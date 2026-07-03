@@ -1,0 +1,23 @@
+{
+  "node_id": "global_vs_local_maximum",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Máximo Global vs Máximo Local en Pruebas",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Al ejecutar experimentos, existe el riesgo de detenerse prematuramente al ver buenos resultados iniciales (máximo local) sin dar tiempo suficiente para descubrir el verdadero potencial máximo (máximo global). Es necesario equilibrar la velocidad del testeo con dar suficiente margen temporal para captar el resultado real.",
+  "pasos_accionables": [
+    "No detener un experimento apenas se vean buenos resultados iniciales",
+    "Definir de antemano un periodo mínimo razonable de prueba",
+    "Comparar resultados a lo largo de varios días o ciclos antes de concluir",
+    "Usar experiencia y juicio para decidir cuándo se ha alcanzado un resultado representativo"
+  ],
+  "entregable_esperado": "Criterio definido de duración de pruebas que evite conclusiones prematuras basadas en máximos locales",
+  "nodos_previos": [
+    "pass_fail_experiment_design"
+  ],
+  "nodos_siguientes": [
+    "customer_discovery_phase2_problem_test"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario está ejecutando experimentos de validación y corre el riesgo de concluir demasiado pronto"
+  ]
+}

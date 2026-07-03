@@ -1,0 +1,28 @@
+{
+  "node_id": "plan_gestion_riesgos",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Plan de Gestión de Riesgos",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Componente del plan de dirección del proyecto que describe el enfoque general para gestionar la incertidumbre, tanto amenazas como oportunidades. Incluye metodología, roles, categorías de riesgo, financiamiento, protocolos de contingencia, definiciones de probabilidad e impacto, y la matriz de probabilidad e impacto que se usará durante todo el proyecto.",
+  "pasos_accionables": [
+    "Definir la metodología y herramientas para cada proceso de gestión de riesgos",
+    "Asignar roles y responsabilidades para la gestión de riesgos",
+    "Establecer categorías de riesgo para organizar el registro",
+    "Determinar fondos de contingencia y protocolos",
+    "Definir escalas de probabilidad e impacto por objetivo",
+    "Diseñar la matriz de probabilidad e impacto"
+  ],
+  "entregable_esperado": "Un documento de Plan de Gestión de Riesgos con metodología, roles, categorías, escalas de probabilidad/impacto y matriz definida.",
+  "nodos_previos": [
+    "project_charter",
+    "stakeholder_register"
+  ],
+  "nodos_siguientes": [
+    "registro_de_riesgos",
+    "matriz_probabilidad_impacto"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto tiene alta incertidumbre o complejidad",
+    "Antes de iniciar la identificación formal de riesgos"
+  ]
+}

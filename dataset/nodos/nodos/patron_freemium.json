@@ -1,0 +1,26 @@
+{
+  "node_id": "patron_freemium",
+  "fase_proyecto": "ideacion",
+  "titulo_concepto": "Patrón Freemium",
+  "fuente": "Business Model Generation (Osterwalder)",
+  "resumen_teorico": "Modelo donde una gran base de usuarios accede gratis a servicios básicos, mientras una pequeña fracción (usualmente menos del 10%) paga por servicios premium. La viabilidad depende de mantener bajo el costo marginal de servir usuarios gratuitos y de una tasa de conversión suficiente de gratuitos a premium. Ejemplos: Flickr, Skype, Red Hat.",
+  "pasos_accionables": [
+    "Definir claramente los límites entre el servicio gratuito y el premium",
+    "Calcular el costo promedio de servir a un usuario gratuito",
+    "Establecer métricas de conversión (tasa de usuarios gratis que pasan a premium)",
+    "Automatizar la relación con clientes gratuitos para mantener bajo costo",
+    "Diseñar incentivos claros para la migración a premium"
+  ],
+  "entregable_esperado": "Estructura de costos diferenciada (fijo, marginal gratuito, premium) y proyección de tasa de conversión freemium a premium",
+  "nodos_previos": [
+    "patron_free_business_model"
+  ],
+  "nodos_siguientes": [
+    "metricas_clave_modelo_negocio",
+    "patron_bait_hook"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto es digital o de plataforma con bajo costo marginal",
+    "Cuando se necesita escalar rápidamente una base de usuarios antes de monetizar"
+  ]
+}

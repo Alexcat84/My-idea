@@ -1,0 +1,26 @@
+{
+  "node_id": "pruning_portafolio",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Poda del Portafolio (Portfolio Pruning)",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Cuando el pipeline de proyectos está sobrecargado con iniciativas mediocres o de bajo valor estratégico, es necesario realizar una revisión drástica y sistemática proyecto por proyecto para eliminar aquellos que no aportan valor. La experiencia sugiere que aproximadamente un tercio de los proyectos en un portafolio típico deberían ser eliminados, liberando recursos para los proyectos de mayor valor.",
+  "pasos_accionables": [
+    "Listar todos los proyectos activos en el pipeline de desarrollo",
+    "Evaluar cada proyecto contra criterios estratégicos y de valor (usar scorecard)",
+    "Identificar el ~30% de proyectos de menor valor o impacto estratégico",
+    "Ejecutar una decisión de corte (Kill) y reasignar los recursos liberados a proyectos prioritarios",
+    "Medir el impacto en tiempo-al-mercado tras la poda"
+  ],
+  "entregable_esperado": "Lista depurada de proyectos activos con al menos 30% de reducción, y plan de reasignación de recursos liberados",
+  "nodos_previos": [
+    "gates_sin_dientes_problema"
+  ],
+  "nodos_siguientes": [
+    "decision_factory_mentality",
+    "gestion_portafolio_formal"
+  ],
+  "condiciones_activacion": [
+    "Cuando el pipeline de proyectos está sobrecargado y el tiempo-al-mercado es excesivo",
+    "Si hay más de 1000 iniciativas activas o el equipo está sobrecargado de multitasking"
+  ]
+}

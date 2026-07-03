@@ -1,0 +1,24 @@
+{
+  "node_id": "etapa_testing_validation",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Etapa 4 - Testing and Validation",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Esta etapa valida la viabilidad completa del proyecto: el producto, el proceso de producción/operaciones, la aceptación del cliente y la economía del proyecto. Incluye pruebas internas extendidas, pruebas de campo con usuarios reales, producción piloto, pruebas de mercado simuladas o 'soft launch', y un análisis financiero revisado con datos más precisos.",
+  "pasos_accionables": [
+    "Ejecutar pruebas técnicas extendidas en condiciones controladas",
+    "Realizar pruebas de campo con usuarios reales para verificar funcionamiento e intención de compra",
+    "Llevar a cabo producción piloto o limitada para probar el proceso de operaciones",
+    "Ejecutar un test de mercado simulado o soft launch con clientes limitados",
+    "Actualizar el análisis financiero con datos reales de ingresos y costos"
+  ],
+  "entregable_esperado": "Resultados validados de pruebas técnicas, de mercado y de producción, junto con análisis financiero actualizado",
+  "nodos_previos": [
+    "gate4_go_to_testing"
+  ],
+  "nodos_siguientes": [
+    "gate5_go_to_launch"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto ha sido desarrollado y necesita validación completa antes del lanzamiento comercial"
+  ]
+}

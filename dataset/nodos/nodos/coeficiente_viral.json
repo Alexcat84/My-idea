@@ -1,0 +1,25 @@
+{
+  "node_id": "coeficiente_viral",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Coeficiente Viral (Viral Growth Factor)",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "El coeficiente viral mide cuántos usuarios activados nuevos genera cada usuario existente mediante referencias. Un coeficiente de 1.0 significa crecimiento mínimo viral (duplicación); valores superiores a 1.2-1.3 indican crecimiento saludable; valores muy altos (12, 20+) indican viralidad explosiva como videos virales.",
+  "pasos_accionables": [
+    "Contar usuarios actuales y promedio de referidos por usuario",
+    "Calcular porcentaje de referidos que se activan (compran/se registran)",
+    "Calcular coeficiente: (nuevos usuarios activados) / (usuarios originales)",
+    "Testear incentivos para quien refiere y para el referido",
+    "Monitorear el coeficiente semanalmente y iterar sobre tácticas de referencia"
+  ],
+  "entregable_esperado": "Cálculo documentado del coeficiente viral con plan de mejora continua",
+  "nodos_previos": [
+    "optimizacion_metricas_crecimiento"
+  ],
+  "nodos_siguientes": [
+    "valor_de_vida_del_cliente"
+  ],
+  "condiciones_activacion": [
+    "Si el producto es apto para viralidad (redes sociales, juegos multijugador)",
+    "Si se busca crecimiento orgánico de bajo costo"
+  ]
+}

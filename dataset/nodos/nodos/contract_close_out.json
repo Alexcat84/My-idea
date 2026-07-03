@@ -1,0 +1,26 @@
+{
+  "node_id": "contract_close_out",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Cierre de Contrato",
+  "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+  "resumen_teorico": "El Cierre de Contrato documenta el desempeño del proveedor para evaluaciones futuras, asegurando que todas las disputas se resuelvan, el producto sea aceptado y los pagos finales realizados antes de cerrar formalmente el contrato. Incluye análisis de desempeño del proveedor, registro de cambios contractuales y disputas, así como la fecha de finalización, firma y pago final.",
+  "pasos_accionables": [
+    "Confirmar que todas las disputas contractuales estén resueltas",
+    "Verificar que el producto o resultado haya sido aceptado",
+    "Confirmar que se hayan realizado los pagos finales",
+    "Documentar el análisis de desempeño del proveedor y registro de cambios",
+    "Registrar la fecha de finalización del contrato y firma de cierre"
+  ],
+  "entregable_esperado": "Informe de Cierre de Contrato con desempeño del proveedor, cambios, disputas y firma final",
+  "nodos_previos": [
+    "procurement_audit",
+    "formal_acceptance"
+  ],
+  "nodos_siguientes": [
+    "project_close_out",
+    "lessons_learned"
+  ],
+  "condiciones_activacion": [
+    "Cuando un contrato con un proveedor ha finalizado o se está terminando"
+  ]
+}

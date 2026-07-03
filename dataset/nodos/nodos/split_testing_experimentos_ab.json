@@ -1,0 +1,26 @@
+{
+  "node_id": "split_testing_experimentos_ab",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Split-Testing (Pruebas A/B)",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Técnica en la que se ofrecen diferentes versiones de un producto a distintos grupos de clientes simultáneamente, para observar diferencias en el comportamiento y así inferir el impacto real de cada variación. A diferencia del análisis de causa-efecto posterior (que es lento y ambiguo), el split-test genera evidencia científica en tiempo real sobre qué cambios importan realmente a los clientes.",
+  "pasos_accionables": [
+    "Definir una hipótesis clara sobre el impacto esperado de una nueva funcionalidad",
+    "Dividir la base de clientes en dos grupos aleatorios (A y B)",
+    "Lanzar la variación nueva solo al grupo B, manteniendo el grupo A con la versión estándar",
+    "Medir comportamiento de ambos grupos usando las mismas métricas",
+    "Comparar resultados para determinar si la variación tuvo impacto real"
+  ],
+  "entregable_esperado": "Reporte de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente",
+  "nodos_previos": [
+    "minimum_viable_product_discovery"
+  ],
+  "nodos_siguientes": [
+    "metricas_cohortes",
+    "kanban_validacion_aprendizaje"
+  ],
+  "condiciones_activacion": [
+    "Si el equipo no puede determinar con certeza qué causó un cambio en las métricas",
+    "Si se quiere decidir entre priorizar nuevas funcionalidades sin desperdiciar recursos de desarrollo"
+  ]
+}

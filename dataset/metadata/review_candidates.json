@@ -1,4 +1,27 @@
 {
+  "minimum_viable_product_discovery": {
+    "refs": 24,
+    "candidatos": [
+      {
+        "node_id": "mvp_catalogo_tecnicas",
+        "score": 74.07407407407408,
+        "ratio": 44.44444444444444,
+        "titulo": "Catálogo de MVPs (Producto Mínimo Viable)"
+      },
+      {
+        "node_id": "producto_minimo_viable",
+        "score": 74.07407407407408,
+        "ratio": 44.44444444444444,
+        "titulo": "Producto Mínimo Viable (MVP)"
+      },
+      {
+        "node_id": "customer_discovery",
+        "score": 66.66666666666666,
+        "ratio": 56.00000000000001,
+        "titulo": "Customer Discovery"
+      }
+    ]
+  },
   "value_proposition_design": {
     "refs": 7,
     "candidatos": [
@@ -365,16 +388,39 @@
         "titulo": "Diseño Centrado en el Humano para Inteligencia Artificial (D4AI)"
       },
       {
-        "node_id": "business_model_canvas_ideo",
-        "score": 72.1311475409836,
-        "ratio": 69.1358024691358,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
-      },
-      {
         "node_id": "definicion_startup",
         "score": 71.42857142857143,
         "ratio": 50.0,
         "titulo": "Definición de Startup"
+      },
+      {
+        "node_id": "enfoque_centrado_humano_organizacional",
+        "score": 68.18181818181819,
+        "ratio": 56.33802816901409,
+        "titulo": "Enfoque Centrado en el Humano (Punto de Partida)"
+      }
+    ]
+  },
+  "gestion_riesgos_proyecto": {
+    "refs": 2,
+    "candidatos": [
+      {
+        "node_id": "plan_gestion_riesgos",
+        "score": 85.71428571428571,
+        "ratio": 68.18181818181819,
+        "titulo": "Plan de Gestión de Riesgos"
+      },
+      {
+        "node_id": "project_management_plan",
+        "score": 80.0,
+        "ratio": 69.23076923076923,
+        "titulo": "Plan de Gestión del Proyecto"
+      },
+      {
+        "node_id": "gestion_riesgo_incremental",
+        "score": 72.0,
+        "ratio": 72.0,
+        "titulo": "Gestión de Riesgo Incremental (Reglas de Apuesta)"
       }
     ]
   },
@@ -717,6 +763,29 @@
       }
     ]
   },
+  "prototipado_field_guide_ideo": {
+    "refs": 2,
+    "candidatos": [
+      {
+        "node_id": "prototipado_rapido",
+        "score": 75.86206896551724,
+        "ratio": 65.21739130434783,
+        "titulo": "Prototipado Rápido (Quick and Dirty)"
+      },
+      {
+        "node_id": "rapid_prototyping",
+        "score": 75.86206896551724,
+        "ratio": 65.21739130434783,
+        "titulo": "Rapid Prototyping (Prototipado Rápido)"
+      },
+      {
+        "node_id": "fallar_rapido_prototipado",
+        "score": 68.0,
+        "ratio": 43.99999999999999,
+        "titulo": "Fallar Rápido, Fallar Seguido (Cultura de Prototipado)"
+      }
+    ]
+  },
   "value_proposition_hypothesis": {
     "refs": 2,
     "candidatos": [
@@ -947,29 +1016,6 @@
       }
     ]
   },
-  "gestion_riesgos_proyecto": {
-    "refs": 1,
-    "candidatos": [
-      {
-        "node_id": "plan_gestion_riesgos",
-        "score": 85.71428571428571,
-        "ratio": 68.18181818181819,
-        "titulo": "Plan de Gestión de Riesgos"
-      },
-      {
-        "node_id": "project_management_plan",
-        "score": 80.0,
-        "ratio": 69.23076923076923,
-        "titulo": "Plan de Gestión del Proyecto"
-      },
-      {
-        "node_id": "gestion_riesgo_incremental",
-        "score": 72.0,
-        "ratio": 72.0,
-        "titulo": "Gestión de Riesgo Incremental (Reglas de Apuesta)"
-      }
-    ]
-  },
   "schedule_baseline": {
     "refs": 1,
     "candidatos": [
@@ -1009,10 +1055,10 @@
         "titulo": "SWOT aplicado al Business Model Canvas"
       },
       {
-        "node_id": "business_model_canvas_ideo",
+        "node_id": "lienzo_modelo_negocio",
         "score": 66.66666666666666,
         "ratio": 57.14285714285714,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
+        "titulo": "El Lienzo de Modelo de Negocio (Business Model Canvas)"
       }
     ]
   },
@@ -1062,7 +1108,7 @@
       }
     ]
   },
-  "diseño_de_constraints_eticos": {
+  "diseno_de_constraints_eticos": {
     "refs": 1,
     "candidatos": [
       {
@@ -1170,10 +1216,10 @@
         "titulo": "De Productos a Servicios y Experiencias"
       },
       {
-        "node_id": "minimum_viable_product_discovery",
+        "node_id": "mvp_catalogo_tecnicas",
         "score": 66.66666666666666,
         "ratio": 66.66666666666667,
-        "titulo": "Producto Mínimo Viable (MVP) en Customer Discovery"
+        "titulo": "Catálogo de MVPs (Producto Mínimo Viable)"
       }
     ]
   },
@@ -1200,7 +1246,7 @@
       }
     ]
   },
-  "definicion_del_problema_de_diseño": {
+  "definicion_del_problema_de_diseno": {
     "refs": 1,
     "candidatos": [
       {
@@ -1220,29 +1266,6 @@
         "score": 75.0,
         "ratio": 50.0,
         "titulo": "El Brief de Diseño como Marco Creativo"
-      }
-    ]
-  },
-  "funding_strategy": {
-    "refs": 1,
-    "candidatos": [
-      {
-        "node_id": "estrategia_de_ventas",
-        "score": 72.72727272727272,
-        "ratio": 60.0,
-        "titulo": "Estrategia de Ventas (Sales Strategy)"
-      },
-      {
-        "node_id": "customer_retention_strategy",
-        "score": 66.66666666666666,
-        "ratio": 60.46511627906976,
-        "titulo": "Estrategia de Retención de Clientes (Keep Customers)"
-      },
-      {
-        "node_id": "grow_customers_strategy",
-        "score": 66.66666666666666,
-        "ratio": 51.28205128205128,
-        "titulo": "Estrategia de Crecimiento de Clientes (Grow)"
       }
     ]
   },
@@ -1637,7 +1660,7 @@
       }
     ]
   },
-  "diseño_de_touchpoints": {
+  "diseno_de_touchpoints": {
     "refs": 1,
     "candidatos": [
       {
@@ -1752,7 +1775,7 @@
       }
     ]
   },
-  "definir_problema_de_diseño": {
+  "definir_problema_de_diseno": {
     "refs": 1,
     "candidatos": [
       {
@@ -1762,16 +1785,16 @@
         "titulo": "El Brief de Diseño como Marco Creativo"
       },
       {
-        "node_id": "diseño_de_desafios_de_innovacion",
+        "node_id": "dise_o_de_desafios_de_innovacion",
         "score": 69.56521739130434,
         "ratio": 65.21739130434783,
         "titulo": "El Desafío de Diseño (Design Challenge)"
       },
       {
-        "node_id": "proceso_diseno_modelo_negocio_5_fases",
-        "score": 65.51724137931035,
-        "ratio": 43.75,
-        "titulo": "Proceso de Diseño de Modelo de Negocio (5 Fases)"
+        "node_id": "diseño_de_desafios_de_innovacion",
+        "score": 69.56521739130434,
+        "ratio": 65.21739130434783,
+        "titulo": "El Desafío de Diseño (Design Challenge)"
       }
     ]
   },
@@ -1821,29 +1844,6 @@
       }
     ]
   },
-  "prototipado_field_guide_ideo": {
-    "refs": 1,
-    "candidatos": [
-      {
-        "node_id": "prototipado_rapido",
-        "score": 75.86206896551724,
-        "ratio": 65.21739130434783,
-        "titulo": "Prototipado Rápido (Quick and Dirty)"
-      },
-      {
-        "node_id": "rapid_prototyping",
-        "score": 75.86206896551724,
-        "ratio": 65.21739130434783,
-        "titulo": "Rapid Prototyping (Prototipado Rápido)"
-      },
-      {
-        "node_id": "fallar_rapido_prototipado",
-        "score": 68.0,
-        "ratio": 43.99999999999999,
-        "titulo": "Fallar Rápido, Fallar Seguido (Cultura de Prototipado)"
-      }
-    ]
-  },
   "mapeo_tendencias": {
     "refs": 1,
     "candidatos": [
@@ -1877,10 +1877,10 @@
         "titulo": "Agencia y Opt-Out: Diseño Ético de Privacidad de Datos"
       },
       {
-        "node_id": "explotacion_tecnologias_disruptivas",
-        "score": 65.51724137931035,
-        "ratio": 55.172413793103445,
-        "titulo": "Explotación de Tecnologías Disruptivas"
+        "node_id": "dise_o_etico_de_privacidad",
+        "score": 68.57142857142857,
+        "ratio": 44.73684210526315,
+        "titulo": "Agencia y Opt-Out: Diseño Ético de Privacidad de Datos"
       }
     ]
   },
@@ -1953,15 +1953,9 @@
       }
     ]
   },
-  "diseño_centrado_en_sistemas": {
+  "diseno_centrado_en_sistemas": {
     "refs": 1,
     "candidatos": [
-      {
-        "node_id": "business_model_canvas_ideo",
-        "score": 80.0,
-        "ratio": 66.66666666666667,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
-      },
       {
         "node_id": "diseno_para_ia_centrada_en_humano",
         "score": 80.0,
@@ -1969,10 +1963,16 @@
         "titulo": "Diseño Centrado en el Humano para Inteligencia Artificial (D4AI)"
       },
       {
-        "node_id": "business_model_canvas_hcd",
-        "score": 80.0,
-        "ratio": 51.162790697674424,
-        "titulo": "Business Model Canvas aplicado a Diseño Centrado en Humanos"
+        "node_id": "diseno_de_sistemas_a_escala",
+        "score": 74.07407407407408,
+        "ratio": 66.66666666666667,
+        "titulo": "Diseño de Sistemas Complejos a Gran Escala"
+      },
+      {
+        "node_id": "diseno_de_sistemas_institucionales",
+        "score": 71.42857142857143,
+        "ratio": 59.01639344262295,
+        "titulo": "Rediseño de Instituciones y Sistemas Sociales a Gran Escala"
       }
     ]
   },
@@ -2325,22 +2325,22 @@
     "refs": 1,
     "candidatos": [
       {
-        "node_id": "business_model_canvas_ideo",
-        "score": 83.72093023255815,
-        "ratio": 65.11627906976744,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
-      },
-      {
-        "node_id": "business_model_canvas_refresher",
-        "score": 83.72093023255815,
-        "ratio": 65.11627906976744,
-        "titulo": "Business Model Canvas (Recordatorio)"
-      },
-      {
         "node_id": "lienzo_modelo_negocio",
         "score": 83.72093023255815,
         "ratio": 65.11627906976744,
         "titulo": "El Lienzo de Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "revalidar_modelo_negocio",
+        "score": 83.72093023255815,
+        "ratio": 65.11627906976744,
+        "titulo": "Re-Validar el Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "unbundling_business_models",
+        "score": 79.16666666666667,
+        "ratio": 79.16666666666666,
+        "titulo": "Patrón de Desagregación (Unbundling) de Modelos de Negocio"
       }
     ]
   },
@@ -2364,6 +2364,29 @@
         "score": 75.67567567567568,
         "ratio": 74.50980392156863,
         "titulo": "Fase Entender: Investigación para el Modelo de Negocio"
+      }
+    ]
+  },
+  "funding_strategy": {
+    "refs": 1,
+    "candidatos": [
+      {
+        "node_id": "estrategia_de_ventas",
+        "score": 72.72727272727272,
+        "ratio": 60.0,
+        "titulo": "Estrategia de Ventas (Sales Strategy)"
+      },
+      {
+        "node_id": "customer_retention_strategy",
+        "score": 66.66666666666666,
+        "ratio": 60.46511627906976,
+        "titulo": "Estrategia de Retención de Clientes (Keep Customers)"
+      },
+      {
+        "node_id": "grow_customers_strategy",
+        "score": 66.66666666666666,
+        "ratio": 51.28205128205128,
+        "titulo": "Estrategia de Crecimiento de Clientes (Grow)"
       }
     ]
   },
@@ -2440,22 +2463,22 @@
     "refs": 1,
     "candidatos": [
       {
-        "node_id": "business_model_canvas_ideo",
-        "score": 80.0,
-        "ratio": 64.15094339622642,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
-      },
-      {
-        "node_id": "business_model_canvas_refresher",
-        "score": 80.0,
-        "ratio": 64.15094339622642,
-        "titulo": "Business Model Canvas (Recordatorio)"
-      },
-      {
         "node_id": "lienzo_modelo_negocio",
         "score": 80.0,
         "ratio": 64.15094339622642,
         "titulo": "El Lienzo de Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "revalidar_modelo_negocio",
+        "score": 80.0,
+        "ratio": 64.15094339622642,
+        "titulo": "Re-Validar el Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "patron_free_business_model",
+        "score": 72.41379310344828,
+        "ratio": 48.275862068965516,
+        "titulo": "Modelo de Negocio FREE (Gratuito)"
       }
     ]
   },
@@ -2551,7 +2574,7 @@
       }
     ]
   },
-  "empatia_en_diseño": {
+  "empatia_en_diseno": {
     "refs": 1,
     "candidatos": [
       {
@@ -2693,22 +2716,22 @@
     "refs": 1,
     "candidatos": [
       {
-        "node_id": "business_model_canvas_ideo",
-        "score": 80.0,
-        "ratio": 75.55555555555556,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
-      },
-      {
-        "node_id": "business_model_canvas_refresher",
-        "score": 80.0,
-        "ratio": 75.55555555555556,
-        "titulo": "Business Model Canvas (Recordatorio)"
-      },
-      {
         "node_id": "lienzo_modelo_negocio",
         "score": 80.0,
         "ratio": 75.55555555555556,
         "titulo": "El Lienzo de Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "revalidar_modelo_negocio",
+        "score": 80.0,
+        "ratio": 75.55555555555556,
+        "titulo": "Re-Validar el Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "patron_free_business_model",
+        "score": 80.0,
+        "ratio": 56.00000000000001,
+        "titulo": "Modelo de Negocio FREE (Gratuito)"
       }
     ]
   },
@@ -2762,22 +2785,22 @@
     "refs": 1,
     "candidatos": [
       {
-        "node_id": "business_model_canvas_ideo",
-        "score": 80.0,
-        "ratio": 62.295081967213115,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
-      },
-      {
-        "node_id": "business_model_canvas_refresher",
-        "score": 80.0,
-        "ratio": 62.295081967213115,
-        "titulo": "Business Model Canvas (Recordatorio)"
-      },
-      {
         "node_id": "lienzo_modelo_negocio",
         "score": 80.0,
         "ratio": 62.295081967213115,
         "titulo": "El Lienzo de Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "revalidar_modelo_negocio",
+        "score": 80.0,
+        "ratio": 62.295081967213115,
+        "titulo": "Re-Validar el Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "search_for_business_model",
+        "score": 71.7948717948718,
+        "ratio": 43.07692307692308,
+        "titulo": "Búsqueda de un Modelo de Negocio (Search)"
       }
     ]
   },
@@ -3015,22 +3038,22 @@
     "refs": 1,
     "candidatos": [
       {
-        "node_id": "business_model_canvas_ideo",
-        "score": 80.0,
-        "ratio": 54.83870967741935,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
-      },
-      {
-        "node_id": "business_model_canvas_refresher",
-        "score": 80.0,
-        "ratio": 54.83870967741935,
-        "titulo": "Business Model Canvas (Recordatorio)"
-      },
-      {
         "node_id": "lienzo_modelo_negocio",
         "score": 80.0,
         "ratio": 54.83870967741935,
         "titulo": "El Lienzo de Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "revalidar_modelo_negocio",
+        "score": 80.0,
+        "ratio": 54.83870967741935,
+        "titulo": "Re-Validar el Modelo de Negocio (Business Model Canvas)"
+      },
+      {
+        "node_id": "search_for_business_model",
+        "score": 71.7948717948718,
+        "ratio": 54.54545454545454,
+        "titulo": "Búsqueda de un Modelo de Negocio (Search)"
       }
     ]
   },
@@ -3142,10 +3165,10 @@
         "titulo": "Hipótesis de Canales de Distribución"
       },
       {
-        "node_id": "business_model_canvas_ideo",
+        "node_id": "lienzo_modelo_negocio",
         "score": 66.66666666666666,
         "ratio": 52.38095238095239,
-        "titulo": "Business Model Canvas (Aplicado a Diseño Centrado en el Humano)"
+        "titulo": "El Lienzo de Modelo de Negocio (Business Model Canvas)"
       }
     ]
   },

@@ -11,9 +11,11 @@
     "Ajusta el diseño para que su descomposición o final de vida genere valor reutilizable, no desecho tóxico"
   ],
   "entregable_esperado": "Un mapa de ciclo de vida del producto/servicio que identifique puntos de descomposición y posible valor futuro (positivo o negativo)",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "analisis_y_sintesis"
+  ],
   "nodos_siguientes": [
-    "diseño_para_reuso_responsable"
+    "diseno_para_reuso_responsable"
   ],
   "condiciones_activacion": [
     "Cuando el proyecto involucra materiales físicos o recursos con impacto ambiental a largo plazo",

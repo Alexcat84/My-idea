@@ -1,0 +1,25 @@
+{
+  "node_id": "network_diagram",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Network Diagram",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Representación visual de las relaciones entre elementos del cronograma (actividades, entregables o hitos), mostrando dependencias tipo finish-to-start, start-to-start, finish-to-finish o start-to-finish, además de leads y lags.",
+  "pasos_accionables": [
+    "Determinar el nivel de detalle (actividad, entregable o hito)",
+    "Identificar el tipo de relación entre cada par de elementos",
+    "Documentar leads o lags aplicables a las relaciones",
+    "Construir el diagrama visual con nodos y flechas de conexión"
+  ],
+  "entregable_esperado": "Diagrama de red visual mostrando dependencias entre actividades del proyecto",
+  "nodos_previos": [
+    "activity_list",
+    "activity_attributes",
+    "milestone_list"
+  ],
+  "nodos_siguientes": [
+    "project_schedule"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita visualizar las dependencias lógicas entre actividades antes de construir el cronograma final"
+  ]
+}

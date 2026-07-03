@@ -12,10 +12,12 @@
     "Señala qué círculos dejaste fuera: esos son los puntos ciegos y riesgos potenciales de tu diseño."
   ],
   "entregable_esperado": "Un diagrama de Venn ampliado que mapea los intereses del diseñador, el negocio, la sociedad, la naturaleza y el futuro, con la 'intersección de posibilidad' señalada y una lista de riesgos por omisiones.",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "reconocer_sesgo_de_apofenia"
+  ],
   "nodos_siguientes": [
     "ejercicio_retrospectivo_proyecto",
-    "sueños_completos_diseño_responsable"
+    "suenos_completos_diseno_responsable"
   ],
   "condiciones_activacion": [
     "Si el usuario está en fase de ideación y no ha considerado el impacto social o ambiental de su idea.",

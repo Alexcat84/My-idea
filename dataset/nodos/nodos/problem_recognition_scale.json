@@ -1,0 +1,25 @@
+{
+  "node_id": "problem_recognition_scale",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Escala de Reconocimiento del Problema",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Herramienta para clasificar qué tan consciente y motivado está el cliente respecto a su problema. Los niveles son: latente (no lo saben), pasivo (lo conocen pero no actúan), activo (buscan solución activamente), y visión (ya intentaron resolverlo por su cuenta y están dispuestos a pagar por algo mejor). Los mejores startups encuentran clientes en la etapa de 'visión', donde el cliente ya construyó una solución casera.",
+  "pasos_accionables": [
+    "Salir a entrevistar clientes para entender cómo experimentan el problema",
+    "Clasificar cada tipo de cliente importante según la escala (latente/pasivo/activo/visión)",
+    "Buscar específicamente clientes que hayan intentado construir su propia solución",
+    "Determinar la intensidad del dolor que causa el problema"
+  ],
+  "entregable_esperado": "Matriz de clientes clasificados por nivel de reconocimiento del problema",
+  "nodos_previos": [
+    "customer_segments_hypothesis"
+  ],
+  "nodos_siguientes": [
+    "customer_archetypes",
+    "day_in_life_customer"
+  ],
+  "condiciones_activacion": [
+    "Si no está claro qué tan urgente es el problema para el cliente",
+    "Antes de diseñar el pitch de ventas"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "tecnica_cinco_porques",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Los Cinco Porqués (Five Whys)",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Técnica de análisis de causa raíz desarrollada por Taiichi Ohno para el Sistema de Producción Toyota, adaptada al Lean Startup. Consiste en preguntar '¿Por qué?' cinco veces consecutivas ante cualquier fallo (técnico, de negocio o de comportamiento del cliente) para descubrir que detrás de casi todo problema aparentemente técnico existe un problema humano u organizacional (falta de entrenamiento, procesos ambiguos, decisiones de gestión). Permite a los equipos construir organizaciones adaptativas que aceleran con el tiempo en lugar de acumular caos.",
+  "pasos_accionables": [
+    "Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución",
+    "Preguntar '¿Por qué ocurrió esto?' y registrar la respuesta",
+    "Repetir la pregunta '¿Por qué?' sobre la respuesta anterior, hasta completar cinco niveles",
+    "Identificar en cada nivel si la causa es técnica o humana/organizacional",
+    "Definir una inversión de prevención proporcional al nivel de daño causado por el síntoma en cada uno de los cinco niveles"
+  ],
+  "entregable_esperado": "Acta de sesión de Cinco Porqués con cadena de causas identificada y lista de inversiones proporcionales asignadas a responsables",
+  "nodos_previos": [
+    "identificacion_de_fallo_o_sintoma"
+  ],
+  "nodos_siguientes": [
+    "inversion_proporcional",
+    "cinco_porques_master"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre un fallo técnico, de proceso o un resultado de negocio inesperado",
+    "Cuando el equipo repite errores similares sin entender la causa raíz",
+    "Cuando la organización necesita balancear velocidad de ejecución con calidad de forma incremental"
+  ]
+}

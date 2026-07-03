@@ -1,0 +1,25 @@
+{
+  "node_id": "optimizacion_embudo_get_customers",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Optimización del Embudo 'Conseguir Clientes'",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Proceso continuo de 'test, medir, ajustar' enfocado en mejorar volumen, costo y conversión en cada etapa del embudo (adquisición, activación, compra). Requiere pruebas controladas tipo A/B, foco en pocas variables a la vez, y mantener siempre en mente el valor de vida del cliente (LTV) comparado con el costo de adquisición (CAQ), asegurando que LTV > CAQ.",
+  "pasos_accionables": [
+    "Asegurar que existan MVP de alta fidelidad, plan de adquisición/activación y dashboard funcionando",
+    "Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (e-commerce, mercado multi-lado, marketplace)",
+    "Ejecutar pruebas A/B controladas cambiando no más de dos variables a la vez",
+    "Calcular LTV y compararlo con CAQ antes de escalar inversión en adquisición",
+    "Iterar continuamente: testear, medir, ajustar y volver a testear"
+  ],
+  "entregable_esperado": "Plan de optimización activo con métricas de volumen, costo y conversión mejorando iterativamente, y validación de que LTV supera al CAQ",
+  "nodos_previos": [
+    "customer_validation_sell_phase",
+    "build_metrics_toolset"
+  ],
+  "nodos_siguientes": [
+    "customer_creation"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya existen datos reales de comportamiento de usuarios y se busca mejorar la eficiencia del embudo de ventas"
+  ]
+}
