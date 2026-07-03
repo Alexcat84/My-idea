@@ -1,0 +1,26 @@
+{
+  "node_id": "activity_list",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Activity List",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Documento que define todas las actividades necesarias para completar el trabajo del proyecto, describiéndolas con suficiente detalle para que quien las ejecute entienda los requisitos necesarios.",
+  "pasos_accionables": [
+    "Identificar cada actividad a partir de los entregables del WBS",
+    "Asignar un identificador único a cada actividad",
+    "Nombrar cada actividad comenzando con un verbo",
+    "Describir el trabajo con el detalle necesario"
+  ],
+  "entregable_esperado": "Lista completa de actividades del proyecto con identificadores y descripciones",
+  "nodos_previos": [
+    "schedule_management_plan",
+    "work_breakdown_structure"
+  ],
+  "nodos_siguientes": [
+    "network_diagram",
+    "activity_resource_requirements",
+    "activity_duration_estimates"
+  ],
+  "condiciones_activacion": [
+    "Cuando el WBS está definido y se necesita detallar las actividades específicas para completar cada paquete de trabajo"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "trabajo_en_lotes_pequenos",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Trabajo en Lotes Pequeños (Small Batches)",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Trabajar en lotes pequeños significa completar y validar unidades de trabajo mínimas antes de pasar a la siguiente etapa, en lugar de acumular grandes cantidades de trabajo antes de moverlas al siguiente proceso. Aunque intuitivamente el trabajo en grandes lotes parece más eficiente (permite especialización y trabajo ininterrumpido), en la práctica genera retrasos, retrabajo masivo e interrupciones costosas cuando surgen errores, ya que estos se descubren tarde y afectan a todo el lote acumulado.",
+  "pasos_accionables": [
+    "Dividir el trabajo de diseño/desarrollo en unidades mínimas viables en lugar de lotes completos",
+    "Pasar cada unidad de trabajo al siguiente equipo o etapa apenas esté lista, sin esperar a completar todo el lote",
+    "Medir el tiempo de ciclo (cycle time) de cada unidad pequeña en lugar de la eficiencia individual del especialista",
+    "Identificar y eliminar el WIP (Work in Progress) oculto: diseños incompletos, hipótesis no validadas, planes de negocio sin probar"
+  ],
+  "entregable_esperado": "Un proceso de trabajo rediseñado con tamaños de lote reducidos y un flujo de una sola pieza (single-piece flow) documentado para al menos un proceso clave del startup",
+  "nodos_previos": [
+    "definicion_mvp"
+  ],
+  "nodos_siguientes": [
+    "pull_no_push",
+    "ciclo_construir_medir_aprender"
+  ],
+  "condiciones_activacion": [
+    "Si el equipo experimenta retrabajos frecuentes (5-6 veces por release)",
+    "Si los lanzamientos de producto se retrasan constantemente por 'un bug más' o 'una feature más'",
+    "Si existe un cuello de botella entre diseño y desarrollo/ingeniería"
+  ]
+}

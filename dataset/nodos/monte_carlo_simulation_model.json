@@ -1,0 +1,25 @@
+{
+  "node_id": "monte_carlo_simulation_model",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Simulación Monte Carlo para Evaluación de Proyectos Mayores",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "En lugar de usar estimaciones puntuales para variables financieras (ventas, costos), este método introduce tres estimaciones (mejor caso, peor caso, caso probable) para generar una distribución de probabilidad. El software genera miles de escenarios financieros posibles, produciendo una distribución de NPV esperados en vez de un solo número, lo que permite tomar decisiones Go/Kill con mejor comprensión del riesgo real.",
+  "pasos_accionables": [
+    "Definir tres estimaciones (optimista, pesimista, probable) para cada variable financiera clave",
+    "Construir una curva de distribución de probabilidad para cada variable",
+    "Ejecutar miles de escenarios simulados mediante software especializado",
+    "Analizar la distribución resultante de NPV para estimar el NPV esperado y su riesgo",
+    "Usar el NPV esperado dividido por costos restantes para rankear proyectos"
+  ],
+  "entregable_esperado": "Distribución de probabilidad de NPV con valor esperado, usada como insumo en decisiones de gate",
+  "nodos_previos": [
+    "net_present_value_npv"
+  ],
+  "nodos_siguientes": [
+    "portfolio_review",
+    "productivity_index"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto involucra grandes gastos de capital y variables financieras estimables por distribución de probabilidad"
+  ]
+}

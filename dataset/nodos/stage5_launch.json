@@ -1,0 +1,23 @@
+{
+  "node_id": "stage5_launch",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Etapa 5: Lanzamiento",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Etapa final del proceso Stage-Gate que implica la implementación del Plan de Lanzamiento al Mercado y del Plan de Operaciones. Se adquiere, instala y pone en marcha el equipo de producción, se llena el canal logístico y comienza la venta del producto al mercado completo.",
+  "pasos_accionables": [
+    "Adquirir, instalar y poner en marcha el equipo de producción (si no se hizo en Etapa 4)",
+    "Llenar el canal de logística y distribución",
+    "Iniciar las ventas del producto en el mercado",
+    "Ejecutar el Plan de Lanzamiento al Mercado y el Plan de Operaciones aprobados"
+  ],
+  "entregable_esperado": "Producto lanzado comercialmente y disponible en el mercado según el plan aprobado.",
+  "nodos_previos": [
+    "gate5_go_to_launch"
+  ],
+  "nodos_siguientes": [
+    "post_launch_review"
+  ],
+  "condiciones_activacion": [
+    "Cuando el Gate 5 ha dado luz verde para la comercialización completa del producto"
+  ]
+}

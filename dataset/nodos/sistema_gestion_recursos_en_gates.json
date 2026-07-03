@@ -1,0 +1,25 @@
+{
+  "node_id": "sistema_gestion_recursos_en_gates",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Asignación y Seguimiento de Recursos en Gates",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Para evitar 'gates huecos' (decisiones Go sin recursos reales comprometidos), las empresas deben implementar un método formal de seguimiento y asignación de recursos en cada reunión de gate. Esto puede ir desde una lista informal de candidatos preparada por el líder del proyecto en empresas pequeñas, hasta software avanzado de gestión de recursos con escenarios 'what if' en empresas grandes.",
+  "pasos_accionables": [
+    "Elegir un método de seguimiento de recursos (lista manual, hoja de cálculo, o software especializado).",
+    "Antes de cada gate, verificar disponibilidad real de personas por departamento.",
+    "Registrar los compromisos de recursos de todos los proyectos activos para evitar sobre-asignación.",
+    "En la reunión de gate, comprometer explícitamente personas y presupuesto para la siguiente etapa."
+  ],
+  "entregable_esperado": "Un modelo de recursos (spreadsheet o software) que muestre personas vs. proyectos y su disponibilidad temporal.",
+  "nodos_previos": [
+    "stage_gate_process_design"
+  ],
+  "nodos_siguientes": [
+    "portafolio_formal_management",
+    "estructura_de_gates"
+  ],
+  "condiciones_activacion": [
+    "Si los proyectos aprobados en gates no reciben recursos reales (gates huecos).",
+    "Si hay múltiples proyectos compitiendo por el mismo personal."
+  ]
+}

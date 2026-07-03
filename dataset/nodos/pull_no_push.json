@@ -1,0 +1,25 @@
+{
+  "node_id": "pull_no_push",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Jalar, No Empujar (Pull, Don't Push)",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Técnica de manufactura lean (usada por Toyota) donde cada etapa del proceso 'jala' (pull) lo que necesita de la etapa anterior solo cuando lo necesita, en lugar de que la etapa anterior 'empuje' (push) trabajo hacia adelante sin considerar la demanda real. En startups, esto se traduce en que no es el cliente quien jala el desarrollo de producto directamente (porque el cliente no siempre sabe lo que quiere), sino la hipótesis sobre el cliente la que debe jalar el trabajo del equipo de desarrollo. Cualquier trabajo que no responda a una hipótesis que necesita ser probada es desperdicio.",
+  "pasos_accionables": [
+    "Formular una hipótesis clara antes de iniciar cualquier desarrollo de producto",
+    "Diseñar el experimento más pequeño posible que pueda validar o refutar esa hipótesis",
+    "Trabajar hacia atrás desde 'qué necesitamos aprender' para definir qué construir (en lugar de construir primero y preguntar después)",
+    "Evitar construir funcionalidades o inventario (WIP) que no respondan a una hipótesis activa de aprendizaje"
+  ],
+  "entregable_esperado": "Un documento de hipótesis priorizadas que jalan el desarrollo del producto, en lugar de un roadmap de features fijo",
+  "nodos_previos": [
+    "trabajo_en_lotes_pequenos",
+    "espiral_mortal_lotes_grandes"
+  ],
+  "nodos_siguientes": [
+    "motor_de_crecimiento"
+  ],
+  "condiciones_activacion": [
+    "Si el equipo está construyendo features basándose en suposiciones no verificadas sobre lo que el cliente quiere",
+    "Si existe inventario de trabajo en progreso (diseños, planes) que nadie ha validado"
+  ]
+}

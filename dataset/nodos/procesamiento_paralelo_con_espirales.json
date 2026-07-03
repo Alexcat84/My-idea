@@ -1,0 +1,24 @@
+{
+  "node_id": "procesamiento_paralelo_con_espirales",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Procesamiento Paralelo con Espirales de Validación",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "En vez de un enfoque secuencial tipo 'carrera de relevos' (una función pasa el proyecto a la siguiente), se recomienda un enfoque tipo 'rugby': múltiples funciones trabajan en paralelo e interactúan constantemente, acelerando el desarrollo sin sacrificar calidad. Se complementa con 'espirales de validación': ciclos rápidos de construir-probar-retroalimentar-revisar con clientes usando prototipos económicos (protoceptos) antes de invertir más dinero, basado en la premisa de que los clientes no saben lo que quieren hasta que lo ven.",
+  "pasos_accionables": [
+    "Reorganizar el equipo para que las funciones trabajen simultáneamente en vez de secuencialmente",
+    "Crear versiones tempranas y económicas del producto (mockups, prototipos virtuales)",
+    "Ejecutar ciclos rápidos de prueba con clientes y ajustar el diseño antes de avanzar",
+    "Repetir las espirales de validación en cada etapa de desarrollo"
+  ],
+  "entregable_esperado": "Cronograma de trabajo paralelo entre funciones y al menos un ciclo de espiral de validación documentado con feedback de clientes",
+  "nodos_previos": [
+    "sistema_gates_go_kill"
+  ],
+  "nodos_siguientes": [
+    "enfoque_mercado_voc"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proceso actual es secuencial y lento (relay race)",
+    "Cuando se necesita reducir el tiempo de ciclo sin perder calidad de ejecución"
+  ]
+}

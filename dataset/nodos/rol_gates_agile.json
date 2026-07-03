@@ -1,0 +1,25 @@
+{
+  "node_id": "rol_gates_agile",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "El Rol de los Gates en un Sistema Ágil",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Los gates (puntos de decisión Go/Kill) siguen siendo esenciales incluso en un sistema ágil: la flexibilidad de Agile aplica al 'qué' se entrega, no a la rigurosidad de la decisión de continuar o no el proyecto. Los gates permiten a la gerencia revisar periódicamente el proyecto, matar iniciativas débiles, reasignar recursos y comprometer los recursos necesarios para que el equipo avance con velocidad. También deben mantenerse gates unificados (no separados por hardware/software) cuando las partes son interdependientes.",
+  "pasos_accionables": [
+    "Mantener los gates de decisión Go/Kill en puntos clave del proyecto, incluso usando Agile",
+    "Usar los gates como checkpoint de recursos, no solo de calidad",
+    "Evitar gates separados para hardware y software si ambos son interdependientes",
+    "Establecer un cronograma de alto nivel con hitos que se mantenga estable, aunque el detalle de cada sprint sea flexible"
+  ],
+  "entregable_esperado": "Calendario de gates definido con criterios claros de decisión Go/Kill y de asignación de recursos en cada punto.",
+  "nodos_previos": [
+    "product_backlog_fisico",
+    "protocepto"
+  ],
+  "nodos_siguientes": [
+    "etapa_pruebas_necesaria"
+  ],
+  "condiciones_activacion": [
+    "Si el equipo cuestiona si los gates siguen siendo necesarios al adoptar metodologías ágiles",
+    "Si existe riesgo de decisiones inconsistentes entre distintas áreas funcionales del mismo proyecto"
+  ]
+}

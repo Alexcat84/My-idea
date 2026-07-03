@@ -1,0 +1,24 @@
+{
+  "node_id": "espiral_muerte_lotes_grandes",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "La Espiral de Muerte de los Lotes Grandes",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Describe el fenómeno organizacional donde trabajar en lotes grandes (por especialización funcional) parece eficiente a nivel individual pero genera interrupciones constantes, retrabajos y cuellos de botella cuando surgen errores o dudas. Por ejemplo, un diseñador que entrega treinta diseños de una vez a ingeniería, en lugar de trabajar de forma colaborativa e iterativa, termina generando más retrabajo (a veces cinco o seis veces por lanzamiento) debido a malentendidos o errores que se descubren tarde. La instintiva preferencia por lotes grandes es tan fuerte que incluso cuando el sistema falla, las personas tienden a culparse a sí mismas en lugar de cuestionar el proceso.",
+  "pasos_accionables": [
+    "Identificar los puntos de entrega o 'handoff' entre departamentos o roles en el proceso actual",
+    "Medir cuántas veces se repite o corrige el trabajo por cada lanzamiento",
+    "Reemplazar el trabajo aislado por colaboración conjunta entre diseño e ingeniería en una sola función a la vez",
+    "Cuestionar la creencia de que la especialización funcional en lotes grandes es más eficiente"
+  ],
+  "entregable_esperado": "Un diagnóstico de los cuellos de botella y retrabajos causados por el trabajo en lotes grandes, junto con un plan para migrar a un flujo de trabajo colaborativo de lotes pequeños",
+  "nodos_previos": [
+    "trabajo_en_lotes_pequenos"
+  ],
+  "nodos_siguientes": [
+    "cinco_por_ques"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo experimenta retrabajos frecuentes o retrasos en la entrega de producto",
+    "Si los equipos trabajan de forma aislada por especialidad (diseño, ingeniería, QA) sin colaboración directa"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "estimacion_costos_actividad",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Estimación de Costos de Actividad",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Proporciona información sobre el costo de recursos necesarios para completar el trabajo del proyecto, incluyendo mano de obra, equipo, suministros y materiales. Puede determinarse mediante juicio de expertos o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
+  "pasos_accionables": [
+    "Identificar los recursos necesarios para cada paquete de trabajo",
+    "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos, bottom-up)",
+    "Calcular costos directos e indirectos",
+    "Documentar reservas de contingencia",
+    "Registrar supuestos, restricciones y nivel de confianza"
+  ],
+  "entregable_esperado": "Hoja de estimación de costos por actividad con rango y nivel de confianza",
+  "nodos_previos": [
+    "plan_gestion_costos",
+    "cronograma_proyecto"
+  ],
+  "nodos_siguientes": [
+    "linea_base_costos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita calcular el presupuesto detallado del proyecto"
+  ]
+}

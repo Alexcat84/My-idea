@@ -1,0 +1,24 @@
+{
+  "node_id": "product_backlog_fisico",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Product Backlog Flexible para Productos Físicos",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "El backlog de producto reemplaza parcialmente la definición tradicional de producto fija al inicio del proyecto. En productos físicos, el backlog es una lista priorizada y flexible de requisitos que evoluciona con el tiempo, permitiendo que el producto esté solo 20-90% definido al momento de la aprobación del proyecto (típicamente 40-60%). A medida que el proyecto avanza y la incertidumbre se reduce, el backlog y el presupuesto se vuelven más estables y se 'congelan' hacia el final de la etapa de Desarrollo.",
+  "pasos_accionables": [
+    "Crear una lista inicial de requisitos de producto priorizada, aceptando que no está 100% definida",
+    "Actualizar el backlog continuamente conforme se obtiene feedback de clientes e iteraciones técnicas",
+    "Congelar las decisiones de hardware más temprano (por los tiempos de fabricación) y dejar el software flexible más tiempo",
+    "Fijar el presupuesto final al término de la etapa de Desarrollo, no antes"
+  ],
+  "entregable_esperado": "Documento de backlog de producto vivo, actualizado en cada sprint, con nivel de definición registrado (%) en cada gate.",
+  "nodos_previos": [
+    "seleccion_proyectos_agile"
+  ],
+  "nodos_siguientes": [
+    "rol_gates_agile"
+  ],
+  "condiciones_activacion": [
+    "Si la gerencia exige un plan de desarrollo detallado (Gantt) antes de aprobar el proyecto pero la definición del producto aún es incierta",
+    "Si el proyecto combina componentes de hardware y software con distintos tiempos de congelamiento"
+  ]
+}

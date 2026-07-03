@@ -1,0 +1,28 @@
+{
+  "node_id": "scoring_model_scorecard",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Modelo de Puntuación (Scorecard) para Seleccionar Proyectos",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Los scorecards son herramientas que permiten a los gerentes calificar proyectos según factores no financieros comprobados como predictores de éxito: ajuste estratégico, ventaja del producto, aprovechamiento de competencias centrales, atractivo del mercado, factibilidad técnica y relación riesgo-retorno. A diferencia de los modelos financieros (que suelen basarse en datos poco confiables en etapas tempranas), los scorecards son más efectivos y eficientes para decisiones Go/Kill en las primeras gates, protegiendo proyectos audaces mientras avanzan por el 'valle de la muerte'.",
+  "pasos_accionables": [
+    "Seleccionar entre 6 y 10 preguntas robustas basadas en investigación (ajuste estratégico, ventaja de producto, competencias, atractivo de mercado, factibilidad técnica, riesgo/retorno)",
+    "Hacer que cada gatekeeper califique el proyecto en escalas de 1-5 o 0-10 en cada criterio",
+    "Sumar (ponderada o no) las calificaciones para obtener el Project Attractiveness Score",
+    "Usar este score junto al Productivity Index para ordenar y priorizar proyectos en revisiones de portafolio",
+    "Usar diferentes scorecards según el tipo de proyecto (nuevo producto estándar vs. tecnología avanzada)"
+  ],
+  "entregable_esperado": "Scorecard aplicado con Project Attractiveness Score calculado para cada proyecto en evaluación",
+  "nodos_previos": [
+    "stage_gate_process",
+    "data_integrity_forecasting"
+  ],
+  "nodos_siguientes": [
+    "portfolio_review",
+    "strategic_roadmap"
+  ],
+  "condiciones_activacion": [
+    "Cuando los datos financieros son poco confiables en las primeras etapas del proyecto",
+    "Cuando se necesita evaluar proyectos audaces o innovadores con alta incertidumbre",
+    "Al diseñar criterios de decisión para gates 1, 2 y 3"
+  ]
+}

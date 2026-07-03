@@ -1,0 +1,25 @@
+{
+  "node_id": "experiment_library",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Biblioteca de Experimentos y Call to Action",
+  "fuente": "Value Proposition Design",
+  "resumen_teorico": "Conjunto de técnicas de experimentación (entrevistas, prototipos, landing pages, crowdfunding, presales, ad tracking, etc.) organizadas según si implican contacto directo u observación indirecta, y si capturan lo que el cliente dice o lo que hace. Se recomienda usar 'calls to action' (CTA) que impliquen mayor inversión del cliente (dinero, tiempo, datos personales) para obtener evidencia más fuerte de interés real.",
+  "pasos_accionables": [
+    "Elegir una combinación de experimentos según costo, fiabilidad y tiempo disponible",
+    "Empezar con experimentos baratos y rápidos (entrevistas, encuestas) cuando la incertidumbre es alta",
+    "Avanzar a experimentos con mayor inversión del cliente (presales, crowdfunding) para validar disposición a pagar",
+    "Diseñar CTAs que impliquen acción real, no solo opinión verbal",
+    "Combinar lo que dicen los clientes con lo que realmente hacen para evitar sesgos"
+  ],
+  "entregable_esperado": "Mix seleccionado de experimentos con CTAs definidos para cada hipótesis crítica",
+  "nodos_previos": [
+    "test_card",
+    "cycle_time"
+  ],
+  "nodos_siguientes": [
+    "mvp_prototipos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario necesita elegir qué tipo de experimento usar para testear una hipótesis específica"
+  ]
+}

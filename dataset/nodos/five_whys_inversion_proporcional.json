@@ -1,0 +1,26 @@
+{
+  "node_id": "five_whys_inversion_proporcional",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Los Cinco Porqués con Inversión Proporcional",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Técnica de análisis de causa raíz donde cada 'porqué' identificado recibe una inversión de corrección proporcional a su impacto, evitando tanto la sobre-ingeniería como la subinversión. El objetivo es que cada nivel de causa reciba una solución adecuada a su magnitud, generando dos resultados: aprendizaje organizacional y acciones concretas (doing). Aplicado repetidamente, fortalece el 'sistema inmune' del equipo frente a errores recurrentes.",
+  "pasos_accionables": [
+    "Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (mínimo 5 veces)",
+    "Para cada respuesta, asignar una persona responsable y una acción proporcional al nivel del problema",
+    "Documentar tanto el aprendizaje obtenido como las acciones correctivas tomadas",
+    "Evitar culpar a individuos; enfocar el análisis en procesos y sistemas",
+    "Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones"
+  ],
+  "entregable_esperado": "Documento de sesión Five Whys con cadena de causas, responsables asignados y acciones proporcionales implementadas",
+  "nodos_previos": [
+    "deteccion_incidente_operativo"
+  ],
+  "nodos_siguientes": [
+    "mejora_continua_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre un error o falla técnica/operativa repetible",
+    "Cuando el equipo tiende a culpar a personas en lugar de procesos",
+    "Cuando se busca prevenir la recurrencia de un problema sistémico"
+  ]
+}

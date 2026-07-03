@@ -1,0 +1,25 @@
+{
+  "node_id": "value_map",
+  "fase_proyecto": "ideacion",
+  "titulo_concepto": "Value Map (Mapa de Valor)",
+  "fuente": "Value Proposition Design",
+  "resumen_teorico": "Describe las características de una propuesta de valor específica de forma estructurada y detallada, desglosándola en Productos y Servicios, Pain Relievers (aliviadores de dolor) y Gain Creators (creadores de ganancia). Es el lado de 'crear valor' del Value Proposition Canvas, y debe diseñarse en función del Customer Profile.",
+  "pasos_accionables": [
+    "Listar todos los productos y servicios de la propuesta de valor",
+    "Definir cómo cada pain reliever alivia un pain específico del cliente",
+    "Definir cómo cada gain creator produce una ganancia específica para el cliente",
+    "Verificar que el mapa de valor conecte con el customer profile"
+  ],
+  "entregable_esperado": "Mapa de valor completo con productos/servicios, pain relievers y gain creators",
+  "nodos_previos": [
+    "customer_profile",
+    "customer_pains",
+    "customer_gains"
+  ],
+  "nodos_siguientes": [
+    "fit_value_proposition"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se comprende el customer profile y se necesita diseñar la propuesta de valor"
+  ]
+}

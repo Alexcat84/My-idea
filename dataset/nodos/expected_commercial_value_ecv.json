@@ -1,0 +1,27 @@
+{
+  "node_id": "expected_commercial_value_ecv",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Valor Comercial Esperado (ECV) para Decisiones de Inversión",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "El ECV es un método de árbol de decisión que aproxima la teoría de precios de opciones financieras para evaluar proyectos de innovación bajo incertidumbre. A diferencia del NPV tradicional, el ECV reconoce que la inversión en un nuevo producto se realiza en incrementos (como comprar opciones en cada gate), considerando las probabilidades de éxito comercial y técnico en cada fase. Esto revela que proyectos riesgosos pero prometedores, que el NPV clásico rechazaría, pueden tener un valor mucho mayor cuando se evalúan etapa por etapa.",
+  "pasos_accionables": [
+    "Dividir el proyecto en fases secuenciales de inversión (ej: investigación preliminar, desarrollo, lanzamiento)",
+    "Asignar una probabilidad de éxito técnico y comercial a cada fase",
+    "Construir un árbol de decisión calculando el valor esperado hacia atrás desde el payoff final",
+    "Comparar el ECV resultante en cada gate contra el costo de avanzar a la siguiente fase",
+    "Usar el ECV, no el NPV simple, para decidir Go/Kill en proyectos grandes y riesgosos"
+  ],
+  "entregable_esperado": "Árbol de decisión con el cálculo de ECV en cada gate, mostrando el valor del proyecto y la decisión de inversión correspondiente",
+  "nodos_previos": [
+    "net_present_value_npv",
+    "stage_gate_process"
+  ],
+  "nodos_siguientes": [
+    "scoring_model_scorecard",
+    "portfolio_review"
+  ],
+  "condiciones_activacion": [
+    "Cuando el NPV tradicional rechaza un proyecto riesgoso pero potencialmente valioso",
+    "Cuando el proyecto tiene múltiples fases de inversión incremental con incertidumbre técnica y comercial"
+  ]
+}

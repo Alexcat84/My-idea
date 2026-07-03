@@ -1,0 +1,25 @@
+{
+  "node_id": "etapa_development",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Etapa 3 - Development: Desarrollo del Producto",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Es la etapa donde el equipo técnico implementa el Development Plan y desarrolla físicamente el producto, resolviendo temas de fuente de suministro y operaciones. Incluye pruebas alfa/internas, hitos periódicos de revisión (no gates), y ciclos iterativos de 'build-test-feedback-revise' con el cliente. Algunas empresas integran métodos Agile (sprints cortos) en esta etapa.",
+  "pasos_accionables": [
+    "Implementar el Development Plan con el equipo técnico multifuncional",
+    "Ejecutar pruebas alfa o de laboratorio bajo condiciones controladas",
+    "Establecer hitos periódicos de revisión del proyecto para control de avance",
+    "Realizar ciclos iterativos de retroalimentación con el cliente (spirals)",
+    "Considerar métodos Agile con sprints cortos para iteraciones rápidas",
+    "Actualizar en paralelo el análisis financiero y los planes de lanzamiento y operaciones"
+  ],
+  "entregable_esperado": "Un prototipo parcialmente probado y validado por el cliente varias veces, listo para pruebas completas, junto con planes actualizados de marketing y operaciones",
+  "nodos_previos": [
+    "gate3_go_to_development"
+  ],
+  "nodos_siguientes": [
+    "gate4_go_to_testing"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto ha recibido luz verde para el desarrollo pesado del producto"
+  ]
+}

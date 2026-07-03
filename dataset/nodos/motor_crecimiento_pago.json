@@ -1,0 +1,26 @@
+{
+  "node_id": "motor_crecimiento_pago",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Motor de Crecimiento de Pago (Paid Engine)",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Motor de crecimiento basado en reinvertir ingresos por cliente en la adquisición de nuevos clientes mediante publicidad, ventas o marketing pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal) permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento no es sostenible sin capital externo. Cualquier canal de adquisición está sujeto a competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una capacidad diferenciada de monetización.",
+  "pasos_accionables": [
+    "Calcular el LTV (valor de vida del cliente) después de costos variables",
+    "Calcular el CPA (costo por adquisición) de cada canal de marketing/ventas",
+    "Verificar que el margen entre LTV y CPA sea positivo y sostenible",
+    "Buscar formas de monetizar mejor un segmento de clientes que la competencia subestima",
+    "Evitar depender de tácticas puntuales (capital invertido, publicity stunts) para compensar un margen negativo"
+  ],
+  "entregable_esperado": "Tabla comparativa de LTV vs CPA por canal de adquisición, con margen de beneficio calculado",
+  "nodos_previos": [
+    "definicion_producto_minimo_viable"
+  ],
+  "nodos_siguientes": [
+    "ajuste_motor_crecimiento",
+    "producto_mercado_fit"
+  ],
+  "condiciones_activacion": [
+    "Si el negocio requiere ventas directas, publicidad o fuerza de ventas para crecer",
+    "Si los clientes están dispuestos a pagar más que el costo de adquisición"
+  ]
+}

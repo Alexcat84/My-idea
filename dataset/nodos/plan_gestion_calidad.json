@@ -1,0 +1,26 @@
+{
+  "node_id": "plan_gestion_calidad",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Plan de Gestión de Calidad",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Incluye roles y responsabilidades, y enfoques de aseguramiento, control y mejora de calidad, así como herramientas, procesos y políticas relacionadas.",
+  "pasos_accionables": [
+    "Definir roles y responsabilidades de calidad",
+    "Documentar el enfoque de planificación de calidad y herramientas a usar",
+    "Establecer el enfoque de aseguramiento de calidad (auditorías)",
+    "Definir el enfoque de control de calidad (medición contra especificaciones)",
+    "Describir el enfoque de mejora continua de calidad"
+  ],
+  "entregable_esperado": "Documento de Plan de Gestión de Calidad aprobado",
+  "nodos_previos": [
+    "plan_gestion_proyecto",
+    "registro_stakeholders"
+  ],
+  "nodos_siguientes": [
+    "metricas_calidad",
+    "plan_mejora_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto tiene requisitos de calidad críticos que deben gestionarse formalmente"
+  ]
+}

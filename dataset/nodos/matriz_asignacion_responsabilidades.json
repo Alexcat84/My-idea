@@ -1,0 +1,23 @@
+{
+  "node_id": "matriz_asignacion_responsabilidades",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Matriz de Asignación de Responsabilidades (RAM/RACI)",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Muestra la intersección entre paquetes de trabajo y recursos, indicando los distintos niveles de participación de los miembros del equipo (Responsable, Aprobador, Consultado, Informado, etc.). El formato más común es el RACI chart.",
+  "pasos_accionables": [
+    "Listar los paquetes de trabajo o actividades",
+    "Listar las personas, divisiones u organizaciones involucradas",
+    "Asignar el nivel de participación (RACI) para cada intersección",
+    "Incluir una leyenda explicando cada nivel de participación"
+  ],
+  "entregable_esperado": "Matriz RACI completa cruzando actividades y recursos humanos",
+  "nodos_previos": [
+    "wbs_estructura_desglose_trabajo"
+  ],
+  "nodos_siguientes": [
+    "plan_gestion_recursos_humanos"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe ambigüedad sobre quién es responsable de qué actividad en el proyecto"
+  ]
+}

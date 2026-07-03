@@ -1,0 +1,25 @@
+{
+  "node_id": "split_testing",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Split Testing (A/B Testing)",
+  "fuente": "Value Proposition Design",
+  "resumen_teorico": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y campañas políticas.",
+  "pasos_accionables": [
+    "Define las variaciones a testear (precio, copy, features, packaging).",
+    "Divide el tráfico equitativamente entre las opciones (control vs. challenge).",
+    "Mide la tasa de conversión del CTA para cada variante.",
+    "Asegura significancia estadística superior al 95% antes de concluir."
+  ],
+  "entregable_esperado": "Resultados comparativos de conversión entre variantes con significancia estadística.",
+  "nodos_previos": [
+    "landing_page_mvp",
+    "ad_tracking"
+  ],
+  "nodos_siguientes": [
+    "mock_sales",
+    "presales"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples alternativas de propuesta de valor, precio o mensaje que se necesitan comparar"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "categorizacion_ranking_proyectos_cubetas",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Categorización y Ranking de Proyectos dentro de las Cubetas",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Una vez definidas las cubetas y sus tamaños, los proyectos activos (que ya pasaron el Gate 2) se clasifican en la cubeta correspondiente. Luego se ordenan de mayor a menor valor (usando NPV u otras métricas) dentro de cada cubeta hasta que se agota el recurso asignado, trazando una 'línea de corte'. Los proyectos por encima de la línea siguen adelante; los de abajo se detienen o cancelan. Es clave no comparar proyectos entre cubetas distintas (evitar comparar 'peras con manzanas').",
+  "pasos_accionables": [
+    "Listar todos los proyectos activos con su cubeta asignada.",
+    "Calcular una métrica de valor (NPV, Productivity Index, Project Attractiveness Score) para cada proyecto.",
+    "Ordenar los proyectos de mayor a menor valor dentro de cada cubeta.",
+    "Trazar la línea de corte según el límite de recursos disponible en esa cubeta.",
+    "Marcar como 'Go' los proyectos sobre la línea y 'Hold/Kill' los que quedan debajo."
+  ],
+  "entregable_esperado": "Listas priorizadas de proyectos 'Go' por cubeta, con los recursos correctamente asignados sin exceder el presupuesto de cada categoría.",
+  "nodos_previos": [
+    "determinacion_tamano_cubetas"
+  ],
+  "nodos_siguientes": [
+    "revision_portafolio_periodica",
+    "diagrama_riesgo_recompensa"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya existen las cubetas definidas y se necesita decidir qué proyectos específicos ejecutar.",
+    "Cuando hay más proyectos propuestos que recursos disponibles."
+  ]
+}

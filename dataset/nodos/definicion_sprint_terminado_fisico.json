@@ -1,0 +1,22 @@
+{
+  "node_id": "definicion_sprint_terminado_fisico",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Definir un 'Sprint Terminado' para Productos Físicos",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "A diferencia del software (donde 'terminado' significa código funcional y potencialmente liberable), en productos físicos un sprint no siempre produce un incremento funcional completo. Puede producir un diseño, un concepto, un prototipo rápido o resultados de un estudio VoC documentados en un formato estándar ('single-page report', revisado por un colega, archivado). Es crítico adaptar la definición de 'terminado' según la naturaleza no incremental del hardware.",
+  "pasos_accionables": [
+    "Determinar qué constituye un entregable tangible válido para cada tipo de sprint (diseño, prototipo, informe VoC, etc.)",
+    "Establecer un formato estándar de documentación de 'terminado' (ej. reporte de una página, revisado, archivado)",
+    "Usar time-boxing en tareas de evaluación para evitar sobre-ingeniería (ej. 'usar máximo 10 horas para evaluar el concepto X')",
+    "Comunicar claramente estos criterios al equipo antes de iniciar el sprint"
+  ],
+  "entregable_esperado": "Criterio de 'Definición de Terminado' documentado y acordado por el equipo para cada tipo de sprint del proyecto",
+  "nodos_previos": [
+    "agile_stage_gate_hibrido"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si el proyecto involucra desarrollo de hardware, dispositivos médicos, maquinaria u otros productos no divisibles como el software",
+    "Cuando el equipo tiene dificultad para saber cuándo detenerse en una tarea de evaluación o diseño"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "assumption_constraint_log",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Registro de Supuestos y Restricciones",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Documento dinámico que registra los supuestos (factores considerados verdaderos sin comprobación) y las restricciones (limitaciones como presupuesto fijo o hitos obligatorios) que afectan la planificación y ejecución del proyecto. Se actualiza continuamente conforme los supuestos se validan o invalidan.",
+  "pasos_accionables": [
+    "Identificar supuestos provenientes de cualquier documento o del equipo del proyecto",
+    "Documentar restricciones definidas por el charter, cliente o reguladores",
+    "Asignar responsable y fecha límite para validar cada supuesto",
+    "Registrar acciones tomadas y el estado actual de cada ítem",
+    "Actualizar el log conforme se validan o invalidan los supuestos"
+  ],
+  "entregable_esperado": "Un log con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.",
+  "nodos_previos": [
+    "project_scope_statement"
+  ],
+  "nodos_siguientes": [
+    "risk_register"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto tiene múltiples supuestos no validados que podrían representar riesgos",
+    "Cuando se necesita rastrear restricciones impuestas por el cliente o regulaciones"
+  ]
+}

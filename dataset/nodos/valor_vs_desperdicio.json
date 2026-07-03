@@ -1,0 +1,26 @@
+{
+  "node_id": "valor_vs_desperdicio",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Valor vs. Desperdicio en Startups (Lean Thinking aplicado)",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "Basado en el pensamiento lean de manufactura (Toyota), este concepto redefine qué es 'valor' para una startup: no es lo que beneficia directamente al cliente final (como en manufactura tradicional), sino todo aquello que contribuye al aprendizaje sobre qué crea valor real para el cliente. Cualquier esfuerzo que no contribuya a este aprendizaje —como construir features que los clientes nunca descubren, o soportar múltiples plataformas innecesarias— es desperdicio, incluso si el trabajo está bien ejecutado técnicamente.",
+  "pasos_accionables": [
+    "Antes de construir una feature, preguntarse: ¿esto nos ayudará a aprender algo esencial sobre el cliente?",
+    "Identificar el mínimo esfuerzo necesario para validar una hipótesis (ej. probar con 1 red en vez de 12)",
+    "Eliminar trabajo que solo sirve para 'pulir' un producto cuya hipótesis central no ha sido validada",
+    "Revisar retrospectivamente qué porcentaje del trabajo realizado contribuyó directamente a insights accionables",
+    "Priorizar lanzar antes y con menos funcionalidades para obtener feedback real más rápido"
+  ],
+  "entregable_esperado": "Un criterio de decisión documentado (checklist o framework) para evaluar si una tarea de desarrollo es 'validante' o es desperdicio, antes de asignar recursos",
+  "nodos_previos": [
+    "aprendizaje_validado"
+  ],
+  "nodos_siguientes": [
+    "mvp_experimentacion",
+    "pivote_estrategico"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo está invirtiendo semanas o meses de desarrollo en un producto sin haber validado sus supuestos con clientes reales",
+    "Cuando existe presión para 'perfeccionar' el producto en lugar de lanzarlo pronto para aprender"
+  ]
+}

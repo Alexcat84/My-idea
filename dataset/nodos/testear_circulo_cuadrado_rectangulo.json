@@ -1,0 +1,26 @@
+{
+  "node_id": "testear_circulo_cuadrado_rectangulo",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Testear el Círculo, el Cuadrado y el Rectángulo",
+  "fuente": "Value Proposition Design",
+  "resumen_teorico": "Marco de tres niveles de testing: primero el 'círculo' (perfil del cliente: jobs, pains y gains que realmente importan), luego el 'cuadrado' (mapa de valor: si los productos/servicios realmente alivian esos pains y crean esos gains), y finalmente el 'rectángulo' (el modelo de negocio completo: si generará más ingresos que costos y es viable). Testear en este orden evita perder tiempo desarrollando soluciones para problemas irrelevantes.",
+  "pasos_accionables": [
+    "Primero, validar con evidencia qué jobs, pains y gains le importan realmente al cliente (círculo)",
+    "Luego, validar que los pain relievers y gain creators propuestos resuelven esos problemas (cuadrado)",
+    "Finalmente, validar que el modelo de negocio completo (socios, canales, ingresos, costos) es viable (rectángulo)",
+    "No avanzar al siguiente nivel sin evidencia suficiente del anterior"
+  ],
+  "entregable_esperado": "Evidencia documentada en cada uno de los tres niveles (perfil del cliente, mapa de valor, modelo de negocio) antes de escalar",
+  "nodos_previos": [
+    "value_proposition_canvas",
+    "business_model_canvas"
+  ],
+  "nodos_siguientes": [
+    "extraer_priorizar_hipotesis",
+    "experiment_library"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario quiere saber en qué orden testear sus supuestos",
+    "Si el usuario ya está testeando el producto sin haber validado que el problema es real"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "activity_attributes",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Activity Attributes",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Detalles adicionales sobre cada actividad, incluyendo predecesores, sucesores, relaciones lógicas, adelantos/retrasos, fechas impuestas, restricciones, supuestos y requisitos de recursos. Se elabora progresivamente conforme avanza la planificación.",
+  "pasos_accionables": [
+    "Identificar actividades predecesoras y sucesoras",
+    "Describir el tipo de relación lógica entre actividades",
+    "Documentar leads y lags aplicables",
+    "Especificar restricciones y supuestos por actividad",
+    "Definir requisitos de recursos y habilidades necesarias"
+  ],
+  "entregable_esperado": "Documento de atributos detallados para cada actividad del proyecto",
+  "nodos_previos": [
+    "activity_list",
+    "schedule_management_plan"
+  ],
+  "nodos_siguientes": [
+    "network_diagram",
+    "activity_resource_requirements",
+    "activity_duration_estimates"
+  ],
+  "condiciones_activacion": [
+    "Cuando la lista de actividades está completa y se requiere detalle adicional para construir el modelo de cronograma"
+  ]
+}

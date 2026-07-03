@@ -1,0 +1,26 @@
+{
+  "node_id": "diseno_experimentos_pass_fail",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Diseño de Experimentos Pass/Fail para Probar Hipótesis",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Cada hipótesis del modelo de negocio debe convertirse en un experimento simple y objetivo de tipo pass/fail que se pueda ejecutar rápidamente ('customer development experiments'). El ciclo es Hipótesis → Diseño de Experimento → Test → Insight. Se busca una señal fuerte ('grab it out of your hands') sin necesitar grandes inversiones de tiempo o dinero, y evitar quedarse en un 'máximo local' en vez de encontrar el 'máximo global'.",
+  "pasos_accionables": [
+    "Preguntarse '¿qué quiero aprender?' para cada hipótesis",
+    "Diseñar el test pass/fail más simple posible",
+    "Ejecutar el test con un grupo pequeño de clientes (ej. 10-30 prospectos)",
+    "Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)",
+    "Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global",
+    "Registrar no solo el resultado pass/fail sino también insights cualitativos"
+  ],
+  "entregable_esperado": "Lista de experimentos pass/fail diseñados y ejecutados con resultados documentados",
+  "nodos_previos": [
+    "sintesis_hipotesis_modelo_negocio"
+  ],
+  "nodos_siguientes": [
+    "preparar_contacto_clientes",
+    "customer_discovery_fase_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando las hipótesis del modelo de negocio ya están definidas y se necesita evidencia empírica antes de invertir más recursos"
+  ]
+}

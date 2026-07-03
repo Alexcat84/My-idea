@@ -1,0 +1,25 @@
+{
+  "node_id": "embudo_atricion_nuevos_productos",
+  "fase_proyecto": "ideacion",
+  "titulo_concepto": "El Embudo de Atrición de Nuevos Productos (Odds 7 a 1)",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Los datos históricos muestran que de cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Esto significa que aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+  "pasos_accionables": [
+    "Mapear cuántas ideas de producto entran al pipeline anualmente.",
+    "Medir cuántas de esas ideas pasan a fase de desarrollo, luego a lanzamiento, y finalmente logran éxito comercial.",
+    "Calcular la tasa de atrición en cada etapa (idea->desarrollo->lanzamiento->éxito).",
+    "Comparar la tasa propia contra el benchmark de la industria (60% de éxito en lanzamiento es el promedio)."
+  ],
+  "entregable_esperado": "Un diagrama de embudo (funnel) con las tasas de conversión de la empresa en cada etapa del proceso de innovación.",
+  "nodos_previos": [
+    "benchmark_inversion_rd_industria"
+  ],
+  "nodos_siguientes": [
+    "sistema_stage_gate",
+    "gestion_portafolio_proyectos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita justificar la cantidad de ideas necesarias para lograr un éxito comercial",
+    "Si la empresa no mide sus tasas de fracaso"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "node_id": "validar_modelo_financiero",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Validar el Modelo Financiero",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, pero deben estar respaldados por el aprendizaje extensivo de customer discovery y validation.",
+  "pasos_accionables": [
+    "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable",
+    "Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)",
+    "Determinar costos operativos básicos, costos de canal y márgenes",
+    "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año",
+    "Verificar el balance de caja disponible (runway)",
+    "Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas"
+  ],
+  "entregable_esperado": "Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable",
+  "nodos_previos": [
+    "customer_validation_fases",
+    "value_proposition_design"
+  ],
+  "nodos_siguientes": [
+    "revalidar_modelo_negocio",
+    "decision_pivotar_o_proceder"
+  ],
+  "condiciones_activacion": [
+    "Cuando el startup está a punto de terminar la fase de Customer Validation",
+    "Cuando se necesita preparar información financiera para inversionistas o bancos"
+  ]
+}

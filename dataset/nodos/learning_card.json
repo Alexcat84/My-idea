@@ -1,0 +1,25 @@
+{
+  "node_id": "learning_card",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Learning Card - Captura de Aprendizajes",
+  "fuente": "Value Proposition Design",
+  "resumen_teorico": "Herramienta complementaria al Test Card para documentar los resultados de los experimentos: qué hipótesis se testeó, qué resultados se obtuvieron, qué tan confiables son los datos, qué conclusiones se derivan y qué acciones se tomarán (pivotar, buscar confirmación, profundizar, avanzar al siguiente bloque, o ejecutar).",
+  "pasos_accionables": [
+    "Registrar la hipótesis testeada y los datos/resultados obtenidos",
+    "Evaluar la fiabilidad de los datos",
+    "Definir las conclusiones e insights derivados",
+    "Determinar la magnitud de la acción requerida (pivote leve o drástico)",
+    "Decidir la acción concreta: pivotar, confirmar con más pruebas, profundizar, avanzar o ejecutar"
+  ],
+  "entregable_esperado": "Learning Card completo por cada experimento, con decisión clara sobre próximos pasos",
+  "nodos_previos": [
+    "test_card"
+  ],
+  "nodos_siguientes": [
+    "five_data_traps",
+    "cycle_time"
+  ],
+  "condiciones_activacion": [
+    "Después de ejecutar cualquier experimento definido en un Test Card"
+  ]
+}

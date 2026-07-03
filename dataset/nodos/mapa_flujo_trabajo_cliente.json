@@ -1,0 +1,28 @@
+{
+  "node_id": "mapa_flujo_trabajo_cliente",
+  "fase_project": "validacion",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Mapa de Flujo de Trabajo del Cliente",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Antes de decidir si pivotar o proceder, el equipo de Customer Development debe construir un diagrama que muestre cómo el cliente prototípico realiza su trabajo hoy, con quién interactúa y cómo gasta su tiempo y dinero. Este mapa sirve como 'reality check' de las hipótesis iniciales sobre el cliente y permite comparar el flujo de trabajo con y sin el producto propuesto.",
+  "pasos_accionables": [
+    "Reunir todos los datos recolectados en las entrevistas de clientes",
+    "Diagramar cómo el cliente realiza su trabajo o vive su día actualmente",
+    "Comparar el diagrama con las hipótesis iniciales del Business Model Canvas",
+    "Dibujar el flujo de trabajo del cliente con y sin el producto propuesto",
+    "Evaluar si la diferencia entre ambos escenarios es dramática y si el cliente pagaría por ella"
+  ],
+  "entregable_esperado": "Diagrama visual del flujo de trabajo del cliente (antes/después del producto) y lista de problemas identificados con su nivel de dolor (pain level)",
+  "nodos_previos": [
+    "entrevistas_descubrimiento_cliente",
+    "hipotesis_business_model_canvas"
+  ],
+  "nodos_siguientes": [
+    "presentacion_solucion_producto",
+    "pivotar_o_proceder"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha completado la fase de Customer Discovery de problema y se necesita validar hipótesis antes de construir la solución",
+    "Cuando el equipo tiene datos cualitativos de clientes pero no los ha sistematizado visualmente"
+  ]
+}

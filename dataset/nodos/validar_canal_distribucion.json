@@ -1,0 +1,26 @@
+{
+  "node_id": "validar_canal_distribucion",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Validar Socios de Canal de Distribución (Channel Partners)",
+  "fuente": "The Startup Owner's Manual - Blank, Steve",
+  "resumen_teorico": "Para negocios con canal de venta indirecto, esta etapa valida la estrategia de canal obteniendo órdenes o compromisos firmes de los socios distribuidores. Es crucial demostrar primero demanda real de clientes finales antes de acercarse a los canales, ya que su pregunta implícita es '¿puedo ganar dinero con este producto?'.",
+  "pasos_accionables": [
+    "Obtener primero validación de demanda de clientes finales antes de contactar canales",
+    "Evaluar si el socio de canal comprará y venderá el producto según precio y términos propuestos",
+    "Determinar el porcentaje del precio de venta que exige el canal y costos adicionales (flete, publicidad)",
+    "Indagar el volumen de ventas potencial y estrategias de promoción del socio",
+    "Negociar incentivos para el canal (bonos, entrenamiento, demostraciones)",
+    "Buscar una orden inicial de stock o prueba de mercado con el canal"
+  ],
+  "entregable_esperado": "Orden de stock inicial o compromiso firme de uno o más socios de canal, junto con aprendizajes sobre términos y volumen",
+  "nodos_previos": [
+    "get_out_building_test_sell"
+  ],
+  "nodos_siguientes": [
+    "customer_creation"
+  ],
+  "condiciones_activacion": [
+    "Si el modelo de negocio depende de canales de distribución indirectos (retail, mayoristas)",
+    "Cuando ya existe evidencia de demanda de clientes finales"
+  ]
+}

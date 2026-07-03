@@ -1,0 +1,26 @@
+{
+  "node_id": "mvp_alta_fidelidad",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "MVP de Alta Fidelidad",
+  "fuente": "The Startup Owner's Manual",
+  "resumen_teorico": "Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.",
+  "pasos_accionables": [
+    "Partir del MVP de baja fidelidad usado en customer discovery",
+    "Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)",
+    "Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual",
+    "Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real",
+    "Iterar continuamente mediante desarrollo ágil y despliegue continuo"
+  ],
+  "entregable_esperado": "Un MVP funcional, pulido e instrumentado, listo para atraer y medir el comportamiento de un volumen mayor de usuarios reales",
+  "nodos_previos": [
+    "mvp_bajo_fidelidad",
+    "customer_discovery"
+  ],
+  "nodos_siguientes": [
+    "plan_de_activacion",
+    "metricas_de_adquisicion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se pasa de customer discovery a customer validation y se necesita probar el producto con más usuarios"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_costo_entrada_mercado",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Análisis de Costo de Entrada a Mercado Existente",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Basado en reglas de investigación de operaciones militares, este análisis usa el porcentaje de participación de mercado del líder para determinar si es viable atacar frontalmente o si conviene re-segmentar. Umbrales clave: 74% = monopolio efectivo (inatacable), 41% = líder de mercado (difícil), 26% = mercado inestable (hay oportunidad), menos de 26% = mercado fácil de penetrar.",
+  "pasos_accionables": [
+    "Investigar el market share del jugador dominante en el mercado objetivo",
+    "Aplicar las reglas de umbral (74%, 41%, 26%) para clasificar el nivel de dificultad",
+    "Si hay un dominante con +74%, descartar ataque frontal y considerar re-segmentación",
+    "Calcular el presupuesto necesario: 3x el del competidor dominante o 1.7x en mercados fragmentados",
+    "Decidir si la startup tiene recursos para competir o debe buscar un nicho"
+  ],
+  "entregable_esperado": "Reporte de viabilidad de entrada a mercado con cálculo de presupuesto competitivo necesario",
+  "nodos_previos": [
+    "hipotesis_tipo_mercado"
+  ],
+  "nodos_siguientes": [
+    "estrategia_resegmentacion_mercado",
+    "brief_competitivo"
+  ],
+  "condiciones_activacion": [
+    "Cuando la startup ha identificado que entra a un mercado existente",
+    "Si se necesita decidir entre atacar de frente o buscar un nicho"
+  ]
+}

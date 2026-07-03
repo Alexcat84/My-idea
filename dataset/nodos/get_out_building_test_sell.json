@@ -1,0 +1,28 @@
+{
+  "node_id": "get_out_building_test_sell",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Test Selling: Validar el Modelo de Negocio con Ventas Reales",
+  "fuente": "The Startup Owner's Manual - Blank, Steve",
+  "resumen_teorico": "Es la fase donde el fundador sale a vender el producto a earlyvangelists a precio cercano al completo, para validar de forma binaria (pass/fail) las hipótesis del modelo de negocio. A diferencia de regalar o descontar el producto, cobrar precio completo prueba la intención real de compra. Se deben gestionar con cuidado los riesgos de solicitudes de personalización y cláusulas de exclusividad.",
+  "pasos_accionables": [
+    "Definir pruebas binarias pass/fail basadas en hipótesis del modelo de negocio (ej: tasa de cierre de ventas)",
+    "Vender a earlyvangelists a precio cercano al completo, evitando descuentos excesivos",
+    "Gestionar solicitudes de personalización: evaluar si son features reales o riesgo de convertirse en negocio a medida",
+    "Evitar comprometerse a exclusividades o cláusulas de 'nación más favorecida' sin cuidado",
+    "Registrar consistentemente hallazgos de cada llamada de venta usando un formato estándar",
+    "Determinar con la junta directiva cuántas órdenes se necesitan para considerar validado el modelo"
+  ],
+  "entregable_esperado": "Órdenes de compra reales o compromisos firmes, y un pronóstico de ventas ajustado por probabilidad",
+  "nodos_previos": [
+    "identificar_earlyvangelists",
+    "formalizar_junta_asesora"
+  ],
+  "nodos_siguientes": [
+    "pivot_post_ventas",
+    "refinar_sales_roadmap"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se completó customer discovery y se tienen earlyvangelists identificados",
+    "Si se necesita validar (no escalar) el modelo de negocio con pruebas reales de venta"
+  ]
+}

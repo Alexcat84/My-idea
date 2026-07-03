@@ -1,0 +1,24 @@
+{
+  "node_id": "metricas_cohortes",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Métricas de Cohortes (Cohort-Based Metrics)",
+  "fuente": "The Lean Startup - Eric Ries",
+  "resumen_teorico": "En lugar de usar métricas agregadas o brutas (gross metrics) que ocultan el comportamiento real de los usuarios, las métricas de cohortes analizan el comportamiento de grupos específicos de clientes que ingresaron al producto en un mismo periodo. Esto permite ver claramente cuántas personas de un grupo definido realizan ciertas acciones deseadas (registro, uso, pago), convirtiendo datos abstractos en información concreta y accionable sobre personas reales.",
+  "pasos_accionables": [
+    "Definir un periodo de tiempo para agrupar usuarios (cohortes) según su fecha de ingreso",
+    "Identificar comportamientos clave a medir (registro, activación, retención, conversión)",
+    "Medir el porcentaje de cada cohorte que cumple cada comportamiento",
+    "Comparar cohortes a lo largo del tiempo para ver si las mejoras del producto generan cambios reales"
+  ],
+  "entregable_esperado": "Tablero o reporte de métricas de cohortes que muestre el comportamiento de grupos de usuarios en el tiempo",
+  "nodos_previos": [
+    "split_testing_experimentos_ab"
+  ],
+  "nodos_siguientes": [
+    "tres_as_de_metricas"
+  ],
+  "condiciones_activacion": [
+    "Si las métricas totales (vanity metrics) suben pero no se sabe la causa real",
+    "Si se necesita evaluar el impacto real de cambios en el producto sobre el comportamiento del usuario"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "product_backlog_agile",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Product Backlog: Requisitos Dinámicos del Cliente",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "El backlog de producto es el equivalente ágil de la especificación de requisitos tradicional, pero en lugar de detallar especificaciones técnicas fijas, contiene necesidades, deseos y preferencias del cliente priorizadas. Es un documento vivo que se actualiza y reprioriza continuamente con nuevo aprendizaje. Algunas empresas usan 'user stories' con 'story points' (ej. tallas de camiseta S/M/L/XL) para estimar el esfuerzo requerido.",
+  "pasos_accionables": [
+    "Recopilar necesidades, deseos y preferencias del cliente (VoC) en lugar de especificaciones técnicas rígidas",
+    "Priorizar los ítems del backlog según valor para el cliente y urgencia",
+    "Traducir los ítems de mayor prioridad en un sprint backlog al inicio de cada sprint",
+    "Actualizar y reprioritizar el backlog constantemente conforme se obtiene nueva información",
+    "Opcional: usar user stories con story points para estimar esfuerzo"
+  ],
+  "entregable_esperado": "Documento de backlog priorizado y vivo, con ítems traducibles a tareas concretas por sprint",
+  "nodos_previos": [
+    "power_of_nine_agile",
+    "voz_del_cliente_voc"
+  ],
+  "nodos_siguientes": [
+    "sprint_board_burn_down"
+  ],
+  "condiciones_activacion": [
+    "Si los requisitos del cliente son ambiguos o cambiantes y no se pueden fijar de antemano",
+    "Cuando se requiere flexibilidad en el diseño manteniendo alineación con necesidades reales del usuario"
+  ]
+}

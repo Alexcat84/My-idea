@@ -1,0 +1,25 @@
+{
+  "node_id": "validacion_hipotesis_ingresos",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Validación de la Hipótesis de Ingresos",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Antes de escalar, es necesario hacer un cálculo aproximado (no contable) de si el ingreso proyectado cubre costos, crece con el tiempo y mejora la rentabilidad a mayor escala. También se debe considerar cómo el canal de distribución afecta el reconocimiento de ingresos y el valor de vida del cliente (Customer Lifetime Value) como factor central en la estrategia de precios.",
+  "pasos_accionables": [
+    "Calcular ingresos brutos aproximados multiplicando volumen por precio promedio",
+    "Verificar si el ingreso cubre costos fijos y variables en el corto plazo",
+    "Evaluar si la rentabilidad mejora a medida que crecen los ingresos",
+    "Considerar el efecto del canal de distribución (descuentos, derechos de devolución) en el ingreso real",
+    "Calcular el valor de vida del cliente (LTV) y su impacto en la estrategia de precio"
+  ],
+  "entregable_esperado": "Cálculo preliminar de viabilidad financiera del modelo de ingresos ('back-of-the-envelope')",
+  "nodos_previos": [
+    "seleccion_estrategia_pricing",
+    "analisis_tco_roi_b2b"
+  ],
+  "nodos_siguientes": [
+    "sintesis_hipotesis_modelo_negocio"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha definido un modelo de pricing y se necesita decidir si el negocio vale la pena antes de escalar"
+  ]
+}

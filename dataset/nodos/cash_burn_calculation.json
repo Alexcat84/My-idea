@@ -1,0 +1,24 @@
+{
+  "node_id": "cash_burn_calculation",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Cálculo de Cash Burn (Quema de Efectivo)",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Proceso para calcular cuánto dinero pierde o gana la empresa cada trimestre, restando todos los costos (ventas, producto, operativos) de los ingresos netos. Es el indicador central para saber cuánto tiempo de vida (runway) le queda a la startup antes de quedarse sin fondos.",
+  "pasos_accionables": [
+    "Calcular ingresos netos de la empresa por trimestre (ingresos brutos menos costos de canal)",
+    "Restar costos de ventas, costos de producto y costos operativos corrientes",
+    "El resultado es el cash burn (positivo o negativo) del periodo",
+    "Restar el cash burn del efectivo disponible al inicio del trimestre para obtener el efectivo remanente"
+  ],
+  "entregable_esperado": "Cálculo trimestral de cash burn y efectivo remanente durante al menos el primer año",
+  "nodos_previos": [
+    "metrics_that_matter_framework"
+  ],
+  "nodos_siguientes": [
+    "pivot_or_proceed_decision"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita saber cuánto tiempo puede operar la empresa antes de quedarse sin capital",
+    "Antes de decidir escalar el negocio o buscar más financiamiento"
+  ]
+}

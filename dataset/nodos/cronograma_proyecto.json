@@ -1,0 +1,27 @@
+{
+  "node_id": "cronograma_proyecto",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Cronograma del Proyecto (Project Schedule)",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se puede representar como diagrama de Gantt (detallado) o gráfico de hitos (solo eventos clave).",
+  "pasos_accionables": [
+    "Recopilar lista de actividades, diagrama de red y estimaciones de duración",
+    "Determinar dependencias entre actividades",
+    "Asignar recursos a cada actividad",
+    "Calcular fechas de inicio y fin usando software de programación o Gantt",
+    "Identificar hitos clave para el gráfico de hitos"
+  ],
+  "entregable_esperado": "Diagrama de Gantt o gráfico de hitos con fechas de inicio/fin y dependencias",
+  "nodos_previos": [
+    "estimacion_tres_puntos",
+    "plan_gestion_cronograma"
+  ],
+  "nodos_siguientes": [
+    "estimacion_costos_actividad",
+    "presupuesto_proyecto"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita visualizar la secuencia temporal de actividades del proyecto",
+    "Cuando se requiere comunicar plazos a stakeholders"
+  ]
+}

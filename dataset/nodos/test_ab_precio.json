@@ -1,0 +1,25 @@
+{
+  "node_id": "test_ab_precio",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Test A/B de Precio",
+  "fuente": "Value Proposition Design",
+  "resumen_teorico": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando variantes a distintos segmentos de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
+  "pasos_accionables": [
+    "Definir las variantes a testear (ej. precio de venta vs. modelo de renta)",
+    "Implementar el test en un canal real (sitio web, landing page)",
+    "Ejecutar múltiples rondas para afinar el precio óptimo",
+    "Medir el porcentaje de usuarios que prefieren cada variante",
+    "Seleccionar el precio o modelo validado con mayor conversión"
+  ],
+  "entregable_esperado": "Un precio o modelo de monetización validado con datos de conversión reales de al menos cientos de usuarios testeados.",
+  "nodos_previos": [
+    "biblioteca_experimentos_validacion"
+  ],
+  "nodos_siguientes": [
+    "diseno_business_model_canvas"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe incertidumbre sobre el precio o modelo de ingresos adecuado",
+    "Cuando se tienen múltiples opciones de monetización viables"
+  ]
+}

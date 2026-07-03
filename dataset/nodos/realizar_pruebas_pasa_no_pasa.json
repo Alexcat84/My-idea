@@ -1,0 +1,23 @@
+{
+  "node_id": "realizar_pruebas_pasa_no_pasa",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Realizar Pruebas Pasa/No Pasa (Pass/Fail Tests)",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Cada hipótesis de negocio debe tener un criterio de éxito binario definido de antemano. No basta con obtener una respuesta 'aprobatoria': se debe buscar una reacción masiva y contundente de los earlyvangelists antes de avanzar a la etapa de Customer Validation. El criterio de éxito debe estar ligado al modelo de negocio (ej. costo de adquisición vs. precio del producto).",
+  "pasos_accionables": [
+    "Definir de antemano el número o porcentaje de clientes 'suficiente' para considerar la prueba exitosa",
+    "Comparar el costo de adquisición de cliente contra el precio del producto",
+    "Enviar invitaciones múltiples (email, ads) y medir tasas de respuesta en términos absolutos y porcentuales",
+    "Clasificar las reacciones de los clientes en categorías (aman el producto, piden features, no ven necesidad, etc.)"
+  ],
+  "entregable_esperado": "Documento de criterios pass/fail con resultados reales comparados y decisión de avanzar o pivotar",
+  "nodos_previos": [
+    "medir_comportamiento_cliente_mvp"
+  ],
+  "nodos_siguientes": [
+    "verificar_product_market_fit"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita una decisión objetiva (no basada en opiniones) sobre si continuar o pivotar"
+  ]
+}

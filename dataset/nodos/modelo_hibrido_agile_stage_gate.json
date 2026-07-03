@@ -1,0 +1,27 @@
+{
+  "node_id": "modelo_hibrido_agile_stage_gate",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Modelo Híbrido Agile-Stage-Gate",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Integración del método Agile-Scrum (sprints, scrums diarios, tableros visuales, backlog priorizado) dentro del sistema tradicional de Stage-Gate para el desarrollo de productos físicos. No son sistemas excluyentes: Stage-Gate mantiene la estructura de gates y decisiones Go/Kill a nivel gerencial, mientras que Agile aporta flexibilidad operativa a nivel de equipo, mejorando la comunicación, reduciendo malentendidos y acelerando el flujo de trabajo diario.",
+  "pasos_accionables": [
+    "Mantener el sistema Stage-Gate existente para las decisiones Go/Kill de alto nivel",
+    "Implementar sprints cortos (ej. de dos semanas) dentro de cada etapa de desarrollo",
+    "Establecer reuniones diarias de pie (scrums) de 15 minutos para sincronizar al equipo",
+    "Usar tableros visuales de scrum para dar seguimiento a tareas y backlog",
+    "Realizar sprint reviews periódicas con representantes de clientes o usuarios internos"
+  ],
+  "entregable_esperado": "Un proceso de desarrollo documentado que combine gates de decisión estratégica con sprints operativos ágiles, incluyendo tablero de backlog y calendario de sprints.",
+  "nodos_previos": [
+    "seleccion_proyectos_agile"
+  ],
+  "nodos_siguientes": [
+    "definicion_sprint_terminado",
+    "rol_gates_agile"
+  ],
+  "condiciones_activacion": [
+    "Si el proyecto enfrenta alta incertidumbre de mercado o requisitos cambiantes",
+    "Si el equipo ya tiene un sistema Stage-Gate funcional pero necesita mayor velocidad de respuesta",
+    "Si se desarrolla un producto físico complejo (hardware y software combinados)"
+  ]
+}

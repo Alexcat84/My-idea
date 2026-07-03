@@ -1,0 +1,28 @@
+{
+  "node_id": "metricas_que_importan",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Metrics That Matter: Validar el Modelo Financiero",
+  "fuente": "The Startup Owner's Manual - Blank, Steve",
+  "resumen_teorico": "En lugar de hojas de cálculo de 5 años con cientos de líneas, este enfoque usa un puñado de números clave organizados según el Business Model Canvas para determinar si el negocio es escalable y rentable antes de quedarse sin dinero. Las dos métricas más importantes son: cuántos meses de efectivo quedan en el banco, y qué tan rápido se está quemando ese efectivo (burn rate). Incluye métricas de propuesta de valor, relaciones con clientes, tipo de mercado, estructura de costos, canal y flujos de ingresos.",
+  "pasos_accionables": [
+    "Calcular unidades totales vendidas por periodo basándose en reportes de validación",
+    "Determinar el precio de venta promedio validado con clientes y canal",
+    "Calcular ventas brutas menos descuentos de canal y otros costos de canal",
+    "Obtener el ingreso neto de la compañía restando costos de canal",
+    "Restar costos de ventas, costos de producto y costos operativos para obtener el burn rate por periodo",
+    "Calcular el efectivo restante en banco después de cada periodo",
+    "Definir junto al equipo e inversionistas cuál burn rate es aceptable y cuántos pivotes más puede costear el startup"
+  ],
+  "entregable_esperado": "Modelo financiero simplificado (spreadsheet trimestral) con las 11 métricas clave que muestra el burn rate y el efectivo restante proyectado, indicando si el negocio es escalable y rentable",
+  "nodos_previos": [
+    "validar_modelo_negocio_hechos"
+  ],
+  "nodos_siguientes": [
+    "revalidar_modelo_negocio",
+    "customer_creation"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita decidir si invertir fuertemente en escalar el negocio sin quedarse sin fondos",
+    "Si el equipo confunde este análisis con proyecciones financieras tradicionales de 5 años"
+  ]
+}

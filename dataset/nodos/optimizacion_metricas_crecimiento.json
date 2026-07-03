@@ -1,0 +1,25 @@
+{
+  "node_id": "optimizacion_metricas_crecimiento",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Optimización de Métricas de Crecimiento (Grow Customers)",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Se deben monitorear métricas clave como dólares incrementales por pedido, take rate de ofertas adicionales, tamaño promedio de orden, y tasa de opt-outs, ajustando constantemente mediante pruebas A/B.",
+  "pasos_accionables": [
+    "Medir dólares incrementales promedio por cliente recurrente (meta: +15%)",
+    "Calcular el 'take rate' de ofertas de upsell (meta: doble dígito)",
+    "Realizar pruebas A/B con ofertas más generosas y urgentes",
+    "Monitorear tasa de opt-outs para evitar saturar al cliente (no debe superar 25% del baseline)",
+    "Realizar encuestas de satisfacción y llamadas de seguimiento a clientes"
+  ],
+  "entregable_esperado": "Dashboard de métricas de crecimiento con ofertas optimizadas y tasa de opt-out controlada",
+  "nodos_previos": [
+    "analisis_de_cohortes"
+  ],
+  "nodos_siguientes": [
+    "coeficiente_viral",
+    "valor_de_vida_del_cliente"
+  ],
+  "condiciones_activacion": [
+    "Si el startup ya tiene base de clientes activa y busca incrementar ingresos por cliente existente"
+  ]
+}

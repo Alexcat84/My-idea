@@ -1,0 +1,26 @@
+{
+  "node_id": "organizational_influence_map",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Mapa Organizacional y de Influencia",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Diagrama que muestra a todas las personas que rodean e influencian la decisión de compra de un cliente, ya sea en un contexto de consumidor (familia, amigos) o empresarial (colegas, jefes). Ayuda a visualizar la complejidad real detrás de cada venta.",
+  "pasos_accionables": [
+    "Listar todas las personas que podrían influir en la decisión de compra",
+    "Dibujar un diagrama tentativo de relaciones e influencias",
+    "Marcar el impacto del producto en la vida diaria/laboral del cliente",
+    "Actualizar el mapa a medida que se descubren nuevos actores"
+  ],
+  "entregable_esperado": "Diagrama visual del mapa organizacional/de influencia del cliente objetivo",
+  "nodos_previos": [
+    "day_in_life_customer",
+    "customer_types_mapping"
+  ],
+  "nodos_siguientes": [
+    "channels_hypothesis_web_mobile",
+    "channels_hypothesis_physical"
+  ],
+  "condiciones_activacion": [
+    "Cuando la venta ocurre en una organización grande y compleja",
+    "Si hay múltiples stakeholders desconocidos"
+  ]
+}

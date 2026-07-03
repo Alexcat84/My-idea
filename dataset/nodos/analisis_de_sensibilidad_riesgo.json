@@ -1,0 +1,25 @@
+{
+  "node_id": "analisis_de_sensibilidad_riesgo",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Análisis de Sensibilidad y Ratio Riesgo-Retorno",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Técnica para identificar riesgos clave de un proyecto probando cómo cambian los resultados financieros al variar supuestos críticos (ej. ventas al 75%, costos +10%, retraso de lanzamiento). También se calcula el ratio riesgo-retorno dividiendo la máxima pérdida acumulada posible entre el NPV del proyecto, para cuantificar el riesgo relativo.",
+  "pasos_accionables": [
+    "Identificar los supuestos clave del modelo financiero (ventas, costos, fecha de lanzamiento)",
+    "Modificar cada supuesto uno a la vez y recalcular NPV/IRR/Payback",
+    "Construir escenarios de mejor y peor caso",
+    "Calcular la curva de flujo de caja acumulado para hallar la posición negativa máxima",
+    "Calcular el ratio riesgo-retorno = máxima pérdida acumulada / NPV"
+  ],
+  "entregable_esperado": "Un análisis de sensibilidad documentado con escenarios best/worst case y el ratio riesgo-retorno del proyecto",
+  "nodos_previos": [
+    "ranking_proyectos_por_npv"
+  ],
+  "nodos_siguientes": [
+    "expected_commercial_value_ecv"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto tiene alta incertidumbre en sus proyecciones financieras",
+    "Antes de tomar decisiones Go/Kill importantes en gates"
+  ]
+}

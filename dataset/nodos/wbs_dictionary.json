@@ -1,0 +1,27 @@
+{
+  "node_id": "wbs_dictionary",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "WBS Dictionary",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Documento que provee detalle sobre las cuentas de control y paquetes de trabajo del WBS, incluyendo descripción del trabajo, supuestos, restricciones, responsables, hitos, recursos, estimaciones de costo y criterios de calidad y aceptación.",
+  "pasos_accionables": [
+    "Documentar el código de cuenta para cada paquete de trabajo",
+    "Describir el trabajo requerido en cada paquete",
+    "Listar hitos y fechas asociadas",
+    "Identificar recursos requeridos y estimaciones de costo",
+    "Definir requisitos de calidad y criterios de aceptación"
+  ],
+  "entregable_esperado": "Diccionario completo del WBS con detalle de cada paquete de trabajo",
+  "nodos_previos": [
+    "work_breakdown_structure",
+    "project_scope_statement"
+  ],
+  "nodos_siguientes": [
+    "risk_register",
+    "activity_list",
+    "project_budget"
+  ],
+  "condiciones_activacion": [
+    "Cuando el WBS ya está creado y se requiere documentar detalles específicos de cada paquete de trabajo"
+  ]
+}

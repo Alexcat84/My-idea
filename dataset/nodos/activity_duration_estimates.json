@@ -1,0 +1,26 @@
+{
+  "node_id": "activity_duration_estimates",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Activity Duration Estimates",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Estimaciones del tiempo necesario para completar el trabajo del proyecto, determinadas mediante juicio experto o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
+  "pasos_accionables": [
+    "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos)",
+    "Convertir horas de esfuerzo en días o semanas según corresponda",
+    "Incluir reserva de contingencia para riesgos de incertidumbre",
+    "Documentar la duración estimada para cada actividad"
+  ],
+  "entregable_esperado": "Documento de estimaciones de duración para cada actividad del WBS",
+  "nodos_previos": [
+    "activity_resource_requirements",
+    "resource_breakdown_structure",
+    "project_scope_statement"
+  ],
+  "nodos_siguientes": [
+    "project_schedule",
+    "schedule_baseline"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita estimar cuánto tiempo tomará completar cada actividad del proyecto"
+  ]
+}

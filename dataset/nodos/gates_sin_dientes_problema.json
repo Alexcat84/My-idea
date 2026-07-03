@@ -1,0 +1,25 @@
+{
+  "node_id": "gates_sin_dientes_problema",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Diagnóstico: Gates sin Dientes (Gates with No Teeth)",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Muchas empresas tienen un sistema Stage-Gate instalado pero los gates carecen de poder real: una vez aprobado, un proyecto rara vez se mata, convirtiendo el proceso en un 'túnel' en vez de un 'embudo'. La causa raíz es que la gerencia no sabe decir 'no' por razones de momentum, política, o falta de criterios claros de decisión.",
+  "pasos_accionables": [
+    "Dibujar la curva de atrición del portafolio actual (proyectos que sobreviven cada gate)",
+    "Verificar si la tasa de eliminación en gates tempranos es cercana a cero (señal de alerta)",
+    "Identificar cuáles de las '7 razones para no matar proyectos' aplican en la organización",
+    "Evaluar si los gates funcionan como reuniones de inversión o solo como checkpoints de status"
+  ],
+  "entregable_esperado": "Diagnóstico documentado del estado actual de los gates con curva de atrición y razones identificadas de resistencia a matar proyectos",
+  "nodos_previos": [
+    "gates_go_kill_decision_points"
+  ],
+  "nodos_siguientes": [
+    "pruning_portafolio",
+    "requisitos_gates_con_dientes"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa tiene demasiados proyectos activos sin claridad de prioridad",
+    "Si ningún proyecto ha sido cancelado en el último año a pesar de tener un proceso Stage-Gate"
+  ]
+}

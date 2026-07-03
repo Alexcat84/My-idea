@@ -1,0 +1,22 @@
+{
+  "node_id": "consecuencias_no_intencionadas_sistemicas",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Consecuencias No Intencionadas en Sistemas Interconectados",
+  "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+  "resumen_teorico": "El caso de Baxter Street (una app de navegación creó un atajo peligroso que se convirtió en rampa viral para saltos de autos gracias a algoritmos de video) ilustra cómo el diseño de un sistema (ruteo de tráfico) interactúa con otro (algoritmos de atención en redes sociales) generando consecuencias imprevistas y en cascada. Los diseñadores deben anticipar cómo su solución puede interactuar con otros sistemas externos (redes sociales, comportamiento humano, infraestructura) de maneras no previstas.",
+  "pasos_accionables": [
+    "Identifica otros sistemas externos que podrían interactuar con tu solución (redes sociales, otras apps, comportamiento social).",
+    "Simula o investiga escenarios de uso indebido o inesperado de tu producto.",
+    "Diseña salvaguardas o mecanismos de monitoreo para detectar efectos en cascada no deseados.",
+    "Revisa periódicamente el impacto real vs. el impacto previsto de tu sistema en el mundo."
+  ],
+  "entregable_esperado": "Un documento de análisis de riesgos sistémicos que liste posibles interacciones no intencionadas con otros sistemas y planes de mitigación.",
+  "nodos_previos": [
+    "framework_ppph_flujos"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se lanza un producto que interactúa con infraestructura pública o plataformas sociales.",
+    "Si existe riesgo de que el uso viral o masivo del producto genere efectos secundarios peligrosos."
+  ]
+}

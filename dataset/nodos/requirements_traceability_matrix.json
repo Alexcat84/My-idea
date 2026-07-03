@@ -1,0 +1,24 @@
+{
+  "node_id": "requirements_traceability_matrix",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Matriz de Trazabilidad de Requisitos",
+  "fuente": "A Project Manager's Book of Forms",
+  "resumen_teorico": "Herramienta que rastrea cada requisito desde su origen hasta los entregables del WBS que lo satisfacen, incluyendo las métricas de medición y el método de validación. También puede usarse para vincular categorías de requisitos entre sí (funcional-técnico, negocio-técnico).",
+  "pasos_accionables": [
+    "Asignar un ID único a cada requisito documentado",
+    "Vincular cada requisito con el objetivo del proyecto que satisface",
+    "Asociar cada requisito con el entregable del WBS correspondiente",
+    "Definir la métrica y técnica de validación para cada requisito"
+  ],
+  "entregable_esperado": "Una matriz que conecta requisitos, objetivos del proyecto, entregables WBS, métricas y métodos de validación.",
+  "nodos_previos": [
+    "requirements_documentation"
+  ],
+  "nodos_siguientes": [
+    "project_scope_statement"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita garantizar que ningún requisito quede sin cumplir o sin validar",
+    "Cuando el proyecto es complejo y requiere control formal de cambios en requisitos"
+  ]
+}

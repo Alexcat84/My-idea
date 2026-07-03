@@ -1,0 +1,28 @@
+{
+  "node_id": "spiral_development_build_test_feedback",
+  "fase_proyecto": "validacion",
+  "titulo_concepto": "Desarrollo en Espiral (Spiral Development)",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Los clientes no saben lo que quieren hasta que lo ven o experimentan. Por ello, en lugar de seguir un proceso lineal y rígido, los equipos exitosos usan un enfoque en espiral: múltiples iteraciones de 'construir-probar-recibir feedback-revisar' desde las etapas tempranas hasta el testing final. Empresas líderes como IDEO iteran en promedio 15 veces con el cliente por proyecto. A diferencia del Agile (medido en semanas), las espirales se miden en meses, pero comparten la lógica de validación temprana y frecuente.",
+  "pasos_accionables": [
+    "Crear una versión rápida y económica del producto (no el prototipo final) para mostrar al cliente lo antes posible",
+    "Recoger feedback confirmatorio de los primeros usuarios",
+    "Revisar el producto incorporando los aprendizajes",
+    "Repetir el ciclo con versiones cada vez más completas hasta llegar a pruebas de campo formales",
+    "Documentar cada iteración desde el estudio VoC inicial hasta el testeo completo del producto"
+  ],
+  "entregable_esperado": "Una secuencia documentada de al menos 3-4 versiones del producto validadas con clientes reales antes del lanzamiento final",
+  "nodos_previos": [
+    "voice_of_customer_research",
+    "concept_testing"
+  ],
+  "nodos_siguientes": [
+    "market_launch_plan",
+    "field_trials"
+  ],
+  "condiciones_activacion": [
+    "Cuando el mercado es fluido y los clientes no tienen claridad sobre sus necesidades",
+    "Si el equipo está tentado a seguir un proceso lineal y rígido de desarrollo",
+    "Cuando se requiere reducir el riesgo de tener que 'volver al pizarrón' tras el desarrollo completo"
+  ]
+}

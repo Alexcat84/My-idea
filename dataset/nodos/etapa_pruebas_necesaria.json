@@ -1,0 +1,22 @@
+{
+  "node_id": "etapa_pruebas_necesaria",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Necesidad de una Etapa de Pruebas Separada en Proyectos Grandes",
+  "fuente": "Winning at New Products - Robert G. Cooper",
+  "resumen_teorico": "Aunque Agile-Stage-Gate incorpora validaciones continuas de cliente durante el Desarrollo, para proyectos grandes, costosos y de larga duración se recomienda mantener una etapa de Pruebas (Testing) separada con su propio gate ('Go to Test'). Esta etapa incluye pruebas de producción, ensayos de campo formales, pruebas beta y test de mercado, lo que permite a la gerencia revisar el proyecto antes de comprometer capital en equipo de producción o lanzamiento semicomercial.",
+  "pasos_accionables": [
+    "Evaluar el tamaño, costo y duración del proyecto para decidir si se necesita etapa de pruebas separada",
+    "Si el proyecto es grande, definir un gate 'Go to Test' distinto del cierre de Desarrollo",
+    "Incluir en la etapa de pruebas: ensayos de producción, pruebas de campo/beta, y pruebas de mercado",
+    "Mantener al equipo de desarrollo involucrado durante esta etapa para asegurar continuidad y compromiso"
+  ],
+  "entregable_esperado": "Plan de etapa de pruebas con actividades específicas (producción, campo, mercado) y gate de aprobación definido.",
+  "nodos_previos": [
+    "rol_gates_agile"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si el proyecto es de gran envergadura, alto costo o larga duración",
+    "Si se requiere inversión de capital (CAPEX) en equipo de producción antes del lanzamiento"
+  ]
+}
