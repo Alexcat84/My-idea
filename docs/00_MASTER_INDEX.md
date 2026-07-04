@@ -18,5 +18,9 @@ Especificaciones de software, diagramas de base de datos, stack tecnológico y d
 Procedimientos operativos estándar (SOPs), manuales de uso interno de scripts (como la curación del grafo) y métricas de calidad.
 *(Vacio temporalmente)*
 
+## Categoría AUD: Auditorías
+Registro de auditorías de calidad del dataset y del pipeline, propias y externas.
+- **[AUD-01-Fase1_Cierre_y_Auditoria](file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/docs/audits/AUD-01-Fase1_Cierre_y_Auditoria.md):** Cierre de la Fase 1 (saneamiento de enlaces, normalización ASCII, fusión semántica) y auditoría independiente de Fable. Dataset congelado en el tag `dataset-v1.0.0`.
+
 ---
 *Nota: Este índice se actualizará conforme se agreguen nuevos documentos formales a las categorías respectivas.*
