@@ -1,0 +1,27 @@
+{
+  "node_id": "metodo_valor_presente_neto_npv",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Valor Presente Neto (NPV) como método preferido de decisión",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "El NPV es el método financiero más confiable para evaluar inversiones porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo. A diferencia de IRR y payback, NPV no ignora el tamaño ni la escala de la inversión, siendo el criterio recomendado cuando los métodos entran en conflicto.",
+  "pasos_accionables": [
+    "Definir la tasa de descuento (hurdle rate) de la empresa",
+    "Proyectar los flujos de caja futuros del proyecto",
+    "Calcular el NPV descontando los flujos a la tasa definida",
+    "Comparar NPV entre proyectos alternativos y elegir el de mayor valor positivo",
+    "Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales"
+  ],
+  "entregable_esperado": "Cálculo de NPV documentado con supuestos claros y análisis de sensibilidad para respaldar la decisión de inversión",
+  "nodos_previos": [
+    "definicion_hurdle_rate",
+    "proyeccion_flujos_caja"
+  ],
+  "nodos_siguientes": [
+    "gestion_capital_trabajo",
+    "analisis_sensibilidad_financiera"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendedor debe decidir entre múltiples proyectos de inversión de capital",
+    "Cuando los métodos de IRR y payback dan resultados contradictorios"
+  ]
+}

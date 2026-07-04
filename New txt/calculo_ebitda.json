@@ -1,0 +1,25 @@
+{
+  "node_id": "calculo_ebitda",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "EBITDA como Medida de Eficiencia Operativa",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "EBITDA (utilidad antes de intereses, impuestos, depreciación y amortización) es una métrica popular en Wall Street porque ignora gastos no monetarios como la depreciación, ofreciendo una visión más pura de la eficiencia operativa. Surgió como respuesta a manipulaciones de EBIT mediante juegos con depreciación (caso Waste Management).",
+  "pasos_accionables": [
+    "Calcular EBITDA = EBIT + Depreciación + Amortización",
+    "Comparar EBITDA con EBIT para entender el peso de gastos no monetarios",
+    "Usar EBITDA para comparar empresas con diferentes políticas de depreciación",
+    "No usar EBITDA como único indicador; complementarlo con flujo de caja real"
+  ],
+  "entregable_esperado": "Cálculo de EBITDA junto con EBIT y utilidad neta para análisis comparativo",
+  "nodos_previos": [
+    "tipos_de_utilidad",
+    "depreciacion_amortizacion_impacto"
+  ],
+  "nodos_siguientes": [
+    "tres_palancas_rentabilidad"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario busca inversión de capital de riesgo",
+    "Si el usuario compara su empresa con competidores de distinta estructura de activos"
+  ]
+}

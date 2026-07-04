@@ -1,0 +1,23 @@
+{
+  "node_id": "retorno_sobre_activos",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Retorno sobre Activos (ROA)",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "El ROA mide qué porcentaje de cada dólar invertido en activos de la empresa se convierte en ganancia. Se calcula dividiendo la ganancia neta entre el total de activos. A diferencia de los márgenes de rentabilidad, un ROA demasiado alto puede ser señal de alerta: podría indicar que la empresa no está reinvirtiendo en su base de activos para el futuro, o incluso que está manipulando el balance para reducir artificialmente los activos reportados (como hizo Enron).",
+  "pasos_accionables": [
+    "Calcular: Ganancia Neta / Total de Activos",
+    "Comparar el ROA con el promedio de la industria (varía mucho entre manufactura, servicios y retail)",
+    "Si el ROA es excesivamente alto, investigar si se está invirtiendo lo suficiente en activos futuros",
+    "Verificar la integridad del balance general si el ROA parece sospechosamente alto"
+  ],
+  "entregable_esperado": "Cálculo de ROA y análisis de inversión en activos futuros",
+  "nodos_previos": [
+    "margen_neto"
+  ],
+  "nodos_siguientes": [
+    "retorno_sobre_capital"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario quiere evaluar la eficiencia en el uso de activos de la empresa"
+  ]
+}

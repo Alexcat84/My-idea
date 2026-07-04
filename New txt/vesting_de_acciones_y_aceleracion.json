@@ -1,0 +1,27 @@
+{
+  "node_id": "vesting_de_acciones_y_aceleracion",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Vesting de Acciones y Aceleración Doble Gatillo (Stock Vesting & Double Trigger Acceleration)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Mecanismo estándar donde las acciones otorgadas a fundadores, empleados y consultores se adquieren gradualmente en el tiempo (típicamente 25% al año, resto mensual durante 3 años), protegiendo a la empresa de que alguien se vaya prematuramente reteniendo todo su equity. El 'Double Trigger Acceleration' acelera el vesting completo si ocurren dos eventos: un Change in Control Y una terminación involuntaria sin causa dentro de 13 meses.",
+  "pasos_accionables": [
+    "Establecer el cronograma de vesting (ej. 1 año cliff + 3 años mensual)",
+    "Definir la opción de recompra de acciones no adquiridas",
+    "Negociar si aplica double trigger acceleration para fundadores clave",
+    "Documentar qué constituye 'Cause' y 'Good Reason' para efectos de terminación",
+    "Incluir requisito de firma de release de reclamos para aceleración"
+  ],
+  "entregable_esperado": "Acuerdo de vesting documentado con cronograma y condiciones de aceleración claramente definidas",
+  "nodos_previos": [
+    "stock_option_plan",
+    "employee_pool"
+  ],
+  "nodos_siguientes": [
+    "retencion_de_talento",
+    "planificacion_de_salida"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está estableciendo términos de equity para fundadores o empleados",
+    "Si necesita proteger a la empresa ante salidas prematuras de socios clave"
+  ]
+}

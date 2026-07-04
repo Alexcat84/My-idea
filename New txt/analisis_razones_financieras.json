@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_razones_financieras",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Análisis de Razones Financieras (Ratios)",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "Las razones financieras (rentabilidad, apalancamiento, liquidez y eficiencia) combinan datos de los tres estados financieros para revelar información que los números crudos no muestran. Ejemplos: retorno sobre activos (ROA), retorno sobre capital (ROE), razón de deuda a capital, razón corriente, rotación de activos totales, días de ventas pendientes (DSO). Permiten comparar empresas de distinto tamaño y detectar tendencias de eficiencia o riesgo.",
+  "pasos_accionables": [
+    "Calcular ratios de rentabilidad: margen bruto, margen operativo, ROA, ROE",
+    "Calcular ratios de apalancamiento: deuda a capital",
+    "Calcular ratios de liquidez: razón corriente, capital de trabajo",
+    "Calcular ratios de eficiencia: rotación de activos, DSO, rotación de inventario (si aplica)",
+    "Comparar resultados entre periodos y frente a competidores del mismo sector"
+  ],
+  "entregable_esperado": "Tabla de ratios financieros clave calculados para la empresa propia, con interpretación de tendencias y comparación sectorial",
+  "nodos_previos": [
+    "lectura_estado_resultados",
+    "lectura_balance_general",
+    "lectura_estado_flujo_efectivo"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si el usuario necesita evaluar la salud financiera integral de su empresa",
+    "Si el usuario debe presentar métricas financieras a inversionistas o bancos",
+    "Si el usuario quiere comparar su desempeño financiero con la competencia"
+  ]
+}

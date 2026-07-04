@@ -1,0 +1,26 @@
+{
+  "node_id": "antidilution_provisions",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Cláusulas Antidilución (Antidilution Provisions)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Mecanismo contractual que protege a los inversionistas de Series A ante una futura ronda de financiamiento a un precio menor (down round), ajustando el precio de conversión de sus acciones preferentes. Existen dos modelos principales: 'full ratchet' (ajusta el precio de conversión al nuevo precio más bajo, muy agresivo) y 'weighted average' (promedio ponderado, más común y equilibrado). Se excluyen ciertos eventos como el employee pool o fusiones aprobadas por el Board.",
+  "pasos_accionables": [
+    "Identificar qué tipo de antidilución se negociará: full ratchet o weighted average.",
+    "Definir las excepciones (carve-outs) que no gatillan el ajuste, como el pool de opciones para empleados.",
+    "Negociar si el ajuste aplica también a splits, dividendos en acciones y recapitalizaciones.",
+    "Consultar con abogado corporativo el impacto en la cap table ante un escenario de down round."
+  ],
+  "entregable_esperado": "Cláusula de antidilución redactada en el term sheet, con el mecanismo y las excepciones claramente definidas.",
+  "nodos_previos": [
+    "negociacion_term_sheet",
+    "valuation_pre_money"
+  ],
+  "nodos_siguientes": [
+    "cap_table_management",
+    "liquidation_preference"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendedor está negociando una ronda de inversión Serie A o posterior",
+    "Si existe riesgo de una futura ronda a menor valuación (down round)"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "node_id": "pool_opciones_empleados",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Tamaño del Pool de Opciones para Empleados",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "El tamaño del option pool (reserva de acciones para futuros empleados) afecta directamente la valuación pre-money efectiva. Los VCs suelen exigir que el aumento del pool ocurra antes de la financiación, diluyendo a los accionistas existentes en lugar de a los nuevos inversores. Un pool típico está entre 10% y 20%.",
+  "pasos_accionables": [
+    "Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.",
+    "Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC.",
+    "Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.",
+    "Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool)."
+  ],
+  "entregable_esperado": "Option budget documentado y tamaño de pool negociado alineado con necesidades reales de contratación.",
+  "nodos_previos": [
+    "valuacion_pre_post_money"
+  ],
+  "nodos_siguientes": [
+    "warrants_financiamiento"
+  ],
+  "condiciones_activacion": [
+    "Cuando el VC propone un tamaño de option pool que impacta la valuación pre-money."
+  ]
+}

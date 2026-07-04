@@ -1,0 +1,27 @@
+{
+  "node_id": "safe_simple_agreement_future_equity",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "SAFE (Simple Agreement for Future Equity)",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "El SAFE, creado por Y Combinator, es un instrumento sintético que combina características de equity y deuda sin ser técnicamente deuda: el inversionista compra efectivamente un warrant no valorado. Elimina problemas legales de insolvencia asociados a la deuda y features como intereses o fecha de vencimiento. Puede incluir cap, descuento y cláusula MFN (most favored nation), pero típicamente carece de derechos pro rata explícitos y de fecha de maduración, lo que elimina un punto de apalancamiento para los inversionistas en negociaciones futuras.",
+  "pasos_accionables": [
+    "Evaluar si el SAFE es preferible a la deuda convertible para evitar riesgos de insolvencia técnica",
+    "Decidir si se incluye cap de valuación, descuento, o ambos (no ambos con warrants)",
+    "Determinar si se necesita añadir una cláusula MFN para proteger a inversionistas tempranos",
+    "Considerar agregar derechos pro rata explícitos si los inversionistas lo requieren",
+    "Involucrar a un abogado calificado para adaptar el documento estándar a las necesidades específicas"
+  ],
+  "entregable_esperado": "Documento SAFE firmado con términos claros de cap/descuento y cláusulas adicionales negociadas",
+  "nodos_previos": [
+    "riesgo_fiduciario_insolvencia_deuda",
+    "pro_rata_rights_deuda_convertible"
+  ],
+  "nodos_siguientes": [
+    "cap_table_basico",
+    "metodo_conversion_notas_cap_table"
+  ],
+  "condiciones_activacion": [
+    "Si el founder busca una alternativa simple y rápida a la deuda convertible para levantar capital semilla",
+    "Si se desea evitar fijar una valuación temprana en la empresa"
+  ]
+}

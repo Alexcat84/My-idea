@@ -1,0 +1,22 @@
+{
+  "node_id": "retorno_sobre_capital",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Retorno sobre Capital (ROE)",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "El ROE mide qué porcentaje de ganancia se genera por cada dólar de capital (equity) invertido en la empresa, a diferencia del ROA que mide sobre el total de activos. Es un ratio clave para inversionistas externos, ya que les indica si el retorno esperado justifica el riesgo de invertir en la empresa comparado con inversiones libres de riesgo como bonos del tesoro. Dos empresas pueden tener ROE distinto por diferencias en su nivel de deuda, lo que conecta directamente con los ratios de apalancamiento.",
+  "pasos_accionables": [
+    "Calcular: Ganancia Neta / Capital de los Accionistas (Equity)",
+    "Comparar el ROE con el retorno de inversiones libres de riesgo",
+    "Analizar si un ROE alto se debe a mayor deuda (revisar debt-to-equity) o a mejor gestión operativa"
+  ],
+  "entregable_esperado": "Cálculo de ROE y justificación del retorno frente al riesgo asumido",
+  "nodos_previos": [
+    "retorno_sobre_activos"
+  ],
+  "nodos_siguientes": [
+    "ratio_deuda_capital"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario busca inversionistas y necesita demostrar retorno atractivo sobre el capital"
+  ]
+}

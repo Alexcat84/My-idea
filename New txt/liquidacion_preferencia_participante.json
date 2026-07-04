@@ -1,0 +1,26 @@
+{
+  "node_id": "liquidacion_preferencia_participante",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Liquidation Preference y Participating Preferred",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "La preferencia de liquidación determina cómo se distribuyen los ingresos entre inversionistas y accionistas comunes en un evento de liquidez (fusión, adquisición, venta). Los inversionistas eligen entre recibir su preferencia de liquidación o convertir a common stock, pero no ambas (salvo en preferred participante, donde reciben la preferencia MÁS su parte proporcional como common). Se recomienda mantener términos simples (sin participación) en rondas tempranas, ya que estos términos tienden a heredarse en rondas futuras y pueden perjudicar a los inversionistas iniciales cuyo monto de preferencia es pequeño.",
+  "pasos_accionables": [
+    "Negociar una preferencia de liquidación simple (1x, no participante) en rondas iniciales",
+    "Evitar múltiplos de preferencia superiores a 1x, ya que son señal de alerta sobre el inversionista",
+    "Entender que un IPO NO se considera evento de liquidación, ya que las acciones preferentes se convierten a comunes",
+    "Solicitar 'kick-outs' que eliminen la participación una vez el VC alcance un retorno de 2x-3x"
+  ],
+  "entregable_esperado": "Cláusula de liquidation preference definida en el term sheet con claridad sobre participación y definición de evento de liquidación",
+  "nodos_previos": [
+    "term_sheet_basico",
+    "valoracion_pre_money"
+  ],
+  "nodos_siguientes": [
+    "pay_to_play",
+    "antidilucion_provisiones"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está negociando un term sheet con inversionistas de capital de riesgo",
+    "Si existe riesgo de dilución en eventos de salida"
+  ]
+}

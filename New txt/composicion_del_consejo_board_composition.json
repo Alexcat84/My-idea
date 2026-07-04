@@ -1,0 +1,27 @@
+{
+  "node_id": "composicion_del_consejo_board_composition",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Composición del Consejo (Board Composition)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Define cómo se estructura el Consejo de Administración de la startup tras una ronda de inversión, estableciendo categorías de directores: Preferred Directors (elegidos por inversionistas), Common Directors (elegidos por fundadores/accionistas comunes, incluyendo al CEO) y Mutual Directors (elegidos por consenso mutuo). Esta estructura determina el equilibrio de poder y control entre fundadores e inversionistas.",
+  "pasos_accionables": [
+    "Determinar el número total de asientos en el consejo antes de negociar",
+    "Definir cuántos asientos corresponden a Preferred, Common y Mutual Directors",
+    "Negociar quién tiene derecho a designar cada tipo de director",
+    "Establecer si el CEO ocupa automáticamente un asiento Common",
+    "Acordar reembolso de gastos para directores designados por inversionistas"
+  ],
+  "entregable_esperado": "Cláusula de composición del consejo redactada en el term sheet, con número y tipo de directores claramente definidos",
+  "nodos_previos": [
+    "negociacion_term_sheet",
+    "ronda_de_financiamiento_serie_a"
+  ],
+  "nodos_siguientes": [
+    "protective_provisions",
+    "gobernanza_corporativa"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está cerrando una ronda de inversión con Preferred Stock",
+    "Si necesita definir el control y gobernanza post-inversión"
+  ]
+}

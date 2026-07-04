@@ -1,0 +1,28 @@
+{
+  "node_id": "convertible_debt_financiamiento",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Deuda Convertible (Convertible Debt) como instrumento de financiamiento",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "La deuda convertible es un préstamo que se convierte en equity (acciones) en una ronda de financiamiento futura, evitando así la negociación de valuación inicial. Es común en rondas semilla y aceleradoras. A cambio del riesgo temprano, los inversionistas reciben una tasa de interés modesta y un descuento sobre el precio de la siguiente ronda.",
+  "pasos_accionables": [
+    "Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de equity.",
+    "Definir el descuento (típicamente 10%-30%, siendo 20% el más común) que recibirán los inversionistas en la conversión.",
+    "Determinar si se usará un valuation cap y a qué monto, considerando el impacto en rondas futuras.",
+    "Fijar una tasa de interés baja (5%-12%, promedio 8%), cercana a las tasas federales aplicables (AFR).",
+    "Establecer plazos de maduración (Maturity Date) y montos mínimos de la próxima ronda (Qualified Financing) para la conversión automática."
+  ],
+  "entregable_esperado": "Un term sheet o nota convertible con términos claros: descuento, cap de valuación, tasa de interés, plazo de maduración y monto mínimo de conversión.",
+  "nodos_previos": [
+    "startup_valuation_basica",
+    "business_model_canvas"
+  ],
+  "nodos_siguientes": [
+    "equity_financing_terminos",
+    "negociacion_term_sheet_vc"
+  ],
+  "condiciones_activacion": [
+    "Si el emprendedor busca financiamiento semilla rápido sin negociar valuación completa.",
+    "Si los inversionistas ángeles o aceleradoras prefieren estructurar la inversión como préstamo temporal.",
+    "Cuando se necesita evitar costos legales elevados de una ronda de equity preferente."
+  ]
+}

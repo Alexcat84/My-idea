@@ -1,0 +1,23 @@
+{
+  "node_id": "dilucion_propiedad_por_ronda",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Dilución de Propiedad en Rondas de Financiamiento",
+  "fuente": "The Founder's Dilemmas",
+  "resumen_teorico": "Cada ronda de financiamiento diluye la propiedad de fundadores y empleados, cediendo derechos económicos y de control a los inversores. Después de la ronda C, los VCs suelen poseer más de la mitad del capital en promedio. Las 'down rounds' (cuando el precio por acción baja) aceleran esta dilución, especialmente si el startup no cumple sus hitos o el ciclo económico es desfavorable.",
+  "pasos_accionables": [
+    "Modelar la tabla de capitalización (cap table) proyectada para cada ronda futura antes de negociar.",
+    "Establecer hitos claros de desempeño para evitar negociar desde una posición débil (down round).",
+    "Comparar el porcentaje de dilución esperado con benchmarks de la industria (ej. tecnología vs ciencias de la vida)."
+  ],
+  "entregable_esperado": "Cap table proyectada con escenarios de dilución para las próximas 2-3 rondas de financiamiento.",
+  "nodos_previos": [
+    "naturaleza_capital_de_riesgo_vc"
+  ],
+  "nodos_siguientes": [
+    "preferencia_de_liquidacion"
+  ],
+  "condiciones_activacion": [
+    "Si el founder está negociando una ronda de financiamiento",
+    "Si el startup no está cumpliendo sus hitos y enfrenta riesgo de down round"
+  ]
+}

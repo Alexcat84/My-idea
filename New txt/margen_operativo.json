@@ -1,0 +1,22 @@
+{
+  "node_id": "margen_operativo",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Margen de Ganancia Operativa (Operating Profit Margin)",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "El margen operativo es la ganancia operativa (EBIT) dividida entre los ingresos, expresada en porcentaje. Es una medida más completa que el margen bruto porque incluye los gastos operativos, mostrando qué tan bien se está gestionando todo el negocio desde el punto de vista operacional. Una tendencia a la baja es una señal de alerta: indica que los costos y gastos están creciendo más rápido que las ventas.",
+  "pasos_accionables": [
+    "Calcular: Ganancia Operativa (EBIT) / Ingresos",
+    "Comparar el margen operativo con el margen bruto para evaluar el peso de los gastos operativos",
+    "Establecer alertas si el margen operativo muestra tendencia descendente sostenida"
+  ],
+  "entregable_esperado": "Cálculo del margen operativo y comparación con periodos anteriores",
+  "nodos_previos": [
+    "margen_bruto"
+  ],
+  "nodos_siguientes": [
+    "margen_neto"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario quiere evaluar la eficiencia de gestión del equipo directivo"
+  ]
+}

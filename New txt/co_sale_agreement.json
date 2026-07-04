@@ -1,0 +1,24 @@
+{
+  "node_id": "co_sale_agreement",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Acuerdo de Co-Venta (Co-Sale Agreement)",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Cláusula casi imposible de eliminar que establece que si un fundador vende sus acciones, los inversores tienen la oportunidad de vender una porción proporcional de las suyas también. Esta cláusula deja de aplicar una vez que la empresa se hace pública (IPO). Es importante negociar un 'piso' (floor) que permita a los fundadores vender pequeñas cantidades de acciones sin activar este derecho.",
+  "pasos_accionables": [
+    "Aceptar la existencia de la cláusula, ya que es prácticamente estándar en todo financiamiento VC",
+    "Negociar un umbral mínimo (floor) de acciones que los fundadores puedan vender sin necesidad de ofrecer co-venta",
+    "Confirmar que la cláusula termina automáticamente en un Qualified IPO",
+    "Evitar que se convierta en una exclusión efectiva que impida cualquier venta personal de acciones"
+  ],
+  "entregable_esperado": "Cláusula de co-venta con un piso negociado que permita ventas menores de fundadores sin trigger del derecho",
+  "nodos_previos": [
+    "term_sheet_negociacion"
+  ],
+  "nodos_siguientes": [
+    "liquidez_fundadores"
+  ],
+  "condiciones_activacion": [
+    "Cuando un fundador necesita liquidez personal antes de un exit",
+    "Cuando se negocia el term sheet de una ronda de inversión"
+  ]
+}

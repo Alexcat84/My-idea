@@ -1,0 +1,22 @@
+{
+  "node_id": "fees_y_breakup_fee_adquisicion",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Manejo de Fees y Breakup Fees en la Transacción",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "El LOI debe especificar quién cubre los costos de transacción (legales, banqueros, etc.). Los breakup fees, poco comunes en deals de venture capital pero frecuentes entre públicas, compensan a una parte si el deal no se cierra. Generalmente no se recomienda para vendedores respaldados por VC, salvo casos de riesgo reputacional o de clientes/empleados significativo.",
+  "pasos_accionables": [
+    "Clarificar en el LOI quién asume los costos legales y de asesoría en la transacción.",
+    "Evaluar si es pertinente solicitar un breakup fee según el riesgo de la venta.",
+    "Usar la cláusula de no-shop como mecanismo preferente en lugar de breakup fees."
+  ],
+  "entregable_esperado": "Sección de fees y (si aplica) breakup fee acordada en el LOI.",
+  "nodos_previos": [
+    "clausula_no_shop_adquisicion"
+  ],
+  "nodos_siguientes": [
+    "cierre_transaccion_adquisicion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se negocian los términos finales de costos en un LOI de adquisición."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "cap_table_basico",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Construcción de la Tabla de Capitalización (Cap Table)",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "El cap table resume quién posee qué parte de la empresa antes y después de una ronda de financiamiento. Es fundamental que los fundadores entiendan cómo calcular el porcentaje de propiedad de cada clase de accionista (fundadores, pool de opciones para empleados, inversionistas), especialmente cuando se introduce un pool de opciones post-money, ya que esto diluye directamente la propiedad de los fundadores y no a los inversionistas.",
+  "pasos_accionables": [
+    "Listar acciones existentes de fundadores antes de la inversión",
+    "Determinar la valuación pre-money y el monto de inversión para calcular la valuación post-money",
+    "Calcular el porcentaje de propiedad de los inversionistas (inversión/post-money)",
+    "Si hay un pool de opciones post-money, restar su porcentaje del de los fundadores para obtener su participación real",
+    "Resolver las incógnitas del cap table (acciones totales, precio por acción) usando álgebra básica",
+    "Verificar los cálculos cruzando la valuación pre-money implícita contra el número de acciones y precio por acción",
+    "Usar decimales/fracciones de acciones en cálculos intermedios y redondear solo al final"
+  ],
+  "entregable_esperado": "Cap table completo y verificado con todas las clases de acciones, porcentajes y precio por acción calculados correctamente",
+  "nodos_previos": [
+    "safe_simple_agreement_future_equity"
+  ],
+  "nodos_siguientes": [
+    "metodo_conversion_notas_cap_table"
+  ],
+  "condiciones_activacion": [
+    "Si el founder está evaluando un term sheet de un VC",
+    "Si se necesita entender el impacto de un pool de opciones nuevo en la propiedad de los fundadores"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "compensacion_service_providers",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Compensación de Proveedores de Servicios mediante Equity",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable inmediato por el valor de mercado recibido. Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas.",
+  "pasos_accionables": [
+    "Crear un equity incentive plan (option pool) con asesoría legal",
+    "Decidir entre otorgar stock directo (con 83(b)) u options según implicaciones fiscales del receptor",
+    "Definir cronograma de vesting para cada concesión de equity",
+    "Establecer el precio de ejercicio de las options basado en la valuación 409A vigente",
+    "Comunicar claramente a los receptores las implicaciones fiscales de su elección"
+  ],
+  "entregable_esperado": "Plan de incentivos de equity (option pool) formalizado con concesiones documentadas para cada proveedor de servicios",
+  "nodos_previos": [
+    "valuacion_409a",
+    "clasificacion_consultores_empleados"
+  ],
+  "nodos_siguientes": [
+    "term_sheet_negociacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando la startup necesita atraer o retener talento sin suficiente efectivo",
+    "Al formalizar la compensación de asesores o empleados clave"
+  ]
+}

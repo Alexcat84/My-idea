@@ -1,0 +1,26 @@
+{
+  "node_id": "employee_pool_esop",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Pool de Opciones para Empleados (Employee Pool / ESOP)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Reserva de acciones comunes que se aparta antes del cierre de una ronda de inversión, destinada a futuras contrataciones de directores, oficiales, empleados y consultores. Este pool se calcula como un porcentaje del capital totalmente diluido post-inversión y afecta directamente el precio de compra de la ronda, ya que diluye a todos los accionistas existentes antes de la entrada del nuevo inversionista.",
+  "pasos_accionables": [
+    "Negociar el tamaño del employee pool como porcentaje del cap table post-money.",
+    "Definir si el pool incluye opciones ya emitidas o solo reservas futuras.",
+    "Calcular el impacto de la dilución del pool en el precio por acción de los fundadores.",
+    "Planificar la asignación futura del pool según el plan de contrataciones."
+  ],
+  "entregable_esperado": "Tamaño del employee pool acordado y reflejado en la cap table pre-cierre.",
+  "nodos_previos": [
+    "cap_table_management",
+    "negociacion_term_sheet"
+  ],
+  "nodos_siguientes": [
+    "stock_vesting_founders_employees",
+    "plan_contrataciones"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está negociando el pre-money valuation de una ronda",
+    "Si la empresa planea contratar personal clave usando equity como incentivo"
+  ]
+}

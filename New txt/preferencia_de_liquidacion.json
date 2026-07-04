@@ -1,0 +1,27 @@
+{
+  "node_id": "preferencia_de_liquidacion",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Preferencia de Liquidación (Liquidation Preference)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Cláusula que otorga a los accionistas preferentes (inversionistas) el derecho a recibir un monto específico (típicamente el precio de compra más dividendos declarados no pagados) antes que los accionistas comunes en caso de liquidación, fusión, adquisición o venta de la empresa. Un 'Change in Control' se considera equivalente a una liquidación para efectos de esta cláusula.",
+  "pasos_accionables": [
+    "Entender si la preferencia es 1x, 2x o superior sobre el precio de compra",
+    "Verificar si es participante o no participante",
+    "Identificar qué eventos se consideran 'Change in Control'",
+    "Revisar cómo se distribuyen los activos remanentes después de pagar la preferencia",
+    "Negociar el tratamiento de contraprestaciones en escrow o contingentes"
+  ],
+  "entregable_esperado": "Cláusula de liquidation preference clara con multiplicador y tipo (participante/no participante) definidos",
+  "nodos_previos": [
+    "composicion_del_consejo_board_composition",
+    "term_sheet_basico"
+  ],
+  "nodos_siguientes": [
+    "conversion_de_acciones_preferentes",
+    "estrategia_de_salida"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está negociando términos de una ronda de inversión con acciones preferentes",
+    "Si necesita entender qué recibirá en caso de venta o liquidación de la empresa"
+  ]
+}

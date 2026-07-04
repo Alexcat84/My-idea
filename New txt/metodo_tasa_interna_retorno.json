@@ -1,0 +1,23 @@
+{
+  "node_id": "metodo_tasa_interna_retorno",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Método de Tasa Interna de Retorno (IRR)",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "Calcula la tasa de retorno real que generarán los flujos de efectivo proyectados de una inversión, es decir, la tasa de descuento que hace que el NPV sea igual a cero. Se compara con el hurdle rate para decidir si la inversión pasa la prueba. Es fácil de explicar pero no cuantifica el valor en dólares ni considera la duración del proyecto.",
+  "pasos_accionables": [
+    "Proyectar los flujos de efectivo futuros de la inversión",
+    "Encontrar la tasa de descuento que hace que el NPV sea igual a cero (usando calculadora financiera o herramienta en línea)",
+    "Comparar esa tasa con el hurdle rate de la empresa",
+    "Considerar usar IRR junto con NPV cuando los montos en juego son grandes o los proyectos tienen duraciones diferentes"
+  ],
+  "entregable_esperado": "Porcentaje de tasa interna de retorno de la inversión, comparado contra el hurdle rate de la empresa",
+  "nodos_previos": [
+    "analisis_de_gastos_de_capital",
+    "metodo_valor_presente_neto"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se necesita comparar rápidamente el retorno porcentual de un proyecto contra la tasa mínima requerida",
+    "Cuando se comparan proyectos con diferente escala o duración, usar en combinación con NPV"
+  ]
+}

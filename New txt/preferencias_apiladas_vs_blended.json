@@ -1,0 +1,25 @@
+{
+  "node_id": "preferencias_apiladas_vs_blended",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Preferencias Apiladas vs. Pari Passu (Blended) entre Series de Inversión",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Cuando una empresa ha levantado múltiples rondas (Series A, B, etc.), existen dos enfoques principales para ordenar las liquidation preferences entre series: (1) Apiladas (stacked) - la serie más reciente (ej. Serie B) recibe su preferencia completa antes que las series anteriores (ej. Serie A); (2) Pari passu o mezcladas (blended) - todas las series comparten proporcionalmente según su capital invertido hasta satisfacer las preferencias. Esta decisión impacta drásticamente la distribución en escenarios de venta bajos.",
+  "pasos_accionables": [
+    "Identificar qué enfoque (apilado o blended) se está proponiendo en el term sheet de la nueva ronda.",
+    "Modelar el impacto de cada enfoque en escenarios de venta bajos donde la preferencia de liquidación domina la distribución.",
+    "Negociar considerando el poder relativo de negociación de cada serie de inversionistas y la estructura de capital existente."
+  ],
+  "entregable_esperado": "Un modelo de cap table con escenarios de distribución de proceeds bajo enfoque apilado y bajo enfoque blended.",
+  "nodos_previos": [
+    "liquidation_preference_basica",
+    "participacion_preferente"
+  ],
+  "nodos_siguientes": [
+    "cierre_de_ronda",
+    "gestion_cap_table"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa ha recibido más de una ronda de financiamiento",
+    "Cuando se negocia una nueva serie de inversión con inversionistas existentes"
+  ]
+}

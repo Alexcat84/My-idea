@@ -1,0 +1,24 @@
+{
+  "node_id": "riesgo_fiduciario_insolvencia_deuda",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Riesgo Fiduciario por Insolvencia Técnica en Deuda Convertible",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso de la empresa.",
+  "pasos_accionables": [
+    "Consultar con un abogado corporativo sobre las leyes estatales de responsabilidad fiduciaria hacia acreedores",
+    "Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity",
+    "Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
+    "Considerar seguros D&O (directors and officers) que cubran este período de riesgo"
+  ],
+  "entregable_esperado": "Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada",
+  "nodos_previos": [
+    "original_issue_discount_oid"
+  ],
+  "nodos_siguientes": [
+    "safe_simple_agreement_future_equity"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa está considerando o ya emitió deuda convertible",
+    "Si existe riesgo de que la empresa no logre levantar la siguiente ronda o falle"
+  ]
+}

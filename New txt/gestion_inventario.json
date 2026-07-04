@@ -1,0 +1,24 @@
+{
+  "node_id": "gestion_inventario",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Gestión Eficiente de Inventario",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "El inventario representa efectivo congelado que la empresa no puede usar para otros fines. El reto es minimizar el inventario sin generar quiebres de stock que insatisfagan a los clientes. Múltiples áreas de la empresa (ventas, ingeniería, producción) afectan los niveles de inventario a través de decisiones sobre personalización de productos, versiones y eficiencia de planta.",
+  "pasos_accionables": [
+    "Calcular los Días de Inventario (DII) actuales",
+    "Evaluar el impacto de personalizaciones de producto ofrecidas por ventas",
+    "Revisar la proliferación de versiones de producto por parte de ingeniería",
+    "Analizar tiempos de inactividad de máquinas y cambios de producción",
+    "Evitar producir por producir cuando la demanda es baja, priorizando el efectivo sobre el costo unitario"
+  ],
+  "entregable_esperado": "Plan de reducción de inventario con métricas de DII y acciones específicas por área",
+  "nodos_previos": [
+    "gestion_capital_trabajo"
+  ],
+  "nodos_siguientes": [
+    "ciclo_conversion_efectivo"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa tiene exceso de inventario o capital de trabajo atado en stock"
+  ]
+}

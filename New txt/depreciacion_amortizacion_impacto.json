@@ -1,0 +1,24 @@
+{
+  "node_id": "depreciacion_amortizacion_impacto",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Poder de la Depreciación y Amortización en las Utilidades",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "La depreciación es un gasto no monetario que distribuye el costo de un activo físico a lo largo de su vida útil estimada. La amortización aplica el mismo concepto a activos intangibles (patentes, goodwill). Cambiar la estimación de vida útil puede alterar drásticamente la utilidad neta reportada, como demostró el caso Waste Management, que manipuló depreciación de camiones y contenedores para inflar ganancias en $716 millones.",
+  "pasos_accionables": [
+    "Identificar todos los activos físicos e intangibles sujetos a depreciación/amortización",
+    "Preguntar al contador qué método y periodo de vida útil se está usando",
+    "Evaluar si los supuestos de vida útil son razonables comparados con la industria",
+    "Detectar cambios año tras año en estos supuestos que puedan indicar manipulación de utilidades"
+  ],
+  "entregable_esperado": "Tabla de activos con su método de depreciación/amortización, vida útil asumida y su impacto mensual en el estado de resultados",
+  "nodos_previos": [
+    "distincion_cogs_gastos_operativos"
+  ],
+  "nodos_siguientes": [
+    "calculo_ebitda"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está evaluando la salud financiera real de una empresa (propia o para adquisición)",
+    "Si hay cambios inexplicables en la rentabilidad reportada"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "liquidation_preference_basica",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Liquidation Preference (Preferencia de Liquidación)",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "La preferencia de liquidación determina cómo se reparten los recursos en un evento de liquidez (venta de la empresa o de la mayoría de sus activos), especialmente cuando la empresa se vende por menos del capital invertido. Establece que los tenedores de acciones preferentes reciben un múltiplo (usualmente 1x) de su inversión original antes que los accionistas comunes reciban cualquier proceso. El emprendedor debe entender que esta cláusula determina la distribución tanto en escenarios buenos como malos.",
+  "pasos_accionables": [
+    "Revisar la cláusula de liquidation preference en cada term sheet antes de firmar.",
+    "Negociar por un múltiplo de 1x (estándar de la industria) en lugar de múltiplos más altos (2x-10x) que se ven en financiamientos en dificultades.",
+    "Entender el 'liquidation preference overhang': el monto que debe devolverse a los inversionistas antes de que los comunes reciban algo.",
+    "Modelar diferentes escenarios de venta (bajo, medio, alto) para entender el impacto real de la preferencia en los retornos de fundadores y empleados."
+  ],
+  "entregable_esperado": "Un modelo financiero (waterfall) que muestre la distribución de proceeds en distintos escenarios de venta considerando la liquidation preference negociada.",
+  "nodos_previos": [
+    "term_sheet_basico",
+    "estructura_de_capital"
+  ],
+  "nodos_siguientes": [
+    "participacion_preferente",
+    "preferencias_apiladas_vs_blended"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario recibe o negocia un term sheet de inversión",
+    "Cuando se planea un evento de liquidez o venta de la empresa"
+  ]
+}

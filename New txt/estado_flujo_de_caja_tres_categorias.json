@@ -1,0 +1,27 @@
+{
+  "node_id": "estado_flujo_de_caja_tres_categorias",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "El Estado de Flujo de Caja: Operación, Inversión y Financiamiento",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "El estado de flujo de caja se divide en tres categorías: efectivo de actividades operativas (el indicador más importante de salud del negocio), efectivo de actividades de inversión (compra/venta de activos como maquinaria) y efectivo de actividades de financiamiento (préstamos, aportes de accionistas, recompra de acciones, dividendos). A diferencia del estado de resultados y el balance, este estado tiene menos margen de manipulación contable, por lo que Wall Street y los inversores lo valoran cada vez más.",
+  "pasos_accionables": [
+    "Solicitar al contador un estado de flujo de caja si aún no existe",
+    "Clasificar cada movimiento de efectivo en operación, inversión o financiamiento",
+    "Evaluar si el flujo operativo es consistentemente saludable (señal de rentabilidad real)",
+    "Analizar si la inversión en activos es baja (posible 'vaca lechera') o alta (apuesta a futuro) según el tipo de negocio",
+    "Revisar la dependencia de financiamiento externo comparando años"
+  ],
+  "entregable_esperado": "Estado de flujo de caja clasificado en las tres categorías, con análisis de tendencia por periodo",
+  "nodos_previos": [
+    "estado_de_resultados",
+    "balance_general"
+  ],
+  "nodos_siguientes": [
+    "reconciliacion_utilidad_neta_flujo_caja",
+    "flujo_de_caja_libre"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendedor solo mira el saldo bancario sin entender su origen",
+    "Cuando se necesita evaluar la salud financiera real más allá de la utilidad reportada"
+  ]
+}

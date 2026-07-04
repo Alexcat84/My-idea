@@ -1,0 +1,26 @@
+{
+  "node_id": "reconciliacion_utilidad_neta_flujo_caja",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Reconciliación de Utilidad Neta con Flujo de Caja",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "Es posible calcular el flujo de caja a partir del estado de resultados y dos balances generales consecutivos. El proceso consiste en partir de la utilidad neta y hacer ajustes: sumar gastos no monetarios (depreciación), restar incrementos en activos (como cuentas por cobrar o inventario), y sumar incrementos en pasivos (como cuentas por pagar). Esta técnica revela cómo cada transacción del negocio afecta simultáneamente el estado de resultados, el balance y el flujo de caja.",
+  "pasos_accionables": [
+    "Partir de la utilidad neta del periodo",
+    "Sumar la depreciación y otros gastos no monetarios",
+    "Restar los incrementos en cuentas por cobrar, inventario u otros activos",
+    "Sumar los incrementos en cuentas por pagar y otros pasivos",
+    "Ajustar por dividendos pagados y cambios en deuda de largo plazo",
+    "Verificar que el resultado coincida con el cambio real en la línea de caja del balance"
+  ],
+  "entregable_esperado": "Tabla de ajustes que reconcilia la utilidad neta con el cambio real en efectivo",
+  "nodos_previos": [
+    "estado_flujo_de_caja_tres_categorias"
+  ],
+  "nodos_siguientes": [
+    "flujo_de_caja_libre"
+  ],
+  "condiciones_activacion": [
+    "Cuando el contador no ha entregado un estado de flujo de caja formal",
+    "Cuando el emprendedor necesita entender por qué la utilidad no coincide con el efectivo disponible"
+  ]
+}

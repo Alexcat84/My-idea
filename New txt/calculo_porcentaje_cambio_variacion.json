@@ -1,0 +1,23 @@
+{
+  "node_id": "calculo_porcentaje_cambio_variacion",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Cálculo de Porcentaje de Cambio y Variación",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "Herramienta matemática básica para el análisis financiero que permite comparar cifras entre dos periodos (presupuesto vs. real, año anterior vs. actual). La fórmula de porcentaje de cambio es la misma que la de porcentaje de varianza, por lo que dominarla permite analizar tanto el desempeño histórico como las desviaciones presupuestarias.",
+  "pasos_accionables": [
+    "Identificar el valor base (periodo anterior o presupuestado) y el valor nuevo (periodo actual o real)",
+    "Restar el valor base del valor nuevo para obtener la diferencia",
+    "Dividir la diferencia entre el valor base",
+    "Multiplicar por 100 para expresar como porcentaje",
+    "Aplicar la misma fórmula para calcular varianzas presupuestarias"
+  ],
+  "entregable_esperado": "Tabla de análisis con porcentajes de cambio y varianza calculados para las principales líneas del presupuesto o estado financiero",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "entendiendo_balance_general_basico"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario necesita comparar resultados financieros entre periodos",
+    "Si el usuario debe analizar desviaciones de su presupuesto"
+  ]
+}

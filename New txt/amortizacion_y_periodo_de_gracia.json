@@ -1,0 +1,23 @@
+{
+  "node_id": "amortizacion_y_periodo_de_gracia",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Términos de Amortización: Draw Period e Interest-Only Period",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Los términos de amortización son más críticos que el precio para alinear la deuda con la estrategia de capital de la empresa. El 'draw period' es el tiempo durante el cual se pueden solicitar desembolsos; el 'interest-only (I/O) period' es el tiempo en que solo se pagan intereses sin amortizar principal, impactando directamente el cash burn y el runway. Negociar estos periodos (típicamente 6-12 meses) es esencial para maximizar el tiempo antes de que el pago de principal comience.",
+  "pasos_accionables": [
+    "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo.",
+    "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo.",
+    "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones).",
+    "Calcular el impacto de la amortización lineal (straight-line) sobre el flujo de caja mensual proyectado."
+  ],
+  "entregable_esperado": "Cronograma de amortización del préstamo con draw period, I/O period y pagos mensuales de principal calculados.",
+  "nodos_previos": [
+    "warrant_pricing_venture_debt"
+  ],
+  "nodos_siguientes": [
+    "covenants_control_terms"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa ya negoció el warrant y necesita definir la estructura de repago del préstamo."
+  ]
+}

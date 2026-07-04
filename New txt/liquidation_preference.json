@@ -1,0 +1,26 @@
+{
+  "node_id": "liquidation_preference",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Preferencia de Liquidación (Liquidation Preference)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Determina el orden y monto que reciben los tenedores de acciones preferentes antes que los accionistas comunes en caso de liquidación, venta o cambio de control de la empresa. Típicamente es 1x el precio de compra más dividendos declarados no pagados, y puede ser participante o no participante. Un 'Change in Control' se trata como evento de liquidación a estos efectos.",
+  "pasos_accionables": [
+    "Negociar el múltiplo de la preferencia de liquidación (1x es estándar, evitar múltiplos mayores).",
+    "Decidir si la preferencia es participante (doble cobro) o no participante.",
+    "Definir qué eventos constituyen un 'Change in Control' que dispara la liquidación.",
+    "Modelar escenarios de exit para entender el impacto en el retorno de fundadores vs inversionistas."
+  ],
+  "entregable_esperado": "Cláusula de liquidation preference definida y modelada en escenarios de salida (waterfall analysis).",
+  "nodos_previos": [
+    "negociacion_term_sheet",
+    "valuation_pre_money"
+  ],
+  "nodos_siguientes": [
+    "exit_strategy",
+    "cap_table_management"
+  ],
+  "condiciones_activacion": [
+    "Cuando se negocia el término económico central de una ronda de inversión",
+    "Si el fundador necesita entender el impacto real en su retorno económico ante un evento de salida"
+  ]
+}

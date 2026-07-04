@@ -1,0 +1,25 @@
+{
+  "node_id": "original_issue_discount_oid",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Original Issue Discount (OID) en Deuda Convertible",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Cuando un acuerdo de deuda convertible incluye warrants sin un pago separado por ellos, el IRS considera que existe un descuento de emisión original (OID). Esto implica que parte del principal repagado se tratará como interés, generando ingresos gravables acumulados para el inversionista incluso antes de recibir pagos. La solución simple es asignar un valor de compra explícito (usualmente unos pocos miles de dólares) a los warrants.",
+  "pasos_accionables": [
+    "Si el trato incluye warrants junto con deuda convertible, negociar un precio de compra separado y explícito para los warrants",
+    "Documentar el pago de los warrants en los términos del acuerdo para evitar el tratamiento fiscal de OID",
+    "Nunca aceptar que un inversionista reciba tanto descuento de conversión como warrants (doble beneficio)",
+    "Consultar con un abogado fiscal/corporativo antes de cerrar la ronda"
+  ],
+  "entregable_esperado": "Acuerdo de deuda convertible con provisión de pago explícito por warrants, evitando implicaciones fiscales de OID",
+  "nodos_previos": [
+    "terminos_hoja_de_terminos_deuda_convertible"
+  ],
+  "nodos_siguientes": [
+    "safe_simple_agreement_future_equity",
+    "cap_table_basico"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está estructurando una ronda de deuda convertible con warrant coverage",
+    "Si el inversionista solicita tanto descuento como warrants simultáneamente"
+  ]
+}

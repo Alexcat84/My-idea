@@ -1,0 +1,27 @@
+{
+  "node_id": "ciclo_de_conversion_de_efectivo",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Ciclo de Conversión de Efectivo (Cash Conversion Cycle)",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "El ciclo de conversión de efectivo mide cuántos días tarda una empresa en recuperar el efectivo invertido en sus operaciones, desde el pago de materias primas hasta el cobro de ventas. Se calcula como DSO + DII − DPO. Un ciclo largo implica mayor necesidad de capital de trabajo; acortarlo libera efectivo significativo para el negocio.",
+  "pasos_accionables": [
+    "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago).",
+    "Aplicar la fórmula: Ciclo = DSO + DII - DPO.",
+    "Multiplicar el resultado por las ventas diarias para estimar el capital de trabajo requerido.",
+    "Identificar palancas para acortar el ciclo (reducir DSO, reducir inventario, aumentar DPO).",
+    "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones."
+  ],
+  "entregable_esperado": "Cálculo del ciclo de conversión de efectivo con plan de acción para optimizarlo.",
+  "nodos_previos": [
+    "gestion_cuentas_por_pagar_dpo",
+    "analisis_flujo_de_caja"
+  ],
+  "nodos_siguientes": [
+    "gestion_relacion_bancaria"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa tiene problemas de liquidez",
+    "Si está creciendo rápidamente o realizando adquisiciones",
+    "Si necesita entender cuánto capital de trabajo requiere el negocio"
+  ]
+}

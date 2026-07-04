@@ -1,0 +1,26 @@
+{
+  "node_id": "disposiciones_antidilucion",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Disposiciones Antidilución (Antidilution Provisions)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Mecanismo que protege a los inversionistas preferentes de la dilución de su participación cuando la empresa emite nuevas acciones a un precio menor (down round). El ajuste típico es 'weighted-average', que recalcula el precio de conversión considerando el precio y cantidad de la nueva emisión, con excepciones para 'Excluded Issuances' como opciones para empleados.",
+  "pasos_accionables": [
+    "Identificar el tipo de ajuste antidilución (weighted-average vs full ratchet)",
+    "Listar las 'Excluded Issuances' que no disparan el ajuste",
+    "Definir qué constituye 'Required Board Approval' para excepciones",
+    "Entender el impacto en el cap table si ocurre un down round"
+  ],
+  "entregable_esperado": "Cláusula de antidilución negociada con lista clara de excepciones y método de cálculo",
+  "nodos_previos": [
+    "preferencia_de_liquidacion",
+    "valoracion_pre_money"
+  ],
+  "nodos_siguientes": [
+    "cap_table_management",
+    "rondas_futuras_de_inversion"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario anticipa posibles rondas futuras a menor valoración",
+    "Si necesita proteger o entender la protección de los inversionistas actuales"
+  ]
+}
