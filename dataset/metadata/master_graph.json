@@ -1,6 +1,6 @@
 {
   "version": "0.2.0",
-  "total_nodos": 958,
+  "total_nodos": 946,
   "nodos": {
     "ab_testing_optimizacion": {
       "node_id": "ab_testing_optimizacion",
@@ -112,30 +112,6 @@
       "condiciones_activacion": [
         "Si el tiempo de espera entre gates está retrasando significativamente el time-to-market.",
         "Si el equipo de desarrollo está distribuido geográficamente y requiere coordinación global."
-      ]
-    },
-    "aceptar_la_imperfeccion_del_dise_o": {
-      "node_id": "aceptar_la_imperfeccion_del_diseno",
-      "fase_proyecto": "planificacion",
-      "titulo_concepto": "Aceptar la Imperfección: Todo se Rompe",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-      "resumen_teorico": "Toda tecnología o diseño, sin importar cuán bien intencionado, eventualmente se romperá, fallará o generará consecuencias no previstas ('cuando inventas el barco, inventas el naufragio'). La historia de los Eames muestra que incluso los diseñadores más idealistas cometen 'errores en sus sueños': lo que se desea y lo que se obtiene rara vez coinciden. En vez de negar esta realidad, los diseñadores deben planificar activamente para la ruptura, preparándose para sanar y ajustar antes, durante y después de que las cosas fallen.",
-      "pasos_accionables": [
-        "Durante la planificación, pregunta explícitamente: ¿de qué formas puede fallar o romperse este diseño?",
-        "Identifica consecuencias negativas no deseadas que podrían surgir incluso si el diseño funciona 'según lo planeado'",
-        "Diseña mecanismos de reparación, actualización o mitigación desde el inicio, no como añadido posterior",
-        "Revisa periódicamente el proyecto preguntando si el 'sueño' original sigue alineado con los resultados reales"
-      ],
-      "entregable_esperado": "Un documento de 'escenarios de ruptura' que liste posibles fallos del diseño y planes de mitigación o reparación asociados",
-      "nodos_previos": [
-        "diseno_para_reuso_responsable"
-      ],
-      "nodos_siguientes": [
-        "plan_gestion_riesgos"
-      ],
-      "condiciones_activacion": [
-        "Cuando el equipo asume que su diseño es una solución perfecta y definitiva",
-        "En etapas de planificación de productos con impacto social o ambiental a largo plazo"
       ]
     },
     "aceptar_la_imperfeccion_del_diseno": {
@@ -490,32 +466,6 @@
         "Si la organización está en pleno proceso de transición hacia metodologías ágiles o Lean.",
         "Si surgen resistencias o sugerencias constantes para revertir el cambio.",
         "Si se necesita distinguir si un problema es causado por el nuevo sistema o por causas preexistentes."
-      ]
-    },
-    "adherence_loop_dise_o_temporal": {
-      "node_id": "adherence_loop_diseno_temporal",
-      "fase_proyecto": "ejecucion",
-      "titulo_concepto": "El Bucle de Adherencia (Adherence Loop)",
-      "fuente": "Change by Design, Revised and U - Tim Brown",
-      "resumen_teorico": "Marco de tres fases autoreforzantes para diseñar experiencias que requieren compromiso continuo del usuario: comprensión del problema, aceptación de la necesidad de acción, y ejecución de la acción. Aplicado originalmente a adherencia a tratamientos médicos, es útil para cualquier producto/servicio que dependa de un compromiso sostenido en el tiempo.",
-      "pasos_accionables": [
-        "Identificar las tres fases: entender, aceptar, actuar",
-        "Diseñar puntos de refuerzo positivo en cada fase del recorrido",
-        "Crear herramientas de soporte (información, comunidades, canales de ayuda)",
-        "Reconocer que cada recorrido individual es único y personalizable",
-        "Involucrar activamente al usuario como protagonista de su propia historia"
-      ],
-      "entregable_esperado": "Un mapa del 'adherence journey' con puntos de intervención definidos en cada fase.",
-      "nodos_previos": [
-        "diseno_en_la_cuarta_dimension"
-      ],
-      "nodos_siguientes": [
-        "navegacion_politica_organizacional"
-      ],
-      "condiciones_activacion": [
-        "Cuando el éxito del producto depende de un uso sostenido en el tiempo",
-        "Cuando existe alta tasa de abandono o falta de compromiso del usuario",
-        "En contextos de salud, educación o cambio de hábito"
       ]
     },
     "adherence_loop_diseno_temporal": {
@@ -3261,30 +3211,6 @@
       "condiciones_activacion": [
         "Cuando una organización decide institucionalizar los Cinco Porqués como práctica recurrente",
         "Cuando los primeros intentos de aplicar la técnica fracasan por falta de estructura o experiencia"
-      ]
-    },
-    "cliente_dise_a_producto": {
-      "node_id": "cliente_disena_producto",
-      "fase_proyecto": "ideacion",
-      "titulo_concepto": "El Cliente Diseña el Producto (Co-Creación Digital)",
-      "fuente": "Winning at New Products - Robert G. Cooper",
-      "resumen_teorico": "Método habilitado por herramientas IT/Internet donde se invita a los clientes o usuarios a diseñar directamente el producto usando plataformas digitales (ej. LEGO Digital Designer). Estudios muestran que los consumidores pueden ser hasta 2.4 veces más eficientes que los productores generando innovaciones significativas, especialmente en etapas tempranas de una categoría.",
-      "pasos_accionables": [
-        "Evaluar si la categoría de producto es apta (el usuario debe poder entender la tecnología subyacente)",
-        "Desarrollar una herramienta digital/CAD simple que permita a usuarios crear diseños",
-        "Crear una galería o comunidad donde los usuarios compartan y reciban feedback de sus creaciones",
-        "Monitorear y analizar los diseños enviados como fuente de ideas de nuevos productos"
-      ],
-      "entregable_esperado": "Una plataforma de co-creación activa con un repositorio de diseños generados por usuarios, disponible para ser evaluado como ideas de producto.",
-      "nodos_previos": [
-        "lead_user_analysis"
-      ],
-      "nodos_siguientes": [
-        "design_thinking_proceso"
-      ],
-      "condiciones_activacion": [
-        "Cuando el producto no requiere conocimiento técnico/científico avanzado (ej. no aplica a farmacéutica o aeroespacial)",
-        "Cuando existe una base de usuarios entusiastas dispuesta a co-crear"
       ]
     },
     "cliente_disena_producto": {
@@ -6666,148 +6592,6 @@
         "Si las sesiones de ideación se desvían constantemente hacia temas no relacionados"
       ]
     },
-    "dise_ar_los_detalles_no_lo_inevitable": {
-      "node_id": "disenar_los_detalles_no_lo_inevitable",
-      "fase_proyecto": "ideacion",
-      "titulo_concepto": "Diseñar los Detalles, No lo Inevitable",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-      "resumen_teorico": "Kevin Kelly plantea que muchas tecnologías (como internet o la IA) son inevitables en su llegada, pero sus características específicas —si son abiertas o cerradas, con o sin fines de lucro, transparentes u opacas— sí son elegibles por quienes las diseñan. El poder real del diseñador no está en detener lo inevitable, sino en decidir la forma particular en que se manifiesta.",
-      "pasos_accionables": [
-        "Identificar qué aspectos de tu proyecto son tendencias inevitables del mercado/tecnología y cuáles son decisiones de diseño abiertas.",
-        "Listar las opciones de diseño disponibles dentro de esa tendencia inevitable (abierto/cerrado, público/privado, con o sin fines de lucro).",
-        "Elegir deliberadamente la configuración que mejor sirva a valores humanos y sociales, no solo a la rentabilidad.",
-        "Documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro."
-      ],
-      "entregable_esperado": "Un documento de decisiones de diseño clave que distinga lo inevitable de lo elegible, y la justificación de las elecciones tomadas.",
-      "nodos_previos": [
-        "bucle_circunstancias_sentimientos_ideas"
-      ],
-      "nodos_siguientes": [
-        "value_proposition_startup"
-      ],
-      "condiciones_activacion": [
-        "Cuando se está diseñando una tecnología o plataforma emergente con múltiples configuraciones posibles.",
-        "Si el equipo asume que 'así tiene que ser' sin cuestionar las decisiones de diseño subyacentes."
-      ]
-    },
-    "dise_o_de_desafios_de_innovacion": {
-      "node_id": "diseno_de_desafios_de_innovacion",
-      "fase_proyecto": "ideacion",
-      "titulo_concepto": "El Desafío de Diseño (Design Challenge)",
-      "fuente": "Change by Design, Revised and U - Tim Brown",
-      "resumen_teorico": "Una competencia estructurada entre equipos rivales que atacan un mismo problema, generando energía colectiva, innovación y una narrativa pública atractiva. Casos como el avión a baterías de Panasonic/Hakuhodo o el Ansari X Prize muestran cómo estos desafíos convierten a espectadores pasivos en participantes comprometidos, generando cobertura mediática y avances tecnológicos reales.",
-      "pasos_accionables": [
-        "Definir un reto claro, medible y desafiante para los equipos participantes",
-        "Establecer reglas y un premio (financiero, reconocimiento o ambos)",
-        "Comunicar el progreso del desafío públicamente para generar expectación",
-        "Aprovechar medios (TV, web, prensa) para construir una narrativa de seguimiento",
-        "Evaluar resultados más allá del ganador: aprendizaje colectivo e innovación generada"
-      ],
-      "entregable_esperado": "Una convocatoria de desafío de diseño con reglas, premio y plan de comunicación pública definidos.",
-      "nodos_previos": [
-        "propagacion_de_ideas_meme"
-      ],
-      "nodos_siguientes": [],
-      "condiciones_activacion": [
-        "Cuando se busca innovación radical en un plazo definido",
-        "Cuando se quiere generar cobertura mediática significativa con bajo presupuesto",
-        "Cuando existen múltiples equipos o comunidades capaces de competir por una solución"
-      ]
-    },
-    "dise_o_en_la_cuarta_dimension": {
-      "node_id": "diseno_en_la_cuarta_dimension",
-      "fase_proyecto": "ejecucion",
-      "titulo_concepto": "Diseñar con el Tiempo (La Cuarta Dimensión)",
-      "fuente": "Change by Design, Revised and U - Tim Brown",
-      "resumen_teorico": "Diseñar experiencias implica no solo el espacio físico sino también la secuencia temporal de interacciones. Bill Moggridge acuñó 'interaction design' para diseñar verbos (acciones) y no solo objetos (nouns). Herramientas como storyboards, escenarios e improvisación ayudan a visualizar cómo una idea se despliega a lo largo del tiempo en un customer journey.",
-      "pasos_accionables": [
-        "Mapear los touchpoints de la experiencia del usuario a lo largo del tiempo",
-        "Crear storyboards que muestren la secuencia de interacciones",
-        "Diseñar pensando en las acciones del usuario (verbos) más que en los objetos (nouns)",
-        "Permitir que el usuario tenga voz en cómo se desarrolla la interacción",
-        "Probar escenarios narrativos con usuarios reales para validar el flujo"
-      ],
-      "entregable_esperado": "Storyboards o mapas de journey que ilustren la experiencia del usuario a través del tiempo.",
-      "nodos_previos": [
-        "prototipado_de_experiencias",
-        "sintesis_de_insights_en_principios_de_diseno"
-      ],
-      "nodos_siguientes": [
-        "adherence_loop_diseno_temporal"
-      ],
-      "condiciones_activacion": [
-        "Cuando se diseñan productos digitales o interactivos",
-        "Cuando la experiencia del usuario ocurre en múltiples etapas o sesiones",
-        "Cuando es necesario coordinar múltiples touchpoints de un servicio"
-      ]
-    },
-    "dise_o_etico_de_privacidad": {
-      "node_id": "diseno_etico_de_privacidad",
-      "fase_proyecto": "planificacion",
-      "titulo_concepto": "Agencia y Opt-Out: Diseño Ético de Privacidad de Datos",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-      "resumen_teorico": "Ante la recolección masiva de datos ('data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), los diseñadores deben considerar dar agencia real a los usuarios sobre su información. Rara vez el opt-out es la opción por defecto; diseñar sistemas éticos implica ofrecer control genuino, no solo cumplimiento legal superficial, y sopesar el trade-off entre conveniencia (menos fricción) y vigilancia.",
-      "pasos_accionables": [
-        "Enumera qué datos sensibles recolecta tu sistema (ubicación, salud, comportamiento, emociones).",
-        "Diseña mecanismos de opt-out reales y accesibles, no ocultos en términos legales.",
-        "Evalúa el trade-off: ¿qué conveniencia pierde el usuario al optar por no compartir datos?",
-        "Comunica de forma transparente cómo se usan y quién se beneficia de los datos recolectados."
-      ],
-      "entregable_esperado": "Una política o mecanismo de consentimiento de datos diseñado con opciones claras de opt-in/opt-out, documentado en el sistema o prototipo.",
-      "nodos_previos": [
-        "mapeo_flujos_invisibles_datos"
-      ],
-      "nodos_siguientes": [],
-      "condiciones_activacion": [
-        "Cuando el diseño de un producto digital requiere políticas de privacidad.",
-        "Si el usuario final es vulnerable a la vigilancia o el uso indebido de sus datos personales."
-      ]
-    },
-    "dise_o_para_reuso_responsable": {
-      "node_id": "diseno_para_reuso_responsable",
-      "fase_proyecto": "ideacion",
-      "titulo_concepto": "Diseño para el Reuso Responsable (Dissociología)",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-      "resumen_teorico": "A través de la narrativa especulativa de 'Dissociology', se plantea que la tecnología futura permitirá extraer valor de los desechos actuales (vertederos), pero surge la pregunta ética de quién debe beneficiarse de ese valor: ¿quienes generaron el desecho o las comunidades que sufrieron sus consecuencias? Este concepto invita a los diseñadores a considerar desde ya la responsabilidad ética y el reparto justo del valor futuro que sus productos y desechos puedan generar.",
-      "pasos_accionables": [
-        "Identifica los materiales de desecho que tu proyecto generará a largo plazo",
-        "Investiga si existen o podrían existir tecnologías futuras para reciclar/reutilizar esos materiales",
-        "Define explícitamente quién debería beneficiarse del valor futuro derivado de tus desechos (comunidad, empresa, gobierno)",
-        "Documenta estas decisiones éticas como parte de los principios de diseño del proyecto"
-      ],
-      "entregable_esperado": "Una declaración de principios éticos sobre el manejo y reparto de valor de los desechos/subproductos del proyecto",
-      "nodos_previos": [
-        "definir_tesoro_con_perspectiva_temporal"
-      ],
-      "nodos_siguientes": [],
-      "condiciones_activacion": [
-        "Cuando el proyecto tiene fuerte componente de sostenibilidad o impacto ambiental",
-        "Cuando se diseñan productos con alto volumen de producción y descarte"
-      ]
-    },
-    "dise_o_reparabilidad_cultura_arreglo": {
-      "node_id": "diseno_reparabilidad_cultura_arreglo",
-      "fase_proyecto": "planificacion",
-      "titulo_concepto": "Diseñar para la Reparabilidad: Índice de Reparabilidad",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-      "resumen_teorico": "Todo se rompe eventualmente; la pregunta clave es qué sistema existe para responder a esa rotura. El 'índice de reparabilidad' francés de 2021 obliga a fabricantes de electrónicos a puntuar sus productos según cinco parámetros: documentación disponible, facilidad de desmontaje, disponibilidad de repuestos, costo de repuestos y particularidades específicas del producto. Este concepto propone que los diseñadores definan de antemano una 'cultura de arreglo' para su propio trabajo, en lugar de asumir una cultura de descarte (obsolescencia programada).",
-      "pasos_accionables": [
-        "Define qué parámetros de reparabilidad aplican a tu producto o servicio (documentación, desmontaje, repuestos, costo, especificidad).",
-        "Diseña el producto pensando en cómo será desmontado y reparado, no solo ensamblado.",
-        "Establece políticas de disponibilidad y costo de repuestos o soporte a largo plazo.",
-        "Decide y comunica quién audita o certifica la reparabilidad (fabricante, terceros, usuarios).",
-        "Compara tu enfoque contra una cultura de descarte y ajusta el modelo de negocio si es necesario."
-      ],
-      "entregable_esperado": "Una ficha de 'índice de reparabilidad' propia con los cinco parámetros evaluados y un plan de soporte post-venta o de fin de vida del producto.",
-      "nodos_previos": [
-        "planificacion_consecuencias_no_intencionadas"
-      ],
-      "nodos_siguientes": [],
-      "condiciones_activacion": [
-        "Si el producto es físico y tiene un ciclo de vida largo (electrodomésticos, dispositivos, mobiliario).",
-        "Si la empresa quiere diferenciarse por sostenibilidad o responsabilidad ambiental."
-      ]
-    },
     "disenar_los_detalles_no_lo_inevitable": {
       "node_id": "disenar_los_detalles_no_lo_inevitable",
       "fase_proyecto": "ideacion",
@@ -9904,30 +9688,6 @@
         "Cuando la empresa quiere evitar el destino de Kodak o Polaroid"
       ]
     },
-    "evitar_par_ilisis_por_analisis": {
-      "node_id": "evitar_paralisis_por_analisis",
-      "fase_proyecto": "validacion",
-      "titulo_concepto": "Evitar la Parálisis por Análisis vs. Just-Do-It",
-      "fuente": "The Lean Startup - Eric Ries",
-      "resumen_teorico": "Existen dos peligros opuestos al investigar mercado y clientes: actuar impulsivamente sin análisis suficiente (just-do-it), asumiendo erróneamente que se conoce el camino correcto tras pocas conversaciones; o caer en parálisis por análisis, refinando planes indefinidamente sin actuar. El problema real de la mayoría de los planes no es la falta de principios estratégicos sólidos, sino que los hechos en que se basan son incorrectos, y estos errores solo se detectan mediante interacción real producto-cliente, no en el pizarrón.",
-      "pasos_accionables": [
-        "Reconocer si el equipo tiende a actuar sin suficiente validación o si tiende a sobre-analizar sin actuar",
-        "Establecer un límite de tiempo/alcance para la fase de análisis antes de pasar a construir un MVP",
-        "Usar el concepto de MVP como criterio objetivo para decidir cuándo dejar de analizar y empezar a construir",
-        "Priorizar la validación con clientes reales sobre el análisis teórico prolongado"
-      ],
-      "entregable_esperado": "Criterio claro y documentado sobre cuándo pasar de la fase de análisis a la construcción del MVP",
-      "nodos_previos": [
-        "genchi_gembutsu_salir_del_edificio"
-      ],
-      "nodos_siguientes": [
-        "producto_minimo_viable"
-      ],
-      "condiciones_activacion": [
-        "Si el equipo lleva mucho tiempo analizando sin tomar acción concreta",
-        "Si el equipo está construyendo sin haber validado ninguna hipótesis con clientes"
-      ]
-    },
     "evitar_paralisis_por_analisis": {
       "node_id": "evitar_paralisis_por_analisis",
       "fase_proyecto": "validacion",
@@ -10132,30 +9892,6 @@
       ],
       "condiciones_activacion": [
         "Cuando el usuario tiene un Value Proposition Canvas o Business Model Canvas completo y necesita decidir qué testear primero"
-      ]
-    },
-    "falacia_del_dise_ador_affordances": {
-      "node_id": "falacia_del_disenador_affordances",
-      "fase_proyecto": "ideacion",
-      "titulo_concepto": "La Falacia del Diseñador y los Affordances",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-      "resumen_teorico": "El filósofo Don Ihde llama 'falacia del diseñador' a la idea errónea de que la intención original de quien diseña algo determina completamente cómo será usado. En realidad, las personas encuentran usos alternativos (affordances) para los objetos y espacios según lo que estos permiten hacer, independientemente del propósito original. Una puerta que se puede empujar se convierte en un columpio; una valla horizontal se convierte en escalera. Reconocer esto ayuda a los diseñadores a anticipar usos no previstos y a diseñar con humildad, sabiendo que el control sobre el uso final es limitado.",
-      "pasos_accionables": [
-        "Durante la investigación de campo, busca usos no intencionados que la gente le da a productos o espacios.",
-        "Pregúntate qué 'affordances' (posibilidades de uso) ofrece tu diseño más allá de su función declarada.",
-        "Diseña con flexibilidad, anticipando que los usuarios reinterpretarán el producto según sus propias necesidades.",
-        "Evita asumir que tu intención de diseño controlará completamente el comportamiento del usuario final."
-      ],
-      "entregable_esperado": "Un listado de posibles usos alternativos (affordances) anticipados para el diseño propuesto, incorporado como insumo para la fase de prototipado.",
-      "nodos_previos": [
-        "identificar_brechas_gaps"
-      ],
-      "nodos_siguientes": [
-        "prototipado_rapido"
-      ],
-      "condiciones_activacion": [
-        "Si el equipo de diseño asume que los usuarios usarán el producto exactamente como fue previsto.",
-        "Si se están definiendo especificaciones de producto sin considerar usos emergentes o no oficiales."
       ]
     },
     "falacia_del_disenador_affordances": {
@@ -22406,30 +22142,6 @@
         "Cuando se requiere justificar decisiones de inversión con criterios estratégicos explícitos"
       ]
     },
-    "sue_os_completos_dise_o_responsable": {
-      "node_id": "suenos_completos_diseno_responsable",
-      "fase_proyecto": "ideacion",
-      "titulo_concepto": "Sueños Completos: Diseñar con Humildad y Optimismo",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-      "resumen_teorico": "Un 'sueño completo' es aquel que es grande y ambicioso pero no ignora sus propios efectos negativos potenciales; deja espacio para los sueños de otros (sociedad, naturaleza, futuras generaciones). Este concepto contrapone el optimismo ciego de innovadores como los Eames o los creadores de CFCs (Protocolo de Montreal) con una postura de humildad activa que anticipa errores en el deseo mismo, no solo en la ejecución. La imperfección se acepta como un resultado inevitable y hasta deseable del diseño, siempre que se mantenga vigilancia y responsabilidad.",
-      "pasos_accionables": [
-        "Al formular la visión/misión de tu proyecto, pregunta explícitamente qué podría salir mal si todo sale 'bien'.",
-        "Enumera a los actores no representados en tu visión actual (comunidades, ecosistemas, generaciones futuras).",
-        "Redacta tu declaración de misión incluyendo tanto la ambición como los límites/salvaguardas conocidos.",
-        "Revisa periódicamente la visión del proyecto para incorporar aprendizajes sobre efectos no deseados."
-      ],
-      "entregable_esperado": "Una declaración de visión/misión del proyecto que incluya explícitamente los riesgos aceptados y los grupos considerados, además de los objetivos de crecimiento.",
-      "nodos_previos": [
-        "diagrama_eames_interseccion_posibilidad"
-      ],
-      "nodos_siguientes": [
-        "planificacion_consecuencias_no_intencionadas"
-      ],
-      "condiciones_activacion": [
-        "Si el equipo fundador está definiendo la visión de largo plazo del proyecto.",
-        "Si existe presión por un crecimiento rápido sin considerar impactos secundarios."
-      ]
-    },
     "suenos_completos_diseno_responsable": {
       "node_id": "suenos_completos_diseno_responsable",
       "fase_proyecto": "ideacion",
@@ -24673,7 +24385,6 @@
       "aceleracion_de_gates",
       "actitud_de_experimentacion_organizacional",
       "adaptacion_teorica_del_lean_startup",
-      "adherence_loop_dise_o_temporal",
       "adherence_loop_diseno_temporal",
       "adn_de_innovacion_organizacional",
       "afinar_motor_crecimiento",
@@ -24722,7 +24433,6 @@
       "desarrollo_en_espiral",
       "despliegue_continuo",
       "diamante_decision_tres_partes",
-      "dise_o_en_la_cuarta_dimension",
       "diseno_ciclo_completo_equipo",
       "diseno_de_sistemas_a_escala",
       "diseno_en_la_cuarta_dimension",
@@ -24865,7 +24575,6 @@
       "busqueda_vs_ejecucion",
       "card_sort",
       "ciclo_circunstancias_sentimientos_ideas",
-      "cliente_dise_a_producto",
       "cliente_disena_producto",
       "co_creation_session",
       "colaboracion_creador_consumidor",
@@ -24907,9 +24616,6 @@
       "diagrama_eames_interseccion_posibilidad",
       "diez_principios_prototipado",
       "disciplina_atencion_dirigida",
-      "dise_ar_los_detalles_no_lo_inevitable",
-      "dise_o_de_desafios_de_innovacion",
-      "dise_o_para_reuso_responsable",
       "disenar_los_detalles_no_lo_inevitable",
       "disenar_verbos_no_sustantivos",
       "disenio_en_turbulencia",
@@ -24968,7 +24674,6 @@
       "evaluacion_tecnologias_disruptivas",
       "explorar_medios_no_convencionales",
       "explotacion_tecnologias_disruptivas",
-      "falacia_del_dise_ador_affordances",
       "falacia_del_disenador_affordances",
       "fallo_como_aprendizaje_startup",
       "fase_diseno_prototipado_modelos",
@@ -25096,7 +24801,6 @@
       "startup_definition",
       "storyboard_prototipado",
       "storytelling_modelo_negocio",
-      "sue_os_completos_dise_o_responsable",
       "suenos_completos_diseno_responsable",
       "superacion_accidia_creativa",
       "superioridad_producto_beneficios",
@@ -25126,7 +24830,6 @@
       "what_if_questions"
     ],
     "planificacion": [
-      "aceptar_la_imperfeccion_del_dise_o",
       "aceptar_la_imperfeccion_del_diseno",
       "actividades_clave",
       "activity_attributes",
@@ -25177,8 +24880,6 @@
       "determinacion_tamano_cubetas",
       "diagrama_riesgo_recompensa",
       "diamante_de_innovacion",
-      "dise_o_etico_de_privacidad",
-      "dise_o_reparabilidad_cultura_arreglo",
       "disenar_para_sanacion",
       "diseno_etico_de_privacidad",
       "diseno_intencional_etica",
@@ -25441,7 +25142,6 @@
       "etapa_testing_validation",
       "evaluacion_amazon_case",
       "evaluacion_de_atractivo_de_mercado",
-      "evitar_par_ilisis_por_analisis",
       "evitar_paralisis_por_analisis",
       "evitar_pseudociencia_producto",
       "experiment_library",
@@ -25638,9 +25338,9 @@
   },
   "stats": {
     "componentes_conexos": 1,
-    "tamano_componente_principal": 958,
+    "tamano_componente_principal": 946,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 12,
+    "nodos_sin_enlaces_entrantes": 0,
     "enlaces_rotos_en_grafo": 0
   }
 }

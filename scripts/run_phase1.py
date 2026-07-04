@@ -33,6 +33,13 @@ LOG_PATH = METADATA_DIR / "phase1_run_log.json"
 
 REF_KEYS = ("nodos_previos", "nodos_siguientes")
 
+# Campos de contenido teorico: nunca se modifican, solo se leen para detectar
+# duplicados exactos (mismo titulo_concepto Y mismo contenido).
+CONTENT_FIELDS = (
+    "resumen_teorico", "pasos_accionables", "condiciones_activacion",
+    "fuente", "titulo_concepto", "entregable_esperado",
+)
+
 # Mapa de fusion de duplicados, tal como quedo definido en
 # scripts/archive/phase1_5_merge.py. Se mantiene aqui como fuente de verdad
 # reproducible para poder redirigir las referencias que ese script nunca
@@ -146,16 +153,20 @@ def step1_ascii_normalize(log):
         new_id = ascii_id(old_id)
         if not new_id:
             continue
-        final_id = new_id
-        suffix = 2
-        while final_id in existing_ids and final_id != old_id:
-            final_id = f"{new_id}_{suffix}"
-            suffix += 1
-        path.rename(NODOS_DIR / f"{final_id}.json")
+        if new_id in existing_ids and new_id != old_id:
+            # El destino ASCII ya existe: probable duplicado (posible fosil
+            # con el mismo contenido bajo otro nombre). No renombramos con un
+            # sufijo que ocultaria el choque; lo dejamos para revision manual.
+            log["ascii_rename_collisions"].append({
+                "old_id": old_id, "target_id": new_id,
+                "note": "el id destino ya existe en disco; posible duplicado, no renombrado",
+            })
+            continue
+        path.rename(NODOS_DIR / f"{new_id}.json")
         existing_ids.discard(old_id)
-        existing_ids.add(final_id)
-        rename_map[old_id] = final_id
-        log["ascii_renames"].append({"old_id": old_id, "new_id": final_id})
+        existing_ids.add(new_id)
+        rename_map[old_id] = new_id
+        log["ascii_renames"].append({"old_id": old_id, "new_id": new_id})
 
     if not rename_map:
         return rename_map
@@ -406,6 +417,27 @@ def step5_compile_master_graph():
     return master, parse_errors
 
 
+def find_exact_duplicates(nodes):
+    """Pares de nodos con el mismo titulo_concepto Y el mismo contenido
+    teorico completo (CONTENT_FIELDS). Detector de duplicados fosiles
+    futuros: dos ids distintos que en realidad son el mismo nodo."""
+    by_title = collections.defaultdict(list)
+    for node_id, data in nodes.items():
+        by_title[data.get("titulo_concepto")].append(node_id)
+
+    duplicate_pairs = []
+    for title, ids in by_title.items():
+        if len(ids) < 2:
+            continue
+        ids = sorted(ids)
+        for i in range(len(ids)):
+            for j in range(i + 1, len(ids)):
+                a, b = nodes[ids[i]], nodes[ids[j]]
+                if all(a.get(f) == b.get(f) for f in CONTENT_FIELDS):
+                    duplicate_pairs.append((ids[i], ids[j]))
+    return duplicate_pairs
+
+
 # ---------------------------------------------------------------------------
 # Paso 6: Validador Gate 0
 # ---------------------------------------------------------------------------
@@ -455,6 +487,13 @@ def step6_validate(master, parse_errors):
         len(parse_errors),
     ))
 
+    duplicate_pairs = find_exact_duplicates(master["nodos"])
+    checks.append((
+        "Cero pares de nodos con titulo_concepto y contenido identicos",
+        len(duplicate_pairs) == 0,
+        duplicate_pairs if duplicate_pairs else 0,
+    ))
+
     return checks
 
 
@@ -465,6 +504,7 @@ def step6_validate(master, parse_errors):
 def main():
     log = {
         "ascii_renames": [],
+        "ascii_rename_collisions": [],
         "merge_redirects": [],
         "alias_redirects": [],
         "alias_unresolved_removed": [],
@@ -474,6 +514,9 @@ def main():
     print("=== Paso 1: Normalizacion ASCII ===")
     rename_map = step1_ascii_normalize(log)
     print(f"  {len(rename_map)} archivo(s) renombrado(s).")
+    if log["ascii_rename_collisions"]:
+        print(f"  ATENCION: {len(log['ascii_rename_collisions'])} colision(es) de renombrado "
+              f"detectada(s) (posibles duplicados, no renombrados). Ver log.")
 
     print("=== Paso 2: Redireccion de nodos fusionados ===")
     updated2, merge_redirect_map = step2_redirect_merged(log)
