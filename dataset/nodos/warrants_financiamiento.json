@@ -1,0 +1,25 @@
+{
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Warrants en Financiamientos de Etapas Posteriores",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Un warrant es el derecho a comprar un número determinado de acciones a un precio predefinido durante un plazo de años, similar a una opción de compra. Los inversionistas los usan para reducir efectivamente la valoración de la empresa sin que ese descuento aparezca explícitamente en el precio negociado -son, en la práctica, un mecanismo de valoración encubierta-. Son comunes en préstamos puente (bridge loans) y en financiamientos de etapas posteriores, típicamente ofreciendo un descuento de hasta 20% sobre el precio de la siguiente ronda, y suelen generar complejidad contable innecesaria.",
+  "pasos_accionables": [
+    "Identificar si el term sheet incluye warrants y cuál es su impacto real en la valuación efectiva de la empresa",
+    "Si se propone un warrant simplemente por un tema de precio, negociar una valoración pre-money más baja en su lugar, para eliminar la complejidad adicional",
+    "En el caso de préstamos puente (bridge loans), aceptar warrants razonables (hasta 20% de descuento) ya que son estándar en la industria para ese instrumento",
+    "Evaluar si el warrant complica innecesariamente la contabilidad y la estructura legal de la empresa a largo plazo antes de aceptarlo"
+  ],
+  "entregable_esperado": "Decisión documentada sobre aceptar warrants o negociar su eliminación/sustitución por una valuación pre-money más baja, con su impacto en la valuación efectiva de la empresa",
+  "condiciones_activacion": [
+    "Cuando se negocia un préstamo puente (bridge loan)",
+    "Cuando aparecen warrants en un term sheet de etapas posteriores"
+  ],
+  "node_id": "warrants_financiamiento",
+  "nodos_previos": [
+    "pool_opciones_empleados"
+  ],
+  "nodos_siguientes": [
+    "convertible_debt_fundamentos",
+    "warrants_deuda_convertible"
+  ]
+}

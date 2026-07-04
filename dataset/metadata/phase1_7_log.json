@@ -1,0 +1,1604 @@
+{
+  "merges": [
+    {
+      "cluster": [
+        "liquidacion_preferencia_participante",
+        "liquidation_preference",
+        "liquidation_preference_basica",
+        "preferencia_de_liquidacion",
+        "terminos_liquidacion_preferencia"
+      ],
+      "canonical_id": "preferencia_de_liquidacion",
+      "losers": [
+        "liquidacion_preferencia_participante",
+        "liquidation_preference",
+        "liquidation_preference_basica",
+        "terminos_liquidacion_preferencia"
+      ],
+      "notes": "Cluster de 5 nodos que explicaban la misma clausula (liquidation preference) con distinto nivel de detalle, incluyendo el nodo sobre 'participating preferred', que se trato como parte integral de la misma clausula (una de sus dos variantes) y no como faceta separada."
+    },
+    {
+      "cluster": [
+        "board_directores_composicion",
+        "board_of_directors_composition",
+        "composicion_board_directors",
+        "composicion_del_consejo_board_composition",
+        "composicion_junta_directiva"
+      ],
+      "canonical_id": "composicion_board_directors",
+      "losers": [
+        "board_directores_composicion",
+        "board_of_directors_composition",
+        "composicion_del_consejo_board_composition",
+        "composicion_junta_directiva"
+      ],
+      "notes": "Fusiona la mecanica de asientos del term sheet (Venture Deals) con la guia estrategica de a quien incluir y por que (Founder's Dilemmas). control_del_board_startup y tamano_junta_directiva_vc quedaron separados por tratar temas distintos (evolucion del control entre rondas, y el problema especifico de multiples VCs en el board), enlazados a este nodo."
+    },
+    {
+      "cluster": [
+        "antidilucion_provisiones",
+        "antidilution_provisions",
+        "disposiciones_antidilucion"
+      ],
+      "canonical_id": "antidilucion_provisiones",
+      "losers": [
+        "antidilution_provisions",
+        "disposiciones_antidilucion"
+      ],
+      "notes": "antidilution_carve_outs y antidilution_weighted_average_broad_narrow quedaron separados por profundizar en mecanicas tecnicas especificas (excepciones detalladas; definicion broad vs narrow de CSO) que irian mas alla del alcance de un nodo unificado; se enlazan a este."
+    },
+    {
+      "cluster": [
+        "dilema_rich_vs_king",
+        "dilema_riqueza_vs_control"
+      ],
+      "canonical_id": "dilema_riqueza_vs_control",
+      "losers": [
+        "dilema_rich_vs_king"
+      ],
+      "notes": "test_rico_vs_rey (herramienta de diagnostico para inversionistas), compatibilidad_motivaciones_riqueza_control (compatibilidad entre cofundadores) y estrategia_hibrida_control_riqueza (estrategia por etapas) son facetas genuinamente distintas del mismo dilema -distinto publico o angulo de aplicacion- y quedaron separadas pero enlazadas."
+    },
+    {
+      "cluster": [
+        "metodo_valor_presente_neto",
+        "metodo_valor_presente_neto_npv"
+      ],
+      "canonical_id": "metodo_valor_presente_neto",
+      "losers": [
+        "metodo_valor_presente_neto_npv"
+      ],
+      "notes": "valor_presente (Present Value) se mantuvo separado por ser un concepto prerrequisito mas basico -de hecho ya aparecia como nodo_previo de este mismo nodo-, no una repeticion del metodo NPV."
+    },
+    {
+      "cluster": [
+        "warrants_en_financiamiento",
+        "warrants_financiamiento"
+      ],
+      "canonical_id": "warrants_financiamiento",
+      "losers": [
+        "warrants_en_financiamiento"
+      ],
+      "notes": "Caso ilustrativo citado en la tarea: warrants_deuda_convertible (warrants como alternativa al descuento en deuda convertible) y warrant_pricing_venture_debt (mecanica de precio de warrants en venture debt, instrumento de deuda distinto) son facetas genuinas y distintas por instrumento financiero -deuda convertible, financiamiento posterior y venture debt son tres contextos distintos-, y quedaron separadas pero enlazadas entre si."
+    },
+    {
+      "cluster": [
+        "ciclo_conversion_efectivo",
+        "ciclo_de_conversion_de_efectivo"
+      ],
+      "canonical_id": "ciclo_de_conversion_de_efectivo",
+      "losers": [
+        "ciclo_conversion_efectivo"
+      ],
+      "notes": "ciclo_conversion_efectivo tenia la clave 'resumen_theorico' mal escrita (sin contenido en 'resumen_teorico'); se resolvio via fusion, no requirio correccion manual en Paso 5."
+    },
+    {
+      "cluster": [
+        "analisis_de_ratios_financieros",
+        "analisis_razones_financieras",
+        "poder_de_los_ratios_financieros"
+      ],
+      "canonical_id": "analisis_de_ratios_financieros",
+      "losers": [
+        "analisis_razones_financieras",
+        "poder_de_los_ratios_financieros"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "depreciacion_activos",
+        "depreciacion_amortizacion_impacto",
+        "depreciacion_de_activos",
+        "depreciacion_y_amortizacion"
+      ],
+      "canonical_id": "depreciacion_y_amortizacion",
+      "losers": [
+        "depreciacion_activos",
+        "depreciacion_amortizacion_impacto",
+        "depreciacion_de_activos"
+      ],
+      "notes": "activos_intangibles_amortizacion quedo separado por ser una faceta especifica (criterios de factibilidad tecnica para amortizar I+D vs. gastar de inmediato), enlazado a este nodo."
+    },
+    {
+      "cluster": [
+        "acuerdo_de_no_negociacion_no_shop",
+        "no_shop_agreement"
+      ],
+      "canonical_id": "no_shop_agreement",
+      "losers": [
+        "acuerdo_de_no_negociacion_no_shop"
+      ],
+      "notes": "clausula_no_shop_adquisicion (mismo mecanismo en contexto de M&A, no de ronda de inversion) y no_shop_extension_negotiation (negociacion de la extension del plazo) son facetas de contexto distinto -es el ejemplo citado en la tarea sobre warrants aplicado aqui- y quedaron separadas pero enlazadas."
+    },
+    {
+      "cluster": [
+        "seleccion_abogado_startup",
+        "seleccion_abogado_vc",
+        "seleccion_abogado_venture"
+      ],
+      "canonical_id": "seleccion_abogado_venture",
+      "losers": [
+        "seleccion_abogado_startup",
+        "seleccion_abogado_vc"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "decision_egalitaria_vs_jerarquica",
+        "modelo_decision_egalitario_vs_jerarquico"
+      ],
+      "canonical_id": "decision_egalitaria_vs_jerarquica",
+      "losers": [
+        "modelo_decision_egalitario_vs_jerarquico"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "tasa_interna_retorno_irr",
+        "metodo_tasa_interna_retorno"
+      ],
+      "canonical_id": "tasa_interna_retorno_irr",
+      "losers": [
+        "metodo_tasa_interna_retorno"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "forma_de_contraprestacion",
+        "forma_de_contraprestacion_en_adquisicion"
+      ],
+      "canonical_id": "forma_de_contraprestacion_en_adquisicion",
+      "losers": [
+        "forma_de_contraprestacion"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "dilema_solo_vs_equipo",
+        "decision_fundador_solo_vs_equipo"
+      ],
+      "canonical_id": "decision_fundador_solo_vs_equipo",
+      "losers": [
+        "dilema_solo_vs_equipo"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "analisis_porcentual_estados_financieros",
+        "calculo_porcentaje_cambio_variacion"
+      ],
+      "canonical_id": "analisis_porcentual_estados_financieros",
+      "losers": [
+        "calculo_porcentaje_cambio_variacion"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "homogeneidad_vs_diversidad_equipo",
+        "homogeneidad_vs_diversidad_equipo_fundador"
+      ],
+      "canonical_id": "homogeneidad_vs_diversidad_equipo",
+      "losers": [
+        "homogeneidad_vs_diversidad_equipo_fundador"
+      ],
+      "notes": "diversidad_vs_homogeneidad_equipo quedo separado por plantear un eje distinto y mas matizado (diversidad de capacidades PERO similitud de valores/soft factors), no solo homogeneidad-mala/diversidad-buena."
+    },
+    {
+      "cluster": [
+        "stock_vesting_founders_employees",
+        "vesting_acciones_fundadores",
+        "vesting_de_acciones_y_aceleracion",
+        "single_double_trigger_acceleration",
+        "emision_founders_stock"
+      ],
+      "canonical_id": "vesting_acciones_fundadores",
+      "losers": [
+        "stock_vesting_founders_employees",
+        "vesting_de_acciones_y_aceleracion",
+        "single_double_trigger_acceleration",
+        "emision_founders_stock"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "eleccion_estructura_vesting_founder",
+        "vesting_golden_handcuffs"
+      ],
+      "canonical_id": "eleccion_estructura_vesting_founder",
+      "losers": [
+        "vesting_golden_handcuffs"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "equity_dinamico_vesting",
+        "vesting_dinamico",
+        "split_dinamico_equity"
+      ],
+      "canonical_id": "vesting_dinamico",
+      "losers": [
+        "equity_dinamico_vesting",
+        "split_dinamico_equity"
+      ],
+      "notes": "reasignacion_equity_fundadores quedo separado por ser un escenario especifico (reasignacion FORZADA por inversionistas, no diseñada por los fundadores), enlazado a este nodo."
+    },
+    {
+      "cluster": [
+        "criterios_equity_split",
+        "factores_split_equity",
+        "equity_split_segun_capital_aportado"
+      ],
+      "canonical_id": "criterios_equity_split",
+      "losers": [
+        "factores_split_equity",
+        "equity_split_segun_capital_aportado"
+      ],
+      "notes": "reparto_inicial_equity (nodo hub esperado en Paso 3a), split_igual_vs_desigual, teoria_equidad_split_equity, timing_equity_split y formalizacion_acuerdo_equity quedaron separados por cubrir preguntas genuinamente distintas (proceso y momento del split, no solo que factores considerar), enlazados entre si como familia tematica."
+    },
+    {
+      "cluster": [
+        "busqueda_ceo_sucesor_externo",
+        "professional_ceo_search"
+      ],
+      "canonical_id": "busqueda_ceo_sucesor_externo",
+      "losers": [
+        "professional_ceo_search"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "founder_ceo_succession_process",
+        "sucesion_founder_ceo"
+      ],
+      "canonical_id": "founder_ceo_succession_process",
+      "losers": [
+        "sucesion_founder_ceo"
+      ],
+      "notes": "Se mantuvo como nodo distinto de busqueda_ceo_sucesor_externo (decision/proceso de sucesion vs. ejecucion de la busqueda externa), enlazados secuencialmente."
+    },
+    {
+      "cluster": [
+        "sesgo_optimismo_founder",
+        "sesgo_optimismo_fundador"
+      ],
+      "canonical_id": "sesgo_optimismo_fundador",
+      "losers": [
+        "sesgo_optimismo_founder"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "batna_definicion",
+        "batna_en_negociacion_vc"
+      ],
+      "canonical_id": "batna_definicion",
+      "losers": [
+        "batna_en_negociacion_vc"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "cobertura_de_intereses",
+        "ratio_cobertura_intereses"
+      ],
+      "canonical_id": "cobertura_de_intereses",
+      "losers": [
+        "ratio_cobertura_intereses"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "estructura_corporativa_c_corp",
+        "seleccion_estructura_corporativa"
+      ],
+      "canonical_id": "seleccion_estructura_corporativa",
+      "losers": [
+        "estructura_corporativa_c_corp"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "lectura_estado_flujo_efectivo",
+        "lenguaje_cash_flow_statement"
+      ],
+      "canonical_id": "lectura_estado_flujo_efectivo",
+      "losers": [
+        "lenguaje_cash_flow_statement"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "metodos_de_valuacion",
+        "metodos_valoracion_empresa"
+      ],
+      "canonical_id": "metodos_de_valuacion",
+      "losers": [
+        "metodos_valoracion_empresa"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "valor_del_dinero_en_el_tiempo",
+        "valor_presente_futuro_roi"
+      ],
+      "canonical_id": "valor_del_dinero_en_el_tiempo",
+      "losers": [
+        "valor_presente_futuro_roi"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "derechos_de_registro",
+        "registration_rights",
+        "registration_rights_ipo"
+      ],
+      "canonical_id": "derechos_de_registro",
+      "losers": [
+        "registration_rights",
+        "registration_rights_ipo"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "premium_ceo_equity",
+        "ceo_equity_premium"
+      ],
+      "canonical_id": "ceo_equity_premium",
+      "losers": [
+        "premium_ceo_equity"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "convertible_debt_financiamiento",
+        "convertible_debt_fundamentos"
+      ],
+      "canonical_id": "convertible_debt_fundamentos",
+      "losers": [
+        "convertible_debt_financiamiento"
+      ],
+      "notes": ""
+    },
+    {
+      "cluster": [
+        "co_sale_agreement",
+        "co_sale_drag_along_agreements"
+      ],
+      "canonical_id": "co_sale_drag_along_agreements",
+      "losers": [
+        "co_sale_agreement"
+      ],
+      "notes": "drag_along_agreement (detalle tactico adicional: umbral common vs preferred) y acuerdo_de_co_venta_y_votacion (combina co-venta con voting agreement, un tercer concepto distinto) quedaron separados por no ser duplicados puros sino combinaciones parciales distintas; se enlazan a este nodo."
+    },
+    {
+      "cluster": [
+        "right_of_first_refusal_inversores",
+        "right_of_first_refusal_pro_rata"
+      ],
+      "canonical_id": "right_of_first_refusal_pro_rata",
+      "losers": [
+        "right_of_first_refusal_inversores"
+      ],
+      "notes": ""
+    }
+  ],
+  "bridges": [
+    {
+      "from": "decision_cuando_fundar",
+      "to": "acumulacion_capital_previo_fundacion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_cuando_fundar",
+      "to": "analisis_motivaciones_fundador",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "fundamentos_inteligencia_financiera",
+      "to": "arte_de_las_finanzas",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "evaluacion_capacidades_fundador",
+      "to": "brecha_capital_humano_founder",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_cuando_fundar",
+      "to": "capital_social_founder",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "fundamentos_inteligencia_financiera",
+      "to": "contabilidad_caja_vs_devengo",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "fundamentos_inteligencia_financiera",
+      "to": "costo_de_capital",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "fundamentos_inteligencia_financiera",
+      "to": "costo_de_oportunidad",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "equity_crowdfunding",
+      "to": "crowdfunding_legal_exemptions_jobs_act",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_cuando_fundar",
+      "to": "decisiones_por_diseno_no_por_default",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "por_que_existen_los_term_sheets",
+      "to": "entender_term_sheet",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "dilema_riqueza_vs_control",
+      "to": "esposas_doradas_carrera",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_cuando_fundar",
+      "to": "esposas_familiares_founder",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_cuando_fundar",
+      "to": "evaluacion_capacidades_fundador",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_fundador_solo_vs_equipo",
+      "to": "evaluar_motivaciones_cofundadores",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "financiamiento_angel_investors",
+      "to": "gestion_angel_investors",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "como_ganan_dinero_los_vc",
+      "to": "jerarquia_firma_vc",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "fundamentos_inteligencia_financiera",
+      "to": "lectura_estado_resultados",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "construccion_de_leverage",
+      "to": "leverage_en_negociacion_con_vcs",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "definicion_startup",
+      "to": "marcos_historicos_comunidades_startup",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "jerarquia_firma_vc",
+      "to": "proceso_diligencia_vc",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "derechos_de_registro",
+      "to": "registration_rights_stock_consideration",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_fundador_solo_vs_equipo",
+      "to": "relacion_previa_y_estructura_roles",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "relacion_previa_y_estructura_roles",
+      "to": "riesgo_cofundadores_relacion_previa",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "cofundar_con_amigos_familia_riesgos",
+      "to": "riesgo_contratar_amigos_familia",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_cuando_fundar",
+      "to": "sesgos_naturales_del_fundador",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "estilos_de_negociacion",
+      "to": "teoria_de_juegos_en_negociacion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "marcos_historicos_comunidades_startup",
+      "to": "tesis_boulder_liderazgo_emprendedor",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "analisis_antiguedad_cuentas_por_cobrar",
+      "to": "gestion_cuentas_por_cobrar",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "analisis_de_ratios_financieros",
+      "to": "cultura_de_transparencia_financiera",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "analisis_varianza_financiera",
+      "to": "decision_consciente_de_crecimiento",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "antidilution_carve_outs",
+      "to": "pay_to_play",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "background_startup_vs_corporativo",
+      "to": "contratacion_experiencia_vs_potencial",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "board_gridlock_y_directores_independientes",
+      "to": "perdida_control_junta_directiva",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "breakup_fee_evaluation",
+      "to": "mejorar_deal_despues_del_hecho",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "calculo_roi",
+      "to": "comparacion_metodos_inversion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "capital_financiero_cushion",
+      "to": "decision_autofinanciamiento_vs_inversion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "compensacion_fundadores_cash_vs_equity",
+      "to": "seesaw_salario_equity",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "concepto_patrimonio_equity",
+      "to": "patrimonio_de_los_propietarios",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "contrarrestar_argumento_mercado",
+      "to": "tecnica_anclaje_negociacion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "conversion_venta_empresa",
+      "to": "asuncion_stock_options_adquisicion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "cumplimiento_sarbanes_oxley",
+      "to": "cultura_de_transparencia_financiera",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "decision_de_salir_a_bolsa",
+      "to": "preparacion_para_salida_a_bolsa",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "due_diligence_adquisiciones",
+      "to": "materiales_due_diligence",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "emprendimiento_serial",
+      "to": "paradoja_exito_emprendedor",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "estrategias_de_alfabetizacion_financiera",
+      "to": "cultura_de_transparencia_financiera",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "estructura_de_la_venta",
+      "to": "forma_de_contraprestacion_en_adquisicion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "evaluacion_salud_financiera_empresa",
+      "to": "analisis_de_ratios_financieros",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "exercise_period_opciones",
+      "to": "valuacion_409a",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "gestion_cuentas_por_cobrar",
+      "to": "gestion_dso",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "gestion_incertidumbre_contratos",
+      "to": "elementos_contrato_legal",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "gestion_relacion_bancaria",
+      "to": "seleccion_prestamista_relacion_vs_transaccion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "goodwill_en_adquisiciones",
+      "to": "due_diligence_adquisiciones",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "indemnification_clause",
+      "to": "reps_warranties_indemnizacion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "information_rights",
+      "to": "protective_provisions",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "inversionistas_acreditados",
+      "to": "cumplimiento_inversionistas_acreditados",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "mejorar_deal_despues_del_hecho",
+      "to": "restructuracion_deuda_soft_landing",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "metodo_conversion_notas_cap_table",
+      "to": "cap_table_basico",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "owner_earnings",
+      "to": "flujo_de_caja_libre",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "perdida_control_junta_directiva",
+      "to": "control_del_board_startup",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "preparacion_materiales_fundraising",
+      "to": "presentacion_inversionistas",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "priorizacion_hipercrecimiento",
+      "to": "eleccion_ritmo_crecimiento",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "protective_provisions",
+      "to": "protective_provisions_alineacion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "prueba_antes_de_comprometerse",
+      "to": "cofundar_con_amigos_familia_riesgos",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "puzzle_prima_capital_privado",
+      "to": "dilema_riqueza_vs_control",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "restructuracion_deuda_soft_landing",
+      "to": "plan_a_b_c_soft_landing",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "riesgo_beneficio_retener_fundador",
+      "to": "transicion_post_sucesion",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "shareholder_representative_role",
+      "to": "gestion_sindicato_inversores",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "term_sheet_disposiciones_vinculantes",
+      "to": "cierre_term_sheet",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "term_sheet_negociacion",
+      "to": "cierre_term_sheet",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "tesis_boulder_stack_emprendedor",
+      "to": "tesis_boulder_inclusividad",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "transicion_post_sucesion",
+      "to": "founder_ceo_succession_process",
+      "type": "enlace_oportunistico"
+    },
+    {
+      "from": "venture_debt_terminos_economicos",
+      "to": "venture_debt_introduccion",
+      "type": "enlace_oportunistico"
+    }
+  ],
+  "ghosts_auto_resolved": {
+    "negociacion_term_sheet": {
+      "resolved_to": "term_sheet_negociacion",
+      "score": 100.0,
+      "ratio": 55.696202531645575
+    },
+    "cap_table_management": {
+      "resolved_to": "cap_table_basico",
+      "score": 100.0,
+      "ratio": 62.06896551724138
+    },
+    "seleccion_cofundadores": {
+      "resolved_to": "seleccion_relaciones_cofundadores",
+      "score": 100.0,
+      "ratio": 80.0
+    },
+    "negociacion_term_sheet_vc": {
+      "resolved_to": "term_sheet_negociacion",
+      "score": 100.0,
+      "ratio": 51.06382978723405
+    },
+    "sucesion_ceo_fundador": {
+      "resolved_to": "founder_ceo_succession_process",
+      "score": 100.0,
+      "ratio": 82.6086956521739
+    },
+    "due_diligence": {
+      "resolved_to": "proceso_diligencia_vc",
+      "score": 100.0,
+      "ratio": 100.0
+    },
+    "rondas_de_financiamiento": {
+      "resolved_to": "dilucion_propiedad_por_ronda",
+      "score": 100.0,
+      "ratio": 65.75342465753424
+    },
+    "business_model_canvas": {
+      "resolved_to": "lienzo_modelo_negocio",
+      "score": 100.0,
+      "ratio": 100.0
+    },
+    "negociacion_liquidation_preference": {
+      "resolved_to": "preferencia_de_liquidacion",
+      "score": 100.0,
+      "ratio": 78.57142857142857
+    },
+    "founder_ceo_succession": {
+      "resolved_to": "founder_ceo_succession_process",
+      "score": 100.0,
+      "ratio": 84.61538461538461
+    },
+    "definicion_hurdle_rate": {
+      "resolved_to": "tasa_de_retorno_requerida",
+      "score": 100.0,
+      "ratio": 66.66666666666667
+    },
+    "estructura_de_capital": {
+      "resolved_to": "estructura_fondo_vc",
+      "score": 100.0,
+      "ratio": 60.86956521739131
+    },
+    "principio_de_correspondencia_contable": {
+      "resolved_to": "principio_correspondencia_contable",
+      "score": 100.0,
+      "ratio": 95.77464788732395
+    },
+    "estado_de_resultados_y_balance": {
+      "resolved_to": "impacto_estado_resultados_en_balance",
+      "score": 96.55172413793103,
+      "ratio": 68.23529411764706
+    },
+    "antidilution_weighted_average_broad_narro": {
+      "resolved_to": "antidilution_weighted_average_broad_narrow",
+      "score": 98.79518072289157,
+      "ratio": 98.79518072289156
+    },
+    "evaluacion_ceo_fundador": {
+      "resolved_to": "evaluacion_capacidades_fundador",
+      "score": 90.47619047619048,
+      "ratio": 81.4814814814815
+    },
+    "protective_provisions_veto_rights": {
+      "resolved_to": "protective_provisions",
+      "score": 100.0,
+      "ratio": 77.77777777777779
+    },
+    "vesting_de_equity": {
+      "resolved_to": "reasignacion_equity_fundadores",
+      "score": 100.0,
+      "ratio": 38.888888888888886
+    },
+    "mvp_producto_minimo_viable": {
+      "resolved_to": "mvp_catalogo_tecnicas",
+      "score": 100.0,
+      "ratio": 91.66666666666666
+    },
+    "cap_table_analysis": {
+      "resolved_to": "cap_table_basico",
+      "score": 100.0,
+      "ratio": 66.66666666666667
+    },
+    "right_of_first_refusal": {
+      "resolved_to": "right_of_first_refusal_pro_rata",
+      "score": 100.0,
+      "ratio": 83.01886792452831
+    },
+    "motivaciones_del_fundador": {
+      "resolved_to": "analisis_motivaciones_fundador",
+      "score": 100.0,
+      "ratio": 80.64516129032258
+    },
+    "calculo_margen_bruto": {
+      "resolved_to": "margen_bruto",
+      "score": 100.0,
+      "ratio": 75.0
+    },
+    "income_statement_basico": {
+      "resolved_to": "estructura_estado_resultados",
+      "score": 100.0,
+      "ratio": 82.05128205128204
+    },
+    "definicion_propuesta_valor": {
+      "resolved_to": "value_proposition_startup",
+      "score": 90.9090909090909,
+      "ratio": 68.18181818181819
+    },
+    "clausulas_control_junta_directiva": {
+      "resolved_to": "control_del_board_startup",
+      "score": 100.0,
+      "ratio": 62.5
+    },
+    "estado_de_resultados": {
+      "resolved_to": "estructura_estado_resultados",
+      "score": 100.0,
+      "ratio": 72.72727272727273
+    },
+    "balance_general": {
+      "resolved_to": "lectura_balance_general",
+      "score": 100.0,
+      "ratio": 78.94736842105263
+    },
+    "pitch_a_inversionistas": {
+      "resolved_to": "elevator_pitch_inversion",
+      "score": 95.23809523809524,
+      "ratio": 78.57142857142857
+    },
+    "ideacion_de_producto_minimo_viable": {
+      "resolved_to": "mvp_catalogo_tecnicas",
+      "score": 100.0,
+      "ratio": 78.57142857142857
+    },
+    "board_de_directores": {
+      "resolved_to": "composicion_board_directors",
+      "score": 100.0,
+      "ratio": 70.37037037037037
+    },
+    "vesting_acciones": {
+      "resolved_to": "vesting_acciones_fundadores",
+      "score": 100.0,
+      "ratio": 91.42857142857143
+    },
+    "modelo_de_negocio_lienzo": {
+      "resolved_to": "lienzo_modelo_negocio",
+      "score": 100.0,
+      "ratio": 62.96296296296296
+    },
+    "estructura_de_costos_e_ingresos": {
+      "resolved_to": "estructura_de_costos",
+      "score": 100.0,
+      "ratio": 78.43137254901961
+    },
+    "lectura_income_statement": {
+      "resolved_to": "estructura_estado_resultados",
+      "score": 100.0,
+      "ratio": 80.0
+    },
+    "seleccion_lead_investor": {
+      "resolved_to": "encontrar_lead_vc",
+      "score": 100.0,
+      "ratio": 72.22222222222221
+    },
+    "negociacion_term_sheets": {
+      "resolved_to": "term_sheet_disposiciones_vinculantes",
+      "score": 100.0,
+      "ratio": 64.70588235294117
+    },
+    "letter_of_intent_loi": {
+      "resolved_to": "carta_de_intencion_loi",
+      "score": 100.0,
+      "ratio": 88.88888888888889
+    },
+    "venture_debt_control_terms": {
+      "resolved_to": "venture_debt_introduccion",
+      "score": 100.0,
+      "ratio": 63.1578947368421
+    },
+    "conversion_de_acciones_preferentes": {
+      "resolved_to": "conversion_rights",
+      "score": 100.0,
+      "ratio": 100.0
+    },
+    "gestion_cap_table": {
+      "resolved_to": "cap_table_basico",
+      "score": 100.0,
+      "ratio": 69.23076923076923
+    },
+    "liquidation_preference_basico": {
+      "resolved_to": "preferencia_de_liquidacion",
+      "score": 100.0,
+      "ratio": 86.27450980392157
+    },
+    "ratios_eficiencia": {
+      "resolved_to": "ratios_eficiencia_inventario",
+      "score": 100.0,
+      "ratio": 75.55555555555556
+    },
+    "vesting_founder": {
+      "resolved_to": "eleccion_estructura_vesting_founder",
+      "score": 100.0,
+      "ratio": 60.0
+    },
+    "definicion_modelo_negocio": {
+      "resolved_to": "definicion_startup_busqueda_modelo_negocio",
+      "score": 100.0,
+      "ratio": 74.62686567164178
+    },
+    "definicion_etapa_startup": {
+      "resolved_to": "definicion_startup",
+      "score": 100.0,
+      "ratio": 85.71428571428572
+    },
+    "due_diligence_ma": {
+      "resolved_to": "proceso_diligencia_vc",
+      "score": 100.0,
+      "ratio": 89.65517241379311
+    },
+    "formacion_junta_directiva": {
+      "resolved_to": "control_del_board_startup",
+      "score": 100.0,
+      "ratio": 75.0
+    },
+    "analisis_balance_general": {
+      "resolved_to": "lectura_balance_general",
+      "score": 100.0,
+      "ratio": 77.41935483870968
+    },
+    "employee_pool": {
+      "resolved_to": "employee_pool_esop",
+      "score": 100.0,
+      "ratio": 83.87096774193549
+    },
+    "negociacion_term_sheet_deuda": {
+      "resolved_to": "term_sheet_negociacion",
+      "score": 100.0,
+      "ratio": 52.0
+    },
+    "convertible_debt": {
+      "resolved_to": "convertible_debt_fundamentos",
+      "score": 100.0,
+      "ratio": 100.0
+    }
+  },
+  "ghosts_manual": {
+    "formacion_equipo_fundador": "decision_fundador_solo_vs_equipo",
+    "equity_split_fundadores": "criterios_equity_split",
+    "valoracion_pre_money": "valuacion_pre_post_money",
+    "cierre_de_ronda": "term_sheet_negociacion",
+    "reparto_equity_fundadores": "reasignacion_equity_fundadores",
+    "negociacion_terminos_inversion": "tecnica_anclaje_negociacion",
+    "decision_reemplazo_fundador_ceo": "founder_ceo_succession_process",
+    "dilema_relaciones_cofundadores": "seleccion_relaciones_cofundadores",
+    "analisis_flujo_de_caja": "analisis_flujo_de_valor",
+    "asignacion_equity_cofundadores": "reparto_inicial_equity",
+    "equity_financing_terminos": "equity_crowdfunding_terminos",
+    "investor_dilemmas": "encontrar_lead_vc",
+    "balance_general_estructura": "lectura_balance_general",
+    "planificacion_de_salida": "future_scenarios_planning",
+    "valuation_pre_money": "valuacion_pre_post_money",
+    "division_de_capital_fundadores": "criterios_equity_split",
+    "founder_role_after_succession": "founder_ceo_succession_process",
+    "estrategia_de_salida": "decision_de_vender_startup",
+    "balance_sheet_basico": "entendiendo_balance_general_basico",
+    "cierre_transaccion_adquisicion": "condiciones_de_cierre_adquisicion",
+    "exit_strategy": "decision_de_vender_startup",
+    "division_equidad_fundadores": "criterios_equity_split",
+    "eleccion_cofundadores": "seleccion_ceo_fundador",
+    "lectura_balance_sheet": "lectura_balance_general",
+    "lectura_cash_flow_statement": "flujo_de_caja_libre",
+    "preparacion_pitch_inversion": "elevator_pitch_inversion",
+    "negociacion_termsheet_vc": "term_sheet_negociacion",
+    "negociacion_terminos_valuacion": "tecnica_anclaje_negociacion",
+    "contratacion_abogado_especializado": "seleccion_abogado_venture",
+    "terminos_hoja_de_terminos_deuda_convertible": "terminos_adicionales_deuda_convertible",
+    "dilema_cofundadores": "circulos_busqueda_cofundadores",
+    "acuerdo_equity_cofundadores": "reparto_inicial_equity",
+    "estados_financieros_basicos": "pro_forma_vs_actuals",
+    "ratios_de_rentabilidad": "analisis_de_ratios_financieros",
+    "plan_de_opciones_empleados": "employee_pool_esop",
+    "calculo_utilidad_neta": "calculo_roi",
+    "negociacion_de_adquisicion": "estilos_de_negociacion",
+    "acuerdo_definitivo_de_adquisicion": "confidencialidad_nda_adquisicion",
+    "ideacion_problema_solucion": "fit_problema_solucion",
+    "seleccion_banco_inversion_ma": "seleccion_banquero_ma",
+    "M&A_negotiation": "no_shop_extension_negotiation",
+    "ronda_de_financiamiento_serie_a": "term_sheet_negociacion",
+    "estructura_de_equity_fundadores": "eleccion_estructura_vesting_founder",
+    "estrategia_financiamiento_temprano": "warrants_financiamiento",
+    "gestion_de_relaciones_entre_cofundadores": "seleccion_relaciones_cofundadores",
+    "dilema_roles_cofundadores": "errores_comunes_asignacion_roles",
+    "board_decision_exit": "decision_de_vender_startup",
+    "serie_a_financiamiento": "warrants_financiamiento",
+    "preparacion_para_ipo": "preparacion_para_salida_a_bolsa",
+    "ipo_preparacion": "wallas_etapa_preparacion",
+    "negociacion_termsheet": "term_sheet_negociacion",
+    "calculo_burn_rate": "cash_burn_calculation",
+    "analisis_cash_flow_statement": "flujo_de_caja_libre",
+    "metodos_de_valoracion_empresarial": "metodos_de_valuacion",
+    "equity_splits_fundadores": "reasignacion_equity_fundadores",
+    "plan_contrataciones": "creacion_option_pool",
+    "levantamiento_capital_serie_a": "executive_summary_inversion",
+    "metricas_de_negocio": "retention_metrics",
+    "modelo_de_negocio_escalable": "patron_free_business_model",
+    "gestion_de_board_de_directores": "composicion_board_directors",
+    "estrategia_de_salida_exit": "decision_de_vender_startup",
+    "estructura_de_capital_startup": "estructura_fondo_vc",
+    "board_composition_investors": "composicion_board_directors",
+    "equipo_fundador_inicial": "rotacion_equipo_fundador",
+    "fundamentos_estados_financieros": "analisis_porcentual_estados_financieros",
+    "cultura_organizacional_inicial": "cultura_de_innovacion",
+    "estructura_ronda_financiamiento": "term_sheet_negociacion",
+    "board_directores_formacion": "composicion_board_directors",
+    "analisis_sensibilidad_financiera": "analisis_varianza_financiera",
+    "modelo_ingresos_bmc": "verificar_modelo_ingresos",
+    "ronda_de_inversion": "financiamiento_angel_investors",
+    "fuentes_alternativas_financiamiento_temprano": "fuentes_financiamiento_startup",
+    "cierre_de_ronda_financiamiento": "term_sheet_negociacion",
+    "product_development_milestones": "etapa_development",
+    "term_sheet_acciones_preferentes": "conversion_rights",
+    "relaciones_largo_plazo_con_inversionistas": "relaciones_con_clientes",
+    "toma_de_decisiones_estrategicas": null,
+    "escalamiento_equipo": "escalamiento_prematuro",
+    "definicion_necesidad_capital": "decision_intensidad_capital",
+    "campana_crowdfunding": "equity_crowdfunding",
+    "definicion_roles_equipo_fundador": "decision_fundador_solo_vs_equipo",
+    "cierre_ronda_financiamiento": "term_sheet_negociacion",
+    "tipos_relaciones_previas_cofundadores": "riesgo_cofundadores_relacion_previa",
+    "resolucion_conflictos_equipo_fundador": "rotacion_equipo_fundador",
+    "equipo_fundador_roles": "rotacion_equipo_fundador",
+    "estructura_societaria": "seleccion_estructura_corporativa",
+    "employee_pool_management": "employee_pool_esop",
+    "retencion_de_talento": "customer_retention_tactics",
+    "fuentes_de_financiamiento_deuda_vs_equity": "fuentes_financiamiento_startup",
+    "term_sheet_basico": null,
+    "negociacion_acuerdo_definitivo": null,
+    "gobernanza_corporativa": null,
+    "negociacion_valoracion": null,
+    "negociacion_rondas_futuras": null,
+    "acuerdo_fundadores": null,
+    "fundraising_preparation": null,
+    "pitch_a_inversores": null,
+    "gobierno_corporativo": null,
+    "fundraising_strategy_startup": null,
+    "mvp": "producto_minimo_viable",
+    "validacion_de_mercado": null,
+    "razones_financieras_liquidez": null,
+    "depreciacion_de_activos_fijos": null,
+    "ratios_de_apalancamiento": null,
+    "rondas_futuras_de_inversion": null,
+    "down_round_financing": null,
+    "estrategia_fundraising": null,
+    "definicion_roles_cofundadores": null,
+    "liquidez_fundadores": null,
+    "termsheet_negociacion_final": null,
+    "startup_valuation_basica": null,
+    "busqueda_inversores_angel": null,
+    "valuation_cap_negociacion": null,
+    "serie_a_conversion": null,
+    "venture_deals_terminos_de_financiamiento": null,
+    "asignacion_titulos_cofundadores": null,
+    "evaluacion_idea_emprendedor": null,
+    "dilema_recompensas_cofundadores": null,
+    "lock_up_provisions": null,
+    "ipo_preparation": null,
+    "above_the_line_below_the_line": null,
+    "dilema_cofundacion_con_conocidos": null,
+    "fund_raising_rounds": null,
+    "founder_motivations_wealth_vs_control": null,
+    "founders_dilemmas_compromiso": null,
+    "identificacion_lista_vcs_objetivo": null,
+    "financial_reporting_investors": null,
+    "identificar_inversores_objetivo": null,
+    "proyeccion_flujos_caja": null,
+    "cierre_ronda_inversion": null,
+    "no_shop_clause": null,
+    "cash_runway_management": null,
+    "planificacion_financiera_deuda": null,
+    "seleccion_aceleradora": null,
+    "termsheet_basico": null,
+    "fundraising_estrategia": null,
+    "firma_acuerdo_definitivo": null,
+    "definicion_cultura_fundacional": null,
+    "stock_option_plan": null,
+    "retencion_talento": null,
+    "estructura_de_capital": null,
+    "vesting_de_equity": "vesting_acciones_fundadores",
+    "negociacion_term_sheets": "term_sheet_negociacion"
+  },
+  "ghosts_removed": [
+    {
+      "node": "activos_intangibles_amortizacion",
+      "key": "nodos_previos",
+      "ref": "depreciacion_de_activos_fijos"
+    },
+    {
+      "node": "acuerdo_de_co_venta_y_votacion",
+      "key": "nodos_siguientes",
+      "ref": "gobernanza_corporativa"
+    },
+    {
+      "node": "analisis_de_ratios_financieros",
+      "key": "nodos_siguientes",
+      "ref": "ratios_de_apalancamiento"
+    },
+    {
+      "node": "antidilucion_provisiones",
+      "key": "nodos_siguientes",
+      "ref": "rondas_futuras_de_inversion"
+    },
+    {
+      "node": "antidilution_carve_outs",
+      "key": "nodos_siguientes",
+      "ref": "down_round_financing"
+    },
+    {
+      "node": "batna_definicion",
+      "key": "nodos_previos",
+      "ref": "estrategia_fundraising"
+    },
+    {
+      "node": "batna_definicion",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_valoracion"
+    },
+    {
+      "node": "breakup_fee_evaluation",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_acuerdo_definitivo"
+    },
+    {
+      "node": "ceo_equity_premium",
+      "key": "nodos_previos",
+      "ref": "definicion_roles_cofundadores"
+    },
+    {
+      "node": "co_sale_drag_along_agreements",
+      "key": "nodos_siguientes",
+      "ref": "liquidez_fundadores"
+    },
+    {
+      "node": "como_ganan_dinero_los_vc",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_rondas_futuras"
+    },
+    {
+      "node": "composicion_board_directors",
+      "key": "nodos_siguientes",
+      "ref": "gobierno_corporativo"
+    },
+    {
+      "node": "composicion_board_directors",
+      "key": "nodos_siguientes",
+      "ref": "gobernanza_corporativa"
+    },
+    {
+      "node": "construccion_de_leverage",
+      "key": "nodos_siguientes",
+      "ref": "termsheet_negociacion_final"
+    },
+    {
+      "node": "convertible_debt_fundamentos",
+      "key": "nodos_previos",
+      "ref": "startup_valuation_basica"
+    },
+    {
+      "node": "convertible_debt_fundamentos",
+      "key": "nodos_previos",
+      "ref": "busqueda_inversores_angel"
+    },
+    {
+      "node": "convertible_debt_fundamentos",
+      "key": "nodos_siguientes",
+      "ref": "valuation_cap_negociacion"
+    },
+    {
+      "node": "convertible_debt_fundamentos",
+      "key": "nodos_siguientes",
+      "ref": "serie_a_conversion"
+    },
+    {
+      "node": "crowdfunding_legal_exemptions_jobs_act",
+      "key": "nodos_previos",
+      "ref": "fundraising_strategy_startup"
+    },
+    {
+      "node": "decision_de_salir_a_bolsa",
+      "key": "nodos_previos",
+      "ref": "venture_deals_terminos_de_financiamiento"
+    },
+    {
+      "node": "decision_egalitaria_vs_jerarquica",
+      "key": "nodos_previos",
+      "ref": "asignacion_titulos_cofundadores"
+    },
+    {
+      "node": "decision_fundador_solo_vs_equipo",
+      "key": "nodos_previos",
+      "ref": "evaluacion_idea_emprendedor"
+    },
+    {
+      "node": "decision_fundador_solo_vs_equipo",
+      "key": "nodos_siguientes",
+      "ref": "dilema_recompensas_cofundadores"
+    },
+    {
+      "node": "derechos_de_registro",
+      "key": "nodos_previos",
+      "ref": "term_sheet_basico"
+    },
+    {
+      "node": "derechos_de_registro",
+      "key": "nodos_siguientes",
+      "ref": "lock_up_provisions"
+    },
+    {
+      "node": "derechos_de_registro",
+      "key": "nodos_siguientes",
+      "ref": "ipo_preparation"
+    },
+    {
+      "node": "diversidad_vs_homogeneidad_equipo",
+      "key": "nodos_siguientes",
+      "ref": "acuerdo_fundadores"
+    },
+    {
+      "node": "embudo_secuencial_de_inversores",
+      "key": "nodos_previos",
+      "ref": "validacion_de_mercado"
+    },
+    {
+      "node": "entender_term_sheet",
+      "key": "nodos_previos",
+      "ref": "fundraising_preparation"
+    },
+    {
+      "node": "entender_term_sheet",
+      "key": "nodos_previos",
+      "ref": "pitch_a_inversores"
+    },
+    {
+      "node": "entender_term_sheet",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_valoracion"
+    },
+    {
+      "node": "estructura_estado_resultados",
+      "key": "nodos_siguientes",
+      "ref": "above_the_line_below_the_line"
+    },
+    {
+      "node": "evaluacion_salud_financiera_empresa",
+      "key": "nodos_siguientes",
+      "ref": "razones_financieras_liquidez"
+    },
+    {
+      "node": "financiamiento_amigos_y_familia",
+      "key": "nodos_siguientes",
+      "ref": "dilema_cofundacion_con_conocidos"
+    },
+    {
+      "node": "financiamiento_angel_investors",
+      "key": "nodos_previos",
+      "ref": "validacion_de_mercado"
+    },
+    {
+      "node": "founder_ceo_succession_process",
+      "key": "nodos_previos",
+      "ref": "fund_raising_rounds"
+    },
+    {
+      "node": "founder_ceo_succession_process",
+      "key": "nodos_previos",
+      "ref": "founder_motivations_wealth_vs_control"
+    },
+    {
+      "node": "founders_activities_clause",
+      "key": "nodos_previos",
+      "ref": "founders_dilemmas_compromiso"
+    },
+    {
+      "node": "gestion_angel_investors",
+      "key": "nodos_previos",
+      "ref": "fundraising_preparation"
+    },
+    {
+      "node": "gestion_multiples_term_sheets",
+      "key": "nodos_previos",
+      "ref": "identificacion_lista_vcs_objetivo"
+    },
+    {
+      "node": "indemnification_clause",
+      "key": "nodos_siguientes",
+      "ref": "gobierno_corporativo"
+    },
+    {
+      "node": "information_rights",
+      "key": "nodos_siguientes",
+      "ref": "financial_reporting_investors"
+    },
+    {
+      "node": "jerarquia_firma_vc",
+      "key": "nodos_previos",
+      "ref": "identificar_inversores_objetivo"
+    },
+    {
+      "node": "metodo_valor_presente_neto",
+      "key": "nodos_previos",
+      "ref": "proyeccion_flujos_caja"
+    },
+    {
+      "node": "negociacion_carta_compromiso_banquero",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_acuerdo_definitivo"
+    },
+    {
+      "node": "no_shop_agreement",
+      "key": "nodos_previos",
+      "ref": "term_sheet_basico"
+    },
+    {
+      "node": "no_shop_agreement",
+      "key": "nodos_siguientes",
+      "ref": "cierre_ronda_inversion"
+    },
+    {
+      "node": "no_shop_extension_negotiation",
+      "key": "nodos_previos",
+      "ref": "no_shop_clause"
+    },
+    {
+      "node": "no_shop_extension_negotiation",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_acuerdo_definitivo"
+    },
+    {
+      "node": "option_pool_negociacion",
+      "key": "nodos_previos",
+      "ref": "term_sheet_basico"
+    },
+    {
+      "node": "plan_a_b_c_soft_landing",
+      "key": "nodos_previos",
+      "ref": "cash_runway_management"
+    },
+    {
+      "node": "preferencia_de_liquidacion",
+      "key": "nodos_previos",
+      "ref": "term_sheet_basico"
+    },
+    {
+      "node": "proceso_diligencia_vc",
+      "key": "nodos_previos",
+      "ref": "pitch_a_inversores"
+    },
+    {
+      "node": "protective_provisions",
+      "key": "nodos_siguientes",
+      "ref": "gobernanza_corporativa"
+    },
+    {
+      "node": "protective_provisions",
+      "key": "nodos_siguientes",
+      "ref": "toma_de_decisiones_estrategicas"
+    },
+    {
+      "node": "prueba_antes_de_comprometerse",
+      "key": "nodos_siguientes",
+      "ref": "acuerdo_fundadores"
+    },
+    {
+      "node": "ratio_deuda_capital",
+      "key": "nodos_siguientes",
+      "ref": "planificacion_financiera_deuda"
+    },
+    {
+      "node": "recursos_ecosistema_emprendedor",
+      "key": "nodos_siguientes",
+      "ref": "seleccion_aceleradora"
+    },
+    {
+      "node": "reducir_playing_with_fire_gap",
+      "key": "nodos_siguientes",
+      "ref": "acuerdo_fundadores"
+    },
+    {
+      "node": "registration_rights_stock_consideration",
+      "key": "nodos_previos",
+      "ref": "negociacion_acuerdo_definitivo"
+    },
+    {
+      "node": "reservas_de_capital_vc",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_rondas_futuras"
+    },
+    {
+      "node": "right_of_first_refusal_pro_rata",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_rondas_futuras"
+    },
+    {
+      "node": "seed_deals_riesgos_precedente",
+      "key": "nodos_previos",
+      "ref": "term_sheet_basico"
+    },
+    {
+      "node": "seleccion_abogado_venture",
+      "key": "nodos_previos",
+      "ref": "fundraising_preparation"
+    },
+    {
+      "node": "seleccion_etapa_fondo_vc",
+      "key": "nodos_siguientes",
+      "ref": "pitch_a_inversores"
+    },
+    {
+      "node": "shareholder_representative_role",
+      "key": "nodos_previos",
+      "ref": "negociacion_acuerdo_definitivo"
+    },
+    {
+      "node": "teoria_de_juegos_en_negociacion",
+      "key": "nodos_previos",
+      "ref": "termsheet_basico"
+    },
+    {
+      "node": "teoria_de_juegos_en_negociacion",
+      "key": "nodos_previos",
+      "ref": "fundraising_estrategia"
+    },
+    {
+      "node": "term_sheet_disposiciones_vinculantes",
+      "key": "nodos_siguientes",
+      "ref": "firma_acuerdo_definitivo"
+    },
+    {
+      "node": "tipos_de_pasivos",
+      "key": "nodos_siguientes",
+      "ref": "razones_financieras_liquidez"
+    },
+    {
+      "node": "transicion_organizacional_fluido_a_formal",
+      "key": "nodos_previos",
+      "ref": "definicion_cultura_fundacional"
+    },
+    {
+      "node": "venture_debt_introduccion",
+      "key": "nodos_previos",
+      "ref": "fundraising_strategy_startup"
+    },
+    {
+      "node": "vesting_acciones_fundadores",
+      "key": "nodos_previos",
+      "ref": "term_sheet_basico"
+    },
+    {
+      "node": "vesting_acciones_fundadores",
+      "key": "nodos_previos",
+      "ref": "stock_option_plan"
+    },
+    {
+      "node": "vesting_acciones_fundadores",
+      "key": "nodos_siguientes",
+      "ref": "retencion_talento"
+    },
+    {
+      "node": "warrants_financiamiento",
+      "key": "nodos_previos",
+      "ref": "term_sheet_basico"
+    },
+    {
+      "node": "warrants_financiamiento",
+      "key": "nodos_siguientes",
+      "ref": "negociacion_valoracion"
+    }
+  ],
+  "jurisdictional_safeguard": [
+    "eleccion_83b",
+    "crowdfunding_legal_exemptions_jobs_act",
+    "cumplimiento_sarbanes_oxley",
+    "seleccion_estructura_corporativa",
+    "inversionistas_acreditados",
+    "cumplimiento_inversionistas_acreditados",
+    "compensacion_service_providers",
+    "derechos_de_registro",
+    "equity_crowdfunding",
+    "exercise_period_opciones",
+    "original_issue_discount_oid",
+    "preparacion_due_diligence",
+    "preparacion_para_salida_a_bolsa",
+    "registration_rights_stock_consideration",
+    "valuacion_409a",
+    "vesting_acciones_fundadores",
+    "vesting_dinamico"
+  ],
+  "finalize_moved_count": 357
+}

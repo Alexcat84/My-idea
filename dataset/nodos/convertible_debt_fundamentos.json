@@ -1,0 +1,30 @@
+{
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Fundamentos de la Deuda Convertible (Convertible Debt)",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla, porque reduce la complejidad legal y los costos frente a una ronda de equity preferente. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+  "pasos_accionables": [
+    "Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de una ronda de equity",
+    "Definir el porcentaje de descuento que recibirán los inversionistas en la conversión (típicamente 10%-30%, siendo 20% el más común)",
+    "Considerar el uso de un valuation cap, solo o combinado con el descuento, y a qué monto, evaluando su impacto en rondas futuras",
+    "Fijar una tasa de interés baja (5%-12%, promedio 8%), cercana a las tasas federales aplicables",
+    "Establecer el plazo de maduración (fecha límite) y el monto mínimo de la siguiente ronda ('Qualified Financing') que dispara la conversión automática",
+    "Comparar los costos legales de una ronda de deuda convertible frente a una ronda de equity semilla preferente"
+  ],
+  "entregable_esperado": "Term sheet o nota convertible con términos claros: descuento, valuation cap, tasa de interés, plazo de maduración y monto mínimo de conversión",
+  "condiciones_activacion": [
+    "Si el emprendedor busca financiamiento semilla rápido sin negociar valuación completa",
+    "Si los inversionistas ángeles o aceleradoras prefieren estructurar la inversión como préstamo temporal",
+    "Cuando se necesita evitar los costos legales elevados de una ronda de equity preferente",
+    "Cuando la empresa busca financiamiento temprano (pre-semilla o semilla) y quiere evitar fijar valuación"
+  ],
+  "node_id": "convertible_debt_fundamentos",
+  "nodos_previos": [
+    "lienzo_modelo_negocio",
+    "warrants_financiamiento"
+  ],
+  "nodos_siguientes": [
+    "equity_crowdfunding_terminos",
+    "term_sheet_negociacion"
+  ]
+}

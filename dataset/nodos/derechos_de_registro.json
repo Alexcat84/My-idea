@@ -1,0 +1,32 @@
+{
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Derechos de Registro (Registration Rights)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Derechos que permiten a los inversionistas exigir que la empresa registre sus acciones ante la autoridad regulatoria de valores (la SEC en Estados Unidos) para poder venderlas públicamente, relevantes principalmente en el contexto de una futura salida a bolsa (IPO). Incluyen 'demand registrations' (el derecho a exigir un registro, generalmente limitado a un número definido de veces), 'piggyback rights' (el derecho a sumarse a un registro ya en marcha) y registros S-3 independientes, todos con límites de tiempo, montos mínimos de oferta y porcentajes mínimos garantizados en caso de reducción proporcional (usualmente no menos del 30%). Aunque los abogados suelen negociar esta sección extensamente, su impacto práctico real es limitado, porque al llegar a un IPO los bancos de inversión tendrán el control principal de cómo se estructura la oferta. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "pasos_accionables": [
+    "Definir el número de 'demand registrations' permitidas (por ejemplo, dos) y el monto mínimo de oferta pública requerido para poder ejercerlas",
+    "Negociar los 'piggyback rights' y su reducción proporcional según las condiciones de mercado",
+    "Revisar el porcentaje mínimo garantizado a los inversionistas en caso de reducción pro rata (usualmente no menos del 30%)",
+    "Acordar quién cubre los gastos de registro (usualmente la empresa, excluyendo comisiones de suscripción) y el tope de honorarios legales para los accionistas vendedores",
+    "No invertir tiempo legal excesivo en esta cláusula, ya que su impacto práctico es limitado frente al control que ejercerán los bancos de inversión en el momento del IPO"
+  ],
+  "entregable_esperado": "Cláusula de derechos de registro incluida en el acuerdo de derechos de los inversionistas (investor rights agreement), con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
+  "condiciones_activacion": [
+    "Si el usuario planea una eventual salida a bolsa (IPO)",
+    "Si los inversionistas requieren garantías de liquidez futura",
+    "Cuando se negocia una ronda institucional con miras a una futura salida a bolsa",
+    "Cuando la empresa está negociando un term sheet con inversores de capital de riesgo"
+  ],
+  "node_id": "derechos_de_registro",
+  "nodos_previos": [
+    "preferencia_de_liquidacion",
+    "term_sheet_negociacion",
+    "warrants_financiamiento"
+  ],
+  "nodos_siguientes": [
+    "preparacion_para_salida_a_bolsa",
+    "wallas_etapa_preparacion",
+    "right_of_first_refusal_pro_rata",
+    "registration_rights_stock_consideration"
+  ]
+}

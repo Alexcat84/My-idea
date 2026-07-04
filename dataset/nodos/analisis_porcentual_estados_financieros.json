@@ -1,0 +1,28 @@
+{
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Análisis de Porcentaje del Total y Porcentaje de Cambio",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "Dos técnicas simples y complementarias de análisis financiero: 'porcentaje del total' (cada línea de gasto o ingreso expresada como porcentaje de los ingresos totales), que muestra la estructura de costos relativa, y 'porcentaje de cambio' (la diferencia entre dos periodos -presupuesto vs. real, año anterior vs. actual- dividida entre el valor base y multiplicada por 100), que muestra tendencias en el tiempo. La fórmula de porcentaje de cambio es la misma que la de porcentaje de varianza presupuestaria, por lo que dominarla permite analizar tanto el desempeño histórico como las desviaciones del presupuesto. Juntas, estas herramientas revelan patrones que los números crudos no muestran, como márgenes en deterioro o gastos que crecen más rápido que los ingresos.",
+  "pasos_accionables": [
+    "Calcular cada línea de gasto o ingreso como porcentaje de los ingresos totales (porcentaje del total)",
+    "Para calcular el porcentaje de cambio o varianza: identificar el valor base (periodo anterior o presupuestado) y el valor nuevo (periodo actual o real), restar el valor base del nuevo, dividir entre el valor base y multiplicar por 100",
+    "Comparar tendencias entre periodos: ¿los márgenes mejoran o empeoran con el tiempo?",
+    "Identificar si el crecimiento de los gastos supera al de los ingresos",
+    "Aplicar la misma fórmula de porcentaje de cambio para calcular varianzas presupuestarias (presupuesto vs. real)"
+  ],
+  "entregable_esperado": "Tabla con el porcentaje de cada línea financiera respecto a los ingresos totales y su cambio o varianza interanual, con interpretación de tendencias",
+  "condiciones_activacion": [
+    "Si el usuario quiere detectar tendencias de rentabilidad o eficiencia operativa",
+    "Si el usuario está comparando el desempeño financiero año contra año",
+    "Si el usuario necesita comparar resultados financieros entre periodos",
+    "Si el usuario debe analizar desviaciones de su presupuesto"
+  ],
+  "node_id": "analisis_porcentual_estados_financieros",
+  "nodos_previos": [
+    "lectura_estado_resultados"
+  ],
+  "nodos_siguientes": [
+    "analisis_de_ratios_financieros",
+    "entendiendo_balance_general_basico"
+  ]
+}

@@ -1,0 +1,1136 @@
+[
+  {
+    "cluster_members": [
+      "liquidacion_preferencia_participante",
+      "liquidation_preference",
+      "liquidation_preference_basica",
+      "preferencia_de_liquidacion",
+      "terminos_liquidacion_preferencia"
+    ],
+    "canonical_id": "preferencia_de_liquidacion",
+    "losers": [
+      "liquidacion_preferencia_participante",
+      "liquidation_preference",
+      "liquidation_preference_basica",
+      "terminos_liquidacion_preferencia"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Preferencia de Liquidación (Liquidation Preference)",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "Cláusula que determina el orden y el monto que reciben los tenedores de acciones preferentes (los inversionistas) antes que los accionistas comunes en un evento de liquidez: fusión, adquisición, venta o cambio de control de la empresa. Típicamente es 1x el precio de compra más los dividendos declarados no pagados. Puede ser participante (el inversionista recibe la preferencia MÁS su parte proporcional como accionista común, un 'doble cobro') o no participante (elige recibir una u otra cosa, no ambas). Un 'Change in Control' se trata como evento de liquidación a estos efectos, pero una oferta pública inicial NO se considera evento de liquidación, ya que las acciones preferentes se convierten a comunes. El 'overhang' de la preferencia es el monto que debe devolverse a los inversionistas antes de que los accionistas comunes reciban cualquier proceso.",
+      "pasos_accionables": [
+        "Negociar una preferencia de liquidación simple (1x, no participante) en rondas iniciales; evitar múltiplos superiores a 1x, ya que son señal de alerta sobre el inversionista",
+        "Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común) y no participante (una u otra, no ambas)",
+        "Si se acepta participación, solicitar 'kick-outs' que la eliminen una vez el inversionista alcance un retorno de 2x-3x",
+        "Definir con claridad qué eventos constituyen un 'Change in Control' que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación",
+        "Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier proceso",
+        "Modelar distintos escenarios de venta (bajo, medio, alto) para entender el impacto real en el retorno de fundadores, empleados e inversionistas (análisis de cascada o waterfall)",
+        "Revisar cómo se tratan las contraprestaciones en garantía (escrow) o contingentes al calcular la distribución",
+        "Anticipar que un inversionista que percibe mayor riesgo (mercado incierto, competencia, condiciones de salida poco claras) tenderá a exigir términos más agresivos"
+      ],
+      "entregable_esperado": "Cláusula de liquidation preference definida en el term sheet (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)",
+      "condiciones_activacion": [
+        "Cuando se negocia el término económico central de una ronda de inversión con acciones preferentes",
+        "Si el fundador necesita entender el impacto real en su retorno económico ante un evento de salida",
+        "Cuando se planea un evento de liquidez o venta de la empresa",
+        "Si existe riesgo de dilución en eventos de salida"
+      ],
+      "fuentes_adicionales": [
+        "The Founder's Dilemmas"
+      ]
+    },
+    "notes": "Cluster de 5 nodos que explicaban la misma clausula (liquidation preference) con distinto nivel de detalle, incluyendo el nodo sobre 'participating preferred', que se trato como parte integral de la misma clausula (una de sus dos variantes) y no como faceta separada."
+  },
+  {
+    "cluster_members": [
+      "board_directores_composicion",
+      "board_of_directors_composition",
+      "composicion_board_directors",
+      "composicion_del_consejo_board_composition",
+      "composicion_junta_directiva"
+    ],
+    "canonical_id": "composicion_board_directors",
+    "losers": [
+      "board_directores_composicion",
+      "board_of_directors_composition",
+      "composicion_del_consejo_board_composition",
+      "composicion_junta_directiva"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Composición del Board de Directores",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "El board de directores es uno de los mecanismos de control más poderosos en una startup, con autoridad para aprobar presupuestos, fusiones, ofertas públicas y hasta reemplazar al CEO. Su composición suele negociarse como parte de una ronda de inversión: los boards en etapa temprana suelen tener entre 3 y 5 asientos (fundador/CEO, inversionista, miembro independiente), mientras que en etapa madura crecen a 7-9 con más miembros externos. Los asientos se clasifican típicamente como Directores Preferentes (elegidos por los inversionistas), Directores Comunes (elegidos por los fundadores o accionistas comunes, generalmente incluyendo al CEO) y Directores Mutuos (elegidos por consenso entre ambas partes); esta estructura determina el equilibrio de poder entre fundadores e inversionistas. Más allá de la mecánica de asientos, quién se sienta en el board importa estratégicamente: incluir a más de un cofundador puede generar confusión de roles entre el equipo ejecutivo y el board y complicar las discusiones estratégicas; los miembros independientes aportan mediación de conflictos y experiencia externa (compensados típicamente con 0.25%-0.5% en opciones sobre acciones, con vesting de 2 a 4 años); y el perfil ideal del board (tamaño, frecuencia de reuniones, experiencia de sus miembros) debe ajustarse al perfil del CEO -un fundador-CEO primerizo se beneficia de un board más experimentado que sirva de contrapeso a su optimismo y falta de foco.",
+      "pasos_accionables": [
+        "Definir el tamaño del board acorde a la etapa de la empresa (3-5 asientos en etapa temprana, creciendo a 7-9 en etapa madura)",
+        "Negociar el balance de asientos entre Directores Preferentes (inversionistas), Comunes (fundadores) y Mutuos, y quién tiene derecho a designar cada uno",
+        "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto a inversionistas menores",
+        "Buscar un miembro independiente con experiencia relevante en la industria; establecer su compensación (0.25%-0.5% en opciones, vesting de 2-4 años)",
+        "Evaluar los costos de largo plazo de incluir a más de un cofundador en el board frente a los beneficios inmediatos de tener aliados dentro de él",
+        "Ajustar la composición ideal del board (tamaño, frecuencia de reuniones, experiencia de sus miembros) al perfil del CEO, buscando directores experimentados como contrapeso si el CEO fundador tiene poca experiencia previa"
+      ],
+      "entregable_esperado": "Estructura del board definida y documentada en el term sheet: número de asientos, tipo de cada uno (Preferente, Común, Mutuo), proceso de designación, y perfil de miembro independiente buscado",
+      "condiciones_activacion": [
+        "Cuando la startup está formando o modificando su board de directores",
+        "Al cerrar una ronda de financiamiento Serie A o posterior",
+        "Si se está por levantar una ronda de inversión que requiera un board formal",
+        "Si la empresa necesita mentoría estratégica externa",
+        "Si el founder-CEO tiene poca experiencia previa liderando una empresa"
+      ],
+      "fuentes_adicionales": [
+        "The Founder's Dilemmas"
+      ]
+    },
+    "notes": "Fusiona la mecanica de asientos del term sheet (Venture Deals) con la guia estrategica de a quien incluir y por que (Founder's Dilemmas). control_del_board_startup y tamano_junta_directiva_vc quedaron separados por tratar temas distintos (evolucion del control entre rondas, y el problema especifico de multiples VCs en el board), enlazados a este nodo."
+  },
+  {
+    "cluster_members": [
+      "antidilucion_provisiones",
+      "antidilution_provisions",
+      "disposiciones_antidilucion"
+    ],
+    "canonical_id": "antidilucion_provisiones",
+    "losers": [
+      "antidilution_provisions",
+      "disposiciones_antidilucion"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Provisiones de Antidilución (Full Ratchet vs Weighted Average)",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "Las provisiones de antidilución protegen a los inversionistas preferentes de la dilución de su porcentaje de propiedad cuando la empresa emite nuevas acciones a un precio menor que en rondas anteriores (una ronda a la baja o 'down round'), ajustando el precio de conversión de sus acciones preferentes. Existen dos mecanismos principales: 'full ratchet' (repriza toda la ronda anterior al nuevo precio más bajo; muy agresivo) y 'weighted average' o promedio ponderado (considera tanto el precio como la magnitud de la nueva emisión; es el estándar más común y equilibrado del mercado). Se excluyen de este ajuste ciertas emisiones ('excluded issuances' o carve-outs), como las opciones para el pool de empleados o fusiones aprobadas por la junta directiva.",
+      "pasos_accionables": [
+        "Negociar antidilución basada en weighted average (broad-based), el estándar más equilibrado del mercado; evitar full ratchet salvo en negociaciones muy específicas o desfavorables",
+        "Identificar y listar las excepciones (carve-outs o 'excluded issuances') que no disparan el ajuste, como el pool de opciones para empleados o fusiones aprobadas por la junta",
+        "Negociar una cláusula de renuncia (waiver) por mayoría de la Serie A, para los casos en que la mayoría de inversionistas acuerde financiar una ronda futura a un precio menor",
+        "Negociar si el ajuste también aplica a splits de acciones, dividendos en acciones y recapitalizaciones",
+        "Consultar con un abogado corporativo el impacto de cada mecanismo en la tabla de capitalización ante un escenario de ronda a la baja"
+      ],
+      "entregable_esperado": "Cláusula de antidilución definida en el term sheet, con el mecanismo de ajuste (weighted average o full ratchet), su fórmula y las excepciones (carve-outs) claramente especificadas",
+      "condiciones_activacion": [
+        "Si la empresa enfrenta o anticipa una ronda de financiamiento a valoración menor (down round)",
+        "Si se está negociando la protección de inversionistas en el term sheet",
+        "Cuando el emprendedor está negociando una ronda de inversión Serie A o posterior"
+      ]
+    },
+    "notes": "antidilution_carve_outs y antidilution_weighted_average_broad_narrow quedaron separados por profundizar en mecanicas tecnicas especificas (excepciones detalladas; definicion broad vs narrow de CSO) que irian mas alla del alcance de un nodo unificado; se enlazan a este."
+  },
+  {
+    "cluster_members": [
+      "dilema_rich_vs_king",
+      "dilema_riqueza_vs_control"
+    ],
+    "canonical_id": "dilema_riqueza_vs_control",
+    "losers": [
+      "dilema_rich_vs_king"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Dilema Riqueza vs. Control (Rich vs. King)",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "Es una de las tensiones centrales que enfrentan los fundadores: elegir entre maximizar el valor financiero de la empresa ('volverse rico') o mantener el control absoluto sobre las decisiones ('ser rey'). Estas dos motivaciones suelen ser excluyentes: las decisiones tomadas a lo largo de la vida del startup -buscar capital externo, contratar ejecutivos experimentados, acelerar el crecimiento- suelen aumentar el valor de la empresa pero diluyen el control del fundador, empujándolo hacia uno de los dos extremos; muy pocos fundadores logran ambos ('rico y rey'). Estructuras híbridas -como ejemplos de franquicias donde el fundador cede parte del control y las ganancias a cambio de crecer con menos capital propio- ilustran relaciones intermedias posibles.",
+      "pasos_accionables": [
+        "Reflexionar honestamente sobre qué es más importante: maximizar el valor de salida o mantener el control de las decisiones clave",
+        "Autoevaluar si la motivación principal es la riqueza financiera o el control, ya que esto anticipa cómo se responderá a decisiones futuras de financiamiento o crecimiento",
+        "Evaluar el trade-off de cada decisión de financiamiento o contratación en términos de dilución de control versus crecimiento de valor",
+        "Definir explícitamente qué decisiones son 'no negociables' en términos de control (por ejemplo, dirección estratégica, cultura) y cuáles se pueden ceder a cambio de recursos",
+        "Considerar estructuras híbridas (por ejemplo, acciones con derechos de voto diferenciados) si se desea preservar control mientras se capta capital",
+        "Anticipar que decisiones de crecimiento rápido o de levantar capital de riesgo suelen sacrificar control"
+      ],
+      "entregable_esperado": "Declaración de prioridades del fundador (riqueza vs. control) que guíe las futuras decisiones de financiamiento, contratación y gobernanza",
+      "condiciones_activacion": [
+        "Cuando el fundador debe decidir si levantar capital externo significativo",
+        "Si existe tensión entre crecer rápido y mantener el control de la visión y decisiones de la empresa",
+        "Si el fundador enfrenta decisiones sobre levantar capital, ceder equity o acelerar crecimiento",
+        "Si el fundador no ha definido claramente su prioridad entre riqueza y control"
+      ]
+    },
+    "notes": "test_rico_vs_rey (herramienta de diagnostico para inversionistas), compatibilidad_motivaciones_riqueza_control (compatibilidad entre cofundadores) y estrategia_hibrida_control_riqueza (estrategia por etapas) son facetas genuinamente distintas del mismo dilema -distinto publico o angulo de aplicacion- y quedaron separadas pero enlazadas."
+  },
+  {
+    "cluster_members": [
+      "metodo_valor_presente_neto",
+      "metodo_valor_presente_neto_npv"
+    ],
+    "canonical_id": "metodo_valor_presente_neto",
+    "losers": [
+      "metodo_valor_presente_neto_npv"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Método del Valor Presente Neto (NPV)",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "Es el método más robusto y preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR) y el método de payback, que ignoran el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera el costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
+      "pasos_accionables": [
+        "Proyectar los flujos de efectivo futuros esperados de la inversión",
+        "Definir la tasa de descuento (hurdle rate) de la empresa",
+        "Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente",
+        "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV",
+        "Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo",
+        "Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales para probar la robustez de la decisión"
+      ],
+      "entregable_esperado": "Cifra de valor presente neto en dólares, con supuestos y análisis de sensibilidad documentados, que indique si la inversión agrega valor real a la empresa",
+      "condiciones_activacion": [
+        "Cuando se necesita determinar si una inversión de capital agregará valor real a la empresa en términos de dólares de hoy",
+        "Cuando el emprendedor debe decidir entre múltiples proyectos de inversión de capital",
+        "Cuando los métodos de IRR y payback dan resultados contradictorios"
+      ]
+    },
+    "notes": "valor_presente (Present Value) se mantuvo separado por ser un concepto prerrequisito mas basico -de hecho ya aparecia como nodo_previo de este mismo nodo-, no una repeticion del metodo NPV."
+  },
+  {
+    "cluster_members": [
+      "warrants_en_financiamiento",
+      "warrants_financiamiento"
+    ],
+    "canonical_id": "warrants_financiamiento",
+    "losers": [
+      "warrants_en_financiamiento"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Warrants en Financiamientos de Etapas Posteriores",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "Un warrant es el derecho a comprar un número determinado de acciones a un precio predefinido durante un plazo de años, similar a una opción de compra. Los inversionistas los usan para reducir efectivamente la valoración de la empresa sin que ese descuento aparezca explícitamente en el precio negociado -son, en la práctica, un mecanismo de valoración encubierta-. Son comunes en préstamos puente (bridge loans) y en financiamientos de etapas posteriores, típicamente ofreciendo un descuento de hasta 20% sobre el precio de la siguiente ronda, y suelen generar complejidad contable innecesaria.",
+      "pasos_accionables": [
+        "Identificar si el term sheet incluye warrants y cuál es su impacto real en la valuación efectiva de la empresa",
+        "Si se propone un warrant simplemente por un tema de precio, negociar una valoración pre-money más baja en su lugar, para eliminar la complejidad adicional",
+        "En el caso de préstamos puente (bridge loans), aceptar warrants razonables (hasta 20% de descuento) ya que son estándar en la industria para ese instrumento",
+        "Evaluar si el warrant complica innecesariamente la contabilidad y la estructura legal de la empresa a largo plazo antes de aceptarlo"
+      ],
+      "entregable_esperado": "Decisión documentada sobre aceptar warrants o negociar su eliminación/sustitución por una valuación pre-money más baja, con su impacto en la valuación efectiva de la empresa",
+      "condiciones_activacion": [
+        "Cuando se negocia un préstamo puente (bridge loan)",
+        "Cuando aparecen warrants en un term sheet de etapas posteriores"
+      ]
+    },
+    "notes": "Caso ilustrativo citado en la tarea: warrants_deuda_convertible (warrants como alternativa al descuento en deuda convertible) y warrant_pricing_venture_debt (mecanica de precio de warrants en venture debt, instrumento de deuda distinto) son facetas genuinas y distintas por instrumento financiero -deuda convertible, financiamiento posterior y venture debt son tres contextos distintos-, y quedaron separadas pero enlazadas entre si."
+  },
+  {
+    "cluster_members": [
+      "ciclo_conversion_efectivo",
+      "ciclo_de_conversion_de_efectivo"
+    ],
+    "canonical_id": "ciclo_de_conversion_de_efectivo",
+    "losers": [
+      "ciclo_conversion_efectivo"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Ciclo de Conversión de Efectivo (Cash Conversion Cycle)",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "El ciclo de conversión de efectivo mide cuántos días tarda una empresa en recuperar el efectivo invertido en sus operaciones, desde el pago de materias primas hasta el cobro de las ventas, integrando los periodos de cuentas por pagar, inventario y cuentas por cobrar. Se calcula como DSO + DII − DPO (días de cobro más días de inventario menos días de pago). Un ciclo largo implica una mayor necesidad de capital de trabajo; acortarlo libera efectivo significativo para el negocio, aunque maximizar el DPO (tardar más en pagar a proveedores) debe equilibrarse contra el riesgo de deteriorar las relaciones con ellos.",
+      "pasos_accionables": [
+        "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago)",
+        "Aplicar la fórmula: Ciclo = DSO + DII - DPO",
+        "Multiplicar el resultado por las ventas diarias para estimar el capital de trabajo requerido",
+        "Evaluar el trade-off entre maximizar el DPO y mantener buenas relaciones con los proveedores",
+        "Identificar en qué punto del ciclo se puede acelerar el retorno de efectivo (reducir DSO, reducir inventario, aumentar DPO razonablemente)",
+        "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones"
+      ],
+      "entregable_esperado": "Cálculo del ciclo de conversión de efectivo, con diagrama de DPO, DSO y DII integrados, y un plan de acción para optimizarlo",
+      "condiciones_activacion": [
+        "Cuando la empresa busca entender de forma integral su eficiencia en el uso de efectivo",
+        "Si la empresa tiene problemas de liquidez",
+        "Si está creciendo rápidamente o realizando adquisiciones",
+        "Si necesita entender cuánto capital de trabajo requiere el negocio"
+      ]
+    },
+    "notes": "ciclo_conversion_efectivo tenia la clave 'resumen_theorico' mal escrita (sin contenido en 'resumen_teorico'); se resolvio via fusion, no requirio correccion manual en Paso 5."
+  },
+  {
+    "cluster_members": [
+      "analisis_de_ratios_financieros",
+      "analisis_razones_financieras",
+      "poder_de_los_ratios_financieros"
+    ],
+    "canonical_id": "analisis_de_ratios_financieros",
+    "losers": [
+      "analisis_razones_financieras",
+      "poder_de_los_ratios_financieros"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Análisis de Ratios Financieros",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "Los ratios financieros son relaciones entre dos cifras de los estados financieros que ofrecen un atajo rápido para entender lo que dicen esos estados, sin importar si la empresa es una startup, una empresa mediana o una gran corporación pública. Se agrupan en cuatro categorías: rentabilidad (por ejemplo, retorno sobre activos o ROA, retorno sobre capital o ROE, margen bruto y margen operativo), apalancamiento (razón deuda a capital), liquidez (razón corriente, capital de trabajo) y eficiencia (rotación de activos, días de ventas pendientes de cobro o DSO). Su verdadero valor surge al compararlos en el tiempo (contra periodos anteriores o proyecciones propias) o contra promedios de la industria y competidores, lo que permite detectar anomalías, medir eficiencia y hasta descubrir manipulación contable: el caso de una conocida empresa de electrodomésticos bajo un CEO que impulsaba recortes agresivos ilustra cómo un analista detectó fraude contable al notar un DSO anormalmente alto.",
+      "pasos_accionables": [
+        "Calcular ratios de rentabilidad: margen bruto, margen operativo, retorno sobre activos (ROA) y retorno sobre capital (ROE)",
+        "Calcular ratios de apalancamiento: razón deuda a capital",
+        "Calcular ratios de liquidez: razón corriente y capital de trabajo",
+        "Calcular ratios de eficiencia: rotación de activos y días de ventas pendientes de cobro (DSO)",
+        "Comparar los ratios actuales con periodos anteriores de la misma empresa y con las proyecciones del plan financiero propio",
+        "Comparar los ratios con los de competidores o promedios de la industria (disponibles a través de asociaciones gremiales)",
+        "Indagar profundamente si algún ratio se sale del rango normal esperado, ya que puede señalar manipulación contable o problemas ocultos"
+      ],
+      "entregable_esperado": "Tablero de ratios financieros clave (rentabilidad, apalancamiento, liquidez, eficiencia) con análisis de tendencia propia y comparación sectorial",
+      "condiciones_activacion": [
+        "Cuando se necesita evaluar rápidamente la salud financiera de una empresa",
+        "Cuando se sospecha de manipulación o irregularidades contables",
+        "Cuando se busca comparar el desempeño con competidores del mismo sector",
+        "Si el usuario debe presentar métricas financieras a inversionistas o bancos"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "depreciacion_activos",
+      "depreciacion_amortizacion_impacto",
+      "depreciacion_de_activos",
+      "depreciacion_y_amortizacion"
+    ],
+    "canonical_id": "depreciacion_y_amortizacion",
+    "losers": [
+      "depreciacion_activos",
+      "depreciacion_amortizacion_impacto",
+      "depreciacion_de_activos"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Depreciación y Amortización: Impacto en la Utilidad",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "La depreciación distribuye el costo de un activo físico (como un vehículo, camión o equipo) a lo largo de su vida útil estimada, siguiendo el principio de correspondencia (matching), en vez de registrar todo el gasto de una sola vez. La amortización aplica el mismo concepto a activos intangibles (patentes, goodwill). Aunque el concepto es simple, existe discreción considerable sobre cómo estimar esa vida útil (por ejemplo, 1 año frente a 3 o 6 años para el mismo tipo de activo), lo cual tiene un efecto directo y significativo sobre la utilidad neta reportada y el patrimonio -una zona clásica de subjetividad contable-. Casos reales de fraude contable, como la manipulación de la depreciación de camiones y contenedores para inflar ganancias en cientos de millones de dólares, ilustran cómo cambiar los supuestos de vida útil puede usarse para manipular resultados. Un emprendedor debe entender cómo su empresa deprecia sus activos, ya que esto afecta directamente el resultado neto, el balance general y las decisiones de bancos e inversionistas.",
+      "pasos_accionables": [
+        "Identificar todos los activos de capital de la empresa (equipos, vehículos, sistemas, propiedad, planta y equipo) sujetos a depreciación",
+        "Revisar con el contador qué método de depreciación se usa (línea recta u otro) y la vida útil estimada de cada categoría de activo",
+        "Evaluar si esa vida útil estimada es razonable comparada con estándares de la industria",
+        "Calcular la depreciación acumulada y su efecto en el valor neto en libros de los activos",
+        "Detectar cambios año tras año en los supuestos de vida útil que puedan indicar manipulación de utilidades",
+        "Entender el impacto de la depreciación y amortización en el estado de resultados y el balance general",
+        "Considerar cómo cambios en la política de depreciación afectarían las ganancias reportadas antes de solicitar un préstamo o presentar resultados a inversionistas"
+      ],
+      "entregable_esperado": "Tabla de activos de capital con su método y cronograma de depreciación/amortización, vida útil asumida, valor neto en libros e impacto en el estado de resultados",
+      "condiciones_activacion": [
+        "Si el usuario necesita justificar o auditar la utilidad reportada de su empresa",
+        "Si la empresa posee activos tangibles significativos (equipo, vehículos, maquinaria)",
+        "Si se está preparando para solicitar un préstamo y el banco pedirá detalles de depreciación",
+        "Si se busca entender por qué las ganancias reportadas cambiaron sin cambios aparentes en ventas",
+        "Si el usuario está evaluando la salud financiera real de una empresa (propia o para adquisición)"
+      ]
+    },
+    "notes": "activos_intangibles_amortizacion quedo separado por ser una faceta especifica (criterios de factibilidad tecnica para amortizar I+D vs. gastar de inmediato), enlazado a este nodo."
+  },
+  {
+    "cluster_members": [
+      "acuerdo_de_no_negociacion_no_shop",
+      "no_shop_agreement"
+    ],
+    "canonical_id": "no_shop_agreement",
+    "losers": [
+      "acuerdo_de_no_negociacion_no_shop"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Acuerdo de Exclusividad (No-Shop Agreement)",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "Cláusula vinculante -a diferencia de la mayoría de los términos del term sheet, que son no vinculantes- que impide a la empresa y a los fundadores buscar, solicitar o negociar con otros inversionistas potenciales durante un periodo definido (comúnmente 30-60-90 días) mientras se completa la due diligence y se cierra la ronda actual. Su objetivo es dar certeza al inversionista de que su tiempo y recursos no se usarán para generar una subasta paralela.",
+      "pasos_accionables": [
+        "Definir el período de exclusividad (comúnmente 30-60-90 días)",
+        "Aclarar que esta cláusula es legalmente vinculante desde la firma del term sheet, a diferencia del resto de sus términos",
+        "Establecer la obligación de notificar cualquier acercamiento de terceros durante este periodo",
+        "Negociar qué ocurre si las partes no cierran la transacción en el plazo acordado (terminación de la obligación)"
+      ],
+      "entregable_esperado": "Cláusula de No Shop firmada, con plazo, obligaciones de notificación y consecuencias de incumplimiento claramente definidas",
+      "condiciones_activacion": [
+        "Si el usuario ha recibido un term sheet y necesita entender sus obligaciones de exclusividad",
+        "Si el inversionista requiere garantía de exclusividad antes de invertir tiempo en due diligence",
+        "Cuando un inversionista ha entregado un term sheet y quiere asegurar exclusividad durante el proceso",
+        "Si el emprendedor está evaluando múltiples ofertas y necesita entender las implicaciones legales de firmar un term sheet"
+      ]
+    },
+    "notes": "clausula_no_shop_adquisicion (mismo mecanismo en contexto de M&A, no de ronda de inversion) y no_shop_extension_negotiation (negociacion de la extension del plazo) son facetas de contexto distinto -es el ejemplo citado en la tarea sobre warrants aplicado aqui- y quedaron separadas pero enlazadas."
+  },
+  {
+    "cluster_members": [
+      "seleccion_abogado_startup",
+      "seleccion_abogado_vc",
+      "seleccion_abogado_venture"
+    ],
+    "canonical_id": "seleccion_abogado_venture",
+    "losers": [
+      "seleccion_abogado_startup",
+      "seleccion_abogado_vc"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Selección de un Abogado Especializado en Venture Capital",
+      "fuente": "Venture Deals",
+      "resumen_teorico": "Un abogado con experiencia comprobada en financiamientos de capital de riesgo es un activo invaluable: ayuda a negociar, enfoca al emprendedor en lo que realmente importa (economía y control del deal) y lo protege de tácticas de distracción de los inversionistas. Un mal abogado -o uno sin experiencia específica en VC- puede negociar mal, enfocarse en temas irrelevantes, encarecer el proceso y dañar la reputación del emprendedor frente a la comunidad inversora. No es necesario contratar firmas caras de prestigio: firmas pequeñas con experiencia específica en financiamiento de startups pueden ser igual o más efectivas. El estilo de trabajo y la conexión personal con el abogado importan tanto como su experiencia técnica.",
+      "pasos_accionables": [
+        "Buscar referencias de abogados con experiencia comprobada específicamente en financiamientos de VC, no en otras especialidades legales",
+        "Pedir referencias a otros emprendedores respetados en el ecosistema e investigar la reputación del abogado en la comunidad",
+        "Evaluar no solo tarifas y experiencia, sino también el estilo de negociación y la conexión personal",
+        "Preguntar al inversionista (antes y después del cierre) su opinión sobre el abogado elegido",
+        "Negociar un tope (cap) de honorarios antes de iniciar el proceso",
+        "Evitar usar abogados generalistas o de confianza personal sin experiencia comprobada en VC"
+      ],
+      "entregable_esperado": "Abogado corporativo especializado en financiamiento de venture capital contratado, con acuerdo de honorarios definido y estilo de trabajo compatible",
+      "condiciones_activacion": [
+        "Antes de iniciar negociaciones formales de una ronda de inversión",
+        "Si el emprendedor no tiene aún asesoría legal especializada en VC",
+        "Cuando la empresa está por recibir su primer term sheet"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "decision_egalitaria_vs_jerarquica",
+      "modelo_decision_egalitario_vs_jerarquico"
+    ],
+    "canonical_id": "decision_egalitaria_vs_jerarquica",
+    "losers": [
+      "modelo_decision_egalitario_vs_jerarquico"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Toma de Decisiones: Enfoque Igualitario vs. Jerárquico",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "Los equipos fundadores deben elegir entre dos modelos ideales para tomar decisiones importantes: el enfoque igualitario (consenso colectivo, sin jerarquías claras, actuando como pares) o el enfoque jerárquico (una persona con poder de decisión final). El enfoque igualitario puede mejorar la calidad de las decisiones y la cohesión del equipo en entornos de alta incertidumbre, pero ralentiza la velocidad de decisión y puede fallar si se usa para evadir conflictos de poder no resueltos. El enfoque jerárquico es más rápido, pero puede fallar si quien decide no puede procesar toda la información relevante o genera facciones internas. Estudios muestran que los CEO dominantes o autocráticos se asocian con menor desempeño en industrias de innovación intensiva (una reducción del 19%). Un modelo híbrido ('consenso con calificaciones') -buscar consenso primero, y si no se logra, que una persona designada decida tras escuchar a todos- suele ser el más equilibrado.",
+      "pasos_accionables": [
+        "Discutir explícitamente como equipo qué enfoque de toma de decisiones se adoptará, antes de enfrentar la primera crisis",
+        "Evaluar si el equipo fundador tiene backgrounds similares (tienden al igualitarismo natural) y si el entorno es turbulento (favorece el enfoque colectivo) o de alta velocidad (favorece la jerarquía)",
+        "Establecer protocolos claros sobre qué decisiones requieren consenso y cuáles pueden tomarse unilateralmente",
+        "Considerar el modelo híbrido 'consenso con calificaciones': buscar consenso primero y, si no se logra, que la persona designada decida tras escuchar a todos",
+        "Evitar el igualitarismo como forma de evadir conflictos de poder no resueltos",
+        "Anticipar que el enfoque elegido deberá evolucionar conforme crece la startup"
+      ],
+      "entregable_esperado": "Un acuerdo escrito sobre el proceso de toma de decisiones del equipo fundador: quién decide qué y cómo se resuelven los empates",
+      "condiciones_activacion": [
+        "Cuando el equipo fundador enfrenta parálisis o bloqueo en decisiones críticas",
+        "Si hay ambigüedad sobre quién tiene la autoridad final",
+        "Cuando se necesita definir la estructura de gobierno antes de escalar",
+        "Si el equipo fundador tiene dos o más socios con poder igual"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "tasa_interna_retorno_irr",
+      "metodo_tasa_interna_retorno"
+    ],
+    "canonical_id": "tasa_interna_retorno_irr",
+    "losers": [
+      "metodo_tasa_interna_retorno"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Tasa Interna de Retorno (IRR)",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "La Tasa Interna de Retorno (IRR) es la tasa de descuento que hace que el Valor Presente Neto (NPV) de un proyecto sea igual a cero. Es útil para comparar de forma rápida y sencilla el retorno de un proyecto contra la tasa mínima requerida (hurdle rate) de la empresa. Sin embargo, tiene limitaciones importantes: no cuantifica la contribución en valor absoluto (dólares) que el proyecto agrega a la empresa, ni considera directamente la duración del retorno ni la escala de la inversión, por lo que conviene usarla junto con el NPV, especialmente cuando se comparan proyectos de distinto tamaño o duración.",
+      "pasos_accionables": [
+        "Proyectar los flujos de efectivo futuros de la inversión",
+        "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el NPV sea igual a cero",
+        "Comparar esa tasa con el hurdle rate (tasa de retorno requerida) de la empresa",
+        "Usar el IRR en conjunto con el NPV -nunca de forma aislada- cuando los montos son grandes o los proyectos tienen duraciones distintas"
+      ],
+      "entregable_esperado": "Cálculo de la Tasa Interna de Retorno del proyecto, comparado explícitamente contra el hurdle rate de la empresa",
+      "condiciones_activacion": [
+        "Cuando se necesita presentar de forma sencilla la rentabilidad de un proyecto a inversionistas o bancos",
+        "Cuando se comparan proyectos con diferente escala o duración, usar en combinación con NPV"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "forma_de_contraprestacion",
+      "forma_de_contraprestacion_en_adquisicion"
+    ],
+    "canonical_id": "forma_de_contraprestacion_en_adquisicion",
+    "losers": [
+      "forma_de_contraprestacion"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Forma de Contraprestación (Cash vs. Stock) en una Adquisición",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "En una oferta de compra (carta de intención o LOI), el valor real de la transacción depende críticamente de la forma en que se paga: efectivo, acciones comunes o acciones preferentes de una empresa pública o privada. El efectivo es la forma más clara y valiosa de contraprestación; cualquier otra forma requiere un análisis profundo de la estructura de capital del comprador, ya que recibir acciones comunes de una empresa privada altamente apalancada, con preferencias de liquidación participantes por delante, puede significar que el valor real recibido sea mucho menor al precio nominal anunciado.",
+      "pasos_accionables": [
+        "Determinar si la oferta es en efectivo, acciones públicas o acciones privadas",
+        "Si la contraprestación es en acciones, investigar la estructura de capital completa del comprador, incluyendo el capital total levantado y las preferencias de liquidación existentes",
+        "Verificar si las acciones ofrecidas son comunes o preferentes, si son participantes, y su posición frente a preferencias de liquidación existentes",
+        "Si las acciones son de una empresa pública, verificar si son de libre negociación, están registradas o sujetas a un periodo de bloqueo (lock-up)",
+        "Solicitar una valoración independiente de la contraprestación no efectiva antes de aceptar la oferta",
+        "No confundir el precio nominal anunciado con el valor económico real recibido"
+      ],
+      "entregable_esperado": "Valoración independiente de la contraprestación ofrecida (efectivo, acciones comunes o preferentes), ajustada por la estructura de capital real del comprador",
+      "condiciones_activacion": [
+        "Si el usuario recibe una oferta de compra pagada total o parcialmente en acciones",
+        "Si el usuario necesita evaluar el valor real de una oferta de adquisición",
+        "Cuando el usuario recibe una oferta de adquisición (LOI) con pago no exclusivamente en efectivo"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "dilema_solo_vs_equipo",
+      "decision_fundador_solo_vs_equipo"
+    ],
+    "canonical_id": "decision_fundador_solo_vs_equipo",
+    "losers": [
+      "dilema_solo_vs_equipo"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Decisión de Fundar en Solitario vs. Formar un Equipo",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "Uno de los primeros grandes dilemas al fundar una startup es decidir si emprender en solitario o formar un equipo de cofundadores. Fundar en solitario evita los dilemas de relaciones, roles y recompensas que surgen entre socios, permite mantener control total y tomar decisiones rápidas, pero obliga a asumir sin ayuda todos los riesgos de capital humano, social y financiero, además de la falta de soporte emocional -solo el 16.1% de los fundadores de startups de alto potencial funda en solitario-. Formar un equipo aporta recursos complementarios pero introduce tensiones de coordinación, negociación de roles y distribución de recompensas. La decisión correcta depende de si ya se posee el rango completo de habilidades necesarias (técnicas, comerciales, financieras), del nivel de crecimiento que exige el negocio (los negocios de alto crecimiento suelen requerir equipo), de la complejidad de la idea, y de la necesidad personal de control sobre las decisiones.",
+      "pasos_accionables": [
+        "Evaluar si ya se posee el rango completo de habilidades necesarias (técnicas, comerciales, financieras) para el negocio",
+        "Determinar el nivel de crecimiento esperado del negocio: los negocios de alto crecimiento, con efectos de red o ventaja de primer movimiento, suelen requerir equipo",
+        "Reflexionar sobre el estilo personal de trabajo y la necesidad de control sobre las decisiones",
+        "Evaluar la complejidad de la idea y de su implementación",
+        "Si se opta por formar equipo, identificar qué capital falta (humano, social, financiero) y buscar cofundadores que lo complementen"
+      ],
+      "entregable_esperado": "Decisión documentada y justificada sobre fundar en solitario o formar un equipo, con los riesgos identificados de cada camino y, si aplica, el capital faltante a cubrir con cofundadores",
+      "condiciones_activacion": [
+        "Cuando el usuario tiene una idea validada y debe decidir la estructura del equipo fundador",
+        "Cuando el usuario está considerando incorporar un socio o cofundador",
+        "Cuando el emprendedor está iniciando el proceso de fundación y no ha decidido su estructura de equipo",
+        "Si el fundador tiene dudas sobre delegar decisiones clave"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "analisis_porcentual_estados_financieros",
+      "calculo_porcentaje_cambio_variacion"
+    ],
+    "canonical_id": "analisis_porcentual_estados_financieros",
+    "losers": [
+      "calculo_porcentaje_cambio_variacion"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Análisis de Porcentaje del Total y Porcentaje de Cambio",
+      "fuente": "Financial Intelligence for Entrepreneurs",
+      "resumen_teorico": "Dos técnicas simples y complementarias de análisis financiero: 'porcentaje del total' (cada línea de gasto o ingreso expresada como porcentaje de los ingresos totales), que muestra la estructura de costos relativa, y 'porcentaje de cambio' (la diferencia entre dos periodos -presupuesto vs. real, año anterior vs. actual- dividida entre el valor base y multiplicada por 100), que muestra tendencias en el tiempo. La fórmula de porcentaje de cambio es la misma que la de porcentaje de varianza presupuestaria, por lo que dominarla permite analizar tanto el desempeño histórico como las desviaciones del presupuesto. Juntas, estas herramientas revelan patrones que los números crudos no muestran, como márgenes en deterioro o gastos que crecen más rápido que los ingresos.",
+      "pasos_accionables": [
+        "Calcular cada línea de gasto o ingreso como porcentaje de los ingresos totales (porcentaje del total)",
+        "Para calcular el porcentaje de cambio o varianza: identificar el valor base (periodo anterior o presupuestado) y el valor nuevo (periodo actual o real), restar el valor base del nuevo, dividir entre el valor base y multiplicar por 100",
+        "Comparar tendencias entre periodos: ¿los márgenes mejoran o empeoran con el tiempo?",
+        "Identificar si el crecimiento de los gastos supera al de los ingresos",
+        "Aplicar la misma fórmula de porcentaje de cambio para calcular varianzas presupuestarias (presupuesto vs. real)"
+      ],
+      "entregable_esperado": "Tabla con el porcentaje de cada línea financiera respecto a los ingresos totales y su cambio o varianza interanual, con interpretación de tendencias",
+      "condiciones_activacion": [
+        "Si el usuario quiere detectar tendencias de rentabilidad o eficiencia operativa",
+        "Si el usuario está comparando el desempeño financiero año contra año",
+        "Si el usuario necesita comparar resultados financieros entre periodos",
+        "Si el usuario debe analizar desviaciones de su presupuesto"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "homogeneidad_vs_diversidad_equipo",
+      "homogeneidad_vs_diversidad_equipo_fundador"
+    ],
+    "canonical_id": "homogeneidad_vs_diversidad_equipo",
+    "losers": [
+      "homogeneidad_vs_diversidad_equipo_fundador"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Homogeneidad vs. Diversidad en el Equipo Fundador",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "La homofilia -la tendencia natural a asociarse con personas similares en género, etnia, origen geográfico, formación y experiencia funcional- genera equipos fundadores homogéneos. Esto aporta beneficios de corto plazo (velocidad de coordinación, confianza, comunicación fácil), pero genera riesgos de largo plazo: habilidades redundantes, falta de competencias críticas, menor adaptabilidad y menor estabilidad del equipo frente a problemas complejos. La diversidad funcional y de redes sociales, aunque más lenta de construir y con mayor riesgo de conflicto inicial, tiende a producir equipos más valiosos, creativos y adaptables.",
+      "pasos_accionables": [
+        "Identificar si el equipo fundador actual es homogéneo en habilidades, formación, experiencia funcional o redes sociales",
+        "Hacer un análisis estructurado de las necesidades de capital humano, social y financiero del proyecto para detectar brechas críticas (por ejemplo, conocimiento de industria, técnico o comercial)",
+        "Considerar activamente ampliar la búsqueda de cofundadores fuera del círculo social inmediato para lograr diversidad de perspectivas y habilidades",
+        "Evaluar también factores 'blandos' (tolerancia al riesgo, valores, estilo de trabajo) antes de comprometerse con un cofundador",
+        "Sopesar los beneficios de cohesión (homogeneidad) contra los beneficios de perspectiva amplia (diversidad) según el contexto del proyecto"
+      ],
+      "entregable_esperado": "Matriz de habilidades y redes del equipo fundador con brechas identificadas y un plan para cubrirlas con cofundadores complementarios",
+      "condiciones_activacion": [
+        "Si el equipo fundador tiene backgrounds muy similares (misma escuela, misma industria)",
+        "Si el startup enfrenta un contexto turbulento o cambiante que requiere adaptabilidad",
+        "Cuando el equipo fundador está compuesto por personas muy similares entre sí"
+      ]
+    },
+    "notes": "diversidad_vs_homogeneidad_equipo quedo separado por plantear un eje distinto y mas matizado (diversidad de capacidades PERO similitud de valores/soft factors), no solo homogeneidad-mala/diversidad-buena."
+  },
+  {
+    "cluster_members": [
+      "stock_vesting_founders_employees",
+      "vesting_acciones_fundadores",
+      "vesting_de_acciones_y_aceleracion",
+      "single_double_trigger_acceleration",
+      "emision_founders_stock"
+    ],
+    "canonical_id": "vesting_acciones_fundadores",
+    "losers": [
+      "stock_vesting_founders_employees",
+      "vesting_de_acciones_y_aceleracion",
+      "single_double_trigger_acceleration",
+      "emision_founders_stock"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Vesting de Acciones (Stock Vesting)",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "El vesting es el mecanismo mediante el cual un fundador, empleado o consultor adquiere gradualmente la propiedad de sus acciones u opciones a lo largo del tiempo, en vez de recibirlas todas de una vez. El esquema estándar es de 4 años con un 'cliff' de 1 año: nada se adquiere durante el primer año, y al cumplirlo se otorga de golpe el primer 25%, seguido de adquisición mensual del resto durante los siguientes 3 años. Si alguien deja la empresa antes de completar su vesting, la empresa puede recomprar las acciones no adquiridas, lo que protege tanto a la empresa como a los demás accionistas de la salida prematura de una persona clave. Al momento de fundación, este mecanismo suele formalizarse emitiendo 'founders' stock' (acciones comunes a precio muy bajo, dado el valor mínimo de la empresa en ese momento) sujetas a este cronograma, presentando dentro de los 30 días siguientes la elección fiscal 83(b) para fijar el tratamiento tributario sobre ganancias de capital a largo plazo. El vesting también puede incluir cláusulas de aceleración ante un cambio de control: la aceleración de gatillo simple (single-trigger) otorga vesting completo automáticamente al ocurrir la adquisición, mientras que la de doble gatillo (double-trigger) -la más común en deals de VC- exige dos eventos: el cambio de control Y una terminación involuntaria sin causa dentro de un plazo definido (típicamente 13 meses), protegiendo así el interés del comprador en retener al talento clave tras la adquisición.",
+      "pasos_accionables": [
+        "Al momento de constituir legalmente la empresa, formalizar la emisión de acciones comunes ('founders' stock') a los fundadores a un precio bajo, completando toda la documentación de compra y pago",
+        "Presentar la elección fiscal 83(b) dentro de los 30 días siguientes a la emisión de las acciones",
+        "Establecer un cronograma de vesting estándar: 1 año de cliff (25% al cumplirlo) y el resto en adquisición mensual durante 3 años más",
+        "Negociar crédito de vesting retroactivo si el fundador ya trabajó en la empresa antes de recibir inversión externa",
+        "Documentar el derecho de recompra (o recuperación) de la empresa sobre las acciones no adquiridas si alguien se va antes de tiempo",
+        "Negociar si aplican cláusulas de aceleración ante un cambio de control, prefiriendo la de doble gatillo (cambio de control + despido sin causa) sobre la de gatillo simple, ya que esta última puede desincentivar a compradores potenciales",
+        "Documentar claramente qué constituye 'causa' y 'razón justificada' de terminación para efectos de la aceleración"
+      ],
+      "entregable_esperado": "Acuerdo de vesting firmado por fundadores y empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, cláusula de recompra, elección 83(b) presentada y condiciones de aceleración claramente definidas",
+      "condiciones_activacion": [
+        "Al momento de constituir legalmente la startup o incorporar nuevos cofundadores",
+        "Si se está estructurando la distribución de equity entre fundadores",
+        "Si un inversionista de capital de riesgo exige vesting como condición de inversión",
+        "Si se necesita proteger a la empresa de la salida temprana de un cofundador o empleado clave",
+        "Si se está negociando una posible adquisición de la empresa"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "eleccion_estructura_vesting_founder",
+      "vesting_golden_handcuffs"
+    ],
+    "canonical_id": "eleccion_estructura_vesting_founder",
+    "losers": [
+      "vesting_golden_handcuffs"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Estructura de Vesting para Fundadores vs. Contrataciones",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "El vesting no solo protege a la empresa de salidas prematuras; también funciona como una herramienta de retención de talento clave ('esposas de oro'), dándole a un ejecutivo un fuerte incentivo financiero para permanecer durante un periodo determinado, típicamente 4 años. Es importante diferenciar el vesting de los fundadores del de las contrataciones no fundadoras: los fundadores suelen negociar 'crédito por tiempo servido' (reconociendo el tiempo ya trabajado antes de la inversión externa), obteniendo esquemas más cortos que los de nuevas contrataciones, aunque el apego emocional del fundador a la empresa puede reducir la necesidad de los inversionistas de imponer estas condiciones tan estrictamente. El diseño debe considerar también si el vesting se basa en tiempo o en desempeño, según el horizonte de valor esperado de cada rol.",
+      "pasos_accionables": [
+        "Definir el cronograma estándar de vesting (usualmente 4 años) para nuevas contrataciones ejecutivas, diferenciándolo del de los fundadores",
+        "Negociar con los inversionistas el reconocimiento de 'crédito por tiempo servido' para los fundadores que ya trabajaron en la empresa antes de la inversión",
+        "Decidir si el vesting de cada rol se basa en tiempo o en desempeño, según su horizonte de valor esperado",
+        "Documentar los términos de vesting de forma consistente para todo el equipo, para evitar conflictos futuros en eventos de salida (adquisición, oferta pública inicial)",
+        "Evaluar la inclusión de cláusulas de aceleración de vesting ante un cambio de control"
+      ],
+      "entregable_esperado": "Documento de términos de vesting diferenciados para fundadores y para el equipo ejecutivo/contrataciones, incluyendo cronograma y condiciones de aceleración",
+      "condiciones_activacion": [
+        "Cuando un inversor externo entra al cap table y exige vesting",
+        "Cuando se está estructurando la compensación de los primeros contratados",
+        "Cuando se formaliza la oferta de equity a un nuevo ejecutivo",
+        "Cuando se prepara la empresa para una ronda de inversión o adquisición"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "equity_dinamico_vesting",
+      "vesting_dinamico",
+      "split_dinamico_equity"
+    ],
+    "canonical_id": "vesting_dinamico",
+    "losers": [
+      "equity_dinamico_vesting",
+      "split_dinamico_equity"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Acuerdos de Equity Dinámicos (Dynamic Equity Agreements)",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "En lugar de fijar el equity y el reparto entre cofundadores de forma estática desde el inicio -uno de los errores más comunes, porque asume que el compromiso, los roles y las contribuciones de cada fundador permanecerán constantes-, conviene incorporar mecanismos dinámicos que se ajusten conforme cambian las circunstancias reales del equipo. El vesting (adquisición gradual de acciones en el tiempo, con un cliff de 1 año seguido de vesting mensual durante 4 años en total) es la pieza central de estos acuerdos dinámicos: si un cofundador abandona el proyecto antes de tiempo, su equity no adquirida puede reclamarse y redistribuirse en vez de quedar 'atrapada' e ineficientemente inmovilizada. Esto evita que el equipo quede 'esposado', necesitando equity fresca para atraer nuevos cofundadores, empleados o inversionistas que llenen los vacíos de capital humano, social o financiero que deja quien se va. Un acuerdo de equity dinámico completo también define términos de recompra (buyout) predefinidos y planifica revisiones periódicas del split conforme evoluciona la startup, en vez de dejarlo fijo para siempre.",
+      "pasos_accionables": [
+        "Establecer un cronograma de vesting con cliff (por ejemplo, 1 año) y adquisición gradual (por ejemplo, 4 años en total) para el equity de cada fundador",
+        "Documentar legalmente el vesting mediante las elecciones fiscales apropiadas (por ejemplo, la Sección 83(b) del código fiscal en Estados Unidos)",
+        "Definir con claridad qué sucede con el equity no adquirida si un cofundador abandona el proyecto antes de tiempo, incluyendo términos de recompra (buyout) predefinidos",
+        "Crear mecanismos para reclamar y redistribuir la equity de fundadores que dejan de contribuir, evitando que quede inmovilizada",
+        "Reservar un fondo de equity dinámico para atraer a futuros cofundadores, empleados o inversionistas que cubran vacíos de capital humano, social o financiero",
+        "Planificar revisiones periódicas del split de equity conforme evoluciona la startup, usando un marco estructurado que divida el desarrollo en fases y pondere la importancia de cada una"
+      ],
+      "entregable_esperado": "Acuerdo legal de equity dinámico, con cronograma de vesting, cláusulas de recuperación y recompra ante salida de cofundadores, y un plan de revisión periódica del split",
+      "condiciones_activacion": [
+        "Al formalizar el split de equity entre cofundadores o firmar el acuerdo de fundadores",
+        "Cuando existe riesgo de que un cofundador abandone el proyecto tempranamente",
+        "Antes de recibir inversión externa, ya que los inversionistas suelen exigir vesting",
+        "Cuando el equipo fundador quiere protegerse ante cambios futuros en compromiso o roles",
+        "Si ya ocurrió una salida de un cofundador y se necesita renegociar el equity"
+      ]
+    },
+    "notes": "reasignacion_equity_fundadores quedo separado por ser un escenario especifico (reasignacion FORZADA por inversionistas, no diseñada por los fundadores), enlazado a este nodo."
+  },
+  {
+    "cluster_members": [
+      "criterios_equity_split",
+      "factores_split_equity",
+      "equity_split_segun_capital_aportado"
+    ],
+    "canonical_id": "criterios_equity_split",
+    "losers": [
+      "factores_split_equity",
+      "equity_split_segun_capital_aportado"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Criterios para la División de Equity entre Fundadores",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "No existen respuestas 'correctas' objetivas para dividir el equity entre cofundadores, pero cuatro categorías de factores ayudan a estructurar la negociación: (1) contribuciones pasadas -incluyendo quién tuvo la idea original (que suele reconocerse con una 'prima de idea' de 10 a 15 puntos porcentuales adicionales) y el capital aportado por cada uno-; (2) el costo de oportunidad que cada fundador sacrifica al unirse (salario que deja de percibir, otras oportunidades); (3) las contribuciones futuras esperadas, según la experiencia previa como emprendedor serial, el nivel de compromiso (tiempo completo o parcial) y el cargo o título de cada uno; y (4) las motivaciones y preferencias personales de cada fundador, como su aversión al riesgo y su tolerancia al conflicto. La investigación empírica muestra que la similitud en el capital inicial aportado por cada cofundador es, de estos factores, el predictor más fuerte de si un equipo terminará dividiendo el equity de forma igualitaria (50/50) o desigual: cuanto más parecidos son los montos invertidos al inicio, más probable es que el equipo opte por una división equitativa.",
+      "pasos_accionables": [
+        "Listar las contribuciones pasadas de cada fundador: quién tuvo la idea original, cuánto capital, tiempo o activos aportó cada uno",
+        "Documentar el capital exacto que cada cofundador aporta (dinero, activos, equipo) y discutir abiertamente si esas contribuciones son similares o desiguales, ya que esto predice fuertemente si el split terminará siendo igualitario o no",
+        "Calcular el costo de oportunidad de cada fundador (salario u otras oportunidades que deja de percibir al unirse)",
+        "Estimar las contribuciones futuras esperadas según la experiencia previa fundando startups y el nivel de dedicación (tiempo completo vs. parcial)",
+        "Considerar si se otorga una 'prima de idea' de 10 a 15 puntos porcentuales al fundador que originó el concepto",
+        "Discutir abiertamente las motivaciones y la tolerancia al conflicto de cada fundador",
+        "Ajustar el split proporcionalmente si algún fundador dedicará menos tiempo (por ejemplo, 80% de dedicación equivale a 80% del equity que le correspondería a tiempo completo)",
+        "Registrar por escrito la lógica detrás de la decisión de split para evitar conflictos futuros"
+      ],
+      "entregable_esperado": "Tabla de equity split justificada, con los porcentajes asignados a cada fundador y el razonamiento detrás de cada uno, incluyendo el análisis de similitud de capital aportado",
+      "condiciones_activacion": [
+        "Cuando el equipo fundador está negociando formalmente cómo repartir el porcentaje de propiedad de la empresa",
+        "Cuando dos o más cofundadores deben decidir cómo repartir el equity inicial de la startup",
+        "Si existe desigualdad en las contribuciones de capital, tiempo o ideas entre los fundadores"
+      ]
+    },
+    "notes": "reparto_inicial_equity (nodo hub esperado en Paso 3a), split_igual_vs_desigual, teoria_equidad_split_equity, timing_equity_split y formalizacion_acuerdo_equity quedaron separados por cubrir preguntas genuinamente distintas (proceso y momento del split, no solo que factores considerar), enlazados entre si como familia tematica."
+  },
+  {
+    "cluster_members": [
+      "busqueda_ceo_sucesor_externo",
+      "professional_ceo_search"
+    ],
+    "canonical_id": "busqueda_ceo_sucesor_externo",
+    "losers": [
+      "professional_ceo_search"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Búsqueda de un CEO Sucesor Externo",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "A diferencia de las grandes empresas, donde la mayoría de los CEOs nuevos provienen de dentro de la organización, en las startups el nuevo CEO casi siempre viene de fuera del equipo ejecutivo existente. Esto ocurre porque el nuevo CEO es contratado para hacer cambios importantes -profesionalizar la cultura, ajustar la estrategia original, o reemplazar a cofundadores o empleados tempranos de bajo desempeño- que el fundador no pudo o no quiso hacer, y porque el equipo ejecutivo pequeño de una startup rara vez ofrece candidatos internos con el perfil de liderazgo general necesario.",
+      "pasos_accionables": [
+        "Evaluar si algún miembro del equipo ejecutivo interno tiene el perfil de liderazgo general necesario antes de buscar afuera",
+        "Definir con claridad qué cambios estratégicos, culturales o de equipo se esperan del nuevo CEO antes de iniciar la búsqueda",
+        "Iniciar una búsqueda externa mediante firmas de reclutamiento especializadas, explorando también la red de contactos propia y de los inversionistas",
+        "Buscar candidatos con experiencia en gestión multifuncional y operaciones, no solo expertise técnico, y con reputación comprobada",
+        "Involucrar al fundador en el proceso de selección (entrevistas junto con miembros clave del consejo) para asegurar una transición más cooperativa",
+        "Negociar el rol futuro del fundador (chairman, CTO, asesor) como parte de la contratación del nuevo CEO"
+      ],
+      "entregable_esperado": "Perfil de candidato CEO definido, lista corta de candidatos externos evaluados por el consejo y el fundador, y acuerdo sobre el rol futuro del fundador tras la sucesión",
+      "condiciones_activacion": [
+        "Cuando el consejo o el fundador han decidido que se necesita un CEO profesional para la siguiente etapa de crecimiento",
+        "Cuando la startup enfrenta cambios organizacionales o de mercado que el fundador no puede liderar",
+        "Cuando la junta directiva decide que se necesita un cambio de liderazgo",
+        "Cuando el fundador-CEO reconoce voluntariamente que necesita ser reemplazado"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "founder_ceo_succession_process",
+      "sucesion_founder_ceo"
+    ],
+    "canonical_id": "founder_ceo_succession_process",
+    "losers": [
+      "sucesion_founder_ceo"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Sucesión del Fundador-CEO",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "A medida que una startup crece, más de la mitad de los fundadores-CEO son reemplazados en su rol, típicamente hacia la tercera ronda de financiamiento. La sucesión puede ser voluntaria (iniciada por el propio fundador), por fracaso (bajo desempeño operativo o en el retorno de las acciones, lo que aumenta drásticamente la probabilidad de que la junta contrate a un sucesor externo), o incluso -paradójicamente- por éxito, cuando el fundador ha tenido éxito desarrollando el producto y recaudando fondos pero carece de las habilidades que exige la siguiente etapa (ventas, marketing, gestión multifuncional). El proceso está determinado sobre todo por quién dispara el cambio: la junta directiva inicia el 73% de las sucesiones, y solo el 27% son iniciadas por el propio fundador. El fundador reemplazado puede permanecer en la empresa como ejecutivo o miembro de la junta, y el éxito de la transición depende tanto del perfil del sucesor como de qué tan bien se gestione el cambio.",
+      "pasos_accionables": [
+        "Establecer desde etapas tempranas métricas claras de desempeño que la junta usará para evaluar al fundador-CEO",
+        "Evaluar si las habilidades actuales del fundador-CEO coinciden con los desafíos de la siguiente etapa del negocio (por ejemplo, pasar de desarrollo de producto a ventas y marketing)",
+        "Reconocer señales tempranas de que se necesita un cambio: incumplimiento reiterado de metas, dificultad para gestionar múltiples funciones, apego excesivo a empleados originales que ya no rinden",
+        "Planificar escenarios de sucesión de forma proactiva, antes de que se conviertan en una crisis, discutiéndolo abiertamente con la junta e inversionistas",
+        "Decidir de antemano qué rol tendría el fundador si es reemplazado (miembro de la junta, asesor, u otro cargo ejecutivo como chairman)",
+        "Evaluar el ajuste del perfil del sucesor con la etapa de crecimiento de la empresa (ventas, operaciones o producto)",
+        "Si se es fundador, considerar tomar un rol activo en la propia sucesión para preservar influencia futura",
+        "Negociar en el term sheet cláusulas relacionadas con el reemplazo de CEO, alineadas con la motivación del fundador (riqueza vs. control)"
+      ],
+      "entregable_esperado": "Plan de sucesión de CEO documentado y consensuado con la junta directiva, con criterios objetivos que dispararían el cambio y el rol futuro definido para el fundador",
+      "condiciones_activacion": [
+        "Cuando el startup ha completado el desarrollo de producto y entra en fase de comercialización",
+        "Cuando se está por cerrar una nueva ronda de financiamiento y los inversionistas cuestionan el liderazgo actual",
+        "Cuando el fundador-CEO reconoce que carece de las habilidades para la siguiente etapa de crecimiento",
+        "Cuando la startup crece rápidamente y las habilidades del fundador ya no se alinean con las necesidades de la etapa actual",
+        "Si el desempeño financiero u operativo bajo presiona a la junta a considerar un cambio de liderazgo"
+      ]
+    },
+    "notes": "Se mantuvo como nodo distinto de busqueda_ceo_sucesor_externo (decision/proceso de sucesion vs. ejecucion de la busqueda externa), enlazados secuencialmente."
+  },
+  {
+    "cluster_members": [
+      "sesgo_optimismo_founder",
+      "sesgo_optimismo_fundador"
+    ],
+    "canonical_id": "sesgo_optimismo_fundador",
+    "losers": [
+      "sesgo_optimismo_founder"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Sesgo de Optimismo y Sobreconfianza del Fundador",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "Los emprendedores tienden a ser sistemáticamente sobreconfiados sobre las probabilidades de éxito de su propio proyecto, muchas veces de forma no realista: estudios muestran que el 95% cree tener más de 50% de probabilidad de éxito, y un tercio cree tener 100% de certeza. Este optimismo es un arma de doble filo: puede impulsar innovación y velocidad de acción, pero también genera planes de negocio poco realistas, sobrecompromiso con la idea inicial, y subestimación sistemática de la competencia y de los recursos necesarios. Los fundadores seriales con alto optimismo muestran, en promedio, peor desempeño en crecimiento de ingresos y empleo que los de bajo optimismo.",
+      "pasos_accionables": [
+        "Buscar activamente evaluación externa objetiva (mentores, asesores, inversionistas) que contraste con el propio optimismo",
+        "Aplicar la regla de descontar proyecciones: dividir las proyecciones de ingresos entre 10 y sumar un año al tiempo estimado de entrega",
+        "Documentar explícitamente los supuestos optimistas del plan de negocio y buscar evidencia que los refute (un 'premortem')",
+        "Comparar el propio proyecto contra startups similares del mercado con criterios objetivos, no solo intuición",
+        "Identificar decisiones clave donde la pasión podría estar nublando el juicio racional"
+      ],
+      "entregable_esperado": "Plan de negocio con proyecciones ajustadas por sesgo de optimismo y validación externa documentada por un tercero objetivo",
+      "condiciones_activacion": [
+        "Si el fundador presenta proyecciones muy optimistas sin contraste externo",
+        "Si es un fundador serial reutilizando fórmulas pasadas sin cuestionarlas",
+        "Al validar supuestos del plan de negocio antes de invertir recursos"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "batna_definicion",
+      "batna_en_negociacion_vc"
+    ],
+    "canonical_id": "batna_definicion",
+    "losers": [
+      "batna_en_negociacion_vc"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "BATNA - Mejor Alternativa a un Acuerdo Negociado",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "BATNA (Best Alternative To a Negotiated Agreement, o Mejor Alternativa a un Acuerdo Negociado) es el plan de respaldo si la negociación actual fracasa. Definirlo con claridad antes de negociar permite establecer un punto de retirada racional y no emocional, evitando ceder más de lo debido bajo presión. En negociaciones de financiamiento, esto se traduce en mantener conversaciones activas con múltiples inversionistas potenciales: cuantas más alternativas reales tenga el emprendedor, mejor será su posición frente a cualquier inversionista individual.",
+      "pasos_accionables": [
+        "Antes de iniciar cualquier negociación, identificar cuál es tu plan B, C y D",
+        "Definir explícitamente tus límites en cada punto clave de la negociación y el punto exacto en el que estás dispuesto a retirarte",
+        "Desarrollar y mantener conversaciones activas con múltiples inversionistas potenciales antes y durante la negociación principal, invirtiendo tiempo real en fortalecer esas alternativas",
+        "Usar la existencia de alternativas reales -sin exagerarlas- como palanca de negociación",
+        "Nunca hacer una amenaza de retirarte de la mesa que no estés dispuesto a cumplir"
+      ],
+      "entregable_esperado": "Documento interno (no compartido) con el BATNA definido, los límites claros para cada término de la negociación, y un pipeline activo de al menos 2-3 inversionistas potenciales en conversación simultánea",
+      "condiciones_activacion": [
+        "Si el usuario está a punto de negociar términos con un inversionista, socio o comprador",
+        "Si el usuario siente presión emocional durante una negociación en curso",
+        "Cuando el usuario está a punto de entrar en negociación con un solo inversionista",
+        "Cuando se busca maximizar el poder de negociación en una ronda"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "cobertura_de_intereses",
+      "ratio_cobertura_intereses"
+    ],
+    "canonical_id": "cobertura_de_intereses",
+    "losers": [
+      "ratio_cobertura_intereses"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Cobertura de Intereses (Interest Coverage)",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "La cobertura de intereses mide la capacidad de una empresa para pagar los intereses de su deuda con sus ganancias operativas (EBIT, ganancias antes de intereses e impuestos, dividido entre gastos de interés). Un ratio cercano a 1 es una señal de alarma, pues indica que casi toda la ganancia operativa se destina a pagar intereses; un ratio alto sugiere que la empresa puede permitirse asumir más deuda sin poner en riesgo su capacidad de pago.",
+      "pasos_accionables": [
+        "Calcular: Ganancia Operativa (EBIT) dividida entre Gastos por Intereses",
+        "Monitorear la tendencia del ratio a lo largo del tiempo",
+        "Evaluar si el ratio es suficientemente alto para tranquilidad de bancos e inversionistas antes de solicitar financiamiento adicional",
+        "Si el ratio es bajo, priorizar el pago de deuda existente antes de asumir más obligaciones",
+        "Usar este ratio junto con el de deuda-a-capital antes de solicitar financiamiento adicional"
+      ],
+      "entregable_esperado": "Cálculo del ratio de cobertura de intereses, su tendencia en el tiempo, y un plan de acción si está en zona de riesgo",
+      "condiciones_activacion": [
+        "Cuando el usuario evalúa tomar más deuda y necesita demostrar capacidad de pago a un banco",
+        "La empresa tiene deuda existente y quiere evaluar su salud financiera antes de buscar más financiamiento"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "estructura_corporativa_c_corp",
+      "seleccion_estructura_corporativa"
+    ],
+    "canonical_id": "seleccion_estructura_corporativa",
+    "losers": [
+      "estructura_corporativa_c_corp"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Selección de Estructura Corporativa (C Corp, S Corp, LLC)",
+      "fuente": "Venture Deals",
+      "resumen_teorico": "La elección de la estructura legal de la empresa (C Corp, S Corp o LLC) determina sus implicaciones fiscales, de responsabilidad y su capacidad para recibir inversión externa. Si se planea levantar capital de riesgo o de inversionistas ángeles, la C Corp es prácticamente obligatoria, porque es la única que permite emitir múltiples clases de acciones y diferir impuestos corporativos mientras la empresa pierde dinero. La S Corp ofrece beneficios fiscales de tipo 'partnership' con protección de responsabilidad limitada, y es una alternativa razonable si no se buscará capital de riesgo. La LLC es similar a la S Corp en beneficios fiscales, pero dificulta otorgar equity a empleados mediante opciones sobre acciones tradicionales.",
+      "pasos_accionables": [
+        "Determinar si se planea levantar capital de riesgo o de inversionistas ángeles a mediano plazo",
+        "Si se buscará ese tipo de capital, constituir la empresa como C Corp desde el inicio, anticipando la necesidad de múltiples clases de acciones",
+        "Si no se buscará ese capital y hay pocos dueños, evaluar S Corp o LLC por sus beneficios fiscales",
+        "Consultar con un abogado corporativo para formalizar la estructura elegida y documentarla en los estatutos de la empresa"
+      ],
+      "entregable_esperado": "Empresa legalmente constituida bajo la estructura corporativa (C Corp, S Corp o LLC) adecuada a su estrategia de financiamiento",
+      "condiciones_activacion": [
+        "Si el usuario está fundando o formalizando legalmente su empresa",
+        "Cuando se planea levantar capital de inversionistas externos"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "lectura_estado_flujo_efectivo",
+      "lenguaje_cash_flow_statement"
+    ],
+    "canonical_id": "lectura_estado_flujo_efectivo",
+    "losers": [
+      "lenguaje_cash_flow_statement"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Lectura del Estado de Flujo de Efectivo",
+      "fuente": "Financial Intelligence for Entrepreneurs",
+      "resumen_teorico": "El estado de flujo de efectivo es el más difícil de leer de los tres estados financieros, pero resulta crucial: muestra de dónde viene el efectivo y hacia dónde va, separado en tres categorías -actividades operativas (efectivo generado por las operaciones normales del negocio), actividades de inversión (compra o venta de activos de capital) y actividades de financiamiento (préstamos, capital de inversionistas, pago de dividendos)-. Permite diagnosticar si la empresa genera efectivo internamente de su negocio principal, invierte en su futuro, o depende de financiamiento externo para sobrevivir, algo vital para evaluar su sostenibilidad.",
+      "pasos_accionables": [
+        "Separar el análisis en las tres categorías: actividades operativas, de inversión y de financiamiento",
+        "Clasificar cada movimiento de efectivo en la categoría correspondiente",
+        "Determinar si el efectivo operativo es positivo o negativo, y calcularlo como el indicador principal de salud del negocio",
+        "Identificar de dónde proviene el efectivo principal: del negocio, de inversionistas o de deuda, y si la empresa es autosuficiente o depende de financiamiento externo",
+        "Conectar los cambios en el balance general (por ejemplo, cuentas por cobrar) con las líneas correspondientes del flujo de efectivo",
+        "Evaluar si el gasto en inversión es alto o bajo en relación con el tamaño y tipo de empresa"
+      ],
+      "entregable_esperado": "Análisis del estado de flujo de efectivo clasificado en sus tres categorías, con conclusión sobre la fuente principal de liquidez del negocio",
+      "condiciones_activacion": [
+        "Si el usuario necesita evaluar la salud de caja de su startup",
+        "Si el usuario está evaluando si el negocio depende de financiamiento externo para sobrevivir",
+        "Cuando se necesita presentar estados financieros completos a inversionistas o bancos"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "metodos_de_valuacion",
+      "metodos_valoracion_empresa"
+    ],
+    "canonical_id": "metodos_de_valuacion",
+    "losers": [
+      "metodos_valoracion_empresa"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Métodos de Valuación de una Empresa",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "Determinar cuánto vale una empresa privada (no cotizada en bolsa) requiere elegir entre distintos métodos de valuación, cada uno con supuestos propios que producen resultados diferentes: el método de precio-ganancias (comparar con múltiplos de mercado de empresas similares), el método de flujo de caja descontado (valorar la corriente futura de efectivo que genera el negocio, descontada a una tasa apropiada), y el método de valuación de activos (sumar el valor estimado de activos tangibles e intangibles). No existe un método 'correcto' único: la elección del método y de sus supuestos (tasa de descuento, múltiplos comparables) introduce un sesgo significativo en el valor resultante, algo crucial para negociaciones de venta, fusión o levantamiento de capital.",
+      "pasos_accionables": [
+        "Identificar el propósito de la valuación (venta, levantamiento de capital, fusión, préstamo)",
+        "Calcular el valor de la empresa usando al menos dos métodos distintos (precio-ganancias, flujo de caja descontado, valor de activos)",
+        "Comparar los resultados obtenidos y entender por qué difieren entre métodos",
+        "Documentar y justificar los supuestos usados en cada método (tasa de descuento, múltiplos comparables, valor de activos)",
+        "Consultar con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas"
+      ],
+      "entregable_esperado": "Un rango de valuación de la empresa sustentado en al menos dos metodologías diferentes, con los supuestos documentados y justificados",
+      "condiciones_activacion": [
+        "Si el emprendedor está por vender su empresa o parte de ella",
+        "Si se está negociando una ronda de inversión y se requiere definir el valor de la empresa",
+        "Si dos socios necesitan determinar el valor de las acciones de la empresa",
+        "El usuario busca atraer inversión o pedir un préstamo grande"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "valor_del_dinero_en_el_tiempo",
+      "valor_presente_futuro_roi"
+    ],
+    "canonical_id": "valor_del_dinero_en_el_tiempo",
+    "losers": [
+      "valor_presente_futuro_roi"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Valor del Dinero en el Tiempo (Time Value of Money)",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+      "resumen_teorico": "Principio financiero fundamental que establece que un dólar disponible hoy vale más que un dólar que se espera recibir en el futuro, debido al riesgo y a la oportunidad de invertir ese dinero desde ahora. Este principio subyace a todas las decisiones sobre inversiones de capital, préstamos e inversiones, y es la base para calcular el valor futuro, el valor presente y la tasa de retorno requerida: herramientas esenciales para decidir si conviene realizar una inversión de capital, como comprar maquinaria o software.",
+      "pasos_accionables": [
+        "Reconocer que cualquier flujo de efectivo futuro debe descontarse para poder compararlo con el efectivo disponible hoy",
+        "Identificar el riesgo asociado a recibir dinero en el futuro versus tenerlo ahora",
+        "Determinar la tasa de retorno requerida según el riesgo del proyecto o inversión",
+        "Calcular el valor presente de los flujos futuros esperados y compararlo con el desembolso inicial de la inversión",
+        "Usar el resultado para decidir si vale la pena realizar la inversión de capital"
+      ],
+      "entregable_esperado": "Análisis de valor presente/futuro de una inversión de capital propuesta, con recomendación de decisión basada en la comparación contra el desembolso inicial",
+      "condiciones_activacion": [
+        "Cuando el emprendedor debe decidir entre invertir dinero ahora o recibirlo en el futuro",
+        "Cuando se evalúan préstamos, inversiones o compras de activos a largo plazo",
+        "El emprendedor debe decidir si comprar un activo, máquina o software para el negocio"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "derechos_de_registro",
+      "registration_rights",
+      "registration_rights_ipo"
+    ],
+    "canonical_id": "derechos_de_registro",
+    "losers": [
+      "registration_rights",
+      "registration_rights_ipo"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Derechos de Registro (Registration Rights)",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "Derechos que permiten a los inversionistas exigir que la empresa registre sus acciones ante la autoridad regulatoria de valores (la SEC en Estados Unidos) para poder venderlas públicamente, relevantes principalmente en el contexto de una futura salida a bolsa (IPO). Incluyen 'demand registrations' (el derecho a exigir un registro, generalmente limitado a un número definido de veces), 'piggyback rights' (el derecho a sumarse a un registro ya en marcha) y registros S-3 independientes, todos con límites de tiempo, montos mínimos de oferta y porcentajes mínimos garantizados en caso de reducción proporcional (usualmente no menos del 30%). Aunque los abogados suelen negociar esta sección extensamente, su impacto práctico real es limitado, porque al llegar a un IPO los bancos de inversión tendrán el control principal de cómo se estructura la oferta.",
+      "pasos_accionables": [
+        "Definir el número de 'demand registrations' permitidas (por ejemplo, dos) y el monto mínimo de oferta pública requerido para poder ejercerlas",
+        "Negociar los 'piggyback rights' y su reducción proporcional según las condiciones de mercado",
+        "Revisar el porcentaje mínimo garantizado a los inversionistas en caso de reducción pro rata (usualmente no menos del 30%)",
+        "Acordar quién cubre los gastos de registro (usualmente la empresa, excluyendo comisiones de suscripción) y el tope de honorarios legales para los accionistas vendedores",
+        "No invertir tiempo legal excesivo en esta cláusula, ya que su impacto práctico es limitado frente al control que ejercerán los bancos de inversión en el momento del IPO"
+      ],
+      "entregable_esperado": "Cláusula de derechos de registro incluida en el acuerdo de derechos de los inversionistas (investor rights agreement), con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
+      "condiciones_activacion": [
+        "Si el usuario planea una eventual salida a bolsa (IPO)",
+        "Si los inversionistas requieren garantías de liquidez futura",
+        "Cuando se negocia una ronda institucional con miras a una futura salida a bolsa",
+        "Cuando la empresa está negociando un term sheet con inversores de capital de riesgo"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "premium_ceo_equity",
+      "ceo_equity_premium"
+    ],
+    "canonical_id": "ceo_equity_premium",
+    "losers": [
+      "premium_ceo_equity"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Prima de Equity para el CEO Fundador",
+      "fuente": "The Founder's Dilemmas",
+      "resumen_teorico": "Los roles jerárquicos claramente definidos en el equipo fundador tienden a justificar splits de equity desiguales: el fundador que asume el rol de CEO recibe en promedio una 'prima' de equity de 14 a 20 puntos porcentuales adicionales respecto a sus cofundadores, y el fundador-CTO una prima menor pero significativa de 5 a 8 puntos. Esta prima refleja la expectativa de mayor responsabilidad, esfuerzo y contribución al éxito del startup asociada a los roles de mayor control.",
+      "pasos_accionables": [
+        "Al definir quién asumirá el rol de CEO o CTO, discutir explícitamente si esto implica una prima de equity",
+        "Evaluar si cada cofundador prioriza el control (el título) o la recompensa financiera (el equity), y negociar el trade-off correspondiente",
+        "Comparar la asignación de equity propuesta contra el benchmark de prima de CEO (14-20 puntos) y de CTO (5-8 puntos) para detectar desalineaciones",
+        "Documentar el razonamiento detrás de cualquier prima otorgada, asegurando que sea proporcional a la contribución esperada real y no solo al título"
+      ],
+      "entregable_esperado": "Tabla o acuerdo de asignación de equity que refleje explícitamente las primas por rol (CEO, CTO, etc.), con su justificación documentada y aceptada por todo el equipo fundador",
+      "condiciones_activacion": [
+        "Cuando se define quién ocupará el rol de CEO o CTO en el equipo fundador",
+        "Cuando hay conflicto sobre si el título debe correlacionarse con mayor equity",
+        "Cuando el equipo fundador está decidiendo cómo repartir equity entre cofundadores",
+        "Cuando se necesita justificar una distribución desigual de equity"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "convertible_debt_financiamiento",
+      "convertible_debt_fundamentos"
+    ],
+    "canonical_id": "convertible_debt_fundamentos",
+    "losers": [
+      "convertible_debt_financiamiento"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Fundamentos de la Deuda Convertible (Convertible Debt)",
+      "fuente": "Venture Deals",
+      "resumen_teorico": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla, porque reduce la complejidad legal y los costos frente a una ronda de equity preferente. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+      "pasos_accionables": [
+        "Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de una ronda de equity",
+        "Definir el porcentaje de descuento que recibirán los inversionistas en la conversión (típicamente 10%-30%, siendo 20% el más común)",
+        "Considerar el uso de un valuation cap, solo o combinado con el descuento, y a qué monto, evaluando su impacto en rondas futuras",
+        "Fijar una tasa de interés baja (5%-12%, promedio 8%), cercana a las tasas federales aplicables",
+        "Establecer el plazo de maduración (fecha límite) y el monto mínimo de la siguiente ronda ('Qualified Financing') que dispara la conversión automática",
+        "Comparar los costos legales de una ronda de deuda convertible frente a una ronda de equity semilla preferente"
+      ],
+      "entregable_esperado": "Term sheet o nota convertible con términos claros: descuento, valuation cap, tasa de interés, plazo de maduración y monto mínimo de conversión",
+      "condiciones_activacion": [
+        "Si el emprendedor busca financiamiento semilla rápido sin negociar valuación completa",
+        "Si los inversionistas ángeles o aceleradoras prefieren estructurar la inversión como préstamo temporal",
+        "Cuando se necesita evitar los costos legales elevados de una ronda de equity preferente",
+        "Cuando la empresa busca financiamiento temprano (pre-semilla o semilla) y quiere evitar fijar valuación"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "co_sale_agreement",
+      "co_sale_drag_along_agreements"
+    ],
+    "canonical_id": "co_sale_drag_along_agreements",
+    "losers": [
+      "co_sale_agreement"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Acuerdos de Co-Venta y Arrastre (Co-Sale & Drag-Along)",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "El Co-Sale Agreement es una cláusula casi imposible de eliminar en un financiamiento de capital de riesgo: establece que si un fundador vende sus acciones, los inversionistas tienen la oportunidad de vender una porción proporcional de las suyas también en la misma transacción. Es importante negociar un 'piso' (floor) que permita a los fundadores vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente al llegar a una oferta pública inicial calificada. El Drag-Along, por su parte, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de la empresa si la mayoría de los accionistas preferentes lo aprueba, facilitando una salida limpia sin que un accionista minoritario pueda bloquearla. Ambas cláusulas suelen incluirse juntas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación.",
+      "pasos_accionables": [
+        "Aceptar la existencia de la cláusula de co-venta, ya que es prácticamente estándar en todo financiamiento de capital de riesgo",
+        "Negociar un umbral mínimo (piso) de acciones que los fundadores puedan vender sin necesidad de ofrecer co-venta a los inversionistas",
+        "Confirmar que ambas cláusulas terminan automáticamente al llegar a una oferta pública inicial calificada",
+        "Establecer el umbral de aprobación necesario para activar el drag-along (por ejemplo, mayoría de una serie de inversión determinada)",
+        "Definir las excepciones razonables al acuerdo de co-venta",
+        "Incluir ambas cláusulas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación, y comunicar a los fundadores las implicaciones de ceder este control en una futura venta"
+      ],
+      "entregable_esperado": "Cláusulas de co-venta y de arrastre (drag-along) firmadas por fundadores e inversionistas, con un piso negociado para ventas menores de fundadores y el umbral de aprobación del drag-along claramente definido",
+      "condiciones_activacion": [
+        "Cuando un fundador necesita liquidez personal antes de un evento de salida",
+        "Cuando se negocia el term sheet de una ronda de inversión",
+        "Cuando se busca asegurar que una futura venta de la empresa no sea bloqueada por accionistas minoritarios",
+        "Si los inversionistas requieren protección para poder liquidar su inversión junto con los fundadores"
+      ]
+    },
+    "notes": "drag_along_agreement (detalle tactico adicional: umbral common vs preferred) y acuerdo_de_co_venta_y_votacion (combina co-venta con voting agreement, un tercer concepto distinto) quedaron separados por no ser duplicados puros sino combinaciones parciales distintas; se enlazan a este nodo."
+  },
+  {
+    "cluster_members": [
+      "right_of_first_refusal_inversores",
+      "right_of_first_refusal_pro_rata"
+    ],
+    "canonical_id": "right_of_first_refusal_pro_rata",
+    "losers": [
+      "right_of_first_refusal_inversores"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Derecho de Primera Negativa y Derechos Pro Rata (ROFR)",
+      "fuente": "Venture Deals - Brad Feld",
+      "resumen_teorico": "El derecho de primera negativa (o derecho pro rata) permite a los inversionistas principales ('Major Investors') comprar su porción proporcional -o un múltiplo de ella- de futuras emisiones de acciones antes de que se ofrezcan a terceros, manteniendo así su porcentaje de propiedad en la empresa. Es estándar en casi todos los financiamientos de capital de riesgo. El fundador debe prestar atención especial a evitar un 'pro rata super' (múltiplos superiores a 1x su porcentaje actual), que sería una petición excesiva, y este derecho suele terminar automáticamente al llegar a una oferta pública inicial calificada.",
+      "pasos_accionables": [
+        "Definir claramente el umbral de inversión que constituye un 'Major Investor', limitando este derecho únicamente a inversionistas que califiquen como tales",
+        "Establecer el múltiplo de pro rata permitido (por ejemplo, 1x su porcentaje actual), verificando que no se incluya un 'pro rata super' excesivo",
+        "Acordar el mecanismo de reasignación de acciones no suscritas entre otros inversionistas elegibles",
+        "Negociar que el derecho aplique solo a inversionistas que participen en rondas subsecuentes, y determinar su terminación automática en una oferta pública inicial calificada"
+      ],
+      "entregable_esperado": "Cláusula de derecho de primera negativa y pro rata redactada en el term sheet, con la definición clara de 'Major Investor' y confirmación de que no existe un múltiplo excesivo (pro rata super)",
+      "condiciones_activacion": [
+        "Cuando se está estructurando una ronda de financiamiento con múltiples inversionistas",
+        "Cuando existen inversionistas pequeños que no deberían tener este derecho",
+        "Cuando inversionistas relevantes desean asegurar su participación en futuras rondas",
+        "Si el emprendedor necesita entender cómo se protegerá la propiedad de sus inversionistas ancla"
+      ]
+    },
+    "notes": ""
+  }
+]

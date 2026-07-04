@@ -1,0 +1,25 @@
+{
+  "node_id": "participacion_preferente",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Tipos de Participación en Acciones Preferentes (No Participante, Participación Total, Participación con Tope)",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Existen tres tipos de participación tras recibir la liquidation preference: (1) No participación - el inversionista solo recibe su preferencia o convierte a común, tomando lo que sea mayor; (2) Participación total - el inversionista recibe su preferencia Y además participa proporcionalmente en el resto de los proceeds, sin necesidad de convertir ('tener el pastel y comérselo también'); (3) Participación con tope - participa hasta alcanzar cierto múltiplo del retorno, después del cual deja de participar. Estos términos impactan significativamente los retornos en escenarios de salida bajos y medios.",
+  "pasos_accionables": [
+    "Calcular escenarios de retorno bajo cada tipo de participación usando el precio de venta esperado de la empresa.",
+    "Preferir 'no participación' en rondas tempranas, ya que es más simple y justo tanto para inversionistas como fundadores.",
+    "Si se acepta participación, negociar un tope razonable (ej. 3x) para limitar el impacto negativo en fundadores y empleados.",
+    "Recordar que los términos de la ronda semilla suelen convertirse en precedente para rondas futuras, por lo que vale la pena negociarlos bien desde el inicio."
+  ],
+  "entregable_esperado": "Claridad documentada sobre el tipo de participación acordado y su impacto modelado en distintos escenarios de salida.",
+  "nodos_previos": [
+    "preferencia_de_liquidacion"
+  ],
+  "nodos_siguientes": [
+    "preferencias_apiladas_vs_blended",
+    "term_sheet_negociacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se negocia la cláusula de participación en un term sheet",
+    "Cuando existen múltiples rondas de inversión con diferentes términos de participación"
+  ]
+}

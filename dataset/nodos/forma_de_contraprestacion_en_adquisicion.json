@@ -1,0 +1,31 @@
+{
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Forma de Contraprestación (Cash vs. Stock) en una Adquisición",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "En una oferta de compra (carta de intención o LOI), el valor real de la transacción depende críticamente de la forma en que se paga: efectivo, acciones comunes o acciones preferentes de una empresa pública o privada. El efectivo es la forma más clara y valiosa de contraprestación; cualquier otra forma requiere un análisis profundo de la estructura de capital del comprador, ya que recibir acciones comunes de una empresa privada altamente apalancada, con preferencias de liquidación participantes por delante, puede significar que el valor real recibido sea mucho menor al precio nominal anunciado.",
+  "pasos_accionables": [
+    "Determinar si la oferta es en efectivo, acciones públicas o acciones privadas",
+    "Si la contraprestación es en acciones, investigar la estructura de capital completa del comprador, incluyendo el capital total levantado y las preferencias de liquidación existentes",
+    "Verificar si las acciones ofrecidas son comunes o preferentes, si son participantes, y su posición frente a preferencias de liquidación existentes",
+    "Si las acciones son de una empresa pública, verificar si son de libre negociación, están registradas o sujetas a un periodo de bloqueo (lock-up)",
+    "Solicitar una valoración independiente de la contraprestación no efectiva antes de aceptar la oferta",
+    "No confundir el precio nominal anunciado con el valor económico real recibido"
+  ],
+  "entregable_esperado": "Valoración independiente de la contraprestación ofrecida (efectivo, acciones comunes o preferentes), ajustada por la estructura de capital real del comprador",
+  "condiciones_activacion": [
+    "Si el usuario recibe una oferta de compra pagada total o parcialmente en acciones",
+    "Si el usuario necesita evaluar el valor real de una oferta de adquisición",
+    "Cuando el usuario recibe una oferta de adquisición (LOI) con pago no exclusivamente en efectivo"
+  ],
+  "node_id": "forma_de_contraprestacion_en_adquisicion",
+  "nodos_previos": [
+    "asset_deal_vs_stock_deal",
+    "term_sheet_negociacion",
+    "estructura_fondo_vc",
+    "estructura_de_la_venta"
+  ],
+  "nodos_siguientes": [
+    "asuncion_stock_options_adquisicion",
+    "escrow_en_adquisiciones"
+  ]
+}

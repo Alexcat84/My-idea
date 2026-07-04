@@ -1,0 +1,24 @@
+{
+  "node_id": "analisis_antiguedad_cuentas_por_cobrar",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Análisis de Antigüedad de Cuentas por Cobrar (Aging)",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "El DSO es un promedio que puede ocultar problemas graves de cobranza. El análisis de aging desglosa las cuentas por cobrar en rangos de tiempo (menos de 30 días, 30-60, más de 90, etc.), revelando la verdadera salud de la cartera de clientes más allá del promedio general.",
+  "pasos_accionables": [
+    "Generar un reporte de antigüedad de cuentas por cobrar segmentado por rangos de días.",
+    "Identificar el porcentaje de cartera en mora superior a 90 días.",
+    "Comparar el aging con el DSO general para detectar riesgos ocultos.",
+    "Priorizar acciones de cobranza sobre los segmentos más antiguos."
+  ],
+  "entregable_esperado": "Reporte de aging de cuentas por cobrar con plan de acción de cobranza.",
+  "nodos_previos": [
+    "ciclo_de_conversion_de_efectivo"
+  ],
+  "nodos_siguientes": [
+    "gestion_cuentas_por_cobrar"
+  ],
+  "condiciones_activacion": [
+    "Si el DSO parece estable pero hay sospechas de morosidad concentrada",
+    "Si se necesita mejorar la gestión de cobranza"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Método del Valor Presente Neto (NPV)",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "Es el método más robusto y preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR) y el método de payback, que ignoran el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera el costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
+  "pasos_accionables": [
+    "Proyectar los flujos de efectivo futuros esperados de la inversión",
+    "Definir la tasa de descuento (hurdle rate) de la empresa",
+    "Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente",
+    "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV",
+    "Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo",
+    "Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales para probar la robustez de la decisión"
+  ],
+  "entregable_esperado": "Cifra de valor presente neto en dólares, con supuestos y análisis de sensibilidad documentados, que indique si la inversión agrega valor real a la empresa",
+  "condiciones_activacion": [
+    "Cuando se necesita determinar si una inversión de capital agregará valor real a la empresa en términos de dólares de hoy",
+    "Cuando el emprendedor debe decidir entre múltiples proyectos de inversión de capital",
+    "Cuando los métodos de IRR y payback dan resultados contradictorios"
+  ],
+  "node_id": "metodo_valor_presente_neto",
+  "nodos_previos": [
+    "analisis_de_gastos_de_capital",
+    "valor_presente",
+    "tasa_de_retorno_requerida",
+    "verificar_modelo_ingresos"
+  ],
+  "nodos_siguientes": [
+    "tasa_interna_retorno_irr",
+    "gestion_capital_trabajo",
+    "analisis_varianza_financiera",
+    "valor_presente"
+  ]
+}

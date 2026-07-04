@@ -1,0 +1,23 @@
+{
+  "node_id": "creacion_option_pool",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Creación de Option Pool para Contrataciones Futuras",
+  "fuente": "The Founder's Dilemmas",
+  "resumen_teorico": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (hasta 20% del equity totalmente diluido) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar.",
+  "pasos_accionables": [
+    "Estimar el número de contrataciones clave necesarias antes de la siguiente ronda de financiamiento.",
+    "Negociar el tamaño del option pool con los inversores antes del cierre de la ronda (afecta la valuación pre-money).",
+    "Revisar y refrescar el pool en cada ronda subsecuente según necesidades de contratación."
+  ],
+  "entregable_esperado": "Cap table actualizado con el porcentaje de option pool reservado y su cronograma de asignación.",
+  "nodos_previos": [
+    "seesaw_salario_equity"
+  ],
+  "nodos_siguientes": [
+    "term_sheet_negociacion"
+  ],
+  "condiciones_activacion": [
+    "Antes de cerrar una ronda de financiamiento formal.",
+    "Cuando se planea escalar el equipo significativamente."
+  ]
+}

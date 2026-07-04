@@ -1,0 +1,24 @@
+{
+  "node_id": "ratios_liquidez",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Ratios de Liquidez: Current Ratio y Quick Ratio",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "Los ratios de liquidez miden la capacidad de la empresa para cumplir sus obligaciones financieras de corto plazo (nómina, proveedores, impuestos). El current ratio compara activos corrientes con pasivos corrientes; el quick ratio (acid test) excluye el inventario para medir liquidez inmediata sin depender de vender stock.",
+  "pasos_accionables": [
+    "Calcular activos corrientes divididos entre pasivos corrientes (current ratio)",
+    "Calcular (activos corrientes - inventario) dividido entre pasivos corrientes (quick ratio)",
+    "Verificar que ambos ratios estén por encima de 1, especialmente en periodos de alto crecimiento",
+    "Comparar con estándares de la industria para determinar si hay exceso de efectivo ocioso o riesgo de falta de liquidez"
+  ],
+  "entregable_esperado": "Reporte de liquidez con current ratio y quick ratio calculados y análisis de suficiencia de caja",
+  "nodos_previos": [
+    "cobertura_de_intereses"
+  ],
+  "nodos_siguientes": [
+    "ratios_eficiencia_inventario"
+  ],
+  "condiciones_activacion": [
+    "Startup en fase de alto crecimiento con riesgo de quedarse sin efectivo",
+    "Antes de solicitar financiamiento bancario"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Lectura del Estado de Flujo de Efectivo",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "El estado de flujo de efectivo es el más difícil de leer de los tres estados financieros, pero resulta crucial: muestra de dónde viene el efectivo y hacia dónde va, separado en tres categorías -actividades operativas (efectivo generado por las operaciones normales del negocio), actividades de inversión (compra o venta de activos de capital) y actividades de financiamiento (préstamos, capital de inversionistas, pago de dividendos)-. Permite diagnosticar si la empresa genera efectivo internamente de su negocio principal, invierte en su futuro, o depende de financiamiento externo para sobrevivir, algo vital para evaluar su sostenibilidad.",
+  "pasos_accionables": [
+    "Separar el análisis en las tres categorías: actividades operativas, de inversión y de financiamiento",
+    "Clasificar cada movimiento de efectivo en la categoría correspondiente",
+    "Determinar si el efectivo operativo es positivo o negativo, y calcularlo como el indicador principal de salud del negocio",
+    "Identificar de dónde proviene el efectivo principal: del negocio, de inversionistas o de deuda, y si la empresa es autosuficiente o depende de financiamiento externo",
+    "Conectar los cambios en el balance general (por ejemplo, cuentas por cobrar) con las líneas correspondientes del flujo de efectivo",
+    "Evaluar si el gasto en inversión es alto o bajo en relación con el tamaño y tipo de empresa"
+  ],
+  "entregable_esperado": "Análisis del estado de flujo de efectivo clasificado en sus tres categorías, con conclusión sobre la fuente principal de liquidez del negocio",
+  "condiciones_activacion": [
+    "Si el usuario necesita evaluar la salud de caja de su startup",
+    "Si el usuario está evaluando si el negocio depende de financiamiento externo para sobrevivir",
+    "Cuando se necesita presentar estados financieros completos a inversionistas o bancos"
+  ],
+  "node_id": "lectura_estado_flujo_efectivo",
+  "nodos_previos": [
+    "lectura_balance_general",
+    "profit_vs_cash"
+  ],
+  "nodos_siguientes": [
+    "analisis_de_ratios_financieros",
+    "owner_earnings"
+  ]
+}

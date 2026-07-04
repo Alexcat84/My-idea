@@ -1,0 +1,28 @@
+{
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Acuerdo de Exclusividad (No-Shop Agreement)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Cláusula vinculante -a diferencia de la mayoría de los términos del term sheet, que son no vinculantes- que impide a la empresa y a los fundadores buscar, solicitar o negociar con otros inversionistas potenciales durante un periodo definido (comúnmente 30-60-90 días) mientras se completa la due diligence y se cierra la ronda actual. Su objetivo es dar certeza al inversionista de que su tiempo y recursos no se usarán para generar una subasta paralela.",
+  "pasos_accionables": [
+    "Definir el período de exclusividad (comúnmente 30-60-90 días)",
+    "Aclarar que esta cláusula es legalmente vinculante desde la firma del term sheet, a diferencia del resto de sus términos",
+    "Establecer la obligación de notificar cualquier acercamiento de terceros durante este periodo",
+    "Negociar qué ocurre si las partes no cierran la transacción en el plazo acordado (terminación de la obligación)"
+  ],
+  "entregable_esperado": "Cláusula de No Shop firmada, con plazo, obligaciones de notificación y consecuencias de incumplimiento claramente definidas",
+  "condiciones_activacion": [
+    "Si el usuario ha recibido un term sheet y necesita entender sus obligaciones de exclusividad",
+    "Si el inversionista requiere garantía de exclusividad antes de invertir tiempo en due diligence",
+    "Cuando un inversionista ha entregado un term sheet y quiere asegurar exclusividad durante el proceso",
+    "Si el emprendedor está evaluando múltiples ofertas y necesita entender las implicaciones legales de firmar un term sheet"
+  ],
+  "node_id": "no_shop_agreement",
+  "nodos_previos": [
+    "term_sheet_negociacion"
+  ],
+  "nodos_siguientes": [
+    "proceso_diligencia_vc",
+    "term_sheet_negociacion",
+    "clausula_no_shop_adquisicion"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Cobertura de Intereses (Interest Coverage)",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "La cobertura de intereses mide la capacidad de una empresa para pagar los intereses de su deuda con sus ganancias operativas (EBIT, ganancias antes de intereses e impuestos, dividido entre gastos de interés). Un ratio cercano a 1 es una señal de alarma, pues indica que casi toda la ganancia operativa se destina a pagar intereses; un ratio alto sugiere que la empresa puede permitirse asumir más deuda sin poner en riesgo su capacidad de pago.",
+  "pasos_accionables": [
+    "Calcular: Ganancia Operativa (EBIT) dividida entre Gastos por Intereses",
+    "Monitorear la tendencia del ratio a lo largo del tiempo",
+    "Evaluar si el ratio es suficientemente alto para tranquilidad de bancos e inversionistas antes de solicitar financiamiento adicional",
+    "Si el ratio es bajo, priorizar el pago de deuda existente antes de asumir más obligaciones",
+    "Usar este ratio junto con el de deuda-a-capital antes de solicitar financiamiento adicional"
+  ],
+  "entregable_esperado": "Cálculo del ratio de cobertura de intereses, su tendencia en el tiempo, y un plan de acción si está en zona de riesgo",
+  "condiciones_activacion": [
+    "Cuando el usuario evalúa tomar más deuda y necesita demostrar capacidad de pago a un banco",
+    "La empresa tiene deuda existente y quiere evaluar su salud financiera antes de buscar más financiamiento"
+  ],
+  "node_id": "cobertura_de_intereses",
+  "nodos_previos": [
+    "ratio_deuda_capital"
+  ],
+  "nodos_siguientes": [
+    "ratios_liquidez"
+  ]
+}

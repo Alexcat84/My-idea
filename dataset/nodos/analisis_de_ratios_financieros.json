@@ -1,0 +1,35 @@
+{
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Análisis de Ratios Financieros",
+  "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+  "resumen_teorico": "Los ratios financieros son relaciones entre dos cifras de los estados financieros que ofrecen un atajo rápido para entender lo que dicen esos estados, sin importar si la empresa es una startup, una empresa mediana o una gran corporación pública. Se agrupan en cuatro categorías: rentabilidad (por ejemplo, retorno sobre activos o ROA, retorno sobre capital o ROE, margen bruto y margen operativo), apalancamiento (razón deuda a capital), liquidez (razón corriente, capital de trabajo) y eficiencia (rotación de activos, días de ventas pendientes de cobro o DSO). Su verdadero valor surge al compararlos en el tiempo (contra periodos anteriores o proyecciones propias) o contra promedios de la industria y competidores, lo que permite detectar anomalías, medir eficiencia y hasta descubrir manipulación contable: el caso de una conocida empresa de electrodomésticos bajo un CEO que impulsaba recortes agresivos ilustra cómo un analista detectó fraude contable al notar un DSO anormalmente alto.",
+  "pasos_accionables": [
+    "Calcular ratios de rentabilidad: margen bruto, margen operativo, retorno sobre activos (ROA) y retorno sobre capital (ROE)",
+    "Calcular ratios de apalancamiento: razón deuda a capital",
+    "Calcular ratios de liquidez: razón corriente y capital de trabajo",
+    "Calcular ratios de eficiencia: rotación de activos y días de ventas pendientes de cobro (DSO)",
+    "Comparar los ratios actuales con periodos anteriores de la misma empresa y con las proyecciones del plan financiero propio",
+    "Comparar los ratios con los de competidores o promedios de la industria (disponibles a través de asociaciones gremiales)",
+    "Indagar profundamente si algún ratio se sale del rango normal esperado, ya que puede señalar manipulación contable o problemas ocultos"
+  ],
+  "entregable_esperado": "Tablero de ratios financieros clave (rentabilidad, apalancamiento, liquidez, eficiencia) con análisis de tendencia propia y comparación sectorial",
+  "condiciones_activacion": [
+    "Cuando se necesita evaluar rápidamente la salud financiera de una empresa",
+    "Cuando se sospecha de manipulación o irregularidades contables",
+    "Cuando se busca comparar el desempeño con competidores del mismo sector",
+    "Si el usuario debe presentar métricas financieras a inversionistas o bancos"
+  ],
+  "node_id": "analisis_de_ratios_financieros",
+  "nodos_previos": [
+    "flujo_de_caja_libre",
+    "estado_flujo_de_caja_tres_categorias",
+    "lectura_estado_resultados",
+    "lectura_balance_general",
+    "lectura_estado_flujo_efectivo",
+    "pro_forma_vs_actuals",
+    "evaluacion_salud_financiera_empresa"
+  ],
+  "nodos_siguientes": [
+    "cultura_de_transparencia_financiera"
+  ]
+}

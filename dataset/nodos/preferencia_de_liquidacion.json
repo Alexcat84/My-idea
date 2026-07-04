@@ -1,0 +1,44 @@
+{
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Preferencia de Liquidación (Liquidation Preference)",
+  "fuente": "Venture Deals - Brad Feld",
+  "resumen_teorico": "Cláusula que determina el orden y el monto que reciben los tenedores de acciones preferentes (los inversionistas) antes que los accionistas comunes en un evento de liquidez: fusión, adquisición, venta o cambio de control de la empresa. Típicamente es 1x el precio de compra más los dividendos declarados no pagados. Puede ser participante (el inversionista recibe la preferencia MÁS su parte proporcional como accionista común, un 'doble cobro') o no participante (elige recibir una u otra cosa, no ambas). Un 'Change in Control' se trata como evento de liquidación a estos efectos, pero una oferta pública inicial NO se considera evento de liquidación, ya que las acciones preferentes se convierten a comunes. El 'overhang' de la preferencia es el monto que debe devolverse a los inversionistas antes de que los accionistas comunes reciban cualquier proceso.",
+  "pasos_accionables": [
+    "Negociar una preferencia de liquidación simple (1x, no participante) en rondas iniciales; evitar múltiplos superiores a 1x, ya que son señal de alerta sobre el inversionista",
+    "Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común) y no participante (una u otra, no ambas)",
+    "Si se acepta participación, solicitar 'kick-outs' que la eliminen una vez el inversionista alcance un retorno de 2x-3x",
+    "Definir con claridad qué eventos constituyen un 'Change in Control' que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación",
+    "Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier proceso",
+    "Modelar distintos escenarios de venta (bajo, medio, alto) para entender el impacto real en el retorno de fundadores, empleados e inversionistas (análisis de cascada o waterfall)",
+    "Revisar cómo se tratan las contraprestaciones en garantía (escrow) o contingentes al calcular la distribución",
+    "Anticipar que un inversionista que percibe mayor riesgo (mercado incierto, competencia, condiciones de salida poco claras) tenderá a exigir términos más agresivos"
+  ],
+  "entregable_esperado": "Cláusula de liquidation preference definida en el term sheet (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)",
+  "condiciones_activacion": [
+    "Cuando se negocia el término económico central de una ronda de inversión con acciones preferentes",
+    "Si el fundador necesita entender el impacto real en su retorno económico ante un evento de salida",
+    "Cuando se planea un evento de liquidez o venta de la empresa",
+    "Si existe riesgo de dilución en eventos de salida"
+  ],
+  "fuentes_adicionales": [
+    "The Founder's Dilemmas"
+  ],
+  "node_id": "preferencia_de_liquidacion",
+  "nodos_previos": [
+    "valuacion_pre_post_money",
+    "term_sheet_negociacion",
+    "estructura_fondo_vc",
+    "composicion_board_directors",
+    "elementos_contrato_legal"
+  ],
+  "nodos_siguientes": [
+    "pay_to_play",
+    "antidilucion_provisiones",
+    "decision_de_vender_startup",
+    "cap_table_basico",
+    "participacion_preferente",
+    "preferencias_apiladas_vs_blended",
+    "conversion_rights",
+    "tamano_junta_directiva_vc"
+  ]
+}

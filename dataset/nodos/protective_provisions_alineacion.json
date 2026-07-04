@@ -1,0 +1,25 @@
+{
+  "node_id": "protective_provisions_alineacion",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Alineación de Provisiones Protectoras entre Series",
+  "fuente": "Venture Deals",
+  "resumen_teorico": "Las provisiones protectoras (derechos de veto de los accionistas preferentes) deben combinarse para que todos los inversionistas preferentes, sin importar la serie, voten juntos. Si desde la segunda ronda existen votos separados por clase de acción, la empresa queda atrapada en una estructura donde cada serie tiene derechos de bloqueo independientes, complicando enormemente la gestión futura, especialmente si se esperan más de tres rondas de financiamiento.",
+  "pasos_accionables": [
+    "Negociar desde la primera ronda VC que las provisiones protectoras se voten en conjunto entre todas las series",
+    "Evaluar cuántas rondas de financiamiento se esperan realistamente antes de decidir el nivel de sincronización necesario",
+    "Evitar comprometerse a votos separados por clase que generen bloqueos futuros"
+  ],
+  "entregable_esperado": "Cláusula de provisiones protectoras unificada entre series de acciones preferentes",
+  "nodos_previos": [
+    "seed_deals_riesgos_precedente",
+    "preferencia_de_liquidacion",
+    "protective_provisions"
+  ],
+  "nodos_siguientes": [
+    "board_control_etapas_tardias"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario negocia su primera ronda liderada por VC",
+    "Si el usuario planea levantar más de tres rondas de capital"
+  ]
+}

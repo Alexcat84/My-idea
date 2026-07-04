@@ -1,0 +1,23 @@
+{
+  "node_id": "owner_earnings",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Owner Earnings (Ganancias del Propietario)",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "Métrica creada por Warren Buffett que mide la capacidad de una empresa de generar efectivo disponible para el dueño, considerando los gastos de capital necesarios para mantener el negocio saludable. A diferencia del profit o del flujo de caja operativo simple, esta métrica ajusta por las inversiones continuas necesarias.",
+  "pasos_accionables": [
+    "Calcular el flujo de caja operativo de la empresa",
+    "Restar los gastos de capital necesarios para mantener (no crecer) el negocio",
+    "Usar esta cifra para evaluar cuánto efectivo podría retirar el dueño sin dañar la empresa",
+    "Comparar owner earnings entre períodos para evaluar salud financiera real"
+  ],
+  "entregable_esperado": "Cálculo de owner earnings del último período fiscal",
+  "nodos_previos": [
+    "cash_is_king"
+  ],
+  "nodos_siguientes": [
+    "flujo_de_caja_libre"
+  ],
+  "condiciones_activacion": [
+    "Cuando se evalúa el valor real de un negocio para inversión o venta"
+  ]
+}

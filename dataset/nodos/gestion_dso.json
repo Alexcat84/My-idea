@@ -1,0 +1,25 @@
+{
+  "node_id": "gestion_dso",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Gestión de Días de Venta Pendientes de Cobro (DSO)",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "DSO mide el número promedio de días que tarda una empresa en cobrar sus cuentas por cobrar. Reducir el DSO libera capital de trabajo y mejora la posición de efectivo de la empresa. Factores como calidad del producto, satisfacción del cliente, políticas de crédito y comunicación entre ventas y cobranza afectan directamente este indicador.",
+  "pasos_accionables": [
+    "Calcular el DSO actual y su tendencia histórica",
+    "Investigar con operaciones si hay problemas de calidad o entrega que retrasen pagos",
+    "Consultar con ventas y servicio al cliente sobre la salud financiera de los clientes",
+    "Definir políticas de crédito claras (términos, descuentos por pronto pago como 2/10 net 30)",
+    "Establecer criterios de perfil de cliente ideal para otorgar crédito"
+  ],
+  "entregable_esperado": "Plan de acción para reducir DSO con políticas de crédito y cobranza definidas",
+  "nodos_previos": [
+    "gestion_capital_trabajo",
+    "gestion_cuentas_por_cobrar"
+  ],
+  "nodos_siguientes": [
+    "ciclo_de_conversion_de_efectivo"
+  ],
+  "condiciones_activacion": [
+    "Cuando el DSO de la empresa está aumentando o es más alto que el estándar de la industria"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "clasificacion_tipos_activos",
+  "fase_proyecto": "ejecucion",
+  "titulo_concepto": "Clasificación y Gestión de Tipos de Activos",
+  "fuente": "Financial Intelligence for Entrepreneurs",
+  "resumen_teorico": "Los activos se dividen en corrientes (convertibles en efectivo en menos de un año: caja, cuentas por cobrar, inventario) y de largo plazo (vida útil mayor a un año: propiedad, planta y equipo, intangibles). Cada categoría involucra distintos niveles de estimación contable y de riesgo de manipulación, siendo el efectivo el único rubro no sujeto a discreción contable significativa.",
+  "pasos_accionables": [
+    "Clasificar los activos de la empresa en corrientes y de largo plazo",
+    "Revisar el saldo de cuentas por cobrar y la reserva para cuentas incobrables",
+    "Evaluar los niveles de inventario (materia prima, en proceso, terminado) y su impacto en el flujo de caja",
+    "Identificar el valor de PPE (propiedad, planta y equipo) registrado al costo de adquisición, no al valor de mercado",
+    "Monitorear que el inventario se mantenga en el nivel mínimo necesario para operar"
+  ],
+  "entregable_esperado": "Inventario clasificado de todos los activos de la empresa con su categoría (corriente/largo plazo) y notas sobre supuestos contables aplicados",
+  "nodos_previos": [
+    "entendiendo_balance_general_basico"
+  ],
+  "nodos_siguientes": [
+    "gestion_cuentas_por_cobrar",
+    "gestion_inventario",
+    "depreciacion_y_amortizacion"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario tiene problemas de liquidez y necesita identificar de dónde libera efectivo",
+    "Si el usuario está preparando estados financieros para due diligence"
+  ]
+}

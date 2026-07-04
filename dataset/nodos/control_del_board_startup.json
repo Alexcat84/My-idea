@@ -1,0 +1,27 @@
+{
+  "node_id": "control_del_board_startup",
+  "fase_proyecto": "planificacion",
+  "titulo_concepto": "Control del Board (Junta Directiva)",
+  "fuente": "The Founder's Dilemmas",
+  "resumen_teorico": "El board de una startup es el principal campo de batalla por el control entre fundadores e inversionistas. A medida que se levantan rondas de financiamiento, los inversionistas suelen tomar más asientos, reduciendo la representación de los fundadores (de 34% tras la ronda A a 21% tras la ronda B en promedio). Esta composición determina quién decide sobre estrategia, compensación del CEO, financiamiento futuro y venta de la empresa.",
+  "pasos_accionables": [
+    "Negociar si el asiento del fundador-CEO es un 'founder seat' (permanece aunque sea reemplazado) o un 'CEO seat' (se pierde al ser reemplazado)",
+    "Evaluar la composición del board en cada ronda antes de firmar term sheets",
+    "Considerar dividir la ronda entre varios VCs para evitar que uno solo controle dos asientos",
+    "Negociar quién nomina al director independiente en boards divididos"
+  ],
+  "entregable_esperado": "Estructura de board definida por escrito, con claridad sobre tipos de asientos y quién los ocupa en cada ronda de financiamiento",
+  "nodos_previos": [
+    "eleccion_estructura_vesting_founder",
+    "dilucion_propiedad_por_ronda",
+    "perdida_control_junta_directiva"
+  ],
+  "nodos_siguientes": [
+    "founder_ceo_succession_process",
+    "protective_provisions"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está negociando una ronda de inversión",
+    "Si el usuario quiere mantener control de decisiones estratégicas tras levantar capital"
+  ]
+}

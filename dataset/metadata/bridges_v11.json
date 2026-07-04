@@ -1,0 +1,632 @@
+[
+  {
+    "from": "antidilucion_provisiones",
+    "to": "antidilution_carve_outs",
+    "type": "satelite_fase1_dedup",
+    "note": "carve-outs es un detalle tecnico mas profundo de la misma clausula"
+  },
+  {
+    "from": "antidilucion_provisiones",
+    "to": "antidilution_weighted_average_broad_narrow",
+    "type": "satelite_fase1_dedup",
+    "note": "broad vs narrow CSO es un detalle tecnico mas profundo de la misma clausula"
+  },
+  {
+    "from": "dilema_riqueza_vs_control",
+    "to": "test_rico_vs_rey",
+    "type": "satelite_fase1_dedup",
+    "note": "herramienta de diagnostico para inversionistas basada en el mismo dilema"
+  },
+  {
+    "from": "dilema_riqueza_vs_control",
+    "to": "compatibilidad_motivaciones_riqueza_control",
+    "type": "satelite_fase1_dedup",
+    "note": "aplica el dilema a la compatibilidad entre cofundadores"
+  },
+  {
+    "from": "dilema_riqueza_vs_control",
+    "to": "estrategia_hibrida_control_riqueza",
+    "type": "satelite_fase1_dedup",
+    "note": "estrategia por etapas para combinar ambos objetivos"
+  },
+  {
+    "from": "metodo_valor_presente_neto",
+    "to": "valor_presente",
+    "type": "satelite_fase1_dedup",
+    "note": "valor presente es el concepto prerrequisito del que parte el calculo de NPV"
+  },
+  {
+    "from": "warrants_financiamiento",
+    "to": "warrants_deuda_convertible",
+    "type": "satelite_fase1_dedup",
+    "note": "misma logica de warrants aplicada a deuda convertible, instrumento distinto"
+  },
+  {
+    "from": "warrants_deuda_convertible",
+    "to": "warrant_pricing_venture_debt",
+    "type": "satelite_fase1_dedup",
+    "note": "mecanica de precio de warrants especifica de venture debt"
+  },
+  {
+    "from": "depreciacion_y_amortizacion",
+    "to": "activos_intangibles_amortizacion",
+    "type": "satelite_fase1_dedup",
+    "note": "amortizacion de intangibles es una faceta especifica del mismo principio"
+  },
+  {
+    "from": "no_shop_agreement",
+    "to": "clausula_no_shop_adquisicion",
+    "type": "satelite_fase1_dedup",
+    "note": "mismo mecanismo de exclusividad, contexto de venta/M&A en vez de ronda de inversion"
+  },
+  {
+    "from": "clausula_no_shop_adquisicion",
+    "to": "no_shop_extension_negotiation",
+    "type": "satelite_fase1_dedup",
+    "note": "negociacion de la extension del plazo de no-shop en M&A"
+  },
+  {
+    "from": "homogeneidad_vs_diversidad_equipo",
+    "to": "diversidad_vs_homogeneidad_equipo",
+    "type": "satelite_fase1_dedup",
+    "note": "eje mas matizado: diversidad de capacidades pero similitud de valores"
+  },
+  {
+    "from": "vesting_dinamico",
+    "to": "reasignacion_equity_fundadores",
+    "type": "satelite_fase1_dedup",
+    "note": "escenario especifico de reasignacion de equity forzada por inversionistas"
+  },
+  {
+    "from": "criterios_equity_split",
+    "to": "reparto_inicial_equity",
+    "type": "satelite_fase1_dedup",
+    "note": "reparto_inicial_equity es el nodo de proceso general; criterios es uno de sus insumos"
+  },
+  {
+    "from": "criterios_equity_split",
+    "to": "split_igual_vs_desigual",
+    "type": "satelite_fase1_dedup",
+    "note": "decision especifica igual vs desigual, con su propio umbral de friccion"
+  },
+  {
+    "from": "criterios_equity_split",
+    "to": "teoria_equidad_split_equity",
+    "type": "satelite_fase1_dedup",
+    "note": "marco distinto: logica social vs logica de negocio segun relacion previa"
+  },
+  {
+    "from": "criterios_equity_split",
+    "to": "timing_equity_split",
+    "type": "satelite_fase1_dedup",
+    "note": "pregunta distinta: cuando dividir, no que factores considerar"
+  },
+  {
+    "from": "criterios_equity_split",
+    "to": "formalizacion_acuerdo_equity",
+    "type": "satelite_fase1_dedup",
+    "note": "formalizacion del acuerdo ya decidido, no los criterios del split"
+  },
+  {
+    "from": "reparto_inicial_equity",
+    "to": "timing_equity_split",
+    "type": "satelite_fase1_dedup",
+    "note": "ambos tratan el momento del split"
+  },
+  {
+    "from": "reparto_inicial_equity",
+    "to": "vesting_dinamico",
+    "type": "satelite_fase1_dedup",
+    "note": "reparto_inicial_equity remite directamente al vesting dinamico"
+  },
+  {
+    "from": "founder_ceo_succession_process",
+    "to": "busqueda_ceo_sucesor_externo",
+    "type": "satelite_fase1_dedup",
+    "note": "etapa secuencial: tras decidir la sucesion, se ejecuta la busqueda externa"
+  },
+  {
+    "from": "co_sale_drag_along_agreements",
+    "to": "drag_along_agreement",
+    "type": "satelite_fase1_dedup",
+    "note": "detalle tactico adicional sobre el umbral common vs preferred del drag-along"
+  },
+  {
+    "from": "co_sale_drag_along_agreements",
+    "to": "acuerdo_de_co_venta_y_votacion",
+    "type": "satelite_fase1_dedup",
+    "note": "combina co-venta con el acuerdo de votacion, un tercer concepto relacionado"
+  },
+  {
+    "from": "decision_pivotar_o_proceder",
+    "to": "fuentes_financiamiento_startup",
+    "type": "puente_hub",
+    "note": "tras decidir proceder con el modelo validado, el siguiente paso es identificar fuentes de financiamiento"
+  },
+  {
+    "from": "restriccion_gasto_validacion",
+    "to": "fuentes_financiamiento_startup",
+    "type": "puente_hub",
+    "note": "antes de gastar, entender que fuentes de financiamiento estan disponibles"
+  },
+  {
+    "from": "metricas_de_startup",
+    "to": "fundamentos_inteligencia_financiera",
+    "type": "puente_hub",
+    "note": "ambos tratan alfabetizacion financiera y metricas fundamentales para fundadores"
+  },
+  {
+    "from": "hipotesis_de_tamano_de_mercado",
+    "to": "decision_fundador_solo_vs_equipo",
+    "type": "puente_hub",
+    "note": "tras evaluar si la oportunidad de mercado justifica el esfuerzo, decidir si se necesita equipo"
+  },
+  {
+    "from": "verificar_modelo_ingresos",
+    "to": "metodo_valor_presente_neto",
+    "type": "puente_hub",
+    "note": "verificado que el modelo genera ingresos, aplicar NPV para evaluar decisiones de inversion especificas"
+  },
+  {
+    "from": "contratar_cerrador_de_ventas",
+    "to": "vesting_acciones_fundadores",
+    "type": "puente_hub",
+    "note": "al contratar a un rol clave, su equity debe sujetarse a vesting"
+  },
+  {
+    "from": "identificar_consejo_asesores",
+    "to": "composicion_board_directors",
+    "type": "puente_hub",
+    "note": "el consejo asesor informal suele preceder a la formacion del board formal exigido por inversionistas"
+  },
+  {
+    "from": "estructura_de_costos",
+    "to": "lectura_balance_general",
+    "type": "puente_hub",
+    "note": "del bloque conceptual de costos del canvas a la lectura real de estados financieros"
+  },
+  {
+    "from": "decision_pivotar_o_proceder",
+    "to": "dilema_riqueza_vs_control",
+    "type": "puente_hub",
+    "note": "ambos son momentos de decision estrategica central para el fundador"
+  },
+  {
+    "from": "decision_cuando_fundar",
+    "to": "acumulacion_capital_previo_fundacion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_cuando_fundar",
+    "to": "analisis_motivaciones_fundador",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "fundamentos_inteligencia_financiera",
+    "to": "arte_de_las_finanzas",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "evaluacion_capacidades_fundador",
+    "to": "brecha_capital_humano_founder",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_cuando_fundar",
+    "to": "capital_social_founder",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "fundamentos_inteligencia_financiera",
+    "to": "contabilidad_caja_vs_devengo",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "fundamentos_inteligencia_financiera",
+    "to": "costo_de_capital",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "fundamentos_inteligencia_financiera",
+    "to": "costo_de_oportunidad",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "equity_crowdfunding",
+    "to": "crowdfunding_legal_exemptions_jobs_act",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_cuando_fundar",
+    "to": "decisiones_por_diseno_no_por_default",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "por_que_existen_los_term_sheets",
+    "to": "entender_term_sheet",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "dilema_riqueza_vs_control",
+    "to": "esposas_doradas_carrera",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_cuando_fundar",
+    "to": "esposas_familiares_founder",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_cuando_fundar",
+    "to": "evaluacion_capacidades_fundador",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_fundador_solo_vs_equipo",
+    "to": "evaluar_motivaciones_cofundadores",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "financiamiento_angel_investors",
+    "to": "gestion_angel_investors",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "como_ganan_dinero_los_vc",
+    "to": "jerarquia_firma_vc",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "fundamentos_inteligencia_financiera",
+    "to": "lectura_estado_resultados",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "construccion_de_leverage",
+    "to": "leverage_en_negociacion_con_vcs",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "definicion_startup",
+    "to": "marcos_historicos_comunidades_startup",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "jerarquia_firma_vc",
+    "to": "proceso_diligencia_vc",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "derechos_de_registro",
+    "to": "registration_rights_stock_consideration",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_fundador_solo_vs_equipo",
+    "to": "relacion_previa_y_estructura_roles",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "relacion_previa_y_estructura_roles",
+    "to": "riesgo_cofundadores_relacion_previa",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "cofundar_con_amigos_familia_riesgos",
+    "to": "riesgo_contratar_amigos_familia",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_cuando_fundar",
+    "to": "sesgos_naturales_del_fundador",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "estilos_de_negociacion",
+    "to": "teoria_de_juegos_en_negociacion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "marcos_historicos_comunidades_startup",
+    "to": "tesis_boulder_liderazgo_emprendedor",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "analisis_antiguedad_cuentas_por_cobrar",
+    "to": "gestion_cuentas_por_cobrar",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "analisis_de_ratios_financieros",
+    "to": "cultura_de_transparencia_financiera",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "analisis_varianza_financiera",
+    "to": "decision_consciente_de_crecimiento",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "antidilution_carve_outs",
+    "to": "pay_to_play",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "background_startup_vs_corporativo",
+    "to": "contratacion_experiencia_vs_potencial",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "board_gridlock_y_directores_independientes",
+    "to": "perdida_control_junta_directiva",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "breakup_fee_evaluation",
+    "to": "mejorar_deal_despues_del_hecho",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "calculo_roi",
+    "to": "comparacion_metodos_inversion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "capital_financiero_cushion",
+    "to": "decision_autofinanciamiento_vs_inversion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "compensacion_fundadores_cash_vs_equity",
+    "to": "seesaw_salario_equity",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "concepto_patrimonio_equity",
+    "to": "patrimonio_de_los_propietarios",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "contrarrestar_argumento_mercado",
+    "to": "tecnica_anclaje_negociacion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "conversion_venta_empresa",
+    "to": "asuncion_stock_options_adquisicion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "cumplimiento_sarbanes_oxley",
+    "to": "cultura_de_transparencia_financiera",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "decision_de_salir_a_bolsa",
+    "to": "preparacion_para_salida_a_bolsa",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "due_diligence_adquisiciones",
+    "to": "materiales_due_diligence",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "emprendimiento_serial",
+    "to": "paradoja_exito_emprendedor",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "estrategias_de_alfabetizacion_financiera",
+    "to": "cultura_de_transparencia_financiera",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "estructura_de_la_venta",
+    "to": "forma_de_contraprestacion_en_adquisicion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "evaluacion_salud_financiera_empresa",
+    "to": "analisis_de_ratios_financieros",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "exercise_period_opciones",
+    "to": "valuacion_409a",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "gestion_cuentas_por_cobrar",
+    "to": "gestion_dso",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "gestion_incertidumbre_contratos",
+    "to": "elementos_contrato_legal",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "gestion_relacion_bancaria",
+    "to": "seleccion_prestamista_relacion_vs_transaccion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "goodwill_en_adquisiciones",
+    "to": "due_diligence_adquisiciones",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "indemnification_clause",
+    "to": "reps_warranties_indemnizacion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "information_rights",
+    "to": "protective_provisions",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "inversionistas_acreditados",
+    "to": "cumplimiento_inversionistas_acreditados",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "mejorar_deal_despues_del_hecho",
+    "to": "restructuracion_deuda_soft_landing",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "metodo_conversion_notas_cap_table",
+    "to": "cap_table_basico",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "owner_earnings",
+    "to": "flujo_de_caja_libre",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "perdida_control_junta_directiva",
+    "to": "control_del_board_startup",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "preparacion_materiales_fundraising",
+    "to": "presentacion_inversionistas",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "priorizacion_hipercrecimiento",
+    "to": "eleccion_ritmo_crecimiento",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "protective_provisions",
+    "to": "protective_provisions_alineacion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "prueba_antes_de_comprometerse",
+    "to": "cofundar_con_amigos_familia_riesgos",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "puzzle_prima_capital_privado",
+    "to": "dilema_riqueza_vs_control",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "restructuracion_deuda_soft_landing",
+    "to": "plan_a_b_c_soft_landing",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "riesgo_beneficio_retener_fundador",
+    "to": "transicion_post_sucesion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "shareholder_representative_role",
+    "to": "gestion_sindicato_inversores",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "term_sheet_disposiciones_vinculantes",
+    "to": "cierre_term_sheet",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "term_sheet_negociacion",
+    "to": "cierre_term_sheet",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "tesis_boulder_stack_emprendedor",
+    "to": "tesis_boulder_inclusividad",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "transicion_post_sucesion",
+    "to": "founder_ceo_succession_process",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  },
+  {
+    "from": "venture_debt_terminos_economicos",
+    "to": "venture_debt_introduccion",
+    "type": "enlace_oportunistico",
+    "note": "Paso 3b: nodo sin previos/siguientes"
+  }
+]
