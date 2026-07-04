@@ -1,25 +1,33 @@
 {
-  "node_id": "spiral_development",
   "fase_proyecto": "ejecucion",
   "titulo_concepto": "Desarrollo en Espiral (Spiral Development)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El desarrollo en espiral consiste en ciclos iterativos de 'construir-probar-recibir feedback-revisar' presentando versiones sucesivas del producto al cliente durante todo el desarrollo, en lugar de seguir un proceso lineal y rígido ('heads-down'). Se basa en la premisa de que los clientes no saben realmente lo que quieren hasta que lo ven o experimentan. Es distinto del Agile: los ciclos se miden en meses, no semanas.",
+  "resumen_teorico": "Los clientes no siempre saben lo que quieren hasta que lo ven o lo experimentan. Por eso, en vez de seguir un proceso de desarrollo lineal y rígido, conviene usar un enfoque en espiral: múltiples ciclos iterativos de construir, probar, recibir retroalimentación y revisar, presentando versiones sucesivas y cada vez más completas del producto al cliente durante todo el desarrollo, no solo al inicio y al final. Se empieza con una versión rápida y económica -no un prototipo totalmente terminado- y se repite el ciclo (en promedio de tres a cuatro veces en negocios entre empresas, hasta quince veces en procesos de diseño muy iterativos) hasta llegar a pruebas de campo formales. A diferencia de los ciclos ágiles, que se miden en semanas, en el desarrollo en espiral se miden en meses, aunque comparten la misma lógica de validación temprana y frecuente.",
   "pasos_accionables": [
-    "Diseñar el proceso de desarrollo como una serie de loops iterativos en vez de un camino lineal",
-    "Presentar versiones tempranas y económicas del producto al cliente (no prototipos totalmente desarrollados)",
-    "Recoger feedback rápido y confirmatorio después de cada iteración",
-    "Revisar el producto incorporando el feedback antes de la siguiente iteración",
-    "Repetir el ciclo múltiples veces (3-4.5 versiones en promedio en B2B, hasta 15 en firmas de diseño como IDEO) hasta llegar a pruebas de campo formales",
-    "Mantener el contacto con el cliente durante toda la etapa de Desarrollo, no solo al inicio y al final"
+    "Diseñar el proceso de desarrollo como una serie de ciclos iterativos, en vez de un camino lineal",
+    "Crear una versión rápida y económica del producto -no el prototipo final- para mostrarla al cliente lo antes posible",
+    "Recoger retroalimentación confirmatoria de los primeros usuarios después de cada iteración",
+    "Revisar el producto incorporando esa retroalimentación antes de la siguiente iteración",
+    "Repetir el ciclo varias veces (de tres a cuatro versiones en promedio, hasta quince en procesos de diseño muy iterativos) hasta llegar a pruebas de campo formales",
+    "Mantener el contacto con el cliente durante toda la etapa de desarrollo y pruebas, no solo al inicio y al final",
+    "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto"
   ],
-  "entregable_esperado": "Serie de prototipos iterativos validados con clientes en cada ciclo, culminando en un producto final testeado en campo",
-  "nodos_previos": [
-    "definicion_producto_proyecto"
-  ],
-  "nodos_siguientes": [],
+  "entregable_esperado": "Serie documentada de al menos tres o cuatro versiones iterativas del producto, validadas con clientes reales en cada ciclo, culminando en un producto final probado en campo",
   "condiciones_activacion": [
     "Cuando el mercado es dinámico y las necesidades del cliente son fluidas o inciertas",
     "Si el equipo sigue un proceso lineal rígido y descubre tarde que el producto no cumple expectativas",
-    "Durante toda la etapa de Desarrollo y Testing del producto"
+    "Durante toda la etapa de desarrollo y pruebas del producto",
+    "Cuando se requiere reducir el riesgo de tener que rehacer el trabajo después del desarrollo completo"
+  ],
+  "node_id": "spiral_development",
+  "nodos_previos": [
+    "definicion_producto_proyecto",
+    "voz_del_cliente_voc",
+    "copy_testing",
+    "desarrollo_de_clientes_customer_development"
+  ],
+  "nodos_siguientes": [
+    "plan_de_lanzamiento_al_mercado",
+    "five_data_traps"
   ]
 }

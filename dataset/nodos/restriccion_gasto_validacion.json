@@ -1,25 +1,31 @@
 {
-  "node_id": "restriccion_gasto_validacion",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Restringir el Gasto Durante la Validación de Clientes",
-  "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Un error típico es el 'premature scaling': gastar en marketing y contratar vendedores antes de que el modelo de negocio esté probado. Esto agota el capital y obliga a despidos costosos cuando se detecta que se necesita un pivote. La validación debe mantener el gasto bajo para preservar efectivo para múltiples iteraciones.",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Un error típico es el escalamiento prematuro: contratar vendedores o gastar en marketing antes de tener un modelo de negocio probado. Esto agota la caja y obliga a despidos costosos cuando llega un pivote. La validación de clientes debe restringir el gasto en ventas y marketing hasta que el modelo esté casi validado, preservando efectivo para financiar múltiples iteraciones o pivotes, y midiendo constantemente la tasa de consumo de caja.",
   "pasos_accionables": [
-    "Posponer contrataciones grandes de ventas y marketing hasta validar el modelo",
-    "Limitar el gasto en campañas de demanda hasta confirmar el segmento de clientes",
-    "Priorizar preservar caja para financiar pivotes",
-    "Medir el 'burn rate' constantemente durante esta etapa"
+    "Posponer la contratación masiva de vendedores hasta validar el modelo de negocio",
+    "Limitar el gasto en marketing de demanda hasta confirmar el segmento de clientes",
+    "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)",
+    "Reservar caja suficiente para financiar múltiples pivotes",
+    "Medir constantemente la tasa de consumo de caja durante esta etapa"
   ],
-  "entregable_esperado": "Un presupuesto de validación controlado que preserve suficiente caja para varios pivotes",
+  "entregable_esperado": "Un presupuesto de validación acotado, con límites claros de gasto por experimento y suficiente caja reservada para financiar varios pivotes",
+  "condiciones_activacion": [
+    "Cuando el equipo quiere escalar ventas o marketing antes de validar el modelo de negocio",
+    "Si el proyecto está tentado a escalar el gasto antes de tiempo"
+  ],
+  "node_id": "restriccion_gasto_validacion",
   "nodos_previos": [
-    "customer_discovery",
-    "constrain_spending_validacion"
+    "fundadores_lideran_validacion",
+    "customer_discovery"
   ],
   "nodos_siguientes": [
+    "priorizar_elementos_a_validar",
+    "evitar_pseudociencia_producto",
+    "introduccion_validacion_clientes",
+    "tipo_mercado_curva_ingresos",
     "pivot_o_proceder",
     "customer_creation"
-  ],
-  "condiciones_activacion": [
-    "Si la startup está tentada a escalar gasto de ventas/marketing antes de validar el modelo de negocio"
   ]
 }

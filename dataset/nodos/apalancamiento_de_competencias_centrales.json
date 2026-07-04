@@ -1,26 +1,28 @@
 {
-  "node_id": "apalancamiento_de_competencias_centrales",
-  "fase_proyecto": "validacion",
+  "fase_proyecto": "ideacion",
   "titulo_concepto": "Apalancamiento de Competencias Centrales (Leverage)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Principio de 'atacar desde una posición de fuerza': los proyectos que aprovechan las competencias tecnológicas y de marketing existentes de la empresa tienen tasas de éxito significativamente mayores que los proyectos 'step-out' que se alejan de la experiencia de la firma. Existen dos tipos de apalancamiento: tecnológico (I+D, ingeniería, manufactura existente) y de marketing (fuerza de ventas, canal, marca, relaciones con clientes existentes).",
+  "resumen_teorico": "Principio de atacar desde una posición de fuerza: los proyectos que aprovechan las competencias y recursos ya existentes de la empresa (investigación y desarrollo, manufactura, marketing, ventas, marca, distribución, soporte técnico) tienen tasas de éxito mucho mayores que los proyectos que llevan a la empresa a territorio desconocido (nuevos mercados o tecnologías), los cuales tienden a fracasar. Existen dos tipos principales de apalancamiento: tecnológico (investigación y desarrollo, ingeniería, manufactura) y de mercado (fuerza de ventas, canal, marca, relación con clientes). Cuando un proyecto tiene bajo apalancamiento, colaborar con socios externos, tercerizar partes del trabajo o abrir el proceso de innovación puede mitigar el riesgo de fracaso.",
   "pasos_accionables": [
-    "Mapear las competencias tecnológicas y de marketing actuales de la empresa",
-    "Evaluar cada proyecto nuevo según su grado de sinergia con esas competencias (matriz de familiaridad)",
-    "Clasificar proyectos como 'alto apalancamiento' o 'step-out'",
-    "Para proyectos de bajo apalancamiento, considerar partnerships, outsourcing o innovación abierta",
-    "Priorizar en el portafolio los proyectos con mayor sinergia salvo que existan razones estratégicas compensatorias"
+    "Mapear y evaluar el ajuste del proyecto con las competencias tecnológicas existentes: investigación y desarrollo, ingeniería, manufactura",
+    "Evaluar el ajuste con los recursos de marketing, ventas, distribución, marca e imagen ya existentes",
+    "Clasificar cada proyecto como de alto apalancamiento o de territorio desconocido, usando una matriz de familiaridad (mercados x tecnologías)",
+    "Para proyectos de bajo apalancamiento, considerar alianzas, tercerización o colaboración externa para mitigar el riesgo",
+    "Priorizar en el portafolio los proyectos con mayor sinergia, salvo que existan razones estratégicas que justifiquen lo contrario"
   ],
-  "entregable_esperado": "Matriz de familiaridad (mercados x tecnologías) con la clasificación de cada proyecto y plan de mitigación para proyectos step-out",
+  "entregable_esperado": "Matriz de familiaridad (mercados x tecnologías) que puntúe cada proyecto respecto a las competencias centrales de la empresa, con su clasificación de apalancamiento y plan de mitigación cuando aplique",
+  "condiciones_activacion": [
+    "Al evaluar y priorizar ideas de nuevos productos",
+    "Cuando se considera entrar en mercados o tecnologías nuevas para la empresa",
+    "Cuando se evalúa si un proyecto nuevo encaja con las capacidades actuales de la empresa"
+  ],
+  "node_id": "apalancamiento_de_competencias_centrales",
   "nodos_previos": [
     "scorecard_de_seleccion_de_proyectos",
     "actualizar_modelo_de_negocio_pivot_o_proceed"
   ],
   "nodos_siguientes": [
+    "gestion_de_portafolio_gates_go_kill",
     "evaluacion_de_atractivo_de_mercado"
-  ],
-  "condiciones_activacion": [
-    "Cuando se evalúa si un proyecto nuevo encaja con las capacidades actuales de la empresa",
-    "Cuando la empresa considera entrar en mercados o tecnologías desconocidas"
   ]
 }

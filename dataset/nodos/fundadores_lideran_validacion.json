@@ -1,23 +1,29 @@
 {
-  "node_id": "fundadores_lideran_validacion",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Los Fundadores Deben Liderar la Validación de Clientes",
-  "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es un error delegar la validación de clientes a Ventas, Desarrollo de Negocio o Marketing. Solo los fundadores tienen la autoridad y el coraje para decidir un pivote basado en feedback directo de clientes. Los gerentes medios no suelen ser buenos en la búsqueda creativa y flexible que requiere esta etapa.",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Delegar la validación de clientes a Ventas, Marketing o Desarrollo de Negocio es un error común. Solo los fundadores tienen la autoridad para decidir un pivote y el coraje de escuchar y transmitir feedback negativo directamente de los clientes, sin intermediarios; los mandos medios ejecutan bien procesos ya conocidos, pero no están capacitados para la búsqueda creativa y el ajuste constante que exige esta etapa temprana. Los fundadores deben salir personalmente a hablar con los clientes, apoyándose en un pequeño equipo de datos y análisis (por ejemplo, para pruebas A/B o canales digitales) sin delegarles la decisión final de pivotar.",
   "pasos_accionables": [
-    "Los fundadores deben salir personalmente a hablar con clientes ('get out of the building')",
-    "Escuchar feedback negativo directamente sin intermediarios",
-    "Mantener la autoridad de decisión sobre pivotes en los fundadores",
-    "Formar un equipo de apoyo (data analysts, testers) pero sin delegar la decisión final"
+    "Asegurar que los fundadores participen directamente y en persona en las conversaciones de validación con clientes",
+    "Evitar delegar la validación a equipos de ventas, marketing o desarrollo de negocio tempranamente",
+    "Escuchar y documentar el feedback negativo directamente de los clientes, sin intermediarios",
+    "Formar un pequeño equipo de apoyo (análisis de datos, pruebas A/B, SEO/PPC en canales digitales) que ejecute pero no decida",
+    "Mantener la autoridad de decisión sobre pivotar exclusivamente en los fundadores"
   ],
-  "entregable_esperado": "Un equipo fundador activamente involucrado en las conversaciones de validación con clientes, con autoridad clara sobre decisiones de pivote",
+  "entregable_esperado": "Un equipo de validación liderado activamente por los fundadores, con registro directo del feedback de clientes y autoridad clara sobre decisiones de pivote",
+  "condiciones_activacion": [
+    "Cuando el equipo fundador considera delegar la validación de clientes a un equipo comercial",
+    "Cuando el equipo de ventas o marketing empieza a tomar decisiones de producto sin consultar a los fundadores"
+  ],
+  "node_id": "fundadores_lideran_validacion",
   "nodos_previos": [
-    "customer_discovery"
+    "filosofia_customer_validation",
+    "customer_discovery",
+    "hoja_de_ruta_de_ventas"
   ],
   "nodos_siguientes": [
+    "restriccion_gasto_validacion",
+    "checkpoints_validacion",
     "pivot_o_proceder"
-  ],
-  "condiciones_activacion": [
-    "Si los fundadores intentan delegar la validación a equipos de ventas o marketing tempranamente"
   ]
 }

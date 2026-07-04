@@ -1,30 +1,34 @@
 {
-  "node_id": "reunion_pivotar_o_perseverar",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Reunión de Pivotar o Perseverar",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "La decisión de pivotar es emocionalmente compleja y requiere un enfoque estructurado. Se recomienda programar reuniones regulares (ni muy frecuentes ni muy espaciadas) donde participen tanto el equipo de desarrollo de producto como el de liderazgo de negocio, idealmente con asesores externos que aporten perspectiva objetiva. El equipo de producto debe presentar resultados históricos de experimentos comparados con expectativas, mientras que el equipo de negocio debe aportar información cualitativa de conversaciones con clientes actuales y potenciales.",
+  "resumen_teorico": "La decisión de pivotar es emocionalmente compleja, por lo que conviene institucionalizarla en reuniones regulares y estructuradas -ni muy frecuentes ni muy espaciadas- programadas con anticipación para reducir la carga emocional del momento y asegurar que existan datos relevantes al decidir. Deben participar tanto el equipo de desarrollo de producto como el de liderazgo de negocio, idealmente con asesores externos que aporten una perspectiva objetiva. El equipo de producto debe presentar un reporte completo de los resultados históricos de sus experimentos comparados con las expectativas originales (no solo el último periodo), mientras que el equipo de negocio debe aportar información cualitativa de conversaciones con clientes actuales y potenciales, e investigar líneas alternativas (nuevos segmentos, necesidades no atendidas) antes de decidir.",
   "pasos_accionables": [
-    "Programar reuniones de pivotar o perseverar con cadencia regular (semanas a meses según el ritmo del startup)",
-    "Convocar tanto al equipo de producto como al de negocio, e idealmente asesores externos",
-    "Preparar un reporte completo de resultados de optimización de producto a lo largo del tiempo, no solo el último periodo",
-    "Comparar resultados obtenidos contra las expectativas originales",
+    "Programar reuniones de pivotar o perseverar con una cadencia regular (semanas o meses, según el ritmo del proyecto), ni muy frecuente ni muy espaciada",
+    "Convocar tanto al equipo de producto como al de negocio, e idealmente a asesores externos",
+    "Preparar un reporte completo de los resultados de los experimentos a lo largo del tiempo, no solo del último periodo, comparándolos contra las expectativas originales",
     "Recopilar y presentar conversaciones cualitativas con clientes actuales y potenciales",
-    "Investigar líneas de indagación alternativas (nuevos segmentos, necesidades no atendidas) antes de decidir"
+    "Investigar líneas de indagación alternativas (nuevos segmentos, necesidades no atendidas) antes de decidir",
+    "Tomar la decisión con base en los datos objetivos presentados, no solo en emociones, miedo o métricas de vanidad"
   ],
-  "entregable_esperado": "Un reporte estructurado de métricas históricas vs. expectativas, junto con evidencia cualitativa de clientes, que sustente una decisión informada de pivotar o perseverar",
-  "nodos_previos": [
-    "metricas_accionables",
-    "contabilidad_innovacion",
-    "decision_pivote_perseverar"
-  ],
-  "nodos_siguientes": [
-    "catalogo_pivotes",
-    "pivot_como_hipotesis_estrategica"
-  ],
+  "entregable_esperado": "Un calendario de reuniones de pivotar o perseverar, junto con un reporte estructurado de métricas históricas frente a expectativas, evidencia cualitativa de clientes, y un acta de la decisión tomada",
   "condiciones_activacion": [
     "Si los experimentos de producto muestran rendimientos decrecientes",
     "Si el equipo siente que el desarrollo de producto debería ser más productivo",
-    "Cuando se necesita evaluar objetivamente si continuar con la estrategia actual"
+    "Cuando se necesita evaluar objetivamente si continuar con la estrategia actual",
+    "Cuando el proyecto no tiene un proceso formal para decidir cambios de rumbo",
+    "Si el miedo o la vanidad de las métricas está impidiendo una decisión objetiva"
+  ],
+  "node_id": "reunion_pivotar_o_perseverar",
+  "nodos_previos": [
+    "metricas_accionables",
+    "contabilidad_innovacion",
+    "decision_pivote_perseverar",
+    "runway_como_numero_de_pivotes"
+  ],
+  "nodos_siguientes": [
+    "catalogo_pivotes",
+    "pivot_como_hipotesis_estrategica",
+    "tipos_de_pivote"
   ]
 }

@@ -1,26 +1,29 @@
 {
-  "node_id": "validar_posicionamiento_con_analistas",
   "fase_proyecto": "validacion",
-  "titulo_concepto": "Validar Posicionamiento con Analistas e Influencers",
-  "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de escalar el negocio, es clave reunirse con analistas de industria e influencers para validar el posicionamiento del producto y la empresa, no para venderles. Estas reuniones sirven para obtener retroalimentación experta sobre el mercado, comparar con competidores, y entender cómo se percibe la propuesta de valor desde una perspectiva externa e informada.",
+  "titulo_concepto": "Validar Posicionamiento con Analistas e Influenciadores",
+  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "resumen_teorico": "Los analistas de la industria y las personas con influencia (por ejemplo, en firmas de análisis reconocidas) aportan credibilidad externa valiosa, especialmente en mercados técnicos donde su respaldo puede facilitar las ventas a grandes empresas. Antes de escalar el negocio, conviene reunirse con ellos para validar el posicionamiento del producto y la empresa -no para venderles- y obtener retroalimentación experta sobre el ajuste con el mercado, la comparación con la competencia y los precios, usando esas reuniones además como referencia futura en relaciones con prensa.",
   "pasos_accionables": [
+    "Identificar a los analistas e influenciadores relevantes, rastreados desde el descubrimiento de clientes",
     "Investigar qué compañías e industrias cubre cada analista antes de contactarlo",
     "Desarrollar un guion breve explicando por qué deberían reunirse contigo",
     "Preguntar de antemano cuánto tiempo asignarán y qué formato de presentación prefieren",
-    "Preparar una presentación enfocada en posicionamiento de mercado y producto, no en venta",
+    "Preparar una presentación enfocada en el posicionamiento de mercado y producto, no en la venta",
     "Documentar la visión que cada analista tiene de su mercado antes de la reunión",
-    "Registrar aprendizajes clave: competidores similares, ajuste con necesidades de mercado, precios comparativos"
+    "Recabar y registrar retroalimentación sobre ajuste de mercado, competencia y precios en un reporte de inteligencia de mercado"
   ],
-  "entregable_esperado": "Reporte de inteligencia de mercado con feedback documentado de analistas e influencers clave sobre posicionamiento y producto",
+  "entregable_esperado": "Reporte de inteligencia de mercado con la retroalimentación de analistas e influenciadores clave sobre posicionamiento, producto, competencia y precios, usable como referencia futura",
+  "condiciones_activacion": [
+    "Cuando el posicionamiento de producto y empresa ya están definidos y se busca validación externa antes de escalar",
+    "Cuando la empresa ya tiene clientes reales y necesita validar el posicionamiento antes de escalar"
+  ],
+  "node_id": "validar_posicionamiento_con_analistas",
   "nodos_previos": [
-    "transicion_producto_a_experiencia",
-    "validar_posicionamiento_analistas"
+    "desarrollar_posicionamiento_empresa",
+    "transicion_producto_a_experiencia"
   ],
   "nodos_siguientes": [
+    "pivotar_o_proceder",
     "pivot_o_proceder"
-  ],
-  "condiciones_activacion": [
-    "Cuando la empresa ya tiene clientes reales y necesita validar posicionamiento antes de escalar"
   ]
 }

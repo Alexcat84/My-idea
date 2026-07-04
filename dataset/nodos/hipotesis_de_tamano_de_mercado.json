@@ -1,28 +1,30 @@
 {
-  "node_id": "hipotesis_de_tamano_de_mercado",
   "fase_proyecto": "ideacion",
   "titulo_concepto": "Hipótesis de Tamaño de Mercado (TAM, SAM, Target Market)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Antes de invertir años en una startup, es crucial estimar el tamaño de la oportunidad usando tres métricas: TAM (mercado total direccionable), SAM (mercado disponible que se puede atender con el canal de ventas) y Target Market (compradores más probables). Se recomienda una estimación 'bottom-up' más realista que las estimaciones 'top-down' de firmas de investigación de mercado, que son buenas prediciendo el pasado, no el futuro.",
+  "resumen_teorico": "Antes de invertir años de trabajo en un proyecto, conviene estimar el tamaño real de la oportunidad usando tres niveles: el mercado total direccionable (TAM, el universo completo de clientes potenciales), el mercado disponible según el canal de ventas (SAM, cuántos de esos clientes se pueden alcanzar realmente) y el mercado objetivo (los compradores más probables al inicio). Se recomienda una estimación de abajo hacia arriba, construida desde datos concretos, en vez de solo basarse en reportes de firmas de investigación de mercado, que suelen ser mejores prediciendo el pasado que el futuro. También conviene considerar mercados adyacentes y el costo de cambio de los clientes actuales, y proyectar el crecimiento a 3-5 años.",
   "pasos_accionables": [
-    "Estimar el TAM usando reportes de la industria y benchmarks de competidores",
-    "Reducir al SAM considerando limitaciones de canal, idioma o plataforma",
-    "Definir el Target Market identificando quién comprará realmente",
-    "Realizar una estimación bottom-up basada en datos demográficos o de uso real",
-    "Considerar mercados adyacentes y el costo de cambio (switching cost) de clientes actuales",
-    "Proyectar el crecimiento a 3-5 años"
+    "Estimar el TAM (mercado total direccionable) usando reportes de la industria y comparación con competidores",
+    "Reducir al SAM (mercado disponible) considerando limitaciones de canal, idioma o plataforma",
+    "Definir el mercado objetivo: quiénes son los compradores más probables al inicio",
+    "Realizar una estimación de abajo hacia arriba, basada en datos demográficos o de uso real, en vez de depender solo de reportes de analistas",
+    "Considerar mercados adyacentes y el costo de cambio de los clientes actuales",
+    "Proyectar el crecimiento del mercado a 3-5 años"
   ],
-  "entregable_esperado": "Documento con estimación escrita de TAM, SAM y Target Market, y pruebas pass/fail identificadas",
+  "entregable_esperado": "Documento con la estimación de TAM, SAM y mercado objetivo, con metodología de abajo hacia arriba explicada y pruebas de éxito y fracaso identificadas",
+  "condiciones_activacion": [
+    "Al validar si una oportunidad de negocio es lo suficientemente grande para justificar la inversión",
+    "Antes de comprometer recursos significativos en el desarrollo del producto",
+    "Si el equipo se basa únicamente en reportes de mercado de terceros sin validación propia"
+  ],
+  "node_id": "hipotesis_de_tamano_de_mercado",
   "nodos_previos": [
     "estrategia_de_innovacion_de_producto",
-    "market_size_hypothesis"
+    "customer_discovery_overview"
   ],
   "nodos_siguientes": [
     "hipotesis_propuesta_de_valor_producto",
-    "customer_segments_hypothesis"
-  ],
-  "condiciones_activacion": [
-    "Al validar si una oportunidad de negocio es lo suficientemente grande para justificar la inversión",
-    "Antes de comprometer recursos significativos en el desarrollo del producto"
+    "customer_segments_hypothesis",
+    "business_model_canvas_scorecard"
   ]
 }

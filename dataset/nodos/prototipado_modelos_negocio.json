@@ -1,29 +1,33 @@
 {
-  "node_id": "prototipado_modelos_negocio",
   "fase_proyecto": "ideacion",
   "titulo_concepto": "Prototipado de Modelos de Negocio",
   "fuente": "Business Model Generation (Osterwalder)",
-  "resumen_teorico": "Un prototipo de modelo de negocio no es una versión reducida del modelo final, sino una herramienta de pensamiento para explorar múltiples direcciones estratégicas antes de comprometerse con una sola. Al manipular prototipos (desde bocetos en servilleta hasta canvas elaborados y casos de negocio), se abordan cuestiones de estructura, relaciones y lógica que la mera discusión no revela. Esto requiere adoptar una 'actitud de diseño': disposición a explorar ideas crudas, descartarlas rápidamente, examinar múltiples posibilidades y aceptar la incertidumbre hasta que el diseño madure, en lugar de tomar decisiones apresuradas.",
+  "resumen_teorico": "Un prototipo de modelo de negocio no es una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos (al menos tres) en distintos niveles de detalle permite probar escenarios (eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
   "pasos_accionables": [
-    "Genera un boceto rápido (napkin sketch) con la idea, la Propuesta de Valor y las principales fuentes de ingreso.",
-    "Desarrolla un Canvas elaborado explorando todos los bloques y sus relaciones, haciendo verificación básica de hechos.",
-    "Convierte el Canvas detallado en un caso de negocio (spreadsheet) para estimar costos, ingresos y potencial de ganancia bajo distintos escenarios.",
-    "Realiza una prueba de campo (field-test) con clientes reales para validar Propuesta de Valor, Canales y mecanismos de precio.",
-    "Construye múltiples prototipos diversos (al menos 3) antes de elegir cuál refinar y ejecutar."
+    "Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso",
+    "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, con una verificación básica de los hechos",
+    "Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios",
+    "Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos",
+    "Realizar una prueba de campo con clientes reales para validar la propuesta de valor, los canales y los mecanismos de precio",
+    "Construir al menos tres prototipos distintos antes de elegir cuál refinar y ejecutar, evitando apegarse emocionalmente a uno temprano"
   ],
-  "entregable_esperado": "Conjunto de prototipos de modelo de negocio en distintos niveles de refinamiento (boceto, canvas elaborado, caso de negocio) con anotaciones de pros y contras de cada uno.",
+  "entregable_esperado": "Conjunto de al menos tres prototipos de modelo de negocio en distintos niveles de detalle (boceto, lienzo elaborado, caso de negocio), con anotaciones de pros y contras de cada uno, listos para evaluación comparativa",
+  "condiciones_activacion": [
+    "Cuando existen varias ideas de modelo de negocio preseleccionadas y se necesita explorarlas antes de decidir",
+    "Si el equipo tiende a apegarse prematuramente a una única solución sin explorar alternativas",
+    "Cuando se necesita innovar el modelo de negocio en vez de solo mejorar el actual"
+  ],
+  "node_id": "prototipado_modelos_negocio",
   "nodos_previos": [
+    "pensamiento_visual_modelos_negocio",
+    "proceso_ideacion_modelo_negocio",
     "lienzo_modelo_negocio",
-    "empathy_map",
-    "ideation_process"
+    "empathy_map"
   ],
   "nodos_siguientes": [
+    "revalidacion_modelo_negocio",
+    "value_proposition_canvas",
     "etapa_build_business_case",
     "get_out_building_test_sell"
-  ],
-  "condiciones_activacion": [
-    "Si el usuario ya tiene una idea inicial de negocio pero no ha explorado alternativas",
-    "Si el equipo tiende a aferrarse a la primera idea sin explorar variantes",
-    "Cuando se necesita innovar el modelo de negocio en lugar de solo mejorar el actual"
   ]
 }

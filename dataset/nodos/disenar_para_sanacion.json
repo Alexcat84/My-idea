@@ -1,28 +1,37 @@
 {
-  "node_id": "disenar_para_sanacion",
   "fase_proyecto": "planificacion",
   "titulo_concepto": "Diseñar para la Sanación (Design for Healing)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Principio que propone que, dado que todo lo que diseñamos eventualmente 'rompe algo' (tiene efectos secundarios negativos), los creadores deben incorporar desde el inicio una intención de reparación o sanación, en lugar de solo optimizar funcionalidad. Esto implica aceptar que el bien y el mal en el diseño no son binarios ni fácilmente predecibles, y que se debe diseñar con humildad ante las consecuencias imprevistas, buscando activamente minimizar daños y maximizar posibilidades de reparación.",
+  "resumen_teorico": "Todo lo que se diseña eventualmente 'rompe algo': genera efectos secundarios negativos que no pueden preverse del todo, así que el bien y el mal en el diseño no son binarios ni fácilmente predecibles. Diseñar para la sanación significa incorporar desde el inicio una intención de reparación, en lugar de limitarse a optimizar la funcionalidad: por un lado, hacia adelante, aceptando con humildad las consecuencias imprevistas y construyendo mecanismos de reversibilidad, retroalimentación y mitigación de daños en sistemas críticos (como inteligencia artificial o datos personales); por otro lado, hacia atrás, reparando y restaurando el daño ya acumulado (desigualdad, deterioro ambiental, fragmentación social) en lugar de solo crear cosas nuevas encima de él. El proceso de creación puede ser en sí mismo un acto de sanación comunitaria cuando involucra a las comunidades afectadas como co-creadoras y hace visible la reparación -como en la técnica japonesa del kintsugi, donde las grietas reparadas se valoran como belleza- en vez de ocultarla.",
   "pasos_accionables": [
-    "En la fase de planificación, preguntar explícitamente: '¿qué se rompe con esta solución y cómo lo reparamos?'",
-    "Incluir en el roadmap del producto mecanismos de retroalimentación para detectar daños colaterales",
-    "Diseñar función de 'reversibilidad' o mitigación en sistemas críticos (ej. IA, datos personales)",
-    "Evaluar el proyecto no solo por su éxito comercial sino por su huella sistémica"
+    "En la planificación, preguntar explícitamente: '¿qué se rompe con esta solución y cómo lo reparamos?'",
+    "Mapear qué ha 'roto' la industria, comunidad o sistema en el que se va a intervenir, antes de proponer algo nuevo",
+    "Incluir en la hoja de ruta del producto mecanismos de retroalimentación para detectar daños colaterales",
+    "Diseñar funciones de reversibilidad o mitigación en los sistemas críticos (por ejemplo, inteligencia artificial o datos personales)",
+    "Involucrar a las comunidades afectadas en el proceso de creación, no solo como usuarios finales sino como co-creadoras de la reparación",
+    "Priorizar la reutilización de estructuras existentes (físicas, sociales, tecnológicas) sobre la demolición y reconstrucción total",
+    "Diseñar procesos o rituales que hagan visible la reparación en vez de ocultarla",
+    "Evaluar el proyecto no solo por su éxito comercial, sino por su huella en el sistema donde se inserta"
   ],
-  "entregable_esperado": "Una sección del plan de negocio o design brief dedicada explícitamente a riesgos éticos/sistémicos y estrategias de mitigación/reparación",
+  "entregable_esperado": "Una sección del plan de negocio o brief de diseño dedicada a los riesgos éticos y sistémicos del proyecto, con una narrativa del daño previo a reparar, mecanismos de mitigación y reversibilidad, y un plan de co-creación con la comunidad afectada",
+  "condiciones_activacion": [
+    "Cuando el producto tiene potencial de escala masiva o afecta a poblaciones vulnerables",
+    "Si el equipo quiere incorporar principios de sostenibilidad o ética desde el diseño",
+    "En etapas de planificación estratégica antes del lanzamiento a mercado",
+    "Si el proyecto opera en un contexto con historia de daño social, ambiental o comunitario",
+    "Si se busca innovación social o sostenibilidad, y no solo innovación comercial"
+  ],
+  "node_id": "disenar_para_sanacion",
   "nodos_previos": [
     "diseno_fugitivo_runaway_design",
-    "pensamiento_de_conexiones_ripple_effect"
+    "pensamiento_de_conexiones_ripple_effect",
+    "diseno_imperfeccion_intencional"
   ],
   "nodos_siguientes": [
     "build_measure_learn",
     "value_proposition_startup",
-    "diseno_reparabilidad_cultura_arreglo"
-  ],
-  "condiciones_activacion": [
-    "Cuando el producto tiene potencial de escala masiva o afecta a poblaciones vulnerables",
-    "Si el equipo fundador quiere incorporar principios de sostenibilidad o ética desde el diseño",
-    "En etapas de planificación estratégica antes del lanzamiento a mercado"
+    "diseno_reparabilidad_cultura_arreglo",
+    "buscar_armonia_diseno",
+    "ficcion_especulativa_como_metodo"
   ]
 }

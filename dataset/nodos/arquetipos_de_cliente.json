@@ -1,23 +1,34 @@
 {
-  "node_id": "arquetipos_de_cliente",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Arquetipos de Cliente (Customer Archetypes)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Un arquetipo de cliente es una representación visual (boceto o descripción detallada) del usuario final y del decisor clave. Ayuda al equipo a cristalizar la estrategia de producto y adquisición de clientes al visualizar demográficamente y psicográficamente quién comprará o usará el producto. Es más sencillo de crear en contextos de consumo que en B2B, donde las relaciones son más complejas.",
+  "resumen_teorico": "Documento breve que humaniza al cliente objetivo, describiendo su perfil, problemas, contexto y motivaciones a partir de las conversaciones iniciales con clientes reales. Debe tratarse como una hipótesis provisional -no un hecho- sujeta a revisión conforme se obtiene aprendizaje validado. En productos donde el usuario final y quien decide la compra son personas distintas (frecuente en ventas a empresas), conviene crear un arquetipo separado para cada uno: cómo es su entorno de trabajo, su perfil demográfico y psicográfico (estilo de vida, afluencia, contexto familiar), y qué lo motivaría a comprar. Estos arquetipos sirven como guía para alinear las decisiones diarias de desarrollo de producto y para vincular el segmento de cliente con el resto del modelo de negocio (canal, relación con el cliente, modelo de ingresos).",
   "pasos_accionables": [
-    "Dibujar o describir al usuario final: ¿trabaja en oficina, cubículo, planta de fábrica?",
-    "Dibujar o describir al decisor: ¿está en una oficina ejecutiva, laboratorio, etc.?",
-    "Definir hipótesis demográficas y psicográficas del comprador (afluencia, estilo de vida, familia)",
-    "Vincular estas características con el modelo de negocio (canal, relación con el cliente, modelo de ingresos)"
+    "Realizar conversaciones exploratorias con clientes potenciales sobre sus problemas, necesidades y frustraciones",
+    "Identificar patrones comunes en esas conversaciones",
+    "Describir o bocetar al usuario final: su entorno (oficina, planta, cubículo) y su rutina",
+    "Si aplica, describir o bocetar por separado a quien decide la compra, que puede ser distinto del usuario final",
+    "Definir hipótesis demográficas y psicográficas del comprador (estilo de vida, afluencia, contexto familiar)",
+    "Redactar un documento breve que reúna el perfil, problemas y contexto de cada arquetipo",
+    "Vincular estas características con el resto del modelo de negocio (canal, relación con el cliente, modelo de ingresos)",
+    "Tratar cada arquetipo como una hipótesis provisional, sujeta a revisión con aprendizaje validado"
   ],
-  "entregable_esperado": "Fichas o bocetos visuales de al menos 2 arquetipos de cliente (usuario final y decisor)",
+  "entregable_esperado": "Documento o fichas visuales con al menos un arquetipo de cliente (usuario final y, si aplica, decisor), describiendo perfil, problemas, contexto y motivaciones, vinculado al resto del modelo de negocio",
+  "condiciones_activacion": [
+    "Cuando se ha completado la exploración inicial de clientes pero aún no hay claridad sobre el perfil objetivo",
+    "Si el equipo de producto necesita alinear prioridades de desarrollo",
+    "Cuando el equipo necesita visualizar concretamente a sus clientes objetivo para alinear la estrategia de producto"
+  ],
+  "fuentes_adicionales": [
+    "The Lean Startup - Eric Ries"
+  ],
+  "node_id": "arquetipos_de_cliente",
   "nodos_previos": [
+    "genchi_gembutsu_salir_del_edificio",
     "tipos_de_clientes"
   ],
   "nodos_siguientes": [
+    "producto_minimo_viable",
     "dia_en_la_vida_del_cliente"
-  ],
-  "condiciones_activacion": [
-    "Cuando el equipo necesita visualizar concretamente a sus clientes objetivo para alinear estrategia de producto"
   ]
 }

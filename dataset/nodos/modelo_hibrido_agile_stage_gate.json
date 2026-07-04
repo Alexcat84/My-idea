@@ -1,27 +1,41 @@
 {
-  "node_id": "modelo_hibrido_agile_stage_gate",
   "fase_proyecto": "ejecucion",
   "titulo_concepto": "Modelo Híbrido Agile-Stage-Gate",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Integración del método Agile-Scrum (sprints, scrums diarios, tableros visuales, backlog priorizado) dentro del sistema tradicional de Stage-Gate para el desarrollo de productos físicos. No son sistemas excluyentes: Stage-Gate mantiene la estructura de gates y decisiones Go/Kill a nivel gerencial, mientras que Agile aporta flexibilidad operativa a nivel de equipo, mejorando la comunicación, reduciendo malentendidos y acelerando el flujo de trabajo diario.",
+  "resumen_teorico": "Combinación de la estructura macro de etapas y compuertas de decisión (Go/Kill) con la ejecución ágil de sprints dentro de cada etapa. La estructura de etapas aporta visión general, coordinación entre áreas (marketing, producción) y control de la dirección; los sprints cortos (de 1 a 4 semanas, siendo 2 semanas lo más común) aportan velocidad, retroalimentación continua del cliente y mejor comunicación interna del equipo, generando en cada sprint algo tangible (prototipo, diseño, informe de investigación con clientes) para mostrar a los interesados.",
   "pasos_accionables": [
-    "Mantener el sistema Stage-Gate existente para las decisiones Go/Kill de alto nivel",
-    "Implementar sprints cortos (ej. de dos semanas) dentro de cada etapa de desarrollo",
-    "Establecer reuniones diarias de pie (scrums) de 15 minutos para sincronizar al equipo",
-    "Usar tableros visuales de scrum para dar seguimiento a tareas y backlog",
-    "Realizar sprint reviews periódicas con representantes de clientes o usuarios internos"
+    "Mantener las etapas y compuertas de decisión estratégica Go/Kill del proceso existente",
+    "Insertar sprints cortos (de 1 a 4 semanas, típicamente 2) dentro de las etapas técnicas de desarrollo y pruebas",
+    "Establecer reuniones diarias breves (15-20 min) lideradas por un facilitador de equipo (scrum master) para sincronizar el trabajo",
+    "Definir un entregable tangible y demostrable al final de cada sprint (prototipo, diseño, informe de investigación con clientes, modelo funcional)",
+    "Usar tableros visuales y un backlog priorizado para dar seguimiento a las tareas",
+    "Realizar revisiones de sprint periódicas con los interesados o representantes de clientes",
+    "Dedicar al equipo de forma exclusiva al proyecto durante los sprints",
+    "Expandir gradualmente el uso de sprints a etapas tempranas (ideación, caso de negocio) conforme el equipo gane confianza",
+    "Mantener reuniones periódicas con la dirección para no perder de vista el objetivo final del proyecto"
   ],
-  "entregable_esperado": "Un proceso de desarrollo documentado que combine gates de decisión estratégica con sprints operativos ágiles, incluyendo tablero de backlog y calendario de sprints.",
+  "entregable_esperado": "Proceso de desarrollo documentado que combine etapas y compuertas de decisión estratégica con sprints operativos, incluyendo tablero de backlog, calendario de sprints y definición de 'sprint terminado' para el producto en cuestión",
+  "condiciones_activacion": [
+    "Si el proyecto tiene alta incertidumbre técnica o de mercado (información del cliente poco clara)",
+    "Si el equipo necesita mayor velocidad y flexibilidad sin perder el control de gestión de la dirección",
+    "Si existen vacíos de conocimiento que impiden avanzar con especificaciones fijas",
+    "Cuando el proyecto combina desarrollo de hardware y software",
+    "Si existe conflicto entre equipos que prefieren un método ágil frente a equipos que prefieren la estructura tradicional",
+    "Para proyectos grandes y de alto impacto en ingresos"
+  ],
+  "node_id": "modelo_hibrido_agile_stage_gate",
   "nodos_previos": [
+    "mitos_stage_gate",
+    "innovation_project_canvas",
+    "flexible_go_kill_criteria",
     "seleccion_proyectos_agile"
   ],
   "nodos_siguientes": [
+    "power_of_nine_agile",
+    "product_backlog_agile",
+    "sprint_board_burn_down",
+    "overlapping_stages_concurrent_execution",
     "definicion_sprint_terminado",
     "rol_gates_agile"
-  ],
-  "condiciones_activacion": [
-    "Si el proyecto enfrenta alta incertidumbre de mercado o requisitos cambiantes",
-    "Si el equipo ya tiene un sistema Stage-Gate funcional pero necesita mayor velocidad de respuesta",
-    "Si se desarrolla un producto físico complejo (hardware y software combinados)"
   ]
 }

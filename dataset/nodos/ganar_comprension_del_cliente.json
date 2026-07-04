@@ -1,27 +1,29 @@
 {
-  "node_id": "ganar_comprension_del_cliente",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Ganar Comprensión Profunda del Cliente",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Antes de vender nada, el equipo debe 'convertirse en el cliente': entender cómo gastan su tiempo y dinero, su flujo de trabajo actual, su dolor o necesidad, la solución que usan hoy y cómo cambiaría su flujo con el nuevo producto. Esto se logra saliendo del edificio, asistiendo a eventos de clientes, leyendo sus publicaciones y hasta viviendo un día como ellos.",
+  "resumen_teorico": "Ir más allá de validar que el problema existe, para entender en profundidad cómo el cliente vive su día a día: su flujo de trabajo, cómo gasta su tiempo y dinero, con quién interactúa, qué solución usa hoy y qué cambiaría su comportamiento actual. Esto se logra saliendo a observar directamente al cliente: asistiendo a sus eventos, leyendo sus publicaciones, siguiendo a las personas que lo influencian, y hasta pasando un día haciendo lo que el cliente hace. El objetivo es conocerlo tan bien que el equipo sea percibido como 'uno de ellos', generando información que va más allá de datos superficiales.",
   "pasos_accionables": [
-    "Investigar y entrevistar clientes sobre cómo gastan su tiempo y dinero",
-    "Mapear su flujo de trabajo actual y su solución/costo actual",
-    "Pasar un día haciendo lo que hacen los clientes y asistir a sus eventos",
-    "Leer sus publicaciones y seguir a sus influenciadores",
-    "Registrar hallazgos en un 'report card' y analizarlos sistemáticamente"
+    "Investigar el flujo de trabajo actual del cliente y sus interacciones con otras personas o departamentos",
+    "Preguntar qué otras soluciones usa hoy y si el problema es compartido por más personas en su organización o entorno",
+    "Explorar qué haría cambiar su comportamiento de compra (precio, características, un nuevo estándar)",
+    "Pasar un día haciendo lo que el cliente hace (por ejemplo, detrás de un mostrador o en una feria) y asistir a sus eventos",
+    "Identificar publicaciones e influenciadores que el cliente sigue",
+    "Documentar todos los hallazgos de forma estructurada, con criterios claros de qué cuenta como validado"
   ],
-  "entregable_esperado": "Documento de comprensión profunda del cliente: qué leen, a quién escuchan, cómo trabajan y gastan su tiempo/dinero, con criterios pass/fail definidos",
+  "entregable_esperado": "Documento de comprensión profunda del cliente con su flujo de trabajo, influenciadores, hábitos de consumo de información, comportamiento de compra y criterios de validación",
+  "condiciones_activacion": [
+    "Cuando ya se validó que el problema es real e importante, y se necesita profundizar en el contexto del cliente antes de diseñar la solución completa",
+    "Antes de presentar cualquier solución o producto al mercado"
+  ],
+  "node_id": "ganar_comprension_del_cliente",
   "nodos_previos": [
+    "scorecard_descubrimiento_cliente",
     "customer_discovery"
   ],
   "nodos_siguientes": [
+    "captura_conocimiento_mercado",
     "capturar_conocimiento_de_mercado",
-    "actualizar_modelo_de_negocio_pivot_o_proceed",
-    "comprension_profunda_cliente"
-  ],
-  "condiciones_activacion": [
-    "Cuando se ha validado que el problema existe pero falta profundidad sobre el cliente real",
-    "Antes de presentar cualquier solución o producto al mercado"
+    "actualizar_modelo_de_negocio_pivot_o_proceed"
   ]
 }

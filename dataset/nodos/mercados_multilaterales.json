@@ -1,23 +1,29 @@
 {
-  "node_id": "mercados_multilaterales",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Mercados Multilaterales (Multi-Sided Markets)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Mercados donde existen múltiples actores con roles distintos (usuario, comprador, pagador, prescriptor) que deben ser validados por separado. Un ejemplo clásico es un dispositivo médico donde el médico recomienda, el hospital compra, el cirujano implanta y la aseguradora paga. Ignorar alguno de estos lados puede ser un error fatal en la estrategia de canal.",
+  "resumen_teorico": "En algunos negocios existen múltiples actores con roles distintos en torno a una misma transacción: quien usa el producto, quien decide comprarlo, quien paga por él y quien lo prescribe o recomienda, y cada uno debe validarse por separado. Un ejemplo clásico es un dispositivo médico, donde el médico lo recomienda, el hospital lo compra, el cirujano lo implanta y la aseguradora lo paga; otro ejemplo son los negocios digitales como las redes sociales, donde los usuarios son 'gratis' pero los anunciantes pagan por alcanzarlos. Ignorar alguno de estos lados del mercado puede ser un error fatal en la estrategia de canal o de ingresos.",
   "pasos_accionables": [
-    "Identifica todos los actores involucrados en la decisión y transacción de compra",
-    "Determina quién usa, quién decide, quién compra y quién paga por el producto",
-    "Valida la hipótesis de canal para cada lado del mercado por separado",
-    "Diseña estrategias de venta diferenciadas para cada tipo de actor"
+    "Identificar si el negocio tiene más de un lado de mercado (por ejemplo, usuarios frente a quienes pagan)",
+    "Determinar quién usa, quién decide, quién compra, quién prescribe y quién paga por el producto",
+    "Definir la propuesta de valor, la relación con el cliente y el modelo de ingresos para cada lado del mercado por separado",
+    "Validar la hipótesis de canal para cada lado del mercado de forma independiente",
+    "Calcular cuánto estaría dispuesto a pagar el lado que paga (por ejemplo, los anunciantes) por alcanzar al lado gratuito",
+    "Diseñar estrategias de venta diferenciadas para cada tipo de actor, enfocando primero los recursos en la fuente de ingresos principal antes de expandir a fuentes secundarias"
   ],
-  "entregable_esperado": "Un diagrama de canal multilateral con todos los actores y sus roles identificados",
+  "entregable_esperado": "Un diagrama de canal multilateral con todos los actores y roles identificados, y un modelo de negocio diferenciado para cada lado del mercado con su propuesta de valor y flujo de ingresos correspondiente",
+  "condiciones_activacion": [
+    "Si el producto involucra múltiples decisores (por ejemplo, dispositivos médicos o plataformas que conectan a dos tipos de usuarios)",
+    "Cuando el modelo de negocio involucra usuarios gratuitos y una fuente de ingresos distinta (como publicidad)"
+  ],
+  "node_id": "mercados_multilaterales",
   "nodos_previos": [
-    "mapa_de_canal_de_ventas"
+    "mapa_de_canal_de_ventas",
+    "revenue_pricing_hypothesis",
+    "actividades_clave"
   ],
   "nodos_siguientes": [
-    "hoja_de_ruta_de_ventas"
-  ],
-  "condiciones_activacion": [
-    "Si el producto involucra múltiples decisores (ej: dispositivos médicos, plataformas B2B2C)"
+    "hoja_de_ruta_de_ventas",
+    "customer_discovery_phase2_problem_test"
   ]
 }

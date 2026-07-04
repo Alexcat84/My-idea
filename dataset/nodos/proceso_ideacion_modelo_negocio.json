@@ -1,27 +1,31 @@
 {
-  "node_id": "proceso_ideacion_modelo_negocio",
   "fase_proyecto": "ideacion",
   "titulo_concepto": "Proceso de Ideación de Modelos de Negocio",
   "fuente": "Business Model Generation (Osterwalder)",
-  "resumen_teorico": "Metodología estructurada de 5 fases para generar innovaciones en el modelo de negocio: composición del equipo, inmersión, expansión de ideas, selección de criterios y prototipado. El objetivo es explorar sistemáticamente nuevas combinaciones de los nueve bloques del Business Model Canvas para descubrir modelos disruptivos, similares a los casos de Skype, car2go, Zopa o Grameenphone.",
+  "resumen_teorico": "Proceso estructurado en cinco fases para generar y filtrar ideas de modelo de negocio, explorando sistemáticamente nuevas combinaciones de los nueve bloques del lienzo de modelo de negocio para descubrir modelos disruptivos: composición de un equipo diverso en antigüedad, experiencia y conocimiento del cliente; inmersión, investigando clientes, tecnologías y modelos existentes; expansión, generando la mayor cantidad de ideas posible por cada bloque del lienzo sin criticar todavía, priorizando cantidad sobre calidad; definición de criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.); y prototipado, reduciendo a entre tres y cinco ideas y esbozándolas en el lienzo. El proceso distingue claramente la fase de generación (cantidad) de la fase de síntesis (calidad).",
   "pasos_accionables": [
-    "Formar un equipo diverso en edad, experiencia y área funcional",
-    "Realizar una fase de inmersión: investigar clientes, tecnologías y modelos existentes",
-    "Expandir ideas usando cada bloque del Canvas como punto de partida, priorizando cantidad sobre calidad",
-    "Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente)",
-    "Reducir a 3-5 ideas y prototiparlas usando el Business Model Canvas"
+    "Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente",
+    "Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes",
+    "Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad",
+    "Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)",
+    "Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio"
   ],
-  "entregable_esperado": "Shortlist de 3 a 5 prototipos de modelo de negocio esbozados en el Business Model Canvas",
+  "entregable_esperado": "Lista corta de 3 a 5 prototipos de modelo de negocio esbozados en el lienzo de modelo de negocio, resultado de un proceso de ideación estructurado",
+  "condiciones_activacion": [
+    "Cuando se necesita generar múltiples opciones de modelo de negocio antes de comprometerse con una",
+    "Si el equipo está atascado en pensamiento incremental sobre su modelo actual"
+  ],
+  "node_id": "proceso_ideacion_modelo_negocio",
   "nodos_previos": [
+    "customer_insights_design",
+    "epicentros_innovacion_modelo_negocio",
+    "what_if_questions",
     "lienzo_modelo_negocio",
     "empathy_map"
   ],
   "nodos_siguientes": [
-    "prototipado_modelo_negocio",
+    "lienzo_modelo_negocio",
+    "prototipado_modelos_negocio",
     "scorecard_de_seleccion_de_proyectos"
-  ],
-  "condiciones_activacion": [
-    "Cuando el usuario necesita generar múltiples opciones de modelo de negocio antes de comprometerse con una",
-    "Si el equipo está atascado en pensamiento incremental sobre su modelo actual"
   ]
 }

@@ -1,26 +1,28 @@
 {
-  "node_id": "priorizar_elementos_a_validar",
   "fase_proyecto": "validacion",
-  "titulo_concepto": "Priorizar qué elementos del modelo de negocio validar",
+  "titulo_concepto": "Priorizar Qué Elementos del Modelo de Negocio Validar",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "No es posible validar todas las variables del modelo de negocio. Usando el Business Model Canvas como guía, la mayoría de startups deben enfocarse en cuatro elementos core: propuesta de valor, relación con clientes, canal y modelo de ingresos. En mercados multi-sided, hay que priorizar todos los lados del mercado. La clave es identificar las cinco variables (o menos) que determinarán el éxito o fracaso del negocio.",
+  "resumen_teorico": "No es posible validar todas las variables del modelo de negocio a la vez. Usando el lienzo de modelo de negocio como guía, la mayoría de los proyectos deben enfocarse en cuatro elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos. En mercados con múltiples lados (donde hay distintos tipos de actores, como usuarios y quienes pagan), hay que priorizar la validación de cada lado por separado. La clave es identificar las cinco variables -o menos- que realmente determinarán el éxito o el fracaso del negocio, en vez de intentar probarlo todo al mismo tiempo.",
   "pasos_accionables": [
-    "Revisar el Business Model Canvas completo",
-    "Seleccionar los 4-5 elementos críticos a validar (ej. propuesta de valor, canal, relación con clientes, modelo de ingresos)",
-    "Si es un mercado multi-sided, definir prioridades de validación para cada lado del mercado",
-    "Evitar intentar validar todas las variables del modelo simultáneamente"
+    "Revisar el lienzo de modelo de negocio completo",
+    "Identificar las cinco variables críticas -o menos- que determinarán el éxito del negocio",
+    "Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos",
+    "Si es un mercado con múltiples lados, priorizar la validación de cada lado del mercado por separado",
+    "Evitar intentar validar todas las variables del modelo de negocio de forma simultánea"
   ],
-  "entregable_esperado": "Lista priorizada de 5 o menos hipótesis críticas de negocio a validar primero",
+  "entregable_esperado": "Lista priorizada de cinco hipótesis críticas de negocio, o menos, a validar primero",
+  "condiciones_activacion": [
+    "Cuando el equipo se siente abrumado por la cantidad de variables del modelo de negocio a probar",
+    "Al iniciar la fase de validación de clientes con múltiples hipótesis pendientes"
+  ],
+  "node_id": "priorizar_elementos_a_validar",
   "nodos_previos": [
-    "constrain_spending_validacion",
+    "restriccion_gasto_validacion",
     "lienzo_modelo_negocio"
   ],
   "nodos_siguientes": [
     "craft_positioning_statement",
     "checklist_mejores_apuestas_modelo_negocio",
-    "priorizar_elementos_validar"
-  ],
-  "condiciones_activacion": [
-    "Cuando el equipo se siente abrumado por la cantidad de variables del modelo de negocio a probar"
+    "fundadores_lideran_validacion"
   ]
 }

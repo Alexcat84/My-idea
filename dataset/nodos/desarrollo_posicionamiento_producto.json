@@ -1,25 +1,29 @@
 {
-  "node_id": "desarrollo_posicionamiento_producto",
   "fase_proyecto": "planificacion",
   "titulo_concepto": "Desarrollo del Posicionamiento de Producto",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "El posicionamiento de producto es el intento de controlar la percepción pública de un producto respecto a la competencia. Tras la validación de clientes, se formaliza en un 'product positioning brief' de una página que guía todo el material de ventas y marketing posterior.",
+  "resumen_teorico": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente durante el descubrimiento de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
   "pasos_accionables": [
-    "Revisar la declaración de posicionamiento inicial creada en customer discovery",
-    "Contrastar con las reacciones reales de los clientes durante la validación",
-    "Re-contactar clientes si la razón de compra no quedó clara",
-    "Redactar el 'product positioning brief' final de una página",
-    "Usar el brief como referencia para toda futura comunicación de marketing"
+    "Revisar la declaración de posicionamiento inicial creada durante el descubrimiento de clientes",
+    "Contrastarla con las reacciones reales de los clientes durante la validación: ¿resonó?, ¿fue creíble y efectiva?",
+    "Volver a contactar clientes si la razón de compra no quedó clara",
+    "Incorporar la retroalimentación de clientes y de socios de canal",
+    "Redactar el resumen de posicionamiento final, de una sola página",
+    "Usar el resumen como referencia para mantener consistencia en todo el material de marketing y ventas futuro"
   ],
-  "entregable_esperado": "Product Positioning Brief (una página) validado con clientes reales",
+  "entregable_esperado": "Resumen de posicionamiento de producto (una página), validado con clientes reales y listo como referencia para todo el material de marketing posterior",
+  "condiciones_activacion": [
+    "Cuando ya se tienen suficientes entrevistas de clientes reales para basar el mensaje en hechos, no en suposiciones",
+    "Cuando se ha completado la validación de clientes y se prepara la fase de creación de clientes"
+  ],
+  "node_id": "desarrollo_posicionamiento_producto",
   "nodos_previos": [
     "auditoria_de_posicionamiento"
   ],
   "nodos_siguientes": [
     "posicionamiento_por_tipo_de_mercado",
+    "gate_0_evaluacion_wishlist",
+    "nueve_pecados_capitales_lanzamiento",
     "posicionamiento_de_empresa"
-  ],
-  "condiciones_activacion": [
-    "Cuando se ha completado la validación de clientes y se prepara la fase de creación de clientes"
   ]
 }

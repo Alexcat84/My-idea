@@ -1,27 +1,30 @@
 {
-  "node_id": "evaluacion_competencias_centrales",
   "fase_proyecto": "ideacion",
   "titulo_concepto": "Evaluación de Competencias Centrales (Core Competencies)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Análisis interno de fortalezas, debilidades y competencias centrales de la empresa. Las competencias centrales son habilidades y conocimientos que diferencian a la empresa de la competencia, dando una ventaja competitiva significativa. Este análisis ayuda a decidir en qué arenas enfocarse para innovar y frecuentemente identifica ideas de nuevos productos que aprovechan las fortalezas existentes.",
+  "resumen_teorico": "Una competencia central no es simplemente una fortaleza: es algo que la empresa hace mejor que sus competidores, que contribuye de forma significativa al beneficio percibido por el cliente, que puede aplicarse a múltiples productos y mercados, y que es difícil de imitar. Evaluar las competencias centrales de la empresa, a través de un análisis interno de fortalezas y debilidades, ayuda a identificar en qué mercados, sectores o productos adyacentes puede entrar la empresa atacando desde una posición de fortaleza, y sirve como base para decidir en qué arenas estratégicas enfocar los recursos de innovación.",
   "pasos_accionables": [
-    "Realizar un análisis FODA interno de la empresa",
-    "Identificar las habilidades y conocimientos que diferencian a la empresa de competidores",
-    "Determinar dónde se tiene apalancamiento estratégico",
-    "Cruzar estas competencias con las arenas de mercado identificadas para encontrar oportunidades de productos"
+    "Realizar un análisis interno de fortalezas y debilidades de la empresa (tecnológicas, de marketing, de operaciones y producción)",
+    "Filtrar cuáles de esas fortalezas cumplen las tres características de una competencia central: beneficio percibido por el cliente, aplicabilidad amplia y dificultad de imitación",
+    "Identificar mercados, sectores o productos adyacentes donde esas competencias puedan aplicarse",
+    "Cruzar estas competencias con las arenas de mercado u oportunidades identificadas para encontrar ideas de nuevos productos",
+    "Usar estas competencias como base para elegir en qué arenas estratégicas enfocar recursos"
   ],
-  "entregable_esperado": "Listado de competencias centrales de la empresa y su cruce con oportunidades de mercado identificadas",
+  "entregable_esperado": "Listado documentado de las competencias centrales de la empresa, con las adyacencias de mercado u oportunidades de producto identificadas a partir de ellas",
+  "condiciones_activacion": [
+    "Antes de decidir en qué nuevas arenas o mercados entrar",
+    "Cuando se busca atacar desde una posición de fortaleza en vez de diversificar sin criterio",
+    "Cuando se necesita decidir en qué áreas de innovación enfocar recursos"
+  ],
+  "node_id": "evaluacion_competencias_centrales",
   "nodos_previos": [
     "evaluacion_industria_cliente"
   ],
   "nodos_siguientes": [
+    "seleccion_arenas_estrategicas",
+    "strat_map",
     "iota_analysis",
-    "core_competency_assessment",
     "evaluacion_megatendencias",
     "evaluacion_tecnologias_disruptivas"
-  ],
-  "condiciones_activacion": [
-    "Cuando se necesita decidir en qué áreas de innovación enfocar recursos",
-    "Cuando se busca alinear nuevas ideas con fortalezas internas"
   ]
 }

@@ -1,24 +1,29 @@
 {
-  "node_id": "dia_en_la_vida_del_cliente",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Un Día en la Vida del Cliente",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Una de las formas más poderosas de entender a los clientes es descubrir cómo 'trabajan' y documentarlo detalladamente, delineando un día típico en su vida antes y después del producto. Requiere investigación de campo directa (salir del edificio) en el lugar donde el cliente trabaja o se divierte, no en una sala de conferencias.",
+  "resumen_teorico": "Ejercicio de investigación de campo para entender cómo 'vive' o 'trabaja' el cliente antes y después de usar el producto, documentando un día típico en su vida. Requiere salir a observar directamente el contexto real del cliente (por ejemplo, trabajar detrás de un mostrador o en su oficina) en vez de asumir conocimientos previos, y repetirse para cada tipo de persona relevante en la decisión de compra (usuario final, gerente, ejecutivo, área de tecnología, etc.), tanto en ventas a empresas como a consumidores.",
   "pasos_accionables": [
-    "Observar o entrevistar directamente a los usuarios en su entorno real (oficina, tienda, hogar)",
-    "Documentar cómo resuelven el problema actualmente sin el producto",
-    "Proyectar cómo cambiaría su día con el nuevo producto",
-    "Repetir el ejercicio para cada tipo de cliente relevante (usuario final, gerente, ejecutivo, TI, etc.)",
-    "Presentar una imagen vívida y específica al equipo de desarrollo de producto"
+    "Observar o entrevistar directamente a los usuarios en su entorno real (oficina, tienda, hogar, planta)",
+    "Documentar cómo resuelven el problema actualmente, sin el producto",
+    "Proyectar y describir cómo cambiaría su día con el nuevo producto",
+    "Repetir el ejercicio para cada tipo de persona relevante en la decisión (usuario final, gerente, ejecutivo, tecnología, etc.)",
+    "Presentar una imagen vívida y específica del antes y el después al equipo de desarrollo de producto, en forma de narrativa o storyboard"
   ],
-  "entregable_esperado": "Documento narrativo o storyboard de 'antes y después' del día de cada tipo de cliente clave",
+  "entregable_esperado": "Documento narrativo o storyboard de 'antes y después' de un día típico de cada tipo de cliente relevante",
+  "condiciones_activacion": [
+    "Si el equipo no tiene experiencia directa en la industria o el entorno del cliente",
+    "Antes de diseñar la propuesta de valor definitiva",
+    "Si el equipo no tiene claridad sobre cómo el producto se integraría en la rutina real del cliente"
+  ],
+  "node_id": "dia_en_la_vida_del_cliente",
   "nodos_previos": [
+    "customer_archetypes",
     "arquetipos_de_cliente"
   ],
   "nodos_siguientes": [
-    "mapa_organizacional_influencia"
-  ],
-  "condiciones_activacion": [
-    "Si el equipo no tiene claridad sobre cómo el producto se integraría en la rutina real del cliente"
+    "mapa_organizacional_influencia",
+    "channels_hypothesis_physical",
+    "preguntas_ipo_dolor_cliente"
   ]
 }

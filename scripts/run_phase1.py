@@ -25,6 +25,8 @@ import sys
 import unicodedata
 from pathlib import Path
 
+from rapidfuzz import fuzz
+
 BASE = Path(__file__).resolve().parent.parent
 NODOS_DIR = BASE / "dataset" / "nodos"
 METADATA_DIR = BASE / "dataset" / "metadata"
@@ -32,13 +34,6 @@ MASTER_GRAPH_PATH = METADATA_DIR / "master_graph.json"
 LOG_PATH = METADATA_DIR / "phase1_run_log.json"
 
 REF_KEYS = ("nodos_previos", "nodos_siguientes")
-
-# Campos de contenido teorico: nunca se modifican, solo se leen para detectar
-# duplicados exactos (mismo titulo_concepto Y mismo contenido).
-CONTENT_FIELDS = (
-    "resumen_teorico", "pasos_accionables", "condiciones_activacion",
-    "fuente", "titulo_concepto", "entregable_esperado",
-)
 
 # Mapa de fusion de duplicados, tal como quedo definido en
 # scripts/archive/phase1_5_merge.py. Se mantiene aqui como fuente de verdad
@@ -417,25 +412,42 @@ def step5_compile_master_graph():
     return master, parse_errors
 
 
-def find_exact_duplicates(nodes):
-    """Pares de nodos con el mismo titulo_concepto Y el mismo contenido
-    teorico completo (CONTENT_FIELDS). Detector de duplicados fosiles
-    futuros: dos ids distintos que en realidad son el mismo nodo."""
+def find_exact_title_duplicates(nodes):
+    """Grupos de nodos con titulo_concepto EXACTAMENTE igual (fallo duro).
+    Tras la fusion semantica de Fase 1.6, cada concepto debe existir como un
+    unico nodo: si dos ids distintos comparten titulo exacto, son fosiles
+    (duplicados) que deberian haberse fusionado."""
     by_title = collections.defaultdict(list)
     for node_id, data in nodes.items():
         by_title[data.get("titulo_concepto")].append(node_id)
+    return {title: sorted(ids) for title, ids in by_title.items() if len(ids) > 1}
 
-    duplicate_pairs = []
-    for title, ids in by_title.items():
-        if len(ids) < 2:
-            continue
-        ids = sorted(ids)
-        for i in range(len(ids)):
-            for j in range(i + 1, len(ids)):
-                a, b = nodes[ids[i]], nodes[ids[j]]
-                if all(a.get(f) == b.get(f) for f in CONTENT_FIELDS):
-                    duplicate_pairs.append((ids[i], ids[j]))
-    return duplicate_pairs
+
+def normalize_title(s: str) -> str:
+    s = unicodedata.normalize("NFKD", s or "")
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return s.lower().strip()
+
+
+def find_near_duplicate_titles(nodes, threshold=95):
+    """Pares de nodos con titulo_concepto distinto pero muy similar
+    (similitud >= threshold, excluyendo los ya exactos). Chequeo
+    informativo: no falla el Gate 0, solo se reporta para revision manual
+    futura (candidatos a una proxima ronda de fusion semantica)."""
+    ids = sorted(nodes)
+    titles = {nid: normalize_title(nodes[nid].get("titulo_concepto", "")) for nid in ids}
+    pairs = []
+    for i in range(len(ids)):
+        for j in range(i + 1, len(ids)):
+            a, b = ids[i], ids[j]
+            ta, tb = titles[a], titles[b]
+            if not ta or not tb or ta == tb:
+                continue
+            score = fuzz.ratio(ta, tb)
+            if score >= threshold:
+                pairs.append((a, b, round(score, 1)))
+    pairs.sort(key=lambda p: -p[2])
+    return pairs
 
 
 # ---------------------------------------------------------------------------
@@ -487,14 +499,16 @@ def step6_validate(master, parse_errors):
         len(parse_errors),
     ))
 
-    duplicate_pairs = find_exact_duplicates(master["nodos"])
+    duplicate_titles = find_exact_title_duplicates(master["nodos"])
     checks.append((
-        "Cero pares de nodos con titulo_concepto y contenido identicos",
-        len(duplicate_pairs) == 0,
-        duplicate_pairs if duplicate_pairs else 0,
+        "Cero grupos con titulo_concepto exacto duplicado",
+        len(duplicate_titles) == 0,
+        duplicate_titles if duplicate_titles else 0,
     ))
 
-    return checks
+    near_duplicates = find_near_duplicate_titles(master["nodos"], threshold=95)
+
+    return checks, near_duplicates
 
 
 # ---------------------------------------------------------------------------
@@ -540,7 +554,7 @@ def main():
     print(f"  Log escrito en {LOG_PATH.relative_to(BASE)}")
 
     print("\n=== Paso 6: Validador Gate 0 ===")
-    checks = step6_validate(master, parse_errors)
+    checks, near_duplicates = step6_validate(master, parse_errors)
 
     all_ok = True
     print("\n--- Resumen Gate 0 ---")
@@ -552,6 +566,13 @@ def main():
 
     print("\n--- Estadisticas del grafo ---")
     print(json.dumps(master["stats"], ensure_ascii=False, indent=2))
+
+    print(f"\n--- Warning informativo: pares de titulo con similitud >= 95 ({len(near_duplicates)}) ---")
+    if near_duplicates:
+        for a, b, score in near_duplicates:
+            print(f"  [{score}] {a}  <->  {b}")
+    else:
+        print("  Ninguno.")
 
     if not all_ok:
         print("\nGATE 0: FALLIDO")

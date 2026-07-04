@@ -1,27 +1,33 @@
 {
-  "node_id": "equipos_visita_cliente",
   "fase_proyecto": "ideacion",
   "titulo_concepto": "Equipos de Visita al Cliente (Customer Visit Teams)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Método de VoC donde equipos visitan clientes y realizan entrevistas profundas basadas en una guía cuidadosamente diseñada para descubrir problemas, necesidades y deseos. Es el método mejor calificado combinando popularidad y efectividad (número uno en ambos ejes), siendo más accesible de implementar que la etnografía pura.",
+  "resumen_teorico": "Método de investigación de la voz del cliente (VoC, por sus siglas en inglés) donde equipos multifuncionales (marketing, ventas, área técnica) visitan a los clientes y realizan entrevistas profundas basadas en una guía cuidadosamente diseñada, para descubrir problemas, necesidades y puntos de dolor no resueltos. A diferencia de la etnografía pura, combina la entrevista estructurada con observación directa del uso del producto tras la conversación. Es el método mejor calificado en la relación popularidad-efectividad, y más accesible de implementar que una etnografía completa.",
   "pasos_accionables": [
-    "Diseñar una guía de entrevista estructurada pero abierta a profundizar",
-    "Formar equipos multidisciplinarios para las visitas (técnico + marketing)",
-    "Visitar clientes en su propio entorno de uso del producto",
-    "Realizar entrevistas en profundidad enfocadas en problemas y necesidades no resueltas",
-    "Sistematizar y compartir los hallazgos con el equipo de desarrollo"
+    "Identificar los sitios o clientes clave a visitar y obtener su acuerdo",
+    "Formar un equipo multidisciplinario para las visitas (por ejemplo: marketing, ventas y área técnica)",
+    "Diseñar una guía de entrevista estructurada pero abierta a profundizar, con preguntas indirectas e inferenciales",
+    "Definir hipótesis previas a la investigación para poder contrastarlas después",
+    "Visitar a los clientes en su propio entorno de uso del producto, realizar la entrevista y luego observar directamente cómo lo usan",
+    "Consolidar los resultados en un taller amplio con el equipo para interpretar los hallazgos de forma colectiva",
+    "Generar ideas mediante lluvia de ideas a partir de los hallazgos obtenidos"
   ],
-  "entregable_esperado": "Conjunto de reportes de entrevistas con clientes que alimentan el pipeline de ideas",
+  "entregable_esperado": "Conjunto de reportes de entrevistas con clientes e insights validados, junto con una lista de conceptos o temas prioritarios de producto que alimentan el proceso de generación de ideas",
+  "condiciones_activacion": [
+    "Cuando se busca un método de investigación de clientes popular y efectivo que balancee profundidad y facilidad de implementación",
+    "Cuando una etnografía completa resulta muy costosa o poco práctica para el producto o mercado",
+    "Cuando se necesita validar y profundizar en las necesidades de clientes empresariales",
+    "Antes de iniciar el desarrollo técnico de un nuevo producto"
+  ],
+  "node_id": "equipos_visita_cliente",
   "nodos_previos": [
-    "sistema_captura_ideas"
+    "sistema_captura_ideas",
+    "etnografia_investigacion_usuario"
   ],
   "nodos_siguientes": [
     "voc_temprano_en_agile_stage_gate",
     "backlog_evolutivo_y_cronograma_flexible",
-    "equipos_visita_cliente_voc"
-  ],
-  "condiciones_activacion": [
-    "Cuando se busca un método de VoC popular y efectivo que balancee profundidad y factibilidad de implementación",
-    "Cuando la etnografía completa resulta muy costosa o poco práctica para el producto/mercado"
+    "reglas_brainstorming",
+    "lead_user_analysis"
   ]
 }

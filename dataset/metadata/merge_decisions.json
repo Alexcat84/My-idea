@@ -1,0 +1,1093 @@
+[
+  {
+    "cluster_members": [
+      "agile_stage_gate_hibrido",
+      "agile_stage_gate_hybrid",
+      "modelo_hibrido_agile_stage_gate"
+    ],
+    "canonical_id": "modelo_hibrido_agile_stage_gate",
+    "losers": [
+      "agile_stage_gate_hibrido",
+      "agile_stage_gate_hybrid"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Modelo Híbrido Agile-Stage-Gate",
+      "fuente": "Winning at New Products - Robert G. Cooper",
+      "resumen_teorico": "Combinación de la estructura macro de etapas y compuertas de decisión (Go/Kill) con la ejecución ágil de sprints dentro de cada etapa. La estructura de etapas aporta visión general, coordinación entre áreas (marketing, producción) y control de la dirección; los sprints cortos (de 1 a 4 semanas, siendo 2 semanas lo más común) aportan velocidad, retroalimentación continua del cliente y mejor comunicación interna del equipo, generando en cada sprint algo tangible (prototipo, diseño, informe de investigación con clientes) para mostrar a los interesados.",
+      "pasos_accionables": [
+        "Mantener las etapas y compuertas de decisión estratégica Go/Kill del proceso existente",
+        "Insertar sprints cortos (de 1 a 4 semanas, típicamente 2) dentro de las etapas técnicas de desarrollo y pruebas",
+        "Establecer reuniones diarias breves (15-20 min) lideradas por un facilitador de equipo (scrum master) para sincronizar el trabajo",
+        "Definir un entregable tangible y demostrable al final de cada sprint (prototipo, diseño, informe de investigación con clientes, modelo funcional)",
+        "Usar tableros visuales y un backlog priorizado para dar seguimiento a las tareas",
+        "Realizar revisiones de sprint periódicas con los interesados o representantes de clientes",
+        "Dedicar al equipo de forma exclusiva al proyecto durante los sprints",
+        "Expandir gradualmente el uso de sprints a etapas tempranas (ideación, caso de negocio) conforme el equipo gane confianza",
+        "Mantener reuniones periódicas con la dirección para no perder de vista el objetivo final del proyecto"
+      ],
+      "entregable_esperado": "Proceso de desarrollo documentado que combine etapas y compuertas de decisión estratégica con sprints operativos, incluyendo tablero de backlog, calendario de sprints y definición de 'sprint terminado' para el producto en cuestión",
+      "condiciones_activacion": [
+        "Si el proyecto tiene alta incertidumbre técnica o de mercado (información del cliente poco clara)",
+        "Si el equipo necesita mayor velocidad y flexibilidad sin perder el control de gestión de la dirección",
+        "Si existen vacíos de conocimiento que impiden avanzar con especificaciones fijas",
+        "Cuando el proyecto combina desarrollo de hardware y software",
+        "Si existe conflicto entre equipos que prefieren un método ágil frente a equipos que prefieren la estructura tradicional",
+        "Para proyectos grandes y de alto impacto en ingresos"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "contabilidad_innovacion",
+      "innovation_accounting",
+      "innovation_accounting_framework"
+    ],
+    "canonical_id": "contabilidad_innovacion",
+    "losers": [
+      "innovation_accounting",
+      "innovation_accounting_framework"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Contabilidad de la Innovación (Innovation Accounting)",
+      "fuente": "The Lean Startup - Eric Ries",
+      "resumen_teorico": "Sistema de medición pensado específicamente para proyectos que operan bajo incertidumbre extrema, que reemplaza a la contabilidad tradicional (diseñada para negocios con un historial estable). Permite demostrar de forma objetiva y cuantitativa si se está generando aprendizaje real y progreso genuino, en vez de depender de narrativas subjetivas u optimismo sin sustento. Funciona en tres pasos: convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo; usar un producto mínimo viable para establecer una línea base con datos reales, no proyecciones; y diseñar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio, evaluando si el cambio produce una mejora real y no solo una coincidencia. El sistema también ayuda a distinguir el crecimiento que crea valor genuino del crecimiento aparente sin sustancia (métricas que suben sin que el negocio mejore de verdad).",
+      "pasos_accionables": [
+        "Convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo (línea base), aunque al inicio sea intuitivo",
+        "Usar un producto mínimo viable para establecer datos reales de partida, no proyecciones",
+        "Identificar los impulsores de crecimiento específicos del modelo de negocio (por ejemplo: rentabilidad por cliente, costo de adquisición, tasa de recompra)",
+        "Diseñar y ejecutar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio",
+        "Evaluar si los cambios generan una mejora real y medible, y no solo una coincidencia",
+        "Definir métricas que reflejen aprendizaje validado y no solo vanidad (por ejemplo, usuarios registrados sin uso real)",
+        "Con base en los datos obtenidos, decidir si perseverar, pivotar o abandonar la estrategia actual"
+      ],
+      "entregable_esperado": "Modelo financiero cuantitativo con métricas base (línea base) y un sistema de experimentos con métricas de aprendizaje, que permita justificar ante el equipo e inversionistas decisiones de perseverar o pivotar",
+      "condiciones_activacion": [
+        "Cuando el equipo no puede demostrar objetivamente si está progresando o solo contando historias optimistas",
+        "Cuando inversionistas o el equipo exigen rendición de cuentas sobre el progreso real del proyecto",
+        "Cuando se necesita distinguir si el crecimiento es genuino o solo apariencia",
+        "Si el proyecto tiene un modelo de negocio con suposiciones no probadas"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "founders_lideran_validacion",
+      "fundadores_lideran_validacion",
+      "liderazgo_fundadores_validacion"
+    ],
+    "canonical_id": "fundadores_lideran_validacion",
+    "losers": [
+      "founders_lideran_validacion",
+      "liderazgo_fundadores_validacion"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Los Fundadores Deben Liderar la Validación de Clientes",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Delegar la validación de clientes a Ventas, Marketing o Desarrollo de Negocio es un error común. Solo los fundadores tienen la autoridad para decidir un pivote y el coraje de escuchar y transmitir feedback negativo directamente de los clientes, sin intermediarios; los mandos medios ejecutan bien procesos ya conocidos, pero no están capacitados para la búsqueda creativa y el ajuste constante que exige esta etapa temprana. Los fundadores deben salir personalmente a hablar con los clientes, apoyándose en un pequeño equipo de datos y análisis (por ejemplo, para pruebas A/B o canales digitales) sin delegarles la decisión final de pivotar.",
+      "pasos_accionables": [
+        "Asegurar que los fundadores participen directamente y en persona en las conversaciones de validación con clientes",
+        "Evitar delegar la validación a equipos de ventas, marketing o desarrollo de negocio tempranamente",
+        "Escuchar y documentar el feedback negativo directamente de los clientes, sin intermediarios",
+        "Formar un pequeño equipo de apoyo (análisis de datos, pruebas A/B, SEO/PPC en canales digitales) que ejecute pero no decida",
+        "Mantener la autoridad de decisión sobre pivotar exclusivamente en los fundadores"
+      ],
+      "entregable_esperado": "Un equipo de validación liderado activamente por los fundadores, con registro directo del feedback de clientes y autoridad clara sobre decisiones de pivote",
+      "condiciones_activacion": [
+        "Cuando el equipo fundador considera delegar la validación de clientes a un equipo comercial",
+        "Cuando el equipo de ventas o marketing empieza a tomar decisiones de producto sin consultar a los fundadores"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "apalancamiento_competencias_core",
+      "apalancamiento_de_competencias_centrales"
+    ],
+    "canonical_id": "apalancamiento_de_competencias_centrales",
+    "losers": [
+      "apalancamiento_competencias_core"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Apalancamiento de Competencias Centrales (Leverage)",
+      "fuente": "Winning at New Products - Robert G. Cooper",
+      "resumen_teorico": "Principio de atacar desde una posición de fuerza: los proyectos que aprovechan las competencias y recursos ya existentes de la empresa (investigación y desarrollo, manufactura, marketing, ventas, marca, distribución, soporte técnico) tienen tasas de éxito mucho mayores que los proyectos que llevan a la empresa a territorio desconocido (nuevos mercados o tecnologías), los cuales tienden a fracasar. Existen dos tipos principales de apalancamiento: tecnológico (investigación y desarrollo, ingeniería, manufactura) y de mercado (fuerza de ventas, canal, marca, relación con clientes). Cuando un proyecto tiene bajo apalancamiento, colaborar con socios externos, tercerizar partes del trabajo o abrir el proceso de innovación puede mitigar el riesgo de fracaso.",
+      "pasos_accionables": [
+        "Mapear y evaluar el ajuste del proyecto con las competencias tecnológicas existentes: investigación y desarrollo, ingeniería, manufactura",
+        "Evaluar el ajuste con los recursos de marketing, ventas, distribución, marca e imagen ya existentes",
+        "Clasificar cada proyecto como de alto apalancamiento o de territorio desconocido, usando una matriz de familiaridad (mercados x tecnologías)",
+        "Para proyectos de bajo apalancamiento, considerar alianzas, tercerización o colaboración externa para mitigar el riesgo",
+        "Priorizar en el portafolio los proyectos con mayor sinergia, salvo que existan razones estratégicas que justifiquen lo contrario"
+      ],
+      "entregable_esperado": "Matriz de familiaridad (mercados x tecnologías) que puntúe cada proyecto respecto a las competencias centrales de la empresa, con su clasificación de apalancamiento y plan de mitigación cuando aplique",
+      "condiciones_activacion": [
+        "Al evaluar y priorizar ideas de nuevos productos",
+        "Cuando se considera entrar en mercados o tecnologías nuevas para la empresa",
+        "Cuando se evalúa si un proyecto nuevo encaja con las capacidades actuales de la empresa"
+      ]
+    },
+    "notes": "fase_proyecto elegida: ideacion. Es fundamentalmente un criterio de evaluacion y priorizacion de ideas nuevas (uno de los miembros del cluster ya lo ubicaba en ideacion); el otro miembro lo ubicaba en validacion porque tambien se reutiliza en revisiones de pivotar-o-proceder, pero su uso primario es el screening temprano."
+  },
+  {
+    "cluster_members": [
+      "arquetipo_cliente",
+      "arquetipos_de_cliente"
+    ],
+    "canonical_id": "arquetipos_de_cliente",
+    "losers": [
+      "arquetipo_cliente"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Arquetipos de Cliente (Customer Archetypes)",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Documento breve que humaniza al cliente objetivo, describiendo su perfil, problemas, contexto y motivaciones a partir de las conversaciones iniciales con clientes reales. Debe tratarse como una hipótesis provisional -no un hecho- sujeta a revisión conforme se obtiene aprendizaje validado. En productos donde el usuario final y quien decide la compra son personas distintas (frecuente en ventas a empresas), conviene crear un arquetipo separado para cada uno: cómo es su entorno de trabajo, su perfil demográfico y psicográfico (estilo de vida, afluencia, contexto familiar), y qué lo motivaría a comprar. Estos arquetipos sirven como guía para alinear las decisiones diarias de desarrollo de producto y para vincular el segmento de cliente con el resto del modelo de negocio (canal, relación con el cliente, modelo de ingresos).",
+      "pasos_accionables": [
+        "Realizar conversaciones exploratorias con clientes potenciales sobre sus problemas, necesidades y frustraciones",
+        "Identificar patrones comunes en esas conversaciones",
+        "Describir o bocetar al usuario final: su entorno (oficina, planta, cubículo) y su rutina",
+        "Si aplica, describir o bocetar por separado a quien decide la compra, que puede ser distinto del usuario final",
+        "Definir hipótesis demográficas y psicográficas del comprador (estilo de vida, afluencia, contexto familiar)",
+        "Redactar un documento breve que reúna el perfil, problemas y contexto de cada arquetipo",
+        "Vincular estas características con el resto del modelo de negocio (canal, relación con el cliente, modelo de ingresos)",
+        "Tratar cada arquetipo como una hipótesis provisional, sujeta a revisión con aprendizaje validado"
+      ],
+      "entregable_esperado": "Documento o fichas visuales con al menos un arquetipo de cliente (usuario final y, si aplica, decisor), describiendo perfil, problemas, contexto y motivaciones, vinculado al resto del modelo de negocio",
+      "condiciones_activacion": [
+        "Cuando se ha completado la exploración inicial de clientes pero aún no hay claridad sobre el perfil objetivo",
+        "Si el equipo de producto necesita alinear prioridades de desarrollo",
+        "Cuando el equipo necesita visualizar concretamente a sus clientes objetivo para alinear la estrategia de producto"
+      ],
+      "fuentes_adicionales": [
+        "The Lean Startup - Eric Ries"
+      ]
+    },
+    "notes": "Cluster que combina dos fuentes distintas y complementarias: Ries aporta el enfoque de 'arquetipo como hipotesis provisional' y Blank aporta el enfoque de 'arquetipos separados para usuario final y decisor, con perfil demografico/psicografico'. Se fusionaron ambas facetas sin perder ninguna; fuente principal Blank por ser mas completa, Ries como fuente adicional."
+  },
+  {
+    "cluster_members": [
+      "bucle_circunstancias_sentimientos_ideas",
+      "ciclo_circunstancias_sentimientos_ideas"
+    ],
+    "canonical_id": "ciclo_circunstancias_sentimientos_ideas",
+    "losers": [
+      "bucle_circunstancias_sentimientos_ideas"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "El Ciclo Circunstancias-Sentimientos-Ideas",
+      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+      "resumen_teorico": "Las circunstancias que se diseñan (tecnologías, espacios, medios, interfaces) generan sentimientos y reacciones emocionales en las personas que los usan; esos sentimientos alimentan nuevas ideas y comportamientos, que a su vez generan nuevas circunstancias diseñadas, cerrando un ciclo continuo (circunstancias, sentimientos, ideas, nuevas circunstancias). Este ciclo explica por qué tecnologías creadas con intenciones neutras (como conectar información) terminan generando efectos emocionales masivos y no planeados, como polarización, ansiedad o adicción. Reconocer el ciclo permite anticipar y decidir intencionalmente qué emociones se quiere que provoque un producto o servicio, en vez de dejar que surjan como efecto colateral no planeado.",
+      "pasos_accionables": [
+        "Antes de diseñar, preguntar explícitamente: ¿qué se quiere que la gente sienta al usar esto?",
+        "Identificar una circunstancia de diseño existente (un producto, interfaz o espacio) y observar qué reacciones físicas y emocionales provoca en las personas (ansiedad, calma, pertenencia, etc.)",
+        "Rastrear qué elementos concretos del diseño (luz, sonido, texto, jerarquía visual, mensaje) generan esa emoción",
+        "Anticipar qué ideas o comportamientos podría inspirar esa emoción en las personas a largo plazo",
+        "Diseñar deliberadamente las circunstancias para inducir los sentimientos deseados, considerando el ciclo completo y no solo la función inmediata del producto",
+        "Revisar iterativamente si los resultados generados retroalimentan positivamente el ciclo o producen efectos no deseados"
+      ],
+      "entregable_esperado": "Un mapa o diagrama del ciclo circunstancias-sentimientos-ideas aplicado al producto o servicio, junto con una declaración de intención emocional y los efectos no deseados identificados",
+      "condiciones_activacion": [
+        "Al iniciar el diseño de cualquier producto, servicio o experiencia que involucre interacción humana",
+        "Cuando se quiere anticipar consecuencias emocionales no deseadas de una innovación",
+        "Cuando el equipo diseña productos digitales o servicios con alto contacto emocional (redes sociales, apps, IA conversacional)"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "comprension_profunda_cliente",
+      "ganar_comprension_del_cliente"
+    ],
+    "canonical_id": "ganar_comprension_del_cliente",
+    "losers": [
+      "comprension_profunda_cliente"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Ganar Comprensión Profunda del Cliente",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Ir más allá de validar que el problema existe, para entender en profundidad cómo el cliente vive su día a día: su flujo de trabajo, cómo gasta su tiempo y dinero, con quién interactúa, qué solución usa hoy y qué cambiaría su comportamiento actual. Esto se logra saliendo a observar directamente al cliente: asistiendo a sus eventos, leyendo sus publicaciones, siguiendo a las personas que lo influencian, y hasta pasando un día haciendo lo que el cliente hace. El objetivo es conocerlo tan bien que el equipo sea percibido como 'uno de ellos', generando información que va más allá de datos superficiales.",
+      "pasos_accionables": [
+        "Investigar el flujo de trabajo actual del cliente y sus interacciones con otras personas o departamentos",
+        "Preguntar qué otras soluciones usa hoy y si el problema es compartido por más personas en su organización o entorno",
+        "Explorar qué haría cambiar su comportamiento de compra (precio, características, un nuevo estándar)",
+        "Pasar un día haciendo lo que el cliente hace (por ejemplo, detrás de un mostrador o en una feria) y asistir a sus eventos",
+        "Identificar publicaciones e influenciadores que el cliente sigue",
+        "Documentar todos los hallazgos de forma estructurada, con criterios claros de qué cuenta como validado"
+      ],
+      "entregable_esperado": "Documento de comprensión profunda del cliente con su flujo de trabajo, influenciadores, hábitos de consumo de información, comportamiento de compra y criterios de validación",
+      "condiciones_activacion": [
+        "Cuando ya se validó que el problema es real e importante, y se necesita profundizar en el contexto del cliente antes de diseñar la solución completa",
+        "Antes de presentar cualquier solución o producto al mercado"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "constrain_spending_validacion",
+      "restriccion_gasto_validacion"
+    ],
+    "canonical_id": "restriccion_gasto_validacion",
+    "losers": [
+      "constrain_spending_validacion"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Restringir el Gasto Durante la Validación de Clientes",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Un error típico es el escalamiento prematuro: contratar vendedores o gastar en marketing antes de tener un modelo de negocio probado. Esto agota la caja y obliga a despidos costosos cuando llega un pivote. La validación de clientes debe restringir el gasto en ventas y marketing hasta que el modelo esté casi validado, preservando efectivo para financiar múltiples iteraciones o pivotes, y midiendo constantemente la tasa de consumo de caja.",
+      "pasos_accionables": [
+        "Posponer la contratación masiva de vendedores hasta validar el modelo de negocio",
+        "Limitar el gasto en marketing de demanda hasta confirmar el segmento de clientes",
+        "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)",
+        "Reservar caja suficiente para financiar múltiples pivotes",
+        "Medir constantemente la tasa de consumo de caja durante esta etapa"
+      ],
+      "entregable_esperado": "Un presupuesto de validación acotado, con límites claros de gasto por experimento y suficiente caja reservada para financiar varios pivotes",
+      "condiciones_activacion": [
+        "Cuando el equipo quiere escalar ventas o marketing antes de validar el modelo de negocio",
+        "Si el proyecto está tentado a escalar el gasto antes de tiempo"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "core_competency_assessment",
+      "evaluacion_competencias_centrales"
+    ],
+    "canonical_id": "evaluacion_competencias_centrales",
+    "losers": [
+      "core_competency_assessment"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Evaluación de Competencias Centrales (Core Competencies)",
+      "fuente": "Winning at New Products - Robert G. Cooper",
+      "resumen_teorico": "Una competencia central no es simplemente una fortaleza: es algo que la empresa hace mejor que sus competidores, que contribuye de forma significativa al beneficio percibido por el cliente, que puede aplicarse a múltiples productos y mercados, y que es difícil de imitar. Evaluar las competencias centrales de la empresa, a través de un análisis interno de fortalezas y debilidades, ayuda a identificar en qué mercados, sectores o productos adyacentes puede entrar la empresa atacando desde una posición de fortaleza, y sirve como base para decidir en qué arenas estratégicas enfocar los recursos de innovación.",
+      "pasos_accionables": [
+        "Realizar un análisis interno de fortalezas y debilidades de la empresa (tecnológicas, de marketing, de operaciones y producción)",
+        "Filtrar cuáles de esas fortalezas cumplen las tres características de una competencia central: beneficio percibido por el cliente, aplicabilidad amplia y dificultad de imitación",
+        "Identificar mercados, sectores o productos adyacentes donde esas competencias puedan aplicarse",
+        "Cruzar estas competencias con las arenas de mercado u oportunidades identificadas para encontrar ideas de nuevos productos",
+        "Usar estas competencias como base para elegir en qué arenas estratégicas enfocar recursos"
+      ],
+      "entregable_esperado": "Listado documentado de las competencias centrales de la empresa, con las adyacencias de mercado u oportunidades de producto identificadas a partir de ellas",
+      "condiciones_activacion": [
+        "Antes de decidir en qué nuevas arenas o mercados entrar",
+        "Cuando se busca atacar desde una posición de fortaleza en vez de diversificar sin criterio",
+        "Cuando se necesita decidir en qué áreas de innovación enfocar recursos"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "cuatro_etapas_del_pensamiento_creativo",
+      "cuatro_etapas_pensamiento_creativo"
+    ],
+    "canonical_id": "cuatro_etapas_del_pensamiento_creativo",
+    "losers": [
+      "cuatro_etapas_pensamiento_creativo"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Las Cuatro Etapas del Pensamiento Creativo (Wallas)",
+      "fuente": "The Art of Thought - Graham Wallas",
+      "resumen_teorico": "Todo proceso de pensamiento creativo o resolución de problemas atraviesa cuatro etapas distintas, que no son estrictamente secuenciales y pueden solaparse cuando se trabaja en varios problemas a la vez: Preparación (investigar el problema en profundidad y de forma consciente, reuniendo toda la información relevante); Incubación (un período en el que no se piensa conscientemente en el problema -se descansa o se hace otra cosa- pero el trabajo mental inconsciente continúa); Iluminación (la aparición súbita de la idea o 'solución feliz', que suele venir precedida por señales sutiles de que algo se está formando, llamadas intimación); y Verificación (someter la idea a un análisis lógico riguroso y a pruebas antes de implementarla). Este modelo es la base histórica de casi todos los procesos modernos de pensamiento de diseño e ideación.",
+      "pasos_accionables": [
+        "Preparación: define claramente el problema e investígalo en profundidad y de forma sistemática, reuniendo toda la información relevante posible",
+        "Incubación: aléjate deliberadamente del problema (duerme, camina, trabaja en otra cosa) sin forzar conscientemente una solución",
+        "Mantén a mano una forma de registro (cuaderno, notas de voz) para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega por completo",
+        "Iluminación: cuando llegue el destello de la idea, captúralo de inmediato sin filtrarlo con crítica",
+        "Verificación: somete la idea capturada a un análisis lógico riguroso y a pruebas antes de implementarla",
+        "Documenta en qué etapa se encuentra cada idea o hipótesis (en preparación, incubando, iluminada o verificada) para gestionar el proceso creativo de forma ordenada"
+      ],
+      "entregable_esperado": "Un registro documentado del proceso de ideación (notas de preparación, incubación e iluminación) junto con una idea validada lógicamente, lista para pasar a prototipado",
+      "condiciones_activacion": [
+        "Cuando el equipo está bloqueado buscando una solución creativa y fuerza el pensamiento sin resultados",
+        "Al iniciar la fase de ideación de un proyecto de innovación o diseño",
+        "Cuando se necesita estructurar un proceso creativo caótico o intuitivo en pasos gestionables",
+        "Si se requiere justificar tiempos de 'no trabajo aparente' dentro de un cronograma de innovación"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "customer_development_agile_pairing",
+      "manifiesto_regla2_agile_customer_development"
+    ],
+    "canonical_id": "customer_development_agile_pairing",
+    "losers": [
+      "manifiesto_regla2_agile_customer_development"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Emparejar Customer Development con Desarrollo Ágil",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "El proceso de desarrollo de clientes es inútil si la organización de desarrollo de producto no puede iterar el producto con velocidad y agilidad. El desarrollo en cascada deja al equipo ciego al feedback del cliente durante largos periodos, ya que solo permite cambios en una ventana corta de especificación inicial. Una organización que trabaja de forma ágil e iterativa, en cambio, está diseñada para incorporar continuamente el aprendizaje de los clientes y entregar un producto que evoluciona alrededor de un producto mínimo viable.",
+      "pasos_accionables": [
+        "Adoptar una metodología de desarrollo ágil e iterativa, no en cascada, desde el inicio del proyecto",
+        "Comprometer profundamente a los equipos de desarrollo de clientes y de ingeniería en un mismo ciclo de trabajo",
+        "Iterar el producto en incrementos pequeños que permitan testear reacciones reales de los clientes",
+        "Evitar especificaciones rígidas de producto que no permitan cambios rápidos",
+        "Diseñar el proceso de desarrollo alrededor de un producto mínimo viable o un conjunto mínimo de características"
+      ],
+      "entregable_esperado": "Proceso de desarrollo ágil funcionando en paralelo y conectado al ciclo de feedback del desarrollo de clientes, con ciclos cortos de iteración",
+      "condiciones_activacion": [
+        "Si el equipo de ingeniería trabaja con metodología en cascada",
+        "Si el producto no puede iterarse rápidamente en respuesta al feedback de clientes",
+        "Al iniciar la construcción de un producto mínimo viable"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "customer_discovery_cuatro_fases",
+      "fases_customer_discovery"
+    ],
+    "canonical_id": "customer_discovery_cuatro_fases",
+    "losers": [
+      "fases_customer_discovery"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Las Cuatro Fases del Customer Discovery",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "El proceso de descubrimiento de clientes se estructura en cuatro fases. Primero, se deconstruye la visión fundacional del proyecto en las nueve partes del lienzo de modelo de negocio y se redactan las hipótesis correspondientes. Segundo, se testean las hipótesis de 'problema' saliendo a hablar con clientes reales. Tercero, se testea la 'solución' presentando el producto mínimo viable a los clientes y comparando los resultados contra criterios de éxito y fracaso definidos de antemano. Cuarto, se evalúan los resultados -comprensión del problema, validación de la propuesta de valor, volumen de clientes, disposición a pagar y rentabilidad del negocio- para decidir si se avanza a la validación de clientes o se regresa a aprender más.",
+      "pasos_accionables": [
+        "Fase 1: deconstruir la visión del proyecto en las nueve partes del lienzo de modelo de negocio y redactar un resumen de una página por cada hipótesis",
+        "Fase 2: salir a probar las hipótesis de 'problema' hablando directamente con clientes reales",
+        "Fase 3: presentar el producto mínimo viable y comparar las respuestas contra metas de éxito y fracaso predefinidas",
+        "Fase 4: evaluar comprensión del problema, validación de la propuesta de valor, volumen de clientes, disposición a pagar y rentabilidad, y decidir si avanzar a validación de clientes o volver a aprender más"
+      ],
+      "entregable_esperado": "Documento con las hipótesis y resultados de las cuatro fases, y una decisión de avanzar o no hacia la validación de clientes",
+      "condiciones_activacion": [
+        "Cuando se necesita estructurar el proceso completo de descubrimiento de clientes de forma metódica",
+        "Al iniciar el proceso formal de descubrimiento de clientes en un proyecto nuevo"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "customer_growth_tactics",
+      "grow_customers_strategy"
+    ],
+    "canonical_id": "estrategia_crecimiento_clientes",
+    "losers": [
+      "customer_growth_tactics",
+      "grow_customers_strategy"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Estrategia de Crecimiento de Clientes (Grow)",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Dos vías principales para crecer aprovechando la base de clientes existente: lograr que gasten más (venta cruzada, venta adicional, desagregación del producto) o que refieran a nuevos clientes (marketing viral, programas de referidos). Estas tácticas maximizan el valor de los clientes actuales antes de invertir en adquirir clientes nuevos, que suele ser más costoso. Para priorizarlas correctamente conviene calcular el valor de vida del cliente -cuánto ingreso genera un cliente a lo largo de toda su relación con el negocio- en vez de enfocarse solo en la primera venta.",
+      "pasos_accionables": [
+        "Calcular el valor de vida del cliente de la base de clientes actual",
+        "Diseñar programas de venta cruzada y venta adicional integrados en el proceso de compra (por ejemplo: 'gasta 25 dólares más y obtén envío gratis')",
+        "Crear motores de recomendación tipo 'si compraste X, te gustará Y'",
+        "Diseñar mecanismos de marketing viral y programas de referidos que incentiven a los clientes actuales a invitar a nuevos",
+        "Probar estas tácticas con clientes reales, incluyendo ofertas y promociones exclusivas",
+        "Revisar tácticas específicas de canales web o móviles para identificar ideas adicionales de crecimiento"
+      ],
+      "entregable_esperado": "Plan de tácticas de crecimiento (venta cruzada, venta adicional, referidos) con el valor de vida del cliente calculado y las hipótesis a testear con clientes reales",
+      "condiciones_activacion": [
+        "Cuando ya existe una base de clientes y se busca maximizar ingresos sin incurrir en el costo de adquirir nuevos clientes",
+        "Si el proyecto tiene suficientes clientes activos como para testear programas de crecimiento"
+      ]
+    },
+    "notes": "Id canonico renombrado (ninguno de los dos originales era limpio): 'estrategia_crecimiento_clientes'. fase_proyecto elegida: ejecucion, ya que las tacticas de venta cruzada/referidos se despliegan una vez que existe una base de clientes activa (etapa de escalamiento), aunque un miembro del cluster las ubicaba en validacion."
+  },
+  {
+    "cluster_members": [
+      "day_in_life_customer",
+      "dia_en_la_vida_del_cliente"
+    ],
+    "canonical_id": "dia_en_la_vida_del_cliente",
+    "losers": [
+      "day_in_life_customer"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Un Día en la Vida del Cliente",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Ejercicio de investigación de campo para entender cómo 'vive' o 'trabaja' el cliente antes y después de usar el producto, documentando un día típico en su vida. Requiere salir a observar directamente el contexto real del cliente (por ejemplo, trabajar detrás de un mostrador o en su oficina) en vez de asumir conocimientos previos, y repetirse para cada tipo de persona relevante en la decisión de compra (usuario final, gerente, ejecutivo, área de tecnología, etc.), tanto en ventas a empresas como a consumidores.",
+      "pasos_accionables": [
+        "Observar o entrevistar directamente a los usuarios en su entorno real (oficina, tienda, hogar, planta)",
+        "Documentar cómo resuelven el problema actualmente, sin el producto",
+        "Proyectar y describir cómo cambiaría su día con el nuevo producto",
+        "Repetir el ejercicio para cada tipo de persona relevante en la decisión (usuario final, gerente, ejecutivo, tecnología, etc.)",
+        "Presentar una imagen vívida y específica del antes y el después al equipo de desarrollo de producto, en forma de narrativa o storyboard"
+      ],
+      "entregable_esperado": "Documento narrativo o storyboard de 'antes y después' de un día típico de cada tipo de cliente relevante",
+      "condiciones_activacion": [
+        "Si el equipo no tiene experiencia directa en la industria o el entorno del cliente",
+        "Antes de diseñar la propuesta de valor definitiva",
+        "Si el equipo no tiene claridad sobre cómo el producto se integraría en la rutina real del cliente"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "decision_pivotar_o_proceder",
+      "pivot_or_proceed_decision"
+    ],
+    "canonical_id": "decision_pivotar_o_proceder",
+    "losers": [
+      "pivot_or_proceed_decision"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Decisión: Pivotar o Proceder",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Es el momento decisivo, al final de la validación de clientes, en que el equipo fundador y los inversionistas deciden si comenzar a invertir fuertemente para ejecutar y escalar el modelo de negocio, o si es necesario regresar a etapas anteriores para refinar las hipótesis. Requiere honestidad radical para distinguir entre hechos realmente validados y opiniones o exceso de confianza del equipo: ¿el producto se vendió bien y fácilmente?, ¿la llegada de clientes es predecible, escalable y rentable?, ¿existe un proceso de ventas repetible?, ¿los tiempos de entrega son realistas? La mayoría de los proyectos -nueve de cada diez- necesitan al menos un pivote adicional antes de poder proceder con confianza a la etapa de creación de clientes.",
+      "pasos_accionables": [
+        "Revisar honestamente si la validación realmente convirtió opiniones en hechos, y no que simplemente se movieron las metas para que coincidieran con el resultado",
+        "Confirmar que el producto se vendió bien y fácilmente",
+        "Verificar que la llegada de clientes sea predecible, escalable y rentable",
+        "Confirmar que existe un proceso de ventas repetible y escalable",
+        "Revisar que los tiempos de entrega del producto sean realistas",
+        "Actualizar el diagrama o lienzo del modelo de negocio con todo lo aprendido",
+        "Votar formalmente: avanzar a la creación de clientes o regresar a etapas anteriores de descubrimiento"
+      ],
+      "entregable_esperado": "Documento de decisión de pivotar o proceder, con checklist completado, modelo de negocio actualizado y evidencia de las pruebas de éxito y fracaso realizadas",
+      "condiciones_activacion": [
+        "Cuando se ha completado el análisis financiero y de modelo de negocio",
+        "Cuando el equipo debe decidir si escalar la inversión o volver a la fase de búsqueda",
+        "Si existen dudas sobre si el modelo de negocio es realmente repetible y escalable",
+        "Cuando los inversionistas necesitan un criterio objetivo antes de aumentar el gasto"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "definicion_startup",
+      "startup_definition"
+    ],
+    "canonical_id": "definicion_startup",
+    "losers": [
+      "startup_definition"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Definición de Startup",
+      "fuente": "The Lean Startup - Eric Ries",
+      "resumen_teorico": "Una startup es una institución humana diseñada para crear nuevos productos o servicios bajo condiciones de incertidumbre extrema: una organización temporal que todavía está buscando -no ejecutando- las respuestas que definen un modelo de negocio repetible y escalable. Esta definición amplía el concepto más allá del garaje tradicional: incluye a cualquier persona o equipo que opere bajo esas condiciones, incluso dentro de grandes empresas o gobiernos, y distingue fundamentalmente a las startups de las empresas establecidas, que ya ejecutan un modelo de negocio conocido.",
+      "pasos_accionables": [
+        "Evaluar si el proyecto opera bajo condiciones de incertidumbre extrema respecto al cliente y al producto",
+        "Reconocer que no se necesita estar en un garaje ni ser una empresa pequeña para aplicar estos principios",
+        "Asumir la mentalidad de una organización temporal en búsqueda de un modelo de negocio, no de ejecución de un plan fijo",
+        "Orientar los recursos y esfuerzos hacia el aprendizaje validado sobre el modelo de negocio, no solo hacia hacer productos o dinero"
+      ],
+      "entregable_esperado": "Una declaración clara del equipo fundador de que el proyecto opera bajo incertidumbre y busca un modelo de negocio repetible y escalable, en vez de ejecutar uno ya probado",
+      "condiciones_activacion": [
+        "Si el proyecto está iniciando con alta incertidumbre sobre clientes o producto",
+        "Al inicio de cualquier proyecto emprendedor, para alinear expectativas del equipo"
+      ],
+      "fuentes_adicionales": [
+        "The Startup Owner's Manual - Steve Blank"
+      ]
+    },
+    "notes": "Cluster que combina dos definiciones complementarias de dos fuentes distintas: Ries aporta el angulo de 'institucion bajo incertidumbre extrema' y Blank aporta el angulo de 'organizacion temporal buscando un modelo de negocio repetible y escalable'. Se fusionaron ambas sin perder ninguna; fuente principal Ries, Blank como fuente adicional."
+  },
+  {
+    "cluster_members": [
+      "desarrollar_posicionamiento_producto",
+      "desarrollo_posicionamiento_producto"
+    ],
+    "canonical_id": "desarrollo_posicionamiento_producto",
+    "losers": [
+      "desarrollar_posicionamiento_producto"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Desarrollo del Posicionamiento de Producto",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente durante el descubrimiento de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
+      "pasos_accionables": [
+        "Revisar la declaración de posicionamiento inicial creada durante el descubrimiento de clientes",
+        "Contrastarla con las reacciones reales de los clientes durante la validación: ¿resonó?, ¿fue creíble y efectiva?",
+        "Volver a contactar clientes si la razón de compra no quedó clara",
+        "Incorporar la retroalimentación de clientes y de socios de canal",
+        "Redactar el resumen de posicionamiento final, de una sola página",
+        "Usar el resumen como referencia para mantener consistencia en todo el material de marketing y ventas futuro"
+      ],
+      "entregable_esperado": "Resumen de posicionamiento de producto (una página), validado con clientes reales y listo como referencia para todo el material de marketing posterior",
+      "condiciones_activacion": [
+        "Cuando ya se tienen suficientes entrevistas de clientes reales para basar el mensaje en hechos, no en suposiciones",
+        "Cuando se ha completado la validación de clientes y se prepara la fase de creación de clientes"
+      ]
+    },
+    "notes": "fase_proyecto elegida: planificacion, ya que el brief final de posicionamiento se usa para preparar toda la comunicacion de marketing y ventas antes del lanzamiento, aunque un miembro del cluster lo ubicaba en validacion (la etapa donde se recoge el feedback que lo alimenta)."
+  },
+  {
+    "cluster_members": [
+      "diamante_de_innovacion",
+      "innovation_diamond_enfoque_sistemico"
+    ],
+    "canonical_id": "diamante_de_innovacion",
+    "losers": [
+      "innovation_diamond_enfoque_sistemico"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "El Diamante de la Innovación (Enfoque Sistémico)",
+      "fuente": "Winning at New Products - Robert G. Cooper",
+      "resumen_teorico": "Ganar en innovación no depende solo de tener un buen proceso de desarrollo de productos, sino de un enfoque integral que alinee simultáneamente cuatro pilares: una estrategia de innovación clara (dónde enfocar los esfuerzos), una gestión de portafolio y recursos balanceada, un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión), y un clima, cultura y liderazgo organizacional que tolere el riesgo y premie la creatividad. Sin estos cuatro elementos alineados, incluso el mejor proceso de desarrollo fallará en producir innovaciones audaces.",
+      "pasos_accionables": [
+        "Definir una estrategia de innovación clara: dónde enfocar los esfuerzos y recursos",
+        "Evaluar y asegurar una gestión de portafolio y asignación de recursos balanceada",
+        "Implementar un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión)",
+        "Fomentar una cultura organizacional y un liderazgo que toleren el riesgo y premien la creatividad",
+        "Evaluar el estado actual del proyecto o la empresa en cada uno de los cuatro pilares e identificar cuál es el eslabón más débil",
+        "Diseñar un plan de acción que aborde los cuatro pilares de manera integrada, no aislada"
+      ],
+      "entregable_esperado": "Un diagnóstico organizacional (auditoría del diamante de innovación) que evalúe el estado de los cuatro pilares -estrategia, portafolio y recursos, proceso, y cultura- identificando fortalezas, debilidades y el eslabón más débil",
+      "condiciones_activacion": [
+        "Cuando una empresa tiene un buen proceso de desarrollo de productos pero sigue fallando en el mercado por factores culturales o estratégicos",
+        "Al iniciar una auditoría estratégica de capacidades de innovación",
+        "Si la empresa solo se enfoca en mejorar su proceso de desarrollo pero sigue sin generar innovación real"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "disenar_para_sanacion",
+      "diseno_para_sanacion"
+    ],
+    "canonical_id": "disenar_para_sanacion",
+    "losers": [
+      "diseno_para_sanacion"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Diseñar para la Sanación (Design for Healing)",
+      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+      "resumen_teorico": "Todo lo que se diseña eventualmente 'rompe algo': genera efectos secundarios negativos que no pueden preverse del todo, así que el bien y el mal en el diseño no son binarios ni fácilmente predecibles. Diseñar para la sanación significa incorporar desde el inicio una intención de reparación, en lugar de limitarse a optimizar la funcionalidad: por un lado, hacia adelante, aceptando con humildad las consecuencias imprevistas y construyendo mecanismos de reversibilidad, retroalimentación y mitigación de daños en sistemas críticos (como inteligencia artificial o datos personales); por otro lado, hacia atrás, reparando y restaurando el daño ya acumulado (desigualdad, deterioro ambiental, fragmentación social) en lugar de solo crear cosas nuevas encima de él. El proceso de creación puede ser en sí mismo un acto de sanación comunitaria cuando involucra a las comunidades afectadas como co-creadoras y hace visible la reparación -como en la técnica japonesa del kintsugi, donde las grietas reparadas se valoran como belleza- en vez de ocultarla.",
+      "pasos_accionables": [
+        "En la planificación, preguntar explícitamente: '¿qué se rompe con esta solución y cómo lo reparamos?'",
+        "Mapear qué ha 'roto' la industria, comunidad o sistema en el que se va a intervenir, antes de proponer algo nuevo",
+        "Incluir en la hoja de ruta del producto mecanismos de retroalimentación para detectar daños colaterales",
+        "Diseñar funciones de reversibilidad o mitigación en los sistemas críticos (por ejemplo, inteligencia artificial o datos personales)",
+        "Involucrar a las comunidades afectadas en el proceso de creación, no solo como usuarios finales sino como co-creadoras de la reparación",
+        "Priorizar la reutilización de estructuras existentes (físicas, sociales, tecnológicas) sobre la demolición y reconstrucción total",
+        "Diseñar procesos o rituales que hagan visible la reparación en vez de ocultarla",
+        "Evaluar el proyecto no solo por su éxito comercial, sino por su huella en el sistema donde se inserta"
+      ],
+      "entregable_esperado": "Una sección del plan de negocio o brief de diseño dedicada a los riesgos éticos y sistémicos del proyecto, con una narrativa del daño previo a reparar, mecanismos de mitigación y reversibilidad, y un plan de co-creación con la comunidad afectada",
+      "condiciones_activacion": [
+        "Cuando el producto tiene potencial de escala masiva o afecta a poblaciones vulnerables",
+        "Si el equipo quiere incorporar principios de sostenibilidad o ética desde el diseño",
+        "En etapas de planificación estratégica antes del lanzamiento a mercado",
+        "Si el proyecto opera en un contexto con historia de daño social, ambiental o comunitario",
+        "Si se busca innovación social o sostenibilidad, y no solo innovación comercial"
+      ]
+    },
+    "notes": "El cluster con la fusion mas dificil: los dos nodos comparten titulo casi identico ('Disenar' vs 'Diseno' para la Sanacion) pero cubren dos facetas distintas y complementarias del mismo principio, ambas de la misma fuente: una hacia adelante (mitigacion/reversibilidad ante danos futuros) y otra hacia atras (reparacion de danos ya acumulados, co-creacion comunitaria). Se fusionaron como dos caras de un mismo concepto sin perder ninguna idea. fase_proyecto elegida: planificacion (encaja como seccion dedicada del plan/brief), aunque un miembro la ubicaba en ideacion."
+  },
+  {
+    "cluster_members": [
+      "economia_circular_de_la_imaginacion",
+      "economia_circular_imaginacion"
+    ],
+    "canonical_id": "economia_circular_de_la_imaginacion",
+    "losers": [
+      "economia_circular_imaginacion"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Economía Circular de la Imaginación",
+      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+      "resumen_teorico": "Así como la economía circular busca que los recursos materiales se regeneren en vez de agotarse, este concepto propone que los productos, medios y tecnologías que se diseñan (redes sociales, inteligencia artificial, medios de comunicación) deberían nutrir y regenerar las emociones y la imaginación de las personas, en vez de contaminarlas o agotarlas, como ocurre con el diseño que fomenta la indignación, la ansiedad, el clickbait o la polarización para capturar atención. Estos sistemas no son emocionalmente neutrales: su estructura decide si alimentan el desgaste emocional o si regeneran la creatividad y el bienestar colectivo. Es un principio ético y estratégico para evaluar si un diseño suma o resta al bienestar emocional de quienes lo usan.",
+      "pasos_accionables": [
+        "Auditar qué emociones genera el producto o sistema en las personas que lo usan",
+        "Identificar los mecanismos de extracción emocional (indignación, miedo, comparación social) que pudieran estar presentes en el diseño",
+        "Identificar si el modelo de negocio incentiva la atención negativa (más controversia genera más clics e ingresos) en vez del bienestar",
+        "Rediseñar esos mecanismos para que regeneren confianza, curiosidad o calma en vez de agotarlas",
+        "Definir métricas de éxito que no dependan solo de la atención o el engagement, sino del bienestar emocional sostenido de las personas"
+      ],
+      "entregable_esperado": "Un mapa de los efectos emocionales (positivos y negativos) que produce el producto o sistema diseñado, junto con una propuesta de rediseño de incentivos y al menos dos métricas alternativas a la atención o el engagement",
+      "condiciones_activacion": [
+        "Cuando el modelo de negocio depende de la atención o el engagement del usuario",
+        "Cuando se busca diferenciar un producto por su impacto positivo en el bienestar del usuario a largo plazo",
+        "Cuando el proyecto involucra medios, inteligencia artificial conversacional, redes sociales o plataformas de contenido"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "emprendimiento_como_management",
+      "gestion_emprendedora"
+    ],
+    "canonical_id": "emprendimiento_como_disciplina_de_gestion",
+    "losers": [
+      "emprendimiento_como_management",
+      "gestion_emprendedora"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "El Emprendimiento como Disciplina de Gestión",
+      "fuente": "The Lean Startup - Eric Ries",
+      "resumen_teorico": "Una startup es una institución, no solo un producto, y por eso requiere un tipo de gestión específicamente diseñado para su contexto de incertidumbre extrema. Ni la planificación tradicional (basada en historiales estables de negocio) ni el caos de 'simplemente hazlo' funcionan bien en este contexto: se necesita una disciplina de gestión estructurada pero flexible, que trate el rol de emprendedor como una función formal dentro de la organización, ligera en procesos pero orientada al aprendizaje rápido en vez de al control burocrático.",
+      "pasos_accionables": [
+        "Evitar depender exclusivamente de planes de negocio rígidos o de investigación de mercado extensa cuando existe alta incertidumbre",
+        "Evitar también el enfoque de 'solo hazlo' sin ningún tipo de estructura o método",
+        "Abandonar la idea de que gestión y disciplina son enemigas de la innovación y la creatividad",
+        "Adoptar una disciplina de gestión específica para este contexto, que balancee estructura y adaptabilidad",
+        "Implementar procesos ligeros que permitan aprendizaje rápido en vez de control burocrático",
+        "Tratar el rol de emprendedor como una función formal y reconocida dentro de la organización"
+      ],
+      "entregable_esperado": "Una estructura de gestión definida para el proyecto, que no dependa de la planificación tradicional ni de la improvisación total, y que permita aprendizaje rápido",
+      "condiciones_activacion": [
+        "Si se intenta aplicar planificación tradicional a un negocio con alta incertidumbre",
+        "Si el proyecto está operando sin ningún tipo de proceso o método (caos total)",
+        "Si hay un producto pero no está claro cómo estructurar la gestión del equipo o proyecto"
+      ]
+    },
+    "notes": "Id canonico renombrado (ninguno de los dos originales era limpio): 'emprendimiento_como_disciplina_de_gestion', igual al titulo_concepto normalizado."
+  },
+  {
+    "cluster_members": [
+      "equipos_visita_cliente",
+      "equipos_visita_cliente_voc"
+    ],
+    "canonical_id": "equipos_visita_cliente",
+    "losers": [
+      "equipos_visita_cliente_voc"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Equipos de Visita al Cliente (Customer Visit Teams)",
+      "fuente": "Winning at New Products - Robert G. Cooper",
+      "resumen_teorico": "Método de investigación de la voz del cliente (VoC, por sus siglas en inglés) donde equipos multifuncionales (marketing, ventas, área técnica) visitan a los clientes y realizan entrevistas profundas basadas en una guía cuidadosamente diseñada, para descubrir problemas, necesidades y puntos de dolor no resueltos. A diferencia de la etnografía pura, combina la entrevista estructurada con observación directa del uso del producto tras la conversación. Es el método mejor calificado en la relación popularidad-efectividad, y más accesible de implementar que una etnografía completa.",
+      "pasos_accionables": [
+        "Identificar los sitios o clientes clave a visitar y obtener su acuerdo",
+        "Formar un equipo multidisciplinario para las visitas (por ejemplo: marketing, ventas y área técnica)",
+        "Diseñar una guía de entrevista estructurada pero abierta a profundizar, con preguntas indirectas e inferenciales",
+        "Definir hipótesis previas a la investigación para poder contrastarlas después",
+        "Visitar a los clientes en su propio entorno de uso del producto, realizar la entrevista y luego observar directamente cómo lo usan",
+        "Consolidar los resultados en un taller amplio con el equipo para interpretar los hallazgos de forma colectiva",
+        "Generar ideas mediante lluvia de ideas a partir de los hallazgos obtenidos"
+      ],
+      "entregable_esperado": "Conjunto de reportes de entrevistas con clientes e insights validados, junto con una lista de conceptos o temas prioritarios de producto que alimentan el proceso de generación de ideas",
+      "condiciones_activacion": [
+        "Cuando se busca un método de investigación de clientes popular y efectivo que balancee profundidad y facilidad de implementación",
+        "Cuando una etnografía completa resulta muy costosa o poco práctica para el producto o mercado",
+        "Cuando se necesita validar y profundizar en las necesidades de clientes empresariales",
+        "Antes de iniciar el desarrollo técnico de un nuevo producto"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "fracaso_como_aprendizaje_startup",
+      "manifiesto_regla3_fracaso_parte_busqueda"
+    ],
+    "canonical_id": "fracaso_como_aprendizaje_startup",
+    "losers": [
+      "manifiesto_regla3_fracaso_parte_busqueda"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "El Fracaso es Parte Integral de la Búsqueda",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "A diferencia de las empresas establecidas -donde el fracaso es la excepción-, un proyecto en etapa de búsqueda está buscando, no ejecutando, un modelo de negocio, por lo que el único camino real es probar muchos experimentos y equivocarse con frecuencia. El fracaso no es realmente un fracaso, sino una parte integral y normal del proceso de aprendizaje; el miedo a fracasar es lo que de verdad condena al proyecto. Esto exige un cambio cultural: pasar del miedo al fracaso a una cultura de aprendizaje y descubrimiento.",
+      "pasos_accionables": [
+        "Diseñar experimentos con criterios claros de éxito y fracaso (para mensajes, características, precios, etc.), aceptando de antemano que varios fallarán",
+        "Cambiar la cultura del equipo de 'miedo al fracaso' a 'aprendizaje y descubrimiento'",
+        "Cuando algo no funciona, reorientarse rápidamente hacia los nuevos hechos y decidir qué corregir",
+        "Documentar cada fracaso como aprendizaje válido que alimenta la decisión de pivotar",
+        "Evitar penalizar al equipo por hipótesis fallidas; en su lugar, ajustar el modelo"
+      ],
+      "entregable_esperado": "Una cultura de equipo documentada que registra y aprende de los experimentos fallidos como parte normal del proceso de descubrimiento, en vez de penalizarlos",
+      "condiciones_activacion": [
+        "Si el equipo tiene miedo de experimentar por temor a equivocarse",
+        "Al establecer la cultura inicial de un proyecto en etapa de búsqueda",
+        "En las primeras fases de descubrimiento de clientes"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "hipotesis_de_tamano_de_mercado",
+      "market_size_hypothesis"
+    ],
+    "canonical_id": "hipotesis_de_tamano_de_mercado",
+    "losers": [
+      "market_size_hypothesis"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Hipótesis de Tamaño de Mercado (TAM, SAM, Target Market)",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Antes de invertir años de trabajo en un proyecto, conviene estimar el tamaño real de la oportunidad usando tres niveles: el mercado total direccionable (TAM, el universo completo de clientes potenciales), el mercado disponible según el canal de ventas (SAM, cuántos de esos clientes se pueden alcanzar realmente) y el mercado objetivo (los compradores más probables al inicio). Se recomienda una estimación de abajo hacia arriba, construida desde datos concretos, en vez de solo basarse en reportes de firmas de investigación de mercado, que suelen ser mejores prediciendo el pasado que el futuro. También conviene considerar mercados adyacentes y el costo de cambio de los clientes actuales, y proyectar el crecimiento a 3-5 años.",
+      "pasos_accionables": [
+        "Estimar el TAM (mercado total direccionable) usando reportes de la industria y comparación con competidores",
+        "Reducir al SAM (mercado disponible) considerando limitaciones de canal, idioma o plataforma",
+        "Definir el mercado objetivo: quiénes son los compradores más probables al inicio",
+        "Realizar una estimación de abajo hacia arriba, basada en datos demográficos o de uso real, en vez de depender solo de reportes de analistas",
+        "Considerar mercados adyacentes y el costo de cambio de los clientes actuales",
+        "Proyectar el crecimiento del mercado a 3-5 años"
+      ],
+      "entregable_esperado": "Documento con la estimación de TAM, SAM y mercado objetivo, con metodología de abajo hacia arriba explicada y pruebas de éxito y fracaso identificadas",
+      "condiciones_activacion": [
+        "Al validar si una oportunidad de negocio es lo suficientemente grande para justificar la inversión",
+        "Antes de comprometer recursos significativos en el desarrollo del producto",
+        "Si el equipo se basa únicamente en reportes de mercado de terceros sin validación propia"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "ideation_process",
+      "proceso_ideacion_modelo_negocio"
+    ],
+    "canonical_id": "proceso_ideacion_modelo_negocio",
+    "losers": [
+      "ideation_process"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Proceso de Ideación de Modelos de Negocio",
+      "fuente": "Business Model Generation (Osterwalder)",
+      "resumen_teorico": "Proceso estructurado en cinco fases para generar y filtrar ideas de modelo de negocio, explorando sistemáticamente nuevas combinaciones de los nueve bloques del lienzo de modelo de negocio para descubrir modelos disruptivos: composición de un equipo diverso en antigüedad, experiencia y conocimiento del cliente; inmersión, investigando clientes, tecnologías y modelos existentes; expansión, generando la mayor cantidad de ideas posible por cada bloque del lienzo sin criticar todavía, priorizando cantidad sobre calidad; definición de criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.); y prototipado, reduciendo a entre tres y cinco ideas y esbozándolas en el lienzo. El proceso distingue claramente la fase de generación (cantidad) de la fase de síntesis (calidad).",
+      "pasos_accionables": [
+        "Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente",
+        "Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes",
+        "Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad",
+        "Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)",
+        "Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio"
+      ],
+      "entregable_esperado": "Lista corta de 3 a 5 prototipos de modelo de negocio esbozados en el lienzo de modelo de negocio, resultado de un proceso de ideación estructurado",
+      "condiciones_activacion": [
+        "Cuando se necesita generar múltiples opciones de modelo de negocio antes de comprometerse con una",
+        "Si el equipo está atascado en pensamiento incremental sobre su modelo actual"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "mapa_organizacional_influencia",
+      "organizational_influence_map"
+    ],
+    "canonical_id": "mapa_organizacional_influencia",
+    "losers": [
+      "organizational_influence_map"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Mapa Organizacional y de Influencia",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Ningún cliente decide en aislamiento. Este mapa lista y dibuja a todas las personas que rodean e influyen en la decisión de compra de un cliente -colegas, jefes, familia, amigos, proveedores-, tanto en contextos de consumo como empresariales, para visualizar la complejidad real detrás de cada venta. También representa el impacto del producto en el día a día del cliente y de su entorno, y se actualiza a medida que se descubren nuevos actores relevantes.",
+      "pasos_accionables": [
+        "Listar a todas las personas que rodean e influyen en la decisión de compra del cliente objetivo",
+        "Dibujar un diagrama tentativo de relaciones e influencias (colegas, jefes, familia, amigos, proveedores)",
+        "Representar el impacto del producto en la vida diaria o laboral de cada persona del mapa",
+        "Actualizar el mapa a medida que se descubren nuevos actores relevantes",
+        "Actualizar el lienzo de modelo de negocio con estos hallazgos"
+      ],
+      "entregable_esperado": "Diagrama visual del mapa organizacional y de influencia del segmento de cliente, actualizado conforme se descubren nuevos actores",
+      "condiciones_activacion": [
+        "Cuando se vende a organizaciones grandes o complejas con múltiples personas involucradas en la decisión",
+        "Si hay múltiples actores desconocidos en el proceso de compra"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "mercados_multilaterales",
+      "multisided_markets"
+    ],
+    "canonical_id": "mercados_multilaterales",
+    "losers": [
+      "multisided_markets"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Mercados Multilaterales (Multi-Sided Markets)",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "En algunos negocios existen múltiples actores con roles distintos en torno a una misma transacción: quien usa el producto, quien decide comprarlo, quien paga por él y quien lo prescribe o recomienda, y cada uno debe validarse por separado. Un ejemplo clásico es un dispositivo médico, donde el médico lo recomienda, el hospital lo compra, el cirujano lo implanta y la aseguradora lo paga; otro ejemplo son los negocios digitales como las redes sociales, donde los usuarios son 'gratis' pero los anunciantes pagan por alcanzarlos. Ignorar alguno de estos lados del mercado puede ser un error fatal en la estrategia de canal o de ingresos.",
+      "pasos_accionables": [
+        "Identificar si el negocio tiene más de un lado de mercado (por ejemplo, usuarios frente a quienes pagan)",
+        "Determinar quién usa, quién decide, quién compra, quién prescribe y quién paga por el producto",
+        "Definir la propuesta de valor, la relación con el cliente y el modelo de ingresos para cada lado del mercado por separado",
+        "Validar la hipótesis de canal para cada lado del mercado de forma independiente",
+        "Calcular cuánto estaría dispuesto a pagar el lado que paga (por ejemplo, los anunciantes) por alcanzar al lado gratuito",
+        "Diseñar estrategias de venta diferenciadas para cada tipo de actor, enfocando primero los recursos en la fuente de ingresos principal antes de expandir a fuentes secundarias"
+      ],
+      "entregable_esperado": "Un diagrama de canal multilateral con todos los actores y roles identificados, y un modelo de negocio diferenciado para cada lado del mercado con su propuesta de valor y flujo de ingresos correspondiente",
+      "condiciones_activacion": [
+        "Si el producto involucra múltiples decisores (por ejemplo, dispositivos médicos o plataformas que conectan a dos tipos de usuarios)",
+        "Cuando el modelo de negocio involucra usuarios gratuitos y una fuente de ingresos distinta (como publicidad)"
+      ]
+    },
+    "notes": "fase_proyecto elegida: validacion, ya que identificar y validar cada lado del mercado por separado es un paso previo a planificar la ejecucion de ingresos, aunque un miembro del cluster lo ubicaba en planificacion."
+  },
+  {
+    "cluster_members": [
+      "metricas_de_startup",
+      "startup_metrics_diferenciadas"
+    ],
+    "canonical_id": "metricas_de_startup",
+    "losers": [
+      "startup_metrics_diferenciadas"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Métricas de Startup vs Métricas de Empresa Establecida",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Un proyecto en etapa de búsqueda no debe medirse con los estados financieros tradicionales (pérdidas y ganancias, balance, flujo de caja), pensados para negocios que ya ejecutan un modelo conocido. En su lugar, conviene medir el progreso en convertir hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de características resuena con los clientes?, ¿quién es realmente el cliente? A esto se suman unas pocas métricas financieras críticas de supervivencia: la tasa de consumo de caja, los meses de caja restante y el tiempo estimado hasta el punto de equilibrio. Este conjunto de métricas reemplaza o complementa el reporte financiero tradicional en las reuniones de dirección tempranas.",
+      "pasos_accionables": [
+        "Definir junto al equipo o la dirección un tablero de métricas de aprendizaje, en vez de un reporte financiero tradicional",
+        "Medir si el problema del cliente y las características del producto han sido validados en cada iteración",
+        "Rastrear métricas de validación de clientes: tamaño promedio de pedido, valor de vida del cliente, tiempo hasta la primera compra, tasa de cierre",
+        "Monitorear métricas financieras mínimas en cada reunión de dirección: tasa de consumo de caja, meses de caja restante y tiempo estimado hasta el punto de equilibrio"
+      ],
+      "entregable_esperado": "Tablero de métricas de aprendizaje y supervivencia que reemplace o complemente los reportes financieros tradicionales en las reuniones de dirección tempranas",
+      "condiciones_activacion": [
+        "Al preparar reuniones de dirección o junta directiva",
+        "Si los inversionistas piden métricas financieras tradicionales de forma prematura",
+        "Si no hay claridad sobre qué medir para saber si el proyecto avanza"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "priorizar_elementos_a_validar",
+      "priorizar_elementos_validar"
+    ],
+    "canonical_id": "priorizar_elementos_a_validar",
+    "losers": [
+      "priorizar_elementos_validar"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Priorizar Qué Elementos del Modelo de Negocio Validar",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "No es posible validar todas las variables del modelo de negocio a la vez. Usando el lienzo de modelo de negocio como guía, la mayoría de los proyectos deben enfocarse en cuatro elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos. En mercados con múltiples lados (donde hay distintos tipos de actores, como usuarios y quienes pagan), hay que priorizar la validación de cada lado por separado. La clave es identificar las cinco variables -o menos- que realmente determinarán el éxito o el fracaso del negocio, en vez de intentar probarlo todo al mismo tiempo.",
+      "pasos_accionables": [
+        "Revisar el lienzo de modelo de negocio completo",
+        "Identificar las cinco variables críticas -o menos- que determinarán el éxito del negocio",
+        "Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos",
+        "Si es un mercado con múltiples lados, priorizar la validación de cada lado del mercado por separado",
+        "Evitar intentar validar todas las variables del modelo de negocio de forma simultánea"
+      ],
+      "entregable_esperado": "Lista priorizada de cinco hipótesis críticas de negocio, o menos, a validar primero",
+      "condiciones_activacion": [
+        "Cuando el equipo se siente abrumado por la cantidad de variables del modelo de negocio a probar",
+        "Al iniciar la fase de validación de clientes con múltiples hipótesis pendientes"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "prototipado_modelo_negocio",
+      "prototipado_modelos_negocio"
+    ],
+    "canonical_id": "prototipado_modelos_negocio",
+    "losers": [
+      "prototipado_modelo_negocio"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ideacion",
+      "titulo_concepto": "Prototipado de Modelos de Negocio",
+      "fuente": "Business Model Generation (Osterwalder)",
+      "resumen_teorico": "Un prototipo de modelo de negocio no es una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos (al menos tres) en distintos niveles de detalle permite probar escenarios (eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
+      "pasos_accionables": [
+        "Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso",
+        "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, con una verificación básica de los hechos",
+        "Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios",
+        "Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos",
+        "Realizar una prueba de campo con clientes reales para validar la propuesta de valor, los canales y los mecanismos de precio",
+        "Construir al menos tres prototipos distintos antes de elegir cuál refinar y ejecutar, evitando apegarse emocionalmente a uno temprano"
+      ],
+      "entregable_esperado": "Conjunto de al menos tres prototipos de modelo de negocio en distintos niveles de detalle (boceto, lienzo elaborado, caso de negocio), con anotaciones de pros y contras de cada uno, listos para evaluación comparativa",
+      "condiciones_activacion": [
+        "Cuando existen varias ideas de modelo de negocio preseleccionadas y se necesita explorarlas antes de decidir",
+        "Si el equipo tiende a apegarse prematuramente a una única solución sin explorar alternativas",
+        "Cuando se necesita innovar el modelo de negocio en vez de solo mejorar el actual"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "reempaquetado_producto",
+      "reempaquetado_producto_pivot"
+    ],
+    "canonical_id": "reempaquetado_producto",
+    "losers": [
+      "reempaquetado_producto_pivot"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Reempaquetado del Producto (Estrategia de Pivote)",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Estrategia de pivote en la que el núcleo tecnológico del producto es correcto, pero su configuración de venta -empaquetado, modularidad, modelo de suscripción, versiones- no coincide con las preferencias de compra del cliente. Este problema debe detectarse durante el descubrimiento de clientes. En lugar de una reingeniería completa, se reconfiguran las características, el modelo de entrega o el precio: por ejemplo, dividiendo el producto en módulos, ofreciéndolo por suscripción o creando versiones escalonadas de funcionalidad creciente.",
+      "pasos_accionables": [
+        "Identificar si el problema real es de tecnología o de empaquetado y posicionamiento comercial",
+        "Explorar alternativas de empaquetado: módulos, suscripción, versiones escalonadas de funcionalidad",
+        "Validar la nueva configuración con clientes, sin necesidad de rediseñar el producto central",
+        "Actualizar el lienzo de modelo de negocio con el nuevo modelo de entrega o precio"
+      ],
+      "entregable_esperado": "Nueva propuesta de empaquetado o precio del producto, validada con al menos un subconjunto de clientes, sin rediseño del núcleo tecnológico",
+      "condiciones_activacion": [
+        "Cuando la tecnología central es válida pero el mercado no reacciona bien a cómo se vende el producto",
+        "Cuando un paquete monolítico resulta muy caro o complejo de vender",
+        "Si el producto tiene buena tecnología pero baja conversión de compra debido a su forma de venta"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "reunion_pivotar_o_perseverar",
+      "reunion_pivote_perseverar"
+    ],
+    "canonical_id": "reunion_pivotar_o_perseverar",
+    "losers": [
+      "reunion_pivote_perseverar"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Reunión de Pivotar o Perseverar",
+      "fuente": "The Lean Startup - Eric Ries",
+      "resumen_teorico": "La decisión de pivotar es emocionalmente compleja, por lo que conviene institucionalizarla en reuniones regulares y estructuradas -ni muy frecuentes ni muy espaciadas- programadas con anticipación para reducir la carga emocional del momento y asegurar que existan datos relevantes al decidir. Deben participar tanto el equipo de desarrollo de producto como el de liderazgo de negocio, idealmente con asesores externos que aporten una perspectiva objetiva. El equipo de producto debe presentar un reporte completo de los resultados históricos de sus experimentos comparados con las expectativas originales (no solo el último periodo), mientras que el equipo de negocio debe aportar información cualitativa de conversaciones con clientes actuales y potenciales, e investigar líneas alternativas (nuevos segmentos, necesidades no atendidas) antes de decidir.",
+      "pasos_accionables": [
+        "Programar reuniones de pivotar o perseverar con una cadencia regular (semanas o meses, según el ritmo del proyecto), ni muy frecuente ni muy espaciada",
+        "Convocar tanto al equipo de producto como al de negocio, e idealmente a asesores externos",
+        "Preparar un reporte completo de los resultados de los experimentos a lo largo del tiempo, no solo del último periodo, comparándolos contra las expectativas originales",
+        "Recopilar y presentar conversaciones cualitativas con clientes actuales y potenciales",
+        "Investigar líneas de indagación alternativas (nuevos segmentos, necesidades no atendidas) antes de decidir",
+        "Tomar la decisión con base en los datos objetivos presentados, no solo en emociones, miedo o métricas de vanidad"
+      ],
+      "entregable_esperado": "Un calendario de reuniones de pivotar o perseverar, junto con un reporte estructurado de métricas históricas frente a expectativas, evidencia cualitativa de clientes, y un acta de la decisión tomada",
+      "condiciones_activacion": [
+        "Si los experimentos de producto muestran rendimientos decrecientes",
+        "Si el equipo siente que el desarrollo de producto debería ser más productivo",
+        "Cuando se necesita evaluar objetivamente si continuar con la estrategia actual",
+        "Cuando el proyecto no tiene un proceso formal para decidir cambios de rumbo",
+        "Si el miedo o la vanidad de las métricas está impidiendo una decisión objetiva"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "spiral_development",
+      "spiral_development_build_test_feedback"
+    ],
+    "canonical_id": "spiral_development",
+    "losers": [
+      "spiral_development_build_test_feedback"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "ejecucion",
+      "titulo_concepto": "Desarrollo en Espiral (Spiral Development)",
+      "fuente": "Winning at New Products - Robert G. Cooper",
+      "resumen_teorico": "Los clientes no siempre saben lo que quieren hasta que lo ven o lo experimentan. Por eso, en vez de seguir un proceso de desarrollo lineal y rígido, conviene usar un enfoque en espiral: múltiples ciclos iterativos de construir, probar, recibir retroalimentación y revisar, presentando versiones sucesivas y cada vez más completas del producto al cliente durante todo el desarrollo, no solo al inicio y al final. Se empieza con una versión rápida y económica -no un prototipo totalmente terminado- y se repite el ciclo (en promedio de tres a cuatro veces en negocios entre empresas, hasta quince veces en procesos de diseño muy iterativos) hasta llegar a pruebas de campo formales. A diferencia de los ciclos ágiles, que se miden en semanas, en el desarrollo en espiral se miden en meses, aunque comparten la misma lógica de validación temprana y frecuente.",
+      "pasos_accionables": [
+        "Diseñar el proceso de desarrollo como una serie de ciclos iterativos, en vez de un camino lineal",
+        "Crear una versión rápida y económica del producto -no el prototipo final- para mostrarla al cliente lo antes posible",
+        "Recoger retroalimentación confirmatoria de los primeros usuarios después de cada iteración",
+        "Revisar el producto incorporando esa retroalimentación antes de la siguiente iteración",
+        "Repetir el ciclo varias veces (de tres a cuatro versiones en promedio, hasta quince en procesos de diseño muy iterativos) hasta llegar a pruebas de campo formales",
+        "Mantener el contacto con el cliente durante toda la etapa de desarrollo y pruebas, no solo al inicio y al final",
+        "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto"
+      ],
+      "entregable_esperado": "Serie documentada de al menos tres o cuatro versiones iterativas del producto, validadas con clientes reales en cada ciclo, culminando en un producto final probado en campo",
+      "condiciones_activacion": [
+        "Cuando el mercado es dinámico y las necesidades del cliente son fluidas o inciertas",
+        "Si el equipo sigue un proceso lineal rígido y descubre tarde que el producto no cumple expectativas",
+        "Durante toda la etapa de desarrollo y pruebas del producto",
+        "Cuando se requiere reducir el riesgo de tener que rehacer el trabajo después del desarrollo completo"
+      ]
+    },
+    "notes": "fase_proyecto elegida: ejecucion, ya que el desarrollo en espiral describe el proceso de construccion iterativa del producto en si (etapa de Desarrollo y Testing), aunque un miembro del cluster lo ubicaba en validacion."
+  },
+  {
+    "cluster_members": [
+      "validar_posicionamiento_analistas",
+      "validar_posicionamiento_con_analistas"
+    ],
+    "canonical_id": "validar_posicionamiento_con_analistas",
+    "losers": [
+      "validar_posicionamiento_analistas"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Validar Posicionamiento con Analistas e Influenciadores",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "Los analistas de la industria y las personas con influencia (por ejemplo, en firmas de análisis reconocidas) aportan credibilidad externa valiosa, especialmente en mercados técnicos donde su respaldo puede facilitar las ventas a grandes empresas. Antes de escalar el negocio, conviene reunirse con ellos para validar el posicionamiento del producto y la empresa -no para venderles- y obtener retroalimentación experta sobre el ajuste con el mercado, la comparación con la competencia y los precios, usando esas reuniones además como referencia futura en relaciones con prensa.",
+      "pasos_accionables": [
+        "Identificar a los analistas e influenciadores relevantes, rastreados desde el descubrimiento de clientes",
+        "Investigar qué compañías e industrias cubre cada analista antes de contactarlo",
+        "Desarrollar un guion breve explicando por qué deberían reunirse contigo",
+        "Preguntar de antemano cuánto tiempo asignarán y qué formato de presentación prefieren",
+        "Preparar una presentación enfocada en el posicionamiento de mercado y producto, no en la venta",
+        "Documentar la visión que cada analista tiene de su mercado antes de la reunión",
+        "Recabar y registrar retroalimentación sobre ajuste de mercado, competencia y precios en un reporte de inteligencia de mercado"
+      ],
+      "entregable_esperado": "Reporte de inteligencia de mercado con la retroalimentación de analistas e influenciadores clave sobre posicionamiento, producto, competencia y precios, usable como referencia futura",
+      "condiciones_activacion": [
+        "Cuando el posicionamiento de producto y empresa ya están definidos y se busca validación externa antes de escalar",
+        "Cuando la empresa ya tiene clientes reales y necesita validar el posicionamiento antes de escalar"
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "cluster_members": [
+      "verificar_clientes_y_canales",
+      "verificar_conocimiento_clientes"
+    ],
+    "canonical_id": "verificar_clientes_y_canales",
+    "losers": [
+      "verificar_conocimiento_clientes"
+    ],
+    "canonical_data": {
+      "fase_proyecto": "validacion",
+      "titulo_concepto": "Verificar Quiénes Son los Clientes y Cómo Alcanzarlos",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
+      "resumen_teorico": "No basta con saber que existen clientes interesados: hay que confirmar que se les puede identificar, encontrar y vender de forma rentable. Esto implica dibujar arquetipos de cliente para cada segmento clave, construir un 'día en la vida' del cliente antes y después del producto, mapear el canal completo desde la empresa hasta el usuario final con sus costos y roles en cada paso, y medir el costo real -todo incluido- de adquirir o activar un grupo de clientes, para saber si los programas de adquisición son rentables y si escalan de forma lineal.",
+      "pasos_accionables": [
+        "Dibujar un arquetipo de cliente para cada segmento clave",
+        "Crear un 'día en la vida' del cliente antes y después del producto",
+        "Mapear el canal completo desde la empresa hasta el usuario final, con costos y roles en cada paso",
+        "Medir el costo real, todo incluido, de adquirir o activar un grupo de clientes (por ejemplo, 50 clientes)",
+        "Identificar qué programas de adquisición son más rentables y si escalan linealmente",
+        "Actualizar el modelo de negocio con los costos de adquisición reales descubiertos"
+      ],
+      "entregable_esperado": "Arquetipos de cliente, mapa de canal con costos, y actualización del lienzo de modelo de negocio con los costos de adquisición reales medidos",
+      "condiciones_activacion": [
+        "Cuando ya se validó que existe demanda, pero falta confirmar el mecanismo de alcance a los clientes",
+        "Antes de aumentar el presupuesto de marketing o ventas"
+      ]
+    },
+    "notes": ""
+  }
+]

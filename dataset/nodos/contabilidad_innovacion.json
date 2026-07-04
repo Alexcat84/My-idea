@@ -1,22 +1,36 @@
 {
-  "node_id": "contabilidad_innovacion",
   "fase_proyecto": "validacion",
-  "titulo_concepto": "Contabilidad de Innovación (Innovation Accounting)",
+  "titulo_concepto": "Contabilidad de la Innovación (Innovation Accounting)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Sistema alternativo a la contabilidad tradicional diseñado específicamente para evaluar el progreso de startups, que operan bajo condiciones de incertidumbre extrema. A diferencia de la contabilidad tradicional (que juzga con los mismos estándares que empresas establecidas), este sistema requiere mantener un modelo financiero cuantitativo que evolucione con el aprendizaje real obtenido de clientes, ayudando a diferenciar el crecimiento genuino ('true innovators') del crecimiento aparente sin creación de valor real ('success theater').",
+  "resumen_teorico": "Sistema de medición pensado específicamente para proyectos que operan bajo incertidumbre extrema, que reemplaza a la contabilidad tradicional (diseñada para negocios con un historial estable). Permite demostrar de forma objetiva y cuantitativa si se está generando aprendizaje real y progreso genuino, en vez de depender de narrativas subjetivas u optimismo sin sustento. Funciona en tres pasos: convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo; usar un producto mínimo viable para establecer una línea base con datos reales, no proyecciones; y diseñar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio, evaluando si el cambio produce una mejora real y no solo una coincidencia. El sistema también ayuda a distinguir el crecimiento que crea valor genuino del crecimiento aparente sin sustancia (métricas que suben sin que el negocio mejore de verdad).",
   "pasos_accionables": [
-    "Establecer un modelo financiero cuantitativo inicial basado en hipótesis (aunque sea intuitivo al inicio)",
-    "Definir métricas que reflejen aprendizaje validado, no solo vanidad (ej: usuarios registrados sin uso real)",
-    "Actualizar el modelo financiero conforme se obtienen datos reales de clientes",
-    "Usar el modelo para distinguir entre crecimiento que crea valor real y crecimiento artificial (success theater)"
+    "Convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo (línea base), aunque al inicio sea intuitivo",
+    "Usar un producto mínimo viable para establecer datos reales de partida, no proyecciones",
+    "Identificar los impulsores de crecimiento específicos del modelo de negocio (por ejemplo: rentabilidad por cliente, costo de adquisición, tasa de recompra)",
+    "Diseñar y ejecutar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio",
+    "Evaluar si los cambios generan una mejora real y medible, y no solo una coincidencia",
+    "Definir métricas que reflejen aprendizaje validado y no solo vanidad (por ejemplo, usuarios registrados sin uso real)",
+    "Con base en los datos obtenidos, decidir si perseverar, pivotar o abandonar la estrategia actual"
   ],
-  "entregable_esperado": "Modelo financiero cuantitativo actualizado con métricas de aprendizaje validado",
-  "nodos_previos": [
-    "producto_minimo_viable"
-  ],
-  "nodos_siguientes": [],
+  "entregable_esperado": "Modelo financiero cuantitativo con métricas base (línea base) y un sistema de experimentos con métricas de aprendizaje, que permita justificar ante el equipo e inversionistas decisiones de perseverar o pivotar",
   "condiciones_activacion": [
-    "Cuando la startup necesita evaluar si su crecimiento es genuino o solo apariencia (success theater)",
-    "Si se necesita justificar decisiones de pivote o perseverancia con datos objetivos"
+    "Cuando el equipo no puede demostrar objetivamente si está progresando o solo contando historias optimistas",
+    "Cuando inversionistas o el equipo exigen rendición de cuentas sobre el progreso real del proyecto",
+    "Cuando se necesita distinguir si el crecimiento es genuino o solo apariencia",
+    "Si el proyecto tiene un modelo de negocio con suposiciones no probadas"
+  ],
+  "node_id": "contabilidad_innovacion",
+  "nodos_previos": [
+    "producto_minimo_viable",
+    "concierge_mvp",
+    "wizard_of_oz_testing",
+    "riesgos_lanzamiento_mvp",
+    "leap_of_faith_assumptions"
+  ],
+  "nodos_siguientes": [
+    "pivote_startup",
+    "motor_de_crecimiento",
+    "pivotar_o_perseverar",
+    "metricas_accionables"
   ]
 }

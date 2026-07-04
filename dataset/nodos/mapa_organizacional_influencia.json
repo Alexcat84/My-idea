@@ -1,23 +1,28 @@
 {
-  "node_id": "mapa_organizacional_influencia",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Mapa Organizacional y de Influencia",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Ningún cliente decide en aislamiento. Este mapa lista a las personas que podrían influir en la decisión de compra del cliente y dibuja un diagrama tentativo del cliente prospecto rodeado de todas las influencias (colegas, familia, amigos). También representa el impacto del producto en el día a día del cliente y su entorno.",
+  "resumen_teorico": "Ningún cliente decide en aislamiento. Este mapa lista y dibuja a todas las personas que rodean e influyen en la decisión de compra de un cliente -colegas, jefes, familia, amigos, proveedores-, tanto en contextos de consumo como empresariales, para visualizar la complejidad real detrás de cada venta. También representa el impacto del producto en el día a día del cliente y de su entorno, y se actualiza a medida que se descubren nuevos actores relevantes.",
   "pasos_accionables": [
-    "Listar todas las personas que rodean e influyen al cliente objetivo",
-    "Dibujar un diagrama de influencias (colegas, familia, jefes, proveedores)",
-    "Representar el impacto del producto en la vida diaria de cada nodo del mapa",
-    "Actualizar el Business Model Canvas con estos hallazgos"
+    "Listar a todas las personas que rodean e influyen en la decisión de compra del cliente objetivo",
+    "Dibujar un diagrama tentativo de relaciones e influencias (colegas, jefes, familia, amigos, proveedores)",
+    "Representar el impacto del producto en la vida diaria o laboral de cada persona del mapa",
+    "Actualizar el mapa a medida que se descubren nuevos actores relevantes",
+    "Actualizar el lienzo de modelo de negocio con estos hallazgos"
   ],
-  "entregable_esperado": "Diagrama visual de mapa organizacional/de influencia del segmento de clientes",
+  "entregable_esperado": "Diagrama visual del mapa organizacional y de influencia del segmento de cliente, actualizado conforme se descubren nuevos actores",
+  "condiciones_activacion": [
+    "Cuando se vende a organizaciones grandes o complejas con múltiples personas involucradas en la decisión",
+    "Si hay múltiples actores desconocidos en el proceso de compra"
+  ],
+  "node_id": "mapa_organizacional_influencia",
   "nodos_previos": [
-    "dia_en_la_vida_del_cliente"
+    "dia_en_la_vida_del_cliente",
+    "customer_types_mapping"
   ],
   "nodos_siguientes": [
-    "hipotesis_de_canales"
-  ],
-  "condiciones_activacion": [
-    "Cuando se vende a organizaciones grandes o complejas con múltiples stakeholders"
+    "hipotesis_de_canales",
+    "channels_hypothesis_web_mobile",
+    "channels_hypothesis_physical"
   ]
 }

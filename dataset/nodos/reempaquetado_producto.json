@@ -1,25 +1,27 @@
 {
-  "node_id": "reempaquetado_producto",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Reempaquetado del Producto (Estrategia de Pivote)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Estrategia de pivote donde el núcleo tecnológico del producto es correcto, pero su configuración de venta (empaquetado, modularidad, modelo de suscripción, versiones) no coincide con las preferencias de compra del cliente. En lugar de reingeniería completa, se reconfiguran las características o el modelo de entrega/precio.",
+  "resumen_teorico": "Estrategia de pivote en la que el núcleo tecnológico del producto es correcto, pero su configuración de venta -empaquetado, modularidad, modelo de suscripción, versiones- no coincide con las preferencias de compra del cliente. Este problema debe detectarse durante el descubrimiento de clientes. En lugar de una reingeniería completa, se reconfiguran las características, el modelo de entrega o el precio: por ejemplo, dividiendo el producto en módulos, ofreciéndolo por suscripción o creando versiones escalonadas de funcionalidad creciente.",
   "pasos_accionables": [
-    "Identificar si el problema es de tecnología o de empaquetado/posicionamiento comercial",
-    "Explorar alternativas de empaquetado: módulos, suscripción, versiones escalonadas",
-    "Validar la nueva configuración con clientes sin requerir reingeniería del producto",
-    "Actualizar el Business Model Canvas con el nuevo modelo de entrega"
+    "Identificar si el problema real es de tecnología o de empaquetado y posicionamiento comercial",
+    "Explorar alternativas de empaquetado: módulos, suscripción, versiones escalonadas de funcionalidad",
+    "Validar la nueva configuración con clientes, sin necesidad de rediseñar el producto central",
+    "Actualizar el lienzo de modelo de negocio con el nuevo modelo de entrega o precio"
   ],
-  "entregable_esperado": "Nueva propuesta de empaquetado/pricing del producto validada con al menos un subconjunto de clientes",
+  "entregable_esperado": "Nueva propuesta de empaquetado o precio del producto, validada con al menos un subconjunto de clientes, sin rediseño del núcleo tecnológico",
+  "condiciones_activacion": [
+    "Cuando la tecnología central es válida pero el mercado no reacciona bien a cómo se vende el producto",
+    "Cuando un paquete monolítico resulta muy caro o complejo de vender",
+    "Si el producto tiene buena tecnología pero baja conversión de compra debido a su forma de venta"
+  ],
+  "node_id": "reempaquetado_producto",
   "nodos_previos": [
-    "categorias_entusiasmo_cliente"
+    "categorias_entusiasmo_cliente",
+    "actualizar_business_model_canvas_discovery"
   ],
   "nodos_siguientes": [
     "actualizar_business_model_canvas_tuneup",
-    "reempaquetado_producto_pivot"
-  ],
-  "condiciones_activacion": [
-    "Cuando la tecnología central es válida pero el mercado no reacciona bien a cómo se vende el producto",
-    "Cuando un paquete monolítico resulta muy caro o complejo de vender"
+    "verificar_product_market_fit"
   ]
 }

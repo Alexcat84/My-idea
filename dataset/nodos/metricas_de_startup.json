@@ -1,24 +1,27 @@
 {
-  "node_id": "metricas_de_startup",
   "fase_proyecto": "validacion",
   "titulo_concepto": "Métricas de Startup vs Métricas de Empresa Establecida",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Las startups no deben medirse con P&L, balance y flujo de caja tradicionales, sino con métricas que rastreen la conversión de hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de features resuena con clientes?, ¿quién es realmente el cliente? Además se deben monitorear pocas métricas financieras críticas: tasa de quema de caja, meses de caja restante y tiempo hasta el punto de equilibrio.",
+  "resumen_teorico": "Un proyecto en etapa de búsqueda no debe medirse con los estados financieros tradicionales (pérdidas y ganancias, balance, flujo de caja), pensados para negocios que ya ejecutan un modelo conocido. En su lugar, conviene medir el progreso en convertir hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de características resuena con los clientes?, ¿quién es realmente el cliente? A esto se suman unas pocas métricas financieras críticas de supervivencia: la tasa de consumo de caja, los meses de caja restante y el tiempo estimado hasta el punto de equilibrio. Este conjunto de métricas reemplaza o complementa el reporte financiero tradicional en las reuniones de dirección tempranas.",
   "pasos_accionables": [
-    "Definir un dashboard de métricas de aprendizaje (no un P&L tradicional)",
-    "Medir validación de problema y producto en cada iteración",
-    "Rastrear métricas de validación de clientes: tamaño de pedido, valor de vida del cliente, tasa de cierre",
-    "Monitorear cash-burn rate y meses de caja restante en cada reunión de directorio"
+    "Definir junto al equipo o la dirección un tablero de métricas de aprendizaje, en vez de un reporte financiero tradicional",
+    "Medir si el problema del cliente y las características del producto han sido validados en cada iteración",
+    "Rastrear métricas de validación de clientes: tamaño promedio de pedido, valor de vida del cliente, tiempo hasta la primera compra, tasa de cierre",
+    "Monitorear métricas financieras mínimas en cada reunión de dirección: tasa de consumo de caja, meses de caja restante y tiempo estimado hasta el punto de equilibrio"
   ],
-  "entregable_esperado": "Dashboard de métricas de startup reemplazando reportes financieros tradicionales en reuniones de junta",
+  "entregable_esperado": "Tablero de métricas de aprendizaje y supervivencia que reemplace o complemente los reportes financieros tradicionales en las reuniones de dirección tempranas",
+  "condiciones_activacion": [
+    "Al preparar reuniones de dirección o junta directiva",
+    "Si los inversionistas piden métricas financieras tradicionales de forma prematura",
+    "Si no hay claridad sobre qué medir para saber si el proyecto avanza"
+  ],
+  "node_id": "metricas_de_startup",
   "nodos_previos": [
-    "determinar_tipo_de_mercado"
+    "determinar_tipo_de_mercado",
+    "market_type_definicion"
   ],
   "nodos_siguientes": [
-    "decisiones_rapidas_reversibles"
-  ],
-  "condiciones_activacion": [
-    "Al preparar reuniones de directorio",
-    "Si los inversionistas piden métricas financieras tradicionales prematuramente"
+    "decisiones_rapidas_reversibles",
+    "decisiones_reversibles_irreversibles"
   ]
 }
