@@ -13,12 +13,12 @@
   ],
   "entregable_esperado": "Scorecard aplicado con Project Attractiveness Score calculado para cada proyecto en evaluación",
   "nodos_previos": [
-    "stage_gate_process",
+    "testing_process_completo",
     "data_integrity_forecasting"
   ],
   "nodos_siguientes": [
     "revision_portafolio_periodica",
-    "strategic_roadmap"
+    "product_roadmap_estrategico"
   ],
   "condiciones_activacion": [
     "Cuando los datos financieros son poco confiables en las primeras etapas del proyecto",

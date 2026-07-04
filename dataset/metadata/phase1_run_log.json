@@ -1,0 +1,3057 @@
+{
+  "ascii_renames": [
+    {
+      "old_id": "aceptar_la_imperfeccion_del_diseño",
+      "new_id": "aceptar_la_imperfeccion_del_diseno"
+    },
+    {
+      "old_id": "adherence_loop_diseño_temporal",
+      "new_id": "adherence_loop_diseno_temporal"
+    },
+    {
+      "old_id": "cliente_diseña_producto",
+      "new_id": "cliente_disena_producto"
+    },
+    {
+      "old_id": "diseñar_los_detalles_no_lo_inevitable",
+      "new_id": "disenar_los_detalles_no_lo_inevitable"
+    },
+    {
+      "old_id": "diseño_de_desafios_de_innovacion",
+      "new_id": "diseno_de_desafios_de_innovacion"
+    },
+    {
+      "old_id": "diseño_en_la_cuarta_dimension",
+      "new_id": "diseno_en_la_cuarta_dimension"
+    },
+    {
+      "old_id": "diseño_etico_de_privacidad",
+      "new_id": "diseno_etico_de_privacidad"
+    },
+    {
+      "old_id": "diseño_para_reuso_responsable",
+      "new_id": "diseno_para_reuso_responsable"
+    },
+    {
+      "old_id": "diseño_reparabilidad_cultura_arreglo",
+      "new_id": "diseno_reparabilidad_cultura_arreglo"
+    },
+    {
+      "old_id": "evitar_parálisis_por_analisis",
+      "new_id": "evitar_paralisis_por_analisis"
+    },
+    {
+      "old_id": "falacia_del_diseñador_affordances",
+      "new_id": "falacia_del_disenador_affordances"
+    },
+    {
+      "old_id": "sueños_completos_diseño_responsable",
+      "new_id": "suenos_completos_diseno_responsable"
+    }
+  ],
+  "merge_redirects": [
+    {
+      "node": "acquisicion_viral_engineering",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "analisis_entorno_modelo_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "aprendizaje_validado_vs_metricas_vanidad",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "blue_ocean_four_actions",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "build_measure_learn",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "business_model_canvas_como_scorecard",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "business_model_canvas_vs_plan",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "business_model_environment_mapping",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "busqueda_vs_ejecucion",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "catalogo_pivotes",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "ciclo_crear_medir_aprender",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "contabilidad_innovacion_pivote",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "create_a_concept",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_acquisition_activation_web",
+      "key": "nodos_previos",
+      "from": "mvp_minimo_viable",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "customer_development_vs_business_plan",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_development_weekly_lessons_learned",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_discovery_get_out_of_building",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_discovery_get_out_of_building",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_mvp",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "customer_discovery_overview",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_discovery_overview",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "customer_retention_metrics_webmobile",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_scenarios_business_model",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_segments_hypothesis",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "customer_validation_sales_roadmap",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_mvp",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "earlyvangelists",
+      "key": "nodos_siguientes",
+      "from": "mvp_minimo_viable",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "earlyvangelists_identificacion",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_mvp",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "earlyvangelists_ventas_tempranas",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "embudo_get_keep_grow",
+      "key": "nodos_previos",
+      "from": "mvp_minimo_viable",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "empathy_map",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "epicentros_innovacion_modelo_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "evaluacion_amazon_case",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "evitar_pseudociencia_producto",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "experiment_library",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "fases_customer_discovery",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "fases_customer_discovery",
+      "key": "nodos_siguientes",
+      "from": "producto_minimo_viable_mvp",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "filosofia_customer_validation",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "four_actions_framework_lado_cliente",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "future_scenarios_planning",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "genchi_gembutsu",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "get_customers_funnel_webmobile",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_mvp",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "get_out_of_the_building",
+      "key": "nodos_siguientes",
+      "from": "mvp_minimo_viable",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "hablar_con_clientes_desmontar_supuestos",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "herramientas_de_activacion_web",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "hipotesis_propuesta_de_valor_producto",
+      "key": "nodos_siguientes",
+      "from": "producto_minimo_viable_mvp",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "hipotesis_relacion_clientes_web",
+      "key": "nodos_siguientes",
+      "from": "mvp_minimo_viable",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "ideation_process",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "identificar_junta_asesores",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "innovation_accounting_framework",
+      "key": "nodos_previos",
+      "from": "mvp_minimo_viable",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "key_resources_hypothesis",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "lean_launchpad_web_startup_process",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "leap_of_faith_assumptions",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "long_tail_pattern",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "mapa_flujo_trabajo_cliente",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "modelo_customer_development",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "motor_crecimiento_pago",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "motor_crecimiento_viral",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "multi_sided_platform_pattern",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "multi_sided_platforms",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "mvp_alta_fidelidad",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "obstaculos_innovacion_modelo_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "open_business_models",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "organizaciones_ambidiestras",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "patron_free_business_model",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "pensamiento_visual_modelos_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "pivot_como_hipotesis_estrategica",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "plan_de_adquisicion_acquire",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "priorizar_elementos_a_validar",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "priorizar_elementos_validar",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "problem_solution_fit",
+      "key": "nodos_previos",
+      "from": "mvp_minimo_viable",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "proceso_ideacion_modelo_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "project_charter",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "prototipado_modelos_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "prototipado_organizacional_estrategico",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "rapid_prototyping",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "reinvencion_constante",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "resegmentacion_mercado_nicho_bajo_costo",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "resource_assessment",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_hcd",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "revalidar_modelo_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "revenue_pricing_hypothesis",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "sales_roadmap_vs_sales_force",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "search_for_business_model",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "split_testing_experimentos_ab",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "startup_como_busqueda_vs_ejecucion",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "storyboard_prototipado",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "storytelling_modelo_negocio",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "swot_business_model_canvas",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "test_ab_precio",
+      "key": "nodos_siguientes",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "testear_circulo_cuadrado_rectangulo",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "tipo_de_mercado_estrategia_competitiva",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "trabajo_en_lotes_pequenos",
+      "key": "nodos_previos",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "unbundling_business_models",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "unique_selling_proposition_statement",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "valor_vs_desperdicio",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_discovery",
+      "to": "producto_minimo_viable"
+    },
+    {
+      "node": "value_proposition_canvas",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "war_room_pivot_proceed",
+      "key": "nodos_previos",
+      "from": "business_model_canvas_ideo",
+      "to": "lienzo_modelo_negocio"
+    },
+    {
+      "node": "waterfall_vs_agile_development",
+      "key": "nodos_siguientes",
+      "from": "minimum_viable_product_mvp",
+      "to": "producto_minimo_viable"
+    }
+  ],
+  "alias_redirects": [
+    {
+      "node": "ab_testing_optimizacion",
+      "key": "nodos_previos",
+      "from": "customer_relationship_hypotheses",
+      "alias_target": "customer_jobs",
+      "resolved_to": "customer_jobs",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "abrazar_la_incomodidad",
+      "key": "nodos_previos",
+      "from": "investigacion_contextual",
+      "alias_target": "investigacion_analoga",
+      "resolved_to": "investigacion_analoga",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "abrazar_la_incomodidad",
+      "key": "nodos_previos",
+      "from": "empatia_usuario",
+      "alias_target": "empatia_capas_de_comprension",
+      "resolved_to": "empatia_capas_de_comprension",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "abrazar_la_incomodidad",
+      "key": "nodos_siguientes",
+      "from": "reencuadre_problema",
+      "alias_target": "problem_recognition_scale",
+      "resolved_to": "problem_recognition_scale",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "abrazar_los_bordes_de_la_conciencia",
+      "key": "nodos_siguientes",
+      "from": "definicion_problema_diseno_centrado_humano",
+      "alias_target": "diseno_para_ia_centrada_en_humano",
+      "resolved_to": "diseno_para_ia_centrada_en_humano",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "aceleracion_de_gates",
+      "key": "nodos_previos",
+      "from": "stage_gate_scorecards",
+      "alias_target": "scorecards_criterios_gate",
+      "resolved_to": "scorecards_criterios_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "aceptar_la_imperfeccion_del_dise_o",
+      "key": "nodos_siguientes",
+      "from": "gestion_riesgos_proyecto",
+      "alias_target": "plan_gestion_riesgos",
+      "resolved_to": "plan_gestion_riesgos",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "aceptar_la_imperfeccion_del_diseno",
+      "key": "nodos_siguientes",
+      "from": "gestion_riesgos_proyecto",
+      "alias_target": "plan_gestion_riesgos",
+      "resolved_to": "plan_gestion_riesgos",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "activity_duration_estimates",
+      "key": "nodos_siguientes",
+      "from": "schedule_baseline",
+      "alias_target": "linea_base_costos",
+      "resolved_to": "linea_base_costos",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "afinar_frente_difuso_innovacion",
+      "key": "nodos_siguientes",
+      "from": "business_case_robusto",
+      "alias_target": "etapa_build_business_case",
+      "resolved_to": "etapa_build_business_case",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "agile_stage_gate_hibrido",
+      "key": "nodos_previos",
+      "from": "proceso_stage_gate_tradicional",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "analisis_flujo_de_valor",
+      "key": "nodos_previos",
+      "from": "stage_gate_tradicional",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "analisis_y_sintesis",
+      "key": "nodos_siguientes",
+      "from": "definicion_de_brief",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "analogos_antilogos",
+      "key": "nodos_previos",
+      "from": "formulacion_idea_negocio",
+      "alias_target": "alineacion_ti_negocio",
+      "resolved_to": "alineacion_ti_negocio",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "anticipar_consecuencias_negativas",
+      "key": "nodos_previos",
+      "from": "definicion_vision_proyecto",
+      "alias_target": "definicion_producto_proyecto",
+      "resolved_to": "definicion_producto_proyecto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "antigoals_framework",
+      "key": "nodos_siguientes",
+      "from": "fail_safes_diseno",
+      "alias_target": "diseno_experimentos_pass_fail",
+      "resolved_to": "diseno_experimentos_pass_fail",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "aprender_desde_el_amor_empatia",
+      "key": "nodos_siguientes",
+      "from": "empatia_field_guide_ideo",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "aprendizaje_validado",
+      "key": "nodos_previos",
+      "from": "formulacion_hipotesis_negocio",
+      "alias_target": "sintesis_hipotesis_modelo_negocio",
+      "resolved_to": "sintesis_hipotesis_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "arenas_estrategicas",
+      "key": "nodos_siguientes",
+      "from": "ideacion_busqueda_oportunidades",
+      "alias_target": "busqueda_vs_ejecucion",
+      "resolved_to": "busqueda_vs_ejecucion",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "asignacion_agil_de_recursos",
+      "key": "nodos_previos",
+      "from": "design_thinking_como_mentalidad_organizacional",
+      "alias_target": "design_thinking_proceso",
+      "resolved_to": "design_thinking_proceso",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "asignacion_agil_de_recursos",
+      "key": "nodos_siguientes",
+      "from": "gestion_de_cartera_de_innovacion",
+      "alias_target": "ways_to_grow_matrix",
+      "resolved_to": "ways_to_grow_matrix",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "assumption_and_constraint_log",
+      "key": "nodos_siguientes",
+      "from": "risk_register",
+      "alias_target": "stakeholder_register",
+      "resolved_to": "stakeholder_register",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "assumption_constraint_log",
+      "key": "nodos_siguientes",
+      "from": "risk_register",
+      "alias_target": "stakeholder_register",
+      "resolved_to": "stakeholder_register",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "backlog_evolutivo_y_cronograma_flexible",
+      "key": "nodos_previos",
+      "from": "stage_gate_tradicional",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "backlog_evolutivo_y_cronograma_flexible",
+      "key": "nodos_previos",
+      "from": "vision_producto_inicial",
+      "alias_target": "vision_estrategia_producto_pivote",
+      "resolved_to": "vision_estrategia_producto_pivote",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "backlog_evolutivo_y_cronograma_flexible",
+      "key": "nodos_siguientes",
+      "from": "sprint_iterativo_de_desarrollo",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "backlog_evolutivo_y_cronograma_flexible",
+      "key": "nodos_siguientes",
+      "from": "gate_de_aprobacion_desarrollo",
+      "alias_target": "stage_gate_td_tecnologia",
+      "resolved_to": "stage_gate_td_tecnologia",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "biblioteca_experimentos_validacion",
+      "key": "nodos_siguientes",
+      "from": "iteracion_producto",
+      "alias_target": "cliente_diseña_producto",
+      "resolved_to": "cliente_disena_producto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "bundle_ideas",
+      "key": "nodos_previos",
+      "from": "brainstorm",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "bundle_ideas",
+      "key": "nodos_previos",
+      "from": "find_themes",
+      "alias_target": "identificar_brechas_gaps",
+      "resolved_to": "identificar_brechas_gaps",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "business_model_canvas_como_scorecard",
+      "key": "nodos_siguientes",
+      "from": "experimentos_de_validacion_de_problema",
+      "alias_target": "biblioteca_experimentos_validacion",
+      "resolved_to": "biblioteca_experimentos_validacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "business_model_environment_mapping",
+      "key": "nodos_siguientes",
+      "from": "evaluacion_modelos_negocio",
+      "alias_target": "caso_taobao_evolucion_modelo",
+      "resolved_to": "caso_taobao_evolucion_modelo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "business_plan_cinco_secciones",
+      "key": "nodos_previos",
+      "from": "swot_por_bloque_de_construccion",
+      "alias_target": "canales_distribucion",
+      "resolved_to": "canales_distribucion",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "business_plan_cinco_secciones",
+      "key": "nodos_siguientes",
+      "from": "hoja_de_ruta_de_implementacion",
+      "alias_target": "plan_de_implementacion_de_venta",
+      "resolved_to": "plan_de_implementacion_de_venta",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "business_plan_cinco_secciones",
+      "key": "nodos_siguientes",
+      "from": "analisis_de_riesgos_del_modelo",
+      "alias_target": "analisis_entorno_modelo_negocio",
+      "resolved_to": "analisis_entorno_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "calidad_de_ejecucion_proceso_innovacion",
+      "key": "nodos_previos",
+      "from": "ideacion_de_producto",
+      "alias_target": "estrategia_de_innovacion_de_producto",
+      "resolved_to": "estrategia_de_innovacion_de_producto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "case_study_sistema_servicio_completo",
+      "key": "nodos_previos",
+      "from": "inmersion_inspiracion",
+      "alias_target": "metodologia_deep_dive",
+      "resolved_to": "metodologia_deep_dive",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "case_study_sistema_servicio_completo",
+      "key": "nodos_siguientes",
+      "from": "implementacion_piloto_a_escala",
+      "alias_target": "fase_implementacion_modelo",
+      "resolved_to": "fase_implementacion_modelo",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "ciclo_circunstancias_sentimientos_ideas",
+      "key": "nodos_previos",
+      "from": "empatia_field_guide_ideo",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "ciclo_circunstancias_sentimientos_ideas",
+      "key": "nodos_siguientes",
+      "from": "prototipado_emocional",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "clima_positivo_innovacion",
+      "key": "nodos_previos",
+      "from": "estrategia_innovacion_empresa",
+      "alias_target": "estrategia_de_innovacion_arenas",
+      "resolved_to": "estrategia_de_innovacion_arenas",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "co_creation_session",
+      "key": "nodos_previos",
+      "from": "interview",
+      "alias_target": "customer_journey_mapping",
+      "resolved_to": "customer_journey_mapping",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "co_creation_session",
+      "key": "nodos_previos",
+      "from": "brainstorm",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "co_creation_session",
+      "key": "nodos_siguientes",
+      "from": "get_feedback",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "conocimiento_local_colaboracion",
+      "key": "nodos_siguientes",
+      "from": "modelo_negocio_sostenible_social",
+      "alias_target": "lienzo_modelo_negocio",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "contractor_status_report",
+      "key": "nodos_previos",
+      "from": "contrato_firmado",
+      "alias_target": "contract_close_out",
+      "resolved_to": "contract_close_out",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "convertir_necesidad_en_demanda",
+      "key": "nodos_siguientes",
+      "from": "prototipado_para_pensar",
+      "alias_target": "storyboard_prototipado",
+      "resolved_to": "storyboard_prototipado",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "copy_testing",
+      "key": "nodos_previos",
+      "from": "value_proposition_design",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "cost_management_plan",
+      "key": "nodos_siguientes",
+      "from": "activity_cost_estimates",
+      "alias_target": "activity_duration_estimates",
+      "resolved_to": "activity_duration_estimates",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "cost_management_plan",
+      "key": "nodos_siguientes",
+      "from": "risk_register",
+      "alias_target": "stakeholder_register",
+      "resolved_to": "stakeholder_register",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "create_a_concept",
+      "key": "nodos_previos",
+      "from": "create_frameworks",
+      "alias_target": "antigoals_framework",
+      "resolved_to": "antigoals_framework",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "cronograma_proyecto",
+      "key": "nodos_previos",
+      "from": "plan_gestion_cronograma",
+      "alias_target": "plan_gestion_costos",
+      "resolved_to": "plan_gestion_costos",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "cronograma_proyecto",
+      "key": "nodos_siguientes",
+      "from": "presupuesto_proyecto",
+      "alias_target": "presupuesto_agil_innovacion",
+      "resolved_to": "presupuesto_agil_innovacion",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "cuatro_etapas_del_pensamiento_creativo",
+      "key": "nodos_siguientes",
+      "from": "empatia_con_usuario",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "cuatro_etapas_pensamiento_creativo",
+      "key": "nodos_siguientes",
+      "from": "brainstorming_ideacion_ideo",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "cultura_de_innovacion_y_juego_serio",
+      "key": "nodos_previos",
+      "from": "t_shaped_people_equipos_interdisciplinarios",
+      "alias_target": "equipo_forma_t",
+      "resolved_to": "equipo_forma_t",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "customer_gains",
+      "key": "nodos_siguientes",
+      "from": "gain_creators",
+      "alias_target": "customer_gains",
+      "resolved_to": "customer_gains",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "customer_pains",
+      "key": "nodos_siguientes",
+      "from": "pain_relievers",
+      "alias_target": "role_playing",
+      "resolved_to": "role_playing",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "customer_retention_tactics",
+      "key": "nodos_previos",
+      "from": "customer_relationships_hypothesis",
+      "alias_target": "customer_segments_hypothesis",
+      "resolved_to": "customer_segments_hypothesis",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "customer_retention_tactics",
+      "key": "nodos_previos",
+      "from": "channel_hypothesis",
+      "alias_target": "channels_hypothesis_physical",
+      "resolved_to": "channels_hypothesis_physical",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "customer_scenarios_business_model",
+      "key": "nodos_previos",
+      "from": "segmentacion_clientes",
+      "alias_target": "resegmentacion_mercado_nicho_bajo_costo",
+      "resolved_to": "resegmentacion_mercado_nicho_bajo_costo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "customer_scenarios_business_model",
+      "key": "nodos_siguientes",
+      "from": "value_proposition_design",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "data_integrity_forecasting",
+      "key": "nodos_previos",
+      "from": "stage_gate_process",
+      "alias_target": "testing_process_completo",
+      "resolved_to": "testing_process_completo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "deep_dive_workshop",
+      "key": "nodos_previos",
+      "from": "field_observations_ideo",
+      "alias_target": "practica_de_observacion_atenta",
+      "resolved_to": "practica_de_observacion_atenta",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "definicion_gatekeepers",
+      "key": "nodos_previos",
+      "from": "stage_gate_scorecards",
+      "alias_target": "scorecards_criterios_gate",
+      "resolved_to": "scorecards_criterios_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "definicion_gatekeepers",
+      "key": "nodos_previos",
+      "from": "clasificacion_proyectos_por_riesgo",
+      "alias_target": "card_sort",
+      "resolved_to": "card_sort",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "definicion_gatekeepers",
+      "key": "nodos_siguientes",
+      "from": "reglas_de_compromiso_gatekeepers",
+      "alias_target": "protocolo_reuniones_gate",
+      "resolved_to": "protocolo_reuniones_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "definicion_startup_busqueda_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "tipos_de_startup",
+      "alias_target": "metricas_de_startup",
+      "resolved_to": "metricas_de_startup",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "definir_antigoals",
+      "key": "nodos_previos",
+      "from": "definicion_problema_diseno",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "definir_antigoals",
+      "key": "nodos_siguientes",
+      "from": "diseno_salvaguardas_failsafes",
+      "alias_target": "antigoals_framework",
+      "resolved_to": "antigoals_framework",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "deriva_deliberada",
+      "key": "nodos_previos",
+      "from": "inmersion_contextual",
+      "alias_target": "metodologia_deep_dive",
+      "resolved_to": "metodologia_deep_dive",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "design_attitude_vs_decision_attitude",
+      "key": "nodos_siguientes",
+      "from": "fase_disenar_modelo_negocio",
+      "alias_target": "fase_entender_modelo_negocio",
+      "resolved_to": "fase_entender_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "design_principles",
+      "key": "nodos_previos",
+      "from": "find_themes",
+      "alias_target": "identificar_brechas_gaps",
+      "resolved_to": "identificar_brechas_gaps",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "design_thinking_fundamentos",
+      "key": "nodos_siguientes",
+      "from": "human_centered_design_ideo",
+      "alias_target": "mapeo_capas_diseno",
+      "resolved_to": "mapeo_capas_diseno",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "design_thinking_proceso",
+      "key": "nodos_siguientes",
+      "from": "prototipado_iterativo",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "disenar_tests_pass_fail",
+      "key": "nodos_previos",
+      "from": "formular_hipotesis_modelo_negocio",
+      "alias_target": "sintesis_hipotesis_modelo_negocio",
+      "resolved_to": "sintesis_hipotesis_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "diseno_activismo_social",
+      "key": "nodos_previos",
+      "from": "pensamiento_sistemico",
+      "alias_target": "get_visual",
+      "resolved_to": "get_visual",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "diseno_basado_en_comportamientos_existentes",
+      "key": "nodos_previos",
+      "from": "empatia_con_el_usuario",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "diseno_consecuencias_no_intencionadas",
+      "key": "nodos_siguientes",
+      "from": "definicion_problema_inicial",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "diseno_de_experiencias_participativas",
+      "key": "nodos_previos",
+      "from": "empatia_con_el_usuario",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "diseno_fugitivo_runaway_design",
+      "key": "nodos_previos",
+      "from": "empatia_field_guide_ideo",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "diseno_fugitivo_runaway_design",
+      "key": "nodos_previos",
+      "from": "design_thinking_tim_brown",
+      "alias_target": "design_thinking_proceso",
+      "resolved_to": "design_thinking_proceso",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "diseno_fugitivo_runaway_design",
+      "key": "nodos_siguientes",
+      "from": "prototipo_etico",
+      "alias_target": "protocepto",
+      "resolved_to": "protocepto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "diseno_imperfeccion_intencional",
+      "key": "nodos_previos",
+      "from": "design_thinking_para_sistemas_complejos",
+      "alias_target": "design_thinking_proceso",
+      "resolved_to": "design_thinking_proceso",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "diseno_imperfeccion_intencional",
+      "key": "nodos_siguientes",
+      "from": "investigar_consecuencias_no_intencionadas",
+      "alias_target": "diseno_consecuencias_no_intencionadas",
+      "resolved_to": "diseno_consecuencias_no_intencionadas",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "diseno_sistemico_partes_interesadas",
+      "key": "nodos_previos",
+      "from": "definicion_problema_sistemico",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "diseno_sistemico_partes_interesadas",
+      "key": "nodos_previos",
+      "from": "investigacion_contextual",
+      "alias_target": "investigacion_analoga",
+      "resolved_to": "investigacion_analoga",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "diseno_sistemico_partes_interesadas",
+      "key": "nodos_siguientes",
+      "from": "gobernanza_etica_proyecto",
+      "alias_target": "etnografia_de_proyecto",
+      "resolved_to": "etnografia_de_proyecto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "diseno_sistemico_partes_interesadas",
+      "key": "nodos_siguientes",
+      "from": "diseno_iterativo_sistemas",
+      "alias_target": "diseno_de_sistemas_a_escala",
+      "resolved_to": "diseno_de_sistemas_a_escala",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "economia_circular_como_modelo_de_negocio",
+      "key": "nodos_previos",
+      "from": "diseno_modelo_de_negocio_canvas",
+      "alias_target": "proceso_diseno_modelo_negocio_5_fases",
+      "resolved_to": "proceso_diseno_modelo_negocio_5_fases",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "economia_circular_como_modelo_de_negocio",
+      "key": "nodos_siguientes",
+      "from": "ejecucion_escalamiento_circular",
+      "alias_target": "escalamiento_prematuro",
+      "resolved_to": "escalamiento_prematuro",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "economia_circular_de_la_imaginacion",
+      "key": "nodos_siguientes",
+      "from": "prototipado_emocional",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "economia_circular_imaginacion",
+      "key": "nodos_previos",
+      "from": "definicion_problema_diseno_centrado_humano",
+      "alias_target": "diseno_para_ia_centrada_en_humano",
+      "resolved_to": "diseno_para_ia_centrada_en_humano",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "economia_de_la_experiencia",
+      "key": "nodos_previos",
+      "from": "mapeo_recorrido_cliente",
+      "alias_target": "customer_journey_mapping",
+      "resolved_to": "customer_journey_mapping",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "eliminar_desperdicio_organizacional",
+      "key": "nodos_previos",
+      "from": "definicion_hipotesis_negocio",
+      "alias_target": "definicion_startup_busqueda_modelo_negocio",
+      "resolved_to": "definicion_startup_busqueda_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "embudo_get_keep_grow",
+      "key": "nodos_siguientes",
+      "from": "customer_acquisition_tactics",
+      "alias_target": "customer_activation_tactics",
+      "resolved_to": "customer_activation_tactics",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "emocion_e_imagen_en_el_pensamiento",
+      "key": "nodos_siguientes",
+      "from": "narrativa_disenio_ideo",
+      "alias_target": "narrativa_como_herramienta_de_sentido",
+      "resolved_to": "narrativa_como_herramienta_de_sentido",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "empatia_capas_de_comprension",
+      "key": "nodos_siguientes",
+      "from": "insight_a_oportunidad",
+      "alias_target": "tecnologias_disruptivas_oportunidad",
+      "resolved_to": "tecnologias_disruptivas_oportunidad",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "equipos_visita_cliente_voc",
+      "key": "nodos_siguientes",
+      "from": "generacion_ideas_brainstormings",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "escenarios_diseno_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "adaptacion_modelo_por_segmento",
+      "alias_target": "verificar_modelo_ingresos",
+      "resolved_to": "verificar_modelo_ingresos",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "esfuerzo_voluntario_vs_urge_espontaneo",
+      "key": "nodos_siguientes",
+      "from": "brainstorming_ideo",
+      "alias_target": "brainstorming_efectivo",
+      "resolved_to": "brainstorming_efectivo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "espiral_muerte_lotes_grandes",
+      "key": "nodos_siguientes",
+      "from": "cinco_por_ques",
+      "alias_target": "tecnica_cinco_porques",
+      "resolved_to": "tecnica_cinco_porques",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "estilos_pensamiento_intuitivo_vs_logico",
+      "key": "nodos_siguientes",
+      "from": "the_lean_startup:experimentacion_validada",
+      "alias_target": "customer_development_vs_business_plan",
+      "resolved_to": "customer_development_vs_business_plan",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "estilos_pensamiento_intuitivo_vs_logico",
+      "key": "nodos_siguientes",
+      "from": "a_project_managers_book_of_forms:planificacion_formal",
+      "alias_target": "project_charter",
+      "resolved_to": "project_charter",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "estimacion_tres_puntos",
+      "key": "nodos_previos",
+      "from": "lista_actividades",
+      "alias_target": "actividades_clave",
+      "resolved_to": "actividades_clave",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "estimate_at_completion_eac",
+      "key": "nodos_previos",
+      "from": "control_de_costos",
+      "alias_target": "estructura_de_costos",
+      "resolved_to": "estructura_de_costos",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "estrategia_de_innovacion_y_tecnologia",
+      "key": "nodos_siguientes",
+      "from": "descubrimiento_de_ideas",
+      "alias_target": "scorecard_descubrimiento_cliente",
+      "resolved_to": "scorecard_descubrimiento_cliente",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "estrategia_get_keep_grow",
+      "key": "nodos_siguientes",
+      "from": "metricas_pirata_aarrr",
+      "alias_target": "metricas_calidad",
+      "resolved_to": "metricas_calidad",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "estrategia_producto_global_glocal",
+      "key": "nodos_previos",
+      "from": "voice_of_customer_research",
+      "alias_target": "voz_del_cliente_voc",
+      "resolved_to": "voz_del_cliente_voc",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "estrategia_producto_global_glocal",
+      "key": "nodos_previos",
+      "from": "market_attractiveness_assessment",
+      "alias_target": "market_type_definicion",
+      "resolved_to": "market_type_definicion",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "estructura_de_gates",
+      "key": "nodos_previos",
+      "from": "stage_gate_process_design",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "estructura_equipos_innovacion_interna",
+      "key": "nodos_previos",
+      "from": "deteccion_necesidad_innovacion_disruptiva",
+      "alias_target": "innovacion_abierta",
+      "resolved_to": "innovacion_abierta",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "estructura_equipos_innovacion_interna",
+      "key": "nodos_siguientes",
+      "from": "plataforma_experimentacion_organizacional",
+      "alias_target": "actitud_de_experimentacion_organizacional",
+      "resolved_to": "actitud_de_experimentacion_organizacional",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "etnografia_de_proyecto",
+      "key": "nodos_siguientes",
+      "from": "insight_a_oportunidad",
+      "alias_target": "tecnologias_disruptivas_oportunidad",
+      "resolved_to": "tecnologias_disruptivas_oportunidad",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "etnografia_investigacion_usuario",
+      "key": "nodos_siguientes",
+      "from": "generacion_ideas_brainstorming",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "evitar_pseudociencia_producto",
+      "key": "nodos_previos",
+      "from": "definicion_hipotesis_negocio",
+      "alias_target": "definicion_startup_busqueda_modelo_negocio",
+      "resolved_to": "definicion_startup_busqueda_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "expected_commercial_value_ecv",
+      "key": "nodos_previos",
+      "from": "net_present_value_npv",
+      "alias_target": "ranking_proyectos_por_npv",
+      "resolved_to": "ranking_proyectos_por_npv",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "expected_commercial_value_ecv",
+      "key": "nodos_previos",
+      "from": "stage_gate_process",
+      "alias_target": "testing_process_completo",
+      "resolved_to": "testing_process_completo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "experimentacion_iterativa_mercado_fisico",
+      "key": "nodos_siguientes",
+      "from": "escalamiento_negocio",
+      "alias_target": "escalamiento_prematuro",
+      "resolved_to": "escalamiento_prematuro",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "falacia_del_dise_ador_affordances",
+      "key": "nodos_siguientes",
+      "from": "prototipado_field_guide_ideo",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "falacia_del_disenador_affordances",
+      "key": "nodos_siguientes",
+      "from": "prototipado_field_guide_ideo",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "fase_entender_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "fase_disenar_modelo_negocio",
+      "alias_target": "fase_entender_modelo_negocio",
+      "resolved_to": "fase_entender_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "ficcion_especulativa_como_metodo",
+      "key": "nodos_previos",
+      "from": "investigacion_contextual",
+      "alias_target": "investigacion_analoga",
+      "resolved_to": "investigacion_analoga",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "ficcion_especulativa_como_metodo",
+      "key": "nodos_previos",
+      "from": "mapeo_tendencias",
+      "alias_target": "evaluacion_megatendencias",
+      "resolved_to": "evaluacion_megatendencias",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "ficcion_especulativa_como_metodo",
+      "key": "nodos_siguientes",
+      "from": "diseno_etico_tecnologia",
+      "alias_target": "diseno_intencional_etica",
+      "resolved_to": "diseno_intencional_etica",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "ficcion_especulativa_como_metodo",
+      "key": "nodos_siguientes",
+      "from": "prototipado_escenarios",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "fit_value_proposition",
+      "key": "nodos_siguientes",
+      "from": "design_prototyping",
+      "alias_target": "rapid_prototyping",
+      "resolved_to": "rapid_prototyping",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "fit_value_proposition",
+      "key": "nodos_siguientes",
+      "from": "testing_hypotheses",
+      "alias_target": "testing_process_completo",
+      "resolved_to": "testing_process_completo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "five_whys_inversion_proporcional",
+      "key": "nodos_previos",
+      "from": "deteccion_incidente_operativo",
+      "alias_target": "design_test_repeat",
+      "resolved_to": "design_test_repeat",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "formal_acceptance",
+      "key": "nodos_previos",
+      "from": "control_de_calidad",
+      "alias_target": "metricas_calidad",
+      "resolved_to": "metricas_calidad",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "framework_flujos_de_datos_ppp",
+      "key": "nodos_previos",
+      "from": "mapeo_ecosistema_stakeholders",
+      "alias_target": "stakeholder_register",
+      "resolved_to": "stakeholder_register",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "framework_get_keep_grow",
+      "key": "nodos_previos",
+      "from": "value_proposition_hypothesis",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "funnel_get_customers_optimizacion",
+      "key": "nodos_previos",
+      "from": "customer_relationship_hypotheses",
+      "alias_target": "customer_jobs",
+      "resolved_to": "customer_jobs",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "future_scenarios_planning",
+      "key": "nodos_previos",
+      "from": "analisis_industria",
+      "alias_target": "iota_analysis",
+      "resolved_to": "iota_analysis",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "future_scenarios_planning",
+      "key": "nodos_siguientes",
+      "from": "evaluacion_modelos_negocio",
+      "alias_target": "caso_taobao_evolucion_modelo",
+      "resolved_to": "caso_taobao_evolucion_modelo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "gates_go_kill_decision_points",
+      "key": "nodos_previos",
+      "from": "stage_gate_process_overview",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "genchi_gembutsu_salir_del_edificio",
+      "key": "nodos_previos",
+      "from": "definicion_hipotesis_valor",
+      "alias_target": "hipotesis_valor_crecimiento",
+      "resolved_to": "hipotesis_valor_crecimiento",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "gestion_de_las_cuatro_fases_del_negocio",
+      "key": "nodos_siguientes",
+      "from": "reintegracion_a_la_organizacion",
+      "alias_target": "proteccion_organizacion_matriz_experimentos",
+      "resolved_to": "proteccion_organizacion_matriz_experimentos",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "gestion_decisiones_bajo_carga_emocional",
+      "key": "nodos_siguientes",
+      "from": "prototipado_centrado_en_usuario",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "gestion_portafolio_dos_niveles",
+      "key": "nodos_previos",
+      "from": "gating_process_stage_gate",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "gestion_visual_del_pipeline_de_desarrollo",
+      "key": "nodos_siguientes",
+      "from": "intervencion_proactiva_en_portafolio",
+      "alias_target": "pruning_portafolio",
+      "resolved_to": "pruning_portafolio",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "get_visual",
+      "key": "nodos_previos",
+      "from": "brainstorm",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "governance_integration_gates_portfolio_roadmap",
+      "key": "nodos_previos",
+      "from": "strategic_roadmap",
+      "alias_target": "product_roadmap_estrategico",
+      "resolved_to": "product_roadmap_estrategico",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "gut_check",
+      "key": "nodos_previos",
+      "from": "brainstorm",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "hablar_con_clientes_desmontar_supuestos",
+      "key": "nodos_previos",
+      "from": "formulacion_hipotesis_negocio",
+      "alias_target": "sintesis_hipotesis_modelo_negocio",
+      "resolved_to": "sintesis_hipotesis_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "herramientas_computacionales_business_model",
+      "key": "nodos_previos",
+      "from": "los_9_bloques_de_construccion",
+      "alias_target": "ventaja_competitiva_producto",
+      "resolved_to": "ventaja_competitiva_producto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "hipotesis_de_tamano_de_mercado",
+      "key": "nodos_previos",
+      "from": "ideacion_de_producto",
+      "alias_target": "estrategia_de_innovacion_de_producto",
+      "resolved_to": "estrategia_de_innovacion_de_producto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "historia_del_futuro_escenarios_especulativos",
+      "key": "nodos_siguientes",
+      "from": "definicion_de_pov_ideo",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "hoja_de_ruta_de_ventas",
+      "key": "nodos_siguientes",
+      "from": "ejecucion_de_ventas",
+      "alias_target": "ejecucion_de_touchpoints",
+      "resolved_to": "ejecucion_de_touchpoints",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "how_might_we_brief_social",
+      "key": "nodos_siguientes",
+      "from": "prototipado_iterativo",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "how_might_we_briefs",
+      "key": "nodos_previos",
+      "from": "definicion_problema_social",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "how_might_we_briefs",
+      "key": "nodos_siguientes",
+      "from": "brainstorming_ideacion",
+      "alias_target": "brainstorming_efectivo",
+      "resolved_to": "brainstorming_efectivo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "how_might_we_framing",
+      "key": "nodos_siguientes",
+      "from": "investigacion_de_campo_observacional",
+      "alias_target": "investigacion_analoga",
+      "resolved_to": "investigacion_analoga",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "how_might_we_hmw",
+      "key": "nodos_siguientes",
+      "from": "brainstorming_estructurado",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "humor_como_herramienta_creativa",
+      "key": "nodos_siguientes",
+      "from": "ideacion_divergente_ideo",
+      "alias_target": "equipo_diverso_ideacion",
+      "resolved_to": "equipo_diverso_ideacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "identificacion_problema_cliente",
+      "key": "nodos_previos",
+      "from": "descubrimiento_de_necesidades_ideo",
+      "alias_target": "scorecard_descubrimiento_cliente",
+      "resolved_to": "scorecard_descubrimiento_cliente",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "identificar_brechas_gaps",
+      "key": "nodos_siguientes",
+      "from": "definicion_problema_change_by_design",
+      "alias_target": "change_log",
+      "resolved_to": "change_log",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "indice_de_reparabilidad",
+      "key": "nodos_siguientes",
+      "from": "culture_of_fixing",
+      "alias_target": "cultura_de_optimismo",
+      "resolved_to": "cultura_de_optimismo",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "innovation_project_canvas",
+      "key": "nodos_siguientes",
+      "from": "stage_gate_flexible_criteria",
+      "alias_target": "flexible_go_kill_criteria",
+      "resolved_to": "flexible_go_kill_criteria",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "internal_idea_capture",
+      "key": "nodos_siguientes",
+      "from": "innovation_show",
+      "alias_target": "contabilidad_innovacion",
+      "resolved_to": "contabilidad_innovacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "intimation_illumination",
+      "key": "nodos_siguientes",
+      "from": "brainstorming_ideo",
+      "alias_target": "brainstorming_efectivo",
+      "resolved_to": "brainstorming_efectivo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "lean_launchpad_web_startup_process",
+      "key": "nodos_previos",
+      "from": "value_proposition_statement",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "lean_launchpad_web_startup_process",
+      "key": "nodos_siguientes",
+      "from": "scaling_business_model",
+      "alias_target": "business_model_canvas_ideo",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "leap_of_faith_assumptions",
+      "key": "nodos_previos",
+      "from": "formulacion_idea_negocio",
+      "alias_target": "alineacion_ti_negocio",
+      "resolved_to": "alineacion_ti_negocio",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "lienzo_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "patrones_modelo_negocio",
+      "alias_target": "lienzo_modelo_negocio",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "lienzo_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "funding_strategy",
+      "alias_target": "estrategia_de_ventas",
+      "resolved_to": "estrategia_de_ventas",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "llamar_lo_que_falta",
+      "key": "nodos_previos",
+      "from": "observacion_de_campo",
+      "alias_target": "practica_de_observacion_atenta",
+      "resolved_to": "practica_de_observacion_atenta",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "mapa_flujo_trabajo_cliente",
+      "key": "nodos_previos",
+      "from": "entrevistas_descubrimiento_cliente",
+      "alias_target": "scorecard_descubrimiento_cliente",
+      "resolved_to": "scorecard_descubrimiento_cliente",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "mapeo_capas_diseno",
+      "key": "nodos_previos",
+      "from": "definicion_problema_inicial",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "mash_ups",
+      "key": "nodos_previos",
+      "from": "brainstorm",
+      "alias_target": "reglas_brainstorming",
+      "resolved_to": "reglas_brainstorming",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "medir_comportamiento_cliente_mvp",
+      "key": "nodos_previos",
+      "from": "definir_hipotesis_producto",
+      "alias_target": "hipotesis_propuesta_de_valor_producto",
+      "resolved_to": "hipotesis_propuesta_de_valor_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "medir_lo_que_importa_no_solo_lo_facil",
+      "key": "nodos_siguientes",
+      "from": "definicion_de_kpis_modelo_negocio",
+      "alias_target": "patron_free_business_model",
+      "resolved_to": "patron_free_business_model",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "metodo_strategic_buckets",
+      "key": "nodos_previos",
+      "from": "definicion_estrategia_innovacion",
+      "alias_target": "estrategia_innovacion_producto",
+      "resolved_to": "estrategia_innovacion_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "metodo_strategic_buckets",
+      "key": "nodos_previos",
+      "from": "business_model_generation_lienzo",
+      "alias_target": "business_model_canvas_ideo",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "metrics_that_matter_framework",
+      "key": "nodos_previos",
+      "from": "value_proposition_hypothesis",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "monte_carlo_simulation_model",
+      "key": "nodos_previos",
+      "from": "net_present_value_npv",
+      "alias_target": "ranking_proyectos_por_npv",
+      "resolved_to": "ranking_proyectos_por_npv",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "mrg_event",
+      "key": "nodos_siguientes",
+      "from": "definicion_estrategia_innovacion",
+      "alias_target": "estrategia_innovacion_producto",
+      "resolved_to": "estrategia_innovacion_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "multi_sided_platform_pattern",
+      "key": "nodos_previos",
+      "from": "segmentacion_clientes",
+      "alias_target": "resegmentacion_mercado_nicho_bajo_costo",
+      "resolved_to": "resegmentacion_mercado_nicho_bajo_costo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "mvp_catalogo_tecnicas",
+      "key": "nodos_siguientes",
+      "from": "tarjeta_de_test",
+      "alias_target": "test_ab_precio",
+      "resolved_to": "test_ab_precio",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "narrativa_como_herramienta_de_sentido",
+      "key": "nodos_siguientes",
+      "from": "prototipado_narrativo_ideo",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "nombrar_los_monstruos",
+      "key": "nodos_siguientes",
+      "from": "mapa_riesgos",
+      "alias_target": "plan_gestion_riesgos",
+      "resolved_to": "plan_gestion_riesgos",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "open_innovation_ideacion",
+      "key": "nodos_previos",
+      "from": "definicion_estrategia_innovacion",
+      "alias_target": "estrategia_innovacion_producto",
+      "resolved_to": "estrategia_innovacion_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "open_innovation_ideacion",
+      "key": "nodos_siguientes",
+      "from": "stage_gate_ideacion",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "optimizacion_keep_retencion",
+      "key": "nodos_previos",
+      "from": "customer_relationship_hypotheses",
+      "alias_target": "customer_jobs",
+      "resolved_to": "customer_jobs",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "organizaciones_ambidiestras",
+      "key": "nodos_siguientes",
+      "from": "fase_implementar_modelo_negocio",
+      "alias_target": "fase_implementacion_modelo",
+      "resolved_to": "fase_implementacion_modelo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "patent_mapping",
+      "key": "nodos_siguientes",
+      "from": "definicion_estrategia_innovacion",
+      "alias_target": "estrategia_innovacion_producto",
+      "resolved_to": "estrategia_innovacion_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "patron_bait_hook",
+      "key": "nodos_siguientes",
+      "from": "metricas_clave_modelo_negocio",
+      "alias_target": "lienzo_modelo_negocio",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "patron_free_business_model",
+      "key": "nodos_siguientes",
+      "from": "metricas_clave_modelo_negocio",
+      "alias_target": "lienzo_modelo_negocio",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "patron_freemium",
+      "key": "nodos_siguientes",
+      "from": "metricas_clave_modelo_negocio",
+      "alias_target": "lienzo_modelo_negocio",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "pensamiento_convergente_divergente",
+      "key": "nodos_previos",
+      "from": "espacio_de_inspiracion",
+      "alias_target": "usuarios_extremos_insights",
+      "resolved_to": "usuarios_extremos_insights",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "pensamiento_de_conexiones_ripple_effect",
+      "key": "nodos_previos",
+      "from": "investigacion_de_usuario_ideo",
+      "alias_target": "etnografia_investigacion_usuario",
+      "resolved_to": "etnografia_investigacion_usuario",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "pensamiento_de_conexiones_ripple_effect",
+      "key": "nodos_siguientes",
+      "from": "modelo_de_negocio_sistemico",
+      "alias_target": "patron_free_business_model",
+      "resolved_to": "patron_free_business_model",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "pensamiento_espacial_mapeo",
+      "key": "nodos_previos",
+      "from": "definicion_problema_inicial",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "pensar_en_grande_empezar_pequeno",
+      "key": "nodos_previos",
+      "from": "definicion_vision_producto",
+      "alias_target": "definicion_tipos_nuevo_producto",
+      "resolved_to": "definicion_tipos_nuevo_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "periodo_incubacion_mental",
+      "key": "nodos_previos",
+      "from": "preparacion_del_problema",
+      "alias_target": "wallas_etapa_preparacion",
+      "resolved_to": "wallas_etapa_preparacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "periodo_incubacion_mental",
+      "key": "nodos_siguientes",
+      "from": "captura_de_intimacion_e_ideas",
+      "alias_target": "sistema_captura_ideas",
+      "resolved_to": "sistema_captura_ideas",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "periodo_incubacion_mental",
+      "key": "nodos_siguientes",
+      "from": "brainstorming_ideo",
+      "alias_target": "brainstorming_efectivo",
+      "resolved_to": "brainstorming_efectivo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "perseguir_multiples_nortes",
+      "key": "nodos_previos",
+      "from": "definicion_vision_proyecto",
+      "alias_target": "definicion_producto_proyecto",
+      "resolved_to": "definicion_producto_proyecto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "perseguir_multiples_nortes",
+      "key": "nodos_siguientes",
+      "from": "priorizacion_objetivos_estrategicos",
+      "alias_target": "strat_map",
+      "resolved_to": "strat_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "pivot_o_proceder_revalidar_modelo_negocio",
+      "key": "nodos_previos",
+      "from": "validacion_clientes_fase_get_ready_to_sell",
+      "alias_target": "filosofia_validacion_clientes",
+      "resolved_to": "filosofia_validacion_clientes",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "pivot_or_proceed_decision",
+      "key": "nodos_siguientes",
+      "from": "business_model_execution",
+      "alias_target": "business_model_canvas_ideo",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "pivotar_o_proceder",
+      "key": "nodos_previos",
+      "from": "entrevistas_descubrimiento_cliente",
+      "alias_target": "scorecard_descubrimiento_cliente",
+      "resolved_to": "scorecard_descubrimiento_cliente",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "plan_gestion_comunicaciones",
+      "key": "nodos_siguientes",
+      "from": "gestion_compromiso_stakeholders",
+      "alias_target": "buy_in_customer_development",
+      "resolved_to": "buy_in_customer_development",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "plan_gestion_interesados",
+      "key": "nodos_siguientes",
+      "from": "gestion_compromiso_stakeholders",
+      "alias_target": "buy_in_customer_development",
+      "resolved_to": "buy_in_customer_development",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "poder_a_traves_de_la_accion",
+      "key": "nodos_siguientes",
+      "from": "verificacion_de_ideas",
+      "alias_target": "wallas_etapa_verificacion",
+      "resolved_to": "wallas_etapa_verificacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "portfolio_management_triangulation",
+      "key": "nodos_siguientes",
+      "from": "gate_governance_execution",
+      "alias_target": "overlapping_stages_concurrent_execution",
+      "resolved_to": "overlapping_stages_concurrent_execution",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "practica_de_observacion_atenta",
+      "key": "nodos_siguientes",
+      "from": "empatia_field_guide_ideo",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "preguntas_ipo_dolor_cliente",
+      "key": "nodos_previos",
+      "from": "desarrollo_hipotesis_problema",
+      "alias_target": "desarrollo_presentacion_problema",
+      "resolved_to": "desarrollo_presentacion_problema",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "presales",
+      "key": "nodos_siguientes",
+      "from": "encaje_problema_solucion",
+      "alias_target": "fit_problema_solucion",
+      "resolved_to": "fit_problema_solucion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "producto_minimo_viable",
+      "key": "nodos_previos",
+      "from": "ideacion_de_producto",
+      "alias_target": "estrategia_de_innovacion_de_producto",
+      "resolved_to": "estrategia_de_innovacion_de_producto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "producto_minimo_viable",
+      "key": "nodos_siguientes",
+      "from": "experimentos_de_validacion_de_problema",
+      "alias_target": "biblioteca_experimentos_validacion",
+      "resolved_to": "biblioteca_experimentos_validacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "producto_unico_superior",
+      "key": "nodos_siguientes",
+      "from": "value_proposition_design",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "project_charter",
+      "key": "nodos_previos",
+      "from": "value_proposition_design",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "project_schedule",
+      "key": "nodos_siguientes",
+      "from": "activity_cost_estimates",
+      "alias_target": "activity_duration_estimates",
+      "resolved_to": "activity_duration_estimates",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "project_schedule",
+      "key": "nodos_siguientes",
+      "from": "project_budget",
+      "alias_target": "cronograma_proyecto",
+      "resolved_to": "cronograma_proyecto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "project_schedule",
+      "key": "nodos_siguientes",
+      "from": "procurement_management_plan",
+      "alias_target": "requirements_management_plan",
+      "resolved_to": "requirements_management_plan",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "proposito_como_motor_energia",
+      "key": "nodos_siguientes",
+      "from": "business_model_generation:propuesta_valor",
+      "alias_target": "business_model_canvas_ideo",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "proposito_como_motor_energia",
+      "key": "nodos_siguientes",
+      "from": "the_lean_startup:vision_producto",
+      "alias_target": "vision_estrategia_producto_pivote",
+      "resolved_to": "vision_estrategia_producto_pivote",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "protocolo_reuniones_gate",
+      "key": "nodos_previos",
+      "from": "stage_gate_scorecards",
+      "alias_target": "scorecards_criterios_gate",
+      "resolved_to": "scorecards_criterios_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "prototipado_de_experiencias",
+      "key": "nodos_siguientes",
+      "from": "field_guide_prototipos_con_usuarios",
+      "alias_target": "usuarios_extremos_edge_cases",
+      "resolved_to": "usuarios_extremos_edge_cases",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "prototipado_experiencial_servicios",
+      "key": "nodos_previos",
+      "from": "mapeo_recorrido_cliente",
+      "alias_target": "customer_journey_mapping",
+      "resolved_to": "customer_journey_mapping",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "prototipado_modelos_negocio",
+      "key": "nodos_siguientes",
+      "from": "business_case_financiero",
+      "alias_target": "etapa_build_business_case",
+      "resolved_to": "etapa_build_business_case",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "prototipado_modelos_negocio",
+      "key": "nodos_siguientes",
+      "from": "field_test_modelo_negocio",
+      "alias_target": "get_out_building_test_sell",
+      "resolved_to": "get_out_building_test_sell",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "prototipado_organizacional_estrategico",
+      "key": "nodos_siguientes",
+      "from": "gestion_del_cambio_organizacional",
+      "alias_target": "plan_gestion_cambios",
+      "resolved_to": "plan_gestion_cambios",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "prototipar_con_medios_no_convencionales",
+      "key": "nodos_siguientes",
+      "from": "iteracion_diseno_producto",
+      "alias_target": "transicion_producto_a_experiencia",
+      "resolved_to": "transicion_producto_a_experiencia",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "rapid_prototyping",
+      "key": "nodos_siguientes",
+      "from": "get_feedback",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "rapid_prototyping",
+      "key": "nodos_siguientes",
+      "from": "integrate_feedback_and_iterate",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "reconocer_sesgo_de_apofenia",
+      "key": "nodos_previos",
+      "from": "investigacion_de_usuarios_ideo",
+      "alias_target": "usuarios_extremos_edge_cases",
+      "resolved_to": "usuarios_extremos_edge_cases",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "reduccion_tamano_de_lote_batch_size",
+      "key": "nodos_previos",
+      "from": "identificacion_cuello_de_botella_organizacional",
+      "alias_target": "actitud_de_experimentacion_organizacional",
+      "resolved_to": "actitud_de_experimentacion_organizacional",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "reduccion_tamano_de_lote_batch_size",
+      "key": "nodos_siguientes",
+      "from": "cultura_disciplina_operativa",
+      "alias_target": "cultura_de_experiencia",
+      "resolved_to": "cultura_de_experiencia",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "reduccion_tiempo_de_mercado_velocidad",
+      "key": "nodos_previos",
+      "from": "voice_of_customer_research",
+      "alias_target": "voz_del_cliente_voc",
+      "resolved_to": "voz_del_cliente_voc",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "refinar_sales_roadmap",
+      "key": "nodos_siguientes",
+      "from": "escalar_equipo_ventas",
+      "alias_target": "estrategia_de_ventas",
+      "resolved_to": "estrategia_de_ventas",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "registro_de_riesgos",
+      "key": "nodos_siguientes",
+      "from": "hoja_datos_riesgo",
+      "alias_target": "hoja_estimacion_costos",
+      "resolved_to": "hoja_estimacion_costos",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "reglas_gestion_riesgo_gambling",
+      "key": "nodos_previos",
+      "from": "generacion_ideas_innovadoras",
+      "alias_target": "open_innovation_ideacion",
+      "resolved_to": "open_innovation_ideacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "restricciones_extremas_como_innovacion",
+      "key": "nodos_previos",
+      "from": "prototipado_bajo_costo",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "restricciones_extremas_como_innovacion",
+      "key": "nodos_siguientes",
+      "from": "modelo_negocio_sostenible_social",
+      "alias_target": "lienzo_modelo_negocio",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "revalidacion_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "creacion_de_clientes",
+      "alias_target": "relaciones_con_clientes",
+      "resolved_to": "relaciones_con_clientes",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "revenue_pricing_hypothesis",
+      "key": "nodos_previos",
+      "from": "channel_hypothesis",
+      "alias_target": "channels_hypothesis_physical",
+      "resolved_to": "channels_hypothesis_physical",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "risk_audit",
+      "key": "nodos_previos",
+      "from": "risk_register",
+      "alias_target": "stakeholder_register",
+      "resolved_to": "stakeholder_register",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "risk_audit",
+      "key": "nodos_previos",
+      "from": "risk_management_plan",
+      "alias_target": "cost_management_plan",
+      "resolved_to": "cost_management_plan",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "role_playing",
+      "key": "nodos_siguientes",
+      "from": "get_feedback",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "roles_product_owner_scrum_master",
+      "key": "nodos_previos",
+      "from": "formacion_equipo_dedicado",
+      "alias_target": "equipo_dedicado_continuo",
+      "resolved_to": "equipo_dedicado_continuo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "roles_product_owner_scrum_master",
+      "key": "nodos_siguientes",
+      "from": "sprint_iterativo_de_desarrollo",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "ruptura_de_habitos_para_estimulo",
+      "key": "nodos_siguientes",
+      "from": "iluminacion_creativa",
+      "alias_target": "wallas_etapa_iluminacion",
+      "resolved_to": "wallas_etapa_iluminacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "ruptura_de_habitos_para_estimulo",
+      "key": "nodos_siguientes",
+      "from": "verificacion_de_ideas",
+      "alias_target": "wallas_etapa_verificacion",
+      "resolved_to": "wallas_etapa_verificacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sales_funnel_get_keep_grow",
+      "key": "nodos_previos",
+      "from": "value_proposition_design",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sandbox_de_innovacion",
+      "key": "nodos_previos",
+      "from": "hitos_de_aprendizaje",
+      "alias_target": "cycle_time",
+      "resolved_to": "cycle_time",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sandbox_de_innovacion",
+      "key": "nodos_siguientes",
+      "from": "expansion_del_sandbox",
+      "alias_target": "sandbox_de_innovacion",
+      "resolved_to": "sandbox_de_innovacion",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "sandbox_de_innovacion",
+      "key": "nodos_siguientes",
+      "from": "reintegracion_a_la_organizacion",
+      "alias_target": "proteccion_organizacion_matriz_experimentos",
+      "resolved_to": "proteccion_organizacion_matriz_experimentos",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "scoring_model_scorecard",
+      "key": "nodos_previos",
+      "from": "stage_gate_process",
+      "alias_target": "testing_process_completo",
+      "resolved_to": "testing_process_completo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "scoring_model_scorecard",
+      "key": "nodos_siguientes",
+      "from": "strategic_roadmap",
+      "alias_target": "product_roadmap_estrategico",
+      "resolved_to": "product_roadmap_estrategico",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "segmentos_de_clientes_problema_necesidad",
+      "key": "nodos_siguientes",
+      "from": "entrevistas_de_descubrimiento_de_clientes",
+      "alias_target": "scorecard_descubrimiento_cliente",
+      "resolved_to": "scorecard_descubrimiento_cliente",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "seleccion_arenas_estrategicas",
+      "key": "nodos_siguientes",
+      "from": "generacion_ideas_nuevo_producto",
+      "alias_target": "definicion_tipos_nuevo_producto",
+      "resolved_to": "definicion_tipos_nuevo_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "seleccion_canal_distribucion",
+      "key": "nodos_previos",
+      "from": "hipotesis_ingresos_precio",
+      "alias_target": "revenue_pricing_hypothesis",
+      "resolved_to": "revenue_pricing_hypothesis",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "seleccion_estrategia_pricing",
+      "key": "nodos_previos",
+      "from": "segmentacion_clientes",
+      "alias_target": "resegmentacion_mercado_nicho_bajo_costo",
+      "resolved_to": "resegmentacion_mercado_nicho_bajo_costo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sentido_del_humor_como_herramienta_de_pensamiento",
+      "key": "nodos_siguientes",
+      "from": "brainstorming_ideo",
+      "alias_target": "brainstorming_efectivo",
+      "resolved_to": "brainstorming_efectivo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sistema_de_gates_go_kill",
+      "key": "nodos_previos",
+      "from": "definicion_de_estrategia_de_innovacion",
+      "alias_target": "estrategia_de_innovacion_arenas",
+      "resolved_to": "estrategia_de_innovacion_arenas",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sistema_gestion_recursos_en_gates",
+      "key": "nodos_previos",
+      "from": "stage_gate_process_design",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sistema_inmune_producto",
+      "key": "nodos_siguientes",
+      "from": "cinco_por_ques",
+      "alias_target": "tecnica_cinco_porques",
+      "resolved_to": "tecnica_cinco_porques",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sistema_triple_a_stage_gate",
+      "key": "nodos_previos",
+      "from": "stage_gate_tradicional",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "sistemas_sabios_vs_ignorantes",
+      "key": "nodos_previos",
+      "from": "mapa_ecosistema_business_model_generation",
+      "alias_target": "business_model_canvas_ideo",
+      "resolved_to": "lienzo_modelo_negocio",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "spiral_development_build_test_feedback",
+      "key": "nodos_previos",
+      "from": "voice_of_customer_research",
+      "alias_target": "voz_del_cliente_voc",
+      "resolved_to": "voz_del_cliente_voc",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "spiral_development_build_test_feedback",
+      "key": "nodos_previos",
+      "from": "concept_testing",
+      "alias_target": "copy_testing",
+      "resolved_to": "copy_testing",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "spiral_development_build_test_feedback",
+      "key": "nodos_siguientes",
+      "from": "field_trials",
+      "alias_target": "five_data_traps",
+      "resolved_to": "five_data_traps",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "stage4_testing_validation",
+      "key": "nodos_previos",
+      "from": "stage3_development",
+      "alias_target": "etapa_development",
+      "resolved_to": "etapa_development",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "stakeholder_analysis_matrix",
+      "key": "nodos_siguientes",
+      "from": "communications_management_plan",
+      "alias_target": "cost_management_plan",
+      "resolved_to": "cost_management_plan",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "stakeholder_analysis_matrix",
+      "key": "nodos_siguientes",
+      "from": "risk_management_plan",
+      "alias_target": "cost_management_plan",
+      "resolved_to": "cost_management_plan",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "stakeholder_register",
+      "key": "nodos_siguientes",
+      "from": "communications_management_plan",
+      "alias_target": "cost_management_plan",
+      "resolved_to": "cost_management_plan",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "startup_como_experimento_cientifico",
+      "key": "nodos_previos",
+      "from": "definicion_vision_producto",
+      "alias_target": "definicion_tipos_nuevo_producto",
+      "resolved_to": "definicion_tipos_nuevo_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "storyboard",
+      "key": "nodos_siguientes",
+      "from": "get_feedback",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "storytelling_como_herramienta_diseno",
+      "key": "nodos_previos",
+      "from": "field_observations_ideo",
+      "alias_target": "practica_de_observacion_atenta",
+      "resolved_to": "practica_de_observacion_atenta",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "storytelling_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "pitch_a_inversionistas",
+      "alias_target": "crear_pitch",
+      "resolved_to": "crear_pitch",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "storytelling_modelo_negocio",
+      "key": "nodos_siguientes",
+      "from": "engaging_employees_transicion",
+      "alias_target": "tres_espacios_innovacion",
+      "resolved_to": "tres_espacios_innovacion",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "strat_map",
+      "key": "nodos_siguientes",
+      "from": "generacion_ideas_nuevo_producto",
+      "alias_target": "definicion_tipos_nuevo_producto",
+      "resolved_to": "definicion_tipos_nuevo_producto",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "strat_map_arenas_estrategicas",
+      "key": "nodos_previos",
+      "from": "definicion_vision_innovacion",
+      "alias_target": "metas_objetivos_smart_innovacion",
+      "resolved_to": "metas_objetivos_smart_innovacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "strategic_buckets",
+      "key": "nodos_siguientes",
+      "from": "stage_gate_ideacion",
+      "alias_target": "mitos_stage_gate",
+      "resolved_to": "mitos_stage_gate",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "superioridad_producto_beneficios",
+      "key": "nodos_previos",
+      "from": "ideacion_necesidades_cliente",
+      "alias_target": "customer_gains",
+      "resolved_to": "customer_gains",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "technology_platform_evaluation",
+      "key": "nodos_previos",
+      "from": "stage_gate_process",
+      "alias_target": "testing_process_completo",
+      "resolved_to": "testing_process_completo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "technology_platform_evaluation",
+      "key": "nodos_siguientes",
+      "from": "strategic_roadmap",
+      "alias_target": "product_roadmap_estrategico",
+      "resolved_to": "product_roadmap_estrategico",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "tecnica_cambio_de_perspectiva_escala",
+      "key": "nodos_siguientes",
+      "from": "definicion_del_problema_ideo",
+      "alias_target": "definicion_startup",
+      "resolved_to": "definicion_startup",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "tecnica_cinco_porques",
+      "key": "nodos_previos",
+      "from": "identificacion_de_fallo_o_sintoma",
+      "alias_target": "earlyvangelists_identificacion",
+      "resolved_to": "earlyvangelists_identificacion",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "tecnica_perder_objeto",
+      "key": "nodos_previos",
+      "from": "observacion_etnografica_ideo",
+      "alias_target": "investigacion_etnografica_ideacion",
+      "resolved_to": "investigacion_etnografica_ideacion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "tecnica_perder_objeto",
+      "key": "nodos_siguientes",
+      "from": "rediseno_experiencia_usuario",
+      "alias_target": "cultura_de_experiencia",
+      "resolved_to": "cultura_de_experiencia",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "test_sell_channel_partners",
+      "key": "nodos_previos",
+      "from": "canvas_de_canales_bmg",
+      "alias_target": "canales_distribucion",
+      "resolved_to": "canales_distribucion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "testing_process_completo",
+      "key": "nodos_siguientes",
+      "from": "encaje_problema_solucion",
+      "alias_target": "fit_problema_solucion",
+      "resolved_to": "fit_problema_solucion",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "testing_process_completo",
+      "key": "nodos_siguientes",
+      "from": "encaje_producto_mercado",
+      "alias_target": "verificar_product_market_fit",
+      "resolved_to": "verificar_product_market_fit",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "tipo_de_mercado_estrategia_competitiva",
+      "key": "nodos_previos",
+      "from": "segmentacion_clientes",
+      "alias_target": "resegmentacion_mercado_nicho_bajo_costo",
+      "resolved_to": "resegmentacion_mercado_nicho_bajo_costo",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "tipo_de_mercado_estrategia_competitiva",
+      "key": "nodos_siguientes",
+      "from": "mapa_de_mercado",
+      "alias_target": "determinar_tipo_de_mercado",
+      "resolved_to": "determinar_tipo_de_mercado",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "unique_selling_proposition_statement",
+      "key": "nodos_siguientes",
+      "from": "value_proposition_design",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "usuarios_extremos_globales",
+      "key": "nodos_previos",
+      "from": "extreme_users_identification",
+      "alias_target": "identificacion_problema_cliente",
+      "resolved_to": "identificacion_problema_cliente",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "usuarios_extremos_globales",
+      "key": "nodos_previos",
+      "from": "field_research_empatia",
+      "alias_target": "empathy_map",
+      "resolved_to": "empathy_map",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "usuarios_extremos_globales",
+      "key": "nodos_siguientes",
+      "from": "prototipado_bajo_costo",
+      "alias_target": "prototipado_rapido",
+      "resolved_to": "prototipado_rapido",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "validar_modelo_financiero",
+      "key": "nodos_previos",
+      "from": "value_proposition_design",
+      "alias_target": "fit_value_proposition",
+      "resolved_to": "fit_value_proposition",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "validar_posicionamiento_con_analistas",
+      "key": "nodos_previos",
+      "from": "validacion_producto_early_adopters",
+      "alias_target": "transicion_producto_a_experiencia",
+      "resolved_to": "transicion_producto_a_experiencia",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "voc_temprano_en_agile_stage_gate",
+      "key": "nodos_previos",
+      "from": "descubrimiento_de_ideas",
+      "alias_target": "scorecard_descubrimiento_cliente",
+      "resolved_to": "scorecard_descubrimiento_cliente",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "voc_temprano_en_agile_stage_gate",
+      "key": "nodos_siguientes",
+      "from": "sprint_iterativo_de_desarrollo",
+      "alias_target": "desarrollo_en_espiral",
+      "resolved_to": "desarrollo_en_espiral",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "wbs_dictionary",
+      "key": "nodos_siguientes",
+      "from": "risk_register",
+      "alias_target": "stakeholder_register",
+      "resolved_to": "stakeholder_register",
+      "via": "alias_map_capa_b.json"
+    },
+    {
+      "node": "wbs_dictionary",
+      "key": "nodos_siguientes",
+      "from": "project_budget",
+      "alias_target": "cronograma_proyecto",
+      "resolved_to": "cronograma_proyecto",
+      "via": "alias_map_capa_c.json"
+    },
+    {
+      "node": "work_breakdown_structure",
+      "key": "nodos_siguientes",
+      "from": "activity_cost_estimates",
+      "alias_target": "activity_duration_estimates",
+      "resolved_to": "activity_duration_estimates",
+      "via": "alias_map_capa_b.json"
+    }
+  ],
+  "alias_unresolved_removed": [],
+  "final_cleanup_removed": [
+    {
+      "node": "anticipar_consecuencias_negativas",
+      "key": "nodos_siguientes",
+      "ref": "diseno_de_constraints_eticos"
+    },
+    {
+      "node": "brainstorming_divergente",
+      "key": "nodos_previos",
+      "ref": "definicion_del_problema_de_diseno"
+    },
+    {
+      "node": "economia_de_la_experiencia",
+      "key": "nodos_siguientes",
+      "ref": "diseno_de_touchpoints"
+    },
+    {
+      "node": "etnografia_de_proyecto",
+      "key": "nodos_previos",
+      "ref": "definir_problema_de_diseno"
+    },
+    {
+      "node": "framework_ppph_flujos",
+      "key": "nodos_siguientes",
+      "ref": "diseno_centrado_en_sistemas"
+    },
+    {
+      "node": "pensamiento_convergente_divergente",
+      "key": "nodos_previos",
+      "ref": "empatia_en_diseno"
+    }
+  ]
+}

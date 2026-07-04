@@ -13,13 +13,12 @@
   ],
   "entregable_esperado": "Una matriz o organigrama que defina claramente quiénes son los gatekeepers en cada gate, según tipo y riesgo del proyecto.",
   "nodos_previos": [
-    "stage_gate_scorecards",
-    "clasificacion_proyectos_por_riesgo",
+    "scorecards_criterios_gate",
+    "card_sort",
     "categorizacion_ranking_proyectos_cubetas"
   ],
   "nodos_siguientes": [
-    "protocolo_reuniones_gate",
-    "reglas_de_compromiso_gatekeepers"
+    "protocolo_reuniones_gate"
   ],
   "condiciones_activacion": [
     "Si el usuario no tiene claro quién toma las decisiones Go/Kill en su proceso de innovación.",
