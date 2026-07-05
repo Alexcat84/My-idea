@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-prototipo_motor.py - Prototipo CLI del motor de ruteo (Fase 2.1)
+prototipo_motor.py - Prototipo CLI del motor de ruteo (Fase 2.2)
 
 Entrevista guiada de texto libre: el usuario nunca elige de un menu. En cada
 paso responde libremente y un modelo barato (Haiku) interpreta la respuesta
@@ -16,23 +16,37 @@ Capa 2 (recorrido): la pregunta de cada nodo esta pregenerada y cacheada
     depende de la topologia, no del usuario. La respuesta del usuario SI
     requiere una llamada por turno (Haiku), porque texto libre no se puede
     cachear ni resolver con un algoritmo interno. Si la API falla en un
-    turno, cae a un menu numerado de emergencia para ese turno.
-Capa 3 (plan final): Sonnet redacta el plan a partir de la entrada original,
-    el perfil de sesion acumulado y la ruta completa.
+    turno, cae a un menu numerado de emergencia para ese turno. El
+    interprete ademas pondera senales de miedo/riesgo/duda hacia candidatos
+    de validacion con clientes (ver engine/plan_readiness.py).
+Medidor de completitud: antes de redactar el plan, se evalua si la ruta toca
+    al menos una familia de accion con clientes y una de viabilidad
+    economica (engine/plan_readiness.py). Si no, se ofrece UNA vez la
+    opcion de continuar ("go deeper") o recibir un plan inicial honesto. La
+    sesion se persiste en engine/sessions/{id}.json y se puede retomar con
+    --continuar {id}.
+Capa 3 (plan final): Sonnet redacta el plan en modo imperativo (tareas, no
+    preguntas) a partir de la entrada original, el perfil de sesion
+    acumulado y la ruta completa, marcando si es un plan inicial o completo.
 
 Uso:  python engine/prototipo_motor.py
+      python engine/prototipo_motor.py --continuar SESSION_ID
 Guardrails: profundidad maxima 15, sin ciclos (nodos visitados no se
 reofrecen), maximo 1 repregunta por nodo antes de forzar el candidato mas
-probable.
+probable, el medidor de completitud solo se ofrece una vez por sesion.
 """
+import argparse
 import json
 import os
 import sys
 import textwrap
+import uuid
 from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
+
+import plan_readiness
 
 # En consolas de Windows, stdout suele quedar en cp1252 (o el codepage local),
 # que no puede representar caracteres como flechas (->) o comillas tipograficas
@@ -49,6 +63,7 @@ GRAPH_PATH = BASE / "dataset" / "metadata" / "master_graph.json"
 QUIZ_PATH = BASE / "engine" / "cuestionario_raiz.json"
 ENTRY_SEEDS_PATH = BASE / "dataset" / "metadata" / "entry_seeds.json"
 PREGUNTAS_CACHE_PATH = BASE / "engine" / "preguntas_cache.json"
+SESSIONS_DIR = BASE / "engine" / "sessions"
 
 MAX_DEPTH = 15
 MAX_OPCIONES = 6
@@ -90,6 +105,12 @@ SYSTEM_INTERPRETE = (
     "'terminemos'), usa accion='generar_plan'.\n"
     "- Si la respuesta indica que el usuario quiere salir sin plan (p.ej. 'no "
     "quiero seguir', 'olvidalo', 'dejalo asi'), usa accion='salir'.\n"
+    "- Si la respuesta expresa un miedo, riesgo o duda no resuelta (p.ej. "
+    "'que nadie lo use', 'no se si pagarian', 'me preocupa que...'), da "
+    "preferencia a los candidatos cuyas condiciones_activacion atienden esa "
+    "senal (validacion con clientes reales, pruebas baratas, MVP) por encima "
+    "de una continuacion puramente teorica, aunque otro candidato parezca "
+    "tematicamente mas cercano.\n"
     "- Si la respuesta discrimina con claridad hacia uno de los candidatos, "
     "usa accion='avanzar' y siguiente=el id exacto de ese candidato.\n"
     "- Si la respuesta NO discrimina entre los candidatos y "
@@ -111,20 +132,42 @@ SYSTEM_INTERPRETE = (
     "str|null, \"perfil_update\": str|null}."
 )
 
+SYSTEM_PROFUNDIZAR = (
+    "Interpretas la respuesta de un usuario a la pregunta de si quiere su "
+    "plan de negocio ahora mismo (aunque le falten algunas partes) o "
+    "prefiere responder unas preguntas mas para tener un plan mas completo. "
+    "Responde SOLO un JSON: {\"decision\": \"generar_ya\"|\"continuar\"}."
+)
+
 SYSTEM_PLAN = (
     "Eres el redactor final de una app de emprendimiento. Recibes un JSON con "
     "entrada_original (el texto libre con el que la persona empezo), "
     "perfil_sesion (lo que revelo sobre su proyecto a lo largo del recorrido) "
-    "y recorrido (los conceptos que visito en orden, cada uno con pasos "
-    "accionables y un entregable esperado). Redacta un plan de accion en "
-    "espanol comun, claro y poderoso, como un project manager excelente que "
-    "habla simple: un titulo breve que refleje el proyecto especifico de la "
-    "persona (no generico), un parrafo de contexto que conecte su entrada "
-    "original y su perfil con lo que va a lograr, y una secuencia numerada de "
-    "pasos concretos agrupados por etapas, con el entregable de cada etapa "
-    "como punto de control. Sin jerga sin explicar, sin autores, sin relleno "
-    "motivacional. Todo lo que escribas debe salir del material recibido; no "
-    "inventes tecnicas nuevas."
+    "y recorrido: una lista ordenada de conceptos, cada uno con titulo, pasos "
+    "(el material original, a menudo en forma de preguntas o pasos "
+    "reflexivos), entregable esperado, y es_viabilidad_economica (si el "
+    "concepto trata de costos, precios o numeros del negocio).\n\n"
+    "Reglas obligatorias:\n"
+    "1. Modo imperativo SIEMPRE. Convierte cada paso reflexivo o pregunta del "
+    "material en una tarea concreta con verbo, sujeto y criterio de exito. "
+    "Ejemplo: el material dice '¿has validado con clientes reales?' y tu "
+    "escribes 'Entrevista a 5 personas de tu publico objetivo esta semana y "
+    "anota como resuelven el problema hoy'.\n"
+    "2. Cada etapa termina con una linea 'Esta semana:' seguida de UNA accion "
+    "ejecutable en 7 dias, concreta y especifica al proyecto de la persona.\n"
+    "3. Si al menos una etapa del recorrido tiene es_viabilidad_economica=true, "
+    "agrega al final una seccion '## ¿Es negocio? Los numeros en simple' que "
+    "sintetice esos conceptos en palabras comunes, usando solo lo que esta en "
+    "el material. Si NINGUNA etapa lo tiene, NO agregues esa seccion ni "
+    "inventes cifras.\n"
+    "4. Prohibido cerrar el plan con preguntas para el usuario. El plan "
+    "cierra con la primera accion concreta del lunes, no con una pregunta.\n"
+    "5. Titulo breve especifico al proyecto (no generico), un parrafo de "
+    "contexto que conecte entrada_original y perfil_sesion con lo que va a "
+    "lograr.\n\n"
+    "Espanol comun, sin jerga sin explicar, sin autores, sin relleno "
+    "motivacional. Todo debe salir del material recibido; no inventes "
+    "tecnicas nuevas."
 )
 
 
@@ -144,6 +187,26 @@ def cargar_preguntas_cache():
     if PREGUNTAS_CACHE_PATH.exists():
         return json.load(open(PREGUNTAS_CACHE_PATH, encoding="utf-8"))
     return {}
+
+
+def guardar_sesion(session_id, ruta, perfil_sesion, texto_original, profundizar_ofrecido):
+    SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
+    data = {
+        "ruta": ruta,
+        "perfil_sesion": perfil_sesion,
+        "entrada_original": texto_original,
+        "profundizar_ofrecido": profundizar_ofrecido,
+        "timestamp": datetime.now().isoformat(),
+    }
+    (SESSIONS_DIR / f"{session_id}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def cargar_sesion(session_id):
+    path = SESSIONS_DIR / f"{session_id}.json"
+    if not path.exists():
+        print(f"ERROR: no existe la sesion {session_id} en {SESSIONS_DIR}")
+        sys.exit(1)
+    return json.load(open(path, encoding="utf-8"))
 
 
 def preguntar_opcion(texto, opciones, extra=""):
@@ -287,7 +350,29 @@ def _menu_emergencia(candidatos, graph):
     return {"accion": "avanzar", "siguiente": candidatos[r], "perfil_update": None}
 
 
-def ensamblar_plan(ruta, graph, perfil_sesion, texto_original):
+def preguntar_profundizar(familias_faltantes):
+    """Ofrece UNA vez la disyuntiva plan-inicial-ya vs. seguir profundizando."""
+    faltan_txt = "; ".join(familias_faltantes)
+    mensaje = (
+        f"Puedo darte tu plan ahora mismo. Eso si: con algunas preguntas mas "
+        f"incluiria {faltan_txt}. ¿Seguimos un poco o lo quieres ya?"
+    )
+    respuesta = input("\n" + mensaje + "\n> ")
+    if API_KEY:
+        try:
+            raw = llamar_claude(SYSTEM_PROFUNDIZAR, respuesta, MODEL_HAIKU, max_tokens=100)
+            data = _parsear_json(raw)
+            if data.get("decision") in ("generar_ya", "continuar"):
+                return data["decision"]
+        except Exception as e:
+            print(f"  (fallo la interpretacion, uso deteccion simple: {e})")
+    low = respuesta.strip().lower()
+    if any(p in low for p in ("ya", "ahora", "dame", "listo", "asi esta bien", "así está bien")):
+        return "generar_ya"
+    return "continuar"
+
+
+def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id):
     material = []
     for nid in ruta:
         n = graph[nid]
@@ -295,13 +380,30 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original):
             "concepto": n["titulo_concepto"],
             "pasos": n.get("pasos_accionables", []),
             "entregable": n.get("entregable_esperado", ""),
+            "es_viabilidad_economica": families.get(nid) == "viabilidad_economica",
         })
     if API_KEY:
         payload = {"entrada_original": texto_original, "perfil_sesion": perfil_sesion, "recorrido": material}
         try:
-            return llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL, max_tokens=2000)
+            cuerpo = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL, max_tokens=4096)
         except Exception as e:
             print(f"  (fallo el redactor con IA, ensamblo offline: {e})")
+            cuerpo = _ensamblar_offline(material, perfil_sesion, texto_original)
+    else:
+        cuerpo = _ensamblar_offline(material, perfil_sesion, texto_original)
+
+    etiqueta = "Plan completo" if evaluacion["es_completa"] else "Plan inicial"
+    partes = [f"_{etiqueta}_", "", cuerpo]
+    if not evaluacion["es_completa"]:
+        partes += ["", "---", "", "## Lo que este plan aun no cubre", ""]
+        for f in evaluacion["familias_faltantes"]:
+            partes.append(f"- {f}")
+        partes += ["", f"Para profundizar, continua la sesion: "
+                        f"`python engine/prototipo_motor.py --continuar {session_id}`"]
+    return "\n".join(partes)
+
+
+def _ensamblar_offline(material, perfil_sesion, texto_original):
     out = ["# Tu plan de accion", ""]
     if texto_original or perfil_sesion:
         out.append("## Contexto")
@@ -320,10 +422,19 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original):
     return "\n".join(out)
 
 
+def parse_args():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--continuar", metavar="SESSION_ID", default=None,
+                    help="Retoma una sesion previa desde su ultimo nodo (engine/sessions/{id}.json)")
+    return ap.parse_args()
+
+
 def main():
+    args = parse_args()
     graph = cargar_grafo()
     entry_seeds = cargar_entry_seeds()
     preguntas_cache = cargar_preguntas_cache()
+    families = plan_readiness.cargar_families(graph)
 
     print("=" * 60)
     print("  MY IDEA - prototipo del motor de ruteo (entrevista guiada)")
@@ -331,10 +442,24 @@ def main():
           f"preguntas cacheadas: {len(preguntas_cache)}")
     print("=" * 60)
 
-    texto_original = input("\nCuentame tu idea o tu situacion actual, con tus palabras:\n> ")
-    actual_id, perfil_sesion = clasificar_entrada(texto_original, entry_seeds, graph)
+    if args.continuar:
+        sesion = cargar_sesion(args.continuar)
+        session_id = args.continuar
+        ruta = sesion["ruta"]
+        visitados = set(ruta)
+        actual_id = ruta[-1]
+        perfil_sesion = sesion["perfil_sesion"]
+        texto_original = sesion["entrada_original"]
+        profundizar_ofrecido = sesion.get("profundizar_ofrecido", False)
+        print(f"\nRetomando sesion {session_id} desde: {graph[actual_id]['titulo_concepto']}")
+    else:
+        session_id = uuid.uuid4().hex[:8]
+        texto_original = input("\nCuentame tu idea o tu situacion actual, con tus palabras:\n> ")
+        actual_id, perfil_sesion = clasificar_entrada(texto_original, entry_seeds, graph)
+        visitados, ruta = {actual_id}, [actual_id]
+        profundizar_ofrecido = False
+        guardar_sesion(session_id, ruta, perfil_sesion, texto_original, profundizar_ofrecido)
 
-    visitados, ruta = {actual_id}, [actual_id]
     while True:
         n = graph[actual_id]
         print("\n" + "-" * 60)
@@ -369,14 +494,25 @@ def main():
             print("\nHasta pronto.")
             reportar_costo()
             return
+
         if resultado["accion"] == "generar_plan":
+            evaluacion = plan_readiness.evaluar_ruta(ruta, families)
+            if not evaluacion["es_completa"] and not profundizar_ofrecido:
+                profundizar_ofrecido = True
+                guardar_sesion(session_id, ruta, perfil_sesion, texto_original, profundizar_ofrecido)
+                if preguntar_profundizar(evaluacion["familias_faltantes"]) == "continuar":
+                    print("\nPerfecto, sigamos un poco mas.")
+                    continue
             break
+
         actual_id = resultado["siguiente"]
         visitados.add(actual_id)
         ruta.append(actual_id)
+        guardar_sesion(session_id, ruta, perfil_sesion, texto_original, profundizar_ofrecido)
 
+    evaluacion = plan_readiness.evaluar_ruta(ruta, families)
     print("\nEnsamblando tu plan...\n")
-    plan = ensamblar_plan(ruta, graph, perfil_sesion, texto_original)
+    plan = ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id)
     print(plan)
     fname = BASE / f"plan_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
     fname.write_text(plan, encoding="utf-8")
