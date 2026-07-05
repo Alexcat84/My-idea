@@ -83,7 +83,7 @@ def evaluar_ruta(ruta, families):
     if not tiene_accion:
         faltantes.append("validar con clientes reales (entrevistas, MVP, pruebas de usuario)")
     if not tiene_viabilidad:
-        faltantes.append("los numeros del negocio (costos, precios, punto de equilibrio)")
+        faltantes.append("si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)")
     if len(ruta) < MIN_NODOS_COMPLETA:
         faltantes.append("mas profundidad en el recorrido")
     return {

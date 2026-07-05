@@ -42,8 +42,11 @@ SYSTEM_PREGUNTA = (
     "siguientes posibles, cada uno con sus condiciones de activacion (cuando ese "
     "camino aplica). Tu tarea: redactar UNA sola pregunta ABIERTA, en espanol "
     "comun, sin jerga, sin mencionar autores, libros ni la palabra 'nodo', "
-    "disenada para que la respuesta libre de la persona revele naturalmente cual "
-    "de los caminos siguientes le corresponde. NO ofrezcas opciones ni menciones "
+    "hablando siempre de la IDEA o el PROYECTO de la persona (nunca de su "
+    "'empresa' o 'negocio', salvo que el concepto actual sea explicitamente de "
+    "viabilidad economica), disenada para que la respuesta libre de la persona "
+    "revele naturalmente cual de los caminos siguientes le corresponde. NO "
+    "ofrezcas opciones ni menciones "
     "los caminos por nombre; la pregunta debe sonar como algo que preguntaria un "
     "buen mentor, no un formulario. Responde SOLO un JSON: {\"pregunta\": str}."
 )
@@ -93,6 +96,8 @@ def main():
                      help="Procesa solo N nodos de prueba (muestreados) y reporta costo extrapolado")
     ap.add_argument("--yes", action="store_true",
                      help="Confirma la corrida completa sobre todos los nodos elegibles (sin --sample)")
+    ap.add_argument("--patch", nargs="+", metavar="NODE_ID", default=None,
+                     help="Regenera solo estos node_id puntuales y los fusiona en el cache real existente")
     args = ap.parse_args()
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
@@ -107,6 +112,20 @@ def main():
     elegibles = nodos_elegibles(graph)
     total = len(elegibles)
     print(f"Nodos elegibles (con nodos_siguientes validos): {total}")
+
+    if args.patch:
+        cache = json.load(open(CACHE_PATH, encoding="utf-8")) if CACHE_PATH.exists() else {}
+        for nid in args.patch:
+            if nid not in elegibles:
+                print(f"  omitido (no elegible o no existe): {nid}")
+                continue
+            pregunta, usage = generar_pregunta(client, graph[nid], elegibles[nid], graph)
+            cache[nid] = {"pregunta": pregunta, "candidatos": elegibles[nid]}
+            costo = usage.input_tokens / 1_000_000 * PRICE_INPUT_PER_MTOK + usage.output_tokens / 1_000_000 * PRICE_OUTPUT_PER_MTOK
+            print(f"  parchado: {nid} -> {pregunta[:70]}  (${costo:.4f})")
+        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"\nGuardado: {CACHE_PATH}  ({len(cache)} preguntas totales)")
+        return
 
     if args.sample is None and not args.yes:
         print(f"\nEsto ejecutaria la corrida COMPLETA sobre {total} nodos y gastaria dinero real.")
