@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-prototipo_motor.py - Prototipo CLI del motor de ruteo (Fase 2.3)
+prototipo_motor.py - Prototipo CLI del motor de ruteo (Fase 2.4)
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
 usuario nunca elige de un menu, y el intérprete puede atravesar varios nodos
@@ -38,6 +38,13 @@ Capa 3 (plan final): Sonnet redacta el plan en modo imperativo (tareas, no
     El lenguaje de cara al usuario habla de "idea/proyecto", no de
     "negocio", salvo que el analisis economico o el propio usuario lo
     traigan a la conversacion.
+Cosecha de vecindario (Fase 2.4): antes de redactar, se expande en silencio
+    desde la ruta (conversada + silenciosa) hacia sus nodos_siguientes y
+    nodos_previos adyacentes (hasta 25, priorizados por familia faltante,
+    fase mayoritaria y afinidad con el perfil_sesion). El redactor recibe
+    material_principal (la ruta, manda estructura y cronologia) y
+    material_de_apoyo (la cosecha, enriquece etapas existentes sin crear
+    etapas propias). El plan reporta cuantos conceptos lo alimentaron.
 
 Uso:  python engine/prototipo_motor.py
       python engine/prototipo_motor.py --continuar SESSION_ID
@@ -49,8 +56,10 @@ medidor de completitud solo se ofrece una vez por sesion.
 import argparse
 import json
 import os
+import re
 import sys
 import textwrap
+import unicodedata
 import uuid
 from datetime import datetime
 from pathlib import Path
@@ -176,30 +185,39 @@ SYSTEM_PROFUNDIZAR = (
 SYSTEM_PLAN = (
     "Eres el redactor final de una app de emprendimiento. Recibes un JSON con "
     "entrada_original (el texto libre con el que la persona empezo), "
-    "perfil_sesion (lo que revelo sobre su idea a lo largo del recorrido) "
-    "y recorrido: una lista ordenada de conceptos, cada uno con titulo, pasos "
-    "(el material original, a menudo en forma de preguntas o pasos "
-    "reflexivos), entregable esperado, y es_viabilidad_economica (si el "
-    "concepto trata de costos, precios o numeros del negocio).\n\n"
+    "perfil_sesion (lo que revelo sobre su idea a lo largo del recorrido), "
+    "material_principal: la ruta conversada (lista ordenada de conceptos, "
+    "cada uno con titulo, pasos, entregable esperado, y "
+    "es_viabilidad_economica), y material_de_apoyo: conceptos vecinos del "
+    "grafo (mismo formato) que NO fueron conversados con el usuario pero son "
+    "relevantes a su perfil.\n\n"
     "Reglas obligatorias:\n"
     "1. Modo imperativo SIEMPRE. Convierte cada paso reflexivo o pregunta del "
     "material en una tarea concreta con verbo, sujeto y criterio de exito. "
     "Ejemplo: el material dice '¿has validado con clientes reales?' y tu "
     "escribes 'Entrevista a 5 personas de tu publico objetivo esta semana y "
     "anota como resuelven el problema hoy'.\n"
-    "2. Cada etapa termina con una linea 'Esta semana:' seguida de UNA accion "
+    "2. material_principal manda la estructura y la cronologia del plan: "
+    "sus conceptos, en su orden, definen las etapas. material_de_apoyo NUNCA "
+    "crea etapas propias; solo enriquece las etapas ya definidas por "
+    "material_principal con acciones y consideraciones adicionales, donde el "
+    "concepto de apoyo sea relevante a esa etapa. Si un concepto de apoyo no "
+    "encaja con claridad en ninguna etapa existente, omitelo — no fuerces su "
+    "inclusion.\n"
+    "3. Cada etapa termina con una linea 'Esta semana:' seguida de UNA accion "
     "ejecutable en 7 dias, concreta y especifica al proyecto de la persona.\n"
-    "3. Si al menos una etapa del recorrido tiene es_viabilidad_economica=true, "
-    "agrega al final una seccion '## ¿Puede sostenerse tu idea? Los numeros "
-    "en simple' que sintetice esos conceptos en palabras comunes, usando "
-    "solo lo que esta en el material. Si NINGUNA etapa lo tiene, NO "
-    "agregues esa seccion ni inventes cifras.\n"
-    "4. Prohibido cerrar el plan con preguntas para el usuario. El plan "
+    "4. Si al menos un concepto (de material_principal o material_de_apoyo) "
+    "tiene es_viabilidad_economica=true, agrega al final una seccion "
+    "'## ¿Puede sostenerse tu idea? Los numeros en simple' que sintetice "
+    "esos conceptos en palabras comunes, usando solo lo que esta en el "
+    "material. Si NINGUNO lo tiene, NO agregues esa seccion ni inventes "
+    "cifras.\n"
+    "5. Prohibido cerrar el plan con preguntas para el usuario. El plan "
     "cierra con la primera accion concreta del lunes, no con una pregunta.\n"
-    "5. Titulo breve especifico al proyecto (no generico), un parrafo de "
+    "6. Titulo breve especifico al proyecto (no generico), un parrafo de "
     "contexto que conecte entrada_original y perfil_sesion con lo que va a "
     "lograr.\n"
-    "6. Habla siempre de la IDEA o el PROYECTO del usuario. Usa la palabra "
+    "7. Habla siempre de la IDEA o el PROYECTO del usuario. Usa la palabra "
     "'negocio' unicamente si el analisis economico forma parte del "
     "material recibido, o si el propio usuario ya la uso en su entrada o "
     "perfil_sesion.\n\n"
@@ -360,9 +378,41 @@ def resumen_nodo(nid, graph):
     }
 
 
+def _reparar_camino(actual_id, camino, graph, visitados):
+    """Si un id del camino no es sucesor directo del anterior pero SI es
+    sucesor de alguno de los sucesores directos de ese anterior (el modelo
+    omitio el padre de nivel 1 intermedio), inserta ese padre automaticamente
+    en vez de descartar el camino completo."""
+    reparado = []
+    prev = actual_id
+    vistos = set()
+    for nid in camino:
+        if nid in graph.get(prev, {}).get("nodos_siguientes", []):
+            reparado.append(nid)
+            vistos.add(nid)
+            prev = nid
+            continue
+        padre = next(
+            (c for c in graph.get(prev, {}).get("nodos_siguientes", [])
+             if c not in visitados and c not in vistos and nid in graph.get(c, {}).get("nodos_siguientes", [])),
+            None,
+        )
+        if padre is None:
+            raise ValueError(f"{nid} no es sucesor de {prev} ni de ninguno de sus sucesores directos")
+        reparado.append(padre)
+        vistos.add(padre)
+        reparado.append(nid)
+        vistos.add(nid)
+        prev = nid
+    return reparado
+
+
 def _validar_camino(actual_id, camino, graph, visitados):
-    if not camino or len(camino) > MAX_SALTOS_SILENCIOSOS_POR_LLAMADA:
-        raise ValueError(f"camino invalido (vacio o excede {MAX_SALTOS_SILENCIOSOS_POR_LLAMADA}): {camino}")
+    if not camino:
+        raise ValueError("camino vacio")
+    camino = _reparar_camino(actual_id, camino, graph, visitados)
+    if len(camino) > MAX_SALTOS_SILENCIOSOS_POR_LLAMADA:
+        raise ValueError(f"camino excede {MAX_SALTOS_SILENCIOSOS_POR_LLAMADA} nodos tras reparacion: {camino}")
     prev = actual_id
     vistos_en_camino = set()
     for nid in camino:
@@ -372,6 +422,7 @@ def _validar_camino(actual_id, camino, graph, visitados):
             raise ValueError(f"{nid} no es sucesor de {prev}")
         vistos_en_camino.add(nid)
         prev = nid
+    return camino
 
 
 def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_original,
@@ -406,8 +457,7 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
             raise ValueError("el modelo repregunto sin repreguntas disponibles")
         if accion == "avanzar":
             camino = data.get("camino") or []
-            _validar_camino(actual_id, camino, graph, visitados)
-            data["camino"] = camino
+            data["camino"] = _validar_camino(actual_id, camino, graph, visitados)
             data["pregunta_necesaria"] = bool(data.get("pregunta_necesaria", True))
         return data
     except Exception as e:
@@ -453,30 +503,95 @@ def preguntar_profundizar(familias_faltantes):
     return "continuar"
 
 
-def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id):
-    material = []
+MAX_COSECHA = 25
+_STOPWORDS_COSECHA = set(
+    "de la el en y a los las que para con su sus un una como al del por se es "
+    "son o u e no ya mas tu tus este esta estos estas".split()
+)
+
+
+def _tokens_cosecha(texto):
+    nfkd = unicodedata.normalize("NFKD", texto.lower())
+    ascii_txt = "".join(c for c in nfkd if not unicodedata.combining(c))
+    return set(w for w in re.findall(r"[a-z0-9]+", ascii_txt) if w not in _STOPWORDS_COSECHA and len(w) > 2)
+
+
+def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, tope=MAX_COSECHA):
+    """Expande desde la ruta (conversada + silenciosa) hacia nodos_siguientes y
+    nodos_previos adyacentes, sin preguntar nada, y devuelve hasta `tope`
+    priorizados por: familia que le falte a la ruta, fase mayoritaria de la
+    ruta, y afinidad de palabras clave con el perfil_sesion."""
+    ruta_set = set(ruta)
+    candidatos = set()
     for nid in ruta:
         n = graph[nid]
-        material.append({
+        for vecino in n.get("nodos_siguientes", []) + n.get("nodos_previos", []):
+            if vecino in graph and vecino not in ruta_set:
+                candidatos.add(vecino)
+
+    fases_ruta = [graph[nid].get("fase_proyecto") for nid in ruta if nid in graph]
+    fase_mayoritaria = max(set(fases_ruta), key=fases_ruta.count) if fases_ruta else None
+
+    familias_faltantes = set()
+    if not evaluacion["tiene_accion_clientes"]:
+        familias_faltantes.add("accion_clientes")
+    if not evaluacion["tiene_viabilidad_economica"]:
+        familias_faltantes.add("viabilidad_economica")
+
+    perfil_tokens = _tokens_cosecha(perfil_sesion) if perfil_sesion else set()
+
+    def puntaje(nid):
+        n = graph[nid]
+        p = 0
+        if families.get(nid) in familias_faltantes:
+            p += 10
+        if n.get("fase_proyecto") == fase_mayoritaria:
+            p += 3
+        if perfil_tokens:
+            texto_nodo = n.get("titulo_concepto", "") + " " + " ".join(n.get("condiciones_activacion", []))
+            p += len(perfil_tokens & _tokens_cosecha(texto_nodo))
+        return p
+
+    return sorted(candidatos, key=puntaje, reverse=True)[:tope]
+
+
+def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id):
+    def a_material(nid):
+        n = graph[nid]
+        return {
             "concepto": n["titulo_concepto"],
             "pasos": n.get("pasos_accionables", []),
             "entregable": n.get("entregable_esperado", ""),
             "es_viabilidad_economica": families.get(nid) == "viabilidad_economica",
-        })
+        }
+
+    material_principal = [a_material(nid) for nid in ruta]
+    cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion)
+    material_de_apoyo = [a_material(nid) for nid in cosecha_ids]
+
     if API_KEY:
-        payload = {"entrada_original": texto_original, "perfil_sesion": perfil_sesion, "recorrido": material}
+        payload = {
+            "entrada_original": texto_original,
+            "perfil_sesion": perfil_sesion,
+            "material_principal": material_principal,
+            "material_de_apoyo": material_de_apoyo,
+        }
         try:
-            cuerpo = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL, max_tokens=4096)
+            cuerpo = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL, max_tokens=8192)
         except Exception as e:
             print(f"  (fallo el redactor con IA, ensamblo offline: {e})")
-            cuerpo = _ensamblar_offline(material, perfil_sesion, texto_original)
+            cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
     else:
-        cuerpo = _ensamblar_offline(material, perfil_sesion, texto_original)
+        cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
 
     etiqueta = "Plan completo" if evaluacion["es_completa"] else "Plan inicial"
+    total_conceptos = len(ruta) + len(cosecha_ids)
     partes = [f"_{etiqueta}_", "", cuerpo]
+    partes += ["", "---", f"_Este plan se alimento de {total_conceptos} conceptos: "
+                          f"{len(ruta)} de tu recorrido conversado y {len(cosecha_ids)} "
+                          f"del vecindario relacionado del grafo._"]
     if not evaluacion["es_completa"]:
-        partes += ["", "---", "", "## Lo que este plan aun no cubre", ""]
+        partes += ["", "## Lo que este plan aun no cubre", ""]
         for f in evaluacion["familias_faltantes"]:
             partes.append(f"- {f}")
         partes += ["", f"Para profundizar, continua la sesion: "

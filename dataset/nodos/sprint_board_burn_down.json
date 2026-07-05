@@ -17,7 +17,11 @@
     "modelo_hibrido_agile_stage_gate",
     "power_of_nine_agile"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "gestion_visual_del_pipeline_de_desarrollo",
+    "kanban_validacion_aprendizaje",
+    "reduccion_tamano_de_lote_batch_size"
+  ],
   "condiciones_activacion": [
     "Durante la ejecución de cualquier sprint activo",
     "Cuando la gerencia necesita visibilidad rápida del progreso sin reuniones extensas"

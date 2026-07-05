@@ -14,7 +14,11 @@
   "nodos_previos": [
     "motor_de_crecimiento"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "motor_crecimiento_pago",
+    "hipotesis_valor_crecimiento",
+    "afinar_motor_crecimiento"
+  ],
   "condiciones_activacion": [
     "Si el producto depende de que los clientes regresen repetidamente (suscripciones, marketplaces, software empresarial)",
     "Si el crecimiento se ha estancado a pesar de buena adquisición de clientes nuevos"

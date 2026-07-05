@@ -15,7 +15,11 @@
     "modelo_hibrido_agile_stage_gate",
     "product_backlog_fisico"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "definicion_sprint_terminado",
+    "spiral_development",
+    "espiral_mortal_lotes_grandes"
+  ],
   "condiciones_activacion": [
     "Si el proyecto involucra desarrollo de hardware, dispositivos médicos, maquinaria u otros productos no divisibles como el software",
     "Cuando el equipo tiene dificultad para saber cuándo detenerse en una tarea de evaluación o diseño"

@@ -16,7 +16,11 @@
     "metricas_cohortes",
     "kanban_validacion_aprendizaje"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "metricas_accionables",
+    "evitar_pseudociencia_producto",
+    "vanity_metrics_vs_accionables"
+  ],
   "condiciones_activacion": [
     "Si existen discusiones internas sobre qué causó cambios en las métricas",
     "Si los equipos desconfían de los datos o los cuestionan cuando contradicen sus proyectos",

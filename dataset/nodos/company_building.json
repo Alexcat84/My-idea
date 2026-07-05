@@ -13,9 +13,14 @@
   "entregable_esperado": "Estructura organizacional funcional formal con roles definidos y plan operativo de ejecución",
   "nodos_previos": [
     "customer_creation",
-    "modelo_customer_development"
+    "modelo_customer_development",
+    "cierre_term_sheet"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "plan_de_lanzamiento_al_mercado",
+    "equipo_multifuncional",
+    "preservar_caja_hasta_validar"
+  ],
   "condiciones_activacion": [
     "Si la empresa ya encontró un modelo de negocio repetible y escalable ('graduation day')",
     "Cuando el equipo fundador reconoce que necesita ejecutivos experimentados para escalar"

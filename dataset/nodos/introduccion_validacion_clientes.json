@@ -16,7 +16,11 @@
     "decision_pivotar_o_proceder",
     "restriccion_gasto_validacion"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "filosofia_validacion_clientes",
+    "customer_validation_sell_phase",
+    "realizar_pruebas_pasa_no_pasa"
+  ],
   "condiciones_activacion": [
     "Cuando el equipo decidió 'proceder' tras el descubrimiento de clientes y necesita iniciar la fase de validación"
   ]

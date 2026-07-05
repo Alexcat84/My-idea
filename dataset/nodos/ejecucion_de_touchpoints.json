@@ -15,7 +15,11 @@
     "blueprint_de_experiencia",
     "hoja_de_ruta_de_ventas"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "pull_no_push",
+    "overlapping_stages_concurrent_execution",
+    "spiral_development"
+  ],
   "condiciones_activacion": [
     "Cuando una experiencia debe repetirse de forma consistente a gran escala",
     "Si pequeños detalles de ejecución están afectando la percepción de calidad del servicio"

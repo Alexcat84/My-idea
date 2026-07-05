@@ -15,7 +15,11 @@
     "framework_ppph_flujos",
     "customer_types_mapping"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "planificacion_consecuencias_no_intencionadas",
+    "disenar_para_sanacion",
+    "aceptar_la_imperfeccion_del_diseno"
+  ],
   "condiciones_activacion": [
     "Cuando se lanza un producto que interactúa con infraestructura pública o plataformas sociales.",
     "Si existe riesgo de que el uso viral o masivo del producto genere efectos secundarios peligrosos."

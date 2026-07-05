@@ -13,9 +13,14 @@
   "entregable_esperado": "Una política o mecanismo de consentimiento de datos diseñado con opciones claras de opt-in/opt-out, documentado en el sistema o prototipo.",
   "nodos_previos": [
     "mapeo_flujos_invisibles_datos",
-    "brief_de_diseno"
+    "brief_de_diseno",
+    "diseno_intencional_etica"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "diseno_intencional_etica",
+    "disenar_para_sanacion",
+    "aceptar_la_imperfeccion_del_diseno"
+  ],
   "condiciones_activacion": [
     "Cuando el diseño de un producto digital requiere políticas de privacidad.",
     "Si el usuario final es vulnerable a la vigilancia o el uso indebido de sus datos personales."

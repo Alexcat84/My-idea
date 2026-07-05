@@ -22,7 +22,11 @@
     "scoring_model_scorecard",
     "technology_platform_evaluation"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "gates_go_kill_decision_points",
+    "red_flags_proyectos_en_problemas",
+    "post_launch_review"
+  ],
   "condiciones_activacion": [
     "Cuando la organización gestiona múltiples proyectos simultáneos de innovación.",
     "Cuando se requiere verificar que el conjunto de proyectos cumple los objetivos estratégicos globales, más allá de decisiones individuales en las gates."

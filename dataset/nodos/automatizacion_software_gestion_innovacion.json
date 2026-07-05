@@ -15,7 +15,11 @@
     "modelo_hibrido_agile_stage_gate",
     "cultura_de_optimismo"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "asignacion_recursos_en_gates",
+    "gestion_visual_del_pipeline_de_desarrollo",
+    "gates_go_kill_decision_points"
+  ],
   "condiciones_activacion": [
     "Cuando la carga administrativa del proceso de innovación consume tiempo excesivo del equipo",
     "Si la empresa gestiona un portafolio grande de proyectos simultáneos"

@@ -16,7 +16,11 @@
     "experimentacion_iterativa_mercado_fisico",
     "recursos_de_segundo_nivel"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "eleccion_ritmo_crecimiento",
+    "riesgo_no_pivotar_a_tiempo",
+    "red_flags_proyectos_en_problemas"
+  ],
   "condiciones_activacion": [
     "Si la empresa está considerando contratar una fuerza de ventas grande justo después del lanzamiento (first customer ship).",
     "Si los inversionistas presionan por 'crecer rápido' (get big fast) sin datos de retención de clientes."

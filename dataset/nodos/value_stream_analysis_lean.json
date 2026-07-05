@@ -17,7 +17,11 @@
   "nodos_previos": [
     "overlapping_stages_concurrent_execution"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "analisis_flujo_de_valor",
+    "pull_no_push",
+    "valor_vs_desperdicio"
+  ],
   "condiciones_activacion": [
     "Cuando el proceso de innovación se ha vuelto burocrático con demasiados entregables y templates",
     "Si el equipo del proyecto se queja de exceso de trabajo administrativo para los gates",
