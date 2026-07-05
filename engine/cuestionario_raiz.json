@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "descripcion": "Cuestionario raiz: mapea el estado del usuario a una de las 20 puertas de entrada del grafo. Maximo 2 preguntas. El texto esta en lenguaje comun, sin jerga.",
+  "pregunta_fase": {
+    "texto": "¿Dónde estás hoy con tu idea de negocio?",
+    "opciones": [
+      {
+        "texto": "Todavía no tengo una idea clara, o tengo varias y quiero encontrar la buena",
+        "fase": "ideacion"
+      },
+      {
+        "texto": "Tengo una idea, pero no sé si alguien la querría de verdad",
+        "fase": "validacion"
+      },
+      {
+        "texto": "Ya comprobé que la gente lo quiere; ahora necesito armar el negocio",
+        "fase": "planificacion"
+      },
+      {
+        "texto": "Ya estoy construyendo u operando mi negocio",
+        "fase": "ejecucion"
+      }
+    ]
+  },
+  "pregunta_puerta": {
+    "ideacion": {
+      "texto": "¿Qué describe mejor lo que necesitas ahora?",
+      "opciones": [
+        {
+          "texto": "Entender cómo funciona el proceso creativo de principio a fin",
+          "nodo": "cuatro_etapas_del_pensamiento_creativo"
+        },
+        {
+          "texto": "Partir de problemas reales de la gente para encontrar mi idea",
+          "nodo": "design_thinking_fundamentos"
+        },
+        {
+          "texto": "Salir a observar el mundo en busca de inspiración concreta",
+          "nodo": "investigacion_etnografica_ideacion"
+        },
+        {
+          "texto": "Ya tengo una chispa de idea; quiero examinar qué estoy dando por hecho",
+          "nodo": "leap_of_faith_assumptions"
+        },
+        {
+          "texto": "Saber si este es el momento correcto de mi vida para emprender",
+          "nodo": "decision_cuando_fundar"
+        }
+      ]
+    },
+    "validacion": {
+      "texto": "¿Qué describe mejor lo que necesitas ahora?",
+      "opciones": [
+        {
+          "texto": "Aprender a escuchar de verdad a mis posibles clientes",
+          "nodo": "voz_del_cliente_voc"
+        },
+        {
+          "texto": "Definir exactamente qué debo comprobar primero",
+          "nodo": "hipotesis_valor_crecimiento"
+        },
+        {
+          "texto": "Salir a entrevistar gente sobre el problema que quiero resolver",
+          "nodo": "desarrollo_presentacion_problema"
+        },
+        {
+          "texto": "Construir algo simple y barato para probar mi idea ya",
+          "nodo": "construir_mvp_baja_fidelidad"
+        },
+        {
+          "texto": "Ya tengo algo andando y quiero medir si de verdad funciona",
+          "nodo": "metricas_accionables"
+        }
+      ]
+    },
+    "planificacion": {
+      "texto": "¿Qué describe mejor lo que necesitas ahora?",
+      "opciones": [
+        {
+          "texto": "Ordenar todo lo que aprendí en un modelo de negocio coherente",
+          "nodo": "sintesis_hipotesis_modelo_negocio"
+        },
+        {
+          "texto": "Definir las actividades del día a día de mi negocio",
+          "nodo": "actividades_clave"
+        },
+        {
+          "texto": "Armar un plan de trabajo formal, con tiempos y responsables",
+          "nodo": "project_management_plan"
+        },
+        {
+          "texto": "Conseguir dinero: conocer mis opciones de financiamiento",
+          "nodo": "fuentes_financiamiento_startup"
+        },
+        {
+          "texto": "Decidir si emprendo solo o con socios, y cómo repartirnos",
+          "nodo": "decision_fundador_solo_vs_equipo"
+        }
+      ]
+    },
+    "ejecucion": {
+      "texto": "¿Qué describe mejor lo que necesitas ahora?",
+      "opciones": [
+        {
+          "texto": "Ejecutar más rápido y con menos desperdicio",
+          "nodo": "trabajo_en_lotes_pequenos"
+        },
+        {
+          "texto": "Hacer crecer lo que ya está funcionando",
+          "nodo": "afinar_motor_crecimiento"
+        },
+        {
+          "texto": "Entender los números de mi negocio sin ser contador",
+          "nodo": "arte_de_las_finanzas"
+        },
+        {
+          "texto": "Quitar la fricción de mis procesos actuales",
+          "nodo": "analisis_flujo_de_valor"
+        },
+        {
+          "texto": "Manejar varios frentes y decidir qué avanza y qué se corta",
+          "nodo": "scorecards_criterios_gate"
+        }
+      ]
+    }
+  }
+}

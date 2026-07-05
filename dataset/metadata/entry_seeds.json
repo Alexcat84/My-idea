@@ -1,15 +1,25 @@
 {
-  "description": "Nodos de entrada iniciales para el chequeo de alcanzabilidad dirigida del validador (Fase 1.8). Todos pertenecen al dataset preexistente (908 nodos previos a la integracion de Venture Deals / The Founder's Dilemmas / Financial Intelligence for Entrepreneurs). Provisional: sera refinado en Fase 2 con los nodos de entrada curados por fase.",
+  "description": "Nodos de entrada CURADOS (Fase 2). 20 puertas, 5 por fase, seleccionadas por topologia (pocos prerequisitos, salida moderada de 4-12, alcance total del grafo) y contenido (suenan a primer paso para el estado mental del usuario). Usados por el validador de alcanzabilidad dirigida y por el cuestionario raiz del motor (engine/cuestionario_raiz.json).",
   "seeds": [
-    "definicion_startup",
     "cuatro_etapas_del_pensamiento_creativo",
-    "desirability_feasibility_viability",
-    "customer_discovery_cuatro_fases",
-    "producto_minimo_viable",
-    "prototipado_rapido",
-    "lienzo_modelo_negocio",
-    "diamante_de_innovacion",
-    "ciclo_construir_medir_aprender",
-    "spiral_development"
+    "design_thinking_fundamentos",
+    "investigacion_etnografica_ideacion",
+    "leap_of_faith_assumptions",
+    "decision_cuando_fundar",
+    "voz_del_cliente_voc",
+    "hipotesis_valor_crecimiento",
+    "desarrollo_presentacion_problema",
+    "construir_mvp_baja_fidelidad",
+    "metricas_accionables",
+    "sintesis_hipotesis_modelo_negocio",
+    "actividades_clave",
+    "project_management_plan",
+    "fuentes_financiamiento_startup",
+    "decision_fundador_solo_vs_equipo",
+    "trabajo_en_lotes_pequenos",
+    "afinar_motor_crecimiento",
+    "arte_de_las_finanzas",
+    "analisis_flujo_de_valor",
+    "scorecards_criterios_gate"
   ]
 }
