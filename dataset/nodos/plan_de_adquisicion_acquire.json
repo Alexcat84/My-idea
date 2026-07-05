@@ -17,10 +17,14 @@
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "customer_discovery",
-    "customer_segments_hypothesis"
+    "customer_segments_hypothesis",
+    "herramientas_online_canal_fisico",
+    "plan_de_materiales_colaterales"
   ],
   "nodos_siguientes": [
-    "plan_de_activacion"
+    "plan_de_activacion",
+    "analisis_de_cohortes",
+    "push_vs_pull_marketing"
   ],
   "condiciones_activacion": [
     "Cuando el startup entra en la fase de customer validation y necesita probar canales de adquisición",

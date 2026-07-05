@@ -13,11 +13,14 @@
   "entregable_esperado": "Una tasa de retorno mínima definida y justificada para evaluar proyectos de inversión",
   "nodos_previos": [
     "valor_del_dinero_en_el_tiempo",
-    "costo_de_capital"
+    "costo_de_capital",
+    "costo_de_oportunidad"
   ],
   "nodos_siguientes": [
     "valor_presente",
-    "metodo_valor_presente_neto"
+    "metodo_valor_presente_neto",
+    "analisis_de_gastos_de_capital",
+    "tasa_interna_retorno_irr"
   ],
   "condiciones_activacion": [
     "Cuando la empresa debe decidir entre múltiples oportunidades de inversión de capital limitadas"

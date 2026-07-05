@@ -12,12 +12,16 @@
     "Evalúa regularmente si mantener el rumbo actual (perseverar) o hacer un giro brusco (pivotar)."
   ],
   "entregable_esperado": "Documento breve que distinga claramente la Visión, la Estrategia actual y el Producto vigente del proyecto, junto con el criterio de cuándo pivotar vs. cuándo optimizar.",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "definicion_startup_incertidumbre",
+    "proposito_como_motor_energia"
+  ],
   "nodos_siguientes": [
     "definicion_startup",
     "aprendizaje_validado",
     "data_integrity_forecasting",
-    "enfoque_motor_unico_crecimiento"
+    "enfoque_motor_unico_crecimiento",
+    "backlog_evolutivo_y_cronograma_flexible"
   ],
   "condiciones_activacion": [
     "Cuando el usuario tiene un plan de negocio detallado tipo 'lanzamiento de cohete' con proyecciones rígidas.",

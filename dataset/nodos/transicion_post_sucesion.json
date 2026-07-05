@@ -13,10 +13,12 @@
   "entregable_esperado": "Plan de transición de roles y organigrama actualizado, con autoridad y reportes claramente definidos.",
   "nodos_previos": [
     "evaluacion_disimilitud_sucesor",
-    "riesgo_beneficio_retener_fundador"
+    "riesgo_beneficio_retener_fundador",
+    "busqueda_ceo_sucesor_externo"
   ],
   "nodos_siguientes": [
-    "founder_ceo_succession_process"
+    "founder_ceo_succession_process",
+    "riesgo_beneficio_retener_fundador"
   ],
   "condiciones_activacion": [
     "Inmediatamente después de contratar al nuevo CEO externo.",

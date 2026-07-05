@@ -13,13 +13,16 @@
   "entregable_esperado": "Lista completa de actividades del proyecto con identificadores y descripciones",
   "nodos_previos": [
     "schedule_management_plan",
-    "work_breakdown_structure"
+    "work_breakdown_structure",
+    "wbs_dictionary"
   ],
   "nodos_siguientes": [
     "network_diagram",
     "activity_resource_requirements",
     "activity_duration_estimates",
-    "milestone_list"
+    "milestone_list",
+    "activity_attributes",
+    "project_schedule"
   ],
   "condiciones_activacion": [
     "Cuando el WBS está definido y se necesita detallar las actividades específicas para completar cada paquete de trabajo"

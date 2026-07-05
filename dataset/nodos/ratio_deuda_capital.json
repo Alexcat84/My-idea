@@ -12,10 +12,12 @@
   ],
   "entregable_esperado": "Cálculo del ratio deuda-capital con comparación sectorial y decisión documentada sobre estrategia de financiamiento",
   "nodos_previos": [
-    "lectura_balance_general"
+    "lectura_balance_general",
+    "retorno_sobre_capital"
   ],
   "nodos_siguientes": [
-    "cobertura_de_intereses"
+    "cobertura_de_intereses",
+    "tasa_crecimiento_sostenible"
   ],
   "condiciones_activacion": [
     "El usuario está decidiendo entre bootstrapping y financiamiento con deuda",

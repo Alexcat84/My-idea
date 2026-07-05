@@ -12,11 +12,20 @@
   ],
   "entregable_esperado": "Documento de hipótesis de segmentos de clientes con tipo de problema identificado y clasificación del mercado (single-sided o multi-sided)",
   "nodos_previos": [
-    "lienzo_modelo_negocio"
+    "lienzo_modelo_negocio",
+    "hipotesis_de_tamano_de_mercado",
+    "hipotesis_propuesta_de_valor_producto"
   ],
   "nodos_siguientes": [
     "customer_types_mapping",
-    "problem_recognition_scale"
+    "problem_recognition_scale",
+    "canales_distribucion",
+    "channels_hypothesis_web_mobile",
+    "customer_retention_tactics",
+    "framework_get_keep_grow",
+    "lienzo_modelo_negocio",
+    "plan_de_adquisicion_acquire",
+    "relaciones_con_clientes"
   ],
   "condiciones_activacion": [
     "Si el equipo aún no ha definido claramente quién es su cliente",

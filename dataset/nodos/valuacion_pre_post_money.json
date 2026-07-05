@@ -11,10 +11,14 @@
   ],
   "entregable_esperado": "Cálculo claro y documentado del porcentaje de dilución esperado en la ronda.",
   "nodos_previos": [
-    "term_sheet_overview"
+    "term_sheet_overview",
+    "option_pool_negociacion"
   ],
   "nodos_siguientes": [
-    "pool_opciones_empleados"
+    "pool_opciones_empleados",
+    "antidilucion_provisiones",
+    "preferencia_de_liquidacion",
+    "seed_deals_riesgos_precedente"
   ],
   "condiciones_activacion": [
     "Cuando el usuario negocia el monto de inversión y porcentaje de equity con un VC."

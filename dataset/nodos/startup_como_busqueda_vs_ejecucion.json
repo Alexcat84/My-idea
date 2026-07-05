@@ -10,7 +10,9 @@
     "Listar explícitamente todas las hipótesis del modelo de negocio (mercado, cliente, precio, canal)."
   ],
   "entregable_esperado": "Un lienzo de hipótesis de modelo de negocio marcado explícitamente como 'no probado'.",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "modelo_cascada_desarrollo_producto"
+  ],
   "nodos_siguientes": [
     "desarrollo_de_clientes_customer_development",
     "lienzo_modelo_negocio",

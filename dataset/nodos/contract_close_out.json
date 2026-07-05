@@ -14,11 +14,13 @@
   "entregable_esperado": "Informe de Cierre de Contrato con desempeño del proveedor, cambios, disputas y firma final",
   "nodos_previos": [
     "procurement_audit",
-    "formal_acceptance"
+    "formal_acceptance",
+    "contractor_status_report"
   ],
   "nodos_siguientes": [
     "project_close_out",
-    "lessons_learned"
+    "lessons_learned",
+    "contractor_status_report"
   ],
   "condiciones_activacion": [
     "Cuando un contrato con un proveedor ha finalizado o se está terminando"

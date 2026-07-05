@@ -14,11 +14,13 @@
   "entregable_esperado": "Documento SAFE firmado con términos claros de cap/descuento y cláusulas adicionales negociadas",
   "nodos_previos": [
     "riesgo_fiduciario_insolvencia_deuda",
-    "pro_rata_rights_deuda_convertible"
+    "pro_rata_rights_deuda_convertible",
+    "original_issue_discount_oid"
   ],
   "nodos_siguientes": [
     "cap_table_basico",
-    "metodo_conversion_notas_cap_table"
+    "metodo_conversion_notas_cap_table",
+    "equity_crowdfunding"
   ],
   "condiciones_activacion": [
     "Si el founder busca una alternativa simple y rápida a la deuda convertible para levantar capital semilla",

@@ -13,11 +13,13 @@
   "entregable_esperado": "Estructura de ingresos definida con mecanismos y tipo de precio por segmento",
   "nodos_previos": [
     "relaciones_con_clientes",
-    "elementos_creadores_valor"
+    "elementos_creadores_valor",
+    "canales_distribucion"
   ],
   "nodos_siguientes": [
     "recursos_clave",
-    "estructura_de_costos"
+    "estructura_de_costos",
+    "lienzo_modelo_negocio"
   ],
   "condiciones_activacion": [
     "Cuando el usuario necesita definir cómo monetizar su propuesta de valor"

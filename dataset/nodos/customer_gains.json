@@ -12,10 +12,13 @@
   ],
   "entregable_esperado": "Lista de post-its con gains concretos y priorizados por relevancia",
   "nodos_previos": [
-    "customer_pains"
+    "customer_pains",
+    "customer_jobs",
+    "customer_profile"
   ],
   "nodos_siguientes": [
-    "value_map"
+    "value_map",
+    "superioridad_producto_beneficios"
   ],
   "condiciones_activacion": [
     "Cuando se busca identificar qué beneficios valorarían los clientes para diseñar creadores de ganancias"

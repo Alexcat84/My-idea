@@ -13,11 +13,23 @@
   "entregable_esperado": "Validación documentada de que el Value Map atiende los jobs, pains y gains más relevantes del cliente",
   "nodos_previos": [
     "customer_profile",
-    "value_map"
+    "value_map",
+    "customer_scenarios_business_model",
+    "producto_unico_superior",
+    "unique_selling_proposition_statement",
+    "value_proposition_canvas"
   ],
   "nodos_siguientes": [
     "rapid_prototyping",
-    "testing_process_completo"
+    "testing_process_completo",
+    "copy_testing",
+    "four_actions_framework_lado_cliente",
+    "framework_get_keep_grow",
+    "lean_launchpad_web_startup_process",
+    "metrics_that_matter_framework",
+    "project_charter",
+    "sales_funnel_get_keep_grow",
+    "validar_modelo_financiero"
   ],
   "condiciones_activacion": [
     "Cuando ya se tienen tanto el Customer Profile como el Value Map y se necesita verificar su alineación"

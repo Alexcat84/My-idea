@@ -13,11 +13,13 @@
   "entregable_esperado": "Tamaño del employee pool acordado y reflejado en la cap table pre-cierre.",
   "nodos_previos": [
     "cap_table_basico",
-    "term_sheet_negociacion"
+    "term_sheet_negociacion",
+    "vesting_acciones_fundadores"
   ],
   "nodos_siguientes": [
     "vesting_acciones_fundadores",
-    "creacion_option_pool"
+    "creacion_option_pool",
+    "asuncion_stock_options_adquisicion"
   ],
   "condiciones_activacion": [
     "Cuando se está negociando el pre-money valuation de una ronda",

@@ -14,12 +14,15 @@
   ],
   "entregable_esperado": "Pronóstico financiero de ingresos netos a 4-8 trimestres con tres escenarios (bueno/mejor/óptimo) y análisis de flujo de caja",
   "nodos_previos": [
-    "verificar_clientes_y_canales"
+    "verificar_clientes_y_canales",
+    "escenarios_diseno_modelo_negocio",
+    "verificar_product_market_fit"
   ],
   "nodos_siguientes": [
     "decision_pivotar_o_proceder",
     "preservar_caja_buscar_gastar",
-    "metodo_valor_presente_neto"
+    "metodo_valor_presente_neto",
+    "metodos_de_valuacion"
   ],
   "condiciones_activacion": [
     "Cuando se necesita decidir si el modelo de negocio es financieramente viable antes de escalar"

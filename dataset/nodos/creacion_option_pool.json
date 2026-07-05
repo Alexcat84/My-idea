@@ -11,10 +11,12 @@
   ],
   "entregable_esperado": "Cap table actualizado con el porcentaje de option pool reservado y su cronograma de asignación.",
   "nodos_previos": [
-    "seesaw_salario_equity"
+    "seesaw_salario_equity",
+    "employee_pool_esop"
   ],
   "nodos_siguientes": [
-    "term_sheet_negociacion"
+    "term_sheet_negociacion",
+    "decision_autofinanciamiento_vs_inversion"
   ],
   "condiciones_activacion": [
     "Antes de cerrar una ronda de financiamiento formal.",

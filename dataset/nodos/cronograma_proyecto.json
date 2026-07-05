@@ -14,12 +14,15 @@
   "entregable_esperado": "Diagrama de Gantt o gráfico de hitos con fechas de inicio/fin y dependencias",
   "nodos_previos": [
     "estimacion_tres_puntos",
-    "plan_gestion_costos"
+    "plan_gestion_costos",
+    "project_schedule",
+    "wbs_dictionary"
   ],
   "nodos_siguientes": [
     "estimacion_costos_actividad",
     "presupuesto_agil_innovacion",
-    "project_charter"
+    "project_charter",
+    "linea_base_costos"
   ],
   "condiciones_activacion": [
     "Cuando se necesita visualizar la secuencia temporal de actividades del proyecto",

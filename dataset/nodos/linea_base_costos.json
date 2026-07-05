@@ -13,9 +13,16 @@
   "entregable_esperado": "Curva de costo acumulado (línea base) integrada al plan de gestión del proyecto",
   "nodos_previos": [
     "estimacion_costos_actividad",
-    "cronograma_proyecto"
+    "cronograma_proyecto",
+    "activity_duration_estimates",
+    "cost_management_plan",
+    "estimacion_tres_puntos",
+    "hoja_estimacion_costos",
+    "plan_gestion_costos"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "estimate_at_completion_eac"
+  ],
   "condiciones_activacion": [
     "Cuando se necesita una referencia para controlar el desempeño financiero del proyecto durante la ejecución"
   ]

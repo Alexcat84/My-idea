@@ -12,11 +12,16 @@
   ],
   "entregable_esperado": "Lista priorizada de supuestos de salto de fe identificados y separados de los hechos comprobados del plan de negocio",
   "nodos_previos": [
-    "alineacion_ti_negocio"
+    "alineacion_ti_negocio",
+    "analogos_antilogos"
   ],
   "nodos_siguientes": [
     "hipotesis_valor_crecimiento",
-    "producto_minimo_viable"
+    "producto_minimo_viable",
+    "concierge_mvp",
+    "contabilidad_innovacion",
+    "genchi_gembutsu",
+    "wizard_of_oz_testing"
   ],
   "condiciones_activacion": [
     "Cuando el emprendedor tiene un plan de negocio pero no ha diferenciado qué partes son hechos y cuáles son suposiciones riesgosas",

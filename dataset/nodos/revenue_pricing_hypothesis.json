@@ -14,11 +14,17 @@
   "entregable_esperado": "Modelo financiero de ingresos con proyección de volumen, precio y validación de viabilidad del negocio",
   "nodos_previos": [
     "key_partners_hypothesis",
-    "channels_hypothesis_physical"
+    "channels_hypothesis_physical",
+    "partners_hypothesis_physical",
+    "traffic_partners_hypothesis"
   ],
   "nodos_siguientes": [
     "lienzo_modelo_negocio",
-    "pricing_tactics_models"
+    "pricing_tactics_models",
+    "mercados_multilaterales",
+    "pass_fail_experiment_design",
+    "pricing_models_selection",
+    "seleccion_canal_distribucion"
   ],
   "condiciones_activacion": [
     "Al definir la estructura de ingresos antes de la validación con clientes reales"

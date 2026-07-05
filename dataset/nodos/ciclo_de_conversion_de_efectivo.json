@@ -23,9 +23,12 @@
     "gestion_dso",
     "gestion_inventario",
     "gestion_cuentas_por_pagar_dpo",
-    "analisis_flujo_de_valor"
+    "analisis_flujo_de_valor",
+    "gestion_capital_trabajo"
   ],
   "nodos_siguientes": [
-    "gestion_relacion_bancaria"
+    "gestion_relacion_bancaria",
+    "analisis_antiguedad_cuentas_por_cobrar",
+    "cultura_de_transparencia_financiera"
   ]
 }

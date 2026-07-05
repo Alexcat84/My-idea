@@ -13,10 +13,14 @@
   ],
   "entregable_esperado": "Scorecard estandarizado y aplicado consistentemente en cada gate, con puntuaciones documentadas y criterios de corte definidos",
   "nodos_previos": [
-    "requisitos_gates_con_dientes"
+    "requisitos_gates_con_dientes",
+    "gates_go_kill_decision_points"
   ],
   "nodos_siguientes": [
-    "asignacion_recursos_en_gates"
+    "asignacion_recursos_en_gates",
+    "aceleracion_de_gates",
+    "definicion_gatekeepers",
+    "protocolo_reuniones_gate"
   ],
   "condiciones_activacion": [
     "Cuando se requiere objetividad en las decisiones de Go/Kill",

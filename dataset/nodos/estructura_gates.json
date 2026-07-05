@@ -12,10 +12,12 @@
   ],
   "entregable_esperado": "Una plantilla de gate con checklist de criterios must-meet, scorecard de criterios should-meet, y protocolo de decisión Go/Kill/Hold/Recycle",
   "nodos_previos": [
-    "sistema_stage_gate"
+    "sistema_stage_gate",
+    "reglas_gestion_riesgo_gambling"
   ],
   "nodos_siguientes": [
-    "gate1_idea_screen"
+    "gate1_idea_screen",
+    "etapa_discovery_ideacion"
   ],
   "condiciones_activacion": [
     "Si los proyectos avanzan sin puntos de control claros",

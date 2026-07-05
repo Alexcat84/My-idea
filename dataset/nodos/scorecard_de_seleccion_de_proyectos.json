@@ -13,13 +13,16 @@
   ],
   "entregable_esperado": "Una matriz o scorecard completado con la puntuación de cada proyecto candidato del portafolio",
   "nodos_previos": [
-    "sistema_de_gates_go_kill"
+    "sistema_de_gates_go_kill",
+    "proceso_ideacion_modelo_negocio"
   ],
   "nodos_siguientes": [
     "portfolio_management",
     "criterios_de_exito_gate",
     "monte_carlo_simulation_model",
-    "seleccion_proyectos_agile"
+    "seleccion_proyectos_agile",
+    "analisis_de_capacidad_de_recursos",
+    "apalancamiento_de_competencias_centrales"
   ],
   "condiciones_activacion": [
     "Cuando existen múltiples proyectos compitiendo por recursos limitados",

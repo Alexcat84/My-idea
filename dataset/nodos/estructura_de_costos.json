@@ -14,11 +14,14 @@
   "nodos_previos": [
     "asociaciones_clave",
     "actividades_clave",
-    "recursos_clave"
+    "recursos_clave",
+    "flujos_de_ingresos"
   ],
   "nodos_siguientes": [
     "lienzo_modelo_negocio",
-    "lectura_balance_general"
+    "lectura_balance_general",
+    "estimate_at_completion_eac",
+    "fundamentos_inteligencia_financiera"
   ],
   "condiciones_activacion": [
     "Cuando se requiere calcular la viabilidad financiera del modelo de negocio"

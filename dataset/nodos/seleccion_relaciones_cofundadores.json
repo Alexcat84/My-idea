@@ -13,10 +13,20 @@
   "entregable_esperado": "Mapa de candidatos a cofundador clasificados por círculo de relación, con análisis de riesgos y beneficios de cada opción.",
   "nodos_previos": [
     "homogeneidad_vs_diversidad_equipo",
-    "cuantos_cofundadores_agregar"
+    "cuantos_cofundadores_agregar",
+    "acumulacion_capital_previo_fundacion",
+    "busqueda_cofundador_complementario",
+    "decision_fundador_solo_vs_equipo",
+    "decisiones_por_diseno_no_por_default",
+    "evaluacion_capital_para_cofundadores"
   ],
   "nodos_siguientes": [
-    "reasignacion_equity_fundadores"
+    "reasignacion_equity_fundadores",
+    "compatibilidad_motivaciones_riqueza_control",
+    "decision_de_vender_startup",
+    "decision_egalitaria_vs_jerarquica",
+    "duos_vs_trios_fundadores",
+    "errores_comunes_asignacion_roles"
   ],
   "condiciones_activacion": [
     "Cuando el fundador está evaluando a candidatos específicos para incorporar como cofundadores.",

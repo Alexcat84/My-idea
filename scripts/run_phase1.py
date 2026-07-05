@@ -9,8 +9,12 @@ Pasos (en orden, idempotente):
   3. Aplicacion de los alias maps restantes (capa B, capa C, auto) generados
      por fix_spiderweb.py / resolve_capa_b.py / resolve_capa_c.py
   4. Limpieza final de cualquier referencia rota sin resolver
-  5. Recompilacion de dataset/metadata/master_graph.json
-  6. Validador Gate 0 (sys.exit(1) si algun chequeo falla)
+  5. Simetrizacion de enlaces: cada arista "X antes de Y" debe vivir en
+     ambos extremos (Y en nodos_siguientes de X, X en nodos_previos de Y)
+  6. Recompilacion de dataset/metadata/master_graph.json
+  7. Validador Gate 0 (sys.exit(1) si algun chequeo falla), incluyendo
+     simetria de enlaces y alcanzabilidad dirigida desde
+     dataset/metadata/entry_seeds.json
 
 Todas las rutas son relativas al repo (BASE = carpeta padre de scripts/).
 No modifica contenido teorico de los nodos: solo nombres de archivo,
@@ -32,6 +36,9 @@ NODOS_DIR = BASE / "dataset" / "nodos"
 METADATA_DIR = BASE / "dataset" / "metadata"
 MASTER_GRAPH_PATH = METADATA_DIR / "master_graph.json"
 LOG_PATH = METADATA_DIR / "phase1_run_log.json"
+ENTRY_SEEDS_PATH = METADATA_DIR / "entry_seeds.json"
+
+MIN_DIRECTED_REACHABILITY_PCT = 99.5
 
 REF_KEYS = ("nodos_previos", "nodos_siguientes")
 
@@ -328,7 +335,124 @@ def step4_cleanup_remaining(log):
 
 
 # ---------------------------------------------------------------------------
-# Paso 5: Compilacion de master_graph.json
+# Paso 5: Simetrizacion de enlaces
+#
+# REGLA SEMANTICA: un enlace es UNA arista dirigida "conviene saber X antes
+# de Y", almacenada siempre en AMBOS extremos: Y debe aparecer en
+# nodos_siguientes de X, y X debe aparecer en nodos_previos de Y. Nunca una
+# sola vista. Si falta una de las dos, se completa aqui; el contenido
+# teorico no se toca, solo se agregan entradas a las listas existentes
+# (nunca se reordenan ni eliminan las ya declaradas).
+# ---------------------------------------------------------------------------
+
+def step5_symmetrize(log):
+    nodes, _ = load_all_nodes()
+    existing_ids = set(nodes)
+
+    # Union de "antes -> despues" visto desde cualquiera de los dos extremos
+    edges = set()
+    for node_id, data in nodes.items():
+        for after in data.get("nodos_siguientes") or []:
+            if after in existing_ids and after != node_id:
+                edges.add((node_id, after))
+        for before in data.get("nodos_previos") or []:
+            if before in existing_ids and before != node_id:
+                edges.add((before, node_id))
+
+    succ_needed = collections.defaultdict(set)
+    pred_needed = collections.defaultdict(set)
+    for a, b in edges:
+        succ_needed[a].add(b)
+        pred_needed[b].add(a)
+
+    added_siguientes = 0
+    added_previos = 0
+    updated = 0
+
+    for node_id, data in nodes.items():
+        changed = False
+
+        original_sig = dedupe_and_remove_self(node_id, data.get("nodos_siguientes") or [])
+        sig_set = set(original_sig)
+        new_sig = list(original_sig)
+        for target in sorted(succ_needed.get(node_id, ())):
+            if target not in sig_set:
+                new_sig.append(target)
+                sig_set.add(target)
+                added_siguientes += 1
+                changed = True
+                log["symmetrize_added"].append(
+                    {"node": node_id, "key": "nodos_siguientes", "added": target}
+                )
+
+        original_prev = dedupe_and_remove_self(node_id, data.get("nodos_previos") or [])
+        prev_set = set(original_prev)
+        new_prev = list(original_prev)
+        for source in sorted(pred_needed.get(node_id, ())):
+            if source not in prev_set:
+                new_prev.append(source)
+                prev_set.add(source)
+                added_previos += 1
+                changed = True
+                log["symmetrize_added"].append(
+                    {"node": node_id, "key": "nodos_previos", "added": source}
+                )
+
+        if new_sig != (data.get("nodos_siguientes") or []):
+            data["nodos_siguientes"] = new_sig
+            changed = True
+        if new_prev != (data.get("nodos_previos") or []):
+            data["nodos_previos"] = new_prev
+            changed = True
+
+        if changed:
+            save_node(node_id, data)
+            updated += 1
+
+    return updated, added_siguientes, added_previos
+
+
+def count_asymmetric_edges(nodes):
+    """Cuenta cuantas aristas siguen sin la vista reciproca completa."""
+    existing_ids = set(nodes)
+    missing_previo = 0
+    missing_siguiente = 0
+    for node_id, data in nodes.items():
+        sig = set(data.get("nodos_siguientes") or [])
+        prev = set(data.get("nodos_previos") or [])
+        for after in sig:
+            if after in existing_ids:
+                other = nodes[after]
+                if node_id not in (other.get("nodos_previos") or []):
+                    missing_previo += 1
+        for before in prev:
+            if before in existing_ids:
+                other = nodes[before]
+                if node_id not in (other.get("nodos_siguientes") or []):
+                    missing_siguiente += 1
+    return missing_previo, missing_siguiente
+
+
+def compute_directed_reachability(nodes, seed_ids):
+    """BFS dirigido hacia adelante (nodos_siguientes) desde seed_ids.
+    Devuelve (alcanzados, total, porcentaje)."""
+    existing_ids = set(nodes)
+    seeds = [s for s in seed_ids if s in existing_ids]
+    visited = set(seeds)
+    stack = list(seeds)
+    while stack:
+        cur = stack.pop()
+        for nxt in nodes[cur].get("nodos_siguientes") or []:
+            if nxt in existing_ids and nxt not in visited:
+                visited.add(nxt)
+                stack.append(nxt)
+    total = len(existing_ids)
+    pct = round(len(visited) / total * 100, 2) if total else 0.0
+    return len(visited), total, pct
+
+
+# ---------------------------------------------------------------------------
+# Paso 6: Compilacion de master_graph.json
 # ---------------------------------------------------------------------------
 
 def compute_graph_stats(nodes):
@@ -377,7 +501,7 @@ def compute_graph_stats(nodes):
     }
 
 
-def step5_compile_master_graph():
+def step6_compile_master_graph():
     nodes, parse_errors = load_all_nodes()
     existing_ids = set(nodes)
 
@@ -451,10 +575,16 @@ def find_near_duplicate_titles(nodes, threshold=95):
 
 
 # ---------------------------------------------------------------------------
-# Paso 6: Validador Gate 0
+# Paso 7: Validador Gate 0
 # ---------------------------------------------------------------------------
 
-def step6_validate(master, parse_errors):
+def load_entry_seeds():
+    if not ENTRY_SEEDS_PATH.exists():
+        return []
+    return load_json(ENTRY_SEEDS_PATH).get("seeds", [])
+
+
+def step7_validate(master, parse_errors):
     stats = master["stats"]
     checks = []
 
@@ -506,6 +636,22 @@ def step6_validate(master, parse_errors):
         duplicate_titles if duplicate_titles else 0,
     ))
 
+    missing_previo, missing_siguiente = count_asymmetric_edges(master["nodos"])
+    total_asymmetric = missing_previo + missing_siguiente
+    checks.append((
+        "Cero aristas con vista reciproca faltante (simetria)",
+        total_asymmetric == 0,
+        f"{total_asymmetric} (sin previo reciproco: {missing_previo}, sin siguiente reciproco: {missing_siguiente})",
+    ))
+
+    seeds = load_entry_seeds()
+    reached, total, pct = compute_directed_reachability(master["nodos"], seeds)
+    checks.append((
+        f"Alcanzabilidad dirigida >= {MIN_DIRECTED_REACHABILITY_PCT}% desde entry_seeds.json",
+        bool(seeds) and pct >= MIN_DIRECTED_REACHABILITY_PCT,
+        f"{pct}% ({reached}/{total}, semillas validas: {len(seeds)})",
+    ))
+
     near_duplicates = find_near_duplicate_titles(master["nodos"], threshold=95)
 
     return checks, near_duplicates
@@ -523,6 +669,7 @@ def main():
         "alias_redirects": [],
         "alias_unresolved_removed": [],
         "final_cleanup_removed": [],
+        "symmetrize_added": [],
     }
 
     print("=== Paso 1: Normalizacion ASCII ===")
@@ -545,16 +692,21 @@ def main():
     updated4 = step4_cleanup_remaining(log)
     print(f"  {updated4} nodo(s) actualizado(s).")
 
-    print("=== Paso 5: Compilacion de master_graph.json ===")
-    master, parse_errors = step5_compile_master_graph()
+    print("=== Paso 5: Simetrizacion de enlaces ===")
+    updated5, added_sig, added_prev = step5_symmetrize(log)
+    print(f"  {updated5} nodo(s) actualizado(s). Vistas completadas: "
+          f"{added_sig} en nodos_siguientes, {added_prev} en nodos_previos.")
+
+    print("=== Paso 6: Compilacion de master_graph.json ===")
+    master, parse_errors = step6_compile_master_graph()
     print(f"  {master['total_nodos']} nodos compilados.")
 
     with open(LOG_PATH, "w", encoding="utf-8") as fh:
         json.dump(log, fh, ensure_ascii=False, indent=2)
     print(f"  Log escrito en {LOG_PATH.relative_to(BASE)}")
 
-    print("\n=== Paso 6: Validador Gate 0 ===")
-    checks, near_duplicates = step6_validate(master, parse_errors)
+    print("\n=== Paso 7: Validador Gate 0 ===")
+    checks, near_duplicates = step7_validate(master, parse_errors)
 
     all_ok = True
     print("\n--- Resumen Gate 0 ---")

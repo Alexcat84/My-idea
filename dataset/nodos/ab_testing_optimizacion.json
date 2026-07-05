@@ -14,11 +14,15 @@
   "entregable_esperado": "Plan de pruebas A/B con elementos priorizados, resultados documentados y decisión sobre la versión ganadora",
   "nodos_previos": [
     "hipotesis_relacion_clientes_web",
-    "customer_jobs"
+    "customer_jobs",
+    "copy_testing",
+    "heat_maps_eye_tracking",
+    "usability_testing_producto"
   ],
   "nodos_siguientes": [
     "cohort_analysis_retencion",
-    "optimizacion_grow_customers"
+    "optimizacion_grow_customers",
+    "funnel_get_customers_optimizacion"
   ],
   "condiciones_activacion": [
     "Cuando el startup ya tiene tráfico web/mobile pero necesita mejorar tasas de conversión",

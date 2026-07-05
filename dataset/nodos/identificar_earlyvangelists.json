@@ -14,11 +14,15 @@
   ],
   "entregable_esperado": "Lista de earlyvangelists con citas de ventas agendadas",
   "nodos_previos": [
-    "customer_discovery"
+    "customer_discovery",
+    "pivot_post_ventas",
+    "pivote_o_proceder",
+    "scorecard_descubrimiento_cliente"
   ],
   "nodos_siguientes": [
     "get_out_building_test_sell",
-    "proceso_venta_b2b"
+    "proceso_venta_b2b",
+    "formalizar_junta_asesora"
   ],
   "condiciones_activacion": [
     "Cuando la startup está lista para intentar la primera venta real",

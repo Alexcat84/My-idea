@@ -14,12 +14,15 @@
   "entregable_esperado": "Diagrama o esquema jerárquico del WBS con paquetes de trabajo identificados",
   "nodos_previos": [
     "project_scope_statement",
-    "scope_management_plan"
+    "scope_management_plan",
+    "assumption_and_constraint_log"
   ],
   "nodos_siguientes": [
     "wbs_dictionary",
     "activity_list",
-    "activity_duration_estimates"
+    "activity_duration_estimates",
+    "estimacion_tres_puntos",
+    "matriz_asignacion_responsabilidades"
   ],
   "condiciones_activacion": [
     "Cuando el alcance del proyecto está definido y se necesita desglosar el trabajo en componentes manejables"

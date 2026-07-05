@@ -16,11 +16,13 @@
   "entregable_esperado": "Plan de optimización secuencial del funnel 'get' con métricas diarias monitoreadas y dashboard de seguimiento",
   "nodos_previos": [
     "ab_testing_optimizacion",
-    "customer_jobs"
+    "customer_jobs",
+    "metricas_de_adquisicion_activacion"
   ],
   "nodos_siguientes": [
     "optimizacion_keep_retencion",
-    "optimizacion_grow_customers"
+    "optimizacion_grow_customers",
+    "cohort_analysis_retencion"
   ],
   "condiciones_activacion": [
     "Cuando el startup ya tiene tráfico pero necesita convertir más visitantes en clientes activados",

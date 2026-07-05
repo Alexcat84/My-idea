@@ -12,9 +12,12 @@
   ],
   "entregable_esperado": "Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición",
   "nodos_previos": [
-    "plan_gestion_calidad"
+    "plan_gestion_calidad",
+    "estrategia_get_keep_grow"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "formal_acceptance"
+  ],
   "condiciones_activacion": [
     "Cuando se necesita cuantificar criterios de aceptación de calidad para control posterior"
   ]

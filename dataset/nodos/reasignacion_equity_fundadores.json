@@ -12,10 +12,15 @@
   "entregable_esperado": "Acuerdo de vesting y documento de justificación de split de equity entre cofundadores.",
   "nodos_previos": [
     "preferencia_de_liquidacion",
-    "vesting_dinamico"
+    "vesting_dinamico",
+    "cuantos_cofundadores_agregar",
+    "estatus_fundador_simbolico",
+    "relacion_previa_y_estructura_roles",
+    "seleccion_relaciones_cofundadores"
   ],
   "nodos_siguientes": [
-    "perdida_control_junta_directiva"
+    "perdida_control_junta_directiva",
+    "eleccion_estructura_vesting_founder"
   ],
   "condiciones_activacion": [
     "Si el equipo fundador tiene un split de equity no formalizado",

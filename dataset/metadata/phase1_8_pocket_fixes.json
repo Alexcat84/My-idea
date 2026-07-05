@@ -1,0 +1,15 @@
+{
+  "description": "Bolsillo dirigido residual detectado en Fase 1.8: BFS por nodos_siguientes sembrado desde los 908 nodos preexistentes (fuente distinta de Venture Deals / The Founder's Dilemmas / Financial Intelligence for Entrepreneurs) tras la simetrizacion. 5 de los 357 nodos nuevos quedaron inalcanzables: forman un cluster autocontenido de tacticas de negociacion (Venture Deals) sin ningun enlace entrante desde el grafo viejo, porque el dataset preexistente no tenia ningun nodo de negociacion propiamente dicho.",
+  "unreachable_before_fix": [
+    "batna_definicion",
+    "construccion_de_leverage",
+    "estilos_de_negociacion",
+    "leverage_en_negociacion_con_vcs",
+    "teoria_de_juegos_en_negociacion"
+  ],
+  "fix": {
+    "from": "stakeholder_analysis_matrix",
+    "to": "teoria_de_juegos_en_negociacion",
+    "reasoning": "stakeholder_analysis_matrix (dataset preexistente, A Project Manager's Book of Forms) mapea a los interesados y determina la estrategia de engagement mas adecuada para cada uno; teoria_de_juegos_en_negociacion es el nodo raiz del cluster de tacticas de negociacion y explica el marco conceptual (juegos de una sola ronda vs. repetidos) que informa como negociar con esos mismos interesados de alto poder/interes. Es el enlace tematico mas cercano disponible en el dataset viejo, dado que no existia ningun nodo previo sobre negociacion."
+  }
+}

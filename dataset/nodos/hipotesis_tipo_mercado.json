@@ -13,10 +13,14 @@
   ],
   "entregable_esperado": "Brief de tipo de mercado con hipótesis seleccionada y análisis competitivo básico",
   "nodos_previos": [
-    "seleccion_canal_fisico"
+    "seleccion_canal_fisico",
+    "hipotesis_de_canales",
+    "seleccion_canal_distribucion"
   ],
   "nodos_siguientes": [
-    "estrategia_resegmentacion_mercado"
+    "estrategia_resegmentacion_mercado",
+    "analisis_costo_entrada_mercado",
+    "hipotesis_relacion_clientes_web"
   ],
   "condiciones_activacion": [
     "Cuando el equipo necesita decidir su estrategia de entrada al mercado antes de invertir en marketing y ventas"

@@ -14,11 +14,17 @@
   "entregable_esperado": "Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses",
   "nodos_previos": [
     "fit_value_proposition",
-    "customer_validation"
+    "customer_validation",
+    "market_type_revenue_growth",
+    "sales_funnel_get_keep_grow",
+    "sales_roadmap",
+    "viral_loop_marketing"
   ],
   "nodos_siguientes": [
     "decision_pivotar_o_proceder",
-    "worst_case_best_case_analysis"
+    "worst_case_best_case_analysis",
+    "cash_burn_calculation",
+    "demand_curve_pricing"
   ],
   "condiciones_activacion": [
     "Cuando el startup ha completado la validación de clientes y necesita decidir si avanzar a la etapa de creación de clientes",

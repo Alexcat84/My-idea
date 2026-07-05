@@ -13,11 +13,13 @@
   ],
   "entregable_esperado": "Un cálculo del coeficiente viral actual y un plan de experimentos para incrementarlo por encima de 1.0",
   "nodos_previos": [
-    "producto_minimo_viable"
+    "producto_minimo_viable",
+    "motor_de_crecimiento"
   ],
   "nodos_siguientes": [
     "motor_de_crecimiento",
-    "producto_mercado_fit_motores"
+    "producto_mercado_fit_motores",
+    "enfoque_motor_unico_crecimiento"
   ],
   "condiciones_activacion": [
     "Si el producto depende de que el uso normal implique invitar a otros (redes sociales, herramientas colaborativas)",

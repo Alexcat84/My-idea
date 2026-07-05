@@ -13,11 +13,14 @@
   ],
   "entregable_esperado": "Una hoja de cálculo con NPV, IRR y Payback Period de cada proyecto, y una lista priorizada de proyectos Go/Hold",
   "nodos_previos": [
-    "gestion_portafolio_dos_niveles"
+    "gestion_portafolio_dos_niveles",
+    "metodo_strategic_buckets"
   ],
   "nodos_siguientes": [
     "indice_de_productividad",
-    "analisis_de_sensibilidad_riesgo"
+    "analisis_de_sensibilidad_riesgo",
+    "expected_commercial_value_ecv",
+    "monte_carlo_simulation_model"
   ],
   "condiciones_activacion": [
     "Cuando se necesita decidir qué proyectos financiar con recursos limitados",

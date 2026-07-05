@@ -14,11 +14,13 @@
   "entregable_esperado": "Estado de flujo de caja clasificado en las tres categorías, con análisis de tendencia por periodo",
   "nodos_previos": [
     "estructura_estado_resultados",
-    "lectura_balance_general"
+    "lectura_balance_general",
+    "contabilidad_caja_vs_devengo"
   ],
   "nodos_siguientes": [
     "reconciliacion_utilidad_neta_flujo_caja",
-    "flujo_de_caja_libre"
+    "flujo_de_caja_libre",
+    "analisis_de_ratios_financieros"
   ],
   "condiciones_activacion": [
     "Cuando el emprendedor solo mira el saldo bancario sin entender su origen",

@@ -14,11 +14,13 @@
   ],
   "entregable_esperado": "Una tabla o registro vivo de riesgos con toda la información de seguimiento actualizada periódicamente.",
   "nodos_previos": [
-    "plan_gestion_riesgos"
+    "plan_gestion_riesgos",
+    "reporte_estado_miembro_equipo"
   ],
   "nodos_siguientes": [
     "matriz_probabilidad_impacto",
-    "hoja_estimacion_costos"
+    "hoja_estimacion_costos",
+    "plan_gestion_adquisiciones"
   ],
   "condiciones_activacion": [
     "Cuando se identifican nuevos riesgos en cualquier fase del proyecto",

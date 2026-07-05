@@ -12,10 +12,15 @@
   ],
   "entregable_esperado": "Estructura de equipo definida con roles claros para el proceso de Customer Development",
   "nodos_previos": [
-    "decisiones_reversibles_irreversibles"
+    "decisiones_reversibles_irreversibles",
+    "buyin_customer_development",
+    "decisiones_rapidas_reversibles"
   ],
   "nodos_siguientes": [
-    "get_out_of_the_building"
+    "get_out_of_the_building",
+    "preservar_caja_buscar_gastar",
+    "preservar_caja_hasta_validar",
+    "preservar_efectivo_buscar_modelo"
   ],
   "condiciones_activacion": [
     "Si la startup está contratando roles de ventas/marketing tradicionales antes de validar el modelo de negocio"

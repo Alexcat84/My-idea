@@ -14,11 +14,16 @@
   "entregable_esperado": "Un Progress Board actualizado con hipótesis testeadas, validadas/invalidadas y próximos pasos definidos.",
   "nodos_previos": [
     "presales",
-    "mock_sales"
+    "mock_sales",
+    "fit_value_proposition"
   ],
   "nodos_siguientes": [
     "fit_problema_solucion",
-    "verificar_product_market_fit"
+    "verificar_product_market_fit",
+    "data_integrity_forecasting",
+    "expected_commercial_value_ecv",
+    "scoring_model_scorecard",
+    "technology_platform_evaluation"
   ],
   "condiciones_activacion": [
     "Cuando se necesita una visión sistemática de cómo avanzar de idea a negocio validado"

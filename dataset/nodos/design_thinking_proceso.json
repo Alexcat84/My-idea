@@ -15,11 +15,18 @@
   "entregable_esperado": "Un concepto de producto validado y parcialmente probado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
   "nodos_previos": [
     "etnografia_investigacion_usuario",
-    "equipos_visita_cliente"
+    "equipos_visita_cliente",
+    "cliente_disena_producto",
+    "lead_user_analysis",
+    "netnografia_social_media",
+    "tecnologias_disruptivas_oportunidad"
   ],
   "nodos_siguientes": [
     "prototipado_rapido",
-    "stage_gate_td_tecnologia"
+    "stage_gate_td_tecnologia",
+    "asignacion_agil_de_recursos",
+    "diseno_fugitivo_runaway_design",
+    "diseno_imperfeccion_intencional"
   ],
   "condiciones_activacion": [
     "Cuando existen dificultades para pasar de la investigación de necesidades a un concepto robusto y probado",

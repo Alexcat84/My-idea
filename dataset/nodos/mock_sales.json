@@ -13,10 +13,12 @@
   "entregable_esperado": "Datos de conversión de la venta simulada como evidencia de disposición a pagar.",
   "nodos_previos": [
     "buy_a_feature_game",
-    "split_testing"
+    "split_testing",
+    "unique_link_tracking"
   ],
   "nodos_siguientes": [
-    "presales"
+    "presales",
+    "testing_process_completo"
   ],
   "condiciones_activacion": [
     "Cuando se necesita evidencia fuerte de disposición a pagar antes de construir el producto"

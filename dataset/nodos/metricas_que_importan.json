@@ -15,11 +15,16 @@
   ],
   "entregable_esperado": "Modelo financiero simplificado (spreadsheet trimestral) con las 11 métricas clave que muestra el burn rate y el efectivo restante proyectado, indicando si el negocio es escalable y rentable",
   "nodos_previos": [
-    "validar_modelo_negocio_hechos"
+    "validar_modelo_negocio_hechos",
+    "war_room_pivot_proceed"
   ],
   "nodos_siguientes": [
     "revalidar_modelo_negocio",
-    "customer_creation"
+    "customer_creation",
+    "burn_rate_por_etapa",
+    "pivot_o_proceder_revalidar_modelo_negocio",
+    "revalidacion_modelo_negocio",
+    "tipo_mercado_curva_ingresos"
   ],
   "condiciones_activacion": [
     "Cuando se necesita decidir si invertir fuertemente en escalar el negocio sin quedarse sin fondos",

@@ -16,10 +16,23 @@
   "entregable_esperado": "Cap table completo y verificado con todas las clases de acciones, porcentajes y precio por acción calculados correctamente",
   "nodos_previos": [
     "safe_simple_agreement_future_equity",
-    "metodo_conversion_notas_cap_table"
+    "metodo_conversion_notas_cap_table",
+    "antidilucion_provisiones",
+    "antidilution_weighted_average_broad_narrow",
+    "gestion_angel_investors",
+    "original_issue_discount_oid",
+    "pay_to_play",
+    "preferencia_de_liquidacion",
+    "preferencias_apiladas_vs_blended",
+    "pro_rata_rights_deuda_convertible"
   ],
   "nodos_siguientes": [
-    "metodo_conversion_notas_cap_table"
+    "metodo_conversion_notas_cap_table",
+    "composicion_board_directors",
+    "decision_hire_investment_banker",
+    "employee_pool_esop",
+    "right_of_first_refusal_pro_rata",
+    "vesting_acciones_fundadores"
   ],
   "condiciones_activacion": [
     "Si el founder está evaluando un term sheet de un VC",

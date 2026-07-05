@@ -13,10 +13,16 @@
   ],
   "entregable_esperado": "Una declaración clara del tipo de mercado en el que se está compitiendo, con su justificación e implicancias estratégicas.",
   "nodos_previos": [
-    "diseno_experimentos_hipotesis"
+    "diseno_experimentos_hipotesis",
+    "board_management_buyin",
+    "channels_hypothesis_physical",
+    "channels_hypothesis_web_mobile",
+    "multi_sided_market_channel"
   ],
   "nodos_siguientes": [
-    "metricas_de_startup"
+    "metricas_de_startup",
+    "estrategia_producto_global_glocal",
+    "market_type_revenue_growth"
   ],
   "condiciones_activacion": [
     "Si el emprendedor aplica la misma estrategia de marketing sin importar si el mercado es nuevo o existente.",
