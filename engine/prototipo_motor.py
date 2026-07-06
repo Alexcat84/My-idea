@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-prototipo_motor.py - Prototipo CLI del motor de ruteo (Fase 2.4)
+prototipo_motor.py - Prototipo CLI del motor de ruteo (Fase 2.5)
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
-usuario nunca elige de un menu, y el intérprete puede atravesar varios nodos
+usuario nunca elige de un menu, y el interprete puede atravesar varios nodos
 en silencio cuando lo que el usuario ya conto (entrada original, perfil de
 sesion, respuestas previas) responde lo que esos nodos preguntarian. Se
 detiene a preguntar solo en el primer punto donde el contexto no alcanza
@@ -44,14 +44,40 @@ Cosecha de vecindario (Fase 2.4): antes de redactar, se expande en silencio
     fase mayoritaria y afinidad con el perfil_sesion). El redactor recibe
     material_principal (la ruta, manda estructura y cronologia) y
     material_de_apoyo (la cosecha, enriquece etapas existentes sin crear
-    etapas propias). El plan reporta cuantos conceptos lo alimentaron.
+    etapas propias). El plan reporta cuantos conceptos lo alimentaron. La
+    etiqueta inicial/completo y la seccion "no cubre" se calculan sobre
+    ruta+cosecha (lo que el plan realmente contiene), no solo la ruta.
+
+Fase 2.5 - persistencia y proyectos de largo plazo:
+    - Persistencia en Supabase (engine/db.py) con fallback a JSON local
+      (--offline): proyectos, sesiones, nodos cubiertos y planes.
+    - estado_vivo: al cerrar cada sesion (no en --gratis), se comprime el
+      estado_vivo anterior + las novedades de la sesion en una sintesis
+      nueva de 300-500 tokens que alimenta la siguiente sesion.
+    - --gratis: una sola llamada Haiku ("organizador de tu idea"), sin
+      interview, con la regla dura de organizar y senalar huecos, nunca
+      instruir.
+    - --seguir PROJECT_ID: sesion de seguimiento. Capa 1 avanzada elige
+      cualquier nodo del grafo (no solo las 20 puertas) segun estado_vivo +
+      cobertura por familia + mensaje nuevo. El recorrido y la cosecha
+      excluyen automaticamente los nodos ya cubiertos (se siembran en
+      visitados). El plan de seguimiento abre reconociendo el avance.
+    - Presupuesto duro por sesion (PRESUPUESTO_SESION_USD, env var,
+      default 0.30): si el costo acumulado alcanza el tope, las llamadas
+      posteriores fallan a proposito y cada punto de la app ya sabe caer a
+      su respaldo offline existente (menu de emergencia, cuestionario
+      cerrado, plan ensamblado sin IA). El evento se registra en la sesion.
 
 Uso:  python engine/prototipo_motor.py
       python engine/prototipo_motor.py --continuar SESSION_ID
+      python engine/prototipo_motor.py --gratis
+      python engine/prototipo_motor.py --seguir PROJECT_ID
+      python engine/prototipo_motor.py --offline   (fuerza JSON local en vez de Supabase)
 Guardrails: profundidad maxima 15 (cuenta todos los nodos, conversados y
 silenciosos), maximo 3 nodos silenciosos por llamada al interprete, maximo 1
 repregunta por punto de decision antes de forzar el camino mas probable, el
-medidor de completitud solo se ofrece una vez por sesion.
+medidor de completitud solo se ofrece una vez por sesion, presupuesto duro
+por sesion con degradacion elegante a modo offline.
 """
 import argparse
 import json
@@ -66,6 +92,10 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+BASE = Path(__file__).resolve().parent.parent
+load_dotenv(BASE / ".env")
+
+import db
 import plan_readiness
 
 # En consolas de Windows, stdout suele quedar en cp1252 (o el codepage local),
@@ -75,9 +105,6 @@ import plan_readiness
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
-
-BASE = Path(__file__).resolve().parent.parent
-load_dotenv(BASE / ".env")
 
 GRAPH_PATH = BASE / "dataset" / "metadata" / "master_graph.json"
 QUIZ_PATH = BASE / "engine" / "cuestionario_raiz.json"
@@ -101,6 +128,9 @@ PRECIOS = {
 }
 USO = {}
 
+PRESUPUESTO_SESION_USD = float(os.environ.get("PRESUPUESTO_SESION_USD", "0.30"))
+PRESUPUESTO_EXCEDIDO = False
+
 SYSTEM_CLASIFICACION = (
     "Eres el clasificador de entrada de una app de guia de emprendimiento. El "
     "usuario describe su idea o su situacion en texto libre. Debes: 1) elegir "
@@ -111,6 +141,21 @@ SYSTEM_CLASIFICACION = (
     "las etapas posteriores no pierdan ese contexto. Responde SOLO un JSON: "
     "{\"puerta_id\": str, \"perfil_sesion\": str}. El puerta_id DEBE ser "
     "exactamente uno de los ids de la lista dada."
+)
+
+SYSTEM_PUERTA_AVANZADA = (
+    "Eres el clasificador de seguimiento de un proyecto de emprendimiento ya "
+    "en marcha. Recibes el estado_vivo del proyecto (sintesis acumulada de "
+    "sesiones previas, puede ser null si es la primera vez que se comprime), "
+    "un mensaje nuevo del usuario contando que ha pasado desde la ultima "
+    "sesion, y una lista de conceptos candidatos (id, titulo, resumen corto, "
+    "fase, condiciones_activacion) que el proyecto TODAVIA NO ha cubierto. "
+    "Elige el candidato que mejor sirva como punto de entrada para retomar "
+    "la conversacion ahora mismo, dado el momento real del proyecto. Tambien "
+    "redacta un perfil_sesion actualizado (2 a 4 frases) que combine lo que "
+    "ya se sabia (estado_vivo) con lo nuevo que cuenta el mensaje. Responde "
+    "SOLO un JSON: {\"puerta_id\": str, \"perfil_sesion\": str}. El "
+    "puerta_id DEBE ser exactamente uno de los candidatos dados."
 )
 
 SYSTEM_INTERPRETE_MULTI = (
@@ -184,13 +229,15 @@ SYSTEM_PROFUNDIZAR = (
 
 SYSTEM_PLAN = (
     "Eres el redactor final de una app de emprendimiento. Recibes un JSON con "
-    "entrada_original (el texto libre con el que la persona empezo), "
+    "entrada_original (el texto libre con el que la persona empezo o el "
+    "mensaje nuevo de esta sesion si es un seguimiento), "
     "perfil_sesion (lo que revelo sobre su idea a lo largo del recorrido), "
     "material_principal: la ruta conversada (lista ordenada de conceptos, "
     "cada uno con titulo, pasos, entregable esperado, y "
-    "es_viabilidad_economica), y material_de_apoyo: conceptos vecinos del "
+    "es_viabilidad_economica), material_de_apoyo: conceptos vecinos del "
     "grafo (mismo formato) que NO fueron conversados con el usuario pero son "
-    "relevantes a su perfil.\n\n"
+    "relevantes a su perfil, y opcionalmente es_seguimiento + "
+    "estado_vivo_previo si esta sesion continua un proyecto ya en marcha.\n\n"
     "Reglas obligatorias:\n"
     "1. Modo imperativo SIEMPRE. Convierte cada paso reflexivo o pregunta del "
     "material en una tarea concreta con verbo, sujeto y criterio de exito. "
@@ -220,10 +267,45 @@ SYSTEM_PLAN = (
     "7. Habla siempre de la IDEA o el PROYECTO del usuario. Usa la palabra "
     "'negocio' unicamente si el analisis economico forma parte del "
     "material recibido, o si el propio usuario ya la uso en su entrada o "
-    "perfil_sesion.\n\n"
+    "perfil_sesion.\n"
+    "8. Si recibes es_seguimiento=true, abre el plan con UNA linea (justo "
+    "despues del titulo) que reconozca el avance del proyecto desde la "
+    "ultima sesion, basada en estado_vivo_previo. No repitas acciones ya "
+    "cubiertas antes: el material que recibes ya excluye lo cubierto en "
+    "sesiones previas, asi que basta con no asumir que el usuario empieza "
+    "de cero.\n\n"
     "Espanol comun, sin jerga sin explicar, sin autores, sin relleno "
     "motivacional. Todo debe salir del material recibido; no inventes "
     "tecnicas nuevas."
+)
+
+SYSTEM_ESTADO_VIVO = (
+    "Comprimes el estado de un proyecto de emprendimiento en una sintesis de "
+    "300 a 500 tokens que sirve como memoria para la siguiente sesion. "
+    "Recibes el estado_vivo anterior (puede ser null si es la primera "
+    "sesion), el perfil de sesion acumulado en la sesion que acaba de "
+    "cerrar, y los titulos de los conceptos nuevos que se cubrieron. "
+    "Combina todo en un solo estado_vivo nuevo: que sabemos del proyecto, "
+    "que se ha validado o decidido, que sigue sin resolver. Prosa densa, "
+    "sin listas, en espanol comun, sin jerga. No repitas informacion ya "
+    "dicha, sintetiza. Responde SOLO el texto del estado_vivo nuevo, sin "
+    "JSON, sin comillas, sin titulo."
+)
+
+SYSTEM_ORGANIZADOR = (
+    "Organizas la idea de un usuario en un resumen honesto, SIN instruir. "
+    "Recibes texto_usuario (su idea o situacion en texto libre) y una lista "
+    "de puertas curadas del grafo (fase + titulo + resumen corto) para que "
+    "sepas el mapa de temas disponible. Responde SOLO un JSON: "
+    "{\"idea_en_una_frase\": str, \"etapa_detectada\": "
+    "\"ideacion\"|\"validacion\"|\"planificacion\"|\"ejecucion\", "
+    "\"lo_que_ya_tienes_claro\": [str, ...], "
+    "\"lo_que_estas_asumiendo_sin_saberlo\": [str, ...], "
+    "\"areas_que_cubriria_tu_plan_completo\": [str, ...]}.\n\n"
+    "REGLA DURA: organiza y senala huecos; PROHIBIDO instruir, dar pasos, "
+    "recomendar acciones o usar verbos en modo imperativo en ningun campo. "
+    "'areas_que_cubriria_tu_plan_completo' son solo NOMBRES de temas (3 a "
+    "6), nunca acciones, nunca el 'como' hacerlo."
 )
 
 
@@ -245,7 +327,8 @@ def cargar_preguntas_cache():
     return {}
 
 
-def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido):
+def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
+                    project_id=None, db_session_id=None, es_seguimiento=False, estado_vivo_previo=None):
     SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
     data = {
         "ruta": ruta,
@@ -253,6 +336,10 @@ def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profu
         "perfil_sesion": perfil_sesion,
         "entrada_original": texto_original,
         "profundizar_ofrecido": profundizar_ofrecido,
+        "project_id": project_id,
+        "db_session_id": db_session_id,
+        "es_seguimiento": es_seguimiento,
+        "estado_vivo_previo": estado_vivo_previo,
         "timestamp": datetime.now().isoformat(),
     }
     (SESSIONS_DIR / f"{session_id}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -293,7 +380,22 @@ def _parsear_json(raw):
         return obj
 
 
+def costo_acumulado_usd():
+    total = 0.0
+    for model, s in USO.items():
+        pin, pout = PRECIOS.get(model, (0.0, 0.0))
+        total += s["in"] / 1_000_000 * pin + s["out"] / 1_000_000 * pout
+    return total
+
+
 def llamar_claude(system, user_text, model, max_tokens=1500):
+    global PRESUPUESTO_EXCEDIDO
+    if costo_acumulado_usd() >= PRESUPUESTO_SESION_USD:
+        if not PRESUPUESTO_EXCEDIDO:
+            PRESUPUESTO_EXCEDIDO = True
+            print(f"  (presupuesto de ${PRESUPUESTO_SESION_USD:.2f} alcanzado; "
+                  f"el resto de la sesion corre en modo offline)")
+        raise RuntimeError("presupuesto de sesion excedido")
     import anthropic
     client = anthropic.Anthropic()
     msg = client.messages.create(
@@ -320,7 +422,7 @@ def reportar_costo():
         total += costo
         print(f"  {model}: {s['llamadas']} llamadas | {s['in']} in / {s['out']} out "
               f"(cache_read {s['cache_read']}) | ${costo:.4f}")
-    print(f"  TOTAL: ${total:.4f}")
+    print(f"  TOTAL: ${total:.4f}" + (" (presupuesto excedido, se degrado a offline)" if PRESUPUESTO_EXCEDIDO else ""))
 
 
 def clasificar_entrada(texto, entry_seeds, graph):
@@ -378,11 +480,13 @@ def resumen_nodo(nid, graph):
     }
 
 
-def _reparar_camino(actual_id, camino, graph, visitados):
-    """Si un id del camino no es sucesor directo del anterior pero SI es
-    sucesor de alguno de los sucesores directos de ese anterior (el modelo
-    omitio el padre de nivel 1 intermedio), inserta ese padre automaticamente
-    en vez de descartar el camino completo."""
+def _reparar_camino_cadena(actual_id, camino, graph, visitados):
+    """Reparo 1 (cadena estricta): si un id del camino no es sucesor directo
+    del anterior pero SI es sucesor de alguno de los sucesores directos de
+    ese anterior (el modelo omitio el padre de nivel 1 intermedio), inserta
+    ese padre automaticamente. Solo repara "hacia adelante" dentro de la
+    MISMA rama que el elemento previo ya aceptado; si el modelo empezo por
+    la rama equivocada, este reparo falla (ver _reparar_camino_desde_objetivo)."""
     reparado = []
     prev = actual_id
     vistos = set()
@@ -407,22 +511,49 @@ def _reparar_camino(actual_id, camino, graph, visitados):
     return reparado
 
 
-def _validar_camino(actual_id, camino, graph, visitados):
+def _reparar_camino_desde_objetivo(camino, nivel1_pool, visitados):
+    """Reparo 2 (reconstruccion desde el objetivo): ignora los pasos
+    intermedios que el modelo propuso (a veces atribuye un nodo de nivel 2 a
+    la rama de nivel 1 equivocada, confundiendo hermanos) y reconstruye el
+    camino minimo real hacia el ULTIMO id que el modelo indico, buscando su
+    padre correcto en el MISMO pool de nivel1+nivel2 que se le mostro."""
     if not camino:
         raise ValueError("camino vacio")
-    camino = _reparar_camino(actual_id, camino, graph, visitados)
-    if len(camino) > MAX_SALTOS_SILENCIOSOS_POR_LLAMADA:
-        raise ValueError(f"camino excede {MAX_SALTOS_SILENCIOSOS_POR_LLAMADA} nodos tras reparacion: {camino}")
+    objetivo = camino[-1]
+    if objetivo in visitados:
+        raise ValueError(f"objetivo {objetivo} ya fue visitado")
+    nivel1_ids = {n["id"] for n in nivel1_pool}
+    if objetivo in nivel1_ids:
+        return [objetivo]
+    for n in nivel1_pool:
+        hijos = {h["id"] for h in n.get("sucesores", [])}
+        if objetivo in hijos and n["id"] not in visitados:
+            return [n["id"], objetivo]
+    raise ValueError(f"{objetivo} no es sucesor de nivel 1 ni de nivel 2 conocido")
+
+
+def _validar_camino(actual_id, camino, graph, visitados, nivel1_pool=None):
+    if not camino:
+        raise ValueError("camino vacio")
+    try:
+        camino_reparado = _reparar_camino_cadena(actual_id, camino, graph, visitados)
+        if len(camino_reparado) > MAX_SALTOS_SILENCIOSOS_POR_LLAMADA:
+            raise ValueError(f"camino excede {MAX_SALTOS_SILENCIOSOS_POR_LLAMADA} nodos tras reparacion en cadena")
+    except Exception:
+        if nivel1_pool is None:
+            raise
+        camino_reparado = _reparar_camino_desde_objetivo(camino, nivel1_pool, visitados)
+
     prev = actual_id
     vistos_en_camino = set()
-    for nid in camino:
+    for nid in camino_reparado:
         if nid not in graph or nid in visitados or nid in vistos_en_camino:
             raise ValueError(f"nodo invalido o repetido en camino: {nid}")
         if nid not in graph[prev].get("nodos_siguientes", []):
             raise ValueError(f"{nid} no es sucesor de {prev}")
         vistos_en_camino.add(nid)
         prev = nid
-    return camino
+    return camino_reparado
 
 
 def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_original,
@@ -457,7 +588,7 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
             raise ValueError("el modelo repregunto sin repreguntas disponibles")
         if accion == "avanzar":
             camino = data.get("camino") or []
-            data["camino"] = _validar_camino(actual_id, camino, graph, visitados)
+            data["camino"] = _validar_camino(actual_id, camino, graph, visitados, nivel1_pool=nivel1)
             data["pregunta_necesaria"] = bool(data.get("pregunta_necesaria", True))
         return data
     except Exception as e:
@@ -555,7 +686,14 @@ def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, tope=M
     return sorted(candidatos, key=puntaje, reverse=True)[:tope]
 
 
-def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id):
+def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id,
+                    es_seguimiento=False, estado_vivo_previo=None):
+    """`evaluacion` (ruta-solo) decide QUE cosechar (familia faltante como
+    prioridad). La etiqueta inicial/completo y la seccion "no cubre" se
+    recalculan sobre ruta+cosecha, porque eso es lo que el plan realmente
+    contiene: si la cosecha trajo la familia que la ruta no toco, el plan
+    ya la cubre y no puede declarar lo contrario. Devuelve un dict con el
+    markdown y los metadatos de cosecha/cobertura, para persistencia."""
     def a_material(nid):
         n = graph[nid]
         return {
@@ -568,6 +706,7 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
     material_principal = [a_material(nid) for nid in ruta]
     cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion)
     material_de_apoyo = [a_material(nid) for nid in cosecha_ids]
+    evaluacion_cobertura = plan_readiness.evaluar_ruta(ruta + cosecha_ids, families)
 
     if API_KEY:
         payload = {
@@ -576,6 +715,9 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
             "material_principal": material_principal,
             "material_de_apoyo": material_de_apoyo,
         }
+        if es_seguimiento:
+            payload["es_seguimiento"] = True
+            payload["estado_vivo_previo"] = estado_vivo_previo
         try:
             cuerpo = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL, max_tokens=8192)
         except Exception as e:
@@ -584,19 +726,23 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
     else:
         cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
 
-    etiqueta = "Plan completo" if evaluacion["es_completa"] else "Plan inicial"
+    etiqueta = "Plan completo" if evaluacion_cobertura["es_completa"] else "Plan inicial"
     total_conceptos = len(ruta) + len(cosecha_ids)
     partes = [f"_{etiqueta}_", "", cuerpo]
     partes += ["", "---", f"_Este plan se alimento de {total_conceptos} conceptos: "
                           f"{len(ruta)} de tu recorrido conversado y {len(cosecha_ids)} "
                           f"del vecindario relacionado del grafo._"]
-    if not evaluacion["es_completa"]:
+    if not evaluacion_cobertura["es_completa"]:
         partes += ["", "## Lo que este plan aun no cubre", ""]
-        for f in evaluacion["familias_faltantes"]:
+        for f in evaluacion_cobertura["familias_faltantes"]:
             partes.append(f"- {f}")
         partes += ["", f"Para profundizar, continua la sesion: "
                         f"`python engine/prototipo_motor.py --continuar {session_id}`"]
-    return "\n".join(partes)
+    return {
+        "markdown": "\n".join(partes),
+        "cosecha_ids": cosecha_ids,
+        "evaluacion_cobertura": evaluacion_cobertura,
+    }
 
 
 def _ensamblar_offline(material, perfil_sesion, texto_original):
@@ -618,10 +764,123 @@ def _ensamblar_offline(material, perfil_sesion, texto_original):
     return "\n".join(out)
 
 
+def comprimir_estado_vivo(estado_anterior, perfil_sesion_nueva, conceptos_nuevos_titulos):
+    """Comprime estado_anterior + novedades de la sesion en un estado_vivo
+    nuevo de 300-500 tokens. Respaldo offline: concatena sin comprimir."""
+    if API_KEY:
+        ctx = {
+            "estado_vivo_anterior": estado_anterior,
+            "perfil_actualizado_esta_sesion": perfil_sesion_nueva,
+            "conceptos_nuevos_cubiertos": conceptos_nuevos_titulos,
+        }
+        try:
+            return llamar_claude(SYSTEM_ESTADO_VIVO, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=700).strip()
+        except Exception as e:
+            print(f"  (fallo comprimir estado_vivo, uso respaldo sin comprimir: {e})")
+    return (estado_anterior + "\n" + perfil_sesion_nueva).strip() if estado_anterior else perfil_sesion_nueva
+
+
+def organizador_gratuito(texto_original, entry_seeds, graph):
+    """Capa gratuita: UNA llamada Haiku que organiza sin instruir.
+    Devuelve (markdown, data_dict) o (None, mensaje_error)."""
+    puertas = [
+        {"id": s, "fase": graph[s]["fase_proyecto"], "titulo": graph[s]["titulo_concepto"],
+         "resumen": graph[s]["resumen_teorico"][:150]}
+        for s in entry_seeds
+    ]
+    ctx = {"texto_usuario": texto_original, "puertas": puertas}
+    try:
+        raw = llamar_claude(SYSTEM_ORGANIZADOR, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=600)
+        data = _parsear_json(raw)
+    except Exception as e:
+        return None, f"  (fallo el organizador con IA: {e})"
+
+    out = [
+        "# Organizador de tu idea", "",
+        f"**En una frase:** {data.get('idea_en_una_frase', '')}", "",
+        f"**Etapa detectada:** {data.get('etapa_detectada', '')}", "",
+        "## Lo que ya tienes claro",
+    ]
+    for b in data.get("lo_que_ya_tienes_claro", []) or []:
+        out.append(f"- {b}")
+    out += ["", "## Lo que estás asumiendo sin saberlo"]
+    for b in data.get("lo_que_estas_asumiendo_sin_saberlo", []) or []:
+        out.append(f"- {b}")
+    out += ["", "## Áreas que cubriría tu plan completo"]
+    for b in data.get("areas_que_cubriria_tu_plan_completo", []) or []:
+        out.append(f"- {b}")
+    return "\n".join(out), data
+
+
+def candidatos_seguimiento(mensaje_nuevo, estado_vivo, fase_actual, families, graph, cubiertos, tope=30):
+    """Candidatos de CUALQUIER parte del grafo (no solo las 20 puertas) que el
+    proyecto aun no cubrio, priorizados por fase, familia sin cubrir y
+    afinidad de palabras clave con el mensaje nuevo + estado_vivo."""
+    orden = {"ideacion": 0, "validacion": 1, "planificacion": 2, "ejecucion": 3}
+    fase_idx = orden.get(fase_actual, 0)
+    conteo_fam = {}
+    for nid in cubiertos:
+        f = families.get(nid, "general")
+        conteo_fam[f] = conteo_fam.get(f, 0) + 1
+    contexto_tokens = _tokens_cosecha((mensaje_nuevo or "") + " " + (estado_vivo or ""))
+
+    def puntaje(nid):
+        n = graph[nid]
+        p = 0
+        f_nodo = orden.get(n.get("fase_proyecto"), 0)
+        if f_nodo == fase_idx:
+            p += 5
+        elif f_nodo == fase_idx + 1:
+            p += 3
+        fam = families.get(nid, "general")
+        if fam != "general" and conteo_fam.get(fam, 0) == 0:
+            p += 6
+        if contexto_tokens:
+            texto_nodo = n.get("titulo_concepto", "") + " " + " ".join(n.get("condiciones_activacion", []))
+            p += len(contexto_tokens & _tokens_cosecha(texto_nodo))
+        return p
+
+    candidatos = [nid for nid in graph if nid not in cubiertos]
+    return sorted(candidatos, key=puntaje, reverse=True)[:tope]
+
+
+def seleccionar_puerta_avanzada(mensaje_nuevo, estado_vivo, fase_actual, families, graph, cubiertos, entry_seeds):
+    """Capa 1 avanzada (--seguir): elige cualquier nodo del grafo aun no
+    cubierto como punto de entrada de la sesion de seguimiento."""
+    candidatos_ids = candidatos_seguimiento(mensaje_nuevo, estado_vivo, fase_actual, families, graph, cubiertos)
+    if API_KEY and candidatos_ids:
+        opciones = []
+        for nid in candidatos_ids:
+            n = graph[nid]
+            opciones.append({
+                "id": nid, "titulo": n["titulo_concepto"], "fase": n.get("fase_proyecto"),
+                "resumen": n.get("resumen_teorico", "")[:150],
+                "condiciones_activacion": n.get("condiciones_activacion", [])[:2],
+            })
+        ctx = {"estado_vivo": estado_vivo, "mensaje_nuevo": mensaje_nuevo, "candidatos": opciones}
+        try:
+            raw = llamar_claude(SYSTEM_PUERTA_AVANZADA, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=400)
+            data = _parsear_json(raw)
+            if data["puerta_id"] in candidatos_ids:
+                return data["puerta_id"], (data.get("perfil_sesion") or "").strip()
+            raise ValueError(f"puerta_id fuera de los candidatos: {data.get('puerta_id')}")
+        except Exception as e:
+            print(f"  (fallo la clasificacion avanzada, uso el candidato de mayor puntaje: {e})")
+    if candidatos_ids:
+        return candidatos_ids[0], (estado_vivo or "")
+    return next(iter(entry_seeds)), (estado_vivo or "")
+
+
 def parse_args():
     ap = argparse.ArgumentParser()
     ap.add_argument("--continuar", metavar="SESSION_ID", default=None,
                     help="Retoma una sesion previa desde su ultimo nodo (engine/sessions/{id}.json)")
+    ap.add_argument("--gratis", action="store_true",
+                    help="Organizador gratuito: una sola llamada, sin entrevista")
+    ap.add_argument("--seguir", metavar="PROJECT_ID", default=None,
+                    help="Sesion de seguimiento de un proyecto existente")
+    ap.add_argument("--offline", action="store_true",
+                    help="Fuerza persistencia JSON local en engine/projects_local/ en vez de Supabase")
     return ap.parse_args()
 
 
@@ -635,41 +894,20 @@ def _imprimir_nodo(idx, total, node, modo, con_resumen=False):
         print("  (cubierto por lo que ya contaste; no hace falta preguntarlo)")
 
 
-def main():
-    args = parse_args()
-    graph = cargar_grafo()
-    entry_seeds = cargar_entry_seeds()
-    preguntas_cache = cargar_preguntas_cache()
-    families = plan_readiness.cargar_families(graph)
+def _extraer_titulo(plan_md):
+    for line in plan_md.splitlines():
+        line = line.strip()
+        if line.startswith("# "):
+            return line[2:].strip()
+    return None
 
-    print("=" * 60)
-    print("  MY IDEA - prototipo del motor de ruteo (travesia silenciosa)")
-    print(f"  Grafo: {len(graph)} conceptos | modo: {'IA' if API_KEY else 'offline'} | "
-          f"preguntas cacheadas: {len(preguntas_cache)}")
-    print("=" * 60)
 
-    pregunta_hecha, respuesta_usuario = None, None
-
-    if args.continuar:
-        sesion = cargar_sesion(args.continuar)
-        session_id = args.continuar
-        ruta = sesion["ruta"]
-        modos = sesion.get("modos", ["conversado"] * len(ruta))
-        visitados = set(ruta)
-        actual_id = ruta[-1]
-        perfil_sesion = sesion["perfil_sesion"]
-        texto_original = sesion["entrada_original"]
-        profundizar_ofrecido = sesion.get("profundizar_ofrecido", False)
-        print(f"\nRetomando sesion {session_id} desde: {graph[actual_id]['titulo_concepto']}")
-    else:
-        session_id = uuid.uuid4().hex[:8]
-        texto_original = input("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
-        actual_id, perfil_sesion = clasificar_entrada(texto_original, entry_seeds, graph)
-        visitados, ruta, modos = {actual_id}, [actual_id], ["conversado"]
-        profundizar_ofrecido = False
-        guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido)
-        _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de entrada", con_resumen=True)
-
+def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
+                       perfil_sesion, texto_original, session_id, project_id, db_session_id,
+                       profundizar_ofrecido=False, pregunta_hecha=None, respuesta_usuario=None,
+                       es_seguimiento=False, estado_vivo_previo=None):
+    """Corre el bucle de entrevista (comun a proyecto nuevo y --seguir) hasta
+    salir sin plan o ensamblar uno. Devuelve un dict con el resultado."""
     repreguntas_usadas = 0
     while True:
         nivel1_ids = sucesores_nivel(actual_id, graph, visitados)
@@ -691,8 +929,7 @@ def main():
 
         if resultado["accion"] == "salir":
             print("\nHasta pronto.")
-            reportar_costo()
-            return
+            return {"tipo": "salio", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion}
 
         if resultado["accion"] == "repreguntar":
             repreguntas_usadas += 1
@@ -706,7 +943,8 @@ def main():
             evaluacion = plan_readiness.evaluar_ruta(ruta, families)
             if not evaluacion["es_completa"] and not profundizar_ofrecido:
                 profundizar_ofrecido = True
-                guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido)
+                guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
+                               project_id, db_session_id, es_seguimiento, estado_vivo_previo)
                 if preguntar_profundizar(evaluacion["familias_faltantes"]) == "continuar":
                     print("\nPerfecto, sigamos un poco mas.")
                     pregunta_hecha, respuesta_usuario = None, None
@@ -727,7 +965,8 @@ def main():
                 _imprimir_nodo(len(ruta), MAX_DEPTH, graph[nid], "silencioso", con_resumen=False)
         actual_id = camino[-1]
         repreguntas_usadas = 0
-        guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido)
+        guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
+                       project_id, db_session_id, es_seguimiento, estado_vivo_previo)
 
         if pregunta_necesaria:
             n = graph[actual_id]
@@ -739,14 +978,194 @@ def main():
 
     evaluacion = plan_readiness.evaluar_ruta(ruta, families)
     print("\nEnsamblando tu plan...\n")
-    plan = ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id)
-    print(plan)
+    resultado_plan = ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion,
+                                     session_id, es_seguimiento=es_seguimiento,
+                                     estado_vivo_previo=estado_vivo_previo)
+    plan_md = resultado_plan["markdown"]
+    print(plan_md)
     fname = BASE / f"plan_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
-    fname.write_text(plan, encoding="utf-8")
+    fname.write_text(plan_md, encoding="utf-8")
     print(f"\nPlan guardado en: {fname}")
     ruta_txt = " -> ".join(f"[{m[0]}]{nid}" for nid, m in zip(ruta, modos))
     print(f"Ruta recorrida ({len(ruta)}): {ruta_txt}")
+
+    return {
+        "tipo": "plan", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion,
+        "cosecha_ids": resultado_plan["cosecha_ids"],
+        "evaluacion_cobertura": resultado_plan["evaluacion_cobertura"],
+        "plan_md": plan_md, "plan_fname": fname,
+    }
+
+
+def _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=False):
+    """Escribe en Supabase (o JSON local) el resultado de una sesion: nodos
+    cubiertos, cierre de sesion, plan, y el estado_vivo comprimido."""
+    if project_id is None or db_session_id is None:
+        return  # --continuar de un scratch file anterior sin project_id: nada que persistir
+
+    ruta = resultado["ruta"]
+    modos = resultado["modos"]
+
+    if resultado["tipo"] == "salio":
+        db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO)
+        return
+
+    cosecha_ids = resultado["cosecha_ids"]
+    evaluacion_cobertura = resultado["evaluacion_cobertura"]
+
+    nodos_con_tipo = list(zip(ruta, modos)) + [(nid, "cosechado") for nid in cosecha_ids]
+    db.registrar_nodos(project_id, db_session_id, nodos_con_tipo)
+
+    ruta_con_modos_json = [{"node_id": nid, "tipo": modo} for nid, modo in zip(ruta, modos)]
+    db.cerrar_sesion(project_id, db_session_id, ruta_con_modos_json, costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO)
+
+    etiqueta_db = "seguimiento" if es_seguimiento else ("completo" if evaluacion_cobertura["es_completa"] else "inicial")
+    total_conceptos = len(ruta) + len(cosecha_ids)
+    familias_presentes = sorted({families.get(nid, "general") for nid in ruta + cosecha_ids} - {"general"})
+    db.guardar_plan(project_id, db_session_id, etiqueta_db, resultado["plan_md"], total_conceptos, familias_presentes)
+
+    proyecto = db.obtener_proyecto(project_id)
+    estado_anterior = proyecto.get("estado_vivo") if proyecto else None
+    conceptos_titulos = [graph[nid]["titulo_concepto"] for nid in ruta + cosecha_ids if nid in graph]
+    estado_nuevo = comprimir_estado_vivo(estado_anterior, resultado["perfil_sesion"], conceptos_titulos)
+
+    fase_final = graph[ruta[-1]].get("fase_proyecto", "ideacion") if ruta else "ideacion"
+    campos = {"estado_vivo": estado_nuevo, "fase_actual": fase_final}
+    titulo = _extraer_titulo(resultado["plan_md"])
+    if titulo and (not proyecto or not proyecto.get("titulo")):
+        campos["titulo"] = titulo
+    db.actualizar_proyecto(project_id, **campos)
+
+
+def modo_nuevo_proyecto(graph, families, entry_seeds, preguntas_cache, args):
+    pregunta_hecha, respuesta_usuario = None, None
+
+    if args.continuar:
+        sesion = cargar_sesion(args.continuar)
+        session_id = args.continuar
+        ruta = sesion["ruta"]
+        modos = sesion.get("modos", ["conversado"] * len(ruta))
+        visitados = set(ruta)
+        actual_id = ruta[-1]
+        perfil_sesion = sesion["perfil_sesion"]
+        texto_original = sesion["entrada_original"]
+        profundizar_ofrecido = sesion.get("profundizar_ofrecido", False)
+        project_id = sesion.get("project_id")
+        db_session_id = sesion.get("db_session_id")
+        es_seguimiento = sesion.get("es_seguimiento", False)
+        estado_vivo_previo = sesion.get("estado_vivo_previo")
+        print(f"\nRetomando sesion {session_id} desde: {graph[actual_id]['titulo_concepto']}")
+    else:
+        session_id = uuid.uuid4().hex[:8]
+        texto_original = input("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
+        project_id = db.crear_proyecto(texto_original)
+        db_session_id = db.crear_sesion(project_id, "inicial", texto_original)
+        actual_id, perfil_sesion = clasificar_entrada(texto_original, entry_seeds, graph)
+        visitados, ruta, modos = {actual_id}, [actual_id], ["conversado"]
+        profundizar_ofrecido = False
+        es_seguimiento, estado_vivo_previo = False, None
+        guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
+                       project_id, db_session_id)
+        _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de entrada", con_resumen=True)
+        print(f"\n(proyecto: {project_id})")
+
+    resultado = ejecutar_recorrido(
+        graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
+        perfil_sesion, texto_original, session_id, project_id, db_session_id,
+        profundizar_ofrecido, pregunta_hecha, respuesta_usuario,
+        es_seguimiento=es_seguimiento, estado_vivo_previo=estado_vivo_previo,
+    )
+    _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=es_seguimiento)
+    if project_id:
+        print(f"\nPara continuar mas adelante: python engine/prototipo_motor.py --seguir {project_id}")
     reportar_costo()
+
+
+def modo_seguir(project_id, graph, families, entry_seeds, preguntas_cache):
+    proyecto = db.obtener_proyecto(project_id)
+    if proyecto is None:
+        print(f"ERROR: no existe el proyecto {project_id}")
+        sys.exit(1)
+
+    cubiertos = db.nodos_cubiertos(project_id)
+    print(f"\nRetomando proyecto {project_id} (fase actual: {proyecto.get('fase_actual')}, "
+          f"{len(cubiertos)} conceptos ya cubiertos).")
+    mensaje_nuevo = input("\nCuéntame qué ha pasado desde la última vez:\n> ")
+
+    db_session_id = db.crear_sesion(project_id, "seguimiento", mensaje_nuevo)
+    estado_vivo_previo = proyecto.get("estado_vivo")
+
+    actual_id, perfil_sesion = seleccionar_puerta_avanzada(
+        mensaje_nuevo, estado_vivo_previo, proyecto.get("fase_actual", "ideacion"),
+        families, graph, cubiertos, entry_seeds,
+    )
+    visitados = set(cubiertos) | {actual_id}
+    ruta, modos = [actual_id], ["conversado"]
+    session_id = uuid.uuid4().hex[:8]
+    guardar_sesion(session_id, ruta, modos, perfil_sesion, mensaje_nuevo, False, project_id, db_session_id,
+                   es_seguimiento=True, estado_vivo_previo=estado_vivo_previo)
+    _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de seguimiento", con_resumen=True)
+
+    resultado = ejecutar_recorrido(
+        graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
+        perfil_sesion, mensaje_nuevo, session_id, project_id, db_session_id,
+        profundizar_ofrecido=False, es_seguimiento=True, estado_vivo_previo=estado_vivo_previo,
+    )
+    _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=True)
+    reportar_costo()
+
+
+def modo_gratis(graph, entry_seeds):
+    print("\n--- Modo gratuito: organizador de tu idea (sin entrevista) ---")
+    texto_original = input("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
+    project_id = db.crear_proyecto(texto_original)
+    db_session_id = db.crear_sesion(project_id, "gratuito", texto_original)
+
+    markdown, data = organizador_gratuito(texto_original, entry_seeds, graph)
+    if markdown is None:
+        print(data)
+        reportar_costo()
+        return
+
+    print("\n" + markdown)
+    fname = BASE / f"plan_gratis_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
+    fname.write_text(markdown, encoding="utf-8")
+    print(f"\nGuardado en: {fname}")
+
+    db.guardar_plan(project_id, db_session_id, "organizador", markdown, 0, [])
+    db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO)
+    if isinstance(data, dict) and data.get("etapa_detectada") in db.FASES:
+        db.actualizar_proyecto(project_id, fase_actual=data["etapa_detectada"])
+
+    print(f"\nProyecto: {project_id}")
+    print(f"Para continuar mas adelante: python engine/prototipo_motor.py --seguir {project_id}")
+    reportar_costo()
+
+
+def main():
+    args = parse_args()
+    if args.offline:
+        db.forzar_offline(True)
+
+    graph = cargar_grafo()
+    entry_seeds = cargar_entry_seeds()
+    preguntas_cache = cargar_preguntas_cache()
+    families = plan_readiness.cargar_families(graph)
+
+    print("=" * 60)
+    print("  MY IDEA - prototipo del motor de ruteo (travesia silenciosa)")
+    print(f"  Grafo: {len(graph)} conceptos | modo: {'IA' if API_KEY else 'offline'} | "
+          f"preguntas cacheadas: {len(preguntas_cache)} | persistencia: "
+          f"{'Supabase' if db.disponible() else 'JSON local'}")
+    print("=" * 60)
+
+    if args.gratis:
+        modo_gratis(graph, entry_seeds)
+        return
+    if args.seguir:
+        modo_seguir(args.seguir, graph, families, entry_seeds, preguntas_cache)
+        return
+    modo_nuevo_proyecto(graph, families, entry_seeds, preguntas_cache, args)
 
 
 if __name__ == "__main__":
