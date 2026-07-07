@@ -2,11 +2,12 @@
 """
 prototipo_motor.py - Motor de ruteo (post motor-v1.0: Fase 2.6 preguntas
 adaptadas por turno, Fase 2.7 escucha activa y caching incremental, Fase
-2.8 navegacion libre con brujula semantica).
+2.8 navegacion libre con brujula semantica, Fase 2.9 cierre del motor -
+tag motor-v2.0, de aqui en adelante solo bugs).
 
 Ver examples/README.md para la prueba de cierre de motor-v1.0 (dos actos,
-sin tracebacks) y las pruebas de Fase 2.6/2.7/2.8 (macetas de calcita); ver
-mas abajo para el detalle de cada fase.
+sin tracebacks) y las pruebas de Fase 2.6/2.7/2.8/2.9 (macetas de
+calcita); ver mas abajo para el detalle de cada fase.
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
 usuario nunca elige de un menu, y el interprete puede atravesar varios nodos
@@ -69,26 +70,43 @@ Fase 2.8 - navegacion libre (brujula semantica): completa la autonavegacion
     genera embeddings locales (sentence-transformers, costo cero por
     sesion) de los 1265 nodos en engine/semantic_index.npz; buscar_afines()
     los usa en cada turno para ofrecerle al interprete, ademas de los
-    sucesores locales, hasta 5 "saltos_posibles" de CUALQUIER parte del
+    sucesores locales, hasta 8 "saltos_posibles" de CUALQUIER parte del
     grafo (cualquier fase, incluso anteriores) afines a la ultima respuesta
-    del usuario. El interprete puede saltar (salto_semantico, max 1 por
-    turno, registrado en la ruta con modo "salto") cuando la respuesta
-    introduce un tema que ningun sucesor local atiende. Si sentence-
-    transformers o el indice no estan disponibles, la brujula se desactiva
-    silenciosamente y el motor sigue navegando solo local, como antes de
-    esta fase. El "sigamos" (profundizar) ahora es DIRIGIDO: en vez de
-    devolver el control al riel local (que podia toparse con MAX_DEPTH sin
-    preguntar nada, rompiendo la promesa de continuar), extender_sigamos_
-    dirigido usa la brujula para elegir 2-3 nodos reales de la familia
-    faltante y los conversa como extension (hasta
-    MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO turnos por encima de MAX_DEPTH); si
-    no hay candidatos genuinos, lo dice honestamente en vez de fingir.
-    Coherencia por autodeclaracion: el redactor ya no se evalua por tags de
-    node_families para la etiqueta del plan — declara el mismo que
-    familias trato con sustancia real (bloque final ===JSON===), y esa
+    del usuario, ya filtrados por MIN_SCORE_SALTO. El interprete puede
+    saltar (salto_semantico, max 1 por turno, registrado en la ruta con
+    modo "salto") cuando la respuesta introduce un tema que ningun sucesor
+    local atiende. Si sentence-transformers o el indice no estan
+    disponibles, la brujula se desactiva silenciosamente y el motor sigue
+    navegando solo local, como antes de esta fase. El "sigamos"
+    (profundizar) ahora es DIRIGIDO: en vez de devolver el control al riel
+    local (que podia toparse con MAX_DEPTH sin preguntar nada, rompiendo la
+    promesa de continuar), extender_sigamos_dirigido usa la brujula para
+    elegir 2-3 nodos reales de la familia faltante y los conversa como
+    extension (hasta MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO turnos por encima de
+    MAX_DEPTH); si no hay candidatos genuinos, lo dice honestamente en vez
+    de fingir. Coherencia por autodeclaracion: el redactor ya no se evalua
+    por tags de node_families para la etiqueta del plan — declara el mismo
+    que familias trato con sustancia real (bloque final ===JSON===), y esa
     autodeclaracion es la UNICA fuente de la etiqueta inicial/completo y de
     "Lo que este plan aun no cubre" (los tags de node_families se conservan
     solo para el medidor de oferta previa y para priorizar la cosecha).
+Fase 2.9 - cierre del motor (tag motor-v2.0): dos correcciones finales
+    surgidas de auditar la propia corrida de Fase 2.8. (a) La extension
+    dirigida ('sigamos') ahora respeta la intencion de salida del usuario
+    turno a turno: cada respuesta pasa por _detectar_decision_plan (el
+    mismo clasificador que decide la oferta inicial de profundizar), y al
+    primer "dame mi plan" (o equivalente) DENTRO de la extension, corta de
+    inmediato en vez de forzar las preguntas restantes — la version inversa
+    de la promesa rota que se cerro en 2.8. (b) El salto semantico ahora
+    tiene permiso explicito de NO ocurrir: MIN_SCORE_SALTO filtra
+    candidatos debiles antes de ofrecerlos (calibrado con los 3 saltos
+    reales de la corrida de 2.8: un salto bien justificado como
+    hoja_estimacion_costos, score 0.474, pasa; uno tematicamente flojo pese
+    a su score relativamente alto como alfabetizacion_en_materiales_
+    maliciosos, score 0.409, queda excluido), y el system prompt expone el
+    score (afinidad) de cada saltos_posible ademas de instruir
+    explicitamente que un candidato ofrecido no obliga a saltar. A partir
+    de este tag, el motor recibe solo fixes de bugs.
 Medidor de completitud: antes de redactar el plan, se evalua si la ruta toca
     al menos una familia de accion con clientes y una de viabilidad
     economica (engine/plan_readiness.py). Si no, se ofrece UNA vez la
@@ -185,6 +203,12 @@ MAX_SALTOS_SILENCIOSOS_POR_LLAMADA = 3
 MAX_REPREGUNTAS_POR_PUNTO = 1
 MAX_SALTOS_SEMANTICOS_POR_TURNO = 1
 MAX_SALTOS_POSIBLES_OFRECIDOS = 8
+# Fase 2.9: umbral minimo de similitud coseno para ofrecer un salto_posible
+# al interprete. Calibrado con los 3 saltos reales de la corrida de Fase
+# 2.8: hoja_estimacion_costos (0.474, un salto bien justificado) debe
+# pasar; alfabetizacion_en_materiales_maliciosos (0.409, tematicamente
+# flojo pese al numero relativamente alto) debe quedar excluido.
+MIN_SCORE_SALTO = 0.42
 MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO = 3
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
@@ -253,11 +277,18 @@ SYSTEM_INTERPRETE_MULTI = (
     "prioridad_declarada_actual: {\"texto\": str, \"conteo\": int} o null — "
     "lo que el usuario mismo ha repetido como su bloqueo o urgencia "
     "principal, y cuantas veces lo ha reafirmado hasta ahora — y "
-    "saltos_posibles (Fase 2.8): hasta 8 nodos de CUALQUIER parte del "
+    "saltos_posibles (Fase 2.8/2.9): hasta 8 nodos de CUALQUIER parte del "
     "grafo (no solo sucesores del nodo actual, pueden ser de cualquier "
     "fase, incluso anteriores) que una busqueda semantica encontro "
-    "afines a la ULTIMA respuesta del usuario, cada uno con id, titulo, "
-    "fase_proyecto y condiciones_activacion.\n\n"
+    "afines a la ULTIMA respuesta del usuario (ya filtrados por un umbral "
+    "minimo — lo que ves aqui ya paso ese filtro), cada uno con id, "
+    "titulo, fase_proyecto, condiciones_activacion, y afinidad (score de "
+    "similitud 0 a 1, mas alto = mas afin). El score es una señal, no una "
+    "orden: puede haber un candidato con score moderado que SI es el tema "
+    "correcto (temas poco representados en el grafo dan scores mas bajos "
+    "en general), y un candidato con score mas alto que en realidad es "
+    "generico o tangencial. Juzga por el CONTENIDO (titulo + "
+    "condiciones_activacion), no solo por el numero.\n\n"
     "Tu trabajo es construir un camino: la secuencia de nodos (1 a 3, en "
     "orden, empezando por un sucesor de nivel 1) que el usuario deberia "
     "atravesar dado lo que ya se sabe de el. Un nodo se atraviesa EN "
@@ -306,6 +337,25 @@ SYSTEM_INTERPRETE_MULTI = (
     "si NINGUN salto_posible es mas especifico que tus sucesores locales, "
     "quedate local (siguiendo el contrato normal de 'camino', incluyendo "
     "'repreguntar' si aplica su regla propia).\n"
+    "'NINGUNO' ES UNA RESPUESTA VALIDA (Fase 2.9): que saltos_posibles "
+    "venga con candidatos NO obliga a saltar. Si el candidato con mejor "
+    "afinidad es en realidad generico, tangencial, o trata el tema de "
+    "forma mas amplia/distinta a lo que el usuario dijo (aunque su score "
+    "sea alto), NO saltes — quedarte local es la decision correcta. "
+    "Ejemplo real de un salto que NO debio ocurrir: el usuario describe "
+    "que su resina hace burbujas y su QR grabado con laser se borra "
+    "(un problema tecnico concreto de materiales y fabricacion), y el "
+    "candidato con mejor score es 'Alfabetización en Materiales Traviesos "
+    "(Mischievous Materials)' (afinidad 0.41, la mas alta del grupo) — "
+    "pero ese nodo en realidad trata de entender que pueden hacer "
+    "tecnologias como algoritmos, blockchain o biologia sintetica a nivel "
+    "conceptual, NO defectos de resina ni tecnicas de grabado. Pese al "
+    "score alto, el contenido no calza: la decision correcta ahi era "
+    "'salto_semantico': null y seguir local. Compara eso con un salto que "
+    "SI debe ocurrir aunque su score sea mas bajo: el usuario dice 'no he "
+    "calculado bien cuanto me cuesta cada pieza' y saltos_posibles incluye "
+    "'Hoja de Trabajo de Estimacion de Costos' (afinidad 0.47) — el "
+    "contenido calza exacto con el dato nuevo, salta ahi.\n"
     "El salto puede ir hacia adelante O hacia atras en fase (por ejemplo, "
     "de validacion de clientes a un nodo de ideacion sobre capacidad de un "
     "fundador solitario, si eso es lo que la respuesta realmente revela). "
@@ -1116,11 +1166,17 @@ def _cargar_brujula():
         return False
 
 
-def buscar_afines(texto, excluidos, k=5):
+def buscar_afines(texto, excluidos, k=5, min_score=0.0, con_score=False):
     """Top-k nodos de TODO el grafo mas afines semanticamente a `texto`
     (embeddings locales, sin llamada a la API), excluyendo `excluidos`
     (ya visitados/cubiertos). Devuelve [] si la brujula no esta disponible
-    o si `texto` esta vacio."""
+    o si `texto` esta vacio.
+    Fase 2.9: min_score descarta candidatos por debajo del umbral (el
+    salto semantico libre lo usa via MIN_SCORE_SALTO; extender_sigamos_
+    dirigido no, porque ese ya filtra por familia, un criterio de
+    relevancia distinto y suficiente). con_score=True devuelve tuplas
+    (id, score) en vez de solo ids, para exponerle el numero al
+    interprete y que pueda juzgar afinidad debil el mismo."""
     if not texto or not texto.strip():
         return []
     if not _cargar_brujula():
@@ -1134,7 +1190,10 @@ def buscar_afines(texto, excluidos, k=5):
         nid = ids[idx]
         if nid in excluidos:
             continue
-        resultados.append(nid)
+        score = float(scores[idx])
+        if score < min_score:
+            break  # orden descendente: nada mas adelante supera el umbral
+        resultados.append((str(nid), score) if con_score else str(nid))
         if len(resultados) >= k:
             break
     return resultados
@@ -1272,17 +1331,23 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
     # Fase 2.8: brujula semantica sobre la ultima respuesta (o la entrada
     # original, si aun no hay respuesta) - candidatos de CUALQUIER parte
     # del grafo, excluyendo lo ya visitado y lo que ya ofrecen los locales.
+    # Fase 2.9: filtra por MIN_SCORE_SALTO (candidatos debiles ni siquiera
+    # se ofrecen) y expone el score (afinidad) para que el interprete
+    # pueda juzgar los casos limite el mismo.
     texto_para_brujula = respuesta_usuario or texto_original
     excluidos_brujula = visitados | set(nivel1_ids)
-    ids_salto_ofrecidos = buscar_afines(texto_para_brujula, excluidos_brujula, k=MAX_SALTOS_POSIBLES_OFRECIDOS)
+    salto_candidatos = buscar_afines(texto_para_brujula, excluidos_brujula,
+                                     k=MAX_SALTOS_POSIBLES_OFRECIDOS, min_score=MIN_SCORE_SALTO, con_score=True)
+    ids_salto_ofrecidos = [nid for nid, _ in salto_candidatos]
     saltos_posibles = [
         {
             "id": nid,
             "titulo": graph[nid]["titulo_concepto"],
             "fase_proyecto": graph[nid].get("fase_proyecto"),
             "condiciones_activacion": graph[nid].get("condiciones_activacion", [])[:2],
+            "afinidad": round(score, 3),
         }
-        for nid in ids_salto_ofrecidos
+        for nid, score in salto_candidatos
     ]
 
     ctx_completo = {
@@ -1404,14 +1469,12 @@ def _menu_emergencia(nivel1_ids, graph):
     return {"accion": "avanzar", "camino": [nivel1_ids[r]], "pregunta_necesaria": True, "perfil_update": None}
 
 
-def preguntar_profundizar(familias_faltantes):
-    """Ofrece UNA vez la disyuntiva plan-inicial-ya vs. seguir profundizando."""
-    faltan_txt = "; ".join(familias_faltantes)
-    mensaje = (
-        f"Puedo darte tu plan ahora mismo. Eso si: con algunas preguntas mas "
-        f"incluiria {faltan_txt}. ¿Seguimos un poco o lo quieres ya?"
-    )
-    respuesta = leer_entrada("\n" + mensaje + "\n> ")
+def _detectar_decision_plan(respuesta):
+    """Clasifica una respuesta libre como 'generar_ya' (el usuario quiere su
+    plan) o 'continuar'. Reutilizado por preguntar_profundizar (la oferta
+    inicial de profundizar) y por extender_sigamos_dirigido (Fase 2.9: la
+    intencion de salida del usuario se respeta tambien DENTRO de la
+    extension dirigida, turno a turno, no solo al ofrecerla)."""
     if API_KEY:
         try:
             raw = llamar_claude(SYSTEM_PROFUNDIZAR, respuesta, MODEL_HAIKU, max_tokens=100, componente="turnos")
@@ -1424,6 +1487,17 @@ def preguntar_profundizar(familias_faltantes):
     if any(p in low for p in ("ya", "ahora", "dame", "listo", "asi esta bien", "así está bien")):
         return "generar_ya"
     return "continuar"
+
+
+def preguntar_profundizar(familias_faltantes):
+    """Ofrece UNA vez la disyuntiva plan-inicial-ya vs. seguir profundizando."""
+    faltan_txt = "; ".join(familias_faltantes)
+    mensaje = (
+        f"Puedo darte tu plan ahora mismo. Eso si: con algunas preguntas mas "
+        f"incluiria {faltan_txt}. ¿Seguimos un poco o lo quieres ya?"
+    )
+    respuesta = leer_entrada("\n" + mensaje + "\n> ")
+    return _detectar_decision_plan(respuesta)
 
 
 FAMILIA_QUERY_BRUJULA = {
@@ -1464,7 +1538,11 @@ def extender_sigamos_dirigido(graph, families, visitados, ruta, modos, perfil_se
     faltan y los conversa como extension, permitida por encima de
     MAX_DEPTH. Muta ruta/modos/visitados en el sitio. Si no encuentra
     candidatos genuinos de esas familias, NO finge continuar: devuelve
-    huno_extension=False para que el llamador lo diga honestamente."""
+    hubo_extension=False para que el llamador lo diga honestamente.
+    Fase 2.9: cada respuesta pasa por _detectar_decision_plan — al primer
+    'dame mi plan' (o equivalente) DENTRO de la extension, corta de
+    inmediato en vez de forzar las preguntas restantes (la version inversa
+    de la promesa rota: ignorar la salida del usuario)."""
     query = " ".join(FAMILIA_QUERY_BRUJULA.get(f, f) for f in familias_faltantes)
     candidatos = buscar_afines(query, visitados, k=20)
     candidatos_familia = [nid for nid in candidatos if families.get(nid) in familias_faltantes]
@@ -1490,6 +1568,14 @@ def extender_sigamos_dirigido(graph, families, visitados, ruta, modos, perfil_se
         pregunta = pregunta_dirigida(nid, graph, preguntas_cache, perfil_sesion, ultimas_preguntas)
         respuesta = leer_entrada("\n" + pregunta + "\n> ")
         ultimas_preguntas = (ultimas_preguntas + [pregunta])[-3:]
+        if _detectar_decision_plan(respuesta) == "generar_ya":
+            # El usuario pidio su plan a mitad de la extension: se corta de
+            # inmediato, sin forzar las preguntas restantes. Lo que no se
+            # alcanzo a cubrir queda autodeclarado como pendiente (Fase 2.8).
+            guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, True,
+                           project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
+                           prioridad_declarada)
+            return {"hubo_extension": True, "perfil_sesion": perfil_sesion, "ultimas_preguntas": ultimas_preguntas}
         perfil_sesion = (perfil_sesion + "\n" + f"Sobre {n['titulo_concepto']}: {respuesta}").strip()
         guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, True,
                        project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,

@@ -286,6 +286,79 @@ que las corridas de Fase 2.6/2.7:
   silencio sin preguntar nada. Se prefirio corregir el bug sobre cumplir
   el objetivo de costo.
 
+## Fase 2.9 — cierre del motor (tag motor-v2.0)
+
+Auditoria de la Fase 2.8, turno por turno: el objetivo se cumplia en lo
+esencial (navegacion libre confirmada — el salto a la Hoja de Estimacion
+de Costos fue "la telaraña autonavegandose por el input del cliente,
+exactamente el objetivo textual"; el plan da soluciones concretas en vez
+de omitir; la escucha se sostiene sin "pero antes"; lo economico quedo
+incluido y coherente), pero con un bug real y un hallazgo de calidad:
+
+1. **Bug real**: dentro de la extension dirigida, el usuario dijo "dame mi
+   plan" tres veces seguidas (turnos 12, 13 y 14 de esa corrida) y el
+   sistema le hizo dos preguntas mas de todos modos antes de generar el
+   plan — la extension corria sus nodos fijos sin chequear la intencion
+   de cada respuesta. La version inversa de la "promesa rota" que se
+   habia cerrado en la 2.8 (ahi el problema era prometer continuar y no
+   preguntar nada; aqui es preguntar de mas ignorando que el usuario ya
+   queria salir).
+2. **Hallazgo de calidad**: de los 3 saltos de esa corrida, el primero
+   (`alfabetizacion_en_materiales_maliciosos`) era tematicamente flojo —
+   el nodo habla de alfabetizacion en blockchain/tecnologias, no de
+   tecnicas de resina — pese a tener el score de afinidad MAS ALTO del
+   grupo (0.409). Los saltos necesitaban permiso explicito para no
+   ocurrir.
+
+Cambios: (1) `extender_sigamos_dirigido` ahora pasa cada respuesta del
+usuario por `_detectar_decision_plan` (el mismo clasificador — real,
+`SYSTEM_PROFUNDIZAR` via Haiku — que decide la oferta inicial de
+profundizar); al primer "dame mi plan" (o equivalente) DENTRO de la
+extension, corta de inmediato en vez de forzar las preguntas restantes.
+(2) El chequeo obligatorio de salto semantico ahora tiene "ninguno" como
+respuesta explicitamente valida, con un ejemplo negativo real (el propio
+caso de `alfabetizacion_en_materiales_maliciosos`) contrastado con un
+ejemplo positivo real (`hoja_estimacion_costos`) en el system prompt.
+Ademas, `MIN_SCORE_SALTO = 0.42` filtra candidatos debiles ANTES de
+ofrecerlos como `saltos_posibles`, calibrado exactamente con los 3 saltos
+de la corrida 2.8 (`hoja_estimacion_costos`, score 0.474, pasa;
+`alfabetizacion_en_materiales_maliciosos`, score 0.409, queda excluido) —
+y cada candidato ahora expone su `afinidad` (score) al interprete para
+que pueda juzgar los casos limite el mismo, no solo el codigo.
+
+Verificado: (a) el filtro de umbral confirmado directamente contra la
+brujula real — la consulta de resina/QR ya NO ofrece
+`alfabetizacion_en_materiales_maliciosos` como candidato, y la consulta de
+costos SI sigue ofreciendo `hoja_estimacion_costos`; (b) el corte de
+intencion dentro de la extension verificado dos veces: con un mock
+controlado (`test_sigamos_salida.py`) y **con la API real**
+(`test_sigamos_salida_real.py`, costo $0.0021) — en ambos casos, tras
+"cobro por pieza pero no se cuanto me cuesta" (respuesta real, continua) y
+"dame mi plan ya, con esto alcanza" (segunda respuesta, real
+`SYSTEM_PROFUNDIZAR` clasifica `generar_ya`), la extension corta ahi
+mismo sin llegar a un tercer nodo; (c) corrida completa de la sesion de
+macetas (`fase2_9_macetas_cierre_motor.txt`, plan en
+`fase2_9_plan_macetas.md`) con las mismas respuestas literales de
+siempre: cero saltos de baja afinidad en la ruta (de hecho cero saltos en
+esta corrida en particular — el umbral mas estricto los redujo, tal como
+se esperaba: "los saltos necesitan permiso para no ocurrir"), plan
+etiquetado `_Plan completo_` coherente con el contenido, costo $0.2413
+(bajo el techo duro de $0.30).
+
+**Nota sobre el metodo de prueba** (limite reconocido en la auditoria): las
+respuestas literales son las mismas de la corrida original de Fase 2.6,
+pero las preguntas ya evolucionaron tanto entre fases que varias parejas
+pregunta-respuesta ya no se corresponden exactamente (el sistema pregunta
+por un tema, el guion contesta sobre otro, pensado para la pregunta de
+otra fase). El motor lo maneja con gracia en las corridas de esta fase,
+pero la coherencia conversacional fina ya no se puede verificar con
+guiones reciclados — la siguiente validacion real requiere una sesion en
+vivo, sin guion, idealmente con una idea real del propio usuario.
+
+Con esta fase, el motor (`prototipo_motor.py`) queda **funcionalmente
+completo** — tag `motor-v2.0`. De aqui en adelante el archivo solo recibe
+fixes de bugs; toda funcionalidad nueva va a la Fase 3 (el porte web).
+
 ## Los dos cierres verificados en esta prueba
 
 **Cierre elegante**: forzando EOF a mitad de sesión (`leer_entrada()`
