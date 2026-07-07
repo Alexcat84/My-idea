@@ -67,6 +67,63 @@ Verificado:
 | Acto 1b (sesión completa, proyecto nuevo, en un solo pase) | Haiku + Sonnet | $0.1489 |
 | Acto 2 (`--seguir`, 5 turnos hasta el plan, en un solo pase) | Haiku + Sonnet | $0.0791 |
 
+## Fase 2.6 — preguntas adaptadas por turno, prompt caching real
+
+Auditoria posterior a motor-v1.0: dos hallazgos sobre la sesion real de las
+macetas de calcita (resina + QR + NFT). (1) Redundancia: nodos vecinos
+hacian la misma pregunta con otro disfraz, y un nodo pregunto por validar
+clientes cuando el usuario ya habia contado que regalo prototipos y le
+encantaron a la gente ("eso ya lo valide"). (2) Tecnicismo: el nodo tipo
+Stage-Gate-TD pregunto en lenguaje de I+D corporativo ("tu organizacion")
+a un artesano solo. Causa raiz unica: las preguntas cacheadas son ciegas al
+contexto (se generaron una vez por nodo, en aislamiento). Ademas, un hallazgo
+tecnico separado: `cache_read` era 0 en las 9 llamadas Haiku de esa sesion
+porque ambos system prompts (interprete y redactor) estaban por debajo del
+minimo cacheable de sus modelos (Haiku 4.5 necesita 4096 tokens, Sonnet 4.6
+necesita 2048 — no 2048/1024 como se penso al principio).
+
+Cambios: el interprete de turno (que ya corria en cada paso) ahora tambien
+devuelve `pregunta_adaptada`: reformula la pregunta cacheada (que pasa a ser
+solo un "plano de intencion", nunca mostrada cruda) al registro del
+perfil_sesion (prohibido vocabulario corporativo para un fundador
+solitario), descontando lo ya respondido (si no queda nada nuevo, el nodo se
+marca silencioso) y sin repetir la estructura de las ultimas 2 preguntas
+hechas. El ruteo tambien penaliza candidatos que presuponen estructura
+organizacional cuando el perfil es una persona sola. Los system prompts del
+interprete y del redactor se ampliaron con ejemplos genuinos (few-shot) que
+de paso los llevan por encima del minimo cacheable real de cada modelo.
+Cosmetico: al repreguntar ya no se reimprime el encabezado del nodo.
+
+Verificado con dos corridas reales de la misma sesion de macetas (mismo
+`entrada_original` literal, mismas respuestas guionizadas realistas basadas
+en el perfil_sesion original), la primera con los prompts aun cortos (antes
+de corregir el umbral) y la segunda ya con los prompts ampliados:
+
+| Corrida | Llamadas Haiku | cache_read Haiku | Costo Haiku | Costo Sonnet | Total |
+|---|---|---|---|---|---|
+| `fase2_6_macetas_con_cache.txt` (post-fix) | 18 | 62,640 tokens | $0.0842 | $0.1280 | $0.2122 |
+| (pre-fix, mismo harness, sin guardar transcript) | 14 | 0 | $0.1091 | $0.1177 | $0.2268 |
+
+Costo Haiku por llamada: $0.0078 (pre-fix) -> $0.0047 (post-fix), una baja
+del ~40%, tal como se esperaba una vez el cache realmente activa. El total
+de la sesion no es directamente comparable al $0.1445 que reporto el
+usuario en su sesion real original (esa sesion tuvo otra profundidad de
+ruta y no quedo transcripcion guardada para repetir el guion exacto), pero
+la mecanica de cache ahora aplica igual a cualquier sesion en vivo.
+
+Verificado en la transcripcion (`fase2_6_macetas_con_cache.txt`): cero
+vocabulario corporativo en las preguntas generadas o en el plan final (grep
+de organizacion/portafolio/unidad de negocio/comite/stakeholders da cero
+coincidencias reales), los nodos de validacion con clientes se marcaron
+silenciosos 4 veces porque el usuario ya habia contado que regalo
+prototipos y le encantaron ("cubierto por lo que ya contaste"), y ningun
+encabezado de nodo se reimprime al repreguntar. Nota honesta: sobre 10
+preguntas conversadas en esta corrida, una pareja (nodos 2 y 4) comparte el
+molde "¿que es lo que mas te preocupa/duda: A, o B?" aunque el contenido de
+fondo difiere en cada una — mejor que la duplicacion casi literal que
+detecto la auditoria original, pero no una eliminacion perfecta de
+plantillas repetidas.
+
 ## Los dos cierres verificados en esta prueba
 
 **Cierre elegante**: forzando EOF a mitad de sesión (`leer_entrada()`

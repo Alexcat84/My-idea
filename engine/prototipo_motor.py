@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-prototipo_motor.py - Motor de ruteo v1.0 (tag motor-v1.0, congelado)
+prototipo_motor.py - Motor de ruteo (post motor-v1.0: Fase 2.6 encima del
+tag congelado, preguntas adaptadas por turno).
 
-A partir de este tag, este archivo solo recibe fixes de bugs. Las
-funciones nuevas van a la implementacion web de Fase 3 (Next.js/TS). Ver
-examples/README.md para la prueba de cierre (dos actos, sin tracebacks).
+Ver examples/README.md para la prueba de cierre de motor-v1.0 (dos actos,
+sin tracebacks). Fase 2.6 anadio preguntas adaptadas por turno y prompt
+caching real; ver mas abajo.
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
 usuario nunca elige de un menu, y el interprete puede atravesar varios nodos
@@ -23,12 +24,23 @@ Capa 2 (recorrido, travesia silenciosa): en cada punto de decision, el
     Devuelve un camino de 1 a 3 nodos: los que el contexto ya responde se
     atraviesan en silencio (cuentan para el plan y las familias del
     medidor, pero no se preguntan), y se detiene a preguntar solo en el
-    ultimo nodo del camino si pregunta_necesaria=true. La pregunta de cada
-    nodo esta pregenerada y cacheada (engine/preguntas_cache.json) porque
-    depende de la topologia, no del usuario. Si la API falla en un turno,
-    cae a un menu numerado de emergencia (un solo salto). El interprete
-    ademas pondera senales de miedo/riesgo/duda hacia candidatos de
-    validacion con clientes (ver engine/plan_readiness.py).
+    ultimo nodo del camino si pregunta_necesaria=true. Si la API falla en un
+    turno, cae a un menu numerado de emergencia (un solo salto). El
+    interprete ademas pondera senales de miedo/riesgo/duda hacia candidatos
+    de validacion con clientes (ver engine/plan_readiness.py), y penaliza
+    candidatos que presuponen estructura organizacional (equipos, unidades
+    de negocio) cuando el perfil indica una persona sola.
+Fase 2.6 - pregunta adaptada por turno: cada nodo trae una pregunta
+    pregenerada y cacheada (engine/preguntas_cache.json, sin tocar) que
+    depende solo de la topologia, no del usuario. Esa pregunta ya NUNCA se
+    muestra cruda: es el "plano de intencion" que el interprete recibe junto
+    con nivel1/nivel2, y la misma llamada devuelve ademas pregunta_adaptada:
+    reformulada al registro del perfil_sesion (nada de vocabulario
+    corporativo si el perfil es un fundador solitario), descontando lo que
+    el contexto ya respondio (si no queda nada nuevo, el nodo se marca
+    silencioso en vez de preguntar), y sin repetir la estructura de las
+    ultimas_preguntas_hechas (las 2 mas recientes de la sesion). Costo
+    marginal: ~100 tokens de salida por turno.
 Medidor de completitud: antes de redactar el plan, se evalua si la ruta toca
     al menos una familia de accion con clientes y una de viabilidad
     economica (engine/plan_readiness.py). Si no, se ofrece UNA vez la
@@ -170,11 +182,14 @@ SYSTEM_INTERPRETE_MULTI = (
     "decidir entre ramas.\n\n"
     "Recibes: la entrada original del usuario, el perfil de sesion "
     "acumulado, el nodo actual, sus sucesores inmediatos (nivel 1) con sus "
-    "condiciones_activacion, y los sucesores de esos sucesores (nivel 2, "
-    "resumidos). Tambien, si aplica, la ultima pregunta hecha y la "
-    "respuesta libre del usuario a esa pregunta (puede ser null si aun no "
-    "se ha hecho ninguna pregunta en este punto y solo cuentas con el "
-    "contexto acumulado).\n\n"
+    "condiciones_activacion y una pregunta_cache, y los sucesores de esos "
+    "sucesores (nivel 2, resumidos igual, con su propia pregunta_cache). "
+    "Tambien, si aplica, la ultima pregunta hecha y la respuesta libre del "
+    "usuario a esa pregunta (puede ser null si aun no se ha hecho ninguna "
+    "pregunta en este punto y solo cuentas con el contexto acumulado), y "
+    "ultimas_preguntas_hechas: el texto literal de hasta las 2 preguntas "
+    "mas recientes que ya se le hicieron al usuario en esta sesion (puede "
+    "venir vacia al inicio).\n\n"
     "Tu trabajo es construir un camino: la secuencia de nodos (1 a 3, en "
     "orden, empezando por un sucesor de nivel 1) que el usuario deberia "
     "atravesar dado lo que ya se sabe de el. Un nodo se atraviesa EN "
@@ -184,7 +199,93 @@ SYSTEM_INTERPRETE_MULTI = (
     "alcance para decidir entre sus propios sucesores: ese es el ultimo "
     "nodo del camino, y marca pregunta_necesaria=true porque ahi hace falta "
     "preguntarle al usuario.\n\n"
-    "Reglas:\n"
+    "Por que importa distinguir silencioso de conversado: el objetivo de "
+    "toda la entrevista es que la persona sienta que habla con alguien que "
+    "escucha, no que llena un formulario de preguntas ya contestadas. Cada "
+    "vez que preguntas algo que el contexto ya resolvia, el usuario pierde "
+    "confianza en que estas prestando atencion — por eso el sesgo por "
+    "defecto debe ser hacia silencioso, y solo preguntas cuando genuinamente "
+    "hay una bifurcacion que el contexto no resuelve. Ejemplo de la "
+    "diferencia: si el nodo pregunta 'como validas el interes de tus "
+    "clientes' y el usuario ya conto en su entrada que regalo prototipos y "
+    "la gente reacciono con entusiasmo, eso YA responde la pregunta — "
+    "silencioso. Pero si el siguiente nodo bifurca entre 'iterar el "
+    "prototipo actual' o 'empezar a cobrar ya', y el usuario nunca dijo si "
+    "quiere validar mas o si ya se siente listo para vender, esa bifurcacion "
+    "SI requiere preguntar — conversado. La misma logica aplica en cadena: "
+    "si el primer sucesor de nivel 1 tambien queda resuelto por el "
+    "contexto, sigue evaluando su propio sucesor de nivel 2 antes de "
+    "decidir donde detenerte; no te detengas en el primero solo porque es "
+    "el primero de la lista.\n\n"
+    "PREGUNTA ADAPTADA (obligatoria cuando pregunta_necesaria=true y "
+    "accion='avanzar'; null en cualquier otro caso): cada nodo trae una "
+    "pregunta_cache pregenerada que es solo un PLANO DE INTENCION (para que "
+    "sirve, que distingue), no el texto que el usuario debe leer. Nunca la "
+    "copies literal: redacta tu propia 'pregunta_adaptada' siguiendo estas "
+    "reglas, en este orden de prioridad:\n"
+    "(a) Conserva la intencion discriminante del plano: tu pregunta debe "
+    "seguir sirviendo para decidir entre los mismos sucesores que la "
+    "original discriminaba.\n"
+    "(b) Registro y vocabulario segun perfil_sesion: si el perfil describe "
+    "a alguien que trabaja solo o un equipo de 1-2 (artesano, maker, "
+    "fundador solitario), PROHIBIDO usar palabras de estructura corporativa "
+    "como 'organizacion', 'unidades de negocio', 'portafolio', 'comite' o "
+    "'tu equipo' (si no tiene equipo) — traduce la intencion a su realidad "
+    "concreta. Ejemplo: el plano dice '¿que haya ideas valiosas que no "
+    "caben dentro de lo que normalmente tu organizacion estaria dispuesta a "
+    "explorar?' y el perfil dice 'hace macetas de resina y calcita, trabaja "
+    "solo'; tu pregunta_adaptada seria algo como '¿te ha llegado alguna "
+    "idea para tu proyecto que se sale de lo que planeaste al principio?'.\n"
+    "(c) Descuenta lo ya respondido: si la entrada_original, el "
+    "perfil_sesion o una respuesta previa YA contestan razonablemente lo "
+    "que este nodo necesitaria saber, NO lo preguntes de nuevo — marca ese "
+    "nodo silencioso (pregunta_necesaria=false y sigue el camino si hay "
+    "margen, o detente igual pero sin pregunta) en vez de forzar una "
+    "pregunta_adaptada vacia de contenido nuevo. Ejemplo: si el usuario ya "
+    "conto que 'regale prototipos y a la gente le encanto', un nodo que "
+    "pregunta por entender las necesidades del cliente ya esta cubierto: "
+    "no lo preguntes, marcalo silencioso.\n"
+    "(d) Anti-redundancia: prohibido repetir la estructura o el eje central "
+    "de cualquiera de las ultimas_preguntas_hechas (p.ej. no encadenes dos "
+    "preguntas seguidas con la forma '¿que te preocupa mas: X o Y?', ni dos "
+    "que en el fondo pidan lo mismo con otras palabras). Si tu primer "
+    "instinto de pregunta_adaptada suena parecido a una de esas dos, cambia "
+    "el angulo; si de verdad no hay nada nuevo que preguntar ahi, marca el "
+    "nodo silencioso en su lugar en vez de repetir. Ejemplo de lo que NO "
+    "debes hacer: si ultimas_preguntas_hechas ya incluye '¿cual es tu mayor "
+    "preocupacion: saber si de verdad estas avanzando o solo convenciendote "
+    "a ti mismo?', y el plano de este nodo pregunta en el fondo lo mismo "
+    "('¿que te preocupa mas: que no sepas como medir si realmente estas "
+    "avanzando o aprendiendo algo valioso?'), NO la reformules con otro "
+    "disfraz — reconoce que es la misma pregunta ya hecha y marca este "
+    "nodo silencioso.\n"
+    "La pregunta_cache cruda NUNCA debe llegarle al usuario tal cual.\n\n"
+    "AFINIDAD DE PERFIL EN EL CAMINO: al elegir entre sucesores, penaliza "
+    "los candidatos cuyo contenido (titulo, condiciones_activacion o "
+    "pregunta_cache) presupone estructura organizacional — equipos, "
+    "unidades de negocio, comites, portafolios de proyectos — cuando el "
+    "perfil_sesion indica una persona sola o un equipo de 1-2, salvo que "
+    "ese sea el UNICO candidato razonable disponible entre los sucesores "
+    "(en ese caso eligelo igual, pero tu pregunta_adaptada debe traducirlo "
+    "a su realidad segun la regla (b)). Segundo ejemplo: entre dos "
+    "sucesores donde uno trata sobre 'como priorizar el portafolio de "
+    "iniciativas de tu organizacion' y otro sobre 'como decidir en que "
+    "concentrar tu tiempo esta semana', y el perfil describe a alguien que "
+    "trabaja solo, prefiere el segundo — trata el mismo tipo de decision "
+    "(priorizacion) pero en el registro correcto para esa persona.\n\n"
+    "TONO Y LONGITUD de pregunta_adaptada y repregunta: siempre en segunda "
+    "persona ('tu', 'tu idea', 'tu proyecto'), una sola pregunta por "
+    "respuesta (nunca dos preguntas separadas por 'y tambien'), sin "
+    "explicar teoria antes de preguntar, longitud de una oracion (dos como "
+    "maximo si hace falta dar un ejemplo breve entre parentesis). Evita "
+    "adjetivos vacios de consultoria ('sinergia', 'escalable' sin "
+    "contexto, 'disruptivo', 'stakeholders'); usa palabras que la persona "
+    "misma usaria para describir su dia a dia. Compara: mal ('¿has "
+    "considerado el impacto de tu propuesta de valor en los diferentes "
+    "segmentos de stakeholders de tu ecosistema de negocio?') vs. bien "
+    "('¿ya le mostraste esto a alguien que no seas tu, para ver si de "
+    "verdad le sirve?').\n\n"
+    "Reglas de camino:\n"
     "- Maximo 3 nodos en el camino por llamada. Si el contexto alcanzaria "
     "para seguir mas alla del tercero, detente igual en el tercero y marca "
     "pregunta_necesaria=false (se continuara en la siguiente llamada, sin "
@@ -192,7 +293,7 @@ SYSTEM_INTERPRETE_MULTI = (
     "- Si la respuesta del usuario a la ultima pregunta no discrimina entre "
     "los sucesores inmediatos y repreguntas_disponibles=true, usa "
     "accion='repreguntar' con UNA pregunta de seguimiento especifica y "
-    "breve.\n"
+    "breve que tampoco repita la estructura de las ultimas_preguntas_hechas.\n"
     "- Si repreguntas_disponibles=false, NUNCA repreguntes: elige el camino "
     "mas probable con lo que tienes y usa accion='avanzar'.\n"
     "- Si en cualquier punto el usuario expresa que quiere su plan final "
@@ -203,7 +304,13 @@ SYSTEM_INTERPRETE_MULTI = (
     "resuelta (p.ej. 'que nadie lo use', 'no se si pagarian'), da "
     "preferencia en el camino a los nodos cuyas condiciones_activacion "
     "atienden esa senal (validacion con clientes reales, pruebas baratas, "
-    "MVP) por encima de una continuacion puramente teorica.\n"
+    "MVP) por encima de una continuacion puramente teorica. Ejemplo: el "
+    "usuario responde 'me da miedo invertir en producir mas y que al final "
+    "nadie lo compre'; entre dos sucesores de nivel 1 disponibles, uno "
+    "sobre un marco teorico de segmentacion de mercado y otro sobre "
+    "conseguir una preventa real antes de fabricar, el camino debe "
+    "preferir el segundo aunque el primero tambien sea valido en teoria — "
+    "la senal de riesgo pesa mas que el orden natural del grafo.\n"
     "- Si la respuesta o el contexto revela informacion nueva y relevante "
     "sobre la idea o la situacion del usuario, resumela en 1 o 2 frases en "
     "perfil_update. Si no hay nada nuevo que agregar, perfil_update debe "
@@ -222,10 +329,70 @@ SYSTEM_INTERPRETE_MULTI = (
     "invalida por esa razon exacta: tu 'camino' en este intento DEBE usar "
     "EXCLUSIVAMENTE ids de la lista literal 'ids_validos' (no inventes ni "
     "combines ids de fuera de esa lista).\n\n"
+    "MAS SOBRE REGISTRO SEGUN PERFIL: la regla (b) no es 'nunca uses "
+    "palabras formales', es 'usa el vocabulario que corresponde a la "
+    "realidad del perfil'. Si el perfil describe una startup con equipo, "
+    "inversionistas o varias personas en roles distintos, SI es correcto "
+    "hablar de 'tu equipo', 'las areas de tu empresa' o 'tus socios' — la "
+    "prohibicion aplica solo cuando esas palabras no corresponden a la "
+    "realidad descrita en el perfil_sesion. Ejemplo contrastante: perfil "
+    "'somos tres personas, dos programadores y una diseñadora, ya "
+    "constituimos la empresa formalmente'; aqui una pregunta_adaptada como "
+    "'¿como estan dividiendo las responsabilidades entre tu equipo?' es "
+    "perfectamente correcta porque el equipo existe de verdad.\n\n"
+    "EJEMPLOS DE RESPUESTA COMPLETA (formato de referencia, no copiar el "
+    "contenido — cada sesion real tiene su propio nodo_actual y sucesores):\n"
+    "Ejemplo 1 (avanzar con tramo silencioso + pregunta_adaptada al final): "
+    "el usuario ya conto en su entrada_original que trabaja solo vendiendo "
+    "pan artesanal y que ya probo con vecinos que compraron y repitieron. "
+    "El nodo_actual es sobre validar interes inicial (ya cubierto por ese "
+    "relato) y su sucesor de nivel 1 es sobre entender que problema "
+    "resuelve el producto para el cliente (tambien cubierto: la gente "
+    "repite compra porque le gusta el sabor). El sucesor de nivel 2 de ese "
+    "nodo pregunta por el costo real de producción, algo que el usuario "
+    "NUNCA menciono. Respuesta: {\"accion\": \"avanzar\", \"camino\": "
+    "[\"id_del_sucesor_nivel1\", \"id_del_sucesor_nivel2\"], "
+    "\"pregunta_necesaria\": true, \"pregunta_adaptada\": \"¿ya sacaste la "
+    "cuenta de cuanto te cuesta en ingredientes y tiempo hacer cada "
+    "tanda?\", \"repregunta\": null, \"perfil_update\": null}.\n"
+    "Ejemplo 2 (repreguntar porque la respuesta fue ambigua): la "
+    "pregunta_adaptada anterior fue '¿ya le vendiste esto a alguien fuera "
+    "de tu circulo cercano?' y el usuario respondio 'creo que si le "
+    "interesaria a la gente'. Eso no confirma si YA vendio o solo lo cree, "
+    "y los dos sucesores de nivel 1 dependen exactamente de esa "
+    "distincion (uno es sobre como convertir interes en venta real, otro "
+    "es sobre como conseguir la primera venta desde cero). Respuesta: "
+    "{\"accion\": \"repreguntar\", \"camino\": [], \"pregunta_necesaria\": "
+    "true, \"pregunta_adaptada\": null, \"repregunta\": \"cuando dices que "
+    "le interesaria a la gente, ¿alguien ya te compro o pago algo, o es "
+    "todavia algo que crees que pasaria?\", \"perfil_update\": null}.\n"
+    "Ejemplo 3 (generar_plan porque el usuario lo pidio explicitamente, "
+    "aunque con otras palabras): el usuario responde 'creo que con esto ya "
+    "tengo para armar algo, dame lo que tengas'. Respuesta: {\"accion\": "
+    "\"generar_plan\", \"camino\": [], \"pregunta_necesaria\": false, "
+    "\"pregunta_adaptada\": null, \"repregunta\": null, \"perfil_update\": "
+    "null}.\n"
+    "Ejemplo 4 (salir sin plan): el usuario responde 'mejor lo dejamos "
+    "aqui, no quiero seguir con esto ahora'. Respuesta: {\"accion\": "
+    "\"salir\", \"camino\": [], \"pregunta_necesaria\": false, "
+    "\"pregunta_adaptada\": null, \"repregunta\": null, \"perfil_update\": "
+    "null}.\n"
+    "Ejemplo 5 (cadena de 3 nodos silenciosos, el maximo permitido, sin "
+    "preguntar nada en esta llamada): el perfil_sesion ya es muy rico "
+    "(varios turnos acumulados) y responde con claridad lo que preguntan "
+    "los tres primeros sucesores en cadena de este punto del grafo, pero "
+    "el contexto SI alcanzaria para seguir mas alla del tercero — aun asi "
+    "te detienes en el tercero por el limite de 3 saltos por llamada. "
+    "Respuesta: {\"accion\": \"avanzar\", \"camino\": [\"id_n1\", "
+    "\"id_n2_hijo_de_n1\", \"id_n3_hijo_de_n2\"], \"pregunta_necesaria\": "
+    "false, \"pregunta_adaptada\": null, \"repregunta\": null, "
+    "\"perfil_update\": null}. La siguiente llamada al interprete "
+    "continuara desde ese tercer nodo, sin que el usuario haya notado "
+    "ninguna pausa.\n\n"
     "Responde SOLO un JSON: {\"accion\": \"avanzar\"|\"repreguntar\"|"
     "\"generar_plan\"|\"salir\", \"camino\": [ids en orden], "
-    "\"pregunta_necesaria\": bool, \"repregunta\": str|null, "
-    "\"perfil_update\": str|null}."
+    "\"pregunta_necesaria\": bool, \"pregunta_adaptada\": str|null, "
+    "\"repregunta\": str|null, \"perfil_update\": str|null}."
 )
 
 SYSTEM_PROFUNDIZAR = (
@@ -260,7 +427,10 @@ SYSTEM_PLAN = (
     "encaja con claridad en ninguna etapa existente, omitelo — no fuerces su "
     "inclusion.\n"
     "3. Cada etapa termina con una linea 'Esta semana:' seguida de UNA accion "
-    "ejecutable en 7 dias, concreta y especifica al proyecto de la persona.\n"
+    "ejecutable en 7 dias, concreta y especifica al proyecto de la persona. "
+    "Ejemplo: no 'Esta semana: piensa en tus costos', sino 'Esta semana: "
+    "anota cuanto gastas en materiales para 3 piezas y divide entre 3 para "
+    "saber tu costo real por unidad'.\n"
     "4. Si al menos un concepto (de material_principal o material_de_apoyo) "
     "tiene es_viabilidad_economica=true, agrega al final una seccion "
     "'## ¿Puede sostenerse tu idea? Los numeros en simple' que sintetice "
@@ -271,20 +441,80 @@ SYSTEM_PLAN = (
     "cierra con la primera accion concreta del lunes, no con una pregunta.\n"
     "6. Titulo breve especifico al proyecto (no generico), un parrafo de "
     "contexto que conecte entrada_original y perfil_sesion con lo que va a "
-    "lograr.\n"
+    "lograr con este plan concreto.\n"
     "7. Habla siempre de la IDEA o el PROYECTO del usuario. Usa la palabra "
     "'negocio' unicamente si el analisis economico forma parte del "
     "material recibido, o si el propio usuario ya la uso en su entrada o "
-    "perfil_sesion.\n"
+    "perfil_sesion. Ejemplo correcto: 'define el precio de tu idea' en vez "
+    "de 'define el precio de tu negocio', salvo que el usuario mismo ya "
+    "haya escrito 'mi negocio' en su entrada_original.\n"
     "8. Si recibes es_seguimiento=true, abre el plan con UNA linea (justo "
     "despues del titulo) que reconozca el avance del proyecto desde la "
-    "ultima sesion, basada en estado_vivo_previo. No repitas acciones ya "
+    "ultima sesion, basada en estado_vivo_previo. Ejemplo: 'Desde la ultima "
+    "vez ya validaste el interes de dos instituciones y conoces tu costo "
+    "real por unidad; este plan parte de ahi.' No repitas acciones ya "
     "cubiertas antes: el material que recibes ya excluye lo cubierto en "
     "sesiones previas, asi que basta con no asumir que el usuario empieza "
     "de cero.\n\n"
     "Espanol comun, sin jerga sin explicar, sin autores, sin relleno "
     "motivacional. Todo debe salir del material recibido; no inventes "
-    "tecnicas nuevas."
+    "tecnicas, cifras ni fuentes nuevas que no esten en el material.\n\n"
+    "EJEMPLO COMPLETO DE TRANSFORMACION (formato de referencia; el "
+    "material real de cada sesion trae mas conceptos y mas detalle que "
+    "este ejemplo reducido):\n"
+    "Entrada recibida: entrada_original='hago velas de soya aromaticas, "
+    "las vendo a amigas pero quiero saber si esto puede ser algo mas "
+    "serio'. perfil_sesion='Trabaja sola, ya vendio algunas velas a "
+    "conocidas y quiere validar si hay mercado mas alla de su circulo "
+    "cercano. No ha calculado costos.' material_principal=[{concepto: "
+    "'Validacion con Clientes Reales', pasos: ['¿Le has preguntado a "
+    "alguien fuera de tu circulo si compraria esto?', '¿Sabes cuanto "
+    "pagarian?'], entregable: 'Lista de 5 personas fuera de tu circulo "
+    "que probaron el producto', es_viabilidad_economica: false}, "
+    "{concepto: 'Costeo Basico de Producto', pasos: ['¿Has sumado el "
+    "costo de cera, mecha, fragancia y envase por vela?'], entregable: "
+    "'Costo real por unidad', es_viabilidad_economica: true}]. "
+    "material_de_apoyo=[{concepto: 'Canales de Venta Directa', pasos: "
+    "['Considera vender en mercados locales o redes sociales antes de "
+    "una tienda propia'], entregable: '', es_viabilidad_economica: "
+    "false}].\n"
+    "Salida esperada (fragmento, mismo orden que material_principal, con "
+    "material_de_apoyo enriqueciendo la Etapa 1 porque 'canales de venta' "
+    "es relevante ahi):\n"
+    "'## Etapa 1: Confirma que hay demanda mas alla de tu circulo cercano"
+    "\\n\\nVender a amigas te dice que el producto gusta, pero no confirma "
+    "que alguien fuera de tu circulo lo compraria con dinero propio, sin "
+    "el gesto de apoyarte por cercania.\\n\\n**Pasos:**\\n1. Identifica 5 "
+    "personas que no te conozcan directamente (conocidos de conocidos, "
+    "grupos locales, redes sociales) y ofreceles una vela a precio real, "
+    "no de regalo.\\n2. Prueba venderlas primero en un mercado local o "
+    "grupo de redes sociales de tu zona antes de pensar en una tienda "
+    "propia — es mas rapido confirmar interes ahi que construyendo un "
+    "canal nuevo desde cero.\\n3. Anota cuantas de esas 5 personas "
+    "compran sin que se lo pidas dos veces.\\n\\n**Entregable:** Lista de "
+    "5 personas fuera de tu circulo que probaron el producto, con cuantas "
+    "pagaron.\\n\\n**Esta semana:** Publica tu vela con precio y foto en "
+    "un grupo local de redes sociales y anota cuantos mensajes de interes "
+    "real recibes en 7 dias.'\n"
+    "Nota como el paso 2 vino de material_de_apoyo (canales de venta) "
+    "insertado DENTRO de la Etapa 1 que ya definia material_principal, sin "
+    "crear una etapa nueva solo para canales. La Etapa 2 (Costeo Basico) "
+    "seguiria despues, y como tiene es_viabilidad_economica=true, el plan "
+    "cerraria con la seccion '## ¿Puede sostenerse tu idea?' sintetizando "
+    "el costeo en palabras simples, tal como pide la regla 4. Ejemplo de "
+    "esa seccion final para este mismo caso: 'Sumaste que cada vela te "
+    "cuesta $3 en materiales. Si la vendes a $8, tu margen por unidad es "
+    "$5. Si vendes 10 velas al mes, eso son $50 de margen — suficiente "
+    "para reinvertir en mas cera, pero todavia no un ingreso que reemplace "
+    "otro trabajo. El numero que necesitas descubrir ahora es cuantas "
+    "velas puedes vender realmente al mes fuera de tu circulo cercano.' "
+    "Observa que la cifra de $3 y $8 salen directamente del material "
+    "recibido (el costeo que el usuario ya calculo), nunca se inventan de "
+    "la nada. Si el material no trae cifras exactas (solo dice 'no ha "
+    "calculado costos'), la seccion final debe pedir ese calculo como "
+    "primer paso en vez de inventar numeros de ejemplo — la honestidad "
+    "sobre lo que aun no se sabe vale mas que un numero inventado que "
+    "parezca completo."
 )
 
 SYSTEM_ESTADO_VIVO = (
@@ -497,13 +727,16 @@ def sucesores_nivel(nid, graph, visitados, limite=MAX_OPCIONES):
     return [c for c in graph[nid].get("nodos_siguientes", []) if c in graph and c not in visitados][:limite]
 
 
-def resumen_nodo(nid, graph):
+def resumen_nodo(nid, graph, preguntas_cache=None):
     n = graph[nid]
-    return {
+    out = {
         "id": nid,
         "titulo": n["titulo_concepto"],
         "condiciones_activacion": n.get("condiciones_activacion", [])[:2],
     }
+    if preguntas_cache is not None:
+        out["pregunta_cache"] = obtener_pregunta(nid, n, preguntas_cache)
+    return out
 
 
 def _reparar_camino_cadena(actual_id, camino, graph, visitados):
@@ -602,13 +835,16 @@ def _elegir_por_afinidad(candidatos_ids, graph, respuesta_usuario, perfil_sesion
 
 def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_original,
                              pregunta_hecha, respuesta_usuario, repreguntas_disponibles,
-                             registrar_evento=None):
+                             preguntas_cache, ultimas_preguntas=None, registrar_evento=None):
     """Capa 2: decide un camino de 1-3 nodos (silenciosos + a lo sumo uno
-    conversado). Si el modelo devuelve algo invalido (id inexistente,
-    camino vacio), reintenta UNA vez con el error y la lista literal de ids
-    validos. Si vuelve a fallar, auto-selecciona en silencio el candidato de
-    mayor afinidad y continua sin que el usuario note nada (registra el
-    evento como 'fallback_auto' via `registrar_evento`, si se provee).
+    conversado) y, si se detiene a preguntar, la pregunta_adaptada para ese
+    nodo (reformulada al registro del perfil, descontando lo ya respondido,
+    sin repetir las ultimas_preguntas_hechas). Si el modelo devuelve algo
+    invalido (id inexistente, camino vacio, pregunta_adaptada faltante),
+    reintenta UNA vez con el error y la lista literal de ids validos. Si
+    vuelve a fallar, auto-selecciona en silencio el candidato de mayor
+    afinidad y continua sin que el usuario note nada (registra el evento
+    como 'fallback_auto' via `registrar_evento`, si se provee).
     Solo devuelve None ante un fallo de RED/presupuesto (ahi si corresponde
     el menu numerado de emergencia, ultimo recurso visible)."""
     nivel1_ids = sucesores_nivel(actual_id, graph, visitados)
@@ -616,18 +852,19 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
     visitados_o_nivel1 = visitados | set(nivel1_ids)
     for nid in nivel1_ids:
         nivel2_ids = sucesores_nivel(nid, graph, visitados_o_nivel1, limite=MAX_SUCESORES_NIVEL2)
-        entrada_nivel1 = resumen_nodo(nid, graph)
-        entrada_nivel1["sucesores"] = [resumen_nodo(n2, graph) for n2 in nivel2_ids]
+        entrada_nivel1 = resumen_nodo(nid, graph, preguntas_cache)
+        entrada_nivel1["sucesores"] = [resumen_nodo(n2, graph, preguntas_cache) for n2 in nivel2_ids]
         nivel1.append(entrada_nivel1)
 
     ctx = {
         "entrada_original": texto_original,
         "perfil_sesion": perfil_sesion,
-        "nodo_actual": resumen_nodo(actual_id, graph),
+        "nodo_actual": resumen_nodo(actual_id, graph, preguntas_cache),
         "sucesores_nivel1_y_nivel2": nivel1,
         "pregunta_hecha": pregunta_hecha,
         "respuesta_usuario": respuesta_usuario,
         "repreguntas_disponibles": repreguntas_disponibles,
+        "ultimas_preguntas_hechas": ultimas_preguntas or [],
     }
 
     def _validar_respuesta(raw):
@@ -641,6 +878,13 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
             camino = data.get("camino") or []
             data["camino"] = _validar_camino(actual_id, camino, graph, visitados, nivel1_pool=nivel1)
             data["pregunta_necesaria"] = bool(data.get("pregunta_necesaria", True))
+            if data["pregunta_necesaria"]:
+                adaptada = (data.get("pregunta_adaptada") or "").strip()
+                if not adaptada:
+                    raise ValueError("pregunta_necesaria=true pero falta pregunta_adaptada")
+                data["pregunta_adaptada"] = adaptada
+            else:
+                data["pregunta_adaptada"] = None
         return data
 
     try:
@@ -673,7 +917,12 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
                 "tipo": "fallback_auto", "nodo_actual": actual_id,
                 "candidato_elegido": candidato, "motivo": str(segundo_error),
             })
-        return {"accion": "avanzar", "camino": [candidato], "pregunta_necesaria": True, "perfil_update": None}
+        # Unica excepcion a "la pregunta cruda del cache nunca se muestra":
+        # este es el ultimo recurso SILENCIOSO (sin menu visible) tras dos
+        # fallos seguidos del modelo; no hay pregunta_adaptada que rescatar.
+        pregunta_fallback = obtener_pregunta(candidato, graph[candidato], preguntas_cache)
+        return {"accion": "avanzar", "camino": [candidato], "pregunta_necesaria": True,
+                "pregunta_adaptada": pregunta_fallback, "perfil_update": None}
 
 
 def _menu_emergencia(nivel1_ids, graph):
@@ -990,6 +1239,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
     salir sin plan o ensamblar uno. Devuelve un dict con el resultado."""
     repreguntas_usadas = 0
     fallback_events = list(fallback_events or [])
+    ultimas_preguntas = []
 
     def _registrar_evento(evento):
         fallback_events.append(evento)
@@ -1005,6 +1255,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
             actual_id, graph, visitados, perfil_sesion, texto_original,
             pregunta_hecha, respuesta_usuario,
             repreguntas_disponibles=(repreguntas_usadas < MAX_REPREGUNTAS_POR_PUNTO),
+            preguntas_cache=preguntas_cache, ultimas_preguntas=ultimas_preguntas,
             registrar_evento=_registrar_evento,
         )
         if resultado is None:
@@ -1021,9 +1272,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         if resultado["accion"] == "repreguntar":
             repreguntas_usadas += 1
             pregunta_hecha = resultado["repregunta"]
-            print("\n" + "-" * 60)
-            print(f"[{len(ruta)}/{MAX_DEPTH}] [conversado] {graph[actual_id]['titulo_concepto']}")
             respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
+            ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-2:]
             continue
 
         if resultado["accion"] == "generar_plan":
@@ -1058,8 +1308,9 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         if pregunta_necesaria:
             n = graph[actual_id]
             _imprimir_nodo(len(ruta), MAX_DEPTH, n, "conversado", con_resumen=True)
-            pregunta_hecha = obtener_pregunta(actual_id, n, preguntas_cache)
+            pregunta_hecha = resultado.get("pregunta_adaptada") or obtener_pregunta(actual_id, n, preguntas_cache)
             respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
+            ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-2:]
         else:
             pregunta_hecha, respuesta_usuario = None, None
 
