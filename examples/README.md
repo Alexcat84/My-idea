@@ -359,6 +359,80 @@ Con esta fase, el motor (`prototipo_motor.py`) queda **funcionalmente
 completo** — tag `motor-v2.0`. De aqui en adelante el archivo solo recibe
 fixes de bugs; toda funcionalidad nueva va a la Fase 3 (el porte web).
 
+## Motor v2.1 — Reporte de Sostenibilidad (calculadora determinística, dataset v1.2)
+
+Auditoria de motor-v2.0: APROBADA. Un solo ajuste menor detectado leyendo la
+transcripcion 2.9: la plantilla "antes de..." reaparecio dos veces con
+disfraz suave (sin "pero" ni "entiendo que" delante) — se cerro añadiendo
+esa forma a las plantillas retoricas nombradas en la memoria
+anti-repeticion.
+
+El complemento nuevo: un **Reporte de Sostenibilidad** anclado al proyecto
+(no a una sesion), pensado como producto de compra repetible porque es el
+unico entregable del motor que mejora solo con el tiempo — cada sesion
+(inicial o de seguimiento) deja numeros nuevos en `projects.numeros_
+proyecto`, y el reporte del mes 3 es mejor que el del mes 1 sin que el
+usuario haga nada extra.
+
+Piezas nuevas:
+- **Memoria numerica del proyecto**: el interprete de turno (en TODAS las
+  sesiones) extrae, solo cuando el usuario lo declara explicitamente (nunca
+  inferido), 8 campos fijos: costo_materiales_unidad, horas_por_unidad,
+  valor_hora, precio_tentativo, capacidad_semanal, costos_fijos_mensuales,
+  unidades_vendidas, precio_pagado_real. Persistidos en `projects.
+  numeros_proyecto` (columna nueva, `supabase/migrations/
+  my_idea_003_numeros.sql`).
+- **`engine/calculadora.py`**: modulo puro, CERO llamadas a LLM. Costo por
+  unidad, margen (valor y %), punto de equilibrio, techo de ingreso por
+  capacidad, tres escenarios (pesimista/base/sobredemanda), y ciclo de
+  conversion de efectivo (reporta insumos faltantes porque los 8 campos
+  nucleares aun no cubren datos de cobro/pago). Maneja rangos ("entre $6 y
+  $10") con el emparejamiento de intervalos correcto por operacion (la
+  resta usa min-precio menos max-costo para el peor caso, no un
+  min-con-min ingenuo). Cada funcion declara que insumos uso y cuales
+  faltan; nunca inventa un numero. Verificado con
+  `engine/test_calculadora.py` (aserciones exactas, incluyendo el
+  escenario mandatado completo).
+- **`--reporte PROJECT_ID`**: inventario de lo que ya se sabe, mini-entrevista
+  determinista (sin brujula, sin nodos, sin LLM) por hasta 6 campos
+  esenciales que falten, acepta "no sé" sin insistir, calculadora.py
+  calcula todo lo posible, y UNA llamada Sonnet narra los resultados YA
+  CALCULADOS (prohibido generar cifras nuevas). Estructura fija: Tus
+  números hoy / Qué significan / Escenarios / Los números que te faltan,
+  mas una nota final fija agregada por codigo (no por el modelo).
+  Presupuesto duro propio: $0.10, independiente del techo general de
+  sesion.
+- **Dataset v1.2** (`punto_equilibrio_unidades`, 1266 nodos): nodo nuevo de
+  margen de contribucion y punto de equilibrio, extraido de "Financial
+  Intelligence for Entrepreneurs" (la distincion costos fijos/variables y
+  apalancamiento operativo que el libro sí desarrolla). Simetrizado con
+  `margen_bruto` y `estructura_de_costos` como previos y
+  `decision_pivotar_o_proceder` como siguiente; `run_phase1.py` Gate 0
+  verde (1266/1266 nodos, 100% alcanzabilidad); cache de preguntas,
+  clasificacion de familias (viabilidad_economica) e indice semantico
+  regenerados para incluirlo.
+
+Verificado en vivo (`motor_v2_1_transcript.txt`, reporte completo en
+`motor_v2_1_reporte_macetas.md`) con el escenario mandatado exacto:
+resina/materiales $8/pieza, 4 horas/pieza, valor_hora $15, precio $85,
+capacidad 5/semana, sin costos fijos declarados. El interprete extrajo los
+5 primeros campos correctamente durante la conversacion normal (incluso
+distinguiendo "todavia no he calculado" de un valor real); `--reporte`
+detecto que solo faltaba costos_fijos_mensuales, pregunto exactamente eso,
+acepto "no sé", y calculadora.py devolvio, verificado con asserts exactos:
+
+- Costo unitario: **$68** (8 + 4×15)
+- Margen: **$17 (20%)**
+- Techo de capacidad: **20 unidades/mes → $1.700 de ingreso, $340 de margen**
+- Punto de equilibrio: **pendiente**, con `costos_fijos_mensuales` listado
+  explicitamente como el insumo que falta
+
+Y el criterio de auditoria mas estricto — "cada cifra del texto debe
+existir en la salida del módulo, ni un número huérfano" — se verifico
+programaticamente: cada numero en el reporte narrado (incluyendo notacion
+de miles en español, "$1.700") se rastreo contra la salida cruda de
+`calcular_reporte()`; cero huerfanos.
+
 ## Los dos cierres verificados en esta prueba
 
 **Cierre elegante**: forzando EOF a mitad de sesión (`leer_entrada()`

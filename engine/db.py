@@ -88,6 +88,7 @@ def _crear_proyecto_local(entrada_original):
         "sessions": [],
         "project_nodes": [],
         "plans": [],
+        "numeros_proyecto": {},
     }
     _guardar_local(project_id, data)
     return project_id

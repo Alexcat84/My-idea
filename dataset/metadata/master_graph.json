@@ -1,6 +1,6 @@
 {
   "version": "0.2.0",
-  "total_nodos": 1265,
+  "total_nodos": 1266,
   "nodos": {
     "ab_testing_optimizacion": {
       "node_id": "ab_testing_optimizacion",
@@ -8230,7 +8230,8 @@
         "demand_curve_pricing",
         "metrics_that_matter_framework",
         "verificar_modelo_ingresos",
-        "worst_case_best_case_analysis"
+        "worst_case_best_case_analysis",
+        "punto_equilibrio_unidades"
       ],
       "nodos_siguientes": [
         "customer_creation",
@@ -13438,7 +13439,8 @@
         "lienzo_modelo_negocio",
         "lectura_balance_general",
         "estimate_at_completion_eac",
-        "fundamentos_inteligencia_financiera"
+        "fundamentos_inteligencia_financiera",
+        "punto_equilibrio_unidades"
       ],
       "condiciones_activacion": [
         "Cuando se requiere calcular la viabilidad financiera del modelo de negocio"
@@ -20242,7 +20244,8 @@
         "distincion_cogs_gastos_operativos"
       ],
       "nodos_siguientes": [
-        "margen_operativo"
+        "margen_operativo",
+        "punto_equilibrio_unidades"
       ],
       "condiciones_activacion": [
         "Cuando el usuario necesita fijar precios de un producto nuevo",
@@ -26767,6 +26770,32 @@
       "condiciones_activacion": [
         "Si el equipo está construyendo features basándose en suposiciones no verificadas sobre lo que el cliente quiere",
         "Si existe inventario de trabajo en progreso (diseños, planes) que nadie ha validado"
+      ]
+    },
+    "punto_equilibrio_unidades": {
+      "node_id": "punto_equilibrio_unidades",
+      "fase_proyecto": "planificacion",
+      "titulo_concepto": "Punto de Equilibrio y Margen de Contribución (Break-Even Point & Contribution Margin)",
+      "fuente": "Financial Intelligence for Entrepreneurs",
+      "resumen_teorico": "El margen de contribución es lo que queda de cada venta después de cubrir los costos variables (los que cambian con el volumen producido, como materiales y mano de obra directa, incluidos en COGS): precio de venta menos costo variable por unidad. El punto de equilibrio es el número de unidades que hay que vender al mes para que ese margen acumulado cubra exactamente los costos fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, incluidos en gastos operativos): costos fijos mensuales divididos entre el margen de contribución por unidad. Por debajo de ese número se pierde dinero; por encima, cada unidad adicional genera ganancia real. Esto se relaciona con lo que el libro llama 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+      "pasos_accionables": [
+        "Clasificar cada costo del proyecto como variable (cambia con las unidades producidas: materiales, tiempo de producción) o fijo (no cambia: renta, herramientas, salarios administrativos)",
+        "Calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad",
+        "Dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
+        "Comparar ese número contra la capacidad real de producción: ¿se puede vender esa cantidad con los recursos actuales?",
+        "Recalcular el punto de equilibrio cada vez que cambien los costos fijos o el precio"
+      ],
+      "entregable_esperado": "Punto de equilibrio calculado en unidades por mes, con los costos fijos y el margen de contribución que lo sustentan",
+      "nodos_previos": [
+        "margen_bruto",
+        "estructura_de_costos"
+      ],
+      "nodos_siguientes": [
+        "decision_pivotar_o_proceder"
+      ],
+      "condiciones_activacion": [
+        "Cuando el usuario necesita saber cuántas unidades debe vender al mes para no perder dinero",
+        "Si el usuario tiene costos fijos y variables identificados pero no sabe combinarlos en una meta de ventas concreta"
       ]
     },
     "push_vs_pull_marketing": {
@@ -35452,6 +35481,7 @@
       "protective_provisions",
       "prototipado_organizacional_estrategico",
       "pruning_portafolio",
+      "punto_equilibrio_unidades",
       "quemar_las_naves_burning_the_boats",
       "ranking_proyectos_por_npv",
       "ratio_deuda_capital",
@@ -35836,7 +35866,7 @@
   },
   "stats": {
     "componentes_conexos": 1,
-    "tamano_componente_principal": 1265,
+    "tamano_componente_principal": 1266,
     "cobertura_componente_principal_pct": 100.0,
     "nodos_sin_enlaces_entrantes": 0,
     "enlaces_rotos_en_grafo": 0

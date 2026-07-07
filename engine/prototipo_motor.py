@@ -179,6 +179,7 @@ load_dotenv(BASE / ".env")
 
 import db
 import plan_readiness
+import calculadora
 
 # En consolas de Windows, stdout suele quedar en cp1252 (o el codepage local),
 # que no puede representar caracteres como flechas (->) o comillas tipograficas
@@ -210,6 +211,17 @@ MAX_SALTOS_POSIBLES_OFRECIDOS = 8
 # flojo pese al numero relativamente alto) debe quedar excluido.
 MIN_SCORE_SALTO = 0.42
 MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO = 3
+
+# Motor v2.1: memoria numerica del proyecto (Reporte de Sostenibilidad).
+# Lista fija de campos que el interprete de turno puede extraer de lo que
+# el USUARIO declara (nunca inferidos). engine/calculadora.py reusa estos
+# mismos nombres de campo como strings literales (modulo puro, sin
+# depender de prototipo_motor).
+CAMPOS_NUMERICOS_PROYECTO = {
+    "costo_materiales_unidad", "horas_por_unidad", "valor_hora", "precio_tentativo",
+    "capacidad_semanal", "costos_fijos_mensuales", "unidades_vendidas", "precio_pagado_real",
+}
+PRESUPUESTO_REPORTE_USD = 0.10
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 MODEL = "claude-sonnet-4-6"
@@ -445,16 +457,22 @@ SYSTEM_INTERPRETE_MULTI = (
     "ultimas_preguntas_hechas — esto incluye repreguntas, no solo preguntas "
     "adaptadas. En particular, quedan PROHIBIDAS dos apariciones de la "
     "MISMA plantilla retorica dentro de esa ventana de 3, aunque el "
-    "contenido de fondo varie; dos plantillas especialmente vigiladas por "
-    "reincidentes: '¿que te preocupa/duda mas: A, o B?' y 'Entiendo que X, "
-    "pero antes de Y, ¿Z?'. Si tu primer instinto de pregunta_adaptada o "
-    "repregunta calza en una de esas dos plantillas Y alguna de las 3 "
-    "ultimas ya la uso, cambia de plantilla por completo (no solo de "
-    "palabras) — por ejemplo, en vez de '¿que te preocupa mas...?' prueba "
-    "una pregunta directa de hechos ('¿ya le mostraste esto a alguien "
-    "fuera de tu circulo?'), y en vez de 'Entiendo que X, pero antes de "
-    "Y...' prueba reconocer y seguir sin el 'pero' (ver la regla de "
-    "PRIORIDAD DECLARADA arriba). Si de verdad no hay nada nuevo que "
+    "contenido de fondo varie; tres plantillas especialmente vigiladas por "
+    "reincidentes: '¿que te preocupa/duda mas: A, o B?', 'Entiendo que X, "
+    "pero antes de Y, ¿Z?', y CUALQUIER apertura con 'antes de...' aunque "
+    "venga sin 'pero' ni 'entiendo que' (motor v2.1: reaparecio dos veces "
+    "con disfraz suave en la corrida de Fase 2.9 — 'antes de resolver la "
+    "resina y el qr, necesito entender algo', 'antes de meterte de lleno "
+    "con nfts reales...' — misma muletilla retorica, solo mas discreta). "
+    "Si tu primer instinto de pregunta_adaptada o repregunta calza en "
+    "alguna de esas tres plantillas Y alguna de las 3 ultimas ya la uso, "
+    "cambia de plantilla por completo (no solo de palabras) — por ejemplo, "
+    "en vez de '¿que te preocupa mas...?' prueba una pregunta directa de "
+    "hechos ('¿ya le mostraste esto a alguien fuera de tu circulo?'), y en "
+    "vez de 'Entiendo que X, pero antes de Y...' o cualquier 'antes de...' "
+    "prueba reconocer y seguir sin condicionarlo a una secuencia previa "
+    "(ver la regla de PRIORIDAD DECLARADA arriba). Si de verdad no hay "
+    "nada nuevo que "
     "preguntar, marca el nodo silencioso en vez de repetir. Ejemplo de lo "
     "que NO debes hacer: si ultimas_preguntas_hechas ya incluye '¿cual es "
     "tu mayor preocupacion: saber si de verdad estas avanzando o solo "
@@ -634,12 +652,32 @@ SYSTEM_INTERPRETE_MULTI = (
     "empleados.\", \"prioridad_declarada\": null, \"salto_semantico\": "
     "\"decision_fundador_solo_vs_equipo\"}. Nota 'camino': [] porque el "
     "destino viene de salto_semantico, no de una cadena local.\n\n"
+    "MEMORIA NUMERICA DEL PROYECTO (motor v2.1): en cada turno, si "
+    "respuesta_usuario (o entrada_original en el primer turno) revela un "
+    "numero concreto que el USUARIO declaro sobre su proyecto (nunca uno "
+    "que tu infieras, redondees o supongas), devuelve 'numeros_detectados' "
+    "con los campos de esta lista fija que apliquen: "
+    "costo_materiales_unidad, horas_por_unidad, valor_hora, "
+    "precio_tentativo, capacidad_semanal, costos_fijos_mensuales, "
+    "unidades_vendidas, precio_pagado_real. Cada campo detectado es "
+    "{\"valor\": numero, o {\"min\": numero, \"max\": numero} si el "
+    "usuario dio un rango, \"unidad\": str|null (ej. 'USD', 'horas', "
+    "'piezas por semana'), \"texto_original\": la frase exacta donde lo "
+    "dijo}. Si no se revelo ningun numero nuevo este turno, "
+    "'numeros_detectados' debe ser null. Ejemplo: el usuario responde 'me "
+    "cuesta como $8 en materiales y me toma unas 4 horas por pieza' -> "
+    "\"numeros_detectados\": {\"costo_materiales_unidad\": {\"valor\": 8, "
+    "\"unidad\": \"USD\", \"texto_original\": \"me cuesta como $8 en "
+    "materiales\"}, \"horas_por_unidad\": {\"valor\": 4, \"unidad\": "
+    "\"horas\", \"texto_original\": \"me toma unas 4 horas por pieza\"}}.\n\n"
     "Responde SOLO un JSON: {\"accion\": \"avanzar\"|\"repreguntar\"|"
     "\"generar_plan\"|\"salir\", \"camino\": [ids en orden], "
     "\"pregunta_necesaria\": bool, \"pregunta_adaptada\": str|null, "
     "\"repregunta\": str|null, \"perfil_update\": str|null, "
     "\"prioridad_declarada\": {\"texto\": str, \"conteo\": int}|null, "
-    "\"salto_semantico\": str|null}."
+    "\"salto_semantico\": str|null, \"numeros_detectados\": "
+    "{campo: {\"valor\": num|{\"min\":num,\"max\":num}, \"unidad\": "
+    "str|null, \"texto_original\": str}, ...}|null}."
 )
 
 SYSTEM_PROFUNDIZAR = (
@@ -859,6 +897,46 @@ SYSTEM_ORGANIZADOR = (
     "recomendar acciones o usar verbos en modo imperativo en ningun campo. "
     "'areas_que_cubriria_tu_plan_completo' son solo NOMBRES de temas (3 a "
     "6), nunca acciones, nunca el 'como' hacerlo."
+)
+
+SYSTEM_REPORTE = (
+    "Redactas la narracion de un Reporte de Sostenibilidad para un proyecto "
+    "de emprendimiento (motor v2.1). Recibes 'resultados': salidas YA "
+    "CALCULADAS por un modulo determinista (costo_unitario, margen, "
+    "punto_equilibrio, capacidad, escenarios, ciclo_conversion_efectivo), "
+    "cada una con su valor (o null si falta un insumo) y que campos se "
+    "usaron o faltan; y 'numeros_proyecto_declarados': los numeros crudos "
+    "que el usuario dio, por si necesitas citarlos literalmente.\n\n"
+    "REGLA DURA, LA MAS IMPORTANTE: PROHIBIDO generar, estimar, redondear "
+    "distinto o inventar CUALQUIER cifra que no venga literalmente de "
+    "'resultados' o 'numeros_proyecto_declarados'. Si necesitas un numero "
+    "para una frase, usa EXACTAMENTE el que recibiste, sin recalcularlo tu "
+    "mismo. Si un resultado tiene valor null (le falta un insumo), NO "
+    "inventes un sustituto ni una cifra de ejemplo: eso se explica en la "
+    "seccion de numeros faltantes, no en 'Tus números hoy'.\n\n"
+    "Estructura obligatoria, con estos titulos EXACTOS y en este orden:\n"
+    "## Tus números hoy\n"
+    "## Qué significan\n"
+    "## Escenarios\n"
+    "## Los números que te faltan (y cómo conseguirlos)\n\n"
+    "En '## Tus números hoy', reporta cada resultado disponible (valor no "
+    "null) con su formula en palabras simples junto al numero. Ejemplo: "
+    "'Tu margen: $85 − $68 = $17 por pieza; de cada venta te quedan $17.' "
+    "En '## Qué significan', explica en 2-4 frases, en español simple sin "
+    "jerga, que le dicen esos numeros sobre su proyecto (¿es sano el "
+    "margen?, ¿el techo de ingreso alcanza lo que busca?). En "
+    "'## Escenarios', si 'escenarios' tiene datos, describe pesimista, "
+    "base y sobredemanda con sus cifras EXACTAS del modulo — para "
+    "sobredemanda, explica que 'unidades_no_atendidas' es venta que se "
+    "pierde porque la capacidad de produccion no alcanza, no un fracaso "
+    "de ventas. En '## Los números que te faltan', para cada nombre de "
+    "campo que aparezca en algun 'insumos_faltantes', tradúcelo a una "
+    "frase en lenguaje natural (nunca el nombre tecnico del campo) "
+    "explicando que dato es y para que serviria tenerlo.\n\n"
+    "No agregues ninguna seccion, nota, disclaimer, ni pregunta al final: "
+    "eso lo agrega el sistema despues de tu texto. No uses la palabra "
+    "'negocio' salvo que el propio usuario ya la haya usado; habla de "
+    "'tu idea' o 'tu proyecto'."
 )
 
 
@@ -1402,6 +1480,21 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
             data["prioridad_declarada"] = {"texto": str(pd["texto"]), "conteo": int(pd["conteo"])}
         else:
             data["prioridad_declarada"] = None
+        nd = data.get("numeros_detectados")
+        limpio = {}
+        if isinstance(nd, dict):
+            for campo, entry in nd.items():
+                if campo not in CAMPOS_NUMERICOS_PROYECTO or not isinstance(entry, dict):
+                    continue
+                valor = entry.get("valor")
+                if valor is None:
+                    continue
+                limpio[campo] = {
+                    "valor": valor,
+                    "unidad": entry.get("unidad"),
+                    "texto_original": entry.get("texto_original"),
+                }
+        data["numeros_detectados"] = limpio or None
         return data
 
     try:
@@ -1919,6 +2012,8 @@ def parse_args():
                     help="Sesion de seguimiento de un proyecto existente")
     ap.add_argument("--offline", action="store_true",
                     help="Fuerza persistencia JSON local en engine/projects_local/ en vez de Supabase")
+    ap.add_argument("--reporte", metavar="PROJECT_ID", default=None,
+                    help="Reporte de Sostenibilidad del proyecto (motor v2.1): costos, margen, punto de equilibrio")
     return ap.parse_args()
 
 
@@ -1955,6 +2050,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
     fallback_events = list(fallback_events or [])
     ultimas_preguntas = []
     historial_mensajes = []
+    numeros_detectados_sesion = {}
 
     def _registrar_evento(evento):
         fallback_events.append(evento)
@@ -1981,11 +2077,22 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
             perfil_sesion = (perfil_sesion + "\n" + resultado["perfil_update"]).strip() if perfil_sesion else resultado["perfil_update"]
         if "prioridad_declarada" in resultado:
             prioridad_declarada = resultado["prioridad_declarada"] or prioridad_declarada
+        if resultado.get("numeros_detectados"):
+            # Motor v2.1: acumula lo detectado ESTE turno; session_id/updated_at
+            # se agregan aqui (metadata de codigo, no algo que el modelo deba
+            # inventar) y se mergean al proyecto en _persistir_resultado.
+            for campo, entry in resultado["numeros_detectados"].items():
+                numeros_detectados_sesion[campo] = {
+                    "valor": entry["valor"], "unidad": entry.get("unidad"),
+                    "texto_original": entry.get("texto_original"),
+                    "session_id": db_session_id, "updated_at": datetime.now().isoformat(),
+                }
 
         if resultado["accion"] == "salir":
             print("\nHasta pronto.")
             return {"tipo": "salio", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion,
-                    "fallback_events": fallback_events, "prioridad_declarada": prioridad_declarada}
+                    "fallback_events": fallback_events, "prioridad_declarada": prioridad_declarada,
+                    "numeros_detectados_sesion": numeros_detectados_sesion}
 
         if resultado["accion"] == "repreguntar":
             repreguntas_usadas += 1
@@ -2087,13 +2194,26 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         "evaluacion_cobertura": resultado_plan["evaluacion_cobertura"],
         "plan_md": plan_md, "plan_fname": fname, "fallback_events": fallback_events,
         "prioridad_declarada": prioridad_declarada,
+        "numeros_detectados_sesion": numeros_detectados_sesion,
     }
+
+
+def _merge_numeros_proyecto(project_id, numeros_detectados_sesion):
+    """Motor v2.1: mergea lo detectado ESTA sesion dentro de
+    projects.numeros_proyecto (solo pisa los campos que esta sesion SI
+    detecto; el resto del historial numerico del proyecto queda intacto)."""
+    if not numeros_detectados_sesion:
+        return
+    proyecto = db.obtener_proyecto(project_id)
+    numeros = dict((proyecto or {}).get("numeros_proyecto") or {})
+    numeros.update(numeros_detectados_sesion)
+    db.actualizar_proyecto(project_id, numeros_proyecto=numeros)
 
 
 def _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=False):
     """Escribe en Supabase (o JSON local) el resultado de una sesion: nodos
     cubiertos, cierre de sesion (con desglose de costo por componente,
-    Fase 2.7), plan, y el estado_vivo comprimido."""
+    Fase 2.7), plan, estado_vivo comprimido, y numeros_proyecto (Motor v2.1)."""
     if project_id is None or db_session_id is None:
         return  # --continuar de un scratch file anterior sin project_id: nada que persistir
 
@@ -2103,6 +2223,7 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
     if resultado["tipo"] == "salio":
         db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
                          costo_por_componente_usd())
+        _merge_numeros_proyecto(project_id, resultado.get("numeros_detectados_sesion"))
         return
 
     cosecha_ids = resultado["cosecha_ids"]
@@ -2110,6 +2231,8 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
 
     nodos_con_tipo = list(zip(ruta, modos)) + [(nid, "cosechado") for nid in cosecha_ids]
     db.registrar_nodos(project_id, db_session_id, nodos_con_tipo)
+
+    _merge_numeros_proyecto(project_id, resultado.get("numeros_detectados_sesion"))
 
     # estado_vivo se comprime ANTES de cerrar la sesion para que su costo
     # quede incluido en el desglose por componente que se persiste al cerrar
@@ -2269,6 +2392,137 @@ def modo_gratis(graph, entry_seeds):
     reportar_costo()
 
 
+# ---------------------------------------------------------------------------
+# Motor v2.1: Reporte de Sostenibilidad (--reporte PROJECT_ID)
+# ---------------------------------------------------------------------------
+
+PREGUNTAS_NUMERICAS = {
+    "costo_materiales_unidad": "¿Cuánto gastas en materiales por pieza, más o menos? Un número aproximado sirve.",
+    "horas_por_unidad": "¿Cuántas horas te toma hacer una pieza, de principio a fin?",
+    "valor_hora": "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
+    "precio_tentativo": "¿A qué precio venderías (o vendes) cada pieza?",
+    "capacidad_semanal": "¿Cuántas piezas puedes producir en una semana normal?",
+    "costos_fijos_mensuales": "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
+}
+MAX_PREGUNTAS_REPORTE = len(PREGUNTAS_NUMERICAS)  # 6, ya coincide 1 a 1 con los campos esenciales
+REPORTE_DISCLAIMER = (
+    "\n\n---\n_Estimaciones basadas en las cifras que tú diste; no sustituyen "
+    "contabilidad formal ni asesoría fiscal, que varían según tu país._"
+)
+
+
+def _extraer_numero(texto):
+    """Extractor deterministico (SIN LLM) de un numero en una respuesta en
+    lenguaje natural: '$8', '8 dolares', '8.5', 'unos 8'. Devuelve None si
+    el usuario no dio un numero reconocible o dijo que no sabe. Es
+    deliberadamente simple (mini-entrevista, no un parser de NLU): trata
+    las comas como separador de miles, no decimal."""
+    t = texto.strip().lower()
+    if not t or any(p in t for p in ("no se", "no sé", "no lo se", "no lo sé", "ni idea", "no tengo idea", "no idea")):
+        return None
+    m = re.search(r"\$?\s*(\d[\d,]*\.?\d*)", t)
+    if not m:
+        return None
+    try:
+        return float(m.group(1).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def _reporte_offline(resultados):
+    """Respaldo sin IA (sin API_KEY, o si el presupuesto del reporte ya se
+    agoto): los numeros crudos del modulo, sin narracion."""
+    partes = ["## Tus números hoy", ""]
+    costo, margen = resultados["costo_unitario"], resultados["margen"]
+    equilibrio, capacidad = resultados["punto_equilibrio"], resultados["capacidad"]
+    if costo["valor"] is not None:
+        partes.append(f"- Costo por unidad: {costo['valor']}")
+    if margen["valor"] is not None:
+        partes.append(f"- Margen por unidad: {margen['valor']} ({margen['porcentaje']}%)")
+    if equilibrio["valor"] is not None:
+        partes.append(f"- Punto de equilibrio: {equilibrio['valor']} unidades/mes")
+    if capacidad["ingreso"] is not None:
+        partes.append(f"- Techo de ingreso mensual: {capacidad['ingreso']} ({capacidad['unidades_mes']} unidades/mes)")
+    faltantes = sorted({f for r in resultados.values() for f in r.get("insumos_faltantes", [])})
+    if faltantes:
+        partes += ["", "## Los números que te faltan", ""]
+        partes += [f"- {f}" for f in faltantes]
+    return "\n".join(partes)
+
+
+def _narrar_reporte(resultados, numeros):
+    if not API_KEY:
+        return _reporte_offline(resultados) + REPORTE_DISCLAIMER
+    payload = {
+        "resultados": resultados,
+        "numeros_proyecto_declarados": {c: v.get("valor") for c, v in numeros.items()},
+    }
+    try:
+        cuerpo = llamar_claude(SYSTEM_REPORTE, json.dumps(payload, ensure_ascii=False), MODEL,
+                               max_tokens=1800, componente="reporte")
+    except Exception as e:
+        print(f"  (fallo la narracion con IA, muestro los numeros crudos: {e})")
+        cuerpo = _reporte_offline(resultados)
+    return cuerpo.strip() + REPORTE_DISCLAIMER
+
+
+def modo_reporte(project_id, graph, families):
+    """Motor v2.1: --reporte PROJECT_ID. (a) Inventario de numeros_proyecto,
+    (b) mini-entrevista SOLO por los campos esenciales que faltan (max 6,
+    deterministica, sin brujula ni nodos), (c) calculadora.py calcula todo
+    lo posible, (d) UNA llamada Sonnet narra los resultados ya calculados
+    (nunca genera cifras nuevas), (e) se guarda como plan etiquetado
+    'reporte_numeros'. Presupuesto duro propio: PRESUPUESTO_REPORTE_USD."""
+    global PRESUPUESTO_SESION_USD
+    proyecto = db.obtener_proyecto(project_id)
+    if proyecto is None:
+        print(f"ERROR: no existe el proyecto {project_id}")
+        sys.exit(1)
+
+    # Techo de costo propio del reporte, independiente del presupuesto
+    # general de sesion: --reporte es una corrida corta y aislada, asi que
+    # basta con apretar el mismo mecanismo de llamar_claude a un tope menor.
+    PRESUPUESTO_SESION_USD = min(PRESUPUESTO_SESION_USD, PRESUPUESTO_REPORTE_USD)
+
+    numeros = dict(proyecto.get("numeros_proyecto") or {})
+    print(f"\nGenerando tu Reporte de Sostenibilidad (proyecto: {project_id})...")
+
+    try:
+        faltantes_esenciales = [c for c in PREGUNTAS_NUMERICAS if c not in numeros]
+        if faltantes_esenciales:
+            print("\nMe faltan algunos numeros para completar tu reporte. "
+                  "Si no sabes alguno, escribe 'no se' y seguimos con el resto.")
+            for campo in faltantes_esenciales[:MAX_PREGUNTAS_REPORTE]:
+                respuesta = leer_entrada("\n" + PREGUNTAS_NUMERICAS[campo] + "\n> ")
+                valor = _extraer_numero(respuesta)
+                if valor is None:
+                    continue
+                numeros[campo] = {
+                    "valor": valor, "unidad": None, "texto_original": respuesta,
+                    "session_id": None, "updated_at": datetime.now().isoformat(),
+                }
+    except SesionInterrumpida:
+        db.actualizar_proyecto(project_id, numeros_proyecto=numeros)
+        print("\n\nSesion interrumpida. Lo que ya contestaste quedo guardado.")
+        print(f"Para generar el reporte completo: python engine/prototipo_motor.py --reporte {project_id}")
+        return
+
+    db.actualizar_proyecto(project_id, numeros_proyecto=numeros)
+    resultados = calculadora.calcular_reporte(numeros)
+    contenido = _narrar_reporte(resultados, numeros)
+
+    fname = BASE / f"reporte_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
+    fname.write_text(contenido, encoding="utf-8")
+    print("\n" + contenido)
+    print(f"\nReporte guardado en: {fname}")
+
+    db_session_id = db.crear_sesion(project_id, "reporte", "generacion de reporte de sostenibilidad")
+    db.guardar_plan(project_id, db_session_id, "reporte_numeros", contenido, 0, [])
+    db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
+                     costo_por_componente_usd())
+    reportar_costo()
+
+
 def main():
     args = parse_args()
     if args.offline:
@@ -2288,6 +2542,9 @@ def main():
 
     if args.gratis:
         modo_gratis(graph, entry_seeds)
+        return
+    if args.reporte:
+        modo_reporte(args.reporte, graph, families)
         return
     if args.seguir:
         modo_seguir(args.seguir, graph, families, entry_seeds, preguntas_cache)
