@@ -18,6 +18,7 @@ Especificaciones de software, diagramas de base de datos, stack tecnológico y d
 Procedimientos operativos estándar (SOPs), manuales de uso interno de scripts (como la curación del grafo) y métricas de calidad.
 - **[PRO-01-Reglas_de_Proceso](../AGENTS.md):** Reglas de proceso ganadas por incidentes reales (ej. calcular a mano antes de escribir un assert numérico). Vive en la raíz del repo (`AGENTS.md`) por convención de herramientas de agentes, no en esta carpeta.
 - **[PRO-02-Manual_de_Comandos_CLI](04_PROCESSES/PRO-02-Manual_de_Comandos_CLI.md):** Cómo probar cada faceta del motor por tu cuenta — sesión nueva, `--continuar`, `--seguir`, `--gratis`, `--reporte`, `--offline`, combinaciones, y mantenimiento del dataset.
+- **[PRO-03-Como_Documentar_de_Aqui_en_Adelante](04_PROCESSES/PRO-03-Como_Documentar_de_Aqui_en_Adelante.md):** Instrucciones fijas de cuándo y cómo crear cada tipo de documento (`STR`/`PLN`/`AUD`/`PRO`/`TST`), flujo estándar al cerrar cualquier trabajo, y checklist rápido. Leer esto antes de agregar cualquier documento nuevo al QMS.
 
 ## Categoría 05: Pruebas y Verificación (TST)
 Registro de la suite de pruebas del motor: automatizadas (regresión, costo $0) y en vivo (API real, ya ejecutadas, evidencia en `examples/`).
@@ -38,5 +39,6 @@ Registro de auditorías de calidad del dataset y del motor, propias y externas. 
 - Cada prueba mencionada en un AUD-XX tiene su entrada en [TST-01](05_TESTING/TST-01-Registro_de_Pruebas.md), con el archivo ejecutable real (`engine/test_*.py` o `engine/live_tests/test_*.py`).
 - Los comandos para reproducir cualquier faceta del sistema por tu cuenta están en [PRO-02](04_PROCESSES/PRO-02-Manual_de_Comandos_CLI.md).
 - Las migraciones de base de datos (`supabase/migrations/my_idea_00X_*.sql`) se referencian desde el AUD-XX que las originó, no tienen categoría propia todavía (candidatas a `TEC` cuando esa carpeta deje de estar vacía).
+- Los planes y reportes que el motor genera para usuarios reales (no para el equipo) viven en `engine/salidas/` (gitignored) — nunca en la raíz del repo.
 
-*Nota: Este índice se actualizará conforme se agreguen nuevos documentos formales a las categorías respectivas.*
+*Nota: Este índice se actualizará conforme se agreguen nuevos documentos formales a las categorías respectivas. Antes de agregar uno, leer [PRO-03](04_PROCESSES/PRO-03-Como_Documentar_de_Aqui_en_Adelante.md).*

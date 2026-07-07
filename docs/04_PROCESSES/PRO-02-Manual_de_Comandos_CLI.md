@@ -75,7 +75,7 @@ declararon en conversaciones anteriores (`numeros_proyecto`), pregunta por
 los que falten (hasta 6, determinístico, aceptás "no sé" sin que insista),
 calcula todo con `calculadora.py` (cero LLM), y narra el resultado con una
 sola llamada a Sonnet. Presupuesto propio: $0.10 (independiente del
-presupuesto general de sesión). Guarda el `.md` en la raíz del repo
+presupuesto general de sesión). Guarda el `.md` en `engine/salidas/`
 (`reporte_*.md`, gitignored) y, si hay Supabase, una fila en `plans`
 etiquetada `reporte_numeros`.
 

@@ -217,6 +217,7 @@ QUIZ_PATH = BASE / "engine" / "cuestionario_raiz.json"
 ENTRY_SEEDS_PATH = BASE / "dataset" / "metadata" / "entry_seeds.json"
 PREGUNTAS_CACHE_PATH = BASE / "engine" / "preguntas_cache.json"
 SESSIONS_DIR = BASE / "engine" / "sessions"
+SALIDAS_DIR = BASE / "engine" / "salidas"
 SEMANTIC_INDEX_PATH = BASE / "engine" / "semantic_index.npz"
 SEMANTIC_MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 
@@ -2246,7 +2247,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
                                      prioridad_declarada=prioridad_declarada)
     plan_md = resultado_plan["markdown"]
     print(plan_md)
-    fname = BASE / f"plan_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
+    SALIDAS_DIR.mkdir(parents=True, exist_ok=True)
+    fname = SALIDAS_DIR / f"plan_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
     fname.write_text(plan_md, encoding="utf-8")
     print(f"\nPlan guardado en: {fname}")
     _ETIQUETA_MODO = {"conversado": "c", "silencioso": "s", "salto": "SALTO"}
@@ -2452,7 +2454,8 @@ def modo_gratis(graph, entry_seeds):
         return
 
     print("\n" + markdown)
-    fname = BASE / f"plan_gratis_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
+    SALIDAS_DIR.mkdir(parents=True, exist_ok=True)
+    fname = SALIDAS_DIR / f"plan_gratis_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
     fname.write_text(markdown, encoding="utf-8")
     print(f"\nGuardado en: {fname}")
 
@@ -2586,7 +2589,8 @@ def modo_reporte(project_id, graph, families):
     resultados = calculadora.calcular_reporte(numeros)
     contenido = _narrar_reporte(resultados, numeros)
 
-    fname = BASE / f"reporte_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
+    SALIDAS_DIR.mkdir(parents=True, exist_ok=True)
+    fname = SALIDAS_DIR / f"reporte_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
     fname.write_text(contenido, encoding="utf-8")
     print("\n" + contenido)
     print(f"\nReporte guardado en: {fname}")
