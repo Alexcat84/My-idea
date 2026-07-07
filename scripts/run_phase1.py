@@ -42,6 +42,12 @@ MIN_DIRECTED_REACHABILITY_PCT = 99.5
 
 REF_KEYS = ("nodos_previos", "nodos_siguientes")
 
+# Hotfix v2.1.1: groundwork de dominios (motor v2.1 solo tiene "core", pero
+# el interruptor de filtrado por dominio queda instalado desde ya en
+# ruteador/brujula/cosecha). Todo nodo DEBE declarar "dominio" con un valor
+# de esta lista; agregar aqui cuando exista un dominio nuevo real.
+DOMINIOS_PERMITIDOS = {"core"}
+
 # Mapa de fusion de duplicados, tal como quedo definido en
 # scripts/archive/phase1_5_merge.py. Se mantiene aqui como fuente de verdad
 # reproducible para poder redirigir las referencias que ese script nunca
@@ -519,6 +525,13 @@ def step6_compile_master_graph():
     for fase in indice_por_fase:
         indice_por_fase[fase].sort()
 
+    indice_por_dominio = collections.defaultdict(list)
+    for node_id, data in nodes.items():
+        dominio = data.get("dominio", "sin_dominio")
+        indice_por_dominio[dominio].append(node_id)
+    for dominio in indice_por_dominio:
+        indice_por_dominio[dominio].sort()
+
     stats = compute_graph_stats(nodes)
     stats["enlaces_rotos_en_grafo"] = broken
 
@@ -527,6 +540,7 @@ def step6_compile_master_graph():
         "total_nodos": len(nodes),
         "nodos": dict(sorted(nodes.items())),
         "indice_por_fase": dict(sorted(indice_por_fase.items())),
+        "indice_por_dominio": dict(sorted(indice_por_dominio.items())),
         "stats": stats,
     }
 
@@ -592,6 +606,16 @@ def step7_validate(master, parse_errors):
         "Enlaces rotos en dataset == 0",
         stats["enlaces_rotos_en_grafo"] == 0,
         stats["enlaces_rotos_en_grafo"],
+    ))
+
+    nodos_dominio_invalido = [
+        node_id for node_id, data in master["nodos"].items()
+        if data.get("dominio") not in DOMINIOS_PERMITIDOS
+    ]
+    checks.append((
+        f"Todos los nodos tienen dominio valido ({sorted(DOMINIOS_PERMITIDOS)})",
+        len(nodos_dominio_invalido) == 0,
+        len(nodos_dominio_invalido) if nodos_dominio_invalido else 0,
     ))
 
     non_ascii_files = [

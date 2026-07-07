@@ -433,6 +433,47 @@ programaticamente: cada numero en el reporte narrado (incluyendo notacion
 de miles en español, "$1.700") se rastreo contra la salida cruda de
 `calcular_reporte()`; cero huerfanos.
 
+### Hotfix v2.1.1 — semántica de sobredemanda + campo dominio
+
+Auditoria independiente de motor-v2.1 encontro un bug real en
+`escenarios_capacidad`: el campo `ingreso_perdido_estimado` del escenario
+de sobredemanda multiplicaba las unidades no atendidas por el **margen**
+($17) en vez del **precio** ($85), subestimando 5x el costo de
+oportunidad real (reportaba "$170 en ventas perdidas" cuando la cifra
+real es $850). La causa raiz de proceso: el assert original
+(`ingreso_perdido_estimado == 170`) se escribio leyendo la salida de la
+funcion, no calculando el escenario de forma independiente — verificaba
+la implementacion, no la intencion.
+
+Corregido separando el campo en dos, con semantica y nombre distintos:
+- `ingreso_perdido_estimado = unidades_no_atendidas × precio` — ventas
+  que no se facturan ($850 en el escenario mandatado).
+- `margen_perdido_estimado = unidades_no_atendidas × margen_u` — ganancia
+  que no llega ($170).
+
+El reporte narrado ahora distingue ambas cifras explicitamente: "Dejarías
+de facturar $850 en ventas que simplemente no puedes atender... De esos
+$850, $170 habrían sido ganancia real para ti." `examples/
+motor_v2_1_transcript.txt` y `examples/motor_v2_1_reporte_macetas.md` se
+regeneraron con las cifras corregidas; se reverifico cero huerfanos
+sobre el texto regenerado.
+
+`engine/test_calculadora.py` se reescribio para llevar el calculo manual
+completo del escenario mandatado en un docstring, con constantes
+nombradas derivadas de ESE calculo (no de correr la funcion), mas un
+assert de guardia (`ingreso_perdido_estimado != margen_perdido_estimado`)
+para atrapar una regresion a la misma formula. La regla de proceso quedo
+fijada en `AGENTS.md`: todo escenario canonico de un test numerico se
+calcula a mano antes de escribir el assert.
+
+Ademas, groundwork de dominios (cero cambio de comportamiento hoy): los
+1266 nodos y el compilador de `master_graph.json` ganaron un campo
+`dominio` (todos `"core"` por ahora), Gate 0 valida que sea uno de los
+permitidos, y el router (`sucesores_nivel`), la brujula
+(`buscar_afines`) y la cosecha de vecindario (`cosechar_vecindario`)
+filtran por dominios desbloqueados del proyecto — con el default
+`{"core"}`, el filtro es un no-op hasta que exista un segundo dominio.
+
 ## Los dos cierres verificados en esta prueba
 
 **Cierre elegante**: forzando EOF a mitad de sesión (`leer_entrada()`

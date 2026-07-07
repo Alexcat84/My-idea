@@ -22,43 +22,87 @@ def _numeros(**campos):
 
 def test_escenario_macetas():
     """El escenario mandatado: resina/materiales $8, 4 horas, valora su hora
-    en $15, vendería a $85, capacidad 5/semana, sin costos fijos declarados."""
+    en $15, vendería a $85, capacidad 5/semana, sin costos fijos declarados.
+
+    REGLA DE PROCESO (hotfix v2.1.1, tras el bug de ingreso_perdido_estimado
+    calculando con margen en vez de precio): el escenario canonico se
+    calcula A MANO aqui abajo, en comentario, ANTES de escribir los
+    asserts - y los asserts se escriben contra ESE calculo manual, no
+    contra lo que la funcion ya devuelve. Un assert que solo repite la
+    salida de la funcion no puede detectar un bug en esa misma funcion.
+
+    Calculo manual:
+      costo_unitario   = 8 (materiales) + 4h x $15/h = 8 + 60         = 68
+      margen           = precio 85 - costo 68                        = 17
+      margen_pct       = 17 / 85 x 100                                = 20.0
+      unidades_mes     = capacidad 5/semana x 4 semanas/mes            = 20
+      ingreso_mes      = 20 unidades x $85                           = 1700
+      margen_mes       = 20 unidades x $17                            = 340
+      pesimista (50%)  = 10 unidades -> ingreso 850, margen 170
+      base (100%)      = 20 unidades -> ingreso 1700, margen 340
+      sobredemanda:
+        demanda_estimada (150%)    = 20 x 1.5                         = 30
+        unidades_producibles       = 20 (tope real de capacidad)
+        unidades_no_atendidas      = 30 - 20                          = 10
+        ingreso_perdido_estimado   = 10 unidades x PRECIO $85         = 850  (facturacion que no ocurre)
+        margen_perdido_estimado    = 10 unidades x MARGEN $17         = 170  (ganancia que no llega)
+    """
+    COSTO_UNITARIO_ESPERADO = 68
+    MARGEN_ESPERADO = 17
+    MARGEN_PCT_ESPERADO = 20.0
+    UNIDADES_MES_ESPERADO = 20
+    INGRESO_MES_ESPERADO = 1700
+    MARGEN_MES_ESPERADO = 340
+    PESIMISTA_ESPERADO = {"unidades_mes": 10, "ingreso": 850, "margen_mensual": 170}
+    BASE_ESPERADO = {"unidades_mes": 20, "ingreso": 1700, "margen_mensual": 340}
+    SOBREDEMANDA_DEMANDA_ESTIMADA_ESPERADA = 30
+    SOBREDEMANDA_UNIDADES_NO_ATENDIDAS_ESPERADO = 10
+    SOBREDEMANDA_INGRESO_PERDIDO_ESPERADO = 850  # unidades_no_atendidas x PRECIO, no margen
+    SOBREDEMANDA_MARGEN_PERDIDO_ESPERADO = 170   # unidades_no_atendidas x MARGEN, no precio
+
     numeros = _numeros(
         costo_materiales_unidad=8, horas_por_unidad=4, valor_hora=15,
         precio_tentativo=85, capacidad_semanal=5,
     )
 
     costo = c.costo_unitario_total(numeros)
-    assert costo["valor"] == 68, costo
+    assert costo["valor"] == COSTO_UNITARIO_ESPERADO, costo
     assert costo["insumos_faltantes"] == []
 
     margen = c.margen_unitario(numeros)
-    assert margen["valor"] == 17, margen
-    assert margen["porcentaje"] == 20.0, margen
+    assert margen["valor"] == MARGEN_ESPERADO, margen
+    assert margen["porcentaje"] == MARGEN_PCT_ESPERADO, margen
 
     equilibrio = c.punto_equilibrio_unidades_mes(numeros)
     assert equilibrio["valor"] is None
     assert equilibrio["insumos_faltantes"] == ["costos_fijos_mensuales"], equilibrio
 
     capacidad = c.techo_ingreso_capacidad(numeros)
-    assert capacidad["unidades_mes"] == 20, capacidad
-    assert capacidad["ingreso"] == 1700, capacidad
-    assert capacidad["margen_mensual"] == 340, capacidad
+    assert capacidad["unidades_mes"] == UNIDADES_MES_ESPERADO, capacidad
+    assert capacidad["ingreso"] == INGRESO_MES_ESPERADO, capacidad
+    assert capacidad["margen_mensual"] == MARGEN_MES_ESPERADO, capacidad
 
     escenarios = c.escenarios_capacidad(numeros)
-    assert escenarios["pesimista"] == {"unidades_mes": 10, "ingreso": 850, "margen_mensual": 170}, escenarios["pesimista"]
-    assert escenarios["base"] == {"unidades_mes": 20, "ingreso": 1700, "margen_mensual": 340}, escenarios["base"]
+    assert escenarios["pesimista"] == PESIMISTA_ESPERADO, escenarios["pesimista"]
+    assert escenarios["base"] == BASE_ESPERADO, escenarios["base"]
     sd = escenarios["sobredemanda"]
-    assert sd["demanda_estimada"] == 30, sd
-    assert sd["unidades_producibles"] == 20, sd
-    assert sd["unidades_no_atendidas"] == 10, sd
-    assert sd["ingreso_perdido_estimado"] == 170, sd
+    assert sd["demanda_estimada"] == SOBREDEMANDA_DEMANDA_ESTIMADA_ESPERADA, sd
+    assert sd["unidades_producibles"] == UNIDADES_MES_ESPERADO, sd
+    assert sd["unidades_no_atendidas"] == SOBREDEMANDA_UNIDADES_NO_ATENDIDAS_ESPERADO, sd
+    assert sd["ingreso_perdido_estimado"] == SOBREDEMANDA_INGRESO_PERDIDO_ESPERADO, sd
+    assert sd["margen_perdido_estimado"] == SOBREDEMANDA_MARGEN_PERDIDO_ESPERADO, sd
+    # Guardrail contra el bug exacto del hotfix: los dos campos de perdida
+    # nunca deben ser iguales entre si salvo coincidencia numerica rara
+    # (precio != margen en este escenario, 85 != 17), asi que si algun dia
+    # vuelven a calcularse con la misma formula por error, esto lo atrapa.
+    assert sd["ingreso_perdido_estimado"] != sd["margen_perdido_estimado"]
 
     cce = c.ciclo_conversion_efectivo(numeros)
     assert cce["valor"] is None
     assert set(cce["insumos_faltantes"]) == set(c.CAMPOS_CICLO_CONVERSION_EFECTIVO)
 
     print("OK: test_escenario_macetas (costo=68, margen=17/20%, techo=20u/$1700/$340, "
+          "sobredemanda ingreso=850/margen=170 correctamente distinguidos, "
           "equilibrio y CCE correctamente pendientes)")
 
 

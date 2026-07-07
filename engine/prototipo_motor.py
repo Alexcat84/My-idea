@@ -3,11 +3,11 @@
 prototipo_motor.py - Motor de ruteo (post motor-v1.0: Fase 2.6 preguntas
 adaptadas por turno, Fase 2.7 escucha activa y caching incremental, Fase
 2.8 navegacion libre con brujula semantica, Fase 2.9 cierre del motor -
-tag motor-v2.0, de aqui en adelante solo bugs).
+tag motor-v2.0 -, Motor v2.1 Reporte de Sostenibilidad + hotfix v2.1.1).
 
 Ver examples/README.md para la prueba de cierre de motor-v1.0 (dos actos,
-sin tracebacks) y las pruebas de Fase 2.6/2.7/2.8/2.9 (macetas de
-calcita); ver mas abajo para el detalle de cada fase.
+sin tracebacks) y las pruebas de Fase 2.6/2.7/2.8/2.9/Motor v2.1 (macetas
+de calcita); ver mas abajo para el detalle de cada fase.
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
 usuario nunca elige de un menu, y el interprete puede atravesar varios nodos
@@ -107,6 +107,29 @@ Fase 2.9 - cierre del motor (tag motor-v2.0): dos correcciones finales
     score (afinidad) de cada saltos_posible ademas de instruir
     explicitamente que un candidato ofrecido no obliga a saltar. A partir
     de este tag, el motor recibe solo fixes de bugs.
+Motor v2.1 - Reporte de Sostenibilidad (complemento aditivo): el
+    interprete de turno, en TODAS las sesiones, extrae numeros que el
+    USUARIO declara (nunca inferidos) hacia projects.numeros_proyecto (8
+    campos fijos: costo_materiales_unidad, horas_por_unidad, valor_hora,
+    precio_tentativo, capacidad_semanal, costos_fijos_mensuales,
+    unidades_vendidas, precio_pagado_real). engine/calculadora.py (CERO
+    LLM) computa costo unitario, margen, punto de equilibrio, techo de
+    ingreso por capacidad, y tres escenarios (pesimista/base/sobredemanda);
+    cada funcion declara que insumos uso y cuales faltan, nunca inventa un
+    numero. --reporte PROJECT_ID hace inventario, una mini-entrevista
+    deterministica (sin LLM) por hasta 6 campos esenciales faltantes, y UNA
+    llamada Sonnet (presupuesto propio $0.10) narra los resultados YA
+    CALCULADOS, con prohibicion dura de generar cifras nuevas.
+    Hotfix v2.1.1: (a) escenarios_capacidad tenia un bug real —
+    ingreso_perdido_estimado (en sobredemanda) multiplicaba por margen en
+    vez de precio, subestimando 5x el costo de oportunidad; ahora son dos
+    campos distintos (ingreso_perdido_estimado = unidades x precio,
+    margen_perdido_estimado = unidades x margen). (b) Groundwork de
+    dominios: todo nodo declara "dominio" (hoy solo "core"); Gate 0 lo
+    valida; sucesores_nivel, buscar_afines y cosechar_vecindario filtran
+    por dominios_desbloqueados (default {"core"}) — cero cambio de
+    comportamiento hoy, pero el interruptor para un segundo dominio futuro
+    ya esta instalado.
 Medidor de completitud: antes de redactar el plan, se evalua si la ruta toca
     al menos una familia de accion con clientes y una de viabilidad
     economica (engine/plan_readiness.py). Si no, se ofrece UNA vez la
@@ -222,6 +245,17 @@ CAMPOS_NUMERICOS_PROYECTO = {
     "capacidad_semanal", "costos_fijos_mensuales", "unidades_vendidas", "precio_pagado_real",
 }
 PRESUPUESTO_REPORTE_USD = 0.10
+
+# Hotfix v2.1.1: groundwork de dominios. Hoy todo el dataset es "core" y
+# todo proyecto tiene ["core"] desbloqueado por defecto, asi que este
+# filtro es un no-op observable — pero ya queda instalado en el ruteador
+# (sucesores_nivel), la brujula (buscar_afines) y la cosecha
+# (cosechar_vecindario) para cuando exista un segundo dominio real.
+DOMINIOS_DESBLOQUEADOS_DEFECTO = frozenset({"core"})
+
+
+def _dominio_permitido(nid, graph, dominios_desbloqueados):
+    return graph[nid].get("dominio", "core") in (dominios_desbloqueados or DOMINIOS_DESBLOQUEADOS_DEFECTO)
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 MODEL = "claude-sonnet-4-6"
@@ -926,10 +960,18 @@ SYSTEM_REPORTE = (
     "jerga, que le dicen esos numeros sobre su proyecto (¿es sano el "
     "margen?, ¿el techo de ingreso alcanza lo que busca?). En "
     "'## Escenarios', si 'escenarios' tiene datos, describe pesimista, "
-    "base y sobredemanda con sus cifras EXACTAS del modulo — para "
-    "sobredemanda, explica que 'unidades_no_atendidas' es venta que se "
-    "pierde porque la capacidad de produccion no alcanza, no un fracaso "
-    "de ventas. En '## Los números que te faltan', para cada nombre de "
+    "base y sobredemanda con sus cifras EXACTAS del modulo. Para "
+    "sobredemanda hay DOS cifras de perdida con significado DISTINTO — "
+    "nunca las confundas ni uses solo una: 'ingreso_perdido_estimado' es "
+    "cuanto DINERO EN VENTAS no se factura (unidades no atendidas x "
+    "precio), y 'margen_perdido_estimado' es cuanta GANANCIA no llega "
+    "(unidades no atendidas x margen) — son numeros diferentes a "
+    "proposito, explica ambos por separado con sus nombres correctos. "
+    "Ejemplo: 'dejarías de facturar $850 en ventas que no puedes atender, "
+    "de los cuales $170 habrían sido ganancia real para ti.' Explica "
+    "tambien que 'unidades_no_atendidas' es venta que se pierde porque la "
+    "capacidad de produccion no alcanza, no un fracaso de ventas. En "
+    "'## Los números que te faltan', para cada nombre de "
     "campo que aparezca en algun 'insumos_faltantes', tradúcelo a una "
     "frase en lenguaje natural (nunca el nombre tecnico del campo) "
     "explicando que dato es y para que serviria tenerlo.\n\n"
@@ -1194,8 +1236,11 @@ def obtener_pregunta(node_id, node, cache):
     )
 
 
-def sucesores_nivel(nid, graph, visitados, limite=MAX_OPCIONES):
-    return [c for c in graph[nid].get("nodos_siguientes", []) if c in graph and c not in visitados][:limite]
+def sucesores_nivel(nid, graph, visitados, limite=MAX_OPCIONES, dominios_desbloqueados=None):
+    return [
+        c for c in graph[nid].get("nodos_siguientes", [])
+        if c in graph and c not in visitados and _dominio_permitido(c, graph, dominios_desbloqueados)
+    ][:limite]
 
 
 def resumen_nodo(nid, graph, preguntas_cache=None):
@@ -1244,7 +1289,7 @@ def _cargar_brujula():
         return False
 
 
-def buscar_afines(texto, excluidos, k=5, min_score=0.0, con_score=False):
+def buscar_afines(texto, excluidos, k=5, min_score=0.0, con_score=False, graph=None, dominios_desbloqueados=None):
     """Top-k nodos de TODO el grafo mas afines semanticamente a `texto`
     (embeddings locales, sin llamada a la API), excluyendo `excluidos`
     (ya visitados/cubiertos). Devuelve [] si la brujula no esta disponible
@@ -1254,7 +1299,11 @@ def buscar_afines(texto, excluidos, k=5, min_score=0.0, con_score=False):
     dirigido no, porque ese ya filtra por familia, un criterio de
     relevancia distinto y suficiente). con_score=True devuelve tuplas
     (id, score) en vez de solo ids, para exponerle el numero al
-    interprete y que pueda juzgar afinidad debil el mismo."""
+    interprete y que pueda juzgar afinidad debil el mismo.
+    Hotfix v2.1.1: si se pasa `graph`, tambien filtra por dominio
+    (dominios_desbloqueados, por defecto DOMINIOS_DESBLOQUEADOS_DEFECTO);
+    si `graph` es None, no hay forma de saber el dominio de cada id y el
+    filtro se omite (compatibilidad con llamadas/pruebas que no lo pasan)."""
     if not texto or not texto.strip():
         return []
     if not _cargar_brujula():
@@ -1267,6 +1316,8 @@ def buscar_afines(texto, excluidos, k=5, min_score=0.0, con_score=False):
     for idx in orden:
         nid = ids[idx]
         if nid in excluidos:
+            continue
+        if graph is not None and nid in graph and not _dominio_permitido(nid, graph, dominios_desbloqueados):
             continue
         score = float(scores[idx])
         if score < min_score:
@@ -1414,7 +1465,7 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
     # pueda juzgar los casos limite el mismo.
     texto_para_brujula = respuesta_usuario or texto_original
     excluidos_brujula = visitados | set(nivel1_ids)
-    salto_candidatos = buscar_afines(texto_para_brujula, excluidos_brujula,
+    salto_candidatos = buscar_afines(texto_para_brujula, excluidos_brujula, graph=graph,
                                      k=MAX_SALTOS_POSIBLES_OFRECIDOS, min_score=MIN_SCORE_SALTO, con_score=True)
     ids_salto_ofrecidos = [nid for nid, _ in salto_candidatos]
     saltos_posibles = [
@@ -1637,7 +1688,7 @@ def extender_sigamos_dirigido(graph, families, visitados, ruta, modos, perfil_se
     inmediato en vez de forzar las preguntas restantes (la version inversa
     de la promesa rota: ignorar la salida del usuario)."""
     query = " ".join(FAMILIA_QUERY_BRUJULA.get(f, f) for f in familias_faltantes)
-    candidatos = buscar_afines(query, visitados, k=20)
+    candidatos = buscar_afines(query, visitados, k=20, graph=graph)
     candidatos_familia = [nid for nid in candidatos if families.get(nid) in familias_faltantes]
     if not candidatos_familia:
         # Respaldo sin brujula (libreria no instalada o candidatos agotados):
@@ -1645,6 +1696,7 @@ def extender_sigamos_dirigido(graph, families, visitados, ruta, modos, perfil_se
         candidatos_familia = [
             nid for nid in graph
             if nid not in visitados and families.get(nid) in familias_faltantes
+            and _dominio_permitido(nid, graph, None)
         ]
     elegidos = candidatos_familia[:MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO]
 
@@ -1706,7 +1758,7 @@ def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, priori
     for nid in ruta:
         n = graph[nid]
         for vecino in n.get("nodos_siguientes", []) + n.get("nodos_previos", []):
-            if vecino in graph and vecino not in ruta_set:
+            if vecino in graph and vecino not in ruta_set and _dominio_permitido(vecino, graph, None):
                 candidatos.add(vecino)
 
     fases_ruta = [graph[nid].get("fase_proyecto") for nid in ruta if nid in graph]

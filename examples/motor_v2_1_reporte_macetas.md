@@ -1,40 +1,45 @@
 ## Tus números hoy
 
-**Tu costo por unidad: $8 (materiales) + 4 horas × $15 = $68 por pieza.** Eso es lo que te cuesta producir cada una.
+**Tu costo por unidad: $8 (materiales) + 4 horas × $15 = $68 por pieza.** Eso es lo que te cuesta producir cada una antes de cualquier ganancia.
 
-**Tu margen: $85 − $68 = $17 por pieza; de cada venta te quedan $17, lo que representa un 20% del precio.**
+**Tu margen: $85 − $68 = $17 por pieza; de cada venta te quedan $17**, lo que representa un 20% del precio.
 
-**Tu capacidad máxima: 5 unidades por semana × 4 semanas = 20 unidades al mes.** Si vendes todo lo que puedes producir, tu ingreso mensual llega a $1.700 y tu margen mensual total sería $340.
+**Tu techo de producción: 5 unidades por semana × 4 semanas = 20 unidades al mes.** Si vendes todo lo que puedes producir, facturas $1.700 al mes y te quedan $340 de ganancia mensual.
 
 ---
 
 ## Qué significan
 
-Un margen del 20% es un punto de partida razonable, aunque ajustado: de cada $85 que ingresa, $68 ya se fueron en materiales y tu tiempo. Con un techo de $1.700 al mes y $340 de margen, tu proyecto puede ser viable, pero depende mucho de cuánto necesitas cubrir en gastos fijos (alquiler, servicios, etc.), dato que aún no tenemos. Lo que sí queda claro es que tu capacidad de producción es el límite real del proyecto hoy: no puedes crecer en ingresos sin primero resolver cuántas unidades puedes fabricar.
+Un margen del 20% es ajustado pero funcional para un proyecto que arranca: de cada $85 que cobras, $17 son tuyo. Lo que importa ahora es saber si esos $340 mensuales (en el mejor caso de tu capacidad actual) cubren lo que el proyecto necesita para sostenerse, incluyendo los gastos fijos que aún no has declarado. Tu techo de ingreso con la capacidad actual es $1.700 al mes, un número concreto con el que puedes comparar tus compromisos reales de gastos. Si tus gastos fijos mensuales son menores a $340, el proyecto cubre sus propios costos; si son mayores, todavía no se sostiene solo.
 
 ---
 
 ## Escenarios
 
-**Escenario pesimista** — vendes solo la mitad de lo que produces:
-- 10 unidades al mes → $850 de ingreso → $170 de margen mensual.
+**Escenario pesimista** — vendes solo la mitad de lo que puedes producir (10 unidades): facturas $850 al mes y te quedan $170 de ganancia. Es el piso razonable para planificar.
 
-**Escenario base** — vendes todo lo que produces:
-- 20 unidades al mes → $1.700 de ingreso → $340 de margen mensual.
+**Escenario base** — produces y vendes todo lo que puedes (20 unidades): $1.700 facturados, $340 de ganancia mensual. Es tu techo real con la capacidad actual.
 
-**Escenario sobredemanda** — la demanda sube a 30 unidades, pero tu capacidad de producción solo alcanza para 20:
-- Produces y vendes 20 unidades → $1.700 de ingreso.
-- Las 10 unidades restantes no se pueden fabricar, no porque no haya clientes, sino porque el tiempo de producción no da. Eso representa **$170 en ventas que se pierden** —clientes que querían comprarte pero no pudiste atenderlos. Este escenario es una señal de que vale la pena explorar cómo ampliar tu capacidad.
+**Escenario de sobredemanda** — llegan pedidos para 30 unidades, pero solo puedes producir 20. Las 10 unidades no atendidas no son un fracaso de ventas —la demanda estuvo—, sino una limitación de tu capacidad de producción. Eso tiene dos consecuencias distintas:
+
+- **Dejarías de facturar $850** en ventas que simplemente no puedes atender (las 10 unidades × $85 de precio): es dinero que se fue sin pasar por tu caja.
+- **De esos $850, $170 habrían sido ganancia real para ti** (las 10 unidades × $17 de margen): no es solo ingreso que se pierde, es rentabilidad que no llega.
+
+Si este escenario se repite, es la señal más clara de que ampliar capacidad tiene sentido concreto y medible.
 
 ---
 
-## Los números que te faltan (y cómo conseguirlos)
+## Los números que te faltan
 
-**Cuánto gastas por mes aunque no vendas nada.** Este es el total de tus gastos fijos: arriendo del espacio, servicios, suscripciones, cuotas de herramientas, lo que sea que debas pagar independientemente de cuántas unidades produzcas. Con ese número podríamos calcular exactamente cuántas unidades necesitas vender cada mes para no perder plata.
+**¿Cuánto gastas por mes sin importar cuánto produces?** — alquiler, servicios, suscripciones, cualquier costo que exista aunque no vendas nada. Sin ese dato no es posible calcular cuántas unidades necesitas vender cada mes para que el proyecto no pierda plata: ese es el punto de equilibrio, y hoy está en blanco.
 
-**Cuántos días pasan entre que compras los materiales y que cobras la venta.** ¿Tienes que poner dinero de tu bolsillo antes de recibir el pago del cliente? ¿Cuántos días tarda en llegarte ese pago? Saber esto permite entender si tu proyecto puede sostenerse solo con lo que genera o si necesita un colchón de efectivo para no ahogarse entre compra y cobro.
+**¿Cuántos días pasan desde que compras materiales hasta que tienes el producto listo para vender?** — esto afecta cuánto efectivo tienes inmovilizado en producción en todo momento.
 
-**Cuántos días te dan tus proveedores para pagar.** Si tus proveedores te dan plazo (por ejemplo, 30 días para pagar los materiales), eso alivia la presión de caja. Ese dato, combinado con los anteriores, define si tu proyecto genera o consume efectivo en el día a día.
+**¿Cuántos días tarda en pagarte un cliente desde que le entregas?** — si cobras al contado es cero, pero si das crédito o plazo, ese tiempo es efectivo que ya salió de tu bolsillo y aún no volvió.
+
+**¿Cuántos días tardas en pagarle a tus proveedores de materiales?** — si te dan plazo para pagar, esos días trabajan a tu favor y reducen la presión sobre tu efectivo disponible.
+
+Con esos tres tiempos juntos se puede calcular cuántos días tu propio dinero está "atrapado" en el ciclo de producción y venta antes de recuperarse, lo que define cuánto capital necesitas tener disponible para que el proyecto fluya sin cortocircuitos de caja.
 
 ---
 _Estimaciones basadas en las cifras que tú diste; no sustituyen contabilidad formal ni asesoría fiscal, que varían según tu país._

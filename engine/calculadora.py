@@ -193,7 +193,15 @@ def escenarios_capacidad(numeros):
         "demanda_estimada": demanda_estimada,
         "unidades_producibles": unidades_base,
         "unidades_no_atendidas": unidades_no_atendidas,
-        "ingreso_perdido_estimado": _r(unidades_no_atendidas * margen_u) if margen_u is not None else None,
+        # Hotfix v2.1.1: dos campos con semantica distinta, no uno solo.
+        # ingreso_perdido_estimado = ventas que no se facturan (unidades x
+        # PRECIO); margen_perdido_estimado = ganancia que no llega (unidades
+        # x MARGEN). Antes, "ingreso_perdido_estimado" calculaba con margen
+        # por error, subestimando 5x el costo de oportunidad real (en el
+        # escenario canonico: reportaba $170 cuando el ingreso no facturado
+        # real es $850 - el margen perdido si es $170, pero es OTRO numero).
+        "ingreso_perdido_estimado": _r(unidades_no_atendidas * precio),
+        "margen_perdido_estimado": _r(unidades_no_atendidas * margen_u) if margen_u is not None else None,
     }
     return {"pesimista": pesimista, "base": base, "sobredemanda": sobredemanda,
             "insumos_usados": techo["insumos_usados"], "insumos_faltantes": []}
