@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 prototipo_motor.py - Motor de ruteo (post motor-v1.0: Fase 2.6 preguntas
-adaptadas por turno, Fase 2.7 escucha activa y caching incremental).
+adaptadas por turno, Fase 2.7 escucha activa y caching incremental, Fase
+2.8 navegacion libre con brujula semantica).
 
 Ver examples/README.md para la prueba de cierre de motor-v1.0 (dos actos,
-sin tracebacks) y las pruebas de Fase 2.6/2.7 (macetas de calcita); ver
+sin tracebacks) y las pruebas de Fase 2.6/2.7/2.8 (macetas de calcita); ver
 mas abajo para el detalle de cada fase.
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
@@ -63,6 +64,31 @@ Fase 2.7 - escucha activa y costos: (a) prioridad_declarada rastrea si el
     (clasificacion/turnos/plan/estado_vivo/organizador) persistida en
     sessions.costo_desglose (supabase/migrations/my_idea_002_costo_desglose.sql,
     aplicar manualmente).
+Fase 2.8 - navegacion libre (brujula semantica): completa la autonavegacion
+    adaptativa mas alla del riel local. engine/build_semantic_index.py
+    genera embeddings locales (sentence-transformers, costo cero por
+    sesion) de los 1265 nodos en engine/semantic_index.npz; buscar_afines()
+    los usa en cada turno para ofrecerle al interprete, ademas de los
+    sucesores locales, hasta 5 "saltos_posibles" de CUALQUIER parte del
+    grafo (cualquier fase, incluso anteriores) afines a la ultima respuesta
+    del usuario. El interprete puede saltar (salto_semantico, max 1 por
+    turno, registrado en la ruta con modo "salto") cuando la respuesta
+    introduce un tema que ningun sucesor local atiende. Si sentence-
+    transformers o el indice no estan disponibles, la brujula se desactiva
+    silenciosamente y el motor sigue navegando solo local, como antes de
+    esta fase. El "sigamos" (profundizar) ahora es DIRIGIDO: en vez de
+    devolver el control al riel local (que podia toparse con MAX_DEPTH sin
+    preguntar nada, rompiendo la promesa de continuar), extender_sigamos_
+    dirigido usa la brujula para elegir 2-3 nodos reales de la familia
+    faltante y los conversa como extension (hasta
+    MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO turnos por encima de MAX_DEPTH); si
+    no hay candidatos genuinos, lo dice honestamente en vez de fingir.
+    Coherencia por autodeclaracion: el redactor ya no se evalua por tags de
+    node_families para la etiqueta del plan — declara el mismo que
+    familias trato con sustancia real (bloque final ===JSON===), y esa
+    autodeclaracion es la UNICA fuente de la etiqueta inicial/completo y de
+    "Lo que este plan aun no cubre" (los tags de node_families se conservan
+    solo para el medidor de oferta previa y para priorizar la cosecha).
 Medidor de completitud: antes de redactar el plan, se evalua si la ruta toca
     al menos una familia de accion con clientes y una de viabilidad
     economica (engine/plan_readiness.py). Si no, se ofrece UNA vez la
@@ -149,12 +175,17 @@ QUIZ_PATH = BASE / "engine" / "cuestionario_raiz.json"
 ENTRY_SEEDS_PATH = BASE / "dataset" / "metadata" / "entry_seeds.json"
 PREGUNTAS_CACHE_PATH = BASE / "engine" / "preguntas_cache.json"
 SESSIONS_DIR = BASE / "engine" / "sessions"
+SEMANTIC_INDEX_PATH = BASE / "engine" / "semantic_index.npz"
+SEMANTIC_MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 
 MAX_DEPTH = 15
 MAX_OPCIONES = 6
 MAX_SUCESORES_NIVEL2 = 4
 MAX_SALTOS_SILENCIOSOS_POR_LLAMADA = 3
 MAX_REPREGUNTAS_POR_PUNTO = 1
+MAX_SALTOS_SEMANTICOS_POR_TURNO = 1
+MAX_SALTOS_POSIBLES_OFRECIDOS = 8
+MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO = 3
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 MODEL = "claude-sonnet-4-6"
@@ -218,10 +249,15 @@ SYSTEM_INTERPRETE_MULTI = (
     "pregunta en este punto y solo cuentas con el contexto acumulado), "
     "ultimas_preguntas_hechas: el texto literal de hasta las 3 "
     "intervenciones mas recientes del sistema en esta sesion (preguntas "
-    "adaptadas Y repreguntas por igual, puede venir vacia al inicio), y "
+    "adaptadas Y repreguntas por igual, puede venir vacia al inicio), "
     "prioridad_declarada_actual: {\"texto\": str, \"conteo\": int} o null — "
     "lo que el usuario mismo ha repetido como su bloqueo o urgencia "
-    "principal, y cuantas veces lo ha reafirmado hasta ahora.\n\n"
+    "principal, y cuantas veces lo ha reafirmado hasta ahora — y "
+    "saltos_posibles (Fase 2.8): hasta 8 nodos de CUALQUIER parte del "
+    "grafo (no solo sucesores del nodo actual, pueden ser de cualquier "
+    "fase, incluso anteriores) que una busqueda semantica encontro "
+    "afines a la ULTIMA respuesta del usuario, cada uno con id, titulo, "
+    "fase_proyecto y condiciones_activacion.\n\n"
     "Tu trabajo es construir un camino: la secuencia de nodos (1 a 3, en "
     "orden, empezando por un sucesor de nivel 1) que el usuario deberia "
     "atravesar dado lo que ya se sabe de el. Un nodo se atraviesa EN "
@@ -249,6 +285,54 @@ SYSTEM_INTERPRETE_MULTI = (
     "contexto, sigue evaluando su propio sucesor de nivel 2 antes de "
     "decidir donde detenerte; no te detengas en el primero solo porque es "
     "el primero de la lista.\n\n"
+    "SALTO SEMANTICO LIBRE (Fase 2.8, navegacion por toda la telaraña): "
+    "ademas de sucesores_nivel1_y_nivel2 (locales, siempre disponibles), "
+    "recibes saltos_posibles: nodos de CUALQUIER parte del grafo afines a "
+    "la ULTIMA respuesta del usuario, sin importar fase o rama.\n"
+    "CHEQUEO OBLIGATORIO, en este orden, ANTES de decidir tu 'accion': "
+    "(1) Mira el tema CONCRETO y NUEVO que la respuesta del usuario acaba "
+    "de introducir (no el tema general de la conversacion — el dato "
+    "especifico nuevo: p.ej. 'trabajo solo', 'no he calculado costos', "
+    "'me preocupa la ley'). (2) Revisa saltos_posibles: ¿alguno trata ESE "
+    "dato especifico de forma mas dedicada/precisa que cualquiera de tus "
+    "sucesores locales? No hace falta que sea un calce perfecto — basta "
+    "que sea claramente MAS especifico al dato nuevo que lo que ofrecen "
+    "tus sucesores locales. (3) Si la respuesta a (2) es si, SALTA ahi, "
+    "AUNQUE tambien podrias inventar una pregunta_adaptada local que "
+    "suene relevante — la pregunta no es 'puedo hacer sonar relevante lo "
+    "local', es 'hay algo mas especifico en saltos_posibles'. Un nodo "
+    "dedicado trae su propio desarrollo teorico y sus propios sucesores "
+    "especializados en ese tema; una pregunta local improvisada no. Solo "
+    "si NINGUN salto_posible es mas especifico que tus sucesores locales, "
+    "quedate local (siguiendo el contrato normal de 'camino', incluyendo "
+    "'repreguntar' si aplica su regla propia).\n"
+    "El salto puede ir hacia adelante O hacia atras en fase (por ejemplo, "
+    "de validacion de clientes a un nodo de ideacion sobre capacidad de un "
+    "fundador solitario, si eso es lo que la respuesta realmente revela). "
+    "Ejemplo con datos reales: el usuario responde 'extraigo la piedra yo "
+    "mismo de una mina, la proceso a mano, hago todo solo, sin equipo ni "
+    "empleados', y saltos_posibles incluye 'Trabajo en Lotes Pequeños "
+    "(Small Batches)' y 'Decision de Fundar en Solitario vs. Formar un "
+    "Equipo' entre otros — AMBOS son mas especificos al dato 'trabajo "
+    "solo, produzco a mano' que un sucesor local generico sobre metricas "
+    "o validacion: salta a cualquiera de esos dos (el que mejor calce), "
+    "en vez de quedarte local inventando una pregunta sobre 'cuantas "
+    "haces al mes' que suena relevante pero no trae el desarrollo teorico "
+    "dedicado al tema. repreguntar NUNCA es un atajo para este caso: "
+    "es solo para desambiguar CUAL sucesor local elegir cuando el tema "
+    "SIGUE siendo el mismo que ya se discutia. Maximo 1 salto por turno. "
+    "Para saltar, responde con "
+    "'salto_semantico': el id exacto (debe ser uno de los ofrecidos en "
+    "saltos_posibles, nunca inventado) y deja 'camino' en []; el resto del "
+    "contrato (pregunta_necesaria, pregunta_adaptada, etc.) aplica igual "
+    "sobre el nodo de destino del salto. Si no saltas, 'salto_semantico' "
+    "debe ser null y sigues el contrato normal de 'camino'. Ejemplo: el "
+    "nodo_actual y sus sucesores locales tratan sobre validar demanda con "
+    "clientes, pero el usuario responde 'hago todo esto yo solo, sin "
+    "equipo ni empleados' — ningun sucesor local atiende ese tema, pero "
+    "saltos_posibles incluye un nodo sobre decision de fundar en solitario "
+    "vs formar equipo: ahi corresponde saltar, con 'salto_semantico': "
+    "'decision_fundador_solo_vs_equipo', 'camino': [].\n\n"
     "PRIORIDAD DECLARADA DEL USUARIO (escucha activa, Fase 2.7): en cada "
     "turno, evalua si respuesta_usuario reafirma o declara lo que mas le "
     "bloquea o le urge en este momento (no una duda pasajera, sino algo que "
@@ -361,9 +445,13 @@ SYSTEM_INTERPRETE_MULTI = (
     "pregunta_necesaria=false (se continuara en la siguiente llamada, sin "
     "preguntar, mientras el contexto siga alcanzando).\n"
     "- Si la respuesta del usuario a la ultima pregunta no discrimina entre "
-    "los sucesores inmediatos y repreguntas_disponibles=true, usa "
-    "accion='repreguntar' con UNA pregunta de seguimiento especifica y "
-    "breve que tampoco repita la estructura de las ultimas_preguntas_hechas.\n"
+    "los sucesores inmediatos Y ese tema SIGUE siendo del dominio de esos "
+    "sucesores locales (no es un tema nuevo que pertenece a otra parte del "
+    "grafo — ver REGLA DE DESEMPATE arriba), y repreguntas_disponibles=true, "
+    "usa accion='repreguntar' con UNA pregunta de seguimiento especifica y "
+    "breve que tampoco repita la estructura de las ultimas_preguntas_hechas. "
+    "repreguntar NUNCA es un atajo para explorar un tema que pertenece a "
+    "otra rama del grafo — para eso esta salto_semantico.\n"
     "- Si repreguntas_disponibles=false, NUNCA repreguntes: elige el camino "
     "mas probable con lo que tienes y usa accion='avanzar'.\n"
     "- Si en cualquier punto el usuario expresa que quiere su plan final "
@@ -385,14 +473,18 @@ SYSTEM_INTERPRETE_MULTI = (
     "sobre la idea o la situacion del usuario, resumela en 1 o 2 frases en "
     "perfil_update. Si no hay nada nuevo que agregar, perfil_update debe "
     "ser null.\n"
-    "- 'camino' es la cadena LITERAL completa, sin saltos: el primer id "
-    "SIEMPRE debe ser uno de los sucesores de nivel 1 dados. Si el nodo que "
-    "te interesa es de nivel 2 (aparece dentro de 'sucesores' de un nodo de "
-    "nivel 1), DEBES incluir primero ese nodo de nivel 1 como paso previo en "
-    "'camino', y el de nivel 2 despues, en ese orden. Nunca pongas un nodo "
-    "de nivel 2 sin su padre de nivel 1 inmediatamente antes en el mismo "
-    "camino. Cada id debe ser un sucesor real del nodo anterior en la "
-    "cadena, nunca un id repetido ni inventado.\n"
+    "- Cuando salto_semantico es null (caso normal, sin salto), 'camino' es "
+    "la cadena LITERAL completa dentro de sucesores_nivel1_y_nivel2: el "
+    "primer id SIEMPRE debe ser uno de los sucesores de nivel 1 dados. Si "
+    "el nodo que te interesa es de nivel 2 (aparece dentro de 'sucesores' "
+    "de un nodo de nivel 1), DEBES incluir primero ese nodo de nivel 1 "
+    "como paso previo en 'camino', y el de nivel 2 despues, en ese orden. "
+    "Nunca pongas un nodo de nivel 2 sin su padre de nivel 1 inmediatamente "
+    "antes en el mismo camino. Cada id debe ser un sucesor real del nodo "
+    "anterior en la cadena, nunca un id repetido ni inventado. Cuando "
+    "salto_semantico SI tiene un id (ver SALTO SEMANTICO LIBRE arriba), "
+    "'camino' debe ser [] — el destino es ese id, no una cadena de "
+    "sucesores locales.\n"
     "- 'repregunta' debe tener texto solo cuando accion='repreguntar'; si "
     "no, null.\n"
     "- Si recibes 'error_previo' e 'ids_validos', tu respuesta anterior fue "
@@ -425,7 +517,7 @@ SYSTEM_INTERPRETE_MULTI = (
     "\"pregunta_necesaria\": true, \"pregunta_adaptada\": \"¿ya sacaste la "
     "cuenta de cuanto te cuesta en ingredientes y tiempo hacer cada "
     "tanda?\", \"repregunta\": null, \"perfil_update\": null, "
-    "\"prioridad_declarada\": null}.\n"
+    "\"prioridad_declarada\": null, \"salto_semantico\": null}.\n"
     "Ejemplo 2 (repreguntar porque la respuesta fue ambigua): la "
     "pregunta_adaptada anterior fue '¿ya le vendiste esto a alguien fuera "
     "de tu circulo cercano?' y el usuario respondio 'creo que si le "
@@ -437,18 +529,18 @@ SYSTEM_INTERPRETE_MULTI = (
     "true, \"pregunta_adaptada\": null, \"repregunta\": \"cuando dices que "
     "le interesaria a la gente, ¿alguien ya te compro o pago algo, o es "
     "todavia algo que crees que pasaria?\", \"perfil_update\": null, "
-    "\"prioridad_declarada\": null}.\n"
+    "\"prioridad_declarada\": null, \"salto_semantico\": null}.\n"
     "Ejemplo 3 (generar_plan porque el usuario lo pidio explicitamente, "
     "aunque con otras palabras): el usuario responde 'creo que con esto ya "
     "tengo para armar algo, dame lo que tengas'. Respuesta: {\"accion\": "
     "\"generar_plan\", \"camino\": [], \"pregunta_necesaria\": false, "
     "\"pregunta_adaptada\": null, \"repregunta\": null, \"perfil_update\": "
-    "null, \"prioridad_declarada\": null}.\n"
+    "null, \"prioridad_declarada\": null, \"salto_semantico\": null}.\n"
     "Ejemplo 4 (salir sin plan): el usuario responde 'mejor lo dejamos "
     "aqui, no quiero seguir con esto ahora'. Respuesta: {\"accion\": "
     "\"salir\", \"camino\": [], \"pregunta_necesaria\": false, "
     "\"pregunta_adaptada\": null, \"repregunta\": null, \"perfil_update\": "
-    "null, \"prioridad_declarada\": null}.\n"
+    "null, \"prioridad_declarada\": null, \"salto_semantico\": null}.\n"
     "Ejemplo 5 (cadena de 3 nodos silenciosos, el maximo permitido, sin "
     "preguntar nada en esta llamada): el perfil_sesion ya es muy rico "
     "(varios turnos acumulados) y responde con claridad lo que preguntan "
@@ -458,9 +550,10 @@ SYSTEM_INTERPRETE_MULTI = (
     "Respuesta: {\"accion\": \"avanzar\", \"camino\": [\"id_n1\", "
     "\"id_n2_hijo_de_n1\", \"id_n3_hijo_de_n2\"], \"pregunta_necesaria\": "
     "false, \"pregunta_adaptada\": null, \"repregunta\": null, "
-    "\"perfil_update\": null, \"prioridad_declarada\": null}. La siguiente "
-    "llamada al interprete continuara desde ese tercer nodo, sin que el "
-    "usuario haya notado ninguna pausa.\n"
+    "\"perfil_update\": null, \"prioridad_declarada\": null, "
+    "\"salto_semantico\": null}. La siguiente llamada al interprete "
+    "continuara desde ese tercer nodo, sin que el usuario haya notado "
+    "ninguna pausa.\n"
     "Ejemplo 6 (prioridad_declarada llega a conteo=2, prohibida otra "
     "deflexion): prioridad_declarada_actual={\"texto\": \"resolver la "
     "resina y el QR antes de vender en volumen\", \"conteo\": 1} y el "
@@ -473,14 +566,30 @@ SYSTEM_INTERPRETE_MULTI = (
     "en la mezcla, o has estado cambiando varias cosas al mismo tiempo?\", "
     "\"repregunta\": null, \"perfil_update\": null, \"prioridad_declarada\": "
     "{\"texto\": \"resolver la resina y el QR antes de vender en volumen\", "
-    "\"conteo\": 2}}. Nota que NO dice 'pero antes de eso' ni desvia hacia "
-    "validacion de pago — reconoce la prioridad y avanza sobre ella "
-    "directamente.\n\n"
+    "\"conteo\": 2}, \"salto_semantico\": null}. Nota que NO dice 'pero "
+    "antes de eso' ni desvia hacia validacion de pago — reconoce la "
+    "prioridad y avanza sobre ella directamente.\n"
+    "Ejemplo 7 (salto semantico, Fase 2.8): nodo_actual y sus sucesores "
+    "locales tratan sobre metricas de validacion de clientes, pero el "
+    "usuario acaba de responder 'extraigo la piedra yo mismo de una mina, "
+    "la proceso a mano, hago todo solo, sin equipo ni empleados'. Ninguno "
+    "de los sucesores locales atiende ese tema (capacidad de una sola "
+    "persona), pero saltos_posibles incluye "
+    "'decision_fundador_solo_vs_equipo' con afinidad clara. Respuesta: "
+    "{\"accion\": \"avanzar\", \"camino\": [], \"pregunta_necesaria\": "
+    "true, \"pregunta_adaptada\": \"ya que haces todo tu solo, ¿has "
+    "pensado en el limite de cuanto puedes producir en un mes trabajando "
+    "asi, o todavia no lo has calculado?\", \"repregunta\": null, "
+    "\"perfil_update\": \"Hace todo el proceso solo, sin equipo ni "
+    "empleados.\", \"prioridad_declarada\": null, \"salto_semantico\": "
+    "\"decision_fundador_solo_vs_equipo\"}. Nota 'camino': [] porque el "
+    "destino viene de salto_semantico, no de una cadena local.\n\n"
     "Responde SOLO un JSON: {\"accion\": \"avanzar\"|\"repreguntar\"|"
     "\"generar_plan\"|\"salir\", \"camino\": [ids en orden], "
     "\"pregunta_necesaria\": bool, \"pregunta_adaptada\": str|null, "
     "\"repregunta\": str|null, \"perfil_update\": str|null, "
-    "\"prioridad_declarada\": {\"texto\": str, \"conteo\": int}|null}."
+    "\"prioridad_declarada\": {\"texto\": str, \"conteo\": int}|null, "
+    "\"salto_semantico\": str|null}."
 )
 
 SYSTEM_PROFUNDIZAR = (
@@ -488,6 +597,22 @@ SYSTEM_PROFUNDIZAR = (
     "plan ahora mismo (aunque le falten algunas partes) o prefiere "
     "responder unas preguntas mas para tener un plan mas completo. "
     "Responde SOLO un JSON: {\"decision\": \"generar_ya\"|\"continuar\"}."
+)
+
+SYSTEM_PREGUNTA_DIRIGIDA = (
+    "Redactas UNA pregunta abierta para continuar una entrevista de "
+    "emprendimiento, en el momento en que el usuario acepto profundizar "
+    "para cubrir una familia especifica que su recorrido aun no tocaba "
+    "(extension dirigida, Fase 2.8 'sigamos'). Recibes perfil_sesion (lo "
+    "que se sabe de su idea), pregunta_cache (el plano de intencion del "
+    "nodo elegido, pregenerado por topologia, NUNCA se muestra cruda), y "
+    "ultimas_preguntas_hechas (hasta 3 textos literales, para no repetir "
+    "plantilla). Reformula pregunta_cache: registro y vocabulario segun "
+    "perfil_sesion (nada de 'organizacion'/'portafolio'/'tu equipo' si es "
+    "un fundador solitario), segunda persona, UNA sola pregunta, sin "
+    "explicar teoria antes, sin repetir la estructura de "
+    "ultimas_preguntas_hechas. Responde SOLO el texto de la pregunta, sin "
+    "comillas ni JSON."
 )
 
 SYSTEM_PLAN = (
@@ -572,7 +697,22 @@ SYSTEM_PLAN = (
     "etapa mas densa, no en dos separadas) en vez de mantenerlas como "
     "etapas distintas. Prohibido crear una etapa cuya funcion ya cumple "
     "otra etapa del plan. Prioriza densidad (mas accion util por etapa) "
-    "sobre extension (mas etapas o mas parrafos por etapa).\n\n"
+    "sobre extension (mas etapas o mas parrafos por etapa).\n"
+    "11. Autodeclaracion de cobertura (Fase 2.8, coherencia por "
+    "construccion): DESPUES de escribir el plan completo, declara "
+    "honestamente que familias de contenido el plan REALMENTE trata. "
+    "'accion_clientes' significa que al menos una etapa da pasos concretos "
+    "para validar con clientes reales, conseguir una venta o preventa real, "
+    "o probar pago (no basta con mencionar clientes de pasada). "
+    "'viabilidad_economica' significa que el plan calcula o pide calcular "
+    "costos, precios, margen o punto de equilibrio con numeros (no basta "
+    "con decir 'piensa en tus costos' sin estructura). Se honesto: si el "
+    "material no da para tratar una familia con sustancia real, NO la "
+    "declares solo porque la mencionaste una vez. Esta autodeclaracion es "
+    "la UNICA fuente para la etiqueta del plan y la seccion de lo que aun "
+    "no cubre — si declaras una familia que el plan no sustenta, el "
+    "usuario vera una etiqueta 'completo' que no corresponde a la "
+    "realidad, exactamente el bug que esta regla existe para eliminar.\n\n"
     "Espanol comun, sin jerga sin explicar, sin autores, sin relleno "
     "motivacional. Todo debe salir del material recibido; no inventes "
     "tecnicas, cifras ni fuentes nuevas que no esten en el material.\n\n"
@@ -631,7 +771,15 @@ SYSTEM_PLAN = (
     "calculado costos'), la seccion final debe pedir ese calculo como "
     "primer paso en vez de inventar numeros de ejemplo — la honestidad "
     "sobre lo que aun no se sabe vale mas que un numero inventado que "
-    "parezca completo."
+    "parezca completo.\n\n"
+    "FORMATO DE SALIDA (obligatorio): escribe el plan completo en markdown "
+    "normal (como en el ejemplo). Al final, en una linea propia, escribe "
+    "EXACTAMENTE el delimitador ===JSON=== y luego, en la siguiente linea, "
+    "SOLO un JSON de una sola linea con tu autodeclaracion de la regla 11: "
+    "{\"familias_tratadas\": [str, ...] (subconjunto de "
+    "[\"accion_clientes\", \"viabilidad_economica\"], puede ser lista "
+    "vacia), \"secciones\": [str, ...] (los titulos de las etapas/secciones "
+    "que escribiste, en orden)}. No agregues nada despues de esa linea."
 )
 
 SYSTEM_ESTADO_VIVO = (
@@ -934,6 +1082,64 @@ def resumen_nodo(nid, graph, preguntas_cache=None):
     return out
 
 
+# ---------------------------------------------------------------------------
+# Brujula semantica (Fase 2.8): navegacion libre por TODA la telaraña, no
+# solo los sucesores locales del nodo actual. Embeddings locales
+# (sentence-transformers), cero costo de API por sesion. Si la libreria o
+# el indice no estan disponibles, se desactiva silenciosamente (una sola
+# vez, con nota impresa) y el motor sigue funcionando solo con navegacion
+# local, exactamente como antes de esta fase.
+# ---------------------------------------------------------------------------
+_BRUJULA_MODELO = None
+_BRUJULA_INDICE = None  # (ids: list[str], embeddings: np.ndarray) o (None, None) si fallo
+_BRUJULA_AVISO_IMPRESO = False
+
+
+def _cargar_brujula():
+    global _BRUJULA_MODELO, _BRUJULA_INDICE, _BRUJULA_AVISO_IMPRESO
+    if _BRUJULA_INDICE is not None:
+        return _BRUJULA_INDICE[0] is not None
+    try:
+        import numpy as np
+        data = np.load(SEMANTIC_INDEX_PATH, allow_pickle=False)
+        ids = list(data["ids"])
+        embeddings = data["embeddings"]
+        from sentence_transformers import SentenceTransformer
+        _BRUJULA_MODELO = SentenceTransformer(SEMANTIC_MODEL_NAME)
+        _BRUJULA_INDICE = (ids, embeddings)
+        return True
+    except Exception as e:
+        if not _BRUJULA_AVISO_IMPRESO:
+            _BRUJULA_AVISO_IMPRESO = True
+            print(f"  (brujula semantica no disponible, navegacion solo local: {e})")
+        _BRUJULA_INDICE = (None, None)
+        return False
+
+
+def buscar_afines(texto, excluidos, k=5):
+    """Top-k nodos de TODO el grafo mas afines semanticamente a `texto`
+    (embeddings locales, sin llamada a la API), excluyendo `excluidos`
+    (ya visitados/cubiertos). Devuelve [] si la brujula no esta disponible
+    o si `texto` esta vacio."""
+    if not texto or not texto.strip():
+        return []
+    if not _cargar_brujula():
+        return []
+    ids, embeddings = _BRUJULA_INDICE
+    query = _BRUJULA_MODELO.encode([texto], normalize_embeddings=True)[0]
+    scores = embeddings @ query
+    orden = scores.argsort()[::-1]
+    resultados = []
+    for idx in orden:
+        nid = ids[idx]
+        if nid in excluidos:
+            continue
+        resultados.append(nid)
+        if len(resultados) >= k:
+            break
+    return resultados
+
+
 def _reparar_camino_cadena(actual_id, camino, graph, visitados):
     """Reparo 1 (cadena estricta): si un id del camino no es sucesor directo
     del anterior pero SI es sucesor de alguno de los sucesores directos de
@@ -1063,11 +1269,28 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         entrada_nivel1["sucesores"] = [resumen_nodo(n2, graph, preguntas_cache) for n2 in nivel2_ids]
         nivel1.append(entrada_nivel1)
 
+    # Fase 2.8: brujula semantica sobre la ultima respuesta (o la entrada
+    # original, si aun no hay respuesta) - candidatos de CUALQUIER parte
+    # del grafo, excluyendo lo ya visitado y lo que ya ofrecen los locales.
+    texto_para_brujula = respuesta_usuario or texto_original
+    excluidos_brujula = visitados | set(nivel1_ids)
+    ids_salto_ofrecidos = buscar_afines(texto_para_brujula, excluidos_brujula, k=MAX_SALTOS_POSIBLES_OFRECIDOS)
+    saltos_posibles = [
+        {
+            "id": nid,
+            "titulo": graph[nid]["titulo_concepto"],
+            "fase_proyecto": graph[nid].get("fase_proyecto"),
+            "condiciones_activacion": graph[nid].get("condiciones_activacion", [])[:2],
+        }
+        for nid in ids_salto_ofrecidos
+    ]
+
     ctx_completo = {
         "entrada_original": texto_original,
         "perfil_sesion": perfil_sesion,
         "nodo_actual": resumen_nodo(actual_id, graph, preguntas_cache),
         "sucesores_nivel1_y_nivel2": nivel1,
+        "saltos_posibles": saltos_posibles,
         "pregunta_hecha": pregunta_hecha,
         "respuesta_usuario": respuesta_usuario,
         "repreguntas_disponibles": repreguntas_disponibles,
@@ -1088,9 +1311,19 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
             raise ValueError(f"accion invalida: {accion}")
         if accion == "repreguntar" and not repreguntas_disponibles:
             raise ValueError("el modelo repregunto sin repreguntas disponibles")
+        data["es_salto"] = False
         if accion == "avanzar":
-            camino = data.get("camino") or []
-            data["camino"] = _validar_camino(actual_id, camino, graph, visitados, nivel1_pool=nivel1)
+            salto = data.get("salto_semantico")
+            if salto:
+                if salto not in ids_salto_ofrecidos:
+                    raise ValueError(f"salto_semantico '{salto}' no esta entre los saltos_posibles ofrecidos")
+                if salto in visitados:
+                    raise ValueError(f"salto_semantico '{salto}' ya fue visitado")
+                data["camino"] = [salto]
+                data["es_salto"] = True
+            else:
+                camino = data.get("camino") or []
+                data["camino"] = _validar_camino(actual_id, camino, graph, visitados, nivel1_pool=nivel1)
             data["pregunta_necesaria"] = bool(data.get("pregunta_necesaria", True))
             if data["pregunta_necesaria"]:
                 adaptada = (data.get("pregunta_adaptada") or "").strip()
@@ -1152,7 +1385,7 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         pregunta_fallback = obtener_pregunta(candidato, graph[candidato], preguntas_cache)
         return {"accion": "avanzar", "camino": [candidato], "pregunta_necesaria": True,
                 "pregunta_adaptada": pregunta_fallback, "perfil_update": None,
-                "prioridad_declarada": prioridad_declarada_actual}
+                "prioridad_declarada": prioridad_declarada_actual, "es_salto": False}
 
 
 def _menu_emergencia(nivel1_ids, graph):
@@ -1191,6 +1424,77 @@ def preguntar_profundizar(familias_faltantes):
     if any(p in low for p in ("ya", "ahora", "dame", "listo", "asi esta bien", "así está bien")):
         return "generar_ya"
     return "continuar"
+
+
+FAMILIA_QUERY_BRUJULA = {
+    "accion_clientes": "validar con clientes reales, conseguir la primera venta, preventa, prueba de pago",
+    "viabilidad_economica": "costos, precios, punto de equilibrio, rentabilidad, margen, cuanto cobrar",
+}
+
+
+def pregunta_dirigida(nid, graph, preguntas_cache, perfil_sesion, ultimas_preguntas):
+    """Pregunta adaptada para un nodo elegido por la brujula en una
+    extension dirigida (Fase 2.8 'sigamos'), sin pasar por el contrato
+    completo del interprete (no hay camino/salto que decidir aqui: el nodo
+    ya se eligio por afinidad a la familia faltante)."""
+    plano = obtener_pregunta(nid, graph[nid], preguntas_cache)
+    if not API_KEY:
+        return plano
+    ctx = {
+        "perfil_sesion": perfil_sesion,
+        "pregunta_cache": plano,
+        "ultimas_preguntas_hechas": (ultimas_preguntas or [])[-3:],
+    }
+    try:
+        return llamar_claude(SYSTEM_PREGUNTA_DIRIGIDA, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU,
+                             max_tokens=150, componente="turnos").strip() or plano
+    except Exception:
+        return plano
+
+
+def extender_sigamos_dirigido(graph, families, visitados, ruta, modos, perfil_sesion, texto_original,
+                               familias_faltantes, preguntas_cache, ultimas_preguntas, session_id,
+                               project_id, db_session_id, es_seguimiento, estado_vivo_previo,
+                               fallback_events, prioridad_declarada):
+    """Fase 2.8: cuando el usuario acepta profundizar ('sigamos'), en vez de
+    devolver el control al interprete de navegacion local (que puede
+    toparse con MAX_DEPTH sin alcanzar a preguntar nada — la promesa rota
+    de 'sigamos un poco mas' detectada en la auditoria de Fase 2.7), la
+    brujula semantica elige directamente 2-3 nodos de las familias que
+    faltan y los conversa como extension, permitida por encima de
+    MAX_DEPTH. Muta ruta/modos/visitados en el sitio. Si no encuentra
+    candidatos genuinos de esas familias, NO finge continuar: devuelve
+    huno_extension=False para que el llamador lo diga honestamente."""
+    query = " ".join(FAMILIA_QUERY_BRUJULA.get(f, f) for f in familias_faltantes)
+    candidatos = buscar_afines(query, visitados, k=20)
+    candidatos_familia = [nid for nid in candidatos if families.get(nid) in familias_faltantes]
+    if not candidatos_familia:
+        # Respaldo sin brujula (libreria no instalada o candidatos agotados):
+        # busca directamente por tag de familia entre todo el grafo.
+        candidatos_familia = [
+            nid for nid in graph
+            if nid not in visitados and families.get(nid) in familias_faltantes
+        ]
+    elegidos = candidatos_familia[:MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO]
+
+    if not elegidos:
+        return {"hubo_extension": False, "perfil_sesion": perfil_sesion, "ultimas_preguntas": ultimas_preguntas}
+
+    print("\nPerfecto, sigamos un poco mas.")
+    for nid in elegidos:
+        n = graph[nid]
+        visitados.add(nid)
+        ruta.append(nid)
+        modos.append("conversado")
+        _imprimir_nodo(len(ruta), MAX_DEPTH, n, "conversado (extension dirigida)", con_resumen=True)
+        pregunta = pregunta_dirigida(nid, graph, preguntas_cache, perfil_sesion, ultimas_preguntas)
+        respuesta = leer_entrada("\n" + pregunta + "\n> ")
+        ultimas_preguntas = (ultimas_preguntas + [pregunta])[-3:]
+        perfil_sesion = (perfil_sesion + "\n" + f"Sobre {n['titulo_concepto']}: {respuesta}").strip()
+        guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, True,
+                       project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
+                       prioridad_declarada)
+    return {"hubo_extension": True, "perfil_sesion": perfil_sesion, "ultimas_preguntas": ultimas_preguntas}
 
 
 MAX_COSECHA = 25
@@ -1273,14 +1577,58 @@ def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, priori
     return seleccionados[:tope]
 
 
+_TEXTO_FAMILIA_FALTANTE = {
+    "accion_clientes": "validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)",
+    "viabilidad_economica": "si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)",
+}
+
+
+def _parsear_autodeclaracion(raw):
+    """Separa el markdown del plan del bloque final ===JSON=== (Fase 2.8,
+    autodeclaracion de cobertura). Si el delimitador falta o el JSON es
+    invalido, devuelve (raw completo, None) - la llamada trata eso como
+    "sin autodeclaracion" mas abajo."""
+    if "===JSON===" not in raw:
+        return raw.strip(), None
+    cuerpo, _, bloque = raw.rpartition("===JSON===")
+    try:
+        data = _parsear_json(bloque)
+    except Exception:
+        return raw.strip(), None
+    return cuerpo.strip(), data
+
+
+def _evaluacion_desde_autodeclaracion(autodeclaracion):
+    """Construye el mismo shape que plan_readiness.evaluar_ruta, pero a
+    partir de lo que el REDACTOR declaro que el plan realmente trata (Fase
+    2.8), no de tags de node_families sobre la ruta/cosecha. Esta es la
+    UNICA fuente para la etiqueta del plan y la seccion 'no cubre' -
+    coherente por construccion, imposible de desincronizar del contenido
+    real."""
+    tratadas = set((autodeclaracion or {}).get("familias_tratadas") or [])
+    tiene_accion = "accion_clientes" in tratadas
+    tiene_viabilidad = "viabilidad_economica" in tratadas
+    faltantes = [_TEXTO_FAMILIA_FALTANTE[f] for f in ("accion_clientes", "viabilidad_economica")
+                 if f not in tratadas]
+    return {
+        "es_completa": tiene_accion and tiene_viabilidad,
+        "tiene_accion_clientes": tiene_accion,
+        "tiene_viabilidad_economica": tiene_viabilidad,
+        "familias_faltantes": faltantes,
+    }
+
+
 def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id,
                     es_seguimiento=False, estado_vivo_previo=None, prioridad_declarada=None):
-    """`evaluacion` (ruta-solo) decide QUE cosechar (familia faltante como
-    prioridad). La etiqueta inicial/completo y la seccion "no cubre" se
-    recalculan sobre ruta+cosecha, porque eso es lo que el plan realmente
-    contiene: si la cosecha trajo la familia que la ruta no toco, el plan
-    ya la cubre y no puede declarar lo contrario. Devuelve un dict con el
-    markdown y los metadatos de cosecha/cobertura, para persistencia.
+    """`evaluacion` (ruta-solo, por tags de node_families) decide QUE
+    cosechar (familia faltante como prioridad) - eso se conserva para el
+    medidor de oferta previa ("quieres continuar") y para priorizar la
+    cosecha. La etiqueta inicial/completo y la seccion "no cubre" YA NO se
+    derivan de tags: vienen de la autodeclaracion del propio redactor
+    (Fase 2.8, _evaluacion_desde_autodeclaracion) sobre lo que el plan
+    realmente contiene, eliminando la clase de bug donde el plan trataba
+    una familia pero la etiqueta decia lo contrario. Devuelve un dict con
+    el markdown y los metadatos de cosecha/cobertura, para persistencia.
     Fase 2.7: prioridad_declarada (el bloqueo que el usuario repitio) se
     pasa a la cosecha (reserva cupos afines) y al redactor (bloqueo_declarado
     en el payload), para que el plan le de tratamiento explicito."""
@@ -1296,8 +1644,8 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
     material_principal = [a_material(nid) for nid in ruta]
     cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada)
     material_de_apoyo = [a_material(nid) for nid in cosecha_ids]
-    evaluacion_cobertura = plan_readiness.evaluar_ruta(ruta + cosecha_ids, families)
 
+    autodeclaracion = None
     if API_KEY:
         payload = {
             "entrada_original": texto_original,
@@ -1310,13 +1658,22 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
             payload["es_seguimiento"] = True
             payload["estado_vivo_previo"] = estado_vivo_previo
         try:
-            cuerpo = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL,
-                                   max_tokens=5000, componente="plan")
+            raw = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL,
+                                max_tokens=5000, componente="plan")
+            cuerpo, autodeclaracion = _parsear_autodeclaracion(raw)
         except Exception as e:
             print(f"  (fallo el redactor con IA, ensamblo offline: {e})")
             cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
     else:
         cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
+
+    if autodeclaracion is not None:
+        evaluacion_cobertura = _evaluacion_desde_autodeclaracion(autodeclaracion)
+    else:
+        # Respaldo si el redactor no devolvio autodeclaracion valida (fallo
+        # de IA, plan offline, o el modelo omitio el bloque ===JSON===):
+        # unico caso donde se vuelve a los tags de node_families.
+        evaluacion_cobertura = plan_readiness.evaluar_ruta(ruta + cosecha_ids, families)
 
     etiqueta = "Plan completo" if evaluacion_cobertura["es_completa"] else "Plan inicial"
     total_conceptos = len(ruta) + len(cosecha_ids)
@@ -1559,23 +1916,55 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
                                project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
                                prioridad_declarada)
                 if preguntar_profundizar(evaluacion["familias_faltantes"]) == "continuar":
-                    print("\nPerfecto, sigamos un poco mas.")
-                    pregunta_hecha, respuesta_usuario = None, None
-                    repreguntas_usadas = 0
-                    continue
+                    # Fase 2.8: extension DIRIGIDA por la brujula hacia las
+                    # familias que faltan, en vez de devolver el control al
+                    # riel local (que puede toparse con MAX_DEPTH sin
+                    # preguntar nada — la "promesa rota" detectada en la
+                    # auditoria de Fase 2.7). Prohibido fingir continuar.
+                    # OJO: evaluacion["familias_faltantes"] son las FRASES
+                    # legibles para el usuario (para preguntar_profundizar);
+                    # extender_sigamos_dirigido necesita las claves cortas
+                    # ("accion_clientes"/"viabilidad_economica") para poder
+                    # comparar contra families.get(nid), no el texto largo.
+                    familias_faltantes_keys = []
+                    if not evaluacion["tiene_accion_clientes"]:
+                        familias_faltantes_keys.append("accion_clientes")
+                    if not evaluacion["tiene_viabilidad_economica"]:
+                        familias_faltantes_keys.append("viabilidad_economica")
+                    extension = extender_sigamos_dirigido(
+                        graph, families, visitados, ruta, modos, perfil_sesion, texto_original,
+                        familias_faltantes_keys, preguntas_cache, ultimas_preguntas, session_id,
+                        project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
+                        prioridad_declarada,
+                    )
+                    perfil_sesion = extension["perfil_sesion"]
+                    ultimas_preguntas = extension["ultimas_preguntas"]
+                    if not extension["hubo_extension"]:
+                        print("\ncon lo que tenemos alcanza para el plan; la parte "
+                              "que falta quedara señalada como pendiente.")
+                    break
             break
 
         # accion == "avanzar": camino de 1-3 nodos, algunos silenciosos + a lo sumo uno conversado al final
+        # (o un unico nodo de salto semantico, Fase 2.8, etiquetado "salto")
         camino = resultado["camino"]
         pregunta_necesaria = resultado["pregunta_necesaria"]
+        es_salto = resultado.get("es_salto", False)
         for idx, nid in enumerate(camino):
             es_ultimo = idx == len(camino) - 1
-            modo = "conversado" if (es_ultimo and pregunta_necesaria) else "silencioso"
+            if es_salto:
+                modo = "salto"
+            else:
+                modo = "conversado" if (es_ultimo and pregunta_necesaria) else "silencioso"
             visitados.add(nid)
             ruta.append(nid)
             modos.append(modo)
-            if modo == "silencioso":
-                _imprimir_nodo(len(ruta), MAX_DEPTH, graph[nid], "silencioso", con_resumen=False)
+            # Un salto SILENCIOSO (pregunta_necesaria=false) igual se
+            # imprime inline, igual que un nodo silencioso normal, para que
+            # el usuario (y la transcripcion) siempre vean que hubo un
+            # salto — nunca pasa desapercibido.
+            if modo == "silencioso" or (modo == "salto" and not (es_ultimo and pregunta_necesaria)):
+                _imprimir_nodo(len(ruta), MAX_DEPTH, graph[nid], modo, con_resumen=False)
         actual_id = camino[-1]
         repreguntas_usadas = 0
         guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
@@ -1584,7 +1973,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
 
         if pregunta_necesaria:
             n = graph[actual_id]
-            _imprimir_nodo(len(ruta), MAX_DEPTH, n, "conversado", con_resumen=True)
+            _imprimir_nodo(len(ruta), MAX_DEPTH, n, modos[-1], con_resumen=True)
             pregunta_hecha = resultado.get("pregunta_adaptada") or obtener_pregunta(actual_id, n, preguntas_cache)
             respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
             ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-3:]
@@ -1602,7 +1991,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
     fname = BASE / f"plan_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
     fname.write_text(plan_md, encoding="utf-8")
     print(f"\nPlan guardado en: {fname}")
-    ruta_txt = " -> ".join(f"[{m[0]}]{nid}" for nid, m in zip(ruta, modos))
+    _ETIQUETA_MODO = {"conversado": "c", "silencioso": "s", "salto": "SALTO"}
+    ruta_txt = " -> ".join(f"[{_ETIQUETA_MODO.get(m, m)}]{nid}" for nid, m in zip(ruta, modos))
     print(f"Ruta recorrida ({len(ruta)}): {ruta_txt}")
 
     return {

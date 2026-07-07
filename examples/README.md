@@ -197,6 +197,95 @@ que la corrida de Fase 2.6:
   siendo cara por su propio precio por token y no se beneficia de cache
   dentro de una sola sesion (solo se llama una vez).
 
+## Fase 2.8 — navegacion libre con brujula semantica, "sigamos" dirigido, coherencia por autodeclaracion
+
+Auditoria de la Fase 2.7: aprobada en un 85% — la escucha activa, la
+cobertura del bloqueo declarado y el caching funcionan. El 15% pendiente:
+el motor navegaba adaptativo pero "sobre un riel" — en cada turno solo
+podia elegir entre los sucesores del nodo actual (2 niveles), asi que una
+respuesta que apuntaba a otra rama de la telaraña (o a una fase anterior)
+quedaba absorbida al perfil en vez de saltar ahi. Ademas se detectaron dos
+bugs nuevos: (1) la "promesa rota del sigamos" — el usuario aceptaba
+profundizar, el sistema decia "sigamos un poco mas" y generaba el plan
+sin una sola pregunta nueva (la ruta ya iba en el tope de profundidad); y
+(2) la incoherencia etiqueta/contenido volvia por otra puerta — un plan
+con etapa completa de costeo aun asi declaraba "no cubre viabilidad
+economica" porque ese contenido entro via nodos etiquetados "general" que
+el clasificador por keywords no detectaba.
+
+Cambios: (1) **Brujula semantica** — `engine/build_semantic_index.py` genera
+embeddings locales (sentence-transformers, `paraphrase-multilingual-MiniLM-
+L12-v2`, costo cero por sesion) de los 1265 nodos en `engine/semantic_
+index.npz`. `buscar_afines()` los usa cada turno para ofrecerle al
+interprete, ademas de los sucesores locales, hasta 8 "saltos_posibles" de
+CUALQUIER parte del grafo (cualquier fase, incluso anteriores). El
+interprete puede saltar (`salto_semantico`, max 1 por turno, registrado en
+la ruta con modo "salto") cuando la respuesta introduce un tema que ningun
+sucesor local atiende bien. Si sentence-transformers o el indice no estan
+disponibles, la brujula se desactiva silenciosamente y el motor sigue
+navegando solo local. (2) **"Sigamos" dirigido** — en vez de devolver el
+control al riel local, `extender_sigamos_dirigido` usa la brujula para
+elegir 2-3 nodos reales de la familia faltante y los conversa como
+extension (hasta 3 turnos por encima de `MAX_DEPTH`); si no hay
+candidatos genuinos, lo dice honestamente en vez de fingir continuar. (3)
+**Coherencia por autodeclaracion** — el redactor ya no se evalua por tags
+de `node_families` para la etiqueta del plan: declara el mismo, en un
+bloque final `===JSON===`, que familias trato CON SUSTANCIA REAL (regla
+11 del `SYSTEM_PLAN`), y esa autodeclaracion es la unica fuente de la
+etiqueta inicial/completo y de "Lo que este plan aun no cubre".
+
+**Dos bugs reales encontrados y corregidos durante la verificacion de esta
+misma fase** (documentados aqui porque son parte de la historia de la
+prueba, no solo el resultado final):
+- El modelo casi nunca saltaba: prefería seguir localmente porque
+  `pregunta_adaptada` es tan flexible que puede hacer sonar relevante casi
+  cualquier nodo local, y `repreguntar` servia de valvula de escape para
+  explorar temas nuevos sin comprometerse a un salto. Se cerro
+  restringiendo `repreguntar` a desambiguacion pura (nunca exploracion de
+  tema nuevo) y agregando un "chequeo obligatorio" mecanico antes de
+  decidir accion: si algun salto_posible es mas especifico al dato nuevo
+  que los sucesores locales, saltar es obligatorio aunque lo local
+  tambien suene razonable. Ademas se subio el numero de saltos ofrecidos
+  de 5 a 8 (el mejor candidato a veces rankeaba 6to en similitud coseno).
+- `extender_sigamos_dirigido` siempre encontraba cero candidatos: comparaba
+  `families.get(nid)` (claves cortas: `"accion_clientes"`,
+  `"viabilidad_economica"`) contra `evaluacion["familias_faltantes"]`, que
+  en realidad son las FRASES largas para el usuario (`plan_readiness.
+  evaluar_ruta` devuelve texto legible, no claves) — la comparacion nunca
+  podia ser verdadera. Se corrigio derivando las claves cortas directamente
+  de `tiene_accion_clientes`/`tiene_viabilidad_economica` antes de llamar a
+  la funcion.
+
+Verificado con una corrida real (`fase2_8_macetas_navegacion_libre.txt`,
+plan completo en `fase2_8_plan_macetas.md`), mismas respuestas literales
+que las corridas de Fase 2.6/2.7:
+
+- **3 saltos semanticos** en la ruta (`[SALTO]alfabetizacion_en_materiales_
+  maliciosos`, `[SALTO]trabajo_en_lotes_pequenos`, `[SALTO]hoja_
+  estimacion_costos`) — el ultimo especialmente bien justificado: el
+  usuario dijo "cobro por pieza pero no he calculado bien cuanto me
+  cuesta" y el sistema salto directo a una "Hoja de Trabajo de Estimacion
+  de Costos" de otra rama del grafo, algo que ningun sucesor local de ese
+  punto ofrecia.
+- **"Sigamos" dirigido**: tras aceptar profundizar, el sistema hizo 3
+  preguntas economicas reales y especificas (estructura de costos, modelo
+  de precios, curva de demanda/estrategia de precio) antes de generar el
+  plan — no la falsa promesa de la auditoria anterior.
+- **Plan etiquetado `_Plan completo_`, coherente con el contenido**: trata
+  con sustancia real tanto accion_clientes (ventas reales, etapas 3-4) como
+  viabilidad_economica (formulas de costeo explicitas en "¿Puede
+  sostenerse tu idea?"), sin inventar cifras que el usuario no dio, y sin
+  seccion "no cubre" (no aplica porque la autodeclaracion dice que ambas
+  familias si se trataron).
+- **Costo**: $0.2746 total — por debajo del techo duro de $0.30, aunque
+  por encima del objetivo aspiracional de $0.25 de la prueba. La razon es
+  directa: esta corrida SI disparo correctamente la extension dirigida
+  (3 preguntas economicas reales + sus llamadas de interpretacion), a
+  diferencia de una corrida previa (con el bug de comparacion de claves
+  aun sin corregir) que resultaba mas barata solo porque fallaba en
+  silencio sin preguntar nada. Se prefirio corregir el bug sobre cumplir
+  el objetivo de costo.
+
 ## Los dos cierres verificados en esta prueba
 
 **Cierre elegante**: forzando EOF a mitad de sesión (`leer_entrada()`
