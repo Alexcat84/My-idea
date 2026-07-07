@@ -1,0 +1,221 @@
+Hotfix v2.1.2 — sesión en vivo, sin guion, que encontró los bugs
+==================================================================
+
+Metodología: idea inventada en el momento (no reciclada de pruebas
+anteriores), cero respuestas escritas de antemano. Cada respuesta se
+decidió solo después de leer la pregunta real impresa por el motor, con
+llamadas reales a la API (Sonnet/Haiku, sin mocks). Para poder decidir
+turno a turno sin bloquear el proceso, se usó la técnica de "cierre
+elegante" ya existente en el motor: se alimenta una sola línea de stdin,
+se deja que el proceso llegue a EOF (lo que dispara SesionInterrumpida y
+guarda el estado), se lee la pregunta impresa, y se decide la siguiente
+respuesta real antes de invocar --continuar de nuevo.
+
+Idea usada: una tienda de barrio (abarrotes) que quiere ofrecer entregas a
+domicilio por WhatsApp.
+
+
+PARTE 1 — sesión nueva (project 55bd298a-0359-42d5-ba2e-b7f41b7e3cc1)
+----------------------------------------------------------------------
+
+> Tengo una tienda de barrio, un abarrotes chico, y quiero empezar a hacer
+> entregas a domicilio por WhatsApp para la gente del vecindario que no
+> puede salir a comprar. Llevo dos semanas dandole vueltas pero no he
+> hecho nada todavia.
+
+[1/15] MVP de Baja Fidelidad (puerta de entrada)
+[2/15] MVP Conserje (Concierge MVP)
+  "Lo más rápido es que empieces a entregar tu mismo a unos pocos vecinos
+  esta semana... ¿qué necesitarías aprender de esas primeras entregas
+  para saber si la gente de verdad quiere este servicio?"
+
+> Creo que necesitaria saber si la gente esta dispuesta a pagar algo por
+> la entrega, o si solo lo quieren porque es gratis. Y tambien si son
+> pedidos chicos o de verdad vale la pena el viaje.
+
+[3/15] Prueba Mago de Oz — "¿Te animas a probar así en bruto?"
+[4/15] Pivot (silencioso, cubierto)
+[5/15] Modelo de Customer Development (4 Pasos)
+  "¿cómo vas a saber si alguien está interesado de verdad: les preguntas
+  directamente cuánto pagarían, o mejor pruebas a cobrar algo... desde el
+  primer día?"
+
+> Mejor cobro algo desde el primer dia, aunque sea poquito, para ver quien
+> de verdad sigue pidiendo y quien solo queria probar gratis.
+
+[6/15] Customer Discovery
+[7/15] Vender a Earlyvangelists como Primeros Clientes
+  "¿ya sabes cuánto vas a cobrar (por ejemplo, $2, $5, $10 por el envío),
+  o necesitas probar primero...?"
+
+>>> BUG #1, primera aparición (--continuar c8b59f32) <<<
+Al resumir, el proceso NO volvió a mostrar la pregunta de arriba. En vez
+de eso, decidió en frío avanzar a un nodo nuevo:
+
+> Ya lo pense: voy a cobrar 2 dolares por entrega, no importa que tan
+> lejos sea dentro del barrio. Me toma como media hora hacer cada entrega
+> contando el tiempo de armar el pedido y caminar.
+
+[8/15] Construir un Sales Roadmap antes que una Fuerza de Ventas
+  Pregunta A (nueva, no relacionada con lo que acabo de escribir):
+  "¿ya sabes exactamente a quién le vas a escribir primero por WhatsApp...?"
+  → mi respuesta de arriba (sobre el precio) se aplicó A ESTA pregunta,
+    no a la de node 7 que quedó sin responder de verdad.
+  Pregunta B (repregunta, recién generada al ver mi respuesta):
+  "Esos $2 por entrega, ¿ya probaste ese precio con alguien del
+  vecindario, o es lo que calculaste que te parece justo?"
+  → EOF aquí, sin haber podido contestar.
+
+> Es lo que calcule que me parece justo, todavia no se lo he dicho a
+> nadie de verdad.
+
+[9/15] Construir un Toolset de Métricas Clave (silencioso, cubierto)
+[10/15] Fase 2 de Validación de Clientes: Salir a Vender
+  Pregunta A (cold-start otra vez, repite el tema ya cubierto):
+  "¿a cuántas personas del vecindario ya les preguntaste...?"
+  Pregunta B (repregunta real, usa mi respuesta anterior):
+  "Entiendo, calculaste el precio. Ahora bien: ¿ya identificaste a 2 o 3
+  vecinos específicos...?"
+  → EOF de nuevo antes de poder contestar la B.
+
+> Si, ya pense en la señora Rosa que vive sola y en don Pepe que tiene la
+> pierna mala, a esos dos les voy a preguntar primero.
+
+  Cold-start otra vez: "¿hay alguien específico en tu vecindario que
+  sabes que ahora mismo no puede salir a comprar?" (¡la misma pregunta
+  que ACABO de responder, palabra por palabra!)
+[11/15] Optimización del Embudo 'Conseguir Clientes'
+  "Cuando le preguntes a la señora Rosa y a don Pepe, ¿qué les vas a
+  ofrecer exactamente...?"
+
+> Les voy a preguntar que necesitan de la tienda ese dia y se los llevo,
+> no es un catalogo fijo, es mas simple: me dicen por whatsapp que les
+> hace falta y yo se los llevo.
+
+>>> BUG #1, segunda y peor aparición <<<
+Al resumir con esta respuesta, el proceso imprimió directamente:
+
+  "Hasta pronto."
+
+Sin ninguna pregunta, sin ningún "> " previo — mi línea NUNCA se leyó.
+El intérprete decidió accion="salir" sin que yo dijera nada parecido a
+"no quiero seguir" (la única condición documentada en el propio prompt
+del sistema para usar esa acción). La sesión se cerró sola, descartando
+en silencio lo que estaba a punto de escribir.
+
+Causa raíz: guardar_sesion() nunca persistía la pregunta literal
+pendiente. Al resumir, ejecutar_recorrido() siempre arrancaba con
+respuesta_usuario=None — indistinguible del arranque de una sesión
+nueva — así que el intérprete tomaba cualquier decisión sin haber visto
+lo que el usuario en verdad iba a responder.
+
+Fix aplicado (hotfix v2.1.2, commit 8da516c): guardar_sesion() ahora
+persiste pregunta_hecha antes de cada leer_entrada(); --continuar la
+recupera y la re-presenta, leyendo una respuesta real ANTES de entrar al
+bucle principal.
+
+
+PARTE 2 — verificación del fix (proyecto descartable, --offline)
+----------------------------------------------------------------------
+
+> Doy clases particulares de matematicas a estudiantes de secundaria por
+> las tardes, y quiero saber si deberia cobrar por paquete de sesiones en
+> vez de por hora suelta.
+
+[2/15] Customer Discovery: Salir del Edificio
+  "Antes de decidir si cambias a paquetes, ¿ya hablaste con tus
+  estudiantes o sus padres...?"
+  → EOF. Verificado en el archivo de sesión: pregunta_hecha guardada
+    literalmente igual a la pregunta de arriba.
+
+> No, todavia no les he preguntado nada directamente, solo lo estoy
+> pensando yo.
+
+Al resumir: la pregunta de arriba se re-imprimió PALABRA POR PALABRA, mi
+respuesta se leyó correctamente para ESA pregunta, y el modelo generó un
+follow-up coherente que construye sobre mi respuesta real:
+  "¿Qué te hace pensar que los paquetes serían mejor...? ¿Es algo que
+  notaste en tus estudiantes o padres, o es una idea que se te ocurrió
+  por otra razón?"
+
+Fix confirmado funcionando. Test dedicado agregado:
+engine/test_resume_pregunta_pendiente.py (sin llamadas reales a la API).
+
+
+PARTE 3 — continuación real vía --seguir hasta el plan
+----------------------------------------------------------------------
+
+Se retomó el proyecto original (abarrotes) vía --seguir, con el fix ya
+aplicado, para completar la historia que el bug había cortado:
+
+> Ya hable con la señora Rosa y con don Pepe. Rosa me pidio arroz, aceite
+> y unos huevos, y me pago los 2 dolares de envio sin problema. Don Pepe
+> todavia no me ha contestado el mensaje.
+
+... 6 turnos más, todos con la pregunta pendiente correctamente
+persistida y re-presentada en cada --continuar, incluyendo:
+
+> Si lo calcule: cada entrega me toma como media hora contando armar el
+> pedido y caminar, entonces 5 entregas son dos horas y media a la semana
+> por 10 dolares en total.
+
+  El motor calculó correctamente en el momento: "$10 por 2.5 horas = $4
+  la hora" y preguntó qué cambiaría eso.
+
+> Creo que tendria que cobrar un poco mas por entrega, tal vez 3 dolares
+> en vez de 2. Con esto ya tengo suficiente para pensar, dame mi plan.
+
+  Oferta de profundizar (viabilidad económica) → "Ya, quiero el plan
+  ahora." → un turno más → plan completo generado, 5 etapas + sección de
+  números, citando correctamente $4/hora → $6/hora con el ajuste de
+  precio, sin inventar ninguna cifra fuera de lo declarado. Guardado en
+  plan_20260707_0735.md (no versionado, gitignored). Ruta recorrida: 8
+  nodos conversados/silenciosos + 24 del vecindario cosechado. Costo
+  real: $0.1008.
+
+
+PARTE 4 — --reporte contra Supabase real: dos bugs más
+----------------------------------------------------------------------
+
+Primer intento (antes de aplicar ninguna migración nueva): el reporte se
+generó, se narró y se guardó en disco correctamente (todos los campos
+"no sé", cero cifras inventadas, disclaimer correcto) — pero al intentar
+registrar la sesión en Supabase:
+
+  postgrest.exceptions.APIError: sessions_tipo_check
+  (sessions.tipo nunca se actualizó para aceptar 'reporte')
+
+Fix: supabase/migrations/my_idea_004_reporte_tipo.sql (aplicada por el
+usuario). Segundo intento: pasó crear_sesion, pero crasheó en el
+siguiente paso:
+
+  postgrest.exceptions.APIError: plans_etiqueta_check
+  (plans.etiqueta nunca se actualizó para aceptar 'reporte_numeros')
+
+Fix: supabase/migrations/my_idea_005_reporte_etiqueta.sql (aplicada por
+el usuario). Tercer intento, ya con ambas migraciones aplicadas:
+completó sin traceback. Verificado directamente contra Supabase:
+
+  sesión b6eb05d0-fd66-42d3-a6c1-eceeb40c0e9f: closed_at correcto,
+  costo_usd=0.0153 (coincide con el costo impreso en pantalla)
+  plan 8d4965cd-...: etiqueta='reporte_numeros', 2744 caracteres guardados
+
+La fila huérfana del primer intento fallido (sesión e7813c73..., nunca
+cerrada, sin plan asociado) se confirmó sin dependientes y se borró
+directamente de Supabase.
+
+
+Resultado final
+----------------------------------------------------------------------
+3 bugs reales encontrados y corregidos, ninguno visible en las pruebas
+anteriores porque todas corrían con mocks o en modo offline/JSON local:
+
+1. --continuar pierde la pregunta pendiente (prototipo_motor.py, commit
+   8da516c)
+2. sessions.tipo no acepta 'reporte' (migración 004, commit 8da516c)
+3. plans.etiqueta no acepta 'reporte_numeros' (migración 005, commit
+   08c6af0)
+
+Todo verificado en vivo, no solo con tests. Regresión completa (5 tests
+existentes + calculadora + test nuevo del resume) sigue en verde después
+de los tres fixes.

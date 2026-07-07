@@ -474,6 +474,51 @@ permitidos, y el router (`sucesores_nivel`), la brujula
 filtran por dominios desbloqueados del proyecto — con el default
 `{"core"}`, el filtro es un no-op hasta que exista un segundo dominio.
 
+### Hotfix v2.1.2 — bugs encontrados en una sesion en vivo sin guion
+
+A diferencia de todas las pruebas anteriores (mockeadas o narradas por un
+escenario mandatado), esta ronda fue una sesion real: una idea inventada
+en el momento (tienda de barrio + entregas a domicilio por WhatsApp),
+cero respuestas escritas de antemano, llamadas reales a la API, cada
+respuesta decidida solo despues de leer la pregunta real impresa por el
+motor. Transcripcion completa en
+`examples/hotfix_v2_1_2_sesion_en_vivo.txt`.
+
+Encontro tres bugs reales, ninguno visible en pruebas anteriores porque
+todas corrian con mocks o en modo offline/JSON local:
+
+1. **`--continuar` perdia la pregunta pendiente**: al resumir una sesion
+   interrumpida, el interprete arrancaba con `respuesta_usuario=None` sin
+   memoria de que se habia preguntado. En el mejor caso, la siguiente
+   respuesta del usuario se aplicaba a una pregunta distinta (recuperable
+   con una repregunta). En el peor caso — reproducido en vivo — el modelo
+   decidio `accion='salir'` ("Hasta pronto") sin que el usuario dijera
+   nada parecido a querer irse, descartando en silencio lo que estaba a
+   punto de escribir (su linea nunca se leyo). Causa raiz:
+   `guardar_sesion()` nunca persistia la pregunta literal pendiente.
+   Corregido: se persiste `pregunta_hecha` antes de cada `leer_entrada()`
+   (tanto en la rama `avanzar` como en `repreguntar`), y `--continuar` la
+   recupera y la re-presenta, leyendo una respuesta real antes de entrar
+   al bucle principal. Verificado en vivo (pregunta repetida palabra por
+   palabra, respuesta bien aplicada) y con un test nuevo,
+   `engine/test_resume_pregunta_pendiente.py` (sin llamadas reales).
+2. **`sessions.tipo` no aceptaba `'reporte'`**: Motor v2.1 agrego ese
+   valor pero nunca actualizo el `CHECK constraint` de la columna. Contra
+   Supabase real, `--reporte` generaba y guardaba el reporte en disco
+   correctamente y luego crasheaba con un `postgrest.exceptions.APIError`
+   al intentar registrar la sesion. Migracion
+   `supabase/migrations/my_idea_004_reporte_tipo.sql`.
+3. **`plans.etiqueta` no aceptaba `'reporte_numeros'`**: el mismo patron,
+   una columna despues. Tras aplicar la migracion 004, `--reporte` avanzo
+   un paso mas y crasheo en el siguiente `insert`. Migracion
+   `supabase/migrations/my_idea_005_reporte_etiqueta.sql`.
+
+Con las tres migraciones aplicadas, se reverifico `--reporte` de punta a
+punta contra Supabase real: sesion cerrada con el costo exacto impreso en
+pantalla ($0.0153) y el plan `reporte_numeros` guardado (2744
+caracteres). La fila de sesion huerfana del intento que crasheo antes de
+la migracion 005 se confirmo sin filas dependientes y se borro.
+
 ## Los dos cierres verificados en esta prueba
 
 **Cierre elegante**: forzando EOF a mitad de sesión (`leer_entrada()`
