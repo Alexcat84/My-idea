@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-prototipo_motor.py - Prototipo CLI del motor de ruteo (Fase 2.5)
+prototipo_motor.py - Motor de ruteo v1.0 (tag motor-v1.0, congelado)
+
+A partir de este tag, este archivo solo recibe fixes de bugs. Las
+funciones nuevas van a la implementacion web de Fase 3 (Next.js/TS). Ver
+examples/README.md para la prueba de cierre (dos actos, sin tracebacks).
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
 usuario nunca elige de un menu, y el interprete puede atravesar varios nodos
@@ -213,7 +217,11 @@ SYSTEM_INTERPRETE_MULTI = (
     "camino. Cada id debe ser un sucesor real del nodo anterior en la "
     "cadena, nunca un id repetido ni inventado.\n"
     "- 'repregunta' debe tener texto solo cuando accion='repreguntar'; si "
-    "no, null.\n\n"
+    "no, null.\n"
+    "- Si recibes 'error_previo' e 'ids_validos', tu respuesta anterior fue "
+    "invalida por esa razon exacta: tu 'camino' en este intento DEBE usar "
+    "EXCLUSIVAMENTE ids de la lista literal 'ids_validos' (no inventes ni "
+    "combines ids de fuera de esa lista).\n\n"
     "Responde SOLO un JSON: {\"accion\": \"avanzar\"|\"repreguntar\"|"
     "\"generar_plan\"|\"salir\", \"camino\": [ids en orden], "
     "\"pregunta_necesaria\": bool, \"repregunta\": str|null, "
@@ -328,7 +336,8 @@ def cargar_preguntas_cache():
 
 
 def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
-                    project_id=None, db_session_id=None, es_seguimiento=False, estado_vivo_previo=None):
+                    project_id=None, db_session_id=None, es_seguimiento=False, estado_vivo_previo=None,
+                    fallback_events=None):
     SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
     data = {
         "ruta": ruta,
@@ -340,6 +349,7 @@ def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profu
         "db_session_id": db_session_id,
         "es_seguimiento": es_seguimiento,
         "estado_vivo_previo": estado_vivo_previo,
+        "fallback_events": fallback_events or [],
         "timestamp": datetime.now().isoformat(),
     }
     (SESSIONS_DIR / f"{session_id}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -353,6 +363,22 @@ def cargar_sesion(session_id):
     return json.load(open(path, encoding="utf-8"))
 
 
+class SesionInterrumpida(Exception):
+    """El usuario corto la sesion (EOF o Ctrl+C). El estado ya se guarda
+    incrementalmente turno a turno (guardar_sesion), asi que el cierre
+    elegante solo necesita evitar el traceback y decir como retomar."""
+    pass
+
+
+def leer_entrada(prompt=""):
+    """input() que convierte EOF/Ctrl+C en un cierre elegante en vez de un
+    traceback visible. Usar SIEMPRE esta funcion en vez de input() directo."""
+    try:
+        return input(prompt)
+    except (EOFError, KeyboardInterrupt):
+        raise SesionInterrumpida()
+
+
 def preguntar_opcion(texto, opciones, extra=""):
     """Menu numerado de emergencia. Devuelve indice elegido, o 'P'/'Q' si extra los permite."""
     print("\n" + texto)
@@ -361,7 +387,7 @@ def preguntar_opcion(texto, opciones, extra=""):
     if extra:
         print(f"  {extra}")
     while True:
-        r = input("> ").strip().upper()
+        r = leer_entrada("> ").strip().upper()
         if r in ("P", "Q") and extra:
             return r
         if r.isdigit() and 1 <= int(r) <= len(opciones):
@@ -556,10 +582,35 @@ def _validar_camino(actual_id, camino, graph, visitados, nivel1_pool=None):
     return camino_reparado
 
 
+def _elegir_por_afinidad(candidatos_ids, graph, respuesta_usuario, perfil_sesion):
+    """Ultimo recurso silencioso (sin mostrar nada al usuario): elige el
+    candidato de mayor afinidad de palabras clave con la ultima respuesta
+    del usuario (y el perfil de sesion), en vez de un menu numerado."""
+    if not candidatos_ids:
+        return None
+    contexto = _tokens_cosecha((respuesta_usuario or "") + " " + (perfil_sesion or ""))
+    if not contexto:
+        return candidatos_ids[0]
+
+    def puntaje(nid):
+        n = graph[nid]
+        texto_nodo = n.get("titulo_concepto", "") + " " + " ".join(n.get("condiciones_activacion", []))
+        return len(contexto & _tokens_cosecha(texto_nodo))
+
+    return max(candidatos_ids, key=puntaje)
+
+
 def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_original,
-                             pregunta_hecha, respuesta_usuario, repreguntas_disponibles):
-    """Capa 2: decide un camino de 1-3 nodos (silenciosos + a lo sumo uno conversado).
-    Devuelve None si la API falla o el resultado no es valido."""
+                             pregunta_hecha, respuesta_usuario, repreguntas_disponibles,
+                             registrar_evento=None):
+    """Capa 2: decide un camino de 1-3 nodos (silenciosos + a lo sumo uno
+    conversado). Si el modelo devuelve algo invalido (id inexistente,
+    camino vacio), reintenta UNA vez con el error y la lista literal de ids
+    validos. Si vuelve a fallar, auto-selecciona en silencio el candidato de
+    mayor afinidad y continua sin que el usuario note nada (registra el
+    evento como 'fallback_auto' via `registrar_evento`, si se provee).
+    Solo devuelve None ante un fallo de RED/presupuesto (ahi si corresponde
+    el menu numerado de emergencia, ultimo recurso visible)."""
     nivel1_ids = sucesores_nivel(actual_id, graph, visitados)
     nivel1 = []
     visitados_o_nivel1 = visitados | set(nivel1_ids)
@@ -578,8 +629,8 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         "respuesta_usuario": respuesta_usuario,
         "repreguntas_disponibles": repreguntas_disponibles,
     }
-    try:
-        raw = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=600)
+
+    def _validar_respuesta(raw):
         data = _parsear_json(raw)
         accion = data.get("accion")
         if accion not in ("avanzar", "repreguntar", "generar_plan", "salir"):
@@ -591,9 +642,38 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
             data["camino"] = _validar_camino(actual_id, camino, graph, visitados, nivel1_pool=nivel1)
             data["pregunta_necesaria"] = bool(data.get("pregunta_necesaria", True))
         return data
-    except Exception as e:
-        print(f"  (fallo el interprete multi-salto, uso menu de emergencia: {e})")
-        return None
+
+    try:
+        raw = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=600)
+    except Exception:
+        return None  # fallo de red/presupuesto: unico caso que llega al menu de emergencia
+
+    mensaje_error_previo = None
+    try:
+        return _validar_respuesta(raw)
+    except Exception as error_validacion:
+        mensaje_error_previo = str(error_validacion)  # el except borra la variable al salir; guardarla antes
+
+    ids_validos = [n["id"] for n in nivel1]
+    for n in nivel1:
+        ids_validos += [h["id"] for h in n.get("sucesores", [])]
+    ctx_retry = dict(ctx)
+    ctx_retry["error_previo"] = mensaje_error_previo
+    ctx_retry["ids_validos"] = ids_validos
+
+    try:
+        raw2 = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx_retry, ensure_ascii=False), MODEL_HAIKU, max_tokens=600)
+        return _validar_respuesta(raw2)
+    except Exception as segundo_error:
+        candidato = _elegir_por_afinidad(nivel1_ids, graph, respuesta_usuario, perfil_sesion)
+        if candidato is None:
+            return None  # no hay ni un candidato para auto-elegir: recien ahi, menu de emergencia
+        if registrar_evento:
+            registrar_evento({
+                "tipo": "fallback_auto", "nodo_actual": actual_id,
+                "candidato_elegido": candidato, "motivo": str(segundo_error),
+            })
+        return {"accion": "avanzar", "camino": [candidato], "pregunta_necesaria": True, "perfil_update": None}
 
 
 def _menu_emergencia(nivel1_ids, graph):
@@ -619,7 +699,7 @@ def preguntar_profundizar(familias_faltantes):
         f"Puedo darte tu plan ahora mismo. Eso si: con algunas preguntas mas "
         f"incluiria {faltan_txt}. ¿Seguimos un poco o lo quieres ya?"
     )
-    respuesta = input("\n" + mensaje + "\n> ")
+    respuesta = leer_entrada("\n" + mensaje + "\n> ")
     if API_KEY:
         try:
             raw = llamar_claude(SYSTEM_PROFUNDIZAR, respuesta, MODEL_HAIKU, max_tokens=100)
@@ -905,10 +985,15 @@ def _extraer_titulo(plan_md):
 def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
                        perfil_sesion, texto_original, session_id, project_id, db_session_id,
                        profundizar_ofrecido=False, pregunta_hecha=None, respuesta_usuario=None,
-                       es_seguimiento=False, estado_vivo_previo=None):
+                       es_seguimiento=False, estado_vivo_previo=None, fallback_events=None):
     """Corre el bucle de entrevista (comun a proyecto nuevo y --seguir) hasta
     salir sin plan o ensamblar uno. Devuelve un dict con el resultado."""
     repreguntas_usadas = 0
+    fallback_events = list(fallback_events or [])
+
+    def _registrar_evento(evento):
+        fallback_events.append(evento)
+
     while True:
         nivel1_ids = sucesores_nivel(actual_id, graph, visitados)
         if not nivel1_ids or len(ruta) >= MAX_DEPTH:
@@ -920,6 +1005,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
             actual_id, graph, visitados, perfil_sesion, texto_original,
             pregunta_hecha, respuesta_usuario,
             repreguntas_disponibles=(repreguntas_usadas < MAX_REPREGUNTAS_POR_PUNTO),
+            registrar_evento=_registrar_evento,
         )
         if resultado is None:
             resultado = _menu_emergencia(nivel1_ids, graph)
@@ -929,14 +1015,15 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
 
         if resultado["accion"] == "salir":
             print("\nHasta pronto.")
-            return {"tipo": "salio", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion}
+            return {"tipo": "salio", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion,
+                    "fallback_events": fallback_events}
 
         if resultado["accion"] == "repreguntar":
             repreguntas_usadas += 1
             pregunta_hecha = resultado["repregunta"]
             print("\n" + "-" * 60)
             print(f"[{len(ruta)}/{MAX_DEPTH}] [conversado] {graph[actual_id]['titulo_concepto']}")
-            respuesta_usuario = input("\n" + pregunta_hecha + "\n> ")
+            respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
             continue
 
         if resultado["accion"] == "generar_plan":
@@ -944,7 +1031,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
             if not evaluacion["es_completa"] and not profundizar_ofrecido:
                 profundizar_ofrecido = True
                 guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
-                               project_id, db_session_id, es_seguimiento, estado_vivo_previo)
+                               project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events)
                 if preguntar_profundizar(evaluacion["familias_faltantes"]) == "continuar":
                     print("\nPerfecto, sigamos un poco mas.")
                     pregunta_hecha, respuesta_usuario = None, None
@@ -966,13 +1053,13 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         actual_id = camino[-1]
         repreguntas_usadas = 0
         guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
-                       project_id, db_session_id, es_seguimiento, estado_vivo_previo)
+                       project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events)
 
         if pregunta_necesaria:
             n = graph[actual_id]
             _imprimir_nodo(len(ruta), MAX_DEPTH, n, "conversado", con_resumen=True)
             pregunta_hecha = obtener_pregunta(actual_id, n, preguntas_cache)
-            respuesta_usuario = input("\n" + pregunta_hecha + "\n> ")
+            respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
         else:
             pregunta_hecha, respuesta_usuario = None, None
 
@@ -993,7 +1080,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         "tipo": "plan", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion,
         "cosecha_ids": resultado_plan["cosecha_ids"],
         "evaluacion_cobertura": resultado_plan["evaluacion_cobertura"],
-        "plan_md": plan_md, "plan_fname": fname,
+        "plan_md": plan_md, "plan_fname": fname, "fallback_events": fallback_events,
     }
 
 
@@ -1037,48 +1124,66 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
     db.actualizar_proyecto(project_id, **campos)
 
 
+def _cierre_elegante(session_id, project_id):
+    """Mensaje de salida limpio ante EOF/Ctrl+C: el estado ya quedo guardado
+    por la ultima guardar_sesion(), asi que solo hace falta decir como
+    retomar. Nunca se propaga un traceback al usuario."""
+    print("\n\nSesion interrumpida. Tu progreso quedo guardado.")
+    if session_id:
+        print(f"Para retomarla en el mismo punto: python engine/prototipo_motor.py --continuar {session_id}")
+    if project_id:
+        print(f"O mas adelante, como seguimiento del proyecto: python engine/prototipo_motor.py --seguir {project_id}")
+
+
 def modo_nuevo_proyecto(graph, families, entry_seeds, preguntas_cache, args):
     pregunta_hecha, respuesta_usuario = None, None
+    session_id, project_id = None, None
 
-    if args.continuar:
-        sesion = cargar_sesion(args.continuar)
-        session_id = args.continuar
-        ruta = sesion["ruta"]
-        modos = sesion.get("modos", ["conversado"] * len(ruta))
-        visitados = set(ruta)
-        actual_id = ruta[-1]
-        perfil_sesion = sesion["perfil_sesion"]
-        texto_original = sesion["entrada_original"]
-        profundizar_ofrecido = sesion.get("profundizar_ofrecido", False)
-        project_id = sesion.get("project_id")
-        db_session_id = sesion.get("db_session_id")
-        es_seguimiento = sesion.get("es_seguimiento", False)
-        estado_vivo_previo = sesion.get("estado_vivo_previo")
-        print(f"\nRetomando sesion {session_id} desde: {graph[actual_id]['titulo_concepto']}")
-    else:
-        session_id = uuid.uuid4().hex[:8]
-        texto_original = input("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
-        project_id = db.crear_proyecto(texto_original)
-        db_session_id = db.crear_sesion(project_id, "inicial", texto_original)
-        actual_id, perfil_sesion = clasificar_entrada(texto_original, entry_seeds, graph)
-        visitados, ruta, modos = {actual_id}, [actual_id], ["conversado"]
-        profundizar_ofrecido = False
-        es_seguimiento, estado_vivo_previo = False, None
-        guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
-                       project_id, db_session_id)
-        _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de entrada", con_resumen=True)
-        print(f"\n(proyecto: {project_id})")
+    try:
+        if args.continuar:
+            sesion = cargar_sesion(args.continuar)
+            session_id = args.continuar
+            ruta = sesion["ruta"]
+            modos = sesion.get("modos", ["conversado"] * len(ruta))
+            visitados = set(ruta)
+            actual_id = ruta[-1]
+            perfil_sesion = sesion["perfil_sesion"]
+            texto_original = sesion["entrada_original"]
+            profundizar_ofrecido = sesion.get("profundizar_ofrecido", False)
+            project_id = sesion.get("project_id")
+            db_session_id = sesion.get("db_session_id")
+            es_seguimiento = sesion.get("es_seguimiento", False)
+            estado_vivo_previo = sesion.get("estado_vivo_previo")
+            fallback_events = sesion.get("fallback_events", [])
+            print(f"\nRetomando sesion {session_id} desde: {graph[actual_id]['titulo_concepto']}")
+        else:
+            session_id = uuid.uuid4().hex[:8]
+            texto_original = leer_entrada("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
+            project_id = db.crear_proyecto(texto_original)
+            db_session_id = db.crear_sesion(project_id, "inicial", texto_original)
+            actual_id, perfil_sesion = clasificar_entrada(texto_original, entry_seeds, graph)
+            visitados, ruta, modos = {actual_id}, [actual_id], ["conversado"]
+            profundizar_ofrecido = False
+            es_seguimiento, estado_vivo_previo = False, None
+            fallback_events = []
+            guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
+                           project_id, db_session_id)
+            _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de entrada", con_resumen=True)
+            print(f"\n(proyecto: {project_id})")
 
-    resultado = ejecutar_recorrido(
-        graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
-        perfil_sesion, texto_original, session_id, project_id, db_session_id,
-        profundizar_ofrecido, pregunta_hecha, respuesta_usuario,
-        es_seguimiento=es_seguimiento, estado_vivo_previo=estado_vivo_previo,
-    )
-    _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=es_seguimiento)
-    if project_id:
-        print(f"\nPara continuar mas adelante: python engine/prototipo_motor.py --seguir {project_id}")
-    reportar_costo()
+        resultado = ejecutar_recorrido(
+            graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
+            perfil_sesion, texto_original, session_id, project_id, db_session_id,
+            profundizar_ofrecido, pregunta_hecha, respuesta_usuario,
+            es_seguimiento=es_seguimiento, estado_vivo_previo=estado_vivo_previo,
+            fallback_events=fallback_events,
+        )
+        _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=es_seguimiento)
+        if project_id:
+            print(f"\nPara continuar mas adelante: python engine/prototipo_motor.py --seguir {project_id}")
+        reportar_costo()
+    except SesionInterrumpida:
+        _cierre_elegante(session_id, project_id)
 
 
 def modo_seguir(project_id, graph, families, entry_seeds, preguntas_cache):
@@ -1087,37 +1192,45 @@ def modo_seguir(project_id, graph, families, entry_seeds, preguntas_cache):
         print(f"ERROR: no existe el proyecto {project_id}")
         sys.exit(1)
 
-    cubiertos = db.nodos_cubiertos(project_id)
-    print(f"\nRetomando proyecto {project_id} (fase actual: {proyecto.get('fase_actual')}, "
-          f"{len(cubiertos)} conceptos ya cubiertos).")
-    mensaje_nuevo = input("\nCuéntame qué ha pasado desde la última vez:\n> ")
+    session_id = None
+    try:
+        cubiertos = db.nodos_cubiertos(project_id)
+        print(f"\nRetomando proyecto {project_id} (fase actual: {proyecto.get('fase_actual')}, "
+              f"{len(cubiertos)} conceptos ya cubiertos).")
+        mensaje_nuevo = leer_entrada("\nCuéntame qué ha pasado desde la última vez:\n> ")
 
-    db_session_id = db.crear_sesion(project_id, "seguimiento", mensaje_nuevo)
-    estado_vivo_previo = proyecto.get("estado_vivo")
+        db_session_id = db.crear_sesion(project_id, "seguimiento", mensaje_nuevo)
+        estado_vivo_previo = proyecto.get("estado_vivo")
 
-    actual_id, perfil_sesion = seleccionar_puerta_avanzada(
-        mensaje_nuevo, estado_vivo_previo, proyecto.get("fase_actual", "ideacion"),
-        families, graph, cubiertos, entry_seeds,
-    )
-    visitados = set(cubiertos) | {actual_id}
-    ruta, modos = [actual_id], ["conversado"]
-    session_id = uuid.uuid4().hex[:8]
-    guardar_sesion(session_id, ruta, modos, perfil_sesion, mensaje_nuevo, False, project_id, db_session_id,
-                   es_seguimiento=True, estado_vivo_previo=estado_vivo_previo)
-    _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de seguimiento", con_resumen=True)
+        actual_id, perfil_sesion = seleccionar_puerta_avanzada(
+            mensaje_nuevo, estado_vivo_previo, proyecto.get("fase_actual", "ideacion"),
+            families, graph, cubiertos, entry_seeds,
+        )
+        visitados = set(cubiertos) | {actual_id}
+        ruta, modos = [actual_id], ["conversado"]
+        session_id = uuid.uuid4().hex[:8]
+        guardar_sesion(session_id, ruta, modos, perfil_sesion, mensaje_nuevo, False, project_id, db_session_id,
+                       es_seguimiento=True, estado_vivo_previo=estado_vivo_previo)
+        _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de seguimiento", con_resumen=True)
 
-    resultado = ejecutar_recorrido(
-        graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
-        perfil_sesion, mensaje_nuevo, session_id, project_id, db_session_id,
-        profundizar_ofrecido=False, es_seguimiento=True, estado_vivo_previo=estado_vivo_previo,
-    )
-    _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=True)
-    reportar_costo()
+        resultado = ejecutar_recorrido(
+            graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
+            perfil_sesion, mensaje_nuevo, session_id, project_id, db_session_id,
+            profundizar_ofrecido=False, es_seguimiento=True, estado_vivo_previo=estado_vivo_previo,
+        )
+        _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=True)
+        reportar_costo()
+    except SesionInterrumpida:
+        _cierre_elegante(session_id, project_id)
 
 
 def modo_gratis(graph, entry_seeds):
     print("\n--- Modo gratuito: organizador de tu idea (sin entrevista) ---")
-    texto_original = input("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
+    try:
+        texto_original = leer_entrada("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
+    except SesionInterrumpida:
+        print("\n\nHasta pronto.")
+        return
     project_id = db.crear_proyecto(texto_original)
     db_session_id = db.crear_sesion(project_id, "gratuito", texto_original)
 

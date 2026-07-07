@@ -1,0 +1,248 @@
+============================================================
+  MY IDEA - prototipo del motor de ruteo (travesia silenciosa)
+  Grafo: 1265 conceptos | modo: IA | preguntas cacheadas: 1239 | persistencia: Supabase
+============================================================
+
+Cuéntame tu idea, o en qué punto estás con ella:
+> 
+------------------------------------------------------------
+[1/15] [puerta de entrada] Design Thinking: Un Enfoque Centrado en el Humano para la Innovación
+Design Thinking es un enfoque de innovación que integra lo deseable desde el
+punto de vista humano con lo tecnológicamente factible y lo económicamente
+viable. A diferencia del diseño tradicional (enfocado en estilo o estética),
+el design thinking pone a las personas en el centro del proceso creativo,
+utilizando la intuición, el reconocimiento de patrones y la construcción de
+significado emocional junto con el razonamiento analítico. No es exclusivo
+de diseñadores profesionales; es una capacidad humana que puede aplicarse a
+negocios, organizaciones sociales y problemas complejos ('wicked probl
+
+(proyecto: 46e3c9ab-2656-4719-8fbe-9b3b8988b4ee)
+
+------------------------------------------------------------
+[2/15] [silencioso] Convertir Necesidad en Demanda: Poner a las Personas Primero
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[3/15] [conversado] Mapa de Empatía (Empathy Map)
+Herramienta desarrollada por XPLANE para construir un perfil profundo de un
+segmento de clientes más allá de datos demográficos, explorando qué ve, oye,
+piensa/siente, dice/hace, sus dolores y ganancias. Permite diseñar mejores
+propuestas de valor, canales y relaciones con clientes.
+
+Ahora que tienes una comprensión más profunda de quién es tu cliente, ¿qué es exactamente lo que vas a ofrecerle o cómo vas a resolver su problema, y qué lo haría diferente o mejor que lo que ya existe?
+> 
+------------------------------------------------------------
+[3/15] [conversado] Mapa de Empatía (Empathy Map)
+
+Antes de definir tu propuesta de valor, necesito entender mejor el problema real. ¿Qué dificultad específica viste en tu vecino ciego que crees que tu app podría resolver? Por ejemplo: ¿le cuesta moverse solo en espacios desconocidos, evitar obstáculos, confiar en herramientas existentes?
+> 
+------------------------------------------------------------
+[4/15] [silencioso] Diseño Fugitivo (Runaway Design)
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[5/15] [silencioso] Diseñar para la Sanación (Design for Healing)
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[6/15] [silencioso] Ciclo Build-Measure-Learn (Lean Startup)
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[7/15] [silencioso] Producto Mínimo Viable (MVP)
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[8/15] [silencioso] MVP tipo Video
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[9/15] [silencioso] Contabilidad de la Innovación (Innovation Accounting)
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[10/15] [silencioso] Establecer la Línea Base con MVP
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[10/15] [conversado] Establecer la Línea Base con MVP
+
+Antes de afinar métricas, necesito entender: ¿Ya has hablado con personas ciegas reales sobre si esta solución de sonar y alertas resuelve un problema que ellos sienten como urgente? ¿Qué feedback recibiste?
+> 
+------------------------------------------------------------
+[11/15] [silencioso] Afinar el Motor de Crecimiento (Tuning the Engine)
+  (cubierto por lo que ya contaste; no hace falta preguntarlo)
+
+------------------------------------------------------------
+[12/15] [conversado] Motor de Crecimiento de Pago (Paid Engine)
+Motor de crecimiento basado en reinvertir ingresos por cliente en la
+adquisición de nuevos clientes mediante publicidad, ventas o marketing
+pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y
+el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal)
+permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento no es
+sostenible sin capital externo. Cualquier canal de adquisición está sujeto a
+competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una
+capacidad diferenciada de monetización.
+
+Ahora que entiendes cómo funciona reinvertir lo que ganas para traer más clientes, ¿qué es lo que más te preocupa o te falta claridad en tu idea: saber si ya has encontrado la fórmula correcta que funciona, decidir en qué exactamente gastar ese dinero para crecer, o darte cuenta de que el crecimiento se te ha quedado atrapado en algún punto?
+> 
+Puedo darte tu plan ahora mismo. Eso si: con algunas preguntas mas incluiria si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio). ¿Seguimos un poco o lo quieres ya?
+> 
+Ensamblando tu plan...
+
+_Plan completo_
+
+# App de guía sonora para personas ciegas: de la intuición al primer usuario real
+
+Tu punto de partida es claro: observaste una necesidad real en alguien cercano y construiste una idea tecnológica sólida (sonar + alertas en tiempo real). Lo que este plan hace es llevarte desde esa intuición hasta tener validación real de que tu solución es deseada, usable y sostenible, sin comprometer recursos en desarrollo antes de tiempo.
+
+---
+
+## Etapa 1: Entiende el problema antes de diseñar la solución
+
+El primer error de cualquier proyecto tecnológico dirigido a una población específica es asumir que el creador entiende el problema mejor que quien lo vive. Antes de escribir una sola línea de código o comprar un sensor, necesitas saber exactamente qué vive una persona ciega cuando se mueve por el espacio, qué soluciones ya usa, y qué frustraciones tiene con ellas.
+
+**Pasos:**
+
+1. Identifica tres perfiles distintos de personas ciegas que podrían usar tu app: por ejemplo, una persona con ceguera de nacimiento que ya usa bastón y tecnología de asistencia; una persona que perdió la vista en la adultez y navega espacios conocidos; y un familiar o acompañante que toma decisiones de compra de tecnología. Elige uno de los tres para empezar.
+
+2. Dale un nombre y características concretas a ese perfil: edad aproximada, entorno donde se mueve (casa, transporte público, trabajo), qué tecnología usa hoy para orientarse, con quién vive.
+
+3. Responde estas seis preguntas sobre ese perfil basándote en lo que puedes observar o investigar hoy: ¿Qué ve en su entorno inmediato? ¿Qué escucha (de personas, dispositivos, cuidadores)? ¿Qué piensa pero no dice en voz alta sobre su autonomía? ¿Qué hace concretamente para moverse? ¿Qué le frustra o le genera miedo en ese proceso? ¿Qué ganaría si ese problema desapareciera?
+
+4. Usa ese perfil para cuestionar los supuestos de tu idea: ¿asume tu app que el usuario está solo? ¿Que tiene smartphone? ¿Que se mueve en espacios abiertos o cerrados? Marca cada supuesto como hipótesis, no como hecho.
+
+5. Antes de proponer tu solución, mapea qué comportamientos nuevos habilitaría tu app y qué sistemas existentes alteraría: ¿reemplaza al bastón? ¿Compite con el perro guía? ¿Requiere que el usuario cambie su forma de caminar? Identifica quién más se ve afectado: familiares, entrenadores de movilidad, aseguradoras.
+
+6. Pregunta explícitamente: ¿qué tiene roto el sistema de movilidad para personas ciegas hoy, y cómo tu app repara eso sin crear nuevos problemas (por ejemplo, dependencia tecnológica, distracción auditiva, falla en zonas sin señal)?
+
+**Entregable de esta etapa:** Un mapa de empatía completo del perfil elegido, con sus seis preguntas respondidas, y una lista de supuestos de tu idea marcados como hipótesis a probar.
+
+**Esta semana:** Consigue contacto con al menos una persona ciega (a través de asociaciones de no videntes, grupos de WhatsApp, o fundaciones locales) y agenda una conversación de 30 minutos para escuchar cómo se mueve hoy, qué usa, y qué le genera más frustración en ese proceso.
+
+---
+
+## Etapa 2: Valida que el problema es real y doloroso con usuarios reales
+
+Tienes un perfil construido desde la observación. Ahora necesitas salir y contrastar ese perfil con personas reales, porque la diferencia entre lo que asumes y lo que viven puede ser enorme.
+
+**Pasos:**
+
+1. Prepara cinco preguntas abiertas sobre el problema (no sobre tu solución). Ejemplos: ¿Cuándo fue la última vez que tuviste dificultad para moverte en un espacio desconocido? ¿Qué hiciste? ¿Qué tecnología usas hoy para orientarte? ¿Qué no te gusta de lo que usas? ¿Cuándo was última vez que rechazaste una tecnología de asistencia y por qué?
+
+2. Entrevista a cinco personas ciegas o con baja visión severa en persona, no por encuesta. Observa su entorno físico mientras hablan. Anota comportamientos, no solo opiniones.
+
+3. También habla con una o dos personas que no sean usuarias directas pero que toman decisiones de compra: un familiar cercano, un trabajador social, un médico rehabilitador. Pueden ser quienes finalmente adquieran la tecnología.
+
+4. Después de cada entrevista, anota: ¿el problema que yo asumía coincide con lo que esta persona vive? ¿Qué necesidad mencionaron que yo no había considerado? ¿Qué soluciones ya intentaron por su cuenta (aunque sean improvisadas)?
+
+5. Busca a las personas que ya intentaron resolver el problema por su cuenta, aunque sea de forma rudimentaria: alguien que grabó instrucciones de audio en su teléfono para recordar rutas, alguien que pagó por una app extranjera cara, alguien que contrató a alguien para acompañarle. Esas personas son tus primeros usuarios ideales: ya saben que tienen el problema y ya intentaron resolverlo.
+
+6. Al terminar las cinco entrevistas, contrasta lo que escuchaste con tus supuestos originales. Marca cuáles se confirmaron, cuáles se refutaron, y cuáles son nuevos.
+
+**Entregable de esta etapa:** Registro escrito de cinco entrevistas con patrones identificados: qué problema aparece repetido, qué soluciones actuales usan, y qué necesidad no articulada surgió que tu idea podría (o no) resolver.
+
+**Esta semana:** Contacta a una asociación de personas ciegas o con discapacidad visual en tu ciudad y pide permiso para asistir a una reunión o evento como observador. Lleva libreta, no prototipo.
+
+---
+
+## Etapa 3: Valida que tu solución es deseada sin construirla todavía
+
+Sabes que el problema existe. Ahora necesitas saber si tu solución específica (sonar + alertas en tiempo real) es la respuesta que esas personas querrían. Y necesitas saberlo antes de gastar en sensores, desarrollo o código.
+
+**Pasos:**
+
+1. Define con precisión la hipótesis que más miedo te da que sea falsa. Por ejemplo: "Una persona ciega adoptaría una app con alertas sonoras en tiempo real para moverse por espacios desconocidos de forma autónoma." Esa es tu hipótesis de valor central.
+
+2. Crea un video simple de dos a tres minutos que muestre cómo funcionaría tu app: puede ser una animación básica, una simulación con voz en off, o tú mismo describiendo el recorrido de un usuario mientras muestras un mapa. No necesitas que la tecnología exista: muestra la experiencia, no el código.
+
+3. Dirige ese video a una comunidad específica: grupos de WhatsApp de personas con discapacidad visual, foros de tecnología de asistencia, páginas de fundaciones de no videntes. Pide que lo vean y respondan dos preguntas: ¿Esto resolvería algo real para ti? ¿Estarías dispuesto a probarlo si existiera?
+
+4. Mide señales concretas: cuántas personas pidieron más información, cuántas se ofrecieron a probarlo, cuántas preguntaron por el precio. Esas son señales de demanda real, no de cortesía.
+
+5. Paralelamente, considera una versión aún más barata de validación: simula la experiencia de tu app manualmente. Lleva a una persona ciega voluntaria a un recorrido y tú, desde atrás, le das las alertas por auricular en tiempo real (como un operador humano). Esto te permite probar si el concepto de alertas sonoras en movimiento real genera valor antes de construir el sensor.
+
+6. Si alguien en el proceso pregunta cuánto costaría o dice que pagaría por esto, documéntalo textualmente. Es el dato más valioso que puedes tener.
+
+**Entregable de esta etapa:** Video publicado con métricas de respuesta (vistas, solicitudes de prueba, preguntas sobre precio) y al menos un registro de prueba simulada con un usuario real.
+
+**Esta semana:** Graba el video de demostración de tu app usando tu teléfono, sin edición profesional, y compártelo en tres grupos o comunidades donde haya personas ciegas o sus familiares. Mide cuántas personas piden saber más.
+
+---
+
+## Etapa 4: Construye la versión mínima que pruebe tu hipótesis central
+
+Ya tienes señales de que el problema es real y de que tu solución genera interés. Ahora construyes la versión más simple posible que permita aprender algo nuevo, no la versión perfecta.
+
+**Pasos:**
+
+1. Define la única hipótesis que tu primera versión va a probar. No "si la app funciona bien", sino algo más específico: por ejemplo, "si una persona ciega puede usar alertas sonoras para evitar obstáculos en un recorrido de cinco minutos sin ayuda humana".
+
+2. Diseña la versión más simple posible de tu app que pruebe esa hipótesis. Esto puede ser: una app básica que usa el sensor del teléfono para detectar obstáculos y emite un sonido, sin interfaz visual, sin login, sin configuración. Una sola función.
+
+3. No agregues ninguna función adicional que no sea necesaria para probar esa hipótesis. Si alguien te dice "¿y podría tener modo oscuro?" o "¿y si integras GPS?", anota la sugerencia y no la implementes todavía.
+
+4. Lleva esa versión mínima a las personas que ya mostraron interés en el paso anterior. Observa cómo la usan: ¿entienden las alertas? ¿reaccionan a tiempo? ¿se confunden? No les preguntes si les gusta, observa si la usan bien.
+
+5. Define antes de lanzar qué señal te indicaría que la hipótesis se confirmó y qué señal te indicaría que debes cambiar algo. Por ejemplo: "si tres de cinco usuarios completan el recorrido sin ayuda humana, la hipótesis se confirma".
+
+6. Después de la prueba, compara lo que esperabas con lo que ocurrió. Anota qué cambiarías en el siguiente ciclo.
+
+**Entregable de esta etapa:** Una versión mínima funcional probada con un grupo reducido de usuarios reales, con métricas de comportamiento (no opiniones) registradas y decisión documentada de qué sigue.
+
+**Esta semana:** Escribe en una hoja la única hipótesis que tu primera versión va a probar y lista las dos o tres funciones mínimas necesarias para probarla. Comparte esa lista con alguien técnico (desarrollador, ingeniero) y pregunta cuánto tiempo llevaría construir solo eso.
+
+---
+
+## Etapa 5: Mide si tu proyecto puede crecer y ajusta lo que no funciona
+
+Tienes una versión funcionando y usuarios que la probaron. Ahora necesitas entender si hay un patrón que pueda repetirse: ¿los usuarios vuelven? ¿Se lo cuentan a otros? ¿Estarían dispuestos a pagar?
+
+**Pasos:**
+
+1. Convierte tus supuestos sobre crecimiento en números concretos, aunque sean estimaciones iniciales: ¿cuántos usuarios necesitas en el primer mes para saber que el proyecto tiene tracción? ¿Cuántos de los que probaron el MVP siguieron usándolo una semana después?
+
+2. Identifica un solo aspecto del crecimiento a mejorar primero. Por ejemplo: el porcentaje de usuarios que terminan el primer recorrido de prueba sin abandonar. Formula una hipótesis sobre qué cambio mejoraría ese número (por ejemplo, simplificar el tipo de alerta sonora) y pruébalo.
+
+3. Mide si ese cambio efectivamente mejoró el número. Si no lo mejoró, descártalo y prueba otra hipótesis. No te quedes con cambios que "se sienten bien" si los números no los respaldan.
+
+4. Evalúa si el crecimiento que estás viendo viene de valor real entregado (personas que volvieron porque la app les ayudó de verdad) o de entusiasmo inicial que se desvanece. La diferencia importa: el primero es sostenible, el segundo no.
+
+5. Si en algún momento los datos muestran que una hipótesis central de tu proyecto es falsa (por ejemplo, que el tipo de alerta sonora que diseñaste confunde más de lo que ayuda), identifica qué tipo de ajuste necesitas: ¿cambiar la forma de la alerta? ¿cambiar el segmento de usuario? ¿cambiar el tipo de sensor? Cada uno de esos es un ajuste diferente con consecuencias diferentes.
+
+**Entregable de esta etapa:** Evidencia cuantitativa de que al menos un aspecto del proyecto mejora con los cambios que haces, y una decisión documentada de si sigues en la dirección actual o ajustas algo específico.
+
+**Esta semana:** Define tres métricas concretas que vas a medir en los próximos 30 días: por ejemplo, porcentaje de usuarios que completan el recorrido de prueba, número de usuarios que lo usan más de una vez, y número de personas que lo recomiendan a alguien más. Escríbelas y decide cómo las vas a registrar.
+
+---
+
+## ¿Puede sostenerse tu idea? Los números en simple
+
+Tu proyecto tiene un componente económico que necesita atención antes de escalar. Estos son los elementos clave para entender si puede funcionar financieramente:
+
+**Quién paga y quién usa pueden ser personas distintas.** La persona ciega usa la app, pero quien la compra puede ser un familiar, una institución de rehabilitación, una aseguradora, o un programa gubernamental. Define desde el inicio si vas a venderle al usuario directo o a quien toma la decisión de compra, porque eso cambia todo: el precio, el canal, el mensaje, y cómo llegas a ellos.
+
+**El costo de conseguir un usuario debe ser menor que lo que ese usuario te genera.** Si te cuesta 50 dólares en publicidad o tiempo conseguir un usuario, y ese usuario paga una sola vez 10 dólares, el proyecto pierde dinero aunque crezca. Antes de invertir en adquisición de usuarios, calcula cuánto estarían dispuestos a pagar (o cuánto pagaría quien los representa) y cuánto te costaría llegar a ellos.
+
+**Completa un modelo de nueve bloques antes de escalar.** Describe en papel quiénes son tus usuarios, qué valor concreto les entregas, cómo llegas a ellos, qué relación mantienes con ellos, cómo generas ingresos, qué recursos necesitas, qué actividades son esenciales, con quién podrías aliarte (fundaciones, hospitales, ópticas, entidades de gobierno), y cuánto cuesta todo eso. No hace falta que sea perfecto: basta con que sea honesto sobre lo que sabes y lo que no.
+
+**Las primeras ventas prueban más que cualquier encuesta.** Cuando alguien paga, aunque sea una cantidad simbólica, confirma que el problema es real y que tu solución vale algo. Busca al menos una persona o institución dispuesta a pagar por acceder a tu proyecto antes de que esté terminado. Eso es más valioso que mil respuestas positivas en un formulario.
+
+---
+
+**El lunes que viene haces esto:** Escribe en un papel los tres supuestos de tu proyecto que más miedo te daría que fueran falsos (por ejemplo: "las personas ciegas adoptarían tecnología nueva si es gratuita", "el sensor del teléfono tiene precisión suficiente para detectar obstáculos a tiempo", "alguien estaría dispuesto a pagar por esto"). Luego elige el más arriesgado y diseña la acción más pequeña posible que te permita saber esta semana si es verdad o no.
+
+---
+_Este plan se alimento de 37 conceptos: 12 de tu recorrido conversado y 25 del vecindario relacionado del grafo._
+
+Plan guardado en: C:\Users\AlexDesk\Documents\I have an idea\plan_20260706_2122.md
+Ruta recorrida (12): [c]design_thinking_fundamentos -> [s]convertir_necesidad_en_demanda -> [c]empathy_map -> [s]diseno_fugitivo_runaway_design -> [s]disenar_para_sanacion -> [s]build_measure_learn -> [s]producto_minimo_viable -> [s]mvp_tipo_video -> [s]contabilidad_innovacion -> [s]establecer_linea_base_mvp -> [s]afinar_motor_crecimiento -> [c]motor_crecimiento_pago
+
+Para continuar mas adelante: python engine/prototipo_motor.py --seguir 46e3c9ab-2656-4719-8fbe-9b3b8988b4ee
+
+============================================================
+  Costo real de la sesion (tokens)
+============================================================
+  claude-haiku-4-5: 13 llamadas | 33200 in / 4610 out (cache_read 0) | $0.0563
+  claude-sonnet-4-6: 1 llamadas | 9763 in / 4224 out (cache_read 0) | $0.0926
+  TOTAL: $0.1489
