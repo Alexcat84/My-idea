@@ -124,6 +124,79 @@ fondo difiere en cada una — mejor que la duplicacion casi literal que
 detecto la auditoria original, pero no una eliminacion perfecta de
 plantillas repetidas.
 
+## Fase 2.7 — escucha activa, cobertura del bloqueo declarado, caching incremental
+
+Auditoria de la Fase 2.6: el plan de macetas era bueno pero la entrevista
+"discutia" con el usuario — tres veces seguidas el usuario dijo que su
+bloqueo era tecnico (resina + QR) y el sistema respondio con la misma
+plantilla ("Entiendo que X... pero antes de eso, ¿ya validaste Y?"),
+desviando la conversacion en vez de escucharla. Consecuencia directa en el
+plan: perdio la etapa de experimentos tecnicos concretos que si tenia el
+plan de Fase 2.4, y le exigia al usuario vender macetas reales sin haberle
+dado como fabricarlas sin defectos. Ademas, la plantilla repetida
+"Entiendo que X, pero antes de Y" aparecia 4 veces en las repreguntas
+(la memoria anti-repeticion solo miraba las ultimas 2 preguntas
+principales, no las repreguntas).
+
+Cambios: (1) `prioridad_declarada` — el interprete rastrea si el usuario
+reafirma 2+ veces el mismo bloqueo; a partir de ahi, prohibido desviar:
+la siguiente intervencion debe reconocer esa prioridad como frente
+legitimo y, si sugiere validar algo mas, presentarlo como complemento en
+paralelo ("mientras...", "en paralelo..."), nunca como sustituto. (2) La
+cosecha reserva hasta 8/25 cupos para nodos afines al bloqueo declarado, y
+el redactor recibe `bloqueo_declarado` con instruccion dura de darle
+tratamiento explicito — si el usuario propuso su propio metodo (p.ej.
+"variar una variable a la vez"), reconocerlo por nombre y estructurarlo
+con pasos concretos, y de revisar dependencias (ninguna etapa puede pedir
+un insumo que el plan no ayudo a producir antes). (3) La memoria
+anti-plantillas se amplio a las ultimas 3 intervenciones (incluye
+repreguntas), con las dos plantillas reincidentes nombradas
+explicitamente. (4) Tope editorial: 5-7 etapas maximo, fusionar las que
+midan lo mismo, max_tokens del plan a 5000. (5) Caching incremental de
+conversacion: el interprete ya no reenvia entrada_original ni el perfil
+completo en cada turno — desde el segundo turno, esa parte vive en el
+prefijo cacheado (`llamar_claude_conversacion`, historial que crece turno
+a turno); ademas se corrigio un bug real en la contabilidad de costos
+(`costo_acumulado_usd`/`reportar_costo` ignoraban por completo el precio
+de `cache_read`/`cache_creation`, subestimando el costo real), y se agrego
+desglose de costo por componente (`clasificacion`/`turnos`/`plan`/
+`estado_vivo`) persistido en `sessions.costo_desglose` (columna nueva,
+`supabase/migrations/my_idea_002_costo_desglose.sql`, aplicar manualmente).
+
+Verificado con una corrida real (`fase2_7_macetas_escucha_activa.txt`,
+plan completo en `fase2_7_plan_macetas.md`), mismas respuestas literales
+que la corrida de Fase 2.6:
+
+- **Cero apariciones de "pero antes"** en toda la transcripcion, y **cero**
+  del molde "¿que te preocupa mas: A o B?". Hubo exactamente UNA pregunta
+  con forma de desviacion, ocurrida ANTES de que la prioridad alcanzara
+  conteo=2 (permitido por la regla); desde que el usuario reafirmo el
+  bloqueo tecnico por segunda vez, la respuesta fue "La resina y el QR son
+  tu frente tecnico principal y vamos a atacarlos de una vez; para avanzar
+  rapido ahi, ¿ya probaste cambiar una sola variable a la vez...?" — cero
+  desviaciones despues de eso.
+- **prioridad_declarada final**: `{"texto": "resolver la resina y el QR
+  antes de vender en volumen (acoplados tecnicamente)", "conteo": 3}`.
+- **El plan dedica su Etapa 2 completa** ("Ataca el bloqueo tecnico con
+  experimentos de una variable a la vez") al metodo que el propio usuario
+  propuso, reconociendolo explicitamente ("Mencionaste algo importante
+  durante la sesion...") y estructurandolo con tarjetas de experimento
+  (hipotesis, variable, metrica, umbral) mas alternativas de fijacion del
+  QR con criterio de exito medible — al nivel del plan de Fase 2.4.
+- **Dependencias resueltas**: la Etapa 3 (MVP) explicita que se prueba
+  "aunque tenga defectos de resina que no afecten la lectura del codigo",
+  en vez de exigir unidades sin defectos que ninguna etapa anterior
+  ensena a producir.
+- **5 etapas** (dentro del tope de 5-7), cero vocabulario corporativo.
+- **Costo**: $0.1842 total (`turnos` $0.0817 con cache_read de 232,984
+  tokens confirmando el caching incremental activo; `plan` $0.0948;
+  `estado_vivo` $0.0043; `clasificacion` $0.0033) — por debajo del techo
+  duro de $0.30, mejor que los $0.2122 de la corrida de Fase 2.6, pero por
+  encima del objetivo aspiracional de $0.15: el costo de `turnos` bajo
+  bien gracias al cache, pero la llamada unica del redactor (Sonnet) sigue
+  siendo cara por su propio precio por token y no se beneficia de cache
+  dentro de una sola sesion (solo se llama una vez).
+
 ## Los dos cierres verificados en esta prueba
 
 **Cierre elegante**: forzando EOF a mitad de sesión (`leer_entrada()`

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-prototipo_motor.py - Motor de ruteo (post motor-v1.0: Fase 2.6 encima del
-tag congelado, preguntas adaptadas por turno).
+prototipo_motor.py - Motor de ruteo (post motor-v1.0: Fase 2.6 preguntas
+adaptadas por turno, Fase 2.7 escucha activa y caching incremental).
 
 Ver examples/README.md para la prueba de cierre de motor-v1.0 (dos actos,
-sin tracebacks). Fase 2.6 anadio preguntas adaptadas por turno y prompt
-caching real; ver mas abajo.
+sin tracebacks) y las pruebas de Fase 2.6/2.7 (macetas de calcita); ver
+mas abajo para el detalle de cada fase.
 
 Entrevista guiada de texto libre con travesia silenciosa multi-salto: el
 usuario nunca elige de un menu, y el interprete puede atravesar varios nodos
@@ -41,6 +41,28 @@ Fase 2.6 - pregunta adaptada por turno: cada nodo trae una pregunta
     silencioso en vez de preguntar), y sin repetir la estructura de las
     ultimas_preguntas_hechas (las 2 mas recientes de la sesion). Costo
     marginal: ~100 tokens de salida por turno.
+Fase 2.7 - escucha activa y costos: (a) prioridad_declarada rastrea si el
+    usuario reafirma 2+ veces el mismo bloqueo/urgencia; desde ahi, prohibido
+    desviar con "pero antes de eso" — la intervencion debe reconocer esa
+    prioridad como frente legitimo y ofrecer lo demas como complemento en
+    paralelo, nunca como sustituto. El ruteo tambien pondera candidatos
+    afines a esa prioridad. (b) La cosecha reserva hasta 8/25 cupos para
+    nodos afines al bloqueo declarado, y el redactor recibe bloqueo_declarado
+    con instruccion dura de darle tratamiento explicito (etapa propia o
+    integrada, metodo del usuario reconocido y estructurado si propuso uno,
+    y verificacion de dependencias entre etapas). (c) La memoria
+    anti-plantillas cubre las ultimas 3 intervenciones (antes 2), incluyendo
+    repreguntas, con dos plantillas reincidentes nombradas explicitamente.
+    (d) Tope editorial del plan: 5-7 etapas, fusionar las que midan lo mismo,
+    max_tokens=5000. (e) Caching incremental de conversacion en el
+    interprete (llamar_claude_conversacion): desde el segundo turno,
+    entrada_original y perfil_sesion ya no se reenvian completos (viven en
+    el prefijo cacheado); ademas se corrigio un bug real donde
+    costo_acumulado_usd/reportar_costo ignoraban el costo de
+    cache_read/cache_creation. Telemetria de costo por componente
+    (clasificacion/turnos/plan/estado_vivo/organizador) persistida en
+    sessions.costo_desglose (supabase/migrations/my_idea_002_costo_desglose.sql,
+    aplicar manualmente).
 Medidor de completitud: antes de redactar el plan, se evalua si la ruta toca
     al menos una familia de accion con clientes y una de viabilidad
     economica (engine/plan_readiness.py). Si no, se ofrece UNA vez la
@@ -142,7 +164,14 @@ PRECIOS = {
     MODEL: (3.00, 15.00),
     MODEL_HAIKU: (1.00, 5.00),
 }
+# Multiplicadores de cache ephemeral (5 min) sobre el precio de entrada:
+# lectura de cache cuesta ~10%, escritura de cache cuesta ~125% (Fase 2.7:
+# antes de esto, costo_acumulado_usd/reportar_costo ignoraban por completo
+# el costo real de cache_read/cache_creation, subestimando el costo real).
+CACHE_READ_MULT = 0.1
+CACHE_WRITE_MULT = 1.25
 USO = {}
+USO_POR_COMPONENTE = {}
 
 PRESUPUESTO_SESION_USD = float(os.environ.get("PRESUPUESTO_SESION_USD", "0.30"))
 PRESUPUESTO_EXCEDIDO = False
@@ -186,10 +215,13 @@ SYSTEM_INTERPRETE_MULTI = (
     "sucesores (nivel 2, resumidos igual, con su propia pregunta_cache). "
     "Tambien, si aplica, la ultima pregunta hecha y la respuesta libre del "
     "usuario a esa pregunta (puede ser null si aun no se ha hecho ninguna "
-    "pregunta en este punto y solo cuentas con el contexto acumulado), y "
-    "ultimas_preguntas_hechas: el texto literal de hasta las 2 preguntas "
-    "mas recientes que ya se le hicieron al usuario en esta sesion (puede "
-    "venir vacia al inicio).\n\n"
+    "pregunta en este punto y solo cuentas con el contexto acumulado), "
+    "ultimas_preguntas_hechas: el texto literal de hasta las 3 "
+    "intervenciones mas recientes del sistema en esta sesion (preguntas "
+    "adaptadas Y repreguntas por igual, puede venir vacia al inicio), y "
+    "prioridad_declarada_actual: {\"texto\": str, \"conteo\": int} o null — "
+    "lo que el usuario mismo ha repetido como su bloqueo o urgencia "
+    "principal, y cuantas veces lo ha reafirmado hasta ahora.\n\n"
     "Tu trabajo es construir un camino: la secuencia de nodos (1 a 3, en "
     "orden, empezando por un sucesor de nivel 1) que el usuario deberia "
     "atravesar dado lo que ya se sabe de el. Un nodo se atraviesa EN "
@@ -217,6 +249,35 @@ SYSTEM_INTERPRETE_MULTI = (
     "contexto, sigue evaluando su propio sucesor de nivel 2 antes de "
     "decidir donde detenerte; no te detengas en el primero solo porque es "
     "el primero de la lista.\n\n"
+    "PRIORIDAD DECLARADA DEL USUARIO (escucha activa, Fase 2.7): en cada "
+    "turno, evalua si respuesta_usuario reafirma o declara lo que mas le "
+    "bloquea o le urge en este momento (no una duda pasajera, sino algo que "
+    "vuelve a mencionar). Devuelve el campo 'prioridad_declarada' con el "
+    "estado ACTUALIZADO completo: si el usuario reafirma la MISMA "
+    "prioridad que ya traias en prioridad_declarada_actual, devuelve el "
+    "mismo texto (o uno mas claro) con conteo = conteo_actual + 1; si "
+    "declara algo nuevo o distinto, devuelve ese texto nuevo con conteo=1; "
+    "si no hay nada que rastrear en este turno, devuelve el mismo estado "
+    "sin cambios (o null si prioridad_declarada_actual tambien era null).\n"
+    "REGLA DURA: si prioridad_declarada (ya con el conteo de este turno "
+    "incluido) tiene conteo >= 2, esta PROHIBIDO que tu pregunta_adaptada o "
+    "repregunta de este turno sea otra deflexion tipo 'entiendo que X, pero "
+    "antes de eso, ¿ya validaste Y?'. En su lugar, tu intervencion DEBE (a) "
+    "reconocer esa prioridad como frente legitimo del plan en una frase "
+    "corta ('tu problema de la resina y el QR es real, vamos a atacarlo'), "
+    "y (b) si la metodologia sugiere validar otra cosa primero, presentarlo "
+    "como COMPLEMENTO EN PARALELO, nunca como sustituto ('...y en paralelo "
+    "esto otro te protege de invertir de mas'). Ejemplo de lo prohibido tras "
+    "conteo>=2: 'Entiendo que la resina y el QR te preocupan, pero antes de "
+    "resolver eso, ¿ya intentaste vender sin el QR?' — es la tercera vez "
+    "que desvia la misma prioridad. Ejemplo correcto en su lugar: 'La "
+    "resina y el QR son tu frente tecnico principal y vamos a atacarlos; "
+    "mientras los resuelves, ¿ya le mostraste el resultado actual, con "
+    "defectos y todo, a alguien fuera de tu circulo? Eso no reemplaza "
+    "resolver la tecnica, solo evita que inviertas semanas sin saber si "
+    "alguien pagaria.' El ruteo (camino) tambien debe ponderar los "
+    "candidatos afines a prioridad_declarada por encima de otros de "
+    "afinidad similar, una vez el conteo llega a 2 o mas.\n\n"
     "PREGUNTA ADAPTADA (obligatoria cuando pregunta_necesaria=true y "
     "accion='avanzar'; null en cualquier otro caso): cada nodo trae una "
     "pregunta_cache pregenerada que es solo un PLANO DE INTENCION (para que "
@@ -245,20 +306,29 @@ SYSTEM_INTERPRETE_MULTI = (
     "conto que 'regale prototipos y a la gente le encanto', un nodo que "
     "pregunta por entender las necesidades del cliente ya esta cubierto: "
     "no lo preguntes, marcalo silencioso.\n"
-    "(d) Anti-redundancia: prohibido repetir la estructura o el eje central "
-    "de cualquiera de las ultimas_preguntas_hechas (p.ej. no encadenes dos "
-    "preguntas seguidas con la forma '¿que te preocupa mas: X o Y?', ni dos "
-    "que en el fondo pidan lo mismo con otras palabras). Si tu primer "
-    "instinto de pregunta_adaptada suena parecido a una de esas dos, cambia "
-    "el angulo; si de verdad no hay nada nuevo que preguntar ahi, marca el "
-    "nodo silencioso en su lugar en vez de repetir. Ejemplo de lo que NO "
-    "debes hacer: si ultimas_preguntas_hechas ya incluye '¿cual es tu mayor "
-    "preocupacion: saber si de verdad estas avanzando o solo convenciendote "
-    "a ti mismo?', y el plano de este nodo pregunta en el fondo lo mismo "
-    "('¿que te preocupa mas: que no sepas como medir si realmente estas "
-    "avanzando o aprendiendo algo valioso?'), NO la reformules con otro "
-    "disfraz — reconoce que es la misma pregunta ya hecha y marca este "
-    "nodo silencioso.\n"
+    "(d) Anti-redundancia (ventana ampliada a 3, Fase 2.7): prohibido "
+    "repetir la estructura o el eje central de cualquiera de las HASTA 3 "
+    "ultimas_preguntas_hechas — esto incluye repreguntas, no solo preguntas "
+    "adaptadas. En particular, quedan PROHIBIDAS dos apariciones de la "
+    "MISMA plantilla retorica dentro de esa ventana de 3, aunque el "
+    "contenido de fondo varie; dos plantillas especialmente vigiladas por "
+    "reincidentes: '¿que te preocupa/duda mas: A, o B?' y 'Entiendo que X, "
+    "pero antes de Y, ¿Z?'. Si tu primer instinto de pregunta_adaptada o "
+    "repregunta calza en una de esas dos plantillas Y alguna de las 3 "
+    "ultimas ya la uso, cambia de plantilla por completo (no solo de "
+    "palabras) — por ejemplo, en vez de '¿que te preocupa mas...?' prueba "
+    "una pregunta directa de hechos ('¿ya le mostraste esto a alguien "
+    "fuera de tu circulo?'), y en vez de 'Entiendo que X, pero antes de "
+    "Y...' prueba reconocer y seguir sin el 'pero' (ver la regla de "
+    "PRIORIDAD DECLARADA arriba). Si de verdad no hay nada nuevo que "
+    "preguntar, marca el nodo silencioso en vez de repetir. Ejemplo de lo "
+    "que NO debes hacer: si ultimas_preguntas_hechas ya incluye '¿cual es "
+    "tu mayor preocupacion: saber si de verdad estas avanzando o solo "
+    "convenciendote a ti mismo?', y el plano de este nodo pregunta en el "
+    "fondo lo mismo ('¿que te preocupa mas: que no sepas como medir si "
+    "realmente estas avanzando o aprendiendo algo valioso?'), NO la "
+    "reformules con otro disfraz — reconoce que es la misma pregunta ya "
+    "hecha y marca este nodo silencioso.\n"
     "La pregunta_cache cruda NUNCA debe llegarle al usuario tal cual.\n\n"
     "AFINIDAD DE PERFIL EN EL CAMINO: al elegir entre sucesores, penaliza "
     "los candidatos cuyo contenido (titulo, condiciones_activacion o "
@@ -354,7 +424,8 @@ SYSTEM_INTERPRETE_MULTI = (
     "[\"id_del_sucesor_nivel1\", \"id_del_sucesor_nivel2\"], "
     "\"pregunta_necesaria\": true, \"pregunta_adaptada\": \"¿ya sacaste la "
     "cuenta de cuanto te cuesta en ingredientes y tiempo hacer cada "
-    "tanda?\", \"repregunta\": null, \"perfil_update\": null}.\n"
+    "tanda?\", \"repregunta\": null, \"perfil_update\": null, "
+    "\"prioridad_declarada\": null}.\n"
     "Ejemplo 2 (repreguntar porque la respuesta fue ambigua): la "
     "pregunta_adaptada anterior fue '¿ya le vendiste esto a alguien fuera "
     "de tu circulo cercano?' y el usuario respondio 'creo que si le "
@@ -365,18 +436,19 @@ SYSTEM_INTERPRETE_MULTI = (
     "{\"accion\": \"repreguntar\", \"camino\": [], \"pregunta_necesaria\": "
     "true, \"pregunta_adaptada\": null, \"repregunta\": \"cuando dices que "
     "le interesaria a la gente, ¿alguien ya te compro o pago algo, o es "
-    "todavia algo que crees que pasaria?\", \"perfil_update\": null}.\n"
+    "todavia algo que crees que pasaria?\", \"perfil_update\": null, "
+    "\"prioridad_declarada\": null}.\n"
     "Ejemplo 3 (generar_plan porque el usuario lo pidio explicitamente, "
     "aunque con otras palabras): el usuario responde 'creo que con esto ya "
     "tengo para armar algo, dame lo que tengas'. Respuesta: {\"accion\": "
     "\"generar_plan\", \"camino\": [], \"pregunta_necesaria\": false, "
     "\"pregunta_adaptada\": null, \"repregunta\": null, \"perfil_update\": "
-    "null}.\n"
+    "null, \"prioridad_declarada\": null}.\n"
     "Ejemplo 4 (salir sin plan): el usuario responde 'mejor lo dejamos "
     "aqui, no quiero seguir con esto ahora'. Respuesta: {\"accion\": "
     "\"salir\", \"camino\": [], \"pregunta_necesaria\": false, "
     "\"pregunta_adaptada\": null, \"repregunta\": null, \"perfil_update\": "
-    "null}.\n"
+    "null, \"prioridad_declarada\": null}.\n"
     "Ejemplo 5 (cadena de 3 nodos silenciosos, el maximo permitido, sin "
     "preguntar nada en esta llamada): el perfil_sesion ya es muy rico "
     "(varios turnos acumulados) y responde con claridad lo que preguntan "
@@ -386,13 +458,29 @@ SYSTEM_INTERPRETE_MULTI = (
     "Respuesta: {\"accion\": \"avanzar\", \"camino\": [\"id_n1\", "
     "\"id_n2_hijo_de_n1\", \"id_n3_hijo_de_n2\"], \"pregunta_necesaria\": "
     "false, \"pregunta_adaptada\": null, \"repregunta\": null, "
-    "\"perfil_update\": null}. La siguiente llamada al interprete "
-    "continuara desde ese tercer nodo, sin que el usuario haya notado "
-    "ninguna pausa.\n\n"
+    "\"perfil_update\": null, \"prioridad_declarada\": null}. La siguiente "
+    "llamada al interprete continuara desde ese tercer nodo, sin que el "
+    "usuario haya notado ninguna pausa.\n"
+    "Ejemplo 6 (prioridad_declarada llega a conteo=2, prohibida otra "
+    "deflexion): prioridad_declarada_actual={\"texto\": \"resolver la "
+    "resina y el QR antes de vender en volumen\", \"conteo\": 1} y el "
+    "usuario acaba de reafirmarla ('mi bloqueo real sigue siendo la "
+    "tecnica, no la demanda'). Respuesta: {\"accion\": \"avanzar\", "
+    "\"camino\": [\"id_nodo_experimentos_tecnicos\"], "
+    "\"pregunta_necesaria\": true, \"pregunta_adaptada\": \"la resina y el "
+    "QR son tu frente principal y vamos a atacarlos de una vez; para "
+    "avanzar rapido ahi, ¿ya probaste cambiar una sola variable a la vez "
+    "en la mezcla, o has estado cambiando varias cosas al mismo tiempo?\", "
+    "\"repregunta\": null, \"perfil_update\": null, \"prioridad_declarada\": "
+    "{\"texto\": \"resolver la resina y el QR antes de vender en volumen\", "
+    "\"conteo\": 2}}. Nota que NO dice 'pero antes de eso' ni desvia hacia "
+    "validacion de pago — reconoce la prioridad y avanza sobre ella "
+    "directamente.\n\n"
     "Responde SOLO un JSON: {\"accion\": \"avanzar\"|\"repreguntar\"|"
     "\"generar_plan\"|\"salir\", \"camino\": [ids en orden], "
     "\"pregunta_necesaria\": bool, \"pregunta_adaptada\": str|null, "
-    "\"repregunta\": str|null, \"perfil_update\": str|null}."
+    "\"repregunta\": str|null, \"perfil_update\": str|null, "
+    "\"prioridad_declarada\": {\"texto\": str, \"conteo\": int}|null}."
 )
 
 SYSTEM_PROFUNDIZAR = (
@@ -411,8 +499,11 @@ SYSTEM_PLAN = (
     "cada uno con titulo, pasos, entregable esperado, y "
     "es_viabilidad_economica), material_de_apoyo: conceptos vecinos del "
     "grafo (mismo formato) que NO fueron conversados con el usuario pero son "
-    "relevantes a su perfil, y opcionalmente es_seguimiento + "
-    "estado_vivo_previo si esta sesion continua un proyecto ya en marcha.\n\n"
+    "relevantes a su perfil, bloqueo_declarado (str|null: lo que el usuario "
+    "mismo repitio como su freno o urgencia principal durante la "
+    "entrevista, ya con las palabras mas claras), y opcionalmente "
+    "es_seguimiento + estado_vivo_previo si esta sesion continua un "
+    "proyecto ya en marcha.\n\n"
     "Reglas obligatorias:\n"
     "1. Modo imperativo SIEMPRE. Convierte cada paso reflexivo o pregunta del "
     "material en una tarea concreta con verbo, sujeto y criterio de exito. "
@@ -455,7 +546,33 @@ SYSTEM_PLAN = (
     "real por unidad; este plan parte de ahi.' No repitas acciones ya "
     "cubiertas antes: el material que recibes ya excluye lo cubierto en "
     "sesiones previas, asi que basta con no asumir que el usuario empieza "
-    "de cero.\n\n"
+    "de cero.\n"
+    "9. Cobertura del bloqueo declarado (Fase 2.7): si recibes "
+    "bloqueo_declarado no nulo, el plan DEBE darle tratamiento explicito y "
+    "accionable — una etapa propia o integrada en una existente, con pasos "
+    "concretos que lo ataquen, usando material_principal y "
+    "material_de_apoyo disponibles (la cosecha ya prioriza conceptos afines "
+    "a ese bloqueo). Si dentro de perfil_sesion o entrada_original el "
+    "usuario ya propuso su propio metodo para atacarlo (por ejemplo, "
+    "'probar variando una sola cosa a la vez'), reconocelo explicitamente "
+    "por su nombre, validalo, y devuelvelo estructurado y mejorado con "
+    "pasos concretos (hipotesis, una variable por intento, criterio de "
+    "exito medible) — no lo menciones de pasada, dale su propio bloque de "
+    "pasos. Ademas, revisa dependencias logicas entre etapas: ninguna etapa "
+    "puede pedir como insumo algo que el plan no ayudo a producir en una "
+    "etapa anterior (por ejemplo, si una etapa pide 'vende unidades sin "
+    "defectos' o 'produce en volumen', una etapa anterior debe haber dado "
+    "los pasos concretos para lograr esa calidad o cantidad; si el material "
+    "no lo cubre con suficiente detalle, ajusta la etapa para pedir algo "
+    "que SI es alcanzable con lo que hay disponible).\n"
+    "10. Limite editorial (Fase 2.7): maximo 5 a 7 etapas en todo el plan, "
+    "nunca mas de 7. Si el material sugeriria mas, FUSIONA las etapas que "
+    "midan o persigan la misma funcion (por ejemplo, dos etapas que ambas "
+    "miden intencion de compra o comportamiento del cliente van en una sola "
+    "etapa mas densa, no en dos separadas) en vez de mantenerlas como "
+    "etapas distintas. Prohibido crear una etapa cuya funcion ya cumple "
+    "otra etapa del plan. Prioriza densidad (mas accion util por etapa) "
+    "sobre extension (mas etapas o mas parrafos por etapa).\n\n"
     "Espanol comun, sin jerga sin explicar, sin autores, sin relleno "
     "motivacional. Todo debe salir del material recibido; no inventes "
     "tecnicas, cifras ni fuentes nuevas que no esten en el material.\n\n"
@@ -567,7 +684,7 @@ def cargar_preguntas_cache():
 
 def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
                     project_id=None, db_session_id=None, es_seguimiento=False, estado_vivo_previo=None,
-                    fallback_events=None):
+                    fallback_events=None, prioridad_declarada=None):
     SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
     data = {
         "ruta": ruta,
@@ -580,6 +697,7 @@ def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profu
         "es_seguimiento": es_seguimiento,
         "estado_vivo_previo": estado_vivo_previo,
         "fallback_events": fallback_events or [],
+        "prioridad_declarada": prioridad_declarada,
         "timestamp": datetime.now().isoformat(),
     }
     (SESSIONS_DIR / f"{session_id}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -636,15 +754,31 @@ def _parsear_json(raw):
         return obj
 
 
+def _costo_llamada_usd(model, in_tokens, out_tokens, cache_read_tokens=0, cache_write_tokens=0):
+    pin, pout = PRECIOS.get(model, (0.0, 0.0))
+    return (
+        in_tokens / 1_000_000 * pin
+        + cache_read_tokens / 1_000_000 * pin * CACHE_READ_MULT
+        + cache_write_tokens / 1_000_000 * pin * CACHE_WRITE_MULT
+        + out_tokens / 1_000_000 * pout
+    )
+
+
 def costo_acumulado_usd():
     total = 0.0
     for model, s in USO.items():
-        pin, pout = PRECIOS.get(model, (0.0, 0.0))
-        total += s["in"] / 1_000_000 * pin + s["out"] / 1_000_000 * pout
+        total += _costo_llamada_usd(model, s["in"], s["out"], s["cache_read"], s["cache_write"])
     return total
 
 
-def llamar_claude(system, user_text, model, max_tokens=1500):
+def costo_por_componente_usd():
+    """Desglose de costo real por componente (Fase 2.7): clasificacion,
+    turnos (entrevista, incluye repreguntas y profundizar), plan,
+    estado_vivo, y organizador (solo en --gratis)."""
+    return dict(USO_POR_COMPONENTE)
+
+
+def llamar_claude(system, user_text, model, max_tokens=1500, componente=None):
     global PRESUPUESTO_EXCEDIDO
     if costo_acumulado_usd() >= PRESUPUESTO_SESION_USD:
         if not PRESUPUESTO_EXCEDIDO:
@@ -659,12 +793,69 @@ def llamar_claude(system, user_text, model, max_tokens=1500):
         system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content": user_text}],
     )
-    stats = USO.setdefault(model, {"in": 0, "out": 0, "llamadas": 0, "cache_read": 0})
+    _registrar_uso(model, msg, componente)
+    return "".join(b.text for b in msg.content if b.type == "text")
+
+
+def _registrar_uso(model, msg, componente=None):
+    stats = USO.setdefault(model, {"in": 0, "out": 0, "llamadas": 0, "cache_read": 0, "cache_write": 0})
+    cache_read = getattr(msg.usage, "cache_read_input_tokens", 0) or 0
+    cache_write = getattr(msg.usage, "cache_creation_input_tokens", 0) or 0
     stats["in"] += msg.usage.input_tokens
     stats["out"] += msg.usage.output_tokens
-    stats["cache_read"] += getattr(msg.usage, "cache_read_input_tokens", 0) or 0
+    stats["cache_read"] += cache_read
+    stats["cache_write"] += cache_write
     stats["llamadas"] += 1
-    return "".join(b.text for b in msg.content if b.type == "text")
+    if componente:
+        costo = _costo_llamada_usd(model, msg.usage.input_tokens, msg.usage.output_tokens, cache_read, cache_write)
+        USO_POR_COMPONENTE[componente] = USO_POR_COMPONENTE.get(componente, 0.0) + costo
+
+
+def llamar_claude_conversacion(system, historial_mensajes, nuevo_turno_texto, model, max_tokens=600, componente=None):
+    """Como llamar_claude, pero mantiene una conversacion (historial_mensajes,
+    mutada en el sitio SOLO si la llamada tiene exito) que crece turno a
+    turno. El marcador de cache vive siempre en el ultimo bloque enviado: se
+    quita del bloque previamente marcado (bookkeeping, seguro aunque esta
+    llamada falle) y se coloca en el turno nuevo. Asi, desde la segunda
+    llamada de la sesion en adelante, todo el prefijo previo (entrada
+    original, perfil acumulado, turnos anteriores) se lee de cache en vez de
+    repagarse completo cada vez (Fase 2.7, caching incremental de
+    conversacion)."""
+    global PRESUPUESTO_EXCEDIDO
+    if costo_acumulado_usd() >= PRESUPUESTO_SESION_USD:
+        if not PRESUPUESTO_EXCEDIDO:
+            PRESUPUESTO_EXCEDIDO = True
+            print(f"  (presupuesto de ${PRESUPUESTO_SESION_USD:.2f} alcanzado; "
+                  f"el resto de la sesion corre en modo offline)")
+        raise RuntimeError("presupuesto de sesion excedido")
+    import anthropic
+    client = anthropic.Anthropic()
+    # El marcador anterior vive en el ultimo mensaje de rol "user" (content
+    # en forma de lista); el mensaje mas reciente en la lista puede ser un
+    # turno "assistant" (content como string plano), asi que se busca hacia
+    # atras el primer bloque con content en lista, no simplemente [-1].
+    for _msg_previo in reversed(historial_mensajes):
+        _contenido_previo = _msg_previo.get("content")
+        if isinstance(_contenido_previo, list) and _contenido_previo:
+            _contenido_previo[-1].pop("cache_control", None)
+            break
+    nuevo_turno = {
+        "role": "user",
+        "content": [{"type": "text", "text": nuevo_turno_texto, "cache_control": {"type": "ephemeral"}}],
+    }
+    msg = client.messages.create(
+        model=model, max_tokens=max_tokens,
+        system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
+        messages=historial_mensajes + [nuevo_turno],
+    )
+    _registrar_uso(model, msg, componente)
+    texto_respuesta = "".join(b.text for b in msg.content if b.type == "text")
+    # Solo se compromete al historial real si la llamada tuvo exito: si
+    # client.messages.create() lanza, no llegamos aqui y historial_mensajes
+    # queda intacto (nunca con un turno de usuario sin su respuesta).
+    historial_mensajes.append(nuevo_turno)
+    historial_mensajes.append({"role": "assistant", "content": texto_respuesta})
+    return texto_respuesta
 
 
 def reportar_costo():
@@ -673,11 +864,14 @@ def reportar_costo():
     print("=" * 60)
     total = 0.0
     for model, s in USO.items():
-        pin, pout = PRECIOS.get(model, (0.0, 0.0))
-        costo = s["in"] / 1_000_000 * pin + s["out"] / 1_000_000 * pout
+        costo = _costo_llamada_usd(model, s["in"], s["out"], s["cache_read"], s["cache_write"])
         total += costo
         print(f"  {model}: {s['llamadas']} llamadas | {s['in']} in / {s['out']} out "
-              f"(cache_read {s['cache_read']}) | ${costo:.4f}")
+              f"(cache_read {s['cache_read']}, cache_write {s['cache_write']}) | ${costo:.4f}")
+    if USO_POR_COMPONENTE:
+        print("  Desglose por componente:")
+        for comp, costo in sorted(USO_POR_COMPONENTE.items(), key=lambda kv: -kv[1]):
+            print(f"    {comp}: ${costo:.4f}")
     print(f"  TOTAL: ${total:.4f}" + (" (presupuesto excedido, se degrado a offline)" if PRESUPUESTO_EXCEDIDO else ""))
 
 
@@ -695,7 +889,8 @@ def clasificar_entrada(texto, entry_seeds, graph):
         ]
         ctx = {"texto_usuario": texto, "puertas": puertas}
         try:
-            raw = llamar_claude(SYSTEM_CLASIFICACION, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=400)
+            raw = llamar_claude(SYSTEM_CLASIFICACION, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU,
+                                max_tokens=400, componente="clasificacion")
             data = _parsear_json(raw)
             if data["puerta_id"] in entry_seeds:
                 return data["puerta_id"], (data.get("perfil_sesion") or "").strip()
@@ -835,18 +1030,30 @@ def _elegir_por_afinidad(candidatos_ids, graph, respuesta_usuario, perfil_sesion
 
 def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_original,
                              pregunta_hecha, respuesta_usuario, repreguntas_disponibles,
-                             preguntas_cache, ultimas_preguntas=None, registrar_evento=None):
+                             preguntas_cache, ultimas_preguntas=None, prioridad_declarada_actual=None,
+                             historial_mensajes=None, registrar_evento=None):
     """Capa 2: decide un camino de 1-3 nodos (silenciosos + a lo sumo uno
     conversado) y, si se detiene a preguntar, la pregunta_adaptada para ese
     nodo (reformulada al registro del perfil, descontando lo ya respondido,
-    sin repetir las ultimas_preguntas_hechas). Si el modelo devuelve algo
-    invalido (id inexistente, camino vacio, pregunta_adaptada faltante),
-    reintenta UNA vez con el error y la lista literal de ids validos. Si
-    vuelve a fallar, auto-selecciona en silencio el candidato de mayor
-    afinidad y continua sin que el usuario note nada (registra el evento
-    como 'fallback_auto' via `registrar_evento`, si se provee).
-    Solo devuelve None ante un fallo de RED/presupuesto (ahi si corresponde
-    el menu numerado de emergencia, ultimo recurso visible)."""
+    sin repetir las ultimas 3 intervenciones). Ademas rastrea
+    prioridad_declarada (Fase 2.7): si el usuario reafirma 2+ veces el mismo
+    bloqueo, prohibe otra deflexion y exige reconocerlo como frente legitimo.
+    Si el modelo devuelve algo invalido (id inexistente, camino vacio,
+    pregunta_adaptada faltante), reintenta UNA vez con el error y la lista
+    literal de ids validos (el reintento SIEMPRE es una llamada aislada, sin
+    tocar historial_mensajes). Si vuelve a fallar, auto-selecciona en
+    silencio el candidato de mayor afinidad y continua sin que el usuario
+    note nada (registra el evento como 'fallback_auto' via
+    `registrar_evento`, si se provee). Solo devuelve None ante un fallo de
+    RED/presupuesto (ahi si corresponde el menu numerado de emergencia,
+    ultimo recurso visible).
+
+    Si se pasa historial_mensajes (lista mutable, Fase 2.7), la llamada
+    principal usa llamar_claude_conversacion: desde el segundo turno de la
+    sesion en adelante, entrada_original y el perfil acumulado ya no se
+    reenvian completos (viven en el prefijo cacheado de turnos previos);
+    solo se envia el turno nuevo. Si historial_mensajes es None, se usa el
+    llamado clasico sin estado (compatibilidad con pruebas aisladas)."""
     nivel1_ids = sucesores_nivel(actual_id, graph, visitados)
     nivel1 = []
     visitados_o_nivel1 = visitados | set(nivel1_ids)
@@ -856,7 +1063,7 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         entrada_nivel1["sucesores"] = [resumen_nodo(n2, graph, preguntas_cache) for n2 in nivel2_ids]
         nivel1.append(entrada_nivel1)
 
-    ctx = {
+    ctx_completo = {
         "entrada_original": texto_original,
         "perfil_sesion": perfil_sesion,
         "nodo_actual": resumen_nodo(actual_id, graph, preguntas_cache),
@@ -864,8 +1071,15 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         "pregunta_hecha": pregunta_hecha,
         "respuesta_usuario": respuesta_usuario,
         "repreguntas_disponibles": repreguntas_disponibles,
-        "ultimas_preguntas_hechas": ultimas_preguntas or [],
+        "ultimas_preguntas_hechas": (ultimas_preguntas or [])[-3:],
+        "prioridad_declarada_actual": prioridad_declarada_actual,
     }
+    if historial_mensajes is not None and historial_mensajes:
+        # turno 2+: entrada_original y perfil_sesion ya viven en el
+        # historial cacheado, no hace falta repagarlos completos cada vez
+        ctx_turno = {k: v for k, v in ctx_completo.items() if k not in ("entrada_original", "perfil_sesion")}
+    else:
+        ctx_turno = ctx_completo
 
     def _validar_respuesta(raw):
         data = _parsear_json(raw)
@@ -885,10 +1099,21 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
                 data["pregunta_adaptada"] = adaptada
             else:
                 data["pregunta_adaptada"] = None
+        pd = data.get("prioridad_declarada")
+        if isinstance(pd, dict) and "texto" in pd and "conteo" in pd:
+            data["prioridad_declarada"] = {"texto": str(pd["texto"]), "conteo": int(pd["conteo"])}
+        else:
+            data["prioridad_declarada"] = None
         return data
 
     try:
-        raw = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=600)
+        if historial_mensajes is not None:
+            raw = llamar_claude_conversacion(SYSTEM_INTERPRETE_MULTI, historial_mensajes,
+                                              json.dumps(ctx_turno, ensure_ascii=False), MODEL_HAIKU,
+                                              max_tokens=700, componente="turnos")
+        else:
+            raw = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx_turno, ensure_ascii=False),
+                                MODEL_HAIKU, max_tokens=700, componente="turnos")
     except Exception:
         return None  # fallo de red/presupuesto: unico caso que llega al menu de emergencia
 
@@ -898,15 +1123,19 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
     except Exception as error_validacion:
         mensaje_error_previo = str(error_validacion)  # el except borra la variable al salir; guardarla antes
 
+    # El reintento y el respaldo tier-2 SIEMPRE usan el contexto completo y
+    # aislado (llamar_claude clasico): no tocan historial_mensajes, para no
+    # comprometer la conversacion cacheada con un intento invalido.
     ids_validos = [n["id"] for n in nivel1]
     for n in nivel1:
         ids_validos += [h["id"] for h in n.get("sucesores", [])]
-    ctx_retry = dict(ctx)
+    ctx_retry = dict(ctx_completo)
     ctx_retry["error_previo"] = mensaje_error_previo
     ctx_retry["ids_validos"] = ids_validos
 
     try:
-        raw2 = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx_retry, ensure_ascii=False), MODEL_HAIKU, max_tokens=600)
+        raw2 = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx_retry, ensure_ascii=False),
+                             MODEL_HAIKU, max_tokens=700, componente="turnos")
         return _validar_respuesta(raw2)
     except Exception as segundo_error:
         candidato = _elegir_por_afinidad(nivel1_ids, graph, respuesta_usuario, perfil_sesion)
@@ -922,7 +1151,8 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         # fallos seguidos del modelo; no hay pregunta_adaptada que rescatar.
         pregunta_fallback = obtener_pregunta(candidato, graph[candidato], preguntas_cache)
         return {"accion": "avanzar", "camino": [candidato], "pregunta_necesaria": True,
-                "pregunta_adaptada": pregunta_fallback, "perfil_update": None}
+                "pregunta_adaptada": pregunta_fallback, "perfil_update": None,
+                "prioridad_declarada": prioridad_declarada_actual}
 
 
 def _menu_emergencia(nivel1_ids, graph):
@@ -951,7 +1181,7 @@ def preguntar_profundizar(familias_faltantes):
     respuesta = leer_entrada("\n" + mensaje + "\n> ")
     if API_KEY:
         try:
-            raw = llamar_claude(SYSTEM_PROFUNDIZAR, respuesta, MODEL_HAIKU, max_tokens=100)
+            raw = llamar_claude(SYSTEM_PROFUNDIZAR, respuesta, MODEL_HAIKU, max_tokens=100, componente="turnos")
             data = _parsear_json(raw)
             if data.get("decision") in ("generar_ya", "continuar"):
                 return data["decision"]
@@ -976,11 +1206,18 @@ def _tokens_cosecha(texto):
     return set(w for w in re.findall(r"[a-z0-9]+", ascii_txt) if w not in _STOPWORDS_COSECHA and len(w) > 2)
 
 
-def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, tope=MAX_COSECHA):
+MAX_COSECHA_PRIORIDAD = 8
+
+
+def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada=None, tope=MAX_COSECHA):
     """Expande desde la ruta (conversada + silenciosa) hacia nodos_siguientes y
     nodos_previos adyacentes, sin preguntar nada, y devuelve hasta `tope`
     priorizados por: familia que le falte a la ruta, fase mayoritaria de la
-    ruta, y afinidad de palabras clave con el perfil_sesion."""
+    ruta, y afinidad de palabras clave con el perfil_sesion.
+    Fase 2.7: si hay prioridad_declarada (el bloqueo que el usuario repitio),
+    reserva hasta MAX_COSECHA_PRIORIDAD cupos para nodos afines a esa
+    prioridad ANTES de aplicar el puntaje normal, para que el plan tenga
+    material tecnico concreto sobre el frente que el usuario mismo senalo."""
     ruta_set = set(ruta)
     candidatos = set()
     for nid in ruta:
@@ -1000,6 +1237,25 @@ def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, tope=M
 
     perfil_tokens = _tokens_cosecha(perfil_sesion) if perfil_sesion else set()
 
+    seleccionados = []
+    candidatos_restantes = set(candidatos)
+
+    texto_prioridad = (prioridad_declarada or {}).get("texto") if prioridad_declarada else None
+    if texto_prioridad:
+        prioridad_tokens = _tokens_cosecha(texto_prioridad)
+        if prioridad_tokens:
+            def afinidad_prioridad(nid):
+                n = graph[nid]
+                texto_nodo = (n.get("titulo_concepto", "") + " " + n.get("resumen_teorico", "")[:300] + " "
+                              + " ".join(n.get("condiciones_activacion", [])))
+                return len(prioridad_tokens & _tokens_cosecha(texto_nodo))
+
+            reservados = [nid for nid in candidatos_restantes if afinidad_prioridad(nid) > 0]
+            reservados.sort(key=afinidad_prioridad, reverse=True)
+            reservados = reservados[:MAX_COSECHA_PRIORIDAD]
+            seleccionados.extend(reservados)
+            candidatos_restantes -= set(reservados)
+
     def puntaje(nid):
         n = graph[nid]
         p = 0
@@ -1012,17 +1268,22 @@ def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, tope=M
             p += len(perfil_tokens & _tokens_cosecha(texto_nodo))
         return p
 
-    return sorted(candidatos, key=puntaje, reverse=True)[:tope]
+    resto = sorted(candidatos_restantes, key=puntaje, reverse=True)
+    seleccionados.extend(resto[: max(0, tope - len(seleccionados))])
+    return seleccionados[:tope]
 
 
 def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id,
-                    es_seguimiento=False, estado_vivo_previo=None):
+                    es_seguimiento=False, estado_vivo_previo=None, prioridad_declarada=None):
     """`evaluacion` (ruta-solo) decide QUE cosechar (familia faltante como
     prioridad). La etiqueta inicial/completo y la seccion "no cubre" se
     recalculan sobre ruta+cosecha, porque eso es lo que el plan realmente
     contiene: si la cosecha trajo la familia que la ruta no toco, el plan
     ya la cubre y no puede declarar lo contrario. Devuelve un dict con el
-    markdown y los metadatos de cosecha/cobertura, para persistencia."""
+    markdown y los metadatos de cosecha/cobertura, para persistencia.
+    Fase 2.7: prioridad_declarada (el bloqueo que el usuario repitio) se
+    pasa a la cosecha (reserva cupos afines) y al redactor (bloqueo_declarado
+    en el payload), para que el plan le de tratamiento explicito."""
     def a_material(nid):
         n = graph[nid]
         return {
@@ -1033,7 +1294,7 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
         }
 
     material_principal = [a_material(nid) for nid in ruta]
-    cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion)
+    cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada)
     material_de_apoyo = [a_material(nid) for nid in cosecha_ids]
     evaluacion_cobertura = plan_readiness.evaluar_ruta(ruta + cosecha_ids, families)
 
@@ -1043,12 +1304,14 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
             "perfil_sesion": perfil_sesion,
             "material_principal": material_principal,
             "material_de_apoyo": material_de_apoyo,
+            "bloqueo_declarado": (prioridad_declarada or {}).get("texto") if prioridad_declarada else None,
         }
         if es_seguimiento:
             payload["es_seguimiento"] = True
             payload["estado_vivo_previo"] = estado_vivo_previo
         try:
-            cuerpo = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL, max_tokens=8192)
+            cuerpo = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL,
+                                   max_tokens=5000, componente="plan")
         except Exception as e:
             print(f"  (fallo el redactor con IA, ensamblo offline: {e})")
             cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
@@ -1103,7 +1366,8 @@ def comprimir_estado_vivo(estado_anterior, perfil_sesion_nueva, conceptos_nuevos
             "conceptos_nuevos_cubiertos": conceptos_nuevos_titulos,
         }
         try:
-            return llamar_claude(SYSTEM_ESTADO_VIVO, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=700).strip()
+            return llamar_claude(SYSTEM_ESTADO_VIVO, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU,
+                                 max_tokens=700, componente="estado_vivo").strip()
         except Exception as e:
             print(f"  (fallo comprimir estado_vivo, uso respaldo sin comprimir: {e})")
     return (estado_anterior + "\n" + perfil_sesion_nueva).strip() if estado_anterior else perfil_sesion_nueva
@@ -1119,7 +1383,8 @@ def organizador_gratuito(texto_original, entry_seeds, graph):
     ]
     ctx = {"texto_usuario": texto_original, "puertas": puertas}
     try:
-        raw = llamar_claude(SYSTEM_ORGANIZADOR, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=600)
+        raw = llamar_claude(SYSTEM_ORGANIZADOR, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU,
+                            max_tokens=600, componente="organizador")
         data = _parsear_json(raw)
     except Exception as e:
         return None, f"  (fallo el organizador con IA: {e})"
@@ -1188,7 +1453,8 @@ def seleccionar_puerta_avanzada(mensaje_nuevo, estado_vivo, fase_actual, familie
             })
         ctx = {"estado_vivo": estado_vivo, "mensaje_nuevo": mensaje_nuevo, "candidatos": opciones}
         try:
-            raw = llamar_claude(SYSTEM_PUERTA_AVANZADA, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU, max_tokens=400)
+            raw = llamar_claude(SYSTEM_PUERTA_AVANZADA, json.dumps(ctx, ensure_ascii=False), MODEL_HAIKU,
+                                max_tokens=400, componente="clasificacion")
             data = _parsear_json(raw)
             if data["puerta_id"] in candidatos_ids:
                 return data["puerta_id"], (data.get("perfil_sesion") or "").strip()
@@ -1234,12 +1500,18 @@ def _extraer_titulo(plan_md):
 def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, ruta, modos,
                        perfil_sesion, texto_original, session_id, project_id, db_session_id,
                        profundizar_ofrecido=False, pregunta_hecha=None, respuesta_usuario=None,
-                       es_seguimiento=False, estado_vivo_previo=None, fallback_events=None):
+                       es_seguimiento=False, estado_vivo_previo=None, fallback_events=None,
+                       prioridad_declarada=None):
     """Corre el bucle de entrevista (comun a proyecto nuevo y --seguir) hasta
-    salir sin plan o ensamblar uno. Devuelve un dict con el resultado."""
+    salir sin plan o ensamblar uno. Devuelve un dict con el resultado.
+    Fase 2.7: mantiene historial_mensajes (conversacion cacheada turno a
+    turno con el interprete, vive solo en memoria de esta corrida, no se
+    persiste) y prioridad_declarada (si persiste entre turnos y entre
+    --continuar, via guardar_sesion)."""
     repreguntas_usadas = 0
     fallback_events = list(fallback_events or [])
     ultimas_preguntas = []
+    historial_mensajes = []
 
     def _registrar_evento(evento):
         fallback_events.append(evento)
@@ -1256,6 +1528,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
             pregunta_hecha, respuesta_usuario,
             repreguntas_disponibles=(repreguntas_usadas < MAX_REPREGUNTAS_POR_PUNTO),
             preguntas_cache=preguntas_cache, ultimas_preguntas=ultimas_preguntas,
+            prioridad_declarada_actual=prioridad_declarada, historial_mensajes=historial_mensajes,
             registrar_evento=_registrar_evento,
         )
         if resultado is None:
@@ -1263,17 +1536,19 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
 
         if resultado.get("perfil_update"):
             perfil_sesion = (perfil_sesion + "\n" + resultado["perfil_update"]).strip() if perfil_sesion else resultado["perfil_update"]
+        if "prioridad_declarada" in resultado:
+            prioridad_declarada = resultado["prioridad_declarada"] or prioridad_declarada
 
         if resultado["accion"] == "salir":
             print("\nHasta pronto.")
             return {"tipo": "salio", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion,
-                    "fallback_events": fallback_events}
+                    "fallback_events": fallback_events, "prioridad_declarada": prioridad_declarada}
 
         if resultado["accion"] == "repreguntar":
             repreguntas_usadas += 1
             pregunta_hecha = resultado["repregunta"]
             respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
-            ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-2:]
+            ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-3:]
             continue
 
         if resultado["accion"] == "generar_plan":
@@ -1281,7 +1556,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
             if not evaluacion["es_completa"] and not profundizar_ofrecido:
                 profundizar_ofrecido = True
                 guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
-                               project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events)
+                               project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
+                               prioridad_declarada)
                 if preguntar_profundizar(evaluacion["familias_faltantes"]) == "continuar":
                     print("\nPerfecto, sigamos un poco mas.")
                     pregunta_hecha, respuesta_usuario = None, None
@@ -1303,14 +1579,15 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         actual_id = camino[-1]
         repreguntas_usadas = 0
         guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
-                       project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events)
+                       project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
+                       prioridad_declarada)
 
         if pregunta_necesaria:
             n = graph[actual_id]
             _imprimir_nodo(len(ruta), MAX_DEPTH, n, "conversado", con_resumen=True)
             pregunta_hecha = resultado.get("pregunta_adaptada") or obtener_pregunta(actual_id, n, preguntas_cache)
             respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
-            ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-2:]
+            ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-3:]
         else:
             pregunta_hecha, respuesta_usuario = None, None
 
@@ -1318,7 +1595,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
     print("\nEnsamblando tu plan...\n")
     resultado_plan = ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion,
                                      session_id, es_seguimiento=es_seguimiento,
-                                     estado_vivo_previo=estado_vivo_previo)
+                                     estado_vivo_previo=estado_vivo_previo,
+                                     prioridad_declarada=prioridad_declarada)
     plan_md = resultado_plan["markdown"]
     print(plan_md)
     fname = BASE / f"plan_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
@@ -1332,12 +1610,14 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         "cosecha_ids": resultado_plan["cosecha_ids"],
         "evaluacion_cobertura": resultado_plan["evaluacion_cobertura"],
         "plan_md": plan_md, "plan_fname": fname, "fallback_events": fallback_events,
+        "prioridad_declarada": prioridad_declarada,
     }
 
 
 def _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=False):
     """Escribe en Supabase (o JSON local) el resultado de una sesion: nodos
-    cubiertos, cierre de sesion, plan, y el estado_vivo comprimido."""
+    cubiertos, cierre de sesion (con desglose de costo por componente,
+    Fase 2.7), plan, y el estado_vivo comprimido."""
     if project_id is None or db_session_id is None:
         return  # --continuar de un scratch file anterior sin project_id: nada que persistir
 
@@ -1345,7 +1625,8 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
     modos = resultado["modos"]
 
     if resultado["tipo"] == "salio":
-        db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO)
+        db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
+                         costo_por_componente_usd())
         return
 
     cosecha_ids = resultado["cosecha_ids"]
@@ -1354,18 +1635,21 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
     nodos_con_tipo = list(zip(ruta, modos)) + [(nid, "cosechado") for nid in cosecha_ids]
     db.registrar_nodos(project_id, db_session_id, nodos_con_tipo)
 
+    # estado_vivo se comprime ANTES de cerrar la sesion para que su costo
+    # quede incluido en el desglose por componente que se persiste al cerrar
+    proyecto = db.obtener_proyecto(project_id)
+    estado_anterior = proyecto.get("estado_vivo") if proyecto else None
+    conceptos_titulos = [graph[nid]["titulo_concepto"] for nid in ruta + cosecha_ids if nid in graph]
+    estado_nuevo = comprimir_estado_vivo(estado_anterior, resultado["perfil_sesion"], conceptos_titulos)
+
     ruta_con_modos_json = [{"node_id": nid, "tipo": modo} for nid, modo in zip(ruta, modos)]
-    db.cerrar_sesion(project_id, db_session_id, ruta_con_modos_json, costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO)
+    db.cerrar_sesion(project_id, db_session_id, ruta_con_modos_json, costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
+                     costo_por_componente_usd())
 
     etiqueta_db = "seguimiento" if es_seguimiento else ("completo" if evaluacion_cobertura["es_completa"] else "inicial")
     total_conceptos = len(ruta) + len(cosecha_ids)
     familias_presentes = sorted({families.get(nid, "general") for nid in ruta + cosecha_ids} - {"general"})
     db.guardar_plan(project_id, db_session_id, etiqueta_db, resultado["plan_md"], total_conceptos, familias_presentes)
-
-    proyecto = db.obtener_proyecto(project_id)
-    estado_anterior = proyecto.get("estado_vivo") if proyecto else None
-    conceptos_titulos = [graph[nid]["titulo_concepto"] for nid in ruta + cosecha_ids if nid in graph]
-    estado_nuevo = comprimir_estado_vivo(estado_anterior, resultado["perfil_sesion"], conceptos_titulos)
 
     fase_final = graph[ruta[-1]].get("fase_proyecto", "ideacion") if ruta else "ideacion"
     campos = {"estado_vivo": estado_nuevo, "fase_actual": fase_final}
@@ -1406,6 +1690,7 @@ def modo_nuevo_proyecto(graph, families, entry_seeds, preguntas_cache, args):
             es_seguimiento = sesion.get("es_seguimiento", False)
             estado_vivo_previo = sesion.get("estado_vivo_previo")
             fallback_events = sesion.get("fallback_events", [])
+            prioridad_declarada = sesion.get("prioridad_declarada")
             print(f"\nRetomando sesion {session_id} desde: {graph[actual_id]['titulo_concepto']}")
         else:
             session_id = uuid.uuid4().hex[:8]
@@ -1417,6 +1702,7 @@ def modo_nuevo_proyecto(graph, families, entry_seeds, preguntas_cache, args):
             profundizar_ofrecido = False
             es_seguimiento, estado_vivo_previo = False, None
             fallback_events = []
+            prioridad_declarada = None
             guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
                            project_id, db_session_id)
             _imprimir_nodo(1, MAX_DEPTH, graph[actual_id], "puerta de entrada", con_resumen=True)
@@ -1427,7 +1713,7 @@ def modo_nuevo_proyecto(graph, families, entry_seeds, preguntas_cache, args):
             perfil_sesion, texto_original, session_id, project_id, db_session_id,
             profundizar_ofrecido, pregunta_hecha, respuesta_usuario,
             es_seguimiento=es_seguimiento, estado_vivo_previo=estado_vivo_previo,
-            fallback_events=fallback_events,
+            fallback_events=fallback_events, prioridad_declarada=prioridad_declarada,
         )
         _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=es_seguimiento)
         if project_id:
@@ -1497,7 +1783,8 @@ def modo_gratis(graph, entry_seeds):
     print(f"\nGuardado en: {fname}")
 
     db.guardar_plan(project_id, db_session_id, "organizador", markdown, 0, [])
-    db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO)
+    db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
+                     costo_por_componente_usd())
     if isinstance(data, dict) and data.get("etapa_detectada") in db.FASES:
         db.actualizar_proyecto(project_id, fase_actual=data["etapa_detectada"])
 

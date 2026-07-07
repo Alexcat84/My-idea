@@ -162,15 +162,29 @@ def crear_sesion(project_id, tipo, mensaje_entrada, puerta_entrada=None):
     return session_id
 
 
-def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto_excedido):
-    """ruta_con_modos: [{"node_id": str, "tipo": "conversado"|"silencioso"}]"""
+def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto_excedido, costo_desglose=None):
+    """ruta_con_modos: [{"node_id": str, "tipo": "conversado"|"silencioso"}].
+    costo_desglose (Fase 2.7): {"clasificacion": float, "turnos": float,
+    "plan": float, "estado_vivo": float, ...} - costo real por componente,
+    ademas del total, para monitorear que componente crece con el tiempo.
+    Requiere la columna sessions.costo_desglose (jsonb); ver
+    supabase/migrations/my_idea_002_costo_desglose.sql. Si la columna aun
+    no existe en el proyecto de Supabase, este update fallaria; en ese caso
+    se reintenta sin costo_desglose para no romper el cierre de sesion."""
     if disponible():
-        _cliente().table("sessions").update({
+        campos = {
             "ruta": ruta_con_modos,
             "costo_usd": costo_usd,
             "presupuesto_excedido": presupuesto_excedido,
             "closed_at": _ahora(),
-        }).eq("id", session_id).execute()
+        }
+        if costo_desglose:
+            campos["costo_desglose"] = costo_desglose
+        try:
+            _cliente().table("sessions").update(campos).eq("id", session_id).execute()
+        except Exception:
+            campos.pop("costo_desglose", None)
+            _cliente().table("sessions").update(campos).eq("id", session_id).execute()
         proyecto = obtener_proyecto(project_id)
         nuevo_conteo = (proyecto.get("session_count", 0) if proyecto else 0) + 1
         actualizar_proyecto(project_id, session_count=nuevo_conteo)
@@ -181,6 +195,7 @@ def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto
             s["ruta"] = ruta_con_modos
             s["costo_usd"] = costo_usd
             s["presupuesto_excedido"] = presupuesto_excedido
+            s["costo_desglose"] = costo_desglose or {}
             s["closed_at"] = _ahora()
     data["session_count"] = data.get("session_count", 0) + 1
     data["updated_at"] = _ahora()
