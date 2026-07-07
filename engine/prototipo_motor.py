@@ -1002,7 +1002,13 @@ def cargar_preguntas_cache():
 
 def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
                     project_id=None, db_session_id=None, es_seguimiento=False, estado_vivo_previo=None,
-                    fallback_events=None, prioridad_declarada=None):
+                    fallback_events=None, prioridad_declarada=None, pregunta_hecha=None):
+    """pregunta_hecha (Hotfix v2.1.2): la pregunta LITERAL que esta pendiente
+    de respuesta en el momento de guardar, si la hay. Se persiste para que
+    --continuar pueda re-presentarla y leer una respuesta real, en vez de
+    reanudar con respuesta_usuario=None (indistinguible del arranque de una
+    sesion nueva) y arriesgarse a que el interprete decida algo sin base,
+    incluyendo 'salir' sin que el usuario lo haya pedido."""
     SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
     data = {
         "ruta": ruta,
@@ -1016,6 +1022,7 @@ def guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profu
         "estado_vivo_previo": estado_vivo_previo,
         "fallback_events": fallback_events or [],
         "prioridad_declarada": prioridad_declarada,
+        "pregunta_hecha": pregunta_hecha,
         "timestamp": datetime.now().isoformat(),
     }
     (SESSIONS_DIR / f"{session_id}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -2149,6 +2156,9 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         if resultado["accion"] == "repreguntar":
             repreguntas_usadas += 1
             pregunta_hecha = resultado["repregunta"]
+            guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
+                           project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
+                           prioridad_declarada, pregunta_hecha=pregunta_hecha)
             respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
             ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-3:]
             continue
@@ -2220,6 +2230,9 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
             n = graph[actual_id]
             _imprimir_nodo(len(ruta), MAX_DEPTH, n, modos[-1], con_resumen=True)
             pregunta_hecha = resultado.get("pregunta_adaptada") or obtener_pregunta(actual_id, n, preguntas_cache)
+            guardar_sesion(session_id, ruta, modos, perfil_sesion, texto_original, profundizar_ofrecido,
+                           project_id, db_session_id, es_seguimiento, estado_vivo_previo, fallback_events,
+                           prioridad_declarada, pregunta_hecha=pregunta_hecha)
             respuesta_usuario = leer_entrada("\n" + pregunta_hecha + "\n> ")
             ultimas_preguntas = (ultimas_preguntas + [pregunta_hecha])[-3:]
         else:
@@ -2343,6 +2356,16 @@ def modo_nuevo_proyecto(graph, families, entry_seeds, preguntas_cache, args):
             fallback_events = sesion.get("fallback_events", [])
             prioridad_declarada = sesion.get("prioridad_declarada")
             print(f"\nRetomando sesion {session_id} desde: {graph[actual_id]['titulo_concepto']}")
+            pregunta_pendiente = sesion.get("pregunta_hecha")
+            if pregunta_pendiente:
+                # Hotfix v2.1.2: sin esto, la primera vuelta del bucle en
+                # ejecutar_recorrido se hace con respuesta_usuario=None,
+                # indistinguible de un arranque de sesion nueva — el
+                # interprete queda libre de decidir cualquier cosa sin haber
+                # visto lo que el usuario en verdad iba a responder,
+                # incluyendo 'salir' sin que nadie lo pidiera.
+                respuesta_usuario = leer_entrada("\n" + pregunta_pendiente + "\n> ")
+                pregunta_hecha = pregunta_pendiente
         else:
             session_id = uuid.uuid4().hex[:8]
             texto_original = leer_entrada("\nCuéntame tu idea, o en qué punto estás con ella:\n> ")
