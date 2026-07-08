@@ -8,8 +8,10 @@
  * RLS de projects/sessions/plans (auth.uid() = user_id) hacen el resto.
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
+import type { NumerosProyecto } from "./calculadora";
 import type { UsoAcumulado } from "./costmeter";
 import type { EstadoRecorrido } from "./engine/recorrido";
+import type { EstadoReporte } from "./engine/reporteFlow";
 
 export const FASES = ["ideacion", "validacion", "planificacion", "ejecucion"] as const;
 export type Fase = (typeof FASES)[number];
@@ -25,10 +27,22 @@ export interface Proyecto {
   status: "active" | "archived";
   tipo_oferta?: string | null;
   unidad_venta?: string | null;
-  numeros_proyecto?: unknown;
+  numeros_proyecto?: NumerosProyecto;
   numeros_descartados?: unknown;
+  estado_reporte?: EstadoReportePersistido | null;
   created_at: string;
   updated_at: string;
+}
+
+/** Estado resumible de la mini-entrevista de POST /api/project/[id]/report
+ * (projects.estado_reporte, migration 010) entre una pregunta y la
+ * siguiente. numeros_proyecto ya vive en su propia columna (fuente de
+ * verdad, se re-lee y se re-escribe en cada paso, igual que Python), asi
+ * que aqui solo hace falta el progreso de la mini-entrevista en si mas el
+ * acumulado de costo (tope propio PRESUPUESTO_REPORTE_USD). */
+export interface EstadoReportePersistido {
+  estado: EstadoReporte;
+  acumulado: UsoAcumulado;
 }
 
 export interface RutaNodo {
@@ -41,7 +55,7 @@ export interface Sesion {
   project_id: string;
   user_id: string;
   session_position: number;
-  tipo: "gratuito" | "inicial" | "seguimiento";
+  tipo: "gratuito" | "inicial" | "seguimiento" | "reporte";
   mensaje_entrada: string;
   puerta_entrada: string | null;
   ruta: RutaNodo[];
@@ -99,7 +113,7 @@ export async function crearSesion(
   supabase: SupabaseClient,
   userId: string,
   projectId: string,
-  tipo: "gratuito" | "inicial" | "seguimiento",
+  tipo: "gratuito" | "inicial" | "seguimiento" | "reporte",
   mensajeEntrada: string,
   puertaEntrada: string | null = null
 ): Promise<string> {
@@ -226,7 +240,7 @@ export async function guardarPlan(
   supabase: SupabaseClient,
   userId: string,
   sessionId: string,
-  etiqueta: "organizador" | "inicial" | "completo" | "seguimiento",
+  etiqueta: "organizador" | "inicial" | "completo" | "seguimiento" | "reporte_numeros",
   contenidoMd: string,
   conceptosUsados: number,
   familiasCubiertas: string[]
