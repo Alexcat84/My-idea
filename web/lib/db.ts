@@ -8,6 +8,8 @@
  * RLS de projects/sessions/plans (auth.uid() = user_id) hacen el resto.
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
+import type { UsoAcumulado } from "./costmeter";
+import type { EstadoRecorrido } from "./engine/recorrido";
 
 export const FASES = ["ideacion", "validacion", "planificacion", "ejecucion"] as const;
 export type Fase = (typeof FASES)[number];
@@ -32,6 +34,32 @@ export interface Proyecto {
 export interface RutaNodo {
   node_id: string;
   tipo: "conversado" | "silencioso";
+}
+
+export interface Sesion {
+  id: string;
+  project_id: string;
+  user_id: string;
+  session_position: number;
+  tipo: "gratuito" | "inicial" | "seguimiento";
+  mensaje_entrada: string;
+  puerta_entrada: string | null;
+  ruta: RutaNodo[];
+  costo_usd: number;
+  presupuesto_excedido: boolean;
+  estado_recorrido: EstadoSesionPersistido | null;
+  created_at: string;
+  closed_at: string | null;
+}
+
+/** Todo lo que hace falta para resumir un turno: el estado del bucle de
+ * entrevista (recorrido) MAS el acumulado de costo real (uso, no solo el
+ * total en dolares) -- llamarClaude necesita el desglose de tokens por
+ * modelo para decidir si el presupuesto de la sesion ya se supero, asi
+ * que no alcanza con persistir costo_usd. */
+export interface EstadoSesionPersistido {
+  recorrido: EstadoRecorrido;
+  acumulado: UsoAcumulado;
 }
 
 function ahora(): string {
@@ -116,6 +144,54 @@ export async function cerrarSesion(
   const proyecto = await obtenerProyecto(supabase, projectId);
   const nuevoConteo = (proyecto?.session_count ?? 0) + 1;
   await actualizarProyecto(supabase, projectId, { session_count: nuevoConteo });
+}
+
+export async function obtenerSesion(supabase: SupabaseClient, sessionId: string): Promise<Sesion | null> {
+  const { data, error } = await supabase.from("sessions").select("*").eq("id", sessionId).limit(1);
+  if (error) throw error;
+  const filas = data as Sesion[];
+  return filas.length > 0 ? filas[0] : null;
+}
+
+/** Persiste el estado resumible del bucle de entrevista entre turnos
+ * (sessions.estado_recorrido, migration 009). No cierra la sesion. */
+export async function guardarEstadoSesion(
+  supabase: SupabaseClient,
+  sessionId: string,
+  estado: EstadoSesionPersistido
+): Promise<void> {
+  const { error } = await supabase.from("sessions").update({ estado_recorrido: estado }).eq("id", sessionId);
+  if (error) throw error;
+}
+
+/** Motor v2.1: mergea lo detectado ESTA sesion dentro de
+ * projects.numeros_proyecto (solo pisa los campos que esta sesion SI
+ * detecto; el resto del historial numerico del proyecto queda intacto). */
+export async function mergeNumerosProyecto(
+  supabase: SupabaseClient,
+  projectId: string,
+  numerosDetectadosSesion: Record<string, unknown> | null | undefined
+): Promise<void> {
+  if (!numerosDetectadosSesion || Object.keys(numerosDetectadosSesion).length === 0) return;
+  const proyecto = await obtenerProyecto(supabase, projectId);
+  const numeros = { ...((proyecto?.numeros_proyecto as Record<string, unknown>) ?? {}), ...numerosDetectadosSesion };
+  await actualizarProyecto(supabase, projectId, { numeros_proyecto: numeros });
+}
+
+/** Motor v2.2: persiste tipo_oferta/unidad_venta si esta sesion detecto
+ * algo nuevo (nunca pisa con null lo que ya estaba guardado de una
+ * sesion anterior). */
+export async function mergeTipoOferta(
+  supabase: SupabaseClient,
+  projectId: string,
+  tipoOfertaSesion: string | null | undefined,
+  unidadVentaSesion: string | null | undefined
+): Promise<void> {
+  if (!tipoOfertaSesion && !unidadVentaSesion) return;
+  const campos: Record<string, unknown> = {};
+  if (tipoOfertaSesion) campos.tipo_oferta = tipoOfertaSesion;
+  if (unidadVentaSesion) campos.unidad_venta = unidadVentaSesion;
+  await actualizarProyecto(supabase, projectId, campos);
 }
 
 export async function guardarPlan(
