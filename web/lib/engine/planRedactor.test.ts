@@ -9,6 +9,7 @@ import {
   ensamblarOffline,
   evaluacionDesdeAutodeclaracion,
   extraerTitulo,
+  filtrarDeltaAntesDeAutodeclaracion,
   finalizarPlan,
   parsearAutodeclaracion,
   prepararPlan,
@@ -77,6 +78,56 @@ describe("parsearAutodeclaracion", () => {
     const { cuerpo, autodeclaracion } = parsearAutodeclaracion(raw);
     expect(cuerpo).toBe(raw.trim());
     expect(autodeclaracion).toBeNull();
+  });
+});
+
+describe("filtrarDeltaAntesDeAutodeclaracion: nunca reenvia ===JSON=== ni lo que sigue", () => {
+  it("reenvia todo el texto antes del marcador, cuando llega en un solo chunk", () => {
+    const recibido: string[] = [];
+    const filtro = filtrarDeltaAntesDeAutodeclaracion((t) => recibido.push(t));
+    filtro.onChunk('# Plan\n\nCuerpo real.\n===JSON===\n{"familias_tratadas": ["accion_clientes"]}');
+    filtro.finalizar();
+    expect(recibido.join("")).toBe("# Plan\n\nCuerpo real.\n");
+  });
+
+  it("nunca reenvia nada del bloque JSON, ni parcialmente, en chunks pequenos letra por letra", () => {
+    const raw = '# Plan\n\nCuerpo.\n===JSON===\n{"familias_tratadas": ["accion_clientes"]}';
+    const recibido: string[] = [];
+    const filtro = filtrarDeltaAntesDeAutodeclaracion((t) => recibido.push(t));
+    for (const caracter of raw) filtro.onChunk(caracter);
+    filtro.finalizar();
+    const textoVisible = recibido.join("");
+    expect(textoVisible).toBe("# Plan\n\nCuerpo.\n");
+    expect(textoVisible).not.toContain("===JSON===");
+    expect(textoVisible).not.toContain("familias_tratadas");
+  });
+
+  it("detecta el marcador aunque llegue partido justo a la mitad entre dos chunks", () => {
+    const recibido: string[] = [];
+    const filtro = filtrarDeltaAntesDeAutodeclaracion((t) => recibido.push(t));
+    filtro.onChunk("Cuerpo del plan==");
+    filtro.onChunk('=JSON===\n{"familias_tratadas": []}');
+    filtro.finalizar();
+    const textoVisible = recibido.join("");
+    expect(textoVisible).toBe("Cuerpo del plan");
+    expect(textoVisible).not.toContain("=JSON===");
+  });
+
+  it("si el marcador nunca aparece, finalizar() libera el resto pendiente en vez de perderlo", () => {
+    const recibido: string[] = [];
+    const filtro = filtrarDeltaAntesDeAutodeclaracion((t) => recibido.push(t));
+    filtro.onChunk("Respuesta corta sin autodeclaracion");
+    filtro.finalizar();
+    expect(recibido.join("")).toBe("Respuesta corta sin autodeclaracion");
+  });
+
+  it("una vez encontrado el marcador, ignora cualquier chunk posterior por completo", () => {
+    const recibido: string[] = [];
+    const filtro = filtrarDeltaAntesDeAutodeclaracion((t) => recibido.push(t));
+    filtro.onChunk("Cuerpo.\n===JSON===\n{}");
+    filtro.onChunk("texto que llegara despues, nunca deberia verse");
+    filtro.finalizar();
+    expect(recibido.join("")).toBe("Cuerpo.\n");
   });
 });
 

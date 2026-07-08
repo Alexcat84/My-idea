@@ -178,6 +178,8 @@ export function prepararPlan(
   return { payload, cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico };
 }
 
+export const MARCADOR_AUTODECLARACION = "===JSON===";
+
 /** Port de _parsear_autodeclaracion: separa el markdown del bloque final
  * ===JSON=== (Fase 2.8). Si el delimitador falta o el JSON es invalido,
  * devuelve (raw completo, null) -- "sin autodeclaracion". */
@@ -185,17 +187,78 @@ export function parsearAutodeclaracion(raw: string): {
   cuerpo: string;
   autodeclaracion: { familias_tratadas?: string[]; secciones?: string[] } | null;
 } {
-  const marcador = "===JSON===";
-  const idx = raw.lastIndexOf(marcador);
+  const idx = raw.lastIndexOf(MARCADOR_AUTODECLARACION);
   if (idx === -1) return { cuerpo: raw.trim(), autodeclaracion: null };
   const cuerpo = raw.slice(0, idx).trim();
-  const bloque = raw.slice(idx + marcador.length);
+  const bloque = raw.slice(idx + MARCADOR_AUTODECLARACION.length);
   try {
     const data = parsearJson<{ familias_tratadas?: string[]; secciones?: string[] }>(bloque);
     return { cuerpo, autodeclaracion: data };
   } catch {
     return { cuerpo: raw.trim(), autodeclaracion: null };
   }
+}
+
+/**
+ * Envuelve un callback de deltas de streaming para que NUNCA reenvie el
+ * marcador ===JSON=== ni lo que venga despues -- ese bloque es la
+ * autodeclaracion de cobertura (regla 11 de SYSTEM_PLAN), uso interno
+ * para finalizarPlan()/parsearAutodeclaracion, jamas contenido para
+ * mostrarle a quien esta viendo el plan generarse en vivo.
+ *
+ * Bug real encontrado en una sesion en vivo (probar.ts): el CLI de Python
+ * nunca tuvo este problema porque llama a Claude de forma bloqueante y
+ * separa cuerpo/autodeclaracion ANTES de imprimir nada; la web SI
+ * streamea el texto crudo del modelo turno a turno segun llega, asi que
+ * sin este filtro, el marcador y el JSON de una linea quedan visibles en
+ * el stream que ve el usuario (el plan YA GUARDADO en Supabase siempre
+ * fue correcto -- finalizarPlan() ya lo parseaba bien -- el bug era
+ * puramente de lo que se mostraba en vivo).
+ *
+ * Mantiene un buffer interno de a lo sumo
+ * MARCADOR_AUTODECLARACION.length-1 caracteres sin enviar, por si el
+ * marcador llega repartido entre dos chunks consecutivos del stream --
+ * por eso expone finalizar(): si el stream termina SIN que el marcador
+ * haya aparecido nunca (respuesta malformada, sin la autodeclaracion
+ * mandatada), ese ultimo resto pendiente debe liberarse igual en vez de
+ * perderse en silencio.
+ */
+export interface FiltroDeltaAutodeclaracion {
+  onChunk: (chunk: string) => void;
+  /** Llamar despues de que el stream termine (stream.finalMessage()) para
+   * liberar cualquier resto en buffer si el marcador nunca aparecio. */
+  finalizar: () => void;
+}
+
+export function filtrarDeltaAntesDeAutodeclaracion(onDeltaSeguro: (texto: string) => void): FiltroDeltaAutodeclaracion {
+  let acumulado = "";
+  let enviado = 0;
+  let marcadorEncontrado = false;
+  return {
+    onChunk(chunk: string) {
+      if (marcadorEncontrado) return;
+      acumulado += chunk;
+      const idx = acumulado.indexOf(MARCADOR_AUTODECLARACION);
+      if (idx !== -1) {
+        if (idx > enviado) onDeltaSeguro(acumulado.slice(enviado, idx));
+        marcadorEncontrado = true;
+        enviado = acumulado.length;
+        return;
+      }
+      const limiteSeguro = Math.max(enviado, acumulado.length - (MARCADOR_AUTODECLARACION.length - 1));
+      if (limiteSeguro > enviado) {
+        onDeltaSeguro(acumulado.slice(enviado, limiteSeguro));
+        enviado = limiteSeguro;
+      }
+    },
+    finalizar() {
+      if (marcadorEncontrado) return;
+      if (acumulado.length > enviado) {
+        onDeltaSeguro(acumulado.slice(enviado));
+        enviado = acumulado.length;
+      }
+    },
+  };
 }
 
 export interface CoberturaPlan {

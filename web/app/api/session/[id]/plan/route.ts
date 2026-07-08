@@ -42,6 +42,7 @@ import { cargarGrafo } from "@/lib/engine/graph";
 import {
   comprimirEstadoVivo,
   extraerTitulo,
+  filtrarDeltaAntesDeAutodeclaracion,
   finalizarPlan,
   prepararPlan,
   type PreparacionPlan,
@@ -68,8 +69,13 @@ async function generarTextoPlan(
       system: [{ type: "text", text: SYSTEM_PLAN, cache_control: { type: "ephemeral" } }],
       messages: [{ role: "user", content: JSON.stringify(preparacion.payload) }],
     });
-    stream.on("text", onDelta);
+    // Nunca reenviar el marcador ===JSON=== ni lo que sigue -- es la
+    // autodeclaracion de cobertura interna (regla 11 de SYSTEM_PLAN), no
+    // contenido para mostrar en vivo.
+    const filtro = filtrarDeltaAntesDeAutodeclaracion(onDelta);
+    stream.on("text", filtro.onChunk);
     const mensajeFinal = await stream.finalMessage();
+    filtro.finalizar();
     const nuevoAcumulado = registrarUso(acumulado, MODEL, mensajeFinal.usage, "plan");
     const rawTexto = mensajeFinal.content
       .filter((b): b is Anthropic.TextBlock => b.type === "text")
