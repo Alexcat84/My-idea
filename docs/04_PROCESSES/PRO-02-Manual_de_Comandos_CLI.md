@@ -5,6 +5,21 @@ cada modo. Todos los comandos se corren desde la raíz del repo. Todos hacen
 llamadas reales a la API salvo que se indique lo contrario (tienen costo
 real, en céntimos de dólar — ver "Presupuestos" al final).
 
+**⚠️ No pegues texto con saltos de línea (varias líneas) directamente en
+una respuesta.** La terminal interpreta cada salto de línea del texto
+pegado como si hubieras presionado Enter — cada línea se envía como una
+respuesta separada a preguntas sucesivas, en vez de una sola respuesta
+completa. Encontrado en vivo pegando el texto de un anuncio de Facebook
+con emojis y saltos de línea: el motor "respondió solo" varias preguntas
+seguidas con fragmentos del anuncio, hasta terminar en un cierre por un
+carácter que la consola no pudo decodificar (ya corregido para que ese
+caso puntual cierre con gracia — ver `leer_entrada()` — pero el problema
+de fondo, líneas separadas leídas como turnos separados, es una
+limitación de la terminal, no del motor). **Si necesitás pegar texto
+largo, quitale los saltos de línea antes** (pegalo como un solo párrafo
+seguido) o resumilo vos mismo en una línea. Esta limitación desaparece en
+la Fase 3 (interfaz web con un campo de texto real).
+
 ---
 
 ## 1. Sesión nueva (modo por defecto)

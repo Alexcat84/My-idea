@@ -31,11 +31,12 @@ Comandos de operación día a día (probar todo lo demás, sesiones reales,
 | T05 | [engine/test_conversacion_incremental.py](../../engine/test_conversacion_incremental.py) | Mecánica de `llamar_claude_conversacion`: el marcador `cache_control` vive solo en el último bloque enviado (se mueve turno a turno), y una llamada fallida deja `historial_mensajes` intacto (sin turno huérfano). | Fase 2.7 |
 | T06 | [engine/test_salto_semantico.py](../../engine/test_salto_semantico.py) | Validación de `salto_semantico` (brújula): un salto ofrecido se acepta al primer intento; uno inventado (fuera de lo ofrecido) se rechaza, dispara un reintento, y cae al respaldo local de afinidad si vuelve a fallar. | Fase 2.8 |
 | T07 | [engine/test_sigamos_salida.py](../../engine/test_sigamos_salida.py) | `extender_sigamos_dirigido` corta de inmediato en cuanto detecta "dame mi plan" a mitad de la extensión dirigida, sin forzar las preguntas restantes. | Fase 2.9 |
+| T15 | [engine/test_leer_entrada_decode_error.py](../../engine/test_leer_entrada_decode_error.py) | `leer_entrada()` convierte un `UnicodeDecodeError` (encontrado en vivo pegando texto con emojis en una consola de Windows) en cierre elegante (`SesionInterrumpida`), igual que EOF/Ctrl+C, en vez de propagar un traceback crudo. | Hotfix v2.1.3 |
 
 **Correr toda la suite de una vez:**
 ```bash
 cd "engine"
-for t in test_calculadora.py test_resume_pregunta_pendiente.py test_autocorreccion.py test_pregunta_adaptada.py test_conversacion_incremental.py test_salto_semantico.py test_sigamos_salida.py; do
+for t in test_calculadora.py test_resume_pregunta_pendiente.py test_leer_entrada_decode_error.py test_autocorreccion.py test_pregunta_adaptada.py test_conversacion_incremental.py test_salto_semantico.py test_sigamos_salida.py; do
   echo "=== $t ==="; python "$t" || echo "FALLO: $t"
 done
 ```
@@ -62,6 +63,14 @@ La sesión en vivo sin guion que encontró los 3 bugs del hotfix v2.1.2
 fue interactiva, turno a turno, contra Supabase real, no un script de un
 solo disparo. Su transcripción completa: **[T14]**
 [examples/hotfix_v2_1_2_sesion_en_vivo.txt](../../examples/hotfix_v2_1_2_sesion_en_vivo.txt).
+
+La primera sesión en vivo del propio usuario (idea real: app de I Ching,
+proyecto `e3bc08a3...`) encontró el bug de `UnicodeDecodeError` (T15,
+hotfix v2.1.3) al pegar el texto de un anuncio de Facebook con emojis y
+saltos de línea. El plan igual se generó completo y coherente
+(`engine/salidas/plan_20260707_2038.md`, no versionado por ser salida de
+usuario real), pero la sesión de Supabase quedó sin cerrar tras el
+traceback — corregido junto con el bug de fondo.
 
 ---
 

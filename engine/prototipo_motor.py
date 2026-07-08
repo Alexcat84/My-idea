@@ -211,6 +211,14 @@ import calculadora
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+# Mismo problema pero de ENTRADA: si el usuario pega texto con emojis u
+# otros caracteres fuera del codepage local de la consola (encontrado en
+# vivo pegando el texto de un anuncio de Facebook con emojis), input()
+# puede lanzar UnicodeDecodeError en vez de simplemente leer la linea.
+# leer_entrada() ademas atrapa ese error explicitamente (ver abajo) como
+# red de seguridad, por si la consola no soporta reconfigure() de entrada.
+if hasattr(sys.stdin, "reconfigure"):
+    sys.stdin.reconfigure(encoding="utf-8", errors="replace")
 
 GRAPH_PATH = BASE / "dataset" / "metadata" / "master_graph.json"
 QUIZ_PATH = BASE / "engine" / "cuestionario_raiz.json"
@@ -1046,10 +1054,15 @@ class SesionInterrumpida(Exception):
 
 def leer_entrada(prompt=""):
     """input() que convierte EOF/Ctrl+C en un cierre elegante en vez de un
-    traceback visible. Usar SIEMPRE esta funcion en vez de input() directo."""
+    traceback visible. Usar SIEMPRE esta funcion en vez de input() directo.
+    UnicodeDecodeError (encontrado en vivo pegando texto con emojis en una
+    consola de Windows con codepage local, que puede ignorar el
+    reconfigure() de sys.stdin) se trata igual: el usuario retoma con
+    --continuar, que ahora (hotfix v2.1.2) re-presenta la pregunta exacta
+    que quedo pendiente en vez de perderla."""
     try:
         return input(prompt)
-    except (EOFError, KeyboardInterrupt):
+    except (EOFError, KeyboardInterrupt, UnicodeDecodeError):
         raise SesionInterrumpida()
 
 

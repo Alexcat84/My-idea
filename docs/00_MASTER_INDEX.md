@@ -30,6 +30,7 @@ Registro de auditorías de calidad del dataset y del motor, propias y externas. 
 - **[AUD-02-Fase2_Cimientos_del_Motor_y_Motor_v1.0](audits/AUD-02-Fase2_Cimientos_del_Motor_y_Motor_v1.0.md):** Kickoff de Fase 2, Fases 2.1 a 2.5 (entrevista abierta, medidor de plan listo, recorrido silencioso, cosecha de vecindario, persistencia Supabase), y cierre de Motor v1.0 (cierre elegante, auto-corrección invisible). Tag `motor-v1.0`.
 - **[AUD-03-Fase2_6_a_2_9_Cierre_Motor_v2_0](audits/AUD-03-Fase2_6_a_2_9_Cierre_Motor_v2_0.md):** Fases 2.6 a 2.9 — preguntas adaptadas por turno, escucha activa, navegación libre con brújula semántica, cierre funcional del motor. Tag `motor-v2.0`.
 - **[AUD-04-Motor_v2_1_y_Hotfixes](audits/AUD-04-Motor_v2_1_y_Hotfixes.md):** Motor v2.1 (Reporte de Sostenibilidad), Hotfix v2.1.1 (semántica de sobredemanda, dominios), Hotfix v2.1.2 (bugs de una sesión en vivo sin guion: `--continuar`, migraciones Supabase), y el fix de seguridad del linter de Supabase. Tag `motor-v2.1`.
+- **[AUD-05-Hotfix_v2_1_3_UnicodeDecodeError](audits/AUD-05-Hotfix_v2_1_3_UnicodeDecodeError.md):** Hotfix v2.1.3 — `UnicodeDecodeError` no atrapado al pegar texto con emojis, encontrado en la primera sesión en vivo del propio usuario con su idea real. `sys.stdin` reconfigurado a UTF-8, `leer_entrada()` atrapa el error con gracia, riesgo de fondo (pegado multilínea) documentado en `PRO-02`.
 
 ---
 
