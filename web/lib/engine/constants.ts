@@ -7,6 +7,15 @@ export const MAX_DEPTH = 15;
 export const MAX_SALTOS_SILENCIOSOS_POR_LLAMADA = 3;
 export const MAX_REPREGUNTAS_POR_PUNTO = 1;
 export const MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO = 3;
+export const MAX_COSECHA = 25;
+export const MAX_COSECHA_PRIORIDAD = 8;
+
+export const SECCION_ECONOMICA_TITULO = "¿Puede sostenerse tu idea?";
+
+export const TEXTO_FAMILIA_FALTANTE: Record<string, string> = {
+  accion_clientes: "validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)",
+  viabilidad_economica: "si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)",
+};
 
 export type CampoNumericoProyecto =
   | "costo_materiales_unidad"

@@ -33,7 +33,7 @@ export interface Proyecto {
 
 export interface RutaNodo {
   node_id: string;
-  tipo: "conversado" | "silencioso";
+  tipo: "conversado" | "silencioso" | "salto";
 }
 
 export interface Sesion {
@@ -192,6 +192,34 @@ export async function mergeTipoOferta(
   if (tipoOfertaSesion) campos.tipo_oferta = tipoOfertaSesion;
   if (unidadVentaSesion) campos.unidad_venta = unidadVentaSesion;
   await actualizarProyecto(supabase, projectId, campos);
+}
+
+export async function nodosCubiertos(supabase: SupabaseClient, projectId: string): Promise<Set<string>> {
+  const { data, error } = await supabase.from("project_nodes").select("node_id").eq("project_id", projectId);
+  if (error) throw error;
+  return new Set((data as Array<{ node_id: string }>).map((row) => row.node_id));
+}
+
+export interface NodoConTipo {
+  node_id: string;
+  tipo: "conversado" | "silencioso" | "salto" | "cosechado";
+}
+
+/** Port de registrar_nodos: ignora duplicados (un nodo cuenta una sola
+ * vez por proyecto, sin importar en que sesion se cubrio primero). */
+export async function registrarNodos(
+  supabase: SupabaseClient,
+  projectId: string,
+  sessionId: string,
+  nodosConTipo: NodoConTipo[]
+): Promise<void> {
+  const yaCubiertos = await nodosCubiertos(supabase, projectId);
+  const nuevos = nodosConTipo.filter((n) => !yaCubiertos.has(n.node_id));
+  if (nuevos.length === 0) return;
+  const { error } = await supabase.from("project_nodes").insert(
+    nuevos.map((n) => ({ project_id: projectId, session_id: sessionId, node_id: n.node_id, tipo: n.tipo }))
+  );
+  if (error) throw error;
 }
 
 export async function guardarPlan(

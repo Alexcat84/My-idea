@@ -10,16 +10,17 @@ export interface EstadoFalso {
   projects: Record<string, Record<string, unknown>>;
   sessions: Record<string, Record<string, unknown>>;
   plans: Record<string, unknown>[];
+  projectNodes: Record<string, unknown>[];
   contadorProject: number;
   contadorSession: number;
 }
 
 export function estadoFalsoVacio(): EstadoFalso {
-  return { projects: {}, sessions: {}, plans: [], contadorProject: 0, contadorSession: 0 };
+  return { projects: {}, sessions: {}, plans: [], projectNodes: [], contadorProject: 0, contadorSession: 0 };
 }
 
 interface Builder {
-  _insert?: Record<string, unknown>;
+  _insert?: Record<string, unknown> | Record<string, unknown>[];
   _update?: Record<string, unknown>;
   _filters: Record<string, unknown>;
   _single: boolean;
@@ -59,8 +60,18 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     return { data: rows, error: null };
   }
   if (nombre === "plans" && b._insert) {
-    estado.plans.push(b._insert);
+    estado.plans.push(b._insert as Record<string, unknown>);
     return { data: null, error: null };
+  }
+  if (nombre === "project_nodes") {
+    if (b._insert) {
+      const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
+      estado.projectNodes.push(...filas);
+      return { data: null, error: null };
+    }
+    const projectId = b._filters.project_id as string | undefined;
+    const rows = projectId ? estado.projectNodes.filter((r) => r.project_id === projectId) : estado.projectNodes;
+    return { data: rows.map((r) => ({ node_id: r.node_id })), error: null };
   }
   return { data: null, error: null };
 }
@@ -69,7 +80,7 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
   const builder: Builder & Record<string, unknown> = {
     _filters: {},
     _single: false,
-    insert(payload: Record<string, unknown>) {
+    insert(payload: Record<string, unknown> | Record<string, unknown>[]) {
       builder._insert = payload;
       return builder;
     },
