@@ -160,11 +160,157 @@ def test_margen_no_positivo_no_da_equilibrio_falso():
     print("OK: test_margen_no_positivo_no_da_equilibrio_falso (nunca un punto de equilibrio absurdo)")
 
 
+def test_digital_founder_caso_real():
+    """Motor v2.2, escenario mandatado del hotfix v2.2: el proyecto real del
+    fundador (app de I Ching, tipo_oferta='digital'), con los numeros YA
+    CORREGIDOS a su unidad real (fijos=$200/mes de infraestructura,
+    variable por pack ~$0, precio $13/pack, meta 20 packs/mes) -- en vez
+    de la version contaminada donde $200 se habia leido como materiales
+    por pieza.
+
+    Calculo manual:
+      costo_unitario (rama digital: solo variable, sin horas/valor_hora)
+                       = 0 (variable declarado)                     = 0
+      margen           = precio 13 - costo 0                        = 13
+      margen_pct       = 13 / 13 x 100                               = 100.0
+      punto_equilibrio = ceil(fijos 200 / margen 13)
+                       = ceil(15.3846...)                            = 16  (packs/mes)
+      escenarios (meta 20, adopcion 50/100/200%):
+        50%  -> 10 packs -> ingreso 130,  margen_total 130
+        100% -> 20 packs -> ingreso 260,  margen_total 260
+        200% -> 40 packs -> ingreso 520,  margen_total 520
+    """
+    COSTO_UNITARIO_ESPERADO = 0
+    MARGEN_ESPERADO = 13
+    MARGEN_PCT_ESPERADO = 100.0
+    EQUILIBRIO_ESPERADO_PACKS = 16
+    ESC_50_ESPERADO = {"unidades": 10, "ingreso": 130, "margen_total": 130}
+    ESC_100_ESPERADO = {"unidades": 20, "ingreso": 260, "margen_total": 260}
+    ESC_200_ESPERADO = {"unidades": 40, "ingreso": 520, "margen_total": 520}
+
+    numeros = _numeros(
+        costos_fijos_mensuales=200, costo_materiales_unidad=0,
+        precio_tentativo=13, unidades_vendidas=20,
+    )
+
+    costo = c.costo_unitario_total(numeros, tipo_oferta="digital")
+    assert costo["valor"] == COSTO_UNITARIO_ESPERADO, costo
+    assert costo["insumos_faltantes"] == [], costo  # horas/valor_hora NO deben pedirse en digital
+
+    margen = c.margen_unitario(numeros, tipo_oferta="digital")
+    assert margen["valor"] == MARGEN_ESPERADO, margen
+    assert margen["porcentaje"] == MARGEN_PCT_ESPERADO, margen
+
+    equilibrio = c.punto_equilibrio_unidades_mes(numeros, tipo_oferta="digital")
+    assert equilibrio["valor"] == EQUILIBRIO_ESPERADO_PACKS, equilibrio
+
+    escenarios = c.escenarios_adopcion(numeros, tipo_oferta="digital")
+    assert escenarios["50%"] == ESC_50_ESPERADO, escenarios["50%"]
+    assert escenarios["100%"] == ESC_100_ESPERADO, escenarios["100%"]
+    assert escenarios["200%"] == ESC_200_ESPERADO, escenarios["200%"]
+
+    gigo = c.detectar_inconsistencia_gigo(numeros, tipo_oferta="digital")
+    assert gigo["inconsistente"] is False, gigo
+
+    print("OK: test_digital_founder_caso_real (costo=0, margen=13/100%, "
+          "equilibrio=16 packs/mes, escenarios de adopcion 50/100/200% correctos)")
+
+
+def test_digital_saas_sintetico():
+    """Motor v2.2, prueba mandatada (8c): caso SaaS sintetico -- fijos $200,
+    costo variable por usuario $0.50, precio $5, meta 100 usuarios.
+
+    Calculo manual:
+      costo_unitario   = 0.50 (variable, rama digital)                = 0.50
+      margen           = precio 5 - costo 0.50                        = 4.50
+      margen_pct       = 4.50 / 5 x 100                                = 90.0
+      punto_equilibrio = ceil(200 / 4.50) = ceil(44.444...)            = 45  (usuarios/mes)
+      escenarios (meta 100):
+        50%  -> 50 usuarios  -> ingreso 250,  margen_total 225
+        100% -> 100 usuarios -> ingreso 500,  margen_total 450
+        200% -> 200 usuarios -> ingreso 1000, margen_total 900
+    """
+    MARGEN_ESPERADO = 4.5
+    MARGEN_PCT_ESPERADO = 90.0
+    EQUILIBRIO_ESPERADO_USUARIOS = 45
+    ESC_50_ESPERADO = {"unidades": 50, "ingreso": 250, "margen_total": 225}
+    ESC_100_ESPERADO = {"unidades": 100, "ingreso": 500, "margen_total": 450}
+    ESC_200_ESPERADO = {"unidades": 200, "ingreso": 1000, "margen_total": 900}
+
+    numeros = _numeros(
+        costos_fijos_mensuales=200, costo_materiales_unidad=0.50,
+        precio_tentativo=5, unidades_vendidas=100,
+    )
+
+    margen = c.margen_unitario(numeros, tipo_oferta="digital")
+    assert margen["valor"] == MARGEN_ESPERADO, margen
+    assert margen["porcentaje"] == MARGEN_PCT_ESPERADO, margen
+
+    equilibrio = c.punto_equilibrio_unidades_mes(numeros, tipo_oferta="digital")
+    assert equilibrio["valor"] == EQUILIBRIO_ESPERADO_USUARIOS, equilibrio
+
+    escenarios = c.escenarios_adopcion(numeros, tipo_oferta="digital")
+    assert escenarios["50%"] == ESC_50_ESPERADO, escenarios["50%"]
+    assert escenarios["100%"] == ESC_100_ESPERADO, escenarios["100%"]
+    assert escenarios["200%"] == ESC_200_ESPERADO, escenarios["200%"]
+
+    print("OK: test_digital_saas_sintetico (margen=4.5/90%, equilibrio=45 usuarios/mes, "
+          "escenarios de adopcion correctos)")
+
+
+def test_gigo_detecta_unidad_equivocada():
+    """Motor v2.2, guardian GIGO: el caso real que motivo la regla -- la
+    mini-entrevista original (pre-v2.2) leyo el presupuesto mensual del
+    fundador ($200) como costo de materiales POR UNIDAD, y 4 meses de
+    desarrollo como 4 HORAS por unidad. El campo valor_hora derivado de la
+    narracion original ($387 de margen negativo, -2976.9%) es $50.
+
+    Calculo manual (numeros contaminados, ANTES de la correccion):
+      costo_unitario = materiales 200 + horas 4 x valor_hora 50
+                     = 200 + 200                                     = 400
+      margen         = precio 13 - costo 400                         = -387
+      margen_pct     = -387 / 13 x 100                                = -2976.923...  ~ -2976.9
+
+    -2976.9% esta muy por debajo del umbral de -100%: el guardian debe
+    marcar esto como inconsistente y el llamador (modo_reporte) NUNCA debe
+    narrar 'no existe punto de equilibrio posible' con estos numeros -- el
+    equilibrio real, una vez corregida la unidad, es 16 packs/mes (ver
+    test_digital_founder_caso_real)."""
+    MARGEN_PCT_ESPERADO = round(-387 / 13 * 100, 1)  # -2976.9
+    assert MARGEN_PCT_ESPERADO == -2976.9, MARGEN_PCT_ESPERADO  # confirma el calculo manual
+
+    numeros_contaminados = _numeros(
+        costo_materiales_unidad=200, horas_por_unidad=4, valor_hora=50,
+        precio_tentativo=13,
+    )
+    margen = c.margen_unitario(numeros_contaminados)
+    assert margen["porcentaje"] == MARGEN_PCT_ESPERADO, margen
+
+    gigo = c.detectar_inconsistencia_gigo(numeros_contaminados)
+    assert gigo["inconsistente"] is True, gigo
+    assert gigo["motivo"] is not None and "unidad equivocada" in gigo["motivo"], gigo
+
+    # Guardrail inverso: un escenario sano (macetas, margen 20%) NUNCA debe
+    # marcarse como inconsistente -- el guardian no puede ser tan agresivo
+    # que desconfie de numeros normales.
+    numeros_sanos = _numeros(
+        costo_materiales_unidad=8, horas_por_unidad=4, valor_hora=15, precio_tentativo=85,
+    )
+    gigo_sano = c.detectar_inconsistencia_gigo(numeros_sanos)
+    assert gigo_sano["inconsistente"] is False, gigo_sano
+
+    print("OK: test_gigo_detecta_unidad_equivocada (margen=-2976.9% detectado como "
+          "inconsistente; escenario sano de macetas NO dispara falso positivo)")
+
+
 def main():
     test_escenario_macetas()
     test_costo_con_rango()
     test_todo_faltante()
     test_margen_no_positivo_no_da_equilibrio_falso()
+    test_digital_founder_caso_real()
+    test_digital_saas_sintetico()
+    test_gigo_detecta_unidad_equivocada()
     print("\nTODOS LOS TESTS DE calculadora.py PASARON.")
 
 

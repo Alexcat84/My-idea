@@ -540,3 +540,87 @@ de red simulado) confirma que ESE camino sigue devolviendo `None` — el
 menú numerado de emergencia sigue existiendo, pero ahora es
 estrictamente el último recurso tras fallo de red total, no la respuesta
 por defecto ante una alucinación del modelo.
+
+## Hotfix v2.1.3 — UnicodeDecodeError al pegar texto con emojis
+
+Encontrado en la primera sesión en vivo del propio usuario (idea real:
+una app de I Ching ya publicada en Play Store). Al pegar el texto de un
+anuncio de Facebook con emojis y saltos de línea, cada línea se leyó como
+una respuesta separada (comportamiento inherente de `input()` de
+terminal frente a un pegado multilínea, no un bug del motor), y en algún
+punto de esa ráfaga un emoji no se pudo decodificar por la consola de
+Windows — `UnicodeDecodeError`, una excepción que `leer_entrada()` no
+atrapaba, produciendo exactamente el traceback crudo que el "cierre
+elegante" existe para evitar desde Motor v1.0.
+
+Corregido: `sys.stdin` reconfigurado a UTF-8 (mismo fix que ya existía
+para `stdout`/`stderr` desde el kickoff de Fase 2), y `leer_entrada()`
+también atrapa `UnicodeDecodeError` como red de seguridad, tratándolo
+igual que EOF/Ctrl+C — cierre elegante, resumible con `--continuar` (que,
+desde v2.1.2, re-presenta la pregunta exacta que quedó pendiente). El
+riesgo de fondo (pegado multilínea reparte respuestas entre preguntas) es
+una limitación de terminal, documentada con su workaround en
+`docs/04_PROCESSES/PRO-02-Manual_de_Comandos_CLI.md` — desaparece por
+completo en la Fase 3 (interfaz web con un campo de texto real). Detalle
+completo: [AUD-05](../docs/audits/AUD-05-Hotfix_v2_1_3_UnicodeDecodeError.md).
+
+## Motor v2.2 — tipo de oferta, guardián GIGO, coherencia mecánica del plan
+
+Auditoría de Fable sobre la re-corrida de la sesión en vivo del fundador
+(post hotfix v2.1.3, `para fable 5.txt`): la entrevista y el plan
+certificados como el producto real (el motor encontró, preguntando, que
+el anuncio de Facebook del fundador llevaba a la página de Facebook y no
+a la APK — el bug real de adquisición de su otro proyecto), pero tres
+bugs reales en la mitad económica, todos con la misma causa de fondo: el
+sistema reconstruía en vez de registrar lo que el usuario dijo.
+
+1. **El plan propuso un canal que el usuario había descartado con
+   evidencia** ("mi familia usa la parte física, ignoran cualquier app,
+   eso es inútil") y además convirtió "amigos" en "familia" — una
+   alucinación de relación encima de ignorar un descarte explícito.
+2. **Incoherencia etiqueta/contenido, tercera reincidencia** (Fase 2.5,
+   Fase 2.8, y ahora esta sesión): una sección de sostenibilidad con
+   contenido real, y tres líneas después "aún no cubre: viabilidad
+   económica".
+3. **`--reporte` narró conclusiones financieras peligrosamente falsas**:
+   la mini-entrevista (molde único, físico) leyó el presupuesto mensual
+   del fundador ($200) como costo de materiales por pieza y sus 4 meses
+   de desarrollo como 4 horas por unidad — margen narrado: -2976.9%, "no
+   existe punto de equilibrio posible", cuando el equilibrio real (con
+   las unidades correctas) es de 16 packs/mes.
+
+Corregido con: **tipo de oferta y unidad de venta** (`producto_fisico`/
+`servicio`/`digital`/`mixto`, extraídos del usuario, nunca inferidos,
+migración `my_idea_007_tipo_oferta.sql`); **mini-entrevista por tipo**
+(tres plantillas parametrizadas, digital omite horas/valor_hora que no
+aplican); **guardián GIGO** (cada campo guarda su unidad declarada, 2+
+respuestas "no aplica" abortan el molde y reclasifican, y un margen
+menor a -100% o un precio menor al 5% del costo detiene toda narración —
+`_reporte_gigo_inconsistente` es 100% determinista, ni siquiera llama al
+LLM); **calculadora generalizada** (`escenarios_adopcion` para digital,
+punto de equilibrio redondeado hacia ARRIBA — `math.ceil`, no al decimal
+más cercano, porque 15.4 unidades no cubren costos fijos que necesitan
+16); **evidencia negativa** (`perfil_sesion` registra descartes como
+restricciones explícitas, `SYSTEM_PLAN` regla 12 prohíbe proponerlos o
+alterar relaciones declaradas); **post-validador mecánico** de
+coherencia (si la sección de sostenibilidad está presente en el
+markdown, `viabilidad_economica` nunca puede aparecer en "no cubre",
+sin importar la autodeclaración del modelo).
+
+Antes de regenerar el reporte del fundador se limpiaron los datos ya
+contaminados en Supabase
+(`scripts/hotfix_v2_2_limpiar_datos_contaminados.py`): `costo_materiales_
+unidad`, `horas_por_unidad` y `valor_hora` se movieron a
+`numeros_descartados` con el motivo; `precio_tentativo` ($13/pack) y
+`costos_fijos_mensuales` ($200) se confirmaron correctos y se
+conservaron. Sin esa limpieza, el reporte regenerado habría vuelto a leer
+los $200-como-materiales del inventario ya guardado.
+
+**Verificado en vivo contra Supabase real** sobre el proyecto del propio
+fundador (`05868ec6`): preguntas de rama digital, cero menciones de
+"pieza" en todo el reporte narrado, y "necesitas vender exactamente 16
+unidades al mes" — calculado por el módulo, no narrado por el modelo.
+Costo real: $0.02. Suite de macetas (rama física) verificada intacta sin
+cambios de comportamiento. Detalle completo, incluyendo el veredicto de
+Fable:
+[AUD-06](../docs/audits/AUD-06-Motor_v2_2_Tipo_de_Oferta_y_Guardian_GIGO.md).

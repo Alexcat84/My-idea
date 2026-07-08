@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-calculadora.py - Motor v2.1: calculadora deterministica del Reporte de
+calculadora.py - Motor v2.1/v2.2: calculadora deterministica del Reporte de
 Sostenibilidad. CERO llamadas a LLM: funciones puras sobre
 numeros_proyecto (el dict {campo: {"valor":..., ...}} que
 prototipo_motor.py acumula via el intérprete de turno). Cada formula trae
@@ -18,7 +18,16 @@ proyecto[campo]["valor"] = {"min": x, "max": y}), el resultado tambien
 sale como rango {"min":, "max":}, calculado con el emparejamiento de
 intervalos correcto por operacion (suma/resta cambian que lado es el
 "peor caso"), no con un min-con-min ingenuo en todos los casos.
+
+Motor v2.2: `tipo_oferta` ('producto_fisico'|'servicio'|'digital'|'mixto'|
+None) generaliza el costo unitario y los escenarios para ofertas
+digitales, que no tienen horas_por_unidad/valor_hora ni un techo de
+capacidad semanal en el mismo sentido que un producto fisico o un
+servicio por horas. None/'producto_fisico'/'servicio' usan las formulas
+originales sin cambios (retrocompatible con proyectos pre-v2.2).
 """
+
+import math
 
 SEMANAS_POR_MES = 4  # aproximacion deliberada (no 4.33) para numeros redondos y verificables
 
@@ -46,11 +55,23 @@ def _r(x, nd=2):
     return round(x, nd) if x is not None else None
 
 
-def costo_unitario_total(numeros):
+def costo_unitario_total(numeros, tipo_oferta=None):
     """Costo por unidad = costo_materiales_unidad + horas_por_unidad * valor_hora.
     Fuente: nodo 'hoja_estimacion_costos' (metodo bottom-up: sumar mano de
-    obra + materiales) y 'margen_bruto' (estructura costo-precio) del grafo."""
+    obra + materiales) y 'margen_bruto' (estructura costo-precio) del grafo.
+
+    Motor v2.2, rama 'digital': una oferta digital no tiene "horas por
+    unidad" de produccion (no se fabrica una unidad a la vez con trabajo
+    manual) -- el costo unitario es directamente el costo variable por
+    usuario/unidad declarado (costo_materiales_unidad, reusado como alias
+    de "costo variable"), sin exigir horas_por_unidad/valor_hora como
+    insumos faltantes (serian datos que no aplican a este tipo de oferta,
+    no datos que el usuario olvido dar)."""
     materiales = _valor(numeros, "costo_materiales_unidad")
+    if tipo_oferta == "digital":
+        if materiales is None:
+            return {"valor": None, "insumos_usados": [], "insumos_faltantes": ["costo_materiales_unidad"]}
+        return {"valor": materiales, "insumos_usados": ["costo_materiales_unidad"], "insumos_faltantes": []}
     horas = _valor(numeros, "horas_por_unidad")
     valor_hora = _valor(numeros, "valor_hora")
     faltantes = [c for c, v in (
@@ -68,10 +89,12 @@ def costo_unitario_total(numeros):
             "insumos_faltantes": []}
 
 
-def margen_unitario(numeros):
+def margen_unitario(numeros, tipo_oferta=None):
     """Margen por unidad = precio_tentativo - costo_unitario_total; porcentaje
-    = margen / precio. Fuente: nodo 'margen_bruto' (Gross Profit Margin)."""
-    costo = costo_unitario_total(numeros)
+    = margen / precio. Fuente: nodo 'margen_bruto' (Gross Profit Margin).
+    Para ofertas digitales, esto es el "margen por usuario" (Motor v2.2) --
+    misma formula, el nombre cambia solo en la narracion, no en el calculo."""
+    costo = costo_unitario_total(numeros, tipo_oferta=tipo_oferta)
     precio = _valor(numeros, "precio_tentativo")
     faltantes = list(costo["insumos_faltantes"])
     if precio is None:
@@ -95,11 +118,18 @@ def margen_unitario(numeros):
             "insumos_usados": costo["insumos_usados"] + ["precio_tentativo"], "insumos_faltantes": []}
 
 
-def punto_equilibrio_unidades_mes(numeros):
+def punto_equilibrio_unidades_mes(numeros, tipo_oferta=None):
     """Unidades/mes para cubrir costos fijos = costos_fijos_mensuales / margen_unitario.
     Formula de margen de contribucion. Fuente: nodo 'punto_equilibrio_unidades'
-    (dataset v1.2 - antes de esa version, esta formula no tenia nodo propio)."""
-    margen = margen_unitario(numeros)
+    (dataset v1.2 - antes de esa version, esta formula no tenia nodo propio).
+
+    Motor v2.2: redondeado hacia ARRIBA (math.ceil), no al decimal mas
+    cercano -- no se pueden vender fracciones de unidad, y quedarse corto
+    en la unidad de redondeo (ej. 15 en vez de 16 cuando el calculo exacto
+    da 15.38) significa no cubrir los costos fijos ese mes. Verificado
+    contra el caso real que motivo este cambio: $200 fijos / $13 margen =
+    15.38 -> se necesitan 16 packs, no 15.4."""
+    margen = margen_unitario(numeros, tipo_oferta=tipo_oferta)
     costos_fijos = _valor(numeros, "costos_fijos_mensuales")
     faltantes = list(margen["insumos_faltantes"])
     if costos_fijos is None:
@@ -113,12 +143,12 @@ def punto_equilibrio_unidades_mes(numeros):
         if m_lo <= 0 or m_hi <= 0:
             return {"valor": None, "insumos_usados": [], "insumos_faltantes": [],
                     "nota": "el margen por unidad no es positivo en todo el rango; no hay punto de equilibrio posible asi"}
-        valor = {"min": _r(cf_lo / m_hi, 1), "max": _r(cf_hi / m_lo, 1)}
+        valor = {"min": math.ceil(cf_lo / m_hi), "max": math.ceil(cf_hi / m_lo)}
     else:
         if margen_v <= 0:
             return {"valor": None, "insumos_usados": [], "insumos_faltantes": [],
                     "nota": "el margen por unidad no es positivo; no hay punto de equilibrio posible con estos numeros"}
-        valor = _r(costos_fijos / margen_v, 1)
+        valor = math.ceil(costos_fijos / margen_v)
     return {"valor": valor, "insumos_usados": margen["insumos_usados"] + ["costos_fijos_mensuales"],
             "insumos_faltantes": []}
 
@@ -207,6 +237,95 @@ def escenarios_capacidad(numeros):
             "insumos_usados": techo["insumos_usados"], "insumos_faltantes": []}
 
 
+def escenarios_adopcion(numeros, tipo_oferta=None):
+    """Motor v2.2, rama 'digital': un producto digital no tiene un techo de
+    capacidad semanal como un producto fisico (no se "produce" una unidad a
+    la vez) -- en su lugar, los tres escenarios son niveles de ADOPCION de
+    una meta declarada (unidades_vendidas, reusado aqui como "meta mensual
+    realista de usuarios o ventas"): 50%, 100%, 200% de esa meta. Sin nodo
+    dedicado todavia (aritmetica directa sobre unidades_vendidas y
+    precio_tentativo, igual que techo_ingreso_capacidad hace con
+    capacidad_semanal)."""
+    meta = _valor(numeros, "unidades_vendidas")
+    precio = _valor(numeros, "precio_tentativo")
+    faltantes = [c for c, v in (("unidades_vendidas", meta), ("precio_tentativo", precio)) if v is None]
+    if faltantes:
+        return {"50%": None, "100%": None, "200%": None, "insumos_usados": [], "insumos_faltantes": faltantes}
+    margen = margen_unitario(numeros, tipo_oferta=tipo_oferta)
+    margen_u = margen["valor"]
+
+    if _hay_rango(meta, precio) or _es_rango(margen_u):
+        # Mismo criterio de simplificacion que escenarios_capacidad: los
+        # rangos colapsan al punto medio para no explotar en un arbol de
+        # combinaciones dificil de leer en el reporte.
+        meta_v = _r((_lado(meta, "min") + _lado(meta, "max")) / 2, 1) if _es_rango(meta) else meta
+        precio_v = _r((_lado(precio, "min") + _lado(precio, "max")) / 2) if _es_rango(precio) else precio
+        margen_v = _r((_lado(margen_u, "min") + _lado(margen_u, "max")) / 2) if _es_rango(margen_u) else margen_u
+    else:
+        meta_v, precio_v, margen_v = meta, precio, margen_u
+
+    def _escenario(factor):
+        unidades = _r(meta_v * factor, 1)
+        return {
+            "unidades": unidades,
+            "ingreso": _r(unidades * precio_v),
+            "margen_total": _r(unidades * margen_v) if margen_v is not None else None,
+        }
+
+    return {
+        "50%": _escenario(0.5), "100%": _escenario(1.0), "200%": _escenario(2.0),
+        "insumos_usados": ["unidades_vendidas", "precio_tentativo"] + margen["insumos_usados"],
+        "insumos_faltantes": [],
+    }
+
+
+UMBRAL_MARGEN_PCT_INCONSISTENTE = -100  # margen mas negativo que -100% del precio
+UMBRAL_PRECIO_MINIMO_FRACCION_COSTO = 0.05  # precio < 5% del costo unitario
+
+
+def detectar_inconsistencia_gigo(numeros, tipo_oferta=None):
+    """Guardian GIGO (Motor v2.2): antes de narrar cualquier conclusion
+    financiera, verifica que los numeros capturados no sean matematicamente
+    absurdos al punto de sugerir que una cifra quedo en la unidad
+    equivocada (ej. un presupuesto MENSUAL leido como costo POR UNIDAD).
+    Caso real que motiva esta funcion: costo_materiales_unidad=200 (era en
+    realidad presupuesto mensual), horas_por_unidad=4 (eran meses de
+    desarrollo), precio_tentativo=13 (precio real del pack) -> costo total
+    400, margen -387, margen_pct = -387/13*100 = -2976.9%. El reporte
+    narro con confianza 'no existe punto de equilibrio posible' sobre un
+    modelo cuyo equilibrio real (una vez corregida la unidad) es de solo
+    16 packs/mes. Esta funcion existe para que ese calculo NUNCA se narre
+    como si fuera confiable: devuelve inconsistente=True y el llamador
+    (modo_reporte) debe mostrar los datos crudos con la inconsistencia
+    senalada, no una conclusion financiera."""
+    costo = costo_unitario_total(numeros, tipo_oferta=tipo_oferta)
+    precio = _valor(numeros, "precio_tentativo")
+    if costo["valor"] is None or precio is None:
+        return {"inconsistente": False, "motivo": None}
+    costo_v = costo["valor"]
+    precio_v = precio
+    if _es_rango(costo_v):
+        costo_v = (costo_v["min"] + costo_v["max"]) / 2
+    if _es_rango(precio_v):
+        precio_v = (precio_v["min"] + precio_v["max"]) / 2
+    if costo_v <= 0 or precio_v <= 0:
+        return {"inconsistente": False, "motivo": None}
+    margen_pct = (precio_v - costo_v) / precio_v * 100
+    if margen_pct < UMBRAL_MARGEN_PCT_INCONSISTENTE:
+        return {"inconsistente": True, "motivo": (
+            f"con estos numeros el margen por unidad es {_r(margen_pct, 1)}%, muy por debajo "
+            "de -100% -- es mas probable que alguna cifra este en la unidad equivocada (por "
+            "ejemplo, un presupuesto mensual leido como costo por unidad, o un plazo en meses "
+            "leido como horas) que que cada venta pierda esa cantidad de dinero"
+        )}
+    if precio_v < costo_v * UMBRAL_PRECIO_MINIMO_FRACCION_COSTO:
+        return {"inconsistente": True, "motivo": (
+            "el precio declarado es menos del 5% del costo unitario calculado -- revisa si el "
+            "precio y el costo estan expresados en la misma unidad (por pieza, por mes, etc.)"
+        )}
+    return {"inconsistente": False, "motivo": None}
+
+
 CAMPOS_CICLO_CONVERSION_EFECTIVO = ("dias_inventario", "dias_cobro_clientes", "dias_pago_proveedores")
 
 
@@ -225,15 +344,32 @@ def ciclo_conversion_efectivo(numeros):
     return {"valor": _r(valor, 1), "insumos_usados": list(CAMPOS_CICLO_CONVERSION_EFECTIVO), "insumos_faltantes": []}
 
 
-def calcular_reporte(numeros_proyecto):
+def calcular_reporte(numeros_proyecto, tipo_oferta=None):
     """Corre todos los calculos disponibles sobre numeros_proyecto y devuelve
     un dict agregado. No lanza excepciones ante datos faltantes: cada
-    sub-resultado reporta sus propios insumos_faltantes."""
-    return {
-        "costo_unitario": costo_unitario_total(numeros_proyecto),
-        "margen": margen_unitario(numeros_proyecto),
-        "punto_equilibrio": punto_equilibrio_unidades_mes(numeros_proyecto),
-        "capacidad": techo_ingreso_capacidad(numeros_proyecto),
-        "escenarios": escenarios_capacidad(numeros_proyecto),
+    sub-resultado reporta sus propios insumos_faltantes.
+
+    Motor v2.2: tipo_oferta=None o 'producto_fisico'/'servicio' usa
+    'capacidad'/'escenarios' basados en capacidad semanal (retrocompatible,
+    formulas sin cambios). tipo_oferta='digital' usa 'escenarios' basados
+    en adopcion de una meta declarada en su lugar (escenarios_adopcion);
+    'capacidad' queda None porque el techo de produccion semanal no aplica
+    a una oferta digital. El guardian GIGO (detectar_inconsistencia_gigo)
+    NO vive aqui adentro a proposito: modo_reporte lo llama por separado
+    antes de decidir si narra o no, para no romper el shape de este dict
+    (cada valor sigue siendo un resultado con insumos_usados/insumos_
+    faltantes, como esperan los llamadores existentes)."""
+    resultado = {
+        "costo_unitario": costo_unitario_total(numeros_proyecto, tipo_oferta=tipo_oferta),
+        "margen": margen_unitario(numeros_proyecto, tipo_oferta=tipo_oferta),
+        "punto_equilibrio": punto_equilibrio_unidades_mes(numeros_proyecto, tipo_oferta=tipo_oferta),
         "ciclo_conversion_efectivo": ciclo_conversion_efectivo(numeros_proyecto),
     }
+    if tipo_oferta == "digital":
+        resultado["capacidad"] = {"unidades_mes": None, "ingreso": None, "margen_mensual": None,
+                                   "insumos_usados": [], "insumos_faltantes": []}
+        resultado["escenarios"] = escenarios_adopcion(numeros_proyecto, tipo_oferta=tipo_oferta)
+    else:
+        resultado["capacidad"] = techo_ingreso_capacidad(numeros_proyecto)
+        resultado["escenarios"] = escenarios_capacidad(numeros_proyecto)
+    return resultado

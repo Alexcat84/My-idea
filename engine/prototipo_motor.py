@@ -255,6 +255,12 @@ CAMPOS_NUMERICOS_PROYECTO = {
 }
 PRESUPUESTO_REPORTE_USD = 0.10
 
+# Motor v2.2: tipo de oferta declarado por el usuario (nunca inferido por
+# heuristica de codigo) y su unidad de venta literal. Generalizan el
+# Reporte de Sostenibilidad mas alla de "producto fisico vendido por
+# pieza" — ver engine/calculadora.py para como cada tipo cambia el calculo.
+TIPOS_OFERTA_VALIDOS = {"producto_fisico", "servicio", "digital", "mixto"}
+
 # Hotfix v2.1.1: groundwork de dominios. Hoy todo el dataset es "core" y
 # todo proyecto tiene ["core"] desbloqueado por defecto, asi que este
 # filtro es un no-op observable — pero ya queda instalado en el ruteador
@@ -584,6 +590,24 @@ SYSTEM_INTERPRETE_MULTI = (
     "sobre la idea o la situacion del usuario, resumela en 1 o 2 frases en "
     "perfil_update. Si no hay nada nuevo que agregar, perfil_update debe "
     "ser null.\n"
+    "- REGISTRO DE EVIDENCIA NEGATIVA (motor v2.2): si el usuario descarta "
+    "algo con evidencia — un canal, un segmento de clientes, un metodo — "
+    "('mi familia usa la parte fisica, ignoran cualquier app, eso es "
+    "inutil'; 'ya probe Reddit y me banearon'; 'ese grupo no compraria "
+    "esto'), NUNCA lo omitas de perfil_update ni lo resumas como si fuera "
+    "neutral. Registralo EXPLICITAMENTE como restriccion, nombrando que se "
+    "descarto y con que evidencia: 'Descarta [X] como [canal/segmento/"
+    "metodo]: [evidencia que dio]'. Esto existe porque un plan real le "
+    "propuso a un usuario como canal de adquisicion exactamente el "
+    "segmento que el mismo habia descartado con evidencia dos turnos antes "
+    "— el perfil_sesion nunca registro el descarte, asi que el redactor no "
+    "tenia forma de saber que no debia proponerlo.\n"
+    "- RELACIONES DECLARADAS, NUNCA ALTERADAS (motor v2.2): usa la palabra "
+    "EXACTA que el usuario usa para describir a las personas de su idea "
+    "(si dice 'amigos', escribe 'amigos', nunca 'familia'; si dice "
+    "'conocidos', no los llames 'clientes' ni 'red de contactos'). No "
+    "reconstruyas ni generalices una relacion declarada — repetila tal "
+    "cual la dijo el usuario, aunque te parezca menos formal.\n"
     "- Cuando salto_semantico es null (caso normal, sin salto), 'camino' es "
     "la cadena LITERAL completa dentro de sucesores_nivel1_y_nivel2: el "
     "primer id SIEMPRE debe ser uno de los sucesores de nivel 1 dados. Si "
@@ -713,6 +737,19 @@ SYSTEM_INTERPRETE_MULTI = (
     "\"unidad\": \"USD\", \"texto_original\": \"me cuesta como $8 en "
     "materiales\"}, \"horas_por_unidad\": {\"valor\": 4, \"unidad\": "
     "\"horas\", \"texto_original\": \"me toma unas 4 horas por pieza\"}}.\n\n"
+    "TIPO DE OFERTA (motor v2.2): en cualquier turno donde el usuario "
+    "revele que vende (o piensa vender), devuelve 'tipo_oferta_detectado' "
+    "con uno de: 'producto_fisico' (algo que se fabrica o se entrega "
+    "fisicamente), 'servicio' (tiempo o trabajo cobrado, no un objeto), "
+    "'digital' (app, software, suscripcion, contenido — costos marginales "
+    "cercanos a cero), 'mixto' (combina claramente mas de uno). Ademas "
+    "devuelve 'unidad_venta_detectada': la palabra EXACTA que el usuario "
+    "usa para su unidad de venta (pieza, cliente, pack, sesion, "
+    "suscripcion, usuario...), tal cual la dijo, nunca una que tu "
+    "inventes. Si el turno no revela nada nuevo sobre esto, ambos deben "
+    "ser null. Ejemplo: 'vendo velas artesanales, cada una a $8' -> "
+    "\"tipo_oferta_detectado\": \"producto_fisico\", "
+    "\"unidad_venta_detectada\": \"vela\".\n\n"
     "Responde SOLO un JSON: {\"accion\": \"avanzar\"|\"repreguntar\"|"
     "\"generar_plan\"|\"salir\", \"camino\": [ids en orden], "
     "\"pregunta_necesaria\": bool, \"pregunta_adaptada\": str|null, "
@@ -720,7 +757,9 @@ SYSTEM_INTERPRETE_MULTI = (
     "\"prioridad_declarada\": {\"texto\": str, \"conteo\": int}|null, "
     "\"salto_semantico\": str|null, \"numeros_detectados\": "
     "{campo: {\"valor\": num|{\"min\":num,\"max\":num}, \"unidad\": "
-    "str|null, \"texto_original\": str}, ...}|null}."
+    "str|null, \"texto_original\": str}, ...}|null, "
+    "\"tipo_oferta_detectado\": \"producto_fisico\"|\"servicio\"|"
+    "\"digital\"|\"mixto\"|null, \"unidad_venta_detectada\": str|null}."
 )
 
 SYSTEM_PROFUNDIZAR = (
@@ -843,7 +882,20 @@ SYSTEM_PLAN = (
     "la UNICA fuente para la etiqueta del plan y la seccion de lo que aun "
     "no cubre — si declaras una familia que el plan no sustenta, el "
     "usuario vera una etiqueta 'completo' que no corresponde a la "
-    "realidad, exactamente el bug que esta regla existe para eliminar.\n\n"
+    "realidad, exactamente el bug que esta regla existe para eliminar.\n"
+    "12. Evidencia negativa y relaciones declaradas (motor v2.2): si "
+    "perfil_sesion registra que el usuario descarto un canal, segmento, o "
+    "metodo con evidencia (buscalo como 'Descarta [X]...' o frases "
+    "equivalentes), PROHIBIDO proponer ese mismo elemento como canal, "
+    "activo, o segmento en ninguna etapa del plan — ni siquiera "
+    "reformulado con otras palabras. Ademas, PROHIBIDO alterar relaciones "
+    "que el usuario declaro explicitamente: si dijo 'amigos', el plan dice "
+    "'amigos', nunca 'familia' ni otra palabra que suene mas conveniente "
+    "para la etapa que estas escribiendo. Esta regla existe porque un plan "
+    "real le propuso a un usuario 'tu propia familia y su red' como canal "
+    "de adquisicion, cuando el usuario habia dicho que eran amigos y que "
+    "ese segmento especificamente rechazaba cualquier app — el redactor "
+    "reconstruyo en vez de registrar lo que el usuario realmente dijo.\n\n"
     "Espanol comun, sin jerga sin explicar, sin autores, sin relleno "
     "motivacional. Todo debe salir del material recibido; no inventes "
     "tecnicas, cifras ni fuentes nuevas que no esten en el material.\n\n"
@@ -944,12 +996,17 @@ SYSTEM_ORGANIZADOR = (
 
 SYSTEM_REPORTE = (
     "Redactas la narracion de un Reporte de Sostenibilidad para un proyecto "
-    "de emprendimiento (motor v2.1). Recibes 'resultados': salidas YA "
+    "de emprendimiento (motor v2.2). Recibes 'resultados': salidas YA "
     "CALCULADAS por un modulo determinista (costo_unitario, margen, "
     "punto_equilibrio, capacidad, escenarios, ciclo_conversion_efectivo), "
     "cada una con su valor (o null si falta un insumo) y que campos se "
-    "usaron o faltan; y 'numeros_proyecto_declarados': los numeros crudos "
-    "que el usuario dio, por si necesitas citarlos literalmente.\n\n"
+    "usaron o faltan; 'numeros_proyecto_declarados': los numeros crudos "
+    "que el usuario dio, por si necesitas citarlos literalmente; y "
+    "'tipo_oferta': 'producto_fisico'|'servicio'|'digital'|'mixto'|null — "
+    "usa el vocabulario correcto segun este campo (para 'digital', di "
+    "'margen por usuario' en vez de 'margen por pieza', 'usuarios/mes' en "
+    "vez de 'unidades producidas'; para 'servicio', habla de la unidad de "
+    "servicio, no de produccion fisica).\n\n"
     "REGLA DURA, LA MAS IMPORTANTE: PROHIBIDO generar, estimar, redondear "
     "distinto o inventar CUALQUIER cifra que no venga literalmente de "
     "'resultados' o 'numeros_proyecto_declarados'. Si necesitas un numero "
@@ -968,18 +1025,26 @@ SYSTEM_REPORTE = (
     "En '## Qué significan', explica en 2-4 frases, en español simple sin "
     "jerga, que le dicen esos numeros sobre su proyecto (¿es sano el "
     "margen?, ¿el techo de ingreso alcanza lo que busca?). En "
-    "'## Escenarios', si 'escenarios' tiene datos, describe pesimista, "
-    "base y sobredemanda con sus cifras EXACTAS del modulo. Para "
-    "sobredemanda hay DOS cifras de perdida con significado DISTINTO — "
-    "nunca las confundas ni uses solo una: 'ingreso_perdido_estimado' es "
-    "cuanto DINERO EN VENTAS no se factura (unidades no atendidas x "
-    "precio), y 'margen_perdido_estimado' es cuanta GANANCIA no llega "
-    "(unidades no atendidas x margen) — son numeros diferentes a "
-    "proposito, explica ambos por separado con sus nombres correctos. "
-    "Ejemplo: 'dejarías de facturar $850 en ventas que no puedes atender, "
-    "de los cuales $170 habrían sido ganancia real para ti.' Explica "
-    "tambien que 'unidades_no_atendidas' es venta que se pierde porque la "
-    "capacidad de produccion no alcanza, no un fracaso de ventas. En "
+    "'## Escenarios', si 'escenarios' tiene datos, su forma depende de "
+    "tipo_oferta — nunca asumas cual es, fijate en las claves que "
+    "realmente vienen en 'resultados.escenarios': (1) 'producto_fisico' o "
+    "'servicio' (claves pesimista/base/sobredemanda): describe los tres "
+    "con sus cifras EXACTAS. Para sobredemanda hay DOS cifras de perdida "
+    "con significado DISTINTO — nunca las confundas ni uses solo una: "
+    "'ingreso_perdido_estimado' es cuanto DINERO EN VENTAS no se factura "
+    "(unidades no atendidas x precio), y 'margen_perdido_estimado' es "
+    "cuanta GANANCIA no llega (unidades no atendidas x margen) — son "
+    "numeros diferentes a proposito, explica ambos por separado con sus "
+    "nombres correctos. Ejemplo: 'dejarías de facturar $850 en ventas que "
+    "no puedes atender, de los cuales $170 habrían sido ganancia real "
+    "para ti.' Explica tambien que 'unidades_no_atendidas' es venta que "
+    "se pierde porque la capacidad de produccion no alcanza, no un "
+    "fracaso de ventas. (2) 'digital' (claves 50%/100%/200%): estos son "
+    "niveles de ADOPCION de la meta de usuarios/ventas que el usuario "
+    "declaro, no de capacidad de produccion — describe cada nivel con su "
+    "'unidades', 'ingreso' e 'margen_total' exactos, y explica que "
+    "representan escenarios de cuanta gente adopta la oferta, no un techo "
+    "fisico de cuanto se puede producir. En "
     "'## Los números que te faltan', para cada nombre de "
     "campo que aparezca en algun 'insumos_faltantes', tradúcelo a una "
     "frase en lenguaje natural (nunca el nombre tecnico del campo) "
@@ -1567,6 +1632,10 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
                     "texto_original": entry.get("texto_original"),
                 }
         data["numeros_detectados"] = limpio or None
+        tipo_oferta = data.get("tipo_oferta_detectado")
+        data["tipo_oferta_detectado"] = tipo_oferta if tipo_oferta in TIPOS_OFERTA_VALIDOS else None
+        unidad_venta = data.get("unidad_venta_detectada")
+        data["unidad_venta_detectada"] = str(unidad_venta).strip() if unidad_venta else None
         return data
 
     try:
@@ -1834,6 +1903,36 @@ _TEXTO_FAMILIA_FALTANTE = {
     "viabilidad_economica": "si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)",
 }
 
+SECCION_ECONOMICA_TITULO = "¿Puede sostenerse tu idea?"
+
+
+def _corregir_coherencia_cobertura(evaluacion_cobertura, cuerpo, tiene_material_economico, registrar_evento=None):
+    """Post-validador MECANICO (Motor v2.2) de la incoherencia etiqueta/
+    contenido: si el material ya traia al menos un concepto de viabilidad
+    economica Y el redactor efectivamente escribio la seccion fija de
+    sostenibilidad (regla 4 de SYSTEM_PLAN), 'viabilidad_economica' NUNCA
+    puede aparecer en 'Lo que este plan aun no cubre' -- sin importar lo
+    que el redactor autodeclaro en su bloque ===JSON=== (regla 11). Tercera
+    reincidencia de este bug (Fase 2.5, Fase 2.8, sesion en vivo del
+    fundador de la app de I Ching: el plan traia la seccion de numeros con
+    contenido real, pero la autodeclaracion igual listaba viabilidad_
+    economica como no cubierta). Ya no depende de que el modelo lo declare
+    bien: se verifica contra el propio markdown generado, en codigo."""
+    seccion_presente = tiene_material_economico and SECCION_ECONOMICA_TITULO in cuerpo
+    if seccion_presente and not evaluacion_cobertura["tiene_viabilidad_economica"]:
+        if registrar_evento:
+            registrar_evento({"tipo": "coherencia_cobertura_corregida", "familia": "viabilidad_economica"})
+        evaluacion_cobertura = dict(evaluacion_cobertura)
+        evaluacion_cobertura["tiene_viabilidad_economica"] = True
+        evaluacion_cobertura["familias_faltantes"] = [
+            f for f in evaluacion_cobertura["familias_faltantes"]
+            if f != _TEXTO_FAMILIA_FALTANTE["viabilidad_economica"]
+        ]
+        evaluacion_cobertura["es_completa"] = (
+            evaluacion_cobertura["tiene_accion_clientes"] and evaluacion_cobertura["tiene_viabilidad_economica"]
+        )
+    return evaluacion_cobertura
+
 
 def _parsear_autodeclaracion(raw):
     """Separa el markdown del plan del bloque final ===JSON=== (Fase 2.8,
@@ -1871,7 +1970,8 @@ def _evaluacion_desde_autodeclaracion(autodeclaracion):
 
 
 def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id,
-                    es_seguimiento=False, estado_vivo_previo=None, prioridad_declarada=None):
+                    es_seguimiento=False, estado_vivo_previo=None, prioridad_declarada=None,
+                    registrar_evento=None):
     """`evaluacion` (ruta-solo, por tags de node_families) decide QUE
     cosechar (familia faltante como prioridad) - eso se conserva para el
     medidor de oferta previa ("quieres continuar") y para priorizar la
@@ -1896,6 +1996,7 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
     material_principal = [a_material(nid) for nid in ruta]
     cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada)
     material_de_apoyo = [a_material(nid) for nid in cosecha_ids]
+    tiene_material_economico = any(m["es_viabilidad_economica"] for m in material_principal + material_de_apoyo)
 
     autodeclaracion = None
     if API_KEY:
@@ -1926,6 +2027,9 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
         # de IA, plan offline, o el modelo omitio el bloque ===JSON===):
         # unico caso donde se vuelve a los tags de node_families.
         evaluacion_cobertura = plan_readiness.evaluar_ruta(ruta + cosecha_ids, families)
+
+    evaluacion_cobertura = _corregir_coherencia_cobertura(
+        evaluacion_cobertura, cuerpo, tiene_material_economico, registrar_evento=registrar_evento)
 
     etiqueta = "Plan completo" if evaluacion_cobertura["es_completa"] else "Plan inicial"
     total_conceptos = len(ruta) + len(cosecha_ids)
@@ -2124,6 +2228,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
     ultimas_preguntas = []
     historial_mensajes = []
     numeros_detectados_sesion = {}
+    tipo_oferta_sesion = None
+    unidad_venta_sesion = None
 
     def _registrar_evento(evento):
         fallback_events.append(evento)
@@ -2160,12 +2266,17 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
                     "texto_original": entry.get("texto_original"),
                     "session_id": db_session_id, "updated_at": datetime.now().isoformat(),
                 }
+        if resultado.get("tipo_oferta_detectado"):
+            tipo_oferta_sesion = resultado["tipo_oferta_detectado"]
+        if resultado.get("unidad_venta_detectada"):
+            unidad_venta_sesion = resultado["unidad_venta_detectada"]
 
         if resultado["accion"] == "salir":
             print("\nHasta pronto.")
             return {"tipo": "salio", "ruta": ruta, "modos": modos, "perfil_sesion": perfil_sesion,
                     "fallback_events": fallback_events, "prioridad_declarada": prioridad_declarada,
-                    "numeros_detectados_sesion": numeros_detectados_sesion}
+                    "numeros_detectados_sesion": numeros_detectados_sesion,
+                    "tipo_oferta_sesion": tipo_oferta_sesion, "unidad_venta_sesion": unidad_venta_sesion}
 
         if resultado["accion"] == "repreguntar":
             repreguntas_usadas += 1
@@ -2257,7 +2368,8 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
     resultado_plan = ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion,
                                      session_id, es_seguimiento=es_seguimiento,
                                      estado_vivo_previo=estado_vivo_previo,
-                                     prioridad_declarada=prioridad_declarada)
+                                     prioridad_declarada=prioridad_declarada,
+                                     registrar_evento=_registrar_evento)
     plan_md = resultado_plan["markdown"]
     print(plan_md)
     SALIDAS_DIR.mkdir(parents=True, exist_ok=True)
@@ -2275,6 +2387,7 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
         "plan_md": plan_md, "plan_fname": fname, "fallback_events": fallback_events,
         "prioridad_declarada": prioridad_declarada,
         "numeros_detectados_sesion": numeros_detectados_sesion,
+        "tipo_oferta_sesion": tipo_oferta_sesion, "unidad_venta_sesion": unidad_venta_sesion,
     }
 
 
@@ -2288,6 +2401,20 @@ def _merge_numeros_proyecto(project_id, numeros_detectados_sesion):
     numeros = dict((proyecto or {}).get("numeros_proyecto") or {})
     numeros.update(numeros_detectados_sesion)
     db.actualizar_proyecto(project_id, numeros_proyecto=numeros)
+
+
+def _merge_tipo_oferta(project_id, tipo_oferta_sesion, unidad_venta_sesion):
+    """Motor v2.2: persiste tipo_oferta/unidad_venta si esta sesion detecto
+    algo nuevo (nunca pisa con None lo que ya estaba guardado de una
+    sesion anterior)."""
+    if not tipo_oferta_sesion and not unidad_venta_sesion:
+        return
+    campos = {}
+    if tipo_oferta_sesion:
+        campos["tipo_oferta"] = tipo_oferta_sesion
+    if unidad_venta_sesion:
+        campos["unidad_venta"] = unidad_venta_sesion
+    db.actualizar_proyecto(project_id, **campos)
 
 
 def _persistir_resultado(project_id, db_session_id, resultado, graph, families, es_seguimiento=False):
@@ -2304,6 +2431,7 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
         db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
                          costo_por_componente_usd())
         _merge_numeros_proyecto(project_id, resultado.get("numeros_detectados_sesion"))
+        _merge_tipo_oferta(project_id, resultado.get("tipo_oferta_sesion"), resultado.get("unidad_venta_sesion"))
         return
 
     cosecha_ids = resultado["cosecha_ids"]
@@ -2313,6 +2441,7 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
     db.registrar_nodos(project_id, db_session_id, nodos_con_tipo)
 
     _merge_numeros_proyecto(project_id, resultado.get("numeros_detectados_sesion"))
+    _merge_tipo_oferta(project_id, resultado.get("tipo_oferta_sesion"), resultado.get("unidad_venta_sesion"))
 
     # estado_vivo se comprime ANTES de cerrar la sesion para que su costo
     # quede incluido en el desglose por componente que se persiste al cerrar
@@ -2487,18 +2616,110 @@ def modo_gratis(graph, entry_seeds):
 # Motor v2.1: Reporte de Sostenibilidad (--reporte PROJECT_ID)
 # ---------------------------------------------------------------------------
 
-PREGUNTAS_NUMERICAS = {
-    "costo_materiales_unidad": "¿Cuánto gastas en materiales por pieza, más o menos? Un número aproximado sirve.",
-    "horas_por_unidad": "¿Cuántas horas te toma hacer una pieza, de principio a fin?",
-    "valor_hora": "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
-    "precio_tentativo": "¿A qué precio venderías (o vendes) cada pieza?",
-    "capacidad_semanal": "¿Cuántas piezas puedes producir en una semana normal?",
-    "costos_fijos_mensuales": "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
+# Motor v2.2: la mini-entrevista se parametriza por tipo_oferta (ver
+# calculadora.py) porque "materiales por pieza" no tiene sentido para una
+# app SaaS, y "horas por unidad" no aplica cuando no se fabrica nada.
+# 'producto_fisico' y el default (tipo_oferta None, proyectos anteriores a
+# esta version) usan el mismo set de 6 campos que Motor v2.1 -- retrocompatible.
+CAMPOS_ESENCIALES_POR_TIPO = {
+    "producto_fisico": ["costo_materiales_unidad", "horas_por_unidad", "valor_hora",
+                         "precio_tentativo", "capacidad_semanal", "costos_fijos_mensuales"],
+    "servicio": ["costo_materiales_unidad", "horas_por_unidad", "valor_hora",
+                 "precio_tentativo", "capacidad_semanal", "costos_fijos_mensuales"],
+    "digital": ["costos_fijos_mensuales", "costo_materiales_unidad", "precio_tentativo", "unidades_vendidas"],
 }
-MAX_PREGUNTAS_REPORTE = len(PREGUNTAS_NUMERICAS)  # 6, ya coincide 1 a 1 con los campos esenciales
+MAX_PREGUNTAS_REPORTE = 6
 REPORTE_DISCLAIMER = (
     "\n\n---\n_Estimaciones basadas en las cifras que tú diste; no sustituyen "
     "contabilidad formal ni asesoría fiscal, que varían según tu país._"
+)
+PREGUNTA_TIPO_OFERTA = "¿Qué vendes exactamente y cómo se cobra?"
+
+# Guardian GIGO (Motor v2.2): frases deterministicas que indican que la
+# mini-entrevista actual (el "molde" de preguntas del tipo_oferta activo)
+# no encaja con el negocio del usuario. Dos apariciones abortan el molde
+# y disparan una reclasificacion en vez de seguir insistiendo con
+# preguntas que no aplican.
+FRASES_NO_APLICA_MOLDE = (
+    "no funciona asi", "no funciona así", "no es por pieza", "no es por unidad",
+    "no vendo por unidades", "no aplica", "no se cobra asi", "no se cobra así",
+    "es una suscripcion", "es una suscripción", "es digital", "no tengo piezas",
+    "no produzco piezas", "no es un producto fisico", "no es un producto físico",
+    "no fabrico",
+)
+
+
+def _detectar_no_aplica(texto):
+    """Deterministico (sin LLM): True si la respuesta indica que la
+    pregunta actual no encaja con el tipo de oferta del usuario."""
+    t = (texto or "").strip().lower()
+    return any(f in t for f in FRASES_NO_APLICA_MOLDE)
+
+
+def _preguntas_por_tipo(tipo_oferta, unidad_venta):
+    """Motor v2.2: tres plantillas parametrizadas por unidad_venta (la
+    palabra literal del usuario: pieza, cliente, pack, suscripcion...).
+    'servicio' y 'digital' tienen preguntas y (en el caso de digital)
+    campos distintos a 'producto_fisico' -- ver CAMPOS_ESENCIALES_POR_TIPO."""
+    u = unidad_venta or "unidad"
+    if tipo_oferta == "servicio":
+        return {
+            "costo_materiales_unidad": f"¿Cuánto te cuesta directamente cada {u} (insumos, materiales que uses, etc.)? "
+                                        "Un número aproximado sirve; si no tienes, responde 0.",
+            "horas_por_unidad": f"¿Cuántas horas de trabajo te toma cada {u}?",
+            "valor_hora": "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
+            "precio_tentativo": f"¿A qué precio cobras (o cobrarías) cada {u}?",
+            "capacidad_semanal": f"¿Cuántas veces de {u} puedes atender en una semana normal?",
+            "costos_fijos_mensuales": "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
+        }
+    if tipo_oferta == "digital":
+        return {
+            "costos_fijos_mensuales": "¿Cuánto gastas al mes en costos fijos de infraestructura (hosting, APIs, herramientas, suscripciones)?",
+            "costo_materiales_unidad": f"¿Tienes algún costo variable por cada {u} (por ejemplo, costo de API por uso)? "
+                                        "Si es prácticamente cero, responde 0.",
+            "precio_tentativo": f"¿A qué precio o ingreso promedio vendes (o venderías) cada {u}?",
+            "unidades_vendidas": f"¿Cuántas de {u} tienes hoy, o cuál sería una meta mensual realista?",
+        }
+    # producto_fisico y default (tipo_oferta None: proyectos pre-v2.2)
+    return {
+        "costo_materiales_unidad": f"¿Cuánto gastas en materiales por {u}, más o menos? Un número aproximado sirve.",
+        "horas_por_unidad": f"¿Cuántas horas de trabajo te toma cada {u}, de principio a fin?",
+        "valor_hora": "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
+        "precio_tentativo": f"¿A qué precio venderías (o vendes) cada {u}?",
+        "capacidad_semanal": f"¿Cuántas de {u} puedes producir en una semana normal?",
+        "costos_fijos_mensuales": "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
+    }
+
+
+def _unidad_declarada_campo(campo, tipo_oferta, unidad_venta):
+    """Motor v2.2, guardian GIGO (a): cada campo capturado en la
+    mini-entrevista guarda la unidad que la PREGUNTA misma establecio —
+    deterministico, no depende de que el usuario la repita. Antes, todo
+    campo capturado por la mini-entrevista quedaba con unidad=None (el
+    campo existia en el esquema desde Motor v2.1 pero nunca se llenaba),
+    asi que no habia forma de detectar una mezcla de unidades mas
+    adelante."""
+    u = unidad_venta or "unidad"
+    if campo == "costos_fijos_mensuales":
+        return "por mes"
+    if campo == "valor_hora":
+        return "por hora"
+    if campo == "unidades_vendidas":
+        return f"{u}/mes" if tipo_oferta == "digital" else u
+    return f"por {u}"
+
+
+SYSTEM_CLASIFICAR_OFERTA = (
+    "Clasificas que vende un proyecto a partir de una frase libre del "
+    "usuario. Responde SOLO un JSON de una linea: {\"tipo_oferta\": "
+    "\"producto_fisico\"|\"servicio\"|\"digital\"|\"mixto\", "
+    "\"unidad_venta\": str}. 'producto_fisico' = se fabrica o entrega algo "
+    "material. 'servicio' = se cobra tiempo o trabajo, no un objeto. "
+    "'digital' = app, software, contenido, suscripcion digital — costos "
+    "marginales cercanos a cero. 'mixto' solo si combina claramente mas de "
+    "uno. 'unidad_venta' es la palabra que el usuario usaria para su "
+    "unidad de venta (pieza, cliente, pack, sesion, usuario, "
+    "suscripcion...); si no queda clara, usa 'unidad'."
 )
 
 
@@ -2518,6 +2739,60 @@ def _extraer_numero(texto):
         return float(m.group(1).replace(",", ""))
     except ValueError:
         return None
+
+
+def _clasificar_oferta(texto):
+    """Motor v2.2: reclasifica tipo_oferta/unidad_venta a partir de una
+    frase libre. Se usa (a) cuando el proyecto todavia no tiene
+    tipo_oferta guardado al abrir --reporte, y (b) cuando el guardian GIGO
+    detecta que el molde de preguntas activo no encaja y hay que
+    cambiarlo. Llamada barata a Haiku (clasificacion, no el interprete
+    completo); si falla o no hay API_KEY, devuelve (None, None) y el
+    llamador sigue con el tipo por defecto (producto_fisico)."""
+    if not API_KEY:
+        return None, None
+    try:
+        raw = llamar_claude(SYSTEM_CLASIFICAR_OFERTA, texto, MODEL_HAIKU, max_tokens=150, componente="turnos")
+        data = _parsear_json(raw)
+        tipo = data.get("tipo_oferta")
+        unidad = data.get("unidad_venta")
+        tipo = tipo if tipo in TIPOS_OFERTA_VALIDOS else None
+        unidad = str(unidad).strip() if unidad else None
+        return tipo, unidad
+    except Exception:
+        return None, None
+
+
+def _reporte_gigo_inconsistente(motivo, numeros):
+    """Guardian GIGO (Motor v2.2): cuando detectar_inconsistencia_gigo
+    marca los numeros como probablemente mal capturados, el reporte NO
+    narra ninguna conclusion financiera (ni siquiera via LLM — esta
+    funcion es 100% deterministica a proposito, para no arriesgar que el
+    narrador intente ser 'creativo' con datos que ya sabemos que estan
+    rotos). Muestra los numeros crudos y pide la correccion puntual.
+    Caso real que motiva esto: un reporte narro con confianza 'no existe
+    punto de equilibrio posible' (margen -2976.9%) para un modelo cuyo
+    equilibrio real, con las unidades corregidas, es de 16 packs/mes."""
+    partes = [
+        "## Tus números hoy", "",
+        "Antes de calcular nada, encontré algo que no cuadra en estos números:", "",
+        f"> {motivo}", "",
+        "No voy a calcular margen ni punto de equilibrio con estos datos: el resultado "
+        "sería una cifra que suena precisa pero está mal, y eso es peor que no tener el "
+        "cálculo. Prefiero decírtelo con honestidad.", "",
+        "## Los números que diste", "",
+    ]
+    for campo, entry in numeros.items():
+        if entry.get("valor") is not None:
+            partes.append(f"- {campo}: {entry['valor']}")
+    partes += [
+        "", "## Los números que te faltan (y cómo conseguirlos)", "",
+        "Revisa si alguno de los números de arriba está en una unidad distinta a la que "
+        "esperaba el reporte (por ejemplo, un gasto mensual anotado como costo por unidad, "
+        "o un plazo en meses anotado como horas), corrígelo, y vuelve a correr "
+        "`--reporte` con la cifra corregida.",
+    ]
+    return "\n".join(partes)
 
 
 def _reporte_offline(resultados):
@@ -2541,12 +2816,13 @@ def _reporte_offline(resultados):
     return "\n".join(partes)
 
 
-def _narrar_reporte(resultados, numeros):
+def _narrar_reporte(resultados, numeros, tipo_oferta=None):
     if not API_KEY:
         return _reporte_offline(resultados) + REPORTE_DISCLAIMER
     payload = {
         "resultados": resultados,
         "numeros_proyecto_declarados": {c: v.get("valor") for c, v in numeros.items()},
+        "tipo_oferta": tipo_oferta,
     }
     try:
         cuerpo = llamar_claude(SYSTEM_REPORTE, json.dumps(payload, ensure_ascii=False), MODEL,
@@ -2558,12 +2834,15 @@ def _narrar_reporte(resultados, numeros):
 
 
 def modo_reporte(project_id, graph, families):
-    """Motor v2.1: --reporte PROJECT_ID. (a) Inventario de numeros_proyecto,
-    (b) mini-entrevista SOLO por los campos esenciales que faltan (max 6,
-    deterministica, sin brujula ni nodos), (c) calculadora.py calcula todo
-    lo posible, (d) UNA llamada Sonnet narra los resultados ya calculados
-    (nunca genera cifras nuevas), (e) se guarda como plan etiquetado
-    'reporte_numeros'. Presupuesto duro propio: PRESUPUESTO_REPORTE_USD."""
+    """Motor v2.1/v2.2: --reporte PROJECT_ID. (a) Inventario de
+    numeros_proyecto y tipo_oferta, (b) mini-entrevista determinista
+    parametrizada por tipo_oferta (fisico/servicio/digital), con guardian
+    GIGO que aborta y reclasifica si 2+ respuestas indican que el molde no
+    encaja, (c) calculadora.py calcula todo lo posible (o el guardian GIGO
+    numerico rechaza narrar si el margen es absurdo), (d) UNA llamada
+    Sonnet narra los resultados ya calculados (nunca genera cifras
+    nuevas), (e) se guarda como plan etiquetado 'reporte_numeros'.
+    Presupuesto duro propio: PRESUPUESTO_REPORTE_USD."""
     global PRESUPUESTO_SESION_USD
     proyecto = db.obtener_proyecto(project_id)
     if proyecto is None:
@@ -2576,22 +2855,59 @@ def modo_reporte(project_id, graph, families):
     PRESUPUESTO_SESION_USD = min(PRESUPUESTO_SESION_USD, PRESUPUESTO_REPORTE_USD)
 
     numeros = dict(proyecto.get("numeros_proyecto") or {})
+    tipo_oferta = proyecto.get("tipo_oferta")
+    unidad_venta = proyecto.get("unidad_venta")
     print(f"\nGenerando tu Reporte de Sostenibilidad (proyecto: {project_id})...")
 
     try:
-        faltantes_esenciales = [c for c in PREGUNTAS_NUMERICAS if c not in numeros]
+        if not tipo_oferta:
+            respuesta_tipo = leer_entrada("\n" + PREGUNTA_TIPO_OFERTA + "\n> ")
+            tipo_detectado, unidad_detectada = _clasificar_oferta(respuesta_tipo)
+            tipo_oferta = tipo_detectado
+            unidad_venta = unidad_detectada or unidad_venta
+            if tipo_oferta:
+                db.actualizar_proyecto(project_id, tipo_oferta=tipo_oferta, unidad_venta=unidad_venta)
+
+        campos_esenciales = CAMPOS_ESENCIALES_POR_TIPO.get(tipo_oferta, CAMPOS_ESENCIALES_POR_TIPO["producto_fisico"])
+        preguntas = _preguntas_por_tipo(tipo_oferta, unidad_venta)
+        faltantes_esenciales = [c for c in campos_esenciales if c not in numeros][:MAX_PREGUNTAS_REPORTE]
+        no_aplica_count = 0
+        molde_cambiado = False
+
         if faltantes_esenciales:
             print("\nMe faltan algunos numeros para completar tu reporte. "
                   "Si no sabes alguno, escribe 'no se' y seguimos con el resto.")
-            for campo in faltantes_esenciales[:MAX_PREGUNTAS_REPORTE]:
-                respuesta = leer_entrada("\n" + PREGUNTAS_NUMERICAS[campo] + "\n> ")
-                valor = _extraer_numero(respuesta)
-                if valor is None:
-                    continue
+        idx = 0
+        while idx < len(faltantes_esenciales):
+            campo = faltantes_esenciales[idx]
+            respuesta = leer_entrada("\n" + preguntas[campo] + "\n> ")
+            if _detectar_no_aplica(respuesta):
+                no_aplica_count += 1
+                if no_aplica_count >= 2 and not molde_cambiado:
+                    print("\nParece que estas preguntas no encajan con lo que vendes. "
+                          "Te pregunto distinto.")
+                    aclaracion = leer_entrada("\n" + PREGUNTA_TIPO_OFERTA + "\n> ")
+                    nuevo_tipo, nueva_unidad = _clasificar_oferta(aclaracion)
+                    molde_cambiado = True
+                    if nuevo_tipo and nuevo_tipo != tipo_oferta:
+                        tipo_oferta = nuevo_tipo
+                        unidad_venta = nueva_unidad or unidad_venta
+                        db.actualizar_proyecto(project_id, tipo_oferta=tipo_oferta, unidad_venta=unidad_venta)
+                        campos_esenciales = CAMPOS_ESENCIALES_POR_TIPO.get(
+                            tipo_oferta, CAMPOS_ESENCIALES_POR_TIPO["producto_fisico"])
+                        preguntas = _preguntas_por_tipo(tipo_oferta, unidad_venta)
+                        faltantes_esenciales = [c for c in campos_esenciales if c not in numeros][:MAX_PREGUNTAS_REPORTE]
+                        idx = 0
+                        continue
+                idx += 1
+                continue
+            valor = _extraer_numero(respuesta)
+            if valor is not None:
                 numeros[campo] = {
-                    "valor": valor, "unidad": None, "texto_original": respuesta,
-                    "session_id": None, "updated_at": datetime.now().isoformat(),
+                    "valor": valor, "unidad": _unidad_declarada_campo(campo, tipo_oferta, unidad_venta),
+                    "texto_original": respuesta, "session_id": None, "updated_at": datetime.now().isoformat(),
                 }
+            idx += 1
     except SesionInterrumpida:
         db.actualizar_proyecto(project_id, numeros_proyecto=numeros)
         print("\n\nSesion interrumpida. Lo que ya contestaste quedo guardado.")
@@ -2599,8 +2915,13 @@ def modo_reporte(project_id, graph, families):
         return
 
     db.actualizar_proyecto(project_id, numeros_proyecto=numeros)
-    resultados = calculadora.calcular_reporte(numeros)
-    contenido = _narrar_reporte(resultados, numeros)
+
+    gigo = calculadora.detectar_inconsistencia_gigo(numeros, tipo_oferta=tipo_oferta)
+    if gigo["inconsistente"]:
+        contenido = _reporte_gigo_inconsistente(gigo["motivo"], numeros) + REPORTE_DISCLAIMER
+    else:
+        resultados = calculadora.calcular_reporte(numeros, tipo_oferta=tipo_oferta)
+        contenido = _narrar_reporte(resultados, numeros, tipo_oferta=tipo_oferta)
 
     SALIDAS_DIR.mkdir(parents=True, exist_ok=True)
     fname = SALIDAS_DIR / f"reporte_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
