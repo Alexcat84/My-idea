@@ -25,8 +25,9 @@ describe("assets sincronizados desde Python (scripts/sync_assets_web.py)", () =>
     });
   }
 
-  it("el manifest tiene exactamente los 5 assets esperados", () => {
+  it("el manifest tiene exactamente los 6 assets esperados", () => {
     expect(Object.keys(manifest).sort()).toEqual([
+      "entry_seeds.json",
       "master_graph.json",
       "node_families.json",
       "preguntas_cache.json",

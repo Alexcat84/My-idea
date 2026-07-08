@@ -157,6 +157,91 @@ export async function llamarClaude(
   return { texto, acumulado: nuevoAcumulado };
 }
 
+export type BloqueTexto = { type: "text"; text: string; cache_control?: { type: "ephemeral" } };
+export type MensajeConversacion =
+  | { role: "user"; content: string | BloqueTexto[] }
+  | { role: "assistant"; content: string };
+
+export interface ResultadoLlamadaConversacion {
+  texto: string;
+  acumulado: UsoAcumulado;
+  historialMensajes: MensajeConversacion[];
+}
+
+/**
+ * Equivalente a llamar_claude_conversacion(): mantiene una conversacion
+ * (historialMensajes) que crece turno a turno, con el marcador de cache
+ * SIEMPRE en el ultimo bloque enviado (se quita del turno previamente
+ * marcado, se coloca en el nuevo) -- asi todo el prefijo previo (entrada
+ * original, perfil acumulado, turnos anteriores) se lee de cache en vez
+ * de repagarse completo cada vez. Devuelve un historialMensajes NUEVO (no
+ * muta el array de entrada); el llamador (la ruta de /turn) es quien
+ * decide persistirlo en Supabase para el proximo turno de la misma
+ * sesion -- a diferencia del CLI, donde este historial vive solo en
+ * memoria del proceso y --continuar lo pierde (Fase 2.7 docstring: "vive
+ * solo en memoria de esta corrida, no se persiste"), la web SI puede
+ * persistirlo, logrando el mismo beneficio de cache incluso despues de
+ * que el usuario cierre la pestaña entre turnos.
+ */
+export async function llamarClaudeConversacion(
+  client: Anthropic,
+  system: string,
+  historialMensajes: MensajeConversacion[],
+  nuevoTurnoTexto: string,
+  model: string,
+  acumulado: UsoAcumulado,
+  opts: { maxTokens?: number; componente?: string; presupuestoUsd?: number } = {}
+): Promise<ResultadoLlamadaConversacion> {
+  const presupuestoUsd = opts.presupuestoUsd ?? PRESUPUESTO_SESION_USD_DEFAULT;
+  if (costoAcumuladoUsd(acumulado) >= presupuestoUsd) {
+    throw new PresupuestoExcedidoError(presupuestoUsd);
+  }
+
+  // Quita cache_control del ultimo bloque previamente marcado (busca hacia
+  // atras el primer mensaje con content en forma de lista -- el mas
+  // reciente puede ser un turno "assistant" con content string plano).
+  const historialSinMarca: MensajeConversacion[] = historialMensajes.map((m) => m);
+  for (let i = historialSinMarca.length - 1; i >= 0; i--) {
+    const msg = historialSinMarca[i];
+    if (msg.role === "user" && Array.isArray(msg.content) && msg.content.length > 0) {
+      const bloques = [...msg.content];
+      const ultimo = { ...bloques[bloques.length - 1] };
+      delete ultimo.cache_control;
+      bloques[bloques.length - 1] = ultimo;
+      historialSinMarca[i] = { role: "user", content: bloques };
+      break;
+    }
+  }
+
+  const nuevoTurno: MensajeConversacion = {
+    role: "user",
+    content: [{ type: "text", text: nuevoTurnoTexto, cache_control: { type: "ephemeral" } }],
+  };
+
+  const msg = await client.messages.create({
+    model,
+    max_tokens: opts.maxTokens ?? 600,
+    system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
+    messages: [...historialSinMarca, nuevoTurno] as Anthropic.MessageParam[],
+  });
+
+  const nuevoAcumulado = registrarUso(acumulado, model, msg.usage, opts.componente);
+  const texto = msg.content
+    .filter((b): b is Anthropic.TextBlock => b.type === "text")
+    .map((b) => b.text)
+    .join("");
+
+  // Solo se compromete al historial real si la llamada tuvo exito (si
+  // client.messages.create() lanza, no llegamos aqui).
+  const historialActualizado: MensajeConversacion[] = [
+    ...historialSinMarca,
+    nuevoTurno,
+    { role: "assistant", content: texto },
+  ];
+
+  return { texto, acumulado: nuevoAcumulado, historialMensajes: historialActualizado };
+}
+
 export interface DesgloseCosto {
   por_modelo: Record<string, { llamadas: number; in: number; out: number; cache_read: number; cache_write: number; costo_usd: number }>;
   por_componente: Record<string, number>;

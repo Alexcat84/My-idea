@@ -29,6 +29,7 @@ ASSETS = {
     "master_graph.json": BASE / "dataset" / "metadata" / "master_graph.json",
     "preguntas_cache.json": BASE / "engine" / "preguntas_cache.json",
     "node_families.json": BASE / "engine" / "node_families.json",
+    "entry_seeds.json": BASE / "dataset" / "metadata" / "entry_seeds.json",
 }
 
 PROMPTS_A_EXPORTAR = [
