@@ -30,12 +30,12 @@ export interface NodoGrafo {
 
 export type Grafo = Record<string, NodoGrafo>;
 
-interface PreguntaCacheEntry {
+export interface PreguntaCacheEntry {
   pregunta?: string;
   [key: string]: unknown;
 }
 
-type PreguntasCache = Record<string, PreguntaCacheEntry>;
+export type PreguntasCache = Record<string, PreguntaCacheEntry>;
 
 let _grafo: Grafo | null = null;
 let _preguntasCache: PreguntasCache | null = null;

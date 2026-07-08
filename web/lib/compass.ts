@@ -110,7 +110,6 @@ export interface CandidatoAfin {
 
 export interface NodoConDominio {
   dominio?: string;
-  [key: string]: unknown;
 }
 
 export interface BuscarAfinesOpts {
