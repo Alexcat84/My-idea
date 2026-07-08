@@ -97,6 +97,15 @@ export async function obtenerProyecto(supabase: SupabaseClient, projectId: strin
   return filas.length > 0 ? filas[0] : null;
 }
 
+/** Lista los proyectos del usuario autenticado (RLS ya filtra por
+ * user_id), mas recientes primero -- reemplaza a --seguir/necesitar saber
+ * el project_id de memoria: la UI muestra esta lista para retomar. */
+export async function listarProyectos(supabase: SupabaseClient): Promise<Proyecto[]> {
+  const { data, error } = await supabase.from("projects").select("*").order("updated_at", { ascending: false });
+  if (error) throw error;
+  return data as Proyecto[];
+}
+
 export async function actualizarProyecto(
   supabase: SupabaseClient,
   projectId: string,

@@ -24,6 +24,7 @@ interface Builder {
   _update?: Record<string, unknown>;
   _filters: Record<string, unknown>;
   _single: boolean;
+  _order?: { col: string; ascending: boolean };
 }
 
 function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
@@ -40,7 +41,15 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
       return { data: null, error: null };
     }
     const id = b._filters.id as string | undefined;
-    const rows = id ? (estado.projects[id] ? [estado.projects[id]] : []) : Object.values(estado.projects);
+    let rows = id ? (estado.projects[id] ? [estado.projects[id]] : []) : Object.values(estado.projects);
+    if (b._order) {
+      const { col, ascending } = b._order;
+      rows = [...rows].sort((a, c) => {
+        const av = String(a[col] ?? "");
+        const cv = String(c[col] ?? "");
+        return ascending ? av.localeCompare(cv) : cv.localeCompare(av);
+      });
+    }
     return { data: rows, error: null };
   }
   if (nombre === "sessions") {
@@ -96,6 +105,10 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
       return builder;
     },
     limit() {
+      return builder;
+    },
+    order(col: string, opts?: { ascending?: boolean }) {
+      builder._order = { col, ascending: opts?.ascending ?? true };
       return builder;
     },
     async single() {
