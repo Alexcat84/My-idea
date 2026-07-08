@@ -1,0 +1,8 @@
+# Fase 3.0.1: los assets sincronizados de la web se generan y se hashean
+# con LF explicito (scripts/sync_assets_web.py, write_bytes) -- si git los
+# reconvierte a CRLF al hacer checkout en una maquina con core.autocrlf=true
+# (el default tipico en Windows), el hash en disco deja de coincidir con
+# manifest.json y checksums.test.ts falla en cualquier clon fresco, sin
+# importar que tan correcto sea el script que los genero. Forzar LF en el
+# checkout, sin importar la config local de autocrlf del cliente que clona.
+web/lib/assets/*.json eol=lf

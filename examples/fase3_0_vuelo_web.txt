@@ -1,0 +1,376 @@
+
+==============================================================================
+  VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
+==============================================================================
+BASE_URL: http://localhost:3000
+Fecha: 2026-07-08T21:03:01.837Z
+Autenticado como dev user: 4a05a687-fc7e-4427-8eaf-cc1cc1644678
+
+==============================================================================
+  FASE 1: organizer (capa gratuita) -- idea del sonar para ciegos
+==============================================================================
+project_id: ea85d590-9393-4e43-ad10-a8b875d4d096
+costo_usd: 0.004115
+tiempo: 7388ms
+--- markdown (primeras 500 chars) ---
+# Organizador de tu idea
+
+**En una frase:** App con sensor sonar que convierte el espacio en alertas sonoras para orientación de personas ciegas
+
+**Etapa detectada:** ideacion
+
+## Lo que ya tienes claro
+- Existe un problema de movilidad y orientación en personas ciegas
+- La tecnología sonar puede captar el entorno en tiempo real
+- Las alertas sonoras pueden transmitir información de navegación
+- El formato de app móvil es viable tecnológicamente
+
+## Lo que estás asumiendo sin saberlo
+- Que las p
+
+==============================================================================
+  FASE 2: sesion completa de macetas de cemento (HTTP + SSE)
+==============================================================================
+Entrada inicial: "Hago y vendo macetas de cemento decorativas, ya tengo ventas reales por Instagram, pero no se si el precio que cobro de verdad me deja ganancia."
+project_id: 51bab6e7-fe34-44f1-aaf9-3bd849e86c9d, session_id: 2f0cadd0-98ab-44c7-bf9d-29f02f061f42
+
+[turno 1] PREGUNTA: Para saber si de verdad ganas dinero con cada maceta, necesito entender qué te cuesta producirla: ¿cuánto inviertes en cemento, moldes, pigmentos y otros materiales por cada pieza que haces?
+[turno 1] RESPUESTA: Hago macetas de cemento decorativas, chicas y medianas, las vendo a tiendas de plantas y directo por Instagram.
+
+[turno 2] PREGUNTA: Entiendo que vendes directo y también a tiendas. Lo que necesito es el número: ¿cuánto te cuesta en materiales (cemento, moldes, pigmentos, etc.) producir una maceta chica, y cuánto una mediana?
+[turno 2] RESPUESTA: Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende.
+  nodos nuevos: EBITDA como Medida de Eficiencia Operativa [conversado]
+
+[turno 3] PREGUNTA: Mirando tu proyecto hoy, ¿cómo está la rentabilidad que efectivamente llega a tu bolsillo comparada con lo que esperabas o con otros proyectos similares al tuyo? ¿hay algo específico que sientas que está comiendo tus ganancias?
+[turno 3] RESPUESTA: Lo que mas me preocupa es no saber si el precio que cobro de verdad me deja ganancia una vez que cuento mi tiempo.
+  nodos nuevos: Las Tres Palancas para Mejorar la Rentabilidad [conversado]
+
+[turno 4] PREGUNTA: Para saber cuál es tu verdadero problema con la ganancia, necesito que entiendas esto: ¿tu costo en materiales y tiempo por maceta es menor que lo que cobras, o ya revisaste eso y el problema está en otro lado, como gastos que no contaste o clientes que no pagan lo que acordaron?
+[turno 4] RESPUESTA: Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura -- y le dedico un par de horas entre mezclar, moldear y pulir.
+
+[turno 5] PREGUNTA: Claro, $68 en materiales y 2 horas de tu tiempo por maceta. Ahora el número clave: ¿a cuánto vendes cada maceta, directo por Instagram y a la tienda de plantas?
+[turno 5] RESPUESTA: Valoro mi hora de trabajo en unos 17, aunque nunca lo habia puesto en numeros asi.
+  nodos nuevos: Lectura y Análisis del Balance General [conversado]
+
+[turno 6] PREGUNTA: Ahora que entiendes qué tiene tu proyecto (activos), qué debe (pasivos) y qué es realmente tuyo (capital), ¿qué es lo que más te preocupa o te gustaría saber sobre tu situación financiera en este momento: cómo está tu dinero en el banco día a día, cómo se compara tu salud financiera con la de otros como tú, o cuánto de lo que debes tienes que pagar pronto versus más adelante?
+[turno 6] RESPUESTA: Las vendo en 85 cada una, mas o menos, dependiendo del tamano.
+  nodos nuevos: Análisis de Ratios Financieros [silencioso], Margen de Ganancia Bruta (Gross Profit Margin) [conversado]
+
+[turno 7] PREGUNTA: Perfecto, ahora vemos el cuadro completo: vendes a $85, pero tu costo es $102 ($68 materiales + $34 en tu tiempo a $17/hora). Eso significa que cada maceta te está dejando una pérdida de $17. Antes de decidir cómo atacar esto, ¿el precio de $85 es lo que cobras directo por Instagram, o es diferente con la tienda de plantas?
+[turno 7] RESPUESTA: Puedo hacer unas 10 a la semana trabajando en mis ratos libres, sin descuidar mi otro trabajo.
+
+[turno 8] PREGUNTA: Claro, 10 a la semana en tus ratos libres es tu capacidad actual. Pero necesito una respuesta directa: ¿a la tienda de plantas le vendes a $85 también, o le das un precio diferente (más bajo) porque es un distribuidor?
+[turno 8] RESPUESTA: Tengo costos fijos como de 200 al mes: renta de un rincon del taller de un amigo y las herramientas que voy comprando.
+  nodos nuevos: Punto de Equilibrio y Margen de Contribución (Break-Even Point & Contribution Margin) [conversado]
+
+[turno 9] PREGUNTA: Bien, ahora el cuadro es completo: pierdes $17 por maceta, produces 10 por semana, y tienes $200 fijos al mes. Con estos números, tu negocio está en zona de riesgo. Antes de decidir si subes precio, reduces costo o cambias algo fundamental: ¿sabes cuántas macetas necesitarías vender cada mes solo para cubrir esos $200 fijos, sin contar tu tiempo?
+[turno 9] RESPUESTA: No he hablado con clientes de forma organizada, solo veo que la gente compra por Instagram, nunca les he preguntado directamente por que.
+  nodos nuevos: Decisión: Pivotar o Proceder [silencioso], Customer Discovery [conversado]
+
+[turno 10] PREGUNTA: Tu problema de rentabilidad es real, pero antes de decidir si subes precio o reduces costo, necesitas entender algo más fundamental: ¿por qué la gente compra tus macetas? ¿Es por el diseño, el precio, porque confían en ti, o por algo que no imaginaste? Cuando vendes por Instagram, ¿alguna vez le preguntaste directamente a alguien?
+[turno 10] RESPUESTA: Mi plan es ir a mercados locales de fin de semana para validar si la gente las compra en persona, no solo en redes.
+  nodos nuevos: Formalizar la Junta Asesora (Advisory Board) [silencioso], Test Selling: Validar el Modelo de Negocio con Ventas Reales [conversado]
+
+[turno 11] PREGUNTA: Cuando vayas a los mercados locales este fin de semana, ¿planeas solo mostrar las macetas y ver si se venden, o también quieres hablar con la gente que se acerca para entender qué les atrae: el diseño, el precio, que sea hecho a mano, o algo más?
+[turno 11] RESPUESTA: Si, tiene sentido, sigamos con lo que sigue.
+
+Interprete se detuvo tras 11 turno(s). tipo final: listo_para_plan
+costo acumulado hasta aqui: $0.1286
+
+==============================================================================
+  FASE 2b: ensamblando el plan (SSE streaming)
+==============================================================================
+SSE: 231 deltas de texto recibidos, 0 aviso(s), tiempo total: 102341ms
+evaluacion_cobertura: {"es_completa":true,"tiene_accion_clientes":true,"tiene_viabilidad_economica":true,"familias_faltantes":[]}
+costo_usd (sesion completa, incluye el plan): $0.2360
+--- plan generado (completo) ---
+_Plan completo_
+
+# Macetas de cemento: de vender a ganar — tu plan para saber si tus precios funcionan
+
+Ya tienes algo valioso: ventas reales por Instagram y dos canales activos (tiendas de plantas y venta directa). El problema concreto es que hoy vendes a $85 por maceta cuando te cuesta $102 producirla — $68 en materiales más 2 horas a $17/hora — lo que significa que pierdes $17 en cada venta antes de contar los $200 mensuales de costos fijos. Este plan te lleva paso a paso a cerrar esa brecha: primero entiende exactamente a dónde va cada peso, luego fija un precio que sí funcione, después valida con clientes reales si ese precio nuevo se sostiene, y finalmente decide si seguir, ajustar o cambiar algo fundamental en cómo produces o vendes.
+
+---
+
+## Etapa 1: Abre tus números y pon cada costo en su lugar
+
+Antes de cambiar cualquier precio, necesitas saber con precisión qué es costo de producir una maceta (lo que cambia con cada pieza que haces) y qué es costo fijo que pagas aunque no produzcas nada ese mes. Si mezclas los dos, cualquier precio que calcules va a estar mal.
+
+**Pasos:**
+
+1. Toma una hoja (papel o Excel) y anota todas las macetas que produjiste el mes pasado. Separa chicas de medianas — si sus costos de materiales son distintos, necesitan filas separadas.
+2. Para cada tamaño, suma el costo real de materiales por pieza: cemento, molde (prorateado por cuántas piezas aguanta), pintura o acabado, y cualquier insumo que toques en esa pieza. Ese es tu **costo variable por unidad**.
+3. Anota tus costos fijos del mes tal como los conoces: $200 de renta de espacio más herramientas. Si hay otros gastos que pagas independientemente de cuántas macetas hagas (datos móviles para Instagram, bolsas para empacar, gasolina para entregar), agrégalos aquí.
+4. Clasifica cada costo en una de dos columnas: **"cambia con cada maceta"** (variable) vs. **"lo pago igual aunque no produzca"** (fijo). Esta separación es la base de todo lo que viene después — sin ella, el punto de equilibrio que calcularás en la siguiente etapa no sirve.
+5. Revisa si el costo de tu tiempo ($17/hora × 2 horas = $34/pieza) está en la columna variable. Debe estarlo: es un costo que ocurre con cada maceta que produces, aunque no lo cobres de una cuenta bancaria.
+
+**Entregable:** Tabla simple con dos columnas — costos variables por pieza (separados por tamaño) y costos fijos mensuales — con un total claro en cada columna.
+
+**Esta semana:** Abre el estado de cuenta o cuaderno donde registras gastos del mes pasado y asigna cada línea a "variable por maceta" o "fijo mensual". Si no tienes registro, hazlo de memoria para los últimos 30 días y márcalo como estimado — tener un estimado documentado vale más que no tener nada.
+
+---
+
+## Etapa 2: Calcula el precio mínimo que no te haga perder dinero
+
+Con los costos clasificados del paso anterior, puedes calcular dos números concretos: el margen de contribución por maceta (cuánto queda de cada venta para cubrir tus costos fijos) y el punto de equilibrio (cuántas macetas necesitas vender al mes para no perder dinero). Hoy produces hasta 40 macetas al mes. La pregunta es cuántas de ellas necesitan venderse — y a qué precio — para que esa producción valga la pena.
+
+**Pasos:**
+
+1. Usa la tabla de la Etapa 1. Toma el precio al que vendes hoy ($85) y réstale el costo variable por unidad (materiales + tu tiempo = $102 según lo ya calculado). El resultado es el **margen de contribución actual**: hoy es −$17, lo que confirma que cada venta empeora tu situación.
+2. Plantea tres escenarios de precio para una maceta mediana (o chica, por separado): uno conservador (+15%), uno intermedio (+25%), uno ambicioso (+35%). Para cada uno, calcula: precio propuesto − costo variable = margen de contribución nuevo.
+3. Con cada margen positivo, calcula el punto de equilibrio: divide $200 (costos fijos mensuales) entre ese margen. El resultado es cuántas macetas debes vender al mes solo para cubrir costos — sin ganancia, pero sin pérdida.
+4. Compara ese número contra tu capacidad real: si produces máximo 40 por mes, el punto de equilibrio tiene que ser menor a 40 para que el modelo sea viable. Si en el escenario conservador el punto de equilibrio da 38 macetas de 40 posibles, el margen de seguridad es muy bajo; el escenario intermedio o ambicioso puede darte más respiro.
+5. Calcula también cuánto ganarías al mes si vendieras todas las piezas que puedes producir (40 unidades) al precio nuevo: (precio − costo variable) × 40 − $200 de fijos = ganancia mensual real. Ese número te dice si el volumen que puedes manejar hoy, con ese precio, genera algo que valga tu tiempo.
+
+**Entregable:** Tabla de tres escenarios de precio con margen de contribución, punto de equilibrio en unidades, y ganancia mensual estimada si vendes a plena capacidad.
+
+**Esta semana:** Abre una hoja de cálculo o una tabla en papel y llena los tres escenarios de precio con los números reales de tu Etapa 1. No importa si los números son feos — lo que importa es verlos escritos.
+
+---
+
+## Etapa 3: Entiende qué mueven tus palancas — precio, costo o ambas
+
+Hay exactamente tres formas de cerrar la brecha entre lo que cobras y lo que te cuesta: subir el precio, bajar el costo variable de producción, o hacer las dos a la vez. Antes de decidir, necesitas saber cuánto margen de maniobra tienes en cada dirección.
+
+**Pasos:**
+
+1. **Palanca de precio:** Revisa los tres escenarios que calculaste en la Etapa 2. El objetivo no es solo cubrir costos: necesitas un precio que deje un margen real después de cubrir los $200 fijos. Identifica a qué precio eso ocurre con el volumen que produces hoy.
+2. **Palanca de costo de materiales:** Anota cada insumo variable (cemento, moldes, acabados) y pregúntate: ¿puedo comprar en mayor cantidad y bajar el costo por unidad? ¿Hay un proveedor diferente? ¿Puedo eliminar algún insumo sin cambiar la calidad? Cuantifica: si bajas $5 el costo de materiales por pieza, ¿cómo cambia el punto de equilibrio?
+3. **Palanca de tiempo de producción:** Tienes 2 horas por maceta a $17/hora. Si optimizas el proceso (por ejemplo, haciendo varios moldes al mismo tiempo o estandarizando acabados), ¿puedes bajar a 1.5 horas? ¿Cuánto mueve eso tu margen de contribución?
+4. Elige la combinación más realista: para la mayoría de productos artesanales, una combinación de precio ligeramente más alto más pequeñas mejoras en el proceso da más resultado que intentar bajar costos de materiales drásticamente.
+5. Documenta la decisión con su justificación: "Subo el precio de X a Y porque el margen de contribución pasa de negativo a Z, y reduzco el tiempo de producción de 2h a 1.75h estandarizando el acabado del borde, lo que baja el costo variable en $4.25 por pieza."
+
+**Entregable:** Una decisión escrita sobre la combinación de palancas que usarás, con los números que la justifican.
+
+**Esta semana:** Toma tus tres escenarios de precio y agrega una columna que muestre qué pasa si además bajas $5 de costo de materiales. Con ese número, elige la combinación que llevará a prueba de mercado en la siguiente etapa.
+
+---
+
+## Etapa 4: Valida en persona si el precio nuevo se sostiene con clientes reales
+
+Tú mismo planteaste ir a mercados locales de fin de semana para probar demanda en persona. Eso es exactamente lo que esta etapa estructura. Vender por Instagram te confirma que hay interés, pero no te dice qué motiva la compra, cuánto está dispuesto a pagar alguien que no te conoce, ni si hay segmentos de compradores con necesidades distintas. El mercado local es tu laboratorio: puedes observar, preguntar y vender en tiempo real.
+
+**Pasos:**
+
+1. Elige un mercado local de fin de semana que tenga perfil compatible con lo que vendes (plantas, artesanías, decoración del hogar). Comprométete a ir al menos dos fines de semana consecutivos.
+2. Lleva macetas a los precios nuevos que calculaste en las etapas anteriores — no a precio de descuento para "probar". Si el precio nuevo no se sostiene con el cliente que te ve en persona, tampoco se sostendrá en Instagram. Prueba el precio real.
+3. Para cada persona que se detenga a ver tus macetas, anota (mentalmente o en papel después): ¿preguntó el precio y siguió su camino, o preguntó el precio y compró o negoció? Esa diferencia te dice más que cualquier encuesta.
+4. Con las personas que sí compren o negocien activamente, haz una pregunta sencilla antes de cerrar la venta: "¿Para dónde es esto, para tu casa o como regalo?" Sus respuestas empiezan a mostrarte si hay segmentos con necesidades distintas (decoración propia vs. regalo, espacio interior vs. exterior, tamaño chico vs. mediano).
+5. Si alguien dice que el precio está alto, no lo bajes de inmediato. Pregunta: "¿Cuánto pagarías tú por algo así?" Anota la respuesta. Si la cifra que dice es menor a tu punto de equilibrio, ese cliente no es tu cliente — esa información también es valiosa.
+6. Al terminar cada fin de semana, registra: cuántas macetas llevaste, cuántas vendiste, a qué precio, cuántas personas preguntaron pero no compraron, y una o dos cosas que escuchaste que no esperabas.
+
+**Entregable:** Registro de los dos fines de semana con unidades vendidas, precio al que se vendieron, observaciones sobre motivos de compra y rango de precios que los clientes mencionaron.
+
+**Esta semana:** Identifica el mercado local donde irás el próximo fin de semana y anota cuántas macetas (de cada tamaño) llevarás, a qué precio nuevo, y qué una pregunta le harás a cada persona que compre.
+
+---
+
+## Etapa 5: Decide si el modelo actual funciona o necesita ajuste
+
+Con los números reales de producción (Etapas 1–3) y la evidencia del mercado (Etapa 4), ya tienes lo suficiente para tomar una decisión informada. Esta etapa no es reflexión: es un checklist con criterios concretos que produce una decisión binaria.
+
+**Pasos:**
+
+1. Revisa tu tabla de punto de equilibrio (Etapa 2). ¿El precio al que realmente vendiste en el mercado local es mayor a tu costo variable por unidad? Si no, el modelo no es viable en su forma actual sin cambios.
+2. Compara las macetas vendidas en los dos fines de semana contra tu punto de equilibrio mensual. ¿Dos fines de semana más Instagram te acercan o te alejan del número de unidades que necesitas vender para no perder dinero?
+3. Revisa los canales por separado: Instagram directo vs. tiendas de plantas vs. mercado local. Para cada canal, calcula cuánto te queda realmente por maceta después de todos los costos (incluido el tiempo de entrega, traslado, o comisión si la tienda se queda con un porcentaje). El canal con mayor margen neto real merece más de tu energía y tiempo.
+4. Si la evidencia muestra que el modelo funciona (precio nuevo cubre costos y hay demanda real al precio nuevo), anota las tres condiciones que lo confirman y decide avanzar con ese precio y esos canales.
+5. Si la evidencia muestra que el modelo no cierra (el precio que el mercado acepta sigue siendo menor a tu costo real), identifica cuál de las tres palancas no moviste suficiente (precio, costo de materiales, tiempo de producción) y regresa a la Etapa 3 con datos reales en lugar de estimaciones.
+6. Documenta la decisión con fecha: "Con estos datos, el modelo funciona/no funciona porque X, y el siguiente paso es Y." Una decisión mala documentada es mejor que ninguna decisión, porque puedes corregirla.
+
+**Entregable:** Documento de una página (puede ser un párrafo y una tabla) con el checklist completado, la decisión tomada, y el canal y precio que vas a sostener hacia adelante, o el ajuste específico que vas a hacer si el modelo no cierra.
+
+**Esta semana:** Antes del primer fin de semana de mercado (Etapa 4), escribe en papel el criterio de éxito que usarás para decidir que el precio nuevo funciona. Ejemplo: "Si vendo al menos 8 de las 12 macetas que llevo, al precio nuevo, en dos fines de semana, el precio se sostiene." Tener ese criterio escrito antes de ir al mercado evita que cambies la meta para que coincida con lo que pasó.
+
+---
+
+## ¿Puede sostenerse tu idea? Los números en simple
+
+Hoy la situación es esta: vendes cada maceta a $85, pero te cuesta $102 producirla ($68 en materiales y 2 horas de trabajo a $17 la hora). Eso significa que en cada venta pierdes $17 antes de contar un solo peso de costos fijos. Encima, tienes $200 al mes en costos fijos (renta de espacio y herramientas). Con 40 macetas como máximo mensual y margen negativo por pieza, hoy no hay volumen que resuelva el problema — vender más solo lo empeora.
+
+Para que la idea sea viable necesitas que el precio de venta supere el costo variable por unidad. Eso te da un **margen de contribución positivo** — el dinero de cada venta que queda disponible para cubrir los $200 fijos. Cuando vendes suficientes unidades para que ese margen cubra exactamente los $200, llegas al **punto de equilibrio**: cero pérdida, cero ganancia. Todo lo que vendas encima de ese número es ganancia real.
+
+Un ejemplo con números concretos: si subes el precio a $125 y mantienes el costo variable en $102, tu margen de contribución sería $23 por maceta. Tu punto de equilibrio serían $200 ÷ $23 ≈ 9 macetas al mes. Con capacidad de 40, eso deja un margen de seguridad real. Si vendieras las 40, ganarías (40 × $23) − $200 = $720 al mes. Pero $125 es solo un ejemplo — el precio real que el mercado acepta es lo que debes descubrir en la Etapa 4, y ese número es el que entra en esta ecuación.
+
+Lo que el plan aún no cubre por completo: si logras bajar el costo variable comprando materiales en mayor volumen o reduciendo el tiempo de producción, el punto de equilibrio baja y la ganancia por maceta sube sin necesidad de subir el precio tanto. Esa optimización de costos vale la pena explorarla en paralelo con la prueba de precio en el mercado local.
+
+**El lunes empieza así:** Abre una hoja y escribe en tres columnas los costos de producción del mes pasado: columna 1, nombre del costo; columna 2, "variable por maceta" o "fijo mensual"; columna 3, monto. Con esa tabla lista, el resto del plan tiene base real.
+
+---
+_Este plan se alimento de 38 conceptos: 13 de tu recorrido conversado y 25 del vecindario relacionado del grafo._
+
+==============================================================================
+  FASE 3: reporte digital -- equilibrio esperado 16 (ceil(200/13))
+==============================================================================
+project_id: d00b3029-0050-4457-944a-dfe955150be1
+
+PREGUNTA: ¿Qué vendes exactamente y cómo se cobra?
+RESPUESTA: Es una app de suscripcion mensual, cada usuario paga una cuota fija cada mes, no vendo piezas ni nada fisico.
+
+PREGUNTA: ¿Cuánto gastas al mes en costos fijos de infraestructura (hosting, APIs, herramientas, suscripciones)?
+RESPUESTA: 200
+
+PREGUNTA: ¿Tienes algún costo variable por cada suscripción (por ejemplo, costo de API por uso)? Si es prácticamente cero, responde 0.
+RESPUESTA: 0
+
+PREGUNTA: ¿A qué precio o ingreso promedio vendes (o venderías) cada suscripción?
+RESPUESTA: 13
+
+PREGUNTA: ¿Cuántas de suscripción tienes hoy, o cuál sería una meta mensual realista?
+RESPUESTA: 20
+
+--- contenido del reporte ---
+## Tus números hoy
+
+**Costo por unidad:** $0 — cada unidad digital que entregas no tiene costo de materiales asociado, lo que es típico de una oferta digital.
+
+**Tu margen:** $13 − $0 = $13 por unidad; de cada venta te quedan $13, lo que representa un 100% del precio sobre el costo de materiales.
+
+**Punto de equilibrio:** Con $200 de costos fijos mensuales y $13 de margen por unidad, necesitas vender exactamente **16 unidades al mes** para cubrir tus costos fijos. A partir de la unidad 17, empiezas a generar ganancia real.
+
+---
+
+## Qué significan
+
+Un margen del 100% sobre el costo de materiales es una de las ventajas más claras de una oferta digital: no gastas en insumos físicos por cada venta adicional. Tu punto de equilibrio de 16 usuarios/mes es relativamente bajo frente a tu meta declarada de 20 usuarios/mes, lo que sugiere que tu proyecto tiene un colchón pequeño pero real: con tu meta alcanzada, superarías el equilibrio por 4 usuarios. Sin embargo, tus costos fijos de $200 mensuales son el único freno estructural visible por ahora — mantenerlos controlados es clave para que ese margen del 100% se traduzca en ganancia sostenida.
+
+---
+
+## Escenarios
+
+Estos tres escenarios representan distintos niveles de adopción de tu meta de 20 usuarios/mes — no un techo físico de producción, sino cuánta gente efectivamente compra tu oferta digital:
+
+**Escenario al 50% de adopción — 10 usuarios/mes**
+Ingreso mensual: $130 | Margen total: $130
+Estarías por debajo de tu punto de equilibrio (necesitas 16 usuarios), lo que significa que con la mitad de tu meta no alcanzas a cubrir tus $200 de costos fijos. Resultado: mes en rojo.
+
+**Escenario al 100% de adopción — 20 usuarios/mes**
+Ingreso mensual: $260 | Margen total: $260
+Alcanzas tu meta declarada. Cubres los $200 de costos fijos y te quedan $60 de ganancia mensual. El proyecto está en pie, pero con poco margen de maniobra.
+
+**Escenario al 200% de adopción — 40 usuarios/mes**
+Ingreso mensual: $520 | Margen total: $520
+Si la adopción duplica tu meta, el ingreso también se duplica. A diferencia de una oferta física, una oferta digital no tiene techo de producción que te impida atender esa demanda, por lo que este escenario es alcanzable sin costos adicionales de materiales.
+
+---
+
+## Los números que te faltan
+
+**Cuántos días tarda tu inventario en moverse** — aunque tu oferta es digital, si manejas algún tipo de insumo o licencia con ciclo de renovación, este dato ayudaría a entender cuánto tiempo pasa entre que inviertes y que recuperas el dinero.
+
+**Cuántos días tardan tus clientes en pagarte** — si ofreces crédito, cuotas o hay demora entre la venta y el cobro efectivo, este dato revela si hay un hueco de liquidez entre lo que vendes y lo que realmente tienes disponible.
+
+**Cuántos días tardas tú en pagarle a tus proveedores** — si tienes algún proveedor (plataforma, herramienta, servicio externo), el plazo que te dan para pagar puede compensar parcialmente la espera de cobros. Con estos tres datos juntos se puede calcular qué tan rápido circula el efectivo en tu proyecto.
+
+---
+_Estimaciones basadas en las cifras que tú diste; no sustituyen contabilidad formal ni asesoría fiscal, que varían según tu país._
+
+costo_usd: $0.0202
+
+Contiene '16': true
+Contiene 'pieza'/'piezas' (NO deberia): false
+
+==============================================================================
+  FASE 4: guardian GIGO -- numeros contaminados del caso real de Motor v2.2
+==============================================================================
+project_id: 0cb09991-00ad-45a7-bba3-c89aafc2df1d
+
+PREGUNTA: ¿Qué vendes exactamente y cómo se cobra?
+RESPUESTA: Es un producto fisico, lo fabrico yo mismo y lo vendo por pieza.
+
+PREGUNTA: ¿Cuánto gastas en materiales por pieza, más o menos? Un número aproximado sirve.
+RESPUESTA: 200
+
+PREGUNTA: ¿Cuántas horas de trabajo te toma cada pieza, de principio a fin?
+RESPUESTA: 4
+
+PREGUNTA: ¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?
+RESPUESTA: 50
+
+PREGUNTA: ¿A qué precio venderías (o vendes) cada pieza?
+RESPUESTA: 13
+
+PREGUNTA: ¿Cuántas de pieza puedes producir en una semana normal?
+RESPUESTA: 5
+
+PREGUNTA: ¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?
+RESPUESTA: 200
+
+--- contenido del reporte (debe ser el guardian GIGO, sin narracion) ---
+## Tus números hoy
+
+Antes de calcular nada, encontré algo que no cuadra en estos números:
+
+> con estos numeros el margen por unidad es -2976.9%, muy por debajo de -100% -- es mas probable que alguna cifra este en la unidad equivocada (por ejemplo, un presupuesto mensual leido como costo por unidad, o un plazo en meses leido como horas) que que cada venta pierda esa cantidad de dinero
+
+No voy a calcular margen ni punto de equilibrio con estos datos: el resultado sería una cifra que suena precisa pero está mal, y eso es peor que no tener el cálculo. Prefiero decírtelo con honestidad.
+
+## Los números que diste
+
+- valor_hora: 50
+- horas_por_unidad: 4
+- precio_tentativo: 13
+- capacidad_semanal: 5
+- costo_materiales_unidad: 200
+- costos_fijos_mensuales: 200
+
+## Los números que te faltan (y cómo conseguirlos)
+
+Revisa si alguno de los números de arriba está en una unidad distinta a la que esperaba el reporte (por ejemplo, un gasto mensual anotado como costo por unidad, o un plazo en meses anotado como horas), corrígelo, y vuelve a generar el reporte con la cifra corregida.
+
+costo_usd: $0.0004
+
+Muestra el aviso del guardian GIGO: true
+
+==============================================================================
+  RESUMEN DE COSTOS REALES
+==============================================================================
+  organizer: $0.0041
+  macetas: $0.2360
+  reporteDigital: $0.0202
+  guardianGigo: $0.0004
+  TOTAL: $0.2607
+
+==============================================================================
+  VUELO COMPLETO: 4/4 fases OK
+==============================================================================
+
+==============================================================================
+  NOTAS DE DIVERGENCIA vs. las transcripciones Python (engine/)
+==============================================================================
+Ninguna divergencia numerica ni de vocabulario encontrada. Especificamente:
+
+- El reporte digital (fase 3) narro "necesitas vender exactamente 16
+  unidades al mes" con fijos=200/precio=13/variable=0 -- exactamente el
+  mismo equilibrio (ceil(200/13)=16) que test_digital_founder_caso_real en
+  engine/test_calculadora.py, y cero menciones de "pieza"/"piezas" en todo
+  el reporte (vocabulario digital correcto: "usuario(s)", "suscripcion").
+
+- El guardian GIGO (fase 4), con los mismos numeros contaminados del caso
+  real que motivo detectarInconsistenciaGigo (costo_materiales_unidad=200
+  leido como presupuesto mensual, horas_por_unidad=4 leidas como meses de
+  desarrollo, valor_hora=50, precio_tentativo=13), calculo el mismo
+  margen de -2976.9% que engine/test_gigo_detecta_unidad_equivocada, y
+  aborto la narracion con el mismo mensaje textual que
+  _reporte_gigo_inconsistente en Python -- nunca narro una conclusion
+  financiera con datos ya sabidos como rotos.
+
+- El plan de la sesion de macetas (fase 2) llego a
+  evaluacion_cobertura.es_completa=true (accion_clientes +
+  viabilidad_economica cubiertas) en 11 turnos web, sin necesitar
+  repreguntas ni la extension "sigamos dirigido" -- mas corto que algunas
+  corridas CLI de fases anteriores de este mismo proyecto, pero es
+  variacion normal de conversacion (las respuestas de este guion
+  resultaron ser mas ricas en informacion economica desde el principio),
+  no una diferencia de comportamiento entre las dos implementaciones.
+
+- Unica diferencia estructural real, esperada y documentada desde el
+  diseno: el streaming SSE de /api/session/[id]/plan (231 deltas de texto
+  recibidos en 102s) no tiene equivalente en el CLI (llamada bloqueante
+  unica) -- es la mejora explicita de UX de la Fase 3.0, no una divergencia
+  de comportamiento del motor.
+
+Costo real total del vuelo completo (4 fases, incluyendo clasificacion,
+entrevista completa, ensamblado de plan con Sonnet, y dos ciclos de
+reporte): $0.2607.
+==============================================================================

@@ -18,7 +18,6 @@ Uso: python scripts/sync_assets_web.py
 """
 import hashlib
 import json
-import shutil
 import sys
 from pathlib import Path
 
@@ -81,10 +80,14 @@ def main():
             print(f"ERROR: no existe el asset fuente: {origen}")
             raise SystemExit(1)
         destino = DEST / nombre
-        shutil.copyfile(origen, destino)
+        # Mismo patron que _exportar_prompts: normalizar EOL a LF y
+        # escribir con write_bytes, hasheando LOS MISMOS bytes escritos.
+        # (Causa raiz del desync: CRLF de Windows hasheado aqui, LF en git.)
+        contenido = origen.read_bytes().replace(b"\r\n", b"\n")
+        destino.write_bytes(contenido)
         manifest[nombre] = {
-            "sha256": _sha256_file(destino),
-            "bytes": destino.stat().st_size,
+            "sha256": _sha256_bytes(contenido),
+            "bytes": len(contenido),
             "fuente": str(origen.relative_to(BASE)).replace("\\", "/"),
         }
         print(f"  {nombre}: {manifest[nombre]['bytes']} bytes, sha256={manifest[nombre]['sha256'][:12]}...")
@@ -104,16 +107,18 @@ def main():
     # al mismo manifest para que checksums.test.ts tambien lo vigile.
     semantic_index_path = DEST / "semantic_index.json"
     if semantic_index_path.exists():
+        contenido_si = semantic_index_path.read_bytes().replace(b"\r\n", b"\n")
+        semantic_index_path.write_bytes(contenido_si)
         manifest["semantic_index.json"] = {
-            "sha256": _sha256_file(semantic_index_path),
-            "bytes": semantic_index_path.stat().st_size,
+            "sha256": _sha256_bytes(contenido_si),
+            "bytes": len(contenido_si),
             "fuente": "scripts/build_semantic_index_voyage.py (Voyage AI voyage-4-lite)",
         }
         print(f"  semantic_index.json: {manifest['semantic_index.json']['bytes']} bytes, "
               f"sha256={manifest['semantic_index.json']['sha256'][:12]}...")
 
     manifest_path = DEST / "manifest.json"
-    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    manifest_path.write_bytes((json.dumps(manifest, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
     print(f"\nManifest escrito en {manifest_path.relative_to(BASE)}")
     print(f"Assets sincronizados: {list(manifest.keys())}")
 
