@@ -25,12 +25,13 @@ describe("assets sincronizados desde Python (scripts/sync_assets_web.py)", () =>
     });
   }
 
-  it("el manifest tiene exactamente los 4 assets esperados", () => {
+  it("el manifest tiene exactamente los 5 assets esperados", () => {
     expect(Object.keys(manifest).sort()).toEqual([
       "master_graph.json",
       "node_families.json",
       "preguntas_cache.json",
       "prompts.json",
+      "semantic_index.json",
     ]);
   });
 });

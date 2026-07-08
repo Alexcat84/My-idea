@@ -97,10 +97,24 @@ def main():
     print(f"  prompts.json: {manifest['prompts.json']['bytes']} bytes, "
           f"sha256={manifest['prompts.json']['sha256'][:12]}... ({len(PROMPTS_A_EXPORTAR)} prompts)")
 
+    # semantic_index.json no lo genera este script (lo genera
+    # build_semantic_index_voyage.py, aparte, porque cuesta dinero real de
+    # API y no deberia correr en cada sync) -- pero si ya existe, se suma
+    # al mismo manifest para que checksums.test.ts tambien lo vigile.
+    semantic_index_path = DEST / "semantic_index.json"
+    if semantic_index_path.exists():
+        manifest["semantic_index.json"] = {
+            "sha256": _sha256_file(semantic_index_path),
+            "bytes": semantic_index_path.stat().st_size,
+            "fuente": "scripts/build_semantic_index_voyage.py (Voyage AI voyage-4-lite)",
+        }
+        print(f"  semantic_index.json: {manifest['semantic_index.json']['bytes']} bytes, "
+              f"sha256={manifest['semantic_index.json']['sha256'][:12]}...")
+
     manifest_path = DEST / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"\nManifest escrito en {manifest_path.relative_to(BASE)}")
-    print(f"Assets sincronizados: {list(ASSETS.keys())} + prompts.json")
+    print(f"Assets sincronizados: {list(manifest.keys())}")
 
 
 if __name__ == "__main__":
