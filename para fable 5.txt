@@ -1,64 +1,298 @@
-PS C:\Users\AlexDesk\Documents\I have an idea> python engine/prototipo_motor.py --reporte 05868ec6-dd9b-4e5c-ab05-d81b3888e553
 ============================================================
-  MY IDEA - prototipo del motor de ruteo (travesia silenciosa)
-  Grafo: 1266 conceptos | modo: IA | preguntas cacheadas: 1240 | persistencia: Supabase
+  MY IDEA — cliente interactivo de la web (Fase 3.0)
 ============================================================
+1. Organizador rápido (una idea, sin entrevista)
+2. Nueva entrevista completa (con plan al final)
+3. Ver mis proyectos
+4. Generar reporte de sostenibilidad de un proyecto
+Q. Salir
 
-Generando tu Reporte de Sostenibilidad (proyecto: 05868ec6-dd9b-4e5c-ab05-d81b3888e553)...
+> 1
 
-## Tus números hoy
+Cuéntame tu idea, o en qué punto estás con ella:
+> Mi idea se basa en crear un prototipo de vision a traves de las paredes, por medio de tecnologia WIFI. Ya es una tecnologia probada, pero los sistemas son muy caros y limitados. Entonces, mi odea es hacer un dispositivo functional y portable, en una mochila todo terreno, y con una conexion inalambrica como starklink, comunicarse en tiempo real con el sensor y mostrar al usuario en tiempo real con unas gafas de realidad todo lo que esta pasando detras de las paredes.
 
-**Costo por unidad:** $0 — lo que te cuesta producir o entregar cada unidad de tu oferta digital es cero en materiales.
+(pensando...)
 
-**Tu margen:** $13 − $0 = $13 por unidad; de cada venta te quedan $13, lo que representa el 100% del precio.
+# Organizador de tu idea
 
-**Punto de equilibrio:** Con costos fijos mensuales de $200 y un margen de $13 por usuario, necesitas vender exactamente **16 unidades al mes** para cubrir tus gastos fijos. La fórmula es simple: $200 ÷ $13 = 16 ventas para no perder ni ganar.
+**En una frase:** Dispositivo portátil basado en tecnología WiFi para visión a través de paredes, integrado en una mochila con conexión Starlink y visualización en gafas AR en tiempo real.
+
+**Etapa detectada:** ideacion
+
+## Lo que ya tienes claro
+- La tecnología WiFi de visión a través de paredes existe y es probada
+- Los sistemas actuales son caros y tienen limitaciones de portabilidad
+- La solución debe ser funcional, portable y estar integrada en una mochila
+- Se requiere conectividad inalámbrica (Starlink) para transmisión en tiempo real
+- La visualización ocurriría mediante gafas de realidad aumentada
+
+## Lo que estás asumiendo sin saberlo
+- Que existe mercado real que pagaría por esta capacidad a precio accesible
+- Que Starlink es la mejor solución de conectividad para este caso de uso específico
+- Que las gafas AR actuales pueden procesar y renderizar datos de visión a través de paredes en tiempo real sin latencia crítica
+- Que el consumo energético de esta combinación de tecnologías es viable en una mochila
+- Que los usuarios finales tienen un problema claro y articulado que esta solución resuelve
+- Que la integración de estos tres componentes (WiFi imaging + Starlink + AR) es técnicamente más simple que los sistemas actuales caros
+
+## Áreas que cubriría tu plan completo
+- Validación del Problema y Necesidad Real del Usuario
+- Hipótesis de Valor y Propuesta Económica
+- Análisis de Viabilidad Técnica e Integración de Componentes
+- Modelo de Negocio y Fuentes de Financiamiento
+- Prototipo Mínimo Viable (MVP) de Baja Fidelidad
+
+(costo: $0.0047, proyecto: 782c66b0-51c2-4064-a54f-87d8b78d1156)
+
+============================================================
+  MY IDEA — cliente interactivo de la web (Fase 3.0)
+============================================================
+1. Organizador rápido (una idea, sin entrevista)
+2. Nueva entrevista completa (con plan al final)
+3. Ver mis proyectos
+4. Generar reporte de sostenibilidad de un proyecto
+Q. Salir
+
+> 2
+
+Cuéntame tu idea, o en qué punto estás con ella:
+> Mi idea se basa en crear un prototipo de vision a traves de las paredes, por medio de tecnologia WIFI. Ya es una tecnologia probada, pero los sistemas son muy caros y limitados. Entonces, mi odea es hacer un dispositivo functional y portable, en una mochila todo terreno, y con una conexion inalambrica como starklink, comunicarse en tiempo real con el sensor y mostrar al usuario en tiempo real con unas gafas de realidad todo lo que esta pasando detras de las paredes.
+
+(pensando...)
+
+(proyecto: d184c5fa-157c-47fd-bece-751263ca4795)
+
+Tu idea de ver a través de paredes con WiFi y mostrar todo en gafas AR es técnicamente ambiciosa; antes de armar toda la mochila y la integración con Starlink, ¿qué es lo más crítico que necesitas validar con potenciales usuarios para saber si alguien de verdad usaría esto: que la visualización en tiempo real funciona como la imaginas, que resuelve un problema real que alguien está dispuesto a pagar por resolver, o que la portabilidad es tan importante como crees?
+> basicamente me importan los tres puntos. Todos son dependientes, los tres puntos que mencionas son validos.
+
+(pensando...)
+
+
+Entiendo que los tres están conectados. Para empezar a validar sin construir todo a la vez, ¿cuál es el que si falla haría que toda la idea no tenga sentido: que nadie realmente quiera ver a través de paredes para nada, o que lo quieran pero no estén dispuestos a pagar lo que costaría hacerlo funcionar de forma portátil?
+> la segunda, porque considero que si quisieran saber que pasa detras de las paredes, pero el tema de costos es importante.
+
+(pensando...)
+
+
+Ya que sabes que la demanda existe pero el costo es lo que decide si funciona o no, ¿hay algo que te preocupe sobre mostrar un prototipo tosco (sin la mochila completa ni Starlink, solo lo básico) a potenciales usuarios para preguntarles directamente cuánto estarían dispuestos a pagar?
+> No m epreocupa en absoluto, lo importante es lograr el objetivo con el dispositivo lo mas reducido posible pero manteniendo la calidad necesaria, incluso para ver a las personas desplazandose dentro de edificios o habitaciones.
+
+(pensando...)
+
+  (cubierto en silencio: Biblioteca de Experimentos (Experiment Library))
+
+Para validar el precio sin construir todo de una vez, ¿ya tienes identificado a quién le mostrarías primero este prototipo mínimo — por ejemplo, profesionales de seguridad, rescate, construcción, o algún otro sector específico que ya sepa que quiere ver a través de paredes?
+> Pues honestamente no he pensado en esp. Quiza los mas inetersados serian instituciones de gobierno o empresas de seguridad.
+
+(pensando...)
+
+
+Cuando dices instituciones de gobierno o empresas de seguridad, ¿ya tienes contacto con alguien específico en esas organizaciones, o tendríamos que empezar desde cero a identificar a quién buscar dentro de ellas?
+> Tengo que empezar desde cero, no conzco a nadie.
+
+(pensando...)
+
+  (cubierto en silencio: El Lienzo de Modelo de Negocio (Business Model Canvas))
+
+Antes de empezar a buscar esos contactos en gobierno o seguridad, ¿qué forma te parece más realista para llegar a ellos: a través de alguien que ya conoces (amigos, familia, contactos profesionales previos), eventos de la industria, o directamente por email/LinkedIn a personas específicas que identifiques?
+> Pienso que puedo hacerlo a travez de mis profesores de la universidad, ya que ellos tienen contactos multidisciplinarios ahi.
+
+(pensando...)
+
+
+Ya que tienes esa puerta de entrada a través de tus profesores, ¿qué le dirías exactamente a uno de ellos para que entienda por qué debería presentarte con alguien en gobierno o seguridad — es decir, qué es lo que más necesitas que esa persona entienda sobre tu idea en 30 segundos?
+> Le diria que con esta tecnologia, se puede contribuir a salvar vidas en primer logra, ya que en caso de una emergencia de una persona sola por ejemplo, se podria ver si esa persona esta o no dentro de esa ubicacion, y si esta consciente o no, ya que entiendo que de acuerdo con la resolucion, incluso se podria apreciar detalles de hasta su respiracion. Por otro lado, se contribuye a la seguridad nacional, ya que en una situacion de emergencia en la cual, hay reenes por ejemplo, se puede ver antes de exponer a los miembros de la seguridad, y saber donde es seguro entrar, donde no, y hacer un plan claro para evitar bajas.
+
+(pensando...)
+
+  (cubierto en silencio: Formalizar la Junta Asesora (Advisory Board))
+
+De tus profesores que tienen esos contactos en gobierno o seguridad, ¿hay alguno que además de poder presentarte, entienda lo suficiente sobre tecnología de sensores o seguridad operativa como para ayudarte a validar si tu idea técnicamente funciona para lo que dices que funciona?
+> No, ellos no son especialistas en eso, pero ahi es donde entran en juego sus contactos, ya que ellos posiblemente manejan estas areas.
+
+(pensando...)
+
+
+Cuando hables con tus profesores para que te presenten con esos especialistas en gobierno o seguridad, ¿qué es lo más importante que necesitas preguntarles primero: si tecnicamente es posible detectar respiración y consciencia con WiFi a la resolucion que necesitas, o directamente si ellos o alguien en su equipo pagaría por tener acceso a esto en una situación de emergencia o operación táctica?
+> No aplica la primer pregunta, ellos no son asesores, de hecho te lo dije, ellos no conocen de esto, pero probablemente sus contactos si, y es ahi donde yo llegaria a hablar del tema directamente con los contactos de ellos. Lo mas importante y a medias seria la segunda, ya que tampoco preguntaria si ellos pagarian por esto, porque no es su area. Al ser esto tan especifico, no sabre nada hasta hablar con los contactos de mis profesores quienes si podrian validar o refutar mi teoria.
+
+(pensando...)
+
+
+Cuando hables directamente con los especialistas de tus profesores, tu objetivo es saber si tu teoría funciona — pero ¿qué información concreta necesitas escuchar de ellos para decidir si vale la pena seguir invirtiendo tiempo en esto: que digan 'sí, es técnicamente posible', o que digan 'sí, y además nosotros o nuestro equipo lo usaríamos'?
+> pues las dos me interesan, saber si es posible tecnicamnete y si para ellos seria util. Se que hay una sola empresa que ha ganado contratos millonarios recientemente con el gobierno de estados unidos, y mi idea es ser la segunda empresa, tratando de innovar.
+
+(pensando...)
+
+  (cubierto en silencio: Verificar Quiénes Son los Clientes y Cómo Alcanzarlos)
+
+Ya que mencionas que hay una empresa que ganó contratos millonarios con el gobierno de Estados Unidos en este espacio, ¿qué diferencia crees que tendría tu solución comparada con la de ellos — por ejemplo, costo más bajo, resolución más alta, portabilidad, algo que ellos no cubren bien?
+> Aun no he investigado lo que ellos presentan, pero lo que si te puedo decir es que al menos estaria logrando producir un prototipo funcional, con la misma o mejor calidad a un costo bajo. Al menos esa es la idea y de hecho, ya hay prototipos funcionales en internet, ya probados a nivel home-use, aunque mi idea es la industrializacion.
+
+(pensando...)
+
+
+Espera — dijiste 'ya hay prototipos funcionales en internet, ya probados a nivel home-use', ¿eso significa que otros ya tienen versiones que funcionan en ese nivel, y lo que tú quieres es industrializarlas para venderlas al gobierno? ¿O esos prototipos son tuyos?
+> No son mis prototipos, estan libres en internet, y hasta con listas de materiales, pero son limitados, para vision sencilla ya que el sensor es de baja capacidad.
+
+(pensando...)
+
+
+Sabiendo que ya existen prototipos públicos con sensores de baja capacidad, tu diferencial es mejorar la capacidad del sensor para detección de respiración y consciencia — ¿ya has investigado qué sensores comerciales podrían dar esa resolución más alta, o ese es exactamente el experimento que necesitas hacer con los especialistas que te presenten tus profesores?
+> Pues, eso sera parte de mi desarrollo, y no lo preguntare ni a los contactos de los profesores, porque es lo primero que yo voy a investigar, idear y desarrollar.
+
+(pensando...)
+
+
+(listo para generar tu plan)
+
+¿Generar tu plan ahora? (s/n)
+> s
+
+Ensamblando tu plan...
+
+# Dispositivo de visión a través de paredes: de idea técnica a validación con quienes realmente pagarían
+
+Tienes una idea técnicamente fundamentada —mejorar un prototipo público de código abierto con un sensor de mayor capacidad para detectar respiración y consciencia en emergencias— y ya sabes a quién apuntas: instituciones de gobierno y empresas de seguridad en EE.UU. Lo que no sabes todavía es si esas organizaciones pagarían lo que costaría construir la solución completa. Ese es el nudo central. Este plan está diseñado para que despejes esa pregunta antes de invertir en integrar WiFi + Starlink + gafas AR, usando los contactos académicos que ya tienes como puerta de entrada y experimentos de bajo costo que te den evidencia real, no opiniones amables.
 
 ---
 
-## Qué significan
+## Etapa 1: Convierte tus suposiciones en una lista de apuestas ordenadas por riesgo
 
-Que tu oferta digital no tenga costo de materiales es una fortaleza real: cada venta que hagas por encima de las 16 unidades mensuales es ganancia casi pura. Tu meta declarada es 20 unidades al mes, loque significa que, si la alcanzas, estarías 4 unidades por encima del punto de equilibrio, generando $52 de excedente mensual sobre tus fijos. El margen del 100% sobre el costo variable es propio de productos digitales bien construidos, pero también significa que todo el peso de la sostenibilidad del proyecto recae en que los costos fijos ($200 al mes) no crezcan sin que crezcan las ventas al mismo ritmo.
+Ahora mismo tu idea descansa sobre varios supuestos que suenan razonables pero que no están verificados. Antes de diseñar cualquier experimento, necesitas saber cuáles de esos supuestos, si resultan falsos, destruyen todo lo demás.
+
+**Pasos:**
+
+1. Escribe en una hoja dos columnas: "hechos comprobados" y "suposiciones no verificadas". Hechos comprobados son cosas que ya existen con evidencia pública: la tecnología WiFi de visión a través de paredes funciona, hay contratos millonarios con el gobierno de EE.UU. en este campo, existe un prototipo de código abierto. Todo lo demás va en la columna de suposiciones.
+
+2. De tu columna de suposiciones, identifica cuáles son los dos o tres "saltos de fe" que, si resultaran falsos, harían que el proyecto no tenga sentido continuar. Para este proyecto, los candidatos más probables son: (a) que el mercado pagará lo suficiente para cubrir el costo real de producir un dispositivo portátil con Starlink + AR, (b) que un sensor mejorado de mayor capacidad es técnicamente alcanzable con los recursos que tienes hoy, y (c) que las instituciones de gobierno y seguridad aceptan ese diferencial como suficiente frente a competidores con contratos probados.
+
+3. Busca análogos: empresas o productos que ya hayan validado partes de tu modelo. Por ejemplo, ¿hay empresas que venden hardware especializado a gobierno con sensor mejorado sobre base open-source? ¿Hay casos donde el diferencial "más barato + más capaz" ganó contratos frente a incumbentes caros? Busca también antílogos: casos donde ese diferencial no fue suficiente. Documenta ambos.
+
+4. Ordena tus suposiciones de mayor a menor riesgo. La que más riesgo representa va primero en tu lista de validación.
+
+**Entregable:** Lista de suposiciones separadas de hechos, con los 2-3 saltos de fe identificados y ordenados por riesgo, más al menos un análogo y un antílogo documentados.
+
+**Esta semana:** Escribe la lista de suposiciones vs. hechos en una sola hoja —a mano o en documento— y marca con un círculo rojo las tres que, si son falsas, hacen que el proyecto no tenga sentido. Ese círculo rojo define qué validas primero.
+
+---
+
+## Etapa 2: Consigue la puerta de entrada antes de diseñar más experimentos
+
+Tu cuello de botella no es el diseño técnico ni el experimento de precio: es que sin acceso real a especialistas en gobierno y seguridad, cualquier validación que hagas será con personas que no pueden comprarte ni darte feedback operativo real. Tienes capital social disponible: profesores universitarios con contactos en esos sectores. Úsalo ahora.
+
+**Pasos:**
+
+1. Identifica a 3 profesores específicos —no "la red académica" en abstracto— que tengan conexiones documentadas (proyectos, publicaciones, contratos) con gobierno o empresas de seguridad. Escríbeles un mensaje de una sola pantalla que explique: qué hace el dispositivo en términos operativos (detecta presencia, respiración y estado de consciencia a través de paredes en emergencias), a quién va dirigido, y qué necesitas de ellos (una introducción a alguien que opere en rescate táctico o seguridad institucional, no una opinión sobre la tecnología).
+
+2. Para cada introducción que consigas, prepara una presentación de máximo 20 minutos estructurada así: (a) el problema operativo concreto que resuelves —vidas en riesgo por no saber si hay personas vivas al otro lado de una pared antes de entrar—, (b) cómo funciona el dispositivo en términos de lo que el usuario ve y hace, no en términos de arquitectura técnica, (c) el diferencial frente a lo que existe hoy —más portable, menor costo, sensor de mayor capacidad—, y (d) una sola pregunta abierta al final: "¿Esto resuelve un problema real para su organización y cuánto pagarían por resolverlo?"
+
+3. Mientras gestionas las introducciones, dibuja el perfil operativo de tu usuario objetivo: no "institución de gobierno" sino la persona concreta dentro de esa institución —coordinador de rescate, jefe de operaciones tácticas— que usaría el dispositivo. Describe su día antes y después de tener el dispositivo. Ese perfil es lo que hace que la introducción del profesor sea una conversación útil en vez de una reunión de cortesía.
+
+4. Identifica también qué personas dentro de esas organizaciones podrían bloquear una compra aunque el operativo quiera comprarte —departamentos de adquisiciones, oficinas de seguridad de tecnología, legales— y anótalos. Necesitas saber desde el principio cuántas personas deben decir "sí" para que una venta ocurra.
+
+**Entregable:** Al menos una reunión agendada con un especialista real (operativo de rescate o seguridad institucional) conseguida a través de introducción académica, y perfil operativo del usuario final dibujado.
+
+**Esta semana:** Escríbele a los 3 profesores identificados. El mensaje debe tener menos de 150 palabras, describir el problema operativo en una oración, y pedir explícitamente una introducción a alguien que trabaje en rescate táctico o seguridad institucional —no una reunión con el propio profesor.
 
 ---
 
-## Escenarios
+## Etapa 3: Valida si pagarían lo que cuesta, antes de construir la solución completa
 
-Estos tres escenarios representan distintos niveles de adopción de tu meta de 20 usuarios/mes — no un techo físico de producción, sino cuánta gente efectivamente elige tu oferta:
+Este es el bloqueo central que declaraste: no saber si el mercado está dispuesto a pagar lo que costaría producir el dispositivo completo. La forma de atacarlo no es construir primero y preguntar después, sino simular la experiencia con el mínimo necesario para que el especialista pueda decirte un número real.
 
-**50% de adopción — escenario conservador:**
-Se venden 10 unidades, generando $130 de ingreso y $130 de margen total. Con costos fijos de $200, estarías por debajo del punto de equilibrio: el proyecto no se sostiene solo en este nivel.
+Tienes dos herramientas disponibles para esto, y la elección depende de lo que consigas en la Etapa 2:
 
-**100% de adopción — escenario base (tu meta):**
-Se venden 20 unidades, generando $260 de ingreso y $260 de margen total. Aquí sí superas el punto de equilibrio de 16 unidades, con $60 de margen por encima de tus costos fijos.
+**Herramienta A — Mago de Oz (si consigues acceso a un especialista dispuesto a una prueba):** Define la experiencia que quieres que el especialista evalúe —ver en tiempo real si hay personas vivas al otro lado de una pared— y simúlala sin construir la integración completa. Usa el sensor existente del prototipo open-source, muestra los datos en una pantalla cualquiera (no las gafas AR), y opera el sistema con asistencia manual donde sea necesario. El especialista evalúa el concepto, no el acabado técnico. Mide: ¿Entiende el valor sin explicación extensa? ¿Pide usarlo de nuevo? ¿Ofrece un número cuando preguntas el precio?
 
-**200% de adopción — escenario de alta demanda:**
-Se venden 40 unidades, generando $520 de ingreso y $520 de margen total. Como se trata de una oferta digital sin costo de entrega por unidad adicional, este escenario no implica pérdida por capacidad: más adopción se traduce directamente en más margen, sin techo físico que lo frene.
+**Herramienta B — Presentación de solución con prototipo mínimo (si el acceso es solo una reunión):** Prepara un storyboard o video corto que muestre el flujo operativo: equipo llega a edificio, despliega mochila, activa sensor, ve en pantalla si hay personas vivas y en qué estado. No necesita ser el dispositivo real —puede ser una recreación con imágenes o video editado que muestre la experiencia. Al final de la presentación, estructura explícitamente la conversación de precio: "Si esto funcionara exactamente como lo ven aquí, ¿qué presupuesto manejaría su organización para una solución así?"
+
+**En ambos casos, aplica el método que ya propusiste —probar variando una sola cosa a la vez— de forma estructurada:**
+
+Tu método es correcto y aquí está estructurado para que produzca evidencia usable:
+
+- *Hipótesis:* El especialista en gobierno/seguridad reconoce que detectar respiración y consciencia a través de paredes en emergencias resuelve un problema real y urgente para su organización, y está dispuesto a asignarle un presupuesto concreto.
+- *Variable que pruebas primero:* La disposición a pagar por la funcionalidad mínima viable (detección de presencia + estado físico básico), sin integración Starlink ni gafas AR. Eso es lo único que varía en esta primera ronda.
+- *Criterio de éxito medible:* Al menos 2 de cada 5 especialistas consultados nombran espontáneamente un rango de presupuesto sin que tú lo sugieras, Y ese rango cubre el costo estimado de producción del componente central (sensor + hardware básico, sin Starlink ni AR todavía).
+- *Lo que NO cambias en esta ronda:* el problema que describes, el segmento al que apuntas, la funcionalidad de detección.
+- *Si el criterio no se cumple:* documenta qué objeción aparece más veces (precio, confianza en el proveedor, proceso de adquisición, requisitos técnicos) y eso define qué variable pruebas en la siguiente ronda.
+
+Registra cada conversación con: nombre del rol del especialista (no nombre personal), respuesta al problema, respuesta al precio, objeción principal si no hubo número, y si pidió ver más o seguir en contacto.
+
+**Entregable:** Registro de al menos 3 conversaciones con especialistas reales, con respuestas documentadas sobre el problema y el precio, y resultado de la hipótesis (validada o invalidada según el criterio definido).
+
+**Esta semana:** Si ya tienes una reunión agendada de la Etapa 2, prepara el storyboard de una página que muestre el flujo operativo del dispositivo y la pregunta de precio estructurada al final. Si aún no tienes reunión, avanza el storyboard de todas formas —necesitarás tenerlo listo el día que llegue la introducción.
 
 ---
 
-## Los números que te faltan
+## Etapa 4: Construye el MVP con lo mínimo que permite aprender lo siguiente
 
-Tu proyecto quedó con una métrica sin calcular porque faltan tres datos:
+Una vez que tienes al menos 3 conversaciones con especialistas y sabes que el problema es real y urgente para ellos, construye el primer MVP físico. No la solución completa: el componente central que permite aprender lo que las conversaciones no pueden confirmar —que el sensor de mayor capacidad realmente detecta respiración y consciencia con el nivel de precisión que necesitan los operativos.
 
-- **Cuántos días pasa tu dinero "atrapado" en inventario antes de convertirse en venta** — en una oferta digital puede ser cero, pero confirmarlo ayuda a entender tu flujo real de caja.
+**Pasos:**
 
-- **Cuántos días tarda un cliente en pagarte después de que compra** — si hay cobros diferidos (suscripciones con períodos de prueba, pagos a 30 días, plataformas que retienen fondos), este número define cuándo el dinero llega realmente a tu bolsillo.
+1. Toma el prototipo público de código abierto como base. Identifica específicamente qué sensor estás mejorando y en qué parámetro concreto (resolución de detección, distancia de penetración, frecuencia de actualización). Escribe una sola oración que diga: "Este sensor mejora [parámetro X] de [valor actual en el prototipo open-source] a [valor objetivo]." Si no puedes escribir esa oración con números reales, ese es el primer experimento técnico que necesitas hacer antes de construir nada más.
 
-- **Cuántos días tardas tú en pagar a tus proveedores** — si tienes proveedores de plataforma, hosting, herramientas o licencias, el plazo que te dan para pagar puede aliviar o presionar tu liquidez mensual.
+2. El MVP no incluye Starlink, no incluye gafas AR, no incluye mochila todo terreno. Incluye: sensor mejorado + hardware mínimo para capturar y mostrar datos + pantalla cualquiera para visualización. Portabilidad básica: debe poder llevarse a un sitio diferente a tu taller. Nada más.
 
-Con esos tres datos se puede calcular cuántos días tu dinero está "en el aire" entre que vendes y que puedes usarlo — un indicador clave para saber si necesitas reserva de efectivo o si tu proyecto fluye sin fricciones financieras.
+3. Antes de invertir en pulir cualquier característica del MVP, pregúntate: ¿este componente contribuye directamente a confirmar que el sensor detecta respiración y consciencia con precisión suficiente para uso operativo? Si la respuesta es no, no lo construyas todavía. Los defectos que bloquean el aprendizaje (el sensor no detecta nada, el sistema no corre) son inaceptables. La baja fidelidad estética (cables visibles, carcasa de cartón, pantalla de laptop) es completamente aceptable.
+
+4. Documenta qué supuesto técnico estás probando con este MVP (por ejemplo: "con un sensor de [especificación X], el sistema detecta respiración a través de una pared de concreto estándar a [Y] metros") y cuál es el criterio de éxito técnico medible. Una variable por prueba.
+
+5. Cuando el MVP funcione en condiciones básicas, llévaselo a uno de los especialistas que ya consultaste en la Etapa 3. No a alguien nuevo: a alguien que ya conoce el problema que intentas resolver y puede darte feedback operativo real, no técnico.
+
+**Entregable:** MVP físico funcional —sensor mejorado + visualización básica— probado en al menos una condición real (pared de concreto, distancia operativa relevante), con resultado documentado frente al criterio técnico definido.
+
+**Esta semana:** Escribe en una sola oración el parámetro específico que mejora tu sensor frente al prototipo open-source y el valor objetivo con números. Si no tienes ese número todavía, esa búsqueda —en literatura técnica, en las especificaciones del prototipo existente, con un profesor de ingeniería— es la tarea de esta semana.
 
 ---
-_Estimaciones basadas en las cifras que tú diste; no sustituyen contabilidad formal ni asesoría fiscal, que varían según tu país._
 
-Reporte guardado en: C:\Users\AlexDesk\Documents\I have an idea\engine\salidas\reporte_20260707_2336.md
+## Etapa 5: Define el modelo completo y decide si proceder o ajustar
+
+Con evidencia de que el problema es real, el precio es alcanzable, y el componente técnico central funciona, tienes todo lo que necesitas para completar el modelo de manera que sea creíble —no solo internamente, sino frente a los especialistas que ya consultaste y frente a potenciales asesores o socios.
+
+**Pasos:**
+
+1. Completa el Lienzo de Modelo de Negocio (los 9 bloques) usando post-its o equivalente digital. Llena cada bloque con lo que sabes ahora —no con lo que asumes. Donde haya vacíos importantes, márcalos como "pendiente de investigar" en vez de inventar una respuesta. Los bloques que más importan para este proyecto ahora: propuesta de valor (qué detecta, con qué precisión, en qué condiciones), segmentos de clientes (qué tipo de institución, qué rol dentro de ella), canales (cómo llegas al decisor de compra, cuántos "sí" necesitas), estructura de costos (costo de producción por unidad del MVP central, sin Starlink ni AR todavía), y fuentes de ingresos (venta directa, contrato de servicio, licencia —define cuál primero).
+
+2. Define la estructura de costos con los números que ya tienes o puedes conseguir: costo del sensor, hardware básico, tiempo de desarrollo. No proyectes ingresos que no puedes sustentar todavía — llena solo los costos reales que ya conoces y deja los ingresos como rango basado en los números que te dieron los especialistas en las conversaciones de la Etapa 3.
+
+3. Identifica los socios clave que necesitas para que esto funcione: ¿quién produce el sensor mejorado? ¿Necesitas un socio técnico para la integración? ¿Hay alguna certificación o proceso de adquisición gubernamental que requiera un socio con experiencia previa en contratos con gobierno de EE.UU.?
+
+4. Con el lienzo completo, haz una evaluación honesta: ¿los datos de las conversaciones con especialistas validan que la propuesta de valor y el precio son coherentes con los costos que tienes en el lienzo? Si sí, procedes a construir la junta asesora formal y buscar el primer contrato piloto. Si hay una incoherencia importante —por ejemplo, el precio que los especialistas mencionaron no cubre los costos reales— documentas exactamente qué necesita cambiar (empaquetado, funcionalidad, segmento) y vuelves al paso que corresponde con evidencia, no con suposiciones nuevas.
+
+5. Para la junta asesora: de los especialistas que ya consultaste, identifica a los que mostraron mayor entusiasmo y conocimiento operativo real. Invítalos a una reunión informal para explorar si tienen interés en asesorarte formalmente. Busca al menos un asesor con experiencia en tecnología sensorial y uno con experiencia en contratos operativos con gobierno o seguridad. Define desde el principio el esquema de compensación (típicamente participación accionaria con calendario de adquisición gradual) para que la conversación sea concreta.
+
+**Entregable:** Lienzo de Modelo de Negocio completo con los 9 bloques y vacíos marcados honestamente, decisión documentada de proceder o ajustar con sus criterios, y lista inicial de candidatos para junta asesora con roles definidos.
+
+**Esta semana:** Completa los bloques de "propuesta de valor", "segmentos de clientes" y "estructura de costos" del lienzo usando solo lo que ya sabes con evidencia —lo que aprendiste en las conversaciones de las etapas anteriores. Deja los demás bloques en blanco si no tienes datos reales todavía.
+
+---
+
+## ¿Puede sostenerse tu idea? Los números en simple
+
+Este bloque solo puede llenarse parcialmente ahora, y esa honestidad es importante.
+
+Lo que ya sabes: la tecnología base existe y hay contratos millonarios en este mercado, lo que confirma que alguien paga sumas grandes por ella. Tu diferencial declarado es costo más bajo + sensor de mayor capacidad. Pero el número que todavía no tienes —y que es el más importante— es cuánto costaría producir una unidad del dispositivo portátil completo (sensor mejorado + hardware de integración + conectividad + visualización) y si ese costo es menor que lo que los especialistas están dispuestos a pagar.
+
+El Lienzo de Modelo de Negocio de la Etapa 5 te pide llenar la estructura de costos y las fuentes de ingresos. Cuando lo completes con números reales, la pregunta central es simple: ¿el precio que los especialistas mencionaron en las conversaciones de la Etapa 3 cubre el costo de producción por unidad más lo que necesitas para operar? Si sí, hay margen y el modelo puede sostenerse. Si no, necesitas saber exactamente qué parte del costo hace que el número no cierre —si es el sensor, la conectividad Starlink, o la integración AR— porque eso define qué componente necesitas ajustar o eliminar del MVP para que el modelo funcione.
+
+No inventes el número ahora. El plan te lleva a conseguirlo: las conversaciones con especialistas te dan el rango de precio, el desarrollo del MVP te da el costo real de producción. Cuando tengas ambos, el análisis es directo.
+
+---
+
+===JSON===
+{"familias_tratadas": ["accion_clientes", "viabilidad_economica"], "secciones": ["Etapa 1: Convierte tus suposiciones en una lista de apuestas orden
+
+(costo total de la sesion: $0.2857)
 
 ============================================================
-  Costo real de la sesion (tokens)
+  MY IDEA — cliente interactivo de la web (Fase 3.0)
 ============================================================
-  claude-sonnet-4-6: 1 llamadas | 499 in / 967 out (cache_read 0, cache_write 1133) | $0.0203
-  Desglose por componente:
-    reporte: $0.0203
-  TOTAL: $0.0203
-PS C:\Users\AlexDesk\Documents\I have an idea> 
+1. Organizador rápido (una idea, sin entrevista)
+2. Nueva entrevista completa (con plan al final)
+3. Ver mis proyectos
+4. Generar reporte de sostenibilidad de un proyecto
+Q. Salir
+
+> 
