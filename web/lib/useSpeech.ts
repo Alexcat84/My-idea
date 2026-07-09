@@ -9,7 +9,7 @@
  * renderiza: fallback limpio a solo-texto, sin errores.
  * (Whisper/API de transcripción = backlog 3.4, no beta.)
  */
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 interface ResultadoVoz {
   soportado: boolean;
@@ -48,15 +48,19 @@ function obtenerConstructor(): (new () => Recognition) | null {
 }
 
 export function useSpeech(onTexto: (finales: string, provisional: string) => void): ResultadoVoz {
-  const [soportado, setSoportado] = useState(false);
+  // Hydration-safe: false en el server, la verdad del navegador en el
+  // cliente, sin setState-en-effect (el soporte es estático por navegador).
+  const soportado = useSyncExternalStore(
+    () => () => {},
+    () => obtenerConstructor() !== null,
+    () => false
+  );
   const [escuchando, setEscuchando] = useState(false);
   const recRef = useRef<Recognition | null>(null);
   const onTextoRef = useRef(onTexto);
-  onTextoRef.current = onTexto;
-
   useEffect(() => {
-    setSoportado(obtenerConstructor() !== null);
-  }, []);
+    onTextoRef.current = onTexto;
+  });
 
   const detener = useCallback(() => {
     recRef.current?.stop();
