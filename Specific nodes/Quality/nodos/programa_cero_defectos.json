@@ -1,0 +1,27 @@
+{
+  "node_id": "programa_cero_defectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Programa de Cero Defectos (Zero Defects) como Prevención",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Zero Defects es un programa filosófico y operativo que busca eliminar la aceptación de errores como algo inevitable, promoviendo la prevención en lugar de la detección y corrección posterior. Se basa en la idea de que si se identifican y controlan las causas raíz de los defectos (mediante análisis de datos y tendencias), es posible reducir drásticamente o eliminar los defectos, evitando así cadenas de efectos negativos como ausentismo, sobrecostos y retrasos de programa.",
+  "pasos_accionables": [
+    "Comunicar a todos los niveles de supervisión la filosofía de que los defectos no son inevitables.",
+    "Usar datos de tendencias para detectar señales tempranas de aumento de defectos.",
+    "Actuar inmediatamente cuando los defectos comiencen a subir, antes de que afecten otras métricas.",
+    "Involucrar a los supervisores de línea en la interpretación y uso de los datos, no solo a especialistas de calidad.",
+    "Reforzar el compromiso gerencial y de supervisión con el objetivo de prevención total."
+  ],
+  "entregable_esperado": "Un plan de acción de prevención de defectos con puntos de control basados en datos, aprobado y respaldado por la gerencia y los supervisores.",
+  "nodos_previos": [
+    "analisis_causa_efecto_indicadores_calidad"
+  ],
+  "nodos_siguientes": [
+    "cultura_de_calidad_supervisores",
+    "costo_de_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización tiene una alta tasa de defectos que genera efectos en cascada (ausentismo, retrasos, faltantes).",
+    "Cuando la gerencia busca pasar de un enfoque correctivo a uno preventivo."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "auditorias_calidad_proceso",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Auditorías de Calidad de Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una auditoría de calidad de proceso es una revisión independiente in situ que compara el desempeño real de un proceso contra un estándar establecido, usando los procedimientos operativos del proceso. Estas auditorías frecuentemente revelan procedimientos inadecuados o inexistentes, más allá de verificar el cumplimiento de los existentes. Ejemplos incluyen las auditorías de aerolíneas en llegadas/salidas, interior/exterior de aviones, y las auditorías de McDonald's sobre calidad, servicio, limpieza y sanidad.",
+  "pasos_accionables": [
+    "Definir las áreas específicas del proceso a auditar",
+    "Establecer una lista detallada de actividades y estándares numéricos a verificar",
+    "Realizar visitas anunciadas y no anunciadas para mayor objetividad",
+    "Registrar y comparar mediciones contra metas numéricas establecidas",
+    "Usar los checklists de autocontrol como fuente de temas específicos para la auditoría"
+  ],
+  "entregable_esperado": "Informe de auditoría de proceso con hallazgos, comparación contra estándares y recomendaciones de mejora",
+  "nodos_previos": [
+    "control_calidad_operaciones_servicio"
+  ],
+  "nodos_siguientes": [
+    "seis_sigma_servicios"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita verificar cumplimiento de procedimientos operativos establecidos",
+    "Si se sospecha de procedimientos inadecuados o inexistentes en un proceso crítico"
+  ]
+}

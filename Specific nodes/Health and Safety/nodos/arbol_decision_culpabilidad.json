@@ -1,0 +1,27 @@
+{
+  "node_id": "arbol_decision_culpabilidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Árbol de Decisión para Determinar Culpabilidad de Actos Inseguros",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Herramienta estructurada para evaluar la culpabilidad de un acto inseguro tras un accidente o incidente. Considera si las acciones y consecuencias fueron intencionadas (sabotaje/criminal), si hubo abuso de sustancias, si se violaron procedimientos deliberadamente, y aplica la 'prueba de sustitución' para determinar si un compañero con capacitación similar habría actuado igual. Distingue entre errores del sistema (deficiencias de entrenamiento/procedimientos) y negligencia individual real.",
+  "pasos_accionables": [
+    "Identificar si la acción y consecuencia fueron intencionadas",
+    "Verificar consumo de sustancias no autorizadas al momento del acto",
+    "Determinar si hubo violación consciente de procedimientos existentes y adecuados",
+    "Aplicar la prueba de sustitución con un jurado de pares",
+    "Revisar historial previo de actos inseguros de la persona",
+    "Clasificar el acto en: criminal, negligente, violación con o sin mitigación, o error inducido por el sistema"
+  ],
+  "entregable_esperado": "Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión",
+  "nodos_previos": [
+    "cultura_justa_organizacional"
+  ],
+  "nodos_siguientes": [
+    "prueba_sustitucion_johnston"
+  ],
+  "condiciones_activacion": [
+    "Después de un accidente o incidente grave donde se identificó un acto inseguro individual",
+    "Cuando se debe decidir si aplicar sanciones disciplinarias"
+  ]
+}

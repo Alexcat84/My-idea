@@ -1,0 +1,25 @@
+{
+  "node_id": "relacion_confiabilidad_sistema_partes",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Relación entre Confiabilidad de Partes y del Sistema",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La confiabilidad de un sistema (Ps) es el producto de las confiabilidades individuales de sus componentes cuando el fallo de cualquier parte causa fallo del sistema y las partes son independientes. A mayor número de componentes, menor confiabilidad del sistema completo. La redundancia (paralela) permite mejorar la confiabilidad general al requerir que todos los elementos redundantes fallen para que el sistema falle.",
+  "pasos_accionables": [
+    "Identificar todas las partes críticas del sistema y sus confiabilidades individuales",
+    "Calcular la confiabilidad del sistema multiplicando las confiabilidades de las partes",
+    "Evaluar si el aumento de complejidad reduce significativamente la confiabilidad total",
+    "Diseñar redundancia paralela en componentes críticos si es necesario",
+    "Calcular la nueva confiabilidad del sistema con redundancia usando Ps = 1-(1-P1)^n"
+  ],
+  "entregable_esperado": "Diagrama de bloques de confiabilidad del sistema con cálculo de Ps y propuesta de redundancia si aplica",
+  "nodos_previos": [
+    "formula_exponencial_confiabilidad"
+  ],
+  "nodos_siguientes": [
+    "prediccion_confiabilidad_diseño"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña un sistema compuesto por múltiples partes y se requiere estimar o mejorar su confiabilidad global"
+  ]
+}

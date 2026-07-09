@@ -1,0 +1,25 @@
+{
+  "node_id": "evaluar_huella_hidrica",
+  "fase_proyecto": "validacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Evaluación de la Huella Hídrica",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Ante la creciente escasez de agua dulce (47% de la población mundial enfrentará escasez severa para 2030), las empresas deben evaluar dos tipos de impactos hídricos: cuánta agua usan directa e indirectamente (agua 'virtual' o incorporada en la cadena de valor), y cuánto contaminan cuerpos de agua. Herramientas como el Water Footprint Network y el CDP Water Disclosure Project ayudan a medir y reportar estos impactos.",
+  "pasos_accionables": [
+    "Mapear y medir el agua usada directamente en operaciones (edificios, manufactura, limpieza)",
+    "Evaluar el uso indirecto de agua en la cadena de suministro (agua 'embebida')",
+    "Contextualizar el uso de agua según la escasez local (zonas estresadas vs abundantes)",
+    "Evaluar el daño potencial a ecosistemas acuáticos por descargas o contaminación"
+  ],
+  "entregable_esperado": "Reporte de huella hídrica que incluya uso directo, indirecto y contexto de estrés hídrico local",
+  "nodos_previos": [
+    "medir_residuos_empresa"
+  ],
+  "nodos_siguientes": [
+    "evaluar_impacto_ecosistemas_biodiversidad"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa opera en industrias con alta dependencia del agua (alimentos, bebidas, textiles)",
+    "Si opera en regiones con estrés hídrico"
+  ]
+}

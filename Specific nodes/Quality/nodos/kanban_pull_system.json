@@ -1,0 +1,28 @@
+{
+  "node_id": "kanban_pull_system",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Kanban – Señal para Producir",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Sistema de señalización (tarjetas, espacios marcados, contenedores) que autoriza la producción y el movimiento de materiales dentro del value stream, controlando niveles de inventario estratégico y WIP estándar, siendo el disparador de un proceso pull.",
+  "pasos_accionables": [
+    "Definir puntos de consumo donde se necesita reposición",
+    "Diseñar el tipo de señal kanban (tarjeta, espacio, contenedor)",
+    "Establecer niveles de reposición basados en consumo real",
+    "Implementar el sistema y capacitar a los operadores",
+    "Monitorear y ajustar los niveles de kanban según variación de demanda"
+  ],
+  "entregable_esperado": "Sistema kanban funcionando con señales visuales de reposición implementadas",
+  "nodos_previos": [
+    "pull_vs_push_systems",
+    "inventory_analysis_lean"
+  ],
+  "nodos_siguientes": [
+    "smed_setup_reduction",
+    "line_balancing"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca implementar un sistema pull de producción",
+    "Si hay sobreproducción o exceso de transporte en el proceso"
+  ]
+}

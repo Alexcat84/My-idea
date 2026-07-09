@@ -1,0 +1,27 @@
+{
+  "node_id": "accion_correctiva_diagnostico_remedio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Acción Correctiva: Diagnóstico y Remedio de Problemas Esporádicos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La acción correctiva (troubleshooting) busca eliminar no conformidades esporádicas causadas por cambios adversos, a diferencia de la mejora de calidad que ataca el desperdicio crónico. El diagnóstico se enfoca en descubrir qué cambió, usando autopsias forenses, comparación de productos antes/después, comparación de datos de proceso, y reconstrucción cronológica de eventos. El remedio generalmente consiste en revertir el cambio y restaurar el estado anterior, siendo un proceso más simple que el de mejora continua ya que se regresa a lo conocido.",
+  "pasos_accionables": [
+    "Realizar autopsia forense del producto/proceso para determinar síntomas exhibidos",
+    "Comparar productos y datos de proceso antes y después del inicio del problema",
+    "Reconstruir la cronología de eventos (cambios de turno, mantenimiento, nuevos empleados, etc.)",
+    "Formular y descartar teorías de causas con base en los datos recolectados",
+    "Restaurar el proceso al estado previo una vez identificada la causa",
+    "Asegurar que el diseño del proceso permita ajustes conocidos, predecibles y accesibles"
+  ],
+  "entregable_esperado": "Reporte de diagnóstico con cronología de eventos y plan de remedio para restaurar la conformidad",
+  "nodos_previos": [
+    "decision_aptitud_para_uso"
+  ],
+  "nodos_siguientes": [
+    "sistema_informacion_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre un pico o desviación esporádica no conforme en el proceso",
+    "Si se necesita distinguir entre un problema esporádico y un desperdicio crónico"
+  ]
+}

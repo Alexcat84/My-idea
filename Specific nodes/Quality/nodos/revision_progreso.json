@@ -1,0 +1,27 @@
+{
+  "node_id": "revision_progreso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Proceso Formal de Revisión de Progreso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Un proceso formal y eficiente de revisión aumenta la probabilidad de alcanzar las metas al identificar brechas entre el estado actual y el objetivo buscado. Requiere un ciclo de retroalimentación claro con responsabilidad y autoridad definidas para actuar sobre las diferencias detectadas, incluyendo puntos de revisión planificados para cada proyecto.",
+  "pasos_accionables": [
+    "Establecer puntos de revisión específicos y planificados para cada proyecto",
+    "Comparar el estado actual medido contra el objetivo establecido",
+    "Identificar brechas (gaps) que requieren atención",
+    "Asignar responsabilidad y autoridad clara para actuar sobre las brechas identificadas",
+    "Documentar y comunicar resultados de forma gráfica y periódica"
+  ],
+  "entregable_esperado": "Un calendario de revisiones con actas que documenten brechas identificadas y acciones correctivas asignadas",
+  "nodos_previos": [
+    "sistema_medicion_kpi"
+  ],
+  "nodos_siguientes": [
+    "tablero_control_scorecard",
+    "auditoria_negocio"
+  ],
+  "condiciones_activacion": [
+    "Cuando un proyecto de calidad está en ejecución y requiere seguimiento continuo",
+    "Cuando se detectan desviaciones entre lo planificado y lo ejecutado"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "dfss_metodologia",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Design for Six Sigma (DFSS)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_hteorico": "DFSS es una metodología sistemática de cinco fases (Definir, Medir, Analizar, Diseñar, Verificar) orientada a crear productos o servicios nuevos con niveles de calidad cercanos a Six Sigma, enfocándose tanto en cumplir las características correctas como en minimizar fallas. Surge para llenar el vacío metodológico de traducir necesidades del cliente en diseños exitosos.",
+  "resumen_teorico": "DFSS es una metodología sistemática de cinco fases (Definir, Medir, Analizar, Diseñar, Verificar) orientada a crear productos o servicios nuevos con niveles de calidad cercanos a Six Sigma, enfocándose tanto en cumplir las características correctas como en minimizar fallas. Surge para llenar el vacío metodológico de traducir necesidades del cliente en diseños exitosos.",
+  "pasos_accionables": [
+    "Revisar el plan estratégico organizacional antes de iniciar el diseño",
+    "Definir la oportunidad de negocio y el alcance del proyecto",
+    "Identificar y traducir necesidades del cliente en características medibles (CTQs)",
+    "Desarrollar y evaluar múltiples conceptos de diseño",
+    "Detallar el diseño ganador incorporando los CTQs como criterios de decisión",
+    "Verificar que el diseño cumple con las necesidades del negocio y del cliente antes de producción"
+  ],
+  "entregable_esperado": "Documento de diseño validado con CTQs definidos, prototipo verificado y plan de producción/lanzamiento",
+  "nodos_previos": [
+    "innovacion_tipo_ii"
+  ],
+  "nodos_siguientes": [
+    "ctq_caracteristicas_criticas",
+    "qfd_matriz"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita desarrollar un producto o servicio completamente nuevo",
+    "Cuando el diseño actual no satisface necesidades del mercado y requiere rediseño total"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "inspeccion_sitio_peligros",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Inspección Regular del Sitio de Trabajo para Identificar Peligros",
+  "fuente": "OSHA3886",
+  "resumen_teorico": "Los peligros pueden aparecer con el tiempo a medida que cambian las condiciones del sitio (avance de obra, desgaste de equipos, llegada de nuevos oficios). Designar a una persona competente para realizar inspecciones frecuentes y documentadas -incluyendo fotos y checklists- permite detectar riesgos antes de que ocurra un incidente.",
+  "pasos_accionables": [
+    "Designar una persona competente para liderar inspecciones periódicas",
+    "Incluir trabajadores en el equipo de inspección",
+    "Documentar hallazgos con fotos/video y checklists por categoría de peligro",
+    "Planificar inspecciones anticipando la llegada de nuevos oficios o equipos",
+    "Cubrir todas las áreas: excavaciones, zonas de acopio, trabajo en altura, mantenimiento de equipos"
+  ],
+  "entregable_esperado": "Reportes de inspección periódicos con hallazgos documentados y plan de corrección",
+  "nodos_previos": [
+    "recopilacion_informacion_peligros"
+  ],
+  "nodos_siguientes": [
+    "caracterizacion_priorizacion_peligros"
+  ],
+  "condiciones_activacion": [
+    "Cuando el sitio de trabajo está en operación activa y cambia constantemente",
+    "Cuando se requiere verificar cumplimiento continuo de condiciones seguras"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "node_id": "analisis_distribucion_poisson_para_capacidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Uso de la Distribución de Poisson para Planificar Capacidad ante Eventos Aleatorios",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando los eventos (como averías de equipo) son independientes y no forman reacciones en cadena, su frecuencia diaria sigue una distribución de Poisson. Conociendo el promedio histórico, se puede calcular la desviación estándar (raíz del promedio) y establecer límites superiores para planificar recursos (ej. número de mecánicos) que cubran la mayoría de los escenarios sin sobredimensionar permanentemente.",
+  "pasos_accionables": [
+    "Recolectar el número de eventos (emergencias, averías) por día durante varias semanas",
+    "Calcular el promedio diario de eventos",
+    "Calcular la desviación estándar como raíz cuadrada del promedio (supuesto Poisson)",
+    "Establecer límites superiores (ej. promedio + 2 o 3 sigma) para dimensionar recursos",
+    "Graficar los datos reales en un gráfico de corridas para confirmar aleatoriedad y ajustar el modelo si es necesario"
+  ],
+  "entregable_esperado": "Estimación de capacidad de recursos (personal, equipo) basada en análisis estadístico de frecuencia de eventos, con gráfico de verificación",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "mejora_del_sistema_responsabilidad_gerencial"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita planificar personal o recursos para atender eventos aleatorios/emergencias",
+    "Cuando no existen datos históricos organizados sobre frecuencia de incidentes"
+  ]
+}

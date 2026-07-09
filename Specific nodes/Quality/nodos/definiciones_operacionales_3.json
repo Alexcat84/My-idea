@@ -1,0 +1,27 @@
+{
+  "node_id": "definiciones_operacionales_3",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Definiciones Operacionales",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
+  "pasos_accionables": [
+    "Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').",
+    "Definir una prueba específica y reproducible para evaluar dicho concepto.",
+    "Establecer un criterio de juicio claro y cuantificable.",
+    "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.",
+    "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición."
+  ],
+  "entregable_esperado": "Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.",
+  "nodos_previos": [
+    "control_estadistico_metodo_medicion"
+  ],
+  "nodos_siguientes": [
+    "ausencia_valor_verdadero"
+  ],
+  "condiciones_activacion": [
+    "Cuando se redactan especificaciones de calidad para contratos con proveedores.",
+    "Cuando existen disputas entre departamentos sobre qué constituye un defecto.",
+    "Al diseñar regulaciones gubernamentales o estándares industriales."
+  ]
+}

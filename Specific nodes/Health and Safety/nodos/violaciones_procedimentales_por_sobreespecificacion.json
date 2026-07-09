@@ -1,0 +1,25 @@
+{
+  "node_id": "violaciones_procedimentales_por_sobreespecificacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Violaciones Procedimentales por Sobreespecificación de Reglas",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Cada vez que ocurre un accidente, las organizaciones suelen añadir nuevas restricciones al manual de procedimientos para prohibir la acción implicada. Con el tiempo, esta acumulación de reglas reduce el espacio de acciones permitidas a un rango menor del necesario para realizar el trabajo en condiciones no óptimas, forzando a los trabajadores a violar procedimientos para poder cumplir con la tarea. Esto es contrario a los errores, que surgen de la subespecificación; las violaciones nacen de la sobreespecificación procedimental.",
+  "pasos_accionables": [
+    "Revisar el historial de modificaciones al manual de procedimientos y su acumulación en el tiempo",
+    "Identificar tareas donde el cumplimiento estricto del procedimiento hace imposible completar el trabajo",
+    "Consultar con trabajadores experimentados sobre violaciones rutinarias necesarias para operar",
+    "Rediseñar procedimientos considerando la variabilidad real de las condiciones de trabajo, no solo el escenario ideal"
+  ],
+  "entregable_esperado": "Diagnóstico de brechas entre procedimiento escrito y práctica real, con plan de re-flexibilización de reglas",
+  "nodos_previos": [
+    "quality_control_vs_quality_assurance"
+  ],
+  "nodos_siguientes": [
+    "fijar_causa_ultimo_accidente_riesgo_siguiente"
+  ],
+  "condiciones_activacion": [
+    "Cuando los trabajadores violan rutinariamente ciertos procedimientos sin sanción aparente",
+    "Si el manual de procedimientos ha crecido significativamente tras sucesivos incidentes"
+  ]
+}

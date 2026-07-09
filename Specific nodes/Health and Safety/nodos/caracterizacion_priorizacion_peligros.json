@@ -1,0 +1,27 @@
+{
+  "node_id": "caracterizacion_priorizacion_peligros",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
+  "fuente": "OSHA3886",
+  "resumen_teorico": "El riesgo es el producto de la severidad y la probabilidad de un peligro, junto con el número de trabajadores expuestos. Evaluar estos factores permite priorizar qué peligros deben controlarse primero y aplicar controles interinos mientras se implementan soluciones permanentes.",
+  "pasos_accionables": [
+    "Evaluar severidad potencial y probabilidad de cada peligro identificado",
+    "Determinar el número de trabajadores expuestos",
+    "Aplicar controles interinos mientras se desarrollan soluciones permanentes",
+    "Priorizar los peligros de mayor riesgo para atención inmediata"
+  ],
+  "entregable_esperado": "Matriz de riesgos priorizada con peligros clasificados por severidad y probabilidad",
+  "nodos_previos": [
+    "inspeccion_sitio_peligros",
+    "identificacion_peligros_salud",
+    "investigacion_incidentes"
+  ],
+  "nodos_siguientes": [
+    "jerarquia_controles"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples peligros identificados y recursos limitados para atenderlos",
+    "Cuando se necesita justificar el orden de implementación de controles"
+  ]
+}

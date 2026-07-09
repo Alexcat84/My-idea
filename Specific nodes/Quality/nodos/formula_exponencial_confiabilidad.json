@@ -1,0 +1,26 @@
+{
+  "node_id": "formula_exponencial_confiabilidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Fórmula Exponencial de Confiabilidad y MTBF",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando la tasa de fallo es constante, el tiempo entre fallos sigue una distribución exponencial. La confiabilidad (probabilidad de operación sin fallo) se calcula como R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Es importante entender que un aumento en el MTBF no produce un aumento proporcional en la confiabilidad, y que la probabilidad de sobrevivir exactamente el tiempo del MTBF es solo del 37%.",
+  "pasos_accionables": [
+    "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil)",
+    "Calcular el MTBF a partir de datos históricos de fallos",
+    "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés",
+    "Interpretar correctamente el resultado evitando la confusión con vida útil o vida de servicio",
+    "Evaluar el impacto de cambios en MTBF sobre la confiabilidad real del sistema"
+  ],
+  "entregable_esperado": "Cálculo de confiabilidad del producto para un tiempo específico de operación, con MTBF documentado",
+  "nodos_previos": [
+    "curva_bañera_periodos_fallo"
+  ],
+  "nodos_siguientes": [
+    "relacion_confiabilidad_sistema_partes",
+    "prediccion_confiabilidad_diseño"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita predecir la probabilidad de operación sin fallo de un producto reparable con tasa de fallo constante"
+  ]
+}

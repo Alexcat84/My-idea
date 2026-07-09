@@ -1,0 +1,25 @@
+{
+  "node_id": "resumen_de_datos_graficos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Resumen y Visualización Gráfica de Datos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La visualización de datos mediante gráficos de series de tiempo, histogramas y diagramas de caja es fundamental para entender la tendencia central, dispersión y forma de la distribución de los datos antes de aplicar análisis estadísticos formales. Graficar los datos contra el orden temporal puede revelar tendencias, ciclos o cambios en variabilidad que sugieren causas del problema.",
+  "pasos_accionables": [
+    "Graficar la variable de salida Y contra el orden temporal en que fue obtenida",
+    "Construir un histograma con al menos 40 puntos de datos para observar la forma de la distribución",
+    "Usar diagramas de caja cuando se tengan pocos datos (mínimo 8 puntos) o se comparen múltiples distribuciones",
+    "Calcular medidas de tendencia central (media, mediana, moda) y dispersión (rango, desviación estándar, varianza)",
+    "Buscar tendencias, ciclos o cambios de variabilidad en los gráficos temporales"
+  ],
+  "entregable_esperado": "Conjunto de gráficos (histogramas, diagramas de caja, series de tiempo) y estadísticas descriptivas que resumen el comportamiento de los datos",
+  "nodos_previos": [
+    "cribado_de_datos"
+  ],
+  "nodos_siguientes": [
+    "analisis_estadistico_de_datos"
+  ],
+  "condiciones_activacion": [
+    "Al iniciar el análisis exploratorio de un conjunto de datos antes de aplicar pruebas estadísticas formales"
+  ]
+}

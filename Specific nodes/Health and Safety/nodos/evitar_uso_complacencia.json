@@ -1,0 +1,27 @@
+{
+  "node_id": "evitar_uso_complacencia",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "No Usar 'Complacencia' como Explicación de Error Humano",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "La 'complacencia' es un término ampliamente usado pero mal definido para explicar la falta de atención o monitoreo de un operador. Para probar complacencia se requeriría definir primero un estándar óptimo de monitoreo, algo que rara vez se hace rigurosamente. Además, incluso con estrategias óptimas de monitoreo, en sistemas complejos siempre se pierden señales porque hay más información de la que se puede atender. Acusar de complacencia es una forma disfrazada de culpar al 'error humano' y genera argumentos circulares.",
+  "pasos_accionables": [
+    "Antes de usar el término 'complacencia', definir explícitamente cuál sería el comportamiento óptimo de monitoreo",
+    "Investigar qué llevó al operador a distribuir su atención de la manera en que lo hizo, considerando las señales en competencia",
+    "Preguntar qué produjo el comportamiento etiquetado como 'complacente' en lugar de detenerse en la etiqueta",
+    "Evitar el razonamiento circular entre 'pérdida de situation awareness' y 'complacencia'"
+  ],
+  "entregable_esperado": "Informe de investigación libre de términos circulares como 'complacencia', con un análisis profundo de las causas sistémicas del comportamiento observado",
+  "nodos_previos": [
+    "evitar_perdida_situacion_awareness"
+  ],
+  "nodos_siguientes": [
+    "modelo_cadena_de_eventos",
+    "modelo_barreras_swiss_cheese"
+  ],
+  "condiciones_activacion": [
+    "Cuando un informe de investigación usa el término 'complacencia' para explicar un fallo",
+    "Al diseñar sistemas de monitoreo automatizado y evaluar el desempeño humano",
+    "Si se está evaluando la confianza excesiva en sistemas automatizados"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "economia_subensambles_inspeccion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Economía de Inspección mediante Construcción de Subensambles Intermedios",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El costo de corrección (k2) suele multiplicarse en cada etapa del proceso de producción, alcanzando valores muy altos en el ensamblaje final. Una estrategia para evitar este costo extremo es construir subensambles intermedios, inspeccionarlos y ajustarlos antes de integrarlos al ensamblaje final, tratando cada subensamble como un nuevo punto de partida con su propio análisis de costo k1/k2.",
+  "pasos_accionables": [
+    "Dividir el proceso de producción en etapas de subensamblaje intermedio.",
+    "Aplicar la teoría de costos k1/k2 a cada subensamblaje de forma independiente.",
+    "Determinar qué subensambles requieren inspección 100% y cuáles no, según el análisis de punto de equilibrio.",
+    "Registrar experiencias y datos históricos de cada subensamblaje para refinar las decisiones de inspección.",
+    "Coordinar con proveedores mediante cartas de control (X-barra y R) compartidas para mejorar la calidad entrante."
+  ],
+  "entregable_esperado": "Plan de inspección escalonado por subensambles, con análisis de costos aplicado a cada etapa intermedia del proceso.",
+  "nodos_previos": [
+    "probabilidad_falla_ensamblaje_multiple",
+    "regla_todo_o_nada_inspeccion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando el proceso de producción es largo y multi-etapa, con costos de corrección crecientes en cada etapa",
+    "Cuando el ensamblaje final tiene un costo de falla extremadamente alto en comparación con etapas intermedias"
+  ]
+}

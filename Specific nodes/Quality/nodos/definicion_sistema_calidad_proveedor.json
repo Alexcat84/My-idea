@@ -1,0 +1,24 @@
+{
+  "node_id": "definicion_sistema_calidad_proveedor",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Definición del Sistema de Calidad del Proveedor",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "En ciertos casos es necesario especificar no solo qué debe cumplir el producto, sino cómo debe operar el proveedor internamente (controles de proceso, condiciones sanitarias, SPC, etc.). Esto puede incluir referencias a normas como ISO 9000 o TS-16949 como requisito contractual.",
+  "pasos_accionables": [
+    "Determinar si se requieren controles de proceso específicos en el proveedor (ej. SPC, condiciones sanitarias)",
+    "Referenciar normas de sistemas de calidad reconocidas (ISO 9000, TS-16949) en el contrato",
+    "Solicitar al proveedor un plan de confiabilidad o análisis de modos de falla (FMECA) si el producto es complejo",
+    "Verificar que el proveedor tenga expertise real, no solo documentación copiada"
+  ],
+  "entregable_esperado": "Cláusula contractual de sistema de calidad del proveedor con normas de referencia y evidencias requeridas",
+  "nodos_previos": [
+    "requisitos_numericos_calidad_lotes"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_encuesta_calidad_proveedor"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto es complejo, regulado o crítico para la seguridad"
+  ]
+}

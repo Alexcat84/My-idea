@@ -1,0 +1,23 @@
+{
+  "node_id": "planificacion_inspeccion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Planificación de Inspección",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Actividad de designar las 'estaciones' donde debe realizarse la inspección (incoming inspection, process inspection, lot approval, finished-goods inspection, etc.) y proporcionar los medios e instrucciones necesarias. Se apoya en el flowchart del proceso para ubicar los puntos críticos de control.",
+  "pasos_accionables": [
+    "Mapear el proceso completo mediante un flowchart.",
+    "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado.",
+    "Definir si la inspección será fija, itinerante (roving) o integrada al operador (poka-yoke).",
+    "Documentar instrucciones y facilidades requeridas en cada estación."
+  ],
+  "entregable_esperado": "Mapa de estaciones de inspección con instrucciones y recursos asignados.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "clasificacion_caracteristicas_calidad",
+    "decision_conformidad_producto"
+  ],
+  "condiciones_activacion": [
+    "Al diseñar o rediseñar un sistema de control de calidad para un proceso productivo o de servicio."
+  ]
+}

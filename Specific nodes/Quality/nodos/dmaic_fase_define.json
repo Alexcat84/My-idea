@@ -1,0 +1,24 @@
+{
+  "node_id": "dmaic_fase_define",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "DMAIC - Fase Define (Definición del Proyecto)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "En esta fase el equipo confirma el problema, objetivo y alcance del proyecto iniciados en el charter. Se identifican los clientes clave, se determina la voz del cliente (VOC), se traduce a requerimientos CTQ (critical to quality) y se define un flujo de proceso de alto nivel, típicamente mediante un diagrama SIPOC.",
+  "pasos_accionables": [
+    "Identificar los clientes clave relacionados con el proyecto",
+    "Recoger la voz del cliente (VOC) y traducirla en requerimientos CTQ",
+    "Elaborar un diagrama SIPOC para definir los límites del proceso",
+    "Confirmar el alcance, recursos y objetivo medible del proyecto"
+  ],
+  "entregable_esperado": "Charter confirmado, VOC documentada, CTQs definidos y diagrama SIPOC elaborado",
+  "nodos_previos": [
+    "dmaic_fase_select"
+  ],
+  "nodos_siguientes": [
+    "dmaic_fase_measure"
+  ],
+  "condiciones_activacion": [
+    "Cuando un proyecto ha sido seleccionado y requiere delimitación clara antes de medir"
+  ]
+}

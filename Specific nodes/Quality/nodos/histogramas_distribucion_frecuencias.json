@@ -1,0 +1,28 @@
+{
+  "node_id": "histogramas_distribucion_frecuencias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Histogramas y Distribución de Frecuencias",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_hteorico": "Un histograma es una tabulación de datos organizados por tamaño que clarifica la tendencia central, la dispersión y la frecuencia relativa de ocurrencia de valores. La forma de la distribución puede sugerir teorías sobre causas de variación en el proceso. Requiere al menos 40 puntos de datos para dar información útil, mientras que los box plots pueden usarse con tan solo 8 puntos.",
+  "resumen_teorico": "Un histograma es una tabulación de datos organizados por tamaño que clarifica la tendencia central, la dispersión y la frecuencia relativa de ocurrencia de valores. La forma de la distribución puede sugerir teorías sobre causas de variación en el proceso. Requiere al menos 40 puntos de datos para dar información útil, mientras que los box plots pueden usarse con tan solo 8 puntos.",
+  "pasos_accionables": [
+    "Recopilar al menos 40 puntos de datos para un histograma (u 8 para box plot)",
+    "Organizar los datos por tamaño en intervalos",
+    "Graficar la frecuencia de ocurrencia de cada intervalo",
+    "Analizar la forma de la distribución para identificar posibles causas de variación",
+    "Comparar múltiples distribuciones usando box plots si es necesario"
+  ],
+  "entregable_esperado": "Histograma o box plot que muestre la distribución de frecuencia del proceso analizado",
+  "nodos_previos": [
+    "visualizacion_datos_deteccion_outliers"
+  ],
+  "nodos_siguientes": [
+    "concepto_variacion_estadistica",
+    "distribuciones_probabilidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere entender la forma de distribución de un conjunto de datos de proceso",
+    "Al iniciar un análisis de causas de variación"
+  ]
+}

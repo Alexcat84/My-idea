@@ -1,0 +1,27 @@
+{
+  "node_id": "inspeccion_automatizada_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Inspección Automatizada",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón, superando la tasa de detección humana (80-90%) al acercarse a la detección total de defectos.",
+  "pasos_accionables": [
+    "Identificar las pruebas que dominan el presupuesto de inspección y personal",
+    "Calcular la economía de automatizar dichas pruebas (ROI)",
+    "Realizar pruebas piloto en candidatos con buen retorno de inversión",
+    "Extender la automatización gradualmente según experiencia",
+    "Garantizar precisión y calibración del equipo automatizado (repetibilidad)"
+  ],
+  "entregable_esperado": "Plan de implementación de inspección automatizada con análisis costo-beneficio para procesos críticos",
+  "nodos_previos": [
+    "clasificacion_seriedad_defectos"
+  ],
+  "nodos_siguientes": [
+    "errores_de_medicion",
+    "economia_de_la_inspeccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando la inspección humana genera altos índices de error por monotonía",
+    "Cuando se requieren niveles de defectos en rango de partes por millón"
+  ]
+}

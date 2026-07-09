@@ -1,0 +1,23 @@
+{
+  "node_id": "disponibilidad_producto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Cálculo de Disponibilidad del Producto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+  "pasos_accionables": [
+    "Determinar el MTBF del producto o sistema",
+    "Determinar el MTTR (tiempo medio de reparación) o MDT (tiempo medio de inactividad)",
+    "Calcular la disponibilidad usando la fórmula de estado estable A = MTBF/(MTBF+MDT)",
+    "Verificar que se cumplan los supuestos de tasa de fallo y reparación constantes",
+    "Diferenciar entre disponibilidad operacional e intrínseca según el análisis requerido"
+  ],
+  "entregable_esperado": "Cálculo documentado de disponibilidad del producto con supuestos verificados",
+  "nodos_previos": [
+    "prediccion_confiabilidad_diseño"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se necesita evaluar qué tan disponible estará un producto reparable considerando tiempos de inactividad"
+  ]
+}

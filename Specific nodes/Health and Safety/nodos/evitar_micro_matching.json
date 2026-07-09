@@ -1,0 +1,25 @@
+{
+  "node_id": "evitar_micro_matching",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Evitar el Micro-Matching (Comparación Retrospectiva con Reglas)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "El micro-matching consiste en comparar fragmentos de comportamiento pasado contra procedimientos, datos disponibles o estándares de buena práctica identificados después del hecho. Esta comparación no explica el comportamiento, solo lo juzga, porque contrasta la conducta con una realidad que el investigador conoce ahora, no con la que rodeaba a la persona en el momento. Existe diferencia crucial entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era realmente perceptible dado el contexto, interfaz y tareas concurrentes).",
+  "pasos_accionables": [
+    "Evitar juzgar acciones solo contra procedimientos hallados aplicables en retrospectiva",
+    "Distinguir entre datos disponibles físicamente y datos observables en el contexto real",
+    "No usar 'estándares de buena práctica' identificados a posteriori como única explicación",
+    "Preguntar por qué tuvo sentido la acción para el actor, no solo si cumplió la norma",
+    "Documentar la brecha usual entre trabajo imaginado (reglas) y trabajo real (práctica)"
+  ],
+  "entregable_esperado": "Análisis que explica el comportamiento en su contexto, evitando juicios basados solo en comparación retrospectiva",
+  "nodos_previos": [
+    "reconstruccion_contexto_situacional"
+  ],
+  "nodos_siguientes": [
+    "informe_causas_raiz"
+  ],
+  "condiciones_activacion": [
+    "Cuando se compara la conducta de un trabajador contra procedimientos oficiales después de un incidente"
+  ]
+}

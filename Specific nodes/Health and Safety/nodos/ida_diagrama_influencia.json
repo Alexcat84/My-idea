@@ -1,0 +1,26 @@
+{
+  "node_id": "ida_diagrama_influencia",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Influence Diagram Approach (IDA)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "El IDA es una metodología que modela cualitativa y cuantitativamente las influencias organizacionales, en distintos niveles (factor influyente, PIF, implementación y política), sobre un resultado adverso. Permite tanto el análisis retrospectivo de accidentes como la estimación proactiva de la probabilidad de eventos futuros, combinando juicio experto estructurado con cálculo de probabilidades condicionales.",
+  "pasos_accionables": [
+    "Reunir un grupo de expertos del dominio para desarrollar el diagrama de influencia mediante discusión estructurada",
+    "Identificar los factores en cada nivel: influyente, PIF, implementación y política",
+    "Asignar razones de influencia (buena/mala) a cada factor mediante escalas graduadas de evidencia",
+    "Combinar las influencias de factores múltiples usando ponderación conjunta y probabilidad condicional",
+    "Sumar las probabilidades incondicionales para obtener la probabilidad global del evento adverso ('top event')"
+  ],
+  "entregable_esperado": "Diagrama de influencia cuantificado con la probabilidad estimada del evento adverso analizado",
+  "nodos_previos": [
+    "vpc_condiciones_productoras_violacion"
+  ],
+  "nodos_siguientes": [
+    "meda_analisis_error_mantenimiento"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere un análisis de seguridad formal (Formal Safety Analysis) para un sistema peligroso",
+    "Si se necesita investigar retrospectivamente las causas organizacionales de un accidente"
+  ]
+}

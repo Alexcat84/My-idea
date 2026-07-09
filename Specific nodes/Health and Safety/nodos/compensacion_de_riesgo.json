@@ -1,0 +1,23 @@
+{
+  "node_id": "compensacion_de_riesgo",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Compensación de Riesgo (Risk Homeostasis)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las mejoras en protección introducidas tras un accidente suelen convertirse, con el tiempo, en ventajas productivas (mayor velocidad, más producción, menos precaución), anulando el beneficio de seguridad original. Ejemplos históricos incluyen la lámpara Davy en minería y el radar marino, que permitieron operar en condiciones más riesgosas que antes. Este fenómeno se conoce como 'compensación de riesgo' u 'homeostasis de riesgo'.",
+  "pasos_accionables": [
+    "Revisar si las mejoras de seguridad implementadas han sido aprovechadas para aumentar la producción o velocidad de operación.",
+    "Establecer políticas que impidan que las ganancias de protección se traduzcan en mayor exposición al riesgo.",
+    "Monitorear indicadores de margen de seguridad tras la implementación de nuevas tecnologías protectoras."
+  ],
+  "entregable_esperado": "Un informe de auditoría que identifique casos de compensación de riesgo dentro de la organización.",
+  "nodos_previos": [
+    "produccion_y_proteccion"
+  ],
+  "nodos_siguientes": [
+    "erosion_de_defensas_por_ausencia_de_accidentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando se introduce nueva tecnología de seguridad y se observa un cambio de comportamiento operativo hacia mayor riesgo."
+  ]
+}

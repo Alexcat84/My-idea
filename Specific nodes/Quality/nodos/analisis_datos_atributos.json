@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_datos_atributos",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Capacidad para Datos de Atributos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando los datos disponibles son categóricos (número de unidades no conformes vs aceptables) en lugar de mediciones numéricas continuas, se puede calcular la capacidad de proceso en términos de errores o defectos. Esto es útil quando el problema no es variabilidad de un parámetro sino errores/equivocaciones (partes faltantes, información incorrecta, etc.), que requieren acciones correctivas diferentes.",
+  "pasos_accionables": [
+    "Recolectar datos de errores o no conformidades por categoría",
+    "Identificar y excluir desempeño anormal (outliers) para calcular la capacidad base",
+    "Calcular el promedio de errores por unidad de trabajo excluyendo anomalías",
+    "Comparar la capacidad estimada con el desempeño actual/original",
+    "Determinar si la causa raíz es variabilidad o errores/equivocaciones humanas"
+  ],
+  "entregable_esperado": "Matriz de errores documentada con cálculo de capacidad de proceso basada en atributos y clasificación de causas (variabilidad vs errores)",
+  "nodos_previos": [
+    "recoleccion_datos_proceso"
+  ],
+  "nodos_siguientes": [
+    "reduccion_errores_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando no se dispone de mediciones numéricas continuas sino solo datos de conformidad/no conformidad",
+    "Cuando el problema de calidad se debe a equivocaciones más que a variabilidad de parámetros"
+  ]
+}

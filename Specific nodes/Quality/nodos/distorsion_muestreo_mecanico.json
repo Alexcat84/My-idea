@@ -1,0 +1,25 @@
+{
+  "node_id": "distorsion_muestreo_mecanico",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distorsión por Muestreo Mecánico",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El muestreo mecánico (seleccionar muestras de arriba, abajo y medio de un lote por juicio del inspector) puede distorsionar el promedio real del proceso, a diferencia del muestreo por números aleatorios que sí refleja la teoría estadística de probabilidad. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado.",
+  "pasos_accionables": [
+    "Evaluar si el método actual de muestreo usa selección aleatoria o mecánica",
+    "Si es posible, implementar selección por números aleatorios para eliminar sesgos",
+    "Si no es practicable el muestreo aleatorio, considerar inspección 100% de una selección aleatoria de lotes",
+    "Documentar cualquier cambio en el método de muestreo como posible causa de puntos fuera de control"
+  ],
+  "entregable_esperado": "Protocolo de muestreo definido y documentado, indicando método usado y su justificación",
+  "nodos_previos": [
+    "fundamentos_variacion_estadistica"
+  ],
+  "nodos_siguientes": [
+    "interpretacion_cartas_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detecten discrepancias entre el promedio esperado y el observado en inspecciones",
+    "Cuando se sospeche que el método de muestreo introduce sesgo"
+  ]
+}

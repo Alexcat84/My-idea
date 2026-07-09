@@ -1,0 +1,27 @@
+{
+  "node_id": "comparacion_metodos_inspeccion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Comparación de Costos Entre Métodos de Inspección (Tabla 2x2)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+  "pasos_accionables": [
+    "Seleccionar una muestra de al menos 200 piezas para probar con ambos métodos de inspección.",
+    "Construir una tabla 2x2 registrando acuerdos y desacuerdos entre el método maestro y el método barato.",
+    "Calcular el costo del ahorro neto usando la fórmula S = M - C - (n12*k2 + n21*u).",
+    "Si el resultado es dudoso, aumentar el tamaño de la muestra (400+ piezas) para mayor precisión.",
+    "Verificar que ambos métodos de prueba estén en control estadístico antes de sacar conclusiones."
+  ],
+  "entregable_esperado": "Análisis de costo-beneficio documentado que determine si el método de inspección barato debe reemplazar al método maestro.",
+  "nodos_previos": [
+    "graficos_control_defectos_raros"
+  ],
+  "nodos_siguientes": [
+    "punto_equilibrio_calidad",
+    "cribado_prueba_barata"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca reducir costos de inspección sin sacrificar calidad.",
+    "Cuando existe un método de prueba alternativo más económico que el método estándar actual."
+  ]
+}

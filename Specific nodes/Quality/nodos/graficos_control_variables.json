@@ -1,0 +1,25 @@
+{
+  "node_id": "graficos_control_variables",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráficos de Control para Datos de Variables (X-bar y R)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los gráficos X-bar y R (o s) se usan con datos continuos medibles. El gráfico X-bar monitorea la tendencia central (promedio) de subgrupos racionales, mientras que el gráfico R (rango) o s (desviación estándar) monitorea la variabilidad dentro de los subgrupos. Existen variantes como X-mR (individuos y rango móvil) para tamaños de subgrupo=1, y Z-mR para series cortas con menos de 20-30 datos.",
+  "pasos_accionables": [
+    "Determinar el tamaño del subgrupo racional (si es 1, usar X-mR)",
+    "Calcular promedio y rango/desviación estándar de cada subgrupo",
+    "Graficar X-bar y R (o s) uno encima del otro en la misma línea vertical temporal",
+    "Interpretar primero el gráfico R/s antes que el X-bar",
+    "Identificar patrones no aleatorios usando las pruebas de Nelson (8 tests con zonas de 1σ)"
+  ],
+  "entregable_esperado": "Par de gráficos X-bar y R/s completos con interpretación de causas especiales identificadas",
+  "nodos_previos": [
+    "control_charts_shewhart"
+  ],
+  "nodos_siguientes": [
+    "interpretacion_graficos_variables"
+  ],
+  "condiciones_activacion": [
+    "Cuando se tienen datos de medición continua (longitud, peso, temperatura, etc.)"
+  ]
+}

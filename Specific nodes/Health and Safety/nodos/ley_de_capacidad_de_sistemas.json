@@ -1,0 +1,24 @@
+{
+  "node_id": "ley_de_capacidad_de_sistemas",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Ley de Capacidad de los Sistemas (Systems Development Law)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Toda nueva tecnología introducida para reducir la carga de trabajo o el riesgo tiende a ser 'estirada' hasta que el sistema vuelve a operar en el límite de su capacidad. Las mejoras tecnológicas no reducen las demandas sobre el operador, sino que elevan las expectativas de desempeño, empujándolo nuevamente al borde del envolvente operacional del cual la tecnología debía protegerlo.",
+  "pasos_accionables": [
+    "Antes de implementar nueva tecnología, identificar qué expectativas de desempeño se elevarán como consecuencia",
+    "Monitorear si las ganancias de eficiencia se traducen en mayor carga de trabajo o mayores exigencias operativas",
+    "Establecer límites organizacionales que eviten explotar al máximo cada mejora tecnológica sin margen de seguridad"
+  ],
+  "entregable_esperado": "Informe de impacto organizacional que anticipe cómo la nueva tecnología modificará las exigencias de desempeño sobre los operadores",
+  "nodos_previos": [
+    "diseno_no_neutral_interfaces"
+  ],
+  "nodos_siguientes": [
+    "adaptaciones_procedimentales"
+  ],
+  "condiciones_activacion": [
+    "Cuando se introduce nueva tecnología o automatización con la promesa de reducir carga de trabajo",
+    "Cuando se evalúan mejoras de eficiencia en sistemas de alto riesgo"
+  ]
+}

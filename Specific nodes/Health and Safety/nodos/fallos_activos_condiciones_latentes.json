@@ -1,0 +1,23 @@
+{
+  "node_id": "fallos_activos_condiciones_latentes",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Fallos Activos y Condiciones Latentes",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Los fallos activos son errores o violaciones cometidos en la 'primera línea' (pilotos, operadores) con efectos inmediatos y de corta duración. Las condiciones latentes son como 'patógenos residentes': diseño deficiente, fallas de supervisión, procedimientos inviables, entrenamiento insuficiente, que pueden permanecer inactivas por años hasta combinarse con circunstancias locales y fallos activos para penetrar las defensas. Las condiciones latentes se originan en decisiones de alto nivel (gerencia, reguladores, fabricantes) y pueden contribuir a múltiples accidentes si no se detectan.",
+  "pasos_accionables": [
+    "Realizar un análisis diferenciado en cada investigación de incidente: identificar fallos activos y condiciones latentes por separado.",
+    "Rastrear el origen de las condiciones latentes hasta decisiones gerenciales o de diseño.",
+    "Crear un registro de condiciones latentes conocidas para monitoreo continuo, no solo tras accidentes."
+  ],
+  "entregable_esperado": "Un reporte de investigación de incidente que distinga claramente fallos activos de condiciones latentes y trace su origen organizacional.",
+  "nodos_previos": [
+    "modelo_queso_suizo"
+  ],
+  "nodos_siguientes": [
+    "trayectoria_del_accidente"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga la causa raíz de un accidente y se busca ir más allá del 'error humano' superficial."
+  ]
+}

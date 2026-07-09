@@ -1,0 +1,26 @@
+{
+  "node_id": "estrategias_estimacion_costos",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Estrategias de Estimación de Costos: Recursos Totales vs. Costo Unitario",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario es más apropiado cuando las deficiencias son raras pero costosas, complejas, o tan rutinarias que su impacto acumulado no es evidente.",
+  "pasos_accionables": [
+    "Determinar si la actividad a medir es mejor evaluada por recursos totales o por costo unitario",
+    "Para recursos totales: identificar el costo total de la categoría y estimar el porcentaje atribuible a mala calidad",
+    "Para costo unitario: estimar el costo de corregir una ocurrencia promedio y multiplicarlo por la frecuencia anual",
+    "Usar fuentes de datos como sistemas de reporte de tiempo, contabilidad de costos, o juicio informado de supervisores",
+    "Incluir en el cálculo beneficios, salarios, costos de capital asignado y penalizaciones por pagos tardíos"
+  ],
+  "entregable_esperado": "Una estimación documentada y justificada del costo de cada actividad de mala calidad identificada",
+  "nodos_previos": [
+    "metodologia_medicion_copq"
+  ],
+  "nodos_siguientes": [
+    "roi_proyectos_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita cuantificar el costo específico de una deficiencia o actividad de mala calidad",
+    "Cuando se preparan estimaciones para justificar un proyecto de mejora ante la dirección"
+  ]
+}

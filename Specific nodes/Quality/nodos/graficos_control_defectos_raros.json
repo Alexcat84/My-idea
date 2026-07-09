@@ -1,0 +1,26 @@
+{
+  "node_id": "graficos_control_defectos_raros",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Uso de Gráficos de Control para Detectar Defectos Raros",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando la fracción defectuosa es muy baja (por ejemplo 1 en 5000 o menos), la inspección de producto terminado no puede detectar confiablemente los defectos, sin importar si es visual o mecánica. La única forma efectiva de monitorear el proceso es mediante gráficos de control (x-barra y R) con mediciones reales tomadas durante el proceso de producción, no al final. Estos gráficos muestran si el proceso permanece estable o si algo ha cambiado, permitiendo detener la producción a tiempo.",
+  "pasos_accionables": [
+    "Identificar procesos con tasas de defectos extremadamente bajas donde la inspección final es ineficaz.",
+    "Diseñar un esquema de muestreo continuo durante el proceso (ej. 4 artículos consecutivos, 25 veces al día).",
+    "Construir gráficos x-barra y R con las mediciones tomadas en el proceso.",
+    "Detener la producción si el gráfico indica una causa especial de variación.",
+    "Investigar la causa raíz antes de decidir si se libera o se rechaza el lote completo."
+  ],
+  "entregable_esperado": "Sistema de gráficos de control (x-barra y R) implementado con datos de proceso en tiempo real, en lugar de depender solo de inspección final.",
+  "nodos_previos": [
+    "control_estadistico_de_procesos"
+  ],
+  "nodos_siguientes": [
+    "comparacion_metodos_inspeccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando la fracción defectuosa del proceso es extremadamente baja (menos de 1 en 1000).",
+    "Cuando la inspección final no logra detectar suficientes defectos para estimar confiablemente la calidad del proceso."
+  ]
+}

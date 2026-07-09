@@ -1,0 +1,26 @@
+{
+  "node_id": "costos_ocultos_calidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Costos Ocultos de la Mala Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Son costos difíciles de estimar que no se reflejan en los reportes tradicionales de calidad, como ventas potenciales perdidas, rediseño de productos, tiempo de inactividad de equipos, o asignaciones de desperdicio ya incorporadas en los estándares contables. Estos costos ocultos pueden multiplicar por tres o cuatro el costo de fallas reportado, representando la 'punta del iceberg' del problema real.",
+  "pasos_accionables": [
+    "Identificar costos no capturados en los sistemas contables tradicionales",
+    "Revisar estándares de costos para detectar desperdicios 'normalizados' (ej. tolerancias de scrap)",
+    "Estimar ventas perdidas por insatisfacción o defectos no reportados",
+    "Incluir estos costos en el estudio de COPQ cuando existan datos creíbles",
+    "Documentar los costos que no pueden cuantificarse pero deben mencionarse como referencia"
+  ],
+  "entregable_esperado": "Listado de costos ocultos identificados con estimación cuantitativa cuando sea posible",
+  "nodos_previos": [
+    "categorias_costos_calidad"
+  ],
+  "nodos_siguientes": [
+    "costo_optimo_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando el COPQ reportado parece bajo en comparación con la percepción de problemas",
+    "Al realizar un estudio exhaustivo de costos de calidad"
+  ]
+}

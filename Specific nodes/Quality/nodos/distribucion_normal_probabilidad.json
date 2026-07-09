@@ -1,0 +1,25 @@
+{
+  "node_id": "distribucion_normal_probabilidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución Normal de Probabilidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Muchas características de calidad pueden aproximarse mediante la función de densidad normal, definida completamente por su media (μ) y desviación estándar (σ). Permite predecir el porcentaje de la población que caerá dentro de ciertos límites usando la transformación estándar Z, facilitando el cálculo de probabilidades mediante tablas estadísticas.",
+  "pasos_accionables": [
+    "Verificar mediante el histograma si los datos siguen una forma de campana",
+    "Estimar la media (X̄) y desviación estándar (s) de la muestra",
+    "Calcular el estadístico Z = (X - media) / desviación estándar para el valor de interés",
+    "Consultar la tabla de distribución normal estándar para obtener la probabilidad acumulada",
+    "Interpretar el resultado como porcentaje esperado de la población dentro/fuera de límites"
+  ],
+  "entregable_esperado": "Cálculo de probabilidad o porcentaje esperado de cumplimiento de especificación basado en la distribución normal",
+  "nodos_previos": [
+    "medidas_tendencia_dispersion"
+  ],
+  "nodos_siguientes": [
+    "analisis_capacidad_procesos"
+  ],
+  "condiciones_activacion": [
+    "Si se necesita predecir el comportamiento futuro de un proceso o producto basado en datos históricos"
+  ]
+}

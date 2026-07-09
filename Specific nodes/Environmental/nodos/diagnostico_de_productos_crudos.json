@@ -1,0 +1,24 @@
+{
+  "node_id": "diagnostico_de_productos_crudos",
+  "fase_proyecto": "ideacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Diagnóstico de Productos Crudos",
+  "fuente": "Cradle to Cradle - Michael Braungart",
+  "resumen_teorico": "Un 'producto crudo' es aquel diseñado únicamente para ser atractivo, cumplir regulaciones y venderse, sin considerar la salud humana o ecológica. Estos productos suelen contener aditivos químicos innecesarios (catalizadores, colorantes, retardantes) provenientes de cadenas de suministro globales no trazadas, lo que provoca contaminación del aire interior, bioacumulación y riesgos a la salud. El diseño descuidado, no la mala intención, es la causa raíz.",
+  "pasos_accionables": [
+    "Realizar un inventario completo de materiales y químicos usados en el producto o servicio actual",
+    "Para cada componente, preguntar explícitamente '¿por qué está aquí y es necesario para la función?'",
+    "Rastrear el origen geográfico de cada parte y verificar regulaciones de los países proveedores",
+    "Identificar sustancias conocidas como tóxicas (metales pesados, disruptores endocrinos, PVC, ftalatos)"
+  ],
+  "entregable_esperado": "Matriz de materiales del producto con origen, función y nivel de necesidad/riesgo de cada componente",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "concepto_producto_plus",
+    "limites_de_la_eco_eficiencia"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario está evaluando un producto existente antes de rediseñarlo",
+    "Si se sospecha de problemas de calidad de aire interior o toxicidad en un producto"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "node_id": "senalizacion_de_salidas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Señalización y Marcado de Salidas (Means of Egress)",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_teorico": "Las rutas de egreso deben tener suficientes salidas para permitir escape rápido, señalizadas con letreros iluminados de 'EXIT' con letras de al menos 6 pulgadas. Puertas o pasillos que puedan confundirse con salidas deben marcarse claramente como 'NOT AN EXIT'. La iluminación de emergencia debe probarse mensual y anualmente.",
+  "pasos_accionables": [
+    "Determinar número adecuado de salidas según carga de ocupantes",
+    "Instalar señalización iluminada de 'EXIT' en todas las rutas",
+    "Marcar puertas/pasillos que no son salidas para evitar confusión",
+    "Probar la iluminación de emergencia mensualmente (30 seg) y anualmente (90 min)"
+  ],
+  "entregable_esperado": "Instalación completa y verificada de señalización de salidas conforme a normativa",
+  "nodos_previos": [
+    "rutas_de_salida_y_puertas_de_emergencia"
+  ],
+  "nodos_siguientes": [
+    "sistemas_de_extincion_de_incendios"
+  ],
+  "condiciones_activacion": [
+    "Si el edificio tiene múltiples rutas de escape que requieren clarificación visual"
+  ]
+}

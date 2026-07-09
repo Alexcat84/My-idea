@@ -1,0 +1,30 @@
+{
+  "node_id": "tripod_delta_general_failure_types",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Tripod-Delta y los General Failure Types (GFTs)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_hteorico": "Tripod-Delta es una herramienta proactiva desarrollada para Shell que mide 11 Tipos Generales de Falla (GFTs): Hardware, Diseño, Gestión de Mantenimiento, Procedimientos, Condiciones que Fuerzan el Error, Orden y Limpieza, Metas Incompatibles, Comunicaciones, Organización, Entrenamiento y Defensas. En lugar de medir accidentes directamente, mide las condiciones latentes que los producen, permitiendo intervención preventiva antes de que ocurra el daño.",
+  "resumen_teorico": "Tripod-Delta es una herramienta proactiva desarrollada para Shell que mide 11 Tipos Generales de Falla (GFTs): Hardware, Diseño, Gestión de Mantenimiento, Procedimientos, Condiciones que Fuerzan el Error, Orden y Limpieza, Metas Incompatibles, Comunicaciones, Organización, Entrenamiento y Defensas. En lugar de medir accidentes directamente, mide las condiciones latentes que los producen, permitiendo intervención preventiva antes de que ocurra el daño.",
+  "pasos_accionables": [
+    "Conformar un equipo de especialistas de tarea (task specialists) por tipo de operación",
+    "Generar indicadores observables (sí/no) para cada uno de los 11 GFTs relevantes a la operación",
+    "Aplicar checklist de 220 ítems (20 por GFT) de forma periódica (trimestral sugerido)",
+    "Generar el Failure State Profile (perfil de fallas) mediante software",
+    "Identificar los 2-3 GFTs más críticos y planificar acciones remediales",
+    "Repetir la medición y comparar tendencias en el tiempo"
+  ],
+  "entregable_esperado": "Failure State Profile (gráfico de barras) con los GFTs priorizados y un plan de acción remedial para los 2-3 más críticos",
+  "nodos_previos": [
+    "enfoque_situacional_vs_personal"
+  ],
+  "nodos_siguientes": [
+    "review_mesh_evaluacion_por_calificacion",
+    "heart_evaluacion_probabilidad_error"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización busca una herramienta proactiva de gestión de riesgos",
+    "Cuando se quiere medir condiciones latentes antes de que ocurran accidentes",
+    "En operaciones de alto riesgo como exploración petrolera, mantenimiento aéreo o transporte"
+  ]
+}

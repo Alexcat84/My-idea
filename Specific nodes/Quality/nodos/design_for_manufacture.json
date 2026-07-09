@@ -1,0 +1,25 @@
+{
+  "node_id": "design_for_manufacture",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Diseño para Manufactura (DFM)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Enfoque sistemático que permite a los ingenieros anticipar los costos de manufactura desde etapas tempranas del diseño, incluso con geometrías preliminares. Ayuda a explorar procesos y materiales alternativos más allá de los que el ingeniero conoce, permitiendo comparar costos entre diseños alternativos.",
+  "pasos_accionables": [
+    "Identificar procesos de manufactura y materiales viables más allá de los conocidos por el equipo",
+    "Generar estimaciones de costos de piezas y herramental para cada alternativa de diseño",
+    "Comparar cuantitativamente las alternativas de diseño en términos de costo de manufactura",
+    "Seleccionar el diseño y proceso más económico que cumpla los requisitos funcionales"
+  ],
+  "entregable_esperado": "Comparación de costos de manufactura entre alternativas de diseño con recomendación final",
+  "nodos_previos": [
+    "concurrent_engineering"
+  ],
+  "nodos_siguientes": [
+    "design_for_assembly"
+  ],
+  "condiciones_activacion": [
+    "Cuando se desconoce el impacto en costos de manufactura de las decisiones de diseño",
+    "Cuando se busca optimizar la selección de materiales y procesos"
+  ]
+}

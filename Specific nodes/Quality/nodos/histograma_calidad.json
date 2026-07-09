@@ -1,0 +1,24 @@
+{
+  "node_id": "histograma_calidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Histograma como Herramienta de Análisis",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El histograma es un gráfico de barras verticales de una distribución de frecuencia que resalta el centro y la cantidad de variación en una muestra de datos. Su simplicidad de construcción e interpretación lo convierte en una herramienta efectiva para el análisis elemental de datos y para evaluar si un proceso puede cumplir con los límites de especificación.",
+  "pasos_accionables": [
+    "Construir la distribución de frecuencia previa a partir de los datos",
+    "Graficar las barras verticales según las frecuencias de cada celda",
+    "Agregar los límites de especificación al gráfico",
+    "Evaluar el centrado, ancho y forma del histograma para determinar capacidad del proceso"
+  ],
+  "entregable_esperado": "Histograma graficado con límites de especificación y análisis de capacidad del proceso",
+  "nodos_previos": [
+    "frecuencia_distribucion"
+  ],
+  "nodos_siguientes": [
+    "analisis_capacidad_procesos"
+  ],
+  "condiciones_activacion": [
+    "Si se necesita visualizar gráficamente la variación de un proceso o característica de calidad"
+  ]
+}

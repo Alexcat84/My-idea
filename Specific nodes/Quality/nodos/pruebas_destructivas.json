@@ -1,0 +1,25 @@
+{
+  "node_id": "pruebas_destructivas",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Manejo de Pruebas Destructivas mediante Control Estadístico",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no es posible aplicar inspección por muestreo o screening tradicional, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.",
+  "pasos_accionables": [
+    "Identificar los atributos de calidad que requieren pruebas destructivas.",
+    "Implementar cartas de control (X-barra y R) sobre el proceso de fabricación en lugar de pruebas al producto terminado.",
+    "Verificar que el proceso esté en control estadístico antes de confiar en la calidad del producto.",
+    "Eliminar la práctica de screening de lotes rechazados, ya que no aporta valor en pruebas destructivas."
+  ],
+  "entregable_esperado": "Sistema de control estadístico de proceso implementado que garantice la calidad sin depender de pruebas destructivas al 100%.",
+  "nodos_previos": [
+    "regla_todo_o_nada_inspeccion",
+    "control_estadistico_de_procesos"
+  ],
+  "nodos_siguientes": [
+    "deteccion_defectos_raros_control_estadistico"
+  ],
+  "condiciones_activacion": [
+    "Cuando el atributo de calidad a probar destruye la muestra o unidad probada"
+  ]
+}

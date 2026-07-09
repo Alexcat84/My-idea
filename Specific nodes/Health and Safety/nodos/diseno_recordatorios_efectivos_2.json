@@ -1,0 +1,27 @@
+{
+  "node_id": "diseno_recordatorios_efectivos_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Diseño de Recordatorios Efectivos para Prevenir Omisiones",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Los errores por omisión son frecuentes en tareas de mantenimiento y pueden reducirse significativamente mediante recordatorios bien diseñados. Un buen recordatorio debe cumplir cinco criterios universales: ser conspicuo (atraer atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (informar cuándo y dónde), de contenido claro (qué hacer) y verificable (permitir marcar los pasos completados). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquear el progreso si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (removible tras cumplir su función).",
+  "pasos_accionables": [
+    "Identificar los pasos de tarea propensos a omisión mediante análisis de errores históricos",
+    "Diseñar recordatorios que cumplan los 5 criterios universales: conspicuo, contiguo, contextual, contenido, check",
+    "Evaluar si aplican criterios secundarios como compeler el progreso o confirmar finalización",
+    "Implementar y probar el recordatorio en el flujo real de trabajo",
+    "Revisar periódicamente la efectividad del recordatorio y ajustar según kaizen (mejora continua)"
+  ],
+  "entregable_esperado": "Sistema de recordatorios documentado con checklist de verificación para pasos críticos de tareas de mantenimiento",
+  "nodos_previos": [
+    "identificacion_pasos_propensos_error"
+  ],
+  "nodos_siguientes": [
+    "diseno_a_prueba_de_errores",
+    "rediseno_de_procesos_de_mantenimiento"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detectan omisiones recurrentes en procedimientos de mantenimiento o inspección",
+    "Cuando una tarea tiene múltiples pasos secuenciales fáciles de olvidar"
+  ]
+}

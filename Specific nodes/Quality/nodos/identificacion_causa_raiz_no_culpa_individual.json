@@ -1,0 +1,26 @@
+{
+  "node_id": "identificacion_causa_raiz_no_culpa_individual",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Identificación de la causa raíz del problema en lugar de culpar al individuo",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El caso del banco muestra que, antes de aplicar métodos estadísticos, los errores generaban conflictos entre turnos, departamentos y personas ('la máquina tiene la culpa'), deteriorando la moral. Al usar métodos estadísticos que rastrean el origen real de la variación (departamento, turno, máquina, operador), la organización puede identificar el problema estructural real en lugar de señalar a un individuo, mejorando la colaboración y la moral del equipo.",
+  "pasos_accionables": [
+    "Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).",
+    "Analizar los datos para distinguir entre variación común del sistema y causas especiales atribuibles a un caso puntual.",
+    "Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.",
+    "Diseñar acciones correctivas dirigidas a la causa estructural identificada.",
+    "Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque."
+  ],
+  "entregable_esperado": "Un sistema de registro y análisis estadístico que permite localizar la causa raíz de los errores sin atribuir culpa individual, junto con un plan de acción correctiva.",
+  "nodos_previos": [
+    "costos_de_calidad_cuatro_categorias"
+  ],
+  "nodos_siguientes": [
+    "eliminacion_de_firmas_duplicadas_responsabilidad_unica"
+  ],
+  "condiciones_activacion": [
+    "Si existe conflicto interno o baja moral por atribución de culpas ante errores recurrentes.",
+    "Si se necesita implementar un sistema de mejora continua basado en datos en lugar de sanciones."
+  ]
+}

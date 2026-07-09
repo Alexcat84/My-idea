@@ -1,0 +1,25 @@
+{
+  "node_id": "cese_dependencia_inspeccion_masiva",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Cesar la Dependencia de la Inspección Masiva",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Tercer punto de Deming: la inspección al 100% para encontrar defectos es tardía, costosa e ineficaz, y equivale a admitir que el proceso no tiene la capacidad requerida. La calidad debe construirse dentro del proceso de producción, no verificarse después. La inspección no mejora ni garantiza la calidad; solo separa (imperfectamente) lo bueno de lo malo.",
+  "pasos_accionables": [
+    "Identificar los puntos actuales de inspección masiva en el proceso",
+    "Analizar la causa raíz de los defectos detectados en inspección, en lugar de solo separarlos",
+    "Rediseñar el proceso de producción para construir calidad desde el origen",
+    "Reservar la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico (ej. circuitos integrados complejos)"
+  ],
+  "entregable_esperado": "Plan de rediseño de proceso que reduzca la dependencia de inspección final y aumente el control en el origen",
+  "nodos_previos": [
+    "adoptar_nueva_filosofia"
+  ],
+  "nodos_siguientes": [
+    "fin_precio_como_criterio_unico"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización usa inspección al 100% o múltiple como principal método de control de calidad",
+    "Cuando hay retrabajo constante y acumulación de piezas para reparación"
+  ]
+}

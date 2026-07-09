@@ -1,0 +1,26 @@
+{
+  "node_id": "calificacion_de_calidad_de_proveedores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Calificación de Calidad de Proveedores (Supplier Rating)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proporciona un resumen cuantitativo de la calidad del proveedor a lo largo de un periodo de tiempo, útil para decidir cómo asignar compras entre proveedores. Puede basarse en porcentaje de no conformidad, calidad general del producto (puntos por fase), análisis económico de costo total, o un plan compuesto que incluya calidad, entrega, precio y capacidad de respuesta con pesos ponderados.",
+  "pasos_accionables": [
+    "Seleccionar las métricas de calidad relevantes (% no conformidad, DPM, etc.)",
+    "Definir un plan compuesto con pesos para calidad, entrega, costo y respuesta",
+    "Calcular la calificación periódica de cada proveedor",
+    "Comunicar la calificación y su impacto en la asignación de compras a los proveedores",
+    "Usar la calificación para decidir participación de mercado entre proveedores"
+  ],
+  "entregable_esperado": "Reporte periódico de calificación de proveedores con puntaje compuesto y su vínculo a decisiones de compra",
+  "nodos_previos": [
+    "certificacion_de_proveedores"
+  ],
+  "nodos_siguientes": [
+    "analisis_pareto_de_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir la asignación de futuras compras entre múltiples proveedores",
+    "Cuando se requiere retroalimentación cuantitativa continua a proveedores"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "error_proofing_servicio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Error-Proofing (A Prueba de Errores) en Procesos de Servicio",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El error-proofing es un elemento clave de prevención de errores en procesos de servicio. Se basa en cinco principios: eliminar la actividad propensa a errores, sustituir por un proceso más confiable, facilitar el trabajo del trabajador, detectar errores más temprano, y minimizar el efecto de los errores. La tecnología juega un rol importante como fuente de ayudas para el error-proofing.",
+  "pasos_accionables": [
+    "Identificar actividades propensas a errores en el proceso",
+    "Evaluar si la actividad puede eliminarse completamente",
+    "Buscar sustitutos más confiables para el proceso actual",
+    "Simplificar el trabajo para reducir la posibilidad de error humano",
+    "Implementar detección temprana de errores (software, códigos de barras, checklists)",
+    "Diseñar mecanismos para minimizar el impacto cuando ocurran errores"
+  ],
+  "entregable_esperado": "Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores",
+  "nodos_previos": [
+    "analisis_flujo_proceso_servicio"
+  ],
+  "nodos_siguientes": [
+    "medicion_capacidad_servicio"
+  ],
+  "condiciones_activacion": [
+    "Cuando se identifican puntos del proceso propensos a fallos humanos",
+    "Cuando se busca prevenir defectos antes de que ocurran en el servicio"
+  ]
+}

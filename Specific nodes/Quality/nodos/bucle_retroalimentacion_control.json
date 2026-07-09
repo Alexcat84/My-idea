@@ -1,0 +1,25 @@
+{
+  "node_id": "bucle_retroalimentacion_control",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "El Bucle de Retroalimentación (Feedback Loop) en Control de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor evalúa el desempeño real, un árbitro (umpire) lo compara contra el estándar, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Puede ser automatizado, de autocontrol del empleado, o mediante inspección externa.",
+  "pasos_accionables": [
+    "Instalar un sensor adecuado para medir el sujeto de control elegido",
+    "Definir el estándar o meta de calidad contra la cual comparar",
+    "Establecer un árbitro (persona o sistema) que compare desempeño real vs meta",
+    "Diseñar un actuador que corrija el proceso cuando exista desviación significativa"
+  ],
+  "entregable_esperado": "Diagrama de bucle de retroalimentación documentado para el proceso crítico seleccionado",
+  "nodos_previos": [
+    "control_calidad_definicion"
+  ],
+  "nodos_siguientes": [
+    "sujetos_de_control",
+    "autocontrol_empleado"
+  ],
+  "condiciones_activacion": [
+    "Si se necesita diseñar un sistema de control para un proceso nuevo o existente"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "epc_condiciones_productoras_error",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Condiciones Productoras de Error (EPCs)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_theorico": "Las EPCs son una lista jerarquizada de factores contextuales que multiplican la probabilidad de error humano en una tarea, derivada de una amplia revisión de literatura en factores humanos. Van desde la falta de familiaridad con una situación (factor x17) hasta la edad del personal en tareas perceptuales (x1.02). Permiten identificar qué condiciones del entorno de trabajo están incrementando el riesgo de error.",
+  "resumen_teorico": "Las EPCs son una lista jerarquizada de factores contextuales que multiplican la probabilidad de error humano en una tarea, derivada de una amplia revisión de literatura en factores humanos. Van desde la falta de familiaridad con una situación (factor x17) hasta la edad del personal en tareas perceptuales (x1.02). Permiten identificar qué condiciones del entorno de trabajo están incrementando el riesgo de error.",
+  "pasos_accionables": [
+    "Listar las condiciones de trabajo presentes en la tarea evaluada",
+    "Comparar dichas condiciones contra la lista rankeada de EPCs",
+    "Seleccionar los factores EPC más relevantes y su peso multiplicador",
+    "Priorizar la remediación de los EPCs con mayor impacto (ej: falta de familiaridad, escasez de tiempo)"
+  ],
+  "entregable_esperado": "Lista priorizada de EPCs presentes en el entorno laboral con sus factores multiplicadores de riesgo",
+  "nodos_previos": [
+    "heart_metodo_evaluacion_error_humano"
+  ],
+  "nodos_siguientes": [
+    "vpc_condiciones_productoras_violacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se desea identificar causas raíz de errores en el lugar de trabajo",
+    "Si se está diseñando un plan de mitigación de riesgos operacionales"
+  ]
+}

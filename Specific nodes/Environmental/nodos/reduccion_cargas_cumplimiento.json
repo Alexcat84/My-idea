@@ -1,0 +1,24 @@
+{
+  "node_id": "reduccion_cargas_cumplimiento",
+  "fase_proyecto": "planificacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Reducción Proactiva de Cargas de Cumplimiento Regulatorio",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Las empresas pueden rediseñar productos o procesos para eliminar el uso de materiales peligrosos innecesarios, reduciendo así la complejidad regulatoria. El 'green list' de SC Johnson, que califica materias primas según impacto ambiental, es un ejemplo de esta práctica proactiva.",
+  "pasos_accionables": [
+    "Mapear todos los materiales usados en productos y procesos de manufactura",
+    "Clasificar materiales según su impacto ambiental y de salud (ej. escala 0-3)",
+    "Priorizar el rediseño de productos para eliminar materiales de alto riesgo regulatorio",
+    "Considerar la descentralización de equipos de cumplimiento si hay heterogeneidad regulatoria regional"
+  ],
+  "entregable_esperado": "Lista clasificada de materiales con plan de sustitución de los de mayor riesgo regulatorio",
+  "nodos_previos": [
+    "sistema_gestion_cumplimiento_ambiental"
+  ],
+  "nodos_siguientes": [
+    "deteccion_temprana_regulatoria"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proceso de manufactura usa materiales peligrosos con seguimiento regulatorio complejo"
+  ]
+}

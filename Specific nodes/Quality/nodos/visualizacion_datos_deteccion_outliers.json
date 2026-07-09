@@ -1,0 +1,27 @@
+{
+  "node_id": "visualizacion_datos_deteccion_outliers",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Visualización de Datos y Detección de Valores Atípicos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Método para identificar puntos de datos anómalos (outliers) mediante técnicas gráficas como box plots y scatter plots. Los puntos visualmente distantes deben ser investigados y solo eliminados si son atribuibles a una causa específica no relacionada con la pregunta de análisis. El análisis de residuos de una regresión también ayuda a detectar puntos inusuales.",
+  "pasos_accionables": [
+    "Graficar los datos en box plots o scatter plots",
+    "Identificar visualmente puntos distantes del resto",
+    "Investigar la causa de los puntos atípicos",
+    "Eliminar el punto solo si se atribuye a una causa específica no relacionada con el análisis",
+    "Usar residuos de regresión como verificación adicional"
+  ],
+  "entregable_esperado": "Conjunto de datos depurado y justificación documentada de cualquier exclusión de outliers",
+  "nodos_previos": [
+    "recoleccion_datos_calidad"
+  ],
+  "nodos_siguientes": [
+    "histogramas_distribucion_frecuencias",
+    "analisis_regresion_correlacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detectan valores extremos en un conjunto de datos de calidad",
+    "Antes de realizar análisis estadístico formal"
+  ]
+}

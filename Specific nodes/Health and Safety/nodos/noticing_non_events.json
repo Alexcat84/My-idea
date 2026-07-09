@@ -1,0 +1,23 @@
+{
+  "node_id": "noticing_non_events",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Dificultad para Notar la Ausencia de Cambio (Non-Events)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "En sistemas automatizados, muchos accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque se abandonan bajo carga de trabajo alta. El resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
+  "pasos_accionables": [
+    "Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado",
+    "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
+    "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+    "Revisar incidentes pasados en busca de 'sorpresas de automatización' como indicador de este riesgo"
+  ],
+  "entregable_esperado": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos",
+  "nodos_previos": [
+    "new_technology_error_pathways"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se diseñan sistemas de monitoreo de procesos automatizados de larga duración",
+    "Cuando se investiga un incidente donde el sistema continuó una acción no deseada sin ser detectado a tiempo"
+  ]
+}

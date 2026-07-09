@@ -1,0 +1,26 @@
+{
+  "node_id": "conexion_comportamiento_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Conexión entre Comportamiento y Proceso",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "Para entender el estado mental de las personas durante un incidente, es necesario vincular sus comunicaciones/acciones con lo que ocurría simultáneamente en el proceso técnico. Esto implica rastrear cómo cambiaron los parámetros del proceso en el tiempo, cómo estaban disponibles esos valores para los operadores (diales, displays, alarmas), y distinguir entre disponibilidad de datos y observabilidad real de los mismos.",
+  "pasos_accionables": [
+    "Registrar cómo cambiaron los parámetros críticos del proceso a lo largo del tiempo",
+    "Documentar cómo estaban disponibles esos valores para los operadores (interfaz, alarmas)",
+    "Distinguir entre disponibilidad de datos y observabilidad real",
+    "Identificar qué tareas eran normales en esa etapa de la operación",
+    "Determinar qué hacían otras personas en el entorno operativo simultáneamente"
+  ],
+  "entregable_esperado": "Mapa que conecta parámetros del proceso con las acciones y evaluaciones de las personas en el tiempo",
+  "nodos_previos": [
+    "construccion_timeline_resolucion"
+  ],
+  "nodos_siguientes": [
+    "identificacion_eventos_datos",
+    "reconstruccion_contexto_situacional"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita entender qué llevó a una persona a actuar de cierta manera dado el estado del proceso"
+  ]
+}

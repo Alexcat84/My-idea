@@ -1,0 +1,27 @@
+{
+  "node_id": "takt_time_demand",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Takt Time y Gestión de la Demanda",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El takt time es el ritmo al cual el cliente compra una unidad de producto, y determina el 'pulso' o cadencia de la producción. Entender la demanda (patrón, variabilidad, tendencia) es esencial para calcular el takt time y ajustar recursos. La capacidad debe balancearse con la demanda para evitar tanto insatisfacción del cliente como desperdicio.",
+  "pasos_accionables": [
+    "Calcular la demanda del cliente en un periodo definido",
+    "Determinar el takt time dividiendo el tiempo disponible entre la demanda",
+    "Comparar takt time con capacidad demostrada y teórica",
+    "Ajustar recursos (manpower, equipos) para igualar el takt time",
+    "Si la demanda varía significativamente, desarrollar múltiples value streams"
+  ],
+  "entregable_esperado": "Cálculo de takt time documentado y plan de ajuste de recursos según demanda",
+  "nodos_previos": [
+    "value_stream_mapping"
+  ],
+  "nodos_siguientes": [
+    "line_balancing",
+    "constraint_management"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita sincronizar producción con demanda del cliente",
+    "Si hay variabilidad significativa en la demanda"
+  ]
+}

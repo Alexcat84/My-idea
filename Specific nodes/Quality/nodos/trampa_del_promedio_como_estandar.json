@@ -1,0 +1,26 @@
+{
+  "node_id": "trampa_del_promedio_como_estandar",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "La Trampa del Promedio como Estándar de Desempeño",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming ilustra un error común de gestión: usar el promedio del grupo como umbral para identificar 'bajo desempeño' e intervenir individualmente. Como en cualquier distribución la mitad de los puntos estarán por debajo del promedio (es matemáticamente inevitable), este método selecciona aleatoriamente a la mitad del personal cada período sin distinguir causas especiales de variación común, generando frustración y ningún beneficio real. La solución es aplicar límites de control estadísticos (no el simple promedio) para distinguir variación aleatoria de causas reales de bajo desempeño.",
+  "pasos_accionables": [
+    "Dejar de usar el promedio simple como línea de corte para intervenciones individuales",
+    "Construir un gráfico de control con límites superior e inferior calculados estadísticamente",
+    "Identificar solo los puntos que caen fuera de los límites de control como candidatos a intervención",
+    "Investigar causas especiales (ej. problemas de visión, capacitación) solo en esos casos atípicos"
+  ],
+  "entregable_esperado": "Gráfico de control con límites estadísticos aplicado al indicador de desempeño, y protocolo de intervención basado en señales reales, no en el promedio",
+  "nodos_previos": [
+    "estado_de_control_estadistico"
+  ],
+  "nodos_siguientes": [
+    "causas_comunes_vs_especiales",
+    "responsabilidad_gerencial_causas_comunes"
+  ],
+  "condiciones_activacion": [
+    "Cuando la gerencia usa el promedio del grupo como criterio de intervención individual",
+    "Cuando existe alta rotación de personal 'señalado' semana a semana sin mejora real"
+  ]
+}

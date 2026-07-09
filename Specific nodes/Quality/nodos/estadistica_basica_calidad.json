@@ -1,0 +1,25 @@
+{
+  "node_id": "estadistica_basica_calidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Estadística Básica para Análisis de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Conjunto de conceptos estadísticos descriptivos (media, mediana, moda, rango, varianza, desviación estándar) y de muestreo necesarios para analizar e interpretar datos de un problema de calidad. Sirve como base para métodos estadísticos más avanzados como pruebas de hipótesis.",
+  "pasos_accionables": [
+    "Determinar el tipo de dato (continuo, ordinal, nominal) antes de elegir el análisis",
+    "Calcular medidas de tendencia central: media, mediana, moda",
+    "Calcular medidas de dispersión: rango, varianza, desviación estándar",
+    "Definir el esquema de muestreo (aleatorio, estratificado) y el tamaño de muestra requerido",
+    "Verificar que la muestra sea libre de sesgo, representativa y aleatoria"
+  ],
+  "entregable_esperado": "Resumen estadístico descriptivo de los datos del problema, con esquema de muestreo definido",
+  "nodos_previos": [
+    "hojas_de_verificacion"
+  ],
+  "nodos_siguientes": [
+    "diagrama_caja"
+  ],
+  "condiciones_activacion": [
+    "Cuando se han recolectado datos y se necesita caracterizar un problema antes de un análisis más profundo"
+  ]
+}

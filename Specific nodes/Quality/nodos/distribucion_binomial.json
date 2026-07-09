@@ -1,0 +1,25 @@
+{
+  "node_id": "distribucion_binomial",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución Binomial para Muestreo de Aceptación",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La distribución binomial calcula la probabilidad de r ocurrencias en n ensayos independientes con probabilidad constante de éxito p. Se aplica cuando no se cumplen las condiciones para usar la aproximación de Poisson, típicamente cuando la población es al menos 10 veces el tamaño de muestra.",
+  "pasos_accionables": [
+    "Definir el tamaño de muestra n y la probabilidad de defecto histórica p",
+    "Calcular q = 1 - p",
+    "Aplicar la fórmula binomial o usar software (Minitab, Excel) para obtener probabilidades",
+    "Usar los resultados para diseñar planes de muestreo de aceptación"
+  ],
+  "entregable_esperado": "Tabla de probabilidades binomiales para diseño de plan de muestreo",
+  "nodos_previos": [
+    "distribucion_poisson"
+  ],
+  "nodos_siguientes": [
+    "teoremas_probabilidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña un plan de muestreo de aceptación de lotes",
+    "Cuando la probabilidad de defecto no es suficientemente pequeña para usar Poisson"
+  ]
+}

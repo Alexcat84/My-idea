@@ -1,0 +1,25 @@
+{
+  "node_id": "capacidad_del_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Capacidad del Proceso",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.",
+  "pasos_accionables": [
+    "Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)",
+    "Calcular la media y el rango promedio del proceso estable",
+    "Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)",
+    "Comunicar la capacidad real a diseño e ingeniería para ajustar especificaciones realistas"
+  ],
+  "entregable_esperado": "Informe de capacidad del proceso con límites naturales de variación calculados a partir de datos en control estadístico.",
+  "nodos_previos": [
+    "graficos_de_control_uso"
+  ],
+  "nodos_siguientes": [
+    "ventajas_control_estadistico"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita definir qué especificaciones puede cumplir realmente un proceso",
+    "Antes de negociar especificaciones con clientes o diseño de producto"
+  ]
+}

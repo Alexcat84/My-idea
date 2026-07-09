@@ -1,0 +1,25 @@
+{
+  "node_id": "limites_de_especificacion_vs_limites_de_control",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Diferencia entre Límites de Especificación y Límites de Control",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Los límites de especificación son requisitos externos impuestos al producto (lo que el cliente acepta), mientras que los límites de control son calculados estadísticamente a partir del propio comportamiento del proceso. Confundirlos lleva a ajustar el proceso constantemente para 'cumplir especificaciones', lo cual introduce más variación y pérdidas económicas severas (sobre-ajuste).",
+  "pasos_accionables": [
+    "Calcular los límites de control a partir de datos reales del proceso (no de especificaciones deseadas)",
+    "Nunca ajustar el proceso basándose en si un punto individual cae dentro o fuera de especificación",
+    "Ajustar el proceso solo cuando el gráfico de control señale una causa especial",
+    "Capacitar a supervisores para distinguir ambos conceptos"
+  ],
+  "entregable_esperado": "Documento que distinga claramente los límites de especificación del cliente frente a los límites de control calculados del proceso, evitando ajustes reactivos innecesarios.",
+  "nodos_previos": [
+    "control_estadistico_del_proceso"
+  ],
+  "nodos_siguientes": [
+    "causas_comunes_vs_especiales"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo ajusta la maquinaria cada vez que una pieza está fuera de especificación",
+    "Cuando existe sobre-corrección crónica en el proceso"
+  ]
+}

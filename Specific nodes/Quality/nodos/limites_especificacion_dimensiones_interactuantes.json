@@ -1,0 +1,23 @@
+{
+  "node_id": "limites_especificacion_dimensiones_interactuantes",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Límites de Especificación para Dimensiones Interactuantes (Stack-up de Tolerancias)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando múltiples componentes se ensamblan para formar un resultado final, sus tolerancias interactúan. El método tradicional de sumar tolerancias directamente es matemáticamente correcto pero demasiado conservador. El enfoque estadístico, basado en la suma de varianzas (raíz cuadrada de la suma de cuadrados de tolerancias), reconoce que es estadísticamente improbable que todos los componentes estén simultáneamente en el extremo de su tolerancia, resultando en límites de ensamble más realistas.",
+  "pasos_accionables": [
+    "Identificar todas las dimensiones de componentes que interactúan en el ensamble final",
+    "Determinar las tolerancias individuales de cada componente",
+    "Aplicar el método estadístico de raíz de suma de cuadrados de las tolerancias en lugar de suma simple",
+    "Calcular la tolerancia resultante del ensamble completo",
+    "Comparar contra el método de suma simple para validar el ahorro en restricciones de manufactura"
+  ],
+  "entregable_esperado": "Cálculo de tolerancia de ensamble mediante método estadístico, documentado junto con la comparación frente al método aditivo tradicional",
+  "nodos_previos": [
+    "limites_tolerancia_estadistica"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se diseñan ensambles mecánicos con múltiples componentes cuyas tolerancias individuales afectan una dimensión final crítica"
+  ]
+}

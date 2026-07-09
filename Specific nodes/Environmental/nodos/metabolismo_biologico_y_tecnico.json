@@ -1,0 +1,26 @@
+{
+  "node_id": "metabolismo_biologico_y_tecnico",
+  "fase_proyecto": "ideacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Los Dos Metabolismos: Biosfera y Tecnosfera",
+  "fuente": "Cradle to Cradle - Michael Braungart",
+  "resumen_teorico": "Marco conceptual que divide todos los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes circulan de forma segura en los ciclos naturales, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin degradarse ni perder calidad. Para que ambos sistemas funcionen de forma saludable, deben mantenerse separados y no contaminarse mutuamente.",
+  "pasos_accionables": [
+    "Determinar si cada material del producto pertenece al metabolismo biológico o técnico",
+    "Diseñar el producto de manera que sus componentes puedan separarse fácilmente al final de su vida útil",
+    "Evitar 'híbridos monstruosos' que mezclen materiales biológicos y técnicos de forma inseparable",
+    "Establecer sistemas de recolección o retorno específicos para cada tipo de metabolismo"
+  ],
+  "entregable_esperado": "Especificación técnica del producto indicando qué componentes son nutrientes biológicos y cuáles son nutrientes técnicos, con su ruta de retorno correspondiente",
+  "nodos_previos": [
+    "waste_equals_food"
+  ],
+  "nodos_siguientes": [
+    "nutrientes_biologicos",
+    "hibridos_monstruosos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario diseña un producto que mezcla materiales orgánicos y sintéticos",
+    "Cuando se busca definir estrategias de fin de vida útil para un producto"
+  ]
+}

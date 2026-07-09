@@ -1,0 +1,26 @@
+{
+  "node_id": "control_estadistico_de_procesos_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control Estadístico de Procesos mediante Gráficos de Control",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El control estadístico se determina mediante gráficos de control (X-barra y R) que establecen límites superior e inferior de control basados en la variación natural del proceso. Puntos fuera de estos límites indican causas especiales que requieren investigación individual, mientras que puntos dentro de los límites representan la variación normal del sistema que solo se mejora modificando el sistema en su conjunto.",
+  "pasos_accionables": [
+    "Recolectar datos de desempeño en muestras (por ejemplo, n=4 o n=5)",
+    "Calcular el promedio y rango de cada muestra",
+    "Establecer límites de control superior e inferior (típicamente 3 sigma) a partir del rango promedio",
+    "Graficar los puntos en el tiempo y observar si permanecen dentro de los límites",
+    "Investigar cualquier punto fuera de los límites como posible causa especial"
+  ],
+  "entregable_esperado": "Un gráfico de control (X-barra y R) construido y con límites calculados para el proceso analizado",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "distincion_causas_comunes_especiales",
+    "administracion_sin_miedo",
+    "deteccion_de_lideres_y_rezagados"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita determinar si un proceso o trabajador está en control estadístico",
+    "Antes de decidir si intervenir individualmente o mejorar el sistema"
+  ]
+}

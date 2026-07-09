@@ -1,0 +1,26 @@
+{
+  "node_id": "ctq_caracteristicas_criticas",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "CTQ - Características Críticas para la Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Las CTQs (Critical-to-Quality) son la traducción técnica y medible de las necesidades expresadas por el cliente. Sirven como objetivos concretos para los diseñadores y como criterios de decisión durante todo el proceso de diseño, garantizando que el producto final resuelva efectivamente el problema del cliente.",
+  "pasos_accionables": [
+    "Recolectar la voz del cliente (VOC) mediante entrevistas, encuestas u observación",
+    "Traducir las necesidades del cliente a términos técnicos medibles",
+    "Establecer métricas, unidades de medida y límites de especificación para cada CTQ",
+    "Priorizar las CTQs según el impacto en la satisfacción del cliente",
+    "Usar las CTQs como base de comparación para evaluar alternativas de diseño"
+  ],
+  "entregable_esperado": "Lista priorizada de CTQs con métricas, objetivos y límites de especificación definidos",
+  "nodos_previos": [
+    "dfss_metodologia"
+  ],
+  "nodos_siguientes": [
+    "qfd_matriz"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha recogido información de necesidades del cliente pero falta traducirla en términos técnicos",
+    "Cuando el equipo de diseño necesita criterios objetivos para tomar decisiones"
+  ]
+}

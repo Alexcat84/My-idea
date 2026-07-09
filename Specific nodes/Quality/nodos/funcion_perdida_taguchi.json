@@ -1,0 +1,23 @@
+{
+  "node_id": "funcion_perdida_taguchi",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Función de Pérdida de Taguchi para Definir Especificaciones",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Enfoque que sostiene que cualquier desviación del valor nominal (target) genera una pérdida económica, no solo cuando el producto está fuera de especificación. Se modela mediante una función cuadrática L = k(X-T)^2, donde k es un coeficiente de costo. Esta función permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de falla en garantía o campo.",
+  "pasos_accionables": [
+    "Determinar el costo de reparación o ajuste bajo garantía/campo cuando el producto se desvía del target",
+    "Determinar el punto de desviación en el cual el cliente promedio reclamaría",
+    "Calcular el coeficiente k de la función de pérdida usando estos dos datos",
+    "Determinar el costo de ajuste en fábrica (usualmente menor)",
+    "Despejar los límites de especificación óptimos igualando el costo de fábrica a la función de pérdida"
+  ],
+  "entregable_esperado": "Límites de especificación calculados con base en la función de pérdida de Taguchi, minimizando costos totales",
+  "nodos_previos": [
+    "limites_especificacion_funcionales"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se busca optimizar límites de especificación considerando el impacto económico de la variación respecto al valor nominal, más allá del cumplimiento binario de especificaciones"
+  ]
+}

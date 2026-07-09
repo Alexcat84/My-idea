@@ -1,0 +1,27 @@
+{
+  "node_id": "auditoria_negocio",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Auditoría de Negocio (Business Audit)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La auditoría de negocio es una revisión independiente del desempeño organizacional, realizada por auditores sin responsabilidad directa sobre lo auditado. Su propósito es proporcionar información imparcial a los gerentes operativos y a la alta dirección para confirmar que los sistemas están funcionando correctamente y que se están logrando los resultados deseados. Puede basarse en criterios externos (Baldrige, EFQM, Deming Prize) o internos.",
+  "pasos_accionables": [
+    "Identificar las preguntas clave que la auditoría debe responder (definidas por la alta dirección)",
+    "Recopilar y analizar la información necesaria para responder esas preguntas",
+    "Comparar el desempeño auditado contra criterios externos o internos establecidos",
+    "Presentar hallazgos y recomendaciones a la alta dirección",
+    "Definir decisiones de acción basadas en los resultados de la auditoría"
+  ],
+  "entregable_esperado": "Un informe de auditoría con hallazgos, comparación contra criterios de excelencia y recomendaciones de acción",
+  "nodos_previos": [
+    "tablero_control_scorecard",
+    "costo_de_mala_calidad"
+  ],
+  "nodos_siguientes": [
+    "consejo_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere validación independiente de que los sistemas de calidad funcionan correctamente",
+    "Cuando la organización busca certificación o reconocimiento externo de calidad"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "matriz_riesgo_conocido_desconocido",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Matriz de Riesgo: Conocidos, Desconocidos y Desconocidos Desconocidos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La incertidumbre en la evaluación de riesgos se clasifica en tres niveles: 'desconocidos desconocidos' (no sabemos que no sabemos, la posición más peligrosa), 'conocidos desconocidos' (sabemos que existe un riesgo pero carecemos de datos para evaluarlo) y 'conocidos conocidos' (tenemos datos y confianza, pero esa confianza puede ser infundada). Reconocer en qué categoría cae cada riesgo ayuda a decidir qué acción tomar: educación, recopilación de datos o revisión crítica de supuestos existentes.",
+  "pasos_accionables": [
+    "Clasificar cada riesgo identificado en una de las tres categorías de conocimiento.",
+    "Para 'desconocidos desconocidos', invertir en educación y colaboración con grupos de la industria.",
+    "Para 'conocidos desconocidos', priorizar la recolección de datos adicionales.",
+    "Para 'conocidos conocidos', cuestionar activamente la validez y suficiencia de los datos existentes."
+  ],
+  "entregable_esperado": "Clasificación documentada de cada riesgo según su nivel de incertidumbre y plan de acción asociado.",
+  "nodos_previos": [
+    "evaluacion_de_factores_de_riesgo"
+  ],
+  "nodos_siguientes": [
+    "plan_de_gestion_de_riesgos"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe incertidumbre sobre la calidad o suficiencia de la información de riesgo disponible.",
+    "Al revisar la confianza excesiva en datos históricos para predecir riesgos futuros."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "node_id": "histograma",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Histograma",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Resumen gráfico de la variación en un conjunto de datos que permite identificar patrones (forma, centro, dispersión) difíciles de ver en tablas numéricas simples, ayudando a relacionar el patrón observado con las condiciones físicas que lo originaron.",
+  "pasos_accionables": [
+    "Determinar valor alto, bajo y rango de los datos",
+    "Decidir número de celdas (bins) y calcular ancho de celda",
+    "Construir los límites de celda y tallar los datos en cada una",
+    "Dibujar ejes horizontal y vertical con las barras correspondientes",
+    "Titular el gráfico e indicar observaciones totales",
+    "Identificar y clasificar el patrón de variación",
+    "Desarrollar una explicación del patrón observado"
+  ],
+  "entregable_esperado": "Histograma con patrón de variación identificado y explicación de causas físicas asociadas",
+  "nodos_previos": [
+    "graficos_y_diagramas"
+  ],
+  "nodos_siguientes": [
+    "control_estadistico_de_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita entender la distribución y variación de un conjunto de datos",
+    "Cuando se busca detectar patrones anómalos generados por el proceso"
+  ]
+}

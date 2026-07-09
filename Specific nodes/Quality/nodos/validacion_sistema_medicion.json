@@ -1,0 +1,23 @@
+{
+  "node_id": "validacion_sistema_medicion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Validación del Sistema de Medición",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Antes de confiar en los datos del proceso mejorado, se debe validar que el sistema de medición es capaz de proporcionar información precisa y confiable. Esto se realiza mediante análisis de capacidad del sistema de medición (MSA), utilizando software estadístico como Minitab.",
+  "pasos_accionables": [
+    "Evaluar la capacidad del sistema de medición usando MSA",
+    "Utilizar software estadístico para el análisis",
+    "Confirmar que las mediciones son confiables antes de establecer estándares de control"
+  ],
+  "entregable_esperado": "Reporte de validación del sistema de medición confirmando su capacidad",
+  "nodos_previos": [
+    "diseno_controles_proceso_mejorado"
+  ],
+  "nodos_siguientes": [
+    "establecimiento_capacidad_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita confirmar la fiabilidad de los datos usados para controlar un proceso"
+  ]
+}

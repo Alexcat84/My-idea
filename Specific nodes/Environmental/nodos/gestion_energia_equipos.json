@@ -1,0 +1,24 @@
+{
+  "node_id": "gestion_energia_equipos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Gestión Inteligente de Energía en Equipos",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "El uso de medidores inteligentes y software de monitoreo en tiempo real permite identificar picos de demanda e ineficiencias antes de que generen sobrecostos, apoyando la transición hacia equipos con certificación Energy Star.",
+  "pasos_accionables": [
+    "Implementar smart meters para monitoreo de consumo en tiempo real",
+    "Usar sistemas como SiteSMART o eMonitor para detectar picos de uso",
+    "Priorizar compra de equipos con etiqueta Energy Star",
+    "Capacitar empleados en buenas prácticas de gestión energética"
+  ],
+  "entregable_esperado": "Sistema de monitoreo energético implementado con alertas de consumo",
+  "nodos_previos": [
+    "actualizacion_hvac"
+  ],
+  "nodos_siguientes": [
+    "eficiencia_hidrica_edificios"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa necesita visibilidad en tiempo real de su consumo energético"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "node_id": "reglas_parada_investigacion_accidentes",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Reglas de Parada (Stop Rules) en la Investigación de Accidentes",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Dado que la causalidad no tiene límites naturales, los investigadores deben establecer límites artificiales razonables para el análisis. El caso de Legasov en Chernobyl ilustra que rastrear causas hasta factores societales remotos (ej. el sistema económico soviético) no conduce a mejoras factibles. El análisis debe limitarse a aquello sobre lo cual los gestores del sistema pueden ejercer control real y cambiar.",
+  "pasos_accionables": [
+    "Definir el alcance de la investigación según lo que los gestores del sistema pueden controlar",
+    "Evitar extender el análisis a factores societales inmutables que no generan mejoras accionables",
+    "Priorizar la calidad y disponibilidad de evidencia confiable al fijar los límites del análisis"
+  ],
+  "entregable_esperado": "Alcance documentado (scope) de la investigación con justificación de sus límites",
+  "nodos_previos": [
+    "modelo_accidente_organizacional"
+  ],
+  "nodos_siguientes": [
+    "fallas_activas_condiciones_latentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando la investigación de un accidente se extiende indefinidamente sin llegar a conclusiones accionables",
+    "Si se debe decidir dónde trazar la línea de responsabilidad organizacional"
+  ]
+}

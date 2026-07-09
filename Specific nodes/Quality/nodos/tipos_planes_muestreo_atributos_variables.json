@@ -1,0 +1,25 @@
+{
+  "node_id": "tipos_planes_muestreo_atributos_variables",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Planes de Muestreo por Atributos y por Variables",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los planes de muestreo de aceptación se dividen en dos tipos: por atributos (cada unidad se clasifica como aceptable/defectuosa y se compara el número de defectuosos contra un límite) y por variables (se mide una característica cuantitativa y se calcula un estadístico como la media, comparándolo con un valor permitido). Los planes por variables requieren muestras más pequeñas pero deben evaluar cada característica por separado, mientras que los de atributos permiten agrupar varias características en un solo criterio de aceptación.",
+  "pasos_accionables": [
+    "Determinar si el producto tiene características medibles cuantitativamente o solo clasificables como pasa/no pasa",
+    "Elegir plan de variables si se busca menor tamaño de muestra y hay pocas características críticas",
+    "Elegir plan de atributos si existen múltiples características a evaluar conjuntamente",
+    "Calcular tamaño de muestra y criterios de aceptación según la norma seleccionada"
+  ],
+  "entregable_esperado": "Selección documentada del tipo de plan de muestreo (atributos o variables) con su justificación técnica",
+  "nodos_previos": [
+    "niveles_calidad_muestreo_aql_lql_aoql"
+  ],
+  "nodos_siguientes": [
+    "single_double_multiple_sampling",
+    "seleccion_plan_muestreo_ansi_z14"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir el método de inspección de lotes entrantes o salientes"
+  ]
+}

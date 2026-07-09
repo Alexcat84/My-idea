@@ -1,0 +1,32 @@
+{
+  "node_id": "auditoria_de_producto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Auditoría de Producto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_theorico": "",
+  "resumen_teorico": "La auditoría de producto es una evaluación independiente y redundante del producto terminado, distinta de la inspección regular, que compara el desempeño real (idealmente el uso del cliente) contra especificaciones o necesidades del usuario. Se realiza en distintas etapas de progresión del producto (fábrica, distribuidor, servicio, campo) y puede ser aleatoria (imagen no sesgada de la calidad) o focalizada (en áreas problemáticas conocidas). Su propósito es detectar discrepancias entre lo que se mide internamente y lo que realmente importa al cliente, evitando el riesgo de que métricas internas (como un 98% de calificación) no reflejen la satisfacción real o los fallos en campo.",
+  "pasos_accionables": [
+    "Definir el alcance del audit: comparar con especificaciones internas o con necesidades reales del usuario",
+    "Seleccionar la etapa de evaluación (fábrica, distribuidor, servicio, campo) según complejidad del producto",
+    "Determinar tamaño de muestra usando métodos estadísticos o reglas prácticas (ej. 2% de producción por turno)",
+    "Diseñar el plan de auditoría especificando características a revisar (auditoría aleatoria vs focalizada)",
+    "Comparar resultados de auditoría con estudios de mercado o quejas de clientes para validar relevancia",
+    "Clasificar defectos por seriedad (crítico, mayor, menor A, menor B, incidental) y calcular demérito por unidad",
+    "Comparar resultados históricos y con competidores para detectar tendencias"
+  ],
+  "entregable_esperado": "Informe de auditoría de producto con índice de demérito por unidad, clasificación de defectos por seriedad y comparación con datos de campo/mercado",
+  "nodos_previos": [
+    "inspeccion_y_prueba_del_producto",
+    "planificacion_de_la_calidad"
+  ],
+  "nodos_siguientes": [
+    "control_de_calidad_por_retroalimentacion",
+    "mejora_continua_de_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe riesgo de que las métricas internas de calidad no reflejen la experiencia real del cliente",
+    "Cuando se requiere validar la efectividad de la inspección previa",
+    "Cuando el producto es crítico y se necesita redundancia de control"
+  ]
+}

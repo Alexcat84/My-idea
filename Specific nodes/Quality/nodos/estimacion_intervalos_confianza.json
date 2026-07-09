@@ -1,0 +1,27 @@
+{
+  "node_id": "estimacion_intervalos_confianza",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Estimación Puntual e Intervalos de Confianza",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La estimación es el proceso de analizar un resultado muestral para predecir el valor correspondiente del parámetro poblacional. Consta de dos partes: la estimación puntual (un único valor) y el intervalo de confianza (un rango de valores que incluye, con una probabilidad preasignada, el verdadero valor del parámetro poblacional). Los límites de confianza no deben confundirse con límites de control u otros límites estadísticos.",
+  "pasos_accionables": [
+    "Calcular el estadístico puntual de la muestra (ej. la media)",
+    "Determinar el nivel de confianza deseado (ej. 95%)",
+    "Usar la distribución t si la desviación estándar poblacional es desconocida",
+    "Calcular los límites de confianza superior e inferior",
+    "Interpretar el intervalo como el rango que contiene el verdadero parámetro con la confianza especificada"
+  ],
+  "entregable_esperado": "Intervalo de confianza calculado para el parámetro poblacional de interés",
+  "nodos_previos": [
+    "inferencia_estadistica_muestreo"
+  ],
+  "nodos_siguientes": [
+    "determinacion_tamano_muestra",
+    "prueba_hipotesis"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita cuantificar la incertidumbre de una estimación muestral",
+    "Al reportar resultados de un análisis de calidad basado en muestras"
+  ]
+}

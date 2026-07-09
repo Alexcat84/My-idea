@@ -1,0 +1,28 @@
+{
+  "node_id": "grafico_de_corrida_run_chart",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráfico de Corrida (Run Chart) como Herramienta de Diagnóstico",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un gráfico de corrida consiste en graficar puntos de datos en el orden en que fueron producidos (temporal o secuencial), a diferencia de un histograma que solo muestra la distribución acumulada sin considerar el orden. Esta herramienta es esencial porque una distribución estadística (media, desviación estándar) solo tiene valor predictivo si los datos provienen de un proceso estable. Si al graficar en orden de producción se observa una tendencia (por ejemplo, decreciente), esto indica que el proceso NO es estable y cualquier cálculo estadístico basado en la distribución sería engañoso e inútil.",
+  "pasos_accionables": [
+    "Registrar cada medición junto con su orden secuencial de producción",
+    "Graficar los puntos en el eje temporal/secuencial, no solo tabular la distribución",
+    "Buscar tendencias, ciclos o patrones sistemáticos (ej. 6 puntos consecutivos en tendencia, 7-8 puntos por encima/debajo del promedio)",
+    "Determinar si el proceso está en estado de control estadístico antes de calcular métricas como media o desviación estándar",
+    "Si se detecta inestabilidad, investigar la causa antes de intentar calcular capacidad de proceso"
+  ],
+  "entregable_esperado": "Gráfico de corrida documentado con análisis de estabilidad del proceso previo a cualquier análisis estadístico adicional",
+  "nodos_previos": [
+    "causas_comunes_causas_especiales"
+  ],
+  "nodos_siguientes": [
+    "capacidad_del_proceso",
+    "control_estadistico_procesos"
+  ],
+  "condiciones_activacion": [
+    "Antes de calcular estadísticas descriptivas (media, desviación estándar) de cualquier proceso",
+    "Cuando se sospecha que un proceso puede no ser estable en el tiempo",
+    "Si se requiere establecer la capacidad de un proceso de manufactura o servicio"
+  ]
+}

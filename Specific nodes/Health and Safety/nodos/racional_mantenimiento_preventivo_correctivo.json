@@ -1,0 +1,27 @@
+{
+  "node_id": "racional_mantenimiento_preventivo_correctivo",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Balance entre Mantenimiento Preventivo y Correctivo",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Los sistemas tecnológicos no se diseñan para durar exactamente el mismo tiempo en todos sus componentes debido a razones económicas. Existe una 'carga de mantenimiento esperada' (componentes identificados en diseño) y una 'carga no esperada' (fallos por errores de diseño u operación). El mantenimiento preventivo reduce costos totales al anticipar fallos, pero pasado el 'codo de recursos' los costos de restauración se disparan. La visión ortodoxa asume que el mantenimiento es benigno, pero en realidad tanto el preventivo como el correctivo pueden introducir errores humanos que dañan el sistema.",
+  "pasos_accionables": [
+    "Clasificar componentes según carga de mantenimiento esperada vs no esperada",
+    "Calcular curvas de costo de mantenimiento preventivo vs correctivo para determinar el nivel óptimo",
+    "Evaluar el riesgo de error humano introducido por cada intervención de mantenimiento",
+    "Comparar el riesgo de negligencia de mantenimiento contra el riesgo de error durante el mantenimiento mismo",
+    "Ajustar la frecuencia de intervenciones según el balance de riesgos, no solo criterios económicos"
+  ],
+  "entregable_esperado": "Plan de mantenimiento que documente el balance óptimo entre intervención preventiva y tolerancia al riesgo de error humano",
+  "nodos_previos": [
+    "diseno_recordatorios_efectivos"
+  ],
+  "nodos_siguientes": [
+    "diseno_a_prueba_de_errores",
+    "medidas_proceso_vs_resultado"
+  ],
+  "condiciones_activacion": [
+    "Cuando se define la política de mantenimiento de un sistema técnico complejo",
+    "Cuando los costos de mantenimiento correctivo se disparan inesperadamente"
+  ]
+}

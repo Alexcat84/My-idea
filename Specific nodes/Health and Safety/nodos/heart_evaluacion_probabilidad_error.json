@@ -1,0 +1,25 @@
+{
+  "node_id": "heart_evaluacion_probabilidad_error",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "HEART: Evaluación y Reducción de Errores Humanos",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "HEART (Human Error Assessment and Reduction Technique) es una técnica que asigna probabilidades nominales de error a tipos genéricos de tarea, y luego las ajusta multiplicándolas por factores de Condiciones que Producen Error (EPCs), como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11). Permite estimar cuantitativamente el riesgo de error humano en una actividad específica considerando el contexto en que se realiza.",
+  "pasos_accionables": [
+    "Clasificar la actividad a evaluar dentro de los tipos de tarea genéricos con probabilidad nominal de error",
+    "Identificar las condiciones que producen error (EPCs) presentes en el contexto de la tarea",
+    "Multiplicar la probabilidad nominal por el factor de cada EPC relevante, ajustado a la proporción de influencia real",
+    "Calcular la probabilidad de error ajustada para la tarea evaluada",
+    "Priorizar intervenciones sobre los EPCs con mayor multiplicador de riesgo"
+  ],
+  "entregable_esperado": "Cálculo cuantitativo de probabilidad de error humano para una tarea crítica, con lista priorizada de EPCs a mitigar",
+  "nodos_previos": [
+    "tripod_delta_general_failure_types",
+    "review_mesh_evaluacion_por_calificacion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se necesita cuantificar el riesgo de error humano en una tarea específica",
+    "Cuando se realiza un análisis de fiabilidad humana (HRA) en operaciones peligrosas"
+  ]
+}

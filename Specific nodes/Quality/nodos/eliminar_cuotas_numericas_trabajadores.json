@@ -1,0 +1,25 @@
+{
+  "node_id": "eliminar_cuotas_numericas_trabajadores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Eliminación de Cuotas Numéricas para la Fuerza Laboral",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Las cuotas de producción, tasas de trabajo (work standards) y el pago por pieza (piece work) son mecanismos que fijan un estándar promedio, generando que la mitad de los trabajadores nunca lo alcancen y la otra mitad no supere el mínimo por presión de grupo. Estas prácticas destruyen el orgullo por el trabajo bien hecho, incentivan la producción de artículos defectuosos (especialmente en el pago por pieza) y no incluyen ningún mecanismo de mejora continua. Deming las considera una 'fortaleza contra la mejora' que debe ser reemplazada por supervisión inteligente y liderazgo basado en el conocimiento del proceso.",
+  "pasos_accionables": [
+    "Identificar todos los esquemas de cuotas, tasas de trabajo o incentivos por pieza vigentes",
+    "Sustituir las cuotas por indicadores de calidad de servicio, no solo de cantidad",
+    "Implementar registro continuo de datos por trabajador (tiempo, tipo de tarea, incidencias) para análisis estadístico",
+    "Capacitar a supervisores para actuar como líderes que ayudan a resolver problemas del sistema, no solo a contar unidades"
+  ],
+  "entregable_esperado": "Plan de transición de sistema de cuotas/incentivos a sistema de liderazgo y medición estadística del desempeño del proceso",
+  "nodos_previos": [
+    "sistema_estable_variacion"
+  ],
+  "nodos_siguientes": [
+    "remover_barreras_orgullo_trabajo"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización usa pago por pieza, tasas de producción o cuotas diarias",
+    "Cuando se detecta alta variabilidad o defectos asociados a presión por cumplir metas numéricas"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "establecimiento_de_niveles_de_calidad_aql_dpm",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Establecimiento de Niveles de Calidad (AQL/DPM)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El AQL (Acceptable Quality Level) es un punto en la curva de característica operativa que describe los riesgos de los planes de muestreo, pero frecuentemente es malinterpretado por proveedores como un nivel de defectos permitido. Se recomienda establecer contractualmente que todo producto debe cumplir especificaciones, usando en su lugar la métrica de Defectos Por Millón (DPM) para mayor claridad y rigor en muchas industrias.",
+  "pasos_accionables": [
+    "Evitar comunicar AQL como nivel de defectos aceptable",
+    "Establecer contractualmente que todo el producto debe cumplir especificaciones",
+    "Adoptar la métrica DPM para mayor precisión",
+    "Definir el proceso de devolución de producto no conforme"
+  ],
+  "entregable_esperado": "Cláusula contractual clara sobre niveles de calidad esperados usando DPM u otra métrica no ambigua",
+  "nodos_previos": [
+    "planes_de_muestreo_de_aceptacion"
+  ],
+  "nodos_siguientes": [
+    "certificacion_de_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando se redactan contratos de suministro con métricas de calidad",
+    "Cuando existe confusión entre proveedor y comprador sobre niveles de defectos aceptables"
+  ]
+}

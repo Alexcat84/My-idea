@@ -1,0 +1,31 @@
+{
+  "node_id": "planificacion_estudio_capacidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Planificación de un Estudio de Capacidad de Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Antes de recolectar datos para un estudio de capacidad, se debe clarificar el propósito del estudio y los pasos necesarios para lograrlo. Para procesos complejos o niveles de defectos de partes por millón, se recomienda una secuencia de nueve pasos que abarca desde la descripción del proceso hasta el plan de análisis de datos.",
+  "pasos_accionables": [
+    "Desarrollar una descripción del proceso incluyendo entradas, pasos y características de salida",
+    "Definir las condiciones de proceso para cada variable (ajustes óptimos y rangos de operación)",
+    "Verificar que cada característica de calidad tenga una variable de proceso ajustable",
+    "Evaluar si el error de medición es significativo mediante un estudio separado",
+    "Decidir si el estudio se enfocará solo en variabilidad o también en errores/mistakes",
+    "Planificar el uso de gráficos de control para evaluar estabilidad",
+    "Preparar un plan de recolección de datos con tamaño de muestra adecuado",
+    "Planificar los métodos de análisis de datos antes de iniciar el estudio",
+    "Reservar tiempo para investigar resultados intermedios antes de calcular la capacidad final"
+  ],
+  "entregable_esperado": "Plan documentado del estudio de capacidad de proceso listo para ejecución",
+  "nodos_previos": [
+    "capacidad_proceso_concepto"
+  ],
+  "nodos_siguientes": [
+    "indice_cp",
+    "indice_cpk"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere un estudio formal de capacidad para procesos complejos",
+    "Cuando se busca cumplir niveles de defectos de partes por millón"
+  ]
+}

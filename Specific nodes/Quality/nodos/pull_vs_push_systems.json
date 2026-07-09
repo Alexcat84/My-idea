@@ -1,0 +1,27 @@
+{
+  "node_id": "pull_vs_push_systems",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistemas Pull versus Push",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_theorico": "Comparación entre sistemas tradicionales push (que calculan tiempos de inicio y empujan producción según demanda proyectada, ignorando restricciones) y sistemas pull (que solo producen cuando son autorizados según el estado del proceso y la demanda real del cliente). Los sistemas pull controlan mejor el flujo y reducen inventario en proceso (WIP).",
+  "resumen_teorico": "Comparación entre sistemas tradicionales push (que calculan tiempos de inicio y empujan producción según demanda proyectada, ignorando restricciones) y sistemas pull (que solo producen cuando son autorizados según el estado del proceso y la demanda real del cliente). Los sistemas pull controlan mejor el flujo y reducen inventario en proceso (WIP).",
+  "pasos_accionables": [
+    "Evaluar si la operación actual funciona bajo un esquema push",
+    "Identificar cuellos de botella que el sistema push está ignorando",
+    "Rediseñar el proceso para que la producción se autorice según demanda real (pull)",
+    "Implementar señales de reposición basadas en consumo (kanban)"
+  ],
+  "entregable_esperado": "Diseño de sistema de producción pull implementado o en transición",
+  "nodos_previos": [
+    "value_stream_mapping"
+  ],
+  "nodos_siguientes": [
+    "kanban_pull_system",
+    "constraint_management"
+  ],
+  "condiciones_activacion": [
+    "Si existe exceso de inventario en proceso (WIP)",
+    "Cuando el flujo de producción está desbalanceado"
+  ]
+}

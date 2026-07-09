@@ -1,0 +1,27 @@
+{
+  "node_id": "muestreo_de_aceptacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Muestreo de Aceptación",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso de evaluar una porción de producto en un lote para decidir aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo excesivo y minimiza errores por monotonía, aunque implica riesgos de muestreo (rechazar buenos lotes o aceptar malos).",
+  "pasos_accionables": [
+    "Determinar si el objetivo es evaluar el lote inmediato o el proceso productivo",
+    "Definir el tamaño de muestra (n) y el criterio de aceptación (c)",
+    "Establecer los niveles de riesgo aceptables (riesgo del productor α y del consumidor β)",
+    "Seleccionar o diseñar un plan de muestreo (por atributos o variables)",
+    "Aplicar el plan y documentar decisiones de aceptación/rechazo por lote"
+  ],
+  "entregable_esperado": "Plan de muestreo de aceptación documentado con n, c, y niveles de riesgo definidos",
+  "nodos_previos": [
+    "economia_de_la_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "curva_caracteristica_operativa",
+    "indices_calidad_muestreo"
+  ],
+  "condiciones_activacion": [
+    "Cuando el costo de inspección 100% es alto respecto al daño potencial",
+    "Cuando la inspección es destructiva o genera monotonía"
+  ]
+}

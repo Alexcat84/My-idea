@@ -1,0 +1,26 @@
+{
+  "node_id": "deteccion_de_lideres_y_rezagados",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Detección de Trabajadores Fuera del Sistema (Líderes y Rezagados)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Ejemplos incluyen soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
+  "pasos_accionables": [
+    "Recolectar datos comparables de desempeño de todos los miembros del grupo",
+    "Graficar los datos en un gráfico de control con límites superior e inferior",
+    "Identificar individuos fuera de los límites de control",
+    "Investigar causas específicas para los de bajo desempeño (equipo, entrenamiento, salud)",
+    "Estudiar y documentar métodos de los de alto desempeño para replicarlos"
+  ],
+  "entregable_esperado": "Un análisis de desempeño grupal con identificación de casos individuales que requieren atención o reconocimiento",
+  "nodos_previos": [
+    "control_estadistico_de_procesos"
+  ],
+  "nodos_siguientes": [
+    "administracion_sin_miedo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se evalúa el desempeño de un grupo de trabajadores realizando tareas similares",
+    "Cuando se buscan oportunidades de mejora del sistema basadas en variabilidad entre trabajadores"
+  ]
+}

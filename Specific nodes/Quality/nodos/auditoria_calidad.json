@@ -1,0 +1,24 @@
+{
+  "node_id": "auditoria_calidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Auditoría de Calidad",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, y no revelar expectativas de hallazgos.",
+  "pasos_accionables": [
+    "Definir con precisión qué función se auditará y contra qué criterios",
+    "Seleccionar auditores imparciales, idealmente de otras áreas, evitando especialistas con sesgos propios",
+    "Entrenar al equipo auditor y darles tiempo para elaborar un reporte adecuado",
+    "Implementar autoauditorías periódicas por parte de las propias operaciones, verificadas con muestreos externos"
+  ],
+  "entregable_esperado": "Programa de auditorías internas con criterios, equipos capacitados y mecanismo de autoauditoría",
+  "nodos_previos": [
+    "calificacion_productos_procesos"
+  ],
+  "nodos_siguientes": [
+    "educacion_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere verificar objetivamente la conformidad de un proceso o función"
+  ]
+}

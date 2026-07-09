@@ -1,0 +1,27 @@
+{
+  "node_id": "especificacion_requisitos_calidad_proveedores",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Especificación de Requisitos de Calidad para Proveedores",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_theorico": "Antes de firmar un contrato con un proveedor, la organización compradora debe transmitir claramente el uso que se dará al producto y verificar que el proveedor pueda cumplir con los requisitos de aptitud para el uso. Esto requiere dos tipos de especificaciones: las que definen los requisitos del producto y las que definen las actividades de calidad esperadas del proveedor (su sistema de calidad).",
+  "resumen_teorico": "Antes de firmar un contrato con un proveedor, la organización compradora debe transmitir claramente el uso que se dará al producto y verificar que el proveedor pueda cumplir con los requisitos de aptitud para el uso. Esto requiere dos tipos de especificaciones: las que definen los requisitos del producto y las que definen las actividades de calidad esperadas del proveedor (su sistema de calidad).",
+  "pasos_accionables": [
+    "Documentar claramente las condiciones de uso del producto en campo",
+    "Definir especificaciones de producto y especificaciones de sistema de calidad por separado",
+    "Establecer cooperación continua entre comprador y proveedor cuando el producto es complejo",
+    "Considerar contratos separados de desarrollo y producción si es necesario clarificar requisitos"
+  ],
+  "entregable_esperado": "Documento de especificación dual: requisitos técnicos del producto y requisitos del sistema de calidad del proveedor",
+  "nodos_previos": [
+    "seleccion_hacer_o_comprar"
+  ],
+  "nodos_siguientes": [
+    "requisitos_numericos_calidad_lotes",
+    "definicion_sistema_calidad_proveedor"
+  ],
+  "condiciones_activacion": [
+    "Cuando se va a contratar un proveedor externo para un producto o componente crítico",
+    "Cuando el producto es complejo y las condiciones de uso no son totalmente conocidas de antemano"
+  ]
+}

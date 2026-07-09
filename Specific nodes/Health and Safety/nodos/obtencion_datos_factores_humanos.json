@@ -1,0 +1,26 @@
+{
+  "node_id": "obtencion_datos_factores_humanos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Obtención de Datos de Factores Humanos",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "El 'error humano' no trata solo de humanos, sino de cómo las herramientas, tareas y entorno de trabajo influyen sistemáticamente en el desempeño. Hay dos fuentes directas de datos: los debriefings de los participantes y los registros de parámetros de desempeño (grabadoras de voz, sistemas de monitoreo, videos). Ambas fuentes tienen limitaciones: la memoria humana no es una grabación fiel y tiende a estructurar los eventos de forma más lineal de lo que realmente fueron; los registros son solo ventanas parciales que apuntan a un mundo más amplio de tareas, metas y presiones organizacionales.",
+  "pasos_accionables": [
+    "Identificar todas las fuentes posibles de datos: debriefings, grabaciones de voz, registros de eventos, lecturas de máquina",
+    "Reconocer las limitaciones de la memoria humana antes de entrevistar participantes",
+    "Cruzar y verificar datos entre distintas fuentes para reconstruir el contexto",
+    "Distinguir explícitamente entre dato factual y dato inferido/analizado"
+  ],
+  "entregable_esperado": "Un inventario de fuentes de datos disponibles y un plan de recolección que combine debriefings y registros",
+  "nodos_previos": [
+    "foco_proximal_reacciones_falla"
+  ],
+  "nodos_siguientes": [
+    "debriefing_participantes",
+    "construccion_linea_tiempo"
+  ],
+  "condiciones_activacion": [
+    "Al iniciar formalmente una investigación de 'error humano'",
+    "Cuando se necesita reunir evidencia verificable antes de sacar conclusiones"
+  ]
+}

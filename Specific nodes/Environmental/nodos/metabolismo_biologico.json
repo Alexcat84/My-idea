@@ -1,0 +1,26 @@
+{
+  "node_id": "metabolismo_biologico",
+  "fase_proyecto": "ideacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Metabolismo Biológico y Nutrientes Biológicos",
+  "fuente": "Cradle to Cradle - Michael Braungart",
+  "resumen_teorico": "Es uno de los dos metabolismos fundamentales del planeta (junto al técnico). Un nutriente biológico es un material o producto diseñado para regresar de forma segura al ciclo biológico, siendo literalmente consumido por microorganismos y otros seres vivos sin contener mutágenos, carcinógenos, tóxicos persistentes ni sustancias bioacumulativas. Aplica principalmente a empaques, productos de consumo rápido y textiles.",
+  "pasos_accionables": [
+    "Identificar qué productos o componentes son de 'consumo' (uso breve, descartables) candidatos a ser nutrientes biológicos",
+    "Auditar todos los químicos y materiales del producto para eliminar mutágenos, carcinógenos y tóxicos persistentes desde el diseño inicial",
+    "Seleccionar solo ingredientes seguros y positivos (como en el caso del textil con 38 químicos de 8000 posibles)",
+    "Diseñar el producto para que pueda compostarse o biodegradarse de forma segura tras su uso"
+  ],
+  "entregable_esperado": "Lista de materiales biológicos seguros aprobados y un prototipo de producto diseñado para biodegradarse sin dañar ecosistemas",
+  "nodos_previos": [
+    "diseno_cero_residuos"
+  ],
+  "nodos_siguientes": [
+    "metabolismo_tecnico",
+    "productos_de_servicio"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario diseña empaques, textiles, o productos de consumo de vida corta",
+    "Si se busca eliminar el concepto de residuo en productos desechables"
+  ]
+}

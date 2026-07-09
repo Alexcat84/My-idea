@@ -1,0 +1,22 @@
+{
+  "node_id": "diseno_para_factores_criticos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Diseño para Factores Críticos y Error Humano",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Elemento clave del diseño de proceso que considera aspectos que presentan peligro serio para la vida humana, la salud, el medio ambiente o riesgo de pérdidas económicas muy grandes. El diseño para estos factores debe incluir márgenes amplios de seguridad, provisiones a prueba de fallas, sistemas de redundancia y alarmas múltiples, apoyándose en análisis de criticidad y FMEA.",
+  "pasos_accionables": [
+    "Identificar aspectos del proceso con riesgo serio para vida, salud, ambiente o grandes pérdidas económicas",
+    "Aplicar análisis de criticidad y FMEA para priorizar estos factores",
+    "Diseñar márgenes de seguridad, sistemas fail-safe, redundancia y alarmas múltiples",
+    "Documentar las contramedidas de prevención de fallas incorporadas al proceso"
+  ],
+  "entregable_esperado": "Documento de análisis de criticidad y FMEA con contramedidas de seguridad incorporadas al diseño del proceso",
+  "nodos_previos": [
+    "identificar_caracteristicas_metas_proceso"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando el proceso involucra operaciones de gran escala con riesgo para la vida, salud, ambiente o grandes sumas de dinero"
+  ]
+}

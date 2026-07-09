@@ -1,0 +1,29 @@
+{
+  "node_id": "fmea_analisis_de_modos_de_falla",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Failure Mode and Effects Analysis (FMEA)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta que identifica posibles formas en que pueden ocurrir fallas, sus efectos, y prioriza acciones de reducción de riesgo mediante un factor de prioridad de riesgo (RPN) calculado a partir de frecuencia, severidad y detectabilidad.",
+  "pasos_accionables": [
+    "Crear una hoja de nueve columnas y tabla de valores asignados",
+    "Listar todos los modos de falla posibles",
+    "Identificar causas posibles para cada modo de falla",
+    "Determinar el efecto de cada falla en cliente, producto y sistema",
+    "Evaluar frecuencia, severidad y detectabilidad usando la tabla de valores",
+    "Calcular el factor de prioridad de riesgo (RPN) multiplicando los tres valores",
+    "Diseñar acciones/remedios solo para las causas de mayor riesgo",
+    "Validar cada acción/remedio implementada"
+  ],
+  "entregable_esperado": "Matriz FMEA completa con modos de falla, causas, efectos, RPN calculado y plan de acción para los riesgos más altos",
+  "nodos_previos": [
+    "diagrama_de_flujo_proceso_map"
+  ],
+  "nodos_siguientes": [
+    "matriz_de_control_de_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita anticipar y priorizar riesgos antes de implementar un proceso o producto",
+    "Cuando fallas potenciales pueden afectar directa o indirectamente al cliente"
+  ]
+}

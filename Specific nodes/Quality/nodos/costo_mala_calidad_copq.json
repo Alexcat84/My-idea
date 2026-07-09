@@ -1,0 +1,26 @@
+{
+  "node_id": "costo_mala_calidad_copq",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Costo de la Mala Calidad (Cost of Poor Quality - COPQ)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuantificación del costo total asociado a procesos de bajo desempeño, incluyendo fallas internas, externas, inspección y prevención. Suele representar una cifra mucho mayor a la esperada por la alta dirección y es clave para justificar inversión en breakthrough. Reducir el COPQ raramente requiere inversión de capital, lo que genera un ROI alto.",
+  "pasos_accionables": [
+    "Clasificar los costos de calidad en categorías contables tradicionales (fallas internas, externas, prevención, evaluación)",
+    "Cuantificar el costo total anual de la mala calidad",
+    "Identificar las áreas de mayor concentración de costo (usualmente fallas internas)",
+    "Presentar el análisis a la alta dirección como justificación de inversión en mejora",
+    "Evitar recortes de costos que reduzcan calidad y generen más COPQ a largo plazo"
+  ],
+  "entregable_esperado": "Reporte de análisis de costo de mala calidad (COPQ) con desglose por categoría y recomendaciones",
+  "nodos_previos": [
+    "proyectos_vitales_pocos"
+  ],
+  "nodos_siguientes": [
+    "roi_breakthrough"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita justificar económicamente un programa de mejora ante la dirección",
+    "Cuando se buscan reducir costos operativos sin sacrificar calidad"
+  ]
+}

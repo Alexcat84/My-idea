@@ -1,0 +1,25 @@
+{
+  "node_id": "sistema_de_alarma_de_defectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistema de Respuesta Oportuna a Alarmas de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Mecanismo para detectar fallas de calidad y actuar positivamente sobre estas señales para evitar deterioro en calidad, costo o entrega. La función de calidad debe establecer estos sistemas de alarma dentro del cronograma común entre comprador y proveedor.",
+  "pasos_accionables": [
+    "Definir indicadores clave que disparen alarmas de calidad",
+    "Establecer un cronograma común entre comprador y proveedor",
+    "Asignar responsables de actuar sobre las alarmas",
+    "Documentar tiempos de respuesta esperados"
+  ],
+  "entregable_esperado": "Protocolo de alarmas de calidad con indicadores, responsables y tiempos de respuesta definidos",
+  "nodos_previos": [
+    "trazabilidad_de_lotes"
+  ],
+  "nodos_siguientes": [
+    "certificacion_de_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen cronogramas compartidos entre comprador y proveedor",
+    "Cuando se requiere detección temprana de fallas de calidad"
+  ]
+}

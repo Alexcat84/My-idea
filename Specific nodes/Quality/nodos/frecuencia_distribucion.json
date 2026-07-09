@@ -1,0 +1,25 @@
+{
+  "node_id": "frecuencia_distribucion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución de Frecuencia",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una distribución de frecuencia es una tabulación de datos organizados según su magnitud, que revela dónde se agrupan la mayoría de los datos y cuánta variación existe. Cuando los datos son numerosos, pueden agruparse en celdas para condensar la información, siguiendo un procedimiento estándar de construcción (número de celdas, intervalo, límites, tabulación).",
+  "pasos_accionables": [
+    "Recolectar los datos crudos del proceso o característica de interés",
+    "Decidir el número de celdas según el tamaño de la muestra",
+    "Calcular el intervalo de celda (rango dividido por número de celdas)",
+    "Construir los límites de celda y tabular las observaciones",
+    "Analizar el patrón resultante para identificar centro y dispersión"
+  ],
+  "entregable_esperado": "Tabla de distribución de frecuencia construida a partir de los datos del proceso",
+  "nodos_previos": [
+    "concepto_variacion_estadistica"
+  ],
+  "nodos_siguientes": [
+    "histograma_calidad"
+  ],
+  "condiciones_activacion": [
+    "Si se dispone de un conjunto grande de datos numéricos que requiere resumen tabular"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "grafico_box_jenkins",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráfico de Ajuste Manual Box-Jenkins",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "A diferencia de otros gráficos de control cuyo objetivo es monitorear y reducir la variabilidad por causas especiales, el gráfico Box-Jenkins tiene como objetivo analizar los datos del proceso para regular el mismo después de cada observación, minimizando así la variación del proceso mediante ajustes continuos.",
+  "pasos_accionables": [
+    "Recolectar datos secuenciales del proceso después de cada observación",
+    "Modelar la serie temporal del proceso usando técnicas Box-Jenkins",
+    "Calcular el ajuste recomendado tras cada observación",
+    "Aplicar el ajuste al proceso para minimizar la variación acumulada",
+    "Repetir el ciclo de observación-ajuste de forma continua"
+  ],
+  "entregable_esperado": "Sistema de ajuste continuo de proceso basado en retroalimentación tras cada observación",
+  "nodos_previos": [
+    "grafico_media_movil_ewma"
+  ],
+  "nodos_siguientes": [
+    "graficos_control_multivariados"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proceso requiere ajuste continuo (regulación) en lugar de solo detección de causas especiales",
+    "Cuando existe capacidad de intervención inmediata tras cada observación"
+  ]
+}

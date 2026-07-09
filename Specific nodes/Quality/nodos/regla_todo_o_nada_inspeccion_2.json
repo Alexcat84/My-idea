@@ -1,0 +1,26 @@
+{
+  "node_id": "regla_todo_o_nada_inspeccion_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Regla de Inspección Todo-o-Nada (All-or-None Rules)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Concepto derivado del análisis de punto de equilibrio: cuando la calidad entrante se ubica consistentemente a un lado del punto de equilibrio (k1/k2), la política óptima es un extremo absoluto —cero inspección o inspección 100%— y no un muestreo parcial. Deming critica las reglas arbitrarias impuestas a proveedores (ej. 'una pieza defectuosa rechaza todo el lote') porque ignoran esta lógica de costos y pueden aumentar el costo total sin mejorar la calidad real, especialmente si el material ya fue puesto en producción antes de completar la inspección.",
+  "pasos_accionables": [
+    "Evaluar si el proceso de calidad entrante está en estado de control estadístico",
+    "Si p < k1/k2, eliminar la inspección de entrada y enfocar el esfuerzo en mejorar la relación con el proveedor",
+    "Si p > k1/k2, implementar inspección 100% en lugar de un plan de muestreo parcial",
+    "Descartar reglas de rechazo de lote basadas en umbrales fijos arbitrarios sin sustento en costos reales",
+    "Si el proceso está fuera de control (straddling el punto de equilibrio), aplicar inspección 100% o las reglas de Joyce Orsini como solución temporal"
+  ],
+  "entregable_esperado": "Política de inspección de entrada formalizada y justificada por análisis de costos, reemplazando reglas arbitrarias de aceptación de lotes",
+  "nodos_previos": [
+    "punto_equilibrio_calidad_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "trabajo_conjunto_con_proveedor"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe una política de rechazo de lotes basada en reglas fijas no fundamentadas en costos",
+    "Cuando se necesita justificar ante la gerencia el cambio de un plan de muestreo a inspección 100% o cero"
+  ]
+}

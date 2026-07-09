@@ -1,0 +1,25 @@
+{
+  "node_id": "inspecciones_superficiales_y_muestreo_incompleto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Inspecciones Superficiales y Muestreo Incompleto",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Ilustrado por el caso Piper Alpha, este concepto señala que las inspecciones de seguridad basadas en muestreo, sin listas de verificación adecuadas, sin tiempo suficiente ni criterios estandarizados, pueden dar una falsa sensación de control mientras dejan pasar deficiencias críticas. La falta de checklist formales y la dependencia del juicio individual del inspector aumentan la variabilidad y el riesgo de omisión.",
+  "pasos_accionables": [
+    "Desarrollar checklists estandarizados para los procesos críticos de seguridad (permisos de trabajo, cambios de turno, sistemas de emergencia)",
+    "Asignar tiempo suficiente para auditorías completas en lugar de inspecciones rápidas",
+    "Capacitar a los inspectores en el uso de procedimientos de permiso de trabajo y sistemas críticos",
+    "Verificar que los hallazgos de inspecciones previas fueron efectivamente corregidos y no solo reportados como resueltos"
+  ],
+  "entregable_esperado": "Checklist de auditoría de seguridad estandarizado y cronograma de inspecciones con tiempo asignado adecuado",
+  "nodos_previos": [
+    "fallo_regulatorio_por_recursos_insuficientes"
+  ],
+  "nodos_siguientes": [
+    "falla_sistemica_vs_error_individual"
+  ],
+  "condiciones_activacion": [
+    "Cuando las inspecciones se realizan sin checklist formal o con tiempo insuficiente",
+    "Cuando existe discrepancia entre lo reportado en inspecciones rutinarias y hallazgos posteriores de investigaciones de incidentes"
+  ]
+}

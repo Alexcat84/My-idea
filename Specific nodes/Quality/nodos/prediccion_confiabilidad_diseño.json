@@ -1,0 +1,27 @@
+{
+  "node_id": "prediccion_confiabilidad_diseño",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Predicción de Confiabilidad Durante el Diseño",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales).",
+  "pasos_accionables": [
+    "Definir el producto y su operación funcional mediante diagrama de bloques funcional",
+    "Preparar un diagrama de bloques de confiabilidad mostrando redundancias e interrelaciones",
+    "Desarrollar el modelo de probabilidad para predecir la confiabilidad",
+    "Recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
+    "Combinar los datos para obtener la predicción numérica de confiabilidad del sistema"
+  ],
+  "entregable_esperado": "Reporte de predicción de confiabilidad del sistema con diagramas de bloques funcionales y de confiabilidad, y banco de datos de partes documentado",
+  "nodos_previos": [
+    "relacion_confiabilidad_sistema_partes",
+    "distribucion_weibull_confiabilidad"
+  ],
+  "nodos_siguientes": [
+    "disponibilidad_producto",
+    "limites_especificacion_funcionales"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está en fase de diseño de un producto y se requiere anticipar su confiabilidad antes de la producción"
+  ]
+}

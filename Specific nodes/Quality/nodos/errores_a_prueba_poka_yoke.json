@@ -1,0 +1,26 @@
+{
+  "node_id": "errores_a_prueba_poka_yoke",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Error-Proofing del Proceso (Poka-Yoke)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El error-proofing o poka-yoke consiste en diseñar procesos, herramientas y máquinas de forma que el error humano sea improbable o imposible. Se basa en cinco principios fundamentales: eliminación, reemplazo, facilitación, detección y mitigación. Los sistemas poka-yoke detienen el equipo automáticamente ante irregularidades y alertan al operador.",
+  "pasos_accionables": [
+    "Analizar los puntos del proceso susceptibles a error humano",
+    "Diseñar mecanismos de bloqueo físico (lock-and-key) para prevenir mal ensamblaje",
+    "Implementar sensores que detecten ausencia o incorrección de operaciones previas",
+    "Aplicar los cinco principios: eliminación, reemplazo, facilitación, detección, mitigación"
+  ],
+  "entregable_esperado": "Mecanismos poka-yoke implementados en los puntos críticos del proceso",
+  "nodos_previos": [
+    "control_proceso_variables"
+  ],
+  "nodos_siguientes": [
+    "6s_lugar_trabajo",
+    "validacion_sistema_medicion"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen defectos recurrentes por error humano",
+    "Cuando se busca prevenir errores de ensamblaje o configuración"
+  ]
+}

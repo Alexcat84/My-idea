@@ -1,0 +1,26 @@
+{
+  "node_id": "criterios_seleccion_proyectos_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Criterios de Selección de Proyectos de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, las organizaciones deben evaluar sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+  "pasos_accionables": [
+    "Listar todas las nominaciones de proyectos disponibles",
+    "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio",
+    "Construir una matriz de evaluación compuesta para comparar nominaciones",
+    "Presentar el listado priorizado al consejo de calidad para decisión final"
+  ],
+  "entregable_esperado": "Matriz de priorización de proyectos con lista ordenada de recomendaciones",
+  "nodos_previos": [
+    "identificacion_oportunidades_mejora"
+  ],
+  "nodos_siguientes": [
+    "carta_proyecto_calidad",
+    "formacion_equipo_proyecto"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples proyectos de mejora candidatos y se debe decidir cuáles ejecutar primero",
+    "Cuando el consejo de calidad necesita justificar recursos limitados"
+  ]
+}

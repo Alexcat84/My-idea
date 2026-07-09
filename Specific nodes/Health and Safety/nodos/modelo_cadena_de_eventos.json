@@ -1,0 +1,27 @@
+{
+  "node_id": "modelo_cadena_de_eventos",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Modelo de Cadena de Eventos (Chain of Events)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de eventos simultáneos, y asume que causas pequeñas producen efectos pequeños.",
+  "pasos_accionables": [
+    "Identificar la secuencia de eventos, evaluaciones y acciones que llevaron al resultado",
+    "Reconocer los límites del modelo: la elección del punto de inicio de la cadena es arbitraria",
+    "Evitar remover un solo 'eslabón' (como un acto humano) como solución única, ya que no refleja la complejidad real del sistema",
+    "Complementar este modelo con un análisis de las vulnerabilidades sistémicas más profundas (ver 'Findings as to risk')"
+  ],
+  "entregable_esperado": "Un diagrama de secuencia de eventos que reconozca sus propias limitaciones y evite conclusiones simplistas sobre causa única",
+  "nodos_previos": [
+    "evitar_uso_complacencia"
+  ],
+  "nodos_siguientes": [
+    "modelo_barreras_swiss_cheese",
+    "no_usar_triangulo_heinrich"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita reconstruir la secuencia temporal de un accidente",
+    "Al comparar diferentes modelos de accidentes para elegir el marco de investigación",
+    "Si se está evaluando la efectividad de una barrera o regla como countermeasure única"
+  ]
+}

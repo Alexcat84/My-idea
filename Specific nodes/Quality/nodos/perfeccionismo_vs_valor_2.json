@@ -1,0 +1,23 @@
+{
+  "node_id": "perfeccionismo_vs_valor_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Perfeccionismo como Desperdicio de Valor",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Existe un impulso humano instintivo hacia la precisión y la perfección que, en ciertos contextos (seguridad alimentaria, energía nuclear, aviación), es indispensable. Sin embargo, en otras situaciones esta búsqueda de perfección es antagónica al negocio, pues consume materiales y energía sin añadir valor tecnológico ni estético real. Este comportamiento se denomina 'perfeccionismo' porque añade costo sin añadir valor, y debe evitarse mediante un análisis de fitness for purpose.",
+  "pasos_accionables": [
+    "Distinguir entre requisitos de calidad críticos (seguridad, salud) y mejoras estéticas o innecesarias",
+    "Evaluar cada especificación de diseño contra su verdadero impacto en la satisfacción del cliente",
+    "Eliminar procesos o controles que agreguen costo sin agregar valor perceptible al cliente",
+    "Establecer criterios de 'fit for purpose' para evitar sobreingeniería"
+  ],
+  "entregable_esperado": "Lista de especificaciones de diseño revisadas, marcando cuáles son críticas y cuáles representan sobrecosto innecesario",
+  "nodos_previos": [
+    "costo_de_mala_calidad_copq"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se detectan altos costos de producción sin mejora perceptible en la satisfacción del cliente",
+    "Si el equipo de diseño tiende a sobre-especificar productos más allá de lo requerido por el cliente"
+  ]
+}

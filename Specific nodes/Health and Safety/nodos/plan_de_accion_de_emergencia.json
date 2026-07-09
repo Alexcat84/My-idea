@@ -1,0 +1,28 @@
+{
+  "node_id": "plan_de_accion_de_emergencia",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Plan de Acción de Emergencia (Emergency Action Plan)",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_theorico": "Un plan de acción de emergencia guía las acciones del empleador y trabajadores durante emergencias laborales. Debe contemplar emergencias internas y externas, definir cadena de mando, rutas de evacuación, puntos de encuentro, procedimientos para personas con discapacidad, y métodos de conteo de personal. Aunque solo es obligatorio bajo ciertas normas OSHA, es una buena práctica general.",
+  "pasos_accionables": [
+    "Identificar emergencias potenciales internas y externas relevantes al negocio",
+    "Definir cadena de mando y persona autorizada para ordenar evacuación",
+    "Documentar rutas de evacuación y puntos de encuentro",
+    "Establecer procedimientos para asistir a personas con discapacidad o que no hablan inglés",
+    "Definir método de conteo de trabajadores y visitantes tras evacuación",
+    "Capacitar a los trabajadores en el plan y sus roles específicos"
+  ],
+  "entregable_esperado": "Documento escrito de Plan de Acción de Emergencia con roles, rutas, y procedimientos de evacuación",
+  "nodos_previos": [
+    "rutas_de_salida_y_puertas_de_emergencia"
+  ],
+  "nodos_siguientes": [
+    "senalizacion_de_salidas",
+    "sistemas_de_extincion_de_incendios"
+  ],
+  "condiciones_activacion": [
+    "Si el negocio no cuenta con un protocolo formal de emergencias",
+    "Si una norma OSHA específica requiere el plan"
+  ]
+}

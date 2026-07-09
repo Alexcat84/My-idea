@@ -1,0 +1,26 @@
+{
+  "node_id": "control_mantener_ganancias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control para Mantener las Ganancias (Plan de Control)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Fase final del proceso RCCA orientada a asegurar que el problema no recurra. Se basa en el diseño, implementación y auditoría de un plan de control que define los sujetos de control, estándares, unidades de medida, sensores, frecuencia de medición, criterios de acción y responsables, mediante una matriz de plan de control.",
+  "pasos_accionables": [
+    "Seleccionar los sujetos de control (características del producto/proceso a monitorear).",
+    "Definir estándares o metas aceptables de desempeño.",
+    "Especificar unidad de medida, sensor, frecuencia y tamaño de muestra.",
+    "Determinar criterios de acción y responsables de decisión y ejecución.",
+    "Capacitar a los dueños del proceso en el uso del plan de control.",
+    "Auditar periódicamente la efectividad del plan de control."
+  ],
+  "entregable_esperado": "Un plan de control documentado (matriz de control) implementado y auditado, que asegura la sostenibilidad de la mejora.",
+  "nodos_previos": [
+    "diseño_implementacion_remedio"
+  ],
+  "nodos_siguientes": [
+    "ciclo_pdsa"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha implementado un remedio y se necesita garantizar que el problema no vuelva a ocurrir."
+  ]
+}

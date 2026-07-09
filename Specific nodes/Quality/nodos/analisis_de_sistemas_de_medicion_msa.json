@@ -1,0 +1,28 @@
+{
+  "node_id": "analisis_de_sistemas_de_medicion_msa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Sistemas de Medición (MSA)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación para garantizar decisiones correctas sobre productos y procesos. Los estudios de Gauge R&R permiten separar la variación debida al instrumento (repetibilidad) de la debida a los operarios (reproducibilidad).",
+  "pasos_accionables": [
+    "Definir el método de prueba con procedimiento paso a paso, equipo y condiciones",
+    "Identificar el sistema de causas de variabilidad (material, analistas, aparatos, días)",
+    "Verificar que el proceso de medición esté bajo control estadístico mediante carta de control",
+    "Realizar un estudio Gauge R&R con múltiples apraisers, partes y repeticiones",
+    "Calcular 5.15σ y compararlo con el rango de especificación (aceptable si es ≤10%)",
+    "Ajustar o calibrar el instrumento si se detecta sesgo sistemático"
+  ],
+  "entregable_esperado": "Informe de estudio MSA/Gauge R&R con estimaciones de repetibilidad, reproducibilidad y determinación de aceptabilidad del sistema de medición",
+  "nodos_previos": [
+    "diseno_de_metodos_de_recoleccion_de_datos"
+  ],
+  "nodos_siguientes": [
+    "reduccion_y_control_de_errores_de_medicion",
+    "cribado_de_datos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesite validar la precisión de instrumentos antes de tomar decisiones de calidad",
+    "Si existen dudas sobre la exactitud de las mediciones que afectan decisiones de aceptación/rechazo"
+  ]
+}

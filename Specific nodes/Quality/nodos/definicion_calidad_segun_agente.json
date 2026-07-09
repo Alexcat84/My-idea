@@ -1,0 +1,23 @@
+{
+  "node_id": "definicion_calidad_segun_agente",
+  "fase_proyecto": "ideacion",
+  "dominio": "quality",
+  "titulo_concepto": "La Calidad se Define según el Agente que Juzga",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming sostiene que la calidad no tiene una definición única y objetiva: varía según quien la juzgue (trabajador, gerente de planta, consumidor, impresor, autor). Un producto puede tener alta calidad para un actor y baja para otro, por lo que se debe identificar explícitamente qué característica de calidad importa a cada parte interesada.",
+  "pasos_accionables": [
+    "Identificar todos los agentes relevantes que juzgan la calidad de un producto/servicio (trabajador, gerencia, cliente, distribuidor)",
+    "Determinar qué escala de calidad usa cada agente",
+    "Documentar posibles conflictos entre las percepciones de calidad de distintos agentes",
+    "Priorizar las características de calidad según impacto en el negocio y el cliente final"
+  ],
+  "entregable_esperado": "Matriz de percepciones de calidad por tipo de agente involucrado",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "consumidor_parte_linea_produccion",
+    "investigacion_necesidades_consumidor"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe desacuerdo interno sobre qué constituye 'buena calidad' para un producto"
+  ]
+}

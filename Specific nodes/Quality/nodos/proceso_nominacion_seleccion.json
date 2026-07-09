@@ -1,0 +1,25 @@
+{
+  "node_id": "proceso_nominacion_seleccion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Proceso de Nominación y Selección de Proyectos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Es el mecanismo formal por el cual la mayoría de los proyectos de mejora se identifican y priorizan. Incluye nominación (desde sistemas de datos, estudios especiales, clientes, empleados, jerarquía gerencial), screening con criterios definidos (factibilidad, significancia, medibilidad, ROI, urgencia) y selección final por parte del consejo o secretaría delegada.",
+  "pasos_accionables": [
+    "Convocar nominaciones de proyectos desde todas las fuentes posibles (datos, encuestas, empleados, clientes)",
+    "Aplicar criterios de screening: factibilidad, significancia, medibilidad, ROI, urgencia, resistencia al cambio",
+    "Delegar el filtrado inicial a una secretaría o departamento de calidad",
+    "Presentar lista priorizada de proyectos recomendados al consejo para decisión final",
+    "Asegurar balance entre proyectos 'vitales pocos' y 'útiles muchos' para impacto real en resultados financieros"
+  ],
+  "entregable_esperado": "Lista final de proyectos aprobados con prioridad, criterios de selección aplicados y responsables asignados",
+  "nodos_previos": [
+    "principio_pareto",
+    "concepto_proyecto_breakthrough"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se reciben múltiples nominaciones de proyectos y se requiere un mecanismo estructurado de priorización",
+    "Cuando se detecta que proyectos ejecutados no generan impacto real en resultados financieros (solo firefighting o relaciones humanas)"
+  ]
+}

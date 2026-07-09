@@ -1,0 +1,28 @@
+{
+  "node_id": "matriz_de_seleccion",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Matriz de Selección",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta para reducir un conjunto de alternativas basándose en criterios explícitos y ponderados por el equipo, introduciendo objetividad al proceso de decisión frente a métodos más subjetivos como la votación simple.",
+  "pasos_accionables": [
+    "Acordar criterios de evaluación de alternativas",
+    "Cada miembro del equipo distribuye 100 puntos entre los criterios",
+    "Calcular el promedio de puntos por criterio y acordar los pesos finales",
+    "Listar las alternativas a evaluar",
+    "Calificar cada alternativa según cada criterio (escala 1-5)",
+    "Calcular el promedio de calificación por alternativa",
+    "Discutir resultados y llegar a consenso sobre próximos pasos"
+  ],
+  "entregable_esperado": "Matriz de selección con alternativas evaluadas, ponderadas y una decisión consensuada",
+  "nodos_previos": [
+    "matriz_pugh"
+  ],
+  "nodos_siguientes": [
+    "matriz_de_planificacion_arbol"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe elegir entre múltiples soluciones o proyectos sin opción claramente superior",
+    "Cuando se busca reducir subjetividad en la toma de decisiones grupales"
+  ]
+}

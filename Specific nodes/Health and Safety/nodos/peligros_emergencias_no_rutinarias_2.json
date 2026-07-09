@@ -1,0 +1,26 @@
+{
+  "node_id": "peligros_emergencias_no_rutinarias_2",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Identificación de Peligros en Emergencias y Tareas No Rutinarias",
+  "fuente": "OSHA3886",
+  "resumen_teorico": "Las emergencias (colapsos estructurales, incendios, derrames, desastres climáticos) y las tareas no rutinarias (izajes críticos, vertidos de concreto) presentan peligros distintos a las operaciones diarias y requieren planes y procedimientos específicos para responder de forma segura.",
+  "pasos_accionables": [
+    "Listar escenarios de emergencia previsibles según el tipo de material y ubicación",
+    "Identificar tareas no rutinarias como izajes críticos o arranques post-parada",
+    "Desarrollar procedimientos de respuesta para cada escenario identificado",
+    "Revisar JSA con los trabajadores antes de iniciar tareas no rutinarias"
+  ],
+  "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con procedimientos de respuesta asociados",
+  "nodos_previos": [
+    "identificacion_peligros_salud",
+    "inspeccion_sitio_peligros"
+  ],
+  "nodos_siguientes": [
+    "controles_no_rutinarias_emergencias"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto incluye actividades de alto riesgo poco frecuentes",
+    "Cuando no existe un plan de emergencia actualizado"
+  ]
+}

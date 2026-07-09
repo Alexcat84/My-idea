@@ -1,0 +1,25 @@
+{
+  "node_id": "distribucion_poisson",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución de Poisson para Defectos Raros",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La distribución de Poisson estima la probabilidad de un número específico de ocurrencias (defectos) por unidad de tiempo o espacio, cuando la probabilidad de ocurrencia es pequeña. Es una aproximación útil de la distribución binomial cuando n≥16, la población es al menos 10 veces la muestra, y p<0.1.",
+  "pasos_accionables": [
+    "Determinar el tamaño de muestra (n) y la probabilidad histórica de defecto (p)",
+    "Calcular np para entrar en la tabla de probabilidades de Poisson",
+    "Obtener la probabilidad acumulada de r o menos defectos",
+    "Usar el resultado para decisiones de aceptación de lotes"
+  ],
+  "entregable_esperado": "Estimación de probabilidad de número de defectos en una muestra o lote",
+  "nodos_previos": [
+    "distribucion_normal_probabilidad"
+  ],
+  "nodos_siguientes": [
+    "distribucion_binomial"
+  ],
+  "condiciones_activacion": [
+    "Cuando se analizan defectos por unidad en componentes complejos",
+    "Cuando se necesita aproximar probabilidades de muestreo con eventos raros"
+  ]
+}

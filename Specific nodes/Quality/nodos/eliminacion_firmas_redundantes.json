@@ -1,0 +1,25 @@
+{
+  "node_id": "eliminacion_firmas_redundantes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Eliminación de Firmas y Revisiones Redundantes en Procesos Administrativos",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming demuestra con casos reales (tarjetas de nómina, órdenes de compra, formularios de viáticos) que exigir múltiples firmas o revisiones diluye la responsabilidad ('si todos son responsables, nadie lo es') y genera más errores, no menos. La solución es simplificar el proceso, asignar responsabilidad clara a una sola persona y devolver inmediatamente los documentos incorrectos a su origen para corrección, en lugar de corregirlos en el flujo posterior.",
+  "pasos_accionables": [
+    "Mapear todos los procesos administrativos que requieren múltiples firmas o aprobaciones",
+    "Eliminar firmas redundantes y asignar responsabilidad única y clara por cada documento",
+    "Implementar el retorno inmediato de documentos incorrectos al originador, con explicación del error",
+    "Medir el porcentaje de error antes y después del cambio para verificar mejora"
+  ],
+  "entregable_esperado": "Proceso administrativo rediseñado con responsabilidad única definida y tasa de error reducida documentada",
+  "nodos_previos": [
+    "retroalimentacion_cliente_mejora_servicio"
+  ],
+  "nodos_siguientes": [
+    "adaptacion_14_puntos_servicio_medico"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples firmas o revisiones en un proceso sin mejora en la tasa de errores",
+    "Si un proceso administrativo (nómina, compras, viáticos) presenta alta tasa de retrabajo"
+  ]
+}

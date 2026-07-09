@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_beneficio_costo",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis Beneficio/Costo",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta para caracterizar pros y contras de una solución propuesta, útil para justificar económicamente una mejora de calidad o decidir entre alternativas, comparando costos únicos, costos operativos adicionales y ahorros anuales esperados.",
+  "pasos_accionables": [
+    "Estimar los costos únicos de implementación",
+    "Estimar los costos operativos anuales adicionales",
+    "Estimar los ahorros anuales esperados",
+    "Evaluar el impacto en la satisfacción del cliente, descartando alternativas que la reduzcan",
+    "Calcular el costo neto operativo anual y el costo anualizado de inversiones únicas",
+    "Sumar ambos para obtener el costo total anual y clasificar las alternativas"
+  ],
+  "entregable_esperado": "Tabla comparativa de alternativas con su análisis beneficio/costo y ranking",
+  "nodos_previos": [
+    "diagrama_causa_efecto"
+  ],
+  "nodos_siguientes": [
+    "plan_de_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen varias soluciones factibles a un problema de calidad y se debe elegir la más rentable"
+  ]
+}

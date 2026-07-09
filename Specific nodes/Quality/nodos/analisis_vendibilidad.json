@@ -1,0 +1,24 @@
+{
+  "node_id": "analisis_vendibilidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Vendibilidad (Salability Analysis)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Evalúa qué características del producto estimulan a los clientes a comprarlo y el precio que están dispuestos a pagar. A diferencia del análisis competitivo, el punto de referencia es la respuesta del cliente al diseño propuesto, no solo la comparación con competidores, aunque ambos análisis pueden combinarse.",
+  "pasos_accionables": [
+    "Diseñar encuestas o pruebas de mercado sobre el diseño propuesto",
+    "Medir la disposición a pagar de distintos segmentos de mercado por cada característica",
+    "Comparar tasas de instalación de opciones en líneas de producto propias y de la competencia",
+    "Identificar segmentos que valoran poco ciertas características para ajustar el diseño"
+  ],
+  "entregable_esperado": "Reporte de vendibilidad con segmentación de clientes y disposición a pagar por característica",
+  "nodos_previos": [
+    "analisis_competitivo"
+  ],
+  "nodos_siguientes": [
+    "analisis_valor"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita validar el interés real del mercado por características específicas del producto"
+  ]
+}

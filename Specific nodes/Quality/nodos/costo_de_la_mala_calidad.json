@@ -1,0 +1,26 @@
+{
+  "node_id": "costo_de_la_mala_calidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Costo Oculto de la Mala Calidad y el Retrabajo",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "La mala calidad no es gratuita: se paga dos veces, una para producir el defecto y otra para corregirlo. Deming ilustra con ejemplos que hasta el 40-42% de la nómina puede destinarse a fabricar y reparar defectos, y que estudios de Feigenbaum estiman que entre 15% y 40% del costo de un producto es desperdicio. Además, el daño en el manejo, el desgaste en anaquel y clientes insatisfechos generan pérdidas adicionales difíciles de cuantificar.",
+  "pasos_accionables": [
+    "Calcular qué porcentaje del personal o del tiempo se dedica a retrabajo o corrección de defectos.",
+    "Estimar el costo total (nómina, materiales, tiempo de máquina) asociado a la producción y corrección de defectos.",
+    "Comunicar estos costos a la gerencia como argumento para invertir en mejora de procesos en lugar de solo inspección final.",
+    "Iniciar un programa de mejora continua orientado a reducir progresivamente el porcentaje de defectos, sin conformarse con un nivel 'aceptable'."
+  ],
+  "entregable_esperado": "Un análisis de costos de mala calidad (retrabajo, desperdicio, daños de manejo) presentado a la gerencia con recomendaciones de mejora de proceso.",
+  "nodos_previos": [
+    "definiciones_operacionales",
+    "control_estadistico_proceso"
+  ],
+  "nodos_siguientes": [
+    "medidas_productividad_no_mejoran"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe un porcentaje significativo del personal dedicado a retrabajo.",
+    "Cuando la gerencia subestima el impacto económico de los defectos de calidad."
+  ]
+}

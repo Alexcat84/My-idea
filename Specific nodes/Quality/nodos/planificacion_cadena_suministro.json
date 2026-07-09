@@ -1,0 +1,27 @@
+{
+  "node_id": "planificacion_cadena_suministro",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad histórica de compras, identificar commodities críticos, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
+  "pasos_accionables": [
+    "Documentar la actividad histórica y futura de compras",
+    "Identificar commodities de alto gasto y alta criticidad",
+    "Formar equipo cross-funcional para la commodity seleccionada",
+    "Analizar estructura y tendencias de la industria proveedora",
+    "Calcular el costo total de propiedad del commodity",
+    "Obtener respaldo de la dirección para implementar la estrategia de sourcing"
+  ],
+  "entregable_esperado": "Estrategia de sourcing aprobada por la dirección con plan de implementación",
+  "nodos_previos": [
+    "evaluacion_encuesta_calidad_proveedor"
+  ],
+  "nodos_siguientes": [
+    "planificacion_economica_conjunta",
+    "planificacion_tecnologica_conjunta"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña la estrategia global de abastecimiento de una organización"
+  ]
+}

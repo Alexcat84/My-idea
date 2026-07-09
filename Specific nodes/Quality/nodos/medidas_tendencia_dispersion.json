@@ -1,0 +1,25 @@
+{
+  "node_id": "medidas_tendencia_dispersion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Medidas de Tendencia Central y Dispersión",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los datos pueden resumirse numéricamente mediante medidas de tendencia central (media, mediana) que indican dónde se centran los datos, y medidas de dispersión (rango, desviación estándar) que indican la cantidad de dispersión. La desviación estándar es la medida de dispersión más útil para conjuntos de más de 10 observaciones.",
+  "pasos_accionables": [
+    "Calcular la media aritmética de los datos",
+    "Calcular la mediana si los datos presentan asimetría o valores atípicos",
+    "Calcular la desviación estándar y/o el rango según el tamaño de la muestra",
+    "Calcular el coeficiente de variación si se comparan grupos con medias distintas",
+    "Evitar eliminar valores extremos sin evidencia de causa especial"
+  ],
+  "entregable_esperado": "Resumen numérico completo (media, mediana, desviación estándar) del conjunto de datos analizado",
+  "nodos_previos": [
+    "frecuencia_distribucion"
+  ],
+  "nodos_siguientes": [
+    "distribucion_normal_probabilidad"
+  ],
+  "condiciones_activacion": [
+    "Si se requiere sintetizar numéricamente un conjunto de datos de calidad"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "node_id": "sesgo_retrospectivo_hindsight_2",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Sesgo Retrospectivo (Hindsight Bias)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_theorico": "El sesgo retrospectivo ocurre cuando, conociendo el resultado de un evento, simplificamos la situación a una elección binaria entre notar o no los datos críticos. Esto distorsiona la capacidad de entender por qué las personas hicieron lo que hicieron, ya que ellas no contaban con el conocimiento del desenlace. Se debe distinguir entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era observable dado el contexto, interfaz y tareas concurrentes).",
+  "resumen_teorico": "El sesgo retrospectivo ocurre cuando, conociendo el resultado de un evento, simplificamos la situación a una elección binaria entre notar o no los datos críticos. Esto distorsiona la capacidad de entender por qué las personas hicieron lo que hicieron, ya que ellas no contaban con el conocimiento del desenlace. Se debe distinguir entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era observable dado el contexto, interfaz y tareas concurrentes).",
+  "pasos_accionables": [
+    "Evitar preguntas contrafactuales del tipo '¿por qué no hicieron...?'",
+    "Reconstruir la situación tal como se desplegó para los involucrados, no como se ve ahora con el resultado conocido",
+    "Diferenciar entre datos disponibles y datos observables en el momento",
+    "Evitar simplificar la secuencia de eventos a una causalidad lineal simple"
+  ],
+  "entregable_esperado": "Reconstrucción cronológica de la situación desde el punto de vista de los involucrados, sin contaminación del conocimiento del resultado",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "analisis_factores_distales_proximales",
+    "fijacion_cognitiva"
+  ],
+  "condiciones_activacion": [
+    "Al iniciar cualquier investigación de 'error humano' o revisión de aprendizaje tras un incidente"
+  ]
+}

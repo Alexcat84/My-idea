@@ -1,0 +1,27 @@
+{
+  "node_id": "normalizacion_de_datos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Normalización de Datos para Comparaciones Justas",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El mayor problema en cualquier ejercicio de benchmarking es comparar sujetos de manera equitativa (like-for-like) cuando son inherentemente diferentes en tamaño, diseño o contexto. La normalización convierte métricas a una forma comparable, considerando factores como escala, contrato, regulación o geografía. Métodos incluyen estratificación en grupos de pares, medición por unidad o por hora, y factores de ponderación sofisticados como el Juran Complexity Factor (JCF) para casos donde una simple medida por unidad es insuficiente.",
+  "pasos_accionables": [
+    "Identificar los factores que impulsan las diferencias de desempeño entre los sujetos benchmarked",
+    "Agrupar a los participantes en categorías o grupos de pares con características similares",
+    "Aplicar estratificación de datos según criterios subyacentes relevantes (ej: edad, género, tipo de instalación)",
+    "Seleccionar un factor normalizador que sea verdaderamente el impulsor del desempeño medido",
+    "Probar la eficacia del método de normalización mediante análisis de correlación entre factor normalizador y métrica de desempeño",
+    "Desarrollar factores de ponderación complejos si la normalización por unidad simple resulta insuficiente"
+  ],
+  "entregable_esperado": "Conjunto de métricas normalizadas que permiten comparaciones válidas y equitativas entre participantes",
+  "nodos_previos": [
+    "recoleccion_validacion_datos_benchmarking"
+  ],
+  "nodos_siguientes": [
+    "analisis_reporte_benchmarking"
+  ],
+  "condiciones_activacion": [
+    "Cuando los sujetos a comparar difieren significativamente en tamaño, diseño o contexto",
+    "Si las comparaciones directas de desempeño llevarían a conclusiones erróneas"
+  ]
+}

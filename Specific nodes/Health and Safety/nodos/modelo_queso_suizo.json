@@ -1,0 +1,23 @@
+{
+  "node_id": "modelo_queso_suizo",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Modelo del Queso Suizo de las Defensas",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Cada capa de defensa tiene debilidades y huecos que cambian dinámicamente en el tiempo (no son estáticos), representados como rebanadas de queso suizo. Un accidente organizacional ocurre solo cuando los huecos de todas las capas se alinean momentáneamente, permitiendo que la trayectoria del peligro atraviese todas las defensas. Estos huecos se crean por fallos activos y condiciones latentes.",
+  "pasos_accionables": [
+    "Mapear las capas de defensa del sistema y los 'huecos' conocidos en cada una.",
+    "Analizar accidentes o cuasi-accidentes pasados identificando qué huecos se alinearon.",
+    "Diseñar mecanismos de monitoreo continuo de huecos en cada capa defensiva."
+  ],
+  "entregable_esperado": "Un diagrama de trayectoria de accidente aplicando el modelo del queso suizo a un caso real o hipotético de la organización.",
+  "nodos_previos": [
+    "defensas_en_profundidad"
+  ],
+  "nodos_siguientes": [
+    "fallos_activos_condiciones_latentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga un accidente organizacional o se quiere anticipar posibles trayectorias de fallo."
+  ]
+}

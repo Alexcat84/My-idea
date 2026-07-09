@@ -1,0 +1,26 @@
+{
+  "node_id": "precision_exactitud_sensores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Precisión y Exactitud de los Sensores de Medición",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La precisión de un sensor es su capacidad de reproducir resultados en pruebas repetidas, mientras que la exactitud es el grado en que el sensor refleja el valor verdadero según un estándar establecido. Los sensores humanos (inspectores, auditores) suelen ser menos precisos que los tecnológicos. La exactitud generalmente se corrige mediante recalibración, mientras que mejorar la precisión más allá de su límite de diseño requiere rediseñar el sensor.",
+  "pasos_accionables": [
+    "Evaluar si el sensor a utilizar es tecnológico o humano y sus limitaciones inherentes",
+    "Medir la reproducibilidad (precisión) del sensor mediante pruebas repetidas",
+    "Comparar los resultados del sensor contra un estándar establecido para verificar exactitud",
+    "Establecer un programa de calibración y mantenimiento periódico del sensor",
+    "Si la precisión es insuficiente, considerar el rediseño del sensor o método de medición"
+  ],
+  "entregable_esperado": "Plan de calibración y mantenimiento de sensores con métricas de precisión y exactitud documentadas",
+  "nodos_previos": [
+    "unidades_medida_sensores"
+  ],
+  "nodos_siguientes": [
+    "product_design_spreadsheet"
+  ],
+  "condiciones_activacion": [
+    "Cuando se depende de mediciones humanas para evaluar calidad (inspección, auditoría)",
+    "Cuando se detectan inconsistencias en los datos de medición recolectados"
+  ]
+}

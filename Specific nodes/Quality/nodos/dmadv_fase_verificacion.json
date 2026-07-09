@@ -1,0 +1,28 @@
+{
+  "node_id": "dmadv_fase_verificacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Fase de Verificación (Verify) en DMADV",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La fase de verificación en DMADV asegura que el nuevo diseño puede ser manufacturado o el servicio entregado y soportado en campo dentro de los parámetros de calidad, confiabilidad y costo requeridos. Tras el DVT, se realiza un escalamiento a producción completa mediante el Manufacturing Verification Test (MVT) o Operations Verification Test (OVT), cuyo objetivo es descubrir problemas potenciales de producción o soporte mediante corridas piloto.",
+  "pasos_accionables": [
+    "Ejecutar una o más corridas piloto del proceso de operaciones",
+    "Realizar análisis de capacidad y análisis de sistemas de medición",
+    "Verificar controles de proceso y ajustar procedimientos operativos estándar",
+    "Entregar documentación formal a los dueños de proceso downstream (manufactura, logística, servicio)",
+    "Realizar pruebas en ambiente de servicio y soporte de campo para detectar problemas de vida útil o capacidad de servicio",
+    "Completar el design scorecard final y archivar hallazgos clave",
+    "Elaborar un informe final con lecciones aprendidas del proyecto"
+  ],
+  "entregable_esperado": "Verificación del desempeño del producto/proceso contra objetivos del proyecto, corrida piloto completa, documentación operativa y de control completa, decisión de escalamiento, procesos transicionados a los dueños y cierre formal del proyecto DFSS",
+  "nodos_previos": [
+    "dmadv_fase_diseno"
+  ],
+  "nodos_siguientes": [
+    "benchmarking_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando el diseño detallado ha sido validado mediante DVT y se requiere confirmar viabilidad de producción a escala completa",
+    "Cuando se necesita transicionar el proyecto de diseño a los equipos operativos permanentes"
+  ]
+}

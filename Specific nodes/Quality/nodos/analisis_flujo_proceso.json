@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_flujo_proceso",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis del Diagrama de Flujo de Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_keorico": "El diseño de un proceso puede revisarse mediante un diagrama de flujo que muestra la trayectoria de los materiales hasta convertirse en producto terminado. Este diagrama divide el proceso en estaciones de trabajo, para las cuales se documentan operaciones, secuencia, instalaciones e instrumentos, y condiciones de proceso a mantener.",
+  "pasos_accionables": [
+    "Elaborar diagrama de flujo del proceso completo",
+    "Dividir el flujo en estaciones de trabajo lógicas",
+    "Documentar para cada estación las operaciones, secuencia, instrumentos y condiciones de proceso",
+    "Usar el documento como base para auditorías y control por parte de inspectores"
+  ],
+  "entregable_esperado": "Diagrama de flujo de proceso con documentación formal por estación de trabajo",
+  "nodos_previos": [
+    "key_process_product_characteristics"
+  ],
+  "nodos_siguientes": [
+    "control_proceso_variables",
+    "errores_a_prueba_poka_yoke"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña o rediseña un proceso de manufactura",
+    "Cuando se requiere establecer puntos de control de calidad"
+  ]
+}

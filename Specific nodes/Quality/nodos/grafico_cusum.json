@@ -1,0 +1,27 @@
+{
+  "node_id": "grafico_cusum",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráfico de Suma Acumulada (CUSUM)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). A diferencia de los gráficos Shewhart tradicionales, cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
+  "pasos_accionables": [
+    "Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra",
+    "Definir el valor objetivo T y la desviación estándar del proceso",
+    "Establecer límites de control superior e inferior a ±4 desviaciones estándar",
+    "Calcular la suma acumulada superior (Cu) e inferior (CL) para cada punto muestral",
+    "Graficar Cu y CL como líneas separadas y monitorear cruces de los límites"
+  ],
+  "entregable_esperado": "Gráfico CUSUM implementado para detección temprana de desplazamientos pequeños en el proceso",
+  "nodos_previos": [
+    "graficos_control_tiradas_cortas"
+  ],
+  "nodos_siguientes": [
+    "grafico_media_movil_ewma",
+    "graficos_control_multivariados"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita detectar desplazamientos pequeños y sostenidos en la media del proceso",
+    "Cuando los gráficos Shewhart tradicionales no son suficientemente sensibles"
+  ]
+}

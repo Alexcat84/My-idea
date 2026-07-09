@@ -1,0 +1,22 @@
+{
+  "node_id": "auditoria_producto",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Auditoría de Producto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La auditoría de producto es una evaluación independiente de la calidad de un producto para determinar su aptitud de uso y conformidad con especificaciones, realizada después de las inspecciones regulares. Sus propósitos incluyen estimar el nivel de calidad entregado al cliente, evaluar la efectividad de las decisiones de inspección, y proporcionar aseguramiento adicional. Es crítico que el alcance del muestreo refleje realmente las características importantes para el cliente, no solo lo fácil de medir.",
+  "pasos_accionables": [
+    "Definir el propósito de la auditoría de producto (estimar calidad entregada, evaluar inspección, etc.)",
+    "Seleccionar la etapa de evaluación más económica y representativa (fábrica, distribuidor, campo)",
+    "Validar que las características auditadas correspondan a lo que realmente importa al cliente (contrastar con estudios de mercado)",
+    "Tomar muestras representativas de productos terminados para verificar conformidad y aptitud de uso"
+  ],
+  "entregable_esperado": "Reporte de auditoría de producto con nivel de calidad estimado y comparación con necesidades del cliente",
+  "nodos_previos": [
+    "seguimiento_accion_correctiva"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se necesita validar la calidad real entregada al cliente más allá de la inspección rutinaria"
+  ]
+}

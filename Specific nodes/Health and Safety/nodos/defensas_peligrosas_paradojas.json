@@ -1,0 +1,24 @@
+{
+  "node_id": "defensas_peligrosas_paradojas",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Defensas Peligrosas: Paradojas de las Barreras de Seguridad",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las defensas, barreras y salvaguardas diseñadas para proteger contra un tipo de peligro pueden exponer a sus usuarios a otros tipos de riesgo no previstos por quienes las crearon —ilustrado históricamente con la armadura de placas en la batalla de Agincourt (1415), que protegía de armas penetrantes pero volvía a los caballeros indefensos al caer al suelo. En sistemas de alta tecnología, las defensas redundantes y diversas han reducido eventos adversos en términos absolutos, pero han transformado la naturaleza de los accidentes que sí ocurren y la relación entre componentes humanos y técnicos del sistema. Es esencial que gestores y operadores comprendan tanto las ventajas como los peligros de las defensas multicapa.",
+  "pasos_accionables": [
+    "Analizar cada capa de defensa/seguridad implementada preguntando: ¿qué nuevo riesgo podría estar introduciendo esta protección?",
+    "Revisar incidentes y casi-accidentes ('free lessons') como oportunidad de 'vacunar' al sistema, aprendiendo de fortalezas y debilidades de las defensas existentes.",
+    "Evaluar si las defensas han cambiado la relación humano-tecnología de forma que genere nuevas vulnerabilidades."
+  ],
+  "entregable_esperado": "Análisis crítico de las defensas de seguridad actuales de la organización, identificando efectos secundarios no deseados.",
+  "nodos_previos": [
+    "confusion_modos_automatizacion"
+  ],
+  "nodos_siguientes": [
+    "calidad_control_vs_aseguramiento"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseñan o revisan sistemas de defensa/protección en procesos de alto riesgo.",
+    "Cuando se investigan incidentes en los que una medida de seguridad contribuyó paradójicamente al daño."
+  ]
+}

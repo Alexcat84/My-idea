@@ -1,0 +1,26 @@
+{
+  "node_id": "littles_law",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Ley de Little",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Relación matemática fundamental en Lean: WIP = Throughput × Lead Time. Establece que reducir el trabajo en proceso (WIP) reduce directamente el lead time hacia el cliente, y que si el WIP varía, el lead time también variará proporcionalmente.",
+  "pasos_accionables": [
+    "Medir el WIP actual del proceso",
+    "Medir el throughput (tasa de producción)",
+    "Calcular el lead time usando la fórmula WIP = TP x LT",
+    "Identificar oportunidades para reducir WIP y así reducir lead time",
+    "Monitorear la relación de forma continua"
+  ],
+  "entregable_esperado": "Cálculo de lead time basado en Ley de Little con plan de reducción de WIP",
+  "nodos_previos": [
+    "inventory_analysis_lean"
+  ],
+  "nodos_siguientes": [
+    "constraint_management"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita reducir el tiempo de entrega al cliente",
+    "Al analizar la relación entre inventario y velocidad de proceso"
+  ]
+}

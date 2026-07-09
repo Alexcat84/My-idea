@@ -1,0 +1,28 @@
+{
+  "node_id": "regulatory_process_model",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Modelo del Proceso Regulatorio con Factores Organizacionales y Gerenciales (O&M)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Modelo de tres niveles para que los reguladores enfoquen sus recursos limitados: (1) instancias locales de incumplimiento detectadas en visitas de sitio, (2) factores organizacionales y gerenciales (O&M) subyacentes que causan esas instancias (ej. gestión de mantenimiento, presión comercial), calificados en escala de 1-5, y (3) un Perfil de Factores Organizacionales que resume las calificaciones para identificar qué factores necesitan reforma urgente. El modelo integra reguladores, regulados y legisladores en un ciclo de aprendizaje continuo.",
+  "pasos_accionables": [
+    "Registrar instancias de incumplimiento durante inspecciones de sitio",
+    "Vincular cada instancia con los factores O&M subyacentes relevantes",
+    "Calificar la contribución de cada factor O&M en escala de 1 (poca influencia) a 5 (influencia considerable)",
+    "Sumar calificaciones a través de instancias para generar un Perfil de Factores Organizacionales",
+    "Priorizar 2-3 factores más críticos para reforma inmediata",
+    "Monitorear el progreso mediante inspecciones sucesivas y perfiles actualizados"
+  ],
+  "entregable_esperado": "Perfil de Factores Organizacionales que priorice las áreas de reforma para la organización regulada",
+  "nodos_previos": [
+    "self_regulation_deregulation_tradeoffs",
+    "formal_safety_assessment_safety_case"
+  ],
+  "nodos_siguientes": [
+    "safety_culture_engineering"
+  ],
+  "condiciones_activacion": [
+    "Cuando un regulador debe decidir dónde enfocar recursos limitados de inspección",
+    "Cuando se requiere distinguir entre reparaciones locales y reformas sistémicas"
+  ]
+}

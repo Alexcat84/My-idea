@@ -1,0 +1,25 @@
+{
+  "node_id": "diagrama_caja",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Diagrama de Caja (Box Plot)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Resumen gráfico de cinco números (mínimo, primer cuartil, mediana, tercer cuartil, máximo) que muestra la variación de un conjunto de datos. Es útil para comparar la variación entre grupos o proveedores.",
+  "pasos_accionables": [
+    "Recolectar los datos crudos y ordenarlos de menor a mayor",
+    "Decidir el tipo de box plot a construir",
+    "Calcular los cinco resúmenes estadísticos necesarios",
+    "Dibujar y etiquetar los ejes horizontal y vertical",
+    "Comparar visualmente la dispersión entre grupos si aplica"
+  ],
+  "entregable_esperado": "Gráfico de caja mostrando la distribución y variación de los datos analizados",
+  "nodos_previos": [
+    "estadistica_basica_calidad"
+  ],
+  "nodos_siguientes": [
+    "plan_de_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita comparar la variación de un proceso entre múltiples grupos o proveedores"
+  ]
+}

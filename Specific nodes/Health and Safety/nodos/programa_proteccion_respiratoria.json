@@ -1,0 +1,28 @@
+{
+  "node_id": "programa_proteccion_respiratoria",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Programa de Protección Respiratoria",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_teorico": "Un programa escrito de protección respiratoria establece procedimientos específicos del lugar de trabajo para seleccionar, usar correctamente, limpiar, desinfectar, almacenar, inspeccionar, reparar y desechar respiradores. Incluye capacitación de trabajadores, uso de equipos aprobados por NIOSH, evaluaciones médicas previas al uso, y pruebas de ajuste (fit-testing) anuales para respiradores ajustados.",
+  "pasos_accionables": [
+    "Redactar un programa escrito específico para el lugar de trabajo según 29 CFR 1910.134",
+    "Asegurar que los respiradores sean aprobados por NIOSH para la aplicación específica",
+    "Realizar evaluación médica antes del primer uso o prueba de ajuste",
+    "Realizar fit-test antes del primer uso y anualmente para respiradores ajustados",
+    "Capacitar a los trabajadores anualmente sobre uso, limitaciones y mantenimiento",
+    "Establecer procedimientos de almacenamiento, limpieza e inspección regular"
+  ],
+  "entregable_esperado": "Documento de programa de protección respiratoria implementado, con registros de fit-test, evaluaciones médicas y capacitaciones.",
+  "nodos_previos": [
+    "identificacion_riesgos_respiratorios"
+  ],
+  "nodos_siguientes": [
+    "ppe_general",
+    "capacitacion_seguridad_trabajadores"
+  ],
+  "condiciones_activacion": [
+    "Si los trabajadores están expuestos a contaminantes en el aire que requieren respiradores",
+    "Si la empresa opera en ambientes con polvo, químicos o vapores peligrosos"
+  ]
+}

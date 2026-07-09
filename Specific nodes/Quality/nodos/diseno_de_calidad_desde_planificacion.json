@@ -1,0 +1,24 @@
+{
+  "node_id": "diseno_de_calidad_desde_planificacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Construcción de la calidad desde la etapa de diseño y planificación",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming ilustra con el ejemplo de un hotel que, una vez que los planos y la construcción avanzan, es demasiado tarde para incorporar calidad: la ubicación de camas frente a ductos de aire, ascensores insuficientes o interruptores de luz confusos son defectos de diseño que ningún gerente puede corregir después. La calidad de un producto o servicio, especialmente en proyectos únicos ('one of a kind'), debe planificarse considerando la experiencia real del usuario final antes de la ejecución física.",
+  "pasos_accionables": [
+    "Antes de finalizar cualquier diseño físico o de proceso, simular la experiencia del usuario final paso a paso.",
+    "Identificar puntos de fricción previsibles (ergonomía, señalización, flujo de uso) durante la fase de planos.",
+    "Involucrar a quienes operarán o usarán el sistema (gerentes, empleados, clientes) en la revisión del diseño antes de construir o implementar.",
+    "Documentar los requisitos funcionales mínimos (ej. escritorio, interruptor maestro) como parte de las especificaciones de diseño.",
+    "Evitar decisiones de diseño irreversibles sin validación previa con casos de uso reales."
+  ],
+  "entregable_esperado": "Un documento de especificaciones de diseño validado con casos de uso reales antes de iniciar la construcción o implementación física del producto/servicio.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "sistema_estable_responsabilidad_gerencial"
+  ],
+  "condiciones_activacion": [
+    "Si el proyecto es de tipo 'único' (construcción, instalación) donde no habrá una segunda oportunidad de corrección fácil.",
+    "Si se están definiendo planos o especificaciones antes de la ejecución física."
+  ]
+}

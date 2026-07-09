@@ -1,0 +1,27 @@
+{
+  "node_id": "punto_equilibrio_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Punto de Equilibrio de Calidad y Regla Todo-o-Nada en Inspección",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Existe un punto de equilibrio (break-even quality) definido como p = k1/k2, donde k1 es el costo de inspeccionar una parte y k2 es el costo de que una parte defectuosa falle en el ensamblaje. Si la fracción defectuosa entrante p es menor que este punto, la estrategia óptima es NO inspeccionar (costo mínimo). Si p es mayor, la inspección al 100% da el costo mínimo. Esta es la regla de 'todo o nada': casi nunca es óptimo un plan de inspección parcial o de muestreo de aceptación.",
+  "pasos_accionables": [
+    "Calcular el costo de inspeccionar una parte (k1) y el costo de fallo por parte defectuosa no detectada (k2).",
+    "Determinar la fracción defectuosa histórica del proceso o proveedor (p).",
+    "Calcular el punto de equilibrio: p_equilibrio = k1/k2.",
+    "Si p < p_equilibrio, eliminar la inspección de esa parte.",
+    "Si p > p_equilibrio, aplicar inspección al 100%.",
+    "Para múltiples partes, ordenar los términos (ki - K*pi) de mayor a menor y aplicar la regla por cada parte."
+  ],
+  "entregable_esperado": "Política de inspección documentada por cada componente o proveedor, indicando si se inspecciona al 100%, o no se inspecciona en absoluto.",
+  "nodos_previos": [
+    "comparacion_metodos_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "trabajo_con_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir la política de inspección de un componente o lote entrante.",
+    "Cuando se manejan múltiples piezas o proveedores y se necesita optimizar el costo total de inspección."
+  ]
+}

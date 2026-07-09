@@ -1,0 +1,27 @@
+{
+  "node_id": "ciclo_de_retroalimentacion_control",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Ciclo de Retroalimentación de Control (Sensor-Estándar-Actuador)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El control de calidad se basa en un bucle de retroalimentación compuesto por: un sensor que mide el desempeño real del proceso, un mecanismo de comparación (umpire) que contrasta esa medición contra estándares, y un actuador que toma acción correctiva cuando hay desviación. Este ciclo puede ser humano, tecnológico o híbrido y opera en distintos niveles organizacionales.",
+  "pasos_accionables": [
+    "Seleccionar o diseñar el sensor adecuado (instrumento, sistema de datos o persona) para medir el atributo de calidad",
+    "Definir la unidad de medida y el estándar de comparación",
+    "Establecer el rol de 'umpire' que interpreta diferencias y decide si hay conformidad",
+    "Diseñar el actuador que ejecutará la acción correctiva ante desviaciones",
+    "Documentar y registrar los resultados del ciclo para trazabilidad"
+  ],
+  "entregable_esperado": "Diagrama del bucle de retroalimentación con sensor, estándar de comparación y actuador definidos para el proceso",
+  "nodos_previos": [
+    "establecimiento_metas_de_calidad"
+  ],
+  "nodos_siguientes": [
+    "ciclo_pdca_pdsa",
+    "piramide_de_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere controlar la conformidad de un proceso en tiempo real",
+    "Si existen desviaciones no gestionadas entre desempeño real y meta"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "rework_por_el_causante",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Rework Realizado por Quien Causó el Error",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Práctica que consiste en que el trabajador que originó un defecto sea quien realice la corrección (rework) de dicho defecto, en lugar de enviarlo a un área separada de retrabajo. Esto genera retroalimentación directa e inmediata sobre los errores cometidos, mejora la moral del trabajador al hacerlo partícipe de la solución, y refuerza la responsabilidad personal por la calidad del trabajo, acelerando el aprendizaje y la reducción de defectos futuros.",
+  "pasos_accionables": [
+    "Identificar los procesos donde el rework se realiza en un área separada del origen del defecto",
+    "Rediseñar el flujo para que el operario reciba y corrija su propio trabajo defectuoso",
+    "Comunicar los tipos de defectos encontrados directamente al operario responsable",
+    "Medir el impacto en la tasa de defectos por unidad tras implementar el cambio"
+  ],
+  "entregable_esperado": "Un flujo de trabajo modificado donde el rework se asigna al operario original, con métricas de defectos antes/después",
+  "nodos_previos": [
+    "conciencia_de_calidad"
+  ],
+  "nodos_siguientes": [
+    "accion_correctiva"
+  ],
+  "condiciones_activacion": [
+    "Cuando el rework se realiza en un área separada y el operario no recibe retroalimentación de sus errores",
+    "Cuando se busca mejorar la moral y responsabilidad personal del equipo de producción"
+  ]
+}

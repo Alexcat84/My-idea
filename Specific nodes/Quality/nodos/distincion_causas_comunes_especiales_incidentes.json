@@ -1,0 +1,27 @@
+{
+  "node_id": "distincion_causas_comunes_especiales_incidentes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distinción entre Causas Comunes y Especiales en el Análisis de Accidentes",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Antes de atribuir un accidente o falla a la negligencia de una persona específica, es fundamental determinar estadísticamente si la causa pertenece al sistema (causa común) o a una condición especial y aislada. Deming argumenta que la mayoría de los accidentes (posiblemente 99%) provienen del sistema mismo y solo una fracción de la negligencia individual. Sin pensamiento estadístico, las organizaciones tienden a culpar erróneamente a individuos, lo que no reduce la frecuencia de accidentes futuros.",
+  "pasos_accionables": [
+    "Recopilar datos históricos de incidentes o accidentes en un gráfico de control",
+    "Determinar si los eventos caen dentro de los límites de variación esperada del sistema",
+    "Evitar conclusiones apresuradas atribuyendo el evento a negligencia individual sin análisis estadístico",
+    "Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo",
+    "Documentar la proporción estimada de causas sistémicas vs especiales para guiar la mejora"
+  ],
+  "entregable_esperado": "Análisis estadístico documentado que clasifique incidentes en causas comunes vs especiales, con recomendaciones de acción correctiva",
+  "nodos_previos": [
+    "profundo_conocimiento_variacion",
+    "graficos_control_shewhart"
+  ],
+  "nodos_siguientes": [
+    "mejora_continua_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurren accidentes, fallas o resultados desfavorables recurrentes en un proceso u organización",
+    "Si existe la tentación de culpar directamente a un trabajador sin análisis previo"
+  ]
+}

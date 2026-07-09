@@ -1,0 +1,25 @@
+{
+  "node_id": "sistemas_recompensa_aleatorios",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistemas de Reconocimiento como Lotería Estadística",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming demuestra, usando probabilidad (distribución de Poisson), que sistemas de reconocimiento tipo 'empleado del mes' basados en conteos bajos (ej. menos quejas) sin considerar si el proceso está en control estadístico son esencialmente una lotería: cualquier trabajador con un promedio estable de errores tendrá, tarde o temprano, un mes con cero incidencias por puro azar. Estos sistemas no reflejan mérito real y con el tiempo pierden efectividad motivacional o generan cinismo, ya que no distinguen habilidad real de variación aleatoria.",
+  "pasos_accionables": [
+    "Calcular la probabilidad de obtener 'cero incidencias' dado el promedio histórico de cada trabajador (ej. usando distribución de Poisson)",
+    "Verificar si el sistema de premios está simplemente premiando la varianza aleatoria y no el desempeño real",
+    "Reemplazar el reconocimiento por desempeño puntual con análisis de tendencias en gráficos de control individuales",
+    "Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período"
+  ],
+  "entregable_esperado": "Evaluación estadística de validez del sistema de reconocimiento actual y recomendación de rediseño basado en control estadístico",
+  "nodos_previos": [
+    "estado_de_control_estadistico"
+  ],
+  "nodos_siguientes": [
+    "responsabilidad_gerencial_causas_comunes"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa usa premios individuales mensuales (empleado del mes) basados en métricas de quejas o errores",
+    "Cuando el sistema de reconocimiento ha perdido efectividad motivacional con el tiempo"
+  ]
+}

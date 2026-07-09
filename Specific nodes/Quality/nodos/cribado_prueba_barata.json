@@ -1,0 +1,25 @@
+{
+  "node_id": "cribado_prueba_barata",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+  "pasos_accionables": [
+    "Verificar que se cumple la condición pk2 > k1 (inspección al 100% es óptima).",
+    "Diseñar y calibrar una prueba barata que nunca acepte lo que la prueba maestra rechazaría.",
+    "Aplicar la prueba barata a todas las n partes, dividiendo en aceptadas (n1) y no aceptadas (n2).",
+    "Aplicar la prueba maestra solo a las n2 partes no aceptadas.",
+    "Calcular el ahorro total: D = n(k1 - k1' - (n2/n)*k1)."
+  ],
+  "entregable_esperado": "Proceso de inspección en dos etapas implementado (cribado barato + prueba maestra selectiva) con cálculo de ahorro documentado.",
+  "nodos_previos": [
+    "comparacion_metodos_inspeccion",
+    "punto_equilibrio_calidad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la inspección al 100% es obligatoria por alto costo de falla (pk2 > k1).",
+    "Cuando existe un método de prueba rápido y económico que puede pre-filtrar antes de la prueba definitiva."
+  ]
+}

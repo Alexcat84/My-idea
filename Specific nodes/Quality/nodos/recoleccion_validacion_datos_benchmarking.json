@@ -1,0 +1,29 @@
+{
+  "node_id": "recoleccion_validacion_datos_benchmarking",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Recolección y Validación de Datos en Benchmarking",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una vez definidos los KPIs, se debe desarrollar un método robusto para recolectar datos de todos los participantes, típicamente mediante documentos o portales web seguros. La validación es crítica ('garbage in, garbage out') y se realiza en dos fases: verificaciones automatizadas integradas en el documento de recolección, seguidas de verificaciones manuales que siguen un proceso de tres pasos: completitud, integridad y consistencia de los datos. Un help desk y FAQs facilitan el proceso y minimizan errores de interpretación.",
+  "pasos_accionables": [
+    "Diseñar un documento de recolección de datos fácil de completar con validaciones automáticas integradas",
+    "Establecer un help desk disponible durante todo el proyecto para resolver dudas de los participantes",
+    "Ejecutar verificaciones automatizadas para prevenir datos espurios antes del envío",
+    "Realizar verificación manual de completitud: asegurar que todos los datos requeridos estén presentes",
+    "Realizar verificación manual de integridad: comparar datos interrelacionados para verificar relaciones esperadas",
+    "Realizar verificación manual de consistencia: triangular con datos históricos disponibles",
+    "Organizar una 'data clinic' si hay muchos errores o dificultades recurrentes"
+  ],
+  "entregable_esperado": "Documento de recolección de datos validado y conjunto de datos limpio, completo, íntegro y consistente listo para análisis",
+  "nodos_previos": [
+    "definicion_kpis_benchmarking"
+  ],
+  "nodos_siguientes": [
+    "normalizacion_de_datos",
+    "analisis_reporte_benchmarking"
+  ],
+  "condiciones_activacion": [
+    "Cuando se inicia la fase de recolección de datos de un estudio de benchmarking",
+    "Si existen múltiples participantes que deben enviar datos comparables"
+  ]
+}

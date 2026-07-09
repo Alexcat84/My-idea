@@ -1,0 +1,24 @@
+{
+  "node_id": "aceptacion_bienes_comprados",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Aceptación de Bienes Comprados",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "La inspección y prueba de aceptación de artículos comprados no tiene que limitarse a la sala de recepción; puede planificarse para ocurrir en la planta del proveedor, durante el proceso, o en el ensamblaje final propio. Es crucial que la aceptación se realice según los términos exactos de la orden de compra, ya que muchas devoluciones son responsabilidad del comprador por descripciones incorrectas o requisitos mal definidos.",
+  "pasos_accionables": [
+    "Planificar dónde ocurrirá la aceptación (proveedor, en tránsito, planta propia) según eficiencia y riesgo",
+    "Verificar que cada inspección se realice según los términos exactos de la orden de compra vigente",
+    "Auditar qué porcentaje de rechazos son causados por errores propios de especificación",
+    "Aplicar el mismo rigor técnico usado en la línea de ensamblaje a las inspecciones de recepción"
+  ],
+  "entregable_esperado": "Plan de aceptación de materiales comprados con puntos de control definidos y trazabilidad a la orden de compra",
+  "nodos_previos": [
+    "ingenieria_calidad_proveedores"
+  ],
+  "nodos_siguientes": [
+    "ingenieria_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se reciben materiales o componentes de terceros para producción"
+  ]
+}

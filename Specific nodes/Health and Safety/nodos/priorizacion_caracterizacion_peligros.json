@@ -1,0 +1,24 @@
+{
+  "node_id": "priorizacion_caracterizacion_peligros",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Caracterización y Priorización de Peligros",
+  "fuente": "OSHA3885",
+  "resumen_teorico": "Tras identificar los peligros, se debe evaluar la severidad potencial, la probabilidad de ocurrencia y el número de trabajadores expuestos, para priorizar cuáles requieren atención inmediata mediante controles interinos mientras se implementan soluciones permanentes.",
+  "pasos_accionables": [
+    "Evaluar cada peligro según severidad, probabilidad y número de expuestos",
+    "Implementar controles interinos mientras se desarrollan soluciones definitivas",
+    "Priorizar los peligros de mayor riesgo para atención inmediata",
+    "Mantener la obligación de controlar todos los peligros graves reconocidos"
+  ],
+  "entregable_esperado": "Matriz de priorización de peligros con nivel de riesgo asignado",
+  "nodos_previos": [
+    "peligros_emergencias_no_rutinarias"
+  ],
+  "nodos_siguientes": [
+    "jerarquia_controles"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples peligros identificados y recursos limitados para atenderlos todos a la vez"
+  ]
+}

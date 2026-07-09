@@ -1,0 +1,26 @@
+{
+  "node_id": "evaluacion_periodica_programa_seguridad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Evaluación Periódica del Programa de Seguridad",
+  "fuente": "OSHA3885",
+  "resumen_teorico": "La evaluación de un programa de seguridad y salud debe realizarse de forma periódica (al menos anual) para determinar si los indicadores de desempeño y las metas siguen siendo relevantes. Esta evaluación también puede activarse por cambios en procesos, equipos, o incidentes graves como lesiones serias, daños significativos a la propiedad o un aumento en quejas relacionadas con seguridad.",
+  "pasos_accionables": [
+    "Revisar si los indicadores de desempeño y metas actuales siguen siendo relevantes",
+    "Ajustar los indicadores si no están impulsando mejoras efectivas en seguridad y salud",
+    "Establecer una frecuencia mínima anual de evaluación, ajustada según la complejidad del programa",
+    "Definir disparadores adicionales de evaluación: cambios de proceso/equipo, incidentes graves, aumento de quejas"
+  ],
+  "entregable_esperado": "Informe de evaluación del programa con indicadores actualizados y calendario de revisiones periódicas definido",
+  "nodos_previos": [
+    "implementacion_programa_seguridad_salud"
+  ],
+  "nodos_siguientes": [
+    "comunicacion_coordinacion_multiempleador"
+  ],
+  "condiciones_activacion": [
+    "Cuando ha pasado un año desde la última evaluación del programa",
+    "Cuando ocurre un cambio significativo en procesos o equipos",
+    "Cuando se presenta un incidente grave, daño material importante o aumento de quejas de seguridad"
+  ]
+}

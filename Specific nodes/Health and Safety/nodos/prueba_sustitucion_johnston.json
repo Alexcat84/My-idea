@@ -1,0 +1,24 @@
+{
+  "node_id": "prueba_sustitucion_johnston",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Prueba de Sustitución de Johnston",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Test mental propuesto por Neil Johnston para evaluar la culpabilidad de un individuo en un accidente: sustituir a la persona involucrada por otra con calificaciones y experiencia comparables, y preguntar si probablemente habría actuado de forma diferente dadas las mismas circunstancias. Si la respuesta es 'probablemente no', la culpa individual no es apropiada y el foco debe estar en deficiencias sistémicas.",
+  "pasos_accionables": [
+    "Seleccionar un grupo de pares con formación y experiencia similar al implicado",
+    "Presentarles el escenario y las condiciones reales en tiempo del incidente",
+    "Preguntar si habrían actuado de manera diferente",
+    "Si la respuesta es negativa, redirigir el análisis hacia fallas sistémicas u organizacionales"
+  ],
+  "entregable_esperado": "Acta de evaluación de pares documentando el resultado de la prueba de sustitución",
+  "nodos_previos": [
+    "arbol_decision_culpabilidad"
+  ],
+  "nodos_siguientes": [
+    "analisis_fallas_latentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita objetividad para evaluar la responsabilidad individual en un accidente"
+  ]
+}

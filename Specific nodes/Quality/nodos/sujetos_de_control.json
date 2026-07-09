@@ -1,0 +1,25 @@
+{
+  "node_id": "sujetos_de_control",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Selección de Sujetos de Control (Control Subjects)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, regulaciones, seguridad, análisis de modos de fallo (FMEA) y diseño de experimentos.",
+  "pasos_accionables": [
+    "Identificar los procesos y productos clave a controlar",
+    "Definir los objetivos del proceso de trabajo",
+    "Traducir la voz del cliente en características de producto (KPC)",
+    "Identificar características de control de proceso (KCC) relacionadas",
+    "Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)"
+  ],
+  "entregable_esperado": "Lista de sujetos de control (KPCs y KCCs) documentada para el proceso",
+  "nodos_previos": [
+    "bucle_retroalimentacion_control"
+  ],
+  "nodos_siguientes": [
+    "establecer_estandares_desempeno"
+  ],
+  "condiciones_activacion": [
+    "Si se está planificando un sistema de control de calidad para un nuevo proceso"
+  ]
+}

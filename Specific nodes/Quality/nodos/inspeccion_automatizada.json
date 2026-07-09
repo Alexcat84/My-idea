@@ -1,0 +1,22 @@
+{
+  "node_id": "inspeccion_automatizada",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Inspección Automatizada",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Uso de sistemas automatizados para reducir costos de inspección, tasas de error, escasez de personal y tiempo de inspección. Se aplica en gauging mecánico, pruebas electrónicas, ensayos no destructivos, análisis químicos e inspección visual, especialmente cuando se buscan niveles de defectos en partes por millón.",
+  "pasos_accionables": [
+    "Identificar las pruebas que dominan el presupuesto de inspección y uso de personal.",
+    "Calcular la economía (ROI) de automatizar dichas pruebas.",
+    "Realizar pruebas piloto con candidatos de alto retorno.",
+    "Escalar la automatización progresivamente según resultados obtenidos."
+  ],
+  "entregable_esperado": "Plan de automatización de inspección con análisis costo-beneficio y pruebas piloto documentadas.",
+  "nodos_previos": [
+    "clasificacion_seriedad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se requiere reducir costos de inspección manual o alcanzar niveles de defecto muy bajos (ppm)."
+  ]
+}

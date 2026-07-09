@@ -1,0 +1,25 @@
+{
+  "node_id": "jerarquia_controles",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Jerarquía de Controles de Peligros",
+  "fuente": "OSHA3885",
+  "resumen_teorico": "Modelo que ordena las estrategias de control de peligros de más a menos efectivas: eliminación, sustitución, controles de ingeniería, controles administrativos y equipo de protección personal (PPE). Se debe priorizar cambiar el peligro en sí antes que depender de la conducta del trabajador o del EPP.",
+  "pasos_accionables": [
+    "Revisar fuentes de información (normas OSHA, NIOSH, literatura de fabricantes) para identificar opciones de control",
+    "Evaluar posibilidad de eliminar o sustituir el peligro",
+    "Priorizar controles de ingeniería sobre administrativos y PPE",
+    "Evitar controles que introduzcan nuevos peligros",
+    "Combinar métodos de control cuando ninguno por sí solo sea suficiente"
+  ],
+  "entregable_esperado": "Lista de opciones de control evaluadas y seleccionadas según la jerarquía de controles",
+  "nodos_previos": [
+    "priorizacion_caracterizacion_peligros"
+  ],
+  "nodos_siguientes": [
+    "plan_control_peligros"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha identificado y priorizado un peligro y se debe decidir cómo controlarlo"
+  ]
+}

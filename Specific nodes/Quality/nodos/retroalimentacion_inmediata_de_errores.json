@@ -1,0 +1,26 @@
+{
+  "node_id": "retroalimentacion_inmediata_de_errores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Retroalimentación inmediata de errores al origen",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "En lugar de corregir errores en documentos incompletos o incorrectos dentro del propio departamento receptor (lo que oculta el problema y perpetúa la causa), Deming propone devolver inmediatamente el documento a quien lo generó, explicando el motivo del rechazo. Esto crea un ciclo de aprendizaje rápido: el generador del error recibe la señal de inmediato y corrige su comportamiento futuro, en lugar de que otros absorban silenciosamente el costo del error.",
+  "pasos_accionables": [
+    "Detectar el punto del proceso donde llegan documentos o insumos incorrectos.",
+    "Establecer una política de devolución inmediata al emisor original, sin corregir internamente.",
+    "Acompañar la devolución con una explicación clara del error y su impacto (ej. demora en pago).",
+    "Registrar la tasa de incidencias semana a semana para verificar la reducción del problema.",
+    "Comunicar los resultados a los involucrados para reforzar el nuevo comportamiento ('los rumores viajan rápido')."
+  ],
+  "entregable_esperado": "Un protocolo formal de devolución de documentos incorrectos al origen, con métricas de reducción de incidencias en pocas semanas.",
+  "nodos_previos": [
+    "eliminacion_de_firmas_duplicadas_responsabilidad_unica"
+  ],
+  "nodos_siguientes": [
+    "muestreo_estadistico_para_inspeccion"
+  ],
+  "condiciones_activacion": [
+    "Si un departamento recibe de forma recurrente documentos de otro departamento con errores.",
+    "Si el equipo corrige errores ajenos en lugar de devolverlos a su origen."
+  ]
+}

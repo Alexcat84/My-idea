@@ -1,0 +1,28 @@
+{
+  "node_id": "matriz_de_control_de_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Matriz de Control de Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta para sostener las mejoras logradas en un proceso, identificando variables críticas, estándares de control (basados en límites de gráficos de control), métodos de medición, y responsables de monitoreo y acción correctiva cuando el proceso se sale de control.",
+  "pasos_accionables": [
+    "Identificar variables que afectan el remedio y al cliente directa o indirectamente",
+    "Establecer el estándar que disparará la acción (idealmente un límite de control)",
+    "Definir cómo, dónde y cuándo se medirá cada variable de control",
+    "Asignar quién analizará las mediciones y quién actuará ante condiciones fuera de control",
+    "Definir pasos concretos para regresar el proceso a control",
+    "Revisar la matriz para verificar cobertura de variables críticas y velocidad de respuesta"
+  ],
+  "entregable_esperado": "Matriz de control documentada con variables, estándares, métodos de medición, responsables y acciones correctivas definidas",
+  "nodos_previos": [
+    "control_estadistico_de_procesos",
+    "diagrama_de_flujo_proceso_map"
+  ],
+  "nodos_siguientes": [
+    "control_estadistico_de_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha completado una mejora de proceso y se necesita sostenerla en el tiempo",
+    "Cuando el equipo requiere claridad sobre responsabilidades ante desviaciones"
+  ]
+}

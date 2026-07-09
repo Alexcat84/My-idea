@@ -1,0 +1,28 @@
+{
+  "node_id": "investigacion_incidentes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Investigación de Incidentes y Casi Accidentes",
+  "fuente": "OSHA3885",
+  "resumen_teorico": "Los incidentes, lesiones, enfermedades y casi accidentes son indicadores claros de peligros existentes. Investigarlos a fondo permite identificar las causas raíz (usualmente múltiples) para prevenir futuras ocurrencias, en lugar de detenerse en el primer factor evidente.",
+  "pasos_accionables": [
+    "Desarrollar un plan y procedimiento claro para investigaciones de incidentes",
+    "Capacitar equipos investigativos en técnicas de investigación y objetividad",
+    "Incluir representantes de gestión y trabajadores en el equipo investigador",
+    "Investigar también los casi accidentes (near misses)",
+    "Identificar y analizar causas raíz, no solo el factor desencadenante inmediato",
+    "Comunicar resultados a gerentes, supervisores y trabajadores"
+  ],
+  "entregable_esperado": "Informe de investigación de incidente con causas raíz identificadas y acciones correctivas propuestas",
+  "nodos_previos": [
+    "identificacion_peligros_salud"
+  ],
+  "nodos_siguientes": [
+    "jerarquia_controles",
+    "plan_control_peligros"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre una lesión, enfermedad, o casi accidente en el lugar de trabajo",
+    "Al recibir reporte OSHA 300/301"
+  ]
+}

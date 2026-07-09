@@ -1,0 +1,25 @@
+{
+  "node_id": "carta_de_control_shewhart",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Carta de Control de Shewhart",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad, riesgo económico, necesidades del cliente), evitando el uso excesivo e ignorado de cartas sin valor real.",
+  "pasos_accionables": [
+    "Recolectar datos de desempeño del proceso en el tiempo",
+    "Calcular la línea central (promedio) y los límites de control estadísticos",
+    "Graficar los puntos y clasificar si caen dentro o fuera de los límites",
+    "Si están dentro: asumir causas comunes, no tomar acción individual",
+    "Si están fuera: investigar causa especial y tomar acción correctiva",
+    "Justificar el uso de la carta según impacto en cliente, seguridad o economía"
+  ],
+  "entregable_esperado": "Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación",
+  "nodos_previos": [
+    "causas_especiales_y_comunes_variacion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se necesita distinguir estadísticamente variación normal de anómala",
+    "Si hay riesgo de tomar decisiones basadas en variación aleatoria (falsas alarmas)"
+  ]
+}

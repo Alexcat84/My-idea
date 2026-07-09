@@ -1,0 +1,27 @@
+{
+  "node_id": "grafico_media_movil_ewma",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráfico de Media Móvil y Media Móvil Exponencialmente Ponderada (EWMA)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El gráfico de media móvil actualiza el promedio eliminando la medición individual más antigua y agregando la más reciente. El EWMA es un refinamiento que pondera las observaciones dando mayor peso a los datos más recientes, siendo efectivo para detectar pequeños desplazamientos y tendencias, especialmente en procesos donde generar un solo dato toma mucho tiempo.",
+  "pasos_accionables": [
+    "Definir el tamaño de la ventana móvil o el factor de ponderación exponencial",
+    "Calcular el promedio móvil actualizando con cada nueva medición",
+    "Para EWMA, aplicar mayor peso a las observaciones más recientes según el factor lambda elegido",
+    "Graficar los valores calculados en función del tiempo",
+    "Monitorear tendencias y pequeños desplazamientos sostenidos"
+  ],
+  "entregable_esperado": "Gráfico de media móvil o EWMA operativo para detección de tendencias en el proceso",
+  "nodos_previos": [
+    "grafico_cusum"
+  ],
+  "nodos_siguientes": [
+    "grafico_box_jenkins",
+    "graficos_control_multivariados"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proceso genera datos con baja frecuencia de producción",
+    "Cuando se requiere resaltar tendencias además de detectar cambios pequeños"
+  ]
+}

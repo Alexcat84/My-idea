@@ -1,0 +1,27 @@
+{
+  "node_id": "evaluacion_encuesta_calidad_proveedor",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Encuesta de Evaluación de Calidad del Proveedor (Supplier Quality Survey)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Es una evaluación de la capacidad del sistema de calidad del proveedor para prevenir, identificar y eliminar producto no conforme. Puede ir desde un cuestionario simple hasta una visita de un equipo multidisciplinario (calidad, ingeniería, manufactura, compras) que revisa gestión, diseño, manufactura, inspección y resultados de calidad, usando un sistema de puntuación ponderado.",
+  "pasos_accionables": [
+    "Diseñar cuestionario o plan de visita cubriendo gestión, diseño, manufactura, inspección y resultados",
+    "Formar equipo cross-funcional para la visita al proveedor",
+    "Aplicar sistema de puntuación con pesos de importancia por actividad",
+    "Documentar hallazgos objetivos, juicios subjetivos y predicción de desempeño futuro",
+    "Considerar certificaciones de terceros (ISO 9000) para reducir evaluaciones repetidas"
+  ],
+  "entregable_esperado": "Informe de encuesta de calidad del proveedor con puntuación y recomendación de aprobación",
+  "nodos_previos": [
+    "definicion_sistema_calidad_proveedor",
+    "seleccion_fuente_unica_multiple"
+  ],
+  "nodos_siguientes": [
+    "planificacion_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Antes de seleccionar formalmente a un proveedor",
+    "Cuando se necesita verificar la capacidad real del proveedor más allá de su promesa contractual"
+  ]
+}

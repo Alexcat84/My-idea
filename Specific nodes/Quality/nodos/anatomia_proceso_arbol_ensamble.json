@@ -1,0 +1,24 @@
+{
+  "node_id": "anatomia_proceso_arbol_ensamble",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Anatomía del Proceso: Árbol de Ensamble",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Estructura coherente que une al proceso e incorpora las salidas de varios subprocesos, muchos ejecutados concurrentemente, convergiendo en un ensamblaje final. Es ampliamente usada en manufactura, hospitales y procesos de oficina como la elaboración de reportes contables o presupuestos, donde múltiples especialistas contribuyen datos que se consolidan progresivamente.",
+  "pasos_accionables": [
+    "Identificar los subprocesos o componentes que deben ensamblarse para el resultado final",
+    "Determinar qué departamentos o especialistas contribuyen a cada rama del árbol",
+    "Diseñar el punto de convergencia donde se consolidan los elementos ensamblados",
+    "Evaluar si la anatomía de árbol de ensamble es la más adecuada frente a otras anatomías de proceso"
+  ],
+  "entregable_esperado": "Diagrama de anatomía de proceso tipo árbol de ensamble con ramas y punto de convergencia definidos",
+  "nodos_previos": [
+    "desarrollar_caracteristicas_proceso"
+  ],
+  "nodos_siguientes": [
+    "seleccionar_diseno_general_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proceso involucra múltiples subprocesos concurrentes que deben integrarse en un resultado final"
+  ]
+}

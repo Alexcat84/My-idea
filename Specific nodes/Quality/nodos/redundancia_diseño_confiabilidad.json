@@ -1,0 +1,24 @@
+{
+  "node_id": "redundancia_diseño_confiabilidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Uso de Redundancia en Diseño para Mejorar la Confiabilidad",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "En el diseño de aparatos complejos, colocar dos o más partes en paralelo permite que si una falla, otra tome su lugar automáticamente, reduciendo drásticamente la probabilidad de falla del conjunto (de pi a pi²). Sin embargo, esta estrategia tiene limitaciones prácticas como restricciones de peso, tamaño y la incertidumbre de si el componente redundante realmente actuará cuando se necesite; a veces la mejor solución es lograr alta confiabilidad en una sola parte.",
+  "pasos_accionables": [
+    "Identificar componentes críticos cuya falla tendría alto impacto en el sistema.",
+    "Evaluar la viabilidad de incorporar un componente redundante en paralelo.",
+    "Calcular la mejora en fracción defectuosa esperada (de pi a pi² aproximadamente).",
+    "Verificar restricciones de peso, espacio y costo antes de implementar la redundancia.",
+    "Probar que el componente redundante efectivamente se activa cuando el principal falla."
+  ],
+  "entregable_esperado": "Evaluación de diseño con decisión documentada sobre implementación de redundancia en componentes críticos.",
+  "nodos_previos": [
+    "probabilidad_falla_ensamblaje_multiple"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se diseña un componente o sistema crítico donde la falla tiene alto costo o riesgo",
+    "Cuando la alta confiabilidad de una sola parte es difícil de lograr"
+  ]
+}

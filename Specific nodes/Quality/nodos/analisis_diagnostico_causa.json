@@ -1,0 +1,24 @@
+{
+  "node_id": "analisis_diagnostico_causa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis y Diagnóstico de la Causa Raíz",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Fase del RCCA donde se analizan los síntomas del problema, se formulan teorías sobre posibles causas, se prueban dichas teorías con datos y herramientas (diagramas causa-efecto, diagramas de dispersión, estratificación, histogramas) y finalmente se identifica la causa raíz confirmada con evidencia.",
+  "pasos_accionables": [
+    "Analizar los síntomas del problema",
+    "Formular teorías sobre posibles causas usando brainstorming y diagramas causa-efecto",
+    "Probar las teorías mediante recolección y análisis de datos",
+    "Identificar la(s) causa(s) raíz confirmada(s) con evidencia"
+  ],
+  "entregable_esperado": "Causa raíz identificada y confirmada mediante datos",
+  "nodos_previos": [
+    "definicion_problema_moms"
+  ],
+  "nodos_siguientes": [
+    "juran_rcca_metodo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha definido un problema y se requiere identificar su causa antes de proponer un remedio"
+  ]
+}

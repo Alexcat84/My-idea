@@ -1,0 +1,26 @@
+{
+  "node_id": "decision_aptitud_para_uso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Decisión de Aptitud para el Uso (Fitness for Purpose)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando un producto no conforma a especificaciones, surge la pregunta de si aún así es apto para el uso. Esta decisión requiere considerar quién es el usuario, cómo se usará el producto, riesgos de seguridad o ambientales, urgencia de entrega y economía. Las organizaciones usan mecanismos como juntas de revisión de material (material review board) o sistemas de delegación múltiple para gestionar estas decisiones de forma eficiente sin sobrecargar procesos formales en casos de bajo impacto.",
+  "pasos_accionables": [
+    "Definir quién es el usuario final y el contexto de uso del producto no conforme",
+    "Evaluar riesgos de seguridad, integridad estructural o impacto ambiental",
+    "Crear un sistema de delegación múltiple: decisiones críticas a junta formal, decisiones menores a personal delegado",
+    "Documentar reglas de conducta para minimizar la pérdida total y evitar búsqueda de culpables",
+    "Usar 'charge backs' (cargos por pérdidas) con moderación, solo en casos de impacto significativo"
+  ],
+  "entregable_esperado": "Tabla de delegación de decisiones de aptitud para el uso, con criterios y responsables definidos",
+  "nodos_previos": [
+    "auto_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "accion_correctiva_diagnostico_remedio"
+  ],
+  "condiciones_activacion": [
+    "Cuando un producto no conforma a especificaciones pero podría seguir siendo utilizable",
+    "Si se requiere un proceso ágil para disposición de productos no conformes"
+  ]
+}

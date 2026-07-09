@@ -1,0 +1,24 @@
+{
+  "node_id": "formulacion_teorias_causa",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Formulación de Teorías de Causa",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso creativo y divergente donde el equipo, mediante lluvia de ideas, genera múltiples teorías no comprobadas sobre las posibles causas del problema. Luego, estas teorías se organizan (por ejemplo, mediante el proceso de afinidad) y se refinan usando diagramas de causa-efecto y otras herramientas de priorización como FMEA.",
+  "pasos_accionables": [
+    "Realizar sesiones de lluvia de ideas con el equipo y expertos en la materia.",
+    "Agrupar las teorías generadas usando el proceso de afinidad.",
+    "Construir un diagrama de causa-efecto (espina de pescado) para organizar las teorías.",
+    "Aplicar FMEA u otras herramientas de priorización para identificar las teorías más probables."
+  ],
+  "entregable_esperado": "Una lista organizada y priorizada de teorías de causa, respaldada por un diagrama de causa-efecto.",
+  "nodos_previos": [
+    "analisis_sintomas"
+  ],
+  "nodos_siguientes": [
+    "prueba_teorias_causa_raiz"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha completado el análisis de síntomas y se requiere identificar posibles causas del problema."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "categorias_copq",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Categorías de Costos de Mala Calidad: Apreciación, Fallo Interno y Fallo Externo",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los costos de mala calidad se dividen en tres categorías principales: (1) Costos de apreciación e inspección, asociados a verificar que no existan deficiencias antes de que lleguen al cliente (pruebas, auditorías, revisiones); (2) Costos de fallo interno, relacionados con reparar, reemplazar o desechar trabajo defectuoso que el cliente no llega a ver (retrabajos, desperdicio, tiempo extra); y (3) Costos de fallo externo, que afectan directamente al cliente y suelen ser los más costosos de corregir (garantías, quejas, envíos urgentes, compensaciones). Identificar en cuál categoría se concentran los costos ayuda a enfocar los esfuerzos de mejora.",
+  "pasos_accionables": [
+    "Clasificar cada actividad relacionada con la calidad en una de las tres categorías (apreciación, fallo interno, fallo externo)",
+    "Calcular el porcentaje que representa cada categoría sobre el total del COPQ",
+    "Identificar la categoría dominante (usualmente fallo interno) para dirigir los esfuerzos de reducción de costos",
+    "Documentar ejemplos específicos de cada categoría dentro de los procesos de la organización"
+  ],
+  "entregable_esperado": "Una tabla de análisis de COPQ desglosada por las tres categorías con porcentajes de participación",
+  "nodos_previos": [
+    "costo_de_mala_calidad_copq"
+  ],
+  "nodos_siguientes": [
+    "metodologia_medicion_copq"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha identificado un COPQ elevado y se necesita saber dónde concentrar los esfuerzos de reducción",
+    "Cuando se preparan proyectos de mejora y se requiere priorizar áreas de impacto"
+  ]
+}

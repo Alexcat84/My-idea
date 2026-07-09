@@ -1,0 +1,25 @@
+{
+  "node_id": "reporte_auditoria",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Elaboración del Reporte de Auditoría",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El reporte de auditoría debe documentar resultados de forma clara y ser revisado con la gerencia de la actividad auditada antes de su distribución final. Debe incluir resumen ejecutivo, propósito y alcance, detalles del plan, estándares usados, observaciones con evidencia, conclusiones, recomendaciones y lista de distribución. La clasificación de seriedad (crítico, mayor, menor) ayuda a priorizar hallazgos.",
+  "pasos_accionables": [
+    "Redactar el reporte incluyendo resumen ejecutivo, alcance, hallazgos y recomendaciones",
+    "Revisar el borrador con la gerencia del área auditada antes de distribuirlo (postaudit meeting)",
+    "Clasificar las no conformidades según su seriedad (crítica, mayor, menor)",
+    "Definir la lista de distribución acordada entre auditor y auditado",
+    "Iniciar el reporte con observaciones positivas para mantener balance"
+  ],
+  "entregable_esperado": "Reporte de auditoría firmado y distribuido según acuerdo previo",
+  "nodos_previos": [
+    "ejecucion_auditoria"
+  ],
+  "nodos_siguientes": [
+    "seguimiento_accion_correctiva"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha concluido la recolección de evidencia y se debe comunicar resultados"
+  ]
+}

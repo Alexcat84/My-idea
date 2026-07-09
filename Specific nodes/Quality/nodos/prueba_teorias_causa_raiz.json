@@ -1,0 +1,25 @@
+{
+  "node_id": "prueba_teorias_causa_raiz",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Prueba de Teorías para Identificar la Causa Raíz",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso iterativo de validación de teorías mediante datos, donde cada teoría se asume falsa hasta que los datos demuestren lo contrario. Se aplican preguntas sucesivas de '¿por qué?' hasta llegar a una causa raíz que sea controlable y no tenga teorías alternativas plausibles pendientes. El ejemplo del Jefferson Memorial ilustra cómo profundizar más allá de síntomas superficiales para hallar la verdadera causa raíz.",
+  "pasos_accionables": [
+    "Seleccionar las teorías más probables del diagrama de causa-efecto.",
+    "Diseñar y recolectar datos específicos para probar cada teoría.",
+    "Analizar los datos para confirmar o descartar teorías.",
+    "Repetir la pregunta '¿por qué?' hasta llegar a una causa raíz controlable.",
+    "Verificar que no existan teorías alternativas plausibles sin descartar."
+  ],
+  "entregable_esperado": "Identificación validada y documentada de la(s) causa(s) raíz del problema, respaldada por datos.",
+  "nodos_previos": [
+    "formulacion_teorias_causa"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_alternativas_solucion"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples teorías de causa y se requiere determinar cuál es la verdadera causa raíz mediante datos."
+  ]
+}

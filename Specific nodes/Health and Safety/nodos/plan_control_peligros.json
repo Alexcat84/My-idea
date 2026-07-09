@@ -1,0 +1,26 @@
+{
+  "node_id": "plan_control_peligros",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Desarrollo del Plan de Control de Peligros",
+  "fuente": "OSHA3885",
+  "resumen_teorico": "Un plan de control de peligros documenta cómo se implementarán los controles seleccionados, priorizando los peligros más graves primero, asignando responsables, fechas de cumplimiento y mecanismos de seguimiento y verificación de efectividad.",
+  "pasos_accionables": [
+    "Listar los peligros que requieren control por orden de prioridad",
+    "Asignar responsables con autoridad para implementar los controles",
+    "Establecer fecha objetivo de finalización",
+    "Definir cómo se dará seguimiento al progreso",
+    "Planear cómo se verificará la efectividad de los controles implementados"
+  ],
+  "entregable_esperado": "Documento de plan de control de peligros con responsables, fechas y métricas de seguimiento",
+  "nodos_previos": [
+    "jerarquia_controles"
+  ],
+  "nodos_siguientes": [
+    "implementacion_controles",
+    "seguimiento_efectividad_controles"
+  ],
+  "condiciones_activacion": [
+    "Cuando se han seleccionado controles y se necesita formalizar su implementación"
+  ]
+}

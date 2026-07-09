@@ -1,0 +1,26 @@
+{
+  "node_id": "matriz_pugh",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Matriz de Pugh",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta para comparar múltiples soluciones alternativas contra criterios preestablecidos (CTQs), calificando cada alternativa como mejor, peor o igual respecto a una solución base (datum), permitiendo crear soluciones híbridas más fuertes a partir de las más débiles.",
+  "pasos_accionables": [
+    "Definir criterios incluyendo CTQs del cliente y criterios de negocio",
+    "Ponderar los criterios según importancia",
+    "Calificar cada alternativa como mejor (+), peor (-) o igual (s) respecto al datum",
+    "Comparar el número de positivos, negativos e iguales entre alternativas",
+    "Crear una nueva alternativa híbrida que combine las mejores características"
+  ],
+  "entregable_esperado": "Matriz de Pugh completada con calificación comparativa de alternativas y selección de la mejor opción o híbrido",
+  "nodos_previos": [
+    "hoja_de_necesidades_del_cliente"
+  ],
+  "nodos_siguientes": [
+    "matriz_de_seleccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples soluciones candidatas y se necesita comparación objetiva",
+    "Cuando se busca combinar fortalezas de distintas alternativas de diseño"
+  ]
+}

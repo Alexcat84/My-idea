@@ -1,0 +1,26 @@
+{
+  "node_id": "personal_protective_equipment",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Equipo de Protección Personal (EPP)",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_teorico": "Selección, provisión y capacitación en el uso correcto de equipo de protección personal (cabeza, ojos, cara, manos, pies) según los peligros identificados en el lugar de trabajo, sin costo para el trabajador.",
+  "pasos_accionables": [
+    "Identificar los peligros que requieren uso de EPP.",
+    "Seleccionar EPP adecuado y ajustado a cada trabajador.",
+    "Proveer el EPP sin costo, salvo excepciones normativas.",
+    "Capacitar a los trabajadores sobre cuándo y cómo usar el EPP correctamente.",
+    "Mantener el EPP en condiciones sanitarias y de funcionamiento adecuadas."
+  ],
+  "entregable_esperado": "Matriz de peligros y EPP asignado, registros de capacitación y EPP distribuido a los trabajadores.",
+  "nodos_previos": [
+    "noise_exposure_control"
+  ],
+  "nodos_siguientes": [
+    "respiratory_protection_program",
+    "infection_control_plan"
+  ],
+  "condiciones_activacion": [
+    "Cuando se identifiquen riesgos físicos, químicos o biológicos que requieran protección personal."
+  ]
+}

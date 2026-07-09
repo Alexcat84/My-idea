@@ -1,0 +1,28 @@
+{
+  "node_id": "sostener_las_ganancias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Sostener las Ganancias (Hold the Gains)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_hteorico": "",
+  "resumen_teorico": "Fase final del ciclo de mejora donde se diseñan e implementan controles formales, se aplica el mistake-proofing (poka-yoke) cuando es necesario, y se auditan los controles periódicamente. Sin esta fase, las mejoras logradas pueden desaparecer con el tiempo, especialmente ante rotación de personal o falta de capacitación formal, como ilustra el caso del linóleo dañado que reapareció por falta de un plan de control formal y entrenamiento.",
+  "pasos_accionables": [
+    "Diseñar e implementar controles formales y documentados",
+    "Aplicar técnicas de a prueba de errores (mistake-proofing) donde sea posible",
+    "Establecer un programa de entrenamiento formal para nuevos empleados",
+    "Auditar periódicamente que los controles se estén cumpliendo",
+    "Documentar el plan de control por escrito para evitar dependencia de la memoria individual"
+  ],
+  "entregable_esperado": "Plan de control documentado, auditado periódicamente, con programa de entrenamiento asociado",
+  "nodos_previos": [
+    "viaje_diagnostico_remedial",
+    "six_sigma_dmaic"
+  ],
+  "nodos_siguientes": [
+    "replicar_resultados"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha implementado un remedio exitoso y se requiere asegurar su permanencia en el tiempo",
+    "Cuando hay rotación de personal que podría erosionar las mejoras logradas"
+  ]
+}

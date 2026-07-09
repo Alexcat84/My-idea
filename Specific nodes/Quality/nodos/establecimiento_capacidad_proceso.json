@@ -1,0 +1,26 @@
+{
+  "node_id": "establecimiento_capacidad_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Establecimiento de la Capacidad del Proceso Mejorado",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Consiste en probar la efectividad del proceso mejorado mediante pruebas planificadas, ajustando resultados no satisfactorios, y utilizando cartas de control para confirmar que el proceso está bajo control estadístico antes de determinar su capacidad final mediante análisis de capacidad.",
+  "pasos_accionables": [
+    "Decidir cómo se probarán las mejoras",
+    "Preparar un plan de prueba para cada mejora",
+    "Conducir la prueba y medir resultados",
+    "Ajustar las mejoras si los resultados no son satisfactorios",
+    "Confirmar control estadístico mediante cartas de control",
+    "Realizar el análisis de capacidad del proceso"
+  ],
+  "entregable_esperado": "Proceso confirmado en control estadístico con capacidad medida y documentada",
+  "nodos_previos": [
+    "validacion_sistema_medicion"
+  ],
+  "nodos_siguientes": [
+    "implementacion_monitoreo_controles"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere confirmar formalmente que el proceso mejorado cumple los objetivos de desempeño"
+  ]
+}

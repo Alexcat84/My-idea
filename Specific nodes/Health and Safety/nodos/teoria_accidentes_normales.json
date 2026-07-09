@@ -1,0 +1,24 @@
+{
+  "node_id": "teoria_accidentes_normales",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Teoría de Accidentes Normales (Perrow)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "Charles Perrow propuso que el riesgo de accidente es una propiedad estructural fija de la complejidad de los sistemas que construimos, no dependiente del compromiso de nadie con la 'visión cero'. Sistemas con alta complejidad interactiva (difícil de rastrear cómo se propagan las fallas) y acoplamiento estrecho (efectos de fallas se propagan rápido y sin margen de intervención) son intrínsecamente más propensos a accidentes 'normales' o inevitables.",
+  "pasos_accionables": [
+    "Evaluar el grado de complejidad interactiva y acoplamiento estrecho de los sistemas críticos de la organización",
+    "Considerar rediseños que reduzcan el acoplamiento estrecho entre subsistemas",
+    "Determinar si el nivel de riesgo estructural justifica continuar, rediseñar o desmantelar la actividad"
+  ],
+  "entregable_esperado": "Análisis de complejidad y acoplamiento de los sistemas críticos con recomendaciones de rediseño o mitigación estructural",
+  "nodos_previos": [
+    "teoria_desastres_organizacionales"
+  ],
+  "nodos_siguientes": [
+    "clasificacion_sistemas_por_nivel_seguridad"
+  ],
+  "condiciones_activacion": [
+    "Si se opera tecnología compleja de alto riesgo (nuclear, financiera, industrial)",
+    "Si se busca entender por qué persisten accidentes pese a buenas intenciones y controles"
+  ]
+}

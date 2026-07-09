@@ -1,0 +1,25 @@
+{
+  "node_id": "clasificacion_de_seriedad_de_defectos_2",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Clasificación de Seriedad de Defectos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Esta clasificación es fundamental para priorizar recursos y establecer niveles de calidad aceptables (AQL) o defectos por millón (DPM) según la criticidad del defecto.",
+  "pasos_accionables": [
+    "Listar todos los posibles defectos del producto o proceso",
+    "Asignar niveles de seriedad (crítico, mayor, menor) a cada defecto",
+    "Comunicar la clasificación al proveedor para enfocar esfuerzos",
+    "Vincular la clasificación a los planes de muestreo e inspección"
+  ],
+  "entregable_esperado": "Tabla de clasificación de defectos por nivel de seriedad, comunicada formalmente al proveedor",
+  "nodos_previos": [
+    "control_del_proceso_del_proveedor"
+  ],
+  "nodos_siguientes": [
+    "planes_de_muestreo_de_aceptacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita priorizar recursos de inspección",
+    "Cuando existen múltiples tipos de no conformidad en un producto"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "control_estadistico_metodo_medicion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control Estadístico del Método de Medición",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming establece que ninguna medición (visual, manual o instrumental) puede considerarse confiable a menos que el sistema completo -instrumento y operador- se encuentre en control estadístico. Esto implica que mediciones repetidas del mismo ítem deben mostrar estabilidad estadística (bajo un R-chart aceptable) y ser reproducibles entre distintos operadores o instrumentos. Sin este control, no se puede atribuir precisión ni exactitud a ningún método de prueba, sin importar el costo del equipo.",
+  "pasos_accionables": [
+    "Realizar mediciones repetidas del mismo ítem con el mismo operador e instrumento y graficar en un R-chart.",
+    "Verificar que el rango de variación (R) se mantenga dentro de límites de control estadístico.",
+    "Comparar resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.",
+    "Comparar resultados entre diferentes instrumentos usados por el mismo operador.",
+    "Establecer criterios de reproducibilidad aceptable antes de iniciar las pruebas."
+  ],
+  "entregable_esperado": "Un reporte de control estadístico del sistema de medición que confirme la validez del método de prueba (instrumento + operador) antes de su uso en producción o inspección.",
+  "nodos_previos": [
+    "control_estadistico_procesos"
+  ],
+  "nodos_siguientes": [
+    "definiciones_operacionales"
+  ],
+  "condiciones_activacion": [
+    "Cuando existan discrepancias entre mediciones de vendedor y comprador.",
+    "Cuando distintas máquinas de prueba den resultados inconsistentes entre sí.",
+    "Antes de aceptar cualquier sistema de inspección o prueba como confiable."
+  ]
+}

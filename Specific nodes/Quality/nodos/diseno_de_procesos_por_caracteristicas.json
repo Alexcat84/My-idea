@@ -1,0 +1,28 @@
+{
+  "node_id": "diseno_de_procesos_por_caracteristicas",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Diseño de Procesos Basado en Características y Metas",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El diseño de procesos organiza las características y metas del proceso (materiales, personas, entrenamiento, recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las metas del producto sean alcanzables y que no existan características de proceso redundantes o innecesarias.",
+  "pasos_accionables": [
+    "Identificar los recursos necesarios: materiales, personas, entrenamiento, otros recursos y procesos de soporte.",
+    "Construir una hoja de cálculo de diseño de proceso vinculando características de proceso con metas de producto.",
+    "Verificar que cada meta de producto sea alcanzada por al menos una característica de proceso.",
+    "Verificar que cada característica de proceso sea necesaria para al menos una meta de producto.",
+    "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso."
+  ],
+  "entregable_esperado": "Hoja de cálculo de diseño de proceso completa, verificada y sin redundancias.",
+  "nodos_previos": [
+    "desarrollo_del_producto",
+    "identificacion_necesidades_cliente"
+  ],
+  "nodos_siguientes": [
+    "diseno_para_factores_criticos_y_error_humano",
+    "optimizacion_de_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se inicia el diseño formal de un nuevo proceso",
+    "Cuando se requiere vincular metas de producto con actividades operativas"
+  ]
+}

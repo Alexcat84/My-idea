@@ -1,0 +1,23 @@
+{
+  "node_id": "falacia_redundancia_social",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Falacia de la Redundancia Social",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Ocurre cuando se asume que añadir más barreras humanas (por ejemplo, un segundo verificador) reduce el riesgo de forma proporcional, pero en la práctica estas barreras no son independientes entre sí. Personas que se conocen y trabajan juntas tienden a confiar en el trabajo del otro sin verificación real, erosionando la efectividad de ambas barreras y pudiendo incluso aumentar el riesgo en lugar de reducirlo.",
+  "pasos_accionables": [
+    "Revisar si las verificaciones dobles involucran personas independientes entre sí",
+    "Evaluar el grado de familiaridad y confianza entre quienes ejecutan controles redundantes",
+    "Rediseñar procesos de verificación para asegurar independencia real, no solo nominal",
+    "Medir tasas de error antes y después de implementar controles redundantes"
+  ],
+  "entregable_esperado": "Diagnóstico de independencia real de las barreras de verificación humana en procesos críticos",
+  "nodos_previos": [
+    "modelo_barreras_defensas"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se implementan dobles verificaciones o controles redundantes por personal",
+    "Si se observa que agregar más controles no reduce (o aumenta) los eventos adversos"
+  ]
+}

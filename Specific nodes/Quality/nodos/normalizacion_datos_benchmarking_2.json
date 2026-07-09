@@ -1,0 +1,27 @@
+{
+  "node_id": "normalizacion_datos_benchmarking_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Normalización de Datos en Benchmarking",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_keteorico": "Es el proceso de convertir métricas de diferentes sujetos de benchmarking a una forma comparable, considerando las variaciones entre ellos (escala, contexto regulatorio, geografía, etc.). Sin normalización, las comparaciones directas de desempeño pueden ser erróneas o llevar a conclusiones equivocadas. Se puede lograr mediante estratificación de datos en categorías similares o mediante factores de ponderación como el Juran Complexity Factor (JCF).",
+  "resumen_teorico": "Es el proceso de convertir métricas de diferentes sujetos de benchmarking a una forma comparable, considerando las variaciones entre ellos (escala, contexto regulatorio, geografía, etc.). Sin normalización, las comparaciones directas de desempeño pueden ser erróneas o llevar a conclusiones equivocadas. Se puede lograr mediante estratificación de datos en categorías similares o mediante factores de ponderación como el Juran Complexity Factor (JCF).",
+  "pasos_accionables": [
+    "Identificar los factores que impulsan el desempeño de los sujetos comparados (escala, complejidad, ubicación, etc.)",
+    "Agrupar a los benchmarkers en categorías o grupos de pares con características similares",
+    "Seleccionar un factor de normalización relevante (ej. costo por unidad, por hora, por factura)",
+    "Aplicar factores de ponderación cuando la normalización simple no sea suficiente (ej. Juran Complexity Factor)",
+    "Probar la validez del factor de normalización mediante análisis de correlación con la métrica de desempeño"
+  ],
+  "entregable_esperado": "Conjunto de datos normalizados y validados estadísticamente, listos para comparación justa entre sujetos de benchmarking",
+  "nodos_previos": [
+    "recoleccion_datos_benchmarking"
+  ],
+  "nodos_siguientes": [
+    "analisis_identificacion_mejores_practicas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se comparan organizaciones, procesos o unidades de negocio con diferencias significativas de escala o contexto",
+    "Cuando las comparaciones directas de desempeño llevan a conclusiones inconsistentes"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "node_id": "formal_safety_assessment_safety_case",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Evaluación Formal de Seguridad (Safety Case)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Modelo regulatorio derivado del Informe Cullen (Piper Alpha) que exige a los operadores de instalaciones peligrosas demostrar mediante un 'Safety Case' que han identificado los riesgos mayores y provisto controles adecuados. El proceso de Evaluación Formal de Seguridad (FSA) incluye cinco pasos: identificación de peligros, evaluación de riesgos asociados, consideración de alternativas de gestión, análisis costo-beneficio de opciones, y decisión sobre cuál adoptar. El Safety Case debe actualizarse periódicamente y ante cambios mayores de circunstancias.",
+  "pasos_accionables": [
+    "Identificar los peligros mayores de la instalación u operación",
+    "Evaluar los riesgos asociados a cada peligro identificado",
+    "Considerar formas alternativas de gestionar dichos riesgos",
+    "Realizar un análisis costo-beneficio de las opciones de gestión",
+    "Seleccionar y documentar la opción elegida en un Safety Case formal",
+    "Actualizar el Safety Case periódicamente y tras cambios significativos"
+  ],
+  "entregable_esperado": "Documento de Safety Case aprobado que demuestre identificación de peligros mayores y controles apropiados",
+  "nodos_previos": [
+    "organizational_accident_model"
+  ],
+  "nodos_siguientes": [
+    "regulatory_process_model",
+    "safety_culture_engineering"
+  ],
+  "condiciones_activacion": [
+    "Cuando se opera una instalación de alto riesgo (offshore, marítima, industrial)",
+    "Cuando el regulador exige demostrar gestión formal de riesgos mayores"
+  ]
+}

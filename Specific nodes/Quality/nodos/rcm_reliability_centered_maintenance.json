@@ -1,0 +1,26 @@
+{
+  "node_id": "rcm_reliability_centered_maintenance",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Mantenimiento Centrado en Confiabilidad (RCM)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+  "pasos_accionables": [
+    "Clasificar todos los activos según criticidad (reactivo, preventivo, predictivo)",
+    "Para activos reactivos, permitir operación hasta falla",
+    "Para activos preventivos, establecer calendario de mantenimiento basado en ciclos/tiempo",
+    "Para activos predictivos, implementar monitoreo de condición (vibración, temperatura, lubricación)",
+    "Medir OEE (Overall Equipment Effectiveness) para evaluar mejora"
+  ],
+  "entregable_esperado": "Plan de mantenimiento priorizado por categoría de criticidad con métricas OEE establecidas",
+  "nodos_previos": [
+    "tpm_maintenance"
+  ],
+  "nodos_siguientes": [
+    "mistake_proofing_poka_yoke"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita priorizar recursos limitados de mantenimiento",
+    "Al buscar mejorar la confiabilidad general del proceso"
+  ]
+}

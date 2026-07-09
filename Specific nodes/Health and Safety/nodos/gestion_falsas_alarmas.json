@@ -1,0 +1,23 @@
+{
+  "node_id": "gestion_falsas_alarmas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Gestión de Falsas Alarmas (Efecto 'Cry Wolf')",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las alarmas frecuentes que resultan falsas generan pérdida de confianza en los operadores, quienes tienden a ignorar o desactivar los sistemas de advertencia incluso cuando señalan una emergencia real. El caso del accidente del Trident de BEA en 1972 ilustra esto: los pilotos desactivaron el sistema de alarma de pérdida ('stick-shaker') porque desconfiaban de él debido a activaciones falsas previas, lo que contribuyó a un accidente fatal real.",
+  "pasos_accionables": [
+    "Auditar la tasa de falsas alarmas de los sistemas de advertencia críticos",
+    "Rediseñar los sistemas de alarma para reducir falsos positivos sin comprometer la sensibilidad",
+    "Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada",
+    "Capacitar al personal sobre los riesgos de desactivar alarmas por desconfianza histórica"
+  ],
+  "entregable_esperado": "Reporte de confiabilidad de sistemas de alarma con plan de reducción de falsos positivos",
+  "nodos_previos": [
+    "defensas_en_profundidad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando existen antecedentes de alarmas falsas frecuentes en el sistema",
+    "Si el personal ha mostrado desconfianza o desactivación de sistemas de advertencia"
+  ]
+}

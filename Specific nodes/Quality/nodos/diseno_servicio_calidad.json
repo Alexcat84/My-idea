@@ -1,0 +1,28 @@
+{
+  "node_id": "diseno_servicio_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Planificación Inicial de Calidad en Servicios",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "En organizaciones de servicio, la calidad se logra mediante dos componentes: características del producto/servicio y ausencia de deficiencias. El diseño del servicio define las características del output para satisfacer necesidades del cliente, mientras que el proceso de servicio (actividades, personas, equipo, ambiente físico) convierte ese diseño en realidad. Se debe considerar que la calidad de servicio es percibida y medida de manera diferente según el tipo de industria (alta vs baja involucración del cliente).",
+  "pasos_accionables": [
+    "Establecer el proyecto de diseño de servicio",
+    "Identificar a los clientes del servicio",
+    "Descubrir las necesidades específicas de los clientes",
+    "Desarrollar las características del producto/servicio",
+    "Desarrollar el proceso de servicio (actividades, personal, equipo, ambiente)",
+    "Establecer controles de proceso y transferir a operaciones"
+  ],
+  "entregable_esperado": "Documento de diseño de servicio con características definidas y proceso de servicio especificado, listo para transferencia a operaciones",
+  "nodos_previos": [
+    "identificacion_necesidades_cliente"
+  ],
+  "nodos_siguientes": [
+    "analisis_flujo_proceso_servicio",
+    "error_proofing_servicio"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está diseñando un nuevo servicio o rediseñando uno existente",
+    "Cuando el negocio pertenece al sector de servicios (no manufactura)"
+  ]
+}

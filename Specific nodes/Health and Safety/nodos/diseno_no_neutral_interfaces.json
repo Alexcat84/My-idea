@@ -1,0 +1,24 @@
+{
+  "node_id": "diseno_no_neutral_interfaces",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "El Diseño de Interfaces No es Neutral",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Todo diseño de interfaz (por ejemplo, un dial redondo vs. una cinta de velocidad) tiene consecuencias cognitivas para el operador. Eliminar 'trampas de error' de un diseño anterior puede reducir también la profundidad cognitiva del involucramiento del operador con la tarea, afectando la construcción de memoria y comprensión de relaciones críticas (como configuración/velocidad). No existe un diseño 'neutral': cada elección de representación visual trae ganancias y costos.",
+  "pasos_accionables": [
+    "Analizar qué trabajo cognitivo desaparece al introducir una nueva interfaz o herramienta",
+    "Evaluar si la reducción de pasos manuales reduce también la comprensión del operador sobre el sistema",
+    "Comparar representaciones analógicas vs digitales en términos de compatibilidad de visualización",
+    "Documentar qué 'trampas de error' elimina el nuevo diseño y qué nuevas vulnerabilidades introduce"
+  ],
+  "entregable_esperado": "Análisis comparativo de diseño de interfaz que identifique trade-offs cognitivos entre la opción antigua y la nueva",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "ley_de_capacidad_de_sistemas",
+    "compatibilidad_de_visualizacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se rediseña una interfaz de monitoreo o control crítico para la seguridad",
+    "Cuando se evalúa la adopción de nueva tecnología en un puesto de trabajo de alto riesgo"
+  ]
+}

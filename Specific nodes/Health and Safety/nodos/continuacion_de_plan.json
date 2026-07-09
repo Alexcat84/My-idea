@@ -1,0 +1,24 @@
+{
+  "node_id": "continuacion_de_plan",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Continuación de Plan (Plan Continuation)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "La continuación de plan ocurre cuando las personas se mantienen fieles a un plan original mientras la situación cambiante realmente exige un plan distinto. Las señales iniciales que sugieren que el plan es correcto suelen ser fuertes y claras, mientras que las señales posteriores que sugieren abandonar el plan tienden a ser más débiles, ambiguas y tardías, lo que dificulta que logren desviar el curso de acción ya en marcha. La toma de decisiones en entornos dinámicos está 'cargada al frente': la mayoría de los recursos cognitivos se dedican a evaluar y reevaluar continuamente la situación, más que a comparar opciones formalmente.",
+  "pasos_accionables": [
+    "Construir una línea de tiempo mostrando qué señales llegaron y en qué momento",
+    "Clasificar señales según su fuerza/ambigüedad y si apoyaban continuar o abandonar el plan",
+    "Analizar por qué las señales tempranas dominaron sobre las tardías",
+    "Evitar juzgar con el conocimiento del resultado si debieron o no abandonar el plan"
+  ],
+  "entregable_esperado": "Línea de tiempo de señales y evaluación de por qué se mantuvo el plan original",
+  "nodos_previos": [
+    "gestion_dinamica_de_fallas"
+  ],
+  "nodos_siguientes": [
+    "recomendaciones_smart"
+  ],
+  "condiciones_activacion": [
+    "Cuando el incidente involucra persistencia en un curso de acción pese a señales de deterioro de la situación"
+  ]
+}

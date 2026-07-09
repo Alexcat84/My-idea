@@ -1,0 +1,26 @@
+{
+  "node_id": "capacidad_de_proceso",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Capacidad de Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.",
+  "pasos_accionables": [
+    "Recolectar datos históricos de desempeño del proceso",
+    "Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones",
+    "Usar los resultados para decidir frecuencia de medición y mantenimiento",
+    "Determinar si el proceso requiere rediseño o si es apto para producción"
+  ],
+  "entregable_esperado": "Análisis de capacidad de proceso con recomendación sobre frecuencia de control y necesidad de ajuste",
+  "nodos_previos": [
+    "concepto_de_dominancia",
+    "etapas_de_control_operativo"
+  ],
+  "nodos_siguientes": [
+    "causas_especiales_y_comunes_variacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se planifica un nuevo proceso o se evalúa uno existente",
+    "Si se necesita justificar la frecuencia de inspección o mantenimiento"
+  ]
+}

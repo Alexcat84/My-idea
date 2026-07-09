@@ -1,0 +1,26 @@
+{
+  "node_id": "prevalencia_omisiones",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Las Omisiones como Principal Tipo de Error en Mantenimiento",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Entre los errores de mantenimiento, las omisiones (fallar en ejecutar pasos necesarios) constituyen la categoría más grande, representando entre 34-64% de los errores según diversos estudios (Rasmussen, INPO, aerolíneas). Las omisiones pueden ocurrir en distintos niveles cognitivos: planificación (olvido o violación deliberada), almacenamiento de intención (lapsus), ejecución (deslices) o monitoreo (fallo en detectar la omisión previa).",
+  "pasos_accionables": [
+    "Clasificar los errores de mantenimiento históricos según tipo (omisión, instalación incorrecta, parte equivocada, otro)",
+    "Identificar en qué nivel cognitivo (planificación, almacenamiento, ejecución, monitoreo) ocurren las omisiones más frecuentes",
+    "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+    "Establecer métricas de seguimiento de omisiones por tipo de tarea"
+  ],
+  "entregable_esperado": "Reporte de clasificación de errores de mantenimiento con identificación de patrones de omisión",
+  "nodos_previos": [
+    "vulnerabilidad_instalacion"
+  ],
+  "nodos_siguientes": [
+    "caracteristicas_tareas_propensas_omision",
+    "diseno_recordatorios_efectivos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga la causa raíz de fallas repetidas de mantenimiento",
+    "Cuando se diseña un sistema de prevención de errores humanos en tareas técnicas"
+  ]
+}

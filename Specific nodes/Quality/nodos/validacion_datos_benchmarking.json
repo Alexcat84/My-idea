@@ -1,0 +1,23 @@
+{
+  "node_id": "validacion_datos_benchmarking",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Validación de Datos en Benchmarking",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso crítico para garantizar la fiabilidad de los datos usados en el benchmarking, bajo el principio de 'basura entra, basura sale'. Juran aplica un enfoque de dos fases: verificaciones automatizadas incorporadas en el instrumento de recolección, seguidas de verificaciones manuales que evalúan completitud, integridad y consistencia de los datos antes del análisis final.",
+  "pasos_accionables": [
+    "Incorporar verificaciones automáticas en el instrumento de recolección de datos para prevenir errores de entrada.",
+    "Solicitar a los participantes realizar una primera revisión manual antes de enviar sus datos.",
+    "Aplicar un proceso de verificación manual en tres pasos: completitud, integridad y consistencia de los datos.",
+    "Resolver discrepancias mediante contacto directo con los participantes antes de consolidar el análisis final."
+  ],
+  "entregable_esperado": "Conjunto de datos validado y normalizado, listo para el análisis comparativo de benchmarking.",
+  "nodos_previos": [
+    "proceso_benchmarking_juran_7pasos"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se han recolectado datos de múltiples participantes y se requiere asegurar su calidad antes del análisis.",
+    "Si existen inconsistencias o dudas sobre la fiabilidad de los datos recibidos."
+  ]
+}

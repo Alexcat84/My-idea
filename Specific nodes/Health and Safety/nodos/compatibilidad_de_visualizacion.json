@@ -1,0 +1,21 @@
+{
+  "node_id": "compatibilidad_de_visualizacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Compatibilidad de Visualización (Display Compatibility)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Principio de diseño que establece que la representación de una cantidad analógica en el mundo (como la velocidad) debe mostrarse de forma analógica y no digital/numérica, para ser cognitivamente compatible con la percepción humana. El 'principio de la parte móvil' indica que en una representación compatible, debe moverse el puntero sobre una escala fija, no la escala sobre un puntero fijo (como ocurre en las cintas de velocidad, violando este principio).",
+  "pasos_accionables": [
+    "Verificar si el instrumento de monitoreo usa una escala fija y un indicador móvil",
+    "Evaluar si los operadores pueden detectar tendencias y magnitudes de cambio de forma intuitiva",
+    "Rediseñar displays que violen el principio de la parte móvil cuando afecten la seguridad operacional"
+  ],
+  "entregable_esperado": "Checklist de evaluación ergonómica de displays críticos basado en el principio de compatibilidad",
+  "nodos_previos": [
+    "diseno_no_neutral_interfaces"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se diseña o audita un panel de instrumentos o pantalla de monitoreo de variables críticas"
+  ]
+}

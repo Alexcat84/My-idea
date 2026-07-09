@@ -1,0 +1,27 @@
+{
+  "node_id": "modelos_gestion_seguridad",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Tres Modelos de Gestión de la Seguridad: Persona, Ingeniería y Organizacional",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos y auditorías de comportamiento. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano como consecuencia (no causa) de condiciones latentes en el sistema, vinculado a la gestión de calidad total. Los tres modelos pueden y deben coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
+  "pasos_accionables": [
+    "Diagnosticar qué modelo(s) predomina actualmente en la organización y sus métricas asociadas (ej. LTIF para el modelo de persona)",
+    "Identificar las brechas: ¿se están ignorando los riesgos organizacionales por enfocarse solo en lesiones individuales?",
+    "Aplicar herramientas del modelo de ingeniería (HAZOP, PRA, análisis de tareas cognitivas) donde haya desajustes humano-máquina",
+    "Incorporar análisis de condiciones latentes y defensas del sistema propio del modelo organizacional",
+    "Integrar los tres modelos de forma complementaria según el tipo de riesgo predominante en el dominio operativo"
+  ],
+  "entregable_esperado": "Matriz de gestión de seguridad que combine métricas y herramientas de los tres modelos, aplicada al contexto específico de la organización",
+  "nodos_previos": [
+    "evaluacion_cultura_seguridad_completa"
+  ],
+  "nodos_siguientes": [
+    "areas_riesgo_primario"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización solo mide seguridad mediante estadísticas de lesiones personales (LTIF)",
+    "Cuando se busca ampliar el enfoque de seguridad hacia accidentes organizacionales de gran escala",
+    "Al diseñar un sistema de gestión de seguridad integral para una tecnología peligrosa"
+  ]
+}

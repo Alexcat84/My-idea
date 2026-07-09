@@ -1,0 +1,25 @@
+{
+  "node_id": "necesidad_mantener_informado",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Necesidad del Cliente de Ser Mantenido Informado",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los clientes que enfrentan incertidumbre (retrasos, fallas de servicio) requieren ser informados activamente, incluso si no pueden hacer nada al respecto. La falta de información genera antagonismo hacia la organización, mientras que mantenerlos informados reduce ansiedad y mejora la percepción del servicio. También existe el riesgo ético/legal de ocultar deliberadamente no conformidades a los clientes.",
+  "pasos_accionables": [
+    "Establecer políticas y procesos formales para comunicar retrasos o fallas a los clientes",
+    "Incluir en la documentación de no conformidades un campo obligatorio: '¿qué se comunicará al cliente?'",
+    "Evaluar el riesgo ético/legal de no informar sobre desviaciones de especificación",
+    "Capacitar al personal de atención para comunicar proactivamente el estado de resolución de problemas"
+  ],
+  "entregable_esperado": "Protocolo de comunicación de incidencias/retrasos hacia el cliente",
+  "nodos_previos": [
+    "necesidades_user_friendly"
+  ],
+  "nodos_siguientes": [
+    "sistema_manejo_quejas"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurren fallas, retrasos o no conformidades que afectan al cliente",
+    "Cuando se detecta un patrón de quejas relacionado con falta de comunicación"
+  ]
+}

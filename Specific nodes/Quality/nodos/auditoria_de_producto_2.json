@@ -1,0 +1,25 @@
+{
+  "node_id": "auditoria_de_producto_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Auditoría de Producto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica se justifica por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.",
+  "pasos_accionables": [
+    "Seleccionar puntos de control (estaciones de inspección o ensamblaje final) para la auditoría",
+    "Reinspeccionar una muestra de productos ya clasificados como aceptados o rechazados",
+    "Verificar la consistencia entre la decisión original y el resultado de la reinspección",
+    "Registrar discrepancias y retroalimentar al proceso de inspección original"
+  ],
+  "entregable_esperado": "Informe de auditoría de producto con tasa de discrepancias entre inspección original y reinspección",
+  "nodos_previos": [
+    "auditoria_de_proceso"
+  ],
+  "nodos_siguientes": [
+    "medicion_de_calidad_en_manufactura"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen quejas de clientes sobre productos que pasaron inspección",
+    "Cuando se requiere validar la confiabilidad del sistema de aceptación/rechazo"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "ingenieria_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Ingeniería de Calidad",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "La ingeniería de calidad es responsable de determinar y planificar el trabajo del resto del departamento de calidad, decidiendo quién inspecciona qué, quién recolecta datos y qué información debe fluir para mantener el sistema en movimiento. Debe colaborar con ingeniería de diseño y manufactura para determinar cómo debe inspeccionarse, probarse y controlarse el producto durante toda su vida.",
+  "pasos_accionables": [
+    "Definir junto a diseño las características de desempeño del nuevo producto",
+    "Coordinar con ingeniería de manufactura el método de fabricación y sus puntos de control",
+    "Detallar requisitos de inspección/prueba y capacitar al personal para ejecutarlos",
+    "Establecer métricas de resultado y mecanismos de reporte periódico"
+  ],
+  "entregable_esperado": "Plan de calidad del producto que integra diseño, manufactura y control durante todo el ciclo de vida",
+  "nodos_previos": [
+    "aceptacion_bienes_comprados"
+  ],
+  "nodos_siguientes": [
+    "analisis_datos_reporte_estatus",
+    "accion_correctiva"
+  ],
+  "condiciones_activacion": [
+    "Al iniciar el desarrollo de un nuevo producto o proceso",
+    "Cuando se requiere estructurar formalmente el departamento de calidad"
+  ]
+}

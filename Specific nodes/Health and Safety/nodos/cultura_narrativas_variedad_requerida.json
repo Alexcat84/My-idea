@@ -1,0 +1,26 @@
+{
+  "node_id": "cultura_narrativas_variedad_requerida",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Cultura de Narrativas para Reducir la Brecha de Variedad Requerida",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las tecnologías peligrosas enfrentan el problema de 'requisite variety': la complejidad del sistema supera la capacidad de quienes deben controlarlo, causando diagnósticos incompletos y remedios miopes. Una cultura que valora las 'historias de guerra' (war stories), la comunicación cara a cara y equipos de trabajo diversos aumenta el conocimiento colectivo sobre errores potenciales y mejora la confianza para manejarlos, funcionando como sustituto del aprendizaje por ensayo-error, que es limitado en sistemas de alto riesgo.",
+  "pasos_accionables": [
+    "Establecer espacios formales e informales donde el personal comparta experiencias de errores e incidentes pasados",
+    "Promover la comunicación cara a cara sobre canales impersonales cuando se trata de temas de seguridad complejos",
+    "Conformar equipos de trabajo con perfiles diversos (especialidad, experiencia, género) para maximizar la variedad de observación",
+    "Documentar y difundir historias de casos reales de manejo exitoso de fallos o cuasi-accidentes"
+  ],
+  "entregable_esperado": "Repositorio de historias/casos de incidentes y un protocolo de reuniones de intercambio de experiencias entre equipos",
+  "nodos_previos": [
+    "cultura_como_mecanismo_descentralizacion"
+  ],
+  "nodos_siguientes": [
+    "auftragssystem_supervision_autonoma"
+  ],
+  "condiciones_activacion": [
+    "Cuando el sistema es demasiado complejo para que los operadores capten toda la información relevante",
+    "Cuando el aprendizaje por ensayo-error es inviable o peligroso",
+    "Cuando los equipos tienden a ser homogéneos y pierden capacidad de detección de anomalías"
+  ]
+}

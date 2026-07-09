@@ -1,0 +1,24 @@
+{
+  "node_id": "boxplot_resumen_datos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Boxplot (Diagrama de Caja)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_theorico": "El boxplot es un resumen gráfico de cinco números: mediana, valor máximo, valor mínimo, primer cuartil y tercer cuartil. Permite comparar rápidamente la dispersión y simetría de conjuntos de datos, siendo útil para comparar el desempeño de diferentes proveedores o procesos.",
+  "resumen_teorico": "El boxplot es un resumen gráfico de cinco números: mediana, valor máximo, valor mínimo, primer cuartil y tercer cuartil. Permite comparar rápidamente la dispersión y simetría de conjuntos de datos, siendo útil para comparar el desempeño de diferentes proveedores o procesos.",
+  "pasos_accionables": [
+    "Ordenar los datos de menor a mayor",
+    "Calcular la mediana, cuartiles, y valores máximo/mínimo",
+    "Dibujar la caja delimitada por los cuartiles con la mediana dentro",
+    "Extender las líneas ('bigotes') hacia los valores extremos",
+    "Comparar boxplots de diferentes grupos para tomar decisiones"
+  ],
+  "entregable_esperado": "Boxplot construido para comparar variabilidad y tendencia central entre grupos de datos",
+  "nodos_previos": [
+    "concepto_variacion_estadistica"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si se requiere comparar la variabilidad y consistencia entre dos o más procesos o proveedores"
+  ]
+}

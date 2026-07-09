@@ -1,0 +1,28 @@
+{
+  "node_id": "product_design_spreadsheet",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Hoja de Cálculo de Diseño de Producto (Product Design Spreadsheet)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta central del proceso Quality by Design que organiza en un solo documento las necesidades del cliente, su traducción, su medición, y las características/features del producto que las satisfacen. Permite verificar que cada necesidad prioritaria esté cubierta por al menos una característica, que cada característica sea necesaria, y que el impacto combinado de las características sea suficiente para satisfacer la necesidad.",
+  "pasos_accionables": [
+    "Colocar las necesidades del cliente, su traducción y medición en el lado izquierdo de la hoja",
+    "Listar las características candidatas del producto como columnas",
+    "Marcar la relación (ninguna, moderada, fuerte, muy fuerte) entre cada característica y cada necesidad",
+    "Verificar que cada necesidad prioritaria esté cubierta por al menos una característica",
+    "Verificar que cada característica sea necesaria (removerla dejaría una necesidad sin cubrir)"
+  ],
+  "entregable_esperado": "Hoja de cálculo completa de diseño de producto vinculando necesidades, mediciones y características",
+  "nodos_previos": [
+    "unidades_medida_sensores",
+    "customer_needs_spreadsheet"
+  ],
+  "nodos_siguientes": [
+    "desarrollo_caracteristicas_producto",
+    "establecer_metas_caracteristicas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha completado la medición de necesidades y se debe iniciar el diseño formal del producto",
+    "Cuando se requiere trazabilidad entre necesidades del cliente y características del producto"
+  ]
+}

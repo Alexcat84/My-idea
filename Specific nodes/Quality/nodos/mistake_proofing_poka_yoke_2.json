@@ -1,0 +1,29 @@
+{
+  "node_id": "mistake_proofing_poka_yoke_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Mistake Proofing (Poka-Yoke)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El mistake proofing (a prueba de errores) es el diseño o rediseño de máquinas, herramientas y procesos para hacer improbable o imposible el error humano. Se basa en cinco principios fundamentales identificados por Nakajo y Kume (1985): eliminación, reemplazo, facilitación, detección y mitigación. Puede aplicarse de forma proactiva (evitando defectos desde el diseño) o reactiva (evitando que un defecto pase a la siguiente operación). Ejemplos incluyen diseños de encaje único (lock-and-key), sensores automáticos de presencia/correctitud, y sistemas a prueba de fallos (fail-safe) como detectores de incendio.",
+  "pasos_accionables": [
+    "Analizar el proceso o producto para identificar puntos donde el error humano es probable",
+    "Clasificar el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación",
+    "Diseñar dispositivos físicos o lógicos que hagan imposible o detectable el error (ej. lugs, notches, sensores)",
+    "Priorizar la prevención proactiva en la etapa de diseño sobre la mitigación reactiva",
+    "Validar que el dispositivo de prueba de errores funcione consistentemente antes de escalar su uso"
+  ],
+  "entregable_esperado": "Un dispositivo, mecanismo o cambio de diseño implementado que elimine o detecte automáticamente el error humano en un proceso específico, documentado con su principio de mistake-proofing aplicado",
+  "nodos_previos": [
+    "analisis_causa_raiz",
+    "control_de_procesos"
+  ],
+  "nodos_siguientes": [
+    "six_sigma_dmaic",
+    "control_estadistico_de_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen defectos recurrentes causados por errores humanos evitables",
+    "Cuando se busca reducir inspecciones y lograr trabajo libre de defectos",
+    "Cuando se diseña un nuevo proceso o herramienta y se quiere prevenir errores desde el origen"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "deteccion_ineficiencias_ti",
+  "fase_proyecto": "validacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Detección de Ineficiencias con Enfoque Verde",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Consiste en formar un equipo que revise activos y políticas de TI para identificar redundancias, desperdicios y bajo aprovechamiento de recursos, como impresoras individuales innecesarias, computadoras que no se apagan, o servidores subutilizados, alineando las políticas de TI con los objetivos generales de sostenibilidad de la empresa.",
+  "pasos_accionables": [
+    "Revisar redundancias como impresoras individuales vs compartidas",
+    "Identificar PCs y servidores de bajo uso mediante indicadores de downtime y llamadas a soporte",
+    "Comparar políticas de TI con las metas de sostenibilidad corporativa",
+    "Documentar brechas y proponer alineaciones"
+  ],
+  "entregable_esperado": "Lista de ineficiencias identificadas y plan de alineación entre políticas de TI y sostenibilidad corporativa",
+  "nodos_previos": [
+    "auditoria_ti_verde"
+  ],
+  "nodos_siguientes": [
+    "virtualizacion_servidores",
+    "gestion_e_waste"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se cuenta con datos de auditoría de TI",
+    "Si se sospechan desperdicios de recursos tecnológicos"
+  ]
+}

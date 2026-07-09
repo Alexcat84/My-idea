@@ -1,0 +1,26 @@
+{
+  "node_id": "fallo_regulatorio_por_recursos_insuficientes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Fallo Regulatorio por Recursos Insuficientes",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_theorico": "Patrón recurrente en los casos analizados (NASA, Piper Alpha, Dryden, FAA) donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
+  "resumen_teorico": "Patrón recurrente en los casos analizados (NASA, Piper Alpha, Dryden, FAA) donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
+  "pasos_accionables": [
+    "Calcular la carga de trabajo real de los equipos de seguridad/calidad frente a su dotación actual",
+    "Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector",
+    "Identificar funciones de supervisión que se han visto reducidas o eliminadas por recortes",
+    "Presentar a la dirección un caso de negocio sobre el riesgo de subdotación en funciones de seguridad"
+  ],
+  "entregable_esperado": "Reporte de brecha de recursos en funciones de seguridad y plan de refuerzo de dotación",
+  "nodos_previos": [
+    "normalizacion_de_la_desviacion"
+  ],
+  "nodos_siguientes": [
+    "inspecciones_superficiales_y_muestreo_incompleto"
+  ],
+  "condiciones_activacion": [
+    "Cuando se han reducido plantillas de seguridad o calidad en los últimos años",
+    "Cuando el personal de supervisión reporta sobrecarga de tareas no relacionadas con su función principal"
+  ]
+}

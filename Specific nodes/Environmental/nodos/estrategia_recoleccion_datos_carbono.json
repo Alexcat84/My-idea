@@ -1,0 +1,26 @@
+{
+  "node_id": "estrategia_recoleccion_datos_carbono",
+  "fase_proyecto": "validacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Estrategia de Recolección de Datos de Carbono",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "La parte más difícil de un análisis de huella de carbono es conseguir los datos necesarios, especialmente en el primer intento. Se requiere identificar quién tiene la información (facturas de energía y combustible), asignar responsables específicos, usar plantillas estandarizadas, automatizar procesos con software especializado, y documentar todo en un 'archivo de carbono'. Es aceptable extrapolar datos faltantes si se documentan los supuestos.",
+  "pasos_accionables": [
+    "Identificar fuentes de datos de energía y combustible (facturas de servicios, registros de flota)",
+    "Asignar responsables específicos para cada tipo de dato requerido",
+    "Desarrollar plantillas estandarizadas junto con las unidades de negocio",
+    "Considerar software de contabilidad de carbono para automatizar el proceso",
+    "Crear un sistema de recordatorios para que empleados envíen datos a tiempo",
+    "Documentar supuestos y crear un archivo de carbono histórico"
+  ],
+  "entregable_esperado": "Sistema de recolección de datos con plantillas, responsables asignados y un archivo documentado de supuestos",
+  "nodos_previos": [
+    "definir_limites_huella_carbono"
+  ],
+  "nodos_siguientes": [
+    "conversion_datos_co2e"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa no tiene un sistema establecido para recolectar datos de energía y combustible"
+  ]
+}

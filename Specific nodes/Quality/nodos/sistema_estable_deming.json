@@ -1,0 +1,23 @@
+{
+  "node_id": "sistema_estable_deming",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Concepto de Sistema Estable",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un sistema estable es aquel cuya variación proviene únicamente de causas comunes, siendo predecible dentro de límites estadísticos. Entender si un proceso es estable determina si la responsabilidad de mejora recae en la gerencia (sistema) o en el trabajador individual.",
+  "pasos_accionables": [
+    "Recolectar datos de proceso a lo largo del tiempo",
+    "Construir cartas de control (control charts) para detectar estabilidad",
+    "Determinar si la variación es causa común o especial",
+    "Asignar responsabilidad de mejora según el tipo de causa identificada"
+  ],
+  "entregable_esperado": "Carta de control con diagnóstico de estabilidad del proceso",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "critica_gestion_por_objetivos",
+    "eliminacion_estandares_trabajo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita diagnosticar si un problema de calidad es sistémico o individual"
+  ]
+}

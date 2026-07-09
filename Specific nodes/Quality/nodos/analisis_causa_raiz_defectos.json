@@ -1,0 +1,27 @@
+{
+  "node_id": "analisis_causa_raiz_defectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis y Clasificación Precisa de Causas de Defectos",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "A través del caso de Charlie Gordon, Crosby muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
+  "pasos_accionables": [
+    "Recolectar datos reales de defectos por unidad y frecuencia",
+    "Cuestionar las clasificaciones genéricas de causa (ej. 'workmanship') y desagregarlas en subcausas específicas",
+    "Verificar cada causa hipotética con las áreas involucradas antes de asumirla como válida",
+    "Formar un equipo multidisciplinario (línea, calidad, compras, ingeniería) para investigar cada defecto recurrente",
+    "Documentar la causa exacta y la acción correctiva aplicada para cada tipo de defecto"
+  ],
+  "entregable_esperado": "Tabla de defectos con causa raíz validada, acción correctiva implementada y resultado medido (reducción de incidencia).",
+  "nodos_previos": [
+    "resolucion_problemas_niveles_supervision"
+  ],
+  "nodos_siguientes": [
+    "equipo_interdepartamental_calidad",
+    "medicion_desempeno_integrado"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe una alta tasa de retrabajo o rechazo sin causa clara identificada",
+    "Cuando diferentes departamentos se culpan mutuamente por los mismos defectos"
+  ]
+}

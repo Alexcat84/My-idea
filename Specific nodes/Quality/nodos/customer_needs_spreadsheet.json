@@ -1,0 +1,27 @@
+{
+  "node_id": "customer_needs_spreadsheet",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Hoja de Cálculo de Necesidades del Cliente (Customer Needs Spreadsheet)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta de planificación que organiza en una matriz los clientes (internos y externos) en orden de prioridad como filas, y sus necesidades identificadas como columnas. Permite visualizar de forma sistemática la importancia relativa de cada necesidad para cada cliente, asegurando que el presupuesto de desarrollo de producto se enfoque en lo más importante. Es la base para convertir necesidades en características y luego en procesos, según la secuencia de Quality by Design.",
+  "pasos_accionables": [
+    "Listar todos los clientes externos e internos en orden de prioridad",
+    "Identificar y listar todas las necesidades descubiertas como encabezados de columna",
+    "Marcar o calificar la importancia de cada necesidad para cada cliente",
+    "Usar la matriz resultante para enfocar recursos de diseño en las necesidades más críticas"
+  ],
+  "entregable_esperado": "Una matriz completa de clientes vs necesidades con calificaciones de importancia que sirve de insumo para el diseño de producto",
+  "nodos_previos": [
+    "identificacion_de_clientes",
+    "recoleccion_de_datos_de_necesidades"
+  ],
+  "nodos_siguientes": [
+    "traduccion_necesidades_cliente",
+    "product_design_spreadsheet"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha completado la recolección de necesidades de clientes y se requiere priorizarlas",
+    "Cuando el presupuesto de desarrollo es limitado y se debe decidir en qué enfocarse"
+  ]
+}

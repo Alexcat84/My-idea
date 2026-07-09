@@ -1,0 +1,25 @@
+{
+  "node_id": "distribuciones_probabilidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribuciones de Probabilidad (Continuas y Discretas)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una distribución de probabilidad relaciona los valores de una característica con su probabilidad de ocurrencia en la población. Se dividen en continuas (datos variables, como la distribución normal, exponencial o Weibull) y discretas (datos de atributos, como Poisson o binomial). Comprender estas distribuciones es fundamental para modelar datos y estimar probabilidades en la gestión de calidad.",
+  "pasos_accionables": [
+    "Determinar si los datos son de tipo variable (continuo) o atributo (discreto)",
+    "Seleccionar la distribución teórica apropiada (normal, exponencial, Weibull, Poisson, binomial)",
+    "Ajustar los datos a la distribución seleccionada",
+    "Usar la distribución para estimar probabilidades de ocurrencia"
+  ],
+  "entregable_esperado": "Identificación y ajuste de la distribución de probabilidad apropiada para el conjunto de datos analizado",
+  "nodos_previos": [
+    "concepto_variacion_estadistica"
+  ],
+  "nodos_siguientes": [
+    "inferencia_estadistica_muestreo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita modelar matemáticamente el comportamiento de una característica de calidad",
+    "Antes de realizar pruebas de hipótesis o estimaciones"
+  ]
+}

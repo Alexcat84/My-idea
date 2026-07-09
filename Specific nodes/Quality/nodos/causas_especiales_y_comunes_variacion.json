@@ -1,0 +1,26 @@
+{
+  "node_id": "causas_especiales_y_comunes_variacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Causas Especiales y Comunes de Variación",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Shewhart denominó causas 'asignables' y 'no asignables'; Deming las llamó 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+  "pasos_accionables": [
+    "Analizar si la desviación observada tiene origen en una sola variable dominante (especial) o en múltiples variables menores (común)",
+    "Si es causa especial: activar acción correctiva inmediata vía PDCA",
+    "Si es causa común: derivar el problema a un proyecto de mejora (ej. Six Sigma DMAIC)",
+    "Evitar tomar acción correctiva sobre variación común (riesgo de 'tampering')"
+  ],
+  "entregable_esperado": "Clasificación documentada de la variación observada como causa especial o común, con la acción correspondiente definida",
+  "nodos_previos": [
+    "capacidad_de_proceso",
+    "ciclo_pdca_pdsa"
+  ],
+  "nodos_siguientes": [
+    "carta_de_control_shewhart"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detecta una diferencia entre el desempeño real y la meta de calidad",
+    "Si existe confusión sobre si se debe corregir o mejorar el proceso"
+  ]
+}

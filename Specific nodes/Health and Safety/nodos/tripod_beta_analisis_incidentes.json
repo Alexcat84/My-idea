@@ -1,0 +1,27 @@
+{
+  "node_id": "tripod_beta_analisis_incidentes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Tripod-Beta: Análisis de Incidentes",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Tripod-Beta es una herramienta computarizada creada por Shell para realizar análisis de incidentes en paralelo con la investigación del evento. Trabaja retrocediendo desde la pérdida hasta identificar las defensas fallidas, los fallos activos y latentes, y las condiciones previas (preconditions) asociadas a Tipos Generales de Fallo (GFTs). Es compatible con Tripod-Delta y el Hazard and Effects Management Process (HEMP) de Shell.",
+  "pasos_accionables": [
+    "Definir el evento de pérdida (target dañado) como punto de partida del análisis",
+    "Retroceder para identificar la defensa que falló",
+    "Determinar si el fallo de la defensa fue activo o latente",
+    "Identificar las precondiciones en el lugar de trabajo asociadas al fallo activo",
+    "Vincular las precondiciones con los Tipos Generales de Fallo (GFTs) latentes correspondientes",
+    "Generar el árbol de incidente y el reporte de accidente para edición final"
+  ],
+  "entregable_esperado": "Árbol de incidente (incident tree) completo con causas activas y latentes identificadas, y reporte de accidente generado",
+  "nodos_previos": [
+    "meda_analisis_error_mantenimiento"
+  ],
+  "nodos_siguientes": [
+    "principios_gestion_error"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre un incidente de seguridad en instalaciones industriales o de extracción",
+    "Si se requiere alinear la investigación de incidentes con el marco teórico de Tripod y HEMP"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "node_id": "run_chart_datos_temporales",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Run Chart (Gráfico de Corrida)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El run chart es un gráfico dinámico que representa los datos en función del tiempo, permitiendo revelar tendencias, ciclos y otros cambios que un histograma estático no puede mostrar, ya que este último es solo una 'fotografía' de un período específico.",
+  "pasos_accionables": [
+    "Recolectar datos del proceso en orden cronológico",
+    "Graficar los valores en el eje Y y el tiempo en el eje X",
+    "Identificar tendencias, ciclos o patrones inusuales en la serie temporal",
+    "Usar los hallazgos para investigar causas especiales de variación"
+  ],
+  "entregable_esperado": "Gráfico de corrida elaborado con datos temporales del proceso, identificando tendencias o anomalías",
+  "nodos_previos": [
+    "concepto_variacion_estadistica"
+  ],
+  "nodos_siguientes": [
+    "control_estadistico_procesos"
+  ],
+  "condiciones_activacion": [
+    "Si se necesita analizar la evolución de un proceso a lo largo del tiempo"
+  ]
+}

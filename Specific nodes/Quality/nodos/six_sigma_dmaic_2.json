@@ -1,0 +1,29 @@
+{
+  "node_id": "six_sigma_dmaic_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Six Sigma - Metodología DMAIC",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "DMAIC (Define, Measure, Analyze, Improve, Control) es la metodología central de Six Sigma para mejorar procesos y productos existentes reduciendo defectos a niveles de partes por millón. Está orientada al cliente y busca traducir sus necesidades en términos operacionales accionables. El objetivo de Six Sigma es lograr no más de 3.4 defectos por millón de oportunidades (DPMO), lo que representa un nivel de variación mínimo respecto a los límites de especificación. Se aplica tanto en procesos de manufactura como transaccionales/servicios.",
+  "pasos_accionables": [
+    "Define: Definir claramente el problema y los objetivos del proyecto mediante un charter",
+    "Measure: Medir el desempeño actual del proceso y recopilar la voz del cliente (VOC)",
+    "Analyze: Analizar los datos recolectados para determinar las causas raíz del problema",
+    "Improve: Seleccionar e implementar las soluciones adecuadas para resolver el problema",
+    "Control: Establecer mecanismos de control para sostener las mejoras logradas en el tiempo"
+  ],
+  "entregable_esperado": "Un proyecto Six Sigma DMAIC completado con métricas de sigma level, causas raíz identificadas, soluciones implementadas y un plan de control documentado",
+  "nodos_previos": [
+    "mistake_proofing_poka_yoke",
+    "voz_del_cliente"
+  ],
+  "nodos_siguientes": [
+    "dmadv_design_for_six_sigma",
+    "roles_six_sigma"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita resolver un problema crónico de calidad con causas no evidentes",
+    "Cuando se requiere alcanzar niveles de calidad cercanos a la perfección (ppm)",
+    "Cuando la organización busca una mejora de tipo breakthrough en procesos críticos para el cliente"
+  ]
+}

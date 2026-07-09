@@ -1,0 +1,26 @@
+{
+  "node_id": "graficos_control_multivariados",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráficos de Control Multivariados",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando un producto tiene dos o más características de calidad, monitorearlas de forma independiente con gráficos separados puede ser engañoso, ya que la probabilidad conjunta de que ambas excedan sus límites simultáneamente es mucho menor que la individual. Los gráficos multivariados (como el T² de Hotelling o EWMA multivariado) abordan correctamente esta interdependencia.",
+  "pasos_accionables": [
+    "Identificar las múltiples características de calidad correlacionadas del producto",
+    "Calcular la matriz de covarianza entre las características",
+    "Construir el estadístico multivariado (por ejemplo, T² de Hotelling)",
+    "Establecer límites de control multivariados apropiados",
+    "Monitorear el estadístico combinado en lugar de gráficos independientes"
+  ],
+  "entregable_esperado": "Sistema de control multivariado implementado para características de calidad correlacionadas",
+  "nodos_previos": [
+    "grafico_box_jenkins"
+  ],
+  "nodos_siguientes": [
+    "capacidad_proceso_concepto"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto tiene múltiples características de calidad correlacionadas",
+    "Cuando el monitoreo independiente de características genera conclusiones distorsionadas"
+  ]
+}

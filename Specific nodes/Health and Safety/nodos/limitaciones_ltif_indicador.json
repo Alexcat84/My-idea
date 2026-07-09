@@ -1,0 +1,25 @@
+{
+  "node_id": "limitaciones_ltif_indicador",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Limitaciones del LTIF como Indicador de Seguridad",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "El índice de lesiones con tiempo perdido (LTIF) tiene una relación asimétrica con los accidentes organizacionales: un LTIF alto sí indica un sistema 'enfermo' propenso a accidentes mayores, pero un LTIF bajo NO garantiza baja probabilidad de un accidente organizacional catastrófico. Esto ocurre porque en sistemas con LTIF muy bajo, el ruido estadístico domina sobre la señal real (ej. un empleado que se cae de la bicicleta en el estacionamiento), y porque las lesiones menores no reflejan la integridad de las defensas del sistema ante fallas catastróficas. Eventos precursores (fugas, casi-accidentes) son más diagnósticos que el LTIF en sistemas maduros.",
+  "pasos_accionables": [
+    "Dejar de usar el LTIF como único o principal indicador de seguridad del sistema",
+    "Implementar sistemas de reporte y seguimiento de eventos precursores (near-misses, fugas, fallas de equipos)",
+    "Establecer métricas de integridad de procesos (process safety indicators) complementarias al LTIF",
+    "Evitar comunicar señales de 'días sin accidentes' como sinónimo de seguridad total del sitio"
+  ],
+  "entregable_esperado": "Panel de indicadores de seguridad de proceso (process safety) que incluya precursores además del LTIF tradicional",
+  "nodos_previos": [
+    "clasificacion_riesgos_por_dominio"
+  ],
+  "nodos_siguientes": [
+    "condiciones_latentes_riesgo_universal"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización tiene LTIF muy bajo pero preocupación por riesgos catastróficos",
+    "Cuando se necesita justificar inversión en indicadores de seguridad de proceso más allá de estadísticas de lesiones"
+  ]
+}

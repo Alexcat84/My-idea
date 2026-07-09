@@ -1,0 +1,26 @@
+{
+  "node_id": "mejora_del_sistema_responsabilidad_gerencial",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Mejora del Sistema como Responsabilidad de la Gerencia",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Los trabajadores operan dentro de un sistema que ellos no controlan (materiales, equipos, políticas). Cuando un proceso está en control estadístico pero sigue generando defectos, la única forma de mejorar es que la gerencia actúe sobre el sistema: mejores materiales, mantenimiento, diseño de equipos o procesos. Ejemplos: cambio de hilo de mala calidad, instalación de una placa niveladora en vagones de carga, ajuste de insumos y mantenimiento en producción de ruedas.",
+  "pasos_accionables": [
+    "Verificar que el proceso esté en control estadístico (sin causas especiales)",
+    "Si persisten defectos con el proceso en control, identificar elementos del sistema (materiales, equipo, entorno) como causa raíz",
+    "Realizar pruebas simples para aislar la variable común a todos los operadores/máquinas",
+    "Implementar el cambio estructural (mejor insumo, rediseño de equipo, mejor mantenimiento)",
+    "Verificar la reducción o eliminación de defectos tras el cambio"
+  ],
+  "entregable_esperado": "Informe de causa raíz a nivel de sistema y evidencia de mejora tras el cambio implementado por la gerencia",
+  "nodos_previos": [
+    "distincion_causas_comunes_especiales"
+  ],
+  "nodos_siguientes": [
+    "politica_no_culpar_trabajador"
+  ],
+  "condiciones_activacion": [
+    "Cuando un proceso está en control estadístico pero la tasa de defectos sigue siendo inaceptable",
+    "Cuando múltiples operadores o máquinas presentan el mismo problema"
+  ]
+}

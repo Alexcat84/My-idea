@@ -1,0 +1,25 @@
+{
+  "node_id": "requisitos_numericos_calidad_lotes_2",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Definición de Requisitos Numéricos de Calidad y Confiabilidad para Lotes",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Más allá de los requisitos por unidad, se necesitan criterios numéricos para juzgar la conformidad de lotes completos de producto, usados típicamente en procedimientos de muestreo de aceptación. Estos criterios deben comunicarse claramente para evitar interpretaciones erróneas por parte del proveedor, especialmente en temas de confiabilidad como MTBF (tiempo medio entre fallas).",
+  "pasos_accionables": [
+    "Definir índices numéricos de calidad de lote (AQL, DPM, etc.)",
+    "Establecer requisitos de confiabilidad como MTBF o MTBJ cuando aplique",
+    "Comunicar explícitamente al proveedor que todo el producto debe cumplir especificaciones, no solo un porcentaje aceptable",
+    "Solicitar pruebas de demostración de confiabilidad si el producto es crítico"
+  ],
+  "entregable_esperado": "Documento de compras con criterios numéricos de calidad y confiabilidad claramente definidos",
+  "nodos_previos": [
+    "especificacion_requisitos_calidad_proveedores"
+  ],
+  "nodos_siguientes": [
+    "definicion_sistema_calidad_proveedor"
+  ],
+  "condiciones_activacion": [
+    "Cuando se usan planes de muestreo de aceptación para lotes",
+    "Cuando el producto requiere alta confiabilidad demostrable"
+  ]
+}

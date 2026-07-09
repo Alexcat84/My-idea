@@ -1,0 +1,27 @@
+{
+  "node_id": "identificacion_peligros_salud_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Identificación de Peligros para la Salud",
+  "fuente": "OSHA3886",
+  "resumen_teorico": "A diferencia de los peligros de seguridad física, los peligros para la salud (químicos, físicos, biológicos y ergonómicos) suelen ser menos evidentes y requieren conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos y factores de riesgo ergonómico como levantamiento de cargas o movimientos repetitivos.",
+  "pasos_accionables": [
+    "Revisar SDS y etiquetas de productos para identificar químicos de riesgo",
+    "Evaluar exposición a ruido, calor y radiación",
+    "Identificar fuentes de riesgo biológico (moho, plantas tóxicas, animales)",
+    "Analizar tareas con levantamiento de carga, movimientos repetitivos o vibración",
+    "Realizar evaluaciones cuantitativas de exposición cuando sea posible",
+    "Consultar el Programa de Consulta In Situ de OSHA si se requiere apoyo especializado"
+  ],
+  "entregable_esperado": "Listado clasificado de peligros para la salud presentes en el sitio, con nivel de exposición estimado",
+  "nodos_previos": [
+    "recopilacion_informacion_peligros"
+  ],
+  "nodos_siguientes": [
+    "caracterizacion_priorizacion_peligros"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen procesos con químicos, ruido, calor o tareas físicas repetitivas",
+    "Cuando no se ha evaluado la exposición a riesgos de salud ocupacional"
+  ]
+}

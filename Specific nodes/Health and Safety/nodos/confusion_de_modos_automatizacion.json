@@ -1,0 +1,26 @@
+{
+  "node_id": "confusion_de_modos_automatizacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Confusión de Modos en Sistemas Automatizados",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Los sistemas de control automatizados, diseñados para eliminar errores humanos de bajo nivel (deslices, lapsus), pueden en cambio generar errores de nivel superior más graves. La confusión de modos ocurre cuando el operador evalúa erróneamente el modo activo del sistema o no percibe una transición de modo. Woods y Sarter identificaron que estos sistemas aumentan la carga de memoria, dificultan compartir la conciencia situacional en equipos, y pueden ocultar eventos importantes debido a su complejidad y múltiples modos operativos.",
+  "pasos_accionables": [
+    "Auditar los sistemas automatizados críticos identificando cuántos modos operativos posee cada uno",
+    "Evaluar si el diseño de la interfaz permite detectar fácilmente transiciones de modo",
+    "Entrenar a los operadores en el reconocimiento de todos los modos posibles y sus transiciones",
+    "Implementar retroalimentación clara y visible ante cada cambio de modo del sistema"
+  ],
+  "entregable_esperado": "Informe de auditoría de automatización con matriz de modos operativos y riesgos de confusión asociados",
+  "nodos_previos": [
+    "modelo_queso_suizo_reason"
+  ],
+  "nodos_siguientes": [
+    "defensas_en_profundidad",
+    "gestion_falsas_alarmas"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización opera sistemas altamente automatizados (aviación, plantas nucleares, anestesia)",
+    "Si se han reportado incidentes de confusión operador-máquina"
+  ]
+}

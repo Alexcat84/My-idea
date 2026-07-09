@@ -1,0 +1,26 @@
+{
+  "node_id": "riesgo_actividades_mantenimiento",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Mantenimiento como Mayor Fuente de Fallas Humanas",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "De las tres actividades universales en tecnologías peligrosas (control normal, control de emergencia y mantenimiento), el mantenimiento es la que presenta mayor riesgo porque puntúa alto simultáneamente en tres criterios: contacto directo ('hands on'), criticidad y frecuencia. Datos de estudios en energía nuclear (INPO, CRIEPI) muestran que más del 50% de los problemas de desempeño humano se asocian a actividades de mantenimiento, prueba y calibración.",
+  "pasos_accionables": [
+    "Evaluar cada actividad operativa según las tres preguntas: contacto directo, criticidad y frecuencia",
+    "Identificar las tareas de mantenimiento que puntúan alto en las tres dimensiones",
+    "Priorizar recursos de supervisión y control de calidad en dichas tareas críticas",
+    "Revisar historiales de incidentes para confirmar que el mantenimiento es la fuente principal de fallas en la organización"
+  ],
+  "entregable_esperado": "Matriz de evaluación de riesgo por actividad (hands-on/criticidad/frecuencia) con las tareas de mantenimiento críticas identificadas",
+  "nodos_previos": [
+    "clasificacion_errores_humanos"
+  ],
+  "nodos_siguientes": [
+    "vulnerabilidad_instalacion",
+    "prevalencia_omisiones"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña un programa de gestión de riesgos organizacionales",
+    "Cuando se busca priorizar recursos de seguridad entre distintas actividades operativas"
+  ]
+}

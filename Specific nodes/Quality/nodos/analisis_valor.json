@@ -1,0 +1,24 @@
+{
+  "node_id": "analisis_valor",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Valor (Value Analysis)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Calcula el costo incremental de características específicas del producto y el costo de satisfacer necesidades particulares del cliente, comparando diseños alternativos. Ayuda a evitar sobrecargar el producto con funciones secundarias a expensas de la funcionalidad fundamental.",
+  "pasos_accionables": [
+    "Elaborar una hoja de cálculo que relacione costos con necesidades del cliente por prioridad",
+    "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas",
+    "Verificar que las necesidades de alta prioridad reciban recursos suficientes",
+    "Evitar el uso de recursos en funciones de bajo valor en detrimento de las funciones esenciales"
+  ],
+  "entregable_esperado": "Hoja de análisis de valor con costos por necesidad y decisiones de reasignación de recursos",
+  "nodos_previos": [
+    "analisis_vendibilidad"
+  ],
+  "nodos_siguientes": [
+    "establecer_diseno_final_producto"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir entre diseños alternativos en función de costo-beneficio por necesidad del cliente"
+  ]
+}

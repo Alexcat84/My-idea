@@ -1,0 +1,24 @@
+{
+  "node_id": "confusion_modos_automatizacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Confusión de Modos en Sistemas Automatizados (Mode Confusion)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Los sistemas de gestión de vuelo (FMS) y otros sistemas automatizados complejos pueden cambiar de modo tanto por intervención del usuario como por lógica interna propia, generando confusión sobre cuál modo está activo. Woods y Sarter identificaron que la automatización puede ocultar eventos y anomalías, poseer múltiples modos, forzar acceso serial a información relacionada, y suprimir información importante sobre las actividades de otros miembros del equipo. Esto provoca dos tipos de fallo: evaluación errónea del modo activo (fallo de percepción) o no notar transiciones de modo (fallo de atención). Un estudio del MIT encontró que el 74% de los casos de confusión de modo se asociaban a navegación vertical, la tarea más compleja y crítica.",
+  "pasos_accionables": [
+    "Auditar las interfaces de sistemas automatizados críticos para identificar puntos de opacidad sobre el modo/estado activo.",
+    "Capacitar a los operadores no solo en el uso del sistema sino en la lógica interna de transición de modos.",
+    "Rediseñar interfaces para hacer visibles las transiciones de modo automáticas, reduciendo la carga cognitiva en momentos de alta demanda."
+  ],
+  "entregable_esperado": "Reporte de auditoría de interfaz humano-máquina con recomendaciones específicas para reducir la confusión de modos.",
+  "nodos_previos": [
+    "ironias_de_la_automatizacion"
+  ],
+  "nodos_siguientes": [
+    "defensas_peligrosas_paradojas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se opera maquinaria o sistemas con múltiples modos automáticos de control.",
+    "Cuando se investigan incidentes relacionados con 'sorpresas' de automatización."
+  ]
+}

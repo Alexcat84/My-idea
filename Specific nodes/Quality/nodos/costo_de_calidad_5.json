@@ -1,0 +1,27 @@
+{
+  "node_id": "costo_de_calidad_5",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "El Costo de la Calidad (Cost of Quality)",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Crosby define el costo de calidad como 'el gasto de hacer las cosas mal': incluye costos de prevención, evaluación (appraisal) y fallas (internas y externas). Sostiene que la calidad es medible con la métrica más respetada, el dinero, refutando la idea de que la calidad es intangible. Calcular este costo, idealmente a través del área de contraloría/finanzas para evitar sesgos, es esencial para justificar inversiones en programas de prevención.",
+  "pasos_accionables": [
+    "Identificar y clasificar los costos asociados a fallas internas (retrabajo, desperdicio) y externas (reclamos, garantías).",
+    "Sumar los costos de evaluación (inspecciones, pruebas) y de prevención (capacitación, planificación de calidad).",
+    "Solicitar al área de finanzas/contraloría que calcule oficialmente el costo total de calidad para evitar sesgos.",
+    "Usar esta cifra como argumento cuantitativo ante la dirección para justificar programas de mejora.",
+    "Monitorear la reducción del costo de calidad como indicador de éxito del programa de prevención."
+  ],
+  "entregable_esperado": "Reporte financiero del costo de calidad total (prevención + evaluación + fallas) calculado por el área de finanzas, usado como línea base.",
+  "nodos_previos": [
+    "definicion_calidad_conformidad"
+  ],
+  "nodos_siguientes": [
+    "programa_make_certain",
+    "cero_defectos_zd"
+  ],
+  "condiciones_activacion": [
+    "Cuando la dirección requiere justificación financiera para invertir en programas de calidad.",
+    "Cuando se necesita medir objetivamente el impacto económico de los defectos y errores en la organización."
+  ]
+}

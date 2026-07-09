@@ -1,0 +1,28 @@
+{
+  "node_id": "inspeccion_lugar_trabajo_peligros",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Inspección del Lugar de Trabajo para Identificar Peligros de Seguridad",
+  "fuente": "OSHA3885",
+  "resumen_theorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, desgaste de equipos o descuido en el mantenimiento. Las inspecciones regulares, con participación de los trabajadores, permiten identificar condiciones peligrosas antes de que ocurra un incidente. Se deben documentar y usar listas de verificación por categorías (orden y limpieza, riesgos eléctricos, incendios, ergonomía, etc.).",
+  "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, desgaste de equipos o descuido en el mantenimiento. Las inspecciones regulares, con participación de los trabajadores, permiten identificar condiciones peligrosas antes de que ocurra un incidente. Se deben documentar y usar listas de verificación por categorías (orden y limpieza, riesgos eléctricos, incendios, ergonomía, etc.).",
+  "pasos_accionables": [
+    "Programar inspecciones regulares de todas las operaciones, equipos y áreas de trabajo",
+    "Incluir a los trabajadores en el equipo de inspección",
+    "Documentar hallazgos con fotos o videos para su posterior corrección",
+    "Usar listas de verificación por categoría de riesgo (eléctrico, incendio, ergonomía, etc.)",
+    "Evaluar cambios propuestos en procesos o equipos antes de implementarlos"
+  ],
+  "entregable_esperado": "Reporte de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección",
+  "nodos_previos": [
+    "identificacion_recopilacion_informacion_peligros"
+  ],
+  "nodos_siguientes": [
+    "identificacion_peligros_salud",
+    "jerarquia_controles"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere verificar condiciones físicas del entorno laboral",
+    "Después de cambios en procesos, equipos o instalaciones"
+  ]
+}

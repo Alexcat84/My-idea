@@ -1,0 +1,23 @@
+{
+  "node_id": "gestion_dinamica_de_fallas",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Gestión Dinámica de Fallas (Dynamic Fault Management)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "La gestión dinámica de fallas describe la necesidad de las personas de comprometer recursos cognitivos para diagnosticar un problema mientras mantienen la integridad del proceso en curso (ej. mantener el avión volando o al paciente respirando). Es típica de dominios guiados por eventos, donde no diagnosticar o corregir puede poner en riesgo la integridad de todo el sistema, aumentando significativamente la carga de trabajo.",
+  "pasos_accionables": [
+    "Identificar las tareas concurrentes que el operador debía manejar simultáneamente al diagnóstico",
+    "Evaluar la carga de trabajo generada por mantener el proceso mientras se diagnostica",
+    "Documentar cómo las demandas duales (operar + diagnosticar) afectaron las decisiones tomadas"
+  ],
+  "entregable_esperado": "Análisis de carga de trabajo y tareas concurrentes durante el incidente",
+  "nodos_previos": [
+    "fijacion_cognitiva"
+  ],
+  "nodos_siguientes": [
+    "continuacion_de_plan"
+  ],
+  "condiciones_activacion": [
+    "Cuando el incidente ocurre en un dominio de eventos dinámicos como aviación, salud o control de procesos"
+  ]
+}

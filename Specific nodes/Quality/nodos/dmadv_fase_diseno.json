@@ -1,0 +1,28 @@
+{
+  "node_id": "dmadv_fase_diseno",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Fase de Diseño (Design) en DMADV",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La fase de diseño en la metodología DMADV (Define, Measure, Analyze, Design, Verify) construye sobre los requisitos del diseño de alto nivel para entregar un diseño funcional detallado y optimizado que cumple con los requisitos operativos de manufactura y servicio. Se realizan diseños detallados en subsistemas que eventualmente se integran en el sistema funcional completo. Se utilizan experimentos diseñados y simulaciones para determinar la mejor configuración de características y obtener ecuaciones matemáticas de predicción.",
+  "pasos_accionables": [
+    "Realizar experimentos diseñados a diferentes niveles de complejidad (screening, response surface, mixture designs)",
+    "Actualizar el design scorecard con resultados de experimentos, benchmarking y estudios de capacidad de proceso",
+    "Reevaluar el diseño del producto contra la capacidad de manufactura u operación",
+    "Validar tolerancias para cada parámetro mediante experimentos diseñados y tolerancias estadísticas",
+    "Documentar el conjunto de pruebas en un plan de Design Verification Test (DVT)",
+    "Realizar una reunión de revisión de diseño al concluir la fase"
+  ],
+  "entregable_esperado": "Diseño funcional detallado con parámetros optimizados, modelos de predicción, tolerancias óptimas, documentación de diseño, procedimientos operativos estándar, resultados de análisis de confiabilidad y resultados de verificación del diseño (DVT), y scorecard de diseño actualizado",
+  "nodos_previos": [
+    "dmadv_fase_analisis",
+    "dmadv_fase_medicion"
+  ],
+  "nodos_siguientes": [
+    "dmadv_fase_verificacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo ha completado el diseño de alto nivel y necesita desarrollar el diseño detallado",
+    "Cuando se requiere optimizar parámetros de diseño para minimizar variación en el desempeño del producto"
+  ]
+}

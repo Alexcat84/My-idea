@@ -1,0 +1,21 @@
+{
+  "node_id": "limitaciones_analisis_costo_beneficio",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming advierte que el análisis costo/beneficio (ΔC/ΔB) frecuentemente falla en calidad porque tanto los costos (ej. costo real de un defecto que llega al cliente) como los beneficios (satisfacción, reputación) son extremadamente difíciles de cuantificar en términos monetarios. Si no se puede estimar confiablemente el numerador ni el denominador, la fracción resultante carece de valor real, y su uso puede ser peligroso, especialmente en decisiones de diseño de producto donde hay riesgo de lesión o pérdida de vida.",
+  "pasos_accionables": [
+    "Antes de aplicar análisis costo/beneficio, verificar si los costos y beneficios pueden estimarse con precisión razonable",
+    "Usar análisis de trade-off (rangos de beneficios) cuando la cuantificación monetaria no sea posible",
+    "Evitar el uso de costo/beneficio en decisiones de diseño donde exista riesgo para la seguridad o vida humana",
+    "Documentar los supuestos y limitaciones de cualquier análisis costo/beneficio presentado a la gerencia"
+  ],
+  "entregable_esperado": "Informe crítico que identifique los supuestos y limitaciones de cualquier análisis costo/beneficio propuesto en un proyecto de calidad",
+  "nodos_previos": [],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se propone justificar una inversión en calidad mediante análisis costo/beneficio",
+    "Cuando el análisis involucra decisiones de diseño con riesgo de seguridad"
+  ]
+}

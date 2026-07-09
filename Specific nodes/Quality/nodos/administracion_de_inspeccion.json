@@ -1,0 +1,26 @@
+{
+  "node_id": "administracion_de_inspeccion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Administración de la Inspección para Alta Calidad",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "En procesos donde un defecto puede ser grave (como en seguridad automotriz o cálculos bancarios), puede requerirse inspección al 100%. Sin embargo, la inspección duplicada debe evitar interacción entre el trabajo original y la revisión (por ejemplo, haciendo que dos personas trabajen de forma independiente desde el documento original) para minimizar la probabilidad de que un error pase inadvertido en ambas verificaciones.",
+  "pasos_accionables": [
+    "Determinar si el proceso requiere inspección al 100% por razones de seguridad o costo total mínimo",
+    "Asegurar que los revisores trabajen de manera independiente desde el documento original, sin ver el trabajo del otro",
+    "Establecer protocolos claros para documentos poco claros o casos especiales, derivándolos a un supervisor",
+    "Calcular la tasa de error combinada esperada cuando se usan dos verificaciones independientes"
+  ],
+  "entregable_esperado": "Un protocolo de inspección al 100% con roles independientes definidos y manejo de excepciones",
+  "nodos_previos": [
+    "definiciones_operacionales",
+    "administracion_sin_miedo"
+  ],
+  "nodos_siguientes": [
+    "control_estadistico_de_metodo_de_prueba"
+  ],
+  "condiciones_activacion": [
+    "Cuando un defecto puede tener consecuencias graves de seguridad o financieras",
+    "Cuando se diseña un sistema de doble verificación de calidad"
+  ]
+}

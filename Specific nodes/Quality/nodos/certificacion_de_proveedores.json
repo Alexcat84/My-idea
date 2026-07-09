@@ -1,0 +1,28 @@
+{
+  "node_id": "certificacion_de_proveedores",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Certificación de Proveedores",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, es esencial para manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+  "pasos_accionables": [
+    "Definir criterios de certificación (ej. 90% de cumplimiento por 4 trimestres consecutivos)",
+    "Aplicar los ocho criterios recomendados por ASQ para certificación",
+    "Usar índices de capacidad de proceso como parte del proceso de certificación",
+    "Otorgar preferencia en licitaciones a proveedores certificados",
+    "Reconocer públicamente el estatus de certificación"
+  ],
+  "entregable_esperado": "Sistema de certificación documentado con criterios claros y lista de proveedores clasificados por nivel",
+  "nodos_previos": [
+    "sistema_de_alarma_de_defectos",
+    "establecimiento_de_niveles_de_calidad_aql_dpm"
+  ],
+  "nodos_siguientes": [
+    "calificacion_de_calidad_de_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca reducir costos de inspección entrante",
+    "Cuando se implementa manufactura justo a tiempo",
+    "Cuando se busca establecer alianzas estratégicas con proveedores"
+  ]
+}

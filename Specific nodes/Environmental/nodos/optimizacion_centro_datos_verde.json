@@ -1,0 +1,29 @@
+{
+  "node_id": "optimizacion_centro_datos_verde",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Optimización de Centros de Datos Verdes",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras reducen drásticamente el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
+  "pasos_accionables": [
+    "Auditar la utilización real de almacenamiento y servidores para identificar excedentes.",
+    "Implementar virtualización de almacenamiento y deduplicación de datos.",
+    "Actualizar servidores y fuentes de poder cada pocos años para mayor eficiencia energética.",
+    "Rediseñar el flujo de aire y aplicar contención de pasillos fríos/calientes.",
+    "Ajustar los rangos de temperatura y humedad según recomendaciones del fabricante.",
+    "Evaluar el uso de economizadores de aire o agua y sistemas de enfriamiento líquido.",
+    "Considerar la ubicación geográfica del centro de datos según fuentes de energía limpias."
+  ],
+  "entregable_esperado": "Plan de optimización energética del centro de datos con métricas de ahorro proyectado (kWh y costos) y cronograma de implementación.",
+  "nodos_previos": [
+    "auditoria_de_ti_verde"
+  ],
+  "nodos_siguientes": [
+    "computacion_en_la_nube",
+    "diseno_para_el_medio_ambiente"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa opera uno o más centros de datos propios con alto consumo energético.",
+    "Si se busca reducir costos operativos de TI y huella de carbono simultáneamente."
+  ]
+}

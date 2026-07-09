@@ -1,0 +1,24 @@
+{
+  "node_id": "insuficiencia_especificaciones",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "La insuficiencia de cumplir solo con especificaciones",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cumplir con especificaciones no garantiza que un material o componente sea adecuado para su propósito final. El proveedor debe conocer el uso final del producto para poder ofrecer un material realmente funcional. Además, dos proveedores pueden cumplir especificaciones y ser de excelente calidad, pero generar problemas de integración o compatibilidad en el sistema completo.",
+  "pasos_accionables": [
+    "Comunicar a proveedores el uso final específico del material o componente, no solo las especificaciones técnicas",
+    "Evaluar la compatibilidad e integración de componentes en el sistema completo, no solo su cumplimiento individual",
+    "Diseñar y probar subsistemas de manera conjunta, no de forma aislada",
+    "Solicitar retroalimentación de diseño e ingeniería antes de fijar especificaciones finales"
+  ],
+  "entregable_esperado": "Documentación de especificaciones que incluya el contexto de uso final y pruebas de integración con otros componentes del sistema",
+  "nodos_previos": [
+    "uso_inadecuado_computadoras"
+  ],
+  "nodos_siguientes": [
+    "falacia_cero_defectos"
+  ],
+  "condiciones_activacion": [
+    "Si existen problemas recurrentes de calidad a pesar de que los materiales cumplen especificaciones formales"
+  ]
+}

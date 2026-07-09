@@ -1,0 +1,26 @@
+{
+  "node_id": "interpretacion_graficos_variables",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Interpretación de Gráficos de Control y Causas Especiales",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La interpretación correcta de los gráficos de control requiere identificar puntos fuera de los límites y patrones no aleatorios. Valores de R fuera de límites indican cambios en la uniformidad del proceso (personal, material, desgaste de maquinaria). Valores de X-bar fuera de límites indican un cambio general que afecta a todas las piezas. Nelson (1984, 1985) propone ocho pruebas para detectar patrones no aleatorios usando zonas de 1σ.",
+  "pasos_accionables": [
+    "Revisar primero el gráfico R o s antes que el X-bar",
+    "Identificar puntos individuales fuera de los límites de control",
+    "Aplicar las ocho pruebas de Nelson para detectar patrones no aleatorios",
+    "Investigar el registro de datos, la operación del proceso y la experiencia del trabajador para hallar la causa",
+    "Documentar causas típicas encontradas: cambio de material, personal, ajuste de máquina, desgaste de herramienta, temperatura o vibración"
+  ],
+  "entregable_esperado": "Informe de causas especiales identificadas con acciones correctivas propuestas",
+  "nodos_previos": [
+    "graficos_control_variables",
+    "graficos_control_atributos"
+  ],
+  "nodos_siguientes": [
+    "capacidad_de_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando un gráfico de control muestra puntos fuera de límites o patrones sospechosos"
+  ]
+}

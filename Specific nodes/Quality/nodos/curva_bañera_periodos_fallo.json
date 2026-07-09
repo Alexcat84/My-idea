@@ -1,0 +1,26 @@
+{
+  "node_id": "curva_bañera_periodos_fallo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Curva de la Bañera y Periodos de Fallo",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por defectos de diseño o fabricación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño o accidentes de uso) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+  "pasos_accionables": [
+    "Recolectar datos de tiempos de fallo del producto en campo o pruebas",
+    "Graficar la tasa de fallo en el tiempo para identificar en qué periodo se encuentra el producto",
+    "Aplicar pruebas de burn-in o screening ambiental para depurar fallos de mortalidad infantil",
+    "Implementar control de procedimientos operativos y de mantenimiento para el periodo de tasa constante",
+    "Establecer reemplazo preventivo de componentes antes de la fase de desgaste"
+  ],
+  "entregable_esperado": "Diagrama de la curva de bañera del producto con acciones de mitigación específicas para cada periodo identificado",
+  "nodos_previos": [
+    "recoleccion_datos_fallo"
+  ],
+  "nodos_siguientes": [
+    "distribucion_weibull_confiabilidad",
+    "formula_exponencial_confiabilidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita entender y clasificar los patrones de fallo de un producto a lo largo de su vida útil"
+  ]
+}

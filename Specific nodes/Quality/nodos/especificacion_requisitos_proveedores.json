@@ -1,0 +1,25 @@
+{
+  "node_id": "especificacion_requisitos_proveedores",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Especificación de Requisitos de Calidad para Proveedores",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La planificación de calidad con proveedores debe iniciarse antes de firmar el contrato, asegurando que el comprador comunique claramente el uso que se hará del producto y que obtenga evidencia de que el proveedor puede cumplir con los requisitos de aptitud para el uso. Se requieren dos tipos de especificaciones: las que definen los requisitos del producto y las que definen las actividades del sistema de calidad esperadas del proveedor.",
+  "pasos_accionables": [
+    "Comunicar al proveedor el uso final y las condiciones de operación del producto",
+    "Obtener evidencia de la capacidad del proveedor para cumplir los requisitos de aptitud de uso",
+    "Redactar especificaciones de producto y especificaciones de sistema de calidad del proveedor",
+    "En casos de alta complejidad, considerar contratos de desarrollo separados antes de la producción"
+  ],
+  "entregable_esperado": "Documento de especificaciones de producto y de sistema de calidad para el proveedor",
+  "nodos_previos": [
+    "revolucion_relaciones_proveedores"
+  ],
+  "nodos_siguientes": [
+    "requisitos_numericos_calidad_lotes"
+  ],
+  "condiciones_activacion": [
+    "Cuando se va a formalizar un contrato con un nuevo proveedor",
+    "Cuando el producto es complejo y las condiciones de uso no son totalmente conocidas de antemano"
+  ]
+}

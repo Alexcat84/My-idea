@@ -1,0 +1,26 @@
+{
+  "node_id": "eliminacion_de_firmas_duplicadas_responsabilidad_unica",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Eliminación de firmas duplicadas y asignación de responsabilidad única",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando un documento o proceso requiere múltiples firmas o revisiones de distintas personas, la responsabilidad se diluye y nadie se siente realmente dueño de la exactitud del resultado. Deming demuestra con el caso de las tarjetas de nómina que exigir dos firmas (empleado y capataz) garantiza problemas porque ninguno asume la responsabilidad total. Reducir el número de revisores a una sola persona responsable, y eliminar tareas que no le corresponden (como cálculos aritméticos), simplifica el proceso y reduce drásticamente los errores.",
+  "pasos_accionables": [
+    "Mapear todos los puntos de firma o revisión en un proceso administrativo.",
+    "Identificar si existe una única persona claramente responsable de la exactitud del documento.",
+    "Eliminar firmas o revisiones redundantes que no agregan valor de control real.",
+    "Reasignar tareas de cálculo o verificación al departamento técnico correspondiente, no al usuario final.",
+    "Medir la tasa de errores antes y después del cambio durante 2-4 semanas."
+  ],
+  "entregable_esperado": "Un proceso administrativo rediseñado con un único responsable claro por documento y una reducción medible de errores en las primeras semanas de implementación.",
+  "nodos_previos": [
+    "identificacion_causa_raiz_no_culpa_individual"
+  ],
+  "nodos_siguientes": [
+    "retroalimentacion_inmediata_de_errores"
+  ],
+  "condiciones_activacion": [
+    "Si un proceso administrativo tiene múltiples firmantes o revisores sin responsabilidad clara.",
+    "Si la tasa de errores en documentos internos (nómina, compras, viáticos) es alta y persistente."
+  ]
+}

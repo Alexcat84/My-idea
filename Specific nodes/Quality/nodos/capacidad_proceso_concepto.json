@@ -1,0 +1,30 @@
+{
+  "node_id": "capacidad_proceso_concepto",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Capacidad de Proceso (Process Capability)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La capacidad de proceso es la variación inherente medida del producto generado por un proceso en estado de control estadístico. Proporciona una predicción cuantificada de la adecuación del proceso, siendo fundamental para predecir variabilidad, elegir procesos, planificar secuencias de procesos, y establecer bases para control periódico y certificación de proveedores.",
+  "pasos_accionables": [
+    "Confirmar que el proceso está en estado de control estadístico (sin causas asignables)",
+    "Definir claramente el proceso: máquina, método, material, personas involucradas",
+    "Recolectar datos representativos de mediciones de producto bajo condiciones estables",
+    "Calcular la desviación estándar del proceso (σ) a partir de datos de control",
+    "Comparar la variación de 6σ contra los límites de especificación",
+    "Utilizar la información resultante para decisiones de diseño, selección de procesos y control"
+  ],
+  "entregable_esperado": "Informe de capacidad de proceso con distribución de variación cuantificada y su relación con especificaciones",
+  "nodos_previos": [
+    "graficos_control_multivariados",
+    "tolerancia_estadistica_dimensiones_interactuantes"
+  ],
+  "nodos_siguientes": [
+    "planificacion_estudio_capacidad",
+    "indice_cp",
+    "indice_cpk"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita predecir si un proceso podrá cumplir especificaciones antes de producir en volumen",
+    "Cuando se debe certificar proveedores o elegir entre procesos competidores"
+  ]
+}

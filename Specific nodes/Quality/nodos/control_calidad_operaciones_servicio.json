@@ -1,0 +1,29 @@
+{
+  "node_id": "control_calidad_operaciones_servicio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control de Calidad en Operaciones de Servicio",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El control de calidad en servicios sigue un ciclo estructurado: elegir sujetos de control, establecer medición, establecer estándares de desempeño, medir el desempeño real, comparar el desempeño contra los estándares y tomar acción sobre la diferencia. Se distinguen indicadores de desempeño (miden la salida del proceso y su conformidad con necesidades del cliente) e indicadores de proceso (miden actividades o variación interna que afectan el desempeño).",
+  "pasos_accionables": [
+    "Identificar el proceso principal, su objetivo, y las necesidades del cliente",
+    "Seleccionar sujetos de control relevantes (features de producto, proceso o efectos secundarios)",
+    "Definir indicadores de desempeño y de proceso con unidades de medida claras",
+    "Establecer valores objetivo y límites máximos/mínimos para cada indicador",
+    "Medir el desempeño real usando métodos automatizados o mystery shoppers",
+    "Comparar resultados contra estándares usando control estadístico de procesos",
+    "Aplicar troubleshooting, mejora de calidad o planificación según la brecha detectada"
+  ],
+  "entregable_esperado": "Sistema de control de calidad documentado con indicadores definidos, estándares establecidos y mecanismo de comparación y acción correctiva",
+  "nodos_previos": [
+    "autocontrol_planificacion_servicio"
+  ],
+  "nodos_siguientes": [
+    "auditorias_calidad_proceso",
+    "seis_sigma_servicios"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere monitorear consistentemente la calidad de un proceso de servicio",
+    "Si existen variaciones no deseadas en el tiempo de entrega o calidad del servicio"
+  ]
+}
