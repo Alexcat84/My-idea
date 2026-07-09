@@ -19,6 +19,7 @@ import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, gu
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
+import { MENSAJE_LIMITE, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 
 interface OrganizadorData {
@@ -71,6 +72,11 @@ export async function POST(request: Request) {
   } = await supabase.auth.getUser();
   if (!user) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  }
+
+  const limite = await verificarLimiteDiario(user.id);
+  if (!limite.permitido) {
+    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
   const graph = cargarGrafo();

@@ -4,16 +4,24 @@
  * (Capa 1), crea el proyecto+sesion, y corre el primer turno del bucle de
  * entrevista (avanzarTurno) -- exactamente lo que el CLI hace entre
  * clasificar_entrada() y la primera pregunta real que el usuario ve.
+ *
+ * Fase 3.2: acepta `project_id` opcional -- el flujo del brief manda toda
+ * idea nueva primero por el organizador (que ya creo el proyecto), y
+ * "Continuar el desarrollo de mi idea" arranca la entrevista sobre ESE
+ * mismo proyecto en vez de crear uno nuevo. Sin project_id, el
+ * comportamiento original (crear proyecto) se mantiene intacto (vuelo.ts
+ * fase 2 y el flujo del CLI dependen de el).
  */
 import { NextResponse } from "next/server";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
-import { crearProyecto, crearSesion } from "@/lib/db";
+import { crearProyecto, crearSesion, obtenerProyecto } from "@/lib/db";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
+import { MENSAJE_LIMITE, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -25,6 +33,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
   }
   const texto = (body as { texto?: unknown } | null)?.texto;
+  const projectIdSolicitado = (body as { project_id?: unknown } | null)?.project_id;
   if (typeof texto !== "string" || texto.trim().length === 0) {
     return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
   }
@@ -33,6 +42,9 @@ export async function POST(request: Request) {
       { error: `'texto' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
       { status: 400 }
     );
+  }
+  if (projectIdSolicitado !== undefined && typeof projectIdSolicitado !== "string") {
+    return NextResponse.json({ error: "'project_id' debe ser un string" }, { status: 400 });
   }
 
   const supabase = await createClient();
@@ -43,12 +55,28 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
 
+  const limite = await verificarLimiteDiario(user.id);
+  if (!limite.permitido) {
+    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+  }
+
   const graph = cargarGrafo();
   const entrySeeds = cargarEntrySeeds();
   const preguntasCache = cargarPreguntasCache();
   const families = cargarFamilies();
 
-  const projectId = await crearProyecto(supabase, user.id, texto);
+  let projectId: string;
+  if (projectIdSolicitado) {
+    // RLS garantiza que solo se ve el proyecto propio; si no aparece, o
+    // no existe o no es de este usuario -- misma respuesta en ambos casos.
+    const proyecto = await obtenerProyecto(supabase, projectIdSolicitado);
+    if (!proyecto) {
+      return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    }
+    projectId = projectIdSolicitado;
+  } else {
+    projectId = await crearProyecto(supabase, user.id, texto);
+  }
   const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto);
 
   const client = createAnthropicClient();
