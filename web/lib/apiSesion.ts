@@ -33,7 +33,8 @@ export async function responderResultadoTurno(
       costoUsd,
       acumuladoFinal.presupuesto_excedido,
       acumuladoFinal.uso_por_componente,
-      PRESUPUESTO_SESION_USD_DEFAULT
+      PRESUPUESTO_SESION_USD_DEFAULT,
+      resultado.estado.fallbackEvents
     );
     await mergeNumerosProyecto(supabase, projectId, resultado.estado.numerosDetectadosSesion);
     await mergeTipoOferta(supabase, projectId, resultado.estado.tipoOfertaSesion, resultado.estado.unidadVentaSesion);

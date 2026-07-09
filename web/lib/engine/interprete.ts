@@ -64,6 +64,7 @@ export interface ResultadoInterprete {
   numerosDetectados: NumerosDetectados | null;
   tipoOfertaDetectado: string | null;
   unidadVentaDetectada: string | null;
+  razonamiento: string | null;
 }
 
 export interface EventoFallback {
@@ -72,6 +73,29 @@ export interface EventoFallback {
   candidato_elegido: string;
   motivo: string;
 }
+
+/** Fase 3.1 (caja de vidrio): lo que el interprete ya calculo para
+ * decidir (candidatos locales, saltos_posibles con sus scores) mas la
+ * decision final y su razonamiento corto -- mismo canal lateral que
+ * EventoFallback, sin tocar el contrato de retorno de
+ * interpretarMultiSalto. */
+export interface EventoDecisionTurno {
+  tipo: "decision_turno";
+  nodo_actual: string;
+  respuesta_usuario: string | null | undefined;
+  candidatos_locales: string[];
+  saltos_posibles: Array<{
+    id: string;
+    titulo: string;
+    fase_proyecto: string | null | undefined;
+    condiciones_activacion: string[];
+    afinidad: number;
+  }>;
+  decision: { accion: AccionInterprete; camino: string[]; es_salto: boolean };
+  razonamiento: string | null;
+}
+
+export type EventoInterprete = EventoFallback | EventoDecisionTurno;
 
 /** Reparo 1 (cadena estricta): ver docstring de _reparar_camino_cadena. */
 function repararCaminoCadena(actualId: string, camino: string[], graph: Grafo, visitados: Set<string>): string[] {
@@ -199,7 +223,7 @@ export interface InterpretarMultiSaltoParams {
    * turno a turno (llamarClaudeConversacion), como el CLI en produccion. */
   historialMensajes: MensajeConversacion[] | null;
   acumulado: UsoAcumulado;
-  registrarEvento?: (evento: EventoFallback) => void;
+  registrarEvento?: (evento: EventoInterprete) => void;
 }
 
 export interface ResultadoInterpretarMultiSalto {
@@ -340,6 +364,8 @@ export async function interpretarMultiSalto(
       typeof tipoOfertaRaw === "string" && TIPOS_OFERTA_VALIDOS.has(tipoOfertaRaw) ? tipoOfertaRaw : null;
     const unidadVentaRaw = data.unidad_venta_detectada;
     const unidadVentaDetectada = unidadVentaRaw ? String(unidadVentaRaw).trim() : null;
+    const razonamientoRaw = data.razonamiento;
+    const razonamiento = razonamientoRaw ? String(razonamientoRaw).trim() : null;
 
     return {
       accion: accion as AccionInterprete,
@@ -353,7 +379,21 @@ export async function interpretarMultiSalto(
       numerosDetectados,
       tipoOfertaDetectado,
       unidadVentaDetectada,
+      razonamiento,
     };
+  }
+
+  function emitirDecisionTurno(resultado: ResultadoInterprete | null, razonamientoFallback?: string) {
+    if (!registrarEvento || !resultado) return;
+    registrarEvento({
+      tipo: "decision_turno",
+      nodo_actual: actualId,
+      respuesta_usuario: respuestaUsuario,
+      candidatos_locales: nivel1.map((n) => n.id),
+      saltos_posibles: saltosPosibles,
+      decision: { accion: resultado.accion, camino: resultado.camino, es_salto: resultado.esSalto },
+      razonamiento: resultado.razonamiento ?? razonamientoFallback ?? null,
+    });
   }
 
   let nuevoHistorial: MensajeConversacion[] | null = historialMensajes;
@@ -389,6 +429,7 @@ export async function interpretarMultiSalto(
   let mensajeErrorPrevio: string;
   try {
     const resultado = validarRespuesta(raw);
+    emitirDecisionTurno(resultado);
     return { resultado, acumulado, historialMensajes: nuevoHistorial };
   } catch (errorValidacion) {
     mensajeErrorPrevio = errorValidacion instanceof Error ? errorValidacion.message : String(errorValidacion);
@@ -407,6 +448,7 @@ export async function interpretarMultiSalto(
     });
     acumulado = r2.acumulado;
     const resultado = validarRespuesta(r2.texto);
+    emitirDecisionTurno(resultado);
     return { resultado, acumulado, historialMensajes: nuevoHistorial };
   } catch (segundoError) {
     const candidato = elegirPorAfinidad(nivel1Ids, graph, respuestaUsuario, perfilSesion);
@@ -434,7 +476,9 @@ export async function interpretarMultiSalto(
       numerosDetectados: null,
       tipoOfertaDetectado: null,
       unidadVentaDetectada: null,
+      razonamiento: null,
     };
+    emitirDecisionTurno(resultado, "fallback automatico tras 2 respuestas invalidas del modelo");
     return { resultado, acumulado, historialMensajes: nuevoHistorial };
   }
 }

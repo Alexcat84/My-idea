@@ -188,6 +188,7 @@ por sesion con degradacion elegante a modo offline.
 import argparse
 import json
 import os
+import random
 import re
 import sys
 import textwrap
@@ -204,6 +205,7 @@ load_dotenv(BASE / ".env")
 import db
 import plan_readiness
 import calculadora
+import verificador_huerfanos
 
 # En consolas de Windows, stdout suele quedar en cp1252 (o el codepage local),
 # que no puede representar caracteres como flechas (->) o comillas tipograficas
@@ -292,6 +294,11 @@ USO_POR_COMPONENTE = {}
 
 PRESUPUESTO_SESION_USD = float(os.environ.get("PRESUPUESTO_SESION_USD", "0.35"))
 PRESUPUESTO_EXCEDIDO = False
+
+# Fase 3.1: fraccion de sesiones que pasan por el juez de calidad muestreado
+# (Haiku, ~$0.003/sesion). Default 1.0 (100%) durante la beta -- se baja via
+# env var cuando ya no haga falta revisar cada sesion.
+JUEZ_SESION_MUESTREO = float(os.environ.get("JUEZ_SESION_MUESTREO", "1.0"))
 
 SYSTEM_CLASIFICACION = (
     "Eres el clasificador de entrada de una app de guia de emprendimiento. El "
@@ -751,6 +758,12 @@ SYSTEM_INTERPRETE_MULTI = (
     "ser null. Ejemplo: 'vendo velas artesanales, cada una a $8' -> "
     "\"tipo_oferta_detectado\": \"producto_fisico\", "
     "\"unidad_venta_detectada\": \"vela\".\n\n"
+    "OBSERVABILIDAD (Fase 3.1): ademas del contrato anterior, incluye "
+    "'razonamiento': una frase corta (maximo ~20 palabras) explicando por "
+    "que elegiste ese camino o ese salto -- no cambia tu decision, solo la "
+    "documenta para que una auditoria humana o automatica pueda revisarla "
+    "despues sin adivinar. Ejemplo: 'el usuario menciono costos sin "
+    "calcular, saltos_posibles trae un nodo dedicado a eso'.\n\n"
     "Responde SOLO un JSON: {\"accion\": \"avanzar\"|\"repreguntar\"|"
     "\"generar_plan\"|\"salir\", \"camino\": [ids en orden], "
     "\"pregunta_necesaria\": bool, \"pregunta_adaptada\": str|null, "
@@ -760,7 +773,8 @@ SYSTEM_INTERPRETE_MULTI = (
     "{campo: {\"valor\": num|{\"min\":num,\"max\":num}, \"unidad\": "
     "str|null, \"texto_original\": str}, ...}|null, "
     "\"tipo_oferta_detectado\": \"producto_fisico\"|\"servicio\"|"
-    "\"digital\"|\"mixto\"|null, \"unidad_venta_detectada\": str|null}."
+    "\"digital\"|\"mixto\"|null, \"unidad_venta_detectada\": str|null, "
+    "\"razonamiento\": str|null}."
 )
 
 SYSTEM_PROFUNDIZAR = (
@@ -956,6 +970,11 @@ SYSTEM_PLAN = (
     "primer paso en vez de inventar numeros de ejemplo — la honestidad "
     "sobre lo que aun no se sabe vale mas que un numero inventado que "
     "parezca completo.\n\n"
+    "Cada elemento de material_principal y material_de_apoyo trae un campo "
+    "'id' (Fase 3.1): es SOLO para tu autodeclaracion de procedencia al "
+    "final (regla de FORMATO DE SALIDA mas abajo) -- jamas escribas un id "
+    "crudo dentro del markdown visible, ahi siempre usas el titulo del "
+    "concepto en prosa normal.\n\n"
     "FORMATO DE SALIDA (obligatorio): escribe el plan completo en markdown "
     "normal (como en el ejemplo). Al final, en una linea propia, escribe "
     "EXACTAMENTE el delimitador ===JSON=== y luego, en la siguiente linea, "
@@ -966,7 +985,12 @@ SYSTEM_PLAN = (
     "ya escanea los encabezados reales del markdown en vez de confiar en "
     "que el modelo los liste bien): {\"familias_tratadas\": [str, ...] "
     "(subconjunto de [\"accion_clientes\", \"viabilidad_economica\"], "
-    "puede ser lista vacia)}. No agregues nada despues de esa linea."
+    "puede ser lista vacia), \"etapas\": {\"1\": [id, ...], \"2\": [id, ...], "
+    "...} (Fase 3.1, procedencia: para cada Etapa numerada que escribiste "
+    "en el markdown, la lista de 'id' -- de material_principal y/o "
+    "material_de_apoyo -- cuyo contenido real usaste en esa etapa; nunca "
+    "inventes un id que no viniera en el material recibido)}. No agregues "
+    "nada despues de esa linea."
 )
 
 SYSTEM_ESTADO_VIVO = (
@@ -980,6 +1004,37 @@ SYSTEM_ESTADO_VIVO = (
     "sin listas, en espanol comun, sin jerga. No repitas informacion ya "
     "dicha, sintetiza. Responde SOLO el texto del estado_vivo nuevo, sin "
     "JSON, sin comillas, sin titulo."
+)
+
+SYSTEM_JUEZ_SESION = (
+    "Fase 3.1 (caja de vidrio): eres un auditor barato y rapido de UNA "
+    "sesion ya cerrada de una entrevista guiada de emprendimiento. NO "
+    "decides nada, NO bloqueas nada -- tu veredicto es una señal de "
+    "triage para que un humano revise despues las sesiones sospechosas, "
+    "nunca un filtro automatico.\n\n"
+    "Recibes 'turnos': una lista, en orden, de cada paso que el "
+    "interprete dio -- el nodo por el que paso (titulo real del grafo), "
+    "si llego ahi por sucesion normal o por un salto semantico (y de ser "
+    "asi, que otros candidatos locales y saltos posibles habia con sus "
+    "scores), la respuesta libre del usuario en ese punto, y el "
+    "razonamiento corto que el interprete dio para su decision (puede "
+    "venir null en pasos automaticos).\n\n"
+    "Evalua tres cosas: (1) pertinencia_transiciones (1 a 5): ¿cada "
+    "transicion entre nodos tiene sentido dado lo que el usuario acababa "
+    "de decir, o hay saltos que parecen arbitrarios/forzados? 5 = todas "
+    "las transiciones se justifican claramente por la respuesta previa; "
+    "1 = varias transiciones no tienen relacion aparente con lo que el "
+    "usuario dijo. (2) repeticion_detectada: true si el interprete "
+    "pregunto (o reformulo) esencialmente lo mismo que ya le habian "
+    "respondido antes en la misma sesion. (3) señales_fuera_de_material: "
+    "citas literales cortas de la respuesta del usuario que mencionan un "
+    "tema que NINGUN nodo visitado ni saltos_posibles ofrecidos parecia "
+    "cubrir (posible hueco de contenido en el grafo, no un error del "
+    "interprete) -- lista vacia si no hay ninguna.\n\n"
+    "Responde SOLO un JSON: {\"pertinencia_transiciones\": 1|2|3|4|5, "
+    "\"repeticion_detectada\": bool, \"señales_fuera_de_material\": "
+    "[str, ...], \"comentario\": str (una sola frase, tu observacion mas "
+    "util para quien revise esta sesion despues)}."
 )
 
 SYSTEM_ORGANIZADOR = (
@@ -1588,6 +1643,29 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
     else:
         ctx_turno = ctx_completo
 
+    def _emitir_decision_turno(resultado, razonamiento_fallback=None):
+        """Fase 3.1 (caja de vidrio): expone via registrar_evento lo que
+        el interprete YA calculo para decidir (candidatos locales,
+        saltos_posibles con sus scores) mas la decision final, sin tocar
+        el contrato de retorno de interpretar_multi_salto (varios tests
+        dependen de su forma exacta) -- el mismo canal lateral que ya usa
+        'fallback_auto'."""
+        if not registrar_evento or resultado is None:
+            return
+        registrar_evento({
+            "tipo": "decision_turno",
+            "nodo_actual": actual_id,
+            "respuesta_usuario": respuesta_usuario,
+            "candidatos_locales": [n["id"] for n in nivel1],
+            "saltos_posibles": saltos_posibles,
+            "decision": {
+                "accion": resultado.get("accion"),
+                "camino": resultado.get("camino"),
+                "es_salto": resultado.get("es_salto", False),
+            },
+            "razonamiento": resultado.get("razonamiento") or razonamiento_fallback,
+        })
+
     def _validar_respuesta(raw):
         data = _parsear_json(raw)
         accion = data.get("accion")
@@ -1640,6 +1718,8 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         data["tipo_oferta_detectado"] = tipo_oferta if tipo_oferta in TIPOS_OFERTA_VALIDOS else None
         unidad_venta = data.get("unidad_venta_detectada")
         data["unidad_venta_detectada"] = str(unidad_venta).strip() if unidad_venta else None
+        razonamiento = data.get("razonamiento")
+        data["razonamiento"] = str(razonamiento).strip() if razonamiento else None
         return data
 
     try:
@@ -1655,7 +1735,9 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
 
     mensaje_error_previo = None
     try:
-        return _validar_respuesta(raw)
+        resultado = _validar_respuesta(raw)
+        _emitir_decision_turno(resultado)
+        return resultado
     except Exception as error_validacion:
         mensaje_error_previo = str(error_validacion)  # el except borra la variable al salir; guardarla antes
 
@@ -1672,7 +1754,9 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
     try:
         raw2 = llamar_claude(SYSTEM_INTERPRETE_MULTI, json.dumps(ctx_retry, ensure_ascii=False),
                              MODEL_HAIKU, max_tokens=700, componente="turnos")
-        return _validar_respuesta(raw2)
+        resultado = _validar_respuesta(raw2)
+        _emitir_decision_turno(resultado)
+        return resultado
     except Exception as segundo_error:
         candidato = _elegir_por_afinidad(nivel1_ids, graph, respuesta_usuario, perfil_sesion)
         if candidato is None:
@@ -1686,9 +1770,11 @@ def interpretar_multi_salto(actual_id, graph, visitados, perfil_sesion, texto_or
         # este es el ultimo recurso SILENCIOSO (sin menu visible) tras dos
         # fallos seguidos del modelo; no hay pregunta_adaptada que rescatar.
         pregunta_fallback = obtener_pregunta(candidato, graph[candidato], preguntas_cache)
-        return {"accion": "avanzar", "camino": [candidato], "pregunta_necesaria": True,
-                "pregunta_adaptada": pregunta_fallback, "perfil_update": None,
-                "prioridad_declarada": prioridad_declarada_actual, "es_salto": False}
+        resultado = {"accion": "avanzar", "camino": [candidato], "pregunta_necesaria": True,
+                     "pregunta_adaptada": pregunta_fallback, "perfil_update": None,
+                     "prioridad_declarada": prioridad_declarada_actual, "es_salto": False}
+        _emitir_decision_turno(resultado, razonamiento_fallback="fallback automatico tras 2 respuestas invalidas del modelo")
+        return resultado
 
 
 def _menu_emergencia(nivel1_ids, graph):
@@ -2011,9 +2097,52 @@ def _familias_desde_encabezados(cuerpo):
     }
 
 
+def _verificar_procedencia_etapas(autodeclaracion, ruta, cosecha_ids, registrar_evento=None):
+    """Fase 3.1 (caja de vidrio): el redactor autodeclara, por etapa
+    numerada, que node_ids de material_principal/material_de_apoyo uso
+    realmente (regla de FORMATO DE SALIDA, campo 'etapas'). Verifica
+    deterministicamente que cada id declarado pertenezca al material que
+    de verdad se le entrego (ruta + cosecha) -- si el modelo inventa un id
+    que nunca vino en el payload, es una alucinacion de procedencia, y se
+    registra 'procedencia_invalida' para revision humana (no bloquea el
+    plan: la seccion ya se escribio, esto es observabilidad, no un
+    guardian que aborte)."""
+    etapas = (autodeclaracion or {}).get("etapas")
+    if not isinstance(etapas, dict) or not etapas:
+        return
+    material_valido = set(ruta) | set(cosecha_ids)
+    for etapa, ids in etapas.items():
+        if not isinstance(ids, list):
+            continue
+        invalidos = [nid for nid in ids if nid not in material_valido]
+        if invalidos and registrar_evento:
+            registrar_evento({
+                "tipo": "procedencia_invalida", "etapa": str(etapa), "ids_invalidos": invalidos,
+            })
+
+
+def _extraer_seccion_economica(cuerpo):
+    """Fase 3.1: la seccion financiera del plan (desde el encabezado fijo
+    SECCION_ECONOMICA_TITULO hasta el proximo encabezado o el final), para
+    acotar el verificador de numeros huerfanos a la parte del plan que
+    realmente habla de dinero -- el resto del plan (numeracion de etapas,
+    conteos de conceptos) no deberia entrar a este chequeo."""
+    idx = cuerpo.find(SECCION_ECONOMICA_TITULO)
+    if idx == -1:
+        return ""
+    resto = cuerpo[idx:]
+    lineas = resto.split("\n")
+    fin = len(lineas)
+    for i, linea in enumerate(lineas):
+        if i > 0 and linea.strip().startswith("#"):
+            fin = i
+            break
+    return "\n".join(lineas[:fin])
+
+
 def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion, session_id,
                     es_seguimiento=False, estado_vivo_previo=None, prioridad_declarada=None,
-                    registrar_evento=None):
+                    registrar_evento=None, numeros_proyecto=None):
     """`evaluacion` (ruta-solo, por tags de node_families) decide QUE
     cosechar (familia faltante como prioridad) - eso se conserva para el
     medidor de oferta previa ("quieres continuar") y para priorizar la
@@ -2029,6 +2158,7 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
     def a_material(nid):
         n = graph[nid]
         return {
+            "id": nid,
             "concepto": n["titulo_concepto"],
             "pasos": n.get("pasos_accionables", []),
             "entregable": n.get("entregable_esperado", ""),
@@ -2076,6 +2206,26 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
         evaluacion_cobertura = _familias_desde_encabezados(cuerpo)
         if registrar_evento:
             registrar_evento({"tipo": "autodeclaracion_fallida"})
+
+    _verificar_procedencia_etapas(autodeclaracion, ruta, cosecha_ids, registrar_evento=registrar_evento)
+
+    # Fase 3.1 (caja de vidrio): igual que en el reporte, pero acotado a la
+    # seccion financiera del plan -- el redactor no corre calculadora.py,
+    # asi que el conjunto permitido es lo declarado por el usuario mas lo
+    # que el propio material del grafo ya menciona (un ejemplo teorico del
+    # nodo no es un numero inventado).
+    seccion_economica = _extraer_seccion_economica(cuerpo)
+    if seccion_economica:
+        textos_material = [
+            t for m in (material_principal + material_de_apoyo)
+            for t in (m.get("pasos", []) + [m.get("entregable", "")])
+        ]
+        numeros_permitidos_plan = verificador_huerfanos.cerradura_aritmetica(
+            verificador_huerfanos.numeros_declarados(numeros_proyecto)
+            | verificador_huerfanos.numeros_de_material(textos_material)
+        )
+        verificador_huerfanos.verificar_numeros_huerfanos(
+            seccion_economica, numeros_permitidos_plan, registrar_evento=registrar_evento)
 
     evaluacion_cobertura = _corregir_coherencia_cobertura(
         evaluacion_cobertura, cuerpo, tiene_material_economico, registrar_evento=registrar_evento)
@@ -2133,6 +2283,51 @@ def comprimir_estado_vivo(estado_anterior, perfil_sesion_nueva, conceptos_nuevos
         except Exception as e:
             print(f"  (fallo comprimir estado_vivo, uso respaldo sin comprimir: {e})")
     return (estado_anterior + "\n" + perfil_sesion_nueva).strip() if estado_anterior else perfil_sesion_nueva
+
+
+def evaluar_calidad_sesion(decisiones, graph, muestreo=None):
+    """Fase 3.1 (caja de vidrio): juez de sesion muestreado (Haiku,
+    ~$0.003/sesion). Revisa la bitacora de decision_turno de la sesion
+    (candidatos locales, saltos_posibles con sus scores, la decision
+    tomada, la respuesta del usuario y el razonamiento del interprete en
+    cada paso) y devuelve una señal de triage -- NUNCA bloquea ni decide
+    nada, solo marca sesiones para revision humana despues. Devuelve None
+    si no se muestreo esta sesion, si no hay API_KEY, o si la llamada
+    fallo (la ausencia de veredicto no es un problema: es simplemente una
+    sesion sin revisar, igual que antes de que existiera esta pieza)."""
+    muestreo = JUEZ_SESION_MUESTREO if muestreo is None else muestreo
+    if not API_KEY or random.random() >= muestreo:
+        return None
+    turnos_decision = [d for d in (decisiones or []) if d.get("tipo") == "decision_turno"]
+    if not turnos_decision:
+        return None
+
+    def _titulo(nid):
+        return graph[nid]["titulo_concepto"] if nid in graph else nid
+
+    turnos = []
+    for d in turnos_decision:
+        decision = d.get("decision") or {}
+        camino = decision.get("camino") or []
+        turnos.append({
+            "nodo": _titulo(d["nodo_actual"]) if d.get("nodo_actual") else None,
+            "destino": [_titulo(nid) for nid in camino],
+            "es_salto": decision.get("es_salto", False),
+            "candidatos_locales": [_titulo(nid) for nid in d.get("candidatos_locales") or []],
+            "saltos_posibles": [
+                {"titulo": s.get("titulo"), "afinidad": s.get("afinidad")}
+                for s in d.get("saltos_posibles") or []
+            ],
+            "respuesta_usuario": d.get("respuesta_usuario"),
+            "razonamiento": d.get("razonamiento"),
+        })
+    try:
+        raw = llamar_claude(SYSTEM_JUEZ_SESION, json.dumps({"turnos": turnos}, ensure_ascii=False),
+                            MODEL_HAIKU, max_tokens=400, componente="juez_sesion")
+        return _parsear_json(raw)
+    except Exception as e:
+        print(f"  (fallo el juez de sesion, se omite calidad: {e})")
+        return None
 
 
 def organizador_gratuito(texto_original, entry_seeds, graph):
@@ -2414,11 +2609,18 @@ def ejecutar_recorrido(graph, families, preguntas_cache, actual_id, visitados, r
 
     evaluacion = plan_readiness.evaluar_ruta(ruta, families)
     print("\nEnsamblando tu plan...\n")
+    # Fase 3.1: numeros ya persistidos del proyecto (sesiones anteriores)
+    # mas los que esta sesion detecto pero aun no se mergean hasta el
+    # cierre -- el verificador de huerfanos del plan necesita ambos.
+    proyecto_actual = db.obtener_proyecto(project_id) if project_id else None
+    numeros_para_plan = dict((proyecto_actual or {}).get("numeros_proyecto") or {})
+    numeros_para_plan.update(numeros_detectados_sesion)
     resultado_plan = ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluacion,
                                      session_id, es_seguimiento=es_seguimiento,
                                      estado_vivo_previo=estado_vivo_previo,
                                      prioridad_declarada=prioridad_declarada,
-                                     registrar_evento=_registrar_evento)
+                                     registrar_evento=_registrar_evento,
+                                     numeros_proyecto=numeros_para_plan)
     plan_md = resultado_plan["markdown"]
     print(plan_md)
     SALIDAS_DIR.mkdir(parents=True, exist_ok=True)
@@ -2477,8 +2679,11 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
     modos = resultado["modos"]
 
     if resultado["tipo"] == "salio":
+        eventos_sesion = resultado.get("fallback_events")
+        calidad = evaluar_calidad_sesion(eventos_sesion, graph)
         db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
-                         costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD)
+                         costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD,
+                         decisiones=eventos_sesion, calidad=calidad)
         _merge_numeros_proyecto(project_id, resultado.get("numeros_detectados_sesion"))
         _merge_tipo_oferta(project_id, resultado.get("tipo_oferta_sesion"), resultado.get("unidad_venta_sesion"))
         return
@@ -2500,8 +2705,11 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
     estado_nuevo = comprimir_estado_vivo(estado_anterior, resultado["perfil_sesion"], conceptos_titulos)
 
     ruta_con_modos_json = [{"node_id": nid, "tipo": modo} for nid, modo in zip(ruta, modos)]
+    eventos_sesion = resultado.get("fallback_events")
+    calidad = evaluar_calidad_sesion(eventos_sesion, graph)
     db.cerrar_sesion(project_id, db_session_id, ruta_con_modos_json, costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
-                     costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD)
+                     costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD,
+                     decisiones=eventos_sesion, calidad=calidad)
 
     etiqueta_db = "seguimiento" if es_seguimiento else ("completo" if evaluacion_cobertura["es_completa"] else "inicial")
     total_conceptos = len(ruta) + len(cosecha_ids)
@@ -2965,12 +3173,32 @@ def modo_reporte(project_id, graph, families):
 
     db.actualizar_proyecto(project_id, numeros_proyecto=numeros)
 
+    eventos_reporte = []
+
+    def _registrar_evento_reporte(evento):
+        eventos_reporte.append(evento)
+
     gigo = calculadora.detectar_inconsistencia_gigo(numeros, tipo_oferta=tipo_oferta)
     if gigo["inconsistente"]:
         contenido = _reporte_gigo_inconsistente(gigo["motivo"], numeros) + REPORTE_DISCLAIMER
+        numeros_permitidos = verificador_huerfanos.cerradura_aritmetica(
+            verificador_huerfanos.numeros_declarados(numeros))
+        # Fase 3.1 (caja de vidrio): antes de esto, un aborto del guardian
+        # GIGO no dejaba ningun rastro persistido -- pnpm salud/health
+        # necesita poder medir la tasa de abortos.
+        _registrar_evento_reporte({"tipo": "gigo_abortado", "motivo": gigo["motivo"]})
     else:
         resultados = calculadora.calcular_reporte(numeros, tipo_oferta=tipo_oferta)
         contenido = _narrar_reporte(resultados, numeros, tipo_oferta=tipo_oferta)
+        numeros_permitidos = verificador_huerfanos.cerradura_aritmetica(
+            verificador_huerfanos.numeros_de_calculadora(resultados)
+            | verificador_huerfanos.numeros_declarados(numeros)
+        )
+    # Fase 3.1 (caja de vidrio): automatiza la vara de auditoria "ningun
+    # numero huerfano" -- senal de triage, no bloquea el reporte ya
+    # generado (a diferencia del guardian GIGO, que si aborta antes).
+    verificador_huerfanos.verificar_numeros_huerfanos(
+        contenido, numeros_permitidos, registrar_evento=_registrar_evento_reporte)
 
     SALIDAS_DIR.mkdir(parents=True, exist_ok=True)
     fname = SALIDAS_DIR / f"reporte_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
@@ -2981,7 +3209,8 @@ def modo_reporte(project_id, graph, families):
     db_session_id = db.crear_sesion(project_id, "reporte", "generacion de reporte de sostenibilidad")
     db.guardar_plan(project_id, db_session_id, "reporte_numeros", contenido, 0, [])
     db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
-                     costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD)
+                     costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD,
+                     decisiones=eventos_reporte)
     reportar_costo()
 
 

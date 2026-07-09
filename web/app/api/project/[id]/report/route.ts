@@ -122,11 +122,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     costoAcumuladoUsd(resultado.acumulado),
     resultado.acumulado.presupuesto_excedido,
     resultado.acumulado.uso_por_componente,
-    PRESUPUESTO_REPORTE_USD
+    PRESUPUESTO_REPORTE_USD,
+    resultado.eventos
   );
 
   return NextResponse.json({
     project_id: projectId,
+    session_id: sessionId,
     tipo: "reporte",
     contenido: resultado.contenido,
     costo_usd: costoAcumuladoUsd(resultado.acumulado),

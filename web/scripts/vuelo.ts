@@ -1,17 +1,21 @@
 // Fase 3.0.1: "vuelo" del cerebro web completo, vía HTTP real contra un
 // `next dev` corriendo en local -- no llamadas de funcion in-process, sino
 // las mismas rutas que usaria un cliente real, incluyendo el streaming SSE
-// de /api/session/[id]/plan. Cuatro fases:
+// de /api/session/[id]/plan. Seis verificaciones:
+//   0. (Fase 3.1) Caso sintetico, sin API: el verificador de numeros
+//      huerfanos SI dispara el flag ante un numero inyectado.
 //   1. Organizer (capa gratuita) con la idea del "sonar" para ciegos.
 //   2. Sesion completa de macetas (entrevista real turno a turno + plan
 //      streaming por SSE). Incluye una respuesta calibrada (Fase 2.8/2.9)
-//      que dispara un salto semantico real, y verifica (Hotfix v2.2.2)
-//      que la ruta lo registre, que el ensamblado del plan no reviente
-//      con 23514 (el bug real de la migracion 012), y que project_nodes
-//      persista tipo='salto' -- el camino de persistencia de un salto
-//      nunca se ejercitaba end-to-end antes de este hotfix.
+//      que dispara un salto semantico real, y verifica que la ruta lo
+//      registre, que el ensamblado del plan no reviente con 23514 (el
+//      bug real de la migracion 012), que project_nodes persista
+//      tipo='salto', y (Fase 3.1) que sessions.decisiones tenga la
+//      bitacora de decision_turno con el score de cada salto y que la
+//      procedencia por etapa del plan haya validado.
 //   3. Reporte digital -- fijos=200, precio=13 -> equilibrio esperado 16
-//      (ceil(200/13)), vocabulario sin "pieza".
+//      (ceil(200/13)), vocabulario sin "pieza", y (Fase 3.1) 0 numeros
+//      huerfanos en sessions.decisiones.
 //   4. Guardian GIGO -- los mismos numeros contaminados del caso real de
 //      Motor v2.2 (costo=200 leido como budget mensual, horas=4 leidas
 //      como meses, precio=13) deben abortar la narracion, no producir un
@@ -32,8 +36,16 @@ import { createClient } from "@supabase/supabase-js";
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, postJson, ROOT } from "./_shared/http";
+import { verificarNumerosHuerfanos } from "../lib/verificadorHuerfanos";
 
 cargarEnvRaiz();
+
+// Fase 3.1: cliente service-role para verificar directamente lo que
+// quedo persistido en Supabase (project_nodes.tipo, sessions.decisiones)
+// -- un cliente autenticado como usuario normal no puede ver esto por
+// RLS, y estas son verificaciones de auditoria, no parte del flujo real
+// de un usuario.
+const supabaseAdmin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
 
 const MAX_TURNOS_SEGURIDAD = 20;
 
@@ -130,6 +142,10 @@ async function faseSesionMacetas(cookie: string) {
       if (n.modo === "salto") nodosSalto.push({ id: n.id, titulo: n.titulo });
     }
   }
+  // /api/session/start puede hacer multi-hop silencioso ANTES de la
+  // primera pregunta (igual que /turn) -- si no se registra aqui, un
+  // salto real ocurrido en el arranque nunca se contabiliza.
+  registrarNodosSalto(r.nodos_nuevos);
 
   while (r.tipo === "pregunta" && turnos < MAX_TURNOS_SEGURIDAD) {
     turnos++;
@@ -214,7 +230,6 @@ async function faseSesionMacetas(cookie: string) {
   }
   log(`saltos detectados en la ruta: ${nodosSalto.map((n) => `${n.titulo} (${n.id})`).join(", ")}`);
 
-  const supabaseAdmin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
   for (const nodo of nodosSalto) {
     const { data: fila, error } = await supabaseAdmin
       .from("project_nodes")
@@ -231,6 +246,39 @@ async function faseSesionMacetas(cookie: string) {
     }
     log(`  OK: project_nodes.tipo='salto' persistido correctamente para '${nodo.id}'`);
   }
+
+  separador("FASE 2d (Fase 3.1): verificando la bitacora de decisiones (caja de vidrio)");
+  const { data: filaSesion, error: errorSesion } = await supabaseAdmin
+    .from("sessions")
+    .select("decisiones")
+    .eq("id", sessionId)
+    .limit(1)
+    .single();
+  if (errorSesion || !filaSesion) {
+    throw new Error(`no se encontro la fila de sessions para verificar decisiones: ${errorSesion?.message}`);
+  }
+  const decisiones = (filaSesion.decisiones ?? []) as Array<Record<string, unknown>>;
+  const turnosDecision = decisiones.filter((d) => d.tipo === "decision_turno");
+  const turnosSaltoConScore = turnosDecision.filter((d) => {
+    const decision = d.decision as { es_salto?: boolean; camino?: string[] } | undefined;
+    if (!decision?.es_salto) return false;
+    const destino = decision.camino?.[0];
+    const saltosPosibles = (d.saltos_posibles as Array<{ id: string; afinidad: number }>) ?? [];
+    return saltosPosibles.some((sp) => sp.id === destino && typeof sp.afinidad === "number");
+  });
+  log(`decision_turno persistidos: ${turnosDecision.length}, con salto+score verificable: ${turnosSaltoConScore.length}`);
+  if (turnosSaltoConScore.length !== nodosSalto.length) {
+    throw new Error(
+      `se esperaban ${nodosSalto.length} decision_turno con salto+score en sessions.decisiones, se encontraron ${turnosSaltoConScore.length}`
+    );
+  }
+  log(`OK: los ${nodosSalto.length} saltos quedaron en la bitacora con su score de afinidad.`);
+
+  const procedenciaInvalida = decisiones.filter((d) => d.tipo === "procedencia_invalida");
+  if (procedenciaInvalida.length > 0) {
+    throw new Error(`se encontraron eventos procedencia_invalida inesperados: ${JSON.stringify(procedenciaInvalida)}`);
+  }
+  log("OK: procedencia por etapa valida (sin eventos procedencia_invalida en la bitacora).");
 
   return { costoUsd: costoUsdPlan, projectId, saltosVerificados: nodosSalto.length };
 }
@@ -284,6 +332,27 @@ async function faseReporteDigital(cookie: string) {
   if (mencionaPieza) {
     throw new Error("fase 3: el reporte usa vocabulario de 'pieza', incorrecto para una oferta digital");
   }
+
+  separador("FASE 3b (Fase 3.1): verificando que el reporte del 16 no tenga numeros huerfanos");
+  const sessionIdReporte = String(r.session_id);
+  const { data: filaSesionReporte, error: errorSesionReporte } = await supabaseAdmin
+    .from("sessions")
+    .select("decisiones")
+    .eq("id", sessionIdReporte)
+    .limit(1)
+    .single();
+  if (errorSesionReporte || !filaSesionReporte) {
+    throw new Error(`no se encontro la fila de sessions del reporte para verificar huerfanos: ${errorSesionReporte?.message}`);
+  }
+  const huerfanosReporte = ((filaSesionReporte.decisiones ?? []) as Array<Record<string, unknown>>).filter(
+    (d) => d.tipo === "numero_huerfano"
+  );
+  if (huerfanosReporte.length > 0) {
+    throw new Error(
+      `el reporte del 16 (nunca deberia inventar cifras) disparo numero_huerfano: ${JSON.stringify(huerfanosReporte)}`
+    );
+  }
+  log("OK: el verificador de numeros huerfanos paso limpio en el reporte del 16 (0 flags).");
 
   return { costoUsd: Number(r.costo_usd) };
 }
@@ -347,10 +416,31 @@ async function faseGuardianGigo(cookie: string) {
   return { costoUsd: Number(r.costo_usd) };
 }
 
+// ---------------------------------------------------------------------------
+// Fase 0 (Fase 3.1): caso sintetico -- ningun API real, solo confirma que
+// el verificador de numeros huerfanos SI dispara el flag ante un numero
+// inyectado fuera de material, antes de gastar dinero en las fases reales.
+// ---------------------------------------------------------------------------
+function faseSanidadVerificadorHuerfanos() {
+  separador("FASE 0 (Fase 3.1): caso sintetico -- numero inyectado fuera de material");
+  const permitidos = new Set([13, 100, 200, 16]);
+  const textoContaminado =
+    "Tu margen por unidad es de $13 (100%). Con costos fijos de $200/mes, tu punto de equilibrio es de 16 " +
+    "unidades/mes. Si escalas, podrias llegar a vender 4500 unidades el proximo trimestre.";
+  const eventos: Record<string, unknown>[] = [];
+  const huerfanos = verificarNumerosHuerfanos(textoContaminado, permitidos, (e) => eventos.push(e));
+  if (huerfanos.length !== 1 || huerfanos[0].valor !== "4500") {
+    throw new Error(`el caso sintetico deberia disparar exactamente 1 numero_huerfano (4500), obtuvo: ${JSON.stringify(huerfanos)}`);
+  }
+  log(`OK: numero inyectado (4500) detectado como huerfano -- contexto: "${huerfanos[0].contexto}"`);
+}
+
 async function main() {
   separador("VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real");
   log(`BASE_URL: ${BASE_URL}`);
   log(`Fecha: ${new Date().toISOString()}`);
+
+  faseSanidadVerificadorHuerfanos();
 
   const cookie = await autenticarComoDevUser();
   log("Autenticado como dev user.");
@@ -380,13 +470,14 @@ async function main() {
   log(`  TOTAL: $${total.toFixed(4)}`);
 
   separador("RESUMEN DE VERIFICACIONES");
+  log("  0. caso sintetico: verificador de numeros huerfanos dispara el flag: OK");
   log("  1. organizer (capa gratuita): OK");
   log("  2. sesion de macetas + plan streaming: OK");
-  log(`  3. salto semantico real persistido sin 23514 (Hotfix v2.2.2): OK (${saltosVerificados} salto(s))`);
-  log("  4. reporte digital (equilibrio esperado 16): OK");
+  log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
+  log("  4. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
   log("  5. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 5/5 verificaciones OK");
+  separador("VUELO COMPLETO: 6/6 verificaciones OK");
   escribirTranscripcion();
 }
 

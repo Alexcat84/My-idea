@@ -21,6 +21,7 @@ describe("prompts.ts re-exporta byte a byte desde assets/prompts.json", () => {
     "SYSTEM_PREGUNTA_DIRIGIDA",
     "SYSTEM_PLAN",
     "SYSTEM_ESTADO_VIVO",
+    "SYSTEM_JUEZ_SESION",
     "SYSTEM_ORGANIZADOR",
     "SYSTEM_REPORTE",
     "SYSTEM_CLASIFICAR_OFERTA",

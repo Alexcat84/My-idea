@@ -29,7 +29,7 @@ import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS
 import { dominioPermitido, obtenerPregunta, sucesoresNivel, type Grafo, type PreguntasCache } from "./graph";
 import {
   interpretarMultiSalto,
-  type EventoFallback,
+  type EventoInterprete,
   type NumeroDetectadoEntry,
   type PrioridadDeclarada,
 } from "./interprete";
@@ -61,7 +61,7 @@ export interface EstadoRecorrido {
   profundizarOfrecido: boolean;
   esSeguimiento: boolean;
   estadoVivoPrevio: string | null;
-  fallbackEvents: EventoFallback[];
+  fallbackEvents: EventoInterprete[];
   prioridadDeclarada: PrioridadDeclarada | null;
   preguntaPendiente: string | null;
   ultimasPreguntas: string[];
@@ -318,7 +318,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
 
   // --- Fase normal: bucle de interpretar_multi_salto (silencioso + repreguntas) ---
   let preguntaHecha = estado.preguntaPendiente;
-  const eventosNuevos: EventoFallback[] = [];
+  const eventosNuevos: EventoInterprete[] = [];
 
   while (true) {
     const actualId = estado.ruta[estado.ruta.length - 1];

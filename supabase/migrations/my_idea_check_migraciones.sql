@@ -95,5 +95,11 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%salto%'
     )
 
+  UNION ALL
+  -- 013 · Phase 3.1 glass box: sessions.decisiones (event log) + sessions.calidad (session judge verdict)
+  SELECT '013', 'sessions.decisiones + sessions.calidad (JSONB)',
+    EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='sessions' AND column_name='decisiones')
+    AND EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='sessions' AND column_name='calidad')
+
 ) checks
 ORDER BY num;

@@ -10,6 +10,7 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import { detectarInconsistenciaGigo, calcularReporte, type NumerosProyecto, type TipoOferta } from "../calculadora";
 import { type UsoAcumulado } from "../costmeter";
+import { cerraduraAritmetica, numerosDeCalculadora, numerosDeclarados, verificarNumerosHuerfanos } from "../verificadorHuerfanos";
 import { MAX_PREGUNTAS_REPORTE, PREGUNTA_TIPO_OFERTA, type CampoNumericoProyecto } from "./constants";
 import {
   camposEsencialesPorTipo,
@@ -54,6 +55,7 @@ export type ResultadoPasoReporte =
       acumulado: UsoAcumulado;
       numeros: NumerosProyecto;
       tipoOfertaActualizado: TipoOfertaActualizado | null;
+      eventos: Record<string, unknown>[];
     };
 
 async function generarContenidoReporte(
@@ -61,14 +63,33 @@ async function generarContenidoReporte(
   numeros: NumerosProyecto,
   tipoOferta: string | null,
   acumulado: UsoAcumulado
-): Promise<{ contenido: string; acumulado: UsoAcumulado }> {
+): Promise<{ contenido: string; acumulado: UsoAcumulado; eventos: Record<string, unknown>[] }> {
+  const eventos: Record<string, unknown>[] = [];
+  const registrarEvento = (e: Record<string, unknown>) => eventos.push(e);
   const gigo = detectarInconsistenciaGigo(numeros, tipoOferta as TipoOferta);
+  let contenido: string;
+  let acumuladoFinal: UsoAcumulado;
+  let numerosPermitidos: Set<number>;
   if (gigo.inconsistente) {
-    return { contenido: reporteGigoInconsistente(gigo.motivo ?? "", numeros), acumulado };
+    contenido = reporteGigoInconsistente(gigo.motivo ?? "", numeros);
+    acumuladoFinal = acumulado;
+    numerosPermitidos = cerraduraAritmetica(numerosDeclarados(numeros));
+    // Fase 3.1 (caja de vidrio): antes de esto, un aborto del guardian
+    // GIGO no dejaba ningun rastro persistido -- pnpm salud necesita
+    // poder medir la tasa de abortos.
+    registrarEvento({ tipo: "gigo_abortado", motivo: gigo.motivo ?? "" });
+  } else {
+    const resultados = calcularReporte(numeros, tipoOferta as TipoOferta);
+    const r = await narrarReporte(client, resultados, numeros, tipoOferta as TipoOferta, acumulado);
+    contenido = r.contenido;
+    acumuladoFinal = r.acumulado;
+    numerosPermitidos = cerraduraAritmetica(new Set([...numerosDeCalculadora(resultados), ...numerosDeclarados(numeros)]));
   }
-  const resultados = calcularReporte(numeros, tipoOferta as TipoOferta);
-  const r = await narrarReporte(client, resultados, numeros, tipoOferta as TipoOferta, acumulado);
-  return { contenido: r.contenido, acumulado: r.acumulado };
+  // Fase 3.1 (caja de vidrio): automatiza la vara de auditoria "ningun
+  // numero huerfano" -- senal de triage, no bloquea el reporte ya
+  // generado (a diferencia del guardian GIGO, que si aborta antes).
+  verificarNumerosHuerfanos(contenido, numerosPermitidos, registrarEvento);
+  return { contenido, acumulado: acumuladoFinal, eventos };
 }
 
 function calcularFaltantes(
@@ -123,8 +144,8 @@ async function continuarConTipoConocido(
 ): Promise<ResultadoPasoReporte> {
   const faltantesEsenciales = calcularFaltantes(tipoOferta, numeros);
   if (faltantesEsenciales.length === 0) {
-    const { contenido, acumulado: acumuladoFinal } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
-    return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null };
+    const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
+    return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
   }
   const preguntas = preguntasPorTipo(tipoOferta, unidadVenta);
   const estado: EstadoReporte = {
@@ -182,13 +203,13 @@ export async function avanzarReporte(
     const siguienteIdx = estado.idx + 1;
     if (siguienteIdx >= estado.faltantesEsenciales.length) {
       const tipoOferta = estado.tipoOferta;
-      const { contenido, acumulado: acumuladoFinal } = await generarContenidoReporte(
+      const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(
         client,
         numeros,
         tipoOferta,
         r.acumulado
       );
-      return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null };
+      return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
     }
     const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta);
     const nuevoEstado: EstadoReporte = { ...estado, fase: "preguntando", idx: siguienteIdx, moldeCambiado: true };
@@ -220,8 +241,8 @@ export async function avanzarReporte(
     const siguienteIdx = estado.idx + 1;
     if (siguienteIdx >= estado.faltantesEsenciales.length) {
       const tipoOferta = estado.tipoOferta;
-      const { contenido, acumulado: acumuladoFinal } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
-      return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null };
+      const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
+      return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
     }
     const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta);
     const nuevoEstado: EstadoReporte = { ...estado, noAplicaCount, idx: siguienteIdx };
@@ -249,7 +270,7 @@ export async function avanzarReporte(
   const siguienteIdx = estado.idx + 1;
   if (siguienteIdx >= estado.faltantesEsenciales.length) {
     const tipoOferta = estado.tipoOferta;
-    const { contenido, acumulado: acumuladoFinal } = await generarContenidoReporte(
+    const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(
       client,
       numerosActualizados,
       tipoOferta,
@@ -261,6 +282,7 @@ export async function avanzarReporte(
       acumulado: acumuladoFinal,
       numeros: numerosActualizados,
       tipoOfertaActualizado: null,
+      eventos,
     };
   }
   const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta);

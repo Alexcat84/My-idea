@@ -91,10 +91,27 @@ describe("interpretarMultiSalto: auto-correccion silenciosa tras 2 fallos de val
     expect(r.resultado?.camino).toHaveLength(1);
     const candidatoElegido = r.resultado?.camino[0] as string;
     expect(graph[actualId].nodos_siguientes).toContain(candidatoElegido);
-    expect(eventos).toHaveLength(1);
-    expect((eventos[0] as { tipo: string }).tipo).toBe("fallback_auto");
-    expect((eventos[0] as { candidato_elegido: string }).candidato_elegido).toBe(candidatoElegido);
+    expect(eventos).toHaveLength(2);
+    const fallbackEventos = eventos.filter((e) => (e as { tipo: string }).tipo === "fallback_auto");
+    const decisionEventos = eventos.filter((e) => (e as { tipo: string }).tipo === "decision_turno");
+    expect(fallbackEventos).toHaveLength(1);
+    expect(decisionEventos).toHaveLength(1);
+    expect((fallbackEventos[0] as { candidato_elegido: string }).candidato_elegido).toBe(candidatoElegido);
     expect(r.resultado?.preguntaAdaptada).toBeTruthy();
+
+    // Fase 3.1 (caja de vidrio): decision_turno tambien se emite en el
+    // camino de fallback, con un razonamiento sintetico documentando que
+    // fue automatico, no una eleccion real del modelo.
+    const decisionEvento = decisionEventos[0] as {
+      decision: { camino: string[] };
+      razonamiento: string | null;
+      candidatos_locales: string[];
+      saltos_posibles: unknown[];
+    };
+    expect(decisionEvento.decision.camino).toEqual([candidatoElegido]);
+    expect(decisionEvento.razonamiento).toBe("fallback automatico tras 2 respuestas invalidas del modelo");
+    expect(decisionEvento.candidatos_locales.length).toBeGreaterThan(0);
+    expect(Array.isArray(decisionEvento.saltos_posibles)).toBe(true);
   });
 });
 

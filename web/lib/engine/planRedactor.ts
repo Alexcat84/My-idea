@@ -30,10 +30,12 @@ import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAM
 import { dominioPermitido, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
+import { cerraduraAritmetica, numerosDeMaterial, numerosDeclarados, verificarNumerosHuerfanos } from "../verificadorHuerfanos";
 
 export { SECCION_ECONOMICA_TITULO };
 
 export interface MaterialNodo {
+  id: string;
   concepto: string;
   pasos: string[];
   entregable: string;
@@ -43,6 +45,7 @@ export interface MaterialNodo {
 export function aMaterial(nid: string, graph: Grafo, families: Record<string, Familia>): MaterialNodo {
   const n = graph[nid];
   return {
+    id: nid,
     concepto: n.titulo_concepto,
     pasos: n.pasos_accionables ?? [],
     entregable: n.entregable_esperado ?? "",
@@ -199,16 +202,25 @@ export const MARCADOR_AUTODECLARACION = "===JSON===";
  * (ver familiasDesdeEncabezados). Contrato compacto desde Hotfix v2.2.1:
  * solo familias_tratadas -- se elimino "secciones" (nunca se leia, era
  * puro peso extra en la cola que se cortaba primero al agotar max_tokens). */
+/** Fase 3.1: 'etapas' mapea el numero de Etapa (tal como aparece en el
+ * markdown, "1", "2", ...) a los node_ids de material_principal/
+ * material_de_apoyo cuyo contenido real el redactor uso en esa etapa --
+ * ver verificarProcedenciaEtapas. */
+export interface AutodeclaracionPlan {
+  familias_tratadas?: string[];
+  etapas?: Record<string, string[]>;
+}
+
 export function parsearAutodeclaracion(raw: string): {
   cuerpo: string;
-  autodeclaracion: { familias_tratadas?: string[] } | null;
+  autodeclaracion: AutodeclaracionPlan | null;
 } {
   const idx = raw.lastIndexOf(MARCADOR_AUTODECLARACION);
   if (idx === -1) return { cuerpo: raw.trim(), autodeclaracion: null };
   const cuerpo = raw.slice(0, idx).trim();
   const bloque = raw.slice(idx + MARCADOR_AUTODECLARACION.length);
   try {
-    const data = parsearJson<{ familias_tratadas?: string[] }>(bloque);
+    const data = parsearJson<AutodeclaracionPlan>(bloque);
     return { cuerpo, autodeclaracion: data };
   } catch {
     return { cuerpo, autodeclaracion: null };
@@ -288,9 +300,7 @@ export interface CoberturaPlan {
  * que evaluarRuta, pero a partir de lo que el REDACTOR declaro que el
  * plan realmente trata -- la UNICA fuente para la etiqueta del plan y la
  * seccion "no cubre", coherente por construccion. */
-export function evaluacionDesdeAutodeclaracion(
-  autodeclaracion: { familias_tratadas?: string[] } | null
-): CoberturaPlan {
+export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionPlan | null): CoberturaPlan {
   const tratadas = new Set(autodeclaracion?.familias_tratadas ?? []);
   const tieneAccion = tratadas.has("accion_clientes");
   const tieneViabilidad = tratadas.has("viabilidad_economica");
@@ -367,6 +377,51 @@ export function corregirCoherenciaCobertura(
   return evaluacionCobertura;
 }
 
+/** Fase 3.1 (caja de vidrio): el redactor autodeclara, por etapa
+ * numerada, que node_ids de materialPrincipal/materialDeApoyo uso
+ * realmente (campo 'etapas' del contrato de FORMATO DE SALIDA). Verifica
+ * deterministicamente que cada id declarado pertenezca al material que
+ * de verdad se le entrego (ruta + cosecha) -- si el modelo inventa un id
+ * que nunca vino en el payload, es una alucinacion de procedencia, y se
+ * registra 'procedencia_invalida' para revision humana (no bloquea el
+ * plan: la seccion ya se escribio, esto es observabilidad, no un
+ * guardian que aborte). Port exacto de _verificar_procedencia_etapas. */
+export function verificarProcedenciaEtapas(
+  autodeclaracion: AutodeclaracionPlan | null,
+  ruta: string[],
+  cosechaIds: string[],
+  registrarEvento?: (evento: Record<string, unknown>) => void
+): void {
+  const etapas = autodeclaracion?.etapas;
+  if (!etapas || typeof etapas !== "object" || Object.keys(etapas).length === 0) return;
+  const materialValido = new Set([...ruta, ...cosechaIds]);
+  for (const [etapa, ids] of Object.entries(etapas)) {
+    if (!Array.isArray(ids)) continue;
+    const invalidos = ids.filter((nid) => !materialValido.has(nid));
+    if (invalidos.length > 0) {
+      registrarEvento?.({ tipo: "procedencia_invalida", etapa, ids_invalidos: invalidos });
+    }
+  }
+}
+
+/** Fase 3.1: la seccion financiera del plan (desde el encabezado fijo
+ * SECCION_ECONOMICA_TITULO hasta el proximo encabezado o el final), para
+ * acotar el verificador de numeros huerfanos a la parte del plan que
+ * realmente habla de dinero. Port exacto de _extraer_seccion_economica. */
+export function extraerSeccionEconomica(cuerpo: string): string {
+  const idx = cuerpo.indexOf(SECCION_ECONOMICA_TITULO);
+  if (idx === -1) return "";
+  const lineas = cuerpo.slice(idx).split("\n");
+  let fin = lineas.length;
+  for (let i = 1; i < lineas.length; i++) {
+    if (lineas[i].trim().startsWith("#")) {
+      fin = i;
+      break;
+    }
+  }
+  return lineas.slice(0, fin).join("\n");
+}
+
 /** Port de _ensamblar_offline: respaldo sin IA (fallo de red/presupuesto
  * en la llamada al redactor) -- concatena el material sin narrar. */
 export function ensamblarOffline(material: MaterialNodo[], perfilSesion: string | null, textoOriginal: string): string {
@@ -413,12 +468,13 @@ export function finalizarPlan(
   ruta: string[],
   families: Record<string, Familia>,
   textoOriginal: string,
-  registrarEvento?: (evento: Record<string, unknown>) => void
+  registrarEvento?: (evento: Record<string, unknown>) => void,
+  numerosProyecto?: unknown
 ): ResultadoEnsamblado {
-  const { cosechaIds, materialPrincipal, tieneMaterialEconomico, payload } = preparacion;
+  const { cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico, payload } = preparacion;
 
   let cuerpo: string;
-  let autodeclaracion: { familias_tratadas?: string[] } | null = null;
+  let autodeclaracion: AutodeclaracionPlan | null = null;
   if (rawTextoModelo !== null) {
     const parsed = parsearAutodeclaracion(rawTextoModelo);
     cuerpo = parsed.cuerpo;
@@ -437,6 +493,20 @@ export function finalizarPlan(
     registrarEvento?.({ tipo: "autodeclaracion_fallida" });
   }
   evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento);
+  verificarProcedenciaEtapas(autodeclaracion, ruta, cosechaIds, registrarEvento);
+
+  // Fase 3.1 (caja de vidrio): igual que en el reporte, pero acotado a la
+  // seccion financiera del plan -- el redactor no corre calculadora.ts,
+  // asi que el conjunto permitido es lo declarado por el usuario mas lo
+  // que el propio material del grafo ya menciona.
+  const seccionEconomica = extraerSeccionEconomica(cuerpo);
+  if (seccionEconomica) {
+    const textosMaterial = [...materialPrincipal, ...materialDeApoyo].flatMap((m) => [...m.pasos, m.entregable]);
+    const numerosPermitidosPlan = cerraduraAritmetica(
+      new Set([...numerosDeclarados(numerosProyecto), ...numerosDeMaterial(textosMaterial)])
+    );
+    verificarNumerosHuerfanos(seccionEconomica, numerosPermitidosPlan, registrarEvento);
+  }
 
   const etiqueta = evaluacionCobertura.es_completa ? "Plan completo" : "Plan inicial";
   const totalConceptos = ruta.length + cosechaIds.length;

@@ -164,7 +164,7 @@ def crear_sesion(project_id, tipo, mensaje_entrada, puerta_entrada=None):
 
 
 def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto_excedido, costo_desglose=None,
-                   presupuesto_usd=None):
+                   presupuesto_usd=None, decisiones=None, calidad=None):
     """ruta_con_modos: [{"node_id": str, "tipo": "conversado"|"silencioso"}].
     costo_desglose (Fase 2.7): {"clasificacion": float, "turnos": float,
     "plan": float, "estado_vivo": float, ...} - costo real por componente,
@@ -178,7 +178,17 @@ def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto
     realmente corrio -- --reporte lo baja temporalmente a
     PRESUPUESTO_REPORTE_USD, asi que este valor puede diferir del default
     de la sesion principal. Requiere sessions.presupuesto_usd (numeric);
-    ver supabase/migrations/my_idea_011_presupuesto_sesion.sql."""
+    ver supabase/migrations/my_idea_011_presupuesto_sesion.sql.
+    decisiones (Fase 3.1, caja de vidrio): lista completa de eventos de la
+    sesion (decision_turno por turno, fallback_auto, autodeclaracion_fallida,
+    coherencia_cobertura_corregida, procedencia_invalida, numero_huerfano)
+    acumulados durante el recorrido -- se persisten de una sola vez al
+    cerrar, igual que costo_desglose, sin necesidad de un write por turno.
+    Requiere sessions.decisiones (jsonb); ver
+    supabase/migrations/my_idea_013_caja_de_vidrio.sql.
+    calidad (Fase 3.1): veredicto JSON del juez de sesion muestreado
+    (evaluar_calidad_sesion), o None si esta sesion no se muestreo.
+    Requiere sessions.calidad (jsonb), misma migracion 013."""
     if disponible():
         campos = {
             "ruta": ruta_con_modos,
@@ -190,11 +200,17 @@ def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto
             campos["costo_desglose"] = costo_desglose
         if presupuesto_usd is not None:
             campos["presupuesto_usd"] = presupuesto_usd
+        if decisiones:
+            campos["decisiones"] = decisiones
+        if calidad:
+            campos["calidad"] = calidad
         try:
             _cliente().table("sessions").update(campos).eq("id", session_id).execute()
         except Exception:
             campos.pop("costo_desglose", None)
             campos.pop("presupuesto_usd", None)
+            campos.pop("decisiones", None)
+            campos.pop("calidad", None)
             _cliente().table("sessions").update(campos).eq("id", session_id).execute()
         proyecto = obtener_proyecto(project_id)
         nuevo_conteo = (proyecto.get("session_count", 0) if proyecto else 0) + 1
@@ -208,6 +224,8 @@ def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto
             s["presupuesto_excedido"] = presupuesto_excedido
             s["costo_desglose"] = costo_desglose or {}
             s["presupuesto_usd"] = presupuesto_usd
+            s["decisiones"] = decisiones or []
+            s["calidad"] = calidad
             s["closed_at"] = _ahora()
     data["session_count"] = data.get("session_count", 0) + 1
     data["updated_at"] = _ahora()

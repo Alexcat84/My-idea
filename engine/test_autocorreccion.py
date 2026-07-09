@@ -61,9 +61,21 @@ assert resultado["accion"] == "avanzar"
 assert len(resultado["camino"]) == 1
 candidato_elegido = resultado["camino"][0]
 assert candidato_elegido in graph[actual_id]["nodos_siguientes"], "el candidato auto-elegido debe ser un sucesor real"
-assert len(eventos) == 1 and eventos[0]["tipo"] == "fallback_auto"
-assert eventos[0]["candidato_elegido"] == candidato_elegido
+assert len(eventos) == 2, f"se esperaban 2 eventos (fallback_auto + decision_turno de Fase 3.1), hubo {len(eventos)}"
+fallback_events = [e for e in eventos if e["tipo"] == "fallback_auto"]
+decision_events = [e for e in eventos if e["tipo"] == "decision_turno"]
+assert len(fallback_events) == 1 and len(decision_events) == 1
+assert fallback_events[0]["candidato_elegido"] == candidato_elegido
 assert resultado.get("pregunta_adaptada"), "el fallback tier-2 debe traer una pregunta (aunque sea la cruda del cache)"
 
-print("\nTODO OK: retry con error+ids_validos confirmado, auto-seleccion silenciosa funciona, evento registrado.")
+# Fase 3.1 (caja de vidrio): el evento decision_turno tambien se emite en
+# el camino de fallback, con un razonamiento sintetico que documenta que
+# fue automatico, no una eleccion real del modelo.
+decision_evento = decision_events[0]
+assert decision_evento["decision"]["camino"] == [candidato_elegido]
+assert decision_evento["razonamiento"] == "fallback automatico tras 2 respuestas invalidas del modelo"
+assert isinstance(decision_evento["candidatos_locales"], list) and len(decision_evento["candidatos_locales"]) > 0
+assert isinstance(decision_evento["saltos_posibles"], list)
+
+print("\nTODO OK: retry con error+ids_validos confirmado, auto-seleccion silenciosa funciona, ambos eventos registrados.")
 print("Candidato auto-elegido por afinidad:", candidato_elegido, "->", graph[candidato_elegido]["titulo_concepto"])

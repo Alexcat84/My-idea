@@ -15,6 +15,7 @@ import {
   parsearAutodeclaracion,
   prepararPlan,
   SECCION_ECONOMICA_TITULO,
+  verificarProcedenciaEtapas,
   type MaterialNodo,
 } from "./planRedactor";
 
@@ -204,9 +205,41 @@ describe("corregirCoherenciaCobertura: 3a reincidencia del bug etiqueta/contenid
   });
 });
 
+describe("verificarProcedenciaEtapas (Fase 3.1): cada id declarado por etapa debe pertenecer al material real", () => {
+  it("no emite nada si todos los ids declarados vienen de ruta o cosecha", () => {
+    const eventos: Record<string, unknown>[] = [];
+    verificarProcedenciaEtapas(
+      { etapas: { "1": ["a", "b"], "2": ["c"] } },
+      ["a", "b"],
+      ["c"],
+      (e) => eventos.push(e)
+    );
+    expect(eventos).toHaveLength(0);
+  });
+
+  it("emite procedencia_invalida con los ids que el modelo invento", () => {
+    const eventos: Record<string, unknown>[] = [];
+    verificarProcedenciaEtapas(
+      { etapas: { "1": ["a", "id_inventado"] } },
+      ["a"],
+      [],
+      (e) => eventos.push(e)
+    );
+    expect(eventos).toHaveLength(1);
+    expect(eventos[0]).toEqual({ tipo: "procedencia_invalida", etapa: "1", ids_invalidos: ["id_inventado"] });
+  });
+
+  it("no hace nada si no hay autodeclaracion o no trae 'etapas' (respaldo por encabezados)", () => {
+    const eventos: Record<string, unknown>[] = [];
+    verificarProcedenciaEtapas(null, ["a"], [], (e) => eventos.push(e));
+    verificarProcedenciaEtapas({ familias_tratadas: ["accion_clientes"] }, ["a"], [], (e) => eventos.push(e));
+    expect(eventos).toHaveLength(0);
+  });
+});
+
 describe("ensamblarOffline / extraerTitulo", () => {
   const material: MaterialNodo[] = [
-    { concepto: "Fundamentos", pasos: ["paso uno", "paso dos"], entregable: "un documento", es_viabilidad_economica: false },
+    { id: "fundamentos_test", concepto: "Fundamentos", pasos: ["paso uno", "paso dos"], entregable: "un documento", es_viabilidad_economica: false },
   ];
 
   it("arma un markdown con etapas y pasos numerados", () => {

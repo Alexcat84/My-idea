@@ -39,6 +39,7 @@ import {
   type NodoConTipo,
 } from "@/lib/db";
 import { cargarGrafo } from "@/lib/engine/graph";
+import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
   comprimirEstadoVivo,
   extraerTitulo,
@@ -148,7 +149,27 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         );
         if (avisoFallback) enviar("aviso", { mensaje: avisoFallback });
 
-        const resultado = finalizarPlan(rawTexto, preparacion, recorrido.ruta, families, recorrido.textoOriginal);
+        // Fase 3.1 (caja de vidrio): eventos propios del ensamblado del
+        // plan (autodeclaracion_fallida, coherencia_cobertura_corregida,
+        // procedencia_invalida, numero_huerfano) -- antes de esta fase
+        // esta ruta nunca pasaba un registrarEvento, asi que ninguno de
+        // estos eventos llegaba a persistirse (a diferencia de Python,
+        // que ya los acumulaba en fallback_events desde el hotfix v2.2.1).
+        const eventosPlan: Record<string, unknown>[] = [];
+        const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
+        const numerosParaPlan = {
+          ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),
+          ...recorrido.numerosDetectadosSesion,
+        };
+        const resultado = finalizarPlan(
+          rawTexto,
+          preparacion,
+          recorrido.ruta,
+          families,
+          recorrido.textoOriginal,
+          (e) => eventosPlan.push(e),
+          numerosParaPlan
+        );
 
         const conceptosTitulos = [...recorrido.ruta, ...resultado.cosechaIds]
           .filter((nid) => nid in graph)
@@ -182,20 +203,30 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           .sort();
         await guardarPlan(supabase, user.id, sessionId, etiquetaDb, resultado.markdown, totalConceptos, familiasPresentes);
 
+        const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];
+        const { calidad, acumulado: acumuladoConJuez } = await evaluarCalidadSesion(
+          client,
+          eventosSesion,
+          graph,
+          acumuladoFinal
+        );
+
         const rutaConModos = recorrido.ruta.map((nid, i) => ({ node_id: nid, tipo: recorrido.modos[i] }));
         await cerrarSesion(
           supabase,
           projectId,
           sessionId,
           rutaConModos,
-          costoAcumuladoUsd(acumuladoFinal),
-          acumuladoFinal.presupuesto_excedido,
-          acumuladoFinal.uso_por_componente,
-          PRESUPUESTO_SESION_USD_DEFAULT
+          costoAcumuladoUsd(acumuladoConJuez),
+          acumuladoConJuez.presupuesto_excedido,
+          acumuladoConJuez.uso_por_componente,
+          PRESUPUESTO_SESION_USD_DEFAULT,
+          eventosSesion,
+          calidad ?? undefined
         );
         await guardarEstadoSesion(supabase, sessionId, {
           recorrido: { ...recorrido, fase: "cerrada", preguntaPendiente: null },
-          acumulado: acumuladoFinal,
+          acumulado: acumuladoConJuez,
         });
 
         const proyecto = await obtenerProyecto(supabase, projectId);
@@ -210,7 +241,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           session_id: sessionId,
           markdown: resultado.markdown,
           evaluacion_cobertura: resultado.evaluacionCobertura,
-          costo_usd: costoAcumuladoUsd(acumuladoFinal),
+          costo_usd: costoAcumuladoUsd(acumuladoConJuez),
         });
       } catch (e) {
         enviar("error", { error: e instanceof Error ? e.message : String(e) });

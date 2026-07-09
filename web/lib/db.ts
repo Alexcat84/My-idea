@@ -63,6 +63,8 @@ export interface Sesion {
   costo_usd: number;
   presupuesto_excedido: boolean;
   presupuesto_usd?: number | null;
+  decisiones?: unknown[] | null;
+  calidad?: Record<string, unknown> | null;
   estado_recorrido: EstadoSesionPersistido | null;
   created_at: string;
   closed_at: string | null;
@@ -154,7 +156,9 @@ export async function cerrarSesion(
   costoUsd: number,
   presupuestoExcedido: boolean,
   costoDesglose?: Record<string, number>,
-  presupuestoUsd?: number
+  presupuestoUsd?: number,
+  decisiones?: unknown[],
+  calidad?: unknown
 ): Promise<void> {
   const campos: Record<string, unknown> = {
     ruta: rutaConModos,
@@ -170,6 +174,17 @@ export async function cerrarSesion(
   // sesion, asi que puede diferir entre sesiones).
   if (presupuestoUsd !== undefined) {
     campos.presupuesto_usd = presupuestoUsd;
+  }
+  // Fase 3.1 (caja de vidrio): bitacora completa de eventos de la sesion
+  // (decision_turno por turno, fallback_auto, etc.), acumulada en
+  // estado_recorrido turno a turno y persistida de una sola vez aqui.
+  if (decisiones && decisiones.length > 0) {
+    campos.decisiones = decisiones;
+  }
+  // Fase 3.1: veredicto del juez de sesion muestreado, o ausente si esta
+  // sesion no se muestreo.
+  if (calidad) {
+    campos.calidad = calidad;
   }
   const { error } = await supabase.from("sessions").update(campos).eq("id", sessionId);
   if (error) throw error;
