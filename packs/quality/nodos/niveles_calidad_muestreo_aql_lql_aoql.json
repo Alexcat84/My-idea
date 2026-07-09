@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Documento con los índices de calidad (AQL, LQL, AOQL) definidos y justificados para el producto o proceso a inspeccionar",
   "nodos_previos": [
-    "control_calidad_especificaciones"
+    "control_calidad_especificaciones",
+    "curva_caracteristica_operativa"
   ],
   "nodos_siguientes": [
     "seleccion_plan_muestreo_ansi_z14",
@@ -22,5 +23,15 @@
   "condiciones_activacion": [
     "Cuando se necesita diseñar o evaluar un esquema de inspección por muestreo de lotes",
     "Si existe negociación de calidad aceptable entre comprador y proveedor"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "indices_calidad_muestreo",
+      "titulo": "Índices de Calidad para Planes de Muestreo (AQL, LQL, IQL, AOQL)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "ids_alias": [
+    "indices_calidad_muestreo"
   ]
 }

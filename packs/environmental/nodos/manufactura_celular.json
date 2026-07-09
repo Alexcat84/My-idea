@@ -13,11 +13,24 @@
   ],
   "entregable_esperado": "Una línea de producción rediseñada bajo el modelo celular con reducción medible de sobreproducción y tiempos de espera",
   "nodos_previos": [
-    "mantenimiento_productivo_total_energia"
+    "mantenimiento_productivo_total_energia",
+    "mantenimiento_productivo_total_verde"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "just_in_time_manufacturing"
+  ],
   "condiciones_activacion": [
     "Cuando la empresa enfrenta problemas de sobreproducción o largos tiempos de cambio de producto",
     "Si se busca mayor flexibilidad de producción en respuesta a demanda variable del cliente"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "manufactura_celular_2",
+      "titulo": "Manufactura Celular y Equipos de Tamaño Adecuado",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "ids_alias": [
+    "manufactura_celular_2"
   ]
 }

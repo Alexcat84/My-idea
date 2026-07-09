@@ -13,13 +13,25 @@
   ],
   "entregable_esperado": "Documento de especificaciones de producto y de sistema de calidad para el proveedor",
   "nodos_previos": [
-    "revolucion_relaciones_proveedores"
+    "revolucion_relaciones_proveedores",
+    "seleccion_hacer_o_comprar"
   ],
   "nodos_siguientes": [
-    "requisitos_numericos_calidad_lotes"
+    "requisitos_numericos_calidad_lotes",
+    "definicion_sistema_calidad_proveedor"
   ],
   "condiciones_activacion": [
     "Cuando se va a formalizar un contrato con un nuevo proveedor",
     "Cuando el producto es complejo y las condiciones de uso no son totalmente conocidas de antemano"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "especificacion_requisitos_calidad_proveedores",
+      "titulo": "Especificación de Requisitos de Calidad para Proveedores",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "ids_alias": [
+    "especificacion_requisitos_calidad_proveedores"
   ]
 }

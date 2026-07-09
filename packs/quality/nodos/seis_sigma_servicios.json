@@ -15,11 +15,24 @@
   "entregable_esperado": "Proyecto Six Sigma documentado con las fases DMAIC completas y resultados medibles de mejora",
   "nodos_previos": [
     "control_calidad_operaciones_servicio",
-    "organizacion_equipos_calidad_servicio"
+    "organizacion_equipos_calidad_servicio",
+    "equipos_autodirigidos_servicio"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "medicion_calidad_servicio"
+  ],
   "condiciones_activacion": [
     "Cuando existe un problema crónico de calidad cuantificable en un proceso de servicio",
     "Si la organización busca institucionalizar una cultura de mejora continua basada en datos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seis_sigma_servicios_2",
+      "titulo": "Six Sigma en Industrias de Servicio",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "ids_alias": [
+    "seis_sigma_servicios_2"
   ]
 }

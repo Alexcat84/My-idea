@@ -2,25 +2,37 @@
   "node_id": "plan_control_peligros",
   "fase_proyecto": "planificacion",
   "dominio": "health_safety",
-  "titulo_concepto": "Desarrollo del Plan de Control de Peligros",
-  "fuente": "OSHA3885",
-  "resumen_teorico": "Un plan de control de peligros documenta cómo se implementarán los controles seleccionados, priorizando los peligros más graves primero, asignando responsables, fechas de cumplimiento y mecanismos de seguimiento y verificación de efectividad.",
+  "titulo_concepto": "Plan de Control de Peligros",
+  "fuente": "OSHA3886",
+  "resumen_teorico": "Documento que describe cómo se implementarán los controles seleccionados, priorizando los peligros más serios primero. Debe asignar responsables, fechas de cumplimiento y mecanismos de seguimiento, y actualizarse conforme cambian las condiciones del sitio.",
   "pasos_accionables": [
-    "Listar los peligros que requieren control por orden de prioridad",
-    "Asignar responsables con autoridad para implementar los controles",
-    "Establecer fecha objetivo de finalización",
+    "Listar los peligros a controlar en orden de prioridad",
+    "Asignar responsables con autoridad para implementar cada control",
+    "Establecer fechas objetivo de finalización",
     "Definir cómo se dará seguimiento al progreso",
-    "Planear cómo se verificará la efectividad de los controles implementados"
+    "Planificar cómo se verificará la efectividad de los controles"
   ],
-  "entregable_esperado": "Documento de plan de control de peligros con responsables, fechas y métricas de seguimiento",
+  "entregable_esperado": "Plan de control de peligros documentado, con responsables y fechas asignadas",
   "nodos_previos": [
     "jerarquia_controles"
   ],
   "nodos_siguientes": [
     "implementacion_controles",
+    "controles_no_rutinarias_emergencias",
     "seguimiento_efectividad_controles"
   ],
   "condiciones_activacion": [
-    "Cuando se han seleccionado controles y se necesita formalizar su implementación"
+    "Cuando se han seleccionado los controles pero falta un plan formal de implementación"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "plan_control_peligros",
+      "titulo": "Desarrollo del Plan de Control de Peligros",
+      "fuente": "OSHA3885"
+    }
+  ],
+  "ids_alias": [
+    "plan_control_peligros",
+    "plan_control_peligros_2"
   ]
 }

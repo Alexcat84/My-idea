@@ -2,25 +2,47 @@
   "node_id": "trilogia_de_juran",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Trilogía de Juran: Planificación, Control y Mejora de la Calidad",
+  "titulo_concepto": "Trilogía de Juran (Planificación, Control y Mejora)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Juran propone un marco operacional de tres procesos universales para gestionar la calidad: planificación de la calidad (diseñar productos/procesos que satisfagan necesidades del cliente), control de la calidad (asegurar que lo diseñado se produce consistentemente) y mejora de la calidad (elevar el nivel de desempeño de forma continua y sistemática, a menudo mediante proyecto a proyecto). Estos tres procesos son la base estructural sobre la que se construye todo el enfoque de gestión de calidad en la organización.",
+  "resumen_teorico": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: (1) Planificación de la calidad -diseñar procesos para crear productos/servicios que satisfagan necesidades-, (2) Control de calidad -asegurar que la producción cumpla los criterios de diseño-, y (3) Mejora de la calidad -eliminar fallos crónicos mediante mejoras sistemáticas o disruptivas (breakthrough)-. Estos tres procesos constituyen la base científica de la gestión de calidad moderna, incluyendo metodologías como Six Sigma.",
   "pasos_accionables": [
-    "Establecer un proceso formal de planificación de calidad que traduzca necesidades del cliente en especificaciones de diseño",
-    "Implementar mecanismos de control de calidad (mediciones, estándares, retroalimentación) para mantener el desempeño dentro de los objetivos",
-    "Definir un proceso sistemático de mejora de calidad basado en proyectos, con metas anuales de mejora",
-    "Asignar responsables claros para cada uno de los tres procesos dentro de la organización"
+    "Diseñar procesos de planificación para traducir la voz del cliente en especificaciones de producto/servicio",
+    "Implementar procesos de control que verifiquen la conformidad del producto con el diseño",
+    "Establecer un proceso sistemático de mejora continua o breakthrough para eliminar fallos crónicos",
+    "Integrar los tres procesos como un ciclo continuo dentro de la gestión organizacional"
   ],
-  "entregable_esperado": "Marco documentado de gestión de calidad con los tres procesos (planificación, control, mejora) definidos, con responsables y métricas asociadas",
+  "entregable_esperado": "Diagrama o plan que muestre los tres procesos (planificación, control, mejora) aplicados al producto o servicio de la organización",
   "nodos_previos": [
+    "gestion_para_la_calidad",
+    "costo_de_mala_calidad_copq",
     "definicion_calidad_fitness_for_purpose"
   ],
   "nodos_siguientes": [
+    "doble_significado_calidad",
+    "costo_de_mala_calidad_copq",
+    "desperdicio_cronico_vs_esporadico",
     "costo_de_mala_calidad",
     "sistema_gestion_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando la organización no cuenta con una estructura sistemática para gestionar la calidad",
-    "Al diseñar o rediseñar el sistema de gestión de calidad de una empresa"
+    "Cuando se necesita una estructura completa de gestión de calidad desde el diseño hasta la mejora",
+    "Si la organización presenta fallos recurrentes que requieren un enfoque sistemático"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "trilogia_de_juran_3",
+      "titulo": "Trilogía de Juran (Planificación, Control y Mejora de Calidad)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "trilogia_de_juran",
+      "titulo": "Trilogía de Juran: Planificación, Control y Mejora de la Calidad",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "ids_alias": [
+    "trilogia_de_juran_3",
+    "trilogia_de_juran",
+    "trilogia_de_juran_2"
   ]
 }

@@ -2,23 +2,36 @@
   "node_id": "recomendaciones_smart",
   "fase_proyecto": "planificacion",
   "dominio": "health_safety",
-  "titulo_concepto": "Formulación de Recomendaciones SMART tras una Investigación",
+  "titulo_concepto": "Recomendaciones SMART para Investigaciones de Seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
-  "resumen_teorico": "Para que las recomendaciones de una investigación tengan tracción organizacional real, deben ser Específicas, Medibles, Acordadas (o al menos aceptables), Realistas y con plazo definido (Time-bound). Esto evita que caigan en el olvido o generen rechazo por parte de la organización.",
+  "resumen_teorico": "Las recomendaciones derivadas de una investigación de 'error humano' deben cumplir el criterio SMART (Specific, Measurable, Agreed, Realistic, Time-bound) para lograr tracción organizacional. El caso de los camiones mineros muestra que los factores explicativos (presión de tiempo, falta de EPP) no siempre coinciden con el factor de cambio real (mantenimiento preventivo en carretera), por lo que las recomendaciones deben apuntar a cambios sistémicos verificables, no solo a exhortar a las personas a 'tener más cuidado'.",
   "pasos_accionables": [
+    "Identificar el factor de cambio real, distinto de los factores explicativos superficiales",
     "Redactar la recomendación especificando qué parte de la organización debe hacer qué y cuándo",
-    "Definir criterios medibles de éxito para monitorear la implementación",
-    "Validar que la recomendación considere las restricciones de producción/eficiencia de la organización",
-    "Asegurar que la recomendación sea realista y ejecutable por el responsable",
-    "Establecer una fecha límite o plazo de implementación"
+    "Definir criterios medibles de éxito",
+    "Validar la recomendación con los responsables de implementación considerando restricciones de producción/eficiencia",
+    "Establecer una fecha límite realista para la implementación"
   ],
-  "entregable_esperado": "Documento de recomendaciones formales cumpliendo los criterios SMART, listo para presentar a la dirección",
+  "entregable_esperado": "Documento de recomendaciones con criterios SMART y plan de seguimiento de implementación",
   "nodos_previos": [
+    "analisis_factores_distales_proximales",
     "factores_explicativos_vs_factores_de_cambio"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "revision_de_aprendizaje"
+  ],
   "condiciones_activacion": [
-    "Cuando se finaliza un informe de investigación y se deben entregar recomendaciones a la organización",
-    "Cuando recomendaciones previas no han sido implementadas efectivamente"
+    "Cuando se ha completado un análisis de incidente y se deben formular recomendaciones de mejora"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "recomendaciones_smart",
+      "titulo": "Formulación de Recomendaciones SMART tras una Investigación",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ],
+  "ids_alias": [
+    "recomendaciones_smart",
+    "recomendaciones_smart_2"
   ]
 }
