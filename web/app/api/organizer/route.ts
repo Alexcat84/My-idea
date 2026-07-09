@@ -49,7 +49,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
 
-  const limite = await verificarLimiteDiario(user.id);
+  const limite = await verificarLimiteDiario(user.id, user.email);
   if (!limite.permitido) {
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }

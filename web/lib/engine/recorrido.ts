@@ -103,7 +103,7 @@ export function estadoInicial(params: {
   };
 }
 
-interface NodoTranscrito {
+export interface NodoTranscrito {
   id: string;
   titulo: string;
   modo: ModoNodo;

@@ -135,17 +135,22 @@ async function faseSesionMacetas(cookie: string) {
   const sessionId = String(r.session_id);
   let turnos = 0;
   const nodosSalto: Array<{ id: string; titulo: string }> = [];
+  // Fase 3.2: el "árbol que piensa" de la UI se alimenta EXACTAMENTE de
+  // estos nodos_nuevos -- acumularlos todos permite verificar al final
+  // que los eventos mostrados == la ruta persistida, 1:1 y en orden.
+  const eventosArbol: Array<{ id: string; modo: string }> = [];
 
-  function registrarNodosSalto(nodosNuevos: unknown) {
+  function registrarNodosNuevos(nodosNuevos: unknown) {
     if (!Array.isArray(nodosNuevos)) return;
     for (const n of nodosNuevos as Array<{ id: string; titulo: string; modo: string }>) {
+      eventosArbol.push({ id: n.id, modo: n.modo });
       if (n.modo === "salto") nodosSalto.push({ id: n.id, titulo: n.titulo });
     }
   }
   // /api/session/start puede hacer multi-hop silencioso ANTES de la
   // primera pregunta (igual que /turn) -- si no se registra aqui, un
   // salto real ocurrido en el arranque nunca se contabiliza.
-  registrarNodosSalto(r.nodos_nuevos);
+  registrarNodosNuevos(r.nodos_nuevos);
 
   while (r.tipo === "pregunta" && turnos < MAX_TURNOS_SEGURIDAD) {
     turnos++;
@@ -158,9 +163,9 @@ async function faseSesionMacetas(cookie: string) {
     if (Array.isArray(r.nodos_nuevos) && r.nodos_nuevos.length > 0) {
       log(`  nodos nuevos: ${(r.nodos_nuevos as Array<{ titulo: string; modo: string }>).map((n) => `${n.titulo} [${n.modo}]`).join(", ")}`);
     }
-    registrarNodosSalto(r.nodos_nuevos);
+    registrarNodosNuevos(r.nodos_nuevos);
   }
-  registrarNodosSalto(r.nodos_nuevos);
+  registrarNodosNuevos(r.nodos_nuevos);
 
   log(`\nInterprete se detuvo tras ${turnos} turno(s). tipo final: ${r.tipo}`);
   if (r.tipo === "salio") {
@@ -279,6 +284,28 @@ async function faseSesionMacetas(cookie: string) {
     throw new Error(`se encontraron eventos procedencia_invalida inesperados: ${JSON.stringify(procedenciaInvalida)}`);
   }
   log("OK: procedencia por etapa valida (sin eventos procedencia_invalida en la bitacora).");
+
+  separador("FASE 2e (Fase 3.2): eventos del arbol == ruta persistida, 1:1 y en orden");
+  const { data: filaRuta, error: errorRuta } = await supabaseAdmin
+    .from("sessions")
+    .select("ruta")
+    .eq("id", sessionId)
+    .limit(1)
+    .single();
+  if (errorRuta || !filaRuta) {
+    throw new Error(`no se pudo leer sessions.ruta para verificar el arbol: ${errorRuta?.message}`);
+  }
+  const rutaPersistida = (filaRuta.ruta ?? []) as Array<{ node_id: string; tipo: string }>;
+  const arbolStr = eventosArbol.map((n) => `${n.id}[${n.modo}]`).join(" -> ");
+  const rutaStr = rutaPersistida.map((n) => `${n.node_id}[${n.tipo}]`).join(" -> ");
+  log(`eventos del arbol (${eventosArbol.length}): ${arbolStr}`);
+  log(`ruta persistida  (${rutaPersistida.length}): ${rutaStr}`);
+  if (arbolStr !== rutaStr) {
+    throw new Error(
+      "los eventos que la UI mostraria en el arbol NO coinciden 1:1 con sessions.ruta -- la animacion dejaria de ser verdad"
+    );
+  }
+  log("OK: el arbol que piensa muestra EXACTAMENTE la ruta persistida (misma secuencia, mismos modos).");
 
   return { costoUsd: costoUsdPlan, projectId, saltosVerificados: nodosSalto.length };
 }
@@ -474,10 +501,11 @@ async function main() {
   log("  1. organizer (capa gratuita): OK");
   log("  2. sesion de macetas + plan streaming: OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
-  log("  4. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
-  log("  5. guardian GIGO (numeros contaminados): OK");
+  log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
+  log("  5. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
+  log("  6. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 6/6 verificaciones OK");
+  separador("VUELO COMPLETO: 7/7 verificaciones OK");
   escribirTranscripcion();
 }
 

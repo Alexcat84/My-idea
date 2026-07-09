@@ -22,7 +22,14 @@ interface ResultadoLimite {
   limite: number;
 }
 
-export async function verificarLimiteDiario(userId: string): Promise<ResultadoLimite> {
+export async function verificarLimiteDiario(userId: string, email?: string | null): Promise<ResultadoLimite> {
+  // El dev user de los arneses de prueba (vuelo.ts/probar.ts, ver
+  // scripts/setup_dev_user.py) queda exento: una corrida completa del
+  // vuelo hace 4 arranques y dos corridas el mismo dia reventarian el
+  // limite -- castigar a la verificacion seria castigar la disciplina.
+  if (email === "dev@my-idea.local") {
+    return { permitido: true, usados: 0, limite: LIMITE_DIARIO };
+  }
   const url = process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN;
   if (!url || !token) {

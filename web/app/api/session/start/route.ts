@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
 
-  const limite = await verificarLimiteDiario(user.id);
+  const limite = await verificarLimiteDiario(user.id, user.email);
   if (!limite.permitido) {
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
@@ -102,5 +102,14 @@ export async function POST(request: Request) {
     dbSessionId: sessionId,
   });
 
-  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado);
+  // La puerta de entrada vive en la ruta DESDE estadoInicial, asi que el
+  // diff de nodos nuevos del turno nunca la incluye -- se antepone aqui
+  // para que el arbol del cliente arranque por donde de verdad entro.
+  const puerta = {
+    id: clasificacion.puertaId,
+    titulo: graph[clasificacion.puertaId]?.titulo_concepto ?? clasificacion.puertaId,
+    modo: "conversado" as const,
+  };
+
+  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [puerta]);
 }

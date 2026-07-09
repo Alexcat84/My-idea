@@ -10,14 +10,21 @@ import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { costoAcumuladoUsd, PRESUPUESTO_SESION_USD_DEFAULT, type UsoAcumulado } from "./costmeter";
 import { cerrarSesion, guardarEstadoSesion, mergeNumerosProyecto, mergeTipoOferta } from "./db";
-import type { ResultadoTurno } from "./engine/recorrido";
+import type { NodoTranscrito, ResultadoTurno } from "./engine/recorrido";
 
 export async function responderResultadoTurno(
   supabase: SupabaseClient,
   projectId: string,
   sessionId: string,
   resultado: ResultadoTurno,
-  acumuladoFinal: UsoAcumulado
+  acumuladoFinal: UsoAcumulado,
+  /** Fase 3.2: nodos que el cliente aun no conoce pero que preceden al
+   * diff de este turno -- hoy, SOLO la puerta de entrada en /start:
+   * estadoInicial la siembra en la ruta ANTES del primer avanzarTurno,
+   * asi que nodosNuevosDesdeInicio() jamas la reporta y el arbol de la
+   * UI arrancaria sin su primer nodo (gap real cazado por la fase 2e de
+   * vuelo.ts: arbol 11 vs ruta 12). */
+  nodosPrefijo: NodoTranscrito[] = []
 ): Promise<NextResponse> {
   await guardarEstadoSesion(supabase, sessionId, { recorrido: resultado.estado, acumulado: acumuladoFinal });
   const costoUsd = costoAcumuladoUsd(acumuladoFinal);
@@ -65,7 +72,7 @@ export async function responderResultadoTurno(
       session_id: sessionId,
       tipo: "listo_para_plan",
       evaluacion: resultado.evaluacion,
-      nodos_nuevos: resultado.nodosNuevos,
+      nodos_nuevos: [...nodosPrefijo, ...resultado.nodosNuevos],
       costo_usd: costoUsd,
     });
   }
@@ -75,7 +82,7 @@ export async function responderResultadoTurno(
     session_id: sessionId,
     tipo: "pregunta",
     pregunta: resultado.pregunta,
-    nodos_nuevos: resultado.nodosNuevos,
+    nodos_nuevos: [...nodosPrefijo, ...resultado.nodosNuevos],
     costo_usd: costoUsd,
   });
 }
