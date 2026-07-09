@@ -14,14 +14,26 @@
   "entregable_esperado": "Modelo de niveles de desempeño documentado con plan de acompañamiento por proveedor",
   "nodos_previos": [
     "auditorias_proveedores",
-    "dialogo_proveedores"
+    "dialogo_proveedores",
+    "codigo_conducta_proveedores"
   ],
   "nodos_siguientes": [
     "profundizacion_cadena_suministro",
-    "alcance_profundo_cadena_suministro"
+    "alcance_profundo_cadena_suministro",
+    "alianzas_cross_industry"
   ],
   "condiciones_activacion": [
     "Si un proveedor esencial no cumple estándares pero es difícil de reemplazar",
     "Si se busca desarrollo a largo plazo en vez de descarte inmediato"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "programa_mentoria_proveedores_2",
+      "titulo": "Programa de Mentoría a Proveedores",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "ids_alias": [
+    "programa_mentoria_proveedores_2"
   ]
 }
