@@ -10,6 +10,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { NumerosProyecto } from "./calculadora";
 import type { UsoAcumulado } from "./costmeter";
+import type { ModoRuta, PlanEtiqueta, ProjectNodeTipo, SessionTipo } from "./dbContract";
 import type { EstadoRecorrido } from "./engine/recorrido";
 import type { EstadoReporte } from "./engine/reporteFlow";
 
@@ -47,7 +48,7 @@ export interface EstadoReportePersistido {
 
 export interface RutaNodo {
   node_id: string;
-  tipo: "conversado" | "silencioso" | "salto";
+  tipo: ModoRuta;
 }
 
 export interface Sesion {
@@ -55,7 +56,7 @@ export interface Sesion {
   project_id: string;
   user_id: string;
   session_position: number;
-  tipo: "gratuito" | "inicial" | "seguimiento" | "reporte";
+  tipo: SessionTipo;
   mensaje_entrada: string;
   puerta_entrada: string | null;
   ruta: RutaNodo[];
@@ -123,7 +124,7 @@ export async function crearSesion(
   supabase: SupabaseClient,
   userId: string,
   projectId: string,
-  tipo: "gratuito" | "inicial" | "seguimiento" | "reporte",
+  tipo: SessionTipo,
   mensajeEntrada: string,
   puertaEntrada: string | null = null
 ): Promise<string> {
@@ -233,7 +234,7 @@ export async function nodosCubiertos(supabase: SupabaseClient, projectId: string
 
 export interface NodoConTipo {
   node_id: string;
-  tipo: "conversado" | "silencioso" | "salto" | "cosechado";
+  tipo: ProjectNodeTipo;
 }
 
 /** Port de registrar_nodos: ignora duplicados (un nodo cuenta una sola
@@ -257,7 +258,7 @@ export async function guardarPlan(
   supabase: SupabaseClient,
   userId: string,
   sessionId: string,
-  etiqueta: "organizador" | "inicial" | "completo" | "seguimiento" | "reporte_numeros",
+  etiqueta: PlanEtiqueta,
   contenidoMd: string,
   conceptosUsados: number,
   familiasCubiertas: string[]

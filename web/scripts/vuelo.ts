@@ -4,7 +4,12 @@
 // de /api/session/[id]/plan. Cuatro fases:
 //   1. Organizer (capa gratuita) con la idea del "sonar" para ciegos.
 //   2. Sesion completa de macetas (entrevista real turno a turno + plan
-//      streaming por SSE).
+//      streaming por SSE). Incluye una respuesta calibrada (Fase 2.8/2.9)
+//      que dispara un salto semantico real, y verifica (Hotfix v2.2.2)
+//      que la ruta lo registre, que el ensamblado del plan no reviente
+//      con 23514 (el bug real de la migracion 012), y que project_nodes
+//      persista tipo='salto' -- el camino de persistencia de un salto
+//      nunca se ejercitaba end-to-end antes de este hotfix.
 //   3. Reporte digital -- fijos=200, precio=13 -> equilibrio esperado 16
 //      (ceil(200/13)), vocabulario sin "pieza".
 //   4. Guardian GIGO -- los mismos numeros contaminados del caso real de
@@ -23,6 +28,7 @@
 //   npx tsx scripts/vuelo.ts
 // Costo real: llamadas reales a Anthropic (Haiku+Sonnet) y Voyage AI.
 // Transcripcion + costos guardados en examples/fase3_0_vuelo_web.txt.
+import { createClient } from "@supabase/supabase-js";
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, postJson, ROOT } from "./_shared/http";
@@ -72,6 +78,14 @@ async function faseOrganizerSonar(cookie: string) {
 // ---------------------------------------------------------------------------
 const RESPUESTAS_MACETAS = [
   "Hago macetas de cemento decorativas, chicas y medianas, las vendo a tiendas de plantas y directo por Instagram.",
+  // Hotfix v2.2.2: query de referencia de la Fase 2.8/2.9 -- calibrada
+  // para disparar un salto semantico real a "Hoja de Trabajo de
+  // Estimacion de Costos" (MIN_SCORE_SALTO en prototipo_motor.py se
+  // calibro especificamente con este score, 0.474, para que este salto
+  // SIGA pasando el umbral). Ver examples/fase2_8_macetas_navegacion_libre.txt
+  // linea 100 y docs/audits/AUD-03. Antes de este hotfix, vuelo.ts nunca
+  // ejercitaba el camino de persistencia de un salto real.
+  "Cobro por pieza pero no he calculado bien cuanto me cuesta en minutos y materiales hacer cada maceta.",
   "Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende.",
   "Lo que mas me preocupa es no saber si el precio que cobro de verdad me deja ganancia una vez que cuento mi tiempo.",
   "Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura -- y le dedico un par de horas entre mezclar, moldear y pulir.",
@@ -108,6 +122,14 @@ async function faseSesionMacetas(cookie: string) {
   const projectId = String(r.project_id);
   const sessionId = String(r.session_id);
   let turnos = 0;
+  const nodosSalto: Array<{ id: string; titulo: string }> = [];
+
+  function registrarNodosSalto(nodosNuevos: unknown) {
+    if (!Array.isArray(nodosNuevos)) return;
+    for (const n of nodosNuevos as Array<{ id: string; titulo: string; modo: string }>) {
+      if (n.modo === "salto") nodosSalto.push({ id: n.id, titulo: n.titulo });
+    }
+  }
 
   while (r.tipo === "pregunta" && turnos < MAX_TURNOS_SEGURIDAD) {
     turnos++;
@@ -120,7 +142,9 @@ async function faseSesionMacetas(cookie: string) {
     if (Array.isArray(r.nodos_nuevos) && r.nodos_nuevos.length > 0) {
       log(`  nodos nuevos: ${(r.nodos_nuevos as Array<{ titulo: string; modo: string }>).map((n) => `${n.titulo} [${n.modo}]`).join(", ")}`);
     }
+    registrarNodosSalto(r.nodos_nuevos);
   }
+  registrarNodosSalto(r.nodos_nuevos);
 
   log(`\nInterprete se detuvo tras ${turnos} turno(s). tipo final: ${r.tipo}`);
   if (r.tipo === "salio") {
@@ -143,6 +167,7 @@ async function faseSesionMacetas(cookie: string) {
   let evaluacionCobertura: unknown = null;
   let deltas = 0;
   const avisos: string[] = [];
+  const erroresSSE: string[] = [];
 
   await consumirSSE(resPlan, ({ evento, data }) => {
     if (evento === "delta") {
@@ -152,6 +177,7 @@ async function faseSesionMacetas(cookie: string) {
       avisos.push(String((data as { mensaje?: string })?.mensaje ?? ""));
       log(`\n[aviso] ${(data as { mensaje?: string })?.mensaje}`);
     } else if (evento === "error") {
+      erroresSSE.push(JSON.stringify(data));
       log(`\n[error SSE] ${JSON.stringify(data)}`);
     } else if (evento === "done") {
       const d = data as { markdown: string; costo_usd: number; evaluacion_cobertura: unknown };
@@ -168,11 +194,45 @@ async function faseSesionMacetas(cookie: string) {
   log("--- plan generado (completo) ---");
   log(markdownFinal);
 
+  if (erroresSSE.length > 0) {
+    throw new Error(
+      `el ensamblado del plan reporto error(es) SSE -- esto es exactamente como se manifesto el bug de la ` +
+      `migracion 012 (23514, project_nodes_tipo_check) en vivo: ${erroresSSE.join(" | ")}`
+    );
+  }
   if (!markdownFinal || markdownFinal.length < 100) {
     throw new Error("el plan generado esta vacio o sospechosamente corto");
   }
 
-  return { costoUsd: costoUsdPlan, projectId };
+  separador("FASE 2c (Hotfix v2.2.2): verificando persistencia real de saltos semanticos");
+  if (nodosSalto.length === 0) {
+    throw new Error(
+      "la sesion de macetas no produjo ningun salto semantico real -- la query de referencia " +
+        "(Fase 2.8/2.9, 'cobro por pieza pero no he calculado bien...') dejo de disparar el salto a " +
+        "'Hoja de Trabajo de Estimacion de Costos'; revisar MIN_SCORE_SALTO o el guion de RESPUESTAS_MACETAS"
+    );
+  }
+  log(`saltos detectados en la ruta: ${nodosSalto.map((n) => `${n.titulo} (${n.id})`).join(", ")}`);
+
+  const supabaseAdmin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
+  for (const nodo of nodosSalto) {
+    const { data: fila, error } = await supabaseAdmin
+      .from("project_nodes")
+      .select("tipo")
+      .eq("project_id", projectId)
+      .eq("node_id", nodo.id)
+      .limit(1)
+      .single();
+    if (error || !fila) {
+      throw new Error(`no se encontro la fila de project_nodes para el salto a '${nodo.id}': ${error?.message}`);
+    }
+    if (fila.tipo !== "salto") {
+      throw new Error(`el nodo '${nodo.id}' llego por salto pero quedo persistido con tipo='${fila.tipo}' (se esperaba 'salto')`);
+    }
+    log(`  OK: project_nodes.tipo='salto' persistido correctamente para '${nodo.id}'`);
+  }
+
+  return { costoUsd: costoUsdPlan, projectId, saltosVerificados: nodosSalto.length };
 }
 
 // ---------------------------------------------------------------------------
@@ -296,9 +356,12 @@ async function main() {
   log("Autenticado como dev user.");
 
   const costos: Record<string, number> = {};
+  let saltosVerificados = 0;
   try {
     costos.organizer = (await faseOrganizerSonar(cookie)).costoUsd;
-    costos.macetas = (await faseSesionMacetas(cookie)).costoUsd;
+    const macetas = await faseSesionMacetas(cookie);
+    costos.macetas = macetas.costoUsd;
+    saltosVerificados = macetas.saltosVerificados;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -316,7 +379,14 @@ async function main() {
   }
   log(`  TOTAL: $${total.toFixed(4)}`);
 
-  separador("VUELO COMPLETO: 4/4 fases OK");
+  separador("RESUMEN DE VERIFICACIONES");
+  log("  1. organizer (capa gratuita): OK");
+  log("  2. sesion de macetas + plan streaming: OK");
+  log(`  3. salto semantico real persistido sin 23514 (Hotfix v2.2.2): OK (${saltosVerificados} salto(s))`);
+  log("  4. reporte digital (equilibrio esperado 16): OK");
+  log("  5. guardian GIGO (numeros contaminados): OK");
+
+  separador("VUELO COMPLETO: 5/5 verificaciones OK");
   escribirTranscripcion();
 }
 

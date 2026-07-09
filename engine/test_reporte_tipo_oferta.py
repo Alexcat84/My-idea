@@ -17,6 +17,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import prototipo_motor as pm
 
 pm.db.forzar_offline(True)
+# Hermeticidad (Hotfix v2.2.2): _clasificar_oferta tiene una guardia
+# `if not API_KEY: return None, None` que se salta el mock de
+# llamar_claude por completo cuando no hay .env con una key real -- el
+# veredicto de esta prueba NO puede depender de secretos ambientales.
+pm.API_KEY = "test-fake-key-not-real"
 
 project_id = pm.db.crear_proyecto("una app para llevar el registro de suscripciones de streaming")
 families = pm.plan_readiness.cargar_families(pm.cargar_grafo())

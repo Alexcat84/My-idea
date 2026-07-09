@@ -21,6 +21,7 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import { buscarAfines } from "../compass";
 import { llamarClaude, MODEL_HAIKU, type MensajeConversacion, type UsoAcumulado } from "../costmeter";
+import type { ModoRuta } from "../dbContract";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
@@ -33,7 +34,7 @@ import {
   type PrioridadDeclarada,
 } from "./interprete";
 
-export type ModoNodo = "conversado" | "silencioso" | "salto";
+export type ModoNodo = ModoRuta;
 
 export interface NumeroDetectadoSesion extends NumeroDetectadoEntry {
   session_id: string;
