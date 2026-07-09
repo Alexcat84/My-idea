@@ -168,7 +168,8 @@ Fase 2.5 - persistencia y proyectos de largo plazo:
       excluyen automaticamente los nodos ya cubiertos (se siembran en
       visitados). El plan de seguimiento abre reconociendo el avance.
     - Presupuesto duro por sesion (PRESUPUESTO_SESION_USD, env var,
-      default 0.30): si el costo acumulado alcanza el tope, las llamadas
+      default 0.35 desde Hotfix v2.2.1): si el costo acumulado alcanza el
+      tope, las llamadas
       posteriores fallan a proposito y cada punto de la app ya sabe caer a
       su respaldo offline existente (menu de emergencia, cuestionario
       cerrado, plan ensamblado sin IA). El evento se registra en la sesion.
@@ -289,7 +290,7 @@ CACHE_WRITE_MULT = 1.25
 USO = {}
 USO_POR_COMPONENTE = {}
 
-PRESUPUESTO_SESION_USD = float(os.environ.get("PRESUPUESTO_SESION_USD", "0.30"))
+PRESUPUESTO_SESION_USD = float(os.environ.get("PRESUPUESTO_SESION_USD", "0.35"))
 PRESUPUESTO_EXCEDIDO = False
 
 SYSTEM_CLASIFICACION = (
@@ -958,11 +959,14 @@ SYSTEM_PLAN = (
     "FORMATO DE SALIDA (obligatorio): escribe el plan completo en markdown "
     "normal (como en el ejemplo). Al final, en una linea propia, escribe "
     "EXACTAMENTE el delimitador ===JSON=== y luego, en la siguiente linea, "
-    "SOLO un JSON de una sola linea con tu autodeclaracion de la regla 11: "
-    "{\"familias_tratadas\": [str, ...] (subconjunto de "
-    "[\"accion_clientes\", \"viabilidad_economica\"], puede ser lista "
-    "vacia), \"secciones\": [str, ...] (los titulos de las etapas/secciones "
-    "que escribiste, en orden)}. No agregues nada despues de esa linea."
+    "SOLO un JSON compacto de una sola linea con tu autodeclaracion de la "
+    "regla 11 (Hotfix v2.2.1: la cola JSON se redujo a un solo campo para "
+    "que quepa completa incluso si el plan agota casi todo max_tokens — "
+    "'secciones' se elimino por ser redundante, el post-validador mecanico "
+    "ya escanea los encabezados reales del markdown en vez de confiar en "
+    "que el modelo los liste bien): {\"familias_tratadas\": [str, ...] "
+    "(subconjunto de [\"accion_clientes\", \"viabilidad_economica\"], "
+    "puede ser lista vacia)}. No agregues nada despues de esa linea."
 )
 
 SYSTEM_ESTADO_VIVO = (
@@ -1936,16 +1940,21 @@ def _corregir_coherencia_cobertura(evaluacion_cobertura, cuerpo, tiene_material_
 
 def _parsear_autodeclaracion(raw):
     """Separa el markdown del plan del bloque final ===JSON=== (Fase 2.8,
-    autodeclaracion de cobertura). Si el delimitador falta o el JSON es
-    invalido, devuelve (raw completo, None) - la llamada trata eso como
-    "sin autodeclaracion" mas abajo."""
+    autodeclaracion de cobertura). Si el delimitador falta, devuelve (raw
+    completo, None). Si el delimitador SI aparece pero el JSON es invalido
+    (Hotfix v2.2.1: la causa real es un ===JSON=== cortado por max_tokens),
+    devuelve el cuerpo YA SEPARADO (sin el marcador ni el JSON roto) en vez
+    de raw completo -- de lo contrario el usuario veria el marcador y el
+    JSON truncado colgando al final de su plan. En ambos casos
+    autodeclaracion=None, y la llamada trata eso como "sin autodeclaracion"
+    mas abajo (respaldo por encabezados, ver _familias_desde_encabezados)."""
     if "===JSON===" not in raw:
         return raw.strip(), None
     cuerpo, _, bloque = raw.rpartition("===JSON===")
     try:
         data = _parsear_json(bloque)
     except Exception:
-        return raw.strip(), None
+        return cuerpo.strip(), None
     return cuerpo.strip(), data
 
 
@@ -1961,6 +1970,39 @@ def _evaluacion_desde_autodeclaracion(autodeclaracion):
     tiene_viabilidad = "viabilidad_economica" in tratadas
     faltantes = [_TEXTO_FAMILIA_FALTANTE[f] for f in ("accion_clientes", "viabilidad_economica")
                  if f not in tratadas]
+    return {
+        "es_completa": tiene_accion and tiene_viabilidad,
+        "tiene_accion_clientes": tiene_accion,
+        "tiene_viabilidad_economica": tiene_viabilidad,
+        "familias_faltantes": faltantes,
+    }
+
+
+def _familias_desde_encabezados(cuerpo):
+    """Respaldo deterministico (Hotfix v2.2.1) cuando la autodeclaracion de
+    la regla 11 falta o no parsea (causa raiz real: un ===JSON=== cortado
+    por max_tokens en una sesion en vivo). A diferencia del respaldo
+    anterior (plan_readiness.evaluar_ruta sobre ruta+cosecha_ids), este NO
+    mira los tags de node_families del material de ENTRADA -- el redactor
+    puede omitir parte de material_de_apoyo si "no encaja con claridad en
+    ninguna etapa" (regla 2), asi que un tag de entrada no garantiza que la
+    familia realmente quedo cubierta en la SALIDA. En vez de eso, escanea
+    los encabezados REALES del markdown ya generado con las mismas
+    palabras clave de plan_readiness. viabilidad_economica ademas se
+    confirma por la presencia exacta de la seccion fija de sostenibilidad
+    (regla 4), la misma senal que ya usa _corregir_coherencia_cobertura."""
+    encabezados = [linea for linea in cuerpo.splitlines() if linea.strip().startswith("#")]
+    texto_encabezados = plan_readiness._normalizar(" ".join(encabezados))
+    tiene_accion = plan_readiness._coincide(texto_encabezados, plan_readiness.KEYWORDS_ACCION_CLIENTES)
+    tiene_viabilidad = (
+        SECCION_ECONOMICA_TITULO in cuerpo
+        or plan_readiness._coincide(texto_encabezados, plan_readiness.KEYWORDS_VIABILIDAD_ECONOMICA)
+    )
+    faltantes = [
+        _TEXTO_FAMILIA_FALTANTE[f]
+        for f, cubierta in (("accion_clientes", tiene_accion), ("viabilidad_economica", tiene_viabilidad))
+        if not cubierta
+    ]
     return {
         "es_completa": tiene_accion and tiene_viabilidad,
         "tiene_accion_clientes": tiene_accion,
@@ -2023,10 +2065,17 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
     if autodeclaracion is not None:
         evaluacion_cobertura = _evaluacion_desde_autodeclaracion(autodeclaracion)
     else:
-        # Respaldo si el redactor no devolvio autodeclaracion valida (fallo
-        # de IA, plan offline, o el modelo omitio el bloque ===JSON===):
-        # unico caso donde se vuelve a los tags de node_families.
-        evaluacion_cobertura = plan_readiness.evaluar_ruta(ruta + cosecha_ids, families)
+        # Hotfix v2.2.1: la autodeclaracion de la regla 11 falta o no
+        # parseo (causa raiz real: un ===JSON=== cortado por max_tokens en
+        # una sesion en vivo; tambien cubre el respaldo offline sin IA).
+        # Escanea los encabezados REALES del cuerpo ya generado en vez de
+        # volver a los tags de node_families sobre ruta+cosecha_ids (el
+        # material de ENTRADA, que el redactor puede omitir parcialmente
+        # segun la regla 2) -- JAMAS se degrada la etiqueta solo porque el
+        # JSON de cola se corto.
+        evaluacion_cobertura = _familias_desde_encabezados(cuerpo)
+        if registrar_evento:
+            registrar_evento({"tipo": "autodeclaracion_fallida"})
 
     evaluacion_cobertura = _corregir_coherencia_cobertura(
         evaluacion_cobertura, cuerpo, tiene_material_economico, registrar_evento=registrar_evento)
@@ -2429,7 +2478,7 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
 
     if resultado["tipo"] == "salio":
         db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
-                         costo_por_componente_usd())
+                         costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD)
         _merge_numeros_proyecto(project_id, resultado.get("numeros_detectados_sesion"))
         _merge_tipo_oferta(project_id, resultado.get("tipo_oferta_sesion"), resultado.get("unidad_venta_sesion"))
         return
@@ -2452,7 +2501,7 @@ def _persistir_resultado(project_id, db_session_id, resultado, graph, families, 
 
     ruta_con_modos_json = [{"node_id": nid, "tipo": modo} for nid, modo in zip(ruta, modos)]
     db.cerrar_sesion(project_id, db_session_id, ruta_con_modos_json, costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
-                     costo_por_componente_usd())
+                     costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD)
 
     etiqueta_db = "seguimiento" if es_seguimiento else ("completo" if evaluacion_cobertura["es_completa"] else "inicial")
     total_conceptos = len(ruta) + len(cosecha_ids)
@@ -2603,7 +2652,7 @@ def modo_gratis(graph, entry_seeds):
 
     db.guardar_plan(project_id, db_session_id, "organizador", markdown, 0, [])
     db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
-                     costo_por_componente_usd())
+                     costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD)
     if isinstance(data, dict) and data.get("etapa_detectada") in db.FASES:
         db.actualizar_proyecto(project_id, fase_actual=data["etapa_detectada"])
 
@@ -2932,7 +2981,7 @@ def modo_reporte(project_id, graph, families):
     db_session_id = db.crear_sesion(project_id, "reporte", "generacion de reporte de sostenibilidad")
     db.guardar_plan(project_id, db_session_id, "reporte_numeros", contenido, 0, [])
     db.cerrar_sesion(project_id, db_session_id, [], costo_acumulado_usd(), PRESUPUESTO_EXCEDIDO,
-                     costo_por_componente_usd())
+                     costo_por_componente_usd(), presupuesto_usd=PRESUPUESTO_SESION_USD)
     reportar_costo()
 
 

@@ -32,7 +32,19 @@ export const PRECIOS: Record<string, [number, number]> = {
 export const CACHE_READ_MULT = 0.1;
 export const CACHE_WRITE_MULT = 1.25;
 
-export const PRESUPUESTO_SESION_USD_DEFAULT = 0.3;
+// Hotfix v2.2.1: configurable por variable de entorno, espejo exacto de
+// PRESUPUESTO_SESION_USD en prototipo_motor.py (mismo nombre de env var,
+// mismo default subido de 0.30 a 0.35). PRESUPUESTO_REPORTE_USD se
+// mantiene fijo -- --reporte es una corrida corta y aislada, no necesita
+// ser configurable por separado.
+function leerPresupuestoSesionUsd(): number {
+  const raw = process.env.PRESUPUESTO_SESION_USD;
+  if (!raw) return 0.35;
+  const valor = Number(raw);
+  return Number.isFinite(valor) ? valor : 0.35;
+}
+
+export const PRESUPUESTO_SESION_USD_DEFAULT = leerPresupuestoSesionUsd();
 export const PRESUPUESTO_REPORTE_USD = 0.1;
 
 export interface UsoModelo {

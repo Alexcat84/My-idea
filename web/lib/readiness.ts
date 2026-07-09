@@ -43,7 +43,11 @@ interface NodoGrafo {
   [key: string]: unknown;
 }
 
-function _normalizar(texto: string): string {
+// Exportadas (Hotfix v2.2.1): planRedactor.ts las reusa para el respaldo
+// de autodeclaracion basado en encabezados (familiasDesdeEncabezados),
+// mismo criterio deterministico que clasificarNodo aplica a los nodos del
+// grafo, aplicado ahora al markdown ya generado.
+export function normalizarTexto(texto: string): string {
   // NFKD descompone "á" en "a" + U+0301 (acento combinante); el rango
   // ̀-ͯ (Combining Diacritical Marks) es el equivalente en JS
   // de filtrar por unicodedata.combining(c) != 0 en Python.
@@ -53,14 +57,14 @@ function _normalizar(texto: string): string {
     .replace(/[̀-ͯ]/g, "");
 }
 
-function _coincide(textoNormalizado: string, palabrasClave: string[]): boolean {
+export function coincideKeyword(textoNormalizado: string, palabrasClave: string[]): boolean {
   return palabrasClave.some((p) => textoNormalizado.includes(p));
 }
 
 export function clasificarNodo(node: NodoGrafo): Familia {
-  const texto = _normalizar(`${node.titulo_concepto ?? ""} ${node.resumen_teorico ?? ""}`);
-  if (_coincide(texto, KEYWORDS_ACCION_CLIENTES)) return "accion_clientes";
-  if (_coincide(texto, KEYWORDS_VIABILIDAD_ECONOMICA)) return "viabilidad_economica";
+  const texto = normalizarTexto(`${node.titulo_concepto ?? ""} ${node.resumen_teorico ?? ""}`);
+  if (coincideKeyword(texto, KEYWORDS_ACCION_CLIENTES)) return "accion_clientes";
+  if (coincideKeyword(texto, KEYWORDS_VIABILIDAD_ECONOMICA)) return "viabilidad_economica";
   return "general";
 }
 

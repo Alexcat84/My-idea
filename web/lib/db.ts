@@ -61,6 +61,7 @@ export interface Sesion {
   ruta: RutaNodo[];
   costo_usd: number;
   presupuesto_excedido: boolean;
+  presupuesto_usd?: number | null;
   estado_recorrido: EstadoSesionPersistido | null;
   created_at: string;
   closed_at: string | null;
@@ -151,7 +152,8 @@ export async function cerrarSesion(
   rutaConModos: RutaNodo[],
   costoUsd: number,
   presupuestoExcedido: boolean,
-  costoDesglose?: Record<string, number>
+  costoDesglose?: Record<string, number>,
+  presupuestoUsd?: number
 ): Promise<void> {
   const campos: Record<string, unknown> = {
     ruta: rutaConModos,
@@ -161,6 +163,12 @@ export async function cerrarSesion(
   };
   if (costoDesglose && Object.keys(costoDesglose).length > 0) {
     campos.costo_desglose = costoDesglose;
+  }
+  // Hotfix v2.2.1: presupuesto vigente con el que esta sesion realmente
+  // corrio (--reporte usa PRESUPUESTO_REPORTE_USD en vez del default de
+  // sesion, asi que puede diferir entre sesiones).
+  if (presupuestoUsd !== undefined) {
+    campos.presupuesto_usd = presupuestoUsd;
   }
   const { error } = await supabase.from("sessions").update(campos).eq("id", sessionId);
   if (error) throw error;

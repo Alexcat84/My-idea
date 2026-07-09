@@ -190,7 +190,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           rutaConModos,
           costoAcumuladoUsd(acumuladoFinal),
           acumuladoFinal.presupuesto_excedido,
-          acumuladoFinal.uso_por_componente
+          acumuladoFinal.uso_por_componente,
+          PRESUPUESTO_SESION_USD_DEFAULT
         );
         await guardarEstadoSesion(supabase, sessionId, {
           recorrido: { ...recorrido, fase: "cerrada", preguntaPendiente: null },

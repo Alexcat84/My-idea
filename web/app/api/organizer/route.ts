@@ -7,7 +7,14 @@
 import { NextResponse } from "next/server";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
-import { costoAcumuladoUsd, llamarClaude, MODEL_HAIKU, usoVacio, type UsoAcumulado } from "@/lib/costmeter";
+import {
+  costoAcumuladoUsd,
+  llamarClaude,
+  MODEL_HAIKU,
+  PRESUPUESTO_SESION_USD_DEFAULT,
+  usoVacio,
+  type UsoAcumulado,
+} from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { parsearJson } from "@/lib/parseJson";
@@ -100,7 +107,8 @@ export async function POST(request: Request) {
       [],
       costoAcumuladoUsd(acumulado),
       acumulado.presupuesto_excedido,
-      acumulado.uso_por_componente
+      acumulado.uso_por_componente,
+      PRESUPUESTO_SESION_USD_DEFAULT
     );
     return NextResponse.json(
       { error: `fallo el organizador con IA: ${e instanceof Error ? e.message : String(e)}`, project_id: projectId },
@@ -117,7 +125,8 @@ export async function POST(request: Request) {
     [],
     costoAcumuladoUsd(acumulado),
     acumulado.presupuesto_excedido,
-    acumulado.uso_por_componente
+    acumulado.uso_por_componente,
+    PRESUPUESTO_SESION_USD_DEFAULT
   );
   if (typeof data.etapa_detectada === "string" && (FASES as readonly string[]).includes(data.etapa_detectada)) {
     await actualizarProyecto(supabase, projectId, { fase_actual: data.etapa_detectada });

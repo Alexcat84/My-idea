@@ -8,7 +8,7 @@
  */
 import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import { costoAcumuladoUsd, type UsoAcumulado } from "./costmeter";
+import { costoAcumuladoUsd, PRESUPUESTO_SESION_USD_DEFAULT, type UsoAcumulado } from "./costmeter";
 import { cerrarSesion, guardarEstadoSesion, mergeNumerosProyecto, mergeTipoOferta } from "./db";
 import type { ResultadoTurno } from "./engine/recorrido";
 
@@ -25,7 +25,16 @@ export async function responderResultadoTurno(
   if (resultado.tipo === "salio") {
     // Fiel a _persistir_resultado en Python: el caso "salio" cierra con
     // ruta=[] (no se persiste la ruta recorrida sin un plan que la use).
-    await cerrarSesion(supabase, projectId, sessionId, [], costoUsd, acumuladoFinal.presupuesto_excedido, acumuladoFinal.uso_por_componente);
+    await cerrarSesion(
+      supabase,
+      projectId,
+      sessionId,
+      [],
+      costoUsd,
+      acumuladoFinal.presupuesto_excedido,
+      acumuladoFinal.uso_por_componente,
+      PRESUPUESTO_SESION_USD_DEFAULT
+    );
     await mergeNumerosProyecto(supabase, projectId, resultado.estado.numerosDetectadosSesion);
     await mergeTipoOferta(supabase, projectId, resultado.estado.tipoOfertaSesion, resultado.estado.unidadVentaSesion);
     return NextResponse.json({

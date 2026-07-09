@@ -17,7 +17,15 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_ESTADO_VIVO } from "../prompts";
-import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
+import {
+  coincideKeyword,
+  evaluarRuta,
+  KEYWORDS_ACCION_CLIENTES,
+  KEYWORDS_VIABILIDAD_ECONOMICA,
+  normalizarTexto,
+  type EvaluacionCobertura,
+  type Familia,
+} from "../readiness";
 import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAMILIA_FALTANTE } from "./constants";
 import { dominioPermitido, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
@@ -181,21 +189,29 @@ export function prepararPlan(
 export const MARCADOR_AUTODECLARACION = "===JSON===";
 
 /** Port de _parsear_autodeclaracion: separa el markdown del bloque final
- * ===JSON=== (Fase 2.8). Si el delimitador falta o el JSON es invalido,
- * devuelve (raw completo, null) -- "sin autodeclaracion". */
+ * ===JSON=== (Fase 2.8). Si el delimitador falta, devuelve (raw completo,
+ * null). Si el delimitador SI aparece pero el JSON es invalido (Hotfix
+ * v2.2.1: la causa real es un ===JSON=== cortado por max_tokens), devuelve
+ * el cuerpo YA SEPARADO (sin el marcador ni el JSON roto) en vez de raw
+ * completo -- de lo contrario el usuario veria el marcador y el JSON
+ * truncado colgando al final de su plan. En ambos casos
+ * autodeclaracion=null, y finalizarPlan() cae al respaldo por encabezados
+ * (ver familiasDesdeEncabezados). Contrato compacto desde Hotfix v2.2.1:
+ * solo familias_tratadas -- se elimino "secciones" (nunca se leia, era
+ * puro peso extra en la cola que se cortaba primero al agotar max_tokens). */
 export function parsearAutodeclaracion(raw: string): {
   cuerpo: string;
-  autodeclaracion: { familias_tratadas?: string[]; secciones?: string[] } | null;
+  autodeclaracion: { familias_tratadas?: string[] } | null;
 } {
   const idx = raw.lastIndexOf(MARCADOR_AUTODECLARACION);
   if (idx === -1) return { cuerpo: raw.trim(), autodeclaracion: null };
   const cuerpo = raw.slice(0, idx).trim();
   const bloque = raw.slice(idx + MARCADOR_AUTODECLARACION.length);
   try {
-    const data = parsearJson<{ familias_tratadas?: string[]; secciones?: string[] }>(bloque);
+    const data = parsearJson<{ familias_tratadas?: string[] }>(bloque);
     return { cuerpo, autodeclaracion: data };
   } catch {
-    return { cuerpo: raw.trim(), autodeclaracion: null };
+    return { cuerpo, autodeclaracion: null };
   }
 }
 
@@ -280,6 +296,40 @@ export function evaluacionDesdeAutodeclaracion(
   const tieneViabilidad = tratadas.has("viabilidad_economica");
   const faltantes = ["accion_clientes", "viabilidad_economica"]
     .filter((f) => !tratadas.has(f))
+    .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
+  return {
+    es_completa: tieneAccion && tieneViabilidad,
+    tiene_accion_clientes: tieneAccion,
+    tiene_viabilidad_economica: tieneViabilidad,
+    familias_faltantes: faltantes,
+  };
+}
+
+/**
+ * Respaldo deterministico (Hotfix v2.2.1) cuando la autodeclaracion de la
+ * regla 11 falta o no parsea (causa raiz real: un ===JSON=== cortado por
+ * max_tokens en una sesion en vivo). A diferencia del respaldo anterior
+ * (evaluarRuta sobre ruta+cosechaIds), esto NO mira los tags de families
+ * del material de ENTRADA -- el redactor puede omitir parte de
+ * materialDeApoyo si "no encaja con claridad en ninguna etapa" (regla 2),
+ * asi que un tag de entrada no garantiza que la familia realmente quedo
+ * cubierta en la SALIDA. En vez de eso, escanea los encabezados REALES
+ * del markdown ya generado con las mismas palabras clave de readiness.ts.
+ * viabilidad_economica ademas se confirma por la presencia exacta de la
+ * seccion fija de sostenibilidad (regla 4), la misma senal que ya usa
+ * corregirCoherenciaCobertura.
+ */
+export function familiasDesdeEncabezados(cuerpo: string): CoberturaPlan {
+  const encabezados = cuerpo
+    .split("\n")
+    .filter((linea) => linea.trim().startsWith("#"))
+    .join(" ");
+  const textoEncabezados = normalizarTexto(encabezados);
+  const tieneAccion = coincideKeyword(textoEncabezados, KEYWORDS_ACCION_CLIENTES);
+  const tieneViabilidad =
+    cuerpo.includes(SECCION_ECONOMICA_TITULO) || coincideKeyword(textoEncabezados, KEYWORDS_VIABILIDAD_ECONOMICA);
+  const faltantes = (["accion_clientes", "viabilidad_economica"] as const)
+    .filter((f) => (f === "accion_clientes" ? !tieneAccion : !tieneViabilidad))
     .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
   return {
     es_completa: tieneAccion && tieneViabilidad,
@@ -381,7 +431,10 @@ export function finalizarPlan(
   if (autodeclaracion !== null) {
     evaluacionCobertura = evaluacionDesdeAutodeclaracion(autodeclaracion);
   } else {
-    evaluacionCobertura = evaluarRuta([...ruta, ...cosechaIds], families);
+    // Hotfix v2.2.1: ver familiasDesdeEncabezados -- jamas se degrada la
+    // etiqueta solo porque el JSON de cola se corto.
+    evaluacionCobertura = familiasDesdeEncabezados(cuerpo);
+    registrarEvento?.({ tipo: "autodeclaracion_fallida" });
   }
   evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento);
 

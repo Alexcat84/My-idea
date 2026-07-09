@@ -17,7 +17,7 @@ import { NextResponse } from "next/server";
 import type { NumerosProyecto } from "@/lib/calculadora";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
-import { costoAcumuladoUsd, usoVacio } from "@/lib/costmeter";
+import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerProyecto } from "@/lib/db";
 import { avanzarReporte, iniciarReporte } from "@/lib/engine/reporteFlow";
 import { createClient } from "@/lib/supabase/server";
@@ -121,7 +121,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     [],
     costoAcumuladoUsd(resultado.acumulado),
     resultado.acumulado.presupuesto_excedido,
-    resultado.acumulado.uso_por_componente
+    resultado.acumulado.uso_por_componente,
+    PRESUPUESTO_REPORTE_USD
   );
 
   return NextResponse.json({

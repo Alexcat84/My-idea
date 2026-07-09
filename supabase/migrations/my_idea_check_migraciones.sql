@@ -81,5 +81,19 @@ FROM (
   SELECT '010', 'projects.estado_reporte (JSONB)',
     EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='projects' AND column_name='estado_reporte')
 
+  UNION ALL
+  -- 011 · Hotfix v2.2.1 configurable session budget, persisted per session
+  SELECT '011', 'sessions.presupuesto_usd (NUMERIC)',
+    EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='sessions' AND column_name='presupuesto_usd')
+
+  UNION ALL
+  -- 012 · Bug fix found verifying Hotfix v2.2.1 live: project_nodes_tipo_check allows 'salto'
+  SELECT '012', 'project_nodes_tipo_check allows ''salto''',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_nodes_tipo_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%salto%'
+    )
+
 ) checks
 ORDER BY num;

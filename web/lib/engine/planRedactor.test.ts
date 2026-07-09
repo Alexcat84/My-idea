@@ -9,6 +9,7 @@ import {
   ensamblarOffline,
   evaluacionDesdeAutodeclaracion,
   extraerTitulo,
+  familiasDesdeEncabezados,
   filtrarDeltaAntesDeAutodeclaracion,
   finalizarPlan,
   parsearAutodeclaracion,
@@ -73,10 +74,22 @@ describe("parsearAutodeclaracion", () => {
     expect(autodeclaracion).toBeNull();
   });
 
-  it("con un bloque JSON invalido, devuelve el raw completo y autodeclaracion=null", () => {
+  it("con un bloque JSON invalido, devuelve SOLO el cuerpo (sin el marcador ni el JSON roto) y autodeclaracion=null", () => {
     const raw = "# Titulo\n\nCuerpo.\n===JSON===\nesto no es json valido";
     const { cuerpo, autodeclaracion } = parsearAutodeclaracion(raw);
-    expect(cuerpo).toBe(raw.trim());
+    expect(cuerpo).toBe("# Titulo\n\nCuerpo.");
+    expect(cuerpo).not.toContain("===JSON===");
+    expect(autodeclaracion).toBeNull();
+  });
+
+  it("Hotfix v2.2.1 (causa raiz real): con el JSON cortado a la mitad por max_tokens, el cuerpo NUNCA muestra el marcador ni el JSON roto", () => {
+    const raw =
+      '# Plan para la mochila WiFi\n\nContenido real y completo del plan.\n\n' +
+      '===JSON===\n{"familias_tratadas": ["accion_clientes", "viabilidad_econo';
+    const { cuerpo, autodeclaracion } = parsearAutodeclaracion(raw);
+    expect(cuerpo).toBe("# Plan para la mochila WiFi\n\nContenido real y completo del plan.");
+    expect(cuerpo).not.toContain("===JSON===");
+    expect(cuerpo).not.toContain("familias_tratadas");
     expect(autodeclaracion).toBeNull();
   });
 });
@@ -211,6 +224,39 @@ describe("ensamblarOffline / extraerTitulo", () => {
   });
 });
 
+describe("familiasDesdeEncabezados (Hotfix v2.2.1): fallback determinístico por encabezados reales del markdown", () => {
+  it("un encabezado con keyword de accion_clientes marca esa familia como tratada", () => {
+    const cuerpo = "# Mi Plan\n\n## Etapa 1: Entrevista a tus clientes reales\n\nContenido.";
+    const r = familiasDesdeEncabezados(cuerpo);
+    expect(r.tiene_accion_clientes).toBe(true);
+    expect(r.tiene_viabilidad_economica).toBe(false);
+    expect(r.es_completa).toBe(false);
+  });
+
+  it(`la presencia de "${SECCION_ECONOMICA_TITULO}" marca viabilidad_economica como tratada, aunque no haya otra keyword`, () => {
+    const cuerpo = `# Mi Plan\n\n## ${SECCION_ECONOMICA_TITULO}\n\nTexto economico.`;
+    const r = familiasDesdeEncabezados(cuerpo);
+    expect(r.tiene_viabilidad_economica).toBe(true);
+  });
+
+  it("sin ninguna keyword ni la seccion economica, ninguna familia se marca como tratada", () => {
+    const cuerpo = "# Mi Plan\n\n## Introduccion\n\nContenido generico sin senales.";
+    const r = familiasDesdeEncabezados(cuerpo);
+    expect(r.tiene_accion_clientes).toBe(false);
+    expect(r.tiene_viabilidad_economica).toBe(false);
+    expect(r.es_completa).toBe(false);
+  });
+
+  it("con ambas familias presentes en los encabezados, es_completa=true", () => {
+    const cuerpo =
+      "# Mi Plan\n\n## Etapa 1: Entrevista a tus clientes reales\n\nContenido.\n\n" +
+      `## ${SECCION_ECONOMICA_TITULO}\n\nTexto economico.`;
+    const r = familiasDesdeEncabezados(cuerpo);
+    expect(r.es_completa).toBe(true);
+    expect(r.familias_faltantes).toHaveLength(0);
+  });
+});
+
 describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo simulado", () => {
   it("con autodeclaracion completa, etiqueta 'Plan completo' y sin seccion de faltantes", () => {
     const ruta = ["design_thinking_fundamentos"];
@@ -242,6 +288,42 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
     const prep = prepararPlan(ruta, graph, families, "mi idea", "perfil", null, false, null);
     const resultado = finalizarPlan(null, prep, ruta, families, "mi idea");
     expect(resultado.markdown).toContain("# Tu plan de accion");
+  });
+
+  it("Hotfix v2.2.1 4(a): con el bloque ===JSON=== ausente por completo, las familias se derivan de los encabezados y la etiqueta es correcta", () => {
+    const ruta = ["design_thinking_fundamentos"];
+    const prep = prepararPlan(ruta, graph, families, "mi idea", "perfil", null, false, null);
+    const rawModelo =
+      "# Mi Plan\n\n## Etapa 1: Entrevista a tus clientes reales\n\nContenido real.\n\n" +
+      `## ${SECCION_ECONOMICA_TITULO}\n\nTexto economico real.`;
+
+    const eventos: Record<string, unknown>[] = [];
+    const resultado = finalizarPlan(rawModelo, prep, ruta, families, "mi idea", (e) => eventos.push(e));
+
+    expect(resultado.evaluacionCobertura.es_completa).toBe(true);
+    expect(resultado.markdown).toContain("_Plan completo_");
+    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("===JSON===");
+    expect(eventos).toContainEqual({ tipo: "autodeclaracion_fallida" });
+  });
+
+  it("Hotfix v2.2.1 4(a) (causa raiz real): con el JSON cortado a la mitad por max_tokens, las familias se derivan de los encabezados y JAMAS se degrada la etiqueta", () => {
+    const ruta = ["design_thinking_fundamentos"];
+    const prep = prepararPlan(ruta, graph, families, "mi idea", "perfil", null, false, null);
+    const rawModelo =
+      "# Mi Plan\n\n## Etapa 1: Entrevista a tus clientes reales\n\nContenido real.\n\n" +
+      `## ${SECCION_ECONOMICA_TITULO}\n\nTexto economico real.\n\n` +
+      '===JSON===\n{"familias_tratadas": ["accion_clientes", "viabilidad_econo';
+
+    const eventos: Record<string, unknown>[] = [];
+    const resultado = finalizarPlan(rawModelo, prep, ruta, families, "mi idea", (e) => eventos.push(e));
+
+    expect(resultado.evaluacionCobertura.es_completa).toBe(true);
+    expect(resultado.markdown).toContain("_Plan completo_");
+    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("===JSON===");
+    expect(resultado.markdown).not.toContain("familias_tratadas");
+    expect(eventos).toContainEqual({ tipo: "autodeclaracion_fallida" });
   });
 });
 

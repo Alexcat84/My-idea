@@ -163,7 +163,8 @@ def crear_sesion(project_id, tipo, mensaje_entrada, puerta_entrada=None):
     return session_id
 
 
-def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto_excedido, costo_desglose=None):
+def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto_excedido, costo_desglose=None,
+                   presupuesto_usd=None):
     """ruta_con_modos: [{"node_id": str, "tipo": "conversado"|"silencioso"}].
     costo_desglose (Fase 2.7): {"clasificacion": float, "turnos": float,
     "plan": float, "estado_vivo": float, ...} - costo real por componente,
@@ -171,7 +172,13 @@ def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto
     Requiere la columna sessions.costo_desglose (jsonb); ver
     supabase/migrations/my_idea_002_costo_desglose.sql. Si la columna aun
     no existe en el proyecto de Supabase, este update fallaria; en ese caso
-    se reintenta sin costo_desglose para no romper el cierre de sesion."""
+    se reintenta sin costo_desglose para no romper el cierre de sesion.
+    presupuesto_usd (Hotfix v2.2.1): el presupuesto vigente (PRESUPUESTO_
+    SESION_USD, ya configurable por env var) con el que esta sesion
+    realmente corrio -- --reporte lo baja temporalmente a
+    PRESUPUESTO_REPORTE_USD, asi que este valor puede diferir del default
+    de la sesion principal. Requiere sessions.presupuesto_usd (numeric);
+    ver supabase/migrations/my_idea_011_presupuesto_sesion.sql."""
     if disponible():
         campos = {
             "ruta": ruta_con_modos,
@@ -181,10 +188,13 @@ def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto
         }
         if costo_desglose:
             campos["costo_desglose"] = costo_desglose
+        if presupuesto_usd is not None:
+            campos["presupuesto_usd"] = presupuesto_usd
         try:
             _cliente().table("sessions").update(campos).eq("id", session_id).execute()
         except Exception:
             campos.pop("costo_desglose", None)
+            campos.pop("presupuesto_usd", None)
             _cliente().table("sessions").update(campos).eq("id", session_id).execute()
         proyecto = obtener_proyecto(project_id)
         nuevo_conteo = (proyecto.get("session_count", 0) if proyecto else 0) + 1
@@ -197,6 +207,7 @@ def cerrar_sesion(project_id, session_id, ruta_con_modos, costo_usd, presupuesto
             s["costo_usd"] = costo_usd
             s["presupuesto_excedido"] = presupuesto_excedido
             s["costo_desglose"] = costo_desglose or {}
+            s["presupuesto_usd"] = presupuesto_usd
             s["closed_at"] = _ahora()
     data["session_count"] = data.get("session_count", 0) + 1
     data["updated_at"] = _ahora()
