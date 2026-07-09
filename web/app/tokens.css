@@ -1,0 +1,29 @@
+/*
+ * My Idea — tokens v1 (dirección Frame.io V4: negro cinematográfico, un
+ * solo acento). ESTE es el único archivo de color de toda la UI: cambiar
+ * la paleta = editar este archivo y nada más (regla del brief, sección 1).
+ *
+ * Las 5 reglas de lenguaje visual que estos tokens sirven:
+ *  1. El color vive en el contenido, no en el chrome (interfaz monocroma;
+ *     --accent solo en acciones, progreso y estados).
+ *  2. Hairlines, no cajas (--border de 1px translúcido, sin sombras
+ *     dramáticas).
+ *  3. Jerarquía por tamaño y peso tipográfico, no por colores de título.
+ *  4. Layout de riel + panel en la vista de idea.
+ *  5. Movimiento mantecoso y breve (--motion) en todo lo que transiciona.
+ */
+:root {
+  --bg: #000000;               /* fondo base: negro verdadero */
+  --surface: #101013;          /* cintas, tarjetas, acordeones */
+  --surface-2: #17171b;        /* hover / elevación segunda */
+  --border: rgba(255, 255, 255, 0.08); /* hairlines, no bordes gruesos */
+  --text: #f5f6f8;             /* títulos y texto primario */
+  --text-dim: #a6a7ad;         /* secundario, metadatos, labels */
+  --accent: #4d7cfe;           /* azul eléctrico: acciones, progreso, focus */
+  --accent-soft: rgba(77, 124, 254, 0.14); /* fondos de estado activo */
+  --done: #3fb950;             /* checklist Hecho / confirmaciones */
+  --warn: #e3b341;             /* avisos suaves (en palabras de persona) */
+  --radius: 12px;
+  --radius-lg: 16px;
+  --motion: 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
