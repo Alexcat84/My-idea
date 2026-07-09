@@ -29,7 +29,7 @@ def candidatos(cat: str) -> list[dict]:
     grupos: dict[str, set[str]] = defaultdict(set)
     # 1) titulo normalizado identico  2) mismo id base sin sufijo numerico
     for nid, d in nodos.items():
-        grupos["t:" + norm_titulo(d.get("titulo", nid))].add(nid)
+        grupos["t:" + norm_titulo(d.get("titulo_concepto", nid))].add(nid)
         grupos["b:" + sin_sufijo(nid)].add(nid)
     vistos: set[frozenset] = set()
     out = []
@@ -45,12 +45,12 @@ def candidatos(cat: str) -> list[dict]:
             "aprobar": None,
             "keeper": orden[0],
             "fusionar": orden[1:],
-            "titulos": {i: nodos[i].get("titulo", "") for i in orden},
+            "titulos": {i: nodos[i].get("titulo_concepto", "") for i in orden},
         })
     # 3) fuzzy de titulos entre pares aun no agrupados (solo pares sueltos)
     ids = sorted(nodos)
     ya = {i for g in out for i in [g["keeper"], *g["fusionar"]]}
-    normt = {i: norm_titulo(nodos[i].get("titulo", i)) for i in ids}
+    normt = {i: norm_titulo(nodos[i].get("titulo_concepto", i)) for i in ids}
     for a_i in range(len(ids)):
         a = ids[a_i]
         if a in ya:
@@ -61,8 +61,8 @@ def candidatos(cat: str) -> list[dict]:
             if similitud(normt[a], normt[b]) >= UMBRAL_FUZZY:
                 keeper, otro = sorted([a, b], key=lambda i: -len(nodos[i].get("resumen_teorico", "")))
                 out.append({"aprobar": None, "keeper": keeper, "fusionar": [otro],
-                            "titulos": {keeper: nodos[keeper].get("titulo", ""),
-                                        otro: nodos[otro].get("titulo", "")}})
+                            "titulos": {keeper: nodos[keeper].get("titulo_concepto", ""),
+                                        otro: nodos[otro].get("titulo_concepto", "")}})
                 ya |= {a, b}
                 break
     return out
@@ -86,7 +86,7 @@ def fusionar(cat: str) -> None:
                 continue
             k = nodos[keeper]
             k.setdefault("merged_originals", []).append(
-                {"node_id": viejo, "titulo": nodos[viejo].get("titulo", ""),
+                {"node_id": viejo, "titulo": nodos[viejo].get("titulo_concepto", ""),
                  "fuente": nodos[viejo].get("fuente", "")})
             k.setdefault("ids_alias", []).append(viejo)
             # heredar aristas del absorbido (se simetriza en paso 4)

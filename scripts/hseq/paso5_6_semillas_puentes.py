@@ -35,11 +35,11 @@ def sugerir_semillas(cat: str) -> None:
     top = sorted(nodos, key=puntaje, reverse=True)[:12]
     print(f"\n== {cat}: candidatas a semilla (aprobar 5-8, guardar en metadata/entry_seeds.json) ==")
     for nid in top:
-        print(f"  {nid}  <- {nodos[nid].get('titulo','')[:70]}")
+        print(f"  {nid}  <- {nodos[nid].get('titulo_concepto','')[:70]}")
 
 
 def _texto(d: dict) -> str:
-    return f"{d.get('titulo','')}. {d.get('resumen_teorico','')[:400]}"
+    return f"{d.get('titulo_concepto','')}. {d.get('resumen_teorico','')[:400]}"
 
 
 def proponer_puentes(cat: str) -> None:
@@ -65,9 +65,9 @@ def proponer_puentes(cat: str) -> None:
         metodo = "embeddings"
     except ImportError:
         for cid, cd in core.items():
-            tc = norm_titulo(cd.get("titulo", cid))
+            tc = norm_titulo(cd.get("titulo_concepto", cid))
             for did, dd in dominio.items():
-                s = similitud(tc, norm_titulo(dd.get("titulo", did)))
+                s = similitud(tc, norm_titulo(dd.get("titulo_concepto", did)))
                 if s >= 0.55:
                     pares.append({"core": cid, "dominio": did, "score": round(s, 4)})
         metodo = "fuzzy (instalar sentence-transformers para mejor senal)"

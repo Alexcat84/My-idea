@@ -43,7 +43,7 @@ def validar(cat: str, clave: str) -> bool:
         errores.append(f"{len(mal_dom)} nodos con dominio != '{clave}' (ej {mal_dom[:2]})")
     titulos = {}
     for i, d in nodos.items():
-        titulos.setdefault((d.get("titulo") or "").strip().lower(), []).append(i)
+        titulos.setdefault((d.get("titulo_concepto") or "").strip().lower(), []).append(i)
     dups = {t: v for t, v in titulos.items() if len(v) > 1 and t}
     if dups:
         errores.append(f"{len(dups)} titulos duplicados (ej {list(dups.values())[0]})")

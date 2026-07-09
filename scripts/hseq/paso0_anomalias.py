@@ -16,7 +16,7 @@ for cat, clave in CATEGORIAS.items():
     total += len(nodos)
     sin_dominio = [i for i, d in nodos.items() if "dominio" not in d]
     mal_dominio = [i for i, d in nodos.items() if d.get("dominio") not in (None, clave)]
-    sin_titulo = [i for i, d in nodos.items() if not d.get("titulo")]
+    sin_titulo = [i for i, d in nodos.items() if not d.get("titulo_concepto")]
     print(f"\n== {cat} (esperado dominio='{clave}') ==")
     print(f"  archivos: {len(todos)} | json: {len(jsons)} | otros: {extras or 'ninguno'}")
     print(f"  sin campo dominio: {sin_dominio or 'ninguno'}")
