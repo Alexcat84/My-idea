@@ -13,6 +13,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Acordeon } from "../../ui/Acordeon";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { Markdown } from "../../ui/Markdown";
+import { PlanDocumento } from "../../ui/PlanDocumento";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import { consumirSSE } from "@/lib/sseCliente";
 
@@ -329,12 +330,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
             </Acordeon>
           )}
 
-          {/* Plan (esta entrega: documento simple; acordeón en la siguiente) */}
-          {planMd && (
-            <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
-              <Markdown>{planMd}</Markdown>
-            </section>
-          )}
+          {/* Plan como documento acordeón (brief 2.6) */}
+          {planMd && <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} />}
 
           {/* Organizador persistido (cuando no hay nada más activo) */}
           {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
