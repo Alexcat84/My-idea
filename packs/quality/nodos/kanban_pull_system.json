@@ -15,11 +15,12 @@
   "entregable_esperado": "Sistema kanban funcionando con señales visuales de reposición implementadas",
   "nodos_previos": [
     "pull_vs_push_systems",
-    "inventory_analysis_lean"
+    "inventory_analysis_lean",
+    "constraint_management",
+    "value_stream_mapping_2"
   ],
   "nodos_siguientes": [
-    "smed_setup_reduction",
-    "line_balancing"
+    "smed_setup_reduction"
   ],
   "condiciones_activacion": [
     "Cuando se busca implementar un sistema pull de producción",

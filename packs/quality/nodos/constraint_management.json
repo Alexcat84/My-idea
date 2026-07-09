@@ -15,11 +15,15 @@
   "entregable_esperado": "Restricción del sistema identificada con plan de acción de las 5 etapas de TOC",
   "nodos_previos": [
     "value_stream_mapping",
-    "takt_time_demand"
+    "takt_time_demand",
+    "littles_law",
+    "pull_vs_push_systems",
+    "value_non_value_added_analysis"
   ],
   "nodos_siguientes": [
     "kanban_pull_system",
-    "cycle_time_reduction"
+    "reduccion_de_tiempo_de_ciclo",
+    "smed_setup_reduction"
   ],
   "condiciones_activacion": [
     "Cuando el throughput del sistema está limitado por un recurso específico",

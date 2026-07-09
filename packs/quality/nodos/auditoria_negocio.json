@@ -15,10 +15,14 @@
   "entregable_esperado": "Un informe de auditoría con hallazgos, comparación contra criterios de excelencia y recomendaciones de acción",
   "nodos_previos": [
     "tablero_control_scorecard",
-    "costo_de_mala_calidad"
+    "costo_de_mala_calidad",
+    "consejo_calidad_2",
+    "costo_de_mala_calidad_2",
+    "revision_progreso"
   ],
   "nodos_siguientes": [
-    "consejo_calidad"
+    "consejo_calidad",
+    "auditoria_presidente"
   ],
   "condiciones_activacion": [
     "Cuando se requiere validación independiente de que los sistemas de calidad funcionan correctamente",

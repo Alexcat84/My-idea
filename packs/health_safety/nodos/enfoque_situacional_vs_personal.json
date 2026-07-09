@@ -13,9 +13,14 @@
   ],
   "entregable_esperado": "Guía de decisión para intervenciones de error que priorice mejoras situacionales sobre medidas disciplinarias individuales",
   "nodos_previos": [
-    "ciclo_de_culpa"
+    "ciclo_de_culpa",
+    "ciclo_de_culpa_2",
+    "ciclo_de_culpa_blame_cycle",
+    "errores_como_consecuencia"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "tripod_delta_general_failure_types"
+  ],
   "condiciones_activacion": [
     "Al decidir cómo responder a un error humano detectado",
     "Cuando la organización tiende a resolver errores solo con medidas disciplinarias individuales"

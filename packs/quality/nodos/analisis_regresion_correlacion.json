@@ -15,10 +15,12 @@
   ],
   "entregable_esperado": "Ecuación de regresión validada con R² y análisis de correlación para predecir o explicar una variable de calidad",
   "nodos_previos": [
-    "pruebas_no_parametricas_transformacion"
+    "pruebas_no_parametricas_transformacion",
+    "prueba_hipotesis",
+    "visualizacion_datos_deteccion_outliers"
   ],
   "nodos_siguientes": [
-    "control_estadistico_procesos"
+    "control_estadistico_proceso"
   ],
   "condiciones_activacion": [
     "Cuando se necesita predecir un resultado de calidad basado en variables de proceso",

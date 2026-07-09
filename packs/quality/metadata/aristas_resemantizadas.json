@@ -1,0 +1,4606 @@
+[
+  {
+    "fantasma": "actitudes_de_gestion_absolutos_calidad",
+    "destino": "organizacion_independiente_de_calidad",
+    "score": 0.7446,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "organizacion_independiente_de_calidad",
+        "score": 0.7446,
+        "titulo": "Organización Independiente y Objetiva de la Función de Calidad"
+      },
+      {
+        "id": "politica_calidad_organizacional",
+        "score": 0.7334,
+        "titulo": "Política de Calidad Organizacional"
+      },
+      {
+        "id": "organizacion_equipos_calidad_servicio",
+        "score": 0.7317,
+        "titulo": "Organización de Equipos para la Calidad en Servicios"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estilo_gerencial_hockey_vs_ballet",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "estilo_gerencial_hockey_vs_ballet",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "ajuste_proceso",
+    "destino": "diseno_controles_proceso_mejorado",
+    "score": 0.5644,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "diseno_controles_proceso_mejorado",
+        "score": 0.5644,
+        "titulo": "Diseño de Controles del Proceso Mejorado"
+      },
+      {
+        "id": "accion_correctiva_6",
+        "score": 0.5352,
+        "titulo": "Acción Correctiva"
+      },
+      {
+        "id": "desarrollar_controles_transferir_operaciones",
+        "score": 0.5339,
+        "titulo": "Desarrollar Controles de Proceso y Transferir a Operaciones"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "interpretacion_cpk",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "alineacion_estrategica_empresarial",
+    "destino": "metas_negocio_calidad",
+    "score": 0.6862,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "metas_negocio_calidad",
+        "score": 0.6862,
+        "titulo": "Metas de Calidad en el Plan de Negocio"
+      },
+      {
+        "id": "establecer_vision_organizacional",
+        "score": 0.6592,
+        "titulo": "Establecimiento de Visión, Misión y Estrategias Organizacionales"
+      },
+      {
+        "id": "principios_alineacion_empresarial",
+        "score": 0.6514,
+        "titulo": "Principios de Alineación Empresarial (Shingo)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "modelo_shingo_evaluacion_excelencia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "modelo_shingo_evaluacion_excelencia",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "analisis_causa_efecto_xs_ys",
+    "destino": "diseno_experimentos_doe_mejora",
+    "score": 0.659,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "diseno_experimentos_doe_mejora",
+        "score": 0.659,
+        "titulo": "Diseño de Experimentos (DOE) en la Fase de Mejora"
+      },
+      {
+        "id": "graficos_control_variables",
+        "score": 0.5717,
+        "titulo": "Gráficos de Control para Datos de Variables (X-bar y R)"
+      },
+      {
+        "id": "dmaic_fase_analyze",
+        "score": 0.5695,
+        "titulo": "DMAIC - Fase Analyze (Análisis de Causas)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_experimentos_doe_mejora",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": []
+  },
+  {
+    "fantasma": "analisis_causa_raiz",
+    "destino": "analisis_diagnostico_causa",
+    "score": 0.5908,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "dmaic_fase_analyze",
+        "score": 0.5908,
+        "titulo": "DMAIC - Fase Analyze (Análisis de Causas)"
+      },
+      {
+        "id": "analisis_diagnostico_causa",
+        "score": 0.5597,
+        "titulo": "Análisis y Diagnóstico de la Causa Raíz"
+      },
+      {
+        "id": "analisis_causa_raiz_diagnostico",
+        "score": 0.5523,
+        "titulo": "Análisis de Causa Raíz mediante Diagnóstico Sistemático"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "mistake_proofing_poka_yoke_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "dmaic_fase_analyze",
+    "aplicado_en": [
+      {
+        "en": "mistake_proofing_poka_yoke_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "analisis_causa_raiz_rcca",
+    "destino": "analisis_diagnostico_causa",
+    "score": 0.6196,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "analisis_diagnostico_causa",
+        "score": 0.6196,
+        "titulo": "Análisis y Diagnóstico de la Causa Raíz"
+      },
+      {
+        "id": "determinacion_tamano_muestra",
+        "score": 0.5348,
+        "titulo": "Determinación del Tamaño de Muestra"
+      },
+      {
+        "id": "dmaic_fase_analyze",
+        "score": 0.5068,
+        "titulo": "DMAIC - Fase Analyze (Análisis de Causas)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "pdsa_shewhart_cycle",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "pdsa_shewhart_cycle",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "analisis_estadistico_de_datos",
+    "destino": "estadistica_basica_calidad",
+    "score": 0.6659,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "estadistica_basica_calidad",
+        "score": 0.6659,
+        "titulo": "Estadística Básica para Análisis de Calidad"
+      },
+      {
+        "id": "resumen_de_datos_graficos",
+        "score": 0.6342,
+        "titulo": "Resumen y Visualización Gráfica de Datos"
+      },
+      {
+        "id": "medidas_tendencia_dispersion",
+        "score": 0.6226,
+        "titulo": "Medidas de Tendencia Central y Dispersión"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cribado_de_datos",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "resumen_de_datos_graficos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "cribado_de_datos",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "resumen_de_datos_graficos",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "analisis_modal_fallos_efectos",
+    "destino": "fmea_analisis_de_modos_de_falla",
+    "score": 0.6489,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "fmea_analisis_de_modos_de_falla",
+        "score": 0.6489,
+        "titulo": "Failure Mode and Effects Analysis (FMEA)"
+      },
+      {
+        "id": "formula_exponencial_confiabilidad",
+        "score": 0.5628,
+        "titulo": "Fórmula Exponencial de Confiabilidad y MTBF"
+      },
+      {
+        "id": "distribucion_weibull_confiabilidad",
+        "score": 0.5607,
+        "titulo": "Distribución de Weibull para Análisis de Confiabilidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "key_process_product_characteristics",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "key_process_product_characteristics",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "auditoria_certificacion_qms",
+    "destino": "certificacion_profesional_calidad",
+    "score": 0.7292,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "certificacion_profesional_calidad",
+        "score": 0.7292,
+        "titulo": "Certificación Profesional de Expertos en Calidad"
+      },
+      {
+        "id": "certificacion_de_proveedores",
+        "score": 0.6461,
+        "titulo": "Certificación de Proveedores"
+      },
+      {
+        "id": "acreditacion_organismos_certificadores",
+        "score": 0.5944,
+        "titulo": "Acreditación de Organismos Certificadores y Reconocimiento Mutuo Internacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "iso_ts_16949_automotriz",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "iso_ts_16949_automotriz",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "autocontrol_empleado",
+    "destino": "autocontrol_y_controlabilidad",
+    "score": 0.819,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "autocontrol_y_controlabilidad",
+        "score": 0.819,
+        "titulo": "Autocontrol (Self-Control) y Controlabilidad"
+      },
+      {
+        "id": "concepto_autocontrol",
+        "score": 0.8075,
+        "titulo": "Concepto de Autocontrol (Self-Control) del Trabajador"
+      },
+      {
+        "id": "autocontrol_planificacion_servicio",
+        "score": 0.7493,
+        "titulo": "Planificación del Autocontrol (Self-Control) en Servicios"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "bucle_retroalimentacion_control",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "bucle_retroalimentacion_control",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "autocontrol_operario",
+    "destino": "autocontrol_y_controlabilidad",
+    "score": 0.7162,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "autocontrol_y_controlabilidad",
+        "score": 0.7162,
+        "titulo": "Autocontrol (Self-Control) y Controlabilidad"
+      },
+      {
+        "id": "concepto_autocontrol",
+        "score": 0.7007,
+        "titulo": "Concepto de Autocontrol (Self-Control) del Trabajador"
+      },
+      {
+        "id": "autocontrol_planificacion_servicio",
+        "score": 0.6064,
+        "titulo": "Planificación del Autocontrol (Self-Control) en Servicios"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "caracteristicas_clave_producto_proceso",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "planificacion_inicial_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "caracteristicas_clave_producto_proceso",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "planificacion_inicial_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "breakthroughs_organizacionales",
+    "destino": "secuencia_universal_breakthrough",
+    "score": 0.7586,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "secuencia_universal_breakthrough",
+        "score": 0.7586,
+        "titulo": "Secuencia Universal para el Breakthrough"
+      },
+      {
+        "id": "consejo_calidad",
+        "score": 0.7092,
+        "titulo": "Consejo de Calidad Ejecutivo (Quality Council)"
+      },
+      {
+        "id": "modelo_transformacion_juran",
+        "score": 0.6617,
+        "titulo": "Modelo de Transformación de Juran (Cinco Breakthroughs)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "costo_de_mala_calidad_copq_2",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "costo_de_mala_calidad_copq_2",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "cartas_de_control",
+    "destino": "tablero_control_scorecard",
+    "score": 0.492,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "tablero_control_scorecard",
+        "score": 0.492,
+        "titulo": "Tablero de Control (Scorecard) para Alta Dirección"
+      },
+      {
+        "id": "limites_control_por_juicio_error",
+        "score": 0.47,
+        "titulo": "Error de Establecer Límites de Control por Juicio en Lugar de Cálculo"
+      },
+      {
+        "id": "control_mantener_ganancias",
+        "score": 0.463,
+        "titulo": "Control para Mantener las Ganancias (Plan de Control)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_capacidad_proceso",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "catorce_pasos_mejora_calidad_crosby",
+    "destino": "programa_mejora_calidad_14_pasos",
+    "score": 0.7672,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "programa_mejora_calidad_14_pasos",
+        "score": 0.7672,
+        "titulo": "Programa de Mejora de Calidad (14 pasos)"
+      },
+      {
+        "id": "reconocimiento_al_desempeno",
+        "score": 0.6999,
+        "titulo": "Paso 12: Reconocimiento (Recognition)"
+      },
+      {
+        "id": "programa_de_mejora_de_calidad",
+        "score": 0.6981,
+        "titulo": "Programa de Mejora de Calidad (Los Catorce Pasos)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "costo_de_calidad_diagnostico",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "definicion_calidad_conformidad_requisitos_2",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "quality_management_maturity_grid_2",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "costo_de_calidad_diagnostico",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "definicion_calidad_conformidad_requisitos_2",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "quality_management_maturity_grid_2",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "catorce_puntos_deming",
+    "destino": "adaptacion_14_puntos_servicio_medico",
+    "score": 0.4633,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "adaptacion_14_puntos_servicio_medico",
+        "score": 0.4633,
+        "titulo": "Adaptación de los 14 Puntos de Deming al Servicio Médico"
+      },
+      {
+        "id": "las_siete_enfermedades_mortales",
+        "score": 0.4306,
+        "titulo": "Las Enfermedades Mortales de la Gestión"
+      },
+      {
+        "id": "consortium_benchmarking",
+        "score": 0.4251,
+        "titulo": "Benchmarking de Consorcio"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "compra_por_precio_mas_bajo_como_error",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "eliminar_slogans_y_exhortaciones",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "enfermedades_mortales_gestion",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "estructura_reporte_dual_estadistico",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "orgullo_por_el_trabajo",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "reglas_deming_consultoria_calidad",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "transformacion_calidad_compromiso_alta_direccion_japon",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "catorce_puntos_para_la_gestion",
+    "destino": "los_14_puntos_deming",
+    "score": 0.6668,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "plan_de_accion_transformacion",
+        "score": 0.6668,
+        "titulo": "Plan de Acción para la Transformación (Punto 14)"
+      },
+      {
+        "id": "metas_negocio_calidad",
+        "score": 0.6208,
+        "titulo": "Metas de Calidad en el Plan de Negocio"
+      },
+      {
+        "id": "resolucion_problemas_niveles_supervision",
+        "score": 0.6151,
+        "titulo": "Resolución de Problemas por Niveles de Supervisión (Regla 85-13-2)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cuestionario_autoevaluacion_gerencial_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "plan_de_accion_transformacion",
+    "aplicado_en": [
+      {
+        "en": "cuestionario_autoevaluacion_gerencial_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "comprension_de_variacion_causas_comunes_especiales",
+    "destino": "causas_comunes_vs_especiales",
+    "score": 0.7597,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "causas_comunes_vs_especiales",
+        "score": 0.7597,
+        "titulo": "Causas Comunes vs Causas Especiales de Variación"
+      },
+      {
+        "id": "causas_especiales_y_comunes_variacion",
+        "score": 0.735,
+        "titulo": "Causas Especiales y Comunes de Variación"
+      },
+      {
+        "id": "causas_comunes_causas_especiales",
+        "score": 0.7034,
+        "titulo": "Causas Comunes y Causas Especiales de Variación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "control_estadistico_de_procesos_en_tiempo_real",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "control_estadistico_de_procesos_en_tiempo_real",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "compromiso_alta_direccion",
+    "destino": "aprobacion_alta_direccion",
+    "score": 0.5889,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "aprobacion_alta_direccion",
+        "score": 0.5889,
+        "titulo": "Aseguramiento de la Participación de la Alta Dirección"
+      },
+      {
+        "id": "rol_alta_direccion_calidad",
+        "score": 0.5544,
+        "titulo": "Rol de la Alta Dirección en el Liderazgo de Calidad"
+      },
+      {
+        "id": "reglas_deming_consultoria_calidad",
+        "score": 0.5377,
+        "titulo": "Reglas de Compromiso para Consultoría en Transformación de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "reglas_deming_consultoria_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "reglas_deming_consultoria_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "compromiso_direccion",
+    "destino": "reglas_deming_consultoria_calidad",
+    "score": 0.4686,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "reglas_deming_consultoria_calidad",
+        "score": 0.4686,
+        "titulo": "Reglas de Compromiso para Consultoría en Transformación de Calidad"
+      },
+      {
+        "id": "accion_correctiva_sistematica",
+        "score": 0.4337,
+        "titulo": "Acción Correctiva Sistemática (Paso 6 de Crosby)"
+      },
+      {
+        "id": "planificacion_tecnologica_conjunta",
+        "score": 0.4131,
+        "titulo": "Planificación Tecnológica Conjunta con Proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "filosofia_zero_defectos",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "compromiso_gerencial",
+    "destino": "compromiso_gerencial_calidad",
+    "score": 0.6027,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "crosby_implementacion_gerencial",
+        "score": 0.6027,
+        "titulo": "Implementación como Habilidad Gerencial Crítica"
+      },
+      {
+        "id": "practicas_gerenciales_no_delegables",
+        "score": 0.5994,
+        "titulo": "Prácticas Gerenciales No Delegables"
+      },
+      {
+        "id": "organizacion_equipos_calidad_servicio",
+        "score": 0.5938,
+        "titulo": "Organización de Equipos para la Calidad en Servicios"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "medicion_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "crosby_implementacion_gerencial",
+    "aplicado_en": [
+      {
+        "en": "medicion_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "conceptos_basicos_estadistica_descriptiva",
+    "destino": "estadistica_basica_calidad",
+    "score": 0.5962,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "definiciones_operacionales_4",
+        "score": 0.5962,
+        "titulo": "Definiciones Operacionales"
+      },
+      {
+        "id": "definiciones_operacionales_3",
+        "score": 0.5373,
+        "titulo": "Definiciones Operacionales"
+      },
+      {
+        "id": "desarrollar_caracteristicas_producto",
+        "score": 0.5035,
+        "titulo": "Desarrollar las Características del Producto o Servicio (Features)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "distribucion_normal_probabilidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "definiciones_operacionales_4",
+    "aplicado_en": [
+      {
+        "en": "distribucion_normal_probabilidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "consejo_de_calidad_ejecutivo",
+    "destino": "consejo_ejecutivo_calidad",
+    "score": 0.663,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "organizacion_equipos_calidad_servicio",
+        "score": 0.663,
+        "titulo": "Organización de Equipos para la Calidad en Servicios"
+      },
+      {
+        "id": "entrenamiento_supervisores_calidad",
+        "score": 0.6562,
+        "titulo": "Entrenamiento de Supervisores (Paso 8)"
+      },
+      {
+        "id": "estilo_gerencial_calidad",
+        "score": 0.6489,
+        "titulo": "Estilo de Gestión para Líderes de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "dmaic_six_sigma",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "secuencia_universal_para_el_breakthrough",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "organizacion_equipos_calidad_servicio",
+    "aplicado_en": [
+      {
+        "en": "dmaic_six_sigma",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "secuencia_universal_para_el_breakthrough",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "control_calidad_especificaciones",
+    "destino": "manual_de_calidad",
+    "score": 0.6486,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "manual_de_calidad",
+        "score": 0.6486,
+        "titulo": "Manual de Calidad y Sistema de Control de Calidad"
+      },
+      {
+        "id": "evaluacion_encuesta_calidad_proveedor",
+        "score": 0.6468,
+        "titulo": "Encuesta de Evaluación de Calidad del Proveedor (Supplier Quality Survey)"
+      },
+      {
+        "id": "especificacion_requisitos_proveedores",
+        "score": 0.6444,
+        "titulo": "Especificación de Requisitos de Calidad para Proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "niveles_calidad_muestreo_aql_lql_aoql",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "control_de_calidad_ciclo_de_retroalimentacion",
+    "destino": "ciclo_de_retroalimentacion_control",
+    "score": 0.5622,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "ciclo_de_retroalimentacion_control",
+        "score": 0.5622,
+        "titulo": "Ciclo de Retroalimentación de Control (Sensor-Estándar-Actuador)"
+      },
+      {
+        "id": "control_calidad_definicion",
+        "score": 0.5535,
+        "titulo": "Control de Calidad como Proceso Universal (Trilogía de Juran)"
+      },
+      {
+        "id": "bucle_retroalimentacion_control",
+        "score": 0.521,
+        "titulo": "El Bucle de Retroalimentación (Feedback Loop) en Control de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "limites_control_estadistico_vs_tolerancias",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "limites_control_estadistico_vs_tolerancias",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "control_de_calidad_en_manufactura",
+    "destino": "planificacion_inicial_calidad",
+    "score": 0.7499,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "planificacion_inicial_calidad",
+        "score": 0.7499,
+        "titulo": "Planificación Inicial de Calidad en Manufactura"
+      },
+      {
+        "id": "decision_conformidad_producto",
+        "score": 0.7093,
+        "titulo": "Decisión de Conformidad del Producto"
+      },
+      {
+        "id": "especificacion_requisitos_proveedores",
+        "score": 0.7011,
+        "titulo": "Especificación de Requisitos de Calidad para Proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "auditoria_de_proceso",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "auditoria_de_proceso",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "control_de_calidad_por_retroalimentacion",
+    "destino": "ciclo_de_retroalimentacion_control",
+    "score": 0.6215,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "trilogia_juran_qa_qc",
+        "score": 0.6215,
+        "titulo": "Distinción entre Control de Calidad y Aseguramiento de Calidad"
+      },
+      {
+        "id": "control_calidad_definicion",
+        "score": 0.618,
+        "titulo": "Control de Calidad como Proceso Universal (Trilogía de Juran)"
+      },
+      {
+        "id": "manual_de_calidad",
+        "score": 0.5926,
+        "titulo": "Manual de Calidad y Sistema de Control de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "auditoria_de_producto",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "trilogia_juran_qa_qc",
+    "aplicado_en": [
+      {
+        "en": "auditoria_de_producto",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "control_de_procesos",
+    "destino": "control_del_proceso_del_proveedor",
+    "score": 0.789,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "control_del_proceso_del_proveedor",
+        "score": 0.789,
+        "titulo": "Plan de Control de Proceso del Proveedor"
+      },
+      {
+        "id": "control_estadistico_de_procesos_2",
+        "score": 0.7228,
+        "titulo": "Control Estadístico de Procesos mediante Gráficos de Control"
+      },
+      {
+        "id": "desarrollo_de_controles_de_proceso",
+        "score": 0.7206,
+        "titulo": "Desarrollo de Controles de Proceso y Transferencia a Operaciones"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "dmadv_design_for_six_sigma",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "mistake_proofing_poka_yoke_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "dmadv_design_for_six_sigma",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "mistake_proofing_poka_yoke_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_calidad",
+    "destino": "normas_culturales_calidad",
+    "score": 0.6892,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "normas_culturales_calidad",
+        "score": 0.6892,
+        "titulo": "Normas Culturales para la Transformación de Calidad"
+      },
+      {
+        "id": "doble_significado_calidad",
+        "score": 0.6774,
+        "titulo": "Doble Significado de la Calidad: Características vs. Ausencia de Fallos"
+      },
+      {
+        "id": "definicion_fitness_for_purpose",
+        "score": 0.6579,
+        "titulo": "Calidad como 'Fitness for Purpose'"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "codigo_conducta_orientado_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "politica_calidad_organizacional",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "recursos_humanos_cultura",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "codigo_conducta_orientado_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "politica_calidad_organizacional",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "recursos_humanos_cultura",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_calidad_positiva",
+    "destino": "normas_culturales_calidad",
+    "score": 0.6554,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "doble_significado_calidad",
+        "score": 0.6554,
+        "titulo": "Doble Significado de la Calidad: Características vs. Ausencia de Fallos"
+      },
+      {
+        "id": "normas_culturales_calidad",
+        "score": 0.6455,
+        "titulo": "Normas Culturales para la Transformación de Calidad"
+      },
+      {
+        "id": "definicion_fitness_for_purpose",
+        "score": 0.644,
+        "titulo": "Calidad como 'Fitness for Purpose'"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "equipos_autodirigidos_servicio",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "doble_significado_calidad",
+    "aplicado_en": [
+      {
+        "en": "equipos_autodirigidos_servicio",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_de_calidad_supervisores",
+    "destino": "entrenamiento_supervisores_2",
+    "score": 0.7717,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "entrenamiento_supervisores_2",
+        "score": 0.7717,
+        "titulo": "Entrenamiento de Supervisores (Paso 8 de Crosby)"
+      },
+      {
+        "id": "entrenamiento_supervisores_calidad",
+        "score": 0.7657,
+        "titulo": "Entrenamiento de Supervisores (Paso 8)"
+      },
+      {
+        "id": "formacion_seleccion_y_retencion_de_personal",
+        "score": 0.7369,
+        "titulo": "Selección, Capacitación y Retención de Personal para Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "identificacion_empleado_con_el_trabajo",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "intercambio_de_roles_para_motivacion",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_cero_defectos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "identificacion_empleado_con_el_trabajo",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "intercambio_de_roles_para_motivacion",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_cero_defectos",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_de_mejora_continua",
+    "destino": "breakthrough_cultural",
+    "score": 0.6997,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "breakthrough_cultural",
+        "score": 0.6997,
+        "titulo": "Ruptura Cultural (Breakthrough in Culture)"
+      },
+      {
+        "id": "transformacion_gerencial_para_la_calidad",
+        "score": 0.6992,
+        "titulo": "Transformación de la Gerencia como Proceso de Largo Plazo"
+      },
+      {
+        "id": "principios_mejora_continua",
+        "score": 0.6741,
+        "titulo": "Principios de Mejora Continua (Shingo)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "organizacion_liderazgo_estadistico",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "organizacion_liderazgo_estadistico",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cycle_time_reduction",
+    "destino": "reduccion_de_tiempo_de_ciclo",
+    "score": 0.8407,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "reduccion_de_tiempo_de_ciclo",
+        "score": 0.8407,
+        "titulo": "Reducción del Tiempo de Ciclo"
+      },
+      {
+        "id": "reduccion_tiempo_ciclo",
+        "score": 0.6352,
+        "titulo": "Reducción del Tiempo de Ciclo del Proceso"
+      },
+      {
+        "id": "takt_time",
+        "score": 0.5404,
+        "titulo": "Takt Time y Producción en Flujo"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "constraint_management",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "value_non_value_added_analysis",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "constraint_management",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "value_non_value_added_analysis",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "decidir_metodologia_mejora_continua",
+    "destino": "mejora_continua_del_proceso",
+    "score": 0.7796,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "mejora_continua_del_proceso",
+        "score": 0.7796,
+        "titulo": "Mejora Continua del Proceso (Never-Ending Improvement)"
+      },
+      {
+        "id": "evaluacion_seleccion_alternativas_mejora",
+        "score": 0.7561,
+        "titulo": "Evaluación y Selección de Alternativas de Mejora"
+      },
+      {
+        "id": "revision_progreso",
+        "score": 0.7434,
+        "titulo": "Proceso Formal de Revisión de Progreso"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "rol_black_belt_six_sigma",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "rol_black_belt_six_sigma",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "definicion_kpis_benchmarking",
+    "destino": "benchmarking_proceso",
+    "score": 0.7136,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "benchmarking_proceso",
+        "score": 0.7136,
+        "titulo": "Benchmarking: Definición y Proceso"
+      },
+      {
+        "id": "monitoreo_continuo_benchmarking",
+        "score": 0.6802,
+        "titulo": "Benchmarking Continuo"
+      },
+      {
+        "id": "recoleccion_validacion_datos_benchmarking",
+        "score": 0.6733,
+        "titulo": "Recolección y Validación de Datos en Benchmarking"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "recoleccion_validacion_datos_benchmarking",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "recoleccion_validacion_datos_benchmarking",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "definicion_oficina_de_calidad",
+    "destino": "oficina_calidad_y_excelencia",
+    "score": 0.799,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "oficina_calidad_y_excelencia",
+        "score": 0.799,
+        "titulo": "Oficina de Calidad y Excelencia (Quality and Excellence Office)"
+      },
+      {
+        "id": "consejo_de_calidad_2",
+        "score": 0.7268,
+        "titulo": "Consejo de Calidad (Quality Council)"
+      },
+      {
+        "id": "organizacion_independiente_de_calidad",
+        "score": 0.7252,
+        "titulo": "Organización Independiente y Objetiva de la Función de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estructura_global_oficina_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "estructura_global_oficina_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "definicion_valor_nominal",
+    "destino": "funcion_perdida_taguchi",
+    "score": 0.5678,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "funcion_perdida_taguchi",
+        "score": 0.5678,
+        "titulo": "Función de Pérdida de Taguchi para Definir Especificaciones"
+      },
+      {
+        "id": "limites_especificacion_funcionales",
+        "score": 0.4673,
+        "titulo": "Límites de Especificación Basados en Necesidades Funcionales"
+      },
+      {
+        "id": "creacion_valor_cliente",
+        "score": 0.4524,
+        "titulo": "Creación de Valor para el Cliente (Shingo)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "funcion_perdida_limites_especificacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "funcion_perdida_limites_especificacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "desarrollo_caracteristicas_detalladas_producto",
+    "destino": "desarrollo_caracteristicas_producto",
+    "score": 0.6937,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "desarrollar_caracteristicas_proceso_2",
+        "score": 0.6937,
+        "titulo": "Desarrollo de las Características del Proceso"
+      },
+      {
+        "id": "concurrent_engineering",
+        "score": 0.6738,
+        "titulo": "Ingeniería Concurrente"
+      },
+      {
+        "id": "desarrollo_caracteristicas_producto",
+        "score": 0.6525,
+        "titulo": "Desarrollo de Características del Producto o Servicio (Quality by Design - Paso 4)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "optimizacion_caracteristicas_diseno",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "desarrollar_caracteristicas_proceso_2",
+    "aplicado_en": [
+      {
+        "en": "optimizacion_caracteristicas_diseno",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "desarrollo_competencias_director_calidad",
+    "destino": "evaluacion_competencias_calidad",
+    "score": 0.7231,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_competencias_calidad",
+        "score": 0.7231,
+        "titulo": "Evaluación de Competencias y Habilidades del Personal de Calidad"
+      },
+      {
+        "id": "formacion_seleccion_y_retencion_de_personal",
+        "score": 0.7193,
+        "titulo": "Selección, Capacitación y Retención de Personal para Calidad"
+      },
+      {
+        "id": "desarrollo_capacidades_expertos_calidad",
+        "score": 0.7012,
+        "titulo": "Enfoque de Desarrollo de Expertos Centrado en el Cliente"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estructura_global_oficina_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "estructura_global_oficina_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "desarrollo_continuo_del_personal",
+    "destino": "formacion_seleccion_y_retencion_de_personal",
+    "score": 0.6767,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "empoderamiento_empleados",
+        "score": 0.6767,
+        "titulo": "Empoderamiento e Involucramiento de Empleados"
+      },
+      {
+        "id": "formacion_seleccion_y_retencion_de_personal",
+        "score": 0.6581,
+        "titulo": "Selección, Capacitación y Retención de Personal para Calidad"
+      },
+      {
+        "id": "repeticion_programa",
+        "score": 0.6328,
+        "titulo": "Hacerlo de Nuevo (Paso 14)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "organizacion_liderazgo_estadistico",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "empoderamiento_empleados",
+    "aplicado_en": [
+      {
+        "en": "organizacion_liderazgo_estadistico",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "desarrollo_del_producto",
+    "destino": "desarrollar_caracteristicas_producto",
+    "score": 0.6957,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "concurrent_engineering",
+        "score": 0.6957,
+        "titulo": "Ingeniería Concurrente"
+      },
+      {
+        "id": "desarrollar_caracteristicas_proceso_2",
+        "score": 0.6709,
+        "titulo": "Desarrollo de las Características del Proceso"
+      },
+      {
+        "id": "desarrollar_caracteristicas_proceso",
+        "score": 0.6307,
+        "titulo": "Desarrollar las Características del Proceso"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_de_procesos_por_caracteristicas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "concurrent_engineering",
+    "aplicado_en": [
+      {
+        "en": "diseno_de_procesos_por_caracteristicas",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diagnostico_actitud_gerencial_hacia_calidad",
+    "destino": "compromiso_gerencial_calidad",
+    "score": 0.7438,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "compromiso_gerencial_calidad",
+        "score": 0.7438,
+        "titulo": "Paso Uno: Compromiso de la Dirección"
+      },
+      {
+        "id": "organizacion_equipos_calidad_servicio",
+        "score": 0.7239,
+        "titulo": "Organización de Equipos para la Calidad en Servicios"
+      },
+      {
+        "id": "politica_calidad_organizacional",
+        "score": 0.7145,
+        "titulo": "Política de Calidad Organizacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "politica_formal_de_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "politica_formal_de_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "difusion_de_mejores_practicas",
+    "destino": "clonacion_replicacion_breakthrough",
+    "score": 0.6139,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "mejora_continua_del_proceso",
+        "score": 0.6139,
+        "titulo": "Mejora Continua del Proceso (Never-Ending Improvement)"
+      },
+      {
+        "id": "modelo_quality_by_design_juran",
+        "score": 0.5763,
+        "titulo": "Modelo Universal de Quality by Design (Juran)"
+      },
+      {
+        "id": "organizacion_equipos_calidad_servicio",
+        "score": 0.5722,
+        "titulo": "Organización de Equipos para la Calidad en Servicios"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "circulos_de_calidad_qc_circles",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "mejora_continua_del_proceso",
+    "aplicado_en": [
+      {
+        "en": "circulos_de_calidad_qc_circles",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_experimentos_taguchi",
+    "destino": "analisis_flujo_proceso",
+    "score": 0.4669,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "analisis_flujo_proceso",
+        "score": 0.4669,
+        "titulo": "Análisis del Diagrama de Flujo de Proceso"
+      },
+      {
+        "id": "poka_yoke_a_prueba_de_errores",
+        "score": 0.4555,
+        "titulo": "Poka-Yoke (A Prueba de Errores)"
+      },
+      {
+        "id": "diagrama_causa_efecto",
+        "score": 0.4336,
+        "titulo": "Diagrama Causa-Efecto (Ishikawa)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "funcion_perdida_limites_especificacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_organizacional_para_calidad",
+    "destino": "oficina_calidad_y_excelencia",
+    "score": 0.7214,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "oficina_calidad_y_excelencia",
+        "score": 0.7214,
+        "titulo": "Oficina de Calidad y Excelencia (Quality and Excellence Office)"
+      },
+      {
+        "id": "desarrollo_caracteristicas_producto",
+        "score": 0.7177,
+        "titulo": "Desarrollo de Características del Producto o Servicio (Quality by Design - Paso 4)"
+      },
+      {
+        "id": "consejo_calidad_informacion",
+        "score": 0.7107,
+        "titulo": "Consejo de Calidad de la Información (Information Quality Council)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "sistemas_sociotecnicos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "sistemas_sociotecnicos",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_sistema_control_calidad",
+    "destino": "desarrollar_controles_transferir_operaciones",
+    "score": 0.7369,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "desarrollar_controles_transferir_operaciones",
+        "score": 0.7369,
+        "titulo": "Desarrollar Controles de Proceso y Transferir a Operaciones"
+      },
+      {
+        "id": "manual_de_calidad",
+        "score": 0.718,
+        "titulo": "Manual de Calidad y Sistema de Control de Calidad"
+      },
+      {
+        "id": "evaluacion_encuesta_calidad_proveedor",
+        "score": 0.6898,
+        "titulo": "Encuesta de Evaluación de Calidad del Proveedor (Supplier Quality Survey)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "auditoria_sistema_control_calidad_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "auditoria_sistema_control_calidad_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "dmadv_fase_analisis",
+    "destino": "dmadv_fase_diseno",
+    "score": 0.7199,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "dmadv_fase_diseno",
+        "score": 0.7199,
+        "titulo": "Fase de Diseño (Design) en DMADV"
+      },
+      {
+        "id": "dmadv_fase_verificacion",
+        "score": 0.6881,
+        "titulo": "Fase de Verificación (Verify) en DMADV"
+      },
+      {
+        "id": "dmadv_design_for_six_sigma",
+        "score": 0.6532,
+        "titulo": "DMADV / Design for Six Sigma (DFSS)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "dmadv_fase_diseno",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": []
+  },
+  {
+    "fantasma": "dmadv_fase_medicion",
+    "destino": "dmadv_design_for_six_sigma",
+    "score": 0.5837,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "dmadv_design_for_six_sigma",
+        "score": 0.5837,
+        "titulo": "DMADV / Design for Six Sigma (DFSS)"
+      },
+      {
+        "id": "dmadv_fase_diseno",
+        "score": 0.5796,
+        "titulo": "Fase de Diseño (Design) en DMADV"
+      },
+      {
+        "id": "design_for_six_sigma_dmadv",
+        "score": 0.5699,
+        "titulo": "Design for Six Sigma (DFSS) - Modelo DMADV"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "dmadv_fase_diseno",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "dmadv_fase_diseno",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "dmaic_fase_control",
+    "destino": "dmaic_six_sigma",
+    "score": 0.6127,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "design_for_six_sigma_dmadv",
+        "score": 0.6127,
+        "titulo": "Design for Six Sigma (DFSS) - Modelo DMADV"
+      },
+      {
+        "id": "dmadv_fase_diseno",
+        "score": 0.6104,
+        "titulo": "Fase de Diseño (Design) en DMADV"
+      },
+      {
+        "id": "dmadv_design_for_six_sigma",
+        "score": 0.5754,
+        "titulo": "DMADV / Design for Six Sigma (DFSS)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "dmaic_fase_improve",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "design_for_six_sigma_dmadv",
+    "aplicado_en": [
+      {
+        "en": "dmaic_fase_improve",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "educacion_estadistica_continua_personal",
+    "destino": "educacion_estadistica_para_la_calidad",
+    "score": 0.6297,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "educacion_calidad",
+        "score": 0.6297,
+        "titulo": "Educación en Calidad"
+      },
+      {
+        "id": "educacion_estadistica_para_la_calidad",
+        "score": 0.5666,
+        "titulo": "Educación Masiva en Métodos Estadísticos para la Calidad"
+      },
+      {
+        "id": "importancia_de_la_capacitacion",
+        "score": 0.5014,
+        "titulo": "Importancia y Límites de la Capacitación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estructura_reporte_dual_estadistico",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "inventario_conocimiento_estadistico_personal",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "transformacion_calidad_compromiso_alta_direccion_japon",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "educacion_calidad",
+    "aplicado_en": [
+      {
+        "en": "estructura_reporte_dual_estadistico",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "inventario_conocimiento_estadistico_personal",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "transformacion_calidad_compromiso_alta_direccion_japon",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "eliminacion_inspeccion_masiva",
+    "destino": "administracion_de_inspeccion",
+    "score": 0.7029,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "administracion_de_inspeccion",
+        "score": 0.7029,
+        "titulo": "Administración de la Inspección para Alta Calidad"
+      },
+      {
+        "id": "eliminacion_inspeccion_masiva_por_control_estadistico",
+        "score": 0.681,
+        "titulo": "Sustitución de la Inspección Masiva por Control Estadístico"
+      },
+      {
+        "id": "abolir_inspeccion_masiva",
+        "score": 0.648,
+        "titulo": "Abolición de la Inspección Masiva como Estrategia de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "control_estadistico_de_procesos_en_tiempo_real",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "control_estadistico_de_procesos_en_tiempo_real",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "especificaciones_de_producto",
+    "destino": "establecer_diseno_final_producto",
+    "score": 0.6409,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "establecer_diseno_final_producto",
+        "score": 0.6409,
+        "titulo": "Establecer y Publicar el Diseño Final del Producto"
+      },
+      {
+        "id": "limites_especificacion_funcionales",
+        "score": 0.6231,
+        "titulo": "Límites de Especificación Basados en Necesidades Funcionales"
+      },
+      {
+        "id": "especificacion_requisitos_proveedores",
+        "score": 0.6121,
+        "titulo": "Especificación de Requisitos de Calidad para Proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "clasificacion_seriedad_defectos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "clasificacion_seriedad_defectos",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "estado_de_control_estadistico",
+    "destino": "sistema_estable_variacion",
+    "score": 0.5546,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "piramide_de_control",
+        "score": 0.5546,
+        "titulo": "Pirámide de Control (Delegación de Responsabilidades)"
+      },
+      {
+        "id": "sistema_estable_responsabilidad_gerencial",
+        "score": 0.5382,
+        "titulo": "Sistema estable como evidencia de responsabilidad gerencial sobre la mejora"
+      },
+      {
+        "id": "implementacion_monitoreo_controles",
+        "score": 0.5344,
+        "titulo": "Implementación y Monitoreo de Controles"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "falacia_meta_numerica_sin_metodo",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "sistemas_recompensa_aleatorios",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "trampa_del_promedio_como_estandar",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "piramide_de_control",
+    "aplicado_en": [
+      {
+        "en": "falacia_meta_numerica_sin_metodo",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "sistemas_recompensa_aleatorios",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "trampa_del_promedio_como_estandar",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "evaluacion_riesgo",
+    "destino": "evaluacion_gestion_riesgos",
+    "score": 0.7593,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_gestion_riesgos",
+        "score": 0.7593,
+        "titulo": "Evaluación y Gestión de Riesgos"
+      },
+      {
+        "id": "gestion_riesgo_identificacion",
+        "score": 0.7345,
+        "titulo": "Identificación de Riesgos Operacionales"
+      },
+      {
+        "id": "evaluacion_de_factores_de_riesgo",
+        "score": 0.7244,
+        "titulo": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gestion_riesgo_identificacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "gestion_riesgo_identificacion",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "formacion_equipo_proyecto_breakthrough",
+    "destino": "concepto_proyecto_breakthrough",
+    "score": 0.7336,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "concepto_proyecto_breakthrough",
+        "score": 0.7336,
+        "titulo": "El Proyecto como Unidad de Breakthrough"
+      },
+      {
+        "id": "secuencia_universal_breakthrough",
+        "score": 0.6918,
+        "titulo": "Secuencia Universal para el Breakthrough"
+      },
+      {
+        "id": "consejo_calidad",
+        "score": 0.6372,
+        "titulo": "Consejo de Calidad Ejecutivo (Quality Council)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "rol_facilitador_equipos_mejora",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "rol_facilitador_equipos_mejora",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "fundamentos_iso_9001",
+    "destino": "iso_9000_sistema_gestion_calidad",
+    "score": 0.6435,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "certificacion_iso_9000",
+        "score": 0.6435,
+        "titulo": "Certificación/Registro del Sistema de Gestión de Calidad ISO 9000"
+      },
+      {
+        "id": "iso_9000_sistema_gestion_calidad",
+        "score": 0.5814,
+        "titulo": "Sistema de Gestión de Calidad ISO 9000/9001"
+      },
+      {
+        "id": "diferencia_iso9001_iso9004",
+        "score": 0.5805,
+        "titulo": "Diferencia entre ISO 9001 e ISO 9004 (Aseguramiento vs Excelencia Organizacional)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "iso_ts_16949_automotriz",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "certificacion_iso_9000",
+    "aplicado_en": [
+      {
+        "en": "iso_ts_16949_automotriz",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "fundamentos_variacion_estadistica",
+    "destino": "concepto_variacion_estadistica",
+    "score": 0.6149,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "concepto_variacion_estadistica",
+        "score": 0.6149,
+        "titulo": "Concepto de Variación Estadística"
+      },
+      {
+        "id": "sistema_estable_variacion",
+        "score": 0.5732,
+        "titulo": "Sistema Estable y Responsabilidad de la Variación"
+      },
+      {
+        "id": "sistema_estable_causas_comunes",
+        "score": 0.5714,
+        "titulo": "Sistema Estable y Responsabilidad de la Gerencia sobre la Variación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "distorsion_muestreo_mecanico",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "distorsion_muestreo_mecanico",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "gestion_causas_comunes_especiales",
+    "destino": "causas_comunes_vs_especiales",
+    "score": 0.6963,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "causas_comunes_vs_especiales",
+        "score": 0.6963,
+        "titulo": "Causas Comunes vs Causas Especiales de Variación"
+      },
+      {
+        "id": "distincion_causas_comunes_especiales_2",
+        "score": 0.6839,
+        "titulo": "Distinción entre Causas Comunes y Causas Especiales"
+      },
+      {
+        "id": "distincion_causas_comunes_especiales_3",
+        "score": 0.6735,
+        "titulo": "Distinción entre Causas Comunes y Causas Especiales de Variación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estandarizacion_industrial_voluntaria",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "estandarizacion_industrial_voluntaria",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "gestion_por_procesos",
+    "destino": "trilogia_de_juran",
+    "score": 0.7428,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "trilogia_de_juran",
+        "score": 0.7428,
+        "titulo": "Trilogía de Juran (Planificación, Control y Mejora)"
+      },
+      {
+        "id": "control_del_proceso_del_proveedor",
+        "score": 0.7404,
+        "titulo": "Plan de Control de Proceso del Proveedor"
+      },
+      {
+        "id": "juran_trilogy",
+        "score": 0.7283,
+        "titulo": "La Trilogía de Juran: Planificación, Control y Mejora"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "sistemas_sociotecnicos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "sistemas_sociotecnicos",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "gestion_riesgo_mitigacion",
+    "destino": "evitacion_del_riesgo",
+    "score": 0.7871,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evitacion_del_riesgo",
+        "score": 0.7871,
+        "titulo": "Evitación del Riesgo (Risk Avoidance)"
+      },
+      {
+        "id": "evaluacion_gestion_riesgos",
+        "score": 0.7673,
+        "titulo": "Evaluación y Gestión de Riesgos"
+      },
+      {
+        "id": "gestion_riesgo_identificacion",
+        "score": 0.7237,
+        "titulo": "Identificación de Riesgos Operacionales"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gestion_riesgo_identificacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "gestion_riesgo_identificacion",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "graficos_control_shewhart",
+    "destino": "carta_de_control_shewhart",
+    "score": 0.6832,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "carta_de_control_shewhart",
+        "score": 0.6832,
+        "titulo": "Carta de Control de Shewhart"
+      },
+      {
+        "id": "control_charts_shewhart",
+        "score": 0.5986,
+        "titulo": "Gráficos de Control de Shewhart"
+      },
+      {
+        "id": "graficos_de_control_uso",
+        "score": 0.4989,
+        "titulo": "Dos Usos Básicos de los Gráficos de Control"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_variacion_desempeno_servicio",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "distincion_causas_comunes_especiales_incidentes",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "analisis_variacion_desempeno_servicio",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "distincion_causas_comunes_especiales_incidentes",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "graficos_de_control_shewhart",
+    "destino": "carta_de_control_shewhart",
+    "score": 0.7131,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "carta_de_control_shewhart",
+        "score": 0.7131,
+        "titulo": "Carta de Control de Shewhart"
+      },
+      {
+        "id": "control_charts_shewhart",
+        "score": 0.6458,
+        "titulo": "Gráficos de Control de Shewhart"
+      },
+      {
+        "id": "graficos_de_control_uso",
+        "score": 0.5326,
+        "titulo": "Dos Usos Básicos de los Gráficos de Control"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "distincion_causas_comunes_especiales_3",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "distincion_causas_comunes_especiales_3",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_costos_mala_calidad",
+    "destino": "categorias_copq",
+    "score": 0.8224,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "categorias_copq",
+        "score": 0.8224,
+        "titulo": "Categorías de Costos de Mala Calidad: Apreciación, Fallo Interno y Fallo Externo"
+      },
+      {
+        "id": "costo_de_la_no_calidad",
+        "score": 0.8134,
+        "titulo": "Costo de la No Calidad (Hacer las Cosas Mal)"
+      },
+      {
+        "id": "concepto_costo_de_calidad",
+        "score": 0.8097,
+        "titulo": "Costo de la Calidad (Cost of Quality)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "calculo_roi_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "calculo_roi_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_de_clientes",
+    "destino": "identificar_clientes_externos_e_internos",
+    "score": 0.7411,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "identificar_clientes_externos_e_internos",
+        "score": 0.7411,
+        "titulo": "Identificación de Clientes Externos e Internos"
+      },
+      {
+        "id": "identificar_clientes_diseno",
+        "score": 0.7261,
+        "titulo": "Identificar a los Clientes (Cast de Clientes)"
+      },
+      {
+        "id": "identificacion_del_verdadero_cliente",
+        "score": 0.6763,
+        "titulo": "Identificación del Verdadero Cliente (Quién Decide la Calidad)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "customer_needs_spreadsheet",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "customer_needs_spreadsheet",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_necesidades_cliente",
+    "destino": "descubrir_necesidades_del_cliente",
+    "score": 0.7803,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "descubrir_necesidades_del_cliente",
+        "score": 0.7803,
+        "titulo": "Descubrimiento de las Necesidades del Cliente"
+      },
+      {
+        "id": "diseno_de_mejoras_para_clientes",
+        "score": 0.7304,
+        "titulo": "Diseño de Mejoras Centrado en el Cliente"
+      },
+      {
+        "id": "hoja_necesidades_cliente",
+        "score": 0.7294,
+        "titulo": "Hoja de Necesidades del Cliente (Customer Needs Spreadsheet)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_de_procesos_por_caracteristicas",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "diseno_servicio_calidad",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "herramientas_de_diseno_de_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "diseno_de_procesos_por_caracteristicas",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "diseno_servicio_calidad",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "herramientas_de_diseno_de_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_oportunidades_mejora",
+    "destino": "proceso_nominacion_seleccion",
+    "score": 0.6259,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "criterios_seleccion_proyectos_calidad",
+        "score": 0.6259,
+        "titulo": "Criterios de Selección de Proyectos de Calidad"
+      },
+      {
+        "id": "diagrama_barreras_ayudas",
+        "score": 0.6042,
+        "titulo": "Diagrama de Barreras y Ayudas"
+      },
+      {
+        "id": "enfoque_proyecto_por_proyecto",
+        "score": 0.5929,
+        "titulo": "Breakthrough Proyecto por Proyecto"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "criterios_seleccion_proyectos_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "criterios_seleccion_proyectos_calidad",
+    "aplicado_en": [
+      {
+        "en": "criterios_seleccion_proyectos_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_procesos_clave_servicio",
+    "destino": "medicion_capacidad_servicio",
+    "score": 0.6537,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "medicion_capacidad_servicio",
+        "score": 0.6537,
+        "titulo": "Medición de Capacidad de Proceso en Servicios"
+      },
+      {
+        "id": "analisis_flujo_proceso_servicio",
+        "score": 0.6476,
+        "titulo": "Análisis del Diagrama de Flujo del Proceso de Servicio"
+      },
+      {
+        "id": "identificar_caracteristicas_metas_proceso",
+        "score": 0.5632,
+        "titulo": "Identificación de Características y Metas del Proceso"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "autocontrol_planificacion_servicio",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificar_causas_sistema_vs_trabajador",
+    "destino": "mejora_del_sistema_responsabilidad_gerencial",
+    "score": 0.7399,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "mejora_del_sistema_responsabilidad_gerencial",
+        "score": 0.7399,
+        "titulo": "Mejora del Sistema como Responsabilidad de la Gerencia"
+      },
+      {
+        "id": "sistema_responsabilidad_gerencial_2",
+        "score": 0.6912,
+        "titulo": "El Sistema es Responsabilidad de la Gerencia"
+      },
+      {
+        "id": "sistema_responsabilidad_gerencial",
+        "score": 0.6823,
+        "titulo": "El Sistema como Responsabilidad de la Gerencia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "eliminar_slogans_y_exhortaciones",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "eliminar_slogans_y_exhortaciones",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "implementacion_proyectos_mejora",
+    "destino": "criterios_seleccion_proyectos_calidad",
+    "score": 0.7402,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "criterios_seleccion_proyectos_calidad",
+        "score": 0.7402,
+        "titulo": "Criterios de Selección de Proyectos de Calidad"
+      },
+      {
+        "id": "proceso_nominacion_seleccion",
+        "score": 0.7281,
+        "titulo": "Proceso de Nominación y Selección de Proyectos"
+      },
+      {
+        "id": "concepto_proyecto_breakthrough",
+        "score": 0.7195,
+        "titulo": "El Proyecto como Unidad de Breakthrough"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "comprension_brechas_desempeno",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "comprension_brechas_desempeno",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "inspeccion_y_prueba_del_producto",
+    "destino": "planificacion_de_la_inspeccion",
+    "score": 0.7278,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "planificacion_de_la_inspeccion",
+        "score": 0.7278,
+        "titulo": "Planificación de la Inspección"
+      },
+      {
+        "id": "decision_conformidad_producto",
+        "score": 0.7168,
+        "titulo": "Decisión de Conformidad del Producto"
+      },
+      {
+        "id": "calificacion_productos_procesos",
+        "score": 0.7016,
+        "titulo": "Calificación de Productos, Procesos y Procedimientos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "auditoria_de_producto",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "auditoria_de_producto",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "institucionalizar_control_estadistico",
+    "destino": "control_estadistico_de_procesos",
+    "score": 0.6132,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "piramide_de_control",
+        "score": 0.6132,
+        "titulo": "Pirámide de Control (Delegación de Responsabilidades)"
+      },
+      {
+        "id": "gobierno_corporativo_y_calidad",
+        "score": 0.5832,
+        "titulo": "Gobierno Corporativo y su Rol en la Excelencia Organizacional"
+      },
+      {
+        "id": "colaboracion_industria_gobierno_estandares",
+        "score": 0.559,
+        "titulo": "Colaboración Industria-Gobierno en Desarrollo de Estándares"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "mejora_continua_del_proceso",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "piramide_de_control",
+    "aplicado_en": [
+      {
+        "en": "mejora_continua_del_proceso",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "interpretacion_cartas_control",
+    "destino": "mal_uso_histograma_vs_carta_control",
+    "score": 0.5153,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "mal_uso_histograma_vs_carta_control",
+        "score": 0.5153,
+        "titulo": "Mal Uso de Histogramas de Distribución en Lugar de Cartas de Control"
+      },
+      {
+        "id": "control_estadistico_de_procesos_en_tiempo_real",
+        "score": 0.4815,
+        "titulo": "Control Estadístico de Procesos en Tiempo Real"
+      },
+      {
+        "id": "control_mantener_ganancias",
+        "score": 0.4713,
+        "titulo": "Control para Mantener las Ganancias (Plan de Control)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "distorsion_muestreo_mecanico",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "liderazgo_para_la_calidad",
+    "destino": "liderazgo_para_mejora_continua",
+    "score": 0.8315,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "liderazgo_para_mejora_continua",
+        "score": 0.8315,
+        "titulo": "Liderazgo Orientado a Mejorar el Sistema"
+      },
+      {
+        "id": "estilo_gerencial_calidad",
+        "score": 0.7955,
+        "titulo": "Estilo de Gestión para Líderes de Calidad"
+      },
+      {
+        "id": "organizacion_equipos_calidad_servicio",
+        "score": 0.7419,
+        "titulo": "Organización de Equipos para la Calidad en Servicios"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gobierno_corporativo_y_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "gobierno_corporativo_y_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "line_balancing",
+    "destino": "carta_de_control_shewhart",
+    "score": 0.3687,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "carta_de_control_shewhart",
+        "score": 0.3687,
+        "titulo": "Carta de Control de Shewhart"
+      },
+      {
+        "id": "punto_equilibrio_calidad_inspeccion",
+        "score": 0.3576,
+        "titulo": "Punto de Equilibrio de Calidad (Break-even Quality) para Decisiones de Inspección"
+      },
+      {
+        "id": "punto_equilibrio_calidad",
+        "score": 0.3553,
+        "titulo": "Punto de Equilibrio de Calidad y Regla Todo-o-Nada en Inspección"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "kanban_pull_system",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "takt_time_demand",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "medicion_costo_de_calidad",
+    "destino": "metodologia_medicion_copq",
+    "score": 0.5915,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "concepto_costo_de_calidad",
+        "score": 0.5915,
+        "titulo": "Costo de la Calidad (Cost of Quality)"
+      },
+      {
+        "id": "costo_de_calidad_4",
+        "score": 0.5744,
+        "titulo": "Costo de Calidad (Cost of Quality)"
+      },
+      {
+        "id": "costo_de_la_no_calidad",
+        "score": 0.568,
+        "titulo": "Costo de la No Calidad (Hacer las Cosas Mal)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "accion_correctiva_sistematica",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "concepto_costo_de_calidad",
+    "aplicado_en": [
+      {
+        "en": "accion_correctiva_sistematica",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "medicion_del_programa_de_calidad",
+    "destino": "medicion_calidad_2",
+    "score": 0.6062,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "compromiso_gerencial_calidad",
+        "score": 0.6062,
+        "titulo": "Paso Uno: Compromiso de la Dirección"
+      },
+      {
+        "id": "gestion_para_la_calidad",
+        "score": 0.5956,
+        "titulo": "Gestión para la Calidad (Managing for Quality)"
+      },
+      {
+        "id": "consejo_de_calidad_y_rol_del_director",
+        "score": 0.5793,
+        "titulo": "Consejo de Calidad y Rol del Director de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cero_defectos_zd",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_make_certain_2",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "compromiso_gerencial_calidad",
+    "aplicado_en": [
+      {
+        "en": "cero_defectos_zd",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_make_certain_2",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "mejora_continua_breakthrough",
+    "destino": "enfoque_proyecto_por_proyecto",
+    "score": 0.7308,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "enfoque_proyecto_por_proyecto",
+        "score": 0.7308,
+        "titulo": "Breakthrough Proyecto por Proyecto"
+      },
+      {
+        "id": "secuencia_universal_breakthrough",
+        "score": 0.7215,
+        "titulo": "Secuencia Universal para el Breakthrough"
+      },
+      {
+        "id": "revision_progreso_breakthrough",
+        "score": 0.663,
+        "titulo": "Revisión Periódica del Progreso de Breakthrough"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "desperdicio_cronico_vs_esporadico",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "desperdicio_cronico_vs_esporadico",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "mejora_continua_kaizen",
+    "destino": "kaizen_mejora_continua",
+    "score": 0.6906,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "kaizen_mejora_continua",
+        "score": 0.6906,
+        "titulo": "Kaizen (Mejora Continua) y Eventos de Mejora Rápida"
+      },
+      {
+        "id": "eventos_kaizen_rie",
+        "score": 0.5755,
+        "titulo": "Eventos de Mejora Rápida (RIE) y Kaizen"
+      },
+      {
+        "id": "ventajas_control_estadistico",
+        "score": 0.5374,
+        "titulo": "Ventajas de la Estabilidad o Control Estadístico"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "pdsa_shewhart_cycle",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "pdsa_shewhart_cycle",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "mejora_continua_organizacional",
+    "destino": "mejora_continua_del_proceso",
+    "score": 0.6965,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "organizacion_equipos_calidad_servicio",
+        "score": 0.6965,
+        "titulo": "Organización de Equipos para la Calidad en Servicios"
+      },
+      {
+        "id": "empoderamiento_empleados",
+        "score": 0.6773,
+        "titulo": "Empoderamiento e Involucramiento de Empleados"
+      },
+      {
+        "id": "formacion_seleccion_y_retencion_de_personal",
+        "score": 0.6751,
+        "titulo": "Selección, Capacitación y Retención de Personal para Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "aprendizaje_institucionalizado_benchmarking",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "organizacion_equipos_calidad_servicio",
+    "aplicado_en": [
+      {
+        "en": "aprendizaje_institucionalizado_benchmarking",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "mejora_sistematica_del_gobierno_corporativo",
+    "destino": "gobierno_corporativo_y_calidad",
+    "score": 0.8259,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "gobierno_corporativo_y_calidad",
+        "score": 0.8259,
+        "titulo": "Gobierno Corporativo y su Rol en la Excelencia Organizacional"
+      },
+      {
+        "id": "planificacion_gobierno_organizaciones_familiares",
+        "score": 0.6683,
+        "titulo": "Planificación de Gobierno Corporativo en Organizaciones Familiares"
+      },
+      {
+        "id": "calidad_del_servicio",
+        "score": 0.6195,
+        "titulo": "Calidad y Productividad en Organizaciones de Servicio"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gobierno_corporativo_y_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": []
+  },
+  {
+    "fantasma": "mejora_sistematica_six_sigma",
+    "destino": "dmaic_six_sigma",
+    "score": 0.6748,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "dmaic_six_sigma",
+        "score": 0.6748,
+        "titulo": "Modelo de Mejora DMAIC de Six Sigma"
+      },
+      {
+        "id": "validacion_sistema_medicion_2",
+        "score": 0.6516,
+        "titulo": "Validación del Sistema de Medición"
+      },
+      {
+        "id": "roadmap_despliegue_lean_six_sigma",
+        "score": 0.6494,
+        "titulo": "Roadmap de Despliegue Lean Six Sigma (Decide-Prepare-Launch-Expand-Sustain)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "impacto_calidad_en_costos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "impacto_calidad_en_costos",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "operacion_de_aceptacion_calidad",
+    "destino": "muestreo_de_aceptacion",
+    "score": 0.6759,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "programa_auditoria_calidad",
+        "score": 0.6759,
+        "titulo": "Programa de Auditoría de Calidad"
+      },
+      {
+        "id": "definicion_y_concepto_de_aseguramiento_de_calidad",
+        "score": 0.6756,
+        "titulo": "Definición y Concepto de Aseguramiento de Calidad"
+      },
+      {
+        "id": "organizacion_independiente_de_calidad",
+        "score": 0.6697,
+        "titulo": "Organización Independiente y Objetiva de la Función de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "accion_correctiva_sistematica",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "programa_auditoria_calidad",
+    "aplicado_en": [
+      {
+        "en": "accion_correctiva_sistematica",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "paso_cuatro_evaluacion_coq",
+    "destino": "costo_de_calidad_2",
+    "score": 0.558,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "evaluacion_desempeno_junta_directiva",
+        "score": 0.558,
+        "titulo": "Evaluación del Desempeño de la Junta Directiva Basada en Resultados"
+      },
+      {
+        "id": "metodologia_medicion_copq",
+        "score": 0.5106,
+        "titulo": "Metodología de Medición del Costo de Mala Calidad"
+      },
+      {
+        "id": "evaluacion_organizacional_calidad",
+        "score": 0.5064,
+        "titulo": "Evaluación Integral de la Organización (Quality Risk Assessment)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "costo_de_la_calidad_coq",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "evaluacion_desempeno_junta_directiva",
+    "aplicado_en": [
+      {
+        "en": "costo_de_la_calidad_coq",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "plan_accion_mejora_benchmarking",
+    "destino": "benchmarking_estrategia",
+    "score": 0.7283,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "benchmarking_estrategia",
+        "score": 0.7283,
+        "titulo": "Benchmarking y Planificación Estratégica"
+      },
+      {
+        "id": "comprension_brechas_desempeno",
+        "score": 0.7265,
+        "titulo": "Comprensión y Priorización de Brechas de Desempeño"
+      },
+      {
+        "id": "rol_alta_direccion_benchmarking",
+        "score": 0.7218,
+        "titulo": "Rol de la Alta Dirección en Benchmarking"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "rol_alta_direccion_benchmarking",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "rol_alta_direccion_benchmarking",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "planeacion_de_calidad_juran",
+    "destino": "juran_quality_by_design",
+    "score": 0.5973,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "programa_auditoria_calidad",
+        "score": 0.5973,
+        "titulo": "Programa de Auditoría de Calidad"
+      },
+      {
+        "id": "medicion_calidad_2",
+        "score": 0.5915,
+        "titulo": "Paso 3: Medición de la Calidad"
+      },
+      {
+        "id": "principios_del_programa_de_auditoria_de_calidad",
+        "score": 0.5787,
+        "titulo": "Principios de un Programa de Auditoría de Calidad Exitoso"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diferencia_planeacion_mejora",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "secuencia_universal_breakthrough",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "programa_auditoria_calidad",
+    "aplicado_en": [
+      {
+        "en": "diferencia_planeacion_mejora",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "secuencia_universal_breakthrough",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "planificacion_calidad_juran",
+    "destino": "juran_quality_by_design",
+    "score": 0.679,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "juran_trilogy",
+        "score": 0.679,
+        "titulo": "La Trilogía de Juran: Planificación, Control y Mejora"
+      },
+      {
+        "id": "diferencia_planeacion_mejora",
+        "score": 0.6198,
+        "titulo": "Diferencia entre Planeación de Calidad y Mejora de Calidad"
+      },
+      {
+        "id": "modelo_quality_by_design_juran",
+        "score": 0.6037,
+        "titulo": "Modelo Universal de Quality by Design (Juran)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "design_for_six_sigma_dmadv_2",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "ingenieria_calidad_proveedores",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "juran_trilogy",
+    "aplicado_en": [
+      {
+        "en": "design_for_six_sigma_dmadv_2",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "ingenieria_calidad_proveedores",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "planificacion_de_la_calidad",
+    "destino": "diferencia_planeacion_mejora",
+    "score": 0.7918,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "diferencia_planeacion_mejora",
+        "score": 0.7918,
+        "titulo": "Diferencia entre Planeación de Calidad y Mejora de Calidad"
+      },
+      {
+        "id": "modelo_quality_by_design_juran",
+        "score": 0.7574,
+        "titulo": "Modelo Universal de Quality by Design (Juran)"
+      },
+      {
+        "id": "quality_by_design",
+        "score": 0.7452,
+        "titulo": "Calidad por Diseño (Quality by Design)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "auditoria_de_producto",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "gobierno_corporativo_y_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "auditoria_de_producto",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "gobierno_corporativo_y_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "planificacion_estrategica_calidad",
+    "destino": "planificacion_estrategica_despliegue_2",
+    "score": 0.7482,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "planificacion_estrategica_despliegue_2",
+        "score": 0.7482,
+        "titulo": "Planificación Estratégica y Despliegue de Calidad"
+      },
+      {
+        "id": "diferencia_planeacion_mejora",
+        "score": 0.6934,
+        "titulo": "Diferencia entre Planeación de Calidad y Mejora de Calidad"
+      },
+      {
+        "id": "establecer_vision_organizacional_2",
+        "score": 0.6923,
+        "titulo": "Establecer una Visión Organizacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diagrama_arbol_despliegue",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "sistema_medicion_kpi",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "diagrama_arbol_despliegue",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "sistema_medicion_kpi",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "planificacion_estrategica_organizacional",
+    "destino": "planificacion_estrategica_despliegue_2",
+    "score": 0.7708,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "planificacion_estrategica_despliegue_2",
+        "score": 0.7708,
+        "titulo": "Planificación Estratégica y Despliegue de Calidad"
+      },
+      {
+        "id": "consejo_ejecutivo_calidad",
+        "score": 0.7333,
+        "titulo": "Formar un Consejo Ejecutivo de Calidad"
+      },
+      {
+        "id": "establecer_vision_organizacional",
+        "score": 0.7043,
+        "titulo": "Establecimiento de Visión, Misión y Estrategias Organizacionales"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "evaluacion_riesgo_calidad_organizacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "evaluacion_riesgo_calidad_organizacional",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "planificacion_para_organizaciones_familiares",
+    "destino": "planificacion_gobierno_organizaciones_familiares",
+    "score": 0.6763,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "planificacion_gobierno_organizaciones_familiares",
+        "score": 0.6763,
+        "titulo": "Planificación de Gobierno Corporativo en Organizaciones Familiares"
+      },
+      {
+        "id": "planificacion_estrategica_despliegue_2",
+        "score": 0.4785,
+        "titulo": "Planificación Estratégica y Despliegue de Calidad"
+      },
+      {
+        "id": "planificacion_auditoria_individual",
+        "score": 0.4675,
+        "titulo": "Planificación de una Auditoría Individual"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gobierno_corporativo_y_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "gobierno_corporativo_y_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "posicionamiento_en_el_mercado",
+    "destino": "estudio_mercado_calidad",
+    "score": 0.662,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "estudio_mercado_calidad",
+        "score": 0.662,
+        "titulo": "Estudio de Mercado para Evaluar Posición Competitiva en Calidad"
+      },
+      {
+        "id": "establecer_metas_de_calidad_basadas_en_mercado",
+        "score": 0.6068,
+        "titulo": "Metas de Calidad Basadas en el Mercado y Benchmarking"
+      },
+      {
+        "id": "liderazgo_calidad_mercado",
+        "score": 0.5996,
+        "titulo": "Liderazgo de Mercado a través de la Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "costo_optimo_calidad",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evaluacion_riesgo_calidad_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "costo_optimo_calidad",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evaluacion_riesgo_calidad_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "prediccion_de_costos_de_servicio_en_campo",
+    "destino": "costo_de_mala_calidad_copq_4",
+    "score": 0.5357,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "costo_de_mala_calidad_copq_4",
+        "score": 0.5357,
+        "titulo": "Costo de la Mala Calidad (Cost of Poor Quality)"
+      },
+      {
+        "id": "estrategias_estimacion_costos",
+        "score": 0.5342,
+        "titulo": "Estrategias de Estimación de Costos: Recursos Totales vs. Costo Unitario"
+      },
+      {
+        "id": "costo_de_calidad_3",
+        "score": 0.501,
+        "titulo": "Paso 4: Costo de la Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "clasificacion_de_seriedad_de_defectos",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "prevencion_de_defectos",
+    "destino": "programa_cero_defectos",
+    "score": 0.6947,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "accion_correctiva_diagnostico_remedio",
+        "score": 0.6947,
+        "titulo": "Acción Correctiva: Diagnóstico y Remedio de Problemas Esporádicos"
+      },
+      {
+        "id": "programa_cero_defectos",
+        "score": 0.6803,
+        "titulo": "Programa de Cero Defectos (Zero Defects) como Prevención"
+      },
+      {
+        "id": "mistake_proofing_poka_yoke",
+        "score": 0.6752,
+        "titulo": "Mistake Proofing / Poka-Yoke"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_causa_efecto_indicadores_calidad",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "definicion_calidad_como_conformidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "accion_correctiva_diagnostico_remedio",
+    "aplicado_en": [
+      {
+        "en": "analisis_causa_efecto_indicadores_calidad",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "definicion_calidad_como_conformidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "prevencion_de_defectos_costo_cero",
+    "destino": "programa_cero_defectos",
+    "score": 0.7462,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "programa_cero_defectos",
+        "score": 0.7462,
+        "titulo": "Programa de Cero Defectos (Zero Defects) como Prevención"
+      },
+      {
+        "id": "programa_zero_defects",
+        "score": 0.6552,
+        "titulo": "Programa de Cero Defectos (Zero Defects)"
+      },
+      {
+        "id": "planificacion_cero_defectos",
+        "score": 0.6369,
+        "titulo": "Planificación de Cero Defectos (Paso 7 de Crosby)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "funciones_del_departamento_de_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "funciones_del_departamento_de_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "profundo_conocimiento_variacion",
+    "destino": "estadistica_basica_calidad",
+    "score": 0.5239,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "estadistica_basica_calidad",
+        "score": 0.5239,
+        "titulo": "Estadística Básica para Análisis de Calidad"
+      },
+      {
+        "id": "vacios_conocimiento_cliente",
+        "score": 0.5156,
+        "titulo": "Vacíos en el Conocimiento del Cliente"
+      },
+      {
+        "id": "descubrir_necesidades_ocultas",
+        "score": 0.5129,
+        "titulo": "Descubrimiento de Necesidades Ocultas del Cliente"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_variacion_desempeno_servicio",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "distincion_causas_comunes_especiales_incidentes",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "estructura_reporte_dual_estadistico",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "programa_catorce_pasos_mejora_calidad",
+    "destino": "compromiso_gerencial_calidad",
+    "score": 0.7354,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "compromiso_gerencial_calidad",
+        "score": 0.7354,
+        "titulo": "Paso Uno: Compromiso de la Dirección"
+      },
+      {
+        "id": "programa_mejora_calidad_14_pasos",
+        "score": 0.7074,
+        "titulo": "Programa de Mejora de Calidad (14 pasos)"
+      },
+      {
+        "id": "manual_de_calidad",
+        "score": 0.6641,
+        "titulo": "Manual de Calidad y Sistema de Control de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cambio_actitud_gerencial",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "quality_management_maturity_grid_3",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "cambio_actitud_gerencial",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "quality_management_maturity_grid_3",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "quality_function_deployment",
+    "destino": "qfd_matriz_calidad",
+    "score": 0.6829,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "qfd_matriz_calidad",
+        "score": 0.6829,
+        "titulo": "Quality Function Deployment (QFD) - Matriz de Planificación de Calidad"
+      },
+      {
+        "id": "establecimiento_metas_de_calidad",
+        "score": 0.5744,
+        "titulo": "Establecimiento de Metas de Calidad"
+      },
+      {
+        "id": "organizacion_independiente_de_calidad",
+        "score": 0.5725,
+        "titulo": "Organización Independiente y Objetiva de la Función de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "key_process_product_characteristics",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "key_process_product_characteristics",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_datos_benchmarking",
+    "destino": "fuentes_datos_benchmarking",
+    "score": 0.8401,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "fuentes_datos_benchmarking",
+        "score": 0.8401,
+        "titulo": "Fuentes de Datos e Información para Benchmarking"
+      },
+      {
+        "id": "validacion_datos_benchmarking",
+        "score": 0.7779,
+        "titulo": "Validación de Datos en Benchmarking"
+      },
+      {
+        "id": "desarrollo_reporte_benchmarking",
+        "score": 0.7246,
+        "titulo": "Desarrollo del Reporte de Benchmarking"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "normalizacion_datos_benchmarking_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "normalizacion_datos_benchmarking_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_datos_calidad",
+    "destino": "diseno_de_metodos_de_recoleccion_de_datos",
+    "score": 0.693,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "evaluacion_encuesta_calidad_proveedor",
+        "score": 0.693,
+        "titulo": "Encuesta de Evaluación de Calidad del Proveedor (Supplier Quality Survey)"
+      },
+      {
+        "id": "estratificacion_datos",
+        "score": 0.6813,
+        "titulo": "Estratificación de Datos"
+      },
+      {
+        "id": "medicion_calidad_2",
+        "score": 0.6803,
+        "titulo": "Paso 3: Medición de la Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "visualizacion_datos_deteccion_outliers",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "evaluacion_encuesta_calidad_proveedor",
+    "aplicado_en": [
+      {
+        "en": "visualizacion_datos_deteccion_outliers",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_datos_desempeno_operativo",
+    "destino": "diseno_de_metodos_de_recoleccion_de_datos",
+    "score": 0.6771,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "diseno_de_metodos_de_recoleccion_de_datos",
+        "score": 0.6771,
+        "titulo": "Diseño y Prueba de Métodos de Recolección de Datos"
+      },
+      {
+        "id": "cribado_de_datos",
+        "score": 0.6015,
+        "titulo": "Cribado de Datos (Data Screening)"
+      },
+      {
+        "id": "gestion_datos_calidad",
+        "score": 0.5883,
+        "titulo": "Gestión del Problema de 'No Hay Datos' en Programas de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_causa_efecto_indicadores_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "analisis_causa_efecto_indicadores_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_datos_fallo",
+    "destino": "cribado_de_datos",
+    "score": 0.7062,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "cribado_de_datos",
+        "score": 0.7062,
+        "titulo": "Cribado de Datos (Data Screening)"
+      },
+      {
+        "id": "gestion_datos_calidad",
+        "score": 0.697,
+        "titulo": "Gestión del Problema de 'No Hay Datos' en Programas de Calidad"
+      },
+      {
+        "id": "analisis_datos_atributos",
+        "score": 0.674,
+        "titulo": "Análisis de Capacidad para Datos de Atributos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "curva_banera_periodos_fallo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "curva_banera_periodos_fallo",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_datos_proceso",
+    "destino": "diseno_de_metodos_de_recoleccion_de_datos",
+    "score": 0.7459,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "diseno_de_metodos_de_recoleccion_de_datos",
+        "score": 0.7459,
+        "titulo": "Diseño y Prueba de Métodos de Recolección de Datos"
+      },
+      {
+        "id": "planificacion_recoleccion_datos",
+        "score": 0.7137,
+        "titulo": "Planificación para Recolección y Análisis de Datos"
+      },
+      {
+        "id": "cribado_de_datos",
+        "score": 0.624,
+        "titulo": "Cribado de Datos (Data Screening)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_capacidad_proceso",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "analisis_datos_atributos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "analisis_capacidad_proceso",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "analisis_datos_atributos",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_de_datos_de_necesidades",
+    "destino": "hoja_necesidades_cliente",
+    "score": 0.7201,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "hoja_necesidades_cliente",
+        "score": 0.7201,
+        "titulo": "Hoja de Necesidades del Cliente (Customer Needs Spreadsheet)"
+      },
+      {
+        "id": "hoja_de_necesidades_del_cliente",
+        "score": 0.7029,
+        "titulo": "Customer Needs Spreadsheet"
+      },
+      {
+        "id": "customer_needs_spreadsheet",
+        "score": 0.6917,
+        "titulo": "Hoja de Cálculo de Necesidades del Cliente (Customer Needs Spreadsheet)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "customer_needs_spreadsheet",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "customer_needs_spreadsheet",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_de_datos_de_proceso",
+    "destino": "diseno_de_metodos_de_recoleccion_de_datos",
+    "score": 0.7053,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "diseno_de_metodos_de_recoleccion_de_datos",
+        "score": 0.7053,
+        "titulo": "Diseño y Prueba de Métodos de Recolección de Datos"
+      },
+      {
+        "id": "planificacion_recoleccion_datos",
+        "score": 0.6719,
+        "titulo": "Planificación para Recolección y Análisis de Datos"
+      },
+      {
+        "id": "auditoria_de_proceso",
+        "score": 0.6363,
+        "titulo": "Auditoría de Proceso (Monitor Process Audit)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "control_estadistico_del_proceso",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "control_estadistico_del_proceso",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "reconocimiento_de_logros_en_calidad",
+    "destino": "reconocimiento_crosby",
+    "score": 0.7206,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "reconocimiento_crosby",
+        "score": 0.7206,
+        "titulo": "Reconocimiento No Monetario"
+      },
+      {
+        "id": "reconocimiento",
+        "score": 0.6647,
+        "titulo": "Reconocimiento (Paso 12)"
+      },
+      {
+        "id": "establecimiento_metas_de_calidad",
+        "score": 0.6514,
+        "titulo": "Establecimiento de Metas de Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "seminario_de_exito_para_gerencia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "seminario_de_exito_para_gerencia",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "reduccion_defectos_cero",
+    "destino": "programa_cero_defectos",
+    "score": 0.7341,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "programa_cero_defectos",
+        "score": 0.7341,
+        "titulo": "Programa de Cero Defectos (Zero Defects) como Prevención"
+      },
+      {
+        "id": "programa_zero_defects",
+        "score": 0.6672,
+        "titulo": "Programa de Cero Defectos (Zero Defects)"
+      },
+      {
+        "id": "zero_defects_concepto",
+        "score": 0.6325,
+        "titulo": "Cero Defectos como Estándar de Desempeño"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "punto_equilibrio_calidad_inspeccion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "punto_equilibrio_calidad_inspeccion",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "reduccion_errores_proceso",
+    "destino": "eliminacion_causas_error_3",
+    "score": 0.7134,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "eliminacion_causas_error_3",
+        "score": 0.7134,
+        "titulo": "Eliminación de Causas de Error (Error-Cause Removal, ECR)"
+      },
+      {
+        "id": "establecimiento_capacidad_proceso",
+        "score": 0.6976,
+        "titulo": "Establecimiento de la Capacidad del Proceso Mejorado"
+      },
+      {
+        "id": "error_proofing_servicio",
+        "score": 0.6895,
+        "titulo": "Error-Proofing (A Prueba de Errores) en Procesos de Servicio"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_datos_atributos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "analisis_datos_atributos",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "reduccion_variabilidad",
+    "destino": "distribucion_weibull_confiabilidad",
+    "score": 0.5879,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "distribucion_weibull_confiabilidad",
+        "score": 0.5879,
+        "titulo": "Distribución de Weibull para Análisis de Confiabilidad"
+      },
+      {
+        "id": "control_estadistico_no_implica_cero_defectos",
+        "score": 0.5659,
+        "titulo": "Control Estadístico No Implica Ausencia de Defectos"
+      },
+      {
+        "id": "distribucion_exponencial",
+        "score": 0.5463,
+        "titulo": "Distribución Exponencial para Análisis de Confiabilidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_capacidad_proceso",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "interpretacion_cpk",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "reduccion_variacion_procesos",
+    "destino": "control_estadistico_no_implica_cero_defectos",
+    "score": 0.637,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "control_estadistico_no_implica_cero_defectos",
+        "score": 0.637,
+        "titulo": "Control Estadístico No Implica Ausencia de Defectos"
+      },
+      {
+        "id": "reduccion_de_tiempo_de_ciclo",
+        "score": 0.6219,
+        "titulo": "Reducción del Tiempo de Ciclo"
+      },
+      {
+        "id": "control_estadistico_del_proceso",
+        "score": 0.6191,
+        "titulo": "Control Estadístico del Proceso (SPC)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "claridad_especificaciones_instrucciones",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "reduccion_y_control_de_errores_de_medicion",
+    "destino": "errores_de_medicion",
+    "score": 0.6599,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "accion_correctiva_diagnostico_remedio",
+        "score": 0.6599,
+        "titulo": "Acción Correctiva: Diagnóstico y Remedio de Problemas Esporádicos"
+      },
+      {
+        "id": "diagnostico_antes_remedio",
+        "score": 0.6203,
+        "titulo": "Diagnóstico Debe Preceder al Remedio"
+      },
+      {
+        "id": "mistake_proofing_poka_yoke",
+        "score": 0.5861,
+        "titulo": "Mistake Proofing / Poka-Yoke"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "analisis_de_sistemas_de_medicion_msa",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "accion_correctiva_diagnostico_remedio",
+    "aplicado_en": [
+      {
+        "en": "analisis_de_sistemas_de_medicion_msa",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "reglas_de_escalamiento_calidad",
+    "destino": "establecimiento_metas_de_calidad",
+    "score": 0.6899,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "establecimiento_metas_de_calidad",
+        "score": 0.6899,
+        "titulo": "Establecimiento de Metas de Calidad"
+      },
+      {
+        "id": "establecer_estandares_desempeno",
+        "score": 0.6392,
+        "titulo": "Establecimiento de Estándares de Desempeño (Metas de Producto y Proceso)"
+      },
+      {
+        "id": "costo_de_calidad_2",
+        "score": 0.6354,
+        "titulo": "Evaluación del Costo de la Calidad (Paso 4)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estructura_global_oficina_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "relacion_proveedor_unico",
+    "destino": "relacion_largo_plazo_proveedor_unico",
+    "score": 0.5549,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "identificar_clientes_externos_e_internos",
+        "score": 0.5549,
+        "titulo": "Identificación de Clientes Externos e Internos"
+      },
+      {
+        "id": "contacto_con_el_cliente_2",
+        "score": 0.5308,
+        "titulo": "Rol del Personal de Contacto con el Cliente"
+      },
+      {
+        "id": "seleccion_fuente_unica_multiple",
+        "score": 0.5252,
+        "titulo": "Selección entre Fuente Única y Múltiples Proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "eliminacion_planes_muestreo_estandar",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "regla_todo_o_nada_inspeccion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "identificar_clientes_externos_e_internos",
+    "aplicado_en": [
+      {
+        "en": "eliminacion_planes_muestreo_estandar",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "regla_todo_o_nada_inspeccion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "reportes_de_costo_de_calidad",
+    "destino": "concepto_costo_de_calidad",
+    "score": 0.7805,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "concepto_costo_de_calidad",
+        "score": 0.7805,
+        "titulo": "Costo de la Calidad (Cost of Quality)"
+      },
+      {
+        "id": "costo_de_calidad_4",
+        "score": 0.7714,
+        "titulo": "Costo de Calidad (Cost of Quality)"
+      },
+      {
+        "id": "costo_de_calidad_3",
+        "score": 0.751,
+        "titulo": "Paso 4: Costo de la Calidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "politica_formal_de_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "politica_formal_de_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_de_proveedores",
+    "destino": "planificacion_cadena_suministro",
+    "score": 0.6789,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "planificacion_cadena_suministro",
+        "score": 0.6789,
+        "titulo": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)"
+      },
+      {
+        "id": "equipo_conjunto_de_mejora_con_proveedores",
+        "score": 0.6594,
+        "titulo": "Equipo Conjunto Comprador-Proveedor para Mejora de Cadena de Suministro"
+      },
+      {
+        "id": "identificar_clientes_externos_e_internos",
+        "score": 0.655,
+        "titulo": "Identificación de Clientes Externos e Internos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "control_del_proceso_del_proveedor",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "control_del_proceso_del_proveedor",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_socios_benchmarking",
+    "destino": "tipos_benchmarking_por_participante",
+    "score": 0.698,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "tipos_benchmarking_por_participante",
+        "score": 0.698,
+        "titulo": "Tipos de Benchmarking según Participantes (Interno, Externo, Competitivo, No Competitivo)"
+      },
+      {
+        "id": "clasificacion_benchmarking",
+        "score": 0.6713,
+        "titulo": "Clasificación de Tipos de Benchmarking"
+      },
+      {
+        "id": "proceso_benchmarking_juran_7pasos",
+        "score": 0.6671,
+        "titulo": "Ciclo de Benchmarking de 7 Pasos de Juran"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "rol_alta_direccion_benchmarking",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "rol_alta_direccion_benchmarking",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seven_basic_tools_of_quality",
+    "destino": "herramientas_analisis_causa_raiz",
+    "score": 0.6745,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "herramientas_de_diseno_de_calidad",
+        "score": 0.6745,
+        "titulo": "Herramientas Frecuentes de Diseño de Calidad"
+      },
+      {
+        "id": "clases_de_medidas_de_calidad",
+        "score": 0.658,
+        "titulo": "Clases Generales de Medidas de Calidad"
+      },
+      {
+        "id": "desarrollo_caracteristicas_producto",
+        "score": 0.6494,
+        "titulo": "Desarrollo de Características del Producto o Servicio (Quality by Design - Paso 4)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "tipos_benchmarking_por_participante",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "herramientas_de_diseno_de_calidad",
+    "aplicado_en": [
+      {
+        "en": "tipos_benchmarking_por_participante",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "sistema_gestion_calidad_general",
+    "destino": "control_calidad_operaciones_servicio",
+    "score": 0.7224,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "control_calidad_operaciones_servicio",
+        "score": 0.7224,
+        "titulo": "Control de Calidad en Operaciones de Servicio"
+      },
+      {
+        "id": "manual_de_calidad",
+        "score": 0.7157,
+        "titulo": "Manual de Calidad y Sistema de Control de Calidad"
+      },
+      {
+        "id": "sistema_gestion_calidad",
+        "score": 0.7013,
+        "titulo": "Sistema de Gestión de Calidad (Quality Management System)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "programa_auditoria_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "programa_auditoria_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "sistema_gestion_calidad_iso9001",
+    "destino": "sistema_gestion_calidad",
+    "score": 0.7955,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "sistema_gestion_calidad",
+        "score": 0.7955,
+        "titulo": "Sistema de Gestión de Calidad (Quality Management System)"
+      },
+      {
+        "id": "iso_ts_16949_automotriz",
+        "score": 0.7521,
+        "titulo": "ISO/TS 16949 - Sistema de Gestión de Calidad Automotriz"
+      },
+      {
+        "id": "iso_9000_sistema_gestion_calidad",
+        "score": 0.731,
+        "titulo": "Sistema de Gestión de Calidad ISO 9000/9001"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "auditorias_primera_segunda_tercera_parte",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "auditorias_primera_segunda_tercera_parte",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "sistema_medicion_calidad",
+    "destino": "medicion_calidad_2",
+    "score": 0.5789,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "manual_de_calidad",
+        "score": 0.5789,
+        "titulo": "Manual de Calidad y Sistema de Control de Calidad"
+      },
+      {
+        "id": "medicion_calidad_2",
+        "score": 0.5562,
+        "titulo": "Paso 3: Medición de la Calidad"
+      },
+      {
+        "id": "gestion_para_la_calidad",
+        "score": 0.5512,
+        "titulo": "Gestión para la Calidad (Managing for Quality)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "entrenamiento_supervisores_calidad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "manual_de_calidad",
+    "aplicado_en": [
+      {
+        "en": "entrenamiento_supervisores_calidad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "tipos_innovacion",
+    "destino": "tipos_innovacion_i_ii",
+    "score": 0.7378,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "tipos_innovacion_i_ii",
+        "score": 0.7378,
+        "titulo": "Dos Tipos de Innovación (Tipo I y Tipo II)"
+      },
+      {
+        "id": "innovacion_tipo_ii",
+        "score": 0.7012,
+        "titulo": "Innovación Tipo II (Más grande/Más pequeño/Combinación)"
+      },
+      {
+        "id": "modelo_transformacion_juran",
+        "score": 0.6306,
+        "titulo": "Modelo de Transformación de Juran (Cinco Breakthroughs)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "design_for_six_sigma_dmadv_2",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "design_for_six_sigma_dmadv_2",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "trabajo_con_proveedores",
+    "destino": "equipo_conjunto_de_mejora_con_proveedores",
+    "score": 0.6419,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "equipo_conjunto_de_mejora_con_proveedores",
+        "score": 0.6419,
+        "titulo": "Equipo Conjunto Comprador-Proveedor para Mejora de Cadena de Suministro"
+      },
+      {
+        "id": "planificacion_cadena_suministro",
+        "score": 0.6339,
+        "titulo": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)"
+      },
+      {
+        "id": "planificacion_tecnologica_conjunta",
+        "score": 0.6273,
+        "titulo": "Planificación Tecnológica Conjunta con Proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "punto_equilibrio_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "punto_equilibrio_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "trabajo_conjunto_con_proveedor",
+    "destino": "equipo_conjunto_de_mejora_con_proveedores",
+    "score": 0.6418,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "equipo_conjunto_de_mejora_con_proveedores",
+        "score": 0.6418,
+        "titulo": "Equipo Conjunto Comprador-Proveedor para Mejora de Cadena de Suministro"
+      },
+      {
+        "id": "coordinacion_control_vs_cambio",
+        "score": 0.6103,
+        "titulo": "Coordinación para Control versus Coordinación para Crear Cambio"
+      },
+      {
+        "id": "intercambio_de_roles_para_motivacion",
+        "score": 0.6084,
+        "titulo": "Intercambio Temporal de Puestos para Mejorar Comprensión y Motivación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "punto_equilibrio_calidad_inspeccion",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "regla_todo_o_nada_inspeccion_2",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "punto_equilibrio_calidad_inspeccion",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "regla_todo_o_nada_inspeccion_2",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "voz_del_cliente",
+    "destino": "descubrir_necesidades_cliente",
+    "score": 0.6152,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "identificar_clientes_diseno",
+        "score": 0.6152,
+        "titulo": "Identificar a los Clientes (Cast de Clientes)"
+      },
+      {
+        "id": "mantenimiento_preventivo_orientado_al_cliente",
+        "score": 0.5735,
+        "titulo": "Programa de Mantenimiento Preventivo Basado en Voz del Cliente"
+      },
+      {
+        "id": "descubrir_necesidades_cliente",
+        "score": 0.5334,
+        "titulo": "Descubrir las Necesidades del Cliente"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "dmadv_design_for_six_sigma",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "six_sigma_dmaic_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "identificar_clientes_diseno",
+    "aplicado_en": [
+      {
+        "en": "dmadv_design_for_six_sigma",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "six_sigma_dmaic_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  }
+]

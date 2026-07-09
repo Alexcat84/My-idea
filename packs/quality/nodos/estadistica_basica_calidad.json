@@ -14,10 +14,13 @@
   ],
   "entregable_esperado": "Resumen estadístico descriptivo de los datos del problema, con esquema de muestreo definido",
   "nodos_previos": [
-    "hojas_de_verificacion"
+    "hojas_de_verificacion",
+    "cribado_de_datos",
+    "resumen_de_datos_graficos"
   ],
   "nodos_siguientes": [
-    "diagrama_caja"
+    "diagrama_caja",
+    "distribucion_normal_probabilidad"
   ],
   "condiciones_activacion": [
     "Cuando se han recolectado datos y se necesita caracterizar un problema antes de un análisis más profundo"

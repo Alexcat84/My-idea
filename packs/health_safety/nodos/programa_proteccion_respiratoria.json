@@ -15,14 +15,13 @@
   ],
   "entregable_esperado": "Documento de programa de protección respiratoria implementado, con registros de fit-test, evaluaciones médicas y capacitaciones.",
   "nodos_previos": [
-    "identificacion_riesgos_respiratorios",
     "personal_protective_equipment",
-    "permit_required_confined_spaces"
+    "permit_required_confined_spaces",
+    "identificacion_peligros_salud"
   ],
   "nodos_siguientes": [
-    "ppe_general",
-    "capacitacion_seguridad_trabajadores",
-    "elevated_surfaces_fall_protection"
+    "elevated_surfaces_fall_protection",
+    "participacion_trabajadores"
   ],
   "condiciones_activacion": [
     "Si los trabajadores están expuestos a contaminantes en el aire que requieren respiradores",

@@ -15,11 +15,15 @@
   ],
   "entregable_esperado": "Gráfico de control implementado con límites calculados, plan de interpretación y protocolo de acción documentado",
   "nodos_previos": [
-    "planificacion_recoleccion_datos"
+    "planificacion_recoleccion_datos",
+    "tipos_escalas_medicion"
   ],
   "nodos_siguientes": [
     "interpretacion_graficos_variables",
-    "capacidad_de_proceso"
+    "capacidad_de_proceso",
+    "estratificacion_datos",
+    "graficos_control_atributos",
+    "graficos_control_variables"
   ],
   "condiciones_activacion": [
     "Cuando se necesita monitorear la estabilidad de un proceso en el tiempo",

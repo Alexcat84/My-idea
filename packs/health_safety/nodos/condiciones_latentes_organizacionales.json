@@ -12,11 +12,15 @@
   ],
   "entregable_esperado": "Un registro de condiciones latentes identificadas en la organización, priorizado por nivel de riesgo y urgencia de corrección.",
   "nodos_previos": [
-    "organizational_accident_model"
+    "modelo_accidente_organizacional"
   ],
   "nodos_siguientes": [
     "cultura_generativa_westrum",
-    "herramientas_diagnostico_proactivo"
+    "identificacion_evaluacion_peligros",
+    "caso_descarrilamiento_nakina",
+    "clasificacion_riesgos_por_dominio",
+    "condiciones_latentes_riesgo_universal",
+    "ironias_de_la_automatizacion"
   ],
   "condiciones_activacion": [
     "Cuando se investiga un accidente y se buscan causas raíz más allá del error humano inmediato.",

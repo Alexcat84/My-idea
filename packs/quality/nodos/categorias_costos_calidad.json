@@ -14,10 +14,12 @@
   ],
   "entregable_esperado": "Tabla desglosada de costos de calidad por categoría (fallas internas, externas, evaluación, prevención) con porcentajes sobre el total",
   "nodos_previos": [
-    "costo_de_mala_calidad"
+    "costo_de_mala_calidad",
+    "costo_de_mala_calidad_3"
   ],
   "nodos_siguientes": [
-    "costo_optimo_calidad"
+    "costo_optimo_calidad",
+    "costos_ocultos_calidad"
   ],
   "condiciones_activacion": [
     "Cuando se requiere detallar el origen específico de los costos de mala calidad",

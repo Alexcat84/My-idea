@@ -15,11 +15,10 @@
   ],
   "entregable_esperado": "Un informe de análisis de tendencias con gráficos superpuestos que identifique la cadena causal entre defectos, ausentismo, faltantes y cumplimiento de programa, más una predicción validada.",
   "nodos_previos": [
-    "recoleccion_datos_desempeno_operativo"
+    "diseno_de_metodos_de_recoleccion_de_datos"
   ],
   "nodos_siguientes": [
-    "programa_cero_defectos",
-    "prevencion_de_defectos"
+    "programa_cero_defectos"
   ],
   "condiciones_activacion": [
     "Cuando existan múltiples métricas de desempeño sin analizar de forma conjunta.",

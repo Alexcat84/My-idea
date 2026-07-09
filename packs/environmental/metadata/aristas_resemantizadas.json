@@ -1,0 +1,866 @@
+[
+  {
+    "fantasma": "auditoria_energetica_edificio",
+    "destino": "benchmark_auditoria_energetica",
+    "score": 0.6982,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "benchmark_auditoria_energetica",
+        "score": 0.6982,
+        "titulo": "Benchmarking y Auditoría Energética de Edificios"
+      },
+      {
+        "id": "auditoria_energetica_sistematica",
+        "score": 0.6305,
+        "titulo": "Auditoría Energética Sistemática"
+      },
+      {
+        "id": "eficiencia_energetica_almacenes",
+        "score": 0.6008,
+        "titulo": "Eficiencia Energética en Almacenes y Centros de Distribución"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "contratacion_desempeno_energetico_esco",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "eficiencia_hidrica_edificios_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "contratacion_desempeno_energetico_esco",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "eficiencia_hidrica_edificios_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "auditorias_formales_proveedores",
+    "destino": "auditorias_proveedores",
+    "score": 0.583,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "auditorias_proveedores",
+        "score": 0.583,
+        "titulo": "Auditorías Formales de Proveedores"
+      },
+      {
+        "id": "profundizacion_cadena_suministro",
+        "score": 0.5681,
+        "titulo": "Profundización en la Cadena de Suministro (Tier 2/3)"
+      },
+      {
+        "id": "dialogo_proveedores",
+        "score": 0.5619,
+        "titulo": "Diálogo y Engagement con Proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "programa_mentoria_proveedores_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "programa_mentoria_proveedores_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "ciclos_biologicos_tecnicos",
+    "destino": "metabolismo_tecnico",
+    "score": 0.6121,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "metabolismo_tecnico",
+        "score": 0.6121,
+        "titulo": "Metabolismo Técnico y Nutrientes Técnicos"
+      },
+      {
+        "id": "metabolismo_biologico",
+        "score": 0.5617,
+        "titulo": "Metabolismo Biológico y Nutrientes Biológicos"
+      },
+      {
+        "id": "nutrientes_biologicos",
+        "score": 0.5326,
+        "titulo": "Nutrientes Biológicos y Productos de Consumo"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "eco_efectividad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "eco_efectividad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "compromiso_ejecutivo_sostenibilidad",
+    "destino": "vincular_compensacion_sostenibilidad",
+    "score": 0.8079,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "vincular_compensacion_sostenibilidad",
+        "score": 0.8079,
+        "titulo": "Vincular Compensación y Bonos al Desempeño en Sostenibilidad"
+      },
+      {
+        "id": "vision_alineacion_sostenibilidad",
+        "score": 0.7894,
+        "titulo": "Visión y Alineación Estratégica de Sostenibilidad"
+      },
+      {
+        "id": "formar_equipo_verde_oficina",
+        "score": 0.7819,
+        "titulo": "Formación de un 'Equipo Verde' para Sostenibilidad de Oficina"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "green_team_oficina",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "green_team_oficina",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "construir_capacidad_sostenibilidad",
+    "destino": "valor_intangible_sostenibilidad",
+    "score": 0.8056,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "valor_intangible_sostenibilidad",
+        "score": 0.8056,
+        "titulo": "Creación de Valor Intangible mediante Sostenibilidad Corporativa"
+      },
+      {
+        "id": "priorizacion_iniciativas_sostenibilidad",
+        "score": 0.7964,
+        "titulo": "Priorización de Iniciativas de Sostenibilidad"
+      },
+      {
+        "id": "enfoque_portafolio_sostenibilidad",
+        "score": 0.7855,
+        "titulo": "Enfoque de Portafolio para Proyectos de Sostenibilidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "incentivar_reconocer_recompensar",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "transparencia_datos_ambientales",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "incentivar_reconocer_recompensar",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "transparencia_datos_ambientales",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "construir_estrategia_eco_advantage",
+    "destino": "estrategia_eco_advantage",
+    "score": 0.8584,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "estrategia_eco_advantage",
+        "score": 0.8584,
+        "titulo": "Estrategia de Eco-Advantage"
+      },
+      {
+        "id": "eco_advantage",
+        "score": 0.8319,
+        "titulo": "Eco-Advantage: Ventaja Competitiva a través de la Estrategia Ambiental"
+      },
+      {
+        "id": "identificar_evaluar_socios_estrategicos",
+        "score": 0.7758,
+        "titulo": "Identificar y Evaluar Socios Estratégicos para Sostenibilidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "co_creacion_estrategia_engagement",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "co_creacion_estrategia_engagement",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_organizacional_sostenibilidad",
+    "destino": "vision_alineacion_sostenibilidad",
+    "score": 0.7473,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "vision_alineacion_sostenibilidad",
+        "score": 0.7473,
+        "titulo": "Visión y Alineación Estratégica de Sostenibilidad"
+      },
+      {
+        "id": "compartir_lecciones_aprendidas",
+        "score": 0.7332,
+        "titulo": "Documentar y Compartir Lecciones Aprendidas en Sostenibilidad"
+      },
+      {
+        "id": "mobilizar_empleados_cultura_ecologica",
+        "score": 0.7302,
+        "titulo": "Movilizar a los Empleados para una Cultura Eco-Advantage"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_para_el_ambiente_dfe",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "diseno_para_el_ambiente_dfe",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "definicion_estrategia_eco_advantage",
+    "destino": "estrategia_eco_advantage",
+    "score": 0.8804,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "estrategia_eco_advantage",
+        "score": 0.8804,
+        "titulo": "Estrategia de Eco-Advantage"
+      },
+      {
+        "id": "eco_advantage",
+        "score": 0.8429,
+        "titulo": "Eco-Advantage: Ventaja Competitiva a través de la Estrategia Ambiental"
+      },
+      {
+        "id": "eco_efectividad_2",
+        "score": 0.7718,
+        "titulo": "Eco-Efectividad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "reporte_sostenibilidad_digital",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "reporte_sostenibilidad_digital",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diagnostico_impacto_ambiental_producto",
+    "destino": "metricas_impacto_ambiental",
+    "score": 0.7457,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "metricas_impacto_ambiental",
+        "score": 0.7457,
+        "titulo": "Métricas de Impacto Ambiental Empresarial"
+      },
+      {
+        "id": "construir_capacidad_evaluacion_ambiental",
+        "score": 0.6481,
+        "titulo": "Construcción de Capacidad Interna para Evaluación Ambiental"
+      },
+      {
+        "id": "mitigacion_riesgos_ambientales",
+        "score": 0.5979,
+        "titulo": "Mitigación de Riesgos Ambientales y Responsabilidad Extendida del Productor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estrategias_seleccion_preferencial",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "estrategias_seleccion_preferencial",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_cero_residuos",
+    "destino": "desperdicio_es_alimento",
+    "score": 0.5285,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "desperdicio_es_alimento",
+        "score": 0.5285,
+        "titulo": "El Desperdicio Es Alimento (Waste Equals Food)"
+      },
+      {
+        "id": "reduccion_residuos_construccion",
+        "score": 0.5033,
+        "titulo": "Reducción de Residuos Relacionados con la Construcción"
+      },
+      {
+        "id": "activacion_lista_positiva",
+        "score": 0.496,
+        "titulo": "Activación de la Lista Positiva (Rediseño Eco-efectivo desde Cero)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "metabolismo_biologico",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_para_desensamblaje",
+    "destino": "herramienta_fractal_triple_top_line",
+    "score": 0.536,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "herramienta_fractal_triple_top_line",
+        "score": 0.536,
+        "titulo": "Herramienta del Fractal y Triple Top Line"
+      },
+      {
+        "id": "marcos_pensamiento_dfe",
+        "score": 0.4831,
+        "titulo": "Marcos Conceptuales para Impulsar el Pensamiento de Diseño Sostenible"
+      },
+      {
+        "id": "nuevo_encargo_de_diseno",
+        "score": 0.466,
+        "titulo": "El Nuevo Encargo de Diseño (The New Design Assignment)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "downcycling_problema",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "eco_efectividad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseño_cradle_to_cradle",
+    "destino": "cradle_to_cradle_concepto",
+    "score": 0.5459,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "cradle_to_cradle_concepto",
+        "score": 0.5459,
+        "titulo": "Cradle to Cradle: Diseño Regenerativo"
+      },
+      {
+        "id": "certificacion_cradle_to_cradle",
+        "score": 0.4042,
+        "titulo": "Certificación Cradle to Cradle"
+      },
+      {
+        "id": "reinvencion_diseno_nutrivehiculo",
+        "score": 0.4036,
+        "titulo": "Reinvención del Diseño: De Producto a Sistema Regenerativo"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_universal_talla_unica",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "fuerza_bruta_industrial",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "modelo_cradle_to_grave",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "monocultura_como_paradigma",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "pib_como_medida_erronea_de_progreso",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "productos_crudos",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "entender_actitudes_empleados",
+    "destino": "evaluacion_actitudes_empleados",
+    "score": 0.7484,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_actitudes_empleados",
+        "score": 0.7484,
+        "titulo": "Evaluación de Actitudes de los Empleados hacia la Sostenibilidad"
+      },
+      {
+        "id": "definicion_metas_engagement",
+        "score": 0.6003,
+        "titulo": "Definición de Metas y Decisiones Estratégicas de Engagement"
+      },
+      {
+        "id": "voces_externas_credibles",
+        "score": 0.5668,
+        "titulo": "Incorporación de Voces Externas Creíbles"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "incentivar_reconocer_recompensar",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "incentivar_reconocer_recompensar",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "escaneo_issues_sostenibilidad",
+    "destino": "priorizacion_iniciativas_sostenibilidad",
+    "score": 0.7982,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "priorizacion_iniciativas_sostenibilidad",
+        "score": 0.7982,
+        "titulo": "Priorización de Iniciativas de Sostenibilidad"
+      },
+      {
+        "id": "compartir_lecciones_aprendidas",
+        "score": 0.7659,
+        "titulo": "Documentar y Compartir Lecciones Aprendidas en Sostenibilidad"
+      },
+      {
+        "id": "identificar_oportunidades_sostenibilidad",
+        "score": 0.7548,
+        "titulo": "Identificar Oportunidades de Sostenibilidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "evaluacion_materialidad_empresarial",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "evaluacion_materialidad_empresarial",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "evaluacion_desempeno_corporativo_sostenibilidad",
+    "destino": "vincular_compensacion_sostenibilidad",
+    "score": 0.8086,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "vincular_compensacion_sostenibilidad",
+        "score": 0.8086,
+        "titulo": "Vincular Compensación y Bonos al Desempeño en Sostenibilidad"
+      },
+      {
+        "id": "vision_alineacion_sostenibilidad",
+        "score": 0.7821,
+        "titulo": "Visión y Alineación Estratégica de Sostenibilidad"
+      },
+      {
+        "id": "eco_eficiencia",
+        "score": 0.76,
+        "titulo": "Eco-Eficiencia para Reducción de Costos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "vincular_compensacion_sostenibilidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": []
+  },
+  {
+    "fantasma": "identificar_valor_de_negocio_ambiental",
+    "destino": "eco_advantage",
+    "score": 0.8048,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "eco_advantage",
+        "score": 0.8048,
+        "titulo": "Eco-Advantage: Ventaja Competitiva a través de la Estrategia Ambiental"
+      },
+      {
+        "id": "identificar_eco_riesgos_oportunidades",
+        "score": 0.7385,
+        "titulo": "Identificación Sistemática de Riesgos y Oportunidades Ambientales (Issue Spotting)"
+      },
+      {
+        "id": "modelo_eco_criterios_ponderados",
+        "score": 0.7228,
+        "titulo": "Modelo de Criterios Ponderados (Eco-Model)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "modelo_eco_criterios_ponderados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "modelo_eco_criterios_ponderados",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "medicion_impacto_ambiental",
+    "destino": "metricas_impacto_ambiental",
+    "score": 0.5502,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "quimica_verde",
+        "score": 0.5502,
+        "titulo": "Uso de química verde en el diseño de producto"
+      },
+      {
+        "id": "disruptores_endocrinos_y_salud_industrial",
+        "score": 0.5344,
+        "titulo": "Disruptores Endocrinos y Salud Industrial"
+      },
+      {
+        "id": "paso1_libre_de_sustancias_x",
+        "score": 0.533,
+        "titulo": "Paso 1: Eliminar Sustancias X (Libre de Culpables Conocidos)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "commuting_teletrabajo_sostenible",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "programa_reciclaje_integral",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "reduccion_viajes_negocio",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "quimica_verde",
+    "aplicado_en": [
+      {
+        "en": "commuting_teletrabajo_sostenible",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "programa_reciclaje_integral",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "reduccion_viajes_negocio",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "medicion_impactos_ambientales",
+    "destino": "metricas_impacto_ambiental",
+    "score": 0.5595,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "quimica_verde",
+        "score": 0.5595,
+        "titulo": "Uso de química verde en el diseño de producto"
+      },
+      {
+        "id": "disruptores_endocrinos_y_salud_industrial",
+        "score": 0.542,
+        "titulo": "Disruptores Endocrinos y Salud Industrial"
+      },
+      {
+        "id": "paso1_libre_de_sustancias_x",
+        "score": 0.5364,
+        "titulo": "Paso 1: Eliminar Sustancias X (Libre de Culpables Conocidos)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "movilidad_verde_empleados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "quimica_verde",
+    "aplicado_en": [
+      {
+        "en": "movilidad_verde_empleados",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "medir_desechos_empresariales",
+    "destino": "medir_residuos_empresa",
+    "score": 0.5701,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "business_materiality_assessment",
+        "score": 0.5701,
+        "titulo": "Evaluación de Materialidad del Negocio"
+      },
+      {
+        "id": "contabilidad_flujo_materiales",
+        "score": 0.5508,
+        "titulo": "Contabilidad de Flujo de Materiales (Material Flow Cost Accounting)"
+      },
+      {
+        "id": "logistica_inversa_rentable",
+        "score": 0.5241,
+        "titulo": "Transformar la Logística Inversa en un Centro de Beneficio"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "realizar_analisis_ciclo_de_vida_lca",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "business_materiality_assessment",
+    "aplicado_en": [
+      {
+        "en": "realizar_analisis_ciclo_de_vida_lca",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "medir_huella_de_carbono_empresarial",
+    "destino": "evaluar_huella_carbono",
+    "score": 0.8351,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluar_huella_carbono",
+        "score": 0.8351,
+        "titulo": "Evaluar la Huella de Carbono de la Empresa"
+      },
+      {
+        "id": "compra_offsets_carbono",
+        "score": 0.7154,
+        "titulo": "Comprar Offsets de Carbono"
+      },
+      {
+        "id": "huella_carbono_empresarial",
+        "score": 0.7079,
+        "titulo": "Medición de la Huella de Carbono Empresarial"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "realizar_analisis_ciclo_de_vida_lca",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "realizar_analisis_ciclo_de_vida_lca",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "mejora_eficiencia_flota_mantenimiento",
+    "destino": "eficiencia_flota_vehicular",
+    "score": 0.781,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "eficiencia_flota_vehicular",
+        "score": 0.781,
+        "titulo": "Mejora de Eficiencia de Flota mediante Mantenimiento y Capacitación"
+      },
+      {
+        "id": "empaque_ecoeficiente",
+        "score": 0.6233,
+        "titulo": "Empaque Eco-Eficiente y Optimización de Carga"
+      },
+      {
+        "id": "consolidacion_cargas_backhaul",
+        "score": 0.5711,
+        "titulo": "Consolidación de Cargas y Aprovechamiento de Backhauls"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "vehiculos_combustibles_alternativos_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "vehiculos_combustibles_alternativos_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "nutrientes_tecnicos_vs_biologicos",
+    "destino": "metabolismo_biologico",
+    "score": 0.7922,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "metabolismo_biologico",
+        "score": 0.7922,
+        "titulo": "Metabolismo Biológico y Nutrientes Biológicos"
+      },
+      {
+        "id": "nutrientes_biologicos",
+        "score": 0.7795,
+        "titulo": "Nutrientes Biológicos y Productos de Consumo"
+      },
+      {
+        "id": "metabolismo_tecnico",
+        "score": 0.7484,
+        "titulo": "Metabolismo Técnico y Nutrientes Técnicos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "energia_eolica_distribuida",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "energia_eolica_distribuida",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "plan_cambio_climatico_corporativo",
+    "destino": "plan_cambio_climatico",
+    "score": 0.8484,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "plan_cambio_climatico",
+        "score": 0.8484,
+        "titulo": "Construir un Plan de Cambio Climático"
+      },
+      {
+        "id": "draft_plan_accion_climatico",
+        "score": 0.7887,
+        "titulo": "Redactar un Plan de Acción Climático"
+      },
+      {
+        "id": "dar_forma_politica_climatica",
+        "score": 0.7487,
+        "titulo": "Dar Forma a la Política de Cambio Climático"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "movilidad_verde_empleados",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "movilidad_verde_empleados",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  }
+]

@@ -13,9 +13,12 @@
   ],
   "entregable_esperado": "Plan de selección y capacitación específico para personal de contacto directo con clientes",
   "nodos_previos": [
-    "calidad_del_servicio"
+    "calidad_del_servicio",
+    "procedimientos_definidos_en_servicios"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "retroalimentacion_cliente_mejora_servicio"
+  ],
   "condiciones_activacion": [
     "Cuando la organización tiene personal de atención directa al público",
     "Al diseñar procesos de contratación y capacitación en servicio al cliente"

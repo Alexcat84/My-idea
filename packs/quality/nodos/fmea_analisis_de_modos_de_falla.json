@@ -17,10 +17,12 @@
   ],
   "entregable_esperado": "Matriz FMEA completa con modos de falla, causas, efectos, RPN calculado y plan de acción para los riesgos más altos",
   "nodos_previos": [
-    "diagrama_de_flujo_proceso_map"
+    "diagrama_de_flujo_proceso_map",
+    "analisis_pareto"
   ],
   "nodos_siguientes": [
-    "matriz_de_control_de_proceso"
+    "matriz_de_control_de_proceso",
+    "key_process_product_characteristics"
   ],
   "condiciones_activacion": [
     "Cuando se necesita anticipar y priorizar riesgos antes de implementar un proceso o producto",

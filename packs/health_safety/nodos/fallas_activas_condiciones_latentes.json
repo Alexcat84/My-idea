@@ -12,11 +12,18 @@
   ],
   "entregable_esperado": "Lista clasificada de fallas activas vs condiciones latentes identificadas en el incidente",
   "nodos_previos": [
-    "modelo_accidente_organizacional"
+    "modelo_accidente_organizacional",
+    "defensas_en_profundidad_2",
+    "omisiones_en_mantenimiento",
+    "prueba_sustitucion_johnston",
+    "reglas_parada_investigacion_accidentes"
   ],
   "nodos_siguientes": [
     "ventana_oportunidad_accidente",
-    "defensas_en_profundidad"
+    "defensas_en_profundidad",
+    "caso_grietas_pequenas_mantenimiento_aeronaves",
+    "condiciones_latentes_largo_plazo",
+    "documentacion_mantenimiento_linea_base"
   ],
   "condiciones_activacion": [
     "Al analizar por qué un accidente ocurrió pese a múltiples capas defensivas",

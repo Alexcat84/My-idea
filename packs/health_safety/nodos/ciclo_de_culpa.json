@@ -12,10 +12,15 @@
     "Redirigir el análisis de incidentes hacia factores sistémicos y organizacionales"
   ],
   "entregable_esperado": "Documento de análisis crítico que identifique si la organización está atrapada en un ciclo de culpa reactivo",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "errores_como_consecuencia",
+    "gestion_de_errores"
+  ],
   "nodos_siguientes": [
     "cultura_de_seguridad_componentes",
-    "cultura_justa"
+    "cultura_justa",
+    "cultura_de_reporte",
+    "enfoque_situacional_vs_personal"
   ],
   "condiciones_activacion": [
     "Cuando tras cada incidente la respuesta es siempre 'culpar y entrenar' o 'escribir otro procedimiento'",

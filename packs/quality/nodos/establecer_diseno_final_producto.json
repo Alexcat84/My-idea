@@ -14,10 +14,13 @@
   "entregable_esperado": "Paquete de documentación oficial del diseño final del producto, aprobado y publicado para otras funciones",
   "nodos_previos": [
     "analisis_valor",
-    "revision_diseno"
+    "revision_diseno",
+    "optimizacion_caracteristicas_diseno"
   ],
   "nodos_siguientes": [
-    "desarrollar_caracteristicas_proceso"
+    "desarrollar_caracteristicas_proceso",
+    "clasificacion_seriedad_defectos",
+    "desarrollar_caracteristicas_proceso_2"
   ],
   "condiciones_activacion": [
     "Cuando el diseño ha sido optimizado y probado y está listo para transmitirse a producción u operaciones"

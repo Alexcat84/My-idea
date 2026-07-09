@@ -13,10 +13,13 @@
   ],
   "entregable_esperado": "Sistema de monitoreo continuo de la brecha procedimiento-práctica con indicadores de alerta temprana de drift",
   "nodos_previos": [
-    "supuestos_de_procedimientos"
+    "supuestos_de_procedimientos",
+    "adaptaciones_procedimentales",
+    "teoria_sistemas_seguridad"
   ],
   "nodos_siguientes": [
-    "cumplimiento_vs_violacion"
+    "cumplimiento_vs_violacion",
+    "organizaciones_alta_confiabilidad"
   ],
   "condiciones_activacion": [
     "Cuando una organización lleva tiempo operando sin incidentes graves y desea evaluar su riesgo real",

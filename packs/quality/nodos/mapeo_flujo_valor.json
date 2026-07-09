@@ -14,11 +14,14 @@
   ],
   "entregable_esperado": "Mapa de flujo de valor actual y futuro documentado con métricas de proceso y plan de implementación",
   "nodos_previos": [
-    "ocho_desperdicios_lean"
+    "ocho_desperdicios_lean",
+    "takt_time"
   ],
   "nodos_siguientes": [
     "sistema_pull_push",
-    "eventos_kaizen_rie"
+    "eventos_kaizen_rie",
+    "planificacion_inicial_calidad",
+    "tres_tipos_desperdicio_tps"
   ],
   "condiciones_activacion": [
     "Cuando se necesita entender el estado actual de un proceso para identificar oportunidades de mejora",

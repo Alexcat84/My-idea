@@ -14,9 +14,22 @@
   ],
   "entregable_esperado": "Un reporte mensual de costo de calidad que vincule indicadores operativos con impacto financiero, presentado a la alta dirección.",
   "nodos_previos": [
-    "programa_cero_defectos"
+    "programa_cero_defectos",
+    "buyer_rating_system",
+    "definicion_calidad_conformidad",
+    "medicion_calidad",
+    "medicion_calidad_2",
+    "medicion_servicios",
+    "rejilla_madurez_gestion_calidad"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "cero_defectos",
+    "cero_defectos_zd",
+    "conciencia_calidad",
+    "conciencia_de_calidad_2",
+    "programa_make_certain_2",
+    "programa_mejora_calidad_14_pasos"
+  ],
   "condiciones_activacion": [
     "Cuando la alta dirección requiere justificación financiera de las iniciativas de calidad.",
     "Cuando se detectan crecimientos inusuales en inventario, retrabajo o costos operativos relacionados con defectos."

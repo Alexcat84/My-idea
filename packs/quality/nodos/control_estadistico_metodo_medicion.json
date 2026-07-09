@@ -14,10 +14,12 @@
   ],
   "entregable_esperado": "Un reporte de control estadístico del sistema de medición que confirme la validez del método de prueba (instrumento + operador) antes de su uso en producción o inspección.",
   "nodos_previos": [
-    "control_estadistico_procesos"
+    "control_estadistico_proceso",
+    "definiciones_operacionales_4"
   ],
   "nodos_siguientes": [
-    "definiciones_operacionales"
+    "definiciones_operacionales",
+    "definiciones_operacionales_3"
   ],
   "condiciones_activacion": [
     "Cuando existan discrepancias entre mediciones de vendedor y comprador.",

@@ -14,7 +14,9 @@
   ],
   "entregable_esperado": "Valor numérico de Cpk documentado con recomendaciones de acción (centrado o reducción de variación)",
   "nodos_previos": [
-    "indice_cp"
+    "indice_cp",
+    "capacidad_proceso_concepto",
+    "planificacion_estudio_capacidad"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [

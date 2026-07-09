@@ -14,10 +14,11 @@
   ],
   "entregable_esperado": "Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad",
   "nodos_previos": [
-    "auditoria_de_producto"
+    "auditoria_de_producto",
+    "control_del_proceso_del_proveedor"
   ],
   "nodos_siguientes": [
-    "prediccion_de_costos_de_servicio_en_campo"
+    "planes_de_muestreo_de_aceptacion"
   ],
   "condiciones_activacion": [
     "Cuando se necesita un indicador único y comparable de calidad de producto",

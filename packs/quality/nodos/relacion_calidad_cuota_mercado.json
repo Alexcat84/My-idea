@@ -12,9 +12,12 @@
     "Evitar mejoras menores de calidad que el cliente no perciba ni valore"
   ],
   "entregable_esperado": "Informe de análisis de preferencia de consumidor vs cuota de mercado con recomendación estratégica (invertir en calidad o en marketing)",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "analisis_licitaciones_no_ganadas"
+  ],
   "nodos_siguientes": [
-    "fitness_for_purpose_vs_conformance"
+    "fitness_for_purpose_vs_conformance",
+    "perfeccionismo_vs_valor"
   ],
   "condiciones_activacion": [
     "Cuando se necesita decidir entre invertir en mejora de calidad o en marketing",

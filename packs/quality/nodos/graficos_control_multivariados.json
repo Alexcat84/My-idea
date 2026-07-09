@@ -14,7 +14,9 @@
   ],
   "entregable_esperado": "Sistema de control multivariado implementado para características de calidad correlacionadas",
   "nodos_previos": [
-    "grafico_box_jenkins"
+    "grafico_box_jenkins",
+    "grafico_cusum",
+    "grafico_media_movil_ewma"
   ],
   "nodos_siguientes": [
     "capacidad_proceso_concepto"

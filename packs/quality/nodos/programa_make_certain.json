@@ -13,9 +13,14 @@
   ],
   "entregable_esperado": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con métricas de rework antes/después",
   "nodos_previos": [
-    "reinicio_programa_calidad"
+    "reinicio_programa_calidad",
+    "costo_de_calidad_5",
+    "definicion_calidad_conformidad",
+    "estilo_gerencial_ballet_vs_hockey"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "cero_defectos_zd"
+  ],
   "condiciones_activacion": [
     "Cuando el programa de calidad se ha enfocado únicamente en manufactura y se requiere extenderlo a personal administrativo",
     "Si existe alto porcentaje de tiempo dedicado a rehacer trabajo en áreas de oficina",

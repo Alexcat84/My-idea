@@ -13,10 +13,12 @@
   ],
   "entregable_esperado": "Una tabla de análisis de COPQ desglosada por las tres categorías con porcentajes de participación",
   "nodos_previos": [
-    "costo_de_mala_calidad_copq"
+    "costo_de_mala_calidad_copq",
+    "costo_de_mala_calidad_copq_3"
   ],
   "nodos_siguientes": [
-    "metodologia_medicion_copq"
+    "metodologia_medicion_copq",
+    "calculo_roi_calidad"
   ],
   "condiciones_activacion": [
     "Cuando se ha identificado un COPQ elevado y se necesita saber dónde concentrar los esfuerzos de reducción",

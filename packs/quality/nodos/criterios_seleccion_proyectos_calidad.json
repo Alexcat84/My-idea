@@ -13,11 +13,13 @@
   ],
   "entregable_esperado": "Matriz de priorización de proyectos con lista ordenada de recomendaciones",
   "nodos_previos": [
-    "identificacion_oportunidades_mejora"
+    "proceso_nominacion_seleccion",
+    "comprension_brechas_desempeno"
   ],
   "nodos_siguientes": [
     "carta_proyecto_calidad",
-    "formacion_equipo_proyecto"
+    "formacion_equipo_proyecto",
+    "pocos_vitales_muchos_utiles"
   ],
   "condiciones_activacion": [
     "Cuando existen múltiples proyectos de mejora candidatos y se debe decidir cuáles ejecutar primero",

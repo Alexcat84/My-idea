@@ -12,10 +12,14 @@
   ],
   "entregable_esperado": "Reporte de validación del sistema de medición confirmando su capacidad",
   "nodos_previos": [
-    "diseno_controles_proceso_mejorado"
+    "diseno_controles_proceso_mejorado",
+    "6s_lugar_trabajo",
+    "control_proceso_variables",
+    "errores_a_prueba_poka_yoke"
   ],
   "nodos_siguientes": [
-    "establecimiento_capacidad_proceso"
+    "establecimiento_capacidad_proceso",
+    "concepto_autocontrol"
   ],
   "condiciones_activacion": [
     "Cuando se necesita confirmar la fiabilidad de los datos usados para controlar un proceso"

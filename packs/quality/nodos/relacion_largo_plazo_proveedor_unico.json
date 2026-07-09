@@ -13,10 +13,14 @@
   ],
   "entregable_esperado": "Lista de proveedores únicos por artículo crítico y contratos de largo plazo firmados con criterios de calidad definidos",
   "nodos_previos": [
-    "compra_por_precio_mas_bajo_como_error"
+    "compra_por_precio_mas_bajo_como_error",
+    "eliminacion_planes_muestreo_estandar"
   ],
   "nodos_siguientes": [
-    "mejora_continua_del_sistema"
+    "mejora_continua_del_sistema",
+    "calificacion_de_proveedores_por_capacidad",
+    "practicas_manufactura_justo_a_tiempo",
+    "regla_todo_o_nada_inspeccion"
   ],
   "condiciones_activacion": [
     "Cuando la empresa maneja múltiples proveedores para un mismo insumo",

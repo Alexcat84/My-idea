@@ -15,10 +15,12 @@
   ],
   "entregable_esperado": "Política de inspección documentada por cada componente o proveedor, indicando si se inspecciona al 100%, o no se inspecciona en absoluto.",
   "nodos_previos": [
-    "comparacion_metodos_inspeccion"
+    "comparacion_metodos_inspeccion",
+    "redundancia_en_diseno"
   ],
   "nodos_siguientes": [
-    "trabajo_con_proveedores"
+    "equipo_conjunto_de_mejora_con_proveedores",
+    "cribado_prueba_barata"
   ],
   "condiciones_activacion": [
     "Cuando se debe decidir la política de inspección de un componente o lote entrante.",

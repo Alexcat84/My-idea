@@ -13,11 +13,13 @@
   ],
   "entregable_esperado": "Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.",
   "nodos_previos": [
-    "recoleccion_de_datos_de_proceso"
+    "diseno_de_metodos_de_recoleccion_de_datos",
+    "muestreo_aleatorio_vs_mecanico"
   ],
   "nodos_siguientes": [
     "capacidad_del_proceso",
-    "graficos_de_control_uso"
+    "graficos_de_control_uso",
+    "limites_de_especificacion_vs_limites_de_control"
   ],
   "condiciones_activacion": [
     "Cuando el usuario depende de inspección final para garantizar calidad",

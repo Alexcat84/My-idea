@@ -1,0 +1,1701 @@
+[
+  {
+    "fantasma": "analisis_fallas_latentes",
+    "destino": "fallas_activas_condiciones_latentes",
+    "score": 0.6357,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "fallas_activas_condiciones_latentes",
+        "score": 0.6357,
+        "titulo": "Fallas Activas y Condiciones Latentes"
+      },
+      {
+        "id": "fallos_activos_condiciones_latentes",
+        "score": 0.6317,
+        "titulo": "Fallos Activos y Condiciones Latentes"
+      },
+      {
+        "id": "deriva_hacia_el_fallo",
+        "score": 0.6284,
+        "titulo": "Drift into Failure (Deriva hacia el fallo)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "prueba_sustitucion_johnston",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "prueba_sustitucion_johnston",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "calidad_control_vs_aseguramiento",
+    "destino": "quality_control_vs_quality_assurance",
+    "score": 0.6828,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "quality_control_vs_quality_assurance",
+        "score": 0.6828,
+        "titulo": "Control de Calidad versus Aseguramiento de Calidad"
+      },
+      {
+        "id": "metas_de_seguridad_correctas",
+        "score": 0.6144,
+        "titulo": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos"
+      },
+      {
+        "id": "medidas_proceso_vs_resultado",
+        "score": 0.5589,
+        "titulo": "Medidas de Proceso vs Medidas de Resultado en Seguridad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "defensas_peligrosas_paradojas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "defensas_peligrosas_paradojas",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "capacitacion_seguridad_trabajadores",
+    "destino": "participacion_trabajadores",
+    "score": 0.8039,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "participacion_trabajadores",
+        "score": 0.8039,
+        "titulo": "Participación de los Trabajadores en el Programa de Seguridad"
+      },
+      {
+        "id": "educacion_entrenamiento_seguridad",
+        "score": 0.7479,
+        "titulo": "Educación y Entrenamiento en Seguridad"
+      },
+      {
+        "id": "seguridad_soldadura_corte_bronceado",
+        "score": 0.7268,
+        "titulo": "Seguridad en Soldadura, Corte y Bronceado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "escaleras_portatiles_seguridad",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "prevencion_violencia_laboral",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_proteccion_respiratoria",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "seguridad_soldadura_corte_bronceado",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "seguridad_trabajadores_jovenes",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "escaleras_portatiles_seguridad",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "prevencion_violencia_laboral",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_proteccion_respiratoria",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "seguridad_soldadura_corte_bronceado",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "seguridad_trabajadores_jovenes",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "clasificacion_errores_humanos",
+    "destino": "atribucion_retrospectiva_del_error",
+    "score": 0.792,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "atribucion_retrospectiva_del_error",
+        "score": 0.792,
+        "titulo": "El 'Error Humano' como Atribución Retrospectiva (Juicio a Posteriori)"
+      },
+      {
+        "id": "analisis_factores_distales_proximales",
+        "score": 0.7419,
+        "titulo": "Análisis de Factores Proximales y Distales"
+      },
+      {
+        "id": "obtencion_datos_factores_humanos",
+        "score": 0.728,
+        "titulo": "Obtención de Datos de Factores Humanos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "riesgo_actividades_mantenimiento",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "riesgo_actividades_mantenimiento",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cognitive_fixation",
+    "destino": "fijacion_cognitiva",
+    "score": 0.8376,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "fijacion_cognitiva",
+        "score": 0.8376,
+        "titulo": "Fijación Cognitiva (Cognitive Fixation)"
+      },
+      {
+        "id": "plan_continuation_bias",
+        "score": 0.4818,
+        "titulo": "Sesgo de Continuación del Plan (Plan Continuation)"
+      },
+      {
+        "id": "confusion_de_modos_automatizacion",
+        "score": 0.4756,
+        "titulo": "Confusión de Modos en Sistemas Automatizados"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "plan_continuation_bias",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "plan_continuation_bias",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "competencia_como_responsabilidad_sistema",
+    "destino": "desajuste_autoridad_responsabilidad",
+    "score": 0.695,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "desajuste_autoridad_responsabilidad",
+        "score": 0.695,
+        "titulo": "Desajuste entre Autoridad y Responsabilidad"
+      },
+      {
+        "id": "responsabilidad_de_seguridad_en_linea",
+        "score": 0.6392,
+        "titulo": "Responsabilidad de Seguridad en la Organización de Línea"
+      },
+      {
+        "id": "autonomia_dependencia_regulatoria",
+        "score": 0.6386,
+        "titulo": "Autonomía e Interdependencia en la Relación Regulador-Regulado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "desajuste_tarea_persona",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "comprension_del_error_humano_como_sintoma",
+    "destino": "human_error_como_sintoma",
+    "score": 0.7692,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "human_error_como_sintoma",
+        "score": 0.7692,
+        "titulo": "El 'Error Humano' como Síntoma, no como Causa"
+      },
+      {
+        "id": "new_view_human_error",
+        "score": 0.7646,
+        "titulo": "New View del Error Humano"
+      },
+      {
+        "id": "atribucion_retrospectiva_del_error",
+        "score": 0.7522,
+        "titulo": "El 'Error Humano' como Atribución Retrospectiva (Juicio a Posteriori)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "new_view_vs_old_view_de_error_humano",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "new_view_vs_old_view_de_error_humano",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "comprension_error_humano_como_consecuencia",
+    "destino": "atribucion_retrospectiva_del_error",
+    "score": 0.8229,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "atribucion_retrospectiva_del_error",
+        "score": 0.8229,
+        "titulo": "El 'Error Humano' como Atribución Retrospectiva (Juicio a Posteriori)"
+      },
+      {
+        "id": "new_view_human_error",
+        "score": 0.8056,
+        "titulo": "New View del Error Humano"
+      },
+      {
+        "id": "human_error_como_sintoma",
+        "score": 0.7764,
+        "titulo": "El 'Error Humano' como Síntoma, no como Causa"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "evitar_sesgo_retrospectivo_hindsight",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "evitar_sesgo_retrospectivo_hindsight",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "condiciones_latentes",
+    "destino": "condiciones_latentes_organizacionales",
+    "score": 0.7084,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "condiciones_latentes_organizacionales",
+        "score": 0.7084,
+        "titulo": "Condiciones Latentes en Sistemas Complejos"
+      },
+      {
+        "id": "condiciones_latentes_riesgo_universal",
+        "score": 0.5726,
+        "titulo": "Condiciones Latentes como Riesgo Universal"
+      },
+      {
+        "id": "condiciones_latentes_largo_plazo",
+        "score": 0.5445,
+        "titulo": "Condiciones Latentes de Largo Plazo en Infraestructura"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "clasificacion_riesgos_por_dominio",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "condiciones_latentes_riesgo_universal",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "clasificacion_riesgos_por_dominio",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "condiciones_latentes_riesgo_universal",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "construccion_causas_recomendaciones",
+    "destino": "construccion_de_causas",
+    "score": 0.5888,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "enfoque_situacional_vs_personal_2",
+        "score": 0.5888,
+        "titulo": "Enfoque Situacional vs. Enfoque Personal en Gestión de Errores"
+      },
+      {
+        "id": "cognisance_organizacional",
+        "score": 0.5827,
+        "titulo": "Cognisance: Conciencia Organizacional del Peligro"
+      },
+      {
+        "id": "revision_de_aprendizaje",
+        "score": 0.5763,
+        "titulo": "Revisión de Aprendizaje en Lugar de Investigación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "construccion_linea_tiempo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "enfoque_situacional_vs_personal_2",
+    "aplicado_en": [
+      {
+        "en": "construccion_linea_tiempo",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_de_seguridad",
+    "destino": "cultura_de_seguridad_componentes",
+    "score": 0.8212,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "cultura_de_seguridad_componentes",
+        "score": 0.8212,
+        "titulo": "Componentes de la Cultura de Seguridad"
+      },
+      {
+        "id": "safety_culture_engineering",
+        "score": 0.7924,
+        "titulo": "Ingeniería de la Cultura de Seguridad"
+      },
+      {
+        "id": "cultura_de_seguridad_interpretivista_funcionalista",
+        "score": 0.7777,
+        "titulo": "Dos Visiones de la Cultura de Seguridad: Interpretivista vs Funcionalista"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "riesgos_del_enfoque_en_error_humano",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "riesgos_del_enfoque_en_error_humano",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_de_seguridad_informada",
+    "destino": "cultura_de_seguridad_componentes",
+    "score": 0.7634,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "cultura_de_seguridad_componentes",
+        "score": 0.7634,
+        "titulo": "Componentes de la Cultura de Seguridad"
+      },
+      {
+        "id": "safety_culture_engineering",
+        "score": 0.7488,
+        "titulo": "Ingeniería de la Cultura de Seguridad"
+      },
+      {
+        "id": "evaluacion_cultura_seguridad_completa",
+        "score": 0.7443,
+        "titulo": "Evaluación de la Cultura de Seguridad Más Allá de sus Componentes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cultura_como_mecanismo_descentralizacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "cultura_como_mecanismo_descentralizacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_de_seguridad_nueva_vista",
+    "destino": "vieja_vision_vs_nueva_vision_seguridad",
+    "score": 0.8513,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "vieja_vision_vs_nueva_vision_seguridad",
+        "score": 0.8513,
+        "titulo": "Contraste entre Vieja Visión y Nueva Visión de la Seguridad"
+      },
+      {
+        "id": "cultura_de_seguridad_interpretivista_funcionalista",
+        "score": 0.7671,
+        "titulo": "Dos Visiones de la Cultura de Seguridad: Interpretivista vs Funcionalista"
+      },
+      {
+        "id": "safety_culture_engineering",
+        "score": 0.7444,
+        "titulo": "Ingeniería de la Cultura de Seguridad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "niveles_de_madurez_de_seguridad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "niveles_de_madurez_de_seguridad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_justa_en_investigacion_de_accidentes",
+    "destino": "cultura_justa",
+    "score": 0.6682,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "limite_busqueda_causas_pendulo",
+        "score": 0.6682,
+        "titulo": "El Límite en la Búsqueda de Causas Distales (¿Ha Ido el Péndulo Demasiado Lejos?)"
+      },
+      {
+        "id": "reporte_casi_accidentes",
+        "score": 0.6362,
+        "titulo": "Sistemas de Reporte de Casi Accidentes (Near-Miss)"
+      },
+      {
+        "id": "aprendizaje_organizacional_desde_incidentes",
+        "score": 0.6203,
+        "titulo": "Aprendizaje Organizacional a partir de Incidentes y Cuasi-Accidentes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "new_view_vs_old_view_de_error_humano",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "limite_busqueda_causas_pendulo",
+    "aplicado_en": [
+      {
+        "en": "new_view_vs_old_view_de_error_humano",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "cultura_organizacional_cerrada",
+    "destino": "dysfunctional_organizational_culture_patterns",
+    "score": 0.6136,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "dysfunctional_organizational_culture_patterns",
+        "score": 0.6136,
+        "titulo": "Patrones Disfuncionales de Cultura Organizacional"
+      },
+      {
+        "id": "cultura_flexible_organizacional",
+        "score": 0.5946,
+        "titulo": "Cultura Organizacional Flexible"
+      },
+      {
+        "id": "cultura_como_mecanismo_descentralizacion",
+        "score": 0.5898,
+        "titulo": "Cultura como Mecanismo de Descentralización Coordinada"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "normalizacion_de_la_desviacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "normalizacion_de_la_desviacion",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_a_prueba_de_errores",
+    "destino": "analisis_factores_distales_proximales",
+    "score": 0.627,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "analisis_factores_distales_proximales",
+        "score": 0.627,
+        "titulo": "Análisis de Factores Proximales y Distales"
+      },
+      {
+        "id": "prevalencia_omisiones",
+        "score": 0.6146,
+        "titulo": "Las Omisiones como Principal Tipo de Error en Mantenimiento"
+      },
+      {
+        "id": "principios_gestion_error",
+        "score": 0.5936,
+        "titulo": "Principios de Gestión del Error (Error Management)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_recordatorios_efectivos_2",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "racional_mantenimiento_preventivo_correctivo",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_de_recomendaciones_basadas_en_contexto",
+    "destino": "new_view_investigation",
+    "score": 0.4865,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "new_view_investigation",
+        "score": 0.4865,
+        "titulo": "Investigación bajo la New View"
+      },
+      {
+        "id": "implementacion_controles_2",
+        "score": 0.4696,
+        "titulo": "Implementación de Controles Seleccionados en el Sitio"
+      },
+      {
+        "id": "plan_control_peligros",
+        "score": 0.4685,
+        "titulo": "Plan de Control de Peligros"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "process_tracing_methods",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "educacion_capacitacion_seguridad",
+    "destino": "capacitacion_educacion_seguridad",
+    "score": 0.7079,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "capacitacion_educacion_seguridad",
+        "score": 0.7079,
+        "titulo": "Educación y Capacitación en Seguridad y Salud Ocupacional"
+      },
+      {
+        "id": "educacion_entrenamiento_seguridad",
+        "score": 0.6715,
+        "titulo": "Educación y Entrenamiento en Seguridad"
+      },
+      {
+        "id": "capacitacion_identificacion_peligros",
+        "score": 0.6542,
+        "titulo": "Capacitación de Trabajadores en Identificación y Control de Peligros"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "prevencion_control_peligros",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "prevencion_control_peligros",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "establecimiento_indicadores_desempeno_sst",
+    "destino": "evaluacion_periodica_programa_seguridad",
+    "score": 0.5792,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "evaluacion_periodica_programa_seguridad",
+        "score": 0.5792,
+        "titulo": "Evaluación Periódica del Programa de Seguridad"
+      },
+      {
+        "id": "evaluacion_mejora_programa",
+        "score": 0.5608,
+        "titulo": "Evaluación y Mejora del Programa de Seguridad y Salud"
+      },
+      {
+        "id": "evaluacion_mejora_programa_2",
+        "score": 0.5569,
+        "titulo": "Evaluación y Mejora Continua del Programa de Seguridad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "verificacion_implementacion_programa_sst",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "verificacion_implementacion_programa_sst",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "evaluacion_de_riesgos_generales",
+    "destino": "caracterizacion_priorizacion_peligros",
+    "score": 0.74,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "caracterizacion_priorizacion_peligros",
+        "score": 0.74,
+        "titulo": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)"
+      },
+      {
+        "id": "clasificacion_riesgos_por_dominio",
+        "score": 0.7187,
+        "titulo": "Clasificación de Riesgos por Dominio Operacional"
+      },
+      {
+        "id": "enfoques_definicion_riesgo_aceptable",
+        "score": 0.6811,
+        "titulo": "Enfoques para Definir el Riesgo Aceptable (ALARP y Alternativas)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "rutas_de_salida_y_puertas_de_emergencia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "rutas_de_salida_y_puertas_de_emergencia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "herramientas_diagnostico_proactivo",
+    "destino": "identificacion_evaluacion_peligros",
+    "score": 0.6669,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "identificacion_evaluacion_peligros",
+        "score": 0.6669,
+        "titulo": "Identificación y Evaluación de Peligros"
+      },
+      {
+        "id": "identificacion_evaluacion_peligros_2",
+        "score": 0.621,
+        "titulo": "Identificación y Evaluación de Peligros"
+      },
+      {
+        "id": "verificacion_implementacion_programa_sst",
+        "score": 0.5798,
+        "titulo": "Verificación de la Implementación y Operación del Programa"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "condiciones_latentes_organizacionales",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "cultura_generativa_westrum",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "condiciones_latentes_organizacionales",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "cultura_generativa_westrum",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "hindsight_bias",
+    "destino": "sesgo_retrospectivo_hindsight_2",
+    "score": 0.7405,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "sesgo_retrospectivo_hindsight_2",
+        "score": 0.7405,
+        "titulo": "Sesgo Retrospectivo (Hindsight Bias)"
+      },
+      {
+        "id": "sesgo_retrospectivo",
+        "score": 0.7239,
+        "titulo": "Sesgo Retrospectivo (Hindsight Bias) y Sesgo de Resultado"
+      },
+      {
+        "id": "evitar_lenguaje_juzgador",
+        "score": 0.6403,
+        "titulo": "Evitar el Lenguaje Juzgador en Investigaciones"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "caso_descarrilamiento_nakina",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "caso_descarrilamiento_nakina",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "hindsight_bias_en_investigacion_de_accidentes",
+    "destino": "limite_busqueda_causas_pendulo",
+    "score": 0.8145,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "limite_busqueda_causas_pendulo",
+        "score": 0.8145,
+        "titulo": "El Límite en la Búsqueda de Causas Distales (¿Ha Ido el Péndulo Demasiado Lejos?)"
+      },
+      {
+        "id": "sesgo_retrospectivo_hindsight",
+        "score": 0.7929,
+        "titulo": "Sesgo Retrospectivo (Hindsight Bias) en el Análisis de Accidentes"
+      },
+      {
+        "id": "investigacion_new_view",
+        "score": 0.7358,
+        "titulo": "Investigación de accidentes bajo el enfoque New View"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "process_tracing_methods",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "process_tracing_methods",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_pasos_propensos_error",
+    "destino": "caracteristicas_tareas_propensas_omision",
+    "score": 0.6409,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "caracteristicas_tareas_propensas_omision",
+        "score": 0.6409,
+        "titulo": "Identificación de Pasos de Tarea Propensos a la Omisión"
+      },
+      {
+        "id": "prevalencia_omisiones",
+        "score": 0.6381,
+        "titulo": "Las Omisiones como Principal Tipo de Error en Mantenimiento"
+      },
+      {
+        "id": "fallas_activas_condiciones_latentes",
+        "score": 0.6118,
+        "titulo": "Fallas Activas y Condiciones Latentes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_recordatorios_efectivos_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "diseno_recordatorios_efectivos_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_riesgos_caida",
+    "destino": "caracterizacion_priorizacion_peligros",
+    "score": 0.6988,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "caracterizacion_priorizacion_peligros",
+        "score": 0.6988,
+        "titulo": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)"
+      },
+      {
+        "id": "clasificacion_riesgos_por_dominio",
+        "score": 0.6867,
+        "titulo": "Clasificación de Riesgos por Dominio Operacional"
+      },
+      {
+        "id": "enfoques_definicion_riesgo_aceptable",
+        "score": 0.6554,
+        "titulo": "Enfoques para Definir el Riesgo Aceptable (ALARP y Alternativas)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "superficies_elevadas_proteccion_caidas",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_riesgos_laborales",
+    "destino": "caracterizacion_priorizacion_peligros",
+    "score": 0.7262,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "caracterizacion_priorizacion_peligros",
+        "score": 0.7262,
+        "titulo": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)"
+      },
+      {
+        "id": "participacion_trabajadores",
+        "score": 0.7008,
+        "titulo": "Participación de los Trabajadores en el Programa de Seguridad"
+      },
+      {
+        "id": "participacion_trabajadores_2",
+        "score": 0.6994,
+        "titulo": "Participación Activa de los Trabajadores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "prevencion_violencia_laboral",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "prevencion_violencia_laboral",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_riesgos_respiratorios",
+    "destino": "identificacion_peligros_salud",
+    "score": 0.6014,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "programa_proteccion_respiratoria",
+        "score": 0.6014,
+        "titulo": "Programa de Protección Respiratoria"
+      },
+      {
+        "id": "identificacion_peligros_salud",
+        "score": 0.5353,
+        "titulo": "Identificación de Peligros para la Salud"
+      },
+      {
+        "id": "identificacion_peligros_salud_2",
+        "score": 0.5186,
+        "titulo": "Identificación de Peligros para la Salud"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "programa_proteccion_respiratoria",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "programa_proteccion_respiratoria",
+    "aplicado_en": [
+      {
+        "en": "programa_proteccion_respiratoria",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "implementacion_programa_seguridad_salud",
+    "destino": "programa_seguridad_salud_ocupacional_2",
+    "score": 0.7761,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "programa_seguridad_salud_ocupacional_2",
+        "score": 0.7761,
+        "titulo": "Programa de Seguridad y Salud Ocupacional"
+      },
+      {
+        "id": "diez_pasos_iniciales_programa",
+        "score": 0.7081,
+        "titulo": "10 Acciones Iniciales para Arrancar un Programa de Seguridad"
+      },
+      {
+        "id": "programa_seguridad_salud_ocupacional",
+        "score": 0.7063,
+        "titulo": "Programa de Seguridad y Salud Ocupacional (Marco de 7 Elementos)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "evaluacion_periodica_programa_seguridad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "evaluacion_periodica_programa_seguridad",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "informe_causas_raiz",
+    "destino": "investigacion_incidentes_2",
+    "score": 0.6396,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "investigacion_incidentes_2",
+        "score": 0.6396,
+        "titulo": "Investigación de Incidentes y Cuasi-Accidentes"
+      },
+      {
+        "id": "investigacion_incidentes",
+        "score": 0.5413,
+        "titulo": "Investigación de Incidentes y Casi Accidentes"
+      },
+      {
+        "id": "limite_busqueda_causas_pendulo",
+        "score": 0.4418,
+        "titulo": "El Límite en la Búsqueda de Causas Distales (¿Ha Ido el Péndulo Demasiado Lejos?)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "evitar_cherry_picking",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evitar_micro_matching",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evitar_shopping_bag",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "evitar_cherry_picking",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evitar_micro_matching",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evitar_shopping_bag",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "investigacion_nueva_vision",
+    "destino": "new_view_vs_old_view_de_error_humano",
+    "score": 0.6132,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "new_view_vs_old_view_de_error_humano",
+        "score": 0.6132,
+        "titulo": "Nueva Visión (New View) vs Vieja Visión (Old View) del Error Humano"
+      },
+      {
+        "id": "vieja_vision_vs_nueva_vision_seguridad",
+        "score": 0.5553,
+        "titulo": "Contraste entre Vieja Visión y Nueva Visión de la Seguridad"
+      },
+      {
+        "id": "investigacion_new_view",
+        "score": 0.5328,
+        "titulo": "Investigación de accidentes bajo el enfoque New View"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "atribucion_retrospectiva_del_error",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "human_error_como_sintoma",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "riesgos_del_enfoque_en_error_humano",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "atribucion_retrospectiva_del_error",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "human_error_como_sintoma",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "riesgos_del_enfoque_en_error_humano",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "las_tres_c_compromiso_competencia",
+    "destino": "motores_de_seguridad_3cs",
+    "score": 0.5439,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "motores_de_seguridad_3cs",
+        "score": 0.5439,
+        "titulo": "Los Tres Motores de la Seguridad: Compromiso, Competencia y Conocimiento"
+      },
+      {
+        "id": "autonomia_dependencia_regulatoria",
+        "score": 0.4758,
+        "titulo": "Autonomía e Interdependencia en la Relación Regulador-Regulado"
+      },
+      {
+        "id": "normalizacion_de_la_desviacion",
+        "score": 0.4715,
+        "titulo": "Normalización de la Desviación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cognisance_organizacional",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "modelo_de_causalidad_de_accidentes_organizacionales",
+    "destino": "modelo_accidente_organizacional",
+    "score": 0.9,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "modelo_accidente_organizacional",
+        "score": 0.9,
+        "titulo": "Modelo de Etapas del Accidente Organizacional (Figura 1.6)"
+      },
+      {
+        "id": "fallas_activas_condiciones_latentes_2",
+        "score": 0.7483,
+        "titulo": "Fallas Activas vs. Condiciones Latentes"
+      },
+      {
+        "id": "diferenciacion_accidente_individual_organizacional",
+        "score": 0.7389,
+        "titulo": "Diferenciación entre Accidente Individual y Accidente Organizacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "normalizacion_de_la_desviacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "normalizacion_de_la_desviacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "modelo_de_persona_vs_organizacional",
+    "destino": "modelo_accidente_organizacional",
+    "score": 0.6375,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "seduccion_modelo_persona",
+        "score": 0.6375,
+        "titulo": "Por qué el Modelo de Persona Domina la Gestión de Seguridad"
+      },
+      {
+        "id": "autenticidad_del_liderazgo_de_campo",
+        "score": 0.5871,
+        "titulo": "Presencia Auténtica del Liderazgo en el Campo"
+      },
+      {
+        "id": "cultura_flexible_organizacional",
+        "score": 0.5666,
+        "titulo": "Cultura Organizacional Flexible"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "seduccion_modelo_persona",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "seduccion_modelo_persona",
+    "aplicado_en": [
+      {
+        "en": "seduccion_modelo_persona",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "modelo_organizacional_de_accidentes",
+    "destino": "modelo_accidente_organizacional",
+    "score": 0.8776,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "modelo_accidente_organizacional",
+        "score": 0.8776,
+        "titulo": "Modelo de Etapas del Accidente Organizacional (Figura 1.6)"
+      },
+      {
+        "id": "trayectoria_del_accidente",
+        "score": 0.7851,
+        "titulo": "Trayectoria del Accidente Organizacional"
+      },
+      {
+        "id": "fallas_activas_condiciones_latentes_2",
+        "score": 0.7702,
+        "titulo": "Fallas Activas vs. Condiciones Latentes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "clasificacion_riesgos_por_dominio",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "clasificacion_riesgos_por_dominio",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "modelo_queso_suizo_reason",
+    "destino": "modelo_barreras_swiss_cheese",
+    "score": 0.6565,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "modelo_barreras_swiss_cheese",
+        "score": 0.6565,
+        "titulo": "Modelo de Barreras (Swiss Cheese)"
+      },
+      {
+        "id": "modelo_barreras_defensas",
+        "score": 0.5179,
+        "titulo": "Modelo de Barreras y Defensas (Swiss Cheese)"
+      },
+      {
+        "id": "modelo_queso_suizo",
+        "score": 0.5142,
+        "titulo": "Modelo del Queso Suizo de las Defensas"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "confusion_de_modos_automatizacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "confusion_de_modos_automatizacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "no_confiar_en_sistema_gestion_seguridad",
+    "destino": "escape_trampa_proveedor_pasivo",
+    "score": 0.6666,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "escape_trampa_proveedor_pasivo",
+        "score": 0.6666,
+        "titulo": "Escapar de la Trampa del Proveedor Pasivo de Seguridad"
+      },
+      {
+        "id": "responsabilidad_hacia_abajo_vs_rendicion_de_cuentas",
+        "score": 0.6575,
+        "titulo": "Seguridad como Responsabilidad Hacia Abajo, No Rendición de Cuentas Hacia Arriba"
+      },
+      {
+        "id": "metas_de_seguridad_correctas",
+        "score": 0.6485,
+        "titulo": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "fenomenos_senuelo",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "nueva_vision_de_error_humano",
+    "destino": "old_view_vs_new_view_human_error",
+    "score": 0.7889,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "old_view_vs_new_view_human_error",
+        "score": 0.7889,
+        "titulo": "Contraste entre la Vieja y la Nueva Visión del 'Error Humano'"
+      },
+      {
+        "id": "human_error_como_sintoma",
+        "score": 0.7784,
+        "titulo": "El 'Error Humano' como Síntoma, no como Causa"
+      },
+      {
+        "id": "new_view_human_error",
+        "score": 0.7768,
+        "titulo": "New View del Error Humano"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "experticia_operativa_vs_vision_sistemica",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "experticia_operativa_vs_vision_sistemica",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "organizational_accident_model",
+    "destino": "modelo_accidente_organizacional",
+    "score": 0.8765,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "modelo_accidente_organizacional",
+        "score": 0.8765,
+        "titulo": "Modelo de Etapas del Accidente Organizacional (Figura 1.6)"
+      },
+      {
+        "id": "fallas_activas_condiciones_latentes_2",
+        "score": 0.7754,
+        "titulo": "Fallas Activas vs. Condiciones Latentes"
+      },
+      {
+        "id": "trayectoria_del_accidente",
+        "score": 0.7726,
+        "titulo": "Trayectoria del Accidente Organizacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "condiciones_latentes_organizacionales",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "formal_safety_assessment_safety_case",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "condiciones_latentes_organizacionales",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "formal_safety_assessment_safety_case",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "ppe_general",
+    "destino": "liderazgo_gerencial_seguridad",
+    "score": 0.409,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "liderazgo_gerencial_seguridad",
+        "score": 0.409,
+        "titulo": "Liderazgo Gerencial en Seguridad y Salud"
+      },
+      {
+        "id": "compromiso_gerencial_seguridad",
+        "score": 0.3782,
+        "titulo": "Liderazgo y Compromiso de la Gerencia en Seguridad"
+      },
+      {
+        "id": "segregacion_funciones_trading_settlement",
+        "score": 0.3695,
+        "titulo": "Segregación de Funciones como Defensa Organizacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "programa_proteccion_respiratoria",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "seguridad_soldadura_corte_bronceado",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "recoleccion_datos_incidente",
+    "destino": "investigacion_incidentes",
+    "score": 0.6508,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "aprendizaje_organizacional_desde_incidentes",
+        "score": 0.6508,
+        "titulo": "Aprendizaje Organizacional a partir de Incidentes y Cuasi-Accidentes"
+      },
+      {
+        "id": "identificacion_recopilacion_informacion_peligros",
+        "score": 0.6086,
+        "titulo": "Recopilación y Revisión de Información sobre Peligros"
+      },
+      {
+        "id": "peligros_emergencias_no_rutinarias",
+        "score": 0.5993,
+        "titulo": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "construccion_timeline_resolucion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "destino_original_top1": "aprendizaje_organizacional_desde_incidentes",
+    "aplicado_en": [
+      {
+        "en": "construccion_timeline_resolucion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "reconstruccion_de_mentalidad_practicante",
+    "destino": "perspectiva_dentro_del_tunel",
+    "score": 0.569,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "fijacion_cognitiva",
+        "score": 0.569,
+        "titulo": "Fijación Cognitiva (Cognitive Fixation)"
+      },
+      {
+        "id": "enfoque_situacional_vs_personal",
+        "score": 0.5661,
+        "titulo": "Enfoque Situacional vs. Personal en la Gestión de Errores"
+      },
+      {
+        "id": "debriefing_participantes",
+        "score": 0.5636,
+        "titulo": "Método de Debriefing de Participantes (Klein)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "process_tracing_methods",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "fijacion_cognitiva",
+    "aplicado_en": [
+      {
+        "en": "process_tracing_methods",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "rediseno_de_procesos_de_mantenimiento",
+    "destino": "seguimiento_efectividad_controles",
+    "score": 0.6145,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "seguimiento_efectividad_controles",
+        "score": 0.6145,
+        "titulo": "Seguimiento y Verificación de la Efectividad de los Controles"
+      },
+      {
+        "id": "seguimiento_efectividad_controles_2",
+        "score": 0.6122,
+        "titulo": "Seguimiento y Verificación de la Efectividad de los Controles"
+      },
+      {
+        "id": "programa_proteccion_respiratoria",
+        "score": 0.5643,
+        "titulo": "Programa de Protección Respiratoria"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diseno_recordatorios_efectivos_2",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "safety_culture_creation",
+    "destino": "cultura_de_seguridad_componentes",
+    "score": 0.7161,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "cultura_de_seguridad_componentes",
+        "score": 0.7161,
+        "titulo": "Componentes de la Cultura de Seguridad"
+      },
+      {
+        "id": "safety_culture_engineering",
+        "score": 0.7042,
+        "titulo": "Ingeniería de la Cultura de Seguridad"
+      },
+      {
+        "id": "establecer_metas_seguridad_correctas",
+        "score": 0.6581,
+        "titulo": "Establecer Metas de Seguridad como Programa de Fitness a Largo Plazo"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "new_view_investigation",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "new_view_investigation",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "sistema_informacion_seguridad",
+    "destino": "teoria_sistemas_seguridad",
+    "score": 0.6182,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "teoria_sistemas_seguridad",
+        "score": 0.6182,
+        "titulo": "Teoría de Sistemas aplicada a la Seguridad"
+      },
+      {
+        "id": "niveles_de_madurez_de_seguridad",
+        "score": 0.6126,
+        "titulo": "Niveles de Madurez de Seguridad (Amalberti)"
+      },
+      {
+        "id": "redes_de_seguridad_regulatoria",
+        "score": 0.61,
+        "titulo": "Redes de Seguridad Regulatoria (Safety Net)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cognisance_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "sistema_reporte_incidentes",
+    "destino": "reporte_casi_accidentes",
+    "score": 0.6359,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "aprendizaje_organizacional_desde_incidentes",
+        "score": 0.6359,
+        "titulo": "Aprendizaje Organizacional a partir de Incidentes y Cuasi-Accidentes"
+      },
+      {
+        "id": "identificacion_evaluacion_peligros_2",
+        "score": 0.5887,
+        "titulo": "Identificación y Evaluación de Peligros"
+      },
+      {
+        "id": "peligros_emergencias_no_rutinarias",
+        "score": 0.5827,
+        "titulo": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cultura_justa_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "destino_original_top1": "aprendizaje_organizacional_desde_incidentes",
+    "aplicado_en": [
+      {
+        "en": "cultura_justa_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "tripod_delta_perfil_riesgo_organizacional",
+    "destino": "formal_safety_assessment_safety_case",
+    "score": 0.5294,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "formal_safety_assessment_safety_case",
+        "score": 0.5294,
+        "titulo": "Evaluación Formal de Seguridad (Safety Case)"
+      },
+      {
+        "id": "caracterizacion_priorizacion_peligros",
+        "score": 0.5164,
+        "titulo": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)"
+      },
+      {
+        "id": "clasificacion_riesgos_por_dominio",
+        "score": 0.5131,
+        "titulo": "Clasificación de Riesgos por Dominio Operacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "heart_metodo_evaluacion_error_humano",
+        "campo": "nodos_previos"
+      }
+    ]
+  }
+]

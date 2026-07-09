@@ -15,10 +15,16 @@
   ],
   "entregable_esperado": "Listado de peligros de salud identificados con su nivel de exposición estimado",
   "nodos_previos": [
-    "inspeccion_lugar_trabajo_peligros"
+    "inspeccion_lugar_trabajo_peligros",
+    "identificacion_recopilacion_informacion_peligros",
+    "recopilacion_informacion_peligros"
   ],
   "nodos_siguientes": [
-    "jerarquia_controles"
+    "jerarquia_controles",
+    "caracterizacion_priorizacion_peligros",
+    "investigacion_incidentes",
+    "peligros_emergencias_no_rutinarias_2",
+    "programa_proteccion_respiratoria"
   ],
   "condiciones_activacion": [
     "Cuando existen procesos con uso de químicos, ruido, calor, o tareas repetitivas",

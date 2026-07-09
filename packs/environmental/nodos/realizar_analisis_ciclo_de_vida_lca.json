@@ -14,12 +14,13 @@
   ],
   "entregable_esperado": "Un informe de LCA con límites del sistema definidos, supuestos documentados y resultados cuantificados de impacto ambiental por etapa del ciclo de vida.",
   "nodos_previos": [
-    "medir_huella_de_carbono_empresarial",
-    "medir_desechos_empresariales"
+    "evaluar_huella_carbono",
+    "medir_residuos_empresa"
   ],
   "nodos_siguientes": [
     "seleccionar_tipo_de_lca_segun_recursos",
-    "estandarizar_metodologia_lca"
+    "estandarizar_metodologia_lca",
+    "benchmarking_desempeno_ambiental"
   ],
   "condiciones_activacion": [
     "Si la empresa quiere comunicar atributos ambientales de un producto",

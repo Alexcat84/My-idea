@@ -13,9 +13,12 @@
   ],
   "entregable_esperado": "Sistema de recordatorios físicos o digitales implementado en los pasos críticos de las tareas de mantenimiento",
   "nodos_previos": [
-    "caracteristicas_tareas_propensas_omision"
+    "caracteristicas_tareas_propensas_omision",
+    "prevalencia_omisiones"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "racional_mantenimiento_preventivo_correctivo"
+  ],
   "condiciones_activacion": [
     "Cuando se ha identificado un paso de tarea con alta probabilidad de omisión",
     "Cuando se busca reducir costos y accidentes asociados a fallas de mantenimiento"

@@ -13,11 +13,10 @@
     "Calcular la probabilidad final de error para priorizar intervenciones de mitigación"
   ],
   "entregable_esperado": "Informe de evaluación HEART con probabilidad de error calculada y lista de EPCs relevantes identificados para la tarea analizada",
-  "nodos_previos": [
-    "tripod_delta_perfil_riesgo_organizacional"
-  ],
+  "nodos_previos": [],
   "nodos_siguientes": [
-    "ida_diagrama_influencia"
+    "ida_diagrama_influencia",
+    "epc_condiciones_productoras_error"
   ],
   "condiciones_activacion": [
     "Cuando se necesita cuantificar la probabilidad de error humano en una tarea crítica",

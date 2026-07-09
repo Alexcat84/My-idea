@@ -14,10 +14,13 @@
     "Priorizar necesidades de más a menos crítica"
   ],
   "entregable_esperado": "Hoja de necesidades del cliente con clientes priorizados, necesidades correlacionadas y ranking de criticidad",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "sipoc"
+  ],
   "nodos_siguientes": [
     "sipoc",
-    "matriz_de_seleccion"
+    "matriz_de_seleccion",
+    "matriz_pugh"
   ],
   "condiciones_activacion": [
     "Cuando la información de clientes es demasiado amplia o vaga para diseñar directamente",

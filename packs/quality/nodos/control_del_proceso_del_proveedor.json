@@ -15,11 +15,14 @@
   ],
   "entregable_esperado": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados",
   "nodos_previos": [
-    "seleccion_de_proveedores"
+    "planificacion_cadena_suministro",
+    "dmadv_design_for_six_sigma"
   ],
   "nodos_siguientes": [
     "certificacion_de_proveedores",
-    "clasificacion_de_seriedad_de_defectos"
+    "clasificacion_de_seriedad_de_defectos",
+    "clasificacion_de_seriedad_de_defectos_2",
+    "mistake_proofing_poka_yoke_2"
   ],
   "condiciones_activacion": [
     "Cuando se inicia una relación contractual con un nuevo proveedor de manufactura",

@@ -1,0 +1,960 @@
+{
+  "reparadas": [
+    {
+      "en": "analisis_capacidad_proceso",
+      "campo": "nodos_siguientes",
+      "de": "mejora_continua_proceso",
+      "a": "mejora_continua_del_proceso"
+    },
+    {
+      "en": "analisis_capacidad_procesos",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "analisis_regresion_correlacion",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "analisis_variacion_desempeno_servicio",
+      "campo": "nodos_siguientes",
+      "de": "mejora_continua_procesos",
+      "a": "mejora_continua_del_proceso"
+    },
+    {
+      "en": "auditoria_de_producto",
+      "campo": "nodos_siguientes",
+      "de": "mejora_continua_de_procesos",
+      "a": "mejora_continua_del_proceso"
+    },
+    {
+      "en": "causas_comunes_causas_especiales",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "claridad_especificaciones_instrucciones",
+      "campo": "nodos_previos",
+      "de": "definicion_operacional",
+      "a": "definiciones_operacionales"
+    },
+    {
+      "en": "concepto_variacion_estadistica",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "consejo_de_calidad_y_rol_del_director",
+      "campo": "nodos_previos",
+      "de": "politica_de_calidad_organizacional",
+      "a": "politica_calidad_organizacional"
+    },
+    {
+      "en": "control_estadistico_metodo_medicion",
+      "campo": "nodos_previos",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "cuestionario_autoevaluacion_gerencial_calidad",
+      "campo": "nodos_previos",
+      "de": "enfermedades_mortales_de_la_gestion",
+      "a": "enfermedades_mortales_gestion"
+    },
+    {
+      "en": "definiciones_operacionales_4",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_de_medicion",
+      "a": "control_estadistico_metodo_medicion"
+    },
+    {
+      "en": "desarrollo_de_controles_de_proceso",
+      "campo": "nodos_siguientes",
+      "de": "auditoria_de_calidad",
+      "a": "auditoria_calidad"
+    },
+    {
+      "en": "distincion_causas_comunes_especiales_incidentes",
+      "campo": "nodos_siguientes",
+      "de": "mejora_continua_procesos",
+      "a": "mejora_continua_del_proceso"
+    },
+    {
+      "en": "estandarizacion_industrial_voluntaria",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "grafico_de_corrida_run_chart",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "histograma_analisis",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "las_siete_enfermedades_mortales",
+      "campo": "nodos_previos",
+      "de": "los_14_puntos_de_deming",
+      "a": "los_14_puntos_deming"
+    },
+    {
+      "en": "medicion_capacidad_servicio",
+      "campo": "nodos_siguientes",
+      "de": "mejora_continua_proceso",
+      "a": "mejora_continua_del_proceso"
+    },
+    {
+      "en": "modelo_shingo_evaluacion_excelencia",
+      "campo": "nodos_siguientes",
+      "de": "mejora_continua_procesos",
+      "a": "mejora_continua_del_proceso"
+    },
+    {
+      "en": "remover_barreras_orgullo_trabajo",
+      "campo": "nodos_siguientes",
+      "de": "mejora_continua_sistema",
+      "a": "mejora_continua_del_sistema"
+    },
+    {
+      "en": "run_chart_datos_temporales",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    },
+    {
+      "en": "seis_sigma_servicios",
+      "campo": "nodos_siguientes",
+      "de": "medicion_calidad_servicio",
+      "a": "medicion_capacidad_servicio"
+    },
+    {
+      "en": "sistema_responsabilidad_gerencial",
+      "campo": "nodos_siguientes",
+      "de": "control_estadistico_procesos",
+      "a": "control_estadistico_proceso"
+    }
+  ],
+  "podadas": [
+    {
+      "en": "accion_correctiva_sistematica",
+      "campo": "nodos_previos",
+      "ref": "medicion_costo_de_calidad"
+    },
+    {
+      "en": "accion_correctiva_sistematica",
+      "campo": "nodos_previos",
+      "ref": "operacion_de_aceptacion_calidad"
+    },
+    {
+      "en": "analisis_capacidad_proceso",
+      "campo": "nodos_previos",
+      "ref": "cartas_de_control"
+    },
+    {
+      "en": "analisis_capacidad_proceso",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_datos_proceso"
+    },
+    {
+      "en": "analisis_capacidad_proceso",
+      "campo": "nodos_siguientes",
+      "ref": "reduccion_variabilidad"
+    },
+    {
+      "en": "analisis_causa_efecto_indicadores_calidad",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_datos_desempeno_operativo"
+    },
+    {
+      "en": "analisis_causa_efecto_indicadores_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "prevencion_de_defectos"
+    },
+    {
+      "en": "analisis_datos_atributos",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_datos_proceso"
+    },
+    {
+      "en": "analisis_datos_atributos",
+      "campo": "nodos_siguientes",
+      "ref": "reduccion_errores_proceso"
+    },
+    {
+      "en": "analisis_de_sistemas_de_medicion_msa",
+      "campo": "nodos_siguientes",
+      "ref": "reduccion_y_control_de_errores_de_medicion"
+    },
+    {
+      "en": "analisis_variacion_desempeno_servicio",
+      "campo": "nodos_previos",
+      "ref": "graficos_control_shewhart"
+    },
+    {
+      "en": "analisis_variacion_desempeno_servicio",
+      "campo": "nodos_previos",
+      "ref": "profundo_conocimiento_variacion"
+    },
+    {
+      "en": "aprendizaje_institucionalizado_benchmarking",
+      "campo": "nodos_siguientes",
+      "ref": "mejora_continua_organizacional"
+    },
+    {
+      "en": "auditoria_de_proceso",
+      "campo": "nodos_previos",
+      "ref": "control_de_calidad_en_manufactura"
+    },
+    {
+      "en": "auditoria_de_producto",
+      "campo": "nodos_previos",
+      "ref": "inspeccion_y_prueba_del_producto"
+    },
+    {
+      "en": "auditoria_de_producto",
+      "campo": "nodos_previos",
+      "ref": "planificacion_de_la_calidad"
+    },
+    {
+      "en": "auditoria_de_producto",
+      "campo": "nodos_siguientes",
+      "ref": "control_de_calidad_por_retroalimentacion"
+    },
+    {
+      "en": "auditoria_sistema_control_calidad_2",
+      "campo": "nodos_previos",
+      "ref": "diseno_sistema_control_calidad"
+    },
+    {
+      "en": "auditorias_primera_segunda_tercera_parte",
+      "campo": "nodos_previos",
+      "ref": "sistema_gestion_calidad_iso9001"
+    },
+    {
+      "en": "autocontrol_planificacion_servicio",
+      "campo": "nodos_previos",
+      "ref": "identificacion_procesos_clave_servicio"
+    },
+    {
+      "en": "bucle_retroalimentacion_control",
+      "campo": "nodos_siguientes",
+      "ref": "autocontrol_empleado"
+    },
+    {
+      "en": "calculo_roi_calidad",
+      "campo": "nodos_previos",
+      "ref": "identificacion_costos_mala_calidad"
+    },
+    {
+      "en": "cambio_actitud_gerencial",
+      "campo": "nodos_siguientes",
+      "ref": "programa_catorce_pasos_mejora_calidad"
+    },
+    {
+      "en": "caracteristicas_clave_producto_proceso",
+      "campo": "nodos_siguientes",
+      "ref": "autocontrol_operario"
+    },
+    {
+      "en": "cero_defectos_zd",
+      "campo": "nodos_siguientes",
+      "ref": "medicion_del_programa_de_calidad"
+    },
+    {
+      "en": "circulos_de_calidad_qc_circles",
+      "campo": "nodos_siguientes",
+      "ref": "difusion_de_mejores_practicas"
+    },
+    {
+      "en": "claridad_especificaciones_instrucciones",
+      "campo": "nodos_siguientes",
+      "ref": "reduccion_variacion_procesos"
+    },
+    {
+      "en": "clasificacion_de_seriedad_de_defectos",
+      "campo": "nodos_siguientes",
+      "ref": "prediccion_de_costos_de_servicio_en_campo"
+    },
+    {
+      "en": "clasificacion_seriedad_defectos",
+      "campo": "nodos_previos",
+      "ref": "especificaciones_de_producto"
+    },
+    {
+      "en": "codigo_conducta_orientado_cliente",
+      "campo": "nodos_siguientes",
+      "ref": "cultura_calidad"
+    },
+    {
+      "en": "compra_por_precio_mas_bajo_como_error",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_deming"
+    },
+    {
+      "en": "comprension_brechas_desempeno",
+      "campo": "nodos_siguientes",
+      "ref": "implementacion_proyectos_mejora"
+    },
+    {
+      "en": "constraint_management",
+      "campo": "nodos_siguientes",
+      "ref": "cycle_time_reduction"
+    },
+    {
+      "en": "control_del_proceso_del_proveedor",
+      "campo": "nodos_previos",
+      "ref": "seleccion_de_proveedores"
+    },
+    {
+      "en": "control_estadistico_de_procesos_en_tiempo_real",
+      "campo": "nodos_previos",
+      "ref": "comprension_de_variacion_causas_comunes_especiales"
+    },
+    {
+      "en": "control_estadistico_de_procesos_en_tiempo_real",
+      "campo": "nodos_siguientes",
+      "ref": "eliminacion_inspeccion_masiva"
+    },
+    {
+      "en": "control_estadistico_del_proceso",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_de_datos_de_proceso"
+    },
+    {
+      "en": "costo_de_calidad_diagnostico",
+      "campo": "nodos_siguientes",
+      "ref": "catorce_pasos_mejora_calidad_crosby"
+    },
+    {
+      "en": "costo_de_la_calidad_coq",
+      "campo": "nodos_siguientes",
+      "ref": "paso_cuatro_evaluacion_coq"
+    },
+    {
+      "en": "costo_de_mala_calidad_copq_2",
+      "campo": "nodos_siguientes",
+      "ref": "breakthroughs_organizacionales"
+    },
+    {
+      "en": "costo_optimo_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "posicionamiento_en_el_mercado"
+    },
+    {
+      "en": "cribado_de_datos",
+      "campo": "nodos_siguientes",
+      "ref": "analisis_estadistico_de_datos"
+    },
+    {
+      "en": "criterios_seleccion_proyectos_calidad",
+      "campo": "nodos_previos",
+      "ref": "identificacion_oportunidades_mejora"
+    },
+    {
+      "en": "cuestionario_autoevaluacion_gerencial_calidad",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_para_la_gestion"
+    },
+    {
+      "en": "curva_banera_periodos_fallo",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_datos_fallo"
+    },
+    {
+      "en": "customer_needs_spreadsheet",
+      "campo": "nodos_previos",
+      "ref": "identificacion_de_clientes"
+    },
+    {
+      "en": "customer_needs_spreadsheet",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_de_datos_de_necesidades"
+    },
+    {
+      "en": "definicion_calidad_como_conformidad",
+      "campo": "nodos_siguientes",
+      "ref": "prevencion_de_defectos"
+    },
+    {
+      "en": "definicion_calidad_conformidad_requisitos_2",
+      "campo": "nodos_siguientes",
+      "ref": "catorce_pasos_mejora_calidad_crosby"
+    },
+    {
+      "en": "design_for_six_sigma_dmadv_2",
+      "campo": "nodos_previos",
+      "ref": "planificacion_calidad_juran"
+    },
+    {
+      "en": "design_for_six_sigma_dmadv_2",
+      "campo": "nodos_siguientes",
+      "ref": "tipos_innovacion"
+    },
+    {
+      "en": "desperdicio_cronico_vs_esporadico",
+      "campo": "nodos_siguientes",
+      "ref": "mejora_continua_breakthrough"
+    },
+    {
+      "en": "diagrama_arbol_despliegue",
+      "campo": "nodos_previos",
+      "ref": "planificacion_estrategica_calidad"
+    },
+    {
+      "en": "diferencia_planeacion_mejora",
+      "campo": "nodos_siguientes",
+      "ref": "planeacion_de_calidad_juran"
+    },
+    {
+      "en": "diseno_de_procesos_por_caracteristicas",
+      "campo": "nodos_previos",
+      "ref": "desarrollo_del_producto"
+    },
+    {
+      "en": "diseno_de_procesos_por_caracteristicas",
+      "campo": "nodos_previos",
+      "ref": "identificacion_necesidades_cliente"
+    },
+    {
+      "en": "diseno_experimentos_doe_mejora",
+      "campo": "nodos_previos",
+      "ref": "analisis_causa_efecto_xs_ys"
+    },
+    {
+      "en": "diseno_servicio_calidad",
+      "campo": "nodos_previos",
+      "ref": "identificacion_necesidades_cliente"
+    },
+    {
+      "en": "distincion_causas_comunes_especiales_3",
+      "campo": "nodos_previos",
+      "ref": "graficos_de_control_shewhart"
+    },
+    {
+      "en": "distincion_causas_comunes_especiales_incidentes",
+      "campo": "nodos_previos",
+      "ref": "profundo_conocimiento_variacion"
+    },
+    {
+      "en": "distincion_causas_comunes_especiales_incidentes",
+      "campo": "nodos_previos",
+      "ref": "graficos_control_shewhart"
+    },
+    {
+      "en": "distorsion_muestreo_mecanico",
+      "campo": "nodos_previos",
+      "ref": "fundamentos_variacion_estadistica"
+    },
+    {
+      "en": "distorsion_muestreo_mecanico",
+      "campo": "nodos_siguientes",
+      "ref": "interpretacion_cartas_control"
+    },
+    {
+      "en": "distribucion_normal_probabilidad",
+      "campo": "nodos_previos",
+      "ref": "conceptos_basicos_estadistica_descriptiva"
+    },
+    {
+      "en": "dmadv_design_for_six_sigma",
+      "campo": "nodos_previos",
+      "ref": "voz_del_cliente"
+    },
+    {
+      "en": "dmadv_design_for_six_sigma",
+      "campo": "nodos_siguientes",
+      "ref": "control_de_procesos"
+    },
+    {
+      "en": "dmadv_fase_diseno",
+      "campo": "nodos_previos",
+      "ref": "dmadv_fase_analisis"
+    },
+    {
+      "en": "dmadv_fase_diseno",
+      "campo": "nodos_previos",
+      "ref": "dmadv_fase_medicion"
+    },
+    {
+      "en": "dmaic_fase_improve",
+      "campo": "nodos_siguientes",
+      "ref": "dmaic_fase_control"
+    },
+    {
+      "en": "dmaic_six_sigma",
+      "campo": "nodos_siguientes",
+      "ref": "consejo_de_calidad_ejecutivo"
+    },
+    {
+      "en": "eliminacion_planes_muestreo_estandar",
+      "campo": "nodos_siguientes",
+      "ref": "relacion_proveedor_unico"
+    },
+    {
+      "en": "eliminar_slogans_y_exhortaciones",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_deming"
+    },
+    {
+      "en": "eliminar_slogans_y_exhortaciones",
+      "campo": "nodos_siguientes",
+      "ref": "identificar_causas_sistema_vs_trabajador"
+    },
+    {
+      "en": "enfermedades_mortales_gestion",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_deming"
+    },
+    {
+      "en": "entrenamiento_supervisores_calidad",
+      "campo": "nodos_previos",
+      "ref": "sistema_medicion_calidad"
+    },
+    {
+      "en": "equipos_autodirigidos_servicio",
+      "campo": "nodos_previos",
+      "ref": "cultura_calidad_positiva"
+    },
+    {
+      "en": "estandarizacion_industrial_voluntaria",
+      "campo": "nodos_siguientes",
+      "ref": "gestion_causas_comunes_especiales"
+    },
+    {
+      "en": "estilo_gerencial_hockey_vs_ballet",
+      "campo": "nodos_previos",
+      "ref": "actitudes_de_gestion_absolutos_calidad"
+    },
+    {
+      "en": "estructura_global_oficina_calidad",
+      "campo": "nodos_previos",
+      "ref": "definicion_oficina_de_calidad"
+    },
+    {
+      "en": "estructura_global_oficina_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "desarrollo_competencias_director_calidad"
+    },
+    {
+      "en": "estructura_global_oficina_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "reglas_de_escalamiento_calidad"
+    },
+    {
+      "en": "estructura_reporte_dual_estadistico",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_deming"
+    },
+    {
+      "en": "estructura_reporte_dual_estadistico",
+      "campo": "nodos_previos",
+      "ref": "profundo_conocimiento_variacion"
+    },
+    {
+      "en": "estructura_reporte_dual_estadistico",
+      "campo": "nodos_siguientes",
+      "ref": "educacion_estadistica_continua_personal"
+    },
+    {
+      "en": "evaluacion_riesgo_calidad_organizacional",
+      "campo": "nodos_previos",
+      "ref": "planificacion_estrategica_organizacional"
+    },
+    {
+      "en": "evaluacion_riesgo_calidad_organizacional",
+      "campo": "nodos_siguientes",
+      "ref": "posicionamiento_en_el_mercado"
+    },
+    {
+      "en": "falacia_meta_numerica_sin_metodo",
+      "campo": "nodos_previos",
+      "ref": "estado_de_control_estadistico"
+    },
+    {
+      "en": "filosofia_zero_defectos",
+      "campo": "nodos_previos",
+      "ref": "compromiso_direccion"
+    },
+    {
+      "en": "funcion_perdida_limites_especificacion",
+      "campo": "nodos_previos",
+      "ref": "diseno_experimentos_taguchi"
+    },
+    {
+      "en": "funcion_perdida_limites_especificacion",
+      "campo": "nodos_previos",
+      "ref": "definicion_valor_nominal"
+    },
+    {
+      "en": "funciones_del_departamento_de_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "prevencion_de_defectos_costo_cero"
+    },
+    {
+      "en": "gestion_riesgo_identificacion",
+      "campo": "nodos_siguientes",
+      "ref": "evaluacion_riesgo"
+    },
+    {
+      "en": "gestion_riesgo_identificacion",
+      "campo": "nodos_siguientes",
+      "ref": "gestion_riesgo_mitigacion"
+    },
+    {
+      "en": "gobierno_corporativo_y_calidad",
+      "campo": "nodos_previos",
+      "ref": "planificacion_de_la_calidad"
+    },
+    {
+      "en": "gobierno_corporativo_y_calidad",
+      "campo": "nodos_previos",
+      "ref": "liderazgo_para_la_calidad"
+    },
+    {
+      "en": "gobierno_corporativo_y_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "mejora_sistematica_del_gobierno_corporativo"
+    },
+    {
+      "en": "gobierno_corporativo_y_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "planificacion_para_organizaciones_familiares"
+    },
+    {
+      "en": "herramientas_de_diseno_de_calidad",
+      "campo": "nodos_previos",
+      "ref": "identificacion_necesidades_cliente"
+    },
+    {
+      "en": "identificacion_empleado_con_el_trabajo",
+      "campo": "nodos_siguientes",
+      "ref": "cultura_de_calidad_supervisores"
+    },
+    {
+      "en": "impacto_calidad_en_costos",
+      "campo": "nodos_siguientes",
+      "ref": "mejora_sistematica_six_sigma"
+    },
+    {
+      "en": "ingenieria_calidad_proveedores",
+      "campo": "nodos_previos",
+      "ref": "planificacion_calidad_juran"
+    },
+    {
+      "en": "intercambio_de_roles_para_motivacion",
+      "campo": "nodos_siguientes",
+      "ref": "cultura_de_calidad_supervisores"
+    },
+    {
+      "en": "interpretacion_cpk",
+      "campo": "nodos_siguientes",
+      "ref": "reduccion_variabilidad"
+    },
+    {
+      "en": "interpretacion_cpk",
+      "campo": "nodos_siguientes",
+      "ref": "ajuste_proceso"
+    },
+    {
+      "en": "inventario_conocimiento_estadistico_personal",
+      "campo": "nodos_siguientes",
+      "ref": "educacion_estadistica_continua_personal"
+    },
+    {
+      "en": "iso_ts_16949_automotriz",
+      "campo": "nodos_previos",
+      "ref": "fundamentos_iso_9001"
+    },
+    {
+      "en": "iso_ts_16949_automotriz",
+      "campo": "nodos_siguientes",
+      "ref": "auditoria_certificacion_qms"
+    },
+    {
+      "en": "kanban_pull_system",
+      "campo": "nodos_siguientes",
+      "ref": "line_balancing"
+    },
+    {
+      "en": "key_process_product_characteristics",
+      "campo": "nodos_previos",
+      "ref": "quality_function_deployment"
+    },
+    {
+      "en": "key_process_product_characteristics",
+      "campo": "nodos_previos",
+      "ref": "analisis_modal_fallos_efectos"
+    },
+    {
+      "en": "limites_control_estadistico_vs_tolerancias",
+      "campo": "nodos_previos",
+      "ref": "control_de_calidad_ciclo_de_retroalimentacion"
+    },
+    {
+      "en": "medicion_calidad",
+      "campo": "nodos_previos",
+      "ref": "compromiso_gerencial"
+    },
+    {
+      "en": "mejora_continua_del_proceso",
+      "campo": "nodos_previos",
+      "ref": "institucionalizar_control_estadistico"
+    },
+    {
+      "en": "mistake_proofing_poka_yoke_2",
+      "campo": "nodos_previos",
+      "ref": "analisis_causa_raiz"
+    },
+    {
+      "en": "mistake_proofing_poka_yoke_2",
+      "campo": "nodos_previos",
+      "ref": "control_de_procesos"
+    },
+    {
+      "en": "modelo_shingo_evaluacion_excelencia",
+      "campo": "nodos_siguientes",
+      "ref": "alineacion_estrategica_empresarial"
+    },
+    {
+      "en": "niveles_calidad_muestreo_aql_lql_aoql",
+      "campo": "nodos_previos",
+      "ref": "control_calidad_especificaciones"
+    },
+    {
+      "en": "normalizacion_datos_benchmarking_2",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_datos_benchmarking"
+    },
+    {
+      "en": "optimizacion_caracteristicas_diseno",
+      "campo": "nodos_previos",
+      "ref": "desarrollo_caracteristicas_detalladas_producto"
+    },
+    {
+      "en": "organizacion_liderazgo_estadistico",
+      "campo": "nodos_previos",
+      "ref": "cultura_de_mejora_continua"
+    },
+    {
+      "en": "organizacion_liderazgo_estadistico",
+      "campo": "nodos_siguientes",
+      "ref": "desarrollo_continuo_del_personal"
+    },
+    {
+      "en": "orgullo_por_el_trabajo",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_deming"
+    },
+    {
+      "en": "pdsa_shewhart_cycle",
+      "campo": "nodos_previos",
+      "ref": "analisis_causa_raiz_rcca"
+    },
+    {
+      "en": "pdsa_shewhart_cycle",
+      "campo": "nodos_siguientes",
+      "ref": "mejora_continua_kaizen"
+    },
+    {
+      "en": "planificacion_inicial_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "autocontrol_operario"
+    },
+    {
+      "en": "politica_calidad_organizacional",
+      "campo": "nodos_siguientes",
+      "ref": "cultura_calidad"
+    },
+    {
+      "en": "politica_formal_de_calidad",
+      "campo": "nodos_previos",
+      "ref": "diagnostico_actitud_gerencial_hacia_calidad"
+    },
+    {
+      "en": "politica_formal_de_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "reportes_de_costo_de_calidad"
+    },
+    {
+      "en": "programa_auditoria_calidad",
+      "campo": "nodos_previos",
+      "ref": "sistema_gestion_calidad_general"
+    },
+    {
+      "en": "programa_cero_defectos",
+      "campo": "nodos_siguientes",
+      "ref": "cultura_de_calidad_supervisores"
+    },
+    {
+      "en": "programa_make_certain_2",
+      "campo": "nodos_siguientes",
+      "ref": "medicion_del_programa_de_calidad"
+    },
+    {
+      "en": "punto_equilibrio_calidad",
+      "campo": "nodos_siguientes",
+      "ref": "trabajo_con_proveedores"
+    },
+    {
+      "en": "punto_equilibrio_calidad_inspeccion",
+      "campo": "nodos_siguientes",
+      "ref": "trabajo_conjunto_con_proveedor"
+    },
+    {
+      "en": "punto_equilibrio_calidad_inspeccion",
+      "campo": "nodos_siguientes",
+      "ref": "reduccion_defectos_cero"
+    },
+    {
+      "en": "quality_management_maturity_grid_2",
+      "campo": "nodos_siguientes",
+      "ref": "catorce_pasos_mejora_calidad_crosby"
+    },
+    {
+      "en": "quality_management_maturity_grid_3",
+      "campo": "nodos_siguientes",
+      "ref": "programa_catorce_pasos_mejora_calidad"
+    },
+    {
+      "en": "recoleccion_validacion_datos_benchmarking",
+      "campo": "nodos_previos",
+      "ref": "definicion_kpis_benchmarking"
+    },
+    {
+      "en": "recursos_humanos_cultura",
+      "campo": "nodos_siguientes",
+      "ref": "cultura_calidad"
+    },
+    {
+      "en": "regla_todo_o_nada_inspeccion",
+      "campo": "nodos_previos",
+      "ref": "relacion_proveedor_unico"
+    },
+    {
+      "en": "regla_todo_o_nada_inspeccion_2",
+      "campo": "nodos_siguientes",
+      "ref": "trabajo_conjunto_con_proveedor"
+    },
+    {
+      "en": "reglas_deming_consultoria_calidad",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_deming"
+    },
+    {
+      "en": "reglas_deming_consultoria_calidad",
+      "campo": "nodos_previos",
+      "ref": "compromiso_alta_direccion"
+    },
+    {
+      "en": "resumen_de_datos_graficos",
+      "campo": "nodos_siguientes",
+      "ref": "analisis_estadistico_de_datos"
+    },
+    {
+      "en": "rol_alta_direccion_benchmarking",
+      "campo": "nodos_previos",
+      "ref": "seleccion_socios_benchmarking"
+    },
+    {
+      "en": "rol_alta_direccion_benchmarking",
+      "campo": "nodos_siguientes",
+      "ref": "plan_accion_mejora_benchmarking"
+    },
+    {
+      "en": "rol_black_belt_six_sigma",
+      "campo": "nodos_previos",
+      "ref": "decidir_metodologia_mejora_continua"
+    },
+    {
+      "en": "rol_facilitador_equipos_mejora",
+      "campo": "nodos_previos",
+      "ref": "formacion_equipo_proyecto_breakthrough"
+    },
+    {
+      "en": "secuencia_universal_breakthrough",
+      "campo": "nodos_previos",
+      "ref": "planeacion_de_calidad_juran"
+    },
+    {
+      "en": "secuencia_universal_para_el_breakthrough",
+      "campo": "nodos_siguientes",
+      "ref": "consejo_de_calidad_ejecutivo"
+    },
+    {
+      "en": "seminario_de_exito_para_gerencia",
+      "campo": "nodos_siguientes",
+      "ref": "reconocimiento_de_logros_en_calidad"
+    },
+    {
+      "en": "sistema_medicion_kpi",
+      "campo": "nodos_previos",
+      "ref": "planificacion_estrategica_calidad"
+    },
+    {
+      "en": "sistemas_recompensa_aleatorios",
+      "campo": "nodos_previos",
+      "ref": "estado_de_control_estadistico"
+    },
+    {
+      "en": "sistemas_sociotecnicos",
+      "campo": "nodos_previos",
+      "ref": "gestion_por_procesos"
+    },
+    {
+      "en": "sistemas_sociotecnicos",
+      "campo": "nodos_previos",
+      "ref": "diseno_organizacional_para_calidad"
+    },
+    {
+      "en": "six_sigma_dmaic_2",
+      "campo": "nodos_previos",
+      "ref": "voz_del_cliente"
+    },
+    {
+      "en": "takt_time_demand",
+      "campo": "nodos_siguientes",
+      "ref": "line_balancing"
+    },
+    {
+      "en": "tipos_benchmarking_por_participante",
+      "campo": "nodos_previos",
+      "ref": "seven_basic_tools_of_quality"
+    },
+    {
+      "en": "trampa_del_promedio_como_estandar",
+      "campo": "nodos_previos",
+      "ref": "estado_de_control_estadistico"
+    },
+    {
+      "en": "transformacion_calidad_compromiso_alta_direccion_japon",
+      "campo": "nodos_previos",
+      "ref": "catorce_puntos_deming"
+    },
+    {
+      "en": "transformacion_calidad_compromiso_alta_direccion_japon",
+      "campo": "nodos_siguientes",
+      "ref": "educacion_estadistica_continua_personal"
+    },
+    {
+      "en": "value_non_value_added_analysis",
+      "campo": "nodos_siguientes",
+      "ref": "cycle_time_reduction"
+    },
+    {
+      "en": "visualizacion_datos_deteccion_outliers",
+      "campo": "nodos_previos",
+      "ref": "recoleccion_datos_calidad"
+    }
+  ]
+}

@@ -13,10 +13,12 @@
   ],
   "entregable_esperado": "Sistema de gestión hídrica con métricas de reducción de consumo",
   "nodos_previos": [
-    "gestion_energia_equipos"
+    "gestion_energia_equipos",
+    "actualizacion_hvac"
   ],
   "nodos_siguientes": [
-    "contratos_desempeno_energetico_esco"
+    "contratos_desempeno_energetico_esco",
+    "certificacion_leed_energy_star"
   ],
   "condiciones_activacion": [
     "Si el edificio tiene alto consumo de agua o está en zona de sequía",

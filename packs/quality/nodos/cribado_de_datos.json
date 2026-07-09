@@ -15,11 +15,13 @@
   ],
   "entregable_esperado": "Conjunto de datos depurado y validado, con outliers identificados y justificados, listo para análisis estadístico",
   "nodos_previos": [
-    "diseno_de_metodos_de_recoleccion_de_datos"
+    "diseno_de_metodos_de_recoleccion_de_datos",
+    "analisis_de_sistemas_de_medicion_msa"
   ],
   "nodos_siguientes": [
-    "analisis_estadistico_de_datos",
-    "resumen_de_datos_graficos"
+    "resumen_de_datos_graficos",
+    "estadistica_basica_calidad",
+    "curva_banera_periodos_fallo"
   ],
   "condiciones_activacion": [
     "Antes de realizar cualquier análisis estadístico formal sobre un conjunto de datos recolectado"

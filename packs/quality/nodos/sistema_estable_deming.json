@@ -12,10 +12,14 @@
     "Asignar responsabilidad de mejora según el tipo de causa identificada"
   ],
   "entregable_esperado": "Carta de control con diagnóstico de estabilidad del proceso",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "critica_gestion_por_objetivos"
+  ],
   "nodos_siguientes": [
     "critica_gestion_por_objetivos",
-    "eliminacion_estandares_trabajo"
+    "eliminacion_estandares_trabajo",
+    "estadistico_competente_organizacion",
+    "inspeccion_optima_proceso"
   ],
   "condiciones_activacion": [
     "Cuando se necesita diagnosticar si un problema de calidad es sistémico o individual"

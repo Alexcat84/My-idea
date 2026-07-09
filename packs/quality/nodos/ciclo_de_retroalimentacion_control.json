@@ -14,11 +14,13 @@
   ],
   "entregable_esperado": "Diagrama del bucle de retroalimentación con sensor, estándar de comparación y actuador definidos para el proceso",
   "nodos_previos": [
-    "establecimiento_metas_de_calidad"
+    "establecimiento_metas_de_calidad",
+    "auditoria_de_producto"
   ],
   "nodos_siguientes": [
     "ciclo_pdca_pdsa",
-    "piramide_de_control"
+    "piramide_de_control",
+    "limites_control_estadistico_vs_tolerancias"
   ],
   "condiciones_activacion": [
     "Cuando se requiere controlar la conformidad de un proceso en tiempo real",

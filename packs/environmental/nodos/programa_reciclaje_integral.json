@@ -14,10 +14,12 @@
   ],
   "entregable_esperado": "Sistema de reciclaje instalado y verificado, con métricas de porcentaje de residuos desviados del vertedero",
   "nodos_previos": [
-    "cultura_reduce_reuse_recycle"
+    "cultura_reduce_reuse_recycle",
+    "green_team_oficina",
+    "involucramiento_empleados_sostenibilidad"
   ],
   "nodos_siguientes": [
-    "medicion_impacto_ambiental"
+    "metricas_impacto_ambiental"
   ],
   "condiciones_activacion": [
     "Si la empresa genera grandes volúmenes de residuos (papel, vidrio, cartón, aluminio)",

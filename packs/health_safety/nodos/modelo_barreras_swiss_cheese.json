@@ -13,9 +13,13 @@
   ],
   "entregable_esperado": "Un mapa de barreras y condiciones latentes que muestre cómo múltiples fallas organizacionales confluyeron, evitando culpar únicamente al operador de primera línea",
   "nodos_previos": [
-    "no_usar_triangulo_heinrich"
+    "no_usar_triangulo_heinrich",
+    "evitar_uso_complacencia",
+    "modelo_cadena_de_eventos"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "confusion_de_modos_automatizacion"
+  ],
   "condiciones_activacion": [
     "Cuando se investiga un accidente industrial de gran escala (energía, procesos químicos, nuclear)",
     "Si se necesita identificar fallas organizacionales profundas detrás de un 'acto inseguro' aparente",

@@ -13,11 +13,12 @@
   ],
   "entregable_esperado": "Gráfico de control con límites estadísticos aplicado al indicador de desempeño, y protocolo de intervención basado en señales reales, no en el promedio",
   "nodos_previos": [
-    "estado_de_control_estadistico"
+    "sistema_estable_variacion"
   ],
   "nodos_siguientes": [
     "causas_comunes_vs_especiales",
-    "responsabilidad_gerencial_causas_comunes"
+    "responsabilidad_gerencial_causas_comunes",
+    "reporte_gerencial_diagnostico_calidad"
   ],
   "condiciones_activacion": [
     "Cuando la gerencia usa el promedio del grupo como criterio de intervención individual",

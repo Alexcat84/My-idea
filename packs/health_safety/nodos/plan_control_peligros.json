@@ -14,12 +14,15 @@
   ],
   "entregable_esperado": "Plan de control de peligros documentado, con responsables y fechas asignadas",
   "nodos_previos": [
-    "jerarquia_controles"
+    "jerarquia_controles",
+    "investigacion_incidentes",
+    "peligros_emergencias_no_rutinarias"
   ],
   "nodos_siguientes": [
     "implementacion_controles",
     "controles_no_rutinarias_emergencias",
-    "seguimiento_efectividad_controles"
+    "seguimiento_efectividad_controles",
+    "implementacion_controles_2"
   ],
   "condiciones_activacion": [
     "Cuando se han seleccionado los controles pero falta un plan formal de implementación"

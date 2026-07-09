@@ -14,9 +14,12 @@
   ],
   "entregable_esperado": "Informe de auditoría del sistema de control de calidad con hallazgos y plan de actualización",
   "nodos_previos": [
-    "manual_de_calidad"
+    "manual_de_calidad",
+    "medicion_kpi"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "planificacion_estrategica_despliegue_2"
+  ],
   "condiciones_activacion": [
     "Cuando ha pasado un periodo significativo desde la última revisión del sistema de calidad",
     "Si se sospecha deterioro o desactualización de los procedimientos de control de calidad"

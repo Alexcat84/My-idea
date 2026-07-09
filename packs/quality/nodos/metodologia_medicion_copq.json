@@ -14,11 +14,13 @@
   ],
   "entregable_esperado": "Un listado priorizado de actividades relacionadas con la mala calidad junto con sus estimaciones de costo, listo para seleccionar proyectos",
   "nodos_previos": [
-    "categorias_copq"
+    "categorias_copq",
+    "costo_de_mala_calidad_copq_3"
   ],
   "nodos_siguientes": [
     "estrategias_estimacion_costos",
-    "seleccion_proyectos_six_sigma_basada_en_copq"
+    "seleccion_proyectos_six_sigma_basada_en_copq",
+    "accion_correctiva_sistematica"
   ],
   "condiciones_activacion": [
     "Cuando la organización necesita datos concretos sobre dónde se generan los costos de mala calidad",

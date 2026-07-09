@@ -12,10 +12,17 @@
   ],
   "entregable_esperado": "Evento de lanzamiento del estándar Cero Defectos realizado en toda la organización.",
   "nodos_previos": [
-    "entrenamiento_supervisores"
+    "entrenamiento_supervisores",
+    "entrenamiento_supervisores_calidad",
+    "planificacion_cero_defectos"
   ],
   "nodos_siguientes": [
-    "establecimiento_metas"
+    "establecimiento_metas",
+    "eliminacion_causas_error_2",
+    "entrenamiento_supervisores_2",
+    "fijacion_de_metas",
+    "programa_ecr_causa_de_error",
+    "reconocimiento_al_desempeno"
   ],
   "condiciones_activacion": [
     "Cuando se ha completado la preparación y capacitación previa al lanzamiento del programa"

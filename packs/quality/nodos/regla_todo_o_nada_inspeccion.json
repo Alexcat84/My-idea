@@ -15,11 +15,14 @@
   "entregable_esperado": "Análisis de costos k1/k2 con la decisión documentada (inspeccionar 100% o no inspeccionar) para cada material o etapa crítica del proceso.",
   "nodos_previos": [
     "control_estadistico_de_procesos",
-    "relacion_proveedor_unico"
+    "relacion_largo_plazo_proveedor_unico"
   ],
   "nodos_siguientes": [
     "pruebas_destructivas",
-    "eliminacion_planes_muestreo_estandar"
+    "eliminacion_planes_muestreo_estandar",
+    "economia_subensambles_inspeccion",
+    "probabilidad_falla_ensamblaje_multiple",
+    "verificacion_paralela_trabajo_critico"
   ],
   "condiciones_activacion": [
     "Cuando se debe decidir sobre políticas de inspección de materiales entrantes o productos en proceso",

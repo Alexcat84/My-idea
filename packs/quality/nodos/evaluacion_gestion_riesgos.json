@@ -14,10 +14,13 @@
     "Reevaluar el proceso de riesgo al menos anualmente"
   ],
   "entregable_esperado": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "gestion_riesgo_identificacion"
+  ],
   "nodos_siguientes": [
     "gestion_del_cambio",
-    "comunicacion_del_riesgo"
+    "comunicacion_del_riesgo",
+    "evitacion_del_riesgo"
   ],
   "condiciones_activacion": [
     "Cuando el proyecto o proceso implica incertidumbre significativa",

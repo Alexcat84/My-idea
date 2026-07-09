@@ -13,10 +13,12 @@
   ],
   "entregable_esperado": "Reporte de huella de carbono en unidades CO2e estandarizadas por fuente de emisión",
   "nodos_previos": [
-    "estrategia_recoleccion_datos_carbono"
+    "estrategia_recoleccion_datos_carbono",
+    "definir_limites_huella_carbono"
   ],
   "nodos_siguientes": [
-    "medir_residuos_empresa"
+    "medir_residuos_empresa",
+    "neutralidad_carbono"
   ],
   "condiciones_activacion": [
     "Cuando ya se tienen datos crudos de energía y combustible listos para procesar"

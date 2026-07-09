@@ -14,10 +14,18 @@
   "entregable_esperado": "Campaña de comunicación interna sobre calidad implementada y supervisores capacitados",
   "nodos_previos": [
     "costo_de_la_calidad_coq",
-    "medicion_de_calidad"
+    "medicion_de_calidad",
+    "costo_de_calidad_4",
+    "programa_de_mejora_de_calidad",
+    "rotacion_de_puestos_para_mejora_calidad"
   ],
   "nodos_siguientes": [
-    "accion_correctiva"
+    "accion_correctiva",
+    "accion_correctiva_3",
+    "accion_correctiva_5",
+    "dia_cero_defectos_3",
+    "entrenamiento_supervisores_calidad",
+    "rework_por_el_causante"
   ],
   "condiciones_activacion": [
     "Cuando ya se cuenta con mediciones de costo de calidad y se necesita involucrar a los empleados"

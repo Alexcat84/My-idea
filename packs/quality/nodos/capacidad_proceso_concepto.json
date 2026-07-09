@@ -16,12 +16,14 @@
   "entregable_esperado": "Informe de capacidad de proceso con distribución de variación cuantificada y su relación con especificaciones",
   "nodos_previos": [
     "graficos_control_multivariados",
-    "tolerancia_estadistica_dimensiones_interactuantes"
+    "tolerancia_estadistica_dimensiones_interactuantes",
+    "funcion_perdida_limites_especificacion"
   ],
   "nodos_siguientes": [
     "planificacion_estudio_capacidad",
     "indice_cp",
-    "indice_cpk"
+    "indice_cpk",
+    "pre_control_estadistico"
   ],
   "condiciones_activacion": [
     "Cuando se necesita predecir si un proceso podrá cumplir especificaciones antes de producir en volumen",

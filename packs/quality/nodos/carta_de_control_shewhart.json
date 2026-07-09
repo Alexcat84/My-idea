@@ -17,7 +17,11 @@
   "nodos_previos": [
     "causas_especiales_y_comunes_variacion"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "analisis_variacion_desempeno_servicio",
+    "distincion_causas_comunes_especiales_3",
+    "distincion_causas_comunes_especiales_incidentes"
+  ],
   "condiciones_activacion": [
     "Cuando se necesita distinguir estadísticamente variación normal de anómala",
     "Si hay riesgo de tomar decisiones basadas en variación aleatoria (falsas alarmas)"

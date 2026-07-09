@@ -17,12 +17,15 @@
   ],
   "entregable_esperado": "Informe de auditoría de producto con índice de demérito por unidad, clasificación de defectos por seriedad y comparación con datos de campo/mercado",
   "nodos_previos": [
-    "inspeccion_y_prueba_del_producto",
-    "planificacion_de_la_calidad"
+    "planificacion_de_la_inspeccion",
+    "diferencia_planeacion_mejora",
+    "auditoria_de_proceso"
   ],
   "nodos_siguientes": [
-    "control_de_calidad_por_retroalimentacion",
-    "mejora_continua_de_procesos"
+    "mejora_continua_del_proceso",
+    "ciclo_de_retroalimentacion_control",
+    "clasificacion_de_seriedad_de_defectos",
+    "medicion_de_calidad_en_manufactura"
   ],
   "condiciones_activacion": [
     "Cuando existe riesgo de que las métricas internas de calidad no reflejen la experiencia real del cliente",

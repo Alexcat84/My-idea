@@ -13,11 +13,12 @@
   ],
   "entregable_esperado": "Tabla de clasificación VA/NVA de todos los pasos del proceso con plan de eliminación de desperdicio",
   "nodos_previos": [
-    "value_stream_mapping"
+    "value_stream_mapping",
+    "value_stream_mapping_2"
   ],
   "nodos_siguientes": [
     "constraint_management",
-    "cycle_time_reduction"
+    "reduccion_de_tiempo_de_ciclo"
   ],
   "condiciones_activacion": [
     "Cuando se busca reducir desperdicio en un proceso mapeado"
