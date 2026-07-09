@@ -29,3 +29,9 @@ export type ProjectNodeTipo = (typeof PROJECT_NODES_TIPO)[number];
  * cosechados del vecindario no forman parte de la ruta conversada). */
 export const MODO_RUTA: readonly Exclude<ProjectNodeTipo, "cosechado">[] = ["conversado", "silencioso", "salto"];
 export type ModoRuta = (typeof MODO_RUTA)[number];
+
+/** pack_clicks.pack (Fase 3.2, migration 014): las claves de dominio de
+ * los mundos HSEQ -- las mismas de packs/<clave>/ y del campo `dominio`
+ * de sus nodos, y las que emite POST /api/packs/interes. */
+export const PACK_CLICKS_PACK = ["quality", "health_safety", "environmental"] as const;
+export type PackClave = (typeof PACK_CLICKS_PACK)[number];

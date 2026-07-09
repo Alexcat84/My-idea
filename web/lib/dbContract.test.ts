@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -86,8 +86,12 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     assertSubconjuntoDelContrato("project_nodes.tipo", PROJECT_NODES_TIPO);
   });
 
-  it("parseo de sanidad: encontro los 3 CHECK esperados con al menos un literal cada uno", () => {
-    for (const clave of ["sessions.tipo", "plans.etiqueta", "project_nodes.tipo"]) {
+  it("pack_clicks.pack", () => {
+    assertSubconjuntoDelContrato("pack_clicks.pack", PACK_CLICKS_PACK);
+  });
+
+  it("parseo de sanidad: encontro los 4 CHECK esperados con al menos un literal cada uno", () => {
+    for (const clave of ["sessions.tipo", "plans.etiqueta", "project_nodes.tipo", "pack_clicks.pack"]) {
       const permitidos = contrato.get(clave);
       expect(permitidos).toBeDefined();
       expect(permitidos!.size).toBeGreaterThan(0);

@@ -13,6 +13,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Acordeon } from "../../ui/Acordeon";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { Markdown } from "../../ui/Markdown";
+import { MundosAddOn } from "../../ui/MundosAddOn";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { ReporteCard } from "../../ui/ReporteCard";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
@@ -342,6 +343,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
               contenidoInicial={detalle.reporte?.contenido_md ?? null}
               preguntaPendiente={detalle.reporte_en_curso?.pregunta ?? null}
             />
+          )}
+
+          {/* Mundos HSEQ con candado (fachada de beta, brief sección 4) */}
+          {!entrevistaActiva && !generandoPlan && (planMd || detalle.organizador) && (
+            <MundosAddOn projectId={projectId} />
           )}
 
           {/* Organizador persistido (cuando no hay nada más activo) */}

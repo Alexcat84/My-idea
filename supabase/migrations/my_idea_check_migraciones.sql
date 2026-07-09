@@ -101,5 +101,10 @@ FROM (
     EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='sessions' AND column_name='decisiones')
     AND EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='sessions' AND column_name='calidad')
 
+  UNION ALL
+  -- 014 · Phase 3.2 pack facade demand telemetry
+  SELECT '014', 'pack_clicks table (quality/health_safety/environmental)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='pack_clicks')
+
 ) checks
 ORDER BY num;

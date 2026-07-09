@@ -8,11 +8,11 @@
  * sesiones en nombre del usuario autenticado, ya verificado por la ruta
  * via el cliente de server.ts antes de llamar a este).
  */
-import { createClient as createSupabaseClient } from "@supabase/supabase-js";
+import { createClient as createSupabaseClient, type SupabaseClient } from "@supabase/supabase-js";
 
-let cached: ReturnType<typeof createSupabaseClient> | null = null;
+let cached: SupabaseClient | null = null;
 
-export function createAdminClient() {
+export function createAdminClient(): SupabaseClient {
   if (cached) return cached;
   cached = createSupabaseClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
