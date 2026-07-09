@@ -14,7 +14,9 @@
     "Derivar el modelo matemático final y establecer ajustes óptimos de los parámetros"
   ],
   "entregable_esperado": "Modelo matemático de predicción del proceso y configuración óptima de parámetros de proceso (Xs)",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "dmaic_fase_improve"
+  ],
   "nodos_siguientes": [
     "evaluacion_seleccion_alternativas_mejora"
   ],

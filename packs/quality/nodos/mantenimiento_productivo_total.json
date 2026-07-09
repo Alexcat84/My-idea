@@ -16,7 +16,9 @@
     "feedback_supervisores_trabajadores",
     "concepto_autocontrol"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "lean_manufacturing_tps"
+  ],
   "condiciones_activacion": [
     "Cuando el equipo presenta fallas frecuentes o pérdidas de capacidad",
     "Cuando se busca maximizar el tiempo de actividad del proceso"

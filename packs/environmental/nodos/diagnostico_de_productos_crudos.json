@@ -12,7 +12,9 @@
     "Identificar sustancias conocidas como tóxicas (metales pesados, disruptores endocrinos, PVC, ftalatos)"
   ],
   "entregable_esperado": "Matriz de materiales del producto con origen, función y nivel de necesidad/riesgo de cada componente",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "quimicos_toxicos_en_diseno"
+  ],
   "nodos_siguientes": [
     "concepto_producto_plus",
     "limites_de_la_eco_eficiencia"

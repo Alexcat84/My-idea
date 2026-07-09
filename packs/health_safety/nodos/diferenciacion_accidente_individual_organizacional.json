@@ -11,7 +11,9 @@
     "Mapear todos los actores del sistema (operador, fabricante, regulador) que pudieron contribuir al evento"
   ],
   "entregable_esperado": "Documento de clasificación inicial del incidente indicando su naturaleza (individual/organizacional) y actores involucrados",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "trayectoria_del_accidente"
+  ],
   "nodos_siguientes": [
     "modelo_accidente_organizacional",
     "defensas_en_profundidad",

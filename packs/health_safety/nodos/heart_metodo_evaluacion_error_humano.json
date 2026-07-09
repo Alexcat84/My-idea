@@ -13,7 +13,9 @@
     "Calcular la probabilidad final de error para priorizar intervenciones de mitigación"
   ],
   "entregable_esperado": "Informe de evaluación HEART con probabilidad de error calculada y lista de EPCs relevantes identificados para la tarea analizada",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "fallos_activos_condiciones_latentes"
+  ],
   "nodos_siguientes": [
     "ida_diagrama_influencia",
     "epc_condiciones_productoras_error"

@@ -13,7 +13,9 @@
     "Investigar cualquier punto fuera de los límites como posible causa especial"
   ],
   "entregable_esperado": "Un gráfico de control (X-barra y R) construido y con límites calculados para el proceso analizado",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "matriz_de_control_de_proceso"
+  ],
   "nodos_siguientes": [
     "distincion_causas_comunes_especiales",
     "administracion_sin_miedo",

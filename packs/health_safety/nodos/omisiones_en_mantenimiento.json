@@ -11,7 +11,9 @@
     "Establecer inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio."
   ],
   "entregable_esperado": "Checklist de verificación de reensamblaje con puntos de firma obligatorios por tarea crítica.",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "fallos_activos_condiciones_latentes"
+  ],
   "nodos_siguientes": [
     "fallas_activas_condiciones_latentes",
     "documentacion_mantenimiento_linea_base",

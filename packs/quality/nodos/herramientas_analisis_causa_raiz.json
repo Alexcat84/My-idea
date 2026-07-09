@@ -13,7 +13,9 @@
     "Aplicar estratificación para descomponer los datos por categorías y encontrar focos del problema."
   ],
   "entregable_esperado": "Conjunto de gráficos y análisis visuales (histogramas, Pareto, dispersión, estratificación) que evidencian patrones y prioridades del problema de calidad.",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "diagrama_arbol_despliegue"
+  ],
   "nodos_siguientes": [
     "definicion_problema_moms",
     "analisis_sintomas",

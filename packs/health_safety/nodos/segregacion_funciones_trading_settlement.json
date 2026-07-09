@@ -11,7 +11,9 @@
     "Auditar periódicamente la existencia de 'roles duales' no documentados en la organización."
   ],
   "entregable_esperado": "Matriz de segregación de funciones (SoD) para los procesos críticos de la organización.",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "implementacion_controles"
+  ],
   "nodos_siguientes": [
     "senales_alerta_no_atendidas"
   ],

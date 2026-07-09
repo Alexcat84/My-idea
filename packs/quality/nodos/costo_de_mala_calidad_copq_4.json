@@ -13,7 +13,9 @@
     "Presentar el análisis de COPQ a la gerencia para obtener aprobación de recursos"
   ],
   "entregable_esperado": "Reporte cuantificado del Costo de la Mala Calidad desglosado por categorías, con recomendaciones de proyectos de mejora priorizados",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "costo_mala_calidad_copq"
+  ],
   "nodos_siguientes": [
     "modelo_costo_optimo_calidad",
     "estudio_mercado_calidad"

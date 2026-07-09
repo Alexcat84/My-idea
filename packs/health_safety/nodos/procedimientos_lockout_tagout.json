@@ -16,7 +16,9 @@
   "nodos_previos": [
     "plan_de_control_de_infecciones"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "lockout_tagout_procedures"
+  ],
   "condiciones_activacion": [
     "Si el negocio realiza mantenimiento o servicio de equipos con fuentes de energía peligrosas"
   ]

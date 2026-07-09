@@ -12,7 +12,9 @@
     "Usar el cálculo detallado de COPQ como mapa de ruta para eliminar sistemáticamente las fuentes de mala calidad"
   ],
   "entregable_esperado": "Reporte cuantificado de COPQ con desglose por categorías (fallos internos, externos, evaluación, prevención) y plan de reducción",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "costo_de_mala_calidad_copq"
+  ],
   "nodos_siguientes": [
     "trilogia_de_juran",
     "secuencia_universal_breakthrough"

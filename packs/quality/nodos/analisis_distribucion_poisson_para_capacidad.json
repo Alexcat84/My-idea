@@ -13,7 +13,9 @@
     "Graficar los datos reales en un gráfico de corridas para confirmar aleatoriedad y ajustar el modelo si es necesario"
   ],
   "entregable_esperado": "Estimación de capacidad de recursos (personal, equipo) basada en análisis estadístico de frecuencia de eventos, con gráfico de verificación",
-  "nodos_previos": [],
+  "nodos_previos": [
+    "analisis_variacion_desempeno_servicio"
+  ],
   "nodos_siguientes": [
     "mejora_del_sistema_responsabilidad_gerencial"
   ],
