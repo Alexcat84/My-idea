@@ -22,7 +22,19 @@ export function cargarEnvRaiz() {
 
 export const BASE_URL = process.env.VUELO_BASE_URL ?? "http://localhost:3000";
 const DEV_EMAIL = "dev@my-idea.local";
-const DEV_PASSWORD = "dev-local-only-not-a-real-account-0001";
+// Seguridad (Fase 3.2): la contrasena del dev user salio del codigo -- vive
+// en VUELO_DEV_PASSWORD del .env raiz (no versionado). La que estuvo
+// committeada se considera quemada; setup_dev_user.py la rota.
+function devPassword(): string {
+  const password = (process.env.VUELO_DEV_PASSWORD ?? "").trim();
+  if (!password) {
+    throw new Error(
+      "falta VUELO_DEV_PASSWORD en el .env raiz -- la contrasena del dev user ya no vive en el codigo; " +
+        "definela (larga y aleatoria) y corre `python scripts/setup_dev_user.py` para rotarla en Supabase"
+    );
+  }
+  return password;
+}
 
 /** Inicia sesion como el dev user (scripts/setup_dev_user.py) y devuelve
  * el header Cookie ya armado -- proxy.ts/allowlist (item 9 de Fase 3.0)
@@ -40,7 +52,7 @@ export async function autenticarComoDevUser(): Promise<string> {
       },
     },
   });
-  const { data, error } = await client.auth.signInWithPassword({ email: DEV_EMAIL, password: DEV_PASSWORD });
+  const { data, error } = await client.auth.signInWithPassword({ email: DEV_EMAIL, password: devPassword() });
   if (error || !data.session) {
     throw new Error(`fallo el login del dev user (${DEV_EMAIL}): ${error?.message}`);
   }

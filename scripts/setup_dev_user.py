@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-setup_dev_user.py - Crea (o encuentra) el usuario fijo de desarrollo (Fase 2.5)
+setup_dev_user.py - Crea o ACTUALIZA el usuario fijo de desarrollo (Fase 2.5)
 
 El CLI no tiene login real: opera como un unico usuario de desarrollo cuyo
 id se referencia en cada fila (user_id). Este script es idempotente: si el
-usuario dev@my-idea.local ya existe, solo imprime su id.
+usuario dev@my-idea.local ya existe, rota su contrasena a la del entorno e
+imprime su id.
 
-Uso: python scripts/setup_dev_user.py
+Seguridad (Fase 3.2): la contrasena JAMAS vive en el codigo -- se lee de
+VUELO_DEV_PASSWORD en el .env raiz (archivo no versionado). La contrasena
+que estuvo committeada antes de este cambio se considera quemada: correr
+este script una vez con la variable nueva la rota en Supabase Auth.
+
+Uso: agregar VUELO_DEV_PASSWORD=<valor largo aleatorio> al .env y correr
+  python scripts/setup_dev_user.py
 """
 import os
 import sys
@@ -18,14 +25,18 @@ BASE = Path(__file__).resolve().parent.parent
 load_dotenv(BASE / ".env")
 
 DEV_EMAIL = "dev@my-idea.local"
-DEV_PASSWORD = "dev-local-only-not-a-real-account-0001"
 
 
 def main():
     url = os.environ.get("SUPABASE_URL", "").strip()
     service_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "").strip()
+    password = os.environ.get("VUELO_DEV_PASSWORD", "").strip()
     if not url or not service_key:
         print("ERROR: faltan SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY en .env")
+        sys.exit(1)
+    if not password:
+        print("ERROR: falta VUELO_DEV_PASSWORD en .env (la contrasena del dev "
+              "user ya no vive en el codigo; define una larga y aleatoria).")
         sys.exit(1)
 
     from supabase import create_client
@@ -34,12 +45,13 @@ def main():
     page = client.auth.admin.list_users()
     for u in page:
         if u.email == DEV_EMAIL:
-            print(f"Ya existe. DEV_USER_ID={u.id}")
+            client.auth.admin.update_user_by_id(u.id, {"password": password})
+            print(f"Ya existia; contrasena rotada a la de VUELO_DEV_PASSWORD. DEV_USER_ID={u.id}")
             return
 
     resp = client.auth.admin.create_user({
         "email": DEV_EMAIL,
-        "password": DEV_PASSWORD,
+        "password": password,
         "email_confirm": True,
     })
     print(f"Creado. DEV_USER_ID={resp.user.id}")

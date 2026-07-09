@@ -75,3 +75,31 @@ scripts sueltos que se corrían a mano, uno por uno. Así es como
 anterior) sin que nadie lo supiera: no había un solo comando cuyo exit
 code pudiera fallar un CI o bloquear un commit. El lado web ya tenía este
 control (`vitest` como portero implacable); el lado Python no.
+
+## Ninguna credencial en archivos versionados, ni siquiera de desarrollo
+
+**Regla:** ningún archivo trackeado por git puede contener contraseñas,
+API keys, tokens ni ningún otro secreto — tampoco los "de desarrollo"
+("es solo el dev user local" no es excepción). Los secretos viven en el
+`.env` raíz (ignorado por git) y el código los lee del entorno, fallando
+con un mensaje claro si faltan. Una credencial que llegó a estar
+committeada se considera QUEMADA: se rota inmediatamente, no basta con
+borrarla del archivo (queda en el historial de git para siempre).
+
+**Por qué:** en la Fase 3.2, la contraseña del dev user de los arneses
+de prueba vivió committeada en `scripts/setup_dev_user.py` y
+`web/scripts/_shared/http.ts`. Combinada con la anon key de Supabase
+(pública por diseño: viaja en el bundle del navegador), cualquiera con
+acceso al historial del repo podía loguearse como ese usuario en el
+deployment real — con cuota exenta, además, hasta el hotfix que apagó la
+exención en producción. El review de seguridad automático lo marcó; la
+cura completa fue mover la contraseña a `VUELO_DEV_PASSWORD` en el
+entorno Y rotarla en Supabase Auth (`scripts/setup_dev_user.py` ahora
+rota en vez de solo crear).
+
+**Cómo aplicarla:** antes de commitear, si un valor da acceso a algo
+(login, API, storage), va al `.env` y el código lo lee con
+`os.environ` / `process.env` + fallo explícito si falta. Al detectar un
+secreto ya committeado: (1) sacarlo del código, (2) rotarlo en el
+servicio de origen, (3) verificar que el flujo sigue vivo con el valor
+nuevo — en ese orden, el mismo día.
