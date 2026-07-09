@@ -6,8 +6,10 @@
  * el árbol). RLS garantiza que solo se ve lo propio.
  */
 import { NextResponse } from "next/server";
+import { PREGUNTA_TIPO_OFERTA } from "@/lib/engine/constants";
 import { obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
 import { cargarGrafo } from "@/lib/engine/graph";
+import { preguntasPorTipo } from "@/lib/engine/reporte";
 import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
 
@@ -77,6 +79,22 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     break;
   }
 
+  // Mini-entrevista de reporte a medias (refresh-proof): reconstruye la
+  // pregunta pendiente desde projects.estado_reporte, igual que lo haría
+  // el siguiente paso del flujo.
+  let reporteEnCurso: { pregunta: string } | null = null;
+  if (proyecto.estado_reporte) {
+    const e = proyecto.estado_reporte.estado;
+    if (e.fase === "clasificando_oferta" || e.fase === "reclasificando_molde") {
+      reporteEnCurso = { pregunta: PREGUNTA_TIPO_OFERTA };
+    } else {
+      const campo = e.faltantesEsenciales[e.idx];
+      if (campo) {
+        reporteEnCurso = { pregunta: preguntasPorTipo(e.tipoOferta, e.unidadVenta)[campo] };
+      }
+    }
+  }
+
   return NextResponse.json({
     idea: {
       id: proyecto.id,
@@ -88,6 +106,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     organizador: organizador && { contenido_md: organizador.contenido_md },
     plan: plan && { etiqueta: plan.etiqueta, contenido_md: plan.contenido_md, created_at: plan.created_at },
     reporte: reporte && { contenido_md: reporte.contenido_md, created_at: reporte.created_at },
+    reporte_en_curso: reporteEnCurso,
     entrevista,
   });
 }

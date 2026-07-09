@@ -14,6 +14,7 @@ import { Acordeon } from "../../ui/Acordeon";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { Markdown } from "../../ui/Markdown";
 import { PlanDocumento } from "../../ui/PlanDocumento";
+import { ReporteCard } from "../../ui/ReporteCard";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import { consumirSSE } from "@/lib/sseCliente";
 
@@ -25,6 +26,7 @@ interface DetalleIdea {
   organizador: { contenido_md: string } | null;
   plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
   reporte: { contenido_md: string; created_at: string } | null;
+  reporte_en_curso: { pregunta: string } | null;
   entrevista: {
     session_id: string;
     pregunta: string | null;
@@ -332,6 +334,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
           {/* Plan como documento acordeón (brief 2.6) */}
           {planMd && <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} />}
+
+          {/* Bajo el plan: la tarjeta "Reporte de números" */}
+          {planMd && !generandoPlan && (
+            <ReporteCard
+              projectId={projectId}
+              contenidoInicial={detalle.reporte?.contenido_md ?? null}
+              preguntaPendiente={detalle.reporte_en_curso?.pregunta ?? null}
+            />
+          )}
 
           {/* Organizador persistido (cuando no hay nada más activo) */}
           {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
