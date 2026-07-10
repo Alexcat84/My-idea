@@ -17,7 +17,7 @@ export async function GET(request: Request) {
     const supabase = await createClient();
     const { error } = await supabase.auth.verifyOtp({ type, token_hash: tokenHash });
     if (!error) {
-      return NextResponse.redirect(new URL("/", url.origin));
+      return NextResponse.redirect(new URL("/ideas", url.origin));
     }
   }
   return NextResponse.redirect(new URL("/login?enlace=vencido", url.origin));

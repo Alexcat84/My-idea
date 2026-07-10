@@ -240,7 +240,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     return (
       <div className="px-6 py-12">
         <p className="text-warn">{error ?? ERROR_GENERICO}</p>
-        <Link href="/" className="mt-4 inline-block text-accent">
+        <Link href="/ideas" className="mt-4 inline-block text-accent">
           Volver a mis ideas
         </Link>
       </div>
@@ -263,7 +263,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6">
       <header className="mb-6 flex items-start justify-between gap-4">
         <div>
-          <Link href="/" className="text-sm text-dim hover:text-ink">
+          <Link href="/ideas" className="text-sm text-dim hover:text-ink">
             ← Mis ideas
           </Link>
           <h1 className="mt-1 text-xl font-semibold leading-snug">{detalle.idea.nombre}</h1>

@@ -1,0 +1,116 @@
+/* Landing pública — estilos del diseño canónico del fundador
+   ("My Idea_ Diseño UI/index.html" @1b686ec). Keyframes y helpers
+   responsive vienen 1:1 del diseño; .lh* son los style-hover del
+   template convertidos a clases (con !important porque compiten
+   contra estilos inline). Alcance: reglas genéricas bajo .landing
+   para no tocar las pantallas de trabajo. Los colores de la app
+   siguen viviendo en tokens.css; ESTE archivo es el diseño. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.landing a {
+  color: #f5f6f8;
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+.landing a:hover {
+  color: #4d7cfe;
+}
+.landing ::selection {
+  background: rgba(77, 124, 254, 0.35);
+}
+
+/* ===== keyframes del diseño ===== */
+@keyframes ideaPulse {
+  0% { box-shadow: 0 0 0 0 rgba(77, 124, 254, 0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(77, 124, 254, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(77, 124, 254, 0); }
+}
+@keyframes ideaPulseGreen {
+  0% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(63, 185, 80, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nodeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes caretBlink {
+  50% { opacity: 0; }
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+@keyframes treeLine {
+  0%, 4% { width: 0; opacity: 1; }
+  80% { width: 100%; opacity: 1; }
+  93% { width: 100%; opacity: 1; }
+  100% { width: 100%; opacity: 0; }
+}
+@keyframes treeStep1 {
+  0%, 4% { opacity: 0.18; }
+  9%, 91% { opacity: 1; }
+  98%, 100% { opacity: 0.18; }
+}
+@keyframes treeStep2 {
+  0%, 23% { opacity: 0.18; }
+  28%, 91% { opacity: 1; }
+  98%, 100% { opacity: 0.18; }
+}
+@keyframes treeStep3 {
+  0%, 42% { opacity: 0.18; }
+  47%, 91% { opacity: 1; }
+  98%, 100% { opacity: 0.18; }
+}
+@keyframes treeStep4 {
+  0%, 61% { opacity: 0.18; }
+  66%, 91% { opacity: 1; }
+  98%, 100% { opacity: 0.18; }
+}
+@keyframes treeStep5 {
+  0%, 80% { opacity: 0.18; }
+  85%, 91% { opacity: 1; }
+  98%, 100% { opacity: 0.18; }
+}
+@keyframes glowDrift {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-46%, -47%) scale(1.07); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+}
+
+/* ===== responsive por atributo (del diseño) ===== */
+@media (max-width: 760px) {
+  [data-nav-links] { display: none !important; }
+  [data-hide-mobile] { display: none !important; }
+  [data-stack] { flex-direction: column !important; }
+  [data-grid-stack] { grid-template-columns: 1fr !important; }
+}
+
+/* ===== style-hover del template -> clases ===== */
+.lh0:hover { color: #f5f6f8 !important; background: rgba(255, 255, 255, 0.06) !important; }
+.lh1:hover { color: #f5f6f8 !important; border-color: rgba(77, 124, 254, 0.65) !important; background: rgba(77, 124, 254, 0.12) !important; box-shadow: 0 0 20px rgba(77, 124, 254, 0.28) !important; }
+.lh2:hover { background: #5e8bff !important; }
+.lh3:hover { color: #5e82e0 !important; }
+.lh4:hover { background: #5e8bff !important; box-shadow: 0 0 54px rgba(77, 124, 254, 0.55) !important; }
+.lh5:hover { color: #f5f6f8 !important; }
+.lh6:hover { border-color: rgba(77, 124, 254, 0.38) !important; box-shadow: 0 0 46px rgba(77, 124, 254, 0.1) !important; }
+.lh7:hover { background: #ffffff !important; }
+.lh8:hover { background: #5e8bff !important; box-shadow: 0 0 44px rgba(77, 124, 254, 0.5) !important; }
+.lh9:hover { border-color: rgba(255, 255, 255, 0.34) !important; }
+
+/* ===== accesibilidad: sin animaciones para quien las pide quietas
+   (el JS de Landing.tsx también congela canvas/tipeo con esta señal) ===== */
+@media (prefers-reduced-motion: reduce) {
+  .landing *,
+  .landing *::before,
+  .landing *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

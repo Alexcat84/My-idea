@@ -9,7 +9,8 @@ export function BotonSalir() {
     <button
       onClick={async () => {
         await createClient().auth.signOut();
-        router.push("/login");
+        // A la landing pública: es la puerta de la casa desde Fase 3.4.
+        router.push("/");
         router.refresh();
       }}
       className="text-sm text-dim hover:text-ink"

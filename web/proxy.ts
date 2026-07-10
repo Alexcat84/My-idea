@@ -25,7 +25,12 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 
+// "/" exacta = landing pública (Fase 3.4): se sirve sin crear sesión —
+// así los crawlers no acuñan usuarios invitados; la identidad invisible
+// nace al entrar a /nueva (CTA "Comenzar").
 const RUTAS_PUBLICAS = ["/login", "/auth"];
+const esRutaPublica = (pathname: string) =>
+  pathname === "/" || RUTAS_PUBLICAS.some((r) => pathname === r || pathname.startsWith(r + "/"));
 
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
@@ -54,9 +59,8 @@ export async function proxy(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const { pathname } = request.nextUrl;
-  const esPublica = RUTAS_PUBLICAS.some((r) => pathname === r || pathname.startsWith(r + "/"));
 
-  if (!user && !esPublica) {
+  if (!user && !esRutaPublica(pathname)) {
     const { error } = await supabase.auth.signInAnonymously();
     if (error) {
       try {
