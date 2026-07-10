@@ -1,16 +1,20 @@
 /**
- * proxy.ts (Next 16: el middleware renombrado) — Fase 3.2, item 9 del
- * plan original de Fase 3.0: la puerta de sesión de toda la app.
+ * proxy.ts (Next 16: el middleware renombrado) — Fase 3.2.
  *
- * Hace dos cosas y nada más: (1) refresca la sesión de Supabase en cada
- * request (patrón @supabase/ssr: sin esto, los Server Components leen
- * cookies vencidas), y (2) redirige a /login cualquier PÁGINA sin
- * usuario autenticado. Las rutas /api/* no pasan por aquí: cada route
- * handler ya verifica auth por sí mismo y responde 401 JSON (un
- * redirect a HTML rompería a los clientes programáticos como vuelo.ts).
- * La allowlist de beta se aplica en el envío del magic link
- * (/api/auth/magic-link): quien no está invitado nunca recibe el enlace,
- * así que nunca llega a tener sesión.
+ * DECISIÓN DE PRODUCTO (2026-07-09, fundador): la web es ABIERTA — no un
+ * sitio-login. El visitante entra directo a la interfaz; el registro se
+ * definirá después. Cómo se logra sin abrir la billetera ni romper el
+ * modelo por-usuario (RLS): sesión ANÓNIMA invisible. Si no hay sesión,
+ * se crea una con signInAnonymously() (cookies persistentes: las ideas
+ * del visitante viven en su navegador), el límite de 5 arranques/día
+ * aplica por usuario anónimo, y cuando exista registro, Supabase permite
+ * VINCULAR el email a esa misma identidad conservando sus ideas.
+ *
+ * /login queda vivo pero fuera del flujo (nadie es redirigido ahí); la
+ * allowlist sigue protegiendo el magic link para cuando el registro
+ * regrese. Requiere "Anonymous sign-ins" habilitado en Supabase Auth; si
+ * la creación anónima fallara (toggle apagado, red), se cae al login
+ * como último recurso en vez de servir una app rota.
  */
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
@@ -47,16 +51,14 @@ export async function proxy(request: NextRequest) {
   const esPublica = RUTAS_PUBLICAS.some((r) => pathname === r || pathname.startsWith(r + "/"));
 
   if (!user && !esPublica) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/login";
-    url.search = "";
-    return NextResponse.redirect(url);
-  }
-  if (user && pathname === "/login") {
-    const url = request.nextUrl.clone();
-    url.pathname = "/";
-    url.search = "";
-    return NextResponse.redirect(url);
+    // Web abierta: identidad anónima silenciosa en vez de muro de login.
+    const { error } = await supabase.auth.signInAnonymously();
+    if (error) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/login";
+      url.search = "";
+      return NextResponse.redirect(url);
+    }
   }
 
   return response;
