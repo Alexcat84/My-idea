@@ -37,7 +37,9 @@ export default async function Home() {
     listarIdeasConEstado(supabase),
     supabase.auth.getUser(),
   ]);
-  const esAnonimo = auth.user?.is_anonymous ?? true;
+  // Anónimo de Supabase o invitado bootstrapeado por el proxy: para
+  // ambos, "Salir" les dejaría las ideas huérfanas — no se muestra.
+  const esAnonimo = (auth.user?.is_anonymous ?? true) || auth.user?.user_metadata?.invitado === true;
 
   if (ideas.length === 0) redirect("/nueva");
 

@@ -1,23 +1,29 @@
 /**
- * proxy.ts (Next 16: el middleware renombrado) — Fase 3.2.
+ * proxy.ts (Next 16: el middleware renombrado; corre en runtime Node).
  *
- * DECISIÓN DE PRODUCTO (2026-07-09, fundador): la web es ABIERTA — no un
- * sitio-login. El visitante entra directo a la interfaz; el registro se
- * definirá después. Cómo se logra sin abrir la billetera ni romper el
- * modelo por-usuario (RLS): sesión ANÓNIMA invisible. Si no hay sesión,
- * se crea una con signInAnonymously() (cookies persistentes: las ideas
- * del visitante viven en su navegador), el límite de 5 arranques/día
- * aplica por usuario anónimo, y cuando exista registro, Supabase permite
- * VINCULAR el email a esa misma identidad conservando sus ideas.
+ * REGLA DE PRODUCTO (fundador, 2026-07-09): la web es ABIERTA. Cualquier
+ * visitante entra y usa lo básico sin restricciones; NINGÚN camino
+ * termina en una pantalla de login, jamás. El signup/login real llegará
+ * en una fase futura (al generar reportes) y podrá VINCULARSE a la
+ * identidad silenciosa del visitante conservando sus ideas.
  *
- * /login queda vivo pero fuera del flujo (nadie es redirigido ahí); la
- * allowlist sigue protegiendo el magic link para cuando el registro
- * regrese. Requiere "Anonymous sign-ins" habilitado en Supabase Auth; si
- * la creación anónima fallara (toggle apagado, red), se cae al login
- * como último recurso en vez de servir una app rota.
+ * Cómo se sostiene sin abrir la billetera ni romper el modelo por
+ * usuario (RLS): toda visita sin sesión recibe una identidad invisible
+ * en cookies. Cadena de bootstrap, de mejor a último recurso:
+ *   1. signInAnonymously() — si el proyecto Supabase tiene el toggle
+ *      "Anonymous sign-ins" activo (trae rate-limit por IP de fábrica).
+ *   2. Usuario invitado creado con la service role key (visitante-<uuid>
+ *      @invitado.my-idea.local, contraseña aleatoria descartada tras el
+ *      login) — no depende de ningún toggle del dashboard.
+ *   3. Si hasta eso falla (outage), el visitante PASA igual: la página
+ *      carga y solo las acciones que escriben fallarán con mensaje
+ *      humano. Nunca un muro.
+ * El costo queda cuidado por el límite de 5 arranques/día por usuario
+ * (lib/rateLimit.ts). /login existe pero está fuera de todo flujo.
  */
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 const RUTAS_PUBLICAS = ["/login", "/auth"];
 
@@ -51,13 +57,24 @@ export async function proxy(request: NextRequest) {
   const esPublica = RUTAS_PUBLICAS.some((r) => pathname === r || pathname.startsWith(r + "/"));
 
   if (!user && !esPublica) {
-    // Web abierta: identidad anónima silenciosa en vez de muro de login.
     const { error } = await supabase.auth.signInAnonymously();
     if (error) {
-      const url = request.nextUrl.clone();
-      url.pathname = "/login";
-      url.search = "";
-      return NextResponse.redirect(url);
+      try {
+        const email = `visitante-${crypto.randomUUID()}@invitado.my-idea.local`;
+        const password = crypto.randomUUID() + crypto.randomUUID();
+        const admin = createAdminClient();
+        const creado = await admin.auth.admin.createUser({
+          email,
+          password,
+          email_confirm: true,
+          user_metadata: { invitado: true },
+        });
+        if (!creado.error) {
+          await supabase.auth.signInWithPassword({ email, password });
+        }
+      } catch {
+        // Último recurso: dejar pasar sin sesión (regla: nunca un muro).
+      }
     }
   }
 
