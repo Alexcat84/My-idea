@@ -119,7 +119,7 @@ Semillas core NO cambian.
 - [x] F2 seguridad_digital saneado — Gate 0 VERDE (55 nodos)
 - [x] F2 exportacion saneado — Gate 0 VERDE (158) + copyright (3 scrubs, 54 punteros)
 - [x] F2 franquicias saneado — Gate 0 VERDE (214); etiquetas packs 426/427 ($0.65)
-- [ ] F3 enriquecer-vs-crear General
-- [ ] F4 etiquetas de árbol
-- [ ] F5 integración OLA 1 (6 libros, Gate 0 entre libros) + línea completa + tag
-- [ ] F6 reporte
+- [x] F3 EVC: 99 enriquecidos / 481 crear (juez $1.42+$0.9est) + dedup interno 26 + aristas 356/146 ($0.35)
+- [x] F4 etiquetas: 455 General + 427 packs ($1.02 total)
+- [x] F5: 455 tejidos (Gate 0 VERDE x7), caché 637 ($0.65), Voyage 3260, calibración 2+2, suites + clon VERDES, vuelo 10/10 ($0.56)
+- [x] F6 reporte entregado; gates G2-G5 pendientes del usuario
