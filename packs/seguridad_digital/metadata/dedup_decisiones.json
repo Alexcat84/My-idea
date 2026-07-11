@@ -1,0 +1,26 @@
+[
+  {
+    "aprobar": false,
+    "keeper": "csf_funcion_detect",
+    "fusionar": [
+      "csf_funcion_protect"
+    ],
+    "titulos": {
+      "csf_funcion_detect": "Función Detect del NIST CSF 2.0",
+      "csf_funcion_protect": "Función Protect del NIST CSF 2.0"
+    },
+    "motivo": "Detect y Protect son funciones DISTINTAS del CSF 2.0; falso positivo del fuzzy"
+  },
+  {
+    "aprobar": true,
+    "keeper": "funcion_respond_plan_incidentes",
+    "fusionar": [
+      "csf_funcion_respond"
+    ],
+    "titulos": {
+      "funcion_respond_plan_incidentes": "Función Responder: Plan de Respuesta ante Incidentes",
+      "csf_funcion_respond": "Función Respond y Plan de Respuesta a Incidentes"
+    },
+    "motivo": "ambos describen la funcion Respond / plan de respuesta a incidentes"
+  }
+]
