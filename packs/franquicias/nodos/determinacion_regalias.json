@@ -1,0 +1,27 @@
+{
+  "node_id": "determinacion_regalias",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Determinación de la Estructura de Regalías",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "Las regalías son la principal fuente de ingresos recurrentes del franquiciador, generalmente un porcentaje de ventas brutas. Un error de solo 1% en la tasa de regalía puede significar pérdidas de millones de dólares a lo largo de la vida del sistema, debido al efecto acumulado en contratos largos (5-20 años) y su impacto en la valoración futura del negocio. La determinación óptima requiere seis pasos: análisis de comparables, posicionamiento de marca, modelado financiero, análisis de sensibilidad, cuantificación de la propuesta de valor, y reingeniería inversa según el ROI del franquiciado.",
+  "pasos_accionables": [
+    "Analizar estructuras de regalías de franquiciadores comparables incluyendo todo lo que reciben a cambio.",
+    "Definir el posicionamiento de mercado deseado (bajo costo, premium, etc.).",
+    "Construir un modelo financiero detallado (costos, contrataciones, flujo de caja franquiciador/franquiciado).",
+    "Realizar análisis de sensibilidad bajo escenarios conservadores.",
+    "Cuantificar la propuesta de valor entregada al franquiciado (compras, marketing, marca, know-how).",
+    "Ajustar la regalía final balanceando el ROI del franquiciado y la rentabilidad del franquiciador."
+  ],
+  "entregable_esperado": "Estructura de regalías validada mediante modelo financiero y análisis de sensibilidad, documentada con justificación.",
+  "nodos_previos": [
+    "determinacion_cuota_inicial",
+    "calculo_roi_franquiciado_2"
+  ],
+  "nodos_siguientes": [
+    "ventas_productos_markup_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario debe fijar el porcentaje de regalías antes de lanzar su programa de franquicia"
+  ]
+}

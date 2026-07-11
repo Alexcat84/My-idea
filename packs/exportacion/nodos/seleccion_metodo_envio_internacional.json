@@ -1,0 +1,28 @@
+{
+  "node_id": "seleccion_metodo_envio_internacional",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Selección del Método de Envío Internacional",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "La elección del método de transporte internacional (marítimo, aéreo, multimodal) depende del costo del envío, el cronograma de entrega y la accesibilidad al producto por parte del comprador extranjero. Aunque el transporte aéreo puede ser más costoso, puede compensarse con menores costos de transporte doméstico y tiempos de entrega más rápidos, dando ventaja competitiva. Los contratos multimodales permiten que un operador único se responsabilice de todo el trayecto desde fábrica hasta destino final.",
+  "pasos_accionables": [
+    "Consultar con un freight forwarder internacional para determinar el mejor método de envío.",
+    "Comparar costos y tiempos de entrega entre transporte marítimo, aéreo y multimodal.",
+    "Reservar espacio con anticipación mediante un booking contract si se usa transporte de carga voluminosa.",
+    "Verificar con el comprador el destino final de las mercancías (incluyendo posibles zonas de libre comercio).",
+    "Agregar marcas de exportación a la documentación de embarque estándar."
+  ],
+  "entregable_esperado": "Método de transporte internacional seleccionado, con booking contract confirmado y documentación de embarque preparada.",
+  "nodos_previos": [
+    "definicion_terminos_de_venta",
+    "incoterms_reglas_comerciales_internacionales"
+  ],
+  "nodos_siguientes": [
+    "seguro_de_carga_transporte",
+    "documentacion_exportacion_basica"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario debe decidir cómo transportar su mercancía al mercado extranjero.",
+    "Si se busca optimizar costos y tiempos de entrega para ganar ventaja competitiva."
+  ]
+}

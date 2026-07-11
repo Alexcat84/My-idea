@@ -1,0 +1,30 @@
+{
+  "node_id": "eleccion_abogado_franquicias",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Elección de un Abogado Especializado en Franquicias",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "El derecho de franquicias es altamente especializado y complejo debido a la variedad de regulaciones estatales en EE.UU. No basta con un abogado general; se requiere experiencia específica del lado franquiciante (no franquiciado), enfoque transaccional, conocimiento de la industria específica y tamaño de firma adecuado. Se recomienda contratar primero al consultor y después al abogado, ya que el consultor validará si franquiciar es viable, ahorrando tiempo y honorarios legales innecesarios.",
+  "pasos_accionables": [
+    "Verificar que el abogado tenga 'derecho de franquicias' como práctica separada en su firma",
+    "Confirmar experiencia representando franquiciantes (no solo franquiciados)",
+    "Evaluar si el enfoque es transaccional, litigioso o ambos según necesidades",
+    "Preguntar sobre modelo de honorarios (tarifa plana vs por hora) y qué incluye exactamente",
+    "Considerar conocimiento específico de la industria del negocio a franquiciar",
+    "Evaluar tamaño de firma, accesibilidad y estilo de comunicación preferido",
+    "Contratar al abogado después de confirmar con el consultor que franquiciar es viable"
+  ],
+  "entregable_esperado": "Un abogado especializado en franquicias contratado, con experiencia franquiciante verificada y modelo de honorarios claro",
+  "nodos_previos": [
+    "seleccion_consultor_franquicias"
+  ],
+  "nodos_siguientes": [
+    "contratacion_abogado_franquicia",
+    "criterio_bazooka_peashooter",
+    "gestion_tiempo_lanzamiento_franquicia"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario ya validó con un consultor que franquiciar es viable",
+    "Si el usuario necesita redactar el FDD y el contrato de franquicia"
+  ]
+}

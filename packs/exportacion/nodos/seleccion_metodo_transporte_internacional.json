@@ -1,0 +1,26 @@
+{
+  "node_id": "seleccion_metodo_transporte_internacional",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Selección del Método de Transporte Internacional",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "La elección del método de envío (aéreo, marítimo, multimodal) depende del costo, tiempo de entrega y accesibilidad para el comprador. El transporte multimodal implica que un operador único asume la responsabilidad de todo el trayecto desde fábrica hasta destino final. Reservar espacio anticipadamente (booking contract) es clave para grandes envíos.",
+  "pasos_accionables": [
+    "Comparar costos y tiempos entre transporte aéreo y marítimo",
+    "Consultar con freight forwarder sobre transporte multimodal si aplica",
+    "Reservar espacio en el medio de transporte con anticipación (booking contract)",
+    "Verificar si el comprador requiere envío a zona franca o puerto libre",
+    "Confirmar instrucciones de notificación al freight forwarder por parte del transportista terrestre"
+  ],
+  "entregable_esperado": "Método de transporte y reserva de espacio confirmados para el embarque",
+  "nodos_previos": [
+    "documentacion_exportacion"
+  ],
+  "nodos_siguientes": [
+    "seguro_exportacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se planifica el envío físico de la mercancía",
+    "Si existe presión de tiempo de entrega o restricciones de costo"
+  ]
+}

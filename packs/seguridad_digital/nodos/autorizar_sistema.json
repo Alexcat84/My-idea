@@ -1,0 +1,25 @@
+{
+  "node_id": "autorizar_sistema",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Autorización del Sistema para Operar",
+  "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "resumen_teorico": "Un funcionario senior de la organización (Authorizing Official) determina si el riesgo de seguridad y privacidad derivado de la operación del sistema es aceptable, basándose en un paquete de autorización que incluye planes de seguridad/privacidad, informes de evaluación y el POA&M. El resultado es una decisión formal que autoriza o no la operación del sistema.",
+  "pasos_accionables": [
+    "Ensamblar el paquete de autorización y enviarlo al funcionario autorizante (Tarea R-1).",
+    "El funcionario autorizante analiza la información y determina el riesgo residual (Tarea R-2).",
+    "Emitir una decisión de autorización que indique si el sistema puede operar (Tarea R-4).",
+    "Asegurar que proveedores externos entreguen la información necesaria para la decisión de riesgo."
+  ],
+  "entregable_esperado": "Una decisión formal de autorización (aprobada o denegada) documentada, junto con el paquete de autorización completo.",
+  "nodos_previos": [
+    "evaluar_controles"
+  ],
+  "nodos_siguientes": [
+    "monitoreo_continuo"
+  ],
+  "condiciones_activacion": [
+    "Cuando un sistema nuevo o modificado necesita aprobación formal antes de entrar en producción.",
+    "Al requerir una decisión ejecutiva documentada sobre el nivel de riesgo aceptado."
+  ]
+}

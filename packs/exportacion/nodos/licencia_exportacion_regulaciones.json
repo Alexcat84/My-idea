@@ -1,0 +1,29 @@
+{
+  "node_id": "licencia_exportacion_regulaciones",
+  "fase_proyecto": "validacion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Determinar si se necesita Licencia de Exportación",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Antes de exportar, es fundamental determinar si el producto requiere una licencia de exportación bajo las regulaciones EAR (Bureau of Industry and Security), ITAR (Departamento de Estado) u OFAC (sanciones económicas). Aunque el 95% de los productos no requieren licencia, todos están sujetos a leyes de control de exportación que determinan a quién y a qué países se puede vender.",
+  "pasos_accionables": [
+    "Clasificar el producto con un ECCN (Export Control Classification Number) en bis.doc.gov",
+    "Verificar si el producto está en la Lista de Municiones de EE.UU. (USML) bajo ITAR",
+    "Consultar las listas de partes denegadas (denied parties lists) en bis.doc.gov",
+    "Revisar la lista consolidada de sanciones de OFAC antes de completar pedidos internacionales",
+    "Designar un oficial de cumplimiento de exportaciones si se exportan pocos productos a pocos países",
+    "Incluir la Declaración de Control de Destino en todas las facturas comerciales"
+  ],
+  "entregable_esperado": "Documento de clasificación de productos con ECCN asignado y verificación de que no existen restricciones para el mercado/comprador objetivo.",
+  "nodos_previos": [
+    "adaptacion_producto_mercado_exterior"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_potencial_exportador_producto",
+    "plan_cumplimiento_exportacion"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa está por iniciar su primera exportación",
+    "Si el producto tiene aplicaciones duales (comerciales y militares)",
+    "Si se va a exportar a un nuevo país o comprador"
+  ]
+}

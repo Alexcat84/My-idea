@@ -1,0 +1,25 @@
+{
+  "node_id": "monitoreo_continuo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Monitoreo Continuo de la Postura de Seguridad y Privacidad",
+  "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "resumen_teorico": "El monitoreo continuo implica vigilar el sistema y su entorno operativo en busca de cambios que afecten la seguridad y privacidad (actualizaciones de hardware/software, cambios de personal, ubicación, ataques adversarios, etc.), evaluar controles de forma continua según la estrategia definida, y usar los resultados para determinar respuestas de riesgo apropiadas. Se debe mantener comunicación constante con el liderazgo sobre la postura de seguridad.",
+  "pasos_accionables": [
+    "Monitorear el sistema y su entorno operativo ante cambios relevantes (Tarea M-1).",
+    "Evaluar controles de forma continua según la estrategia de monitoreo (Tarea M-2).",
+    "Determinar e implementar respuestas de riesgo basadas en los resultados del monitoreo y el POA&M (Tarea M-3).",
+    "Comunicar de forma continua la postura de seguridad y privacidad a la dirección (Tarea M-5)."
+  ],
+  "entregable_esperado": "Un reporte periódico de postura de seguridad/privacidad y un registro actualizado de cambios y respuestas de riesgo.",
+  "nodos_previos": [
+    "autorizar_sistema"
+  ],
+  "nodos_siguientes": [
+    "rmf_paso_preparar"
+  ],
+  "condiciones_activacion": [
+    "Una vez autorizado el sistema, para mantener su nivel de riesgo aceptable en el tiempo.",
+    "Cuando ocurren cambios significativos en el sistema, personal o entorno de operación."
+  ]
+}

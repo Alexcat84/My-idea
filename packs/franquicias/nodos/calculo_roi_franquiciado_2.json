@@ -1,0 +1,44 @@
+{
+  "node_id": "calculo_roi_franquiciado_2",
+  "fase_proyecto": "validacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Cálculo del ROI del Franquiciado (Cash-on-Cash)",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "Antes de franquiciar, el negocio debe demostrar que puede ofrecer un retorno de inversión atractivo al franquiciado. Se recomienda calcular el ROI sobre una base 'cash-on-cash' (asumiendo que el franquiciado paga todo en efectivo, sin financiamiento), excluyendo terreno y construcción, depreciación, amortización, intereses e impuestos. El benchmark de la industria es un ROI mínimo del 15% para el segundo o tercer año de operación. Este cálculo se obtiene dividiendo el flujo de caja ajustado entre el costo total de inversión (Item 7 del FDD).",
+  "pasos_accionables": [
+    "Calcular la inversión inicial total del franquiciado (equipo, build-out, inventario, franchise fee, capital de trabajo) en dólares actuales.",
+    "Tomar el estado de resultados de la unidad más representativa del negocio actual.",
+    "Normalizar el salario del gerente/dueño a tasa de mercado.",
+    "Eliminar gastos que el franquiciado no incurrirá (oficina administrativa, soporte de campo, gastos legales de marca).",
+    "Eliminar gastos financieros (intereses), no monetarios (depreciación/amortización) e impuestos.",
+    "Agregar línea de regalías y aportes al fondo de marketing del sistema.",
+    "Dividir el flujo de caja ajustado entre la inversión total para obtener el ROI proyectado."
+  ],
+  "entregable_esperado": "Hoja de cálculo con proyección de ROI del franquiciado mostrando al menos 15% de retorno para año 2-3, lista para incluir en Item 19 del FDD si se decide divulgar.",
+  "nodos_previos": [
+    "evaluacion_franquiciabilidad_negocio",
+    "documentacion_sistemas_operativos",
+    "decision_franquiciar_vs_expansion_propia"
+  ],
+  "nodos_siguientes": [
+    "decision_franquiciar_vs_expansion_propia",
+    "financial_performance_representations",
+    "determinacion_regalias",
+    "factores_exito_franquicia_mercado_capital_gestion"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendedor está evaluando si su negocio es franquiciable financieramente",
+    "Antes de definir la estructura de fees y regalías",
+    "Si se quiere validar atractivo de la oportunidad frente a franquiciados potenciales"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "calculo_roi_franquiciado",
+      "titulo": "Cálculo del Retorno de Inversión (ROI) del Franquiciado",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "ids_alias": [
+    "calculo_roi_franquiciado"
+  ]
+}

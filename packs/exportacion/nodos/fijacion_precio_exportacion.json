@@ -1,0 +1,30 @@
+{
+  "node_id": "fijacion_precio_exportacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Fijación de Precios para Exportación",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Determinar el precio óptimo para un producto en el mercado internacional es uno de los elementos más críticos y desafiantes de la venta internacional. Los componentes tradicionales son costos, demanda del mercado y competencia, cada uno analizado desde una perspectiva de exportación que puede diferir sustancialmente del mercado doméstico. Se deben considerar objetivos de mercado, posicionamiento, descuentos, y costos adicionales como aranceles, fluctuación cambiaria y VAT que puede duplicar el precio final pagado por el importador.",
+  "pasos_accionables": [
+    "Definir el objetivo de mercado (penetración, crecimiento a largo plazo, salida de excedentes).",
+    "Calcular el costo real del producto de exportación usando método de costeo marginal en lugar de cost-plus.",
+    "Excluir costos que no generan beneficio para la función de exportación (ej. publicidad doméstica).",
+    "Incluir costos 'no de mercado' como aranceles y tarifas aduaneras.",
+    "Evaluar la demanda del mercado (ingreso per cápita, elasticidad, tipo de cliente objetivo).",
+    "Analizar la competencia en el mercado extranjero específico.",
+    "Calcular el precio final al consumidor considerando todos los factores anteriores."
+  ],
+  "entregable_esperado": "Estructura de precio de exportación documentada, incluyendo costo base, márgenes, y precio final estimado al consumidor por mercado.",
+  "nodos_previos": [
+    "calculo_de_aranceles_importacion",
+    "evaluacion_mercados_objetivo"
+  ],
+  "nodos_siguientes": [
+    "elaboracion_pro_forma_invoice",
+    "definicion_terminos_de_venta"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario debe establecer el precio de su producto para un mercado de exportación específico.",
+    "Si el usuario aplica erróneamente el mismo método de precios doméstico al mercado internacional."
+  ]
+}

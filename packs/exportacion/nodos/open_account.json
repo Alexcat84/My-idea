@@ -1,0 +1,26 @@
+{
+  "node_id": "open_account",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Cuenta Abierta (Open Account)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que dificulta el cobro legal en caso de impago. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo puede mitigarse mediante seguro de crédito a la exportación, factoring o financiamiento de capital de trabajo para exportación.",
+  "pasos_accionables": [
+    "Evaluar exhaustivamente la solvencia y el historial de pago del comprador antes de ofrecer cuenta abierta",
+    "Definir términos de pago claros (plazo, moneda) en el contrato",
+    "Considerar contratar seguro de crédito a la exportación o factoring para mitigar riesgo de impago",
+    "Monitorear continuamente los patrones de pago del comprador"
+  ],
+  "entregable_esperado": "Contrato con términos de cuenta abierta definidos y, opcionalmente, póliza de seguro de crédito contratada",
+  "nodos_previos": [
+    "seleccion_de_metodo_de_pago"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_cambiario",
+    "consignment"
+  ],
+  "condiciones_activacion": [
+    "Cuando el comprador tiene un historial de pago largo y favorable, o ha sido verificado como solvente",
+    "Cuando la competencia obliga a ofrecer términos de crédito flexibles para no perder la venta"
+  ]
+}

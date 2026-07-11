@@ -21,6 +21,13 @@ CATEGORIAS = {
     "quality": "quality",
 }
 
+# Expansión v1.3: los pasos pueden apuntarse a packs NUEVOS sin re-tocar los
+# HSEQ ya integrados (que quedan congelados). HSEQ_CATEGORIAS acepta una
+# lista separada por comas de carpetas bajo packs/.
+_cats_env = os.environ.get("HSEQ_CATEGORIAS", "").strip()
+if _cats_env:
+    CATEGORIAS = {c.strip(): c.strip() for c in _cats_env.split(",") if c.strip()}
+
 
 def dir_nodos(categoria: str) -> Path:
     return BASE / categoria / "nodos"

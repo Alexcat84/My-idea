@@ -1,0 +1,27 @@
+{
+  "node_id": "getting_started_media_protection",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Protección de Medios (Media Protection)",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+  "pasos_accionables": [
+    "Inventariar qué medios contienen CUI.",
+    "Establecer procedimientos de préstamo y devolución de medios físicos.",
+    "Almacenar medios de forma segura (cajón con llave, gabinete, biblioteca controlada).",
+    "Marcar los medios con las restricciones de distribución y manejo de CUI.",
+    "Sanitizar medios antes de reutilización o disposición.",
+    "Restringir y revisar periódicamente el acceso a medios digitales y físicos.",
+    "Mantener trazabilidad durante el transporte de medios."
+  ],
+  "entregable_esperado": "Inventario de medios con CUI, procedimiento de sanitización y registro de control de acceso/transporte.",
+  "nodos_previos": [
+    "getting_started_maintenance"
+  ],
+  "nodos_siguientes": [
+    "getting_started_personnel_security"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa maneja dispositivos de almacenamiento removibles o documentos físicos con CUI."
+  ]
+}

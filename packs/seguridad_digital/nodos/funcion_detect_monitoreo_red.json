@@ -1,0 +1,25 @@
+{
+  "node_id": "funcion_detect_monitoreo_red",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Función Detectar: Monitoreo de Red y Actividad Anómala",
+  "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+  "resumen_teorico": "Detectar consiste en monitorear continuamente los sistemas para identificar accesos no autorizados de personal, dispositivos (como USB) y software, así como investigar cualquier actividad inusual en la red o por parte del personal, permitiendo una respuesta temprana ante incidentes.",
+  "pasos_accionables": [
+    "Configurar monitoreo de accesos no autorizados al sistema",
+    "Revisar conexiones de dispositivos externos como USB",
+    "Verificar periódicamente usuarios y conexiones no reconocidas en la red",
+    "Investigar cualquier actividad inusual detectada"
+  ],
+  "entregable_esperado": "Sistema o proceso de monitoreo activo con registro de revisiones periódicas",
+  "nodos_previos": [
+    "funcion_protect_politica_seguridad"
+  ],
+  "nodos_siguientes": [
+    "funcion_respond_plan_incidentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se implementaron controles de protección básicos",
+    "Cuando se necesita visibilidad continua sobre la red"
+  ]
+}

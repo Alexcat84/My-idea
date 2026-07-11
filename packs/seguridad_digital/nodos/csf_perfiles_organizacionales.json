@@ -1,0 +1,27 @@
+{
+  "node_id": "csf_perfiles_organizacionales",
+  "fase_proyecto": "planificacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Perfiles Organizacionales del CSF (Current y Target Profile)",
+  "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+  "resumen_teorico": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual) y un Target Profile (estado deseado), pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
+  "pasos_accionables": [
+    "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando actualmente y en qué medida",
+    "Definir el Target Profile: qué resultados se han priorizado como objetivo de gestión de riesgo",
+    "Considerar usar un Community Profile del sector como base para el Target Profile",
+    "Usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría",
+    "Comparar Current vs Target Profile para identificar brechas y priorizar acciones futuras"
+  ],
+  "entregable_esperado": "Documento con Current Profile y Target Profile definidos, más un análisis de brechas entre ambos",
+  "nodos_previos": [
+    "csf_funcion_govern",
+    "csf_funcion_recover"
+  ],
+  "nodos_siguientes": [
+    "csf_funcion_govern"
+  ],
+  "condiciones_activacion": [
+    "Cuando el negocio ya implementó las seis funciones básicas y quiere formalizar su madurez de ciberseguridad",
+    "Si se necesita comunicar el estado de ciberseguridad a inversionistas, socios o reguladores"
+  ]
+}

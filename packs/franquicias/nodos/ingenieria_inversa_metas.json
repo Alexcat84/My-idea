@@ -1,0 +1,29 @@
+{
+  "node_id": "ingenieria_inversa_metas",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Ingeniería Inversa de Metas Financieras",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "Proceso de planificación que parte de la meta final deseada (ej. vender la empresa en $10M en 5 años) y retrocede para calcular el crecimiento en valoración necesario, las ganancias (EBIT) requeridas, y el número de franquicias que deben venderse y abrirse para alcanzar esa meta. Se basa en estimar ingresos por regalías, márgenes netos por franquiciado y multiplicar por el número de unidades necesarias.",
+  "pasos_accionables": [
+    "Definir el valor de venta deseado a futuro (ej. $10M en 5 años)",
+    "Restar el valor actual del negocio para obtener el crecimiento en valoración requerido",
+    "Dividir ese crecimiento entre un múltiplo de ganancias conservador del sector para obtener el EBIT objetivo",
+    "Estimar ingresos promedio por franquiciado (regalías, ventas de producto) y margen neto de contribución",
+    "Dividir el EBIT objetivo entre la contribución neta por franquiciado para calcular el número de franquicias necesarias",
+    "Distribuir esas ventas de franquicia en un cronograma de 5 años, priorizando crecimiento gradual al inicio"
+  ],
+  "entregable_esperado": "Modelo financiero con el número objetivo de franquicias a vender y abrir por año para alcanzar la meta de valoración",
+  "nodos_previos": [
+    "plan_estrategico_franquicia"
+  ],
+  "nodos_siguientes": [
+    "velocidad_crecimiento_franquicia",
+    "planificacion_salida_estrategica",
+    "velocidad_crecimiento_franquicia_2"
+  ],
+  "condiciones_activacion": [
+    "El usuario tiene una meta financiera clara de venta o valoración futura",
+    "Se necesita traducir metas financieras en un número concreto de franquicias a vender"
+  ]
+}

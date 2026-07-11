@@ -1,0 +1,26 @@
+{
+  "node_id": "rmf_paso_categorizar",
+  "fase_proyecto": "planificacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Paso Categorizar: Clasificación de Sistemas por Impacto",
+  "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "resumen_teorico": "La categorización consiste en clasificar cada sistema según el impacto (bajo, moderado, alto) que tendría una pérdida de confidencialidad, integridad o disponibilidad sobre la organización. El impacto general del sistema se determina por el nivel más alto asignado entre estas tres dimensiones ('high-water mark'). Esta clasificación guía la selección posterior de controles proporcional al riesgo.",
+  "pasos_accionables": [
+    "Identificar los activos, procesos y sistemas más importantes de la organización.",
+    "Evaluar el impacto de confidencialidad, integridad y disponibilidad para cada tipo de información (bajo/moderado/alto).",
+    "Determinar el impacto general del sistema usando el nivel más alto (high-water mark).",
+    "Usar una tabla de planificación para documentar la categorización (ver NIST SP 800-60)."
+  ],
+  "entregable_esperado": "Una tabla de categorización de sistemas con niveles de impacto (C, I, A) y el impacto general asignado a cada sistema.",
+  "nodos_previos": [
+    "limites_autorizacion_sistema",
+    "rmf_paso_preparar"
+  ],
+  "nodos_siguientes": [
+    "seleccion_controles"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización tiene múltiples sistemas con diferentes niveles de criticidad.",
+    "Antes de decidir qué controles de seguridad implementar."
+  ]
+}

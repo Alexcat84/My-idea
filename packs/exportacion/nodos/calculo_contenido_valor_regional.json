@@ -1,0 +1,26 @@
+{
+  "node_id": "calculo_contenido_valor_regional",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Cálculo del Contenido de Valor Regional (RVC)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto.",
+  "pasos_accionables": [
+    "Elaborar una lista de materiales con costos (costed bill of materials)",
+    "Identificar el valor de los materiales no originarios (VNM) usados en la producción",
+    "Seleccionar el método de cálculo aplicable según el FTA (Buildup, Builddown, Net Cost o Transaction Value)",
+    "Aplicar la fórmula correspondiente: Builddown = ((AV-VNM)/AV)x100; Buildup = (VOM/AV)x100",
+    "Comparar el resultado con el porcentaje mínimo requerido por el FTA (usualmente 35% Buildup o 45% Builddown)"
+  ],
+  "entregable_esperado": "Hoja de cálculo con el porcentaje de RVC obtenido y comparación contra el umbral mínimo exigido por el FTA",
+  "nodos_previos": [
+    "reglas_de_origen_fta_2"
+  ],
+  "nodos_siguientes": [
+    "certificacion_origen_producto"
+  ],
+  "condiciones_activacion": [
+    "Si el producto no cumple la regla de cambio de clasificación arancelaria (Tariff Shift)",
+    "Si el FTA exige un porcentaje mínimo de contenido regional para calificar"
+  ]
+}

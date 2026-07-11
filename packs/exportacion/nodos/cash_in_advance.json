@@ -1,0 +1,25 @@
+{
+  "node_id": "cash_in_advance",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Pago por Adelantado (Cash in Advance)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "El pago por adelantado es el método más seguro para el exportador, ya que elimina el riesgo de cobro y otorga uso inmediato del dinero. Puede realizarse mediante transferencia bancaria (rápida) o cheque (con posible demora de hasta 6 semanas). También se usan tarjetas de crédito para bienes de bajo valor y servicios de escrow para transacciones pequeñas que requieren garantías mutuas. Sin embargo, este método puede generar problemas de flujo de caja al comprador y no es común en muchos mercados, por lo que insistir únicamente en este método puede hacer perder ventas frente a competidores más flexibles.",
+  "pasos_accionables": [
+    "Evaluar si el comprador acepta pago por adelantado como condición de venta",
+    "Elegir el mecanismo de transferencia (wire transfer preferido sobre cheque)",
+    "Considerar el uso de servicios de escrow para transacciones pequeñas con compradores desconocidos",
+    "Verificar la validez de transacciones con tarjeta de crédito antes de enviar mercancía"
+  ],
+  "entregable_esperado": "Confirmación de pago recibido antes del envío de la mercancía",
+  "nodos_previos": [
+    "seleccion_de_metodo_de_pago"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_cambiario"
+  ],
+  "condiciones_activacion": [
+    "Cuando el comprador es nuevo o de riesgo desconocido y el exportador desea máxima seguridad",
+    "Cuando se trata de transacciones de bajo valor con consumidores finales"
+  ]
+}

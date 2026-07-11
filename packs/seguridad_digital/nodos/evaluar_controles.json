@@ -1,0 +1,26 @@
+{
+  "node_id": "evaluar_controles",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Evaluación de Controles Implementados",
+  "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "resumen_teorico": "La evaluación determina si los controles implementados funcionan correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
+  "pasos_accionables": [
+    "Seleccionar un individuo o equipo responsable de la evaluación de controles (Tarea A-1).",
+    "Desarrollar, revisar y aprobar planes de evaluación (Tarea A-2).",
+    "Ejecutar las evaluaciones de controles usando los planes aprobados (Tarea A-3), apoyándose en NIST SP 800-53A.",
+    "Preparar un informe de evaluación con hallazgos y recomendaciones (Tarea A-4).",
+    "Preparar un Plan de Acción y Metas (POA&M) para corregir deficiencias (Tarea A-6)."
+  ],
+  "entregable_esperado": "Un informe de evaluación de controles y un Plan de Acción y Metas (POA&M) con tareas de remediación priorizadas.",
+  "nodos_previos": [
+    "implementar_controles"
+  ],
+  "nodos_siguientes": [
+    "autorizar_sistema"
+  ],
+  "condiciones_activacion": [
+    "Después de implementar controles y antes de autorizar el sistema para operar.",
+    "Cuando se requiere evidencia formal de la efectividad de los controles para auditorías o contratos."
+  ]
+}

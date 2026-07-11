@@ -1,0 +1,29 @@
+{
+  "node_id": "csf_funcion_govern",
+  "fase_proyecto": "planificacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Función Govern del NIST CSF 2.0",
+  "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+  "resumen_teorico": "Govern es la función central del CSF 2.0 que ayuda a la pequeña empresa a establecer, comunicar y monitorear su estrategia de gestión de riesgo de ciberseguridad, incluyendo expectativas, políticas y roles de responsabilidad. Integra la ciberseguridad como un riesgo de negocio más, alineado con la misión organizacional.",
+  "pasos_accionables": [
+    "Documentar la misión del negocio y qué riesgos de ciberseguridad podrían impedir alcanzarla",
+    "Identificar requisitos legales, regulatorios y contractuales de ciberseguridad aplicables",
+    "Asignar formalmente quién será responsable de desarrollar y ejecutar la estrategia de ciberseguridad",
+    "Evaluar el impacto potencial de perder activos o operaciones críticas",
+    "Evaluar si un seguro de ciberseguridad es apropiado para el negocio",
+    "Evaluar riesgos de proveedores y terceros antes de formalizar relaciones comerciales",
+    "Comunicar y hacer cumplir políticas de gestión de riesgo de ciberseguridad a toda la organización"
+  ],
+  "entregable_esperado": "Documento de gobernanza que incluya misión del negocio, riesgos identificados, requisitos legales/regulatorios/contractuales, y designación formal de responsables de ciberseguridad",
+  "nodos_previos": [
+    "csf_perfiles_organizacionales"
+  ],
+  "nodos_siguientes": [
+    "csf_funcion_identify",
+    "csf_perfiles_organizacionales"
+  ],
+  "condiciones_activacion": [
+    "Si el negocio no tiene ninguna estrategia formal de ciberseguridad",
+    "Si el liderazgo aún no ha definido responsabilidades claras en materia de ciberseguridad"
+  ]
+}

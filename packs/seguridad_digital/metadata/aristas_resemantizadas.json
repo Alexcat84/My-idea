@@ -1,0 +1,83 @@
+[
+  {
+    "fantasma": "mfa_mantenimiento_remoto",
+    "destino": "getting_started_maintenance",
+    "score": 0.6317,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "getting_started_maintenance",
+        "score": 0.6317,
+        "titulo": "Mantenimiento de Sistemas"
+      },
+      {
+        "id": "getting_started_security_assessment_monitoring",
+        "score": 0.5071,
+        "titulo": "Evaluación de Seguridad y Monitoreo Continuo"
+      },
+      {
+        "id": "monitoreo_continuo",
+        "score": 0.5056,
+        "titulo": "Monitoreo Continuo de la Postura de Seguridad y Privacidad"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gestion_contrasenas_cui",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "MFA en mantenimiento remoto pertenece al nodo de mantenimiento de sistemas",
+    "aplicado_en": [
+      {
+        "en": "gestion_contrasenas_cui",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "plan_seguridad_sistema",
+    "destino": "getting_started_planning",
+    "score": 0.7956,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "getting_started_planning",
+        "score": 0.7956,
+        "titulo": "Plan de Seguridad del Sistema (System Security Plan)"
+      },
+      {
+        "id": "plan_seguridad_sistema_poam",
+        "score": 0.7363,
+        "titulo": "Plan de Seguridad del Sistema (SSP) y Plan de Acción y Cronograma (POAM)"
+      },
+      {
+        "id": "concientizacion_entrenamiento_cui",
+        "score": 0.6715,
+        "titulo": "Concientización y Entrenamiento en Seguridad para Personal"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "determinar_alcance_cui",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "estructura_sp800171",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "determinar_alcance_cui",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "estructura_sp800171",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  }
+]

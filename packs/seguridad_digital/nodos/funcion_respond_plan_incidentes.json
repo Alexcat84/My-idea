@@ -1,0 +1,38 @@
+{
+  "node_id": "funcion_respond_plan_incidentes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Función Responder: Plan de Respuesta ante Incidentes",
+  "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+  "resumen_teorico": "La función Responder establece un plan de acción para cuando ocurre un ataque, incluyendo notificación a clientes y empleados afectados, mantenimiento de operaciones del negocio, reporte a autoridades y fuerzas del orden, investigación y contención del ataque, y prueba regular del plan para asegurar su efectividad.",
+  "pasos_accionables": [
+    "Definir protocolo de notificación a clientes, empleados y terceros afectados",
+    "Establecer procedimientos para mantener operaciones durante un incidente",
+    "Crear proceso de reporte a autoridades y fuerzas del orden",
+    "Documentar pasos de investigación y contención de ataques",
+    "Probar el plan de respuesta regularmente mediante simulacros"
+  ],
+  "entregable_esperado": "Plan de respuesta a incidentes documentado y probado",
+  "nodos_previos": [
+    "funcion_detect_monitoreo_red",
+    "csf_funcion_detect"
+  ],
+  "nodos_siguientes": [
+    "funcion_recover_restauracion",
+    "csf_funcion_recover"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre o se sospecha un incidente de seguridad",
+    "Antes de que ocurra un ataque, como preparación preventiva"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "csf_funcion_respond",
+      "titulo": "Función Respond y Plan de Respuesta a Incidentes",
+      "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide"
+    }
+  ],
+  "ids_alias": [
+    "csf_funcion_respond"
+  ]
+}

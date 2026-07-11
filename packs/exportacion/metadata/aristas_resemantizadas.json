@@ -1,0 +1,1623 @@
+[
+  {
+    "fantasma": "acuerdos_representante_extranjero",
+    "destino": "negociacion_acuerdo_representante_extranjero",
+    "score": 0.7995,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "negociacion_acuerdo_representante_extranjero",
+        "score": 0.7995,
+        "titulo": "Negociación del Acuerdo con el Representante Extranjero"
+      },
+      {
+        "id": "contacto_evaluacion_representantes_extranjeros",
+        "score": 0.6356,
+        "titulo": "Contacto y Evaluación de Representantes o Distribuidores Extranjeros"
+      },
+      {
+        "id": "acuerdo_representante_servicio",
+        "score": 0.6288,
+        "titulo": "Cláusulas de Servicio y Capacitación en Acuerdos con Representantes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "servicio_postventa_internacional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "servicio_postventa_internacional",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "clasificacion_arancelaria_producto",
+    "destino": "calculo_de_aranceles_importacion",
+    "score": 0.5537,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "etiquetado_exportacion",
+        "score": 0.5537,
+        "titulo": "Etiquetado y Marcado de Exportación (Labeling)"
+      },
+      {
+        "id": "terminos_de_venta_incoterms",
+        "score": 0.538,
+        "titulo": "Términos de Venta / Incoterms"
+      },
+      {
+        "id": "calculo_de_aranceles_importacion",
+        "score": 0.5261,
+        "titulo": "Cálculo de Aranceles y Tarifas de Importación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "calculo_de_aranceles_importacion",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "reglas_de_origen_fta_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "la clasificacion arancelaria es el insumo directo del calculo de aranceles (rebind)",
+    "aplicado_en": [
+      {
+        "en": "reglas_de_origen_fta_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "cobro_internacional_y_gestion_de_riesgo_cambiario",
+    "destino": "gestion_riesgo_cambiario",
+    "score": 0.8416,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "gestion_riesgo_cambiario",
+        "score": 0.8416,
+        "titulo": "Gestión del Riesgo de Tipo de Cambio (Foreign Exchange Risk)"
+      },
+      {
+        "id": "gestion_fluctuaciones_cambiarias_clientes",
+        "score": 0.6856,
+        "titulo": "Gestión de Fluctuaciones Cambiarias y Retención de Clientes Internacionales"
+      },
+      {
+        "id": "prevencion_problemas_de_pago",
+        "score": 0.648,
+        "titulo": "Prevención de Problemas de Pago en Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "letra_de_cambio_bill_of_exchange",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "letra_de_cambio_bill_of_exchange",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "contratacion_transporte_internacional",
+    "destino": "seleccion_metodo_envio_internacional",
+    "score": 0.7631,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "seleccion_metodo_envio_internacional",
+        "score": 0.7631,
+        "titulo": "Selección del Método de Envío Internacional"
+      },
+      {
+        "id": "seleccion_metodo_transporte_internacional",
+        "score": 0.6282,
+        "titulo": "Selección del Método de Transporte Internacional"
+      },
+      {
+        "id": "transitarios_freight_forwarders",
+        "score": 0.6219,
+        "titulo": "Transitarios y Empresas de Transporte (Freight Forwarders)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "incoterms_reglas_comerciales_internacionales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "incoterms_reglas_comerciales_internacionales",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "decision_de_exportar",
+    "destino": "decision_estrategica_exportar",
+    "score": 0.7319,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "decision_estrategica_exportar",
+        "score": 0.7319,
+        "titulo": "Decisión Estratégica de Exportar"
+      },
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.7274,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "licencia_exportacion_regulaciones",
+        "score": 0.7071,
+        "titulo": "Determinar si se necesita Licencia de Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "investigacion_mercado_paso_a_paso",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "investigacion_mercado_paso_a_paso",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "documentos_de_embarque_para_cobro",
+    "destino": "documentacion_exportacion",
+    "score": 0.5698,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "documentacion_exportacion",
+        "score": 0.5698,
+        "titulo": "Documentación de Exportación"
+      },
+      {
+        "id": "documentacion_viaje_internacional",
+        "score": 0.5034,
+        "titulo": "Documentación Requerida para Viajes de Negocios Internacionales"
+      },
+      {
+        "id": "documentary_collections",
+        "score": 0.4842,
+        "titulo": "Cobranzas Documentarias (Documentary Collections)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "docs de embarque para cobro caen en documentacion de exportacion",
+    "aplicado_en": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "ejecucion_operaciones_exportacion",
+    "destino": "enfoques_generales_exportacion",
+    "score": 0.7314,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.7314,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "organizacion_interna_exportacion",
+        "score": 0.6729,
+        "titulo": "Organización Interna para la Exportación"
+      },
+      {
+        "id": "seleccion_de_metodo_de_pago",
+        "score": 0.6657,
+        "titulo": "Selección del Método de Pago en Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "establecer_tienda_online_exportacion",
+    "destino": "internacionalizacion_sitio_web_exportacion",
+    "score": 0.7493,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "internacionalizacion_sitio_web_exportacion",
+        "score": 0.7493,
+        "titulo": "Internacionalización del Sitio Web para Exportación"
+      },
+      {
+        "id": "tipos_sitio_web_exportacion",
+        "score": 0.7476,
+        "titulo": "Tipos de Sitio Web para Exportación Online"
+      },
+      {
+        "id": "promocion_sitio_web",
+        "score": 0.6837,
+        "titulo": "Promoción del Sitio Web de Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "fiscalidad_comercio_electronico_internacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "fiscalidad_comercio_electronico_internacional",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "estrategia_entrada_mercado",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.7069,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.7069,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.6976,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      },
+      {
+        "id": "enfoque_paso_a_paso_investigacion_mercado",
+        "score": 0.6839,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercados de Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "seleccion_representante_extranjero",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "seleccion_representante_extranjero",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "estrategia_precios_exportacion",
+    "destino": "enfoques_generales_exportacion",
+    "score": 0.7303,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.7303,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "seleccion_de_metodo_de_pago",
+        "score": 0.7152,
+        "titulo": "Selección del Método de Pago en Exportación"
+      },
+      {
+        "id": "decision_estrategica_exportar",
+        "score": 0.6826,
+        "titulo": "Decisión Estratégica de Exportar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gestion_fluctuaciones_cambiarias_clientes",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "gestion_fluctuaciones_cambiarias_clientes",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "evaluacion_potencial_exportador",
+    "destino": "enfoques_generales_exportacion",
+    "score": 0.7413,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.7413,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "evaluacion_potencial_exportador_producto",
+        "score": 0.733,
+        "titulo": "Evaluación del Potencial de Exportación del Producto"
+      },
+      {
+        "id": "evaluacion_preparacion_empresa_exportar",
+        "score": 0.6857,
+        "titulo": "Evaluación de la Preparación de la Empresa para Exportar (Export Readiness)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "investigacion_mercado_paso_a_paso",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "investigacion_mercado_paso_a_paso",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "evaluacion_riesgo_pago_comprador_extranjero",
+    "destino": "prevencion_problemas_de_pago",
+    "score": 0.6893,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "gestion_riesgo_cambiario",
+        "score": 0.6893,
+        "titulo": "Gestión del Riesgo de Tipo de Cambio (Foreign Exchange Risk)"
+      },
+      {
+        "id": "seguro_de_credito_a_la_exportacion",
+        "score": 0.6195,
+        "titulo": "Seguro de Crédito a la Exportación (Export Credit Insurance)"
+      },
+      {
+        "id": "seleccion_de_metodo_de_pago",
+        "score": 0.5878,
+        "titulo": "Selección del Método de Pago en Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "seguro_de_credito_a_la_exportacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "riesgo de pago del comprador = prevencion de problemas de pago, no riesgo cambiario (rebind)",
+    "aplicado_en": [
+      {
+        "en": "seguro_de_credito_a_la_exportacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "expansion_a_nuevos_mercados",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.5174,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.5174,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.5097,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      },
+      {
+        "id": "gestion_fluctuaciones_cambiarias_clientes",
+        "score": 0.5069,
+        "titulo": "Gestión de Fluctuaciones Cambiarias y Retención de Clientes Internacionales"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "seguro_de_credito_a_la_exportacion",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "factura_pro_forma",
+    "destino": "elaboracion_pro_forma_invoice",
+    "score": 0.6428,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "elaboracion_pro_forma_invoice",
+        "score": 0.6428,
+        "titulo": "Elaboración de la Pro Forma Invoice"
+      },
+      {
+        "id": "documentacion_exportacion_basica",
+        "score": 0.4543,
+        "titulo": "Documentación Básica de Exportación (Pro Forma Invoice, Commercial Invoice, Packing List, SED)"
+      },
+      {
+        "id": "letra_de_cambio_bill_of_exchange",
+        "score": 0.3803,
+        "titulo": "Letra de Cambio y Carta de Transmisión de Documentos (Draft Transmittal Letter)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "mismo concepto",
+    "aplicado_en": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "fidelizacion_clientes_internacionales",
+    "destino": "construccion_relaciones_internacionales",
+    "score": 0.7588,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "construccion_relaciones_internacionales",
+        "score": 0.7588,
+        "titulo": "Construcción y Mantenimiento de Relaciones Comerciales Internacionales"
+      },
+      {
+        "id": "internacionalizacion_sitio_web_exportacion",
+        "score": 0.6763,
+        "titulo": "Internacionalización del Sitio Web para Exportación"
+      },
+      {
+        "id": "respuesta_consultas_internacionales",
+        "score": 0.6721,
+        "titulo": "Establecimiento de una Política para Responder Consultas Internacionales"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gestion_fluctuaciones_cambiarias_clientes",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "gestion_fluctuaciones_cambiarias_clientes",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "gestion_documentacion_exportacion",
+    "destino": "documentacion_exportacion",
+    "score": 0.7422,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "documentacion_exportacion",
+        "score": 0.7422,
+        "titulo": "Documentación de Exportación"
+      },
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.696,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "documentacion_exportacion_basica",
+        "score": 0.684,
+        "titulo": "Documentación Básica de Exportación (Pro Forma Invoice, Commercial Invoice, Packing List, SED)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "certificacion_origen_producto",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "certificacion_origen_producto",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "gestion_propiedad_intelectual_internacional",
+    "destino": "proteccion_propiedad_intelectual_internacional",
+    "score": 0.7187,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "proteccion_propiedad_intelectual_internacional",
+        "score": 0.7187,
+        "titulo": "Protección de Propiedad Intelectual en Mercados Internacionales"
+      },
+      {
+        "id": "proteccion_propiedad_intelectual_2",
+        "score": 0.6983,
+        "titulo": "Protección de Propiedad Intelectual (Patente y Marca)"
+      },
+      {
+        "id": "licenciamiento_tecnologia",
+        "score": 0.6969,
+        "titulo": "Licenciamiento de Tecnología como Estrategia de Internacionalización"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "joint_ventures_internacionales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "joint_ventures_internacionales",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "gestion_relacion_representante",
+    "destino": "construccion_relaciones_internacionales",
+    "score": 0.5716,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "construccion_relaciones_internacionales",
+        "score": 0.5716,
+        "titulo": "Construcción y Mantenimiento de Relaciones Comerciales Internacionales"
+      },
+      {
+        "id": "contacto_evaluacion_representantes_extranjeros",
+        "score": 0.5524,
+        "titulo": "Contacto y Evaluación de Representantes o Distribuidores Extranjeros"
+      },
+      {
+        "id": "acuerdo_representante_servicio",
+        "score": 0.5073,
+        "titulo": "Cláusulas de Servicio y Capacitación en Acuerdos con Representantes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "acuerdo_representante_servicio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "gestionar al representante es parte de construir relaciones internacionales",
+    "aplicado_en": [
+      {
+        "en": "acuerdo_representante_servicio",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_de_mercado_objetivo",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.7378,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.7378,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "screening_mercados_potenciales",
+        "score": 0.6783,
+        "titulo": "Screening de Mercados Potenciales"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.6501,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "certificado_de_origen_coo",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "glosario_terminos_incoterms",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "uso_del_us_commercial_service",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "certificado_de_origen_coo",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "glosario_terminos_incoterms",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "uso_del_us_commercial_service",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_mercado_meta",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.7268,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.7268,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "screening_mercados_potenciales",
+        "score": 0.6537,
+        "titulo": "Screening de Mercados Potenciales"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.6469,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "programas_asistencia_gubernamental_exportacion",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "proteccion_propiedad_intelectual_internacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "programas_asistencia_gubernamental_exportacion",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "proteccion_propiedad_intelectual_internacional",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_mercado_meta_exportacion",
+    "destino": "enfoques_generales_exportacion",
+    "score": 0.7344,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.7344,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "evaluacion_potencial_exportador_producto",
+        "score": 0.7271,
+        "titulo": "Evaluación del Potencial de Exportación del Producto"
+      },
+      {
+        "id": "decision_estrategica_exportar",
+        "score": 0.716,
+        "titulo": "Decisión Estratégica de Exportar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "identificacion_producto_exportable",
+    "destino": "etiquetado_exportacion",
+    "score": 0.6776,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "etiquetado_exportacion",
+        "score": 0.6776,
+        "titulo": "Etiquetado y Marcado de Exportación (Labeling)"
+      },
+      {
+        "id": "evaluacion_potencial_exportador_producto",
+        "score": 0.6338,
+        "titulo": "Evaluación del Potencial de Exportación del Producto"
+      },
+      {
+        "id": "autocertificacion_del_exportador",
+        "score": 0.63,
+        "titulo": "Autocertificación de Origen por el Exportador"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "proteccion_patentes_internacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "identificar producto exportable no es etiquetado; sin candidato mejor, se poda"
+  },
+  {
+    "fantasma": "investigacion_mercado_objetivo",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.8192,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.8192,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "screening_mercados_potenciales",
+        "score": 0.751,
+        "titulo": "Screening de Mercados Potenciales"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.7061,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "fijacion_precio_exportacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "fijacion_precio_exportacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "letra_de_cambio",
+    "destino": "letra_de_cambio_bill_of_exchange",
+    "score": 0.5866,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "letra_de_cambio_bill_of_exchange",
+        "score": 0.5866,
+        "titulo": "Letra de Cambio y Carta de Transmisión de Documentos (Draft Transmittal Letter)"
+      },
+      {
+        "id": "carta_de_credito_letter_of_credit",
+        "score": 0.4216,
+        "titulo": "Carta de Crédito (Letter of Credit)"
+      },
+      {
+        "id": "letters_of_credit",
+        "score": 0.4087,
+        "titulo": "Cartas de Crédito (Letters of Credit)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "mismo concepto",
+    "aplicado_en": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "mejora_flujo_de_caja_exportador",
+    "destino": "enfoques_generales_exportacion",
+    "score": 0.6403,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.6403,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "transitarios_freight_forwarders",
+        "score": 0.6318,
+        "titulo": "Transitarios y Empresas de Transporte (Freight Forwarders)"
+      },
+      {
+        "id": "etiquetado_exportacion",
+        "score": 0.6107,
+        "titulo": "Etiquetado y Marcado de Exportación (Labeling)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "seguro_de_credito_a_la_exportacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "flujo de caja no es enfoques generales; se poda"
+  },
+  {
+    "fantasma": "negociacion_carta_de_credito",
+    "destino": "letters_of_credit",
+    "score": 0.7871,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "letters_of_credit",
+        "score": 0.7871,
+        "titulo": "Cartas de Crédito (Letters of Credit)"
+      },
+      {
+        "id": "carta_de_credito_letter_of_credit",
+        "score": 0.6512,
+        "titulo": "Carta de Crédito (Letter of Credit)"
+      },
+      {
+        "id": "resolucion_problemas_de_pago",
+        "score": 0.6007,
+        "titulo": "Resolución de Problemas de Pago en Comercio Internacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "elaboracion_pro_forma_invoice",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "elaboracion_pro_forma_invoice",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "negociacion_internacional",
+    "destino": "negociacion_acuerdo_representante_extranjero",
+    "score": 0.6771,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "negociacion_acuerdo_representante_extranjero",
+        "score": 0.6771,
+        "titulo": "Negociación del Acuerdo con el Representante Extranjero"
+      },
+      {
+        "id": "resolucion_problemas_de_pago",
+        "score": 0.58,
+        "titulo": "Resolución de Problemas de Pago en Comercio Internacional"
+      },
+      {
+        "id": "construccion_relaciones_internacionales",
+        "score": 0.5586,
+        "titulo": "Construcción y Mantenimiento de Relaciones Comerciales Internacionales"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gestion_diferencias_culturales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "la negociacion con el representante es el caso concreto del libro",
+    "aplicado_en": [
+      {
+        "en": "gestion_diferencias_culturales",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "negociacion_terminos_de_venta",
+    "destino": "negociacion_acuerdo_representante_extranjero",
+    "score": 0.5009,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "negociacion_acuerdo_representante_extranjero",
+        "score": 0.5009,
+        "titulo": "Negociación del Acuerdo con el Representante Extranjero"
+      },
+      {
+        "id": "terminos_de_venta_incoterms",
+        "score": 0.4888,
+        "titulo": "Términos de Venta / Incoterms"
+      },
+      {
+        "id": "participacion_ferias_comerciales",
+        "score": 0.475,
+        "titulo": "Participación en Ferias Comerciales Internacionales"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "negociacion_terminos_venta",
+    "destino": "participacion_ferias_comerciales",
+    "score": 0.441,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "participacion_ferias_comerciales",
+        "score": 0.441,
+        "titulo": "Participación en Ferias Comerciales Internacionales"
+      },
+      {
+        "id": "terminos_de_venta_incoterms",
+        "score": 0.4271,
+        "titulo": "Términos de Venta / Incoterms"
+      },
+      {
+        "id": "negociacion_acuerdo_representante_extranjero",
+        "score": 0.4203,
+        "titulo": "Negociación del Acuerdo con el Representante Extranjero"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "documentacion_exportacion_basica",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "modos_de_entrada_intermediarios",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "plan_de_exportacion",
+    "destino": "elementos_plan_exportacion_ejemplo",
+    "score": 0.7967,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "elementos_plan_exportacion_ejemplo",
+        "score": 0.7967,
+        "titulo": "Elementos Prácticos de un Plan de Exportación (Ejemplo Aplicado)"
+      },
+      {
+        "id": "plan_accion_exportacion",
+        "score": 0.7565,
+        "titulo": "Plan de Acción de Exportación con Cronograma y Métricas"
+      },
+      {
+        "id": "estructura_plan_exportacion",
+        "score": 0.7515,
+        "titulo": "Estructura del Plan de Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "asistencia_us_commercial_service",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evaluacion_mercados_objetivo",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "investigacion_mercado_paso_a_paso",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "asistencia_us_commercial_service",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evaluacion_mercados_objetivo",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "investigacion_mercado_paso_a_paso",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "plan_exportacion_basico",
+    "destino": "elementos_plan_exportacion_ejemplo",
+    "score": 0.8088,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "elementos_plan_exportacion_ejemplo",
+        "score": 0.8088,
+        "titulo": "Elementos Prácticos de un Plan de Exportación (Ejemplo Aplicado)"
+      },
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.7454,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "plan_accion_exportacion",
+        "score": 0.7303,
+        "titulo": "Plan de Acción de Exportación con Cronograma y Métricas"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "asistencia_agencias_minoritarias_mbda",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "recursos_apoyo_pymes_sba",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "asistencia_agencias_minoritarias_mbda",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "financiamiento_exim_bank_3",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "recursos_apoyo_pymes_sba",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "planificacion_instalacion_producto_exterior",
+    "destino": "consideraciones_instalacion_internacional",
+    "score": 0.6126,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "consideraciones_instalacion_internacional",
+        "score": 0.6126,
+        "titulo": "Consideraciones de Instalación de Productos en el Extranjero"
+      },
+      {
+        "id": "evaluacion_preparacion_empresa_exportar",
+        "score": 0.6002,
+        "titulo": "Evaluación de la Preparación de la Empresa para Exportar (Export Readiness)"
+      },
+      {
+        "id": "elementos_plan_exportacion_ejemplo",
+        "score": 0.5695,
+        "titulo": "Elementos Prácticos de un Plan de Exportación (Ejemplo Aplicado)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "adaptacion_producto_mercado_exterior",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "mismo tema",
+    "aplicado_en": [
+      {
+        "en": "adaptacion_producto_mercado_exterior",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "preparacion_propuesta_licitacion",
+    "destino": "consideraciones_instalacion_internacional",
+    "score": 0.473,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "consideraciones_instalacion_internacional",
+        "score": 0.473,
+        "titulo": "Consideraciones de Instalación de Productos en el Extranjero"
+      },
+      {
+        "id": "plan_cumplimiento_exportacion",
+        "score": 0.4639,
+        "titulo": "Plan de Cumplimiento de Exportación (Compliance Plan)"
+      },
+      {
+        "id": "evaluacion_preparacion_empresa_exportar",
+        "score": 0.4607,
+        "titulo": "Evaluación de la Preparación de la Empresa para Exportar (Export Readiness)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "programas_asistencia_gubernamental_exportacion",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_de_incoterms",
+    "destino": "glosario_terminos_incoterms",
+    "score": 0.5551,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "glosario_terminos_incoterms",
+        "score": 0.5551,
+        "titulo": "Términos de Comercio Internacional (Incoterms)"
+      },
+      {
+        "id": "incoterms_reglas_comerciales_internacionales",
+        "score": 0.5377,
+        "titulo": "Incoterms: Términos Comerciales Internacionales (EXW, FCA, FAS, FOB)"
+      },
+      {
+        "id": "definicion_terminos_de_venta",
+        "score": 0.4862,
+        "titulo": "Definición de Términos de Venta (Incoterms)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "certificado_de_origen_coo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "seleccionar incoterms apunta al nodo de incoterms",
+    "aplicado_en": [
+      {
+        "en": "certificado_de_origen_coo",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_mercado_meta",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.7233,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.7233,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "screening_mercados_potenciales",
+        "score": 0.6415,
+        "titulo": "Screening de Mercados Potenciales"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.6337,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "barreras_comerciales_no_arancelarias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "reglas_de_origen_fta_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "barreras_comerciales_no_arancelarias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "reglas_de_origen_fta_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_mercado_objetivo",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.7326,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.7326,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "screening_mercados_potenciales",
+        "score": 0.6774,
+        "titulo": "Screening de Mercados Potenciales"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.6516,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "adaptacion_producto_estandares_tecnicos",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "estadisticas_comerciales",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "gestion_diferencias_culturales",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "gold_key_matching_service",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "international_partner_search",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "investigacion_mercado_primaria_secundaria_2",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "participacion_ferias_comerciales",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "reglas_de_origen_fta_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "adaptacion_producto_estandares_tecnicos",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "estadisticas_comerciales",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "gestion_diferencias_culturales",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "gold_key_matching_service",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "international_partner_search",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "investigacion_mercado_primaria_secundaria_2",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "participacion_ferias_comerciales",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "reglas_de_origen_fta_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_mercados_objetivo",
+    "destino": "evaluacion_mercados_objetivo",
+    "score": 0.7122,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluacion_mercados_objetivo",
+        "score": 0.7122,
+        "titulo": "Evaluación de Mercados Objetivo"
+      },
+      {
+        "id": "screening_mercados_potenciales",
+        "score": 0.6676,
+        "titulo": "Screening de Mercados Potenciales"
+      },
+      {
+        "id": "investigacion_mercado_paso_a_paso",
+        "score": 0.6578,
+        "titulo": "Enfoque Paso a Paso para la Investigación de Mercado"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "metodos_exportacion_directa_indirecta_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "metodos_exportacion_directa_indirecta_2",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_metodo_de_pago_internacional",
+    "destino": "seleccion_de_metodo_de_pago",
+    "score": 0.7088,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "seleccion_de_metodo_de_pago",
+        "score": 0.7088,
+        "titulo": "Selección del Método de Pago en Exportación"
+      },
+      {
+        "id": "metodos_pago_electronico_internacional",
+        "score": 0.6418,
+        "titulo": "Métodos de Pago Electrónico para Exportación Online"
+      },
+      {
+        "id": "resolucion_problemas_de_pago",
+        "score": 0.6319,
+        "titulo": "Resolución de Problemas de Pago en Comercio Internacional"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "letra_de_cambio_bill_of_exchange",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "letra_de_cambio_bill_of_exchange",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_modo_de_entrada",
+    "destino": "planificacion_itinerario_viaje_negocios",
+    "score": 0.3872,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "planificacion_itinerario_viaje_negocios",
+        "score": 0.3872,
+        "titulo": "Planificación del Itinerario de Viaje de Negocios"
+      },
+      {
+        "id": "seleccion_metodo_transporte_internacional",
+        "score": 0.355,
+        "titulo": "Selección del Método de Transporte Internacional"
+      },
+      {
+        "id": "clausula_escape_contrato_representante",
+        "score": 0.3544,
+        "titulo": "Cláusula de Escape en Contratos de Representación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "licenciamiento_tecnologico",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_producto_exportable",
+    "destino": "enfoques_generales_exportacion",
+    "score": 0.6897,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.6897,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "etiquetado_exportacion",
+        "score": 0.6664,
+        "titulo": "Etiquetado y Marcado de Exportación (Labeling)"
+      },
+      {
+        "id": "evaluacion_potencial_exportador_producto",
+        "score": 0.6623,
+        "titulo": "Evaluación del Potencial de Exportación del Producto"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "export_administration_regulations",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "seleccion de producto no es enfoques de involucramiento; se poda"
+  },
+  {
+    "fantasma": "seleccion_producto_exportacion",
+    "destino": "enfoques_generales_exportacion",
+    "score": 0.7785,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "enfoques_generales_exportacion",
+        "score": 0.7785,
+        "titulo": "Enfoques Generales de Involucramiento en la Exportación"
+      },
+      {
+        "id": "evaluacion_potencial_exportador_producto",
+        "score": 0.74,
+        "titulo": "Evaluación del Potencial de Exportación del Producto"
+      },
+      {
+        "id": "decision_estrategica_exportar",
+        "score": 0.6999,
+        "titulo": "Decisión Estratégica de Exportar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "adaptacion_producto_mercado_exterior",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "adaptacion_producto_mercado_exterior",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "terminos_de_pago_internacional",
+    "destino": "metodos_de_pago_internacional",
+    "score": 0.5863,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "resolucion_problemas_de_pago",
+        "score": 0.5863,
+        "titulo": "Resolución de Problemas de Pago en Comercio Internacional"
+      },
+      {
+        "id": "seleccion_de_metodo_de_pago",
+        "score": 0.5774,
+        "titulo": "Selección del Método de Pago en Exportación"
+      },
+      {
+        "id": "instituciones_financieras_bancos",
+        "score": 0.555,
+        "titulo": "Rol de las Instituciones Financieras en la Exportación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "terminos de pago = metodos de pago internacional (rebind)",
+    "aplicado_en": [
+      {
+        "en": "carta_de_credito_letter_of_credit",
+        "campo": "nodos_previos"
+      }
+    ]
+  }
+]

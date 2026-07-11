@@ -1,0 +1,26 @@
+{
+  "node_id": "control_acceso_least_privilege",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Control de Acceso y Principio de Mínimo Privilegio",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "El Control de Acceso limita el acceso al sistema de información a usuarios autorizados, procesos actuando en su nombre, o dispositivos, y a los tipos de transacciones y funciones que estos usuarios están permitidos ejercer. El concepto fundamental de Mínimo Privilegio implica limitar los derechos de acceso solo a los usuarios que lo necesitan para cumplir sus tareas asignadas, incluyendo restringir privilegios administrativos solo a quienes los requieren.",
+  "pasos_accionables": [
+    "Implementar políticas que limiten el acceso a CUI solo a individuos que lo requieren para su trabajo",
+    "Revisar información pública (sitio web de la empresa) para eliminar CUI expuesto",
+    "Proteger CUI con bloqueos de dispositivo y terminación de sesión automática",
+    "Identificar y restringir privilegios administrativos solo a quienes los necesitan",
+    "Reasignar o remover privilegios cuando un individuo ya no requiere acceso"
+  ],
+  "entregable_esperado": "Política de control de acceso documentada e implementada, con lista de usuarios y sus niveles de privilegio",
+  "nodos_previos": [
+    "plan_seguridad_sistema_poam",
+    "estructura_sp800171"
+  ],
+  "nodos_siguientes": [
+    "identificacion_autenticacion_mfa"
+  ],
+  "condiciones_activacion": [
+    "Cuando se implementan los requisitos de la familia Access Control de SP 800-171"
+  ]
+}

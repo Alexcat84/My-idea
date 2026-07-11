@@ -1,0 +1,27 @@
+{
+  "node_id": "seleccion_agente_carga_internacional",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Selección de Agente de Carga Internacional (Freight Forwarder)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Un freight forwarder es un agente especializado en el envío de mercancía a destinos internacionales. Conoce las regulaciones de importación extranjeras, las normativas de exportación de EE.UU., métodos de envío y documentación necesaria. Asiste en cotizaciones de precios, recomienda métodos de empaque, reserva espacio en transporte y revisa documentación antes del embarque.",
+  "pasos_accionables": [
+    "Identificar necesidades de envío (volumen, tipo de carga, destino)",
+    "Buscar freight forwarders licenciados por IATA (aéreo) o Federal Maritime Commission (marítimo)",
+    "Solicitar cotización que incluya fletes, tasas portuarias, seguros y honorarios",
+    "Delegar preparación de documentación y filing electrónico en AES",
+    "Coordinar con freight forwarder la reserva de espacio en el medio de transporte (booking contract)"
+  ],
+  "entregable_esperado": "Contrato o acuerdo de servicio con un freight forwarder seleccionado",
+  "nodos_previos": [
+    "plataformas_comercio_electronico_marketplaces"
+  ],
+  "nodos_siguientes": [
+    "embalaje_exportacion",
+    "documentacion_exportacion"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa no tiene experiencia en logística internacional",
+    "Si el volumen de exportación justifica apoyo externo especializado"
+  ]
+}

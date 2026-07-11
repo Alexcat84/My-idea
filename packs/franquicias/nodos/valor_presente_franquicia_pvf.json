@@ -1,0 +1,25 @@
+{
+  "node_id": "valor_presente_franquicia_pvf",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Valor Presente de una Franquicia (PVF)",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "El PVF es un concepto desarrollado por iFranchise Group que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
+  "pasos_accionables": [
+    "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates)",
+    "Estimar el impacto en el valor de empresa de cada franquiciado adicional",
+    "Usar el PVF para evaluar decisiones de inversión en marketing, brokers y personal",
+    "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de brokers)"
+  ],
+  "entregable_esperado": "Modelo financiero de PVF que estime el valor de vida de un franquiciado típico",
+  "nodos_previos": [
+    "decision_fpr"
+  ],
+  "nodos_siguientes": [
+    "mensaje_marketing_franquicia",
+    "las_cuatro_ventas_franquicia"
+  ],
+  "condiciones_activacion": [
+    "Cuando se toman decisiones sobre inversión en marketing, reclutamiento o brokers de franquicia"
+  ]
+}

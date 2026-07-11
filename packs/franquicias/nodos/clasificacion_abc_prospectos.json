@@ -1,0 +1,26 @@
+{
+  "node_id": "clasificacion_abc_prospectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Clasificación ABC de Prospectos de Ventas",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "Sistema para categorizar leads de franquicia en tres tipos: 'A' (3-5%, totalmente comprometidos y responsivos), 'B' (12-15%, parcialmente comprometidos, requieren más guía) y 'C' (80-85%, no calificados o no comprometidos, deben archivarse). Permite priorizar el tiempo del equipo de ventas en los prospectos con mayor probabilidad de cierre.",
+  "pasos_accionables": [
+    "Clasificar cada prospecto como A, B o C en la primera llamada",
+    "Enfocar el tiempo de ventas en mover prospectos B hacia A",
+    "Archivar prospectos C en un archivo de contacto a 6 meses sin perseguirlos activamente",
+    "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas como benchmark"
+  ],
+  "entregable_esperado": "Sistema de clasificación y pipeline de ventas con categorías A/B/C implementado",
+  "nodos_previos": [
+    "calificacion_candidatos_franquicia",
+    "prospecto_emprendedor_flaming"
+  ],
+  "nodos_siguientes": [
+    "proceso_primera_llamada",
+    "cadencia_seguimiento_prospectos"
+  ],
+  "condiciones_activacion": [
+    "Al recibir inquiries/leads de franquicia para gestionar el pipeline de ventas"
+  ]
+}

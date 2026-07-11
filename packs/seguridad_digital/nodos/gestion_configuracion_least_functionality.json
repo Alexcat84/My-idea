@@ -1,0 +1,24 @@
+{
+  "node_id": "gestion_configuracion_least_functionality",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Gestión de Configuración y Mínima Funcionalidad",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Establece y mantiene configuraciones base e inventarios de sistemas organizacionales (hardware, software, firmware, documentación), así como configuraciones de seguridad para productos de TI empleados. El concepto de Mínima Funcionalidad implica configurar el sistema para proveer solo las capacidades esenciales para la misión, deshabilitando o removiendo funciones, puertos, protocolos y servicios innecesarios o inseguros.",
+  "pasos_accionables": [
+    "Limitar quién puede realizar cambios en sistemas que contienen CUI",
+    "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
+    "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
+    "Deshabilitar funciones, puertos y servicios innecesarios en los sistemas"
+  ],
+  "entregable_esperado": "Inventario de configuraciones base documentado y política de gestión de cambios implementada",
+  "nodos_previos": [
+    "auditoria_responsabilidad"
+  ],
+  "nodos_siguientes": [
+    "identificacion_autenticacion_mfa"
+  ],
+  "condiciones_activacion": [
+    "Cuando se implementan los requisitos de la familia Configuration Management de SP 800-171"
+  ]
+}

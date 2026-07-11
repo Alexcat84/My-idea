@@ -1,0 +1,25 @@
+{
+  "node_id": "gestion_contrasenas_cui",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Gestión Segura de Contraseñas",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Define reglas organizacionales para la creación, transmisión y actualización de contraseñas, asegurando que no coincidan con listas de contraseñas comprometidas o comúnmente utilizadas, y que se transmitan mediante canales cifrados.",
+  "pasos_accionables": [
+    "Definir reglas de complejidad y renovación de contraseñas para la organización.",
+    "Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.",
+    "Mantener y actualizar regularmente una lista de contraseñas comprometidas o débiles.",
+    "Verificar que las contraseñas nuevas no estén en dicha lista antes de aceptarlas."
+  ],
+  "entregable_esperado": "Política de contraseñas documentada con mecanismo de verificación contra listas de contraseñas comprometidas.",
+  "nodos_previos": [
+    "identificacion_autenticacion_mfa"
+  ],
+  "nodos_siguientes": [
+    "getting_started_incident_response",
+    "getting_started_maintenance"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa maneja CUI y necesita establecer controles de acceso robustos."
+  ]
+}

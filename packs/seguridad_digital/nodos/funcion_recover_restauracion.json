@@ -1,0 +1,23 @@
+{
+  "node_id": "funcion_recover_restauracion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Función Recuperar: Restauración y Mejora Continua",
+  "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+  "resumen_teorico": "Recuperar implica reparar y restaurar el equipo y las partes de la red afectadas tras un ataque, actualizar la política y el plan de ciberseguridad con las lecciones aprendidas, prepararse para eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas), y mantener informados a empleados y clientes sobre las actividades de respuesta y recuperación.",
+  "pasos_accionables": [
+    "Reparar y restaurar equipos y redes afectadas",
+    "Actualizar la política de ciberseguridad con lecciones aprendidas del incidente",
+    "Preparar planes de contingencia para eventos inadvertidos (desastres naturales, etc.)",
+    "Comunicar a empleados y clientes el estado de recuperación"
+  ],
+  "entregable_esperado": "Sistemas restaurados y política de ciberseguridad actualizada con lecciones aprendidas",
+  "nodos_previos": [
+    "funcion_respond_plan_incidentes"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Después de haber sufrido un incidente de ciberseguridad",
+    "Cuando se requiere actualizar procesos tras una prueba o simulacro"
+  ]
+}

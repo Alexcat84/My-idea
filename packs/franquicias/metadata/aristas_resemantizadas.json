@@ -1,0 +1,1348 @@
+[
+  {
+    "fantasma": "busqueda_asesoria_legal_franquicia",
+    "destino": "contratacion_abogado_franquicia",
+    "score": 0.7901,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "contratacion_abogado_franquicia",
+        "score": 0.7901,
+        "titulo": "Contratación de Asesoría Legal Especializada en Franquicias"
+      },
+      {
+        "id": "contratar_abogado_franquicias",
+        "score": 0.7127,
+        "titulo": "Contratación del Abogado de Franquicias Adecuado"
+      },
+      {
+        "id": "eleccion_abogado_franquicias",
+        "score": 0.6374,
+        "titulo": "Elección de un Abogado Especializado en Franquicias"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "otros_terminos_contractuales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "otros_terminos_contractuales",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "cierre_de_venta_franquicia",
+    "destino": "gestion_terminacion_franquiciado",
+    "score": 0.6039,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "gestion_terminacion_franquiciado",
+        "score": 0.6039,
+        "titulo": "Gestión de Incumplimiento y Terminación de Franquiciados"
+      },
+      {
+        "id": "exito_franquiciado_determina_exito_franquiciador",
+        "score": 0.5984,
+        "titulo": "El Éxito del Franquiciado Determina el Éxito del Franquiciador"
+      },
+      {
+        "id": "ciclo_ventas_calidad_franquicia",
+        "score": 0.5935,
+        "titulo": "Ciclo de Ventas-Calidad de la Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "concepto_de_advances",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "discovery_day_estrategico",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "validacion_con_franquiciados",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "cerrar venta no es terminacion de franquiciados; se poda"
+  },
+  {
+    "fantasma": "cierre_de_ventas_de_franquicia",
+    "destino": "gestion_terminacion_franquiciado",
+    "score": 0.6182,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "gestion_terminacion_franquiciado",
+        "score": 0.6182,
+        "titulo": "Gestión de Incumplimiento y Terminación de Franquiciados"
+      },
+      {
+        "id": "terminacion_franquiciado_causas",
+        "score": 0.618,
+        "titulo": "Causales de Terminación de Contrato de Franquicia"
+      },
+      {
+        "id": "exito_franquiciado_determina_exito_franquiciador",
+        "score": 0.6174,
+        "titulo": "El Éxito del Franquiciado Determina el Éxito del Franquiciador"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "marketing_en_ferias_comerciales_de_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_de_referidos_de_franquiciados",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "idem"
+  },
+  {
+    "fantasma": "creacion_fdd",
+    "destino": "preparar_fdd",
+    "score": 0.5501,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "preparar_fdd",
+        "score": 0.5501,
+        "titulo": "Preparar el Franchise Disclosure Document (FDD)"
+      },
+      {
+        "id": "elaboracion_fdd",
+        "score": 0.5167,
+        "titulo": "Elaboración del Franchise Disclosure Document (FDD)"
+      },
+      {
+        "id": "decision_fpr",
+        "score": 0.4247,
+        "titulo": "Decisión sobre Financial Performance Representations (FPR)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "calificacion_candidatos_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "mismo concepto",
+    "aplicado_en": [
+      {
+        "en": "calificacion_candidatos_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "decision_convertirse_en_franquiciador",
+    "destino": "preguntas_clave_decision_franquiciar",
+    "score": 0.748,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "preguntas_clave_decision_franquiciar",
+        "score": 0.748,
+        "titulo": "Preguntas Fundamentales Antes de Decidir Franquiciar"
+      },
+      {
+        "id": "asistencia_apertura_franquicia",
+        "score": 0.7102,
+        "titulo": "Asistencia en el Proceso de Apertura (Startup Assistance)"
+      },
+      {
+        "id": "perdida_control_operativo",
+        "score": 0.7056,
+        "titulo": "Pérdida de Control Operativo del Franquiciante"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estrategia_ubicacion_franquicia_corporativa",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "estrategia_ubicacion_franquicia_corporativa",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "decision_de_franquiciar_el_negocio",
+    "destino": "preguntas_clave_decision_franquiciar",
+    "score": 0.7837,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "preguntas_clave_decision_franquiciar",
+        "score": 0.7837,
+        "titulo": "Preguntas Fundamentales Antes de Decidir Franquiciar"
+      },
+      {
+        "id": "decision_final_franquiciar",
+        "score": 0.74,
+        "titulo": "Evaluación Final: ¿Es Correcto Franquiciar tu Negocio?"
+      },
+      {
+        "id": "perdida_control_operativo",
+        "score": 0.7306,
+        "titulo": "Pérdida de Control Operativo del Franquiciante"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "diferenciacion_estructura_legal_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "diferenciacion_estructura_legal_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "definicion_perfil_franquiciado_ideal",
+    "destino": "estructura_proveedores_aprobados_designados",
+    "score": 0.6667,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "estructura_proveedores_aprobados_designados",
+        "score": 0.6667,
+        "titulo": "Definir Estructura de Proveedores (Aprobados vs. Designados)"
+      },
+      {
+        "id": "evaluacion_temperamento_franquiciador",
+        "score": 0.6567,
+        "titulo": "Evaluación del Temperamento y Habilidades del Futuro Franquiciador"
+      },
+      {
+        "id": "referidos_franquiciados_existentes",
+        "score": 0.6501,
+        "titulo": "Red de Referidos de Franquiciados Existentes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "motivaciones_reales_franquiciado",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "perfil del franquiciado no es estructura de proveedores; se poda"
+  },
+  {
+    "fantasma": "desarrollo_del_paquete_de_ventas_de_franquicia",
+    "destino": "ciclo_venta_calidad_franquicia",
+    "score": 0.7786,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "ciclo_venta_calidad_franquicia",
+        "score": 0.7786,
+        "titulo": "Ciclo de Venta-Calidad de la Franquicia"
+      },
+      {
+        "id": "propuesta_valor_franquicia",
+        "score": 0.7422,
+        "titulo": "Desarrollar la Propuesta de Valor Integral del Sistema de Franquicia"
+      },
+      {
+        "id": "ciclo_ventas_calidad_franquicia_2",
+        "score": 0.738,
+        "titulo": "El Ciclo de Ventas-Control de Calidad de Franquicias"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "marketing_en_ferias_comerciales_de_franquicias",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "marketing_en_ferias_comerciales_de_franquicias",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "desarrollo_documentos_legales_franquicia",
+    "destino": "contratacion_abogado_franquicia",
+    "score": 0.7046,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "contratacion_abogado_franquicia",
+        "score": 0.7046,
+        "titulo": "Contratación de Asesoría Legal Especializada en Franquicias"
+      },
+      {
+        "id": "contratar_abogado_franquicias",
+        "score": 0.6361,
+        "titulo": "Contratación del Abogado de Franquicias Adecuado"
+      },
+      {
+        "id": "otros_terminos_contractuales",
+        "score": 0.631,
+        "titulo": "Definir Otros Términos Contractuales Clave del Acuerdo de Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "eleccion_abogado_franquicias",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "eleccion_abogado_franquicias",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "desarrollo_fdd",
+    "destino": "preparar_fdd",
+    "score": 0.5878,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "preparar_fdd",
+        "score": 0.5878,
+        "titulo": "Preparar el Franchise Disclosure Document (FDD)"
+      },
+      {
+        "id": "elaboracion_fdd",
+        "score": 0.5869,
+        "titulo": "Elaboración del Franchise Disclosure Document (FDD)"
+      },
+      {
+        "id": "decision_fpr",
+        "score": 0.4986,
+        "titulo": "Decisión sobre Financial Performance Representations (FPR)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decision_fpr",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "proceso_llamada_inicial_venta",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "mismo concepto",
+    "aplicado_en": [
+      {
+        "en": "decision_fpr",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "proceso_llamada_inicial_venta",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "desarrollo_paquete_franquicia",
+    "destino": "franquicia_unidad_individual",
+    "score": 0.6603,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "franquicia_unidad_individual",
+        "score": 0.6603,
+        "titulo": "Franquicia de Unidad Individual"
+      },
+      {
+        "id": "concepto_de_advances",
+        "score": 0.6403,
+        "titulo": "Advances: Pequeñas Ventas Progresivas"
+      },
+      {
+        "id": "estrategia_multicanal_expansion",
+        "score": 0.6393,
+        "titulo": "Estrategia Multicanal de Expansión (Franquicia + Corporativo)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estrategia_ventas_diy",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "paquete de franquicia no es el tipo unidad individual; se poda"
+  },
+  {
+    "fantasma": "desarrollo_sistema_operativo_franquiciable",
+    "destino": "franquicia_unidad_individual",
+    "score": 0.632,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "franquicia_unidad_individual",
+        "score": 0.632,
+        "titulo": "Franquicia de Unidad Individual"
+      },
+      {
+        "id": "documentacion_sistemas_operativos",
+        "score": 0.6187,
+        "titulo": "Documentación de Sistemas Operativos (Cloneabilidad)"
+      },
+      {
+        "id": "manual_operaciones_desarrollo",
+        "score": 0.545,
+        "titulo": "Desarrollo del Manual de Operaciones"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "propuesta_valor_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "sistema operativo franquiciable no es unidad individual; se poda"
+  },
+  {
+    "fantasma": "diseno_estructura_franquicia",
+    "destino": "seleccion_estructura_franquicia",
+    "score": 0.7343,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "seleccion_estructura_franquicia",
+        "score": 0.7343,
+        "titulo": "Selección de la Estructura de Oferta de Franquicia"
+      },
+      {
+        "id": "franquicia_unidad_individual",
+        "score": 0.6642,
+        "titulo": "Franquicia de Unidad Individual"
+      },
+      {
+        "id": "estructura_proveedores_aprobados_designados",
+        "score": 0.6345,
+        "titulo": "Definir Estructura de Proveedores (Aprobados vs. Designados)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "estructura_proveedores_aprobados_designados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "estructura_proveedores_aprobados_designados",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_sistema_franquicia",
+    "destino": "franquicia_unidad_individual",
+    "score": 0.7044,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "franquicia_unidad_individual",
+        "score": 0.7044,
+        "titulo": "Franquicia de Unidad Individual"
+      },
+      {
+        "id": "ventas_productos_markup_proveedores",
+        "score": 0.6575,
+        "titulo": "Ventas de Productos y Estructura de Proveedores (Aprobados/Designados)"
+      },
+      {
+        "id": "franquicia_conversion",
+        "score": 0.645,
+        "titulo": "Franquicia de Conversión"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "calificacion_candidatos_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "calificacion_candidatos_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "diseno_sistema_operativo_franquiciable",
+    "destino": "franquicia_unidad_individual",
+    "score": 0.5848,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "franquicia_unidad_individual",
+        "score": 0.5848,
+        "titulo": "Franquicia de Unidad Individual"
+      },
+      {
+        "id": "documentacion_sistemas_operativos",
+        "score": 0.5836,
+        "titulo": "Documentación de Sistemas Operativos (Cloneabilidad)"
+      },
+      {
+        "id": "ventas_productos_markup_proveedores",
+        "score": 0.5354,
+        "titulo": "Ventas de Productos y Estructura de Proveedores (Aprobados/Designados)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "manual_operaciones_desarrollo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "idem"
+  },
+  {
+    "fantasma": "diseño_programa_franquicia",
+    "destino": "seleccion_estructura_franquicia",
+    "score": 0.6436,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "investigacion_desarrollo_concepto",
+        "score": 0.6436,
+        "titulo": "Investigación y Desarrollo del Concepto (Evolución de Marca)"
+      },
+      {
+        "id": "asistencia_apertura_franquicia",
+        "score": 0.6061,
+        "titulo": "Asistencia en el Proceso de Apertura (Startup Assistance)"
+      },
+      {
+        "id": "seleccion_estructura_franquicia",
+        "score": 0.604,
+        "titulo": "Selección de la Estructura de Oferta de Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "vender_concepto_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "disenar el programa = elegir estructura de oferta (rebind)",
+    "aplicado_en": [
+      {
+        "en": "vender_concepto_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "documentos_legales_franquicia",
+    "destino": "contratacion_abogado_franquicia",
+    "score": 0.6769,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "contratacion_abogado_franquicia",
+        "score": 0.6769,
+        "titulo": "Contratación de Asesoría Legal Especializada en Franquicias"
+      },
+      {
+        "id": "comprender_definicion_legal_franquicia",
+        "score": 0.6426,
+        "titulo": "Comprender la Definición Legal Federal de Franquicia (FTC Rule 436)"
+      },
+      {
+        "id": "otros_terminos_contractuales",
+        "score": 0.6318,
+        "titulo": "Definir Otros Términos Contractuales Clave del Acuerdo de Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "contratacion_abogado_franquicia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "los documentos legales se producen con el abogado especializado",
+    "aplicado_en": []
+  },
+  {
+    "fantasma": "estrategia_de_marketing_de_franquicias",
+    "destino": "mensaje_marketing_franquicia",
+    "score": 0.836,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "mensaje_marketing_franquicia",
+        "score": 0.836,
+        "titulo": "Diseño del Mensaje de Marketing de Franquicia (Contenido y Emoción)"
+      },
+      {
+        "id": "ciclo_venta_calidad_franquicia",
+        "score": 0.8289,
+        "titulo": "Ciclo de Venta-Calidad de la Franquicia"
+      },
+      {
+        "id": "segmentacion_perfil_franquiciado",
+        "score": 0.7854,
+        "titulo": "Estrechamiento del Perfil de Comprador de Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "marketing_directo_y_llamadas_en_frio_franquicias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "marketing_en_ferias_comerciales_de_franquicias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "publicidad_impresa_para_franquicias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "seo_para_captacion_de_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "marketing_directo_y_llamadas_en_frio_franquicias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "marketing_en_ferias_comerciales_de_franquicias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "publicidad_impresa_para_franquicias",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "seo_para_captacion_de_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "estructura_de_regalias",
+    "destino": "seleccion_estructura_franquicia",
+    "score": 0.4797,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "seleccion_estructura_franquicia",
+        "score": 0.4797,
+        "titulo": "Selección de la Estructura de Oferta de Franquicia"
+      },
+      {
+        "id": "los_tres_grandes_criterios",
+        "score": 0.3509,
+        "titulo": "Los Tres Grandes Criterios de Selección (The Big Three)"
+      },
+      {
+        "id": "mensaje_franquicias_conversion",
+        "score": 0.3485,
+        "titulo": "Diseñar Mensaje Específico para Franquicias de Conversión"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decision_diy_vs_consultor_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "estructura_fee_regalias",
+    "destino": "determinacion_regalias",
+    "score": 0.5711,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "otras_fees_franquicia",
+        "score": 0.5711,
+        "titulo": "Definir Fees Adicionales del Sistema de Franquicia"
+      },
+      {
+        "id": "determinacion_regalias",
+        "score": 0.5346,
+        "titulo": "Determinación de la Estructura de Regalías"
+      },
+      {
+        "id": "alternativa_dealership_distributorship",
+        "score": 0.489,
+        "titulo": "Alternativa: Dealerships y Distribuidoras (Modelo Sin Fee)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "calculo_roi_franquiciado_2",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "estructura de regalias = determinacion de regalias (rebind)",
+    "aplicado_en": [
+      {
+        "en": "calculo_roi_franquiciado_2",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "estructura_franquicia",
+    "destino": "ciclo_venta_calidad_franquicia",
+    "score": 0.706,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "ciclo_venta_calidad_franquicia",
+        "score": 0.706,
+        "titulo": "Ciclo de Venta-Calidad de la Franquicia"
+      },
+      {
+        "id": "franquicia_unidad_individual",
+        "score": 0.7059,
+        "titulo": "Franquicia de Unidad Individual"
+      },
+      {
+        "id": "seleccion_estructura_franquicia",
+        "score": 0.6763,
+        "titulo": "Selección de la Estructura de Oferta de Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "entrenar_franquiciados_validacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "entrenar_franquiciados_validacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "estructura_organizacional_franquiciador",
+    "destino": "apalancamiento_personal_franquicia",
+    "score": 0.7427,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "apalancamiento_personal_franquicia",
+        "score": 0.7427,
+        "titulo": "Apalancamiento de Personal (Staffing Leverage)"
+      },
+      {
+        "id": "rentabilidad_incrementada_franquicia",
+        "score": 0.7389,
+        "titulo": "Rentabilidad Incrementada del Modelo de Franquicia"
+      },
+      {
+        "id": "evaluacion_temperamento_franquiciador",
+        "score": 0.7235,
+        "titulo": "Evaluación del Temperamento y Habilidades del Futuro Franquiciador"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "comunicacion_efectiva_con_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "comunicacion_efectiva_con_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "evaluacion_de_franquiciabilidad",
+    "destino": "rentabilidad_incrementada_franquicia",
+    "score": 0.7623,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "rentabilidad_incrementada_franquicia",
+        "score": 0.7623,
+        "titulo": "Rentabilidad Incrementada del Modelo de Franquicia"
+      },
+      {
+        "id": "ventas_productos_markup_proveedores",
+        "score": 0.7564,
+        "titulo": "Ventas de Productos y Estructura de Proveedores (Aprobados/Designados)"
+      },
+      {
+        "id": "prevenir_franquicias_inadvertidas",
+        "score": 0.7436,
+        "titulo": "Prevención de Franquicias Inadvertidas"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decision_diy_vs_consultor_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "decision_diy_vs_consultor_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "evaluacion_recursos_alternativas",
+    "destino": "determinacion_cuota_inicial",
+    "score": 0.5709,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "determinacion_cuota_inicial",
+        "score": 0.5709,
+        "titulo": "Determinación de la Cuota Inicial de Franquicia"
+      },
+      {
+        "id": "soporte_continuo_franquicia",
+        "score": 0.557,
+        "titulo": "Soporte Continuo al Franquiciado (Ongoing Support)"
+      },
+      {
+        "id": "diseno_programa_capacitacion_franquicia",
+        "score": 0.5031,
+        "titulo": "Diseño del Programa de Capacitación para Franquiciados"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decision_final_franquiciar",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "recursos/alternativas no es cuota inicial; se poda"
+  },
+  {
+    "fantasma": "evaluar_viabilidad_franquiciar",
+    "destino": "investigacion_desarrollo_concepto",
+    "score": 0.7794,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "investigacion_desarrollo_concepto",
+        "score": 0.7794,
+        "titulo": "Investigación y Desarrollo del Concepto (Evolución de Marca)"
+      },
+      {
+        "id": "evaluacion_temperamento_franquiciador",
+        "score": 0.7743,
+        "titulo": "Evaluación del Temperamento y Habilidades del Futuro Franquiciador"
+      },
+      {
+        "id": "factores_exito_franquicia_mercado_capital_gestion",
+        "score": 0.7718,
+        "titulo": "Factores Críticos de Éxito: Mercado, Capital y Gestión"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "prevenir_franquicias_inadvertidas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "prevenir_franquicias_inadvertidas",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "expansion_multi_unidad",
+    "destino": "estrategia_multicanal_expansion",
+    "score": 0.4497,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "estrategia_multicanal_expansion",
+        "score": 0.4497,
+        "titulo": "Estrategia Multicanal de Expansión (Franquicia + Corporativo)"
+      },
+      {
+        "id": "decision_franquiciar_vs_expansion_propia",
+        "score": 0.4252,
+        "titulo": "Decisión Estratégica: Franquiciar vs. Expansión con Unidades Propias vs. Capital Externo"
+      },
+      {
+        "id": "alternativa_operaciones_propias",
+        "score": 0.4184,
+        "titulo": "Alternativa: Crecimiento con Operaciones Propias (Company-Owned)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "programa_de_referidos_de_franquiciados",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "generacion_leads_franquicia",
+    "destino": "enfoque_integrado_marketing_franquicia",
+    "score": 0.6659,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "crecimiento_desde_franquiciados_existentes",
+        "score": 0.6659,
+        "titulo": "Crecimiento desde la Base de Franquiciados Existentes"
+      },
+      {
+        "id": "franquicia_mas_crecimiento_corporativo_hibrido",
+        "score": 0.6422,
+        "titulo": "Estrategia Híbrida: Franquicia más Crecimiento de Unidades Corporativas"
+      },
+      {
+        "id": "ciclo_venta_calidad_franquicia",
+        "score": 0.6133,
+        "titulo": "Ciclo de Venta-Calidad de la Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "modelo_curva_campana_ventas_franquicia",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "proceso_llamada_inicial_venta",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "la generacion de leads es el corazon del marketing integrado (rebind)",
+    "aplicado_en": [
+      {
+        "en": "modelo_curva_campana_ventas_franquicia",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "proceso_llamada_inicial_venta",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "plan_marketing_franquicia",
+    "destino": "presupuesto_marketing_franquicia",
+    "score": 0.7676,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "presupuesto_marketing_franquicia",
+        "score": 0.7676,
+        "titulo": "Presupuesto de Marketing basado en Velocidad de Crecimiento"
+      },
+      {
+        "id": "mix_medios_marketing_franquicia",
+        "score": 0.7456,
+        "titulo": "Asignación del Mix de Medios en Marketing de Franquicia"
+      },
+      {
+        "id": "mensaje_marketing_franquicia",
+        "score": 0.7241,
+        "titulo": "Diseño del Mensaje de Marketing de Franquicia (Contenido y Emoción)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "modelo_curva_campana_ventas_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "modelo_curva_campana_ventas_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "programa_capacitacion_franquiciados",
+    "destino": "programa_entrena_al_entrenador",
+    "score": 0.7813,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "programa_entrena_al_entrenador",
+        "score": 0.7813,
+        "titulo": "Programa 'Entrena al Entrenador'"
+      },
+      {
+        "id": "entrenamiento_en_sitio",
+        "score": 0.7301,
+        "titulo": "Entrenamiento en el Sitio del Franquiciado (On-Site Training)"
+      },
+      {
+        "id": "entrenamiento_continuo",
+        "score": 0.7267,
+        "titulo": "Entrenamiento Continuo (Ongoing Training)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "desarrollar_manual_operaciones",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "desarrollar_manual_operaciones",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "reclutamiento_franquiciados",
+    "destino": "construccion_equipo_franquicia",
+    "score": 0.7007,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "construccion_equipo_franquicia",
+        "score": 0.7007,
+        "titulo": "Construcción del Equipo para el Lanzamiento de la Franquicia"
+      },
+      {
+        "id": "analisis_competencia_franquicias",
+        "score": 0.688,
+        "titulo": "Analizar a Fondo a los Competidores Directos de Franquicia"
+      },
+      {
+        "id": "entrenar_franquiciados_validacion",
+        "score": 0.6635,
+        "titulo": "Entrenar a Franquiciados para la Validación"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "entrenar_franquiciados_validacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "entrenar_franquiciados_validacion",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "red_de_franquiciados_iniciales",
+    "destino": "franquicia_unidad_individual",
+    "score": 0.6904,
+    "banda": "revision",
+    "veredicto": "rechazado_revision",
+    "candidatos": [
+      {
+        "id": "franquicia_unidad_individual",
+        "score": 0.6904,
+        "titulo": "Franquicia de Unidad Individual"
+      },
+      {
+        "id": "construccion_equipo_franquicia",
+        "score": 0.6519,
+        "titulo": "Construcción del Equipo para el Lanzamiento de la Franquicia"
+      },
+      {
+        "id": "asistencia_apertura_franquicia",
+        "score": 0.6475,
+        "titulo": "Asistencia en el Proceso de Apertura (Startup Assistance)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "referidos_franquiciados_existentes",
+        "campo": "nodos_previos"
+      }
+    ],
+    "motivo_revision": "red inicial no es tipo unidad individual; se poda"
+  },
+  {
+    "fantasma": "seleccion_de_franquiciados",
+    "destino": "leverage_una_sola_franquicia",
+    "score": 0.7221,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "leverage_una_sola_franquicia",
+        "score": 0.7221,
+        "titulo": "El 'Número Mágico': Rentabilidad desde la Primera Franquicia"
+      },
+      {
+        "id": "ciclo_ventas_calidad_franquicia",
+        "score": 0.722,
+        "titulo": "Ciclo de Ventas-Calidad de la Franquicia"
+      },
+      {
+        "id": "ventas_productos_markup_proveedores",
+        "score": 0.7212,
+        "titulo": "Ventas de Productos y Estructura de Proveedores (Aprobados/Designados)"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "marketing_directo_y_llamadas_en_frio_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "marketing_en_ferias_comerciales_de_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "portales_web_de_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "ppc_para_venta_de_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_de_referidos_de_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "marketing_directo_y_llamadas_en_frio_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "marketing_en_ferias_comerciales_de_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "portales_web_de_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "ppc_para_venta_de_franquicias",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "programa_de_referidos_de_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_franquiciados",
+    "destino": "leverage_una_sola_franquicia",
+    "score": 0.7242,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "leverage_una_sola_franquicia",
+        "score": 0.7242,
+        "titulo": "El 'Número Mágico': Rentabilidad desde la Primera Franquicia"
+      },
+      {
+        "id": "ciclo_ventas_calidad_franquicia",
+        "score": 0.7201,
+        "titulo": "Ciclo de Ventas-Calidad de la Franquicia"
+      },
+      {
+        "id": "franquicia_mas_crecimiento_corporativo_hibrido",
+        "score": 0.7164,
+        "titulo": "Estrategia Híbrida: Franquicia más Crecimiento de Unidades Corporativas"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "pilares_control_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "pilares_control_calidad",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_medios_marketing_franquicia",
+    "destino": "mix_medios_marketing_franquicia",
+    "score": 0.7736,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "mix_medios_marketing_franquicia",
+        "score": 0.7736,
+        "titulo": "Asignación del Mix de Medios en Marketing de Franquicia"
+      },
+      {
+        "id": "publicidad_impresa_para_franquicias",
+        "score": 0.719,
+        "titulo": "Publicidad Impresa en la Venta de Franquicias"
+      },
+      {
+        "id": "publicidad_impresa_franquicia",
+        "score": 0.6696,
+        "titulo": "Evaluación de la Publicidad Impresa en Franquicias"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "brokers_lead_referral_networks",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "enfoque_integrado_marketing_franquicia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "brokers_lead_referral_networks",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "enfoque_integrado_marketing_franquicia",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "seleccion_y_venta_de_franquicias",
+    "destino": "ciclo_venta_calidad_franquicia",
+    "score": 0.7837,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "ciclo_venta_calidad_franquicia",
+        "score": 0.7837,
+        "titulo": "Ciclo de Venta-Calidad de la Franquicia"
+      },
+      {
+        "id": "propuesta_valor_franquicia",
+        "score": 0.7771,
+        "titulo": "Desarrollar la Propuesta de Valor Integral del Sistema de Franquicia"
+      },
+      {
+        "id": "ciclo_ventas_calidad_franquicia",
+        "score": 0.7729,
+        "titulo": "Ciclo de Ventas-Calidad de la Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "comunicacion_efectiva_con_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "comunicacion_efectiva_con_franquiciados",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "vender_primera_franquicia",
+    "destino": "ciclo_ventas_calidad_franquicia",
+    "score": 0.6975,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "ciclo_ventas_calidad_franquicia",
+        "score": 0.6975,
+        "titulo": "Ciclo de Ventas-Calidad de la Franquicia"
+      },
+      {
+        "id": "las_cuatro_ventas_franquicia",
+        "score": 0.6603,
+        "titulo": "Las Cuatro Ventas de la Franquicia"
+      },
+      {
+        "id": "ciclo_venta_calidad_franquicia",
+        "score": 0.6588,
+        "titulo": "Ciclo de Venta-Calidad de la Franquicia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "cumplir_leyes_estatales_franquicia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preparar_fdd",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "motivo_revision": "vender la primera franquicia entra al ciclo ventas-calidad",
+    "aplicado_en": [
+      {
+        "en": "cumplir_leyes_estatales_franquicia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preparar_fdd",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  }
+]

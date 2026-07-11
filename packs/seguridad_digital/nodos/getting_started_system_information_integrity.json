@@ -1,0 +1,25 @@
+{
+  "node_id": "getting_started_system_information_integrity",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Integridad de Sistemas e Información",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Identifica, reporta y corrige fallas de sistema oportunamente, provee protección contra código malicioso, y monitorea alertas de seguridad para actuar en consecuencia, además de gestionar la retención adecuada de CUI.",
+  "pasos_accionables": [
+    "Suscribirse a fuentes de alertas de seguridad (CISA, NSA, FBI, ISACs, proveedores).",
+    "Establecer una estrategia de monitoreo del sistema con procedimientos y herramientas definidas.",
+    "Detectar ataques, conexiones no autorizadas y actividades inusuales en tráfico entrante/saliente.",
+    "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
+    "Eliminar CUI de sistemas no federales una vez concluidos los contratos para reducir la superficie de ataque."
+  ],
+  "entregable_esperado": "Estrategia de monitoreo de seguridad y política de retención/eliminación de CUI documentadas.",
+  "nodos_previos": [
+    "getting_started_system_communication_protection"
+  ],
+  "nodos_siguientes": [
+    "getting_started_planning"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere detectar amenazas activas y gestionar el ciclo de vida de la CUI."
+  ]
+}

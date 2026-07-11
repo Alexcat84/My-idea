@@ -1,0 +1,27 @@
+{
+  "node_id": "plan_cumplimiento_exportacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Plan de Cumplimiento de Exportación (Compliance Plan)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Para empresas con catálogos amplios de productos, es recomendable crear un plan de cumplimiento escrito que sistematice la clasificación ECCN, el control de países embargados, la verificación de partes denegadas y el mantenimiento de registros de todas las transacciones de exportación.",
+  "pasos_accionables": [
+    "Estudiar videos y publicaciones online de BIS sobre EAR",
+    "Asistir a seminarios específicos sobre EAR y control de exportaciones",
+    "Crear un campo en el sistema de gestión de inventario para ECCNs",
+    "Agregar campo con países donde la exportación está prohibida por EAR",
+    "Contactar a BIS para revisar el plan final",
+    "Adaptar el software de inventario para marcar pedidos problemáticos"
+  ],
+  "entregable_esperado": "Documento escrito de plan de cumplimiento con sistema de inventario actualizado que incluya ECCNs y restricciones por país.",
+  "nodos_previos": [
+    "licencia_exportacion_regulaciones"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_potencial_exportador_producto"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa tiene un catálogo extenso de productos (decenas o cientos de SKUs)",
+    "Si la empresa exporta regularmente a múltiples países"
+  ]
+}

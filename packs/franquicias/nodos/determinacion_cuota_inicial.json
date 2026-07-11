@@ -1,0 +1,28 @@
+{
+  "node_id": "determinacion_cuota_inicial",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Determinación de la Cuota Inicial de Franquicia",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "La cuota inicial debe tratarse principalmente como una herramienta de recuperación de costos (marketing, comisiones de venta, asesoría legal, selección de sitio, capacitación inicial) y no como centro de ganancias, ya que el verdadero retorno viene de la relación a largo plazo (regalías). Debe analizarse frente a competidores comparables y alinearse con el posicionamiento deseado (premium vs. bajo costo).",
+  "pasos_accionables": [
+    "Calcular los costos reales de venta, arranque y soporte por franquicia.",
+    "Analizar las cuotas iniciales de competidores directos comparables.",
+    "Definir el posicionamiento de marca (premium, estándar, bajo costo) y ajustar la cuota en consecuencia.",
+    "Evitar fijar una cuota que erija barreras de entrada innecesarias."
+  ],
+  "entregable_esperado": "Cuota de franquicia inicial justificada con análisis de costos y competencia.",
+  "nodos_previos": [
+    "franquicia_unidad_individual",
+    "franquicia_conversion",
+    "franquicia_desarrollo_area",
+    "subfranquicia_master",
+    "franquicia_representante_area"
+  ],
+  "nodos_siguientes": [
+    "determinacion_regalias"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario debe fijar el precio de entrada a su sistema de franquicia"
+  ]
+}

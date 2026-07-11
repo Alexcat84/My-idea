@@ -1,0 +1,26 @@
+{
+  "node_id": "autocertificacion_del_exportador",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Autocertificación de Origen por el Exportador",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto sin intervención de terceros, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible.",
+  "pasos_accionables": [
+    "Determinar si el embarque es único o parte de envíos múltiples idénticos",
+    "Si es múltiple, definir el periodo cobertura en formato mm/dd/yyyy (máximo 12 meses)",
+    "Identificar a la persona con autoridad legal para firmar en nombre de la empresa",
+    "Redactar la declaración de certificación conforme al tratado aplicable",
+    "Conservar toda la documentación de soporte por si se solicita auditoría"
+  ],
+  "entregable_esperado": "Documento de autocertificación de origen firmado, con declaración de cumplimiento y responsabilidad legal",
+  "nodos_previos": [
+    "certificado_de_origen_coo"
+  ],
+  "nodos_siguientes": [
+    "documentacion_exportacion_basica"
+  ],
+  "condiciones_activacion": [
+    "Cuando el tratado de libre comercio aplicable permite autocertificación (ej. TLC EE.UU.-Corea)",
+    "Si el exportador desea evitar trámites con terceros certificadores"
+  ]
+}

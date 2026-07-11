@@ -1,0 +1,29 @@
+{
+  "node_id": "letters_of_credit",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Cartas de Crédito (Letters of Credit)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Una carta de crédito es un compromiso de un banco, a nombre del comprador, de pagar al exportador siempre que se cumplan los términos y se presenten los documentos especificados. Puede ser irrevocable (no modificable sin acuerdo mutuo) o revocable (desaconsejada por su riesgo). Puede estar confirmada por un banco de EE.UU. para mayor seguridad frente a riesgos políticos o económicos del país del comprador. El proceso involucra múltiples pasos entre banco emisor, banco confirmador, exportador y freight forwarder, y requiere revisar cuidadosamente que todos los documentos coincidan exactamente con los términos establecidos.",
+  "pasos_accionables": [
+    "Negociar con el comprador que su banco emita una carta de crédito irrevocable",
+    "Solicitar confirmación de un banco de EE.UU. si existe riesgo país o desconocimiento del banco emisor",
+    "Revisar minuciosamente todos los términos y condiciones de la carta de crédito recibida contra la pro forma invoice",
+    "Coordinar con el freight forwarder para cumplir fechas de embarque y documentación requerida",
+    "Presentar los documentos exactos y a tiempo para asegurar el pago",
+    "Solicitar amendments inmediatamente si algún término no puede cumplirse"
+  ],
+  "entregable_esperado": "Carta de crédito irrevocable (confirmada si aplica) revisada y documentos de embarque conformes presentados al banco",
+  "nodos_previos": [
+    "seleccion_de_metodo_de_pago",
+    "incoterms_reglas_comerciales_internacionales",
+    "elaboracion_pro_forma_invoice"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_cambiario"
+  ],
+  "condiciones_activacion": [
+    "Cuando el exportador y el comprador buscan un método de pago seguro para ambas partes",
+    "Cuando existe incertidumbre sobre la solvencia del comprador o riesgo país elevado"
+  ]
+}

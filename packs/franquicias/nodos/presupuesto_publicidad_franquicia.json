@@ -1,0 +1,26 @@
+{
+  "node_id": "presupuesto_publicidad_franquicia",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Presupuesto de Publicidad y Flujo de Caja para Venta de Franquicias",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "El presupuesto de marketing para vender franquicias debe cubrir un periodo de al menos seis meses antes de esperar recuperar costos vía cuotas de franquicia, dado que las ventas no son inmediatas. Cuanto mayor sea el presupuesto mensual de publicidad, más rápido se cerrará la primera venta. Por ejemplo, vender 6 franquicias en el primer año puede requerir ~$30,000 en gasto publicitario, mientras que 12 ventas pueden requerir entre $50,000 y $60,000.",
+  "pasos_accionables": [
+    "Definir la meta de número de franquicias a vender en el primer año",
+    "Calcular el presupuesto de publicidad necesario basado en la meta (ej. $30,000 para 6 ventas, $50-60k para 12)",
+    "Planificar un colchón de flujo de caja para al menos 6 meses de publicidad antes de recuperar ingresos",
+    "Monitorear el gasto publicitario versus el ritmo real de ventas y ajustar"
+  ],
+  "entregable_esperado": "Presupuesto de marketing y flujo de caja proyectado para los primeros 6-12 meses de venta de franquicias",
+  "nodos_previos": [
+    "modelo_curva_campana_ventas_franquicia"
+  ],
+  "nodos_siguientes": [
+    "costos_personal_franquicia",
+    "costos_preparacion_franquicia"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario está diseñando el presupuesto financiero inicial para lanzar su programa de franquicias",
+    "Si el usuario subestima los costos de marketing necesarios para atraer franquiciados"
+  ]
+}

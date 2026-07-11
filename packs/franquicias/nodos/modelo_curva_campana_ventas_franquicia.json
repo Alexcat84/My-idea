@@ -1,0 +1,26 @@
+{
+  "node_id": "modelo_curva_campana_ventas_franquicia",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Modelo de Curva de Campana para Predicción de Ventas de Franquicia",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "Las ventas de franquicia no ocurren a un ritmo predecible o lineal; siguen un patrón estadístico similar a una curva de campana, donde cada lead o esfuerzo de marketing tiene una probabilidad de convertirse en venta distribuida a lo largo de varias semanas (típicamente 12-14 semanas desde el llenado del pipeline). Al apilar múltiples cohortes mensuales de leads, la probabilidad acumulada de cerrar una venta aumenta con cada mes que pasa. Esto implica que un franquiciante debe pensar en términos de flujo continuo de leads y no esperar resultados inmediatos o uniformes.",
+  "pasos_accionables": [
+    "Modelar el tiempo esperado de cierre de venta como una distribución de campana, no como un valor fijo",
+    "Proyectar múltiples cohortes mensuales de leads en paralelo para suavizar la variabilidad",
+    "Calcular el punto medio esperado de cierre (ej. 12-14 semanas) para planificar flujo de caja",
+    "Ajustar expectativas considerando factores internos (calidad de oferta, validación, marketing) y externos (economía)"
+  ],
+  "entregable_esperado": "Proyección de calendario de ventas de franquicia basada en cohortes mensuales de leads con estimación de tiempos de cierre",
+  "nodos_previos": [
+    "presupuesto_marketing_franquicia",
+    "enfoque_integrado_marketing_franquicia"
+  ],
+  "nodos_siguientes": [
+    "presupuesto_publicidad_franquicia"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario necesita proyectar cuántas franquicias venderá en un periodo determinado",
+    "Si el usuario se frustra por la falta de ventas inmediatas tras iniciar marketing"
+  ]
+}
