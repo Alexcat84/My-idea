@@ -153,3 +153,31 @@ y `dataset/metadata/expansion_v13/`.
 5. Técnica: `integrar_packs.py` hardcodea los 3 packs HSEQ — extenderlo al
    aprobar G3/G4.
 6. Merge a main: solo con autorización explícita.
+
+
+## 9. Addendum — Hygiene v1.3.1 (post-auditoría)
+
+**Hallazgo 1 del auditor (esquema "renegado" en los packs): REFUTADO con censo.**
+Los 4,583 nodos del universo (3,260 dataset + 896 quality + 427 packs nuevos)
+tienen CERO campos `titulo`; el 100% usa `titulo_concepto`, `pasos_accionables`
+y `node_id` interno — uniforme desde el core original hasta los HSEQ integrados.
+El chequeo de títulos del Gate 0 por dominio lee `titulo_concepto`
+(run_phase1_dominio.py:46) y nunca corrió vacuo: re-corrido con evidencia
+(427 títulos, 0 vacíos, 100% únicos por dominio, VERDE). La migración prescrita
+a `titulo`/`pasos_practicos` habría roto graph.ts, el motor y run_phase1 —
+es el mismo desfase del runbook §1 ya documentado en la sección 7.
+**Núcleo válido adoptado:** `engine/test_validador_esquema.py` — garantía
+permanente (nodo sintético renegado → exit 1) cableada a run_all_tests.
+
+**Hallazgo 2 (backlog de etiqueta_arbol): LEGÍTIMO y ejecutado.**
+Backfill de los 2,805 nodos pre-v1.3 con el script parametrizado: $3.3735
+(+$0.0667 de diferenciación). Validación: 0 vacías, 0 >6 palabras; 74 etiquetas
+duplicadas entre nodos distintos diferenciadas (72 regeneradas con prohibición
+explícita + 2 a mano: "Adopta Cero Defectos como Norma", "Valida que tu
+Cliente Compra") → **3,260/3,260 etiquetadas, 0 duplicadas**. Master recompilado
+(la etiqueta viaja al grafo compilado), sync con checksums, suites python 13/13
+y web 218/218, **clon limpio VERDE**. Commit `fa2e601` ("Hygiene v1.3.1").
+
+Costo total actualizado de la expansión: ≈ **$19.80**.
+Merge a main: listo desde el lado técnico; esperando la palabra del usuario,
+igual que los gates G2-G5 (curaduría del auditor disponible en la sección 8).
