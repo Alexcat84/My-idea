@@ -1,0 +1,25 @@
+{
+  "node_id": "calibracion_intensidad_celebracion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Calibración de la Intensidad de la Celebración ('No Alcanzar el Pico Demasiado Pronto')",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "Aunque celebrar la conversión del cliente es valioso, sobreactuar la celebración en relación con la naturaleza del producto o servicio puede generar desconfianza o sensación de desesperación, similar a llevar a alguien a París en la primera cita. Es crucial ajustar la magnitud de la celebración al contexto y expectativas del cliente, guardando sorpresas para etapas posteriores de la relación.",
+  "pasos_accionables": [
+    "Evaluar el nivel de involucramiento emocional típico del cliente al comprar el producto/servicio",
+    "Diseñar una celebración proporcional (ni insuficiente ni excesiva) para esa categoría de producto",
+    "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (Affirm, Adopt, etc.)"
+  ],
+  "entregable_esperado": "Una guía de 'niveles de celebración' según tipo de producto/servicio y ticket promedio.",
+  "nodos_previos": [
+    "cierre_satisfaccion_postventa"
+  ],
+  "nodos_siguientes": [
+    "fase_affirm_reduccion_incertidumbre"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto es de bajo involucramiento emocional (ej. seguros, servicios técnicos) y se corre riesgo de sobreactuar",
+    "Si se detecta que celebraciones pasadas generaron incomodidad en el cliente"
+  ],
+  "etiqueta_arbol": "No Celebres Antes de Tiempo"
+}

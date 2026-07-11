@@ -1,0 +1,28 @@
+{
+  "node_id": "compartir_datos_cadena_suministro",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Compartición de Datos entre Empresas de la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Compartir datos de demanda, decisiones y métricas de desempeño entre las empresas de una cadena de suministro mejora la toma de decisiones colectiva y reduce distorsiones como el efecto látigo (bullwhip effect). Aunque existe reticencia por temor a filtrar información confidencial a competidores, las cadenas que colaboran eficientemente ganan cuota de mercado frente a las que no lo hacen, ya que la competencia se traslada de empresa-contra-empresa a cadena-de-suministro-contra-cadena-de-suministro.",
+  "pasos_accionables": [
+    "Definir qué datos de demanda, decisiones y desempeño se pueden compartir de forma segura",
+    "Establecer mecanismos electrónicos (reportes vía web) para compartir información con socios",
+    "Compartir decisiones internas con impacto en demanda (ej. promociones) con proveedores clave",
+    "Evaluar cuantitativamente los beneficios de la colaboración frente a los riesgos de exposición"
+  ],
+  "entregable_esperado": "Acuerdo de intercambio de datos con al menos un socio clave de la cadena de suministro",
+  "nodos_previos": [
+    "modelo_cuadrantes_mercado",
+    "creacion_data_warehouse"
+  ],
+  "nodos_siguientes": [
+    "mitigacion_efecto_latigo",
+    "diagnostico_efecto_latigo"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples empresas interdependientes en la cadena de suministro",
+    "Si se detectan problemas recurrentes de desabasto o exceso de inventario"
+  ],
+  "etiqueta_arbol": "Comparte Datos con tu Cadena"
+}

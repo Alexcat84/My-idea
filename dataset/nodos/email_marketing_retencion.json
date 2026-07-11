@@ -1,0 +1,28 @@
+{
+  "node_id": "email_marketing_retencion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Email Marketing para Retención y Revenue",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "El email es uno de los canales más efectivos para traer de vuelta a usuarios inactivos y generar ingresos adicionales. Las estrategias incluyen recordatorios personalizados, reportes periódicos de valor entregado, campañas de upsell, retargeting de carritos abandonados y emails de 'sorpresa y deleite' que refuerzan la relación emocional con el cliente.",
+  "pasos_accionables": [
+    "Define triggers de inactividad (ej. sin login en 2 semanas) para emails de reactivación",
+    "Envía reportes periódicos de valor entregado (uso, ahorro, logros)",
+    "Crea secuencias de upsell explicando features premium no utilizadas",
+    "Implementa retargeting por email para carritos abandonados con ofertas especiales",
+    "Envía emails de 'sorpresa y deleite' mostrando el progreso o beneficio obtenido por el cliente"
+  ],
+  "entregable_esperado": "Sistema de emails de retención y revenue con al menos una campaña de reactivación y una de upsell activas",
+  "nodos_previos": [
+    "email_marketing_activacion",
+    "email_marketing_para_captacion"
+  ],
+  "nodos_siguientes": [
+    "acquisicion_viral_engineering"
+  ],
+  "condiciones_activacion": [
+    "Si hay churn de usuarios inactivos que antes mostraron interés",
+    "Si existe un modelo freemium o de planes escalonados con oportunidad de upsell"
+  ],
+  "etiqueta_arbol": "Recupera Clientes por Correo"
+}

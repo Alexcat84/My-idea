@@ -1,0 +1,27 @@
+{
+  "node_id": "prompting_cadena_de_pensamiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Prompting en Cadena de Pensamiento (Chain-of-Thought)",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Técnica que consiste en pedir a la IA que razone paso a paso, dividiendo una tarea compleja en subpasos secuenciales (listar opciones, criticarlas, compararlas en una tabla, elegir la mejor). Esto mejora significativamente la calidad y precisión de las respuestas frente a preguntas directas de una sola vez, permitiendo además revisar y refinar cada etapa del proceso.",
+  "pasos_accionables": [
+    "Dividir la tarea compleja en pasos secuenciales explícitos",
+    "Pedir a la IA que primero liste opciones o ideas",
+    "Solicitar una crítica o comparación de esas opciones (tabla de pros/contras)",
+    "Pedir una recomendación final justificada",
+    "Revisar cada paso antes de avanzar al siguiente para poder ajustar el prompt"
+  ],
+  "entregable_esperado": "Un análisis estructurado (ej. comparación de estrategias, modelos de negocio o soluciones) generado mediante prompts secuenciales verificables",
+  "nodos_previos": [
+    "ingenieria_de_prompts_efectiva"
+  ],
+  "nodos_siguientes": [
+    "ai_supply_chain"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita tomar una decisión de negocio compleja con ayuda de IA",
+    "Cuando una respuesta simple de la IA resulta superficial o poco confiable"
+  ],
+  "etiqueta_arbol": "Haz que la IA Razone"
+}

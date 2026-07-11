@@ -3,22 +3,31 @@
   "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Gestión Eficiente de Inventario",
-  "fuente": "Financial Intelligence for Entrepreneurs",
+  "fuente": "Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El inventario representa efectivo congelado que la empresa no puede usar para otros fines. El reto es minimizar el inventario sin generar quiebres de stock que insatisfagan a los clientes. Múltiples áreas de la empresa (ventas, ingeniería, producción) afectan los niveles de inventario a través de decisiones sobre personalización de productos, versiones y eficiencia de planta.",
   "pasos_accionables": [
     "Calcular los Días de Inventario (DII) actuales",
     "Evaluar el impacto de personalizaciones de producto ofrecidas por ventas",
     "Revisar la proliferación de versiones de producto por parte de ingeniería",
     "Analizar tiempos de inactividad de máquinas y cambios de producción",
-    "Evitar producir por producir cuando la demanda es baja, priorizando el efectivo sobre el costo unitario"
+    "Evitar producir por producir cuando la demanda es baja, priorizando el efectivo sobre el costo unitario",
+    "Calcular el inventario cíclico óptimo balanceando costos de ordenar vs. costos de mantener.",
+    "Definir niveles de inventario de seguridad según la variabilidad de la demanda y el costo de quiebre de stock.",
+    "Identificar patrones estacionales de demanda y decidir entre acumular inventario estacional o invertir en flexibilidad de producción.",
+    "Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda."
   ],
   "entregable_esperado": "Plan de reducción de inventario con métricas de DII y acciones específicas por área",
   "nodos_previos": [
     "gestion_capital_trabajo",
-    "clasificacion_tipos_activos"
+    "clasificacion_tipos_activos",
+    "clasificacion_mercados_cadena_suministro",
+    "metodos_de_pronostico",
+    "metricas_servicio_cliente_bts_bto",
+    "programacion_produccion"
   ],
   "nodos_siguientes": [
-    "ciclo_de_conversion_de_efectivo"
+    "ciclo_de_conversion_de_efectivo",
+    "milk_run_deliveries"
   ],
   "condiciones_activacion": [
     "Cuando la empresa tiene exceso de inventario o capital de trabajo atado en stock"

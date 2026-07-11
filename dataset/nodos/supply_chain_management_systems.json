@@ -1,0 +1,26 @@
+{
+  "node_id": "supply_chain_management_systems",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Sistemas de Gestión de Cadena de Suministro (SCM)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos de sistemas ERP y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
+  "pasos_accionables": [
+    "Identificar brechas analíticas no cubiertas por el ERP actual",
+    "Seleccionar módulos SCM relevantes (APS, demand planning, inventory)",
+    "Integrar el sistema SCM con las fuentes de datos ERP existentes",
+    "Establecer procesos de revisión periódica de los planes generados"
+  ],
+  "entregable_esperado": "Arquitectura de sistemas SCM integrada con ERP",
+  "nodos_previos": [
+    "erp_systems",
+    "data_transmission_edi_xml"
+  ],
+  "nodos_siguientes": [
+    "ai_supply_chain"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa requiere capacidades analíticas avanzadas para planificación estratégica de la cadena de suministro"
+  ],
+  "etiqueta_arbol": "Integra tus Sistemas de Suministro"
+}

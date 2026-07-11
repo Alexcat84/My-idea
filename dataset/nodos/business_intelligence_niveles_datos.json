@@ -1,0 +1,26 @@
+{
+  "node_id": "business_intelligence_niveles_datos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Sistema de Inteligencia de Negocio en Tres Niveles",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Para operar en entornos de cambio rápido, una empresa necesita un sistema de business intelligence (BI) que presente datos en tres niveles: estratégico (para que la alta dirección decida qué hacer, con datos históricos y de mercado externo), operativo (para que la gerencia media decida cómo hacerlo, con métricas nivel 2 del SCOR) y táctico (para que el personal ejecute y resuelva problemas, con métricas de diagnóstico nivel 3). Esto requiere un data warehouse centralizado que capture datos automáticamente de los sistemas operativos.",
+  "pasos_accionables": [
+    "Definir qué datos estratégicos, operativos y tácticos son relevantes para tu negocio",
+    "Construir o adquirir un data warehouse que centralice información de sistemas operativos y contables",
+    "Automatizar la captura de datos evitando entrada manual",
+    "Crear reportes predefinidos por nivel de audiencia (directivos, gerentes medios, personal operativo) y habilitar consultas ad-hoc"
+  ],
+  "entregable_esperado": "Sistema de reportes y dashboards estructurado en tres niveles (estratégico, operativo, táctico) conectado a un data warehouse",
+  "nodos_previos": [
+    "framework_scor_plan_source_make_deliver"
+  ],
+  "nodos_siguientes": [
+    "fundamentos_inteligencia_financiera"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa está saturada de datos pero sin capacidad de accionarlos",
+    "Si diferentes niveles de la organización necesitan visibilidad distinta sobre el desempeño"
+  ],
+  "etiqueta_arbol": "Organiza tus Datos en Tres Niveles"
+}

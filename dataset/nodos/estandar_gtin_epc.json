@@ -1,0 +1,26 @@
+{
+  "node_id": "estandar_gtin_epc",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Estandarización de Identificación de Producto (GTIN/EPC)",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un número de serie único a cada ítem individual, permitiendo rastrear su historial de movimiento a través de la red EPCglobal.",
+  "pasos_accionables": [
+    "Registrar la organización en GS1 para obtener un código de gestor (manager code)",
+    "Etiquetar los productos con GTIN/EPC según el estándar correspondiente a la región (13 o 14 dígitos)",
+    "Integrar los sistemas internos con la red EPCglobal para consulta y actualización en tiempo real",
+    "Mantener actualizada la base de datos de códigos EPC conforme los productos se mueven en la cadena"
+  ],
+  "entregable_esperado": "Catálogo de productos codificado bajo estándar GTIN/EPC, registrado en GS1",
+  "nodos_previos": [
+    "iot_big_data_supply_chain"
+  ],
+  "nodos_siguientes": [
+    "conformidad_comercio_internacional"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa opera en múltiples países y necesita interoperabilidad de datos de producto",
+    "Si se requiere trazabilidad detallada del historial de cada unidad de producto"
+  ],
+  "etiqueta_arbol": "Estandariza la Identificación de Productos"
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "evaluacion_riesgos_legales_ia",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Evaluación de Riesgos Legales y Éticos en el Uso de IA Generativa",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Los modelos de IA se entrenan con grandes volúmenes de datos que a menudo incluyen material con derechos de autor, usado sin permiso explícito de los creadores. La legalidad de esto varía según el país (la UE es más restrictiva, EE.UU. más laxo, Japón lo permite explícitamente). Antes de construir un producto o servicio basado en IA generativa, el emprendedor debe entender los riesgos legales y éticos asociados, especialmente si el output de la IA podría reproducir contenido protegido o generar responsabilidad legal.",
+  "pasos_accionables": [
+    "Investigar la jurisdicción legal aplicable a tu negocio respecto a datos de entrenamiento de IA",
+    "Revisar los términos de servicio del proveedor de IA sobre propiedad y responsabilidad del output",
+    "Evaluar si el uso del output de la IA podría infringir derechos de autor de terceros",
+    "Consultar con asesoría legal antes de comercializar productos basados en contenido generado por IA",
+    "Establecer políticas internas sobre uso ético de IA en la empresa"
+  ],
+  "entregable_esperado": "Informe de riesgo legal/ético documentado, con políticas internas de uso de IA definidas.",
+  "nodos_previos": [
+    "fine_tuning_ia_para_caso_de_uso"
+  ],
+  "nodos_siguientes": [
+    "alineacion_etica_ia_negocio"
+  ],
+  "condiciones_activacion": [
+    "Cuando el negocio planea comercializar un producto o servicio que use directamente el output de una IA generativa"
+  ],
+  "etiqueta_arbol": "Evalúa los Riesgos de IA"
+}

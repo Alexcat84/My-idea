@@ -1,0 +1,26 @@
+{
+  "node_id": "principio_humano_en_el_loop",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Principio 2: Ser el Humano en el Loop",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "La IA generativa no 'sabe' realmente nada: predice la siguiente palabra más probable, priorizando muchas veces 'satisfacer al usuario' sobre 'ser precisa', lo que produce alucinaciones (respuestas incorrectas pero convincentes). Por ello, el emprendedor debe mantenerse activamente en el ciclo de decisión, verificando y cuestionando las salidas de la IA en vez de delegarle decisiones críticas sin supervisión, especialmente en áreas de alto riesgo para el negocio (finanzas, legal, salud, atención al cliente).",
+  "pasos_accionables": [
+    "Establecer puntos de verificación humana obligatorios antes de que una salida de IA llegue al cliente o se ejecute una acción",
+    "Entrenar al equipo para detectar señales de alucinación (citas inventadas, datos no verificables, exceso de confianza en la respuesta)",
+    "Nunca aceptar una respuesta de la IA como fuente única de verdad en decisiones críticas del negocio",
+    "Definir protocolos claros de cuándo la IA puede actuar de forma autónoma y cuándo requiere aprobación humana"
+  ],
+  "entregable_esperado": "Protocolo de supervisión humana (human-in-the-loop) para el uso de IA en el negocio",
+  "nodos_previos": [
+    "principio_invitar_ia_siempre"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_seguridad_ia"
+  ],
+  "condiciones_activacion": [
+    "Cuando la IA se usa para generar contenido, decisiones o respuestas que impactan directamente al cliente o a operaciones críticas",
+    "Cuando el equipo detecta o sospecha de alucinaciones en las respuestas de la IA"
+  ],
+  "etiqueta_arbol": "Sé el Humano en el Loop"
+}

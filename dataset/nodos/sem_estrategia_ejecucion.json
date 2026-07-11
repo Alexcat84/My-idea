@@ -1,0 +1,31 @@
+{
+  "node_id": "sem_estrategia_ejecucion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Estrategia y Ejecución de Campañas SEM",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "El proceso básico de SEM consiste en investigar keywords de alto potencial, agruparlas en ad groups, y testear diferentes anuncios (ad copy) y landing pages dentro de cada grupo. Se recomienda usar 'long-tail keywords' (términos más específicos y largos) porque son menos competitivos y más baratos, ideales para pruebas iniciales con grupos pequeños de usuarios. El caso de Archives.com (Inflection) muestra cómo se puede testear el interés en distintos enfoques de producto usando landing pages antes de construir el producto final, alineando desarrollo de producto con datos reales de mercado.",
+  "pasos_accionables": [
+    "Investigar palabras clave usando Google Keyword Planner, SEMrush o SpyFu",
+    "Crear long-tail keywords agregando calificadores específicos a términos base",
+    "Crear ad groups organizados por tipo de producto o intención de búsqueda",
+    "Escribir anuncios con título llamativo, keyword incluida y llamado a la acción claro",
+    "Crear landing pages específicas para cada concepto de producto a testear",
+    "Usar Google Analytics URL Builder para rastrear conversiones por anuncio",
+    "Comenzar con un conjunto pequeño (ej. 4 anuncios) para obtener una línea base",
+    "Eliminar anuncios de bajo rendimiento y optimizar los que funcionan"
+  ],
+  "entregable_esperado": "Una campaña SEM activa con al menos 4 variantes de anuncios, cada una vinculada a una landing page distinta y con tracking de conversión configurado.",
+  "nodos_previos": [
+    "ad_tracking"
+  ],
+  "nodos_siguientes": [
+    "quality_score_optimizacion",
+    "retargeting_display"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se definieron métricas base de CTR/CPC/CPA y se quiere escalar la prueba",
+    "Cuando se busca validar mensajes de producto antes de invertir en desarrollo completo"
+  ],
+  "etiqueta_arbol": "Ejecuta tu Campaña de Búsqueda"
+}

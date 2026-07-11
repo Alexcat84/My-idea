@@ -1,0 +1,28 @@
+{
+  "node_id": "simulacion_clientes_ia",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Simulación de Clientes con IA para Validación Preliminar",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Los LLMs pueden adoptar personas de consumidores con distintos niveles de ingreso y comportamientos de compra, generando estimaciones de disposición a pagar (willingness to pay) consistentes con estudios de mercado reales. Esto permite 'entrevistar' a un cliente simulado antes de hablar con clientes reales, como forma de práctica y para obtener insights iniciales, aunque nunca debe reemplazar la validación con clientes reales.",
+  "pasos_accionables": [
+    "Asignar a la IA una persona de cliente objetivo con datos demográficos y de comportamiento específicos",
+    "Realizar una 'entrevista' simulada sobre el producto o propuesta de valor",
+    "Extraer hipótesis o preguntas clave a partir de las respuestas simuladas",
+    "Validar esas hipótesis posteriormente con clientes reales antes de tomar decisiones definitivas"
+  ],
+  "entregable_esperado": "Guion de entrevista simulada con IA y lista de hipótesis a validar con clientes reales",
+  "nodos_previos": [
+    "asignacion_persona_ia",
+    "deteccion_alucinaciones_ia"
+  ],
+  "nodos_siguientes": [
+    "prueba_solucion_con_cliente",
+    "customer_archetypes"
+  ],
+  "condiciones_activacion": [
+    "Antes de realizar entrevistas costosas o difíciles de conseguir con clientes reales",
+    "En etapas tempranas de ideación cuando aún no hay acceso a usuarios reales"
+  ],
+  "etiqueta_arbol": "Simula Clientes Antes de Lanzar"
+}

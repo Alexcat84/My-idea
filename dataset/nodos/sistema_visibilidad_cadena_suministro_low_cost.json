@@ -1,0 +1,32 @@
+{
+  "node_id": "sistema_visibilidad_cadena_suministro_low_cost",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Sistema de Visibilidad End-to-End con Componentes IT Simples",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Ante restricciones de tiempo y presupuesto, es posible construir un sistema de visibilidad de cadena de suministro combinando componentes IT básicos y accesibles (hojas de cálculo, archivos de texto, email, páginas web, bases de datos relacionales, scripts simples) en vez de comprar software costoso y complejo. La clave es identificar el patrón subyacente simple detrás de la aparente complejidad del problema (siguiendo la lógica de Sun Tzu: pocas notas, infinitas combinaciones) y usar esos componentes para crear una vista actualizada constantemente de inventario, producción y demanda, visible para todos los actores de la cadena.",
+  "pasos_accionables": [
+    "Identificar el patrón simple detrás del problema complejo (ej: rastrear uso diario, actualizar pronósticos, mover inventario, agotar stock a tiempo)",
+    "Inventariar qué componentes IT básicos ya tienen acceso todas las partes de la cadena (spreadsheets, email, bases de datos)",
+    "Diseñar un sistema modesto que combine estos componentes para recolectar datos de inventario en producción, almacén y pedidos",
+    "Incluir datos de facturación/entregas para rastrear demanda real a nivel tienda y región",
+    "Implementar llamadas de conferencia recurrentes usando el sistema para revisar números y proyectar fechas de agotamiento",
+    "Iterar el sistema agregando nuevas vistas y cálculos según se necesiten",
+    "Documentar aprendizajes y extender el sistema a otros productos o líneas"
+  ],
+  "entregable_esperado": "Sistema funcional de bajo costo (construido en semanas, no meses) que ofrece visibilidad end-to-end de inventario y demanda entre múltiples actores de la cadena de suministro",
+  "nodos_previos": [
+    "definicion_alineacion_cadena_suministro",
+    "efecto_bullwhip"
+  ],
+  "nodos_siguientes": [
+    "ciclo_virtuoso_datos_electronicos",
+    "scorecard_desempeno_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario necesita visibilidad de cadena de suministro pero no tiene presupuesto para software enterprise",
+    "Si hay fluctuaciones de demanda estacionales que requieren coordinación rápida entre múltiples partes",
+    "Cuando existe urgencia de tiempo (ej: temporada de ventas) que impide instalar sistemas complejos"
+  ],
+  "etiqueta_arbol": "Arma Visibilidad con Pocos Recursos"
+}

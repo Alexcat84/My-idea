@@ -1,0 +1,29 @@
+{
+  "node_id": "gestion_instalaciones",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión de Instalaciones (Facility Management)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Una vez decidida la ubicación de una instalación (decisión costosa y difícil de revertir), la gestión continua se enfoca en tres decisiones clave: el rol que jugará cada instalación (qué actividades realiza, lo que afecta la flexibilidad de la cadena de suministro), cómo se asigna la capacidad en cada instalación (equipo y mano de obra, afectando rentabilidad), y la asignación de proveedores y mercados a cada instalación (afectando costos de transporte y capacidad de cumplir la demanda).",
+  "pasos_accionables": [
+    "Definir el rol específico de cada instalación (única función vs. multipropósito)",
+    "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajos costos de utilización) o sub-capacidad (pérdida de ventas)",
+    "Asignar proveedores y mercados a cada instalación considerando costos de transporte",
+    "Evaluar el impacto de estas decisiones en la flexibilidad general de la cadena de suministro"
+  ],
+  "entregable_esperado": "Documento de estrategia de instalaciones con rol, capacidad asignada y mapa de proveedores/mercados por instalación",
+  "nodos_previos": [
+    "produccion_scheduling_balance_objetivos",
+    "planificacion_cadena_suministro",
+    "modelo_simulacion_cadena_suministro_circular"
+  ],
+  "nodos_siguientes": [
+    "gestion_pedidos_order_management",
+    "planificacion_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendimiento escala y necesita más de una instalación física",
+    "Si se está evaluando abrir una nueva planta o centro de distribución"
+  ],
+  "etiqueta_arbol": "Gestiona bien tus Instalaciones"
+}

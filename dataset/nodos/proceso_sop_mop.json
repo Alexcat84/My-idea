@@ -1,0 +1,27 @@
+{
+  "node_id": "proceso_sop_mop",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Planeación Colaborativa S&OP / M&OP (Sales & Operations / Mission & Operations Planning)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El S&OP (Sales & Operations Planning) es una práctica empresarial de planeación colaborativa cíclica (cada 15-30 días) que se puede adaptar como M&OP (Mission & Operations Planning) para respuesta a desastres. Consta de cinco pasos: (1) órdenes de misión/CONOPS, (2) planeación de demanda, (3) planeación de oferta, (4) conciliación de planes mediante modelado y simulación en mapas digitales, y (5) implementación y monitoreo continuo. Permite que múltiples organizaciones con agendas distintas lleguen a consenso rápido usando datos visuales compartidos.",
+  "pasos_accionables": [
+    "Definir la orden de misión o el objetivo de negocio central (CONOPS)",
+    "Calcular la demanda proyectada de productos/recursos por ubicación o unidad",
+    "Planificar la oferta y logística de transporte necesaria para cubrir la demanda",
+    "Modelar el sistema completo (productos, instalaciones, vehículos, rutas) y correr simulaciones para detectar desajustes",
+    "Implementar el plan y monitorear con datos actualizados frecuentemente, ajustando en tiempo real"
+  ],
+  "entregable_esperado": "Un modelo de cadena de suministro simulado (mapa con entidades: productos, instalaciones, vehículos, rutas) validado contra desajustes de oferta-demanda",
+  "nodos_previos": [
+    "ooda_loop_decision"
+  ],
+  "nodos_siguientes": [
+    "plataforma_colaboracion_masiva"
+  ],
+  "condiciones_activacion": [
+    "Cuando múltiples organizaciones deben coordinar operaciones logísticas complejas",
+    "Cuando se requiere planificación cíclica de oferta y demanda entre áreas funcionales distintas"
+  ],
+  "etiqueta_arbol": "Planifica Operaciones en Ciclos Cortos"
+}

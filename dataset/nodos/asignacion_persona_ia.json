@@ -1,0 +1,26 @@
+{
+  "node_id": "asignacion_persona_ia",
+  "fase_proyecto": "ideacion",
+  "dominio": "core",
+  "titulo_concepto": "Asignar Persona a la IA para Mejorar Resultados",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Dado que los LLMs predicen texto en base a patrones, sus respuestas por defecto tienden a ser genéricas. Definir explícitamente 'quién' es la IA (un experto, un crítico, un cliente potencial, un comediante) rompe ese patrón genérico y produce outputs más específicos, creativos y útiles para el contexto del negocio. Tratar a la IA como un colaborador con un rol definido, en un proceso iterativo de edición conjunta, mejora sustancialmente la calidad del resultado frente a preguntas simples y sin contexto.",
+  "pasos_accionables": [
+    "Definir un rol específico y relevante para la tarea antes de escribir el prompt (ej. 'actúa como director de marketing de una startup B2B')",
+    "Dar contexto y restricciones claras junto con la persona asignada",
+    "Iterar en modo conversación, refinando el output paso a paso en vez de pedir la respuesta final de una sola vez",
+    "Probar múltiples personas para la misma tarea y comparar la calidad de las respuestas"
+  ],
+  "entregable_esperado": "Biblioteca de prompts con personas definidas para las tareas recurrentes del negocio (marketing, ventas, producto)",
+  "nodos_previos": [
+    "human_in_the_loop_ia"
+  ],
+  "nodos_siguientes": [
+    "simulacion_clientes_ia"
+  ],
+  "condiciones_activacion": [
+    "Cuando las respuestas genéricas de la IA no aportan valor diferencial",
+    "Al iniciar sesiones de brainstorming o generación de contenido con IA"
+  ],
+  "etiqueta_arbol": "Dale una Identidad a tu IA"
+}

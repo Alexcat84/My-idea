@@ -1,0 +1,32 @@
+{
+  "node_id": "critical_path",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Critical Path (Camino Crítico)",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "Framework para enumerar los hitos absolutamente necesarios para alcanzar el traction goal con el menor número de pasos posible. Sirve principalmente como filtro para decidir qué NO hacer: toda actividad debe evaluarse contra el Critical Path, y si no está en el camino, no debe realizarse. Requiere reevaluación constante tras cada hito porque las suposiciones iniciales suelen ser incorrectas.",
+  "pasos_accionables": [
+    "Enumera los hitos estrictamente necesarios para alcanzar tu traction goal",
+    "Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios",
+    "Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla",
+    "Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real",
+    "Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos"
+  ],
+  "entregable_esperado": "Lista priorizada y validada de hitos críticos con proceso de reevaluación periódica establecido",
+  "nodos_previos": [
+    "traction_goal",
+    "bullseye_framework",
+    "law_of_shitty_click_throughs",
+    "middle_ring_testing"
+  ],
+  "nodos_siguientes": [
+    "middle_ring_testing",
+    "traction_channel_bias",
+    "alineacion_bd_metricas_core"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo tiene múltiples direcciones posibles y recursos limitados",
+    "Cuando se necesita justificar por qué NO se está trabajando en ciertas features o actividades"
+  ],
+  "etiqueta_arbol": "Traza tu Camino Crítico"
+}

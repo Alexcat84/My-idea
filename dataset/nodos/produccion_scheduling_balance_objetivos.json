@@ -1,0 +1,29 @@
+{
+  "node_id": "produccion_scheduling_balance_objetivos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Programación de Producción: Balance entre Objetivos Competitivos",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La programación de producción asigna la capacidad disponible (equipo, mano de obra, instalaciones) al trabajo que debe realizarse, buscando el equilibrio óptimo entre tres objetivos que compiten entre sí: altas tasas de utilización (economías de escala mediante corridas largas), bajos niveles de inventario (corridas cortas y entrega justo a tiempo) y altos niveles de servicio al cliente (evitar quiebres de stock). No es posible maximizar los tres simultáneamente, por lo que la gestión de operaciones consiste en encontrar el balance adecuado según la estrategia del negocio.",
+  "pasos_accionables": [
+    "Identificar cuáles de los tres objetivos (utilización, inventario, servicio) son prioritarios para tu modelo de negocio",
+    "Calcular el lote económico de producción (economic lot size) para cada producto",
+    "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario)",
+    "Revisar continuamente el inventario resultante contra la demanda real y ajustar"
+  ],
+  "entregable_esperado": "Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en run-out time",
+  "nodos_previos": [
+    "alineacion_ti_negocio",
+    "modelo_simulacion_cadena_suministro_circular"
+  ],
+  "nodos_siguientes": [
+    "gestion_instalaciones",
+    "gestion_pedidos_order_management"
+  ],
+  "condiciones_activacion": [
+    "Cuando el startup pasa de producción artesanal a producción en volumen",
+    "Si el usuario fabrica múltiples productos en una misma línea o instalación",
+    "Cuando hay tensión entre costos de inventario y nivel de servicio al cliente"
+  ],
+  "etiqueta_arbol": "Equilibra tus Objetivos de Producción"
+}

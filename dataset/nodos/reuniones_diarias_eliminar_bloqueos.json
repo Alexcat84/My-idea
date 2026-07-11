@@ -1,0 +1,26 @@
+{
+  "node_id": "reuniones_diarias_eliminar_bloqueos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Reuniones Diarias para Eliminar Bloqueos Críticos",
+  "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
+  "resumen_teorico": "En situaciones de supervivencia con plazos ajustados (ej. 60 días para salvar una cuenta), cualquier demora de una persona esperando una decisión puede ser fatal para el proyecto completo. La solución es instaurar reuniones diarias cuyo único propósito es identificar y resolver bloqueos antes de que superen las 24 horas de duración.",
+  "pasos_accionables": [
+    "Establecer una cadencia diaria (no semanal) de reunión con el equipo crítico",
+    "En cada reunión preguntar explícitamente: '¿Qué está bloqueado y por qué?'",
+    "Asignar autoridad y recursos inmediatos para resolver cada bloqueo detectado",
+    "No permitir que ningún bloqueo dure más de un ciclo de 24 horas"
+  ],
+  "entregable_esperado": "Calendario de reuniones diarias instaurado con registro de bloqueos y tiempos de resolución",
+  "nodos_previos": [
+    "descubrir_valor_inesperado_cliente"
+  ],
+  "nodos_siguientes": [
+    "cierre_segun_tamano_decision"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe un plazo crítico de supervivencia empresarial",
+    "Cuando la organización es grande y las decisiones tienden a estancarse en una sola persona"
+  ],
+  "etiqueta_arbol": "Destraba Todo con Reuniones Diarias"
+}

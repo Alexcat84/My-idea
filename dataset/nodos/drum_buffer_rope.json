@@ -1,0 +1,30 @@
+{
+  "node_id": "drum_buffer_rope",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Modelo Drum-Buffer-Rope para Sincronizar la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Modelo que sincroniza toda la cadena de suministro como una sola entidad, alineada al ritmo real de la demanda del mercado (el 'tambor'). Cada empresa gestiona la incertidumbre mediante buffers de inventario o capacidad productiva, y comparten datos de demanda (la 'cuerda') que los mantiene sincronizados, minimizando el efecto látigo (bullwhip effect).",
+  "pasos_accionables": [
+    "Identificar la demanda del mercado como el 'tambor' que marca el ritmo de toda la cadena",
+    "Determinar buffers de inventario o capacidad en cada eslabón según el nivel de incertidumbre",
+    "Compartir datos de demanda real (ventas POS) entre los participantes de la cadena para reducir la incertidumbre",
+    "Monitorear la reducción de las olas de demanda (bullwhip effect) tras la sincronización"
+  ],
+  "entregable_esperado": "Diagrama de flujo de inventario sincronizado con buffers definidos y acuerdo de intercambio de datos de demanda",
+  "nodos_previos": [
+    "cinco_pasos_enfoque_restricciones",
+    "alineacion_incentivos_desempeno",
+    "gestion_rationing_shortage_gaming",
+    "precios_todos_los_dias_bajos",
+    "teoria_de_restricciones"
+  ],
+  "nodos_siguientes": [
+    "sales_operations_planning"
+  ],
+  "condiciones_activacion": [
+    "Cuando la cadena de suministro sufre fuertes fluctuaciones de demanda (efecto látigo)",
+    "Si múltiples empresas de la cadena desean coordinar operaciones"
+  ],
+  "etiqueta_arbol": "Sincroniza tu Cadena al Ritmo"
+}

@@ -3,14 +3,18 @@
   "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Sistema Inmune del Producto (Andon Cord adaptado)",
-  "fuente": "The Lean Startup - Eric Ries",
+  "fuente": "The Lean Startup - Eric Ries | Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Inspirado en el cordón andon de Toyota (que permite a cualquier trabajador detener la línea de producción al detectar un defecto), el 'sistema inmune del producto' es un conjunto de mecanismos automáticos de defensa que monitorean tanto el funcionamiento técnico del producto como la salud del negocio (métricas clave). Cuando se detecta un problema —incluso uno sutil que las pruebas automatizadas no capturarían, como un botón de compra invisible por error de diseño— el sistema puede revertir automáticamente el cambio defectuoso, notificar al equipo responsable y bloquear nuevos cambios hasta resolver la causa raíz.",
   "pasos_accionables": [
     "Definir métricas de negocio críticas que deben monitorearse continuamente (ej: tasa de conversión, ventas)",
     "Implementar pruebas automatizadas funcionales y de negocio para cada despliegue",
     "Configurar alertas automáticas que notifiquen al equipo ante cualquier anomalía detectada",
     "Establecer un protocolo de reversión automática del cambio defectuoso",
-    "Bloquear nuevos despliegues del equipo responsable hasta encontrar y corregir la causa raíz del problema"
+    "Bloquear nuevos despliegues del equipo responsable hasta encontrar y corregir la causa raíz del problema",
+    "Revisar los puntos de fricción del producto que generan llamadas de soporte",
+    "Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente",
+    "Desarrollar herramientas de autoservicio y autosanación dentro del producto",
+    "Medir el porcentaje de problemas resueltos sin intervención humana"
   ],
   "entregable_esperado": "Un sistema de monitoreo y alertas automáticas que protege al producto y al negocio de cambios defectuosos, permitiendo detección y corrección casi inmediata",
   "nodos_previos": [

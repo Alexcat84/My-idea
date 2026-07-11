@@ -1,0 +1,26 @@
+{
+  "node_id": "comprender_alineacion_etica_ia",
+  "fase_proyecto": "ideacion",
+  "dominio": "core",
+  "titulo_concepto": "Alineación y Ética de la IA",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Antes de integrar IA en un producto o proceso de negocio, el emprendedor debe entender que los modelos de IA heredan sesgos de sus datos de entrenamiento (mayormente web abierta, dominado por perspectivas occidentales y masculinas) y que el proceso de alineación (RLHF) no elimina completamente estos sesgos, solo los oculta o reemplaza por otros. Esto tiene implicaciones directas si se construye un producto que use IA generativa para atender usuarios diversos, tomar decisiones de contratación, evaluación o generación de contenido.",
+  "pasos_accionables": [
+    "Auditar qué modelo de IA se usará y qué se conoce sobre sus datos de entrenamiento y proceso de fine-tuning",
+    "Probar el modelo con casos de uso reales del negocio buscando sesgos de género, raza o cultura",
+    "Documentar los sesgos encontrados y decidir mitigaciones (prompts correctivos, revisión humana, elección de otro modelo)",
+    "Evaluar implicaciones legales y regulatorias según el país donde opera el startup (UE vs EEUU vs Japón)"
+  ],
+  "entregable_esperado": "Informe de auditoría de sesgos y riesgos éticos del modelo de IA elegido para el producto/negocio",
+  "nodos_previos": [
+    "desafios_implementacion_ia"
+  ],
+  "nodos_siguientes": [
+    "modelo_quality_by_design_juran"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendimiento planea integrar IA generativa en su producto o servicio",
+    "Cuando el producto involucra decisiones sensibles (contratación, crédito, salud, justicia)"
+  ],
+  "etiqueta_arbol": "Cuida la Ética de tu IA"
+}

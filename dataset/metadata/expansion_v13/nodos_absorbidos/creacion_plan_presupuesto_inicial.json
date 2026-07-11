@@ -1,0 +1,25 @@
+{
+  "node_id": "creacion_plan_presupuesto_inicial",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Creación de Plan de Proyecto y Presupuesto Inicial mediante Time Boxing",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Un plan es una secuencia de tareas no repetitivas para lograr objetivos aún no alcanzados. Se recomienda usar 'time boxing': asignar límites de tiempo realistas pero ambiciosos a cada tarea, dividiendo el trabajo en tres etapas (Definir: 2-6 semanas, Diseñar: 1-3 meses, Construir: 2-6 meses), evitando la ley de Parkinson donde el trabajo se expande para llenar el tiempo disponible.",
+  "pasos_accionables": [
+    "Crear una sección del plan para cada objetivo definido",
+    "Listar las tareas principales de diseño y construcción para cada objetivo",
+    "Mostrar dependencias entre tareas y entre objetivos",
+    "Asignar 'time boxes' (límites de tiempo) a cada tarea con input del equipo ejecutor",
+    "Ajustar iterativamente tiempo y alcance hasta lograr un plan ambicioso pero factible"
+  ],
+  "entregable_esperado": "Plan de proyecto documentado con time boxes definidos por objetivo y por fase (definir/diseñar/construir)",
+  "nodos_previos": [
+    "definicion_objetivos_proyecto_sistema"
+  ],
+  "nodos_siguientes": [
+    "estimacion_presupuesto_roi_sistema"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita convertir objetivos de proyecto en un cronograma concreto de trabajo"
+  ]
+}

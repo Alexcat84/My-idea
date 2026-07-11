@@ -1,0 +1,26 @@
+{
+  "node_id": "comprension_capacidades_limitaciones_ia",
+  "fase_proyecto": "ideacion",
+  "dominio": "core",
+  "titulo_concepto": "Comprensión de las Capacidades y Limitaciones Impredecibles de la IA",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Las IA modernas muestran capacidades emergentes que ni sus propios creadores anticiparon completamente, pudiendo sobresalir en tareas complejas (como escribir código funcional) mientras fallan en tareas aparentemente simples (como jugar tic-tac-toe correctamente). Esto significa que las tareas fáciles para humanos pueden ser difíciles para la IA y viceversa. Los emprendedores deben probar empíricamente qué tan bien la IA resuelve su caso de uso específico antes de confiar en ella, en lugar de asumir capacidades basadas en la reputación general del modelo.",
+  "pasos_accionables": [
+    "Diseñar pruebas específicas para el caso de uso propio del negocio, no solo confiar en benchmarks generales",
+    "Probar la IA en tareas límite (edge cases) relevantes para el negocio",
+    "Documentar patrones de error y aciertos encontrados durante las pruebas",
+    "Establecer un proceso de revisión humana para outputs críticos",
+    "Iterar el prompt o el flujo de trabajo basado en los resultados de las pruebas"
+  ],
+  "entregable_esperado": "Reporte de pruebas empíricas de la IA aplicada al caso de uso específico, con matriz de aciertos/errores documentada.",
+  "nodos_previos": [
+    "seleccion_modelo_ia_adecuado"
+  ],
+  "nodos_siguientes": [
+    "fine_tuning_ia_para_caso_de_uso"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendedor va a delegar una tarea crítica del negocio a un sistema de IA generativa"
+  ],
+  "etiqueta_arbol": "Conoce lo que la IA Ignora"
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "milk_run_deliveries",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Entregas Milk Run",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Las entregas milk run consolidan múltiples orígenes o destinos en una sola ruta de transporte, en lugar de hacer entregas directas punto a punto. Permiten combinar cantidades menores a carga completa (LTL) en cargas completas (TL), reduciendo costos de transporte y de recepción. Existen dos técnicas principales de ruteo: la matriz de ahorros (savings matrix), más simple y flexible ante restricciones, y la asignación generalizada (generalized assignment), más eficiente cuando la única restricción es la capacidad del vehículo.",
+  "pasos_accionables": [
+    "Identificar ubicaciones de origen y destino que puedan consolidarse en una sola ruta",
+    "Calcular las cantidades económicas de pedido (EOQ) de cada producto por ubicación",
+    "Elegir la técnica de ruteo (matriz de ahorros o asignación generalizada) según las restricciones existentes (ventanas de tiempo, capacidad de vehículo)",
+    "Diseñar la secuencia de recogidas/entregas y validar con software de ruteo",
+    "Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada"
+  ],
+  "entregable_esperado": "Plan de ruta de entrega consolidada (milk run) con secuencia de paradas, cantidades por parada y técnica de ruteo seleccionada",
+  "nodos_previos": [
+    "gestion_inventario"
+  ],
+  "nodos_siguientes": [
+    "crossdocking",
+    "driver_transporte",
+    "colaboracion_transporte_ctm"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples clientes o proveedores con volúmenes menores a carga completa",
+    "Cuando se busca reducir costos de transporte consolidando envíos"
+  ],
+  "etiqueta_arbol": "Consolida tus Rutas de Entrega"
+}

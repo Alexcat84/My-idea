@@ -1,0 +1,27 @@
+{
+  "node_id": "ai_panel_de_criticos",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "IA como Panel de Críticos para Validar Planes",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Consiste en usar la IA para simular la crítica de figuras reconocidas (líderes, emprendedores, expertos) sobre un plan de negocio, así como pedir explícitamente formas en que el plan podría fracasar y una visión de éxito. Esta técnica convierte a la IA en un simulador de retroalimentación de bajo costo antes de exponer la idea a stakeholders reales, ayudando a anticipar riesgos y fortalecer la propuesta.",
+  "pasos_accionables": [
+    "Describir el plan o modelo de negocio a la IA con suficiente detalle",
+    "Pedir 10 formas específicas en que el plan podría fallar",
+    "Solicitar una visión de éxito alternativa",
+    "Invocar 2-3 personajes conocidos (emprendedores, líderes) para que critiquen el plan en su propia voz",
+    "Sintetizar los hallazgos en un documento de riesgos y mitigaciones"
+  ],
+  "entregable_esperado": "Documento de análisis de riesgos del plan de negocio con perspectivas múltiples simuladas y mitigaciones propuestas",
+  "nodos_previos": [
+    "prompting_cadena_de_pensamiento",
+    "propuesta_de_valor"
+  ],
+  "nodos_siguientes": [
+    "iteracion_plan_negocio"
+  ],
+  "condiciones_activacion": [
+    "Antes de presentar un plan de negocio a inversores o socios",
+    "Cuando se busca una validación rápida y de bajo costo de una estrategia"
+  ]
+}

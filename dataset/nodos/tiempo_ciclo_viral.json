@@ -1,0 +1,28 @@
+{
+  "node_id": "tiempo_ciclo_viral",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Tiempo de Ciclo Viral (Viral Cycle Time)",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "Es el tiempo que tarda un usuario en completar el ciclo viral completo: desde que recibe una invitación hasta que se convierte en un nuevo usuario que a su vez invita a otros. Dos productos con el mismo coeficiente viral pero diferentes tiempos de ciclo tendrán resultados de crecimiento dramáticamente distintos: cuanto más corto el ciclo, más rápido el crecimiento compuesto. Reducir la fricción en cada paso del embudo y crear urgencia son las palancas principales para acortarlo.",
+  "pasos_accionables": [
+    "Medir el tiempo promedio desde el envío de una invitación hasta la conversión del invitado",
+    "Mapear cada paso del embudo de invitación a registro",
+    "Eliminar pasos innecesarios (páginas extra, campos de formulario)",
+    "Crear incentivos o urgencia para acelerar la acción del usuario invitado",
+    "Simplificar la integración con el producto (ej. embed codes) para reducir fricción"
+  ],
+  "entregable_esperado": "Mapa del ciclo viral con tiempos medidos por etapa y lista de optimizaciones aplicadas",
+  "nodos_previos": [
+    "coeficiente_viral"
+  ],
+  "nodos_siguientes": [
+    "identificacion_bolsas_virales",
+    "seeding_canal_viral"
+  ],
+  "condiciones_activacion": [
+    "Cuando el canal de tracción principal es viral/boca a boca",
+    "Cuando se busca acelerar el crecimiento compuesto del producto"
+  ],
+  "etiqueta_arbol": "Acelera tu Ciclo Viral"
+}

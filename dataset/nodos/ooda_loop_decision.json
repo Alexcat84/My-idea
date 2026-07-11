@@ -1,0 +1,27 @@
+{
+  "node_id": "ooda_loop_decision",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Ciclo OODA para Decisiones Rápidas en Entornos Cambiantes",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El ciclo OODA (Observar, Orientar, Decidir, Actuar), originado en el ámbito militar, es un proceso iterativo y no lineal centrado en la 'orientación' como núcleo de comprensión de la situación. En entornos bien entendidos se puede saltar la fase de 'decidir' y ciclar rápidamente entre observar-orientar-actuar (guía implícita). La guía explícita (decisión formal) solo se requiere ante cambios significativos. Es clave para operar con velocidad en cadenas de suministro y respuesta a crisis.",
+  "pasos_accionables": [
+    "Establecer canales de observación continua (sensores, reportes, datos en tiempo real)",
+    "Entrenar al equipo para interpretar rápidamente la situación (orientar) según objetivos claros",
+    "Definir cuándo se puede actuar directamente (guía implícita) y cuándo se requiere decisión formal",
+    "Medir resultados de cada acción y retroalimentar el ciclo continuamente"
+  ],
+  "entregable_esperado": "Un protocolo operativo documentado que defina las fases de observación, orientación, decisión y acción para el equipo",
+  "nodos_previos": [
+    "ciclo_shewhart_pdsa",
+    "bucle_retroalimentacion_autoajustable"
+  ],
+  "nodos_siguientes": [
+    "proceso_sop_mop"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización opera en entornos de alta incertidumbre o crisis (VUCA)",
+    "Cuando las decisiones centralizadas son demasiado lentas frente a la velocidad de los eventos"
+  ],
+  "etiqueta_arbol": "Decide Rápido con el Ciclo OODA"
+}

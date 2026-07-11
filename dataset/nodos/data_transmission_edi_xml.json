@@ -1,0 +1,26 @@
+{
+  "node_id": "data_transmission_edi_xml",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Transmisión de Datos: EDI y XML",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "EDI (Electronic Data Interchange) es una tecnología para transmitir datos estandarizados entre empresas (órdenes de compra, facturas, notificaciones de envío). XML es una tecnología más flexible y extensible que permite comunicación entre computadoras y entre computadoras y humanos. Ambas tecnologías están convergiendo en sistemas híbridos.",
+  "pasos_accionables": [
+    "Identificar qué transacciones de negocio requieren automatización (órdenes, facturas, envíos)",
+    "Evaluar si la infraestructura EDI existente es suficiente o se necesita XML",
+    "Definir estándares de datos con socios comerciales",
+    "Implementar traducción EDI-XML si se requiere compatibilidad híbrida"
+  ],
+  "entregable_esperado": "Especificación de formato de intercambio de datos con socios comerciales clave",
+  "nodos_previos": [
+    "cloud_computing_supply_chain"
+  ],
+  "nodos_siguientes": [
+    "erp_systems",
+    "supply_chain_management_systems"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa necesita automatizar transacciones repetitivas con proveedores o clientes"
+  ],
+  "etiqueta_arbol": "Conecta tus Sistemas de Datos"
+}

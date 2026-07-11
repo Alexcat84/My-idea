@@ -1,0 +1,5925 @@
+[
+  {
+    "fantasma": "integracion_post_adquisicion",
+    "destino": "carta_de_intencion_loi",
+    "score": 0.4994,
+    "titulo_destino": "Carta de Intención (Letter of Intent) para Adquisiciones",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "adquisicion_estrategica_resolver_crisis",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "mapeo_de_stakeholders_clave",
+    "destino": "stakeholder_mapping_wheel",
+    "score": 0.7654,
+    "titulo_destino": "Mapeo de Stakeholders (Stakeholder Wheel)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "advances_vs_continuations",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "segmentacion_clientes",
+    "destino": "customer_archetypes",
+    "score": 0.5801,
+    "titulo_destino": "Arquetipos de Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "advocacy_customer_journey",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "atributos_mercado_chopra_meindl",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "community_building_estrategia",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "construccion_tribu_de_marca",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "content_marketing_blog",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "cuatro_etapas_llamada_de_ventas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "enfoque_en_superfans",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "estrategia_cuatro_capacidades_mercado",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "eventos_offline_como_canal_traccion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_adopt_ciclo_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_assess_ciclo_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_assess_experiencia_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "investigar_datos_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preframing_expectativas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preparacion_preguntas_problema_precall",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "seo_estrategia_fat_head",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "simulacion_clientes_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Arquetipos de cliente son una forma de segmentación",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fase_adopt_customer_journey",
+    "destino": "fase_adopt_ciclo_cliente",
+    "score": 0.7671,
+    "titulo_destino": "Fase Adopt del Ciclo de Vida del Cliente",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "advocacy_customer_journey",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "onboarding_cliente",
+    "destino": "welcome_call_cliente_veterano",
+    "score": 0.5666,
+    "titulo_destino": "Llamada de Bienvenida por un Cliente Veterano (Peer Onboarding)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "advocacy_customer_journey",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "desconexion_ventas_experiencia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "fase_acclimate_experiencia_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_accomplish_experiencia_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_admit_celebracion",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "fase_assess_experiencia_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "preframing_expectativas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Llamada de bienvenida es parte del onboarding",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "proceso_investigate_clientes",
+    "destino": "rediseno_procesos_negocio_cx",
+    "score": 0.6503,
+    "titulo_destino": "Rediseño de Procesos de Negocio Centrado en el Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "advocacy_customer_journey",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "conexion_personal_emocional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos tratan procesos centrados en el cliente",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "programa_referidos",
+    "destino": "evaluacion_mejora_programa_2",
+    "score": 0.5881,
+    "titulo_destino": "Evaluación y Mejora del Programa de Seguridad (Elemento del Programa)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "advocacy_customer_journey",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "construccion_tribu_de_marca",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "enfoque_en_superfans",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "regalos_estrategicos_personalizados",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Destino trata programas de seguridad, no de referidos",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_metrica_traccion",
+    "destino": "drift_hacia_el_fallo",
+    "score": 0.5308,
+    "titulo_destino": "Drift: Desviación Incremental hacia el Fallo",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "alineacion_bd_metricas_core",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Drift organizacional no es una métrica de tracción",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "participantes_cadena_suministro",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.6959,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "alineacion_cadena_estrategia_negocio",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincide con definición general de cadena de suministro",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "desarrollo_capacidades_cadena",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.6235,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "alineacion_cadena_estrategia_negocio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "El destino solo define/alinea, no desarrolla capacidades",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "sincronizacion_cadena_suministro",
+    "destino": "drum_buffer_rope",
+    "score": 0.7395,
+    "titulo_destino": "Modelo Drum-Buffer-Rope para Sincronizar la Cadena de Suministro",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "alineacion_incentivos_desempeno",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "gestion_rationing_shortage_gaming",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "precios_todos_los_dias_bajos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "preparacion_llamada_ventas",
+    "destino": "apertura_llamada_venta_grande",
+    "score": 0.6974,
+    "titulo_destino": "Apertura de Llamada en Ventas Grandes: Mito de la Primera Impresión",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "apertura_efectiva_llamada_venta",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos tratan sobre llamadas de ventas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "segmentacion_de_clientes",
+    "destino": "analisis_de_cohortes",
+    "score": 0.6086,
+    "titulo_destino": "Análisis de Cohortes para Retención",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "apertura_efectiva_llamada_venta",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "construccion_de_comunidad_como_canal_traccion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "estrategia_plataformas_existentes",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "metodologia_spin_selling",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preguntas_situacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Cohortes son una técnica de segmentación",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "solucion_robusta_80",
+    "destino": "regla_todo_o_nada_inspeccion_2",
+    "score": 0.4656,
+    "titulo_destino": "Regla de Inspección Todo-o-Nada (All-or-None Rules)",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "arquitectura_flexible_soa",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "plataforma_colaboracion_masiva",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "visibilidad_tiempo_real",
+    "destino": "gestion_visual_del_pipeline_de_desarrollo",
+    "score": 0.5679,
+    "titulo_destino": "Gestión Visual del Pipeline de Desarrollo (Portfolio Visibility)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "arquitectura_flexible_soa",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "division_trabajo_humano_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Tableros visuales dan visibilidad en tiempo real",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "colaboracion_masiva_cadena_suministro",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.7431,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "arquitectura_tecnica_modular",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_segmento_cliente",
+    "destino": "customer_profile",
+    "score": 0.7116,
+    "titulo_destino": "Customer Profile (Perfil del Cliente)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "blogging_como_canal_de_traccion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "estrategia_ventas_enterprise",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "targeting_blogs_traccion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "propuesta_de_valor",
+    "destino": "value_proposition_startup",
+    "score": 0.6818,
+    "titulo_destino": "Propuesta de Valor",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "blogging_como_canal_de_traccion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "construccion_de_comunidad_como_canal_traccion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "construccion_de_valor_percibido",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "construccion_tribu_de_marca",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "ecuacion_de_valor_venta",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "email_marketing_para_captacion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_assess_ciclo_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "garantias_implicitas_vs_expresas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "metodologia_spin_selling",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "metricas_servicio_cliente_bts_bto",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preframing_expectativas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preguntas_beneficio",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "publicidad_no_convencional_stunts",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincidencia directa de concepto",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "seo_como_canal",
+    "destino": "canales_de_traccion_19",
+    "score": 0.557,
+    "titulo_destino": "Los 19 Canales de Tracción",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "blogging_como_canal_de_traccion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "SEO es uno de los 19 canales descritos",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "alianzas_estrategicas_proveedores",
+    "destino": "asociaciones_clave",
+    "score": 0.7545,
+    "titulo_destino": "Bloque de Asociaciones Clave (Key Partnerships)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "bpm_gestion_excepciones",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "mapeo_cadena_suministro",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.7364,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "bucle_retroalimentacion_autoajustable",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "gestion_procurement_consumo",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "gestion_riesgo_cadena_suministro",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "sistema_visibilidad_cadena_suministro_low_cost",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_metricas_desempeno",
+    "destino": "funcion_perdida_taguchi",
+    "score": 0.5465,
+    "titulo_destino": "Función de Pérdida de Taguchi para Definir Especificaciones",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "bucle_retroalimentacion_autoajustable",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Función de Taguchi es de manufactura, no métricas de desempeño general",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_kpis_desempeno",
+    "destino": "key_process_product_characteristics",
+    "score": 0.5199,
+    "titulo_destino": "Características Clave de Producto y Proceso (KPC)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "bucle_retroalimentacion_autoajustable",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "estrategia_cuatro_capacidades_mercado",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "KPC se relaciona con características medibles de desempeño",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "resiliencia_cadena_suministro",
+    "destino": "trade_off_responsividad_eficiencia",
+    "score": 0.663,
+    "titulo_destino": "Balance entre Capacidad de Respuesta y Eficiencia",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "bucle_retroalimentacion_autoajustable",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trade-off eficiencia/responsividad no es resiliencia",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "retencion_de_talento_en_crisis",
+    "destino": "analisis_competitivo",
+    "score": 0.6002,
+    "titulo_destino": "Análisis Competitivo para Identificar Oportunidades",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "buen_lugar_para_trabajar",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Análisis competitivo no trata retención de talento",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "critical_path_framework",
+    "destino": "critical_path",
+    "score": 0.7109,
+    "titulo_destino": "Critical Path (Camino Crítico)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "bullseye_framework",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "traction_test",
+    "destino": "usability_testing_producto",
+    "score": 0.5357,
+    "titulo_destino": "Pruebas de Usabilidad (Usability Testing)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "bullseye_framework",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Pruebas de usabilidad no son pruebas de tracción",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_de_riesgos",
+    "destino": "gestion_riesgo_incremental",
+    "score": 0.7547,
+    "titulo_destino": "Gestión de Riesgo Incremental (Reglas de Apuesta)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "cadena_suministro_respuesta_desastres",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "planificacion_de_demanda",
+    "destino": "plan_de_adquisicion_acquire",
+    "score": 0.6743,
+    "titulo_destino": "Plan de Adquisición de Clientes (Acquire Plan)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "cadena_suministro_respuesta_desastres",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Plan de adquisición de clientes no es planificación de demanda",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "diseno_experiencia_fase_admit",
+    "destino": "revision_diseno",
+    "score": 0.6219,
+    "titulo_destino": "Revisión de Diseño (Design Review)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "calibracion_intensidad_celebracion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "estrategia_multicanal_bienvenida",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_affirm_reduccion_incertidumbre",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "No coincide claramente con revisión de diseño genérica",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "mvp_producto_minimo_viable",
+    "destino": "insuficiencia_especificaciones",
+    "score": 0.5659,
+    "titulo_destino": "La insuficiencia de cumplir solo con especificaciones",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "canales_link_sharing",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Insuficiencia de especificaciones no trata MVP",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "estrategia_upsell",
+    "destino": "estrategia_hibrida_control_riqueza",
+    "score": 0.5619,
+    "titulo_destino": "Estrategia Híbrida: Combinar Control y Riqueza en Etapas",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "celebracion_automatizada_de_hitos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Estrategia de control/riqueza no trata upsell",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "fase_adopcion_cliente",
+    "destino": "fase_adopt_ciclo_cliente",
+    "score": 0.7761,
+    "titulo_destino": "Fase Adopt del Ciclo de Vida del Cliente",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "celebracion_automatizada_de_hitos",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "fase_accomplish_experiencia_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "reunion_conclusion_proyecto",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fase_accomplish_cliente",
+    "destino": "fase_accomplish_experiencia_cliente",
+    "score": 0.7398,
+    "titulo_destino": "Fase Accomplish: Verificar que el Cliente Logró su Objetivo",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "celebracion_hitos_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "documento_quien_es_quien_equipo",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "fase_acclimate_experiencia_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "identificacion_de_crisis_empresarial",
+    "destino": "deteccion_de_mentiras_organizacionales",
+    "score": 0.6206,
+    "titulo_destino": "Detección de Mentiras Organizacionales en Momentos de Crisis",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "ceo_de_guerra_vs_paz",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Detección de mentiras se da en contexto de crisis empresarial",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_vision_estrategica",
+    "destino": "establecer_vision_organizacional",
+    "score": 0.73,
+    "titulo_destino": "Establecimiento de Visión, Misión y Estrategias Organizacionales",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "ceo_de_guerra_vs_paz",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "never_lose_a_customer_onboarding",
+    "destino": "customer_retention_strategy",
+    "score": 0.573,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "cierre_satisfaccion_postventa",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Estrategia de retención se relaciona con no perder clientes",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "venta_consultiva_spin",
+    "destino": "framework_spin_selling",
+    "score": 0.7044,
+    "titulo_destino": "Framework SPIN Selling",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "cierre_satisfaccion_postventa",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "cierre_segun_tamano_decision",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "cierre_sofisticacion_comprador",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_relacion_postventa",
+    "destino": "tecnica_freaky_friday",
+    "score": 0.6219,
+    "titulo_destino": "Técnica de Gestión 'Freaky Friday' (Intercambio de Roles)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "cierre_segun_complejidad_venta",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "contratos_de_servicio_garantia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "escala_actitud_cierre",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "mecanismo_resolucion_disputas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Freaky Friday es técnica de conflicto entre equipos, no postventa",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "venta_consultiva",
+    "destino": "contratar_cerrador_de_ventas",
+    "score": 0.5445,
+    "titulo_destino": "Contratar un Cerrador de Ventas (Sales Closer)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "cierre_segun_complejidad_venta",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Contratar cerrador de ventas no es venta consultiva",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "diseno_producto_minimo_viable",
+    "destino": "insuficiencia_especificaciones",
+    "score": 0.6465,
+    "titulo_destino": "La insuficiencia de cumplir solo con especificaciones",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "clasificacion_garantia_full_limited",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata sobre especificaciones de materiales, no sobre MVP",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_propuesta_valor",
+    "destino": "value_proposition_startup",
+    "score": 0.7495,
+    "titulo_destino": "Propuesta de Valor",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "clasificacion_garantia_full_limited",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_accomplish_experiencia_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "politica_servicio_postventa",
+    "destino": "contratos_de_servicio_garantia",
+    "score": 0.6451,
+    "titulo_destino": "Ofrecer Contratos de Servicio (Service Contracts) Correctamente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "clasificacion_garantia_full_limited",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "diferenciacion_garantia_contrato_servicio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Contratos de servicio son parte de la política postventa",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "generacion_leads",
+    "destino": "liderazgo_ejecutivo_innovacion",
+    "score": 0.516,
+    "titulo_destino": "Los Siete Hábitos del Liderazgo Exitoso en Innovación",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "clasificacion_leads_abc",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata liderazgo en innovación, no generación de leads",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "value_proposition_design",
+    "destino": "elementos_creadores_valor",
+    "score": 0.7162,
+    "titulo_destino": "Elementos Creadores de Valor en la Propuesta",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "clasificacion_leads_abc",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "diseno_embudo_ventas_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "nutricion_leads_marketing",
+    "destino": "relacion_calidad_cuota_mercado",
+    "score": 0.5328,
+    "titulo_destino": "Relación entre Calidad y Cuota de Mercado",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "clasificacion_leads_abc",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata calidad y cuota de mercado, no nutrición de leads",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "segmentacion_mercado",
+    "destino": "market_type_revenue_growth",
+    "score": 0.6247,
+    "titulo_destino": "Tipo de Mercado y Curvas de Crecimiento de Ingresos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "clasificacion_mercados_cadena_suministro",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "marco_analisis_mercado_cadena_suministro",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "modelo_cuadrantes_mercado",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Tipos de mercado se relacionan con segmentación",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "analisis_mercado",
+    "destino": "estudio_mercado_calidad",
+    "score": 0.6992,
+    "titulo_destino": "Estudio de Mercado para Evaluar Posición Competitiva en Calidad",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "clasificacion_mercados_cadena_suministro",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "modelo_cuadrantes_mercado",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Estudio de mercado es un tipo de análisis de mercado",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "estrategia_inventario",
+    "destino": "gestion_inventario",
+    "score": 0.7362,
+    "titulo_destino": "Gestión Eficiente de Inventario",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "clasificacion_mercados_cadena_suministro",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "mejora_continua_cadena_suministro",
+    "destino": "equipo_conjunto_de_mejora_con_proveedores",
+    "score": 0.7854,
+    "titulo_destino": "Equipo Conjunto Comprador-Proveedor para Mejora de Cadena de Suministro",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "colaboracion_transporte_ctm",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "logistica_inversa_retornos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "shared_scorecard",
+    "destino": "scorecard_desempeno_cadena_suministro",
+    "score": 0.5061,
+    "titulo_destino": "Scorecard de Desempeño y Bucle de Retroalimentación Autocorrectivo",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "collaboration_enablers",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "collaborative_transportation_management",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Scorecard compartido en cadena de suministro encaja con el concepto",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "supply_chain_mapping",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.7782,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "collaborative_transportation_management",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "stakeholder_identification",
+    "destino": "stakeholder_mapping_wheel",
+    "score": 0.7193,
+    "titulo_destino": "Mapeo de Stakeholders (Stakeholder Wheel)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "collaborative_transportation_management",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "retencion_clientes",
+    "destino": "customer_retention_strategy",
+    "score": 0.8215,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "community_building_estrategia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "customer_appreciation_pr",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "never_lose_a_customer_experiencia_post_venta",
+    "destino": "customer_retention_strategy",
+    "score": 0.6138,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "community_building_estrategia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Retención de clientes se alinea con experiencia postventa",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_sistema_simple_multiproposito",
+    "destino": "anatomia_proceso_arbol_ensamble",
+    "score": 0.4551,
+    "titulo_destino": "Anatomía del Proceso: Árbol de Ensamble",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "complejidad_acorde_capacidad_organizacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "seleccion_modelo_ia",
+    "destino": "pricing_models_selection",
+    "score": 0.6521,
+    "titulo_destino": "Selección de Modelo de Precios",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comprender_alineacion_etica_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata modelos de precios, no modelos de IA",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "diseno_producto_ia_responsable",
+    "destino": "modelo_quality_by_design_juran",
+    "score": 0.7175,
+    "titulo_destino": "Modelo Universal de Quality by Design (Juran)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "comprender_alineacion_etica_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "analisis_de_tendencias_tecnologicas",
+    "destino": "ejecucion_incremental_transicion_tecnologica",
+    "score": 0.6606,
+    "titulo_destino": "Transición Tecnológica mediante Pasos Incrementales",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comprender_ia_como_tecnologia_de_proposito_general",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata ejecución de transición tecnológica, no análisis de tendencias",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "vigilancia_competitiva",
+    "destino": "analisis_competitivo_calidad",
+    "score": 0.6271,
+    "titulo_destino": "Análisis Competitivo de Producto",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comprender_ia_como_tecnologia_de_proposito_general",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Análisis competitivo de producto es vigilancia competitiva",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cierre_ventas",
+    "destino": "cierre_segun_complejidad_venta",
+    "score": 0.6168,
+    "titulo_destino": "Efectividad del Cierre según la Complejidad de la Venta",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "compromiso_linea_tiempo_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Trata directamente la efectividad del cierre de ventas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "spin_selling_preguntas",
+    "destino": "framework_spin_selling",
+    "score": 0.7658,
+    "titulo_destino": "Framework SPIN Selling",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "compromiso_linea_tiempo_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "diseno_embudo_ventas_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "reconstruccion_de_confianza_organizacional",
+    "destino": "confianza_mutua_fundadores",
+    "score": 0.686,
+    "titulo_destino": "Construcción y Mantenimiento de la Confianza entre Cofundadores",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comunicacion_a_toda_la_empresa",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Construcción de confianza entre cofundadores encaja con el tema",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "ejecucion_bajo_presion",
+    "destino": "cierre_segun_tamano_decision",
+    "score": 0.5356,
+    "titulo_destino": "Relación entre Presión de Cierre y Tamaño de la Decisión",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comunicacion_honesta_en_crisis_al_equipo",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "reuniones_diarias_eliminar_bloqueos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Relación presión-tamaño de decisión aplica a ejecución bajo presión",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "reconocimiento_equipo_post_crisis",
+    "destino": "tecnica_freaky_friday",
+    "score": 0.6234,
+    "titulo_destino": "Técnica de Gestión 'Freaky Friday' (Intercambio de Roles)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comunicacion_honesta_en_crisis_al_equipo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata intercambio de roles, no reconocimiento post-crisis",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "contratacion_basada_en_mision",
+    "destino": "definir_mision_organizacional",
+    "score": 0.6253,
+    "titulo_destino": "Definir la Misión Organizacional",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comunidad_como_activo_estrategico",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata definición de misión, no contratación basada en ella",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "programa_lealtad_exclusivo",
+    "destino": "estrategia_multicanal_bienvenida",
+    "score": 0.5075,
+    "titulo_destino": "Estrategia Multicanal de Bienvenida (6 Herramientas de Comunicación)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "comunidad_tribu_marca",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_adopt",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "marcador_visual_marca",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata bienvenida multicanal, no programa de lealtad",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "proceso_personalize_clientes",
+    "destino": "rediseno_procesos_negocio_cx",
+    "score": 0.6826,
+    "titulo_destino": "Rediseño de Procesos de Negocio Centrado en el Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "conexion_personal_emocional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Rediseño de procesos centrado en cliente encaja con personalización",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "preguntas_situacion_problema_implicacion_necesidad",
+    "destino": "necesidades_implicitas_vs_explicitas",
+    "score": 0.7006,
+    "titulo_destino": "Necesidades Implícitas vs. Explícitas",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "construccion_de_valor_percibido",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "cuatro_etapas_llamada_de_ventas",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "investigacion_como_habilidad_clave",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "metodologia_spin_selling",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "co_inteligencia_humano_ia",
+    "destino": "human_in_the_loop_ia",
+    "score": 0.6849,
+    "titulo_destino": "Ser el Humano en el Circuito (Human in the Loop)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "construccion_experticia_era_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Human in the loop es el núcleo de co-inteligencia humano-IA",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "modelo_negocio_con_ia",
+    "destino": "alineacion_ti_negocio",
+    "score": 0.7527,
+    "titulo_destino": "Alineación de TI con el Modelo de Negocio",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "construccion_experticia_era_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "experto_en_el_bucle",
+    "destino": "nueva_vision_organizacion_linea_seguridad",
+    "score": 0.5496,
+    "titulo_destino": "New View: Seguridad Impulsada por la Línea y el Experto",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "construccion_experticia_era_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "New View otorga poder al experto, coherente con expertos en el bucle",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "filosofia_fundador_tecnico_como_ceo",
+    "destino": "busqueda_cofundador_complementario",
+    "score": 0.5604,
+    "titulo_destino": "Búsqueda de Cofundador Complementario",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "construccion_red_profesional_integrada",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata búsqueda de cofundador, no filosofía de fundador técnico como CEO",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "fase_advocate_cliente",
+    "destino": "advocacy_customer_journey",
+    "score": 0.7397,
+    "titulo_destino": "Fase de Advocate en el Customer Journey",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "construccion_tribu_de_marca",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "enfoque_en_superfans",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "experiencias_exclusivas_vip",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "fase_adopt_ciclo_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "regalos_estrategicos_personalizados",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "email_marketing",
+    "destino": "email_marketing_para_captacion",
+    "score": 0.8293,
+    "titulo_destino": "Email Marketing para Captación de Clientes",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "content_marketing_blog",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "publicidad_organica",
+    "destino": "creacion_contenido_compartible",
+    "score": 0.6409,
+    "titulo_destino": "Creación de Contenido Compartible para Amplificar con Publicidad Pagada",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "content_marketing_blog",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Contenido orgánico amplificado con pauta encaja con publicidad orgánica",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "ronda_de_financiamiento",
+    "destino": "construccion_de_leverage",
+    "score": 0.6822,
+    "titulo_destino": "Construcción de Leverage en Negociaciones de Financiamiento",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "contratacion_acelerada_hipercrecimiento",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "mercado_de_uno_fundraising",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "peligro_capital_barato",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Construcción de leverage es clave en rondas de financiamiento",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_de_caja_runway",
+    "destino": "runway_como_numero_de_pivotes",
+    "score": 0.6395,
+    "titulo_destino": "Runway medido en Pivotes Disponibles",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "contratacion_acelerada_hipercrecimiento",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "peligro_capital_barato",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Runway medido en pivotes es parte de gestión de caja",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_equipo_fundador",
+    "destino": "decision_fundador_solo_vs_equipo",
+    "score": 0.7083,
+    "titulo_destino": "Decisión de Fundar en Solitario vs. Formar un Equipo",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "contratar_por_fortaleza",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "framework_ones_and_twos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "construccion_equipo_ejecutivo",
+    "destino": "entrenamiento_gerencial",
+    "score": 0.687,
+    "titulo_destino": "Entrenamiento Gerencial como Responsabilidad del CEO",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "contratar_por_fortaleza",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Entrenamiento gerencial es parte de construir el equipo ejecutivo",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_experiencia_onboarding",
+    "destino": "gamificacion_onboarding_visual",
+    "score": 0.5838,
+    "titulo_destino": "Gamificación Visual del Proceso de Onboarding",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "conversacion_emocional_postcompra",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "fase_affirm_buyers_remorse",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Gamificación es una técnica específica de diseño de onboarding",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_vision_producto",
+    "destino": "pensamiento_visual_modelos_negocio",
+    "score": 0.6739,
+    "titulo_destino": "Pensamiento Visual (Visual Thinking) para Modelos de Negocio",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "coraje_decision_ceo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Visual thinking para modelos de negocio no define visión de producto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "validacion_producto_mercado",
+    "destino": "introduccion_validacion_clientes",
+    "score": 0.8021,
+    "titulo_destino": "Introducción a la Validación de Clientes (Customer Validation)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "coraje_decision_ceo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseño_de_red_logistica",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.6421,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "crossdocking",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "milk_run_deliveries",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Es una definición general de cadena de suministro, no diseño de red",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_de_transporte",
+    "destino": "driver_transporte",
+    "score": 0.7194,
+    "titulo_destino": "Driver de Transporte: Selección de Modo según Valor del Producto",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "crossdocking",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "milk_run_deliveries",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "estrategia_diferenciacion_cadena_suministro",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.8126,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "cuatro_capacidades_mercado",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "metricas_eficiencia_interna",
+    "destino": "medicion_de_calidad_en_manufactura",
+    "score": 0.5923,
+    "titulo_destino": "Medición de Calidad en Operaciones de Manufactura",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "cuatro_categorias_desempeno_cadena_suministro",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "framework_scor_plan_source_make_deliver",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Medición de productividad y calidad se alinea con métricas de eficiencia",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "propuesta_valor",
+    "destino": "value_proposition_startup",
+    "score": 0.6529,
+    "titulo_destino": "Propuesta de Valor",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "cuatro_etapas_llamada_de_ventas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "estrategia_ventas_enterprise",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "framework_caracteristicas_ventajas_beneficios",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "targeting_blogs_traccion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincidencia directa de concepto",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_de_mision_y_valores",
+    "destino": "definir_mision_organizacional",
+    "score": 0.7119,
+    "titulo_destino": "Definir la Misión Organizacional",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "cultura_de_buena_empresa",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "evaluacion_ceo_tres_preguntas",
+    "destino": "medicion_calidad_2",
+    "score": 0.6422,
+    "titulo_destino": "Paso 3: Medición de la Calidad",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "cultura_feedback_alta_frecuencia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "toma_decisiones_bajo_incertidumbre",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Medición de calidad no corresponde a preguntas de evaluación de CEO",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "fidelizacion_clientes",
+    "destino": "customer_retention_strategy",
+    "score": 0.7078,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "customer_appreciation_pr",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "retencion_clientes_journey",
+    "destino": "customer_retention_strategy",
+    "score": 0.7301,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "customer_appreciation_soporte",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "business_model_generation_propuesta_valor",
+    "destino": "modelos_negocio_mas_alla_del_lucro",
+    "score": 0.6703,
+    "titulo_destino": "Modelos de Negocio Más Allá del Lucro (Enterprise Models)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "definicion_alineacion_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata de modelos sin fines de lucro, no de propuesta de valor",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "modelo_negocio_lean_canvas",
+    "destino": "lienzo_modelo_negocio",
+    "score": 0.7474,
+    "titulo_destino": "El Lienzo de Modelo de Negocio (Business Model Canvas)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "definicion_alineacion_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "flexibilidad_secuencia_desarrollo_paralela",
+    "destino": "procesamiento_paralelo_con_espirales",
+    "score": 0.6182,
+    "titulo_destino": "Procesamiento Paralelo con Espirales de Validación",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "definicion_objetivos_proyecto_sistema",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Procesamiento paralelo coincide con flexibilidad de secuencia de desarrollo",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "creacion_plan_presupuesto_inicial",
+    "destino": "plan_gestion_costos",
+    "score": 0.6046,
+    "titulo_destino": "Plan de Gestión de Costos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "definicion_objetivos_proyecto_sistema",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Plan de gestión de costos incluye la creación del presupuesto inicial",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "validar_producto_mercado",
+    "destino": "verificar_product_market_fit",
+    "score": 0.7936,
+    "titulo_destino": "Verificar el Ajuste Producto/Mercado (Product/Market Fit)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "definir_meta_de_traccion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseño_organizacional_startup",
+    "destino": "definicion_startup",
+    "score": 0.7305,
+    "titulo_destino": "Definición de Startup",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "descomposicion_tareas_trabajo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_cuentas_clave",
+    "destino": "clausula_personas_clave_banker",
+    "score": 0.5769,
+    "titulo_destino": "Cláusula de Personas Clave (Key Person Provision) en Contratos con Asesores",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "descubrir_valor_inesperado_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Cláusula de persona clave en contratos no es gestión de cuentas clave",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "descubrimiento_cliente",
+    "destino": "verificar_clientes_y_canales",
+    "score": 0.7024,
+    "titulo_destino": "Verificar Quiénes Son los Clientes y Cómo Alcanzarlos",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "descubrir_valor_inesperado_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fidelizacion_cliente_critico",
+    "destino": "gestion_de_quejas_y_fidelizacion",
+    "score": 0.6493,
+    "titulo_destino": "Gestión de Quejas y su Impacto en la Fidelización",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "descubrir_valor_inesperado_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Gestión de quejas impacta directamente la fidelización",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "expansion_contrato",
+    "destino": "no_shop_extension_negotiation",
+    "score": 0.5399,
+    "titulo_destino": "Negociación de la Extensión del No-Shop",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "descubrir_valor_inesperado_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Negociación de extensión de no-shop es un caso de expansión de contrato",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "grupo_control_emparejado",
+    "destino": "piramide_de_control",
+    "score": 0.5695,
+    "titulo_destino": "Pirámide de Control (Delegación de Responsabilidades)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "deteccion_efecto_hawthorne",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "metodologia_evaluacion_entrenamiento_ventas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Pirámide de control de delegación no corresponde a grupo control emparejado",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "metricas_vs_objetivos_reales",
+    "destino": "metas_vs_proposito",
+    "score": 0.7108,
+    "titulo_destino": "Distinguir Metas (Goals) de Propósito (Ley de Goodhart)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "deuda_de_gestion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "estrategia_producto_no_es_trabajo_del_cliente",
+    "destino": "reempaquetado_producto",
+    "score": 0.6802,
+    "titulo_destino": "Reempaquetado del Producto (Estrategia de Pivote)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "disciplina_rigurosa_proceso_ventas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Reempaquetado es una estrategia relacionada a ajustar producto al cliente",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cierre_deals_complejos",
+    "destino": "obtencion_compromiso_venta",
+    "score": 0.631,
+    "titulo_destino": "Obtención de Compromiso: Cierre Simple en Ventas Grandes",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "disciplina_rigurosa_proceso_ventas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Cierre en ventas grandes corresponde a deals complejos",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "validacion_de_hipotesis_con_ia",
+    "destino": "prueba_hipotesis",
+    "score": 0.7038,
+    "titulo_destino": "Prueba de Hipótesis Estadística",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "disenar_prompts_efectivos_para_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "deteccion_migracion_mercados",
+    "destino": "relocalizacion_clustering_logistico",
+    "score": 0.4764,
+    "titulo_destino": "Relocalización y Clustering Logístico para Reducir Distancias de Transporte",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "diseno_dashboards",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "modelo_cuadrantes_mercado",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "planificacion_escenarios_crecimiento_ia",
+    "destino": "future_scenarios_planning",
+    "score": 0.7071,
+    "titulo_destino": "Planificación de Escenarios Futuros (Scenario Planning)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "diseno_de_eucatastrofe_organizacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cultura_organizacional",
+    "destino": "cultura_organizacional_calidad",
+    "score": 0.7272,
+    "titulo_destino": "Cultura Organizacional y su Impacto en la Calidad",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "diseno_de_eucatastrofe_organizacional",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "liderazgo_basado_en_valores_mas_alla_del_deber",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "personas_productos_ganancias_orden",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_del_cambio_organizacional",
+    "destino": "gestion_del_cambio",
+    "score": 0.7829,
+    "titulo_destino": "Gestión del Cambio (Change Management)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "diseno_de_eucatastrofe_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "liderazgo_en_tiempos_de_crisis",
+    "destino": "adopcion_liderazgo",
+    "score": 0.7256,
+    "titulo_destino": "Adoptar e Instituir el Liderazgo (Punto 7)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "diseno_de_eucatastrofe_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_de_chatbots_de_atencion",
+    "destino": "analisis_conversacional",
+    "score": 0.5271,
+    "titulo_destino": "Análisis Conversacional (Conversation Analysis)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "diseno_de_ia_antropomorfica_para_producto",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "prompting_por_persona_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Análisis conversacional lingüístico no es diseño de chatbots",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "estrategia_de_retencion_de_clientes",
+    "destino": "customer_retention_strategy",
+    "score": 0.9037,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "diseno_de_ia_antropomorfica_para_producto",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "escalamiento_organizacional",
+    "destino": "cultura_flexible_organizacional",
+    "score": 0.6472,
+    "titulo_destino": "Cultura Organizacional Flexible",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "diseno_organizacional",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "entrenamiento_empleados_startup",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "programacion_cultura_empresarial",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Cultura flexible adapta estructura según escalamiento organizacional",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_de_procesos",
+    "destino": "diseno_de_procesos_por_caracteristicas",
+    "score": 0.8033,
+    "titulo_destino": "Diseño de Procesos Basado en Características y Metas",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "diseno_organizacional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "desarrollo_producto",
+    "destino": "etapa_development",
+    "score": 0.7204,
+    "titulo_destino": "Etapa 3 - Development: Desarrollo del Producto",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "diseno_producto_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "driver_inventario",
+    "destino": "driver_informacion",
+    "score": 0.5803,
+    "titulo_destino": "Driver de Información: Coordinación y Pronóstico en la Cadena de Suministro",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "driver_produccion",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "driver_ubicacion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "trade_off_responsividad_eficiencia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Destino trata del driver de información, no de inventario",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "escalamiento_equipo_con_ia",
+    "destino": "fase_mobilizacion_equipo_multifuncional",
+    "score": 0.552,
+    "titulo_destino": "Fase de Movilización: Equipo Multifuncional",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "efecto_nivelador_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Movilización de equipo no menciona IA ni escalamiento tecnológico",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "estimacion_presupuesto_roi_sistema",
+    "destino": "plan_gestion_costos",
+    "score": 0.6576,
+    "titulo_destino": "Plan de Gestión de Costos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "ejecucion_incremental_transicion_tecnologica",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Plan de gestión de costos cubre estimación de presupuesto",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diagnostico_de_fallo_de_plan_empresarial",
+    "destino": "falta_de_constancia_de_proposito_2",
+    "score": 0.637,
+    "titulo_destino": "Falta de Constancia de Propósito (Ausencia de Plan a Largo Plazo)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "ejecucion_rapida_de_despidos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Falta de constancia de propósito es causa de fallo de plan empresarial",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "metricas_de_activacion",
+    "destino": "customer_activation_tactics",
+    "score": 0.5846,
+    "titulo_destino": "Tácticas de Activación de Clientes",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "email_marketing_activacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Tácticas de activación se relacionan con sus métricas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "viral_marketing_referidos",
+    "destino": "acquisicion_viral_engineering",
+    "score": 0.7025,
+    "titulo_destino": "Ingeniería de Adquisición Viral y Efectos de Red",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "email_marketing_retencion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "features_advantages_benefits",
+    "destino": "superioridad_producto_beneficios",
+    "score": 0.6979,
+    "titulo_destino": "Superioridad del Producto Basada en Beneficios",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "enfoque_resolucion_problemas_lanzamiento_producto",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "prevencion_de_objeciones",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Superioridad basada en beneficios corresponde al modelo FAB",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "desarrollo_de_producto_lean_startup",
+    "destino": "introduccion_lean",
+    "score": 0.6984,
+    "titulo_destino": "Introducción a Lean (Manufactura Esbelta)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "enfoque_resolucion_problemas_lanzamiento_producto",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Lean manufactura es distinto de Lean Startup para desarrollo de producto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "spin_questioning_model",
+    "destino": "modelo_spin_preguntas",
+    "score": 0.7556,
+    "titulo_destino": "Modelo SPIN: Secuencia de Preguntas de Venta",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "enfoque_resolucion_problemas_lanzamiento_producto",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "prevencion_de_objeciones",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_producto_minimo_viable",
+    "destino": "productos_crudos",
+    "score": 0.7212,
+    "titulo_destino": "Productos Crudos (Crude Products)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "engineering_as_marketing",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "seo_estrategia_fat_head",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "seo_long_tail",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "segmento_cliente_objetivo",
+    "destino": "customer_profile",
+    "score": 0.6867,
+    "titulo_destino": "Customer Profile (Perfil del Cliente)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "engineering_as_marketing",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Customer profile describe el segmento de cliente objetivo",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "business_development_estrategico",
+    "destino": "alineacion_bd_metricas_core",
+    "score": 0.6937,
+    "titulo_destino": "Alineación de Business Development con Métricas Core",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "engineering_as_marketing",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos tratan alineación estratégica de BD",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_de_desempeno",
+    "destino": "juran_trilogy",
+    "score": 0.642,
+    "titulo_destino": "La Trilogía de Juran: Planificación, Control y Mejora",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "entrenamiento_funcional_empleados",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "entrenamiento_gerencial",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "framework_good_bad_product_manager",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "integracion_agresiva_ejecutivo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Juran trata calidad, no gestión de desempeño general",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "spin_model_preguntas",
+    "destino": "modelo_spin_preguntas",
+    "score": 0.8091,
+    "titulo_destino": "Modelo SPIN: Secuencia de Preguntas de Venta",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "escala_actitud_cierre",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "metodologia_evaluacion_entrenamiento_ventas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "tecnicas_de_cierre_tradicionales",
+    "destino": "ineficacia_cierre_ventas_grandes",
+    "score": 0.6051,
+    "titulo_destino": "Ineficacia de las Técnicas de Cierre en Ventas Grandes",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "escala_actitud_cierre",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos abordan técnicas de cierre clásicas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "ajuste_estrategia_venta_compleja",
+    "destino": "marco_avances_continuaciones",
+    "score": 0.7234,
+    "titulo_destino": "Marco de Resultados de Llamada: Órdenes, Avances, Continuaciones y No-Ventas",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "escala_actitud_cierre",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "contratacion_de_ejecutivos_senior",
+    "destino": "ceo_puente_interino",
+    "score": 0.7089,
+    "titulo_destino": "CEO Puente o Interino en la Transición",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "establecer_estandar_alto_desempeno",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "investigacion_competencia_display_ads",
+    "destino": "ad_tracking",
+    "score": 0.6786,
+    "titulo_destino": "Ad Tracking (Rastreo de Anuncios)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_anuncios_sociales_respuesta_indirecta",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Ad tracking no trata investigación de competencia",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "analisis_mercado_creciente",
+    "destino": "market_type_revenue_growth",
+    "score": 0.6923,
+    "titulo_destino": "Tipo de Mercado y Curvas de Crecimiento de Ingresos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_captura_mercado_crecimiento",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "estrategia_cuatro_capacidades_mercado",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Relacionado con crecimiento de mercado",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "transicion_mercado_maduro",
+    "destino": "market_type_revenue_growth",
+    "score": 0.7197,
+    "titulo_destino": "Tipo de Mercado y Curvas de Crecimiento de Ingresos",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "estrategia_captura_mercado_crecimiento",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "roadmap_proyectos_12_meses",
+    "destino": "product_roadmap_estrategico",
+    "score": 0.6901,
+    "titulo_destino": "Roadmap Estratégico de Producto y Tecnología",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_captura_mercado_crecimiento",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "estrategia_cuatro_capacidades_mercado",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Concepto de roadmap coincide",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_de_segmento_objetivo",
+    "destino": "alineacion_de_objetivos_en_sistemas",
+    "score": 0.6275,
+    "titulo_destino": "Alineación de Objetivos en Sistemas Complejos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_ferias_comerciales",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata alineación de sistemas, no segmentación",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "modelo_de_ingresos",
+    "destino": "validacion_hipotesis_ingresos",
+    "score": 0.6665,
+    "titulo_destino": "Validación de la Hipótesis de Ingresos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_ferias_comerciales",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos sobre validación del modelo de ingresos",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cierre_de_ventas",
+    "destino": "cierre_segun_complejidad_venta",
+    "score": 0.6254,
+    "titulo_destino": "Efectividad del Cierre según la Complejidad de la Venta",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_ferias_comerciales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincide con efectividad de cierre según venta",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "medicion_impacto_experiencia_cliente",
+    "destino": "adherence_loop_diseno_temporal",
+    "score": 0.5535,
+    "titulo_destino": "El Bucle de Adherencia (Adherence Loop)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_multicanal_bienvenida",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Adherence loop es diseño, no medición de impacto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "descubrimiento_de_clientes",
+    "destino": "verificar_clientes_y_canales",
+    "score": 0.7264,
+    "titulo_destino": "Verificar Quiénes Son los Clientes y Cómo Alcanzarlos",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "estrategia_plataformas_existentes",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "canales_de_adquisicion_pagados",
+    "destino": "programa_afiliados",
+    "score": 0.6544,
+    "titulo_destino": "Programas de Afiliados como Canal de Tracción",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_plataformas_existentes",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Afiliados es canal pagado de adquisición",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "escalamiento_de_canal",
+    "destino": "canales_distribucion",
+    "score": 0.5729,
+    "titulo_destino": "Bloque de Canales (Channels)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_plataformas_existentes",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "eventos_offline_propios",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Bloque de canales es base conceptual relevante",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "embudo_ventas",
+    "destino": "apertura_llamada_venta_grande",
+    "score": 0.6506,
+    "titulo_destino": "Apertura de Llamada en Ventas Grandes: Mito de la Primera Impresión",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "estrategia_ventas_enterprise",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "tacticas_cierre_ventas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "tacticas_cold_calling",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata apertura de llamada, no embudo completo",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "contratacion_ejecutivos_senior",
+    "destino": "ceo_puente_interino",
+    "score": 0.7022,
+    "titulo_destino": "CEO Puente o Interino en la Transición",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "evaluacion_balanceada_de_ejecutivos",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "gestion_empleados_brillantes_problematicos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_perfil_ejecutivo",
+    "destino": "framework_ones_and_twos",
+    "score": 0.6819,
+    "titulo_destino": "Ones y Twos: Estilos de Liderazgo Estratégico vs. Ejecución",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "evaluacion_vp_ventas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Framework describe perfiles de liderazgo ejecutivo",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "necesidad_contratacion_ventas",
+    "destino": "contratar_cerrador_de_ventas",
+    "score": 0.6997,
+    "titulo_destino": "Contratar un Cerrador de Ventas (Sales Closer)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "evaluacion_vp_ventas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincide con contratación de cerrador de ventas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_proceso_ventas",
+    "destino": "diseno_embudo_ventas_cliente",
+    "score": 0.6522,
+    "titulo_destino": "Diseño del Embudo de Ventas desde la Perspectiva del Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "evaluacion_vp_ventas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos sobre diseño del proceso/embudo de ventas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "onboarding_ejecutivo",
+    "destino": "planificacion_sucesion_ceo",
+    "score": 0.5107,
+    "titulo_destino": "El Dilema de la Sucesión del CEO: Interno vs. Externo",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "evaluacion_vp_ventas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata sucesión de CEO, no onboarding",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_cadena_suministro_con_ia",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.7634,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "evaluar_ia_predictiva_vs_generativa_para_negocio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_canal_traccion",
+    "destino": "canales_distribucion",
+    "score": 0.6823,
+    "titulo_destino": "Bloque de Canales (Channels)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "eventos_offline_como_canal_traccion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Bloque de canales define canales de tracción",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "validacion_de_demanda",
+    "destino": "introduccion_validacion_clientes",
+    "score": 0.7207,
+    "titulo_destino": "Introducción a la Validación de Clientes (Customer Validation)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "eventos_offline_propios",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "construccion_de_comunidad",
+    "destino": "community_building_estrategia",
+    "score": 0.8385,
+    "titulo_destino": "Construcción de Comunidad (Community Building)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "eventos_offline_propios",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fidelizacion_de_clientes",
+    "destino": "customer_retention_strategy",
+    "score": 0.7235,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "eventos_offline_propios",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "canales_distribucion_bmg",
+    "destino": "hipotesis_de_canales",
+    "score": 0.5808,
+    "titulo_destino": "Hipótesis de Canales de Distribución",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "existing_platforms_leverage",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "programa_afiliados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Hipótesis de canales coincide con distribución",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "optimizacion_canal_traccion",
+    "destino": "framework_bullseye",
+    "score": 0.598,
+    "titulo_destino": "Framework Bullseye para Canales de Tracción",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "existing_platforms_leverage",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "programa_afiliados",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Bullseye optimiza selección de canal de tracción",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diagnostico_fuga_clientes_postventa",
+    "destino": "retention_metrics",
+    "score": 0.5429,
+    "titulo_destino": "Métricas de Retención",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "experiencia_del_cliente_proactiva",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Métricas de retención permiten diagnosticar churn",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "producto_como_experiencia",
+    "destino": "cultura_de_experiencia",
+    "score": 0.7018,
+    "titulo_destino": "Construcción de una Cultura de Experiencia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "experiencia_del_cliente_proactiva",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "rediseno_procesos_negocio_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "transparencia_facturacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_primeros_100_dias",
+    "destino": "brief_de_diseno",
+    "score": 0.4539,
+    "titulo_destino": "El Brief de Diseño como Marco Creativo",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "experiencia_del_cliente_proactiva",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "cultura_organizacional_centrada_cliente",
+    "destino": "contacto_con_el_cliente",
+    "score": 0.7085,
+    "titulo_destino": "Gestión del Contacto con el Cliente en Organizaciones de Servicio",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "experiencia_del_cliente_proactiva",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "rediseno_procesos_negocio_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "rediseno_procesos_negocio_cx",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "programa_recompensas_por_lealtad",
+    "destino": "celebracion_hitos_cliente",
+    "score": 0.6766,
+    "titulo_destino": "Celebración de Hitos y Logros del Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "experiencias_exclusivas_vip",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "fase_adopt_ciclo_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Celebración de hitos no es un programa de recompensas",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "fase_valoracion_inicial",
+    "destino": "fase_assess_experiencia_cliente",
+    "score": 0.6542,
+    "titulo_destino": "La Fase Assess: Evaluación previa a la compra",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_acclimate_experiencia_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Fase Assess coincide con valoración inicial",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "solicitud_testimonios_referidos",
+    "destino": "gestion_testimonios",
+    "score": 0.6366,
+    "titulo_destino": "Recolección y Redacción de Testimonios Efectivos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_accomplish_experiencia_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "reunion_conclusion_proyecto",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Gestión de testimonios coincide parcialmente",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fase_advocate",
+    "destino": "advocacy_customer_journey",
+    "score": 0.6487,
+    "titulo_destino": "Fase de Advocate en el Customer Journey",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_adopt",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "ocho_fases_experiencia_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Advocacy customer journey coincide con fase Advocate",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fase_admit_conversion_prospecto",
+    "destino": "desarrollo_en_espiral",
+    "score": 0.446,
+    "titulo_destino": "Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "fase_affirm_buyers_remorse",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "handoff_transicion_ventas_cuentas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "programa_garantia_devolucion",
+    "destino": "indemnification_clause",
+    "score": 0.5695,
+    "titulo_destino": "Cláusula de Indemnización y Seguro D&O",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_affirm_buyers_remorse",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata de indemnización D&O, no de garantía de devolución",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "fase_activacion_onboarding_cliente",
+    "destino": "fase_acclimate_experiencia_cliente",
+    "score": 0.5456,
+    "titulo_destino": "Fase de Aclimatación del Cliente (Acclimate Phase)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_affirm_reduccion_incertidumbre",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincide con la fase de aclimatación del cliente",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "experiencia_admit_cierre_venta",
+    "destino": "cierre_segun_complejidad_venta",
+    "score": 0.6857,
+    "titulo_destino": "Efectividad del Cierre según la Complejidad de la Venta",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_affirm_reducir_remordimiento",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos tratan sobre técnicas de cierre y su efectividad",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "segmento_de_clientes",
+    "destino": "customer_creation",
+    "score": 0.6439,
+    "titulo_destino": "Customer Creation",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_assess",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Customer Creation es ejecución de demanda, no definición de segmentos",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "buyer_persona",
+    "destino": "decision_hire_investment_banker",
+    "score": 0.5467,
+    "titulo_destino": "Decisión de Contratar un Banquero de Inversión para M&A",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fase_assess_experiencia_cliente",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "personalizacion_investigacion_prospecto",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preframing_expectativas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "seguimiento_informacion_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Tema de M&A/banqueros no relacionado con buyer persona",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "mapa_del_viaje_emocional_del_cliente",
+    "destino": "ocho_fases_experiencia_cliente",
+    "score": 0.7302,
+    "titulo_destino": "Las Ocho Fases de la Experiencia del Cliente",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "fases_de_retencion_de_clientes",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "pensamiento_h2h",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_de_experiencia_postventa",
+    "destino": "cultura_de_experiencia",
+    "score": 0.6415,
+    "titulo_destino": "Construcción de una Cultura de Experiencia",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "fases_de_retencion_de_clientes",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata cultura de experiencia general, no diseño postventa específico",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_cultura_organizacional",
+    "destino": "cultura_organizacional_calidad",
+    "score": 0.7276,
+    "titulo_destino": "Cultura Organizacional y su Impacto en la Calidad",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "feedback_efectivo_liderazgo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "pruebas_anillo_interior_ab_testing",
+    "destino": "gate4_go_to_testing",
+    "score": 0.5553,
+    "titulo_destino": "Gate 4: Go to Testing",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "framework_bullseye",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Gate 4 es revisión de stage-gate, no A/B testing",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "enfoque_canal_nucleo",
+    "destino": "canales_distribucion",
+    "score": 0.4712,
+    "titulo_destino": "Bloque de Canales (Channels)",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "framework_bullseye",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_modelo_negocio",
+    "destino": "business_model_environment_mapping",
+    "score": 0.7791,
+    "titulo_destino": "Mapeo del Entorno del Modelo de Negocio",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "garantias_implicitas_vs_expresas",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "information_driver_supply_chain",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "reconstruir_equipo_ejecutivo_para_nueva_etapa",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "vertical_vs_virtual_integracion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "adopcion_herramientas_ia",
+    "destino": "automatizacion_software_gestion_innovacion",
+    "score": 0.6471,
+    "titulo_destino": "Automatización mediante Software de Gestión de Innovación",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_alucinaciones_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Relacionado con automatización de software para gestión de innovación",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "validacion_de_hipotesis_de_mercado",
+    "destino": "introduccion_validacion_clientes",
+    "score": 0.703,
+    "titulo_destino": "Introducción a la Validación de Clientes (Customer Validation)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_alucinaciones_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "estructuracion_alianzas_estrategicas",
+    "destino": "formalizar_alianza_estrategica",
+    "score": 0.7528,
+    "titulo_destino": "Formalizar y Gestionar una Alianza Estratégica de Sostenibilidad",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_beneficios_alianza_sostenible",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_de_vision_de_producto",
+    "destino": "pensamiento_visual_modelos_negocio",
+    "score": 0.7015,
+    "titulo_destino": "Pensamiento Visual (Visual Thinking) para Modelos de Negocio",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_de_problemas_sin_receta",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "liderazgo_fundador_vs_gestion_profesional",
+    "destino": "adopcion_liderazgo",
+    "score": 0.8072,
+    "titulo_destino": "Adoptar e Instituir el Liderazgo (Punto 7)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_de_problemas_sin_receta",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "salida_a_bolsa_como_ultimo_recurso",
+    "destino": "garantia_devolucion_dinero",
+    "score": 0.5591,
+    "titulo_destino": "Garantía de Devolución para Eliminar el Miedo a la Pérdida",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_expectativas_equity_empleados",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Garantía de devolución no relaciona con salida a bolsa",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "retencion_de_talento_post_ipo",
+    "destino": "inventario_conocimiento_estadistico_personal",
+    "score": 0.5553,
+    "titulo_destino": "Inventario y Aprovechamiento del Conocimiento Estadístico Interno",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_expectativas_equity_empleados",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata inventario estadístico, no retención de talento post-IPO",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "diseño_producto_supply_chain",
+    "destino": "planificacion_cadena_suministro",
+    "score": 0.6503,
+    "titulo_destino": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_instalaciones",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "modelo_simulacion_cadena_suministro_circular",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Relacionado con planificación de cadena de suministro",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_pedidos",
+    "destino": "gestion_pedidos_order_management",
+    "score": 0.7823,
+    "titulo_destino": "Gestión de Pedidos (Order Management)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_instalaciones",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "produccion_scheduling_balance_objetivos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "programacion_entregas",
+    "destino": "planificacion_cadena_suministro",
+    "score": 0.5985,
+    "titulo_destino": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_instalaciones",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "gestion_pedidos_order_management",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Programación de entregas forma parte de la planificación de suministro",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "crm_relacion_cliente",
+    "destino": "mapa_de_acceso_al_cliente",
+    "score": 0.5662,
+    "titulo_destino": "Mapa de Acceso al Cliente (Customer Access Map)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_pedidos_order_management",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Mapa de acceso al cliente es distinto de gestión CRM",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "never_lose_customer_onboarding",
+    "destino": "customer_retention_strategy",
+    "score": 0.5834,
+    "titulo_destino": "Estrategia de Retención de Clientes (Keep Customers)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_pedidos_order_management",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "programacion_entregas_delivery_scheduling",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos tratan sobre retener y no perder clientes",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "planificacion_demanda",
+    "destino": "plan_de_adquisicion_acquire",
+    "score": 0.6648,
+    "titulo_destino": "Plan de Adquisición de Clientes (Acquire Plan)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_procurement_consumo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Plan de adquisición de clientes no es planificación de demanda",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "seleccion_proveedores",
+    "destino": "alcance_profundo_cadena_suministro",
+    "score": 0.709,
+    "titulo_destino": "Alcance Profundo en la Cadena de Suministro (Tier 2/3)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_procurement_consumo",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "negociacion_contratos_proveedores",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "negociacion_contratos",
+    "destino": "negociacion_carta_compromiso_banquero",
+    "score": 0.761,
+    "titulo_destino": "Negociación de la Carta de Compromiso (Engagement Letter) con el Banquero",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_procurement_consumo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "prediccion_demanda",
+    "destino": "pronostico_de_demanda_variables",
+    "score": 0.7219,
+    "titulo_destino": "Pronóstico de Demanda: Cuatro Variables Clave",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "gestion_rationing_shortage_gaming",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_credito_cobranzas",
+    "destino": "gestion_cuentas_por_cobrar",
+    "score": 0.6663,
+    "titulo_destino": "Gestión de Cuentas por Cobrar (Accounts Receivable)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "gestion_riesgo_credito",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Cuentas por cobrar es parte central de gestión de crédito y cobranzas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "planificacion_escenarios_futuros_ia",
+    "destino": "future_scenarios_planning",
+    "score": 0.8053,
+    "titulo_destino": "Planificación de Escenarios Futuros (Scenario Planning)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "habilidad_prompting_como_experticia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "estrategia_boca_a_boca",
+    "destino": "adherence_loop_diseno_temporal",
+    "score": 0.6205,
+    "titulo_destino": "El Bucle de Adherencia (Adherence Loop)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "hacer_remarcable_lo_requerido",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Bucle de adherencia no trata sobre boca a boca",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "cultura_organizacional_startup",
+    "destino": "definicion_startup_busqueda_modelo_negocio",
+    "score": 0.7628,
+    "titulo_destino": "La Startup como Organización Temporal en Búsqueda de un Modelo de Negocio",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "hr_como_control_de_calidad_gerencial",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "minimizar_politica_organizacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "adopcion_herramientas_digitales",
+    "destino": "oficina_digital_sin_papel",
+    "score": 0.6047,
+    "titulo_destino": "Transición hacia la Oficina Digital Sin Papel",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "human_in_the_loop_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Oficina digital sin papel es ejemplo de adopción de herramientas digitales",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_de_cadena_de_suministro",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.7951,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "ia_en_supply_chain",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "simulacion_de_operaciones_supply_chain",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "vehiculos_autonomos_drones_supply_chain",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "coeficiente_viral_general",
+    "destino": "coeficiente_viral",
+    "score": 0.7955,
+    "titulo_destino": "Coeficiente Viral (Viral Growth Factor)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "identificacion_bolsas_virales",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "tiempo_ciclo_viral",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "ab_testing_crecimiento",
+    "destino": "concepto_de_crecimiento_regenerativo",
+    "score": 0.631,
+    "titulo_destino": "Crecimiento Regenerativo (Good Growth)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "identificacion_bolsas_virales",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "tiempo_ciclo_viral",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Crecimiento regenerativo no trata sobre A/B testing",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "diseno_programa_referidos",
+    "destino": "portafolio_de_diseno",
+    "score": 0.6357,
+    "titulo_destino": "Balancear el Portafolio (Documentar el Proceso)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "incentivos_no_monetarios_advocacy",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "timing_solicitud_referidos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Portafolio de diseño no relaciona con programas de referidos",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "metricas_crecimiento_viral",
+    "destino": "coeficiente_viral",
+    "score": 0.8333,
+    "titulo_destino": "Coeficiente Viral (Viral Growth Factor)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "incentivos_no_monetarios_advocacy",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_venta_grande_vs_pequena",
+    "destino": "diferencias_venta_pequena_venta_grande",
+    "score": 0.534,
+    "titulo_destino": "Diferencias psicológicas entre venta pequeña y venta grande",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "ineficacia_cierre_ventas_grandes",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincide directamente con diferencias entre venta pequeña y grande",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "spin_selling_metodologia",
+    "destino": "metodologia_spin_selling",
+    "score": 0.7968,
+    "titulo_destino": "Metodología SPIN Selling",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "ineficacia_cierre_ventas_grandes",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_problema_negocio",
+    "destino": "business_model_environment_mapping",
+    "score": 0.6559,
+    "titulo_destino": "Mapeo del Entorno del Modelo de Negocio",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "ingenieria_de_prompts_efectiva",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Mapeo del entorno no es definición del problema de negocio",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "screening_mismatch_ejecutivos",
+    "destino": "analisis_causa_raiz_despido_ejecutivo",
+    "score": 0.7058,
+    "titulo_destino": "Análisis de Causa Raíz al Despedir a un Ejecutivo",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "integracion_agresiva_ejecutivo",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "proceso_contratacion_ejecutivos_sin_experiencia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "desajustes_ejecutivos_gran_empresa",
+    "destino": "analisis_causa_raiz_despido_ejecutivo",
+    "score": 0.7581,
+    "titulo_destino": "Análisis de Causa Raíz al Despedir a un Ejecutivo",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "integracion_agresiva_ejecutivo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_buyer_persona",
+    "destino": "customer_types_mapping",
+    "score": 0.5896,
+    "titulo_destino": "Mapeo de Tipos de Cliente en la Decisión de Compra",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "investigar_datos_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Mapeo de tipos de cliente se relaciona con definición de buyer persona",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "observar_cliente_habitat_natural",
+    "destino": "identificar_eco_riesgos_oportunidades",
+    "score": 0.5294,
+    "titulo_destino": "Identificación Sistemática de Riesgos y Oportunidades Ambientales (Issue Spotting)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "investigar_datos_cliente",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "personalizar_interacciones_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Identificación de riesgos ambientales no relaciona con observación etnográfica del cliente",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_casos_uso_ia",
+    "destino": "worst_case_best_case_analysis",
+    "score": 0.4951,
+    "titulo_destino": "Análisis de Peor Caso y Mejor Caso",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "jagged_frontier_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "ai_como_socio_creativo",
+    "destino": "colaboracion_creador_consumidor",
+    "score": 0.6388,
+    "titulo_destino": "Codiseño: Colaboración entre Creadores y Consumidores",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "jagged_frontier_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Codiseño entre creadores y consumidores se relaciona con IA como socio creativo",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_flujo_trabajo_humano_ia",
+    "destino": "portafolio_de_diseno",
+    "score": 0.6281,
+    "titulo_destino": "Balancear el Portafolio (Documentar el Proceso)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "jagged_frontier_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "portafolio de diseño no trata flujo de trabajo humano-IA",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_metricas_clave",
+    "destino": "normalizacion_datos_benchmarking_2",
+    "score": 0.525,
+    "titulo_destino": "Normalización de Datos en Benchmarking (Conversión a Forma Comparable)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "jerarquia_datos_scor",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "normalización de datos no es definición de métricas clave",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "modelo_negocio_canvas",
+    "destino": "lienzo_modelo_negocio",
+    "score": 0.8142,
+    "titulo_destino": "El Lienzo de Modelo de Negocio (Business Model Canvas)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "jerarquia_datos_scor",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cierre_de_venta",
+    "destino": "cierre_segun_complejidad_venta",
+    "score": 0.6106,
+    "titulo_destino": "Efectividad del Cierre según la Complejidad de la Venta",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "kit_shock_and_awe_bienvenida",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preguntas_beneficio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "trata directamente sobre cierre de venta según contexto",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "spin_selling_necesidades_implicitas",
+    "destino": "framework_spin_selling",
+    "score": 0.7089,
+    "titulo_destino": "Framework SPIN Selling",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "kit_shock_and_awe_bienvenida",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fundacion_equipo_founders",
+    "destino": "creacion_roles_c_level",
+    "score": 0.6524,
+    "titulo_destino": "Cuándo Crear Nuevas Posiciones Ejecutivas (C-Level y VP)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "la_lucha_resiliencia_ceo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "evolución del equipo fundador hacia roles C-level, relacionado",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "seguimiento_postventa",
+    "destino": "sostener_las_ganancias",
+    "score": 0.5683,
+    "titulo_destino": "Sostener las Ganancias (Hold the Gains)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "lanzamiento_nuevos_productos_enfoque_problema",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "obtencion_compromiso_venta",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "tacticas_de_ferias_comerciales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "sostener ganancias es control de procesos, no seguimiento postventa",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "inner_ring_testing",
+    "destino": "middle_ring_testing",
+    "score": 0.5639,
+    "titulo_destino": "Middle Ring Testing (Bullseye)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "law_of_shitty_click_throughs",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "middle_ring_testing",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "targeting_blogs_channel",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "es fase distinta (middle ring), no inner ring",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "iteracion_producto",
+    "destino": "modelo_quality_by_design_juran",
+    "score": 0.6082,
+    "titulo_destino": "Modelo Universal de Quality by Design (Juran)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "lead_bullets_no_silver_bullets",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "modelo de Juran no trata iteración de producto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "tres_fases_traccion_producto",
+    "destino": "fases_traccion_producto",
+    "score": 0.7115,
+    "titulo_destino": "Las Tres Fases de Tracción (Leaky Bucket)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "leaky_bucket_metaphor",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "posicionamiento_de_marca",
+    "destino": "desarrollo_posicionamiento_producto",
+    "score": 0.6762,
+    "titulo_destino": "Desarrollo del Posicionamiento de Producto",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "liderazgo_frente_crisis_competitiva",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "posicionamiento de producto es análogo al de marca",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "relanzamiento_de_producto",
+    "destino": "reinvencion_diseno_nutrivehiculo",
+    "score": 0.6166,
+    "titulo_destino": "Reinvención del Diseño: De Producto a Sistema Regenerativo",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "liderazgo_frente_crisis_competitiva",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "trata reinvención sistémica, no relanzamiento de producto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_crisis_empresarial",
+    "destino": "adquisicion_estrategica_resolver_crisis",
+    "score": 0.6289,
+    "titulo_destino": "Adquisición Estratégica para Resolver una Crisis de Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "liderazgo_wartime_peacetime",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "adquisición para resolver crisis es un caso de gestión de crisis",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_de_calidad",
+    "destino": "organizacion_independiente_de_calidad",
+    "score": 0.7309,
+    "titulo_destino": "Organización Independiente y Objetiva de la Función de Calidad",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "logistica_inversa_retornos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "entrega_al_cliente",
+    "destino": "gestion_pedidos_order_management",
+    "score": 0.5938,
+    "titulo_destino": "Gestión de Pedidos (Order Management)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "logistica_inversa_retornos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "gestión de pedidos incluye la entrega al cliente",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "due_diligence_transaccion",
+    "destino": "negociacion_contratos_proveedores",
+    "score": 0.6161,
+    "titulo_destino": "Negociación de Contratos con Proveedores",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "manejo_crisis_auditoria_contable",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "negociación con proveedores no es due diligence transaccional",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "cierre_negociacion_venta",
+    "destino": "obtencion_compromiso_venta",
+    "score": 0.63,
+    "titulo_destino": "Obtención de Compromiso: Cierre Simple en Ventas Grandes",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "manejo_crisis_auditoria_contable",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "obtención de compromiso es forma de cierre de negociación",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "formacion_junta_directiva",
+    "destino": "gestion_junta_directiva_startup",
+    "score": 0.6706,
+    "titulo_destino": "Gestión de la Junta Directiva Liderada por Inversionistas",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "mentor_dos_tipos_de_amigos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "gestión de junta directiva se relaciona con su formación",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_de_crisis_ceo",
+    "destino": "equipo_de_gestion_de_crisis",
+    "score": 0.6901,
+    "titulo_destino": "Protocolo de Equipo de Gestión de Crisis",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "mentor_dos_tipos_de_amigos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "protocolo de equipo de crisis es parte de gestión de crisis del CEO",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "pitch_deck_inversionistas",
+    "destino": "crear_pitch",
+    "score": 0.44,
+    "titulo_destino": "Creación de un Pitch",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "mercado_de_uno_fundraising",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "negociacion_termsheet",
+    "destino": "negociacion_carta_compromiso_banquero",
+    "score": 0.7065,
+    "titulo_destino": "Negociación de la Carta de Compromiso (Engagement Letter) con el Banquero",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "mercado_de_uno_fundraising",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cierre_de_ronda",
+    "destino": "cierre_term_sheet",
+    "score": 0.5364,
+    "titulo_destino": "Cierre del Acuerdo: Term Sheet y Documentos Definitivos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "mercado_de_uno_fundraising",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "cierre de term sheet es parte del cierre de ronda",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_metricas_exito_ventas",
+    "destino": "establecer_metas_de_calidad_basadas_en_mercado",
+    "score": 0.6575,
+    "titulo_destino": "Metas de Calidad Basadas en el Mercado y Benchmarking",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "metodologia_evaluacion_entrenamiento_ventas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "metas de calidad no son métricas de éxito en ventas",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_de_inventario",
+    "destino": "gestion_inventario",
+    "score": 0.716,
+    "titulo_destino": "Gestión Eficiente de Inventario",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "metodos_de_pronostico",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "planificacion_agregada",
+    "destino": "project_management_plan",
+    "score": 0.6689,
+    "titulo_destino": "Plan de Gestión del Proyecto",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "metodos_de_pronostico",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "plan de gestión de proyecto no es planificación agregada",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "optimizacion_inventario",
+    "destino": "gestion_inventario",
+    "score": 0.6508,
+    "titulo_destino": "Gestión Eficiente de Inventario",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "metricas_servicio_cliente_bts_bto",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "gestión eficiente de inventario coincide con optimización",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "brainstorming_canales_bullseye",
+    "destino": "framework_bullseye",
+    "score": 0.7432,
+    "titulo_destino": "Framework Bullseye para Canales de Tracción",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "middle_ring_testing",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_de_inventarios",
+    "destino": "gestion_inventario",
+    "score": 0.7121,
+    "titulo_destino": "Gestión Eficiente de Inventario",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "milk_run_deliveries",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "ejecucion_operativa",
+    "destino": "procedimientos_lockout_tagout",
+    "score": 0.5072,
+    "titulo_destino": "Procedimientos de Bloqueo y Etiquetado (Procedimiento Escrito)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "mission_and_operations_planning",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "procedimiento lockout/tagout es demasiado específico y distinto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "diseño_cadena_valor",
+    "destino": "modelo_quality_by_design_juran",
+    "score": 0.6097,
+    "titulo_destino": "Modelo Universal de Quality by Design (Juran)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "modelado_simulacion_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "modelo de Juran no trata diseño de cadena de valor",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "modelo_valor_dinamico_vs_costo",
+    "destino": "estructura_de_costos",
+    "score": 0.6878,
+    "titulo_destino": "Bloque de Estructura de Costos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "modelado_simulacion_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "estructura de costos distingue modelos cost-driven vs value-driven",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "business_model_canvas",
+    "destino": "lienzo_modelo_negocio",
+    "score": 0.8321,
+    "titulo_destino": "El Lienzo de Modelo de Negocio (Business Model Canvas)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "modelo_cuatro_cuadrantes_mercado",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "simulacion_diseno_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "preguntas_problema",
+    "destino": "preguntas_problema_2",
+    "score": 0.67,
+    "titulo_destino": "Preguntas de Problema (Problem Questions)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "modelo_spin",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "preguntas_implicacion",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "preguntas_situacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "coincide directamente con el concepto de preguntas de problema",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "desarrollo_necesidades_explicitas",
+    "destino": "necesidades_implicitas_vs_explicitas",
+    "score": 0.6601,
+    "titulo_destino": "Necesidades Implícitas vs. Explícitas",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "modelo_spin_preguntas",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "prevencion_objeciones_vs_manejo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "trata la evolución de necesidades implícitas a explícitas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "presentacion_beneficios",
+    "destino": "incentivos_reconocimiento_sostenibilidad",
+    "score": 0.6359,
+    "titulo_destino": "Incentivos, Reconocimiento y Recompensas por Desempeño Sostenible",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "modelo_spin_preguntas",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "prevencion_objeciones_vs_manejo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "incentivos de sostenibilidad no se relacionan con presentación de beneficios",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "demostracion_de_capacidad",
+    "destino": "analisis_capacidad_proceso",
+    "score": 0.6498,
+    "titulo_destino": "Análisis de Capacidad de Proceso (Process Capability)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "modelo_spin_secuencia_preguntas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Análisis de capacidad de proceso encaja con demostración de capacidad",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "descubrimiento_de_problemas_cliente",
+    "destino": "customer_discovery_phase2_problem_test",
+    "score": 0.7492,
+    "titulo_destino": "Customer Discovery Fase 2: Probar el Problema",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "necesidades_implicitas_vs_explicitas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "value_proposition_design_fit",
+    "destino": "elementos_creadores_valor",
+    "score": 0.6873,
+    "titulo_destino": "Elementos Creadores de Valor en la Propuesta",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "necesidades_implicitas_vs_explicitas",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Elementos creadores de valor son parte del diseño de propuesta de valor",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "decision_venta_empresa",
+    "destino": "decision_hire_investment_banker",
+    "score": 0.648,
+    "titulo_destino": "Decisión de Contratar un Banquero de Inversión para M&A",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "no_jugar_con_probabilidades",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Contratar banquero se relaciona directamente con decisión de vender empresa",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_de_crisis",
+    "destino": "equipo_de_gestion_de_crisis",
+    "score": 0.6949,
+    "titulo_destino": "Protocolo de Equipo de Gestión de Crisis",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "nobody_cares_just_run_company",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Protocolo de equipo de crisis es parte central de gestión de crisis",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "toma_decisiones_bajo_presion",
+    "destino": "cierre_segun_tamano_decision",
+    "score": 0.7769,
+    "titulo_destino": "Relación entre Presión de Cierre y Tamaño de la Decisión",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "nobody_cares_just_run_company",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "primeros_100_dias_cliente",
+    "destino": "fase_assess_ciclo_cliente",
+    "score": 0.5437,
+    "titulo_destino": "Fase Assess del Ciclo de Vida del Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "ocho_fases_experiencia_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Fase Assess es pre-compra, no onboarding posterior",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "seis_medios_comunicacion",
+    "destino": "estrategia_multicanal_bienvenida",
+    "score": 0.7322,
+    "titulo_destino": "Estrategia Multicanal de Bienvenida (6 Herramientas de Comunicación)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "ocho_fases_experiencia_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fidelizacion_por_comunidad",
+    "destino": "community_building_estrategia",
+    "score": 0.6736,
+    "titulo_destino": "Construcción de Comunidad (Community Building)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "onboarding_comunitario_y_lenguaje_propio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Community building es la estrategia central de fidelización comunitaria",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gamificacion_desempeno_equipos",
+    "destino": "equipo_multifuncional",
+    "score": 0.611,
+    "titulo_destino": "Equipos Cross-Funcionales vs. Equipos Disfuncionales",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "ooda_loop_decision",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "requisitos_sistema_retroalimentacion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Equipos cross-funcionales no trata gamificación de desempeño",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "diseño_de_cadena_de_suministro",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.8139,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "outsourcing_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cultura_organizacional_inicial",
+    "destino": "cultura_organizacional_calidad",
+    "score": 0.6108,
+    "titulo_destino": "Cultura Organizacional y su Impacto en la Calidad",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "paradoja_responsabilidad_creatividad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Ambos tratan cultura organizacional como concepto base",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "gestion_equipos_alto_rendimiento",
+    "destino": "equipos_alto_desempeno",
+    "score": 0.7647,
+    "titulo_destino": "Atributos de Equipos de Alto Desempeño Aplicados a Seguridad",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "paradoja_responsabilidad_creatividad",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "proyeccion_financiera",
+    "destino": "costo_de_capital",
+    "score": 0.6543,
+    "titulo_destino": "Costo de Capital",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "peligro_capital_barato",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Costo de capital es un concepto distinto a proyección financiera",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "plan_de_contingencia_financiera",
+    "destino": "gestion_relacion_bancaria",
+    "score": 0.6929,
+    "titulo_destino": "Gestión de la Relación con el Banco",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "peligro_capital_barato",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "La relación bancaria es clave para contingencias de financiamiento",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "segmentos_de_clientes",
+    "destino": "customer_creation",
+    "score": 0.6372,
+    "titulo_destino": "Customer Creation",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "pensamiento_h2h",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Customer creation es una fase de ejecución, no de segmentación",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "mapa_de_empatia",
+    "destino": "empathy_map",
+    "score": 0.8279,
+    "titulo_destino": "Mapa de Empatía (Empathy Map)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "pensamiento_h2h",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "retencion_de_talento",
+    "destino": "analisis_competitivo",
+    "score": 0.5797,
+    "titulo_destino": "Análisis Competitivo para Identificar Oportunidades",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "personas_productos_ganancias_orden",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Análisis competitivo no trata retención de talento",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "cocreacion_empleados_cx",
+    "destino": "coshh_procedimiento_rolling",
+    "score": 0.5515,
+    "titulo_destino": "Procedimiento Continuo de Control de Sustancias Peligrosas (COSHH)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "persuasion_directivos_prioridad_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "COSHH trata sustancias peligrosas, tema totalmente distinto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "desarrollo_negocios_tipos_alianzas",
+    "destino": "asociaciones_clave",
+    "score": 0.7228,
+    "titulo_destino": "Bloque de Asociaciones Clave (Key Partnerships)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "pipeline_alianzas_bd",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "pivote_de_modelo_de_negocio",
+    "destino": "pivote_estrategico",
+    "score": 0.7595,
+    "titulo_destino": "Pivote Estratégico basado en Evidencia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "plan_de_contingencia_b",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "reconstruccion_de_equipo_ejecutivo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "preguntas_de_problema",
+    "destino": "preguntas_problema_2",
+    "score": 0.7154,
+    "titulo_destino": "Preguntas de Problema (Problem Questions)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "planificacion_preguntas_implicacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "mapa_cadena_suministro",
+    "destino": "definicion_alineacion_cadena_suministro",
+    "score": 0.7425,
+    "titulo_destino": "Definición y Alineación de la Cadena de Suministro con la Estrategia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "plataforma_colaboracion_masiva",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "identificacion_stakeholders",
+    "destino": "stakeholder_mapping_wheel",
+    "score": 0.7709,
+    "titulo_destino": "Mapeo de Stakeholders (Stakeholder Wheel)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "plataforma_colaboracion_masiva",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "escalamiento_agile_30_60_90",
+    "destino": "power_of_nine_agile",
+    "score": 0.6183,
+    "titulo_destino": "El Poder de Nueve: Artefactos, Roles y Herramientas de Agile",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "plataforma_colaboracion_masiva",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Power of Nine no trata escalamiento temporal de Agile",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_expectativas_postventa",
+    "destino": "objetivos_de_llamada_orientados_a_avance",
+    "score": 0.6753,
+    "titulo_destino": "Definir Objetivos de Llamada Orientados a la Acción (Avance)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "preframing_expectativas",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "traspaso_ventas_cuentas",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Objetivos de llamada son de fase de venta, no postventa",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "expansion_producto",
+    "destino": "estrategias_de_crecimiento_empresarial",
+    "score": 0.5402,
+    "titulo_destino": "Cuatro Estrategias Genéricas de Crecimiento",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "pregunta_que_no_estamos_haciendo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Es una de las cuatro estrategias genéricas de crecimiento",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "diseno_metricas",
+    "destino": "tres_as_de_metricas",
+    "score": 0.5082,
+    "titulo_destino": "Las Tres A's de las Métricas (Accionables, Accesibles, Auditables)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "preguntas_excelencia_operacional",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Las tres A's son un marco para diseñar métricas efectivas",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "necesidades_implicitas_explicitas",
+    "destino": "necesidades_implicitas_vs_explicitas",
+    "score": 0.6982,
+    "titulo_destino": "Necesidades Implícitas vs. Explícitas",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "preguntas_need_payoff",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincidencia exacta de concepto",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cierre_de_venta_consultiva",
+    "destino": "obtencion_compromiso_venta",
+    "score": 0.5795,
+    "titulo_destino": "Obtención de Compromiso: Cierre Simple en Ventas Grandes",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "preguntas_need_payoff",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "venta_interna_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Obtención de compromiso es la forma de cierre en venta consultiva",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "entrevistas_de_descubrimiento_de_clientes",
+    "destino": "understanding_customers_tecnicas",
+    "score": 0.6898,
+    "titulo_destino": "Seis Técnicas para Obtener Insights de Clientes",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "preguntas_problema_2",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Las técnicas de insights incluyen entrevistas de descubrimiento",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "investigacion_de_mercado",
+    "destino": "estudio_mercado_calidad",
+    "score": 0.689,
+    "titulo_destino": "Estudio de Mercado para Evaluar Posición Competitiva en Calidad",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "preguntas_situacion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Estudio de mercado es una forma de investigación de mercado",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "mapa_empatia",
+    "destino": "empathy_map",
+    "score": 0.8313,
+    "titulo_destino": "Mapa de Empatía (Empathy Map)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "preparacion_preguntas_problema_precall",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "construccion_de_valor_antes_de_solucion",
+    "destino": "ecuacion_de_valor_venta",
+    "score": 0.612,
+    "titulo_destino": "Ecuación de Valor en la Venta Consultiva",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "prevencion_de_objeciones",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "La ecuación de valor sustenta la construcción de valor previa a la solución",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "reconstruccion_cultura_post_crisis",
+    "destino": "breakthrough_cultural",
+    "score": 0.5905,
+    "titulo_destino": "Ruptura Cultural (Breakthrough in Culture)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "proceso_despidos_responsables",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Breakthrough cultural describe la transformación cultural necesaria",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "mvp_produccion_inicial",
+    "destino": "planificacion_inicial_calidad",
+    "score": 0.5258,
+    "titulo_destino": "Planificación Inicial de Calidad en Manufactura",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "produccion_scheduling_balance_objetivos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Planificación de calidad en manufactura no corresponde a MVP de startups",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "modelo_negocio_operaciones",
+    "destino": "alineacion_ti_negocio",
+    "score": 0.7528,
+    "titulo_destino": "Alineación de TI con el Modelo de Negocio",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "produccion_scheduling_balance_objetivos",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "recompensas_referidos_significativas",
+    "destino": "incentivos_reconocimiento_sostenibilidad",
+    "score": 0.6524,
+    "titulo_destino": "Incentivos, Reconocimiento y Recompensas por Desempeño Sostenible",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "programa_referidos_exclusividad",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Incentivos y reconocimiento son la base de recompensas por referidos",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "kpis_logisticos",
+    "destino": "planificacion_cadena_suministro",
+    "score": 0.6237,
+    "titulo_destino": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "programacion_entregas_delivery_scheduling",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Sourcing process no cubre KPIs logísticos",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_inventarios",
+    "destino": "gestion_inventario",
+    "score": 0.6976,
+    "titulo_destino": "Gestión Eficiente de Inventario",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "programacion_produccion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincidencia directa de tema",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "logistica_entrega",
+    "destino": "planificacion_cadena_suministro",
+    "score": 0.6308,
+    "titulo_destino": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "programacion_produccion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Sourcing/procurement no es logística de entrega",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "ai_panel_de_criticos",
+    "destino": "encuesta_satisfaccion_postproyecto",
+    "score": 0.5767,
+    "titulo_destino": "Encuesta de Satisfacción Post-Entrega",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "prompting_cadena_de_pensamiento",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Temas no relacionados",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "fundamentos_de_llms",
+    "destino": "modelo_madurez_capacidades_cmmi",
+    "score": 0.5476,
+    "titulo_destino": "Modelo de Madurez de Capacidades (CMM/CMMI)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "prompting_por_persona_ia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "CMMI no tiene relación con LLMs",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "analisis_de_mercado",
+    "destino": "estudio_mercado_calidad",
+    "score": 0.6964,
+    "titulo_destino": "Estudio de Mercado para Evaluar Posición Competitiva en Calidad",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "pronostico_de_demanda_variables",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Estudio de mercado coincide con análisis de mercado",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "estrategia_marketing_crecimiento",
+    "destino": "estrategia_crecimiento_clientes",
+    "score": 0.7482,
+    "titulo_destino": "Estrategia de Crecimiento de Clientes (Grow)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "publicidad_garantia_conforme",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_publico_objetivo",
+    "destino": "despliegue_metas",
+    "score": 0.6537,
+    "titulo_destino": "Despliegue de Metas (Goal Deployment)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "publicidad_no_convencional_stunts",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Despliegue de metas no define público objetivo",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "medicion_canales_traccion",
+    "destino": "canales_distribucion",
+    "score": 0.5025,
+    "titulo_destino": "Bloque de Canales (Channels)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "publicidad_no_convencional_stunts",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "social_ads_indirect_response",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Descripción de canales no aborda medición de tracción",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "estrategia_publicidad_offline",
+    "destino": "tracking_publicidad_offline",
+    "score": 0.7915,
+    "titulo_destino": "Medición y Tracking de Publicidad Offline",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "publicidad_remanente_remnant_ads",
+        "campo": "nodos_previos"
+      },
+      {
+        "nodo": "seleccion_plataforma_social_ads",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "nodo": "tracking_publicidad_offline",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "hitos_de_producto",
+    "destino": "concepto_producto_plus",
+    "score": 0.4632,
+    "titulo_destino": "El Concepto de 'Producto Plus'",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "publicidad_tradicional_pr",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "pr_no_convencional",
+    "destino": "ciclo_de_mejora_continua_helix",
+    "score": 0.4322,
+    "titulo_destino": "Ciclo de Cuatro Pasos y la Hélice de Mejora Continua",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "publicidad_tradicional_pr",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "fundraising_startup",
+    "destino": "crowdfunding_de_producto",
+    "score": 0.6971,
+    "titulo_destino": "Crowdfunding de Producto (Kickstarter/Indiegogo)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "publicidad_tradicional_pr",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Crowdfunding es una forma de fundraising",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "lanzamiento_producto_imperfecto",
+    "destino": "nueve_pecados_capitales_lanzamiento",
+    "score": 0.5865,
+    "titulo_destino": "Los 9 Pecados Capitales del Modelo de Introducción de Producto",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "reconstruccion_de_equipo_ejecutivo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Pecados del modelo de lanzamiento no es lo mismo que lanzar producto imperfecto",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "cultura_organizacional_ia",
+    "destino": "cultura_organizacional_calidad",
+    "score": 0.7492,
+    "titulo_destino": "Cultura Organizacional y su Impacto en la Calidad",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "reconstruccion_significado_trabajo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "pivot_estrategico",
+    "destino": "pivote_estrategico",
+    "score": 0.7742,
+    "titulo_destino": "Pivote Estratégico basado en Evidencia",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "reconstruir_equipo_ejecutivo_para_nueva_etapa",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "contratacion_estrategica",
+    "destino": "desarrollo_attack_plans",
+    "score": 0.7271,
+    "titulo_destino": "Desarrollo de Planes de Ataque (Attack Plans)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "reconstruir_equipo_ejecutivo_para_nueva_etapa",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "escalar_operaciones",
+    "destino": "benchmarking_7_pasos_juran",
+    "score": 0.5378,
+    "titulo_destino": "Proceso de Benchmarking de 7 Pasos (Juran)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "reconstruir_equipo_ejecutivo_para_nueva_etapa",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Benchmarking no trata escalamiento operativo",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "mapeo_journey_cliente_holistico",
+    "destino": "customer_journey_mapping",
+    "score": 0.7747,
+    "titulo_destino": "Mapeo del Customer Journey (Viaje del Cliente)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "rediseno_procesos_negocio_cx",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "personalizacion_interacciones_cliente",
+    "destino": "herramientas_de_activacion_web",
+    "score": 0.7249,
+    "titulo_destino": "Herramientas de Activación de Usuarios",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "regalos_estrategicos_sorpresa",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "investigacion_cliente",
+    "destino": "understanding_customers_tecnicas",
+    "score": 0.6381,
+    "titulo_destino": "Seis Técnicas para Obtener Insights de Clientes",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "regalos_estrategicos_sorpresa",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Técnicas de insights de cliente coinciden con investigación de cliente",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "seguimiento_relacion_postventa",
+    "destino": "relacion_previa_y_estructura_roles",
+    "score": 0.5729,
+    "titulo_destino": "Tipo de Relación Previa como Determinante de la Estructura de Roles",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "regalos_estrategicos_sorpresa",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata relación entre cofundadores, no postventa",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_postventa",
+    "destino": "juran_trilogy",
+    "score": 0.6277,
+    "titulo_destino": "La Trilogía de Juran: Planificación, Control y Mejora",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "relacion_continua_con_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trilogía de Juran es sobre calidad, no postventa",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "analisis_de_competencia",
+    "destino": "analisis_competitivo_calidad",
+    "score": 0.7428,
+    "titulo_destino": "Análisis Competitivo de Producto",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "respuesta_estrategica_a_amenaza_competitiva",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_metricas_exito_kickoff",
+    "destino": "benchmarking_proceso",
+    "score": 0.5629,
+    "titulo_destino": "Benchmarking: Definición y Proceso",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "reunion_conclusion_proyecto",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Benchmarking no define métricas de kickoff",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "desarrollo_necesidades_cliente_spin",
+    "destino": "modelo_spin_preguntas",
+    "score": 0.6732,
+    "titulo_destino": "Modelo SPIN: Secuencia de Preguntas de Venta",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "riesgo_tecnicas_cierre_venta_compleja",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincidencia exacta con modelo SPIN",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "modelo_de_negocio_canvas",
+    "destino": "lienzo_modelo_negocio",
+    "score": 0.8161,
+    "titulo_destino": "El Lienzo de Modelo de Negocio (Business Model Canvas)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "scor_model_operaciones",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "pronostico_de_demanda",
+    "destino": "demand_curve_pricing",
+    "score": 0.6928,
+    "titulo_destino": "Curva de Demanda y Estrategia de Precios",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "scor_model_operaciones",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Curva de demanda es sobre pricing, no pronóstico",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "gestion_procurement",
+    "destino": "planificacion_cadena_suministro",
+    "score": 0.6979,
+    "titulo_destino": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "scor_model_operaciones",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Sourcing process es procurement",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definicion_de_cultura_organizacional",
+    "destino": "cultura_organizacional_calidad",
+    "score": 0.7243,
+    "titulo_destino": "Cultura Organizacional y su Impacto en la Calidad",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "screening_ambicion_organizacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "mapa_experiencia_cliente",
+    "destino": "customer_journey_mapping",
+    "score": 0.7901,
+    "titulo_destino": "Mapeo del Customer Journey (Viaje del Cliente)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "seguimiento_informacion_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "fases_relacion_cliente",
+    "destino": "fase_acclimate_experiencia_cliente",
+    "score": 0.715,
+    "titulo_destino": "Fase de Aclimatación del Cliente (Acclimate Phase)",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "seguimiento_informacion_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "prevencion_perdida_clientes",
+    "destino": "cierre_satisfaccion_postventa",
+    "score": 0.6569,
+    "titulo_destino": "Impacto Negativo del Cierre Forzado en la Satisfacción Post-Venta",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "seguimiento_informacion_cliente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Relacionado con satisfacción y retención postventa",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "sem_fundamentos_metricas",
+    "destino": "falacia_meta_numerica_sin_metodo",
+    "score": 0.4961,
+    "titulo_destino": "La Falacia de la Meta Numérica sin Método (Sistema de Semáforo)",
+    "banda": "poda",
+    "usos": [
+      {
+        "nodo": "sem_estrategia_ejecucion",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "podado"
+  },
+  {
+    "fantasma": "pipeline_de_ventas",
+    "destino": "flujos_de_ingresos",
+    "score": 0.6208,
+    "titulo_destino": "Bloque de Flujos de Ingresos (Revenue Streams)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "senales_de_compra_reales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Flujos de ingresos no es pipeline de ventas",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "priorizacion_de_leads",
+    "destino": "apertura_efectiva_llamada_venta",
+    "score": 0.5213,
+    "titulo_destino": "Apertura Efectiva de la Llamada de Ventas (Preliminares)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "senales_de_compra_reales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Apertura de llamada no trata priorización de leads",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "cyborg_vs_centauro",
+    "destino": "centaur_cyborg_ia",
+    "score": 0.7029,
+    "titulo_destino": "Modelos de Colaboración Centauro y Cyborg con IA",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "shadow_ai_use_organizacional",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "entrevistas_clientes_reales",
+    "destino": "prueba_solucion_con_cliente",
+    "score": 0.5865,
+    "titulo_destino": "Prueba de la Solución con el Cliente",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "simulacion_clientes_ia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Prueba con cliente involucra entrevistas reales",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "estrategia_de_negocio",
+    "destino": "alineacion_ti_negocio",
+    "score": 0.7246,
+    "titulo_destino": "Alineación de TI con el Modelo de Negocio",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "simulacion_diseno_cadena_suministro",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "identificacion_bullwhip_effect",
+    "destino": "efecto_bullwhip",
+    "score": 0.6859,
+    "titulo_destino": "Identificación y Costeo del Efecto Bullwhip",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "sistema_visibilidad_cadena_suministro_low_cost",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Coincidencia directa con efecto bullwhip",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "identificacion_primer_cliente_correcto",
+    "destino": "verificar_clientes_y_canales",
+    "score": 0.6802,
+    "titulo_destino": "Verificar Quiénes Son los Clientes y Cómo Alcanzarlos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "tacticas_cold_calling",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Verificar clientes coincide con identificar primer cliente correcto",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "cierre_de_alianzas",
+    "destino": "cierre_term_sheet",
+    "score": 0.5151,
+    "titulo_destino": "Cierre del Acuerdo: Term Sheet y Documentos Definitivos",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "tacticas_de_ferias_comerciales",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Term sheet es de inversión, no alianzas",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "identificacion_conflictos_interdepartamentales",
+    "destino": "gestion_de_conflictos_cofundadores",
+    "score": 0.5904,
+    "titulo_destino": "Gestión de Conflictos entre Cofundadores: Afectivo vs. Cognitivo",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "tecnica_freaky_friday",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata conflictos entre cofundadores, no interdepartamentales",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "procesos_colaboracion_interequipos",
+    "destino": "coordinacion_multiempleador",
+    "score": 0.6858,
+    "titulo_destino": "Coordinación Multiempleador (Agencias de Personal y Empleador Anfitrión)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "tecnica_freaky_friday",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Es coordinación de seguridad multiempleador, no colaboración entre equipos",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "definicion_estrategia_negocio",
+    "destino": "estrategia_innovacion_producto",
+    "score": 0.7649,
+    "titulo_destino": "Estrategia de Innovación de Producto",
+    "banda": "auto",
+    "usos": [
+      {
+        "nodo": "tecnologia_como_medio_no_fin",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": null,
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "transicion_incremental_vs_bigbang",
+    "destino": "drift_hacia_el_fallo",
+    "score": 0.6276,
+    "titulo_destino": "Drift: Desviación Incremental hacia el Fallo",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "tecnologia_como_medio_no_fin",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Drift es desviación de diseño, no estrategia de transición",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "decision_venta_empresa_analisis_logico",
+    "destino": "enfoque_etapa_investigacion",
+    "score": 0.6364,
+    "titulo_destino": "Priorizar la Etapa de Investigación sobre Demostración de Capacidad",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "tipos_adquisiciones_tecnologia",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Trata investigación en llamadas de venta, no venta de empresa",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "negociacion_venta_empresa",
+    "destino": "co_sale_drag_along_agreements",
+    "score": 0.6633,
+    "titulo_destino": "Acuerdos de Co-Venta y Arrastre (Co-Sale & Drag-Along)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "tipos_adquisiciones_tecnologia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Acuerdos de co-venta son parte de la negociación de venta de la empresa",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "validar_problema_cliente",
+    "destino": "customer_validation",
+    "score": 0.6385,
+    "titulo_destino": "Customer Validation",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "traccion_como_metrica_clave",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "rechazado_revision",
+    "motivo_revision": "Customer Validation prueba escalabilidad, no valida el problema del cliente",
+    "estado": "podado"
+  },
+  {
+    "fantasma": "mapa_de_procesos_logisticos",
+    "destino": "planificacion_cadena_suministro",
+    "score": 0.6692,
+    "titulo_destino": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "vehiculos_autonomos_drones_supply_chain",
+        "campo": "nodos_previos"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "Sourcing process es parte del mapa de procesos logísticos de la cadena de suministro",
+    "estado": "aplicado"
+  },
+  {
+    "fantasma": "definir_core_competencies_empresa",
+    "destino": "evaluacion_competencias_centrales",
+    "score": 0.6188,
+    "titulo_destino": "Evaluación de Competencias Centrales (Core Competencies)",
+    "banda": "revision",
+    "usos": [
+      {
+        "nodo": "vertical_vs_virtual_integracion",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "veredicto": "aprobado_revision",
+    "motivo_revision": "La evaluación de competencias centrales corresponde directamente al concepto de definirlas",
+    "estado": "aplicado"
+  }
+]

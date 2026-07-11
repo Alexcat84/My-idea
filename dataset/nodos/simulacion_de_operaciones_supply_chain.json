@@ -1,0 +1,33 @@
+{
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Modelado de Simulación para Decisiones de Supply Chain",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "La simulación permite crear un prototipo digital de una fábrica, almacén o red de suministro completa para probar diferentes condiciones antes de implementar cambios reales. Se aplica en tres horizontes: estratégico (1-5 años, ej. dónde construir una planta), táctico (1 mes-1 año, ej. gestión de incertidumbre de demanda) y operativo (1 día-1 mes, ej. layout de almacén). Permite detectar problemas de diseño antes de invertir, reducir stock de seguridad manteniendo el nivel de servicio, y evitar inversiones innecesarias mediante pruebas virtuales.",
+  "pasos_accionables": [
+    "Recopilar datos de ERP/SCM sobre productos, plantas, costos y restricciones de capacidad",
+    "Definir el horizonte de decisión (estratégico, táctico u operativo) y la pregunta a responder",
+    "Construir el modelo de simulación representando la red actual o propuesta",
+    "Ejecutar el modelo bajo distintos escenarios y variables de incertidumbre (demanda, tráfico, procesos)",
+    "Comparar resultados de escenarios para seleccionar el diseño con mejor relación costo-servicio",
+    "Validar la solución antes de implementarla físicamente para minimizar riesgo"
+  ],
+  "entregable_esperado": "Modelo de simulación validado con recomendación de diseño de red, layout o política de inventario respaldada por datos",
+  "nodos_previos": [
+    "definicion_alineacion_cadena_suministro",
+    "ia_en_supply_chain",
+    "manufactura_aditiva_bajo_demanda",
+    "vehiculos_autonomos_drones_supply_chain"
+  ],
+  "nodos_siguientes": [
+    "vehiculos_autonomos_drones_supply_chain",
+    "ia_en_supply_chain"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir la ubicación de una nueva planta, centro de distribución o terminal",
+    "Si existe alta incertidumbre en demanda o procesos y se requiere probar diseños antes de invertir",
+    "Cuando se busca optimizar niveles de stock de seguridad sin sacrificar nivel de servicio"
+  ],
+  "etiqueta_arbol": "Simula tu Cadena de Suministro"
+}

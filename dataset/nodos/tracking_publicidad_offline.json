@@ -1,0 +1,26 @@
+{
+  "node_id": "tracking_publicidad_offline",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Medición y Tracking de Publicidad Offline",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "A diferencia de la publicidad online, los anuncios offline son difíciles de medir directamente. Se recomienda usar URLs únicas, códigos promocionales, y preguntas directas como '¿cómo nos conociste?' para atribuir conversiones a campañas específicas y así justificar (o descartar) inversión futura en cada medio.",
+  "pasos_accionables": [
+    "Crear URLs únicas o landing pages específicas por campaña offline",
+    "Incluir códigos promocionales exclusivos para cada canal",
+    "Agregar la pregunta '¿Cómo se enteró de nosotros?' en formularios de registro/compra",
+    "Analizar los datos recolectados para decidir qué canales offline escalar o descartar"
+  ],
+  "entregable_esperado": "Sistema de atribución simple para campañas offline (URLs, códigos, encuesta de origen)",
+  "nodos_previos": [
+    "herramientas_online_canal_fisico",
+    "seleccion_plataforma_social_ads"
+  ],
+  "nodos_siguientes": [
+    "publicidad_remanente_remnant_ads"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ejecutan múltiples campañas offline simultáneas y se necesita saber cuál funciona"
+  ],
+  "etiqueta_arbol": "Mide tu Publicidad Fuera de Línea"
+}

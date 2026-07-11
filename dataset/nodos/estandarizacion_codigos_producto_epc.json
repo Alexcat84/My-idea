@@ -1,0 +1,26 @@
+{
+  "node_id": "estandarizacion_codigos_producto_epc",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Estandarización de Datos de Producto (EPC y GDSN)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El uso de números de parte internos distintos entre empresas genera errores costosos de traducción, facturación y pronóstico. El Electronic Product Code (EPC) y redes como el Global Data Synchronization Network (GDSN) permiten un identificador único compartido entre socios comerciales, eliminando traducciones manuales y mejorando la precisión de los datos de ventas e inventario.",
+  "pasos_accionables": [
+    "Evaluar los costos actuales de traducción de números de parte entre socios comerciales",
+    "Adoptar códigos EPC para la comunicación externa manteniendo códigos internos si se desea",
+    "Conectar la empresa a un 'data pool' del GDSN a través de GS1",
+    "Clasificar los productos usando estándares como UNSPSC o GPC para análisis jerárquico"
+  ],
+  "entregable_esperado": "Catálogo de productos con códigos EPC/GPC asignados y conexión activa a la red GDSN",
+  "nodos_previos": [
+    "seleccion_fuente_unica_multiple"
+  ],
+  "nodos_siguientes": [
+    "sales_operations_planning"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen errores frecuentes de facturación o pedidos por discrepancias de códigos de producto",
+    "Si la empresa trabaja con múltiples socios comerciales con distintos sistemas ERP"
+  ],
+  "etiqueta_arbol": "Unifica los Datos de tus Productos"
+}

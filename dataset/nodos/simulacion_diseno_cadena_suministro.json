@@ -1,0 +1,29 @@
+{
+  "node_id": "simulacion_diseno_cadena_suministro",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Simulación para Diseño de Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La simulación continua de diferentes diseños y operaciones de cadena de suministro permite a las empresas romper con ideas preconcebidas y probar nuevos enfoques, en lugar de extrapolar estrategias desde la experiencia diaria incremental. Las cadenas de suministro deben ajustarse a la estrategia de negocio, no al revés. Los gerentes que se enfocan solo en operaciones diarias tienden a perder la visión general y fallan en encontrar mejoras estratégicas significativas.",
+  "pasos_accionables": [
+    "Definir la estrategia de negocio antes de diseñar la cadena de suministro",
+    "Crear modelos de simulación de distintos escenarios de cadena (no solo optimizar lo existente)",
+    "Probar combinaciones de tecnologías (robots, manufactura aditiva, vehículos autónomos) en el modelo",
+    "Comparar resultados de simulación contra el desempeño actual antes de invertir en cambios reales",
+    "Repetir el proceso de simulación periódicamente para adaptarse a cambios del mercado global"
+  ],
+  "entregable_esperado": "Un modelo de simulación de cadena de suministro con al menos dos escenarios alternativos comparados contra el estado actual",
+  "nodos_previos": [
+    "lienzo_modelo_negocio",
+    "alineacion_ti_negocio"
+  ],
+  "nodos_siguientes": [
+    "metricas_desempeno_cadena_suministro",
+    "tecnologias_emergentes_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa busca rediseñar su cadena de suministro para escalar",
+    "Cuando el crecimiento de ventas exige repensar la logística existente"
+  ],
+  "etiqueta_arbol": "Prueba Nuevos Diseños de Suministro"
+}

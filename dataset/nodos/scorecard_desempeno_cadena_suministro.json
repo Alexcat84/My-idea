@@ -1,0 +1,31 @@
+{
+  "node_id": "scorecard_desempeno_cadena_suministro",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Scorecard de Desempeño y Bucle de Retroalimentación Autocorrectivo",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentación autocorrectivo: las empresas corrigen sus propios problemas rápidamente sin esperar instrucciones, porque saben que su desempeño es visible para todos. Esto eleva el desempeño colectivo de la cadena por encima de lo que lograría cada empresa operando de forma aislada.",
+  "pasos_accionables": [
+    "Definir métricas clave de desempeño compartidas entre todos los socios de la cadena (entregas a tiempo, niveles de inventario, precisión de pronósticos)",
+    "Construir un scorecard visible para todas las partes, actualizado en tiempo real o casi real",
+    "Comunicar que el desempeño de cada empresa es visible para el resto de la cadena",
+    "Dejar que las empresas autocorrijan su desempeño sin intervención centralizada constante",
+    "Revisar el scorecard periódicamente en reuniones de coordinación (ej: conference calls)"
+  ],
+  "entregable_esperado": "Scorecard funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente",
+  "nodos_previos": [
+    "ciclo_virtuoso_datos_electronicos",
+    "collaboration_enablers",
+    "collaborative_transportation_management",
+    "sistema_visibilidad_cadena_suministro_low_cost"
+  ],
+  "nodos_siguientes": [
+    "sistema_manejo_quejas"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya existe flujo continuo de datos entre socios de la cadena",
+    "Si se busca mejorar el desempeño colectivo sin aumentar el control centralizado",
+    "Para reducir el efecto bullwhip mediante mayor transparencia de demanda real"
+  ],
+  "etiqueta_arbol": "Comparte el Desempeño de tu Cadena"
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "requisitos_sistema_retroalimentacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Tres Requisitos para Sistemas de Retroalimentación de Alto Desempeño",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Para que un sistema de retroalimentación funcione en un entorno impredecible se necesitan tres condiciones simultáneas: (1) transparencia de datos en tiempo real para que todos vean lo que ocurre, (2) autoridad delegada para actuar dentro de reglas definidas sin esperar aprobación, y (3) un interés personal (stake) en el resultado que motive el aprendizaje y la mejora continua. Cuando estas tres condiciones se combinan, emerge un sistema autoorganizado capaz de responder rápido y con calidad, similar a como el fuego surge de combustible, oxígeno y chispa.",
+  "pasos_accionables": [
+    "Implementar plataformas de datos compartidos y visibles para todos los actores relevantes",
+    "Delegar autoridad de decisión a unidades autónomas dentro de reglas claras",
+    "Diseñar incentivos (monetarios, reputacionales, de desarrollo) ligados a los resultados obtenidos",
+    "Revisar periódicamente que las tres condiciones sigan vigentes conforme cambia el entorno"
+  ],
+  "entregable_esperado": "Un diseño organizacional que especifique quién ve qué datos, qué autoridad tiene cada rol y qué incentivos existen por resultados",
+  "nodos_previos": [
+    "bucle_retroalimentacion_autoajustable"
+  ],
+  "nodos_siguientes": [
+    "sistema_de_alarma_de_defectos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca escalar la toma de decisiones descentralizada en operaciones",
+    "Cuando los equipos dependen de aprobaciones centralizadas que ralentizan la respuesta"
+  ],
+  "etiqueta_arbol": "Diseña tu Sistema de Retroalimentación"
+}

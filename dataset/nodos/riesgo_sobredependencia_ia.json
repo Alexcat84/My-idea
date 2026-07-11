@@ -1,0 +1,27 @@
+{
+  "node_id": "riesgo_sobredependencia_ia",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Riesgo de Sobredependencia y Pérdida de Criterio Propio",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "El uso excesivo de IA sin supervisión crítica puede generar 'pereza cognitiva': los usuarios dejan de pensar profundamente, aceptan la primera respuesta de la IA (efecto ancla) y pierden capacidad de juicio propio. Estudios muestran que profesionales con IA de alta calidad se volvieron menos rigurosos y cometieron peores decisiones que quienes no usaban IA, especialmente en tareas ambiguas o con datos engañosos.",
+  "pasos_accionables": [
+    "Establecer como norma editar y cuestionar siempre las salidas de la IA antes de usarlas.",
+    "Rotar tareas críticas entre revisión humana pura y asistida por IA para mantener el criterio del equipo.",
+    "Capacitar al equipo en 'pensamiento crítico aplicado a IA': identificar cuándo desconfiar de una respuesta plausible.",
+    "Medir periódicamente la calidad de las decisiones tomadas con y sin apoyo de IA."
+  ],
+  "entregable_esperado": "Protocolo interno de uso responsable de IA con checkpoints de revisión humana obligatoria.",
+  "nodos_previos": [
+    "descomposicion_tareas_trabajo",
+    "jagged_frontier_ia"
+  ],
+  "nodos_siguientes": [
+    "reconstruccion_significado_trabajo"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo empieza a delegar decisiones importantes a la IA sin revisión.",
+    "Cuando se detecta una caída en la calidad de las decisiones pese a mayor velocidad."
+  ],
+  "etiqueta_arbol": "No Dependas Ciegamente de la IA"
+}

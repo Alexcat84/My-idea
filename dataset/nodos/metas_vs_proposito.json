@@ -3,20 +3,31 @@
   "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Distinguir Metas (Goals) de Propósito (Ley de Goodhart)",
-  "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+  "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future | The Hard Thing About Hard Thing - Ben Horowitz | Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Las metas son objetivos medibles (puntos, likes, ventas) mientras que el propósito es la razón profunda detrás de la acción (diversión, conexión, impacto). Cuando confundimos metas con propósito, corremos el riesgo de optimizar el indicador en vez del valor real que representa —la Ley de Goodhart: 'cuando una medida se convierte en objetivo, deja de ser una buena medida'—. Esto puede generar comportamiento no ético, toma de riesgo excesiva y pérdida de motivación intrínseca (caso 'Goals Gone Wild').",
   "pasos_accionables": [
     "Lista explícitamente las métricas/KPIs actuales de tu proyecto",
     "Para cada métrica, pregúntate: ¿esta métrica realmente representa el valor/propósito que queremos lograr?",
     "Identifica si alguna métrica podría ser 'hackeada' (como el AI de Q*bert) sin cumplir el propósito real",
-    "Ajusta o complementa las métricas con indicadores cualitativos que capturen mejor el propósito"
+    "Ajusta o complementa las métricas con indicadores cualitativos que capturen mejor el propósito",
+    "Antes de fijar una métrica, define primero el objetivo cualitativo real que persigues",
+    "Pregúntate qué comportamientos generará esa métrica en el equipo antes de implementarla",
+    "Complementa métricas cuantitativas con evaluaciones cualitativas (ej: satisfacción del cliente, opinión de ingenieros sobre el producto)",
+    "Evita sacrificar el largo plazo (R&D, calidad) para cumplir números de corto plazo",
+    "Aplica el concepto de 'white box': entiende cómo se producen los números, no solo el resultado final",
+    "Identificar el objetivo superficial que el cliente dice buscar",
+    "Investigar el deseo o motivación real detrás de ese objetivo declarado",
+    "Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confirmar el resultado real)",
+    "Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato",
+    "Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado"
   ],
   "entregable_esperado": "Una tabla de métricas actuales junto con el propósito que cada una debería representar, señalando discrepancias o riesgos de 'gaming the metric'",
   "nodos_previos": [
     "disenio_en_turbulencia"
   ],
   "nodos_siguientes": [
-    "antigoals_framework"
+    "antigoals_framework",
+    "deuda_de_gestion"
   ],
   "condiciones_activacion": [
     "Cuando el equipo está obsesionado con una métrica única (ej. crecimiento de usuarios, likes, ventas) sin conexión clara al valor real ofrecido",

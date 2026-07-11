@@ -1,0 +1,26 @@
+{
+  "node_id": "diagnostico_fuga_clientes_postventa",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Diagnóstico de Fuga de Clientes en la Postventa",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "La mayoría de negocios pierde entre el 20% y el 70% de sus clientes nuevos en los primeros 100 días de relación, no por precio o competencia, sino porque el cliente se siente ignorado tras la compra. Las empresas invierten enormes recursos en adquisición (marketing y ventas) pero casi nada en la experiencia posterior a la venta, generando una desconexión emocional que provoca la salida silenciosa del cliente sin que la empresa entienda por qué.",
+  "pasos_accionables": [
+    "Calcular la tasa real de abandono de clientes en los primeros 100 días.",
+    "Revisar el ratio de inversión entre adquisición (marketing/ventas) y retención (servicio postventa).",
+    "Entrevistar a clientes que se dieron de baja recientemente para identificar la causa emocional real detrás de su salida.",
+    "Mapear el 'customer life cycle' completo (awareness, consideración, compra, satisfacción, lealtad, advocacy) y detectar en qué etapa se concentra la inversión."
+  ],
+  "entregable_esperado": "Un diagnóstico con tasa de churn en los primeros 100 días, ratio de inversión pre-venta vs post-venta, y una lista de razones emocionales de abandono reportadas por clientes.",
+  "nodos_previos": [
+    "propuesta_de_valor",
+    "segmentacion_de_clientes"
+  ],
+  "nodos_siguientes": [
+    "diseno_primeros_100_dias",
+    "experiencia_del_cliente_proactiva"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa ya tiene clientes activos pero reporta alta rotación o bajas silenciosas sin razón aparente."
+  ]
+}

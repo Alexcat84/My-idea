@@ -14,13 +14,17 @@
   "entregable_esperado": "Mapa de canales por segmento de cliente con fases cubiertas y tipo (propio/socio, directo/indirecto)",
   "nodos_previos": [
     "customer_segments_hypothesis",
-    "elementos_creadores_valor"
+    "elementos_creadores_valor",
+    "estrategia_plataformas_existentes",
+    "eventos_offline_propios",
+    "framework_bullseye"
   ],
   "nodos_siguientes": [
     "relaciones_con_clientes",
     "flujos_de_ingresos",
     "business_plan_cinco_secciones",
-    "test_sell_channel_partners"
+    "test_sell_channel_partners",
+    "eventos_offline_como_canal_traccion"
   ],
   "condiciones_activacion": [
     "Cuando el usuario ya tiene definida su propuesta de valor y necesita definir cómo llegar al cliente"

@@ -1,0 +1,27 @@
+{
+  "node_id": "programa_recompensas_por_lealtad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Programa de Recompensas por Lealtad Continua",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "Sistemas de puntos o recompensas escalonadas que premian la repetición de compra fortalecen la retención. dōTERRA ofrece un producto gratis mensual al superar cierto umbral de compra, lo que incrementa el valor promedio del pedido y refuerza comportamientos deseados, logrando una tasa de retención siete veces superior al promedio de su industria.",
+  "pasos_accionables": [
+    "Define umbrales de compra que activen recompensas",
+    "Selecciona productos complementarios de bajo costo pero alto valor percibido como premio",
+    "Comunica el programa de forma clara y recurrente (mensual)",
+    "Mide el impacto en el valor promedio de pedido y tasa de retención"
+  ],
+  "entregable_esperado": "Estructura de programa de recompensas con umbrales y premios definidos, y métrica de retención base para comparar",
+  "nodos_previos": [
+    "modelo_de_ingresos",
+    "segmentacion_clientes"
+  ],
+  "nodos_siguientes": [
+    "fase_advocate_cliente",
+    "programa_referidos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el negocio tiene un modelo de compra recurrente o suscripción",
+    "Si la tasa de retención es baja comparada con la industria"
+  ]
+}

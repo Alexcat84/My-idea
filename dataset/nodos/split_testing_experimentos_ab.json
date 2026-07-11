@@ -3,14 +3,18 @@
   "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Split-Testing (Pruebas A/B)",
-  "fuente": "The Lean Startup - Eric Ries",
+  "fuente": "The Lean Startup - Eric Ries | SPIN Selling - Neil Rackham",
   "resumen_teorico": "Técnica en la que se ofrecen diferentes versiones de un producto a distintos grupos de clientes simultáneamente, para observar diferencias en el comportamiento y así inferir el impacto real de cada variación. A diferencia del análisis de causa-efecto posterior (que es lento y ambiguo), el split-test genera evidencia científica en tiempo real sobre qué cambios importan realmente a los clientes.",
   "pasos_accionables": [
     "Definir una hipótesis clara sobre el impacto esperado de una nueva funcionalidad",
     "Dividir la base de clientes en dos grupos aleatorios (A y B)",
     "Lanzar la variación nueva solo al grupo B, manteniendo el grupo A con la versión estándar",
     "Medir comportamiento de ambos grupos usando las mismas métricas",
-    "Comparar resultados para determinar si la variación tuvo impacto real"
+    "Comparar resultados para determinar si la variación tuvo impacto real",
+    "Seleccionar un grupo de control con nivel de desempeño inicial similar al grupo que recibirá la intervención",
+    "Medir resultados de ambos grupos en el mismo periodo de tiempo bajo las mismas condiciones de mercado",
+    "Comparar el cambio porcentual de ambos grupos, no solo los valores absolutos",
+    "Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención"
   ],
   "entregable_esperado": "Reporte de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente",
   "nodos_previos": [

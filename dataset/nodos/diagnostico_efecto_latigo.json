@@ -1,0 +1,26 @@
+{
+  "node_id": "diagnostico_efecto_latigo",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Diagnóstico del Efecto Látigo (Bullwhip Effect)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Fue ilustrado con el 'beer game' del MIT y documentado por Peter Senge. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+  "pasos_accionables": [
+    "Comparar las órdenes recibidas en cada eslabón contra la demanda real del consumidor final",
+    "Identificar si existe amplificación de la variabilidad de la demanda al subir en la cadena",
+    "Simular el 'beer game' o un ejercicio similar con el equipo para visualizar la dinámica",
+    "Cuantificar costos asociados a sobreproducción, exceso de inventario y rupturas de stock"
+  ],
+  "entregable_esperado": "Informe de diagnóstico que evidencie la presencia y magnitud del efecto látigo en la cadena propia",
+  "nodos_previos": [
+    "compartir_datos_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "mitigacion_efecto_latigo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se observan ciclos de escasez seguidos de exceso de inventario",
+    "Si los pronósticos de demanda difieren mucho entre eslabones de la cadena"
+  ],
+  "etiqueta_arbol": "Diagnostica el Efecto Látigo"
+}

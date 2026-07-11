@@ -1,0 +1,30 @@
+{
+  "node_id": "regla_disponibilidad_previa_venta",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Disponibilidad de la Garantía Antes de la Venta (Pre-Sale Availability Rule)",
+  "fuente": "Businessperson's Guide to Federal Warranty Law",
+  "resumen_teorico": "Minoristas, empresas de venta por correo, venta puerta a puerta y warrantors deben asegurar que el texto completo de la garantía esté disponible para que el consumidor lo lea antes de comprar el producto, ya sea exhibiéndolo junto al producto, en un catálogo, o a solicitud del cliente. Esto permite comparación informada previa a la compra. Puntero jurisdiccional: mecánica según la ley federal de EE.UU. (Magnuson-Moss); los conceptos son universales pero la regulación de garantías varía por país — verifica la norma vigente en tu jurisdicción.",
+  "pasos_accionables": [
+    "Definir el canal de venta (retail, online, puerta a puerta) y el método correspondiente para exhibir la garantía antes de la compra.",
+    "Colocar la garantía visible junto al producto en tienda física o incluirla en la página de producto online.",
+    "Capacitar al equipo de ventas para mostrar la garantía si el cliente la solicita antes de comprar."
+  ],
+  "entregable_esperado": "Proceso documentado de exhibición de garantía por canal de venta, implementado en tienda física y/o e-commerce.",
+  "nodos_previos": [
+    "regla_divulgacion_garantia",
+    "clasificacion_garantia_full_limited",
+    "cumplimiento_magnuson_moss"
+  ],
+  "nodos_siguientes": [
+    "publicidad_garantia",
+    "publicidad_garantia_conforme"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa distribuye o vende productos con garantía escrita a través de cualquier canal."
+  ],
+  "ids_alias": [
+    "regla_disponibilidad_previa_venta_2"
+  ],
+  "etiqueta_arbol": "Muestra tu Garantía Antes de Vender"
+}

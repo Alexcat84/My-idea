@@ -1,0 +1,27 @@
+{
+  "node_id": "programacion_entregas_delivery_scheduling",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Programación de Entregas: Directas vs. Milk Run",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Existen dos métodos principales de entrega: las entregas directas (de un origen a un destino, simples pero eficientes solo cuando el EOQ del receptor coincide con la carga de transporte completa) y las entregas milk run (de un origen a múltiples destinos o viceversa, más complejas de programar pero más eficientes en el uso del transporte y menor costo de recepción cuando las cantidades individuales son menores a una carga completa). La elección depende de la relación entre el EOQ de cada ubicación receptora y la capacidad del modo de transporte.",
+  "pasos_accionables": [
+    "Evaluar si el EOQ de cada ubicación receptora coincide con cargas completas de transporte",
+    "Si coincide, implementar entregas directas por su simplicidad",
+    "Si no coincide, diseñar rutas milk run combinando pedidos",
+    "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando la única restricción es capacidad del vehículo",
+    "Decidir entre entregas desde ubicaciones de producto único o desde centros de distribución"
+  ],
+  "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas",
+  "nodos_previos": [
+    "gestion_pedidos_order_management"
+  ],
+  "nodos_siguientes": [
+    "customer_retention_strategy"
+  ],
+  "condiciones_activacion": [
+    "Cuando el negocio tiene múltiples puntos de entrega y busca reducir costos logísticos",
+    "Si los costos de transporte o recepción son elevados por entregas fragmentadas"
+  ],
+  "etiqueta_arbol": "Elige cómo Programar tus Entregas"
+}

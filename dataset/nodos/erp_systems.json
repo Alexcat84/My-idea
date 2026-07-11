@@ -1,0 +1,27 @@
+{
+  "node_id": "erp_systems",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Sistemas ERP (Enterprise Resource Planning)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Los sistemas ERP recopilan datos de múltiples funciones de la empresa (finanzas, procura, manufactura, cumplimiento de órdenes, RRHH, logística) y ofrecen una vista orientada a procesos que atraviesa departamentos funcionales. Se enfocan principalmente en ejecutar y monitorear transacciones diarias, careciendo a menudo de capacidades analíticas avanzadas.",
+  "pasos_accionables": [
+    "Mapear los procesos de negocio que requieren integración cross-funcional",
+    "Seleccionar módulos ERP necesarios (finanzas, procura, manufactura, logística)",
+    "Evaluar la necesidad de sistemas analíticos complementarios (APS, SCM)",
+    "Planificar la implementación por fases según prioridad de módulos"
+  ],
+  "entregable_esperado": "Plan de implementación ERP con módulos priorizados",
+  "nodos_previos": [
+    "data_transmission_edi_xml",
+    "cloud_computing_supply_chain"
+  ],
+  "nodos_siguientes": [
+    "supply_chain_management_systems",
+    "warehouse_management_system"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa tiene procesos fragmentados entre departamentos sin visibilidad centralizada"
+  ],
+  "etiqueta_arbol": "Conecta tu Empresa con un ERP"
+}

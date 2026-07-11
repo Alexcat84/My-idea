@@ -3,21 +3,31 @@
   "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Bloque de Asociaciones Clave (Key Partnerships)",
-  "fuente": "Business Model Generation - Osterwalder",
+  "fuente": "Business Model Generation - Osterwalder | Essentials of Supply Chain Management - Michael H. Hugos | Essentials of Supply Chain Mana - Michael H. Hugos",
   "resumen_teorico": "Describe la red de proveedores y socios que hacen funcionar el modelo de negocio. Cuatro tipos: alianzas estratégicas entre no competidores, coopetencia (alianzas entre competidores), joint ventures y relaciones comprador-proveedor. Motivaciones: optimización/economía de escala, reducción de riesgo, y adquisición de recursos o actividades.",
   "pasos_accionables": [
     "Identificar qué recursos o actividades se pueden obtener de terceros en vez de desarrollarlos internamente",
     "Clasificar las alianzas necesarias según su tipo (estratégica, coopetencia, joint venture, proveedor)",
     "Definir la motivación de cada asociación (costo, riesgo, o acceso a recursos)",
-    "Formalizar acuerdos con los socios clave identificados"
+    "Formalizar acuerdos con los socios clave identificados",
+    "Detecta tendencias de mercado emergentes mediante investigación de ventas y comportamiento de clientes clave",
+    "Identifica fabricantes con productos alineados a la tendencia emergente",
+    "Negocia alianzas con compromisos de compra anticipada a cambio de garantías de suministro preferencial",
+    "Capacita a la fuerza de ventas y crea incentivos para promover estos productos estratégicos",
+    "Evaluar si la relación con el socio requiere una oferta personalizada (no commodity).",
+    "Definir KPIs conjuntos y metas de desempeño medibles para la coordinación.",
+    "Negociar horizonte contractual de 3 a 5 años que permita inversión mutua.",
+    "Establecer mecanismo de reparto de beneficios (costos reducidos y/o ingresos crecientes) para ambas partes."
   ],
   "entregable_esperado": "Mapa de socios clave con tipo de relación y motivación estratégica",
   "nodos_previos": [
     "actividades_clave",
-    "recursos_clave"
+    "recursos_clave",
+    "bpm_gestion_excepciones"
   ],
   "nodos_siguientes": [
-    "estructura_de_costos"
+    "estructura_de_costos",
+    "pipeline_alianzas_bd"
   ],
   "condiciones_activacion": [
     "Cuando el usuario no puede o no debe realizar todas las actividades/recursos internamente"

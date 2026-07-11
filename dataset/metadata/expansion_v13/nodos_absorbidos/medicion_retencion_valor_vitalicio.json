@@ -1,0 +1,24 @@
+{
+  "node_id": "medicion_retencion_valor_vitalicio",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Impacto Financiero de la Retención y Valor Vitalicio del Cliente",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "Un incremento del 5% en la tasa de retención de clientes puede generar entre 25% y 100% más de utilidades, porque el costo de adquisición ya está pagado y ese dinero fluye directo a la rentabilidad. Además, vender a un cliente existente tiene una probabilidad de éxito de 60-70% frente a 5-20% con un prospecto nuevo, y adquirir un cliente nuevo cuesta de 6 a 7 veces más que retener uno actual. Estos datos justifican reasignar recursos de adquisición hacia retención.",
+  "pasos_accionables": [
+    "Calcular el costo de adquisición de cliente (CAC) actual de la empresa.",
+    "Calcular el valor vitalicio del cliente (LTV) y compararlo con el CAC.",
+    "Simular el impacto en utilidades de mejorar la tasa de retención en 5 puntos porcentuales.",
+    "Usar estos números para justificar internamente inversión en experiencia postventa frente a marketing/ventas."
+  ],
+  "entregable_esperado": "Una tabla comparativa de CAC vs LTV y una proyección de impacto en utilidades ante mejoras en retención, usada como argumento de negocio.",
+  "nodos_previos": [
+    "diagnostico_fuga_clientes_postventa"
+  ],
+  "nodos_siguientes": [
+    "diseno_primeros_100_dias"
+  ],
+  "condiciones_activacion": [
+    "Si se necesita justificar ante liderazgo o inversionistas por qué invertir en retención en vez de solo en adquisición."
+  ]
+}

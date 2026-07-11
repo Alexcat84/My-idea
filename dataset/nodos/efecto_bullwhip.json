@@ -1,0 +1,29 @@
+{
+  "node_id": "efecto_bullwhip",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Identificación y Costeo del Efecto Bullwhip",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El efecto bullwhip es un fenómeno donde pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores a medida que se mueven hacia atrás en la cadena de suministro, causando que distintas empresas tengan percepciones muy diferentes de la demanda real del mercado. Esto genera primero escasez y luego exceso de inventario. Antes de invertir en soluciones, se debe cuantificar la magnitud del efecto y estimar sus costos en producción, transporte, inventario y ventas perdidas.",
+  "pasos_accionables": [
+    "Establecer la magnitud del efecto bullwhip en la empresa comparando variabilidad de demanda en distintos puntos de la cadena",
+    "Estimar el efecto sobre costos de producción y programación",
+    "Estimar el efecto sobre costos de transporte, envío y recepción",
+    "Calcular el nivel de inventario necesario para mantener niveles de servicio y su costo de mantenimiento",
+    "Evaluar el efecto sobre disponibilidad de producto y ventas perdidas por falta de inventario",
+    "Usar estas estimaciones como base para justificar inversión en soluciones de colaboración/datos"
+  ],
+  "entregable_esperado": "Informe cuantificado del costo del efecto bullwhip en la empresa, que sirva de justificación de negocio (business case) para inversión en visibilidad de datos",
+  "nodos_previos": [
+    "impacto_estado_resultados_en_balance"
+  ],
+  "nodos_siguientes": [
+    "sistema_visibilidad_cadena_suministro_low_cost",
+    "gestion_riesgo_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen fluctuaciones inexplicables de inventario (exceso o escasez) a lo largo de la cadena",
+    "Antes de justificar inversión en sistemas de visibilidad o colaboración con datos"
+  ],
+  "etiqueta_arbol": "Detecta el Efecto Látigo"
+}

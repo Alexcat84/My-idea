@@ -1,0 +1,29 @@
+{
+  "node_id": "retargeting_display",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Retargeting y Publicidad Display",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (Google Display Network, AdRoll, Perfect Audience) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca.",
+  "pasos_accionables": [
+    "Instalar píxeles de retargeting (Google AdWords, AdRoll, Perfect Audience) en el sitio",
+    "Segmentar audiencias según comportamiento (ej. visitó pero no compró)",
+    "Diseñar anuncios personalizados según la etapa del funnel de cada segmento",
+    "Evaluar redes de display generales (Google Display Network) vs nicho (The Deck, BuySellAds)",
+    "Analizar competidores con herramientas como MixRank o Adbeat antes de elegir red",
+    "Medir el balance entre efectividad y percepción de invasión de privacidad del usuario"
+  ],
+  "entregable_esperado": "Una campaña de retargeting activa con al menos un segmento de audiencia definido y anuncios personalizados por etapa de conversión.",
+  "nodos_previos": [
+    "sem_estrategia_ejecucion",
+    "quality_score_optimizacion"
+  ],
+  "nodos_siguientes": [
+    "social_ads_indirect_response"
+  ],
+  "condiciones_activacion": [
+    "Cuando hay tráfico significativo al sitio pero baja tasa de conversión",
+    "Cuando se busca reforzar el reconocimiento de marca más allá de la búsqueda directa"
+  ],
+  "etiqueta_arbol": "Vuelve a Buscar a tu Visitante"
+}

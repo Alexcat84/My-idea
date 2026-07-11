@@ -1,0 +1,28 @@
+{
+  "node_id": "sop_colaborativo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Proceso Colaborativo S&OP (Sales and Operations Planning) en 5 Pasos",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Un proceso simplificado de S&OP guiado por simulaciones, ejecutado en ciclos (ej. cada 30 días): (1) Pronóstico de demanda y precios, (2) Plan de demanda por instalación, (3) Plan de suministro (producción/rutas), (4) Modelado y simulación para detectar discrepancias entre demanda y suministro, y (5) Ajuste y consenso del plan operativo final. Este proceso convierte datos en un plan operativo compartido y revisado continuamente por todos los actores de la cadena.",
+  "pasos_accionables": [
+    "Establecer un ciclo recurrente (ej. mensual) de planificación de demanda y suministro.",
+    "Recolectar pronósticos de ventas y precios de mercado.",
+    "Traducir pronósticos en necesidades de materia prima y producto terminado por instalación.",
+    "Simular el plan de suministro contra el plan de demanda para detectar descalces.",
+    "Ajustar y validar el plan con todos los socios antes de ponerlo en marcha."
+  ],
+  "entregable_esperado": "Plan operativo S&OP validado y consensuado para el próximo ciclo (ej. 30 días).",
+  "nodos_previos": [
+    "modelado_simulacion_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "plataforma_colaboracion_tiempo_real",
+    "combinacion_humano_ia_decision"
+  ],
+  "condiciones_activacion": [
+    "Si existen múltiples partes interesadas (proveedores, distribuidores, retailers) que deben coordinar producción y entrega",
+    "Si la demanda es volátil y requiere ajustes frecuentes"
+  ],
+  "etiqueta_arbol": "Planifica Ventas y Operaciones Juntas"
+}

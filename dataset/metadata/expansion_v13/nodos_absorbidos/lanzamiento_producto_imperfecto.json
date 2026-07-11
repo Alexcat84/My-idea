@@ -1,0 +1,24 @@
+{
+  "node_id": "lanzamiento_producto_imperfecto",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Lanzar un Producto Imperfecto para Aprender el Mercado",
+  "fuente": "The Hard Thing About Hard Things",
+  "resumen_teorico": "Al entrar a un nuevo mercado tras un pivote, los equipos técnicos suelen insistir en completar una larga lista de funcionalidades antes de lanzar, basándose en los requerimientos del contexto anterior (cliente único) en lugar del mercado amplio real. Sin embargo, la única forma de entender verdaderamente las necesidades del nuevo mercado es lanzar el producto —aunque esté incompleto o tenga errores— y aprender rápidamente de la retracción y el feedback real, en lugar de intentar anticipar perfectamente los requerimientos sin datos de mercado.",
+  "pasos_accionables": [
+    "Resistir la presión del equipo técnico de completar todas las funcionalidades 'ideales' antes de lanzar",
+    "Distinguir entre requerimientos heredados de un cliente anterior y necesidades reales del mercado amplio",
+    "Lanzar el producto al mercado real lo antes posible, aceptando que fallará en algunos aspectos",
+    "Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales",
+    "Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas"
+  ],
+  "entregable_esperado": "Versión mínima viable del producto lanzada al mercado, junto con un mecanismo de captura de feedback temprano",
+  "nodos_previos": [
+    "reconstruccion_de_equipo_ejecutivo"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando el equipo técnico retrasa el lanzamiento por perfeccionismo",
+    "Cuando el producto fue diseñado originalmente para un solo cliente y debe generalizarse a un mercado más amplio"
+  ]
+}

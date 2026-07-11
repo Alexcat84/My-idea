@@ -1,0 +1,29 @@
+{
+  "node_id": "vehiculos_autonomos_drones_supply_chain",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Drones y Vehículos Autónomos en la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Estas tecnologías permiten mover productos en distintos tramos de la cadena de suministro: camiones autónomos entre fábricas y almacenes, y drones aéreos o furgonetas autónomas para entregas al cliente final. Todos pueden conectarse a sistemas centrales que programan y coordinan sus actividades.",
+  "pasos_accionables": [
+    "Identificar tramos de la cadena de suministro con alto volumen repetitivo (fábrica-almacén, almacén-cliente) susceptibles de automatización",
+    "Evaluar el tipo de dron adecuado según el tramo: terrestre para grandes volúmenes, aéreo para entregas rápidas de última milla",
+    "Diseñar un sistema central de programación y coordinación que integre los distintos vehículos autónomos",
+    "Realizar pruebas piloto en un área geográfica limitada antes de escalar"
+  ],
+  "entregable_esperado": "Plan de automatización logística que identifique tramos candidatos, tipo de vehículo autónomo a usar y sistema de coordinación central",
+  "nodos_previos": [
+    "definicion_alineacion_cadena_suministro",
+    "planificacion_cadena_suministro",
+    "simulacion_de_operaciones_supply_chain"
+  ],
+  "nodos_siguientes": [
+    "simulacion_de_operaciones_supply_chain",
+    "ia_en_supply_chain"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa busca reducir costos logísticos y tiempos de entrega mediante automatización",
+    "Si existe alto volumen de entregas repetitivas entre nodos fijos de la cadena"
+  ],
+  "etiqueta_arbol": "Usa Drones en tu Cadena"
+}

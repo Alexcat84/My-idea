@@ -1,0 +1,290 @@
+{
+  "nodos": [
+    "advocacy_customer_journey",
+    "calibracion_intensidad_celebracion",
+    "celebracion_automatizada_de_hitos",
+    "celebracion_hitos_cliente",
+    "comunicacion_proactiva_puntos_estres",
+    "comunidad_tribu_marca",
+    "conexion_personal_emocional",
+    "construccion_tribu_de_marca",
+    "conversacion_emocional_postcompra",
+    "desconexion_ventas_experiencia",
+    "documento_quien_es_quien_equipo",
+    "encuesta_satisfaccion_postproyecto",
+    "enfoque_en_superfans",
+    "estrategia_multicanal_bienvenida",
+    "experiencia_del_cliente_proactiva",
+    "experiencias_exclusivas_vip",
+    "fase_acclimate",
+    "fase_acclimate_experiencia_cliente",
+    "fase_acclimate_mapa_de_proceso",
+    "fase_accomplish",
+    "fase_accomplish_experiencia_cliente",
+    "fase_activate",
+    "fase_activate_primera_impresion",
+    "fase_admit",
+    "fase_admit_celebracion",
+    "fase_adopt",
+    "fase_adopt_ciclo_cliente",
+    "fase_affirm",
+    "fase_affirm_buyers_remorse",
+    "fase_affirm_reduccion_incertidumbre",
+    "fase_affirm_reducir_remordimiento",
+    "fase_assess",
+    "fase_assess_ciclo_cliente",
+    "fase_assess_experiencia_cliente",
+    "fases_de_retencion_de_clientes",
+    "gamificacion_onboarding_visual",
+    "garantia_devolucion_dinero",
+    "gestion_testimonios",
+    "gratificacion_inmediata_producto",
+    "hacer_remarcable_lo_requerido",
+    "handoff_transicion_ventas_cuentas",
+    "incentivos_no_monetarios_advocacy",
+    "investigar_datos_cliente",
+    "kit_shock_and_awe_bienvenida",
+    "marcador_visual_marca",
+    "micro_experiencias_personalizadas",
+    "ocho_fases_experiencia_cliente",
+    "onboarding_comunitario_y_lenguaje_propio",
+    "pensamiento_h2h",
+    "personalizacion_investigacion_prospecto",
+    "personalizar_interacciones_cliente",
+    "persuasion_directivos_prioridad_cliente",
+    "preframing_expectativas",
+    "programa_referidos_exclusividad",
+    "rediseno_procesos_negocio_cliente",
+    "rediseno_procesos_negocio_cx",
+    "regalos_estrategicos_personalizados",
+    "regalos_estrategicos_sorpresa",
+    "reunion_conclusion_proyecto",
+    "seguimiento_informacion_cliente",
+    "seis_canales_comunicacion_assess",
+    "seis_herramientas_comunicacion_celebracion",
+    "seis_herramientas_comunicacion_fase_activate",
+    "seis_medios_comunicacion_cliente",
+    "shock_and_awe_kit_bienvenida",
+    "sorprender_cliente_estrategico",
+    "timing_solicitud_referidos",
+    "transparencia_facturacion",
+    "traspaso_ventas_cuentas",
+    "upsell_post_logro",
+    "visualizacion_progreso_onboarding",
+    "welcome_call_cliente_veterano"
+  ],
+  "conexiones_vecino_tematico": [
+    {
+      "nodo": "calibracion_intensidad_celebracion",
+      "campo": "nodos_previos",
+      "vecino": "cierre_satisfaccion_postventa",
+      "score": 0.6038
+    },
+    {
+      "nodo": "comunicacion_proactiva_puntos_estres",
+      "campo": "nodos_siguientes",
+      "vecino": "problem_recognition_scale",
+      "score": 0.6372
+    },
+    {
+      "nodo": "comunidad_tribu_marca",
+      "campo": "nodos_siguientes",
+      "vecino": "comunidad_como_activo_estrategico",
+      "score": 0.652
+    },
+    {
+      "nodo": "estrategia_multicanal_bienvenida",
+      "campo": "nodos_previos",
+      "vecino": "seleccion_canal_distribucion",
+      "score": 0.6193
+    },
+    {
+      "nodo": "estrategia_multicanal_bienvenida",
+      "campo": "nodos_siguientes",
+      "vecino": "eventos_offline_como_canal_traccion",
+      "score": 0.6064
+    },
+    {
+      "nodo": "experiencias_exclusivas_vip",
+      "campo": "nodos_previos",
+      "vecino": "tacticas_de_ferias_comerciales",
+      "score": 0.6008
+    },
+    {
+      "nodo": "fase_affirm_buyers_remorse",
+      "campo": "nodos_previos",
+      "vecino": "cierre_satisfaccion_postventa",
+      "score": 0.6135
+    },
+    {
+      "nodo": "fase_affirm_reduccion_incertidumbre",
+      "campo": "nodos_previos",
+      "vecino": "gestion_de_quejas_y_fidelizacion",
+      "score": 0.6441
+    },
+    {
+      "nodo": "fases_de_retencion_de_clientes",
+      "campo": "nodos_siguientes",
+      "vecino": "estrategia_de_ventas",
+      "score": 0.6626
+    },
+    {
+      "nodo": "gamificacion_onboarding_visual",
+      "campo": "nodos_siguientes",
+      "vecino": "get_visual",
+      "score": 0.6418
+    },
+    {
+      "nodo": "garantia_devolucion_dinero",
+      "campo": "nodos_siguientes",
+      "vecino": "enfasis_en_utilidades_corto_plazo",
+      "score": 0.7992
+    },
+    {
+      "nodo": "gestion_testimonios",
+      "campo": "nodos_siguientes",
+      "vecino": "riesgos_consenso_inspeccion",
+      "score": 0.6883
+    },
+    {
+      "nodo": "gratificacion_inmediata_producto",
+      "campo": "nodos_siguientes",
+      "vecino": "riesgo_tecnicas_cierre_venta_compleja",
+      "score": 0.7638
+    },
+    {
+      "nodo": "hacer_remarcable_lo_requerido",
+      "campo": "nodos_siguientes",
+      "vecino": "organizacion_independiente_de_calidad",
+      "score": 0.6687
+    },
+    {
+      "nodo": "handoff_transicion_ventas_cuentas",
+      "campo": "nodos_previos",
+      "vecino": "eliminacion_firmas_redundantes",
+      "score": 0.6595
+    },
+    {
+      "nodo": "incentivos_no_monetarios_advocacy",
+      "campo": "nodos_previos",
+      "vecino": "equity_crowdfunding_terminos",
+      "score": 0.6937
+    },
+    {
+      "nodo": "micro_experiencias_personalizadas",
+      "campo": "nodos_previos",
+      "vecino": "customer_appreciation_pr",
+      "score": 0.6535
+    },
+    {
+      "nodo": "ocho_fases_experiencia_cliente",
+      "campo": "nodos_previos",
+      "vecino": "categorias_entusiasmo_cliente",
+      "score": 0.6871
+    },
+    {
+      "nodo": "personalizacion_investigacion_prospecto",
+      "campo": "nodos_previos",
+      "vecino": "insight_observacion_empatia",
+      "score": 0.6215
+    },
+    {
+      "nodo": "persuasion_directivos_prioridad_cliente",
+      "campo": "nodos_previos",
+      "vecino": "cambio_actitud_gerencial",
+      "score": 0.7232
+    },
+    {
+      "nodo": "persuasion_directivos_prioridad_cliente",
+      "campo": "nodos_siguientes",
+      "vecino": "contacto_con_el_cliente",
+      "score": 0.683
+    },
+    {
+      "nodo": "regalos_estrategicos_sorpresa",
+      "campo": "nodos_siguientes",
+      "vecino": "customer_appreciation_pr",
+      "score": 0.6888
+    },
+    {
+      "nodo": "seis_medios_comunicacion_cliente",
+      "campo": "nodos_siguientes",
+      "vecino": "understanding_customers_tecnicas",
+      "score": 0.5908
+    },
+    {
+      "nodo": "shock_and_awe_kit_bienvenida",
+      "campo": "nodos_siguientes",
+      "vecino": "customer_appreciation_pr",
+      "score": 0.6192
+    },
+    {
+      "nodo": "sorprender_cliente_estrategico",
+      "campo": "nodos_siguientes",
+      "vecino": "customer_appreciation_pr",
+      "score": 0.6193
+    }
+  ],
+  "core_tocados_simetria": [
+    "advocacy_customer_journey",
+    "cambio_actitud_gerencial",
+    "categorias_entusiasmo_cliente",
+    "cierre_satisfaccion_postventa",
+    "cierre_segun_complejidad_venta",
+    "coeficiente_viral",
+    "community_building_estrategia",
+    "comunidad_como_activo_estrategico",
+    "construccion_tribu_de_marca",
+    "contacto_con_el_cliente",
+    "cultura_de_experiencia",
+    "customer_appreciation_pr",
+    "customer_archetypes",
+    "customer_journey_mapping",
+    "customer_types_mapping",
+    "eliminacion_firmas_redundantes",
+    "empathy_map",
+    "enfasis_en_utilidades_corto_plazo",
+    "enfoque_en_superfans",
+    "equity_crowdfunding_terminos",
+    "estrategia_de_ventas",
+    "estrategia_multicanal_bienvenida",
+    "eventos_offline_como_canal_traccion",
+    "fase_acclimate",
+    "fase_acclimate_experiencia_cliente",
+    "fase_accomplish",
+    "fase_accomplish_experiencia_cliente",
+    "fase_activate",
+    "fase_activate_primera_impresion",
+    "fase_admit",
+    "fase_adopt",
+    "fase_adopt_ciclo_cliente",
+    "fase_affirm",
+    "fase_affirm_buyers_remorse",
+    "fase_affirm_reduccion_incertidumbre",
+    "fase_assess_ciclo_cliente",
+    "fase_assess_experiencia_cliente",
+    "framework_spin_selling",
+    "gamificacion_onboarding_visual",
+    "gestion_de_quejas_y_fidelizacion",
+    "gestion_testimonios",
+    "get_visual",
+    "herramientas_de_activacion_web",
+    "incentivos_reconocimiento_sostenibilidad",
+    "insight_observacion_empatia",
+    "kit_shock_and_awe_bienvenida",
+    "ocho_fases_experiencia_cliente",
+    "organizacion_independiente_de_calidad",
+    "preframing_expectativas",
+    "problem_recognition_scale",
+    "rediseno_procesos_negocio_cx",
+    "retention_metrics",
+    "reunion_conclusion_proyecto",
+    "riesgo_tecnicas_cierre_venta_compleja",
+    "riesgos_consenso_inspeccion",
+    "seleccion_canal_distribucion",
+    "tacticas_de_ferias_comerciales",
+    "understanding_customers_tecnicas",
+    "value_proposition_startup",
+    "welcome_call_cliente_veterano"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "node_id": "gestion_alucinaciones_ia",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión de Alucinaciones de la IA",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Las IA generativas producen texto estadísticamente probable, no necesariamente verdadero. Esto genera 'alucinaciones': datos, citas o estudios inventados que suenan completamente plausibles, incluso para el propio creador del contenido replicado por la IA. Para un emprendedor, esto implica un riesgo crítico si se usa IA para investigación de mercado, reportes a inversionistas, contenido legal o técnico sin verificación humana posterior.",
+  "pasos_accionables": [
+    "Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.",
+    "Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.",
+    "Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.",
+    "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza."
+  ],
+  "entregable_esperado": "Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.",
+  "nodos_previos": [
+    "prompting_por_persona_ia",
+    "automatizacion_software_gestion_innovacion",
+    "ia_generacion_ideas_negocio"
+  ],
+  "nodos_siguientes": [
+    "introduccion_validacion_clientes",
+    "ia_generacion_ideas_negocio",
+    "ia_colaborador_productividad"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo usa IA para generar informes, datos de mercado o contenido que será presentado a terceros (inversionistas, clientes, reguladores).",
+    "Si se detectan inconsistencias entre lo que la IA afirma y la realidad verificable."
+  ],
+  "ids_alias": [
+    "gestion_alucinaciones_ia_2"
+  ],
+  "etiqueta_arbol": "Verifica lo que Dice la IA"
+}

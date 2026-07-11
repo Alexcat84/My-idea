@@ -1,0 +1,30 @@
+{
+  "node_id": "decision_venta_empresa_analisis_logico",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Análisis Lógico para Decidir si Vender la Empresa",
+  "fuente": "The Hard Thing About Hard Thing - Ben Horowitz",
+  "resumen_teorico": "Marco racional para evaluar si conviene vender una startup o mantenerla independiente. La regla básica: si la empresa está temprano en un mercado muy grande y tiene buenas posibilidades de ser líder (#1), debe permanecer independiente, porque ningún comprador podrá pagar el valor futuro real. Se deben clasificar las adquisiciones en tres tipos (talento/tecnología, producto, negocio) y analizar correctamente cuál es el mercado real y quiénes serán los competidores futuros, ya que definir mal el mercado (como en el caso Pointcast vs Google) lleva a decisiones erróneas.",
+  "pasos_accionables": [
+    "Clasificar la posible adquisición: talento/tecnología, producto o negocio completo",
+    "Determinar si el mercado actual es al menos un orden de magnitud mayor al ya explotado",
+    "Evaluar honestamente las probabilidades reales de ser el jugador #1 del mercado",
+    "Redefinir el mercado real (no el mercado percibido) y los competidores futuros",
+    "Comparar ofertas de adquisición con la proyección de valor a 3-5 años como empresa independiente",
+    "Ejecutar un proceso corto de M&A para detectar el 'máximo local' de precio de mercado si hay dudas"
+  ],
+  "entregable_esperado": "Documento de análisis estratégico que responda si vender o no la empresa, con justificación de mercado y posición competitiva",
+  "nodos_previos": [
+    "definicion_mercado_objetivo",
+    "analisis_competitivo"
+  ],
+  "nodos_siguientes": [
+    "negociacion_venta_empresa",
+    "gestion_emocional_founder"
+  ],
+  "condiciones_activacion": [
+    "Cuando la startup recibe ofertas de adquisición",
+    "Cuando el fundador debe decidir entre crecer independiente o vender",
+    "Cuando el mercado está siendo redefinido por cambios tecnológicos (ej. virtualización)"
+  ]
+}

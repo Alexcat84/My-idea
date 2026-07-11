@@ -1,0 +1,27 @@
+{
+  "node_id": "modelado_simulacion_cadena_suministro",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Modelado y Simulación de Cadena de Suministro con Cuatro Entidades",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Cualquier cadena de suministro puede modelarse definiendo cuatro tipos de entidades: Productos (costo, peso, volumen), Instalaciones (ubicación, costos operativos, tasas de producción/demanda), Vehículos (velocidad, capacidad, costos, rutas) y Rutas (destinos, distancias, frecuencias). Usando mapas digitales (Google Maps, etc.) estas entidades se colocan geográficamente y se simulan interacciones para detectar problemas de desempeño antes de implementarlos en la realidad, reduciendo riesgo y costo de errores.",
+  "pasos_accionables": [
+    "Definir los datos clave de tus productos, instalaciones, vehículos y rutas.",
+    "Usar una herramienta de mapeo o software de simulación (ej. SCM Globe) para colocar estas entidades geográficamente.",
+    "Ejecutar simulaciones para detectar cuellos de botella, exceso de inventario o incumplimientos antes de operar en el mundo real.",
+    "Iterar el diseño hasta lograr el balance óptimo entre costo y nivel de servicio."
+  ],
+  "entregable_esperado": "Modelo de simulación de la cadena de suministro con métricas base de desempeño (inventario, costos, tiempos).",
+  "nodos_previos": [
+    "estructura_de_costos"
+  ],
+  "nodos_siguientes": [
+    "sop_colaborativo",
+    "plataforma_colaboracion_tiempo_real"
+  ],
+  "condiciones_activacion": [
+    "Si el negocio requiere coordinar múltiples proveedores, fábricas o puntos de distribución",
+    "Si se necesita validar un diseño logístico antes de invertir capital"
+  ],
+  "etiqueta_arbol": "Modela tu Cadena de Suministro"
+}

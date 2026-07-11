@@ -1,0 +1,37 @@
+{
+  "node_id": "desafios_implementacion_ia",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Desafíos en la Implementación de IA (Calidad de Datos y Confianza)",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo de 'alucinaciones' (información inventada o recomendaciones absurdas). La solución pasa por gobernanza de datos rigurosa, auditorías regulares, y el uso de modelos de IA explicable que equilibren transparencia y desempeño, definiendo qué decisiones puede tomar la IA sola y cuáles requieren intervención humana.",
+  "pasos_accionables": [
+    "Implementar prácticas de gobernanza de datos: validación, limpieza y auditorías periódicas",
+    "Formar un equipo especializado que monitoree el desempeño de la IA en su etapa inicial de despliegue",
+    "Definir niveles de autonomía de la IA vs. puntos de escalamiento a decisión humana",
+    "Optar por modelos de IA explicable cuando la transparencia sea crítica para la confianza organizacional"
+  ],
+  "entregable_esperado": "Marco de gobernanza de datos e IA con protocolos de auditoría y niveles definidos de autonomía/escalamiento humano",
+  "nodos_previos": [
+    "ia_en_supply_chain",
+    "alineacion_etica_ia_negocio",
+    "amara_law_expectativas_tecnologia",
+    "gestion_riesgo_seguridad_ia",
+    "ia_colaborador_productividad",
+    "mitigar_falling_asleep_wheel",
+    "principio_mejora_continua_ia",
+    "shadow_ia_organizacional"
+  ],
+  "nodos_siguientes": [
+    "data_integrity_forecasting",
+    "comprender_alineacion_etica_ia",
+    "ingenieria_de_prompts_efectiva",
+    "invitar_ia_a_todo",
+    "principio_invitar_ia_siempre"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización planea otorgar mayor autonomía de decisión a sistemas de IA",
+    "Si existe desconfianza interna hacia las recomendaciones generadas por IA"
+  ],
+  "etiqueta_arbol": "Enfrenta los Retos de la IA"
+}

@@ -1,0 +1,32 @@
+{
+  "node_id": "gestion_riesgo_cadena_suministro",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión de Riesgo en Cadena de Suministro (Natural y Operativo)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La gestión de riesgo en la cadena de suministro es un acto de balance continuo entre alcanzar alto desempeño a bajo costo y tomar precauciones para eventos disruptivos. Eliminar duplicación de proveedores, instalaciones y stock de seguridad reduce costos pero aumenta el riesgo ante disrupciones. Se debe evaluar el riesgo natural (desastres) y operativo (calidad, mano de obra, forex, impuestos, infraestructura, robo, terrorismo) de cada país/ubicación para determinar el nivel de stock de seguridad necesario según el apetito de riesgo de la empresa.",
+  "pasos_accionables": [
+    "Determinar el apetito y tolerancia al riesgo actual de la empresa",
+    "Cuantificar el riesgo natural de cada país/región (terremotos, huracanes, sequías, etc.)",
+    "Evaluar el riesgo operativo por país (calidad, mano de obra, forex, impuestos, infraestructura, robo, terrorismo, enfermedades)",
+    "Formar equipos multifuncionales (operaciones, finanzas, compras, tecnología) para evaluar riesgos desde distintas perspectivas",
+    "Crear un mapa común (físico o digital) de instalaciones y rutas de la cadena de suministro como contexto organizador",
+    "Correr simulaciones de escenarios disruptivos (ej: huracán) para identificar instalaciones más vulnerables",
+    "Determinar niveles de stock de seguridad necesarios según riesgo país y apetito de riesgo",
+    "Calcular costos extra requeridos para la solución de riesgo elegida y comparar opciones"
+  ],
+  "entregable_esperado": "Plan de contingencia documentado con niveles de stock de seguridad, proveedores duplicados donde corresponda, y mapa de riesgo por instalación/país",
+  "nodos_previos": [
+    "definicion_alineacion_cadena_suministro",
+    "efecto_bullwhip"
+  ],
+  "nodos_siguientes": [
+    "balance_eficiencia_responsividad"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa opera en entornos VUCA (volátiles, inciertos, complejos, ambiguos)",
+    "Si depende de un solo proveedor crítico o de países con alto riesgo geopolítico/natural",
+    "Antes de decidir reducir stock de seguridad o consolidar proveedores por eficiencia"
+  ],
+  "etiqueta_arbol": "Equilibra Riesgo y Eficiencia"
+}

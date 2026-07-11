@@ -1,0 +1,25 @@
+{
+  "node_id": "leaky_bucket_metaphor",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Metáfora del Balde con Fugas (Leaky Bucket)",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "El producto se compara con un balde: al inicio tiene muchas fugas (no retiene bien a los clientes) porque no es una solución completa a sus necesidades. Invertir en tracción temprano no es 'dinero desperdiciado' aunque muchos clientes se pierdan; es información valiosa que revela dónde están las fugas reales del producto, permitiendo priorizar mejoras basadas en datos de clientes reales y no solo en feedback de early adopters (que suelen ser complacientes).",
+  "pasos_accionables": [
+    "Envía tráfico/clientes fríos (no conocidos) a tu producto de forma constante, aunque sea en volumen bajo.",
+    "Mide en qué punto del embudo se pierden los clientes (activación, uso, retención, pago).",
+    "Usa estos datos para priorizar el roadmap de producto, enfocándote en 'tapar' las fugas más grandes primero."
+  ],
+  "entregable_esperado": "Análisis de embudo de conversión con clientes fríos identificando los puntos de mayor abandono (fugas) del producto.",
+  "nodos_previos": [
+    "regla_50_por_ciento"
+  ],
+  "nodos_siguientes": [
+    "fases_traccion_producto"
+  ],
+  "condiciones_activacion": [
+    "Cuando el feedback de clientes cercanos/beta es demasiado positivo y no revela problemas reales",
+    "Cuando se necesita decidir qué mejorar primero en el producto"
+  ],
+  "etiqueta_arbol": "Tapa las Fugas de tu Balde"
+}

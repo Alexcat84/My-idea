@@ -1,0 +1,29 @@
+{
+  "node_id": "pronostico_de_demanda_variables",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Pronóstico de Demanda: Cuatro Variables Clave",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "Todo pronóstico de demanda depende de cuatro variables: Oferta (número de proveedores y lead times), Demanda (crecimiento, estacionalidad, madurez del mercado), Características del producto (si es sustituible, complementario, nuevo o maduro) y Entorno competitivo (participación de mercado, promociones, guerras de precios). Cuanta más incertidumbre haya en estas variables, más difícil y menos preciso será el pronóstico.",
+  "pasos_accionables": [
+    "Evaluar el número de proveedores y lead times de tu cadena de suministro",
+    "Analizar tendencia de crecimiento/declive y estacionalidad de la demanda de tu mercado",
+    "Clasificar tu producto según madurez, sustitución y complementariedad",
+    "Monitorear la participación de mercado propia y de competidores, incluyendo promociones planeadas"
+  ],
+  "entregable_esperado": "Ficha de análisis de las cuatro variables de mercado como insumo para el pronóstico",
+  "nodos_previos": [
+    "scor_model_operaciones",
+    "estudio_mercado_calidad"
+  ],
+  "nodos_siguientes": [
+    "metodos_de_pronostico",
+    "gestion_rationing_shortage_gaming"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita planificar inventario, producción o compras",
+    "Si el negocio enfrenta alta variabilidad de demanda o mercado nuevo",
+    "Antes de definir metas de ventas o producción para el siguiente período"
+  ],
+  "etiqueta_arbol": "Analiza las Cuatro Variables Clave"
+}

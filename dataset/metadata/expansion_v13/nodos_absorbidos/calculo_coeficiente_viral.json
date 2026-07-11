@@ -1,0 +1,25 @@
+{
+  "node_id": "calculo_coeficiente_viral",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Cálculo del Coeficiente Viral (K) y Ciclo Viral",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "El coeficiente viral K mide cuántos clientes adicionales genera cada cliente existente, calculado como K = i * porcentaje de conversión (donde i es el número de invitaciones enviadas por usuario). Un K mayor a 1 genera crecimiento exponencial verdadero; un K mayor a 0.5 ya ayuda significativamente al crecimiento. El ciclo viral (tiempo que tarda un usuario en completar el loop) es igual de crítico: cuanto más corto, más rápido el crecimiento exponencial.",
+  "pasos_accionables": [
+    "Mide el número promedio de invitaciones enviadas por usuario (i)",
+    "Mide el porcentaje de conversión de esas invitaciones en nuevos usuarios",
+    "Calcula K = i * conversión; descompón la conversión en click-through y signup si es necesario",
+    "Mide el tiempo promedio del ciclo viral (invitación a conversión)",
+    "Identifica el eslabón más débil (invites o conversión) y enfoca esfuerzos de A/B testing ahí",
+    "Trabaja en reducir el ciclo viral simplificando pasos y creando urgencia"
+  ],
+  "entregable_esperado": "Reporte con K calculado, ciclo viral medido en días, y plan de A/B testing para el área más débil",
+  "nodos_previos": [
+    "viral_marketing_referidos"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si ya existe un producto en uso con usuarios reales invitando a otros",
+    "Si se necesita decidir si viral marketing es un canal viable de crecimiento"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "node_id": "reunion_conclusion_proyecto_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Reunión de Conclusión (Conclusion Meeting)",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "Espejo del kickoff meeting realizado al finalizar un proyecto o entrega, donde se revisan los objetivos organizacionales y las métricas de éxito de corto y largo plazo definidas al inicio. El objetivo es confirmar honestamente si se alcanzaron las metas del cliente, atender deficiencias pendientes y asegurar claridad mutua sobre el cumplimiento del compromiso adquirido.",
+  "pasos_accionables": [
+    "Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff",
+    "Realizar una evaluación honesta del nivel de éxito en cada métrica",
+    "Solicitar feedback del cliente sobre esas métricas",
+    "Atender cualquier deficiencia pendiente antes de cerrar",
+    "Compartir testimonios y reconocimientos mutuos",
+    "Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)"
+  ],
+  "entregable_esperado": "Acta de reunión de conclusión con métricas confirmadas, feedback del cliente y plan de monitoreo post-proyecto",
+  "nodos_previos": [
+    "kickoff_meeting",
+    "definicion_metricas_exito"
+  ],
+  "nodos_siguientes": [
+    "fase_accomplish",
+    "encuesta_satisfaccion_postproyecto"
+  ],
+  "condiciones_activacion": [
+    "Cuando un proyecto o entrega llega a su fase final y se necesita confirmar el cumplimiento de objetivos con el cliente"
+  ]
+}

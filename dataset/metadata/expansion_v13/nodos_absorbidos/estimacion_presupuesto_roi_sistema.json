@@ -1,0 +1,27 @@
+{
+  "node_id": "estimacion_presupuesto_roi_sistema",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Estimación de Presupuesto y ROI del Sistema",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Antes de ejecutar un proyecto de sistema, se debe validar si vale la pena hacerlo mediante un análisis de costo-beneficio. Se identifican tres tipos de costos (hardware/software, desarrollo, operación) y cuatro tipos de beneficios (directos, incrementales, evitación de costos, intangibles), calculando flujo de caja trimestral y valor presente neto.",
+  "pasos_accionables": [
+    "Estimar costos de hardware/software, desarrollo y operación por trimestre",
+    "Identificar beneficios directos (ahorros de productividad)",
+    "Identificar beneficios incrementales (nuevos ingresos atribuibles parcialmente al sistema)",
+    "Identificar beneficios de evitación de costos (no contratar personal adicional)",
+    "Listar beneficios intangibles (ventaja competitiva, satisfacción laboral, servicio superior)",
+    "Calcular flujo de caja neto trimestral y el valor presente neto (VPN) del proyecto",
+    "Presentar el análisis a los ejecutivos responsables para validar el proyecto"
+  ],
+  "entregable_esperado": "Análisis de costo/beneficio completo con VPN calculado y aprobación de los responsables financieros del negocio",
+  "nodos_previos": [
+    "creacion_plan_presupuesto_inicial"
+  ],
+  "nodos_siguientes": [
+    "ejecucion_incremental_transicion_tecnologica"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita justificar financieramente la inversión en un nuevo sistema o tecnología antes de aprobarla"
+  ]
+}

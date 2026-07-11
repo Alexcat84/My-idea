@@ -15,13 +15,15 @@
   "entregable_esperado": "Tabla de clasificación de clientes por categoría de entusiasmo con porcentajes y decisión de acción resultante",
   "nodos_previos": [
     "prueba_solucion_con_cliente",
-    "medir_comportamiento_y_entusiasmo_del_cliente"
+    "medir_comportamiento_y_entusiasmo_del_cliente",
+    "obtencion_de_compromiso"
   ],
   "nodos_siguientes": [
     "pivotar_o_proceder",
     "reempaquetado_producto",
     "actualizar_business_model_canvas_tuneup",
-    "product_market_fit"
+    "product_market_fit",
+    "ocho_fases_experiencia_cliente"
   ],
   "condiciones_activacion": [
     "Cuando se ha completado la ronda de entrevistas de solución y se debe decidir si avanzar",

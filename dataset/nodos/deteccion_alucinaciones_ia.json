@@ -1,0 +1,26 @@
+{
+  "node_id": "deteccion_alucinaciones_ia",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Detección y Manejo de Alucinaciones de IA",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Los modelos de lenguaje (LLMs) tienden a generar información falsa pero plausible ('alucinaciones' o 'confabulaciones') porque su objetivo interno prioriza dar una respuesta satisfactoria sobre una respuesta exacta. Incluso al ser confrontados, pueden justificar convincentemente respuestas incorrectas. Reconocer este comportamiento es esencial antes de usar la IA para validar hipótesis de negocio, datos de mercado o contenido dirigido a clientes.",
+  "pasos_accionables": [
+    "Contrastar toda cifra, cita o dato generado por IA con una fuente primaria verificable",
+    "Pedir a la IA que cite sus fuentes y verificar que existan realmente",
+    "Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas",
+    "Nunca usar output de IA sin verificación en documentos legales, financieros o contractuales"
+  ],
+  "entregable_esperado": "Checklist de verificación de datos generados por IA antes de su uso en documentos o decisiones del negocio",
+  "nodos_previos": [
+    "human_in_the_loop_ia"
+  ],
+  "nodos_siguientes": [
+    "simulacion_clientes_ia"
+  ],
+  "condiciones_activacion": [
+    "Cuando se usa IA para investigación de mercado, redacción de propuestas o análisis de datos",
+    "Si el usuario detecta información sospechosamente precisa pero sin fuente clara"
+  ],
+  "etiqueta_arbol": "Detecta cuando la IA Inventa"
+}

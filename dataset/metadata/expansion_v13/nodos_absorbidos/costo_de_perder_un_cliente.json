@@ -1,0 +1,26 @@
+{
+  "node_id": "costo_de_perder_un_cliente",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "El Costo Real de Perder un Cliente",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "Las empresas suelen calcular con precisión el costo de adquisición de clientes (CAC), pero rara vez calculan el costo real de perderlos. Un cliente adquirido con alta inversión inicial puede generar pérdidas netas si abandona antes de que el negocio recupere esa inversión (por ejemplo, los bancos tardan 25 meses en recuperar el CAC vía cuotas, pero el 32% de clientes se va antes del año). Comparar el costo de adquisición contra el tiempo de vida real del cliente revela si el modelo de negocio es sostenible.",
+  "pasos_accionables": [
+    "Calcular el Costo de Adquisición de Cliente (CAC) exacto por canal.",
+    "Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).",
+    "Medir el porcentaje real de clientes que abandonan antes de alcanzar ese punto de equilibrio.",
+    "Presentar el impacto financiero de la pérdida temprana de clientes al equipo directivo."
+  ],
+  "entregable_esperado": "Análisis financiero comparando CAC, tiempo de recuperación de inversión y tasa de abandono real.",
+  "nodos_previos": [
+    "costo_de_adquisicion_de_clientes"
+  ],
+  "nodos_siguientes": [
+    "primeros_100_dias",
+    "fases_de_retencion_de_clientes"
+  ],
+  "condiciones_activacion": [
+    "Cuando el negocio invierte fuertemente en marketing/ventas pero desconoce su tasa de retención real.",
+    "Cuando se sospecha que el negocio pierde dinero con clientes que abandonan pronto."
+  ]
+}

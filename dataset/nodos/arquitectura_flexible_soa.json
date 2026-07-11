@@ -1,0 +1,26 @@
+{
+  "node_id": "arquitectura_flexible_soa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Aprovechar Aplicaciones Existentes (SOA/EAI/API)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Estrategia tecnológica que consiste en usar arquitecturas orientadas a servicios (SOA), integración de aplicaciones empresariales (EAI) y APIs para construir una infraestructura híbrida y flexible (cloud/SaaS/consumer IT), en lugar de desarrollar todo desde cero. El esfuerzo de desarrollo propio se enfoca solo en el software y procedimientos que generan valor único y diferencial.",
+  "pasos_accionables": [
+    "Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS).",
+    "Identificar qué funcionalidades pueden resolverse con herramientas existentes vía integración.",
+    "Reservar el desarrollo propio únicamente para el valor diferencial único del negocio.",
+    "Diseñar la arquitectura con APIs abiertas para facilitar integraciones futuras."
+  ],
+  "entregable_esperado": "Mapa de arquitectura tecnológica que distinga componentes externos reutilizables vs. desarrollo propio necesario.",
+  "nodos_previos": [
+    "iota_analysis"
+  ],
+  "nodos_siguientes": [
+    "gestion_visual_del_pipeline_de_desarrollo"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo evalúa construir tecnología propia vs. usar soluciones existentes.",
+    "Cuando se busca reducir tiempo y costo de desarrollo tecnológico."
+  ],
+  "etiqueta_arbol": "Aprovecha lo que Ya Existe"
+}

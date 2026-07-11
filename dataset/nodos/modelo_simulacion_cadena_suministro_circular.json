@@ -1,0 +1,28 @@
+{
+  "node_id": "modelo_simulacion_cadena_suministro_circular",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Simulación de Cadenas de Suministro Circulares y Sostenibles",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Antes de implementar una cadena de suministro física, es posible construir un modelo de simulación compuesto por entidades clave (productos, instalaciones, vehículos, rutas) para probar diferentes escenarios de oferta, demanda, costos y ubicaciones. Esto permite generar reportes de P&L y KPIs que sirven de base objetiva para comparar diseños alternativos antes de invertir capital, especialmente relevante en cadenas de suministro circulares (como recolección de aceite usado para biodiesel) donde el impacto ambiental y la eficiencia económica deben equilibrarse.",
+  "pasos_accionables": [
+    "Definir las entidades del modelo: productos, instalaciones, vehículos y rutas",
+    "Usar el método del centro de gravedad para ubicar instalaciones de recolección/hubs",
+    "Correr simulaciones de al menos 14 días con distintos supuestos de oferta y demanda",
+    "Generar reportes de P&L y KPIs a partir de los datos simulados",
+    "Comparar diseños alternativos de cadena de suministro antes de la inversión real"
+  ],
+  "entregable_esperado": "Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro",
+  "nodos_previos": [
+    "planificacion_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "gestion_instalaciones",
+    "produccion_scheduling_balance_objetivos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendimiento involucra economía circular o sostenibilidad como propuesta de valor",
+    "Si se necesita validar el diseño de una cadena de suministro antes de invertir en infraestructura física"
+  ],
+  "etiqueta_arbol": "Simula tu Cadena Circular"
+}

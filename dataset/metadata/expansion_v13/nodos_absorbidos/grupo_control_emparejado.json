@@ -1,0 +1,25 @@
+{
+  "node_id": "grupo_control_emparejado",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Grupo de Control Emparejado para Medir Impacto Real",
+  "fuente": "SPIN Selling - Neil Rackham",
+  "resumen_teorico": "Para aislar el efecto real de una intervención (como un entrenamiento) de factores externos como condiciones de mercado o diferencias iniciales entre equipos, se debe comparar el grupo intervenido con un grupo de control que inicie con niveles similares de desempeño ('emparejado'). Esto permite descartar explicaciones alternativas, como que el grupo experimental ya era superior antes de la intervención, y atribuir con mayor confianza las diferencias de resultados a la intervención misma.",
+  "pasos_accionables": [
+    "Seleccionar un grupo de control con nivel de desempeño inicial similar al grupo que recibirá la intervención",
+    "Medir resultados de ambos grupos en el mismo periodo de tiempo bajo las mismas condiciones de mercado",
+    "Comparar el cambio porcentual de ambos grupos, no solo los valores absolutos",
+    "Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención"
+  ],
+  "entregable_esperado": "Comparativa cuantitativa de resultados (pedidos, ingresos, conversión) entre grupo experimental y grupo de control emparejado en igualdad de condiciones iniciales.",
+  "nodos_previos": [
+    "metodologia_evaluacion_entrenamiento_ventas"
+  ],
+  "nodos_siguientes": [
+    "deteccion_efecto_hawthorne"
+  ],
+  "condiciones_activacion": [
+    "Cuando se quiere validar rigurosamente el impacto de un cambio (entrenamiento, proceso, herramienta) en ventas o desempeño",
+    "Si existe la sospecha de que el grupo experimental ya tenía ventaja antes de la intervención"
+  ]
+}

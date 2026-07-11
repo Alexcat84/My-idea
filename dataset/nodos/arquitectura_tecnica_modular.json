@@ -1,0 +1,27 @@
+{
+  "node_id": "arquitectura_tecnica_modular",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Arquitectura Técnica Modular Basada en la Nube",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Estrategia de construir sistemas de negocio combinando servicios de computación en la nube y aplicaciones de software ya existentes (APIs, SaaS), escribiendo código nuevo solo para las funciones únicas que generan valor diferencial. Ejemplo: Uber usa AWS, Google Maps, Braintree y Twilio, enfocando su desarrollo propio solo en ser la plataforma de conexión entre pasajeros y conductores.",
+  "pasos_accionables": [
+    "Identificar las funciones core que generan el valor diferencial de tu negocio",
+    "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, hosting) pueden resolverse con servicios SaaS existentes",
+    "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente",
+    "Enfocar el desarrollo propio exclusivamente en la capa de coordinación/colaboración que es tu propuesta de valor única",
+    "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente"
+  ],
+  "entregable_esperado": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propietario central",
+  "nodos_previos": [
+    "definicion_alineacion_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "diseno_conceptual_sistema"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita construir rápidamente una plataforma de colaboración sin invertir en infraestructura pesada",
+    "Si el presupuesto de tecnología es limitado y se prioriza velocidad de lanzamiento"
+  ],
+  "etiqueta_arbol": "Construye tu Arquitectura Modular"
+}

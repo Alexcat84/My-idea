@@ -1,0 +1,28 @@
+{
+  "node_id": "email_marketing_activacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Secuencias de Email para Activación de Clientes",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "La activación es lograr que un nuevo usuario se comprometa lo suficiente con el producto como para volverse un cliente activo (ej. Twitter: enviar un tweet; Dropbox: subir un archivo). El email marketing automatizado permite crear secuencias que guían a los usuarios por el camino ideal de uso, detectando cuándo se desvían y reenganchándolos con mensajes específicos en cada paso crítico.",
+  "pasos_accionables": [
+    "Define el 'camino ideal' de experiencia que debe seguir un nuevo usuario",
+    "Identifica los pasos críticos necesarios para que el usuario obtenga valor del producto",
+    "Crea emails automatizados disparados por inacción en cada paso crítico",
+    "Usa herramientas como Vero o Customer.io para automatizar estos mensajes",
+    "Envía emails personales (no 'no-reply') para abrir canal de feedback directo"
+  ],
+  "entregable_esperado": "Flujo de emails de activación automatizado con triggers definidos por comportamiento del usuario",
+  "nodos_previos": [
+    "email_marketing_para_captacion"
+  ],
+  "nodos_siguientes": [
+    "email_marketing_retencion",
+    "customer_activation_tactics"
+  ],
+  "condiciones_activacion": [
+    "Si existe una alta tasa de abandono de usuarios nuevos sin activar",
+    "Si el producto tiene un proceso de onboarding con pasos claros medibles"
+  ],
+  "etiqueta_arbol": "Activa Clientes con Correos"
+}

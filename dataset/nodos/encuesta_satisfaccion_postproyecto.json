@@ -1,0 +1,28 @@
+{
+  "node_id": "encuesta_satisfaccion_postproyecto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Encuesta de Satisfacción Post-Entrega",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "Herramienta de retroalimentación aplicada al finalizar una interacción o proyecto, que se adapta según la calificación recibida: si es alta, invita a testimonios; si es baja, crea espacio para ventilar frustraciones y buscar reconciliación. Permite capturar tanto la percepción del cliente como la del equipo interno para mejorar procesos futuros.",
+  "pasos_accionables": [
+    "Diseñar una encuesta breve con calificación inicial (ej. estrellas o NPS)",
+    "Ramificar preguntas según el resultado (positivo vs negativo)",
+    "Si es positivo, solicitar testimonio o reseña",
+    "Si es negativo, dar espacio para expresar frustración y proponer solución",
+    "Aplicar la encuesta tanto interna (equipo) como externamente (cliente)",
+    "Usar los resultados para ajustar procesos futuros"
+  ],
+  "entregable_esperado": "Encuesta implementada con lógica de ramificación y reporte de resultados (NPS u otro indicador)",
+  "nodos_previos": [
+    "reunion_conclusion_proyecto",
+    "cultura_feedback_alta_frecuencia"
+  ],
+  "nodos_siguientes": [
+    "fase_accomplish"
+  ],
+  "condiciones_activacion": [
+    "Cuando se completa una entrega, proyecto o interacción significativa con el cliente"
+  ],
+  "etiqueta_arbol": "Pregunta Cómo Quedó tu Cliente"
+}

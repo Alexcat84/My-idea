@@ -1,0 +1,26 @@
+{
+  "node_id": "gestion_contratos_desempeno",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión y Seguimiento del Desempeño de Proveedores",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
+  "pasos_accionables": [
+    "Establecer indicadores de desempeño (KPIs) alineados al contrato",
+    "Recolectar datos de desempeño de proveedores de forma rutinaria",
+    "Notificar y exigir corrección a proveedores que no cumplen niveles acordados",
+    "Evaluar implementar Vendor-Managed Inventory (VMI) para proveedores estratégicos"
+  ],
+  "entregable_esperado": "Sistema de seguimiento de KPIs de proveedores con reportes periódicos de cumplimiento",
+  "nodos_previos": [
+    "negociacion_contratos_proveedores"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_credito"
+  ],
+  "condiciones_activacion": [
+    "Cuando un proveedor es fuente única de una categoría crítica de productos",
+    "Cuando se busca reducir la carga administrativa de gestión de inventario"
+  ],
+  "etiqueta_arbol": "Mide a tus Proveedores"
+}

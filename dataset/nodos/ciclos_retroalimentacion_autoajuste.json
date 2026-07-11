@@ -1,0 +1,26 @@
+{
+  "node_id": "ciclos_retroalimentacion_autoajuste",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Ciclos de Retroalimentación Auto-ajustables",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Mecanismo mediante el cual se motiva a las personas con recompensas (monetarias o psicológicas) por alcanzar metas de desempeño predefinidas, y se les provee información en tiempo real sobre su avance hacia esas metas. Esto genera un bucle de retroalimentación que permite a las operaciones ajustarse continuamente, reduciendo ineficiencias como el efecto látigo (bullwhip effect) y suavizando ciclos de auge y caída económica.",
+  "pasos_accionables": [
+    "Definir metas de desempeño claras y medibles para los equipos operativos.",
+    "Establecer recompensas o incentivos ligados al cumplimiento de esas metas.",
+    "Proveer información en tiempo real sobre el progreso hacia las metas.",
+    "Ajustar continuamente las operaciones en base a los datos entrantes, no solo periódicamente."
+  ],
+  "entregable_esperado": "Sistema de métricas e incentivos con retroalimentación en tiempo real para los equipos operativos.",
+  "nodos_previos": [
+    "division_trabajo_humano_ia"
+  ],
+  "nodos_siguientes": [
+    "graficos_control_individuales_operarios"
+  ],
+  "condiciones_activacion": [
+    "Cuando la operación sufre de ciclos de sobre/sub-reacción similares al efecto bullwhip.",
+    "Cuando se busca mayor resiliencia y adaptabilidad ante un entorno VUCA (volátil, incierto, complejo, ambiguo)."
+  ],
+  "etiqueta_arbol": "Motiva con Metas Visibles"
+}

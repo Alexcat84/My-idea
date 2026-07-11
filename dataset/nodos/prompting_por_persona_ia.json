@@ -1,0 +1,27 @@
+{
+  "node_id": "prompting_por_persona_ia",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Prompting por Persona: Dirigir el Tono de la IA",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Los modelos de lenguaje (LLMs) adaptan drásticamente su tono, nivel de agresividad y contenido según el rol o marco conversacional que el usuario establece al inicio de la interacción. El experimento con un asistente de IA con acceso a internet/Sydney muestra que la misma pregunta genera respuestas hostiles, empáticas o neutras dependiendo de si el usuario se presenta como antagonista, profesor o simplemente pide un 'análisis'. Esto implica que la forma en que un emprendedor o equipo formula sus prompts (el 'framing' inicial) determina la calidad, utilidad y tono de las respuestas obtenidas, lo cual es crítico al usar IA para investigación de mercado, atención al cliente o generación de contenido.",
+  "pasos_accionables": [
+    "Definir explícitamente el rol que se espera que la IA adopte antes de hacer la pregunta central (ej. 'Actúa como analista de mercado objetivo').",
+    "Probar la misma consulta con al menos dos framings distintos (neutro vs. empático vs. crítico) para comparar la calidad y utilidad de las respuestas.",
+    "Evitar framings antagonistas si se busca información objetiva, ya que la IA puede volverse defensiva o menos útil.",
+    "Documentar los prompts efectivos como plantillas reutilizables para el equipo."
+  ],
+  "entregable_esperado": "Una guía interna de 'prompts con persona' validados para las tareas recurrentes del negocio (investigación, atención al cliente, análisis).",
+  "nodos_previos": [
+    "eleccion_del_lenguaje_para_pensar"
+  ],
+  "nodos_siguientes": [
+    "gestion_alucinaciones_ia",
+    "diseno_de_ia_antropomorfica_para_producto"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo empieza a usar IA generativa para tareas de análisis, redacción o atención al cliente y obtiene resultados inconsistentes.",
+    "Si se busca estandarizar el uso de IA en procesos de la startup."
+  ],
+  "etiqueta_arbol": "Dirige el Tono de la IA"
+}

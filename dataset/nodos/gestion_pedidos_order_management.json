@@ -1,0 +1,32 @@
+{
+  "node_id": "gestion_pedidos_order_management",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión de Pedidos (Order Management)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Proceso de transmitir información de pedidos desde clientes hacia atrás en la cadena de suministro (minoristas, distribuidores, proveedores de servicios, productores) y devolver información de fechas de entrega, sustituciones y pedidos pendientes. Se rige por cuatro principios: ingresar los datos del pedido una sola vez y capturarlos electrónicamente en la fuente original; automatizar el manejo de pedidos rutinarios y reservar la intervención humana para excepciones; hacer visible el estado del pedido a clientes y agentes de servicio; e integrar los sistemas de gestión de pedidos con otros sistemas relacionados (inventario, precios, facturación) para mantener la integridad de los datos.",
+  "pasos_accionables": [
+    "Diseñar un sistema de entrada de pedidos donde el cliente ingrese directamente sus datos",
+    "Automatizar el enrutamiento y cumplimiento de pedidos rutinarios",
+    "Implementar manejo de excepciones para pedidos con problemas (inventario insuficiente, fechas perdidas, cambios de cliente)",
+    "Dar visibilidad del estado del pedido al cliente en tiempo real",
+    "Integrar el sistema de pedidos con inventario, precios y facturación"
+  ],
+  "entregable_esperado": "Sistema o flujo documentado de gestión de pedidos con automatización de rutina y protocolo de excepciones",
+  "nodos_previos": [
+    "gestion_instalaciones",
+    "produccion_scheduling_balance_objetivos"
+  ],
+  "nodos_siguientes": [
+    "planificacion_cadena_suministro",
+    "customer_retention_strategy",
+    "logistica_inversa_retornos",
+    "programacion_entregas_delivery_scheduling"
+  ],
+  "condiciones_activacion": [
+    "Cuando el volumen de pedidos supera la capacidad de manejo manual",
+    "Si existen quejas frecuentes por falta de visibilidad del estado del pedido",
+    "Cuando se busca integrar order management con CRM"
+  ],
+  "etiqueta_arbol": "Ordena el Flujo de Pedidos"
+}

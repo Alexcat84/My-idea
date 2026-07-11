@@ -1,0 +1,26 @@
+{
+  "node_id": "manufactura_aditiva_bajo_demanda",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Manufactura Aditiva (Impresión 3D) para Producción Bajo Demanda",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "La impresión 3D o manufactura aditiva permite crear productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y mejora el nivel de servicio al cliente al minimizar quiebres de stock.",
+  "pasos_accionables": [
+    "Identificar productos o componentes con alta variabilidad y baja predictibilidad de demanda",
+    "Evaluar la viabilidad técnica y de costos de fabricarlos mediante manufactura aditiva",
+    "Rediseñar el proceso de inventario para sustituir stock terminado por materia prima común",
+    "Medir el impacto en costos de almacenamiento y nivel de servicio tras la implementación"
+  ],
+  "entregable_esperado": "Análisis de viabilidad de manufactura aditiva para una línea de productos, con proyección de ahorro en inventario",
+  "nodos_previos": [
+    "impresion_inteligente"
+  ],
+  "nodos_siguientes": [
+    "simulacion_de_operaciones_supply_chain"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa enfrenta altos costos de inventario por gran variedad de productos de baja rotación",
+    "Si se busca mejorar el nivel de servicio evitando quiebres de stock"
+  ],
+  "etiqueta_arbol": "Imprime en 3D bajo Demanda"
+}

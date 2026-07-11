@@ -1,0 +1,26 @@
+{
+  "node_id": "driver_informacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Driver de Información: Coordinación y Pronóstico en la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La información es la base para tomar decisiones sobre los otros cuatro drivers (producción, inventario, ubicación, transporte) y conecta todas las actividades de la cadena de suministro. Se usa para dos propósitos: (1) coordinar actividades diarias (programación de producción, niveles de inventario, rutas de transporte) y (2) pronosticar y planificar demanda futura (a nivel táctico para cronogramas mensuales/trimestrales, y a nivel estratégico para decisiones de expansión o entrada/salida de mercados). Información precisa, oportuna y completa maximiza la rentabilidad de toda la cadena.",
+  "pasos_accionables": [
+    "Implementar sistemas de captura de datos de demanda y oferta en tiempo real (o lo más cercano posible).",
+    "Compartir información relevante con proveedores y clientes clave de la cadena de suministro.",
+    "Usar los datos para ajustar programaciones semanales de producción, inventario y transporte.",
+    "Generar pronósticos tácticos (mensuales/trimestrales) y estratégicos (expansión, nuevos mercados) basados en esta información."
+  ],
+  "entregable_esperado": "Sistema o proceso de recolección y distribución de información (EDI, dashboard, reportes) que alimente las decisiones de producción, inventario, ubicación y transporte.",
+  "nodos_previos": [
+    "driver_transporte"
+  ],
+  "nodos_siguientes": [
+    "planificacion_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe desconexión de información entre los participantes de la cadena de suministro.",
+    "Cuando el usuario necesita mejorar la precisión de sus pronósticos de demanda."
+  ],
+  "etiqueta_arbol": "Usa la Información para Decidir"
+}

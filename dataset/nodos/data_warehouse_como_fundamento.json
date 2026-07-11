@@ -1,0 +1,25 @@
+{
+  "node_id": "data_warehouse_como_fundamento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Data Warehouse Empresarial como Fundamento de Mejora Operativa",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Antes de implementar mejoras en pronóstico de demanda, gestión de inventario, gestión de pedidos o programación de entregas, es necesario consolidar los datos transaccionales dispersos (órdenes, facturas, inventario) en un data warehouse central que sirva de fuente única de verdad para todos los sistemas posteriores.",
+  "pasos_accionables": [
+    "Identifica todas las fuentes de datos transaccionales existentes (ERP, sistemas de intercambio de datos)",
+    "Diseña un data warehouse que consolide estos datos diaria u horariamente",
+    "Prioriza este proyecto como base antes de construir módulos analíticos (forecasting, scheduling)",
+    "Define qué reportes y accesos vía web se habilitarán a partir de esta base de datos"
+  ],
+  "entregable_esperado": "Data warehouse funcional interfaced con sistemas transaccionales existentes",
+  "nodos_previos": [
+    "cuatro_capacidades_mercado"
+  ],
+  "nodos_siguientes": [
+    "bpm_gestion_excepciones"
+  ],
+  "condiciones_activacion": [
+    "Cuando se quiere mejorar pronóstico, inventario o gestión de pedidos pero los datos están fragmentados en múltiples sistemas"
+  ],
+  "etiqueta_arbol": "Ordena tus Datos Primero"
+}

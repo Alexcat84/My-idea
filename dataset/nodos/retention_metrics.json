@@ -3,14 +3,18 @@
   "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Métricas de Retención",
-  "fuente": "The Startup Owner's Manual - Steve Blank",
+  "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Indicadores clave para monitorear la salud de la retención de clientes, organizados por cohortes (grupos con características temporales comunes). Permiten detectar señales tempranas de churn y evaluar el valor de vida del cliente.",
   "pasos_accionables": [
     "Medir visitas, page views y tiempo en sitio/app por cohorte",
     "Calcular tiempo promedio entre visitas",
     "Estimar vida promedio del cliente y lifetime value",
     "Monitorear quejas, tickets de soporte y tasas de respuesta a e-mails",
-    "Agrupar clientes por cohortes (mes de ingreso) para comparar comportamiento"
+    "Agrupar clientes por cohortes (mes de ingreso) para comparar comportamiento",
+    "Calcular el Costo de Adquisición de Cliente (CAC) exacto por canal.",
+    "Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).",
+    "Medir el porcentaje real de clientes que abandonan antes de alcanzar ese punto de equilibrio.",
+    "Presentar el impacto financiero de la pérdida temprana de clientes al equipo directivo."
   ],
   "entregable_esperado": "Dashboard de métricas de retención segmentado por cohortes",
   "nodos_previos": [
@@ -18,7 +22,8 @@
   ],
   "nodos_siguientes": [
     "estrategia_crecimiento_clientes",
-    "factores_valoracion_startup"
+    "factores_valoracion_startup",
+    "experiencia_del_cliente_proactiva"
   ],
   "condiciones_activacion": [
     "Cuando se necesita cuantificar el éxito de las tácticas de retención"

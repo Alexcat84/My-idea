@@ -14,7 +14,9 @@
   ],
   "entregable_esperado": "Paquete financiero completo (forecast de cash flow + presupuesto anual) listo para presentar al banco.",
   "nodos_previos": [
-    "ciclo_de_conversion_de_efectivo"
+    "ciclo_de_conversion_de_efectivo",
+    "gestion_riesgo_credito",
+    "peligro_capital_barato"
   ],
   "nodos_siguientes": [
     "seleccion_prestamista_relacion_vs_transaccion"

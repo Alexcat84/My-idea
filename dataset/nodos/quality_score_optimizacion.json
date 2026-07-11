@@ -1,0 +1,27 @@
+{
+  "node_id": "quality_score_optimizacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Optimización del Quality Score en Anuncios",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "El Quality Score es una calificación que Google (y otras plataformas) asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
+  "pasos_accionables": [
+    "Revisar el CTR de cada keyword y anuncio regularmente",
+    "Reescribir anuncios con CTR por debajo del promedio (2%) o crítico (menor a 1.5%)",
+    "Usar Dynamic Keyword Insertion para aumentar relevancia automáticamente",
+    "Adaptar el copy del anuncio específicamente a cada grupo de keywords",
+    "Monitorear el Quality Score general de la cuenta como indicador de salud de la campaña"
+  ],
+  "entregable_esperado": "Un reporte de Quality Score por ad group con acciones correctivas para los anuncios de bajo desempeño.",
+  "nodos_previos": [
+    "sem_estrategia_ejecucion"
+  ],
+  "nodos_siguientes": [
+    "retargeting_display"
+  ],
+  "condiciones_activacion": [
+    "Cuando el CPC es demasiado alto o la campaña no es rentable",
+    "Cuando se busca escalar una campaña SEM ya validada"
+  ],
+  "etiqueta_arbol": "Mejora el Puntaje de Calidad"
+}

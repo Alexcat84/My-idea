@@ -1,0 +1,28 @@
+{
+  "node_id": "rediseno_procesos_negocio_cliente",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Rediseño de Procesos de Negocio para Eliminar Fricciones Autoinfligidas",
+  "fuente": "Never Lose a Customer Again - Joey Coleman",
+  "resumen_teorico": "Muchos problemas de experiencia del cliente son causados por la propia estructura y procesos internos de la empresa, no por el cliente. El caso Comcast muestra cómo identificar estas fricciones autoinfligidas (ventanas de citas muy amplias, transferencias de llamadas innecesarias, políticas de facturación confusas) y rediseñar los procesos para eliminarlas, incluyendo compensaciones automáticas cuando la empresa falla (crédito automático por retraso) y centros de atención especializados para resolver todo en una sola llamada.",
+  "pasos_accionables": [
+    "Mapear los procesos internos que generan quejas recurrentes de clientes",
+    "Identificar políticas o estructuras internas que crean fricción sin beneficio para el cliente",
+    "Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto",
+    "Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio",
+    "Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)"
+  ],
+  "entregable_esperado": "Mapa de procesos rediseñados con métricas de impacto esperado y mecanismos de compensación automática",
+  "nodos_previos": [
+    "contacto_con_el_cliente"
+  ],
+  "nodos_siguientes": [
+    "transparencia_facturacion",
+    "cultura_de_experiencia"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen altos volúmenes de quejas o llamadas repetidas de clientes",
+    "Cuando los procesos internos están diseñados por conveniencia operativa y no por el cliente"
+  ],
+  "etiqueta_arbol": "Elimina Fricciones que Tú Creaste"
+}

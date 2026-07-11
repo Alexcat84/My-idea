@@ -1,0 +1,63 @@
+{
+  "nodos": [
+    "clasificacion_garantia_full_limited",
+    "contratos_de_servicio_garantia",
+    "cumplimiento_magnuson_moss",
+    "diferenciacion_garantia_contrato_servicio",
+    "evitar_terminos_enganosos_garantia",
+    "garantias_implicitas_vs_expresas",
+    "mecanismo_resolucion_disputas",
+    "prohibicion_tie_in_sales",
+    "publicidad_garantia",
+    "publicidad_garantia_conforme",
+    "regla_disponibilidad_previa_venta",
+    "regla_divulgacion_garantia"
+  ],
+  "conexiones_vecino_tematico": [
+    {
+      "nodo": "contratos_de_servicio_garantia",
+      "campo": "nodos_siguientes",
+      "vecino": "negociacion_carta_compromiso_banquero",
+      "score": 0.5683
+    },
+    {
+      "nodo": "evitar_terminos_enganosos_garantia",
+      "campo": "nodos_siguientes",
+      "vecino": "reps_warranties_indemnizacion",
+      "score": 0.6315
+    },
+    {
+      "nodo": "mecanismo_resolucion_disputas",
+      "campo": "nodos_siguientes",
+      "vecino": "contract_close_out",
+      "score": 0.6715
+    },
+    {
+      "nodo": "prohibicion_tie_in_sales",
+      "campo": "nodos_siguientes",
+      "vecino": "protective_provisions",
+      "score": 0.65
+    },
+    {
+      "nodo": "publicidad_garantia",
+      "campo": "nodos_siguientes",
+      "vecino": "reps_warranties_indemnizacion",
+      "score": 0.5971
+    }
+  ],
+  "core_tocados_simetria": [
+    "business_model_environment_mapping",
+    "clasificacion_garantia_full_limited",
+    "contract_close_out",
+    "contratos_de_servicio_garantia",
+    "cumplimiento_magnuson_moss",
+    "estrategia_crecimiento_clientes",
+    "negociacion_carta_compromiso_banquero",
+    "protective_provisions",
+    "publicidad_garantia_conforme",
+    "regla_disponibilidad_previa_venta",
+    "regla_divulgacion_garantia",
+    "reps_warranties_indemnizacion",
+    "value_proposition_startup"
+  ]
+}

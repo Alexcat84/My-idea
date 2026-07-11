@@ -1,0 +1,31 @@
+{
+  "node_id": "middle_ring_testing",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Middle Ring Testing (Bullseye)",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "Fase intermedia del método Bullseye donde se ejecutan pruebas baratas y rápidas sobre las estrategias de canal más prometedoras identificadas en la lluvia de ideas inicial. El objetivo es responder tres preguntas clave: costo de adquisición por cliente, cantidad de clientes disponibles en ese canal, y si esos clientes son los correctos en este momento. No se debe optimizar en profundidad, solo obtener señales de viabilidad estratégica antes de comprometer más recursos.",
+  "pasos_accionables": [
+    "Selecciona la estrategia de canal más prometedora de tu lista de brainstorming inicial",
+    "Diseña pruebas económicas (ej. $250 en AdWords) y de corto plazo (menos de un mes en fase I)",
+    "Mide costo de adquisición, volumen de clientes disponibles y calidad/ajuste de esos clientes",
+    "Compara los resultados de varias estrategias de canal usando una hoja de cálculo",
+    "Elige la estrategia ganadora para pasar a pruebas de anillo interno (inner ring)"
+  ],
+  "entregable_esperado": "Hoja de cálculo comparativa con costo de adquisición, volumen y calidad de clientes por estrategia de canal probada",
+  "nodos_previos": [
+    "framework_bullseye",
+    "traction_goal",
+    "critical_path",
+    "traction_channel_bias"
+  ],
+  "nodos_siguientes": [
+    "critical_path",
+    "targeting_blogs_channel"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario ya identificó varias estrategias de canal candidatas y necesita decidir en cuál enfocarse",
+    "Cuando el equipo tiene recursos limitados y no puede optimizar múltiples canales a la vez"
+  ],
+  "etiqueta_arbol": "Prueba tus Mejores Canales"
+}

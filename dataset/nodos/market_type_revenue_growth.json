@@ -15,10 +15,16 @@
   "entregable_esperado": "Proyección de ingresos ajustada según el tipo de mercado, con justificación basada en comparables o cuota de mercado",
   "nodos_previos": [
     "market_type_definicion",
-    "capturar_conocimiento_de_mercado"
+    "capturar_conocimiento_de_mercado",
+    "estrategia_captura_mercado_crecimiento"
   ],
   "nodos_siguientes": [
-    "metrics_that_matter_framework"
+    "metrics_that_matter_framework",
+    "clasificacion_mercados_cadena_suministro",
+    "estrategia_captura_mercado_crecimiento",
+    "estrategia_cuatro_capacidades_mercado",
+    "marco_analisis_mercado_cadena_suministro",
+    "modelo_cuadrantes_mercado"
   ],
   "condiciones_activacion": [
     "Cuando se están construyendo proyecciones de ingresos para el business model",

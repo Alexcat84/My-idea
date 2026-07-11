@@ -1,0 +1,27 @@
+{
+  "node_id": "metodos_de_pronostico",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Métodos de Pronóstico: Cualitativo, Causal, Series de Tiempo y Simulación",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "Existen cuatro métodos básicos de pronóstico que suelen combinarse: (1) Cualitativo, basado en intuición y comparación con productos similares, útil cuando hay poca data histórica; (2) Causal, que asume relación fuerte entre demanda y factores externos como precio o tasas de interés; (3) Series de tiempo, el más común, que usa patrones históricos (promedios móviles, suavizado exponencial) y funciona mejor en mercados estables; (4) Simulación, que combina métodos causales y de series de tiempo para modelar escenarios hipotéticos. Los pronósticos de corto plazo y agregados son más precisos que los de largo plazo o muy segmentados, y siempre existe un margen de error que debe planificarse.",
+  "pasos_accionables": [
+    "Determinar qué método(s) de pronóstico se ajustan a la disponibilidad de datos históricos",
+    "Combinar al menos dos métodos (ej. series de tiempo + causal) para mejorar precisión",
+    "Preferir pronósticos agregados y de corto plazo sobre los muy segmentados o de largo plazo",
+    "Definir el margen de error esperado y crear planes de contingencia para desviaciones (ej. +/-20%)"
+  ],
+  "entregable_esperado": "Pronóstico de demanda documentado con método(s) utilizados, margen de error estimado y plan de contingencia",
+  "nodos_previos": [
+    "pronostico_de_demanda_variables"
+  ],
+  "nodos_siguientes": [
+    "gestion_inventario"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere tomar decisiones de compra, producción o inventario basadas en demanda futura",
+    "Si el negocio tiene poca data histórica y necesita métodos cualitativos complementarios",
+    "Cuando se busca reducir sobre-stock o quiebres de inventario mediante mejor precisión de pronóstico"
+  ],
+  "etiqueta_arbol": "Elige tu Método de Pronóstico"
+}

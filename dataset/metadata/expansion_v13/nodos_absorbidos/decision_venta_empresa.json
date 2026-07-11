@@ -1,0 +1,27 @@
+{
+  "node_id": "decision_venta_empresa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Decisión Estratégica de Vender la Empresa",
+  "fuente": "The Hard Thing About Hard Thing - Ben Horowitz",
+  "resumen_teorico": "Cuando llegan ofertas de adquisición, el CEO enfrenta una decisión compleja que va más allá del precio: debe evaluar si el equipo tiene la energía y motivación para seguir enfrentando desafíos, el tamaño real del mercado futuro, y los riesgos de permanecer independiente frente a los cambios arquitectónicos o competitivos que se avecinan. La decisión debe basarse en consultar al equipo directivo, definir un precio mínimo aceptable basado en el valor real construido (no solo en la prima ofrecida) y mantenerse firme en las negociaciones.",
+  "pasos_accionables": [
+    "Evaluar honestamente el tamaño y evolución futura del mercado",
+    "Consultar a los reportes directos sobre su disposición a continuar el camino difícil",
+    "Definir un precio mínimo basado en el valor real del negocio, no solo en la prima sobre el precio actual",
+    "Comunicar ese precio con firmeza a todos los posibles compradores",
+    "Estar dispuesto a esperar y sostener la posición aunque no haya ofertas inmediatas"
+  ],
+  "entregable_esperado": "Marco de decisión documentado con criterios claros de venta (precio mínimo, condiciones de mercado, consenso del equipo directivo)",
+  "nodos_previos": [
+    "fit_producto_mercado",
+    "escalamiento_negocio"
+  ],
+  "nodos_siguientes": [
+    "gestion_transicion_post_adquisicion"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa recibe ofertas de adquisición",
+    "Cuando el mercado enfrenta cambios estructurales que amenazan la posición competitiva"
+  ]
+}

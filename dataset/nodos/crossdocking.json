@@ -1,0 +1,27 @@
+{
+  "node_id": "crossdocking",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Crossdocking en Centros de Distribución",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El crossdocking es una técnica logística en la que los envíos de carga completa llegan a un centro de distribución y se descargan, y al mismo tiempo se fragmentan y combinan con otros productos para cargarse directamente en camiones de salida, minimizando el almacenamiento. Reduce el tiempo de flujo del producto y los costos de manipulación, pero requiere alta coordinación entre entradas y salidas y volúmenes predecibles.",
+  "pasos_accionables": [
+    "Evaluar si el volumen y la predictibilidad de la demanda justifican crossdocking",
+    "Sincronizar horarios de llegada de camiones entrantes con la salida de camiones salientes",
+    "Diseñar el layout del centro de distribución para minimizar tiempos de manipulación",
+    "Establecer sistemas de coordinación en tiempo real entre proveedores y transportistas",
+    "Medir reducción de inventario en tránsito y costos de manipulación"
+  ],
+  "entregable_esperado": "Proceso documentado de crossdocking con horarios de sincronización y layout del centro de distribución",
+  "nodos_previos": [
+    "milk_run_deliveries"
+  ],
+  "nodos_siguientes": [
+    "driver_transporte"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen grandes volúmenes predecibles de producto",
+    "Cuando se busca reducir tiempos de almacenamiento y costos de manipulación"
+  ],
+  "etiqueta_arbol": "Agiliza tu Distribución sin Bodega"
+}

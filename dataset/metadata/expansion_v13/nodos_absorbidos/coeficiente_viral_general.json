@@ -1,0 +1,28 @@
+{
+  "node_id": "coeficiente_viral_general",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Coeficiente Viral (Viral Coefficient)",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "El coeficiente viral (K) mide cuántos nuevos usuarios genera cada usuario existente a través de invitaciones. Se calcula como K = número de invitaciones enviadas por usuario x porcentaje de conversión de esas invitaciones en nuevos usuarios. Si K es mayor a 1, el crecimiento es exponencial (viral); si es menor a 1, se necesita alimentar constantemente el ciclo con nuevos usuarios de otras fuentes. La conversión puede descomponerse en click-through percentage y signup percentage para identificar el cuello de botella específico.",
+  "pasos_accionables": [
+    "Medir el número promedio de invitaciones enviadas por usuario",
+    "Medir el porcentaje de conversión de invitaciones en clics",
+    "Medir el porcentaje de conversión de clics en registros (signup)",
+    "Calcular K = invitaciones x click-through % x signup %",
+    "Identificar cuál de las tres variables es más débil y enfocar esfuerzos ahí"
+  ],
+  "entregable_esperado": "Dashboard con cálculo de coeficiente viral desglosado en sus componentes (invitaciones, CTR, conversión de registro)",
+  "nodos_previos": [
+    "definicion_producto_minimo_viable",
+    "segmento_cliente_objetivo"
+  ],
+  "nodos_siguientes": [
+    "optimizacion_ciclo_viral",
+    "ab_testing_crecimiento"
+  ],
+  "condiciones_activacion": [
+    "Cuando el modelo de negocio depende de crecimiento por referidos o boca a boca",
+    "Cuando el producto tiene mecanismos de compartir integrados (invitaciones, compartir en redes)"
+  ]
+}

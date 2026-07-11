@@ -1,0 +1,26 @@
+{
+  "node_id": "bpm_gestion_excepciones",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión de Excepciones con Business Process Management (BPM)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El uso de software BPM interfaced con los sistemas transaccionales permite definir reglas de negocio y detectar automáticamente excepciones (errores en pedidos, retrasos, facturación) para alertar al personal correspondiente, permitiendo una atención al cliente proactiva en vez de reactiva.",
+  "pasos_accionables": [
+    "Define las reglas de negocio críticas para cada tipo de cliente/proveedor (ej. plazos de entrega, tolerancias de error)",
+    "Implementa software BPM interfaced con la base de datos transaccional existente",
+    "Configura alertas automáticas por email cuando se detecten excepciones a las reglas",
+    "Capacita al equipo de servicio al cliente para actuar proactivamente ante las alertas"
+  ],
+  "entregable_esperado": "Sistema BPM configurado con reglas de negocio y alertas automáticas de excepciones",
+  "nodos_previos": [
+    "data_warehouse_como_fundamento"
+  ],
+  "nodos_siguientes": [
+    "asociaciones_clave"
+  ],
+  "condiciones_activacion": [
+    "Cuando errores en pedidos o facturación tardan mucho en detectarse",
+    "Cuando el servicio al cliente reacciona tarde a problemas de la cadena de suministro"
+  ],
+  "etiqueta_arbol": "Detecta Excepciones Automáticamente"
+}

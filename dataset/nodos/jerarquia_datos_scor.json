@@ -1,0 +1,27 @@
+{
+  "node_id": "jerarquia_datos_scor",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Jerarquía de Datos Estratégicos, Operativos y Tácticos (Modelo SCOR)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El modelo SCOR clasifica los datos de la cadena de suministro en tres niveles según su uso: datos estratégicos (nivel 1) para la alta dirección sobre desempeño global en servicio al cliente, eficiencia interna, flexibilidad de demanda y desarrollo de producto; datos operativos (nivel 2) a nivel de sucursal para planificación de mandos medios; y datos tácticos (nivel 3) para resolución diaria de problemas por parte del personal de línea. Esta estructura evita la sobrecarga de información y permite que cada nivel jerárquico acceda a la granularidad que necesita.",
+  "pasos_accionables": [
+    "Definir qué métricas corresponden a nivel estratégico, operativo y táctico según el modelo SCOR",
+    "Segmentar la recolección de datos por nivel organizacional (dirección, gerencia media, personal operativo)",
+    "Incluir datos externos (tamaño de mercado, indicadores económicos, benchmarks de industria) en el nivel estratégico",
+    "Validar que cada rol de la empresa tenga acceso solo a la información relevante para su función"
+  ],
+  "entregable_esperado": "Mapa de métricas clasificado en los tres niveles SCOR con responsables asignados por nivel",
+  "nodos_previos": [
+    "lienzo_modelo_negocio"
+  ],
+  "nodos_siguientes": [
+    "creacion_data_warehouse",
+    "diseno_dashboards"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa tiene múltiples niveles jerárquicos y necesita organizar el flujo de información",
+    "Si existe sobrecarga de datos sin estructura clara de uso"
+  ],
+  "etiqueta_arbol": "Ordena tus Datos por Nivel"
+}

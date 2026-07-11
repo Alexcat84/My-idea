@@ -1,0 +1,28 @@
+{
+  "node_id": "creacion_data_warehouse",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Creación de un Data Warehouse para la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Un data warehouse es un repositorio central que integra datos de múltiples sistemas operativos y contables de la empresa, capturando información automáticamente en la fuente para evitar entrada manual. Combina software de base de datos con herramientas de reportes predefinidos, visualizaciones gráficas y consultas ad-hoc. Se recomienda iniciar con un sistema simple y escalarlo conforme la organización gana experiencia usando los datos activamente.",
+  "pasos_accionables": [
+    "Identificar los sistemas operativos y contables fuente de los datos relevantes",
+    "Automatizar la captura de datos evitando el ingreso manual",
+    "Implementar un piloto simple y de pequeña escala antes de escalar",
+    "Habilitar reportes predefinidos y consultas ad-hoc para distintos usuarios",
+    "Extender el acceso a socios de la cadena de suministro vía web cuando sea pertinente"
+  ],
+  "entregable_esperado": "Data warehouse funcional con conexiones automatizadas a sistemas fuente y reportes básicos operativos",
+  "nodos_previos": [
+    "jerarquia_datos_scor"
+  ],
+  "nodos_siguientes": [
+    "diseno_dashboards",
+    "compartir_datos_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa maneja múltiples sistemas dispersos de información",
+    "Si se requiere visibilidad centralizada del desempeño operativo"
+  ],
+  "etiqueta_arbol": "Centraliza tus Datos Clave"
+}

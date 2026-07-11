@@ -1,0 +1,27 @@
+{
+  "node_id": "mission_and_operations_planning",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Planificación de Misión y Operaciones (M&OP)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos que comienza con la definición de la misión (CONOPS), sigue con planificación de demanda por instalación, planificación de transporte, modelado del supply chain y simulación para elegir el mejor plan antes de ejecutarlo en el mundo real.",
+  "pasos_accionables": [
+    "Definir el concepto de operaciones (CONOPS): origen de suministros, instalaciones y necesidades",
+    "Realizar planificación de demanda por instalación según población afectada",
+    "Planificar el uso de vehículos disponibles para transportar suministros",
+    "Modelar la cadena de suministro propuesta con los datos de demanda y transporte",
+    "Simular el modelo para detectar problemas y elegir el plan de mejor desempeño antes de ejecutarlo"
+  ],
+  "entregable_esperado": "Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo, simulación) validado antes de su ejecución",
+  "nodos_previos": [
+    "cadena_suministro_respuesta_desastres"
+  ],
+  "nodos_siguientes": [
+    "alineacion_stakeholders_ma"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere coordinar múltiples organizaciones sin jerarquía formal",
+    "Cuando es necesario actualizar planes operativos de forma continua ante cambios rápidos"
+  ],
+  "etiqueta_arbol": "Planifica tu Misión y Operación"
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "ab_testing_crecimiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "A/B Testing Sistemático para Crecimiento",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "Estrategia de mejora continua basada en pruebas A/B constantes sobre elementos clave del embudo de conversión (botones, copy, formularios, headlines, prueba social, etc.). Se recomienda enfocarse en una métrica principal durante semanas, probando cambios grandes (5-10x de impacto potencial) antes de optimizar detalles menores. Dado que el crecimiento viral compone, incluso mejoras del 1% pueden generar diferencias enormes en el largo plazo.",
+  "pasos_accionables": [
+    "Elegir una métrica clave a mejorar (ej. tasa de registro)",
+    "Generar hipótesis de cambios grandes antes que pequeños ajustes",
+    "Ejecutar pruebas A/B durante semanas enfocándose en una sola métrica a la vez",
+    "Probar elementos como botones, ubicación de CTA, copy, prueba social, número de campos de formulario",
+    "Documentar resultados y pasar a la siguiente métrica cuando se agoten las ideas"
+  ],
+  "entregable_esperado": "Calendario/backlog de pruebas A/B priorizadas con resultados documentados por métrica",
+  "nodos_previos": [
+    "coeficiente_viral_general",
+    "tiempo_ciclo_viral"
+  ],
+  "nodos_siguientes": [
+    "identificacion_bolsas_virales"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita optimizar continuamente un embudo de conversión o crecimiento",
+    "Cuando el equipo tiene tráfico suficiente para generar resultados estadísticamente relevantes"
+  ]
+}

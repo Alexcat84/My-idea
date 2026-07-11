@@ -3,13 +3,18 @@
   "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "Gestión de Cuentas por Cobrar (Accounts Receivable)",
-  "fuente": "Financial Intelligence for Entrepreneurs",
+  "fuente": "Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Los acreedores también monitorean este rubro de cerca como indicador de salud financiera.",
   "pasos_accionables": [
     "Revisar periódicamente el saldo total de cuentas por cobrar",
     "Establecer una política de reserva para cuentas incobrables basada en experiencia histórica",
     "Monitorear los días promedio de cobro (DSO) para detectar deterioro en la cobranza",
-    "Implementar seguimiento activo con clientes morosos para acelerar conversión a efectivo"
+    "Implementar seguimiento activo con clientes morosos para acelerar conversión a efectivo",
+    "Definir políticas de crédito basadas en el análisis de cuentas por cobrar (DSO, deuda incobrable)",
+    "Establecer criterios de aceptación de riesgo según condiciones económicas",
+    "Implementar procesos de aprobación de ventas basados en análisis de crédito",
+    "Gestionar cobranzas activas de cuentas vencidas",
+    "Ofrecer múltiples formas de pago (EFT, cartas de crédito internacionales, etc.)"
   ],
   "entregable_esperado": "Reporte de antigüedad de cuentas por cobrar con acciones de cobranza definidas",
   "nodos_previos": [
@@ -17,7 +22,8 @@
     "analisis_antiguedad_cuentas_por_cobrar"
   ],
   "nodos_siguientes": [
-    "gestion_dso"
+    "gestion_dso",
+    "gestion_riesgo_credito"
   ],
   "condiciones_activacion": [
     "Si el usuario enfrenta problemas de flujo de caja a pesar de tener ventas saludables"

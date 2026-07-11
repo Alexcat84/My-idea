@@ -1,0 +1,27 @@
+{
+  "node_id": "identificacion_bolsas_virales",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Identificación de Bolsas Virales (Viral Pockets)",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "Dentro de la base total de clientes, pueden existir subgrupos (por país, edad, u otra característica) que crecen viralmente mucho más rápido que el promedio general. Detectar estas 'bolsas virales' permite enfocar recursos en los segmentos donde el producto ya funciona de forma orgánica, optimizando específicamente para ellos (idioma, cultura, canal).",
+  "pasos_accionables": [
+    "Segmentar la base de usuarios por atributos relevantes (país, edad, canal de origen)",
+    "Calcular el coeficiente viral por cada segmento",
+    "Identificar los segmentos con K más alto (bolsas virales)",
+    "Optimizar la experiencia específicamente para esos segmentos (idioma, mensajes, features)"
+  ],
+  "entregable_esperado": "Análisis segmentado de coeficiente viral por grupo de usuarios con recomendaciones de enfoque",
+  "nodos_previos": [
+    "coeficiente_viral",
+    "tiempo_ciclo_viral"
+  ],
+  "nodos_siguientes": [
+    "seeding_canal_viral"
+  ],
+  "condiciones_activacion": [
+    "Cuando el crecimiento viral global es bajo pero se sospecha que hay variación entre segmentos",
+    "Cuando se busca priorizar mercados o nichos para escalar"
+  ],
+  "etiqueta_arbol": "Detecta tus Bolsas Virales"
+}

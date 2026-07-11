@@ -1,0 +1,27 @@
+{
+  "node_id": "diseno_dashboards",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Diseño de Dashboards por Audiencia",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Los dashboards son despliegues de una página que muestran a cada usuario, de un vistazo, los indicadores clave que le competen. Difieren según el nivel: alta dirección necesita ver el cumplimiento de metas globales, gerencia media requiere detalle de las operaciones bajo su responsabilidad, y el personal operativo necesita datos tácticos específicos de sus tareas diarias (compras, crédito, inventario). La velocidad para detectar problemas y oportunidades mediante dashboards es una ventaja competitiva crítica.",
+  "pasos_accionables": [
+    "Identificar los indicadores clave (KPIs) responsabilidad de cada rol/nivel",
+    "Diseñar un dashboard diferenciado para alta dirección, gerencia media y personal operativo",
+    "Permitir 'drill-down' desde el dashboard estratégico hacia el detalle operativo y táctico",
+    "Iterar el diseño del dashboard conforme el equipo gana experiencia usándolo"
+  ],
+  "entregable_esperado": "Set de dashboards personalizados por nivel jerárquico, con capacidad de detalle progresivo",
+  "nodos_previos": [
+    "creacion_data_warehouse",
+    "jerarquia_datos_scor"
+  ],
+  "nodos_siguientes": [
+    "desarrollo_reporte_benchmarking"
+  ],
+  "condiciones_activacion": [
+    "Cuando los distintos niveles de la organización no tienen visibilidad clara de su desempeño",
+    "Si se busca acelerar la velocidad de reacción ante problemas de mercado"
+  ],
+  "etiqueta_arbol": "Diseña Paneles para cada Rol"
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "diseno_producto_cadena_suministro",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Diseño de Producto Orientado a la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El diseño del producto determina la forma de la cadena de suministro necesaria para fabricarlo, impactando fuertemente en costo y disponibilidad. Diseñar productos con menos partes, diseños simples y construcción modular a partir de subensambles genéricos permite trabajar con menos proveedores, reducir inventarios de producto terminado y responder más rápido a la demanda. Equipos multifuncionales (diseño, procurement, manufactura) deben coordinar para lograr productos exitosos y rentables.",
+  "pasos_accionables": [
+    "Formar equipos multifuncionales de diseño, procurement y manufactura",
+    "Diseñar productos con menor cantidad de partes y componentes modulares",
+    "Evaluar si proveedores actuales pueden suministrar los componentes necesarios",
+    "Analizar riesgos de dependencia de proveedores únicos por componente",
+    "Simplificar el diseño para facilitar el ensamblaje y reducir el número de proveedores"
+  ],
+  "entregable_esperado": "Diseño de producto modular validado por equipo multifuncional con lista de proveedores requeridos",
+  "nodos_previos": [
+    "etapa_development"
+  ],
+  "nodos_siguientes": [
+    "programacion_produccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está diseñando un nuevo producto físico",
+    "Cuando existen múltiples proveedores para componentes críticos y se busca simplificar la cadena"
+  ],
+  "etiqueta_arbol": "Simplifica el Diseño de tu Producto"
+}

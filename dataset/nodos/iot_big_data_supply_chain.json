@@ -1,0 +1,27 @@
+{
+  "node_id": "iot_big_data_supply_chain",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "IoT y Big Data para Trazabilidad de Supply Chain",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "El Internet de las Cosas (IoT) conecta dispositivos embebidos en productos y equipos para enviar y recibir datos en tiempo real, generando volúmenes masivos de 'big data' que alimentan el análisis de patrones y tendencias en la cadena de suministro. Esta evolución va desde códigos de barras, pasando por RFID, hasta microchips embebidos en cualquier producto, permitiendo un seguimiento continuo y granular del movimiento de mercancías.",
+  "pasos_accionables": [
+    "Mapear los puntos de la cadena de suministro donde se necesita visibilidad en tiempo real",
+    "Seleccionar tecnología de tagging adecuada (código de barras, RFID, chips IoT) según costo y necesidad de datos",
+    "Establecer una base de datos centralizada que capture y almacene los datos generados por los dispositivos IoT",
+    "Definir qué patrones o KPIs se analizarán con los datos recolectados (tiempos de tránsito, quiebres de stock, etc.)"
+  ],
+  "entregable_esperado": "Infraestructura de captura de datos IoT integrada con un repositorio central listo para análisis",
+  "nodos_previos": [
+    "optimizacion_tecnologia_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "estandar_gtin_epc",
+    "ia_en_supply_chain"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa carece de visibilidad en tiempo real sobre el movimiento de sus productos",
+    "Si se busca alimentar sistemas de IA con datos operativos de calidad"
+  ],
+  "etiqueta_arbol": "Rastrea tu Cadena con IoT"
+}

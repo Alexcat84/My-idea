@@ -1,0 +1,28 @@
+{
+  "node_id": "metricas_servicio_cliente_bts_bto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Métricas de Servicio al Cliente: Build-to-Stock vs Build-to-Order",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Existen dos modelos operativos con métricas de servicio distintas. Build-to-Stock (BTS) aplica a productos commodity que deben estar disponibles de inmediato (medido por fill rate de orden completa y de línea de producto). Build-to-Order (BTO) aplica a productos personalizados por pedido (medido por tiempo de respuesta cotizado y tasa de cumplimiento a tiempo). Elegir y medir el modelo correcto es esencial para alinear expectativas del cliente con la operación.",
+  "pasos_accionables": [
+    "Determinar si tu producto/servicio opera bajo modelo BTS o BTO",
+    "Si es BTS, medir el order fill rate y el line-item fill rate",
+    "Si es BTO, medir el tiempo de respuesta cotizado y la tasa de cumplimiento a tiempo",
+    "Alinear el tiempo de respuesta prometido con la propuesta de valor y estrategia competitiva"
+  ],
+  "entregable_esperado": "Sistema de medición de servicio al cliente implementado según el modelo operativo (BTS o BTO)",
+  "nodos_previos": [
+    "cuatro_categorias_desempeno_cadena_suministro",
+    "value_proposition_startup"
+  ],
+  "nodos_siguientes": [
+    "gestion_inventario",
+    "framework_scor_plan_source_make_deliver"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario gestiona inventario o pedidos personalizados",
+    "Si hay quejas de clientes por tiempos de entrega o disponibilidad"
+  ],
+  "etiqueta_arbol": "Compara Fabricar Contra Pedido o Stock"
+}

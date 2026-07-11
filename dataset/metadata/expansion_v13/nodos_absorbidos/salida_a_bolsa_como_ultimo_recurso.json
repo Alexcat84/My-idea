@@ -1,0 +1,28 @@
+{
+  "node_id": "salida_a_bolsa_como_ultimo_recurso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "IPO como Último Recurso en Crisis de Capital",
+  "fuente": "The Hard Thing About Hard Things",
+  "resumen_teorico": "En situaciones extremas, cuando el mercado privado se cierra completamente para una empresa pero el mercado público sigue parcialmente abierto, salir a bolsa —incluso en condiciones desfavorables (baja valuación, mala prensa, negocio no maduro)— puede ser la única vía de supervivencia. Esta decisión no debe tomarse por prestigio sino como mecanismo de sobrevivencia financiera cuando no hay alternativas.",
+  "pasos_accionables": [
+    "Evalúa honestamente si la empresa cumple criterios mínimos para ser pública (procesos, forecasting, operaciones).",
+    "Lista explícitamente pros y contras de salir a bolsa en el contexto actual del mercado.",
+    "Consulta con directores que tengan experiencia previa como CEOs de empresas públicas.",
+    "Prepara al equipo y a los empleados para la realidad de la valuación y sus implicaciones (ej. splits accionarios).",
+    "Ajusta el precio de oferta según comparables de mercado, incluso si es menor a rondas privadas previas."
+  ],
+  "entregable_esperado": "Documento de decisión de IPO con análisis de pros/contras, aprobación de la junta directiva, y S-1 preparado con métricas financieras realistas.",
+  "nodos_previos": [
+    "peligro_capital_barato",
+    "gestion_de_caja_runway"
+  ],
+  "nodos_siguientes": [
+    "comunicacion_post_ipo",
+    "gestion_expectativas_equity_empleados"
+  ],
+  "condiciones_activacion": [
+    "Cuando el mercado privado se cierra completamente y la empresa enfrenta bancarrota inminente.",
+    "Cuando la única opción de financiamiento restante es el mercado público, aunque en condiciones adversas."
+  ]
+}

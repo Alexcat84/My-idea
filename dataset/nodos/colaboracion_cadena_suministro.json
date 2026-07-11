@@ -1,0 +1,27 @@
+{
+  "node_id": "colaboracion_cadena_suministro",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Iniciar la Colaboración en la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El primer paso para reducir el efecto látigo es medirlo dentro de la propia empresa, comparando el volumen y frecuencia de pedidos recibidos de clientes contra los pedidos realizados a proveedores. Compartir datos de inventario y demanda con socios comerciales (como hacen Walmart, Dell y P&G) permite decisiones más eficientes en toda la cadena, en lugar de que cada empresa optimice de forma aislada.",
+  "pasos_accionables": [
+    "Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)",
+    "Graficar la divergencia entre demanda de clientes y órdenes a proveedores",
+    "Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)",
+    "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave",
+    "Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado"
+  ],
+  "entregable_esperado": "Gráfico de medición del efecto látigo propio y acuerdo inicial de intercambio de datos con al menos un socio clave",
+  "nodos_previos": [
+    "sales_operations_planning"
+  ],
+  "nodos_siguientes": [
+    "optimizacion_tecnologia_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa sufre variabilidad de demanda no explicada por ventas reales",
+    "Si se busca iniciar colaboración formal con proveedores o clientes en la cadena"
+  ],
+  "etiqueta_arbol": "Mide y Comparte con tu Cadena"
+}

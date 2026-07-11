@@ -1,0 +1,28 @@
+{
+  "node_id": "division_trabajo_humano_ia",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "División del Trabajo entre Humanos e IA",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Principio estratégico que establece que las computadoras y la IA deben automatizar las tareas repetitivas, rutinarias y de monitoreo (donde no fallan ni se cansan), mientras que las personas deben enfocarse en actividades creativas, de resolución de problemas y colaboración, donde no hay respuestas correctas claras y se requiere juicio humano.",
+  "pasos_accionables": [
+    "Mapear las tareas del proceso operativo y clasificarlas en rutinarias vs. creativas/ambiguas.",
+    "Automatizar con IA/algoritmos las tareas repetitivas de monitoreo y registro de datos.",
+    "Asignar a personas las tareas de excepción, negociación y resolución de problemas complejos.",
+    "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes."
+  ],
+  "entregable_esperado": "Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.",
+  "nodos_previos": [
+    "gestion_visual_del_pipeline_de_desarrollo",
+    "riesgo_control_algoritmico"
+  ],
+  "nodos_siguientes": [
+    "ciclos_retroalimentacion_autoajuste",
+    "automatizacion_tareas_aburridas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está diseñando un sistema que combina automatización con toma de decisiones humana.",
+    "Cuando el equipo pierde tiempo humano valioso en tareas repetitivas que podrían automatizarse."
+  ],
+  "etiqueta_arbol": "Reparte Tareas entre Humanos e IA"
+}

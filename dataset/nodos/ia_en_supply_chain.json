@@ -1,0 +1,31 @@
+{
+  "node_id": "ia_en_supply_chain",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Inteligencia Artificial Aplicada a la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "La IA, potenciada por modelos de lenguaje grandes (LLMs), transforma tres áreas clave de supply chain: pronóstico de demanda (analizando datos históricos, tendencias de mercado y factores externos como clima o eventos sociales), optimización de rutas (usando datos de tráfico en tiempo real y aprendizaje automático para rutas dinámicas), y operaciones de almacén (robots con visión computacional que manipulan productos de formas y tamaños variables). El objetivo es pasar de datos masivos a decisiones accionables en tiempo real, complementando —no reemplazando— el juicio humano.",
+  "pasos_accionables": [
+    "Auditar las fuentes de datos actuales de demanda, rutas y almacén para evaluar su calidad y volumen",
+    "Seleccionar un área piloto (forecasting, rutas o almacén) donde implementar una solución de IA",
+    "Integrar algoritmos de machine learning con datos históricos y en tiempo real (tráfico, clima, redes sociales)",
+    "Medir la mejora en precisión de pronóstico o eficiencia operativa antes de escalar a otras áreas",
+    "Definir qué decisiones puede tomar la IA de forma autónoma y cuáles deben escalarse a gestores humanos"
+  ],
+  "entregable_esperado": "Plan piloto de implementación de IA en al menos un área de supply chain con métricas de éxito definidas (ej. % mejora en precisión de forecast)",
+  "nodos_previos": [
+    "iot_big_data_supply_chain",
+    "definicion_alineacion_cadena_suministro",
+    "simulacion_de_operaciones_supply_chain",
+    "vehiculos_autonomos_drones_supply_chain"
+  ],
+  "nodos_siguientes": [
+    "desafios_implementacion_ia",
+    "simulacion_de_operaciones_supply_chain"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa tiene grandes volúmenes de datos de demanda, rutas o inventario sin explotar",
+    "Si los métodos tradicionales de pronóstico no logran precisión suficiente ante demanda volátil"
+  ],
+  "etiqueta_arbol": "Aplica IA en tu Cadena"
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "clasificacion_mercados_cadena_suministro",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Clasificación de Mercados por Oferta y Demanda",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Los mercados se clasifican en cuatro cuadrantes según la relación oferta-demanda: mercados en desarrollo (demanda incierta, oferta y demanda bajas pero creciendo), mercados de crecimiento (demanda mayor que oferta), mercados estables (oferta y demanda altas y predecibles) y mercados maduros (oferta excede demanda, alta competencia). Cada cuadrante presenta oportunidades y requerimientos de desempeño distintos para la cadena de suministro que lo sirve.",
+  "pasos_accionables": [
+    "Identificar en qué cuadrante de mercado opera tu empresa: desarrollo, crecimiento, estable o maduro",
+    "Analizar la relación actual entre oferta y demanda en tu industria",
+    "Determinar qué oportunidades específicas ofrece ese cuadrante (fill rate, eficiencia, flexibilidad o desarrollo de producto)",
+    "Ajustar la estrategia de inventario y precios según el cuadrante identificado"
+  ],
+  "entregable_esperado": "Diagnóstico escrito del cuadrante de mercado en que opera el negocio y las implicaciones estratégicas correspondientes",
+  "nodos_previos": [
+    "market_type_revenue_growth",
+    "estudio_mercado_calidad"
+  ],
+  "nodos_siguientes": [
+    "metricas_desempeno_cadena_suministro",
+    "gestion_inventario",
+    "cuatro_categorias_desempeno_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario necesita definir su estrategia de cadena de suministro",
+    "Si hay incertidumbre sobre cómo priorizar recursos según el tipo de mercado"
+  ],
+  "etiqueta_arbol": "Ubica tu Mercado en el Mapa"
+}

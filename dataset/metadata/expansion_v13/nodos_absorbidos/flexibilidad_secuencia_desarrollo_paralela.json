@@ -1,0 +1,27 @@
+{
+  "node_id": "flexibilidad_secuencia_desarrollo_paralela",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Flexibilidad en la Secuencia de Desarrollo mediante Objetivos Paralelos",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Estructurar el diseño del sistema en componentes u objetivos separados que puedan desarrollarse en paralelo, evitando dependencias secuenciales rígidas. Esto permite que retrasos en un objetivo no afecten el progreso de otros, y facilita mover recursos entre objetivos según se necesite.",
+  "pasos_accionables": [
+    "Dividir el sistema en componentes independientes con mínima interdependencia",
+    "Diseñar tareas para que puedan ejecutarse en paralelo, no en cascada",
+    "Asignar personal con habilidades transferibles entre distintos objetivos",
+    "Crear un plan alternativo (plan B) ante fallas o retrasos en algún objetivo",
+    "Diseñar el sistema de forma que se puedan recortar funciones sin perder valor central"
+  ],
+  "entregable_esperado": "Plan de proyecto con objetivos independientes, ejecutables en paralelo, y un plan de contingencia documentado",
+  "nodos_previos": [
+    "diseno_sistema_simple_multiproposito"
+  ],
+  "nodos_siguientes": [
+    "definicion_objetivos_proyecto_sistema",
+    "creacion_plan_presupuesto_inicial"
+  ],
+  "condiciones_activacion": [
+    "Cuando se planifica el desarrollo de un sistema complejo con múltiples componentes",
+    "Si el proyecto anterior falló por dependencias rígidas entre tareas"
+  ]
+}

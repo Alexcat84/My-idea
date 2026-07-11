@@ -13,11 +13,13 @@
   ],
   "entregable_esperado": "Reporte de campaña publicitaria con tasa de clics (CTR) como métrica de interés.",
   "nodos_previos": [
-    "landing_page_mvp"
+    "landing_page_mvp",
+    "publicidad_remanente_remnant_ads"
   ],
   "nodos_siguientes": [
     "split_testing",
-    "unique_link_tracking"
+    "unique_link_tracking",
+    "sem_estrategia_ejecucion"
   ],
   "condiciones_activacion": [
     "Cuando se quiere validar la existencia de un job/pain/gain antes de construir cualquier producto"

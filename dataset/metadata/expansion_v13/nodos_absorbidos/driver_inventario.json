@@ -1,0 +1,25 @@
+{
+  "node_id": "driver_inventario",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Driver de Inventario: Cíclico, de Seguridad y Estacional",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El inventario actúa como amortiguador contra la incertidumbre en la cadena de suministro, pero mantenerlo tiene un costo. Existen tres tipos de decisiones de inventario: (1) Inventario cíclico, la cantidad necesaria para satisfacer la demanda entre compras, con trade-off entre economías de escala y costos de mantenimiento; (2) Inventario de seguridad, buffer contra la incertidumbre de la demanda, con trade-off entre costo de exceso vs. costo de pérdida de ventas; (3) Inventario estacional, acumulado para anticipar picos predecibles de demanda, con trade-off entre costo de almacenar vs. invertir en manufactura flexible.",
+  "pasos_accionables": [
+    "Calcular el inventario cíclico óptimo balanceando costos de ordenar vs. costos de mantener.",
+    "Definir niveles de inventario de seguridad según la variabilidad de la demanda y el costo de quiebre de stock.",
+    "Identificar patrones estacionales de demanda y decidir entre acumular inventario estacional o invertir en flexibilidad de producción.",
+    "Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda."
+  ],
+  "entregable_esperado": "Política de inventario documentada con niveles definidos de inventario cíclico, de seguridad y estacional para cada producto clave.",
+  "nodos_previos": [
+    "driver_produccion"
+  ],
+  "nodos_siguientes": [
+    "driver_ubicacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario enfrenta problemas de quiebres de stock o exceso de inventario.",
+    "Cuando existe demanda estacional predecible que afecta la producción."
+  ]
+}

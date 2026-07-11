@@ -1,0 +1,26 @@
+{
+  "node_id": "gestion_riesgo_seguridad_ia",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión de Riesgos de Seguridad en IA (Prompt Injection y Jailbreaking)",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Los sistemas de IA pueden ser manipulados mediante técnicas como 'prompt injection' (instrucciones ocultas en contenido web o documentos que la IA lee) y 'jailbreaking' (convencer a la IA de romper sus reglas mediante escenarios ficticios o roleplay). Esto representa un riesgo real para cualquier negocio que integre IA con acceso a datos externos, atención al cliente automatizada o generación de contenido, ya que actores malintencionados pueden explotar estas vulnerabilidades para phishing, desinformación o fraude.",
+  "pasos_accionables": [
+    "Evaluar qué fuentes de datos externas puede leer la IA integrada en el producto (webs, documentos, emails)",
+    "Realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+    "Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
+    "Monitorear el uso del sistema en producción para detectar patrones de abuso o manipulación"
+  ],
+  "entregable_esperado": "Plan de mitigación de riesgos de seguridad para el sistema de IA del negocio",
+  "nodos_previos": [
+    "principio_humano_en_el_loop"
+  ],
+  "nodos_siguientes": [
+    "desafios_implementacion_ia"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto integra IA con capacidad de leer contenido externo o ejecutar acciones automáticas",
+    "Antes del lanzamiento público de una funcionalidad basada en IA generativa"
+  ],
+  "etiqueta_arbol": "Protege tu IA de Ataques"
+}

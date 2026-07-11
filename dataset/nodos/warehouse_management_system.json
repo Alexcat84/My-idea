@@ -1,0 +1,25 @@
+{
+  "node_id": "warehouse_management_system",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Sistema de Gestión de Almacén (WMS)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Los WMS soportan las operaciones diarias de almacén, gestionando niveles de inventario, ubicaciones de almacenamiento, y las actividades de picking, packing y envío para cumplir con las órdenes de los clientes de manera eficiente.",
+  "pasos_accionables": [
+    "Mapear el flujo físico actual de productos en el almacén",
+    "Definir ubicaciones y niveles de inventario a rastrear en el sistema",
+    "Automatizar procesos de picking, packing y shipping",
+    "Integrar el WMS con robots o vehículos automatizados si aplica"
+  ],
+  "entregable_esperado": "WMS implementado y operando con seguimiento de inventario en tiempo real",
+  "nodos_previos": [
+    "erp_systems"
+  ],
+  "nodos_siguientes": [
+    "industrial_robots_automation"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa opera almacenes con volumen significativo de SKUs y órdenes"
+  ],
+  "etiqueta_arbol": "Gestiona tu Almacén con Sistema"
+}

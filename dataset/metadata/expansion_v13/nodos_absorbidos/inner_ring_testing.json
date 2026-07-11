@@ -1,0 +1,27 @@
+{
+  "node_id": "inner_ring_testing",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Inner Ring Testing y Optimización de Canal",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "Una vez seleccionado un canal de tracción ganador mediante middle ring testing, el inner ring testing consiste en optimizar profundamente esa estrategia y descubrir nuevas tácticas dentro del mismo canal. Se usa A/B testing continuo para mejorar métricas clave, y se debe seguir explorando variantes para evitar la saturación descrita en la Ley de los Shitty Click-Throughs.",
+  "pasos_accionables": [
+    "Dedica tiempo y recursos significativos solo al canal validado en middle ring testing",
+    "Ejecuta pruebas A/B continuas (mínimo una por semana) sobre variables como copy, imágenes, landing pages",
+    "Usa herramientas como Optimizely, Visual Website Optimizer o Unbounce para facilitar las pruebas",
+    "Busca nuevas tácticas dentro del canal principal para mantenerte por delante de la competencia",
+    "Explora cómo otros canales de tracción pueden alimentar tu canal principal"
+  ],
+  "entregable_esperado": "Sistema de A/B testing activo con métricas de mejora documentadas y lista de nuevas tácticas descubiertas dentro del canal principal",
+  "nodos_previos": [
+    "middle_ring_testing"
+  ],
+  "nodos_siguientes": [
+    "critical_path",
+    "traction_goal"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se identificó un canal de tracción ganador y se necesita escalar su efectividad",
+    "Cuando las métricas de conversión empiezan a estancarse por saturación del canal"
+  ]
+}

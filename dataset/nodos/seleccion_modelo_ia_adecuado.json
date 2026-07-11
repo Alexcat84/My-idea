@@ -1,0 +1,27 @@
+{
+  "node_id": "seleccion_modelo_ia_adecuado",
+  "fase_proyecto": "ideacion",
+  "dominio": "core",
+  "titulo_concepto": "Selección del Tipo de Modelo de IA según Necesidad del Negocio",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Existen distintos tipos de LLMs disponibles: modelos pequeños y especializados (baratos, ideales para tareas simples y de alto volumen como responder preguntas frecuentes), modelos open-source (gratuitos, modificables, con comunidades de desarrolladores) y Frontier Models (los más avanzados y costosos, con capacidades emergentes pero también mayor costo de operación). Elegir el modelo correcto depende del presupuesto, la complejidad de la tarea y la necesidad de personalización.",
+  "pasos_accionables": [
+    "Definir la complejidad de la tarea que la IA debe resolver",
+    "Evaluar el presupuesto disponible para infraestructura de IA",
+    "Comparar modelos pequeños/especializados vs open-source vs frontier models",
+    "Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
+    "Decidir según relación costo-beneficio y facilidad de integración"
+  ],
+  "entregable_esperado": "Documento de decisión que especifique qué tipo de modelo de IA usará el negocio y por qué, con pruebas piloto realizadas.",
+  "nodos_previos": [
+    "prototyping_possibilities"
+  ],
+  "nodos_siguientes": [
+    "fine_tuning_ia_para_caso_de_uso",
+    "comprension_capacidades_limitaciones_ia"
+  ],
+  "condiciones_activacion": [
+    "Cuando el emprendedor está evaluando incorporar IA generativa en su producto o proceso de negocio"
+  ],
+  "etiqueta_arbol": "Elige el Modelo de IA Justo"
+}

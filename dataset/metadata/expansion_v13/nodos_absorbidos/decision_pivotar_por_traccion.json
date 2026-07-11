@@ -1,0 +1,24 @@
+{
+  "node_id": "decision_pivotar_por_traccion",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Decidir si Pivotar Basado en Tracción",
+  "fuente": "Traction - Gabriel Weinberg",
+  "resumen_teorico": "Antes de abandonar una idea por falta de tracción, se debe buscar evidencia de 'puntos brillantes' (bright spots): pequeños grupos de clientes genuinamente comprometidos con el producto. Si existen, puede ser señal de que el mercado aún no está listo (llegar temprano) en lugar de que la idea sea mala. Analizar por qué esos clientes se enganchan puede revelar oportunidades de expansión antes de pivotar.",
+  "pasos_accionables": [
+    "Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos",
+    "Analiza qué característica común tienen esos clientes leales",
+    "Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos",
+    "Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto",
+    "Solo pivota si no encuentras ningún punto brillante tras análisis profundo"
+  ],
+  "entregable_esperado": "Análisis de cohortes de clientes comprometidos con conclusión de pivotar o perseverar",
+  "nodos_previos": [
+    "framework_bullseye"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando el crecimiento es lento y el equipo está considerando abandonar o cambiar de rumbo",
+    "Cuando no se logra tracción tras varias rondas de Bullseye"
+  ]
+}

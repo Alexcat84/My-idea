@@ -1,0 +1,25 @@
+{
+  "node_id": "alineacion_incentivos_desempeno",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Alineación de Incentivos de Desempeño en la Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Los incentivos de ventas por cuotas mensuales o trimestrales generan compras forzadas al final de cada periodo, empujando producto sin demanda real hacia la cadena. Del mismo modo, incentivos internos en conflicto (ej. minimizar costos de transporte a costa del servicio al cliente) generan ineficiencias sistémicas.",
+  "pasos_accionables": [
+    "Usar costeo basado en actividades (ABC) para cuantificar el costo real del forward buying por incentivos de fin de periodo",
+    "Identificar incentivos internos que generen conflictos entre departamentos",
+    "Experimentar con nuevos esquemas de incentivos alineados a la eficiencia de toda la cadena, no solo a metas individuales"
+  ],
+  "entregable_esperado": "Diagnóstico de incentivos en conflicto y propuesta de nuevo esquema de incentivos alineado",
+  "nodos_previos": [
+    "demand_curve_pricing"
+  ],
+  "nodos_siguientes": [
+    "drum_buffer_rope"
+  ],
+  "condiciones_activacion": [
+    "Si existen picos de venta artificiales al cierre de mes o trimestre",
+    "Cuando distintos departamentos tienen métricas de éxito contradictorias"
+  ],
+  "etiqueta_arbol": "Revisa tus Incentivos de Desempeño"
+}

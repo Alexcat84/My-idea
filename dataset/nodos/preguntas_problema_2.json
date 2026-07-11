@@ -1,0 +1,30 @@
+{
+  "node_id": "preguntas_problema_2",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Preguntas de Problema (Problem Questions)",
+  "fuente": "SPIN Selling - Neil Rackham",
+  "resumen_teorico": "Son preguntas que indagan sobre dificultades, insatisfacciones o problemas del cliente con su situación actual, invitando a que exprese Necesidades Implícitas. Están más ligadas al éxito de venta que las Preguntas de Situación, especialmente en ventas pequeñas. En ventas grandes, aunque siguen siendo esenciales como materia prima del proceso, no predicen por sí solas el cierre; se necesita desarrollarlas más con Preguntas de Implicación.",
+  "pasos_accionables": [
+    "Formula preguntas directas sobre insatisfacciones del cliente con su situación actual ('¿Está satisfecho con...?', '¿Qué desventajas tiene...?').",
+    "Registra cada problema mencionado como una Necesidad Implícita potencial.",
+    "Si la venta es pequeña o de bajo costo, prioriza cantidad de Preguntas de Problema, ya que predicen fuertemente el éxito.",
+    "Si la venta es grande o compleja, usa las Preguntas de Problema solo como punto de partida y prepárate para profundizar con Preguntas de Implicación."
+  ],
+  "entregable_esperado": "Lista de problemas identificados en el cliente durante la conversación de descubrimiento, priorizados por relevancia para el producto/servicio ofrecido.",
+  "nodos_previos": [
+    "preguntas_situacion",
+    "understanding_customers_tecnicas",
+    "modelo_spin"
+  ],
+  "nodos_siguientes": [
+    "preguntas_implicacion",
+    "necesidades_implicitas_vs_explicitas",
+    "planificacion_preguntas_implicacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está en la fase de descubrimiento de necesidades con un cliente potencial.",
+    "Cuando el ciclo de venta es corto y de bajo valor, donde detectar problemas basta para cerrar."
+  ],
+  "etiqueta_arbol": "Indaga los Problemas del Cliente"
+}

@@ -16,12 +16,20 @@
   "entregable_esperado": "Estrategia de sourcing aprobada por la dirección con plan de implementación",
   "nodos_previos": [
     "evaluacion_encuesta_calidad_proveedor",
-    "seleccion_fuente_unica_multiple"
+    "seleccion_fuente_unica_multiple",
+    "alineacion_cadena_estrategia_negocio",
+    "driver_informacion",
+    "gestion_instalaciones",
+    "gestion_pedidos_order_management",
+    "scor_model_operaciones"
   ],
   "nodos_siguientes": [
     "planificacion_economica_conjunta",
     "planificacion_tecnologica_conjunta",
-    "control_del_proceso_del_proveedor"
+    "control_del_proceso_del_proveedor",
+    "gestion_instalaciones",
+    "modelo_simulacion_cadena_suministro_circular",
+    "vehiculos_autonomos_drones_supply_chain"
   ],
   "condiciones_activacion": [
     "Cuando se diseña la estrategia global de abastecimiento de una organización"

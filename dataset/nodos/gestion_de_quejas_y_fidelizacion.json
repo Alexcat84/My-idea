@@ -13,9 +13,14 @@
   ],
   "entregable_esperado": "Sistema formal de gestión de quejas implementado, con protocolos de respuesta y comunicación al cliente",
   "nodos_previos": [
-    "descubrir_necesidades_del_cliente"
+    "descubrir_necesidades_del_cliente",
+    "senales_de_compra_en_venta_grande",
+    "descubrir_valor_inesperado_cliente"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "law_of_shitty_click_throughs",
+    "fase_affirm_reduccion_incertidumbre"
+  ],
   "condiciones_activacion": [
     "Cuando la organización enfrenta fallas recurrentes de producto o servicio y necesita gestionar el impacto en la lealtad del cliente"
   ]

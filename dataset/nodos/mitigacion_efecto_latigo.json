@@ -1,0 +1,28 @@
+{
+  "node_id": "mitigacion_efecto_latigo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Mitigación del Efecto Látigo: Cinco Factores Causales",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Existen cinco factores que generan el efecto látigo y sus respectivas estrategias de mitigación: (1) pronóstico de demanda basado en pedidos en lugar de datos de punto de venta reales; (2) agrupamiento de pedidos (order batching) por costos de procesamiento/transporte; (3) racionamiento de producto que induce 'shortage gaming'; (4) fluctuación de precios que genera compras anticipadas; y (5) incentivos de desempeño desalineados (ej. cuotas de fin de mes). Cada factor requiere una intervención específica: compartir datos POS, reducir costos de pedido, basar el racionamiento en históricos, aplicar precios estables ('everyday low prices'), y alinear incentivos con costeo basado en actividades (ABC).",
+  "pasos_accionables": [
+    "Sustituir pronósticos basados en pedidos por datos de punto de venta (POS) compartidos",
+    "Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y 3PLs para permitir lotes más pequeños y frecuentes",
+    "Basar el racionamiento de producto en patrones históricos de pedido, no en el pedido actual, y avisar con anticipación de posibles escaseces",
+    "Implementar políticas de precios estables ('everyday low price') para evitar compras anticipadas",
+    "Rediseñar incentivos de ventas e internos usando costeo ABC para eliminar el impulso a vender por cuota a fin de periodo"
+  ],
+  "entregable_esperado": "Plan de acción con al menos una intervención implementada por cada uno de los cinco factores causales del efecto látigo",
+  "nodos_previos": [
+    "diagnostico_efecto_latigo",
+    "compartir_datos_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "sales_operations_planning"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha diagnosticado la presencia del efecto látigo en la cadena de suministro propia",
+    "Si hay conflictos de incentivos entre áreas comerciales y de operaciones"
+  ],
+  "etiqueta_arbol": "Corrige el Efecto Látigo"
+}

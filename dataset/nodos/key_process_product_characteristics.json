@@ -14,11 +14,13 @@
   "entregable_esperado": "Listado clasificado de características clave de producto y proceso con su nivel de criticidad",
   "nodos_previos": [
     "qfd_matriz_calidad",
-    "fmea_analisis_de_modos_de_falla"
+    "fmea_analisis_de_modos_de_falla",
+    "estrategia_cuatro_capacidades_mercado"
   ],
   "nodos_siguientes": [
     "analisis_flujo_proceso",
-    "control_proceso_variables"
+    "control_proceso_variables",
+    "bucle_retroalimentacion_autoajustable"
   ],
   "condiciones_activacion": [
     "Cuando se inicia la planificación de manufactura de un nuevo producto",

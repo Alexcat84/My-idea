@@ -1,0 +1,29 @@
+{
+  "node_id": "ciclo_virtuoso_datos_electronicos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Ciclo Virtuoso de Conexiones Electrónicas de Datos",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La estrategia efectiva de cadena de suministro comienza con mejorar la precisión y flujo de datos entre empresas. Las conexiones electrónicas simples de datos (vs. EDI/XML costosos y complejos) son la base de un ciclo virtuoso de mejora continua, especialmente relevante para las empresas tier 2/3 que aún dependen de email, fax y hojas de cálculo. Sistemas simples con datos buenos superan a sistemas complejos con datos malos ('garbage in, garbage out').",
+  "pasos_accionables": [
+    "Mapear qué tipo de conexión de datos usa cada socio de la cadena (EDI, XML, email, fax, APIs)",
+    "Priorizar soluciones de conectividad simples y de bajo costo sobre sistemas complejos y caros",
+    "Implementar APIs o conexiones cloud-based (SaaS) para automatizar el intercambio de datos",
+    "Establecer el flujo continuo de datos como base para todas las decisiones estratégicas y tácticas",
+    "Validar que los datos compartidos sean precisos antes de escalar el sistema"
+  ],
+  "entregable_esperado": "Infraestructura básica de conexión de datos entre la empresa y sus socios clave de cadena de suministro, con flujo continuo y validado",
+  "nodos_previos": [
+    "sistema_visibilidad_cadena_suministro_low_cost",
+    "coordinacion_colaboracion_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "scorecard_desempeno_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa es tier 2/3 y no puede costear sistemas EDI complejos",
+    "Si la falta de datos precisos y oportunos está afectando la toma de decisiones",
+    "Al iniciar la digitalización de una cadena de suministro fragmentada"
+  ],
+  "etiqueta_arbol": "Mejora el Flujo de tus Datos"
+}

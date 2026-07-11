@@ -1,0 +1,26 @@
+{
+  "node_id": "driver_produccion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Driver de Producción: Enfoque de Producto vs Funcional",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La producción se refiere a la capacidad de fabricar y almacenar productos. Las fábricas pueden diseñarse con enfoque de producto (realizan todas las operaciones para una línea de producto, generando expertise en ese producto) o enfoque funcional (se especializan en pocas operaciones aplicables a múltiples productos, generando expertise funcional). Además, los almacenes pueden organizarse mediante almacenamiento por SKU, por lote de trabajo (job lot) o crossdocking (sin almacenar, solo redistribuyendo rápidamente).",
+  "pasos_accionables": [
+    "Determinar si la fábrica/operación debe tener enfoque de producto o enfoque funcional según la variedad y volumen de productos.",
+    "Evaluar exceso de capacidad vs. utilización total para decidir el nivel de flexibilidad deseado.",
+    "Elegir el método de almacenamiento (SKU, job lot o crossdocking) según la velocidad de rotación y diversidad de productos.",
+    "Diseñar el master production schedule considerando capacidad de planta, balance de carga, calidad y mantenimiento."
+  ],
+  "entregable_esperado": "Plan de producción y almacenamiento con el enfoque (producto/funcional) y método de almacenaje definidos, junto con un cronograma maestro de producción.",
+  "nodos_previos": [
+    "trade_off_responsividad_eficiencia",
+    "definicion_alineacion_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "decision_conformidad_producto"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario debe definir cómo estructurar su capacidad de manufactura o almacenamiento."
+  ],
+  "etiqueta_arbol": "Elige tu Enfoque de Producción"
+}

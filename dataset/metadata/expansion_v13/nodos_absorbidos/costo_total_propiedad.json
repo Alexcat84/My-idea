@@ -1,0 +1,26 @@
+{
+  "node_id": "costo_total_propiedad",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Costo Total de Propiedad (TCO) en Decisiones de Sourcing",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El Total Cost of Ownership (TCO) es un enfoque que va más allá del precio unitario para evaluar proveedores, incorporando factores cualitativos y cuantitativos como tiempos de entrega, calidad, control de procesos y facilidad de hacer negocios. Mediante fórmulas ponderadas que combinan costo monetario y puntajes de calidad, las empresas pueden tomar decisiones de sourcing más informadas, permitiendo que proveedores de mayor costo pero mejor desempeño cualitativo compitan efectivamente contra proveedores de bajo costo.",
+  "pasos_accionables": [
+    "Definir criterios cualitativos relevantes (calidad, cumplimiento, control de procesos)",
+    "Asignar pesos relativos entre costo monetario y criterios cualitativos (ej. 75/25)",
+    "Calcular el costo total ponderado para cada proveedor usando la fórmula de TCO",
+    "Comparar proveedores en base al costo total analizado, no solo el precio unitario",
+    "Ajustar los pesos según la importancia estratégica de cada factor"
+  ],
+  "entregable_esperado": "Modelo de evaluación TCO aplicado a un proceso de RFP con comparación de proveedores",
+  "nodos_previos": [
+    "seleccion_proveedores"
+  ],
+  "nodos_siguientes": [
+    "negociacion_contratos_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando se evalúan proveedores de distintas regiones con diferencias de precio y calidad",
+    "Cuando el precio no es el único factor relevante en la decisión de compra"
+  ]
+}

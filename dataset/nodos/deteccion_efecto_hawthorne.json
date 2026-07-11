@@ -1,0 +1,28 @@
+{
+  "node_id": "deteccion_efecto_hawthorne",
+  "fase_proyecto": "validacion",
+  "dominio": "core",
+  "titulo_concepto": "Detección y Aislamiento del Efecto Hawthorne",
+  "fuente": "SPIN Selling - Neil Rackham",
+  "resumen_teorico": "El efecto Hawthorne es el incremento artificial y temporal en el desempeño que ocurre simplemente porque las personas reciben atención (por ejemplo, durante un entrenamiento), independientemente del contenido específico de la intervención. Para descartar que las mejoras de productividad se deban solo a este efecto y no al método enseñado, se puede dividir al grupo entrenado en subgrupos según el nivel real de adopción de las nuevas conductas y comparar sus resultados en el tiempo, especialmente después de que cese la atención/entrenamiento.",
+  "pasos_accionables": [
+    "Dividir al grupo entrenado en subgrupos según el grado de adopción real de las nuevas conductas (alto vs bajo)",
+    "Comparar el desempeño de ambos subgrupos durante y después del periodo de atención/entrenamiento",
+    "Verificar si el subgrupo de baja adopción regresa a niveles previos una vez retirada la atención (señal de efecto Hawthorne)",
+    "Confirmar que el subgrupo de alta adopción mantiene o mejora resultados incluso sin atención continua",
+    "Contrastar ambos subgrupos con un grupo de control sin entrenamiento"
+  ],
+  "entregable_esperado": "Análisis de subgrupos que demuestre si la mejora de productividad persiste después de retirar la atención del entrenamiento, aislando el efecto Hawthorne del efecto real del método.",
+  "nodos_previos": [
+    "esfuerzo_voluntario_vs_urge_espontaneo",
+    "metodologia_evaluacion_entrenamiento_ventas"
+  ],
+  "nodos_siguientes": [
+    "efectos_recompensa_castigo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita evidencia robusta de que una mejora de resultados se debe al contenido de una intervención y no solo a la atención recibida",
+    "Si stakeholders cuestionan la validez de resultados positivos post-entrenamiento"
+  ],
+  "etiqueta_arbol": "Cuidado con el Efecto Novedad"
+}

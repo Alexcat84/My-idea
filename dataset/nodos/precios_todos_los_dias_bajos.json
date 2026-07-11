@@ -1,0 +1,24 @@
+{
+  "node_id": "precios_todos_los_dias_bajos",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Estrategia de Precios Estables (Everyday Low Prices)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Las fluctuaciones de precio (promociones, descuentos) generan compras anticipadas (forward buying) y oleadas de demanda difíciles de gestionar. Mantener precios estables y predecibles hace que los clientes compren según necesidad real, facilitando el pronóstico de demanda y la eficiencia de la cadena.",
+  "pasos_accionables": [
+    "Evaluar el impacto histórico de promociones en la variabilidad de la demanda",
+    "Diseñar una política de precios estables en lugar de descuentos periódicos agresivos",
+    "Medir la reducción en fluctuaciones de demanda tras implementar precios constantes"
+  ],
+  "entregable_esperado": "Política de pricing estable documentada con proyección de impacto en demanda",
+  "nodos_previos": [
+    "demand_curve_pricing"
+  ],
+  "nodos_siguientes": [
+    "drum_buffer_rope"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa usa promociones frecuentes que generan picos y caídas de demanda"
+  ],
+  "etiqueta_arbol": "Mantén Precios Siempre Bajos"
+}

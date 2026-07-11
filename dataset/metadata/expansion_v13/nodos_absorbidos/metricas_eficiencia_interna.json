@@ -1,0 +1,25 @@
+{
+  "node_id": "metricas_eficiencia_interna",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Métricas de Eficiencia Interna (Inventory Turns, Cash-to-Cash)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La eficiencia interna mide qué tan rentablemente se usan los activos de la empresa. Métricas clave incluyen: valor de inventario, rotación de inventario (turns = costo anual de ventas / inventario promedio anual), retorno sobre ventas (EBIT/ventas), y ciclo de conversión de efectivo (días de inventario + días de cuentas por cobrar - período de pago a proveedores). Estas métricas permiten identificar dónde se puede mejorar la rentabilidad operativa.",
+  "pasos_accionables": [
+    "Calcular la rotación de inventario actual de la empresa",
+    "Calcular el retorno sobre ventas (return on sales)",
+    "Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)",
+    "Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario"
+  ],
+  "entregable_esperado": "Reporte financiero-operativo con las cuatro métricas de eficiencia interna calculadas y comparadas contra benchmarks de la industria",
+  "nodos_previos": [
+    "cuatro_categorias_desempeno_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "framework_scor_plan_source_make_deliver"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita evaluar la salud financiera-operativa de la cadena de suministro",
+    "Si hay problemas de flujo de caja o exceso de inventario"
+  ]
+}

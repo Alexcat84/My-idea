@@ -1,0 +1,28 @@
+{
+  "node_id": "scor_model_operaciones",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Modelo SCOR: Marco de Operaciones de Cadena de Suministro",
+  "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos",
+  "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) es un marco estandarizado y reconocido mundialmente para analizar y mejorar el desempeño de la cadena de suministro. Organiza las operaciones en seis procesos de alto nivel: Planificar, Abastecer, Fabricar, Entregar, Devolver y Habilitar. Provee un lenguaje común, métricas estándar (KPIs de confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos) y permite benchmarking entre empresas. La versión más reciente, SCOR DS, incorpora resiliencia, sostenibilidad y procesos digitales.",
+  "pasos_accionables": [
+    "Mapear las operaciones actuales de tu empresa según las categorías Plan-Source-Make-Deliver (y Return/Enable si aplica)",
+    "Definir métricas KPI de nivel 1 para cada categoría (confiabilidad, agilidad, costo)",
+    "Comparar (benchmark) tu desempeño contra estándares de la industria",
+    "Identificar cuellos de botella u operaciones no optimizadas usando el marco común"
+  ],
+  "entregable_esperado": "Mapa de procesos de cadena de suministro clasificado bajo el modelo SCOR con métricas base definidas",
+  "nodos_previos": [
+    "lienzo_modelo_negocio"
+  ],
+  "nodos_siguientes": [
+    "planificacion_cadena_suministro",
+    "pronostico_de_demanda_variables"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa ya tiene operaciones activas y necesita evaluarlas sistemáticamente",
+    "Si se busca comparar desempeño contra competidores o estándares de industria",
+    "Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos"
+  ],
+  "etiqueta_arbol": "Organiza tu Cadena de Suministro"
+}

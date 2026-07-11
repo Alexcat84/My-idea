@@ -1,0 +1,27 @@
+{
+  "node_id": "prompting_alta_variacion",
+  "fase_proyecto": "ideacion",
+  "dominio": "core",
+  "titulo_concepto": "Prompting de Alta Variación para Romper la Respuesta Promedio",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Por defecto, la IA tiende a dar la respuesta 'promedio' más probable estadísticamente, lo que produce ideas genéricas y poco originales. Para obtener ideas verdaderamente novedosas es necesario empujar deliberadamente al modelo hacia respuestas de alta variación, por ejemplo asignándole personajes o escenarios inusuales (ej. 'cómo un superhéroe haría espresso') que fuerzan conexiones menos obvias. La investigación muestra que generar muchas ideas 'raras' incrementa la probabilidad de encontrar algunas verdaderamente valiosas, ya que los humanos son buenos filtrando baja calidad pero necesitan material de partida diverso.",
+  "pasos_accionables": [
+    "Definir un rol o personaje inusual para la IA al pedir ideas (ej. 'eres un experto en resolver problemas de forma poco convencional')",
+    "Pedir explícitamente ideas 'diferentes entre sí' y 'poco probables' en el prompt",
+    "Usar analogías o escenarios extremos (superhéroes, otras épocas, otras industrias) para forzar recombinaciones inesperadas",
+    "Generar múltiples tandas con distintos marcos/personajes y comparar resultados",
+    "Filtrar humanamente buscando la chispa de inspiración, no la solución final lista para usar"
+  ],
+  "entregable_esperado": "Conjunto de ideas de alta originalidad para innovar en producto, marketing o modelo de negocio, listas para ser refinadas por el equipo",
+  "nodos_previos": [
+    "ia_generacion_ideas_negocio"
+  ],
+  "nodos_siguientes": [
+    "pruebas_inadecuadas_prototipos"
+  ],
+  "condiciones_activacion": [
+    "Si las ideas generadas por IA se sienten repetitivas o genéricas",
+    "Si el equipo necesita diferenciación creativa fuerte frente a competidores"
+  ],
+  "etiqueta_arbol": "Rompe la Respuesta Promedio"
+}

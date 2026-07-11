@@ -1,0 +1,29 @@
+{
+  "node_id": "sales_operations_planning",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Planificación de Ventas y Operaciones (S&OP)",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+  "pasos_accionables": [
+    "Establecer un ciclo mensual de revisión de demanda y oferta a nivel agregado",
+    "Involucrar a Gerencia General, Ventas, Operaciones, Finanzas y Desarrollo de Producto en el proceso",
+    "Adoptar un enfoque outside-in, priorizando el análisis de factores externos (clientes, competencia, mercado)",
+    "Definir el mínimo de datos necesarios para tomar decisiones rápidas y precisas, evitando el exceso de datos",
+    "Ajustar continuamente los planes operativos según cambien los pronósticos, en lugar de seguir un plan anual fijo"
+  ],
+  "entregable_esperado": "Proceso mensual de S&OP documentado con roles, calendario y KPIs de balance oferta-demanda",
+  "nodos_previos": [
+    "drum_buffer_rope",
+    "estandarizacion_codigos_producto_epc",
+    "mitigacion_efecto_latigo"
+  ],
+  "nodos_siguientes": [
+    "colaboracion_cadena_suministro"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa necesita un proceso recurrente para balancear oferta y demanda",
+    "Si los planes anuales fijos no logran adaptarse a la volatilidad del mercado"
+  ],
+  "etiqueta_arbol": "Equilibra tu Oferta y Demanda"
+}

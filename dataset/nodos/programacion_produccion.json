@@ -1,0 +1,26 @@
+{
+  "node_id": "programacion_produccion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Programación de Producción y Lote Económico",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La programación de producción asigna la capacidad disponible (equipo, mano de obra, instalaciones) balanceando altas tasas de utilización, bajos niveles de inventario y altos niveles de servicio al cliente. Para instalaciones multi-producto, se calcula el tamaño de lote económico (similar al EOQ) y se secuencian las corridas de producción usando el concepto de 'run-out time': el tiempo que tomaría agotar el inventario de un producto según su demanda esperada.",
+  "pasos_accionables": [
+    "Calcular el tamaño de lote económico para cada producto balanceando costos de setup e inventario",
+    "Calcular el run-out time de cada producto (inventario disponible / demanda esperada)",
+    "Priorizar la secuencia de producción según menor run-out time relativo",
+    "Ajustar la programación para balancear utilización, inventario y servicio al cliente"
+  ],
+  "entregable_esperado": "Calendario de producción con lotes económicos y secuencia basada en run-out time",
+  "nodos_previos": [
+    "diseno_producto_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "gestion_inventario"
+  ],
+  "condiciones_activacion": [
+    "Cuando se fabrican múltiples productos en una misma línea o instalación",
+    "Cuando se busca optimizar el balance entre inventario y costos de producción"
+  ],
+  "etiqueta_arbol": "Programa tu Producción y Lotes"
+}

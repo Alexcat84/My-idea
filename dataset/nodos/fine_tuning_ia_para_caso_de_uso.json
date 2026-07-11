@@ -1,0 +1,27 @@
+{
+  "node_id": "fine_tuning_ia_para_caso_de_uso",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Fine-Tuning de IA para el Caso de Uso del Negocio",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "Los modelos de lenguaje (LLM) pasan por una fase de preentrenamiento general y luego por un fine-tuning que los adapta a tareas específicas. Las empresas pueden alimentar al modelo con ejemplos propios (como transcripciones de soporte al cliente con buenas respuestas) o con retroalimentación de usuarios (thumbs-up/thumbs-down) para que el modelo produzca respuestas más alineadas con su caso de uso particular. Esto convierte a un modelo genérico en una herramienta especializada para el negocio.",
+  "pasos_accionables": [
+    "Identificar el caso de uso específico donde se aplicará la IA (soporte, ventas, contenido, etc.)",
+    "Recopilar ejemplos reales de interacciones deseadas (preguntas y respuestas ideales)",
+    "Entrenar o ajustar el modelo con esos ejemplos específicos del negocio",
+    "Implementar un sistema de retroalimentación (thumbs up/down) para mejora continua",
+    "Medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso"
+  ],
+  "entregable_esperado": "Un modelo de IA fine-tuned o prompt-engineered con ejemplos específicos del negocio, documentado y validado con métricas de desempeño.",
+  "nodos_previos": [
+    "seleccion_modelo_ia_adecuado",
+    "comprension_capacidades_limitaciones_ia"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_riesgos_legales_ia"
+  ],
+  "condiciones_activacion": [
+    "Cuando el negocio quiere implementar IA para una tarea repetitiva y específica como atención al cliente o generación de contenido"
+  ],
+  "etiqueta_arbol": "Entrena tu IA a Medida"
+}

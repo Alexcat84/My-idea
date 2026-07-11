@@ -1,0 +1,27 @@
+{
+  "node_id": "mitigar_falling_asleep_wheel",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Mitigar el Riesgo de 'Dormirse al Volante' con IA",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "La investigación muestra que cuando la IA es de alta calidad, las personas tienden a volverse pasivas, dejan de revisar críticamente sus resultados y pierden habilidad propia con el tiempo ('falling asleep at the wheel'). Esto puede llevar a errores graves justo en los casos donde la IA falla (fuera de la frontera irregular). Es crucial mantener revisión crítica activa, especialmente en tareas de alto riesgo o impacto, para evitar la degradación de juicio humano y detectar errores de la IA a tiempo.",
+  "pasos_accionables": [
+    "Establecer puntos de revisión humana obligatoria en tareas de alto riesgo, incluso si la IA parece confiable",
+    "Entrenar al equipo para cuestionar activamente las respuestas de la IA en vez de aceptarlas automáticamente",
+    "Realizar pruebas periódicas con casos diseñados para que la IA falle, y medir si el equipo detecta el error",
+    "Rotar responsabilidades para que nadie dependa exclusivamente de la IA sin ejercitar su propio criterio"
+  ],
+  "entregable_esperado": "Protocolo de revisión crítica de resultados de IA para tareas de alto riesgo o impacto en el negocio",
+  "nodos_previos": [
+    "centaur_cyborg_ia"
+  ],
+  "nodos_siguientes": [
+    "desafios_implementacion_ia",
+    "shadow_ia_organizacional"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detecta que el equipo confía ciegamente en resultados de IA sin revisión",
+    "Cuando la tarea tiene consecuencias importantes si la IA se equivoca (decisiones financieras, contratación, diagnósticos)"
+  ],
+  "etiqueta_arbol": "No te Duermas con la IA"
+}

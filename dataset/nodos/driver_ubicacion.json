@@ -1,0 +1,27 @@
+{
+  "node_id": "driver_ubicacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Driver de Ubicación: Centralización vs Descentralización de Instalaciones",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "La ubicación se refiere al sitio geográfico de las instalaciones de producción y almacenamiento, y a qué actividades se realizan en cada una. El trade-off central es centralizar (economías de escala y eficiencia) vs. descentralizar (mayor cercanía a clientes/proveedores y capacidad de respuesta). Las decisiones de ubicación son altamente estratégicas porque comprometen inversiones de largo plazo y determinan las rutas posibles de flujo de producto hacia el cliente final.",
+  "pasos_accionables": [
+    "Evaluar factores clave por ubicación: costo de instalaciones, costo laboral, habilidades disponibles, infraestructura, impuestos/aranceles y proximidad a proveedores/clientes.",
+    "Decidir entre consolidar operaciones en pocas ubicaciones (eficiencia) o distribuir en múltiples ubicaciones (capacidad de respuesta).",
+    "Modelar los posibles caminos de flujo de producto según el número y tamaño de instalaciones elegidas.",
+    "Validar la decisión de ubicación contra la estrategia competitiva definida previamente."
+  ],
+  "entregable_esperado": "Análisis comparativo de ubicaciones candidatas con la decisión final de número, tamaño y localización de instalaciones.",
+  "nodos_previos": [
+    "marcos_historicos_comunidades_startup",
+    "trade_off_responsividad_eficiencia"
+  ],
+  "nodos_siguientes": [
+    "driver_transporte",
+    "estrategia_expansion_centros_distribucion"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario planea abrir nuevas instalaciones, almacenes o entrar en nuevas geografías."
+  ],
+  "etiqueta_arbol": "Decide Dónde Ubicar tus Plantas"
+}

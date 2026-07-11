@@ -1,0 +1,25 @@
+{
+  "node_id": "gestion_rationing_shortage_gaming",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Gestión del Racionamiento y Shortage Gaming",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Cuando la demanda supera la oferta, los fabricantes racionan producto según pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
+  "pasos_accionables": [
+    "Basar las decisiones de racionamiento en patrones históricos de pedidos del cliente, no en el tamaño de la orden actual",
+    "Comunicar con anticipación a los clientes cuando se detecte que la demanda superará la oferta",
+    "Implementar sistemas de alerta temprana de escasez para evitar compras de pánico"
+  ],
+  "entregable_esperado": "Política de racionamiento basada en histórico y protocolo de comunicación anticipada de escasez",
+  "nodos_previos": [
+    "pronostico_de_demanda_variables"
+  ],
+  "nodos_siguientes": [
+    "drum_buffer_rope"
+  ],
+  "condiciones_activacion": [
+    "Cuando la demanda de un producto supera consistentemente la capacidad de oferta",
+    "Si se detectan pedidos anormalmente altos de ciertos clientes"
+  ],
+  "etiqueta_arbol": "Cuida el Racionamiento de Producto"
+}

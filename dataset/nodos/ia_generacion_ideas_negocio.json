@@ -1,0 +1,29 @@
+{
+  "node_id": "ia_generacion_ideas_negocio",
+  "fase_proyecto": "ideacion",
+  "dominio": "core",
+  "titulo_concepto": "IA como Motor de Generación de Ideas (Recombinación)",
+  "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+  "resumen_teorico": "La innovación surge frecuentemente de la recombinación de ideas existentes de campos distintos (como los hermanos Wright combinando mecánica de bicicletas y observación de aves). Los LLMs son 'máquinas de conexión' entrenadas para encontrar relaciones entre conceptos aparentemente no relacionados, lo que las hace herramientas poderosas para generar ideas de negocio novedosas. En estudios controlados (ej. Wharton), un modelo de IA avanzado superó a 200 estudiantes de MBA generando ideas de producto: 35 de las 40 mejores ideas evaluadas por jueces humanos vinieron de la IA. Sin embargo, la mayoría de ideas generadas serán mediocres; el valor está en generar volumen y luego filtrar humanamente.",
+  "pasos_accionables": [
+    "Invitar siempre a la IA a sesiones de brainstorming como un participante más",
+    "Pedir a la IA que combine 2-3 conceptos distantes o no relacionados con el negocio para forzar recombinación creativa",
+    "Solicitar listas largas (20+ ideas) esperando que la mayoría sean mediocres, y filtrar humanamente las de mayor potencial",
+    "Asignar un rol experto a la IA en el prompt (ej. 'Eres un experto en marketing') para mejorar la calidad de las ideas generadas",
+    "Repetir la solicitud con distintos contextos o audiencias objetivo si las primeras ideas no inspiran"
+  ],
+  "entregable_esperado": "Lista curada de ideas de negocio o producto generadas con ayuda de IA, filtradas y priorizadas por el equipo humano",
+  "nodos_previos": [
+    "gestion_intraemprendedora_experimentacion",
+    "gestion_alucinaciones_ia"
+  ],
+  "nodos_siguientes": [
+    "prompting_alta_variacion",
+    "gestion_alucinaciones_ia"
+  ],
+  "condiciones_activacion": [
+    "Si el equipo está en fase de ideación y necesita ampliar el abanico de conceptos de producto o negocio",
+    "Si el emprendedor no se considera naturalmente muy creativo o el equipo carece de diversidad de perspectivas"
+  ],
+  "etiqueta_arbol": "Combina Ideas con IA"
+}
