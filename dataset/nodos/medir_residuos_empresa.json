@@ -1,0 +1,27 @@
+{
+  "node_id": "medir_residuos_empresa",
+  "fase_proyecto": "validacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Medición de Residuos de la Empresa",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "El 'desperdicio' en cualquier forma (sólido, líquido, gaseoso, peligroso o no) representa ganancia perdida. Medir residuos revela ineficiencias y sienta las bases para reducción de costos. El primer paso es una auditoría de residuos para identificar tipo, cantidad y origen, usando métodos como registros de transportistas de basura, auditorías físicas, revisión de registros de compra, encuestas a empleados y recorridos por instalaciones.",
+  "pasos_accionables": [
+    "Solicitar registros a la empresa recolectora de residuos (tipo, cantidad, origen)",
+    "Realizar una auditoría física: recolectar, clasificar y pesar los residuos",
+    "Revisar registros de compra para identificar qué termina como desperdicio",
+    "Encuestar a empleados sobre fuentes de desperdicio",
+    "Hacer recorridos por las instalaciones para identificar oportunidades cualitativas"
+  ],
+  "entregable_esperado": "Auditoría de residuos con datos de tipo, cantidad y origen del desperdicio generado",
+  "nodos_previos": [
+    "conversion_datos_co2e"
+  ],
+  "nodos_siguientes": [
+    "evaluar_huella_hidrica",
+    "realizar_analisis_ciclo_de_vida_lca"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa produce residuos sólidos, líquidos o peligrosos y no los ha auditado antes",
+    "Si se busca reducir costos de tratamiento, reciclaje o disposición"
+  ]
+}

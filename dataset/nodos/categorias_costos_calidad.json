@@ -1,0 +1,28 @@
+{
+  "node_id": "categorias_costos_calidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Categorías de Costos de Calidad: Fallas Internas, Externas, Evaluación y Prevención",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los costos de calidad se dividen tradicionalmente en cuatro categorías: fallas internas (defectos detectados antes de la entrega, como desperdicio y retrabajo), fallas externas (defectos detectados después de la entrega, como garantías y reclamos), costos de evaluación (inspección y pruebas para determinar conformidad) y costos de prevención (planificación y actividades para evitar fallas). El costo de mala calidad estrictamente se refiere a la suma de fallas internas y externas, mientras que evaluación y prevención son inversiones.",
+  "pasos_accionables": [
+    "Clasificar todos los costos de calidad identificados en las cuatro categorías",
+    "Calcular el peso relativo de cada categoría dentro del costo total",
+    "Comparar los costos de fallas (internas+externas) contra los de prevención",
+    "Detectar el desequilibrio típico: alto gasto en fallas, bajo gasto en prevención",
+    "Proponer incremento en inversión de prevención basado en el análisis"
+  ],
+  "entregable_esperado": "Tabla desglosada de costos de calidad por categoría (fallas internas, externas, evaluación, prevención) con porcentajes sobre el total",
+  "nodos_previos": [
+    "costo_de_mala_calidad",
+    "costo_de_mala_calidad_3"
+  ],
+  "nodos_siguientes": [
+    "costo_optimo_calidad",
+    "costos_ocultos_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere detallar el origen específico de los costos de mala calidad",
+    "Al decidir dónde invertir en mejora: prevención vs corrección"
+  ]
+}

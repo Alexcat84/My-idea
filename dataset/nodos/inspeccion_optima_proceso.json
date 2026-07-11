@@ -1,0 +1,22 @@
+{
+  "node_id": "inspeccion_optima_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Optimización del Punto y Tipo de Inspección",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming plantea que la inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico y no solo criterios tradicionales como los estándares militares (Mil-Std 105D).",
+  "pasos_accionables": [
+    "Mapear todos los puntos de inspección actuales (materiales entrantes, proceso, producto final)",
+    "Calcular el costo total asociado a cada punto de inspección versus el costo de no inspeccionar",
+    "Solicitar evidencia de control estadístico a proveedores para reducir inspección de entrada",
+    "Eliminar inspecciones en puntos donde no se generan registros ni se usan los datos"
+  ],
+  "entregable_esperado": "Mapa de puntos de inspección optimizados con justificación de costo-beneficio",
+  "nodos_previos": [
+    "sistema_estable_deming"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la empresa usa planes de muestreo tradicionales sin analizar costo total del proceso"
+  ]
+}

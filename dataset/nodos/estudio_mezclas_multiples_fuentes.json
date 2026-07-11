@@ -1,0 +1,27 @@
+{
+  "node_id": "estudio_mezclas_multiples_fuentes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Estudio de Mezclas de Múltiples Fuentes de Producción",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando el producto final es una mezcla de varias líneas, máquinas u operadores, estudiar solo la mezcla combinada puede ocultar oportunidades de mejora. Aunque cada fuente esté en control estadístico individualmente, sus medias pueden diferir ampliamente, ampliando la varianza total de la mezcla. La búsqueda 'aguas arriba' (en cada fuente individual) ofrece un apalancamiento poderoso para la mejora.",
+  "pasos_accionables": [
+    "Identificar todas las fuentes individuales (máquinas, operadores, líneas) que alimentan un proceso combinado",
+    "Generar cartas de control individuales para cada fuente, no solo para la mezcla total",
+    "Comparar los niveles medios y variabilidad entre las fuentes",
+    "Priorizar la intervención en las fuentes con mayor variación o desviación del nivel deseado",
+    "Buscar traer todas las fuentes a un mismo nivel y reducir su variación individual"
+  ],
+  "entregable_esperado": "Cartas de control individuales por fuente y plan de acción priorizado para las fuentes más problemáticas",
+  "nodos_previos": [
+    "control_estadistico_no_implica_cero_defectos"
+  ],
+  "nodos_siguientes": [
+    "distincion_causas_comunes_especiales",
+    "limites_control_por_juicio_error"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto final proviene de múltiples máquinas, operadores o líneas de producción",
+    "Cuando la carta de control de la mezcla global no revela problemas evidentes pero persisten defectos"
+  ]
+}

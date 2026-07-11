@@ -1,0 +1,29 @@
+{
+  "node_id": "estratificacion_datos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Estratificación de Datos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La estratificación es la separación de datos en categorías para identificar qué grupos contribuyen a un problema de calidad. Se usa en análisis de problemas, identificación de proyectos, análisis de síntomas, prueba de hipótesis y desarrollo de soluciones. Ayuda a responder preguntas sobre frecuencia de defectos, factores contribuyentes y diferencias entre grupos (estratos), como en el caso de comparar proveedores distintos.",
+  "pasos_accionables": [
+    "Seleccionar las variables de estratificación relevantes",
+    "Establecer categorías (valores discretos o rangos) para cada variable",
+    "Clasificar las observaciones en las categorías correspondientes",
+    "Calcular el fenómeno medido (conteo, promedio o histograma) para cada categoría",
+    "Mostrar los resultados, preferentemente en gráficos de barras",
+    "Repetir el proceso para otras variables de estratificación (segunda etapa)",
+    "Planificar confirmación adicional de los hallazgos"
+  ],
+  "entregable_esperado": "Conjunto de histogramas o gráficos estratificados por categoría con conclusiones sobre causas del problema",
+  "nodos_previos": [
+    "control_charts_shewhart",
+    "planificacion_recoleccion_datos"
+  ],
+  "nodos_siguientes": [
+    "planificacion_recoleccion_datos"
+  ],
+  "condiciones_activacion": [
+    "Cuando un análisis global de datos no revela la causa raíz de un problema",
+    "Cuando existen múltiples fuentes o proveedores que pueden contribuir de forma distinta a un defecto"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "key_process_product_characteristics",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Características Clave de Producto y Proceso (KPC)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Las características clave de producto son salidas de un proceso medibles y percibidas por el cliente, mientras que las características clave de proceso (KPC) son entradas o factores del proceso que afectan las salidas pero no son vistas directamente por el cliente. Identificarlas permite priorizar recursos, usando herramientas como investigación de mercado, QFD, revisión de diseño y AMFE.",
+  "pasos_accionables": [
+    "Recolectar inputs de investigación de mercado, QFD, revisión de diseño y AMFE",
+    "Clasificar las características del producto según su importancia relativa (crítica, mayor, menor, incidental)",
+    "Identificar partes 'sensibles a calidad' usando criterios de complejidad y tasa de fallos",
+    "Documentar las características clave en planos y especificaciones"
+  ],
+  "entregable_esperado": "Listado clasificado de características clave de producto y proceso con su nivel de criticidad",
+  "nodos_previos": [
+    "qfd_matriz_calidad",
+    "fmea_analisis_de_modos_de_falla"
+  ],
+  "nodos_siguientes": [
+    "analisis_flujo_proceso",
+    "control_proceso_variables"
+  ],
+  "condiciones_activacion": [
+    "Cuando se inicia la planificación de manufactura de un nuevo producto",
+    "Cuando se requiere priorizar recursos de control de calidad"
+  ]
+}

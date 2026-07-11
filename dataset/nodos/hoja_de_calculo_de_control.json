@@ -1,0 +1,27 @@
+{
+  "node_id": "hoja_de_calculo_de_control",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Hoja de Cálculo de Control (Control Spreadsheet)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Es la herramienta principal que resume el trabajo de planificación del control. En filas horizontales se listan los sujetos de control y en columnas verticales los elementos del bucle de retroalimentación (unidad de medida, tipo de sensor, meta de calidad, frecuencia de medición, tamaño de muestra, criterios de decisión y responsabilidad). También existe una variante para asignar 'quién hace qué' entre los distintos roles en una estación de control.",
+  "pasos_accionables": [
+    "Listar todos los sujetos de control identificados en el mapa de proceso",
+    "Definir para cada uno: unidad de medida, sensor, meta, frecuencia y tamaño de muestra",
+    "Establecer criterios de decisión y responsable de cada decisión",
+    "Complementar con una hoja de 'quién hace qué' para aclarar roles en la estación de control"
+  ],
+  "entregable_esperado": "Hoja de cálculo de control completa con todos los sujetos de control y responsabilidades asignadas",
+  "nodos_previos": [
+    "mapa_de_proceso_planificacion_control",
+    "piramide_de_control"
+  ],
+  "nodos_siguientes": [
+    "etapas_de_control_operativo",
+    "concepto_de_dominancia"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere formalizar el plan de control de un proceso",
+    "Si existe ambigüedad sobre quién es responsable de cada decisión de calidad"
+  ]
+}

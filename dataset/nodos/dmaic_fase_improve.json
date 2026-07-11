@@ -1,0 +1,27 @@
+{
+  "node_id": "dmaic_fase_improve",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "DMAIC - Fase Improve (Mejora del Proceso)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El equipo busca cuantificar la relación causa-efecto mediante diseño de experimentos (DOE) para predecir, mejorar y optimizar el desempeño del proceso. Se utilizan experimentos de screening (factoriales fraccionados) para identificar los determinantes vitales, seguidos de experimentos factoriales completos y técnicas de optimización como RSM y EVOP.",
+  "pasos_accionables": [
+    "Planificar los experimentos diseñados (DOE) necesarios para el proyecto",
+    "Ejecutar experimentos de screening (factoriales fraccionados) para reducir la lista de Xs",
+    "Realizar experimentos factoriales 2k para modelar matemáticamente el desempeño del proceso",
+    "Aplicar RSM o EVOP si se requiere mayor optimización",
+    "Evaluar alternativas de mejora y seleccionar la solución óptima",
+    "Diseñar e implementar la mejora seleccionada"
+  ],
+  "entregable_esperado": "Modelo matemático del proceso, configuración óptima de parámetros y solución de mejora diseñada e implementada",
+  "nodos_previos": [
+    "dmaic_fase_analyze"
+  ],
+  "nodos_siguientes": [
+    "dmaic_six_sigma",
+    "diseno_experimentos_doe_mejora"
+  ],
+  "condiciones_activacion": [
+    "Cuando se han identificado y confirmado las causas raíz vitales y se requiere optimizar el proceso"
+  ]
+}

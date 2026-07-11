@@ -1,0 +1,26 @@
+{
+  "node_id": "histograma_analisis",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Histogramas para Capacidad de Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El análisis de histogramas combina el concepto de histograma con el de curva de probabilidad para evaluar si un proceso puede cumplir con las especificaciones. Se analiza el centrado (aim), el ancho (variabilidad) y la forma (posibles múltiples poblaciones o problemas de calidad) del histograma. Se requieren al menos 40 mediciones para revelar el patrón básico de variación.",
+  "pasos_accionables": [
+    "Seleccionar una muestra aleatoria de al menos 40 mediciones del proceso",
+    "Construir el histograma y añadir los límites de especificación",
+    "Evaluar el centrado, ancho y forma del histograma",
+    "Determinar si el proceso puede cumplir las especificaciones (capacidad de proceso)",
+    "Investigar picos múltiples como indicio de mezcla de poblaciones o procesos distintos"
+  ],
+  "entregable_esperado": "Histograma con límites de especificación y diagnóstico de capacidad del proceso",
+  "nodos_previos": [
+    "distribucion_normal_probabilidad"
+  ],
+  "nodos_siguientes": [
+    "control_estadistico_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se sospecha variabilidad no controlada en un proceso",
+    "Cuando se requiere validar si un proceso es capaz de cumplir tolerancias"
+  ]
+}

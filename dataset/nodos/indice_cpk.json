@@ -1,0 +1,26 @@
+{
+  "node_id": "indice_cpk",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Índice de Capacidad de Proceso Cpk",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cpk es un índice que refleja tanto la variación del proceso como la ubicación de su media respecto a los límites de especificación, a diferencia de Cp que asume centrado perfecto. Cpk indica qué tan cerca está la media actual del proceso del límite de especificación más próximo, siendo crítico para certificación de proveedores y detección de procesos descentrados.",
+  "pasos_accionables": [
+    "Calcular la media actual del proceso y su desviación estándar",
+    "Calcular la distancia de la media a cada límite de especificación (USL y LSL)",
+    "Determinar Cpk como el mínimo entre (USL-media)/3σ y (media-LSL)/3σ",
+    "Comparar Cpk con Cp para determinar si el proceso está descentrado",
+    "Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación"
+  ],
+  "entregable_esperado": "Valor numérico de Cpk documentado con recomendaciones de acción (centrado o reducción de variación)",
+  "nodos_previos": [
+    "indice_cp",
+    "capacidad_proceso_concepto",
+    "planificacion_estudio_capacidad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se sospecha que el proceso no está centrado en la especificación",
+    "Cuando se certifica a proveedores usando criterios de capacidad de proceso"
+  ]
+}

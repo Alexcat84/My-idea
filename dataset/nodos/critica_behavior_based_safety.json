@@ -1,0 +1,27 @@
+{
+  "node_id": "critica_behavior_based_safety",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Crítica a los Programas de Seguridad Basados en Comportamiento",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "Los programas de seguridad basados en el comportamiento (behavior-based safety) atribuyen la responsabilidad del riesgo al trabajador individual, no a las condiciones estructurales del trabajo. Preguntan 'quién' es responsable en lugar de 'qué' genera el riesgo, y suelen usar incentivos (premios, bonos) o castigos (pérdida de beneficios, pruebas de drogas obligatorias) que desincentivan el reporte honesto de incidentes, generando un clima de miedo y erosionando la solidaridad laboral.",
+  "pasos_accionables": [
+    "Auditar los programas de incentivos de seguridad existentes para identificar si penalizan el reporte de lesiones",
+    "Eliminar premios grupales condicionados a la ausencia de reportes de incidentes",
+    "Sustituir métricas basadas en tasas de incidentes por métricas de proceso o inputs de seguridad",
+    "Evaluar el clima de reporte mediante entrevistas anónimas a trabajadores"
+  ],
+  "entregable_esperado": "Diagnóstico documentado de los efectos del sistema actual de incentivos sobre el reporte de incidentes, con recomendaciones de rediseño",
+  "nodos_previos": [
+    "participacion_trabajadores"
+  ],
+  "nodos_siguientes": [
+    "cuestionar_vision_zero",
+    "aprendizaje_organizacional_desde_incidentes",
+    "paradoja_bajos_incidentes_altas_fatalidades"
+  ],
+  "condiciones_activacion": [
+    "Si la organización tiene un programa de incentivos ligado a bajos números de incidentes reportados",
+    "Si se sospecha subreporte de lesiones o incidentes"
+  ]
+}

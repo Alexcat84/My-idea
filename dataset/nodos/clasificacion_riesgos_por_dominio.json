@@ -1,0 +1,27 @@
+{
+  "node_id": "clasificacion_riesgos_por_dominio",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Clasificación de Riesgos por Dominio Operacional",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Todos los dominios peligrosos comparten cuatro tipos de riesgo: lesiones personales, errores de operadores clave, condiciones latentes y riesgos a terceros. El balance entre estos riesgos varía según el dominio (nuclear, aviación, construcción, minería, servicios financieros, etc.) y puede cambiar con la tecnología y la sociedad. Sin embargo, el riesgo de condiciones latentes es consistentemente alto en todos los dominios, ya que los procesos organizacionales genéricos (planificación, presupuesto, mantenimiento, gestión) son comunes a cualquier sistema técnico complejo.",
+  "pasos_accionables": [
+    "Mapear los cuatro tipos de riesgo (personal, operador clave, latente, terceros) específicos del dominio de la organización",
+    "Comparar el perfil de riesgo actual contra dominios similares usando referencias históricas",
+    "Identificar si el enfoque de gestión de riesgos está desactualizado respecto a cambios tecnológicos o sociales recientes",
+    "Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales"
+  ],
+  "entregable_esperado": "Matriz de clasificación de riesgos por tipo (personal, operador, latente, terceros) específica para la organización, con nivel estimado de cada uno",
+  "nodos_previos": [
+    "modelo_accidente_organizacional",
+    "condiciones_latentes_organizacionales"
+  ],
+  "nodos_siguientes": [
+    "condiciones_latentes_riesgo_universal",
+    "limitaciones_ltif_indicador"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización opera en un sector de alto riesgo (nuclear, oil&gas, aviación, salud) y necesita evaluar su exposición real",
+    "Cuando existe sospecha de que el enfoque de seguridad está enfocado en el riesgo equivocado"
+  ]
+}

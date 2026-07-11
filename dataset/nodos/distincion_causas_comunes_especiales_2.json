@@ -1,0 +1,25 @@
+{
+  "node_id": "distincion_causas_comunes_especiales_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distinción entre Causas Comunes y Causas Especiales",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Uno de los errores más costosos en la gestión de calidad es tratar toda variación (cada defecto individual) como si tuviera una causa especial rastreable, cuando en realidad proviene de causas comunes inherentes al sistema estable. Esto lleva a esfuerzos de investigación infructuosos que no logran reducir el nivel de defectos porque atacan síntomas, no el sistema. Solo un cambio en el sistema (diseño, método, materiales) puede reducir defectos originados por causas comunes.",
+  "pasos_accionables": [
+    "Antes de investigar un defecto individual, verificar si el proceso está en control estadístico mediante carta de control",
+    "Si el proceso está en control, reconocer que las variaciones (incluso defectos) provienen de causas comunes del sistema",
+    "Evitar investigar cada punto o defecto como causa especial cuando el proceso es estable",
+    "Redirigir el esfuerzo de mejora hacia un cambio estructural del sistema, no hacia el rastreo caso por caso"
+  ],
+  "entregable_esperado": "Informe de clasificación de causas (comunes vs especiales) y plan de mejora del sistema en caso de causas comunes",
+  "nodos_previos": [
+    "limites_control_por_juicio_error"
+  ],
+  "nodos_siguientes": [
+    "sistema_responsabilidad_gerencial"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo de ingeniería investigue cada defecto individualmente sin verificar el estado de control del proceso",
+    "Cuando el nivel de defectos permanezca estable a pesar de esfuerzos continuos de corrección puntual"
+  ]
+}

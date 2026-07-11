@@ -1,0 +1,25 @@
+{
+  "node_id": "muestreo_dodge_romig",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Tablas de Muestreo Dodge–Romig (LTPD y AOQL)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Las tablas Dodge-Romig ofrecen planes de muestreo por atributos rectificantes, es decir, asumen que todos los lotes rechazados son inspeccionados al 100% y los defectuosos son reemplazados por unidades aceptables. Existen dos enfoques: LTPD (protege calidad lote a lote) y AOQL (protege calidad promedio a largo plazo). Se usan cuando se prioriza la protección contra mala calidad ya sea a nivel de lote individual o en el promedio de muchos lotes.",
+  "pasos_accionables": [
+    "Determinar si se prioriza la protección lote por lote (LTPD) o el promedio a largo plazo (AOQL)",
+    "Seleccionar el valor de LTPD o AOQL deseado según el riesgo tolerable",
+    "Consultar la tabla correspondiente para obtener tamaño de muestra y número de aceptación",
+    "Establecer el procedimiento de inspección 100% para lotes rechazados con reemplazo de defectuosos"
+  ],
+  "entregable_esperado": "Plan de muestreo rectificante Dodge-Romig seleccionado con parámetros de LTPD/AOQL definidos",
+  "nodos_previos": [
+    "seleccion_plan_muestreo_ansi_z14"
+  ],
+  "nodos_siguientes": [
+    "acceptance_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando es factible y deseable la inspección 100% de lotes rechazados",
+    "Si se requiere protección tanto lote a lote como en el largo plazo"
+  ]
+}

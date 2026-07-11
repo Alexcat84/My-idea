@@ -1,0 +1,24 @@
+{
+  "node_id": "verificacion_paralela_trabajo_critico",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Verificación Paralela para Trabajo Crítico en Servicios",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Para procesos de servicio críticos (bancos, nóminas, tiendas) donde el costo de un error corregido tarde es muy alto, Deming recomienda que dos personas realicen de forma independiente y paralela el mismo cálculo sobre copias limpias y legibles, sin conocer los resultados del otro, y que una máquina compare ambos resultados para detectar discrepancias. La calidad resultante es mucho mejor que el producto de las probabilidades de error individuales (p1×p2), ya que es muy poco probable que ambos cometan el mismo error.",
+  "pasos_accionables": [
+    "Identificar transacciones o cálculos críticos donde el costo de error corregido tarde sea alto (k2 elevado).",
+    "Asignar el mismo trabajo a dos personas distintas trabajando de forma independiente sobre copias legibles.",
+    "Ingresar ambos resultados a una máquina o sistema que detecte automáticamente las diferencias.",
+    "Detener el trabajo ante cualquier figura ilegible y rastrear su origen para verificación, sin importar el tiempo perdido.",
+    "Mejorar el sistema subyacente (legibilidad, iluminación, contratación, entrenamiento) en paralelo a la verificación."
+  ],
+  "entregable_esperado": "Procedimiento formal de verificación paralela implementado para transacciones críticas, con sistema de comparación automatizada de resultados.",
+  "nodos_previos": [
+    "regla_todo_o_nada_inspeccion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se procesan transacciones críticas en servicios (bancos, nóminas, facturación) con alto costo de error tardío",
+    "Cuando es difícil detectar errores mediante un solo verificador"
+  ]
+}

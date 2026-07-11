@@ -1,0 +1,26 @@
+{
+  "node_id": "takt_time",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Takt Time y Producción en Flujo",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El takt time es el ritmo al cual el cliente compra una unidad de producto, y sirve como el 'compás' que marca la pauta de producción en un sistema pull. Calcular el takt time permite dimensionar personal, balancear procesos y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando es posible.",
+  "pasos_accionables": [
+    "Calcular la demanda del cliente en un periodo definido",
+    "Determinar el takt time dividiendo tiempo disponible entre demanda",
+    "Ajustar dotación de personal y balancear las estaciones de trabajo según el takt",
+    "Reducir tiempos de cambio (setup) para permitir lotes más pequeños"
+  ],
+  "entregable_esperado": "Cálculo de takt time y plan de balanceo de línea",
+  "nodos_previos": [
+    "ocho_desperdicios",
+    "lean_manufacturing"
+  ],
+  "nodos_siguientes": [
+    "mapeo_flujo_valor",
+    "mapeo_flujo_valor_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca sincronizar la producción con la demanda real del cliente"
+  ]
+}

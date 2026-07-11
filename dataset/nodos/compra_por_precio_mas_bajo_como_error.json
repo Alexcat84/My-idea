@@ -1,0 +1,24 @@
+{
+  "node_id": "compra_por_precio_mas_bajo_como_error",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Riesgo de comprar solo por el precio más bajo",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming critica la práctica de otorgar contratos y compras exclusivamente al proveedor de menor precio, ya que esto ignora el costo total (rework, fallas de compatibilidad, pérdidas de producción) y no garantiza calidad. El precio inicial bajo puede esconder costos ocultos mucho mayores en producción, ensamblaje o servicio.",
+  "pasos_accionables": [
+    "Eliminar el criterio de 'menor precio' como único factor de decisión en compras",
+    "Calcular el costo total de propiedad (TCO) incluyendo rework, tiempo perdido y fallas",
+    "Evaluar cómo los materiales interactúan en el proceso completo de producción, no solo si cumplen especificaciones aisladas"
+  ],
+  "entregable_esperado": "Política de compras que reemplace el criterio de precio más bajo por análisis de costo total y calidad",
+  "nodos_previos": [
+    "calificacion_de_proveedores_por_capacidad"
+  ],
+  "nodos_siguientes": [
+    "relacion_largo_plazo_proveedor_unico"
+  ],
+  "condiciones_activacion": [
+    "Cuando el departamento de compras evalúa proveedores solo por precio",
+    "Si existen problemas recurrentes de compatibilidad entre materiales de distintos proveedores"
+  ]
+}

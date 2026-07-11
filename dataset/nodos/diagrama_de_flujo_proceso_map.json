@@ -1,0 +1,30 @@
+{
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Flow Diagram / Process Map",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Representación gráfica de la secuencia de pasos necesarios para producir una salida (producto, servicio o información). Utiliza símbolos estandarizados para documentar el flujo del proceso, identificar puntos de decisión y detectar segmentos poco conocidos que requieren investigación adicional.",
+  "pasos_accionables": [
+    "Discutir el uso previsto del diagrama y el resultado deseado",
+    "Definir límites del proceso (primer y último paso)",
+    "Documentar cada paso en secuencia usando símbolos apropiados",
+    "Marcar puntos de decisión y continuar por una rama",
+    "Anotar segmentos desconocidos para completarlos después",
+    "Repetir hasta completar todas las ramas",
+    "Revisar el diagrama completo verificando precisión mediante observación o entrevistas",
+    "Analizar el diagrama de flujo resultante"
+  ],
+  "entregable_esperado": "Diagrama de flujo validado que documenta el proceso actual con todos los pasos, decisiones y ramas",
+  "nodos_previos": [
+    "sipoc"
+  ],
+  "nodos_siguientes": [
+    "fmea_analisis_de_modos_de_falla",
+    "matriz_de_control_de_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo necesita entender el proceso actual antes de mejorarlo",
+    "Cuando se buscan puntos problemáticos que causan errores o retrasos"
+  ]
+}

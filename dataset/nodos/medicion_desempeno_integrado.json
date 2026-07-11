@@ -1,0 +1,25 @@
+{
+  "node_id": "medicion_desempeno_integrado",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Medición Integrada de Desempeño: Cronograma, Costo y Calidad",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Crosby plantea que los supervisores deben monitorear tres características amplias e interrelacionadas de su operación: cronograma (schedule), costo y calidad. Factores como el ausentismo o la escasez de partes afectan simultáneamente a las tres dimensiones. Sin medición constante y comprensión de estas interrelaciones (tendencias), los problemas se detectan tarde, cuando ya es más difícil y costoso corregirlos.",
+  "pasos_accionables": [
+    "Identificar los indicadores que afectan cronograma, costo y calidad en la operación (ausentismo, escasez de partes, entrenamiento, etc.)",
+    "Determinar qué factores tienen impacto múltiple (dual o triple) sobre las tres dimensiones",
+    "Establecer gráficos de tendencia (charts) para cada indicador y revisarlos periódicamente",
+    "Usar las tendencias para predecir problemas antes de que se materialicen, no solo para reportarlos después",
+    "Basar las decisiones de asignación de tiempo del supervisor en las áreas de mayor riesgo detectadas"
+  ],
+  "entregable_esperado": "Sistema de indicadores y gráficos de tendencia para cronograma, costo y calidad, revisado periódicamente por el supervisor.",
+  "nodos_previos": [
+    "equipo_interdepartamental_calidad",
+    "analisis_causa_raiz_defectos"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando los supervisores reaccionan a los problemas solo después de que impactan gravemente el presupuesto o el cronograma",
+    "Cuando no existe un sistema de medición que relacione calidad, costo y cronograma de forma conjunta"
+  ]
+}

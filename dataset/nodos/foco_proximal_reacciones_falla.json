@@ -1,0 +1,25 @@
+{
+  "node_id": "foco_proximal_reacciones_falla",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "El Sesgo del Foco Proximal en la Reacción a Fallas",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Las reacciones organizacionales ante un accidente tienden a centrarse en las personas más cercanas en tiempo y espacio a producir o evitar el desenlace (el 'proximal'), viéndolas como el motor de la acción. Esto permite a la organización re-narrar el evento en lugar de cambiar sus creencias sobre el sistema, aislando el fallo en un individuo 'poco confiable' y evitando así cuestionar políticas, inversiones o prioridades. Esto resulta en aprendizaje organizacional nulo: lecciones caras quedan sin aprenderse porque el sistema se declara seguro salvo por 'manzanas podridas'.",
+  "pasos_accionables": [
+    "Identificar si el informe se centra exclusivamente en la persona más cercana al evento",
+    "Buscar activamente vulnerabilidades sistémicas previas (quejas anteriores, reportes similares, señales de alerta ignoradas)",
+    "Cuestionar si aislar la culpa en un individuo evita cambios costosos pero necesarios en la organización",
+    "Documentar explícitamente las lecciones sistémicas, no solo las acciones del individuo"
+  ],
+  "entregable_esperado": "Una lista de vulnerabilidades sistémicas identificadas más allá de la acción individual del operador",
+  "nodos_previos": [
+    "sharp_end_blunt_end"
+  ],
+  "nodos_siguientes": [
+    "obtencion_datos_factores_humanos"
+  ],
+  "condiciones_activacion": [
+    "Cuando una organización busca cerrar rápidamente un caso culpando a un solo trabajador",
+    "Cuando existen antecedentes de quejas o reportes similares antes del incidente"
+  ]
+}

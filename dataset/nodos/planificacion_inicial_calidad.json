@@ -1,0 +1,28 @@
+{
+  "node_id": "planificacion_inicial_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Planificación Inicial de Calidad en Manufactura",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La planificación de calidad en manufactura inicia con la revisión del diseño del producto y del proceso para identificar características clave, determinar su importancia relativa, analizar el diagrama de flujo del proceso, evaluar capacidad y control del proceso, aplicar error-proofing, y validar sistemas de medición, buscando prevenir defectos y minimizar variabilidad.",
+  "pasos_accionables": [
+    "Revisar el diseño del producto con personal de operaciones antes de su lanzamiento",
+    "Identificar características clave del producto y del proceso (KPCs)",
+    "Clasificar características por importancia (crítica, mayor, menor, incidental)",
+    "Analizar el diagrama de flujo del proceso por estación de trabajo",
+    "Validar la capacidad y los sistemas de medición del proceso"
+  ],
+  "entregable_esperado": "Documento de plan de control de proceso con características clave identificadas y clasificadas",
+  "nodos_previos": [
+    "mapeo_flujo_valor",
+    "mapeo_flujo_valor_2"
+  ],
+  "nodos_siguientes": [
+    "autocontrol_y_controlabilidad",
+    "auditoria_de_proceso",
+    "caracteristicas_clave_producto_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña o transfiere un nuevo producto a manufactura y se requiere planificación de calidad previa"
+  ]
+}

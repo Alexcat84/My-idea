@@ -1,0 +1,26 @@
+{
+  "node_id": "graficos_control_individuales_operarios",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráficos de Control Individuales para Retroalimentación al Trabajador",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Proveer a cada operario su propio gráfico de control permite que perciba semana a semana su desempeño real, motivando la mejora personal y revelando problemas ocultos (como deficiencias visuales o falta de capacitación) que antes no se detectaban. Este mecanismo, ilustrado en el caso de la fábrica de medias, generó mejoras dramáticas sin nuevo equipo ni personal adicional.",
+  "pasos_accionables": [
+    "Establecer un sistema de inspección diario o periódico por trabajador",
+    "Calcular y graficar el porcentaje de defectos por trabajador a lo largo del tiempo",
+    "Entregar el gráfico individual a cada trabajador junto con explicación de su significado",
+    "Investigar casos atípicos (mejores y peores desempeños) para identificar causas específicas (visión, capacitación, técnica)",
+    "Aplicar correctivos individuales (revisión médica, entrenamiento) cuando corresponda",
+    "Dar seguimiento continuo y documentar la mejora en el tiempo"
+  ],
+  "entregable_esperado": "Sistema de gráficos de control individuales implementado, con seguimiento de mejora continua y hallazgos documentados",
+  "nodos_previos": [
+    "politica_no_culpar_trabajador",
+    "gestion_participativa_qc_circle_supervisores"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando los trabajadores desconocen su propio nivel de desempeño",
+    "Cuando se busca mejorar la calidad sin inversión significativa en equipo nuevo"
+  ]
+}

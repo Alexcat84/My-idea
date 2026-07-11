@@ -1,0 +1,25 @@
+{
+  "node_id": "documentacion_mantenimiento_linea_base",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Diferencias entre Documentación de Mantenimiento de Línea y de Base",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "El mantenimiento de línea (tareas rápidas, no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo diseñados para personal experimentado, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso), se genera una brecha peligrosa en las defensas del sistema.",
+  "pasos_accionables": [
+    "Auditar si existen procedimientos formales de traspaso de trabajo entre turnos o áreas (línea/base).",
+    "Asegurar que toda tarea, sin importar su origen, incluya documentación completa y advertencias de seguridad.",
+    "Crear hojas de traspaso (stage sheets) por escrito en lugar de brief verbales."
+  ],
+  "entregable_esperado": "Procedimiento formal de traspaso de trabajo con hojas de etapa documentadas.",
+  "nodos_previos": [
+    "fallas_activas_condiciones_latentes",
+    "omisiones_en_mantenimiento"
+  ],
+  "nodos_siguientes": [
+    "defensas_en_profundidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando una organización transfiere tareas incompletas entre turnos o departamentos diferentes",
+    "Cuando se detectan diferencias culturales/procedimentales entre áreas operativas"
+  ]
+}

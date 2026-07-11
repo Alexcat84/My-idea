@@ -1,0 +1,27 @@
+{
+  "node_id": "teoria_sistemas_seguridad",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Teoría de Sistemas aplicada a la Seguridad",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Enfoque que estudia la seguridad como propiedad emergente del sistema completo, no de sus partes aisladas. Se basa en dos ideas: la emergencia (la seguridad surge de la interacción de componentes y procesos) y el control (restricciones que limitan grados de libertad de los componentes). Los accidentes de sistema no resultan de fallas de componentes sino de la erosión del control sobre las restricciones de seguridad, especialmente cuando el sistema persigue múltiples metas en conflicto (rapidez, costo, calidad).",
+  "pasos_accionables": [
+    "Analizar el sistema completo, incluyendo interacciones entre componentes, no solo fallas individuales",
+    "Identificar las metas múltiples y potencialmente conflictivas que persigue la organización",
+    "Evaluar cómo se ejercen y erosionan los controles/restricciones de seguridad en el tiempo",
+    "Estudiar tanto los sistemas exitosos como los fallidos, ya que comparten procesos organizacionales similares"
+  ],
+  "entregable_esperado": "Análisis sistémico de metas en conflicto y mecanismos de control de seguridad en la organización",
+  "nodos_previos": [
+    "modelo_barreras_defensas"
+  ],
+  "nodos_siguientes": [
+    "drift_hacia_el_fallo",
+    "safety_i_safety_ii",
+    "drift_hacia_el_fallo_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando el modelo de barreras resulta insuficiente para explicar el contexto organizacional de un accidente",
+    "Cuando existen múltiples objetivos organizacionales en tensión (costo, tiempo, calidad, seguridad)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "node_id": "eficiencia_hidrica_edificios",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Eficiencia y Reciclaje de Agua en Edificios",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Reducir el consumo de agua y su temperatura de calentamiento genera ahorros energéticos y económicos. Sistemas de recolección de agua de lluvia y reciclaje de agua gris permiten reducir la dependencia de suministro municipal hasta en un 50-74%.",
+  "pasos_accionables": [
+    "Reducir temperatura de calentadores de agua de 140°F a 120°F",
+    "Reparar fugas de tuberías y realizar mantenimiento regular",
+    "Instalar accesorios de bajo flujo (grifos, duchas, inodoros)",
+    "Implementar sistemas de recolección de agua de lluvia o reciclaje de agua gris"
+  ],
+  "entregable_esperado": "Sistema de gestión hídrica con métricas de reducción de consumo",
+  "nodos_previos": [
+    "gestion_energia_equipos",
+    "actualizacion_hvac"
+  ],
+  "nodos_siguientes": [
+    "contratos_desempeno_energetico_esco",
+    "certificacion_leed_energy_star",
+    "critica_del_pib_como_metrica_de_progreso"
+  ],
+  "condiciones_activacion": [
+    "Si el edificio tiene alto consumo de agua o está en zona de sequía",
+    "Si se busca reducir costos de calentamiento de agua"
+  ]
+}

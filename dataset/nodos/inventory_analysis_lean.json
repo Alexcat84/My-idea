@@ -1,0 +1,27 @@
+{
+  "node_id": "inventory_analysis_lean",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Inventario en Lean",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El inventario (materia prima, WIP, producto terminado) se considera generalmente desperdicio, pues representa efectivo inmovilizado y riesgo de daño, robo u obsolescencia. Sin embargo, cierto inventario estratégico compensa variación del proceso y demanda. Se debe calcular niveles mínimo-máximo y monitorear precisión mediante conteo cíclico.",
+  "pasos_accionables": [
+    "Identificar todos los puntos de inventario en el value stream",
+    "Determinar si el inventario es estratégico o desperdicio puro",
+    "Calcular niveles mínimo-máximo considerando demanda, tiempo de reposición y variación",
+    "Implementar conteo cíclico para mejorar precisión de registros",
+    "Reducir o eliminar inventario no estratégico"
+  ],
+  "entregable_esperado": "Plan de niveles de inventario optimizados con sistema de conteo cíclico implementado",
+  "nodos_previos": [
+    "value_stream_mapping"
+  ],
+  "nodos_siguientes": [
+    "littles_law",
+    "kanban_pull_system"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe exceso de inventario o inventario impreciso",
+    "Al diseñar el estado futuro del value stream"
+  ]
+}

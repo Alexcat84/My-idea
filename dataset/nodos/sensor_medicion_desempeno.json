@@ -1,0 +1,22 @@
+{
+  "node_id": "sensor_medicion_desempeno",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "El Sensor: Medición del Desempeño Real",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El sensor es el dispositivo o persona que detecta y convierte datos en información utilizable para la toma de decisiones. Puede ser un instrumento tecnológico, un sistema de datos, o un ser humano (encuestas, entrevistas). Es crítico definir la precisión, unidad de medida y frecuencia de medición.",
+  "pasos_accionables": [
+    "Seleccionar el tipo de sensor adecuado (tecnológico, de datos o humano)",
+    "Definir la unidad de medida comprensible y enfocada en el cliente",
+    "Establecer la frecuencia y formato de registro de los datos",
+    "Minimizar errores humanos mediante instrucciones detalladas y estándares visuales"
+  ],
+  "entregable_esperado": "Especificación técnica del sensor con unidad de medida, frecuencia y formato de reporte definidos",
+  "nodos_previos": [
+    "establecer_estandares_desempeno"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si se requiere implementar la medición real de un sujeto de control definido"
+  ]
+}

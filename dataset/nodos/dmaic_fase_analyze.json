@@ -1,0 +1,25 @@
+{
+  "node_id": "dmaic_fase_analyze",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "DMAIC - Fase Analyze (Análisis de Causas)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El equipo analiza datos de desempeño pasados y actuales para confirmar relaciones causa-efecto mediante herramientas estadísticas como histogramas, box plots, correlación, regresión, pruebas de hipótesis y ANOVA. El objetivo es identificar los 'vital few' Xs (inputs) que determinan el desempeño del proceso (Ys).",
+  "pasos_accionables": [
+    "Realizar análisis gráfico exploratorio (histogramas, box plots, Pareto)",
+    "Aplicar correlación y regresión para variables continuas",
+    "Ejecutar pruebas de hipótesis (t-tests, ANOVA, chi-cuadrado) según el tipo de dato",
+    "Confirmar los determinantes vitales (vital few Xs) del desempeño del proceso"
+  ],
+  "entregable_esperado": "Lista validada de inputs (Xs) que son causas raíz probadas del problema, respaldada por análisis estadístico",
+  "nodos_previos": [
+    "dmaic_fase_measure"
+  ],
+  "nodos_siguientes": [
+    "dmaic_fase_improve",
+    "analisis_causa_raiz_diagnostico"
+  ],
+  "condiciones_activacion": [
+    "Cuando se dispone de datos de línea base y se requiere confirmar estadísticamente las causas raíz del problema"
+  ]
+}

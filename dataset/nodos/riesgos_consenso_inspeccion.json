@@ -1,0 +1,26 @@
+{
+  "node_id": "riesgos_consenso_inspeccion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Riesgos del Consenso en la Inspección y Certificación",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando dos o más inspectores/certificadores emiten un juicio consensuado, este puede reflejar solamente la opinión dominante de uno de ellos (por jerarquía, miedo o experiencia), en lugar de un juicio verdaderamente compartido. Esto oculta desacuerdos valiosos que podrían mejorar el sistema de medición. La solución es que cada inspector registre su juicio de forma independiente y luego se comparen los resultados sin confrontación directa.",
+  "pasos_accionables": [
+    "Solicitar a cada inspector o certificador que registre su juicio de forma independiente, sin conocer el del otro.",
+    "Comparar los registros posteriormente en un ambiente sin jerarquía o temor.",
+    "Usar un gráfico simple (como el de Fig. 51/52) para visualizar acuerdos y desacuerdos por tipo de caso.",
+    "Investigar los casos de desacuerdo para identificar necesidad de mejores definiciones o entrenamiento.",
+    "Recordar que el acuerdo entre inspectores no garantiza que el juicio sea correcto, solo que existe un sistema consistente."
+  ],
+  "entregable_esperado": "Sistema de registro independiente y comparación posterior implementado entre inspectores/certificadores, con gráfico de seguimiento de acuerdos/desacuerdos.",
+  "nodos_previos": [
+    "administracion_de_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "comparacion_inspectores_independientes"
+  ],
+  "condiciones_activacion": [
+    "Cuando dos o más personas deben emitir un juicio de calidad conjunto sobre un mismo ítem o caso.",
+    "Cuando existe una relación jerárquica entre los evaluadores que podría sesgar el consenso."
+  ]
+}

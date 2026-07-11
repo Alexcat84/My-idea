@@ -1,0 +1,25 @@
+{
+  "node_id": "decision_conformidad_producto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Decisión de Conformidad del Producto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Es el juicio operativo mediante el cual inspectores o trabajadores de producción determinan si un producto cumple con las especificaciones establecidas. Dado el volumen de decisiones diarias, esta responsabilidad se delega a inspectores entrenados o instrumentos automatizados, quienes identifican el producto conforme ('stamp it up') para que continúe su flujo hacia el siguiente destino.",
+  "pasos_accionables": [
+    "Entrenar a inspectores y operadores en el conocimiento de productos, estándares e instrumentos.",
+    "Delegar la autoridad de juicio de conformidad a inspectores o sistemas automatizados.",
+    "Establecer procedimientos de identificación ('stamp') para productos conformes.",
+    "Definir políticas de gestión sobre el envío de productos conformes."
+  ],
+  "entregable_esperado": "Procedimiento documentado de inspección con criterios de conformidad y delegación de autoridad.",
+  "nodos_previos": [
+    "planificacion_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "decision_aptitud_uso",
+    "clasificacion_seriedad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere evaluar masivamente si productos cumplen especificaciones antes de su envío o uso."
+  ]
+}

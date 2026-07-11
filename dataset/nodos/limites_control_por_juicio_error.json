@@ -1,0 +1,26 @@
+{
+  "node_id": "limites_control_por_juicio_error",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Error de Establecer Límites de Control por Juicio en Lugar de Cálculo",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un error costoso y común es colocar líneas de acción en una carta de control basadas en juicio, metas deseadas, especificaciones del cliente, o clasificación del fabricante del equipo, en lugar de calcularlas estadísticamente a partir de los datos del proceso. Esto genera sobre-ajuste o sub-ajuste, perpetuando los problemas y confundiendo causas especiales con causas comunes.",
+  "pasos_accionables": [
+    "Nunca fijar límites de control basados en especificaciones, metas o requerimientos del cliente",
+    "Calcular los límites de control estadísticamente a partir de los datos históricos del propio proceso",
+    "Verificar que ningún manual o consultor esté usando curvas OC o especificaciones como base de límites",
+    "Educar a supervisores y gerentes sobre la diferencia entre límite de control (estadístico) y límite de especificación (requerimiento)"
+  ],
+  "entregable_esperado": "Carta de control con límites calculados estadísticamente, documentando la fórmula y datos usados",
+  "nodos_previos": [
+    "estudio_mezclas_multiples_fuentes"
+  ],
+  "nodos_siguientes": [
+    "distincion_causas_comunes_especiales",
+    "distincion_causas_comunes_especiales_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detecte que los límites de una carta de control fueron fijados arbitrariamente o por juicio",
+    "Cuando el desempeño se mida contra la capacidad máxima del fabricante del equipo en vez del desempeño estadístico real"
+  ]
+}

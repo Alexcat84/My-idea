@@ -1,0 +1,24 @@
+{
+  "node_id": "control_calidad_definicion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control de Calidad como Proceso Universal (Trilogía de Juran)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El control de calidad es el tercer proceso universal de la Trilogía de Juran (junto con planificación y mejora). Su propósito es mantener la estabilidad del proceso mediante un bucle de retroalimentación, evitando el deterioro del desempeño una vez alcanzado un nuevo nivel tras la mejora.",
+  "pasos_accionables": [
+    "Identificar en qué zona de control se encuentra el proceso (estable pero deficiente vs. mejorado)",
+    "Diferenciar entre necesidad de control y necesidad de mejora",
+    "Establecer nuevos controles después de cada mejora para evitar retroceso",
+    "Aplicar el concepto de control tanto a nivel de proceso como de producto"
+  ],
+  "entregable_esperado": "Diagrama de la Trilogía de Juran aplicado al proceso actual con zonas de control identificadas",
+  "nodos_previos": [
+    "entrenamiento_para_breakthrough"
+  ],
+  "nodos_siguientes": [
+    "bucle_retroalimentacion_control"
+  ],
+  "condiciones_activacion": [
+    "Si un proceso ha sido recientemente mejorado y requiere estabilización"
+  ]
+}

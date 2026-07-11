@@ -1,0 +1,25 @@
+{
+  "node_id": "ventana_oportunidad_accidente",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Ventana de Oportunidad para la Trayectoria del Accidente",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Concepto (relacionado con el 'modelo del queso suizo') que describe el momento en que los agujeros producidos por fallas activas se alinean con los agujeros creados por condiciones latentes, permitiendo que una trayectoria de peligro atraviese todas las defensas y ponga en contacto dañino a los peligros con las personas o activos.",
+  "pasos_accionables": [
+    "Reconstruir la secuencia temporal de fallos en cada capa defensiva",
+    "Identificar el punto de alineación entre condiciones latentes preexistentes y fallas activas puntuales",
+    "Proponer medidas que rompan la alineación (reforzar capas críticas identificadas)"
+  ],
+  "entregable_esperado": "Línea de tiempo del incidente mostrando el momento exacto de alineación de fallos",
+  "nodos_previos": [
+    "fallas_activas_condiciones_latentes",
+    "defensas_en_profundidad",
+    "caso_grietas_pequenas_mantenimiento_aeronaves",
+    "defensas_en_profundidad_2"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "En el análisis forense post-incidente para explicar por qué el accidente ocurrió en ese momento específico",
+    "Al comunicar hallazgos de investigación a la dirección de la organización"
+  ]
+}

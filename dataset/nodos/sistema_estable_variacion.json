@@ -1,0 +1,29 @@
+{
+  "node_id": "sistema_estable_variacion",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistema Estable y Responsabilidad de la Variación",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un sistema estable es aquel cuya variación se mantiene dentro de límites predecibles a lo largo del tiempo, mostrando que las causas de defectos son comunes (del sistema) y no especiales (de un individuo). Cuando un sistema es estable, la responsabilidad de mejorar el resultado recae en la gerencia, no en los trabajadores, ya que estos no pueden superar las limitaciones inherentes al proceso sin cambios estructurales. Establecer metas numéricas sobre un sistema estable sin modificar el sistema es inútil y desmoralizante.",
+  "pasos_accionables": [
+    "Recopilar datos históricos de producción y defectos en forma de gráficos de control",
+    "Determinar si el sistema es estable (dentro de límites de control) o inestable",
+    "Si es estable, identificar qué cambios estructurales (materiales, máquinas, capacitación) pueden mover la capacidad del sistema",
+    "Evitar fijar metas numéricas hasta no haber intervenido sobre el sistema mismo"
+  ],
+  "entregable_esperado": "Gráfico de control con clasificación de causas comunes vs especiales y recomendación de intervención gerencial",
+  "nodos_previos": [
+    "eliminar_slogans_y_exhortaciones"
+  ],
+  "nodos_siguientes": [
+    "eliminar_metas_numericas_gerencia",
+    "eliminar_cuotas_numericas_trabajadores",
+    "falacia_meta_numerica_sin_metodo",
+    "sistemas_recompensa_aleatorios",
+    "trampa_del_promedio_como_estandar"
+  ],
+  "condiciones_activacion": [
+    "Cuando se quiere establecer una meta de productividad o calidad",
+    "Cuando existe confusión sobre si un problema es del trabajador o del proceso"
+  ]
+}

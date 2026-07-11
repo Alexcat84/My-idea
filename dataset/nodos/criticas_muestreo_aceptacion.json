@@ -1,0 +1,24 @@
+{
+  "node_id": "criticas_muestreo_aceptacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Crítica al muestreo de aceptación (MIL-STD-105D y similares)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Los planes de muestreo de aceptación como Military Standard 105D o Dodge-Romig (AOQL, LTPD) incrementan costos y garantizan que algunos clientes recibirán producto defectuoso si se usan como auditoría final de calidad. Deming sostiene que estos métodos están obsoletos y que la industria no puede permitirse las pérdidas que generan; se debe migrar hacia el control estadístico de procesos en lugar de la inspección de lotes.",
+  "pasos_accionables": [
+    "Eliminar gradualmente el uso de planes de muestreo de aceptación como control final de calidad",
+    "Sustituir la inspección de lotes por control estadístico de procesos en tiempo real",
+    "Trabajar con proveedores para garantizar calidad en la fuente, no en la inspección final",
+    "Calcular el costo real de las pérdidas asociadas al muestreo de aceptación"
+  ],
+  "entregable_esperado": "Un plan de transición del muestreo de aceptación hacia control estadístico de procesos en la cadena de suministro",
+  "nodos_previos": [
+    "limitaciones_intervalos_confianza"
+  ],
+  "nodos_siguientes": [
+    "mito_departamento_control_calidad"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa actualmente usa planes de muestreo de aceptación para controlar calidad de lotes entrantes o salientes"
+  ]
+}

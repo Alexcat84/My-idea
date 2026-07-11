@@ -1,0 +1,25 @@
+{
+  "node_id": "reducciones_cadena_suministro",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Buscar Reducciones de Emisiones en la Cadena de Suministro",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Trabajar con los proveedores (no contra ellos) y enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales, es una estrategia efectiva. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+  "pasos_accionables": [
+    "Realizar un análisis de ciclo de vida para identificar impactos en la cadena de valor.",
+    "Identificar proveedores clave con mayor impacto de emisiones.",
+    "Colaborar con esos proveedores para modificar prácticas de producción.",
+    "Evaluar oportunidades de reducción en el uso del producto por el cliente (downstream)."
+  ],
+  "entregable_esperado": "Un mapeo de impactos de emisiones en la cadena de suministro con acciones colaborativas definidas con proveedores clave.",
+  "nodos_previos": [
+    "implementar_estrategias_reduccion_emisiones"
+  ],
+  "nodos_siguientes": [
+    "compra_offsets_carbono"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa depende de agricultura o extracción de recursos como insumos críticos.",
+    "Si el análisis de ciclo de vida revela impactos significativos fuera de las operaciones directas."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "node_id": "prueba_hipotesis",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Prueba de Hipótesis Estadística",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una prueba de hipótesis evalúa la validez de una afirmación sobre una población, comparando una hipótesis nula (H0, sin diferencia) contra una hipótesis alternativa (Ha, con diferencia). El proceso implica definir el problema práctico, plantear las hipótesis, elegir un nivel de significancia (alfa), seleccionar el estadístico de prueba, determinar la región de rechazo, calcular el estadístico con los datos muestrales, y sacar una conclusión práctica. Existen dos tipos de errores: Tipo I (rechazar H0 siendo verdadera) y Tipo II (no rechazar H0 siendo falsa).",
+  "pasos_accionables": [
+    "Plantear el problema práctico a resolver",
+    "Definir la hipótesis nula (H0) y la alternativa (Ha)",
+    "Elegir un valor de alfa (comúnmente 0.01, 0.05 o 0.10)",
+    "Seleccionar el estadístico de prueba apropiado (t-test, etc.)",
+    "Determinar la región de rechazo",
+    "Recolectar datos, calcular el estadístico y compararlo con la región de rechazo",
+    "Sacar la conclusión práctica del proceso"
+  ],
+  "entregable_esperado": "Conclusión estadística documentada sobre si se rechaza o no la hipótesis nula, con implicaciones prácticas para el proceso",
+  "nodos_previos": [
+    "determinacion_tamano_muestra",
+    "estimacion_intervalos_confianza"
+  ],
+  "nodos_siguientes": [
+    "pruebas_no_parametricas_transformacion",
+    "analisis_regresion_correlacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita comparar dos o más grupos o condiciones de un proceso",
+    "Al investigar si una diferencia observada es estadísticamente significativa"
+  ]
+}

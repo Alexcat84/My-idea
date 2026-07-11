@@ -1,0 +1,29 @@
+{
+  "node_id": "analisis_pareto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Pareto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta para establecer prioridades dividiendo los contribuyentes a un efecto en 'pocos vitales' y 'muchos útiles', mostrando la magnitud de contribución de cada uno y el porcentaje acumulado, para enfocar los esfuerzos de mejora donde generarán mayor impacto.",
+  "pasos_accionables": [
+    "Totalizar los datos de cada contribuyente y calcular el gran total",
+    "Reordenar los contribuyentes de mayor a menor",
+    "Calcular el porcentaje acumulado de cada contribuyente",
+    "Dibujar ejes con barras (magnitud) y línea (porcentaje acumulado)",
+    "Analizar el punto de quiebre en la curva acumulada",
+    "Etiquetar los 'pocos vitales' y los 'muchos útiles'"
+  ],
+  "entregable_esperado": "Diagrama de Pareto que identifica claramente los pocos vitales sobre los que enfocar esfuerzos de mejora",
+  "nodos_previos": [
+    "graficos_y_diagramas"
+  ],
+  "nodos_siguientes": [
+    "fmea_analisis_de_modos_de_falla",
+    "matriz_de_planificacion_arbol",
+    "control_estadistico_de_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita priorizar entre múltiples causas o problemas",
+    "Cuando se debe seleccionar proyectos de mejora basados en impacto"
+  ]
+}

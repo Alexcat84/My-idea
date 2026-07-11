@@ -1,0 +1,24 @@
+{
+  "node_id": "ironias_de_la_automatizacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Ironías de la Automatización (Bainbridge)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: al quitar las partes fáciles de una tarea, la automatización puede hacer más difíciles las partes complejas; los diseñadores dejan a los humanos las tareas que no supieron automatizar (restaurar el sistema tras fallos imprevistos); los operadores deben mantener vigilancia por largos períodos pese a que los humanos son malos en eso; y las habilidades se deterioran por falta de práctica justo cuando más se necesitan en emergencias. La ironía final es que los sistemas automatizados más exitosos, con rara necesidad de intervención manual, son los que más requieren inversión en entrenamiento del operador.",
+  "pasos_accionables": [
+    "Evaluar qué tareas fueron automatizadas y cuáles quedaron 'residualmente' a cargo del humano (usualmente las más difíciles e impredecibles).",
+    "Implementar programas de entrenamiento recurrente en escenarios de fallo simulado para mantener las habilidades manuales de los operadores.",
+    "Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros."
+  ],
+  "entregable_esperado": "Plan de entrenamiento y diseño de interfaz que aborde explícitamente las ironías de la automatización identificadas en los procesos de la organización.",
+  "nodos_previos": [
+    "condiciones_latentes_organizacionales"
+  ],
+  "nodos_siguientes": [
+    "confusion_modos_automatizacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se introduce o evalúa tecnología automatizada en procesos críticos de seguridad.",
+    "Cuando se diseñan programas de capacitación para operadores de sistemas automatizados."
+  ]
+}

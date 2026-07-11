@@ -1,0 +1,27 @@
+{
+  "node_id": "control_proceso_variables",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Correlación de Variables de Proceso con Resultados de Producto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Consiste en descubrir mediante análisis de datos las relaciones entre las variables del proceso y los resultados del producto, lo cual permite crear características de control de proceso (límites y mecanismos reguladores) para mantener el proceso estable. El diseño estadístico de experimentos (DOE) es clave para entender interacciones entre variables bajo enfoques como Six Sigma.",
+  "pasos_accionables": [
+    "Recolectar datos de variables de proceso y resultados de producto",
+    "Aplicar diseño estadístico de experimentos para identificar relaciones causales",
+    "Establecer límites y mecanismos reguladores en las variables críticas",
+    "Documentar en una hoja de control de proceso (control plan)"
+  ],
+  "entregable_esperado": "Control plan con límites y mecanismos de regulación de variables de proceso",
+  "nodos_previos": [
+    "analisis_flujo_proceso",
+    "key_process_product_characteristics"
+  ],
+  "nodos_siguientes": [
+    "errores_a_prueba_poka_yoke",
+    "validacion_sistema_medicion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca reducir variabilidad del proceso",
+    "Cuando se implementa un programa Six Sigma"
+  ]
+}

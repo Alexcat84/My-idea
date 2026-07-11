@@ -1,0 +1,26 @@
+{
+  "node_id": "pruebas_no_parametricas_transformacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Pruebas No Paramétricas, Transformación de Datos y Bootstrapping",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando los datos violan los supuestos de las pruebas paramétricas (como la normalidad), existen alternativas: pruebas no paramétricas (basadas en rangos, libres de distribución), transformación de datos (funciones de potencia, Box-Cox, Johnson) para cumplir los supuestos, y bootstrapping (remuestreo con reemplazo para determinar empíricamente la distribución de un estadístico).",
+  "pasos_accionables": [
+    "Verificar los supuestos de normalidad y varianza igual de los datos",
+    "Si se violan los supuestos, considerar pruebas no paramétricas basadas en rangos",
+    "Alternativamente, aplicar una transformación de datos (potencia, Box-Cox o Johnson)",
+    "Como opción adicional, aplicar bootstrapping para estimar la distribución empírica del estadístico",
+    "Seleccionar el método más apropiado según el software y necesidad de interpretabilidad"
+  ],
+  "entregable_esperado": "Análisis estadístico válido a pesar de la violación de supuestos de normalidad, usando el método alternativo apropiado",
+  "nodos_previos": [
+    "prueba_hipotesis"
+  ],
+  "nodos_siguientes": [
+    "analisis_regresion_correlacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando los datos de calidad no siguen una distribución normal",
+    "Cuando las varianzas entre grupos comparados son desiguales"
+  ]
+}

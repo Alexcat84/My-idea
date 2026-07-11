@@ -1,0 +1,24 @@
+{
+  "node_id": "comparacion_inspectores_independientes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Comparación Sistemática de Dos o Más Inspectores Independientes",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Para verificar si dos inspectores producen resultados sustancialmente similares, se diseña un esquema donde cada uno inspecciona muestras de forma independiente (mecánica, no aleatoria), y periódicamente ambos inspeccionan el mismo ítem (ej. cada 20 items) para verificar consistencia. Los resultados se grafican para detectar divergencias sistemáticas entre inspectores o necesidad de mejores definiciones de criterios.",
+  "pasos_accionables": [
+    "Definir un esquema de muestreo mecánico (no aleatorio) para que cada inspector seleccione ítems de diferentes partes del lote.",
+    "Hacer que cada inspector examine y registre resultados de forma independiente.",
+    "Programar inspecciones conjuntas periódicas (ej. cada 20° ítem) donde ambos evalúen el mismo ítem.",
+    "Graficar los resultados de ambos inspectores a lo largo del tiempo.",
+    "Analizar discrepancias para determinar si provienen de diferencias entre inspectores o entre muestras."
+  ],
+  "entregable_esperado": "Gráfico de seguimiento longitudinal de resultados de dos o más inspectores, con protocolo de verificación cruzada periódica implementado.",
+  "nodos_previos": [
+    "riesgos_consenso_inspeccion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando múltiples inspectores o certificadores deben garantizar consistencia en la calificación de productos.",
+    "Cuando se sospecha de sesgo o divergencia sistemática entre evaluadores."
+  ]
+}

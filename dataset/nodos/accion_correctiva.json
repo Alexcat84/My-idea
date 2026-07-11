@@ -1,0 +1,39 @@
+{
+  "node_id": "accion_correctiva",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Acción Correctiva (Esporádica vs Crónica)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Diferencia entre no conformidades esporádicas (cambios aislados en un proceso normalmente bueno, resueltos mediante troubleshooting local) y no conformidades crónicas o 'repetidoras' (requieren diagnóstico profundo mediante proyectos de mejora, análisis de causa raíz o metodologías Six Sigma).",
+  "pasos_accionables": [
+    "Clasificar la no conformidad como esporádica o crónica según su recurrencia.",
+    "Para casos esporádicos, aplicar troubleshooting local o proceso 8D.",
+    "Para casos crónicos, organizar un proyecto formal de mejora de calidad.",
+    "Utilizar técnicas de análisis de causa raíz o Six Sigma para diagnosticar condiciones crónicas."
+  ],
+  "entregable_esperado": "Plan de acción correctiva documentado, diferenciando resolución esporádica de proyecto de mejora crónica.",
+  "nodos_previos": [
+    "disposicion_producto_no_conforme",
+    "analisis_datos_reporte_estatus",
+    "cero_defectos",
+    "conciencia_calidad",
+    "conciencia_de_calidad",
+    "conciencia_de_calidad_2",
+    "costo_de_calidad_3",
+    "costo_de_calidad_4",
+    "costo_de_calidad_6",
+    "ingenieria_calidad",
+    "programa_de_mejora_de_calidad",
+    "programa_make_certain_3",
+    "rework_por_el_causante"
+  ],
+  "nodos_siguientes": [
+    "comite_cero_defectos",
+    "eliminacion_causas_error_4",
+    "manejo_problemas",
+    "planificacion_calidad_crosby"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe una no conformidad recurrente o aislada que requiere prevención de repetición."
+  ]
+}

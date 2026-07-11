@@ -1,0 +1,27 @@
+{
+  "node_id": "analisis_causa_raiz_diagnostico",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Causa Raíz mediante Diagnóstico Sistemático",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso estructurado para identificar la causa real de un problema crónico de calidad. Se generan teorías (hipótesis) sobre posibles causas basadas en la experiencia del equipo, luego se correlacionan los datos reales (ej. presencia/ausencia de protección) con la ocurrencia del defecto para validar o descartar cada teoría antes de implementar soluciones.",
+  "pasos_accionables": [
+    "Realizar análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)",
+    "Generar una lista de teorías/hipótesis sobre las causas probables con el equipo",
+    "Diseñar un mecanismo de recolección de datos que permita correlacionar cada teoría con el defecto observado",
+    "Validar estadísticamente cuál teoría explica la mayoría de los casos",
+    "Confirmar la causa raíz antes de diseñar el remedio"
+  ],
+  "entregable_esperado": "Documento de diagnóstico con la causa raíz confirmada y evidencia de correlación de datos",
+  "nodos_previos": [
+    "dmaic_fase_analyze"
+  ],
+  "nodos_siguientes": [
+    "mantener_las_ganancias",
+    "enfoque_proyecto_por_proyecto"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe un problema crónico de calidad sin causa clara",
+    "Cuando el equipo tiene múltiples hipótesis sin validar"
+  ]
+}

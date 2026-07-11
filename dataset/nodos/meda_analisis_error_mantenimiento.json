@@ -1,0 +1,27 @@
+{
+  "node_id": "meda_analisis_error_mantenimiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Maintenance Error Decision Aid (MEDA)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "MEDA es una herramienta desarrollada por Boeing para investigar errores de mantenimiento en aviación, aplicable a cualquier actividad de mantenimiento crítica para la seguridad. Consta de cinco secciones que cubren qué pasó, cómo y por qué ocurrió el error, qué defensas fallaron y qué soluciones potenciales existen. Opera tanto a nivel de investigación de línea como de análisis de tendencias organizacionales.",
+  "pasos_accionables": [
+    "Completar la Sección 1-3 documentando qué ocurrió (aerolínea, tipo de evento, naturaleza del fallo)",
+    "Clasificar el tipo de lapso o error de mantenimiento según las categorías definidas",
+    "Completar el checklist de factores contribuyentes de la Sección 4 (información, equipo, diseño, capacitación, entorno, supervisión, comunicación)",
+    "Determinar en la Sección 5a qué defensas fallaron y deberían haber prevenido el incidente",
+    "Definir en la Sección 5b las medidas correctivas locales para prevenir la recurrencia",
+    "Alimentar los datos a un sistema de análisis de tendencias organizacional"
+  ],
+  "entregable_esperado": "Informe MEDA completo con clasificación del error, factores contribuyentes identificados y plan de acciones correctivas",
+  "nodos_previos": [
+    "ida_diagrama_influencia"
+  ],
+  "nodos_siguientes": [
+    "tripod_beta_analisis_incidentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre un error de mantenimiento en un sistema crítico de seguridad",
+    "Si se desea estandarizar la investigación de errores de mantenimiento en la organización"
+  ]
+}

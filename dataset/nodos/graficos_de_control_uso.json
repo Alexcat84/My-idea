@@ -1,0 +1,25 @@
+{
+  "node_id": "graficos_de_control_uso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Dos Usos Básicos de los Gráficos de Control",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Los gráficos de control tienen dos aplicaciones: (1) como juicio retrospectivo, para determinar si un lote pasado estuvo en control estadístico; y (2) como operación continua, para mantener el proceso en control durante la producción, extendiendo los límites hacia el futuro y graficando puntos en tiempo real.",
+  "pasos_accionables": [
+    "Definir si el gráfico se usará para evaluar un lote pasado o para monitoreo continuo",
+    "Si es monitoreo continuo, extender los límites de control calculados hacia adelante",
+    "Capacitar al operario para ignorar fluctuaciones normales y reaccionar solo ante señales reales (puntos fuera de límite o corridas)",
+    "Revisar periódicamente la vigencia y utilidad de cada gráfico (evitar proliferación sin propósito)"
+  ],
+  "entregable_esperado": "Sistema de gráficos de control implementado en planta, con roles claros de quién los revisa y con qué frecuencia se auditan.",
+  "nodos_previos": [
+    "control_estadistico_del_proceso"
+  ],
+  "nodos_siguientes": [
+    "capacidad_del_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita decidir si un lote histórico fue producido en control",
+    "Cuando se quiere implementar monitoreo en tiempo real de un proceso productivo"
+  ]
+}

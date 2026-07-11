@@ -1,0 +1,27 @@
+{
+  "node_id": "gestion_miedo_reportes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gestión del Miedo en el Reporte de Datos",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming ilustra cómo el miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del Punto 8 (eliminar el miedo) de su filosofía de gestión.",
+  "pasos_accionables": [
+    "Auditar la distribución de datos reportados en busca de patrones anómalos de concentración cerca de límites regulatorios.",
+    "Investigar si el personal evita reportar valores extremos por temor a consecuencias.",
+    "Rediseñar los sistemas de evaluación de desempeño para que no penalicen el reporte honesto de problemas.",
+    "Empoderar a los trabajadores para actuar según el criterio técnico sin temor a represalias por afectar metas de producción."
+  ],
+  "entregable_esperado": "Un diagnóstico de sesgos en el reporte de datos y un plan de acción para eliminar el miedo como fuente de distorsión de la información.",
+  "nodos_previos": [
+    "ausencia_valor_verdadero"
+  ],
+  "nodos_siguientes": [
+    "falacia_recompensa_loteria",
+    "critica_gestion_por_objetivos"
+  ],
+  "condiciones_activacion": [
+    "Cuando los datos reportados muestran concentraciones sospechosas cerca de límites de aceptación.",
+    "Cuando los trabajadores evitan reportar fallas por temor a ser culpados.",
+    "Al diseñar sistemas de evaluación de desempeño individual."
+  ]
+}

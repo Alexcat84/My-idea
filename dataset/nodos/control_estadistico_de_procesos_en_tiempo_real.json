@@ -1,0 +1,29 @@
+{
+  "node_id": "control_estadistico_de_procesos_en_tiempo_real",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control Estadístico de Procesos en Tiempo Real",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. El caso del operador que maneja cuatro tornos ilustra cómo el acceso a datos en tiempo real reduce defectos de 1 en 10 a prácticamente cero, y mejora la satisfacción laboral al dar al trabajador control sobre su propio desempeño.",
+  "pasos_accionables": [
+    "Capacitar a los operadores en el uso e interpretación de cartas de control",
+    "Colocar las cartas de control directamente en el puesto de trabajo, accesibles para todos los turnos",
+    "Permitir que el operador ajuste el proceso solo cuando la carta indique causa especial, no por intuición",
+    "Compartir la misma carta entre turnos para mantener continuidad del conocimiento del proceso"
+  ],
+  "entregable_esperado": "Cartas de control implementadas y utilizadas activamente por los operadores en el punto de producción",
+  "nodos_previos": [
+    "causas_comunes_vs_especiales",
+    "definiciones_operacionales_de_calidad",
+    "enfoque_en_procesos_no_en_problemas"
+  ],
+  "nodos_siguientes": [
+    "administracion_de_inspeccion",
+    "eliminacion_gestion_por_objetivos_y_numeros",
+    "eliminacion_inspeccion_masiva_por_control_estadistico"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe alta tasa de defectos detectados tarde en el proceso",
+    "Cuando los operadores no tienen visibilidad de su propio desempeño mientras trabajan"
+  ]
+}

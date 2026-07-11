@@ -1,0 +1,27 @@
+{
+  "node_id": "falacia_meta_numerica_sin_metodo",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "La Falacia de la Meta Numérica sin Método (Sistema de Semáforo)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El ejemplo de la refinería de azúcar muestra cómo establecer una meta numérica arbitraria (ej. consumo de agua ≤3.5 ton/ton) sin un método sistemático de mejora conduce a sobre-ajuste o sub-ajuste constante: cada desviación del objetivo dispara explicaciones improvisadas y correcciones no fundamentadas, generando más pérdidas que ganancias. Una meta sin un plan de mejora basado en conocimiento del proceso (ciclo de Shewhart, diseño experimental, análisis de variables naturales) es solo una ilusión de control.",
+  "pasos_accionables": [
+    "Antes de fijar una meta numérica, estudiar el proceso mediante observación de variación natural (temperatura, presión, velocidad, etc.)",
+    "Aplicar el ciclo PDSA (Planificar-Hacer-Estudiar-Actuar) para probar cambios fundamentados en conocimiento técnico",
+    "Usar diseño experimental cuando la observación natural no sea suficiente",
+    "Construir un gráfico de control del indicador para diferenciar causas especiales de mejora real",
+    "Evitar juntas reactivas que buscan explicaciones improvisadas cada vez que se incumple la meta"
+  ],
+  "entregable_esperado": "Plan de mejora de proceso basado en el ciclo PDSA y datos de variación natural, en lugar de un sistema reactivo de metas numéricas",
+  "nodos_previos": [
+    "ciclo_shewhart_pdsa",
+    "sistema_estable_variacion"
+  ],
+  "nodos_siguientes": [
+    "causas_comunes_vs_especiales"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización define metas numéricas (KPIs) sin un método claro de cómo alcanzarlas",
+    "Cuando existe un sistema de alertas (semáforos, colores) que dispara reacciones improvisadas ante desviaciones"
+  ]
+}

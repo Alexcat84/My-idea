@@ -1,0 +1,26 @@
+{
+  "node_id": "pre_control_estadistico",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "PRE-Control",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.",
+  "pasos_accionables": [
+    "Centrar el proceso entre los límites de especificación al iniciar",
+    "Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites",
+    "Tomar muestras periódicas de tres piezas consecutivas",
+    "Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado",
+    "Ajustar el proceso y reiniciar el monitoreo"
+  ],
+  "entregable_esperado": "Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales",
+  "nodos_previos": [
+    "capacidad_proceso_concepto"
+  ],
+  "nodos_siguientes": [
+    "graficos_control_tiradas_cortas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere un método de control simple y rápido en planta",
+    "Cuando el enfoque debe ser en conformidad con especificación más que en control estadístico puro"
+  ]
+}

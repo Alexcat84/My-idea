@@ -1,0 +1,26 @@
+{
+  "node_id": "clasificacion_seriedad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Clasificación de Seriedad (Seriousness Classification)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Sistema formal, generado por un comité interdepartamental, que clasifica características y defectos en clases de seriedad (usualmente 3 o 4: crítico, mayor, menor, incidental) para determinar el nivel de atención en planificación, muestreo y criterios de conformidad. Ayuda a enfocar recursos en lo verdaderamente crítico.",
+  "pasos_accionables": [
+    "Formar un comité interdepartamental (diseño, calidad, producción).",
+    "Decidir el número de clases de seriedad a utilizar.",
+    "Definir cada clase con criterios claros.",
+    "Clasificar cada característica y defecto en su clase correspondiente.",
+    "Aplicar la clasificación en planificación de inspección, especificaciones y auditorías de producto."
+  ],
+  "entregable_esperado": "Tabla de clasificación de seriedad aprobada y aplicada a características y defectos del producto.",
+  "nodos_previos": [
+    "clasificacion_caracteristicas_calidad",
+    "decision_conformidad_producto"
+  ],
+  "nodos_siguientes": [
+    "inspeccion_automatizada"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe gran cantidad de características a inspeccionar y se necesita priorizar esfuerzos."
+  ]
+}

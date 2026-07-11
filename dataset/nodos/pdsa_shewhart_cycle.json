@@ -1,0 +1,27 @@
+{
+  "node_id": "pdsa_shewhart_cycle",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Ciclo PDSA (Plan-Do-Study-Act)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El PDSA, originalmente propuesto por Shewhart como PDCA y popularizado por Deming, es un método iterativo de experimentación para identificar causas raíz de problemas mediante prueba y error. A diferencia del RCCA de Juran, no requiere un análisis exhaustivo previo de causas; en su lugar, formula hipótesis de cambio y las prueba experimentalmente para confirmar si producen una mejora real.",
+  "pasos_accionables": [
+    "Plan: definir el cambio a probar y diseñar el experimento",
+    "Do: ejecutar el plan experimental y recolectar datos",
+    "Study: analizar los datos y resumir el aprendizaje obtenido",
+    "Act: determinar qué cambios se implementan permanentemente y cuáles requieren más pruebas"
+  ],
+  "entregable_esperado": "Un ciclo documentado de experimentación con resultados analizados y decisión sobre implementación permanente del cambio",
+  "nodos_previos": [
+    "analisis_diagnostico_causa"
+  ],
+  "nodos_siguientes": [
+    "just_do_its",
+    "kaizen_mejora_continua"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere experimentación iterativa para validar soluciones",
+    "Cuando el equipo trabaja en entornos de salud u organizaciones que confían en pruebas empíricas",
+    "Cuando no se conoce con certeza la causa raíz y se prefiere probar cambios directamente"
+  ]
+}

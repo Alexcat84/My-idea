@@ -1,0 +1,29 @@
+{
+  "node_id": "seleccion_plan_muestreo_ansi_z14",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Selección y Aplicación de Planes de Muestreo ANSI/ASQC Z1.4",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "ANSI/ASQC Z1.4 es un sistema de muestreo por atributos basado en AQL que permite seleccionar un plan de muestreo a partir de: el AQL, el tamaño de lote, el tipo de muestreo (simple/doble/múltiple) y el nivel de inspección (I, II o III, siendo II el normal). El estándar incluye procedimientos de cambio entre inspección normal, estricta (si la calidad se deteriora) y reducida (si el historial del proveedor es bueno), permitiendo balancear costo de inspección con protección de calidad requerida.",
+  "pasos_accionables": [
+    "Determinar el AQL, tamaño de lote y nivel de inspección requeridos",
+    "Consultar la tabla de letras de código de tamaño de muestra según lote y nivel de inspección",
+    "Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra",
+    "Implementar reglas de cambio a inspección estricta si dos de cinco lotes consecutivos son rechazados",
+    "Aplicar inspección reducida si los últimos 10 lotes fueron aceptados bajo inspección normal"
+  ],
+  "entregable_esperado": "Plan de muestreo ANSI/ASQC Z1.4 completamente parametrizado y procedimiento de cambio de niveles documentado",
+  "nodos_previos": [
+    "single_double_multiple_sampling",
+    "niveles_calidad_muestreo_aql_lql_aoql",
+    "tipos_planes_muestreo_atributos_variables"
+  ],
+  "nodos_siguientes": [
+    "muestreo_dodge_romig",
+    "acceptance_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere un estándar reconocido y probado para inspección de lotes por atributos",
+    "Si la producción es continua en serie de lotes"
+  ]
+}

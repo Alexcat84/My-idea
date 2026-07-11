@@ -1,0 +1,26 @@
+{
+  "node_id": "vpc_condiciones_productoras_violacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Condiciones Productoras de Violación (VPCs)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las VPCs son factores que incrementan la probabilidad de que una persona incumpla procedimientos de operación segura, a diferencia de los errores, las violaciones tienen un componente social y motivacional. Incluyen la baja probabilidad percibida de detección (x10), la inconveniencia (x7), la autoridad aparente para violar (x3), entre otros. También se documenta un efecto de género significativo (factor x1.4 para hombres) que no existe en los errores.",
+  "pasos_accionables": [
+    "Evaluar el contexto de cumplimiento normativo del área de trabajo",
+    "Clasificar el comportamiento de violación según las categorías genéricas (Tabla 7.3)",
+    "Identificar los VPCs presentes y su peso de influencia",
+    "Diseñar intervenciones dirigidas a cambiar normas, creencias y actitudes, no solo procedimientos"
+  ],
+  "entregable_esperado": "Diagnóstico de factores de violación normativa en el equipo de trabajo con recomendaciones de intervención cultural",
+  "nodos_previos": [
+    "epc_condiciones_productoras_error"
+  ],
+  "nodos_siguientes": [
+    "principios_gestion_error",
+    "ida_diagrama_influencia"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detectan incumplimientos recurrentes de procedimientos de seguridad",
+    "Si se busca diferenciar entre error involuntario y violación intencional"
+  ]
+}

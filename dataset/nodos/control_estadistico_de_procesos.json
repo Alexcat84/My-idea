@@ -1,0 +1,43 @@
+{
+  "node_id": "control_estadistico_de_procesos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control Estadístico de Procesos (SPC)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Aplicación de métodos estadísticos, mediante gráficos de control, para medir y analizar la variación de un proceso, distinguiendo entre causas comunes (inherentes, aleatorias) y causas especiales (asignables) de variación, con el objetivo de predecir el desempeño del proceso y reducir la variación de forma continua.",
+  "pasos_accionables": [
+    "Elegir la característica a graficar, priorizando las de alta tasa de defectos",
+    "Identificar variables y condiciones del proceso que contribuyen a la característica final",
+    "Verificar que el sistema de medición tenga precisión y exactitud suficientes",
+    "Determinar el punto más temprano de prueba para detectar causas asignables",
+    "Elegir el tipo de gráfico de control adecuado (variables o atributos)",
+    "Decidir la línea central y los límites de control (usualmente ±3σ)",
+    "Elegir subgrupos racionales para las muestras",
+    "Establecer un sistema simple y confiable de recolección de datos",
+    "Calcular límites de control y definir instrucciones de interpretación y acción",
+    "Graficar los datos e interpretar los resultados"
+  ],
+  "entregable_esperado": "Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción",
+  "nodos_previos": [
+    "histograma",
+    "analisis_pareto",
+    "cuatro_costos_de_calidad",
+    "matriz_de_control_de_proceso",
+    "mejora_continua_del_sistema",
+    "mistake_proofing_poka_yoke_2"
+  ],
+  "nodos_siguientes": [
+    "matriz_de_control_de_proceso",
+    "aim_of_leadership",
+    "deteccion_de_lideres_y_rezagados",
+    "deteccion_defectos_raros_control_estadistico",
+    "graficos_control_defectos_raros",
+    "mejora_continua_del_proceso",
+    "pruebas_destructivas",
+    "regla_todo_o_nada_inspeccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita monitorear y predecir el desempeño de un proceso en el tiempo",
+    "Cuando se busca distinguir variación normal de variación por causas especiales"
+  ]
+}

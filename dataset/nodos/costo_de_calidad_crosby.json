@@ -1,0 +1,26 @@
+{
+  "node_id": "costo_de_calidad_crosby",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "El Costo de la Calidad (Por Qué la Calidad es Gratis)",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Crosby afirma que 'la calidad es gratis' porque el verdadero costo no proviene de hacer las cosas bien, sino del incumplimiento (nonconformance): reprocesos, desperdicios, inspecciones adicionales. Calcular este costo permite dimensionar la magnitud real del problema de calidad en la organización y justificar la inversión en prevención.",
+  "pasos_accionables": [
+    "Identificar todos los costos asociados a fallas internas y externas",
+    "Calcular el costo de reprocesos, desperdicio e inspecciones",
+    "Presentar los números al equipo directivo para dimensionar el problema",
+    "Usar la cifra como punto de partida para medir mejora"
+  ],
+  "entregable_esperado": "Un informe cuantificado del costo de no conformidad en la operación, presentado a la gerencia.",
+  "nodos_previos": [
+    "conformance_to_requirements"
+  ],
+  "nodos_siguientes": [
+    "quality_awareness_crosby",
+    "programa_catorce_pasos_crosby"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita justificar económicamente un programa de mejora de calidad",
+    "Cuando la gerencia no percibe la gravedad del problema de calidad"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "node_id": "distribucion_normal_probabilidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución Normal y Cálculo de Probabilidades",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La distribución normal permite calcular la probabilidad de que una característica de calidad caiga dentro de ciertos límites, mediante la transformación de datos a la variable estandarizada Z (media 0, desviación estándar 1). El área bajo la curva entre dos límites representa la probabilidad de ocurrencia. Aproximadamente 68.26% de la población cae dentro de ±1 desviación estándar, 95.46% dentro de ±2, y 99.73% dentro de ±3.",
+  "pasos_accionables": [
+    "Calcular la media y desviación estándar de la población o muestra",
+    "Transformar el valor de interés a Z = (X - media) / desviación estándar",
+    "Consultar tablas de distribución normal estándar para obtener la probabilidad acumulada",
+    "Interpretar el resultado como porcentaje de la población dentro o fuera de especificaciones"
+  ],
+  "entregable_esperado": "Cálculo de probabilidad de cumplimiento de especificaciones basado en distribución normal",
+  "nodos_previos": [
+    "medidas_tendencia_dispersion",
+    "estadistica_basica_calidad"
+  ],
+  "nodos_siguientes": [
+    "analisis_capacidad_proceso",
+    "histograma_analisis",
+    "analisis_capacidad_procesos",
+    "distribucion_exponencial",
+    "distribucion_poisson"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita estimar el porcentaje de producción que cumplirá especificaciones",
+    "Cuando los datos de un proceso siguen un comportamiento normal"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "distribucion_normal_probabilidad",
+      "titulo": "Distribución Normal de Probabilidad",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "ids_alias": [
+    "distribucion_normal_probabilidad",
+    "distribucion_normal_probabilidad_2"
+  ]
+}

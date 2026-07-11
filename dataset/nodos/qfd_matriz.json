@@ -1,0 +1,27 @@
+{
+  "node_id": "qfd_matriz",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Despliegue de la Función de Calidad (QFD)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "QFD es un conjunto de matrices que conectan sistemáticamente las necesidades del cliente ('qué') con los medios técnicos para satisfacerlas ('cómo'), en cascada desde necesidades del cliente hasta CTQs, requisitos funcionales, requisitos de diseño y de proceso. Permite identificar brechas (gaps) entre el desempeño actual y lo requerido.",
+  "pasos_accionables": [
+    "Listar verticalmente los objetivos a cumplir (necesidades del cliente)",
+    "Listar horizontalmente los medios técnicos para cumplir cada objetivo",
+    "Calificar la relación entre cada objetivo y cada medio dentro de la matriz",
+    "Encadenar matrices sucesivas, usando el 'cómo' de una como el 'qué' de la siguiente",
+    "Actualizar la matriz continuamente para hacer seguimiento del análisis de brechas"
+  ],
+  "entregable_esperado": "Matriz QFD completa que traza la relación desde necesidades del cliente hasta requisitos de proceso y control",
+  "nodos_previos": [
+    "ctq_caracteristicas_criticas",
+    "dfss_metodologia"
+  ],
+  "nodos_siguientes": [
+    "design_scorecard"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita asegurar trazabilidad entre necesidades del cliente y decisiones técnicas de diseño",
+    "Cuando existen múltiples requisitos en competencia que deben priorizarse"
+  ]
+}

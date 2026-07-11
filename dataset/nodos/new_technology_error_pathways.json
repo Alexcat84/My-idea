@@ -1,0 +1,26 @@
+{
+  "node_id": "new_technology_error_pathways",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Nueva Tecnología y Nuevas Rutas hacia el Error",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "La introducción de nueva tecnología en dominios de seguridad crítica no elimina el error, sino que lo transforma: incrementa demandas operativas al permitir operar más rápido/cerca de los límites, suele estar mal adaptada al trabajo real obligando a los usuarios a 'terminar el diseño' en la práctica, y exige nuevo conocimiento que abre nuevas vulnerabilidades. Problemas típicos incluyen: error de modo (mode error), pérdida en arquitecturas de pantalla, falta de coordinación de entradas entre operadores, sobrecarga de trabajo y de datos, y dificultad para notar cambios mediante valores digitales.",
+  "pasos_accionables": [
+    "Evaluar si la nueva tecnología permite operar el sistema más cerca de sus márgenes de seguridad",
+    "Revisar si los operadores han tenido que adaptar/parchar la tecnología para que funcione en la práctica",
+    "Auditar la interfaz en busca de riesgos de error de modo, sobrecarga de datos o pantallas poco intuitivas",
+    "Verificar mecanismos de coordinación cuando múltiples personas interactúan con el mismo sistema automatizado"
+  ],
+  "entregable_esperado": "Evaluación de riesgos de interacción humano-tecnología antes o después de implementar un nuevo sistema",
+  "nodos_previos": [
+    "buggy_inert_knowledge",
+    "tecnologias_disruptivas_oportunidad"
+  ],
+  "nodos_siguientes": [
+    "noticing_non_events"
+  ],
+  "condiciones_activacion": [
+    "Cuando se introduce nueva automatización o tecnología en un proceso crítico",
+    "Cuando se investiga un incidente relacionado con interacción humano-máquina"
+  ]
+}

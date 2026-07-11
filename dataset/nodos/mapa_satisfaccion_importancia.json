@@ -1,0 +1,23 @@
+{
+  "node_id": "mapa_satisfaccion_importancia",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Mapa de Cuadrantes Satisfacción vs. Importancia",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta gráfica que posiciona atributos del producto/servicio según su importancia para el cliente y el nivel de satisfacción alcanzado, dividiendo el análisis en cuatro cuadrantes: mantener status quo (satisfacción alta, importancia baja), apalancar fortaleza (satisfacción alta, importancia alta), baja prioridad (satisfacción baja, importancia baja), y agregar recursos urgentemente (satisfacción baja, importancia alta). Esta última representa el mayor potencial de ganancia si se mejora.",
+  "pasos_accionables": [
+    "Calcular promedios de satisfacción e importancia para cada atributo evaluado",
+    "Ubicar cada atributo en el cuadrante correspondiente según sus valores relativos a los promedios",
+    "Priorizar acciones de mejora para atributos en el cuadrante de alta importancia/baja satisfacción",
+    "Usar atributos de alta importancia/alta satisfacción como argumento de marketing"
+  ],
+  "entregable_esperado": "Mapa visual de cuadrantes con lista priorizada de atributos que requieren acción inmediata",
+  "nodos_previos": [
+    "estudio_mercado_calidad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se tienen datos de encuestas de satisfacción e importancia de atributos",
+    "Si se necesita priorizar recursos limitados de mejora"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "disposicion_producto_no_conforme",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Disposición de Producto No Conforme",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso formal que sigue a la detección de un lote no conforme: se genera un reporte, el lote se pone en cuarentena, se investiga la causa y se decide entre no enviar (reparar, reclasificar, desechar) o enviar mediante alguna forma de waiver (del diseñador, cliente, departamento de calidad o junta de revisión de material).",
+  "pasos_accionables": [
+    "Marcar el lote como 'hold' y enviarlo a área de cuarentena.",
+    "Asignar un investigador para recopilar información de aptitud para el uso.",
+    "Decidir la disposición final: reparar, reclasificar, desechar o enviar bajo waiver.",
+    "Documentar la decisión mediante el sistema formal (p. ej. material review board).",
+    "Registrar y monitorear el porcentaje de lotes enviados bajo waiver."
+  ],
+  "entregable_esperado": "Registro de disposición de lote no conforme con decisión final documentada y trazable.",
+  "nodos_previos": [
+    "decision_aptitud_uso",
+    "decision_comunicacion"
+  ],
+  "nodos_siguientes": [
+    "accion_correctiva"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detecta un lote de producto no conforme y se requiere decidir su destino."
+  ]
+}

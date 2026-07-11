@@ -1,0 +1,26 @@
+{
+  "node_id": "concurrent_engineering",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Ingeniería Concurrente",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso de desarrollo de productos donde todos los responsables de desarrollo y producción participan desde las etapas más tempranas del diseño. Dado que el 70-80% del costo de un producto se determina en estas etapas iniciales, es esencial considerar el costo desde el principio para lograr competitividad.",
+  "pasos_accionables": [
+    "Involucrar a equipos multifuncionales (diseño, manufactura, costos) desde el inicio del proyecto",
+    "Determinar la configuración del producto considerando procesos de manufactura y materiales disponibles",
+    "Evaluar el costo de cada decisión de diseño temprano en el proceso",
+    "Usar herramientas de software (como DFMA) para guiar decisiones de diseño con información de costos"
+  ],
+  "entregable_esperado": "Configuración de producto validada por un equipo multifuncional con estimaciones de costo tempranas",
+  "nodos_previos": [
+    "quality_by_design"
+  ],
+  "nodos_siguientes": [
+    "design_for_manufacture",
+    "design_for_assembly"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca reducir costos de producto desde etapas tempranas de diseño",
+    "Cuando existe desconexión entre los equipos de diseño y manufactura"
+  ]
+}

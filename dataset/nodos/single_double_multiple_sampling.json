@@ -1,0 +1,24 @@
+{
+  "node_id": "single_double_multiple_sampling",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Muestreo Simple, Doble y Múltiple",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
+  "pasos_accionables": [
+    "Evaluar el volumen de inspección disponible y la complejidad administrativa tolerable",
+    "Optar por muestreo simple si se prioriza la simplicidad de administración",
+    "Optar por muestreo doble o múltiple si se busca reducir el costo promedio de inspección",
+    "Verificar que la curva OC del plan elegido cumpla con los riesgos aceptables para productor y consumidor"
+  ],
+  "entregable_esperado": "Plan de muestreo especificado (tipo, tamaño de muestra inicial y subsecuente, números de aceptación/rechazo)",
+  "nodos_previos": [
+    "tipos_planes_muestreo_atributos_variables"
+  ],
+  "nodos_siguientes": [
+    "seleccion_plan_muestreo_ansi_z14"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere definir el procedimiento operativo detallado de inspección de lotes"
+  ]
+}

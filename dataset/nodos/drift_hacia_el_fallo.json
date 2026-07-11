@@ -1,0 +1,28 @@
+{
+  "node_id": "drift_hacia_el_fallo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Drift: Desviación Incremental hacia el Fallo",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "El 'drift' es el alejamiento lento e incremental entre cómo se diseñó un sistema y cómo realmente opera. Ocurre porque las reglas suelen estar sobrediseñadas para el peor caso y no calzan con el trabajo real; la presión por eficiencia local prioriza metas medibles (puntualidad, costos) sobre la seguridad (difícil de medir); y el éxito pasado se toma como garantía de seguridad futura, normalizando pequeñas desviaciones hasta que se vuelven la nueva norma.",
+  "pasos_accionables": [
+    "Monitorear sistemáticamente la brecha entre procedimiento escrito y práctica real (no solo cuando hay accidentes)",
+    "Identificar qué metas de eficiencia local están compitiendo con la seguridad",
+    "Cuestionar si el éxito reciente refleja seguridad real o simplemente ausencia de consecuencias adversas hasta ahora",
+    "Establecer mecanismos de retroalimentación que detecten normalización de desviaciones antes de que se consoliden"
+  ],
+  "entregable_esperado": "Sistema de monitoreo continuo de la brecha procedimiento-práctica con indicadores de alerta temprana de drift",
+  "nodos_previos": [
+    "supuestos_de_procedimientos",
+    "adaptaciones_procedimentales",
+    "teoria_sistemas_seguridad"
+  ],
+  "nodos_siguientes": [
+    "cumplimiento_vs_violacion",
+    "organizaciones_alta_confiabilidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando una organización lleva tiempo operando sin incidentes graves y desea evaluar su riesgo real",
+    "Cuando se investigan las causas raíz sistémicas de un accidente"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "reduccion_tiempo_ciclo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Reducción del Tiempo de Ciclo del Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El tiempo es una de las métricas más utilizadas para medir la entrega de servicios. Los clientes demandan continuamente tiempos de entrega más cortos. Mediante el análisis del diagrama de flujo y técnicas Lean, se pueden eliminar desperdicios y reducir el tiempo de ciclo mediante acciones como eliminar reprocesos, simplificar pasos, combinar actividades, transferir aprobaciones a niveles más bajos, y usar tecnología.",
+  "pasos_accionables": [
+    "Eliminar bucles de reproceso para corregir errores del proceso",
+    "Eliminar o simplificar pasos de valor marginal para el cliente",
+    "Eliminar pasos redundantes como inspecciones (solo tras eliminar causas de error)",
+    "Combinar pasos realizados por un mismo trabajador",
+    "Transferir pasos de aprobación a niveles inferiores",
+    "Cambiar la secuencia de actividades de consecutivas a simultáneas",
+    "Usar tecnología para realizar pasos rutinarios y complejos"
+  ],
+  "entregable_esperado": "Proceso de servicio rediseñado con tiempo de ciclo reducido, documentado con datos de antes/después",
+  "nodos_previos": [
+    "analisis_flujo_proceso_servicio"
+  ],
+  "nodos_siguientes": [
+    "error_proofing_servicio",
+    "medicion_capacidad_servicio"
+  ],
+  "condiciones_activacion": [
+    "Cuando el tiempo de entrega del servicio es una preocupación crítica del cliente",
+    "Cuando se ha completado el mapeo de proceso y se buscan oportunidades de mejora"
+  ]
+}

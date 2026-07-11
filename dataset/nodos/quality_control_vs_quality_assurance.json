@@ -1,0 +1,25 @@
+{
+  "node_id": "quality_control_vs_quality_assurance",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Control de Calidad versus Aseguramiento de Calidad",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Históricamente el control de calidad (QC) dependía de inspectores especializados al final del proceso productivo. Con el movimiento TQM (Total Quality Management), impulsado por Deming, Juran e Ishikawa, la responsabilidad se distribuyó a todo el personal bajo el concepto de aseguramiento de calidad (QA), donde la calidad se 'construye' en el proceso en lugar de 'inspeccionarse' al final. Sin embargo, la eliminación de la inspección independiente puede generar riesgos de seguridad si no existe una verificación externa robusta, como ocurrió en casos de mantenimiento aeronáutico donde trabajadores firmaban su propio trabajo sin supervisión.",
+  "pasos_accionables": [
+    "Revisar si la organización cuenta con una función de inspección independiente para tareas críticas de seguridad",
+    "Evaluar los riesgos de permitir el autochequeo ('sign-off') sin verificación externa",
+    "Establecer disponibilidad de personal de aseguramiento de calidad en todos los turnos, incluidos nocturnos",
+    "Implementar auditorías aleatorias sobre el trabajo firmado como conforme"
+  ],
+  "entregable_esperado": "Política de aseguramiento de calidad con mecanismos de verificación independiente definidos",
+  "nodos_previos": [
+    "defensas_peligrosas_paradojas"
+  ],
+  "nodos_siguientes": [
+    "violaciones_procedimentales_por_sobreespecificacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización ha migrado de inspección centralizada a autoevaluación del trabajador",
+    "Si existen antecedentes de trabajo mal ejecutado firmado como conforme"
+  ]
+}

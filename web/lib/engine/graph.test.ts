@@ -11,9 +11,9 @@ import {
 } from "./graph";
 
 describe("cargarGrafo / cargarEntrySeeds / cargarPreguntasCache", () => {
-  it("carga los 1266 nodos reales", () => {
+  it("carga los 2805 nodos reales (1266 core + 1539 de packs, Fase 3.6)", () => {
     const graph = cargarGrafo();
-    expect(Object.keys(graph).length).toBe(1266);
+    expect(Object.keys(graph).length).toBe(2805);
   });
 
   it("carga las 20 puertas de entrada", () => {
@@ -49,12 +49,27 @@ describe("sucesoresNivel: mismos sucesores reales que engine/prototipo_motor.py"
   });
 });
 
-describe("dominioPermitido: no-op con el default {core} (Hotfix v2.1.1)", () => {
-  it("todos los nodos reales pasan con el default (todo el dataset es 'core')", () => {
+describe("dominioPermitido: el muro de mundos (Fase 3.5/3.6)", () => {
+  it("los nodos core pasan con el default {core}", () => {
     const graph = cargarGrafo();
-    const algunosIds = Object.keys(graph).slice(0, 50);
-    for (const id of algunosIds) {
+    const cores = Object.keys(graph)
+      .filter((id) => (graph[id].dominio ?? "core") === "core")
+      .slice(0, 50);
+    expect(cores.length).toBe(50);
+    for (const id of cores) {
       expect(dominioPermitido(id, graph)).toBe(true);
+    }
+  });
+
+  it("los nodos de packs integrados NO pasan por defecto (mundos tras flags), y sí con su unlock", () => {
+    const graph = cargarGrafo();
+    for (const dominio of ["quality", "health_safety", "environmental"]) {
+      const delPack = Object.keys(graph).filter((id) => graph[id].dominio === dominio);
+      expect(delPack.length).toBeGreaterThan(0);
+      for (const id of delPack.slice(0, 10)) {
+        expect(dominioPermitido(id, graph)).toBe(false);
+        expect(dominioPermitido(id, graph, ["core", dominio])).toBe(true);
+      }
     }
   });
 });

@@ -1,0 +1,27 @@
+{
+  "node_id": "heart_metodo_evaluacion_error_humano",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "HEART: Human Error Assessment and Reduction Technique",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "HEART es una técnica desarrollada por Jeremy Williams para evaluar y reducir el error humano en tareas críticas. Proporciona tipos genéricos de tareas con probabilidades nominales de error asociadas, y una lista de Condiciones Productoras de Error (EPCs) que multiplican esa probabilidad nominal según su influencia. Permite estimar cuantitativamente la probabilidad de error humano en una actividad específica combinando el tipo de tarea con los factores contextuales presentes.",
+  "pasos_accionables": [
+    "Identificar la actividad a evaluar y clasificarla según los tipos de tarea genéricos de la Tabla 7.2",
+    "Determinar la probabilidad de error nominal asociada a ese tipo de tarea",
+    "Revisar la lista de Condiciones Productoras de Error (EPCs) y seleccionar las aplicables a la tarea",
+    "Multiplicar la probabilidad nominal por la proporción juzgada de cada factor EPC aplicable",
+    "Calcular la probabilidad final de error para priorizar intervenciones de mitigación"
+  ],
+  "entregable_esperado": "Informe de evaluación HEART con probabilidad de error calculada y lista de EPCs relevantes identificados para la tarea analizada",
+  "nodos_previos": [
+    "fallos_activos_condiciones_latentes"
+  ],
+  "nodos_siguientes": [
+    "ida_diagrama_influencia",
+    "epc_condiciones_productoras_error"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita cuantificar la probabilidad de error humano en una tarea crítica",
+    "Si se requiere priorizar factores de riesgo humano para intervención"
+  ]
+}

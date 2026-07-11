@@ -1,0 +1,25 @@
+{
+  "node_id": "validacion_sistema_medicion_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Validación del Sistema de Medición (Bajo Six Sigma)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Bajo enfoques Six Sigma con bajos niveles de defectos permitidos, es crucial validar la capacidad del sistema de medición, no solo del proceso de manufactura. La variación observada proviene tanto del proceso como de la medición; si esta última es alta, se producen clasificaciones erróneas de producto bueno como defectuoso o viceversa.",
+  "pasos_accionables": [
+    "Cuantificar la variación debida al proceso de manufactura",
+    "Cuantificar la variación debida al sistema de medición (Gauge R&R)",
+    "Comparar ambas fuentes de variación para determinar capacidad de medición",
+    "Corregir o calibrar el sistema de medición si es necesario"
+  ],
+  "entregable_esperado": "Estudio de Gauge R&R con capacidad de medición validada",
+  "nodos_previos": [
+    "6s_lugar_trabajo"
+  ],
+  "nodos_siguientes": [
+    "concepto_autocontrol"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requieren tolerancias muy estrictas (Six Sigma)",
+    "Cuando existen discrepancias entre clasificación de producto bueno/malo"
+  ]
+}

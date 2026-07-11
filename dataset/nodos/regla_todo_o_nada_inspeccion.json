@@ -1,0 +1,31 @@
+{
+  "node_id": "regla_todo_o_nada_inspeccion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Regla de Todo-o-Nada para Inspección (Teoría de Costos k1/k2)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming propone un modelo matemático para decidir si se debe inspeccionar el 100% de un material entrante o no inspeccionarlo en absoluto, comparando el costo de inspección (k1) con el costo de reparación aguas abajo (k2) y la fracción defectuosa (p). Si p < k1/k2, no se debe inspeccionar (Caso 1); si p > k1/k2, se debe inspeccionar el 100% (Caso 2). La inspección parcial (muestreo) casi nunca minimiza el costo total; solo las estrategias extremas (0% o 100%) lo hacen.",
+  "pasos_accionables": [
+    "Calcular el costo de inspección por unidad (k1) del material o proceso.",
+    "Calcular el costo promedio de corrección aguas abajo (k2) si el defecto no se detecta a tiempo.",
+    "Estimar la fracción defectuosa histórica (p) del proveedor o proceso.",
+    "Comparar p con el punto de equilibrio k1/k2 para decidir entre Caso 1 (sin inspección) o Caso 2 (inspección 100%).",
+    "Documentar la decisión y monitorear con cartas de control para verificar que la fracción defectuosa se mantenga estable."
+  ],
+  "entregable_esperado": "Análisis de costos k1/k2 con la decisión documentada (inspeccionar 100% o no inspeccionar) para cada material o etapa crítica del proceso.",
+  "nodos_previos": [
+    "control_estadistico_de_procesos",
+    "relacion_largo_plazo_proveedor_unico"
+  ],
+  "nodos_siguientes": [
+    "pruebas_destructivas",
+    "eliminacion_planes_muestreo_estandar",
+    "economia_subensambles_inspeccion",
+    "probabilidad_falla_ensamblaje_multiple",
+    "verificacion_paralela_trabajo_critico"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir sobre políticas de inspección de materiales entrantes o productos en proceso",
+    "Cuando existen costos significativos de reparación aguas abajo por defectos no detectados"
+  ]
+}

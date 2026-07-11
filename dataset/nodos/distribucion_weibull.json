@@ -1,0 +1,27 @@
+{
+  "node_id": "distribucion_weibull",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución Weibull para Predicción de Vida Útil",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La distribución Weibull es una familia flexible de distribuciones definida por parámetros de escala, forma y ubicación, capaz de aproximar tanto la exponencial (β=1) como la normal (β≈3.5). Se usa ampliamente para predecir el porcentaje de fallos de una población en función de la vida a fatiga, mediante gráficos de probabilidad con rangos medios (mean ranks).",
+  "pasos_accionables": [
+    "Obtener al menos 7 mediciones de vida a fatiga o tiempo hasta fallo",
+    "Calcular los rangos medios (mean rank = i/(n+1)) para cada observación ordenada",
+    "Graficar los datos en papel de probabilidad Weibull (escala logarítmica)",
+    "Ajustar una línea recta y estimar el parámetro de forma (β)",
+    "Extrapolar con cautela y calcular intervalos de confianza",
+    "Verificar el ajuste con el estadístico Anderson-Darling (P-value > .05)"
+  ],
+  "entregable_esperado": "Gráfico de probabilidad Weibull con predicción de porcentaje de fallos y parámetros estimados",
+  "nodos_previos": [
+    "distribucion_exponencial"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_identificacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita predecir vida útil o tasa de fallos de un componente",
+    "Cuando los datos no se ajustan claramente a normal o exponencial"
+  ]
+}

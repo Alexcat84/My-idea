@@ -1,0 +1,29 @@
+{
+  "node_id": "cribado_de_datos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Cribado de Datos (Data Screening)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El cribado de datos consiste en detectar valores atípicos (outliers) o errores de transcripción antes del análisis. Un método común clasifica como outlier a observaciones fuera de un intervalo de L desviaciones estándar de la media (L típicamente 2.5, 3 o 4). Los outliers solo deben eliminarse si pueden rastrearse a causas específicas; de lo contrario existe riesgo de eliminar información valiosa. También se usan métodos visuales como diagramas de dispersión y análisis de regresión con residuos.",
+  "pasos_accionables": [
+    "Calcular la media y desviación estándar del conjunto de datos",
+    "Definir el multiplicador L según el tamaño de la muestra (ej. L=3 para n=1000, L=2.5 para n=100)",
+    "Identificar observaciones fuera del intervalo ±L desviaciones estándar",
+    "Investigar la causa de cada posible outlier antes de eliminarlo",
+    "Visualizar los datos con diagramas de caja o dispersión para detectar anomalías",
+    "Repetir el cribado tras corregir o eliminar datos erróneos"
+  ],
+  "entregable_esperado": "Conjunto de datos depurado y validado, con outliers identificados y justificados, listo para análisis estadístico",
+  "nodos_previos": [
+    "diseno_de_metodos_de_recoleccion_de_datos",
+    "analisis_de_sistemas_de_medicion_msa"
+  ],
+  "nodos_siguientes": [
+    "resumen_de_datos_graficos",
+    "estadistica_basica_calidad",
+    "curva_banera_periodos_fallo"
+  ],
+  "condiciones_activacion": [
+    "Antes de realizar cualquier análisis estadístico formal sobre un conjunto de datos recolectado"
+  ]
+}

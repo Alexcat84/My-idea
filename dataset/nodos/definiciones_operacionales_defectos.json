@@ -1,0 +1,25 @@
+{
+  "node_id": "definiciones_operacionales_defectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Definiciones Operacionales para Clasificación de Defectos",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming recomienda abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector, y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
+  "pasos_accionables": [
+    "Reunir a supervisores, operadores y calidad para definir criterios objetivos de aceptación/rechazo por tipo de defecto",
+    "Redactar definiciones operacionales claras, medibles y sin ambigüedad para cada categoría de defecto",
+    "Diseñar pruebas estadísticas para validar que las definiciones se aplican de manera consistente entre diferentes inspectores",
+    "Capacitar a todo el personal de producción e inspección en las nuevas definiciones"
+  ],
+  "entregable_esperado": "Manual de definiciones operacionales de defectos, validado estadísticamente y comunicado a todo el personal relevante",
+  "nodos_previos": [
+    "reporte_gerencial_diagnostico_calidad"
+  ],
+  "nodos_siguientes": [
+    "abolir_inspeccion_masiva"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe ambigüedad o inconsistencia en cómo distintos inspectores clasifican defectos",
+    "Cuando el sistema actual permite que el criterio subjetivo del inspector determine si un defecto llega o no al cliente"
+  ]
+}

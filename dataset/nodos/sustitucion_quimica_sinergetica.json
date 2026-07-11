@@ -1,0 +1,25 @@
+{
+  "node_id": "sustitucion_quimica_sinergetica",
+  "fase_proyecto": "planificacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Sustitución Química Sinergética",
+  "fuente": "Cradle to Cradle - Michael Braungart",
+  "resumen_teorico": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema. Braungart advierte que muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque no se analiza el conjunto de interacciones químicas ni la disponibilidad real de los materiales sustitutos en la naturaleza. Existen bases de datos de materiales (más de 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
+  "pasos_accionables": [
+    "Mapear todos los componentes químicos del producto y su función",
+    "Consultar bases de datos de materiales para identificar alternativas menos tóxicas",
+    "Evaluar las interacciones sinérgicas entre los nuevos materiales y los existentes",
+    "Verificar la disponibilidad y el impacto de extracción del material sustituto antes de adoptarlo"
+  ],
+  "entregable_esperado": "Una matriz de sustitución de materiales que incluya análisis de sinergia, toxicidad relativa y disponibilidad de recursos",
+  "nodos_previos": [
+    "cradle_to_cradle_concepto"
+  ],
+  "nodos_siguientes": [
+    "sistema_take_back"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario planea reemplazar un material tóxico sin haber evaluado el reemplazo en su totalidad",
+    "Si existe presión regulatoria para eliminar una sustancia específica del producto"
+  ]
+}

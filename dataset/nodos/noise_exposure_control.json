@@ -1,0 +1,26 @@
+{
+  "node_id": "noise_exposure_control",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Control de Exposición al Ruido Ocupacional",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_teorico": "Programa para identificar, medir y controlar niveles de ruido superiores a 85 decibeles en el lugar de trabajo, incluyendo conservación auditiva, pruebas audiométricas y uso de protección auditiva.",
+  "pasos_accionables": [
+    "Medir los niveles de ruido con sonómetro u analizador de bandas de octava.",
+    "Implementar un programa de conservación auditiva cuando se identifique exposición excesiva.",
+    "Proveer protección auditiva adecuada y capacitar en su uso correcto.",
+    "Realizar pruebas audiométricas periódicas a trabajadores en áreas ruidosas.",
+    "Colocar señalización de advertencia en zonas de alto ruido."
+  ],
+  "entregable_esperado": "Mapa de niveles de ruido, programa de conservación auditiva implementado y registros de pruebas audiométricas.",
+  "nodos_previos": [
+    "medical_services_first_aid"
+  ],
+  "nodos_siguientes": [
+    "personal_protective_equipment",
+    "permit_required_confined_spaces"
+  ],
+  "condiciones_activacion": [
+    "Cuando existan áreas de trabajo con niveles de ruido que puedan superar los 85 decibeles."
+  ]
+}

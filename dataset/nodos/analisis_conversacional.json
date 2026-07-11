@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_conversacional",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Análisis Conversacional (Conversation Analysis)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "Técnica de notación de grano fino desarrollada por Maurice Nevile para transcripciones de voz, que captura pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características, basadas en teorías de interacción social, revelan cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
+  "pasos_accionables": [
+    "Aplicar notación estándar (pausas en segundos, micro-pausas, superposición con corchetes)",
+    "Marcar cambios de velocidad (más rápido/lento que el habla circundante)",
+    "Marcar cambios de tono (ascendente, descendente, dentro de palabra)",
+    "Identificar tokens como 'oh', 'um', 'ah'",
+    "Interpretar los patrones en conjunto, no aisladamente, para construir evidencia de fenómenos de interacción"
+  ],
+  "entregable_esperado": "Transcripción con notación de análisis conversacional e interpretación de patrones de interacción",
+  "nodos_previos": [
+    "construccion_timeline_resolucion"
+  ],
+  "nodos_siguientes": [
+    "conexion_comportamiento_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere evidencia detallada y concreta sobre calidad de coordinación entre operadores",
+    "Cuando se sospecha pérdida de gestión de recursos de equipo (CRM)"
+  ]
+}

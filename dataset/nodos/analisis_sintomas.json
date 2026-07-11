@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_sintomas",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Síntomas del Problema",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Etapa que busca comprender la situación actual del problema respondiendo preguntas sobre frecuencia, severidad, tipos de fallas y ubicación en el proceso. Este análisis es fundamental para orientar la búsqueda de causas, de forma similar a conocer el punto de partida antes de trazar una ruta hacia un destino.",
+  "pasos_accionables": [
+    "Recolectar datos detallados sobre la ocurrencia del problema.",
+    "Usar diagramas de flujo de proceso para ubicar dónde ocurre la falla.",
+    "Aplicar análisis de Pareto y estratificación para identificar patrones.",
+    "Documentar la frecuencia, severidad y tipo de fallas observadas."
+  ],
+  "entregable_esperado": "Un análisis documentado de síntomas que describe claramente la situación actual del problema (frecuencia, severidad, ubicación).",
+  "nodos_previos": [
+    "definicion_problema_moms",
+    "definicion_problema_moms_2",
+    "herramientas_analisis_causa_raiz"
+  ],
+  "nodos_siguientes": [
+    "formulacion_teorias_causa"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha definido el problema y se requiere entender su comportamiento actual antes de buscar causas."
+  ]
+}

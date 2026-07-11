@@ -1,0 +1,37 @@
+{
+  "node_id": "niveles_calidad_muestreo_aql_lql_aoql",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Índices de Calidad para Planes de Muestreo (AQL, LQL, IQL, AOQL)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor.",
+  "pasos_accionables": [
+    "Definir qué nivel de no conformidad es aceptable como promedio de proceso (AQL) según necesidades del producto",
+    "Establecer el nivel de calidad límite inaceptable (LQL/LTPD) y el riesgo del consumidor asociado",
+    "Calcular o consultar el AOQL para conocer el peor caso de calidad de salida promedio",
+    "Comunicar a proveedores internos y externos que el AQL no autoriza enviar producto no conforme deliberadamente"
+  ],
+  "entregable_esperado": "Documento con los índices de calidad (AQL, LQL, AOQL) definidos y justificados para el producto o proceso a inspeccionar",
+  "nodos_previos": [
+    "curva_caracteristica_operativa",
+    "muestreo_de_aceptacion"
+  ],
+  "nodos_siguientes": [
+    "seleccion_plan_muestreo_ansi_z14",
+    "tipos_planes_muestreo_atributos_variables"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita diseñar o evaluar un esquema de inspección por muestreo de lotes",
+    "Si existe negociación de calidad aceptable entre comprador y proveedor"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "indices_calidad_muestreo",
+      "titulo": "Índices de Calidad para Planes de Muestreo (AQL, LQL, IQL, AOQL)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "ids_alias": [
+    "indices_calidad_muestreo"
+  ]
+}

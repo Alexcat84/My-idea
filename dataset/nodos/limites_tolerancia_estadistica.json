@@ -1,0 +1,25 @@
+{
+  "node_id": "limites_tolerancia_estadistica",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Límites de Tolerancia Estadística basados en Variabilidad del Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Metodología para establecer límites de especificación realistas basados en la capacidad real del proceso de manufactura, usando datos muestrales para calcular límites naturales de tolerancia (basados en 3 desviaciones estándar) o límites de tolerancia estadística más precisos (que incorporan un factor K según el nivel de confianza y porcentaje de población deseado).",
+  "pasos_accionables": [
+    "Obtener una muestra representativa de datos del proceso de manufactura",
+    "Calcular el promedio y la desviación estándar de la muestra",
+    "Determinar el factor K correspondiente al nivel de confianza y porcentaje de población deseado (tabla de factores)",
+    "Calcular los límites de tolerancia estadística como promedio ± K*s",
+    "Comparar estos límites con los límites funcionales requeridos y verificar estabilidad del proceso con carta de control"
+  ],
+  "entregable_esperado": "Límites de tolerancia estadística documentados junto con la evaluación de estabilidad del proceso mediante carta de control",
+  "nodos_previos": [
+    "limites_especificacion_funcionales"
+  ],
+  "nodos_siguientes": [
+    "limites_especificacion_dimensiones_interactuantes"
+  ],
+  "condiciones_activacion": [
+    "Cuando se dispone de datos de proceso y se necesita establecer límites de especificación realistas y estadísticamente fundamentados"
+  ]
+}

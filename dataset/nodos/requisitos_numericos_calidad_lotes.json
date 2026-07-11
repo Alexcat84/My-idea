@@ -1,0 +1,35 @@
+{
+  "node_id": "requisitos_numericos_calidad_lotes",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Requisitos Numéricos de Calidad y Confiabilidad para Lotes",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, generando confusión en discusiones de responsabilidad del producto.",
+  "pasos_accionables": [
+    "Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)",
+    "Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas",
+    "Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos",
+    "Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)"
+  ],
+  "entregable_esperado": "Plan de muestreo de aceptación con índices numéricos de calidad y confiabilidad definidos y comunicados al proveedor",
+  "nodos_previos": [
+    "especificacion_requisitos_proveedores"
+  ],
+  "nodos_siguientes": [
+    "definicion_sistema_calidad_proveedor"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere decidir la aceptación o rechazo de lotes de producto mediante muestreo",
+    "Cuando existe riesgo de confusión estadística con el proveedor sobre niveles de calidad aceptables"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "requisitos_numericos_calidad_lotes_2",
+      "titulo": "Definición de Requisitos Numéricos de Calidad y Confiabilidad para Lotes",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "ids_alias": [
+    "requisitos_numericos_calidad_lotes_2"
+  ]
+}

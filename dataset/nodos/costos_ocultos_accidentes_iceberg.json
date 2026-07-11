@@ -1,0 +1,26 @@
+{
+  "node_id": "costos_ocultos_accidentes_iceberg",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "El Modelo del Iceberg de Costos Ocultos de los Accidentes",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Los costos visibles de un accidente (recuperables por seguro) representan solo una fracción del costo real: por cada libra recuperada del seguro, entre 5 y 50 libras adicionales se pierden en costos indirectos no asegurados (daño a productos, planta, equipos, costos legales, retrasos de producción, horas extra, tiempo de investigación, y daño reputacional/moral). Grandes eventos en la industria petroquímica (Piper Alpha, Exxon Valdez) han costado miles de millones de dólares. Esto refuerza que la gestión de seguridad no es un costo sino una inversión que previene pérdidas catastróficas para el negocio.",
+  "pasos_accionables": [
+    "Calcular el costo total estimado de incidentes pasados incluyendo costos indirectos (no solo lo cubierto por seguro)",
+    "Presentar a la alta dirección un análisis costo-beneficio de la inversión en prevención vs. el costo potencial de un accidente mayor",
+    "Incluir en el análisis de riesgo estimaciones de daño reputacional, pérdida de negocio y dificultades de reclutamiento",
+    "Usar estudios de 'loss costing' (como el realizado por HSE-Chevron) para dimensionar el costo real de incidentes menores acumulados"
+  ],
+  "entregable_esperado": "Análisis de costo total de incidentes (directos + indirectos) que sustente inversión en gestión de riesgos ante la dirección",
+  "nodos_previos": [
+    "condiciones_latentes_riesgo_universal",
+    "limite_busqueda_causas_pendulo"
+  ],
+  "nodos_siguientes": [
+    "planificacion_recuperacion_post_accidente"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita justificar presupuesto para gestión de riesgos ante la alta dirección",
+    "Al preparar un caso de negocio (business case) para inversión en seguridad de procesos"
+  ]
+}

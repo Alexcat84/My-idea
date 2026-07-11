@@ -1,0 +1,30 @@
+{
+  "node_id": "mapeo_flujo_valor",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Mapeo de Flujo de Valor (De la Concepción a la Comercialización)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El mapeo de flujo de valor documenta todas las actividades necesarias para llevar un producto desde la concepción hasta la comercialización, incluyendo flujo de materiales e información. Permite distinguir actividades de valor agregado, actividades sin valor agregado pero necesarias, y actividades sin valor agregado. Se desarrollan mapas del estado actual y estado futuro para guiar la implementación de mejoras hacia el estado deseado.",
+  "pasos_accionables": [
+    "Entrenar al equipo en conceptos clave de Lean y VSM",
+    "Mapear el estado actual documentando tiempos de ciclo, inventarios, tiempos de espera y capacidad",
+    "Clasificar actividades en valor agregado, no valor agregado necesario, y desperdicio puro",
+    "Diseñar el mapa del estado futuro deseado",
+    "Implementar cambios y validar mejoras contra el mapa futuro"
+  ],
+  "entregable_esperado": "Mapa de flujo de valor actual y futuro documentado con métricas de proceso y plan de implementación",
+  "nodos_previos": [
+    "ocho_desperdicios_lean",
+    "takt_time"
+  ],
+  "nodos_siguientes": [
+    "sistema_pull_push",
+    "eventos_kaizen_rie",
+    "planificacion_inicial_calidad",
+    "tres_tipos_desperdicio_tps"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita entender el estado actual de un proceso para identificar oportunidades de mejora",
+    "Cuando se planifica una transformación Lean en una línea de producción o servicio"
+  ]
+}

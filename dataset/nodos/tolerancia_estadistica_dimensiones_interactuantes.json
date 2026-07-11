@@ -1,0 +1,27 @@
+{
+  "node_id": "tolerancia_estadistica_dimensiones_interactuantes",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Tolerancia Estadística para Dimensiones Interactuantes",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando varios componentes se ensamblan para formar un resultado final, la simple suma de tolerancias es matemáticamente correcta pero excesivamente conservadora. El enfoque estadístico usa la relación entre varianzas (raíz de la suma de cuadrados de las tolerancias) para establecer tolerancias de componentes más amplias sin afectar la tolerancia del ensamble, asumiendo independencia y distribución normal de los componentes.",
+  "pasos_accionables": [
+    "Identificar las dimensiones de componentes que interactúan en el ensamble final",
+    "Verificar que los componentes se fabriquen de forma independiente y aleatoria",
+    "Confirmar que cada dimensión de componente sigue una distribución normal",
+    "Aplicar la fórmula de raíz de suma de cuadrados de tolerancias para calcular la tolerancia del ensamble",
+    "Ajustar tolerancias de componentes individuales usando el factor de corrección de Bender (1.5) si es necesario",
+    "Calcular el riesgo residual de que un ensamble caiga fuera de tolerancia"
+  ],
+  "entregable_esperado": "Especificación de tolerancias de componentes optimizada mediante el método estadístico de raíz de suma de cuadrados",
+  "nodos_previos": [
+    "funcion_perdida_limites_especificacion"
+  ],
+  "nodos_siguientes": [
+    "capacidad_proceso_concepto"
+  ],
+  "condiciones_activacion": [
+    "Cuando un producto ensamblado depende de múltiples dimensiones de componentes independientes",
+    "Cuando la suma simple de tolerancias resulta demasiado restrictiva para el proceso de manufactura"
+  ]
+}

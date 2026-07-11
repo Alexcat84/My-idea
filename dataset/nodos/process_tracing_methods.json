@@ -1,0 +1,28 @@
+{
+  "node_id": "process_tracing_methods",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Métodos de Rastreo de Procesos (Process-Tracing)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Los métodos de process-tracing son una familia de técnicas de análisis de tareas cognitivas que buscan reconstruir cómo evolucionó la comprensión de los practicantes en paralelo con la situación que se desarrollaba durante un episodio de resolución de problemas (por ejemplo, un incidente o accidente). Construyen dos relatos paralelos: uno en el lenguaje específico del dominio (contexto) y otro en términos conceptuales (dependientes de conceptos), que permiten reconocer patrones y regularidades de desempeño humano —incluso comparables entre distintos dominios— en lugar de ver solo una masa de datos sin sentido. Son indispensables para investigar por qué tuvo sentido para los practicantes actuar como lo hicieron, dado lo que sabían en ese momento.",
+  "pasos_accionables": [
+    "Recolectar datos crudos del episodio (registros, transcripciones, testimonios, datos de sistemas)",
+    "Construir el relato específico del dominio en el lenguaje técnico de los practicantes",
+    "Identificar y aplicar conceptos dependientes (ej. sorpresa de automatización, carga de trabajo) para interpretar los datos",
+    "Buscar regularidades y patrones de desempeño humano a través de los dos relatos paralelos",
+    "Documentar las conclusiones evitando el lenguaje de déficit humano (culpar, señalar fallos)"
+  ],
+  "entregable_esperado": "Un informe de investigación de incidente/accidente que incluya el relato dual (contexto-específico y conceptual) explicando por qué las acciones de los practicantes tuvieron sentido dado su contexto y comprensión en el momento.",
+  "nodos_previos": [
+    "new_view_vs_old_view_de_error_humano",
+    "limite_busqueda_causas_pendulo"
+  ],
+  "nodos_siguientes": [
+    "perspectiva_dentro_del_tunel"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita investigar un incidente o accidente y entender la perspectiva de los involucrados",
+    "Cuando se busca ir más allá de simplemente listar errores humanos",
+    "Cuando se requiere generar conocimiento transferible sobre patrones de cognición y desempeño para prevenir futuros eventos"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "proceso_como_cadena_de_etapas",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "El Proceso como Cadena de Etapas Cliente-Proveedor",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Todo trabajo y actividad forma parte de un proceso, representable mediante un diagrama de flujo que divide el trabajo en etapas. Cada etapa tiene un cliente (la siguiente etapa) y recibe entradas de un proveedor (la etapa anterior). Ninguna etapa debe operar buscando su máximo beneficio individual; todas deben trabajar coordinadamente hacia la satisfacción óptima del cliente final. Este marco es la base para diagnosticar dónde ocurren los problemas de calidad.",
+  "pasos_accionables": [
+    "Mapear el proceso completo desde el proveedor inicial hasta el cliente final en un diagrama de flujo",
+    "Identificar en cada etapa quién es el cliente inmediato y qué necesita",
+    "Preguntar en cada etapa: ¿Qué puedo hacer por ti? ¿Qué podrías hacer tú por mí?",
+    "Detectar dónde la optimización local de una etapa perjudica al conjunto del proceso"
+  ],
+  "entregable_esperado": "Un diagrama de flujo del proceso principal de la organización con etapas, clientes y proveedores identificados",
+  "nodos_previos": [
+    "ciclo_shewhart_pdsa",
+    "plan_de_accion_transformacion"
+  ],
+  "nodos_siguientes": [
+    "preguntas_para_formacion_de_equipos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita diagnosticar en qué punto del proceso se originan defectos o desperdicios",
+    "Si distintas áreas trabajan de forma aislada sin coordinación hacia el cliente final"
+  ]
+}

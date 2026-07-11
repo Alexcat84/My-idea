@@ -1,0 +1,29 @@
+{
+  "node_id": "reporte_gerencial_diagnostico_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Reporte de Diagnóstico a la Gerencia sobre Fallas del Sistema de Calidad",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming presenta un modelo real de informe consultivo a la alta dirección, que documenta con datos existentes (auditorías de calidad) los problemas sistémicos de una planta: defectos mayores constantes, inspección al 200% ineficaz, retrabajo excesivo, trabajo a destajo (piece work) como causa raíz de mala calidad, y ausencia de definiciones operacionales claras. El reporte concluye que la inspección masiva y la nueva maquinaria no resuelven el problema si la gerencia no asume su responsabilidad de rediseñar el sistema.",
+  "pasos_accionables": [
+    "Recopilar y analizar datos históricos de auditoría de calidad (defectos mayores/menores) que ya existen en la organización",
+    "Documentar el flujo real de detección y manejo de defectos (quién los repara, quién los deja pasar y por qué)",
+    "Identificar si existe trabajo a destajo (piece work) y evaluar su impacto en la calidad",
+    "Redactar un informe estructurado a la gerencia con hallazgos, causas raíz y opciones de acción (mantener status quo, reducir costos manteniendo defectos, o rediseñar el sistema)",
+    "Recomendar explícitamente la eliminación de la distinción arbitraria entre defectos mayores/menores y la creación de definiciones operacionales claras"
+  ],
+  "entregable_esperado": "Documento de diagnóstico e informe a la gerencia con datos de auditoría, causas raíz identificadas y plan de acción para rediseño del sistema de calidad",
+  "nodos_previos": [
+    "trampa_del_promedio_como_estandar",
+    "causas_comunes_vs_especiales"
+  ],
+  "nodos_siguientes": [
+    "eliminar_trabajo_a_destajo",
+    "definiciones_operacionales_defectos",
+    "abolir_inspeccion_masiva"
+  ],
+  "condiciones_activacion": [
+    "Cuando una planta tiene niveles crónicos de defectos y la gerencia atribuye el problema solo a falta de maquinaria nueva",
+    "Cuando existen datos de auditoría de calidad que nunca han sido analizados con fines de mejora"
+  ]
+}

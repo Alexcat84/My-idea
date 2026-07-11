@@ -1,0 +1,26 @@
+{
+  "node_id": "diseno_experimentos_doe_mejora",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Diseño de Experimentos (DOE) en la Fase de Mejora",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "En la fase de mejora de Six Sigma, el equipo utiliza Diseños de Experimentos (DOE) para cuantificar la relación causa-efecto entre las variables de entrada (Xs) y salida (Ys). Se emplean experimentos de cribado (factoriales fraccionados) para identificar los 'pocos vitales', seguidos de experimentos factoriales 2k para construir modelos matemáticos predictivos, y si es necesario, experimentos factoriales completos, RSM o EVOP para optimizar el rendimiento del proceso.",
+  "pasos_accionables": [
+    "Planificar los experimentos diseñados requeridos por el proyecto",
+    "Realizar experimentos de cribado factorial fraccionado para reducir la lista de Xs",
+    "Ejecutar experimentos factoriales 2k para construir el modelo matemático",
+    "Realizar experimentos factoriales completos si se requiere más información",
+    "Aplicar RSM o EVOP para optimizar los parámetros del proceso",
+    "Derivar el modelo matemático final y establecer ajustes óptimos de los parámetros"
+  ],
+  "entregable_esperado": "Modelo matemático de predicción del proceso y configuración óptima de parámetros de proceso (Xs)",
+  "nodos_previos": [
+    "dmaic_fase_improve"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_seleccion_alternativas_mejora"
+  ],
+  "condiciones_activacion": [
+    "Cuando se han identificado los Xs vitales y se requiere modelar matemáticamente su relación con los Ys para optimizar el proceso"
+  ]
+}

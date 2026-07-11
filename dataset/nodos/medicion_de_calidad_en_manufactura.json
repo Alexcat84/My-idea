@@ -1,0 +1,27 @@
+{
+  "node_id": "medicion_de_calidad_en_manufactura",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Medición de Calidad en Operaciones de Manufactura",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La gestión de procesos clave de trabajo debe incluir mediciones sistemáticas. La productividad se define como la relación entre el output y los recursos de entrada, y debe calcularse usando únicamente el output aceptable (utilizable por el cliente), no el output total. La selección y reporte periódico de estas unidades de medida comunica al personal que la calidad es prioritaria, sentando las bases para la mejora continua.",
+  "pasos_accionables": [
+    "Definir las unidades de medida relevantes para cada actividad de manufactura",
+    "Calcular productividad usando solo el output aceptable, no el total",
+    "Establecer un sistema de recolección y reporte periódico de datos",
+    "Aplicar técnicas estadísticas (como cartas de control) para analizar los datos"
+  ],
+  "entregable_esperado": "Sistema de indicadores de calidad y productividad implementado con reportes periódicos",
+  "nodos_previos": [
+    "auditoria_de_producto",
+    "auditoria_de_proceso",
+    "auditoria_de_producto_2"
+  ],
+  "nodos_siguientes": [
+    "enfoque_mejora_continua_operaciones"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización mide únicamente el output total sin diferenciar aceptable de no aceptable",
+    "Cuando se busca sentar bases de datos para mejora continua"
+  ]
+}

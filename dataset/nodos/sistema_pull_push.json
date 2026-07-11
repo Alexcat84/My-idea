@@ -1,0 +1,27 @@
+{
+  "node_id": "sistema_pull_push",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistemas Pull versus Push en Producción",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en pronósticos de demanda, ignorando restricciones y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando es autorizado según el estado del proceso y la demanda real del cliente, mejorando el flujo y reduciendo el WIP (trabajo en proceso).",
+  "pasos_accionables": [
+    "Evaluar el sistema actual de producción para determinar si opera bajo push o pull",
+    "Implementar mecanismos Just-in-Time y kanbans para habilitar el sistema pull",
+    "Establecer señales de reposición basadas en el consumo real del cliente",
+    "Reducir el inventario en proceso mediante el sistema de tracción",
+    "Monitorear la reducción del tiempo de entrega y mejora de la confiabilidad"
+  ],
+  "entregable_esperado": "Sistema de producción rediseñado bajo lógica pull con kanbans implementados y métricas de flujo mejoradas",
+  "nodos_previos": [
+    "mapeo_flujo_valor",
+    "tres_tipos_desperdicio_tps"
+  ],
+  "nodos_siguientes": [
+    "eventos_kaizen_rie"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización presenta exceso de inventario en proceso (WIP)",
+    "Cuando existen fluctuaciones en la demanda que generan desbalance de capacidad"
+  ]
+}

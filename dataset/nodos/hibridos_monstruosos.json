@@ -1,0 +1,24 @@
+{
+  "node_id": "hibridos_monstruosos",
+  "fase_proyecto": "validacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Híbridos Monstruosos (Monstrous Hybrids)",
+  "fuente": "Cradle to Cradle - Michael Braungart",
+  "resumen_teorico": "Concepto que describe productos compuestos por mezclas inseparables de materiales biológicos y técnicos, lo cual impide que ninguno de los dos pueda recuperarse o reincorporarse de forma segura a su metabolismo correspondiente tras el uso. El ejemplo clásico es el zapato de cuero convencional, curtido con cromo y con suela de caucho con plomo, que no puede biodegradarse ni reciclarse de forma segura.",
+  "pasos_accionables": [
+    "Auditar el producto actual identificando combinaciones de materiales técnicos y biológicos mezclados de forma permanente",
+    "Sustituir procesos de mezcla irreversible por diseños desmontables o mono-materiales",
+    "Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente"
+  ],
+  "entregable_esperado": "Reporte de auditoría de materiales que señale los puntos de hibridación problemática en el producto y propuestas de rediseño",
+  "nodos_previos": [
+    "metabolismo_biologico_y_tecnico"
+  ],
+  "nodos_siguientes": [
+    "nutrientes_biologicos"
+  ],
+  "condiciones_activacion": [
+    "Cuando un producto no puede reciclarse ni biodegradarse tras su vida útil",
+    "Cuando se detectan materiales tóxicos ocultos en combinaciones de manufactura"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "node_id": "redes_de_seguridad_regulatoria",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Redes de Seguridad Regulatoria (Safety Net)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Concepto derivado del caso Dryden: la seguridad de un sistema complejo depende de múltiples capas de defensa regulatoria (guías, auditorías, manuales aprobados, certificación de personal, reporte de anomalías). Cuando varias de estas capas fallan simultáneamente por razones sistémicas (desregulación, recortes presupuestarios, burocracia excesiva), la red de seguridad colectiva se rompe y permite que fallas individuales se traduzcan en catástrofes.",
+  "pasos_accionables": [
+    "Mapear todas las capas de defensa regulatoria existentes en la organización (manuales, auditorías, certificaciones, listas de equipo mínimo)",
+    "Verificar el estado real de cada capa (¿existe el manual aprobado? ¿está actualizado? ¿se audita realmente?)",
+    "Identificar puntos donde múltiples capas dependen de los mismos recursos limitados",
+    "Diseñar redundancia real entre capas de control para evitar fallas simultáneas"
+  ],
+  "entregable_esperado": "Mapa de capas de defensa regulatoria con estado de cada una y plan de refuerzo de redundancias críticas",
+  "nodos_previos": [
+    "conflicto_de_objetivos_en_organismos_reguladores"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se detectan múltiples deficiencias regulatorias simultáneas en una organización",
+    "Cuando un proceso de desregulación o recorte presupuestario ha reducido la capacidad de supervisión"
+  ]
+}

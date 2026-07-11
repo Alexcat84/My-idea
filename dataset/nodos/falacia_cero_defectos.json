@@ -1,0 +1,24 @@
+{
+  "node_id": "falacia_cero_defectos",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "La falacia del cero defectos",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "La suposición de que todo está bien dentro de los límites de especificación y mal fuera de ellos no corresponde a la realidad. Una descripción más precisa es la función de pérdida de Taguchi, donde la pérdida es mínima en el valor nominal y aumenta progresivamente conforme se aleja de él en cualquier dirección. Dispositivos que fuerzan el cumplimiento de especificaciones ('cero defectos') pueden destaparse una distribución angosta y aumentar las pérdidas reales.",
+  "pasos_accionables": [
+    "Reemplazar el criterio binario de conformidad/no conformidad por la función de pérdida de Taguchi",
+    "Buscar reducir la variación alrededor del valor nominal, no solo estar dentro de límites",
+    "Evitar mecanismos que fuercen artificialmente el cumplimiento de especificaciones sin reducir variación real",
+    "Medir la pérdida económica asociada a la distancia del valor nominal, no solo el conteo de defectos"
+  ],
+  "entregable_esperado": "Un modelo de función de pérdida aplicado a los parámetros críticos de calidad del producto",
+  "nodos_previos": [
+    "insuficiencia_especificaciones"
+  ],
+  "nodos_siguientes": [
+    "pruebas_inadecuadas_prototipos"
+  ],
+  "condiciones_activacion": [
+    "Si la organización mide calidad únicamente por cumplimiento binario de especificaciones ('cero defectos')"
+  ]
+}

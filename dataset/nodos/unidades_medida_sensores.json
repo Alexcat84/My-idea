@@ -1,0 +1,27 @@
+{
+  "node_id": "unidades_medida_sensores",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Establecimiento de Unidades de Medida y Sensores",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Para comunicar la calidad con precisión, es necesario 'decirlo en números'. Esto requiere definir una unidad de medida (cantidad definida de una característica de calidad) y un sensor (método o instrumento que evalúa y expresa esa característica en términos de la unidad). Aplica tanto a bienes (unidades técnicas como tiempo, temperatura) como a servicios (prontitud, cortesía) y a abstracciones (belleza, sabor), las cuales deben descomponerse en componentes medibles.",
+  "pasos_accionables": [
+    "Preguntar al cliente cuáles son sus unidades de medida implícitas o explícitas para evaluar calidad",
+    "Definir una unidad de medida para cada necesidad o característica identificada",
+    "Seleccionar o diseñar un sensor (instrumento, método o juicio humano) que evalúe esa unidad",
+    "Para abstracciones, descomponer la característica en componentes observables y medibles",
+    "Validar que la unidad de medida sea entendible, económica y de interpretación uniforme"
+  ],
+  "entregable_esperado": "Lista de necesidades del cliente con su unidad de medida y sensor correspondiente definidos",
+  "nodos_previos": [
+    "traduccion_necesidades_cliente"
+  ],
+  "nodos_siguientes": [
+    "precision_exactitud_sensores",
+    "product_design_spreadsheet"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita cuantificar necesidades cualitativas o abstractas del cliente",
+    "Cuando se busca comparar objetivamente el desempeño de calidad entre operaciones"
+  ]
+}

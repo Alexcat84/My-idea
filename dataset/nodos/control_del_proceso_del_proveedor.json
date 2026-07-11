@@ -1,0 +1,31 @@
+{
+  "node_id": "control_del_proceso_del_proveedor",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Plan de Control de Proceso del Proveedor",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. También incluye tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
+  "pasos_accionables": [
+    "Solicitar al proveedor un plan escrito de control del proceso de manufactura",
+    "Incluir requisitos de SPC para detección temprana de defectos",
+    "Definir tareas especiales y buenas prácticas de manufactura requeridas",
+    "Clasificar la seriedad de los defectos para priorizar esfuerzos",
+    "Establecer estándares sensoriales físicos cuando se requiera juicio humano",
+    "Estandarizar métodos y condiciones de prueba entre proveedor y comprador"
+  ],
+  "entregable_esperado": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados",
+  "nodos_previos": [
+    "planificacion_cadena_suministro",
+    "dmadv_design_for_six_sigma"
+  ],
+  "nodos_siguientes": [
+    "certificacion_de_proveedores",
+    "clasificacion_de_seriedad_de_defectos",
+    "clasificacion_de_seriedad_de_defectos_2",
+    "mistake_proofing_poka_yoke_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se inicia una relación contractual con un nuevo proveedor de manufactura",
+    "Cuando existen discrepancias recurrentes en mediciones entre proveedor y comprador"
+  ]
+}

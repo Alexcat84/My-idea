@@ -1,0 +1,32 @@
+{
+  "node_id": "fallas_activas_condiciones_latentes",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Fallas Activas y Condiciones Latentes",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las fallas activas son errores y violaciones cometidos por el personal de primera línea ('sharp end') con efecto inmediato. Las condiciones latentes son consecuencias de decisiones tomadas en niveles superiores de la organización, que permanecen dormidas hasta que se combinan con otros factores para producir un fallo. Ambas crean 'agujeros' en las defensas del sistema; cuando se alinean, se abre una 'ventana de oportunidad' para el accidente.",
+  "pasos_accionables": [
+    "Identificar actos inseguros (errores/violaciones) cometidos en el momento del incidente",
+    "Buscar decisiones organizacionales previas (presupuesto, capacitación, dotación) que crearon condiciones latentes",
+    "Evaluar cómo ambos tipos de fallas coincidieron temporal y espacialmente"
+  ],
+  "entregable_esperado": "Lista clasificada de fallas activas vs condiciones latentes identificadas en el incidente",
+  "nodos_previos": [
+    "modelo_accidente_organizacional",
+    "defensas_en_profundidad_2",
+    "omisiones_en_mantenimiento",
+    "prueba_sustitucion_johnston",
+    "reglas_parada_investigacion_accidentes"
+  ],
+  "nodos_siguientes": [
+    "ventana_oportunidad_accidente",
+    "defensas_en_profundidad",
+    "caso_grietas_pequenas_mantenimiento_aeronaves",
+    "condiciones_latentes_largo_plazo",
+    "documentacion_mantenimiento_linea_base"
+  ],
+  "condiciones_activacion": [
+    "Al analizar por qué un accidente ocurrió pese a múltiples capas defensivas",
+    "Cuando se busca distinguir causas inmediatas de causas raíz"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "node_id": "modelo_accidente_organizacional",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Modelo de Etapas del Accidente Organizacional (Figura 1.6)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada'. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
+  "pasos_accionables": [
+    "Identificar el resultado adverso (outcome) y las defensas que fallaron",
+    "Determinar qué fallas activas y condiciones latentes permitieron el fallo de cada defensa",
+    "Rastrear qué condiciones locales del lugar de trabajo propiciaron los actos inseguros",
+    "Identificar qué factores organizacionales upstream generaron esas condiciones locales"
+  ],
+  "entregable_esperado": "Diagrama causal de tres niveles (organización-lugar de trabajo-individuo) aplicado al incidente analizado",
+  "nodos_previos": [
+    "diferenciacion_accidente_individual_organizacional"
+  ],
+  "nodos_siguientes": [
+    "reglas_parada_investigacion_accidentes",
+    "fallas_activas_condiciones_latentes",
+    "clasificacion_riesgos_por_dominio",
+    "condiciones_latentes_organizacionales",
+    "formal_safety_assessment_safety_case",
+    "normalizacion_de_la_desviacion",
+    "safety_ii_resiliencia",
+    "seduccion_modelo_persona"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga un accidente organizacional y se necesita estructurar la cadena causal",
+    "Al diseñar un protocolo de investigación de incidentes para una empresa"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node_id": "caracteristicas_tareas_propensas_omision",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Identificación de Pasos de Tarea Propensos a la Omisión",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional del paso (no está señalado por la acción anterior), ocurrencia después de alcanzado el objetivo principal, cercanía al final de la tarea, ocultamiento del ítem, cambios recientes de práctica, instalación de múltiples ítems similares, y dependencia de condiciones previas. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
+  "pasos_accionables": [
+    "Desglosar cada tarea de mantenimiento en sus pasos discretos",
+    "Evaluar cada paso contra la lista de características omission-prone (aislamiento funcional, cercanía al final, ocultamiento, etc.)",
+    "Marcar los pasos con múltiples características de riesgo como críticos",
+    "Diseñar controles específicos (recordatorios, verificaciones) para esos pasos críticos"
+  ],
+  "entregable_esperado": "Lista de pasos de tarea marcados por nivel de riesgo de omisión con justificación de características presentes",
+  "nodos_previos": [
+    "prevalencia_omisiones"
+  ],
+  "nodos_siguientes": [
+    "diseno_recordatorios_efectivos",
+    "diseno_recordatorios_efectivos_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se documentan o rediseñan procedimientos de mantenimiento altamente proceduralizados",
+    "Cuando se busca anticipar puntos de falla antes de que ocurran incidentes"
+  ]
+}

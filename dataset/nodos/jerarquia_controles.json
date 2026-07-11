@@ -1,0 +1,41 @@
+{
+  "node_id": "jerarquia_controles",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Jerarquía de Controles de Peligros",
+  "fuente": "OSHA3886",
+  "resumen_teorico": "Un modelo NIOSH que ordena las estrategias de control de peligros de más a menos efectivas: eliminación, sustitución, controles de ingeniería, controles administrativos y equipo de protección personal (EPP). Los controles más efectivos remueven físicamente el peligro; los menos efectivos dependen del comportamiento humano.",
+  "pasos_accionables": [
+    "Identificar opciones de control revisando estándares OSHA, literatura de fabricantes y experiencia de otros sitios",
+    "Priorizar eliminación o sustitución del peligro antes que controles administrativos o EPP",
+    "Evitar controles que introduzcan nuevos peligros",
+    "Combinar varios niveles de control cuando ninguno por sí solo sea suficiente",
+    "Aplicar principios de Prevención mediante el Diseño (PtD) al seleccionar equipos y materiales"
+  ],
+  "entregable_esperado": "Lista de controles seleccionados para cada peligro, ordenados según la jerarquía de controles",
+  "nodos_previos": [
+    "caracterizacion_priorizacion_peligros",
+    "priorizacion_caracterizacion_peligros",
+    "identificacion_peligros_salud",
+    "inspeccion_lugar_trabajo_peligros",
+    "investigacion_incidentes"
+  ],
+  "nodos_siguientes": [
+    "plan_control_peligros"
+  ],
+  "condiciones_activacion": [
+    "Cuando se deben seleccionar medidas de control para peligros priorizados",
+    "Cuando se evalúa si el EPP es la única medida usada, lo cual indica un control insuficiente"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "jerarquia_controles",
+      "titulo": "Jerarquía de Controles de Peligros",
+      "fuente": "OSHA3885"
+    }
+  ],
+  "ids_alias": [
+    "jerarquia_controles",
+    "jerarquia_controles_2"
+  ]
+}

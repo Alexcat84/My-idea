@@ -1,0 +1,28 @@
+{
+  "node_id": "analisis_flujo_proceso_servicio",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis del Diagrama de Flujo del Proceso de Servicio",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los diagramas de flujo de proceso (mapas de proceso o blueprints de servicio) permiten visualizar las actividades del servicio, identificando la 'línea de interacción' (donde cliente y empleados interactúan), la 'línea de invisibilidad' (actividades visibles vs no visibles para el cliente) y los límites organizacionales. Se identifican puntos de proceso (P) donde pueden ocurrir problemas que causen insatisfacción del cliente, permitiendo implementar acciones preventivas.",
+  "pasos_accionables": [
+    "Mapear todas las actividades del proceso de servicio incluyendo front-office y back-office",
+    "Identificar la línea de interacción cliente-empleado",
+    "Marcar la línea de invisibilidad entre actividades visibles y no visibles al cliente",
+    "Identificar puntos de proceso (P) donde pueden ocurrir problemas",
+    "Documentar problemas recurrentes conocidos (promesas no cumplidas, múltiples contactos, servicio incorrecto, etc.)",
+    "Implementar acciones preventivas en los puntos críticos identificados"
+  ],
+  "entregable_esperado": "Diagrama de flujo de servicio (blueprint) completo con puntos críticos marcados y plan de acciones preventivas",
+  "nodos_previos": [
+    "diseno_servicio_calidad"
+  ],
+  "nodos_siguientes": [
+    "reduccion_tiempo_ciclo",
+    "error_proofing_servicio"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita analizar y mejorar un proceso de servicio existente",
+    "Cuando se detectan problemas recurrentes de insatisfacción del cliente"
+  ]
+}

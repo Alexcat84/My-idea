@@ -1,0 +1,26 @@
+{
+  "node_id": "conversion_datos_co2e",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Conversión de Datos a Unidades CO2e",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Una vez recolectados los datos crudos (litros de gasolina, kilowatts-hora), se deben convertir a unidades estándar de CO2 equivalente usando factores de conversión predeterminados. Existen herramientas como calculadoras en línea, hojas de cálculo y software especializado que facilitan este proceso. Es importante ser transparente sobre recalculos si surgen errores significativos.",
+  "pasos_accionables": [
+    "Seleccionar una herramienta o calculadora con factores de conversión estándar",
+    "Convertir cada tipo de dato crudo a toneladas/kilogramos de CO2e",
+    "Revisar y validar los cálculos con un tercero si es posible",
+    "Estar preparado para recalcular si se detectan errores importantes"
+  ],
+  "entregable_esperado": "Reporte de huella de carbono en unidades CO2e estandarizadas por fuente de emisión",
+  "nodos_previos": [
+    "estrategia_recoleccion_datos_carbono",
+    "definir_limites_huella_carbono"
+  ],
+  "nodos_siguientes": [
+    "medir_residuos_empresa",
+    "neutralidad_carbono"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se tienen datos crudos de energía y combustible listos para procesar"
+  ]
+}

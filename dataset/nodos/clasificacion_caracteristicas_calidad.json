@@ -1,0 +1,25 @@
+{
+  "node_id": "clasificacion_caracteristicas_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Clasificación de Características y Defectos de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Consiste en elaborar dos listas: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
+  "pasos_accionables": [
+    "Derivar la lista de características de calidad a partir de las especificaciones del producto.",
+    "Elaborar la lista de defectos observados en manufactura y en campo.",
+    "Comparar ambas listas para identificar diferencias relevantes.",
+    "Usar la clasificación para priorizar esfuerzos de inspección."
+  ],
+  "entregable_esperado": "Documento con listas clasificadas de características de calidad y defectos asociados.",
+  "nodos_previos": [
+    "planificacion_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "clasificacion_seriedad",
+    "inspeccion_caracteristicas_sensoriales"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita priorizar qué aspectos del producto inspeccionar con mayor rigor."
+  ]
+}

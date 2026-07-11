@@ -1,0 +1,28 @@
+{
+  "node_id": "economia_de_la_inspeccion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Economía de la Inspección (Regla de Deming kp)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Determina el nivel óptimo de inspección (ninguna, muestreo o 100%) comparando el costo de inspección por unidad (I) contra el costo de daño por dejar pasar un defecto (A). El punto de equilibrio se calcula como pb = I/A: si la proporción defectuosa esperada (p) es mayor a pb, conviene inspección 100%; si es menor, conviene muestreo o ninguna inspección.",
+  "pasos_accionables": [
+    "Calcular el costo de inspección por unidad (I)",
+    "Calcular el costo de daño por defecto no detectado (A)",
+    "Determinar el punto de equilibrio pb = I/A",
+    "Comparar el nivel de calidad histórico (p) contra pb",
+    "Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado"
+  ],
+  "entregable_esperado": "Análisis costo-beneficio documentado que justifique el nivel de inspección elegido para un producto/proceso",
+  "nodos_previos": [
+    "errores_de_medicion",
+    "clasificacion_seriedad_defectos",
+    "inspeccion_automatizada"
+  ],
+  "nodos_siguientes": [
+    "muestreo_de_aceptacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir el nivel de inspección para un lote de producción",
+    "Cuando los costos de inspección o de fallas son significativos"
+  ]
+}

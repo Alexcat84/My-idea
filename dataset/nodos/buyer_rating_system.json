@@ -1,0 +1,25 @@
+{
+  "node_id": "buyer_rating_system",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistema de Calificación de Compradores (Buyer Rating)",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Método de medición aplicado al área de compras que consiste en cargar a cada agente comprador los errores causados por los proveedores que gestiona, generando una tasa de defectos por comprador. Esto expone diferencias de desempeño entre compradores y motiva mayor cuidado en la selección y gestión de proveedores.",
+  "pasos_accionables": [
+    "Definir un sistema de registro de defectos por proveedor asociado a cada comprador",
+    "Calcular tasas de defectos por comprador en lugar de solo por proveedor",
+    "Discutir los resultados con el equipo de compras antes de implementar",
+    "Usar los resultados para mejorar la selección y gestión de proveedores"
+  ],
+  "entregable_esperado": "Reporte de tasas de defectos por comprador implementado y compartido con el departamento de compras",
+  "nodos_previos": [
+    "medicion_calidad"
+  ],
+  "nodos_siguientes": [
+    "costo_de_calidad",
+    "costo_de_calidad_3"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples proveedores y no es práctico medir a cada uno individualmente"
+  ]
+}

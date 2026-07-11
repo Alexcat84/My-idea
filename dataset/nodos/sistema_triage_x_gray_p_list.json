@@ -1,0 +1,25 @@
+{
+  "node_id": "sistema_triage_x_gray_p_list",
+  "fase_proyecto": "planificacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Sistema de Triaje de Sustancias: Listas X, Gris y P",
+  "fuente": "Cradle to Cradle - Michael Braungart",
+  "resumen_teorico": "Es un método de inventario y clasificación de todos los materiales usados en un producto según su nivel de riesgo. La Lista X agrupa sustancias altamente peligrosas (carcinógenas, mutagénicas, teratogénicas) que deben eliminarse con prioridad. La Lista Gris incluye sustancias problemáticas pero actualmente esenciales, sin sustituto viable, que requieren manejo especial (ej. cadmio en paneles solares bajo esquema de servicio). La Lista P (positiva/preferida) reúne sustancias definidas como seguras y saludables, evaluadas por toxicidad, bioacumulación, biodegradabilidad y potencial de daño ambiental. Este triaje permite iniciar un rediseño 'pasivo' del producto, sustituyendo ingredientes sin cambiar su concepto fundamental.",
+  "pasos_accionables": [
+    "Realizar un inventario completo de todos los materiales y sustancias usadas en la fabricación y uso del producto.",
+    "Clasificar cada sustancia en Lista X (eliminar), Lista Gris (uso condicionado y gestionado) o Lista P (preferida).",
+    "Sustituir ingredientes de la Lista X por alternativas de la Lista P cuando sea posible, manteniendo el mismo diseño de producto.",
+    "Documentar sustancias en Lista Gris con plan de gestión (ej. propiedad retenida por el fabricante como en modelo de servicio)."
+  ],
+  "entregable_esperado": "Documento de clasificación (triaje) de todas las sustancias del producto en listas X, Gris y P, con plan de sustitución inicial.",
+  "nodos_previos": [
+    "estrategias_seleccion_preferencial"
+  ],
+  "nodos_siguientes": [
+    "activacion_lista_positiva"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario tiene un producto existente y necesita iniciar un proceso de rediseño gradual.",
+    "Si el usuario descubre que su producto contiene sustancias tóxicas desconocidas o no evaluadas."
+  ]
+}

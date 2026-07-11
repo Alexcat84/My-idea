@@ -1,0 +1,29 @@
+{
+  "node_id": "costo_optimo_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Costo Óptimo de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Modelo que relaciona los costos de fallas con los costos de evaluación y prevención para determinar el punto de menor costo total de calidad. Tradicionalmente se pensaba que existía un óptimo antes de la perfección, pero con la mejora en la capacidad de cuantificar el impacto de fallas en ventas, se reconoce que el mínimo costo total tiende hacia el 100% de conformidad (cero defectos) en el largo plazo.",
+  "pasos_accionables": [
+    "Graficar las curvas de costo de fallas y costo de evaluación/prevención",
+    "Identificar el punto de intersección o mínimo de la curva de costo total",
+    "Evaluar si existen proyectos de mejora económicamente justificables",
+    "Determinar si la organización se encuentra lejos del óptimo",
+    "Ajustar el presupuesto de prevención según el análisis de beneficio-costo"
+  ],
+  "entregable_esperado": "Análisis gráfico o numérico del punto óptimo de costo de calidad y recomendaciones de inversión",
+  "nodos_previos": [
+    "categorias_costos_calidad",
+    "costos_ocultos_calidad"
+  ],
+  "nodos_siguientes": [
+    "estudio_mercado_calidad",
+    "limitaciones_analisis_costo_beneficio",
+    "costo_de_mala_calidad_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita decidir cuánto invertir en prevención versus aceptar cierto nivel de fallas",
+    "Al evaluar si la mejora de calidad ha alcanzado su límite económico"
+  ]
+}

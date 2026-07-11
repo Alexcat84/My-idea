@@ -1,0 +1,27 @@
+{
+  "node_id": "tpm_maintenance",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Mantenimiento Productivo Total (TPM)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Filosofía de mantenimiento basada en la participación total de los empleados (mantenimiento autónomo), donde el operador es el experto del proceso y realiza tareas rutinarias de limpieza, lubricación y ajuste, enfocándose en eliminar pérdidas y lograr cero fallas y cero defectos.",
+  "pasos_accionables": [
+    "Capacitar a los operadores en mantenimiento autónomo básico",
+    "Establecer rutinas diarias de limpieza, lubricación y ajuste por parte del operador",
+    "Identificar y eliminar fuentes de pérdidas de productividad",
+    "Integrar TPM con 6S para sostenibilidad",
+    "Medir mejoras mediante indicadores de disponibilidad y desempeño de equipo"
+  ],
+  "entregable_esperado": "Programa de mantenimiento autónomo implementado con operadores capacitados",
+  "nodos_previos": [
+    "6s_workplace_organization",
+    "smed_setup_reduction"
+  ],
+  "nodos_siguientes": [
+    "rcm_reliability_centered_maintenance"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen fallas frecuentes de equipo o mantenimiento reactivo",
+    "Al buscar maximizar la disponibilidad de activos críticos"
+  ]
+}

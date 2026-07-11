@@ -1,0 +1,25 @@
+{
+  "node_id": "gestion_centro_datos_verde",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Optimización Energética del Centro de Datos (PUE/CADE)",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Los centros de datos consumen cerca del 1.5% de la energía total en EE.UU., cifra que se espera duplique. Métricas como PUE (Power Usage Effectiveness) y CADE (Corporate Average Data Center Efficiency) permiten medir y mejorar la eficiencia energética, buscando acercarse a un ratio ideal de 1.0 mediante optimización de refrigeración, humedad, flujo de aire y aprovechamiento de calor residual.",
+  "pasos_accionables": [
+    "Calcular el PUE actual (Potencia Total de Instalación / Potencia de Equipos TI)",
+    "Implementar soluciones de contención de aire frío/caliente entre racks",
+    "Ajustar termostatos de 'pasillos fríos' a 25-27°C en vez de 20-22°C",
+    "Instalar economizadores de agua o aire para aprovechar condiciones externas",
+    "Aprovechar calor residual de servidores para calefacción de oficinas"
+  ],
+  "entregable_esperado": "Reporte de métricas PUE/CADE con plan de mejora de eficiencia energética del centro de datos",
+  "nodos_previos": [
+    "virtualizacion_servidores",
+    "auditoria_ti_verde"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si la empresa opera su propio centro de datos",
+    "Si se busca reducir costos de refrigeración y energía en infraestructura TI"
+  ]
+}

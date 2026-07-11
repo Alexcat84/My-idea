@@ -1,0 +1,24 @@
+{
+  "node_id": "control_estadistico_de_metodo_de_prueba",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control Estadístico del Método de Prueba (Instrumento y Operador)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un método de medición (instrumento y operador) debe mostrar control estadístico en mediciones repetidas para poder considerarse válido. No basta con tener buen equipo; la precisión del método requiere que sea reproducible dentro de límites especificados entre diferentes operadores u observadores, independientemente del costo del equipo de prueba.",
+  "pasos_accionables": [
+    "Realizar mediciones repetidas del mismo ítem con el mismo instrumento y operador",
+    "Verificar mediante gráfico de control que las mediciones repetidas estén en control estadístico",
+    "Comparar resultados entre diferentes operadores o instrumentos para validar reproducibilidad",
+    "Rechazar el método de medición si no se logra control estadístico o reproducibilidad adecuada"
+  ],
+  "entregable_esperado": "Validación documentada de que el método de medición está en control estadístico y es reproducible",
+  "nodos_previos": [
+    "administracion_de_inspeccion",
+    "definiciones_operacionales_2"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se cuestiona la fiabilidad de un instrumento o método de medición",
+    "Cuando existen discrepancias entre mediciones de proveedor y comprador"
+  ]
+}

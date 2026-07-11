@@ -1,0 +1,31 @@
+{
+  "node_id": "dmadv_design_for_six_sigma",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "DMADV / Design for Six Sigma (DFSS)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "DMADV (Define, Measure, Analyze, Design, Verify) es la metodología Six Sigma orientada al diseño de nuevos productos, servicios o procesos sin defectos, en contraste con DMAIC que mejora procesos existentes. Se enfoca en traducir las necesidades del cliente en CTQs (Critical to Quality) y desarrollar un diseño completo que cumpla con estos requisitos desde el inicio, verificando que el diseño final entregue el valor esperado por el cliente.",
+  "pasos_accionables": [
+    "Define: Establecer metas y dirección para el diseño de un nuevo producto/servicio mediante un charter de equipo",
+    "Measure: Recolectar y traducir las necesidades del cliente en CTQs (Critical to Quality)",
+    "Analyze: Entender la información de la voz del cliente y definir las características de diseño en un concepto de alto nivel",
+    "Design: Desarrollar el diseño detallado del producto o servicio final, identificando variables críticas al proceso",
+    "Verify: Implementar el diseño, preparar el rollout a escala completa y establecer mecanismos de control que aseguren el cumplimiento de los CTQs"
+  ],
+  "entregable_esperado": "Un diseño de producto, servicio o proceso completamente desarrollado, verificado contra los CTQs del cliente, listo para su lanzamiento a escala completa",
+  "nodos_previos": [
+    "six_sigma_dmaic",
+    "descubrir_necesidades_cliente",
+    "six_sigma_dmaic_2"
+  ],
+  "nodos_siguientes": [
+    "roles_six_sigma",
+    "control_del_proceso_del_proveedor",
+    "dmadv_fase_diseno"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita diseñar un producto, servicio o proceso completamente nuevo",
+    "Cuando no existe un proceso previo que mejorar sino que debe crearse desde cero",
+    "Cuando se requiere asegurar que el diseño cumpla con múltiples requisitos críticos del cliente (CTQs) desde el inicio"
+  ]
+}

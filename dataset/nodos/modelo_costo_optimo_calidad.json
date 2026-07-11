@@ -1,0 +1,24 @@
+{
+  "node_id": "modelo_costo_optimo_calidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Modelo de Costo Óptimo de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Este modelo grafica tres curvas: costos de falla (que crecen a infinito conforme el producto es más defectuoso), costos de evaluación más prevención (que crecen conforme se acerca a la perfección), y la suma de ambas como costo total de calidad. Tradicionalmente se creía que existía un punto óptimo de calidad de conformidad menor al 100%, pero la tendencia actual, impulsada por la creciente capacidad de cuantificar el impacto de fallas en ingresos, sugiere que el mínimo costo total ocurre en la perfección (100% conformidad), aunque esto no siempre es económicamente viable en el corto plazo.",
+  "pasos_accionables": [
+    "Graficar curvas de costo de falla y costo de prevención/evaluación en función del nivel de conformidad",
+    "Determinar el punto de intersección o mínimo de la curva de costo total",
+    "Evaluar si existen proyectos de mejora que ofrezcan beneficios mayores a su costo",
+    "Concluir si se ha alcanzado el límite económico de mejora cuando no existan proyectos justificables"
+  ],
+  "entregable_esperado": "Análisis gráfico y numérico que determine si la organización ha alcanzado el óptimo económico de calidad o si existen oportunidades de mejora rentables",
+  "nodos_previos": [
+    "costo_de_mala_calidad_copq",
+    "costo_de_mala_calidad_copq_4"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se desea determinar el nivel económicamente óptimo de inversión en calidad",
+    "Si la organización debate entre invertir más en prevención o aceptar cierto nivel de defectos"
+  ]
+}

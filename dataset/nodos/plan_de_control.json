@@ -1,0 +1,28 @@
+{
+  "node_id": "plan_de_control",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Plan de Control",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El plan de control se usa para sostener las ganancias obtenidas de un proyecto de mejora de calidad. Especifica las variables de control a monitorear, cómo medirlas y las acciones a tomar según criterios explícitos, asegurando el máximo uso del autocontrol.",
+  "pasos_accionables": [
+    "Identificar las variables que afectan al remedio y al cliente directa o indirectamente",
+    "Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control",
+    "Definir cómo se medirá cada variable de control",
+    "Establecer dónde, cuándo y cómo se registrarán las mediciones",
+    "Decidir quién analizará las mediciones y determinará si el proceso está fuera de control",
+    "Decidir quién actuará para diagnosticar y eliminar la causa asignable",
+    "Definir los pasos para regresar el proceso a control",
+    "Revisar la matriz para verificar completitud y efectividad"
+  ],
+  "entregable_esperado": "Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas",
+  "nodos_previos": [
+    "diagrama_barreras_ayudas",
+    "analisis_beneficio_costo",
+    "diagrama_caja"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se ha completado una mejora de proceso y se necesita sostener los resultados en el tiempo"
+  ]
+}

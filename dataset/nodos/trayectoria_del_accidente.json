@@ -1,0 +1,24 @@
+{
+  "node_id": "trayectoria_del_accidente",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Trayectoria del Accidente Organizacional",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "La condición necesaria para un accidente organizacional es la rara alineación de huecos en capas sucesivas de defensa, permitiendo que los peligros entren en contacto dañino con personas y activos. Estas 'ventanas de oportunidad' son raras debido a la multiplicidad de defensas y la movilidad de los huecos. Los fallos activos pueden crear huecos deliberadamente (deshabilitar defensas por objetivos operativos locales, como en Chernóbil) o involuntariamente (diagnóstico erróneo, como en Three Mile Island).",
+  "pasos_accionables": [
+    "Reconstruir la secuencia completa del accidente identificando cada capa de defensa que fue penetrada.",
+    "Determinar si los huecos fueron creados deliberadamente (violación) o involuntariamente (error).",
+    "Documentar lecciones aprendidas para reforzar las capas de defensa específicas que fallaron."
+  ],
+  "entregable_esperado": "Un informe de investigación de accidente con diagrama de trayectoria mostrando las capas de defensa penetradas y el tipo de fallo en cada una.",
+  "nodos_previos": [
+    "fallos_activos_condiciones_latentes"
+  ],
+  "nodos_siguientes": [
+    "accidentes_individuales_vs_organizacionales",
+    "diferenciacion_accidente_individual_organizacional"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre un accidente organizacional y se requiere un análisis causal completo, no solo atribución de culpa individual."
+  ]
+}

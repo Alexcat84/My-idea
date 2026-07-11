@@ -1,0 +1,26 @@
+{
+  "node_id": "design_for_assembly",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Diseño para Ensamblaje (DFA)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Metodología para evaluar el diseño de partes y ensamblajes con el fin de identificar piezas innecesarias y determinar tiempos y costos de ensamblaje. Busca simplificar el producto reduciendo el número de partes, mejorando calidad, confiabilidad y acortando ciclos de desarrollo.",
+  "pasos_accionables": [
+    "Evaluar la contribución de costo de cada parte del ensamblaje",
+    "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza",
+    "Calcular tiempos y costos de ensamblaje con software especializado",
+    "Rediseñar el producto para simplificar el proceso de ensamblaje"
+  ],
+  "entregable_esperado": "Diseño de ensamblaje simplificado con menor número de partes y costos de ensamblaje reducidos",
+  "nodos_previos": [
+    "design_for_manufacture",
+    "concurrent_engineering"
+  ],
+  "nodos_siguientes": [
+    "design_for_environment"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto tiene un número excesivo de partes que incrementan costos de ensamblaje",
+    "Cuando se busca mejorar la confiabilidad del producto reduciendo la complejidad"
+  ]
+}

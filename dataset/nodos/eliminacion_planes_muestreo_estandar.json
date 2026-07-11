@@ -1,0 +1,26 @@
+{
+  "node_id": "eliminacion_planes_muestreo_estandar",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Eliminación de Planes de Muestreo Estándar (AQL, Military Standard 105D)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming critica el uso pro forma de planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig, que no consideran los costos reales (k1, k2) sino solo un nivel de calidad aceptable (AQL) arbitrario. Su aplicación mecánica, sin análisis de costos, puede duplicar el costo total respecto a la estrategia óptima (inspección 100% o ninguna). Se recomienda descartar estos planes y basar las decisiones en el análisis de costo total real.",
+  "pasos_accionables": [
+    "Revisar los contratos y procedimientos actuales que exigen el uso de AQL o planes de muestreo estándar.",
+    "Calcular el costo total bajo el plan de muestreo actual versus el costo con la regla óptima (0% o 100% inspección).",
+    "Negociar con proveedores y clientes la eliminación de cláusulas de AQL en favor de acuerdos basados en costo total y mejora continua.",
+    "Sustituir el criterio de aceptación por lotes por control estadístico continuo del proceso del proveedor."
+  ],
+  "entregable_esperado": "Documento de política de calidad que elimina el uso de planes de muestreo estándar y establece criterios basados en análisis de costos y control estadístico.",
+  "nodos_previos": [
+    "regla_todo_o_nada_inspeccion",
+    "probabilidad_falla_ensamblaje_multiple"
+  ],
+  "nodos_siguientes": [
+    "relacion_largo_plazo_proveedor_unico"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización aplica actualmente planes de muestreo estándar como Military Standard 105D o tablas AQL",
+    "Cuando los contratos con proveedores exigen niveles de calidad aceptable (AQL) sin análisis de costo"
+  ]
+}

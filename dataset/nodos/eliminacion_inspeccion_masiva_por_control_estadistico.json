@@ -1,0 +1,22 @@
+{
+  "node_id": "eliminacion_inspeccion_masiva_por_control_estadistico",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Sustitución de la Inspección Masiva por Control Estadístico",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "La inspección al 100% de un producto (como el caso de discos de freno inspeccionados en su totalidad) es innecesaria y costosa cuando el proceso está bajo control estadístico demostrado mediante cartas de control; en ese caso basta con muestreo periódico. Insistir en inspección total ignora la evidencia estadística y desperdicia recursos, además de no mejorar la calidad, solo detecta defectos ya producidos.",
+  "pasos_accionables": [
+    "Establecer cartas de control para verificar la estabilidad del proceso",
+    "Demostrar mediante datos que el proceso está bajo control estadístico",
+    "Reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control",
+    "Comunicar a las áreas de calidad y clientes el cambio y su justificación estadística"
+  ],
+  "entregable_esperado": "Evidencia estadística de proceso bajo control y nuevo protocolo de muestreo aprobado",
+  "nodos_previos": [
+    "control_estadistico_de_procesos_en_tiempo_real"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la organización realiza inspección al 100% pese a tener procesos estables"
+  ]
+}

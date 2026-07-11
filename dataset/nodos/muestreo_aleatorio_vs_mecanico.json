@@ -1,0 +1,25 @@
+{
+  "node_id": "muestreo_aleatorio_vs_mecanico",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Muestreo Aleatorio vs Muestreo Mecánico",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El muestreo mecánico (usando herramientas físicas como una paleta) puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad, distorsionando el promedio del proceso observado. Solo el muestreo por números aleatorios verdaderos permite aplicar sin distorsión la teoría estadística de distribuciones.",
+  "pasos_accionables": [
+    "Evaluar si el método de muestreo actual es mecánico o aleatorio verdadero",
+    "Si es mecánico, documentar y calibrar el sesgo propio del instrumento de muestreo",
+    "Preferir números aleatorios generados formalmente cuando se requiera inferencia estadística rigurosa",
+    "Registrar las características físicas del instrumento de muestreo como parte de los datos del experimento"
+  ],
+  "entregable_esperado": "Protocolo de muestreo documentado que especifique el método usado y su posible sesgo mecánico frente al ideal aleatorio.",
+  "nodos_previos": [
+    "experimento_cuentas_rojas"
+  ],
+  "nodos_siguientes": [
+    "control_estadistico_del_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña un sistema de muestreo de calidad para inspección de lotes",
+    "Cuando los resultados de muestreo parecen sesgados respecto a la proporción teórica esperada"
+  ]
+}

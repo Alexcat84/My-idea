@@ -1,0 +1,26 @@
+{
+  "node_id": "diagnostico_antes_remedio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Diagnóstico Debe Preceder al Remedio",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Es un error común aplicar remedios antes de conocer las causas reales de un defecto ('Ready, fire, aim'). Los sesgos, opiniones de expertos no cuestionadas y creencias arraigadas (como culpar a los trabajadores) llevan a soluciones ineficaces. Estudios muestran que la mayoría de los defectos son controlables por la gerencia, no por el trabajador.",
+  "pasos_accionables": [
+    "Prohibir la implementación de remedios sin evidencia validada de la causa",
+    "Cuestionar afirmaciones de expertos o miembros del equipo sin datos de respaldo",
+    "Realizar investigación específica si existen creencias arraigadas sobre las causas",
+    "Usar datos históricos similares a estudios de fallas para validar hipótesis"
+  ],
+  "entregable_esperado": "Reporte de causas validadas con evidencia antes de proponer remedios",
+  "nodos_previos": [
+    "terminologia_clave_breakthrough",
+    "rol_facilitador_equipos_mejora"
+  ],
+  "nodos_siguientes": [
+    "institucionalizar_breakthrough",
+    "terminologia_clave_breakthrough"
+  ],
+  "condiciones_activacion": [
+    "Si el equipo tiene presión para actuar rápido sin validar causas"
+  ]
+}

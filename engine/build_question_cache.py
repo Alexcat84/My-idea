@@ -98,7 +98,14 @@ def main():
                      help="Confirma la corrida completa sobre todos los nodos elegibles (sin --sample)")
     ap.add_argument("--patch", nargs="+", metavar="NODE_ID", default=None,
                      help="Regenera solo estos node_id puntuales y los fusiona en el cache real existente")
+    ap.add_argument("--patch-file", metavar="RUTA", default=None,
+                     help="Como --patch pero lee los node_id de un archivo (uno por linea); "
+                          "evita el limite de linea de comandos de Windows con listas grandes")
     args = ap.parse_args()
+
+    if args.patch_file:
+        ids = [l.strip() for l in Path(args.patch_file).read_text(encoding="utf-8").splitlines() if l.strip()]
+        args.patch = (args.patch or []) + ids
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     if not api_key:
@@ -115,16 +122,30 @@ def main():
 
     if args.patch:
         cache = json.load(open(CACHE_PATH, encoding="utf-8")) if CACHE_PATH.exists() else {}
-        for nid in args.patch:
+        total_in, total_out, parchados, omitidos = 0, 0, 0, 0
+        t0 = time.time()
+        for i, nid in enumerate(args.patch, 1):
             if nid not in elegibles:
-                print(f"  omitido (no elegible o no existe): {nid}")
+                omitidos += 1
+                if omitidos <= 20:
+                    print(f"  omitido (no elegible o no existe): {nid}")
                 continue
             pregunta, usage = generar_pregunta(client, graph[nid], elegibles[nid], graph)
             cache[nid] = {"pregunta": pregunta, "candidatos": elegibles[nid]}
-            costo = usage.input_tokens / 1_000_000 * PRICE_INPUT_PER_MTOK + usage.output_tokens / 1_000_000 * PRICE_OUTPUT_PER_MTOK
-            print(f"  parchado: {nid} -> {pregunta[:70]}  (${costo:.4f})")
+            total_in += usage.input_tokens
+            total_out += usage.output_tokens
+            parchados += 1
+            if parchados % 20 == 0:
+                print(f"  [{i}/{len(args.patch)}] parchado: {nid} -> {pregunta[:60]}")
+            # guardado incremental: una falla a mitad de lista no pierde lo hecho
+            if parchados % 50 == 0:
+                CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
         CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+        elapsed = time.time() - t0
+        cost = (total_in / 1_000_000) * PRICE_INPUT_PER_MTOK + (total_out / 1_000_000) * PRICE_OUTPUT_PER_MTOK
         print(f"\nGuardado: {CACHE_PATH}  ({len(cache)} preguntas totales)")
+        print(f"Parchados: {parchados} | Omitidos (sin sucesores validos): {omitidos}")
+        print(f"Tokens reales: {total_in} in / {total_out} out | Costo real: ${cost:.4f} | Tiempo: {elapsed:.1f}s")
         return
 
     if args.sample is None and not args.yes:

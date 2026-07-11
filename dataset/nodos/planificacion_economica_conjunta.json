@@ -1,0 +1,25 @@
+{
+  "node_id": "planificacion_economica_conjunta",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Planificación Económica Conjunta con Proveedores (Value Engineering y Costo Total de Propiedad)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Se centra en analizar el valor del producto comprado (ingeniería de valor) en lugar de solo la conformidad con especificación, y en calcular el costo total de propiedad incluyendo inspección de entrada, rechazos y costos de uso, ya que el precio más bajo no siempre resulta en el menor costo total.",
+  "pasos_accionables": [
+    "Aplicar ingeniería de valor para detectar sobre-especificación o costos innecesarios",
+    "Calcular el costo total de propiedad (precio + inspección + rechazos + costos de uso)",
+    "Comparar ofertas de proveedores no solo por precio unitario sino por costo total",
+    "Fomentar que proveedores propongan mejoras de diseño que reduzcan costo manteniendo calidad"
+  ],
+  "entregable_esperado": "Análisis de costo total de propiedad comparativo entre proveedores candidatos",
+  "nodos_previos": [
+    "planificacion_cadena_suministro"
+  ],
+  "nodos_siguientes": [
+    "planificacion_tecnologica_conjunta",
+    "value_stream_mapping_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se comparan ofertas de proveedores para una decisión de compra"
+  ]
+}

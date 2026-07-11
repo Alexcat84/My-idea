@@ -1,0 +1,23 @@
+{
+  "node_id": "interpretacion_cpk",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Interpretación del Índice Cpk",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El índice Cpk resume dos parámetros -el promedio y la desviación estándar- en un solo número, lo cual puede enmascarar detalles importantes. Procesos muy diferentes pueden tener el mismo Cpk. Para mejorar el Cpk se puede modificar el promedio del proceso (ajuste simple) o reducir la desviación estándar (investigando causas de variabilidad), siendo la primera opción generalmente más fácil de implementar.",
+  "pasos_accionables": [
+    "Calcular el Cpk usando la fórmula estándar con USL, LSL, media y desviación estándar",
+    "Revisar siempre el histograma del proceso, no solo el valor numérico de Cpk",
+    "Determinar si la mejora requiere ajustar el promedio del proceso o reducir la variabilidad",
+    "Comparar con el índice Cpm si existe un valor objetivo (target) diferente de la media"
+  ],
+  "entregable_esperado": "Cálculo documentado del Cpk con histograma de respaldo y plan de acción para mejorarlo (ajuste de media o reducción de varianza)",
+  "nodos_previos": [
+    "analisis_capacidad_proceso"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se ha calculado un Cpk y se necesita decidir qué acción tomar para mejorarlo",
+    "Cuando se comparan procesos con el mismo Cpk pero comportamientos distintos"
+  ]
+}

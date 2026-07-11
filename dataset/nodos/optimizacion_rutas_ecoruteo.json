@@ -1,0 +1,23 @@
+{
+  "node_id": "optimizacion_rutas_ecoruteo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Optimización de Rutas y Eco-Routing",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "Las tecnologías de eco-routing permiten planificar no solo la ruta más rápida sino la más eficiente en combustible, considerando pendientes, semáforos y límites de velocidad. Además, emparejar el tipo correcto de vehículo con la ruta adecuada (alta capacidad para rutas cortas, alta eficiencia para rutas largas) optimiza el consumo de combustible y reduce emisiones significativamente.",
+  "pasos_accionables": [
+    "Implementar tecnología de eco-routing que calcule la ruta más eficiente en combustible, no solo la más rápida.",
+    "Eliminar giros innecesarios (ej. giros a la izquierda) que incrementan tiempo de motor encendido.",
+    "Emparejar vehículos de baja capacidad y alta eficiencia con rutas de alto kilometraje, y viceversa.",
+    "Medir el ahorro de combustible comparando rutas tradicionales vs. rutas optimizadas."
+  ],
+  "entregable_esperado": "Sistema de ruteo optimizado implementado con métricas comparativas de ahorro de combustible y tiempo de entrega.",
+  "nodos_previos": [
+    "eficiencia_flota_vehicular",
+    "gestion_logistica_verde"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si la empresa gestiona múltiples rutas de entrega o distribución con flota propia o subcontratada."
+  ]
+}

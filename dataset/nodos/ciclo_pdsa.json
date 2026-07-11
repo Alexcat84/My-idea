@@ -1,0 +1,24 @@
+{
+  "node_id": "ciclo_pdsa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Ciclo Plan-Do-Study-Act (PDSA / Ciclo de Shewhart-Deming)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Metodología de mejora continua basada en experimentación iterativa, propuesta originalmente por Shewhart y popularizada por Deming. A diferencia del RCCA, el PDSA identifica cambios potenciales y los prueba mediante ciclos de Planificar-Hacer-Estudiar-Actuar para confirmar si producen una mejora, respondiendo tres preguntas clave: qué se busca lograr, cómo se sabrá que un cambio es una mejora, y qué cambios se pueden realizar.",
+  "pasos_accionables": [
+    "Definir el objetivo del cambio a probar (Plan).",
+    "Diseñar el experimento para probar el cambio.",
+    "Ejecutar el plan experimental y recolectar datos (Do).",
+    "Analizar los datos obtenidos y resumir el aprendizaje (Study).",
+    "Determinar los cambios permanentes a implementar o pruebas adicionales necesarias (Act)."
+  ],
+  "entregable_esperado": "Un ciclo PDSA documentado con resultados del experimento y decisión sobre la adopción del cambio como mejora permanente.",
+  "nodos_previos": [
+    "control_mantener_ganancias"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se requiere probar experimentalmente si un cambio propuesto genera una mejora antes de institucionalizarlo.",
+    "Cuando se trabaja en un entorno de mejora continua iterativa."
+  ]
+}

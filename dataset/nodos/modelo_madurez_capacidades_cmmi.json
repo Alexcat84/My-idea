@@ -1,0 +1,26 @@
+{
+  "node_id": "modelo_madurez_capacidades_cmmi",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Modelo de Madurez de Capacidades (CMM/CMMI)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El CMM (y su evolución CMMI) es un modelo desarrollado por el SEI de Carnegie Mellon para evaluar objetivamente la capacidad de los procesos de desarrollo de software (y otros procesos organizacionales) mediante niveles de madurez: 1-Inicial, 2-Gestionado, 3-Definido, 4-Gestionado Cuantitativamente, 5-Optimizando. Se basa en observación empírica de organizaciones y permite mejorar procesos de forma sistemática, siendo ampliamente usado en gobierno, industria y desarrollo de software.",
+  "pasos_accionables": [
+    "Determinar el nivel de madurez actual de los procesos organizacionales",
+    "Contratar un evaluador (lead appraiser) autorizado por el SEI para el diagnóstico",
+    "Aplicar el método SCAMPI para evaluar el cumplimiento del modelo CMMI",
+    "Definir un plan de mejora para avanzar de nivel de madurez",
+    "Institucionalizar las prácticas definidas en el nivel objetivo"
+  ],
+  "entregable_esperado": "Informe de evaluación de madurez de procesos (nivel CMM/CMMI) con plan de mejora hacia el siguiente nivel",
+  "nodos_previos": [
+    "buenas_practicas_manufactura_cgmp"
+  ],
+  "nodos_siguientes": [
+    "benchmarking_7_pasos_juran"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización desarrolla software o sistemas y necesita mejorar la madurez de sus procesos",
+    "Cuando se requiere calificar como proveedor ante contratos gubernamentales o de defensa"
+  ]
+}

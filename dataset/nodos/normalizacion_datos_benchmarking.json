@@ -1,0 +1,24 @@
+{
+  "node_id": "normalizacion_datos_benchmarking",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Normalización de Datos en Benchmarking (Comparación Justa)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Técnica esencial para comparar de forma justa ('apples to apples') el desempeño entre unidades, sitios o procesos que son inherentemente diferentes entre sí. Se logra mediante estratificación de datos según factores relevantes (escala, regulación, geografía) o mediante índices propietarios como el Factor de Complejidad Juran (CF) y el Índice de Calidad Juran (JQI), que permiten comparaciones válidas y evitan conclusiones erróneas.",
+  "pasos_accionables": [
+    "Identificar los factores que impulsan diferencias de desempeño entre las unidades comparadas",
+    "Agrupar los sujetos de benchmarking en categorías o grupos de pares similares",
+    "Calcular un factor de complejidad o índice normalizado (ej. Juran Complexity Factor)",
+    "Aplicar el índice normalizado para generar comparaciones válidas (ej. Juran Quality Index)"
+  ],
+  "entregable_esperado": "Conjunto de datos normalizados con índices comparables (CF, JQI) entre sitios o unidades de la organización",
+  "nodos_previos": [
+    "benchmarking_7_pasos_juran"
+  ],
+  "nodos_siguientes": [
+    "analisis_identificacion_mejores_practicas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita comparar el desempeño de unidades organizacionales con características muy distintas entre sí"
+  ]
+}

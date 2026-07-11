@@ -1,0 +1,26 @@
+{
+  "node_id": "omisiones_en_mantenimiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Omisiones en Reensamblaje durante Mantenimiento",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las omisiones durante el reensamblaje son la forma más común de error humano en mantenimiento, tanto en aviación como en energía nuclear. Estos errores ocurren de forma recurrente y no deben analizarse buscando causas psicológicas individuales, sino identificando las condiciones sistémicas que permiten que ocurran y que luego no sean detectadas antes de causar daño.",
+  "pasos_accionables": [
+    "Identificar tareas de reensamblaje críticas donde históricamente ocurren omisiones (ej. cubiertas, sujetadores).",
+    "Implementar listas de verificación obligatorias con firma paso a paso para tareas críticas.",
+    "Establecer inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio."
+  ],
+  "entregable_esperado": "Checklist de verificación de reensamblaje con puntos de firma obligatorios por tarea crítica.",
+  "nodos_previos": [
+    "fallos_activos_condiciones_latentes"
+  ],
+  "nodos_siguientes": [
+    "fallas_activas_condiciones_latentes",
+    "documentacion_mantenimiento_linea_base",
+    "fallas_activas_condiciones_latentes_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseñan procedimientos de mantenimiento para equipos con múltiples partes desmontables",
+    "Cuando se investiga un incidente relacionado con partes faltantes tras mantenimiento"
+  ]
+}

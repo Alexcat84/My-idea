@@ -1,0 +1,26 @@
+{
+  "node_id": "limites_control_estadistico_vs_tolerancias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Límites de Control Estadístico vs. Tolerancias de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Existe una confusión histórica entre los límites de control estadístico (basados en variación de causas comunes) y las tolerancias de calidad (especificaciones oficiales del producto). Un punto puede estar fuera de los límites de control sin que el producto incumpla las tolerancias, generando ambigüedad sobre si se debe tomar acción correctiva. Los líderes deben clarificar responsabilidades y establecer guías claras para estas situaciones, evitando que los operarios ignoren las cartas de control por falta de estatus oficial.",
+  "pasos_accionables": [
+    "Clarificar la responsabilidad para la acción correctiva cuando hay puntos fuera de los límites de control",
+    "Establecer guías de decisión para los cuatro cuadrantes (proceso conforme/no conforme x producto conforme/no conforme)",
+    "Justificar el uso de cartas de control basándose en valor agregado: necesidades del cliente, riesgo de seguridad, economía, precisión requerida",
+    "Evitar la instalación indiscriminada de cartas de control sin propósito claro"
+  ],
+  "entregable_esperado": "Documento de guías de decisión (matriz de cuadrantes) que clarifique cuándo tomar acción correctiva según el estado del proceso y del producto",
+  "nodos_previos": [
+    "ciclo_de_retroalimentacion_control"
+  ],
+  "nodos_siguientes": [
+    "autocontrol_y_controlabilidad",
+    "accion_correctiva_diagnostico_remedio"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo detecta puntos fuera de los límites de control pero el producto sigue cumpliendo especificaciones",
+    "Si existe confusión entre el personal operativo sobre cuándo actuar frente a señales estadísticas"
+  ]
+}

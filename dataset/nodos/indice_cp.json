@@ -1,0 +1,27 @@
+{
+  "node_id": "indice_cp",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Índice de Capacidad de Proceso Cp",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El índice Cp mide la capacidad potencial de un proceso comparando el ancho de especificación (USL-LSL) con la variación natural del proceso (6σ), asumiendo que el proceso está centrado en el punto medio de la especificación. Un Cp de 1.0 indica que el proceso apenas cumple con las especificaciones; se recomienda un Cp de al menos 1.33 para mayor margen de seguridad.",
+  "pasos_accionables": [
+    "Calcular la desviación estándar del proceso a partir de datos en control estadístico",
+    "Determinar los límites de especificación superior e inferior (USL y LSL)",
+    "Calcular Cp como (USL-LSL) dividido entre 6 veces la desviación estándar",
+    "Comparar el valor de Cp con el estándar mínimo aceptable de la industria (típicamente 1.33)",
+    "Usar el resultado para decisiones sobre selección o mejora del proceso"
+  ],
+  "entregable_esperado": "Valor numérico de Cp calculado y documentado junto con su interpretación",
+  "nodos_previos": [
+    "planificacion_estudio_capacidad",
+    "capacidad_proceso_concepto"
+  ],
+  "nodos_siguientes": [
+    "indice_cpk"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita cuantificar la capacidad potencial de un proceso centrado",
+    "Cuando se debe comparar procesos candidatos para selección de manufactura"
+  ]
+}

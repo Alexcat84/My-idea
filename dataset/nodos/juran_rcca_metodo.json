@@ -1,0 +1,25 @@
+{
+  "node_id": "juran_rcca_metodo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Método RCCA de Juran (Análisis de Causa Raíz)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El RCCA (Root Cause Corrective Action) de Juran es un método de cuatro pasos para identificar y solucionar la causa raíz de problemas esporádicos: Definir el problema, Analizar y diagnosticar la causa, Mejorar/remediar la causa, y Controlar para mantener las ganancias. Es análogo al proceso médico de diagnóstico y tratamiento, y se enfoca en causas especiales (esporádicas), a diferencia de Six Sigma que aborda causas comunes (crónicas).",
+  "pasos_accionables": [
+    "Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema",
+    "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz",
+    "Mejorar: diseñar e implementar el remedio",
+    "Controlar: ajustar los controles para mantener las ganancias"
+  ],
+  "entregable_esperado": "Causa raíz identificada, remedio implementado y controles ajustados para prevenir recurrencia",
+  "nodos_previos": [
+    "analisis_diagnostico_causa"
+  ],
+  "nodos_siguientes": [
+    "definicion_problema_moms",
+    "analisis_diagnostico_causa"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre un problema esporádico de causa especial en un proceso que estaba previamente bajo control"
+  ]
+}

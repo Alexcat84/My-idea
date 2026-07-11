@@ -1,0 +1,27 @@
+{
+  "node_id": "costo_de_la_no_calidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Costo de la No Calidad (Hacer las Cosas Mal)",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "El costo de calidad es el gasto derivado de hacer las cosas incorrectamente: retrabajos, reprocesos, correcciones administrativas y errores repetidos. En el caso analizado, se estima que hasta el 25% del personal dedica tiempo a rehacer trabajo, lo que representa millones de dólares en pérdidas internas, más un monto similar atribuible a proveedores. Cuantificar este costo permite justificar económicamente la inversión en prevención y mostrar el retorno potencial de un programa de mejora de calidad.",
+  "pasos_accionables": [
+    "Realizar un análisis interno (auditoría) para detectar tareas que se repiten por errores (ej. órdenes devueltas, reportes no leídos).",
+    "Cuantificar en términos monetarios el porcentaje de personal/tiempo dedicado a corregir errores.",
+    "Extender el análisis a proveedores y su impacto en el costo total de no calidad.",
+    "Presentar estas cifras a la dirección como justificación cuantitativa del programa de mejora."
+  ],
+  "entregable_esperado": "Informe cuantitativo del costo de la no calidad (interno y de proveedores) como base para el caso de negocio del programa de mejora.",
+  "nodos_previos": [
+    "critica_acceptable_quality_level"
+  ],
+  "nodos_siguientes": [
+    "equipo_mejora_calidad",
+    "programa_zero_defects",
+    "equipo_mejora_calidad_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita justificar económicamente un programa de calidad ante la dirección.",
+    "Cuando existen síntomas de reprocesos frecuentes sin medición formal de su costo."
+  ]
+}

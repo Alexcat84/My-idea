@@ -1,0 +1,24 @@
+{
+  "node_id": "areas_riesgo_primario",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Cuatro Áreas Primarias de Riesgo en Tecnologías Peligrosas",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Toda tecnología peligrosa presenta cuatro áreas de riesgo: (1) riesgos de lesión personal o daño por contacto directo con peligros, asociados a accidentes individuales; (2) riesgos por errores de operadores clave de primera línea con control centralizado; (3) riesgos por acumulación insidiosa de condiciones latentes en las esferas de mantenimiento, gestión y organización, que pueden destruir un sistema entero; y (4) riesgos a terceros (pasajeros, vecinos, inversores, etc.) no empleados directamente por la organización. La prevalencia de cada tipo varía según el dominio y puede cambiar con el tiempo y la tecnología.",
+  "pasos_accionables": [
+    "Mapear los cuatro tipos de riesgo específicos para el dominio operativo de la organización",
+    "Determinar cuál(es) de los cuatro tipos es más prevalente o crítico dado el contexto tecnológico y societal actual",
+    "Revisar si la organización ha estado enfocada históricamente en un solo tipo de riesgo (p.ej., lesiones personales) ignorando otros (p.ej., mantenimiento o terceros)",
+    "Diseñar métricas y sistemas de vigilancia específicos para cada tipo de riesgo identificado"
+  ],
+  "entregable_esperado": "Matriz de riesgos organizacionales categorizados en los cuatro tipos, con nivel de prevalencia y controles asociados para cada uno",
+  "nodos_previos": [
+    "modelos_gestion_seguridad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Al realizar una evaluación integral de riesgos de una instalación u organización peligrosa",
+    "Cuando se sospecha que el enfoque de gestión de riesgos está desactualizado o sesgado hacia un solo tipo de riesgo",
+    "Después de un incidente que revela un tipo de riesgo previamente subestimado (ej. riesgos a terceros)"
+  ]
+}

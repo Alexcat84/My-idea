@@ -1,0 +1,26 @@
+{
+  "node_id": "analisis_pareto_de_proveedores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Pareto Aplicado a Proveedores",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Técnica para identificar los 'pocos vitales' problemas de proveedores en lugar de intentar programas amplios que aprieten todos los procedimientos. Puede aplicarse por número de parte, familia de producto, proceso, proveedor completo, costo total, o modo de falla, revelando debilidades gerenciales y tecnológicas específicas que merecen atención prioritaria.",
+  "pasos_accionables": [
+    "Recopilar datos de defectos y rechazos por proveedor, parte o proceso",
+    "Clasificar las pérdidas usando el principio de Pareto (80/20)",
+    "Identificar los pocos proveedores o partes que concentran la mayoría de los problemas",
+    "Enfocar recursos de mejora en los elementos vitales identificados",
+    "Repetir el análisis por diferentes dimensiones (costo, modo de falla, etc.)"
+  ],
+  "entregable_esperado": "Gráfico de Pareto con los proveedores, partes o procesos críticos identificados y priorizados para acción",
+  "nodos_previos": [
+    "calificacion_de_calidad_de_proveedores"
+  ],
+  "nodos_siguientes": [
+    "equipo_conjunto_de_mejora_con_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando un programa de mejora de proveedores no logra resultados por dispersión de esfuerzos",
+    "Cuando se necesita priorizar recursos limitados de mejora"
+  ]
+}

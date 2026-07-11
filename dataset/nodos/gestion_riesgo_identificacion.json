@@ -1,0 +1,28 @@
+{
+  "node_id": "gestion_riesgo_identificacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Identificación de Riesgos Operacionales",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El riesgo es cualquier cosa que puede salir mal y resultar en una pérdida. La gestión de riesgo requiere primero identificar los riesgos relevantes mediante un equipo multifuncional con amplio conocimiento del negocio, sistemas, personas y procesos. Los riesgos suelen ser invisibles en condiciones normales y solo se manifiestan bajo condiciones adversas.",
+  "pasos_accionables": [
+    "Formar un equipo multifuncional de crisis con conocimiento amplio del negocio",
+    "Elaborar una lista de actividades, sistemas y procesos del negocio",
+    "Preguntar sistemáticamente '¿Qué puede salir mal?' para cada elemento de la lista",
+    "Aplicar la técnica de los Seis Sombreros de pensar (sombrero negro) para evitar el pensamiento grupal",
+    "Documentar todos los riesgos identificados antes de pasar a la evaluación"
+  ],
+  "entregable_esperado": "Lista documentada de riesgos potenciales identificados por proceso, sistema o actividad",
+  "nodos_previos": [
+    "teoremas_probabilidad",
+    "distribucion_weibull"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_gestion_riesgos",
+    "evitacion_del_riesgo"
+  ],
+  "condiciones_activacion": [
+    "Al iniciar un proceso de gestión de riesgos en la organización",
+    "Cuando se requiere anticipar pérdidas potenciales bajo condiciones adversas"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "evaluacion_gestion_riesgos",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Evaluación y Gestión de Riesgos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso estructurado para identificar riesgos potenciales, evaluar su severidad y probabilidad, y definir acciones concretas para minimizarlos o eliminarlos. Incluye el análisis de consecuencias de actuar o no actuar, el impacto futuro de las decisiones, y el balance costo/beneficio. El objetivo final no es solo evaluar sino generar una lista de acciones ejecutables con responsables y fechas.",
+  "pasos_accionables": [
+    "Hacer una lluvia de ideas exhaustiva de todos los riesgos y opciones posibles sin restricciones",
+    "Evaluar consecuencias de actuar vs no actuar, incluyendo efectos secundarios inesperados (revenge effects)",
+    "Analizar el impacto futuro de la decisión sobre la flexibilidad del negocio",
+    "Calcular el costo/beneficio de cada opción de mitigación",
+    "Definir acciones concretas, responsables y fechas de entrega",
+    "Reevaluar el proceso de riesgo al menos anualmente"
+  ],
+  "entregable_esperado": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
+  "nodos_previos": [
+    "gestion_riesgo_identificacion"
+  ],
+  "nodos_siguientes": [
+    "gestion_del_cambio",
+    "comunicacion_del_riesgo",
+    "evitacion_del_riesgo"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto o proceso implica incertidumbre significativa",
+    "Cuando se necesita priorizar recursos limitados entre múltiples plantas o áreas de riesgo"
+  ]
+}

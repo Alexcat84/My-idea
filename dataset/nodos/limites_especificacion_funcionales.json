@@ -1,0 +1,26 @@
+{
+  "node_id": "limites_especificacion_funcionales",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Límites de Especificación Basados en Necesidades Funcionales",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Al establecer límites de especificación para las características de un producto, se debe considerar el valor nominal deseado y los límites de tolerancia que reflejen las necesidades funcionales reales del producto, no solo criterios arbitrarios. Esto se logra desarrollando datos que relacionen el desempeño del producto con mediciones críticas de componentes mediante diagramas de dispersión y ecuaciones de regresión.",
+  "pasos_accionables": [
+    "Identificar las características críticas del producto que afectan su función",
+    "Diseñar experimentos o pruebas para relacionar variaciones del componente con el desempeño del producto",
+    "Construir diagramas de dispersión y ecuaciones de regresión",
+    "Establecer límites de tolerancia con base científica dentro de límites de confianza",
+    "Validar que el tamaño de muestra sea suficiente y el proceso esté controlado estadísticamente"
+  ],
+  "entregable_esperado": "Documento de especificaciones técnicas con límites de tolerancia justificados por datos funcionales",
+  "nodos_previos": [
+    "prediccion_confiabilidad_diseno"
+  ],
+  "nodos_siguientes": [
+    "limites_tolerancia_estadistica",
+    "funcion_perdida_taguchi"
+  ],
+  "condiciones_activacion": [
+    "Cuando se están definiendo especificaciones de diseño de un producto nuevo o rediseño"
+  ]
+}

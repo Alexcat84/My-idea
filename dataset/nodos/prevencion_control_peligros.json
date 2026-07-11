@@ -1,0 +1,33 @@
+{
+  "node_id": "prevencion_control_peligros",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Prevención y Control de Peligros (Jerarquía de Controles)",
+  "fuente": "OSHA3885",
+  "resumen_teorico": "Elemento que consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros identificados. Los controles deben seleccionarse según una jerarquía: primero soluciones de ingeniería, luego prácticas seguras de trabajo, controles administrativos, y finalmente equipo de protección personal (EPP). Se debe desarrollar un plan que garantice implementación, protección provisional, seguimiento de progreso y verificación de efectividad.",
+  "pasos_accionables": [
+    "Seleccionar controles priorizando ingeniería sobre EPP",
+    "Desarrollar un plan de implementación con responsables y plazos",
+    "Proveer protección provisional mientras se implementan controles definitivos",
+    "Verificar la efectividad de los controles implementados",
+    "Involucrar a los trabajadores en la elección y evaluación de soluciones"
+  ],
+  "entregable_esperado": "Plan de control de peligros con jerarquía aplicada, responsables asignados y mecanismo de verificación",
+  "nodos_previos": [
+    "identificacion_evaluacion_peligros",
+    "enfoque_find_and_fix",
+    "identificacion_evaluacion_peligros_2",
+    "participacion_trabajadores",
+    "programa_seguridad_salud_ocupacional"
+  ],
+  "nodos_siguientes": [
+    "evaluacion_mejora_programa",
+    "capacitacion_educacion_seguridad",
+    "educacion_entrenamiento_seguridad",
+    "evaluacion_mejora_programa_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se han identificado peligros y se requiere decidir cómo mitigarlos",
+    "Cuando los controles actuales dependen únicamente de EPP sin considerar opciones superiores en la jerarquía"
+  ]
+}

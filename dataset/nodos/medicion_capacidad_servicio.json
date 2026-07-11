@@ -1,0 +1,31 @@
+{
+  "node_id": "medicion_capacidad_servicio",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Medición de Capacidad de Proceso en Servicios",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Se necesita asegurar que el proceso de servicio pueda cumplir con las necesidades y metas del cliente bajo condiciones normales de operación. Cuando las necesidades del cliente pueden cuantificarse, se usan índices de capacidad de proceso o niveles Sigma. Un parámetro cuantitativo importante en el sector servicios es el tiempo para completar una transacción de servicio. Una evaluación más amplia del proceso de servicio mide cuatro parámetros: efectividad, eficiencia, adaptabilidad y tiempo de ciclo.",
+  "pasos_accionables": [
+    "Recolectar una muestra de datos históricos del proceso de servicio",
+    "Comparar los datos contra las especificaciones o metas establecidas",
+    "Construir un histograma para visualizar la distribución de los datos",
+    "Determinar si el proceso es capaz de cumplir consistentemente con las especificaciones",
+    "Si no es capaz, rediseñar el proceso y volver a probar",
+    "Evaluar los cuatro parámetros: efectividad, eficiencia, adaptabilidad y tiempo de ciclo"
+  ],
+  "entregable_esperado": "Estudio de capacidad preliminar con histograma, comparación con especificaciones y determinación de capacidad del proceso de servicio",
+  "nodos_previos": [
+    "reduccion_tiempo_ciclo",
+    "error_proofing_servicio",
+    "seis_sigma_servicios"
+  ],
+  "nodos_siguientes": [
+    "mejora_continua_del_proceso",
+    "modelo_servqual",
+    "codigo_conducta_orientado_cliente"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita verificar si un proceso de servicio cumple con las expectativas del cliente",
+    "Cuando se ha rediseñado un proceso de servicio y se requiere validar su capacidad"
+  ]
+}

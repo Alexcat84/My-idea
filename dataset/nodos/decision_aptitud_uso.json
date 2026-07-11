@@ -1,0 +1,27 @@
+{
+  "node_id": "decision_aptitud_uso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Decisión de Aptitud para el Uso (Fitness for Use)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto o no para el uso previsto. Esta decisión requiere recopilar información sobre el usuario, el uso real del producto, riesgos de seguridad, urgencia, economía y las medidas de aptitud del cliente. Se disponen opciones como desecho, clasificación, reproceso, devolución al proveedor o venta con descuento.",
+  "pasos_accionables": [
+    "Identificar quién será el usuario final y su nivel de sofisticación técnica.",
+    "Determinar cómo se usará realmente el producto.",
+    "Evaluar riesgos de seguridad humana o integridad estructural.",
+    "Analizar urgencia y economía de reparación vs uso tal cual.",
+    "Consultar medidas de aptitud del cliente, que pueden diferir de las del fabricante.",
+    "Asignar la decisión a un especialista, gerente de calidad o comité (material review board) según el monto en juego."
+  ],
+  "entregable_esperado": "Informe de análisis de aptitud para el uso con recomendación de disposición del lote no conforme.",
+  "nodos_previos": [
+    "decision_conformidad_producto"
+  ],
+  "nodos_siguientes": [
+    "decision_comunicacion",
+    "disposicion_producto_no_conforme"
+  ],
+  "condiciones_activacion": [
+    "Cuando un producto no cumple especificaciones pero podría seguir siendo funcionalmente útil."
+  ]
+}

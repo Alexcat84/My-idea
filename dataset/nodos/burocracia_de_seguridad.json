@@ -1,0 +1,27 @@
+{
+  "node_id": "burocracia_de_seguridad",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Riesgos de la Burocracia de Seguridad",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "El crecimiento de la burocracia de seguridad (procesos, protocolos, papeleo) puede aumentar paradójicamente el riesgo de accidentes. Genera 'documentos de fantasía' desconectados del trabajo real, fomenta indicadores retrasados con poco valor predictivo, y crea 'secreto estructural' donde la información crítica no cruza fronteras organizacionales. Prioriza cumplimiento sobre experiencia técnica, desempoderando a los expertos operativos.",
+  "pasos_accionables": [
+    "Auditar si los procedimientos de seguridad reflejan el trabajo real o son 'documentos de fantasía'",
+    "Identificar la brecha entre cómo la organización cree que trabaja y cómo realmente trabaja",
+    "Revisar si existen incentivos que fomenten el subreporte de incidentes",
+    "Evaluar la proporción de indicadores adelantados vs indicadores rezagados (lagging) en uso",
+    "Detectar innovaciones de los trabajadores que hayan pasado a la clandestinidad por no cumplir procedimientos"
+  ],
+  "entregable_esperado": "Reporte de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
+  "nodos_previos": [
+    "escape_trampa_proveedor_pasivo",
+    "diseno_departamento_seguridad_efectivo"
+  ],
+  "nodos_siguientes": [
+    "responsabilidad_hacia_abajo_vs_rendicion_de_cuentas"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización tiene un departamento de seguridad numeroso pero desconectado de operaciones",
+    "Cuando se sospecha subreporte de incidentes por presión de indicadores"
+  ]
+}

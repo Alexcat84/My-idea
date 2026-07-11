@@ -1,0 +1,26 @@
+{
+  "node_id": "muestreo_estadistico_para_inspeccion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Muestreo estadístico como alternativa a la inspección al 100%",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "En lugar de revisar cada transacción, reclamo o pieza de inventario (costoso e ineficiente), Deming propone usar muestreo estadístico basado en teoría de probabilidad para estimar el estado general del sistema y detectar anomalías. Ejemplos incluyen el pago inmediato de viáticos con auditoría de una muestra (ej. 1 de 50) y la evaluación del valor de planta física de una empresa mediante inspección de una fracción representativa de los activos. Este enfoque libera recursos de revisión excesiva y los redirige a trabajo productivo.",
+  "pasos_accionables": [
+    "Definir la población total de transacciones, activos o documentos a controlar.",
+    "Diseñar un tamaño de muestra estadísticamente representativo (incluyendo 100% de casos sospechosos).",
+    "Aplicar el muestreo de forma continua o periódica en lugar de revisión exhaustiva.",
+    "Usar los resultados de la muestra para estimar el desempeño general del sistema.",
+    "Reasignar el personal liberado de la inspección total a tareas de mejora o producción."
+  ],
+  "entregable_esperado": "Un plan de muestreo estadístico documentado que reemplaza la inspección al 100% en un proceso administrativo u operativo, con estimaciones de desempeño confiables.",
+  "nodos_previos": [
+    "retroalimentacion_inmediata_de_errores"
+  ],
+  "nodos_siguientes": [
+    "control_estadistico_de_inventario_en_transito"
+  ],
+  "condiciones_activacion": [
+    "Si la organización revisa el 100% de las transacciones o activos de forma costosa e ineficiente.",
+    "Si se requiere estimar el valor o estado de un gran volumen de inventario o documentos."
+  ]
+}

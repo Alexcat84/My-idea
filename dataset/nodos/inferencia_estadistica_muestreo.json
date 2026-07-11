@@ -1,0 +1,27 @@
+{
+  "node_id": "inferencia_estadistica_muestreo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Inferencia Estadística y Variación de Muestreo",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La inferencia estadística es el proceso de estimar, mediante muestreo y aplicación de métodos estadísticos, ciertas características de una población. La variación de muestreo describe cómo diferentes muestras extraídas del mismo proceso pueden arrojar resultados distintos. El teorema del límite central establece que la media de muestras suficientemente grandes seguirá aproximadamente una distribución normal, lo cual es fundamental para el trabajo estadístico práctico.",
+  "pasos_accionables": [
+    "Tomar una muestra aleatoria representativa de la población",
+    "Calcular el estadístico muestral (ej. la media)",
+    "Aplicar el teorema del límite central si el tamaño de muestra es mayor a 30",
+    "Usar la distribución t de Student para muestras pequeñas",
+    "Reconocer que cualquier muestra individual está sujeta a variación de muestreo"
+  ],
+  "entregable_esperado": "Estimación estadística de un parámetro poblacional basada en una muestra representativa",
+  "nodos_previos": [
+    "distribuciones_probabilidad"
+  ],
+  "nodos_siguientes": [
+    "estimacion_intervalos_confianza",
+    "determinacion_tamano_muestra"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita generalizar resultados de una muestra a toda la población",
+    "Al evaluar si un proceso cumple con especificaciones basándose en datos limitados"
+  ]
+}

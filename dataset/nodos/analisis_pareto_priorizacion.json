@@ -1,0 +1,28 @@
+{
+  "node_id": "analisis_pareto_priorizacion",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Pareto para Priorización de Problemas",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El principio de Pareto establece que para cualquier efecto dado, existen múltiples contribuyentes que hacen aportes desiguales; unos pocos contribuyentes (los 'vitales pocos') generan la mayor parte del efecto, mientras que muchos otros (los 'útiles muchos') contribuyen en menor medida. El análisis de Pareto se usa iterativamente para descomponer un problema general en subcategorías cada vez más específicas hasta identificar el foco preciso de intervención.",
+  "pasos_accionables": [
+    "Recopilar datos sobre las distintas categorías de un problema (tipo, costo, frecuencia)",
+    "Ordenar las categorías de forma descendente por porcentaje acumulado",
+    "Identificar los 'pocos vitales' que representan la mayor parte del impacto",
+    "Repetir el análisis de forma iterativa sobre subcategorías del problema principal",
+    "Enfocar los recursos del equipo en los pocos vitales identificados"
+  ],
+  "entregable_esperado": "Gráfico de Pareto con la categoría prioritaria de intervención claramente identificada",
+  "nodos_previos": [
+    "principio_pareto"
+  ],
+  "nodos_siguientes": [
+    "viaje_diagnostico_remedial",
+    "six_sigma_dmaic",
+    "consejo_de_calidad",
+    "establecer_proyecto_mejora"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples tipos de defectos o problemas y se necesita decidir por dónde empezar"
+  ]
+}

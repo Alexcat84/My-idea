@@ -1,0 +1,24 @@
+{
+  "node_id": "muestreo_con_seguimiento_no_respondientes",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Muestreo estratificado con seguimiento a no respondientes en encuestas de clientes",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Deming propone en su lugar seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "pasos_accionables": [
+    "Definir una muestra representativa reducida de la población de clientes (ej. 1000 de miles).",
+    "Enviar el cuestionario únicamente a esa muestra.",
+    "Realizar seguimiento activo (entrevista personal o telefónica) a quienes no respondan dentro de la muestra.",
+    "Calcular los intervalos de confianza de los resultados obtenidos.",
+    "Aplicar el mismo método a estudios futuros sobre cualquier producto con lista de compradores disponible."
+  ],
+  "entregable_esperado": "Un diseño de encuesta con muestra representativa y protocolo de seguimiento a no respondientes, junto con resultados con nivel de confianza estadística documentado.",
+  "nodos_previos": [
+    "moral_y_sistema_no_individuo"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Si la tasa de respuesta de una encuesta de satisfacción de clientes es baja (ej. 50%).",
+    "Si se requiere validar la voz del cliente con rigor estadístico antes de tomar decisiones de producto."
+  ]
+}

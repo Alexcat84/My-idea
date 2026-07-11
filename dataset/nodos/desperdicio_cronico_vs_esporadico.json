@@ -1,0 +1,25 @@
+{
+  "node_id": "desperdicio_cronico_vs_esporadico",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Desperdicio Crónico vs. Picos Esporádicos",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Distinción clave dentro de la Trilogía de Juran: el desperdicio crónico es un nivel de fallo persistente y 'planificado' (aceptado implícitamente en el diseño del proceso) que solo se reduce mediante proyectos de mejora que atacan causas raíz. Los picos esporádicos son eventos súbitos e inesperados (fallo de energía, error humano) que elevan temporalmente el nivel de fallo y se resuelven mediante control/acción correctiva, regresando al nivel crónico original, no eliminándolo.",
+  "pasos_accionables": [
+    "Monitorear los niveles de fallo/error de los procesos de forma continua",
+    "Diferenciar si un aumento de fallos es un pico esporádico (causa asignable) o parte del nivel crónico",
+    "Ante picos esporádicos, aplicar acción correctiva inmediata para restaurar el status quo",
+    "Ante desperdicio crónico, iniciar un proyecto de mejora para identificar y eliminar causas raíz"
+  ],
+  "entregable_esperado": "Gráfico de control o tablero con la distinción entre nivel crónico de fallos y eventos esporádicos, junto con plan de acción diferenciado para cada uno",
+  "nodos_previos": [
+    "trilogia_de_juran"
+  ],
+  "nodos_siguientes": [
+    "enfoque_proyecto_por_proyecto"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detecta un aumento repentino en la tasa de defectos o fallos",
+    "Cuando existe un nivel de desperdicio persistente que nadie ha cuestionado"
+  ]
+}

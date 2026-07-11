@@ -1,0 +1,28 @@
+{
+  "node_id": "sipoc",
+  "fase_proyecto": "ideacion",
+  "dominio": "quality",
+  "titulo_concepto": "SIPOC (Supplier-Input-Process-Output-Customer)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Mapa de alto nivel que muestra los proveedores principales de un proceso, las entradas recibidas, el proceso que agrega valor, las salidas producidas y los clientes que las reciben. Se usa en etapas tempranas de un proyecto para caracterizar el proceso e identificar miembros clave del equipo.",
+  "pasos_accionables": [
+    "Definir el proceso, nombrarlo y establecer puntos de inicio y fin",
+    "Identificar proveedores e insumos críticos recibidos",
+    "Identificar clientes y las salidas que responden a sus necesidades",
+    "Identificar de 5 a 8 pasos mayores del proceso",
+    "Validar el mapa trabajando con las funciones clave que ejecutan los pasos"
+  ],
+  "entregable_esperado": "Mapa SIPOC validado que define alcance, proveedores, entradas, proceso, salidas y clientes",
+  "nodos_previos": [
+    "hoja_de_necesidades_del_cliente",
+    "definicion_sistema_calidad_proveedor"
+  ],
+  "nodos_siguientes": [
+    "diagrama_de_flujo_proceso_map",
+    "hoja_de_necesidades_del_cliente"
+  ],
+  "condiciones_activacion": [
+    "Cuando se inicia un proyecto de mejora y se necesita entender el alcance del proceso",
+    "Cuando se requiere identificar a los miembros correctos del equipo de mejora"
+  ]
+}

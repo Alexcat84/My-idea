@@ -83,7 +83,9 @@ describe.runIf(TIENE_VOYAGE)(
     }, 15000);
 
     it(`query negativa NO ofrece '${NODO_ESPERADO_EXCLUIDO}' (queda bajo el umbral)`, async () => {
-      const candidatosSinFiltro = await buscarAfines(QUERY_NEGATIVA, new Set(), { k: 20, minScore: 0.0 });
+      // k amplio: con el grafo ampliado a 2805 nodos (Fase 3.6) el nodo de
+      // referencia ya no entra al top-20; el punto del caso es su SCORE.
+      const candidatosSinFiltro = await buscarAfines(QUERY_NEGATIVA, new Set(), { k: 3000, minScore: 0.0 });
       const crudo = candidatosSinFiltro.find((c) => c.id === NODO_ESPERADO_EXCLUIDO);
       expect(crudo).toBeDefined();
       expect(crudo!.score).toBeCloseTo(SCORE_REF_NEGATIVO, 1);

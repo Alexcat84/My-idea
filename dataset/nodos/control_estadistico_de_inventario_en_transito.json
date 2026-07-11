@@ -1,0 +1,26 @@
+{
+  "node_id": "control_estadistico_de_inventario_en_transito",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control estadístico de procesos aplicado a tiempos de tránsito e inventario",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Al estudiar el tiempo de tránsito de mercancías (o cualquier proceso repetitivo) mediante gráficos de control estadístico, es posible distinguir entre variación común y causas especiales (como averías). Una vez que el proceso está en control estadístico, se puede calcular un límite superior confiable de tiempo, reduciendo el inventario de seguridad requerido y generando ahorros significativos, como se muestra en el ejemplo de la ruta Buffalo-Kansas City, que generó ahorros de 500,000 dólares anuales.",
+  "pasos_accionables": [
+    "Recolectar datos históricos de tiempo de tránsito o duración del proceso.",
+    "Construir un gráfico de control para identificar si el proceso está en control estadístico.",
+    "Separar las causas especiales (ej. averías) de la variación normal del sistema.",
+    "Calcular el límite superior de tiempo esperado bajo control estadístico.",
+    "Ajustar los niveles de inventario o buffer con base en ese límite, y monitorear ahorros resultantes."
+  ],
+  "entregable_esperado": "Un gráfico de control de tiempos de proceso con límites calculados estadísticamente y una política de inventario ajustada que documente el ahorro esperado.",
+  "nodos_previos": [
+    "muestreo_estadistico_para_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "sistema_estable_responsabilidad_gerencial"
+  ],
+  "condiciones_activacion": [
+    "Si existe inventario de seguridad excesivo basado en estimaciones no estadísticas.",
+    "Si se requiere reducir costos de inventario sin afectar el nivel de servicio."
+  ]
+}

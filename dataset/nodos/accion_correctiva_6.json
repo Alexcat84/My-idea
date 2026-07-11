@@ -1,0 +1,27 @@
+{
+  "node_id": "accion_correctiva_6",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Acción Correctiva (Destapar Causas — Rolling Over the Rocks)",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "La acción correctiva es un paso del programa de mejora de calidad que consiste en identificar sistemáticamente las causas raíz de los problemas ('rolling over the rocks to see what is under them') y establecer mecanismos formales para resolverlos de manera permanente, evitando que el problema se repita. Requiere un sistema formal de reporte y seguimiento de auditorías de calidad.",
+  "pasos_accionables": [
+    "Documentar los problemas detectados mediante auditorías de calidad",
+    "Investigar la causa raíz de cada problema de forma sistemática",
+    "Asignar responsables y plazos para la resolución definitiva",
+    "Dar seguimiento y verificar que la acción implementada haya eliminado el problema"
+  ],
+  "entregable_esperado": "Sistema de acción correctiva implementado con registro de problemas, causas y soluciones verificadas",
+  "nodos_previos": [
+    "cero_defectos",
+    "programa_mejora_calidad_14_pasos"
+  ],
+  "nodos_siguientes": [
+    "eliminacion_causas_error",
+    "consejo_de_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detectan defectos o no conformidades recurrentes",
+    "Cuando la organización carece de un sistema formal para resolver causas raíz de problemas"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "node_id": "viaje_diagnostico_remedial",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Viaje Diagnóstico y Viaje Remedial",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Metodología dual de Juran para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
+  "pasos_accionables": [
+    "Analizar los síntomas del problema (evidencia observable)",
+    "Formular teorías sobre las posibles causas",
+    "Probar las teorías más plausibles con datos",
+    "Establecer la(s) causa(s) raíz confirmada(s)",
+    "Diseñar remedios para eliminar las causas",
+    "Probar los remedios bajo condiciones operativas reales",
+    "Gestionar la resistencia predecible al cambio",
+    "Establecer nuevos controles para sostener las ganancias"
+  ],
+  "entregable_esperado": "Documento de causa raíz validada y plan de remedio probado con controles de sostenimiento",
+  "nodos_previos": [
+    "secuencia_universal_breakthrough",
+    "analisis_pareto_priorizacion",
+    "establecer_proyecto_mejora"
+  ],
+  "nodos_siguientes": [
+    "six_sigma_dmaic",
+    "sostener_las_ganancias"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución"
+  ]
+}

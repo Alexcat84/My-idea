@@ -1,0 +1,31 @@
+{
+  "node_id": "investigacion_incidentes_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Investigación de Incidentes y Cuasi-Accidentes",
+  "fuente": "OSHA3886",
+  "resumen_teorico": "Toda lesión, enfermedad, cuasi-accidente o reporte de preocupación debe investigarse para identificar las causas raíz -que suelen ser múltiples- y prevenir su repetición. Una investigación efectiva no se detiene en el primer factor identificado, sino que pregunta reiteradamente '¿por qué?' hasta llegar a fallas sistémicas del programa.",
+  "pasos_accionables": [
+    "Desarrollar un procedimiento claro de investigación con roles definidos",
+    "Capacitar equipos investigadores en técnicas objetivas de análisis",
+    "Incluir representantes de gerencia y trabajadores en cada investigación",
+    "Investigar también los cuasi-accidentes, no solo los incidentes con daño",
+    "Identificar causas raíz y comunicar resultados a toda la organización",
+    "Cumplir con los plazos de reporte a OSHA (8h fatalidad, 24h hospitalización/amputación)"
+  ],
+  "entregable_esperado": "Informe de investigación de incidente con causas raíz identificadas y plan de acción correctiva",
+  "nodos_previos": [
+    "inspeccion_sitio_peligros",
+    "evitar_cherry_picking",
+    "evitar_micro_matching",
+    "evitar_shopping_bag",
+    "five_whys_inversion_proporcional"
+  ],
+  "nodos_siguientes": [
+    "caracterizacion_priorizacion_peligros"
+  ],
+  "condiciones_activacion": [
+    "Cuando ocurre una lesión, enfermedad o cuasi-accidente en el sitio",
+    "Cuando se requiere cumplir con normativa de reporte de OSHA"
+  ]
+}

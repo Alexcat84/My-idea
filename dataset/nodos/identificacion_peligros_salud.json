@@ -1,0 +1,33 @@
+{
+  "node_id": "identificacion_peligros_salud",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Identificación de Peligros para la Salud (Industria General)",
+  "fuente": "OSHA3885",
+  "resumen_teorico": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible. Requiere revisar SDS, realizar evaluaciones cuantitativas de exposición y examinar registros médicos para detectar patrones relacionados con el trabajo.",
+  "pasos_accionables": [
+    "Revisar SDS y etiquetas de productos para identificar químicos de riesgo",
+    "Evaluar exposición a ruido, calor o radiación",
+    "Identificar fuentes de riesgo biológico (enfermedades infecciosas, moho, alérgenos)",
+    "Analizar tareas con factores de riesgo ergonómico (levantamiento, repetición, vibración)",
+    "Realizar muestreos de aire o mediciones directas cuando sea posible",
+    "Revisar registros médicos (anonimizados) para detectar patrones de enfermedad ocupacional"
+  ],
+  "entregable_esperado": "Listado de peligros de salud identificados con su nivel de exposición estimado",
+  "nodos_previos": [
+    "inspeccion_lugar_trabajo_peligros",
+    "identificacion_recopilacion_informacion_peligros",
+    "recopilacion_informacion_peligros"
+  ],
+  "nodos_siguientes": [
+    "jerarquia_controles",
+    "caracterizacion_priorizacion_peligros",
+    "investigacion_incidentes",
+    "peligros_emergencias_no_rutinarias_2",
+    "programa_proteccion_respiratoria"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen procesos con uso de químicos, ruido, calor, o tareas repetitivas",
+    "Si se requiere un diagnóstico de salud ocupacional"
+  ]
+}

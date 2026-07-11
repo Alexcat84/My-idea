@@ -1,0 +1,27 @@
+{
+  "node_id": "evaluacion_de_factores_de_riesgo",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una vez identificados los riesgos, deben priorizarse asignando valores numéricos a distintos factores: severidad (magnitud de la pérdida potencial), probabilidad (frecuencia de ocurrencia), impacto de la velocidad, indignación del consumidor, complejidad, alcance (scope) e incertidumbre. Multiplicando o sumando estos valores se obtiene una lista priorizada que permite enfocar los esfuerzos de prevención en los riesgos más importantes.",
+  "pasos_accionables": [
+    "Asignar una escala numérica (ej. 1-3 o 1-5) a cada riesgo identificado según severidad y probabilidad.",
+    "Evaluar factores adicionales: velocidad de impacto, indignación pública, complejidad, alcance e incertidumbre.",
+    "Combinar los valores (multiplicando o sumando) para obtener una puntuación de prioridad por riesgo.",
+    "Ordenar la lista de riesgos de mayor a menor prioridad para enfocar los recursos."
+  ],
+  "entregable_esperado": "Matriz de riesgos priorizada con puntuaciones numéricas por cada factor evaluado.",
+  "nodos_previos": [
+    "identificacion_de_riesgos",
+    "prevencion_de_groupthink_en_evaluacion_de_riesgos"
+  ],
+  "nodos_siguientes": [
+    "matriz_riesgo_conocido_desconocido",
+    "plan_de_gestion_de_riesgos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se cuenta con una lista de riesgos pero no se sabe cuáles priorizar.",
+    "Antes de asignar recursos limitados a la mitigación de riesgos."
+  ]
+}

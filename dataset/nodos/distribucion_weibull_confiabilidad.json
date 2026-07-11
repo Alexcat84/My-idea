@@ -1,0 +1,25 @@
+{
+  "node_id": "distribucion_weibull_confiabilidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución de Weibull para Análisis de Confiabilidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta estadística flexible que permite modelar tasas de fallo crecientes, decrecientes o constantes mediante el parámetro de forma (b). Un valor de b menor a 1 indica tasa decreciente (mortalidad infantil), igual a 1 indica tasa constante, y mayor a 1 indica tasa creciente (desgaste). Es especialmente útil cuando la tasa de fallo no es constante y el modelo exponencial simple no aplica.",
+  "pasos_accionables": [
+    "Recolectar tiempos de fallo de una muestra de productos",
+    "Graficar los datos en papel de probabilidad Weibull",
+    "Estimar el parámetro de forma b a partir de la pendiente del gráfico",
+    "Interpretar el tipo de comportamiento de fallo según el valor de b",
+    "Usar el modelo para predecir la confiabilidad R en un periodo de tiempo específico"
+  ],
+  "entregable_esperado": "Gráfico de Weibull con parámetro de forma estimado y predicción de confiabilidad para el periodo de interés",
+  "nodos_previos": [
+    "curva_banera_periodos_fallo"
+  ],
+  "nodos_siguientes": [
+    "prediccion_confiabilidad_diseno"
+  ],
+  "condiciones_activacion": [
+    "Cuando la tasa de fallo del producto no es constante y se requiere un modelo más flexible que el exponencial"
+  ]
+}

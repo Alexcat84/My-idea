@@ -1,0 +1,28 @@
+{
+  "node_id": "review_mesh_evaluacion_por_calificacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Review y MESH: Evaluación por Calificación Subjetiva",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Review (operaciones ferroviarias) y MESH (mantenimiento aeronáutico) son descendientes de Tripod-Delta que usan calificaciones subjetivas de 1 a 5 en lugar de indicadores objetivos sí/no. Los especialistas de tarea estiman la frecuencia con que ciertos factores de problema (locales y organizacionales) han afectado su trabajo. Al agrupar datos de muchas personas, los sesgos individuales se cancelan, generando un perfil confiable de áreas problemáticas.",
+  "pasos_accionables": [
+    "Definir los factores locales y organizacionales relevantes al contexto (ej. 16 RPFs para ferrocarril, 8 factores organizacionales + factores locales para mantenimiento)",
+    "Seleccionar una muestra representativa de evaluadores (ej. 20-30% del personal operativo)",
+    "Aplicar escalas de calificación de 1 (casi nunca) a 5 (muy frecuente) sobre un periodo definido",
+    "Recolectar y promediar los datos de forma anónima mediante software",
+    "Generar diagramas de barras comparando la calificación individual vs el promedio del área",
+    "Comunicar a los trabajadores las acciones tomadas para mantener su confianza en el sistema"
+  ],
+  "entregable_esperado": "Sistema periódico de calificación de factores de riesgo con reportes comparativos y plan de acción visible para el personal",
+  "nodos_previos": [
+    "tripod_delta_general_failure_types"
+  ],
+  "nodos_siguientes": [
+    "heart_evaluacion_probabilidad_error"
+  ],
+  "condiciones_activacion": [
+    "Cuando construir indicadores objetivos es demasiado costoso o lento",
+    "Cuando se requiere una herramienta más ágil y económica que Tripod-Delta",
+    "En sectores con múltiples ubicaciones dispersas (ferrocarril) o centralizadas (mantenimiento aéreo)"
+  ]
+}

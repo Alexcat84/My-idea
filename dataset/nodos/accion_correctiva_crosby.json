@@ -1,0 +1,27 @@
+{
+  "node_id": "accion_correctiva_crosby",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Acción Correctiva Sistemática",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Paso del programa donde se investigan las causas reales de los problemas de calidad, en lugar de conclusiones superficiales. Requiere acudir directamente a los trabajadores operativos para entender lo que realmente sucede, y realizar auditorías independientes periódicas de cada departamento.",
+  "pasos_accionables": [
+    "Investigar las causas raíz consultando directamente al personal operativo",
+    "Realizar auditorías independientes periódicas por departamento",
+    "Documentar hallazgos en reportes formales de ingeniería de calidad",
+    "Definir planes de acción correctiva específicos por departamento responsable"
+  ],
+  "entregable_esperado": "Reporte de acción correctiva con causas raíz identificadas y plan de solución por departamento.",
+  "nodos_previos": [
+    "quality_awareness_crosby"
+  ],
+  "nodos_siguientes": [
+    "zero_defects_concepto",
+    "eliminacion_causas_error",
+    "eliminacion_causas_error_3"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detectan problemas recurrentes sin solución clara",
+    "Cuando los departamentos no han sido auditados independientemente en mucho tiempo"
+  ]
+}

@@ -70,8 +70,12 @@ def validar_prerequisitos():
             faltantes.append(str(ruta.relative_to(BASE)))
             continue
         puentes = cargar_json(ruta)
+        # Forma aprobada por el usuario: {"nota": ..., "aprobados": [pares]}.
+        # La nota viaja en el archivo; aquí solo consumimos los pares.
+        if isinstance(puentes, dict) and isinstance(puentes.get("aprobados"), list):
+            puentes = puentes["aprobados"]
         if not isinstance(puentes, list) or len(puentes) == 0:
-            fallar(f"{ruta.name} de '{d}' está vacío o no es una lista")
+            fallar(f"{ruta.name} de '{d}' está vacío o no es una lista (ni {{nota, aprobados}})")
         puentes_por_dominio[d] = puentes
     if faltantes:
         fallar(
@@ -163,20 +167,26 @@ def main():
 
     tocados_core = paso_a_integrar_nodos_y_puentes(puentes)
 
-    # b. familias (sin costo)
-    correr([sys.executable, "engine/plan_readiness.py"], "b. Etiquetas de familia (readiness) para el grafo ampliado")
-
     # e-parte-1. recompilar master_graph + Gate 0 (los nodos ya están en dataset/)
     correr([sys.executable, "scripts/run_phase1.py"], "e. run_phase1: recompilación + Gate 0 (debe quedar VERDE)")
 
-    # c. caché de preguntas PARCIAL: nodos de packs + cores tocados por puentes
+    # b. familias (sin costo) — DESPUÉS de run_phase1: plan_readiness lee
+    # master_graph.json, que recién queda recompilado con el grafo ampliado.
+    correr([sys.executable, "engine/plan_readiness.py"], "b. Etiquetas de familia (readiness) para el grafo ampliado")
+
+    # c. caché de preguntas PARCIAL: nodos de packs + cores tocados por puentes.
+    # La lista va en un archivo (--patch-file): 1500+ ids exceden el límite de
+    # línea de comandos de Windows.
     pack_ids = [p.stem for d in PACKS for p in (BASE / "packs" / d / "nodos").glob("*.json")]
     a_parchear = pack_ids + sorted(tocados_core)
     print(f"\n  caché parcial: {len(pack_ids)} nodos de packs + {len(tocados_core)} cores con sucesores nuevos")
+    patch_file = BASE / "engine" / "_patch_pendientes.txt"
+    patch_file.write_text("\n".join(a_parchear) + "\n", encoding="utf-8")
     correr(
-        [sys.executable, "engine/build_question_cache.py", "--patch", *a_parchear],
+        [sys.executable, "engine/build_question_cache.py", "--patch-file", str(patch_file)],
         "c. Caché de preguntas parcial (packs + cores tocados)",
     )
+    patch_file.unlink(missing_ok=True)
 
     # d. índice Voyage completo
     correr([sys.executable, "scripts/build_semantic_index_voyage.py"], "d. Índice semántico Voyage completo")

@@ -1,0 +1,26 @@
+{
+  "node_id": "diseno_recordatorios_efectivos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Diseño de Recordatorios Efectivos contra Omisiones",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Un buen recordatorio para prevenir omisiones debe cumplir criterios universales: ser conspicuo (atraer atención en el momento crítico), contiguo (cercano en tiempo/distancia al paso a recordar), dar contexto (cuándo y dónde), contenido (qué hacer) y permitir verificación (check). Criterios secundarios incluyen ser comprensivo, poder bloquear el progreso (compel), confirmar que el paso se completó, y poder eliminarse una vez cumplido su propósito (conclude).",
+  "pasos_accionables": [
+    "Para cada paso crítico identificado, diseñar un recordatorio que cumpla los 5 criterios universales (conspicuo, contiguo, contexto, contenido, check)",
+    "Evaluar si aplican criterios secundarios como bloqueo de progreso (compel) o confirmación posterior (confirm)",
+    "Probar el recordatorio en campo con el personal de mantenimiento antes de implementación masiva",
+    "Revisar periódicamente la efectividad del recordatorio y ajustar según retroalimentación"
+  ],
+  "entregable_esperado": "Sistema de recordatorios físicos o digitales implementado en los pasos críticos de las tareas de mantenimiento",
+  "nodos_previos": [
+    "caracteristicas_tareas_propensas_omision",
+    "prevalencia_omisiones"
+  ],
+  "nodos_siguientes": [
+    "racional_mantenimiento_preventivo_correctivo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha identificado un paso de tarea con alta probabilidad de omisión",
+    "Cuando se busca reducir costos y accidentes asociados a fallas de mantenimiento"
+  ]
+}

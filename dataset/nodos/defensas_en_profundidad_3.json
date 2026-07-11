@@ -1,0 +1,25 @@
+{
+  "node_id": "defensas_en_profundidad_3",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Defensas en Profundidad: Protección o Ocultamiento Peligroso",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "La filosofía de defensas en profundidad se basa en la redundancia y diversidad de capas de protección, asumiendo independencia causal entre ellas. Sin embargo, Jens Rasmussen señaló la 'falacia de las defensas en profundidad': estas capas pueden ocultar errores y fallas latentes, permitiendo que se acumulen condiciones peligrosas sin ser detectadas ni corregidas. Charles Perrow, en su teoría de accidentes normales, argumentó que la redundancia aumenta la complejidad interactiva, opacidad del sistema, y genera una falsa sensación de seguridad que impulsa a operar con mayor riesgo (más rápido, con peor clima, etc.).",
+  "pasos_accionables": [
+    "Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos)",
+    "Evaluar si existen dependencias ocultas entre capas que se asumen independientes",
+    "Implementar mecanismos de detección temprana de fallas latentes antes de que se acumulen",
+    "Revisar si la confianza en las múltiples defensas ha generado complacencia operativa"
+  ],
+  "entregable_esperado": "Mapa de capas de defensa del sistema con análisis de independencia real y puntos ciegos de detección",
+  "nodos_previos": [
+    "fijar_causa_ultimo_accidente_riesgo_siguiente"
+  ],
+  "nodos_siguientes": [
+    "gestion_falsas_alarmas"
+  ],
+  "condiciones_activacion": [
+    "Cuando el sistema depende de múltiples capas de protección redundantes",
+    "Si ha ocurrido un accidente donde fallaron varias defensas simultáneamente"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "graficos_control_atributos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráficos de Control para Datos de Atributos (p, np, c, u)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos.",
+  "pasos_accionables": [
+    "Determinar si se cuenta unidades defectuosas o número de defectos",
+    "Seleccionar el tipo de gráfico apropiado (p, np, c o u) según el tipo de conteo y tamaño de muestra",
+    "Calcular límites de control considerando el tamaño promedio de muestra",
+    "Graficar los datos y aplicar las mismas reglas de interpretación que en gráficos de variables",
+    "Investigar puntos fuera de límites, incluyendo valores inusualmente buenos"
+  ],
+  "entregable_esperado": "Gráfico de atributos (p, np, c o u) construido con límites de control y análisis de puntos fuera de rango",
+  "nodos_previos": [
+    "control_charts_shewhart"
+  ],
+  "nodos_siguientes": [
+    "interpretacion_graficos_variables"
+  ],
+  "condiciones_activacion": [
+    "Cuando los datos disponibles son de conteo o clasificación (pasa/no pasa, número de defectos)"
+  ]
+}

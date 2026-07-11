@@ -1,0 +1,25 @@
+{
+  "node_id": "evitar_lenguaje_juzgador",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Evitar el Lenguaje Juzgador en Investigaciones",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Decir que las personas 'fallaron' en hacer algo o 'deberían haber' actuado de otra manera es juzgar desde una posición retrospectiva externa, no explica el comportamiento. Términos como 'fallo en reconocer' no explican cómo y por qué la tripulación interpretó la situación de esa manera, y no ayudan a otros a evitar el mismo problema. Para entender el error humano hay que adoptar la perspectiva interna del túnel (cómo se veía la situación desde adentro) en lugar de juzgar desde afuera con el conocimiento retrospectivo del resultado.",
+  "pasos_accionables": [
+    "Revisar los informes de incidentes y eliminar frases como 'fallo en', 'debería haber' o 'no logró'",
+    "Reformular las conclusiones como descripciones de cómo tenía sentido la acción desde la perspectiva del operador",
+    "Preguntar '¿cómo pudo esto tener sentido para ellos en ese momento?' en cada conclusión del reporte"
+  ],
+  "entregable_esperado": "Un informe de investigación reescrito sin lenguaje juzgador, enfocado en explicar el comportamiento desde la perspectiva interna de los involucrados",
+  "nodos_previos": [
+    "reconstruccion_contexto_situacional"
+  ],
+  "nodos_siguientes": [
+    "sharp_end_blunt_end",
+    "debriefing_participantes"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está redactando un informe de investigación de accidente o incidente",
+    "Cuando el equipo de investigación usa términos como 'error humano' o 'fallo' sin explicación"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "hoja_de_necesidades_del_cliente",
+  "fase_proyecto": "ideacion",
+  "dominio": "quality",
+  "titulo_concepto": "Customer Needs Spreadsheet",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Herramienta de hoja de cálculo multicolumna que ayuda a analizar y priorizar las necesidades del cliente, correlacionando clientes vitales/útiles con las necesidades descubiertas, asegurando que el diseño se enfoque en lo más importante y que los recursos se asignen correctamente.",
+  "pasos_accionables": [
+    "Crear una hoja de cálculo multicolumna",
+    "Listar clientes vitales y grupos de clientes útiles en orden de prioridad",
+    "Listar todas las necesidades descubiertas en la fila superior",
+    "Correlacionar relaciones entre clientes y necesidades con evidencia sólida",
+    "Analizar fuerza de relación e importancia del cliente",
+    "Priorizar necesidades de más a menos crítica"
+  ],
+  "entregable_esperado": "Hoja de necesidades del cliente con clientes priorizados, necesidades correlacionadas y ranking de criticidad",
+  "nodos_previos": [
+    "sipoc"
+  ],
+  "nodos_siguientes": [
+    "sipoc",
+    "matriz_de_seleccion",
+    "matriz_pugh"
+  ],
+  "condiciones_activacion": [
+    "Cuando la información de clientes es demasiado amplia o vaga para diseñar directamente",
+    "Cuando se necesita priorizar recursos de diseño según importancia del cliente"
+  ]
+}

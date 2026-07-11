@@ -1,0 +1,25 @@
+{
+  "node_id": "correlacion_cero_muestra_remanente",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Correlación Cero entre Muestra y Remanente en Estado de Control Estadístico",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming demuestra empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
+  "pasos_accionables": [
+    "Verificar si el proceso de producción está en estado de control estadístico antes de diseñar planes de muestreo",
+    "Realizar experimentos de muestreo (ej. con lotes de prueba) para confirmar independencia entre muestra y remanente",
+    "Usar teoría de muestreo solo para fines enumerativos (estimar características poblacionales), no para decisiones de aceptación/rechazo basadas en la muestra",
+    "Aumentar el tamaño de muestra si se requiere mejor estimación de las características del lote completo"
+  ],
+  "entregable_esperado": "Reporte de validación estadística que confirme el estado de control del proceso y la independencia entre muestra y remanente, con estimaciones de error estándar",
+  "nodos_previos": [
+    "control_estadistico_proceso"
+  ],
+  "nodos_siguientes": [
+    "punto_equilibrio_calidad_inspeccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseña o evalúa un plan de muestreo de aceptación",
+    "Cuando se desea justificar estadísticamente por qué la inspección por muestreo no mejora la calidad final del lote"
+  ]
+}

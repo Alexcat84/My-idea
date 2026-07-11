@@ -1,0 +1,27 @@
+{
+  "node_id": "smed_setup_reduction",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "SMED – Reducción de Tiempos de Cambio (Setup)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Single Minute Exchange of Die (SMED) es un conjunto de técnicas desarrolladas por Shigeo Shingo para reducir drásticamente el tiempo de cambio de producto/proceso, idealmente a menos de 10 minutos, separando actividades internas (que requieren detener producción) de externas (que pueden hacerse sin detenerla).",
+  "pasos_accionables": [
+    "Documentar el proceso actual de cambio/setup",
+    "Clasificar actividades en internas y externas",
+    "Mover actividades internas a externas siempre que sea posible",
+    "Simplificar y estandarizar las actividades internas restantes",
+    "Eliminar necesidad de ajustes y pruebas de ensayo"
+  ],
+  "entregable_esperado": "Tiempo de cambio (setup) reducido y documentado, con procedimiento estandarizado",
+  "nodos_previos": [
+    "kanban_pull_system",
+    "constraint_management"
+  ],
+  "nodos_siguientes": [
+    "tpm_maintenance"
+  ],
+  "condiciones_activacion": [
+    "Cuando los tiempos de cambio de producto son largos y generan inventario excesivo",
+    "Al buscar mayor flexibilidad de producción"
+  ]
+}

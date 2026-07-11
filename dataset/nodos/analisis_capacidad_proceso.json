@@ -1,0 +1,28 @@
+{
+  "node_id": "analisis_capacidad_proceso",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Capacidad de Proceso (Process Capability)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La capacidad de proceso mide si un proceso puede cumplir con las especificaciones del producto. Es fundamental distinguir entre un proceso bajo control estadístico (estable, sin causas asignables) y un proceso capaz (que cumple especificaciones). Ambos conceptos son independientes: un proceso puede estar fuera de control pero cumplir especificaciones, o estar en control pero no cumplirlas. El objetivo ideal es lograr procesos que sean tanto estables como capaces.",
+  "pasos_accionables": [
+    "Graficar mediciones individuales contra los límites de especificación",
+    "Verificar si el proceso está en control estadístico mediante cartas de control",
+    "Calcular la desviación estándar y los límites de capacidad del proceso",
+    "Comparar los índices de capacidad (Cpk, Cpm) con las especificaciones usando un histograma",
+    "Verificar los cinco supuestos clave: estabilidad, normalidad, datos suficientes, representatividad de muestras e independencia de mediciones"
+  ],
+  "entregable_esperado": "Un informe de capacidad de proceso con índices Cpk/Cpm calculados, histograma comparativo con especificaciones y conclusión sobre si el proceso es estable y/o capaz",
+  "nodos_previos": [
+    "diseno_de_metodos_de_recoleccion_de_datos",
+    "distribucion_normal_probabilidad"
+  ],
+  "nodos_siguientes": [
+    "mejora_continua_del_proceso",
+    "interpretacion_cpk"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita verificar si un proceso cumple con las especificaciones del producto",
+    "Cuando existe controversia entre departamentos sobre si 'la especificación es muy estricta' o 'el proceso es descuidado'"
+  ]
+}

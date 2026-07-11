@@ -1,0 +1,27 @@
+{
+  "node_id": "sesgo_retrospectivo_hindsight",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Sesgo Retrospectivo (Hindsight Bias) en el Análisis de Accidentes",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "El conocimiento del resultado de un evento (outcome knowledge) sesga profundamente el juicio sobre las acciones de quienes estuvieron involucrados en el momento. Estudios muestran que las personas sobreestiman lo que ellas mismas habrían sabido en su momento, sobreestiman lo que otros sabían, y tergiversan lo que realmente sabían antes del evento. Muchas señales de advertencia solo son reconocibles como tales después de conocer el desenlace; antes del accidente, la 'señal' se perdía entre ruido y no era evidente que anunciaba ese tipo específico de desastre. Como señalan Wagenaar y Groeneweg, los accidentes ocurren no porque la gente apueste y pierda, sino porque no cree que el accidente sea posible.",
+  "pasos_accionables": [
+    "Al investigar un accidente, reconstruir el estado de conocimiento e información disponible ANTES del evento, evitando juzgar con el conocimiento del resultado.",
+    "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo.",
+    "Evaluar si las 'señales de advertencia' identificadas post-hoc eran realmente discernibles en tiempo real dado el volumen de información disperso entre los participantes."
+  ],
+  "entregable_esperado": "Protocolo de investigación de incidentes que incluya control explícito del sesgo retrospectivo.",
+  "nodos_previos": [
+    "caso_descarrilamiento_nakina"
+  ],
+  "nodos_siguientes": [
+    "cultura_generativa_westrum",
+    "analisis_factores_distales_proximales",
+    "fijacion_cognitiva",
+    "revision_de_aprendizaje"
+  ],
+  "condiciones_activacion": [
+    "Cuando se realiza una investigación post-accidente y se evalúa la culpabilidad o previsibilidad de los actores.",
+    "Cuando se diseñan procesos de aprendizaje organizacional a partir de fallos."
+  ]
+}

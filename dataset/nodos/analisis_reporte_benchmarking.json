@@ -1,0 +1,30 @@
+{
+  "node_id": "analisis_reporte_benchmarking",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis y Reporte de Hallazgos de Benchmarking",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El análisis debe ser imparcial, objetivo y alineado con los objetivos del benchmarking, identificando fortalezas, debilidades y brechas cuantificadas frente a los líderes. Las comparaciones cuantitativas suelen hacerse respecto al top quartile, el mejor de la clase, o el promedio poblacional, cada uno con ventajas y riesgos distintos. El reporte debe presentarse de forma clara, usando gráficos y tablas, y debe equilibrar la confidencialidad con el potencial de aprendizaje, cumpliendo siempre con la legislación antitrust.",
+  "pasos_accionables": [
+    "Analizar los datos de desempeño y normalización para determinar brechas entre participantes",
+    "Verificar la significancia estadística de las comparaciones realizadas",
+    "Comparar contra top quartile, mejor de la clase y promedio, evaluando pros y contras de cada enfoque",
+    "Considerar factores contextuales (geografía, tipo de cambio, regulación) que expliquen diferencias",
+    "Elaborar el reporte con hallazgos claros, gráficos y recomendaciones de mejora",
+    "Definir el nivel de anonimización de datos balanceando confidencialidad y potencial de aprendizaje",
+    "Asegurar cumplimiento de acuerdos de confidencialidad y legislación antitrust en el reporte"
+  ],
+  "entregable_esperado": "Reporte de benchmarking completo con hallazgos, brechas cuantificadas y recomendaciones de mejora",
+  "nodos_previos": [
+    "normalizacion_de_datos",
+    "recoleccion_validacion_datos_benchmarking"
+  ],
+  "nodos_siguientes": [
+    "identificacion_practicas_lideres",
+    "comprension_brechas_desempeno"
+  ],
+  "condiciones_activacion": [
+    "Cuando los datos ya han sido validados y normalizados",
+    "Si se requiere comunicar resultados a los participantes del estudio de benchmarking"
+  ]
+}

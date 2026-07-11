@@ -1,0 +1,27 @@
+{
+  "node_id": "determinacion_tamano_muestra",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Determinación del Tamaño de Muestra",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El tamaño de muestra adecuado depende de los riesgos de muestreo deseados (alfa y beta), el tamaño de la diferencia mínima que se desea detectar, y la variación de la característica medida. Un tamaño de muestra insuficiente o excesivo desperdicia tiempo y esfuerzo; se recomienda usar calculadoras de poder y tamaño de muestra en lugar de reglas empíricas.",
+  "pasos_accionables": [
+    "Definir el riesgo alfa (error tipo I) aceptable",
+    "Definir el riesgo beta (error tipo II) o poder de la prueba deseado",
+    "Estimar la diferencia mínima que se desea detectar",
+    "Estimar la variación de la característica a medir",
+    "Usar una calculadora de poder y tamaño de muestra para determinar el n requerido"
+  ],
+  "entregable_esperado": "Tamaño de muestra calculado y justificado antes de la recolección de datos",
+  "nodos_previos": [
+    "estimacion_intervalos_confianza",
+    "inferencia_estadistica_muestreo"
+  ],
+  "nodos_siguientes": [
+    "prueba_hipotesis"
+  ],
+  "condiciones_activacion": [
+    "Antes de diseñar un experimento o estudio de recolección de datos",
+    "Cuando se necesita balancear el costo de muestreo con la precisión deseada"
+  ]
+}

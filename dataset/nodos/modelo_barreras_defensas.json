@@ -1,0 +1,26 @@
+{
+  "node_id": "modelo_barreras_defensas",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Modelo de Barreras y Defensas (Swiss Cheese)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Modelo que propone que los sistemas críticos están protegidos por defensas duras y blandas (muros, procedimientos). Los accidentes ocurren cuando errores activos (actos inseguros en la primera línea) se combinan con errores latentes (condiciones organizacionales dormidas) que alinean 'agujeros' en las capas de defensa, permitiendo que el riesgo se propague hasta causar un accidente. Inspirado en industrias de contención de energía peligrosa (nuclear, petróleo, procesos químicos), popularizado tras grandes accidentes industriales como Bhopal en 1984.",
+  "pasos_accionables": [
+    "Identificar las defensas duras (físicas) y blandas (procedimentales) existentes en el sistema",
+    "Mapear posibles condiciones latentes dentro de la organización (diseño, mantenimiento, capacitación)",
+    "Evaluar si las defensas están realmente instaladas y funcionando o solo existen en papel",
+    "Analizar cómo los errores activos en la línea frontal pueden combinarse con fallas latentes"
+  ],
+  "entregable_esperado": "Mapa de capas de defensa del sistema con identificación de posibles brechas latentes y activas",
+  "nodos_previos": [
+    "modelo_queso_suizo"
+  ],
+  "nodos_siguientes": [
+    "teoria_sistemas_seguridad",
+    "falacia_redundancia_social"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga un accidente en un sistema de contención de energía peligrosa",
+    "Cuando se necesita entender la combinación de fallas humanas y organizacionales en un incidente"
+  ]
+}

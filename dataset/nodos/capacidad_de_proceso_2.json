@@ -1,0 +1,27 @@
+{
+  "node_id": "capacidad_de_proceso_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Capacidad de Proceso mediante Monitoreo Estadístico",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cada unidad estudiada (un operador humano, una máquina o un sistema) debe ser monitoreada durante un período de tiempo para determinar su capacidad de proceso: lo que puede hacer predeciblemente bajo las condiciones actuales. Esta capacidad usualmente puede determinarse en unos tres meses mediante cartas de control. Si la dirección determina que la capacidad del proceso no está dentro de límites aceptables, debe actuar sobre el proceso o sistema, ya que la calidad no puede exceder la capacidad del sistema y no puede ser inspeccionada dentro del producto, debe ser construida en él.",
+  "pasos_accionables": [
+    "Seleccionar la unidad a estudiar (persona, máquina, sistema)",
+    "Recolectar datos de desempeño durante un período representativo (aprox. 3 meses)",
+    "Construir cartas de control (run charts, control charts) para visualizar variación",
+    "Determinar si el proceso está dentro de límites aceptables",
+    "Si no lo está, intervenir sobre el sistema (no sobre el individuo)"
+  ],
+  "entregable_esperado": "Carta de control con límites de capacidad del proceso y decisión de intervención documentada",
+  "nodos_previos": [
+    "calidad_de_diseno_vs_produccion"
+  ],
+  "nodos_siguientes": [
+    "moral_y_sistema_no_individuo",
+    "liderazgo_para_mejora_continua"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen tasas de error o rechazo variables que se desean estabilizar",
+    "Cuando se necesita decidir si un problema es del sistema o del individuo"
+  ]
+}

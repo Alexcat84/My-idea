@@ -1,0 +1,26 @@
+{
+  "node_id": "diseno_para_factores_criticos_y_error_humano",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Diseño para Factores Críticos y Reducción de Error Humano",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los factores críticos son aspectos que representan peligro para la vida, salud, el ambiente o grandes pérdidas económicas. El diseño de procesos debe incorporar márgenes de seguridad, sistemas a prueba de fallos y redundancia. Además, dado que los humanos son falibles, se debe analizar y reducir el error humano mediante técnicas de mistake-proofing (a prueba de errores), clasificando errores por técnica, retroalimentación insuficiente o falta de atención sostenida.",
+  "pasos_accionables": [
+    "Realizar un análisis de criticidad y análisis de modos de falla y efectos (FMEA).",
+    "Identificar aspectos con riesgo para la vida, salud, ambiente o pérdidas económicas grandes.",
+    "Diseñar márgenes de seguridad, sistemas redundantes y alarmas múltiples.",
+    "Analizar datos de errores humanos y aplicar el principio de Pareto para priorizar los tipos de error vitales.",
+    "Aplicar principios de mistake-proofing como la eliminación de operaciones propensas al error."
+  ],
+  "entregable_esperado": "Plan de diseño con medidas de seguridad y mecanismos a prueba de error implementados.",
+  "nodos_previos": [
+    "diseno_de_procesos_por_caracteristicas"
+  ],
+  "nodos_siguientes": [
+    "optimizacion_de_procesos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proceso involucra riesgos altos para personas, activos o ambiente",
+    "Cuando se detectan errores humanos recurrentes en procesos existentes"
+  ]
+}

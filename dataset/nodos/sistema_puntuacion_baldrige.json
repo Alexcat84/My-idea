@@ -1,0 +1,23 @@
+{
+  "node_id": "sistema_puntuacion_baldrige",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistema de Puntuación Baldrige (ADLI y LeTCI)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El sistema de puntuación Baldrige usa una escala de 0 a 1000 puntos distribuidos entre las categorías, con fuerte énfasis en Resultados (450 puntos). Se evalúan dos dimensiones: Proceso, mediante los factores ADLI (Approach, Deployment, Learning, Integration), y Resultados, mediante los factores LeTCI (Levels, Trends, Comparisons, Integration). Estos factores permiten evaluar tanto la solidez metodológica de los procesos como el desempeño real alcanzado.",
+  "pasos_accionables": [
+    "Para cada proceso evaluado, calificar el Enfoque (metodología usada), Despliegue (extensión de aplicación), Aprendizaje (refinamiento) e Integración (alineación organizacional)",
+    "Para cada resultado, calificar el Nivel actual, la Tendencia, las Comparaciones con la competencia o benchmarks, y la Integración con los objetivos organizacionales",
+    "Asignar puntajes según las guías de puntuación de cada categoría",
+    "Consolidar puntaje total y compararlo contra benchmarks de organizaciones ganadoras"
+  ],
+  "entregable_esperado": "Puntaje consolidado organizacional bajo la metodología ADLI/LeTCI con análisis de fortalezas y brechas por categoría",
+  "nodos_previos": [
+    "criterios_baldrige_excelencia"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se realiza una autoevaluación formal o solicitud al premio Baldrige",
+    "Si se requiere un método objetivo y comparable de evaluación de madurez organizacional"
+  ]
+}

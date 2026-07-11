@@ -1,0 +1,26 @@
+{
+  "node_id": "identificar_caracteristicas_metas_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Identificación de Características y Metas del Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una característica de proceso es cualquier propiedad o atributo necesario para crear el bien o entregar el servicio y alcanzar las metas de características del producto. Responde a qué mecanismos se necesitan para crear o entregar esas características repetidamente sin fallas, categorizándose en procedimientos, métodos, equipos, materiales, personas, entrenamiento y otros recursos.",
+  "pasos_accionables": [
+    "Descomponer el proceso en características específicas necesarias para cada característica del producto",
+    "Clasificar cada característica en procedimientos, métodos, equipos, materiales, personas, entrenamiento o recursos",
+    "Organizar las características y metas en una hoja de cálculo de diseño de proceso",
+    "Verificar que cada característica del producto sea alcanzada por al menos una característica del proceso y eliminar redundancias",
+    "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas"
+  ],
+  "entregable_esperado": "Hoja de cálculo de diseño de proceso con características, metas y verificación de cobertura completa de necesidades del producto",
+  "nodos_previos": [
+    "seleccionar_diseno_general_proceso",
+    "desarrollar_caracteristicas_proceso_2"
+  ],
+  "nodos_siguientes": [
+    "diseno_para_factores_criticos"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha definido el flujo general del proceso y se requiere especificar los mecanismos concretos que lo ejecutarán"
+  ]
+}

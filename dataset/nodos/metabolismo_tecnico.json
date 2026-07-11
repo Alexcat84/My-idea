@@ -1,0 +1,28 @@
+{
+  "node_id": "metabolismo_tecnico",
+  "fase_proyecto": "ideacion",
+  "dominio": "environmental",
+  "titulo_concepto": "Metabolismo Técnico y Nutrientes Técnicos",
+  "fuente": "Cradle to Cradle - Michael Braungart",
+  "resumen_teorico": "Es el segundo metabolismo planetario, correspondiente a los ciclos cerrados de la industria (tecnosfera). Un nutriente técnico es un material diseñado para regresar continuamente al ciclo industrial del cual proviene, manteniendo su alta calidad mediante 'upcycling' en vez de 'downcycling'. Ejemplos: metales, plásticos de alta calidad que deben separarse por tipo para no perder valor al reciclarse.",
+  "pasos_accionables": [
+    "Clasificar los componentes técnicos del producto (metales, plásticos, aleaciones)",
+    "Diseñar para el desensamble fácil, evitando mezclar materiales técnicos incompatibles",
+    "Establecer sistemas de recuperación con el fabricante para reincorporar los materiales sin pérdida de calidad",
+    "Evitar el downcycling diseñando desde el inicio pensando en ciclos cerrados"
+  ],
+  "entregable_esperado": "Especificación técnica del producto con materiales catalogados por tipo de metabolismo y plan de recuperación/reingreso al ciclo industrial",
+  "nodos_previos": [
+    "metabolismo_biologico",
+    "eco_efectividad"
+  ],
+  "nodos_siguientes": [
+    "productos_de_servicio",
+    "manejo_de_hibridos_monstruosos",
+    "metabolismo_biologico"
+  ],
+  "condiciones_activacion": [
+    "Si el producto contiene materiales durables como metales, plásticos técnicos o electrónicos",
+    "Si se quiere evitar la pérdida de valor de materiales tras su vida útil"
+  ]
+}

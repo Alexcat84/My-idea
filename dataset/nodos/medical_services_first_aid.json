@@ -1,0 +1,26 @@
+{
+  "node_id": "medical_services_first_aid",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Servicios Médicos y Primeros Auxilios",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_teorico": "Disposición de recursos médicos, personal capacitado en primeros auxilios y kits accesibles para atender emergencias de salud en el lugar de trabajo, incluyendo protocolos para exposición a patógenos transmitidos por sangre.",
+  "pasos_accionables": [
+    "Asegurar acceso a instalación médica cercana o personal capacitado en primeros auxilios en cada turno.",
+    "Mantener botiquines de primeros auxilios completos, accesibles e inspeccionados periódicamente.",
+    "Proveer EPP y capacitación en patógenos transmitidos por sangre a quienes brindan primeros auxilios.",
+    "Ofrecer vacunación contra hepatitis B a personal expuesto.",
+    "Publicar números de emergencia visibles en el lugar de trabajo."
+  ],
+  "entregable_esperado": "Botiquines abastecidos, personal certificado en primeros auxilios y protocolo de respuesta a emergencias médicas documentado.",
+  "nodos_previos": [
+    "infection_control_plan",
+    "powered_industrial_trucks_safety"
+  ],
+  "nodos_siguientes": [
+    "noise_exposure_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando no existe una instalación médica cercana o el trabajo implica riesgos de lesión o exposición biológica."
+  ]
+}

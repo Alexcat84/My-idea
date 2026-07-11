@@ -1,0 +1,28 @@
+{
+  "node_id": "abolir_inspeccion_masiva",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Abolición de la Inspección Masiva como Estrategia de Calidad",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming argumenta que construir calidad mediante inspección al 100% o incluso al 200% nunca funciona: es costosa, ineficaz (los inspectores terminan haciendo retrabajo en vez de inspeccionar) y no previene la generación de defectos, solo intenta atraparlos después del hecho. La estrategia correcta es reducir la necesidad de inspección masiva mediante control estadístico del proceso, aleatorización de la inspección y rediseño del sistema de producción para prevenir defectos desde el origen.",
+  "pasos_accionables": [
+    "Medir el costo actual de inspección al 100%/200% y de retrabajo asociado",
+    "Implementar muestreo aleatorio (usando números aleatorios) en lugar de inspección exhaustiva",
+    "Separar claramente el rol de inspección del rol de retrabajo/producción",
+    "Establecer gráficos de control por operador e inspector para detectar quiénes están fuera de los parámetros normales",
+    "Reducir gradualmente la inspección masiva a medida que el proceso demuestre estar en control estadístico"
+  ],
+  "entregable_esperado": "Plan de transición de inspección masiva a inspección por muestreo aleatorio y control estadístico de proceso, con métricas de reducción de costos e incremento de calidad",
+  "nodos_previos": [
+    "definiciones_operacionales_defectos",
+    "eliminar_trabajo_a_destajo",
+    "reporte_gerencial_diagnostico_calidad"
+  ],
+  "nodos_siguientes": [
+    "responsabilidad_gerencial_causas_comunes"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa depende de inspección al 100% o 200% para garantizar calidad",
+    "Cuando los inspectores dedican más tiempo a retrabajo que a inspección real"
+  ]
+}

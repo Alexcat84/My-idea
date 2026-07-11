@@ -46,7 +46,9 @@ REF_KEYS = ("nodos_previos", "nodos_siguientes")
 # el interruptor de filtrado por dominio queda instalado desde ya en
 # ruteador/brujula/cosecha). Todo nodo DEBE declarar "dominio" con un valor
 # de esta lista; agregar aqui cuando exista un dominio nuevo real.
-DOMINIOS_PERMITIDOS = {"core"}
+# Fase 3.6: dominios ampliados — los packs P1-HSEQ integrados por
+# scripts/integrar_packs.py viven en el mismo dataset con su dominio propio.
+DOMINIOS_PERMITIDOS = {"core", "quality", "health_safety", "environmental"}
 
 # Mapa de fusion de duplicados, tal como quedo definido en
 # scripts/archive/phase1_5_merge.py. Se mantiene aqui como fuente de verdad
@@ -595,7 +597,16 @@ def find_near_duplicate_titles(nodes, threshold=95):
 def load_entry_seeds():
     if not ENTRY_SEEDS_PATH.exists():
         return []
-    return load_json(ENTRY_SEEDS_PATH).get("seeds", [])
+    seeds = list(load_json(ENTRY_SEEDS_PATH).get("seeds", []))
+    # Fase 3.6: los mundos integrados se entran por sus propias semillas
+    # (packs/<dominio>/metadata/entry_seeds.json, rutas unlock/start), no por
+    # las 20 puertas core del motor. Para el chequeo de alcanzabilidad el
+    # universo tiene todas las puertas; el archivo del motor NO se toca.
+    for pack_seeds in sorted(BASE.glob("packs/*/metadata/entry_seeds.json")):
+        for seed in load_json(pack_seeds):
+            if seed not in seeds and (NODOS_DIR / f"{seed}.json").exists():
+                seeds.append(seed)
+    return seeds
 
 
 def step7_validate(master, parse_errors):

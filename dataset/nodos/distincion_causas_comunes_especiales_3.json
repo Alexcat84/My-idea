@@ -1,0 +1,26 @@
+{
+  "node_id": "distincion_causas_comunes_especiales_3",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distinción entre Causas Comunes y Causas Especiales de Variación",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming enfatiza que la mayoría de los problemas de calidad (más del 80-90%) provienen de causas comunes, es decir, del sistema mismo, y son responsabilidad de la gerencia. Las causas especiales son atribuibles a un trabajador, máquina o condición local específica y se detectan cuando un punto cae fuera de los límites de control. Confundir ambas lleva a culpar injustamente a los trabajadores por fallos del sistema.",
+  "pasos_accionables": [
+    "Recolectar datos de desempeño (errores, defectos) por trabajador o unidad a lo largo del tiempo",
+    "Calcular límites de control estadísticos (media ± 3 sigma) sobre los datos",
+    "Clasificar los puntos fuera de límite como causas especiales; investigar contexto (rutas difíciles, turnos, etc.) antes de sancionar",
+    "Reconocer que los puntos dentro de límites reflejan variación del sistema, no de las personas",
+    "Dirigir esfuerzos de mejora hacia el sistema (materiales, equipos, procesos) en lugar de culpar al operador"
+  ],
+  "entregable_esperado": "Gráfico de control con clasificación clara de puntos como causa común o especial, y plan de acción diferenciado para cada tipo",
+  "nodos_previos": [
+    "carta_de_control_shewhart"
+  ],
+  "nodos_siguientes": [
+    "mejora_del_sistema_responsabilidad_gerencial"
+  ],
+  "condiciones_activacion": [
+    "Cuando se atribuyen errores a trabajadores sin verificar si son causas comunes del sistema",
+    "Cuando se necesita decidir si intervenir sobre un proceso o sobre un individuo"
+  ]
+}

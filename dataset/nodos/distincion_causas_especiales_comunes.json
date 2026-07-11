@@ -1,0 +1,25 @@
+{
+  "node_id": "distincion_causas_especiales_comunes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distinción entre Causas Especiales y Comunes (Teorema de Nelson)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Ajustar un proceso que está en control estadístico, reaccionando a cada falla como si tuviera una causa especial obvia, solo genera más problemas, no menos. Apagar incendios o corregir una causa especial detectada por un punto fuera de control únicamente regresa el proceso a donde debería haber estado, sin ser una mejora real. Es crucial diferenciar entre variación de causa común (del sistema) y causa especial (evento aislado) antes de actuar.",
+  "pasos_accionables": [
+    "Antes de ajustar un proceso, verificar si está en control estadístico",
+    "Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros",
+    "Evitar tratar cada defecto individual como causa especial si el sistema es estable",
+    "Usar métodos estadísticos (Cap. 11) para decidir si una intervención es necesaria"
+  ],
+  "entregable_esperado": "Gráfico de control del proceso con identificación clara de causas comunes vs especiales antes de tomar acción correctiva",
+  "nodos_previos": [
+    "mejora_continua_del_proceso"
+  ],
+  "nodos_siguientes": [
+    "adopcion_liderazgo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detecta un defecto y se quiere ajustar el proceso inmediatamente sin análisis previo",
+    "Cuando un supervisor reacciona a cada error individual sin evaluar si el sistema es estable"
+  ]
+}

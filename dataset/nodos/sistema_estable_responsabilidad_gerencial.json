@@ -1,0 +1,26 @@
+{
+  "node_id": "sistema_estable_responsabilidad_gerencial",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistema estable como evidencia de responsabilidad gerencial sobre la mejora",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando un gráfico de control muestra que un proceso (por ejemplo, el tiempo de preparación de habitaciones de hotel o el servicio de un departamento) está en un estado estable, esto indica que las causas de los problemas son comunes al sistema y no atribuibles a trabajadores individuales. En consecuencia, la responsabilidad de mejorar el desempeño recae completamente en la gerencia, que es quien diseña y controla el sistema, no en los empleados que operan dentro de sus límites.",
+  "pasos_accionables": [
+    "Recolectar datos de desempeño del proceso mediante observación estadística planificada (snap-counts, muestreo periódico).",
+    "Construir un gráfico de control para verificar si el sistema es estable.",
+    "Si el sistema es estable, comunicar a la gerencia que la mejora depende del rediseño del sistema, no de presionar a los trabajadores.",
+    "Priorizar iniciativas de mejora estructural (diseño, equipo, procesos) en lugar de sanciones individuales."
+  ],
+  "entregable_esperado": "Un informe de estabilidad del sistema (gráfico de control) que asigna formalmente la responsabilidad de mejora a la gerencia y propone cambios estructurales.",
+  "nodos_previos": [
+    "control_estadistico_de_inventario_en_transito",
+    "diseno_de_calidad_desde_planificacion"
+  ],
+  "nodos_siguientes": [
+    "identificacion_causa_raiz_no_culpa_individual"
+  ],
+  "condiciones_activacion": [
+    "Si existe la tentación de culpar a empleados individuales por problemas sistémicos.",
+    "Si se necesita justificar ante la dirección la necesidad de invertir en rediseño de procesos o instalaciones."
+  ]
+}

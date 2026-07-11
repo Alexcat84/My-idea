@@ -1,0 +1,26 @@
+{
+  "node_id": "seduccion_modelo_persona",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Por qué el Modelo de Persona Domina la Gestión de Seguridad",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "El modelo centrado en la persona (culpar al individuo por actos inseguros) sigue siendo el más usado a pesar de sus limitaciones, debido a factores psicológicos y organizacionales: es tradicional y cómodo para gerentes, permite fijar responsabilidad legal más fácilmente en el trabajador de primera línea, se alinea con la creencia en el libre albedrío y el error fundamental de atribución (asumir que los actos malos los cometen personas malas), y ofrece satisfacción emocional al culpar a alguien en lugar de algo. Sin embargo, este modelo es inútil para abordar errores de operadores clave, condiciones latentes o riesgos a terceros, que son la esencia de los accidentes organizacionales.",
+  "pasos_accionables": [
+    "Auditar el discurso interno de la organización para detectar sesgo hacia la culpa individual tras incidentes",
+    "Educar a la gerencia sobre las limitaciones del modelo de persona frente a accidentes organizacionales",
+    "Establecer criterios claros para distinguir cuándo un incidente requiere análisis individual vs. análisis sistémico",
+    "Revisar políticas disciplinarias para asegurar que no sustituyan el análisis de causas raíz organizacionales"
+  ],
+  "entregable_esperado": "Documento de política interna que defina cuándo aplicar el modelo de persona vs. el modelo organizacional en investigaciones de incidentes",
+  "nodos_previos": [
+    "modelo_accidente_organizacional"
+  ],
+  "nodos_siguientes": [
+    "condiciones_latentes_riesgo_universal",
+    "limite_busqueda_causas_pendulo"
+  ],
+  "condiciones_activacion": [
+    "Cuando las investigaciones de accidentes consistentemente terminan culpando solo a trabajadores de primera línea",
+    "Cuando la organización busca mejorar su cultura de seguridad más allá del castigo individual"
+  ]
+}

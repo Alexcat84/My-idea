@@ -1,0 +1,24 @@
+{
+  "node_id": "segregacion_funciones_trading_settlement",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Segregación de Funciones como Defensa Organizacional",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten indefinidamente.",
+  "pasos_accionables": [
+    "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separados.",
+    "Prohibir que una misma persona pueda autorizar y aprobar su propio trabajo.",
+    "Auditar periódicamente la existencia de 'roles duales' no documentados en la organización."
+  ],
+  "entregable_esperado": "Matriz de segregación de funciones (SoD) para los procesos críticos de la organización.",
+  "nodos_previos": [
+    "implementacion_controles"
+  ],
+  "nodos_siguientes": [
+    "senales_alerta_no_atendidas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se diseñan controles internos en operaciones financieras o de alto riesgo",
+    "Cuando una persona tiene doble responsabilidad de ejecución y control"
+  ]
+}

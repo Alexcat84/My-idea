@@ -1,0 +1,25 @@
+{
+  "node_id": "seleccionar_diseno_general_proceso",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Selección del Diseño General del Proceso",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El diseño de proceso debe comenzar con un diagrama de flujo de alto nivel que describa el flujo general, desde el cual se identifican subprocesos y actividades principales para diseño detallado. Debe cumplir criterios como entregar las metas de calidad del producto, ser eficiente en recursos y no exigir inversiones mayores a las planificadas.",
+  "pasos_accionables": [
+    "Elaborar un diagrama de flujo de proceso de alto nivel",
+    "Verificar que el diseño incorpore contramedidas de análisis de criticidad, FMEA y árbol de fallas",
+    "Evaluar el impacto de anatomías de proceso radicalmente distintas (unidades dedicadas vs funciones especializadas)",
+    "Documentar para cada actividad: entradas, salidas, metas, tiempo de ciclo, costo y descripción de conversión",
+    "Revisar el flujo para eliminar fuentes de error, redundancias y reducir tiempos de ciclo"
+  ],
+  "entregable_esperado": "Diagrama de flujo de proceso de alto nivel documentado con especificaciones de entradas, salidas y metas por actividad",
+  "nodos_previos": [
+    "anatomia_proceso_arbol_ensamble"
+  ],
+  "nodos_siguientes": [
+    "identificar_caracteristicas_metas_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe definir la estructura general del proceso antes de entrar en el diseño detallado"
+  ]
+}

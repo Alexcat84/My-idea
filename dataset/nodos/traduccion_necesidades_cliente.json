@@ -1,0 +1,26 @@
+{
+  "node_id": "traduccion_necesidades_cliente",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Traducción de Necesidades del Cliente al Lenguaje del Proveedor",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Proceso sistemático de convertir las necesidades expresadas por el cliente (en su propio lenguaje, a veces vago o ambiguo) al lenguaje técnico del proveedor, evitando malentendidos derivados de un 'lenguaje común' aparente. Se apoya en herramientas como glosarios, muestras físicas, departamentos de traducción (ej. edición de pedidos), estandarización de nomenclatura y, sobre todo, la medición numérica como el remedio más efectivo contra la vaguedad.",
+  "pasos_accionables": [
+    "Identificar términos vagos o ambiguos en las necesidades expresadas por el cliente",
+    "Crear un glosario de términos clave con definiciones precisas acordadas",
+    "Usar muestras físicas o audiovisuales para especificar características cualitativas",
+    "Establecer un departamento o proceso de traducción para pedidos de alto volumen si aplica",
+    "Convertir descripciones cualitativas en mediciones numéricas siempre que sea posible"
+  ],
+  "entregable_esperado": "Documento de necesidades del cliente traducidas a especificaciones técnicas claras y medibles",
+  "nodos_previos": [
+    "customer_needs_spreadsheet"
+  ],
+  "nodos_siguientes": [
+    "unidades_medida_sensores"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe riesgo de malentendido entre cliente y proveedor por terminología ambigua",
+    "Cuando las necesidades del cliente están expresadas en términos cualitativos no medibles"
+  ]
+}

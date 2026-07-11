@@ -1,0 +1,27 @@
+{
+  "node_id": "mistake_proofing_poka_yoke",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Mistake Proofing / Poka-Yoke",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Técnica de prevención que diseña el proceso para hacer improbable o imposible el error humano, mediante el rediseño de herramientas y máquinas (ej. lugs y notches para lock-and-key). Incluye cinco principios: eliminación, reemplazo, facilitación, detección y mitigación. Puede aplicarse de forma proactiva (evitar el defecto) o reactiva (evitar que el defecto pase a la siguiente operación).",
+  "pasos_accionables": [
+    "Analizar los puntos del proceso donde ocurren errores humanos frecuentes",
+    "Aplicar uno de los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación",
+    "Diseñar o rediseñar herramientas/máquinas para hacer el error físicamente imposible",
+    "Priorizar el modo proactivo (prevenir en diseño) sobre el reactivo (detectar después)",
+    "Validar la efectividad del mecanismo de mistake-proofing implementado"
+  ],
+  "entregable_esperado": "Mecanismo de poka-yoke implementado en el punto crítico del proceso, validado y documentado",
+  "nodos_previos": [
+    "rcm_reliability_centered_maintenance",
+    "6s_workplace_organization"
+  ],
+  "nodos_siguientes": [
+    "six_sigma_dmaic_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen errores humanos recurrentes en el proceso",
+    "Al diseñar un nuevo proceso o producto para prevenir defectos desde el origen"
+  ]
+}

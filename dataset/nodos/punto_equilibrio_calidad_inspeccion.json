@@ -1,0 +1,31 @@
+{
+  "node_id": "punto_equilibrio_calidad_inspeccion",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Punto de Equilibrio de Calidad (Break-even Quality) para Decisiones de Inspección",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Deming demuestra matemáticamente que existe un punto de equilibrio (k1/k2) entre el costo de inspeccionar una pieza (k1) y el costo de reparar/reensamblar un ensamble que falla por una pieza defectuosa (k2). Si la fracción defectuosa entrante p es menor que k1/k2, la estrategia de costo mínimo es cero inspección (Caso 1). Si p es mayor que k1/k2, la estrategia de costo mínimo es inspección 100% (Caso 2). Cualquier plan de muestreo intermedio entre estos dos extremos, cuando la calidad se sitúa consistentemente a un lado del punto de equilibrio, aumenta el costo total en comparación con las reglas de todo-o-nada.",
+  "pasos_accionables": [
+    "Calcular k1 (costo de inspeccionar una pieza) y k2 (costo de reparar un ensamble fallido por pieza defectuosa)",
+    "Determinar el punto de equilibrio k1/k2",
+    "Estimar la fracción defectuosa promedio entrante p mediante datos históricos en estado de control estadístico",
+    "Comparar p contra k1/k2 para decidir entre cero inspección o inspección 100%",
+    "Evitar planes de muestreo intermedios (aceptación por muestreo) cuando p esté consistentemente de un lado del punto de equilibrio"
+  ],
+  "entregable_esperado": "Tabla de costos comparativos (Tabla 6 tipo) que justifique la decisión de inspección (cero, muestreo o 100%) con base en datos reales de costos y calidad entrante",
+  "nodos_previos": [
+    "control_estadistico_proceso",
+    "costo_de_la_calidad",
+    "correlacion_cero_muestra_remanente"
+  ],
+  "nodos_siguientes": [
+    "programa_cero_defectos",
+    "equipo_conjunto_de_mejora_con_proveedores",
+    "regla_todo_o_nada_inspeccion_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa recibe lotes de materiales o piezas y debe decidir el nivel de inspección de entrada",
+    "Cuando existen costos definibles de inspección y de falla por defectos",
+    "Cuando se sospecha que un plan de muestreo intermedio está aumentando costos innecesariamente"
+  ]
+}

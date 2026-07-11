@@ -1,0 +1,27 @@
+{
+  "node_id": "etapas_de_control_operativo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Etapas de Control Operativo (Setup, Running, Producto, Instalaciones)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El control operativo se organiza en etapas clave: control de arranque (setup, decide si iniciar el proceso), control en marcha (running, decide si continuar operando), control de producto (evalúa conformidad del producto ya fabricado) y control de instalaciones (mantenimiento de equipos, apoyado en TPM y RCM). Cada etapa requiere criterios, verificación y asignación clara de responsabilidad.",
+  "pasos_accionables": [
+    "Definir checklist de arranque (setup) con criterios de verificación previos al inicio",
+    "Establecer el bucle de control en marcha para decisiones de continuar/detener",
+    "Diseñar el control de producto terminado con responsables idealmente independientes de sesgos",
+    "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist y calendario",
+    "Auditar de forma independiente el cumplimiento del calendario de mantenimiento"
+  ],
+  "entregable_esperado": "Procedimientos documentados para cada etapa de control (arranque, marcha, producto, instalaciones)",
+  "nodos_previos": [
+    "hoja_de_calculo_de_control"
+  ],
+  "nodos_siguientes": [
+    "concepto_de_dominancia",
+    "capacidad_de_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ejecuta un proceso productivo que requiere puntos de control definidos",
+    "Si hay fallas recurrentes por falta de mantenimiento de equipos"
+  ]
+}

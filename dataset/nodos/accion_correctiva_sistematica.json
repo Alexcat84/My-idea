@@ -1,0 +1,30 @@
+{
+  "node_id": "accion_correctiva_sistematica",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Acción Correctiva Sistemática (Paso 6 de Crosby)",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Método formal para resolver definitivamente los problemas identificados durante la operación de aceptación u otras fuentes, estableciendo cuatro niveles de actividad constante: reuniones diarias entre supervisores de área y calidad, reuniones semanales entre supervisión de producción y gerencia de calidad, reuniones mensuales de gerencia general para revisar problemas no resueltos, y equipos de tarea (task teams) para problemas complejos o de largo plazo. Se basa en el principio de Pareto: atacar primero los problemas más grandes e importantes.",
+  "pasos_accionables": [
+    "Documentar cada problema detectado en un gráfico de acción ítem por ítem (problema, gravedad, causa, responsable, plazo)",
+    "Establecer reuniones diarias entre supervisor de área y un ingeniero/supervisor de calidad",
+    "Escalar problemas no resueltos a reuniones semanales entre supervisión de producción y alta gerencia de calidad",
+    "Revisar mensualmente los problemas no resueltos con la gerencia general y asignar equipos de tarea si es necesario",
+    "Formar equipos de tarea con miembros responsables de cada organización afectada y un presidente designado; disolverlos al resolver el problema",
+    "Priorizar los problemas según el principio de Pareto (los más grandes primero)"
+  ],
+  "entregable_esperado": "Sistema documentado de acción correctiva con gráficos de seguimiento por nivel (diario, semanal, mensual) y comunicaciones formales de cierre de problemas",
+  "nodos_previos": [
+    "metodologia_medicion_copq",
+    "muestreo_de_aceptacion"
+  ],
+  "nodos_siguientes": [
+    "planificacion_cero_defectos",
+    "auditoria_calidad_proveedores"
+  ],
+  "condiciones_activacion": [
+    "Cuando se detectan defectos recurrentes que no se resuelven de forma permanente",
+    "Cuando existe descoordinación entre departamentos que genera errores repetidos",
+    "Si el usuario necesita un mecanismo formal de escalamiento de problemas de calidad"
+  ]
+}

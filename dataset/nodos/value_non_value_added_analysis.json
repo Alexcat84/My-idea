@@ -1,0 +1,26 @@
+{
+  "node_id": "value_non_value_added_analysis",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Descomposición de Valor Agregado / No Agregado (VA/NVA)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Metodología Lean para identificar en cada paso del proceso si el cliente estaría dispuesto a pagar por esa actividad. Las actividades sin valor agregado se consideran desperdicio, aunque algunas son necesarias temporalmente (ej. inspecciones) hasta que el proceso sea lo suficientemente robusto para eliminarlas.",
+  "pasos_accionables": [
+    "Listar cada paso del proceso desde el mapa de estado actual",
+    "Preguntar para cada paso: ¿el cliente pagaría por esto?",
+    "Clasificar cada paso como valor agregado, no valor agregado necesario, o desperdicio puro",
+    "Diseñar acciones para reducir o eliminar el desperdicio identificado"
+  ],
+  "entregable_esperado": "Tabla de clasificación VA/NVA de todos los pasos del proceso con plan de eliminación de desperdicio",
+  "nodos_previos": [
+    "value_stream_mapping",
+    "value_stream_mapping_2"
+  ],
+  "nodos_siguientes": [
+    "constraint_management",
+    "reduccion_de_tiempo_de_ciclo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se busca reducir desperdicio en un proceso mapeado"
+  ]
+}

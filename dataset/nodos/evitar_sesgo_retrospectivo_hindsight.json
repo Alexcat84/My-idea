@@ -1,0 +1,27 @@
+{
+  "node_id": "evitar_sesgo_retrospectivo_hindsight",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Evitar el Sesgo Retrospectivo (Hindsight) en el Análisis de Errores",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "El sesgo retrospectivo hace que quien analiza un incidente vea todas las señales de peligro como obvias y agrupadas, cuando en realidad llegaron de forma fragmentada, contradictoria y ambigua a las personas involucradas en el momento. Para entender por qué la gente hizo lo que hizo, hay que reconstruir la situación tal como se desplegó ante ellos, sin saber el resultado final, evitando el 'shopping-bagging' de pistas.",
+  "pasos_accionables": [
+    "Reconstruir una línea de tiempo de cuándo llegó cada pista o indicación",
+    "Evitar asumir que el resultado era predecible desde el inicio",
+    "Imaginar la situación sin conocer el desenlace",
+    "Analizar qué pudo significar cada señal dado el contexto y entendimiento de las personas en ese momento",
+    "Reconocer que el entendimiento de los actores era incompleto y cambiante, no estático"
+  ],
+  "entregable_esperado": "Línea de tiempo reconstruida desde la perspectiva de los actores, sin sesgo de resultado conocido",
+  "nodos_previos": [
+    "atribucion_retrospectiva_del_error"
+  ],
+  "nodos_siguientes": [
+    "operacionalizacion_de_etiquetas_psicologicas",
+    "construccion_de_causas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga un accidente o incidente y existe la tentación de juzgar decisiones pasadas con la información actual",
+    "Cuando se pregunta '¿cómo no vieron la evidencia?' sobre un evento pasado"
+  ]
+}

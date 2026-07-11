@@ -1,0 +1,24 @@
+{
+  "node_id": "muestreo_aleatorio_operacional",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Definición Operacional de Selección Aleatoria",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado (tabla de números aleatorios o generador validado) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+  "pasos_accionables": [
+    "Numerar todas las unidades del marco muestral de 1 a N.",
+    "Definir por escrito el procedimiento de generación de números aleatorios a usar.",
+    "Seleccionar n números aleatorios sin duplicar del rango 1 a N.",
+    "Usar los números seleccionados para identificar las unidades de la muestra.",
+    "Documentar el procedimiento para que pueda auditarse o repetirse."
+  ],
+  "entregable_esperado": "Protocolo escrito de muestreo aleatorio con procedimiento de generación de números y criterios de selección.",
+  "nodos_previos": [
+    "definiciones_operacionales"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando se necesita auditar o monitorear un proceso, censo o lote mediante muestreo estadístico.",
+    "Cuando se cuestiona la validez de una muestra usada para tomar decisiones de calidad."
+  ]
+}

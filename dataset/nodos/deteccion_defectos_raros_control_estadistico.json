@@ -1,0 +1,25 @@
+{
+  "node_id": "deteccion_defectos_raros_control_estadistico",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando la fracción defectuosa es extremadamente baja (ej. 1 en 5000 o menos), la inspección del producto terminado es ineficaz e imprecisa, requiriendo tamaños de muestra enormes con alto error estándar. La única forma confiable de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) que usan mediciones reales durante el proceso, permitiendo detectar cambios en el proceso antes de que se traduzcan en defectos.",
+  "pasos_accionables": [
+    "Determinar si la fracción defectuosa del proceso es extremadamente baja (ej. menor a 1/1000).",
+    "Reemplazar la inspección masiva del producto terminado por mediciones continuas en proceso.",
+    "Establecer cartas de control X-barra y R con muestras pequeñas y frecuentes (ej. 4 unidades, 25 veces al día).",
+    "Detener la producción cuando la carta señale una causa especial, investigar la causa antes de liberar el lote.",
+    "Decidir racionalmente si condenar todo el lote o liberar parte de él según los hallazgos."
+  ],
+  "entregable_esperado": "Sistema de cartas de control en proceso implementado para monitorear procesos con fracción defectuosa extremadamente baja.",
+  "nodos_previos": [
+    "pruebas_destructivas",
+    "control_estadistico_de_procesos"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la fracción defectuosa del proceso es tan baja que la inspección del producto terminado resulta estadísticamente poco confiable",
+    "Cuando existen requisitos extremos de confiabilidad (ej. menos de 1 falla en 10^9 unidades)"
+  ]
+}

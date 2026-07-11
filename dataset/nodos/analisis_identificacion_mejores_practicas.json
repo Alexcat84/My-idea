@@ -1,0 +1,29 @@
+{
+  "node_id": "analisis_identificacion_mejores_practicas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis e Identificación de Mejores Prácticas",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+  "pasos_accionables": [
+    "Recolectar y consolidar los datos de desempeño y normalización de todos los participantes",
+    "Aplicar pruebas de significancia estadística a las comparaciones",
+    "Comparar el desempeño contra el mejor de la clase, el cuartil superior o el promedio, según el objetivo",
+    "Determinar y cuantificar las brechas de desempeño frente a los líderes",
+    "Explorar las estrategias y prácticas de trabajo de cada participante para explicar las diferencias de desempeño",
+    "Considerar factores contextuales como ubicación geográfica, regulación y tipo de cambio en el análisis"
+  ],
+  "entregable_esperado": "Informe de análisis con brechas de desempeño cuantificadas y causas identificadas, listo para pasar a desarrollo de reporte",
+  "nodos_previos": [
+    "normalizacion_datos_benchmarking",
+    "normalizacion_datos_benchmarking_2"
+  ],
+  "nodos_siguientes": [
+    "desarrollo_reporte_benchmarking",
+    "aprendizaje_institucionalizado_benchmarking"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya se cuenta con datos normalizados y se requiere identificar las causas de las diferencias de desempeño",
+    "Cuando se busca determinar qué prácticas explican el éxito de los mejores desempeños"
+  ]
+}

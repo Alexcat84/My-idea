@@ -1,0 +1,26 @@
+{
+  "node_id": "lockout_tagout_procedures",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Procedimientos de Bloqueo y Etiquetado (Control de Energías Peligrosas)",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_teorico": "Procedimiento formal para controlar energías peligrosas (mecánica, hidráulica, neumática, eléctrica) durante el mantenimiento o servicio de maquinaria, asegurando que el equipo esté completamente desenergizado y bloqueado antes de intervenir.",
+  "pasos_accionables": [
+    "Desarrollar y documentar por escrito el procedimiento de bloqueo/etiquetado, revisándolo anualmente.",
+    "Capacitar a trabajadores autorizados y proveerles candados de seguridad personales.",
+    "Verificar el aislamiento de la fuente de energía antes de iniciar el trabajo mediante pruebas o medidores.",
+    "Bloquear la maquinaria en la fuente de energía principal, no en interruptores de control.",
+    "Establecer un procedimiento alterno seguro para equipos que no puedan ser bloqueados/etiquetados."
+  ],
+  "entregable_esperado": "Procedimiento LOTO documentado, trabajadores capacitados y certificados, y candados/etiquetas disponibles para cada máquina.",
+  "nodos_previos": [
+    "machinery_equipment_safety",
+    "procedimientos_lockout_tagout"
+  ],
+  "nodos_siguientes": [
+    "machine_guarding_abrasive_wheels"
+  ],
+  "condiciones_activacion": [
+    "Cuando existan máquinas o equipos que requieran mantenimiento, servicio o ajuste con riesgo de energización accidental."
+  ]
+}

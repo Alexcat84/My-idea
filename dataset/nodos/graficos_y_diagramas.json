@@ -1,0 +1,28 @@
+{
+  "node_id": "graficos_y_diagramas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Graphs and Charts (Gráficos y Diagramas)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Conjunto de herramientas para resumir datos cuantitativos de forma pictórica, incluyendo gráficos de línea (relación entre variables continuas), gráficos de barras (comparación de categorías) y gráficos circulares (proporciones del total). Deben respetar integridad gráfica, escala consistente y simplicidad.",
+  "pasos_accionables": [
+    "Determinar rango y escala de los ejes",
+    "Seleccionar el tipo de gráfico adecuado (línea, barra o pastel)",
+    "Graficar los datos respetando escalas consistentes",
+    "Etiquetar y titular el gráfico claramente",
+    "Verificar integridad gráfica evitando distorsión de la información",
+    "Simplificar eliminando decoración innecesaria"
+  ],
+  "entregable_esperado": "Gráfico o diagrama claro, con integridad y escala adecuada, que comunique datos de forma efectiva",
+  "nodos_previos": [
+    "diagrama_arbol_despliegue"
+  ],
+  "nodos_siguientes": [
+    "analisis_pareto",
+    "histograma"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita comunicar datos cuantitativos de forma visual y clara",
+    "Cuando se requiere comparar tendencias o proporciones en el tiempo"
+  ]
+}

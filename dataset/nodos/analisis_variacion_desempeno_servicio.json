@@ -1,0 +1,27 @@
+{
+  "node_id": "analisis_variacion_desempeno_servicio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis Estadístico de Variación en el Desempeño del Servicio",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El desempeño de un servicio (como la puntualidad de un tren) no puede juzgarse por una sola observación, sino que requiere un estudio estadístico histórico mediante gráficos de corrida y distribuciones de tiempos. Esto permite distinguir entre un sistema que cumple en promedio pero con alta variabilidad (desperdicio de recursos), uno con baja variabilidad (eficiente), uno donde el sistema está en control pero no puede cumplir la especificación (problema de diseño), y uno en caos total.",
+  "pasos_accionables": [
+    "Recolectar datos de desempeño del servicio a lo largo del tiempo (ej. tiempos de llegada)",
+    "Construir un gráfico de corrida o histograma de distribución de tiempos",
+    "Clasificar el tipo de desempeño según la forma de la distribución (centrado con alta/baja variabilidad, desalineado, caótico)",
+    "Si el sistema está en control pero no cumple especificaciones, revisar el diseño del proceso o la especificación misma",
+    "Comunicar resultados usando visualizaciones claras a los responsables del servicio"
+  ],
+  "entregable_esperado": "Gráfico de distribución de tiempos de desempeño con diagnóstico del tipo de variación presente",
+  "nodos_previos": [
+    "carta_de_control_shewhart"
+  ],
+  "nodos_siguientes": [
+    "mejora_continua_del_proceso",
+    "analisis_distribucion_poisson_para_capacidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita evaluar la confiabilidad o puntualidad de un servicio",
+    "Si hay quejas sobre inconsistencia en tiempos de entrega o servicio"
+  ]
+}

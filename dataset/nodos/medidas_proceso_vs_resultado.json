@@ -1,0 +1,28 @@
+{
+  "node_id": "medidas_proceso_vs_resultado",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Medidas de Proceso vs Medidas de Resultado en Seguridad",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "La mayoría de las organizaciones miden la seguridad mediante indicadores de resultado negativo (fatalidades, lesiones con tiempo perdido), pero estos son poco confiables cuando los eventos son raros, ya que la variación entre periodos es más 'ruido' que 'señal'. La distribución de Poisson (ejemplo de las coces de caballo) ilustra que los resultados negativos solo revelan la cara negativa de la seguridad, no su presencia sostenida. Se necesitan medidas de proceso que evalúen la 'salud de seguridad' del sistema de forma regular, más allá de contar accidentes.",
+  "pasos_accionables": [
+    "Auditar los indicadores de seguridad actuales de la organización: identificar si son de proceso o de resultado",
+    "Reconocer las limitaciones de los indicadores de resultado cuando la tasa de accidentes es baja",
+    "Diseñar indicadores de proceso que midan la calidad de defensas, diseño, entrenamiento, procedimientos, mantenimiento",
+    "Establecer un sistema de muestreo regular de estos 'signos vitales' organizacionales",
+    "Usar ambos tipos de medidas de forma complementaria para navegar el 'espacio de seguridad'"
+  ],
+  "entregable_esperado": "Sistema de indicadores de seguridad mixto (proceso + resultado) documentado y con periodicidad definida",
+  "nodos_previos": [
+    "riesgo_error_humano_en_mantenimiento",
+    "racional_mantenimiento_preventivo_correctivo"
+  ],
+  "nodos_siguientes": [
+    "espacio_de_seguridad",
+    "motores_de_seguridad_3cs"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización solo mide seguridad por número de accidentes o lesiones",
+    "Cuando el sector tiene tasas de accidentes ya muy bajas y estables"
+  ]
+}

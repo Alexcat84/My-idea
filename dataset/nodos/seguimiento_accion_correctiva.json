@@ -1,0 +1,24 @@
+{
+  "node_id": "seguimiento_accion_correctiva",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Seguimiento de la Acción Correctiva Post-Auditoría",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La fase final de la auditoría es el seguimiento para confirmar que la acción correctiva fue implementada y es efectiva. Si no se implementa, el auditor debe verificar primero si hay acuerdo sobre las conclusiones del reporte; si hay acuerdo pero faltan recursos, el auditor puede ayudar reformulando la seriedad del hallazgo en términos que impacten a la gerencia (p.ej., términos monetarios).",
+  "pasos_accionables": [
+    "Programar una auditoría de seguimiento para verificar implementación de acciones correctivas",
+    "Confirmar que existe acuerdo sobre las conclusiones del reporte original",
+    "Si faltan recursos, ayudar a reformular la deficiencia en términos de impacto para la gerencia",
+    "Cerrar el archivo de auditoría solo cuando las no conformidades han sido corregidas"
+  ],
+  "entregable_esperado": "Confirmación documentada de cierre de no conformidades o escalamiento a alta dirección",
+  "nodos_previos": [
+    "reporte_auditoria"
+  ],
+  "nodos_siguientes": [
+    "auditoria_producto"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha emitido un reporte de auditoría con hallazgos pendientes de corrección"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "node_id": "diagrama_causa_efecto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Diagrama Causa-Efecto (Ishikawa)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Desarrollado por Kaoru Ishikawa, organiza y muestra las interrelaciones entre las diversas teorías sobre la causa raíz de un problema (efecto). Ayuda al equipo a estructurar su pensamiento y avanzar sistemáticamente hacia la identificación de causas raíz reales.",
+  "pasos_accionables": [
+    "Definir claramente el efecto (Y) a explicar y colocarlo en una caja a la derecha",
+    "Usar brainstorming o enfoque racional para identificar posibles causas (Xs)",
+    "Agrupar las causas en 2 a 5 categorías principales conectadas a la espina central en ángulo de 70°",
+    "Añadir causas subsidiarias a cada categoría principal",
+    "Continuar añadiendo causas hasta llegar a posibles causas raíz",
+    "Verificar la validez lógica de cada cadena causal",
+    "Revisar la completitud del diagrama"
+  ],
+  "entregable_esperado": "Diagrama causa-efecto completo con categorías principales y causas raíz potenciales identificadas",
+  "nodos_previos": [
+    "brainstorming",
+    "diagrama_afinidad"
+  ],
+  "nodos_siguientes": [
+    "hojas_de_verificacion",
+    "analisis_beneficio_costo",
+    "diagrama_barreras_ayudas"
+  ],
+  "condiciones_activacion": [
+    "Cuando un equipo necesita identificar sistemáticamente las causas raíz de un problema de calidad"
+  ]
+}

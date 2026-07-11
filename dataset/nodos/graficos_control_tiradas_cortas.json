@@ -1,0 +1,27 @@
+{
+  "node_id": "graficos_control_tiradas_cortas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráficos de Control para Tiradas Cortas (Short-Run Control Charts)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "En procesos de producción corta o en sistemas de manufactura esbelta con cambios frecuentes de producto, no es factible recolectar 20-30 muestras para establecer un gráfico de control tradicional. Existen cuatro enfoques: ignorar la variabilidad sistemática, estratificar datos, usar análisis de regresión con residuos, o estandarizar los datos mediante transformación Z para normalizarlos a una línea base común.",
+  "pasos_accionables": [
+    "Identificar si el proceso tiene corridas cortas por cambios frecuentes de producto",
+    "Seleccionar el método de construcción del gráfico (estratificación, regresión, estandarización)",
+    "Aplicar la transformación Z si se elige el método de estandarización",
+    "Graficar los datos transformados en un gráfico de control único",
+    "Interpretar señales de fuera de control sobre la escala estandarizada"
+  ],
+  "entregable_esperado": "Gráfico de control funcional adaptado a un entorno de producción de tiradas cortas o mixtas",
+  "nodos_previos": [
+    "pre_control_estadistico"
+  ],
+  "nodos_siguientes": [
+    "grafico_cusum",
+    "grafico_media_movil_ewma"
+  ],
+  "condiciones_activacion": [
+    "Cuando la producción cambia frecuentemente de producto y no hay suficientes datos por corrida",
+    "Cuando se requiere monitorear procesos en sistemas de manufactura esbelta"
+  ]
+}

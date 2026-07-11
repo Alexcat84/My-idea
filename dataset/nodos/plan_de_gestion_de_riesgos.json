@@ -1,0 +1,28 @@
+{
+  "node_id": "plan_de_gestion_de_riesgos",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Plan de Gestión de Riesgos (Concerns, Options, Consequences)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Una vez priorizados los riesgos, se debe desarrollar un plan concreto de acción. Esto implica listar todas las preocupaciones relacionadas con el riesgo, generar opciones amplias para mitigarlo o eliminarlo, y evaluar las consecuencias de actuar o no actuar, incluyendo el 'efecto de venganza' (resultados negativos no anticipados de acciones bien intencionadas) y el impacto futuro de la decisión. Finalmente se decide qué acciones concretas ejecutar, quién las hará y cuándo.",
+  "pasos_accionables": [
+    "Realizar una lluvia de ideas exhaustiva sobre las preocupaciones (concerns) de cada riesgo priorizado.",
+    "Generar una lista amplia de opciones para minimizar o eliminar el riesgo, sin restricciones iniciales.",
+    "Evaluar las consecuencias de actuar y de no actuar, incluyendo posibles efectos secundarios no deseados.",
+    "Analizar el costo/beneficio y el impacto futuro de cada opción.",
+    "Definir acciones concretas, responsables y plazos de ejecución."
+  ],
+  "entregable_esperado": "Plan de acción documentado con responsables, plazos y análisis de costo/beneficio para mitigar los riesgos priorizados.",
+  "nodos_previos": [
+    "matriz_riesgo_conocido_desconocido",
+    "evaluacion_de_factores_de_riesgo"
+  ],
+  "nodos_siguientes": [
+    "equipo_de_gestion_de_crisis",
+    "aceptacion_de_fallas_como_inevitables"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha completado la evaluación y priorización de riesgos pero no existen acciones concretas definidas.",
+    "Antes de asignar presupuesto y recursos a la mitigación de riesgos específicos."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "node_id": "senales_alerta_no_atendidas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Señales de Alerta Ignoradas (Warning Signs)",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "En el colapso de Barings, existieron múltiples indicadores previos (falta de segregación de funciones, altos requerimientos de financiamiento, ganancias desproporcionadas al riesgo percibido, comunicaciones de la bolsa sobre cuentas sospechosas) que individualmente parecían poco significativos, pero que en conjunto debían haber activado una alarma organizacional. La falta de un mecanismo que integre estas señales dispersas es en sí misma una condición latente.",
+  "pasos_accionables": [
+    "Establecer un registro centralizado de anomalías o señales de alerta reportadas por distintas áreas.",
+    "Definir umbrales o combinaciones de señales que disparen automáticamente una revisión de riesgo.",
+    "Asignar responsabilidad clara de seguimiento a cada señal de alerta hasta su cierre."
+  ],
+  "entregable_esperado": "Sistema o registro de señales de alerta con seguimiento y cierre documentado.",
+  "nodos_previos": [
+    "segregacion_funciones_trading_settlement"
+  ],
+  "nodos_siguientes": [
+    "defensas_en_profundidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando existen múltiples reportes de anomalías que no han sido consolidados ni escalados",
+    "En auditorías de riesgo donde se identifican indicadores dispersos sin seguimiento"
+  ]
+}

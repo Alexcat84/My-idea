@@ -1,0 +1,26 @@
+{
+  "node_id": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "El Riesgo de las 'Soluciones' que Causan el Próximo Accidente",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las medidas correctivas diseñadas tras un accidente (fixes de ingeniería o regulación) pueden, sin quererlo, sembrar las condiciones para un accidente futuro distinto. Ejemplos históricos incluyen el monitor de despegue que falló mecánicamente causando un accidente, y la regla post-TMI de no reducir la inyección de agua a alta presión, que en Ginna prolongó una emergencia porque esa acción sí era la correcta en ese contexto. Esto demuestra que los reguladores y diseñadores no pueden prever todos los escenarios de falla en sistemas complejos y fuertemente acoplados.",
+  "pasos_accionables": [
+    "Antes de implementar una nueva regla o dispositivo tras un incidente, evaluar escenarios alternativos donde la nueva regla podría ser contraproducente",
+    "Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos",
+    "Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal",
+    "Capacitar a operadores en el juicio situacional, no solo en el cumplimiento ciego de la nueva regla"
+  ],
+  "entregable_esperado": "Protocolo de revisión de nuevas medidas correctivas con análisis de escenarios contraproducentes",
+  "nodos_previos": [
+    "violaciones_procedimentales_por_sobreespecificacion"
+  ],
+  "nodos_siguientes": [
+    "defensas_en_profundidad",
+    "defensas_en_profundidad_3"
+  ],
+  "condiciones_activacion": [
+    "Cuando se está por implementar una nueva regla o dispositivo tras investigar un accidente",
+    "Si la organización opera sistemas complejos y fuertemente acoplados"
+  ]
+}

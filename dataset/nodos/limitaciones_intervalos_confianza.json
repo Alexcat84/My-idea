@@ -1,0 +1,24 @@
+{
+  "node_id": "limitaciones_intervalos_confianza",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Limitaciones de los intervalos de confianza para predicción",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Los intervalos de confianza y niveles de significancia estadística son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
+  "pasos_accionables": [
+    "Distinguir claramente entre estudios enumerativos (resumen de datos pasados) y estudios analíticos (predicción futura)",
+    "No usar p-values o intervalos de confianza como única base para decisiones de planificación futura",
+    "Buscar patrones repetidos y consistentes bajo diferentes condiciones ambientales antes de generalizar",
+    "Combinar el análisis estadístico con conocimiento técnico del proceso (química, ingeniería, etc.)"
+  ],
+  "entregable_esperado": "Un criterio documentado de decisión que combine evidencia estadística repetible con conocimiento técnico del dominio",
+  "nodos_previos": [
+    "ensenanza_deficiente_metodos_estadisticos"
+  ],
+  "nodos_siguientes": [
+    "criticas_muestreo_aceptacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se debe decidir entre dos métodos o procesos basándose en datos estadísticos para planificación futura"
+  ]
+}

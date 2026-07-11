@@ -1,0 +1,27 @@
+{
+  "node_id": "registro_reporte_lesiones",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Registro y Reporte de Lesiones y Enfermedades Ocupacionales",
+  "fuente": "SMALL_BUSINESS",
+  "resumen_teorico": "OSHA exige llevar registros de lesiones y enfermedades laborales mediante formularios específicos: Form 300 (log de lesiones/enfermedades), Form 301 (reporte de incidente) y Form 300A (resumen anual). Ciertas empresas con 10 o menos trabajadores o en industrias de bajo riesgo están parcialmente exentas, pero todas deben reportar fatalidades, hospitalizaciones, amputaciones y pérdida de un ojo. Existen plazos de envío electrónico y de reporte a OSHA (8 horas para fatalidades, 24 horas para hospitalizaciones/amputaciones/pérdida de ojo).",
+  "pasos_accionables": [
+    "Determinar si la empresa está exenta o no de los requisitos de registro según tamaño e industria",
+    "Registrar cada lesión/enfermedad ocupacional recordable en el Formulario OSHA 300",
+    "Completar un Formulario OSHA 301 para cada caso recordable",
+    "Preparar el resumen anual en el Formulario OSHA 300A y publicarlo de febrero a abril",
+    "Enviar electrónicamente la información requerida a OSHA según el tamaño y sector del establecimiento",
+    "Reportar fatalidades a OSHA dentro de 8 horas y hospitalizaciones/amputaciones dentro de 24 horas",
+    "Conservar los registros de lesiones por al menos 5 años y los registros médicos según el período correspondiente"
+  ],
+  "entregable_esperado": "Formularios OSHA 300, 301 y 300A completados, publicados y archivados conforme a los plazos legales.",
+  "nodos_previos": [
+    "autoinspeccion_lugar_de_trabajo",
+    "programa_seguridad_salud_ocupacional_2"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando ocurre una lesión o enfermedad laboral recordable",
+    "Cuando se requiere cumplir con obligaciones legales de reporte ante OSHA"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "clasificacion_de_seriedad_de_defectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Clasificación de Seriedad de Defectos y Deméritos por Unidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad entre periodos, líneas de producción o competidores de forma objetiva y proporcional a la oportunidad de error.",
+  "pasos_accionables": [
+    "Definir categorías de seriedad de defectos relevantes para el producto",
+    "Asignar peso (demérito) a cada categoría de defecto",
+    "Registrar número de defectos por categoría durante inspección/auditoría",
+    "Calcular deméritos totales y dividir entre unidades inspeccionadas",
+    "Usar el índice resultante para comparar tendencias históricas y frente a competencia"
+  ],
+  "entregable_esperado": "Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad",
+  "nodos_previos": [
+    "auditoria_de_producto",
+    "control_del_proceso_del_proveedor"
+  ],
+  "nodos_siguientes": [
+    "planes_de_muestreo_de_aceptacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita un indicador único y comparable de calidad de producto",
+    "Cuando se quiere diferenciar la gravedad relativa de distintos tipos de fallas"
+  ]
+}

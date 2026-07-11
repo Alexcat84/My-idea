@@ -1,0 +1,27 @@
+{
+  "node_id": "costo_de_mala_calidad_copq_4",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Costo de la Mala Calidad (En Promedio 15% de los Ingresos)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El Costo de la Mala Calidad (COPQ) representa el gasto asociado a procesos, productos o servicios defectuosos. En manufactura equivale en promedio al 15% de ingresos por ventas (rango 5-35% según complejidad), mientras que en servicios alcanza un promedio del 30% de gastos operativos (rango 25-40%). Este costo suele ser mayor que la utilidad anual y sirve como herramienta clave para justificar ante la gerencia la asignación de recursos a mejora de calidad. Los costos de falla representan la mayor proporción del total, mientras que los costos de prevención son la porción más pequeña.",
+  "pasos_accionables": [
+    "Definir categorías de costo de calidad: prevención, evaluación y fallas (internas y externas)",
+    "Recolectar datos de costos de falla, evaluación y prevención en la organización",
+    "Comparar el COPQ como porcentaje de ventas o gastos operativos contra benchmarks de la industria",
+    "Identificar oportunidades de proyectos de mejora basados en las áreas de mayor costo de falla",
+    "Presentar el análisis de COPQ a la gerencia para obtener aprobación de recursos"
+  ],
+  "entregable_esperado": "Reporte cuantificado del Costo de la Mala Calidad desglosado por categorías, con recomendaciones de proyectos de mejora priorizados",
+  "nodos_previos": [
+    "costo_mala_calidad_copq"
+  ],
+  "nodos_siguientes": [
+    "modelo_costo_optimo_calidad",
+    "estudio_mercado_calidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando la organización necesita justificar inversión en calidad ante la gerencia",
+    "Si se sospecha que los costos de falla son altos pero no se ha cuantificado formalmente"
+  ]
+}

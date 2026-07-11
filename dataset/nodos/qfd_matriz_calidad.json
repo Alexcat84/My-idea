@@ -1,0 +1,29 @@
+{
+  "node_id": "qfd_matriz_calidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Quality Function Deployment (QFD) - Matriz de Planificación de Calidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "QFD es una técnica que documenta la lógica de traducir necesidades del cliente en características de producto y proceso mediante hojas de cálculo o matrices interrelacionadas. Permite alinear y organizar sistemáticamente la información generada durante la planificación de calidad, conectando las necesidades del cliente con las especificaciones técnicas y de proceso.",
+  "pasos_accionables": [
+    "Establecer el proyecto con metas claras (ej. ingresos objetivo)",
+    "Identificar clientes internos y externos",
+    "Descubrir las necesidades de cada grupo de clientes",
+    "Desarrollar las características del producto que satisfacen esas necesidades",
+    "Desarrollar los procesos necesarios para producir esas características",
+    "Definir controles de proceso y transferir a operaciones"
+  ],
+  "entregable_esperado": "Un conjunto de matrices/hojas de cálculo que vinculan necesidades del cliente con características de producto y proceso, listas para transferir a operaciones",
+  "nodos_previos": [
+    "design_for_six_sigma_dmadv",
+    "design_for_six_sigma_dmadv_2"
+  ],
+  "nodos_siguientes": [
+    "key_process_product_characteristics"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita traducir sistemáticamente la voz del cliente en especificaciones técnicas",
+    "Cuando se diseña un nuevo producto o servicio con múltiples partes interesadas internas y externas",
+    "Cuando se requiere trazabilidad entre necesidades del cliente y controles de proceso"
+  ]
+}

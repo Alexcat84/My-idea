@@ -1,0 +1,25 @@
+{
+  "node_id": "trazabilidad_de_lotes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistema de Identificación y Trazabilidad de Lotes",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Sistema que permite identificar y rastrear productos a través de números de lote o heat numbers, facilitando la localización de problemas, reduciendo el volumen de retiros de producto (recalls) y fijando responsabilidades. Requiere esfuerzo adicional para preservar el orden de manufactura pero permite mayor precisión en el muestreo.",
+  "pasos_accionables": [
+    "Asignar números de lote o identificadores únicos a cada producción",
+    "Documentar el orden cronológico de manufactura",
+    "Vincular registros de inspección a los identificadores de lote",
+    "Establecer procedimientos de recall basados en trazabilidad"
+  ],
+  "entregable_esperado": "Sistema documentado de trazabilidad con registros de lote vinculados a inspecciones",
+  "nodos_previos": [
+    "establecimiento_de_niveles_de_calidad_aql_dpm"
+  ],
+  "nodos_siguientes": [
+    "sistema_de_alarma_de_defectos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto tiene implicaciones de confiabilidad o seguridad crítica",
+    "Cuando se requiere capacidad de recall rápido"
+  ]
+}

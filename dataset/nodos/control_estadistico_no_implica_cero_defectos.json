@@ -1,0 +1,25 @@
+{
+  "node_id": "control_estadistico_no_implica_cero_defectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control Estadístico No Implica Ausencia de Defectos",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un proceso en control estadístico es aquel cuya variación es predecible dentro de límites estables, pero esto no significa que esté libre de defectos; de hecho puede producir una alta proporción de artículos defectuosos. El control estadístico es el punto de partida, no el objetivo final: una vez alcanzado, comienza el trabajo serio de mejora de calidad y economía.",
+  "pasos_accionables": [
+    "Verificar mediante carta de control si el proceso está en estado de control estadístico",
+    "Aceptar que estar en control no equivale a cumplir especificaciones",
+    "Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control",
+    "Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)"
+  ],
+  "entregable_esperado": "Carta de control validada y plan de intervención en el sistema para reducir defectuosos",
+  "nodos_previos": [
+    "distorsion_muestreo_mecanico"
+  ],
+  "nodos_siguientes": [
+    "estudio_mezclas_multiples_fuentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo confunda 'proceso estable' con 'proceso libre de defectos'",
+    "Cuando se requiera planificar mejoras después de confirmar estabilidad del proceso"
+  ]
+}

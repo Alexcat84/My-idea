@@ -1,0 +1,25 @@
+{
+  "node_id": "sistema_estable_causas_comunes",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Sistema Estable y Responsabilidad de la Gerencia sobre la Variación",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando un proceso muestra variación aleatoria estable (dentro de límites predecibles) alrededor de un promedio, se dice que está en un 'sistema estable'. En ese caso, la responsabilidad de mejorar radica exclusivamente en la gerencia, ya que los trabajadores no pueden, por su propio esfuerzo, cambiar el sistema. Pedir a los trabajadores que 'hagan mejor su trabajo' es inútil si el problema es del sistema, no de las personas.",
+  "pasos_accionables": [
+    "Recolectar datos diarios de defectos o errores durante varias semanas.",
+    "Graficar los datos en una carta de corrida o carta de control para verificar si la variación es estable (causas comunes) o inestable (causas especiales).",
+    "Si el sistema es estable, dirigir los esfuerzos de mejora hacia el sistema (procesos, definiciones, materiales) y no hacia el desempeño individual de los trabajadores."
+  ],
+  "entregable_esperado": "Una carta de control o run chart con el análisis de si el proceso está en control estadístico, y un plan de acción dirigido al sistema si corresponde.",
+  "nodos_previos": [
+    "cadena_reaccion_calidad_productividad"
+  ],
+  "nodos_siguientes": [
+    "definiciones_operacionales",
+    "control_estadistico_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando la gerencia culpa a los trabajadores por defectos o errores recurrentes.",
+    "Antes de implementar cualquier plan de mejora de calidad, para diagnosticar si el problema es sistémico."
+  ]
+}

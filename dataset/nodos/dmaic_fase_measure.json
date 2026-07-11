@@ -1,0 +1,27 @@
+{
+  "node_id": "dmaic_fase_measure",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "DMAIC - Fase Measure (Medición del Proceso)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "El equipo caracteriza el proceso midiendo el desempeño base y documentándolo mediante mapeo, análisis Pareto, FMEA para identificar modos de falla potenciales, y estudios de capacidad del sistema de medición y del proceso. Se confirma o modifica el objetivo del proyecto según los hallazgos, y se genera una lista priorizada de teorías de causa raíz.",
+  "pasos_accionables": [
+    "Mapear el proceso en detalle mediante diagramas de flujo",
+    "Medir el desempeño base (Ys) usando análisis Pareto",
+    "Realizar un FMEA para identificar modos de falla potenciales (Xs)",
+    "Evaluar la capacidad del sistema de medición (Gage R&R)",
+    "Determinar si el proceso está en control estadístico y medir su capacidad a corto plazo",
+    "Confirmar o modificar el objetivo del proyecto según los datos obtenidos",
+    "Generar una lista priorizada de teorías de causa raíz usando diagramas causa-efecto"
+  ],
+  "entregable_esperado": "Métricas de línea base, FMEA completado, capacidad del sistema de medición validada y lista de teorías de causa priorizada",
+  "nodos_previos": [
+    "dmaic_fase_define"
+  ],
+  "nodos_siguientes": [
+    "dmaic_fase_analyze"
+  ],
+  "condiciones_activacion": [
+    "Cuando el proyecto ha sido definido y se requiere establecer una línea base cuantitativa del proceso"
+  ]
+}

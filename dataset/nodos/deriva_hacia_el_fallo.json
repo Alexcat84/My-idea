@@ -1,0 +1,25 @@
+{
+  "node_id": "deriva_hacia_el_fallo",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Drift into Failure (Deriva hacia el fallo)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "El fallo no es el resultado inmediato de errores puntuales en la línea operativa, sino que se incuba durante un largo periodo mediante pequeños ajustes incrementales en cómo se negocia la seguridad frente a otras metas organizacionales. Esto se relaciona con la 'normalización de la desviación' de Diane Vaughan: prácticas antes vistas como inaceptables se vuelven normales gradualmente, a menudo como parte necesaria de la adaptación competitiva de la organización.",
+  "pasos_accionables": [
+    "Mapear la historia de decisiones incrementales que llevaron a la condición actual de riesgo",
+    "Identificar prácticas que fueron 'normalizadas' con el tiempo sin evaluación crítica",
+    "Revisar cómo los sistemas complejos y fuertemente acoplados (tight coupling) elevan el riesgo estructural de fallo",
+    "Evaluar la exploración y experimentación organizacional en busca de eficiencia frente a los límites de seguridad"
+  ],
+  "entregable_esperado": "Análisis histórico de la deriva organizacional hacia condiciones de riesgo, identificando puntos de normalización de desviaciones",
+  "nodos_previos": [
+    "new_view_vs_old_view"
+  ],
+  "nodos_siguientes": [
+    "resiliencia_organizacional"
+  ],
+  "condiciones_activacion": [
+    "Cuando se sospecha que el riesgo actual es resultado de una deriva gradual y no de un evento único",
+    "Al evaluar sistemas complejos y altamente acoplados (Perrow) en busca de vulnerabilidades estructurales"
+  ]
+}

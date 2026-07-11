@@ -1,0 +1,25 @@
+{
+  "node_id": "calificacion_de_proveedores_por_capacidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Calificación de proveedores basada en capacidad real, no en manuales de auditoría",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, Deming sugiere que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
+  "pasos_accionables": [
+    "Descartar procesos de calificación basados solo en checklists genéricos",
+    "Solicitar evidencia de inversión en investigación y desarrollo del proveedor",
+    "Revisar el historial de desarrollo de producto y mejora continua del proveedor",
+    "Evaluar la capacidad del proveedor de participar en pruebas conjuntas del producto final"
+  ],
+  "entregable_esperado": "Criterio de calificación de proveedores basado en capacidad de mejora continua y no en precio o auditorías superficiales",
+  "nodos_previos": [
+    "relacion_largo_plazo_proveedor_unico"
+  ],
+  "nodos_siguientes": [
+    "equipos_conjuntos_diseno_proveedor",
+    "compra_por_precio_mas_bajo_como_error"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita seleccionar un nuevo proveedor para un componente crítico"
+  ]
+}

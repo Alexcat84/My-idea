@@ -1,0 +1,28 @@
+{
+  "node_id": "value_stream_mapping_2",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Value Stream Mapping (Distinguir Valor de Desperdicio)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Técnica Lean que documenta todas las actividades (materiales e información) requeridas para llevar un producto desde la concepción hasta la comercialización. Permite distinguir actividades de valor añadido, actividades sin valor añadido pero necesarias, y desperdicio puro. Se construye un mapa del estado actual y luego un mapa del estado futuro que incorpora mejoras.",
+  "pasos_accionables": [
+    "Entrenar al equipo en conceptos clave de Lean",
+    "Mapear el estado actual documentando tiempos de ciclo, downtime, capacidad, esperas e inventarios",
+    "Realizar análisis de descomposición VA/NVA para cada paso del proceso",
+    "Diseñar y documentar el mapa de estado futuro con mejoras",
+    "Implementar los cambios y validar contra el estado futuro deseado"
+  ],
+  "entregable_esperado": "Mapa de flujo de valor del estado actual y del estado futuro, con plan de mejoras identificado",
+  "nodos_previos": [
+    "planificacion_economica_conjunta"
+  ],
+  "nodos_siguientes": [
+    "value_non_value_added_analysis",
+    "takt_time_demand",
+    "kanban_pull_system"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere entender y mejorar un proceso end-to-end de producción o servicio",
+    "Si existe desperdicio no identificado en el flujo actual"
+  ]
+}

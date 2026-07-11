@@ -1,0 +1,26 @@
+{
+  "node_id": "concepto_de_dominancia",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Concepto de Dominancia de Variables",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Dado que existen numerosos sujetos de control, este concepto ayuda a identificar los 'pocos vitales' priorizando la variable dominante del proceso: dominante por configuración inicial (setup), por tiempo (desgaste progresivo), por componentes (calidad de insumos), por personas (habilidad del trabajador) o por información (procesos tipo taller que cambian frecuentemente). Cada tipo dominante sugiere un diseño de control distinto.",
+  "pasos_accionables": [
+    "Analizar el proceso para identificar cuál variable tiene mayor influencia sobre el resultado",
+    "Clasificar la variable dominante (setup, tiempo, componente, persona o información)",
+    "Diseñar el control priorizando la gestión de esa variable dominante",
+    "Asignar recursos y prioridades acorde al tipo de dominancia identificado"
+  ],
+  "entregable_esperado": "Identificación documentada de la variable dominante del proceso y plan de control ajustado a ella",
+  "nodos_previos": [
+    "hoja_de_calculo_de_control",
+    "etapas_de_control_operativo"
+  ],
+  "nodos_siguientes": [
+    "capacidad_de_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando los recursos de control son limitados y se debe priorizar",
+    "Si el proceso presenta múltiples variables sin claridad sobre cuál controlar primero"
+  ]
+}

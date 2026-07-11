@@ -1,0 +1,26 @@
+{
+  "node_id": "plan_continuation_bias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Sesgo de Continuación del Plan (Plan Continuation)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney",
+  "resumen_teorico": "Fenómeno psicológico donde las personas persisten con un plan original aunque la situación haya cambiado y requiera un plan distinto. La toma de decisiones en entornos dinámicos está 'front-loaded': la mayoría de los recursos cognitivos se dedican a evaluar y reevaluar continuamente la situación, más que a comparar opciones. Las señales tempranas que sugieren que el plan original es correcto suelen ser fuertes e inequívocas, mientras que las señales tardías que sugieren abandonar el plan son más débiles y ambiguas, lo que dificulta el cambio de curso incluso cuando ya se perciben.",
+  "pasos_accionables": [
+    "Construir una línea de tiempo detallada de las señales (cues) que fueron apareciendo durante el incidente",
+    "Clasificar las señales según su fuerza, ambigüedad y momento de aparición (tempranas vs tardías)",
+    "Analizar qué señales reforzaron la creencia de que el plan original funcionaba",
+    "Evitar juzgar con el conocimiento del resultado (hindsight); reconstruir la perspectiva del momento"
+  ],
+  "entregable_esperado": "Línea de tiempo de señales situacionales con análisis de por qué el plan original no fue abandonado a tiempo",
+  "nodos_previos": [
+    "fijacion_cognitiva"
+  ],
+  "nodos_siguientes": [
+    "unstabilized_approach_go_around",
+    "buggy_inert_knowledge"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga un incidente donde el equipo continuó una acción pese a señales de alerta",
+    "Cuando se analiza por qué un operador no abandonó un procedimiento a tiempo"
+  ]
+}

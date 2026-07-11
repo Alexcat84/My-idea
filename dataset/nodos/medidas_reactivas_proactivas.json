@@ -1,0 +1,26 @@
+{
+  "node_id": "medidas_reactivas_proactivas",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Sistema de Ayudas de Navegación: Medidas Reactivas y Proactivas",
+  "fuente": "Managing the Risks of Organizat - Reason, J. T_",
+  "resumen_teorico": "Las ayudas de navegación en seguridad se dividen en dos categorías: medidas reactivas (aplicadas después de un evento, revelando patrones recurrentes de causa-efecto a través del análisis de múltiples incidentes) y medidas proactivas (aplicadas antes de un evento, evaluando la 'salud de seguridad' del sistema mediante chequeos regulares de condiciones organizacionales y defensas). Un error común es enfocarse solo en eventos individuales, lo que lleva a contramedidas dirigidas a fallos humanos aislados, ignorando que los accidentes organizacionales tienen causas múltiples. El análisis de varios eventos relacionados usando un marco clasificatorio común revela patrones que guían qué procesos muestrear proactivamente.",
+  "pasos_accionables": [
+    "Implementar un marco clasificatorio común para analizar múltiples incidentes pasados (no solo casos aislados)",
+    "Identificar patrones recurrentes de causa-efecto en las condiciones locales y organizacionales",
+    "Diseñar entre 8 y 16 chequeos proactivos de 'signos vitales' organizacionales según los patrones detectados",
+    "Definir la frecuencia de cada chequeo según la velocidad de cambio del proceso (factores del lugar de trabajo cambian más rápido que los organizacionales)"
+  ],
+  "entregable_esperado": "Sistema documentado de indicadores reactivos y proactivos con frecuencia de medición definida",
+  "nodos_previos": [
+    "metas_de_seguridad_correctas"
+  ],
+  "nodos_siguientes": [
+    "reporte_casi_accidentes",
+    "medicion_proactiva_procesos"
+  ],
+  "condiciones_activacion": [
+    "Al diseñar o rediseñar el sistema de información de seguridad de la organización",
+    "Cuando el análisis de accidentes se enfoca solo en el evento único más reciente"
+  ]
+}

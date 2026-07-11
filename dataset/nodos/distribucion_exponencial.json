@@ -1,0 +1,25 @@
+{
+  "node_id": "distribucion_exponencial",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Distribución Exponencial para Análisis de Confiabilidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La distribución exponencial describe el tiempo entre fallos de equipos complejos y patrones de carga donde eventos pequeños son más frecuentes que grandes. A diferencia de la normal, en la exponencial 36.8% de la población está por encima de la media y 63.2% por debajo. Una propiedad clave es que la desviación estándar es igual a la media (MTBF).",
+  "pasos_accionables": [
+    "Estimar el tiempo medio entre fallos (MTBF) del equipo o proceso",
+    "Calcular la razón X/μ para el valor de interés",
+    "Consultar tabla de área exponencial para obtener la probabilidad de superar cierto tiempo sin fallo",
+    "Usar el resultado para planificar mantenimiento preventivo o garantías"
+  ],
+  "entregable_esperado": "Estimación de probabilidad de tiempo entre fallos para toma de decisiones de mantenimiento o garantía",
+  "nodos_previos": [
+    "distribucion_normal_probabilidad"
+  ],
+  "nodos_siguientes": [
+    "distribucion_weibull"
+  ],
+  "condiciones_activacion": [
+    "Cuando se analiza el tiempo entre fallos de equipos reparables",
+    "Cuando se requiere predecir confiabilidad de un componente"
+  ]
+}

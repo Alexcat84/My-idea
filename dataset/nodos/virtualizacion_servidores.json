@@ -1,0 +1,25 @@
+{
+  "node_id": "virtualizacion_servidores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "environmental",
+  "titulo_concepto": "Virtualización de Servidores",
+  "fuente": "The Green to Gold Business Play - Daniel C. Esty",
+  "resumen_teorico": "La mayoría de los servidores operan solo entre 5-15% de su capacidad máxima debido al aprovisionamiento para picos de demanda. La virtualización permite ejecutar múltiples instancias de servidor en una sola máquina física, consolidando hasta 10 servidores en uno y mejorando la utilización hasta en un 85%, generando ahorros energéticos significativos.",
+  "pasos_accionables": [
+    "Medir el nivel de utilización actual de los servidores físicos",
+    "Implementar software de virtualización (ej. VMware)",
+    "Consolidar múltiples servidores físicos en instancias virtuales",
+    "Monitorear mejoras en utilización y ahorro energético resultante"
+  ],
+  "entregable_esperado": "Infraestructura de servidores virtualizada con métricas de mejora en utilización y reducción de consumo energético",
+  "nodos_previos": [
+    "deteccion_ineficiencias_ti"
+  ],
+  "nodos_siguientes": [
+    "gestion_centro_datos_verde"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa mantiene múltiples servidores físicos con baja utilización",
+    "Si se busca reducir costos energéticos de TI"
+  ]
+}

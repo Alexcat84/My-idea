@@ -1,0 +1,26 @@
+{
+  "node_id": "relacion_calidad_cuota_mercado",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Relación entre Calidad y Cuota de Mercado",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Cuando las diferencias de calidad percibidas por el consumidor son evidentes (fuera del rango 25-75% de preferencia), estas diferencias son decisivas para la cuota de mercado. Cuando las diferencias son pequeñas, el factor decisivo pasa a ser la habilidad de marketing. Un producto preferido por más del 75% de los consumidores tiende a dominar todo el mercado.",
+  "pasos_accionables": [
+    "Realizar pruebas de preferencia estadísticamente sólidas entre el producto propio y el líder competidor",
+    "Determinar si la diferencia de preferencia cae fuera del rango 25-75%",
+    "Si la diferencia es amplia, invertir en mejoras de calidad; si es pequeña, invertir en marketing",
+    "Evitar mejoras menores de calidad que el cliente no perciba ni valore"
+  ],
+  "entregable_esperado": "Informe de análisis de preferencia de consumidor vs cuota de mercado con recomendación estratégica (invertir en calidad o en marketing)",
+  "nodos_previos": [
+    "analisis_licitaciones_no_ganadas"
+  ],
+  "nodos_siguientes": [
+    "fitness_for_purpose_vs_conformance",
+    "perfeccionismo_vs_valor"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita decidir entre invertir en mejora de calidad o en marketing",
+    "Cuando existe un competidor directo con cuota de mercado dominante"
+  ]
+}

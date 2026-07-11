@@ -1,0 +1,27 @@
+{
+  "node_id": "probabilidad_falla_ensamblaje_multiple",
+  "fase_proyecto": "planificacion",
+  "dominio": "quality",
+  "titulo_concepto": "Probabilidad de Falla en Ensamblajes con Múltiples Partes",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Cuando un ensamblaje contiene múltiples partes no inspeccionadas, la probabilidad de falla del conjunto se aproxima a la suma de las fracciones defectuosas individuales (p1+p2+...+pm) cuando cada pi es pequeña. A medida que aumenta el número de partes (ej. 300 en una radio, 10,000 en un automóvil), la probabilidad de falla del ensamblaje crece, y el costo de reparación k2 también aumenta, por lo que se requiere que los componentes individuales tengan calidad cercana a cero defectos.",
+  "pasos_accionables": [
+    "Listar todas las partes componentes del ensamblaje final y su fracción defectuosa individual (pi).",
+    "Calcular la probabilidad de falla del ensamblaje usando la fórmula acumulativa (aproximación por suma de pi si son pequeñas).",
+    "Identificar qué partes requieren inspección 100% (Caso 2) versus las que pueden dejarse sin inspección con calidad casi cero defectos.",
+    "Evaluar la posibilidad de exposición múltiple al mismo defecto (ej. múltiples soldaduras) y su efecto acumulativo en la tasa de falla."
+  ],
+  "entregable_esperado": "Matriz de partes críticas con su fracción defectuosa y clasificación de estrategia de inspección (100% o cero defectos garantizado).",
+  "nodos_previos": [
+    "regla_todo_o_nada_inspeccion"
+  ],
+  "nodos_siguientes": [
+    "redundancia_diseno_confiabilidad",
+    "economia_subensambles_inspeccion",
+    "eliminacion_planes_muestreo_estandar"
+  ],
+  "condiciones_activacion": [
+    "Cuando el producto final está compuesto por múltiples partes o componentes ensamblados",
+    "Cuando existe exposición repetida al mismo tipo de defecto (ej. múltiples soldaduras o uniones)"
+  ]
+}

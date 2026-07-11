@@ -1,0 +1,25 @@
+{
+  "node_id": "analisis_competitivo_calidad",
+  "fase_proyecto": "validacion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis Competitivo de Producto",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Comparación característica por característica del producto propio frente a los de la competencia, utilizando análisis de laboratorio, pruebas de campo o entrevistas con clientes que usan productos competidores. Permite identificar áreas de vulnerabilidad y ventaja competitiva para tomar decisiones de mejora del diseño.",
+  "pasos_accionables": [
+    "Recolectar datos de productos competidores mediante pruebas de laboratorio, campo o entrevistas",
+    "Comparar característica por característica el producto propio contra los competidores",
+    "Identificar áreas donde el diseño es vulnerable y áreas de ventaja",
+    "Decidir si se debe mejorar el producto en base a los hallazgos, apoyándose en análisis de valor"
+  ],
+  "entregable_esperado": "Matriz o cuadro de análisis competitivo con comparación de características y decisiones de mejora identificadas",
+  "nodos_previos": [
+    "optimizacion_caracteristicas_diseno"
+  ],
+  "nodos_siguientes": [
+    "analisis_valor",
+    "analisis_vendibilidad"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere comparar el producto con ofertas de la competencia antes de finalizar el diseño"
+  ]
+}

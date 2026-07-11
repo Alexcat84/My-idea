@@ -1,0 +1,28 @@
+{
+  "node_id": "auditoria_de_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Auditoría de Proceso (Monitor Process Audit)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La auditoría de proceso es una verificación sistemática, mediante checklist, de que las operaciones de manufactura cumplen con las especificaciones establecidas: registros, calibración de equipos, procedimientos de limpieza, requisitos de seguridad y control de proceso. Las discrepancias se clasifican en críticas, mayores o menores, y requieren acción correctiva documentada dentro de plazos definidos (inmediato para críticas, cinco días para mayores/menores).",
+  "pasos_accionables": [
+    "Diseñar un checklist de auditoría que cubra especificaciones, registros, calibración, procedimientos y seguridad",
+    "Clasificar cada hallazgo como crítico, mayor o menor",
+    "Documentar por escrito las discrepancias encontradas",
+    "Definir plazos de corrección según severidad (inmediato, 5 días)",
+    "Dar seguimiento a la implementación de la acción correctiva"
+  ],
+  "entregable_esperado": "Checklist de auditoría de proceso aplicado y reporte de discrepancias con plan de acción correctiva documentado",
+  "nodos_previos": [
+    "planificacion_inicial_calidad"
+  ],
+  "nodos_siguientes": [
+    "auditoria_de_producto",
+    "medicion_de_calidad_en_manufactura",
+    "auditoria_de_producto_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita verificar el cumplimiento de especificaciones en operaciones de manufactura",
+    "Cuando existen quejas de campo que sugieren fallas de proceso no detectadas"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "ciclo_shewhart_pdsa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Ciclo de Shewhart (PDSA) para la Mejora Continua",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "El ciclo de Shewhart (conocido en Japón como ciclo de Deming) es un procedimiento iterativo de cuatro pasos —Plan, Do, Study, Act— usado para mejorar cualquier etapa de un proceso o para investigar una causa especial detectada por señal estadística. El paso de estudio de resultados busca aprender cómo mejorar el producto o servicio futuro; los resultados favorables pueden repetirse el ciclo bajo condiciones ambientales distintas para validar su robustez.",
+  "pasos_accionables": [
+    "Planificar un cambio o prueba con una hipótesis clara de mejora (Plan)",
+    "Llevar a cabo el cambio o prueba, preferiblemente a pequeña escala (Do)",
+    "Estudiar los resultados obtenidos y comparar con lo esperado (Study)",
+    "Actuar: adoptar, adaptar o abandonar el cambio según los resultados obtenidos (Act)",
+    "Repetir el ciclo bajo condiciones ambientales diferentes para confirmar la validez de los resultados"
+  ],
+  "entregable_esperado": "Un registro documentado de al menos un ciclo PDSA completo aplicado a una etapa de proceso, incluyendo hipótesis, datos y conclusiones",
+  "nodos_previos": [
+    "plan_de_accion_transformacion"
+  ],
+  "nodos_siguientes": [
+    "proceso_como_cadena_de_etapas",
+    "falacia_meta_numerica_sin_metodo"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere mejorar sistemáticamente una etapa de un proceso",
+    "Si se ha detectado una causa especial mediante control estadístico de procesos"
+  ]
+}

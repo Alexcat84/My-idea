@@ -1,0 +1,27 @@
+{
+  "node_id": "fijacion_cognitiva",
+  "fase_proyecto": "validacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Fijación Cognitiva (Cognitive Fixation)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "La fijación cognitiva ocurre cuando el contexto inmediato de resolución de problemas sesga a las personas hacia una interpretación particular de la situación, activando cierto conocimiento y actividades de diagnóstico a expensas de otras. En situaciones inciertas y dinámicas, las personas deben hacer evaluaciones provisionales basadas en datos parciales; tomar una acción compromete a una interpretación particular y genera explicaciones que la justifican, las cuales pueden persistir aunque surjan nuevos datos contradictorios. El caso del vuelo con desbalance de combustible ilustra cómo una tripulación mantuvo la interpretación de 'problema de indicación' pese a evidencia posterior.",
+  "pasos_accionables": [
+    "Identificar el momento en que se formó la interpretación inicial y qué datos la sustentaron",
+    "Documentar qué evidencia posterior contradecía la interpretación y por qué no fue suficiente para cambiarla",
+    "Evaluar el balance entre 'vagabundeo temático' (cambiar de explicación constantemente) y fijación cognitiva (no revisar la interpretación)",
+    "Reconstruir la secuencia de sensemaking: evaluación-acción-nueva evaluación"
+  ],
+  "entregable_esperado": "Mapa de sensemaking que muestre la evolución de la interpretación de la tripulación/operador y los puntos de fijación",
+  "nodos_previos": [
+    "sesgo_retrospectivo_hindsight",
+    "sesgo_retrospectivo_hindsight_2"
+  ],
+  "nodos_siguientes": [
+    "gestion_dinamica_de_fallas",
+    "continuacion_de_plan",
+    "plan_continuation_bias"
+  ],
+  "condiciones_activacion": [
+    "Cuando el incidente involucra un diagnóstico erróneo sostenido pese a nueva evidencia"
+  ]
+}

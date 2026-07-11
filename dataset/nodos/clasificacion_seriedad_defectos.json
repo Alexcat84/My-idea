@@ -1,0 +1,27 @@
+{
+  "node_id": "clasificacion_seriedad_defectos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Clasificación de Seriedad de Defectos (Características y Defectos por Gravedad)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Consiste en clasificar tanto las características de calidad derivadas de especificaciones como los defectos (síntomas de no conformidad) según su gravedad. Aunque ambas listas tienen relación, no son idénticas ni se comportan igual. Esta clasificación, aunque tediosa, revela confusiones interdepartamentales y permite optimizar recursos de inspección.",
+  "pasos_accionables": [
+    "Elaborar lista de características de calidad desde especificaciones",
+    "Elaborar lista separada de defectos/síntomas de no conformidad",
+    "Definir categorías de seriedad (crítico, mayor, menor) con un comité multidisciplinario",
+    "Aplicar la clasificación para reducir dimensiones a verificar y tiempo de inspección",
+    "Validar con casos piloto que demuestren el beneficio a diseñadores reticentes"
+  ],
+  "entregable_esperado": "Tabla de clasificación de seriedad de características y defectos aplicada a un producto/proceso específico",
+  "nodos_previos": [
+    "establecer_diseno_final_producto"
+  ],
+  "nodos_siguientes": [
+    "inspeccion_automatizada",
+    "economia_de_la_inspeccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe alto volumen de inspección sin priorización clara",
+    "Cuando hay desacuerdo entre departamentos sobre qué defectos son críticos"
+  ]
+}

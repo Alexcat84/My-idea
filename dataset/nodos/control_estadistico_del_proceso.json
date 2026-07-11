@@ -1,0 +1,29 @@
+{
+  "node_id": "control_estadistico_del_proceso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Control Estadístico del Proceso (SPC)",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.",
+  "pasos_accionables": [
+    "Recolectar datos secuenciales del proceso (por hora, por lote, etc.)",
+    "Construir gráficos de control (X-barra y R) con los datos",
+    "Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad",
+    "Una vez estable, calcular la capacidad real del proceso"
+  ],
+  "entregable_esperado": "Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.",
+  "nodos_previos": [
+    "diseno_de_metodos_de_recoleccion_de_datos",
+    "muestreo_aleatorio_vs_mecanico"
+  ],
+  "nodos_siguientes": [
+    "capacidad_del_proceso",
+    "graficos_de_control_uso",
+    "limites_de_especificacion_vs_limites_de_control"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario depende de inspección final para garantizar calidad",
+    "Cuando hay variabilidad inexplicada en la producción",
+    "Antes de intentar mejorar un proceso, para saber si es estable"
+  ]
+}

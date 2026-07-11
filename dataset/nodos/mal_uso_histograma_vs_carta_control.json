@@ -1,0 +1,25 @@
+{
+  "node_id": "mal_uso_histograma_vs_carta_control",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Mal Uso de Histogramas de Distribución en Lugar de Cartas de Control",
+  "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "resumen_teorico": "Presentar a un operador un histograma de distribución de resultados (por ejemplo, pesos de lingotes) no distingue entre causas atribuibles al sistema y causas que el operador podría corregir, por lo que no ayuda a mejorar y solo genera frustración. Los operadores que ajustan el proceso basándose en esta información sin una carta de control adecuada terminan aumentando la variabilidad en lugar de reducirla (siguiendo reglas de sobre-ajuste).",
+  "pasos_accionables": [
+    "Sustituir histogramas de desempeño diario por cartas de control apropiadas",
+    "Asegurar que la herramienta usada distinga entre variación del sistema y variación atribuible al operador",
+    "Capacitar a los operadores para que no ajusten el proceso en base a cada punto individual sin evidencia de causa especial",
+    "Evaluar si el ajuste manual del proceso está aumentando la variabilidad en lugar de reducirla"
+  ],
+  "entregable_esperado": "Reemplazo de herramientas de reporte (histogramas simples) por cartas de control con límites estadísticamente calculados",
+  "nodos_previos": [
+    "distincion_causas_comunes_especiales"
+  ],
+  "nodos_siguientes": [
+    "sistema_responsabilidad_gerencial"
+  ],
+  "condiciones_activacion": [
+    "Cuando se use un histograma o distribución de resultados como única herramienta de retroalimentación al operador",
+    "Cuando los operadores ajusten manualmente el proceso después de cada medición individual"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "errores_de_medicion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Errores de Medición: Sesgo y Repetibilidad",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La variación total de un proceso incluye variación del proceso de fabricación y variación del proceso de medición. El sesgo (bias) es la diferencia sistemática respecto al valor verdadero, mientras que la repetibilidad (precisión) mide la consistencia de mediciones repetidas. Ambos conceptos requieren definir el método de prueba, el sistema de causas de variabilidad y verificar estabilidad estadística mediante cartas de control.",
+  "pasos_accionables": [
+    "Definir formalmente el método de prueba paso a paso",
+    "Identificar las fuentes de variabilidad (operador, equipo, día, laboratorio)",
+    "Verificar la estabilidad del proceso de medición mediante carta de control",
+    "Calcular bias y repetibilidad del instrumento de medición",
+    "Calibrar el equipo respecto a estándares de medida reconocidos"
+  ],
+  "entregable_esperado": "Estudio de Análisis del Sistema de Medición (MSA) documentado con bias y repetibilidad calculados",
+  "nodos_previos": [
+    "inspeccion_automatizada",
+    "analisis_de_sistemas_de_medicion_msa"
+  ],
+  "nodos_siguientes": [
+    "economia_de_la_inspeccion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requieren niveles de defectos bajo enfoque Six Sigma",
+    "Cuando existen discrepancias entre mediciones repetidas del mismo producto"
+  ]
+}

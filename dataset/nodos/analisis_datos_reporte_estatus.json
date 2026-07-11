@@ -1,0 +1,25 @@
+{
+  "node_id": "analisis_datos_reporte_estatus",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Análisis de Datos y Reporte de Estatus",
+  "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+  "resumen_teorico": "Cada inspección genera dos resultados: la aceptación/rechazo del producto y el registro de la medición. Acumulando y analizando estos datos, el ingeniero de calidad determina el estatus continuo del proceso. Los reportes deben ser visibles y explicados a los involucrados; la gerencia solo permitirá trabajar en el futuro si la calidad ayuda a sobrevivir el presente con datos de tendencia precisos.",
+  "pasos_accionables": [
+    "Registrar sistemáticamente cada resultado de inspección/prueba",
+    "Colocar gráficos de progreso visibles en las áreas de trabajo y explicarlos al personal",
+    "Generar reportes de tendencia útiles tanto para supervisión operativa como para alta gerencia",
+    "Usar los datos para identificar qué trabajadores o procesos tienen problemas"
+  ],
+  "entregable_esperado": "Sistema de reporte de datos de calidad con gráficos visibles y tendencias accesibles a todos los niveles",
+  "nodos_previos": [
+    "ingenieria_calidad"
+  ],
+  "nodos_siguientes": [
+    "accion_correctiva",
+    "accion_correctiva_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita visibilidad del desempeño de calidad en tiempo real"
+  ]
+}

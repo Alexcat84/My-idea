@@ -1,0 +1,24 @@
+{
+  "node_id": "aceptacion_de_fallas_como_inevitables",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Aceptación de la Falla como Elemento Necesario del Sistema",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "La perfección no es posible ni costeable; incluso los mejores sistemas de calidad (Six Sigma) permiten una tasa de defectos no nula. Todos los sistemas humanos fallan eventualmente, y si una organización no experimenta fallas, puede ser señal de que las está ocultando o no las está detectando adecuadamente. Se debe aceptar la inevitabilidad de la falla y enfocar los esfuerzos en construir sistemas que la detecten y gestionen rápidamente para minimizar la pérdida.",
+  "pasos_accionables": [
+    "Determinar la tasa de falla que la organización puede costear (Six Sigma, Three Sigma, etc.) comparando el costo de falla vs. costo de prevención.",
+    "Revisar si la ausencia de fallas reportadas indica un sistema robusto o fallas ocultas.",
+    "Auditar la definición interna de 'falla' para asegurar que se están registrando adecuadamente.",
+    "Construir sistemas de detección rápida y gestión de fallas en vez de perseguir la eliminación total del riesgo."
+  ],
+  "entregable_esperado": "Análisis de costo-beneficio que determine la tasa de falla aceptable y un sistema de detección de fallas activo.",
+  "nodos_previos": [
+    "equipo_de_gestion_de_crisis",
+    "plan_de_gestion_de_riesgos"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la organización busca eliminar el riesgo por completo sin considerar el costo.",
+    "Cuando no se han reportado fallas en mucho tiempo y se sospecha ocultamiento."
+  ]
+}

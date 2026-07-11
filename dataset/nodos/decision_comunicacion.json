@@ -1,0 +1,24 @@
+{
+  "node_id": "decision_comunicacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Decisión de Comunicación sobre No Conformidades",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Involucra decidir qué información comunicar a clientes (outsiders) y a empleados internos (insiders) cuando se envía un producto no conforme como apto para el uso. La falta de comunicación puede generar desconfianza en clientes o desmotivación en inspectores y operarios que perciben que sus reportes no tienen efecto.",
+  "pasos_accionables": [
+    "Diseñar formularios que obliguen a decidir qué comunicar a clientes y empleados.",
+    "Establecer un protocolo de notificación a clientes cuando se envían productos no conformes.",
+    "Comunicar internamente las razones de la decisión de envío a inspectores y operarios.",
+    "Documentar decisiones de comunicación como parte del sistema de gestión de calidad."
+  ],
+  "entregable_esperado": "Protocolo formal de comunicación interna y externa sobre no conformidades.",
+  "nodos_previos": [
+    "decision_aptitud_uso"
+  ],
+  "nodos_siguientes": [
+    "disposicion_producto_no_conforme"
+  ],
+  "condiciones_activacion": [
+    "Cuando se decide enviar un producto no conforme como apto para uso y existe riesgo de pérdida de confianza."
+  ]
+}

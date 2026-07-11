@@ -1,0 +1,25 @@
+{
+  "node_id": "curva_caracteristica_operativa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Curva Característica de Operación (OC)",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Gráfico que cuantifica la probabilidad de aceptación de un lote en función de su porcentaje de defectuosos, para un plan de muestreo específico (n, c). Permite evaluar el riesgo del productor (rechazar buenos lotes) y del consumidor (aceptar malos lotes), aunque no predice la calidad real del lote ni brinda un nivel de confianza directo.",
+  "pasos_accionables": [
+    "Definir el plan de muestreo (n, c) a evaluar",
+    "Calcular la probabilidad de aceptación para distintos niveles de p usando distribución Poisson, binomial o hipergeométrica",
+    "Graficar la curva OC resultante",
+    "Analizar los riesgos α (productor) y β (consumidor) en la curva",
+    "Ajustar el plan de muestreo si los riesgos no son aceptables"
+  ],
+  "entregable_esperado": "Curva OC graficada y documentada para el plan de muestreo seleccionado, con riesgos cuantificados",
+  "nodos_previos": [
+    "muestreo_de_aceptacion"
+  ],
+  "nodos_siguientes": [
+    "niveles_calidad_muestreo_aql_lql_aoql"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita validar formalmente un plan de muestreo antes de implementarlo"
+  ]
+}

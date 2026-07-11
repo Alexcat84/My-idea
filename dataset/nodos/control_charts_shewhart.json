@@ -1,0 +1,32 @@
+{
+  "node_id": "control_charts_shewhart",
+  "fase_proyecto": "ejecucion",
+  "dominio": "quality",
+  "titulo_concepto": "Gráficos de Control de Shewhart",
+  "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "resumen_teorico": "Los gráficos de control son herramientas estadísticas que permiten distinguir entre variación de causa común y causa especial en un proceso. Se dividen en dos categorías: gráficos de variables (datos continuos medibles) y gráficos de atributos (datos de conteo). Los límites de control se establecen típicamente en ±3 desviaciones estándar de la línea central, calculados a partir de 20-30 muestras (subgrupos racionales) recolectadas previamente.",
+  "pasos_accionables": [
+    "Seleccionar el tipo de gráfico adecuado según el tipo de dato (Fig. 19.23 Roadmap)",
+    "Recolectar 20-30 subgrupos racionales antes de establecer límites",
+    "Calcular límites de control usando fórmulas basadas en ±3σ (Tabla 19.3)",
+    "Graficar los datos en orden temporal de producción",
+    "Interpretar los resultados y definir acciones para el personal de producción",
+    "Retirar los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características"
+  ],
+  "entregable_esperado": "Gráfico de control implementado con límites calculados, plan de interpretación y protocolo de acción documentado",
+  "nodos_previos": [
+    "planificacion_recoleccion_datos",
+    "tipos_escalas_medicion"
+  ],
+  "nodos_siguientes": [
+    "interpretacion_graficos_variables",
+    "capacidad_de_proceso",
+    "estratificacion_datos",
+    "graficos_control_atributos",
+    "graficos_control_variables"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita monitorear la estabilidad de un proceso en el tiempo",
+    "Cuando se requiere distinguir causas comunes de causas especiales de variación"
+  ]
+}

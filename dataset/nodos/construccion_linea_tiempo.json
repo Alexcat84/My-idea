@@ -1,0 +1,26 @@
+{
+  "node_id": "construccion_linea_tiempo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Construcción de una Línea de Tiempo de Alta Resolución",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "El tiempo es un principio organizador poderoso para entender la actividad humana en dominios guiados por eventos (donde el ritmo de trabajo no está bajo control total de los operadores). Una línea de tiempo de baja resolución o mal construida oculta los procesos subyacentes responsables de los 'errores'. Es necesario reconstruir con precisión qué sabían los operadores en cada momento (por ejemplo, millas de recorrido reales, no solo distancia radial) para entender correctamente la carga de trabajo y las presiones de tiempo que enfrentaban, evitando conclusiones erróneas basadas en el conocimiento retrospectivo del investigador.",
+  "pasos_accionables": [
+    "Reunir todos los datos temporales disponibles (grabaciones, registros, radar, logs)",
+    "Verificar que los datos usados reflejen lo que el operador sabía en tiempo real, no una métrica retrospectiva engañosa",
+    "Definir explícitamente y justificar el punto de inicio de la secuencia de eventos",
+    "Cruzar comunicaciones (por ejemplo, instrucciones de control) con la evolución del proceso para inferir la carga de trabajo real"
+  ],
+  "entregable_esperado": "Una línea de tiempo detallada y verificada que refleje la información y presión de tiempo reales percibidas por los operadores",
+  "nodos_previos": [
+    "debriefing_participantes",
+    "obtencion_datos_factores_humanos"
+  ],
+  "nodos_siguientes": [
+    "construccion_de_causas"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita evaluar si los operadores estaban 'apurados' o bajo presión de tiempo",
+    "Cuando los datos disponibles requieren reconstrucción cruzada de múltiples fuentes"
+  ]
+}

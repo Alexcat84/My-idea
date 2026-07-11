@@ -1,0 +1,28 @@
+{
+  "node_id": "modelo_barreras_swiss_cheese",
+  "fase_proyecto": "planificacion",
+  "dominio": "health_safety",
+  "titulo_concepto": "Modelo de Barreras (Swiss Cheese)",
+  "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
+  "resumen_teorico": "Modelo inspirado en industrias de alto riesgo energético (procesos, oil & gas, nuclear) que propone que los sistemas tienen defensas duras y blandas (barreras) contra el riesgo. Los accidentes ocurren cuando errores activos (actos inseguros en la primera línea) coinciden con errores latentes (condiciones organizacionales dormantes). El caso de Bhopal ilustra múltiples fallas latentes combinadas con problemas activos. Aunque dirige la atención a factores organizacionales upstream, el modelo aún preserva el papel central de los 'actos inseguros' como causa final, lo que puede reintroducir la culpa al error humano.",
+  "pasos_accionables": [
+    "Mapear las defensas duras (físicas) y blandas (procedimentales) existentes en el sistema",
+    "Identificar condiciones latentes que puedan estar dormidas dentro de la organización (diseño inadecuado, falta de entrenamiento, mantenimiento diferido)",
+    "Evitar centrar el análisis únicamente en el 'acto inseguro' final del operador de primera línea",
+    "Investigar cómo las condiciones organizacionales y gerenciales contribuyeron sistemáticamente al fallo de las barreras"
+  ],
+  "entregable_esperado": "Un mapa de barreras y condiciones latentes que muestre cómo múltiples fallas organizacionales confluyeron, evitando culpar únicamente al operador de primera línea",
+  "nodos_previos": [
+    "no_usar_triangulo_heinrich",
+    "evitar_uso_complacencia",
+    "modelo_cadena_de_eventos"
+  ],
+  "nodos_siguientes": [
+    "confusion_de_modos_automatizacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se investiga un accidente industrial de gran escala (energía, procesos químicos, nuclear)",
+    "Si se necesita identificar fallas organizacionales profundas detrás de un 'acto inseguro' aparente",
+    "Al diseñar sistemas de defensa en profundidad para procesos peligrosos"
+  ]
+}
