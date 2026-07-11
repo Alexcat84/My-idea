@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { CHECKLIST_ESTADO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { CHECKLIST_ESTADO, DOMINIOS, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -95,8 +95,27 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     assertSubconjuntoDelContrato("checklist_items.estado", CHECKLIST_ESTADO);
   });
 
-  it("parseo de sanidad: encontro los 5 CHECK esperados con al menos un literal cada uno", () => {
-    for (const clave of ["sessions.tipo", "plans.etiqueta", "project_nodes.tipo", "pack_clicks.pack", "checklist_items.estado"]) {
+  it("sessions.dominio y plans.dominio (Fase 3.5, migration 016)", () => {
+    assertSubconjuntoDelContrato("sessions.dominio", DOMINIOS);
+    assertSubconjuntoDelContrato("plans.dominio", DOMINIOS);
+  });
+
+  it("project_unlocks.dominio (Fase 3.5): solo packs, jamás 'core'", () => {
+    assertSubconjuntoDelContrato("project_unlocks.dominio", PACK_CLICKS_PACK);
+    expect(contrato.get("project_unlocks.dominio")!.has("core")).toBe(false);
+  });
+
+  it("parseo de sanidad: encontro los 8 CHECK esperados con al menos un literal cada uno", () => {
+    for (const clave of [
+      "sessions.tipo",
+      "plans.etiqueta",
+      "project_nodes.tipo",
+      "pack_clicks.pack",
+      "checklist_items.estado",
+      "sessions.dominio",
+      "plans.dominio",
+      "project_unlocks.dominio",
+    ]) {
       const permitidos = contrato.get(clave);
       expect(permitidos).toBeDefined();
       expect(permitidos!.size).toBeGreaterThan(0);

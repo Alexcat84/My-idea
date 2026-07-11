@@ -117,5 +117,21 @@ FROM (
     )
     AND EXISTS (SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='checklist_items' AND policyname='checklist_items_own')
 
+  UNION ALL
+  -- 016 · Phase 3.5 HSEQ worlds behind flags: unlocks + dominio provenance
+  SELECT '016', 'project_unlocks table + sessions.dominio + plans.dominio (CHECK core+3 packs)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='project_unlocks')
+    AND EXISTS (SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='project_unlocks' AND policyname='project_unlocks_own')
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'sessions_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%health_safety%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'plans_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%health_safety%'
+    )
+
 ) checks
 ORDER BY num;

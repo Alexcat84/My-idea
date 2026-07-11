@@ -1,20 +1,26 @@
 {
-  "comentario": "Catálogo ESTÁTICO de los mundos HSEQ (brief sección 4): la fachada de beta nunca lee nodos de packs/. 'clave' coincide con el campo dominio de los nodos y con el CHECK de pack_clicks (migration 014).",
+  "comentario": "Catálogo ESTÁTICO de los mundos HSEQ: ÚNICA fuente autorizada para hablar de mundos bloqueados (la fachada jamás lee nodos de packs/). 'clave' coincide con el campo dominio de los nodos, el CHECK de pack_clicks (014) y el de project_unlocks (016). Copy de los mockups aprobados (Paso 6): es copy de producción. Créditos canon 2026-07-10: activar 3, seguimiento 2 (precios.ts es el espejo).",
   "packs": [
     {
       "clave": "quality",
       "nombre": "Calidad y Confianza",
-      "promesa": "Que cada cliente reciba lo que le prometiste, siempre — procesos que no dependen de tu memoria."
+      "promesa": "Que tu cliente confíe, vuelva y te recomiende.",
+      "creditos_activar": 3,
+      "creditos_seguimiento": 2
     },
     {
       "clave": "health_safety",
       "nombre": "Seguridad y Personas",
-      "promesa": "Protege a quienes hacen posible tu idea: prevención que se adelanta al accidente."
+      "promesa": "Protege a tu gente y a tu negocio de su peor día.",
+      "creditos_activar": 3,
+      "creditos_seguimiento": 2
     },
     {
       "clave": "environmental",
       "nombre": "Ambiente y Futuro",
-      "promesa": "Crece sin hipotecar el mañana: decisiones ambientales que también cuidan tu margen."
+      "promesa": "Convierte lo sostenible en ventaja que se nota y se cobra.",
+      "creditos_activar": 3,
+      "creditos_seguimiento": 2
     }
   ]
 }

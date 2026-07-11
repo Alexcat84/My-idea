@@ -39,3 +39,9 @@ export type PackClave = (typeof PACK_CLICKS_PACK)[number];
 /** checklist_items.estado (Fase 3.3, migration 015): estados de un toque. */
 export const CHECKLIST_ESTADO = ["pendiente", "empezado", "a_medias", "hecho"] as const;
 export type ChecklistEstado = (typeof CHECKLIST_ESTADO)[number];
+
+/** Dominios válidos de sessions/plans/checklist_items (Fase 3.5, migration
+ * 016): core + packs. Sin fila en project_unlocks, un dominio de pack no
+ * existe para el motor. */
+export const DOMINIOS = ["core", ...PACK_CLICKS_PACK] as const;
+export type Dominio = (typeof DOMINIOS)[number];
