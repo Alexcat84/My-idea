@@ -120,3 +120,9 @@ summary::-webkit-details-marker {
   to { transform: scale(1); }
 }
 .anima-rail-fill { animation: railFillIn 0.35s ease-out both; }
+
+/* Canon corregido (entrega 2026-07-11): la barra azul del stepper avanza
+ * hasta la etapa actual, escalonada, sobre la pista punteada. */
+@keyframes stepFill {
+  to { width: 100%; }
+}

@@ -31,7 +31,9 @@ const RESPUESTAS = [
 ];
 
 async function capturar(page: Page, archivo: string) {
-  await page.waitForTimeout(1600); // animaciones planIn/railIn del canon
+  // animaciones del canon: planIn/railIn + el stepFill escalonado del
+  // stepper (la última barra termina ~1.65s; 3s deja todo asentado)
+  await page.waitForTimeout(3000);
   await page.screenshot({ path: path.join(OUT, archivo), fullPage: true });
   console.log(`  ${archivo}`);
 }
@@ -97,7 +99,19 @@ async function main() {
   await app.getByText("Tu Plan · en camino", { exact: false }).first().waitFor({ timeout: 30000 });
   await app.waitForTimeout(4000); // etapas encendiéndose por SSE
   await capturar(app, "04a_plan_en_camino_app.png");
-  await app.getByRole("button", { name: "Pasar a Manos a la Obra" }).waitFor({ timeout: 300000 });
+  try {
+    await app.getByRole("button", { name: "Pasar a Manos a la Obra" }).waitFor({ timeout: 240000 });
+  } catch (e) {
+    // diagnóstico del camino en-vivo: qué quedó en pantalla cuando el CTA
+    // no apareció tras el done del SSE
+    await app.screenshot({ path: path.join(OUT, "_debug_sin_cta.png"), fullPage: true });
+    const cuerpo = ((await app.textContent("body")) ?? "").replace(/\s+/g, " ");
+    console.log("SIN CTA. Pistas del DOM:");
+    for (const clave of ["Pasar a Manos", "Generar mi plan", "Suficiente para avanzar", "Tu Plan · en camino", "Tu Plan · listo", "en curso", "algo se atoró", "conexión se cortó"]) {
+      console.log(`  "${clave}" presente:`, cuerpo.includes(clave));
+    }
+    throw e;
+  }
   await capturar(app, "04_tu_plan_app.png");
   await capturarCanon(canon, "05 - Etapa 4 - Tu Plan.html", "04_tu_plan_canon.png");
 

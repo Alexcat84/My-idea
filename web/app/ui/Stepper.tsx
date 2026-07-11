@@ -57,13 +57,30 @@ function Punto({ estado, titulo, tamano }: { estado: "hecha" | "actual" | "pensa
   );
 }
 
-function Guion({ ancho }: { ancho: number }) {
+function Guion({ ancho, lleno, orden }: { ancho: number; lleno?: boolean; orden?: number }) {
+  // Canon corregido (entrega 2026-07-11): los conectores hasta la etapa
+  // actual llevan la barra azul de relleno (stepFill, escalonada) sobre la
+  // pista punteada; los futuros quedan solo punteados.
+  if (!lleno) {
+    return (
+      <span
+        aria-hidden
+        className="shrink-0 border-t-2 border-dashed"
+        style={{ width: `${ancho}px`, borderColor: "rgba(255,255,255,0.18)" }}
+      />
+    );
+  }
   return (
-    <span
-      aria-hidden
-      className="shrink-0 border-t-2 border-dashed"
-      style={{ width: `${ancho}px`, borderColor: "rgba(255,255,255,0.18)" }}
-    />
+    <span aria-hidden className="relative shrink-0" style={{ width: `${ancho}px`, height: "4px" }}>
+      <span
+        className="absolute left-0 right-0 top-px border-t-2 border-dashed"
+        style={{ borderColor: "rgba(255,255,255,0.18)" }}
+      />
+      <span
+        className="absolute left-0 top-0 h-1 w-0 rounded-[2px] bg-accent"
+        style={{ animation: `stepFill 0.45s ease-out ${0.2 + (orden ?? 0) * 0.5}s forwards` }}
+      />
+    </span>
   );
 }
 
@@ -81,7 +98,7 @@ export function Stepper({ etapa, pensando, etiqueta }: EstadoStepper) {
         const mostrarEtiqueta = n === etapa && etiqueta;
         return (
           <span key={titulo} className="flex items-center gap-2.5">
-            {i > 0 && <Guion ancho={30} />}
+            {i > 0 && <Guion ancho={30} lleno={n <= etapa} orden={i - 1} />}
             {mostrarEtiqueta ? (
               <span className="flex items-center gap-2">
                 <Punto estado={estado} titulo={titulo} tamano={12} />
@@ -115,7 +132,7 @@ export function StepperMini({ etapa, pensando }: EstadoStepper) {
         else estado = "futura";
         return (
           <span key={titulo} className="flex items-center gap-2">
-            {i > 0 && <Guion ancho={14} />}
+            {i > 0 && <Guion ancho={14} lleno={n <= etapa} orden={i - 1} />}
             <Punto estado={estado} titulo={titulo} tamano={9} />
           </span>
         );

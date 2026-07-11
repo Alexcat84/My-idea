@@ -114,6 +114,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [etiquetaEtapa, setEtiquetaEtapa] = useState<string | undefined>();
   const [planMd, setPlanMd] = useState<string | null>(null);
   const arrancoRef = useRef(false);
+  // true desde que el usuario pide el plan de la sesion actual: los turnos
+  // tardios de esa sesion ya no reabren la entrevista (carrera C0 bis).
+  const planPedidoRef = useRef(false);
 
   // --- Manos a la Obra (Fase 3.6) ---
   const [vistaManos, setVistaManos] = useState(quiereManos);
@@ -140,6 +143,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   function procesarTurno(data: RespuestaTurno) {
+    // C0 bis (cazado por el gate instrumentado): si el usuario pidió el
+    // plan con un turno aún en vuelo, la respuesta tardía de ese turno
+    // llegaba DESPUÉS de que generarPlan limpiara la pregunta y la
+    // resucitaba — el plan terminaba pero la vista creía que la
+    // entrevista seguía (sin CTA, sin fila de mundos). El plan manda: un
+    // turno tardío de la misma sesión ya no reabre la entrevista.
+    if (planPedidoRef.current) return;
     setSessionId(data.session_id);
     agregarNodos(data.nodos_nuevos);
     if (data.tipo === "pregunta" && data.pregunta) {
@@ -162,12 +172,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaManos(false);
     setRitualInicial(false);
     setDominioEntrevista(dominio);
+    planPedidoRef.current = false;
     procesarTurno(data);
   }
 
   const generarPlan = useCallback(
     async (sid: string) => {
       if (generandoPlan) return;
+      planPedidoRef.current = true;
       setGenerandoPlan(true);
       setPregunta(null);
       // C0 (la puerta que falta): sin esto, llegar al plan desde
@@ -182,6 +194,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         if (!res.ok || !res.body) {
           setError(ERROR_GENERICO);
           setGenerandoPlan(false);
+          planPedidoRef.current = false;
           return;
         }
         // Árbol de etapas: cada encabezado "## " que llega por el stream
@@ -208,10 +221,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
             void cargarChecklist();
           } else if (evento === "error") {
             setError(ERROR_GENERICO);
+            planPedidoRef.current = false;
           }
         });
       } catch {
         setError("la conexión se cortó mientras armábamos tu plan; tu recorrido quedó guardado, intenta de nuevo");
+        planPedidoRef.current = false;
       } finally {
         setGenerandoPlan(false);
         setEtiquetaEtapa(undefined);
