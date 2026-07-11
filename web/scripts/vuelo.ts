@@ -35,7 +35,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, postJson, ROOT } from "./_shared/http";
+import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, patchJson, postJson, ROOT } from "./_shared/http";
 import { verificarNumerosHuerfanos } from "../lib/verificadorHuerfanos";
 
 cargarEnvRaiz();
@@ -311,6 +311,216 @@ async function faseSesionMacetas(cookie: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Fase 2f (Fase 3.3): el bucle completo del checklist contra Supabase real.
+// checklist derivado -> PATCH estados -> follow (mensaje compuesto auditable,
+// puerta avanzada fuera de lo ya cubierto) -> plan 'seguimiento' -> checklist
+// encadenado del plan nuevo.
+// ---------------------------------------------------------------------------
+const RESPUESTAS_SEGUIMIENTO = [
+  "Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.",
+  "Vendo unas 12 macetas al mes por Instagram, y el proveedor nuevo me baja el cemento un 20%.",
+  "Mi duda ahora es si producir por lotes de 10 o seguir por pedido; por pedido no me atraso, pero pierdo el descuento de materiales.",
+  "Sí: tengo dos clientes mayoristas interesados que me pidieron precio por docena, todavía no les respondo.",
+  "Puedo dedicarle unas 15 horas a la semana; el resto lo cubre mi hermana cuando hay pedidos grandes.",
+  "De acuerdo, con eso es suficiente por ahora.",
+];
+
+interface ItemVuelo {
+  id: string;
+  etapa: number;
+  orden: number;
+  texto: string;
+  destacado: boolean;
+  estado: string;
+  nota: string | null;
+}
+
+async function faseChecklistSeguimiento(cookie: string, projectId: string) {
+  separador("FASE 2f (Fase 3.3): checklist -> PATCH -> follow -> plan seguimiento encadenado");
+
+  // --- 1. el checklist derivado del plan de macetas ---
+  const cl1 = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const planes1 = cl1.planes as Array<{ plan_id: string; dominio: string; etapas: Array<{ etapa: number; items: ItemVuelo[] }> }>;
+  const resumen1 = cl1.resumen as Record<string, { total: number; hechos: number }>;
+  if (planes1.length !== 1) {
+    throw new Error(`se esperaba exactamente 1 plan con checklist (el de macetas), hay ${planes1.length}`);
+  }
+  const items1 = planes1[0].etapas.flatMap((e) => e.items);
+  log(`checklist derivado: ${items1.length} items en ${planes1[0].etapas.length} etapa(s), dominio '${planes1[0].dominio}'`);
+  if (items1.length < 5) {
+    throw new Error(`checklist sospechosamente corto (${items1.length} items) para un plan completo`);
+  }
+  if (planes1[0].dominio !== "core") {
+    throw new Error(`dominio esperado 'core', llego '${planes1[0].dominio}'`);
+  }
+  for (const etapa of planes1[0].etapas) {
+    const destacados = etapa.items.filter((i) => i.destacado);
+    if (destacados.length !== 1 || !etapa.items[etapa.items.length - 1].destacado) {
+      throw new Error(`etapa ${etapa.etapa}: se esperaba exactamente 1 destacado y al final (hay ${destacados.length})`);
+    }
+  }
+  if (items1.some((i) => i.estado !== "pendiente")) {
+    throw new Error("todos los items recien derivados deben nacer 'pendiente'");
+  }
+  if (resumen1.core?.total !== items1.length || resumen1.core?.hechos !== 0) {
+    throw new Error(`resumen inconsistente: ${JSON.stringify(resumen1)} vs ${items1.length} items, 0 hechos`);
+  }
+  log("OK: estructura del checklist (1 destacado por etapa, al final; todos pendientes; resumen consistente).");
+
+  // --- 2. PATCH: avance real de un toque ---
+  const primero = items1[0];
+  const rHecho = await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+    item_id: primero.id,
+    estado: "hecho",
+    nota: "quedó lista la tabla de costos por pieza",
+  });
+  if ((rHecho.item as { estado?: string })?.estado !== "hecho") {
+    throw new Error(`PATCH no dejo el item en 'hecho': ${JSON.stringify(rHecho)}`);
+  }
+  const destacado1 = items1.find((i) => i.destacado)!;
+  await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: destacado1.id, estado: "a_medias" });
+  log(`OK: '${primero.texto.slice(0, 50)}…' -> hecho (con nota); destacado etapa 1 -> a_medias.`);
+
+  // Contrato: estado invalido debe rechazarse con 400 (jamas 23514 en vivo).
+  const resInvalido = await fetch(`${BASE_URL}/api/project/${projectId}/checklist`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({ item_id: primero.id, estado: "terminado" }),
+  });
+  if (resInvalido.status !== 400) {
+    throw new Error(`estado invalido 'terminado' debio dar 400, dio ${resInvalido.status}`);
+  }
+  log("OK: estado fuera de CHECKLIST_ESTADO rechazado con 400.");
+
+  // --- 3. follow: el ritual de 3 tarjetas -> sesion de seguimiento ---
+  const { data: nodosAntes } = await supabaseAdmin
+    .from("project_nodes")
+    .select("node_id")
+    .eq("project_id", projectId);
+  const cubiertosAntes = new Set((nodosAntes ?? []).map((n: { node_id: string }) => n.node_id));
+  log(`nodos cubiertos antes del follow: ${cubiertosAntes.size}`);
+
+  let rf = await postJson(cookie, `/api/project/${projectId}/follow`, {
+    detalles: "Conseguí un proveedor de cemento más barato y una feria local en agosto.",
+    enfoque: "el precio y el margen",
+  });
+  const followSessionId = String(rf.session_id);
+  log(`follow session_id: ${followSessionId}, tipo primer turno: ${rf.tipo}`);
+
+  const nodosFollow = (rf.nodos_nuevos ?? []) as Array<{ id: string; titulo: string; modo: string }>;
+  if (nodosFollow.length === 0) {
+    throw new Error("follow no devolvio nodos_nuevos -- el arbol de la UI arrancaria vacio (bug del gate en start, reincidente)");
+  }
+  const puerta = nodosFollow[0];
+  if (cubiertosAntes.has(puerta.id)) {
+    throw new Error(
+      `la puerta avanzada '${puerta.id}' YA estaba cubierta por sesiones previas -- paridad con modo_seguir rota (visitados = cubiertos ∪ ruta)`
+    );
+  }
+  log(`OK: puerta avanzada '${puerta.titulo}' (${puerta.id}) fuera de lo ya cubierto.`);
+
+  // Bitacora: el mensaje compuesto quedo auditable en sessions.mensaje_entrada.
+  const { data: filaFollow, error: errFollow } = await supabaseAdmin
+    .from("sessions")
+    .select("tipo, mensaje_entrada")
+    .eq("id", followSessionId)
+    .limit(1)
+    .single();
+  if (errFollow || !filaFollow) {
+    throw new Error(`no se pudo leer la sesion de follow: ${errFollow?.message}`);
+  }
+  if (filaFollow.tipo !== "seguimiento") {
+    throw new Error(`sessions.tipo esperado 'seguimiento', llego '${filaFollow.tipo}'`);
+  }
+  const mensajeEntrada = String(filaFollow.mensaje_entrada ?? "");
+  for (const fragmento of [
+    "Desde el último plan, este es mi avance real:",
+    "HECHO (1):",
+    "(nota: quedó lista la tabla de costos por pieza)",
+    "A MEDIAS (1):",
+    "Además: Conseguí un proveedor de cemento más barato",
+    "Lo que más me interesa profundizar ahora: el precio y el margen",
+  ]) {
+    if (!mensajeEntrada.includes(fragmento)) {
+      throw new Error(`la bitacora (mensaje_entrada) no contiene el fragmento esperado: "${fragmento}"\n---\n${mensajeEntrada}`);
+    }
+  }
+  log("OK: mensaje compuesto auditable en la bitacora (estados, nota, detalles y enfoque presentes).");
+
+  // --- 4. la entrevista de seguimiento hasta el plan ---
+  let idxSeg = 0;
+  let turnosSeg = 0;
+  let costoSeg = Number(rf.costo_usd ?? 0);
+  while (rf.tipo === "pregunta" && turnosSeg < MAX_TURNOS_SEGURIDAD) {
+    turnosSeg++;
+    const respuesta = RESPUESTAS_SEGUIMIENTO[Math.min(idxSeg++, RESPUESTAS_SEGUIMIENTO.length - 1)];
+    log(`\n[seguimiento turno ${turnosSeg}] PREGUNTA: ${rf.pregunta}`);
+    log(`[seguimiento turno ${turnosSeg}] RESPUESTA: ${respuesta}`);
+    rf = await postJson(cookie, `/api/session/${followSessionId}/turn`, { respuesta });
+    costoSeg = Number(rf.costo_usd ?? costoSeg);
+  }
+  if (rf.tipo !== "listo_para_plan") {
+    throw new Error(`la sesion de seguimiento no llego a listo_para_plan (tipo final: ${rf.tipo} tras ${turnosSeg} turnos)`);
+  }
+  log(`\nlisto_para_plan tras ${turnosSeg} turno(s) de seguimiento.`);
+
+  const resPlanSeg = await fetch(`${BASE_URL}/api/session/${followSessionId}/plan`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resPlanSeg.ok) {
+    throw new Error(`POST plan de seguimiento -> ${resPlanSeg.status}`);
+  }
+  let markdownSeg = "";
+  await consumirSSE(resPlanSeg, ({ evento, data }) => {
+    if (evento === "delta") process.stdout.write(".");
+    else if (evento === "done") {
+      const d = data as { markdown: string; costo_usd: number };
+      markdownSeg = d.markdown;
+      costoSeg = d.costo_usd;
+    } else if (evento === "error") {
+      throw new Error(`error SSE en plan de seguimiento: ${JSON.stringify(data)}`);
+    }
+  });
+  process.stdout.write("\n");
+  if (!markdownSeg || markdownSeg.length < 100) {
+    throw new Error("el plan de seguimiento esta vacio o sospechosamente corto");
+  }
+
+  const { data: filaPlanSeg, error: errPlanSeg } = await supabaseAdmin
+    .from("plans")
+    .select("id, etiqueta")
+    .eq("session_id", followSessionId)
+    .limit(1)
+    .single();
+  if (errPlanSeg || !filaPlanSeg) {
+    throw new Error(`no se encontro el plan de la sesion de seguimiento: ${errPlanSeg?.message}`);
+  }
+  if (filaPlanSeg.etiqueta !== "seguimiento") {
+    throw new Error(`plans.etiqueta esperada 'seguimiento', llego '${filaPlanSeg.etiqueta}'`);
+  }
+  log(`OK: plan persistido con etiqueta 'seguimiento' (${filaPlanSeg.id}).`);
+
+  // --- 5. el bucle queda encadenado: el plan nuevo derivo SU checklist ---
+  const cl2 = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const planes2 = cl2.planes as Array<{ plan_id: string; etapas: Array<{ items: ItemVuelo[] }> }>;
+  const resumen2 = cl2.resumen as Record<string, { total: number; hechos: number }>;
+  if (planes2.length !== 2) {
+    throw new Error(`tras el plan de seguimiento se esperaban 2 planes con checklist, hay ${planes2.length}`);
+  }
+  const itemsNuevo = planes2.find((p) => p.plan_id === filaPlanSeg.id)?.etapas.flatMap((e) => e.items) ?? [];
+  if (itemsNuevo.length === 0) {
+    throw new Error("el plan de seguimiento NO derivo checklist -- el bucle quedo roto");
+  }
+  if ((resumen2.core?.hechos ?? 0) < 1) {
+    throw new Error(`el resumen perdio los hechos previos: ${JSON.stringify(resumen2)}`);
+  }
+  log(`OK: checklist encadenado (${itemsNuevo.length} items nuevos del plan de seguimiento; hechos previos preservados).`);
+
+  return { costoUsd: costoSeg };
+}
+
+// ---------------------------------------------------------------------------
 // Fase 3: reporte digital -- fijos=200, precio=13, variable~0 -> equilibrio
 // esperado ceil(200/13)=16. Vocabulario esperado: "usuario(s)"/"suscripcion",
 // nunca "pieza".
@@ -479,6 +689,7 @@ async function main() {
     const macetas = await faseSesionMacetas(cookie);
     costos.macetas = macetas.costoUsd;
     saltosVerificados = macetas.saltosVerificados;
+    costos.checklistSeguimiento = (await faseChecklistSeguimiento(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -502,10 +713,11 @@ async function main() {
   log("  2. sesion de macetas + plan streaming: OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
-  log("  5. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
-  log("  6. guardian GIGO (numeros contaminados): OK");
+  log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
+  log("  6. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
+  log("  7. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 7/7 verificaciones OK");
+  separador("VUELO COMPLETO: 8/8 verificaciones OK");
   escribirTranscripcion();
 }
 

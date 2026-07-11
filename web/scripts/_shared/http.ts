@@ -103,6 +103,19 @@ export async function postJson(cookie: string, ruta: string, body: unknown): Pro
   return json;
 }
 
+export async function patchJson(cookie: string, ruta: string, body: unknown): Promise<Record<string, unknown>> {
+  const res = await fetch(`${BASE_URL}${ruta}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify(body),
+  });
+  const json = (await res.json()) as Record<string, unknown>;
+  if (!res.ok) {
+    throw new Error(`PATCH ${ruta} -> ${res.status}: ${JSON.stringify(json)}`);
+  }
+  return json;
+}
+
 export async function getJson(cookie: string, ruta: string): Promise<Record<string, unknown>> {
   const res = await fetch(`${BASE_URL}${ruta}`, { headers: { Cookie: cookie } });
   const json = (await res.json()) as Record<string, unknown>;
