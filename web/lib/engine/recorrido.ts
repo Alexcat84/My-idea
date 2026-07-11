@@ -61,6 +61,10 @@ export interface EstadoRecorrido {
   profundizarOfrecido: boolean;
   esSeguimiento: boolean;
   estadoVivoPrevio: string | null;
+  /** Fase 3.3 (paridad con modo_seguir 2801): en seguimiento, los nodos ya
+   * cubiertos por sesiones anteriores se excluyen de sucesores/brújula —
+   * Python hace visitados = cubiertos | ruta; esto es el "cubiertos". */
+  nodosCubiertosPrevios: string[];
   fallbackEvents: EventoInterprete[];
   prioridadDeclarada: PrioridadDeclarada | null;
   preguntaPendiente: string | null;
@@ -80,6 +84,7 @@ export function estadoInicial(params: {
   textoOriginal: string;
   esSeguimiento?: boolean;
   estadoVivoPrevio?: string | null;
+  nodosCubiertosPrevios?: string[];
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -89,6 +94,7 @@ export function estadoInicial(params: {
     profundizarOfrecido: false,
     esSeguimiento: params.esSeguimiento ?? false,
     estadoVivoPrevio: params.estadoVivoPrevio ?? null,
+    nodosCubiertosPrevios: params.nodosCubiertosPrevios ?? [],
     fallbackEvents: [],
     prioridadDeclarada: null,
     preguntaPendiente: null,
@@ -230,7 +236,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     if (!evaluacion.tiene_accion_clientes) familiasFaltantesKeys.push("accion_clientes");
     if (!evaluacion.tiene_viabilidad_economica) familiasFaltantesKeys.push("viabilidad_economica");
 
-    const visitados = new Set(estado.ruta);
+    const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
     const query = familiasFaltantesKeys.map((f) => FAMILIA_QUERY_BRUJULA[f] ?? f).join(" ");
     const afines = await buscarAfines(query, visitados, { k: 20, graph });
     let candidatosFamilia = afines.map((c) => c.id).filter((nid) => familiasFaltantesKeys.includes(families[nid] ?? "general"));
@@ -322,7 +328,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
 
   while (true) {
     const actualId = estado.ruta[estado.ruta.length - 1];
-    const visitados = new Set(estado.ruta);
+    // Paridad modo_seguir: cubiertos de sesiones previas + ruta actual
+    // (?? [] defiende estados persistidos antes de la Fase 3.3).
+    const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
     const nivel1Ids = sucesoresNivel(actualId, graph, visitados);
     if (nivel1Ids.length === 0 || estado.ruta.length >= MAX_DEPTH) {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
