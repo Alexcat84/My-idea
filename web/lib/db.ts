@@ -269,6 +269,8 @@ export async function registrarNodos(
   if (error) throw error;
 }
 
+/** Devuelve el id del plan insertado (Fase 3.3: el checklist derivado
+ * necesita plan_id para encadenarse). */
 export async function guardarPlan(
   supabase: SupabaseClient,
   userId: string,
@@ -277,14 +279,44 @@ export async function guardarPlan(
   contenidoMd: string,
   conceptosUsados: number,
   familiasCubiertas: string[]
+): Promise<string> {
+  const { data, error } = await supabase
+    .from("plans")
+    .insert({
+      session_id: sessionId,
+      user_id: userId,
+      etiqueta,
+      contenido_md: contenidoMd,
+      conceptos_usados: conceptosUsados,
+      familias_cubiertas: familiasCubiertas,
+    })
+    .select("id")
+    .single();
+  if (error) throw error;
+  return data.id as string;
+}
+
+/** Fase 3.3: persiste el checklist derivado de un plan recién guardado.
+ * Solo los planes de entrevista (inicial|completo|seguimiento) derivan
+ * checklist; organizador y reporte_numeros NO llegan aquí. */
+export async function insertarChecklist(
+  supabase: SupabaseClient,
+  projectId: string,
+  planId: string,
+  items: Array<{ etapa: number; orden: number; texto: string; destacado: boolean }>,
+  dominio: string = "core"
 ): Promise<void> {
-  const { error } = await supabase.from("plans").insert({
-    session_id: sessionId,
-    user_id: userId,
-    etiqueta,
-    contenido_md: contenidoMd,
-    conceptos_usados: conceptosUsados,
-    familias_cubiertas: familiasCubiertas,
-  });
+  if (items.length === 0) return;
+  const { error } = await supabase.from("checklist_items").insert(
+    items.map((i) => ({
+      project_id: projectId,
+      plan_id: planId,
+      dominio,
+      etapa: i.etapa,
+      orden: i.orden,
+      texto: i.texto,
+      destacado: i.destacado,
+    }))
+  );
   if (error) throw error;
 }

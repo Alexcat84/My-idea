@@ -30,6 +30,7 @@ import {
   cerrarSesion,
   guardarEstadoSesion,
   guardarPlan,
+  insertarChecklist,
   mergeNumerosProyecto,
   mergeTipoOferta,
   obtenerProyecto,
@@ -38,6 +39,7 @@ import {
   type EstadoSesionPersistido,
   type NodoConTipo,
 } from "@/lib/db";
+import { derivarChecklist } from "@/lib/engine/checklist";
 import { cargarGrafo } from "@/lib/engine/graph";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
@@ -201,7 +203,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         ]
           .filter((f) => f !== "general")
           .sort();
-        await guardarPlan(supabase, user.id, sessionId, etiquetaDb, resultado.markdown, totalConceptos, familiasPresentes);
+        const planId = await guardarPlan(supabase, user.id, sessionId, etiquetaDb, resultado.markdown, totalConceptos, familiasPresentes);
+        // Fase 3.3: todo plan de entrevista (inicial|completo|seguimiento)
+        // deriva su checklist determinístico; organizador y reporte_numeros
+        // nunca pasan por esta ruta. dominio 'core' hasta que existan mundos.
+        await insertarChecklist(supabase, projectId, planId, derivarChecklist(resultado.markdown));
 
         const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];
         const { calidad, acumulado: acumuladoConJuez } = await evaluarCalidadSesion(
