@@ -79,11 +79,6 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
     );
   }
 
-  const limite = await verificarLimiteDiario(user.id, user.email);
-  if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
-  }
-
   const graph = cargarGrafo();
   const preguntasCache = cargarPreguntasCache();
   const families = cargarFamilies();
@@ -106,6 +101,13 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
       { error: "Este mundo se está preparando — muy pronto podrás explorarlo." },
       { status: 503 }
     );
+  }
+
+  // El límite se cobra al FINAL de las validaciones (hallado por el vuelo:
+  // cobrarlo antes quemaba un arranque en el 503 de pre-integración).
+  const limite = await verificarLimiteDiario(user.id, user.email);
+  if (!limite.permitido) {
+    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
   const mensaje = `Exploración del mundo "${entrada.nombre}" (${entrada.promesa}) para mi idea. Contexto actual: ${
