@@ -69,6 +69,19 @@ describe("calibracion offline (fixture, sin red)", () => {
     expect(score).toBeCloseTo(SCORE_REF_NEGATIVO, 1);
     expect(score).toBeLessThan(MIN_SCORE_SALTO);
   });
+
+  // Expansión v1.3: un caso nuevo por libro grande (Traction, Hugos) — la
+  // brújula debe VER el conocimiento recién tejido al core.
+  const casosV13 = (fixture as unknown as {
+    casos_v13?: Array<{ texto: string; nodo_esperado: string; score_ref: number; embedding: number[] }>;
+  }).casos_v13 ?? [];
+  for (const caso of casosV13) {
+    it(`caso v1.3: '${caso.nodo_esperado}' responde a "${caso.texto.slice(0, 40)}…"`, () => {
+      const score = scoreContra(caso.nodo_esperado, caso.embedding);
+      expect(score).toBeCloseTo(caso.score_ref, 1);
+      expect(score).toBeGreaterThan(MIN_SCORE_SALTO);
+    });
+  }
 });
 
 describe.runIf(TIENE_VOYAGE)(

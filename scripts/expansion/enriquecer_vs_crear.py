@@ -181,7 +181,7 @@ def etapa_juzgar():
             })
         for intento in range(3):
             try:
-                r = client.messages.create(model=MODEL, max_tokens=3000, system=JUEZ_SYSTEM,
+                r = client.messages.create(model=MODEL, max_tokens=9000, system=JUEZ_SYSTEM,
                                            messages=[{"role": "user", "content": json.dumps(entrada, ensure_ascii=False)}])
                 uso["in"] += r.usage.input_tokens
                 uso["out"] += r.usage.output_tokens

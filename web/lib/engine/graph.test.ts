@@ -11,9 +11,9 @@ import {
 } from "./graph";
 
 describe("cargarGrafo / cargarEntrySeeds / cargarPreguntasCache", () => {
-  it("carga los 2805 nodos reales (1266 core + 1539 de packs, Fase 3.6)", () => {
+  it("carga los 3260 nodos reales (1266 core + 455 OLA1 v1.3 + 1539 de packs)", () => {
     const graph = cargarGrafo();
-    expect(Object.keys(graph).length).toBe(2805);
+    expect(Object.keys(graph).length).toBe(3260);
   });
 
   it("carga las 20 puertas de entrada", () => {
