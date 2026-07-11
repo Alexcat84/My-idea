@@ -23,7 +23,7 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
-import { crearSesion, nodosCubiertos, obtenerProyecto } from "@/lib/db";
+import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import type { ChecklistEstado } from "@/lib/dbContract";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
 import { seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
@@ -108,6 +108,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   const cubiertos = await nodosCubiertos(supabase, projectId);
   const estadoVivoPrevio = (proyecto.estado_vivo as string | null) ?? null;
+  // Fase 3.5: core + unlocks; solo-core si la 016 aún no está aplicada.
+  let dominios = ["core"];
+  try {
+    dominios = await dominiosDesbloqueados(supabase, projectId);
+  } catch {
+    dominios = ["core"];
+  }
 
   // El mensaje compuesto es el mensaje_entrada de la sesión: bitácora.
   const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje);
@@ -124,7 +131,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     graph,
     cubiertos,
     entrySeeds,
-    acumulado
+    acumulado,
+    dominios
   );
 
   const estado = estadoInicial({
@@ -134,6 +142,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     esSeguimiento: true,
     estadoVivoPrevio,
     nodosCubiertosPrevios: [...cubiertos],
+    dominiosDesbloqueados: dominios,
   });
 
   const resultado = await avanzarTurno({

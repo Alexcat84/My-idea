@@ -128,7 +128,8 @@ export async function crearSesion(
   projectId: string,
   tipo: SessionTipo,
   mensajeEntrada: string,
-  puertaEntrada: string | null = null
+  puertaEntrada: string | null = null,
+  dominio: string = "core"
 ): Promise<string> {
   const proyecto = await obtenerProyecto(supabase, projectId);
   const posicion = (proyecto?.session_count ?? 0) + 1;
@@ -141,6 +142,9 @@ export async function crearSesion(
       tipo,
       mensaje_entrada: mensajeEntrada,
       puerta_entrada: puertaEntrada,
+      // 'core' es el DEFAULT de la columna (016): se omite para que las
+      // sesiones normales sigan funcionando aun antes de aplicar la 016.
+      ...(dominio !== "core" ? { dominio } : {}),
     })
     .select("id")
     .single();
@@ -247,6 +251,15 @@ export async function nodosCubiertos(supabase: SupabaseClient, projectId: string
   return new Set((data as Array<{ node_id: string }>).map((row) => row.node_id));
 }
 
+/** Fase 3.5: los dominios que este proyecto puede recorrer — 'core'
+ * siempre, más un dominio por cada fila de project_unlocks. Sin fila,
+ * el dominio no existe para el motor (el filtro es el muro). */
+export async function dominiosDesbloqueados(supabase: SupabaseClient, projectId: string): Promise<string[]> {
+  const { data, error } = await supabase.from("project_unlocks").select("dominio").eq("project_id", projectId);
+  if (error) throw error;
+  return ["core", ...(data as Array<{ dominio: string }>).map((row) => row.dominio)];
+}
+
 export interface NodoConTipo {
   node_id: string;
   tipo: ProjectNodeTipo;
@@ -278,7 +291,8 @@ export async function guardarPlan(
   etiqueta: PlanEtiqueta,
   contenidoMd: string,
   conceptosUsados: number,
-  familiasCubiertas: string[]
+  familiasCubiertas: string[],
+  dominio: string = "core"
 ): Promise<string> {
   const { data, error } = await supabase
     .from("plans")
@@ -289,6 +303,8 @@ export async function guardarPlan(
       contenido_md: contenidoMd,
       conceptos_usados: conceptosUsados,
       familias_cubiertas: familiasCubiertas,
+      // igual que crearSesion: 'core' es el DEFAULT de la columna (016).
+      ...(dominio !== "core" ? { dominio } : {}),
     })
     .select("id")
     .single();

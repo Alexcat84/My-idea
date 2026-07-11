@@ -14,7 +14,7 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_PUERTA_AVANZADA } from "../prompts";
-import type { Grafo } from "./graph";
+import { dominioPermitido, type Grafo } from "./graph";
 import { tokensCosecha } from "./tokens";
 
 const ORDEN_FASES: Record<string, number> = { ideacion: 0, validacion: 1, planificacion: 2, ejecucion: 3 };
@@ -28,7 +28,8 @@ export function candidatosSeguimiento(
   families: Record<string, string>,
   graph: Grafo,
   cubiertos: Set<string>,
-  tope = 30
+  tope = 30,
+  dominiosDesbloqueados: string[] | null = null
 ): string[] {
   const faseIdx = ORDEN_FASES[faseActual] ?? 0;
   const conteoFam: Record<string, number> = {};
@@ -54,7 +55,7 @@ export function candidatosSeguimiento(
   };
 
   return Object.keys(graph)
-    .filter((nid) => !cubiertos.has(nid))
+    .filter((nid) => !cubiertos.has(nid) && dominioPermitido(nid, graph, dominiosDesbloqueados))
     .sort((a, b) => puntaje(b) - puntaje(a))
     .slice(0, tope);
 }
@@ -76,9 +77,19 @@ export async function seleccionarPuertaAvanzada(
   graph: Grafo,
   cubiertos: Set<string>,
   entrySeeds: string[],
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  dominiosDesbloqueados: string[] | null = null
 ): Promise<ResultadoPuertaAvanzada> {
-  const candidatosIds = candidatosSeguimiento(mensajeNuevo, estadoVivo, faseActual, families, graph, cubiertos);
+  const candidatosIds = candidatosSeguimiento(
+    mensajeNuevo,
+    estadoVivo,
+    faseActual,
+    families,
+    graph,
+    cubiertos,
+    undefined,
+    dominiosDesbloqueados
+  );
   if (candidatosIds.length > 0) {
     const opciones = candidatosIds.map((nid) => {
       const n = graph[nid];

@@ -140,7 +140,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
           recorrido.perfilSesion,
           recorrido.prioridadDeclarada,
           recorrido.esSeguimiento,
-          recorrido.estadoVivoPrevio
+          recorrido.estadoVivoPrevio,
+          recorrido.dominiosDesbloqueados ?? null
         );
 
         const { rawTexto, acumulado: acumuladoTrasRedactor, avisoFallback } = await generarTextoPlan(
@@ -203,11 +204,23 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         ]
           .filter((f) => f !== "general")
           .sort();
-        const planId = await guardarPlan(supabase, user.id, sessionId, etiquetaDb, resultado.markdown, totalConceptos, familiasPresentes);
+        // Fase 3.5: el plan hereda la procedencia de dominio de su sesión
+        // (core para todo lo normal; el pack cuando la sesión es de mundo).
+        const dominioSesion = ((sesion as { dominio?: string }).dominio ?? "core") as string;
+        const planId = await guardarPlan(
+          supabase,
+          user.id,
+          sessionId,
+          etiquetaDb,
+          resultado.markdown,
+          totalConceptos,
+          familiasPresentes,
+          dominioSesion
+        );
         // Fase 3.3: todo plan de entrevista (inicial|completo|seguimiento)
         // deriva su checklist determinístico; organizador y reporte_numeros
-        // nunca pasan por esta ruta. dominio 'core' hasta que existan mundos.
-        await insertarChecklist(supabase, projectId, planId, derivarChecklist(resultado.markdown));
+        // nunca pasan por esta ruta.
+        await insertarChecklist(supabase, projectId, planId, derivarChecklist(resultado.markdown), dominioSesion);
 
         const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];
         const { calidad, acumulado: acumuladoConJuez } = await evaluarCalidadSesion(

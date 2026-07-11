@@ -224,6 +224,9 @@ export interface InterpretarMultiSaltoParams {
   historialMensajes: MensajeConversacion[] | null;
   acumulado: UsoAcumulado;
   registrarEvento?: (evento: EventoInterprete) => void;
+  /** Fase 3.5: dominios recorribles del proyecto (core + unlocks);
+   * undefined = solo core, el comportamiento de siempre. */
+  dominiosDesbloqueados?: string[];
 }
 
 export interface ResultadoInterpretarMultiSalto {
@@ -251,13 +254,14 @@ export async function interpretarMultiSalto(
     prioridadDeclaradaActual = null,
     historialMensajes,
     registrarEvento,
+    dominiosDesbloqueados,
   } = params;
   let acumulado = params.acumulado;
 
-  const nivel1Ids = sucesoresNivel(actualId, graph, visitados);
+  const nivel1Ids = sucesoresNivel(actualId, graph, visitados, undefined, dominiosDesbloqueados);
   const visitadosONivel1 = new Set([...visitados, ...nivel1Ids]);
   const nivel1: ResumenNodo[] = nivel1Ids.map((nid) => {
-    const nivel2Ids = sucesoresNivel(nid, graph, visitadosONivel1, MAX_SUCESORES_NIVEL2);
+    const nivel2Ids = sucesoresNivel(nid, graph, visitadosONivel1, MAX_SUCESORES_NIVEL2, dominiosDesbloqueados);
     const entradaNivel1 = resumenNodo(nid, graph, preguntasCache);
     entradaNivel1.sucesores = nivel2Ids.map((n2) => resumenNodo(n2, graph, preguntasCache));
     return entradaNivel1;
@@ -269,6 +273,7 @@ export async function interpretarMultiSalto(
     k: MAX_SALTOS_POSIBLES_OFRECIDOS,
     minScore: MIN_SCORE_SALTO,
     graph,
+    dominiosDesbloqueados,
   });
   const idsSaltoOfrecidos = new Set(saltoCandidatos.map((c) => c.id));
   const saltosPosibles = saltoCandidatos.map(({ id, score }) => ({

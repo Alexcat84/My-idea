@@ -17,7 +17,7 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
-import { crearProyecto, crearSesion, obtenerProyecto } from "@/lib/db";
+import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
@@ -79,6 +79,18 @@ export async function POST(request: Request) {
   }
   const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto);
 
+  // Fase 3.5: dominios recorribles del proyecto (core + unlocks). Un
+  // proyecto recién creado no tiene unlocks; y si project_unlocks aún no
+  // existe (016 sin aplicar) o falla, se degrada a solo-core.
+  let dominios = ["core"];
+  if (projectIdSolicitado) {
+    try {
+      dominios = await dominiosDesbloqueados(supabase, projectId);
+    } catch {
+      dominios = ["core"];
+    }
+  }
+
   const client = createAnthropicClient();
   let acumulado = usoVacio();
 
@@ -89,6 +101,7 @@ export async function POST(request: Request) {
     actualId: clasificacion.puertaId,
     perfilSesion: clasificacion.perfilSesion,
     textoOriginal: texto,
+    dominiosDesbloqueados: dominios,
   });
 
   const resultado = await avanzarTurno({

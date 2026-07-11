@@ -65,7 +65,8 @@ export function cosecharVecindario(
   evaluacion: Pick<EvaluacionCobertura, "tiene_accion_clientes" | "tiene_viabilidad_economica">,
   perfilSesion: string | null,
   prioridadDeclarada: PrioridadDeclarada | null = null,
-  tope = MAX_COSECHA
+  tope = MAX_COSECHA,
+  dominiosDesbloqueados: string[] | null = null
 ): string[] {
   const rutaSet = new Set(ruta);
   const candidatos = new Set<string>();
@@ -73,7 +74,9 @@ export function cosecharVecindario(
     const n = graph[nid];
     if (!n) continue;
     for (const vecino of [...(n.nodos_siguientes ?? []), ...(n.nodos_previos ?? [])]) {
-      if (vecino in graph && !rutaSet.has(vecino) && dominioPermitido(vecino, graph)) {
+      // Fase 3.5: hermana de la bomba dormida de recorrido.ts:239 — la
+      // cosecha también filtraba con el default {core}.
+      if (vecino in graph && !rutaSet.has(vecino) && dominioPermitido(vecino, graph, dominiosDesbloqueados)) {
         candidatos.add(vecino);
       }
     }
@@ -166,11 +169,21 @@ export function prepararPlan(
   perfilSesion: string | null,
   prioridadDeclarada: PrioridadDeclarada | null,
   esSeguimiento: boolean,
-  estadoVivoPrevio: string | null
+  estadoVivoPrevio: string | null,
+  dominiosDesbloqueados: string[] | null = null
 ): PreparacionPlan {
   const evaluacionRuta = evaluarRuta(ruta, families);
   const materialPrincipal = ruta.map((nid) => aMaterial(nid, graph, families));
-  const cosechaIds = cosecharVecindario(ruta, graph, families, evaluacionRuta, perfilSesion, prioridadDeclarada);
+  const cosechaIds = cosecharVecindario(
+    ruta,
+    graph,
+    families,
+    evaluacionRuta,
+    perfilSesion,
+    prioridadDeclarada,
+    undefined,
+    dominiosDesbloqueados
+  );
   const materialDeApoyo = cosechaIds.map((nid) => aMaterial(nid, graph, families));
   const tieneMaterialEconomico = [...materialPrincipal, ...materialDeApoyo].some((m) => m.es_viabilidad_economica);
 

@@ -65,6 +65,10 @@ export interface EstadoRecorrido {
    * cubiertos por sesiones anteriores se excluyen de sucesores/brújula —
    * Python hace visitados = cubiertos | ruta; esto es el "cubiertos". */
   nodosCubiertosPrevios: string[];
+  /** Fase 3.5: dominios que el proyecto puede recorrer (core + unlocks).
+   * Se fija al arrancar la sesión (start/follow/world-start) y viaja con
+   * el estado; alimenta sucesores, brújula, intérprete y cosecha. */
+  dominiosDesbloqueados: string[];
   fallbackEvents: EventoInterprete[];
   prioridadDeclarada: PrioridadDeclarada | null;
   preguntaPendiente: string | null;
@@ -85,6 +89,7 @@ export function estadoInicial(params: {
   esSeguimiento?: boolean;
   estadoVivoPrevio?: string | null;
   nodosCubiertosPrevios?: string[];
+  dominiosDesbloqueados?: string[];
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -95,6 +100,7 @@ export function estadoInicial(params: {
     esSeguimiento: params.esSeguimiento ?? false,
     estadoVivoPrevio: params.estadoVivoPrevio ?? null,
     nodosCubiertosPrevios: params.nodosCubiertosPrevios ?? [],
+    dominiosDesbloqueados: params.dominiosDesbloqueados ?? ["core"],
     fallbackEvents: [],
     prioridadDeclarada: null,
     preguntaPendiente: null,
@@ -238,11 +244,20 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
 
     const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
     const query = familiasFaltantesKeys.map((f) => FAMILIA_QUERY_BRUJULA[f] ?? f).join(" ");
-    const afines = await buscarAfines(query, visitados, { k: 20, graph });
+    const afines = await buscarAfines(query, visitados, {
+      k: 20,
+      graph,
+      dominiosDesbloqueados: estado.dominiosDesbloqueados,
+    });
     let candidatosFamilia = afines.map((c) => c.id).filter((nid) => familiasFaltantesKeys.includes(families[nid] ?? "general"));
     if (candidatosFamilia.length === 0) {
+      // FIX obligatorio del plan (bomba dormida): esta llamada iba SIN la
+      // lista — con unlocks activos habría filtrado con el default {core}.
       candidatosFamilia = Object.keys(graph).filter(
-        (nid) => !visitados.has(nid) && familiasFaltantesKeys.includes(families[nid] ?? "general") && dominioPermitido(nid, graph)
+        (nid) =>
+          !visitados.has(nid) &&
+          familiasFaltantesKeys.includes(families[nid] ?? "general") &&
+          dominioPermitido(nid, graph, estado.dominiosDesbloqueados)
       );
     }
     const elegidos = candidatosFamilia.slice(0, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO);
@@ -331,7 +346,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     // Paridad modo_seguir: cubiertos de sesiones previas + ruta actual
     // (?? [] defiende estados persistidos antes de la Fase 3.3).
     const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
-    const nivel1Ids = sucesoresNivel(actualId, graph, visitados);
+    const nivel1Ids = sucesoresNivel(actualId, graph, visitados, undefined, estado.dominiosDesbloqueados);
     if (nivel1Ids.length === 0 || estado.ruta.length >= MAX_DEPTH) {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
       return {
@@ -359,6 +374,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       historialMensajes: estado.historialMensajes,
       acumulado,
       registrarEvento: (e) => eventosNuevos.push(e),
+      dominiosDesbloqueados: estado.dominiosDesbloqueados,
     });
     acumulado = resultadoInterprete.acumulado;
     if (resultadoInterprete.historialMensajes) {
