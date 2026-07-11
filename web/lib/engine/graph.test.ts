@@ -11,9 +11,9 @@ import {
 } from "./graph";
 
 describe("cargarGrafo / cargarEntrySeeds / cargarPreguntasCache", () => {
-  it("carga los 3260 nodos reales (1266 core + 455 OLA1 v1.3 + 1539 de packs)", () => {
+  it("carga los 3687 nodos reales (1721 core + 1539 HSEQ + 427 mundos v1.3.2)", () => {
     const graph = cargarGrafo();
-    expect(Object.keys(graph).length).toBe(3260);
+    expect(Object.keys(graph).length).toBe(3687);
   });
 
   it("carga las 20 puertas de entrada", () => {
@@ -63,7 +63,8 @@ describe("dominioPermitido: el muro de mundos (Fase 3.5/3.6)", () => {
 
   it("los nodos de packs integrados NO pasan por defecto (mundos tras flags), y sí con su unlock", () => {
     const graph = cargarGrafo();
-    for (const dominio of ["quality", "health_safety", "environmental"]) {
+    // Fase v1.3.2: la muralla vale para los 6 mundos.
+    for (const dominio of ["quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias"]) {
       const delPack = Object.keys(graph).filter((id) => graph[id].dominio === dominio);
       expect(delPack.length).toBeGreaterThan(0);
       for (const id of delPack.slice(0, 10)) {

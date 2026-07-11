@@ -1,0 +1,27 @@
+{
+  "node_id": "costos_preparacion_franquicia",
+  "fase_proyecto": "planificacion",
+  "dominio": "franquicias",
+  "titulo_concepto": "Costos de Preparación para Crear la Nueva Entidad de Franquicia",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "Además de los costos de desarrollo, marketing y personal, existen costos de preparación asociados a crear formalmente el nuevo negocio de franquicia. Esto incluye la creación de una nueva entidad corporativa, auditoría de apertura del balance, duplicación de materiales de colateral (folletos, videos, papelería), registro de marcas adicionales, costos de viaje del equipo consultor, y nuevo equipo/mobiliario. Estos costos suelen oscilar entre $10,000 y $20,000 dependiendo de la escala del esfuerzo.",
+  "pasos_accionables": [
+    "Decidir si se creará una nueva entidad corporativa para la operación de franquicia",
+    "Presupuestar la duplicación de materiales de marketing y colaterales",
+    "Registrar las marcas adicionales necesarias para proteger la marca franquiciada",
+    "Presupuestar costos de viaje, equipo y mobiliario para el equipo de franquicia"
+  ],
+  "entregable_esperado": "Lista de costos de preparación (setup costs) con presupuesto estimado entre $10,000 y $20,000",
+  "nodos_previos": [
+    "costos_personal_franquicia",
+    "presupuesto_publicidad_franquicia"
+  ],
+  "nodos_siguientes": [
+    "decision_final_franquiciar"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario está finalizando el presupuesto total de lanzamiento de franquicia",
+    "Si el usuario no ha contemplado gastos administrativos y legales de constitución"
+  ],
+  "etiqueta_arbol": "Calcula Costos de Preparación"
+}

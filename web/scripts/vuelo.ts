@@ -647,6 +647,109 @@ async function faseMundos(cookie: string, projectId: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Fase 2g-bis (Fase v1.3.2): los tres mundos nuevos. Murallas negativas de
+// exportacion y franquicias (sin unlock -> 403: el dominio no existe para el
+// motor) + ciclo positivo COMPLETO de seguridad_digital (unlock -> start con
+// semilla del mapeo de brecha -> turnos -> plan dominio=seguridad_digital ->
+// checklist agrupado). El unlock de seguridad_digital requiere la migración
+// 017 aplicada (CHECK de project_unlocks ampliado): si el CHECK viejo lo
+// rechaza, se corta con el mensaje exacto de qué pegar en el SQL Editor.
+// ---------------------------------------------------------------------------
+async function faseMundosNuevos(cookie: string, projectId: string) {
+  separador("FASE 2g-bis (v1.3.2): mundos nuevos -- murallas x2 + ciclo de seguridad_digital");
+
+  // 1. Murallas negativas: sin unlock, exportacion y franquicias = 403.
+  for (const dominio of ["exportacion", "franquicias"]) {
+    const sinUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/${dominio}/start`, {
+      method: "POST",
+      headers: { Cookie: cookie },
+    });
+    if (sinUnlock.status !== 403) {
+      throw new Error(`start de '${dominio}' sin unlock debio responder 403 (la muralla), respondio ${sinUnlock.status}`);
+    }
+    log(`OK: muralla de '${dominio}' en pie (403 sin unlock).`);
+  }
+
+  // 2. Unlock de seguridad_digital -- aqui muerde el CHECK de la migracion 017.
+  const resUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/seguridad_digital/unlock`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resUnlock.ok) {
+    const cuerpo = await resUnlock.text();
+    throw new Error(
+      `unlock de seguridad_digital respondio ${resUnlock.status} -- si el cuerpo huele a 23514, ` +
+        `falta aplicar my_idea_017_mundos_nuevos.sql en el SQL Editor de Supabase (los CHECK de la 016 ` +
+        `solo aceptan los packs HSEQ). Cuerpo: ${cuerpo.slice(0, 300)}`
+    );
+  }
+  const u = (await resUnlock.json()) as Record<string, unknown>;
+  if (u.ok !== true || u.dominio !== "seguridad_digital") {
+    throw new Error(`unlock de seguridad_digital fallo: ${JSON.stringify(u)}`);
+  }
+  log(`OK: unlock de seguridad_digital con ${u.creditos} creditos (migracion 017 viva).`);
+
+  // 3. Ciclo positivo completo.
+  const conUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/seguridad_digital/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!conUnlock.ok) {
+    throw new Error(`start de seguridad_digital con unlock respondio ${conUnlock.status} (se esperaba 200 post-integracion)`);
+  }
+  let rw = (await conUnlock.json()) as Record<string, unknown>;
+  const worldSessionId = String(rw.session_id);
+  let costoW = Number(rw.costo_usd ?? 0);
+  log(`world session: ${worldSessionId}, tipo: ${rw.tipo}`);
+  const RESPUESTAS_SEGURIDAD_DIGITAL = [
+    "Vendo por Instagram y guardo los datos de mis clientes en el celular y en un Excel sin clave.",
+    "Uso la misma contrasena para el correo, Instagram y el banco, y no tengo verificacion en dos pasos.",
+    "No tengo copias de seguridad; si pierdo el celular pierdo los pedidos y los contactos.",
+    "Me preocupa que me roben la cuenta de Instagram porque es mi canal principal de ventas.",
+    "Con eso me basta por ahora.",
+  ];
+  let turnosW = 0;
+  while (rw.tipo === "pregunta" && turnosW < MAX_TURNOS_SEGURIDAD) {
+    turnosW++;
+    const respuesta = RESPUESTAS_SEGURIDAD_DIGITAL[Math.min(turnosW - 1, RESPUESTAS_SEGURIDAD_DIGITAL.length - 1)];
+    log(`[seguridad_digital turno ${turnosW}] ${rw.pregunta}`);
+    rw = await postJson(cookie, `/api/session/${worldSessionId}/turn`, { respuesta });
+    costoW = Number(rw.costo_usd ?? costoW);
+  }
+  if (rw.tipo !== "listo_para_plan") {
+    throw new Error(`la sesion de seguridad_digital no llego a listo_para_plan (tipo: ${rw.tipo})`);
+  }
+  const resPlanW = await fetch(`${BASE_URL}/api/session/${worldSessionId}/plan`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  let mdW = "";
+  await consumirSSE(resPlanW, ({ evento, data }) => {
+    if (evento === "done") {
+      const d = data as { markdown: string; costo_usd: number };
+      mdW = d.markdown;
+      costoW = d.costo_usd;
+    }
+  });
+  if (!mdW) throw new Error("el plan de seguridad_digital salio vacio");
+  const { data: planW } = await supabaseAdmin
+    .from("plans")
+    .select("id, etiqueta, dominio")
+    .eq("session_id", worldSessionId)
+    .single();
+  if (planW?.dominio !== "seguridad_digital") {
+    throw new Error(`plans.dominio esperado 'seguridad_digital', llego '${planW?.dominio}'`);
+  }
+  const clW = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const resumenW = clW.resumen as Record<string, { total: number }>;
+  if (!resumenW.seguridad_digital || resumenW.seguridad_digital.total === 0) {
+    throw new Error(`el checklist de seguridad_digital no aparece agrupado por dominio: ${JSON.stringify(resumenW)}`);
+  }
+  log(`OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con ${resumenW.seguridad_digital.total} items).`);
+  return { costoUsd: costoW };
+}
+
+// ---------------------------------------------------------------------------
 // Fase 2h (Fase 3.6): el contrato que la UI de convergencia consume.
 // GET /api/idea/[id] debe traer lo que las pantallas nuevas pintan:
 // unlocks (fila real de project_unlocks), mundos con su plan (post ciclo
@@ -878,6 +981,7 @@ async function main() {
     costos.checklistSeguimiento = (await faseChecklistSeguimiento(cookie, macetas.projectId)).costoUsd;
     const mundos = await faseMundos(cookie, macetas.projectId);
     costos.mundos = mundos.costoUsd;
+    costos.mundosNuevos = (await faseMundosNuevos(cookie, macetas.projectId)).costoUsd;
     costos.contratoUI = (await faseContratoUI(cookie, macetas.projectId, mundos.cicloCompleto)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
@@ -904,11 +1008,12 @@ async function main() {
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
   log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
   log("  6. mundos HSEQ: muro 403 sin unlock, unlock idempotente con creditos, y 503/ciclo segun integracion (Fase 3.5): OK");
-  log("  7. contrato de la UI de convergencia: unlocks + historial + mundos + grupo vigente (Fase 3.6): OK");
-  log("  8. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
-  log("  9. guardian GIGO (numeros contaminados): OK");
+  log("  7. mundos nuevos v1.3.2: murallas 403 de exportacion/franquicias + ciclo completo de seguridad_digital (migracion 017): OK");
+  log("  8. contrato de la UI de convergencia: unlocks + historial + mundos + grupo vigente (Fase 3.6): OK");
+  log("  9. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
+  log("  10. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 10/10 verificaciones OK");
+  separador("VUELO COMPLETO: 11/11 verificaciones OK");
   escribirTranscripcion();
 }
 

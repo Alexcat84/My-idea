@@ -1,0 +1,26 @@
+{
+  "node_id": "auditoria_responsabilidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Auditoría y Responsabilidad (Audit and Accountability)",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, y con qué frecuencia se revisan.",
+  "pasos_accionables": [
+    "Preguntar al personal de TI o proveedor de seguridad qué información de auditoría se captura actualmente",
+    "Verificar que los registros contengan tipo de evento, momento, origen, resultado e identidad del individuo asociado",
+    "Definir políticas de retención de registros conforme a regulaciones del sector",
+    "Restringir el acceso a la gestión de funciones de auditoría solo a usuarios privilegiados autorizados",
+    "Establecer frecuencia de revisión de los registros de auditoría"
+  ],
+  "entregable_esperado": "Sistema de registro de auditoría configurado con política de retención, protección y revisión documentada",
+  "nodos_previos": [
+    "plan_seguridad_sistema_poam"
+  ],
+  "nodos_siguientes": [
+    "gestion_configuracion_least_functionality"
+  ],
+  "condiciones_activacion": [
+    "Cuando se implementan los requisitos de la familia Audit and Accountability de SP 800-171"
+  ],
+  "etiqueta_arbol": "Registra y Audita tu Actividad"
+}

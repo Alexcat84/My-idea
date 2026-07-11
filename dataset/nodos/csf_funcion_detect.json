@@ -1,0 +1,27 @@
+{
+  "node_id": "csf_funcion_detect",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Función Detect del NIST CSF 2.0",
+  "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+  "resumen_teorico": "Detect proporciona los resultados necesarios para encontrar y analizar posibles ataques y compromisos de ciberseguridad, mediante monitoreo de comportamiento anómalo en sistemas, software antivirus/antimalware, y vigilancia del entorno físico.",
+  "pasos_accionables": [
+    "Instalar y mantener software antivirus y antimalware en todos los dispositivos del negocio",
+    "Monitorear tecnologías informáticas y servicios externos para detectar desviaciones del comportamiento típico",
+    "Evaluar el entorno físico en busca de señales de manipulación o actividad sospechosa",
+    "Contratar un proveedor de servicios de monitoreo si no hay recursos internos para hacerlo",
+    "Capacitar al personal para reconocer indicadores comunes de incidentes (pérdida de acceso, red lenta, alertas de antivirus, intentos fallidos de inicio de sesión)"
+  ],
+  "entregable_esperado": "Sistema de monitoreo activo (interno o mediante MSSP) con antivirus instalado en todos los dispositivos y lista de indicadores de incidentes documentada",
+  "nodos_previos": [
+    "csf_funcion_protect"
+  ],
+  "nodos_siguientes": [
+    "funcion_respond_plan_incidentes"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya existen salvaguardas básicas de protección implementadas",
+    "Si el negocio no tiene forma de detectar actividad sospechosa en su red"
+  ],
+  "etiqueta_arbol": "Detecta Ataques a Tiempo"
+}

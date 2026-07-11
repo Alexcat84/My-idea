@@ -133,5 +133,31 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%health_safety%'
     )
 
+  UNION ALL
+  -- 017 · Fase v1.3.2 tres mundos nuevos: los 4 CHECK de dominio amplían a 6 packs.
+  -- ANTES de aplicar la 017, esta fila debe decir MISSING pero los 4 conname
+  -- deben EXISTIR (verificación de nombres del patch); DESPUÉS, ✓ OK.
+  SELECT '017', 'CHECKs de dominio con 6 packs (seguridad_digital/exportacion/franquicias)',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_unlocks_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%seguridad_digital%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'sessions_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%exportacion%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'plans_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%franquicias%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'pack_clicks_pack_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%seguridad_digital%'
+    )
+
 ) checks
 ORDER BY num;

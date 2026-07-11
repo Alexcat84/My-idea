@@ -1,0 +1,30 @@
+{
+  "node_id": "letra_de_cambio_bill_of_exchange",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Letra de Cambio y Carta de Transmisión de Documentos (Draft Transmittal Letter)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "La letra de cambio (draft o bill of exchange) es el documento financiero mediante el cual el exportador (drawer) ordena al comprador o a su banco (drawee) pagar una suma determinada, ya sea a la vista (sight draft) o a plazo (time draft). La carta de transmisión de documentos acompaña la letra y especifica instrucciones precisas al banco: monto, moneda, tenor del pago, beneficiario, documentos adjuntos, condiciones de entrega (contra pago o contra aceptación), responsabilidad de cargos bancarios, procedimiento de protesto en caso de no pago/no aceptación, y datos de contacto para consultas. Es una herramienta clave en el proceso de cobro documentario (documentary collection).",
+  "pasos_accionables": [
+    "Completar el monto y moneda de la letra de cambio según lo acordado con el comprador.",
+    "Especificar el tenor del pago (a la vista, a 30/45/60 días) y el beneficiario a quien se pagará.",
+    "Detallar en la carta de transmisión el listado exacto de documentos adjuntos (factura, conocimiento de embarque, lista de empaque, certificados).",
+    "Indicar las instrucciones de entrega de documentos: contra pago (sight draft) o contra aceptación (time draft).",
+    "Definir quién asume los cargos bancarios y si se debe protestar el documento en caso de no pago o no aceptación.",
+    "Enviar la letra y documentos al banco corresponsal o banco del comprador según las instrucciones del comprador."
+  ],
+  "entregable_esperado": "Letra de cambio y carta de transmisión completas y firmadas, listas para ser enviadas al banco negociador junto con la documentación de embarque requerida.",
+  "nodos_previos": [
+    "carta_de_credito_letter_of_credit",
+    "seleccion_de_metodo_de_pago"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_cambiario"
+  ],
+  "condiciones_activacion": [
+    "Cuando el pago se gestiona mediante cobro documentario (documentary collection) en lugar de carta de crédito.",
+    "Cuando el exportador necesita instruir formalmente al banco sobre las condiciones de entrega de documentos y cobro.",
+    "Si existe riesgo de no pago y se requiere la opción de protesto formal."
+  ],
+  "etiqueta_arbol": "Ordena el Pago con Letra"
+}

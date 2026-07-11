@@ -1,0 +1,27 @@
+{
+  "node_id": "getting_started_supply_chain_risk_management",
+  "fase_proyecto": "planificacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Gestión de Riesgo de la Cadena de Suministro (SCRM)",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
+  "pasos_accionables": [
+    "Identificar proveedores críticos con acceso a sistemas que procesan CUI.",
+    "Definir la frecuencia de revisión y actualización del plan SCRM.",
+    "Identificar riesgos en diseño, manufactura, adquisición, entrega e integración de componentes.",
+    "Establecer políticas para evaluar proveedores antes de la compra o contratación de servicios.",
+    "Definir acciones de respuesta ante incidentes de la cadena de suministro y proveedores alternativos.",
+    "Establecer estrategia de monitoreo de desempeño frente al plan SCRM."
+  ],
+  "entregable_esperado": "Plan de gestión de riesgo de cadena de suministro documentado con lista de proveedores críticos y estrategias de respuesta.",
+  "nodos_previos": [
+    "getting_started_system_services_acquisition",
+    "supply_chain_management_systems",
+    "gestion_riesgo_cadena_suministro"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la empresa depende de proveedores externos para componentes o servicios críticos relacionados con CUI."
+  ],
+  "etiqueta_arbol": "Gestiona el Riesgo de Proveedores"
+}

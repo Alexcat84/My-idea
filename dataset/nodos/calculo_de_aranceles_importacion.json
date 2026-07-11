@@ -1,0 +1,28 @@
+{
+  "node_id": "calculo_de_aranceles_importacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Cálculo de Aranceles y Tarifas de Importación",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de export.gov para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "pasos_accionables": [
+    "Identificar el código HS (Sistema Armonizado) de 6 dígitos del producto.",
+    "Consultar la base de datos de aranceles en export.gov para el país de destino específico.",
+    "Calcular el impacto de aranceles, tarifas portuarias e impuestos sobre el precio final al consumidor.",
+    "Incorporar estos costos en la estrategia de fijación de precios de exportación."
+  ],
+  "entregable_esperado": "Tabla de costos arancelarios y tributarios por país de destino, integrada en el cálculo del precio de exportación.",
+  "nodos_previos": [
+    "gestion_fluctuaciones_cambiarias_clientes"
+  ],
+  "nodos_siguientes": [
+    "fijacion_precio_exportacion",
+    "elaboracion_pro_forma_invoice",
+    "reglas_de_origen_fta_2"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario necesita determinar el costo final de su producto en un mercado extranjero específico.",
+    "Si el usuario está definiendo su estrategia de precios de exportación."
+  ],
+  "etiqueta_arbol": "Calcula Aranceles de Importación"
+}

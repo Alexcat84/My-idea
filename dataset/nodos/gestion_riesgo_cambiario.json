@@ -1,0 +1,43 @@
+{
+  "node_id": "gestion_riesgo_cambiario",
+  "fase_proyecto": "planificacion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Gestión del Riesgo de Tipo de Cambio (Foreign Exchange Risk)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "El riesgo cambiario surge porque comprador y vendedor rara vez usan la misma moneda, y el valor relativo de las divisas puede cambiar entre el acuerdo y el pago. Cotizar y exigir pago en dólares estadounidenses transfiere este riesgo al comprador, pero puede reducir competitividad. Alternativamente, vender en moneda extranjera y cubrir el riesgo mediante contratos forward (compra/venta de divisa a tasa prefijada con fecha futura) permite ser competitivo mientras se gestiona el riesgo.",
+  "pasos_accionables": [
+    "Decidir si se cotizará y cobrará en USD o en moneda extranjera",
+    "Si se opta por moneda extranjera, consultar con un banquero internacional antes de negociar el contrato",
+    "Evaluar el uso de un forward contract para fijar el tipo de cambio a futuro",
+    "Verificar problemas de convertibilidad de la moneda del comprador"
+  ],
+  "entregable_esperado": "Estrategia de cobertura cambiaria definida (cotización en USD o contrato forward) documentada en el contrato de venta",
+  "nodos_previos": [
+    "letters_of_credit",
+    "open_account",
+    "documentary_collections",
+    "cash_in_advance",
+    "consignment",
+    "metodos_de_pago_internacional",
+    "letra_de_cambio_bill_of_exchange"
+  ],
+  "nodos_siguientes": [
+    "prevencion_problemas_de_pago",
+    "resolucion_problemas_de_pago"
+  ],
+  "condiciones_activacion": [
+    "Cuando el comprador solicita pagar en su moneda local",
+    "Cuando el exportador quiere ser competitivo ofreciendo pagos en moneda extranjera sin asumir riesgo excesivo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "gestion_riesgo_cambiario_2",
+      "titulo": "Gestión del Riesgo de Tipo de Cambio",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "ids_alias": [
+    "gestion_riesgo_cambiario_2"
+  ],
+  "etiqueta_arbol": "Gestiona el Riesgo Cambiario"
+}

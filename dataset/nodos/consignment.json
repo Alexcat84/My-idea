@@ -1,0 +1,27 @@
+{
+  "node_id": "consignment",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Venta en Consignación (Consignment)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Es una variante de cuenta abierta en la que el exportador retiene la titularidad de los bienes hasta que el distribuidor extranjero los vende al cliente final, momento en el cual se genera el pago. Es útil para productos como maquinaria pesada que requieren inventario de exhibición. Es de alto riesgo para el exportador, por lo que requiere asociarse con distribuidores confiables y contar con seguro adecuado para la mercancía en tránsito o en posesión del distribuidor.",
+  "pasos_accionables": [
+    "Seleccionar un distribuidor extranjero reputado y confiable o un proveedor logístico tercero",
+    "Establecer contractualmente el periodo de tiempo para la venta y condiciones de devolución de inventario no vendido",
+    "Contratar seguro para la mercancía en consignación durante el tránsito y almacenamiento",
+    "Definir claramente los términos de pago tras la venta al cliente final"
+  ],
+  "entregable_esperado": "Contrato de consignación firmado con distribuidor, incluyendo cobertura de seguro para la mercancía",
+  "nodos_previos": [
+    "seleccion_de_metodo_de_pago",
+    "open_account"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_cambiario"
+  ],
+  "condiciones_activacion": [
+    "Cuando se venden bienes que requieren inventario de exhibición como maquinaria o equipo pesado",
+    "Cuando el exportador busca mejorar competitividad mediante disponibilidad y entrega rápida"
+  ],
+  "etiqueta_arbol": "Vende en Consignación"
+}

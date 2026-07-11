@@ -1,0 +1,41 @@
+{
+  "node_id": "reglas_de_origen_fta_2",
+  "fase_proyecto": "planificacion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Reglas de Origen (Rules of Origin - ROOs)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Las Reglas de Origen determinan si un producto exportado califica para tratamiento arancelario preferencial bajo un Tratado de Libre Comercio (FTA). Existen ROOs no preferenciales (genéricas, para países OMC bajo trato de Nación Más Favorecida) y preferenciales (específicas de cada FTA). Un bien califica si es 'wholly obtained' (totalmente originario) en el territorio de una parte del FTA, o si contiene insumos extranjeros pero cumple con las reglas específicas de cambio arancelario o contenido de valor regional establecidas en el acuerdo. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "pasos_accionables": [
+    "Identificar el número de clasificación HS del producto usando el código Schedule B (uscensus.prod.3ceonline.com)",
+    "Determinar si existe ventaja arancelaria comparando la tasa MFN vs la tasa preferencial del FTA (export.customsinfo.com)",
+    "Verificar si el producto contiene insumos no originarios del FTA",
+    "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (export.gov/fta)",
+    "Determinar si el contenido extranjero cumple con la regla de cambio arancelario (Tariff Shift) o de contenido de valor regional (RVC)"
+  ],
+  "entregable_esperado": "Documento con la clasificación HS del producto y determinación preliminar de si califica para beneficios arancelarios bajo el FTA aplicable",
+  "nodos_previos": [
+    "evaluacion_mercados_objetivo",
+    "calculo_de_aranceles_importacion"
+  ],
+  "nodos_siguientes": [
+    "calculo_contenido_valor_regional",
+    "certificacion_origen_producto",
+    "regla_de_minimis",
+    "reglas_origen_sectoriales"
+  ],
+  "condiciones_activacion": [
+    "Si el usuario exporta a un país con el cual EE.UU. tiene un Tratado de Libre Comercio vigente",
+    "Si el producto contiene insumos o componentes de múltiples países"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "reglas_de_origen_fta",
+      "titulo": "Reglas de Origen (Rules of Origin) para Beneficios de Tratados de Libre Comercio",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "ids_alias": [
+    "reglas_de_origen_fta"
+  ],
+  "etiqueta_arbol": "Verifica las Reglas de Origen"
+}

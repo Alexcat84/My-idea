@@ -1,0 +1,28 @@
+{
+  "node_id": "limites_autorizacion_sistema",
+  "fase_proyecto": "planificacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Límites de Autorización del Sistema (Authorization Boundaries)",
+  "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "resumen_teorico": "Un sistema es la combinación de elementos interactuantes (personas, procesos, tecnologías, instalaciones) organizados para lograr un propósito. Establecer un límite de autorización significa trazar una línea imaginaria alrededor del sistema para poder categorizar sus riesgos e identificar los controles apropiados. Esto también aplica a contratos con proveedores, que deben documentar los límites de autorización y responsabilidad.",
+  "pasos_accionables": [
+    "Identificar los sistemas que componen la organización (ej. dispositivo médico, proceso de manejo de información confidencial).",
+    "Trazar el límite o alcance de cada sistema a proteger.",
+    "Documentar los límites de autorización en contratos con proveedores externos.",
+    "Usar el límite definido como base para categorizar riesgos y seleccionar controles."
+  ],
+  "entregable_esperado": "Un diagrama o documento que defina claramente el alcance (boundary) de cada sistema crítico de la organización.",
+  "nodos_previos": [
+    "estrategia_gestion_riesgo_tolerancia",
+    "rmf_paso_preparar",
+    "diseno_conceptual_sistema"
+  ],
+  "nodos_siguientes": [
+    "rmf_paso_categorizar"
+  ],
+  "condiciones_activacion": [
+    "Cuando no está claro qué partes de la infraestructura conforman un 'sistema' a proteger.",
+    "Al establecer contratos con proveedores externos que gestionan parte de la infraestructura."
+  ],
+  "etiqueta_arbol": "Define los Límites de tu Sistema"
+}

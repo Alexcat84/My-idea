@@ -1,0 +1,41 @@
+{
+  "node_id": "seguro_de_credito_a_la_exportacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Seguro de Crédito a la Exportación (Export Credit Insurance)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "El seguro de crédito a la exportación protege al exportador contra el riesgo de impago por parte del comprador extranjero, cubriendo tanto riesgos comerciales (quiebra, incumplimiento) como políticos (inconvertibilidad de moneda, guerra). El Ex-Im Bank de EE.UU. ofrece pólizas que cubren entre 90-100% del riesgo, mejorando el flujo de caja del exportador y permitiéndole ofrecer términos de crédito más atractivos a compradores internacionales. Existen pólizas de comprador único (Single-Buyer) y de múltiples compradores (Multi-Buyer), además de productos para instituciones financieras.",
+  "pasos_accionables": [
+    "Evaluar el riesgo de impago de los compradores internacionales antes de extender crédito.",
+    "Contactar a Ex-Im Bank o SBA para explorar opciones de seguro de crédito a la exportación.",
+    "Elegir entre póliza Single-Buyer (para un comprador específico) o Multi-Buyer (para múltiples compradores con términos de cuenta abierta).",
+    "Verificar elegibilidad para descuentos si se cuenta con préstamo de capital de trabajo de Ex-Im Bank o SBA.",
+    "Aplicar al producto Express Insurance para decisiones rápidas de crédito (hasta $300,000 en 5 días hábiles)."
+  ],
+  "entregable_esperado": "Póliza de seguro de crédito a la exportación contratada, con documentación de cobertura para cuentas por cobrar extranjeras.",
+  "nodos_previos": [
+    "seguro_de_carga_transporte",
+    "garantia_capital_trabajo",
+    "prevencion_problemas_de_pago",
+    "financiamiento_exim_bank_3"
+  ],
+  "nodos_siguientes": [
+    "instituciones_financieras_bancos"
+  ],
+  "condiciones_activacion": [
+    "Cuando el exportador extiende términos de crédito a compradores internacionales y busca reducir riesgo de impago.",
+    "Si el usuario necesita mejorar su flujo de caja mediante el aseguramiento de cuentas por cobrar extranjeras.",
+    "Cuando el prestamista del comprador exige seguro de crédito para otorgar financiamiento."
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seguro_credito_exportacion_eximbank",
+      "titulo": "Seguro de Crédito a la Exportación (Export Credit Insurance)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "ids_alias": [
+    "seguro_credito_exportacion_eximbank"
+  ],
+  "etiqueta_arbol": "Asegura tu Crédito de Exportación"
+}

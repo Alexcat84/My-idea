@@ -193,5 +193,182 @@
         "Si existe riesgo reputacional por prácticas de proveedores"
       ]
     }
+  ],
+  "seguridad_digital": [
+    {
+      "id": "getting_started_planning",
+      "titulo": "Plan de Seguridad del Sistema (System Security Plan)",
+      "fase": "planificacion",
+      "condiciones": [
+        "Cuando la organización necesita documentar formalmente sus controles de seguridad para cumplimiento de SP 800-171."
+      ]
+    },
+    {
+      "id": "control_minimizacion_datos",
+      "titulo": "Control: Minimización y Gestión Técnica de Datos",
+      "fase": "planificacion",
+      "condiciones": [
+        "Cuando se detecta recolección excesiva de datos",
+        "Si se requiere mayor flexibilidad ante cambios regulatorios"
+      ]
+    },
+    {
+      "id": "funcion_respond_plan_incidentes",
+      "titulo": "Función Responder: Plan de Respuesta ante Incidentes",
+      "fase": "ejecucion",
+      "condiciones": [
+        "Cuando ocurre o se sospecha un incidente de seguridad",
+        "Antes de que ocurra un ataque, como preparación preventiva"
+      ]
+    },
+    {
+      "id": "fundamentos_gestion_riesgo",
+      "titulo": "Fundamentos de la Gestión de Riesgo (Frame, Assess, Respond, Monitor)",
+      "fase": "ideacion",
+      "condiciones": [
+        "Cuando la organización no tiene un enfoque estructurado para pensar en riesgo de seguridad y privacidad.",
+        "Al iniciar cualquier iniciativa de gestión de riesgo de información."
+      ]
+    },
+    {
+      "id": "identificacion_autenticacion_mfa",
+      "titulo": "Identificación, Autenticación y Autenticación Multifactor (MFA)",
+      "fase": "ejecucion",
+      "condiciones": [
+        "Cuando se implementan los requisitos de la familia Identification and Authentication de SP 800-171",
+        "Si la organización aún depende solo de contraseñas para el acceso"
+      ]
+    },
+    {
+      "id": "mantenimiento_sistema_cui",
+      "titulo": "Mantenimiento de Sistemas que Procesan CUI",
+      "fase": "ejecucion",
+      "condiciones": [
+        "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171"
+      ]
+    }
+  ],
+  "exportacion": [
+    {
+      "id": "evaluacion_mercados_objetivo",
+      "titulo": "Evaluación de Mercados Objetivo",
+      "fase": "validacion",
+      "condiciones": [
+        "Cuando ya existe una lista corta de mercados y se requiere decidir cuál priorizar"
+      ]
+    },
+    {
+      "id": "documentacion_exportacion_basica",
+      "titulo": "Documentación Básica de Exportación (Pro Forma Invoice, Commercial Invoice, Packing List, SED)",
+      "fase": "ejecucion",
+      "condiciones": [
+        "Antes de realizar cualquier embarque internacional formal",
+        "Cuando se ha cerrado una venta de exportación y se debe preparar el envío"
+      ]
+    },
+    {
+      "id": "elementos_plan_exportacion_ejemplo",
+      "titulo": "Elementos Prácticos de un Plan de Exportación (Ejemplo Aplicado)",
+      "fase": "planificacion",
+      "condiciones": [
+        "Cuando la empresa necesita un ejemplo concreto de cómo llenar cada sección del plan de exportación",
+        "Cuando se trata de una PYME con recursos limitados que necesita un modelo simplificado"
+      ]
+    },
+    {
+      "id": "seleccion_representante_extranjero",
+      "titulo": "Checklist para Seleccionar un Representante o Distribuidor Extranjero",
+      "fase": "validacion",
+      "condiciones": [
+        "Si el usuario está evaluando múltiples candidatos para representar su producto en el extranjero",
+        "Si el usuario no tiene un método estructurado de selección de socios comerciales"
+      ]
+    },
+    {
+      "id": "proteccion_propiedad_intelectual_internacional",
+      "titulo": "Protección de Propiedad Intelectual en Mercados Internacionales",
+      "fase": "planificacion",
+      "condiciones": [
+        "Si el usuario planea licenciar tecnología o formar joint ventures en el extranjero",
+        "Si el usuario tiene productos con alto valor de marca o innovación tecnológica"
+      ]
+    },
+    {
+      "id": "seleccion_de_metodo_de_pago",
+      "titulo": "Selección del Método de Pago en Exportación",
+      "fase": "planificacion",
+      "condiciones": [
+        "Cuando el exportador debe decidir cómo cobrará una venta internacional",
+        "Cuando se negocia un nuevo contrato con un comprador extranjero desconocido o con historial limitado"
+      ]
+    },
+    {
+      "id": "programas_ex_im_bank",
+      "titulo": "Programas de Financiamiento del Ex-Im Bank",
+      "fase": "planificacion",
+      "condiciones": [
+        "Si el usuario necesita reducir riesgo comercial o político en una venta de exportación",
+        "Si el usuario requiere capital de trabajo para producir bienes de exportación"
+      ]
+    }
+  ],
+  "franquicias": [
+    {
+      "id": "seleccion_estructura_franquicia",
+      "titulo": "Selección de la Estructura de Oferta de Franquicia",
+      "fase": "planificacion",
+      "condiciones": [
+        "Cuando el usuario está diseñando su plan de franquicia inicial y no ha definido la estructura de venta"
+      ]
+    },
+    {
+      "id": "propuesta_valor_franquicia",
+      "titulo": "Desarrollar la Propuesta de Valor Integral del Sistema de Franquicia",
+      "fase": "planificacion",
+      "condiciones": [
+        "Al finalizar el desarrollo del sistema de franquicia y antes de lanzar la campaña de reclutamiento de franquiciados"
+      ]
+    },
+    {
+      "id": "leverage_una_sola_franquicia",
+      "titulo": "El 'Número Mágico': Rentabilidad desde la Primera Franquicia",
+      "fase": "validacion",
+      "condiciones": [
+        "Si el usuario duda de si franquiciar es rentable con pocas unidades vendidas",
+        "Si se busca minimizar riesgo financiero al iniciar un programa de franquicias"
+      ]
+    },
+    {
+      "id": "determinacion_cuota_inicial",
+      "titulo": "Determinación de la Cuota Inicial de Franquicia",
+      "fase": "planificacion",
+      "condiciones": [
+        "Cuando el usuario debe fijar el precio de entrada a su sistema de franquicia"
+      ]
+    },
+    {
+      "id": "proceso_venta_franquicias",
+      "titulo": "Proceso de Venta de Franquicias",
+      "fase": "ejecucion",
+      "condiciones": [
+        "Cuando se cuenta ya con un flujo constante de leads y se necesita cerrarlos eficazmente"
+      ]
+    },
+    {
+      "id": "programa_entrenamiento_franquiciados",
+      "titulo": "Diseño del Programa de Entrenamiento para Franquiciados",
+      "fase": "planificacion",
+      "condiciones": [
+        "Cuando el manual de operaciones está completo y se prepara la incorporación de nuevos franquiciados"
+      ]
+    },
+    {
+      "id": "soporte_continuo_franquicia",
+      "titulo": "Soporte Continuo al Franquiciado (Ongoing Support)",
+      "fase": "ejecucion",
+      "condiciones": [
+        "Cuando ya existen franquiciados operando y requieren acompañamiento post-apertura"
+      ]
+    }
   ]
 }

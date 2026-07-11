@@ -44,6 +44,9 @@ const NOMBRE_MUNDO: Record<string, string> = {
   quality: "Calidad y Confianza",
   health_safety: "Seguridad y Personas",
   environmental: "Ambiente y Futuro",
+  seguridad_digital: "Seguridad Digital",
+  exportacion: "Vender al Mundo",
+  franquicias: "Multiplica tu Negocio",
 };
 
 export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Cinta[]> {

@@ -1,0 +1,28 @@
+{
+  "node_id": "determinar_alcance_cui",
+  "fase_proyecto": "planificacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Determinación del Alcance y Aplicabilidad de SP 800-171",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Los requisitos de seguridad de SP 800-171 solo aplican a los componentes de sistemas no federales que procesan, almacenan o transmiten CUI, o que proveen protección a dichos componentes. Un alcance adecuado es clave para decisiones de inversión en protección y gestión de riesgos. Se puede limitar el alcance aislando componentes en un dominio de seguridad separado mediante subredes, firewalls u otros dispositivos de protección perimetral, usando separación física, lógica o ambas.",
+  "pasos_accionables": [
+    "Inventariar todos los sistemas y componentes de la organización",
+    "Identificar cuáles sistemas procesan, almacenan o transmiten CUI",
+    "Evaluar la posibilidad de aislar estos sistemas en un dominio de seguridad separado (subredes, firewalls)",
+    "Documentar la decisión de alcance y su justificación"
+  ],
+  "entregable_esperado": "Documento de definición de alcance que especifica qué sistemas están dentro y fuera del perímetro de cumplimiento de CUI",
+  "nodos_previos": [
+    "que_es_cui",
+    "diagrama_flujo_cui",
+    "estructura_sp800171"
+  ],
+  "nodos_siguientes": [
+    "getting_started_planning",
+    "plan_seguridad_sistema_poam"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas relevantes que manejan CUI"
+  ],
+  "etiqueta_arbol": "Define el Alcance de Datos"
+}

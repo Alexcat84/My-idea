@@ -1,0 +1,41 @@
+{
+  "node_id": "carta_de_credito_letter_of_credit",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Carta de Crédito (Letter of Credit)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "La carta de crédito (L/C) es un instrumento de pago emitido por el banco del comprador que garantiza al exportador el pago del 100% del valor de la factura, siempre que se cumplan estrictamente los términos y condiciones especificados (documentos requeridos, fecha límite de embarque, prohibición de embarques parciales o transbordos, plazo de presentación de documentos, etc.). Es confirmada por un banco corresponsal en el país del exportador, lo que añade una capa de seguridad adicional al pago. El exportador debe examinar cuidadosamente el instrumento y, si no puede cumplir alguna condición, comunicarse con el comprador para solicitar una enmienda antes del embarque. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "pasos_accionables": [
+    "Revisar minuciosamente todos los términos y condiciones de la L/C recibida antes de aceptar la orden.",
+    "Verificar la lista de documentos requeridos (factura comercial, conocimiento de embarque, lista de empaque, certificados) y su cantidad de copias.",
+    "Confirmar la fecha límite de embarque y el plazo de presentación de documentos (usualmente 21 días desde la fecha del B/L).",
+    "Si no se puede cumplir algún término, contactar al comprador para gestionar una enmienda antes de embarcar.",
+    "Coordinar con el banco confirmador (en el país del exportador) para la negociación de los documentos y el cobro del pago."
+  ],
+  "entregable_esperado": "Carta de crédito revisada y aceptada, con documentos de embarque preparados conforme a sus términos, lista para presentación bancaria dentro del plazo estipulado.",
+  "nodos_previos": [
+    "seleccion_de_metodo_de_pago",
+    "metodos_de_pago_internacional"
+  ],
+  "nodos_siguientes": [
+    "letra_de_cambio_bill_of_exchange",
+    "documentacion_exportacion",
+    "elaboracion_pro_forma_invoice"
+  ],
+  "condiciones_activacion": [
+    "Cuando el comprador extranjero paga mediante carta de crédito.",
+    "Cuando el exportador necesita asegurar el cobro de una venta internacional de alto riesgo.",
+    "Si el exportador requiere mitigar riesgo de impago en mercados nuevos o desconocidos."
+  ],
+  "merged_originals": [
+    {
+      "node_id": "carta_de_credito",
+      "titulo": "Carta de Crédito (Letter of Credit)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "ids_alias": [
+    "carta_de_credito"
+  ],
+  "etiqueta_arbol": "Usa Carta de Crédito"
+}

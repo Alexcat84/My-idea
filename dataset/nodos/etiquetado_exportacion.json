@@ -1,0 +1,27 @@
+{
+  "node_id": "etiquetado_exportacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Etiquetado y Marcado de Exportación (Labeling)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, y ayudan a los receptores a identificar el embarque, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "pasos_accionables": [
+    "Confirmar marcas de exportación requeridas por el comprador",
+    "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos",
+    "Agregar símbolos pictóricos internacionales de manejo",
+    "Incluir advertencias en inglés y en idioma del país destino",
+    "Etiquetar materiales peligrosos según símbolos de IATA/OMI si aplica"
+  ],
+  "entregable_esperado": "Plantilla de etiquetado de exportación conforme a normativa internacional",
+  "nodos_previos": [
+    "embalaje_exportacion"
+  ],
+  "nodos_siguientes": [
+    "documentacion_exportacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se prepara un embarque para exportación",
+    "Si el producto es considerado material peligroso o requiere manejo especial"
+  ],
+  "etiqueta_arbol": "Marca Correctamente tus Envíos"
+}

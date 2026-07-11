@@ -1,0 +1,26 @@
+{
+  "node_id": "documentary_collections",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Cobranzas Documentarias (Documentary Collections)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Es una transacción en la que el exportador encomienda a su banco el cobro del pago, enviando los documentos de título al banco del comprador a cambio de pago (document against payment/sight draft) o aceptación de pago futuro (document against acceptance/time draft). A diferencia de la carta de crédito, los bancos actúan como facilitadores sin garantizar el pago, por lo que el recurso ante impago es limitado, pero el costo es menor.",
+  "pasos_accionables": [
+    "Decidir entre sight draft (pago contra documentos) o time draft (pago a plazo tras aceptación)",
+    "Enviar los documentos de título (bill of lading) junto con el draft a través del banco remitente",
+    "Verificar que el comprador acepte o pague según las instrucciones de la carta de transmisión",
+    "Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft"
+  ],
+  "entregable_esperado": "Draft (sight o time) y documentos de embarque enviados a través de bancos con instrucciones claras de cobro",
+  "nodos_previos": [
+    "seleccion_de_metodo_de_pago"
+  ],
+  "nodos_siguientes": [
+    "gestion_riesgo_cambiario"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe cierta confianza en el comprador pero se desea mantener control sobre el título de la mercancía",
+    "Cuando se busca un método más económico que la carta de crédito"
+  ],
+  "etiqueta_arbol": "Cobra tu Venta con el Banco"
+}

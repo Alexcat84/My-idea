@@ -1,0 +1,26 @@
+{
+  "node_id": "seguro_exportacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Seguro de Exportación (Carga y Crédito)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida o robo durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
+  "pasos_accionables": [
+    "Determinar según términos de venta quién es responsable del seguro de carga",
+    "Contratar póliza propia o asegurar bajo la póliza del freight forwarder",
+    "No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad",
+    "Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago",
+    "Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito"
+  ],
+  "entregable_esperado": "Pólizas de seguro de carga y/o crédito contratadas antes del embarque",
+  "nodos_previos": [
+    "seleccion_metodo_transporte_internacional",
+    "documentacion_exportacion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Antes de cualquier embarque de mercancía de alto valor",
+    "Si existe riesgo de impago por parte del comprador extranjero"
+  ],
+  "etiqueta_arbol": "Contrata Seguros de Exportación"
+}

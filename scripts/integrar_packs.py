@@ -5,9 +5,13 @@ convierte los packs saneados (P1-HSEQ, tag hseq-sanitized-v1) en parte
 del universo recorrible del motor.
 
 PREREQUISITO HUMANO BLOQUEANTE: packs/<dominio>/metadata/bridges_aprobados.json
-para LOS TRES dominios (el usuario aprueba 10-15 puentes por dominio desde
+para CADA pack pendiente (el usuario aprueba 10-15 puentes por dominio desde
 bridges_propuestos.json; regla: ningún nodo core ancla más de 2-3 puentes
-por dominio). Sin los tres archivos, este script se niega a correr.
+por dominio). Sin esos archivos, este script se niega a correr.
+
+v1.3.2: los packs se descubren de packs/*/nodos (data-driven, nada hardcodeado);
+los ya integrados (HSEQ, fase 3.5) se detectan porque sus nodos viven en
+dataset/nodos/ y se saltan — congelados.
 
 Secuencia (plan de fase, puntos a-f):
   a. Compilar master_graph con core + packs + puentes aprobados
@@ -39,9 +43,31 @@ import sys
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent.parent
-PACKS = ["quality", "health_safety", "environmental"]
 DATASET_NODOS = BASE / "dataset" / "nodos"
 MASTER_GRAPH = BASE / "dataset" / "metadata" / "master_graph.json"
+
+
+def descubrir_packs():
+    """v1.3.2: los packs se descubren de packs/*/nodos (nada hardcodeado) y se
+    separan en ya-integrados (todos sus nodos viven en dataset/nodos, p.ej. los
+    HSEQ de la fase 3.5, congelados) y pendientes. Un estado parcial es un bug.
+    """
+    integrados, pendientes = [], []
+    for carpeta in sorted(p for p in (BASE / "packs").iterdir() if (p / "nodos").is_dir()):
+        nodos = sorted((carpeta / "nodos").glob("*.json"))
+        if not nodos:
+            continue
+        en_dataset = sum(1 for n in nodos if (DATASET_NODOS / n.name).exists())
+        if en_dataset == len(nodos):
+            integrados.append(carpeta.name)
+        elif en_dataset == 0:
+            pendientes.append(carpeta.name)
+        else:
+            fallar(
+                f"pack '{carpeta.name}' en estado PARCIAL: {en_dataset}/{len(nodos)} nodos "
+                "ya están en dataset/nodos/ — integración a medias, revisar antes de seguir"
+            )
+    return integrados, pendientes
 
 
 def fallar(msg):
@@ -60,11 +86,11 @@ def guardar_json(path, data):
         f.write("\n")
 
 
-def validar_prerequisitos():
-    """El muro humano: bridges_aprobados.json en los TRES dominios."""
+def validar_prerequisitos(packs):
+    """El muro humano: bridges_aprobados.json en TODOS los packs pendientes."""
     faltantes = []
     puentes_por_dominio = {}
-    for d in PACKS:
+    for d in packs:
         ruta = BASE / "packs" / d / "metadata" / "bridges_aprobados.json"
         if not ruta.exists():
             faltantes.append(str(ruta.relative_to(BASE)))
@@ -83,7 +109,7 @@ def validar_prerequisitos():
             + "\n  - ".join(faltantes)
             + "\nEl usuario debe aprobar 10-15 puentes por dominio desde bridges_propuestos.json "
             "(regla: ningún nodo core ancla más de 2-3 puentes por dominio) y guardar la selección "
-            "en bridges_aprobados.json. Este script NO corre sin los tres archivos."
+            "en bridges_aprobados.json. Este script NO corre sin el archivo de cada pack pendiente."
         )
     # Regla de concentración: ningún nodo core ancla más de 3 puentes por dominio.
     # Formato esperado (el de bridges_propuestos.json['candidatos']):
@@ -103,11 +129,11 @@ def validar_prerequisitos():
     return puentes_por_dominio
 
 
-def paso_a_integrar_nodos_y_puentes(puentes_por_dominio):
+def paso_a_integrar_nodos_y_puentes(packs, puentes_por_dominio):
     """Copia los nodos de packs al dataset y teje los puentes bidireccionales."""
     print("\n=== a. Integrando nodos de packs + puentes aprobados ===")
     copiados = 0
-    for d in PACKS:
+    for d in packs:
         origen = BASE / "packs" / d / "nodos"
         for archivo in sorted(origen.glob("*.json")):
             destino = DATASET_NODOS / archivo.name
@@ -145,6 +171,10 @@ def paso_a_integrar_nodos_y_puentes(puentes_por_dominio):
 
 def correr(cmd, descripcion):
     print(f"\n=== {descripcion} ===\n  $ {' '.join(cmd)}")
+    # Windows: pnpm es pnpm.cmd — subprocess sin shell no lo resuelve solo.
+    ejecutable = shutil.which(cmd[0])
+    if ejecutable:
+        cmd = [ejecutable] + cmd[1:]
     r = subprocess.run(cmd, cwd=BASE)
     if r.returncode != 0:
         fallar(f"'{descripcion}' terminó con código {r.returncode} — línea de ensamblaje DETENIDA (revisar antes de reintentar)")
@@ -157,15 +187,23 @@ def main():
     modo.add_argument("--ejecutar", action="store_true", help="corre la línea de ensamblaje completa")
     args = ap.parse_args()
 
-    puentes = validar_prerequisitos()
-    total_pack_nodes = sum(len(list((BASE / "packs" / d / "nodos").glob("*.json"))) for d in PACKS)
-    print(f"Prerequisitos OK: puentes aprobados en los 3 dominios; {total_pack_nodes} nodos de packs listos.")
+    integrados, pendientes = descubrir_packs()
+    if integrados:
+        print(f"Packs ya integrados (congelados, no se tocan): {', '.join(integrados)}")
+    if not pendientes:
+        print("No hay packs pendientes de integrar. Nada que hacer.")
+        return
+    print(f"Packs pendientes: {', '.join(pendientes)}")
+
+    puentes = validar_prerequisitos(pendientes)
+    total_pack_nodes = sum(len(list((BASE / "packs" / d / "nodos").glob("*.json"))) for d in pendientes)
+    print(f"Prerequisitos OK: puentes aprobados en {len(pendientes)} packs; {total_pack_nodes} nodos listos.")
 
     if args.dry_run:
         print("\n--dry-run: nada tocado. Para ejecutar: python scripts/integrar_packs.py --ejecutar")
         return
 
-    tocados_core = paso_a_integrar_nodos_y_puentes(puentes)
+    tocados_core = paso_a_integrar_nodos_y_puentes(pendientes, puentes)
 
     # e-parte-1. recompilar master_graph + Gate 0 (los nodos ya están en dataset/)
     correr([sys.executable, "scripts/run_phase1.py"], "e. run_phase1: recompilación + Gate 0 (debe quedar VERDE)")
@@ -177,7 +215,7 @@ def main():
     # c. caché de preguntas PARCIAL: nodos de packs + cores tocados por puentes.
     # La lista va en un archivo (--patch-file): 1500+ ids exceden el límite de
     # línea de comandos de Windows.
-    pack_ids = [p.stem for d in PACKS for p in (BASE / "packs" / d / "nodos").glob("*.json")]
+    pack_ids = [p.stem for d in pendientes for p in (BASE / "packs" / d / "nodos").glob("*.json")]
     a_parchear = pack_ids + sorted(tocados_core)
     print(f"\n  caché parcial: {len(pack_ids)} nodos de packs + {len(tocados_core)} cores con sucesores nuevos")
     patch_file = BASE / "engine" / "_patch_pendientes.txt"

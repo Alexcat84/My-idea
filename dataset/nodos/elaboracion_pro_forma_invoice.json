@@ -1,0 +1,34 @@
+{
+  "node_id": "elaboracion_pro_forma_invoice",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Elaboración de la Pro Forma Invoice",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "La pro forma invoice es una cotización preparada en formato de factura, siendo el método preferido en el negocio de exportación. Describe el producto, establece precio, tiempo de envío y términos de venta y pago. Sirve como modelo para que el comprador solicite licencias de importación, abra cartas de crédito o gestione fondos. Debe incluir detalles extensos que una cotización doméstica no requiere.",
+  "pasos_accionables": [
+    "Incluir nombres y direcciones de vendedor y comprador.",
+    "Detallar número de referencia y fecha de consulta del comprador.",
+    "Listar productos solicitados con descripción breve y precio en USD.",
+    "Especificar volumen cúbico, peso bruto/neto en unidades métricas.",
+    "Indicar descuentos comerciales, punto de entrega, términos de venta y pago.",
+    "Agregar costos de seguro y flete, periodo de validez de la cotización.",
+    "Incluir declaración de veracidad y país de origen de los bienes.",
+    "Marcar claramente el documento como 'Pro Forma Invoice'."
+  ],
+  "entregable_esperado": "Documento de pro forma invoice completo, listo para enviar al comprador extranjero o usar en trámites de importación/financiamiento.",
+  "nodos_previos": [
+    "fijacion_precio_exportacion",
+    "definicion_terminos_de_venta",
+    "calculo_de_aranceles_importacion",
+    "carta_de_credito_letter_of_credit"
+  ],
+  "nodos_siguientes": [
+    "documentacion_exportacion_basica",
+    "letters_of_credit"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario recibe una consulta o solicitud de cotización de un comprador internacional.",
+    "Si el comprador necesita el documento para solicitar licencia de importación o abrir carta de crédito."
+  ],
+  "etiqueta_arbol": "Redacta tu Cotización Formal"
+}

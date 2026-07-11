@@ -1,0 +1,33 @@
+{
+  "_nota": "Fase v1.3.2 — mapeo determinístico fase_proyecto → semilla de entrada para evaluacionBrecha (patch del usuario, verbatim). Cero LLM. Los packs HSEQ no están aquí a propósito: conservan el puntaje dinámico original de la Fase 3.5. Las claves 'construccion'/'operacion' del patch no existen en el canon de fases (ideacion/validacion/planificacion/ejecucion), así que cada pack lleva además 'planificacion' y 'ejecucion' como alias con el mismo valor — verificado contra la fase real de los nodos semilla: los de 'construccion' son fase planificacion y los de 'operacion' son fase ejecucion. 'crecimiento' se conserva del patch para el futuro (hoy ninguna fase del motor la emite). Si un mapeo chirría, se cambia editando este JSON, sin tocar código.",
+  "seguridad_digital": {
+    "ideacion": "fundamentos_gestion_riesgo",
+    "validacion": "control_minimizacion_datos",
+    "construccion": "getting_started_planning",
+    "planificacion": "getting_started_planning",
+    "operacion": "identificacion_autenticacion_mfa",
+    "ejecucion": "identificacion_autenticacion_mfa",
+    "crecimiento": "funcion_respond_plan_incidentes",
+    "_defecto": "getting_started_planning"
+  },
+  "exportacion": {
+    "ideacion": "evaluacion_mercados_objetivo",
+    "validacion": "evaluacion_mercados_objetivo",
+    "construccion": "elementos_plan_exportacion_ejemplo",
+    "planificacion": "elementos_plan_exportacion_ejemplo",
+    "operacion": "documentacion_exportacion_basica",
+    "ejecucion": "documentacion_exportacion_basica",
+    "crecimiento": "seleccion_representante_extranjero",
+    "_defecto": "evaluacion_mercados_objetivo"
+  },
+  "franquicias": {
+    "ideacion": "seleccion_estructura_franquicia",
+    "validacion": "leverage_una_sola_franquicia",
+    "construccion": "propuesta_valor_franquicia",
+    "planificacion": "propuesta_valor_franquicia",
+    "operacion": "proceso_venta_franquicias",
+    "ejecucion": "proceso_venta_franquicias",
+    "crecimiento": "programa_entrenamiento_franquiciados",
+    "_defecto": "seleccion_estructura_franquicia"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "seguro_de_carga_transporte",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Seguro de Carga (Cargo Insurance)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "El seguro de carga protege al exportador contra pérdidas, daños o retrasos de la mercancía durante el transporte internacional. Dado que las condiciones climáticas, el manejo brusco y otros riesgos son comunes en el transporte, es esencial asegurar el envío. La cobertura difiere sustancialmente de los seguros domésticos y suele fijarse en 110% del valor CIF o CIP. La responsabilidad de contratarlo depende de los términos de venta acordados (Incoterms).",
+  "pasos_accionables": [
+    "Determinar según los términos de venta (Incoterms) quién es responsable del seguro de carga.",
+    "Si el vendedor es responsable, contratar una póliza propia o asegurar la carga bajo la póliza del freight forwarder.",
+    "Si el comprador es responsable, no asumir que ha contratado cobertura adecuada; verificar documentación.",
+    "Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP)."
+  ],
+  "entregable_esperado": "Póliza de seguro de carga marítima o aérea contratada y certificado de seguro listo para incluir en la documentación de exportación.",
+  "nodos_previos": [
+    "terminos_de_venta_incoterms",
+    "seleccion_metodo_envio_internacional",
+    "definicion_terminos_de_venta"
+  ],
+  "nodos_siguientes": [
+    "seguro_de_credito_a_la_exportacion",
+    "documentacion_exportacion_basica"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario está preparando un envío internacional y necesita definir la cobertura de riesgos de transporte.",
+    "Si el término de venta acordado responsabiliza al exportador por el seguro."
+  ],
+  "etiqueta_arbol": "Asegura tu Carga en Tránsito"
+}

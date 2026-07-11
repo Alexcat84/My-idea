@@ -7,7 +7,14 @@
  * de tokens +1 c/u), sobre el asset horneado packs_entry_seeds.json
  * (id, titulo, fase, condiciones de cada semilla; los nodos completos
  * llegan al grafo con la línea de ensamblaje).
+ *
+ * Fase v1.3.2: los mundos nuevos (seguridad_digital, exportacion,
+ * franquicias) traen además un mapeo determinístico fase→semilla aprobado
+ * por el usuario (brecha_semillas.json). Si el pack está en ese mapa y la
+ * semilla mapeada sigue disponible, gana sin puntuar; si ya está cubierta
+ * (o el pack no está en el mapa, como los HSEQ), cae al puntaje dinámico.
  */
+import brechaJson from "../assets/brecha_semillas.json";
 import seedsJson from "../assets/packs_entry_seeds.json";
 import { tokensCosecha } from "./tokens";
 
@@ -39,6 +46,20 @@ export function evaluacionBrecha(
 ): ResultadoBrecha | null {
   const semillas = semillasDelPack(pack).filter((s) => !cubiertos.has(s.id));
   if (semillas.length === 0) return null;
+
+  // v1.3.2: mapeo aprobado fase→semilla (solo packs presentes en el JSON).
+  const mapa = (brechaJson as unknown as Record<string, Record<string, string>>)[pack];
+  if (mapa) {
+    const idMapa = mapa[faseActual] ?? mapa["_defecto"];
+    const elegida = idMapa ? semillas.find((s) => s.id === idMapa) : undefined;
+    if (elegida) {
+      return {
+        semillaId: elegida.id,
+        puntaje: 0,
+        razonamiento: `mapeo aprobado fase→semilla: '${elegida.titulo}' para fase ${faseActual} (brecha_semillas.json)`,
+      };
+    }
+  }
 
   const faseIdx = ORDEN_FASES[faseActual] ?? 0;
   const contexto = tokensCosecha(`${estadoVivo ?? ""} ${tipoOferta ?? ""}`);

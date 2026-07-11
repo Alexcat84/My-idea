@@ -1,0 +1,24 @@
+{
+  "node_id": "descuento_aceptaciones_bancarias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Descuento de Letras y Aceptaciones Bancarias",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibiendo un monto menor al valor nominal por intereses y comisiones) o utilizar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+  "pasos_accionables": [
+    "Evaluar la solvencia del comprador extranjero antes de descontar la letra",
+    "Negociar con el banco el descuento de letras a plazo",
+    "Considerar la aceptación bancaria para transacciones de gran denominación"
+  ],
+  "entregable_esperado": "Mecanismo de conversión de cuentas por cobrar a efectivo implementado",
+  "nodos_previos": [
+    "trabajo_con_bancos_comerciales"
+  ],
+  "nodos_siguientes": [
+    "programas_ex_im_bank"
+  ],
+  "condiciones_activacion": [
+    "Si el exportador necesita liquidez inmediata antes del vencimiento de una letra de crédito"
+  ],
+  "etiqueta_arbol": "Convierte tus Letras en Efectivo"
+}

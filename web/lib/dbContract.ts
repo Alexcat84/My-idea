@@ -30,10 +30,18 @@ export type ProjectNodeTipo = (typeof PROJECT_NODES_TIPO)[number];
 export const MODO_RUTA: readonly Exclude<ProjectNodeTipo, "cosechado">[] = ["conversado", "silencioso", "salto"];
 export type ModoRuta = (typeof MODO_RUTA)[number];
 
-/** pack_clicks.pack (Fase 3.2, migration 014): las claves de dominio de
- * los mundos HSEQ -- las mismas de packs/<clave>/ y del campo `dominio`
- * de sus nodos, y las que emite POST /api/packs/interes. */
-export const PACK_CLICKS_PACK = ["quality", "health_safety", "environmental"] as const;
+/** pack_clicks.pack (Fase 3.2, migration 014; ampliada en 017): las claves
+ * de dominio de los mundos -- las mismas de packs/<clave>/ y del campo
+ * `dominio` de sus nodos, y las que emite POST /api/packs/interes.
+ * Fase v1.3.2 (migration 017): + seguridad_digital, exportacion, franquicias. */
+export const PACK_CLICKS_PACK = [
+  "quality",
+  "health_safety",
+  "environmental",
+  "seguridad_digital",
+  "exportacion",
+  "franquicias",
+] as const;
 export type PackClave = (typeof PACK_CLICKS_PACK)[number];
 
 /** checklist_items.estado (Fase 3.3, migration 015): estados de un toque. */

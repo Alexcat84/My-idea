@@ -1,0 +1,29 @@
+{
+  "node_id": "protect_medidas_tecnicas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Protect: Medidas Técnicas de Protección de Datos",
+  "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+  "resumen_teorico": "La función Protect abarca las medidas técnicas concretas para salvaguardar los datos: control de acceso a redes y dispositivos, uso de software de seguridad, cifrado de datos sensibles en reposo y en tránsito, respaldos regulares, actualización automática de software de seguridad, y políticas formales para la disposición segura de datos y dispositivos obsoletos.",
+  "pasos_accionables": [
+    "Implementar controles de acceso para redes, computadoras y dispositivos",
+    "Instalar y mantener software de seguridad actualizado",
+    "Cifrar datos sensibles tanto en reposo como en tránsito",
+    "Establecer rutina de respaldos regulares de datos",
+    "Automatizar actualizaciones de seguridad cuando sea posible",
+    "Redactar políticas formales de disposición segura de datos y equipos"
+  ],
+  "entregable_esperado": "Conjunto de controles técnicos de protección de datos implementados y documentados (cifrado, backups, control de acceso, políticas de disposición)",
+  "nodos_previos": [
+    "control_minimizacion_datos"
+  ],
+  "nodos_siguientes": [
+    "communicate_transparencia",
+    "go_plan_de_accion"
+  ],
+  "condiciones_activacion": [
+    "Cuando se requiere implementar salvaguardas técnicas concretas",
+    "Si la organización maneja datos sensibles sin protecciones técnicas actuales"
+  ],
+  "etiqueta_arbol": "Protege tus Datos Técnicamente"
+}

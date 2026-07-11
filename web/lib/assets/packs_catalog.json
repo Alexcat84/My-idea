@@ -1,5 +1,5 @@
 {
-  "comentario": "Catálogo ESTÁTICO de los mundos HSEQ: ÚNICA fuente autorizada para hablar de mundos bloqueados (la fachada jamás lee nodos de packs/). 'clave' coincide con el campo dominio de los nodos, el CHECK de pack_clicks (014) y el de project_unlocks (016). Copy de los mockups aprobados (Paso 6): es copy de producción. Créditos canon 2026-07-10: activar 3, seguimiento 2 (precios.ts es el espejo).",
+  "comentario": "Catálogo ESTÁTICO de los mundos: ÚNICA fuente autorizada para hablar de mundos bloqueados (la fachada jamás lee nodos de packs/). 'clave' coincide con el campo dominio de los nodos, el CHECK de pack_clicks (014/017) y el de project_unlocks (016/017). Copy de los mockups aprobados (Paso 6) + bautizos v1.3.2 aprobados por el usuario: es copy de producción. Créditos canon 2026-07-10: activar 3, seguimiento 2 (precios.ts es el espejo).",
   "packs": [
     {
       "clave": "quality",
@@ -19,6 +19,27 @@
       "clave": "environmental",
       "nombre": "Ambiente y Futuro",
       "promesa": "Convierte lo sostenible en ventaja que se nota y se cobra.",
+      "creditos_activar": 3,
+      "creditos_seguimiento": 2
+    },
+    {
+      "clave": "seguridad_digital",
+      "nombre": "Seguridad Digital",
+      "promesa": "Blinda tus datos, tus cuentas y la confianza de tus clientes.",
+      "creditos_activar": 3,
+      "creditos_seguimiento": 2
+    },
+    {
+      "clave": "exportacion",
+      "nombre": "Vender al Mundo",
+      "promesa": "Lleva tu producto a clientes de otros países, con método.",
+      "creditos_activar": 3,
+      "creditos_seguimiento": 2
+    },
+    {
+      "clave": "franquicias",
+      "nombre": "Multiplica tu Negocio",
+      "promesa": "Convierte tu negocio probado en muchos que funcionan igual.",
       "creditos_activar": 3,
       "creditos_seguimiento": 2
     }

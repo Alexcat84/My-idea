@@ -1,0 +1,25 @@
+{
+  "node_id": "regla_de_minimis",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Regla De Minimis en Origen de Mercancías",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "La Regla De Minimis permite que un porcentaje limitado del valor de venta (generalmente 7% para NAFTA, 10% para otros FTAs) corresponda a materiales no originarios, aun cuando estos no cumplan la prueba de cambio arancelario, sin que esto impida que el producto califique para beneficios del FTA. Existen excepciones, como en productos textiles donde el cálculo se basa en peso en lugar de valor. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "pasos_accionables": [
+    "Calcular el valor de los insumos no originarios que no cumplen el cambio arancelario",
+    "Determinar el porcentaje que representan sobre el valor total de factura del producto",
+    "Verificar si dicho porcentaje está por debajo del umbral De Minimis aplicable (7-10%)",
+    "Confirmar excepciones sectoriales, como el cálculo por peso en textiles"
+  ],
+  "entregable_esperado": "Cálculo documentado del porcentaje de materiales no originarios y su cumplimiento con el umbral De Minimis",
+  "nodos_previos": [
+    "reglas_de_origen_fta_2"
+  ],
+  "nodos_siguientes": [
+    "certificacion_origen_producto"
+  ],
+  "condiciones_activacion": [
+    "Si el producto no cumple estrictamente la regla de cambio arancelario pero el contenido no originario es mínimo"
+  ],
+  "etiqueta_arbol": "Aplica la Regla De Minimis"
+}

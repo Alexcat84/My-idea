@@ -1,0 +1,29 @@
+{
+  "node_id": "definicion_terminos_de_venta",
+  "fase_proyecto": "ejecucion",
+  "dominio": "exportacion",
+  "titulo_concepto": "Definición de Términos de Venta (Incoterms)",
+  "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+  "resumen_teorico": "Los términos de venta (Incoterms) definen las obligaciones, riesgos y costos tanto del comprador como del vendedor en la entrega de mercancías en una transacción de exportación. Aunque suenan similares a términos domésticos, con frecuencia tienen significados muy distintos. Es fundamental conocerlos antes de preparar una cotización, incluyendo CIF, CFR, CPT/CIP, EXW, FAS, FCA y FOB, cada uno con distinta asignación de responsabilidad de transporte, seguro y despacho aduanero.",
+  "pasos_accionables": [
+    "Estudiar la definición de cada Incoterm relevante (CIF, CFR, CPT/CIP, EXW, FAS, FCA, FOB).",
+    "Seleccionar el Incoterm más apropiado según el modo de transporte (marítimo vs. cualquier modo).",
+    "Cotizar preferentemente en términos CIF o CIP para mostrar al comprador el costo total hasta destino.",
+    "Consultar con un freight forwarder para calcular precios CIF/CIP si es necesario.",
+    "Comunicar claramente el Incoterm elegido en la cotización y pro forma invoice."
+  ],
+  "entregable_esperado": "Términos de venta (Incoterm) definidos y documentados claramente en todas las cotizaciones y contratos de exportación.",
+  "nodos_previos": [
+    "fijacion_precio_exportacion"
+  ],
+  "nodos_siguientes": [
+    "elaboracion_pro_forma_invoice",
+    "seguro_de_carga_transporte",
+    "seleccion_metodo_envio_internacional"
+  ],
+  "condiciones_activacion": [
+    "Cuando el usuario debe preparar una cotización o pro forma invoice para un comprador extranjero.",
+    "Si existe confusión sobre quién asume los costos y riesgos del transporte internacional."
+  ],
+  "etiqueta_arbol": "Define tus Términos de Venta"
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "concientizacion_entrenamiento_cui",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Concientización y Entrenamiento en Seguridad para Personal",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer amenazas internas e ingeniería social.",
+  "pasos_accionables": [
+    "Diseñar contenido de entrenamiento personalizado según roles y entornos de trabajo del personal",
+    "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
+    "Implementar técnicas de concientización como posters, correos de liderazgo, eventos tipo lunch-and-learn",
+    "Utilizar recursos gratuitos disponibles (NARA CUI training, Security Awareness Hub)"
+  ],
+  "entregable_esperado": "Programa de entrenamiento y concientización documentado, con registros de participación del personal",
+  "nodos_previos": [
+    "estructura_sp800171"
+  ],
+  "nodos_siguientes": [
+    "respuesta_incidentes_cui"
+  ],
+  "condiciones_activacion": [
+    "Cuando se implementan los requisitos de la familia Awareness and Training de SP 800-171"
+  ],
+  "etiqueta_arbol": "Capacita a tu Personal"
+}

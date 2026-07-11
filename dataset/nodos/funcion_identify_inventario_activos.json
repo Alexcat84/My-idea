@@ -1,0 +1,27 @@
+{
+  "node_id": "funcion_identify_inventario_activos",
+  "fase_proyecto": "planificacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Función Identificar: Inventario de Activos Digitales",
+  "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+  "resumen_teorico": "La primera función del framework consiste en elaborar una lista completa de todo el equipo, software y datos que utiliza la empresa, incluyendo laptops, smartphones, tablets y dispositivos de punto de venta. Este inventario es la base para entender la superficie de ataque y priorizar esfuerzos de protección.",
+  "pasos_accionables": [
+    "Listar todos los dispositivos físicos (laptops, smartphones, tablets, POS)",
+    "Listar todo el software utilizado en la organización",
+    "Identificar dónde se almacenan y procesan los datos sensibles",
+    "Actualizar el inventario periódicamente"
+  ],
+  "entregable_esperado": "Inventario documentado de equipos, software y datos de la empresa",
+  "nodos_previos": [
+    "marco_nist_cybersecurity_framework",
+    "arquitectura_tecnica_modular"
+  ],
+  "nodos_siguientes": [
+    "funcion_protect_politica_seguridad"
+  ],
+  "condiciones_activacion": [
+    "Cuando la empresa no sabe qué activos digitales posee",
+    "Antes de crear una política de ciberseguridad formal"
+  ],
+  "etiqueta_arbol": "Elabora tu Inventario de Activos"
+}

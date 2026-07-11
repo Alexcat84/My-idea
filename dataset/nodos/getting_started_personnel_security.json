@@ -1,0 +1,24 @@
+{
+  "node_id": "getting_started_personnel_security",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Seguridad del Personal",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Asegura que los individuos, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad, protegiendo la información durante y después de acciones de personal como despidos o transferencias.",
+  "pasos_accionables": [
+    "Establecer un proceso de verificación (background checks) antes de otorgar acceso al sistema.",
+    "Definir políticas de terminación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
+    "Definir políticas de reasignación: revisar y ajustar los permisos según nueva necesidad operativa."
+  ],
+  "entregable_esperado": "Políticas documentadas de screening, terminación y transferencia de personal con acceso a CUI.",
+  "nodos_previos": [
+    "getting_started_media_protection"
+  ],
+  "nodos_siguientes": [
+    "getting_started_physical_protection"
+  ],
+  "condiciones_activacion": [
+    "Cuando se contratan, despiden o transfieren empleados con acceso a sistemas que procesan CUI."
+  ],
+  "etiqueta_arbol": "Verifica la Confianza del Personal"
+}

@@ -1,0 +1,28 @@
+{
+  "node_id": "identificacion_autenticacion_mfa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Identificación, Autenticación y Autenticación Multifactor (MFA)",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "Consiste en verificar la identidad de un usuario, proceso o dispositivo como prerrequisito para permitir el acceso a recursos del sistema. La Autenticación Multifactor (MFA) es una mejora de seguridad clave que requiere que el usuario verifique su identidad combinando dos o más factores: algo que sabe (contraseña/PIN), algo que tiene (tarjeta inteligente/llave de seguridad) y algo que es (huella/rostro). Las contraseñas solas ya no son suficientes para proteger contra atacantes.",
+  "pasos_accionables": [
+    "Implementar MFA para acceso a cuentas privilegiadas y no privilegiadas",
+    "Definir reglas de contraseñas para la organización",
+    "Enviar contraseñas usando formas criptográficamente protegidas (correo encriptado, gestores de contraseñas)",
+    "Mantener y actualizar una lista de contraseñas comprometidas o comunes para verificación"
+  ],
+  "entregable_esperado": "Sistema de MFA implementado en todos los accesos críticos y política de gestión de contraseñas documentada",
+  "nodos_previos": [
+    "control_acceso_least_privilege",
+    "gestion_configuracion_least_functionality"
+  ],
+  "nodos_siguientes": [
+    "respuesta_incidentes_cui",
+    "gestion_contrasenas_cui"
+  ],
+  "condiciones_activacion": [
+    "Cuando se implementan los requisitos de la familia Identification and Authentication de SP 800-171",
+    "Si la organización aún depende solo de contraseñas para el acceso"
+  ],
+  "etiqueta_arbol": "Verifica Identidad con Doble Factor"
+}

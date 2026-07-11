@@ -1,0 +1,28 @@
+{
+  "node_id": "estructura_sp800171",
+  "fase_proyecto": "ideacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Estructura de SP 800-171: 17 Familias de Requisitos de Seguridad",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Cada requisito incluye un identificador único, descripción, parámetros definidos por la organización (ODP), discusión y referencias a SP 800-53.",
+  "pasos_accionables": [
+    "Revisar las 17 familias de requisitos disponibles en el catálogo de SP 800-171",
+    "Priorizar familias según el nivel de madurez actual de la organización",
+    "Usar la herramienta NIST Cybersecurity and Privacy Reference Tool (CPRT) para explorar requisitos específicos"
+  ],
+  "entregable_esperado": "Lista priorizada de familias de requisitos a implementar según recursos disponibles",
+  "nodos_previos": [
+    "que_es_cui"
+  ],
+  "nodos_siguientes": [
+    "determinar_alcance_cui",
+    "getting_started_planning",
+    "concientizacion_entrenamiento_cui",
+    "control_acceso_least_privilege",
+    "plan_seguridad_sistema_poam"
+  ],
+  "condiciones_activacion": [
+    "Cuando el negocio debe implementar controles de seguridad para proteger CUI bajo contrato federal"
+  ],
+  "etiqueta_arbol": "Conoce las Familias de Requisitos"
+}

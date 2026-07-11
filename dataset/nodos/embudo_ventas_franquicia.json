@@ -1,0 +1,28 @@
+{
+  "node_id": "embudo_ventas_franquicia",
+  "fase_proyecto": "ejecucion",
+  "dominio": "franquicias",
+  "titulo_concepto": "El Embudo de Ventas de Franquicia (Franchise Sales Funnel)",
+  "fuente": "Franchise Your Business - Mark Siebert",
+  "resumen_teorico": "Modelo desarrollado por iFranchise Group que permite analizar la efectividad del marketing de franquicias. El embudo representa el flujo desde leads generados por distintas fuentes (PR, medios impresos, ferias, correo directo, internet, brokers, referidos) hasta las ventas finales, cada fuente con distinto costo por lead y tasa de cierre. Los brokers generan los leads de mayor calidad (cierre más alto), seguido de PR y referidos; internet genera el mayor volumen pero menor tasa de cierre. Se estima un costo por lead de $50-150, tasa de conversión de CIRF a venta de ~13.5%, cierre total de ~2% de todas las consultas, y tiempo de cierre de 12-14 semanas.",
+  "pasos_accionables": [
+    "Mapear todas las fuentes actuales de generación de leads y su costo asociado",
+    "Medir la tasa de conversión de cada fuente en cada etapa del embudo (lead → CIRF → reunión → venta)",
+    "Comparar costo-por-lead y costo-por-venta entre canales",
+    "Ajustar la inversión en marketing hacia los canales con mejor retorno según el perfil del franquiciado objetivo",
+    "Establecer sistema de tracking para monitorear todo el embudo de forma continua"
+  ],
+  "entregable_esperado": "Panel de métricas del embudo de ventas de franquicia con costo por lead, tasa de cierre y tiempo de cierre por canal",
+  "nodos_previos": [
+    "segmentacion_perfil_franquiciado"
+  ],
+  "nodos_siguientes": [
+    "mix_medios_marketing_franquicia",
+    "estacionalidad_marketing_franquicia"
+  ],
+  "condiciones_activacion": [
+    "Cuando se necesita optimizar el gasto en marketing de franquicias",
+    "Cuando el franquiciador no tiene visibilidad clara de qué canales generan ventas reales"
+  ],
+  "etiqueta_arbol": "Diseña tu Embudo de Ventas"
+}

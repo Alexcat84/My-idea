@@ -5,10 +5,12 @@ import { describe, expect, it } from "vitest";
 import { evaluacionBrecha, semillasDelPack } from "./evaluacionBrecha";
 
 describe("evaluacionBrecha (determinística, sin LLM)", () => {
-  it("el asset horneado trae 7 semillas por dominio", () => {
-    for (const pack of ["quality", "health_safety", "environmental"]) {
+  it("el asset horneado trae las semillas aprobadas por dominio (6 mundos)", () => {
+    for (const pack of ["quality", "health_safety", "environmental", "exportacion", "franquicias"]) {
       expect(semillasDelPack(pack)).toHaveLength(7);
     }
+    // seguridad_digital: 6 semillas aprobadas (v1.3.2)
+    expect(semillasDelPack("seguridad_digital")).toHaveLength(6);
   });
 
   it("mismos insumos -> misma semilla (determinismo)", () => {
@@ -37,5 +39,30 @@ describe("evaluacionBrecha (determinística, sin LLM)", () => {
 
   it("pack inexistente -> null", () => {
     expect(evaluacionBrecha("finanzas", null, null, "ideacion")).toBeNull();
+  });
+
+  // Fase v1.3.2: los mundos nuevos entran por el mapeo aprobado fase→semilla
+  // (brecha_semillas.json), no por puntaje. Los HSEQ no están en el mapa y
+  // conservan el comportamiento de arriba.
+  it("mundos nuevos: el mapeo aprobado manda (decisiones de producto)", () => {
+    // Exportación: ideación Y validación entran por la misma pregunta honesta
+    // (¿a qué mercado y por qué ese?).
+    expect(evaluacionBrecha("exportacion", null, null, "ideacion")!.semillaId).toBe("evaluacion_mercados_objetivo");
+    expect(evaluacionBrecha("exportacion", null, null, "validacion")!.semillaId).toBe("evaluacion_mercados_objetivo");
+    // Franquicias: validación = probar que UNA funciona antes de multiplicar.
+    expect(evaluacionBrecha("franquicias", null, null, "validacion")!.semillaId).toBe("leverage_una_sola_franquicia");
+    // Seguridad digital: al que idea, fundamentos de gestión de riesgo.
+    expect(evaluacionBrecha("seguridad_digital", null, null, "ideacion")!.semillaId).toBe("fundamentos_gestion_riesgo");
+    // Alias del canon: planificacion/ejecucion (patch decía construccion/operacion).
+    expect(evaluacionBrecha("seguridad_digital", null, null, "planificacion")!.semillaId).toBe("getting_started_planning");
+    expect(evaluacionBrecha("exportacion", null, null, "ejecucion")!.semillaId).toBe("documentacion_exportacion_basica");
+  });
+
+  it("mundos nuevos: semilla mapeada ya cubierta -> cae al puntaje dinámico", () => {
+    const r = evaluacionBrecha("franquicias", null, null, "validacion", new Set(["leverage_una_sola_franquicia"]));
+    expect(r).not.toBeNull();
+    expect(r!.semillaId).not.toBe("leverage_una_sola_franquicia");
+    // el fallback es el puntaje clásico, no otro mapeo
+    expect(r!.razonamiento).toContain("puntaje");
   });
 });

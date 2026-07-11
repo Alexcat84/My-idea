@@ -1,0 +1,28 @@
+{
+  "node_id": "que_es_cui",
+  "fase_proyecto": "ideacion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Comprensión de la Información No Clasificada Controlada (CUI)",
+  "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "resumen_teorico": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Incluye información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
+  "pasos_accionables": [
+    "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de CUI",
+    "Contactar al oficial de contratos para confirmar qué información específica es CUI",
+    "Consultar el sitio de NARA (archives.gov/cui) para conocer tipos y marcados de CUI",
+    "Documentar qué tipo de CUI maneja el negocio (técnica, propietaria, etc.)"
+  ],
+  "entregable_esperado": "Documento que identifica claramente qué información de la empresa califica como CUI y su origen contractual",
+  "nodos_previos": [
+    "mantenimiento_sistema_cui"
+  ],
+  "nodos_siguientes": [
+    "determinar_alcance_cui",
+    "diagrama_flujo_cui",
+    "estructura_sp800171"
+  ],
+  "condiciones_activacion": [
+    "Si la empresa tiene contratos con el gobierno federal u organizaciones que trabajan con el gobierno",
+    "Si el usuario no sabe si maneja información sensible sujeta a regulación federal"
+  ],
+  "etiqueta_arbol": "Entiende la Información Controlada"
+}

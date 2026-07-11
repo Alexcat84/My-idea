@@ -1,0 +1,28 @@
+{
+  "node_id": "seleccion_controles",
+  "fase_proyecto": "ejecucion",
+  "dominio": "seguridad_digital",
+  "titulo_concepto": "Selección y Adaptación (Tailoring) de Controles",
+  "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+  "resumen_teorico": "Tras categorizar el sistema, se selecciona un conjunto inicial de controles (baseline) para proteger la confidencialidad, integridad y disponibilidad, usando catálogos como NIST SP 800-53. Luego, estos controles se adaptan (tailoring) a los requisitos específicos de seguridad y privacidad de la organización, guiados por evaluaciones de riesgo. Los controles seleccionados y adaptados se documentan en un plan de seguridad y/o privacidad.",
+  "pasos_accionables": [
+    "Seleccionar un baseline de controles apropiado según la categorización del sistema (Tarea S-1).",
+    "Adaptar (tailor) los controles a los riesgos y necesidades específicas de la organización (Tarea S-2).",
+    "Documentar los controles seleccionados y adaptados en un plan de seguridad/privacidad.",
+    "Desarrollar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5)."
+  ],
+  "entregable_esperado": "Un plan de seguridad y privacidad que documente los controles seleccionados, adaptados y justificados por el nivel de riesgo.",
+  "nodos_previos": [
+    "rmf_paso_categorizar"
+  ],
+  "nodos_siguientes": [
+    "implementar_controles",
+    "nist_privacy_framework_introduccion",
+    "marco_nist_cybersecurity_framework"
+  ],
+  "condiciones_activacion": [
+    "Cuando se ha completado la categorización de sistemas y se requiere definir salvaguardas concretas.",
+    "Al requerir cumplir con requisitos legales, regulatorios o contractuales de seguridad."
+  ],
+  "etiqueta_arbol": "Elige y Ajusta tus Controles"
+}
