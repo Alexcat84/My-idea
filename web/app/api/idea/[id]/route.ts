@@ -118,7 +118,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     entrevista = {
       session_id: s.id,
       pregunta: rec.preguntaPendiente,
-      listo_para_plan: rec.fase === "listo_para_plan",
+      // Phase 3.7.2: la oferta abierta (esperando_profundizar) tambien es
+      // "listo" para la UI; sin esto, recargar en plena oferta dejaba la
+      // vista vacia (ni pregunta ni tarjeta).
+      listo_para_plan: rec.fase === "listo_para_plan" || rec.fase === "esperando_profundizar",
       dominio: s.dominio ?? "core",
       ruta: rec.ruta.map((nid, i) => ({
         id: nid,

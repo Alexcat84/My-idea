@@ -15,6 +15,8 @@ export const MAX_SUCESORES_NIVEL2 = 4;
 export const DOMINIOS_DESBLOQUEADOS_DEFECTO = ["core"];
 
 export interface NodoGrafo {
+  /** Hygiene v1.3.1: etiqueta corta del arbol (4-5 palabras, segunda persona). */
+  etiqueta_arbol?: string;
   node_id: string;
   fase_proyecto: string;
   dominio?: string;

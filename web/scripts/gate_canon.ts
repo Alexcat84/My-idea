@@ -27,7 +27,11 @@ const RESPUESTAS = [
   "Cada kit me cuesta unos 180 en materiales y lo vendo a 350; tardo una tarde en armar cinco.",
   "Lo que más me preocupa es si alguien fuera de mis conocidos pagaría ese precio, todavía no he vendido a desconocidos.",
   "Puedo dedicarle unas 10 horas a la semana sin descuidar mi trabajo.",
-  "Sí, con eso me basta por ahora.",
+  // Phase 3.7.2: cierres explícitos para que el intérprete proponga el
+  // plan y aparezca LA OFERTA HONESTA (el estado nuevo que el gate debe ver)
+  "Con eso me basta por ahora, creo que ya te conté lo importante.",
+  "Ya no tengo más que agregar, quiero ver mi plan.",
+  "De acuerdo, suficiente, armemos el plan.",
 ];
 
 async function capturar(page: Page, archivo: string) {
@@ -75,27 +79,46 @@ async function main() {
 
   // 03 La Exploración (entrevista real por la UI)
   await app.getByRole("button", { name: "Explorar estas suposiciones" }).click();
+  const hayOferta = async () =>
+    (await app.getByText("Tu recorrido hasta aquí", { exact: false }).count()) +
+      (await app.getByText("Suficiente para avanzar", { exact: false }).count()) >
+    0;
   for (let i = 0; i < RESPUESTAS.length; i++) {
-    const campo = app.locator("textarea");
+    // la oferta pudo llegar con la respuesta anterior: no hay textarea que llenar
+    if (await hayOferta()) break;
+    // textarea HABILITADO (mientras envía queda disabled en el DOM)
+    const campo = app.locator("textarea:not([disabled])").first();
     await campo.waitFor({ timeout: 180000 });
     if (i === 2) await capturar(app, "03_exploracion_app.png"); // a mitad del riel
     await campo.fill(RESPUESTAS[i]);
     await app.getByRole("button", { name: "Enviar" }).click();
-    // espera a que la pregunta cambie o aparezca "Suficiente para avanzar"
-    await app
-      .locator("textarea, text=Suficiente para avanzar")
-      .first()
-      .waitFor({ timeout: 180000 })
-      .catch(() => {});
-    const listo = await app.getByText("Suficiente para avanzar", { exact: false }).count();
-    if (listo > 0) break;
+    // Phase 3.7.2: la siguiente pregunta (campo habilitado de nuevo) o LA
+    // OFERTA HONESTA, lo que llegue primero.
+    await Promise.race([
+      app.locator("textarea:not([disabled])").first().waitFor({ timeout: 180000 }),
+      app.getByText("Tu recorrido hasta aquí", { exact: false }).waitFor({ timeout: 180000 }),
+      app.getByText("Suficiente para avanzar", { exact: false }).waitFor({ timeout: 180000 }),
+    ]).catch(() => {});
+    if (await hayOferta()) break;
   }
   await capturarCanon(canon, "04 - Etapa 3 - La Exploracion.html", "03_exploracion_canon.png");
 
-  // 04 espera del plan + Tu Plan
+  // Phase 3.7.2 — la oferta honesta: captura del estado nuevo si apareció
+  if ((await app.getByText("Tu recorrido hasta aquí", { exact: false }).count()) > 0) {
+    await capturar(app, "03b_oferta_honesta_app.png");
+  }
+
+  // 04 espera del plan + Tu Plan, pasando por la tarjeta intermedia
+  // ("¿Algo más que quieras que tu plan tome en cuenta?") con contexto
+  // real: ejercita el canal contexto_final -> redactor -> bitácora.
   const btnPlan = app.getByRole("button", { name: /Generar mi plan/i }).first();
   if ((await btnPlan.count()) > 0) await btnPlan.click();
   else await app.getByText("Generar mi plan con lo que ya conté").click();
+  await app.getByText("¿Algo más que quieras", { exact: false }).waitFor({ timeout: 30000 });
+  await app
+    .locator("#contexto-final")
+    .fill("Me importa que el plan asuma que solo puedo invertir 200 al mes al inicio.");
+  await app.getByRole("button", { name: "Armar mi plan" }).click();
   await app.getByText("Tu Plan · en camino", { exact: false }).first().waitFor({ timeout: 30000 });
   await app.waitForTimeout(4000); // etapas encendiéndose por SSE
   await capturar(app, "04a_plan_en_camino_app.png");

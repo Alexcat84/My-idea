@@ -123,6 +123,23 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const { recorrido, acumulado } = estadoPersistido;
   const projectId = sesion.project_id;
 
+  // Phase 3.7.2 (la oferta honesta): "¿Algo mas que quieras que tu plan
+  // tome en cuenta?" — el texto opcional viaja al redactor por el mismo
+  // canal que todo lo que el usuario conto (el perfil de sesion) y queda
+  // en la bitacora como contexto_final_usuario.
+  let contextoFinal: string | null = null;
+  try {
+    const body = (await request.json()) as { contexto_final?: string };
+    const texto = (body?.contexto_final ?? "").trim();
+    if (texto) contextoFinal = texto.slice(0, 2000);
+  } catch {
+    // sin body: el camino clasico
+  }
+  if (contextoFinal) {
+    recorrido.perfilSesion = `${recorrido.perfilSesion ?? ""}
+Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
+  }
+
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
@@ -159,6 +176,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         // estos eventos llegaba a persistirse (a diferencia de Python,
         // que ya los acumulaba en fallback_events desde el hotfix v2.2.1).
         const eventosPlan: Record<string, unknown>[] = [];
+        if (contextoFinal) {
+          eventosPlan.push({ tipo: "contexto_final_usuario", texto: contextoFinal });
+        }
         const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
         const numerosParaPlan = {
           ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),

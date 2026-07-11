@@ -129,6 +129,11 @@ export type ResultadoTurno =
       acumulado: UsoAcumulado;
       evaluacion: EvaluacionCobertura;
       nodosNuevos: NodoTranscrito[];
+      /** Phase 3.7.2 (la oferta honesta): presente cuando el motor OFRECE
+       * el plan (fase esperando_profundizar, doble CTA canon); etiquetas
+       * de arbol de 2-3 temas no tratados, [] si la ruta esta completa.
+       * Ausente en los cierres sin vuelta (presupuesto, profundidad). */
+      temasPendientes?: string[];
     }
   | { tipo: "salio"; estado: EstadoRecorrido; acumulado: UsoAcumulado }
   | {
@@ -142,6 +147,53 @@ export type ResultadoTurno =
  * 'generar_ya' o 'continuar'. Reutilizado por la oferta de profundizar y
  * por la extension dirigida (Fase 2.9: la salida del usuario se respeta
  * turno a turno tambien DENTRO de la extension). */
+/** Phase 3.7.2: el boton "Seguimos explorando" manda este sentinela por
+ * /turn; clasificarlo con LLM seria pagar por un click. */
+export const SENTINELA_SEGUIR_EXPLORANDO = "__seguimos_explorando__";
+
+/** Phase 3.7.2 (la oferta honesta): que queda sobre la mesa. Elige hasta
+ * 3 nodos representativos de las familias faltantes (brujula sobre la
+ * query de cada familia, sin LLM) y devuelve sus etiquetas de arbol, en
+ * el idioma de la casa ("Tu Cliente Ideal", no "accion_clientes"). Ruta
+ * completa -> [] y la tarjeta lo dice con honestidad inversa. */
+async function temasPendientesDeLaMesa(
+  estado: EstadoRecorrido,
+  families: Record<string, Familia>,
+  graph: Grafo
+): Promise<string[]> {
+  const evaluacion = evaluarRuta(estado.ruta, families);
+  const faltantesKeys: string[] = [];
+  if (!evaluacion.tiene_accion_clientes) faltantesKeys.push("accion_clientes");
+  if (!evaluacion.tiene_viabilidad_economica) faltantesKeys.push("viabilidad_economica");
+  if (faltantesKeys.length === 0) return [];
+
+  const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
+  const etiquetas: string[] = [];
+  for (const familia of faltantesKeys) {
+    try {
+      const afines = await buscarAfines(FAMILIA_QUERY_BRUJULA[familia] ?? familia, visitados, {
+        k: 10,
+        graph,
+        dominiosDesbloqueados: estado.dominiosDesbloqueados,
+      });
+      const deLaFamilia = afines
+        .map((c) => c.id)
+        .filter((nid) => (families[nid] ?? "general") === familia)
+        .slice(0, 2);
+      for (const nid of deLaFamilia) {
+        const n = graph[nid];
+        const etiqueta = n?.etiqueta_arbol ?? n?.titulo_concepto;
+        if (etiqueta && !etiquetas.includes(etiqueta)) etiquetas.push(etiqueta);
+      }
+    } catch {
+      // la brujula caida no bloquea la oferta: cae al nombre humano de la familia
+      const nombre = familia === "accion_clientes" ? "Salir a validar con clientes" : "Tus numeros de verdad";
+      if (!etiquetas.includes(nombre)) etiquetas.push(nombre);
+    }
+  }
+  return etiquetas.slice(0, 3);
+}
+
 export async function detectarDecisionPlan(
   client: Anthropic,
   respuesta: string,
@@ -231,8 +283,14 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
 
   // --- Sub-fase: esperando "¿seguimos un poco o lo quieres ya?" ---
   if (estado.fase === "esperando_profundizar") {
-    const { decision, acumulado: a1 } = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado);
-    acumulado = a1;
+    let decision: "generar_ya" | "continuar";
+    if (respuestaUsuario === SENTINELA_SEGUIR_EXPLORANDO) {
+      decision = "continuar";
+    } else {
+      const r = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado);
+      decision = r.decision;
+      acumulado = r.acumulado;
+    }
     if (decision === "generar_ya") {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
       return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
@@ -250,6 +308,17 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       dominiosDesbloqueados: estado.dominiosDesbloqueados,
     });
     let candidatosFamilia = afines.map((c) => c.id).filter((nid) => familiasFaltantesKeys.includes(families[nid] ?? "general"));
+    // Phase 3.7.2: con la ruta completa, "Seguimos explorando" sigue
+    // siendo una promesa real: los mejores afines al perfil, sin filtro
+    // de familia (antes: elegidos vacios -> listo otra vez, boton muerto).
+    if (candidatosFamilia.length === 0 && familiasFaltantesKeys.length === 0) {
+      const afinesPerfil = await buscarAfines(estado.perfilSesion || estado.textoOriginal, visitados, {
+        k: 6,
+        graph,
+        dominiosDesbloqueados: estado.dominiosDesbloqueados,
+      });
+      candidatosFamilia = afinesPerfil.map((c) => c.id);
+    }
     if (candidatosFamilia.length === 0) {
       // FIX obligatorio del plan (bomba dormida): esta llamada iba SIN la
       // lista — con unlocks activos habría filtrado con el default {core}.
@@ -434,13 +503,22 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
 
     if (resultado.accion === "generar_plan") {
       const evaluacion = evaluarRuta(estado.ruta, families);
-      if (!evaluacion.es_completa && !estado.profundizarOfrecido) {
-        const faltanTxt = evaluacion.familias_faltantes.join("; ");
-        const mensaje =
-          `Puedo darte tu plan ahora mismo. Eso si: con algunas preguntas mas ` +
-          `incluiria ${faltanTxt}. ¿Seguimos un poco o lo quieres ya?`;
-        estado = { ...estado, profundizarOfrecido: true, fase: "esperando_profundizar", preguntaPendiente: mensaje };
-        return { tipo: "pregunta", estado, pregunta: mensaje, acumulado, nodosNuevos: nodosNuevosDesdeInicio() };
+      // Phase 3.7.2 (la oferta honesta, canon 04): la oferta de
+      // suficiencia ya no es una pregunta de texto que invita a salir a
+      // ciegas; es una tarjeta con lo que queda sobre la mesa (2-3 temas
+      // pendientes por su etiqueta de arbol) y dos CTAs de peso igual.
+      // Si no falta nada, lo dice con honestidad inversa (temas = []).
+      if (!estado.profundizarOfrecido) {
+        const temasPendientes = await temasPendientesDeLaMesa(estado, families, graph);
+        estado = { ...estado, profundizarOfrecido: true, fase: "esperando_profundizar", preguntaPendiente: null };
+        return {
+          tipo: "listo_para_plan",
+          estado,
+          acumulado,
+          evaluacion,
+          temasPendientes,
+          nodosNuevos: nodosNuevosDesdeInicio(),
+        };
       }
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
       return { tipo: "listo_para_plan", estado, acumulado, evaluacion, nodosNuevos: nodosNuevosDesdeInicio() };

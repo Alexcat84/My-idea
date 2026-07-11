@@ -16,6 +16,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Acordeon } from "../../ui/Acordeon";
+import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Markdown } from "../../ui/Markdown";
@@ -63,6 +64,7 @@ interface RespuestaTurno {
   tipo: "pregunta" | "listo_para_plan" | "salio" | "error_temporal";
   pregunta?: string;
   nodos_nuevos?: NodoNuevo[];
+  temas_pendientes?: string[];
   error?: string;
 }
 
@@ -104,6 +106,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [cintillo, setCintillo] = useState<string | null>(null);
   const [enviando, setEnviando] = useState(false);
   const [listoParaPlan, setListoParaPlan] = useState(false);
+  // Phase 3.7.2 (la oferta honesta): temas sobre la mesa cuando el motor
+  // OFRECE el plan (null = cierre sin vuelta: CTA unico) y la tarjeta
+  // intermedia de contexto final.
+  const [temasPendientes, setTemasPendientes] = useState<string[] | null>(null);
+  const [tarjetaContextoFinal, setTarjetaContextoFinal] = useState(false);
+  const [contextoFinal, setContextoFinal] = useState("");
   const [recorrido, setRecorrido] = useState<QA[]>([]);
   const [nodos, setNodos] = useState<NodoArbol[]>([]);
   const contadorNodos = useRef(0);
@@ -157,6 +165,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     } else if (data.tipo === "listo_para_plan") {
       setPregunta(null);
       setListoParaPlan(true);
+      setTemasPendientes(data.temas_pendientes ?? null);
     } else if (data.tipo === "salio") {
       setPregunta(null);
     }
@@ -168,6 +177,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
     contadorNodos.current = 0;
     setRecorrido([]);
     setListoParaPlan(false);
+    setTemasPendientes(null);
+    setTarjetaContextoFinal(false);
+    setContextoFinal("");
     setPlanMd(null);
     setVistaManos(false);
     setRitualInicial(false);
@@ -177,7 +189,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   const generarPlan = useCallback(
-    async (sid: string) => {
+    async (sid: string, contextoExtra?: string) => {
       if (generandoPlan) return;
       planPedidoRef.current = true;
       setGenerandoPlan(true);
@@ -190,7 +202,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
       setListoParaPlan(false);
       setError(null);
       try {
-        const res = await fetch(`/api/session/${sid}/plan`, { method: "POST" });
+        // Phase 3.7.2: el contexto final opcional viaja al redactor.
+        const res = await fetch(`/api/session/${sid}/plan`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(contextoExtra ? { contexto_final: contextoExtra } : {}),
+        });
         if (!res.ok || !res.body) {
           setError(ERROR_GENERICO);
           setGenerandoPlan(false);
@@ -308,6 +325,34 @@ export function IdeaView({ projectId }: { projectId: string }) {
       procesarTurno((await res.json()) as RespuestaTurno);
     } catch {
       setError("no pudimos enviar tu respuesta; revisa tu internet e intenta de nuevo");
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  /** Phase 3.7.2: "Seguimos explorando" es un click, no una frase — viaja
+   * como sentinela y el motor lo entiende sin gastar en clasificarlo. */
+  async function seguirExplorando() {
+    if (!sessionId || enviando) return;
+    setEnviando(true);
+    setError(null);
+    setListoParaPlan(false);
+    setTemasPendientes(null);
+    try {
+      const res = await fetch(`/api/session/${sessionId}/turn`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ respuesta: "__seguimos_explorando__" }),
+      });
+      if (!res.ok) {
+        setError(ERROR_GENERICO);
+        setListoParaPlan(true);
+        return;
+      }
+      procesarTurno((await res.json()) as RespuestaTurno);
+    } catch {
+      setError("no pudimos continuar; revisa tu internet e intenta de nuevo");
+      setListoParaPlan(true);
     } finally {
       setEnviando(false);
     }
@@ -484,7 +529,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
             <div className={"flex min-w-0 flex-col gap-4" + (mostrarArbol ? "" : " sm:col-span-2")}>
               {/* Tarjeta de pregunta (una a la vez) */}
-              {pregunta && (
+              {pregunta && !tarjetaContextoFinal && (
                 <TarjetaPregunta
                   cintillo={cintillo}
                   pregunta={pregunta}
@@ -497,27 +542,105 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 <p className="text-sm text-dim">Pensando la siguiente pregunta…</p>
               )}
 
-              {/* Suficiente para avanzar (canon 04): acción clara, no chat */}
-              {listoParaPlan && !generandoPlan && !planMd && (
-                <div className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
-                  <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-                    Suficiente para avanzar
+              {/* Phase 3.7.2 — tarjeta intermedia (canon 04): contexto final
+                  opcional antes de armar el plan. */}
+              {tarjetaContextoFinal && !generandoPlan && !planMd && (
+                <div className="rounded-panel border border-hairline bg-surface p-6 sm:p-7">
+                  <p className="text-[19px] font-semibold leading-normal [text-wrap:pretty]">
+                    ¿Algo más que quieras que tu plan tome en cuenta?
                   </p>
-                  <p className="mt-2 text-[17px] font-medium leading-relaxed">
-                    Con lo que me contaste alcanza: vamos a tu plan.
-                  </p>
+                  <div className="mt-5">
+                    <CampoConVoz
+                      id="contexto-final"
+                      valor={contextoFinal}
+                      onCambio={setContextoFinal}
+                      filas={3}
+                      placeholder="Opcional: escríbelo o díctalo…"
+                    />
+                  </div>
                   <button
-                    onClick={() => sessionId && generarPlan(sessionId)}
-                    className="mt-4 rounded-[10px] bg-accent px-5 py-3 font-medium text-white hover:opacity-90"
+                    onClick={() => {
+                      if (!sessionId) return;
+                      setTarjetaContextoFinal(false);
+                      generarPlan(sessionId, contextoFinal.trim() || undefined);
+                    }}
+                    className="mt-5 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
                   >
-                    Generar mi plan
+                    Armar mi plan
                   </button>
                 </div>
               )}
 
-              {puedeGenerarPlan && pregunta && (
+              {/* Phase 3.7.2 — LA OFERTA HONESTA (canon 04): con temas sobre
+                  la mesa = pills + doble CTA de peso igual; ruta completa =
+                  honestidad inversa; cierre sin vuelta (presupuesto,
+                  profundidad) = CTA único. */}
+              {listoParaPlan && !tarjetaContextoFinal && !generandoPlan && !planMd && (
+                <div className="rounded-panel border border-hairline bg-surface p-6 sm:p-7">
+                  <p className="mb-3.5 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+                    <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+                    {temasPendientes === null ? "Suficiente para avanzar" : "Tu recorrido hasta aquí"}
+                  </p>
+                  <p className="text-[19px] font-semibold leading-normal [text-wrap:pretty]">
+                    {temasPendientes === null
+                      ? "Con lo que me contaste alcanza: vamos a tu plan."
+                      : "Con lo que me contaste puedo armar tu plan."}
+                  </p>
+                  {temasPendientes !== null && temasPendientes.length > 0 && (
+                    <>
+                      <p className="mt-3.5 text-[13.5px] text-dim">Si quieres, seguimos explorando:</p>
+                      <div className="mt-2.5 flex flex-wrap gap-2">
+                        {temasPendientes.map((tema) => (
+                          <span
+                            key={tema}
+                            className="rounded-full px-3.5 py-1.5 text-[12.5px] font-medium"
+                            style={{ border: "1px solid rgba(77,124,254,0.4)" }}
+                          >
+                            {tema}
+                          </span>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                  {temasPendientes !== null && temasPendientes.length === 0 && (
+                    <p className="mt-3.5 text-[13.5px] text-dim">Cubrimos lo esencial de punta a punta.</p>
+                  )}
+                  {temasPendientes === null ? (
+                    <button
+                      onClick={() => setTarjetaContextoFinal(true)}
+                      className="mt-6 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
+                    >
+                      Generar mi plan
+                    </button>
+                  ) : (
+                    <div className="mt-6 flex gap-3">
+                      <button
+                        onClick={seguirExplorando}
+                        disabled={enviando}
+                        className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
+                        style={{ border: "1px solid rgba(77,124,254,0.5)" }}
+                      >
+                        Seguimos explorando
+                      </button>
+                      <button
+                        onClick={() => setTarjetaContextoFinal(true)}
+                        disabled={enviando}
+                        className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
+                        style={{ border: "1px solid rgba(77,124,254,0.5)" }}
+                      >
+                        Generar mi plan
+                      </button>
+                    </div>
+                  )}
+                  <p className="mt-4 text-center text-xs text-dim opacity-80">
+                    Tu plan puede profundizarse después con el seguimiento.
+                  </p>
+                </div>
+              )}
+
+              {puedeGenerarPlan && pregunta && !tarjetaContextoFinal && (
                 <button
-                  onClick={() => sessionId && generarPlan(sessionId)}
+                  onClick={() => setTarjetaContextoFinal(true)}
                   className="self-start text-sm text-dim hover:text-ink"
                 >
                   Generar mi plan con lo que ya conté

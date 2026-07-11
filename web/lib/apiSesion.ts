@@ -72,6 +72,9 @@ export async function responderResultadoTurno(
       session_id: sessionId,
       tipo: "listo_para_plan",
       evaluacion: resultado.evaluacion,
+      // Phase 3.7.2 (la oferta honesta): presente cuando el motor OFRECE
+      // (doble CTA); ausente en los cierres sin vuelta (CTA unico).
+      temas_pendientes: resultado.temasPendientes,
       nodos_nuevos: [...nodosPrefijo, ...resultado.nodosNuevos],
       costo_usd: costoUsd,
     });

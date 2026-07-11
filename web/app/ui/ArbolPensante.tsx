@@ -120,6 +120,16 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
                 </li>
               );
             })}
+            {/* canon 04: el riel es memoria; lo futuro no tiene tema, solo
+                el punto hueco punteado mientras el motor sigue vivo */}
+            {generando && nodos.length > 0 && (
+              <li aria-hidden className="anima-rail-in relative flex items-start" style={{ gap: "15px" }}>
+                <span
+                  className="h-5 w-5 shrink-0 rounded-full bg-black"
+                  style={{ border: "1.5px dashed rgba(166,167,173,0.6)" }}
+                />
+              </li>
+            )}
           </ol>
         </div>
       </div>
