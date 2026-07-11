@@ -11,12 +11,23 @@ export interface EstadoFalso {
   sessions: Record<string, Record<string, unknown>>;
   plans: Record<string, unknown>[];
   projectNodes: Record<string, unknown>[];
+  checklistItems: Record<string, unknown>[];
   contadorProject: number;
   contadorSession: number;
+  contadorPlan: number;
 }
 
 export function estadoFalsoVacio(): EstadoFalso {
-  return { projects: {}, sessions: {}, plans: [], projectNodes: [], contadorProject: 0, contadorSession: 0 };
+  return {
+    projects: {},
+    sessions: {},
+    plans: [],
+    projectNodes: [],
+    checklistItems: [],
+    contadorProject: 0,
+    contadorSession: 0,
+    contadorPlan: 0,
+  };
 }
 
 interface Builder {
@@ -69,8 +80,31 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     return { data: rows, error: null };
   }
   if (nombre === "plans" && b._insert) {
-    estado.plans.push(b._insert as Record<string, unknown>);
-    return { data: null, error: null };
+    // Fase 3.3: guardarPlan encadena .select("id").single() para devolver
+    // el plan_id que el checklist derivado necesita — el fake lo imita.
+    estado.contadorPlan++;
+    const id = `plan-${estado.contadorPlan}`;
+    estado.plans.push({ id, ...(b._insert as Record<string, unknown>) });
+    return { data: b._single ? { id } : [{ id }], error: null };
+  }
+  if (nombre === "checklist_items") {
+    if (b._insert) {
+      const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
+      estado.checklistItems.push(...filas);
+      return { data: null, error: null };
+    }
+    if (b._update) {
+      const id = b._filters.id as string | undefined;
+      const fila = estado.checklistItems.find((r) => r.id === id);
+      if (!fila) return { data: null, error: { message: "no encontrado" } };
+      Object.assign(fila, b._update);
+      return { data: b._single ? fila : [fila], error: null };
+    }
+    let rows = estado.checklistItems;
+    for (const [col, val] of Object.entries(b._filters)) {
+      rows = rows.filter((r) => r[col] === val);
+    }
+    return { data: rows, error: null };
   }
   if (nombre === "project_nodes") {
     if (b._insert) {

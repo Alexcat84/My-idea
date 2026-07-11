@@ -55,8 +55,11 @@ function resolverTabla(
     return { data: Object.values(estadoFalso.sessions), error: null };
   }
   if (nombre === "plans" && b._insert) {
-    estadoFalso.plans.push(b._insert);
-    return { data: null, error: null };
+    // Fase 3.3: guardarPlan encadena .select("id").single() — el fake
+    // devuelve un id como el real (el organizador lo ignora).
+    const id = `plan-${estadoFalso.plans.length + 1}`;
+    estadoFalso.plans.push({ id, ...b._insert });
+    return { data: b._single ? { id } : [{ id }], error: null };
   }
   return { data: null, error: null };
 }
