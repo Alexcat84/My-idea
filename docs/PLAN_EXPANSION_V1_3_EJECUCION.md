@@ -8,7 +8,7 @@ verificación contra código real (correcciones abajo).
 
 | Grupo | Nodos crudos | Costo | Destino runbook |
 |---|---|---|---|
-| books/General (7 libros, 6 temas) | (en curso, ~100 chunks) | ~ | OLA 1 → core |
+| books/General (7 libros, 6 temas) | 580 (incl. 1 recuperado tras clobber case-insensitive) | $6.2904 | OLA 1 → core |
 | books/seguridad_digital (5 docs NIST/FTC) | 56 | $0.4507 | OLA 2 → packs/seguridad_digital |
 | books/exportacion (Basic Guide 11ª) | 169 | $1.6587 | OLA 3 → packs/exportacion |
 | books/franquicias (Siebert) | 219 | $1.9392 | OLA 4 → packs/franquicias |
@@ -115,10 +115,10 @@ Semillas core NO cambian.
   costos reales por fase, y la lista de decisiones del usuario (G2-G5).
 
 ## Estado de ejecución (actualizar aquí al completar cada fase)
-- [ ] F1 herramientas + movida a packs/
-- [ ] F2 seguridad_digital saneado (Gate 0 dominio)
-- [ ] F2 exportacion saneado + auditoría copyright
-- [ ] F2 franquicias saneado
+- [x] F1 herramientas + movida a packs/ (esquema 0 fallas, colisiones: 2 packs + 1 general renombradas)
+- [x] F2 seguridad_digital saneado — Gate 0 VERDE (55 nodos)
+- [x] F2 exportacion saneado — Gate 0 VERDE (158) + copyright (3 scrubs, 54 punteros)
+- [x] F2 franquicias saneado — Gate 0 VERDE (214); etiquetas packs 426/427 ($0.65)
 - [ ] F3 enriquecer-vs-crear General
 - [ ] F4 etiquetas de árbol
 - [ ] F5 integración OLA 1 (6 libros, Gate 0 entre libros) + línea completa + tag
