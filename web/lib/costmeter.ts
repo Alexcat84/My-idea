@@ -18,6 +18,7 @@
  * base de datos en vez de en memoria del proceso.
  */
 import Anthropic from "@anthropic-ai/sdk";
+import { limpiarGuiones } from "./voz";
 
 export const MODEL = "claude-sonnet-4-6";
 export const MODEL_HAIKU = "claude-haiku-4-5";
@@ -162,10 +163,14 @@ export async function llamarClaude(
     messages: [{ role: "user", content: userText }],
   });
   const nuevoAcumulado = registrarUso(acumulado, model, msg.usage, opts.componente);
-  const texto = msg.content
-    .filter((b): b is Anthropic.TextBlock => b.type === "text")
-    .map((b) => b.text)
-    .join("");
+  // Phase 3.7 (voz): punto único de salida — ningún texto del modelo viaja
+  // con guiones largos/medios, ni siquiera si el prompt fue desobedecido.
+  const texto = limpiarGuiones(
+    msg.content
+      .filter((b): b is Anthropic.TextBlock => b.type === "text")
+      .map((b) => b.text)
+      .join("")
+  );
   return { texto, acumulado: nuevoAcumulado };
 }
 
@@ -238,10 +243,13 @@ export async function llamarClaudeConversacion(
   });
 
   const nuevoAcumulado = registrarUso(acumulado, model, msg.usage, opts.componente);
-  const texto = msg.content
-    .filter((b): b is Anthropic.TextBlock => b.type === "text")
-    .map((b) => b.text)
-    .join("");
+  // Phase 3.7 (voz): mismo filtro que llamarClaude — ver nota allá.
+  const texto = limpiarGuiones(
+    msg.content
+      .filter((b): b is Anthropic.TextBlock => b.type === "text")
+      .map((b) => b.text)
+      .join("")
+  );
 
   // Solo se compromete al historial real si la llamada tuvo exito (si
   // client.messages.create() lanza, no llegamos aqui).

@@ -25,6 +25,11 @@ export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
+// Phase 3.7 (D2): sello de versión permanente. Vercel inyecta el sha del
+// commit en build; en dev local no existe y el sello dice "dev". Zanja
+// para siempre el "¿qué build estoy viendo?" de las sesiones del fundador.
+const SELLO_VERSION = (process.env.VERCEL_GIT_COMMIT_SHA ?? "dev").slice(0, 7);
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} ${instrument.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-bg text-ink">{children}</body>
+      <body className="min-h-full flex flex-col bg-bg text-ink">
+        {children}
+        <footer className="px-4 py-2 text-right text-[10px] text-white/25 select-all" aria-label="versión">
+          v·{SELLO_VERSION}
+        </footer>
+      </body>
     </html>
   );
 }

@@ -313,6 +313,7 @@ SYSTEM_CLASIFICACION = (
 )
 
 SYSTEM_PUERTA_AVANZADA = (
+    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
     "Eres el clasificador de seguimiento de un proyecto de emprendimiento ya "
     "en marcha. Recibes el estado_vivo del proyecto (sintesis acumulada de "
     "sesiones previas, puede ser null si es la primera vez que se comprime), "
@@ -328,6 +329,7 @@ SYSTEM_PUERTA_AVANZADA = (
 )
 
 SYSTEM_INTERPRETE_MULTI = (
+    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
     "Eres el interprete de una entrevista guiada de emprendimiento que puede "
     "avanzar varios pasos del grafo en silencio cuando el contexto del "
     "usuario ya responde lo que esos nodos preguntarian, y se detiene a "
@@ -785,6 +787,7 @@ SYSTEM_PROFUNDIZAR = (
 )
 
 SYSTEM_PREGUNTA_DIRIGIDA = (
+    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
     "Redactas UNA pregunta abierta para continuar una entrevista de "
     "emprendimiento, en el momento en que el usuario acepto profundizar "
     "para cubrir una familia especifica que su recorrido aun no tocaba "
@@ -801,6 +804,7 @@ SYSTEM_PREGUNTA_DIRIGIDA = (
 )
 
 SYSTEM_PLAN = (
+    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
     "Eres el redactor final de una app de emprendimiento. Recibes un JSON con "
     "entrada_original (el texto libre con el que la persona empezo o el "
     "mensaje nuevo de esta sesion si es un seguimiento), "
@@ -1038,6 +1042,7 @@ SYSTEM_JUEZ_SESION = (
 )
 
 SYSTEM_ORGANIZADOR = (
+    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
     "Organizas la idea de un usuario en un resumen honesto, SIN instruir. "
     "Recibes texto_usuario (su idea o situacion en texto libre) y una lista "
     "de puertas curadas del grafo (fase + titulo + resumen corto) para que "
@@ -1054,6 +1059,7 @@ SYSTEM_ORGANIZADOR = (
 )
 
 SYSTEM_REPORTE = (
+    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
     "Redactas la narracion de un Reporte de Sostenibilidad para un proyecto "
     "de emprendimiento (motor v2.2). Recibes 'resultados': salidas YA "
     "CALCULADAS por un modulo determinista (costo_unitario, margen, "
