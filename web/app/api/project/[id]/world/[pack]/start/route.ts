@@ -23,13 +23,13 @@ import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { cargarGrafo, cargarPreguntasCache, obtenerPregunta } from "@/lib/engine/graph";
 import { estadoInicial } from "@/lib/engine/recorrido";
-import { MENSAJE_LIMITE, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
-export async function POST(_request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
   const { id: projectId, pack } = await params;
 
   const entrada = (catalogo.packs as Array<{ clave: string; nombre: string; promesa: string }>).find(
@@ -104,7 +104,12 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
 
   // El límite se cobra al FINAL de las validaciones (hallado por el vuelo:
   // cobrarlo antes quemaba un arranque en el 503 de pre-integración).
-  const limite = await verificarLimiteDiario(user.id, user.email);
+  // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
+  const fusible = await verificarFusibleGlobal(user.email);
+  if (!fusible.permitido) {
+    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+  }
+  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }

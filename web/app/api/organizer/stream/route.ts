@@ -24,7 +24,7 @@ import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { construirMarkdown, SECCIONES_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
-import { MENSAJE_LIMITE, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 import type Anthropic from "@anthropic-ai/sdk";
 
@@ -56,7 +56,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
 
-  const limite = await verificarLimiteDiario(user.id, user.email);
+  // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
+  const fusible = await verificarFusibleGlobal(user.email);
+  if (!fusible.permitido) {
+    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+  }
+  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }

@@ -29,7 +29,7 @@ import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache } from "@/lib/engin
 import { seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { componerMensajeSeguimiento, type ItemParaComponer } from "@/lib/engine/seguimientoComposer";
-import { MENSAJE_LIMITE, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -70,7 +70,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
   }
 
-  const limite = await verificarLimiteDiario(user.id, user.email);
+  // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
+  const fusible = await verificarFusibleGlobal(user.email);
+  if (!fusible.permitido) {
+    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+  }
+  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
