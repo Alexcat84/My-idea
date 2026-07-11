@@ -1,22 +1,31 @@
 "use client";
 
 /**
- * IdeaView — la vista de idea (brief 2.4/2.5/2.6): layout de riel
- * (árbol punteado) + panel de contenido. El árbol SOLO se alimenta de
- * eventos reales: nodos de la ruta que devuelve /turn, etapas del SSE
- * del plan. La entrevista es una tarjeta a la vez; el "recorrido" es un
- * acordeón para releer, no un chat.
+ * IdeaView — la vista de idea (canon 3.6, mockups 03-08): breadcrumb
+ * "Mis ideas / <nombre>" + stepper de 5 etapas canónicas en el header,
+ * layout de riel (árbol punteado) + panel, y la vista Manos a la Obra
+ * (checklist + ritual + mundos) detrás de ?vista=manos.
+ *
+ * REGLA DE ORO: el árbol y el stepper SOLO se alimentan de eventos
+ * reales: nodos de la ruta que devuelve /turn, etapas del SSE del plan,
+ * filas persistidas del checklist. La entrevista es una tarjeta a la
+ * vez; el "recorrido" es un acordeón para releer, no un chat.
+ * EL AZUL PIENSA (explorar, planear), EL VERDE EJECUTA (etapa 5).
  */
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Acordeon } from "../../ui/Acordeon";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
+import { ManosALaObra, grupoVigente, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Markdown } from "../../ui/Markdown";
-import { MundosAddOn } from "../../ui/MundosAddOn";
 import { PlanDocumento } from "../../ui/PlanDocumento";
+import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { ReporteCard } from "../../ui/ReporteCard";
+import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
+import catalogo from "@/lib/assets/packs_catalog.json";
+import type { ChecklistEstado } from "@/lib/dbContract";
 import { consumirSSE } from "@/lib/sseCliente";
 
 const NOTA_SILENCIOSO = "cubierto por lo que contaste";
@@ -32,8 +41,15 @@ interface DetalleIdea {
     session_id: string;
     pregunta: string | null;
     listo_para_plan: boolean;
+    dominio?: string;
     ruta: Array<{ id: string; titulo: string; modo: string }>;
   } | null;
+  unlocks?: string[];
+  mundos?: Array<{
+    dominio: string;
+    plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
+  }>;
+  historial?: PlanHistorial[];
 }
 
 interface NodoNuevo {
@@ -65,9 +81,18 @@ function nodoArbolDesdeRuta(n: { id: string; titulo: string; modo: string }, idx
   };
 }
 
+const NOMBRE_MUNDO = Object.fromEntries(
+  (catalogo as { packs: Array<{ clave: string; nombre: string; promesa: string }> }).packs.map((p) => [
+    p.clave,
+    { nombre: p.nombre, promesa: p.promesa },
+  ])
+);
+
 export function IdeaView({ projectId }: { projectId: string }) {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const quiereEntrevista = searchParams.get("entrevista") === "1";
+  const quiereManos = searchParams.get("vista") === "manos";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -82,12 +107,27 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [recorrido, setRecorrido] = useState<QA[]>([]);
   const [nodos, setNodos] = useState<NodoArbol[]>([]);
   const contadorNodos = useRef(0);
+  const [dominioEntrevista, setDominioEntrevista] = useState<string>("core");
 
   // --- plan ---
   const [generandoPlan, setGenerandoPlan] = useState(false);
   const [etiquetaEtapa, setEtiquetaEtapa] = useState<string | undefined>();
   const [planMd, setPlanMd] = useState<string | null>(null);
   const arrancoRef = useRef(false);
+
+  // --- Manos a la Obra (Fase 3.6) ---
+  const [vistaManos, setVistaManos] = useState(quiereManos);
+  const [ritualInicial, setRitualInicial] = useState(false);
+  const [checklist, setChecklist] = useState<ChecklistData | null>(null);
+
+  const cargarChecklist = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/project/${projectId}/checklist`);
+      if (res.ok) setChecklist((await res.json()) as ChecklistData);
+    } catch {
+      /* el checklist es progresivo: sin él, la vista Manos avisa sola */
+    }
+  }, [projectId]);
 
   function agregarNodos(nuevos: NodoNuevo[] | undefined) {
     if (!nuevos?.length) return;
@@ -110,6 +150,19 @@ export function IdeaView({ projectId }: { projectId: string }) {
     } else if (data.tipo === "salio") {
       setPregunta(null);
     }
+  }
+
+  /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
+  function entrarASesionNueva(data: RespuestaTurno, dominio: string) {
+    setNodos([]);
+    contadorNodos.current = 0;
+    setRecorrido([]);
+    setListoParaPlan(false);
+    setPlanMd(null);
+    setVistaManos(false);
+    setRitualInicial(false);
+    setDominioEntrevista(dominio);
+    procesarTurno(data);
   }
 
   const generarPlan = useCallback(
@@ -145,6 +198,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
           } else if (evento === "done") {
             const d = data as { markdown: string };
             setPlanMd(d.markdown);
+            // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
+            void cargarChecklist();
           } else if (evento === "error") {
             setError(ERROR_GENERICO);
           }
@@ -156,7 +211,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         setEtiquetaEtapa(undefined);
       }
     },
-    [generandoPlan]
+    [generandoPlan, cargarChecklist]
   );
 
   // Carga inicial + arranque de entrevista si venimos del organizador.
@@ -173,11 +228,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
         }
         const d = (await res.json()) as DetalleIdea;
         setDetalle(d);
-        if (d.plan) setPlanMd(d.plan.contenido_md);
+        if (d.plan) {
+          setPlanMd(d.plan.contenido_md);
+          void cargarChecklist();
+        }
         if (d.entrevista) {
           setSessionId(d.entrevista.session_id);
           setPregunta(d.entrevista.pregunta);
           setListoParaPlan(d.entrevista.listo_para_plan);
+          setDominioEntrevista(d.entrevista.dominio ?? "core");
           setNodos(d.entrevista.ruta.map(nodoArbolDesdeRuta));
           contadorNodos.current = d.entrevista.ruta.length;
           const conversado = [...d.entrevista.ruta].reverse().find((n) => n.modo !== "silencioso");
@@ -233,6 +292,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
     }
   }
 
+  function irAManos(ritual = false) {
+    setRitualInicial(ritual);
+    setVistaManos(true);
+    router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
+  }
+
+  function volverAlViaje() {
+    setVistaManos(false);
+    router.replace(`/idea/${projectId}`, { scroll: false });
+  }
+
   if (cargando) {
     return <p className="px-6 py-12 text-dim">Cargando tu idea…</p>;
   }
@@ -251,6 +321,47 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const mostrarArbol = nodos.length > 0 && (entrevistaActiva || generandoPlan);
   const puedeGenerarPlan = Boolean(sessionId) && !generandoPlan && !planMd;
 
+  // Progreso real del checklist (para stepper, chips y fila de potenciadores).
+  const coreVigente = checklist ? grupoVigente(checklist, "core") : null;
+  const itemsCore = coreVigente?.etapas.flatMap((e) => e.items) ?? [];
+  const hechosCore = itemsCore.filter((i) => i.estado === "hecho").length;
+  const enObra = itemsCore.some((i) => i.estado !== "pendiente") || detalle.plan?.etiqueta === "seguimiento";
+  const unlocks = detalle.unlocks ?? [];
+  const progresoMundos: Record<string, { hechos: number; total: number } | null> = {};
+  for (const u of unlocks) {
+    const g = checklist ? grupoVigente(checklist, u) : null;
+    const items = g?.etapas.flatMap((e) => e.items) ?? [];
+    progresoMundos[u] = g
+      ? { hechos: items.filter((i) => i.estado === "hecho").length, total: items.length }
+      : null;
+  }
+
+  // Etapa canónica para el stepper: solo verdad del motor.
+  let etapaStepper: number;
+  let pensandoStepper = false;
+  let etiquetaStepper: string | undefined;
+  if (generandoPlan) {
+    etapaStepper = 4;
+    pensandoStepper = true;
+    etiquetaStepper = "Tu Plan · en camino…";
+  } else if (entrevistaActiva) {
+    etapaStepper = 3;
+    pensandoStepper = Boolean(pregunta) || enviando;
+    etiquetaStepper =
+      dominioEntrevista !== "core"
+        ? `${NOMBRE_MUNDO[dominioEntrevista]?.nombre ?? dominioEntrevista} · en curso…`
+        : "La Exploración · en curso…";
+  } else if (vistaManos || enObra) {
+    etapaStepper = 5;
+    etiquetaStepper = itemsCore.length > 0 ? `Manos a la Obra · ${hechosCore}/${itemsCore.length}` : "Manos a la Obra";
+  } else if (planMd) {
+    etapaStepper = 4;
+    etiquetaStepper = "Tu Plan · listo";
+  } else {
+    etapaStepper = 2;
+    etiquetaStepper = detalle.organizador ? "Claridad · lista" : undefined;
+  }
+
   const arbol = (
     <ArbolPensante
       nodos={nodos}
@@ -259,134 +370,255 @@ export function IdeaView({ projectId }: { projectId: string }) {
     />
   );
 
+  const mundosParaObra = unlocks.map((dominio) => ({
+    dominio,
+    nombre: NOMBRE_MUNDO[dominio]?.nombre ?? dominio,
+    promesa: NOMBRE_MUNDO[dominio]?.promesa ?? "",
+    plan: detalle.mundos?.find((m) => m.dominio === dominio)?.plan ?? null,
+  }));
+
   return (
-    <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6">
-      <header className="mb-6 flex items-start justify-between gap-4">
-        <div>
-          <Link href="/ideas" className="text-sm text-dim hover:text-ink">
-            ← Mis ideas
+    <div className="flex min-h-full flex-1 flex-col">
+      {/* header canon: breadcrumb + stepper de 5 etapas */}
+      <header className="flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6">
+        <div className="flex min-w-0 items-center gap-2.5">
+          <Link href="/ideas" className="shrink-0 text-[13px] text-dim hover:text-ink">
+            Mis ideas /
           </Link>
-          <h1 className="mt-1 text-xl font-semibold leading-snug">{detalle.idea.nombre}</h1>
+          <span className="truncate text-[14.5px] font-semibold">{detalle.idea.nombre}</span>
         </div>
-        {puedeGenerarPlan && (
-          <button
-            onClick={() => sessionId && generarPlan(sessionId)}
-            className="shrink-0 rounded-cinta border border-hairline bg-surface px-4 py-2 text-sm font-medium hover:bg-surface-2"
-          >
-            Generar mi plan
-          </button>
-        )}
+        <span className="flex-1" />
+        <div className="hidden md:block">
+          <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} />
+        </div>
+        <span
+          className={
+            "md:hidden whitespace-nowrap text-[12px] font-semibold " +
+            (etapaStepper === 5 ? "text-done" : "text-accent")
+          }
+        >
+          {etiquetaStepper}
+        </span>
       </header>
 
-      {error && <p className="mb-4 text-sm text-warn">{error}</p>}
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">
+        {error && <p className="mb-4 text-sm text-warn">{error}</p>}
 
-      <div className="flex flex-col gap-6 sm:grid sm:grid-cols-[190px_1fr] sm:gap-8">
-        {/* Riel izquierdo: el árbol (en móvil, acordeón arriba) */}
-        {mostrarArbol && (
+        {vistaManos && planMd && checklist ? (
           <>
-            <div className="hidden sm:block">{arbol}</div>
-            <div className="sm:hidden">
-              <Acordeon titulo="Recorrido del grafo" abierto={generandoPlan}>
-                {arbol}
-              </Acordeon>
-            </div>
-          </>
-        )}
-
-        <div className={"flex min-w-0 flex-col gap-4" + (mostrarArbol ? "" : " sm:col-span-2")}>
-          {/* Tarjeta de pregunta (una a la vez) */}
-          {pregunta && (
-            <TarjetaPregunta cintillo={cintillo} pregunta={pregunta} enviando={enviando} onEnviar={responder} />
-          )}
-          {!pregunta && enviando && (
-            <p className="text-sm text-dim">Pensando la siguiente pregunta…</p>
-          )}
-
-          {/* Acciones claras, no texto en conversación */}
-          {listoParaPlan && !generandoPlan && !planMd && (
-            <div className="rounded-panel border border-hairline bg-surface p-5">
-              <p className="font-medium">Con lo que contaste ya alcanza para tu plan.</p>
-              <button
-                onClick={() => sessionId && generarPlan(sessionId)}
-                className="mt-4 rounded-cinta bg-accent px-5 py-3 font-medium text-white hover:opacity-90"
-              >
-                Generar mi plan
-              </button>
-            </div>
-          )}
-
-          {generandoPlan && (
-            <p className="text-sm text-dim">Armando tu plan por etapas — mira el recorrido crecer.</p>
-          )}
-
-          {/* Recorrido releíble (no chat) */}
-          {recorrido.length > 0 && (
-            <Acordeon titulo={`Recorrido (${recorrido.length})`}>
-              <ol className="space-y-4">
-                {recorrido.map((qa, i) => (
-                  <li key={i} className="border-b border-hairline pb-3 last:border-0 last:pb-0">
-                    <p className="text-sm text-dim">{qa.pregunta}</p>
-                    <p className="mt-1">{qa.respuesta}</p>
-                  </li>
-                ))}
-              </ol>
-            </Acordeon>
-          )}
-
-          {/* Plan como documento acordeón (brief 2.6) */}
-          {planMd && <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} />}
-
-          {/* Bajo el plan: la tarjeta "Reporte de números" */}
-          {planMd && !generandoPlan && (
-            <ReporteCard
+            <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
+              ← Ver el plan
+            </button>
+            <ManosALaObra
               projectId={projectId}
-              contenidoInicial={detalle.reporte?.contenido_md ?? null}
-              preguntaPendiente={detalle.reporte_en_curso?.pregunta ?? null}
+              planMd={planMd}
+              checklist={checklist}
+              historial={detalle.historial ?? []}
+              mundos={mundosParaObra}
+              entrevistaAbierta={Boolean(pregunta)}
+              onVolverEntrevista={volverAlViaje}
+              onItemActualizado={({ id, estado }) => {
+                setChecklist((prev) =>
+                  prev
+                    ? {
+                        ...prev,
+                        planes: prev.planes.map((p) => ({
+                          ...p,
+                          etapas: p.etapas.map((e) => ({
+                            ...e,
+                            items: e.items.map((i) =>
+                              i.id === id
+                                ? { ...i, estado: estado as ChecklistEstado, updated_at: new Date().toISOString() }
+                                : i
+                            ),
+                          })),
+                        })),
+                      }
+                    : prev
+                );
+              }}
+              onSeguimientoIniciado={(data) => entrarASesionNueva(data as RespuestaTurno, "core")}
+              onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio)}
+              ritualAbierto={ritualInicial}
             />
-          )}
+          </>
+        ) : (
+          <div className="flex flex-col gap-6 sm:grid sm:grid-cols-[190px_1fr] sm:gap-8">
+            {/* Riel izquierdo: el árbol (en móvil, acordeón arriba) */}
+            {mostrarArbol && (
+              <>
+                <div className="hidden sm:block">
+                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+                    Recorrido de la idea
+                  </p>
+                  {arbol}
+                </div>
+                <div className="sm:hidden">
+                  <Acordeon titulo="Recorrido de la idea" abierto={generandoPlan}>
+                    {arbol}
+                  </Acordeon>
+                </div>
+              </>
+            )}
 
-          {/* Mundos HSEQ con candado (fachada de beta, brief sección 4) */}
-          {!entrevistaActiva && !generandoPlan && (planMd || detalle.organizador) && (
-            <MundosAddOn projectId={projectId} />
-          )}
+            <div className={"flex min-w-0 flex-col gap-4" + (mostrarArbol ? "" : " sm:col-span-2")}>
+              {/* Tarjeta de pregunta (una a la vez) */}
+              {pregunta && (
+                <TarjetaPregunta
+                  cintillo={cintillo}
+                  pregunta={pregunta}
+                  enviando={enviando}
+                  onEnviar={responder}
+                  textoBoton="Enviar"
+                />
+              )}
+              {!pregunta && enviando && (
+                <p className="text-sm text-dim">Pensando la siguiente pregunta…</p>
+              )}
 
-          {/* Organizador persistido (cuando no hay nada más activo) */}
-          {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
-            <>
-              <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
-                <Markdown>{detalle.organizador.contenido_md}</Markdown>
-              </section>
-              <button
-                onClick={async () => {
-                  setEnviando(true);
-                  setError(null);
-                  try {
-                    const inicio = await fetch("/api/session/start", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ texto: detalle.idea.entrada_original, project_id: projectId }),
-                    });
-                    if (inicio.status === 429) {
-                      setError(((await inicio.json()) as { error: string }).error);
-                    } else if (!inicio.ok) {
-                      setError(ERROR_GENERICO);
-                    } else {
-                      procesarTurno((await inicio.json()) as RespuestaTurno);
-                    }
-                  } catch {
-                    setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
-                  } finally {
-                    setEnviando(false);
+              {/* Suficiente para avanzar (canon 04): acción clara, no chat */}
+              {listoParaPlan && !generandoPlan && !planMd && (
+                <div className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
+                  <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+                    Suficiente para avanzar
+                  </p>
+                  <p className="mt-2 text-[17px] font-medium leading-relaxed">
+                    Con lo que me contaste alcanza: vamos a tu plan.
+                  </p>
+                  <button
+                    onClick={() => sessionId && generarPlan(sessionId)}
+                    className="mt-4 rounded-[10px] bg-accent px-5 py-3 font-medium text-white hover:opacity-90"
+                  >
+                    Generar mi plan
+                  </button>
+                </div>
+              )}
+
+              {puedeGenerarPlan && pregunta && (
+                <button
+                  onClick={() => sessionId && generarPlan(sessionId)}
+                  className="self-start text-sm text-dim hover:text-ink"
+                >
+                  Generar mi plan con lo que ya conté
+                </button>
+              )}
+
+              {generandoPlan && (
+                <p className="text-sm text-dim">Armando tu plan por etapas — mira el recorrido crecer.</p>
+              )}
+
+              {/* Recorrido releíble (no chat) */}
+              {recorrido.length > 0 && (
+                <Acordeon titulo={`Recorrido (${recorrido.length})`}>
+                  <ol className="space-y-4">
+                    {recorrido.map((qa, i) => (
+                      <li key={i} className="border-b border-hairline pb-3 last:border-0 last:pb-0">
+                        <p className="text-sm text-dim">{qa.pregunta}</p>
+                        <p className="mt-1">{qa.respuesta}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </Acordeon>
+              )}
+
+              {/* Plan como documento (canon 05) */}
+              {planMd && <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} />}
+
+              {/* CTA canon 05: el verde ejecuta espera en la etapa 5 */}
+              {planMd && !generandoPlan && !entrevistaActiva && (
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    onClick={() => irAManos(false)}
+                    className="rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
+                  >
+                    Pasar a Manos a la Obra
+                  </button>
+                  <button
+                    onClick={() => irAManos(true)}
+                    className="rounded-[10px] border border-white/15 px-5 py-3 text-[13.5px] text-dim hover:border-accent/60 hover:text-ink"
+                  >
+                    Ajustar el plan
+                  </button>
+                </div>
+              )}
+
+              {/* Bajo el plan: Tus Números (canon 05/07, 2 créditos) */}
+              {planMd && !generandoPlan && (
+                <div id="tus-numeros">
+                  <ReporteCard
+                    projectId={projectId}
+                    contenidoInicial={detalle.reporte?.contenido_md ?? null}
+                    preguntaPendiente={detalle.reporte_en_curso?.pregunta ?? null}
+                  />
+                </div>
+              )}
+
+              {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
+              {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
+                <>
+                  <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+                    Claridad · lista
+                  </p>
+                  <h2 className="text-xl font-semibold leading-snug">Esto entendí de tu idea</h2>
+                  <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
+                    <Markdown>{detalle.organizador.contenido_md}</Markdown>
+                  </section>
+                  <p className="text-sm text-dim">
+                    Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a
+                    pregunta.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <button
+                      onClick={async () => {
+                        setEnviando(true);
+                        setError(null);
+                        try {
+                          const inicio = await fetch("/api/session/start", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ texto: detalle.idea.entrada_original, project_id: projectId }),
+                          });
+                          if (inicio.status === 429) {
+                            setError(((await inicio.json()) as { error: string }).error);
+                          } else if (!inicio.ok) {
+                            setError(ERROR_GENERICO);
+                          } else {
+                            procesarTurno((await inicio.json()) as RespuestaTurno);
+                          }
+                        } catch {
+                          setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+                        } finally {
+                          setEnviando(false);
+                        }
+                      }}
+                      className="rounded-[10px] bg-accent px-5 py-3 font-medium text-white hover:opacity-90"
+                    >
+                      Explorar estas suposiciones
+                    </button>
+                  </div>
+                  <p className="text-xs text-dim">
+                    La Exploración usa 5 créditos. Tu Claridad es gratis y queda guardada para siempre.
+                  </p>
+                </>
+              )}
+
+              {/* Fila de potenciadores (canon 07 B): visible desde Claridad */}
+              {!entrevistaActiva && !generandoPlan && (planMd || detalle.organizador) && (
+                <PotenciaTuIdea
+                  projectId={projectId}
+                  unlocks={unlocks}
+                  progresoMundos={progresoMundos}
+                  conPlan={Boolean(planMd)}
+                  onVerMundo={() => irAManos(false)}
+                  onTusNumeros={() =>
+                    document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" })
                   }
-                }}
-                className="self-start rounded-cinta bg-accent px-5 py-3 font-medium text-white hover:opacity-90"
-              >
-                Continuar el desarrollo de mi idea
-              </button>
-            </>
-          )}
-        </div>
-      </div>
-    </main>
+                />
+              )}
+            </div>
+          </div>
+        )}
+      </main>
+    </div>
   );
 }

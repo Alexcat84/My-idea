@@ -103,21 +103,23 @@ export default function NuevaIdea() {
     const d = estado.data;
     return (
       <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-3 px-4 py-10 sm:px-6">
-        <h1 className="mb-3 text-xl font-semibold">Tu idea, organizada</h1>
-        <Acordeon titulo="En una frase" abierto>
+        {/* Canon 03 (Claridad): chip de estado + "Esto entendí de tu idea" */}
+        <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Claridad · lista</p>
+        <h1 className="mb-3 text-xl font-semibold">Esto entendí de tu idea</h1>
+        <Acordeon titulo="Tu idea en una frase" abierto>
           <p>{d.idea_en_una_frase}</p>
           {d.etapa_detectada && (
             <p className="mt-2 text-sm text-dim">Etapa detectada: {d.etapa_detectada}</p>
           )}
         </Acordeon>
-        <Acordeon titulo="Lo que ya tienes claro">
+        <Acordeon titulo="Lo que ya tienes" abierto>
           <ul className="list-disc space-y-1.5 pl-5">
             {(d.lo_que_ya_tienes_claro ?? []).map((b, i) => (
               <li key={i}>{b}</li>
             ))}
           </ul>
         </Acordeon>
-        <Acordeon titulo="Lo que estás asumiendo sin saberlo">
+        <Acordeon titulo="Lo que estás asumiendo" abierto>
           <ul className="list-disc space-y-1.5 pl-5">
             {(d.lo_que_estas_asumiendo_sin_saberlo ?? []).map((b, i) => (
               <li key={i}>{b}</li>
@@ -131,37 +133,63 @@ export default function NuevaIdea() {
             ))}
           </ul>
         </Acordeon>
-        <button
-          onClick={() => router.push(`/idea/${estado.projectId}?entrevista=1`)}
-          className="mt-5 rounded-cinta bg-accent px-5 py-3.5 font-medium text-white hover:opacity-90"
-        >
-          Continuar el desarrollo de mi idea
-        </button>
+        <p className="mt-2 text-sm text-dim">
+          Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a pregunta.
+        </p>
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <button
+            onClick={() => router.push(`/idea/${estado.projectId}?entrevista=1`)}
+            className="rounded-[10px] bg-accent px-6 py-3 font-medium text-white hover:opacity-90"
+          >
+            Explorar estas suposiciones
+          </button>
+          <button
+            onClick={() => {
+              setEstado({ fase: "captura" });
+            }}
+            className="rounded-[10px] border border-white/15 px-5 py-3 text-[13.5px] text-dim hover:border-accent/60 hover:text-ink"
+          >
+            Corregir algo
+          </button>
+        </div>
+        <p className="mt-2 text-xs text-dim">
+          La Exploración usa 5 créditos. Tu Claridad es gratis y queda guardada para siempre.
+        </p>
       </main>
     );
   }
 
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-4 py-10 sm:px-6">
-      <label htmlFor="idea" className="mb-4 block text-xl font-semibold leading-snug">
-        Cuéntame tu idea, o en qué punto estás con ella
+      {/* Canon 02 (La Chispa): el momento sagrado — un campo grande y nada más */}
+      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
+        Nueva idea · La Chispa
+      </p>
+      <label htmlFor="idea" className="mb-2 block text-2xl font-bold leading-snug tracking-tight">
+        Cuéntame tu idea
       </label>
+      <p className="mb-4 text-[15px] text-dim">
+        Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito.
+      </p>
       <CampoConVoz
         id="idea"
         valor={texto}
         onCambio={setTexto}
         filas={7}
         autoFocus
-        placeholder="Escríbela con tus palabras, o dictala con el micrófono…"
+        placeholder="Quiero vender café de especialidad a domicilio en mi barrio…"
       />
       {estado.error && <p className="mt-3 text-sm text-warn">{estado.error}</p>}
-      <button
-        onClick={enviar}
-        disabled={!texto.trim()}
-        className="mt-5 self-end rounded-cinta bg-accent px-6 py-3 font-medium text-white hover:opacity-90 disabled:opacity-40"
-      >
-        Organizar mi idea
-      </button>
+      <div className="mt-5 flex items-center justify-between gap-4">
+        <p className="text-xs text-dim">Sin plantillas ni formularios. Solo tu idea, en tus palabras.</p>
+        <button
+          onClick={enviar}
+          disabled={!texto.trim()}
+          className="rounded-[10px] bg-accent px-6 py-3 font-medium text-white hover:opacity-90 disabled:opacity-40"
+        >
+          Continuar
+        </button>
+      </div>
     </main>
   );
 }

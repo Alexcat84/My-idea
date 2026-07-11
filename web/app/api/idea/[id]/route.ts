@@ -31,7 +31,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
 
   const { data: sesiones } = await supabase
     .from("sessions")
-    .select("id, closed_at, estado_recorrido, created_at")
+    .select("id, closed_at, estado_recorrido, created_at, dominio")
     .eq("project_id", projectId)
     .order("created_at", { ascending: true });
 
@@ -39,30 +39,79 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   const { data: planes } = idsSesiones.length
     ? await supabase
         .from("plans")
-        .select("session_id, etiqueta, contenido_md, created_at")
+        .select("session_id, etiqueta, contenido_md, created_at, dominio")
         .in("session_id", idsSesiones)
         .order("created_at", { ascending: true })
     : { data: [] };
 
-  type FilaPlan = { session_id: string; etiqueta: string; contenido_md: string; created_at: string };
+  type FilaPlan = {
+    session_id: string;
+    etiqueta: string;
+    contenido_md: string;
+    created_at: string;
+    dominio: string | null;
+  };
   const filas = (planes ?? []) as FilaPlan[];
+  const esCore = (p: FilaPlan) => !p.dominio || p.dominio === "core";
   const ultimo = (pred: (p: FilaPlan) => boolean) => filas.filter(pred).at(-1) ?? null;
   const organizador = ultimo((p) => p.etiqueta === "organizador");
-  const plan = ultimo((p) => ["inicial", "completo", "seguimiento"].includes(p.etiqueta));
+  // El plan de la vista es el ÚLTIMO plan CORE: los planes de mundos viven
+  // en su propia sección (canon 08), no tapan el viaje principal.
+  const plan = ultimo((p) => esCore(p) && ["inicial", "completo", "seguimiento"].includes(p.etiqueta));
   const reporte = ultimo((p) => p.etiqueta === "reporte_numeros");
 
-  // Entrevista abierta: sesión sin cerrar con estado resumible.
+  // Mundos (Fase 3.5/3.6): unlocks del proyecto + último plan por dominio.
+  // project_unlocks puede no existir pre-016: se tolera con lista vacía.
+  let unlocks: string[] = [];
+  try {
+    const { data, error } = await supabase
+      .from("project_unlocks")
+      .select("dominio")
+      .eq("project_id", projectId);
+    if (!error) unlocks = ((data ?? []) as Array<{ dominio: string }>).map((u) => u.dominio);
+  } catch {
+    unlocks = [];
+  }
+  const mundos = unlocks.map((dominio) => {
+    const planMundo = ultimo(
+      (p) => p.dominio === dominio && ["inicial", "completo", "seguimiento"].includes(p.etiqueta)
+    );
+    return {
+      dominio,
+      plan: planMundo && {
+        etiqueta: planMundo.etiqueta,
+        contenido_md: planMundo.contenido_md,
+        created_at: planMundo.created_at,
+      },
+    };
+  });
+
+  // Historia (canon 06): etiqueta y fecha de cada plan core anterior al
+  // vigente — lo releíble, sin duplicar el contenido pesado.
+  const historialCore = filas.filter(
+    (p) => esCore(p) && ["inicial", "completo", "seguimiento"].includes(p.etiqueta)
+  );
+  const historial = historialCore.slice(0, -1).map((p) => ({
+    etiqueta: p.etiqueta,
+    created_at: p.created_at,
+    contenido_md: p.contenido_md,
+  }));
+
+  // Entrevista abierta: sesión sin cerrar con estado resumible. El dominio
+  // etiqueta la exploración de mundo (canon 08) sin cambiar el flujo.
   const graph = cargarGrafo();
   let entrevista: {
     session_id: string;
     pregunta: string | null;
     listo_para_plan: boolean;
+    dominio: string;
     ruta: Array<{ id: string; titulo: string; modo: string }>;
   } | null = null;
   for (const s of ((sesiones ?? []) as Array<{
     id: string;
     closed_at: string | null;
     estado_recorrido: EstadoSesionPersistido | null;
+    dominio?: string | null;
   }>).reverse()) {
     if (s.closed_at || !s.estado_recorrido) continue;
     const rec = s.estado_recorrido.recorrido;
@@ -70,6 +119,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       session_id: s.id,
       pregunta: rec.preguntaPendiente,
       listo_para_plan: rec.fase === "listo_para_plan",
+      dominio: s.dominio ?? "core",
       ruta: rec.ruta.map((nid, i) => ({
         id: nid,
         titulo: graph[nid]?.titulo_concepto ?? nid,
@@ -108,5 +158,8 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     reporte: reporte && { contenido_md: reporte.contenido_md, created_at: reporte.created_at },
     reporte_en_curso: reporteEnCurso,
     entrevista,
+    unlocks,
+    mundos,
+    historial,
   });
 }

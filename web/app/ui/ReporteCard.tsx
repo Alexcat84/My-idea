@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Acordeon } from "./Acordeon";
 import { Markdown } from "./Markdown";
 import { TarjetaPregunta } from "./TarjetaPregunta";
+import { PRECIOS } from "@/lib/precios";
 
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
 
@@ -88,7 +89,7 @@ export function ReporteCard({ projectId, contenidoInicial, preguntaPendiente }: 
     const { secciones, pie } = parsearReporte(estado.contenido);
     return (
       <section className="flex flex-col gap-3">
-        <h3 className="mt-2 text-base font-semibold">Reporte de números</h3>
+        <h3 className="mt-2 text-base font-semibold">Tus Números</h3>
         {secciones.map((s, i) => (
           <Acordeon key={i} titulo={s.titulo} abierto={i === 0}>
             <Markdown>{s.contenido}</Markdown>
@@ -110,7 +111,7 @@ export function ReporteCard({ projectId, contenidoInicial, preguntaPendiente }: 
   if (estado.fase === "preguntando") {
     return (
       <section className="flex flex-col gap-3">
-        <h3 className="mt-2 text-base font-semibold">Reporte de números</h3>
+        <h3 className="mt-2 text-base font-semibold">Tus Números</h3>
         <TarjetaPregunta
           cintillo="Tus números"
           pregunta={estado.pregunta}
@@ -122,19 +123,25 @@ export function ReporteCard({ projectId, contenidoInicial, preguntaPendiente }: 
     );
   }
 
+  // Canon 05/07: la tarjeta "Tus Números" bajo el plan, con su costo en
+  // créditos desde precios.ts (jamás cifras hardcodeadas).
   return (
-    <section className="rounded-panel border border-hairline bg-surface p-5">
-      <h3 className="text-base font-semibold">Reporte de números</h3>
+    <section className="rounded-panel border border-hairline bg-surface p-5 hover:border-accent/55" data-transiciona>
+      <div className="flex items-center justify-between gap-3">
+        <h3 className="text-base font-semibold">Tus Números</h3>
+        <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-1 text-[11px] font-bold text-accent">
+          {PRECIOS.tus_numeros} créditos
+        </span>
+      </div>
       <p className="mt-1.5 text-sm text-dim">
-        Unas pocas preguntas sobre costos y precios, y te decimos si tu idea puede sostenerse — con
-        tus números, no con promedios.
+        Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
       </p>
       <button
         onClick={() => paso()}
         disabled={enviando}
         className="mt-4 rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-sm font-medium hover:bg-accent-soft disabled:opacity-50"
       >
-        {enviando ? "Preparando…" : "Sacar mi reporte"}
+        {enviando ? "Preparando…" : "Sacar mis números"}
       </button>
       {error && <p className="mt-3 text-sm text-warn">{error}</p>}
     </section>

@@ -1,34 +1,35 @@
 /**
- * /ideas: "Mis ideas" (brief 2.2) — lista vertical de cintas, una por
- * idea, con nombre, última actividad y mini-estado. Server Component:
- * lee directo de Supabase con la sesión del usuario (proxy.ts ya
- * garantizó que hay usuario, anónimo si hizo falta).
+ * /ideas: "Mis ideas" — el home de cintas (canon 3.6, mockup 01): barra
+ * con el logo y Potenciadores, saludo con captura rápida (La Chispa
+ * embebida), y una cinta por idea con su mini-stepper de 5 puntos, su
+ * chip de estado y su pista. Server Component: lee directo de Supabase
+ * con la sesión del usuario (proxy.ts ya garantizó que hay usuario).
  *
- * Vivía en "/" hasta la Fase 3.4: la raíz ahora es la landing pública
- * del fundador y esta pantalla es el hogar de quien ya tiene ideas.
- * Al visitante nuevo (cero ideas) no se le muestra una lista vacía —
- * se le lleva directo a la captura. "Salir" solo aparece para cuentas
- * con email: a un usuario anónimo/invitado cerrarle la sesión le
- * dejaría sus ideas huérfanas.
+ * REGLA DE ORO: el mini-stepper y los chips solo muestran verdad
+ * persistida del motor (lib/ideas.ts las deriva; aquí solo se pintan).
+ * Al visitante nuevo (cero ideas) se le lleva directo a la captura.
+ * "Salir" solo aparece para cuentas con email.
  */
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { haceCuanto, listarIdeasConEstado, type EstadoIdea } from "@/lib/ideas";
+import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
 import { BotonSalir } from "../ui/BotonSalir";
+import { Saludo } from "../ui/Saludo";
+import { StepperMini } from "../ui/Stepper";
 
 export const dynamic = "force-dynamic";
 
-function ChipEstado({ estado }: { estado: EstadoIdea }) {
-  const activo = estado === "En entrevista";
+function Chip({ chip }: { chip: ChipCinta }) {
+  const tono =
+    chip.tono === "verde"
+      ? "border-done/45 text-done"
+      : chip.tono === "azul"
+        ? "border-accent/45 text-accent"
+        : "border-white/20 text-ink";
   return (
-    <span
-      className={
-        "rounded-full px-2.5 py-0.5 text-xs " +
-        (activo ? "bg-accent-soft text-accent" : "border border-hairline text-dim")
-      }
-    >
-      {estado}
+    <span className={`inline-flex items-center rounded-full border px-3.5 py-1.5 text-[12.5px] font-bold ${tono}`}>
+      {chip.texto}
     </span>
   );
 }
@@ -46,36 +47,83 @@ export default async function MisIdeas() {
   if (ideas.length === 0) redirect("/nueva");
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-8 sm:px-6">
-      <header className="mb-8 flex items-center justify-between">
-        <h1 className="text-2xl font-semibold tracking-tight">Mis ideas</h1>
-        <div className="flex items-center gap-5">
-          {!esAnonimo && <BotonSalir />}
-          <Link
-            href="/nueva"
-            className="rounded-cinta bg-accent px-4 py-2 font-medium text-white hover:opacity-90"
-          >
-            Nueva idea
-          </Link>
-        </div>
+    <div className="flex min-h-full flex-1 flex-col">
+      <header className="flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6">
+        <Link href="/ideas" className="text-base font-extrabold tracking-tight">
+          My <span className="text-accent">idea</span>
+        </Link>
+        <span className="flex-1" />
+        <Link href="/potenciadores" className="text-[13.5px] text-dim hover:text-ink">
+          Potenciadores
+        </Link>
+        {!esAnonimo && <BotonSalir />}
       </header>
 
-      <ul className="flex flex-col gap-3">
-        {ideas.map((idea) => (
-          <li key={idea.id}>
-            <Link
-              href={`/idea/${idea.id}`}
-              className="block rounded-cinta border border-hairline bg-surface px-5 py-4 hover:bg-surface-2"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <p className="font-medium leading-snug">{idea.nombre}</p>
-                <ChipEstado estado={idea.estado} />
-              </div>
-              <p className="mt-1.5 text-xs text-dim">{haceCuanto(idea.actualizado)}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </main>
+      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:px-6">
+        <h1 className="anima-plan-in text-2xl font-bold tracking-tight">
+          <Saludo />
+        </h1>
+
+        {/* Captura rápida: La Chispa embebida — el campo real vive en /nueva */}
+        <Link
+          href="/nueva"
+          className="anima-plan-in mt-4 flex items-center gap-3.5 rounded-[14px] border border-accent/30 bg-surface px-5 py-4 hover:border-accent/55"
+          style={{ animationDelay: "0.1s" }}
+        >
+          <span className="flex-1 text-[15px] text-dim">Cuéntame una idea nueva…</span>
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-accent/55">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <rect x="6" y="1.5" width="4" height="7.5" rx="2" fill="var(--accent)" />
+              <path d="M3.5 8a4.5 4.5 0 0 0 9 0" stroke="var(--accent)" strokeWidth="1.4" fill="none" />
+              <line x1="8" y1="12.6" x2="8" y2="14.5" stroke="var(--accent)" strokeWidth="1.4" />
+            </svg>
+          </span>
+        </Link>
+
+        <p
+          className="anima-plan-in mb-4 mt-10 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim"
+          style={{ animationDelay: "0.2s" }}
+        >
+          Tus ideas · {ideas.length}
+        </p>
+
+        <ul className="flex flex-col gap-3.5">
+          {ideas.map((idea, i) => (
+            <li key={idea.id} className="anima-plan-in" style={{ animationDelay: `${0.3 + i * 0.1}s` }}>
+              <Link
+                href={`/idea/${idea.id}`}
+                className={
+                  "block rounded-panel border bg-surface px-5 py-5 sm:px-6 " +
+                  (idea.etapa === 5
+                    ? "border-done/30 hover:border-done/60"
+                    : "border-hairline hover:border-accent/55")
+                }
+                data-transiciona
+              >
+                {/* canon 01 mobile: título · stepper+chips · pista, apilados;
+                    en desktop el bloque de chips pasa a la derecha */}
+                <div className="flex items-center gap-3">
+                  <p className="min-w-0 flex-1 text-[15px] font-semibold leading-snug sm:text-[17px]">
+                    {idea.nombre}
+                  </p>
+                  <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0">
+                    <path d="M4 2l4 4-4 4" stroke="var(--text-dim)" strokeWidth="1.5" fill="none" />
+                  </svg>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <StepperMini etapa={idea.etapa} pensando={idea.pensando} />
+                  <span className="flex flex-1 flex-wrap justify-end gap-1.5">
+                    {idea.chips.map((chip) => (
+                      <Chip key={chip.texto} chip={chip} />
+                    ))}
+                  </span>
+                </div>
+                <p className="mt-2 text-xs text-dim">{idea.pista}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </main>
+    </div>
   );
 }

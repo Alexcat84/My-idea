@@ -647,6 +647,66 @@ async function faseMundos(cookie: string, projectId: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Fase 2h (Fase 3.6): el contrato que la UI de convergencia consume.
+// GET /api/idea/[id] debe traer lo que las pantallas nuevas pintan:
+// unlocks (fila real de project_unlocks), mundos con su plan (post ciclo
+// positivo), historial de planes core anteriores (acordeon Historia), y
+// el checklist agrupado con el grupo vigente al final (orden cronologico).
+// ---------------------------------------------------------------------------
+async function faseContratoUI(cookie: string, projectId: string, cicloMundoCompleto: boolean) {
+  separador("FASE 2h (Fase 3.6): contrato de la UI -- /api/idea con unlocks, mundos e historial");
+
+  const d = await getJson(cookie, `/api/idea/${projectId}`);
+
+  const unlocks = (d.unlocks ?? []) as string[];
+  if (!unlocks.includes("quality")) {
+    throw new Error(`/api/idea no reporta el unlock de quality: ${JSON.stringify(unlocks)}`);
+  }
+  log(`OK: unlocks = ${JSON.stringify(unlocks)} (fila real de project_unlocks).`);
+
+  const historial = (d.historial ?? []) as Array<{ etiqueta: string; created_at: string; contenido_md: string }>;
+  if (historial.length < 1) {
+    throw new Error("historial vacio: el plan de macetas anterior al de seguimiento debia estar ahi (acordeon Historia)");
+  }
+  if (!historial.every((h) => h.contenido_md && h.created_at)) {
+    throw new Error("entradas de historial sin contenido o fecha");
+  }
+  log(`OK: historial con ${historial.length} plan(es) core anteriores, releibles.`);
+
+  const plan = d.plan as { etiqueta: string } | null;
+  if (plan?.etiqueta !== "seguimiento") {
+    throw new Error(`el plan vigente de la vista debia ser el de seguimiento (core), llego '${plan?.etiqueta}'`);
+  }
+  log("OK: el plan de la vista es el ultimo CORE (los planes de mundos no lo tapan).");
+
+  const mundos = (d.mundos ?? []) as Array<{ dominio: string; plan: { contenido_md: string } | null }>;
+  const mundoQuality = mundos.find((m) => m.dominio === "quality");
+  if (!mundoQuality) {
+    throw new Error("mundos no incluye quality pese al unlock");
+  }
+  if (cicloMundoCompleto && !mundoQuality.plan?.contenido_md) {
+    throw new Error("tras el ciclo positivo, el plan del mundo quality debia venir en mundos[]");
+  }
+  log(`OK: seccion de mundo quality ${mundoQuality.plan ? "con su plan" : "activa (sin plan aun)"}.`);
+
+  // El grupo vigente de cada dominio debe ser el ULTIMO (orden cronologico).
+  const cl = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const planes = cl.planes as Array<{ dominio: string; etapas: Array<{ items: ItemVuelo[] }> }>;
+  const gruposCore = planes.filter((p) => p.dominio === "core");
+  if (gruposCore.length < 2) {
+    throw new Error(`se esperaban >=2 grupos core (macetas + seguimiento), hay ${gruposCore.length}`);
+  }
+  const vigente = gruposCore.at(-1)!;
+  const itemsVigente = vigente.etapas.flatMap((e) => e.items);
+  if (itemsVigente.some((i) => i.estado !== "pendiente")) {
+    throw new Error("el grupo core VIGENTE (el del plan de seguimiento) debia venir todo pendiente -- el orden cronologico del GET esta roto");
+  }
+  log("OK: grupo vigente = ultimo cronologico (la pantalla Manos a la Obra pinta el checklist correcto).");
+
+  return { costoUsd: 0 };
+}
+
+// ---------------------------------------------------------------------------
 // Fase 3: reporte digital -- fijos=200, precio=13, variable~0 -> equilibrio
 // esperado ceil(200/13)=16. Vocabulario esperado: "usuario(s)"/"suscripcion",
 // nunca "pieza".
@@ -816,7 +876,9 @@ async function main() {
     costos.macetas = macetas.costoUsd;
     saltosVerificados = macetas.saltosVerificados;
     costos.checklistSeguimiento = (await faseChecklistSeguimiento(cookie, macetas.projectId)).costoUsd;
-    costos.mundos = (await faseMundos(cookie, macetas.projectId)).costoUsd;
+    const mundos = await faseMundos(cookie, macetas.projectId);
+    costos.mundos = mundos.costoUsd;
+    costos.contratoUI = (await faseContratoUI(cookie, macetas.projectId, mundos.cicloCompleto)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -842,10 +904,11 @@ async function main() {
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
   log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
   log("  6. mundos HSEQ: muro 403 sin unlock, unlock idempotente con creditos, y 503/ciclo segun integracion (Fase 3.5): OK");
-  log("  7. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
-  log("  8. guardian GIGO (numeros contaminados): OK");
+  log("  7. contrato de la UI de convergencia: unlocks + historial + mundos + grupo vigente (Fase 3.6): OK");
+  log("  8. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
+  log("  9. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 9/9 verificaciones OK");
+  separador("VUELO COMPLETO: 10/10 verificaciones OK");
   escribirTranscripcion();
 }
 

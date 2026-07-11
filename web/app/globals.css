@@ -17,6 +17,7 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-done: var(--done);
+  --color-done-soft: var(--done-soft);
   --color-warn: var(--warn);
   --font-sans: var(--font-inter);
   --radius-cinta: var(--radius);
@@ -70,3 +71,38 @@ summary::-webkit-details-marker {
   scrollbar-width: thin;
   scrollbar-color: var(--surface-2) transparent;
 }
+
+/*
+ * Animaciones canon (paquete visual Fase 3.6, VARIABLES del canon):
+ * el pulso azul piensa, el pulso verde ejecuta, el anillo gira mientras
+ * el motor responde, y todo lo que entra lo hace con planIn.
+ */
+@keyframes ideaPulse {
+  0% { box-shadow: 0 0 0 0 rgba(77, 124, 254, 0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(77, 124, 254, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(77, 124, 254, 0); }
+}
+@keyframes greenPulse {
+  0% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.5); }
+  70% { box-shadow: 0 0 0 7px rgba(63, 185, 80, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0); }
+}
+@keyframes planIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spinRing {
+  to { transform: rotate(360deg); }
+}
+@keyframes barGrow {
+  from { width: 0; }
+}
+@keyframes checkPop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+.anima-idea-pulse { animation: ideaPulse 1.8s ease-out infinite; }
+.anima-green-pulse { animation: greenPulse 1.8s ease-out infinite; }
+.anima-plan-in { animation: planIn 0.6s ease-out both; }
+.anima-check-pop { animation: checkPop 0.4s ease-out both; }
+.anima-spin-ring { animation: spinRing 0.9s linear infinite; }

@@ -24,6 +24,7 @@ interface ItemChecklist {
   destacado: boolean;
   estado: ChecklistEstado;
   nota: string | null;
+  created_at: string;
   updated_at: string;
 }
 
@@ -41,11 +42,14 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
   }
 
+  // Orden cronológico de planes (created_at) para que el grupo VIGENTE de
+  // cada dominio sea el último (Fase 3.6: la pantalla Manos a la Obra lo
+  // necesita; plan_id es uuid y su orden era arbitrario).
   const { data, error } = await supabase
     .from("checklist_items")
-    .select("id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, updated_at")
+    .select("id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, created_at, updated_at")
     .eq("project_id", projectId)
-    .order("plan_id", { ascending: true })
+    .order("created_at", { ascending: true })
     .order("etapa", { ascending: true })
     .order("orden", { ascending: true });
   if (error) {

@@ -123,9 +123,14 @@ export function PlanDocumento({ md, nombreIdea }: { md: string; nombreIdea: stri
         return (
           <Acordeon key={i} titulo={s.titulo}>
             <Markdown>{resto}</Markdown>
+            {/* Canon: la caja "Esta semana" es VERDE — acción sobre el mundo real */}
             {estaSemana && (
-              <div className="mt-4 rounded-cinta border border-hairline bg-accent-soft px-4 py-3">
-                <Markdown>{estaSemana}</Markdown>
+              <div className="mt-4 rounded-cinta border border-done/35 bg-done-soft px-4 py-3">
+                <p className="mb-1 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[1.4px] text-done">
+                  <span className="anima-green-pulse h-2 w-2 rounded-full bg-done" />
+                  Esta semana
+                </p>
+                <Markdown>{estaSemana.replace(/^\*\*Esta semana:?\*\*\s*/i, "")}</Markdown>
               </div>
             )}
           </Acordeon>
