@@ -134,7 +134,7 @@ function IconoEstado({ estado }: { estado: ChecklistEstado }) {
       </span>
     );
   }
-  return <span className="box-border h-[22px] w-[22px] shrink-0 rounded-full border-[1.5px] border-white/20" />;
+  return <span className="box-border block h-[22px] w-[22px] shrink-0 rounded-full border-[1.5px] border-white/20" />;
 }
 
 function FilaItem({

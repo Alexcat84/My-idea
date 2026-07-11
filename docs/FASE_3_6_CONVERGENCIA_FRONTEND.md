@@ -42,9 +42,13 @@ alcanzabilidad dirigida 100.0% desde 41 semillas, 0 títulos duplicados.
 
 | Paso | Costo |
 |---|---|
-| b. familias (clasificador por palabras clave) | $0 |
-| c. caché de preguntas parcial (Haiku 4.5) | PENDIENTE |
-| d. índice Voyage completo (~2805 nodos) | PENDIENTE |
+| b. familias (clasificador por palabras clave, 2805 nodos) | $0 |
+| c. caché de preguntas parcial: 1381 parchados + 185 omitidos sin sucesores (714,943 in / 124,755 out, Haiku 4.5, 36 min) | **$1.3387** |
+| d. índice Voyage completo: 2805 nodos, dim 512, 424,474 tokens (voyage-4-lite) | **≈$0.01** |
+| Caché final: 2594 preguntas (todos los elegibles del grafo ampliado) | |
+
+MIN_SCORE_SALTO=0.30 sigue calibrado: los 2 casos de referencia dan
+0.3503 (pasa) / 0.2583 (excluido) con el índice nuevo.
 
 ## B-E. Convergencia visual (canon: 8 HTML + REGLAS_Y_TOKENS.md)
 
@@ -83,6 +87,18 @@ persistidas y eventos reales del motor.
 
 - FASE 2h nueva en `scripts/vuelo.ts`: contrato de la UI (unlocks +
   historial + mundos + grupo vigente cronológico).
-- `scripts/capturas.ts`: PNGs desktop 1240 / mobile 380 de las 5
-  pantallas, autenticado como dev user (examples/capturas/).
-- Resultados: PENDIENTE (vuelo 10/10, suites, capturas, preview URL).
+- **Vuelo: 10/10 verificaciones OK — $0.4038 reales**, incluido POR FIN
+  el ciclo positivo completo del mundo quality: unlock 3 créditos →
+  start 200 (ya no 503) → 4 turnos → plan `dominio=quality` → checklist
+  del mundo con 22 ítems agrupado por dominio. Transcripción en
+  `examples/fase3_0_vuelo_web.txt`.
+- **Suites en clon limpio**: web 213/216 (3 skipped por diseño: capa
+  Voyage viva sin key) + python 12/12. En el árbol de trabajo (con
+  .env): web 216/216.
+- `scripts/capturas.ts` (Playwright + dev user): PNGs desktop 1240 /
+  mobile 380 de las 5 pantallas en `web/examples/capturas/`, tomadas
+  sobre el proyecto real del vuelo (plan seguimiento + checklist +
+  mundo quality activo con su plan) — cotejadas contra los HTML 01/02/
+  05/06/07/08 del canon.
+- Costo total de la fase en APIs: $1.34 (caché) + ~$0.01 (Voyage) +
+  $0.40 (vuelo) ≈ **$1.75**.
