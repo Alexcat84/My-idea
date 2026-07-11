@@ -521,6 +521,132 @@ async function faseChecklistSeguimiento(cookie: string, projectId: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Fase 2g (Fase 3.5): mundos detras de flags. SIEMPRE verifica el muro
+// (sin unlock -> 403) y la idempotencia del unlock. El ciclo positivo
+// (start -> turnos -> plan dominio=quality -> checklist del dominio) se
+// autodetecta: solo corre si la linea de ensamblaje (integrar_packs.py)
+// ya metio nodos de packs al grafo web; antes de eso, start con unlock
+// debe responder 503 en palabras de persona.
+// ---------------------------------------------------------------------------
+async function faseMundos(cookie: string, projectId: string) {
+  separador("FASE 2g (Fase 3.5): mundos HSEQ -- el muro, el unlock y el ciclo");
+
+  // El grafo web tiene nodos de packs? (post-linea-de-ensamblaje)
+  const grafoRes = await fetch(`${BASE_URL}/api/projects`, { headers: { Cookie: cookie } });
+  void grafoRes; // el grafo no se expone por API; se detecta via el 503/200 del start
+
+  // 1. Prueba negativa: sin fila en project_unlocks, /start = 403.
+  const sinUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/quality/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (sinUnlock.status !== 403) {
+    throw new Error(`start sin unlock debio responder 403 (el muro), respondio ${sinUnlock.status}`);
+  }
+  log("OK: sin unlock, el mundo no existe (403 con palabras de persona).");
+
+  // 2. Pack inexistente -> 404.
+  const packFalso = await fetch(`${BASE_URL}/api/project/${projectId}/world/finanzas/unlock`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (packFalso.status !== 404) {
+    throw new Error(`unlock de pack inexistente debio dar 404, dio ${packFalso.status}`);
+  }
+  log("OK: pack fuera del catalogo rechazado (404).");
+
+  // 3. Unlock real (stub de creditos) + idempotencia.
+  const u1 = await postJson(cookie, `/api/project/${projectId}/world/quality/unlock`, {});
+  if (u1.ok !== true || u1.dominio !== "quality") {
+    throw new Error(`unlock fallo: ${JSON.stringify(u1)}`);
+  }
+  log(`OK: unlock de quality con ${u1.creditos} creditos (stub).`);
+  const u2 = await postJson(cookie, `/api/project/${projectId}/world/quality/unlock`, {});
+  if (u2.ya_estaba_activo !== true) {
+    throw new Error(`el segundo unlock debio ser idempotente: ${JSON.stringify(u2)}`);
+  }
+  log("OK: unlock idempotente (23505 absorbido).");
+
+  // Verificar la fila real en Supabase.
+  const { data: filaUnlock, error: errUnlock } = await supabaseAdmin
+    .from("project_unlocks")
+    .select("dominio, creditos_pagados")
+    .eq("project_id", projectId)
+    .eq("dominio", "quality")
+    .single();
+  if (errUnlock || !filaUnlock) {
+    throw new Error(`no se encontro la fila de project_unlocks: ${errUnlock?.message}`);
+  }
+  log(`OK: fila persistida (creditos_pagados=${filaUnlock.creditos_pagados}).`);
+
+  // 4. Con unlock: pre-integracion 503; post-integracion, ciclo completo.
+  const conUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/quality/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (conUnlock.status === 503) {
+    log("OK: mundo activado pero contenido en preparacion (503) -- la linea de");
+    log("    ensamblaje (integrar_packs.py) aun no corre; el ciclo positivo de");
+    log("    esta fase se completara cuando existan bridges_aprobados x3.");
+    return { costoUsd: 0, cicloCompleto: false };
+  }
+  if (!conUnlock.ok) {
+    throw new Error(`start con unlock respondio ${conUnlock.status} (se esperaba 200 o 503 pre-integracion)`);
+  }
+
+  // ---- ciclo positivo (grafo ya integrado) ----
+  let rw = (await conUnlock.json()) as Record<string, unknown>;
+  const worldSessionId = String(rw.session_id);
+  let costoW = Number(rw.costo_usd ?? 0);
+  log(`world session: ${worldSessionId}, tipo: ${rw.tipo}`);
+  let turnosW = 0;
+  const RESPUESTAS_MUNDO = [
+    "Mis clientes se quejan de piezas con burbujas y acabados irregulares entre lotes.",
+    "Reviso cada pieza al final, pero no tengo un registro de que falla ni cuando.",
+    "Me interesa un proceso simple para detectar el defecto antes de hornear la pieza.",
+    "Con eso me basta por ahora.",
+  ];
+  while (rw.tipo === "pregunta" && turnosW < MAX_TURNOS_SEGURIDAD) {
+    turnosW++;
+    const respuesta = RESPUESTAS_MUNDO[Math.min(turnosW - 1, RESPUESTAS_MUNDO.length - 1)];
+    log(`[mundo turno ${turnosW}] ${rw.pregunta}`);
+    rw = await postJson(cookie, `/api/session/${worldSessionId}/turn`, { respuesta });
+    costoW = Number(rw.costo_usd ?? costoW);
+  }
+  if (rw.tipo !== "listo_para_plan") {
+    throw new Error(`la sesion de mundo no llego a listo_para_plan (tipo: ${rw.tipo})`);
+  }
+  const resPlanW = await fetch(`${BASE_URL}/api/session/${worldSessionId}/plan`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  let mdW = "";
+  await consumirSSE(resPlanW, ({ evento, data }) => {
+    if (evento === "done") {
+      const d = data as { markdown: string; costo_usd: number };
+      mdW = d.markdown;
+      costoW = d.costo_usd;
+    }
+  });
+  if (!mdW) throw new Error("el plan del mundo salio vacio");
+  const { data: planW } = await supabaseAdmin
+    .from("plans")
+    .select("id, etiqueta, dominio")
+    .eq("session_id", worldSessionId)
+    .single();
+  if (planW?.dominio !== "quality") {
+    throw new Error(`plans.dominio esperado 'quality', llego '${planW?.dominio}'`);
+  }
+  const clW = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const resumenW = clW.resumen as Record<string, { total: number }>;
+  if (!resumenW.quality || resumenW.quality.total === 0) {
+    throw new Error(`el checklist del mundo no aparece agrupado por dominio: ${JSON.stringify(resumenW)}`);
+  }
+  log(`OK: ciclo completo del mundo (plan dominio=quality, checklist quality con ${resumenW.quality.total} items).`);
+  return { costoUsd: costoW, cicloCompleto: true };
+}
+
+// ---------------------------------------------------------------------------
 // Fase 3: reporte digital -- fijos=200, precio=13, variable~0 -> equilibrio
 // esperado ceil(200/13)=16. Vocabulario esperado: "usuario(s)"/"suscripcion",
 // nunca "pieza".
@@ -690,6 +816,7 @@ async function main() {
     costos.macetas = macetas.costoUsd;
     saltosVerificados = macetas.saltosVerificados;
     costos.checklistSeguimiento = (await faseChecklistSeguimiento(cookie, macetas.projectId)).costoUsd;
+    costos.mundos = (await faseMundos(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -714,10 +841,11 @@ async function main() {
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
   log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
-  log("  6. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
-  log("  7. guardian GIGO (numeros contaminados): OK");
+  log("  6. mundos HSEQ: muro 403 sin unlock, unlock idempotente con creditos, y 503/ciclo segun integracion (Fase 3.5): OK");
+  log("  7. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
+  log("  8. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 8/8 verificaciones OK");
+  separador("VUELO COMPLETO: 9/9 verificaciones OK");
   escribirTranscripcion();
 }
 
