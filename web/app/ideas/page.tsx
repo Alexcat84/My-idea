@@ -91,7 +91,9 @@ export default async function MisIdeas() {
           {ideas.map((idea, i) => (
             <li key={idea.id} className="anima-plan-in" style={{ animationDelay: `${0.3 + i * 0.1}s` }}>
               <Link
-                href={`/idea/${idea.id}`}
+                // C0: una idea ya en Manos a la Obra entra directo a la
+                // etapa 5 (checklist + mundos), no al documento del plan.
+                href={idea.etapa === 5 ? `/idea/${idea.id}?vista=manos` : `/idea/${idea.id}`}
                 className={
                   "block rounded-panel border bg-surface px-5 py-5 sm:px-6 " +
                   (idea.etapa === 5

@@ -170,6 +170,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
       if (generandoPlan) return;
       setGenerandoPlan(true);
       setPregunta(null);
+      // C0 (la puerta que falta): sin esto, llegar al plan desde
+      // "Suficiente para avanzar" dejaba entrevistaActiva=true para
+      // siempre y escondía el CTA "Pasar a Manos a la Obra" y la fila
+      // "Potencia tu idea" — el fundador terminaba su plan sin ninguna
+      // puerta visible hacia la etapa 5 ni hacia los 6 mundos.
+      setListoParaPlan(false);
       setError(null);
       try {
         const res = await fetch(`/api/session/${sid}/plan`, { method: "POST" });
@@ -503,8 +509,27 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 </button>
               )}
 
+              {/* C5 (canon 04→05): la espera del plan es una tarjeta con el
+                  anillo pensando y la etapa que va llegando por SSE — el
+                  riel de la izquierda enciende cada etapa real. */}
               {generandoPlan && (
-                <p className="text-sm text-dim">Armando tu plan por etapas — mira el recorrido crecer.</p>
+                <div className="anima-plan-in rounded-panel border border-hairline bg-surface p-6">
+                  <p className="flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
+                    <span className="relative inline-block h-3 w-3">
+                      <span
+                        className="anima-spin-ring absolute inset-0 box-border rounded-full border-2"
+                        style={{ borderColor: "rgba(77,124,254,0.2)", borderTopColor: "var(--accent)" }}
+                      />
+                    </span>
+                    Tu Plan · en camino
+                  </p>
+                  <p className="mt-3 text-[17px] font-medium leading-relaxed">
+                    {etiquetaEtapa ? `Escribiendo: ${etiquetaEtapa}` : "Armando tu plan por etapas."}
+                  </p>
+                  <p className="mt-1.5 text-sm text-dim">
+                    Cada etapa se enciende en el recorrido cuando queda escrita de verdad.
+                  </p>
+                </div>
               )}
 
               {/* Recorrido releíble (no chat) */}
@@ -522,7 +547,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
               )}
 
               {/* Plan como documento (canon 05) */}
-              {planMd && <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} />}
+              {planMd && (
+                <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} onEmpezar={() => irAManos(false)} />
+              )}
 
               {/* CTA canon 05: el verde ejecuta espera en la etapa 5 */}
               {planMd && !generandoPlan && !entrevistaActiva && (

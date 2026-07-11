@@ -9,7 +9,6 @@
  */
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Acordeon } from "../ui/Acordeon";
 import { ArbolPensante, type NodoArbol } from "../ui/ArbolPensante";
 import { CampoConVoz } from "../ui/CampoConVoz";
 import { consumirSSE } from "@/lib/sseCliente";
@@ -102,57 +101,83 @@ export default function NuevaIdea() {
   if (estado.fase === "resultado") {
     const d = estado.data;
     return (
-      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-3 px-4 py-10 sm:px-6">
-        {/* Canon 03 (Claridad): chip de estado + "Esto entendí de tu idea" */}
-        <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Claridad · lista</p>
-        <h1 className="mb-3 text-xl font-semibold">Esto entendí de tu idea</h1>
-        <Acordeon titulo="Tu idea en una frase" abierto>
-          <p>{d.idea_en_una_frase}</p>
-          {d.etapa_detectada && (
-            <p className="mt-2 text-sm text-dim">Etapa detectada: {d.etapa_detectada}</p>
-          )}
-        </Acordeon>
-        <Acordeon titulo="Lo que ya tienes" abierto>
-          <ul className="list-disc space-y-1.5 pl-5">
-            {(d.lo_que_ya_tienes_claro ?? []).map((b, i) => (
-              <li key={i}>{b}</li>
-            ))}
-          </ul>
-        </Acordeon>
-        <Acordeon titulo="Lo que estás asumiendo" abierto>
-          <ul className="list-disc space-y-1.5 pl-5">
-            {(d.lo_que_estas_asumiendo_sin_saberlo ?? []).map((b, i) => (
-              <li key={i}>{b}</li>
-            ))}
-          </ul>
-        </Acordeon>
-        <Acordeon titulo="Áreas que cubriría tu plan completo">
-          <ul className="list-disc space-y-1.5 pl-5">
-            {(d.areas_que_cubriria_tu_plan_completo ?? []).map((b, i) => (
-              <li key={i}>{b}</li>
-            ))}
-          </ul>
-        </Acordeon>
-        <p className="mt-2 text-sm text-dim">
-          Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a pregunta.
-        </p>
-        <div className="mt-3 flex flex-wrap items-center gap-3">
+      // Canon 03 (docs/diseno-canon): frase héroe + dos tarjetas (la de
+      // suposiciones con borde azul y rombos) + nota interna + CTA. Sin
+      // acordeones, sin "Etapa detectada", sin "Áreas del plan" y sin
+      // "Corregir algo" (estaba en el canon; removido por orden del
+      // fundador — la Claridad no se regenera).
+      <main className="mx-auto flex w-full max-w-[840px] flex-1 flex-col px-4 py-12 sm:px-6">
+        <div className="anima-plan-in" style={{ animationDelay: "0.1s" }}>
+          <div className="mb-4 flex items-center gap-2">
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+            <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+              Esto entendí de tu idea
+            </span>
+          </div>
+          <h1 className="text-[26px] font-bold leading-[1.35] tracking-[-0.02em] [text-wrap:balance] sm:text-[30px]">
+            {d.idea_en_una_frase}
+          </h1>
+        </div>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <section
+            className="anima-plan-in rounded-panel border border-hairline bg-surface p-7"
+            style={{ animationDelay: "0.35s" }}
+          >
+            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+              Lo que ya tienes
+            </p>
+            <ul className="flex flex-col gap-4">
+              {(d.lo_que_ya_tienes_claro ?? []).map((b, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span
+                    aria-hidden
+                    className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-black"
+                  >
+                    <span className="h-[9px] w-[9px] rounded-full bg-accent" />
+                  </span>
+                  <span className="text-[14.5px] leading-[1.6]">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section
+            className="anima-plan-in rounded-panel bg-surface p-7"
+            style={{ animationDelay: "0.5s", border: "1px solid rgba(77,124,254,0.3)" }}
+          >
+            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
+              Lo que estás asumiendo
+            </p>
+            <ul className="flex flex-col gap-4">
+              {(d.lo_que_estas_asumiendo_sin_saberlo ?? []).map((b, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span
+                    aria-hidden
+                    className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center bg-black"
+                  >
+                    <span className="box-border h-2 w-2 rotate-45 border-[1.5px] border-accent" />
+                  </span>
+                  <span className="text-[14.5px] leading-[1.6]">{b}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 border-t border-hairline pt-[18px] text-[13px] leading-[1.6] text-dim [text-wrap:pretty]">
+              Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a
+              pregunta.
+            </p>
+          </section>
+        </div>
+
+        <div className="anima-plan-in mt-9" style={{ animationDelay: "0.65s" }}>
           <button
             onClick={() => router.push(`/idea/${estado.projectId}?entrevista=1`)}
-            className="rounded-[10px] bg-accent px-6 py-3 font-medium text-white hover:opacity-90"
+            className="rounded-[10px] bg-accent px-[26px] py-3 text-sm font-semibold text-white hover:opacity-90"
           >
             Explorar estas suposiciones
           </button>
-          <button
-            onClick={() => {
-              setEstado({ fase: "captura" });
-            }}
-            className="rounded-[10px] border border-white/15 px-5 py-3 text-[13.5px] text-dim hover:border-accent/60 hover:text-ink"
-          >
-            Corregir algo
-          </button>
         </div>
-        <p className="mt-2 text-xs text-dim">
+        <p className="anima-plan-in mt-3.5 text-[13px] text-dim" style={{ animationDelay: "0.75s" }}>
           La Exploración usa 5 créditos. Tu Claridad es gratis y queda guardada para siempre.
         </p>
       </main>

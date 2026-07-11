@@ -1,13 +1,23 @@
 "use client";
 
 /**
- * ArbolPensante — la línea punteada vertical que crece y se bifurca
- * (brief 2.4). REGLA DE ORO: este componente solo RENDERIZA la lista que
+ * ArbolPensante — el riel del recorrido (canon 04, docs/diseno-canon,
+ * anatomía extraída del HTML: barra de 4px con gradiente azul que crece,
+ * puntos de 20px sobre fondo negro con aro hairline, relleno azul
+ * inset 4px cuando el nodo quedó conversado, anillo girando mientras el
+ * motor piensa el punto actual, silenciosos al 50% con su nota, y rombo
+ * azul de 6px para los saltos).
+ *
+ * REGLA DE ORO intacta: este componente solo RENDERIZA la lista que
  * recibe; quien la llena lo hace exclusivamente con eventos reales del
- * motor (secciones del stream, nodos de la ruta, etapas del plan).
- * Aquí no hay temporizadores ni progreso simulado — si no llega evento,
- * no se enciende nada.
+ * motor. Las animaciones son de ENTRADA de cada evento real (railIn),
+ * jamás temporizadores de progreso simulado.
+ *
+ * Phase 3.7 (C3): altura contenida — el riel no crece infinito; el punto
+ * actual queda siempre a la vista (auto-scroll al fondo) y el historial
+ * se desliza hacia arriba.
  */
+import { useEffect, useRef } from "react";
 
 export interface NodoArbol {
   id: string;
@@ -21,62 +31,100 @@ export interface NodoArbol {
 
 interface Props {
   nodos: NodoArbol[];
-  /** true mientras el motor sigue generando: el último punto pulsa */
+  /** true mientras el motor sigue generando: el último punto gira */
   generando: boolean;
-  /** texto de estado "generando: <label>" */
+  /** texto de estado bajo el riel ("generando: <label>") */
   etiquetaGenerando?: string;
 }
 
+function PuntoRiel({ activo, lleno }: { activo: boolean; lleno: boolean }) {
+  return (
+    <span aria-hidden className="relative h-5 w-5 shrink-0 rounded-full bg-black">
+      {/* aro base hairline (canon: 1.5px rgba(255,255,255,0.14)) */}
+      <span
+        className="absolute inset-0 box-border rounded-full border-[1.5px]"
+        style={{ borderColor: "rgba(255,255,255,0.14)" }}
+      />
+      {/* anillo girando: el motor está pensando ESTE punto */}
+      {activo && (
+        <span
+          className="anima-spin-ring absolute inset-0 box-border rounded-full border-[2.5px]"
+          style={{ borderColor: "rgba(77,124,254,0.2)", borderTopColor: "var(--accent)" }}
+        />
+      )}
+      {/* relleno azul: el punto ya quedó en el recorrido */}
+      {lleno && <span className="anima-rail-fill absolute inset-1 rounded-full bg-accent" />}
+    </span>
+  );
+}
+
 export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
+  const marco = useRef<HTMLDivElement>(null);
+
+  // C3: el punto actual siempre a la vista; el historial se desliza.
+  useEffect(() => {
+    const el = marco.current;
+    if (el) el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+  }, [nodos.length, generando]);
+
   return (
     <div aria-live="polite">
-      <ol className="relative flex flex-col gap-0">
-        {nodos.map((n, i) => {
-          const esUltimo = i === nodos.length - 1;
-          const activo = generando && esUltimo;
-          return (
-            <li key={n.id} className="relative flex gap-3 pb-5 last:pb-0" data-transiciona>
-              {/* línea punteada hacia el siguiente punto */}
-              {!esUltimo && (
-                <span
-                  aria-hidden
-                  className="absolute left-[5px] top-4 h-full border-l border-dashed border-hairline"
-                />
-              )}
+      <div
+        ref={marco}
+        className="max-h-[min(60vh,520px)] overflow-y-auto overscroll-contain pr-1"
+        style={{ scrollbarWidth: "thin", maskImage: "linear-gradient(180deg, transparent 0, black 18px)" }}
+      >
+        <div className="relative flex flex-col">
+          {/* la barra del canon: 4px, gradiente azul, crece con el riel */}
+          {nodos.length > 1 && (
+            <span aria-hidden className="absolute bottom-[10px] left-2 top-[10px]">
               <span
-                aria-hidden
-                className={
-                  "relative z-10 mt-1.5 h-[11px] w-[11px] shrink-0 rounded-full " +
-                  (activo
-                    ? "bg-accent animate-pulse"
-                    : n.salto
-                      ? "border-2 border-accent bg-bg"
-                      : n.atenuado
-                        ? "border border-hairline bg-surface-2"
-                        : "bg-accent")
-                }
+                className="block h-full w-1 rounded-[2px]"
+                style={{ background: "linear-gradient(180deg, rgba(77,124,254,0.35), var(--accent))" }}
               />
-              <div className="min-w-0">
-                <p
-                  className={
-                    "text-sm leading-snug " + (n.atenuado ? "text-dim" : "text-ink")
-                  }
+            </span>
+          )}
+          <ol className="relative flex flex-col">
+            {nodos.map((n, i) => {
+              const esUltimo = i === nodos.length - 1;
+              const activo = generando && esUltimo;
+              return (
+                <li
+                  key={n.id}
+                  className="anima-rail-in relative flex items-start"
+                  style={{ gap: "15px" }}
+                  data-transiciona
                 >
-                  {n.label}
-                  {n.salto && (
-                    <span className="ml-1.5 align-middle text-[10px] uppercase tracking-wide text-accent">
-                      salto
+                  <PuntoRiel activo={activo} lleno={!activo || n.atenuado === true} />
+                  <span className={"min-w-0" + (n.atenuado ? " opacity-50" : "")}>
+                    <span
+                      className={
+                        "block pt-px text-sm leading-[1.45] " +
+                        (esUltimo && !n.atenuado ? "font-semibold text-accent" : "font-medium text-ink")
+                      }
+                    >
+                      {n.label}
                     </span>
-                  )}
-                </p>
-                {n.nota && <p className="text-xs text-dim">{n.nota}</p>}
-              </div>
-            </li>
-          );
-        })}
-      </ol>
+                    {(n.nota || n.salto) && (
+                      <span className="mt-[3px] block text-xs text-dim">
+                        {n.salto && (
+                          <span
+                            aria-hidden
+                            className="mr-1.5 inline-block h-1.5 w-1.5 rotate-45 border-[1.5px] border-accent align-baseline"
+                          />
+                        )}
+                        {n.salto ? "fue un salto" : n.nota}
+                      </span>
+                    )}
+                  </span>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
       {generando && (
-        <p className="mt-4 text-xs text-dim">
+        <p className="mt-2 text-xs text-dim">
           generando{etiquetaGenerando ? `: ${etiquetaGenerando}` : "…"}
         </p>
       )}
