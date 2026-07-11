@@ -1,0 +1,215 @@
+{
+  "fecha": "2026-07-11",
+  "fase": "v1.3.2",
+  "criterios": [
+    "solo anclas dominio=core (las murallas filtran anclas de otros packs)",
+    "max 2-3 puentes por ancla core",
+    "cero trampas semanticas: el resumen del ancla debe llevar a la ACCION del nodo pack",
+    "cero redundantes: un destino no acumula puentes que ensenan lo mismo"
+  ],
+  "propuestas_originales_rechazadas_en_bloque": {
+    "motivo": "ancla en dominio de otro pack (quality/health_safety): invisible tras las murallas si ese pack no esta desbloqueado",
+    "cantidad": 15,
+    "de_total": 15,
+    "pares": [
+      {
+        "core": "gestion_riesgo_identificacion",
+        "dominio_ancla": "quality",
+        "nodo_pack": "estrategia_gestion_riesgo_tolerancia"
+      },
+      {
+        "core": "evaluacion_periodica_programa_seguridad",
+        "dominio_ancla": "health_safety",
+        "nodo_pack": "getting_started_security_assessment_monitoring"
+      },
+      {
+        "core": "seguimiento_efectividad_controles",
+        "dominio_ancla": "health_safety",
+        "nodo_pack": "evaluar_controles"
+      },
+      {
+        "core": "participacion_trabajadores",
+        "dominio_ancla": "health_safety",
+        "nodo_pack": "concientizacion_entrenamiento_cui"
+      },
+      {
+        "core": "racional_mantenimiento_preventivo_correctivo",
+        "dominio_ancla": "health_safety",
+        "nodo_pack": "gestion_configuracion_least_functionality"
+      },
+      {
+        "core": "programa_auditoria_calidad",
+        "dominio_ancla": "quality",
+        "nodo_pack": "auditoria_responsabilidad"
+      },
+      {
+        "core": "prevencion_control_peligros",
+        "dominio_ancla": "health_safety",
+        "nodo_pack": "determinar_alcance_cui"
+      },
+      {
+        "core": "implementacion_controles",
+        "dominio_ancla": "health_safety",
+        "nodo_pack": "implementar_controles"
+      },
+      {
+        "core": "evaluacion_gestion_riesgos",
+        "dominio_ancla": "quality",
+        "nodo_pack": "fundamentos_gestion_riesgo"
+      },
+      {
+        "core": "prevencion_control_peligros",
+        "dominio_ancla": "health_safety",
+        "nodo_pack": "seleccion_controles"
+      },
+      {
+        "core": "plan_de_control",
+        "dominio_ancla": "quality",
+        "nodo_pack": "control_minimizacion_datos"
+      },
+      {
+        "core": "implementacion_monitoreo_controles",
+        "dominio_ancla": "quality",
+        "nodo_pack": "monitoreo_continuo"
+      },
+      {
+        "core": "implementacion_monitoreo_controles",
+        "dominio_ancla": "quality",
+        "nodo_pack": "getting_started_incident_response"
+      },
+      {
+        "core": "control_del_proceso_del_proveedor",
+        "dominio_ancla": "quality",
+        "nodo_pack": "plan_seguridad_sistema_poam"
+      },
+      {
+        "core": "clasificacion_de_seriedad_de_defectos_2",
+        "dominio_ancla": "quality",
+        "nodo_pack": "rmf_paso_categorizar"
+      }
+    ]
+  },
+  "rechazados_individuales": [
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "gestion_configuracion_least_functionality",
+      "score": 0.8234,
+      "motivo": "Trampa semantica: homonimo 'gestion' - el desempeno de proveedores no ensena a configurar sistemas con minima funcionalidad."
+    },
+    {
+      "core": "gestion_riesgo_cadena_suministro",
+      "dominio": "estrategia_gestion_riesgo_tolerancia",
+      "score": 0.8067,
+      "motivo": "Tope por ancla: la misma ancla ya entra por su par exacto (SCRM) y por fundamentos; tercera arista seria concentracion."
+    },
+    {
+      "core": "calidad_de_ejecucion_proceso_innovacion",
+      "dominio": "gestion_configuracion_least_functionality",
+      "score": 0.8004,
+      "motivo": "Trampa semantica: calidad de ejecucion en innovacion de producto no lleva a configuracion segura de sistemas."
+    },
+    {
+      "core": "analisis_de_capacidad_de_recursos",
+      "dominio": "gestion_configuracion_least_functionality",
+      "score": 0.7958,
+      "motivo": "Trampa semantica: capacidad de recursos del portafolio no es funcionalidad minima de sistemas."
+    },
+    {
+      "core": "diseno_imperfeccion_intencional",
+      "dominio": "implementar_controles",
+      "score": 0.7624,
+      "motivo": "Trampa semantica: la imperfeccion intencional de diseno es casi el antonimo de implementar controles de seguridad."
+    },
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "implementar_controles",
+      "score": 0.7581,
+      "motivo": "Trampa semantica: seguimiento de proveedores no ensena a implementar controles NIST."
+    },
+    {
+      "core": "escenarios_futuros",
+      "dominio": "implementar_controles",
+      "score": 0.706,
+      "motivo": "Trampa semantica: escenarios futuros alternativos no conectan con la accion de implementar controles."
+    },
+    {
+      "core": "reporte_estado_miembro_equipo",
+      "dominio": "getting_started_incident_response",
+      "score": 0.6904,
+      "motivo": "Trampa semantica: un informe de estado del equipo no es un plan de respuesta a incidentes."
+    },
+    {
+      "core": "supply_chain_management_systems",
+      "dominio": "plan_seguridad_sistema_poam",
+      "score": 0.6858,
+      "motivo": "Redundante: la ancla ya tiene su puente natural (SCRM); SSP/POAM es paso interno del RMF, no punto de entrada."
+    },
+    {
+      "core": "scor_model_operaciones",
+      "dominio": "getting_started_supply_chain_risk_management",
+      "score": 0.6831,
+      "motivo": "Redundante: el nodo pack ya recibe 2 puentes mas exactos; SCOR es marco operativo, no de seguridad."
+    },
+    {
+      "core": "customer_retention_metrics_webmobile",
+      "dominio": "monitoreo_continuo",
+      "score": 0.6816,
+      "motivo": "Trampa semantica: homonimo 'monitoreo' - metricas de retencion no son postura de seguridad."
+    },
+    {
+      "core": "analisis_de_sensibilidad_riesgo",
+      "dominio": "getting_started_risk_assessment",
+      "score": 0.6809,
+      "motivo": "Trampa semantica: homonimo 'riesgo' financiero (ratio riesgo-retorno) vs riesgo de seguridad; nodo pack ya cubierto por anclas exactas."
+    },
+    {
+      "core": "resource_assessment",
+      "dominio": "evaluar_controles",
+      "score": 0.6794,
+      "motivo": "Trampa semantica: homonimo 'evaluacion' - evaluar recursos del proyecto no es evaluar controles implementados."
+    },
+    {
+      "core": "registro_de_riesgos",
+      "dominio": "getting_started_incident_response",
+      "score": 0.6776,
+      "motivo": "Desalineado: el registro de riesgos conduce a assessment/monitoring (aprobados), no a respuesta a incidentes."
+    },
+    {
+      "core": "sistemas_sabios_vs_ignorantes",
+      "dominio": "limites_autorizacion_sistema",
+      "score": 0.6752,
+      "motivo": "Trampa semantica: homonimo 'sistema' - el concepto de IA de Mollick no es el limite de autorizacion del RMF."
+    },
+    {
+      "core": "plan_gestion_riesgos",
+      "dominio": "determinar_alcance_cui",
+      "score": 0.6743,
+      "motivo": "Tope por ancla (ya x2) y CUI es nicho regulatorio de contratistas del gobierno de EEUU, mal punto de entrada."
+    },
+    {
+      "core": "proteccion_organizacion_matriz_experimentos",
+      "dominio": "determinar_alcance_cui",
+      "score": 0.6732,
+      "motivo": "Trampa semantica: proteger a la organizacion matriz de experimentos no tiene relacion con el alcance de SP 800-171."
+    },
+    {
+      "core": "team_member_status_report",
+      "dominio": "getting_started_incident_response",
+      "score": 0.6702,
+      "motivo": "Trampa semantica: duplicado en ingles del informe de estado; mismo motivo."
+    },
+    {
+      "core": "activity_list",
+      "dominio": "funcion_identify_inventario_activos",
+      "score": 0.6631,
+      "motivo": "Trampa semantica: la lista de actividades de PM no es un inventario de activos digitales."
+    },
+    {
+      "core": "stakeholder_analysis_matrix",
+      "dominio": "rmf_paso_categorizar",
+      "score": 0.6613,
+      "motivo": "Trampa semantica: analisis de stakeholders no ensena a categorizar sistemas por impacto."
+    }
+  ],
+  "aprobados_total": 12
+}

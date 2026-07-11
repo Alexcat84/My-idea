@@ -1,0 +1,65 @@
+{
+  "nota": "Curaduria v1.3.2. Hallazgo estructural: 15/15 propuestas originales de bridges_propuestos.json tenian ancla en OTRO pack (quality/health_safety) - un puente pack-a-pack queda muerto tras las murallas de dominio, asi que se rechazaron en bloque y se regeneraron candidatos con el mismo metodo restringido a anclas dominio=core (bridges_candidatos_core_only.json). Reglas: max 2-3 por ancla core, cero trampas semanticas (homonimos riesgo/sistema/cultura/investigacion verificados leyendo resumen_teorico), cero redundantes. Rechazos uno a uno con motivo en bridges_curaduria.json.",
+  "aprobados": [
+    {
+      "core": "plan_gestion_riesgos",
+      "dominio": "estrategia_gestion_riesgo_tolerancia",
+      "score": 0.8791
+    },
+    {
+      "core": "risk_audit",
+      "dominio": "estrategia_gestion_riesgo_tolerancia",
+      "score": 0.8258
+    },
+    {
+      "core": "diseno_conceptual_sistema",
+      "dominio": "limites_autorizacion_sistema",
+      "score": 0.7413
+    },
+    {
+      "core": "supply_chain_management_systems",
+      "dominio": "getting_started_supply_chain_risk_management",
+      "score": 0.7252
+    },
+    {
+      "core": "gestion_riesgo_cadena_suministro",
+      "dominio": "fundamentos_gestion_riesgo",
+      "score": 0.721
+    },
+    {
+      "core": "gestion_riesgo_incremental",
+      "dominio": "fundamentos_gestion_riesgo",
+      "score": 0.7168
+    },
+    {
+      "core": "plan_gestion_riesgos",
+      "dominio": "rmf_paso_preparar",
+      "score": 0.7163
+    },
+    {
+      "core": "gestion_riesgo_cadena_suministro",
+      "dominio": "getting_started_supply_chain_risk_management",
+      "score": 0.6953
+    },
+    {
+      "core": "matriz_probabilidad_impacto",
+      "dominio": "getting_started_risk_assessment",
+      "score": 0.6878
+    },
+    {
+      "core": "registro_de_riesgos",
+      "dominio": "getting_started_security_assessment_monitoring",
+      "score": 0.6734
+    },
+    {
+      "core": "registro_de_riesgos",
+      "dominio": "getting_started_risk_assessment",
+      "score": 0.6478
+    },
+    {
+      "core": "arquitectura_tecnica_modular",
+      "dominio": "funcion_identify_inventario_activos",
+      "score": 0.6301
+    }
+  ]
+}

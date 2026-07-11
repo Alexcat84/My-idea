@@ -1,0 +1,55 @@
+{
+  "nota": "Curaduria v1.3.2. Hallazgo estructural: 14/20 propuestas originales de bridges_propuestos.json tenian ancla en OTRO pack (quality/health_safety) - un puente pack-a-pack queda muerto tras las murallas de dominio, asi que se rechazaron en bloque y se regeneraron candidatos con el mismo metodo restringido a anclas dominio=core (bridges_candidatos_core_only.json). Reglas: max 2-3 por ancla core, cero trampas semanticas (homonimos riesgo/sistema/cultura/investigacion verificados leyendo resumen_teorico), cero redundantes. Rechazos uno a uno con motivo en bridges_curaduria.json.",
+  "aprobados": [
+    {
+      "core": "intellectual_property_strategy",
+      "dominio": "proteccion_propiedad_intelectual_internacional",
+      "score": 0.8147
+    },
+    {
+      "core": "transicion_producto_a_experiencia",
+      "dominio": "servicio_postventa_internacional",
+      "score": 0.7939
+    },
+    {
+      "core": "diseno_producto_cadena_suministro",
+      "dominio": "adaptacion_producto_mercado_exterior",
+      "score": 0.7798
+    },
+    {
+      "core": "gestion_relacion_bancaria",
+      "dominio": "trabajo_con_bancos_comerciales",
+      "score": 0.7727
+    },
+    {
+      "core": "demand_curve_pricing",
+      "dominio": "fijacion_precio_exportacion",
+      "score": 0.7611
+    },
+    {
+      "core": "seleccion_canal_distribucion",
+      "dominio": "seleccion_canales_distribucion",
+      "score": 0.7606
+    },
+    {
+      "core": "captura_conocimiento_mercado",
+      "dominio": "investigacion_mercado_primaria_secundaria_2",
+      "score": 0.7451
+    },
+    {
+      "core": "hipotesis_de_canales",
+      "dominio": "seleccion_canales_distribucion",
+      "score": 0.7439
+    },
+    {
+      "core": "marco_analisis_mercado_cadena_suministro",
+      "dominio": "investigacion_mercado_paso_a_paso",
+      "score": 0.7388
+    },
+    {
+      "core": "intellectual_property_strategy",
+      "dominio": "licenciamiento_tecnologia",
+      "score": 0.7379
+    }
+  ]
+}

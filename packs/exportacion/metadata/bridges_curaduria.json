@@ -1,0 +1,210 @@
+{
+  "fecha": "2026-07-11",
+  "fase": "v1.3.2",
+  "criterios": [
+    "solo anclas dominio=core (las murallas filtran anclas de otros packs)",
+    "max 2-3 puentes por ancla core",
+    "cero trampas semanticas: el resumen del ancla debe llevar a la ACCION del nodo pack",
+    "cero redundantes: un destino no acumula puentes que ensenan lo mismo"
+  ],
+  "propuestas_originales_rechazadas_en_bloque": {
+    "motivo": "ancla en dominio de otro pack (quality/health_safety): invisible tras las murallas si ese pack no esta desbloqueado",
+    "cantidad": 14,
+    "de_total": 20,
+    "pares": [
+      {
+        "core": "calidad_del_servicio",
+        "dominio_ancla": "quality",
+        "nodo_pack": "servicio_postventa_internacional"
+      },
+      {
+        "core": "costo_de_uso_life_cycle",
+        "dominio_ancla": "quality",
+        "nodo_pack": "calculo_de_aranceles_importacion"
+      },
+      {
+        "core": "colaboracion_sectorial",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "organizacion_interna_exportacion"
+      },
+      {
+        "core": "costo_de_uso_life_cycle",
+        "dominio_ancla": "quality",
+        "nodo_pack": "gestion_fluctuaciones_cambiarias_clientes"
+      },
+      {
+        "core": "criterios_diseno_producto",
+        "dominio_ancla": "quality",
+        "nodo_pack": "adaptacion_producto_mercado_exterior"
+      },
+      {
+        "core": "calidad_del_servicio",
+        "dominio_ancla": "quality",
+        "nodo_pack": "exportacion_de_servicios"
+      },
+      {
+        "core": "dialogo_proveedores",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "respuesta_consultas_internacionales"
+      },
+      {
+        "core": "colaboracion_industria_gobierno_estandares",
+        "dominio_ancla": "quality",
+        "nodo_pack": "barreras_comerciales_no_arancelarias"
+      },
+      {
+        "core": "transporte_bajas_emisiones",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "seguro_de_carga_transporte"
+      },
+      {
+        "core": "alineacion_estrategica_despliegue",
+        "dominio_ancla": "quality",
+        "nodo_pack": "autoevaluacion_gerencial_exportacion"
+      },
+      {
+        "core": "especificacion_requisitos_proveedores",
+        "dominio_ancla": "quality",
+        "nodo_pack": "consideraciones_instalacion_internacional"
+      },
+      {
+        "core": "responsabilidad_extendida_productor",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "seleccion_de_distribuidor_internacional"
+      },
+      {
+        "core": "crecimiento_ingresos_verdes",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "decision_estrategica_exportar"
+      },
+      {
+        "core": "calidad_del_servicio",
+        "dominio_ancla": "quality",
+        "nodo_pack": "financiamiento_bancos_multilaterales_desarrollo"
+      }
+    ]
+  },
+  "rechazados_individuales": [
+    {
+      "core": "balance_eficiencia_responsividad",
+      "dominio": "adaptacion_producto_estandares_tecnicos",
+      "score": 0.8422,
+      "motivo": "Trampa semantica: el trade-off eficiencia/responsividad de la cadena no lleva a estandares tecnicos internacionales."
+    },
+    {
+      "core": "balance_eficiencia_responsividad",
+      "dominio": "prevencion_problemas_de_pago",
+      "score": 0.8253,
+      "motivo": "Trampa semantica: score alto por vocabulario compartido; sin flujo de accion real."
+    },
+    {
+      "core": "balance_eficiencia_responsividad",
+      "dominio": "servicio_postventa_internacional",
+      "score": 0.812,
+      "motivo": "Trampa semantica: tercera propuesta del mismo ancla debil; el destino ya recibe un puente exacto."
+    },
+    {
+      "core": "calidad_de_ejecucion_proceso_innovacion",
+      "dominio": "adaptacion_producto_estandares_tecnicos",
+      "score": 0.8081,
+      "motivo": "Trampa semantica: calidad de ejecucion en innovacion no es certificacion de estandares."
+    },
+    {
+      "core": "transicion_producto_a_experiencia",
+      "dominio": "adaptacion_producto_estandares_tecnicos",
+      "score": 0.806,
+      "motivo": "Desalineado: la ancla entra mejor por postventa internacional (aprobada)."
+    },
+    {
+      "core": "intellectual_property_strategy",
+      "dominio": "proteccion_propiedad_intelectual_2",
+      "score": 0.7956,
+      "motivo": "Redundante: nodo hermano del ya aprobado proteccion_propiedad_intelectual_internacional; un puente basta."
+    },
+    {
+      "core": "seed_deals_riesgos_precedente",
+      "dominio": "prevencion_problemas_de_pago",
+      "score": 0.7851,
+      "motivo": "Trampa semantica: precedentes de rondas semilla no tienen relacion con impagos de compradores extranjeros."
+    },
+    {
+      "core": "dependency_analysis",
+      "dominio": "adaptacion_producto_mercado_exterior",
+      "score": 0.783,
+      "motivo": "Trampa semantica: analisis de dependencias de cronograma no es adaptacion de producto."
+    },
+    {
+      "core": "seleccion_canal_fisico",
+      "dominio": "seleccion_canales_distribucion",
+      "score": 0.7781,
+      "motivo": "Redundante: el ancla general seleccion_canal_distribucion (aprobada) cubre el mismo destino; canal fisico es su subcaso."
+    },
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "prevencion_problemas_de_pago",
+      "score": 0.7779,
+      "motivo": "Direccion invertida: desempeno de PROVEEDORES vs impagos de COMPRADORES extranjeros."
+    },
+    {
+      "core": "marco_analisis_mercado_cadena_suministro",
+      "dominio": "adaptacion_producto_mercado_exterior",
+      "score": 0.7774,
+      "motivo": "Dispersion: la ancla entra mejor por investigacion de mercado (aprobada); el destino ya tiene puente exacto."
+    },
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "servicio_postventa_internacional",
+      "score": 0.7745,
+      "motivo": "Trampa semantica: gestion de proveedores no es tu servicio postventa al cliente."
+    },
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "garantias_producto_internacional",
+      "score": 0.7655,
+      "motivo": "Trampa semantica: contratos con proveedores no son garantias al cliente final."
+    },
+    {
+      "core": "etapa_investigacion_ventas",
+      "dominio": "investigacion_mercado_primaria_secundaria_2",
+      "score": 0.7608,
+      "motivo": "Trampa semantica: homonimo 'investigacion' - preparar la llamada de venta (SPIN) no es estudio de mercado."
+    },
+    {
+      "core": "demand_curve_pricing",
+      "dominio": "gestion_fluctuaciones_cambiarias_clientes",
+      "score": 0.7575,
+      "motivo": "Debil: la ancla ya tiene su par exacto (fijacion de precio de exportacion); lo cambiario no nace de la curva de demanda."
+    },
+    {
+      "core": "programacion_cultura_empresarial",
+      "dominio": "gestion_diferencias_culturales",
+      "score": 0.7514,
+      "motivo": "Trampa semantica: homonimo 'cultura' - cultura interna de empresa vs interculturalidad comercial."
+    },
+    {
+      "core": "marco_analisis_mercado_cadena_suministro",
+      "dominio": "garantias_producto_internacional",
+      "score": 0.7435,
+      "motivo": "Trampa semantica: cuadrantes de mercado no llevan a garantias internacionales."
+    },
+    {
+      "core": "gestion_procurement_consumo",
+      "dominio": "seleccion_representante_extranjero",
+      "score": 0.7432,
+      "motivo": "Trampa semantica: gestion de consumo en compras no es seleccionar un distribuidor en el exterior."
+    },
+    {
+      "core": "precios_todos_los_dias_bajos",
+      "dominio": "gestion_fluctuaciones_cambiarias_clientes",
+      "score": 0.7403,
+      "motivo": "Debil: EDLP es estrategia retail domestica; la gestion cambiaria no se activa desde ahi."
+    },
+    {
+      "core": "validar_posicionamiento_con_analistas",
+      "dominio": "respuesta_consultas_internacionales",
+      "score": 0.7382,
+      "motivo": "Trampa semantica: validar con analistas de industria no es politica de respuesta a consultas de importadores."
+    }
+  ],
+  "aprobados_total": 10
+}

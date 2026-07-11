@@ -1,0 +1,162 @@
+{
+  "fecha": "2026-07-11",
+  "fase": "v1.3.2",
+  "criterios": [
+    "solo anclas dominio=core (las murallas filtran anclas de otros packs)",
+    "max 2-3 puentes por ancla core",
+    "cero trampas semanticas: el resumen del ancla debe llevar a la ACCION del nodo pack",
+    "cero redundantes: un destino no acumula puentes que ensenan lo mismo"
+  ],
+  "propuestas_originales_rechazadas_en_bloque": {
+    "motivo": "ancla en dominio de otro pack (quality/health_safety): invisible tras las murallas si ese pack no esta desbloqueado",
+    "cantidad": 8,
+    "de_total": 20,
+    "pares": [
+      {
+        "core": "seleccion_hacer_o_comprar",
+        "dominio_ancla": "quality",
+        "nodo_pack": "outsourcing_funciones_franquicia"
+      },
+      {
+        "core": "colaboracion_sectorial",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "decision_diy_vs_consultor_franquicia"
+      },
+      {
+        "core": "benchmarking_prioritizacion_sostenibilidad",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "adaptabilidad_regional_concepto"
+      },
+      {
+        "core": "seguimiento_cumplimiento_cadena_suministro",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "programa_cumplimiento_legal"
+      },
+      {
+        "core": "costo_de_uso_life_cycle",
+        "dominio_ancla": "quality",
+        "nodo_pack": "determinacion_regalias"
+      },
+      {
+        "core": "calidad_del_servicio",
+        "dominio_ancla": "quality",
+        "nodo_pack": "costos_personal_franquicia"
+      },
+      {
+        "core": "formacion_seleccion_y_retencion_de_personal",
+        "dominio_ancla": "quality",
+        "nodo_pack": "diseno_programa_capacitacion_franquicia"
+      },
+      {
+        "core": "colaboracion_sectorial",
+        "dominio_ancla": "environmental",
+        "nodo_pack": "construccion_equipo_franquicia"
+      }
+    ]
+  },
+  "rechazados_individuales": [
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "programa_de_referidos_de_franquiciados",
+      "score": 0.8762,
+      "motivo": "Trampa semantica: score maximo del pool y par absurdo - seguimiento de proveedores no es un programa de referidos; ejemplo de seduccion del embedding."
+    },
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "reduccion_riesgo_percibido",
+      "score": 0.8743,
+      "motivo": "Trampa semantica: misma ancla-iman; sin flujo de accion hacia el riesgo percibido del franquiciado."
+    },
+    {
+      "core": "gestion_contratos_desempeno",
+      "dominio": "motivated_management_franquiciado",
+      "score": 0.8599,
+      "motivo": "Trampa semantica: gestionar proveedores no ensena la motivacion por propiedad del franquiciado."
+    },
+    {
+      "core": "seed_deals_riesgos_precedente",
+      "dominio": "reduccion_riesgo_percibido",
+      "score": 0.8181,
+      "motivo": "Trampa semantica: homonimo 'riesgo' - precedentes de inversores vs percepcion del comprador de franquicia."
+    },
+    {
+      "core": "ventaja_competitiva_producto",
+      "dominio": "mensaje_franquicias_conversion",
+      "score": 0.8093,
+      "motivo": "Debil: la ancla ya aprobada hacia su mejor destino (reduccion de riesgo percibido); conversion franchising es otro tema."
+    },
+    {
+      "core": "divergencia_de_motivaciones_en_exit",
+      "dominio": "atencion_franquiciados_top",
+      "score": 0.806,
+      "motivo": "Trampa semantica: homonimo 'salida/venta' - motivaciones de exit del equipo fundador no conectan con cuidar franquiciados top."
+    },
+    {
+      "core": "ventaja_competitiva_producto",
+      "dominio": "crecimiento_desde_franquiciados_existentes",
+      "score": 0.8054,
+      "motivo": "Debil: relacion generica; se respeta 1 puente por esta ancla."
+    },
+    {
+      "core": "validar_posicionamiento_con_analistas",
+      "dominio": "programa_de_referidos_de_franquiciados",
+      "score": 0.8039,
+      "motivo": "Trampa semantica: analistas e influenciadores de industria no son referidos de franquiciados."
+    },
+    {
+      "core": "estrategia_de_innovacion_y_tecnologia",
+      "dominio": "plan_estrategico_franquicia",
+      "score": 0.7942,
+      "motivo": "Trampa semantica: homonimo 'estrategia' - roadmap tecnologico de producto vs plan estrategico de franquicia."
+    },
+    {
+      "core": "decision_intensidad_capital",
+      "dominio": "barreras_entrada_competencia",
+      "score": 0.7941,
+      "motivo": "Tope por ancla: ya x2 con destinos exactos (evaluar franquiciar, capitalizacion); tercera arista seria concentracion."
+    },
+    {
+      "core": "divergencia_de_motivaciones_en_exit",
+      "dominio": "venta_primer_franquiciado",
+      "score": 0.7929,
+      "motivo": "Trampa semantica reincidente (ya marcada en propuestas originales): exit de fundadores no es vender la primera franquicia."
+    },
+    {
+      "core": "balance_eficiencia_responsividad",
+      "dominio": "motivated_management_franquiciado",
+      "score": 0.7918,
+      "motivo": "Trampa semantica: trade-off de cadena de suministro vs motivacion por propiedad."
+    },
+    {
+      "core": "balance_eficiencia_responsividad",
+      "dominio": "programa_de_referidos_de_franquiciados",
+      "score": 0.7907,
+      "motivo": "Trampa semantica: sin relacion de accion."
+    },
+    {
+      "core": "divergencia_de_motivaciones_en_exit",
+      "dominio": "mensaje_franquicias_conversion",
+      "score": 0.7869,
+      "motivo": "Trampa semantica: mismo homonimo de exit/venta."
+    },
+    {
+      "core": "prevencion_de_objeciones",
+      "dominio": "manejo_objeciones_venta_franquicia",
+      "score": 0.7855,
+      "motivo": "Redundante: ancla casi duplicada de prevencion_objeciones_vs_manejo (aprobada) hacia el mismo nodo pack."
+    },
+    {
+      "core": "evaluacion_capacidades_fundador",
+      "dominio": "encaje_organizacional",
+      "score": 0.782,
+      "motivo": "Redundante: el nodo pack ya recibe evaluacion_fit_cultural (par mas exacto); la ancla aprobada hacia prospecto_emprendedor_flaming."
+    },
+    {
+      "core": "coordinacion_colaboracion_cadena_suministro",
+      "dominio": "combinar_crecimiento_corporativo_y_franquicia",
+      "score": 0.7807,
+      "motivo": "Trampa semantica: colaboracion en cadena de suministro no es la decision de crecimiento mixto corporativo/franquicia."
+    }
+  ],
+  "aprobados_total": 13
+}

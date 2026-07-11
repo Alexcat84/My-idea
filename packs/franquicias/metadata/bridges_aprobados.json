@@ -1,0 +1,70 @@
+{
+  "nota": "Curaduria v1.3.2. Hallazgo estructural: 8/20 propuestas originales de bridges_propuestos.json tenian ancla en OTRO pack (quality/health_safety) - un puente pack-a-pack queda muerto tras las murallas de dominio, asi que se rechazaron en bloque y se regeneraron candidatos con el mismo metodo restringido a anclas dominio=core (bridges_candidatos_core_only.json). Reglas: max 2-3 por ancla core, cero trampas semanticas (homonimos riesgo/sistema/cultura/investigacion verificados leyendo resumen_teorico), cero redundantes. Rechazos uno a uno con motivo en bridges_curaduria.json.",
+  "aprobados": [
+    {
+      "core": "evaluacion_fit_cultural",
+      "dominio": "encaje_organizacional",
+      "score": 0.8469
+    },
+    {
+      "core": "outsourcing_cadena_suministro",
+      "dominio": "outsourcing_funciones_franquicia",
+      "score": 0.8393
+    },
+    {
+      "core": "ventaja_competitiva_producto",
+      "dominio": "reduccion_riesgo_percibido",
+      "score": 0.837
+    },
+    {
+      "core": "decision_intensidad_capital",
+      "dominio": "evaluar_ventajas_desventajas_franquicia",
+      "score": 0.8332
+    },
+    {
+      "core": "decision_intensidad_capital",
+      "dominio": "capitalizacion_adecuada_del_franquiciador",
+      "score": 0.7966
+    },
+    {
+      "core": "prevencion_objeciones_vs_manejo",
+      "dominio": "manejo_objeciones_venta_franquicia",
+      "score": 0.7962
+    },
+    {
+      "core": "conversacion_emocional_postcompra",
+      "dominio": "mensaje_emocional_racional",
+      "score": 0.789
+    },
+    {
+      "core": "intellectual_property_strategy",
+      "dominio": "proteccion_propiedad_intelectual_franq",
+      "score": 0.7859
+    },
+    {
+      "core": "costo_de_oportunidad",
+      "dominio": "evaluar_ventajas_desventajas_franquicia",
+      "score": 0.7797
+    },
+    {
+      "core": "estrategia_ventas_enterprise",
+      "dominio": "proceso_llamada_inicial_venta",
+      "score": 0.7795
+    },
+    {
+      "core": "evaluacion_capacidades_fundador",
+      "dominio": "prospecto_emprendedor_flaming",
+      "score": 0.7778
+    },
+    {
+      "core": "sesgo_optimismo_fundador",
+      "dominio": "prospecto_emprendedor_flaming",
+      "score": 0.7727
+    },
+    {
+      "core": "customer_types_mapping",
+      "dominio": "multiples_compradores_influyentes",
+      "score": 0.7718
+    }
+  ]
+}
