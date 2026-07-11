@@ -35,3 +35,7 @@ export type ModoRuta = (typeof MODO_RUTA)[number];
  * de sus nodos, y las que emite POST /api/packs/interes. */
 export const PACK_CLICKS_PACK = ["quality", "health_safety", "environmental"] as const;
 export type PackClave = (typeof PACK_CLICKS_PACK)[number];
+
+/** checklist_items.estado (Fase 3.3, migration 015): estados de un toque. */
+export const CHECKLIST_ESTADO = ["pendiente", "empezado", "a_medias", "hecho"] as const;
+export type ChecklistEstado = (typeof CHECKLIST_ESTADO)[number];

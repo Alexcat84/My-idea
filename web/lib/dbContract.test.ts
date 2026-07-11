@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { CHECKLIST_ESTADO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -42,7 +42,8 @@ function parsearContratoDesdeMigraciones(): Map<string, Set<string>> {
     // CREATE TABLE public.<tabla> ( ... <col> TEXT ... CHECK (<col> IN (...)) ... );
     for (const bloque of sql.matchAll(/CREATE TABLE public\.(\w+)\s*\(([\s\S]*?)\n\);/g)) {
       const [, tabla, cuerpo] = bloque;
-      for (const check of cuerpo.matchAll(/(\w+)\s+TEXT[^,]*CHECK\s*\(\s*\1\s+IN\s*\(([^)]*)\)\)/g)) {
+      // /i: 001-014 escriben TEXT, las migraciones de Fase 3.3+ usan text.
+      for (const check of cuerpo.matchAll(/(\w+)\s+TEXT[^,]*CHECK\s*\(\s*\1\s+IN\s*\(([^)]*)\)\)/gi)) {
         const [, columna, lista] = check;
         contrato.set(`${tabla}.${columna}`, new Set(extraerLiterales(lista)));
       }
@@ -90,8 +91,12 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     assertSubconjuntoDelContrato("pack_clicks.pack", PACK_CLICKS_PACK);
   });
 
-  it("parseo de sanidad: encontro los 4 CHECK esperados con al menos un literal cada uno", () => {
-    for (const clave of ["sessions.tipo", "plans.etiqueta", "project_nodes.tipo", "pack_clicks.pack"]) {
+  it("checklist_items.estado (Fase 3.3, migration 015)", () => {
+    assertSubconjuntoDelContrato("checklist_items.estado", CHECKLIST_ESTADO);
+  });
+
+  it("parseo de sanidad: encontro los 5 CHECK esperados con al menos un literal cada uno", () => {
+    for (const clave of ["sessions.tipo", "plans.etiqueta", "project_nodes.tipo", "pack_clicks.pack", "checklist_items.estado"]) {
       const permitidos = contrato.get(clave);
       expect(permitidos).toBeDefined();
       expect(permitidos!.size).toBeGreaterThan(0);

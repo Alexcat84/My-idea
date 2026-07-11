@@ -106,5 +106,16 @@ FROM (
   SELECT '014', 'pack_clicks table (quality/health_safety/environmental)',
     EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='pack_clicks')
 
+  UNION ALL
+  -- 015 · Phase 3.3 checklist loop: one row per actionable plan step
+  SELECT '015', 'checklist_items table + estado CHECK + RLS policy',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='checklist_items')
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'checklist_items_estado_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%a_medias%'
+    )
+    AND EXISTS (SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='checklist_items' AND policyname='checklist_items_own')
+
 ) checks
 ORDER BY num;
