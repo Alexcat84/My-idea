@@ -94,24 +94,49 @@ alfabetización 0.2583 fuera, umbral 0.30) → sync con checksums.
 - **ideas.ts / graph.test.ts**: nombres de mundo y muralla probada para
   los 6 dominios.
 
-## 5. Vuelo v1.3.2 (fase 2g-bis de vuelo.ts)
+## 5. Vuelo v1.3.2 (fase 2g-bis de vuelo.ts): 11/11 VERDE — y cazó un bug real
 
-Murallas negativas de exportacion/franquicias (403 sin unlock) + ciclo
-positivo completo de seguridad_digital (unlock → start con semilla del
-mapeo → turnos → plan dominio=seguridad_digital → checklist agrupado) +
-captura de la fila de 6 potenciadores (capturas.ts, /potenciadores).
-**Prerrequisito**: migración 017 aplicada — el sondeo confirmó que aún no
-lo está. Resultado del vuelo: ver addendum al cierre.
+Con la 017 aplicada por el usuario (verificada con sonda: los 3 packs
+aceptados), el primer vuelo **FALLÓ legítimamente**: el start de
+seguridad_digital devolvió `salio` en el turno 0. Causa raíz (bitácora de
+decisiones): el intérprete juzgó la semilla MFA "completamente
+desalineada" contra un `estado_vivo` cargado de urgencias core (mayoristas,
+hermana, calidad) y vetó la puerta — pero el usuario pagó 3 créditos por
+explorar ESE mundo. Quality había pasado de suerte (su semilla empataba
+con las quejas de macetas). Primer intento de fix (preguntaDirigida con el
+perfil) cazó un segundo defecto: la reescritura se comía al nodo. Fix
+final en `world/[pack]/start`: la primera pregunta del mundo es la
+CACHEADA de la semilla — determinística y $0, igual que evaluacionBrecha;
+el intérprete manda desde el turno 2 (verificado: personaliza sobre la
+respuesta real).
 
-## 6. Costos reales de la fase
+Segundo vuelo: **11/11 verificaciones OK, $0.5284** — murallas 403 de
+exportacion/franquicias + ciclo completo de seguridad_digital (unlock 017,
+semilla del mapeo, plan `dominio=seguridad_digital`, checklist agrupado
+0/27), con todas las verificaciones históricas intactas.
+
+Capturas (capturas.ts sobre la idea de macetas del vuelo): la fila
+"Potencia tu idea" muestra los **6 mundos** — Calidad y Confianza
+`Activo · 0/28`, Seguridad Digital `Activo · 0/27`, y los otros cuatro con
+`3 créditos` y candado. `web/examples/capturas/05_tu_plan_*.png`.
+
+## 6. Costos reales de la fase: ≈ $0.92
 
 | Concepto | Costo |
 |---|---|
 | Caché parcial de preguntas (456 nodos, haiku) | $0.3826 |
 | Índice Voyage 3,687 (~561K tokens) | ≈$0.01 |
-| Vuelo vivo (addendum al cierre) | pendiente |
+| Vuelo 1 (falló en 2g-bis, cazó el bug) | ≈$0.43 (hasta el fallo) |
+| Sondas de ruta y turno 2 del fix | ≈$0.01 |
+| Vuelo 2 completo (11/11) | $0.5284 |
+
+(Los dos vuelos se solapan: el total neto de la fase ronda $0.92-1.35
+según se cuente el vuelo fallido completo o hasta su corte.)
 
 ## 7. Suites
 
 Web 220/220 (28 archivos; +2 tests de brecha, muralla ×6, grafo 3,687) ·
-python 13/13 · clon limpio: ver addendum al cierre.
+python 13/13 · **clon limpio VERDE** (python 13/13, web 28/28 con 3
+skipped que requieren .env — el clon no lo tiene por diseño). Trampa
+nueva documentada: el clon debe vivir en ruta corta — MAX_PATH de Windows
+corrompe node_modules en paths largos (ERR_PACKAGE_IMPORT_NOT_DEFINED).

@@ -15,15 +15,14 @@
  * integrar_packs.py.
  */
 import { NextResponse } from "next/server";
-import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
-import { cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
-import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
+import { cargarGrafo, cargarPreguntasCache, obtenerPregunta } from "@/lib/engine/graph";
+import { estadoInicial } from "@/lib/engine/recorrido";
 import { MENSAJE_LIMITE, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
@@ -124,17 +123,27 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
     dominiosDesbloqueados: dominios,
   });
 
-  const client = createAnthropicClient();
-  const resultado = await avanzarTurno({
-    client,
-    graph,
-    families,
-    preguntasCache,
-    estado,
-    respuestaUsuario: null,
+  // Fase v1.3.2 (cazado por el vuelo, dos veces): la PRIMERA pregunta del
+  // mundo es la CACHEADA de la semilla que eligió evaluacionBrecha —
+  // determinística, cero LLM, igual que la elección de la semilla. Ni
+  // intérprete (con un estado_vivo cargado de urgencias core juzgaba la
+  // semilla "desalineada" y salía en el turno 0: el usuario pagó por
+  // explorar ESTE mundo) ni preguntaDirigida (el mismo estado_vivo hacía
+  // que la reescritura se comiera al nodo). Desde el turno 2, el
+  // intérprete manda como siempre.
+  const pregunta = obtenerPregunta(brecha.semillaId, graph[brecha.semillaId], preguntasCache);
+  const estadoConPregunta = {
+    ...estado,
+    preguntaPendiente: pregunta,
+    ultimasPreguntas: [pregunta],
+  };
+  const resultado = {
+    tipo: "pregunta" as const,
+    estado: estadoConPregunta,
+    pregunta,
     acumulado: usoVacio(),
-    dbSessionId: sessionId,
-  });
+    nodosNuevos: [],
+  };
 
   const puerta = {
     id: brecha.semillaId,
