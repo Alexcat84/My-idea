@@ -702,7 +702,7 @@ async function faseMundosNuevos(cookie: string, projectId: string) {
   let costoW = Number(rw.costo_usd ?? 0);
   log(`world session: ${worldSessionId}, tipo: ${rw.tipo}`);
   const RESPUESTAS_SEGURIDAD_DIGITAL = [
-    "Vendo por Instagram y guardo los datos de mis clientes en el celular y en un Excel sin clave.",
+    "Me preocupan sobre todo las contrasenas y quien puede entrar a mis cuentas, quiero ordenar eso ya. Hoy guardo los datos de mis clientes en un Excel sin clave y en el celular.",
     "Uso la misma contrasena para el correo, Instagram y el banco, y no tengo verificacion en dos pasos.",
     "No tengo copias de seguridad; si pierdo el celular pierdo los pedidos y los contactos.",
     "Me preocupa que me roben la cuenta de Instagram porque es mi canal principal de ventas.",
@@ -746,6 +746,121 @@ async function faseMundosNuevos(cookie: string, projectId: string) {
     throw new Error(`el checklist de seguridad_digital no aparece agrupado por dominio: ${JSON.stringify(resumenW)}`);
   }
   log(`OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con ${resumenW.seguridad_digital.total} items).`);
+  return { costoUsd: costoW };
+}
+
+// ---------------------------------------------------------------------------
+// Fase 2g-ter (Fase v1.4): el 7.º mundo, "Riesgos Bajo Control". Muralla
+// negativa de risk_management (sin unlock -> 403) + ciclo positivo COMPLETO
+// (unlock 3 créditos -> start con la semilla del mapeo de brecha -> turnos ->
+// plan dominio=risk_management -> checklist agrupado). El unlock muerde el
+// CHECK de la migración 019 (project_unlocks ampliado al 7.º pack): si el
+// CHECK viejo lo rechaza, se corta con el mensaje exacto para el SQL Editor.
+// ---------------------------------------------------------------------------
+async function faseMundoRiesgos(cookie: string, projectId: string) {
+  separador("FASE 2g-ter (v1.4): Riesgos Bajo Control -- muralla + unlock 3 creditos + ciclo");
+
+  // 1. Muralla negativa: sin unlock, risk_management = 403 (no existe para el motor).
+  const sinUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/risk_management/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (sinUnlock.status !== 403) {
+    throw new Error(`start de 'risk_management' sin unlock debio responder 403 (la muralla), respondio ${sinUnlock.status}`);
+  }
+  log("OK: muralla de 'risk_management' en pie (403 sin unlock).");
+
+  // 2. Unlock -- aqui muerde el CHECK de la migracion 019.
+  const resUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/risk_management/unlock`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resUnlock.ok) {
+    const cuerpo = await resUnlock.text();
+    throw new Error(
+      `unlock de risk_management respondio ${resUnlock.status} -- si el cuerpo huele a 23514, ` +
+        `falta aplicar my_idea_019_mundo_riesgos.sql en el SQL Editor de Supabase (los CHECK de la 017 ` +
+        `no aceptan risk_management). Cuerpo: ${cuerpo.slice(0, 300)}`
+    );
+  }
+  const u = (await resUnlock.json()) as Record<string, unknown>;
+  if (u.ok !== true || u.dominio !== "risk_management") {
+    throw new Error(`unlock de risk_management fallo: ${JSON.stringify(u)}`);
+  }
+  if (Number(u.creditos) !== 3) {
+    throw new Error(`el unlock de risk_management debio cobrar 3 creditos, cobro ${u.creditos}`);
+  }
+  log(`OK: unlock de risk_management con ${u.creditos} creditos (migracion 019 viva).`);
+
+  // La fila real: creditos_pagados = 3 (canon del catalogo).
+  const { data: fila, error: errFila } = await supabaseAdmin
+    .from("project_unlocks")
+    .select("creditos_pagados")
+    .eq("project_id", projectId)
+    .eq("dominio", "risk_management")
+    .single();
+  if (errFila || fila?.creditos_pagados !== 3) {
+    throw new Error(`fila de project_unlocks risk_management con creditos_pagados!=3: ${JSON.stringify(fila)} ${errFila?.message ?? ""}`);
+  }
+
+  // 3. Ciclo positivo completo -- la brecha elige la semilla del 7.º mundo.
+  const conUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/risk_management/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!conUnlock.ok) {
+    throw new Error(`start de risk_management con unlock respondio ${conUnlock.status} (se esperaba 200 post-integracion)`);
+  }
+  let rw = (await conUnlock.json()) as Record<string, unknown>;
+  const worldSessionId = String(rw.session_id);
+  let costoW = Number(rw.costo_usd ?? 0);
+  log(`world session: ${worldSessionId}, tipo: ${rw.tipo}`);
+  log(`[risk_management brecha] primera pregunta (semilla del mapeo, cero LLM): ${rw.pregunta}`);
+  const RESPUESTAS_RIESGOS = [
+    "Mi mayor riesgo es que dependo de un solo proveedor de resina; si sube el precio o desaparece, no puedo producir ni entregar. Quiero aprender a verlo venir a tiempo.",
+    "Nunca he escrito una lista de lo que podria salir mal; voy apagando incendios cuando ya pasaron.",
+    "No tengo un colchon de dinero ni un proveedor alterno; si algo falla, se me para la produccion entera.",
+    "Quiero anticipar los golpes antes de que ocurran y decidir con calma, no a las carreras.",
+    "Con eso me basta por ahora.",
+  ];
+  let turnosW = 0;
+  while (rw.tipo === "pregunta" && turnosW < MAX_TURNOS_SEGURIDAD) {
+    turnosW++;
+    const respuesta = RESPUESTAS_RIESGOS[Math.min(turnosW - 1, RESPUESTAS_RIESGOS.length - 1)];
+    log(`[risk_management turno ${turnosW}] ${rw.pregunta}`);
+    rw = await postJson(cookie, `/api/session/${worldSessionId}/turn`, { respuesta });
+    costoW = Number(rw.costo_usd ?? costoW);
+  }
+  if (rw.tipo !== "listo_para_plan") {
+    throw new Error(`la sesion de risk_management no llego a listo_para_plan (tipo: ${rw.tipo})`);
+  }
+  const resPlanW = await fetch(`${BASE_URL}/api/session/${worldSessionId}/plan`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  let mdW = "";
+  await consumirSSE(resPlanW, ({ evento, data }) => {
+    if (evento === "done") {
+      const d = data as { markdown: string; costo_usd: number };
+      mdW = d.markdown;
+      costoW = d.costo_usd;
+    }
+  });
+  if (!mdW) throw new Error("el plan de risk_management salio vacio");
+  const { data: planW } = await supabaseAdmin
+    .from("plans")
+    .select("id, etiqueta, dominio")
+    .eq("session_id", worldSessionId)
+    .single();
+  if (planW?.dominio !== "risk_management") {
+    throw new Error(`plans.dominio esperado 'risk_management', llego '${planW?.dominio}'`);
+  }
+  const clW = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const resumenW = clW.resumen as Record<string, { total: number }>;
+  if (!resumenW.risk_management || resumenW.risk_management.total === 0) {
+    throw new Error(`el checklist de risk_management no aparece agrupado por dominio: ${JSON.stringify(resumenW)}`);
+  }
+  log(`OK: ciclo completo del 7.o mundo (plan dominio=risk_management, checklist con ${resumenW.risk_management.total} items).`);
   return { costoUsd: costoW };
 }
 
@@ -1088,6 +1203,7 @@ async function main() {
     const mundos = await faseMundos(cookie, macetas.projectId);
     costos.mundos = mundos.costoUsd;
     costos.mundosNuevos = (await faseMundosNuevos(cookie, macetas.projectId)).costoUsd;
+    costos.mundoRiesgos = (await faseMundoRiesgos(cookie, macetas.projectId)).costoUsd;
     costos.contratoUI = (await faseContratoUI(cookie, macetas.projectId, mundos.cicloCompleto)).costoUsd;
     costos.sentidoDelTiempo = (await faseSentidoDelTiempo(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
@@ -1116,12 +1232,13 @@ async function main() {
   log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
   log("  6. mundos HSEQ: muro 403 sin unlock, unlock idempotente con creditos, y 503/ciclo segun integracion (Fase 3.5): OK");
   log("  7. mundos nuevos v1.3.2: murallas 403 de exportacion/franquicias + ciclo completo de seguridad_digital (migracion 017): OK");
+  log("  7-bis. Riesgos Bajo Control (v1.4): muralla 403 + unlock 3 creditos (migracion 019) + ciclo completo dominio=risk_management: OK");
   log("  8. contrato de la UI de convergencia: unlocks + historial + mundos + grupo vigente (Fase 3.6): OK");
   log("  9. sentido del tiempo (Fase 3.8): modo, completed_at real, baseline con 3 clases de cumplimiento, celebracion+reabrir: OK");
   log("  10. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
   log("  11. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 12/12 verificaciones OK");
+  separador("VUELO COMPLETO: 13/13 verificaciones OK");
   escribirTranscripcion();
 }
 
