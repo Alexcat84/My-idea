@@ -1,0 +1,324 @@
+[
+  {
+    "node_id": "haz_tu_lista_de_lo_que_puede_fallar",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "El Censo de Riesgos",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 2; Edwards et al., Managing Project Risks, Cap. 6",
+    "resumen_teorico": "El corazón de gestionar el riesgo es tener una lista viva de lo que puede salir mal, no una foto que hiciste una vez y archivaste. Se arma con una sesión honesta de lluvia de ideas donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, y luego decides cuáles vale la pena manejar. Lo importante no es la lista inicial, sino el mecanismo que la mantiene despierta: cada semana aparecen riesgos nuevos y otros se apagan. Para un emprendedor solo, esta lista sustituye al equipo que en una empresa te avisaría de los peligros. Sin ella, gestionar riesgo es imposible: no puedes cuidar lo que no has nombrado.",
+    "pasos_accionables": [
+      "Siéntate quince minutos y escribe todo lo que podría salir mal en tu proyecto, sin filtrarte.",
+      "Marca cuáles merecen que hagas algo y cuáles puedes soltar por ahora.",
+      "Guarda la lista en un lugar que revises seguido, no en un cajón.",
+      "Agenda un momento fijo cada semana para añadir riesgos nuevos y quitar los que ya pasaron."
+    ],
+    "entregable_esperado": "Una lista viva de riesgos, guardada a la vista, con un momento semanal fijo para actualizarla.",
+    "nodos_previos": ["Cuál Es tu Mayor Riesgo"],
+    "nodos_siguientes": ["Las Formas en Que los Proyectos Mueren", "Cuán Probable y Cuánto Dolería"],
+    "condiciones_activacion": [
+      "cuando llevas los riesgos en la cabeza y no en un papel",
+      "cuando hiciste una lista al inicio y nunca la volviste a tocar",
+      "cuando algo te sorprendió y al mirarlo atrás era previsible"
+    ],
+    "etiqueta_arbol": "Lista de lo Que Puede Fallar"
+  },
+  {
+    "node_id": "las_formas_en_que_los_proyectos_mueren",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Los Riesgos Nucleares de Todo Proyecto",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 13 (Core Risks)",
+    "resumen_teorico": "Hay unas pocas formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y a veces mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco no dependen de cuánto te esfuerces ni de qué tan listo seas: son inevitables. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+    "pasos_accionables": [
+      "Revisa tu plan contra las cinco formas típicas de morir y anota cuál te amenaza más.",
+      "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (cuándo lo quieren para).",
+      "Anticipa que el alcance crecerá: reserva margen en vez de asumir cero cambios.",
+      "Identifica de quién dependes tanto que perderlo te frenaría, y de qué acuerdo sin cerrar dependes."
+    ],
+    "entregable_esperado": "Tu plan revisado contra las cinco formas típicas de fracaso, con la que más te amenaza marcada y con margen reservado.",
+    "nodos_previos": ["Haz tu Lista de lo Que Puede Fallar"],
+    "nodos_siguientes": ["Guarda un Colchón de Tiempo y Dinero", "El Riesgo Eres Tú"],
+    "condiciones_activacion": [
+      "cuando planeas como si los problemas de proyectos pasados no se fueran a repetir",
+      "cuando tu plazo salió de cuándo lo quieren, no de cuánto trabajo es",
+      "cuando das por hecho que lo que el cliente pide hoy será lo mismo al final"
+    ],
+    "etiqueta_arbol": "Cómo Mueren los Proyectos"
+  },
+  {
+    "node_id": "busca_el_riesgo_antes_de_que_te_busque",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "El Momento de Identificar Riesgos",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 6 (Approach and Timing)",
+    "resumen_teorico": "Identificar riesgos no es un trámite de una sola vez al arrancar, es algo que se hace temprano y se repite a lo largo del camino. Cuanto antes nombras un riesgo, más barato y fácil es hacer algo con él: al principio todavía tienes tiempo, opciones y dinero para maniobrar. Si esperas a que el riesgo se vuelva problema, ya solo te queda apagar el incendio. La incertidumbre es mayor al inicio y va bajando conforme avanzas y aprendes, así que conviene volver a buscar riesgos en cada etapa, no solo en la primera. Para el emprendedor solo, esto significa reservar, en cada tramo del proyecto, un momento para preguntar qué podría salir mal de aquí en adelante.",
+    "pasos_accionables": [
+      "Haz tu primera búsqueda de riesgos al inicio, cuando aún tienes margen para maniobrar.",
+      "Repite la búsqueda al empezar cada etapa nueva del proyecto, no solo al arranque.",
+      "En cada búsqueda pregunta: qué podría salir mal de aquí en adelante que hoy no veo.",
+      "Actúa temprano sobre el riesgo que detectes, mientras aún es barato hacerlo."
+    ],
+    "entregable_esperado": "Un ritmo de búsqueda de riesgos por etapa, con la primera ronda hecha al inicio del proyecto.",
+    "nodos_previos": ["Haz tu Lista de lo Que Puede Fallar"],
+    "nodos_siguientes": ["Técnicas Para Sacar Riesgos a la Luz", "Revisa tus Riesgos con un Ritmo"],
+    "condiciones_activacion": [
+      "cuando solo piensas en los riesgos al arrancar y nunca más",
+      "cuando un problema estalló y ya no tenías margen para maniobrar",
+      "cuando empiezas una etapa nueva sin preguntarte qué riesgos trae"
+    ],
+    "etiqueta_arbol": "Busca el Riesgo Temprano"
+  },
+  {
+    "node_id": "tecnicas_para_sacar_riesgos_a_la_luz",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Técnicas de Identificación de Riesgos",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 6-7 (Identification Techniques and Tools)",
+    "resumen_teorico": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas suelta, sola o con alguien de confianza, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+    "pasos_accionables": [
+      "Haz una lluvia de ideas de riesgos, solo o con alguien de confianza que te cuestione.",
+      "Busca o arma una lista de chequeo de riesgos típicos de tu tipo de negocio.",
+      "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
+      "Reescribe cada riesgo como una frase completa de causa y efecto, no como una palabra suelta."
+    ],
+    "entregable_esperado": "Una lista de riesgos sacada con varias técnicas, cada uno escrito como frase completa de causa y efecto.",
+    "nodos_previos": ["Busca el Riesgo Antes de Que Te Busque"],
+    "nodos_siguientes": ["El Pre-Mortem: Imagina el Fracaso", "Cuán Probable y Cuánto Dolería"],
+    "condiciones_activacion": [
+      "cuando tu lista de riesgos se quedó corta y sientes que se te escapan cosas",
+      "cuando anotas riesgos como palabras sueltas y luego no sabes qué querías decir",
+      "cuando no tienes equipo que aporte miradas distintas sobre lo que puede fallar"
+    ],
+    "etiqueta_arbol": "Saca los Riesgos a la Luz"
+  },
+  {
+    "node_id": "el_pre_mortem_imagina_el_fracaso",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "El Pre-Mortem",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 7 (Speculation Tools); DeMarco y Lister, Waltzing with Bears",
+    "resumen_teorico": "El pre-mortem es la técnica más honesta para sacar riesgos que nadie se atreve a decir en voz alta. En vez de preguntar qué podría salir mal, das un salto al futuro y supones que el proyecto ya fracasó rotundamente; desde ahí, cuentas la historia de por qué fracasó. Ese cambio de marco desactiva el optimismo obligatorio: como el fracaso ya es un hecho imaginado, tu mente deja de defenderlo y empieza a buscar culpables reales. Aparecen así los riesgos que la actitud de yo-puedo-con-todo mantenía escondidos. Para el emprendedor solo, que no tiene a nadie que juegue al abogado del diablo, imaginar el fracaso a propósito es la forma más rápida de ver sus propios puntos ciegos.",
+    "pasos_accionables": [
+      "Imagina que estás seis meses en el futuro y tu proyecto fracasó por completo.",
+      "Escribe la historia de por qué fracasó, con detalles, como si ya hubiera pasado.",
+      "Subraya en esa historia cada causa concreta: esos son riesgos que no habías nombrado.",
+      "Pasa esos riesgos nuevos a tu lista y decide qué harías con los más graves."
+    ],
+    "entregable_esperado": "Una historia escrita del fracaso imaginado de tu proyecto, con sus causas convertidas en riesgos de tu lista.",
+    "nodos_previos": ["Técnicas Para Sacar Riesgos a la Luz"],
+    "nodos_siguientes": ["Cuán Probable y Cuánto Dolería", "Nombra tus Suposiciones Frágiles"],
+    "condiciones_activacion": [
+      "cuando sientes que tu optimismo te impide ver lo que puede fallar",
+      "cuando nadie a tu alrededor te cuestiona el plan",
+      "cuando quieres sacar los riesgos incómodos que nadie diría en voz alta"
+    ],
+    "etiqueta_arbol": "Imagina Que Ya Fracasaste"
+  },
+  {
+    "node_id": "cuan_probable_y_cuanto_doleria",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Probabilidad e Impacto",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 8 (Assessing Likelihood and Impacts)",
+    "resumen_teorico": "Todo riesgo se mide por dos cosas: qué tan probable es que ocurra, y cuánto te dolería si ocurre. Estas dos preguntas ordenan tu lista y te dicen a cuáles prestar atención primero. Un riesgo muy probable pero de daño mínimo puede esperar; uno improbable pero capaz de hundirte merece tu atención hoy. No necesitas números perfectos al principio: basta con ubicar cada riesgo como alta, media o baja probabilidad, y como daño grande, mediano o pequeño, siempre que seas honesto y consistente al hacerlo. El error común es mirar solo una de las dos dimensiones: obsesionarse con lo que más probable sin ver que su daño es trivial, o temer un desastre que casi nunca pasa.",
+    "pasos_accionables": [
+      "De cada riesgo de tu lista, estima qué tan probable es: alta, media o baja.",
+      "Estima también cuánto dolería si pasa: daño grande, mediano o pequeño.",
+      "Ordena tu lista con las dos dimensiones juntas, no con una sola.",
+      "Sé honesto y usa el mismo criterio para todos, para poder compararlos de verdad."
+    ],
+    "entregable_esperado": "Tu lista de riesgos con una estimación de probabilidad y de impacto para cada uno, hecha con criterio consistente.",
+    "nodos_previos": ["Haz tu Lista de lo Que Puede Fallar"],
+    "nodos_siguientes": ["Evalúa la Gravedad Sin Autoengaño", "La Matriz de Colores Te Engaña"],
+    "condiciones_activacion": [
+      "cuando todos tus riesgos te parecen igual de urgentes",
+      "cuando te obsesiona un riesgo probable cuyo daño en realidad es menor",
+      "cuando no sabes a cuál de tus riesgos atender primero"
+    ],
+    "etiqueta_arbol": "Cuán Probable y Cuánto Dolería"
+  },
+  {
+    "node_id": "la_matriz_de_colores_te_engana",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Por Qué la Matriz de Riesgo No Funciona",
+    "fuente": "Hubbard, The Failure of Risk Management, Cap. 8 (Worse Than Useless)",
+    "resumen_teorico": "La herramienta más popular para calificar riesgos, la matriz de colores que multiplica una probabilidad alta-media-baja por un impacto alto-medio-bajo y pinta el resultado de rojo, amarillo o verde, es peor que inútil. El problema de fondo es que trata escalas de orden como si fueran números reales: un impacto de tres no es el triple de uno, igual que una película de tres estrellas no es el triple de buena que una de una estrella, pero la matriz los multiplica igual. Encima, las etiquetas como media significan cosas muy distintas para cada persona, y esconde el exceso de confianza con que todos estimamos. El resultado no es solo que no ayuda: agrega su propio error y puede dejarte peor que tu simple intuición. La sensación de control que da es un placebo.",
+    "pasos_accionables": [
+      "Si usas una matriz de colores, deja de multiplicar sus casillas como si fueran números.",
+      "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y cuánto en dinero o tiempo.",
+      "Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.",
+      "Prefiere una estimación imperfecta pero honesta a un tablero de colores que aparenta rigor."
+    ],
+    "entregable_esperado": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad y daño en palabras y cifras honestas.",
+    "nodos_previos": ["Cuán Probable y Cuánto Dolería"],
+    "nodos_siguientes": ["Piensa en Rangos, No en Números Únicos", "Cómo Sabes Que tu Método Sirve"],
+    "condiciones_activacion": [
+      "cuando usas o te piden usar una matriz de riesgo de colores",
+      "cuando calificas riesgos con puntajes que luego sumas o multiplicas",
+      "cuando un tablero de riesgo te da calma pero no sabrías defender sus números"
+    ],
+    "etiqueta_arbol": "La Matriz de Colores Te Engaña"
+  },
+  {
+    "node_id": "piensa_en_rangos_no_en_numeros_unicos",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Expresar la Incertidumbre como Rango",
+    "fuente": "Hubbard, The Failure of Risk Management, Cap. 4; DeMarco y Lister, Waltzing with Bears, Cap. 8",
+    "resumen_teorico": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen y ganar credibilidad. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
+    "pasos_accionables": [
+      "Toma tu próximo estimado importante de plazo, costo o ventas.",
+      "En vez de un número, escribe un rango: de tal a tal.",
+      "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango.",
+      "Comunica el rango a tu cliente o a ti mismo, en vez de una cifra falsamente exacta."
+    ],
+    "entregable_esperado": "Tus estimados clave reescritos como rangos con una confianza declarada, en lugar de números únicos.",
+    "nodos_previos": ["La Matriz de Colores Te Engaña"],
+    "nodos_siguientes": ["Calibra tu Propio Ojo", "El Valor También Es Incierto"],
+    "condiciones_activacion": [
+      "cuando prometes una fecha o un costo exactos sobre algo que no controlas",
+      "cuando sientes que dar un rango te hace ver inseguro",
+      "cuando tus estimados de un solo número se rompen una y otra vez"
+    ],
+    "etiqueta_arbol": "Piensa en Rangos, No en Cifras"
+  },
+  {
+    "node_id": "calibra_tu_propio_ojo",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Calibración del Juicio",
+    "fuente": "Hubbard, The Failure of Risk Management, Cap. 12 (Calibrated Estimates)",
+    "resumen_teorico": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta sesenta, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
+    "pasos_accionables": [
+      "En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.",
+      "Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.",
+      "Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.",
+      "Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho."
+    ],
+    "entregable_esperado": "Un registro de tus estimaciones con rango y su resultado real, que muestra qué tan calibrado estás.",
+    "nodos_previos": ["Piensa en Rangos, No en Números Únicos"],
+    "nodos_siguientes": ["Cuánto Sabes y Cuánto Solo Crees", "Mide lo Que de Verdad Mueve la Aguja"],
+    "condiciones_activacion": [
+      "cuando tus predicciones seguras fallan más de lo que deberían",
+      "cuando decides mucho por corazonada y quieres que sea confiable",
+      "cuando das rangos tan estrechos que casi siempre te quedas corto"
+    ],
+    "etiqueta_arbol": "Calibra tu Propio Ojo"
+  },
+  {
+    "node_id": "cuanto_sabes_y_cuanto_solo_crees",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Los Límites del Conocimiento Experto",
+    "fuente": "Hubbard, The Failure of Risk Management, Cap. 7 (The Limits of Expert Knowledge)",
+    "resumen_teorico": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso en dos días distintos, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+    "pasos_accionables": [
+      "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación clara de tus errores pasados.",
+      "Separa lo que sabes con datos de lo que solo crees por intuición.",
+      "En las decisiones grandes, busca al menos un dato externo que confirme o rete tu juicio.",
+      "Acepta que puedes estar sobreconfiado y deja margen para equivocarte."
+    ],
+    "entregable_esperado": "Una decisión clave dividida entre lo que sabes con datos y lo que solo crees, con un dato externo que la contraste.",
+    "nodos_previos": ["Calibra tu Propio Ojo"],
+    "nodos_siguientes": ["Cuidado con la Falsa Precisión", "Cómo Sabes Que tu Método Sirve"],
+    "condiciones_activacion": [
+      "cuando te apoyas solo en tu experiencia para juzgar un riesgo",
+      "cuando estás muy seguro de algo que en realidad no has comprobado",
+      "cuando tomas una decisión grande sin ningún dato que rete tu corazonada"
+    ],
+    "etiqueta_arbol": "Cuánto Sabes y Cuánto Solo Crees"
+  },
+  {
+    "node_id": "mide_lo_que_de_verdad_mueve_la_aguja",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Análisis de Sensibilidad",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 20 (Sensitivity Analysis)",
+    "resumen_teorico": "No todas tus incertidumbres pesan igual. De todas las cosas que no sabes, unas pocas deciden el resultado y el resto casi no importa. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: preguntas cuál de tus supuestos, si cambia, mueve más el resultado final, y ahí concentras tu atención, tu medición y tu esfuerzo por reducir la incertidumbre. Sin esto, es fácil perder semanas afinando un número que no cambia nada mientras ignoras el que lo decide todo. Para el emprendedor con tiempo y dinero limitados, saber qué mueve la aguja es lo que separa el esfuerzo útil del desperdiciado: mide primero lo que más incertidumbre le quita a tu decisión.",
+    "pasos_accionables": [
+      "Lista los supuestos inciertos detrás de tu decisión o tu proyección.",
+      "Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.",
+      "Marca los dos o tres que más mueven la aguja e ignora por ahora los demás.",
+      "Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos."
+    ],
+    "entregable_esperado": "Tus supuestos ordenados por cuánto mueven el resultado, con los dos o tres decisivos marcados para medir primero.",
+    "nodos_previos": ["Nombra tus Suposiciones Frágiles"],
+    "nodos_siguientes": ["Riesgo Contra Valor: Vale la Pena", "Calibra tu Propio Ojo"],
+    "condiciones_activacion": [
+      "cuando tienes muchas incertidumbres y no sabes cuál atacar primero",
+      "cuando pasas tiempo afinando datos que quizá no cambian nada",
+      "cuando una decisión depende de varios supuestos y quieres saber cuál pesa más"
+    ],
+    "etiqueta_arbol": "Mide lo Que Mueve la Aguja"
+  },
+  {
+    "node_id": "evalua_la_gravedad_sin_autoengano",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Evaluación de la Severidad del Riesgo",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 8 (Evaluating Risk Severity)",
+    "resumen_teorico": "La gravedad de un riesgo combina su probabilidad y su impacto en un solo juicio que te dice cuánta atención merece. Un riesgo grave es el que junta buena probabilidad de ocurrir con capacidad de hacerte mucho daño; ese va primero. El reto no es la fórmula, es la honestidad: es tentador inflar la gravedad de lo que ya decidiste evitar, o minimizar la de lo que no quieres enfrentar. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode. Para el emprendedor solo, sin un jefe ni un comité que lo contrapese, la disciplina de juzgar la gravedad de forma pareja es lo que evita que su miedo o su ilusión decidan por él.",
+    "pasos_accionables": [
+      "Para cada riesgo, junta su probabilidad y su impacto en un solo nivel de gravedad.",
+      "Ordena tus riesgos de más grave a menos grave con ese criterio.",
+      "Revisa si inflaste o minimizaste alguno para que encajara con lo que ya querías hacer.",
+      "Atiende primero los tres más graves, no los que te dan más miedo emocional."
+    ],
+    "entregable_esperado": "Tus riesgos ordenados por gravedad con un criterio parejo, con los tres más graves marcados para atender primero.",
+    "nodos_previos": ["Cuán Probable y Cuánto Dolería"],
+    "nodos_siguientes": ["Cuatro Caminos Ante un Riesgo", "Riesgo Contra Valor: Vale la Pena"],
+    "condiciones_activacion": [
+      "cuando no sabes a cuál de tus riesgos dedicar tu tiempo limitado",
+      "cuando sospechas que tu miedo o tu ilusión están ordenando tus prioridades",
+      "cuando calificaste riesgos pero sin un criterio parejo entre ellos"
+    ],
+    "etiqueta_arbol": "Evalúa la Gravedad Sin Autoengaño"
+  },
+  {
+    "node_id": "como_sabes_que_tu_metodo_sirve",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Medir si el Método de Riesgo Funciona",
+    "fuente": "Hubbard, The Failure of Risk Management, Cap. 3 (How Do We Know What Works)",
+    "resumen_teorico": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y jamás comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si lo que llamaste probable ocurre seguido y lo improbable casi nunca, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+    "pasos_accionables": [
+      "Escribe hoy tus predicciones de riesgo, con probabilidad, y guárdalas con fecha.",
+      "Cuando pase el tiempo, compara lo que predijiste con lo que de verdad ocurrió.",
+      "Pregunta: lo que llamé probable ocurrió seguido, y lo improbable casi nunca.",
+      "Si no acierta, cambia de método en vez de repetir uno que solo te da calma."
+    ],
+    "entregable_esperado": "Un registro fechado de tus predicciones de riesgo para contrastarlo después contra lo que realmente pasó.",
+    "nodos_previos": ["Escepticismo Sano Ante el Riesgo"],
+    "nodos_siguientes": ["Tu Gestión de Riesgo Funciona", "Cuidado con la Falsa Precisión"],
+    "condiciones_activacion": [
+      "cuando llamas exitoso a tu método de riesgo solo porque te da calma",
+      "cuando nunca comparaste tus predicciones con lo que después pasó",
+      "cuando adoptas una forma de gestionar riesgo sin poder decir si funciona"
+    ],
+    "etiqueta_arbol": "¿Cómo Sabes Que tu Método Sirve?"
+  },
+  {
+    "node_id": "cuidado_con_la_falsa_precision",
+    "fase_proyecto": "validacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Errores en los Métodos Cuantitativos",
+    "fuente": "Hubbard, The Failure of Risk Management, Cap. 10 (Where Even the Quants Go Wrong)",
+    "resumen_teorico": "Pasar a los números no te salva solo. Hasta las cuentas más sofisticadas engañan cuando arrancan de datos inventados o de supuestos frágiles: un resultado con muchos decimales parece riguroso y por eso da una confianza que no merece. La falsa precisión es peligrosa justo porque tranquiliza. Un cálculo solo vale lo que valen sus insumos: si metiste una probabilidad que sacaste de la manga, la respuesta exacta que salga sigue siendo un invento con apariencia de ciencia. Para el emprendedor, la lección no es huir de los números, sino usarlos con honestidad: reconoce de dónde salió cada dato, prefiere un rango honesto a un decimal falso, y desconfía de cualquier resultado que se vea más seguro que la información con que lo hiciste.",
+    "pasos_accionables": [
+      "De cualquier cálculo de riesgo, rastrea de dónde salió cada número que metiste.",
+      "Marca los datos que en realidad inventaste o supusiste sin base.",
+      "No presentes más decimales de los que tus datos aguantan: redondea con honestidad.",
+      "Desconfía de todo resultado que parezca más seguro que la información que lo alimentó."
+    ],
+    "entregable_esperado": "Un cálculo de riesgo con el origen de cada dato marcado y los supuestos inventados señalados, redondeado con honestidad.",
+    "nodos_previos": ["Cómo Sabes Que tu Método Sirve"],
+    "nodos_siguientes": ["Cuatro Caminos Ante un Riesgo", "Reporta el Riesgo Sin Maquillaje"],
+    "condiciones_activacion": [
+      "cuando un cálculo con muchos decimales te da una seguridad que no tienes",
+      "cuando metes en una fórmula datos que sacaste de la manga",
+      "cuando presentas cifras exactas sobre cosas que en realidad no mediste"
+    ],
+    "etiqueta_arbol": "Cuidado con la Falsa Precisión"
+  }
+]

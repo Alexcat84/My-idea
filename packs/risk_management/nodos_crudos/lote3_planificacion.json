@@ -1,0 +1,301 @@
+[
+  {
+    "node_id": "cuatro_caminos_ante_un_riesgo",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Las Opciones de Respuesta al Riesgo",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 9 (Risk Response Options)",
+    "resumen_teorico": "Ante un riesgo tienes cuatro caminos, y conviene conocerlos antes de decidir. Puedes evitarlo, cambiando de rumbo para que ya no pueda ocurrir; transferirlo, pasándoselo a quien puede absorberlo mejor, como un seguro o una cláusula; reducirlo, bajando su probabilidad o su impacto y quedándote con lo que sobra; o retenerlo, aceptarlo tal cual porque tratarlo costaría más de lo que vale. Los riesgos casi nunca se eliminan del todo: al cerrar uno suele abrirse otro. La respuesta siempre tiene un costo, así que se pesa contra el daño que evitaría. Para el emprendedor, tener presentes los cuatro caminos evita el reflejo de siempre reaccionar igual y abre opciones más baratas o más listas.",
+    "pasos_accionables": [
+      "Toma tus riesgos más graves y, de cada uno, escribe cuál de los cuatro caminos le conviene.",
+      "Considera primero si puedes evitarlo cambiando de rumbo, la respuesta más contundente.",
+      "Si no, decide si lo reduces, lo transfieres a alguien más, o lo aceptas a conciencia.",
+      "Pesa el costo de la respuesta contra el daño que evitarías: que valga la pena."
+    ],
+    "entregable_esperado": "Tus riesgos graves con un camino de respuesta elegido para cada uno (evitar, transferir, reducir o aceptar).",
+    "nodos_previos": ["Evalúa la Gravedad Sin Autoengaño"],
+    "nodos_siguientes": ["Evitar o Asumir, Decide a Conciencia", "Transfiere lo Que No Debes Cargar"],
+    "condiciones_activacion": [
+      "cuando tienes un riesgo grave y no sabes qué hacer con él",
+      "cuando siempre reaccionas igual ante cualquier riesgo",
+      "cuando quieres opciones antes de comprometer tiempo y dinero en una respuesta"
+    ],
+    "etiqueta_arbol": "Cuatro Caminos Ante un Riesgo"
+  },
+  {
+    "node_id": "evitar_o_asumir_decide_a_conciencia",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Apetito y Actitud ante el Riesgo",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 9 (Risk Attitudes and Appetites)",
+    "resumen_teorico": "Cuánto riesgo estás dispuesto a asumir es una decisión, no un rasgo fijo, y conviene tomarla a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y hasta el estado de ánimo: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito reciente infla el apetito; un susto lo encoge. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
+    "pasos_accionables": [
+      "Antes de una decisión grande, pregúntate cuánto riesgo estás dispuesto a asumir en ella.",
+      "Revisa si un éxito o un susto reciente te está inflando o encogiendo el apetito sin razón.",
+      "Desconfía de datos viejos: comprueba si siguen siendo ciertos antes de apoyarte en ellos.",
+      "Deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino."
+    ],
+    "entregable_esperado": "Una declaración escrita de cuánto riesgo estás dispuesto a asumir en tu decisión clave, revisada contra tu estado de ánimo reciente.",
+    "nodos_previos": ["Cuatro Caminos Ante un Riesgo"],
+    "nodos_siguientes": ["Reduce el Riesgo a lo Razonable", "Riesgo Contra Valor: Vale la Pena"],
+    "condiciones_activacion": [
+      "cuando decides cuánto arriesgar por impulso y no a propósito",
+      "cuando un éxito o un fracaso reciente te cambió el apetito de riesgo",
+      "cuando te apoyas en datos viejos sin revisar si siguen vigentes"
+    ],
+    "etiqueta_arbol": "Evitar o Asumir a Conciencia"
+  },
+  {
+    "node_id": "reduce_el_riesgo_a_lo_razonable",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Reducir el Riesgo Hasta lo Razonable",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 9 (Mitigation Principles; ALARP)",
+    "resumen_teorico": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, o sobre el impacto, para que si ocurre duela menos, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
+    "pasos_accionables": [
+      "De un riesgo grave, decide si atacas su probabilidad, su impacto, o ambos.",
+      "Lista dos o tres acciones concretas de reducción y su costo aproximado.",
+      "Detente cuando gastar más ya casi no baje el riesgo: ese es el límite razonable.",
+      "Anota el riesgo residual que aceptas quedarte, para no olvidar que sigue ahí."
+    ],
+    "entregable_esperado": "Un plan de reducción para un riesgo grave, con el punto razonable donde parar y el riesgo residual anotado.",
+    "nodos_previos": ["Evitar o Asumir, Decide a Conciencia"],
+    "nodos_siguientes": ["Guarda un Colchón de Tiempo y Dinero", "Anota Por Qué Decidiste Así"],
+    "condiciones_activacion": [
+      "cuando intentas eliminar un riesgo por completo y te sale carísimo",
+      "cuando no sabes hasta dónde vale la pena gastar en protegerte",
+      "cuando blindas riesgos menores y descuidas los graves"
+    ],
+    "etiqueta_arbol": "Reduce el Riesgo a lo Razonable"
+  },
+  {
+    "node_id": "transfiere_lo_que_no_debes_cargar",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Transferencia del Riesgo",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 9 (Risk Transfer)",
+    "resumen_teorico": "Algunos riesgos no tienes por qué cargarlos tú: puedes transferirlos a quien está mejor preparado para absorberlos. Un seguro convierte un golpe raro pero devastador en un pago mensual predecible; una cláusula en un contrato pasa la responsabilidad de un retraso o un defecto a quien lo causa; un proveedor con garantía carga con el costo de su propia falla. Transferir no hace desaparecer el riesgo, solo cambia quién paga si ocurre, y casi siempre tiene un precio: la prima del seguro, una condición del contrato. La regla es transferir lo que te puede hundir y no puedes controlar, y quedarte con lo que sí manejas. Para el emprendedor solo, un buen seguro o una cláusula bien puesta pueden ser la diferencia entre un susto y la quiebra.",
+    "pasos_accionables": [
+      "Identifica los riesgos que te hundirían y que en realidad no controlas.",
+      "De cada uno, pregúntate quién está mejor preparado para absorberlo: un seguro, el proveedor, el cliente.",
+      "Revisa qué seguro o cláusula concreta transferiría ese golpe, y cuánto cuesta.",
+      "Contrata o negocia la transferencia de al menos el riesgo que más te podría hundir."
+    ],
+    "entregable_esperado": "Una lista de tus riesgos que hundirían el negocio con la vía de transferencia (seguro o cláusula) elegida para cada uno.",
+    "nodos_previos": ["Cuatro Caminos Ante un Riesgo"],
+    "nodos_siguientes": ["Los Controles Que Ya Tienes", "Plan B Antes de Necesitarlo"],
+    "condiciones_activacion": [
+      "cuando un solo golpe raro podría quebrarte",
+      "cuando cargas tú con un riesgo que en realidad causa o controla otro",
+      "cuando firmas contratos sin revisar quién paga si algo sale mal"
+    ],
+    "etiqueta_arbol": "Transfiere lo Que No Debes Cargar"
+  },
+  {
+    "node_id": "guarda_un_colchon_de_tiempo_y_dinero",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "La Reserva de Contingencia",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 14 y 20-21 (Risk Reserve)",
+    "resumen_teorico": "Cuando conoces tus riesgos, sabes cuánto margen guardar para protegerte: eso es la reserva de contingencia, tiempo y dinero apartados para cuando un riesgo pegue. La reserva es, por definición, algo que quizá no uses; por eso cuesta disciplina reservarla, y por eso quien no la tiene termina pagando mucho más caro cuando el riesgo se vuelve realidad. Lo importante es que su tamaño no sea un número al azar ni un diez por ciento de manual, sino que salga del riesgo real que mediste: mientras más grande e incierto el riesgo, mayor el colchón. La reserva incluye lo que gastarás en prepararte y lo que guardas para apagar incendios. Para el emprendedor, un colchón bien dimensionado es lo que le permite sobrevivir al golpe que a otros los saca del juego.",
+    "pasos_accionables": [
+      "Suma el impacto probable de tus riesgos graves para estimar cuánto colchón necesitas.",
+      "Aparta tiempo y dinero de reserva proporcional a ese riesgo, no un porcentaje al azar.",
+      "Separa la reserva del presupuesto normal: es para emergencias, no para gasto corriente.",
+      "Revisa el tamaño del colchón cada vez que tus riesgos crezcan o se reduzcan."
+    ],
+    "entregable_esperado": "Una reserva de tiempo y dinero apartada, con su tamaño justificado por el riesgo real que mediste.",
+    "nodos_previos": ["Las Formas en Que los Proyectos Mueren"],
+    "nodos_siguientes": ["Plan B Antes de Necesitarlo", "Riesgo Contra Valor: Vale la Pena"],
+    "condiciones_activacion": [
+      "cuando un imprevisto te deja sin margen de tiempo o dinero",
+      "cuando tu reserva es un porcentaje redondo sin relación con tus riesgos reales",
+      "cuando gastas tu colchón de emergencia en el día a día"
+    ],
+    "etiqueta_arbol": "Guarda un Colchón de Reserva"
+  },
+  {
+    "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Entrega Incremental para Exponer el Riesgo",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 16 (Incremental Risk Mitigation)",
+    "resumen_teorico": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana o par de semanas, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
+    "pasos_accionables": [
+      "Divide tu proyecto en versiones pequeñas, suficientes para entregar algo cada semana o dos.",
+      "Ordena las versiones poniendo primero lo más valioso y lo más riesgoso.",
+      "Entrega la primera versión pronto y observa qué riesgo confirma o desmiente.",
+      "Ajusta el plan con lo aprendido antes de seguir con las siguientes versiones."
+    ],
+    "entregable_esperado": "Un plan de entrega por versiones pequeñas, con lo más valioso y riesgoso al principio.",
+    "nodos_previos": ["Guarda un Colchón de Tiempo y Dinero"],
+    "nodos_siguientes": ["Tus Alertas Tempranas", "Entrega por Partes Para Exponer el Riesgo"],
+    "condiciones_activacion": [
+      "cuando planeas entregar todo de una vez al final",
+      "cuando no sabrás si tu idea funciona hasta haber gastado todo",
+      "cuando quieres que la realidad ponga a prueba tus supuestos temprano"
+    ],
+    "etiqueta_arbol": "Entrega por Partes, Expón el Riesgo"
+  },
+  {
+    "node_id": "tus_alertas_tempranas",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Indicadores de Transición del Riesgo",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 15 (Transition Indicators)",
+    "resumen_teorico": "Hay un momento en que un riesgo deja de ser posibilidad y se vuelve problema: es la transición. Muchas veces esa transición es invisible cuando ocurre, así que necesitas una señal que te avise que empezó, un indicador de alerta temprana. Para cada riesgo que decidas manejar, busca la señal más temprana y práctica de que se está materializando: un cliente que tarda más en pagar, un proveedor que empieza a fallar entregas chicas, tu propia energía que baja semana a semana. Cuando esa alerta se enciende, ejecutas el plan que ya tenías listo. Sin indicadores, te enteras del incendio cuando ya no hay nada que salvar. Para el emprendedor solo, definir sus alertas tempranas es como poner detectores de humo en cada riesgo importante.",
+    "pasos_accionables": [
+      "De cada riesgo que vas a manejar, define la señal más temprana de que está empezando.",
+      "Elige señales que puedas ver de verdad, no cosas que solo notarías cuando ya es tarde.",
+      "Anota junto a cada alerta qué harás en cuanto se encienda.",
+      "Revisa esas señales con la misma frecuencia con que revisas tu proyecto."
+    ],
+    "entregable_esperado": "Una lista de tus riesgos manejados, cada uno con su señal de alerta temprana y la acción que dispara.",
+    "nodos_previos": ["Entrega por Partes Para Exponer el Riesgo"],
+    "nodos_siguientes": ["Plan B Antes de Necesitarlo", "Revisa tus Riesgos con un Ritmo"],
+    "condiciones_activacion": [
+      "cuando te enteras de los problemas cuando ya no hay nada que hacer",
+      "cuando tienes planes de emergencia pero no sabes cuándo activarlos",
+      "cuando un riesgo se volvió problema sin que lo vieras venir"
+    ],
+    "etiqueta_arbol": "Tus Alertas Tempranas"
+  },
+  {
+    "node_id": "plan_b_antes_de_necesitarlo",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Planes de Contingencia",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 9 (Risk Treatment); DeMarco y Lister, Waltzing with Bears",
+    "resumen_teorico": "El mejor momento para decidir qué harás si un riesgo pega es antes de que pegue, con la cabeza fría, no en plena crisis. Un plan de contingencia es tu plan B ya pensado: para cada riesgo grave, qué acción concreta tomarás cuando se materialice. Tenerlo listo cambia todo, porque en el momento del golpe no tienes tiempo ni claridad para improvisar. Algunas partes del plan hay que prepararlas de antemano para que sean posibles después: apartar un contacto, tener un proveedor alterno identificado, guardar una copia. Eso es preparar el terreno para que tu plan B funcione. Para el emprendedor solo, que no tiene un equipo que reaccione por él, un plan B escrito es la diferencia entre responder con calma y congelarse ante el problema.",
+    "pasos_accionables": [
+      "Para cada riesgo grave, escribe qué harás concretamente si se vuelve realidad.",
+      "Identifica qué necesitas preparar de antemano para que ese plan B sea posible.",
+      "Prepara esas piezas ahora: un contacto, un proveedor alterno, una copia de respaldo.",
+      "Guarda tus planes B donde puedas encontrarlos rápido en plena crisis."
+    ],
+    "entregable_esperado": "Un plan B escrito por cada riesgo grave, con las piezas que hay que preparar de antemano ya listas.",
+    "nodos_previos": ["Tus Alertas Tempranas"],
+    "nodos_siguientes": ["Cuando el Riesgo Se Vuelve Realidad", "Anota Por Qué Decidiste Así"],
+    "condiciones_activacion": [
+      "cuando ante un problema te congelas porque no tenías plan",
+      "cuando improvisas en plena crisis y las decisiones salen mal",
+      "cuando dependes de algo que, si falla, no tienes con qué reemplazar"
+    ],
+    "etiqueta_arbol": "Plan B Antes de Necesitarlo"
+  },
+  {
+    "node_id": "anota_por_que_decidiste_asi",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Registrar las Decisiones de Riesgo",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 9 (Recording Decisions)",
+    "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es una de las cosas más valiosas que puedes hacer, porque la memoria engaña: dentro de unos meses no recordarás si aceptaste un riesgo por análisis o por prisa, y repetirás el error o desharás una buena decisión sin saberlo. Registrar la razón (qué sabías, qué supusiste, qué alternativas descartaste) te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+    "pasos_accionables": [
+      "Cada vez que decidas qué hacer con un riesgo, escribe en una línea por qué lo decidiste así.",
+      "Anota qué sabías, qué supusiste y qué otras opciones descartaste.",
+      "Guarda esas notas junto a tu lista de riesgos, no sueltas.",
+      "Al cerrar el proyecto, relee tus decisiones y saca lecciones para el siguiente."
+    ],
+    "entregable_esperado": "Un registro breve de cada decisión de riesgo con su razón, guardado junto a tu lista de riesgos.",
+    "nodos_previos": ["Reduce el Riesgo a lo Razonable"],
+    "nodos_siguientes": ["Guarda lo Que Aprendiste de Cada Golpe", "Vuelve a Medir Después del Susto"],
+    "condiciones_activacion": [
+      "cuando no recuerdas por qué tomaste una decisión de riesgo hace meses",
+      "cuando repites un error que ya habías analizado y olvidado",
+      "cuando deshaces una buena decisión sin saber por qué la tomaste"
+    ],
+    "etiqueta_arbol": "Anota Por Qué Decidiste Así"
+  },
+  {
+    "node_id": "los_controles_que_ya_tienes",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "Inventario de Controles Existentes",
+    "fuente": "Edwards et al., Managing Project Risks, Cap. 9 (Existing Risk Controls)",
+    "resumen_teorico": "Antes de inventar defensas nuevas contra un riesgo, mira lo que ya te protege. Casi siempre tienes controles que no llamas así: un respaldo que ya haces, una cláusula en un contrato, una costumbre que reduce errores, un ahorro que amortigua un mal mes. Reconocerlos te evita gastar en proteger algo que ya está cubierto y te muestra dónde están los huecos reales, los riesgos que hoy no tienen ninguna defensa. El ejercicio es simple: para cada riesgo grave, pregúntate qué te protege hoy de él, y si esa protección es suficiente o tiene fugas. Para el emprendedor, empezar por lo que ya tiene es más barato y más rápido que armar todo desde cero, y concentra el esfuerzo nuevo donde de verdad falta.",
+    "pasos_accionables": [
+      "Para cada riesgo grave, escribe qué te protege hoy de él, aunque nunca lo llamaste control.",
+      "Marca los riesgos que no tienen ninguna protección: esos son tus huecos reales.",
+      "Revisa si los controles que ya tienes son suficientes o tienen fugas.",
+      "Concentra tu esfuerzo nuevo en los huecos, no en reforzar lo que ya está cubierto."
+    ],
+    "entregable_esperado": "Un inventario de lo que ya te protege de cada riesgo grave, con los huecos sin cubrir marcados.",
+    "nodos_previos": ["Transfiere lo Que No Debes Cargar"],
+    "nodos_siguientes": ["Reduce el Riesgo a lo Razonable", "Un Dueño Para Cada Riesgo"],
+    "condiciones_activacion": [
+      "cuando vas a armar defensas nuevas sin mirar lo que ya tienes",
+      "cuando gastas en proteger algo que ya estaba cubierto",
+      "cuando no sabes cuáles de tus riesgos están hoy sin ninguna defensa"
+    ],
+    "etiqueta_arbol": "Los Controles Que Ya Tienes"
+  },
+  {
+    "node_id": "riesgo_contra_valor_vale_la_pena",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "El Valor Compensa el Riesgo",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 21 (Value Offsets Risk)",
+    "resumen_teorico": "Cuánto riesgo vale la pena correr depende del valor que puede darte el proyecto. Cuando lo que está en juego es grande, vale correr riesgos serios; cuando el premio es mínimo, casi ningún riesgo se justifica. Suena obvio, pero muchos hacen lo contrario: corren riesgos enormes en proyectos de bajo valor, exprimiéndose para bajar costos y hacer volar a un cerdo. Esos proyectos de marcha de la muerte casi siempre terminan en fracaso, con todos agotados y enojados. La regla sana es dejar que el valor esperado guíe cuánto riesgo aceptas: tu capital de riesgo es limitado, así que ponlo donde el beneficio neto sea mejor. Para el emprendedor, comparar riesgo contra valor antes de lanzarse es lo que separa una apuesta inteligente de un sacrificio inútil.",
+    "pasos_accionables": [
+      "Estima el valor esperado de tu proyecto, no solo su costo.",
+      "Pon lado a lado el riesgo que exige y el valor que promete.",
+      "Si el valor es bajo y el riesgo alto, replantea o abandona: no te exprimas por un premio mínimo.",
+      "Con varios proyectos posibles, pon tu esfuerzo donde el beneficio neto sea mejor."
+    ],
+    "entregable_esperado": "Una comparación escrita del riesgo que exige tu proyecto contra el valor esperado que promete, con una decisión de seguir o replantear.",
+    "nodos_previos": ["Evalúa la Gravedad Sin Autoengaño"],
+    "nodos_siguientes": ["El Valor También Es Incierto", "Corre Hacia el Riesgo"],
+    "condiciones_activacion": [
+      "cuando estás a punto de arriesgar mucho por un premio pequeño",
+      "cuando te exprimes para bajar costos en un proyecto de bajo valor",
+      "cuando tienes que elegir en cuál de varios proyectos poner tu esfuerzo"
+    ],
+    "etiqueta_arbol": "Riesgo Contra Valor: ¿Vale la Pena?"
+  },
+  {
+    "node_id": "el_valor_tambien_es_incierto",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "El Valor Esperado También Es Incierto",
+    "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 19 (Value Is Uncertain, Too)",
+    "resumen_teorico": "Solemos tratar el costo como incierto y el valor como una promesa segura, pero eso es un engaño. El beneficio que esperas de tu proyecto es tan incierto como su costo: las ventas que imaginas, los clientes que llegarán, el precio que aguantará el mercado, todo es un rango, no un dato. Si mides el costo con cuidado pero das el valor por hecho, tu comparación entre riesgo y beneficio está coja. La disciplina es medir el valor con la misma honestidad y precisión que el costo: exprésalo también como un rango con su incertidumbre. Para el emprendedor, reconocer que el valor puede quedar por debajo de lo soñado evita el error clásico de justificar cualquier riesgo con un beneficio inflado que quizá nunca llegue.",
+    "pasos_accionables": [
+      "Escribe el valor que esperas de tu proyecto como un rango, no como un número seguro.",
+      "Pregúntate qué pasa con tu decisión si el valor cae en el extremo bajo del rango.",
+      "Mide el valor con el mismo cuidado con que mides el costo, no con más optimismo.",
+      "Descarta las apuestas que solo se justifican con el mejor caso del valor."
+    ],
+    "entregable_esperado": "El valor esperado de tu proyecto expresado como un rango, con la decisión revisada contra su extremo bajo.",
+    "nodos_previos": ["Riesgo Contra Valor: Vale la Pena"],
+    "nodos_siguientes": ["Mide lo Que de Verdad Mueve la Aguja", "Riesgo Contra Valor: Vale la Pena"],
+    "condiciones_activacion": [
+      "cuando das por segura la ganancia pero tratas el costo como incierto",
+      "cuando justificas un riesgo con un beneficio que asumes sin medir",
+      "cuando tu proyección de ventas es un solo número optimista"
+    ],
+    "etiqueta_arbol": "El Valor También Es Incierto"
+  },
+  {
+    "node_id": "el_riesgo_eres_tu",
+    "fase_proyecto": "planificacion",
+    "dominio": "risk_management",
+    "titulo_concepto": "El Fundador Como Punto Único de Falla",
+    "fuente": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+    "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante dos semanas, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. Los libros llaman a esto riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+    "pasos_accionables": [
+      "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+      "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+      "Escribe qué pasa con tus clientes si tú no puedes trabajar por dos semanas, y cómo se les avisaría.",
+      "Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte."
+    ],
+    "entregable_esperado": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas dos semanas.",
+    "nodos_previos": ["Las Formas en Que los Proyectos Mueren"],
+    "nodos_siguientes": ["Plan B Antes de Necesitarlo", "Sigue Operando Pese al Golpe"],
+    "condiciones_activacion": [
+      "cuando todo tu negocio depende de que tú estés disponible cada día",
+      "cuando los accesos y el conocimiento viven solo en tu cabeza",
+      "cuando no sabes qué pasaría con tus clientes si te enfermas dos semanas"
+    ],
+    "etiqueta_arbol": "El Riesgo Eres Tú"
+  }
+]
