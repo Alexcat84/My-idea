@@ -40,6 +40,8 @@ export interface ItemAnalytics {
   completed_at: string | null;
   fecha_base: string | null;
   fecha_base_original: string | null;
+  /** texto del ítem, para los hitos de acción de la Celebración */
+  texto?: string;
 }
 
 export interface MundoAnalytics {
@@ -73,11 +75,17 @@ export interface Hito {
   tipo: "chispa" | "claridad" | "plan" | "mundo" | "accion" | "realizada";
   etiqueta: string;
   dominio?: string;
+  /** subtítulo dim (canon 09): "La idea nace", "planificado · a tiempo"… */
+  subtitulo?: string;
+  /** cumplimiento del ítem (solo hitos de acción con fecha_base) */
+  cumplimiento?: CumplimientoItem;
 }
 
 export interface CapaUniversal {
   duracionTotalDias: number;
   accionesHechas: number;
+  /** X/N del checklist VIGENTE (canon 09: "19 de 24 acciones") */
+  accionesVigente: { hechas: number; total: number };
   ritmoAccionesPorSemana: number;
   rachaMasLargaDias: number;
   ciclosDePlan: number;
@@ -166,9 +174,18 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   const semanas = duracionTotalDias / 7;
   const ritmo = semanas > 0 ? accionesHechas / semanas : accionesHechas;
 
+  // "X de N acciones" (canon 09): el checklist del plan core VIGENTE.
+  const planVigente = [...entrada.planesCore].sort((a, b) => a.created_at.localeCompare(b.created_at)).at(-1);
+  const itemsVigente = planVigente ? entrada.items.filter((i) => i.plan_id === planVigente.id) : [];
+  const accionesVigente = {
+    hechas: itemsVigente.filter((i) => i.completed_at).length,
+    total: itemsVigente.length,
+  };
+
   const universal: CapaUniversal = {
     duracionTotalDias,
     accionesHechas,
+    accionesVigente,
     ritmoAccionesPorSemana: Math.round(ritmo * 10) / 10,
     rachaMasLargaDias: rachaMasLarga(completadas),
     ciclosDePlan: entrada.planesCore.length,
@@ -233,25 +250,43 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
 
 /** El timeline de Hitos (§5/§6), construido SOLO de lo persistido. Con
  * incluirAcciones, cada ítem completado suma su propio hito (Celebración). */
+const SUBTITULO_CUMPLIMIENTO: Record<CumplimientoItem, string> = {
+  a_tiempo: "planificado · a tiempo",
+  adelantada: "planificado · adelantada",
+  tardia: "planificado · tardía",
+};
+
 export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluirAcciones = false): Hito[] {
-  const hitos: Hito[] = [{ fecha: entrada.proyectoCreatedAt, tipo: "chispa", etiqueta: "La Chispa" }];
+  const hitos: Hito[] = [
+    { fecha: entrada.proyectoCreatedAt, tipo: "chispa", etiqueta: "La Chispa", subtitulo: "La idea nace" },
+  ];
   if (entrada.organizadorAt) {
-    hitos.push({ fecha: entrada.organizadorAt, tipo: "claridad", etiqueta: "Claridad" });
+    hitos.push({ fecha: entrada.organizadorAt, tipo: "claridad", etiqueta: "Claridad", subtitulo: "Tu idea, organizada" });
   }
   const ciclos = [...entrada.planesCore].sort((a, b) => a.created_at.localeCompare(b.created_at));
   ciclos.forEach((p, i) => {
-    hitos.push({ fecha: p.created_at, tipo: "plan", etiqueta: `Plan ciclo ${i + 1}` });
+    const subtitulo = i === 0 ? (p.baseline_confirmada_at ? "con línea base" : undefined) : "replanificado con lo aprendido";
+    hitos.push({ fecha: p.created_at, tipo: "plan", etiqueta: `Tu Plan · ciclo ${i + 1}`, subtitulo });
   });
   for (const m of entrada.mundos) {
     hitos.push({ fecha: m.unlocked_at, tipo: "mundo", etiqueta: "Mundo activado", dominio: m.dominio });
   }
   if (incluirAcciones) {
     for (const it of entrada.items) {
-      if (it.completed_at) hitos.push({ fecha: it.completed_at, tipo: "accion", etiqueta: "Acción completada" });
+      if (!it.completed_at) continue;
+      const cumplimiento =
+        it.fecha_base ? clasificarCumplimiento(it.completed_at, it.fecha_base) : undefined;
+      hitos.push({
+        fecha: it.completed_at,
+        tipo: "accion",
+        etiqueta: it.texto ?? "Acción completada",
+        subtitulo: cumplimiento ? SUBTITULO_CUMPLIMIENTO[cumplimiento] : undefined,
+        cumplimiento,
+      });
     }
   }
   if (entrada.realizadaAt) {
-    hitos.push({ fecha: entrada.realizadaAt, tipo: "realizada", etiqueta: "Realizada" });
+    hitos.push({ fecha: entrada.realizadaAt, tipo: "realizada", etiqueta: "REALIZADA" });
   }
   void ahora;
   return hitos.sort((a, b) => a.fecha.localeCompare(b.fecha));

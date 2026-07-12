@@ -31,6 +31,10 @@ export interface Cinta {
   chips: ChipCinta[];
   /** línea secundaria ("una pregunta te espera" / "última acción hace 2 días") */
   pista: string;
+  /** Fase 3.8: la idea ya es un proyecto realizado (se agrupa al final) */
+  realizada: boolean;
+  /** "87 días · de la chispa al proyecto" (solo realizadas) */
+  resumenRealizada?: string;
 }
 
 export function nombreDeIdea(titulo: string | null, entradaOriginal: string): string {
@@ -148,6 +152,13 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
 
     const pista = pensando ? "una pregunta te espera" : `última acción ${haceCuanto(p.updated_at)}`;
 
+    // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.
+    const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
+    const realizada = Boolean(realizadaAt);
+    const resumenRealizada = realizadaAt
+      ? `${Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))} días · de la chispa al proyecto`
+      : undefined;
+
     return {
       id: p.id,
       nombre: nombreDeIdea(p.titulo, p.entrada_original),
@@ -157,6 +168,8 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
       pensando,
       chips,
       pista,
+      realizada,
+      resumenRealizada,
     };
   });
 }

@@ -17,6 +17,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Acordeon } from "../../ui/Acordeon";
 import { AnalisisProyecto } from "../../ui/AnalisisProyecto";
+import { Celebracion } from "../../ui/Celebracion";
 import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
@@ -103,6 +104,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereEntrevista = searchParams.get("entrevista") === "1";
   const quiereManos = searchParams.get("vista") === "manos";
   const quiereAnalisis = searchParams.get("vista") === "analisis";
+  const quiereCelebracion = searchParams.get("vista") === "celebracion";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -141,6 +143,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Fase 3.8: el modo del camino ('ritmo'|'fechas'|null hasta elegir).
   const [modoCamino, setModoCamino] = useState<"ritmo" | "fechas" | null>(null);
   const [vistaAnalisis, setVistaAnalisis] = useState(quiereAnalisis);
+  const [vistaCelebracion, setVistaCelebracion] = useState(quiereCelebracion);
+  const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
 
   const cargarChecklist = useCallback(async () => {
     try {
@@ -278,6 +282,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
         const d = (await res.json()) as DetalleIdea;
         setDetalle(d);
         setModoCamino(d.idea.modo_camino ?? null);
+        setRealizadaAt(d.idea.realizada_at ?? null);
+        // Una idea ya realizada abre en su Celebración (salvo que la URL
+        // pida otra vista explícita).
+        if (d.idea.realizada_at && !quiereManos && !quiereAnalisis) setVistaCelebracion(true);
         if (d.plan) {
           setPlanMd(d.plan.contenido_md);
           void cargarChecklist();
@@ -379,18 +387,29 @@ export function IdeaView({ projectId }: { projectId: string }) {
   function volverAlViaje() {
     setVistaManos(false);
     setVistaAnalisis(false);
+    setVistaCelebracion(false);
     router.replace(`/idea/${projectId}`, { scroll: false });
   }
 
   function irAAnalisis() {
     setVistaAnalisis(true);
+    setVistaCelebracion(false);
     router.replace(`/idea/${projectId}?vista=analisis`, { scroll: false });
   }
 
   function volverAManos() {
     setVistaAnalisis(false);
+    setVistaCelebracion(false);
     setVistaManos(true);
     router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
+  }
+
+  function irACelebracion() {
+    setRealizadaAt(new Date().toISOString());
+    setVistaManos(false);
+    setVistaAnalisis(false);
+    setVistaCelebracion(true);
+    router.replace(`/idea/${projectId}?vista=celebracion`, { scroll: false });
   }
 
   if (cargando) {
@@ -476,6 +495,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
             Mis ideas /
           </Link>
           <span className="truncate text-[14.5px] font-semibold">{detalle.idea.nombre}</span>
+          {realizadaAt && (
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-done/50 px-2 py-0.5 text-[11px] font-bold text-done">
+              <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
+                <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="var(--done)" strokeWidth="2" fill="none" />
+              </svg>
+              Proyecto
+            </span>
+          )}
         </div>
         <span className="flex-1" />
         <div className="hidden md:block">
@@ -494,7 +521,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">
         {error && <p className="mb-4 text-sm text-warn">{error}</p>}
 
-        {vistaAnalisis && planMd && checklist ? (
+        {vistaCelebracion ? (
+          <Celebracion
+            projectId={projectId}
+            onVerAnalisis={irAAnalisis}
+            onVolverIdeas={() => router.push("/ideas")}
+            onReabierto={() => {
+              setRealizadaAt(null);
+              volverAManos();
+            }}
+          />
+        ) : vistaAnalisis && planMd && checklist ? (
           <AnalisisProyecto projectId={projectId} titulos={titulosDeEtapas(planMd)} onVolver={volverAManos} />
         ) : vistaManos && planMd && checklist ? (
           <>
@@ -512,6 +549,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onModoCambiado={setModoCamino}
               onRecargarChecklist={cargarChecklist}
               onVerAnalisis={irAAnalisis}
+              onRealizada={irACelebracion}
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
               onItemActualizado={({ id, estado, completed_at }) => {

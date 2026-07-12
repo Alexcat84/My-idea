@@ -73,7 +73,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
 
   const { data: itemsRaw } = await supabase
     .from("checklist_items")
-    .select("plan_id, dominio, etapa, estado, destacado, completed_at, fecha_base, fecha_base_original")
+    .select("plan_id, dominio, etapa, estado, destacado, texto, completed_at, fecha_base, fecha_base_original")
     .eq("project_id", projectId);
   const items: ItemAnalytics[] = ((itemsRaw ?? []) as Array<ItemAnalytics & { dominio: string | null }>)
     .filter((i) => esCore(i.dominio))
@@ -82,6 +82,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       etapa: i.etapa,
       estado: i.estado,
       destacado: i.destacado,
+      texto: i.texto,
       completed_at: i.completed_at,
       fecha_base: i.fecha_base,
       fecha_base_original: i.fecha_base_original,

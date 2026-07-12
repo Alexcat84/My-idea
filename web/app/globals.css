@@ -126,3 +126,26 @@ summary::-webkit-details-marker {
 @keyframes stepFill {
   to { width: 100%; }
 }
+
+/* Fase 3.8 (canon 09, La Celebración): al llegar a REALIZADA nace el
+ * proyecto con UNA sola onda verde que se expande y se apaga. */
+@keyframes greenWave {
+  from { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  to { transform: translate(-50%, -50%) scale(26); opacity: 0; }
+}
+.anima-green-wave { animation: greenWave 1.1s ease-out forwards; }
+@keyframes hitoReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anima-hito-reveal { animation: hitoReveal 0.55s ease-out both; }
+
+/* prefers-reduced-motion: sin teatro, al estado final directo (canon 09). */
+@media (prefers-reduced-motion: reduce) {
+  .anima-green-wave,
+  .anima-hito-reveal,
+  .anima-plan-in,
+  .anima-green-pulse {
+    animation: none !important;
+  }
+}

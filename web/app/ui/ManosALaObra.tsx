@@ -83,6 +83,8 @@ interface Props {
   onRecargarChecklist: () => void;
   /** abre la pantalla Análisis del proyecto (§6) */
   onVerAnalisis: () => void;
+  /** la idea se marcó como realizada (§5): el padre abre la Celebración */
+  onRealizada: () => void;
   /** true si hay una entrevista abierta para "Volver a la entrevista" */
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
@@ -707,6 +709,7 @@ export function ManosALaObra({
   onModoCambiado,
   onRecargarChecklist,
   onVerAnalisis,
+  onRealizada,
   entrevistaAbierta,
   onVolverEntrevista,
   onItemActualizado,
@@ -726,6 +729,9 @@ export function ManosALaObra({
   const [recalcularPendientes, setRecalcularPendientes] = useState(false);
   const [guardandoBaseline, setGuardandoBaseline] = useState(false);
   const [errorBaseline, setErrorBaseline] = useState<string | null>(null);
+  // Fase 3.8 §5 — confirmación de "Marcar como realizada"
+  const [confirmandoRealizar, setConfirmandoRealizar] = useState(false);
+  const [realizando, setRealizando] = useState(false);
 
   const titulosCore = useMemo(() => titulosDeEtapas(planMd), [planMd]);
   const core = grupoVigente(checklist, "core");
@@ -787,6 +793,28 @@ export function ManosALaObra({
       setErrorBaseline("no pudimos guardar tus fechas; revisa tu internet e intenta de nuevo");
     } finally {
       setGuardandoBaseline(false);
+    }
+  }
+
+  async function marcarRealizada() {
+    setRealizando(true);
+    setError(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/realizar`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ accion: "realizar" }),
+      });
+      if (!res.ok) {
+        setError(ERROR_GENERICO);
+        return;
+      }
+      setConfirmandoRealizar(false);
+      onRealizada();
+    } catch {
+      setError("no pudimos guardar; revisa tu internet e intenta de nuevo");
+    } finally {
+      setRealizando(false);
     }
   }
 
@@ -1045,6 +1073,48 @@ export function ManosALaObra({
               Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste.
             </span>
           </button>
+        )}
+
+        {/* Fase 3.8 §5 — marcar la idea como realizada (nace el proyecto) */}
+        {cCore.total > 0 && (
+          <div className="rounded-panel border border-done/40 bg-surface p-5">
+            {!confirmandoRealizar ? (
+              <>
+                <p className="text-[13px] font-semibold text-done">¿Tu idea ya es un proyecto?</p>
+                <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+                  Cuando lo sientas real, ciérrala. No hace falta terminar todo el checklist.
+                </p>
+                <button
+                  onClick={() => setConfirmandoRealizar(true)}
+                  className="mt-3 w-full rounded-[10px] border border-done/50 py-2.5 text-[13px] font-semibold text-done hover:bg-done-soft"
+                >
+                  Marcar como realizada
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="text-[14px] font-semibold leading-relaxed">
+                  Esto cierra tu idea y nace tu proyecto. Podrás reabrirla cuando quieras.
+                </p>
+                <div className="mt-3 flex items-center gap-3">
+                  <button
+                    onClick={marcarRealizada}
+                    disabled={realizando}
+                    className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
+                  >
+                    {realizando ? "Cerrando…" : "Sí, es un proyecto"}
+                  </button>
+                  <button
+                    onClick={() => setConfirmandoRealizar(false)}
+                    disabled={realizando}
+                    className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
+                  >
+                    Todavía no
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
         )}
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">

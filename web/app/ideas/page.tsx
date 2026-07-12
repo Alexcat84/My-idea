@@ -46,6 +46,10 @@ export default async function MisIdeas() {
 
   if (ideas.length === 0) redirect("/nueva");
 
+  // Fase 3.8: las realizadas reposan al final, bajo su propio encabezado.
+  const activas = ideas.filter((i) => !i.realizada);
+  const realizadas = ideas.filter((i) => i.realizada);
+
   return (
     <div className="flex min-h-full flex-1 flex-col">
       <header className="flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6">
@@ -84,11 +88,11 @@ export default async function MisIdeas() {
           className="anima-plan-in mb-4 mt-10 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim"
           style={{ animationDelay: "0.2s" }}
         >
-          Tus ideas · {ideas.length}
+          Tus ideas · {activas.length}
         </p>
 
         <ul className="flex flex-col gap-3.5">
-          {ideas.map((idea, i) => (
+          {activas.map((idea, i) => (
             <li key={idea.id} className="anima-plan-in" style={{ animationDelay: `${0.3 + i * 0.1}s` }}>
               <Link
                 // C0: una idea ya en Manos a la Obra entra directo a la
@@ -125,6 +129,37 @@ export default async function MisIdeas() {
             </li>
           ))}
         </ul>
+
+        {/* Fase 3.8 §5 — Realizadas: más serenas, sin stepper ni pulso, con
+            el distintivo "Proyecto" de forma. Reposan al final. */}
+        {realizadas.length > 0 && (
+          <>
+            <p className="mb-4 mt-12 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+              Realizadas · {realizadas.length}
+            </p>
+            <ul className="flex flex-col gap-3.5">
+              {realizadas.map((idea) => (
+                <li key={idea.id}>
+                  <Link
+                    href={`/idea/${idea.id}?vista=celebracion`}
+                    className="block rounded-panel border border-hairline bg-surface/60 px-5 py-4 opacity-90 hover:border-done/50 hover:opacity-100 sm:px-6"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <p className="min-w-0 flex-1 truncate text-[15px] font-semibold sm:text-[16px]">{idea.nombre}</p>
+                      <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-done/45 px-2.5 py-1 text-[11px] font-bold text-done">
+                        <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
+                          <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="var(--done)" strokeWidth="2" fill="none" />
+                        </svg>
+                        Proyecto
+                      </span>
+                    </div>
+                    {idea.resumenRealizada && <p className="mt-1.5 text-xs text-dim">{idea.resumenRealizada}</p>}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </main>
     </div>
   );
