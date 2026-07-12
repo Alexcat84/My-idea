@@ -1,0 +1,114 @@
+{
+  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo.",
+  "aprobados": [
+    {
+      "core": "identificacion_de_riesgos",
+      "dominio": "caza_las_oportunidades_no_solo_amenazas",
+      "score": 0.8304
+    },
+    {
+      "core": "identificacion_de_riesgos",
+      "dominio": "evalua_la_gravedad_sin_autoengano",
+      "score": 0.8254
+    },
+    {
+      "core": "enfoque_situacional_vs_personal_2",
+      "dominio": "como_sabes_que_tu_metodo_sirve",
+      "score": 0.7844
+    },
+    {
+      "core": "manejo_de_incertidumbre_proyectos_innovadores",
+      "dominio": "nombra_tus_suposiciones_fragiles",
+      "score": 0.7739
+    },
+    {
+      "core": "planificacion_recuperacion_post_accidente",
+      "dominio": "plan_de_desastre_y_recuperacion",
+      "score": 0.768
+    },
+    {
+      "core": "eliminar_miedo",
+      "dominio": "deja_de_ignorar_el_riesgo",
+      "score": 0.767
+    },
+    {
+      "core": "gestion_riesgo_identificacion",
+      "dominio": "un_dueno_para_cada_riesgo",
+      "score": 0.7642
+    },
+    {
+      "core": "plan_de_gestion_de_riesgos",
+      "dominio": "plan_b_antes_de_necesitarlo",
+      "score": 0.7562
+    },
+    {
+      "core": "estrategia_gestion_riesgo_tolerancia",
+      "dominio": "evitar_o_asumir_decide_a_conciencia",
+      "score": 0.7516
+    },
+    {
+      "core": "sesgo_retrospectivo_hindsight",
+      "dominio": "cuanto_sabes_y_cuanto_solo_crees",
+      "score": 0.7512
+    },
+    {
+      "core": "estrategia_gestion_riesgo_tolerancia",
+      "dominio": "empieza_con_lo_que_ya_funciona",
+      "score": 0.7414
+    },
+    {
+      "core": "leap_of_faith_assumptions",
+      "dominio": "tecnicas_para_sacar_riesgos_a_la_luz",
+      "score": 0.7395
+    },
+    {
+      "core": "enfoque_situacional_vs_personal_2",
+      "dominio": "gestionar_el_riesgo_es_de_adultos",
+      "score": 0.7369
+    }
+  ],
+  "rechazados": [
+    {
+      "core": "identificacion_de_riesgos",
+      "dominio": "riesgo_del_negocio_o_del_proyecto",
+      "score": 0.8252,
+      "motivo": "Cap de ancla (identificacion_de_riesgos a 2) + redundante con la semilla haz_tu_lista_de_lo_que_puede_fallar (el censo ya es la puerta de identificacion). [indicado por el usuario]"
+    },
+    {
+      "core": "gestion_eco_riesgos",
+      "dominio": "el_riesgo_del_entorno_que_no_controlas",
+      "score": 0.7445,
+      "motivo": "El nodo del entorno remite explicitamente al mundo Ambiente y Futuro; anclar a un core de eco-riesgo cruza proposito con ese mundo especializado."
+    },
+    {
+      "core": "evaluacion_gestion_riesgos",
+      "dominio": "revisa_tus_riesgos_con_un_ritmo",
+      "score": 0.7406,
+      "motivo": "Ancla core generica (evaluacion_gestion_riesgos) hacia una semilla (revisa) que ya es puerta de entrada: redundante."
+    },
+    {
+      "core": "estrategia_gestion_riesgo_tolerancia",
+      "dominio": "escepticismo_sano_ante_el_riesgo",
+      "score": 0.7356,
+      "motivo": "Cap de ancla (estrategia_gestion_riesgo_tolerancia a 2) + el de menor score de esa ancla (0.736). [indicado por el usuario]"
+    },
+    {
+      "core": "risk_audit",
+      "dominio": "tu_gestion_de_riesgo_funciona",
+      "score": 0.7326,
+      "motivo": "Score bajo (0.733); el hilo de auditar-el-metodo ya queda cubierto por puentes de mejor fit (como_sabes_que_tu_metodo_sirve)."
+    },
+    {
+      "core": "evitacion_del_riesgo",
+      "dominio": "cuatro_caminos_ante_un_riesgo",
+      "score": 0.7324,
+      "motivo": "Redundante con la semilla cuatro_caminos_ante_un_riesgo: la evitacion es una de las cuatro opciones que el nodo ya despliega."
+    },
+    {
+      "core": "evaluacion_de_factores_de_riesgo",
+      "dominio": "cuan_probable_y_cuanto_doleria",
+      "score": 0.7291,
+      "motivo": "Score mas bajo del lote (0.729) + redundante con la semilla cuan_probable_y_cuanto_doleria (el nodo ya es puerta de entrada)."
+    }
+  ]
+}

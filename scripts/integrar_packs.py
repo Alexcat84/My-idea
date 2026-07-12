@@ -231,7 +231,9 @@ def main():
 
     # f. sync de assets a la web + suites
     correr([sys.executable, "scripts/sync_assets_web.py"], "f. Sync de assets a web/lib/assets")
-    correr(["pnpm", "-C", "web", "vitest", "run"], "f. Suite web (checksums + contrato) — debe quedar verde")
+    # 'run test' (script del package.json), no 'vitest run' bare: pnpm bajo
+    # subprocess de Windows mal-parsea el binario suelto ("web" not found).
+    correr(["pnpm", "-C", "web", "run", "test"], "f. Suite web (checksums + contrato) — debe quedar verde")
     correr([sys.executable, "engine/run_all_tests.py"], "f. Suite python — debe quedar verde")
 
     print(
