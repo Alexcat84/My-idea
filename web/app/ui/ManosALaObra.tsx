@@ -81,6 +81,8 @@ interface Props {
   onModoCambiado: (modo: ModoCamino) => void;
   /** tras confirmar la línea base: el padre recarga el checklist entero */
   onRecargarChecklist: () => void;
+  /** abre la pantalla Análisis del proyecto (§6) */
+  onVerAnalisis: () => void;
   /** true si hay una entrevista abierta para "Volver a la entrevista" */
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
@@ -704,6 +706,7 @@ export function ManosALaObra({
   modoCamino,
   onModoCambiado,
   onRecargarChecklist,
+  onVerAnalisis,
   entrevistaAbierta,
   onVolverEntrevista,
   onItemActualizado,
@@ -1030,6 +1033,18 @@ export function ManosALaObra({
         {/* Fase 3.8 §3 — interruptor permanente (canon 10) */}
         {modoCamino !== null && (
           <InterruptorFechas modo={modoCamino} ocupado={guardandoModo} onToggle={elegirModo} />
+        )}
+        {/* Fase 3.8 §6 — puerta al análisis del proyecto */}
+        {cCore.total > 0 && (
+          <button
+            onClick={onVerAnalisis}
+            className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-left text-[13px] font-semibold hover:border-accent/60"
+          >
+            Ver análisis del proyecto
+            <span className="mt-0.5 block text-[12px] font-normal text-dim">
+              Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste.
+            </span>
+          </button>
         )}
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">

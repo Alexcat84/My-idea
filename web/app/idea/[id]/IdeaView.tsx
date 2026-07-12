@@ -16,9 +16,10 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Acordeon } from "../../ui/Acordeon";
+import { AnalisisProyecto } from "../../ui/AnalisisProyecto";
 import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
-import { ManosALaObra, grupoVigente, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
+import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Markdown } from "../../ui/Markdown";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
@@ -101,6 +102,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const searchParams = useSearchParams();
   const quiereEntrevista = searchParams.get("entrevista") === "1";
   const quiereManos = searchParams.get("vista") === "manos";
+  const quiereAnalisis = searchParams.get("vista") === "analisis";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -138,6 +140,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [checklist, setChecklist] = useState<ChecklistData | null>(null);
   // Fase 3.8: el modo del camino ('ritmo'|'fechas'|null hasta elegir).
   const [modoCamino, setModoCamino] = useState<"ritmo" | "fechas" | null>(null);
+  const [vistaAnalisis, setVistaAnalisis] = useState(quiereAnalisis);
 
   const cargarChecklist = useCallback(async () => {
     try {
@@ -375,7 +378,19 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   function volverAlViaje() {
     setVistaManos(false);
+    setVistaAnalisis(false);
     router.replace(`/idea/${projectId}`, { scroll: false });
+  }
+
+  function irAAnalisis() {
+    setVistaAnalisis(true);
+    router.replace(`/idea/${projectId}?vista=analisis`, { scroll: false });
+  }
+
+  function volverAManos() {
+    setVistaAnalisis(false);
+    setVistaManos(true);
+    router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
   }
 
   if (cargando) {
@@ -479,7 +494,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">
         {error && <p className="mb-4 text-sm text-warn">{error}</p>}
 
-        {vistaManos && planMd && checklist ? (
+        {vistaAnalisis && planMd && checklist ? (
+          <AnalisisProyecto projectId={projectId} titulos={titulosDeEtapas(planMd)} onVolver={volverAManos} />
+        ) : vistaManos && planMd && checklist ? (
           <>
             <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
               ← Ver el plan
@@ -494,6 +511,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               modoCamino={modoCamino}
               onModoCambiado={setModoCamino}
               onRecargarChecklist={cargarChecklist}
+              onVerAnalisis={irAAnalisis}
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
               onItemActualizado={({ id, estado, completed_at }) => {
