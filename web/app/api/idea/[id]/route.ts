@@ -155,6 +155,9 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       entrada_original: proyecto.entrada_original,
       fase_actual: proyecto.fase_actual,
       tipo_oferta: proyecto.tipo_oferta ?? null,
+      // Fase 3.8: el modo del camino y si la idea ya es un proyecto realizado.
+      modo_camino: proyecto.modo_camino ?? null,
+      realizada_at: proyecto.realizada_at ?? null,
     },
     organizador: organizador && { contenido_md: organizador.contenido_md },
     plan: plan && { etiqueta: plan.etiqueta, contenido_md: plan.contenido_md, created_at: plan.created_at },

@@ -33,7 +33,13 @@ const NOTA_SILENCIOSO = "cubierto por lo que contaste";
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
 
 interface DetalleIdea {
-  idea: { id: string; nombre: string; entrada_original: string };
+  idea: {
+    id: string;
+    nombre: string;
+    entrada_original: string;
+    modo_camino?: "ritmo" | "fechas" | null;
+    realizada_at?: string | null;
+  };
   organizador: { contenido_md: string } | null;
   plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
   reporte: { contenido_md: string; created_at: string } | null;
@@ -130,6 +136,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [vistaManos, setVistaManos] = useState(quiereManos);
   const [ritualInicial, setRitualInicial] = useState(false);
   const [checklist, setChecklist] = useState<ChecklistData | null>(null);
+  // Fase 3.8: el modo del camino ('ritmo'|'fechas'|null hasta elegir).
+  const [modoCamino, setModoCamino] = useState<"ritmo" | "fechas" | null>(null);
 
   const cargarChecklist = useCallback(async () => {
     try {
@@ -266,6 +274,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         }
         const d = (await res.json()) as DetalleIdea;
         setDetalle(d);
+        setModoCamino(d.idea.modo_camino ?? null);
         if (d.plan) {
           setPlanMd(d.plan.contenido_md);
           void cargarChecklist();
@@ -481,6 +490,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
               checklist={checklist}
               historial={detalle.historial ?? []}
               mundos={mundosParaObra}
+              modoCamino={modoCamino}
+              onModoCambiado={setModoCamino}
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
               onItemActualizado={({ id, estado, completed_at }) => {

@@ -10,7 +10,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { NumerosProyecto } from "./calculadora";
 import type { UsoAcumulado } from "./costmeter";
-import type { ModoRuta, PlanEtiqueta, ProjectNodeTipo, SessionTipo } from "./dbContract";
+import type { ModoCamino, ModoRuta, PlanEtiqueta, ProjectNodeTipo, SessionTipo } from "./dbContract";
 import type { EstadoRecorrido } from "./engine/recorrido";
 import type { EstadoReporte } from "./engine/reporteFlow";
 
@@ -31,6 +31,10 @@ export interface Proyecto {
   numeros_proyecto?: NumerosProyecto;
   numeros_descartados?: unknown;
   estado_reporte?: EstadoReportePersistido | null;
+  /** Fase 3.8: la idea marcada como realizada (nace un "Proyecto"). */
+  realizada_at?: string | null;
+  /** Fase 3.8: cómo lleva el usuario su camino en Manos a la Obra. */
+  modo_camino?: ModoCamino | null;
   created_at: string;
   updated_at: string;
 }
@@ -120,6 +124,23 @@ export async function actualizarProyecto(
     .update({ ...campos, updated_at: ahora() })
     .eq("id", projectId);
   if (error) throw error;
+}
+
+/** Fase 3.8 — bitácora de eventos de PROYECTO (migration 018): el mueble
+ * que las sesiones no daban (sessions.decisiones es por sesión). Eventos:
+ * 'modo_camino' {de, a}, 'realizada' {accion}. No falla la request si el
+ * insert falla (es telemetría/memoria, no la acción principal). */
+export async function registrarBitacora(
+  supabase: SupabaseClient,
+  projectId: string,
+  tipo: string,
+  payload: Record<string, unknown> = {}
+): Promise<void> {
+  try {
+    await supabase.from("project_bitacora").insert({ project_id: projectId, tipo, payload });
+  } catch {
+    /* la bitácora nunca bloquea la acción del usuario */
+  }
 }
 
 export async function crearSesion(

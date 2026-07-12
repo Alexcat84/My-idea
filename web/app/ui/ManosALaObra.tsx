@@ -16,7 +16,7 @@
 import { useMemo, useState } from "react";
 import { Acordeon } from "./Acordeon";
 import { Markdown } from "./Markdown";
-import type { ChecklistEstado, FechaBaseOrigen } from "@/lib/dbContract";
+import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import { haceCuanto } from "@/lib/ideas";
 
@@ -72,6 +72,10 @@ interface Props {
   checklist: ChecklistData;
   historial: PlanHistorial[];
   mundos: MundoInfo[];
+  /** Fase 3.8: modo del camino; null hasta la primera elección. */
+  modoCamino: ModoCamino | null;
+  /** el PATCH /modo respondió: el padre refresca su copia del modo */
+  onModoCambiado: (modo: ModoCamino) => void;
   /** true si hay una entrevista abierta para "Volver a la entrevista" */
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
@@ -440,12 +444,96 @@ function RitualContinuar({
   );
 }
 
+/** Borde azul de elección (canon 10: rgba(77,124,254,0.5)) — el azul piensa. */
+const BORDE_AZUL = { border: "1px solid rgba(77,124,254,0.5)" } as const;
+
+/** Vista A del canon 10 (tarjeta ligera al entrar): la elección de modo, con
+ * dos opciones de PESO VISUAL IGUAL. */
+function TarjetaModo({
+  ocupado,
+  onElegir,
+}: {
+  ocupado: boolean;
+  onElegir: (modo: ModoCamino) => void;
+}) {
+  const opciones: Array<{ modo: ModoCamino; titulo: string; desc: string }> = [
+    { modo: "ritmo", titulo: "A mi ritmo", desc: "Marca tu avance cuando suceda. Sin fechas ni presiones." },
+    {
+      modo: "fechas",
+      titulo: "Con fechas y recordatorios",
+      desc: "Te sugiero un calendario; tú lo ajustas. Yo te recuerdo.",
+    },
+  ];
+  return (
+    <section className="anima-plan-in rounded-panel border border-hairline bg-black p-6 text-center sm:p-8">
+      <h3 className="mx-auto max-w-md text-2xl font-bold leading-tight tracking-tight [text-wrap:balance]">
+        ¿Cómo quieres llevar tu camino?
+      </h3>
+      <div className="mt-7 flex flex-col gap-4 text-left sm:flex-row">
+        {opciones.map((o) => (
+          <button
+            key={o.modo}
+            onClick={() => onElegir(o.modo)}
+            disabled={ocupado}
+            className="flex flex-1 flex-col rounded-panel border border-white/10 bg-surface p-6 text-left transition-transform hover:-translate-y-0.5 disabled:opacity-50"
+          >
+            <span className="text-[17px] font-semibold">{o.titulo}</span>
+            <span className="mt-2 text-[13.5px] leading-relaxed text-dim [text-wrap:pretty]">{o.desc}</span>
+            <span
+              className="mt-5 rounded-[10px] py-2.5 text-center text-[13.5px] font-semibold text-ink"
+              style={BORDE_AZUL}
+            >
+              Elegir este
+            </span>
+          </button>
+        ))}
+      </div>
+      <p className="mt-5 text-xs text-dim">Puedes cambiar de modo cuando quieras.</p>
+    </section>
+  );
+}
+
+/** El interruptor permanente "Fechas y recordatorios: activados / pausados"
+ * (canon 10). Alterna 'fechas' ↔ 'ritmo'; pausar nunca borra fechas. */
+function InterruptorFechas({
+  modo,
+  ocupado,
+  onToggle,
+}: {
+  modo: ModoCamino;
+  ocupado: boolean;
+  onToggle: (nuevo: ModoCamino) => void;
+}) {
+  const activo = modo === "fechas";
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
+      <div className="min-w-0">
+        <p className="text-[13px] font-semibold">Fechas y recordatorios</p>
+        <p className={"text-[12px] " + (activo ? "text-done" : "text-dim")}>{activo ? "activados" : "pausados"}</p>
+      </div>
+      <button
+        onClick={() => onToggle(activo ? "ritmo" : "fechas")}
+        disabled={ocupado}
+        className={
+          "shrink-0 rounded-[9px] px-3.5 py-1.5 text-[12.5px] font-semibold disabled:opacity-50 " +
+          (activo ? "border border-white/15 text-dim hover:text-ink" : "text-ink")
+        }
+        style={activo ? undefined : BORDE_AZUL}
+      >
+        {activo ? "Pausar" : "Activar"}
+      </button>
+    </div>
+  );
+}
+
 export function ManosALaObra({
   projectId,
   planMd,
   checklist,
   historial,
   mundos,
+  modoCamino,
+  onModoCambiado,
   entrevistaAbierta,
   onVolverEntrevista,
   onItemActualizado,
@@ -459,6 +547,7 @@ export function ManosALaObra({
   const [arrancandoMundo, setArrancandoMundo] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [errorRitual, setErrorRitual] = useState<string | null>(null);
+  const [guardandoModo, setGuardandoModo] = useState(false);
 
   const titulosCore = useMemo(() => titulosDeEtapas(planMd), [planMd]);
   const core = grupoVigente(checklist, "core");
@@ -474,6 +563,27 @@ export function ManosALaObra({
     .at(-1);
   const desde = itemsCore.map((i) => i.created_at).sort()[0];
   const ciclosAjuste = historial.filter((h) => h.etiqueta === "seguimiento").length;
+
+  async function elegirModo(modo: ModoCamino) {
+    setGuardandoModo(true);
+    setError(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/modo`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ modo_camino: modo }),
+      });
+      if (!res.ok) {
+        setError(ERROR_GENERICO);
+        return;
+      }
+      onModoCambiado(modo);
+    } catch {
+      setError("no pudimos guardar tu elección; revisa tu internet e intenta de nuevo");
+    } finally {
+      setGuardandoModo(false);
+    }
+  }
 
   async function aplicarCambio(item: ItemChecklistUI, cambio: CambioItem) {
     setOcupado(true);
@@ -574,6 +684,9 @@ export function ManosALaObra({
 
         {error && <p className="text-sm text-warn">{error}</p>}
 
+        {/* Fase 3.8 §3 — primera entrada: la elección del modo del camino */}
+        {modoCamino === null && <TarjetaModo ocupado={guardandoModo} onElegir={elegirModo} />}
+
         {/* ritual de continuación (3 tarjetas) */}
         {ritual && (
           <RitualContinuar
@@ -667,8 +780,12 @@ export function ManosALaObra({
         )}
       </div>
 
-      {/* lateral: ciclo de profundización + ritmo */}
+      {/* lateral: interruptor de fechas + ciclo de profundización + ritmo */}
       <aside className="flex flex-col gap-6">
+        {/* Fase 3.8 §3 — interruptor permanente (canon 10) */}
+        {modoCamino !== null && (
+          <InterruptorFechas modo={modoCamino} ocupado={guardandoModo} onToggle={elegirModo} />
+        )}
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
             Ciclo de profundización
