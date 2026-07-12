@@ -47,14 +47,25 @@ function fmtFechaLocal(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
-/** Marca el primer ítem pendiente como hecho HOY, esperando el botón "Hoy"
- * explícitamente y el PATCH real. CERO swallow: si algo falla, LANZA — un
- * gate que traga clicks fallidos en silencio es un instrumento debilitado. */
+/** Marca un ítem PENDIENTE como hecho HOY. Reglas del instrumento (cero
+ * swallow, cero .first() ciego):
+ *  - selecciona un ítem pendiente EXPLÍCITO (el último "Marcar hecho" del DOM),
+ *    jamás un .first() que una recarga stale pueda reapuntar a un ítem ya hecho;
+ *  - espera el botón "Hoy" y el PATCH real (waitForResponse);
+ *  - CONFIRMA el completion por la aparición de un nuevo "hecho el ..." — no
+ *    basta con que el prompt se abra (eso ya quita el botón) ni con que el
+ *    PATCH responda: exige que el ítem quede hecho de verdad, o LANZA. */
 async function marcarHechoHoy(app: Page) {
-  const btn = app.getByRole("button", { name: "Marcar hecho" }).first();
-  await btn.waitFor({ state: "visible", timeout: 15000 });
-  await btn.click();
-  const hoy = app.getByRole("button", { name: "Hoy" }).first();
+  const marcar = app.getByRole("button", { name: "Marcar hecho" });
+  const hechos = app.getByText(/^hecho el /);
+  await marcar.first().waitFor({ state: "visible", timeout: 15000 });
+  const pendientes = await marcar.count();
+  if (pendientes === 0) throw new Error("no quedan ítems pendientes para marcar hecho");
+  const hechosAntes = await hechos.count();
+
+  // El último pendiente del DOM: selección explícita, no un .first() ciego.
+  await marcar.nth(pendientes - 1).click();
+  const hoy = app.getByRole("button", { name: "Hoy" });
   await hoy.waitFor({ state: "visible", timeout: 8000 });
   const [resp] = await Promise.all([
     app.waitForResponse(
@@ -64,6 +75,14 @@ async function marcarHechoHoy(app: Page) {
     hoy.click(),
   ]);
   if (!resp.ok()) throw new Error(`PATCH checklist falló al marcar hecho: HTTP ${resp.status()}`);
+
+  // Settlement: exige un "hecho el ..." MÁS renderizado (completion real).
+  const t0 = Date.now();
+  while (Date.now() - t0 < 10000) {
+    if ((await hechos.count()) > hechosAntes) return;
+    await app.waitForTimeout(150);
+  }
+  throw new Error("no apareció un nuevo 'hecho el' tras el PATCH: el ítem no quedó hecho");
 }
 
 async function capturarCanon(page: Page, htmlCanon: string, archivo: string) {
