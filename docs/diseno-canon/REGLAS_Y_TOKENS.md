@@ -50,5 +50,19 @@ Precios en dinero y tamanos de pack: por definir (los packs del centro de credit
 6. 06 Etapa 5 - Manos a la Obra (checklist verde, ciclo de profundizacion, ritmo)
 7. 07 Potenciadores y Creditos (compuerta, centro de creditos, fila de potenciadores, Tus Numeros por dentro, guardian ambar)
 8. 08 Mundos Activos (idea con Calidad y Confianza activo: checklist maestro agrupado, seccion del mundo, cinta con chips)
+9. 09 La Celebracion (marcar idea como realizada: timeline vertical animado del viaje, pulso verde + pill "Proyecto", estadisticas reales, linea de cumplimiento solo con baseline, "Reabrir esta idea")
+10. 10 Modo y Fechas (vista A: eleccion "A mi ritmo" vs "Con fechas y recordatorios"; vista B: ritual de linea base con fechas sugeridas deterministicas, "Aceptar estas fechas", edicion por item, "mover esta etapa una semana")
+11. 11 Analisis del Proyecto (capa universal siempre + capa de cumplimiento solo con baseline, tono espejo con tardias en ambar, barras gemelas base-vs-real, "Descargar mi informe .md")
 
 Cada pantalla incluye desktop 1240 y mobile 380. Los archivos HTML son autocontenidos: abren sin servidor.
+
+## 5. Fase 3.8 — El sentido del tiempo (pantallas 09-11)
+
+Reglas nuevas que mandan sobre estas tres pantallas:
+
+- CERO LLM / cero costo por render: la Celebracion y el Analisis se construyen solo de lo persistido (projects.created_at, planes, checklist_items.completed_at, project_unlocks, plans.baseline_confirmada_at, checklist_items.fecha_base). Ningun texto de estas pantallas sale de un modelo.
+- Tardias en AMBAR (#E0A64A, el tono guardian), jamas en rojo. El tono es espejo, nunca regano.
+- La capa de cumplimiento (a tiempo / adelantadas / tardias, desviacion, barras gemelas) solo aparece si hubo baseline confirmada. Sin baseline: solo la capa universal.
+- Umbral "a tiempo": |completed_at - fecha_base| <= 1 dia. Adelantada: completed_at < fecha_base - 1 dia. Tardia: completed_at > fecha_base + 1 dia.
+- Animacion de la Celebracion: duracion FIJA 6-8s sin importar el largo del viaje, saltable con un toque, prefers-reduced-motion -> estado estatico directo.
+- Las fechas sugeridas son deterministicas (sin hora): etapa N -> plan.created_at + N semanas (viernes); items "Esta semana" -> inicio de su semana. El usuario las ve en lenguaje humano ("viernes 20 de marzo").
