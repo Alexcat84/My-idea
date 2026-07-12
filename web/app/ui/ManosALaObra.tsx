@@ -16,7 +16,8 @@
 import { useMemo, useState } from "react";
 import { Acordeon } from "./Acordeon";
 import { Markdown } from "./Markdown";
-import type { ChecklistEstado } from "@/lib/dbContract";
+import type { ChecklistEstado, FechaBaseOrigen } from "@/lib/dbContract";
+import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import { haceCuanto } from "@/lib/ideas";
 
 export interface ItemChecklistUI {
@@ -29,8 +30,18 @@ export interface ItemChecklistUI {
   destacado: boolean;
   estado: ChecklistEstado;
   nota: string | null;
+  completed_at: string | null;
+  fecha_base: string | null;
+  fecha_base_origen: FechaBaseOrigen | null;
+  fecha_base_original: string | null;
   created_at: string;
   updated_at: string;
+}
+
+/** Cambios que un ítem puede recibir en un toque (Fase 3.8: + completed_at). */
+export interface CambioItem {
+  estado?: ChecklistEstado;
+  completed_at?: string | null;
 }
 
 export interface ChecklistData {
@@ -65,7 +76,7 @@ interface Props {
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
   /** PATCH aplicado: el padre refresca su copia del checklist */
-  onItemActualizado: (item: { id: string; estado: ChecklistEstado }) => void;
+  onItemActualizado: (item: { id: string; estado?: ChecklistEstado; completed_at?: string | null }) => void;
   /** el follow devolvió el primer turno: el padre entra a la entrevista */
   onSeguimientoIniciado: (turno: unknown) => void;
   /** POST world/start devolvió el primer turno del mundo */
@@ -140,49 +151,123 @@ function IconoEstado({ estado }: { estado: ChecklistEstado }) {
 function FilaItem({
   item,
   ocupado,
-  onEstado,
+  onCambio,
 }: {
   item: ItemChecklistUI;
   ocupado: boolean;
-  onEstado: (estado: ChecklistEstado) => void;
+  onCambio: (cambio: CambioItem) => void;
 }) {
   const hecho = item.estado === "hecho";
+  // Fase 3.8 §2 — timeline real: al marcar hecho, "¿Cuándo lo hiciste?
+  // HOY / elegir fecha". HOY es el default de un toque; la fecha puede ser
+  // pasada, nunca futura; editable después desde el ítem ya hecho.
+  const [preguntando, setPreguntando] = useState(false);
+  const [editandoFecha, setEditandoFecha] = useState(false);
+  const hoyInput = fechaInputLocal(new Date());
+
+  function marcarHecho(completedAt?: string | null) {
+    setPreguntando(false);
+    setEditandoFecha(false);
+    onCambio({ estado: "hecho", completed_at: completedAt });
+  }
+
+  function pasoDeCirculo() {
+    const siguiente = SIGUIENTE_ESTADO[item.estado];
+    if (siguiente === "hecho") setPreguntando(true);
+    else onCambio({ estado: siguiente }); // hecho→pendiente limpia completed_at en la ruta
+  }
+
   return (
     <div
       className={
-        "flex items-center gap-3.5 rounded-cinta border bg-surface px-4 py-3.5 " +
+        "rounded-cinta border bg-surface px-4 py-3.5 " +
         (item.destacado && !hecho ? "border-done/35" : "border-hairline")
       }
     >
-      {/* un toque: pendiente → empezado → a medias → hecho → pendiente */}
-      <button
-        onClick={() => onEstado(SIGUIENTE_ESTADO[item.estado])}
-        disabled={ocupado}
-        title={`Estado: ${ETIQUETA_ESTADO[item.estado]} — tocar para cambiar`}
-        aria-label={`${item.texto}: ${ETIQUETA_ESTADO[item.estado]}, tocar para cambiar`}
-        className="shrink-0 disabled:opacity-50"
-      >
-        <IconoEstado estado={item.estado} />
-      </button>
-      <span className="min-w-0 flex-1">
-        <span className={"block text-[14.5px] " + (hecho ? "text-dim line-through" : "text-ink")}>
-          {item.texto}
-        </span>
-        {!hecho && item.estado !== "pendiente" && (
-          <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
-        )}
-        {!hecho && item.destacado && (
-          <span className="mt-0.5 block text-[12.5px] text-done">esta semana</span>
-        )}
-      </span>
-      {!hecho && (
+      <div className="flex items-center gap-3.5">
+        {/* un toque: pendiente → empezado → a medias → hecho → pendiente */}
         <button
-          onClick={() => onEstado("hecho")}
+          onClick={pasoDeCirculo}
           disabled={ocupado}
-          className="shrink-0 rounded-[9px] border border-done/50 px-3.5 py-1.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
+          title={`Estado: ${ETIQUETA_ESTADO[item.estado]} — tocar para cambiar`}
+          aria-label={`${item.texto}: ${ETIQUETA_ESTADO[item.estado]}, tocar para cambiar`}
+          className="shrink-0 disabled:opacity-50"
         >
-          Marcar hecho
+          <IconoEstado estado={item.estado} />
         </button>
+        <span className="min-w-0 flex-1">
+          <span className={"block text-[14.5px] " + (hecho ? "text-dim line-through" : "text-ink")}>
+            {item.texto}
+          </span>
+          {!hecho && item.estado !== "pendiente" && (
+            <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
+          )}
+          {!hecho && item.destacado && (
+            <span className="mt-0.5 block text-[12.5px] text-done">esta semana</span>
+          )}
+          {hecho && item.completed_at && !editandoFecha && (
+            <button
+              onClick={() => setEditandoFecha(true)}
+              disabled={ocupado}
+              className="mt-0.5 block text-[12.5px] text-done hover:underline disabled:opacity-50"
+            >
+              hecho el {fechaHumanaCorta(item.completed_at)} · cambiar
+            </button>
+          )}
+        </span>
+        {!hecho && !preguntando && (
+          <button
+            onClick={() => setPreguntando(true)}
+            disabled={ocupado}
+            className="shrink-0 rounded-[9px] border border-done/50 px-3.5 py-1.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
+          >
+            Marcar hecho
+          </button>
+        )}
+      </div>
+
+      {/* mini-prompt "¿Cuándo lo hiciste?" al marcar hecho */}
+      {preguntando && (
+        <div className="mt-3 flex flex-wrap items-center gap-2.5 border-t border-hairline pt-3">
+          <span className="text-[12.5px] text-dim">¿Cuándo lo hiciste?</span>
+          <button
+            onClick={() => marcarHecho()}
+            disabled={ocupado}
+            className="rounded-[9px] bg-done px-3.5 py-1.5 text-[12.5px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
+          >
+            Hoy
+          </button>
+          <input
+            type="date"
+            max={hoyInput}
+            onChange={(e) => e.target.value && marcarHecho(isoDesdeInputLocal(e.target.value))}
+            disabled={ocupado}
+            aria-label="Elegir la fecha en que lo hiciste"
+            className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
+          />
+          <button onClick={() => setPreguntando(false)} className="text-[12.5px] text-dim hover:text-ink">
+            cancelar
+          </button>
+        </div>
+      )}
+
+      {/* editar la fecha de un ítem ya hecho */}
+      {hecho && editandoFecha && (
+        <div className="mt-3 flex flex-wrap items-center gap-2.5 border-t border-hairline pt-3">
+          <span className="text-[12.5px] text-dim">Cambiar la fecha:</span>
+          <input
+            type="date"
+            max={hoyInput}
+            defaultValue={item.completed_at ? fechaInputLocal(new Date(item.completed_at)) : hoyInput}
+            onChange={(e) => e.target.value && onCambio({ completed_at: isoDesdeInputLocal(e.target.value) })}
+            disabled={ocupado}
+            aria-label="Cambiar la fecha en que lo hiciste"
+            className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
+          />
+          <button onClick={() => setEditandoFecha(false)} className="text-[12.5px] text-dim hover:text-ink">
+            listo
+          </button>
+        </div>
       )}
     </div>
   );
@@ -192,12 +277,12 @@ function GrupoEtapas({
   grupo,
   titulos,
   ocupado,
-  onEstado,
+  onCambio,
 }: {
   grupo: NonNullable<ReturnType<typeof grupoVigente>>;
   titulos: Record<number, string>;
   ocupado: boolean;
-  onEstado: (item: ItemChecklistUI, estado: ChecklistEstado) => void;
+  onCambio: (item: ItemChecklistUI, cambio: CambioItem) => void;
 }) {
   // La primera etapa con pendientes queda abierta; las demás, plegadas.
   const primeraActiva = grupo.etapas.find((e) => e.items.some((i) => i.estado !== "hecho"))?.etapa;
@@ -221,7 +306,7 @@ function GrupoEtapas({
             <Acordeon key={etapa} titulo={encabezado}>
               <div className="flex flex-col gap-2.5">
                 {items.map((item) => (
-                  <FilaItem key={item.id} item={item} ocupado={ocupado} onEstado={(e) => onEstado(item, e)} />
+                  <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} />
                 ))}
               </div>
             </Acordeon>
@@ -232,7 +317,7 @@ function GrupoEtapas({
             <div className="mb-3">{encabezado}</div>
             <div className="flex flex-col gap-2.5">
               {items.map((item) => (
-                <FilaItem key={item.id} item={item} ocupado={ocupado} onEstado={(e) => onEstado(item, e)} />
+                <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} />
               ))}
             </div>
           </section>
@@ -390,20 +475,27 @@ export function ManosALaObra({
   const desde = itemsCore.map((i) => i.created_at).sort()[0];
   const ciclosAjuste = historial.filter((h) => h.etiqueta === "seguimiento").length;
 
-  async function cambiarEstado(item: ItemChecklistUI, estado: ChecklistEstado) {
+  async function aplicarCambio(item: ItemChecklistUI, cambio: CambioItem) {
     setOcupado(true);
     setError(null);
     try {
       const res = await fetch(`/api/project/${projectId}/checklist`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ item_id: item.id, estado }),
+        body: JSON.stringify({ item_id: item.id, ...cambio }),
       });
       if (!res.ok) {
         setError(ERROR_GENERICO);
         return;
       }
-      onItemActualizado({ id: item.id, estado });
+      // La ruta devuelve el ítem persistido (incluye completed_at ya
+      // resuelto: default now() al marcar hecho, null al desmarcar).
+      const data = (await res.json()) as { item?: { estado?: ChecklistEstado; completed_at?: string | null } };
+      onItemActualizado({
+        id: item.id,
+        estado: data.item?.estado ?? cambio.estado,
+        completed_at: data.item?.completed_at,
+      });
     } catch {
       setError("no pudimos guardar el cambio; revisa tu internet e intenta de nuevo");
     } finally {
@@ -500,7 +592,7 @@ export function ManosALaObra({
           </p>
         )}
         {core ? (
-          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} onEstado={cambiarEstado} />
+          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} onCambio={aplicarCambio} />
         ) : (
           <p className="text-sm text-dim">
             Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.
@@ -536,7 +628,7 @@ export function ManosALaObra({
 
               {grupo ? (
                 <div className="mt-4">
-                  <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onEstado={cambiarEstado} />
+                  <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} />
                 </div>
               ) : (
                 <button

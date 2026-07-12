@@ -483,7 +483,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               mundos={mundosParaObra}
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
-              onItemActualizado={({ id, estado }) => {
+              onItemActualizado={({ id, estado, completed_at }) => {
                 setChecklist((prev) =>
                   prev
                     ? {
@@ -494,7 +494,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
                             ...e,
                             items: e.items.map((i) =>
                               i.id === id
-                                ? { ...i, estado: estado as ChecklistEstado, updated_at: new Date().toISOString() }
+                                ? {
+                                    ...i,
+                                    ...(estado !== undefined ? { estado: estado as ChecklistEstado } : {}),
+                                    ...(completed_at !== undefined ? { completed_at } : {}),
+                                    updated_at: new Date().toISOString(),
+                                  }
                                 : i
                             ),
                           })),
