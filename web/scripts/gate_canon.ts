@@ -42,6 +42,30 @@ async function capturar(page: Page, archivo: string) {
   console.log(`  ${archivo}`);
 }
 
+/** yyyy-mm-dd local para llenar un <input type="date">. */
+function fmtFechaLocal(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+/** Marca el primer ítem pendiente como hecho HOY, esperando el botón "Hoy"
+ * explícitamente y el PATCH real. CERO swallow: si algo falla, LANZA — un
+ * gate que traga clicks fallidos en silencio es un instrumento debilitado. */
+async function marcarHechoHoy(app: Page) {
+  const btn = app.getByRole("button", { name: "Marcar hecho" }).first();
+  await btn.waitFor({ state: "visible", timeout: 15000 });
+  await btn.click();
+  const hoy = app.getByRole("button", { name: "Hoy" }).first();
+  await hoy.waitFor({ state: "visible", timeout: 8000 });
+  const [resp] = await Promise.all([
+    app.waitForResponse(
+      (r) => r.url().includes("/checklist") && r.request().method() === "PATCH",
+      { timeout: 15000 }
+    ),
+    hoy.click(),
+  ]);
+  if (!resp.ok()) throw new Error(`PATCH checklist falló al marcar hecho: HTTP ${resp.status()}`);
+}
+
 async function capturarCanon(page: Page, htmlCanon: string, archivo: string) {
   await page.goto(pathToFileURL(path.join(CANON, htmlCanon)).href);
   await page.waitForTimeout(900);
@@ -160,66 +184,83 @@ async function main() {
   }
 
   // ── Fase 3.8: el sentido del tiempo (canon 09/10/11) desde la sesión real.
-  // Requiere la migración 018 aplicada. Envuelto para no perder las capturas
-  // anteriores si un selector necesita ajuste.
-  try {
-    // asegurar la vista Manos (por si el bloque de mundos volvió al plan)
-    if (!/vista=manos/.test(app.url())) {
-      await app.getByRole("button", { name: "Pasar a Manos a la Obra" }).click().catch(() => {});
-      await app.waitForURL(/vista=manos/, { timeout: 30000 }).catch(() => {});
-    }
+  // Requiere la migración 018 aplicada. CERO swallow: cada paso espera lo suyo
+  // y LANZA si falla -- el gate es un instrumento permanente, no un adorno.
 
-    // 06 Modo del camino (vista A): la tarjeta de elección en la primera entrada
-    await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
-    await capturar(app, "06_modo_app.png");
-    await capturarCanon(canon, "10 - Modo y Fechas.html", "06_modo_canon.png");
-
-    // elegir "Con fechas y recordatorios" → el ritual de la línea base (vista B)
-    await app.getByRole("button", { name: /Con fechas y recordatorios/ }).click();
-    await app.getByText("Ponle fechas a tu camino", { exact: false }).waitFor({ timeout: 30000 });
-    await capturar(app, "07_baseline_app.png");
-    await app.getByRole("button", { name: "Aceptar estas fechas" }).click();
-    await app.waitForTimeout(1500);
-
-    // marcar dos acciones como hechas (Hoy) para poblar el timeline real
-    for (let i = 0; i < 2; i++) {
-      const btn = app.getByRole("button", { name: "Marcar hecho" }).first();
-      if ((await btn.count()) === 0) break;
-      await btn.click();
-      await app.getByRole("button", { name: "Hoy" }).first().click().catch(() => {});
-      await app.waitForTimeout(800);
-    }
-
-    // 07 Análisis del proyecto (canon 11)
-    await app.getByRole("button", { name: /Ver análisis del proyecto/ }).click();
-    await app.getByText("Análisis de", { exact: false }).first().waitFor({ timeout: 30000 });
-    await app.waitForTimeout(1500);
-    await capturar(app, "08_analisis_app.png");
-    await capturarCanon(canon, "11 - Analisis del Proyecto.html", "08_analisis_canon.png");
-    await app.getByRole("button", { name: "← Volver" }).click().catch(() => {});
-    await app.waitForTimeout(1000);
-
-    // 08 La Celebración (canon 09) — variante con cumplimiento (modo fechas)
-    await app.getByRole("button", { name: "Marcar como realizada" }).click();
-    await app.getByRole("button", { name: /Sí, es un proyecto/ }).click();
-    await app.getByText("Aquí acaba tu idea y nace tu proyecto", { exact: false }).waitFor({ timeout: 30000 });
-    await app.waitForTimeout(8000); // la animación 6-8s asienta
-    await capturar(app, "09_celebracion_cumplimiento_app.png");
-    await capturarCanon(canon, "09 - La Celebracion.html", "09_celebracion_canon.png");
-
-    // variante a-mi-ritmo: reabrir → pausar fechas → realizar de nuevo
-    await app.getByRole("button", { name: /Reabrir esta idea/ }).click();
-    await app.waitForTimeout(2000);
-    await app.getByRole("button", { name: "Pausar" }).click().catch(() => {});
-    await app.waitForTimeout(800);
-    await app.getByRole("button", { name: "Marcar como realizada" }).click();
-    await app.getByRole("button", { name: /Sí, es un proyecto/ }).click();
-    await app.getByText("Aquí acaba tu idea y nace tu proyecto", { exact: false }).waitFor({ timeout: 30000 });
-    await app.waitForTimeout(8000);
-    await capturar(app, "09b_celebracion_ritmo_app.png");
-  } catch (e) {
-    console.log(`\n[Fase 3.8] captura incompleta (¿migración 018 aplicada?): ${e instanceof Error ? e.message : e}`);
+  // asegurar la vista Manos (el bloque de mundos pudo volver al plan default)
+  if (!/vista=manos/.test(app.url())) {
+    const irManos = app.getByRole("button", { name: "Pasar a Manos a la Obra" }).first();
+    await irManos.waitFor({ state: "visible", timeout: 15000 });
+    await irManos.click();
+    await app.waitForURL(/vista=manos/, { timeout: 30000 });
   }
+
+  // 06 Modo del camino (vista A): la tarjeta de elección en la primera entrada
+  await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
+  await capturar(app, "06_modo_app.png");
+  await capturarCanon(canon, "10 - Modo y Fechas.html", "06_modo_canon.png");
+
+  // ── variante A-MI-RITMO: SIN baseline (cero "planificado", sin cumplimiento).
+  // Se captura primero, mientras el proyecto aún no tiene línea base.
+  await app.getByRole("button", { name: /A mi ritmo/ }).click();
+  await app.getByText("Fechas y recordatorios", { exact: false }).first().waitFor({ timeout: 15000 });
+  for (let i = 0; i < 4; i++) await marcarHechoHoy(app); // completions reales, sin fechas base
+  await app.getByRole("button", { name: "Marcar como realizada" }).click();
+  await app.getByRole("button", { name: /Sí, es un proyecto/ }).click();
+  await app.getByText("Aquí acaba tu idea y nace tu proyecto", { exact: false }).waitFor({ timeout: 30000 });
+  await app.waitForTimeout(8000); // la animación 6-8s asienta
+  await capturar(app, "09b_celebracion_ritmo_app.png");
+
+  // reabrir para pasar a la variante con fechas
+  const reabrir = app.getByRole("button", { name: /Reabrir esta idea/ });
+  await reabrir.waitFor({ state: "visible", timeout: 15000 });
+  await reabrir.click();
+  await app.getByText("Fechas y recordatorios", { exact: false }).first().waitFor({ timeout: 30000 });
+
+  // ── variante FECHAS: activar → ritual de baseline con fechas editadas para
+  // poblar las 3 clases de cumplimiento (tardía en ámbar, a tiempo, adelantadas).
+  const activar = app.getByRole("button", { name: "Activar" }).first();
+  await activar.waitFor({ state: "visible", timeout: 15000 });
+  await activar.click();
+  await app.getByText("Ponle fechas a tu camino", { exact: false }).waitFor({ timeout: 30000 });
+
+  // editar las dos primeras fechas (ítems ya hechos HOY): una al pasado (→
+  // tardía) y otra a hoy (→ a tiempo); el resto quedan en su sugerida futura
+  // (→ adelantadas). Las demás fechas base ancla del canon quedan intactas.
+  const inputs = app.locator('input[type="date"]');
+  await inputs.first().waitFor({ state: "visible", timeout: 10000 });
+  await inputs.nth(0).fill(fmtFechaLocal(new Date(Date.now() - 21 * 86400000))); // 3 semanas atrás → tardía
+  await inputs.nth(1).fill(fmtFechaLocal(new Date())); // hoy → a tiempo
+  await capturar(app, "07_baseline_app.png");
+
+  const [respBase] = await Promise.all([
+    app.waitForResponse((r) => r.url().includes("/baseline") && r.request().method() === "POST", { timeout: 15000 }),
+    app.getByRole("button", { name: "Aceptar estas fechas" }).click(),
+  ]);
+  if (!respBase.ok()) throw new Error(`POST baseline falló: HTTP ${respBase.status()}`);
+  // el checklist recarga y reaparecen los "Marcar hecho" de los pendientes
+  await app.getByRole("button", { name: "Marcar hecho" }).first().waitFor({ timeout: 15000 });
+  for (let i = 0; i < 2; i++) await marcarHechoHoy(app); // dos más → adelantadas
+
+  // 08 Análisis del proyecto (canon 11) — ahora con cumplimiento poblado
+  await app.getByRole("button", { name: /Ver análisis del proyecto/ }).click();
+  await app.getByText("Análisis de", { exact: false }).first().waitFor({ timeout: 30000 });
+  await app.waitForTimeout(1500);
+  await capturar(app, "08_analisis_app.png");
+  await capturarCanon(canon, "11 - Analisis del Proyecto.html", "08_analisis_canon.png");
+  const volver = app.getByRole("button", { name: "← Volver" }).first();
+  await volver.waitFor({ state: "visible", timeout: 15000 });
+  await volver.click();
+
+  // 09 La Celebración (canon 09) — variante con cumplimiento (modo fechas)
+  const marcarReal = app.getByRole("button", { name: "Marcar como realizada" }).first();
+  await marcarReal.waitFor({ state: "visible", timeout: 15000 });
+  await marcarReal.click();
+  await app.getByRole("button", { name: /Sí, es un proyecto/ }).click();
+  await app.getByText("Aquí acaba tu idea y nace tu proyecto", { exact: false }).waitFor({ timeout: 30000 });
+  await app.waitForTimeout(8000);
+  await capturar(app, "09_celebracion_cumplimiento_app.png");
+  await capturarCanon(canon, "09 - La Celebracion.html", "09_celebracion_canon.png");
 
   await browser.close();
   console.log(`\nGATE: capturas lado a lado en ${OUT} — el veredicto visual es del fundador/auditor.`);
