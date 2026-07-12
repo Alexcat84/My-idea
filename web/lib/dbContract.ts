@@ -53,3 +53,18 @@ export type ChecklistEstado = (typeof CHECKLIST_ESTADO)[number];
  * existe para el motor. */
 export const DOMINIOS = ["core", ...PACK_CLICKS_PACK] as const;
 export type Dominio = (typeof DOMINIOS)[number];
+
+/** projects.modo_camino (Fase 3.8, migration 018): cómo lleva el usuario su
+ * camino en Manos a la Obra. null hasta la primera elección. 'ritmo' = todo
+ * como hoy, sin fechas base; 'fechas' = con línea base y recordatorios. El
+ * interruptor de "pausar" solo alterna 'fechas' ↔ 'ritmo' (jamás borra las
+ * fechas ya puestas en los ítems). */
+export const MODO_CAMINO = ["ritmo", "fechas"] as const;
+export type ModoCamino = (typeof MODO_CAMINO)[number];
+
+/** checklist_items.fecha_base_origen (Fase 3.8, migration 018): procedencia
+ * de la fecha objetivo VIGENTE de un ítem. 'sugerida' = del sugeridor
+ * determinístico; 'ajustada' = el usuario movió una fecha que fue sugerida;
+ * 'manual' = fecha puesta a mano sin que hubiera sugerencia previa. */
+export const FECHA_BASE_ORIGEN = ["sugerida", "ajustada", "manual"] as const;
+export type FechaBaseOrigen = (typeof FECHA_BASE_ORIGEN)[number];

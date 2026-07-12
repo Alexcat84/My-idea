@@ -159,5 +159,28 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%seguridad_digital%'
     )
 
+  UNION ALL
+  -- 018 · Fase 3.8 el sentido del tiempo: columnas de tiempo/modo/baseline,
+  -- CHECKs nombrados de modo_camino y fecha_base_origen, y project_bitacora.
+  SELECT '018', 'tiempo real + modo_camino + baseline + fecha_base(_origen/_original) + project_bitacora',
+    EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='projects' AND column_name='realizada_at')
+    AND EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='projects' AND column_name='modo_camino')
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'projects_modo_camino_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%fechas%'
+    )
+    AND EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='plans' AND column_name='baseline_confirmada_at')
+    AND EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='checklist_items' AND column_name='completed_at')
+    AND EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='checklist_items' AND column_name='fecha_base')
+    AND EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='checklist_items' AND column_name='fecha_base_original')
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'checklist_items_fecha_base_origen_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%sugerida%'
+    )
+    AND EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='project_bitacora')
+    AND EXISTS (SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='project_bitacora' AND policyname='project_bitacora_own')
+
 ) checks
 ORDER BY num;

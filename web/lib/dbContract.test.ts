@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { CHECKLIST_ESTADO, DOMINIOS, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { CHECKLIST_ESTADO, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -105,7 +105,15 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     expect(contrato.get("project_unlocks.dominio")!.has("core")).toBe(false);
   });
 
-  it("parseo de sanidad: encontro los 8 CHECK esperados con al menos un literal cada uno", () => {
+  it("projects.modo_camino (Fase 3.8, migration 018)", () => {
+    assertSubconjuntoDelContrato("projects.modo_camino", MODO_CAMINO);
+  });
+
+  it("checklist_items.fecha_base_origen (Fase 3.8, migration 018)", () => {
+    assertSubconjuntoDelContrato("checklist_items.fecha_base_origen", FECHA_BASE_ORIGEN);
+  });
+
+  it("parseo de sanidad: encontro los 10 CHECK esperados con al menos un literal cada uno", () => {
     for (const clave of [
       "sessions.tipo",
       "plans.etiqueta",
@@ -115,6 +123,8 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
       "sessions.dominio",
       "plans.dominio",
       "project_unlocks.dominio",
+      "projects.modo_camino",
+      "checklist_items.fecha_base_origen",
     ]) {
       const permitidos = contrato.get(clave);
       expect(permitidos).toBeDefined();
