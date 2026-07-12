@@ -487,11 +487,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
             <ManosALaObra
               projectId={projectId}
               planMd={planMd}
+              planCreatedAt={detalle.plan?.created_at ?? itemsCore[0]?.created_at ?? new Date().toISOString()}
               checklist={checklist}
               historial={detalle.historial ?? []}
               mundos={mundosParaObra}
               modoCamino={modoCamino}
               onModoCambiado={setModoCamino}
+              onRecargarChecklist={cargarChecklist}
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
               onItemActualizado={({ id, estado, completed_at }) => {

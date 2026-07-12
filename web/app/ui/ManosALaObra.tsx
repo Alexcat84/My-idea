@@ -17,7 +17,8 @@ import { useMemo, useState } from "react";
 import { Acordeon } from "./Acordeon";
 import { Markdown } from "./Markdown";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
-import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
+import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
+import { diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 
 export interface ItemChecklistUI {
@@ -69,6 +70,8 @@ interface MundoInfo {
 interface Props {
   projectId: string;
   planMd: string;
+  /** created_at del plan core vigente: ancla del sugeridor de fechas (§4) */
+  planCreatedAt: string;
   checklist: ChecklistData;
   historial: PlanHistorial[];
   mundos: MundoInfo[];
@@ -76,6 +79,8 @@ interface Props {
   modoCamino: ModoCamino | null;
   /** el PATCH /modo respondió: el padre refresca su copia del modo */
   onModoCambiado: (modo: ModoCamino) => void;
+  /** tras confirmar la línea base: el padre recarga el checklist entero */
+  onRecargarChecklist: () => void;
   /** true si hay una entrevista abierta para "Volver a la entrevista" */
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
@@ -208,6 +213,9 @@ function FilaItem({
           )}
           {!hecho && item.destacado && (
             <span className="mt-0.5 block text-[12.5px] text-done">esta semana</span>
+          )}
+          {!hecho && item.fecha_base && (
+            <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
             <button
@@ -367,7 +375,7 @@ function RitualContinuar({
           </p>
           <p className="mt-2 text-sm text-dim">
             Llevas {resumen.hechos} de {resumen.total} acciones hechas. Ajusta arriba lo que haga falta —
-            de eso compongo el "qué ha pasado", sin que lo redactes dos veces.
+            de eso compongo el «qué ha pasado», sin que lo redactes dos veces.
           </p>
           <button
             onClick={() => setPaso(2)}
@@ -526,14 +534,176 @@ function InterruptorFechas({
   );
 }
 
+/** El ritual de la línea base (canon 10, vista B). Las fechas se sugieren
+ * determinísticamente (fechasBase.ts, cero LLM) y el usuario ajusta la que
+ * quiera. Tema azul: fijar fechas es planear. */
+function RitualFechas({
+  items,
+  titulos,
+  planCreatedAt,
+  soloPendientes,
+  guardando,
+  error,
+  onAceptar,
+  onPosponer,
+}: {
+  items: ItemChecklistUI[];
+  titulos: Record<number, string>;
+  planCreatedAt: string;
+  soloPendientes: boolean;
+  guardando: boolean;
+  error: string | null;
+  onAceptar: (fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) => void;
+  onPosponer: () => void;
+}) {
+  const diaPreferido = useMemo(() => diaDominante(items.map((i) => i.completed_at)), [items]);
+  const sugeridas = useMemo(
+    () =>
+      Object.fromEntries(
+        sugerirFechasBase({
+          planCreatedAt,
+          diaPreferido,
+          items: items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
+        }).map((s) => [s.id, s.fecha])
+      ),
+    [items, planCreatedAt, diaPreferido]
+  );
+  // Fecha vigente por ítem (YYYY-MM-DD) y qué ítems tocó el usuario (=ajustada).
+  const [fechas, setFechas] = useState<Record<string, string>>(sugeridas);
+  const [editados, setEditados] = useState<Record<string, true>>({});
+
+  const porEtapa = useMemo(() => {
+    const m = new Map<number, ItemChecklistUI[]>();
+    for (const it of items) {
+      if (!m.has(it.etapa)) m.set(it.etapa, []);
+      m.get(it.etapa)!.push(it);
+    }
+    return [...m.entries()].sort((a, b) => a[0] - b[0]);
+  }, [items]);
+
+  function fijar(id: string, fecha: string) {
+    setFechas((f) => ({ ...f, [id]: fecha }));
+    setEditados((e) => ({ ...e, [id]: true }));
+  }
+
+  function moverEtapa(etapa: number) {
+    setFechas((f) => {
+      const copia = { ...f };
+      const marcados: Record<string, true> = {};
+      for (const it of items) {
+        if (it.etapa !== etapa) continue;
+        const base = copia[it.id] ?? sugeridas[it.id];
+        const d = new Date(`${base}T12:00:00`);
+        copia[it.id] = fechaInputLocal(new Date(d.getFullYear(), d.getMonth(), d.getDate() + 7, 12));
+        marcados[it.id] = true;
+      }
+      setEditados((e) => ({ ...e, ...marcados }));
+      return copia;
+    });
+  }
+
+  function aceptar() {
+    onAceptar(
+      items.map((it) => ({
+        item_id: it.id,
+        fecha: isoDesdeInputLocal(fechas[it.id] ?? sugeridas[it.id]),
+        origen: editados[it.id] ? "ajustada" : "sugerida",
+      }))
+    );
+  }
+
+  return (
+    <section className="anima-plan-in overflow-hidden rounded-panel border border-hairline bg-surface">
+      <div className="px-6 pb-4 pt-7 sm:px-8">
+        <h3 className="text-2xl font-bold tracking-tight">
+          {soloPendientes ? "Recalcular las fechas pendientes" : "Ponle fechas a tu camino"}
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-dim">
+          Te propongo estas fechas en lenguaje humano; ajusta la que quieras. La hora es opcional.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-1 px-6 pb-2 sm:px-8">
+        {porEtapa.map(([etapa, its]) => (
+          <div key={etapa}>
+            <div className="my-3 flex items-center gap-3">
+              <span className="text-[11px] font-bold uppercase tracking-[1.2px] text-accent">
+                Etapa {etapa}
+                {titulos[etapa] ? ` · ${titulos[etapa]}` : ""}
+              </span>
+              <span className="h-px flex-1 bg-hairline" />
+              <button
+                onClick={() => moverEtapa(etapa)}
+                disabled={guardando}
+                className="rounded-[8px] border border-white/15 px-2.5 py-1 text-[12px] text-dim hover:text-ink disabled:opacity-50"
+              >
+                Mover esta etapa una semana
+              </button>
+            </div>
+            <div className="flex flex-col gap-2.5">
+              {its.map((it) => {
+                const fecha = fechas[it.id] ?? sugeridas[it.id];
+                return (
+                  <div
+                    key={it.id}
+                    className="flex flex-wrap items-center gap-3.5 rounded-cinta border border-hairline bg-surface px-4 py-3"
+                  >
+                    <span
+                      className="h-4 w-4 shrink-0 rounded-full border-[1.6px]"
+                      style={{ borderColor: "var(--accent)" }}
+                    />
+                    <span className="min-w-0 flex-1 text-[14.5px]">{it.texto}</span>
+                    <span className="flex items-center gap-2">
+                      <span className="hidden text-[12.5px] text-dim sm:inline">{fechaHumana(isoDesdeInputLocal(fecha))}</span>
+                      <input
+                        type="date"
+                        value={fecha}
+                        onChange={(e) => e.target.value && fijar(it.id, e.target.value)}
+                        disabled={guardando}
+                        aria-label={`Fecha para: ${it.texto}`}
+                        className="rounded-[9px] border bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none disabled:opacity-50"
+                        style={{ borderColor: "rgba(77,124,254,0.4)" }}
+                      />
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {error && <p className="px-6 pt-2 text-sm text-warn sm:px-8">{error}</p>}
+
+      <div className="flex flex-wrap items-center gap-4 px-6 py-6 sm:px-8">
+        <button
+          onClick={aceptar}
+          disabled={guardando}
+          className="rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
+        >
+          {guardando ? "Guardando…" : "Aceptar estas fechas"}
+        </button>
+        <div className="flex flex-col">
+          <button onClick={onPosponer} disabled={guardando} className="text-left text-[13.5px] text-dim hover:text-ink disabled:opacity-50">
+            Ponerlas después
+          </button>
+          <span className="text-xs text-dim opacity-75">Sin fechas no podré recordarte nada.</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function ManosALaObra({
   projectId,
   planMd,
+  planCreatedAt,
   checklist,
   historial,
   mundos,
   modoCamino,
   onModoCambiado,
+  onRecargarChecklist,
   entrevistaAbierta,
   onVolverEntrevista,
   onItemActualizado,
@@ -548,12 +718,19 @@ export function ManosALaObra({
   const [error, setError] = useState<string | null>(null);
   const [errorRitual, setErrorRitual] = useState<string | null>(null);
   const [guardandoModo, setGuardandoModo] = useState(false);
+  // Fase 3.8 §4 — ritual de la línea base
+  const [pospuesto, setPospuesto] = useState(false);
+  const [recalcularPendientes, setRecalcularPendientes] = useState(false);
+  const [guardandoBaseline, setGuardandoBaseline] = useState(false);
+  const [errorBaseline, setErrorBaseline] = useState<string | null>(null);
 
   const titulosCore = useMemo(() => titulosDeEtapas(planMd), [planMd]);
   const core = grupoVigente(checklist, "core");
   const itemsCore = core?.etapas.flatMap((e) => e.items) ?? [];
   const cCore = conteo(itemsCore);
   const tituloPlan = planMd.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? null;
+  // Fase 3.8: la baseline está confirmada si algún ítem core ya tiene fecha.
+  const hayFechas = itemsCore.some((i) => i.fecha_base);
 
   // Ritmo: lecturas directas de lo persistido.
   const ultimaAccion = itemsCore
@@ -577,11 +754,36 @@ export function ManosALaObra({
         setError(ERROR_GENERICO);
         return;
       }
+      // Reactivar fechas reabre el ritual (si aún no hay ninguna puesta).
+      if (modo === "fechas") setPospuesto(false);
       onModoCambiado(modo);
     } catch {
       setError("no pudimos guardar tu elección; revisa tu internet e intenta de nuevo");
     } finally {
       setGuardandoModo(false);
+    }
+  }
+
+  async function confirmarBaseline(fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) {
+    if (!core) return;
+    setGuardandoBaseline(true);
+    setErrorBaseline(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/baseline`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ plan_id: core.plan_id, fechas }),
+      });
+      if (!res.ok) {
+        setErrorBaseline(ERROR_GENERICO);
+        return;
+      }
+      setRecalcularPendientes(false);
+      onRecargarChecklist();
+    } catch {
+      setErrorBaseline("no pudimos guardar tus fechas; revisa tu internet e intenta de nuevo");
+    } finally {
+      setGuardandoBaseline(false);
     }
   }
 
@@ -686,6 +888,49 @@ export function ManosALaObra({
 
         {/* Fase 3.8 §3 — primera entrada: la elección del modo del camino */}
         {modoCamino === null && <TarjetaModo ocupado={guardandoModo} onElegir={elegirModo} />}
+
+        {/* Fase 3.8 §4 — ritual de la línea base (modo fechas) */}
+        {modoCamino === "fechas" && core && (recalcularPendientes || (!hayFechas && !pospuesto)) && (
+          <RitualFechas
+            items={recalcularPendientes ? itemsCore.filter((i) => i.estado !== "hecho") : itemsCore}
+            titulos={titulosCore}
+            planCreatedAt={planCreatedAt}
+            soloPendientes={recalcularPendientes}
+            guardando={guardandoBaseline}
+            error={errorBaseline}
+            onAceptar={confirmarBaseline}
+            onPosponer={() => {
+              setPospuesto(true);
+              setRecalcularPendientes(false);
+            }}
+          />
+        )}
+
+        {/* fechas ya puestas: pospuesta (reabrir) o activas (recalcular) */}
+        {modoCamino === "fechas" && core && !recalcularPendientes && !hayFechas && pospuesto && (
+          <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
+            <p className="text-[13px] text-dim">Sin fechas no podré recordarte nada.</p>
+            <button
+              onClick={() => setPospuesto(false)}
+              className="shrink-0 text-[12.5px] font-semibold text-accent hover:underline"
+            >
+              Poner fechas ahora
+            </button>
+          </div>
+        )}
+        {modoCamino === "fechas" && core && !recalcularPendientes && hayFechas && (
+          <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
+            <p className="text-[13px] text-dim">
+              <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
+            </p>
+            <button
+              onClick={() => setRecalcularPendientes(true)}
+              className="shrink-0 text-[12.5px] font-semibold text-accent hover:underline"
+            >
+              Recalcular pendientes
+            </button>
+          </div>
+        )}
 
         {/* ritual de continuación (3 tarjetas) */}
         {ritual && (

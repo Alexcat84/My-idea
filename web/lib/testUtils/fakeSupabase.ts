@@ -79,13 +79,28 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     const rows = id ? (estado.sessions[id] ? [estado.sessions[id]] : []) : Object.values(estado.sessions);
     return { data: rows, error: null };
   }
-  if (nombre === "plans" && b._insert) {
-    // Fase 3.3: guardarPlan encadena .select("id").single() para devolver
-    // el plan_id que el checklist derivado necesita — el fake lo imita.
-    estado.contadorPlan++;
-    const id = `plan-${estado.contadorPlan}`;
-    estado.plans.push({ id, ...(b._insert as Record<string, unknown>) });
-    return { data: b._single ? { id } : [{ id }], error: null };
+  if (nombre === "plans") {
+    if (b._insert) {
+      // Fase 3.3: guardarPlan encadena .select("id").single() para devolver
+      // el plan_id que el checklist derivado necesita — el fake lo imita.
+      estado.contadorPlan++;
+      const id = `plan-${estado.contadorPlan}`;
+      estado.plans.push({ id, ...(b._insert as Record<string, unknown>) });
+      return { data: b._single ? { id } : [{ id }], error: null };
+    }
+    if (b._update) {
+      // Fase 3.8: la ruta baseline sella plans.baseline_confirmada_at.
+      const id = b._filters.id as string | undefined;
+      const fila = estado.plans.find((r) => (r as { id?: string }).id === id);
+      if (fila) Object.assign(fila, b._update);
+      return { data: null, error: null };
+    }
+    let rows = estado.plans;
+    for (const [col, val] of Object.entries(b._filters)) {
+      rows = rows.filter((r) => (r as Record<string, unknown>)[col] === val);
+    }
+    if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
+    return { data: rows, error: null };
   }
   if (nombre === "checklist_items") {
     if (b._insert) {
