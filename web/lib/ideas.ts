@@ -51,6 +51,7 @@ const NOMBRE_MUNDO: Record<string, string> = {
   seguridad_digital: "Seguridad Digital",
   exportacion: "Vender al Mundo",
   franquicias: "Multiplica tu Negocio",
+  risk_management: "Riesgos Bajo Control",
 };
 
 export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Cinta[]> {

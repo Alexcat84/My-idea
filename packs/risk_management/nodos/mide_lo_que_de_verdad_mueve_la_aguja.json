@@ -1,0 +1,30 @@
+{
+  "node_id": "mide_lo_que_de_verdad_mueve_la_aguja",
+  "fase_proyecto": "validacion",
+  "dominio": "risk_management",
+  "titulo_concepto": "Análisis de Sensibilidad",
+  "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 20 (Sensitivity Analysis)",
+  "resumen_teorico": "No todas tus incertidumbres pesan igual. De todas las cosas que no sabes, unas pocas deciden el resultado y el resto casi no importa. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: preguntas cuál de tus supuestos, si cambia, mueve más el resultado final, y ahí concentras tu atención, tu medición y tu esfuerzo por reducir la incertidumbre. Sin esto, es fácil perder semanas afinando un número que no cambia nada mientras ignoras el que lo decide todo. Para el emprendedor con tiempo y dinero limitados, saber qué mueve la aguja es lo que separa el esfuerzo útil del desperdiciado: mide primero lo que más incertidumbre le quita a tu decisión.",
+  "pasos_accionables": [
+    "Lista los supuestos inciertos detrás de tu decisión o tu proyección.",
+    "Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.",
+    "Marca los dos o tres que más mueven la aguja e ignora por ahora los demás.",
+    "Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos."
+  ],
+  "entregable_esperado": "Tus supuestos ordenados por cuánto mueven el resultado, con los dos o tres decisivos marcados para medir primero.",
+  "nodos_previos": [
+    "nombra_tus_suposiciones_fragiles",
+    "calibra_tu_propio_ojo",
+    "el_valor_tambien_es_incierto"
+  ],
+  "nodos_siguientes": [
+    "riesgo_contra_valor_vale_la_pena",
+    "calibra_tu_propio_ojo"
+  ],
+  "condiciones_activacion": [
+    "cuando tienes muchas incertidumbres y no sabes cuál atacar primero",
+    "cuando pasas tiempo afinando datos que quizá no cambian nada",
+    "cuando una decisión depende de varios supuestos y quieres saber cuál pesa más"
+  ],
+  "etiqueta_arbol": "Mide lo Que Mueve la Aguja"
+}
