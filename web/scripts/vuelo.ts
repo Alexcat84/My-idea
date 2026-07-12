@@ -820,6 +820,12 @@ async function faseContratoUI(cookie: string, projectId: string, cicloMundoCompl
 async function faseSentidoDelTiempo(cookie: string, projectId: string) {
   separador("FASE 2i (Fase 3.8): el sentido del tiempo -- modo, timeline real, baseline, analisis, celebracion");
 
+  // Postgres devuelve timestamptz como "...+00:00" (sin milisegundos); es el
+  // MISMO instante que el ISO "...Z" que enviamos. Comparar por valor, no por
+  // representacion de texto.
+  const mismaFecha = (a: unknown, b: string) =>
+    typeof a === "string" && new Date(a).getTime() === new Date(b).getTime();
+
   const grupoVigenteCore = (cl: Record<string, unknown>) => {
     const planes = cl.planes as Array<{ dominio: string; plan_id: string; etapas: Array<{ items: Array<Record<string, unknown>> }> }>;
     return planes.filter((p) => p.dominio === "core").at(-1)!;
@@ -841,7 +847,7 @@ async function faseSentidoDelTiempo(cookie: string, projectId: string) {
     estado: "hecho",
     completed_at: "2026-06-01T12:00:00.000Z",
   });
-  if ((rHecho.item as { completed_at?: string }).completed_at !== "2026-06-01T12:00:00.000Z") {
+  if (!mismaFecha((rHecho.item as { completed_at?: string }).completed_at, "2026-06-01T12:00:00.000Z")) {
     throw new Error(`completed_at no se persistio: ${JSON.stringify(rHecho.item)}`);
   }
   log("OK: timeline real -- completed_at pasado persistido (para todos, sin fechas base).");
