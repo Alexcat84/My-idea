@@ -810,6 +810,106 @@ async function faseContratoUI(cookie: string, projectId: string, cicloMundoCompl
 }
 
 // ---------------------------------------------------------------------------
+// Fase 2i (Fase 3.8): el sentido del tiempo, dos ciclos sobre el proyecto de
+// macetas -- cero LLM, cero costo. (a) modo a-mi-ritmo: completed_at real,
+// analisis con capa universal SOLA. (b) modo fechas: baseline con fechas
+// PASADAS controladas (a tiempo / tardia / adelantada), analisis con capa de
+// cumplimiento coherente, realizar -> celebracion, reabrir.
+// Requiere la migracion 018 aplicada en Supabase.
+// ---------------------------------------------------------------------------
+async function faseSentidoDelTiempo(cookie: string, projectId: string) {
+  separador("FASE 2i (Fase 3.8): el sentido del tiempo -- modo, timeline real, baseline, analisis, celebracion");
+
+  const grupoVigenteCore = (cl: Record<string, unknown>) => {
+    const planes = cl.planes as Array<{ dominio: string; plan_id: string; etapas: Array<{ items: Array<Record<string, unknown>> }> }>;
+    return planes.filter((p) => p.dominio === "core").at(-1)!;
+  };
+
+  // ---- (a) modo A MI RITMO: solo fechas reales, sin cumplimiento ----
+  const rModoRitmo = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "ritmo" });
+  if (rModoRitmo.modo_camino !== "ritmo") throw new Error(`/modo no persistio 'ritmo': ${JSON.stringify(rModoRitmo)}`);
+  log("OK: modo del camino = 'ritmo' (persistido).");
+
+  const cl0 = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const vig0 = grupoVigenteCore(cl0);
+  const items = vig0.etapas.flatMap((e) => e.items) as Array<{ id: string; etapa: number; destacado: boolean }>;
+  if (items.length < 3) throw new Error(`el plan vigente necesita >=3 items para el vuelo del tiempo, hay ${items.length}`);
+
+  // completed_at real (pasado) de un toque
+  const rHecho = await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+    item_id: items[0].id,
+    estado: "hecho",
+    completed_at: "2026-06-01T12:00:00.000Z",
+  });
+  if ((rHecho.item as { completed_at?: string }).completed_at !== "2026-06-01T12:00:00.000Z") {
+    throw new Error(`completed_at no se persistio: ${JSON.stringify(rHecho.item)}`);
+  }
+  log("OK: timeline real -- completed_at pasado persistido (para todos, sin fechas base).");
+
+  const anRitmo = await getJson(cookie, `/api/project/${projectId}/analisis`);
+  if (anRitmo.tiene_baseline !== false) throw new Error("a-mi-ritmo NO debe tener capa de cumplimiento");
+  const uRitmo = (anRitmo.analytics as { universal: { accionesHechas: number } }).universal;
+  if (uRitmo.accionesHechas < 1) throw new Error("la capa universal no conto la accion completada");
+  log(`OK: analisis a-mi-ritmo -- capa universal sola (acciones=${uRitmo.accionesHechas}, cumplimiento=null).`);
+
+  // ---- (b) modo FECHAS: baseline con fechas pasadas controladas ----
+  const rModoFechas = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
+  if (rModoFechas.modo_camino !== "fechas") throw new Error("/modo no persistio 'fechas'");
+  log("OK: modo del camino = 'fechas'.");
+
+  // Fechas base PASADAS a proposito, para poder producir las 3 clases de
+  // cumplimiento con completed_at tambien pasado (nunca futuro).
+  const fechas = [
+    { item_id: items[0].id, fecha: "2026-06-01T12:00:00.000Z", origen: "sugerida" }, // completed 06-01 = a tiempo
+    { item_id: items[1].id, fecha: "2026-06-05T12:00:00.000Z", origen: "sugerida" }, // completed 06-12 = tardia
+    { item_id: items[2].id, fecha: "2026-06-20T12:00:00.000Z", origen: "sugerida" }, // completed 06-12 = adelantada
+  ];
+  const rBaseline = await postJson(cookie, `/api/project/${projectId}/baseline`, {
+    plan_id: vig0.plan_id,
+    fechas,
+  });
+  if (rBaseline.ok !== true) throw new Error(`/baseline no confirmo: ${JSON.stringify(rBaseline)}`);
+  log(`OK: linea base sellada (${rBaseline.confirmadas} fechas, baseline_confirmada_at=${rBaseline.baseline_confirmada_at}).`);
+
+  // completed_at de item[1] (tardia: 06-12 > 06-05) y item[2] (adelantada: 06-12 < 06-20)
+  await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+    item_id: items[1].id,
+    estado: "hecho",
+    completed_at: "2026-06-12T12:00:00.000Z",
+  });
+  await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+    item_id: items[2].id,
+    estado: "hecho",
+    completed_at: "2026-06-12T12:00:00.000Z",
+  });
+
+  const anFechas = await getJson(cookie, `/api/project/${projectId}/analisis`);
+  if (anFechas.tiene_baseline !== true) throw new Error("modo fechas con baseline: la capa de cumplimiento debia existir");
+  const c = (anFechas.analytics as { cumplimiento: { aTiempo: number; adelantadas: number; tardias: number; totalConFecha: number } }).cumplimiento;
+  // a mano: item0 06-01 vs base 06-01 -> a tiempo; item1 06-12 vs 06-05 (+7) -> tardia; item2 06-12 vs 06-20 (-8) -> adelantada
+  if (c.aTiempo < 1 || c.tardias < 1 || c.adelantadas < 1) {
+    throw new Error(`las 3 clases de cumplimiento debian aparecer: ${JSON.stringify(c)}`);
+  }
+  if (c.totalConFecha !== 3) throw new Error(`totalConFecha esperado 3, llego ${c.totalConFecha}`);
+  log(`OK: analisis con cumplimiento -- ${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardias (calculado de lo persistido).`);
+
+  // ---- realizar -> celebracion -> reabrir ----
+  const rReal = await postJson(cookie, `/api/project/${projectId}/realizar`, { accion: "realizar" });
+  if (!rReal.realizada_at) throw new Error("realizar no sello realizada_at");
+  const anCeleb = await getJson(cookie, `/api/project/${projectId}/analisis`);
+  const hitos = anCeleb.hitosCelebracion as Array<{ tipo: string }>;
+  if (!hitos.some((h) => h.tipo === "realizada")) throw new Error("el timeline de celebracion no incluye el hito 'realizada'");
+  if (!hitos.some((h) => h.tipo === "accion")) throw new Error("el timeline de celebracion no incluye hitos de accion");
+  log(`OK: realizada -> celebracion (timeline de ${hitos.length} hitos con acciones y REALIZADA).`);
+
+  const rReab = await postJson(cookie, `/api/project/${projectId}/realizar`, { accion: "reabrir" });
+  if (rReab.realizada_at !== null) throw new Error("reabrir no puso realizada_at a null");
+  log("OK: reabrir puso realizada_at a null (la idea vuelve a estar viva).");
+
+  return { costoUsd: 0 };
+}
+
+// ---------------------------------------------------------------------------
 // Fase 3: reporte digital -- fijos=200, precio=13, variable~0 -> equilibrio
 // esperado ceil(200/13)=16. Vocabulario esperado: "usuario(s)"/"suscripcion",
 // nunca "pieza".
@@ -983,6 +1083,7 @@ async function main() {
     costos.mundos = mundos.costoUsd;
     costos.mundosNuevos = (await faseMundosNuevos(cookie, macetas.projectId)).costoUsd;
     costos.contratoUI = (await faseContratoUI(cookie, macetas.projectId, mundos.cicloCompleto)).costoUsd;
+    costos.sentidoDelTiempo = (await faseSentidoDelTiempo(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -1010,10 +1111,11 @@ async function main() {
   log("  6. mundos HSEQ: muro 403 sin unlock, unlock idempotente con creditos, y 503/ciclo segun integracion (Fase 3.5): OK");
   log("  7. mundos nuevos v1.3.2: murallas 403 de exportacion/franquicias + ciclo completo de seguridad_digital (migracion 017): OK");
   log("  8. contrato de la UI de convergencia: unlocks + historial + mundos + grupo vigente (Fase 3.6): OK");
-  log("  9. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
-  log("  10. guardian GIGO (numeros contaminados): OK");
+  log("  9. sentido del tiempo (Fase 3.8): modo, completed_at real, baseline con 3 clases de cumplimiento, celebracion+reabrir: OK");
+  log("  10. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
+  log("  11. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 11/11 verificaciones OK");
+  separador("VUELO COMPLETO: 12/12 verificaciones OK");
   escribirTranscripcion();
 }
 
