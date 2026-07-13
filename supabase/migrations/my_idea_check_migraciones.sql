@@ -208,5 +208,42 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%risk_management%'
     )
 
+  UNION ALL
+  -- 020 · Cuentas y créditos: ledger balance-based + caja de vidrio + RLS de solo-lectura del dueño
+  SELECT '020', 'ledger de créditos (credit_accounts + credit_transactions + RLS + índice idempotencia)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='credit_accounts')
+    AND EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='credit_transactions')
+    AND EXISTS (SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='credit_accounts' AND policyname='credit_accounts_own_select')
+    AND EXISTS (SELECT 1 FROM pg_indexes WHERE schemaname='public' AND indexname='credit_transactions_idempotency_key')
+
+  UNION ALL
+  -- 021 · RPC atómicas de consumo/otorgamiento: SECURITY DEFINER y sin EXECUTE para anon/authenticated
+  SELECT '021', 'RPC consumir_creditos + otorgar_creditos (SECURITY DEFINER, service-role-only)',
+    EXISTS (SELECT 1 FROM pg_proc WHERE proname='consumir_creditos' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='otorgar_creditos' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_routine_grants
+      WHERE routine_schema='public' AND routine_name='consumir_creditos'
+        AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
+    )
+
+  UNION ALL
+  -- 022 · Cortesía de beta: 20 créditos una sola vez (blindaje beta_courtesy_log)
+  SELECT '022', 'cortesía (beta_courtesy_log + otorgar_cortesia)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='beta_courtesy_log')
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='otorgar_cortesia' AND pronamespace='public'::regnamespace AND prosecdef)
+
+  UNION ALL
+  -- 023 · RevenueCat: idempotencia de webhook + grant idempotente (esquema; pasarelas NO activadas)
+  SELECT '023', 'RevenueCat (revenuecat_webhook_events + otorgar_creditos_idempotente)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='revenuecat_webhook_events')
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='otorgar_creditos_idempotente' AND pronamespace='public'::regnamespace AND prosecdef)
+
+  UNION ALL
+  -- 024 · Refund: nadie pierde créditos por un fallo del sistema
+  SELECT '024', 'refund (credit_refund_log + reembolsar_creditos)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='credit_refund_log')
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='reembolsar_creditos' AND pronamespace='public'::regnamespace AND prosecdef)
+
 ) checks
 ORDER BY num;
