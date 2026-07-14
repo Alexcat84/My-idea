@@ -77,6 +77,11 @@ export function AnalisisProyecto({
     return Math.max(1, ...c.porEtapa.flatMap((e) => [e.baseDias ?? 0, e.realDias ?? 0]));
   }, [datos]);
 
+  const maxDur = useMemo(() => {
+    const d = datos?.analytics.universal.duracionPorEtapa ?? [];
+    return Math.max(1, ...d.map((e) => e.dias));
+  }, [datos]);
+
   if (error) return <p className="text-sm text-warn">{error}</p>;
   if (!datos) return <p className="text-dim">Calculando tu análisis…</p>;
 
@@ -111,38 +116,48 @@ export function AnalisisProyecto({
           <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta="ciclos · mundos" />
         </div>
 
-        {u.duracionPorEtapa.length > 0 && (
-          <div className="mt-6">
-            <p className="mb-3 text-[13px] font-semibold">Duración real por etapa</p>
-            <div className="flex flex-col gap-2">
-              {u.duracionPorEtapa.map((e) => (
-                <div
-                  key={e.etapa}
-                  className="flex items-center justify-between rounded-cinta border border-hairline bg-surface px-4 py-2.5"
-                >
-                  <span className="text-[14px]">{nombreEtapa(e.etapa)}</span>
-                  <span className="text-[13px] font-semibold text-dim">{e.dias} días</span>
+        {/* Canon 11: duración con barras (izq) y hitos (der) en dos columnas. */}
+        {(u.duracionPorEtapa.length > 0 || a.hitos.length > 0) && (
+          <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-start">
+            {u.duracionPorEtapa.length > 0 && (
+              <div className="flex-1 rounded-panel border border-hairline bg-surface p-5">
+                <p className="mb-4 text-[13px] font-semibold">Duración real por etapa</p>
+                <div className="flex flex-col gap-3.5">
+                  {u.duracionPorEtapa.map((e) => (
+                    <div key={e.etapa}>
+                      <div className="mb-1.5 flex items-baseline justify-between gap-3">
+                        <span className="text-[14px]">{nombreEtapa(e.etapa)}</span>
+                        <span className="text-[13px] font-semibold text-dim">{e.dias} días</span>
+                      </div>
+                      <div className="h-2 overflow-hidden rounded bg-white/5">
+                        <div
+                          className="h-full rounded"
+                          style={{ width: `${(e.dias / maxDur) * 100}%`, background: "var(--accent)" }}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+              </div>
+            )}
 
-        {a.hitos.length > 0 && (
-          <div className="mt-6">
-            <p className="mb-3 text-[13px] font-semibold">Hitos</p>
-            <ol className="flex flex-col gap-2.5 border-l border-hairline pl-4">
-              {a.hitos.map((h, i) => (
-                <li key={i} className="relative">
-                  <span
-                    className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full"
-                    style={{ background: h.tipo === "realizada" ? "var(--done)" : "var(--accent)" }}
-                  />
-                  <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha)}</span>
-                  <span className="ml-2 text-[13.5px]">{h.etiqueta}</span>
-                </li>
-              ))}
-            </ol>
+            {a.hitos.length > 0 && (
+              <div className="rounded-panel border border-hairline bg-surface p-5 lg:w-[340px] lg:shrink-0">
+                <p className="mb-4 text-[13px] font-semibold">Hitos</p>
+                <ol className="flex flex-col gap-3 border-l border-hairline pl-4">
+                  {a.hitos.map((h, i) => (
+                    <li key={i} className="relative">
+                      <span
+                        className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full"
+                        style={{ background: h.tipo === "realizada" ? "var(--done)" : "var(--accent)" }}
+                      />
+                      <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha)}</span>
+                      <span className="ml-2 text-[13.5px]">{h.etiqueta}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
           </div>
         )}
       </section>
@@ -174,61 +189,73 @@ export function AnalisisProyecto({
             </div>
           </div>
 
-          {c.porEtapa.length > 0 && (
-            <div className="mt-6">
-              <p className="mb-1 text-[13px] font-semibold">Planificado vs. real por etapa</p>
-              <p className="mb-3 flex gap-4 text-[11.5px] text-dim">
-                <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-4 rounded-sm" style={{ background: "rgba(77,124,254,0.55)" }} /> base
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-4 rounded-sm bg-done" /> real
-                </span>
-              </p>
-              <div className="flex flex-col gap-3">
-                {c.porEtapa.map((e) => {
-                  const tardeEtapa = (e.realDias ?? 0) > (e.baseDias ?? 0) + 1;
-                  return (
-                    <div key={e.etapa}>
-                      <p className="mb-1 text-[13px]">{nombreEtapa(e.etapa)}</p>
-                      <div className="flex flex-col gap-1">
-                        <div className="h-2.5 overflow-hidden rounded bg-white/5">
-                          <div
-                            className="h-full rounded"
-                            style={{ width: `${((e.baseDias ?? 0) / maxBarra) * 100}%`, background: "rgba(77,124,254,0.55)" }}
-                          />
-                        </div>
-                        <div className="h-2.5 overflow-hidden rounded bg-white/5">
-                          <div
-                            className="h-full rounded"
-                            style={{
-                              width: `${((e.realDias ?? 0) / maxBarra) * 100}%`,
-                              background: tardeEtapa ? "var(--warn)" : "var(--done)",
-                            }}
-                          />
+          {/* Canon 11: barras gemelas (izq) y desviación + replanificación
+              en paneles apilados (der). */}
+          <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-start">
+            {c.porEtapa.length > 0 && (
+              <div className="flex-1 rounded-panel border border-hairline bg-surface p-5">
+                <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+                  <p className="text-[13px] font-semibold">Planificado vs. real por etapa</p>
+                  <p className="flex gap-4 text-[11.5px] text-dim">
+                    <span className="flex items-center gap-1.5">
+                      <span className="h-2 w-4 rounded-sm" style={{ background: "rgba(77,124,254,0.55)" }} /> base
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="h-2 w-4 rounded-sm bg-done" /> real
+                    </span>
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {c.porEtapa.map((e) => {
+                    const tardeEtapa = (e.realDias ?? 0) > (e.baseDias ?? 0) + 1;
+                    return (
+                      <div key={e.etapa}>
+                        <p className="mb-1 text-[13px]">{nombreEtapa(e.etapa)}</p>
+                        <div className="flex flex-col gap-1">
+                          <div className="h-2.5 overflow-hidden rounded bg-white/5">
+                            <div
+                              className="h-full rounded"
+                              style={{ width: `${((e.baseDias ?? 0) / maxBarra) * 100}%`, background: "rgba(77,124,254,0.55)" }}
+                            />
+                          </div>
+                          <div className="h-2.5 overflow-hidden rounded bg-white/5">
+                            <div
+                              className="h-full rounded"
+                              style={{
+                                width: `${((e.realDias ?? 0) / maxBarra) * 100}%`,
+                                background: tardeEtapa ? "var(--warn)" : "var(--done)",
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          )}
-
-          <div className="mt-6 rounded-panel border border-hairline bg-surface p-5">
-            <p className="text-[15px]">
-              <span className="text-2xl font-bold text-ink">
-                {c.desviacionMediaDias > 0 ? "+" : ""}
-                {c.desviacionMediaDias.toFixed(1)}
-              </span>{" "}
-              <span className="text-dim">días · desviación media sobre lo planificado</span>
-            </p>
-            {c.replanificaciones > 0 && (
-              <p className="mt-3 text-[13.5px] leading-relaxed text-dim">
-                Moviste la fecha de {c.replanificaciones} {c.replanificaciones === 1 ? "acción" : "acciones"}.
-                Replanificar es parte del método. Ajustar el mapa no es fallar: es seguir con los pies en la tierra.
-              </p>
             )}
+
+            <div className="flex flex-col gap-4 lg:w-[340px] lg:shrink-0">
+              <div className="rounded-panel border border-hairline bg-surface p-5">
+                <p className="text-[15px]">
+                  <span className="text-2xl font-bold text-ink">
+                    {c.desviacionMediaDias > 0 ? "+" : ""}
+                    {c.desviacionMediaDias.toFixed(1)}
+                  </span>{" "}
+                  <span className="text-dim">días · desviación media sobre lo planificado</span>
+                </p>
+              </div>
+              {c.replanificaciones > 0 && (
+                <div className="rounded-panel border border-hairline bg-surface p-5">
+                  <p className="text-[14px] font-semibold">
+                    Moviste la fecha de {c.replanificaciones} {c.replanificaciones === 1 ? "acción" : "acciones"}
+                  </p>
+                  <p className="mt-2 text-[13.5px] leading-relaxed text-dim">
+                    Replanificar es parte del método. Ajustar el mapa no es fallar: es seguir con los pies en la tierra.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </section>
       )}

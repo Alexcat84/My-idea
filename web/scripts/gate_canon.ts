@@ -85,12 +85,17 @@ async function marcarHechoHoy(app: Page) {
   throw new Error("no apareció un nuevo 'hecho el' tras el PATCH: el ítem no quedó hecho");
 }
 
-async function capturarCanon(page: Page, htmlCanon: string, archivo: string) {
+// label opcional: substring del data-screen-label a capturar. Sin él, el
+// primer frame que termina en "desktop" (varios canon tienen varias vistas;
+// p.ej. 10 tiene "Eleccion ... Desktop" y "Ritual ... desktop": hay que
+// pedir el correcto o el par app-canon se cruza).
+async function capturarCanon(page: Page, htmlCanon: string, archivo: string, label?: string) {
   await page.goto(pathToFileURL(path.join(CANON, htmlCanon)).href);
   await page.waitForTimeout(900);
-  const frame = page.locator("[data-screen-label$='desktop']").first();
+  const sel = label ? `[data-screen-label*="${label}"]` : "[data-screen-label$='desktop']";
+  const frame = page.locator(sel).first();
   await frame.screenshot({ path: path.join(OUT, archivo) });
-  console.log(`  ${archivo} <- canon "${htmlCanon}"`);
+  console.log(`  ${archivo} <- canon "${htmlCanon}"${label ? ` [${label}]` : ""}`);
 }
 
 async function main() {
@@ -217,7 +222,7 @@ async function main() {
   // 06 Modo del camino (vista A): la tarjeta de elección en la primera entrada
   await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
   await capturar(app, "06_modo_app.png");
-  await capturarCanon(canon, "10 - Modo y Fechas.html", "06_modo_canon.png");
+  await capturarCanon(canon, "10 - Modo y Fechas.html", "06_modo_canon.png", "Eleccion");
 
   // ── variante A-MI-RITMO: SIN baseline (cero "planificado", sin cumplimiento).
   // Se captura primero, mientras el proyecto aún no tiene línea base.
@@ -229,6 +234,7 @@ async function main() {
   await app.getByText("Aquí acaba tu idea y nace tu proyecto", { exact: false }).waitFor({ timeout: 30000 });
   await app.waitForTimeout(8000); // la animación 6-8s asienta
   await capturar(app, "09b_celebracion_ritmo_app.png");
+  await capturarCanon(canon, "09 - La Celebracion.html", "09b_celebracion_ritmo_canon.png", "variante a mi ritmo desktop");
 
   // reabrir para pasar a la variante con fechas
   const reabrir = app.getByRole("button", { name: /Reabrir esta idea/ });
@@ -251,6 +257,7 @@ async function main() {
   await inputs.nth(0).fill(fmtFechaLocal(new Date(Date.now() - 21 * 86400000))); // 3 semanas atrás → tardía
   await inputs.nth(1).fill(fmtFechaLocal(new Date())); // hoy → a tiempo
   await capturar(app, "07_baseline_app.png");
+  await capturarCanon(canon, "10 - Modo y Fechas.html", "07_baseline_canon.png", "Ritual");
 
   const [respBase] = await Promise.all([
     app.waitForResponse((r) => r.url().includes("/baseline") && r.request().method() === "POST", { timeout: 15000 }),

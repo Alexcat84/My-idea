@@ -57,42 +57,72 @@ function Timeline({ hitos, onFin }: { hitos: Hito[]; onFin: () => void }) {
 
   const pct = total > 0 ? Math.round((Math.min(revelados, total) / total) * 100) : 100;
 
+  // Eje SIEMPRE centrado en desktop y a la izquierda en móvil; el punto y la
+  // barra azul viajan sobre él. left-[7px] (móvil) / left-1/2 (desktop).
+  const ejePos = "left-[7px] -translate-x-1/2 sm:left-1/2";
+
   return (
-    <div className="relative pl-6" onClick={() => setRevelados(total)}>
-      {/* pista + barra azul que desciende */}
-      <span className="absolute left-1.5 top-1 bottom-1 w-px bg-hairline" />
+    <div className="relative py-2" onClick={() => setRevelados(total)}>
+      {/* eje: pista hairline + barra azul→verde que desciende */}
+      <span className={"absolute top-2 bottom-2 w-px bg-hairline " + ejePos} />
       <span
-        className="absolute left-1.5 top-1 w-px bg-gradient-to-b from-accent to-done transition-[height] duration-500 ease-out"
-        style={{ height: `calc(${pct}% - 8px)` }}
+        className={"absolute top-2 w-px bg-gradient-to-b from-accent to-done transition-[height] duration-500 ease-out " + ejePos}
+        style={{ height: `calc(${pct}% - 16px)` }}
       />
-      <ol className="flex flex-col gap-5">
+      <ol className="flex flex-col gap-6">
         {hitos.map((h, i) => {
           const visible = i < revelados;
+          const izq = i % 2 === 0; // alternancia de lado en desktop
+          const realizada = h.tipo === "realizada";
+          const color = colorHito(h);
           return (
             <li
               key={i}
-              className={visible ? "anima-hito-reveal" : ""}
+              className={"relative grid sm:grid-cols-2 sm:gap-x-10 " + (visible ? "anima-hito-reveal" : "")}
               style={{ opacity: visible ? 1 : 0, transition: "opacity 0.4s ease-out" }}
             >
+              {/* el punto sobre el eje (anillo verde mayor para REALIZADA) */}
               <span
-                className="absolute -ml-[21px] mt-1.5 h-2.5 w-2.5 rounded-full"
-                style={{ background: colorHito(h) }}
-              />
-              <p className="flex flex-wrap items-baseline gap-2">
-                <span className="text-[12.5px] text-dim">{fechaHumanaCorta(h.fecha)}</span>
-                <span
+                className={
+                  "absolute z-10 rounded-full " +
+                  ejePos +
+                  (realizada
+                    ? " mt-0 flex h-6 w-6 items-center justify-center border-2 bg-black"
+                    : " mt-1.5 h-2.5 w-2.5")
+                }
+                style={realizada ? { borderColor: color } : { background: color }}
+              >
+                {realizada && <span className="h-2 w-2 rounded-full" style={{ background: color }} />}
+              </span>
+
+              {/* contenido: móvil a la derecha del eje; desktop alterna lados */}
+              <div
+                className={
+                  "pl-7 sm:pl-0 " +
+                  (realizada
+                    ? "sm:col-span-2 sm:pt-9 sm:text-center"
+                    : izq
+                      ? "sm:pr-10 sm:text-right"
+                      : "sm:col-start-2 sm:pl-10 sm:text-left")
+                }
+              >
+                <p className="text-[12px] text-dim">{fechaHumanaCorta(h.fecha)}</p>
+                <p
                   className={
-                    "text-[14.5px] " + (h.tipo === "realizada" ? "font-bold uppercase tracking-wide text-done" : "font-medium")
+                    "mt-0.5 " +
+                    (realizada
+                      ? "text-[15px] font-bold uppercase tracking-wide text-done"
+                      : "text-[14.5px] font-medium")
                   }
                 >
                   {h.etiqueta}
-                </span>
-              </p>
-              {h.subtitulo && (
-                <p className={"text-[12.5px] " + (h.cumplimiento === "tardia" ? "text-warn" : "text-dim")}>
-                  {h.subtitulo}
                 </p>
-              )}
+                {h.subtitulo && (
+                  <p className={"mt-0.5 text-[12.5px] " + (h.cumplimiento === "tardia" ? "text-warn" : "text-dim")}>
+                    {h.subtitulo}
+                  </p>
+                )}
+              </div>
             </li>
           );
         })}
