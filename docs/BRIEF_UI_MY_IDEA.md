@@ -141,6 +141,13 @@ Pagos reales de tokens (Stripe), activación real de packs, transcripción Whisp
 edición del título de idea con IA, exportar PDF, modo claro, paleta final del
 sitio de referencia del fundador, marcar "idea cerrada" con celebración.
 
+- **Píldora-humana de fechas (ritual de baseline, canon 10).** Hoy el ritual usa
+  el `<input type="date">` nativo (robusto, accesible, familiar); el canon lo
+  dibuja como píldora en lenguaje humano ("viernes 20 de marzo") con hora
+  colapsable. Refinamiento post-beta: construir el selector-píldora a medida
+  SOLO si la telemetría muestra que el modo fechas se usa mucho. Decisión del
+  fundador (fidelidad visual cerrada 2026-07-14): dejar nativo por ahora.
+
 ## 6. CRITERIOS DE CIERRE FASE 3.2 (base) y 3.3 (bucle)
 - 3.2: flujo completo Nueva idea → organizador con árbol real → entrevista en
   tarjetas → plan acordeón → reporte, en Vercel preview con allowlist, mobile-first
