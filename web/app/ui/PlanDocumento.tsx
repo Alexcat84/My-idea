@@ -203,9 +203,12 @@ function CajaEstaSemana({
 
 /** Una barra-topic desplegable (acordeón nativo <details>): colapsada por
  * defecto; al abrir muestra la data estructurada y la acción al final. */
-function BarraTopic({ s }: { s: Seccion }) {
+function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
   return (
-    <details className="group overflow-hidden rounded-[14px] border border-hairline bg-surface transition-colors open:border-[color:rgba(77,124,254,0.35)]">
+    <details
+      {...(abierta ? { open: true } : {})}
+      className="group overflow-hidden rounded-[14px] border border-hairline bg-surface transition-colors open:border-[color:rgba(77,124,254,0.35)]"
+    >
       <summary className="flex cursor-pointer list-none items-center gap-3.5 px-6 py-[18px] [&::-webkit-details-marker]:hidden">
         {s.numero ? (
           <span className="shrink-0 text-[13px] font-bold text-accent">{s.numero}</span>
@@ -297,7 +300,7 @@ export function PlanDocumento({
       <div className="mt-8 flex flex-col gap-3">
         {plan.secciones.map((s, i) => (
           <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
-            <BarraTopic s={s} />
+            <BarraTopic s={s} abierta={i === 0} />
           </div>
         ))}
       </div>
