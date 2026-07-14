@@ -65,7 +65,7 @@ async function marcarHechoHoy(app: Page) {
 
   // El último pendiente del DOM: selección explícita, no un .first() ciego.
   await marcar.nth(pendientes - 1).click();
-  const hoy = app.getByRole("button", { name: "Hoy" });
+  const hoy = app.getByRole("button", { name: "Hoy", exact: true });
   await hoy.waitFor({ state: "visible", timeout: 8000 });
   const [resp] = await Promise.all([
     app.waitForResponse(

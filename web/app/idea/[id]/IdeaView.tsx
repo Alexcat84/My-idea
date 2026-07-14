@@ -53,6 +53,8 @@ interface DetalleIdea {
     dominio?: string;
     ruta: Array<{ id: string; titulo: string; modo: string }>;
   } | null;
+  /** recorrido que construyó el plan vigente (canon 05: sidebar de nodos). */
+  recorrido?: Array<{ id: string; titulo: string; modo: string }>;
   unlocks?: string[];
   mundos?: Array<{
     dominio: string;
@@ -479,6 +481,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
     />
   );
 
+  // Canon 05 "Construido con tu recorrido": los conceptos del recorrido (no
+  // los silenciosos ni las etapas del plan). De la API si el plan está hecho;
+  // del riel vivo si acabamos de generarlo.
+  const nodosFuente =
+    detalle.recorrido && detalle.recorrido.length > 0
+      ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.titulo)
+      : nodos.filter((n) => !n.atenuado && !n.id.startsWith("etapa-")).map((n) => n.label);
+
   const mundosParaObra = unlocks.map((dominio) => ({
     dominio,
     nombre: NOMBRE_MUNDO[dominio]?.nombre ?? dominio,
@@ -760,7 +770,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
               {/* Plan como documento (canon 05) */}
               {planMd && (
-                <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} onEmpezar={() => irAManos(false)} />
+                <PlanDocumento
+                  md={planMd}
+                  nombreIdea={detalle.idea.nombre}
+                  onEmpezar={() => irAManos(false)}
+                  nodosFuente={nodosFuente}
+                />
               )}
 
               {/* CTA canon 05: el verde ejecuta espera en la etapa 5 */}

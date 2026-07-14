@@ -172,10 +172,12 @@ function CajaEstaSemana({
   contenido,
   grande,
   onEmpezar,
+  etiqueta = "Esta semana",
 }: {
   contenido: string;
   grande?: boolean;
   onEmpezar?: () => void;
+  etiqueta?: string;
 }) {
   return (
     <div
@@ -184,7 +186,7 @@ function CajaEstaSemana({
     >
       <p className="mb-2 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[1.4px] text-done">
         <span className="anima-green-pulse h-[9px] w-[9px] rounded-full bg-done" />
-        Esta semana
+        {etiqueta}
       </p>
       <div className={grande ? "text-[17px] font-semibold leading-normal [text-wrap:pretty] sm:text-[19px]" : "text-[13.5px] leading-[1.6] [text-wrap:pretty]"}>
         <Markdown>{contenido}</Markdown>
@@ -209,19 +211,28 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
       {...(abierta ? { open: true } : {})}
       className="group overflow-hidden rounded-[14px] border border-hairline bg-surface transition-colors open:border-[color:rgba(77,124,254,0.35)]"
     >
-      <summary className="flex cursor-pointer list-none items-center gap-3.5 px-6 py-[18px] [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none items-start gap-3.5 px-6 py-[18px] [&::-webkit-details-marker]:hidden">
         {s.numero ? (
-          <span className="shrink-0 text-[13px] font-bold text-accent">{s.numero}</span>
+          <span className="mt-px shrink-0 text-[13px] font-bold text-accent">{s.numero}</span>
         ) : (
-          <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+          <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
         )}
-        <span className="min-w-0 flex-1 text-[15.5px] font-semibold leading-snug">{s.titulo}</span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-[15.5px] font-semibold leading-snug">{s.titulo}</span>
+          {/* Entregable como subtítulo de la barra colapsada: saber de qué va
+              sin expandir. Se oculta al abrir (dentro va la caja completa). */}
+          {s.entregable && (
+            <span className="mt-1 line-clamp-2 block text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty] group-open:hidden">
+              {s.entregable}
+            </span>
+          )}
+        </span>
         <svg
           aria-hidden
           width="14"
           height="14"
           viewBox="0 0 12 12"
-          className="shrink-0 text-dim transition-transform duration-200 group-open:rotate-180"
+          className="mt-1 shrink-0 text-dim transition-transform duration-200 group-open:rotate-180"
         >
           <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.4" fill="none" />
         </svg>
@@ -257,23 +268,35 @@ export function PlanDocumento({
   md,
   nombreIdea,
   onEmpezar,
+  nodosFuente,
 }: {
   md: string;
   nombreIdea: string;
-  /** CTA verde del cierre: lleva a Manos a la Obra. */
+  /** CTA verde: lleva a Manos a la Obra (bloque "Tu primera acción"). */
   onEmpezar?: () => void;
+  /** canon 05: nodos del recorrido → sidebar "Construido con tu recorrido". */
+  nodosFuente?: string[];
 }) {
   const plan = parsearPlan(md);
   const etapas = plan.secciones.filter((s) => s.tipo === "etapa");
+  // La acción de la etapa 1 (el corazón del producto): SIEMPRE visible arriba,
+  // fuera de los acordeones. Su copia también vive al final de su tramo.
+  const primeraAccion =
+    etapas.find((s) => s.estaSemana)?.estaSemana ?? plan.secciones.find((s) => s.estaSemana)?.estaSemana ?? null;
 
-  return (
-    <section className="flex flex-col">
+  const documento = (
+    <div className="min-w-0 flex-1">
       {/* encabezado del documento (canon 05) */}
       <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
         <div className="mb-3 flex items-center gap-2">
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
           <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Generado de tu recorrido{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
+            Generado de tu recorrido
+            {nodosFuente && nodosFuente.length > 0
+              ? ` · ${nodosFuente.length} ${nodosFuente.length === 1 ? "nodo" : "nodos"}`
+              : plan.etiqueta
+                ? ` · ${plan.etiqueta}`
+                : ""}
           </span>
         </div>
         <button onClick={() => descargarMd(md, nombreIdea)} className="shrink-0 text-sm text-dim hover:text-ink">
@@ -292,12 +315,19 @@ export function PlanDocumento({
       )}
       {etapas.length > 0 && (
         <p className="anima-plan-in mt-3 text-[13px] text-dim" style={{ animationDelay: "0.25s" }}>
-          {etapas.length} {etapas.length === 1 ? "etapa" : "etapas"} · despliega cada una para ver los pasos y tu acción concreta
+          {etapas.length} {etapas.length === 1 ? "etapa" : "etapas"} · cada barra muestra su entregable; despliégala para los pasos y la acción
         </p>
       )}
 
-      {/* barras-topic (acordeones), colapsadas: los topics primero */}
-      <div className="mt-8 flex flex-col gap-3">
+      {/* TU PRIMERA ACCIÓN: el corazón del producto, siempre visible arriba */}
+      {primeraAccion && (
+        <div className="anima-plan-in mt-8" style={{ animationDelay: "0.3s" }}>
+          <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta="Tu primera acción" />
+        </div>
+      )}
+
+      {/* barras-topic (acordeones): los topics primero, primera abierta */}
+      <div className="mt-6 flex flex-col gap-3">
         {plan.secciones.map((s, i) => (
           <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
             <BarraTopic s={s} abierta={i === 0} />
@@ -305,18 +335,43 @@ export function PlanDocumento({
         ))}
       </div>
 
-      {/* cierre concreto: ejecutar (verde ejecuta) */}
-      {onEmpezar && (
-        <div className="anima-plan-in mt-8" style={{ animationDelay: "0.5s" }}>
-          <CajaEstaSemana
-            contenido="Ya tienes el mapa completo. El primer paso concreto te espera en Manos a la Obra — empieza por lo más pequeño que puedas hacer hoy."
-            grande
-            onEmpezar={onEmpezar}
-          />
-        </div>
-      )}
-
       {plan.pie && <p className="mt-5 text-[13px] text-dim">{plan.pie}</p>}
+    </div>
+  );
+
+  // Sin nodos fuente (plan de mundo / historial): una sola columna.
+  if (!nodosFuente || nodosFuente.length === 0) {
+    return <section className="flex flex-col">{documento}</section>;
+  }
+
+  // Canon 05: documento + sidebar "Construido con tu recorrido".
+  return (
+    <section className="flex flex-col gap-8 lg:flex-row lg:items-start">
+      {documento}
+      <aside
+        className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7"
+        style={{ animationDelay: "0.5s" }}
+      >
+        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Construido con tu recorrido</p>
+        <ul className="flex flex-col gap-4">
+          {nodosFuente.map((n, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span
+                aria-hidden
+                className="mt-0.5 flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border-[1.5px] border-white/15 bg-black"
+              >
+                <span className="h-[7px] w-[7px] rounded-full bg-accent" />
+              </span>
+              <span className="text-[13px] leading-[1.5] text-dim">{n}</span>
+            </li>
+          ))}
+        </ul>
+        {/* Canon 05: la nota de recálculo bajo una hairline — el plan no es
+            una lápida, se vuelve a la entrevista cuando el mundo cambia. */}
+        <p className="mt-6 border-t border-hairline pt-5 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
+          ¿Cambia algo en el mundo real? Vuelve a la entrevista cuando quieras: el plan se recalcula desde donde estés.
+        </p>
+      </aside>
     </section>
   );
 }

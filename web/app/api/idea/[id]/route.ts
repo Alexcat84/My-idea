@@ -132,6 +132,24 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     break;
   }
 
+  // El recorrido que construyó el plan vigente (canon 05, sidebar "Construido
+  // con tu recorrido"): disponible incluso con la sesión ya cerrada, leyendo
+  // el estado_recorrido de la sesión del plan.
+  let recorrido: Array<{ id: string; titulo: string; modo: string }> = [];
+  if (plan) {
+    const s = ((sesiones ?? []) as Array<{ id: string; estado_recorrido: EstadoSesionPersistido | null }>).find(
+      (x) => x.id === plan.session_id
+    );
+    const rec = s?.estado_recorrido?.recorrido;
+    if (rec) {
+      recorrido = rec.ruta.map((nid, i) => ({
+        id: nid,
+        titulo: graph[nid]?.titulo_concepto ?? nid,
+        modo: rec.modos[i],
+      }));
+    }
+  }
+
   // Mini-entrevista de reporte a medias (refresh-proof): reconstruye la
   // pregunta pendiente desde projects.estado_reporte, igual que lo haría
   // el siguiente paso del flujo.
@@ -164,6 +182,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     reporte: reporte && { contenido_md: reporte.contenido_md, created_at: reporte.created_at },
     reporte_en_curso: reporteEnCurso,
     entrevista,
+    recorrido,
     unlocks,
     mundos,
     historial,
