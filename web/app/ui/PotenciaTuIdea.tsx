@@ -1,15 +1,14 @@
 "use client";
 
 /**
- * PotenciaTuIdea — la fila de potenciadores (canon 3.6, mockup 07 B):
- * Tus Números (2 créditos) + los tres mundos (3 créditos, candado).
- * Precios SIEMPRE desde precios.ts / packs_catalog.json — ninguna cifra
- * hardcodeada. Mundo con candado: tarjeta no-modal "Disponible
- * próximamente" + telemetría pack_clicks. Mundo con fila en
- * project_unlocks: chip verde "Activo · n/m" (el verde ejecuta) y va a
- * su sección en Manos a la Obra.
+ * PotenciaTuIdea — la fila "Potencia tu idea" (canon 07-B / 08): grilla de
+ * tarjetas con ícono arriba-izquierda + chip arriba-derecha (créditos /
+ * "Activo · n/m" verde / candado), nombre y promesa, con hover que eleva la
+ * tarjeta. Tus Números (2 créditos) + los mundos del catálogo. Precios
+ * SIEMPRE desde precios.ts / packs_catalog.json — ninguna cifra hardcodeada.
+ * Azul piensa; el verde ejecuta marca el mundo activo.
  */
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { PRECIOS } from "@/lib/precios";
 
@@ -23,30 +22,84 @@ interface Pack {
 interface Props {
   projectId: string;
   unlocks: string[];
-  /** progreso del checklist por dominio (null si el mundo no arrancó) */
   progresoMundos: Record<string, { hechos: number; total: number } | null>;
-  /** hay plan core: Tus Números disponible */
   conPlan: boolean;
-  /** ver el mundo activo (lleva a Manos a la Obra) */
   onVerMundo: (dominio: string) => void;
-  /** ir a la tarjeta Tus Números bajo el plan */
   onTusNumeros: () => void;
 }
 
-function Candado() {
+/** Íconos por mundo (trazo del canon); genérico para los mundos nuevos. */
+function Icono({ clave, activo }: { clave: string; activo?: boolean }) {
+  const color = clave === "tus_numeros" ? "#F5F6F8" : activo ? "#4D7CFE" : "#A6A7AD";
+  const p = { stroke: color, strokeWidth: 1.5, fill: "none" as const };
+  const paths: Record<string, ReactNode> = {
+    tus_numeros: (
+      <>
+        <line x1="4" y1="16" x2="4" y2="10" stroke="#F5F6F8" strokeWidth="1.6" />
+        <line x1="10" y1="16" x2="10" y2="5" stroke="#F5F6F8" strokeWidth="1.6" />
+        <line x1="16" y1="16" x2="16" y2="8" stroke="#F5F6F8" strokeWidth="1.6" />
+      </>
+    ),
+    quality: (
+      <>
+        <path d="M10 2.5l6 2.2v4.5c0 3.6-2.5 6.6-6 8.3-3.5-1.7-6-4.7-6-8.3V4.7z" {...p} />
+        <path d="M7 9.8l2.1 2.1L13.3 8" {...p} />
+      </>
+    ),
+    health_safety: (
+      <>
+        <circle cx="10" cy="6.5" r="3" {...p} />
+        <path d="M4 16.5c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8" {...p} />
+      </>
+    ),
+    environmental: (
+      <>
+        <path d="M16 4c-7 0-11 4-11 11 6.5 0 11-4 11-11z" {...p} />
+        <path d="M5.5 14.5C8 11 11 8.5 14 7" {...p} strokeWidth={1.2} />
+      </>
+    ),
+    seguridad_digital: (
+      <>
+        <path d="M10 2.5l6 2.2v4.5c0 3.6-2.5 6.6-6 8.3-3.5-1.7-6-4.7-6-8.3V4.7z" {...p} />
+        <rect x="8" y="8.5" width="4" height="3.5" rx="0.8" {...p} strokeWidth={1.2} />
+        <path d="M8.8 8.5V7.6a1.2 1.2 0 0 1 2.4 0v0.9" {...p} strokeWidth={1.2} />
+      </>
+    ),
+    exportacion: (
+      <>
+        <circle cx="10" cy="10" r="7" {...p} />
+        <path d="M3 10h14M10 3c2 2.2 2 11.8 0 14M10 3c-2 2.2-2 11.8 0 14" {...p} strokeWidth={1.2} />
+      </>
+    ),
+    franquicias: (
+      <>
+        <rect x="3" y="3" width="6.5" height="6.5" rx="1.2" {...p} />
+        <rect x="10.5" y="3" width="6.5" height="6.5" rx="1.2" {...p} />
+        <rect x="3" y="10.5" width="6.5" height="6.5" rx="1.2" {...p} />
+        <rect x="10.5" y="10.5" width="6.5" height="6.5" rx="1.2" {...p} />
+      </>
+    ),
+    risk_management: (
+      <>
+        <path d="M10 2.5l7.5 13H2.5z" {...p} />
+        <line x1="10" y1="8" x2="10" y2="11.5" {...p} />
+        <circle cx="10" cy="13.5" r="0.6" fill={color} stroke="none" />
+      </>
+    ),
+  };
   return (
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="shrink-0 text-dim">
-      <rect x="3" y="11" width="18" height="11" rx="2" />
-      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden className="shrink-0">
+      {paths[clave] ?? paths.quality}
     </svg>
   );
 }
 
-function ChipCreditos({ n }: { n: number }) {
+function Candado() {
   return (
-    <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-1 text-[11px] font-bold text-accent">
-      {n} créditos
-    </span>
+    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden className="shrink-0 text-dim">
+      <rect x="2.5" y="6" width="9" height="6.5" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M4.5 6V4.5a2.5 2.5 0 0 1 5 0V6" stroke="currentColor" strokeWidth="1.3" fill="none" />
+    </svg>
   );
 }
 
@@ -56,7 +109,6 @@ export function PotenciaTuIdea({ projectId, unlocks, progresoMundos, conPlan, on
 
   function clickBloqueado(pack: Pack) {
     setAvisoEn(pack.clave);
-    // fire-and-forget: la telemetría pack_clicks no bloquea nada
     fetch("/api/packs/interes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -64,30 +116,35 @@ export function PotenciaTuIdea({ projectId, unlocks, progresoMundos, conPlan, on
     }).catch(() => {});
   }
 
+  const claseCard =
+    "group flex flex-col rounded-[14px] border bg-surface p-[22px] text-left transition-[transform,background,border-color] duration-200 hover:-translate-y-[3px] hover:bg-surface-2";
+
   return (
     <section className="mt-2">
-      <h3 className="text-base font-semibold">Potencia tu idea</h3>
-      <p className="mt-1 text-sm text-dim">Conocimiento especializado que se suma a tu plan.</p>
-      <div className="mt-3 flex flex-col gap-3">
+      <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Potencia tu idea</p>
+      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
         {/* Tus Números */}
         <button
           onClick={() => (conPlan ? onTusNumeros() : setAvisoEn("tus_numeros"))}
-          className="rounded-cinta border border-hairline bg-surface px-5 py-4 text-left hover:border-accent/55"
+          className={claseCard + " border-accent/35 hover:border-accent/60"}
           data-transiciona
         >
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-medium">Tus Números</p>
-            <ChipCreditos n={PRECIOS.tus_numeros} />
+          <div className="mb-3.5 flex items-center justify-between">
+            <Icono clave="tus_numeros" />
+            <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-[3px] text-[11px] font-bold text-accent">
+              {PRECIOS.tus_numeros} créditos
+            </span>
           </div>
-          <p className="mt-1 text-sm text-dim">
+          <p className="text-[15px] font-semibold">Tus Números</p>
+          <p className="mt-1.5 text-[12.5px] leading-[1.55] text-dim [text-wrap:pretty]">
             Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
           </p>
           {avisoEn === "tus_numeros" && (
-            <p className="mt-2 text-sm text-accent">Disponible con tu plan: primero genera el plan de tu idea.</p>
+            <p className="mt-2 text-[12.5px] text-accent">Primero genera el plan de tu idea.</p>
           )}
         </button>
 
-        {/* Los tres mundos */}
+        {/* Los mundos del catálogo */}
         {packs.map((p) => {
           const activo = unlocks.includes(p.clave);
           const progreso = progresoMundos[p.clave] ?? null;
@@ -95,28 +152,30 @@ export function PotenciaTuIdea({ projectId, unlocks, progresoMundos, conPlan, on
             <button
               key={p.clave}
               onClick={() => (activo ? onVerMundo(p.clave) : clickBloqueado(p))}
-              className={
-                "rounded-cinta border bg-surface px-5 py-4 text-left " +
-                (activo ? "border-done/30 hover:border-done/60" : "border-hairline hover:bg-surface-2")
-              }
+              className={claseCard + " " + (activo ? "border-accent/45" : "border-hairline")}
               data-transiciona
             >
-              <div className="flex items-center justify-between gap-3">
-                <p className="font-medium">{p.nombre}</p>
+              <div className="mb-3.5 flex items-center justify-between gap-2">
+                <Icono clave={p.clave} activo={activo} />
                 {activo ? (
-                  <span className="inline-flex shrink-0 items-center rounded-full border border-done/45 px-2.5 py-1 text-[11px] font-bold text-done">
-                    {progreso ? `Activo · ${progreso.hechos}/${progreso.total}` : "Activo"}
+                  <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
+                    Activo{progreso ? <> · <span className="text-done">{progreso.hechos}/{progreso.total}</span></> : ""}
                   </span>
                 ) : (
                   <span className="flex shrink-0 items-center gap-2">
-                    <ChipCreditos n={p.creditos_activar} />
+                    <span className="inline-flex items-center rounded-full border border-white/20 px-2.5 py-[3px] text-[10.5px] font-bold text-dim">
+                      {p.creditos_activar} créditos
+                    </span>
                     <Candado />
                   </span>
                 )}
               </div>
-              <p className="mt-1 text-sm text-dim">{p.promesa}</p>
+              <p className={"text-[15px] font-semibold" + (activo ? "" : " text-dim")}>{p.nombre}</p>
+              <p className={"mt-1.5 text-[12.5px] leading-[1.55] [text-wrap:pretty] text-dim" + (activo ? "" : " opacity-75")}>
+                {p.promesa}
+              </p>
               {avisoEn === p.clave && !activo && (
-                <p className="mt-2 text-sm text-accent">Disponible próximamente. Te avisaremos aquí mismo.</p>
+                <p className="mt-2 text-[12.5px] text-accent">Disponible próximamente. Te avisaremos aquí mismo.</p>
               )}
             </button>
           );

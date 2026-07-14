@@ -182,5 +182,31 @@ FROM (
     AND EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='project_bitacora')
     AND EXISTS (SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='project_bitacora' AND policyname='project_bitacora_own')
 
+  UNION ALL
+  -- 019 · Fase v1.4 séptimo pack: los 4 CHECK de dominio amplían a 7 packs
+  -- (risk_management). ANTES de aplicar debe decir MISSING pero los 4 conname
+  -- deben EXISTIR; DESPUÉS, ✓ OK.
+  SELECT '019', 'CHECKs de dominio con 7 packs (+risk_management)',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_unlocks_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%risk_management%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'sessions_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%risk_management%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'plans_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%risk_management%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'pack_clicks_pack_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%risk_management%'
+    )
+
 ) checks
 ORDER BY num;

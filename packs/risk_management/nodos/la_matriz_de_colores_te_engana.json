@@ -1,0 +1,29 @@
+{
+  "node_id": "la_matriz_de_colores_te_engana",
+  "fase_proyecto": "validacion",
+  "dominio": "risk_management",
+  "titulo_concepto": "Por Qué la Matriz de Riesgo No Funciona",
+  "fuente": "Hubbard, The Failure of Risk Management, Cap. 8 (Worse Than Useless)",
+  "resumen_teorico": "La herramienta más popular para calificar riesgos, la matriz de colores que multiplica una probabilidad alta-media-baja por un impacto alto-medio-bajo y pinta el resultado de rojo, amarillo o verde, es peor que inútil. El problema de fondo es que trata escalas de orden como si fueran números reales: un impacto de tres no es el triple de uno, igual que una película de tres estrellas no es el triple de buena que una de una estrella, pero la matriz los multiplica igual. Encima, las etiquetas como media significan cosas muy distintas para cada persona, y esconde el exceso de confianza con que todos estimamos. El resultado no es solo que no ayuda: agrega su propio error y puede dejarte peor que tu simple intuición. La sensación de control que da es un placebo.",
+  "pasos_accionables": [
+    "Si usas una matriz de colores, deja de multiplicar sus casillas como si fueran números.",
+    "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y cuánto en dinero o tiempo.",
+    "Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.",
+    "Prefiere una estimación imperfecta pero honesta a un tablero de colores que aparenta rigor."
+  ],
+  "entregable_esperado": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad y daño en palabras y cifras honestas.",
+  "nodos_previos": [
+    "cuan_probable_y_cuanto_doleria",
+    "escepticismo_sano_ante_el_riesgo"
+  ],
+  "nodos_siguientes": [
+    "piensa_en_rangos_no_en_numeros_unicos",
+    "como_sabes_que_tu_metodo_sirve"
+  ],
+  "condiciones_activacion": [
+    "cuando usas o te piden usar una matriz de riesgo de colores",
+    "cuando calificas riesgos con puntajes que luego sumas o multiplicas",
+    "cuando un tablero de riesgo te da calma pero no sabrías defender sus números"
+  ],
+  "etiqueta_arbol": "La Matriz de Colores Te Engaña"
+}

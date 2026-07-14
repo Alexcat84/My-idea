@@ -13,9 +13,9 @@
  * del plan ("## Etapa N: título"); si el plan no los trae, se muestra
  * solo el número. Nada se anima sin un evento real detrás.
  */
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
-import { Markdown } from "./Markdown";
+import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import { diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
@@ -468,12 +468,33 @@ function TarjetaModo({
   ocupado: boolean;
   onElegir: (modo: ModoCamino) => void;
 }) {
-  const opciones: Array<{ modo: ModoCamino; titulo: string; desc: string }> = [
-    { modo: "ritmo", titulo: "A mi ritmo", desc: "Marca tu avance cuando suceda. Sin fechas ni presiones." },
+  // Íconos del canon 10: reloj (a mi ritmo) y calendario (con fechas), en un
+  // badge redondeado arriba-izquierda. Trazo dim; azul piensa el tiempo.
+  const iconoReloj = (
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden>
+      <circle cx="10" cy="10" r="7" stroke="#A6A7AD" strokeWidth="1.5" />
+      <path d="M10 6v4l2.5 2" stroke="#A6A7AD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+  const iconoCalendario = (
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden>
+      <rect x="3" y="4.5" width="14" height="12.5" rx="2" stroke="#4D7CFE" strokeWidth="1.5" />
+      <path d="M3 8h14M6.5 3v3M13.5 3v3" stroke="#4D7CFE" strokeWidth="1.5" strokeLinecap="round" />
+      <rect x="6" y="11" width="2.5" height="2.5" rx="0.5" fill="#4D7CFE" />
+    </svg>
+  );
+  const opciones: Array<{ modo: ModoCamino; titulo: string; desc: string; icono: ReactNode }> = [
+    {
+      modo: "ritmo",
+      titulo: "A mi ritmo",
+      desc: "Marca tu avance cuando suceda. Sin fechas ni presiones.",
+      icono: iconoReloj,
+    },
     {
       modo: "fechas",
       titulo: "Con fechas y recordatorios",
       desc: "Te sugiero un calendario; tú lo ajustas. Yo te recuerdo.",
+      icono: iconoCalendario,
     },
   ];
   return (
@@ -489,6 +510,9 @@ function TarjetaModo({
             disabled={ocupado}
             className="flex flex-1 flex-col rounded-panel border border-white/10 bg-surface p-6 text-left transition-transform hover:-translate-y-0.5 disabled:opacity-50"
           >
+            <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-[11px] bg-surface-2">
+              {o.icono}
+            </span>
             <span className="text-[17px] font-semibold">{o.titulo}</span>
             <span className="mt-2 text-[13.5px] leading-relaxed text-dim [text-wrap:pretty]">{o.desc}</span>
             <span
@@ -1031,7 +1055,7 @@ export function ManosALaObra({
               {mundo.plan && (
                 <div className="mt-4">
                   <Acordeon titulo={`El plan de ${mundo.nombre}`}>
-                    <Markdown>{mundo.plan.contenido_md}</Markdown>
+                    <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
                   </Acordeon>
                 </div>
               )}
@@ -1048,7 +1072,7 @@ export function ManosALaObra({
                   key={i}
                   titulo={`Plan ${h.etiqueta} · ${haceCuanto(h.created_at)}`}
                 >
-                  <Markdown>{h.contenido_md}</Markdown>
+                  <PlanDocumento md={h.contenido_md} nombreIdea={`Plan ${h.etiqueta}`} />
                 </Acordeon>
               ))}
             </div>

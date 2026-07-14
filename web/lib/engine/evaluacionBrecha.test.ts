@@ -5,12 +5,14 @@ import { describe, expect, it } from "vitest";
 import { evaluacionBrecha, semillasDelPack } from "./evaluacionBrecha";
 
 describe("evaluacionBrecha (determinística, sin LLM)", () => {
-  it("el asset horneado trae las semillas aprobadas por dominio (6 mundos)", () => {
+  it("el asset horneado trae las semillas aprobadas por dominio (7 mundos)", () => {
     for (const pack of ["quality", "health_safety", "environmental", "exportacion", "franquicias"]) {
       expect(semillasDelPack(pack)).toHaveLength(7);
     }
     // seguridad_digital: 6 semillas aprobadas (v1.3.2)
     expect(semillasDelPack("seguridad_digital")).toHaveLength(6);
+    // risk_management: 8 semillas aprobadas (v1.4), 2 por cada fase del canon
+    expect(semillasDelPack("risk_management")).toHaveLength(8);
   });
 
   it("mismos insumos -> misma semilla (determinismo)", () => {
@@ -56,6 +58,12 @@ describe("evaluacionBrecha (determinística, sin LLM)", () => {
     // Alias del canon: planificacion/ejecucion (patch decía construccion/operacion).
     expect(evaluacionBrecha("seguridad_digital", null, null, "planificacion")!.semillaId).toBe("getting_started_planning");
     expect(evaluacionBrecha("exportacion", null, null, "ejecucion")!.semillaId).toBe("documentacion_exportacion_basica");
+    // Riesgos Bajo Control (v1.4): una puerta honesta por fase del canon.
+    expect(evaluacionBrecha("risk_management", null, null, "ideacion")!.semillaId).toBe("correr_hacia_el_riesgo");
+    expect(evaluacionBrecha("risk_management", null, null, "validacion")!.semillaId).toBe("haz_tu_lista_de_lo_que_puede_fallar");
+    // Alias construccion→planificacion y operacion→ejecucion, verificado contra la fase real del nodo.
+    expect(evaluacionBrecha("risk_management", null, null, "planificacion")!.semillaId).toBe("cuatro_caminos_ante_un_riesgo");
+    expect(evaluacionBrecha("risk_management", null, null, "ejecucion")!.semillaId).toBe("revisa_tus_riesgos_con_un_ritmo");
   });
 
   it("mundos nuevos: semilla mapeada ya cubierta -> cae al puntaje dinámico", () => {

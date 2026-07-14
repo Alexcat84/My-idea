@@ -21,7 +21,7 @@ import { Celebracion } from "../../ui/Celebracion";
 import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
-import { Markdown } from "../../ui/Markdown";
+import { Claridad } from "../../ui/Claridad";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { ReporteCard } from "../../ui/ReporteCard";
@@ -53,6 +53,8 @@ interface DetalleIdea {
     dominio?: string;
     ruta: Array<{ id: string; titulo: string; modo: string }>;
   } | null;
+  /** recorrido que construyó el plan vigente (canon 05: sidebar de nodos). */
+  recorrido?: Array<{ id: string; titulo: string; modo: string }>;
   unlocks?: string[];
   mundos?: Array<{
     dominio: string;
@@ -479,6 +481,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
     />
   );
 
+  // Canon 05 "Construido con tu recorrido": los conceptos del recorrido (no
+  // los silenciosos ni las etapas del plan). De la API si el plan está hecho;
+  // del riel vivo si acabamos de generarlo.
+  const nodosFuente =
+    detalle.recorrido && detalle.recorrido.length > 0
+      ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.titulo)
+      : nodos.filter((n) => !n.atenuado && !n.id.startsWith("etapa-")).map((n) => n.label);
+
   const mundosParaObra = unlocks.map((dominio) => ({
     dominio,
     nombre: NOMBRE_MUNDO[dominio]?.nombre ?? dominio,
@@ -760,7 +770,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
               {/* Plan como documento (canon 05) */}
               {planMd && (
-                <PlanDocumento md={planMd} nombreIdea={detalle.idea.nombre} onEmpezar={() => irAManos(false)} />
+                <PlanDocumento
+                  md={planMd}
+                  nombreIdea={detalle.idea.nombre}
+                  onEmpezar={() => irAManos(false)}
+                  nodosFuente={nodosFuente}
+                />
               )}
 
               {/* CTA canon 05: el verde ejecuta espera en la etapa 5 */}
@@ -795,17 +810,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
               {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
                 <>
-                  <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-                    Claridad · lista
-                  </p>
-                  <h2 className="text-xl font-semibold leading-snug">Esto entendí de tu idea</h2>
-                  <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
-                    <Markdown>{detalle.organizador.contenido_md}</Markdown>
-                  </section>
-                  <p className="text-sm text-dim">
-                    Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a
-                    pregunta.
-                  </p>
+                  <Claridad md={detalle.organizador.contenido_md} />
                   <div className="flex flex-wrap items-center gap-3">
                     <button
                       onClick={async () => {

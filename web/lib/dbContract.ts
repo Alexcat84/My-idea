@@ -30,10 +30,11 @@ export type ProjectNodeTipo = (typeof PROJECT_NODES_TIPO)[number];
 export const MODO_RUTA: readonly Exclude<ProjectNodeTipo, "cosechado">[] = ["conversado", "silencioso", "salto"];
 export type ModoRuta = (typeof MODO_RUTA)[number];
 
-/** pack_clicks.pack (Fase 3.2, migration 014; ampliada en 017): las claves
- * de dominio de los mundos -- las mismas de packs/<clave>/ y del campo
+/** pack_clicks.pack (Fase 3.2, migration 014; ampliada en 017 y 019): las
+ * claves de dominio de los mundos -- las mismas de packs/<clave>/ y del campo
  * `dominio` de sus nodos, y las que emite POST /api/packs/interes.
- * Fase v1.3.2 (migration 017): + seguridad_digital, exportacion, franquicias. */
+ * Fase v1.3.2 (migration 017): + seguridad_digital, exportacion, franquicias.
+ * Fase v1.4 (migration 019): + risk_management (séptimo pack). */
 export const PACK_CLICKS_PACK = [
   "quality",
   "health_safety",
@@ -41,6 +42,7 @@ export const PACK_CLICKS_PACK = [
   "seguridad_digital",
   "exportacion",
   "franquicias",
+  "risk_management",
 ] as const;
 export type PackClave = (typeof PACK_CLICKS_PACK)[number];
 

@@ -1,18 +1,29 @@
 "use client";
 
 /**
- * PlanDocumento — el plan como documento acordeón (brief 2.6): título e
- * intro abiertos; cada "## " sección (etapas, sostenibilidad, lo no
- * cubierto) como acordeón; "Esta semana" destacado con el acento dentro
- * de su etapa; la etiqueta (inicial/completo/seguimiento) como chip
- * discreto; descarga .md. El parser respeta el markdown REAL del motor:
- * no inventa estructura, solo pliega la que viene.
+ * PlanDocumento — el plan como DOCUMENTO DE ACORDEONES (canon 05 +
+ * ajustes del fundador 2026-07-14):
+ *   - Encabezado + intro abiertos; debajo, una línea de meta ("N etapas").
+ *   - Cada "## " del motor es una BARRA-TOPIC colapsada que, al desplegarse,
+ *     muestra la data estructurada en contenedores: descripción, Pasos como
+ *     una mini-línea de puntos (sutil pero visual), y Entregable en su caja.
+ *   - La ACCIÓN concreta ("Esta semana") va al FINAL de cada tramo, nunca al
+ *     inicio; y el cierre es un CTA concreto (Empezar / Manos a la Obra).
+ * El parser respeta el markdown REAL del motor: no inventa estructura, solo
+ * pliega la que viene. Colores: azul piensa, verde ejecuta (REGLAS_Y_TOKENS).
  */
 import { Markdown } from "./Markdown";
 
+type TipoSeccion = "etapa" | "cierre" | "otro";
+
 interface Seccion {
   titulo: string;
-  contenido: string;
+  numero: string | null;
+  tipo: TipoSeccion;
+  descripcion: string;
+  pasos: string[];
+  entregable: string | null;
+  estaSemana: string | null;
 }
 
 interface PlanParseado {
@@ -23,58 +34,102 @@ interface PlanParseado {
   pie: string | null;
 }
 
-function parsearPlan(md: string): PlanParseado {
-  const lineas = md.split("\n");
-  let etiqueta: string | null = null;
-  let titulo: string | null = null;
-  let pie: string | null = null;
+/** Recorta "**Etiqueta:** …" (hasta la línea en blanco o el fin) del cuerpo. */
+function recortarBloque(cuerpo: string, etiqueta: RegExp): { valor: string | null; resto: string } {
+  const m = cuerpo.match(etiqueta);
+  if (!m || m.index === undefined) return { valor: null, resto: cuerpo };
+  const resto = (cuerpo.slice(0, m.index) + cuerpo.slice(m.index + m[0].length)).trim();
+  return { valor: m[0].trim(), resto };
+}
 
+function parsearSeccion(tituloCrudo: string, contenido: string): Seccion {
+  const mEtapa = tituloCrudo.match(/^Etapa\s+(\d+)\s*[:.·-]?\s*(.*)$/i);
+  const numero = mEtapa ? mEtapa[1].padStart(2, "0") : null;
+  const titulo = (mEtapa ? mEtapa[2].trim() : tituloCrudo) || tituloCrudo;
+  const esCierre = /sosten|n[úu]meros|no cubr|qu[ée] sigue/i.test(tituloCrudo);
+
+  let cuerpo = contenido.replace(/\n---\s*$/g, "\n").trim();
+
+  // 1) "Esta semana" — la acción concreta del tramo (va al final).
+  const es = recortarBloque(cuerpo, /\*\*Esta semana:?\*\*[\s\S]*?(?=\n\s*\n|$)/);
+  cuerpo = es.resto;
+  const estaSemana = es.valor ? es.valor.replace(/^\*\*Esta semana:?\*\*\s*/i, "").trim() : null;
+
+  // 2) "Entregable" — el artefacto que queda.
+  const ent = recortarBloque(cuerpo, /\*\*Entregable:?\*\*[\s\S]*?(?=\n\s*\n|$)/);
+  cuerpo = ent.resto;
+  const entregable = ent.valor ? ent.valor.replace(/^\*\*Entregable:?\*\*\s*/i, "").trim() : null;
+
+  // 3) "Pasos" — tras quitar Entregable/Esta semana, lo que sigue a **Pasos:**
+  //    es la lista; lo anterior es la descripción.
+  let pasos: string[] = [];
+  const idxPasos = cuerpo.search(/\*\*Pasos:?\*\*/i);
+  let descripcion = cuerpo;
+  if (idxPasos >= 0) {
+    descripcion = cuerpo.slice(0, idxPasos).trim();
+    const listaRaw = cuerpo.slice(idxPasos).replace(/^\*\*Pasos:?\*\*\s*/i, "");
+    pasos = listaRaw
+      .split(/\n/)
+      .map((l) => l.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim())
+      .filter(Boolean);
+  }
+
+  return {
+    titulo,
+    numero,
+    tipo: numero ? "etapa" : esCierre ? "cierre" : "otro",
+    descripcion: descripcion.trim(),
+    pasos,
+    entregable,
+    estaSemana,
+  };
+}
+
+function parsearPlan(md: string): PlanParseado {
+  let etiqueta: string | null = null;
+  let pie: string | null = null;
   const cuerpo: string[] = [];
-  for (const linea of lineas) {
+  for (const linea of md.split("\n")) {
     const l = linea.trim();
-    if (!etiqueta && /^_Plan (completo|inicial)_$/.test(l)) {
+    if (!etiqueta && /^_Plan (completo|inicial|de seguimiento|seguimiento)_$/i.test(l)) {
       etiqueta = l.replaceAll("_", "");
       continue;
     }
-    if (!pie && /^_Este plan se aliment/.test(l)) {
+    if (!pie && /^_Este plan se aliment/i.test(l)) {
       pie = l.replaceAll("_", "");
       continue;
     }
     cuerpo.push(linea);
   }
 
-  const secciones: Seccion[] = [];
-  let intro: string[] = [];
-  let actual: Seccion | null = null;
+  let titulo: string | null = null;
+  const intro: string[] = [];
+  const rawSecc: { titulo: string; contenido: string }[] = [];
+  let actual: { titulo: string; contenido: string } | null = null;
   for (const linea of cuerpo) {
-    if (linea.startsWith("# ") && !titulo) {
-      titulo = linea.slice(2).trim();
+    // El primer encabezado (# o ##) es el TÍTULO del plan; su cuerpo, la intro.
+    if (!titulo) {
+      const h = linea.match(/^#{1,2}\s+(.+)$/);
+      if (h) {
+        titulo = h[1].trim();
+        continue;
+      }
+      intro.push(linea);
       continue;
     }
     const h2 = linea.match(/^##\s+(.+)$/);
     if (h2) {
       actual = { titulo: h2[1].trim(), contenido: "" };
-      secciones.push(actual);
+      rawSecc.push(actual);
       continue;
     }
     if (actual) actual.contenido += linea + "\n";
     else intro.push(linea);
   }
-  // separadores --- sueltos al final de secciones: ruido visual fuera
-  for (const s of secciones) s.contenido = s.contenido.replace(/\n---\s*$/g, "\n").trim();
-  intro = intro.join("\n").replace(/\n---\s*$/g, "").trim().split("\n");
 
-  return { etiqueta, titulo, intro: intro.join("\n").trim(), secciones, pie };
-}
-
-/** Separa el bloque "**Esta semana:** …" (hasta la línea en blanco) del
- * resto del contenido de una etapa, para destacarlo con el acento. */
-function separarEstaSemana(contenido: string): { resto: string; estaSemana: string | null } {
-  const m = contenido.match(/^\*\*Esta semana:?\*\*[\s\S]*?(?=\n\s*\n|$)/m);
-  if (!m) return { resto: contenido, estaSemana: null };
-  const estaSemana = m[0].trim();
-  const resto = (contenido.slice(0, m.index) + contenido.slice((m.index ?? 0) + m[0].length)).trim();
-  return { resto, estaSemana };
+  const secciones = rawSecc.map((s) => parsearSeccion(s.titulo, s.contenido));
+  const introTxt = intro.join("\n").replace(/\n---\s*$/g, "").trim();
+  return { etiqueta, titulo, intro: introTxt, secciones, pie };
 }
 
 function descargarMd(md: string, nombre: string) {
@@ -87,28 +142,54 @@ function descargarMd(md: string, nombre: string) {
   URL.revokeObjectURL(url);
 }
 
+/** Pasos como mini-línea de puntos (canon 04 en pequeño): sutil pero visual. */
+function PasosLista({ pasos }: { pasos: string[] }) {
+  return (
+    <ol className="mt-2 flex flex-col">
+      {pasos.map((p, i) => (
+        <li key={i} className="relative flex gap-3 pb-3 last:pb-0">
+          <span aria-hidden className="relative flex-none">
+            <span className="mt-[5px] block h-1.5 w-1.5 rounded-full bg-accent" />
+            {i < pasos.length - 1 && (
+              <span
+                className="absolute left-[2.5px] top-3 w-px"
+                style={{ bottom: "-4px", background: "rgba(77,124,254,0.28)" }}
+              />
+            )}
+          </span>
+          <span className="min-w-0 flex-1 text-[13.5px] leading-[1.6] text-dim [text-wrap:pretty]">
+            <Markdown>{p}</Markdown>
+          </span>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+/** La caja verde de acción (verde ejecuta). Al final de cada tramo, o como CTA
+ * grande de cierre con el botón "Empezar con esto". */
 function CajaEstaSemana({
   contenido,
   grande,
   onEmpezar,
+  etiqueta = "Esta semana",
 }: {
   contenido: string;
   grande?: boolean;
   onEmpezar?: () => void;
+  etiqueta?: string;
 }) {
   return (
     <div
-      className={
-        "rounded-panel bg-surface " + (grande ? "px-7 py-[26px]" : "mt-4 px-5 py-4")
-      }
+      className={"rounded-[12px] bg-surface " + (grande ? "px-7 py-[26px]" : "px-4 py-4")}
       style={{ border: "1px solid rgba(63,185,80,0.35)" }}
     >
-      <p className="mb-3 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[1.4px] text-done">
+      <p className="mb-2 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[1.4px] text-done">
         <span className="anima-green-pulse h-[9px] w-[9px] rounded-full bg-done" />
-        Esta semana
+        {etiqueta}
       </p>
-      <div className={grande ? "text-[17px] font-semibold leading-normal [text-wrap:pretty] sm:text-[19px]" : ""}>
-        <Markdown>{contenido.replace(/^\*\*Esta semana:?\*\*\s*/i, "")}</Markdown>
+      <div className={grande ? "text-[17px] font-semibold leading-normal [text-wrap:pretty] sm:text-[19px]" : "text-[13.5px] leading-[1.6] [text-wrap:pretty]"}>
+        <Markdown>{contenido}</Markdown>
       </div>
       {grande && onEmpezar && (
         <button
@@ -122,38 +203,103 @@ function CajaEstaSemana({
   );
 }
 
+/** Una barra-topic desplegable (acordeón nativo <details>): colapsada por
+ * defecto; al abrir muestra la data estructurada y la acción al final. */
+function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
+  return (
+    <details
+      {...(abierta ? { open: true } : {})}
+      className="group overflow-hidden rounded-[14px] border border-hairline bg-surface transition-colors open:border-[color:rgba(77,124,254,0.35)]"
+    >
+      <summary className="flex cursor-pointer list-none items-start gap-3.5 px-6 py-[18px] [&::-webkit-details-marker]:hidden">
+        {s.numero ? (
+          <span className="mt-px shrink-0 text-[13px] font-bold text-accent">{s.numero}</span>
+        ) : (
+          <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+        )}
+        <span className="min-w-0 flex-1">
+          <span className="block text-[15.5px] font-semibold leading-snug">{s.titulo}</span>
+          {/* Entregable como subtítulo de la barra colapsada: saber de qué va
+              sin expandir. Se oculta al abrir (dentro va la caja completa). */}
+          {s.entregable && (
+            <span className="mt-1 line-clamp-2 block text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty] group-open:hidden">
+              {s.entregable}
+            </span>
+          )}
+        </span>
+        <svg
+          aria-hidden
+          width="14"
+          height="14"
+          viewBox="0 0 12 12"
+          className="mt-1 shrink-0 text-dim transition-transform duration-200 group-open:rotate-180"
+        >
+          <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.4" fill="none" />
+        </svg>
+      </summary>
+      <div className="flex flex-col gap-4 px-6 pb-[22px] pt-1">
+        {s.descripcion && (
+          <div className="text-sm leading-[1.65] text-dim [text-wrap:pretty]">
+            <Markdown>{s.descripcion}</Markdown>
+          </div>
+        )}
+        {s.pasos.length > 0 && (
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">Pasos</p>
+            <PasosLista pasos={s.pasos} />
+          </div>
+        )}
+        {s.entregable && (
+          <div className="rounded-[10px] border border-hairline px-4 py-3" style={{ background: "#141419" }}>
+            <p className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-accent">Entregable</p>
+            <div className="text-[13.5px] leading-[1.55] text-ink [text-wrap:pretty]">
+              <Markdown>{s.entregable}</Markdown>
+            </div>
+          </div>
+        )}
+        {/* La acción concreta, SIEMPRE al final del tramo. */}
+        {s.estaSemana && <CajaEstaSemana contenido={s.estaSemana} />}
+      </div>
+    </details>
+  );
+}
+
 export function PlanDocumento({
   md,
   nombreIdea,
   onEmpezar,
+  nodosFuente,
 }: {
   md: string;
   nombreIdea: string;
-  /** CTA verde del canon 05 en la caja grande: lleva a Manos a la Obra. */
+  /** CTA verde: lleva a Manos a la Obra (bloque "Tu primera acción"). */
   onEmpezar?: () => void;
+  /** canon 05: nodos del recorrido → sidebar "Construido con tu recorrido". */
+  nodosFuente?: string[];
 }) {
   const plan = parsearPlan(md);
+  const etapas = plan.secciones.filter((s) => s.tipo === "etapa");
+  // La acción de la etapa 1 (el corazón del producto): SIEMPRE visible arriba,
+  // fuera de los acordeones. Su copia también vive al final de su tramo.
+  const primeraAccion =
+    etapas.find((s) => s.estaSemana)?.estaSemana ?? plan.secciones.find((s) => s.estaSemana)?.estaSemana ?? null;
 
-  // Canon 05: la primera acción concreta se eleva a la caja grande bajo
-  // la intro; su etapa conserva el resto del contenido.
-  const secciones = plan.secciones.map((s) => ({ titulo: s.titulo, ...separarEstaSemana(s.contenido) }));
-  const idxElevada = secciones.findIndex((s) => s.estaSemana);
-  const primeraSemana = idxElevada >= 0 ? secciones[idxElevada].estaSemana : null;
-
-  return (
-    <section className="flex flex-col">
-      {/* encabezado del documento (canon 05): chip + título 32 + intro */}
+  const documento = (
+    <div className="min-w-0 flex-1">
+      {/* encabezado del documento (canon 05) */}
       <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
-        <div className="mb-4 flex items-center gap-2">
+        <div className="mb-3 flex items-center gap-2">
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
           <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Generado de tu recorrido{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
+            Generado de tu recorrido
+            {nodosFuente && nodosFuente.length > 0
+              ? ` · ${nodosFuente.length} ${nodosFuente.length === 1 ? "nodo" : "nodos"}`
+              : plan.etiqueta
+                ? ` · ${plan.etiqueta}`
+                : ""}
           </span>
         </div>
-        <button
-          onClick={() => descargarMd(md, nombreIdea)}
-          className="shrink-0 text-sm text-dim hover:text-ink"
-        >
+        <button onClick={() => descargarMd(md, nombreIdea)} className="shrink-0 text-sm text-dim hover:text-ink">
           Descargar .md
         </button>
       </div>
@@ -163,52 +309,69 @@ export function PlanDocumento({
         </h2>
       )}
       {plan.intro && (
-        <div className="anima-plan-in mt-3.5 max-w-[560px] text-[15.5px] leading-[1.7] text-dim [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
+        <div className="anima-plan-in mt-3.5 max-w-[600px] text-[15.5px] leading-[1.7] text-dim [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
           <Markdown>{plan.intro}</Markdown>
         </div>
       )}
+      {etapas.length > 0 && (
+        <p className="anima-plan-in mt-3 text-[13px] text-dim" style={{ animationDelay: "0.25s" }}>
+          {etapas.length} {etapas.length === 1 ? "etapa" : "etapas"} · cada barra muestra su entregable; despliégala para los pasos y la acción
+        </p>
+      )}
 
-      {/* la caja verde grande: la primera acción sobre el mundo real */}
-      {primeraSemana && (
-        <div className="anima-plan-in mt-9" style={{ animationDelay: "0.35s" }}>
-          <CajaEstaSemana contenido={primeraSemana} grande onEmpezar={onEmpezar} />
+      {/* TU PRIMERA ACCIÓN: el corazón del producto, siempre visible arriba */}
+      {primeraAccion && (
+        <div className="anima-plan-in mt-8" style={{ animationDelay: "0.3s" }}>
+          <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta="Tu primera acción" />
         </div>
       )}
 
-      {/* etapas como tarjetas numeradas (canon 05), sin acordeones */}
-      <div className="mt-9 flex flex-col gap-3.5">
-        {secciones.map((s, i) => {
-          const numero = s.titulo.match(/^Etapa\s+(\d+)/i)?.[1];
-          const esLaElevada = i === idxElevada;
-          return (
-            <article
-              key={i}
-              className="anima-plan-in rounded-[14px] border border-hairline bg-surface px-6 py-[22px]"
-              style={{ animationDelay: `${0.55 + i * 0.12}s` }}
-            >
-              <div className="flex items-baseline gap-3.5">
-                {numero && (
-                  <span className="shrink-0 text-[13px] font-bold text-accent">
-                    {numero.padStart(2, "0")}
-                  </span>
-                )}
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-[17px] font-semibold leading-snug">
-                    {s.titulo.replace(/^Etapa\s+\d+\s*[:.·-]?\s*/i, "")}
-                  </h3>
-                  <div className="mt-2 text-sm leading-[1.65]">
-                    <Markdown>{s.resto}</Markdown>
-                  </div>
-                  {/* la caja elevada no se repite en su etapa */}
-                  {s.estaSemana && !esLaElevada && <CajaEstaSemana contenido={s.estaSemana} />}
-                </div>
-              </div>
-            </article>
-          );
-        })}
+      {/* barras-topic (acordeones): los topics primero, primera abierta */}
+      <div className="mt-6 flex flex-col gap-3">
+        {plan.secciones.map((s, i) => (
+          <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
+            <BarraTopic s={s} abierta={i === 0} />
+          </div>
+        ))}
       </div>
 
-      {plan.pie && <p className="mt-4 text-[13px] text-dim">{plan.pie}</p>}
+      {plan.pie && <p className="mt-5 text-[13px] text-dim">{plan.pie}</p>}
+    </div>
+  );
+
+  // Sin nodos fuente (plan de mundo / historial): una sola columna.
+  if (!nodosFuente || nodosFuente.length === 0) {
+    return <section className="flex flex-col">{documento}</section>;
+  }
+
+  // Canon 05: documento + sidebar "Construido con tu recorrido".
+  return (
+    <section className="flex flex-col gap-8 lg:flex-row lg:items-start">
+      {documento}
+      <aside
+        className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7"
+        style={{ animationDelay: "0.5s" }}
+      >
+        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Construido con tu recorrido</p>
+        <ul className="flex flex-col gap-4">
+          {nodosFuente.map((n, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span
+                aria-hidden
+                className="mt-0.5 flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border-[1.5px] border-white/15 bg-black"
+              >
+                <span className="h-[7px] w-[7px] rounded-full bg-accent" />
+              </span>
+              <span className="text-[13px] leading-[1.5] text-dim">{n}</span>
+            </li>
+          ))}
+        </ul>
+        {/* Canon 05: la nota de recálculo bajo una hairline — el plan no es
+            una lápida, se vuelve a la entrevista cuando el mundo cambia. */}
+        <p className="mt-6 border-t border-hairline pt-5 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
+          ¿Cambia algo en el mundo real? Vuelve a la entrevista cuando quieras: el plan se recalcula desde donde estés.
+        </p>
+      </aside>
     </section>
   );
 }

@@ -1,0 +1,29 @@
+{
+  "node_id": "cuidado_con_la_falsa_precision",
+  "fase_proyecto": "validacion",
+  "dominio": "risk_management",
+  "titulo_concepto": "Errores en los Métodos Cuantitativos",
+  "fuente": "Hubbard, The Failure of Risk Management, Cap. 10 (Where Even the Quants Go Wrong)",
+  "resumen_teorico": "Pasar a los números no te salva solo. Hasta las cuentas más sofisticadas engañan cuando arrancan de datos inventados o de supuestos frágiles: un resultado con muchos decimales parece riguroso y por eso da una confianza que no merece. La falsa precisión es peligrosa justo porque tranquiliza. Un cálculo solo vale lo que valen sus insumos: si metiste una probabilidad que sacaste de la manga, la respuesta exacta que salga sigue siendo un invento con apariencia de ciencia. Para el emprendedor, la lección no es huir de los números, sino usarlos con honestidad: reconoce de dónde salió cada dato, prefiere un rango honesto a un decimal falso, y desconfía de cualquier resultado que se vea más seguro que la información con que lo hiciste.",
+  "pasos_accionables": [
+    "De cualquier cálculo de riesgo, rastrea de dónde salió cada número que metiste.",
+    "Marca los datos que en realidad inventaste o supusiste sin base.",
+    "No presentes más decimales de los que tus datos aguantan: redondea con honestidad.",
+    "Desconfía de todo resultado que parezca más seguro que la información que lo alimentó."
+  ],
+  "entregable_esperado": "Un cálculo de riesgo con el origen de cada dato marcado y los supuestos inventados señalados, redondeado con honestidad.",
+  "nodos_previos": [
+    "como_sabes_que_tu_metodo_sirve",
+    "cuanto_sabes_y_cuanto_solo_crees"
+  ],
+  "nodos_siguientes": [
+    "cuatro_caminos_ante_un_riesgo",
+    "reporta_el_riesgo_sin_maquillaje"
+  ],
+  "condiciones_activacion": [
+    "cuando un cálculo con muchos decimales te da una seguridad que no tienes",
+    "cuando metes en una fórmula datos que sacaste de la manga",
+    "cuando presentas cifras exactas sobre cosas que en realidad no mediste"
+  ],
+  "etiqueta_arbol": "Cuidado con la Falsa Precisión"
+}

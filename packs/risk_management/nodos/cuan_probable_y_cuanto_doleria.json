@@ -1,0 +1,31 @@
+{
+  "node_id": "cuan_probable_y_cuanto_doleria",
+  "fase_proyecto": "validacion",
+  "dominio": "risk_management",
+  "titulo_concepto": "Probabilidad e Impacto",
+  "fuente": "Edwards et al., Managing Project Risks, Cap. 8 (Assessing Likelihood and Impacts)",
+  "resumen_teorico": "Todo riesgo se mide por dos cosas: qué tan probable es que ocurra, y cuánto te dolería si ocurre. Estas dos preguntas ordenan tu lista y te dicen a cuáles prestar atención primero. Un riesgo muy probable pero de daño mínimo puede esperar; uno improbable pero capaz de hundirte merece tu atención hoy. No necesitas números perfectos al principio: basta con ubicar cada riesgo como alta, media o baja probabilidad, y como daño grande, mediano o pequeño, siempre que seas honesto y consistente al hacerlo. El error común es mirar solo una de las dos dimensiones: obsesionarse con lo que más probable sin ver que su daño es trivial, o temer un desastre que casi nunca pasa.",
+  "pasos_accionables": [
+    "De cada riesgo de tu lista, estima qué tan probable es: alta, media o baja.",
+    "Estima también cuánto dolería si pasa: daño grande, mediano o pequeño.",
+    "Ordena tu lista con las dos dimensiones juntas, no con una sola.",
+    "Sé honesto y usa el mismo criterio para todos, para poder compararlos de verdad."
+  ],
+  "entregable_esperado": "Tu lista de riesgos con una estimación de probabilidad y de impacto para cada uno, hecha con criterio consistente.",
+  "nodos_previos": [
+    "haz_tu_lista_de_lo_que_puede_fallar",
+    "el_pre_mortem_imagina_el_fracaso",
+    "riesgo_no_es_mala_suerte",
+    "tecnicas_para_sacar_riesgos_a_la_luz"
+  ],
+  "nodos_siguientes": [
+    "evalua_la_gravedad_sin_autoengano",
+    "la_matriz_de_colores_te_engana"
+  ],
+  "condiciones_activacion": [
+    "cuando todos tus riesgos te parecen igual de urgentes",
+    "cuando te obsesiona un riesgo probable cuyo daño en realidad es menor",
+    "cuando no sabes a cuál de tus riesgos atender primero"
+  ],
+  "etiqueta_arbol": "Cuán Probable y Cuánto Dolería"
+}

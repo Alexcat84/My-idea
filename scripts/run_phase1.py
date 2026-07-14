@@ -49,9 +49,10 @@ REF_KEYS = ("nodos_previos", "nodos_siguientes")
 # Fase 3.6: dominios ampliados — los packs P1-HSEQ integrados por
 # scripts/integrar_packs.py viven en el mismo dataset con su dominio propio.
 # Fase v1.3.2: tres mundos nuevos (seguridad_digital, exportacion, franquicias).
+# Fase v1.4: septimo pack risk_management.
 DOMINIOS_PERMITIDOS = {
     "core", "quality", "health_safety", "environmental",
-    "seguridad_digital", "exportacion", "franquicias",
+    "seguridad_digital", "exportacion", "franquicias", "risk_management",
 }
 
 # Mapa de fusion de duplicados, tal como quedo definido en
