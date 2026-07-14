@@ -15,7 +15,7 @@
  */
 import { useMemo, useState } from "react";
 import { Acordeon } from "./Acordeon";
-import { Markdown } from "./Markdown";
+import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import { diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
@@ -1031,7 +1031,7 @@ export function ManosALaObra({
               {mundo.plan && (
                 <div className="mt-4">
                   <Acordeon titulo={`El plan de ${mundo.nombre}`}>
-                    <Markdown>{mundo.plan.contenido_md}</Markdown>
+                    <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
                   </Acordeon>
                 </div>
               )}
@@ -1048,7 +1048,7 @@ export function ManosALaObra({
                   key={i}
                   titulo={`Plan ${h.etiqueta} · ${haceCuanto(h.created_at)}`}
                 >
-                  <Markdown>{h.contenido_md}</Markdown>
+                  <PlanDocumento md={h.contenido_md} nombreIdea={`Plan ${h.etiqueta}`} />
                 </Acordeon>
               ))}
             </div>
