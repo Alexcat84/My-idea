@@ -75,19 +75,12 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
         style={{ scrollbarWidth: "thin", maskImage: "linear-gradient(180deg, transparent 0, black 18px)" }}
       >
         <div className="relative flex flex-col">
-          {/* la barra del canon: 4px, gradiente azul, crece con el riel */}
-          {nodos.length > 1 && (
-            <span aria-hidden className="absolute bottom-[10px] left-2 top-[10px]">
-              <span
-                className="block h-full w-1 rounded-[2px]"
-                style={{ background: "linear-gradient(180deg, rgba(77,124,254,0.35), var(--accent))" }}
-              />
-            </span>
-          )}
           <ol className="relative flex flex-col">
             {nodos.map((n, i) => {
               const esUltimo = i === nodos.length - 1;
               const activo = generando && esUltimo;
+              // Hay un punto DESPUÉS de este (real o el hueco "futuro")?
+              const conConector = i < nodos.length - 1 || generando;
               return (
                 <li
                   key={n.id}
@@ -95,13 +88,31 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
                   style={{ gap: "15px" }}
                   data-transiciona
                 >
+                  {/* Conector por-nodo: del centro de ESTE punto (top:10px)
+                      al centro del SIGUIENTE (bottom:-10px). Así la línea
+                      SIEMPRE termina en un punto y jamás se pasa, sin
+                      importar cuánto ocupe la etiqueta. Va detrás del punto
+                      (su bg negro lo enmascara), como en el canon 04. */}
+                  {conConector && (
+                    <span
+                      aria-hidden
+                      className="absolute w-1 rounded-[2px]"
+                      style={{
+                        left: "8px",
+                        top: "10px",
+                        bottom: "-10px",
+                        background: "linear-gradient(180deg, rgba(77,124,254,0.5), var(--accent))",
+                      }}
+                    />
+                  )}
                   <PuntoRiel activo={activo} lleno={!activo || n.atenuado === true} />
                   <span className={"min-w-0" + (n.atenuado ? " opacity-50" : "")}>
                     <span
                       className={
-                        "block pt-px text-sm leading-[1.45] " +
+                        "block pt-px text-sm leading-[1.45] line-clamp-2 " +
                         (esUltimo && !n.atenuado ? "font-semibold text-accent" : "font-medium text-ink")
                       }
+                      title={n.label}
                     >
                       {n.label}
                     </span>
