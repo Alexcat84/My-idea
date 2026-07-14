@@ -21,7 +21,7 @@ import { Celebracion } from "../../ui/Celebracion";
 import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
-import { Markdown } from "../../ui/Markdown";
+import { Claridad } from "../../ui/Claridad";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { ReporteCard } from "../../ui/ReporteCard";
@@ -795,17 +795,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
               {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
                 <>
-                  <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-                    Claridad · lista
-                  </p>
-                  <h2 className="text-xl font-semibold leading-snug">Esto entendí de tu idea</h2>
-                  <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
-                    <Markdown>{detalle.organizador.contenido_md}</Markdown>
-                  </section>
-                  <p className="text-sm text-dim">
-                    Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a
-                    pregunta.
-                  </p>
+                  <Claridad md={detalle.organizador.contenido_md} />
                   <div className="flex flex-wrap items-center gap-3">
                     <button
                       onClick={async () => {

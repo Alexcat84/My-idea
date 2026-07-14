@@ -22,9 +22,12 @@ export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoB
   return (
     <div className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
       {cintillo && (
-        <p className="mb-2 text-[11px] font-medium uppercase tracking-wider text-dim">{cintillo}</p>
+        <p className="mb-3.5 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+          <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+          {cintillo}
+        </p>
       )}
-      <p className="text-[17px] font-medium leading-relaxed">{pregunta}</p>
+      <p className="text-[17px] font-semibold leading-[1.5] [text-wrap:pretty] sm:text-[21px]">{pregunta}</p>
       <div className="mt-5">
         <CampoConVoz
           valor={respuesta}
