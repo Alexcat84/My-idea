@@ -12,6 +12,11 @@ export interface EstadoFalso {
   plans: Record<string, unknown>[];
   projectNodes: Record<string, unknown>[];
   checklistItems: Record<string, unknown>[];
+  /** Fase 4.2: los mundos activados, con su ciclo de vida (migracion 026). */
+  projectUnlocks: Record<string, unknown>[];
+  /** Fase 4.2: los eventos de proyecto (migracion 018), para poder asertar
+   * que el cierre de un mundo deja rastro. */
+  bitacora: Record<string, unknown>[];
   contadorProject: number;
   contadorSession: number;
   contadorPlan: number;
@@ -24,6 +29,8 @@ export function estadoFalsoVacio(): EstadoFalso {
     plans: [],
     projectNodes: [],
     checklistItems: [],
+    projectUnlocks: [],
+    bitacora: [],
     contadorProject: 0,
     contadorSession: 0,
     contadorPlan: 0,
@@ -122,6 +129,37 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     // .single() en una lectura (Fase 3.8: la ruta lee el ítem previo para
     // preservar la fecha_base al replanificar) devuelve la fila, no un array.
     if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
+    return { data: rows, error: null };
+  }
+  if (nombre === "project_unlocks") {
+    if (b._insert) {
+      const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
+      estado.projectUnlocks.push(...filas);
+      return { data: null, error: null };
+    }
+    // El update filtra por project_id + dominio (no por id): la fila del unlock
+    // se identifica por el par, igual que su UNIQUE en la 016.
+    let rows = estado.projectUnlocks;
+    for (const [col, val] of Object.entries(b._filters)) {
+      rows = rows.filter((r) => r[col] === val);
+    }
+    if (b._update) {
+      for (const fila of rows) Object.assign(fila, b._update);
+      return { data: null, error: null };
+    }
+    if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
+    return { data: rows, error: null };
+  }
+  if (nombre === "project_bitacora") {
+    if (b._insert) {
+      const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
+      estado.bitacora.push(...filas);
+      return { data: null, error: null };
+    }
+    let rows = estado.bitacora;
+    for (const [col, val] of Object.entries(b._filters)) {
+      rows = rows.filter((r) => r[col] === val);
+    }
     return { data: rows, error: null };
   }
   if (nombre === "project_nodes") {

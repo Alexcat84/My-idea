@@ -58,6 +58,9 @@ interface DetalleIdea {
   unlocks?: string[];
   mundos?: Array<{
     dominio: string;
+    /** Fase 4.2: el mundo se dio por completado (migración 026). null = abierto. */
+    completado_at?: string | null;
+    cierre_motivo?: string | null;
     plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
   }>;
   historial?: PlanHistorial[];
@@ -508,12 +511,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
       ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.etiqueta ?? n.titulo)
       : nodos.filter((n) => !n.atenuado && !n.id.startsWith("etapa-")).map((n) => n.label);
 
-  const mundosParaObra = unlocks.map((dominio) => ({
-    dominio,
-    nombre: NOMBRE_MUNDO[dominio]?.nombre ?? dominio,
-    promesa: NOMBRE_MUNDO[dominio]?.promesa ?? "",
-    plan: detalle.mundos?.find((m) => m.dominio === dominio)?.plan ?? null,
-  }));
+  const mundosParaObra = unlocks.map((dominio) => {
+    const m = detalle.mundos?.find((x) => x.dominio === dominio);
+    return {
+      dominio,
+      nombre: NOMBRE_MUNDO[dominio]?.nombre ?? dominio,
+      promesa: NOMBRE_MUNDO[dominio]?.promesa ?? "",
+      plan: m?.plan ?? null,
+      completadoAt: m?.completado_at ?? null,
+    };
+  });
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -593,6 +600,20 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onRecargarChecklist={cargarChecklist}
               onVerAnalisis={irAAnalisis}
               onRealizada={irACelebracion}
+              onMundoCerrado={(dominio, completadoAt) =>
+                // Fase 4.2 §3: cerrar un mundo NO cierra la idea — aquí no se
+                // toca realizada_at ni se abre la Celebración. Solo su chip.
+                setDetalle((prev) =>
+                  prev
+                    ? {
+                        ...prev,
+                        mundos: prev.mundos?.map((m) =>
+                          m.dominio === dominio ? { ...m, completado_at: completadoAt } : m
+                        ),
+                      }
+                    : prev
+                )
+              }
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
               onItemActualizado={({ id, estado, completed_at }) => {
@@ -885,6 +906,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   projectId={projectId}
                   unlocks={unlocks}
                   progresoMundos={progresoMundos}
+                  mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
                   conPlan={Boolean(planMd)}
                   onVerMundo={() => irAManos()}
                   onTusNumeros={() =>

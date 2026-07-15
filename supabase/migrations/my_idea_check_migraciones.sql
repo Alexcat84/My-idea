@@ -218,5 +218,19 @@ FROM (
       WHERE table_schema='public' AND table_name='projects' AND column_name='cierre_motivo'
     )
 
+  UNION ALL
+  -- 026 · Fase 4.2 cierre de mundo: project_unlocks gana el ciclo de vida
+  -- completo del mundo (completado_at + cierre_motivo), espejo de la 025 para
+  -- el viaje principal. Sin tabla nueva: la fila del unlock ES el mundo.
+  SELECT '026', 'project_unlocks.completado_at + cierre_motivo',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='completado_at'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='cierre_motivo'
+    )
+
 ) checks
 ORDER BY num;

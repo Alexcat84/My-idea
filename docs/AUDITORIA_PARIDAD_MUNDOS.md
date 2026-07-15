@@ -160,3 +160,30 @@ OK: el follow core compone con items CORE aunque los del mundo sean los mas reci
 ```
 
 Vuelo 13/13 ($1.0080 · paridadMundos $0.1301) · vitest 341/341 · motor python 13/13.
+
+---
+
+## Epílogo — FASE 4.2: el ancla de V4 dejó de ser un comentario
+
+La corrección de V4 cerró el bug y dejó escrito, en un comentario de
+`follow/route.ts`, cómo sería el día que existiera un follow **de mundo**: «esta
+función recibe su `dominio` y filtra por él, y el bloque de realidad se construye
+con el cumplimiento DE ESE MUNDO más una línea de contexto global (nunca las
+tardanzas del core como si fueran suyas)». La Fase 4.2 lo implementó **tal cual**
+—decisión del fundador: cada mundo tiene su propio seguimiento y su propio
+cierre, con los mismos parámetros que el viaje principal. Ver
+`docs/FLUJO_TRACKING.md` §9.
+
+Lo que eso cambia en el estado de esta auditoría:
+
+| Hallazgo | Estado tras la 4.2 |
+|---|---|
+| **V4** | El filtro ya no es solo un muro: es el eje. `itemsDelUltimoPlanDe(filas, dominio)` sirve a los dos follows, y el vuelo prueba **las dos direcciones** — el core no toma ítems de mundo (fase 2k) y el mundo no toma ítems core (fase 2L). |
+| **V5** (paridad de trato) | Deja de ser "paridad visual" para ser paridad completa: el mundo tiene ritual, cumplimiento propio y acta. El **sidebar** sigue en backlog. |
+| **V2** | **Sin cambios: sigue en backlog post-beta con telemetría.** La brecha sigue ciega al avance del checklist. Matiz nuevo: el follow de mundo **no la usa** — elige su puerta con el intérprete, que sí lee la realidad medida. El hueco de V2 queda acotado a la **primera** puerta de un mundo (`world/start`), no a sus ciclos siguientes. |
+
+La decisión de diseño de V3b **se mantiene y ahora tiene su reverso**: la capa
+universal del proyecto sigue ignorando los mundos (sus etapas colisionarían con
+las del core), y cada mundo tiene **su propia** capa universal, calculada con la
+**misma función** (`capaUniversalDe`) sobre sus propios datos y midiendo su vida
+desde su unlock hasta su cierre. Ninguna de las dos lecturas contamina a la otra.

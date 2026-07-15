@@ -1097,6 +1097,26 @@ const VOCES_CUMPLIMIENTO = ["a tiempo", "tardia", "adelantada", "desviacion", "d
 
 const sinAcentos = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 
+/**
+ * ¿El texto contiene la FRASE (no la subcadena)? Un guardian que compara
+ * subcadenas a secas grita cuando no debe: "eso toma tiempo" contiene
+ * "a tiempo", y "llevas tarde en el horno" contiene "vas tarde". Los dos son
+ * prosa inocente, y los dos hacian rojo el vuelo (cazado en vivo por el plan
+ * a-mi-ritmo de la 4.2: "...y eso toma tiempo").
+ *
+ * El limite de palabra va al INICIO, que es donde estaba el defecto -- la frase
+ * pegada al final de otra palabra. Al final no lo lleva a proposito: "tardia"
+ * debe seguir cazando "tardias", y "adelantada", "adelantadas".
+ *
+ * Esto NO baja la vara: sigue prohibiendo exactamente lo mismo. Solo deja de
+ * inventarse violaciones que nadie cometio.
+ */
+function contieneFrase(texto: string, frase: string): boolean {
+  const escapada = frase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\\b${escapada}`, "u").test(texto);
+}
+const frasesPresentes = (texto: string, frases: string[]) => frases.filter((f) => contieneFrase(texto, f));
+
 /** El mensaje_entrada de la ULTIMA sesion de seguimiento: lo que el motor
  * recibio DE VERDAD (la bitacora, no nuestra suposicion). */
 async function ultimoMensajeSeguimiento(projectId: string): Promise<string> {
@@ -1161,7 +1181,7 @@ async function faseBucleTracking(cookie: string, projectId: string) {
   log("OK: el BLOQUE DE REALIDAD llego al motor con cumplimiento (modo fechas), auditable en la bitacora.");
 
   const p1 = sinAcentos(c1.markdown);
-  const reganos1 = REGANOS.filter((r) => p1.includes(r));
+  const reganos1 = frasesPresentes(p1, REGANOS);
   if (reganos1.length > 0) {
     throw new Error(`el plan de seguimiento REGAÑA (regla 8-bis violada): ${reganos1.join(", ")}`);
   }
@@ -1183,7 +1203,7 @@ async function faseBucleTracking(cookie: string, projectId: string) {
   log("OK: en 'a mi ritmo' el bloque NO menciona cumplimiento (aunque la baseline vieja siga existiendo).");
 
   const p2 = sinAcentos(c2.markdown);
-  const voces = VOCES_CUMPLIMIENTO.filter((v) => p2.includes(v));
+  const voces = frasesPresentes(p2, VOCES_CUMPLIMIENTO);
   if (voces.length > 0) {
     throw new Error(`el plan a-mi-ritmo habla de cumplimiento (§3 violado): ${voces.join(", ")}`);
   }
@@ -1442,6 +1462,355 @@ async function faseParidadMundos(cookie: string, projectId: string) {
 // esperado ceil(200/13)=16. Vocabulario esperado: "usuario(s)"/"suscripcion",
 // nunca "pieza".
 // ---------------------------------------------------------------------------
+/** El mensaje_entrada de la ultima sesion de seguimiento DE UN DOMINIO: lo que
+ * el motor recibio de verdad para ESE subproyecto (la bitacora, no nuestra
+ * suposicion). Fase 4.2: ya no hay un solo follow, hay uno por mundo activo. */
+async function ultimoMensajeSeguimientoDe(projectId: string, dominio: string): Promise<string> {
+  const { data, error } = await supabaseAdmin
+    .from("sessions")
+    .select("mensaje_entrada, created_at")
+    .eq("project_id", projectId)
+    .eq("tipo", "seguimiento")
+    .eq("dominio", dominio)
+    .order("created_at", { ascending: false })
+    .limit(1);
+  if (error || !data?.length) {
+    throw new Error(`no se encontro sesion de seguimiento de dominio '${dominio}': ${error?.message}`);
+  }
+  return String((data[0] as { mensaje_entrada: string }).mensaje_entrada ?? "");
+}
+
+type GrupoChecklist = {
+  dominio: string;
+  plan_id: string;
+  etapas: Array<{ items: Array<Record<string, unknown>> }>;
+};
+
+async function gruposChecklist(cookie: string, projectId: string): Promise<GrupoChecklist[]> {
+  const cl = (await getJson(cookie, `/api/project/${projectId}/checklist`)) as Record<string, unknown>;
+  return cl.planes as GrupoChecklist[];
+}
+
+const grupoVigenteDe = (grupos: GrupoChecklist[], dominio: string) =>
+  grupos.filter((g) => g.dominio === dominio).at(-1);
+
+// ---------------------------------------------------------------------------
+// Fase 2L (Fase 4.2): EL MUNDO COMO SUBPROYECTO COMPLETO. La 4.1 le dio al
+// mundo fechas y cumplimiento; le faltaba lo que hace de un tramo un
+// subproyecto: seguimiento propio y un final propio.
+//
+//   1. Desviacion sembrada en SUS items -> su follow recibe SU cumplimiento y
+//      NO el del core (la regla que el bloque de mundo existe para cumplir).
+//   2. Su plan nuevo la asume sin regañar (regla 8-bis), y regenera SOLO el
+//      plan del mundo: el plan core no se toca.
+//   3. Cierre del mundo al ~70% con motivo -> chip, bitacora, timeline de la
+//      Celebracion y desglose del Analisis, con los conteos calculados A MANO.
+//   4. Reabrir preserva el motivo (la historia no se reescribe).
+//   5. §3 jerarquia honesta: completar mundos -- TODOS -- no cierra la idea.
+//
+// El espejo de la 4.1 (el follow CORE no toma items de mundo) sigue verde en la
+// fase 2k, que corre justo antes sobre este mismo proyecto y con los items del
+// mundo siendo los mas recientes: el escenario exacto del hallazgo V4.
+// ---------------------------------------------------------------------------
+async function faseMundoSubproyecto(cookie: string, projectId: string) {
+  separador("FASE 2L (Fase 4.2): el mundo como subproyecto -- su seguimiento, su cumplimiento y su cierre");
+  let costoUsd = 0;
+  const MUNDO = "health_safety";
+  const NOMBRE = "Seguridad y Personas";
+  const dia = (offset: number) => new Date(Date.now() + offset * 86_400_000).toISOString();
+
+  // El cumplimiento solo existe en modo fechas; la 2k lo dejo asi.
+  const rModo = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
+  if (rModo.modo_camino !== "fechas") throw new Error("no se pudo restituir el modo 'fechas'");
+
+  // ── 1. Desviacion sembrada en los items DEL MUNDO ──
+  // La 2k dejo 3 items del mundo fechados y hechos: dif 0, +8, -5.
+  // Aqui se anaden 2 tardias GRANDES, con textos propios del mundo:
+  //   base -30d, hecho -18d -> +12 (tardia)
+  //   base -30d, hecho -21d ->  +9 (tardia)
+  // A MANO, el mundo queda: 1 a tiempo, 1 adelantada, 3 tardias (total 5);
+  // desviacion media = (0 + 8 - 5 + 12 + 9) / 5 = 24/5 = +4.8 dias.
+  const gruposPrevios = await gruposChecklist(cookie, projectId);
+  const gMundoPrevio = grupoVigenteDe(gruposPrevios, MUNDO);
+  if (!gMundoPrevio) throw new Error(`la fase 2k debio dejar checklist de '${MUNDO}'`);
+  const gCorePrevio = grupoVigenteDe(gruposPrevios, "core")!;
+  const itemsMundo = gMundoPrevio.etapas.flatMap((e) => e.items);
+  const yaFechados = itemsMundo.filter((i) => i.fecha_base);
+  if (yaFechados.length !== 3) {
+    throw new Error(`se esperaban los 3 items fechados por la 2k, hay ${yaFechados.length}`);
+  }
+  const nuevos = itemsMundo.filter((i) => !i.fecha_base).slice(0, 2);
+  if (nuevos.length !== 2) throw new Error("el mundo no tiene 2 items libres para sembrar la desviacion");
+  await postJson(cookie, `/api/project/${projectId}/baseline`, {
+    plan_id: gCorePrevio.plan_id, // la baseline es DEL PROYECTO; el plan del mundo no se sella
+    fechas: nuevos.map((it) => ({ item_id: it.id as string, fecha: dia(-30), origen: "sugerida" })),
+  });
+  const REALES = [dia(-18), dia(-21)];
+  for (const [k, it] of nuevos.entries()) {
+    await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+      item_id: it.id as string,
+      estado: "hecho",
+      completed_at: REALES[k],
+    });
+  }
+  const textosTardiosMundo = nuevos.map((i) => String(i.texto));
+  log(`OK: desviacion sembrada en los items de '${MUNDO}' -- a mano queda 1 a tiempo, 1 adelantada, 3 tardias (de 5).`);
+
+  // El cumplimiento CORE, para poder probar que NO se cuela en el mundo.
+  const anPrevio = (await getJson(cookie, `/api/project/${projectId}/analisis`)) as Record<string, unknown>;
+  const cumplCore = (anPrevio.analytics as {
+    cumplimiento: { tardiasTop: Array<{ texto: string }>; porDominio: Array<Record<string, unknown>> } | null;
+  }).cumplimiento;
+  if (!cumplCore) throw new Error("el analisis perdio la capa de cumplimiento");
+  const delMundoPrevio = cumplCore.porDominio.find((d) => d.dominio === MUNDO);
+  if (
+    !delMundoPrevio ||
+    delMundoPrevio.aTiempo !== 1 ||
+    delMundoPrevio.adelantadas !== 1 ||
+    delMundoPrevio.tardias !== 3 ||
+    delMundoPrevio.total !== 5
+  ) {
+    throw new Error(
+      `el desglose del mundo != calculo a mano (1 a tiempo / 1 adelantada / 3 tardias de 5): ${JSON.stringify(delMundoPrevio)}`
+    );
+  }
+  if (delMundoPrevio.desviacionMediaDias !== 4.8) {
+    throw new Error(`la desviacion media del mundo != 4.8 calculado a mano: ${delMundoPrevio.desviacionMediaDias}`);
+  }
+  log("OK: el Analisis cuenta el cumplimiento del mundo con los conteos a mano (1/1/3 de 5, +4.8 dias).");
+
+  // ── 2. SU follow: su cumplimiento, jamas el del core ──
+  const rf = await postJson(cookie, `/api/project/${projectId}/follow`, {
+    detalles: "Compre las mascarillas pero el polvo sigue igual de bravo.",
+    enfoque: null,
+    dominio: MUNDO,
+  });
+  costoUsd += Number(rf.costo_usd ?? 0);
+  const sidFollow = String(rf.session_id);
+
+  const msg = await ultimoMensajeSeguimientoDe(projectId, MUNDO);
+  if (!msg.includes(`Mi realidad medida en «${NOMBRE}»`)) {
+    throw new Error(`el bloque del mundo no se presenta como suyo: ${msg.slice(0, 200)}`);
+  }
+  if (!msg.includes("1 a tiempo, 1 adelantadas, 3 tardías (de 5 con fecha)")) {
+    throw new Error(`el bloque no lleva el cumplimiento DEL MUNDO calculado a mano: ${msg}`);
+  }
+  if (!msg.includes("desviación media de +4.8 días")) {
+    throw new Error("el bloque no lleva la desviacion media del mundo (+4.8)");
+  }
+  // La regla que este bloque existe para cumplir: NUNCA las tardanzas del core.
+  const coreColado = cumplCore.tardiasTop
+    .map((t) => t.texto)
+    .filter((tx) => tx.length > 25 && msg.includes(tx));
+  if (coreColado.length > 0) {
+    throw new Error(
+      `el bloque del mundo lleva tardias del CORE como si fueran suyas: "${coreColado[0].slice(0, 60)}…"`
+    );
+  }
+  // Y sus propias tardias SI, con nombre y apellido.
+  if (!textosTardiosMundo.some((tx) => msg.includes(tx.slice(0, 40)))) {
+    throw new Error("el bloque no dice DONDE se atora el usuario en este mundo");
+  }
+  // UNA sola linea del proyecto, y rotulada.
+  const lineasContexto = msg.split("\n").filter((l) => l.includes("Contexto de mi proyecto"));
+  if (lineasContexto.length !== 1) {
+    throw new Error(`el bloque del mundo debe traer UNA linea de contexto global, trae ${lineasContexto.length}`);
+  }
+  if (!lineasContexto[0].includes("NO de este mundo")) {
+    throw new Error("la linea de contexto no se rotula como del proyecto y no del mundo");
+  }
+  log("OK: el follow del MUNDO recibe SU cumplimiento (1/1/3, +4.8) y NO el del core; una sola linea de contexto.");
+
+  // Sus items, no los del core: el espejo de V4 en la otra direccion.
+  const textosCore = gCorePrevio.etapas.flatMap((e) => e.items).map((i) => String(i.texto));
+  const coreEnMensaje = textosCore.filter((tx) => tx.length > 25 && msg.includes(tx));
+  if (coreEnMensaje.length > 0) {
+    throw new Error(`el follow del mundo compuso con items CORE: "${coreEnMensaje[0].slice(0, 60)}…"`);
+  }
+  if (!itemsMundo.map((i) => String(i.texto)).some((tx) => tx.length > 25 && msg.includes(tx))) {
+    throw new Error("el follow del mundo no compuso con NINGUN item suyo: la seleccion quedo vacia");
+  }
+  log("OK: compone con SUS items; ni uno del core se cuela (el espejo del hallazgo V4).");
+
+  // ── 3. Su plan nuevo: asume la desviacion sin regañar, y es SOLO suyo ──
+  let r: Record<string, unknown> = rf;
+  let turnos = 0;
+  while (r.tipo === "pregunta" && turnos < MAX_TURNOS_SEGURIDAD) {
+    turnos += 1;
+    r = await postJson(cookie, `/api/session/${sidFollow}/turn`, {
+      respuesta: "Con eso te cuento lo importante; arma el plan con lo que ya sabes.",
+    });
+  }
+  let markdown = "";
+  const resPlan = await fetch(`${BASE_URL}/api/session/${sidFollow}/plan`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({}),
+  });
+  await consumirSSE(resPlan, ({ evento, data }) => {
+    if (evento === "done") {
+      markdown = String((data as { markdown: string }).markdown ?? "");
+      costoUsd += Number((data as { costo_usd?: number }).costo_usd ?? 0);
+    }
+    if (evento === "error") throw new Error(`el plan del mundo fallo: ${JSON.stringify(data)}`);
+  });
+  const reganos = frasesPresentes(sinAcentos(markdown), REGANOS);
+  if (reganos.length > 0) {
+    throw new Error(`el plan del mundo REGAÑA (regla 8-bis violada): ${reganos.join(", ")}`);
+  }
+  log("OK: el plan nuevo del mundo asume su desviacion SIN regañar (regla 8-bis).");
+
+  const gruposTras = await gruposChecklist(cookie, projectId);
+  const gMundoNuevo = grupoVigenteDe(gruposTras, MUNDO)!;
+  if (gMundoNuevo.plan_id === gMundoPrevio.plan_id) {
+    throw new Error("el follow del mundo no genero un ciclo nuevo: su plan vigente no cambio");
+  }
+  const gCoreTras = grupoVigenteDe(gruposTras, "core")!;
+  if (gCoreTras.plan_id !== gCorePrevio.plan_id) {
+    throw new Error("el follow del MUNDO regenero tambien el plan CORE: debia regenerar SOLO el suyo");
+  }
+  const otrosMundos = ["quality", "seguridad_digital", "risk_management"];
+  for (const otro of otrosMundos) {
+    const antes = grupoVigenteDe(gruposPrevios, otro);
+    const despues = grupoVigenteDe(gruposTras, otro);
+    if (antes && despues && antes.plan_id !== despues.plan_id) {
+      throw new Error(`el follow de '${MUNDO}' toco el plan de '${otro}'`);
+    }
+  }
+  log("OK: regenero SOLO el plan del mundo (checklist encadenado en su grupo); core y los otros mundos, intactos.");
+
+  // ── 4. El cierre del mundo al ~70%, con motivo ──
+  const itemsNuevos = gMundoNuevo.etapas.flatMap((e) => e.items);
+  const objetivo70 = Math.round(itemsNuevos.length * 0.7);
+  for (const it of itemsNuevos.slice(0, objetivo70)) {
+    await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: it.id as string, estado: "hecho" });
+  }
+  const pendientesEsperados = itemsNuevos.length - objetivo70;
+  const MOTIVO_MUNDO = "Ya tengo el equipo y el protocolo escrito; el resto lo hare cuando contrate a alguien.";
+  const rCerrar = await postJson(cookie, `/api/project/${projectId}/world/${MUNDO}/completar`, {
+    accion: "completar",
+    motivo: MOTIVO_MUNDO,
+  });
+  if (!rCerrar.completado_at) throw new Error("completar no sello completado_at");
+  if (rCerrar.cierre_motivo !== MOTIVO_MUNDO) throw new Error("completar no devolvio el motivo");
+  log(`Sembrado para el cierre: ${objetivo70} de ${itemsNuevos.length} acciones del mundo (~70%).`);
+
+  // El chip: /api/idea es lo que la UI lee de verdad.
+  const detalle = (await getJson(cookie, `/api/idea/${projectId}`)) as Record<string, unknown>;
+  const mundoUI = (detalle.mundos as Array<{ dominio: string; completado_at: string | null; cierre_motivo: string | null }>)
+    .find((m) => m.dominio === MUNDO);
+  if (!mundoUI?.completado_at) throw new Error("la UI no ve el mundo como completado (no hay chip)");
+  if (mundoUI.cierre_motivo !== MOTIVO_MUNDO) throw new Error("la UI no recibe el motivo del cierre del mundo");
+
+  // Los pendientes del mundo, intactos: testigos, no basura.
+  const itemsTrasCierre = grupoVigenteDe(await gruposChecklist(cookie, projectId), MUNDO)!.etapas.flatMap((e) => e.items);
+  const pendientesReales = itemsTrasCierre.filter((i) => i.estado !== "hecho").length;
+  if (pendientesReales !== pendientesEsperados) {
+    throw new Error(
+      `el cierre del mundo TOCO sus pendientes: quedaron ${pendientesReales}, se esperaban ${pendientesEsperados}`
+    );
+  }
+
+  // La bitacora del proyecto.
+  const { data: bitM } = await supabaseAdmin
+    .from("project_bitacora")
+    .select("tipo, payload")
+    .eq("project_id", projectId)
+    .eq("tipo", "mundo_completado");
+  const eventosM = (bitM ?? []) as Array<{ payload: { mundo: string; accion: string; motivo: string | null } }>;
+  if (!eventosM.some((e) => e.payload?.mundo === MUNDO && e.payload?.motivo === MOTIVO_MUNDO)) {
+    throw new Error("la bitacora no registro el cierre del mundo con su motivo");
+  }
+
+  // El timeline de la Celebracion del proyecto y el desglose del Analisis.
+  const an = (await getJson(cookie, `/api/project/${projectId}/analisis`)) as Record<string, unknown>;
+  const hitos = an.hitosCelebracion as Array<{ tipo: string; dominio?: string; subtitulo?: string }>;
+  const hitoCierre = hitos.find((h) => h.tipo === "mundo_completado" && h.dominio === MUNDO);
+  if (!hitoCierre) throw new Error("el timeline de la Celebracion no trae el hito del mundo completado");
+  if (hitoCierre.subtitulo !== MOTIVO_MUNDO) throw new Error("el hito del cierre perdio el motivo discreto");
+  const iActivado = hitos.findIndex((h) => h.tipo === "mundo" && h.dominio === MUNDO);
+  const iCerrado = hitos.findIndex((h) => h.tipo === "mundo_completado" && h.dominio === MUNDO);
+  if (iActivado === -1 || iCerrado < iActivado) throw new Error("el hito del cierre no va despues del de su activacion");
+  const mundosAn = (an.analytics as { mundos: Array<{ dominio: string; completadoAt: string | null }> }).mundos;
+  if (!mundosAn.find((m) => m.dominio === MUNDO)?.completadoAt) {
+    throw new Error("el Analisis no refleja el mundo como completado en su desglose");
+  }
+  log(
+    `OK: cierre del mundo al ${Math.round((objetivo70 / itemsNuevos.length) * 100)}% -- chip en la UI, motivo en bitacora, ` +
+      `hito en el timeline y desglose del Analisis; sus ${pendientesReales} pendientes intactos.`
+  );
+
+  // ── 5. §3 JERARQUIA HONESTA: ni un mundo ni TODOS cierran la idea ──
+  const { data: proyTrasMundo } = await supabaseAdmin
+    .from("projects")
+    .select("realizada_at")
+    .eq("id", projectId)
+    .single();
+  if ((proyTrasMundo as { realizada_at: string | null } | null)?.realizada_at) {
+    throw new Error("§3 VIOLADO: completar un mundo cerro la idea");
+  }
+  for (const otro of otrosMundos) {
+    await postJson(cookie, `/api/project/${projectId}/world/${otro}/completar`, { accion: "completar" });
+  }
+  const { data: proyTrasTodos } = await supabaseAdmin
+    .from("projects")
+    .select("realizada_at")
+    .eq("id", projectId)
+    .single();
+  if ((proyTrasTodos as { realizada_at: string | null } | null)?.realizada_at) {
+    throw new Error("§3 VIOLADO: completar TODOS los mundos cerro la idea sola");
+  }
+  log("OK: §3 -- ni un mundo ni TODOS los mundos cierran la idea: el cierre del proyecto es un acto aparte.");
+
+  // Un mundo cerrado no se replanifica a ciegas: se reabre primero (409).
+  const resCerrado = await fetch(`${BASE_URL}/api/project/${projectId}/follow`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({ dominio: MUNDO, detalles: "algo mas" }),
+  });
+  if (resCerrado.status !== 409) {
+    throw new Error(`el follow de un mundo COMPLETADO respondio ${resCerrado.status}, se esperaba 409`);
+  }
+  log("OK: el follow de un mundo completado responde 409 (reabrelo primero), sin gastar un arranque.");
+
+  // El acta del proyecto DICE como quedaron los mundos (§3), sin esconder nada.
+  const rReal = await postJson(cookie, `/api/project/${projectId}/realizar`, { accion: "realizar", motivo: null });
+  if (!rReal.realizada_at) throw new Error("no se pudo cerrar el proyecto para leer su acta");
+  const anActa = (await getJson(cookie, `/api/project/${projectId}/analisis`)) as Record<string, unknown>;
+  const informe = String(anActa.informe_md ?? "");
+  if (!informe.includes(`- ${NOMBRE}:`)) {
+    throw new Error(`el acta del proyecto no dice como quedo '${NOMBRE}': ${informe.slice(0, 400)}`);
+  }
+  if (!informe.includes(`${NOMBRE}: **${objetivo70} de ${itemsNuevos.length}**`)) {
+    throw new Error("el acta no trae el avance REAL del mundo al cerrar");
+  }
+  if (!/completado el \d{4}-\d{2}-\d{2}/.test(informe)) {
+    throw new Error("el acta no dice que el mundo quedo completado, con su fecha");
+  }
+  if (informe.includes(MUNDO)) throw new Error("el acta nombra el mundo por su clave tecnica");
+  log(`OK: el acta del proyecto dice como quedo cada mundo ("${NOMBRE}: ${objetivo70} de ${itemsNuevos.length}, completado").`);
+  await postJson(cookie, `/api/project/${projectId}/realizar`, { accion: "reabrir" });
+
+  // ── 6. Reabrir el mundo NO borra su motivo ──
+  const rReabrir = await postJson(cookie, `/api/project/${projectId}/world/${MUNDO}/completar`, { accion: "reabrir" });
+  if (rReabrir.completado_at !== null) throw new Error("reabrir el mundo no puso completado_at a null");
+  if (rReabrir.cierre_motivo !== MOTIVO_MUNDO) throw new Error("reabrir devolvio el motivo cambiado");
+  const { data: unlockRe } = await supabaseAdmin
+    .from("project_unlocks")
+    .select("completado_at, cierre_motivo")
+    .eq("project_id", projectId)
+    .eq("dominio", MUNDO)
+    .single();
+  const fila = unlockRe as { completado_at: string | null; cierre_motivo: string | null } | null;
+  if (fila?.completado_at !== null) throw new Error("reabrir no persistio completado_at = null");
+  if (fila?.cierre_motivo !== MOTIVO_MUNDO) {
+    throw new Error("BORRO EL MOTIVO al reabrir el mundo (la historia no se reescribe)");
+  }
+  log("OK: reabrir el mundo NO borro su motivo; la bitacora conserva la secuencia completa.");
+
+  return { costoUsd };
+}
+
 async function faseReporteDigital(cookie: string) {
   separador("FASE 3: reporte digital -- equilibrio esperado 16 (ceil(200/13))");
   const textoInicial = "Tengo una app de suscripcion mensual para llevar el registro de gastos personales.";
@@ -1616,6 +1985,7 @@ async function main() {
     costos.sentidoDelTiempo = (await faseSentidoDelTiempo(cookie, macetas.projectId)).costoUsd;
     costos.bucleTracking = (await faseBucleTracking(cookie, macetas.projectId)).costoUsd;
     costos.paridadMundos = (await faseParidadMundos(cookie, macetas.projectId)).costoUsd;
+    costos.mundoSubproyecto = (await faseMundoSubproyecto(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -1639,6 +2009,7 @@ async function main() {
   log("  1b. organizer idea larga multi-dominio (regresion tope de tokens 600->1500): OK");
   log("  2. sesion de macetas + plan streaming: OK");
   log("  2j. bucle de tracking (Fase 4.0): bloque de realidad al motor en DOS ciclos (fechas con desviacion / a-mi-ritmo sin cumplimiento), plan sin regaño, acta de cierre completa y motivo que sobrevive al reabrir: OK");
+  log("  2L. el mundo como subproyecto (Fase 4.2): su follow recibe SU cumplimiento (1/1/3 de 5, +4.8 dias) y NO el del core, con UNA linea de contexto rotulada; su plan nuevo asume la desviacion sin regañar y regenera SOLO el suyo; cierre al 70% con motivo -> chip, bitacora, hito en el timeline y desglose; ni un mundo ni TODOS cierran la idea (§3); reabrir preserva el motivo: OK");
   log("  2k. paridad de mundos (Fase 4.1): mundo activado POST-baseline recibe fechas por el ritual del proyecto (V3a), su cumplimiento aparece en el desglose por dominio del Analisis con conteos a mano (V3b), y el follow core NO toma sus items aunque sean los mas recientes (V4): OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
@@ -1651,7 +2022,7 @@ async function main() {
   log("  10. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
   log("  11. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 13/13 verificaciones OK");
+  separador("VUELO COMPLETO: 14/14 verificaciones OK");
   escribirTranscripcion();
 }
 

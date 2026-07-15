@@ -51,6 +51,11 @@ export interface ItemAnalytics {
 export interface MundoAnalytics {
   dominio: string;
   unlocked_at: string;
+  /** Fase 4.2: el usuario dio por terminado este mundo (migración 026). null =
+   * abierto. Es el `realizada_at` del mundo: mismo parámetro, misma soberanía. */
+  completado_at?: string | null;
+  /** Fase 4.2: el porqué del cierre de ESTE mundo, en sus palabras. */
+  cierre_motivo?: string | null;
 }
 
 export interface EntradaAnalytics {
@@ -62,6 +67,10 @@ export interface EntradaAnalytics {
   /** TODOS los ítems core (de todos los ciclos): el trabajo real del viaje */
   items: ItemAnalytics[];
   mundos: MundoAnalytics[];
+  /** Fase 4.2: los planes de los MUNDOS, con su dominio. Un mundo es un
+   * subproyecto: tiene sus propios ciclos y su propio plan vigente, y
+   * analyticsDeMundo() los mide con la MISMA capa universal que el core. */
+  planesMundo?: Array<PlanCoreAnalytics & { dominio: string }>;
   /** Fase 4.0 §3: el modo del camino viaja con la lectura — el bloque de
    * realidad NO habla de cumplimiento si el usuario eligió "a mi ritmo". */
   modoCamino?: "ritmo" | "fechas" | null;
@@ -81,7 +90,7 @@ export function clasificarCumplimiento(completedAt: string, fechaBase: string): 
 
 export interface Hito {
   fecha: string;
-  tipo: "chispa" | "claridad" | "plan" | "mundo" | "accion" | "realizada";
+  tipo: "chispa" | "claridad" | "plan" | "mundo" | "mundo_completado" | "accion" | "realizada";
   etiqueta: string;
   dominio?: string;
   /** subtítulo dim (canon 09): "La idea nace", "planificado · a tiempo"… */
@@ -108,13 +117,22 @@ export interface CapaUniversal {
   diasDeVidaPlanVigente: number;
 }
 
-/** Fase 4.1 (V3b): un mundo (o el core) con sus conteos de cumplimiento. */
+/** Fase 4.1 (V3b): un mundo (o el core) con sus conteos de cumplimiento.
+ *
+ * Fase 4.2: gana la desviación media, las tardías que importan y las
+ * replanificaciones — los mismos parámetros que la capa de cumplimiento del
+ * viaje principal. No es adorno: el bloque de realidad de un follow-DE-MUNDO
+ * REDACTA de aquí, y sin estos campos tendría que recalcularlos por su cuenta
+ * (la regla del §6 prohíbe duplicar la lógica del tiempo). */
 export interface CumplimientoDominio {
   dominio: string;
   aTiempo: number;
   adelantadas: number;
   tardias: number;
   total: number;
+  desviacionMediaDias: number;
+  tardiasTop: Array<{ texto: string; etapa: number; diasRetraso: number }>;
+  replanificados: Array<{ texto: string; etapa: number }>;
 }
 
 export interface CapaCumplimiento {
@@ -150,6 +168,11 @@ export interface Analytics {
   /** Fase 4.0 §8 (acta de cierre): el porqué del cierre, en las palabras del
    * usuario. null si aún no cerró, o si cerró sin escribir nada. */
   cierreMotivo: string | null;
+  /** Fase 4.2: cada mundo medido como el subproyecto que es (su capa universal,
+   * su cumplimiento, su cierre). `universal.mundos` es solo el conteo; esto es
+   * la lista, que necesitan el desglose del Análisis y el acta del proyecto
+   * (§3: cerrar la idea con mundos abiertos es legítimo, y el acta lo DICE). */
+  mundos: AnalyticsMundo[];
 }
 
 /** El último plan con baseline confirmada (por created_at) — la base VIGENTE
@@ -215,23 +238,146 @@ const esItemCore = (i: ItemAnalytics) => dominioDe(i) === "core";
  * cumplimiento es real y debe contarse.
  */
 function cumplimientoPorDominio(items: ItemAnalytics[]): CumplimientoDominio[] {
-  const porDom = new Map<string, CumplimientoDominio>();
+  const porDom = new Map<string, ItemAnalytics[]>();
   for (const it of items) {
-    if (!it.completed_at || !it.fecha_base) continue;
     const d = dominioDe(it);
-    const acc = porDom.get(d) ?? { dominio: d, aTiempo: 0, adelantadas: 0, tardias: 0, total: 0 };
-    const clase = clasificarCumplimiento(it.completed_at, it.fecha_base);
-    if (clase === "a_tiempo") acc.aTiempo += 1;
-    else if (clase === "adelantada") acc.adelantadas += 1;
-    else acc.tardias += 1;
-    acc.total += 1;
-    porDom.set(d, acc);
+    porDom.set(d, [...(porDom.get(d) ?? []), it]);
+  }
+  const filas: CumplimientoDominio[] = [];
+  for (const [dominio, delDominio] of porDom) {
+    const conFecha = delDominio.filter((i) => i.completed_at && i.fecha_base);
+    if (conFecha.length === 0) continue;
+    let aTiempo = 0;
+    let adelantadas = 0;
+    let tardias = 0;
+    let sumaDesv = 0;
+    for (const it of conFecha) {
+      const clase = clasificarCumplimiento(it.completed_at!, it.fecha_base!);
+      if (clase === "a_tiempo") aTiempo += 1;
+      else if (clase === "adelantada") adelantadas += 1;
+      else tardias += 1;
+      sumaDesv += difDias(it.fecha_base!, it.completed_at!);
+    }
+    filas.push({
+      dominio,
+      aTiempo,
+      adelantadas,
+      tardias,
+      total: conFecha.length,
+      desviacionMediaDias: Math.round((sumaDesv / conFecha.length) * 10) / 10,
+      tardiasTop: conFecha
+        .filter((i) => clasificarCumplimiento(i.completed_at!, i.fecha_base!) === "tardia")
+        .map((i) => ({
+          texto: i.texto ?? "",
+          etapa: i.etapa,
+          diasRetraso: Math.round(difDias(i.fecha_base!, i.completed_at!)),
+        }))
+        .sort((a, b) => b.diasRetraso - a.diasRetraso)
+        .slice(0, 5),
+      // Las replanificaciones se cuentan sobre TODO el dominio, no solo sobre
+      // lo ya completado: mover la fecha de algo que aún no haces también dice
+      // que la línea base era irreal.
+      replanificados: delDominio
+        .filter((i) => i.fecha_base_original)
+        .map((i) => ({ texto: i.texto ?? "", etapa: i.etapa })),
+    });
   }
   // core primero; los mundos, alfabeticos: orden estable para la pantalla.
-  return [...porDom.values()].sort((a, b) =>
+  return filas.sort((a, b) =>
     a.dominio === "core" ? -1 : b.dominio === "core" ? 1 : a.dominio.localeCompare(b.dominio)
   );
 }
+
+/**
+ * Fase 4.2: LA CAPA UNIVERSAL, de un tramo cualquiera del viaje. Extraída tal
+ * cual de calcularAnalytics para que un MUNDO se mida con la misma vara que el
+ * viaje principal — un mundo es un subproyecto completo, y su ritmo, su racha y
+ * su "X de N" salen de esta función, no de una copia paralela (la regla del §6:
+ * prohibido duplicar la lógica del tiempo).
+ *
+ * `chispa` es el nacimiento del tramo (la idea para el core; el unlock para un
+ * mundo) y `fin` su cierre (realizada_at / completado_at, o ahora).
+ */
+export function capaUniversalDe(
+  items: ItemAnalytics[],
+  planes: PlanCoreAnalytics[],
+  chispa: string,
+  fin: string,
+  mundos: number
+): CapaUniversal {
+  const completadas = items.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
+  const accionesHechas = completadas.length;
+  const duracionTotalDias = Math.max(0, dias(chispa, fin));
+  const semanas = duracionTotalDias / 7;
+  const ritmo = semanas > 0 ? accionesHechas / semanas : accionesHechas;
+
+  // "X de N acciones" (canon 09): el checklist del plan VIGENTE del tramo.
+  const planVigente = [...planes].sort((a, b) => a.created_at.localeCompare(b.created_at)).at(-1);
+  const itemsVigente = planVigente ? items.filter((i) => i.plan_id === planVigente.id) : [];
+  const ultimoAvance = completadas.length ? completadas.reduce((a, b) => (a > b ? a : b)) : null;
+
+  return {
+    duracionTotalDias,
+    accionesHechas,
+    accionesVigente: {
+      hechas: itemsVigente.filter((i) => i.completed_at).length,
+      total: itemsVigente.length,
+    },
+    ritmoAccionesPorSemana: Math.round(ritmo * 10) / 10,
+    rachaMasLargaDias: rachaMasLarga(completadas),
+    ciclosDePlan: planes.length,
+    mundos,
+    duracionPorEtapa: duracionPorEtapa(items, chispa),
+    diasSinAvance: ultimoAvance ? Math.max(0, dias(ultimoAvance, fin)) : null,
+    planVigenteAt: planVigente?.created_at ?? null,
+    diasDeVidaPlanVigente: planVigente ? Math.max(0, dias(planVigente.created_at, fin)) : 0,
+  };
+}
+
+/**
+ * Fase 4.2: la lectura de UN MUNDO como el subproyecto que es. Misma capa
+ * universal que el core, y su cumplimiento del desglose por dominio (que no
+ * mira `baseline_confirmada_at` a propósito: el plan de un mundo nunca se
+ * sella, sus ítems se fechan en el ritual del proyecto, y su cumplimiento es
+ * real igual).
+ *
+ * La vida del mundo va de su unlock a su cierre: `duracionTotalDias` cuenta
+ * desde que el usuario lo activó, jamás desde la chispa de la idea.
+ */
+export interface AnalyticsMundo {
+  dominio: string;
+  universal: CapaUniversal;
+  cumplimiento: CumplimientoDominio | null;
+  completadoAt: string | null;
+  cierreMotivo: string | null;
+}
+
+export function analyticsDeMundo(entrada: EntradaAnalytics, dominio: string): AnalyticsMundo | null {
+  const mundo = entrada.mundos.find((m) => m.dominio === dominio);
+  if (!mundo) return null;
+  const items = entrada.items.filter((i) => dominioDe(i) === dominio);
+  const planes = (entrada.planesMundo ?? [])
+    .filter((p) => p.dominio === dominio && ETIQUETAS_CICLO_PLAN.includes(p.etiqueta))
+    .map(({ id, etiqueta, created_at, baseline_confirmada_at }) => ({
+      id,
+      etiqueta,
+      created_at,
+      baseline_confirmada_at,
+    }));
+  const ahora = entrada.ahora ?? new Date().toISOString();
+  // El mundo cierra cuando el usuario lo cierra; si la IDEA entera se cerró
+  // antes, ese es su horizonte. Un mundo abierto se mide hasta hoy.
+  const fin = mundo.completado_at ?? entrada.realizadaAt ?? ahora;
+  return {
+    dominio,
+    universal: capaUniversalDe(items, planes, mundo.unlocked_at, fin, 0),
+    cumplimiento: cumplimientoPorDominio(items)[0] ?? null,
+    completadoAt: mundo.completado_at ?? null,
+    cierreMotivo: mundo.cierre_motivo ?? null,
+  };
+}
+
+const ETIQUETAS_CICLO_PLAN = ["inicial", "completo", "seguimiento"];
 
 export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   const ahora = entrada.ahora ?? new Date().toISOString();
@@ -243,36 +389,8 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   // y le moverian el ritmo/la racha al viaje principal. Los mundos se cuentan en
   // el desglose por dominio del cumplimiento.
   const itemsCore = entrada.items.filter(esItemCore);
-  const completadas = itemsCore.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
-  const accionesHechas = completadas.length;
-  const duracionTotalDias = Math.max(0, dias(chispa, fin));
-  const semanas = duracionTotalDias / 7;
-  const ritmo = semanas > 0 ? accionesHechas / semanas : accionesHechas;
-
-  // "X de N acciones" (canon 09): el checklist del plan core VIGENTE.
-  const planVigente = [...entrada.planesCore].sort((a, b) => a.created_at.localeCompare(b.created_at)).at(-1);
-  const itemsVigente = planVigente ? itemsCore.filter((i) => i.plan_id === planVigente.id) : [];
-  const accionesVigente = {
-    hechas: itemsVigente.filter((i) => i.completed_at).length,
-    total: itemsVigente.length,
-  };
-
-  // Fase 4.0 §3: días desde el último avance y vida del plan vigente.
-  const ultimoAvance = completadas.length ? completadas.reduce((a, b) => (a > b ? a : b)) : null;
-
-  const universal: CapaUniversal = {
-    duracionTotalDias,
-    accionesHechas,
-    accionesVigente,
-    ritmoAccionesPorSemana: Math.round(ritmo * 10) / 10,
-    rachaMasLargaDias: rachaMasLarga(completadas),
-    ciclosDePlan: entrada.planesCore.length,
-    mundos: entrada.mundos.length,
-    duracionPorEtapa: duracionPorEtapa(itemsCore, chispa),
-    diasSinAvance: ultimoAvance ? Math.max(0, dias(ultimoAvance, fin)) : null,
-    planVigenteAt: planVigente?.created_at ?? null,
-    diasDeVidaPlanVigente: planVigente ? Math.max(0, dias(planVigente.created_at, fin)) : 0,
-  };
+  // Fase 4.2: la misma capa que mide un mundo (capaUniversalDe) mide el core.
+  const universal = capaUniversalDe(itemsCore, entrada.planesCore, chispa, fin, entrada.mundos.length);
 
   // Capa de cumplimiento: solo si algún plan tiene baseline confirmada.
   let cumplimiento: CapaCumplimiento | null = null;
@@ -347,6 +465,9 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
     hitos,
     modoCamino: entrada.modoCamino ?? null,
     cierreMotivo: entrada.cierreMotivo ?? null,
+    mundos: entrada.mundos
+      .map((m) => analyticsDeMundo(entrada, m.dominio))
+      .filter((m): m is AnalyticsMundo => m !== null),
   };
 }
 
@@ -372,6 +493,18 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
   });
   for (const m of entrada.mundos) {
     hitos.push({ fecha: m.unlocked_at, tipo: "mundo", etiqueta: "Mundo activado", dominio: m.dominio });
+    // Fase 4.2: un mundo cerrado deja su hito en el timeline del PROYECTO —
+    // con su motivo discreto de subtítulo si el usuario escribió uno. El
+    // nombre humano lo pone la pantalla desde el catálogo; aquí solo la clave.
+    if (m.completado_at) {
+      hitos.push({
+        fecha: m.completado_at,
+        tipo: "mundo_completado",
+        etiqueta: "Mundo completado",
+        dominio: m.dominio,
+        subtitulo: m.cierre_motivo?.replace(/\s+/g, " ").trim() || undefined,
+      });
+    }
   }
   if (incluirAcciones) {
     for (const it of entrada.items) {
@@ -397,8 +530,19 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
 /** El informe descargable (.md), armado del análisis ya calculado. Tono
  * espejo (§6): las tardías se nombran sin regaño. Cero LLM. */
 /** Fase 4.0 §8: con `realizadaAt`, el informe abre con su ACTA DE CIERRE
- * (estado final + el motivo del usuario) antes de las estadísticas. */
-export function informeMarkdown(nombre: string, a: Analytics, realizadaAt?: string | null): string {
+ * (estado final + el motivo del usuario) antes de las estadísticas.
+ *
+ * Fase 4.2 §3 (jerarquía honesta): el acta dice en qué estado quedaron los
+ * mundos. Cerrar el proyecto con mundos abiertos es LEGÍTIMO — la soberanía del
+ * usuario manda —, y por eso mismo el acta no lo esconde: "Calidad y Confianza:
+ * 3 de 5 (60%), abierta". El nombre humano lo resuelve quien llama
+ * (`nombreMundo`); este módulo es puro y no conoce el catálogo. */
+export function informeMarkdown(
+  nombre: string,
+  a: Analytics,
+  realizadaAt?: string | null,
+  nombreMundo: (dominio: string) => string = (d) => d
+): string {
   const u = a.universal;
   const l: string[] = [];
   l.push(`# Análisis de ${nombre}`);
@@ -412,6 +556,12 @@ export function informeMarkdown(nombre: string, a: Analytics, realizadaAt?: stri
           ? ` (${Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)}%)`
           : "")
     );
+    for (const m of a.mundos) {
+      const v = m.universal.accionesVigente;
+      const pct = v.total > 0 ? ` (${Math.round((v.hechas / v.total) * 100)}%)` : "";
+      const estado = m.completadoAt ? `completado el ${m.completadoAt.slice(0, 10)}` : "abierta";
+      l.push(`- ${nombreMundo(m.dominio)}: **${v.hechas} de ${v.total}**${pct}, ${estado}`);
+    }
     if (a.cierreMotivo) {
       l.push("");
       l.push("### Por qué la cerraste aquí");

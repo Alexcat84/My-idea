@@ -17,23 +17,36 @@
  *
  * Cobra 1 arranque del límite diario: es una sesión de entrevista nueva,
  * mismo perfil de costo que session/start.
+ *
+ * Fase 4.2 — FOLLOW DE MUNDO. El ritual dejó de vivir una sola vez: cada mundo
+ * activo tiene el suyo, y la ruta recibe `dominio`. Lo que se mueve con él:
+ *   - los ítems que componen el mensaje (los de ESE mundo, itemsDelUltimoPlanDe);
+ *   - el bloque de realidad (el cumplimiento DE ESE MUNDO contra SUS fechas, más
+ *     una línea de contexto global — jamás las tardanzas del core como suyas);
+ *   - la puerta, amurallada a los nodos del mundo;
+ *   - la sesión, que nace con dominio=mundo → su plan hereda el dominio y deriva
+ *     checklist con él (la ruta del plan ya lo hace sola), encadenado dentro del
+ *     grupo de ese mundo. Regenera SOLO el plan del mundo.
+ * Lo que NO se mueve: la cosecha del vecindario, que sigue amurallada a
+ * core+unlocks igual que en el plan original del mundo (world/start:122).
  */
 import { NextResponse } from "next/server";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
+import catalogo from "@/lib/assets/packs_catalog.json";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import type { ChecklistEstado } from "@/lib/dbContract";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
-import { calcularAnalytics } from "@/lib/analytics";
+import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
-import { construirBloqueRealidad } from "@/lib/engine/bloqueRealidad";
-import { seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
+import { construirBloqueRealidad, construirBloqueRealidadMundo } from "@/lib/engine/bloqueRealidad";
+import { candidatosSeguimiento, seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import {
   componerMensajeSeguimiento,
-  itemsDelUltimoPlanCore,
+  itemsDelUltimoPlanDe,
   type FilaChecklist,
 } from "@/lib/engine/seguimientoComposer";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
@@ -45,7 +58,7 @@ export const runtime = "nodejs";
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
 
-  let body: { detalles?: unknown; enfoque?: unknown };
+  let body: { detalles?: unknown; enfoque?: unknown; dominio?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -53,6 +66,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
   const detalles = typeof body.detalles === "string" ? body.detalles : null;
   const enfoque = typeof body.enfoque === "string" ? body.enfoque : null;
+  // Fase 4.2: sin dominio, el follow es el de siempre (el viaje core).
+  const dominio = typeof body.dominio === "string" && body.dominio ? body.dominio : "core";
   for (const [campo, valor] of [
     ["detalles", detalles],
     ["enfoque", enfoque],
@@ -77,6 +92,48 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
   }
 
+  // Fase 4.2: el mundo debe existir, estar activado y estar ABIERTO. Igual que
+  // world/start, esto va ANTES de cobrar el arranque: nadie quema una consulta
+  // en un 403.
+  const entradaCatalogo = (catalogo.packs as Array<{ clave: string; nombre: string }>).find(
+    (p) => p.clave === dominio
+  );
+  let nombreMundo = "";
+  if (dominio !== "core") {
+    if (!entradaCatalogo) {
+      return NextResponse.json({ error: "ese mundo no existe" }, { status: 404 });
+    }
+    nombreMundo = entradaCatalogo.nombre;
+    const { data: unlock } = await supabase
+      .from("project_unlocks")
+      .select("id, completado_at")
+      .eq("project_id", projectId)
+      .eq("dominio", dominio)
+      .limit(1);
+    if (!unlock || unlock.length === 0) {
+      return NextResponse.json(
+        { error: `El mundo "${nombreMundo}" aún no está activado para esta idea.` },
+        { status: 403 }
+      );
+    }
+    // Un mundo cerrado no se replanifica: se reabre primero. El cierre es
+    // reversible de un toque, así que esto no encierra a nadie.
+    if ((unlock[0] as { completado_at?: string | null }).completado_at) {
+      return NextResponse.json(
+        { error: `Diste "${nombreMundo}" por completado. Reábrelo si quieres seguir trabajándolo.` },
+        { status: 409 }
+      );
+    }
+  }
+
+  // ── ANCLA para la ETAPA 2 del frente de cuentas (rama cuentas-y-creditos)
+  // Aqui, y NO antes, va la VERIFICACION de saldo del follow de mundo: 2
+  // creditos. Este es el punto correcto porque el mundo ya se valido (existe,
+  // esta activado y esta abierto): verificar antes cobraria un 403 o un 404.
+  // El patron es el del plan (session/[id]/plan:309): verificar saldo al inicio
+  // y DESCONTAR A LA ENTREGA — el descuento va al final de esta ruta, no aqui.
+  // El follow core no cobra creditos: es el bucle del viaje principal.
+  //
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
@@ -87,22 +144,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
-  // (a) El checklist del último plan CORE (por fecha de inserción) con estados y
-  // notas — la historia real del avance, sin que el usuario la redacte.
+  // (a) El checklist del último plan DEL DOMINIO (por fecha de inserción) con
+  // estados y notas — la historia real del avance, sin que el usuario la
+  // redacte.
   //
   // Fase 4.1 (V4, auditoría de paridad de mundos): el filtro de dominio NO es
-  // decorativo. Este follow es SIEMPRE core (la sesión se crea sin dominio), y
-  // la consulta tomaba el plan del ítem más reciente FUERA CUAL FUERA su
-  // dominio: si el usuario acababa de explorar un mundo, "Contar qué pasó"
-  // componía su "mi avance real" con el checklist del MUNDO mientras el bloque
-  // de realidad llevaba cumplimiento core — el mensaje y el bloque describiendo
-  // dominios distintos. En el vuelo no se manifestó por suerte del orden.
-  //
-  // ANCLA: el día que exista un follow-DE-MUNDO, esta funcion recibe su
-  // `dominio` y filtra por él, y el bloque de realidad se construye con el
-  // cumplimiento DE ESE MUNDO más una línea de contexto global (nunca las
-  // tardanzas del core como si fueran suyas). Hoy no existe: el ritual
-  // "Contar qué pasó" vive una sola vez, en el viaje core.
+  // decorativo. La consulta tomaba el plan del ítem más reciente FUERA CUAL
+  // FUERA su dominio: si el usuario acababa de explorar un mundo, "Contar qué
+  // pasó" componía su "mi avance real" con el checklist del MUNDO mientras el
+  // bloque de realidad llevaba cumplimiento core — el mensaje y el bloque
+  // describiendo dominios distintos. En el vuelo no se manifestó por suerte del
+  // orden. Fase 4.2: el ancla que quedó aquí ya es código — el dominio entra por
+  // el body y manda sobre los ítems, el bloque y la puerta.
   const { data: filas, error: errorItems } = await supabase
     .from("checklist_items")
     .select("plan_id, dominio, etapa, texto, destacado, estado, nota, created_at")
@@ -113,15 +166,32 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (errorItems) {
     return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
   }
-  const items = itemsDelUltimoPlanCore((filas ?? []) as unknown as FilaChecklist[]);
+  const items = itemsDelUltimoPlanDe((filas ?? []) as unknown as FilaChecklist[], dominio);
+  // Un mundo sin checklist propio no tiene nada que seguir: primero se explora.
+  if (dominio !== "core" && items.length === 0) {
+    return NextResponse.json(
+      { error: `Primero explora "${nombreMundo}" — su seguimiento nace de su plan.` },
+      { status: 409 }
+    );
+  }
 
   // Fase 4.0 §3 (docs/FLUJO_TRACKING.md): el BLOQUE DE REALIDAD. Antes el
   // follow solo mandaba lo que el usuario MARCO; el motor replanificaba ciego
   // al tiempo. Ahora lee el mismo analytics.ts que el Analisis: cumplimiento,
   // donde se atora, replanificaciones y ritmo real.
-  const bloqueRealidad = construirBloqueRealidad(
-    calcularAnalytics(await cargarEntradaAnalytics(supabase, projectId, proyecto))
-  );
+  //
+  // Fase 4.2: el bloque de un MUNDO se mide con la misma vara pero con SUS
+  // datos (analyticsDeMundo: sus items, contra sus fechas, desde su unlock), y
+  // del proyecto solo lleva una linea de contexto rotulada.
+  const entradaAnalytics = await cargarEntradaAnalytics(supabase, projectId, proyecto);
+  const analytics = calcularAnalytics(entradaAnalytics);
+  let bloqueRealidad: string | null;
+  if (dominio === "core") {
+    bloqueRealidad = construirBloqueRealidad(analytics);
+  } else {
+    const aMundo = analyticsDeMundo(entradaAnalytics, dominio);
+    bloqueRealidad = aMundo ? construirBloqueRealidadMundo(aMundo, analytics, nombreMundo) : null;
+  }
 
   const mensaje = componerMensajeSeguimiento({ items, detalles, enfoque, bloqueRealidad });
 
@@ -141,8 +211,40 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     dominios = ["core"];
   }
 
+  // Fase 4.2: la PUERTA de un follow de mundo se amuralla a los nodos de ese
+  // mundo. La cosecha del vecindario NO (más abajo): sigue con core+unlocks,
+  // igual que el plan original del mundo. Elegir la puerta con el intérprete —
+  // y no con la semilla determinística de evaluacionBrecha, como en
+  // world/start — es deliberado: en un seguimiento el mensaje YA trae la
+  // realidad medida, y esa es justo la señal con la que se debe elegir por
+  // dónde entrar. Es el mismo trato que recibe el core.
+  const dominiosPuerta = dominio === "core" ? dominios : [dominio];
+  if (dominio !== "core") {
+    const hayPuerta = candidatosSeguimiento(
+      mensaje,
+      estadoVivoPrevio,
+      (proyecto.fase_actual as string | null) ?? "ideacion",
+      families,
+      graph,
+      cubiertos,
+      undefined,
+      dominiosPuerta
+    );
+    // Sin candidatos del mundo, seleccionarPuertaAvanzada caería a entrySeeds[0]
+    // — un nodo CORE — y el plan del mundo saldría explorando el viaje
+    // principal. Antes que eso, se dice la verdad.
+    if (hayPuerta.length === 0) {
+      return NextResponse.json(
+        { error: `Ya recorriste todas las puertas de "${nombreMundo}".` },
+        { status: 409 }
+      );
+    }
+  }
+
   // El mensaje compuesto es el mensaje_entrada de la sesión: bitácora.
-  const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje);
+  // La sesión nace con el dominio del mundo: su plan lo hereda y deriva su
+  // checklist con él (session/[id]/plan:260), encadenado en el grupo del mundo.
+  const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje, null, dominio);
 
   const client = createAnthropicClient();
   const acumulado = usoVacio();
@@ -157,7 +259,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     cubiertos,
     entrySeeds,
     acumulado,
-    dominios
+    dominiosPuerta
   );
 
   const estado = estadoInicial({
@@ -190,5 +292,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     modo: "conversado" as const,
   };
 
+  // ── ANCLA para la ETAPA 2 del frente de cuentas: el DESCUENTO de los 2
+  // creditos del follow de mundo va aqui (solo si dominio !== "core"). Este es
+  // el punto de entrega: la sesion existe, la puerta esta elegida y el primer
+  // turno esta listo para el usuario. Ni un credito antes: un follow que muere
+  // en el camino no se cobra.
   return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [nodoPuerta]);
 }

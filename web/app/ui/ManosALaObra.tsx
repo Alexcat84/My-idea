@@ -81,6 +81,8 @@ interface MundoInfo {
   nombre: string;
   promesa: string;
   plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
+  /** Fase 4.2: el usuario dio este mundo por completado. null = abierto. */
+  completadoAt?: string | null;
 }
 
 interface Props {
@@ -101,6 +103,10 @@ interface Props {
   onVerAnalisis: () => void;
   /** la idea se marcó como realizada (§5): el padre abre la Celebración */
   onRealizada: () => void;
+  /** Fase 4.2: un mundo se completó o se reabrió — el padre refresca su copia.
+   * El cierre de un mundo NO abre la Celebración (§3: la fiesta grande es del
+   * proyecto; el cierre de un mundo es un momento sobrio). */
+  onMundoCerrado: (dominio: string, completadoAt: string | null) => void;
   /** true si hay una entrevista abierta para "Volver a la entrevista" */
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
@@ -357,15 +363,22 @@ function GrupoEtapas({
   );
 }
 
-/** Ritual de 3 tarjetas: checklist → detalles → enfoque (con "No estoy seguro"). */
+/** Ritual de 3 tarjetas: checklist → detalles → enfoque (con "No estoy seguro").
+ *
+ * Fase 4.2: el mismo ritual sirve al viaje principal y a cada mundo activo —
+ * son las MISMAS tres tarjetas. `mundo` (su nombre) es lo único que cambia: de
+ * quién habla. Un solo componente, porque un mundo es un subproyecto completo y
+ * su seguimiento no es una versión recortada del otro. */
 function RitualContinuar({
   resumen,
+  mundo,
   enviando,
   error,
   onEnviar,
   onCerrar,
 }: {
   resumen: { hechos: number; total: number };
+  mundo?: string;
   enviando: boolean;
   error: string | null;
   onEnviar: (detalles: string | null, enfoque: string | null) => void;
@@ -379,7 +392,7 @@ function RitualContinuar({
     <div className="rounded-panel border border-accent/40 bg-surface p-5 sm:p-6">
       <div className="mb-3 flex items-center justify-between">
         <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-          Continuar mi idea · {paso} de 3
+          {mundo ? `Continuar ${mundo}` : "Continuar mi idea"} · {paso} de 3
         </p>
         <button onClick={onCerrar} className="text-sm text-dim hover:text-ink">
           Cerrar
@@ -392,7 +405,9 @@ function RitualContinuar({
       {paso === 1 && resumen.hechos === 0 && (
         <>
           <p className="text-[17px] font-medium leading-relaxed">
-            ¿Aún no arrancas? Cuéntame qué cambió desde que armamos el plan.
+            {mundo
+              ? `¿Aún no arrancas con ${mundo}? Cuéntame qué cambió desde que armamos su plan.`
+              : "¿Aún no arrancas? Cuéntame qué cambió desde que armamos el plan."}
           </p>
           <p className="mt-2 text-sm text-dim">
             A veces la realidad se mueve antes que uno: un proveedor que falla, algo que se cayó, una
@@ -413,8 +428,8 @@ function RitualContinuar({
             Tu checklist es tu historia: ¿ya refleja lo que hiciste?
           </p>
           <p className="mt-2 text-sm text-dim">
-            Llevas {resumen.hechos} de {resumen.total} acciones hechas. Ajusta arriba lo que haga falta —
-            de eso compongo el «qué ha pasado», sin que lo redactes dos veces.
+            Llevas {resumen.hechos} de {resumen.total} acciones {mundo ? `de ${mundo} ` : ""}hechas. Ajusta arriba
+            lo que haga falta — de eso compongo el «qué ha pasado», sin que lo redactes dos veces.
           </p>
           <button
             onClick={() => setPaso(2)}
@@ -471,7 +486,7 @@ function RitualContinuar({
               disabled={enviando}
               className="rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90 disabled:opacity-50"
             >
-              {enviando ? "Pensando…" : "Continuar mi idea"}
+              {enviando ? "Pensando…" : mundo ? "Continuar este mundo" : "Continuar mi idea"}
             </button>
             <button
               onClick={() => onEnviar(detalles.trim() || null, null)}
@@ -796,6 +811,7 @@ export function ManosALaObra({
   onRecargarChecklist,
   onVerAnalisis,
   onRealizada,
+  onMundoCerrado,
   entrevistaAbierta,
   onVolverEntrevista,
   onItemActualizado,
@@ -805,6 +821,12 @@ export function ManosALaObra({
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
   const [ritual, setRitual] = useState(false);
+  // Fase 4.2: el ritual de un mundo (su dominio) y su cierre. Van aparte del
+  // core a propósito: dos subproyectos abiertos a la vez no comparten estado.
+  const [ritualMundo, setRitualMundo] = useState<string | null>(null);
+  const [cerrandoMundo, setCerrandoMundo] = useState<string | null>(null);
+  const [motivoMundo, setMotivoMundo] = useState("");
+  const [guardandoMundo, setGuardandoMundo] = useState(false);
   const [ocupado, setOcupado] = useState(false);
   const [enviandoFollow, setEnviandoFollow] = useState(false);
   const [arrancandoMundo, setArrancandoMundo] = useState<string | null>(null);
@@ -983,14 +1005,17 @@ export function ManosALaObra({
     }
   }
 
-  async function enviarFollow(detalles: string | null, enfoque: string | null) {
+  // Fase 4.2: el mismo follow para el viaje principal y para un mundo. El
+  // `dominio` viaja al servidor y allí manda sobre los ítems, el bloque de
+  // realidad y la puerta; aquí solo se dice de quién es el ritual.
+  async function enviarFollow(detalles: string | null, enfoque: string | null, dominio = "core") {
     setEnviandoFollow(true);
     setErrorRitual(null);
     try {
       const res = await fetch(`/api/project/${projectId}/follow`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ detalles, enfoque }),
+        body: JSON.stringify({ detalles, enfoque, dominio }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -1002,6 +1027,34 @@ export function ManosALaObra({
       setErrorRitual("no pudimos conectar; revisa tu internet e intenta de nuevo");
     } finally {
       setEnviandoFollow(false);
+    }
+  }
+
+  /** Fase 4.2: el cierre de un mundo — el acta en miniatura. Mismos parámetros
+   * que el del proyecto: no exige el checklist al 100%, el motivo es opcional y
+   * es reversible. Reabrir no borra el motivo: la historia no se reescribe. */
+  async function cerrarMundo(dominio: string, accion: "completar" | "reabrir") {
+    setGuardandoMundo(true);
+    setError(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/world/${dominio}/completar`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ accion, motivo: accion === "completar" ? motivoMundo.trim() || null : null }),
+      });
+      if (!res.ok) {
+        setError(ERROR_GENERICO);
+        return;
+      }
+      const data = (await res.json()) as { completado_at?: string | null };
+      setCerrandoMundo(null);
+      setMotivoMundo("");
+      // El chip sale de lo que respondió el servidor, no de lo que pedimos.
+      onMundoCerrado(dominio, data.completado_at ?? null);
+    } catch {
+      setError("no pudimos guardar; revisa tu internet e intenta de nuevo");
+    } finally {
+      setGuardandoMundo(false);
     }
   }
 
@@ -1130,15 +1183,33 @@ export function ManosALaObra({
           const items = grupo?.etapas.flatMap((e) => e.items) ?? [];
           const c = conteo(items);
           const titulosMundo = mundo.plan ? titulosDeEtapas(mundo.plan.contenido_md) : {};
+          const completado = Boolean(mundo.completadoAt);
           return (
             <section key={mundo.dominio} className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
               <div className="flex flex-wrap items-center gap-3">
                 <h3 className="text-base font-semibold">{mundo.nombre}</h3>
-                <span className="inline-flex items-center rounded-full border border-done/45 px-3 py-1 text-[11px] font-bold text-done">
-                  {grupo ? `Mundo activo · ${c.hechos}/${c.total}` : "Mundo activo"}
-                </span>
+                {/* Fase 4.2: el chip del mundo completado. Distingue por FORMA
+                    (el check) además de por color, como el resto del canon. */}
+                {completado ? (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-done/50 bg-done-soft px-3 py-1 text-[11px] font-bold text-done">
+                    <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
+                      <path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    Completado
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center rounded-full border border-done/45 px-3 py-1 text-[11px] font-bold text-done">
+                    {grupo ? `Mundo activo · ${c.hechos}/${c.total}` : "Mundo activo"}
+                  </span>
+                )}
               </div>
               <p className="mt-1 text-sm text-dim">{mundo.promesa}</p>
+              {completado && (
+                <p className="mt-2 text-[12.5px] text-dim">
+                  Lo diste por terminado {haceCuanto(mundo.completadoAt!)}
+                  {c.total > c.hechos ? ". Lo que quedó pendiente sigue aquí: es parte de tu historia." : "."}
+                </p>
+              )}
 
               {/* mini viaje del mundo: Exploración → Plan → Manos a la Obra */}
               <div className="mt-3 flex items-center gap-2.5 text-[12px] text-dim">
@@ -1163,6 +1234,102 @@ export function ManosALaObra({
                 >
                   {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo"}
                 </button>
+              )}
+
+              {/* Fase 4.2 §1 — el ritual de 3 tarjetas, TAMBIÉN aquí: un mundo
+                  es un subproyecto y tiene su propio ciclo de seguimiento. */}
+              {grupo && !completado && ritualMundo === mundo.dominio && (
+                <div className="mt-4">
+                  <RitualContinuar
+                    resumen={c}
+                    mundo={mundo.nombre}
+                    enviando={enviandoFollow}
+                    error={errorRitual}
+                    onEnviar={(d, e) => enviarFollow(d, e, mundo.dominio)}
+                    onCerrar={() => setRitualMundo(null)}
+                  />
+                </div>
+              )}
+
+              {/* Fase 4.2 §2 — el cierre del mundo: el acta en miniatura. Sobrio
+                  a propósito (§2: un momento, no la fiesta): la Celebración
+                  grande, con su constelación y su pulso, es del PROYECTO. */}
+              {grupo && (
+                <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-hairline pt-4">
+                  {completado ? (
+                    <>
+                      <button
+                        onClick={() => cerrarMundo(mundo.dominio, "reabrir")}
+                        disabled={guardandoMundo}
+                        className="text-[13px] font-semibold text-accent hover:underline disabled:opacity-50"
+                      >
+                        {guardandoMundo ? "Reabriendo…" : "Reabrir este mundo"}
+                      </button>
+                      <span className="text-[12.5px] text-dim">Si vuelves a él, tu checklist te espera igual.</span>
+                    </>
+                  ) : cerrandoMundo === mundo.dominio ? (
+                    <div className="w-full">
+                      <p className="text-[14px] font-semibold leading-relaxed">
+                        ¿Diste {mundo.nombre} por terminado? Podrás reabrirlo cuando quieras.
+                      </p>
+                      {/* El espejo del momento: sus números reales, sin juicio. */}
+                      <p className="mt-2 text-[12.5px] text-dim">
+                        Llevas {c.hechos} de {c.total} acciones de este mundo
+                        {c.total > 0 ? ` (${Math.round((c.hechos / c.total) * 100)}%)` : ""}. Las que queden
+                        pendientes se guardan tal cual. Cerrar este mundo no cierra tu idea.
+                      </p>
+                      <label htmlFor={`motivo-${mundo.dominio}`} className="mt-3.5 block text-[12.5px] text-dim">
+                        ¿Por qué lo cierras aquí? <span className="text-dim/70">(opcional, para tu propia memoria)</span>
+                      </label>
+                      <div className="mt-1.5">
+                        <CampoConVoz
+                          id={`motivo-${mundo.dominio}`}
+                          valor={motivoMundo}
+                          onCambio={setMotivoMundo}
+                          filas={2}
+                          placeholder="Lo cierro porque…"
+                        />
+                      </div>
+                      <div className="mt-3 flex items-center gap-3">
+                        <button
+                          onClick={() => cerrarMundo(mundo.dominio, "completar")}
+                          disabled={guardandoMundo}
+                          className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
+                        >
+                          {guardandoMundo ? "Cerrando…" : "Sí, lo doy por terminado"}
+                        </button>
+                        <button
+                          onClick={() => setCerrandoMundo(null)}
+                          disabled={guardandoMundo}
+                          className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
+                        >
+                          Todavía no
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <button
+                        onClick={() => {
+                          setRitualMundo(mundo.dominio);
+                          setErrorRitual(null);
+                        }}
+                        className="rounded-[10px] bg-accent px-4 py-2.5 text-[13px] font-semibold text-white hover:opacity-90"
+                      >
+                        Contar qué pasó
+                      </button>
+                      <button
+                        onClick={() => {
+                          setCerrandoMundo(mundo.dominio);
+                          setMotivoMundo("");
+                        }}
+                        className="rounded-[10px] border border-done/50 px-4 py-2.5 text-[13px] font-semibold text-done hover:bg-done-soft"
+                      >
+                        Marcar este mundo como completado
+                      </button>
+                    </>
+                  )}
+                </div>
               )}
               {mundo.plan && (
                 <div className="mt-4">

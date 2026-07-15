@@ -5,7 +5,7 @@
 import { describe, expect, it } from "vitest";
 import type { Grafo } from "./graph";
 import { candidatosSeguimiento } from "./puertaAvanzada";
-import { componerMensajeSeguimiento, itemsDelUltimoPlanCore } from "./seguimientoComposer";
+import { componerMensajeSeguimiento, itemsDelUltimoPlanDe } from "./seguimientoComposer";
 
 describe("componerMensajeSeguimiento", () => {
   it("agrupa por estado en orden hecho→a_medias→empezado→pendiente, con notas", () => {
@@ -85,7 +85,7 @@ describe("candidatosSeguimiento (puntajes a mano sobre mini-grafo)", () => {
 // usuario acababa de explorar un mundo, "Contar que paso" componia su avance
 // real con el checklist del MUNDO mientras el bloque llevaba cumplimiento core.
 // ---------------------------------------------------------------------------
-describe("itemsDelUltimoPlanCore (Fase 4.1 V4)", () => {
+describe("itemsDelUltimoPlanDe (Fase 4.1 V4 + Fase 4.2)", () => {
   // El escenario exacto del hallazgo: el mundo es MAS RECIENTE que el core.
   const filas = [
     { plan_id: "mundo1", dominio: "quality", etapa: 1, orden: 1, texto: "Audita tu calidad", destacado: false, estado: "pendiente" as const, created_at: "2026-03-10T17:08:00Z" },
@@ -96,18 +96,18 @@ describe("itemsDelUltimoPlanCore (Fase 4.1 V4)", () => {
   ];
 
   it("con items de mundo MAS RECIENTES, el follow NO los toma", () => {
-    const items = itemsDelUltimoPlanCore(filas);
+    const items = itemsDelUltimoPlanDe(filas, "core");
     expect(items.map((i) => i.texto)).toEqual(["Cierra tu costo", "Sal a vender"]);
     expect(items.some((i) => i.texto.includes("calidad") || i.texto.includes("variacion"))).toBe(false);
   });
 
   it("elige el ULTIMO plan core, no el primero (los ciclos viejos no vuelven)", () => {
-    const items = itemsDelUltimoPlanCore(filas);
+    const items = itemsDelUltimoPlanDe(filas, "core");
     expect(items.some((i) => i.texto.includes("Plan viejo"))).toBe(false);
   });
 
   it("conserva estado, nota, destacado y el orden etapa->orden", () => {
-    const items = itemsDelUltimoPlanCore(filas);
+    const items = itemsDelUltimoPlanDe(filas, "core");
     expect(items[0]).toEqual({ etapa: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho", nota: "la tabla quedo lista" });
     expect(items[1].destacado).toBe(true);
   });
@@ -116,15 +116,47 @@ describe("itemsDelUltimoPlanCore (Fase 4.1 V4)", () => {
     const viejos = [
       { plan_id: "p1", etapa: 1, orden: 1, texto: "Sin dominio", destacado: false, estado: "hecho" as const, created_at: "2026-03-05T10:00:00Z" },
     ];
-    expect(itemsDelUltimoPlanCore(viejos).map((i) => i.texto)).toEqual(["Sin dominio"]);
+    expect(itemsDelUltimoPlanDe(viejos, "core").map((i) => i.texto)).toEqual(["Sin dominio"]);
   });
 
   it("un proyecto SOLO con items de mundo no compone nada core", () => {
-    expect(itemsDelUltimoPlanCore(filas.filter((f) => f.dominio === "quality"))).toEqual([]);
+    expect(itemsDelUltimoPlanDe(filas.filter((f) => f.dominio === "quality"), "core")).toEqual([]);
   });
 
   it("no depende del orden en que venga la consulta", () => {
     const alReves = [...filas].reverse();
-    expect(itemsDelUltimoPlanCore(alReves).map((i) => i.texto)).toEqual(["Cierra tu costo", "Sal a vender"]);
+    expect(itemsDelUltimoPlanDe(alReves, "core").map((i) => i.texto)).toEqual(["Cierra tu costo", "Sal a vender"]);
+  });
+
+  // Fase 4.2: el mundo tiene su PROPIO follow. El espejo del hallazgo V4, en la
+  // otra direccion: si el follow de un mundo tomara items core, el motor
+  // replanificaria el mundo con la historia del viaje principal.
+  it("el follow de un mundo toma SUS items, aunque el core sea mas reciente", () => {
+    const coreMasNuevo = [
+      ...filas,
+      { plan_id: "core3", dominio: "core", etapa: 1, orden: 1, texto: "Lo ultimo del core", destacado: false, estado: "hecho" as const, created_at: "2026-03-11T09:00:00Z" },
+    ];
+    const items = itemsDelUltimoPlanDe(coreMasNuevo, "quality");
+    expect(items.map((i) => i.texto)).toEqual(["Audita tu calidad", "Mide la variacion"]);
+    expect(items.some((i) => i.texto.includes("core"))).toBe(false);
+  });
+
+  it("el follow de un mundo elige el ULTIMO plan DE ESE MUNDO (su ciclo nuevo)", () => {
+    const conCiclo2 = [
+      ...filas,
+      { plan_id: "mundo2", dominio: "quality", etapa: 1, orden: 1, texto: "Ciclo 2 del mundo", destacado: false, estado: "pendiente" as const, created_at: "2026-03-20T10:00:00Z" },
+    ];
+    expect(itemsDelUltimoPlanDe(conCiclo2, "quality").map((i) => i.texto)).toEqual(["Ciclo 2 del mundo"]);
+  });
+
+  it("un mundo sin checklist propio no compone nada (jamas cae al core)", () => {
+    expect(itemsDelUltimoPlanDe(filas, "environmental")).toEqual([]);
+  });
+
+  it("dominio null NO se cuela en el follow de un mundo", () => {
+    const viejos = [
+      { plan_id: "p1", etapa: 1, orden: 1, texto: "Sin dominio", destacado: false, estado: "hecho" as const, created_at: "2026-03-05T10:00:00Z" },
+    ];
+    expect(itemsDelUltimoPlanDe(viejos, "quality")).toEqual([]);
   });
 });

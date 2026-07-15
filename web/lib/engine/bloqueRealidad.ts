@@ -11,7 +11,7 @@
  * duraciones y ritmo — jamás lenguaje de cumplimiento. No se juzga contra
  * fechas que el usuario eligió no tener.
  */
-import type { Analytics } from "../analytics";
+import type { Analytics, AnalyticsMundo } from "../analytics";
 
 /** Recorta un texto de ítem para que el bloque no se infle. */
 function corto(texto: string, max = 70): string {
@@ -71,6 +71,84 @@ export function construirBloqueRealidad(a: Analytics): string | null {
   } else if (a.modoCamino === "ritmo") {
     L.push("- Elegí llevar esto a mi ritmo, sin fechas: no hay nada que medir contra un calendario.");
   }
+
+  return L.join("\n");
+}
+
+/**
+ * Fase 4.2: el bloque de realidad de UN MUNDO. Un mundo es un subproyecto
+ * completo y su seguimiento merece su propio espejo — pero SOLO el suyo.
+ *
+ * La regla que este bloque existe para cumplir: jamás presentarle al motor las
+ * tardanzas del core como si fueran del mundo. Todo lo medido aquí sale de
+ * `aMundo` (sus ítems, contra SUS fechas, desde que el usuario lo activó); del
+ * proyecto entra UNA sola línea, y va rotulada como lo que es: contexto, no su
+ * historia. Sin esa línea el motor planificaría el mundo como si el resto de la
+ * vida del usuario no existiera; con más de una, volvería a confundirlos.
+ */
+export function construirBloqueRealidadMundo(
+  aMundo: AnalyticsMundo,
+  aProyecto: Analytics,
+  nombreMundo: string
+): string | null {
+  const u = aMundo.universal;
+  if (!u.planVigenteAt && u.accionesHechas === 0) return null;
+
+  const L: string[] = [
+    `Mi realidad medida en «${nombreMundo}» (registrada por el sistema, no por mi memoria):`,
+  ];
+
+  L.push(
+    `- Ciclo ${u.ciclosDePlan} de este mundo` +
+      (u.planVigenteAt ? `; su plan vigente lleva ${PLURAL(u.diasDeVidaPlanVigente, "día", "días")}.` : ".")
+  );
+
+  const ritmo = [
+    `${u.accionesVigente.hechas} de ${u.accionesVigente.total} acciones de este mundo hechas en su ciclo`,
+    `${u.ritmoAccionesPorSemana} acciones por semana desde que lo activé`,
+  ];
+  if (u.diasSinAvance !== null) ritmo.push(`${PLURAL(u.diasSinAvance, "día", "días")} desde mi último avance aquí`);
+  else ritmo.push("aún sin ningún avance registrado en este mundo");
+  L.push(`- Ritmo en este mundo: ${ritmo.join("; ")}.`);
+
+  if (u.duracionPorEtapa.length > 0) {
+    const porEtapa = u.duracionPorEtapa.map((e) => `etapa ${e.etapa}: ${PLURAL(e.dias, "día", "días")}`);
+    L.push(`- Duración real por etapa de este mundo: ${porEtapa.join("; ")}.`);
+  }
+
+  // Cumplimiento: el del MUNDO, contra las fechas de SUS ítems. Misma regla del
+  // modo que el core — sin fechas no se juzga contra un calendario.
+  const c = aMundo.cumplimiento;
+  if (aProyecto.modoCamino === "fechas" && c && c.total > 0) {
+    L.push(
+      `- Cumplimiento de este mundo contra las fechas que acepté: ${c.aTiempo} a tiempo, ` +
+        `${c.adelantadas} adelantadas, ${c.tardias} tardías (de ${c.total} con fecha); desviación media de ` +
+        `${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias} días.`
+    );
+    if (c.tardiasTop.length > 0) {
+      const donde = c.tardiasTop.map(
+        (t) => `"${corto(t.texto)}" (etapa ${t.etapa}, ${PLURAL(t.diasRetraso, "día", "días")} tarde)`
+      );
+      L.push(`- Donde se me atoró el tiempo en este mundo: ${donde.join("; ")}.`);
+    }
+    if (c.replanificados.length > 0) {
+      const cuales = c.replanificados.map((r) => `"${corto(r.texto)}" (etapa ${r.etapa})`);
+      L.push(
+        `- Moví la fecha de ${PLURAL(c.replanificados.length, "acción", "acciones")} de este mundo: ${cuales.join("; ")}.`
+      );
+    }
+  } else if (aProyecto.modoCamino === "ritmo") {
+    L.push("- Elegí llevar esto a mi ritmo, sin fechas: no hay nada que medir contra un calendario.");
+  }
+
+  // La ÚNICA línea del proyecto entero, rotulada para que no se confunda con lo
+  // de arriba: el mundo no vive en el vacío, pero su historia no es esta.
+  const p = aProyecto.universal;
+  const contexto = [
+    `mi viaje principal va ${p.accionesVigente.hechas} de ${p.accionesVigente.total} acciones en su ciclo ${p.ciclosDePlan}`,
+  ];
+  if (p.diasSinAvance !== null) contexto.push(`${PLURAL(p.diasSinAvance, "día", "días")} desde mi último avance allí`);
+  L.push(`- Contexto de mi proyecto (NO de este mundo): ${contexto.join("; ")}.`);
 
   return L.join("\n");
 }

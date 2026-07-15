@@ -23,6 +23,9 @@ interface Props {
   projectId: string;
   unlocks: string[];
   progresoMundos: Record<string, { hechos: number; total: number } | null>;
+  /** Fase 4.2: los mundos que el usuario dio por completados. Su chip cambia de
+   * "Activo · n/m" (azul) a "Completado" (verde): el mundo tuvo un final. */
+  mundosCompletados?: string[];
   conPlan: boolean;
   onVerMundo: (dominio: string) => void;
   onTusNumeros: () => void;
@@ -103,7 +106,15 @@ function Candado() {
   );
 }
 
-export function PotenciaTuIdea({ projectId, unlocks, progresoMundos, conPlan, onVerMundo, onTusNumeros }: Props) {
+export function PotenciaTuIdea({
+  projectId,
+  unlocks,
+  progresoMundos,
+  mundosCompletados = [],
+  conPlan,
+  onVerMundo,
+  onTusNumeros,
+}: Props) {
   const [avisoEn, setAvisoEn] = useState<string | null>(null);
   const packs = (catalogo as { packs: Pack[] }).packs;
 
@@ -147,6 +158,7 @@ export function PotenciaTuIdea({ projectId, unlocks, progresoMundos, conPlan, on
         {/* Los mundos del catálogo */}
         {packs.map((p) => {
           const activo = unlocks.includes(p.clave);
+          const completado = mundosCompletados.includes(p.clave);
           const progreso = progresoMundos[p.clave] ?? null;
           return (
             <button
@@ -157,7 +169,16 @@ export function PotenciaTuIdea({ projectId, unlocks, progresoMundos, conPlan, on
             >
               <div className="mb-3.5 flex items-center justify-between gap-2">
                 <Icono clave={p.clave} activo={activo} />
-                {activo ? (
+                {completado ? (
+                  /* Fase 4.2: el mundo con final. Forma (el check) además de
+                     color, como el resto del canon. */
+                  <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-done/50 bg-done-soft px-2.5 py-[3px] text-[10.5px] font-bold text-done">
+                    <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
+                      <path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    Completado
+                  </span>
+                ) : activo ? (
                   <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
                     Activo{progreso ? <> · <span className="text-done">{progreso.hechos}/{progreso.total}</span></> : ""}
                   </span>

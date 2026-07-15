@@ -9,6 +9,7 @@
  */
 import { NextResponse } from "next/server";
 import { calcularAnalytics, construirHitos, informeMarkdown } from "@/lib/analytics";
+import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
 import { obtenerProyecto } from "@/lib/db";
 import { nombreDeIdea } from "@/lib/ideas";
@@ -36,6 +37,11 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
 
   const analytics = calcularAnalytics(entrada);
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
+  // Fase 4.2 §3: el acta nombra los mundos como el usuario los conoce; el
+  // catálogo vive aquí porque analytics.ts es puro y no conoce los assets.
+  const nombreMundo = (dominio: string) =>
+    (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.find((p) => p.clave === dominio)
+      ?.nombre ?? dominio;
 
   return NextResponse.json({
     nombre,
@@ -45,6 +51,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     tiene_baseline: analytics.cumplimiento !== null,
     analytics,
     hitosCelebracion: construirHitos(entrada, ahora, true),
-    informe_md: informeMarkdown(nombre, analytics, proyecto.realizada_at ?? null),
+    informe_md: informeMarkdown(nombre, analytics, proyecto.realizada_at ?? null, nombreMundo),
   });
 }

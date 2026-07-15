@@ -30,20 +30,26 @@ export interface FilaChecklist {
 }
 
 /**
- * Fase 4.1 (V4, auditoría de paridad de mundos): los ítems del ÚLTIMO plan
- * CORE. El follow es SIEMPRE core, pero antes se tomaba el plan del ítem más
- * reciente FUERA CUAL FUERA su dominio: si el usuario acababa de explorar un
- * mundo, "Contar qué pasó" componía su "mi avance real" con el checklist del
- * MUNDO mientras el bloque de realidad llevaba cumplimiento core.
+ * Fase 4.1 (V4, auditoría de paridad de mundos): los ítems del ÚLTIMO plan DE
+ * UN DOMINIO. Antes se tomaba el plan del ítem más reciente FUERA CUAL FUERA su
+ * dominio: si el usuario acababa de explorar un mundo, "Contar qué pasó"
+ * componía su "mi avance real" con el checklist del MUNDO mientras el bloque de
+ * realidad llevaba cumplimiento core.
+ *
+ * Fase 4.2: el dominio es parámetro. Ya no hay un solo follow — cada mundo
+ * activo tiene el suyo, y cada uno compone con SUS ítems. `dominio` "core" cubre
+ * también los ítems previos a la migración 016, que no lo traen.
  *
  * Ordena por su cuenta a propósito: no depende de que quien la llama haya
  * ordenado la consulta, y así el test la puede ejercitar de verdad.
  */
-export function itemsDelUltimoPlanCore(filas: FilaChecklist[]): ItemParaComponer[] {
-  const core = filas.filter((f) => !f.dominio || f.dominio === "core");
-  if (core.length === 0) return [];
-  const masReciente = [...core].sort((a, b) => b.created_at.localeCompare(a.created_at))[0];
-  return core
+export function itemsDelUltimoPlanDe(filas: FilaChecklist[], dominio: string): ItemParaComponer[] {
+  const delDominio = filas.filter((f) =>
+    dominio === "core" ? !f.dominio || f.dominio === "core" : f.dominio === dominio
+  );
+  if (delDominio.length === 0) return [];
+  const masReciente = [...delDominio].sort((a, b) => b.created_at.localeCompare(a.created_at))[0];
+  return delDominio
     .filter((f) => f.plan_id === masReciente.plan_id)
     .sort((a, b) => a.etapa - b.etapa || (a.orden ?? 0) - (b.orden ?? 0))
     .map((f) => ({

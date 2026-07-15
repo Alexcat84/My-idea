@@ -278,6 +278,11 @@ export function AnalisisProyecto({
                       <li key={d.dominio} className="flex items-baseline justify-between gap-3">
                         <span className="min-w-0 truncate text-[13px]">
                           {NOMBRE_DOMINIO[d.dominio] ?? d.dominio}
+                          {/* Fase 4.2: el mundo que ya tuvo su final lo dice
+                              aquí también, sin cambiar el resto de la fila. */}
+                          {datos.analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt) && (
+                            <span className="ml-2 text-[11px] font-semibold text-done">Completado</span>
+                          )}
                         </span>
                         <span className="shrink-0 text-[12.5px] tabular-nums">
                           <span className="font-semibold text-done">{d.aTiempo}</span>
