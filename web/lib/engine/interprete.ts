@@ -93,6 +93,10 @@ export interface EventoDecisionTurno {
   }>;
   decision: { accion: AccionInterprete; camino: string[]; es_salto: boolean };
   razonamiento: string | null;
+  /** Fase 3.9 (E16): la prioridad que el usuario declaro EN ESTE turno (null si
+   * no declaro ninguna). Antes solo se aplicaba al estado, nunca se registraba;
+   * ahora la bitacora dice en que turnos disparo la regla de prioridad. */
+  prioridad_declarada: PrioridadDeclarada | null;
 }
 
 export type EventoInterprete = EventoFallback | EventoDecisionTurno;
@@ -398,6 +402,7 @@ export async function interpretarMultiSalto(
       saltos_posibles: saltosPosibles,
       decision: { accion: resultado.accion, camino: resultado.camino, es_salto: resultado.esSalto },
       razonamiento: resultado.razonamiento ?? razonamientoFallback ?? null,
+      prioridad_declarada: resultado.prioridadDeclarada ?? null,
     });
   }
 
