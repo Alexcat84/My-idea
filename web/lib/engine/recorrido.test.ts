@@ -89,7 +89,14 @@ describe("avanzarTurno: fase esperando_respuesta (orquestacion, interpretarMulti
     expect(r.estado.ruta).toEqual(["design_thinking_fundamentos", nid]);
     expect(r.estado.modos).toEqual(["conversado", "conversado"]);
     expect(r.pregunta).toBe("¿que capas has mapeado?");
-    expect(r.nodosNuevos).toEqual([{ id: nid, titulo: graph[nid].titulo_concepto, modo: "conversado" }]);
+    expect(r.nodosNuevos).toEqual([
+      {
+        id: nid,
+        titulo: graph[nid].titulo_concepto,
+        etiqueta: graph[nid].etiqueta_arbol ?? graph[nid].titulo_concepto,
+        modo: "conversado",
+      },
+    ]);
   });
 
   it("accion=salir cierra la fase sin pedir mas nada", async () => {

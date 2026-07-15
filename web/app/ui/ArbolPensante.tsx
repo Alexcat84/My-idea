@@ -21,7 +21,10 @@ import { useEffect, useRef } from "react";
 
 export interface NodoArbol {
   id: string;
+  /** lo que se muestra: la etiqueta_arbol (corta, enamora). */
   label: string;
+  /** Fase 3.9: el titulo_concepto completo — respalda en el tooltip. */
+  titulo?: string;
   /** atenuado: nodos silenciosos ("cubierto por lo que contaste") */
   atenuado?: boolean;
   /** marca sutil distinta para los saltos semánticos */
@@ -106,13 +109,16 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
                     />
                   )}
                   <PuntoRiel activo={activo} lleno={!activo || n.atenuado === true} />
-                  <span className={"min-w-0" + (n.atenuado ? " opacity-50" : "")}>
+                  <span className={"min-w-0 flex-1" + (n.atenuado ? " opacity-50" : "")}>
+                    {/* B4: una línea con elipsis (el fix A ya las acorta con la
+                        etiqueta_arbol). El tooltip respalda con el título
+                        completo del concepto. */}
                     <span
                       className={
-                        "block pt-px text-sm leading-[1.45] line-clamp-2 " +
+                        "block truncate pt-px text-sm leading-[1.45] " +
                         (esUltimo && !n.atenuado ? "font-semibold text-accent" : "font-medium text-ink")
                       }
-                      title={n.label}
+                      title={n.titulo ?? n.label}
                     >
                       {n.label}
                     </span>

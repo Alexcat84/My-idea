@@ -25,7 +25,7 @@ import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import type { ChecklistEstado } from "@/lib/dbContract";
-import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
+import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { componerMensajeSeguimiento, type ItemParaComponer } from "@/lib/engine/seguimientoComposer";
@@ -166,6 +166,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const nodoPuerta = {
     id: puerta.puertaId,
     titulo: graph[puerta.puertaId]?.titulo_concepto ?? puerta.puertaId,
+    etiqueta: etiquetaArbol(puerta.puertaId, graph),
     modo: "conversado" as const,
   };
 

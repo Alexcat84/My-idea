@@ -64,6 +64,16 @@ export function cargarEntrySeeds(): string[] {
   return _entrySeeds;
 }
 
+/** Fase 3.9: lo que se muestra en las SUPERFICIES DE NAVEGACIÓN (riel del
+ * árbol, cintillo de la tarjeta) es la etiqueta_arbol -- 4-5 palabras en
+ * segunda persona, generada para enamorar. El titulo_concepto (el nombre del
+ * libro) solo respalda en el DETALLE del nodo. Fallback al título si falta la
+ * etiqueta, y al id como último recurso. "La etiqueta enamora, el título
+ * respalda". */
+export function etiquetaArbol(nid: string, graph: Grafo): string {
+  return graph[nid]?.etiqueta_arbol ?? graph[nid]?.titulo_concepto ?? nid;
+}
+
 /** Hotfix v2.1.1: groundwork de dominios. Hoy todo el dataset es "core" y
  * todo proyecto tiene ["core"] desbloqueado por defecto. */
 export function dominioPermitido(nid: string, graph: Grafo, dominiosDesbloqueados?: string[] | null): boolean {

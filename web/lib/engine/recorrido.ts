@@ -26,7 +26,7 @@ import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
-import { dominioPermitido, obtenerPregunta, sucesoresNivel, type Grafo, type PreguntasCache } from "./graph";
+import { dominioPermitido, etiquetaArbol, obtenerPregunta, sucesoresNivel, type Grafo, type PreguntasCache } from "./graph";
 import {
   interpretarMultiSalto,
   type EventoInterprete,
@@ -117,7 +117,10 @@ export function estadoInicial(params: {
 
 export interface NodoTranscrito {
   id: string;
+  /** El nombre del concepto (titulo_concepto): respalda en el DETALLE. */
   titulo: string;
+  /** Fase 3.9: lo que se muestra en riel/cintillo (etiqueta_arbol). */
+  etiqueta: string;
   modo: ModoNodo;
 }
 
@@ -277,6 +280,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     return estado.ruta.slice(rutaLongitudInicial).map((nid, i) => ({
       id: nid,
       titulo: graph[nid]?.titulo_concepto ?? nid,
+      etiqueta: etiquetaArbol(nid, graph),
       modo: estado.modos[rutaLongitudInicial + i],
     }));
   }

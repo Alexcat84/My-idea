@@ -19,7 +19,7 @@ import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
-import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
+import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
@@ -126,6 +126,7 @@ export async function POST(request: Request) {
   const puerta = {
     id: clasificacion.puertaId,
     titulo: graph[clasificacion.puertaId]?.titulo_concepto ?? clasificacion.puertaId,
+    etiqueta: etiquetaArbol(clasificacion.puertaId, graph),
     modo: "conversado" as const,
   };
 

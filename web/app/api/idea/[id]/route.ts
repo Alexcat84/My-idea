@@ -8,7 +8,7 @@
 import { NextResponse } from "next/server";
 import { PREGUNTA_TIPO_OFERTA } from "@/lib/engine/constants";
 import { obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
-import { cargarGrafo } from "@/lib/engine/graph";
+import { cargarGrafo, etiquetaArbol } from "@/lib/engine/graph";
 import { preguntasPorTipo } from "@/lib/engine/reporte";
 import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
@@ -105,7 +105,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     pregunta: string | null;
     listo_para_plan: boolean;
     dominio: string;
-    ruta: Array<{ id: string; titulo: string; modo: string }>;
+    ruta: Array<{ id: string; titulo: string; etiqueta: string; modo: string }>;
   } | null = null;
   for (const s of ((sesiones ?? []) as Array<{
     id: string;
@@ -126,6 +126,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       ruta: rec.ruta.map((nid, i) => ({
         id: nid,
         titulo: graph[nid]?.titulo_concepto ?? nid,
+        etiqueta: etiquetaArbol(nid, graph),
         modo: rec.modos[i],
       })),
     };
@@ -135,7 +136,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   // El recorrido que construyó el plan vigente (canon 05, sidebar "Construido
   // con tu recorrido"): disponible incluso con la sesión ya cerrada, leyendo
   // el estado_recorrido de la sesión del plan.
-  let recorrido: Array<{ id: string; titulo: string; modo: string }> = [];
+  let recorrido: Array<{ id: string; titulo: string; etiqueta: string; modo: string }> = [];
   if (plan) {
     const s = ((sesiones ?? []) as Array<{ id: string; estado_recorrido: EstadoSesionPersistido | null }>).find(
       (x) => x.id === plan.session_id
@@ -145,6 +146,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       recorrido = rec.ruta.map((nid, i) => ({
         id: nid,
         titulo: graph[nid]?.titulo_concepto ?? nid,
+        etiqueta: etiquetaArbol(nid, graph),
         modo: rec.modos[i],
       }));
     }
