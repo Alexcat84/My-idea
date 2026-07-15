@@ -17,7 +17,7 @@ import {
 } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
-import { construirMarkdown, type OrganizadorData } from "@/lib/engine/organizador";
+import { construirMarkdown, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
@@ -81,11 +81,12 @@ export async function POST(request: Request) {
       JSON.stringify({ texto_usuario: texto, puertas }),
       MODEL_HAIKU,
       acumulado,
-      { maxTokens: 600, componente: "organizador" }
+      { maxTokens: MAX_TOKENS_ORGANIZADOR, componente: "organizador" }
     );
     acumulado = resultado.acumulado;
     data = parsearJson<OrganizadorData>(resultado.texto);
   } catch (e) {
+    console.error("[organizer:json] falló", { projectId, error: e });
     await cerrarSesion(
       supabase,
       projectId,

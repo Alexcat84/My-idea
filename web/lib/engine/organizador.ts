@@ -5,6 +5,12 @@
  * del shape, del markdown y de las secciones detectables en el stream.
  */
 
+/** Tope de tokens de salida del organizador. 600 truncaba el JSON de ideas
+ * ricas/multi-dominio (auditor HSEQ, etc.) → parseo roto → fallo. 1500 da
+ * margen holgado para las 3 listas + las dos frases. Fuente única para las
+ * dos puertas del organizador (JSON y SSE). */
+export const MAX_TOKENS_ORGANIZADOR = 1500;
+
 export interface OrganizadorData {
   idea_en_una_frase?: string;
   etapa_detectada?: string;

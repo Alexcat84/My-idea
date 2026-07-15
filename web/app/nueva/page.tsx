@@ -204,7 +204,19 @@ export default function NuevaIdea() {
         autoFocus
         placeholder="Quiero vender café de especialidad a domicilio en mi barrio…"
       />
-      {estado.error && <p className="mt-3 text-sm text-warn">{estado.error}</p>}
+      {estado.error && (
+        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+          <p className="text-sm text-warn">{estado.error}</p>
+          {/* tu texto sigue en el campo: reintentar es un clic, sin re-teclear */}
+          <button
+            onClick={enviar}
+            disabled={!texto.trim()}
+            className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10 disabled:opacity-40"
+          >
+            Intentar de nuevo
+          </button>
+        </div>
+      )}
       <div className="mt-5 flex items-center justify-between gap-4">
         <p className="text-xs text-dim">Sin plantillas ni formularios. Solo tu idea, en tus palabras.</p>
         <button

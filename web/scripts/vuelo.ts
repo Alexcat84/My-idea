@@ -84,6 +84,51 @@ async function faseOrganizerSonar(cookie: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Fase 1b: organizer con una idea REAL larga y multi-dominio (auditor HSEQ).
+// Regresion permanente del bug que la sesion de fundador cazo en produccion:
+// max_tokens 600 truncaba el JSON del organizador ante una idea rica -> parseo
+// roto -> fallo. Los vuelos usaban solo ideas cortas y limpias y nunca lo
+// tocaron. Si el tope vuelve a quedar corto, postJson lanza (502) y el vuelo
+// cae aqui, antes de que sorprenda a un usuario nuevo.
+// ---------------------------------------------------------------------------
+const IDEA_LARGA_HSEQ =
+  "Quisiera crear un auditor HSEQ virtual, y tambien que sea una app. La idea es crear " +
+  "una base de conocimiento con las normas actuales: cada base tendria el contenido " +
+  "completo de la norma (ISO 9001 de calidad, ISO 14001 ambiental, ISO 45001 de " +
+  "seguridad y salud en el trabajo), mas las explicaciones que recibi durante las clases " +
+  "que tome en Bogota. Tengo todo el material para convertirlo en un banco de " +
+  "conocimiento. La idea es que un auditor especialista en cualquiera de estas areas, o " +
+  "en todas a la vez, pueda usar la herramienta para registrar sus hallazgos en tiempo " +
+  "real en la app, y recibir la clausula exacta de lo que aplica, en base al analisis " +
+  "interno que la herramienta hace del hallazgo. Ademas quiero que genere el informe de " +
+  "auditoria automaticamente, con las no conformidades clasificadas, las observaciones y " +
+  "las oportunidades de mejora, para que el auditor no lo redacte desde cero. Mas " +
+  "adelante me gustaria que soporte auditorias integradas de los tres sistemas a la vez, " +
+  "control de acciones correctivas con fechas y responsables, y un panel para que la " +
+  "empresa vea el estado de cierre de cada hallazgo. No se si cobrar por suscripcion a " +
+  "las empresas o por auditor, ni cuanto costaria mantener las normas actualizadas.";
+
+async function faseOrganizerIdeaLarga(cookie: string) {
+  separador("FASE 1b: organizer con idea larga multi-dominio (regresion tope de tokens)");
+  log(`largo del texto: ${IDEA_LARGA_HSEQ.length} chars`);
+  const inicio = Date.now();
+  const r = await postJson(cookie, "/api/organizer", { texto: IDEA_LARGA_HSEQ });
+  log(`project_id: ${r.project_id}`);
+  log(`costo_usd: ${r.costo_usd}`);
+  log(`tiempo: ${Date.now() - inicio}ms`);
+  // El markdown bien formado PRUEBA que el JSON no se trunco ni fallo el parseo.
+  if (typeof r.markdown !== "string" || !r.markdown.includes("# Organizador de tu idea")) {
+    throw new Error("organizer idea larga: markdown mal formado (posible truncacion por tope)");
+  }
+  const data = r.data as { idea_en_una_frase?: string; areas_que_cubriria_tu_plan_completo?: string[] } | undefined;
+  if (!data?.idea_en_una_frase || !Array.isArray(data.areas_que_cubriria_tu_plan_completo)) {
+    throw new Error("organizer idea larga: JSON incompleto (truncado antes de cerrar las listas)");
+  }
+  log(`OK -- frase: "${String(data.idea_en_una_frase).slice(0, 90)}..."`);
+  return { costoUsd: Number(r.costo_usd) };
+}
+
+// ---------------------------------------------------------------------------
 // Fase 2: sesion completa de macetas de cemento, entrevista real turno a
 // turno (silencioso multi-hop incluido) hasta agotar preguntas o llegar a
 // MAX_TURNOS_SEGURIDAD, despues ensambla el plan por SSE.
@@ -1196,6 +1241,7 @@ async function main() {
   let saltosVerificados = 0;
   try {
     costos.organizer = (await faseOrganizerSonar(cookie)).costoUsd;
+    costos.organizerIdeaLarga = (await faseOrganizerIdeaLarga(cookie)).costoUsd;
     const macetas = await faseSesionMacetas(cookie);
     costos.macetas = macetas.costoUsd;
     saltosVerificados = macetas.saltosVerificados;
@@ -1226,6 +1272,7 @@ async function main() {
   separador("RESUMEN DE VERIFICACIONES");
   log("  0. caso sintetico: verificador de numeros huerfanos dispara el flag: OK");
   log("  1. organizer (capa gratuita): OK");
+  log("  1b. organizer idea larga multi-dominio (regresion tope de tokens 600->1500): OK");
   log("  2. sesion de macetas + plan streaming: OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
