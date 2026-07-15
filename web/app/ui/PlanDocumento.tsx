@@ -14,150 +14,8 @@
  */
 import { Markdown } from "./Markdown";
 
-type TipoSeccion = "etapa" | "cierre" | "otro";
+import { parsearPlan, type BloquePasos, type Seccion } from "@/lib/planParser";
 
-/** Fase 3.9 C8: un bloque de pasos con su sub-encabezado (o null si la lista
- * venía suelta). Varios por etapa: "Pasos para construir", "Pasos para
- * atacarlo", etc. — todos con el MISMO tratamiento visual de puntos + línea. */
-interface BloquePasos {
-  label: string | null;
-  pasos: string[];
-}
-
-interface Seccion {
-  titulo: string;
-  numero: string | null;
-  tipo: TipoSeccion;
-  descripcion: string;
-  bloquesPasos: BloquePasos[];
-  entregable: string | null;
-  estaSemana: string | null;
-}
-
-interface PlanParseado {
-  etiqueta: string | null;
-  titulo: string | null;
-  intro: string;
-  secciones: Seccion[];
-  pie: string | null;
-}
-
-/** Recorta "**Etiqueta:** …" (hasta la línea en blanco o el fin) del cuerpo. */
-function recortarBloque(cuerpo: string, etiqueta: RegExp): { valor: string | null; resto: string } {
-  const m = cuerpo.match(etiqueta);
-  if (!m || m.index === undefined) return { valor: null, resto: cuerpo };
-  const resto = (cuerpo.slice(0, m.index) + cuerpo.slice(m.index + m[0].length)).trim();
-  return { valor: m[0].trim(), resto };
-}
-
-function parsearSeccion(tituloCrudo: string, contenido: string): Seccion {
-  const mEtapa = tituloCrudo.match(/^Etapa\s+(\d+)\s*[:.·-]?\s*(.*)$/i);
-  const numero = mEtapa ? mEtapa[1].padStart(2, "0") : null;
-  const titulo = (mEtapa ? mEtapa[2].trim() : tituloCrudo) || tituloCrudo;
-  const esCierre = /sosten|n[úu]meros|no cubr|qu[ée] sigue/i.test(tituloCrudo);
-
-  let cuerpo = contenido.replace(/\n---\s*$/g, "\n").trim();
-
-  // 1) La acción concreta del tramo (va al final): "Esta semana" o su
-  //    equivalente en la sección de números ("El lunes que viene").
-  const RE_SEMANA = /\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*[\s\S]*?(?=\n\s*\n|$)/i;
-  const es = recortarBloque(cuerpo, RE_SEMANA);
-  cuerpo = es.resto;
-  const estaSemana = es.valor
-    ? es.valor.replace(/^\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*\s*/i, "").trim()
-    : null;
-
-  // 2) "Entregable" — el artefacto que queda.
-  const ent = recortarBloque(cuerpo, /\*\*Entregable:?\*\*[\s\S]*?(?=\n\s*\n|$)/);
-  cuerpo = ent.resto;
-  const entregable = ent.valor ? ent.valor.replace(/^\*\*Entregable:?\*\*\s*/i, "").trim() : null;
-
-  // 3) Pasos (C8): CUALQUIER "**...Pasos...:**" abre un bloque; una lista suelta
-  //    cae en un bloque sin label. Todo lo demás (incluidas notas en negrita
-  //    como "**Nota crítica:**") es descripción/prosa. Así los pasos reciben el
-  //    mismo punto+línea vengan numerados, con viñetas, o en varios sub-bloques.
-  const bloquesPasos: BloquePasos[] = [];
-  const descripLineas: string[] = [];
-  let bloque: BloquePasos | null = null;
-  const esItem = (l: string) => /^\s*(?:\d+[.)]|[-*])\s+/.test(l);
-  for (const linea of cuerpo.split("\n")) {
-    const lab = linea.match(/^\s*\*\*\s*([^*]*[Pp]asos[^*]*?)\s*:?\s*\*\*\s*(.*)$/);
-    if (lab) {
-      bloque = { label: lab[1].trim(), pasos: [] };
-      bloquesPasos.push(bloque);
-      if (lab[2]?.trim()) bloque.pasos.push(lab[2].trim());
-      continue;
-    }
-    if (esItem(linea)) {
-      if (!bloque) {
-        bloque = { label: null, pasos: [] };
-        bloquesPasos.push(bloque);
-      }
-      bloque.pasos.push(linea.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim());
-      continue;
-    }
-    bloque = null; // una línea no-lista cierra el bloque de pasos
-    if (linea.trim()) descripLineas.push(linea);
-  }
-  for (const b of bloquesPasos) b.pasos = b.pasos.filter(Boolean);
-
-  return {
-    titulo,
-    numero,
-    tipo: numero ? "etapa" : esCierre ? "cierre" : "otro",
-    descripcion: descripLineas.join("\n").trim(),
-    bloquesPasos: bloquesPasos.filter((b) => b.pasos.length > 0),
-    entregable,
-    estaSemana,
-  };
-}
-
-function parsearPlan(md: string): PlanParseado {
-  let etiqueta: string | null = null;
-  let pie: string | null = null;
-  const cuerpo: string[] = [];
-  for (const linea of md.split("\n")) {
-    const l = linea.trim();
-    if (!etiqueta && /^_Plan (completo|inicial|de seguimiento|seguimiento)_$/i.test(l)) {
-      etiqueta = l.replaceAll("_", "");
-      continue;
-    }
-    if (!pie && /^_Este plan se aliment/i.test(l)) {
-      pie = l.replaceAll("_", "");
-      continue;
-    }
-    cuerpo.push(linea);
-  }
-
-  let titulo: string | null = null;
-  const intro: string[] = [];
-  const rawSecc: { titulo: string; contenido: string }[] = [];
-  let actual: { titulo: string; contenido: string } | null = null;
-  for (const linea of cuerpo) {
-    // El primer encabezado (# o ##) es el TÍTULO del plan; su cuerpo, la intro.
-    if (!titulo) {
-      const h = linea.match(/^#{1,2}\s+(.+)$/);
-      if (h) {
-        titulo = h[1].trim();
-        continue;
-      }
-      intro.push(linea);
-      continue;
-    }
-    const h2 = linea.match(/^##\s+(.+)$/);
-    if (h2) {
-      actual = { titulo: h2[1].trim(), contenido: "" };
-      rawSecc.push(actual);
-      continue;
-    }
-    if (actual) actual.contenido += linea + "\n";
-    else intro.push(linea);
-  }
-
-  const secciones = rawSecc.map((s) => parsearSeccion(s.titulo, s.contenido));
-  const introTxt = intro.join("\n").replace(/\n---\s*$/g, "").trim();
-  return { etiqueta, titulo, intro: introTxt, secciones, pie };
-}
 
 function descargarMd(md: string, nombre: string) {
   const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
@@ -176,15 +34,22 @@ function PasosLista({ pasos }: { pasos: string[] }) {
       {pasos.map((p, i) => (
         <li key={i} className="relative flex gap-3 pb-3 last:pb-0">
           <span aria-hidden className="relative flex-none">
-            <span className="mt-[5px] block h-1.5 w-1.5 rounded-full bg-accent" />
+            {/* El punto va al centro óptico de la PRIMERA línea del texto:
+                13.5px x 1.6 de interlineado = 21.6px de caja, punto de 6px ->
+                (21.6-6)/2 ~= 8px. Antes iba a 5px y ademas el <p> del Markdown
+                empujaba el texto 10px hacia abajo: de ahi el desalineo. */}
+            <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-accent" />
             {i < pasos.length - 1 && (
+              // del borde inferior de este punto al borde superior del siguiente
               <span
-                className="absolute left-[2.5px] top-3 w-px"
-                style={{ bottom: "-4px", background: "rgba(77,124,254,0.28)" }}
+                className="absolute left-[2.5px] top-4 w-px"
+                style={{ bottom: "-8px", background: "rgba(77,124,254,0.28)" }}
               />
             )}
           </span>
-          <span className="min-w-0 flex-1 text-[13.5px] leading-[1.6] text-dim [text-wrap:pretty]">
+          {/* [&_p]:!my-0 neutraliza el margen del parrafo del Markdown, que es
+              lo que descuadraba el punto contra el texto. */}
+          <span className="min-w-0 flex-1 text-[13.5px] leading-[1.6] text-dim [text-wrap:pretty] [&_p]:!my-0">
             <Markdown>{p}</Markdown>
           </span>
         </li>
