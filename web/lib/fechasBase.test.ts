@@ -13,7 +13,7 @@
 //     Sem del 16-mar: lun 16 ... vie 20
 //     Sem del 23-mar: lun 23 ... vie 27
 import { describe, expect, it } from "vitest";
-import { diaDominante, sugerirFechasBase } from "./fechasBase";
+import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "./fechasBase";
 
 const BASE = "2026-03-02T10:00:00"; // lunes 2 de marzo 2026, local
 
@@ -89,5 +89,53 @@ describe("diaDominante — patrón de día de cierre", () => {
       "2026-03-13T09:00:00",
     ]);
     expect(dia).toBe(6);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Fase 4.0 §1[8] — el sugeridor del ciclo N+1 aprende la VELOCIDAD real del
+// ciclo N. Antes la cadencia era fija (1 etapa = 1 semana) y le volvia a
+// prometer una semana a quien tardaba tres. Calculos a mano ANTES del assert.
+// ---------------------------------------------------------------------------
+describe("cadenciaRealSemanas (Fase 4.0)", () => {
+  it("sin datos, la cadencia de siempre: 1 semana por etapa", () => {
+    expect(cadenciaRealSemanas([])).toBe(1);
+    expect(cadenciaRealSemanas([{ etapa: 1, dias: 0 }])).toBe(1);
+  });
+
+  it("un usuario de ~1 semana por etapa se queda en 1", () => {
+    // dias: 7 y 8 -> media 7.5 -> 7.5/7 = 1.07 -> redondea a 1
+    expect(cadenciaRealSemanas([{ etapa: 1, dias: 7 }, { etapa: 2, dias: 8 }])).toBe(1);
+  });
+
+  it("un usuario de tres semanas por etapa recibe 3", () => {
+    // dias: 18 y 24 -> media 21 -> 21/7 = 3 exacto
+    expect(cadenciaRealSemanas([{ etapa: 1, dias: 18 }, { etapa: 2, dias: 24 }])).toBe(3);
+  });
+
+  it("se acota a 6 aunque el dato sea extremo", () => {
+    // 365 dias/etapa -> 52 semanas -> tope 6
+    expect(cadenciaRealSemanas([{ etapa: 1, dias: 365 }])).toBe(6);
+  });
+});
+
+describe("sugerirFechasBase — la cadencia aprendida espacia las etapas", () => {
+  // plan nace el jueves 2026-03-05. Cadencia 1 (default): etapa 1 -> viernes de
+  // la semana +1 = 2026-03-13; etapa 2 -> viernes +2 = 2026-03-20.
+  const items = [
+    { id: "a", etapa: 1, destacado: false },
+    { id: "b", etapa: 2, destacado: false },
+  ];
+
+  it("con cadencia 1 (default) mantiene el comportamiento de siempre", () => {
+    const r = sugerirFechasBase({ planCreatedAt: "2026-03-05T12:00:00Z", items });
+    expect(r.map((f) => f.fecha)).toEqual(["2026-03-13", "2026-03-20"]);
+  });
+
+  it("con cadencia 3, la etapa 1 cae a 3 semanas y la etapa 2 a 6", () => {
+    // etapa 1 -> viernes de la semana +3 = 2026-03-27
+    // etapa 2 -> viernes de la semana +6 = 2026-04-17
+    const r = sugerirFechasBase({ planCreatedAt: "2026-03-05T12:00:00Z", items, cadenciaSemanas: 3 });
+    expect(r.map((f) => f.fecha)).toEqual(["2026-03-27", "2026-04-17"]);
   });
 });

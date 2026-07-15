@@ -13,12 +13,12 @@
  * del plan ("## Etapa N: título"); si el plan no los trae, se muestra
  * solo el número. Nada se anima sin un evento real detrás.
  */
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
 import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
-import { diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
+import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 
 export interface ItemChecklistUI {
@@ -588,6 +588,7 @@ function RitualFechas({
   items,
   titulos,
   planCreatedAt,
+  cadenciaSemanas,
   soloPendientes,
   guardando,
   error,
@@ -602,6 +603,8 @@ function RitualFechas({
   error: string | null;
   onAceptar: (fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) => void;
   onPosponer: () => void;
+  /** Fase 4.0 §1[8]: semanas por etapa aprendidas del ciclo previo. */
+  cadenciaSemanas?: number;
 }) {
   const diaPreferido = useMemo(() => diaDominante(items.map((i) => i.completed_at)), [items]);
   const sugeridas = useMemo(
@@ -610,10 +613,11 @@ function RitualFechas({
         sugerirFechasBase({
           planCreatedAt,
           diaPreferido,
+          cadenciaSemanas,
           items: items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
         }).map((s) => [s.id, s.fecha])
       ),
-    [items, planCreatedAt, diaPreferido]
+    [items, planCreatedAt, diaPreferido, cadenciaSemanas]
   );
   // Fecha vigente por ítem (YYYY-MM-DD) y qué ítems tocó el usuario (=ajustada).
   const [fechas, setFechas] = useState<Record<string, string>>(sugeridas);
@@ -769,6 +773,29 @@ export function ManosALaObra({
   const [errorRitual, setErrorRitual] = useState<string | null>(null);
   const [guardandoModo, setGuardandoModo] = useState(false);
   // Fase 3.8 §4 — ritual de la línea base
+  // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
+  // real por etapa la calcula analytics.ts (§6: la única calculadora del
+  // tiempo); aquí solo se deriva la cadencia. /analisis es cero-LLM, cero costo.
+  const [cadenciaSemanas, setCadenciaSemanas] = useState(1);
+  useEffect(() => {
+    let vivo = true;
+    (async () => {
+      try {
+        const res = await fetch(`/api/project/${projectId}/analisis`);
+        if (!res.ok) return;
+        const d = (await res.json()) as {
+          analytics?: { universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> } };
+        };
+        if (vivo) setCadenciaSemanas(cadenciaRealSemanas(d.analytics?.universal?.duracionPorEtapa ?? []));
+      } catch {
+        /* sin datos: se queda la cadencia por defecto (1 semana por etapa) */
+      }
+    })();
+    return () => {
+      vivo = false;
+    };
+  }, [projectId]);
+
   const [pospuesto, setPospuesto] = useState(false);
   const [recalcularPendientes, setRecalcularPendientes] = useState(false);
   const [guardandoBaseline, setGuardandoBaseline] = useState(false);
@@ -970,6 +997,7 @@ export function ManosALaObra({
             items={recalcularPendientes ? itemsCore.filter((i) => i.estado !== "hecho") : itemsCore}
             titulos={titulosCore}
             planCreatedAt={planCreatedAt}
+            cadenciaSemanas={cadenciaSemanas}
             soloPendientes={recalcularPendientes}
             guardando={guardandoBaseline}
             error={errorBaseline}
