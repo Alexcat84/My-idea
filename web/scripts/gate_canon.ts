@@ -86,6 +86,18 @@ async function marcarHechoHoy(app: Page) {
   throw new Error("no apareció un nuevo 'hecho el' tras el PATCH: el ítem no quedó hecho");
 }
 
+/** Garantiza la vista Manos a la Obra, POR LA PUERTA (el CTA, sin teclear
+ * URLs). El gate navega mucho y varias ramas dejan la app en la vista del plan
+ * (p.ej. el respaldo de la verificacion C0 de los 6 mundos, que hace clic en
+ * "← Ver el plan"): quien necesite Manos, la pide con esto. */
+async function asegurarManos(app: Page) {
+  if (/vista=manos/.test(app.url())) return;
+  const irManos = app.getByRole("button", { name: "Pasar a Manos a la Obra" }).first();
+  await irManos.waitFor({ state: "visible", timeout: 15000 });
+  await irManos.click();
+  await app.waitForURL(/vista=manos/, { timeout: 30000 });
+}
+
 // label opcional: substring del data-screen-label a capturar. Sin él, el
 // primer frame que termina en "desktop" (varios canon tienen varias vistas;
 // p.ej. 10 tiene "Eleccion ... Desktop" y "Ritual ... desktop": hay que
@@ -225,6 +237,9 @@ async function main() {
   );
   if (!resUnlock.ok()) throw new Error(`GATE ROJO: el unlock del mundo respondio ${resUnlock.status()}`);
   await app.reload();
+  // La verificacion C0 de arriba pudo dejarnos en la vista del plan (su rama de
+  // respaldo hace clic en "← Ver el plan"): la seccion del mundo vive en Manos.
+  await asegurarManos(app);
 
   const explorarMundo = app.getByRole("button", { name: "Explorar este mundo" }).first();
   await explorarMundo.waitFor({ state: "visible", timeout: 30000 });
@@ -268,7 +283,12 @@ async function main() {
 
   // La seccion del mundo, ya con su checklist: es lo que el canon 08 muestra.
   await app.getByText("Calidad y Confianza", { exact: false }).first().waitFor({ timeout: 30000 });
-  const cerrarMundo = app.getByRole("button", { name: "Marcar este mundo como completado" });
+  // TODO lo del mundo se pide DENTRO de su seccion. "Contar qué pasó" existe dos
+  // veces en esta pantalla -- la del mundo y la del core, en el aside -- y el
+  // aside va DESPUES en el DOM: un .last() ciego abre el ritual del CORE y el
+  // gate captura la pantalla equivocada creyendo que capturo la buena.
+  const seccionMundo = app.locator("section").filter({ hasText: "Calidad y Confianza" }).first();
+  const cerrarMundo = seccionMundo.getByRole("button", { name: "Marcar este mundo como completado" });
   await cerrarMundo.waitFor({ state: "visible", timeout: 15000 });
   await capturar(app, "10_mundo_activo_app.png");
   await capturarCanon(canon, "08 - Mundos Activos.html", "10_mundo_activo_canon.png");
@@ -276,27 +296,26 @@ async function main() {
   // El ritual del mundo y su cierre: los dos estados nuevos de la 4.2. No hay
   // par de canon para ellos (el 08 es anterior a esta fase): se capturan solos,
   // para que el fundador los vea en el mismo barrido.
-  await app.getByRole("button", { name: "Contar qué pasó" }).last().click();
-  await app.getByText("Continuar Calidad y Confianza", { exact: false }).waitFor({ timeout: 15000 });
+  await seccionMundo.getByRole("button", { name: "Contar qué pasó" }).click();
+  // La prueba de que se abrio el del MUNDO y no el del core: su encabezado lo
+  // nombra. Si esto falla, la captura habria sido una mentira.
+  await seccionMundo.getByText("Continuar Calidad y Confianza", { exact: false }).waitFor({ timeout: 15000 });
   await capturar(app, "10b_mundo_ritual_app.png");
-  await app.getByRole("button", { name: "Cerrar" }).last().click();
+  await seccionMundo.getByRole("button", { name: "Cerrar" }).click();
 
   await cerrarMundo.click();
-  await app.getByText("¿Diste Calidad y Confianza por terminado?", { exact: false }).waitFor({ timeout: 15000 });
+  await seccionMundo
+    .getByText("¿Diste Calidad y Confianza por terminado?", { exact: false })
+    .waitFor({ timeout: 15000 });
   await capturar(app, "10c_mundo_cierre_app.png");
-  await app.getByRole("button", { name: "Todavía no" }).click();
+  await seccionMundo.getByRole("button", { name: "Todavía no" }).click();
 
   // ── Fase 3.8: el sentido del tiempo (canon 09/10/11) desde la sesión real.
   // Requiere la migración 018 aplicada. CERO swallow: cada paso espera lo suyo
   // y LANZA si falla -- el gate es un instrumento permanente, no un adorno.
 
   // asegurar la vista Manos (el bloque de mundos pudo volver al plan default)
-  if (!/vista=manos/.test(app.url())) {
-    const irManos = app.getByRole("button", { name: "Pasar a Manos a la Obra" }).first();
-    await irManos.waitFor({ state: "visible", timeout: 15000 });
-    await irManos.click();
-    await app.waitForURL(/vista=manos/, { timeout: 30000 });
-  }
+  await asegurarManos(app);
 
   // 06 Modo del camino (vista A): la tarjeta de elección en la primera entrada
   await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
