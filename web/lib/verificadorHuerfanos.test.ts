@@ -5,11 +5,35 @@
 import { describe, expect, it } from "vitest";
 import {
   cerraduraAritmetica,
+  detectarCifrasDeMercado,
   extraerNumeros,
   numerosDeCalculadora,
   numerosDeclarados,
   verificarNumerosHuerfanos,
 } from "./verificadorHuerfanos";
+
+describe("detectarCifrasDeMercado (Fase 3.9 D12)", () => {
+  it("caza una cifra de tamano de mercado disfrazada en un condicional", () => {
+    const texto = "Si en el pais hay 500 auditores certificados activos, el modelo tiene espacio.";
+    expect(detectarCifrasDeMercado(texto).map((c) => c.valor)).toContain("500");
+  });
+
+  it("no marca un numero de accion legitimo (5 personas, < 20)", () => {
+    const texto = "Entrevista a 5 personas de tu publico objetivo esta semana.";
+    expect(detectarCifrasDeMercado(texto)).toEqual([]);
+  });
+
+  it("no marca la forma correcta: manda a buscar el dato, sin cifra concreta", () => {
+    const texto = "Si en tu zona hay X auditores certificados (buscalo en el registro), hay espacio.";
+    expect(detectarCifrasDeMercado(texto)).toEqual([]);
+  });
+
+  it("emite el evento cifra_mercado_inventada al registrarEvento", () => {
+    const eventos: Record<string, unknown>[] = [];
+    detectarCifrasDeMercado("En el mercado nacional existen 12000 empresas objetivo.", (e) => eventos.push(e));
+    expect(eventos).toContainEqual(expect.objectContaining({ tipo: "cifra_mercado_inventada", valor: "12000" }));
+  });
+});
 
 describe("tolerancia de formato", () => {
   it("1.700 (miles, estilo hispano) normaliza a 1700", () => {

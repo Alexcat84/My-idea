@@ -122,6 +122,49 @@ export function numerosDeMaterial(textos: string[]): Set<number> {
   return numeros;
 }
 
+// Fase 3.9 (D12): cifras de tamano de mercado inventadas. El verificador de
+// huerfanos se acota a la seccion financiera; una cifra fabricada en una etapa
+// de estrategia ("si en el pais hay 500 auditores certificados activos") queda
+// fuera de su alcance, y ademas suele venir envuelta en un condicional que la
+// disfraza. Este detector escanea TODO el plan buscando el patron delator: un
+// numero concreto pegado a una ENTIDAD poblacional y a un MARCO de mercado/
+// geografia. La forma correcta (regla 15 del redactor) manda a buscar el dato
+// en el registro real y NO lleva cifra concreta, asi que no dispara. Señal de
+// triage, no bloquea (igual que los huerfanos).
+const ENTIDAD_MERCADO =
+  /\b(auditores?|empresas?|compan[ií]as?|personas?|clientes?|profesionales?|habitantes?|usuarios?|competidores?|certificados?|consumidores?|negocios?|pymes?|emprendedores?|proveedores?)\b/i;
+const MARCO_MERCADO =
+  /\b(pa[ií]s|mercado|zona|regi[oó]n|ciudad|nacional|total|hay|existen?|activos?|estimad|poblaci[oó]n|millones?|mil(?:es)?)\b/i;
+
+export interface CifraMercado {
+  valor: string;
+  contexto: string;
+}
+
+/** Marca numeros que parecen cifras de tamano de mercado inventadas: un
+ * numeral (>= 20, para no confundir "entrevista a 5 personas" con "500
+ * auditores en el pais") cuyo contexto cercano trae a la vez una entidad
+ * poblacional y un marco de mercado/geografia. Devuelve uno por numero unico
+ * y, si se provee registrarEvento, emite 'cifra_mercado_inventada'. */
+export function detectarCifrasDeMercado(
+  texto: string,
+  registrarEvento?: (evento: Record<string, unknown>) => void
+): CifraMercado[] {
+  const encontrados: CifraMercado[] = [];
+  const vistos = new Set<string>();
+  for (const { valor, token, contexto } of extraerNumeros(texto)) {
+    if (Math.abs(valor) < 20 || token.includes("%") || token.includes("$")) continue;
+    if (!ENTIDAD_MERCADO.test(contexto) || !MARCO_MERCADO.test(contexto)) continue;
+    const clave = `${token}|${contexto}`;
+    if (vistos.has(clave)) continue;
+    vistos.add(clave);
+    const cifra = { valor: token, contexto };
+    encontrados.push(cifra);
+    registrarEvento?.({ tipo: "cifra_mercado_inventada", ...cifra });
+  }
+  return encontrados;
+}
+
 function pertenece(valor: number, permitidos: Set<number>): boolean {
   for (const p of permitidos) {
     if (Math.abs(valor - p) <= TOLERANCIA) return true;
