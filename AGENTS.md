@@ -103,3 +103,31 @@ rota en vez de solo crear).
 secreto ya committeado: (1) sacarlo del código, (2) rotarlo en el
 servicio de origen, (3) verificar que el flujo sigue vivo con el valor
 nuevo — en ese orden, el mismo día.
+
+## La etiqueta enamora, el título respalda (superficies de navegación)
+
+**Regla:** en las SUPERFICIES DE NAVEGACIÓN del recorrido (el riel del
+árbol, el cintillo de la tarjeta de pregunta, cualquier lista de nodos por
+la que el usuario "viaja") lo único que se muestra es la `etiqueta_arbol`
+(4-5 palabras, segunda persona, generada para enamorar). El
+`titulo_concepto` (el nombre del libro/marco: "Leap of Faith Assumptions",
+"Build-Measure-Learn") aparece SOLO en el DETALLE de un nodo, junto a su
+fuente, y en tooltips de respaldo. Fallback al título si faltara la
+etiqueta. El helper único es `etiquetaArbol(nid, graph)` en
+`web/lib/engine/graph.ts` — úsalo en todo constructor de nodo de árbol.
+
+**Por qué:** en la Fase 3.9, la sesión real del fundador (auditor HSEQ)
+mostró el riel y el cintillo con `titulo_concepto` verbatim — jerga y
+anglicismos crudos ("earlyvangelists", "Customer Development") en la
+superficie más visible del producto. Los 3,260 `etiqueta_arbol` que se
+generaron por $3.44 estaban sin usar en las dos superficies que más
+importan: `recorrido.ts` devolvía `titulo_concepto` y la UI lo pintaba tal
+cual. Una etiqueta corta y en segunda persona es la diferencia entre un
+producto que habla contigo y uno que te recita una bibliografía.
+
+**Cómo aplicarla:** cualquier objeto de nodo que llegue al riel/cintillo
+lleva AMBOS campos — `etiqueta` (para mostrar) y `titulo` (para el detalle
+y el tooltip). Nunca pintes `titulo_concepto` directo en una superficie de
+navegación. Y en el redactor del plan: prohibido citar títulos de nodo
+verbatim cuando traen jerga o anglicismos; el plan habla español llano
+siempre.

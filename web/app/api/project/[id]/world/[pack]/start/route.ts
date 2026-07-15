@@ -21,7 +21,7 @@ import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
-import { cargarGrafo, cargarPreguntasCache, obtenerPregunta } from "@/lib/engine/graph";
+import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta } from "@/lib/engine/graph";
 import { estadoInicial } from "@/lib/engine/recorrido";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
@@ -153,6 +153,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const puerta = {
     id: brecha.semillaId,
     titulo: graph[brecha.semillaId]?.titulo_concepto ?? brecha.semillaId,
+    etiqueta: etiquetaArbol(brecha.semillaId, graph),
     modo: "conversado" as const,
   };
   return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [puerta]);

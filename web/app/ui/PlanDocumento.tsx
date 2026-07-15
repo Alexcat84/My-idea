@@ -16,12 +16,20 @@ import { Markdown } from "./Markdown";
 
 type TipoSeccion = "etapa" | "cierre" | "otro";
 
+/** Fase 3.9 C8: un bloque de pasos con su sub-encabezado (o null si la lista
+ * venía suelta). Varios por etapa: "Pasos para construir", "Pasos para
+ * atacarlo", etc. — todos con el MISMO tratamiento visual de puntos + línea. */
+interface BloquePasos {
+  label: string | null;
+  pasos: string[];
+}
+
 interface Seccion {
   titulo: string;
   numero: string | null;
   tipo: TipoSeccion;
   descripcion: string;
-  pasos: string[];
+  bloquesPasos: BloquePasos[];
   entregable: string | null;
   estaSemana: string | null;
 }
@@ -50,36 +58,55 @@ function parsearSeccion(tituloCrudo: string, contenido: string): Seccion {
 
   let cuerpo = contenido.replace(/\n---\s*$/g, "\n").trim();
 
-  // 1) "Esta semana" — la acción concreta del tramo (va al final).
-  const es = recortarBloque(cuerpo, /\*\*Esta semana:?\*\*[\s\S]*?(?=\n\s*\n|$)/);
+  // 1) La acción concreta del tramo (va al final): "Esta semana" o su
+  //    equivalente en la sección de números ("El lunes que viene").
+  const RE_SEMANA = /\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*[\s\S]*?(?=\n\s*\n|$)/i;
+  const es = recortarBloque(cuerpo, RE_SEMANA);
   cuerpo = es.resto;
-  const estaSemana = es.valor ? es.valor.replace(/^\*\*Esta semana:?\*\*\s*/i, "").trim() : null;
+  const estaSemana = es.valor
+    ? es.valor.replace(/^\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*\s*/i, "").trim()
+    : null;
 
   // 2) "Entregable" — el artefacto que queda.
   const ent = recortarBloque(cuerpo, /\*\*Entregable:?\*\*[\s\S]*?(?=\n\s*\n|$)/);
   cuerpo = ent.resto;
   const entregable = ent.valor ? ent.valor.replace(/^\*\*Entregable:?\*\*\s*/i, "").trim() : null;
 
-  // 3) "Pasos" — tras quitar Entregable/Esta semana, lo que sigue a **Pasos:**
-  //    es la lista; lo anterior es la descripción.
-  let pasos: string[] = [];
-  const idxPasos = cuerpo.search(/\*\*Pasos:?\*\*/i);
-  let descripcion = cuerpo;
-  if (idxPasos >= 0) {
-    descripcion = cuerpo.slice(0, idxPasos).trim();
-    const listaRaw = cuerpo.slice(idxPasos).replace(/^\*\*Pasos:?\*\*\s*/i, "");
-    pasos = listaRaw
-      .split(/\n/)
-      .map((l) => l.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim())
-      .filter(Boolean);
+  // 3) Pasos (C8): CUALQUIER "**...Pasos...:**" abre un bloque; una lista suelta
+  //    cae en un bloque sin label. Todo lo demás (incluidas notas en negrita
+  //    como "**Nota crítica:**") es descripción/prosa. Así los pasos reciben el
+  //    mismo punto+línea vengan numerados, con viñetas, o en varios sub-bloques.
+  const bloquesPasos: BloquePasos[] = [];
+  const descripLineas: string[] = [];
+  let bloque: BloquePasos | null = null;
+  const esItem = (l: string) => /^\s*(?:\d+[.)]|[-*])\s+/.test(l);
+  for (const linea of cuerpo.split("\n")) {
+    const lab = linea.match(/^\s*\*\*\s*([^*]*[Pp]asos[^*]*?)\s*:?\s*\*\*\s*(.*)$/);
+    if (lab) {
+      bloque = { label: lab[1].trim(), pasos: [] };
+      bloquesPasos.push(bloque);
+      if (lab[2]?.trim()) bloque.pasos.push(lab[2].trim());
+      continue;
+    }
+    if (esItem(linea)) {
+      if (!bloque) {
+        bloque = { label: null, pasos: [] };
+        bloquesPasos.push(bloque);
+      }
+      bloque.pasos.push(linea.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim());
+      continue;
+    }
+    bloque = null; // una línea no-lista cierra el bloque de pasos
+    if (linea.trim()) descripLineas.push(linea);
   }
+  for (const b of bloquesPasos) b.pasos = b.pasos.filter(Boolean);
 
   return {
     titulo,
     numero,
     tipo: numero ? "etapa" : esCierre ? "cierre" : "otro",
-    descripcion: descripcion.trim(),
-    pasos,
+    descripcion: descripLineas.join("\n").trim(),
+    bloquesPasos: bloquesPasos.filter((b) => b.pasos.length > 0),
     entregable,
     estaSemana,
   };
@@ -239,16 +266,18 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
       </summary>
       <div className="flex flex-col gap-4 px-6 pb-[22px] pt-1">
         {s.descripcion && (
-          <div className="text-sm leading-[1.65] text-dim [text-wrap:pretty]">
+          // C7: prosa justificada con partición (lang="es" en el layout); C10:
+          // cuerpo legible (gris claro, no el dim tenue), jerarquía por tamaño.
+          <div className="text-[14.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]">
             <Markdown>{s.descripcion}</Markdown>
           </div>
         )}
-        {s.pasos.length > 0 && (
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">Pasos</p>
-            <PasosLista pasos={s.pasos} />
+        {s.bloquesPasos.map((b, bi) => (
+          <div key={bi}>
+            <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">{b.label ?? "Pasos"}</p>
+            <PasosLista pasos={b.pasos} />
           </div>
-        )}
+        ))}
         {s.entregable && (
           <div className="rounded-[10px] border border-hairline px-4 py-3" style={{ background: "#141419" }}>
             <p className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-accent">Entregable</p>
@@ -309,7 +338,7 @@ export function PlanDocumento({
         </h2>
       )}
       {plan.intro && (
-        <div className="anima-plan-in mt-3.5 max-w-[600px] text-[15.5px] leading-[1.7] text-dim [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
+        <div className="anima-plan-in mt-3.5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
           <Markdown>{plan.intro}</Markdown>
         </div>
       )}

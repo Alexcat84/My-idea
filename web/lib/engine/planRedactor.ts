@@ -30,7 +30,14 @@ import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAM
 import { dominioPermitido, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
-import { cerraduraAritmetica, numerosDeMaterial, numerosDeclarados, verificarNumerosHuerfanos } from "../verificadorHuerfanos";
+import {
+  cerraduraAritmetica,
+  detectarCifrasDeMercado,
+  numerosDeMaterial,
+  numerosDeclarados,
+  verificarNumerosHuerfanos,
+} from "../verificadorHuerfanos";
+import { detectarFaltaDeAcentos } from "../detectorAcentos";
 
 export { SECCION_ECONOMICA_TITULO };
 
@@ -519,6 +526,18 @@ export function finalizarPlan(
       new Set([...numerosDeclarados(numerosProyecto), ...numerosDeMaterial(textosMaterial)])
     );
     verificarNumerosHuerfanos(seccionEconomica, numerosPermitidosPlan, registrarEvento);
+  }
+
+  // Fase 3.9 (D12): cifras de tamano de mercado inventadas, en TODO el plan
+  // (viven en etapas de estrategia, fuera de la seccion financiera, disfrazadas
+  // en condicionales). Señal de triage.
+  detectarCifrasDeMercado(cuerpo, registrarEvento);
+
+  // Fase 3.9 (D11): salida sin acentos (el prompt va sin tildes y el modelo lo
+  // imita). Un solo evento con la muestra de palabras sospechosas.
+  const sinAcentos = detectarFaltaDeAcentos(cuerpo);
+  if (sinAcentos.length > 0) {
+    registrarEvento?.({ tipo: "salida_sin_acentos", muestra: sinAcentos.slice(0, 12), total: sinAcentos.length });
   }
 
   const etiqueta = evaluacionCobertura.es_completa ? "Plan completo" : "Plan inicial";
