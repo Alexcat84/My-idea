@@ -32,10 +32,10 @@ const BASE: EntradaAnalytics = {
   ],
   mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-20") }],
   items: [
-    { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, completed_at: iso("2026-03-10"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
-    { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, completed_at: iso("2026-03-13"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
-    { plan_id: "p1", etapa: 2, estado: "hecho", destacado: false, completed_at: iso("2026-03-20"), fecha_base: iso("2026-03-22"), fecha_base_original: null },
-    { plan_id: "p1", etapa: 2, estado: "hecho", destacado: false, completed_at: iso("2026-03-25"), fecha_base: iso("2026-03-25"), fecha_base_original: iso("2026-03-20") },
+    { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "A", completed_at: iso("2026-03-10"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
+    { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "B", completed_at: iso("2026-03-13"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
+    { plan_id: "p1", etapa: 2, estado: "hecho", destacado: false, texto: "C", completed_at: iso("2026-03-20"), fecha_base: iso("2026-03-22"), fecha_base_original: null },
+    { plan_id: "p1", etapa: 2, estado: "hecho", destacado: false, texto: "D", completed_at: iso("2026-03-25"), fecha_base: iso("2026-03-25"), fecha_base_original: iso("2026-03-20") },
   ],
 };
 
@@ -125,5 +125,67 @@ describe("construirHitos", () => {
   it("incluirAcciones suma un hito por ítem completado (4 acciones)", () => {
     const h = construirHitos(BASE, iso("2026-05-01"), true);
     expect(h.filter((x) => x.tipo === "accion")).toHaveLength(4);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Fase 4.0 §3 — lo que el BLOQUE DE REALIDAD necesita y antes no se calculaba.
+// Todo a mano sobre el MISMO proyecto sembrado arriba.
+// ---------------------------------------------------------------------------
+describe("calcularAnalytics — señales para el bloque de realidad (§3)", () => {
+  it("diasSinAvance: del ultimo completed_at al fin", () => {
+    // ultimo avance = D @ 03-25. fin = realizada @ 05-01.
+    // 03-25 -> 04-25 = 31 dias; 04-25 -> 05-01 = 6 dias; 31+6 = 37.
+    expect(calcularAnalytics(BASE).universal.diasSinAvance).toBe(37);
+  });
+
+  it("diasSinAvance es null si nunca hubo un avance", () => {
+    const sinAvance = { ...BASE, items: BASE.items.map((i) => ({ ...i, completed_at: null })) };
+    expect(calcularAnalytics(sinAvance).universal.diasSinAvance).toBeNull();
+  });
+
+  it("vida del plan vigente: el ultimo plan por created_at (p2)", () => {
+    const u = calcularAnalytics(BASE).universal;
+    // p2 nacio 04-01; fin 05-01; abril tiene 30 dias -> 30.
+    expect(u.planVigenteAt).toBe(iso("2026-04-01"));
+    expect(u.diasDeVidaPlanVigente).toBe(30);
+  });
+
+  it("tardiasTop: solo B, con sus 3 dias de retraso y su etapa", () => {
+    // De los 4 items, el unico tardio es B (base 03-10, hecho 03-13 -> +3).
+    expect(calcularAnalytics(BASE).cumplimiento?.tardiasTop).toEqual([
+      { texto: "B", etapa: 1, diasRetraso: 3 },
+    ]);
+  });
+
+  it("tardiasTop ordena por retraso descendente y corta en 5", () => {
+    const seis = Array.from({ length: 6 }, (_, k) => ({
+      plan_id: "p1",
+      etapa: 1,
+      estado: "hecho",
+      destacado: false,
+      texto: `T${k}`,
+      // base 03-10; hecho 03-(11+k) -> retraso 1+k dias (k=0 -> +1 = a tiempo)
+      completed_at: iso(`2026-03-${String(11 + k).padStart(2, "0")}`),
+      fecha_base: iso("2026-03-10"),
+      fecha_base_original: null,
+    }));
+    const top = calcularAnalytics({ ...BASE, items: seis }).cumplimiento!.tardiasTop;
+    // k=0 (+1) es "a tiempo" y NO entra; quedan k=1..5 -> retrasos 2,3,4,5,6.
+    // Orden descendente: 6,5,4,3,2 (T5,T4,T3,T2,T1). Son 5: no se corta nada.
+    expect(top.map((t) => t.diasRetraso)).toEqual([6, 5, 4, 3, 2]);
+    expect(top[0].texto).toBe("T5");
+  });
+
+  it("replanificados: CUALES movieron su fecha, no solo cuantos", () => {
+    const c = calcularAnalytics(BASE).cumplimiento!;
+    expect(c.replanificaciones).toBe(1);
+    expect(c.replanificados).toEqual([{ texto: "D", etapa: 2 }]);
+  });
+
+  it("el modo del camino se arrastra tal cual", () => {
+    expect(calcularAnalytics(BASE).modoCamino).toBeNull();
+    expect(calcularAnalytics({ ...BASE, modoCamino: "fechas" }).modoCamino).toBe("fechas");
+    expect(calcularAnalytics({ ...BASE, modoCamino: "ritmo" }).modoCamino).toBe("ritmo");
   });
 });

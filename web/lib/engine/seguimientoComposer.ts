@@ -19,6 +19,9 @@ export interface EntradaSeguimiento {
   items: ItemParaComponer[];
   detalles?: string | null; // "¿Algo más que deba saber?"
   enfoque?: string | null; // "¿Hacia dónde profundizamos?" (null = "No estoy seguro")
+  /** Fase 4.0 §3: el BLOQUE DE REALIDAD (construirBloqueRealidad), ya
+   * redactado desde analytics.ts. null si no hay nada medido todavía. */
+  bloqueRealidad?: string | null;
 }
 
 const ETIQUETA: Record<ChecklistEstado, string> = {
@@ -51,6 +54,10 @@ export function componerMensajeSeguimiento(e: EntradaSeguimiento): string {
   }
   const detalles = e.detalles?.trim();
   if (detalles) partes.push(`Además: ${detalles}`);
+  // Fase 4.0 §3: la realidad medida va ANTES del enfoque — el motor lee el
+  // tiempo real (cumplimiento, atascos, ritmo) y no solo lo que marqué.
+  const bloque = e.bloqueRealidad?.trim();
+  if (bloque) partes.push("", bloque, "");
   const enfoque = e.enfoque?.trim();
   partes.push(
     enfoque

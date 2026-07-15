@@ -58,6 +58,9 @@ export interface EntradaAnalytics {
   /** TODOS los ítems core (de todos los ciclos): el trabajo real del viaje */
   items: ItemAnalytics[];
   mundos: MundoAnalytics[];
+  /** Fase 4.0 §3: el modo del camino viaja con la lectura — el bloque de
+   * realidad NO habla de cumplimiento si el usuario eligió "a mi ritmo". */
+  modoCamino?: "ritmo" | "fechas" | null;
   /** ancla de "ahora" para tests deterministas (default: Date.now) */
   ahora?: string;
 }
@@ -91,6 +94,12 @@ export interface CapaUniversal {
   ciclosDePlan: number;
   mundos: number;
   duracionPorEtapa: Array<{ etapa: number; dias: number }>;
+  /** Fase 4.0 §3 (ritmo real): días desde el último avance. null si nunca hubo
+   * uno. Un usuario que no toca el checklist en 30 días es otro contexto. */
+  diasSinAvance: number | null;
+  /** Fase 4.0 §3 (ciclo): cuándo nació el plan vigente y cuánto lleva vivo. */
+  planVigenteAt: string | null;
+  diasDeVidaPlanVigente: number;
 }
 
 export interface CapaCumplimiento {
@@ -104,12 +113,21 @@ export interface CapaCumplimiento {
   desviacionMediaDias: number;
   replanificaciones: number;
   porEtapa: Array<{ etapa: number; baseDias: number | null; realDias: number | null }>;
+  /** Fase 4.0 §3 ("las tardías que importan"): los ítems más desviados, de
+   * mayor a menor retraso — el motor debe saber DÓNDE se atora el usuario. */
+  tardiasTop: Array<{ texto: string; etapa: number; diasRetraso: number }>;
+  /** Fase 4.0 §3: CUÁLES movieron su fecha (no solo cuántos): señal de que la
+   * línea base era irreal o de que la vida cambió. */
+  replanificados: Array<{ texto: string; etapa: number }>;
 }
 
 export interface Analytics {
   universal: CapaUniversal;
   cumplimiento: CapaCumplimiento | null;
   hitos: Hito[];
+  /** Fase 4.0 §3: se arrastra tal cual para que el bloque de realidad elija su
+   * lenguaje (con fechas: cumplimiento; a mi ritmo: solo duraciones y ritmo). */
+  modoCamino: "ritmo" | "fechas" | null;
 }
 
 /** El último plan con baseline confirmada (por created_at) — la base VIGENTE
@@ -182,6 +200,9 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
     total: itemsVigente.length,
   };
 
+  // Fase 4.0 §3: días desde el último avance y vida del plan vigente.
+  const ultimoAvance = completadas.length ? completadas.reduce((a, b) => (a > b ? a : b)) : null;
+
   const universal: CapaUniversal = {
     duracionTotalDias,
     accionesHechas,
@@ -191,6 +212,9 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
     ciclosDePlan: entrada.planesCore.length,
     mundos: entrada.mundos.length,
     duracionPorEtapa: duracionPorEtapa(entrada.items, chispa),
+    diasSinAvance: ultimoAvance ? Math.max(0, dias(ultimoAvance, fin)) : null,
+    planVigenteAt: planVigente?.created_at ?? null,
+    diasDeVidaPlanVigente: planVigente ? Math.max(0, dias(planVigente.created_at, fin)) : 0,
   };
 
   // Capa de cumplimiento: solo si algún plan tiene baseline confirmada.
@@ -241,11 +265,24 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
       desviacionMediaDias: total > 0 ? Math.round((sumaDesv / total) * 10) / 10 : 0,
       replanificaciones: delPlan.filter((i) => i.fecha_base_original).length,
       porEtapa,
+      // Las tardías que importan: mayor retraso primero, hasta 5.
+      tardiasTop: conFecha
+        .filter((i) => clasificarCumplimiento(i.completed_at!, i.fecha_base!) === "tardia")
+        .map((i) => ({
+          texto: i.texto ?? "",
+          etapa: i.etapa,
+          diasRetraso: Math.round(difDias(i.fecha_base!, i.completed_at!)),
+        }))
+        .sort((a, b) => b.diasRetraso - a.diasRetraso)
+        .slice(0, 5),
+      replanificados: delPlan
+        .filter((i) => i.fecha_base_original)
+        .map((i) => ({ texto: i.texto ?? "", etapa: i.etapa })),
     };
   }
 
   const hitos = construirHitos(entrada, ahora);
-  return { universal, cumplimiento, hitos };
+  return { universal, cumplimiento, hitos, modoCamino: entrada.modoCamino ?? null };
 }
 
 /** El timeline de Hitos (§5/§6), construido SOLO de lo persistido. Con
