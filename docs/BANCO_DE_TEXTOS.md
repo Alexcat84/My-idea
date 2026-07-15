@@ -41,6 +41,28 @@ Destino: `docs/BANCO_DE_TEXTOS.md` (versionado en el repo).
   - Riesgos Bajo Control: "Ve venir lo que puede fallar, y decide antes de que decida por ti."
 - Tus Números: "Tus cifras reales convertidas en margen, punto de equilibrio y escenarios."
 
+### 2.1 El cierre (proyecto y mundo) — Fase 4.0 §8 / Fase 4.2 §9.2
+
+El cierre es soberano: nunca se exige el 100%, el porqué siempre es opcional, y
+lo pendiente se nombra como testigo, jamás como deuda.
+
+- Proyecto: "¿Tu idea ya es un proyecto?" · "Cuando lo sientas real, ciérrala. No
+  hace falta terminar todo el checklist." · "Esto cierra tu idea y nace tu
+  proyecto. Podrás reabrirla cuando quieras." · "Sí, es un proyecto" / "Todavía
+  no" · "Las que queden pendientes se guardan tal cual: son parte de tu historia."
+- Mundo: "Marcar este mundo como completado" · "¿Diste {mundo} por terminado?
+  Podrás reabrirlo cuando quieras." · "Sí, lo doy por terminado" / "Todavía no" ·
+  "Cerrar este mundo no cierra tu idea." · "Reabrir este mundo" · "Si vuelves a
+  él, tu checklist te espera igual." · chip "Completado".
+- El porqué, en ambos: "¿Por qué la cierras aquí? (opcional, para tu propia
+  memoria)" · "La cierro porque…" / "Lo cierro porque…"
+- El ritual de seguimiento, en un mundo: "Continuar {mundo}" · "Contar qué pasó"
+  · "Continuar este mundo" · "¿Aún no arrancas con {mundo}? Cuéntame qué cambió
+  desde que armamos su plan."
+- El mundo SIEMPRE se nombra como el usuario lo conoce ("Calidad y Confianza"),
+  jamás por su clave técnica (`quality`). Regla dura: ninguna superficie —
+  pantalla, informe exportado, acta — puede filtrar una clave de dominio.
+
 ## 3. REGLAS DE VOZ (obligatorias en toda salida al usuario)
 
 - **Cero guiones largos o medios** (— –). Coma, dos puntos o punto.

@@ -152,3 +152,86 @@ pierde la mitad de la historia. El acta la conserva.
   marcan. Quedan como testigos honestos en la Historia (las notas por ítem ya
   existen para documentar casos puntuales como "no se pudo ejecutar completa,
   entregable aceptable").
+
+## 9. LOS MUNDOS COMO SUBPROYECTOS COMPLETOS (Fase 4.2)
+
+Decisión del fundador: **cada mundo tiene su propio seguimiento y su propio
+cierre, con los mismos parámetros que el viaje principal**. Un mundo se
+exploraba, se planificaba y se ejecutaba con su checklist, pero no podía ni
+replanificarse ni terminar: quedaba abierto para siempre.
+
+La regla que ordena toda la fase: **un mundo es un subproyecto, no una versión
+recortada del viaje principal.** De ahí sale todo lo demás — el mismo ritual, la
+misma capa de métricas, el mismo tipo de acta.
+
+### 9.1 El follow de mundo
+
+`POST /api/project/[id]/follow` recibe `dominio`. Sin él, es el follow de siempre
+(core). Con él, **todo lo que depende del dominio se mueve con él**:
+
+| Qué | Cómo |
+|---|---|
+| Los ítems del mensaje | `itemsDelUltimoPlanDe(filas, dominio)` — los del último plan **de ese mundo** |
+| El bloque de realidad | `construirBloqueRealidadMundo` — el cumplimiento **del mundo** contra **sus** fechas, más **UNA** línea de contexto global, rotulada |
+| La puerta | `seleccionarPuertaAvanzada` amurallada a los nodos del mundo |
+| La sesión | nace con `dominio=mundo` → su plan hereda el dominio y deriva checklist con él, encadenado en el grupo de ese mundo |
+
+**Lo que NO se mueve, a propósito:** la cosecha del vecindario sigue amurallada a
+`core + unlocks`, igual que en el plan original del mundo (`world/start:122`). El
+mundo no vive en el vacío: se construye sobre la idea.
+
+**Por qué la puerta la elige el intérprete y no `evaluacionBrecha`** (que es lo
+que hace `world/start`): en un seguimiento el mensaje **ya trae la realidad
+medida**, y esa es justo la señal con la que se debe elegir por dónde entrar. Es
+el mismo trato que recibe el core. Con un guardián: sin candidatos del mundo,
+`seleccionarPuertaAvanzada` caería a `entrySeeds[0]` — un nodo **core** — y el
+plan del mundo saldría explorando el viaje principal. Antes que eso, un 409 que
+dice la verdad.
+
+**La regla que el bloque de mundo existe para cumplir:** jamás presentarle al
+motor las tardanzas del core como si fueran del mundo. Del proyecto entra una
+sola línea, y va rotulada ("Contexto de mi proyecto (NO de este mundo)"). Sin esa
+línea el motor planificaría el mundo como si el resto de la vida del usuario no
+existiera; con más de una, volvería a confundirlos.
+
+El caso **avance-cero** (§4) y el **tono 8-bis** ("este ciclo asume tu ritmo
+real") aplican igual: son del ritual, no del core.
+
+### 9.2 El cierre de mundo (el acta en miniatura)
+
+Espejo exacto del §8, porque los parámetros son los mismos:
+
+- **Persistencia**: `project_unlocks.completado_at` + `cierre_motivo`
+  (migración 026). Sin tabla nueva: la fila del unlock **es** la presencia del
+  mundo en la idea, y su ciclo de vida completo cabe en ella. El evento
+  `mundo_completado` de `project_bitacora` lleva `{mundo, accion, motivo}`.
+- **No exige el checklist al 100%**, el motivo es **opcional** (texto/voz), y el
+  espejo del momento dice "X de N acciones de este mundo".
+- **Reversible** ("Reabrir este mundo"), y **reabrir no borra el motivo**.
+- **Los ítems pendientes quedan intactos**: testigos, no basura.
+- **Dónde aparece**: chip verde "Completado" en su sección y en la fila de
+  potenciadores; su hito en el timeline de la Celebración del proyecto
+  ("Mundo completado: Calidad y Confianza", con el matiz de los mundos `#3A9B8F`
+  y su motivo discreto); y el desglose por dominio del Análisis.
+- **Sobrio a propósito**: el cierre de un mundo es **un momento, no la fiesta**.
+  La Celebración grande — la constelación, el timeline con pulso, "aquí acaba tu
+  idea y nace tu proyecto" — sigue siendo **exclusiva del proyecto**.
+
+### 9.3 La jerarquía honesta
+
+Las dos direcciones, y ninguna es simétrica:
+
+- **Cerrar el PROYECTO con mundos abiertos es legítimo** — la soberanía del
+  usuario manda. Y por eso mismo el acta **lo dice**: "Calidad y Confianza: 3 de
+  5 (60%), abierta". No se esconde lo que el usuario decidió.
+- **Completar los mundos NO cierra el proyecto**, ni siquiera completándolos
+  todos. El cierre del proyecto es un acto aparte, del usuario, en su pantalla.
+  La ruta de cierre de mundo **jamás toca** `projects.realizada_at`.
+
+### 9.4 El cobro (cuando la ETAPA 2 despierte)
+
+El follow de mundo cuesta **2 créditos**, con el patrón de siempre: **verificar
+al inicio, descontar a la entrega**. Las dos anclas están en
+`follow/route.ts`, en sus puntos exactos — la verificación **después** de validar
+el mundo (verificar antes cobraría un 403), el descuento en la entrega del primer
+turno. El follow **core no cuesta créditos**: es el bucle del viaje principal.
