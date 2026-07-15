@@ -16,6 +16,8 @@ import { fechaHumanaCorta } from "@/lib/fechas";
 interface Respuesta {
   nombre: string;
   tiene_baseline: boolean;
+  /** Fase 4.0 §8: el porqué del cierre, en las palabras del usuario. */
+  cierre_motivo?: string | null;
   analytics: Analytics;
   hitosCelebracion: Hito[];
 }
@@ -222,6 +224,19 @@ export function Celebracion({
       {/* timeline fechado */}
       <section className="rounded-panel border border-hairline bg-surface p-6 sm:p-7">
         <Timeline hitos={datos.hitosCelebracion} onFin={() => setTerminado(true)} />
+        {/* Fase 4.0 §8: el acta, bajo el hito REALIZADA — discreta y en la
+            voz del usuario. Solo aparece cuando la animación terminó, para
+            no adelantarse al momento. */}
+        {terminado && datos.cierre_motivo && (
+          <figure className="anima-plan-in mx-auto mt-6 max-w-md border-t border-hairline pt-5 text-center">
+            <figcaption className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+              Por qué la cerraste aquí
+            </figcaption>
+            <blockquote className="text-[14px] leading-[1.7] text-ink [text-wrap:pretty]">
+              «{datos.cierre_motivo}»
+            </blockquote>
+          </figure>
+        )}
       </section>
 
       {/* estadísticas reales */}

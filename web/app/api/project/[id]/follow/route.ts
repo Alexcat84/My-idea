@@ -26,6 +26,9 @@ import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import type { ChecklistEstado } from "@/lib/dbContract";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
+import { calcularAnalytics } from "@/lib/analytics";
+import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
+import { construirBloqueRealidad } from "@/lib/engine/bloqueRealidad";
 import { seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { componerMensajeSeguimiento, type ItemParaComponer } from "@/lib/engine/seguimientoComposer";
@@ -103,7 +106,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       nota: (f.nota as string | null) ?? null,
     }));
 
-  const mensaje = componerMensajeSeguimiento({ items, detalles, enfoque });
+  // Fase 4.0 §3 (docs/FLUJO_TRACKING.md): el BLOQUE DE REALIDAD. Antes el
+  // follow solo mandaba lo que el usuario MARCO; el motor replanificaba ciego
+  // al tiempo. Ahora lee el mismo analytics.ts que el Analisis: cumplimiento,
+  // donde se atora, replanificaciones y ritmo real.
+  const bloqueRealidad = construirBloqueRealidad(
+    calcularAnalytics(await cargarEntradaAnalytics(supabase, projectId, proyecto))
+  );
+
+  const mensaje = componerMensajeSeguimiento({ items, detalles, enfoque, bloqueRealidad });
 
   // (b) Entrada de modo_seguir, línea por línea.
   const graph = cargarGrafo();

@@ -208,5 +208,15 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%risk_management%'
     )
 
+  UNION ALL
+  -- 025 · Phase 4.0 §8 acta de cierre: projects.cierre_motivo (el porque del
+  -- cierre, en las palabras del usuario). Nota: se salta 020-024, RESERVADAS
+  -- al frente de cuentas y creditos (rama cuentas-y-creditos, sin aplicar).
+  SELECT '025', 'projects.cierre_motivo (text)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='projects' AND column_name='cierre_motivo'
+    )
+
 ) checks
 ORDER BY num;

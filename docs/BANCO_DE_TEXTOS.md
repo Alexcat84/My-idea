@@ -54,7 +54,12 @@ Destino: `docs/BANCO_DE_TEXTOS.md` (versionado en el repo).
 - **Palabras de persona en los errores**: el usuario nunca ve maquinaria.
   Ej: "Se me cortó la conexión un momento. Tu avance está guardado."
 - **Espejo, jamás regaño**: las tardías en ámbar, nunca rojo; los datos se
-  muestran, no se juzgan.
+  muestran, no se juzgan. Vale **también puertas adentro**: el plan de
+  seguimiento ASUME la desviación, no la reprocha. Prohibido "vas tarde",
+  "te atrasaste", "no cumpliste", "deberías haber". El canon es: *"la etapa 2
+  tomó más de lo previsto; este ciclo asume tu ritmo real"*. Y a quien eligió
+  ir a su ritmo no se le habla de calendario: no se juzga contra fechas que
+  decidió no tener.
 - **La etiqueta enamora, el título respalda**: en navegación se muestra la
   etiqueta humana; el título del libro vive en el detalle, con su fuente.
 - **El azul piensa, el verde ejecuta.** (Regla de color del fundador.)

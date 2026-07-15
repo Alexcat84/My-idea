@@ -60,19 +60,38 @@ export interface FechaSugerida {
   fecha: string;
 }
 
+/**
+ * Fase 4.0 §1[8]: la cadencia REAL del ciclo previo, en semanas por etapa.
+ * Entra la `duracionPorEtapa` que ya calculó analytics.ts (aquí NO se recalcula
+ * nada: §6). Si el usuario tardó de verdad tres semanas por etapa, el ciclo
+ * nuevo deja de prometerle una: promete tres. Sin datos → 1 (el default de
+ * siempre). Se acota a [1, 6] para que una etapa rara (o un dato sucio) no
+ * dispare fechas absurdas a un año vista.
+ */
+export function cadenciaRealSemanas(duracionPorEtapa: Array<{ etapa: number; dias: number }>): number {
+  const dias = duracionPorEtapa.map((e) => e.dias).filter((d) => d > 0);
+  if (dias.length === 0) return 1;
+  const media = dias.reduce((a, b) => a + b, 0) / dias.length;
+  return Math.min(6, Math.max(1, Math.round(media / 7)));
+}
+
 /** Sugiere una fecha de calendario para cada ítem (determinístico). */
 export function sugerirFechasBase(opts: {
   planCreatedAt: string;
   items: ItemSugerible[];
   /** día preferido (0-6) derivado de completed_at previos; null = por defecto */
   diaPreferido?: number | null;
+  /** Fase 4.0: semanas por etapa aprendidas del ciclo previo (default 1). */
+  cadenciaSemanas?: number;
 }): FechaSugerida[] {
   const base = new Date(opts.planCreatedAt);
   const preferido = opts.diaPreferido ?? null;
+  const cadencia = Math.max(1, Math.round(opts.cadenciaSemanas ?? 1));
   return opts.items.map((it) => {
     // "Esta semana" → inicio (lunes); regular → viernes, o el día preferido.
     const weekday = it.destacado ? LUNES : preferido ?? VIERNES;
-    const objetivo = objetivoEnSemana(base, it.etapa, weekday);
+    // La etapa N cae a N x cadencia semanas: el espaciado aprende del ritmo real.
+    const objetivo = objetivoEnSemana(base, it.etapa * cadencia, weekday);
     return { id: it.id, fecha: fechaInputLocal(objetivo) };
   });
 }

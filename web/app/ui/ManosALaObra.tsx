@@ -13,12 +13,13 @@
  * del plan ("## Etapa N: título"); si el plan no los trae, se muestra
  * solo el número. Nada se anima sin un evento real detrás.
  */
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
+import { CampoConVoz } from "./CampoConVoz";
 import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
-import { diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
+import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 
 export interface ItemChecklistUI {
@@ -94,8 +95,6 @@ interface Props {
   onSeguimientoIniciado: (turno: unknown) => void;
   /** POST world/start devolvió el primer turno del mundo */
   onMundoIniciado: (turno: unknown, dominio: string) => void;
-  /** abrir el ritual directamente (CTA "Ajustar el plan" del plan) */
-  ritualAbierto?: boolean;
 }
 
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
@@ -372,7 +371,28 @@ function RitualContinuar({
         </button>
       </div>
 
-      {paso === 1 && (
+      {/* Fase 4.0 §4: el ritual NO exige avance mínimo (la realidad cambia antes
+          de ejecutar), pero SE ADAPTA. Con cero avance, "llevas 0 de 28" es
+          absurdo y desmoralizante: la pregunta cambia, la puerta no. */}
+      {paso === 1 && resumen.hechos === 0 && (
+        <>
+          <p className="text-[17px] font-medium leading-relaxed">
+            ¿Aún no arrancas? Cuéntame qué cambió desde que armamos el plan.
+          </p>
+          <p className="mt-2 text-sm text-dim">
+            A veces la realidad se mueve antes que uno: un proveedor que falla, algo que se cayó, una
+            oportunidad nueva. Si ya hiciste algo, márcalo arriba y lo tomo en cuenta.
+          </p>
+          <button
+            onClick={() => setPaso(2)}
+            className="mt-4 rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90"
+          >
+            Te cuento
+          </button>
+        </>
+      )}
+
+      {paso === 1 && resumen.hechos > 0 && (
         <>
           <p className="text-[17px] font-medium leading-relaxed">
             Tu checklist es tu historia: ¿ya refleja lo que hiciste?
@@ -569,6 +589,7 @@ function RitualFechas({
   items,
   titulos,
   planCreatedAt,
+  cadenciaSemanas,
   soloPendientes,
   guardando,
   error,
@@ -583,6 +604,8 @@ function RitualFechas({
   error: string | null;
   onAceptar: (fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) => void;
   onPosponer: () => void;
+  /** Fase 4.0 §1[8]: semanas por etapa aprendidas del ciclo previo. */
+  cadenciaSemanas?: number;
 }) {
   const diaPreferido = useMemo(() => diaDominante(items.map((i) => i.completed_at)), [items]);
   const sugeridas = useMemo(
@@ -591,10 +614,11 @@ function RitualFechas({
         sugerirFechasBase({
           planCreatedAt,
           diaPreferido,
+          cadenciaSemanas,
           items: items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
         }).map((s) => [s.id, s.fecha])
       ),
-    [items, planCreatedAt, diaPreferido]
+    [items, planCreatedAt, diaPreferido, cadenciaSemanas]
   );
   // Fecha vigente por ítem (YYYY-MM-DD) y qué ítems tocó el usuario (=ajustada).
   const [fechas, setFechas] = useState<Record<string, string>>(sugeridas);
@@ -739,9 +763,10 @@ export function ManosALaObra({
   onItemActualizado,
   onSeguimientoIniciado,
   onMundoIniciado,
-  ritualAbierto = false,
 }: Props) {
-  const [ritual, setRitual] = useState(ritualAbierto);
+  // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
+  // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
+  const [ritual, setRitual] = useState(false);
   const [ocupado, setOcupado] = useState(false);
   const [enviandoFollow, setEnviandoFollow] = useState(false);
   const [arrancandoMundo, setArrancandoMundo] = useState<string | null>(null);
@@ -749,10 +774,35 @@ export function ManosALaObra({
   const [errorRitual, setErrorRitual] = useState<string | null>(null);
   const [guardandoModo, setGuardandoModo] = useState(false);
   // Fase 3.8 §4 — ritual de la línea base
+  // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
+  // real por etapa la calcula analytics.ts (§6: la única calculadora del
+  // tiempo); aquí solo se deriva la cadencia. /analisis es cero-LLM, cero costo.
+  const [cadenciaSemanas, setCadenciaSemanas] = useState(1);
+  useEffect(() => {
+    let vivo = true;
+    (async () => {
+      try {
+        const res = await fetch(`/api/project/${projectId}/analisis`);
+        if (!res.ok) return;
+        const d = (await res.json()) as {
+          analytics?: { universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> } };
+        };
+        if (vivo) setCadenciaSemanas(cadenciaRealSemanas(d.analytics?.universal?.duracionPorEtapa ?? []));
+      } catch {
+        /* sin datos: se queda la cadencia por defecto (1 semana por etapa) */
+      }
+    })();
+    return () => {
+      vivo = false;
+    };
+  }, [projectId]);
+
   const [pospuesto, setPospuesto] = useState(false);
   const [recalcularPendientes, setRecalcularPendientes] = useState(false);
   const [guardandoBaseline, setGuardandoBaseline] = useState(false);
   const [errorBaseline, setErrorBaseline] = useState<string | null>(null);
+  // Fase 4.0 §8 — el porqué del cierre, en las palabras del usuario (opcional)
+  const [cierreMotivo, setCierreMotivo] = useState("");
   // Fase 3.8 §5 — confirmación de "Marcar como realizada"
   const [confirmandoRealizar, setConfirmandoRealizar] = useState(false);
   const [realizando, setRealizando] = useState(false);
@@ -827,7 +877,7 @@ export function ManosALaObra({
       const res = await fetch(`/api/project/${projectId}/realizar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ accion: "realizar" }),
+        body: JSON.stringify({ accion: "realizar", motivo: cierreMotivo.trim() || null }),
       });
       if (!res.ok) {
         setError(ERROR_GENERICO);
@@ -950,6 +1000,7 @@ export function ManosALaObra({
             items={recalcularPendientes ? itemsCore.filter((i) => i.estado !== "hecho") : itemsCore}
             titulos={titulosCore}
             planCreatedAt={planCreatedAt}
+            cadenciaSemanas={cadenciaSemanas}
             soloPendientes={recalcularPendientes}
             guardando={guardandoBaseline}
             error={errorBaseline}
@@ -1116,10 +1167,31 @@ export function ManosALaObra({
                 </button>
               </>
             ) : (
+              /* Fase 4.0 §8 — EL ACTA DE CIERRE: mini-ritual de dos elementos.
+                 (a) el espejo del momento, con los números reales y SIN juicio;
+                 (b) el porqué, OPCIONAL. Cero fricción: se cierra sin escribir
+                 nada, como siempre. */
               <>
                 <p className="text-[14px] font-semibold leading-relaxed">
                   Esto cierra tu idea y nace tu proyecto. Podrás reabrirla cuando quieras.
                 </p>
+                <p className="mt-2 text-[12.5px] text-dim">
+                  Llevas {cCore.hechos} de {cCore.total} acciones
+                  {cCore.total > 0 ? ` (${Math.round((cCore.hechos / cCore.total) * 100)}%)` : ""}. Las que queden
+                  pendientes se guardan tal cual: son parte de tu historia.
+                </p>
+                <label htmlFor="cierre-motivo" className="mt-3.5 block text-[12.5px] text-dim">
+                  ¿Por qué la cierras aquí? <span className="text-dim/70">(opcional, para tu propia memoria)</span>
+                </label>
+                <div className="mt-1.5">
+                  <CampoConVoz
+                    id="cierre-motivo"
+                    valor={cierreMotivo}
+                    onCambio={setCierreMotivo}
+                    filas={2}
+                    placeholder="La cierro porque…"
+                  />
+                </div>
                 <div className="mt-3 flex items-center gap-3">
                   <button
                     onClick={marcarRealizada}
