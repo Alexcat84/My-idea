@@ -16,7 +16,14 @@
 //     C e2 completed 03-20 · base 03-22           → dif −2  (adelantada)
 //     D e2 completed 03-25 · base 03-25 · orig 03-20 → dif 0 (a tiempo, replan)
 import { describe, expect, it } from "vitest";
-import { informeMarkdown, calcularAnalytics, clasificarCumplimiento, construirHitos, type EntradaAnalytics } from "./analytics";
+import {
+  analyticsDeMundo,
+  informeMarkdown,
+  calcularAnalytics,
+  clasificarCumplimiento,
+  construirHitos,
+  type EntradaAnalytics,
+} from "./analytics";
 
 function iso(d: string) {
   return `${d}T12:00:00Z`;
@@ -246,10 +253,26 @@ const ITEMS_MUNDO = [
 const CON_MUNDO: EntradaAnalytics = { ...BASE, items: [...BASE.items, ...ITEMS_MUNDO] };
 
 describe("calcularAnalytics — desglose por dominio (Fase 4.1 V3b)", () => {
+  // Fase 4.2: el desglose gana desviación media, tardías y replanificados — los
+  // mismos parámetros que el core, porque el bloque de realidad de un follow de
+  // mundo REDACTA de aquí. Cálculos a mano ANTES del assert:
+  //   quality: difs 0, +5, −3 -> suma +2 / 3 = 0.667 -> 0.7
+  //            tardía: Q2 (+5, etapa 1) · replanificados: ninguno
+  //   core:    difs 0 (A), +3 (B), −2 (C), 0 (D) -> suma +1 / 4 = 0.25 -> 0.3
+  //            tardía: B (+3, etapa 1) · replanificado: D (tiene base original)
   it("cuenta el cumplimiento del MUNDO con sus propios conteos", () => {
     const porDom = calcularAnalytics(CON_MUNDO).cumplimiento!.porDominio;
     const quality = porDom.find((d) => d.dominio === "quality");
-    expect(quality).toEqual({ dominio: "quality", aTiempo: 1, adelantadas: 1, tardias: 1, total: 3 });
+    expect(quality).toEqual({
+      dominio: "quality",
+      aTiempo: 1,
+      adelantadas: 1,
+      tardias: 1,
+      total: 3,
+      desviacionMediaDias: 0.7,
+      tardiasTop: [{ texto: "Q2", etapa: 1, diasRetraso: 5 }],
+      replanificados: [],
+    });
   });
 
   it("cuenta el core aparte, sin mezclarlo con el mundo", () => {
@@ -260,6 +283,9 @@ describe("calcularAnalytics — desglose por dominio (Fase 4.1 V3b)", () => {
       adelantadas: 1,
       tardias: 1,
       total: 4,
+      desviacionMediaDias: 0.3,
+      tardiasTop: [{ texto: "B", etapa: 1, diasRetraso: 3 }],
+      replanificados: [{ texto: "D", etapa: 2 }],
     });
   });
 
@@ -295,5 +321,179 @@ describe("calcularAnalytics — desglose por dominio (Fase 4.1 V3b)", () => {
 
   it("sin mundos, el desglose es solo core", () => {
     expect(calcularAnalytics(BASE).cumplimiento!.porDominio.map((d) => d.dominio)).toEqual(["core"]);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Fase 4.2 — EL MUNDO COMO SUBPROYECTO. Se mide con la MISMA capa universal que
+// el core (capaUniversalDe), pero su vida va de su UNLOCK a su CIERRE, no de la
+// chispa de la idea. Sobre el mismo proyecto sembrado, con su plan propio.
+//
+// Calculos a mano ANTES del assert (AGENTS.md). Mundo 'quality':
+//   unlock 03-20 · plan pq1 nace 03-21 · la IDEA se realiza 05-01 · abierto
+//   -> duracion total = 03-20 -> 05-01 = 11 (marzo) + 30 (abril) + 1 = 42 dias
+//   -> hechas = 3 (Q1 04-10, Q2 04-15, Q3 04-17; Q4 sin hacer)
+//   -> ritmo = 3 / (42/7) = 3/6 = 0.5 acciones por semana
+//   -> racha = 04-10 -> 04-17 = 7 dias (gaps 5 y 2, ambos <= 7)
+//   -> "X de N" del plan vigente pq1 = 3 de 4
+//   -> etapas: e1 termina 04-15 -> 03-20->04-15 = 26 dias; e2 termina 04-17 -> 2 dias
+//   -> dias sin avance = 04-17 -> 05-01 = 14
+//   -> plan vigente 03-21 -> 05-01 = 41 dias de vida
+// ---------------------------------------------------------------------------
+const PLAN_MUNDO = {
+  id: "pq1",
+  etiqueta: "inicial",
+  created_at: iso("2026-03-21"),
+  baseline_confirmada_at: null,
+  dominio: "quality",
+};
+const CON_SUBPROYECTO: EntradaAnalytics = { ...CON_MUNDO, planesMundo: [PLAN_MUNDO] };
+
+describe("analyticsDeMundo — el mundo medido con la vara del core (Fase 4.2)", () => {
+  const m = analyticsDeMundo(CON_SUBPROYECTO, "quality")!;
+
+  it("su vida cuenta desde el UNLOCK, jamás desde la chispa de la idea", () => {
+    expect(m.universal.duracionTotalDias).toBe(42);
+  });
+
+  it("su ritmo, su racha y su 'X de N' son suyos", () => {
+    expect(m.universal.accionesHechas).toBe(3);
+    expect(m.universal.ritmoAccionesPorSemana).toBe(0.5);
+    expect(m.universal.rachaMasLargaDias).toBe(7);
+    expect(m.universal.accionesVigente).toEqual({ hechas: 3, total: 4 });
+    expect(m.universal.ciclosDePlan).toBe(1);
+  });
+
+  it("sus etapas se miden desde su unlock, no desde la chispa", () => {
+    expect(m.universal.duracionPorEtapa).toEqual([
+      { etapa: 1, dias: 26 },
+      { etapa: 2, dias: 2 },
+    ]);
+  });
+
+  it("su plan vigente y sus días sin avance son los del mundo", () => {
+    expect(m.universal.planVigenteAt).toBe(iso("2026-03-21"));
+    expect(m.universal.diasDeVidaPlanVigente).toBe(41);
+    expect(m.universal.diasSinAvance).toBe(14);
+  });
+
+  it("su cumplimiento es el de SUS ítems (1/1/1 de 3), nunca el del core", () => {
+    expect(m.cumplimiento).toMatchObject({ aTiempo: 1, adelantadas: 1, tardias: 1, total: 3 });
+  });
+
+  it("un mundo abierto no reporta cierre", () => {
+    expect(m.completadoAt).toBeNull();
+    expect(m.cierreMotivo).toBeNull();
+  });
+
+  it("un mundo COMPLETADO se mide hasta su cierre, no hasta hoy", () => {
+    // Cerrado el 04-20: duracion = 03-20 -> 04-20 = 11 + 20 = 31 dias;
+    // dias sin avance = 04-17 -> 04-20 = 3 (no 14).
+    const cerrado = analyticsDeMundo(
+      {
+        ...CON_SUBPROYECTO,
+        mundos: [
+          {
+            dominio: "quality",
+            unlocked_at: iso("2026-03-20"),
+            completado_at: iso("2026-04-20"),
+            cierre_motivo: "Ya tengo el protocolo que necesitaba.",
+          },
+        ],
+      },
+      "quality"
+    )!;
+    expect(cerrado.universal.duracionTotalDias).toBe(31);
+    expect(cerrado.universal.diasSinAvance).toBe(3);
+    expect(cerrado.completadoAt).toBe(iso("2026-04-20"));
+    expect(cerrado.cierreMotivo).toBe("Ya tengo el protocolo que necesitaba.");
+  });
+
+  it("un mundo que no está activado no existe", () => {
+    expect(analyticsDeMundo(CON_SUBPROYECTO, "environmental")).toBeNull();
+  });
+
+  it("los planes de OTRO mundo no le cuentan ciclos", () => {
+    const conVecino = {
+      ...CON_SUBPROYECTO,
+      planesMundo: [PLAN_MUNDO, { ...PLAN_MUNDO, id: "ph1", dominio: "health_safety" }],
+    };
+    expect(analyticsDeMundo(conVecino, "quality")!.universal.ciclosDePlan).toBe(1);
+  });
+});
+
+describe("el cierre de un mundo (Fase 4.2)", () => {
+  const CERRADO: EntradaAnalytics = {
+    ...CON_SUBPROYECTO,
+    mundos: [
+      {
+        dominio: "quality",
+        unlocked_at: iso("2026-03-20"),
+        completado_at: iso("2026-04-20"),
+        cierre_motivo: "Ya tengo el protocolo   que necesitaba.",
+      },
+    ],
+  };
+
+  it("deja su hito en el timeline del PROYECTO, con su motivo discreto", () => {
+    const hitos = construirHitos(CERRADO, iso("2026-05-02"));
+    const cierre = hitos.find((h) => h.tipo === "mundo_completado")!;
+    expect(cierre).toEqual({
+      fecha: iso("2026-04-20"),
+      tipo: "mundo_completado",
+      etiqueta: "Mundo completado",
+      dominio: "quality",
+      subtitulo: "Ya tengo el protocolo que necesitaba.",
+    });
+  });
+
+  it("el hito del cierre va DESPUÉS del de su activación", () => {
+    const tipos = construirHitos(CERRADO, iso("2026-05-02"))
+      .filter((h) => h.dominio === "quality")
+      .map((h) => h.tipo);
+    expect(tipos).toEqual(["mundo", "mundo_completado"]);
+  });
+
+  it("un mundo abierto no deja hito de cierre", () => {
+    expect(construirHitos(CON_SUBPROYECTO, iso("2026-05-02")).some((h) => h.tipo === "mundo_completado")).toBe(false);
+  });
+
+  it("sin motivo, el hito no inventa subtítulo", () => {
+    const sinMotivo = {
+      ...CERRADO,
+      mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-20"), completado_at: iso("2026-04-20") }],
+    };
+    expect(construirHitos(sinMotivo, iso("2026-05-02")).find((h) => h.tipo === "mundo_completado")!.subtitulo)
+      .toBeUndefined();
+  });
+});
+
+// §3 JERARQUÍA HONESTA: cerrar el proyecto con mundos abiertos es legítimo, y
+// por eso mismo el acta no lo esconde.
+describe("informeMarkdown — el acta dice cómo quedaron los mundos (Fase 4.2 §3)", () => {
+  const nombres = (d: string) => (d === "quality" ? "Calidad y Confianza" : d);
+
+  it("un mundo ABIERTO se nombra abierto, con su avance real", () => {
+    const md = informeMarkdown("Mi idea", calcularAnalytics(CON_SUBPROYECTO), iso("2026-05-01"), nombres);
+    expect(md).toContain("- Calidad y Confianza: **3 de 4** (75%), abierta");
+  });
+
+  it("un mundo COMPLETADO se nombra con su fecha de cierre", () => {
+    const cerrado = calcularAnalytics({
+      ...CON_SUBPROYECTO,
+      mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-20"), completado_at: iso("2026-04-20") }],
+    });
+    const md = informeMarkdown("Mi idea", cerrado, iso("2026-05-01"), nombres);
+    expect(md).toContain("- Calidad y Confianza: **3 de 4** (75%), completado el 2026-04-20");
+  });
+
+  it("sin cierre del proyecto no hay acta, y por tanto no hay línea de mundos", () => {
+    const md = informeMarkdown("Mi idea", calcularAnalytics(CON_SUBPROYECTO), null, nombres);
+    expect(md).not.toContain("Calidad y Confianza");
+  });
+
+  it("el mundo se nombra como el usuario lo conoce, jamás por su clave técnica", () => {
+    const md = informeMarkdown("Mi idea", calcularAnalytics(CON_SUBPROYECTO), iso("2026-05-01"), nombres);
+    expect(md).not.toContain("quality");
   });
 });

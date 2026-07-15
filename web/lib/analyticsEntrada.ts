@@ -6,7 +6,7 @@
  * lógica del tiempo" se rompe por la puerta de atrás.
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { EntradaAnalytics, ItemAnalytics, PlanCoreAnalytics } from "./analytics";
+import type { EntradaAnalytics, ItemAnalytics, MundoAnalytics, PlanCoreAnalytics } from "./analytics";
 import type { Proyecto } from "./db";
 
 const ETIQUETAS_CICLO = ["inicial", "completo", "seguimiento"];
@@ -44,6 +44,17 @@ export async function cargarEntradaAnalytics(
       created_at: p.created_at,
       baseline_confirmada_at: p.baseline_confirmada_at,
     }));
+  // Fase 4.2: los planes de los MUNDOS, con su dominio — un mundo es un
+  // subproyecto y tiene sus propios ciclos (su plan original + cada follow).
+  const planesMundo = planes
+    .filter((p) => !esCore(p.dominio))
+    .map((p) => ({
+      id: p.id,
+      etiqueta: p.etiqueta,
+      created_at: p.created_at,
+      baseline_confirmada_at: p.baseline_confirmada_at,
+      dominio: p.dominio as string,
+    }));
   const organizador = planes.find((p) => esCore(p.dominio) && p.etiqueta === "organizador");
 
   const { data: itemsRaw } = await supabase
@@ -67,13 +78,23 @@ export async function cargarEntradaAnalytics(
     }));
 
   // project_unlocks puede no existir pre-016: se tolera con lista vacía.
-  let mundos: Array<{ dominio: string; unlocked_at: string }> = [];
+  // Fase 4.2: completado_at/cierre_motivo llegan con la 026; si la migración
+  // aún no está aplicada, el select entero falla — se reintenta sin esas dos
+  // columnas y los mundos se leen como abiertos (que es lo que son).
+  let mundos: MundoAnalytics[] = [];
   try {
     const { data, error } = await supabase
       .from("project_unlocks")
-      .select("dominio, unlocked_at")
+      .select("dominio, unlocked_at, completado_at, cierre_motivo")
       .eq("project_id", projectId);
-    if (!error) mundos = (data ?? []) as Array<{ dominio: string; unlocked_at: string }>;
+    if (!error) mundos = (data ?? []) as MundoAnalytics[];
+    else {
+      const { data: previo } = await supabase
+        .from("project_unlocks")
+        .select("dominio, unlocked_at")
+        .eq("project_id", projectId);
+      mundos = (previo ?? []) as MundoAnalytics[];
+    }
   } catch {
     mundos = [];
   }
@@ -83,6 +104,7 @@ export async function cargarEntradaAnalytics(
     realizadaAt: proyecto.realizada_at ?? null,
     organizadorAt: organizador?.created_at ?? null,
     planesCore,
+    planesMundo,
     items,
     mundos,
     modoCamino: (proyecto.modo_camino as "ritmo" | "fechas" | null) ?? null,
