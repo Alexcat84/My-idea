@@ -1075,6 +1075,210 @@ async function faseSentidoDelTiempo(cookie: string, projectId: string) {
   return { costoUsd: 0 };
 }
 
+
+// ---------------------------------------------------------------------------
+// Fase 2j (Fase 4.0): EL BUCLE DE TRACKING SE CIERRA. Lo que ningun test
+// unitario puede probar: que el BLOQUE DE REALIDAD (§3) llega de verdad al
+// motor y que el plan resultante lo usa SIN regañar (regla 8-bis: es prompt, y
+// los prompts solo se prueban volando). DOS ciclos, por adenda del auditor:
+//   (1) modo FECHAS con la desviacion ya sembrada por la fase 2i -> el bloque
+//       debe traer cumplimiento y el plan debe asumirlo sin reproche;
+//   (2) el espejo en modo A MI RITMO -> ni el bloque ni el plan pueden hablar
+//       de cumplimiento: no se juzga contra fechas que el usuario no tiene.
+// Cierra con el ACTA (§8) completa: cerrar con motivo, verlo en Celebracion,
+// Analisis e informe, reabrir, y confirmar que sobrevive en la bitacora.
+// ---------------------------------------------------------------------------
+
+/** Frases que el §3 / regla 8-bis PROHIBEN en un plan de seguimiento: el tono
+ * es espejo, jamas regaño. Se comparan sin acentos y en minusculas. */
+const REGANOS = ["vas tarde", "te atrasaste", "no cumpliste", "deberias haber", "vas retrasado", "incumpliste"];
+/** Vocabulario de cumplimiento: prohibido cuando el usuario va "a mi ritmo". */
+const VOCES_CUMPLIMIENTO = ["a tiempo", "tardia", "adelantada", "desviacion", "dias tarde"];
+
+const sinAcentos = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+
+/** El mensaje_entrada de la ULTIMA sesion de seguimiento: lo que el motor
+ * recibio DE VERDAD (la bitacora, no nuestra suposicion). */
+async function ultimoMensajeSeguimiento(projectId: string): Promise<string> {
+  const { data, error } = await supabaseAdmin
+    .from("sessions")
+    .select("mensaje_entrada, created_at")
+    .eq("project_id", projectId)
+    .eq("tipo", "seguimiento")
+    .order("created_at", { ascending: false })
+    .limit(1);
+  if (error || !data?.length) throw new Error(`no se encontro la sesion de seguimiento: ${error?.message}`);
+  return String((data[0] as { mensaje_entrada: string }).mensaje_entrada ?? "");
+}
+
+/** Un ciclo de seguimiento completo, hasta el plan. Devuelve su markdown. */
+async function correrCicloSeguimiento(cookie: string, projectId: string, enfoque: string | null) {
+  const rf = await postJson(cookie, `/api/project/${projectId}/follow`, {
+    detalles: "El proveedor de cemento subio precios a mitad de camino.",
+    enfoque,
+  });
+  const sessionId = String(rf.session_id);
+  let r: Record<string, unknown> = rf;
+  let turnos = 0;
+  while (r.tipo === "pregunta" && turnos < 6) {
+    turnos += 1;
+    r = await postJson(cookie, `/api/session/${sessionId}/turn`, {
+      respuesta: "Con eso te cuento lo importante; arma el plan con lo que ya sabes.",
+    });
+  }
+  let markdown = "";
+  const res = await fetch(`${BASE_URL}/api/session/${sessionId}/plan`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({}),
+  });
+  await consumirSSE(res, ({ evento, data }) => {
+    if (evento === "done") markdown = String((data as { markdown: string }).markdown ?? "");
+    if (evento === "error") throw new Error(`el plan de seguimiento fallo: ${JSON.stringify(data)}`);
+  });
+  if (!markdown) throw new Error("el plan de seguimiento no devolvio markdown");
+  return { markdown, costoUsd: Number(r.costo_usd ?? 0) };
+}
+
+async function faseBucleTracking(cookie: string, projectId: string) {
+  separador("FASE 2j (Fase 4.0): el bucle de tracking -- bloque de realidad, dos ciclos, y el acta");
+  let costoUsd = 0;
+
+  // ---- CICLO 1: modo FECHAS, con la desviacion sembrada por la fase 2i ----
+  const rModoF = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
+  if (rModoF.modo_camino !== "fechas") throw new Error("no se pudo volver a modo fechas");
+
+  const c1 = await correrCicloSeguimiento(cookie, projectId, "Quiero cerrar el costo real por pieza.");
+  costoUsd += c1.costoUsd;
+
+  const msg1 = await ultimoMensajeSeguimiento(projectId);
+  if (!msg1.includes("Mi realidad medida")) {
+    throw new Error("el BLOQUE DE REALIDAD no llego al motor: el mensaje de seguimiento no lo trae");
+  }
+  for (const senal of ["Ritmo:", "Cumplimiento contra las fechas"]) {
+    if (!msg1.includes(senal)) throw new Error(`el bloque de realidad no trae '${senal}' en modo fechas`);
+  }
+  log("OK: el BLOQUE DE REALIDAD llego al motor con cumplimiento (modo fechas), auditable en la bitacora.");
+
+  const p1 = sinAcentos(c1.markdown);
+  const reganos1 = REGANOS.filter((r) => p1.includes(r));
+  if (reganos1.length > 0) {
+    throw new Error(`el plan de seguimiento REGAÑA (regla 8-bis violada): ${reganos1.join(", ")}`);
+  }
+  log("OK: el plan de seguimiento asume la desviacion SIN regañar (cero frases prohibidas).");
+
+  // ---- CICLO 2 (espejo): modo A MI RITMO -> cero lenguaje de cumplimiento ----
+  const rModoR = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "ritmo" });
+  if (rModoR.modo_camino !== "ritmo") throw new Error("no se pudo pasar a modo ritmo");
+
+  const c2 = await correrCicloSeguimiento(cookie, projectId, null);
+  costoUsd += c2.costoUsd;
+
+  const msg2 = await ultimoMensajeSeguimiento(projectId);
+  if (!msg2.includes("Mi realidad medida")) throw new Error("el bloque de realidad no llego en modo ritmo");
+  if (msg2.includes("Cumplimiento contra las fechas")) {
+    throw new Error("BLINDAJE ROTO: el bloque habla de cumplimiento en modo 'a mi ritmo' (§3)");
+  }
+  if (!msg2.includes("a mi ritmo")) throw new Error("el bloque no declara el modo 'a mi ritmo'");
+  log("OK: en 'a mi ritmo' el bloque NO menciona cumplimiento (aunque la baseline vieja siga existiendo).");
+
+  const p2 = sinAcentos(c2.markdown);
+  const voces = VOCES_CUMPLIMIENTO.filter((v) => p2.includes(v));
+  if (voces.length > 0) {
+    throw new Error(`el plan a-mi-ritmo habla de cumplimiento (§3 violado): ${voces.join(", ")}`);
+  }
+  log("OK: el plan del ciclo a-mi-ritmo no juzga contra fechas que el usuario no tiene.");
+
+  // ---- EL ACTA (§8): cerrar al ~75% con motivo, verlo, reabrir, y que sobreviva ----
+  // Los dos ciclos de seguimiento dejaron un checklist NUEVO (0 hechas): cerrar
+  // ahi probaria el mecanismo pero no el escenario que pidio el auditor. Se
+  // siembra ~75% para que el espejo del acta muestre numeros REALES y los
+  // pendientes queden como testigos honestos (§8). Cero API: solo PATCH.
+  const clActa = (await getJson(cookie, `/api/project/${projectId}/checklist`)) as Record<string, unknown>;
+  const planesActa = clActa.planes as Array<{
+    dominio: string;
+    etapas: Array<{ items: Array<{ id: string; estado: string }> }>;
+  }>;
+  const itemsActa = planesActa
+    .filter((p) => p.dominio === "core")
+    .at(-1)!
+    .etapas.flatMap((e) => e.items);
+  const objetivo75 = Math.round(itemsActa.length * 0.75);
+  for (const it of itemsActa.slice(0, objetivo75)) {
+    await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: it.id, estado: "hecho" });
+  }
+  const pendientesEsperados = itemsActa.length - objetivo75;
+  log(`Sembrado para el acta: ${objetivo75} de ${itemsActa.length} acciones hechas (~75%).`);
+
+  const MOTIVO = "La cierro aqui porque ya valide el precio y el canal; el resto lo decide el mercado.";
+  const rReal = await postJson(cookie, `/api/project/${projectId}/realizar`, { accion: "realizar", motivo: MOTIVO });
+  if (!rReal.realizada_at) throw new Error("realizar no sello realizada_at");
+  if (rReal.cierre_motivo !== MOTIVO) throw new Error("realizar no devolvio el motivo");
+
+  const an = await getJson(cookie, `/api/project/${projectId}/analisis`);
+  if (an.cierre_motivo !== MOTIVO) throw new Error("el analisis no expone el motivo del cierre");
+  const informe = String(an.informe_md ?? "");
+  if (!informe.includes("## Acta de cierre")) throw new Error("el informe exportado no trae la seccion 'Acta de cierre'");
+  if (!informe.includes(MOTIVO)) throw new Error("el acta del informe no cita el motivo literal del usuario");
+  const hitosC = an.hitosCelebracion as Array<{ tipo: string }>;
+  if (!hitosC.some((h) => h.tipo === "realizada")) throw new Error("la celebracion no trae el hito realizada");
+  const u = (an.analytics as { universal: { accionesVigente: { hechas: number; total: number } } }).universal;
+  // El espejo del acta debe reflejar el ~75% REAL, no un cierre vacio.
+  if (u.accionesVigente.hechas !== objetivo75 || u.accionesVigente.total !== itemsActa.length) {
+    throw new Error(
+      `el espejo del acta no refleja lo sembrado: dice ${u.accionesVigente.hechas} de ` +
+        `${u.accionesVigente.total}, se esperaba ${objetivo75} de ${itemsActa.length}`
+    );
+  }
+  const pct = Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100);
+  if (!informe.includes(`**${objetivo75} de ${itemsActa.length}**`)) {
+    throw new Error("el informe no trae las acciones al cerrar con los numeros reales");
+  }
+  // §8: los pendientes al cierre NO se tocan (testigos honestos en la Historia).
+  const clTrasCierre = (await getJson(cookie, `/api/project/${projectId}/checklist`)) as Record<string, unknown>;
+  const itemsTras = (clTrasCierre.planes as typeof planesActa)
+    .filter((p) => p.dominio === "core")
+    .at(-1)!
+    .etapas.flatMap((e) => e.items);
+  const pendientesReales = itemsTras.filter((i) => i.estado !== "hecho").length;
+  if (pendientesReales !== pendientesEsperados) {
+    throw new Error(
+      `el cierre TOCO los pendientes (§8 violado): quedaron ${pendientesReales}, se esperaban ${pendientesEsperados}`
+    );
+  }
+  log(
+    `OK: acta de cierre -- cerrado al ${pct}% (${u.accionesVigente.hechas} de ${u.accionesVigente.total}); ` +
+      `motivo en analisis + celebracion + informe; los ${pendientesReales} pendientes quedaron intactos.`
+  );
+
+  // reabrir NO borra el motivo (la historia no se reescribe)
+  const rReab = await postJson(cookie, `/api/project/${projectId}/realizar`, { accion: "reabrir" });
+  if (rReab.realizada_at !== null) throw new Error("reabrir no puso realizada_at a null");
+  const { data: proyRe } = await supabaseAdmin
+    .from("projects")
+    .select("cierre_motivo")
+    .eq("id", projectId)
+    .single();
+  if ((proyRe as { cierre_motivo: string | null } | null)?.cierre_motivo !== MOTIVO) {
+    throw new Error("BORRO EL MOTIVO al reabrir (§8 violado: la historia no se reescribe)");
+  }
+  const { data: bit } = await supabaseAdmin
+    .from("project_bitacora")
+    .select("tipo, payload")
+    .eq("project_id", projectId)
+    .eq("tipo", "realizada");
+  const eventos = (bit ?? []) as Array<{ payload: { accion: string; motivo: string | null } }>;
+  if (!eventos.some((e) => e.payload?.motivo === MOTIVO)) {
+    throw new Error("la bitacora no registro el motivo del cierre");
+  }
+  if (!eventos.some((e) => e.payload?.accion === "reabrir")) {
+    throw new Error("la bitacora no registro el reabrir");
+  }
+  log(`OK: reabrir NO borro el motivo; la bitacora conserva la secuencia (${eventos.length} eventos 'realizada').`);
+
+  return { costoUsd };
+}
+
 // ---------------------------------------------------------------------------
 // Fase 3: reporte digital -- fijos=200, precio=13, variable~0 -> equilibrio
 // esperado ceil(200/13)=16. Vocabulario esperado: "usuario(s)"/"suscripcion",
@@ -1252,6 +1456,7 @@ async function main() {
     costos.mundoRiesgos = (await faseMundoRiesgos(cookie, macetas.projectId)).costoUsd;
     costos.contratoUI = (await faseContratoUI(cookie, macetas.projectId, mundos.cicloCompleto)).costoUsd;
     costos.sentidoDelTiempo = (await faseSentidoDelTiempo(cookie, macetas.projectId)).costoUsd;
+    costos.bucleTracking = (await faseBucleTracking(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -1274,6 +1479,7 @@ async function main() {
   log("  1. organizer (capa gratuita): OK");
   log("  1b. organizer idea larga multi-dominio (regresion tope de tokens 600->1500): OK");
   log("  2. sesion de macetas + plan streaming: OK");
+  log("  2j. bucle de tracking (Fase 4.0): bloque de realidad al motor en DOS ciclos (fechas con desviacion / a-mi-ritmo sin cumplimiento), plan sin regaño, acta de cierre completa y motivo que sobrevive al reabrir: OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
   log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
