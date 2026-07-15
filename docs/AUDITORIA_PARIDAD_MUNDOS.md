@@ -4,6 +4,9 @@ trato que el core?** Verificación V1–V5 antes de arreglar nada; con este repo
 el auditor y el fundador deciden qué entra pre-beta y qué va al backlog.
 
 - **Fecha:** 2026-07-15 · **Contra:** `main` = `3ac2edc`
+- **VEREDICTO (auditor + fundador):** Fase 4.1 pre-beta con **V4 + V3** por la vía
+  simple; **V2** y el **sidebar de V5** al backlog post-beta con telemetría.
+  Estado de la corrección al pie de este documento.
 - **Costo de la auditoría: $0.** La prueba viva de V1 ya estaba contenida en el
   último vuelo (su fase de mundos corre después del ciclo de seguimiento); el
   resto salió de leer el código y de reproducir consultas contra lo persistido.
@@ -129,3 +132,31 @@ antes de ese follow. Fue **suerte del orden**, no diseño. El flujo real de la U
 - **V2** es el más profundo: darle el avance real a la brecha es fácil
   técnicamente, pero **cambia qué puerta elige** para el usuario. Merece criterio,
   no prisa.
+
+
+---
+
+## Estado tras el veredicto — FASE 4.1 (corregido)
+
+| Hallazgo | Estado | Qué se hizo |
+|---|---|---|
+| **V4** follow con ítems de otro dominio | ✅ **Corregido** | La selección sale de la ruta a `itemsDelUltimoPlanCore()` (`seguimientoComposer.ts`): función **pura**, filtra por dominio (null = core) y **ordena por su cuenta** — no depende de que la consulta venga ordenada, y así el test la ejercita de verdad (el fake de Supabase no implementa `.order()`). Queda el **ancla** para el día que exista follow-de-mundo con su bloque por dominio. |
+| **V3a** ítems de mundo sin fecha | ✅ **Corregido** | El ritual pasa de "ítems + un plan" a **grupos por dominio** (`GrupoRitual`). Cada tramo lleva **su propio ancla**: una llamada al sugeridor por tramo, desde el `created_at` del plan de **ese** dominio (un mundo activado en abril no puede fechar desde un plan core de marzo). "Mover esta etapa una semana" ahora mueve la etapa **de su mundo**. `/baseline` no necesitó cambios: ya actualizaba por `item_id` sin filtrar dominio. |
+| **V3b** Análisis sin mundos | ✅ **Corregido** | `analyticsEntrada` deja de excluirlos; el Análisis suma la fila del canon 11 (**"Cumplimiento por mundo"**), visible solo si hay algún mundo con fechas. **Decisión de diseño explícita:** la **capa universal los sigue ignorando** — las etapas de mundo colisionarían con las del core en `duracionPorEtapa` y le moverían el ritmo y la racha al viaje principal. Hay un test que protege esa decisión. `cumplimientoPorDominio` **no mira** `baseline_confirmada_at`: el plan del mundo nunca se sella y su cumplimiento igual es real. |
+| **V2** brecha ciega al avance | 📋 **Backlog post-beta** | Con telemetría: cambia **qué puerta se le abre al usuario**, y eso merece datos, no prisa. |
+| **V5** sidebar en el plan de mundo | 📋 **Backlog post-beta** | Matiz menor; el resto del trato ya era paridad. |
+
+**Verificación de la 4.1** — vuelo, fase 2k, el escenario que la auditoría dejó al
+descubierto, de punta a punta:
+
+```
+OK: punto de partida -- baseline core confirmada y modo 'fechas'.
+OK: 'health_safety' activado y explorado DESPUES de la baseline core.
+OK: los 33 items de 'health_safety' nacen SIN fecha base (post-baseline).
+OK: los items del MUNDO reciben fecha base por el ritual del proyecto (V3a).
+OK: 3 items del mundo completados con fechas conocidas (1 a tiempo, 1 tardia, 1 adelantada).
+OK: Analisis con desglose por dominio -- health_safety: 1/1/1 (conteos a mano); core aparte.
+OK: el follow core compone con items CORE aunque los del mundo sean los mas recientes (V4).
+```
+
+Vuelo 13/13 ($1.0080 · paridadMundos $0.1301) · vitest 341/341 · motor python 13/13.

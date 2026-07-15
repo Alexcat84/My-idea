@@ -3,7 +3,7 @@
   VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
 ==============================================================================
 BASE_URL: http://localhost:3000
-Fecha: 2026-07-15T16:56:22.137Z
+Fecha: 2026-07-15T18:21:56.863Z
 
 ==============================================================================
   FASE 0 (Fase 3.1): caso sintetico -- numero inyectado fuera de material
@@ -14,266 +14,266 @@ Autenticado como dev user.
 ==============================================================================
   FASE 1: organizer (capa gratuita) -- idea del sonar para ciegos
 ==============================================================================
-project_id: 0d73f265-eb75-43d9-bfb4-8df7d2caf73a
-costo_usd: 0.004185
-tiempo: 6599ms
+project_id: 077e3099-c564-45fc-be0f-102164794238
+costo_usd: 0.0041600000000000005
+tiempo: 6381ms
 --- markdown (primeras 500 chars) ---
 # Organizador de tu idea
 
-**En una frase:** Aplicación que permite a personas ciegas navegar mediante feedback sonoro tipo sonar con alertas en tiempo real
+**En una frase:** Aplicación de navegación por sonar para personas ciegas con alertas en tiempo real basadas en sensores
 
 **Etapa detectada:** ideacion
 
 ## Lo que ya tienes claro
-- Existe un problema de movilidad e independencia para personas ciegas
-- La tecnología de sonar/sensores puede convertirse en señales auditivas
-- El formato es una aplicación digital
-- La urgencia percibida es alta (tiempo real, seguridad)
+- Existe un grupo de usuarios específico: personas ciegas
+- Hay una propuesta tecnológica concreta: sensor tipo sonar + alertas de audio en tiempo real
+- El problema que se intenta resolver está relacionado con la movilidad y orientación espacial
 
 ## Lo que estás asumiendo sin saberlo
-- Que l
+- Que las
 
 ==============================================================================
   FASE 1b: organizer con idea larga multi-dominio (regresion tope de tokens)
 ==============================================================================
 largo del texto: 1237 chars
-project_id: 4a390e33-281e-452f-bcd9-d7f38e31fd45
-costo_usd: 0.005718
-tiempo: 8960ms
-OK -- frase: "Plataforma SaaS que automatiza auditorías HSEQ (ISO 9001, 14001, 45001) mediante una base ..."
+project_id: 466901b4-7094-4aaf-bcbc-9e8ceb8a267b
+costo_usd: 0.005627999999999999
+tiempo: 8260ms
+OK -- frase: "Plataforma de auditoría HSEQ que automatiza el análisis de hallazgos contra normas ISO, ge..."
 
 ==============================================================================
   FASE 2: sesion completa de macetas de cemento (HTTP + SSE)
 ==============================================================================
 Entrada inicial: "Hago y vendo macetas de cemento decorativas, ya tengo ventas reales por Instagram, pero no se si el precio que cobro de verdad me deja ganancia."
-project_id: 4855654b-ae0e-4cd2-973c-ccba939cacb0, session_id: 55f6bb67-781b-4abf-a528-51de25254198
+project_id: f271e5cf-1fd3-4339-b36e-1f7176a28463, session_id: 47cabd51-79a3-424a-90cd-e83c80b8e4cf
 
-[turno 1] PREGUNTA: Para saber si de verdad ganas dinero, necesito entender tus números: ¿cuánto te cuesta en materiales y tiempo hacer cada maceta, y a qué precio la estás vendiendo ahora?
+[turno 1] PREGUNTA: De las macetas que vendiste por Instagram, ¿cuanto te costo en materiales y tiempo hacer cada una, y a que precio la vendiste?
 [turno 1] RESPUESTA: Hago macetas de cemento decorativas, chicas y medianas, las vendo a tiendas de plantas y directo por Instagram.
 
-[turno 2] PREGUNTA: Entiendo que vendes a tiendas y por Instagram. Ahora necesito los números concretos: ¿cuánto gastan en materiales (cemento, pigmentos, moldes) por cada maceta, cuánto tiempo te toma hacerla, y a qué precio específico la vendes?
+[turno 2] PREGUNTA: Entendido que vendes a tiendas y por Instagram. Necesito los números concretos: ¿cuanto te cuesta hacer una maceta chica (materiales y tu tiempo), y a cuanto la vendes?
 [turno 2] RESPUESTA: Cobro por pieza pero no he calculado bien cuanto me cuesta en minutos y materiales hacer cada maceta.
   nodos nuevos: Hoja de Trabajo de Estimación de Costos [salto]
 
-[turno 3] PREGUNTA: Lo primero es que hagas la cuenta real. ¿Podrías anotar en una hoja: cuánto gastas en cemento, pigmentos y otros materiales por maceta, cuántos minutos te toma hacer una, y a qué precio la vendes ahora mismo?
+[turno 3] PREGUNTA: Para saber si tu precio te deja ganancia, necesitas hacer la cuenta una sola vez: anota cuanto gastaste en cemento, aditivos y otros materiales para hacer una maceta, y cuanto tiempo te toma desde que mezclas hasta que esta lista. Con esos dos numeros sacamos el costo real.
 [turno 3] RESPUESTA: Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende.
 
-[turno 4] PREGUNTA: Bien, ya tienes 15 ventas reales en dos meses. Ahora la pregunta clave: de esas ventas, ¿cuánto dinero efectivamente te quedó en la mano después de restar lo que gastaste en materiales y tiempo?
+[turno 4] PREGUNTA: Bien, 15 ventas en dos meses es traccion real. Pero todavia necesito los numeros: de esas 15 macetas, ¿a cuanto precio las vendiste, y cuanto te costo en cemento y tiempo hacer cada una?
 [turno 4] RESPUESTA: Lo que mas me preocupa es no saber si el precio que cobro de verdad me deja ganancia una vez que cuento mi tiempo.
   nodos nuevos: Validación de la Hipótesis de Ingresos [salto]
 
-[turno 5] PREGUNTA: Tu preocupación es legítima y es exactamente lo que vamos a resolver. Empecemos por lo concreto: toma una maceta que ya vendiste, suma el cemento, pigmentos, moldes y todo lo que usaste, y cuéntame ese total; después cuántos minutos te tomó hacerla, y a cuánto la vendiste.
+[turno 5] PREGUNTA: Tu preocupacion sobre el tiempo y la ganancia es legitima. Vamos a resolverla: ¿a cuanto vendes cada maceta, y cuanto tiempo te toma hacerla desde el inicio?
 [turno 5] RESPUESTA: Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura -- y le dedico un par de horas entre mezclar, moldear y pulir.
 
-[turno 6] PREGUNTA: Bien, $68 en materiales y 2 horas de trabajo. Ahora lo crucial: ¿a cuánto vendes cada maceta?
+[turno 6] PREGUNTA: Perfecto, eso es mitad de la cuenta. Ahora falta lo otro: ¿a cuanto precio vendes cada maceta?
 [turno 6] RESPUESTA: Valoro mi hora de trabajo en unos 17, aunque nunca lo habia puesto en numeros asi.
   nodos nuevos: Síntesis y Validación Cruzada de Hipótesis del Modelo de Negocio [conversado]
 
-[turno 7] PREGUNTA: Perfecto, ahora tienes la foto completa: $68 en materiales, 2 horas a $17 la hora (otros $34), total $102 de costo real por maceta. ¿A cuánto la estás vendiendo en Instagram y a cuánto se la revende la tienda de plantas?
+[turno 7] PREGUNTA: Tienes 15 ventas reales a un precio que aún no hemos puesto en números claros. Dime: ¿a cuánto venden cada maceta en Instagram?
 [turno 7] RESPUESTA: Las vendo en 85 cada una, mas o menos, dependiendo del tamano.
+  nodos nuevos: Customer Discovery [conversado]
 
-[turno 8] PREGUNTA: Entiendo que varían según tamaño. Dame un ejemplo concreto: una maceta mediana, ¿a cuánto la vendes en Instagram, y a cuánto se la deja la tienda de plantas a ella?
+[turno 8] PREGUNTA: Bien, ya tenemos los numeros: costo de materiales 68, dos horas de tu tiempo a 17 la hora son 34 mas, total 102 por maceta, y las vendes a 85. Eso significa que cada venta te deja 17 menos de lo que te cuesta hacer una. Antes de decidir si cambias precio o algo mas, necesito saber: cuando la tienda de plantas o tus clientes de Instagram te compraron esas 15 macetas, ¿les preguntaste por que les interesa tu producto, o solo cerraste la venta?
 [turno 8] RESPUESTA: Puedo hacer unas 10 a la semana trabajando en mis ratos libres, sin descuidar mi otro trabajo.
-  nodos nuevos: Customer Discovery [silencioso], Customer Validation [conversado]
 
-[turno 9] PREGUNTA: Bien, 10 macetas por semana en ratos libres es información clave. Ahora cierra el círculo: de esas 10 que haces cada semana, ¿cuántas las vendes directamente en Instagram a cuánto cada una, y cuántas se las dejas a la tienda de plantas a cuánto?
+[turno 9] PREGUNTA: Entendido que haces 10 por semana en ratos libres. Pero necesito que respondas esto: de esas 15 macetas que ya vendiste, ¿preguntaste a esos clientes por qué te las compraron a ti y no a otro, o simplemente cerraste la venta sin entender qué les gustó?
 [turno 9] RESPUESTA: Tengo costos fijos como de 200 al mes: renta de un rincon del taller de un amigo y las herramientas que voy comprando.
+  nodos nuevos: Punto de Equilibrio y Margen de Contribución (Break-Even Point & Contribution Margin) [salto]
 
-[turno 10] PREGUNTA: Bueno, los $200 de costos fijos al mes son importantes. Pero necesito cerrar lo anterior primero: de esas 10 macetas que haces por semana, ¿a cuánto las vendes directamente a clientes en Instagram, y a cuánto se las vende la tienda de plantas?
+[turno 10] PREGUNTA: Bien, ahora tenemos el cuadro completo: costo de materiales 68 por maceta, tu tiempo 34, total 102 por unidad, precio de venta 85, y costos fijos de 200 al mes. Con estos numeros, ¿cuantas macetas necesitas vender cada mes solo para cubrir tus 200 fijos y no perder dinero?
 [turno 10] RESPUESTA: No he hablado con clientes de forma organizada, solo veo que la gente compra por Instagram, nunca les he preguntado directamente por que.
-  nodos nuevos: Pivot (Pivote) [silencioso], Modelo de Customer Development (4 Pasos) [conversado]
+  nodos nuevos: Decisión: Pivotar o Proceder [conversado]
 
-[turno 11] PREGUNTA: Ahí está el problema real: estás vendiendo sin entender por qué compran. Eso hace imposible saber si tu precio es justo o si tu modelo es viable. Empecemos: toma a 3 personas que te compraron por Instagram en el último mes, contáctalas esta semana y pregúntales directamente: ¿qué problema resuelve para ellas tu maceta, y por qué eligieron la tuya sobre otras opciones?
+[turno 11] PREGUNTA: Con margen negativo (vendes a 85, te cuesta 102), matematicamente no puedes cubrir los 200 fijos vendiendo mas macetas al mismo precio. Necesitas decidir: ¿subes el precio de venta, reduces el costo (materiales o tiempo), o hay algo en lo que los clientes ven valor que no estamos contando?
 [turno 11] RESPUESTA: Mi plan es ir a mercados locales de fin de semana para validar si la gente las compra en persona, no solo en redes.
   nodos nuevos: Experimentación Iterativa en Mercados Físicos/Informales [salto]
 
-[turno 12] PREGUNTA: Perfecto, los mercados de fin de semana son una forma rápida de validar. Pero hazlo con método: lleva 5 macetas, anota cuántas vendes, a quién (edad, si trabaja, si tiene plantas en casa), y pregúntale directamente por qué eligió la tuya. ¿Cuándo planeas ir al primer mercado?
+[turno 12] PREGUNTA: Ir a mercados es buena idea para validar en persona. Pero antes de gastar tiempo y dinero en eso, ¿cuanto estarias dispuesto a cobrar por una maceta si alguien te la pidiera en un mercado presencial, sabiendo que ahi podes hablar directamente con el cliente?
 [turno 12] RESPUESTA: Si, tiene sentido, sigamos con lo que sigue.
 
 Interprete se detuvo tras 12 turno(s). tipo final: listo_para_plan
-costo acumulado hasta aqui: $0.1312
+costo acumulado hasta aqui: $0.1359
 
 ==============================================================================
   FASE 2b: ensamblando el plan (SSE streaming)
 ==============================================================================
-SSE: 196 deltas de texto recibidos, 0 aviso(s), tiempo total: 100853ms
+SSE: 196 deltas de texto recibidos, 0 aviso(s), tiempo total: 95057ms
 evaluacion_cobertura: {"es_completa":true,"tiene_accion_clientes":true,"tiene_viabilidad_economica":true,"familias_faltantes":[]}
-costo_usd (sesion completa, incluye el plan): $0.2484
+costo_usd (sesion completa, incluye el plan): $0.2512
 --- plan generado (completo) ---
 _Plan completo_
 
-# Macetas de cemento: ¿tu precio te deja ganancia real?
+# Macetas de cemento: un plan para saber si tu precio funciona y qué ajustar
 
-Ya tienes ventas reales por Instagram y dos canales activos (directo y tiendas de plantas). El siguiente paso no es vender más, sino confirmar que cada maceta que produces te deja dinero de verdad, contando tu tiempo. Este plan te lleva de "creo que gano" a "sé exactamente cuánto gano y cuántas macetas necesito vender para que valga la pena".
-
----
-
-## Etapa 1: Calcula tu costo real por maceta, incluyendo tu tiempo
-
-Ya sabes que cada maceta te cuesta $68 en materiales y que valoras tu hora en $17. Con 2 horas de trabajo por pieza, tu costo total por maceta es $102. Pero ese número solo tiene sentido si lo comparas con lo que cobras hoy. Sin ese cruce, no puedes saber si estás ganando o perdiendo.
-
-**Pasos:**
-
-1. Anota el precio exacto al que vendes cada maceta en Instagram. Si tienes varios tamaños o modelos, anota el precio de cada uno por separado.
-2. Anota el precio al que vendes a las tiendas de plantas. Ese precio es menor al de Instagram; necesitas saber exactamente cuánto menos.
-3. Calcula tu margen bruto por canal: precio de venta menos $102 (tu costo real por unidad). Si el resultado es negativo, estás perdiendo dinero en ese canal. Si es positivo, tienes margen bruto.
-4. Si produces distintos modelos, repite el cálculo para cada uno: algunos pueden tener margen positivo y otros no.
-5. Arma una tabla sencilla con tres columnas: modelo, costo real ($102 u otro si el tiempo varía), precio de venta, margen por unidad. Una fila por modelo y por canal.
-
-**Entregable:** Una tabla con el margen bruto real por maceta, separado por canal (Instagram directo y tiendas de plantas).
-
-**Esta semana:** Abre una hoja de cálculo o una hoja de papel, anota el precio que cobras en cada canal y réstale $102. Ese número es tu margen bruto por maceta hoy. Si no tienes precio definido para uno de los canales, ponlo en cero y trátalo como prioridad urgente.
+Ya tienes algo valioso: ventas reales y un canal que funciona. Lo que este plan resuelve es la pregunta que llevas tiempo haciéndote: ¿estás ganando dinero de verdad, o estás subsidiando tu propio trabajo sin saberlo? Con los datos que ya tienes (costo de materiales, valor de tu hora, precio actual, capacidad de producción y costos fijos) hay suficiente para calcular el número real, entender qué tan lejos estás del equilibrio, y probar si puedes cobrar más, vender más, o las dos cosas.
 
 ---
 
-## Etapa 2: Descubre cuántas macetas necesitas vender para no perder dinero
+## Etapa 1: Calcula el número que lo cambia todo, tu margen real por maceta
 
-Tienes $200 de costos fijos al mes (renta de espacio y herramientas). Esos $200 los pagas vendas o no vendas. Para saber si tu proyecto puede sostenerse, necesitas calcular cuántas macetas debes vender cada mes solo para cubrir esos $200, antes de ver ganancia real.
+Ya tienes los ingredientes: materiales a 68 pesos por pieza, dos horas de trabajo a 17 pesos la hora (34 pesos), y un precio de venta de 85 pesos. Eso da un costo unitario de 102 pesos y un margen de menos 17 pesos por maceta vendida. Dicho claro: hoy cada venta te cuesta dinero en vez de darte ganancia, porque tu tiempo no está cubierto por el precio.
 
 **Pasos:**
 
-1. Toma el margen bruto por unidad que calculaste en la Etapa 1 (precio de venta menos $102). Ese es tu margen de contribución por maceta.
-2. Divide $200 entre ese margen de contribución. El resultado es tu punto de equilibrio: la cantidad mínima de macetas al mes para no perder dinero.
-3. Compara ese número con tu producción real actual: produces aproximadamente 10 macetas por semana en tiempo parcial, lo que da unas 40 al mes en capacidad máxima. ¿El punto de equilibrio está por debajo de esas 40?
-4. Si el punto de equilibrio supera tu capacidad de producción actual, tienes un problema estructural de precio o de costos fijos, no de ventas. Anótalo explícitamente.
-5. Recalcula el punto de equilibrio con los precios de cada canal por separado: vender solo por Instagram tiene un margen distinto al de vender a tiendas de plantas, y eso cambia cuántas necesitas vender.
+1. Abre una hoja (papel o digital) y anota estas tres columnas: costo de materiales por pieza, costo de tu tiempo por pieza (horas multiplicadas por tu valor de hora), y precio al que vendes. Calcula la diferencia entre precio y costo total: ese es tu margen real por unidad.
+2. Ahora suma tus costos fijos mensuales (los 200 pesos de renta de espacio y herramientas). Divide esos 200 entre cuántas macetas vendes al mes (aproximadamente 7 o 8 según tu ritmo actual). Ese número es el costo fijo que cada maceta debe absorber adicionalmente.
+3. Suma el margen unitario (negativo) más el costo fijo por pieza: ese es tu déficit real por maceta en este momento.
+4. Anota también cuántas macetas necesitarías vender al mes para que los 200 pesos de costos fijos queden cubiertos, asumiendo que el margen unitario fuera positivo. Esto te da la escala mínima del proyecto.
 
-Para armar este cálculo con claridad, construye también una línea base de costos: suma tus costos variables por mes (costo por maceta por unidades producidas) más tus $200 fijos, y compara contra tus ingresos reales del mes. Esa comparación te dice si ya estás en terreno positivo o negativo hoy.
+Para que la idea funcione con tu precio actual, necesitarías bajar el costo de materiales, reducir el tiempo de producción por pieza, o subir el precio. Las etapas siguientes te ayudan a decidir cuál de esas palancas mover primero.
 
-**Entregable:** Punto de equilibrio en unidades por mes, calculado para cada canal, con la comparación contra tu capacidad real de producción.
-
-**Esta semana:** Toma el margen bruto que calculaste en la Etapa 1 y divide $200 entre ese número. Escribe el resultado en algún lugar visible. Eso te dice cuántas macetas necesitas vender este mes solo para empatar.
+**Esta semana:** Llena esa hoja con los números reales de tu última tanda de producción: cuántos materiales usaste, cuántas horas te tomó y cuántas piezas salieron. Divide cada rubro entre el número de piezas para tener el costo real por unidad de esa tanda específica.
 
 ---
 
-## Etapa 3: Entiende por qué te compran y quién compra de verdad
+## Etapa 2: Descubre cuánto están dispuestos a pagar tus clientes reales
 
-Llevas 15 unidades vendidas en 2 meses. Eso confirma que hay demanda, pero no sabes por qué compran ni qué problema resuelve tu maceta para quien la compra. Sin esa información, cualquier decisión de precio o de canal es una apuesta. Decidiste probar los mercados físicos locales además de Instagram: ese movimiento es correcto para un producto físico, y este paso te da la estructura para sacarle aprendizaje real.
+El margen negativo actual no cierra el caso: puede que tus clientes estén dispuestos a pagar más de 85 pesos y tú no lo sepas todavía. Vender por Instagram sin haber preguntado directamente por el precio es como dejar dinero sobre la mesa sin verlo.
 
 **Pasos:**
 
-1. Antes de ir a un mercado físico o de contactar a una nueva tienda de plantas, escribe en una hoja tres hipótesis: (a) por qué crees que te compran, (b) qué problema resuelve tu maceta para quien la tiene en casa, (c) qué hace que alguien elija tu maceta sobre una de plástico o una genérica de ferretería.
-2. En tu próxima venta directa, ya sea por Instagram o en un mercado físico, haz una sola pregunta al comprador: "¿Qué fue lo que te hizo decidirte a comprar?" Anota la respuesta textual, no tu interpretación.
-3. Repite esa pregunta con al menos 8 a 10 compradores reales. Busca palabras que se repitan: decoración, regalo, originalidad, tamaño, precio, algo más. Esas palabras son tu propuesta de valor real, la que el mercado ya está diciéndote.
-4. En el mercado físico, observa también el comportamiento: ¿qué maceta agarran primero? ¿Preguntan el precio antes o después de tocarla? ¿Qué los hace dejarla y alejarse? Eso vale más que cualquier opinión verbal.
-5. Con ese aprendizaje, ajusta tu hipótesis de por qué compran y úsala en la siguiente etapa para decidir si tu precio actual refleja ese valor o no.
+1. Elige a tres personas que ya te hayan comprado y escríbeles un mensaje directo, breve y honesto: "Oye, estoy ajustando mis precios y me ayudaría mucho saber: ¿qué fue lo que más valoraste al comprar la maceta? ¿Por qué elegiste esta en vez de otra?" Anota sus respuestas palabra por palabra, no las parafrasees.
+2. Con esas respuestas, identifica si lo que mencionan (diseño, material, rareza, tamaño, personalización) justifica un precio más alto que el de una maceta de plástico o barro genérica. Si varias personas mencionan lo mismo, eso es una señal de qué valor real tiene tu producto para quien lo compra.
+3. Prueba publicar en Instagram una maceta similar a las que ya vendes, pero con un precio 20 o 30 pesos más alto que tu precio actual. No lo anuncies como aumento: simplemente ponlo así desde el principio en esa publicación. Observa si la reacción (mensajes, preguntas, ventas) cambia significativamente o no.
+4. Define de antemano un criterio claro de éxito para esa prueba: por ejemplo, "si al menos 2 de las próximas 5 personas que pregunten compran al precio nuevo, el precio es viable". Si nadie compra al precio nuevo después de 10 consultas reales, eso también es información útil.
 
-Diseña cada prueba de canal o formato como un experimento con criterio claro de éxito o fracaso antes de hacerla. Ejemplo: "Si en el mercado físico vendo 3 macetas en 4 horas, el canal tiene potencial; si vendo menos de 1, necesito cambiar algo (precio, presentación o ubicación)." Ese criterio lo defines antes, no después de ver el resultado.
-
-**Entregable:** Lista de respuestas textuales de al menos 8 compradores reales sobre por qué compraron, con los patrones repetidos identificados.
-
-**Esta semana:** Envía un mensaje directo a las últimas 5 personas que te compraron por Instagram y pregúntales una sola cosa: "¿Qué fue lo que te hizo decidirte a comprar?" Copia sus respuestas exactas en un documento.
+**Esta semana:** Manda el mensaje a tres compradores anteriores hoy mismo y anota sus respuestas. Con eso ya tienes material para decidir si el valor percibido justifica subir el precio antes de tocar nada más.
 
 ---
 
-## Etapa 4: Define si tu precio actual es el correcto o necesitas ajustarlo
+## Etapa 3: Prueba vender en mercados físicos locales y compara resultados
 
-Con los costos claros de la Etapa 1 y el aprendizaje de por qué compran de la Etapa 3, ya puedes tomar una decisión informada sobre el precio. Este es el paso donde atacas directamente tu bloqueo declarado: ¿el precio que cobras te deja ganancia real contando tu tiempo?
+Ya tienes el plan de validar en mercados presenciales: es una buena idea porque el entorno físico te da información que Instagram no da, como cuánto tiempo la gente se detiene frente a la maceta, qué preguntan primero, y si el precio les genera duda o no.
 
 **Pasos:**
 
-1. Revisa si tu maceta entrega algo que otras no tienen: textura, diseño, tamaño inusual, personalización. Si la respuesta es sí con evidencia de los compradores (lo dijeron en la Etapa 3), tienes argumento para fijar precio según el valor percibido, no según el costo más un margen arbitrario.
-2. Si tus compradores mencionan palabras como "decoración", "regalo" o "original", tu maceta compite en percepción de valor, no en precio mínimo. Eso te da margen para subir el precio sin perder ventas, siempre que lo pruebes con evidencia.
-3. Prueba una sola variable a la vez. Si quieres saber si puedes cobrar más, sube el precio de un modelo específico en Instagram un 15% a 20% durante dos semanas. No cambies nada más. Si las ventas de ese modelo no caen, el precio nuevo funciona. Si caen, vuelves al precio anterior y analizas qué más podría estar pasando.
-4. Para el canal de tiendas de plantas, evalúa si el margen que te dejan es positivo después de descontar tu costo real de $102. Si no lo es, ese canal te cuesta dinero en vez de ganártelo. Decide si lo mantienes como canal de visibilidad (con ese costo explícito) o si lo ajustas o eliminas.
-5. Documenta el resultado de cada prueba de precio antes de hacer la siguiente. Una hipótesis, una variable, un criterio de éxito medible.
+1. Elige un mercado local, bazar o tianguis al que puedas llevar 5 a 10 macetas un fin de semana. Busca uno donde tu tipo de producto tenga sentido (mercados de plantas, artesanías, diseño, decoración).
+2. Antes de ir, define exactamente qué quieres aprender ese día. Por ejemplo: "¿A qué precio compra alguien que no me conoce?" o "¿Qué le llama la atención primero, el diseño o el tamaño?". Escríbelo antes de salir para no confundir lo que buscabas aprender con lo que pasó.
+3. Durante el evento, observa y anota: cuántas personas se detienen, cuántas preguntan el precio, cuántas lo compran, y qué dicen o preguntan las que no compran. Esas últimas son las más valiosas.
+4. Prueba ofrecer al menos una maceta a un precio 20 pesos más alto que tu precio habitual de Instagram. Compara las reacciones con las del precio normal.
+5. Al final del día, compara el resultado contra el criterio que definiste en el paso 2: ¿pasó o no pasó?
 
-**Entregable:** Precio validado con evidencia real para cada canal y cada modelo, con registro de qué probaste y qué resultado obtuviste.
+Diseña la participación como un experimento de bajo costo: si el espacio en el mercado cuesta más de lo que puedes vender ese día sin problema, empieza con un mercado gratuito o de cuota simbólica.
 
-**Esta semana:** Elige el modelo de maceta que más vendes en Instagram y sube su precio entre un 15% y un 20% en tu próxima publicación. Deja ese precio por 7 días y cuenta cuántos mensajes de interés o ventas recibes. Compara con las últimas 2 semanas al precio anterior.
+**Esta semana:** Identifica un mercado, bazar o evento local en tu zona al que puedas asistir en los próximos 15 días, anota cuánto cuesta el lugar y cuántas piezas necesitarías vender solo para cubrir ese costo.
 
 ---
 
-## Etapa 5: Decide si perseveras con el modelo actual o cambias algo
+## Etapa 4: Decide si subir el precio, bajar costos o las dos cosas, con datos en la mano
 
-Con los datos de las etapas anteriores ya tienes suficiente para hacer una revisión honesta: ¿el modelo actual (precio actual, dos canales, 10 macetas por semana) puede sostenerse o necesita un cambio? Este no es un fracaso: es el momento en que los datos te dicen hacia dónde ir.
+Con los datos de las etapas anteriores ya puedes tomar una decisión informada en vez de seguir operando a ciegas. Esta etapa te pide revisar honestamente qué aprendiste y qué ajuste concreto vas a hacer.
 
 **Pasos:**
 
-1. Reúne los resultados de las cuatro etapas anteriores en una sola hoja: costo real por unidad, margen bruto por canal, punto de equilibrio, qué aprendiste de por qué compran, y resultado de la prueba de precio.
-2. Responde estas tres preguntas con datos, no con intuición: (a) ¿El margen bruto por maceta cubre los $200 fijos si vendes lo que produces hoy? (b) ¿El canal de tiendas de plantas tiene margen positivo o te está costando dinero? (c) ¿La prueba de precio mostró que puedes cobrar más sin perder ventas?
-3. Si las respuestas apuntan a que el modelo no cierra con los precios actuales, identifica qué cambiarías primero: precio, reducción de costos de materiales, eliminar el canal menos rentable, o aumentar volumen. Cambia solo una cosa a la vez.
-4. Si el modelo sí cierra, define cuántas macetas quieres producir y vender el próximo mes como meta concreta, con el precio ya validado.
-5. Programa esta revisión cada mes, no cada año. Con la velocidad de tu proyecto, un mes es suficiente para tener datos nuevos.
+1. Revisa lo que obtuviste: ¿Qué dijeron tus compradores sobre el valor de la maceta? ¿Compraron al precio más alto en Instagram o en el mercado físico? ¿Cuántas personas preguntaron y cuántas compraron?
+2. Con esos datos, elige una sola palanca para mover primero, no todas al mismo tiempo. Las opciones son: (a) subir el precio si los clientes mostraron disposición a pagar más, (b) reducir el costo de materiales si puedes comprar en mayor volumen o encontrar proveedor más barato, o (c) reducir el tiempo por pieza si puedes optimizar algún paso del proceso sin sacrificar calidad.
+3. Calcula el nuevo margen con ese único cambio. Por ejemplo: si subes el precio de 85 a 110 pesos y tu costo sigue en 102, el margen pasa de menos 17 a más 8 pesos por pieza. ¿Es suficiente para cubrir también los costos fijos? Haz el cálculo.
+4. Si ningún cambio individual cierra el déficit, considera combinar dos: subir el precio moderadamente y reducir un costo. Calcula el escenario combinado antes de implementarlo.
+5. Actualiza tu hoja de costos con el nuevo número y úsalo como referencia para todas las ventas que hagas a partir de ese momento.
 
-Las métricas que importan para tu proyecto en este momento son simples: margen por maceta, unidades vendidas por canal, y si el total del mes cubre o supera el punto de equilibrio. Todo lo demás es secundario ahora.
+Si decides subir el precio, pruébalo primero con las macetas nuevas que produzcas, sin cambiar el precio de las que ya tienes en exhibición. Eso te permite comparar sin arriesgar todo de golpe.
 
-**Entregable:** Una decisión documentada: perseveras con el modelo actual (con qué ajustes de precio o canal) o cambias un elemento específico, respaldada en los datos que recolectaste.
+**Esta semana:** Con los datos de las etapas anteriores, calcula en papel qué pasaría con tu margen si subes el precio 20 pesos. Anota el nuevo margen por pieza y cuántas macetas necesitarías vender al mes para cubrir tus costos fijos con ese precio nuevo.
 
-**Esta semana:** El lunes que viene, abre una hoja con cinco líneas: (1) margen por maceta en Instagram, (2) margen por maceta en tiendas de plantas, (3) punto de equilibrio mensual en unidades, (4) unidades vendidas este mes, (5) resultado de la prueba de precio. Llena cada línea con el número real. Esa hoja es tu primer tablero de decisiones.
+---
+
+## Etapa 5: Define las dos o tres métricas que te dirán si el proyecto avanza de verdad
+
+Con ventas reales ya funcionando, el riesgo es fijarte solo en "vendí" o "no vendí" sin saber si cada venta te acerca o te aleja de la rentabilidad. Necesitas dos o tres números concretos que revisen el estado real de tu proyecto cada mes.
+
+**Pasos:**
+
+1. Define tus métricas clave. Para tu proyecto, las más útiles son: (a) margen neto por unidad vendida (precio menos costo total, incluyendo tu tiempo), (b) número de unidades vendidas al mes, y (c) ingresos totales menos costos totales ese mes. Esos tres números juntos te dicen si el proyecto avanza o no.
+2. Para cada métrica, define un número mínimo que consideras aceptable. Por ejemplo: "margen por pieza de al menos 15 pesos", "al menos 12 piezas vendidas al mes", "al menos cubrir los 200 pesos de costos fijos mensuales con lo que sobre del margen". Esos son tus criterios de evaluación, no objetivos aspiracionales.
+3. Al final de cada mes, compara los números reales contra esos mínimos. Si los tres están por encima, el proyecto avanza. Si alguno falla, identifica cuál y por qué antes de hacer cualquier cambio.
+4. Evita usar como indicador principal el número de seguidores en Instagram o los "me gusta" en tus publicaciones: esos números no te dicen si hay ganancia. Lo que importa es cuántos de esos seguidores compran, a qué precio, y qué margen deja cada venta.
+
+**Esta semana:** Abre una hoja nueva y anota los números de los últimos dos meses: cuántas macetas vendiste, a qué precio, cuánto gastaste en materiales y cuántas horas trabajaste. Calcula el margen total de esos dos meses y compáralo contra tus costos fijos del mismo período.
 
 ---
 
 ## ¿Puede sostenerse tu idea? Los números en simple
 
-Ya tienes algunos números reales: $102 de costo por maceta (materiales más tu tiempo) y $200 de costos fijos al mes. Lo que falta para cerrar el cuadro son los precios reales de venta por canal y el volumen mensual sostenido. Con eso, la foto completa se ve así:
+Ya tienes los datos reales del proyecto: el trabajo ahora es usarlos para ver con claridad si el modelo actual puede sostenerse y qué necesita cambiar para que sí pueda.
 
-- **Costo por maceta:** $68 en materiales más $34 de tu tiempo (2 horas a $17 por hora), para un total de $102 por unidad producida.
-- **Margen bruto por unidad:** lo que te queda después de restarle $102 a tu precio de venta. Si cobras, por ejemplo, $150, tu margen es $48. Si cobras $120, es $18. Ese número cambia completamente según el canal, porque la tienda de plantas muy probablemente te paga menos que un comprador directo en Instagram.
-- **Costos fijos mensuales:** $200 que pagas independientemente de cuántas macetas produzcas. Ese es tu piso.
-- **Punto de equilibrio en unidades:** divide $200 entre tu margen bruto por maceta. Si tu margen es $48, necesitas vender al menos 5 macetas al mes solo para cubrir los fijos. Si tu margen es $18, necesitas más de 11. Ese número te dice si tu capacidad actual (unas 40 macetas al mes en tiempo parcial) es suficiente o no.
-- **Meses de margen:** si en un mes vendes más del punto de equilibrio, la diferencia es ganancia real disponible para reinvertir o retirar. Si vendes menos, ese mes perdiste dinero aunque hayas cobrado algo.
+- **Costo por unidad:** Es la suma de tus materiales (68 pesos) más el costo de tu tiempo (2 horas a 17 pesos cada una, es decir 34 pesos). Total: 102 pesos por maceta. Este es el piso mínimo que tu precio debe superar para que cada venta no te cueste dinero.
 
-**Esta semana:** Abre una hoja con cuatro columnas: costo por maceta ($102), precio de venta por canal (uno por columna si tienes dos canales), margen por unidad (precio menos $102), y punto de equilibrio ($200 dividido entre ese margen). Pon un número en cada celda, aunque sea estimado. Esa hoja resuelve tu bloqueo principal.
+- **Margen bruto por unidad:** Con tu precio actual de 85 pesos, el margen es de menos 17 pesos por pieza. Eso significa que hoy cada maceta que vendes te genera una pérdida, no una ganancia, porque tu precio está por debajo de tu costo real.
+
+- **Costos fijos mensuales:** Tienes 200 pesos al mes de costos fijos (espacio en el taller y herramientas). Para cubrirlos con ventas, necesitas que el margen por pieza sea positivo primero. Si el margen fuera de 25 pesos por maceta, necesitarías vender 8 macetas al mes solo para cubrir esos 200 pesos, antes de contar cualquier ganancia para ti.
+
+- **Punto de equilibrio en unidades:** Este es el número de macetas que debes vender al mes para que tus ingresos cubran exactamente todos tus costos (fijos y variables), sin ganar ni perder. Con el precio y costos actuales ese punto no existe porque el margen unitario es negativo. Para calcularlo necesitas primero un precio que supere los 102 pesos por pieza: cuando lo tengas, divide los 200 pesos de costos fijos entre ese margen nuevo y obtienes el número de macetas mínimo al mes.
+
+- **Precio mínimo viable:** Para cubrir tu costo unitario de 102 pesos y dejar al menos 25 pesos de margen por pieza (lo que permitiría cubrir costos fijos vendiendo 8 macetas al mes), tu precio tendría que estar alrededor de 127 pesos. Ese es el número de referencia que las etapas anteriores te piden probar con clientes reales.
+
+- **Capacidad vs. demanda actual:** Produces hasta 10 macetas por semana pero vendes alrededor de 7 o 8 al mes. No es un problema de capacidad: es un problema de demanda y precio. Producir más sin resolver el margen solo ampliaría la pérdida.
+
+**Esta semana:** Abre una hoja con cuatro columnas: costo unitario real (materiales más tiempo), precio que quieres probar, margen resultante, y cuántas macetas necesitas vender al mes para cubrir los 200 pesos de costos fijos. Pon un número en cada columna, aunque el precio sea el que quieres probar todavía, no el que ya tienes confirmado.
 
 ---
-_Este plan se alimento de 35 conceptos: 10 de tu recorrido conversado y 25 del vecindario relacionado del grafo._
+_Este plan se alimento de 34 conceptos: 9 de tu recorrido conversado y 25 del vecindario relacionado del grafo._
 
 ==============================================================================
   FASE 2c (Hotfix v2.2.2): verificando persistencia real de saltos semanticos
 ==============================================================================
-saltos detectados en la ruta: Margen de Ganancia Bruta (Gross Profit Margin) (margen_bruto), Hoja de Trabajo de Estimación de Costos (hoja_estimacion_costos), Validación de la Hipótesis de Ingresos (validacion_hipotesis_ingresos), Experimentación Iterativa en Mercados Físicos/Informales (experimentacion_iterativa_mercado_fisico)
+saltos detectados en la ruta: Margen de Ganancia Bruta (Gross Profit Margin) (margen_bruto), Hoja de Trabajo de Estimación de Costos (hoja_estimacion_costos), Validación de la Hipótesis de Ingresos (validacion_hipotesis_ingresos), Punto de Equilibrio y Margen de Contribución (Break-Even Point & Contribution Margin) (punto_equilibrio_unidades), Experimentación Iterativa en Mercados Físicos/Informales (experimentacion_iterativa_mercado_fisico)
   OK: project_nodes.tipo='salto' persistido correctamente para 'margen_bruto'
   OK: project_nodes.tipo='salto' persistido correctamente para 'hoja_estimacion_costos'
   OK: project_nodes.tipo='salto' persistido correctamente para 'validacion_hipotesis_ingresos'
+  OK: project_nodes.tipo='salto' persistido correctamente para 'punto_equilibrio_unidades'
   OK: project_nodes.tipo='salto' persistido correctamente para 'experimentacion_iterativa_mercado_fisico'
 
 ==============================================================================
   FASE 2d (Fase 3.1): verificando la bitacora de decisiones (caja de vidrio)
 ==============================================================================
-decision_turno persistidos: 13, con salto+score verificable: 4
-OK: los 4 saltos quedaron en la bitacora con su score de afinidad.
+decision_turno persistidos: 13, con salto+score verificable: 5
+OK: los 5 saltos quedaron en la bitacora con su score de afinidad.
 OK: procedencia por etapa valida (sin eventos procedencia_invalida en la bitacora).
 
 ==============================================================================
   FASE 2e (Fase 3.2): eventos del arbol == ruta persistida, 1:1 y en orden
 ==============================================================================
-eventos del arbol (10): metricas_accionables[conversado] -> margen_bruto[salto] -> hoja_estimacion_costos[salto] -> validacion_hipotesis_ingresos[salto] -> sintesis_hipotesis_modelo_negocio[conversado] -> customer_discovery[silencioso] -> customer_validation[conversado] -> pivote_startup[silencioso] -> modelo_customer_development[conversado] -> experimentacion_iterativa_mercado_fisico[salto]
-ruta persistida  (10): metricas_accionables[conversado] -> margen_bruto[salto] -> hoja_estimacion_costos[salto] -> validacion_hipotesis_ingresos[salto] -> sintesis_hipotesis_modelo_negocio[conversado] -> customer_discovery[silencioso] -> customer_validation[conversado] -> pivote_startup[silencioso] -> modelo_customer_development[conversado] -> experimentacion_iterativa_mercado_fisico[salto]
+eventos del arbol (9): metricas_accionables[conversado] -> margen_bruto[salto] -> hoja_estimacion_costos[salto] -> validacion_hipotesis_ingresos[salto] -> sintesis_hipotesis_modelo_negocio[conversado] -> customer_discovery[conversado] -> punto_equilibrio_unidades[salto] -> decision_pivotar_o_proceder[conversado] -> experimentacion_iterativa_mercado_fisico[salto]
+ruta persistida  (9): metricas_accionables[conversado] -> margen_bruto[salto] -> hoja_estimacion_costos[salto] -> validacion_hipotesis_ingresos[salto] -> sintesis_hipotesis_modelo_negocio[conversado] -> customer_discovery[conversado] -> punto_equilibrio_unidades[salto] -> decision_pivotar_o_proceder[conversado] -> experimentacion_iterativa_mercado_fisico[salto]
 OK: el arbol que piensa muestra EXACTAMENTE la ruta persistida (misma secuencia, mismos modos).
 
 ==============================================================================
   FASE 2f (Fase 3.3): checklist -> PATCH -> follow -> plan seguimiento encadenado
 ==============================================================================
-checklist derivado: 30 items en 5 etapa(s), dominio 'core'
+checklist derivado: 27 items en 5 etapa(s), dominio 'core'
 OK: estructura del checklist (1 destacado por etapa, al final; todos pendientes; resumen consistente).
-OK: 'Anota el precio exacto al que vendes cada maceta e…' -> hecho (con nota); destacado etapa 1 -> a_medias.
+OK: 'Abre una hoja (papel o digital) y anota estas tres…' -> hecho (con nota); destacado etapa 1 -> a_medias.
 OK: estado fuera de CHECKLIST_ESTADO rechazado con 400.
-nodos cubiertos antes del follow: 35
-follow session_id: 04135491-9396-4734-9d15-9468719ee36f, tipo primer turno: pregunta
-OK: puerta avanzada 'Curva de Demanda y Estrategia de Precios' (demand_curve_pricing) fuera de lo ya cubierto.
+nodos cubiertos antes del follow: 34
+follow session_id: 99beaf36-8b73-4be1-a0fa-c7ee6276b4e8, tipo primer turno: pregunta
+OK: puerta avanzada 'Diseño de Experimentos Pass/Fail para Validar Hipótesis' (pass_fail_experiment_design) fuera de lo ya cubierto.
 OK: mensaje compuesto auditable en la bitacora (estados, nota, detalles y enfoque presentes).
 
-[seguimiento turno 1] PREGUNTA: De las 15 macetas que vendiste en dos meses, ¿sabes cuántas fueron por Instagram y cuántas a través de tiendas o mercados físicos?
+[seguimiento turno 1] PREGUNTA: De los tres compradores anteriores que planeas contactar, ¿qué pregunta concreta quieres hacerles para entender qué valoran realmente de tus macetas: el material, el diseño, el tamaño, o algo más?
 [seguimiento turno 1] RESPUESTA: Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.
 
-[seguimiento turno 2] PREGUNTA: Cuando subiste el precio a $250, ¿eso fue en Instagram, en las tiendas de plantas, en ambos canales, o solo en uno para probar?
+[seguimiento turno 2] PREGUNTA: Con precio de 250 y costo de 130, tu margen unitario es de 120 pesos: eso cubre tus 200 pesos mensuales de renta con solo 2 macetas vendidas. Antes de escalar, ¿ya sabes si ese precio de 250 es tu techo o si la gente tolera más, y qué atributos específicos de tus macetas justifican ese precio frente a una maceta de barro común?
 [seguimiento turno 2] RESPUESTA: Vendo unas 12 macetas al mes por Instagram, y el proveedor nuevo me baja el cemento un 20%.
 
-[seguimiento turno 3] PREGUNTA: Con 12 macetas al mes por Instagram a $250 y el cemento 20% más barato, ¿ya calculaste cuál es tu nuevo margen por maceta y cuántas necesitarías vender cada mes para cubrir tus $200 fijos?
+[seguimiento turno 3] PREGUNTA: Esas 12 macetas al mes a 250 pesos son 3000 pesos de ingresos mensuales; con costo de 130, tu margen es de 1440 pesos al mes. Con el proveedor más barato, ¿cuánto baja exactamente tu costo por pieza?
 [seguimiento turno 3] RESPUESTA: Mi duda ahora es si producir por lotes de 10 o seguir por pedido; por pedido no me atraso, pero pierdo el descuento de materiales.
 
-[seguimiento turno 4] PREGUNTA: cuando dices que por lotes pierdes descuento, ¿ya tienes el número de cuánto baja tu costo si produces de 10 en 10 versus una a una?
+[seguimiento turno 4] PREGUNTA: Tu dilema es real: lotes de 10 te dan descuento en materiales pero te obligan a producir antes de saber si alguien lo va a comprar. Con 12 ventas al mes, ¿cuántos días de espera tolera tu cliente típico antes de decir que no, o son compras tan impulsivas que necesitas tenerlo ya listo?
 [seguimiento turno 4] RESPUESTA: Sí: tengo dos clientes mayoristas interesados que me pidieron precio por docena, todavía no les respondo.
 
-[seguimiento turno 5] PREGUNTA: Antes de responderles a esos dos mayoristas, ¿ya calculaste cuál sería tu costo real por maceta si les vendes de a docena, y qué precio necesitarías cobrarles para mantener el margen que hoy tienes en Instagram?
+[seguimiento turno 5] PREGUNTA: Esos dos mayoristas que te piden precio por docena son exactamente el cambio de escala que buscas, pero antes de responderles, necesito saber: ¿ya calculaste cuánto te cuesta producir una docena con el proveedor nuevo, y a qué precio por unidad podrías venderles sin perder margen?
 [seguimiento turno 5] RESPUESTA: Puedo dedicarle unas 15 horas a la semana; el resto lo cubre mi hermana cuando hay pedidos grandes.
 
-[seguimiento turno 6] PREGUNTA: Esas 15 horas que puedes dedicar a la semana, ¿incluyen el tiempo que necesitarías para producir para los mayoristas, o es adicional a lo que ya haces ahora con Instagram?
+[seguimiento turno 6] PREGUNTA: Espera: tu hermana te ayuda con pedidos grandes, eso es importante. Entonces si los mayoristas te piden una docena cada uno por mes (24 macetas totales), ¿eso es algo que tú y tu hermana pueden hacer juntas sin que deje de funcionar lo que ya estás vendiendo por Instagram, o se te vuelve imposible?
 [seguimiento turno 6] RESPUESTA: De acuerdo, con eso es suficiente por ahora.
 
-listo_para_plan tras 6 turno(s) de seguimiento.
-OK: plan persistido con etiqueta 'seguimiento' (0ce00322-925c-4aae-a918-71612525ebf5).
+[seguimiento turno 7] PREGUNTA: Ya que los mayoristas esperan tu respuesta y sabes que tu hermana puede ayudarte, lo que necesitas ahora es decidir el precio que les vas a ofrecer: ¿qué margen mínimo por maceta necesitas para que valga la pena responderles, considerando que producirás en lotes?
+[seguimiento turno 7] RESPUESTA: De acuerdo, con eso es suficiente por ahora.
+
+[seguimiento turno 8] PREGUNTA: Necesito ser más directo: cuando dices 'de acuerdo, con eso es suficiente', ¿significa que ya decidiste el precio que les vas a cobrar a los mayoristas, o todavía no tienes ese número claro?
+[seguimiento turno 8] RESPUESTA: De acuerdo, con eso es suficiente por ahora.
+
+listo_para_plan tras 8 turno(s) de seguimiento.
+OK: plan persistido con etiqueta 'seguimiento' (86c7c962-0cfd-4880-ad39-33dd4dba5af7).
 OK: checklist encadenado (28 items nuevos del plan de seguimiento; hechos previos preservados).
 
 ==============================================================================
@@ -284,12 +284,12 @@ OK: pack fuera del catalogo rechazado (404).
 OK: unlock de quality con 3 creditos (stub).
 OK: unlock idempotente (23505 absorbido).
 OK: fila persistida (creditos_pagados=3).
-world session: 00a4fce2-d1a2-438b-abef-3eeeecb94ec8, tipo: pregunta
-[mundo turno 1] Ahora que tienes claro dónde están los problemas de calidad en tu idea, ¿qué información crees que necesitas más urgentemente: entender cuánto dinero se está perdiendo por esos problemas, o asegurarte de que tu equipo realmente entienda por qué la calidad importa?
-[mundo turno 2] Cuando dices que hay burbujas y acabados irregulares, ¿eso ocurre en todas las macetas que produces o solo en algunas? Y de las que tienen defectos, ¿los clientes te avisan o simplemente dejan de comprar?
-[mundo turno 3] Para empezar a controlar esto, lo primero que necesitas es registrar cuándo aparecen las burbujas y los acabados irregulares: ¿en qué etapa del proceso crees que ocurren (al mezclar el cemento, al verter, al desmoldar, al secar)?
-[mundo turno 4] Antes de hornear, ¿qué señales visuales o al tacto podrías usar para detectar una burbuja o un acabado irregular sin dañar la pieza? Es decir, ¿qué inspección simple podrías hacer en ese momento?
-OK: ciclo completo del mundo (plan dominio=quality, checklist quality con 21 items).
+world session: 9e2302e1-72ce-4db7-95ae-c42de260596f, tipo: pregunta
+[mundo turno 1] Cuando observas que algo no sale bien en tu proyecto, ¿qué es lo primero que haces: intentas arreglarlo de inmediato, o antes te tomas tiempo para entender si el problema viene de algo puntual o de cómo está armado todo el sistema?
+[mundo turno 2] Esas burbujas y irregularidades, ¿aparecen en todas las macetas por igual o solo en algunas del lote?
+[mundo turno 3] Cuando rechazas una pieza por burbuja o irregularidad, ¿la descartas completamente o la intentas arreglar de alguna forma?
+[mundo turno 4] Antes de hornear, ¿en qué momento del proceso de moldeo o mezcla crees que aparecen esas burbujas, o aún no lo tienes claro?
+OK: ciclo completo del mundo (plan dominio=quality, checklist quality con 25 items).
 
 ==============================================================================
   FASE 2g-bis (v1.3.2): mundos nuevos -- murallas x2 + ciclo de seguridad_digital
@@ -297,27 +297,27 @@ OK: ciclo completo del mundo (plan dominio=quality, checklist quality con 21 ite
 OK: muralla de 'exportacion' en pie (403 sin unlock).
 OK: muralla de 'franquicias' en pie (403 sin unlock).
 OK: unlock de seguridad_digital con 3 creditos (migracion 017 viva).
-world session: 422ba88a-ba11-478b-920f-3e3f3d303fa9, tipo: pregunta
+world session: f0014ef9-2cbb-433e-86a0-89d8e94b443f, tipo: pregunta
 [seguridad_digital turno 1] Ahora que estás pensando en cómo verificar quién accede a tu proyecto y proteger esa información sensible, ¿qué te preocupa más: tener un plan claro de qué hacer si algo sale mal en la seguridad, o asegurarte de que las contraseñas y credenciales se manejen de forma realmente segura desde el principio?
-[seguridad_digital turno 2] Para ordenar las contraseñas y el acceso a tus cuentas ahora, ¿usas la misma contraseña en varios lugares (Instagram, email, banco) o ya tienes contraseñas diferentes para cada uno?
-[seguridad_digital turno 3] Ademas del Excel con datos de clientes y el celular, ¿hay otros lugares donde guardas informacion del negocio (correos, fotos de pedidos, notas de ventas, o algo en la nube)?
-[seguridad_digital turno 4] Tu hermana te ayuda con la producción y tiene acceso al celular o al Excel donde guardas los pedidos y contactos, ¿verdad? ¿ella es la única persona fuera de ti que maneja esa información, o hay otras personas (clientes, mayoristas, alguien más) que también ven esos datos?
-[seguridad_digital turno 5] Entiendo que Instagram es tu canal crítico. Para protegerla: ¿tienes acceso a la contraseña desde otra cuenta de email, o solo desde el celular donde la guardas ahora?
-OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con 20 items).
+[seguridad_digital turno 2] Para empezar a ordenar esto, ¿qué datos de tus clientes tienes hoy en ese Excel: solo nombres y teléfonos, o también guardas direcciones, números de documento, o algo más?
+[seguridad_digital turno 3] Entendido: la misma contraseña en correo, Instagram y banco es el riesgo más inmediato. Antes de armar un plan, ¿ya probaste cambiar esas contraseñas a algo diferente en cada una, o es algo que quieres hacer ahora mismo pero no sabes por dónde empezar?
+[seguridad_digital turno 4] Sin copias de seguridad, perder el celular significa perder todo: pedidos, contactos, datos de clientes. Eso es crítico. Para ordenarlo rápido: ¿guardas los datos solo en el celular, o también los tienes en algún otro lugar (computadora, nube, papel)?
+[seguridad_digital turno 5] Instagram es tu canal de ventas principal, así que perder acceso a esa cuenta sería una catástrofe. ¿Ya activaste la verificación en dos pasos en Instagram, o todavía no?
+OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con 25 items).
 
 ==============================================================================
   FASE 2g-ter (v1.4): Riesgos Bajo Control -- muralla + unlock 3 creditos + ciclo
 ==============================================================================
 OK: muralla de 'risk_management' en pie (403 sin unlock).
 OK: unlock de risk_management con 3 creditos (migracion 019 viva).
-world session: e5235432-e751-4337-bba7-2c49be6254fc, tipo: pregunta
+world session: ff2f8c3b-625b-402d-af60-43134575d5d3, tipo: pregunta
 [risk_management brecha] primera pregunta (semilla del mapeo, cero LLM): De los riesgos que monitoreas en tu proyecto, ¿cuáles son los que cambian o aparecen nuevos mientras avanzas, y cómo estás detectando esos cambios ahora mismo?
 [risk_management turno 1] De los riesgos que monitoreas en tu proyecto, ¿cuáles son los que cambian o aparecen nuevos mientras avanzas, y cómo estás detectando esos cambios ahora mismo?
-[risk_management turno 2] Ese riesgo con el proveedor de resina es real; antes de armar un plan para verlo venir, necesito entender: ¿ya probaste hablar con otros proveedores de resina para saber si existen alternativas en tu zona o si realmente es solo uno?
-[risk_management turno 3] De todos los riesgos que acabas de mencionar (proveedor único, defectos de calidad, seguridad digital, mayoristas esperando respuesta), ¿cuál es el que crees que te puede hacer más daño en los próximos dos meses si no lo controlas?
-[risk_management turno 4] Frente a ese riesgo de parar la producción entera si algo falla con la resina, tienes cuatro caminos: buscar un proveedor alterno (reducir), guardar resina de más por si acaso (retener), dejar de hacer macetas si no hay resina (evitar), o conseguir que alguien más cargue con ese riesgo (transferir). ¿Cuál de esos te parece más realista para ti en las próximas semanas?
-[risk_management turno 5] Para anticipar esos golpes con calma, necesitas un plan claro: si mañana tu proveedor de resina sube el precio un 50% o desaparece, ¿ya escribiste o tienes en mente exactamente qué harías ese día? (Por ejemplo, a quién llamarías primero, qué decisión tomarías sobre los mayoristas que esperan respuesta, cuánto tiempo te compraría buscar otra resina.)
-OK: ciclo completo del 7.o mundo (plan dominio=risk_management, checklist con 30 items).
+[risk_management turno 2] Ya que tu proveedor de resina es crítico, ¿has intentado hablar con otros proveedores para saber qué opciones existen, aunque no cambies ahora mismo?
+[risk_management turno 3] Si mañana no pudieras trabajar durante dos o tres semanas (por enfermedad, viaje, o lo que sea), ¿qué pasaría con tus pedidos, tus contactos de clientes, y el acceso a tu Instagram?
+[risk_management turno 4] De todo lo que haces tú en tu proyecto (producción, ventas, contacto con clientes, finanzas), ¿cuál es lo único que si no pasara, tu negocio se pararía completamente, y cuál es lo que podría esperar una semana sin que se rompa todo?
+[risk_management turno 5] De los tres riesgos que ya identificaste (proveedor de resina, defectos en producción, seguridad de datos), ¿hay alguno que aún no hayas puesto en palabras claras con tu hermana o contigo mismo por escrito?
+OK: ciclo completo del 7.o mundo (plan dominio=risk_management, checklist con 34 items).
 
 ==============================================================================
   FASE 2h (Fase 3.6): contrato de la UI -- /api/idea con unlocks, mundos e historial
@@ -335,7 +335,7 @@ OK: modo del camino = 'ritmo' (persistido).
 OK: timeline real -- completed_at pasado persistido (para todos, sin fechas base).
 OK: analisis a-mi-ritmo -- capa universal sola (acciones=2, cumplimiento=null).
 OK: modo del camino = 'fechas'.
-OK: linea base sellada (3 fechas, baseline_confirmada_at=2026-07-15T17:08:36.474Z).
+OK: linea base sellada (3 fechas, baseline_confirmada_at=2026-07-15T18:34:43.009Z).
 OK: analisis con cumplimiento -- 1 a tiempo, 1 adelantadas, 1 tardias (calculado de lo persistido).
 OK: realizada -> celebracion (timeline de 11 hitos con acciones y REALIZADA).
 OK: reabrir puso realizada_at a null (la idea vuelve a estar viva).
@@ -347,14 +347,25 @@ OK: el BLOQUE DE REALIDAD llego al motor con cumplimiento (modo fechas), auditab
 OK: el plan de seguimiento asume la desviacion SIN regañar (cero frases prohibidas).
 OK: en 'a mi ritmo' el bloque NO menciona cumplimiento (aunque la baseline vieja siga existiendo).
 OK: el plan del ciclo a-mi-ritmo no juzga contra fechas que el usuario no tiene.
-Sembrado para el acta: 12 de 16 acciones hechas (~75%).
-OK: acta de cierre -- cerrado al 75% (12 de 16); motivo en analisis + celebracion + informe; los 4 pendientes quedaron intactos.
+Sembrado para el acta: 22 de 29 acciones hechas (~75%).
+OK: acta de cierre -- cerrado al 76% (22 de 29); motivo en analisis + celebracion + informe; los 7 pendientes quedaron intactos.
 OK: reabrir NO borro el motivo; la bitacora conserva la secuencia (4 eventos 'realizada').
+
+==============================================================================
+  FASE 2k (Fase 4.1): paridad de mundos -- fechas, cumplimiento por dominio y follow limpio
+==============================================================================
+OK: punto de partida -- baseline core confirmada y modo 'fechas'.
+OK: 'health_safety' activado y explorado DESPUES de la baseline core.
+OK: los 33 items de 'health_safety' nacen SIN fecha base (post-baseline).
+OK: los items del MUNDO reciben fecha base por el ritual del proyecto (V3a).
+OK: 3 items del mundo completados con fechas conocidas (1 a tiempo, 1 tardia, 1 adelantada).
+OK: Analisis con desglose por dominio -- health_safety: 1 a tiempo, 1 adelantadas, 1 tardias (conteos a mano); core aparte con 3.
+OK: el follow core compone con items CORE aunque los del mundo sean los mas recientes (V4).
 
 ==============================================================================
   FASE 3: reporte digital -- equilibrio esperado 16 (ceil(200/13))
 ==============================================================================
-project_id: baaa8c69-5b4c-456d-a68c-788632b4affc
+project_id: 6e2d32e9-2783-4f00-a60f-da0ec3255d04
 
 PREGUNTA: ¿Qué vendes exactamente y cómo se cobra?
 RESPUESTA: Es una app de suscripcion mensual, cada usuario paga una cuota fija cada mes, no vendo piezas ni nada fisico.
@@ -374,47 +385,46 @@ RESPUESTA: 20
 --- contenido del reporte ---
 ## Tus números hoy
 
-**Costo por usuario:** $0 por cada usuario atendido, porque tus materiales declarados para producir la oferta digital tienen costo cero.
+**Costo por usuario:** $0 (tu costo de materiales por unidad digital es $0, lo que significa que entregar tu oferta a cada usuario adicional no te cuesta nada extra en materiales).
 
-**Margen por usuario:** $13 (precio) − $0 (costo) = $13 por usuario; de cada venta te queda el 100% del precio como ganancia antes de cubrir tus costos fijos.
+**Margen por usuario:** $13 − $0 = $13 por usuario; de cada venta, los $13 completos quedan para tu proyecto, lo que representa un 100% de margen sobre el costo de materiales.
 
-**Punto de equilibrio:** con $200 de costos fijos mensuales y $13 de margen por usuario, necesitas 16 usuarios al mes para no perder ni ganar nada: a partir del usuario 17 empiezas a generar ganancia real.
+**Punto de equilibrio:** Con costos fijos de $200 al mes y $13 de margen por usuario, necesitas 16 usuarios al mes para cubrir exactamente tus costos fijos y no perder dinero.
 
 ---
 
 ## Qué significan
 
-Un margen del 100% sobre el costo variable es la ventaja central de los proyectos digitales con costo de entrega prácticamente nulo: cada venta nueva suma casi íntegramente a tu resultado final. El punto de equilibrio en 16 usuarios es alcanzable si tu meta declarada es 20 usuarios al mes, lo que significa que llegarías a positivo con el 80% de esa meta cubierta. Eso le da a tu proyecto cierto colchón: no necesitas vender todo lo que planeas para salir a flote. Lo que más importa ahora no es el margen (que es sólido), sino confirmar si ese precio de $13 es sostenible frente a lo que el mercado acepta pagar.
+Que tu oferta digital no tenga costo de materiales por usuario es una fortaleza estructural: cada venta que supere las 16 unidades mensuales es ganancia directa. Con tu meta declarada de 20 usuarios al mes, estarías 4 usuarios por encima del punto de equilibrio, lo que deja un margen de operación positivo pero ajustado. El punto crítico de tu proyecto no es el costo de producir, sino sostener los $200 de costos fijos mientras construyes tu base de usuarios.
 
 ---
 
 ## Escenarios
 
-Estos tres escenarios representan distintos niveles de adopción de tu meta de 20 usuarios al mes, no un techo físico de producción, porque en una oferta digital la capacidad no es la restricción principal sino cuánta gente decide comprar.
+Estos tres escenarios representan distintos niveles de adopción de tu meta declarada de 20 usuarios al mes: cuánta gente efectivamente elige tu oferta. No son un techo físico de producción (en una oferta digital puedes atender a todos), sino una pregunta sobre tracción real en el mercado.
 
-**Adopción al 50% (10 usuarios/mes):**
-Ingreso mensual de $130 y margen total de $130. Con $200 de costos fijos, estarías $70 por debajo del equilibrio: el proyecto aún no se sostiene solo en este nivel.
+**Adopción al 50% (10 usuarios/mes):** Ingreso de $130 y margen total de $130. Con costos fijos de $200, estarías por debajo del punto de equilibrio y operarías en déficit ese mes.
 
-**Adopción al 100% (20 usuarios/mes):**
-Ingreso mensual de $260 y margen total de $260. Cubiertos los $200 de costos fijos, te quedarían $60 de ganancia mensual. Este es el escenario base que declaraste.
+**Adopción al 100% (20 usuarios/mes):** Ingreso de $260 y margen total de $260. Cubres tus $200 de costos fijos y te quedan $60 positivos para el mes.
 
-**Adopción al 200% (40 usuarios/mes):**
-Ingreso mensual de $520 y margen total de $520. Después de cubrir los $200 fijos, tendrías $320 de ganancia mensual: más del doble de lo que necesitas para sostenerte. Este escenario también muestra que, si la demanda crece así de rápido, conviene planificar con anticipación cómo escalar la experiencia del usuario sin degradar la calidad.
+**Adopción al 200% (40 usuarios/mes):** Ingreso de $520 y margen total de $520. Aquí la diferencia con tus costos fijos es considerablemente más holgada y el proyecto gana velocidad financiera.
+
+La zona de riesgo real está en el escenario del 50%: si la adopción tarda en llegar, necesitas saber cuántos meses puedes sostener esa diferencia con tus reservas actuales.
 
 ---
 
-## Los números que te faltan
+## Los números que te faltan (y cómo conseguirlos)
 
-**Cuántos días tarda tu inventario en moverse:** aunque tu oferta es digital y no tienes stock físico, si manejas algún tipo de activo o contenido con ciclo de renovación, este dato ayudaría a entender cuánto capital queda "atrapado" antes de convertirse en dinero disponible.
+**Cuántos días pasa entre que produces o activas tu oferta y que el dinero llega a tu bolsillo:** este dato, combinado con los siguientes dos, te diría cuánto tiempo tu dinero está "atrapado" en el ciclo de tu proyecto antes de que puedas usarlo. Para conseguirlo, revisa cuántos días en promedio transcurren desde que un usuario compra hasta que el pago se acredita en tu cuenta (considera plataformas de pago, períodos de retención, etcétera).
 
-**Cuántos días tardan tus clientes en pagarte:** si ofreces pagos diferidos, suscripciones con período de gracia o acceso antes del cobro, este dato es clave para saber cuánto tiempo pasa entre que entregas el servicio y que el dinero llega a tu cuenta.
+**Cuántos días te toman en promedio tus clientes para pagarte:** si ofreces períodos de prueba gratuita, facturación diferida o suscripciones con ciclo de cobro, ese tiempo importa. Anótalo según tus condiciones reales de cobro.
 
-**Cuántos días tardas en pagarle a tus proveedores:** si tienes algún proveedor de plataforma, licencia o infraestructura digital, este plazo determina cuánto tiempo puedes "usar" ese dinero antes de tener que desembolsarlo. Con los tres datos juntos se calcularía tu ciclo de conversión de efectivo, que muestra si tu proyecto genera liquidez por adelantado o si necesitas financiar una brecha entre gastos y cobros.
+**Cuántos días tienes para pagar a tus proveedores o plataformas:** si pagas hosting, licencias u otros servicios con cierto plazo, ese margen de tiempo trabaja a tu favor. Revisa las fechas de vencimiento de tus compromisos fijos.
 
 ---
 _Estimaciones basadas en las cifras que tú diste; no sustituyen contabilidad formal ni asesoría fiscal, que varían según tu país._
 
-costo_usd: $0.0207
+costo_usd: $0.0199
 
 Contiene '16': true
 Contiene 'pieza'/'piezas' (NO deberia): false
@@ -427,7 +437,7 @@ OK: el verificador de numeros huerfanos paso limpio en el reporte del 16 (0 flag
 ==============================================================================
   FASE 4: guardian GIGO -- numeros contaminados del caso real de Motor v2.2
 ==============================================================================
-project_id: 97bfc9b0-f802-47e2-acb5-91c5ff81743f
+project_id: a4b8df34-29b1-48ea-8037-5884e21499f1
 
 PREGUNTA: ¿Qué vendes exactamente y cómo se cobra?
 RESPUESTA: Es un producto fisico, lo fabrico yo mismo y lo vendo por pieza.
@@ -480,18 +490,19 @@ Muestra el aviso del guardian GIGO: true
   RESUMEN DE COSTOS REALES
 ==============================================================================
   organizer: $0.0042
-  organizerIdeaLarga: $0.0057
-  macetas: $0.2484
-  checklistSeguimiento: $0.1987
-  mundos: $0.0950
-  mundosNuevos: $0.0848
-  mundoRiesgos: $0.1454
+  organizerIdeaLarga: $0.0056
+  macetas: $0.2512
+  checklistSeguimiento: $0.2069
+  mundos: $0.1050
+  mundosNuevos: $0.0957
+  mundoRiesgos: $0.1583
   contratoUI: $0.0000
   sentidoDelTiempo: $0.0000
-  bucleTracking: $0.0228
-  reporteDigital: $0.0207
+  bucleTracking: $0.0308
+  paridadMundos: $0.1301
+  reporteDigital: $0.0199
   guardianGigo: $0.0004
-  TOTAL: $0.8260
+  TOTAL: $1.0080
 
 ==============================================================================
   RESUMEN DE VERIFICACIONES
@@ -501,7 +512,8 @@ Muestra el aviso del guardian GIGO: true
   1b. organizer idea larga multi-dominio (regresion tope de tokens 600->1500): OK
   2. sesion de macetas + plan streaming: OK
   2j. bucle de tracking (Fase 4.0): bloque de realidad al motor en DOS ciclos (fechas con desviacion / a-mi-ritmo sin cumplimiento), plan sin regaño, acta de cierre completa y motivo que sobrevive al reabrir: OK
-  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (4 salto(s))
+  2k. paridad de mundos (Fase 4.1): mundo activado POST-baseline recibe fechas por el ritual del proyecto (V3a), su cumplimiento aparece en el desglose por dominio del Analisis con conteos a mano (V3b), y el follow core NO toma sus items aunque sean los mas recientes (V4): OK
+  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (5 salto(s))
   4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK
   5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK
   6. mundos HSEQ: muro 403 sin unlock, unlock idempotente con creditos, y 503/ciclo segun integracion (Fase 3.5): OK

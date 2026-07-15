@@ -1279,6 +1279,164 @@ async function faseBucleTracking(cookie: string, projectId: string) {
   return { costoUsd };
 }
 
+
+// ---------------------------------------------------------------------------
+// Fase 2k (Fase 4.1): PARIDAD DE MUNDOS. El escenario que la auditoria
+// (docs/AUDITORIA_PARIDAD_MUNDOS.md) dejo sin cubrir, de punta a punta:
+//   1. Un mundo activado DESPUES de confirmada la baseline core (health_safety:
+//      ningun otro fase lo toca) -- su checklist nace sin fechas.
+//   2. Recalcular: sus items entran al MISMO ritual y baseline del proyecto
+//      (V3a). Por HTTP se ejercita lo que el ritual hace al aceptar: POST
+//      /baseline con los item_id DEL MUNDO.
+//   3. Se completan con fechas CONOCIDAS -> cumplimiento deterministico.
+//   4. El Analisis los cuenta en su desglose por dominio (V3b), con los
+//      conteos calculados A MANO aqui.
+//   5. El follow core NO toma sus items, aunque sean los mas recientes (V4):
+//      el escenario exacto del hallazgo, que en los vuelos previos no se
+//      manifestaba por suerte del orden.
+// ---------------------------------------------------------------------------
+async function faseParidadMundos(cookie: string, projectId: string) {
+  separador("FASE 2k (Fase 4.1): paridad de mundos -- fechas, cumplimiento por dominio y follow limpio");
+  let costoUsd = 0;
+  const MUNDO = "health_safety";
+
+  // El bucle de tracking (2j) dejo el modo en 'ritmo': se restituye 'fechas',
+  // que es el modo donde el cumplimiento existe.
+  const rModo = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
+  if (rModo.modo_camino !== "fechas") throw new Error("no se pudo restituir el modo 'fechas'");
+
+  // La baseline core viene confirmada de la fase 2i: sin eso, "post-baseline"
+  // no significaria nada.
+  const anPrevio = await getJson(cookie, `/api/project/${projectId}/analisis`);
+  if (!anPrevio.tiene_baseline) throw new Error("la fase 2i debio dejar la baseline core confirmada");
+  log("OK: punto de partida -- baseline core confirmada y modo 'fechas'.");
+
+  // ── 1. El mundo, activado AHORA (post-baseline) ──
+  const resUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/${MUNDO}/unlock`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resUnlock.ok) throw new Error(`unlock de ${MUNDO} respondio ${resUnlock.status}`);
+  const resStart = await fetch(`${BASE_URL}/api/project/${projectId}/world/${MUNDO}/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resStart.ok) throw new Error(`start de ${MUNDO} respondio ${resStart.status}`);
+  let rw = (await resStart.json()) as Record<string, unknown>;
+  const sidMundo = String(rw.session_id);
+  const RESPUESTAS: string[] = [
+    "Trabajo con cemento y polvo todo el dia, sin mascarilla ni guantes decentes; se que algun dia me va a pasar factura.",
+    "Nunca he escrito que puede lastimarme ni he preparado nada para una emergencia.",
+    "Quiero proteger mi salud sin frenar la produccion.",
+    "Con eso me basta por ahora.",
+  ];
+  let t = 0;
+  while (rw.tipo === "pregunta" && t < MAX_TURNOS_SEGURIDAD) {
+    rw = await postJson(cookie, `/api/session/${sidMundo}/turn`, {
+      respuesta: RESPUESTAS[Math.min(t, RESPUESTAS.length - 1)],
+    });
+    t += 1;
+  }
+  const resPlanW = await fetch(`${BASE_URL}/api/session/${sidMundo}/plan`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({}),
+  });
+  await consumirSSE(resPlanW, ({ evento, data }) => {
+    if (evento === "done") costoUsd = Number((data as { costo_usd?: number }).costo_usd ?? 0);
+    if (evento === "error") throw new Error(`el plan de ${MUNDO} fallo: ${JSON.stringify(data)}`);
+  });
+  log(`OK: '${MUNDO}' activado y explorado DESPUES de la baseline core.`);
+
+  // ── 2. Su checklist nace SIN fechas (el hueco que V3a cierra) ──
+  const cl = (await getJson(cookie, `/api/project/${projectId}/checklist`)) as Record<string, unknown>;
+  type Grupo = { dominio: string; plan_id: string; etapas: Array<{ items: Array<Record<string, unknown>> }> };
+  const grupos = cl.planes as Grupo[];
+  const gMundo = grupos.filter((g) => g.dominio === MUNDO).at(-1);
+  if (!gMundo) throw new Error(`el mundo ${MUNDO} no dejo checklist`);
+  const itemsMundo = gMundo.etapas.flatMap((e) => e.items);
+  if (itemsMundo.length < 4) throw new Error(`el mundo dejo solo ${itemsMundo.length} items: muy pocos para el escenario`);
+  if (itemsMundo.some((i) => i.fecha_base)) throw new Error("los items del mundo nacieron con fecha: imposible");
+  const gCore = grupos.filter((g) => g.dominio === "core").at(-1)!;
+  log(`OK: los ${itemsMundo.length} items de '${MUNDO}' nacen SIN fecha base (post-baseline).`);
+
+  // ── 3. Recalcular: los items del MUNDO entran al ritual del proyecto (V3a) ──
+  // Fechas base CONOCIDAS, en el pasado, para que el cumplimiento sea exacto.
+  const dia = (offset: number) => new Date(Date.now() + offset * 86_400_000).toISOString();
+  const BASES = [dia(-20), dia(-20), dia(-10)]; // 3 items fechados; el resto sin tocar
+  const aFechar = itemsMundo.slice(0, 3);
+  const rBase = await postJson(cookie, `/api/project/${projectId}/baseline`, {
+    plan_id: gCore.plan_id, // la baseline es DEL PROYECTO; el plan del mundo no se sella
+    fechas: aFechar.map((it, k) => ({ item_id: it.id as string, fecha: BASES[k], origen: "sugerida" })),
+  });
+  if (!rBase || (rBase as { error?: string }).error) throw new Error(`/baseline rechazo los items de mundo: ${JSON.stringify(rBase)}`);
+
+  const cl2 = (await getJson(cookie, `/api/project/${projectId}/checklist`)) as Record<string, unknown>;
+  const itemsMundo2 = (cl2.planes as Grupo[]).filter((g) => g.dominio === MUNDO).at(-1)!.etapas.flatMap((e) => e.items);
+  const conFecha = itemsMundo2.filter((i) => i.fecha_base);
+  if (conFecha.length !== 3) throw new Error(`se fecharon ${conFecha.length} items de mundo, se esperaban 3 (V3a roto)`);
+  log("OK: los items del MUNDO reciben fecha base por el ritual del proyecto (V3a).");
+
+  // ── 4. Completarlos con fechas conocidas -> cumplimiento deterministico ──
+  // A MANO: base -20d, hecho -20d -> dif 0  -> A TIEMPO
+  //         base -20d, hecho -12d -> dif +8 -> TARDIA
+  //         base -10d, hecho -15d -> dif -5 -> ADELANTADA
+  const REALES = [dia(-20), dia(-12), dia(-15)];
+  for (const [k, it] of aFechar.entries()) {
+    await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+      item_id: it.id as string,
+      estado: "hecho",
+      completed_at: REALES[k],
+    });
+  }
+  log("OK: 3 items del mundo completados con fechas conocidas (1 a tiempo, 1 tardia, 1 adelantada).");
+
+  // ── 5. El Analisis los cuenta en su desglose por dominio (V3b) ──
+  const an = (await getJson(cookie, `/api/project/${projectId}/analisis`)) as Record<string, unknown>;
+  const cumpl = (an.analytics as { cumplimiento: { porDominio: Array<Record<string, number | string>> } | null }).cumplimiento;
+  if (!cumpl) throw new Error("el analisis perdio la capa de cumplimiento");
+  const delMundo = cumpl.porDominio.find((d) => d.dominio === MUNDO);
+  if (!delMundo) throw new Error(`el desglose por dominio NO incluye '${MUNDO}' (V3b roto): ${JSON.stringify(cumpl.porDominio)}`);
+  if (delMundo.aTiempo !== 1 || delMundo.tardias !== 1 || delMundo.adelantadas !== 1 || delMundo.total !== 3) {
+    throw new Error(
+      `conteos del mundo != calculo a mano (1/1/1 de 3): ${JSON.stringify(delMundo)}`
+    );
+  }
+  const delCore = cumpl.porDominio.find((d) => d.dominio === "core");
+  if (!delCore) throw new Error("el desglose perdio el core");
+  if (cumpl.porDominio[0].dominio !== "core") throw new Error("el core debe ir primero en el desglose");
+  log(`OK: Analisis con desglose por dominio -- ${MUNDO}: ${delMundo.aTiempo} a tiempo, ${delMundo.adelantadas} adelantadas, ${delMundo.tardias} tardias (conteos a mano); core aparte con ${delCore.total}.`);
+
+  // ── 6. El follow core NO toma los items del mundo (V4) ──
+  // Los del mundo son AHORA los mas recientes del proyecto: el escenario exacto
+  // del hallazgo. Antes de 4.1, el follow habria compuesto con ellos.
+  const textosMundo = itemsMundo2.map((i) => String(i.texto));
+  const rf = await postJson(cookie, `/api/project/${projectId}/follow`, {
+    detalles: "Sigo con lo mio.",
+    enfoque: null,
+  });
+  costoUsd += Number(rf.costo_usd ?? 0);
+  const { data: sesF } = await supabaseAdmin
+    .from("sessions")
+    .select("mensaje_entrada")
+    .eq("id", String(rf.session_id))
+    .single();
+  const mensaje = String((sesF as { mensaje_entrada: string }).mensaje_entrada ?? "");
+  const colados = textosMundo.filter((tx) => tx.length > 25 && mensaje.includes(tx));
+  if (colados.length > 0) {
+    throw new Error(
+      `V4 ROTO: el follow core compuso con ${colados.length} item(s) del mundo '${MUNDO}': "${colados[0].slice(0, 60)}…"`
+    );
+  }
+  const itemsCoreVig = gCore.etapas.flatMap((e) => e.items).map((i) => String(i.texto));
+  if (!itemsCoreVig.some((tx) => tx.length > 25 && mensaje.includes(tx))) {
+    throw new Error("el follow core no compuso con NINGUN item core: la seleccion quedo vacia");
+  }
+  log("OK: el follow core compone con items CORE aunque los del mundo sean los mas recientes (V4).");
+
+  return { costoUsd };
+}
+
 // ---------------------------------------------------------------------------
 // Fase 3: reporte digital -- fijos=200, precio=13, variable~0 -> equilibrio
 // esperado ceil(200/13)=16. Vocabulario esperado: "usuario(s)"/"suscripcion",
@@ -1457,6 +1615,7 @@ async function main() {
     costos.contratoUI = (await faseContratoUI(cookie, macetas.projectId, mundos.cicloCompleto)).costoUsd;
     costos.sentidoDelTiempo = (await faseSentidoDelTiempo(cookie, macetas.projectId)).costoUsd;
     costos.bucleTracking = (await faseBucleTracking(cookie, macetas.projectId)).costoUsd;
+    costos.paridadMundos = (await faseParidadMundos(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -1480,6 +1639,7 @@ async function main() {
   log("  1b. organizer idea larga multi-dominio (regresion tope de tokens 600->1500): OK");
   log("  2. sesion de macetas + plan streaming: OK");
   log("  2j. bucle de tracking (Fase 4.0): bloque de realidad al motor en DOS ciclos (fechas con desviacion / a-mi-ritmo sin cumplimiento), plan sin regaño, acta de cierre completa y motivo que sobrevive al reabrir: OK");
+  log("  2k. paridad de mundos (Fase 4.1): mundo activado POST-baseline recibe fechas por el ritual del proyecto (V3a), su cumplimiento aparece en el desglose por dominio del Analisis con conteos a mano (V3b), y el follow core NO toma sus items aunque sean los mas recientes (V4): OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
   log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
