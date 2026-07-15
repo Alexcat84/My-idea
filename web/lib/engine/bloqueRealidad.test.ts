@@ -39,6 +39,9 @@ const CUMPLIMIENTO: Analytics["cumplimiento"] = {
     { texto: "Fija tu precio con costo real", etapa: 3, diasRetraso: 5 },
   ],
   replanificados: [{ texto: "Habla con 5 cafeterías", etapa: 1 }],
+  // Fase 4.1 (V3b): el desglose por dominio existe, pero el bloque del follow
+  // core NO lo usa — el follow es core (V4) y su bloque también.
+  porDominio: [{ dominio: "core", aTiempo: 12, adelantadas: 5, tardias: 2, total: 19 }],
 };
 
 const base = (over: Partial<Analytics> = {}): Analytics => ({

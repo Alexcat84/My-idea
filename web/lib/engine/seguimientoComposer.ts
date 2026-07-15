@@ -15,6 +15,46 @@ export interface ItemParaComponer {
   nota?: string | null;
 }
 
+/** Una fila cruda de checklist_items, como la devuelve la consulta del follow. */
+export interface FilaChecklist {
+  plan_id: string;
+  /** null = core (los ítems anteriores a la migración 016 no lo traen). */
+  dominio?: string | null;
+  etapa: number;
+  orden?: number;
+  texto: string;
+  destacado: boolean;
+  estado: ChecklistEstado;
+  nota?: string | null;
+  created_at: string;
+}
+
+/**
+ * Fase 4.1 (V4, auditoría de paridad de mundos): los ítems del ÚLTIMO plan
+ * CORE. El follow es SIEMPRE core, pero antes se tomaba el plan del ítem más
+ * reciente FUERA CUAL FUERA su dominio: si el usuario acababa de explorar un
+ * mundo, "Contar qué pasó" componía su "mi avance real" con el checklist del
+ * MUNDO mientras el bloque de realidad llevaba cumplimiento core.
+ *
+ * Ordena por su cuenta a propósito: no depende de que quien la llama haya
+ * ordenado la consulta, y así el test la puede ejercitar de verdad.
+ */
+export function itemsDelUltimoPlanCore(filas: FilaChecklist[]): ItemParaComponer[] {
+  const core = filas.filter((f) => !f.dominio || f.dominio === "core");
+  if (core.length === 0) return [];
+  const masReciente = [...core].sort((a, b) => b.created_at.localeCompare(a.created_at))[0];
+  return core
+    .filter((f) => f.plan_id === masReciente.plan_id)
+    .sort((a, b) => a.etapa - b.etapa || (a.orden ?? 0) - (b.orden ?? 0))
+    .map((f) => ({
+      etapa: f.etapa,
+      texto: f.texto,
+      destacado: f.destacado,
+      estado: f.estado,
+      nota: f.nota ?? null,
+    }));
+}
+
 export interface EntradaSeguimiento {
   items: ItemParaComponer[];
   detalles?: string | null; // "¿Algo más que deba saber?"

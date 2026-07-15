@@ -34,6 +34,10 @@ export interface PlanCoreAnalytics {
 
 export interface ItemAnalytics {
   plan_id: string;
+  /** Fase 4.1 (V3b): null = core. Los items de mundo YA no se excluyen en la
+   * entrada; la capa universal los ignora (sus etapas colisionarian con las del
+   * core y le moverian el ritmo al viaje principal) y el desglose los cuenta. */
+  dominio?: string | null;
   etapa: number;
   estado: string;
   destacado: boolean;
@@ -104,6 +108,15 @@ export interface CapaUniversal {
   diasDeVidaPlanVigente: number;
 }
 
+/** Fase 4.1 (V3b): un mundo (o el core) con sus conteos de cumplimiento. */
+export interface CumplimientoDominio {
+  dominio: string;
+  aTiempo: number;
+  adelantadas: number;
+  tardias: number;
+  total: number;
+}
+
 export interface CapaCumplimiento {
   aTiempo: number;
   adelantadas: number;
@@ -121,6 +134,10 @@ export interface CapaCumplimiento {
   /** Fase 4.0 §3: CUÁLES movieron su fecha (no solo cuántos): señal de que la
    * línea base era irreal o de que la vida cambió. */
   replanificados: Array<{ texto: string; etapa: number }>;
+  /** Fase 4.1 (V3b): el desglose por dominio — core y cada mundo con fechas,
+   * con sus propios conteos. La fila extra que admite el canon 11: los mundos
+   * dejan de ser invisibles al cumplimiento sin rediseñar la pantalla. */
+  porDominio: CumplimientoDominio[];
 }
 
 export interface Analytics {
@@ -186,12 +203,47 @@ function duracionPorEtapa(
   return out;
 }
 
+/** null/"core" = el viaje principal (los items previos a la 016 no traen dominio). */
+const dominioDe = (i: ItemAnalytics) => i.dominio ?? "core";
+const esItemCore = (i: ItemAnalytics) => dominioDe(i) === "core";
+
+/**
+ * Fase 4.1 (V3b): el cumplimiento POR DOMINIO. Cuenta cualquier item con fecha
+ * base y fecha real, venga del core o de un mundo, agrupado por su dominio. No
+ * mira `baseline_confirmada_at` del plan a proposito: los items de mundo entran
+ * al MISMO ritual y baseline del proyecto (su plan no se sella), y aun asi su
+ * cumplimiento es real y debe contarse.
+ */
+function cumplimientoPorDominio(items: ItemAnalytics[]): CumplimientoDominio[] {
+  const porDom = new Map<string, CumplimientoDominio>();
+  for (const it of items) {
+    if (!it.completed_at || !it.fecha_base) continue;
+    const d = dominioDe(it);
+    const acc = porDom.get(d) ?? { dominio: d, aTiempo: 0, adelantadas: 0, tardias: 0, total: 0 };
+    const clase = clasificarCumplimiento(it.completed_at, it.fecha_base);
+    if (clase === "a_tiempo") acc.aTiempo += 1;
+    else if (clase === "adelantada") acc.adelantadas += 1;
+    else acc.tardias += 1;
+    acc.total += 1;
+    porDom.set(d, acc);
+  }
+  // core primero; los mundos, alfabeticos: orden estable para la pantalla.
+  return [...porDom.values()].sort((a, b) =>
+    a.dominio === "core" ? -1 : b.dominio === "core" ? 1 : a.dominio.localeCompare(b.dominio)
+  );
+}
+
 export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   const ahora = entrada.ahora ?? new Date().toISOString();
   const chispa = entrada.proyectoCreatedAt;
   const fin = entrada.realizadaAt ?? ahora;
 
-  const completadas = entrada.items.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
+  // Fase 4.1 (V3b): la entrada ya NO excluye los mundos, pero la capa universal
+  // SI los ignora: sus etapas colisionarian con las del core en duracionPorEtapa
+  // y le moverian el ritmo/la racha al viaje principal. Los mundos se cuentan en
+  // el desglose por dominio del cumplimiento.
+  const itemsCore = entrada.items.filter(esItemCore);
+  const completadas = itemsCore.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
   const accionesHechas = completadas.length;
   const duracionTotalDias = Math.max(0, dias(chispa, fin));
   const semanas = duracionTotalDias / 7;
@@ -199,7 +251,7 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
 
   // "X de N acciones" (canon 09): el checklist del plan core VIGENTE.
   const planVigente = [...entrada.planesCore].sort((a, b) => a.created_at.localeCompare(b.created_at)).at(-1);
-  const itemsVigente = planVigente ? entrada.items.filter((i) => i.plan_id === planVigente.id) : [];
+  const itemsVigente = planVigente ? itemsCore.filter((i) => i.plan_id === planVigente.id) : [];
   const accionesVigente = {
     hechas: itemsVigente.filter((i) => i.completed_at).length,
     total: itemsVigente.length,
@@ -216,7 +268,7 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
     rachaMasLargaDias: rachaMasLarga(completadas),
     ciclosDePlan: entrada.planesCore.length,
     mundos: entrada.mundos.length,
-    duracionPorEtapa: duracionPorEtapa(entrada.items, chispa),
+    duracionPorEtapa: duracionPorEtapa(itemsCore, chispa),
     diasSinAvance: ultimoAvance ? Math.max(0, dias(ultimoAvance, fin)) : null,
     planVigenteAt: planVigente?.created_at ?? null,
     diasDeVidaPlanVigente: planVigente ? Math.max(0, dias(planVigente.created_at, fin)) : 0,
@@ -226,7 +278,7 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   let cumplimiento: CapaCumplimiento | null = null;
   const baselinePlan = planBaselineVigente(entrada.planesCore);
   if (baselinePlan) {
-    const delPlan = entrada.items.filter((i) => i.plan_id === baselinePlan.id);
+    const delPlan = itemsCore.filter((i) => i.plan_id === baselinePlan.id);
     const conFecha = delPlan.filter((i) => i.completed_at && i.fecha_base);
     let aTiempo = 0;
     let adelantadas = 0;
@@ -283,6 +335,8 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
       replanificados: delPlan
         .filter((i) => i.fecha_base_original)
         .map((i) => ({ texto: i.texto ?? "", etapa: i.etapa })),
+      // V3b: aqui SI entran los mundos, con TODOS los items del proyecto.
+      porDominio: cumplimientoPorDominio(entrada.items),
     };
   }
 

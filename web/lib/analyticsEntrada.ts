@@ -50,10 +50,13 @@ export async function cargarEntradaAnalytics(
     .from("checklist_items")
     .select("plan_id, dominio, etapa, estado, destacado, texto, completed_at, fecha_base, fecha_base_original")
     .eq("project_id", projectId);
+  // Fase 4.1 (V3b): ya NO se excluyen los mundos. La entrada los lleva CON su
+  // dominio; analytics decide que capa los usa (la universal los ignora para no
+  // mover el ritmo del viaje principal; el desglose de cumplimiento los cuenta).
   const items: ItemAnalytics[] = ((itemsRaw ?? []) as Array<ItemAnalytics & { dominio: string | null }>)
-    .filter((i) => esCore(i.dominio))
     .map((i) => ({
       plan_id: i.plan_id,
+      dominio: i.dominio,
       etapa: i.etapa,
       estado: i.estado,
       destacado: i.destacado,

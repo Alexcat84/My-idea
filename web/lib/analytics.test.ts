@@ -222,3 +222,78 @@ describe("informeMarkdown — acta de cierre (§8)", () => {
     expect(md).not.toContain("### Por qué la cerraste aquí");
   });
 });
+
+// ---------------------------------------------------------------------------
+// Fase 4.1 (V3b) — los mundos dejan de ser invisibles al cumplimiento. Sobre el
+// MISMO proyecto sembrado, se anaden items de un mundo con fechas conocidas.
+// Calculos a mano ANTES del assert (AGENTS.md).
+//
+//   Mundo 'quality', plan pq1 (NO es plan core: no entra en planesCore):
+//     Q1 e1 base 04-10 · hecho 04-10  -> dif  0  -> a tiempo
+//     Q2 e1 base 04-10 · hecho 04-15  -> dif +5  -> tardia
+//     Q3 e2 base 04-20 · hecho 04-17  -> dif -3  -> adelantada
+//     Q4 e2 base 04-25 · SIN hacer    -> no cuenta (falta fecha real)
+//   -> quality: 1 a tiempo, 1 adelantada, 1 tardia, total 3
+//   -> core (del BASE de arriba): A y D a tiempo, C adelantada, B tardia
+//      = 2 a tiempo, 1 adelantada, 1 tardia, total 4
+// ---------------------------------------------------------------------------
+const ITEMS_MUNDO = [
+  { plan_id: "pq1", dominio: "quality", etapa: 1, estado: "hecho", destacado: false, texto: "Q1", completed_at: iso("2026-04-10"), fecha_base: iso("2026-04-10"), fecha_base_original: null },
+  { plan_id: "pq1", dominio: "quality", etapa: 1, estado: "hecho", destacado: false, texto: "Q2", completed_at: iso("2026-04-15"), fecha_base: iso("2026-04-10"), fecha_base_original: null },
+  { plan_id: "pq1", dominio: "quality", etapa: 2, estado: "hecho", destacado: false, texto: "Q3", completed_at: iso("2026-04-17"), fecha_base: iso("2026-04-20"), fecha_base_original: null },
+  { plan_id: "pq1", dominio: "quality", etapa: 2, estado: "pendiente", destacado: false, texto: "Q4", completed_at: null, fecha_base: iso("2026-04-25"), fecha_base_original: null },
+];
+const CON_MUNDO: EntradaAnalytics = { ...BASE, items: [...BASE.items, ...ITEMS_MUNDO] };
+
+describe("calcularAnalytics — desglose por dominio (Fase 4.1 V3b)", () => {
+  it("cuenta el cumplimiento del MUNDO con sus propios conteos", () => {
+    const porDom = calcularAnalytics(CON_MUNDO).cumplimiento!.porDominio;
+    const quality = porDom.find((d) => d.dominio === "quality");
+    expect(quality).toEqual({ dominio: "quality", aTiempo: 1, adelantadas: 1, tardias: 1, total: 3 });
+  });
+
+  it("cuenta el core aparte, sin mezclarlo con el mundo", () => {
+    const porDom = calcularAnalytics(CON_MUNDO).cumplimiento!.porDominio;
+    expect(porDom.find((d) => d.dominio === "core")).toEqual({
+      dominio: "core",
+      aTiempo: 2,
+      adelantadas: 1,
+      tardias: 1,
+      total: 4,
+    });
+  });
+
+  it("el core va primero: orden estable para la pantalla", () => {
+    expect(calcularAnalytics(CON_MUNDO).cumplimiento!.porDominio.map((d) => d.dominio)).toEqual([
+      "core",
+      "quality",
+    ]);
+  });
+
+  it("LA CAPA UNIVERSAL NO SE MUEVE: el mundo no le toca el ritmo al viaje core", () => {
+    // El aserto que protege la decision de diseño: sumar 3 acciones de mundo NO
+    // puede cambiar la duracion, el ritmo, la racha ni las etapas del core.
+    const sinMundo = calcularAnalytics(BASE).universal;
+    const conMundo = calcularAnalytics(CON_MUNDO).universal;
+    expect(conMundo).toEqual(sinMundo);
+  });
+
+  it("las etapas del mundo NO colisionan con las del core en duracionPorEtapa", () => {
+    // Ambos tienen etapa 1 y 2: si se mezclaran, las duraciones core cambiarian.
+    expect(calcularAnalytics(CON_MUNDO).universal.duracionPorEtapa).toEqual(
+      calcularAnalytics(BASE).universal.duracionPorEtapa
+    );
+  });
+
+  it("el cumplimiento CORE (el principal) sigue intacto con mundos presentes", () => {
+    const c = calcularAnalytics(CON_MUNDO).cumplimiento!;
+    const soloCore = calcularAnalytics(BASE).cumplimiento!;
+    expect(c.aTiempo).toBe(soloCore.aTiempo);
+    expect(c.tardias).toBe(soloCore.tardias);
+    expect(c.totalConFecha).toBe(soloCore.totalConFecha);
+  });
+
+  it("sin mundos, el desglose es solo core", () => {
+    expect(calcularAnalytics(BASE).cumplimiento!.porDominio.map((d) => d.dominio)).toEqual(["core"]);
+  });
+});

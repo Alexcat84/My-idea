@@ -9,6 +9,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Analytics } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
+import catalogo from "@/lib/assets/packs_catalog.json";
 
 interface Respuesta {
   nombre: string;
@@ -21,6 +22,13 @@ interface Respuesta {
 }
 
 const ERROR = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
+
+/** Fase 4.1 (V3b): el mundo se nombra como el usuario lo conoce, jamás por su
+ * clave técnica. "core" es el viaje principal. */
+const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries([
+  ["core", "Tu viaje principal"],
+  ...(catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.map((p) => [p.clave, p.nombre]),
+]);
 
 function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
   return (
@@ -259,6 +267,33 @@ export function AnalisisProyecto({
             )}
 
             <div className="flex flex-col gap-4 lg:w-[340px] lg:shrink-0">
+              {/* Fase 4.1 (V3b): la fila extra que admite el canon 11 — el
+                  cumplimiento por dominio. Solo aparece cuando hay algún mundo
+                  con fechas: en un proyecto solo-core no estorba. */}
+              {c.porDominio.length > 1 && (
+                <div className="rounded-panel border border-hairline bg-surface p-5">
+                  <p className="mb-3 text-[13px] font-semibold">Cumplimiento por mundo</p>
+                  <ul className="flex flex-col gap-2.5">
+                    {c.porDominio.map((d) => (
+                      <li key={d.dominio} className="flex items-baseline justify-between gap-3">
+                        <span className="min-w-0 truncate text-[13px]">
+                          {NOMBRE_DOMINIO[d.dominio] ?? d.dominio}
+                        </span>
+                        <span className="shrink-0 text-[12.5px] tabular-nums">
+                          <span className="font-semibold text-done">{d.aTiempo}</span>
+                          <span className="text-dim"> · </span>
+                          <span className="font-semibold text-accent">{d.adelantadas}</span>
+                          <span className="text-dim"> · </span>
+                          <span className="font-semibold text-warn">{d.tardias}</span>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 border-t border-hairline pt-2.5 text-[11.5px] text-dim">
+                    a tiempo · adelantadas · tardías
+                  </p>
+                </div>
+              )}
               <div className="rounded-panel border border-hairline bg-surface p-5">
                 <p className="text-[15px]">
                   <span className="text-2xl font-bold text-ink">

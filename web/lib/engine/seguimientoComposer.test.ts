@@ -5,7 +5,7 @@
 import { describe, expect, it } from "vitest";
 import type { Grafo } from "./graph";
 import { candidatosSeguimiento } from "./puertaAvanzada";
-import { componerMensajeSeguimiento } from "./seguimientoComposer";
+import { componerMensajeSeguimiento, itemsDelUltimoPlanCore } from "./seguimientoComposer";
 
 describe("componerMensajeSeguimiento", () => {
   it("agrupa por estado en orden hecho→a_medias→empezado→pendiente, con notas", () => {
@@ -76,5 +76,55 @@ describe("candidatosSeguimiento (puntajes a mano sobre mini-grafo)", () => {
       new Set(["a"])
     );
     expect(r.indexOf("d")).toBeLessThan(r.indexOf("c"));
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Fase 4.1 (V4, auditoria de paridad de mundos): el follow es SIEMPRE core, y
+// antes tomaba el plan del item MAS RECIENTE fuera cual fuera su dominio. Si el
+// usuario acababa de explorar un mundo, "Contar que paso" componia su avance
+// real con el checklist del MUNDO mientras el bloque llevaba cumplimiento core.
+// ---------------------------------------------------------------------------
+describe("itemsDelUltimoPlanCore (Fase 4.1 V4)", () => {
+  // El escenario exacto del hallazgo: el mundo es MAS RECIENTE que el core.
+  const filas = [
+    { plan_id: "mundo1", dominio: "quality", etapa: 1, orden: 1, texto: "Audita tu calidad", destacado: false, estado: "pendiente" as const, created_at: "2026-03-10T17:08:00Z" },
+    { plan_id: "mundo1", dominio: "quality", etapa: 1, orden: 2, texto: "Mide la variacion", destacado: false, estado: "pendiente" as const, created_at: "2026-03-10T17:08:00Z" },
+    { plan_id: "core2", dominio: "core", etapa: 2, orden: 1, texto: "Sal a vender", destacado: true, estado: "a_medias" as const, created_at: "2026-03-10T16:59:00Z" },
+    { plan_id: "core2", dominio: "core", etapa: 1, orden: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho" as const, nota: "la tabla quedo lista", created_at: "2026-03-10T16:59:00Z" },
+    { plan_id: "core1", dominio: "core", etapa: 1, orden: 1, texto: "Plan viejo, ciclo anterior", destacado: false, estado: "hecho" as const, created_at: "2026-03-01T10:00:00Z" },
+  ];
+
+  it("con items de mundo MAS RECIENTES, el follow NO los toma", () => {
+    const items = itemsDelUltimoPlanCore(filas);
+    expect(items.map((i) => i.texto)).toEqual(["Cierra tu costo", "Sal a vender"]);
+    expect(items.some((i) => i.texto.includes("calidad") || i.texto.includes("variacion"))).toBe(false);
+  });
+
+  it("elige el ULTIMO plan core, no el primero (los ciclos viejos no vuelven)", () => {
+    const items = itemsDelUltimoPlanCore(filas);
+    expect(items.some((i) => i.texto.includes("Plan viejo"))).toBe(false);
+  });
+
+  it("conserva estado, nota, destacado y el orden etapa->orden", () => {
+    const items = itemsDelUltimoPlanCore(filas);
+    expect(items[0]).toEqual({ etapa: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho", nota: "la tabla quedo lista" });
+    expect(items[1].destacado).toBe(true);
+  });
+
+  it("dominio null cuenta como core (items previos a la migracion 016)", () => {
+    const viejos = [
+      { plan_id: "p1", etapa: 1, orden: 1, texto: "Sin dominio", destacado: false, estado: "hecho" as const, created_at: "2026-03-05T10:00:00Z" },
+    ];
+    expect(itemsDelUltimoPlanCore(viejos).map((i) => i.texto)).toEqual(["Sin dominio"]);
+  });
+
+  it("un proyecto SOLO con items de mundo no compone nada core", () => {
+    expect(itemsDelUltimoPlanCore(filas.filter((f) => f.dominio === "quality"))).toEqual([]);
+  });
+
+  it("no depende del orden en que venga la consulta", () => {
+    const alReves = [...filas].reverse();
+    expect(itemsDelUltimoPlanCore(alReves).map((i) => i.texto)).toEqual(["Cierra tu costo", "Sal a vender"]);
   });
 });

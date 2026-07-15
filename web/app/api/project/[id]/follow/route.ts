@@ -31,7 +31,11 @@ import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
 import { construirBloqueRealidad } from "@/lib/engine/bloqueRealidad";
 import { seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
-import { componerMensajeSeguimiento, type ItemParaComponer } from "@/lib/engine/seguimientoComposer";
+import {
+  componerMensajeSeguimiento,
+  itemsDelUltimoPlanCore,
+  type FilaChecklist,
+} from "@/lib/engine/seguimientoComposer";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
@@ -83,11 +87,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
-  // (a) El checklist del último plan (por fecha de inserción) con estados y
+  // (a) El checklist del último plan CORE (por fecha de inserción) con estados y
   // notas — la historia real del avance, sin que el usuario la redacte.
+  //
+  // Fase 4.1 (V4, auditoría de paridad de mundos): el filtro de dominio NO es
+  // decorativo. Este follow es SIEMPRE core (la sesión se crea sin dominio), y
+  // la consulta tomaba el plan del ítem más reciente FUERA CUAL FUERA su
+  // dominio: si el usuario acababa de explorar un mundo, "Contar qué pasó"
+  // componía su "mi avance real" con el checklist del MUNDO mientras el bloque
+  // de realidad llevaba cumplimiento core — el mensaje y el bloque describiendo
+  // dominios distintos. En el vuelo no se manifestó por suerte del orden.
+  //
+  // ANCLA: el día que exista un follow-DE-MUNDO, esta funcion recibe su
+  // `dominio` y filtra por él, y el bloque de realidad se construye con el
+  // cumplimiento DE ESE MUNDO más una línea de contexto global (nunca las
+  // tardanzas del core como si fueran suyas). Hoy no existe: el ritual
+  // "Contar qué pasó" vive una sola vez, en el viaje core.
   const { data: filas, error: errorItems } = await supabase
     .from("checklist_items")
-    .select("plan_id, etapa, texto, destacado, estado, nota, created_at")
+    .select("plan_id, dominio, etapa, texto, destacado, estado, nota, created_at")
     .eq("project_id", projectId)
     .order("created_at", { ascending: false })
     .order("etapa", { ascending: true })
@@ -95,16 +113,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (errorItems) {
     return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
   }
-  const ultimoPlanId = filas?.[0]?.plan_id ?? null;
-  const items: ItemParaComponer[] = (filas ?? [])
-    .filter((f) => f.plan_id === ultimoPlanId)
-    .map((f) => ({
-      etapa: f.etapa as number,
-      texto: f.texto as string,
-      destacado: f.destacado as boolean,
-      estado: f.estado as ChecklistEstado,
-      nota: (f.nota as string | null) ?? null,
-    }));
+  const items = itemsDelUltimoPlanCore((filas ?? []) as unknown as FilaChecklist[]);
 
   // Fase 4.0 §3 (docs/FLUJO_TRACKING.md): el BLOQUE DE REALIDAD. Antes el
   // follow solo mandaba lo que el usuario MARCO; el motor replanificaba ciego
