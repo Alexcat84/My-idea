@@ -176,15 +176,22 @@ function PasosLista({ pasos }: { pasos: string[] }) {
       {pasos.map((p, i) => (
         <li key={i} className="relative flex gap-3 pb-3 last:pb-0">
           <span aria-hidden className="relative flex-none">
-            <span className="mt-[5px] block h-1.5 w-1.5 rounded-full bg-accent" />
+            {/* El punto va al centro óptico de la PRIMERA línea del texto:
+                13.5px x 1.6 de interlineado = 21.6px de caja, punto de 6px ->
+                (21.6-6)/2 ~= 8px. Antes iba a 5px y ademas el <p> del Markdown
+                empujaba el texto 10px hacia abajo: de ahi el desalineo. */}
+            <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-accent" />
             {i < pasos.length - 1 && (
+              // del borde inferior de este punto al borde superior del siguiente
               <span
-                className="absolute left-[2.5px] top-3 w-px"
-                style={{ bottom: "-4px", background: "rgba(77,124,254,0.28)" }}
+                className="absolute left-[2.5px] top-4 w-px"
+                style={{ bottom: "-8px", background: "rgba(77,124,254,0.28)" }}
               />
             )}
           </span>
-          <span className="min-w-0 flex-1 text-[13.5px] leading-[1.6] text-dim [text-wrap:pretty]">
+          {/* [&_p]:!my-0 neutraliza el margen del parrafo del Markdown, que es
+              lo que descuadraba el punto contra el texto. */}
+          <span className="min-w-0 flex-1 text-[13.5px] leading-[1.6] text-dim [text-wrap:pretty] [&_p]:!my-0">
             <Markdown>{p}</Markdown>
           </span>
         </li>
