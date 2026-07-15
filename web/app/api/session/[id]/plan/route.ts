@@ -56,39 +56,69 @@ import { createClient } from "@/lib/supabase/server";
 
 const INTERVALO_HEARTBEAT_MS = 15_000;
 
+// Reintento del redactor (hermano del fix del organizador). El plan se genera
+// en el momento de MAYOR inversion emocional del usuario -- acaba de terminar su
+// entrevista -- y pronto sera un momento PAGADO (5 creditos): un hipo transitorio
+// de la API no puede costarle su plan. El SDK reintenta la conexion inicial pero
+// NO un fallo a mitad de stream: eso lo cubre esta red.
+const BACKOFFS_PLAN_MS = [0, 1000, 3000];
+
 async function generarTextoPlan(
   client: Anthropic,
   preparacion: PreparacionPlan,
   acumulado: UsoAcumulado,
-  onDelta: (texto: string) => void
+  onDelta: (texto: string) => void,
+  /** Un intento previo pinto etapas en el arbol de espera y murio: el cliente
+   * debe DESCARTARLAS antes de que el intento nuevo pinte las suyas (el texto
+   * nuevo no es el mismo). Anunciar una sola vez, la leccion del organizador. */
+  onReinicio: () => void
 ): Promise<{ rawTexto: string | null; acumulado: UsoAcumulado; avisoFallback: string | null }> {
   if (costoAcumuladoUsd(acumulado) >= PRESUPUESTO_SESION_USD_DEFAULT) {
     return { rawTexto: null, acumulado, avisoFallback: "presupuesto de sesion ya excedido, ensamblo sin narrar" };
   }
-  try {
-    const stream = client.messages.stream({
-      model: MODEL,
-      max_tokens: 5000,
-      system: [{ type: "text", text: SYSTEM_PLAN, cache_control: { type: "ephemeral" } }],
-      messages: [{ role: "user", content: JSON.stringify(preparacion.payload) }],
-    });
-    // Nunca reenviar el marcador ===JSON=== ni lo que sigue -- es la
-    // autodeclaracion de cobertura interna (regla 11 de SYSTEM_PLAN), no
-    // contenido para mostrar en vivo.
-    const filtro = filtrarDeltaAntesDeAutodeclaracion(onDelta);
-    stream.on("text", filtro.onChunk);
-    const mensajeFinal = await stream.finalMessage();
-    filtro.finalizar();
-    const nuevoAcumulado = registrarUso(acumulado, MODEL, mensajeFinal.usage, "plan");
-    const rawTexto = mensajeFinal.content
-      .filter((b): b is Anthropic.TextBlock => b.type === "text")
-      .map((b) => b.text)
-      .join("");
-    return { rawTexto, acumulado: nuevoAcumulado, avisoFallback: null };
-  } catch (e) {
-    const motivo = e instanceof PresupuestoExcedidoError ? e.message : e instanceof Error ? e.message : String(e);
-    return { rawTexto: null, acumulado, avisoFallback: `fallo el redactor con IA, ensamblo offline: ${motivo}` };
+  let ultimoError: unknown = null;
+  for (let intento = 0; intento < BACKOFFS_PLAN_MS.length; intento += 1) {
+    if (BACKOFFS_PLAN_MS[intento] > 0) {
+      await new Promise((r) => setTimeout(r, BACKOFFS_PLAN_MS[intento]));
+      onReinicio();
+    }
+    try {
+      const stream = client.messages.stream({
+        model: MODEL,
+        max_tokens: 5000,
+        system: [{ type: "text", text: SYSTEM_PLAN, cache_control: { type: "ephemeral" } }],
+        messages: [{ role: "user", content: JSON.stringify(preparacion.payload) }],
+      });
+      // Nunca reenviar el marcador ===JSON=== ni lo que sigue -- es la
+      // autodeclaracion de cobertura interna (regla 11 de SYSTEM_PLAN), no
+      // contenido para mostrar en vivo. Filtro NUEVO por intento: es con estado.
+      const filtro = filtrarDeltaAntesDeAutodeclaracion(onDelta);
+      stream.on("text", filtro.onChunk);
+      const mensajeFinal = await stream.finalMessage();
+      filtro.finalizar();
+      const nuevoAcumulado = registrarUso(acumulado, MODEL, mensajeFinal.usage, "plan");
+      const rawTexto = mensajeFinal.content
+        .filter((b): b is Anthropic.TextBlock => b.type === "text")
+        .map((b) => b.text)
+        .join("");
+      return { rawTexto, acumulado: nuevoAcumulado, avisoFallback: null };
+    } catch (e) {
+      // El presupuesto no es un hipo: reintentar solo quemaria mas. Es el UNICO
+      // caso que sigue ensamblando offline, que para eso existe.
+      if (e instanceof PresupuestoExcedidoError) {
+        return { rawTexto: null, acumulado, avisoFallback: `fallo el redactor con IA, ensamblo offline: ${e.message}` };
+      }
+      ultimoError = e;
+      console.error(`[plan] intento ${intento + 1}/${BACKOFFS_PLAN_MS.length} fallo:`, e);
+    }
   }
+  // Agotados los reintentos: LANZA. Antes se degradaba en silencio a un
+  // ensamblado offline -- un plan mecanico, sin narracion, entregado como si
+  // nada en el momento que mas le importa al usuario (y que pronto le cuesta 5
+  // creditos). Es mejor decirlo y ofrecerle reintentar SOLO la redaccion: su
+  // sesion y su recorrido ya estan persistidos, la entrevista no se repite.
+  console.error("[plan] redactor agotado tras reintentos", { ultimoError });
+  throw ultimoError instanceof Error ? ultimoError : new Error(String(ultimoError));
 }
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -165,7 +195,8 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           client,
           preparacion,
           acumulado,
-          (texto) => enviar("delta", { texto })
+          (texto) => enviar("delta", { texto }),
+          () => enviar("reinicio", { motivo: "reintentando la redaccion" })
         );
         if (avisoFallback) enviar("aviso", { mensaje: avisoFallback });
 
@@ -275,6 +306,14 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         if (titulo && !proyecto?.titulo) camposProyecto.titulo = titulo;
         await actualizarProyecto(supabase, projectId, camposProyecto);
 
+        // ── ANCLA para la ETAPA 2 del frente de cuentas (docs/FLUJO_TRACKING.md §5)
+        // Aqui, y NO antes, se cablea el consumo de los 5 creditos del plan: el
+        // patron es verificar saldo al inicio y DESCONTAR A LA ENTREGA. Este
+        // punto es la entrega: el plan ya esta redactado, persistido, con su
+        // checklist derivado y la sesion cerrada. Es prerequisito de ese cobro
+        // que el redactor reintente y, si se agota, LANCE (ver generarTextoPlan):
+        // un plan que muere a mitad jamas debe consumir creditos, y uno
+        // ensamblado offline en silencio no es lo que el usuario pago.
         enviar("done", {
           project_id: projectId,
           session_id: sessionId,

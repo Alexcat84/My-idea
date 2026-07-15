@@ -137,6 +137,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [generandoPlan, setGenerandoPlan] = useState(false);
   const [etiquetaEtapa, setEtiquetaEtapa] = useState<string | undefined>();
   const [planMd, setPlanMd] = useState<string | null>(null);
+  // Fix (retry del stream del plan): si la redaccion muere tras los reintentos
+  // del servidor, se guarda con que reintentarla. La sesion y el recorrido YA
+  // estan persistidos: reintentar re-lanza SOLO la redaccion, nunca la entrevista.
+  const [planFallido, setPlanFallido] = useState<{ sid: string; contexto?: string } | null>(null);
   const arrancoRef = useRef(false);
   // true desde que el usuario pide el plan de la sesion actual: los turnos
   // tardios de esa sesion ya no reabren la entrevista (carrera C0 bis).
@@ -220,6 +224,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       // puerta visible hacia la etapa 5 ni hacia los 6 mundos.
       setListoParaPlan(false);
       setError(null);
+      setPlanFallido(null);
       try {
         // Phase 3.7.2: el contexto final opcional viaja al redactor.
         const res = await fetch(`/api/session/${sid}/plan`, {
@@ -238,7 +243,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
         let crudo = "";
         const etapasVistas = new Set<string>();
         await consumirSSE(res, ({ evento, data }) => {
-          if (evento === "delta") {
+          if (evento === "reinicio") {
+            // Un intento del redactor murió a mitad y el servidor va a reintentar.
+            // Lo que ese intento alcanzó a pintar NO corresponde al texto nuevo:
+            // se descarta para no mezclar dos redacciones en el mismo árbol.
+            crudo = "";
+            etapasVistas.clear();
+            setNodos((prev) => prev.filter((n) => !n.id.startsWith("etapa-")));
+            setEtiquetaEtapa(undefined);
+          } else if (evento === "delta") {
             crudo += String((data as { texto: string }).texto);
             for (const m of crudo.matchAll(/^##\s+(.+)$/gm)) {
               const titulo = m[1].trim();
@@ -256,12 +269,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
             // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
             void cargarChecklist();
           } else if (evento === "error") {
-            setError(ERROR_GENERICO);
+            setError(
+              "no pudimos terminar de escribir tu plan; lo que contaste está guardado, así que no hay que repetir nada"
+            );
+            setPlanFallido({ sid, contexto: contextoExtra });
             planPedidoRef.current = false;
           }
         });
       } catch {
-        setError("la conexión se cortó mientras armábamos tu plan; tu recorrido quedó guardado, intenta de nuevo");
+        setError("la conexión se cortó mientras armábamos tu plan; tu recorrido quedó guardado");
+        setPlanFallido({ sid, contexto: contextoExtra });
         planPedidoRef.current = false;
       } finally {
         setGenerandoPlan(false);
@@ -531,7 +548,21 @@ export function IdeaView({ projectId }: { projectId: string }) {
       </header>
 
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">
-        {error && <p className="mb-4 text-sm text-warn">{error}</p>}
+        {error && (
+          <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className="text-sm text-warn">{error}</p>
+            {/* Reintenta SOLO la redaccion sobre la misma sesion: la entrevista
+                ya esta persistida y no se repite. */}
+            {planFallido && !generandoPlan && (
+              <button
+                onClick={() => generarPlan(planFallido.sid, planFallido.contexto)}
+                className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+              >
+                Intentar de nuevo
+              </button>
+            )}
+          </div>
+        )}
 
         {vistaCelebracion ? (
           <Celebracion
