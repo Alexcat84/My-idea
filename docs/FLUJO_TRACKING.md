@@ -122,3 +122,33 @@ replanificar por realidad vale cada crédito.
 | Ritual adaptado a avance-cero (§4) | ✗ NO existe: hoy diría "0 de 28" |
 | Sugeridor N+1 aprende del ritmo real | parcial (patrón de día sí; velocidad no) |
 | Cobro del follow | dormido (ETAPA 2 de cuentas, por diseño) |
+| Acta de cierre (§8) | ✗ NO existe: hoy se cierra sin memoria del porqué |
+
+## 8. EL ACTA DE CIERRE (adenda del fundador: el cierre es soberano y ahora
+también documentado)
+
+Cerrar una idea es un acto del usuario, no un premio del sistema: no exige el
+100% del checklist y nunca lo exigirá. Pero un cierre sin memoria del porqué
+pierde la mitad de la historia. El acta la conserva.
+
+- **Persistencia**: `projects.cierre_motivo` (text, null). El evento
+  `realizada` de `project_bitacora` amplía su payload a `{accion, motivo}`.
+- **El diálogo de "Marcar como realizada"** se vuelve un mini-ritual honesto
+  de dos elementos:
+  (a) **el espejo del momento**: "Llevas X de N acciones (Z%)" con sus números
+      reales, sin juicio;
+  (b) **campo OPCIONAL** (texto/voz): "¿Por qué la cierras aquí? (para tu
+      propia memoria)".
+  Cero fricción: se puede cerrar sin escribir nada, como hoy.
+- **Dónde aparece el motivo** (donde la historia se cuenta): bajo el hito
+  REALIZADA del timeline de la Celebración (discreto, en la voz del usuario),
+  en el Análisis, y en el informe `.md` exportado, que cuando el proyecto está
+  realizado gana su sección **"Acta de cierre"** (estado final, motivo del
+  usuario, y las estadísticas completas).
+- **Reabrir NO borra el motivo** (la historia no se reescribe): queda en la
+  bitácora. Si el usuario vuelve a cerrar después, el motivo nuevo se registra
+  junto al anterior; el Análisis puede mostrar la secuencia.
+- **Los ítems pendientes al cierre no se tocan**: ni cambian de estado ni se
+  marcan. Quedan como testigos honestos en la Historia (las notas por ítem ya
+  existen para documentar casos puntuales como "no se pudo ejecutar completa,
+  entregable aceptable").

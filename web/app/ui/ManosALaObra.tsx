@@ -94,8 +94,6 @@ interface Props {
   onSeguimientoIniciado: (turno: unknown) => void;
   /** POST world/start devolvió el primer turno del mundo */
   onMundoIniciado: (turno: unknown, dominio: string) => void;
-  /** abrir el ritual directamente (CTA "Ajustar el plan" del plan) */
-  ritualAbierto?: boolean;
 }
 
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
@@ -372,7 +370,28 @@ function RitualContinuar({
         </button>
       </div>
 
-      {paso === 1 && (
+      {/* Fase 4.0 §4: el ritual NO exige avance mínimo (la realidad cambia antes
+          de ejecutar), pero SE ADAPTA. Con cero avance, "llevas 0 de 28" es
+          absurdo y desmoralizante: la pregunta cambia, la puerta no. */}
+      {paso === 1 && resumen.hechos === 0 && (
+        <>
+          <p className="text-[17px] font-medium leading-relaxed">
+            ¿Aún no arrancas? Cuéntame qué cambió desde que armamos el plan.
+          </p>
+          <p className="mt-2 text-sm text-dim">
+            A veces la realidad se mueve antes que uno: un proveedor que falla, algo que se cayó, una
+            oportunidad nueva. Si ya hiciste algo, márcalo arriba y lo tomo en cuenta.
+          </p>
+          <button
+            onClick={() => setPaso(2)}
+            className="mt-4 rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90"
+          >
+            Te cuento
+          </button>
+        </>
+      )}
+
+      {paso === 1 && resumen.hechos > 0 && (
         <>
           <p className="text-[17px] font-medium leading-relaxed">
             Tu checklist es tu historia: ¿ya refleja lo que hiciste?
@@ -739,9 +758,10 @@ export function ManosALaObra({
   onItemActualizado,
   onSeguimientoIniciado,
   onMundoIniciado,
-  ritualAbierto = false,
 }: Props) {
-  const [ritual, setRitual] = useState(ritualAbierto);
+  // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
+  // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
+  const [ritual, setRitual] = useState(false);
   const [ocupado, setOcupado] = useState(false);
   const [enviandoFollow, setEnviandoFollow] = useState(false);
   const [arrancandoMundo, setArrancandoMundo] = useState<string | null>(null);

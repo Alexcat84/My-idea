@@ -144,7 +144,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   // --- Manos a la Obra (Fase 3.6) ---
   const [vistaManos, setVistaManos] = useState(quiereManos);
-  const [ritualInicial, setRitualInicial] = useState(false);
   const [checklist, setChecklist] = useState<ChecklistData | null>(null);
   // Fase 3.8: el modo del camino ('ritmo'|'fechas'|null hasta elegir).
   const [modoCamino, setModoCamino] = useState<"ritmo" | "fechas" | null>(null);
@@ -203,7 +202,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setContextoFinal("");
     setPlanMd(null);
     setVistaManos(false);
-    setRitualInicial(false);
     setDominioEntrevista(dominio);
     planPedidoRef.current = false;
     procesarTurno(data);
@@ -384,8 +382,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     }
   }
 
-  function irAManos(ritual = false) {
-    setRitualInicial(ritual);
+  function irAManos() {
     setVistaManos(true);
     router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
   }
@@ -594,7 +591,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
               }}
               onSeguimientoIniciado={(data) => entrarASesionNueva(data as RespuestaTurno, "core")}
               onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio)}
-              ritualAbierto={ritualInicial}
             />
           </>
         ) : (
@@ -778,25 +774,26 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 <PlanDocumento
                   md={planMd}
                   nombreIdea={detalle.idea.nombre}
-                  onEmpezar={() => irAManos(false)}
+                  onEmpezar={() => irAManos()}
                   nodosFuente={nodosFuente}
                 />
               )}
 
-              {/* CTA canon 05: el verde ejecuta espera en la etapa 5 */}
+              {/* CTA canon 05: el verde ejecuta espera en la etapa 5.
+                  Fase 4.0 (regla de UNA sola puerta, docs/FLUJO_TRACKING.md §2):
+                  esta pantalla es un DOCUMENTO, no una puerta. El antiguo
+                  "Ajustar el plan" abría aquí el ritual de seguimiento —
+                  prematuro (disparaba el follow con cero avance: "llevas 0 de
+                  28") y duplicado: la única puerta al ritual es Manos a la Obra
+                  → "Contar qué pasó". Ajustar sin haber ejecutado es regenerar,
+                  y regenerar no es el producto. */}
               {planMd && !generandoPlan && !entrevistaActiva && (
                 <div className="flex flex-wrap items-center gap-3">
                   <button
-                    onClick={() => irAManos(false)}
+                    onClick={() => irAManos()}
                     className="rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
                   >
                     Pasar a Manos a la Obra
-                  </button>
-                  <button
-                    onClick={() => irAManos(true)}
-                    className="rounded-[10px] border border-white/15 px-5 py-3 text-[13.5px] text-dim hover:border-accent/60 hover:text-ink"
-                  >
-                    Ajustar el plan
                   </button>
                 </div>
               )}
@@ -858,7 +855,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   unlocks={unlocks}
                   progresoMundos={progresoMundos}
                   conPlan={Boolean(planMd)}
-                  onVerMundo={() => irAManos(false)}
+                  onVerMundo={() => irAManos()}
                   onTusNumeros={() =>
                     document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" })
                   }
