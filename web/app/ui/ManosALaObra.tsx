@@ -61,6 +61,21 @@ export interface PlanHistorial {
   contenido_md: string;
 }
 
+/**
+ * Fase 4.1 (V3a, auditoria de paridad): un tramo del ritual de fechas. El ritual
+ * cubre el proyecto ENTERO -- el viaje core y cada mundo activo -- y cada tramo
+ * trae SU propio ancla: el sugeridor etapa->semana cuenta desde el created_at
+ * del plan de ESE dominio, no del core (un mundo activado en abril no puede
+ * fechar sus etapas desde un plan core de marzo).
+ */
+export interface GrupoRitual {
+  dominio: string;
+  nombre: string;
+  planCreatedAt: string;
+  titulos: Record<number, string>;
+  items: ItemChecklistUI[];
+}
+
 interface MundoInfo {
   dominio: string;
   nombre: string;
@@ -586,9 +601,7 @@ function InterruptorFechas({
  * determinísticamente (fechasBase.ts, cero LLM) y el usuario ajusta la que
  * quiera. Tema azul: fijar fechas es planear. */
 function RitualFechas({
-  items,
-  titulos,
-  planCreatedAt,
+  grupos,
   cadenciaSemanas,
   soloPendientes,
   guardando,
@@ -596,9 +609,7 @@ function RitualFechas({
   onAceptar,
   onPosponer,
 }: {
-  items: ItemChecklistUI[];
-  titulos: Record<number, string>;
-  planCreatedAt: string;
+  grupos: GrupoRitual[];
   soloPendientes: boolean;
   guardando: boolean;
   error: string | null;
@@ -607,43 +618,61 @@ function RitualFechas({
   /** Fase 4.0 §1[8]: semanas por etapa aprendidas del ciclo previo. */
   cadenciaSemanas?: number;
 }) {
+  // Con "recalcular", solo lo que sigue vivo. Un mundo recien activado trae
+  // todos sus items pendientes: por eso aparece aqui aunque la baseline core
+  // ya estuviera confirmada (V3a).
+  const tramos = useMemo(
+    () =>
+      grupos
+        .map((g) => ({ ...g, items: soloPendientes ? g.items.filter((i) => i.estado !== "hecho") : g.items }))
+        .filter((g) => g.items.length > 0),
+    [grupos, soloPendientes]
+  );
+  const items = useMemo(() => tramos.flatMap((g) => g.items), [tramos]);
   const diaPreferido = useMemo(() => diaDominante(items.map((i) => i.completed_at)), [items]);
+  // Una llamada al sugeridor POR TRAMO: cada dominio cuenta desde su propio plan.
   const sugeridas = useMemo(
     () =>
       Object.fromEntries(
-        sugerirFechasBase({
-          planCreatedAt,
-          diaPreferido,
-          cadenciaSemanas,
-          items: items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
-        }).map((s) => [s.id, s.fecha])
+        tramos.flatMap((g) =>
+          sugerirFechasBase({
+            planCreatedAt: g.planCreatedAt,
+            diaPreferido,
+            cadenciaSemanas,
+            items: g.items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
+          }).map((s) => [s.id, s.fecha])
+        )
       ),
-    [items, planCreatedAt, diaPreferido, cadenciaSemanas]
+    [tramos, diaPreferido, cadenciaSemanas]
   );
   // Fecha vigente por ítem (YYYY-MM-DD) y qué ítems tocó el usuario (=ajustada).
   const [fechas, setFechas] = useState<Record<string, string>>(sugeridas);
   const [editados, setEditados] = useState<Record<string, true>>({});
 
-  const porEtapa = useMemo(() => {
-    const m = new Map<number, ItemChecklistUI[]>();
-    for (const it of items) {
-      if (!m.has(it.etapa)) m.set(it.etapa, []);
-      m.get(it.etapa)!.push(it);
-    }
-    return [...m.entries()].sort((a, b) => a[0] - b[0]);
-  }, [items]);
+  const porTramo = useMemo(
+    () =>
+      tramos.map((g) => {
+        const m = new Map<number, ItemChecklistUI[]>();
+        for (const it of g.items) {
+          if (!m.has(it.etapa)) m.set(it.etapa, []);
+          m.get(it.etapa)!.push(it);
+        }
+        return { ...g, etapas: [...m.entries()].sort((a, b) => a[0] - b[0]) };
+      }),
+    [tramos]
+  );
 
   function fijar(id: string, fecha: string) {
     setFechas((f) => ({ ...f, [id]: fecha }));
     setEditados((e) => ({ ...e, [id]: true }));
   }
 
-  function moverEtapa(etapa: number) {
+  function moverEtapa(dominio: string, etapa: number) {
     setFechas((f) => {
       const copia = { ...f };
       const marcados: Record<string, true> = {};
       for (const it of items) {
-        if (it.etapa !== etapa) continue;
+        if (it.etapa !== etapa || it.dominio !== dominio) continue;
         const base = copia[it.id] ?? sugeridas[it.id];
         const d = new Date(`${base}T12:00:00`);
         copia[it.id] = fechaInputLocal(new Date(d.getFullYear(), d.getMonth(), d.getDate() + 7, 12));
@@ -676,16 +705,23 @@ function RitualFechas({
       </div>
 
       <div className="flex flex-col gap-1 px-6 pb-2 sm:px-8">
-        {porEtapa.map(([etapa, its]) => (
+        {porTramo.map((tramo) => (
+          <section key={tramo.dominio}>
+            {/* V3a: el mundo se anuncia por su nombre. Con un solo tramo (solo
+                core) no hace falta cintillo: no se le pone nombre a lo obvio. */}
+            {porTramo.length > 1 && (
+              <p className="mt-5 text-[11px] font-bold uppercase tracking-[1.2px] text-dim">{tramo.nombre}</p>
+            )}
+            {tramo.etapas.map(([etapa, its]) => (
           <div key={etapa}>
             <div className="my-3 flex items-center gap-3">
               <span className="text-[11px] font-bold uppercase tracking-[1.2px] text-accent">
                 Etapa {etapa}
-                {titulos[etapa] ? ` · ${titulos[etapa]}` : ""}
+                {tramo.titulos[etapa] ? ` · ${tramo.titulos[etapa]}` : ""}
               </span>
               <span className="h-px flex-1 bg-hairline" />
               <button
-                onClick={() => moverEtapa(etapa)}
+                onClick={() => moverEtapa(tramo.dominio, etapa)}
                 disabled={guardando}
                 className="rounded-[8px] border border-white/15 px-2.5 py-1 text-[12px] text-dim hover:text-ink disabled:opacity-50"
               >
@@ -722,6 +758,8 @@ function RitualFechas({
               })}
             </div>
           </div>
+            ))}
+          </section>
         ))}
       </div>
 
@@ -813,6 +851,31 @@ export function ManosALaObra({
   const cCore = conteo(itemsCore);
   const tituloPlan = planMd.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? null;
   // Fase 3.8: la baseline está confirmada si algún ítem core ya tiene fecha.
+  // Fase 4.1 (V3a): el ritual cubre el proyecto ENTERO. Cada tramo lleva su
+  // propio ancla (el created_at del plan de SU dominio) y sus propios titulos
+  // de etapa: un mundo activado en abril no puede fechar desde un plan core de
+  // marzo. Un mundo sin plan o sin checklist todavia no tiene nada que fechar.
+  const gruposRitual: GrupoRitual[] = useMemo(() => {
+    const out: GrupoRitual[] = [];
+    if (core) {
+      out.push({ dominio: "core", nombre: "Tu viaje principal", planCreatedAt, titulos: titulosCore, items: itemsCore });
+    }
+    for (const mundo of mundos) {
+      const g = grupoVigente(checklist, mundo.dominio);
+      if (!g || !mundo.plan) continue;
+      out.push({
+        dominio: mundo.dominio,
+        nombre: mundo.nombre,
+        planCreatedAt: mundo.plan.created_at,
+        titulos: titulosDeEtapas(mundo.plan.contenido_md),
+        items: g.etapas.flatMap((e) => e.items),
+      });
+    }
+    return out;
+  }, [core, planCreatedAt, titulosCore, itemsCore, mundos, checklist]);
+
+  // Con fechas ya puestas en CUALQUIER dominio no se reabre el ritual inicial;
+  // un mundo nuevo entra por "recalcular pendientes" (V3a).
   const hayFechas = itemsCore.some((i) => i.fecha_base);
 
   // Ritmo: lecturas directas de lo persistido.
@@ -997,9 +1060,7 @@ export function ManosALaObra({
         {/* Fase 3.8 §4 — ritual de la línea base (modo fechas) */}
         {modoCamino === "fechas" && core && (recalcularPendientes || (!hayFechas && !pospuesto)) && (
           <RitualFechas
-            items={recalcularPendientes ? itemsCore.filter((i) => i.estado !== "hecho") : itemsCore}
-            titulos={titulosCore}
-            planCreatedAt={planCreatedAt}
+            grupos={gruposRitual}
             cadenciaSemanas={cadenciaSemanas}
             soloPendientes={recalcularPendientes}
             guardando={guardandoBaseline}
