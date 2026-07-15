@@ -35,6 +35,9 @@ export interface Proyecto {
   realizada_at?: string | null;
   /** Fase 3.8: cómo lleva el usuario su camino en Manos a la Obra. */
   modo_camino?: ModoCamino | null;
+  /** Fase 4.0 §8 (acta de cierre): por qué el usuario cerró la idea aquí, en
+   * sus palabras. null si cerró sin escribir nada (el campo es opcional). */
+  cierre_motivo?: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -128,7 +131,7 @@ export async function actualizarProyecto(
 
 /** Fase 3.8 — bitácora de eventos de PROYECTO (migration 018): el mueble
  * que las sesiones no daban (sessions.decisiones es por sesión). Eventos:
- * 'modo_camino' {de, a}, 'realizada' {accion}. No falla la request si el
+ * 'modo_camino' {de, a}, 'realizada' {accion, motivo}. No falla la request si el
  * insert falla (es telemetría/memoria, no la acción principal). */
 export async function registrarBitacora(
   supabase: SupabaseClient,

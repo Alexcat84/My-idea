@@ -83,6 +83,7 @@ export async function cargarEntradaAnalytics(
     items,
     mundos,
     modoCamino: (proyecto.modo_camino as "ritmo" | "fechas" | null) ?? null,
+    cierreMotivo: proyecto.cierre_motivo ?? null,
     ahora,
   };
 }

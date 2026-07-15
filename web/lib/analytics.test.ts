@@ -16,7 +16,7 @@
 //     C e2 completed 03-20 · base 03-22           → dif −2  (adelantada)
 //     D e2 completed 03-25 · base 03-25 · orig 03-20 → dif 0 (a tiempo, replan)
 import { describe, expect, it } from "vitest";
-import { calcularAnalytics, clasificarCumplimiento, construirHitos, type EntradaAnalytics } from "./analytics";
+import { informeMarkdown, calcularAnalytics, clasificarCumplimiento, construirHitos, type EntradaAnalytics } from "./analytics";
 
 function iso(d: string) {
   return `${d}T12:00:00Z`;
@@ -187,5 +187,38 @@ describe("calcularAnalytics — señales para el bloque de realidad (§3)", () =
     expect(calcularAnalytics(BASE).modoCamino).toBeNull();
     expect(calcularAnalytics({ ...BASE, modoCamino: "fechas" }).modoCamino).toBe("fechas");
     expect(calcularAnalytics({ ...BASE, modoCamino: "ritmo" }).modoCamino).toBe("ritmo");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Fase 4.0 §8 — EL ACTA DE CIERRE en el informe exportado.
+// ---------------------------------------------------------------------------
+describe("informeMarkdown — acta de cierre (§8)", () => {
+  it("sin realizadaAt no hay acta: el informe es el de siempre", () => {
+    const md = informeMarkdown("Mi idea", calcularAnalytics(BASE));
+    expect(md).not.toContain("## Acta de cierre");
+  });
+
+  it("realizado: abre con el acta, el estado final y el porcentaje", () => {
+    // accionesVigente = items del plan vigente (p2). En BASE todos los items
+    // son de p1, asi que el vigente (p2) tiene 0 de 0 -> sin porcentaje.
+    const md = informeMarkdown("Mi idea", calcularAnalytics(BASE), iso("2026-05-01"));
+    expect(md).toContain("## Acta de cierre");
+    expect(md).toContain("**Proyecto realizado** el 2026-05-01");
+    expect(md).toContain("Acciones al cerrar: **0 de 0**");
+  });
+
+  it("con motivo, el informe lo cita en la voz del usuario", () => {
+    const a = calcularAnalytics({ ...BASE, cierreMotivo: "Ya validé lo que\nnecesitaba saber." });
+    const md = informeMarkdown("Mi idea", a, iso("2026-05-01"));
+    expect(md).toContain("### Por qué la cerraste aquí");
+    // los saltos de linea se aplanan para no romper la cita markdown
+    expect(md).toContain("> Ya validé lo que necesitaba saber.");
+  });
+
+  it("sin motivo (cerro sin escribir), el acta existe pero no inventa cita", () => {
+    const md = informeMarkdown("Mi idea", calcularAnalytics(BASE), iso("2026-05-01"));
+    expect(md).toContain("## Acta de cierre");
+    expect(md).not.toContain("### Por qué la cerraste aquí");
   });
 });

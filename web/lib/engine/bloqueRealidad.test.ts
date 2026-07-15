@@ -46,6 +46,7 @@ const base = (over: Partial<Analytics> = {}): Analytics => ({
   cumplimiento: CUMPLIMIENTO,
   hitos: [],
   modoCamino: "fechas",
+  cierreMotivo: null,
   ...over,
 });
 

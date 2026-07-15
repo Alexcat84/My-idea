@@ -13,6 +13,9 @@ import { fechaHumanaCorta } from "@/lib/fechas";
 interface Respuesta {
   nombre: string;
   tiene_baseline: boolean;
+  /** Fase 4.0 §8: el acta de cierre. */
+  realizada_at?: string | null;
+  cierre_motivo?: string | null;
   analytics: Analytics;
   informe_md: string;
 }
@@ -95,6 +98,26 @@ export function AnalisisProyecto({
       <button onClick={onVolver} className="self-start text-sm text-dim hover:text-ink">
         ← Volver
       </button>
+
+      {/* Fase 4.0 §8: el acta de cierre encabeza el análisis de un proyecto
+          ya cerrado: estado final y el porqué, en la voz del usuario. */}
+      {datos.realizada_at && (
+        <section className="rounded-panel border border-done/40 bg-surface p-5">
+          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">Acta de cierre</p>
+          <p className="mt-2 text-[14px]">
+            Cerrado el {fechaHumanaCorta(datos.realizada_at)} con{" "}
+            <span className="font-semibold">
+              {a.universal.accionesVigente.hechas} de {a.universal.accionesVigente.total}
+            </span>{" "}
+            acciones. Lo que quedó pendiente sigue en tu historia, tal cual.
+          </p>
+          {datos.cierre_motivo && (
+            <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
+              «{datos.cierre_motivo}»
+            </blockquote>
+          )}
+        </section>
+      )}
 
       <header className="flex flex-wrap items-center justify-between gap-4">
         <h2 className="text-2xl font-bold tracking-tight sm:text-[28px]">Análisis de {nombre}</h2>

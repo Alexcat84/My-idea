@@ -15,6 +15,7 @@
  */
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
+import { CampoConVoz } from "./CampoConVoz";
 import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
@@ -800,6 +801,8 @@ export function ManosALaObra({
   const [recalcularPendientes, setRecalcularPendientes] = useState(false);
   const [guardandoBaseline, setGuardandoBaseline] = useState(false);
   const [errorBaseline, setErrorBaseline] = useState<string | null>(null);
+  // Fase 4.0 §8 — el porqué del cierre, en las palabras del usuario (opcional)
+  const [cierreMotivo, setCierreMotivo] = useState("");
   // Fase 3.8 §5 — confirmación de "Marcar como realizada"
   const [confirmandoRealizar, setConfirmandoRealizar] = useState(false);
   const [realizando, setRealizando] = useState(false);
@@ -874,7 +877,7 @@ export function ManosALaObra({
       const res = await fetch(`/api/project/${projectId}/realizar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ accion: "realizar" }),
+        body: JSON.stringify({ accion: "realizar", motivo: cierreMotivo.trim() || null }),
       });
       if (!res.ok) {
         setError(ERROR_GENERICO);
@@ -1164,10 +1167,31 @@ export function ManosALaObra({
                 </button>
               </>
             ) : (
+              /* Fase 4.0 §8 — EL ACTA DE CIERRE: mini-ritual de dos elementos.
+                 (a) el espejo del momento, con los números reales y SIN juicio;
+                 (b) el porqué, OPCIONAL. Cero fricción: se cierra sin escribir
+                 nada, como siempre. */
               <>
                 <p className="text-[14px] font-semibold leading-relaxed">
                   Esto cierra tu idea y nace tu proyecto. Podrás reabrirla cuando quieras.
                 </p>
+                <p className="mt-2 text-[12.5px] text-dim">
+                  Llevas {cCore.hechos} de {cCore.total} acciones
+                  {cCore.total > 0 ? ` (${Math.round((cCore.hechos / cCore.total) * 100)}%)` : ""}. Las que queden
+                  pendientes se guardan tal cual: son parte de tu historia.
+                </p>
+                <label htmlFor="cierre-motivo" className="mt-3.5 block text-[12.5px] text-dim">
+                  ¿Por qué la cierras aquí? <span className="text-dim/70">(opcional, para tu propia memoria)</span>
+                </label>
+                <div className="mt-1.5">
+                  <CampoConVoz
+                    id="cierre-motivo"
+                    valor={cierreMotivo}
+                    onCambio={setCierreMotivo}
+                    filas={2}
+                    placeholder="La cierro porque…"
+                  />
+                </div>
                 <div className="mt-3 flex items-center gap-3">
                   <button
                     onClick={marcarRealizada}

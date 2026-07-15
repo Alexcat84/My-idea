@@ -41,9 +41,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     nombre,
     modo_camino: proyecto.modo_camino ?? null,
     realizada_at: proyecto.realizada_at ?? null,
+    cierre_motivo: proyecto.cierre_motivo ?? null,
     tiene_baseline: analytics.cumplimiento !== null,
     analytics,
     hitosCelebracion: construirHitos(entrada, ahora, true),
-    informe_md: informeMarkdown(nombre, analytics),
+    informe_md: informeMarkdown(nombre, analytics, proyecto.realizada_at ?? null),
   });
 }

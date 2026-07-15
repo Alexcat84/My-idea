@@ -61,6 +61,8 @@ export interface EntradaAnalytics {
   /** Fase 4.0 §3: el modo del camino viaja con la lectura — el bloque de
    * realidad NO habla de cumplimiento si el usuario eligió "a mi ritmo". */
   modoCamino?: "ritmo" | "fechas" | null;
+  /** Fase 4.0 §8: el motivo del cierre (projects.cierre_motivo). */
+  cierreMotivo?: string | null;
   /** ancla de "ahora" para tests deterministas (default: Date.now) */
   ahora?: string;
 }
@@ -128,6 +130,9 @@ export interface Analytics {
   /** Fase 4.0 §3: se arrastra tal cual para que el bloque de realidad elija su
    * lenguaje (con fechas: cumplimiento; a mi ritmo: solo duraciones y ritmo). */
   modoCamino: "ritmo" | "fechas" | null;
+  /** Fase 4.0 §8 (acta de cierre): el porqué del cierre, en las palabras del
+   * usuario. null si aún no cerró, o si cerró sin escribir nada. */
+  cierreMotivo: string | null;
 }
 
 /** El último plan con baseline confirmada (por created_at) — la base VIGENTE
@@ -282,7 +287,13 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   }
 
   const hitos = construirHitos(entrada, ahora);
-  return { universal, cumplimiento, hitos, modoCamino: entrada.modoCamino ?? null };
+  return {
+    universal,
+    cumplimiento,
+    hitos,
+    modoCamino: entrada.modoCamino ?? null,
+    cierreMotivo: entrada.cierreMotivo ?? null,
+  };
 }
 
 /** El timeline de Hitos (§5/§6), construido SOLO de lo persistido. Con
@@ -331,11 +342,29 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
 
 /** El informe descargable (.md), armado del análisis ya calculado. Tono
  * espejo (§6): las tardías se nombran sin regaño. Cero LLM. */
-export function informeMarkdown(nombre: string, a: Analytics): string {
+/** Fase 4.0 §8: con `realizadaAt`, el informe abre con su ACTA DE CIERRE
+ * (estado final + el motivo del usuario) antes de las estadísticas. */
+export function informeMarkdown(nombre: string, a: Analytics, realizadaAt?: string | null): string {
   const u = a.universal;
   const l: string[] = [];
   l.push(`# Análisis de ${nombre}`);
   l.push("");
+  if (realizadaAt) {
+    l.push("## Acta de cierre");
+    l.push(`- Estado final: **Proyecto realizado** el ${realizadaAt.slice(0, 10)}`);
+    l.push(
+      `- Acciones al cerrar: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}**` +
+        (u.accionesVigente.total > 0
+          ? ` (${Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)}%)`
+          : "")
+    );
+    if (a.cierreMotivo) {
+      l.push("");
+      l.push("### Por qué la cerraste aquí");
+      l.push(`> ${a.cierreMotivo.replace(/\s+/g, " ").trim()}`);
+    }
+    l.push("");
+  }
   l.push("## Lo que construiste");
   l.push(`- Duración total: **${u.duracionTotalDias} días**`);
   l.push(`- Acciones completadas: **${u.accionesHechas}**`);
