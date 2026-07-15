@@ -487,10 +487,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   // Canon 05 "Construido con tu recorrido": los conceptos del recorrido (no
   // los silenciosos ni las etapas del plan). De la API si el plan está hecho;
-  // del riel vivo si acabamos de generarlo.
+  // del riel vivo si acabamos de generarlo. Fase 3.9: la etiqueta_arbol también
+  // aquí (superficie de navegación), consistente entre vivo y recarga.
   const nodosFuente =
     detalle.recorrido && detalle.recorrido.length > 0
-      ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.titulo)
+      ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.etiqueta ?? n.titulo)
       : nodos.filter((n) => !n.atenuado && !n.id.startsWith("etapa-")).map((n) => n.label);
 
   const mundosParaObra = unlocks.map((dominio) => ({
