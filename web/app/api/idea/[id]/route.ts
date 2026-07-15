@@ -62,22 +62,36 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
 
   // Mundos (Fase 3.5/3.6): unlocks del proyecto + último plan por dominio.
   // project_unlocks puede no existir pre-016: se tolera con lista vacía.
-  let unlocks: string[] = [];
+  // Fase 4.2: el ciclo de vida del mundo (completado_at + cierre_motivo) llega
+  // con la 026; si aún no está aplicada el select entero falla, y se reintenta
+  // sin esas columnas — los mundos se leen abiertos, que es lo que son.
+  type FilaUnlock = { dominio: string; completado_at?: string | null; cierre_motivo?: string | null };
+  let unlocksRaw: FilaUnlock[] = [];
   try {
     const { data, error } = await supabase
       .from("project_unlocks")
-      .select("dominio")
+      .select("dominio, completado_at, cierre_motivo")
       .eq("project_id", projectId);
-    if (!error) unlocks = ((data ?? []) as Array<{ dominio: string }>).map((u) => u.dominio);
+    if (!error) unlocksRaw = (data ?? []) as FilaUnlock[];
+    else {
+      const { data: previo } = await supabase
+        .from("project_unlocks")
+        .select("dominio")
+        .eq("project_id", projectId);
+      unlocksRaw = (previo ?? []) as FilaUnlock[];
+    }
   } catch {
-    unlocks = [];
+    unlocksRaw = [];
   }
-  const mundos = unlocks.map((dominio) => {
+  const unlocks = unlocksRaw.map((u) => u.dominio);
+  const mundos = unlocksRaw.map((u) => {
     const planMundo = ultimo(
-      (p) => p.dominio === dominio && ["inicial", "completo", "seguimiento"].includes(p.etiqueta)
+      (p) => p.dominio === u.dominio && ["inicial", "completo", "seguimiento"].includes(p.etiqueta)
     );
     return {
-      dominio,
+      dominio: u.dominio,
+      completado_at: u.completado_at ?? null,
+      cierre_motivo: u.cierre_motivo ?? null,
       plan: planMundo && {
         etiqueta: planMundo.etiqueta,
         contenido_md: planMundo.contenido_md,

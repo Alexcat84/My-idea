@@ -10,8 +10,26 @@
  * con baseline confirmada.
  */
 import { useEffect, useState } from "react";
+import catalogo from "@/lib/assets/packs_catalog.json";
 import type { Analytics, Hito } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
+
+/** El mundo se nombra como el usuario lo conoce, jamás por su clave técnica. */
+const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries(
+  (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.map((p) => [p.clave, p.nombre])
+);
+
+/** El matiz de los mundos, extraído del canon 09 (el punto de "Mundo activado:
+ * Calidad y Confianza"): ni el azul que piensa ni el verde que ejecuta — los
+ * mundos tienen tono propio en el timeline. */
+const MATIZ_MUNDO = "#3A9B8F";
+
+/** Fase 4.2: el hito se lee "Mundo activado: Calidad y Confianza" (canon 09).
+ * La etiqueta viene sin nombre desde analytics (que es puro y no conoce el
+ * catálogo); aquí se completa. */
+function etiquetaHito(h: Hito): string {
+  return h.dominio ? `${h.etiqueta}: ${NOMBRE_DOMINIO[h.dominio] ?? h.dominio}` : h.etiqueta;
+}
 
 interface Respuesta {
   nombre: string;
@@ -27,6 +45,7 @@ const ERROR = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
 function colorHito(h: Hito): string {
   if (h.tipo === "realizada") return "var(--done)";
   if (h.tipo === "accion") return h.cumplimiento === "tardia" ? "var(--warn)" : "var(--done)";
+  if (h.tipo === "mundo" || h.tipo === "mundo_completado") return MATIZ_MUNDO;
   return "var(--accent)";
 }
 
@@ -117,7 +136,7 @@ function Timeline({ hitos, onFin }: { hitos: Hito[]; onFin: () => void }) {
                       : "text-[14.5px] font-medium")
                   }
                 >
-                  {h.etiqueta}
+                  {etiquetaHito(h)}
                 </p>
                 {h.subtitulo && (
                   <p className={"mt-0.5 text-[12.5px] " + (h.cumplimiento === "tardia" ? "text-warn" : "text-dim")}>
