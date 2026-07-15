@@ -1097,6 +1097,26 @@ const VOCES_CUMPLIMIENTO = ["a tiempo", "tardia", "adelantada", "desviacion", "d
 
 const sinAcentos = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 
+/**
+ * ¿El texto contiene la FRASE (no la subcadena)? Un guardian que compara
+ * subcadenas a secas grita cuando no debe: "eso toma tiempo" contiene
+ * "a tiempo", y "llevas tarde en el horno" contiene "vas tarde". Los dos son
+ * prosa inocente, y los dos hacian rojo el vuelo (cazado en vivo por el plan
+ * a-mi-ritmo de la 4.2: "...y eso toma tiempo").
+ *
+ * El limite de palabra va al INICIO, que es donde estaba el defecto -- la frase
+ * pegada al final de otra palabra. Al final no lo lleva a proposito: "tardia"
+ * debe seguir cazando "tardias", y "adelantada", "adelantadas".
+ *
+ * Esto NO baja la vara: sigue prohibiendo exactamente lo mismo. Solo deja de
+ * inventarse violaciones que nadie cometio.
+ */
+function contieneFrase(texto: string, frase: string): boolean {
+  const escapada = frase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\\b${escapada}`, "u").test(texto);
+}
+const frasesPresentes = (texto: string, frases: string[]) => frases.filter((f) => contieneFrase(texto, f));
+
 /** El mensaje_entrada de la ULTIMA sesion de seguimiento: lo que el motor
  * recibio DE VERDAD (la bitacora, no nuestra suposicion). */
 async function ultimoMensajeSeguimiento(projectId: string): Promise<string> {
@@ -1161,7 +1181,7 @@ async function faseBucleTracking(cookie: string, projectId: string) {
   log("OK: el BLOQUE DE REALIDAD llego al motor con cumplimiento (modo fechas), auditable en la bitacora.");
 
   const p1 = sinAcentos(c1.markdown);
-  const reganos1 = REGANOS.filter((r) => p1.includes(r));
+  const reganos1 = frasesPresentes(p1, REGANOS);
   if (reganos1.length > 0) {
     throw new Error(`el plan de seguimiento REGAÑA (regla 8-bis violada): ${reganos1.join(", ")}`);
   }
@@ -1183,7 +1203,7 @@ async function faseBucleTracking(cookie: string, projectId: string) {
   log("OK: en 'a mi ritmo' el bloque NO menciona cumplimiento (aunque la baseline vieja siga existiendo).");
 
   const p2 = sinAcentos(c2.markdown);
-  const voces = VOCES_CUMPLIMIENTO.filter((v) => p2.includes(v));
+  const voces = frasesPresentes(p2, VOCES_CUMPLIMIENTO);
   if (voces.length > 0) {
     throw new Error(`el plan a-mi-ritmo habla de cumplimiento (§3 violado): ${voces.join(", ")}`);
   }
@@ -1634,7 +1654,7 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
     }
     if (evento === "error") throw new Error(`el plan del mundo fallo: ${JSON.stringify(data)}`);
   });
-  const reganos = REGANOS.filter((x) => sinAcentos(markdown).includes(x));
+  const reganos = frasesPresentes(sinAcentos(markdown), REGANOS);
   if (reganos.length > 0) {
     throw new Error(`el plan del mundo REGAÑA (regla 8-bis violada): ${reganos.join(", ")}`);
   }
