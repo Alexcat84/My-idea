@@ -208,3 +208,45 @@ protegía el comportamiento equivocado ("si Claude falla, cae al ensamblado
 offline") y estaba verde. Un contrato de código puede estar **verde y mal**: si
 un test defiende una conducta que ya no queremos, se reescribe: no se respeta
 por antigüedad.
+
+### 9.1 El linaje entero: instrumentos que podían mentir (Fase 4.2)
+
+Las cuatro últimas lecciones del proyecto **no fueron bugs de producto**. Fueron
+instrumentos capaces de mentir, y las cuatro dicen lo mismo:
+
+| El incidente | La mentira que podía contar |
+|---|---|
+| El falso verde del acta | 13/13 con el acta cerrando "0 de 24": el escenario pedido jamás corría |
+| La degradación silenciosa del plan | Un plan de segunda entregado como si fuera el bueno |
+| El guardián de subcadenas | Acusó de regaño a *"y eso toma tiempo"* ("tom-**a tiempo**"); llevaba **dos vuelos verde por suerte de la redacción del modelo**, no por estar bien |
+| El tiro ciego del gate | Un `.last()` abría el ritual del **core** y el gate habría guardado **la pantalla equivocada creyendo que capturó la buena** |
+
+> **El instrumento debe caerse en vez de mentir.**
+
+Un guardián que solo acierta cuando el LLM no usa cierta palabra no protegía
+nada. Y de aquí sale el criterio fino que los dos últimos exigieron: **aparecer
+en la línea de contexto global es diseño; aparecer como cumplimiento del mundo
+sería el bug.** Cuando un guardián grita, la primera pregunta no es "¿cómo lo
+callo?" sino **"¿tiene razón?"** — a veces el defecto está en la vara, y
+arreglarlo no es bajarla.
+
+### 9.2 La octava errata: autorizar sobre evidencia que no existe
+
+El auditor autorizó un merge tras leer *"el vuelo del mundo-subproyecto"* en el
+título de un commit y **dar por corrida una corrida que solo existía como
+código**. La realidad terminó alcanzando a la autorización — el vuelo corrió
+verde después —, y aun así el merge se detuvo.
+
+> **Mergear con una autorización formada sobre evidencia falsa, aunque la
+> realidad la haya alcanzado, es justo el proceder calladito que este proyecto
+> no hace.**
+
+**La regla, en palabras del auditor:** *una autorización condicionada a evidencia
+se emite cuando la evidencia existe, no cuando el código que la producirá
+existe.*
+
+Y su reverso, para quien ejecuta: **el código que produce una prueba no es la
+prueba.** Un título de commit, un comentario con el cálculo a mano, un test
+escrito — nada de eso es un resultado. Los dos defectos de instrumento de esta
+fase **solo aparecieron al correr de verdad**: ninguna lectura del código los
+habría encontrado.
