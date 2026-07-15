@@ -156,7 +156,11 @@ describe("POST /api/session/[id]/plan", () => {
     expect(estadoFalso.projectNodes.length).toBeGreaterThan(0);
   });
 
-  it("si la llamada a Claude falla, cae al ensamblado offline y aun asi cierra la sesion", async () => {
+  // ── Fix (retry en el stream del plan): el redactor corre en el momento de
+  // mayor inversion del usuario (y pronto, pagado). Antes, CUALQUIER fallo del
+  // modelo degradaba en silencio a un ensamblado offline; ahora se reintenta, y
+  // si se agota se dice de frente para que el usuario reintente SOLO la redaccion.
+  function sembrarSesionViva() {
     estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
     estadoFalso.sessions["s1"] = {
       id: "s1",
@@ -164,17 +168,74 @@ describe("POST /api/session/[id]/plan", () => {
       closed_at: null,
       estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
     };
-    messagesStreamFalso.mockReturnValueOnce(streamFalsoFallido("fallo de red simulado"));
+  }
+
+  it("un hipo transitorio a mitad de stream se REINTENTA y el plan sale igual", async () => {
+    sembrarSesionViva();
+    const rawBueno =
+      '# Plan para vender macetas\n\n## Etapa 1: Cierra tu costo real\n\nContenido real.\n\n' +
+      '===JSON===\n{"familias_tratadas": ["accion_clientes"]}';
+    // El primer intento muere; el segundo (tras el backoff) va bien.
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoFallido("overload simulado"));
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoExitoso(rawBueno));
+
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    const texto = await res.text();
+
+    // El usuario recibe SU plan, no un ensamblado offline de consolacion.
+    expect(texto).not.toContain("event: aviso");
+    const match = texto.match(/event: done\ndata: (.+)\n\n/);
+    expect(match).toBeTruthy();
+    expect(JSON.parse(match![1]).markdown).toContain("Etapa 1");
+    // Y se le avisa al cliente que descarte lo que el intento muerto pinto:
+    // anunciar una sola vez (la leccion del organizador).
+    expect(texto).toContain("event: reinicio");
+    expect(estadoFalso.sessions["s1"].closed_at).toBeTruthy();
+  });
+
+  it("agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)", async () => {
+    sembrarSesionViva();
+    messagesStreamFalso.mockReturnValue(streamFalsoFallido("overload persistente"));
+
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    const texto = await res.text();
+
+    expect(texto).toContain("event: error");
+    expect(texto).not.toContain("event: done");
+    // La sesion sigue viva: el recorrido esta persistido y reintentar re-lanza
+    // SOLO la redaccion, sin repetirle la entrevista al usuario.
+    expect(estadoFalso.sessions["s1"].closed_at).toBeFalsy();
+    // 3 intentos: el hipo se reintenta, no se abandona al primer tropiezo.
+    expect(messagesStreamFalso).toHaveBeenCalledTimes(3);
+  });
+
+  it("presupuesto excedido: NO se reintenta, se ensambla offline y se cierra", async () => {
+    // El presupuesto no es un hipo: reintentar solo quemaria mas. Es el unico
+    // caso que sigue cayendo al ensamblado offline, que para eso existe.
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase(),
+        // El costo sale de los tokens ya gastados: 10M de salida en el modelo
+        // del redactor rebasan cualquier presupuesto de sesion.
+        acumulado: {
+          ...acumuladoVacio,
+          uso: { "claude-sonnet-4-6": { in: 0, out: 10_000_000, cache_read: 0, cache_write: 0 } },
+        },
+      },
+    };
 
     const res = await POST(requestFalso(), ctxFalso("s1"));
     const texto = await res.text();
     expect(texto).toContain("event: aviso");
     const match = texto.match(/event: done\ndata: (.+)\n\n/);
     expect(match).toBeTruthy();
-    const done = JSON.parse(match![1]);
-    expect(done.markdown).toContain("# Tu plan de accion");
-
-    const sesion = estadoFalso.sessions["s1"] as Record<string, unknown>;
-    expect(sesion.closed_at).toBeTruthy();
+    expect(JSON.parse(match![1]).markdown).toContain("# Tu plan de accion");
+    expect(estadoFalso.sessions["s1"].closed_at).toBeTruthy();
+    // Ni un solo intento al modelo: el presupuesto se corta ANTES.
+    expect(messagesStreamFalso).not.toHaveBeenCalled();
   });
 });

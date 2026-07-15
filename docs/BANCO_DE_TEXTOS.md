@@ -158,3 +158,31 @@ hispana en varios países:
 - "El motor es un director de proyectos, no un conocedor de todo el universo."
 - "En una auditoría no se puede cometer errores o pierdes credibilidad."
   (El origen de la obsesión con la verificación que define este producto.)
+
+## 9. REGLAS DE VERIFICACIÓN (la misma verdad, tres veces)
+
+No son teoría: cada una se ganó con un incidente real de este proyecto, y las
+tres dicen lo mismo desde un ángulo distinto.
+
+- **Una señal que nadie lee no es una salvaguarda.** Las banderas de la caja de
+  vidrio existían y nadie las miraba; por eso `pnpm salud` tiene su digest por
+  sesión, con el `session_id` para ir directo con el forense.
+- **Un verde que no ejercita el escenario es peor que un rojo.** El vuelo daba
+  13/13 con el acta cerrando "0 de 24": el mecanismo pasaba, el caso pedido
+  jamás corría. Hay que **sembrar el estado antes de asertar sobre él**.
+- **Un error que se traga es peor que un error que grita.** El redactor del plan
+  atrapaba cualquier fallo y entregaba un plan ensamblado offline, mecánico y
+  sin narración, cerrando la sesión como si nada. Un usuario que pagará 5
+  créditos habría recibido un plan de segunda sin que él, ni nosotros, ni los
+  logs se enteraran jamás.
+
+> **El sistema debe preferir fallar ruidoso a mentir calladito.**
+
+La degradación silenciosa es la peor clase de fallo: no deja síntoma. Cuando haya
+que elegir entre entregar algo peor sin avisar y decir que no se pudo, se dice.
+
+**Corolario sobre los tests:** los tests también envejecen. Había uno que
+protegía el comportamiento equivocado ("si Claude falla, cae al ensamblado
+offline") y estaba verde. Un contrato de código puede estar **verde y mal**: si
+un test defiende una conducta que ya no queremos, se reescribe: no se respeta
+por antigüedad.

@@ -80,6 +80,14 @@ function fmtFecha(iso: string | null): string {
   return new Date(iso).toISOString().replace("T", " ").slice(0, 16);
 }
 
+/** El cliente service-role del operador (mismo patron que salud.ts). */
+export function clienteAdmin(): SupabaseClient {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL ?? process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) throw new Error("Faltan SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY en el entorno.");
+  return createClient(url, key);
+}
+
 async function main() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL ?? process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -115,6 +123,17 @@ async function main() {
     projectId = filaSes?.project_id ?? id;
   }
 
+  const md = await construirInforme(supabase, projectId!);
+  const outDir = path.join(ROOT, "examples", "forense");
+  mkdirSync(outDir, { recursive: true });
+  const outPath = path.join(outDir, `${projectId}.md`);
+  writeFileSync(outPath, md, "utf-8");
+  console.log(`Forense escrito en ${outPath}`);
+}
+
+/** El informe forense COMPLETO de un proyecto, en markdown. Exportado para que
+ * otros instrumentos (p.ej. el forense del vuelo) lo reusen sin duplicarlo. */
+export async function construirInforme(supabase: SupabaseClient, projectId: string): Promise<string> {
   const [{ data: proyRows }, { data: sesRows }, { data: nodoRows }] = await Promise.all([
     supabase.from("projects").select("id, titulo, entrada_original, fase_actual").eq("id", projectId).limit(1),
     supabase
@@ -321,14 +340,14 @@ async function main() {
   }
   log("");
 
-  const outDir = path.join(ROOT, "examples", "forense");
-  mkdirSync(outDir, { recursive: true });
-  const outPath = path.join(outDir, `${projectId}.md`);
-  writeFileSync(outPath, L.join("\n") + "\n", "utf-8");
-  console.log(`Forense escrito en ${outPath} (${L.length} lineas, ${sesiones.length} sesiones).`);
+  return L.join("\n") + "\n";
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+// Solo se ejecuta cuando SE INVOCA como comando. Al importarlo (lo hace
+// forense_vuelo.ts para reusar construirInforme) NO debe disparar nada.
+if (process.argv[1] && path.resolve(process.argv[1]).endsWith(`${path.sep}forense.ts`)) {
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}
