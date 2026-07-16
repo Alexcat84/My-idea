@@ -189,6 +189,14 @@ tres dicen lo mismo desde un ángulo distinto.
 - **Una señal que nadie lee no es una salvaguarda.** Las banderas de la caja de
   vidrio existían y nadie las miraba; por eso `pnpm salud` tiene su digest por
   sesión, con el `session_id` para ir directo con el forense.
+  > **Su hermana gemela: una vara que el instrumento no mira es decoración.**
+  El canon traía su frame **mobile 380** en 10 de sus 11 pantallas desde el
+  principio, y durante siete fases el gate abrió un solo viewport de 1240: la
+  "fidelidad al canon verificada" de las 11 pantallas se verificó **solo en
+  escritorio**, contra una vara que existía, estaba dibujada y nadie miraba —
+  mientras la APK renderiza esta web en un teléfono. Desde jul 2026 el gate es
+  de **dos viewports**: toda pantalla se verifica en 1240 **y** en 380, o su
+  fase no cierra.
 - **Un verde que no ejercita el escenario es peor que un rojo.** El vuelo daba
   13/13 con el acta cerrando "0 de 24": el mecanismo pasaba, el caso pedido
   jamás corría. Hay que **sembrar el estado antes de asertar sobre él**.
