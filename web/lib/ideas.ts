@@ -9,6 +9,7 @@
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { listarProyectos } from "./db";
+import { fechaSello } from "./fechas";
 
 export type EstadoIdea = "Organizada" | "En entrevista" | "Con plan" | "En seguimiento";
 
@@ -151,13 +152,16 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
       chips.push({ texto: "Con claridad", tono: "neutro" });
     }
 
-    const pista = pensando ? "una pregunta te espera" : `última acción ${haceCuanto(p.updated_at)}`;
+    // Fase 4.3.1: la pista ANCLA la idea en el calendario (fechaSello) en vez
+    // de solo "hace X" — el fundador lo pidió para poder ordenar y ubicar el
+    // historial. "una pregunta te espera" cuando el motor tiene el turno.
+    const pista = pensando ? "una pregunta te espera" : `última acción · ${fechaSello(p.updated_at)}`;
 
     // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.
     const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
     const realizada = Boolean(realizadaAt);
     const resumenRealizada = realizadaAt
-      ? `${Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))} días · de la chispa al proyecto`
+      ? `realizada el ${fechaSello(realizadaAt)} · ${Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))} días de la chispa al proyecto`
       : undefined;
 
     return {
