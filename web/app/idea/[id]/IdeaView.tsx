@@ -948,6 +948,18 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
                   conPlan={Boolean(planMd)}
                   onVerMundo={() => irAManos()}
+                  onActivarMundo={(dominio) => {
+                    // Beta: el mundo quedó activado (unlock gratis). Se añade a
+                    // la lista local para que su tarjeta pase a "Activo" y su
+                    // sección aparezca en Manos a la Obra, y se entra ahí para
+                    // que el usuario lo explore de inmediato.
+                    setDetalle((prev) =>
+                      prev
+                        ? { ...prev, unlocks: [...new Set([...(prev.unlocks ?? []), dominio])] }
+                        : prev
+                    );
+                    irAManos();
+                  }}
                   onTusNumeros={() =>
                     document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" })
                   }
