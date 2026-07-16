@@ -42,7 +42,23 @@ pagos.
   la APK** (el magic link en WebView es fricción fea: saltar al correo y volver
   rompe el flujo).
 - **Mobile-first 380px es ley del canon**: toda pantalla nueva se diseña y se
-  gate-verifica también en 380. La APK renderiza exactamente esta web.
+  gate-verifica también en 380 (el gate lo hace desde jul 2026, en sus dos
+  viewports).
+- **La APK NO es la web embebida y ya.** *(Decisión del fundador, 2026-07-16,
+  revirtiendo la línea original de este § —"la APK renderiza exactamente esta
+  web"— que venía del auditor.)* El veredicto, como fundador y como **cliente
+  usuario**: **«eso no sirve, se satura»**. Envolver el scroll de la web en un
+  WebView y llamarlo app da una app que no se ve como una app.
+
+  **La APK sigue un diseño detallado propio y LUCE como APK, aunque inyectemos
+  la web.** Tendrá **componentes nativos**. El precedente no es teórico: es el I
+  Ching, donde este patrón "aplicó y quedó genial, con las variaciones
+  correctas".
+
+  Lo que eso NO cambia (sigue en pie, y es lo que hace posible lo anterior):
+  toda la inteligencia vive en el servidor y la APK es **otra cara de las mismas
+  rutas API**. El caparazón es nativo; el cerebro, no. Nada de lógica de negocio
+  en el cliente.
 - **La Chispa con micrófono es la razón de ser de la APK** ("una idea nace en un
   preciso momento"): la captura por voz jamás se degrada en móvil.
 
@@ -80,10 +96,43 @@ Lecciones pagadas en el I Ching, aplicadas de nacimiento:
 - **El sello de versión (v·hash) en el pie**: en la APK identifica qué build web
   sirve el WebView. Conservar siempre.
 
+## 3-bis. EL CAPARAZÓN NATIVO (el patrón del I Ching, verificado en su código)
+
+Esto no es una intención: es lo que `referencia/iching-app/apps/mobile` ya hace
+en producción, y de ahí se porta. La APK es un **WebView dentro de un caparazón
+nativo**, no un WebView a secas:
+
+| Pieza | Qué aporta | Dónde vive en el I Ching |
+|---|---|---|
+| **Botón atrás del sistema** | Que "atrás" haga lo que el usuario espera y no cierre la app | `BackHandler` (`app/index.tsx`) |
+| **Safe areas** | Que el notch y la barra de gestos no se coman la UI | `useSafeAreaInsets` |
+| **Barras del sistema / edge-to-edge** | Que la app ocupe la pantalla como app, no como página | `SystemBars` (`react-native-edge-to-edge`), `StatusBar` |
+| **Splash** | Arranque de app, no parpadeo de navegador | `expo-splash-screen` |
+| **Pantallas NATIVAS propias** | Lo que en un WebView es fricción fea o directamente no funciona | `expo-router` `Stack`: `auth/`, `purchase-success` |
+| **El puente** | La web y lo nativo se hablan | `injectedJavaScript` + `onMessage` (`WebViewMessageEvent`) |
+| **Compras** | Play Billing de verdad | `react-native-purchases` (RevenueCat) |
+| **Estado local + sync** | Que la app abra con contenido, sin esperar red | `AsyncStorage`, `src/db`, `src/sync/sync-service.ts` |
+
+**La consecuencia de diseño, que es la que el fundador señaló:** la navegación
+de My Idea a 380 hoy **no existe** — no hay menú que se despliegue, no hay nada
+que se colapse, y todo es un scroll largo (la captura de Manos a la Obra a 380
+mide ~3.100px y el header trunca el nombre de la idea). Eso hay que diseñarlo, y
+la parte que sea **chrome de navegación** es candidata a ser **nativa**, no
+inyectada. El diseño detallado de la APK es su propia entrega de canon: hasta que
+exista, este § describe el patrón, no la pantalla.
+
+**Regla que sí queda fijada:** la frontera. Nativo = caparazón, navegación,
+permisos, compras, sesión. Web inyectada = el producto (la Chispa, el árbol, el
+plan, el checklist, los mundos). Si una pieza necesita saber de negocio, vive en
+el servidor y se pinta en la web.
+
 ## 4. CHECKLIST DEL DÍA APK (para no redescubrirlo)
 
-1. Proyecto Android (TWA/WebView patrón I Ching), target API 36+ (re-verificar
-   el nivel vigente ese agosto).
+0. **El diseño detallado de la APK** (su canon propio): qué es nativo y qué se
+   inyecta, pantalla por pantalla. Es el prerequisito de todo lo demás — sin él
+   la APK es la web envuelta, que es exactamente lo que el fundador rechazó.
+1. Proyecto Android (WebView + caparazón nativo, patrón I Ching; **no** un TWA
+   pelado), target API 36+ (re-verificar el nivel vigente ese agosto).
 2. Play Integrity + origin guard (portar del I Ching).
 3. Login con Google nativo puenteado a Supabase.
 4. RevenueCat + Google Play Billing sobre el ledger existente (origen nuevo,
