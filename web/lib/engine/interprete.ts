@@ -99,7 +99,39 @@ export interface EventoDecisionTurno {
   prioridad_declarada: PrioridadDeclarada | null;
 }
 
-export type EventoInterprete = EventoFallback | EventoDecisionTurno;
+/**
+ * Fase 4.3 (el mundo nunca abandona): el intérprete dijo 'salir' en una sesión
+ * de mundo y la brújula re-eligió puerta en vez de cerrar. Queda en la bitácora
+ * de la sesión con el motivo LITERAL del intérprete: es la señal de que
+ * evaluacionBrecha eligió una semilla que el perfil no admitía (V2), y el
+ * digest de `pnpm salud` la cuenta para que el hueco tenga cara.
+ */
+export interface EventoPuertaReelegida {
+  tipo: "puerta_reelegida";
+  dominio: string;
+  puerta_descartada: string;
+  puerta_nueva: string;
+  /** el razonamiento del intérprete al querer salir: por qué no encajaba */
+  motivo: string | null;
+  es_semilla: boolean;
+  candidatas_restantes: number;
+}
+
+/** Fase 4.3: no quedaba NINGUNA puerta del dominio compatible con el perfil.
+ * El cierre honesto, con su reembolso: el único final legítimo de un mundo que
+ * no era para este usuario. */
+export interface EventoMundoIncompatible {
+  tipo: "mundo_incompatible";
+  dominio: string;
+  puertas_descartadas: string[];
+  motivo: string | null;
+}
+
+export type EventoInterprete =
+  | EventoFallback
+  | EventoDecisionTurno
+  | EventoPuertaReelegida
+  | EventoMundoIncompatible;
 
 /** Reparo 1 (cadena estricta): ver docstring de _reparar_camino_cadena. */
 function repararCaminoCadena(actualId: string, camino: string[], graph: Grafo, visitados: Set<string>): string[] {

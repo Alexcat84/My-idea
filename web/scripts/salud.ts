@@ -178,6 +178,14 @@ async function main() {
     add("gigo_abortado", "GIGO");
     add("procedencia_invalida", "procedencia");
     add("autodeclaracion_fallida", "autodecl");
+    // Fase 4.3: la brujula tuvo que rescatar un mundo del que el interprete se
+    // queria ir. No es un fallo -- el rescate funciono -- pero SI es la cara de
+    // V2: evaluacionBrecha eligio una semilla que el perfil no admitia. Si esto
+    // sube, la puerta de entrada de ese mundo esta mal elegida.
+    add("puerta_reelegida", "puerta-reelegida");
+    // Esto si duele: no quedaba NINGUNA puerta compatible. El usuario pago por
+    // un mundo que no era para el y se le devolvio la activacion.
+    add("mundo_incompatible", "MUNDO-INCOMPATIBLE");
     if (s.presupuesto_excedido) flags.push("presupuesto");
     // Brujula floja: el mejor salto posible de TODA la sesion apenas supera el
     // umbral (poco material afin al usuario en el grafo), o varios turnos pobres.
