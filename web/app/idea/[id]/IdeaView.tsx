@@ -23,6 +23,7 @@ import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Claridad } from "../../ui/Claridad";
 import { PlanDocumento } from "../../ui/PlanDocumento";
+import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { ReporteCard } from "../../ui/ReporteCard";
 import { Stepper } from "../../ui/Stepper";
@@ -33,6 +34,11 @@ import { consumirSSE } from "@/lib/sseCliente";
 
 const NOTA_SILENCIOSO = "cubierto por lo que contaste";
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
+/** Fase 4.3 §2: el servidor SIEMPRE manda el mensaje del cierre. Esto es la red
+ * por si una respuesta vieja (o un despliegue a mitad) llega sin él: aun así, la
+ * pantalla habla. Jamás muda. */
+const MENSAJE_CIERRE_RESPALDO =
+  "Hasta aquí puedo acompañarte por este camino. Tu idea queda guardada tal como está.";
 
 interface DetalleIdea {
   idea: {
@@ -81,6 +87,10 @@ interface RespuestaTurno {
   nodos_nuevos?: NodoNuevo[];
   temas_pendientes?: string[];
   error?: string;
+  /** Fase 4.3 §2: todo 'salio' viaja con su mensaje en palabras de persona. */
+  mensaje?: string;
+  /** el mundo era incompatible y su activación se devolvió (§1) */
+  unlock_revertido?: boolean;
 }
 
 interface QA {
@@ -125,6 +135,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [cintillo, setCintillo] = useState<string | null>(null);
   const [enviando, setEnviando] = useState(false);
   const [listoParaPlan, setListoParaPlan] = useState(false);
+  /** Fase 4.3 §2: el cierre honesto en pantalla (null = no hubo cierre). */
+  const [cierre, setCierre] = useState<{ mensaje: string; unlockRevertido: boolean } | null>(null);
   // Phase 3.7.2 (la oferta honesta): temas sobre la mesa cuando el motor
   // OFRECE el plan (null = cierre sin vuelta: CTA unico) y la tarjeta
   // intermedia de contexto final.
@@ -194,12 +206,21 @@ export function IdeaView({ projectId }: { projectId: string }) {
       setListoParaPlan(true);
       setTemasPendientes(data.temas_pendientes ?? null);
     } else if (data.tipo === "salio") {
+      // Fase 4.3 §2: antes esto era SOLO setPregunta(null) -- la pantalla se
+      // quedaba muda y el usuario, que pudo haber pagado por este mundo, no
+      // recibia ni una palabra. Un cierre sin explicacion es degradacion
+      // silenciosa en su cara.
       setPregunta(null);
+      setCierre({
+        mensaje: data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
+        unlockRevertido: Boolean(data.unlock_revertido),
+      });
     }
   }
 
   /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
   function entrarASesionNueva(data: RespuestaTurno, dominio: string) {
+    setCierre(null);
     setNodos([]);
     contadorNodos.current = 0;
     setRecorrido([]);
@@ -665,6 +686,24 @@ export function IdeaView({ projectId }: { projectId: string }) {
             )}
 
             <div className={"flex min-w-0 flex-col gap-4" + (mostrarArbol ? "" : " sm:col-span-2")}>
+              {/* Fase 4.3 §2 — EL CIERRE HONESTO. Va antes que todo lo demas:
+                  si el motor salio, esto es lo que el usuario tiene que ver, y
+                  no una pantalla en blanco. */}
+              {cierre && (
+                <CierreHonesto
+                  mensaje={cierre.mensaje}
+                  unlockRevertido={cierre.unlockRevertido}
+                  hayPlan={Boolean(planMd)}
+                  onVolverAManos={() => {
+                    setCierre(null);
+                    irAManos();
+                  }}
+                  onVerMundos={() => {
+                    setCierre(null);
+                    document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                />
+              )}
               {/* Tarjeta de pregunta (una a la vez) */}
               {pregunta && !tarjetaContextoFinal && (
                 <TarjetaPregunta

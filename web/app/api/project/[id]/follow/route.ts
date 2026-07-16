@@ -270,6 +270,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     estadoVivoPrevio,
     nodosCubiertosPrevios: [...cubiertos],
     dominiosDesbloqueados: dominios,
+    // Fase 4.3: un follow de mundo es una sesion de mundo. Misma regla.
+    dominioSesion: dominio,
   });
 
   const resultado = await avanzarTurno({

@@ -27,6 +27,7 @@ import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
 import { dominioPermitido, etiquetaArbol, obtenerPregunta, sucesoresNivel, type Grafo, type PreguntasCache } from "./graph";
+import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import {
   interpretarMultiSalto,
   type EventoInterprete,
@@ -69,6 +70,13 @@ export interface EstadoRecorrido {
    * Se fija al arrancar la sesión (start/follow/world-start) y viaja con
    * el estado; alimenta sucesores, brújula, intérprete y cosecha. */
   dominiosDesbloqueados: string[];
+  /** Fase 4.3: el dominio de ESTA sesion ("core" o un mundo). En una sesion de
+   * mundo, 'salir' no cierra: re-elige puerta (el mundo nunca abandona). */
+  dominioSesion: string;
+  /** Fase 4.3: las ramas que el interprete ya rechazo en esta sesion. Se
+   * descarta la rama entera, no el nodo: el interprete rechaza "el nodo_actual
+   * y todos sus sucesores". */
+  puertasDescartadas: string[];
   fallbackEvents: EventoInterprete[];
   prioridadDeclarada: PrioridadDeclarada | null;
   preguntaPendiente: string | null;
@@ -90,6 +98,7 @@ export function estadoInicial(params: {
   estadoVivoPrevio?: string | null;
   nodosCubiertosPrevios?: string[];
   dominiosDesbloqueados?: string[];
+  dominioSesion?: string;
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -101,6 +110,8 @@ export function estadoInicial(params: {
     estadoVivoPrevio: params.estadoVivoPrevio ?? null,
     nodosCubiertosPrevios: params.nodosCubiertosPrevios ?? [],
     dominiosDesbloqueados: params.dominiosDesbloqueados ?? ["core"],
+    dominioSesion: params.dominioSesion ?? "core",
+    puertasDescartadas: [],
     fallbackEvents: [],
     prioridadDeclarada: null,
     preguntaPendiente: null,
@@ -138,7 +149,15 @@ export type ResultadoTurno =
        * Ausente en los cierres sin vuelta (presupuesto, profundidad). */
       temasPendientes?: string[];
     }
-  | { tipo: "salio"; estado: EstadoRecorrido; acumulado: UsoAcumulado }
+  | {
+      tipo: "salio";
+      estado: EstadoRecorrido;
+      acumulado: UsoAcumulado;
+      /** Fase 4.3: presente solo cuando se agotaron TODAS las puertas de un
+       * mundo. La ruta lo usa para revertir el unlock (y, cuando la ETAPA 2
+       * despierte, reembolsar) y para que la UI hable con palabras de persona. */
+      cierreMundo?: { dominio: string; motivo: string | null };
+    }
   | {
       tipo: "error_temporal";
       estado: EstadoRecorrido;
@@ -490,6 +509,70 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     if (resultado.unidadVentaDetectada) estado = { ...estado, unidadVentaSesion: resultado.unidadVentaDetectada };
 
     if (resultado.accion === "salir") {
+      // ── Fase 4.3: EL MUNDO NUNCA ABANDONA ──
+      // En una sesion de mundo, 'salir' NO cierra. El usuario pago por explorar
+      // ESTE mundo; que la semilla que eligio evaluacionBrecha (ciega al perfil,
+      // V2) no encajara no es problema suyo. La brujula re-elige entre las demas
+      // semillas del dominio y sus vecinos, descartando la RAMA rechazada.
+      // Quien juzga el perfil sigue siendo el interprete: si tambien rechaza la
+      // puerta nueva, se vuelve a re-elegir. La brujula propone, el interprete
+      // dispone, y solo cuando no queda ninguna hay cierre -- honesto y con
+      // reembolso.
+      if (estado.dominioSesion !== "core") {
+        const rechazada = ramaDe(actualId, graph);
+        const descartados = new Set<string>([...estado.puertasDescartadas, ...rechazada]);
+        const reeleccion = reelegirPuertaDeMundo({
+          dominio: estado.dominioSesion,
+          graph,
+          estadoVivo: estado.estadoVivoPrevio,
+          perfilSesion: estado.perfilSesion,
+          cubiertos: new Set([...estado.nodosCubiertosPrevios, ...estado.ruta]),
+          descartados,
+        });
+        const motivo = resultado.razonamiento ?? null;
+        if (reeleccion) {
+          const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache);
+          estado = {
+            ...estado,
+            ruta: [...estado.ruta, reeleccion.puertaId],
+            modos: [...estado.modos, "conversado"],
+            puertasDescartadas: [...descartados],
+            preguntaPendiente: pregunta,
+            ultimasPreguntas: [...estado.ultimasPreguntas, pregunta].slice(-3),
+            fallbackEvents: [
+              ...estado.fallbackEvents,
+              {
+                tipo: "puerta_reelegida",
+                dominio: estado.dominioSesion,
+                puerta_descartada: actualId,
+                puerta_nueva: reeleccion.puertaId,
+                motivo,
+                es_semilla: reeleccion.esSemilla,
+                candidatas_restantes: reeleccion.candidatas,
+              },
+            ],
+          };
+          return { tipo: "pregunta", estado, pregunta, acumulado, nodosNuevos: nodosNuevosDesdeInicio() };
+        }
+        // No queda ninguna: el unico final legitimo de un mundo que no era para
+        // este usuario. Se dice, no se calla.
+        estado = {
+          ...estado,
+          fase: "cerrada",
+          preguntaPendiente: null,
+          puertasDescartadas: [...descartados],
+          fallbackEvents: [
+            ...estado.fallbackEvents,
+            {
+              tipo: "mundo_incompatible",
+              dominio: estado.dominioSesion,
+              puertas_descartadas: [...descartados],
+              motivo,
+            },
+          ],
+        };
+        return { tipo: "salio", estado, acumulado, cierreMundo: { dominio: estado.dominioSesion, motivo } };
+      }
       estado = { ...estado, fase: "cerrada", preguntaPendiente: null };
       return { tipo: "salio", estado, acumulado };
     }

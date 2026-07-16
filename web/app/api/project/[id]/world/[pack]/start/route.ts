@@ -126,6 +126,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     textoOriginal: mensaje,
     nodosCubiertosPrevios: [...cubiertos],
     dominiosDesbloqueados: dominios,
+    // Fase 4.3: el motor debe saber que esta es una sesion DE MUNDO. Sin esto,
+    // 'salir' cerraria en vez de re-elegir puerta y el usuario que pago por
+    // este mundo se quedaria mirando una pantalla muda.
+    dominioSesion: pack,
   });
 
   // Fase v1.3.2 (cazado por el vuelo, dos veces): la PRIMERA pregunta del

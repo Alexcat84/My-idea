@@ -761,6 +761,45 @@ async function faseMundosNuevos(cookie: string, projectId: string) {
     rw = await postJson(cookie, `/api/session/${worldSessionId}/turn`, { respuesta });
     costoW = Number(rw.costo_usd ?? costoW);
   }
+  // Fase 4.3: el contrato de un mundo ya no es "siempre acaba en plan". El
+  // interprete puede juzgar que este mundo no es para esta idea -- y con las
+  // macetas, cuyo bloqueo real son los defectos de manufactura, juzga
+  // exactamente eso: rechaza la rama de seguridad digital una y otra vez. Antes
+  // de la 4.3 ese juicio cerraba la sesion en silencio en el primer 'salir' y
+  // esta fase moria igual, solo que sin entender por que.
+  //
+  // El contrato nuevo tiene DOS finales legitimos, y los dos son verdes: o el
+  // mundo da su plan, o cierra HONESTAMENTE con mensaje y activacion devuelta.
+  // Lo unico que jamas puede pasar es el silencio. Eso es lo que se asierta.
+  if (rw.tipo === "salio") {
+    if (!rw.mensaje || String(rw.mensaje).length < 20) {
+      throw new Error("PANTALLA MUDA: seguridad_digital cerro sin una palabra para el usuario (4.3 §2)");
+    }
+    if (!rw.unlock_revertido) {
+      throw new Error("seguridad_digital cerro por incompatible pero NO devolvio la activacion (4.3 §1)");
+    }
+    const { data: ev } = await supabaseAdmin
+      .from("sessions")
+      .select("decisiones")
+      .eq("id", worldSessionId)
+      .single();
+    const eventos = ((ev as { decisiones: Array<Record<string, unknown>> } | null)?.decisiones ?? []);
+    const rescates = eventos.filter((e) => e.tipo === "puerta_reelegida").length;
+    const incompat = eventos.filter((e) => e.tipo === "mundo_incompatible").length;
+    if (incompat !== 1) throw new Error("cerro sin registrar 'mundo_incompatible' en la caja de vidrio");
+    log(
+      `OK: el interprete juzgo que 'seguridad_digital' no es para esta idea. La brujula lo rescato ` +
+        `${rescates} vez/veces (re-eleccion de puerta) y, agotadas todas, cierre HONESTO con mensaje ` +
+        `y activacion devuelta. Cero silencio.`
+    );
+    // El usuario puede volver a entrar sin pagar: se reactiva para que las
+    // fases siguientes vean el mundo donde el usuario lo veria.
+    await fetch(`${BASE_URL}/api/project/${projectId}/world/seguridad_digital/unlock`, {
+      method: "POST",
+      headers: { Cookie: cookie },
+    });
+    return { costoUsd: costoW };
+  }
   if (rw.tipo !== "listo_para_plan") {
     throw new Error(`la sesion de seguridad_digital no llego a listo_para_plan (tipo: ${rw.tipo})`);
   }
@@ -1811,6 +1850,165 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
   return { costoUsd };
 }
 
+// ---------------------------------------------------------------------------
+// Fase 2M (Fase 4.3): EL MUNDO NUNCA ABANDONA. La regresion del hallazgo del
+// barrido de 380, donde el interprete salio de 'quality' en el turno 1:
+//
+//   "El nodo_actual 'Medicion de la Calidad' y todos sus sucesores estan
+//    disenados para organizaciones con estructura, equipos, multiples procesos
+//    y sistemas formales de calidad. La usuaria es..."
+//
+// ...y el usuario que pago 3 creditos se quedaba mirando una pantalla muda.
+//
+// QUE ES DETERMINISTICO Y QUE NO, dicho sin adornos:
+//  * El DESAJUSTE se siembra: el estado_vivo se fija a mano (artesana sola,
+//    sin estructura) contra el mundo de calidad, cuyas semillas son
+//    organizacionales. Eso ya no depende de que salga la idea correcta.
+//  * La DECISION del interprete no se puede forzar: es un LLM. Puede salir o no.
+//  * Por eso el aserto NO es "hubo re-eleccion" (eso seria un test que solo pasa
+//    con suerte, justo lo que esta fase vino a matar). El aserto es el
+//    INVARIANTE: pase lo que pase, esto NUNCA termina en silencio. O hay plan
+//    del mundo, o hay cierre CON mensaje y con el unlock devuelto. Y si hubo
+//    re-eleccion, que este bien hecha.
+//  La mecanica de la re-eleccion en si es deterministica y vive clavada en
+//  reeleccionPuerta.test.ts (12 casos contra el grafo REAL).
+// ---------------------------------------------------------------------------
+async function faseMundoNuncaAbandona(cookie: string, projectId: string) {
+  separador("FASE 2M (Fase 4.3): el mundo nunca abandona -- desajuste sembrado, re-eleccion y cierre honesto");
+  let costoUsd = 0;
+  const MUNDO = "quality";
+
+  // ── 1. El desajuste, sembrado a mano ──
+  // El estado_vivo que el mundo de calidad NO admite: artesana sola, tres kits,
+  // cero estructura. Es el perfil literal del hallazgo.
+  const ESTADO_ARTESANA =
+    "Artesana sola que arma kits de huerto urbano a mano en su casa. Vendio tres kits a " +
+    "amigos que le pagaron. No tiene empleados, ni procesos escritos, ni equipos, ni " +
+    "sistemas formales de ningun tipo: lo hace todo ella en su mesa de trabajo. Le " +
+    "preocupa que el sustrato le quede disparejo entre un kit y otro.";
+  const { error: errEstado } = await supabaseAdmin
+    .from("projects")
+    .update({ estado_vivo: ESTADO_ARTESANA, fase_actual: "validacion" })
+    .eq("id", projectId);
+  if (errEstado) throw new Error(`no se pudo sembrar el estado_vivo: ${errEstado.message}`);
+  log("Sembrado: estado_vivo de artesana sola (sin estructura) contra el mundo de calidad.");
+
+  // El mundo se reactiva: la 2L pudo dejarlo completado, y ademas un cierre por
+  // incompatibilidad revierte el unlock (§1) -- se parte de un estado limpio.
+  await postJson(cookie, `/api/project/${projectId}/world/${MUNDO}/completar`, { accion: "reabrir" }).catch(() => {});
+  await fetch(`${BASE_URL}/api/project/${projectId}/world/${MUNDO}/unlock`, { method: "POST", headers: { Cookie: cookie } });
+
+  const resStart = await fetch(`${BASE_URL}/api/project/${projectId}/world/${MUNDO}/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resStart.ok) {
+    // 409 = ya se recorrieron todas sus puertas en fases anteriores: el
+    // escenario no se puede montar, y callarlo seria un verde falso.
+    throw new Error(`start de ${MUNDO} respondio ${resStart.status}: no se pudo montar el escenario`);
+  }
+  let r = (await resStart.json()) as Record<string, unknown>;
+  const sid = String(r.session_id);
+  const puertaInicial = ((r.nodos_nuevos as Array<{ id: string }>) ?? [])[0]?.id ?? "(desconocida)";
+  log(`OK: entrada al mundo por la semilla '${puertaInicial}' (la que eligio evaluacionBrecha, ciega al perfil).`);
+
+  // ── 2. Turnos con respuestas de artesana: el desajuste se hace evidente ──
+  const RESPUESTAS = [
+    "Trabajo sola en mi casa, no tengo empleados ni procesos escritos de nada.",
+    "No tengo equipo ni departamento; soy yo, mi mesa y las macetas.",
+    "Solo quiero que los kits salgan parejos entre si, nada mas.",
+    "Con eso te conte lo importante; arma el plan con lo que ya sabes.",
+  ];
+  let salio: Record<string, unknown> | null = null;
+  let t = 0;
+  while (r.tipo === "pregunta" && t < MAX_TURNOS_SEGURIDAD) {
+    r = await postJson(cookie, `/api/session/${sid}/turn`, {
+      respuesta: RESPUESTAS[Math.min(t, RESPUESTAS.length - 1)],
+    });
+    t += 1;
+    if (r.tipo === "salio") salio = r;
+  }
+  costoUsd += Number(r.costo_usd ?? 0);
+
+  // ── 3. La caja de vidrio: que hizo el motor de verdad ──
+  const { data: ses } = await supabaseAdmin
+    .from("sessions")
+    .select("decisiones, ruta")
+    .eq("id", sid)
+    .single();
+  const eventos = ((ses as { decisiones: Array<Record<string, unknown>> } | null)?.decisiones ?? []);
+  const reelecciones = eventos.filter((e) => e.tipo === "puerta_reelegida");
+  const incompatibles = eventos.filter((e) => e.tipo === "mundo_incompatible");
+  const quisoSalir = eventos.filter(
+    (e) => e.tipo === "decision_turno" && (e.decision as { accion?: string } | undefined)?.accion === "salir"
+  );
+
+  // Cada intento de salir DEBE haber terminado en re-eleccion o en cierre
+  // honesto. Un 'salir' sin ninguna de las dos es el bug de vuelta.
+  if (quisoSalir.length !== reelecciones.length + incompatibles.length) {
+    throw new Error(
+      `el interprete quiso salir ${quisoSalir.length} vez/veces pero solo hubo ` +
+        `${reelecciones.length} re-eleccion(es) y ${incompatibles.length} cierre(s): un 'salir' se colo sin rescate`
+    );
+  }
+
+  if (reelecciones.length > 0) {
+    // El escenario se dio: se verifica que el rescate este BIEN hecho.
+    const re = reelecciones[0] as Record<string, unknown>;
+    if (!re.motivo) throw new Error("el evento 'puerta_reelegida' no guardo el motivo del interprete");
+    if (re.puerta_nueva === re.puerta_descartada) throw new Error("la 're-eleccion' devolvio la misma puerta");
+    if (re.dominio !== MUNDO) throw new Error(`el evento dice dominio '${re.dominio}', se esperaba '${MUNDO}'`);
+    log(
+      `OK: el interprete quiso salir y la brujula RE-ELIGIO puerta: '${re.puerta_descartada}' -> ` +
+        `'${re.puerta_nueva}' (semilla=${re.es_semilla}); el motivo quedo en la caja de vidrio.`
+    );
+  } else {
+    log(`OK (escenario no disparado): el interprete no quiso salir esta vez -- la mecanica de la re-eleccion vive clavada en reeleccionPuerta.test.ts (12 casos, grafo real).`);
+  }
+
+  // ── 4. EL INVARIANTE: esto no termina en silencio, pase lo que pase ──
+  if (salio) {
+    // Cierre: entonces TIENE que ser honesto. Este es el hallazgo de la 4.3 §2.
+    if (!salio.mensaje || String(salio.mensaje).length < 20) {
+      throw new Error("PANTALLA MUDA: la sesion cerro sin mensaje para el usuario (el bug de la 4.3 §2)");
+    }
+    if (incompatibles.length > 0) {
+      if (!salio.unlock_revertido) throw new Error("el mundo se declaro incompatible pero NO se devolvio la activacion");
+      const { data: unlockTras } = await supabaseAdmin
+        .from("project_unlocks")
+        .select("dominio")
+        .eq("project_id", projectId)
+        .eq("dominio", MUNDO);
+      if ((unlockTras ?? []).length !== 0) {
+        throw new Error("el unlock sigue en pie tras un cierre por incompatibilidad: el reembolso no ocurrio");
+      }
+      log(`OK: ninguna puerta del mundo era compatible -> cierre HONESTO con mensaje ("${String(salio.mensaje).slice(0, 60)}…") y activacion devuelta.`);
+    } else {
+      log(`OK: la sesion cerro CON mensaje al usuario, jamas muda.`);
+    }
+    return { costoUsd };
+  }
+
+  // ── 5. Sin cierre: el ciclo termina en PLAN DEL MUNDO, no en silencio ──
+  const resPlan = await fetch(`${BASE_URL}/api/session/${sid}/plan`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({}),
+  });
+  await consumirSSE(resPlan, ({ evento, data }) => {
+    if (evento === "done") costoUsd += Number((data as { costo_usd?: number }).costo_usd ?? 0);
+    if (evento === "error") throw new Error(`el plan del mundo fallo: ${JSON.stringify(data)}`);
+  });
+  const grupos = await gruposChecklist(cookie, projectId);
+  const gMundo = grupoVigenteDe(grupos, MUNDO);
+  if (!gMundo || gMundo.etapas.flatMap((e) => e.items).length === 0) {
+    throw new Error("el ciclo del mundo no termino en un checklist propio: termino en silencio");
+  }
+  log(`OK: el ciclo del mundo termina en PLAN con checklist propio (${gMundo.etapas.flatMap((e) => e.items).length} items), jamas en silencio.`);
+
+  return { costoUsd };
+}
+
 async function faseReporteDigital(cookie: string) {
   separador("FASE 3: reporte digital -- equilibrio esperado 16 (ceil(200/13))");
   const textoInicial = "Tengo una app de suscripcion mensual para llevar el registro de gastos personales.";
@@ -1986,6 +2184,7 @@ async function main() {
     costos.bucleTracking = (await faseBucleTracking(cookie, macetas.projectId)).costoUsd;
     costos.paridadMundos = (await faseParidadMundos(cookie, macetas.projectId)).costoUsd;
     costos.mundoSubproyecto = (await faseMundoSubproyecto(cookie, macetas.projectId)).costoUsd;
+    costos.mundoNuncaAbandona = (await faseMundoNuncaAbandona(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -2009,6 +2208,7 @@ async function main() {
   log("  1b. organizer idea larga multi-dominio (regresion tope de tokens 600->1500): OK");
   log("  2. sesion de macetas + plan streaming: OK");
   log("  2j. bucle de tracking (Fase 4.0): bloque de realidad al motor en DOS ciclos (fechas con desviacion / a-mi-ritmo sin cumplimiento), plan sin regaño, acta de cierre completa y motivo que sobrevive al reabrir: OK");
+  log("  2M. el mundo nunca abandona (Fase 4.3): con un estado_vivo de artesana sembrado contra el mundo de calidad, cada 'salir' del interprete termina en re-eleccion de puerta o en cierre HONESTO con mensaje y activacion devuelta -- jamas en pantalla muda; el ciclo acaba en plan del mundo: OK");
   log("  2L. el mundo como subproyecto (Fase 4.2): su follow recibe SU cumplimiento (1/1/3 de 5, +4.8 dias) y NO el del core, con UNA linea de contexto rotulada; su plan nuevo asume la desviacion sin regañar y regenera SOLO el suyo; cierre al 70% con motivo -> chip, bitacora, hito en el timeline y desglose; ni un mundo ni TODOS cierran la idea (§3); reabrir preserva el motivo: OK");
   log("  2k. paridad de mundos (Fase 4.1): mundo activado POST-baseline recibe fechas por el ritual del proyecto (V3a), su cumplimiento aparece en el desglose por dominio del Analisis con conteos a mano (V3b), y el follow core NO toma sus items aunque sean los mas recientes (V4): OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
@@ -2022,7 +2222,7 @@ async function main() {
   log("  10. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
   log("  11. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 14/14 verificaciones OK");
+  separador("VUELO COMPLETO: 15/15 verificaciones OK");
   escribirTranscripcion();
 }
 

@@ -217,14 +217,19 @@ function FilaItem({
         (item.destacado && !hecho ? "border-done/35" : "border-hairline")
       }
     >
-      <div className="flex items-center gap-3.5">
+      <div className="flex flex-wrap items-center gap-3.5">
         {/* un toque: pendiente → empezado → a medias → hecho → pendiente */}
+        {/* Fase 4.3 §4 (deuda del barrido 380): a 380 EL CÍRCULO ES EL CONTROL,
+            como manda el frame móvil del canon 06. Su área táctil sube a 44px
+            con padding + margen negativo: el dedo recibe 44, el layout sigue
+            viendo los 22 del círculo, así que la fila no crece. En escritorio,
+            todo queda exactamente como estaba. */}
         <button
           onClick={pasoDeCirculo}
           disabled={ocupado}
           title={`Estado: ${ETIQUETA_ESTADO[item.estado]} — tocar para cambiar`}
           aria-label={`${item.texto}: ${ETIQUETA_ESTADO[item.estado]}, tocar para cambiar`}
-          className="shrink-0 disabled:opacity-50"
+          className="-m-[11px] flex h-11 w-11 shrink-0 items-center justify-center p-[11px] disabled:opacity-50 sm:m-0 sm:h-auto sm:w-auto sm:p-0"
         >
           <IconoEstado estado={item.estado} />
         </button>
@@ -251,11 +256,26 @@ function FilaItem({
             </button>
           )}
         </span>
+        {/* Fase 4.3 §4 — el botón a 380, con sus dos reglas resueltas:
+            (a) SOLO en el ítem EN CURSO, como pediste. En los demás, el círculo
+                basta y el texto recupera el ancho entero (antes caía a una
+                columna de ~140px partida en cuatro líneas).
+            (b) DEBAJO del texto, no al lado (basis-full + el flex-wrap del
+                padre). Al lado dejaba ESE ítem en NUEVE líneas: peor que la
+                deuda que veníamos a pagar.
+            El frame móvil del canon no dibuja botón en ninguno, y aun así se
+            conserva aquí: sin él, marcar hecho a 380 pasa de UN toque a TRES
+            (el círculo cicla pendiente→empezado→a medias→hecho). Cambiar la
+            acción de la semana por tres toques no era el trato.
+            Escritorio: sin cambios, el botón sigue al lado en cada pendiente. */}
         {!hecho && !preguntando && (
           <button
             onClick={() => setPreguntando(true)}
             disabled={ocupado}
-            className="shrink-0 rounded-[9px] border border-done/50 px-3.5 py-1.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
+            className={
+              (item.destacado ? "basis-full py-2.5 sm:basis-auto sm:py-1.5 " : "hidden sm:block sm:py-1.5 ") +
+              "shrink-0 rounded-[9px] border border-done/50 px-3.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
+            }
           >
             Marcar hecho
           </button>
