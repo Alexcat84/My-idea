@@ -217,7 +217,7 @@ function FilaItem({
         (item.destacado && !hecho ? "border-done/35" : "border-hairline")
       }
     >
-      <div className="flex items-center gap-3.5">
+      <div className="flex flex-wrap items-center gap-3.5">
         {/* un toque: pendiente → empezado → a medias → hecho → pendiente */}
         {/* Fase 4.3 §4 (deuda del barrido 380): a 380 EL CÍRCULO ES EL CONTROL,
             como manda el frame móvil del canon 06. Su área táctil sube a 44px
@@ -256,18 +256,25 @@ function FilaItem({
             </button>
           )}
         </span>
-        {/* Fase 4.3 §4: a 380 el botón solo acompaña al ítem EN CURSO (el
-            destacado de "esta semana"), como el canon móvil. En los demás
-            ítems se robaba el ancho y dejaba el texto en una columna de ~140px,
-            partido en cuatro líneas. El círculo de la izquierda hace su trabajo.
-            Escritorio: sin cambios, el botón sigue en cada pendiente. */}
+        {/* Fase 4.3 §4 — el botón a 380, con sus dos reglas resueltas:
+            (a) SOLO en el ítem EN CURSO, como pediste. En los demás, el círculo
+                basta y el texto recupera el ancho entero (antes caía a una
+                columna de ~140px partida en cuatro líneas).
+            (b) DEBAJO del texto, no al lado (basis-full + el flex-wrap del
+                padre). Al lado dejaba ESE ítem en NUEVE líneas: peor que la
+                deuda que veníamos a pagar.
+            El frame móvil del canon no dibuja botón en ninguno, y aun así se
+            conserva aquí: sin él, marcar hecho a 380 pasa de UN toque a TRES
+            (el círculo cicla pendiente→empezado→a medias→hecho). Cambiar la
+            acción de la semana por tres toques no era el trato.
+            Escritorio: sin cambios, el botón sigue al lado en cada pendiente. */}
         {!hecho && !preguntando && (
           <button
             onClick={() => setPreguntando(true)}
             disabled={ocupado}
             className={
-              (item.destacado ? "" : "hidden sm:block ") +
-              "shrink-0 rounded-[9px] border border-done/50 px-3.5 py-1.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
+              (item.destacado ? "basis-full py-2.5 sm:basis-auto sm:py-1.5 " : "hidden sm:block sm:py-1.5 ") +
+              "shrink-0 rounded-[9px] border border-done/50 px-3.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
             }
           >
             Marcar hecho
