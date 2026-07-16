@@ -84,3 +84,32 @@ validación del dataset, registrado aparte porque no es una prueba del
 motor sino del grafo de conocimiento — cubierto en
 [AUD-01](../audits/AUD-01-Fase1_Cierre_y_Auditoria.md) y las auditorías de
 fase (AUD-02 a AUD-06).
+
+---
+
+## Higiene del banco de pruebas (Fase 4.3 §5)
+
+Nota puesta aquí, y no en "el runbook de beta", porque ese runbook **no existe
+todavía**: este documento es el sitio donde vive la higiene de las pruebas.
+Cuando el runbook nazca, esta sección se muda entera.
+
+**El hallazgo:** el gate captura Home con la cuenta del dev, que acumula
+**cientos de ideas** de todos los vuelos y gates. Su captura de página completa
+salía de 23.000px — **31 veces** el frame del canon. Eso medía contaminación del
+banco de pruebas, no diseño. Home es hoy la **única** pantalla del gate que se
+captura sin `fullPage`: el canon 01 es un frame de UNA pantalla y la
+contaminación vive toda bajo el pliegue, así que pantalla contra pantalla es la
+comparación honesta.
+
+**La regla, para cuando el auth despierte:**
+
+- Los proyectos de prueba del fundador se distinguen por **`user_id`**. No por
+  el título, no por la fecha, no por heurística: por su dueño.
+- **La telemetría de beta filtra por invitados** (la identidad de invitado del
+  proxy) y **jamás** mezcla los vuelos. Un vuelo son ~15 proyectos sintéticos con
+  ideas de macetas y kits de huerto: si entran a la telemetría, la beta miente
+  sobre su propio uso.
+- Corolario para cualquier métrica futura (activación, retención, embudo): antes
+  de leerla, preguntar **de quién son estos datos**. La lección de fondo es la
+  misma del BANCO §9 — una señal que mezcla vuelos con usuarios reales no es una
+  señal, es ruido con cara de dato.

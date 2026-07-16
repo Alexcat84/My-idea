@@ -48,11 +48,11 @@ const RESPUESTAS = [
 const VP_ESCRITORIO = { width: 1240, height: 900 };
 const VP_MOVIL = { width: 380, height: 844 };
 
-async function capturar(page: Page, archivo: string) {
+async function capturar(page: Page, archivo: string, fullPage = true) {
   // animaciones del canon: planIn/railIn + el stepFill escalonado del
   // stepper (la última barra termina ~1.65s; 3s deja todo asentado)
   await page.waitForTimeout(3000);
-  await page.screenshot({ path: path.join(OUT, archivo), fullPage: true });
+  await page.screenshot({ path: path.join(OUT, archivo), fullPage });
   console.log(`  ${archivo}`);
 }
 
@@ -66,10 +66,10 @@ async function capturar(page: Page, archivo: string) {
  * 380 sale gratis y, mejor aun, es EXACTAMENTE el mismo estado: si el par
  * escritorio/movil difiere, la diferencia es del layout y de nada mas.
  */
-async function capturarApp(app: Page, base: string) {
-  await capturar(app, `${base}_app.png`);
+async function capturarApp(app: Page, base: string, fullPage = true) {
+  await capturar(app, `${base}_app.png`, fullPage);
   await app.setViewportSize(VP_MOVIL);
-  await capturar(app, `${base}_app_380.png`);
+  await capturar(app, `${base}_app_380.png`, fullPage);
   await app.setViewportSize(VP_ESCRITORIO);
   await app.waitForTimeout(500); // el reflow de vuelta asienta antes de seguir
 }
@@ -173,8 +173,15 @@ async function main() {
 
   // 00 Home (canon 01). Hueco heredado: el gate nunca la habia capturado, en
   // NINGUN viewport, aunque el canon la trae en los dos.
+  //
+  // UNICA pantalla que se captura SIN fullPage, y por una razon de honestidad:
+  // la cuenta del gate acumula CIENTOS de ideas de todos los vuelos, y su
+  // fullPage salia 23.000px -- 31 veces el frame del canon. Eso medía
+  // contaminacion del banco de pruebas, no diseno. El canon 01 es un frame de
+  // UNA pantalla; la contaminacion vive toda bajo el pliegue. Pantalla contra
+  // pantalla es la comparacion honesta, y ahi la cinta de idea SI es la vara.
   await app.goto(`${BASE_URL}/ideas`);
-  await capturarApp(app, "00_home");
+  await capturarApp(app, "00_home", false);
   await capturarCanon(canon, "01 - Home - Mis Ideas.html", "00_home_canon.png", "Mis ideas desktop", true);
   await capturarCanon(canon, "01 - Home - Mis Ideas.html", "00_home_canon_380.png", "Mis ideas mobile 380", true);
 

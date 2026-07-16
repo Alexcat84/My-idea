@@ -219,12 +219,17 @@ function FilaItem({
     >
       <div className="flex items-center gap-3.5">
         {/* un toque: pendiente → empezado → a medias → hecho → pendiente */}
+        {/* Fase 4.3 §4 (deuda del barrido 380): a 380 EL CÍRCULO ES EL CONTROL,
+            como manda el frame móvil del canon 06. Su área táctil sube a 44px
+            con padding + margen negativo: el dedo recibe 44, el layout sigue
+            viendo los 22 del círculo, así que la fila no crece. En escritorio,
+            todo queda exactamente como estaba. */}
         <button
           onClick={pasoDeCirculo}
           disabled={ocupado}
           title={`Estado: ${ETIQUETA_ESTADO[item.estado]} — tocar para cambiar`}
           aria-label={`${item.texto}: ${ETIQUETA_ESTADO[item.estado]}, tocar para cambiar`}
-          className="shrink-0 disabled:opacity-50"
+          className="-m-[11px] flex h-11 w-11 shrink-0 items-center justify-center p-[11px] disabled:opacity-50 sm:m-0 sm:h-auto sm:w-auto sm:p-0"
         >
           <IconoEstado estado={item.estado} />
         </button>
@@ -251,11 +256,19 @@ function FilaItem({
             </button>
           )}
         </span>
+        {/* Fase 4.3 §4: a 380 el botón solo acompaña al ítem EN CURSO (el
+            destacado de "esta semana"), como el canon móvil. En los demás
+            ítems se robaba el ancho y dejaba el texto en una columna de ~140px,
+            partido en cuatro líneas. El círculo de la izquierda hace su trabajo.
+            Escritorio: sin cambios, el botón sigue en cada pendiente. */}
         {!hecho && !preguntando && (
           <button
             onClick={() => setPreguntando(true)}
             disabled={ocupado}
-            className="shrink-0 rounded-[9px] border border-done/50 px-3.5 py-1.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
+            className={
+              (item.destacado ? "" : "hidden sm:block ") +
+              "shrink-0 rounded-[9px] border border-done/50 px-3.5 py-1.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
+            }
           >
             Marcar hecho
           </button>
