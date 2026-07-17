@@ -161,7 +161,7 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
     const realizada = Boolean(realizadaAt);
     const resumenRealizada = realizadaAt
-      ? `realizada el ${fechaSello(realizadaAt)} · ${Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))} días de la chispa al proyecto`
+      ? `realizada ${fechaSello(realizadaAt)} · ${Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))} días de la chispa al proyecto`
       : undefined;
 
     return {

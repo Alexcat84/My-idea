@@ -45,18 +45,27 @@ describe("CierreHonesto — la pantalla jamás queda muda (Fase 4.3 §2)", () =>
     expect(html).toContain("Ver los otros mundos");
   });
 
-  it("si se devolvió la activación, lo DICE (el usuario pagó por ese mundo)", () => {
-    expect(pintar({ unlockRevertido: true })).toContain("Tu activación quedó devuelta");
+  // Fase 4.3.2 (regla de claims): la línea de reembolso cuelga de un evento del
+  // ledger (creditosDevueltos), JAMÁS de un flag. Es una afirmación de dinero.
+  it("con créditos DE VERDAD devueltos, lo dice con el monto", () => {
+    expect(pintar({ creditosDevueltos: 3 })).toContain("Te devolvimos 3 créditos");
+    expect(pintar({ creditosDevueltos: 1 })).toContain("Te devolvimos 1 crédito"); // singular
   });
 
-  it("sin reembolso no promete uno", () => {
-    expect(pintar({ unlockRevertido: false })).not.toContain("activación quedó devuelta");
+  it("en beta (creditosDevueltos null) NO afirma ningún reembolso", () => {
+    const html = pintar({ creditosDevueltos: null });
+    expect(html).not.toContain("Te devolvimos");
+    expect(html).not.toContain("crédito");
+  });
+
+  it("0 créditos tampoco afirma nada (no hubo consumo)", () => {
+    expect(pintar({ creditosDevueltos: 0 })).not.toContain("Te devolvimos");
   });
 
   it("el cierre core también habla: el mensaje viene del servidor, no se inventa aquí", () => {
     const html = pintar({
       mensaje: "Tu idea queda guardada tal como está: vuelve cuando quieras y seguimos desde aquí.",
-      unlockRevertido: false,
+      creditosDevueltos: null,
     });
     expect(html).toContain("Tu idea queda guardada tal como está");
   });

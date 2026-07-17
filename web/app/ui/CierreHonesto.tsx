@@ -21,14 +21,17 @@
  */
 export function CierreHonesto({
   mensaje,
-  unlockRevertido,
+  creditosDevueltos,
   hayPlan,
   onVolverAManos,
   onVerMundos,
 }: {
   mensaje: string;
-  /** el mundo se cerró y su activación se devolvió (§1) */
-  unlockRevertido?: boolean;
+  /** Fase 4.3.2 (regla de claims): créditos DE VERDAD devueltos, respaldados por
+   * un evento del ledger. null = no hubo consumo que devolver (p.ej. beta
+   * gratis): NO se muestra ninguna afirmación de dinero. El hecho de que el
+   * mundo quedó reabierto ya lo dice el `mensaje` del servidor. */
+  creditosDevueltos?: number | null;
   /** con plan, la salida natural es Manos a la Obra; sin él, los mundos */
   hayPlan: boolean;
   onVolverAManos: () => void;
@@ -44,9 +47,10 @@ export function CierreHonesto({
         Hasta aquí llega este camino
       </p>
       <p className="text-[17px] font-medium leading-relaxed [text-wrap:pretty]">{mensaje}</p>
-      {unlockRevertido && (
+      {typeof creditosDevueltos === "number" && creditosDevueltos > 0 && (
         <p className="mt-3 text-[13px] text-done">
-          Tu activación quedó devuelta: este mundo te sigue esperando, sin pagar de nuevo.
+          Te devolvimos {creditosDevueltos} {creditosDevueltos === 1 ? "crédito" : "créditos"} de la
+          activación. Nunca pierdes créditos por algo que no te sirvió.
         </p>
       )}
       <div className="mt-5 flex flex-wrap items-center gap-3">

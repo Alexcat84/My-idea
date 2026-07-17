@@ -21,28 +21,38 @@ const MESES = [
 
 const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"] as const;
 
-const MESES_CORTO = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"] as const;
-
 /**
- * Sello de tiempo del historial (Fase 4.3.1): un timestamp que ANCLA la idea en
- * el calendario, en vez de solo "hace X". El "hace 3 meses / hace 4 meses" no
- * ayuda a ordenar ni a ubicar; una fecha real sí. Patrón heredado de cómo el I
- * Ching guarda los chats: hora para lo de hoy, fecha para lo anterior, y el año
- * solo cuando no es el actual (para no repetirlo en cada línea).
+ * Sello de tiempo del historial (Fase 4.3.1; formato híbrido desde 4.3.2): la
+ * marca de tiempo de la UI VIVA. Decisión del fundador: "la UI respira, las
+ * actas constan" — aquí, relativo para lo reciente ("hace 21 min", "hace 3
+ * días") y absoluto como ancla ("hoy 08:14", "ayer 21:26", "12 de marzo", con
+ * el año solo cuando no es el actual). Es el patrón del canon de Claude Design.
  *
- * Local a propósito (getHours/getDate): es la fecha del reloj del usuario, no un
+ * IMPORTANTE: esta función es SOLO para la UI. Los DOCUMENTOS DE REGISTRO —el
+ * acta de cierre, el informe .md, el análisis exportado— van SIEMPRE en
+ * absoluto y NO la usan: leen `fechaHumana`/`fechaHumanaCorta`/ISO. Un registro
+ * que diga "hace 3 días" deja de constar en cuanto pasa el tiempo.
+ *
+ * Local a propósito (getHours/getDate): la fecha del reloj del usuario, no un
  * instante UTC. `ahora` es inyectable para tests deterministas.
  */
 export function fechaSello(iso: string, ahora: Date = new Date()): string {
   const d = new Date(iso);
+  const min = Math.floor((ahora.getTime() - d.getTime()) / 60_000);
+  if (min < 2) return "hace un momento";
+  if (min < 60) return `hace ${min} min`;
   const hh = String(d.getHours()).padStart(2, "0");
   const mm = String(d.getMinutes()).padStart(2, "0");
   if (d.toDateString() === ahora.toDateString()) return `hoy ${hh}:${mm}`;
   const ayer = new Date(ahora);
   ayer.setDate(ahora.getDate() - 1);
   if (d.toDateString() === ayer.toDateString()) return `ayer ${hh}:${mm}`;
-  const base = `${d.getDate()} ${MESES_CORTO[d.getMonth()]}`;
-  return d.getFullYear() === ahora.getFullYear() ? base : `${base} ${d.getFullYear()}`;
+  // Diferencia en días DE CALENDARIO (no ventanas de 24h): 2..6 días => relativo.
+  const soloFecha = (x: Date) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+  const dias = Math.round((soloFecha(ahora) - soloFecha(d)) / 86_400_000);
+  if (dias < 7) return `hace ${dias} días`;
+  const base = `${d.getDate()} de ${MESES[d.getMonth()]}`;
+  return d.getFullYear() === ahora.getFullYear() ? base : `${base} de ${d.getFullYear()}`;
 }
 
 /** "viernes 20 de marzo" — la fecha en palabras del canon 10. */

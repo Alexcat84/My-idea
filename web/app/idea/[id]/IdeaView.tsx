@@ -91,6 +91,8 @@ interface RespuestaTurno {
   mensaje?: string;
   /** el mundo era incompatible y su activación se devolvió (§1) */
   unlock_revertido?: boolean;
+  /** Fase 4.3.2: creditos DE VERDAD devueltos (evento del ledger). null en beta. */
+  creditos_devueltos?: number | null;
 }
 
 interface QA {
@@ -136,7 +138,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [enviando, setEnviando] = useState(false);
   const [listoParaPlan, setListoParaPlan] = useState(false);
   /** Fase 4.3 §2: el cierre honesto en pantalla (null = no hubo cierre). */
-  const [cierre, setCierre] = useState<{ mensaje: string; unlockRevertido: boolean } | null>(null);
+  const [cierre, setCierre] = useState<{ mensaje: string; creditosDevueltos: number | null } | null>(null);
   // Phase 3.7.2 (la oferta honesta): temas sobre la mesa cuando el motor
   // OFRECE el plan (null = cierre sin vuelta: CTA unico) y la tarjeta
   // intermedia de contexto final.
@@ -213,7 +215,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       setPregunta(null);
       setCierre({
         mensaje: data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
-        unlockRevertido: Boolean(data.unlock_revertido),
+        creditosDevueltos: data.creditos_devueltos ?? null,
       });
     }
   }
@@ -692,7 +694,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {cierre && (
                 <CierreHonesto
                   mensaje={cierre.mensaje}
-                  unlockRevertido={cierre.unlockRevertido}
+                  creditosDevueltos={cierre.creditosDevueltos}
                   hayPlan={Boolean(planMd)}
                   onVolverAManos={() => {
                     setCierre(null);

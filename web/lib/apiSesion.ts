@@ -19,16 +19,22 @@ const MENSAJE_CIERRE_CORE =
   "Con lo que me contaste no puedo seguir preguntando sin hacerte perder el tiempo. " +
   "Tu idea queda guardada tal como está: vuelve cuando quieras y seguimos desde aquí.";
 
-/** El cierre honesto de un mundo que no era para este proyecto (§1). Las
- * palabras son del fundador, literales. */
+/** El cierre honesto de un mundo que no era para este proyecto (§1).
+ *
+ * Fase 4.3.2 (regla de claims del BANCO): el mensaje NO afirma nada sobre
+ * dinero ni créditos. Dice el hecho real —el mundo queda reabierto y pueden
+ * volver a entrar— sin "sin pagar de nuevo" ni "te devolvimos N créditos": esa
+ * es una afirmación de dinero, y solo puede mostrarse con un evento del ledger
+ * que la respalde (ver `creditos_devueltos`). En beta la activación es gratis:
+ * no hubo consumo, así que no hay reembolso que anunciar. */
 function mensajeMundoIncompatible(dominio: string): string {
   const nombre =
     (catalogo.packs as Array<{ clave: string; nombre: string }>).find((p) => p.clave === dominio)?.nombre ??
     "Este mundo";
   return (
     `${nombre} está pensado para negocios con más estructura de la que tu proyecto necesita hoy; ` +
-    "te lo digo antes de hacerte perder tiempo. Te devolvimos la activación: puedes volver a " +
-    "entrar sin pagar de nuevo cuando tu proyecto crezca."
+    "te lo digo antes de hacerte perder tiempo. Este mundo te sigue esperando: puedes volver a " +
+    "entrar cuando tu proyecto crezca."
   );
 }
 
@@ -69,21 +75,32 @@ export async function responderResultadoTurno(
     // Fase 4.3 §1: un mundo solo cierra cuando NINGUNA de sus puertas era
     // compatible con el perfil (el motor ya re-eligio todo lo que pudo).
     const cierre = resultado.cierreMundo;
+    // Fase 4.3.2: DOS cosas distintas, que la regla de claims obliga a separar.
+    //  (1) `unlock_revertido` — HECHO real: se borra la fila y el usuario puede
+    //      volver a entrar al mundo. No es una afirmación de dinero.
+    //  (2) `creditos_devueltos` — AFIRMACIÓN DE DINERO: cuántos créditos se le
+    //      devolvieron. Solo puede tener valor si un evento del ledger lo
+    //      respalda. En beta la activación es gratis (no hubo consumo): null.
+    // ── ANCLA para la ETAPA 2 (rama cuentas-y-creditos) ──────────────────
+    // Hoy: null (no hay ledger, la activación de beta es gratis). El día de la
+    // ETAPA 2, esta línea pasa a
+    //   `const creditosDevueltos = cierre ? await reembolsarCreditos(projectId,
+    //      cierre.dominio, "mundo_incompatible") : null;`
+    // Esa función consulta el ledger, ve si HUBO un cargo real por la
+    // activación, lo revierte con su propio evento y devuelve el monto (o null
+    // si no hubo cargo — p.ej. cortesía de beta). El claim de dinero de la UI
+    // cuelga de ESE valor, jamás de un flag de entorno: si el ledger no lo
+    // respalda, no se afirma.
+    const creditosDevueltos: number | null = null;
     if (cierre) {
-      // Se revierte el unlock: el usuario pago por explorar un mundo que no era
-      // para su proyecto de hoy, y podra volver a entrar gratis cuando crezca.
-      //
-      // ── ANCLA para la ETAPA 2 del frente de cuentas (rama cuentas-y-creditos)
-      // Aqui va reembolsar_creditos(projectId, 3, 'mundo_incompatible'): el
-      // reembolso AUTOMATICO de los 3 creditos de la activacion. Hoy no hay
-      // ledger, asi que revertir el unlock ES el reembolso -- devuelve la unica
-      // cosa que el usuario compro. Cuando el ledger exista, las dos cosas van
-      // juntas y en esta misma transaccion logica.
+      // Revertir el unlock: real hoy, sin ledger. El mundo vuelve a estar
+      // disponible para reintentarlo cuando el proyecto crezca.
       await supabase.from("project_unlocks").delete().eq("project_id", projectId).eq("dominio", cierre.dominio);
       await registrarBitacora(supabase, projectId, "mundo_incompatible", {
         mundo: cierre.dominio,
         motivo: cierre.motivo,
         unlock_revertido: true,
+        creditos_devueltos: creditosDevueltos,
       });
     }
 
@@ -97,6 +114,9 @@ export async function responderResultadoTurno(
       mensaje: cierre ? mensajeMundoIncompatible(cierre.dominio) : MENSAJE_CIERRE_CORE,
       dominio: cierre?.dominio ?? null,
       unlock_revertido: Boolean(cierre),
+      // El claim de dinero: null en beta. La UI solo muestra la línea de
+      // reembolso si esto trae un número.
+      creditos_devueltos: creditosDevueltos,
     });
   }
 
