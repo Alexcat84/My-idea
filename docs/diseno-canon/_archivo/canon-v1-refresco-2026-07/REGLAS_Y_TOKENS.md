@@ -10,7 +10,7 @@ nativo de la APK es un encargo aparte.
 |---|---|---|
 | Azul primario | `#4D7CFE` | Exploración, planeación, navegación, el anillo "pensando", y toda acción que dispara al motor a pensar (incluido "Contar qué pasó", que regenera el plan). Etapas 1 a 4 del stepper. |
 | Verde ejecución | `#3FB950` | Acción sobre el mundo real: etapa 5 del stepper, progreso del checklist (contadores X/N, barras, ítems hechos, "marcar hecho"), cajas "esta semana", "marcar como realizada", chip "Completado". |
-| Ámbar guardián | `#E0A64A` | El guardián de datos (GIGO) de Tus Números, las tardías del cumplimiento, y la pérdida en Tus Números (margen negativo, escenarios en rojo). Espejo, nunca rojo, nunca regaño: una pérdida es un dato que se muestra, no una falta que se reprocha. |
+| Ámbar guardián | `#E0A64A` | El guardián de datos (GIGO) de Tus Números, y las tardías del cumplimiento (espejo, nunca rojo, nunca regaño). |
 | Matiz de los mundos | `#3A9B8F` | Identidad de un mundo (punto y borde de su sección) y su hito en la Celebración. Ni azul ni verde. |
 | Fondo base | `#0A0A0C` / `#000000` | Lienzo y frames. |
 | Superficie 1 | `#101013` | Tarjetas. |
@@ -87,8 +87,6 @@ usuario nunca pierde créditos por un fallo del sistema.
 11. `11_analisis_del_proyecto.html`, Análisis del Proyecto (capa universal, cumplimiento modo fechas, cumplimiento por mundo)
 12. `12_el_cierre_honesto.html`, El cierre honesto (NUEVO: camino sin salida y mundo que no encaja, con reembolso)
 13. `13_detalle_de_actividad.html`, Explorar actividad (NUEVO: detalle de ítem, cajón lateral y hoja inferior)
-14. `14_tus_numeros.html`, Tus Números (NUEVO: réplica financiera del análisis; veredicto de una frase, tiles, barra de la verdad, palancas calculadas, escenarios, faltantes, guardián; estados pérdida y sano)
 
 Cada archivo incluye desktop 1240 y móvil 380, y estados extra donde el producto
-los tiene. Ver `NOTAS_DE_DECISIONES.md` (pantallas 1 a 13) y `NOTAS_TUS_NUMEROS.md`
-(pantalla 14) para el criterio pantalla por pantalla.
+los tiene. Ver `NOTAS_DE_DECISIONES.md` para el criterio pantalla por pantalla.

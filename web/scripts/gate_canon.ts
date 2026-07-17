@@ -510,6 +510,12 @@ async function main() {
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_camino_SOLOCANON_380.png", "Cierre honesto camino movil 380", true);
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON.png", "Cierre honesto mundo desktop", true);
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON_380.png", "Cierre honesto mundo movil 380", true);
+  // Canon 2.0: Tus Números (canon 14, pantalla nueva) — la app aún no la tiene
+  // (FASE B item 6). Sus 4 frames van solo-canon hasta que /idea/[id]/numeros exista.
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_perdida_SOLOCANON.png", "Tus Numeros perdida desktop", true);
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_perdida_SOLOCANON_380.png", "Tus Numeros perdida movil 380", true);
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_sano_SOLOCANON.png", "Tus Numeros sano desktop", true);
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_sano_SOLOCANON_380.png", "Tus Numeros sano movil 380", true);
 
   await browser.close();
   console.log(`\nGATE: capturas lado a lado en ${OUT} — el veredicto visual es del fundador/auditor.`);

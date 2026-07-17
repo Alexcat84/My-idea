@@ -673,7 +673,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
             />
           </>
         ) : (
-          <div className="flex flex-col gap-6 sm:grid sm:grid-cols-[190px_1fr] sm:gap-8">
+          // Fase 4.3.2: el riel pasa de 190px a 260px — a 190 las etiquetas del
+          // recorrido se cortaban ("Identifica tus Supue…"); hay espacio de
+          // sobra a la izquierda y el árbol es la superficie que enamora.
+          <div className="flex flex-col gap-6 sm:grid sm:grid-cols-[260px_1fr] sm:gap-8">
             {/* Riel izquierdo: el árbol (en móvil, acordeón arriba) */}
             {mostrarArbol && (
               <>
