@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Mundos Activos</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Mundo activo desktop
+      - Mundo activo movil 380
+      - Mundo cierre desktop
+      - Mundo cierre movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta; los mundos tienen su matiz)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --radio-campo: 14px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 800px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .top-label { font-size: 13.5px; font-weight: 600; color: var(--verde); white-space: nowrap; }
+
+    .mundo-cuerpo { max-width: 820px; width: 100%; margin: 0 auto; padding: 30px 40px 56px; }
+    .lienzo--movil .mundo-cuerpo { padding: 20px 18px 44px; }
+
+    /* Resumen del viaje core (colapsado): el mundo vive DENTRO de la idea */
+    .core-resumen { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); margin-bottom: 22px; }
+    .core-resumen-tit { font-size: 14.5px; font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .core-resumen-cuenta { flex: none; font-size: 13px; font-weight: 700; color: var(--verde); }
+    .core-resumen-flecha { flex: none; color: var(--texto-dim); }
+
+    /* SECCION DEL MUNDO (subproyecto completo, con matiz propio) */
+    .mundo { border: 1px solid rgba(58, 155, 143, 0.35); border-radius: var(--radio-tarjeta); padding: 26px 28px; }
+    .lienzo--movil .mundo { padding: 20px 18px; }
+    .mundo-encab { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .mundo-nombre { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; }
+    .mundo-punto { width: 11px; height: 11px; border-radius: 50%; background: var(--mundos); }
+    .mundo-chip { font-size: 12px; font-weight: 600; color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.45); border-radius: 999px; padding: 5px 12px; }
+    .mundo-promesa { font-size: 14.5px; color: var(--texto-dim); margin-top: 10px; }
+
+    /* Mini viaje del mundo: su propia Exploracion, Plan y Manos a la Obra */
+    .mini-viaje { display: flex; align-items: center; gap: 10px; margin: 16px 0 24px; font-size: 13px; color: var(--texto-dim); }
+    .mini-nodo { display: flex; align-items: center; gap: 7px; }
+    .mini-nodo::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--mundos); }
+    .mini-nodo--manos::before { background: var(--verde); }
+    .mini-nodo--manos { color: var(--verde); font-weight: 600; }
+    .mini-guion { color: rgba(255, 255, 255, 0.2); }
+
+    /* Etapas y items del mundo (misma gramatica que Manos: verde ejecuta) */
+    .etapa { border: 1px solid var(--hairline); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+    .etapa--abierta { border-color: rgba(63, 185, 80, 0.28); }
+    .etapa-cab { display: flex; align-items: center; gap: 12px; padding: 16px 20px; }
+    .etapa-num { flex: none; font-size: 13px; font-weight: 700; color: var(--azul); }
+    .etapa-tit { flex: 1; font-size: 15px; font-weight: 700; }
+    .etapa-cuenta { flex: none; font-size: 13px; font-weight: 700; color: var(--verde); }
+    .etapa-flecha { flex: none; color: var(--texto-dim); }
+    .etapa-items { padding: 0 20px 14px; display: flex; flex-direction: column; gap: 10px; }
+
+    .item { display: flex; align-items: center; gap: 14px; padding: 15px 16px; background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: 11px; }
+    .item--semana { border-color: rgba(63, 185, 80, 0.3); }
+    .item-check { flex: none; width: 21px; height: 21px; border-radius: 50%; border: 1.5px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; }
+    .item-check--hecho { border-color: var(--verde); background: var(--verde); }
+    .item-check--hecho svg { width: 12px; height: 12px; stroke: #04120A; }
+    .item-texto { flex: 1; font-size: 14px; line-height: 1.55; }
+    .item--hecho .item-texto { color: var(--texto-dim); text-decoration: line-through; }
+    .item-etiqueta { display: inline-block; font-size: 11.5px; font-weight: 600; color: var(--verde); margin-top: 6px; }
+    .item-boton { flex: none; padding: 9px 15px; border-radius: 9px; border: 1px solid rgba(63, 185, 80, 0.4); background: rgba(63, 185, 80, 0.08); color: var(--verde); font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; }
+
+    /* Footer del mundo: repensar (azul) y cerrar el mundo (verde) */
+    .mundo-footer { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    .lienzo--movil .mundo-footer { flex-direction: column; }
+    .boton-azul { padding: 12px 20px; border-radius: 11px; border: none; background: var(--azul); color: #fff; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .boton-verde-borde { padding: 12px 20px; border-radius: 11px; border: 1px solid rgba(63, 185, 80, 0.45); background: rgba(63, 185, 80, 0.08); color: var(--verde); font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; }
+
+    /* ACTA DE CIERRE DEL MUNDO (el acta en miniatura, soberana) */
+    .acta { border-top: 1px solid var(--hairline); margin-top: 24px; padding-top: 24px; }
+    .acta-titulo { font-size: 17px; font-weight: 700; }
+    .acta-espejo { font-size: 14px; line-height: 1.6; color: var(--texto-dim); margin-top: 12px; }
+    .acta-pregunta { font-size: 14px; color: var(--texto); margin: 20px 0 10px; }
+    .acta-pregunta span { color: var(--texto-dim); }
+    .acta-campo { position: relative; background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: var(--radio-campo); min-height: 90px; padding: 16px 18px; }
+    .acta-campo-texto { font-size: 14px; color: var(--texto-dim); }
+    .acta-mic { position: absolute; right: 12px; bottom: 12px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--superficie-1); display: flex; align-items: center; justify-content: center; }
+    .acta-mic svg { width: 15px; height: 15px; stroke: var(--texto-dim); }
+    .acta-acciones { display: flex; align-items: center; gap: 16px; margin-top: 18px; }
+    .boton-verde { padding: 13px 22px; border-radius: 11px; border: none; background: var(--verde); color: #04120A; font-size: 14.5px; font-weight: 700; font-family: inherit; cursor: pointer; }
+    .enlace-tenue { font-size: 14px; color: var(--texto-dim); text-decoration: none; }
+    .enlace-tenue:hover { color: var(--texto); }
+
+    .avatar { position: absolute; left: 22px; bottom: 22px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--superficie-1); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--texto-dim); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Mundos activos</div>
+      <h1 class="galeria-titulo">Mundos Activos</h1>
+      <p class="galeria-descripcion">
+        Un mundo es un subproyecto completo, no una version recortada del viaje: tiene su propia
+        exploracion, su plan, su checklist, su seguimiento y su cierre. Vive dentro de la idea, con el
+        matiz de los mundos en su identidad y el verde para su ejecucion. Su acta de cierre es soberana:
+        no exige el 100%, el porque es opcional, y cerrar el mundo no cierra la idea. Desktop 1240 y
+        movil 380, en dos estados: mundo activo y acta de cierre.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) MUNDO ACTIVO · DESKTOP                                      -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Mundo activo desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequenos con guia incluida</span>
+            </div>
+            <span class="top-label">Manos a la Obra · 13/56</span>
+          </nav>
+
+          <div class="mundo-cuerpo">
+            <!-- CORE colapsado -->
+            <div class="core-resumen">
+              <span class="core-resumen-tit">Tu viaje core: de tres ventas entre amigos a tu primera venta con desconocidos</span>
+              <span class="core-resumen-cuenta">7/30</span>
+              <span class="core-resumen-flecha">&#9662;</span>
+            </div>
+
+            <!-- MUNDO -->
+            <div class="mundo">
+              <div class="mundo-encab">
+                <div class="mundo-nombre"><span class="mundo-punto"></span>Calidad y Confianza</div>
+                <span class="mundo-chip">Mundo activo · 6/26</span>
+              </div>
+              <p class="mundo-promesa">Que tu cliente confie, vuelva y te recomiende.</p>
+              <div class="mini-viaje">
+                <span class="mini-nodo">Exploracion</span>
+                <span class="mini-guion">&mdash;&mdash;</span>
+                <span class="mini-nodo">Plan</span>
+                <span class="mini-guion">&mdash;&mdash;</span>
+                <span class="mini-nodo mini-nodo--manos">Manos a la Obra · 6/26</span>
+              </div>
+
+              <!-- ETAPA 1 ABIERTA -->
+              <div class="etapa etapa--abierta">
+                <div class="etapa-cab">
+                  <span class="etapa-num">01</span>
+                  <span class="etapa-tit">Etapa 1</span>
+                  <span class="etapa-cuenta">3/5</span>
+                  <span class="etapa-flecha">&#9652;</span>
+                </div>
+                <div class="etapa-items">
+                  <div class="item item--hecho"><span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="item-texto">Escribe una lista de no mas de ocho caracteristicas que definen un kit "bien hecho" para ti: peso del sustrato, cantidad de semillas por sobre, estado de la maceta al empacar, y las demas que un comprador exigente notaria.</span></div>
+                  <div class="item item--hecho"><span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="item-texto">Convierte esa lista en una tarjeta de verificacion de media pagina (una columna con los ocho puntos, una casilla de si o no al lado de cada uno).</span></div>
+                  <div class="item item--hecho"><span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="item-texto">Arma un kit usando esa tarjeta por primera vez y anota donde te atrasas o donde el criterio no esta claro: esos son los puntos que necesitas afinar antes de que la tarjeta sea util de verdad.</span></div>
+                  <div class="item"><span class="item-check"></span><span class="item-texto">Piensa tambien en las dos o tres cosas que el comprador que regala el kit quiere que el receptor perciba al abrirlo: que es fresco, que viene con instrucciones claras, que no llega roto.</span><button class="item-boton">Marcar hecho</button></div>
+                  <div class="item item--semana"><span class="item-check"></span><span class="item-texto">Arma dos kits usando la tarjeta de verificacion que creaste y cronometra cuanto tiempo adicional te toma (si el estandar es bueno, no deberia agregar mas de diez minutos por kit).<span class="item-etiqueta">esta semana</span></span><button class="item-boton">Marcar hecho</button></div>
+                </div>
+              </div>
+
+              <div class="etapa"><div class="etapa-cab"><span class="etapa-num">02</span><span class="etapa-tit">Etapa 2</span><span class="etapa-cuenta">2/6</span><span class="etapa-flecha">&#9662;</span></div></div>
+              <div class="etapa"><div class="etapa-cab"><span class="etapa-num">03</span><span class="etapa-tit">Etapa 3</span><span class="etapa-cuenta">1/5</span><span class="etapa-flecha">&#9662;</span></div></div>
+              <div class="etapa"><div class="etapa-cab"><span class="etapa-num">04</span><span class="etapa-tit">Etapa 4</span><span class="etapa-cuenta">0/5</span><span class="etapa-flecha">&#9662;</span></div></div>
+              <div class="etapa"><div class="etapa-cab"><span class="etapa-num">05</span><span class="etapa-tit">Etapa 5</span><span class="etapa-cuenta">0/5</span><span class="etapa-flecha">&#9662;</span></div></div>
+
+              <div class="mundo-footer">
+                <button class="boton-azul">Contar que paso</button>
+                <button class="boton-verde-borde">Marcar este mundo como completado</button>
+              </div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) MUNDO ACTIVO · MOVIL 380                                    -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Mundo activo movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones</span></div>
+            <span class="top-label">13/56</span>
+          </nav>
+
+          <div class="mundo-cuerpo">
+            <div class="core-resumen">
+              <span class="core-resumen-tit">Tu viaje core</span>
+              <span class="core-resumen-cuenta">7/30</span>
+              <span class="core-resumen-flecha">&#9662;</span>
+            </div>
+
+            <div class="mundo">
+              <div class="mundo-encab">
+                <div class="mundo-nombre"><span class="mundo-punto"></span>Calidad y Confianza</div>
+                <span class="mundo-chip">Mundo activo · 6/26</span>
+              </div>
+              <p class="mundo-promesa">Que tu cliente confie, vuelva y te recomiende.</p>
+              <div class="mini-viaje">
+                <span class="mini-nodo">Exploracion</span>
+                <span class="mini-guion">&mdash;</span>
+                <span class="mini-nodo">Plan</span>
+                <span class="mini-guion">&mdash;</span>
+                <span class="mini-nodo mini-nodo--manos">Manos · 6/26</span>
+              </div>
+
+              <div class="etapa etapa--abierta">
+                <div class="etapa-cab"><span class="etapa-num">01</span><span class="etapa-tit">Etapa 1</span><span class="etapa-cuenta">3/5</span><span class="etapa-flecha">&#9652;</span></div>
+                <div class="etapa-items">
+                  <div class="item item--hecho"><span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="item-texto">Escribe una lista de no mas de ocho caracteristicas que definen un kit "bien hecho": peso del sustrato, cantidad de semillas, estado de la maceta al empacar.</span></div>
+                  <div class="item item--hecho"><span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="item-texto">Convierte esa lista en una tarjeta de verificacion de media pagina, con una casilla de si o no al lado de cada punto.</span></div>
+                  <div class="item"><span class="item-check"></span><span class="item-texto">Piensa en las dos o tres cosas que el comprador que regala el kit quiere que el receptor perciba al abrirlo: que es fresco, que llega con instrucciones claras.</span><button class="item-boton">Marcar</button></div>
+                  <div class="item item--semana"><span class="item-check"></span><span class="item-texto">Arma dos kits usando la tarjeta y cronometra cuanto tiempo adicional te toma.<span class="item-etiqueta">esta semana</span></span><button class="item-boton">Marcar</button></div>
+                </div>
+              </div>
+              <div class="etapa"><div class="etapa-cab"><span class="etapa-num">02</span><span class="etapa-tit">Etapa 2</span><span class="etapa-cuenta">2/6</span><span class="etapa-flecha">&#9662;</span></div></div>
+              <div class="etapa"><div class="etapa-cab"><span class="etapa-num">03</span><span class="etapa-tit">Etapa 3</span><span class="etapa-cuenta">1/5</span><span class="etapa-flecha">&#9662;</span></div></div>
+
+              <div class="mundo-footer">
+                <button class="boton-azul">Contar que paso</button>
+                <button class="boton-verde-borde">Marcar este mundo como completado</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) MUNDO CIERRE (acta) · DESKTOP                               -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Mundo cierre desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequenos con guia incluida</span>
+            </div>
+            <span class="top-label">Manos a la Obra · 13/56</span>
+          </nav>
+
+          <div class="mundo-cuerpo">
+            <div class="mundo">
+              <div class="mundo-encab">
+                <div class="mundo-nombre"><span class="mundo-punto"></span>Calidad y Confianza</div>
+                <span class="mundo-chip">Mundo activo · 6/26</span>
+              </div>
+              <p class="mundo-promesa">Que tu cliente confie, vuelva y te recomiende.</p>
+
+              <!-- ACTA DE CIERRE -->
+              <div class="acta">
+                <div class="acta-titulo">Diste Calidad y Confianza por terminado? Podras reabrirlo cuando quieras.</div>
+                <p class="acta-espejo">Llevas 6 de 26 acciones de este mundo (23%). Las que queden pendientes se guardan tal cual: son testigos de tu historia, no una deuda. Cerrar este mundo no cierra tu idea.</p>
+                <p class="acta-pregunta">Por que lo cierras aqui? <span>(opcional, para tu propia memoria)</span></p>
+                <div class="acta-campo">
+                  <span class="acta-campo-texto">Lo cierro porque ya tengo la tarjeta de verificacion funcionando y el estandar es consistente; el resto lo afino sobre la marcha sin necesitar el plan completo del mundo...</span>
+                  <div class="acta-mic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0"></path><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                </div>
+                <div class="acta-acciones">
+                  <button class="boton-verde">Si, lo doy por terminado</button>
+                  <a class="enlace-tenue">Todavia no</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 4) MUNDO CIERRE (acta) · MOVIL 380                             -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Mundo cierre movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones</span></div>
+          </nav>
+
+          <div class="mundo-cuerpo">
+            <div class="mundo">
+              <div class="mundo-encab">
+                <div class="mundo-nombre"><span class="mundo-punto"></span>Calidad y Confianza</div>
+                <span class="mundo-chip">Mundo activo · 6/26</span>
+              </div>
+              <p class="mundo-promesa">Que tu cliente confie, vuelva y te recomiende.</p>
+
+              <div class="acta">
+                <div class="acta-titulo">Diste Calidad y Confianza por terminado?</div>
+                <p class="acta-espejo">Llevas 6 de 26 acciones de este mundo (23%). Las que queden pendientes se guardan tal cual. Cerrar este mundo no cierra tu idea.</p>
+                <p class="acta-pregunta">Por que lo cierras aqui? <span>(opcional)</span></p>
+                <div class="acta-campo">
+                  <span class="acta-campo-texto">Lo cierro porque ya tengo la tarjeta de verificacion funcionando y el estandar es consistente...</span>
+                  <div class="acta-mic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0"></path><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                </div>
+                <div class="acta-acciones">
+                  <button class="boton-verde">Si, lo doy por terminado</button>
+                  <a class="enlace-tenue">Todavia no</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

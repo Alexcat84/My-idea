@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Etapa 3 · La Exploracion</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Exploracion desktop
+      - Exploracion movil 380
+      - Exploracion recorrido abierto movil 380
+      - Exploracion oferta honesta desktop
+      - Exploracion oferta honesta movil 380
+      - Exploracion plan en camino desktop
+      - Exploracion plan en camino movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --radio-campo: 14px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 760px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+
+    .lienzo { position: relative; display: flex; flex-direction: column; min-height: 860px; }
+    .lienzo--movil { min-height: 760px; }
+
+    /* ==========================================================================
+       BARRA SUPERIOR con migaja + stepper de las 5 etapas
+       ========================================================================== */
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .top-riel { display: flex; align-items: center; gap: 6px; flex: none; }
+    .top-punto { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+    .top-punto--hecho { background: var(--azul); }
+    .top-punto--pensando { width: 12px; height: 12px; border: 2px solid var(--azul); animation: pulso 1.8s ease-in-out infinite; }
+    .top-punto--futuro { border: 1.5px solid rgba(255, 255, 255, 0.22); }
+    .top-linea { width: 22px; height: 2px; border-radius: 2px; background: var(--azul); flex: none; }
+    .top-linea--futuro { background: rgba(255, 255, 255, 0.14); }
+    .top-label { font-size: 13.5px; font-weight: 600; color: var(--azul); margin-left: 8px; white-space: nowrap; }
+
+    /* ==========================================================================
+       LAYOUT: recorrido a la izquierda, tarjeta al centro
+       ========================================================================== */
+    .exp-cuerpo { flex: 1; display: grid; grid-template-columns: 300px 1fr; gap: 8px; padding: 36px 40px; }
+    .exp-centro { max-width: 760px; }
+
+    .recorrido-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 22px; }
+
+    /* Riel vertical del arbol */
+    .riel-vertical { display: flex; flex-direction: column; }
+    .nodo { display: flex; gap: 16px; padding-bottom: 22px; }
+    .nodo-marca { position: relative; flex: none; width: 18px; display: flex; justify-content: center; padding-top: 3px; }
+    .nodo:not(:last-child) .nodo-marca::after { content: ""; position: absolute; left: 50%; top: 18px; bottom: -22px; width: 2px; transform: translateX(-50%); background: rgba(255, 255, 255, 0.12); }
+
+    .nodo-punto { width: 12px; height: 12px; border-radius: 50%; z-index: 1; }
+    .nodo-punto--hecho { background: var(--azul); }
+    .nodo-punto--pensando { border: 2.5px solid var(--azul); animation: pulso 1.8s ease-in-out infinite; }
+    .nodo-punto--futuro { border: 1.5px solid rgba(255, 255, 255, 0.28); }
+
+    .nodo-cuerpo { min-width: 0; }
+    .nodo-label { font-size: 15px; font-weight: 600; color: var(--texto); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 210px; }
+    .nodo--actual .nodo-label { color: var(--azul); }
+    .nodo--futuro .nodo-label { color: var(--texto-dim); font-weight: 500; }
+    .nodo-sub { font-size: 12.5px; color: var(--texto-dim); margin-top: 3px; }
+
+    /* Tarjeta de pregunta */
+    .tarjeta { background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 30px 32px; display: flex; flex-direction: column; gap: 20px; }
+    .lienzo--movil .tarjeta { padding: 24px 22px; }
+
+    .tarjeta-eyebrow { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); }
+    .tarjeta-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--azul); flex: none; }
+    .tarjeta-eyebrow--pensando::before { background: transparent; border: 2px solid var(--azul); animation: pulso 1.8s ease-in-out infinite; }
+
+    .tarjeta-pregunta { font-size: 24px; font-weight: 700; line-height: 1.4; letter-spacing: -0.3px; text-wrap: pretty; }
+    .lienzo--movil .tarjeta-pregunta { font-size: 20px; }
+    .tarjeta-titulo-plan { font-size: 22px; font-weight: 700; line-height: 1.4; text-wrap: pretty; }
+    .tarjeta-sub { font-size: 14.5px; line-height: 1.55; color: var(--texto-dim); }
+
+    .respuesta { position: relative; background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: var(--radio-campo); min-height: 130px; padding: 18px 20px; }
+    .respuesta-texto { font-size: 15px; color: var(--texto-dim); }
+    .respuesta-mic { position: absolute; right: 14px; bottom: 14px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--superficie-1); display: flex; align-items: center; justify-content: center; }
+    .respuesta-mic svg { width: 16px; height: 16px; stroke: var(--texto-dim); }
+
+    .boton-primario { padding: 13px 24px; border-radius: 11px; border: none; background: var(--azul); color: #fff; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; align-self: flex-start; }
+    .boton-primario:hover { filter: brightness(1.08); }
+
+    .enlace-generar { font-size: 14px; color: var(--texto-dim); text-decoration: none; }
+    .enlace-generar:hover { color: var(--azul); }
+
+    /* Barra colapsable "Recorrido (N)" */
+    .colapsable { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding: 18px 24px; background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); font-size: 16px; font-weight: 600; cursor: pointer; }
+    .colapsable-flecha { color: var(--texto-dim); }
+
+    /* Oferta honesta: chips de potenciadores + dos salidas */
+    .oferta-sub { font-size: 15px; color: var(--texto-dim); }
+    .oferta-chips { display: flex; gap: 12px; flex-wrap: wrap; }
+    .chip-poten { padding: 12px 18px; border-radius: 999px; border: 1px solid var(--hairline); background: var(--superficie-2); font-size: 14px; font-weight: 600; }
+    .oferta-salidas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .lienzo--movil .oferta-salidas { grid-template-columns: 1fr; }
+    .boton-salida { padding: 18px; border-radius: 12px; border: 1px solid var(--hairline); background: var(--superficie-2); color: var(--texto); font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .boton-salida--fuerte { background: var(--azul); border-color: var(--azul); color: #fff; }
+    .oferta-nota { font-size: 13px; color: var(--texto-dim); text-align: center; }
+
+    /* Nodo en generacion (plan en camino) */
+    .generando { margin-top: 6px; padding-left: 34px; }
+    .generando-texto { font-size: 12.5px; line-height: 1.5; color: var(--texto-dim); }
+
+    /* ==========================================================================
+       MOVIL: recorrido como barra + hoja inferior (bottom sheet)
+       ========================================================================== */
+    .exp-cuerpo--movil { display: block; padding: 24px 18px; }
+    .barra-recorrido { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; padding: 14px 18px; background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: 12px; font-size: 14px; font-weight: 600; }
+    .barra-recorrido span { color: var(--texto-dim); font-weight: 500; }
+
+    .hoja { position: absolute; left: 0; right: 0; bottom: 0; background: #0E0E11; border-top: 1px solid var(--hairline); border-radius: 20px 20px 0 0; padding: 14px 22px 28px; box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.5); }
+    .hoja-agarre { width: 40px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.2); margin: 0 auto 18px; }
+    .hoja-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 18px; }
+    .velo { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.55); }
+
+    .avatar { position: absolute; left: 22px; bottom: 22px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--superficie-1); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--texto-dim); z-index: 2; }
+
+    @keyframes pulso {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(77, 124, 254, 0.4); }
+      50% { box-shadow: 0 0 0 5px rgba(77, 124, 254, 0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .top-punto--pensando, .nodo-punto--pensando, .tarjeta-eyebrow--pensando::before { animation: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Etapa 3 de 5</div>
+      <h1 class="galeria-titulo">La Exploracion</h1>
+      <p class="galeria-descripcion">
+        La entrevista guiada. El riel del arbol a la izquierda muestra el recorrido de la idea (la linea
+        desciende y toca cada punto); al centro, la pregunta actual y el campo para responder. Incluye la
+        oferta honesta ("con lo que me contaste puedo armar tu plan") y la tarjeta intermedia mientras el
+        plan se escribe. En movil el recorrido se abre como hoja inferior. Desktop 1240 y movil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) PRINCIPAL · DESKTOP                                         -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Exploracion desktop">
+        <div class="lienzo">
+
+          <!-- BARRA SUPERIOR -->
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequenos con guia incluida</span>
+            </div>
+            <div class="top-riel">
+              <span class="top-punto top-punto--hecho"></span>
+              <span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span>
+              <span class="top-linea"></span>
+              <span class="top-punto top-punto--pensando"></span>
+              <span class="top-label">La Exploracion · en curso</span>
+              <span class="top-linea top-linea--futuro"></span>
+              <span class="top-punto top-punto--futuro"></span>
+              <span class="top-linea top-linea--futuro"></span>
+              <span class="top-punto top-punto--futuro"></span>
+            </div>
+          </nav>
+
+          <div class="exp-cuerpo">
+
+            <!-- RECORRIDO (riel vertical) -->
+            <aside>
+              <div class="recorrido-titulo">Recorrido de la idea</div>
+              <div class="riel-vertical">
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--pensando"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Prueba tu Valor y Cierra la Brecha</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Sal del Edificio y Observa</div><div class="nodo-sub">cubierto por lo que contaste</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Responde tus Preguntas Clave</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Lanza tu Producto Minimo</div><div class="nodo-sub">cubierto por lo que contaste</div></div></div>
+                <div class="nodo nodo--actual"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Sirve a tus Primeros Clientes</div></div></div>
+              </div>
+            </aside>
+
+            <!-- TARJETA DE PREGUNTA -->
+            <div class="exp-centro">
+              <div class="tarjeta">
+                <div class="tarjeta-eyebrow">Sirve a tus primeros clientes</div>
+                <h2 class="tarjeta-pregunta">Perfecto, esos numeros estan claros: 180 de costo, 350 de venta, cinco kits en una tarde. Volviendo a lo que preguntaba antes, alguno de esos tres conocidos te conto si la persona que recibio el kit de regalo realmente lo uso, o quedo guardado en un cajon?</h2>
+                <div class="respuesta">
+                  <span class="respuesta-texto">Cuentame con tus palabras...</span>
+                  <div class="respuesta-mic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0"></path><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  </div>
+                </div>
+                <button class="boton-primario">Enviar</button>
+                <a class="enlace-generar">Generar mi plan con lo que ya conte</a>
+              </div>
+              <div class="colapsable"><span>Recorrido (2)</span><span class="colapsable-flecha">&#9662;</span></div>
+            </div>
+
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) PRINCIPAL · MOVIL 380                                       -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Exploracion movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones pequenos</span></div>
+          </nav>
+          <div class="exp-cuerpo exp-cuerpo--movil">
+            <div class="barra-recorrido">Sirve a tus Primeros Clientes <span>Recorrido &#9662;</span></div>
+            <div class="tarjeta">
+              <div class="tarjeta-eyebrow">Sirve a tus primeros clientes</div>
+              <h2 class="tarjeta-pregunta">Alguno de esos tres conocidos te conto si la persona que recibio el kit de regalo realmente lo uso, o quedo guardado en un cajon?</h2>
+              <div class="respuesta">
+                <span class="respuesta-texto">Cuentame con tus palabras...</span>
+                <div class="respuesta-mic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0"></path><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+              </div>
+              <button class="boton-primario">Enviar</button>
+              <a class="enlace-generar">Generar mi plan con lo que ya conte</a>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) RECORRIDO ABIERTO · MOVIL 380 (hoja inferior)              -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Exploracion recorrido abierto movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones pequenos</span></div>
+          </nav>
+          <div class="exp-cuerpo exp-cuerpo--movil">
+            <div class="barra-recorrido">Sirve a tus Primeros Clientes <span>Recorrido &#9652;</span></div>
+            <div class="tarjeta">
+              <div class="tarjeta-eyebrow">Sirve a tus primeros clientes</div>
+              <h2 class="tarjeta-pregunta">Alguno de esos tres conocidos te conto si la persona que recibio el kit de regalo realmente lo uso, o quedo guardado?</h2>
+            </div>
+          </div>
+
+          <!-- HOJA INFERIOR ABIERTA -->
+          <div class="velo"></div>
+          <div class="hoja">
+            <div class="hoja-agarre"></div>
+            <div class="hoja-titulo">Recorrido de la idea</div>
+            <div class="riel-vertical">
+              <div class="nodo nodo--actual"><div class="nodo-marca"><span class="nodo-punto nodo-punto--pensando"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Prueba tu Valor y Cierra la Brecha</div></div></div>
+              <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Sal del Edificio y Observa</div><div class="nodo-sub">cubierto por lo que contaste</div></div></div>
+              <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Responde tus Preguntas Clave</div></div></div>
+              <div class="nodo nodo--futuro"><div class="nodo-marca"><span class="nodo-punto nodo-punto--futuro"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Sirve a tus Primeros Clientes</div></div></div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 4) OFERTA HONESTA · DESKTOP                                    -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Exploracion oferta honesta desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequenos con guia incluida</span>
+            </div>
+            <div class="top-riel">
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--pensando"></span><span class="top-label">La Exploracion · en curso</span>
+              <span class="top-linea top-linea--futuro"></span><span class="top-punto top-punto--futuro"></span>
+              <span class="top-linea top-linea--futuro"></span><span class="top-punto top-punto--futuro"></span>
+            </div>
+          </nav>
+
+          <div class="exp-cuerpo">
+            <aside>
+              <div class="recorrido-titulo">Recorrido de la idea</div>
+              <div class="riel-vertical">
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--pensando"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Prueba tu Valor y Cierra la Brecha</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Sal del Edificio y Observa</div><div class="nodo-sub">cubierto por lo que contaste</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Responde tus Preguntas Clave</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Lanza tu Producto Minimo</div><div class="nodo-sub">cubierto por lo que contaste</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Sirve a tus Primeros Clientes</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Mide tu Innovacion Real</div><div class="nodo-sub">cubierto por lo que contaste</div></div></div>
+                <div class="nodo nodo--actual"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Elige tu Motor de Crecimiento</div></div></div>
+              </div>
+            </aside>
+
+            <div class="exp-centro">
+              <div class="tarjeta">
+                <div class="tarjeta-eyebrow">Tu recorrido hasta aqui</div>
+                <h2 class="tarjeta-titulo-plan">Con lo que me contaste puedo armar tu plan.</h2>
+                <p class="oferta-sub">Si quieres, seguimos explorando dos cosas mas:</p>
+                <div class="oferta-chips">
+                  <span class="chip-poten">Calcula tu Punto de Equilibrio</span>
+                  <span class="chip-poten">Calcula tu Margen Bruto</span>
+                </div>
+                <div class="oferta-salidas">
+                  <button class="boton-salida">Seguimos explorando</button>
+                  <button class="boton-salida boton-salida--fuerte">Generar mi plan</button>
+                </div>
+                <p class="oferta-nota">Tu plan puede profundizarse despues con el seguimiento.</p>
+              </div>
+              <div class="colapsable"><span>Recorrido (5)</span><span class="colapsable-flecha">&#9662;</span></div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 5) OFERTA HONESTA · MOVIL 380                                  -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Exploracion oferta honesta movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones pequenos</span></div>
+          </nav>
+          <div class="exp-cuerpo exp-cuerpo--movil">
+            <div class="barra-recorrido">Elige tu Motor de Crecimiento <span>Recorrido &#9662;</span></div>
+            <div class="tarjeta">
+              <div class="tarjeta-eyebrow">Tu recorrido hasta aqui</div>
+              <h2 class="tarjeta-titulo-plan">Con lo que me contaste puedo armar tu plan.</h2>
+              <p class="oferta-sub">Si quieres, seguimos explorando:</p>
+              <div class="oferta-chips">
+                <span class="chip-poten">Calcula tu Punto de Equilibrio</span>
+                <span class="chip-poten">Calcula tu Margen Bruto</span>
+              </div>
+              <div class="oferta-salidas">
+                <button class="boton-salida boton-salida--fuerte">Generar mi plan</button>
+                <button class="boton-salida">Seguimos explorando</button>
+              </div>
+              <p class="oferta-nota">Tu plan puede profundizarse despues con el seguimiento.</p>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 6) PLAN EN CAMINO · DESKTOP                                    -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Exploracion plan en camino desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequenos con guia incluida</span>
+            </div>
+            <div class="top-riel">
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--pensando"></span><span class="top-label">Tu Plan · en camino</span>
+              <span class="top-linea top-linea--futuro"></span><span class="top-punto top-punto--futuro"></span>
+            </div>
+          </nav>
+
+          <div class="exp-cuerpo">
+            <aside>
+              <div class="recorrido-titulo">Recorrido de la idea</div>
+              <div class="riel-vertical">
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Responde tus Preguntas Clave</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Sirve a tus Primeros Clientes</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="nodo-punto nodo-punto--hecho"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Elige tu Motor de Crecimiento</div></div></div>
+                <div class="nodo nodo--actual"><div class="nodo-marca"><span class="nodo-punto nodo-punto--pensando"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Etapa 1: Pon por escrito las dos apuestas</div></div></div>
+              </div>
+              <div class="generando">
+                <p class="generando-texto">generando: Etapa 1: Pon por escrito las dos apuestas que tu idea necesita que sean verdad</p>
+              </div>
+            </aside>
+
+            <div class="exp-centro">
+              <div class="tarjeta">
+                <div class="tarjeta-eyebrow tarjeta-eyebrow--pensando">Tu plan · en camino</div>
+                <h2 class="tarjeta-titulo-plan">Escribiendo: Etapa 1: Pon por escrito las dos apuestas que tu idea necesita que sean verdad</h2>
+                <p class="tarjeta-sub">Cada etapa se enciende en el recorrido cuando queda escrita de verdad.</p>
+              </div>
+              <div class="colapsable"><span>Recorrido (5)</span><span class="colapsable-flecha">&#9662;</span></div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 7) PLAN EN CAMINO · MOVIL 380                                  -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Exploracion plan en camino movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones pequenos</span></div>
+          </nav>
+          <div class="exp-cuerpo exp-cuerpo--movil">
+            <div class="barra-recorrido">Tu Plan en camino <span>Recorrido &#9662;</span></div>
+            <div class="tarjeta">
+              <div class="tarjeta-eyebrow tarjeta-eyebrow--pensando">Tu plan · en camino</div>
+              <h2 class="tarjeta-titulo-plan">Escribiendo: Etapa 1: Pon por escrito las dos apuestas que tu idea necesita que sean verdad</h2>
+              <p class="tarjeta-sub">Cada etapa se enciende en el recorrido cuando queda escrita de verdad.</p>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
