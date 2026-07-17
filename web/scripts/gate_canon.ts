@@ -267,6 +267,19 @@ async function main() {
   // 05 Manos a la Obra POR LA PUERTA (el CTA, sin teclear URLs) + los 6 mundos
   await app.getByRole("button", { name: "Pasar a Manos a la Obra" }).click();
   await app.waitForURL(/vista=manos/, { timeout: 30000 });
+
+  // 06 Modo del camino (vista A): en la PRIMERA entrada a Manos el selector de
+  // modo está a la vista, así que se captura aquí (antes vivía suelto más abajo).
+  await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
+  await capturarApp(app, "06_modo");
+  await capturarCanon(canon, "10_modo_y_fechas.html", "06_modo_canon.png", "Modo eleccion desktop", true);
+  await capturarCanon(canon, "10_modo_y_fechas.html", "06_modo_canon_380.png", "Modo eleccion movil 380", true);
+
+  // Fase 4.3.2: el canon de Manos muestra el estado ACTIVO (modo elegido,
+  // compacto), no el selector de primera entrada. Se elige "a mi ritmo" para
+  // capturar ESE estado -- y de paso deja el modo listo para el resto del flujo.
+  await app.getByRole("button", { name: /A mi ritmo/ }).click();
+  await app.getByText("Modo:", { exact: false }).first().waitFor({ timeout: 15000 });
   await capturarApp(app, "05_manos");
   await capturarCanon(canon, "06_manos_a_la_obra.html", "05_manos_canon.png", "Manos a la Obra desktop", true);
   await capturarCanon(canon, "06_manos_a_la_obra.html", "05_manos_canon_380.png", "Manos a la Obra movil 380", true);
@@ -402,16 +415,8 @@ async function main() {
   // asegurar la vista Manos (el bloque de mundos pudo volver al plan default)
   await asegurarManos(app);
 
-  // 06 Modo del camino (vista A): la tarjeta de elección en la primera entrada
-  await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
-  await capturarApp(app, "06_modo");
-  await capturarCanon(canon, "10_modo_y_fechas.html", "06_modo_canon.png", "Modo eleccion desktop", true);
-  await capturarCanon(canon, "10_modo_y_fechas.html", "06_modo_canon_380.png", "Modo eleccion movil 380", true);
-
-  // ── variante A-MI-RITMO: SIN baseline (cero "planificado", sin cumplimiento).
-  // Se captura primero, mientras el proyecto aún no tiene línea base.
-  await app.getByRole("button", { name: /A mi ritmo/ }).click();
-  await app.getByText("Fechas y recordatorios", { exact: false }).first().waitFor({ timeout: 15000 });
+  // ── variante A-MI-RITMO: el modo ya es "a mi ritmo" (elegido y capturado como
+  // pantalla 06 arriba). Se marca el avance SIN baseline (sin cumplimiento).
   for (let i = 0; i < 4; i++) await marcarHechoHoy(app); // completions reales, sin fechas base
   await app.getByRole("button", { name: "Marcar como realizada" }).click();
   await app.getByRole("button", { name: /Sí, es un proyecto/ }).click();
@@ -427,13 +432,16 @@ async function main() {
   const reabrir = app.getByRole("button", { name: /Reabrir esta idea/ });
   await reabrir.waitFor({ state: "visible", timeout: 15000 });
   await reabrir.click();
-  await app.getByText("Fechas y recordatorios", { exact: false }).first().waitFor({ timeout: 30000 });
 
-  // ── variante FECHAS: activar → ritual de baseline con fechas editadas para
-  // poblar las 3 clases de cumplimiento (tardía en ámbar, a tiempo, adelantadas).
-  const activar = app.getByRole("button", { name: "Activar" }).first();
-  await activar.waitFor({ state: "visible", timeout: 15000 });
-  await activar.click();
+  // ── variante FECHAS: el interruptor "Activar/Pausar" se retiró (Fase 4.3.2).
+  // Se cambia de modo reabriendo el selector con "cambiar" y eligiendo "Con
+  // fechas y recordatorios". Sin fechas aún, el ritual de baseline se abre solo,
+  // con las 3 clases de cumplimiento (tardía en ámbar, a tiempo, adelantadas).
+  const cambiar = app.getByRole("button", { name: "cambiar" }).first();
+  await cambiar.waitFor({ state: "visible", timeout: 30000 });
+  await cambiar.click();
+  await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 15000 });
+  await app.getByRole("button", { name: /Con fechas y recordatorios/ }).click();
   await app.getByText("Ponle fechas a tu camino", { exact: false }).waitFor({ timeout: 30000 });
 
   // editar las dos primeras fechas (ítems ya hechos HOY): una al pasado (→

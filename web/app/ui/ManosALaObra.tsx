@@ -601,37 +601,6 @@ function TarjetaModo({
 
 /** El interruptor permanente "Fechas y recordatorios: activados / pausados"
  * (canon 10). Alterna 'fechas' ↔ 'ritmo'; pausar nunca borra fechas. */
-function InterruptorFechas({
-  modo,
-  ocupado,
-  onToggle,
-}: {
-  modo: ModoCamino;
-  ocupado: boolean;
-  onToggle: (nuevo: ModoCamino) => void;
-}) {
-  const activo = modo === "fechas";
-  return (
-    <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
-      <div className="min-w-0">
-        <p className="text-[13px] font-semibold">Fechas y recordatorios</p>
-        <p className={"text-[12px] " + (activo ? "text-done" : "text-dim")}>{activo ? "activados" : "pausados"}</p>
-      </div>
-      <button
-        onClick={() => onToggle(activo ? "ritmo" : "fechas")}
-        disabled={ocupado}
-        className={
-          "shrink-0 rounded-[9px] px-3.5 py-1.5 text-[12.5px] font-semibold disabled:opacity-50 " +
-          (activo ? "border border-white/15 text-dim hover:text-ink" : "text-ink")
-        }
-        style={activo ? undefined : BORDE_AZUL}
-      >
-        {activo ? "Pausar" : "Activar"}
-      </button>
-    </div>
-  );
-}
-
 /** El ritual de la línea base (canon 10, vista B). Las fechas se sugieren
  * determinísticamente (fechasBase.ts, cero LLM) y el usuario ajusta la que
  * quiera. Tema azul: fijar fechas es planear. */
@@ -853,6 +822,10 @@ export function ManosALaObra({
   const [error, setError] = useState<string | null>(null);
   const [errorRitual, setErrorRitual] = useState<string | null>(null);
   const [guardandoModo, setGuardandoModo] = useState(false);
+  // Fase 4.3.2 (Manos a la Obra a 380, canon refrescado): el modo se muestra
+  // COMPACTO ("Modo: a mi ritmo · cambiar"); el selector grande solo aparece en
+  // la primera entrada (modoCamino===null) o cuando el usuario toca "cambiar".
+  const [mostrarSelectorModo, setMostrarSelectorModo] = useState(false);
   // Fase 3.8 §4 — ritual de la línea base
   // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
   // real por etapa la calcula analytics.ts (§6: la única calculadora del
@@ -944,6 +917,7 @@ export function ManosALaObra({
       }
       // Reactivar fechas reabre el ritual (si aún no hay ninguna puesta).
       if (modo === "fechas") setPospuesto(false);
+      setMostrarSelectorModo(false);
       onModoCambiado(modo);
     } catch {
       setError("no pudimos guardar tu elección; revisa tu internet e intenta de nuevo");
@@ -1123,12 +1097,29 @@ export function ManosALaObra({
               </span>
             </div>
           )}
+          {/* Fase 4.3.2: el modo, COMPACTO (canon refrescado). El selector grande
+              ya no vive aquí salvo en la primera entrada; "cambiar" lo reabre. */}
+          {modoCamino !== null && !mostrarSelectorModo && (
+            <p className="mt-3 text-[13px] text-dim">
+              Modo: <span className="font-semibold text-ink">{modoCamino === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
+              {" · "}
+              <button
+                onClick={() => setMostrarSelectorModo(true)}
+                className="font-semibold text-accent hover:underline"
+              >
+                cambiar
+              </button>
+            </p>
+          )}
         </header>
 
         {error && <p className="text-sm text-warn">{error}</p>}
 
-        {/* Fase 3.8 §3 — primera entrada: la elección del modo del camino */}
-        {modoCamino === null && <TarjetaModo ocupado={guardandoModo} onElegir={elegirModo} />}
+        {/* Fase 3.8 §3 — la elección del modo: primera entrada (modoCamino null)
+            o cuando el usuario toca "cambiar". */}
+        {(modoCamino === null || mostrarSelectorModo) && (
+          <TarjetaModo ocupado={guardandoModo} onElegir={elegirModo} />
+        )}
 
         {/* Fase 3.8 §4 — ritual de la línea base (modo fechas) */}
         {modoCamino === "fechas" && core && (recalcularPendientes || (!hayFechas && !pospuesto)) && (
@@ -1181,6 +1172,36 @@ export function ManosALaObra({
             onEnviar={enviarFollow}
             onCerrar={() => setRitual(false)}
           />
+        )}
+
+        {/* Fase 4.3.2 (Manos a la Obra a 380): "Contar qué pasó" ARRIBA en móvil.
+            Antes vivía SOLO en el aside, que en móvil cae al fondo (~2.800px): la
+            puerta principal al seguimiento quedaba enterrada. Esta tarjeta es
+            lg:hidden (la del aside es hidden lg:block): la acción sale una vez en
+            cada viewport, en su sitio. El azul dispara al motor a repensar. */}
+        {core && cCore.total > 0 && !ritual && (
+          <div className="rounded-panel border border-accent/40 bg-surface p-5 lg:hidden">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
+              Ciclo de profundización
+            </p>
+            <p className="text-[15px] font-semibold leading-relaxed">
+              ¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás.
+            </p>
+            <button
+              onClick={() => setRitual(true)}
+              className="mt-3 block w-full rounded-[10px] bg-accent py-2.5 text-center text-[13.5px] font-semibold text-white hover:opacity-90"
+            >
+              Contar qué pasó
+            </button>
+            {entrevistaAbierta && (
+              <button
+                onClick={onVolverEntrevista}
+                className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
+              >
+                Volver a la entrevista
+              </button>
+            )}
+          </div>
         )}
 
         {/* checklist maestro: viaje core */}
@@ -1379,12 +1400,11 @@ export function ManosALaObra({
         )}
       </div>
 
-      {/* lateral: interruptor de fechas + ciclo de profundización + ritmo */}
+      {/* lateral: análisis + realizar + ciclo de profundización + ritmo.
+          El modo ya no vive aquí (Fase 4.3.2): es el indicador compacto del
+          header. En móvil este aside cae debajo del checklist (posición del
+          canon para análisis/ritmo); "Contar qué pasó" ya subió arriba. */}
       <aside className="flex flex-col gap-6">
-        {/* Fase 3.8 §3 — interruptor permanente (canon 10) */}
-        {modoCamino !== null && (
-          <InterruptorFechas modo={modoCamino} ocupado={guardandoModo} onToggle={elegirModo} />
-        )}
         {/* Fase 3.8 §6 — puerta al análisis del proyecto */}
         {cCore.total > 0 && (
           <button
@@ -1460,7 +1480,9 @@ export function ManosALaObra({
             )}
           </div>
         )}
-        <div className="rounded-panel border border-hairline bg-surface p-5">
+        {/* Ciclo de profundización — SOLO desktop (hidden lg:block): en móvil
+            esta acción ya subió arriba con su propia tarjeta (lg:hidden). */}
+        <div className="hidden rounded-panel border border-hairline bg-surface p-5 lg:block">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
             Ciclo de profundización
           </p>
