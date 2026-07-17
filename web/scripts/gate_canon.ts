@@ -397,7 +397,10 @@ async function main() {
   // nombra. Si esto falla, la captura habria sido una mentira.
   await seccionMundo.getByText("Continuar Calidad y Confianza", { exact: false }).waitFor({ timeout: 15000 });
   await capturarApp(app, "10b_mundo_ritual");
-  await seccionMundo.getByRole("button", { name: "Cerrar" }).click();
+  // exact: sin él, "Cerrar" (substring) choca con el aria-label de cualquier
+  // ítem del checklist cuyo texto traiga "cerrarlo"/"cerrar" — los ítems son
+  // generados y varían por corrida (cazado en vivo, jul 2026).
+  await seccionMundo.getByRole("button", { name: "Cerrar", exact: true }).click();
 
   await cerrarMundo.click();
   await seccionMundo
