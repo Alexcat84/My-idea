@@ -145,12 +145,27 @@ summary::-webkit-details-marker {
 }
 .anima-hito-reveal { animation: hitoReveal 0.55s ease-out both; }
 
+/* Fase 4.3.2 — el cajón "Detalle de la actividad" entra deslizando: desde
+ * abajo (hoja) en móvil, desde la derecha en desktop. Breve y mantecoso. */
+@keyframes hojaIn {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@media (min-width: 640px) {
+  @keyframes hojaIn {
+    from { transform: translateX(24px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+}
+.anima-hoja-in { animation: hojaIn 0.28s ease-out both; }
+
 /* prefers-reduced-motion: sin teatro, al estado final directo (canon 09). */
 @media (prefers-reduced-motion: reduce) {
   .anima-green-wave,
   .anima-hito-reveal,
   .anima-plan-in,
-  .anima-green-pulse {
+  .anima-green-pulse,
+  .anima-hoja-in {
     animation: none !important;
   }
 }

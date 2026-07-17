@@ -284,6 +284,15 @@ async function main() {
   await capturarCanon(canon, "06_manos_a_la_obra.html", "05_manos_canon.png", "Manos a la Obra desktop", true);
   await capturarCanon(canon, "06_manos_a_la_obra.html", "05_manos_canon_380.png", "Manos a la Obra movil 380", true);
 
+  // 13 Detalle de actividad ("Explorar actividad", Fase 4.3.2): tocar el TEXTO
+  // de un ítem abre el cajón (desktop) / hoja (movil). Ya es un par vivo.
+  await app.locator('button[title="Ver el detalle de esta actividad"]').first().click();
+  await app.getByText("Detalle de la actividad", { exact: false }).waitFor({ timeout: 10000 });
+  await capturarApp(app, "13_detalle");
+  await capturarCanon(canon, "13_detalle_de_actividad.html", "13_detalle_canon.png", "Detalle de actividad desktop", true);
+  await capturarCanon(canon, "13_detalle_de_actividad.html", "13_detalle_canon_380.png", "Detalle de actividad movil 380", true);
+  await app.getByRole("button", { name: "Cerrar el detalle" }).click();
+
   // verificación C0: los 6 mundos visibles en el flujo real
   const cuerpo = (await app.textContent("body")) ?? "";
   const mundos = ["Calidad y Confianza", "Seguridad y Personas", "Ambiente y Futuro", "Seguridad Digital", "Vender al Mundo", "Multiplica tu Negocio"];
@@ -501,8 +510,6 @@ async function main() {
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_camino_SOLOCANON_380.png", "Cierre honesto camino movil 380", true);
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON.png", "Cierre honesto mundo desktop", true);
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON_380.png", "Cierre honesto mundo movil 380", true);
-  await capturarCanon(canon, "13_detalle_de_actividad.html", "z_detalle_actividad_SOLOCANON.png", "Detalle de actividad desktop", true);
-  await capturarCanon(canon, "13_detalle_de_actividad.html", "z_detalle_actividad_SOLOCANON_380.png", "Detalle de actividad movil 380", true);
 
   await browser.close();
   console.log(`\nGATE: capturas lado a lado en ${OUT} — el veredicto visual es del fundador/auditor.`);

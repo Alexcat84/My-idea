@@ -639,7 +639,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               }
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
-              onItemActualizado={({ id, estado, completed_at }) => {
+              onItemActualizado={({ id, estado, completed_at, nota, fecha_base, fecha_base_original, fecha_base_origen }) => {
                 setChecklist((prev) =>
                   prev
                     ? {
@@ -654,6 +654,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                                     ...i,
                                     ...(estado !== undefined ? { estado: estado as ChecklistEstado } : {}),
                                     ...(completed_at !== undefined ? { completed_at } : {}),
+                                    ...(nota !== undefined ? { nota } : {}),
+                                    ...(fecha_base !== undefined ? { fecha_base } : {}),
+                                    ...(fecha_base_original !== undefined ? { fecha_base_original } : {}),
+                                    ...(fecha_base_origen !== undefined ? { fecha_base_origen } : {}),
                                     updated_at: new Date().toISOString(),
                                   }
                                 : i

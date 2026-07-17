@@ -16,6 +16,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
 import { CampoConVoz } from "./CampoConVoz";
+import { DetalleActividad } from "./DetalleActividad";
 import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
@@ -40,10 +41,14 @@ export interface ItemChecklistUI {
   updated_at: string;
 }
 
-/** Cambios que un ítem puede recibir en un toque (Fase 3.8: + completed_at). */
+/** Cambios que un ítem puede recibir en un toque (Fase 3.8: + completed_at;
+ * Fase 4.3.2, detalle de actividad: + nota y fecha_base). La ruta PATCH ya los
+ * acepta todos; el detalle solo los cablea desde la UI. */
 export interface CambioItem {
   estado?: ChecklistEstado;
   completed_at?: string | null;
+  nota?: string | null;
+  fecha_base?: string | null;
 }
 
 export interface ChecklistData {
@@ -110,8 +115,17 @@ interface Props {
   /** true si hay una entrevista abierta para "Volver a la entrevista" */
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
-  /** PATCH aplicado: el padre refresca su copia del checklist */
-  onItemActualizado: (item: { id: string; estado?: ChecklistEstado; completed_at?: string | null }) => void;
+  /** PATCH aplicado: el padre refresca su copia del checklist. Fase 4.3.2: el
+   * detalle también mueve nota y fecha, así que el ítem actualizado los lleva. */
+  onItemActualizado: (item: {
+    id: string;
+    estado?: ChecklistEstado;
+    completed_at?: string | null;
+    nota?: string | null;
+    fecha_base?: string | null;
+    fecha_base_original?: string | null;
+    fecha_base_origen?: FechaBaseOrigen | null;
+  }) => void;
   /** el follow devolvió el primer turno: el padre entra a la entrevista */
   onSeguimientoIniciado: (turno: unknown) => void;
   /** POST world/start devolvió el primer turno del mundo */
@@ -185,10 +199,13 @@ function FilaItem({
   item,
   ocupado,
   onCambio,
+  onAbrirDetalle,
 }: {
   item: ItemChecklistUI;
   ocupado: boolean;
   onCambio: (cambio: CambioItem) => void;
+  /** Fase 4.3.2: tocar el texto abre "Explorar actividad" (el detalle). */
+  onAbrirDetalle: () => void;
 }) {
   const hecho = item.estado === "hecho";
   // Fase 3.8 §2 — timeline real: al marcar hecho, "¿Cuándo lo hiciste?
@@ -234,9 +251,15 @@ function FilaItem({
           <IconoEstado estado={item.estado} />
         </button>
         <span className="min-w-0 flex-1">
-          <span className={"block text-[14.5px] " + (hecho ? "text-dim line-through" : "text-ink")}>
+          {/* Fase 4.3.2: el texto abre "Explorar actividad". Es un botón (no un
+              div con onClick) para que el teclado y los lectores lo alcancen. */}
+          <button
+            onClick={onAbrirDetalle}
+            className={"block w-full text-left text-[14.5px] hover:underline " + (hecho ? "text-dim line-through" : "text-ink")}
+            title="Ver el detalle de esta actividad"
+          >
             {item.texto}
-          </span>
+          </button>
           {!hecho && item.estado !== "pendiente" && (
             <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
           )}
@@ -334,11 +357,14 @@ function GrupoEtapas({
   titulos,
   ocupado,
   onCambio,
+  onAbrirDetalle,
 }: {
   grupo: NonNullable<ReturnType<typeof grupoVigente>>;
   titulos: Record<number, string>;
   ocupado: boolean;
   onCambio: (item: ItemChecklistUI, cambio: CambioItem) => void;
+  /** Fase 4.3.2: abrir el detalle de un ítem, con el título de SU etapa. */
+  onAbrirDetalle: (item: ItemChecklistUI, tituloEtapa: string) => void;
 }) {
   // La primera etapa con pendientes queda abierta; las demás, plegadas.
   const primeraActiva = grupo.etapas.find((e) => e.items.some((i) => i.estado !== "hecho"))?.etapa;
@@ -362,7 +388,7 @@ function GrupoEtapas({
             <Acordeon key={etapa} titulo={encabezado}>
               <div className="flex flex-col gap-2.5">
                 {items.map((item) => (
-                  <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} />
+                  <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
                 ))}
               </div>
             </Acordeon>
@@ -373,7 +399,7 @@ function GrupoEtapas({
             <div className="mb-3">{encabezado}</div>
             <div className="flex flex-col gap-2.5">
               {items.map((item) => (
-                <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} />
+                <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
               ))}
             </div>
           </section>
@@ -810,6 +836,12 @@ export function ManosALaObra({
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
   const [ritual, setRitual] = useState(false);
+  // Fase 4.3.2: el "Explorar actividad" abierto. Se guarda el ID (no el ítem):
+  // el ítem VIVO se deriva del checklist al renderizar, así el cajón refleja
+  // cada cambio (marcar hecho, mover fecha, nota) sin cerrarse ni recargar.
+  const [detalleItem, setDetalleItem] = useState<{ id: string; tituloEtapa: string } | null>(null);
+  const abrirDetalle = (item: ItemChecklistUI, tituloEtapa: string) =>
+    setDetalleItem({ id: item.id, tituloEtapa });
   // Fase 4.2: el ritual de un mundo (su dominio) y su cierre. Van aparte del
   // core a propósito: dos subproyectos abiertos a la vez no comparten estado.
   const [ritualMundo, setRitualMundo] = useState<string | null>(null);
@@ -984,13 +1016,19 @@ export function ManosALaObra({
         setError(ERROR_GENERICO);
         return;
       }
-      // La ruta devuelve el ítem persistido (incluye completed_at ya
-      // resuelto: default now() al marcar hecho, null al desmarcar).
-      const data = (await res.json()) as { item?: { estado?: ChecklistEstado; completed_at?: string | null } };
+      // La ruta devuelve el ítem persistido COMPLETO (completed_at ya resuelto;
+      // fecha_base / fecha_base_original / origen tras una replanificación; la
+      // nota guardada). Se propaga todo para que el detalle y la fila reflejen
+      // lo persistido sin recargar.
+      const data = (await res.json()) as { item?: Partial<ItemChecklistUI> };
       onItemActualizado({
         id: item.id,
         estado: data.item?.estado ?? cambio.estado,
         completed_at: data.item?.completed_at,
+        nota: data.item?.nota ?? cambio.nota,
+        fecha_base: data.item?.fecha_base ?? cambio.fecha_base,
+        fecha_base_original: data.item?.fecha_base_original,
+        fecha_base_origen: data.item?.fecha_base_origen,
       });
     } catch {
       setError("no pudimos guardar el cambio; revisa tu internet e intenta de nuevo");
@@ -1211,7 +1249,7 @@ export function ManosALaObra({
           </p>
         )}
         {core ? (
-          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} onCambio={aplicarCambio} />
+          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
         ) : (
           <p className="text-sm text-dim">
             Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.
@@ -1265,7 +1303,7 @@ export function ManosALaObra({
 
               {grupo ? (
                 <div className="mt-4">
-                  <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} />
+                  <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                 </div>
               ) : (
                 <button
@@ -1531,6 +1569,27 @@ export function ManosALaObra({
           </div>
         )}
       </aside>
+
+      {/* Fase 4.3.2 — "Explorar actividad": el cajón/hoja del detalle de un ítem.
+          Se deriva el ítem VIVO del checklist por su id (refleja cada cambio); si
+          el ítem desapareció (recarga), se cierra solo. */}
+      {(() => {
+        if (!detalleItem) return null;
+        const vivo = checklist.planes
+          .flatMap((p) => p.etapas)
+          .flatMap((e) => e.items)
+          .find((i) => i.id === detalleItem.id);
+        if (!vivo) return null;
+        return (
+          <DetalleActividad
+            item={vivo}
+            tituloEtapa={detalleItem.tituloEtapa}
+            ocupado={ocupado}
+            onCambio={(cambio) => aplicarCambio(vivo, cambio)}
+            onCerrar={() => setDetalleItem(null)}
+          />
+        );
+      })()}
     </div>
   );
 }
