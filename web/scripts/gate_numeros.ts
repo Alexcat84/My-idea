@@ -11,7 +11,7 @@ import { createClient } from "@supabase/supabase-js";
 import { mkdirSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, ROOT } from "./_shared/http";
+import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, postJson, ROOT } from "./_shared/http";
 
 cargarEnvRaiz();
 const admin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
@@ -86,20 +86,9 @@ async function main() {
     costos_fijos_mensuales: 200,
     capacidad_semanal: 5,
   });
-  // SANO (kits del canon): costo 180, precio 350, fijos 1200 -> margen 170.
-  // Con los datos del ciclo de caja (40+30-20 = 50 dias) para estrenar la
-  // seccion "Tu ciclo de caja" (la recompensa de la puerta de los faltantes).
-  const pidSano = await sembrar(dev.id, "Kits de huerto urbano para balcones pequenos", "kit", {
-    costo_materiales_unidad: 100,
-    horas_por_unidad: 4,
-    valor_hora: 20,
-    precio_tentativo: 350,
-    costos_fijos_mensuales: 1200,
-    capacidad_semanal: 7.5,
-    dias_inventario: 40,
-    dias_cobro_clientes: 30,
-    dias_pago_proveedores: 20,
-  });
+  // SANO (kits): arranca VACIO; su historial se construye por HTTP mas abajo
+  // (dos correcciones reales) para estrenar el sello "HOY" y "Versiones anteriores".
+  const pidSano = await sembrar(dev.id, "Kits de huerto urbano para balcones pequenos", "kit", {});
 
   const browser = await chromium.launch();
   const context = await browser.newContext({ viewport: VP_ESCRITORIO, deviceScaleFactor: 1 });
@@ -120,10 +109,24 @@ async function main() {
     await capturarCanon(canon, "Tus Numeros perdida desktop", "numeros_perdida_canon.png");
     await capturarCanon(canon, "Tus Numeros perdida movil 380", "numeros_perdida_canon_380.png");
 
-    console.log("SANO (kits):");
+    console.log("SANO (kits) con historial:");
+    const rutaSano = `/api/project/${pidSano}/numeros`;
+    // v1: precio 150 -> perdida (margen -30). v2: precio 350 -> sano + ciclo de caja.
+    // Dos versiones el MISMO dia: la lista muestra la hora (desambigua gemelas).
+    await postJson(cookie, rutaSano, { numeros: { costo_materiales_unidad: 100, horas_por_unidad: 4, valor_hora: 20, precio_tentativo: 150, costos_fijos_mensuales: 1200, capacidad_semanal: 7.5 } });
+    await postJson(cookie, rutaSano, { numeros: { precio_tentativo: 350, dias_inventario: 40, dias_cobro_clientes: 30, dias_pago_proveedores: 20 } });
     await capturarApp(app, pidSano, "numeros_sano");
     await capturarCanon(canon, "Tus Numeros sano desktop", "numeros_sano_canon.png");
     await capturarCanon(canon, "Tus Numeros sano movil 380", "numeros_sano_canon_380.png");
+
+    // Modo LECTURA: visitar la version pasada (perdida) desde "Versiones anteriores".
+    console.log("SANO (kits) modo lectura:");
+    await app.setViewportSize(VP_ESCRITORIO);
+    await app.goto(`${BASE_URL}/idea/${pidSano}/numeros`);
+    await app.waitForSelector('[data-screen-label="Tus Numeros vista"]', { timeout: 30000 });
+    await app.getByText("pérdida", { exact: true }).first().click();
+    await app.waitForSelector("text=Estás viendo tus números del", { timeout: 15000 });
+    await capturar(app, "numeros_lectura_app.png");
   } finally {
     await browser.close();
     await admin.from("projects").delete().in("id", [pidPerdida, pidSano]);

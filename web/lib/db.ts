@@ -222,20 +222,39 @@ export async function ultimaVersionNumeros(
   return filas.length > 0 ? filas[0] : null;
 }
 
-/** El historial (metadatos ligeros, sin traer numeros/calculo/narracion
- * completos), mas recientes primero: alimenta "calculado con tus cifras del
- * [fecha]" y la lista de versiones. */
+/** El historial de versiones, mas recientes primero. Trae el `calculo`
+ * (snapshot) para que la ruta arme el resumen de cada fila (fecha + veredicto
+ * + margen) SIN recalcular nada: es la foto de ese momento, tal cual quedo. */
 export async function historialVersionesNumeros(
   supabase: SupabaseClient,
   projectId: string
-): Promise<Array<{ id: string; created_at: string; narracion_at: string | null }>> {
+): Promise<Array<{ id: string; created_at: string; narracion_at: string | null; calculo: unknown | null }>> {
   const { data, error } = await supabase
     .from("project_numeros_versiones")
-    .select("id, created_at, narracion_at")
+    .select("id, created_at, narracion_at, calculo")
     .eq("project_id", projectId)
     .order("created_at", { ascending: false });
   if (error) throw error;
-  return (data ?? []) as Array<{ id: string; created_at: string; narracion_at: string | null }>;
+  return (data ?? []) as Array<{ id: string; created_at: string; narracion_at: string | null; calculo: unknown | null }>;
+}
+
+/** Una version concreta (para VISITARLA en modo lectura). Devuelve su snapshot
+ * inmutable: las cifras de entonces, el calculo de entonces, y su fecha. RLS
+ * ya filtra por dueño; el project_id se exige ademas por defensa. */
+export async function obtenerVersionNumeros(
+  supabase: SupabaseClient,
+  projectId: string,
+  versionId: string
+): Promise<VersionNumeros | null> {
+  const { data, error } = await supabase
+    .from("project_numeros_versiones")
+    .select("*")
+    .eq("project_id", projectId)
+    .eq("id", versionId)
+    .limit(1);
+  if (error) throw error;
+  const filas = data as VersionNumeros[];
+  return filas.length > 0 ? filas[0] : null;
 }
 
 /** Cuantas re-narraciones del modelo se hicieron HOY para esta idea (freno del

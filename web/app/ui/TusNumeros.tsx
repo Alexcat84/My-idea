@@ -14,7 +14,16 @@ import type { ValorNumerico } from "@/lib/calculadora";
 import type { Palanca, Palancas } from "@/lib/palancas";
 import type { Tablero } from "@/lib/tableroNumeros";
 import { fraseCicloCaja, type Veredicto } from "@/lib/numerosVivo";
+import { fechaSello, momentoAbsoluto, selloVersion } from "@/lib/fechas";
 import { CorregirCifras } from "@/app/ui/CorregirCifras";
+
+interface VersionResumen {
+  id: string;
+  fecha: string;
+  tono: Veredicto["tono"] | null;
+  margen: ValorNumerico | null;
+  vigente: boolean;
+}
 
 interface RespuestaNumeros {
   titulo: string | null;
@@ -25,6 +34,16 @@ interface RespuestaNumeros {
   narracion: string | null;
   cifras_fecha: string | null;
   activado: boolean;
+  historial?: VersionResumen[];
+}
+
+/** El payload de VISITAR una version pasada (GET ?version): modo lectura. */
+interface VistaHistorica {
+  titulo: string | null;
+  unidad: string | null;
+  tablero: Tablero;
+  veredicto: Veredicto;
+  cifras_fecha: string;
 }
 
 // ── formato ──────────────────────────────────────────────────────────────
@@ -266,37 +285,163 @@ function Escenarios({ t }: { t: Tablero }) {
   );
 }
 
-// ── faltantes (la PUERTA: cada item es tocable y abre el recolector) ─────────
-function Faltantes({ t, onCorregir }: { t: Tablero; onCorregir: (campo: string) => void }) {
+// ── faltantes ────────────────────────────────────────────────────────────
+// En el PRESENTE cada item es la PUERTA: un boton que abre el recolector en su
+// campo. En una version HISTORICA (soloLectura, onCorregir ausente) son display
+// plano: el pasado se visita, no se edita.
+function Faltantes({ t, onCorregir }: { t: Tablero; onCorregir?: (campo: string) => void }) {
   return (
     <div className="rounded-panel border border-hairline px-6 py-5">
       {t.faltantes.map((campo) => {
         const e = ETIQUETAS_FALTANTES[campo] ?? { texto: campo, porque: "" };
-        return (
-          <button
-            key={campo}
-            onClick={() => onCorregir(campo)}
-            className="group flex w-full items-start gap-3.5 border-b border-hairline py-3 text-left last:border-b-0"
-          >
-            <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-md border-[1.5px] border-accent/55 text-[14px] leading-none text-accent transition group-hover:border-accent group-hover:bg-accent/10">
+        const cuerpo = (
+          <>
+            <span
+              className={
+                "mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-md border-[1.5px] text-[14px] leading-none " +
+                (onCorregir ? "border-accent/55 text-accent transition group-hover:border-accent group-hover:bg-accent/10" : "border-hairline text-transparent")
+              }
+            >
               +
             </span>
             <div className="min-w-0">
-              <div className="text-sm leading-snug transition group-hover:text-accent">{e.texto}</div>
+              <div className={"text-sm leading-snug" + (onCorregir ? " transition group-hover:text-accent" : "")}>{e.texto}</div>
               {e.porque && <div className="mt-0.5 text-[12.5px] leading-snug text-dim">{e.porque}</div>}
             </div>
-            <span className="ml-auto self-center whitespace-nowrap text-[12px] text-accent opacity-0 transition group-hover:opacity-100">
-              Añadir →
-            </span>
+            {onCorregir && (
+              <span className="ml-auto self-center whitespace-nowrap text-[12px] text-accent opacity-0 transition group-hover:opacity-100">
+                Añadir →
+              </span>
+            )}
+          </>
+        );
+        return onCorregir ? (
+          <button key={campo} onClick={() => onCorregir(campo)} className="group flex w-full items-start gap-3.5 border-b border-hairline py-3 text-left last:border-b-0">
+            {cuerpo}
           </button>
+        ) : (
+          <div key={campo} className="flex items-start gap-3.5 border-b border-hairline py-3 last:border-b-0">
+            {cuerpo}
+          </div>
         );
       })}
       {t.faltantes.length === 0 && <div className="py-2 text-sm text-dim">Tienes todo lo esencial. Buen trabajo.</div>}
-      {/* La ley del fundador, en pantalla: matar la duda de costo para siempre. */}
-      <p className="mt-3 border-t border-hairline pt-3 text-[12px] leading-relaxed text-dim">
-        Añadir o corregir cifras es gratis, siempre: tu tablero se recalcula al momento.
+      {/* La ley del fundador, en pantalla (solo en el presente: en el pasado no se edita). */}
+      {onCorregir && (
+        <p className="mt-3 border-t border-hairline pt-3 text-[12px] leading-relaxed text-dim">
+          Añadir o corregir cifras es gratis, siempre: tu tablero se recalcula al momento.
+        </p>
+      )}
+    </div>
+  );
+}
+
+// ── piezas compartidas entre el PRESENTE y una version HISTORICA ─────────────
+function VeredictoBloque({ v }: { v: Veredicto }) {
+  const tono = TONO[v.tono];
+  return (
+    <div className={`mt-5 flex items-start gap-3.5 rounded-panel border px-6 py-5 ${tono.borde} ${tono.fondo}`}>
+      <span className={`mt-1.5 h-2.5 w-2.5 flex-none rounded-full ${tono.punto}`} />
+      <p className="text-[17px] font-semibold leading-normal">
+        <FraseConAcento frase={v.frase} acento={v.acento} clase={tono.acento} />
       </p>
     </div>
+  );
+}
+
+/** El cuerpo del tablero (tiles -> guardian). En el presente los faltantes son
+ * la puerta (onCorregir); en una version historica, display plano. */
+function RestoTablero({ t, u, onCorregir }: { t: Tablero; u: string; onCorregir?: (campo: string) => void }) {
+  return (
+    <>
+      <TituloSeccion>De un vistazo</TituloSeccion>
+      <Tiles t={t} u={u} />
+      <TituloSeccion>La barra de la verdad</TituloSeccion>
+      <BarraVerdad t={t} />
+      <Palancasseccion pal={t.palancas} u={u} />
+      <div className="mt-10 grid gap-3.5 lg:grid-cols-[1.3fr_1fr]">
+        <div>
+          <TituloSeccion>Escenarios, a tu precio de hoy</TituloSeccion>
+          <Escenarios t={t} />
+        </div>
+        <div>
+          <TituloSeccion>Los numeros que te faltan</TituloSeccion>
+          <Faltantes t={t} onCorregir={onCorregir} />
+        </div>
+      </div>
+      {t.cicloDias !== null && (
+        <>
+          <TituloSeccion>Tu ciclo de caja</TituloSeccion>
+          <div className="rounded-panel border border-hairline bg-surface px-6 py-5">
+            <div className="text-[28px] font-extrabold tracking-tight">
+              {t.cicloDias} <span className="text-[15px] font-semibold text-dim">días</span>
+            </div>
+            <p className="mt-2 text-[14px] leading-relaxed text-dim [text-wrap:pretty]">{fraseCicloCaja(t.cicloDias)}</p>
+          </div>
+        </>
+      )}
+      <div className="mt-4 flex gap-3.5 rounded-panel border border-warn/30 bg-warn/[0.06] px-6 py-5">
+        <span className="mt-0.5 flex-none text-warn" aria-hidden>
+          ⚠
+        </span>
+        <p className="text-[13.5px] leading-relaxed text-warn/90">
+          <strong className="font-semibold text-warn">Guardian de datos.</strong>{" "}
+          {t.gigo.inconsistente
+            ? t.gigo.motivo
+            : "Estos numeros valen exactamente lo que valen las cifras que metiste. Cuando agregues las que faltan, el numero real puede cambiar. No sustituye contabilidad formal ni asesoria fiscal."}
+        </p>
+      </div>
+    </>
+  );
+}
+
+const ETIQUETA_TONO: Record<Veredicto["tono"], string> = {
+  perdida: "pérdida",
+  ajuste: "margen delgado",
+  sano: "sano",
+  datos: "faltan datos",
+};
+
+function margenLista(v: ValorNumerico | null): { texto: string; clase: string } {
+  const m = medio(v);
+  if (m === null) return { texto: "—", clase: "text-dim" };
+  return { texto: m >= 0 ? `+${fmt(v)}` : fmt(v), clase: m < 0 ? "text-warn" : "text-done" };
+}
+
+/** "Versiones anteriores": SOLO las pasadas (la vigente vive arriba). El
+ * diferenciador de la fila es el contenido (veredicto + margen); la hora solo
+ * aparece para desambiguar gemelas del mismo día. El pasado se visita. */
+function VersionesAnteriores({ versiones, onVer }: { versiones: VersionResumen[]; onVer: (id: string) => void }) {
+  const pasadas = versiones.filter((v) => !v.vigente);
+  if (pasadas.length === 0) return null;
+  const ahora = new Date();
+  const clave = (iso: string) => new Date(iso).toDateString();
+  const porDia = new Map<string, number>();
+  for (const v of versiones) porDia.set(clave(v.fecha), (porDia.get(clave(v.fecha)) ?? 0) + 1);
+  return (
+    <>
+      <TituloSeccion>Versiones anteriores</TituloSeccion>
+      <div className="rounded-panel border border-hairline">
+        {pasadas.map((v) => {
+          const conHora = (porDia.get(clave(v.fecha)) ?? 0) > 1;
+          const mg = margenLista(v.margen);
+          const punto = v.tono ? TONO[v.tono].punto : "bg-dim";
+          return (
+            <button
+              key={v.id}
+              onClick={() => onVer(v.id)}
+              className="group flex w-full items-center gap-4 border-b border-hairline px-6 py-4 text-left last:border-b-0 hover:bg-surface-2"
+            >
+              <span className="text-[14px] font-semibold group-hover:text-accent">{selloVersion(v.fecha, ahora, conHora)}</span>
+              <span className={`h-2 w-2 flex-none rounded-full ${punto}`} aria-hidden />
+              <span className="text-[13px] text-dim">{v.tono ? ETIQUETA_TONO[v.tono] : "—"}</span>
+              <span className={`ml-auto text-[14px] font-semibold ${mg.clase}`}>{mg.texto}</span>
+              <span className="whitespace-nowrap text-[12px] text-accent opacity-0 transition group-hover:opacity-100">Ver →</span>
+            </button>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
@@ -307,6 +452,8 @@ export function TusNumeros({ projectId }: { projectId: string }) {
   const [editando, setEditando] = useState(false);
   /** La puerta de un faltante: abre el recolector con foco en ese campo. */
   const [campoInicial, setCampoInicial] = useState<string | null>(null);
+  /** Una version PASADA que se esta visitando en modo lectura (null = el presente). */
+  const [historico, setHistorico] = useState<VistaHistorica | null>(null);
   const abrirRecolector = (campo: string | null = null) => {
     setCampoInicial(campo);
     setEditando(true);
@@ -323,26 +470,76 @@ export function TusNumeros({ projectId }: { projectId: string }) {
     };
   }, [projectId]);
 
+  async function verVersion(id: string) {
+    const r = await fetch(`/api/project/${projectId}/numeros?version=${id}`);
+    if (r.ok) {
+      setHistorico((await r.json()) as VistaHistorica);
+      if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+  const volverAHoy = () => {
+    setHistorico(null);
+    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   if (error) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">{error}</div>;
   if (!data) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">Calculando tus numeros…</div>;
 
-  const { tablero: t, veredicto: v } = data;
-  const u = data.unidad || "unidad";
-  const tono = TONO[v.tono];
+  const u = (historico ?? data).unidad || "unidad";
+  const titulo = (historico ?? data).titulo;
+
+  const cabecera = (
+    <nav className="flex items-center justify-between gap-6 border-b border-hairline px-8 py-4">
+      <div className="flex min-w-0 items-baseline gap-3">
+        <Link href="/ideas" className="flex-none text-sm text-dim hover:text-accent">
+          Mis ideas /
+        </Link>
+        <span className="truncate text-[15px] font-bold">{titulo ?? "Tu idea"}</span>
+      </div>
+      <span className="flex-none rounded-full border border-accent/40 px-3 py-1.5 text-[12.5px] font-semibold text-accent">
+        Tus Numeros · 2 creditos
+      </span>
+    </nav>
+  );
+
+  // ── MODO LECTURA: visitar una version pasada. El pasado se visita, no se
+  //    edita: sin "Corregir", sin faltantes tocables, con la banda que dice
+  //    el momento absoluto (el acta consta en absoluto). ──
+  if (historico) {
+    return (
+      <div className="min-h-full">
+        {cabecera}
+        <div className="mx-auto w-full max-w-[1060px] px-10 pb-16 pt-8">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-panel border border-accent/40 bg-accent/[0.06] px-6 py-4">
+            <p className="text-[14px] font-semibold text-accent">
+              Estás viendo tus números del {momentoAbsoluto(historico.cifras_fecha)}
+            </p>
+            <button
+              onClick={volverAHoy}
+              className="rounded-cinta bg-accent px-4 py-2 text-[13px] font-medium text-white hover:opacity-90"
+            >
+              Volver a hoy
+            </button>
+          </div>
+          <h1 className="text-[32px] font-bold leading-tight tracking-tight">
+            Los numeros de {titulo ? titulo.toLowerCase() : "tu idea"}
+          </h1>
+          <VeredictoBloque v={historico.veredicto} />
+          <RestoTablero t={historico.tablero} u={u} />
+        </div>
+      </div>
+    );
+  }
+
+  // ── EL PRESENTE: se habita. Aqui se corrige y se recalcula. ──
+  const t = data.tablero;
+  const v = data.veredicto;
+  const reciente = data.cifras_fecha ? new Date().getTime() - new Date(data.cifras_fecha).getTime() < 120_000 : false;
+  const selloHoy = data.cifras_fecha ? (reciente ? "recién actualizado" : fechaSello(data.cifras_fecha)) : null;
 
   return (
     <div className="min-h-full">
-      <nav className="flex items-center justify-between gap-6 border-b border-hairline px-8 py-4">
-        <div className="flex min-w-0 items-baseline gap-3">
-          <Link href="/ideas" className="flex-none text-sm text-dim hover:text-accent">
-            Mis ideas /
-          </Link>
-          <span className="truncate text-[15px] font-bold">{data.titulo ?? "Tu idea"}</span>
-        </div>
-        <span className="flex-none rounded-full border border-accent/40 px-3 py-1.5 text-[12.5px] font-semibold text-accent">
-          Tus Numeros · 2 creditos
-        </span>
-      </nav>
+      {cabecera}
 
       <div className="mx-auto w-full max-w-[1060px] px-10 pb-16 pt-8" data-screen-label="Tus Numeros vista">
         <Link href={`/idea/${projectId}`} className="mb-6 inline-block text-sm text-dim hover:text-accent">
@@ -353,23 +550,17 @@ export function TusNumeros({ projectId }: { projectId: string }) {
           Calculado por codigo, sobre tus cifras
         </div>
         <h1 className="text-[32px] font-bold leading-tight tracking-tight">
-          Los numeros de {data.titulo ? data.titulo.toLowerCase() : "tu idea"}
+          Los numeros de {titulo ? titulo.toLowerCase() : "tu idea"}
         </h1>
 
-        <div className={`mt-5 flex items-start gap-3.5 rounded-panel border px-6 py-5 ${tono.borde} ${tono.fondo}`}>
-          <span className={`mt-1.5 h-2.5 w-2.5 flex-none rounded-full ${tono.punto}`} />
-          <p className="text-[17px] font-semibold leading-normal">
-            <FraseConAcento frase={v.frase} acento={v.acento} clase={tono.acento} />
-          </p>
-        </div>
+        <VeredictoBloque v={v} />
 
-        <div className="mt-4 flex items-center gap-3 text-[13px] text-dim">
-          {data.cifras_fecha && (
-            <span>Calculado con tus cifras del {new Date(data.cifras_fecha).toLocaleDateString("es")}.</span>
-          )}
+        <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-dim">
+          <span className="font-semibold text-ink">Tus números de HOY</span>
+          {selloHoy && <span>· calculado con tus cifras del {selloHoy}</span>}
           {!editando && (
-            <button onClick={() => abrirRecolector(null)} className="font-medium text-accent hover:underline">
-              Corregir mis cifras
+            <button onClick={() => abrirRecolector(null)} className="ml-1 font-medium text-accent hover:underline">
+              Corregir mis cifras · gratis
             </button>
           )}
         </div>
@@ -394,48 +585,9 @@ export function TusNumeros({ projectId }: { projectId: string }) {
           </div>
         )}
 
-        <TituloSeccion>De un vistazo</TituloSeccion>
-        <Tiles t={t} u={u} />
+        <RestoTablero t={t} u={u} onCorregir={(campo) => abrirRecolector(campo)} />
 
-        <TituloSeccion>La barra de la verdad</TituloSeccion>
-        <BarraVerdad t={t} />
-
-        <Palancasseccion pal={t.palancas} u={u} />
-
-        <div className="mt-10 grid gap-3.5 lg:grid-cols-[1.3fr_1fr]">
-          <div>
-            <TituloSeccion>Escenarios, a tu precio de hoy</TituloSeccion>
-            <Escenarios t={t} />
-          </div>
-          <div>
-            <TituloSeccion>Los numeros que te faltan</TituloSeccion>
-            <Faltantes t={t} onCorregir={(campo) => abrirRecolector(campo)} />
-          </div>
-        </div>
-
-        {t.cicloDias !== null && (
-          <>
-            <TituloSeccion>Tu ciclo de caja</TituloSeccion>
-            <div className="rounded-panel border border-hairline bg-surface px-6 py-5">
-              <div className="text-[28px] font-extrabold tracking-tight">
-                {t.cicloDias} <span className="text-[15px] font-semibold text-dim">días</span>
-              </div>
-              <p className="mt-2 text-[14px] leading-relaxed text-dim [text-wrap:pretty]">{fraseCicloCaja(t.cicloDias)}</p>
-            </div>
-          </>
-        )}
-
-        <div className="mt-4 flex gap-3.5 rounded-panel border border-warn/30 bg-warn/[0.06] px-6 py-5">
-          <span className="mt-0.5 flex-none text-warn" aria-hidden>
-            ⚠
-          </span>
-          <p className="text-[13.5px] leading-relaxed text-warn/90">
-            <strong className="font-semibold text-warn">Guardian de datos.</strong>{" "}
-            {t.gigo.inconsistente
-              ? t.gigo.motivo
-              : "Estos numeros valen exactamente lo que valen las cifras que metiste. Cuando agregues las que faltan, el numero real puede cambiar. No sustituye contabilidad formal ni asesoria fiscal."}
-          </p>
-        </div>
+        <VersionesAnteriores versiones={data.historial ?? []} onVer={verVersion} />
       </div>
     </div>
   );

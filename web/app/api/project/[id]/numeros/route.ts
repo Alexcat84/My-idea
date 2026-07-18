@@ -21,6 +21,7 @@ import {
   historialVersionesNumeros,
   insertarVersionNumeros,
   obtenerProyecto,
+  obtenerVersionNumeros,
   ultimaVersionNumeros,
 } from "@/lib/db";
 import { narrarReporte } from "@/lib/engine/reporte";
@@ -117,17 +118,52 @@ function cifrasDeclaradas(numeros: NumerosProyecto): Record<string, number | { m
   return out;
 }
 
-export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+/** Resumen de una version para la lista "Versiones anteriores": fecha +
+ * veredicto + margen, TODO del snapshot guardado (cero recalculo). El
+ * diferenciador de la fila es el contenido, no el reloj. */
+function resumenVersion(
+  v: { id: string; created_at: string; calculo: unknown | null },
+  vigente: boolean
+) {
+  const c = (v.calculo ?? {}) as { veredicto?: { tono?: string }; margen?: unknown };
+  return { id: v.id, fecha: v.created_at, tono: c.veredicto?.tono ?? null, margen: c.margen ?? null, vigente };
+}
+
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
   const ctx = await cargarContexto(projectId);
   if ("error" in ctx) return ctx.error;
   const { supabase, proyecto } = ctx;
 
+  // VISITAR una version pasada (?version=<id>): modo LECTURA. Se devuelve su
+  // snapshot inmutable tal cual quedo, sin recalcular. Editar el pasado no
+  // existe: el que corrige es siempre el presente.
+  const versionId = new URL(request.url).searchParams.get("version");
+  if (versionId) {
+    const version = await obtenerVersionNumeros(supabase, projectId, versionId);
+    if (!version || !version.calculo) {
+      return NextResponse.json({ error: "esa version no existe" }, { status: 404 });
+    }
+    const calculo = version.calculo as Record<string, unknown> & { veredicto?: unknown };
+    return NextResponse.json({
+      project_id: projectId,
+      titulo: proyecto.titulo,
+      unidad: proyecto.unidad_venta ?? null,
+      historico: true,
+      tablero: calculo, // el snapshot ES el tablero (calculo = {...tablero, veredicto})
+      veredicto: calculo.veredicto ?? null,
+      cifras_fecha: version.created_at,
+    });
+  }
+
   const numeros: NumerosProyecto = proyecto.numeros_proyecto ?? {};
   const tipoOferta = (proyecto.tipo_oferta ?? null) as TipoOferta;
   const { tablero, veredicto } = payloadTablero(numeros, tipoOferta, proyecto.unidad_venta ?? null);
   const ultima = await ultimaVersionNumeros(supabase, projectId);
-  const historial = await historialVersionesNumeros(supabase, projectId);
+  const historialRaw = await historialVersionesNumeros(supabase, projectId);
+  // La primera (mas reciente) es la VIGENTE: la que se ve arriba. La UI lista
+  // solo las pasadas; la vigente vive en el tablero principal, no como fila.
+  const historial = historialRaw.map((v, i) => resumenVersion(v, i === 0));
 
   return NextResponse.json({
     project_id: projectId,
@@ -230,7 +266,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     cifrasFecha = new Date().toISOString();
   }
 
-  const historial = await historialVersionesNumeros(supabase, projectId);
+  const historialRaw = await historialVersionesNumeros(supabase, projectId);
+  const historial = historialRaw.map((v, i) => resumenVersion(v, i === 0));
 
   return NextResponse.json({
     project_id: projectId,
