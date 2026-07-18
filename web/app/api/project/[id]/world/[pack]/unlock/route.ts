@@ -1,10 +1,12 @@
 /**
- * POST /api/project/[id]/world/[pack]/unlock — Fase 3.5, stub de créditos
- * (Stripe llega en fase posterior): valida el pack contra el catálogo,
- * inserta el unlock con los créditos del catálogo (creditos_pagados) y
- * desde ese momento el dominio EXISTE para el motor (el muro de filtros
- * deja pasar). Idempotente: activar dos veces responde ok sin duplicar
- * (UNIQUE project_id+dominio).
+ * POST /api/project/[id]/world/[pack]/unlock — Fase 3.5, remodelada por la
+ * 4.5 (PREVIEW_MUNDOS_PLAN): ABRIR el mundo, gratis. Ya no es una compra:
+ * el cobro del mundo vive en la ENTREGA de su plan (ruta del plan, ancla
+ * ETAPA 2). Esta ruta solo crea la fila para que el dominio EXISTA para el
+ * motor (el muro de filtros deja pasar) y su sección aparezca en Manos a la
+ * Obra; el preview en sí lo sella world/start (preview_at). Idempotente:
+ * abrir dos veces responde ok sin duplicar (UNIQUE project_id+dominio).
+ * creditos_pagados queda en 0 siempre: registro histórico del modelo viejo.
  */
 import { NextResponse } from "next/server";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -39,7 +41,8 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
   const { error } = await supabase.from("project_unlocks").insert({
     project_id: projectId,
     dominio: pack,
-    creditos_pagados: entrada.creditos_activar,
+    // Fase 4.5: abrir es gratis; el cobro vive en la entrega del plan.
+    creditos_pagados: 0,
   });
   if (error) {
     // 23505 = ya estaba activo: idempotente, no es un error para el usuario.

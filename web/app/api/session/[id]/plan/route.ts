@@ -35,6 +35,7 @@ import {
   mergeTipoOferta,
   obtenerProyecto,
   obtenerSesion,
+  registrarBitacora,
   registrarNodos,
   type EstadoSesionPersistido,
   type NodoConTipo,
@@ -307,13 +308,28 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         await actualizarProyecto(supabase, projectId, camposProyecto);
 
         // ── ANCLA para la ETAPA 2 del frente de cuentas (docs/FLUJO_TRACKING.md §5)
-        // Aqui, y NO antes, se cablea el consumo de los 5 creditos del plan: el
+        // Aqui, y NO antes, se cablea el consumo de creditos del plan: el
         // patron es verificar saldo al inicio y DESCONTAR A LA ENTREGA. Este
         // punto es la entrega: el plan ya esta redactado, persistido, con su
         // checklist derivado y la sesion cerrada. Es prerequisito de ese cobro
         // que el redactor reintente y, si se agota, LANCE (ver generarTextoPlan):
         // un plan que muere a mitad jamas debe consumir creditos, y uno
         // ensamblado offline en silencio no es lo que el usuario pago.
+        // Fase 4.5 (PREVIEW_MUNDOS_PLAN §5.3): para una sesion de MUNDO, este
+        // es ADEMAS el punto de cobro del mundo entero: el preview fue gratis
+        // y lo que se compra es EL PLAN (precios.ts: mundo_activar, 3
+        // creditos; el nombre del concepto lo reconcilia la ETAPA 2). En beta
+        // no se cobra; se sella plan_pagado_at (idempotente, WHERE IS NULL) y
+        // queda la telemetria preview_a_compra (§6).
+        if (dominioSesion !== "core") {
+          await supabase
+            .from("project_unlocks")
+            .update({ plan_pagado_at: new Date().toISOString() })
+            .eq("project_id", projectId)
+            .eq("dominio", dominioSesion)
+            .is("plan_pagado_at", null);
+          await registrarBitacora(supabase, projectId, "preview_a_compra", { mundo: dominioSesion });
+        }
         enviar("done", {
           project_id: projectId,
           session_id: sessionId,

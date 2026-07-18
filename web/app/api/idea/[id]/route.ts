@@ -65,20 +65,38 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   // Fase 4.2: el ciclo de vida del mundo (completado_at + cierre_motivo) llega
   // con la 026; si aún no está aplicada el select entero falla, y se reintenta
   // sin esas columnas — los mundos se leen abiertos, que es lo que son.
-  type FilaUnlock = { dominio: string; completado_at?: string | null; cierre_motivo?: string | null };
+  type FilaUnlock = {
+    dominio: string;
+    completado_at?: string | null;
+    cierre_motivo?: string | null;
+    /** Fase 4.5 (migración 028): el escaparate del preview. */
+    preview_at?: string | null;
+    preview_session_id?: string | null;
+    resumen_md?: string | null;
+    resumen_at?: string | null;
+    plan_pagado_at?: string | null;
+  };
   let unlocksRaw: FilaUnlock[] = [];
   try {
     const { data, error } = await supabase
       .from("project_unlocks")
-      .select("dominio, completado_at, cierre_motivo")
+      .select("dominio, completado_at, cierre_motivo, preview_at, preview_session_id, resumen_md, resumen_at, plan_pagado_at")
       .eq("project_id", projectId);
     if (!error) unlocksRaw = (data ?? []) as FilaUnlock[];
     else {
-      const { data: previo } = await supabase
+      // Pre-028: reintento sin las columnas del preview; pre-026, solo dominio.
+      const { data: sin45, error: err45 } = await supabase
         .from("project_unlocks")
-        .select("dominio")
+        .select("dominio, completado_at, cierre_motivo")
         .eq("project_id", projectId);
-      unlocksRaw = (previo ?? []) as FilaUnlock[];
+      if (!err45) unlocksRaw = (sin45 ?? []) as FilaUnlock[];
+      else {
+        const { data: previo } = await supabase
+          .from("project_unlocks")
+          .select("dominio")
+          .eq("project_id", projectId);
+        unlocksRaw = (previo ?? []) as FilaUnlock[];
+      }
     }
   } catch {
     unlocksRaw = [];
@@ -92,6 +110,12 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       dominio: u.dominio,
       completado_at: u.completado_at ?? null,
       cierre_motivo: u.cierre_motivo ?? null,
+      // Fase 4.5: lo que la UI necesita para pintar los cuatro estados.
+      preview_at: u.preview_at ?? null,
+      preview_session_id: u.preview_session_id ?? null,
+      resumen_md: u.resumen_md ?? null,
+      resumen_at: u.resumen_at ?? null,
+      plan_pagado_at: u.plan_pagado_at ?? null,
       plan: planMundo && {
         etiqueta: planMundo.etiqueta,
         contenido_md: planMundo.contenido_md,
@@ -128,6 +152,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     dominio?: string | null;
   }>).reverse()) {
     if (s.closed_at || !s.estado_recorrido) continue;
+    // Fase 4.5: una sesión con recorrido en fase 'cerrada' pero sin closed_at
+    // es un preview con diagnóstico listo (esperando compra). NO es una
+    // entrevista abierta: su cara es el escaparate del mundo, no una pregunta.
+    if (s.estado_recorrido.recorrido.fase === "cerrada") continue;
     const rec = s.estado_recorrido.recorrido;
     entrevista = {
       session_id: s.id,
