@@ -10,6 +10,21 @@ import { crearSupabaseFalso, estadoFalsoVacio, type EstadoFalso } from "@/lib/te
 let estadoFalso: EstadoFalso = estadoFalsoVacio();
 let supabaseFalso = crearSupabaseFalso(estadoFalso);
 
+vi.mock("@/lib/creditos", async (importOriginal) => {
+  // ETAPA 2: las funciones PURAS (conceptoDelPlan, montos, mensajes) son las
+  // reales; las que tocan el ledger (RPC service-role) se stubean con saldo
+  // holgado -- la ley de AGENTS.md: ningun test depende de secretos del
+  // ambiente, y el ledger REAL se verifica en vivo en el vuelo de dinero.
+  const real = await importOriginal<typeof import("@/lib/creditos")>();
+  return {
+    ...real,
+    saldoDe: vi.fn(async () => 20),
+    verificarSaldo: vi.fn(async () => ({ alcanza: true, creditos: 20 })),
+    cobrar: vi.fn(async () => 15),
+    reembolsar: vi.fn(async () => 20),
+    otorgarCortesia: vi.fn(async () => 20),
+  };
+});
 vi.mock("@/lib/supabase/server", () => ({
   createClient: vi.fn(async () => supabaseFalso),
 }));

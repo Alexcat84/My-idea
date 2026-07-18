@@ -17,10 +17,13 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
+import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
 import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { PRECIOS } from "@/lib/precios";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
@@ -55,7 +58,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
 
-  // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
+  // ETAPA 2 — LA FRONTERA: la web y el organizador son libres; el login nace
+  // AQUÍ, al pulsar "Iniciar La Exploración". La identidad invisible no pasa:
+  // la UI detecta login_requerido y lleva al login (la idea se adopta al
+  // autenticarse, nada se pierde).
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
+
+  // Fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
     return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
@@ -63,6 +74,17 @@ export async function POST(request: Request) {
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+  }
+
+  // ETAPA 2 — VERIFICAR al inicio (no cobrar): la Exploración cuesta
+  // plan_completo (5). El descuento ocurre A LA ENTREGA del plan (ruta del
+  // plan, idempotente). Rechazo limpio antes del esfuerzo del usuario.
+  const saldo = await verificarSaldo(user.id, PRECIOS.plan_completo);
+  if (!saldo.alcanza) {
+    return NextResponse.json(
+      { error: mensajeSaldoInsuficiente(saldo.creditos, PRECIOS.plan_completo), saldo: saldo.creditos },
+      { status: 402 }
+    );
   }
 
   const graph = cargarGrafo();

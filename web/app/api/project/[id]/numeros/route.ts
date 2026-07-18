@@ -14,6 +14,7 @@ import { NextResponse } from "next/server";
 import type { NumerosProyecto, TipoOferta } from "@/lib/calculadora";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { costoAcumuladoUsd, usoVacio } from "@/lib/costmeter";
+import { cobrar, mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
 import {
   actualizarProyecto,
   activarTusNumeros,
@@ -22,8 +23,11 @@ import {
   insertarVersionNumeros,
   obtenerProyecto,
   obtenerVersionNumeros,
+  registrarBitacora,
   ultimaVersionNumeros,
 } from "@/lib/db";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { PRECIOS } from "@/lib/precios";
 import { narrarReporte } from "@/lib/engine/reporte";
 import { cifrasCambiaron, MENSAJE_TOPE_RENARRACION, TOPE_RENARRACION_DIA, veredictoNumeros } from "@/lib/numerosVivo";
 import { armarTablero } from "@/lib/tableroNumeros";
@@ -135,6 +139,20 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if ("error" in ctx) return ctx.error;
   const { supabase, proyecto } = ctx;
 
+  // ETAPA 2 — la compuerta del canon 07: sin activacion, el tablero no se
+  // muestra. La pantalla pinta la compuerta ("Sacar mis numeros · 2
+  // creditos") y el POST {activar:true} verifica saldo, activa y cobra.
+  if (proyecto.tus_numeros_activado_at == null) {
+    return NextResponse.json({
+      project_id: projectId,
+      titulo: proyecto.titulo,
+      unidad: proyecto.unidad_venta ?? null,
+      activado: false,
+      compuerta: true,
+      costo: PRECIOS.tus_numeros,
+    });
+  }
+
   // VISITAR una version pasada (?version=<id>): modo LECTURA. Se devuelve su
   // snapshot inmutable tal cual quedo, sin recalcular. Editar el pasado no
   // existe: el que corrige es siempre el presente.
@@ -193,10 +211,26 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   const ctx = await cargarContexto(projectId);
   if ("error" in ctx) return ctx.error;
-  const { supabase, proyecto } = ctx;
+  const { supabase, user, proyecto } = ctx;
+
+  // ETAPA 2 (la frontera): Tus Numeros es motor pagado; cuenta real.
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
 
   const tipoOferta = (proyecto.tipo_oferta ?? null) as TipoOferta;
   const unidad = proyecto.unidad_venta ?? null;
+
+  // ETAPA 2 — la compuerta: sin activacion no hay tablero. Activar cuesta
+  // tus_numeros (2), UNA vez por idea; despues, recalculos y correcciones
+  // son gratis por ley.
+  const yaActivado = proyecto.tus_numeros_activado_at != null;
+  if (!yaActivado && body.activar !== true) {
+    return NextResponse.json(
+      { compuerta: true, costo: PRECIOS.tus_numeros, error: "Tus Números se activa una vez por idea." },
+      { status: 409 }
+    );
+  }
 
   // 1) Corregir cifras (opcional): funde y valida sobre lo vigente.
   let numeros: NumerosProyecto = proyecto.numeros_proyecto ?? {};
@@ -206,13 +240,38 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     numeros = fundidas;
   }
 
-  // 2) Activacion idempotente (ancla de cobro ETAPA 2), si se pidio.
+  // 2) Activacion (ETAPA 2, VIVO): verificar >=2 al activar; consumir 2 a la
+  //    entrega de ESTE primer tablero (la respuesta de este request), UNA vez
+  //    por idea. Idempotente doble: activarTusNumeros (WHERE IS NULL atomico)
+  //    + la clave `numeros:{projectId}` en el ledger. La carrera rara
+  //    (verifico y otra pestana gasto antes): entregar y registrar.
   let activadoAhora = false;
   let activadoAt = proyecto.tus_numeros_activado_at ?? null;
+  let creditosRestantes: number | null = null;
   if (body.activar === true) {
+    if (!yaActivado) {
+      const saldoNum = await verificarSaldo(user.id, PRECIOS.tus_numeros);
+      if (!saldoNum.alcanza) {
+        return NextResponse.json(
+          { error: mensajeSaldoInsuficiente(saldoNum.creditos, PRECIOS.tus_numeros), saldo: saldoNum.creditos },
+          { status: 402 }
+        );
+      }
+    }
     const r = await activarTusNumeros(supabase, projectId);
     activadoAhora = r.activadoAhora;
     activadoAt = r.activadoAt;
+    if (activadoAhora) {
+      const resultadoCobro = await cobrar(user.id, "tus_numeros", PRECIOS.tus_numeros, `numeros:${projectId}`);
+      if (resultadoCobro === -1) {
+        await registrarBitacora(supabase, projectId, "cobro_carrera", {
+          concepto: "tus_numeros",
+          monto: PRECIOS.tus_numeros,
+        });
+      } else {
+        creditosRestantes = resultadoCobro;
+      }
+    }
   }
 
   // 3) Recalculo determinista: SIEMPRE, gratis, sin tope ni bloqueo.
@@ -282,6 +341,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     activado: activadoAt != null,
     activado_ahora: activadoAhora,
     limite_relecturas: limiteAlcanzado,
+    creditos_restantes: creditosRestantes,
     mensaje,
     historial,
   });

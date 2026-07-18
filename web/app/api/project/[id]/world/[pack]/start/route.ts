@@ -23,6 +23,7 @@ import catalogo from "@/lib/assets/packs_catalog.json";
 import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
 import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta } from "@/lib/engine/graph";
@@ -48,6 +49,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   } = await supabase.auth.getUser();
   if (!user) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  }
+  // ETAPA 2 (la frontera): motor pagado; cuenta real.
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
