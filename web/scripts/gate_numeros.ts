@@ -87,6 +87,8 @@ async function main() {
     capacidad_semanal: 5,
   });
   // SANO (kits del canon): costo 180, precio 350, fijos 1200 -> margen 170.
+  // Con los datos del ciclo de caja (40+30-20 = 50 dias) para estrenar la
+  // seccion "Tu ciclo de caja" (la recompensa de la puerta de los faltantes).
   const pidSano = await sembrar(dev.id, "Kits de huerto urbano para balcones pequenos", "kit", {
     costo_materiales_unidad: 100,
     horas_por_unidad: 4,
@@ -94,6 +96,9 @@ async function main() {
     precio_tentativo: 350,
     costos_fijos_mensuales: 1200,
     capacidad_semanal: 7.5,
+    dias_inventario: 40,
+    dias_cobro_clientes: 30,
+    dias_pago_proveedores: 20,
   });
 
   const browser = await chromium.launch();

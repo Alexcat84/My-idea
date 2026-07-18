@@ -134,6 +134,19 @@ async function main() {
   check("re-narracion inserta filas nuevas (no UPDATE): >= 2 narradas", narradas2.length >= 2, narradas2.length);
   check("la narracion anterior NO se borro ni reescribio", idsNarradas1.every((id) => narradas2.some((v) => v.id === id)));
 
+  // 4.5) La PUERTA de los faltantes (fix del tablero vivo): dar los datos del
+  //   ciclo de caja los saca de faltantes y estrena la seccion "Tu ciclo de caja".
+  //   Antes (v2, sano, sin datos de ciclo) los 3 estan en faltantes:
+  const faltAntes = pick<string[]>(v2, "tablero", "faltantes");
+  check("puerta: antes, los 3 campos del ciclo estan en faltantes",
+    faltAntes.includes("dias_inventario") && faltAntes.includes("dias_cobro_clientes") && faltAntes.includes("dias_pago_proveedores"), faltAntes);
+  //   CCE = dias_inventario + dias_cobro - dias_pago = 40 + 30 - 20 = 50.
+  const conCiclo = await postJson(cookie, ruta, { numeros: { dias_inventario: 40, dias_cobro_clientes: 30, dias_pago_proveedores: 20 } });
+  check("puerta: CCE = 50 dias (estrena la seccion Tu ciclo de caja)", pick(conCiclo, "tablero", "cicloDias") === 50, pick(conCiclo, "tablero", "cicloDias"));
+  const faltDespues = pick<string[]>(conCiclo, "tablero", "faltantes");
+  check("puerta: los 3 campos del ciclo SALEN de faltantes (recompensa visible)",
+    !faltDespues.includes("dias_inventario") && !faltDespues.includes("dias_cobro_clientes") && !faltDespues.includes("dias_pago_proveedores"), faltDespues);
+
   // 5) Idempotencia (repetida): activar de nuevo NO vuelve a marcar.
   const actRep = await postJson(cookie, ruta, { activar: true });
   check("activar repetido: activado_ahora=false", actRep.activado_ahora === false, actRep.activado_ahora);

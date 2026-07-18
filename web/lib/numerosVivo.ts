@@ -45,6 +45,21 @@ export function cifrasCambiaron(actuales: NumerosProyecto, previas: NumerosProye
   return false;
 }
 
+/**
+ * El ciclo de conversión de efectivo (CCE) en palabras de persona: cuántos
+ * días tarda tu dinero en volver desde que pagas los materiales. Positivo = la
+ * plata queda amarrada; cero = vuelve el mismo día; negativo = cobras antes de
+ * pagar y la caja trabaja a tu favor (nunca "malo": es un dato, no una falta).
+ * null si aún faltan los datos.
+ */
+export function fraseCicloCaja(dias: number | null): string | null {
+  if (dias === null || dias === undefined) return null;
+  const d = Math.round(dias);
+  if (d > 0) return `Tu dinero tarda unos ${d} días en volver a tu bolsillo desde que pagas los materiales.`;
+  if (d === 0) return "Tu dinero vuelve el mismo día: cobras justo cuando pagas.";
+  return `Cobras antes de pagar: tu caja trabaja a favor, con unos ${Math.abs(d)} días de holgura.`;
+}
+
 export interface Veredicto {
   tono: "perdida" | "ajuste" | "sano" | "datos";
   frase: string;

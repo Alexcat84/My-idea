@@ -92,3 +92,24 @@ describe("escenariosFilas: ganancia NETA de fijos, y base solo si hay volumen de
     expect(plena).toEqual({ nombre: "A capacidad plena", sub: "30 al mes", ganancia: 3900 });
   });
 });
+
+describe("cicloDias: el ciclo de caja aparece y sale de faltantes al darlo", () => {
+  const base = { costo_materiales_unidad: 30, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 38, costos_fijos_mensuales: 200, capacidad_semanal: 5 };
+
+  it("sin los datos de cobro/inventario/pago: cicloDias null y los 3 estan en faltantes", () => {
+    const t = armarTablero(numeros(base));
+    expect(t.cicloDias).toBeNull();
+    expect(t.faltantes).toContain("dias_inventario");
+    expect(t.faltantes).toContain("dias_cobro_clientes");
+    expect(t.faltantes).toContain("dias_pago_proveedores");
+  });
+
+  it("con los tres: CCE = 40 + 30 - 20 = 50 días, y salen de faltantes", () => {
+    // CCE = dias_inventario + dias_cobro_clientes - dias_pago_proveedores
+    const t = armarTablero(numeros({ ...base, dias_inventario: 40, dias_cobro_clientes: 30, dias_pago_proveedores: 20 }));
+    expect(t.cicloDias).toBe(50);
+    expect(t.faltantes).not.toContain("dias_inventario");
+    expect(t.faltantes).not.toContain("dias_cobro_clientes");
+    expect(t.faltantes).not.toContain("dias_pago_proveedores");
+  });
+});
