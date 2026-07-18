@@ -106,6 +106,17 @@ function payloadTablero(numeros: NumerosProyecto, tipoOferta: TipoOferta, unidad
   return { tablero, veredicto: veredictoNumeros(tablero, unidad) };
 }
 
+/** Los valores declarados de los campos editables, para PRE-LLENAR el
+ * recolector con lo ultimo que dijo el usuario (canon 14: nunca en blanco). */
+function cifrasDeclaradas(numeros: NumerosProyecto): Record<string, number | { min: number; max: number }> {
+  const out: Record<string, number | { min: number; max: number }> = {};
+  for (const campo of CAMPOS_EDITABLES) {
+    const v = numeros[campo]?.valor;
+    if (v !== null && v !== undefined) out[campo] = v as number | { min: number; max: number };
+  }
+  return out;
+}
+
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
   const ctx = await cargarContexto(projectId);
@@ -124,6 +135,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     unidad: proyecto.unidad_venta ?? null,
     tablero,
     veredicto,
+    numeros_declarados: cifrasDeclaradas(numeros),
     narracion: ultima?.narracion ?? null,
     narracion_at: ultima?.narracion_at ?? null,
     cifras_fecha: ultima?.created_at ?? null,
@@ -226,6 +238,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     unidad,
     tablero,
     veredicto,
+    numeros_declarados: cifrasDeclaradas(numeros),
     narracion: narracion ?? (hayCambio ? null : ultima?.narracion ?? null),
     narracion_at: narracionAt ?? (hayCambio ? null : ultima?.narracion_at ?? null),
     cifras_fecha: cifrasFecha,

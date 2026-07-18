@@ -25,7 +25,7 @@ import { Claridad } from "../../ui/Claridad";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
-import { ReporteCard } from "../../ui/ReporteCard";
+import { PRECIOS } from "@/lib/precios";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -898,15 +898,28 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 </div>
               )}
 
-              {/* Bajo el plan: Tus Números (canon 05/07, 2 créditos) */}
+              {/* Bajo el plan: Tus Números (canon 05/14, 2 créditos). El CTA
+                  lleva a la pantalla de tablero vivo /idea/[id]/numeros; las
+                  cifras se editan alli con el recolector, ya no en una
+                  mini-entrevista inline. */}
               {planMd && !generandoPlan && (
-                <div id="tus-numeros">
-                  <ReporteCard
-                    projectId={projectId}
-                    contenidoInicial={detalle.reporte?.contenido_md ?? null}
-                    preguntaPendiente={detalle.reporte_en_curso?.pregunta ?? null}
-                  />
-                </div>
+                <section className="rounded-panel border border-hairline bg-surface p-5 hover:border-accent/55" data-transiciona>
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="text-base font-semibold">Tus Números</h3>
+                    <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-1 text-[11px] font-bold text-accent">
+                      {PRECIOS.tus_numeros} créditos
+                    </span>
+                  </div>
+                  <p className="mt-1.5 text-sm text-dim">
+                    Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
+                  </p>
+                  <Link
+                    href={`/idea/${projectId}/numeros`}
+                    className="mt-4 inline-block rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-sm font-medium hover:bg-accent-soft"
+                  >
+                    Sacar mis números
+                  </Link>
+                </section>
               )}
 
               {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
@@ -969,9 +982,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     );
                     irAManos();
                   }}
-                  onTusNumeros={() =>
-                    document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onTusNumeros={() => router.push(`/idea/${projectId}/numeros`)}
                 />
               )}
             </div>

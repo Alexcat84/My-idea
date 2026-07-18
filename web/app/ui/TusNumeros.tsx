@@ -14,12 +14,14 @@ import type { ValorNumerico } from "@/lib/calculadora";
 import type { Palanca, Palancas } from "@/lib/palancas";
 import type { Tablero } from "@/lib/tableroNumeros";
 import type { Veredicto } from "@/lib/numerosVivo";
+import { CorregirCifras } from "@/app/ui/CorregirCifras";
 
 interface RespuestaNumeros {
   titulo: string | null;
   unidad: string | null;
   tablero: Tablero;
   veredicto: Veredicto;
+  numeros_declarados: Record<string, number | { min: number; max: number }>;
   narracion: string | null;
   cifras_fecha: string | null;
   activado: boolean;
@@ -311,6 +313,7 @@ function Faltantes({ t }: { t: Tablero }) {
 export function TusNumeros({ projectId }: { projectId: string }) {
   const [data, setData] = useState<RespuestaNumeros | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [editando, setEditando] = useState(false);
 
   useEffect(() => {
     let vivo = true;
@@ -362,6 +365,32 @@ export function TusNumeros({ projectId }: { projectId: string }) {
             <FraseConAcento frase={v.frase} acento={v.acento} clase={tono.acento} />
           </p>
         </div>
+
+        <div className="mt-4 flex items-center gap-3 text-[13px] text-dim">
+          {data.cifras_fecha && (
+            <span>Calculado con tus cifras del {new Date(data.cifras_fecha).toLocaleDateString("es")}.</span>
+          )}
+          {!editando && (
+            <button onClick={() => setEditando(true)} className="font-medium text-accent hover:underline">
+              Corregir mis cifras
+            </button>
+          )}
+        </div>
+
+        {editando && (
+          <div className="mt-4">
+            <CorregirCifras
+              projectId={projectId}
+              unidad={u}
+              declaradas={data.numeros_declarados}
+              onGuardado={(payload) => {
+                setData(payload as RespuestaNumeros);
+                setEditando(false);
+              }}
+              onCancelar={() => setEditando(false)}
+            />
+          </div>
+        )}
 
         <TituloSeccion>De un vistazo</TituloSeccion>
         <Tiles t={t} u={u} />
