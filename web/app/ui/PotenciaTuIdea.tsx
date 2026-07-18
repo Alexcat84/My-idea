@@ -33,12 +33,10 @@ interface Props {
   /** Fase 4.2: los mundos que el usuario dio por completados. Su chip cambia de
    * "Activo · n/m" (azul) a "Completado" (verde): el mundo tuvo un final. */
   mundosCompletados?: string[];
-  conPlan: boolean;
   onVerMundo: (dominio: string) => void;
   /** Beta: activar un mundo (gratis hasta la ETAPA 2). El padre refresca sus
    * unlocks y entra al mundo. */
   onActivarMundo: (dominio: string) => void;
-  onTusNumeros: () => void;
 }
 
 /** Íconos por mundo (trazo del canon); genérico para los mundos nuevos. */
@@ -112,12 +110,9 @@ export function PotenciaTuIdea({
   unlocks,
   progresoMundos,
   mundosCompletados = [],
-  conPlan,
   onVerMundo,
   onActivarMundo,
-  onTusNumeros,
 }: Props) {
-  const [avisoEn, setAvisoEn] = useState<string | null>(null);
   const [activando, setActivando] = useState<string | null>(null);
   const [errorEn, setErrorEn] = useState<string | null>(null);
   const packs = (catalogo as { packs: Pack[] }).packs;
@@ -154,28 +149,9 @@ export function PotenciaTuIdea({
   return (
     <section className="mt-2">
       <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Potencia tu idea</p>
+      {/* Canon 05: Tus Números NO va aquí (se dedujo: ya es la fila-CTA bajo el
+          plan). Este grid es solo los mundos del catálogo. */}
       <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Tus Números */}
-        <button
-          onClick={() => (conPlan ? onTusNumeros() : setAvisoEn("tus_numeros"))}
-          className={claseCard + " border-accent/35 hover:border-accent/60"}
-          data-transiciona
-        >
-          <div className="mb-3.5 flex items-center justify-between">
-            <Icono clave="tus_numeros" />
-            <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-[3px] text-[11px] font-bold text-accent">
-              {PRECIOS.tus_numeros} créditos
-            </span>
-          </div>
-          <p className="text-[15px] font-semibold">Tus Números</p>
-          <p className="mt-1.5 text-[12.5px] leading-[1.55] text-dim [text-wrap:pretty]">
-            Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
-          </p>
-          {avisoEn === "tus_numeros" && (
-            <p className="mt-2 text-[12.5px] text-accent">Primero genera el plan de tu idea.</p>
-          )}
-        </button>
-
         {/* Los mundos del catálogo */}
         {packs.map((p) => {
           const activo = unlocks.includes(p.clave);
@@ -225,9 +201,14 @@ export function PotenciaTuIdea({
               </p>
               {!activo && (
                 <p className="mt-2 text-[12px] text-dim/70">
-                  {errorEn === p.clave
-                    ? "No pudimos activarlo; intenta de nuevo."
-                    : "Gratis durante la beta · un toque lo activa"}
+                  {errorEn === p.clave ? (
+                    "No pudimos activarlo; intenta de nuevo."
+                  ) : (
+                    <>
+                      {/* Canon 05/07: precio de catálogo tachado, leyendo de precios.ts. */}
+                      <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
+                    </>
+                  )}
                 </p>
               )}
             </button>

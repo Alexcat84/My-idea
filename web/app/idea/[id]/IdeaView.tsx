@@ -1014,7 +1014,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   unlocks={unlocks}
                   progresoMundos={progresoMundos}
                   mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
-                  conPlan={Boolean(planMd)}
                   onVerMundo={() => irAManos()}
                   onActivarMundo={(dominio) => {
                     // Beta: el mundo quedó activado (unlock gratis). Se añade a
@@ -1028,7 +1027,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     );
                     irAManos();
                   }}
-                  onTusNumeros={() => router.push(`/idea/${projectId}/numeros`)}
                 />
               )}
             </div>

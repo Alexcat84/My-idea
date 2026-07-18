@@ -155,7 +155,11 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     // Fase 4.3.1: la pista ANCLA la idea en el calendario (fechaSello) en vez
     // de solo "hace X" — el fundador lo pidió para poder ordenar y ubicar el
     // historial. "una pregunta te espera" cuando el motor tiene el turno.
-    const pista = pensando ? "una pregunta te espera" : `última acción · ${fechaSello(p.updated_at)}`;
+    // Canon 01: la meta line COMBINA la invitación con el sello, no una u otra
+    // ("Una pregunta te espera · última acción ayer 21:26").
+    const pista = pensando
+      ? `Una pregunta te espera · última acción ${fechaSello(p.updated_at)}`
+      : `última acción · ${fechaSello(p.updated_at)}`;
 
     // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.
     const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
