@@ -1,7 +1,7 @@
 // FASE B (canon 14): logica pura del tablero vivo. Veredicto determinista
 // (numeros por codigo), comparacion de cifras, y el mensaje del tope diario.
 import { describe, expect, it } from "vitest";
-import { cifrasCambiaron, MENSAJE_TOPE_RENARRACION, veredictoNumeros } from "./numerosVivo";
+import { cifrasCambiaron, fraseCicloCaja, MENSAJE_TOPE_RENARRACION, veredictoNumeros } from "./numerosVivo";
 import { armarTablero } from "./tableroNumeros";
 import type { NumerosProyecto } from "./calculadora";
 
@@ -51,6 +51,23 @@ describe("cifrasCambiaron: solo los valores, no los metadatos", () => {
   it("un valor distinto: es cambio", () => {
     const subido = numeros({ costo_materiales_unidad: 30, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 45, costos_fijos_mensuales: 200 });
     expect(cifrasCambiaron(subido, velas)).toBe(true);
+  });
+});
+
+describe("fraseCicloCaja: el ciclo de caja en palabras de persona", () => {
+  it("null cuando faltan los datos", () => {
+    expect(fraseCicloCaja(null)).toBeNull();
+  });
+  it("positivo: la plata tarda N días en volver", () => {
+    expect(fraseCicloCaja(50)).toContain("tarda unos 50 días en volver");
+  });
+  it("cero: vuelve el mismo día", () => {
+    expect(fraseCicloCaja(0)).toContain("el mismo día");
+  });
+  it("negativo: cobras antes de pagar, a favor (nunca 'malo')", () => {
+    const f = fraseCicloCaja(-10)!;
+    expect(f).toContain("Cobras antes de pagar");
+    expect(f).toContain("10 días de holgura");
   });
 });
 

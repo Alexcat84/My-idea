@@ -119,6 +119,10 @@ export interface Tablero {
   palancas: Palancas;
   reporte: ReporteCalculado;
   escenariosFilas: FilaEscenario[];
+  /** El ciclo de conversión de efectivo en días (CCE), o null si faltan los
+   * datos de cobro/inventario/pago. Cuando NO es null, la pantalla gana su
+   * sección "Tu ciclo de caja": la recompensa visible de haberlos dado. */
+  cicloDias: number | null;
   faltantes: string[];
   gigo: ResultadoGigo;
 }
@@ -159,6 +163,7 @@ export function armarTablero(
     palancas,
     reporte,
     escenariosFilas: construirEscenariosFilas(numeros, reporte, margen.valor, valorCampo(numeros, "costos_fijos_mensuales")),
+    cicloDias: typeof reporte.ciclo_conversion_efectivo.valor === "number" ? reporte.ciclo_conversion_efectivo.valor : null,
     faltantes: faltantesDeReporte(reporte),
     gigo: detectarInconsistenciaGigo(numeros, tipoOferta),
   };

@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import type { ValorNumerico } from "@/lib/calculadora";
 import type { Palanca, Palancas } from "@/lib/palancas";
 import type { Tablero } from "@/lib/tableroNumeros";
-import type { Veredicto } from "@/lib/numerosVivo";
+import { fraseCicloCaja, type Veredicto } from "@/lib/numerosVivo";
 import { CorregirCifras } from "@/app/ui/CorregirCifras";
 
 interface RespuestaNumeros {
@@ -266,23 +266,36 @@ function Escenarios({ t }: { t: Tablero }) {
   );
 }
 
-// ── faltantes ──────────────────────────────────────────────────────────────
-function Faltantes({ t }: { t: Tablero }) {
+// ── faltantes (la PUERTA: cada item es tocable y abre el recolector) ─────────
+function Faltantes({ t, onCorregir }: { t: Tablero; onCorregir: (campo: string) => void }) {
   return (
     <div className="rounded-panel border border-hairline px-6 py-5">
       {t.faltantes.map((campo) => {
         const e = ETIQUETAS_FALTANTES[campo] ?? { texto: campo, porque: "" };
         return (
-          <div key={campo} className="flex items-start gap-3.5 border-b border-hairline py-3 last:border-b-0">
-            <span className="mt-0.5 h-5 w-5 flex-none rounded-md border-[1.5px] border-accent/55" />
+          <button
+            key={campo}
+            onClick={() => onCorregir(campo)}
+            className="group flex w-full items-start gap-3.5 border-b border-hairline py-3 text-left last:border-b-0"
+          >
+            <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-md border-[1.5px] border-accent/55 text-[14px] leading-none text-accent transition group-hover:border-accent group-hover:bg-accent/10">
+              +
+            </span>
             <div className="min-w-0">
-              <div className="text-sm leading-snug">{e.texto}</div>
+              <div className="text-sm leading-snug transition group-hover:text-accent">{e.texto}</div>
               {e.porque && <div className="mt-0.5 text-[12.5px] leading-snug text-dim">{e.porque}</div>}
             </div>
-          </div>
+            <span className="ml-auto self-center whitespace-nowrap text-[12px] text-accent opacity-0 transition group-hover:opacity-100">
+              Añadir →
+            </span>
+          </button>
         );
       })}
       {t.faltantes.length === 0 && <div className="py-2 text-sm text-dim">Tienes todo lo esencial. Buen trabajo.</div>}
+      {/* La ley del fundador, en pantalla: matar la duda de costo para siempre. */}
+      <p className="mt-3 border-t border-hairline pt-3 text-[12px] leading-relaxed text-dim">
+        Añadir o corregir cifras es gratis, siempre: tu tablero se recalcula al momento.
+      </p>
     </div>
   );
 }
@@ -292,6 +305,12 @@ export function TusNumeros({ projectId }: { projectId: string }) {
   const [data, setData] = useState<RespuestaNumeros | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [editando, setEditando] = useState(false);
+  /** La puerta de un faltante: abre el recolector con foco en ese campo. */
+  const [campoInicial, setCampoInicial] = useState<string | null>(null);
+  const abrirRecolector = (campo: string | null = null) => {
+    setCampoInicial(campo);
+    setEditando(true);
+  };
 
   useEffect(() => {
     let vivo = true;
@@ -349,7 +368,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
             <span>Calculado con tus cifras del {new Date(data.cifras_fecha).toLocaleDateString("es")}.</span>
           )}
           {!editando && (
-            <button onClick={() => setEditando(true)} className="font-medium text-accent hover:underline">
+            <button onClick={() => abrirRecolector(null)} className="font-medium text-accent hover:underline">
               Corregir mis cifras
             </button>
           )}
@@ -361,11 +380,16 @@ export function TusNumeros({ projectId }: { projectId: string }) {
               projectId={projectId}
               unidad={u}
               declaradas={data.numeros_declarados}
+              campoInicial={campoInicial}
               onGuardado={(payload) => {
                 setData(payload as RespuestaNumeros);
                 setEditando(false);
+                setCampoInicial(null);
               }}
-              onCancelar={() => setEditando(false)}
+              onCancelar={() => {
+                setEditando(false);
+                setCampoInicial(null);
+              }}
             />
           </div>
         )}
@@ -385,9 +409,21 @@ export function TusNumeros({ projectId }: { projectId: string }) {
           </div>
           <div>
             <TituloSeccion>Los numeros que te faltan</TituloSeccion>
-            <Faltantes t={t} />
+            <Faltantes t={t} onCorregir={(campo) => abrirRecolector(campo)} />
           </div>
         </div>
+
+        {t.cicloDias !== null && (
+          <>
+            <TituloSeccion>Tu ciclo de caja</TituloSeccion>
+            <div className="rounded-panel border border-hairline bg-surface px-6 py-5">
+              <div className="text-[28px] font-extrabold tracking-tight">
+                {t.cicloDias} <span className="text-[15px] font-semibold text-dim">días</span>
+              </div>
+              <p className="mt-2 text-[14px] leading-relaxed text-dim [text-wrap:pretty]">{fraseCicloCaja(t.cicloDias)}</p>
+            </div>
+          </>
+        )}
 
         <div className="mt-4 flex gap-3.5 rounded-panel border border-warn/30 bg-warn/[0.06] px-6 py-5">
           <span className="mt-0.5 flex-none text-warn" aria-hidden>
