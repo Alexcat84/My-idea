@@ -31,7 +31,12 @@ evidencia (el par app-vs-canon del gate); el fundador abre el par y confirma.
 | 11 | Análisis del Proyecto | **Calza / delta menor** | `08_analisis` (+`_380`) | capa universal + cumplimiento por mundo (v1.4). | ⏳ por confirmar |
 | 12 | El cierre honesto | **Trabajo** | `z_cierre_camino_SOLOCANON`, `z_cierre_mundo_SOLOCANON` (sin par de app) | canon **nuevo**; la app tiene la UI del cierre de la 4.3. Reemplazarla por el diseño canon 12 y **adaptar las salidas core** (primera exploración sin plan → "Volver a mi idea") + el reembolso. | 🟡 solo-canon |
 | 13 | Detalle de actividad | **Delta menor** | `13_detalle` (+`_380`) | construido en 4.3.2; canon nuevo. Comparar y ajustar deltas, **no rehacer**. | ⏳ por confirmar |
-| 14 | Tus Números | **Trabajo grande** | `z_numeros_perdida_SOLOCANON`, `z_numeros_sano_SOLOCANON` (sin par de app) | **no existe** `/idea/[id]/numeros` ni la calculadora inversa. Toda la pantalla + el tablero vivo (cifras editables, recálculo determinístico gratis, cobro de 2 créditos **una vez por idea**, versiones con fecha, archivar el reporte narrado viejo). | ✅ cierto: nada construido |
+| 14 | Tus Números | **HECHO** (web-v1.3.0-numeros) | `numeros_perdida_{app,canon}`, `numeros_sano_{app,canon}` (+`_380`) | Construido y cerrado (C1–C6): calculadora inversa con paridad, pantalla canon 14, tablero vivo (cifras editables, recálculo gratis, cobro 1 vez por idea idempotente, versiones append-only, re-narración que archiva). Vuelo y par del gate verdes, auditados. | ✅ hecho |
+
+### Deltas aceptados del frente 14 (veredicto del fundador, 2026-07-17)
+
+- **"Números que faltan" refleja los faltantes REALES del motor** (días de cobro/inventario/pago), no los ítems ilustrativos del dibujo (tiempo, puesto, merma). **Delta aceptado a favor de la app:** el canon ilustra, el motor confiesa. Un faltante inventado sería una mentira bonita; el real es una guía honesta.
+- **Escenarios:** ganancia **NETA de fijos** (como el canon: techo sano $3.900 = 30×170−1.200). La fila "Tu ritmo de hoy" (volumen actual) aparece **solo si el usuario declaró `unidades_vendidas`**; sin ese dato, las dos honestas (pesimista y capacidad plena). Jamás se inventa la base.
 
 **Resumen:** 2 trabajos (14 Tus Números, 12 Cierre honesto), 2 deltas de peso
 (04 Exploración móvil, 07 Potenciadores/packs), 3 deltas menores de pulido

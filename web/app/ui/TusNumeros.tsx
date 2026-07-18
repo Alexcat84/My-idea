@@ -242,30 +242,8 @@ function Palancasseccion({ pal, u }: { pal: Palancas; u: string }) {
 }
 
 // ── escenarios ─────────────────────────────────────────────────────────────
-interface FilaEsc {
-  nombre: string;
-  sub: string;
-  ganancia: number | null;
-}
-function filasEscenarios(t: Tablero): FilaEsc[] {
-  const esc = t.reporte.escenarios as unknown as Record<string, unknown>;
-  const filas: FilaEsc[] = [];
-  const n = (x: unknown) => (typeof x === "number" ? x : null);
-  if ("pesimista" in esc) {
-    const p = esc.pesimista as { unidades_mes?: number; margen_mensual?: number } | null;
-    const b = esc.base as { unidades_mes?: number; margen_mensual?: number } | null;
-    if (p) filas.push({ nombre: "Pesimista", sub: `${p.unidades_mes} al mes`, ganancia: n(p.margen_mensual) });
-    if (b) filas.push({ nombre: "A capacidad plena", sub: `${b.unidades_mes} al mes`, ganancia: n(b.margen_mensual) });
-  } else {
-    for (const [k, etq] of [["50%", "mitad de tu meta"], ["100%", "tu meta"], ["200%", "el doble"]] as const) {
-      const e = esc[k] as { unidades?: number; margen_total?: number } | null;
-      if (e) filas.push({ nombre: etq, sub: `${e.unidades} al mes`, ganancia: n(e.margen_total) });
-    }
-  }
-  return filas;
-}
 function Escenarios({ t }: { t: Tablero }) {
-  const filas = filasEscenarios(t);
+  const filas = t.escenariosFilas;
   if (filas.length === 0) return null;
   return (
     <div className="overflow-hidden rounded-panel border border-hairline">

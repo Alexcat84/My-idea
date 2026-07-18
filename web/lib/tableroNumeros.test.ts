@@ -63,3 +63,32 @@ describe("armarTablero: ensamblado sobre los dos casos del canon", () => {
     expect(t.palancas.volumen.recomendada).toBe(true);
   });
 });
+
+describe("escenariosFilas: ganancia NETA de fijos, y base solo si hay volumen declarado", () => {
+  // VELAS sin unidades_vendidas: capacidad 5/sem -> 20/mes.
+  //   pesimista 50% = 10 ; contribucion 10 x -4 = -40 ; neto -40 - 200 = -240
+  //   capacidad plena = 20 ; contribucion 20 x -4 = -80 ; neto -80 - 200 = -280
+  //   SIN "Tu ritmo de hoy" (no se declaro el volumen).
+  it("velas: 2 filas honestas, netas, sin base inventada", () => {
+    const t = armarTablero(numeros({ costo_materiales_unidad: 30, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 38, costos_fijos_mensuales: 200, capacidad_semanal: 5 }));
+    expect(t.escenariosFilas.map((f) => f.nombre)).toEqual(["Pesimista", "A capacidad plena"]);
+    expect(t.escenariosFilas[0]).toEqual({ nombre: "Pesimista", sub: "10 al mes", ganancia: -240 });
+    expect(t.escenariosFilas[1].ganancia).toBe(-280);
+  });
+
+  // VELAS con unidades_vendidas = 15 -> aparece "Tu ritmo de hoy":
+  //   15 x -4 = -60 ; neto -60 - 200 = -260
+  it("velas con volumen declarado: aparece 'Tu ritmo de hoy' (3 filas)", () => {
+    const t = armarTablero(numeros({ costo_materiales_unidad: 30, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 38, costos_fijos_mensuales: 200, capacidad_semanal: 5, unidades_vendidas: 15 }));
+    expect(t.escenariosFilas.map((f) => f.nombre)).toEqual(["Pesimista", "Tu ritmo de hoy", "A capacidad plena"]);
+    expect(t.escenariosFilas[1]).toEqual({ nombre: "Tu ritmo de hoy", sub: "15 al mes", ganancia: -260 });
+  });
+
+  // KITS: capacidad plena 30 ; contribucion 30 x 170 = 5100 ; neto 5100 - 1200 = 3900
+  //   (calza EXACTO con el techo del canon: $3.900).
+  it("kits: la capacidad plena da $3.900 netos, como el canon", () => {
+    const t = armarTablero(numeros({ costo_materiales_unidad: 100, horas_por_unidad: 4, valor_hora: 20, precio_tentativo: 350, costos_fijos_mensuales: 1200, capacidad_semanal: 7.5 }));
+    const plena = t.escenariosFilas.find((f) => f.nombre === "A capacidad plena");
+    expect(plena).toEqual({ nombre: "A capacidad plena", sub: "30 al mes", ganancia: 3900 });
+  });
+});
