@@ -510,8 +510,11 @@ async function main() {
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_camino_SOLOCANON_380.png", "Cierre honesto camino movil 380", true);
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON.png", "Cierre honesto mundo desktop", true);
   await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON_380.png", "Cierre honesto mundo movil 380", true);
-  // Canon 2.0: Tus Números (canon 14, pantalla nueva) — la app aún no la tiene
-  // (FASE B item 6). Sus 4 frames van solo-canon hasta que /idea/[id]/numeros exista.
+  // Canon 2.0: Tus Números (canon 14). La pantalla /idea/[id]/numeros YA existe
+  // (FASE B, C4). El par app-vs-canon en dos viewports lo produce su capturador
+  // dedicado, scripts/gate_numeros.ts (siembra pérdida+sano y navega a la ruta),
+  // porque no vive en el flujo lineal de este gate. Aquí quedan los frames del
+  // canon como referencia rápida.
   await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_perdida_SOLOCANON.png", "Tus Numeros perdida desktop", true);
   await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_perdida_SOLOCANON_380.png", "Tus Numeros perdida movil 380", true);
   await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_sano_SOLOCANON.png", "Tus Numeros sano desktop", true);
