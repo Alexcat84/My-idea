@@ -17,6 +17,7 @@
  */
 import { useState, type ReactNode } from "react";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import type { EstadoMundo } from "@/lib/engine/previewMundos";
 import { PRECIOS } from "@/lib/precios";
 
 interface Pack {
@@ -33,9 +34,12 @@ interface Props {
   /** Fase 4.2: los mundos que el usuario dio por completados. Su chip cambia de
    * "Activo · n/m" (azul) a "Completado" (verde): el mundo tuvo un final. */
   mundosCompletados?: string[];
+  /** Fase 4.5: el estado de cada mundo (bloqueado / abierto / diagnostico_listo
+   * / plan_comprado), calculado por el padre con estadoMundo(). */
+  estadosMundo: Record<string, EstadoMundo>;
   onVerMundo: (dominio: string) => void;
-  /** Beta: activar un mundo (gratis hasta la ETAPA 2). El padre refresca sus
-   * unlocks y entra al mundo. */
+  /** Fase 4.5: ABRIR un mundo es gratis (el cobro vive en la entrega de su
+   * plan). El padre refresca sus unlocks y entra al mundo. */
   onActivarMundo: (dominio: string) => void;
 }
 
@@ -110,22 +114,19 @@ export function PotenciaTuIdea({
   unlocks,
   progresoMundos,
   mundosCompletados = [],
+  estadosMundo,
   onVerMundo,
   onActivarMundo,
 }: Props) {
   const [activando, setActivando] = useState<string | null>(null);
   const [errorEn, setErrorEn] = useState<string | null>(null);
+  const [avisoBloqueado, setAvisoBloqueado] = useState<string | null>(null);
   const packs = (catalogo as { packs: Pack[] }).packs;
 
-  // Beta: el cobro de creditos duerme hasta la ETAPA 2 (ledger, migraciones
-  // 020-024 sin aplicar). Mientras tanto, activar un mundo es GRATIS y para
-  // todos: la web esta abierta y el fundador debe poder probar los 7 por igual.
-  // El endpoint /unlock ya es un stub sin cobro; aqui va el boton que faltaba.
-  //
-  // ── ANCLA para la ETAPA 2: cuando el ledger despierte, esta funcion verifica
-  // saldo ANTES del POST y descuenta a la activacion (los `creditos_activar` del
-  // catalogo). El boton pasa de "Activar (beta)" a "Activar · N creditos". El
-  // resto del flujo -- unlock -> world/start -> plan -- no cambia.
+  // Fase 4.5 (PREVIEW_MUNDOS_PLAN): abrir un mundo es GRATIS, siempre. Lo que
+  // se compra es su PLAN, a la entrega (ancla ETAPA 2 en la ruta del plan).
+  // Esta funcion solo crea la fila (unlock stub) para que la seccion del mundo
+  // exista en Manos a la Obra.
   async function activarMundo(pack: Pack) {
     setActivando(pack.clave);
     setErrorEn(null);
@@ -152,21 +153,30 @@ export function PotenciaTuIdea({
       {/* Canon 05: Tus Números NO va aquí (se dedujo: ya es la fila-CTA bajo el
           plan). Este grid es solo los mundos del catálogo. */}
       <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Los mundos del catálogo */}
+        {/* Los mundos del catálogo — Fase 4.5: los CUATRO estados del preview
+            (bloqueado / abierto / diagnóstico listo / plan comprado). */}
         {packs.map((p) => {
-          const activo = unlocks.includes(p.clave);
+          const estado = estadosMundo[p.clave] ?? "abierto";
+          const abierto = unlocks.includes(p.clave);
           const completado = mundosCompletados.includes(p.clave);
           const progreso = progresoMundos[p.clave] ?? null;
+          const comprado = estado === "plan_comprado";
+          const bloqueado = estado === "bloqueado";
+          const destacado = comprado || estado === "diagnostico_listo";
           return (
             <button
               key={p.clave}
-              onClick={() => (activo ? onVerMundo(p.clave) : activarMundo(p))}
+              onClick={() => {
+                if (bloqueado) setAvisoBloqueado(p.clave);
+                else if (abierto) onVerMundo(p.clave);
+                else activarMundo(p);
+              }}
               disabled={activando !== null}
-              className={claseCard + " " + (activo ? "border-accent/45" : "border-hairline") + " disabled:opacity-60"}
+              className={claseCard + " " + (destacado ? "border-accent/45" : "border-hairline") + " disabled:opacity-60"}
               data-transiciona
             >
               <div className="mb-3.5 flex items-center justify-between gap-2">
-                <Icono clave={p.clave} activo={activo} />
+                <Icono clave={p.clave} activo={destacado} />
                 {completado ? (
                   /* Fase 4.2: el mundo con final. Forma (el check) además de
                      color, como el resto del canon. */
@@ -176,36 +186,45 @@ export function PotenciaTuIdea({
                     </svg>
                     Completado
                   </span>
-                ) : activo ? (
+                ) : comprado ? (
                   <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
                     Activo{progreso ? <> · <span className="text-done">{progreso.hechos}/{progreso.total}</span></> : ""}
                   </span>
+                ) : estado === "diagnostico_listo" ? (
+                  /* El estado protagonista: el escaparate espera. */
+                  <span className="inline-flex shrink-0 items-center rounded-full border border-accent/50 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
+                    Listo para tu plan
+                  </span>
+                ) : bloqueado ? (
+                  <span className="inline-flex shrink-0 items-center rounded-full border border-hairline px-2.5 py-[3px] text-[10.5px] font-bold text-dim">
+                    Se abre con tu plan
+                  </span>
                 ) : (
-                  /* Beta: sin candado. La tarjeta invita a ACTIVAR (gratis
-                     hasta la ETAPA 2). El precio del catálogo se muestra tachado
-                     al lado, para que se lea que es cortesía de beta y no que
-                     siempre fue gratis. */
-                  <span className="flex shrink-0 items-center gap-2">
-                    <span className="text-[10.5px] font-medium text-dim/60 line-through">
-                      {p.creditos_activar} créditos
-                    </span>
-                    <span className="inline-flex items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-                      {activando === p.clave ? "Activando…" : "Activar · beta"}
-                    </span>
+                  <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
+                    {activando === p.clave ? "Abriendo…" : "Explóralo gratis"}
                   </span>
                 )}
               </div>
-              <p className={"text-[15px] font-semibold" + (activo ? "" : " text-dim")}>{p.nombre}</p>
-              <p className={"mt-1.5 text-[12.5px] leading-[1.55] [text-wrap:pretty] text-dim" + (activo ? "" : " opacity-75")}>
+              <p className={"text-[15px] font-semibold" + (destacado ? "" : " text-dim")}>{p.nombre}</p>
+              <p className={"mt-1.5 text-[12.5px] leading-[1.55] [text-wrap:pretty] text-dim" + (destacado ? "" : " opacity-75")}>
                 {p.promesa}
               </p>
-              {!activo && (
+              {!comprado && !completado && (
                 <p className="mt-2 text-[12px] text-dim/70">
                   {errorEn === p.clave ? (
-                    "No pudimos activarlo; intenta de nuevo."
+                    "No pudimos abrirlo; intenta de nuevo."
+                  ) : avisoBloqueado === p.clave ? (
+                    "Primero genera el plan de tu idea."
+                  ) : estado === "diagnostico_listo" ? (
+                    <>
+                      Tu diagnóstico te espera · su plan:{" "}
+                      <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
+                    </>
                   ) : (
                     <>
-                      {/* Canon 05/07: precio de catálogo tachado, leyendo de precios.ts. */}
+                      {/* Fase 4.5: el preview es gratis; lo que se compra es el
+                          plan (precio de catálogo, leyendo de precios.ts). */}
+                      El preview es gratis · su plan:{" "}
                       <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
                     </>
                   )}

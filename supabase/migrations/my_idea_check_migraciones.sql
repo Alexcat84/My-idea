@@ -252,5 +252,32 @@ FROM (
         AND policyname='project_numeros_versiones_own'
     )
 
+  UNION ALL
+  -- 028 · Fase 4.5 preview de los mundos: project_unlocks gana el escaparate
+  -- (preview_at, preview_session_id, resumen_md/resumen_at) y el ancla del
+  -- cobro a la entrega (plan_pagado_at). Backfill: unlock viejo con plan de su
+  -- dominio queda como comprado.
+  SELECT '028', 'project_unlocks.preview_at + preview_session_id + resumen_md/_at + plan_pagado_at',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='preview_at'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='preview_session_id'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='resumen_md'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='resumen_at'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='plan_pagado_at'
+    )
+
 ) checks
 ORDER BY num;

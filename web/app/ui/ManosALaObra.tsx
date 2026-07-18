@@ -19,7 +19,9 @@ import { CampoConVoz } from "./CampoConVoz";
 import { DetalleActividad } from "./DetalleActividad";
 import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
-import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
+import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
+import { Markdown } from "./Markdown";
+import { PRECIOS } from "@/lib/precios";
 import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 
@@ -88,6 +90,12 @@ interface MundoInfo {
   plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
   /** Fase 4.2: el usuario dio este mundo por completado. null = abierto. */
   completadoAt?: string | null;
+  /** Fase 4.5 (preview): el diagnóstico persistido (el escaparate) y la
+   * sesión desde la que la compra genera el plan sin re-entrevistar. */
+  resumenMd?: string | null;
+  resumenAt?: string | null;
+  previewSessionId?: string | null;
+  planPagadoAt?: string | null;
 }
 
 interface Props {
@@ -130,6 +138,9 @@ interface Props {
   onSeguimientoIniciado: (turno: unknown) => void;
   /** POST world/start devolvió el primer turno del mundo */
   onMundoIniciado: (turno: unknown, dominio: string) => void;
+  /** Fase 4.5: comprar el plan del mundo desde su escaparate (el diagnóstico).
+   * El padre genera el plan DESDE la sesión del preview, sin re-entrevistar. */
+  onComprarPlanMundo: (dominio: string, sessionId: string) => void;
 }
 
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
@@ -832,6 +843,7 @@ export function ManosALaObra({
   onItemActualizado,
   onSeguimientoIniciado,
   onMundoIniciado,
+  onComprarPlanMundo,
 }: Props) {
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
@@ -1276,9 +1288,18 @@ export function ManosALaObra({
                     </svg>
                     Completado
                   </span>
-                ) : (
+                ) : grupo ? (
                   <span className="inline-flex items-center rounded-full border border-done/45 px-3 py-1 text-[11px] font-bold text-done">
-                    {grupo ? `Mundo activo · ${c.hechos}/${c.total}` : "Mundo activo"}
+                    Mundo activo · {c.hechos}/{c.total}
+                  </span>
+                ) : mundo.resumenMd && !mundo.plan ? (
+                  /* Fase 4.5: el estado protagonista del preview. */
+                  <span className="inline-flex items-center rounded-full border border-accent/50 bg-accent/10 px-3 py-1 text-[11px] font-bold text-accent">
+                    Listo para generar tu plan
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center rounded-full border border-accent/45 px-3 py-1 text-[11px] font-bold text-accent">
+                    {mundo.plan ? "Mundo activo" : "Explóralo gratis"}
                   </span>
                 )}
               </div>
@@ -1292,7 +1313,7 @@ export function ManosALaObra({
 
               {/* mini viaje del mundo: Exploración → Plan → Manos a la Obra */}
               <div className="mt-3 flex items-center gap-2.5 text-[12px] text-dim">
-                <span className={mundo.plan ? "text-accent" : ""}>Exploración</span>
+                <span className={mundo.plan || mundo.resumenMd ? "text-accent" : ""}>Exploración</span>
                 <span className="w-3 border-t-2 border-dashed border-white/20" />
                 <span className={mundo.plan ? "text-accent" : ""}>Plan</span>
                 <span className="w-3 border-t-2 border-dashed border-white/20" />
@@ -1305,13 +1326,37 @@ export function ManosALaObra({
                 <div className="mt-4">
                   <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                 </div>
+              ) : mundo.resumenMd && !mundo.plan ? (
+                /* Fase 4.5: EL ESCAPARATE. El diagnóstico persiste y se relee;
+                   la compra genera el plan desde la sesión del preview, sin
+                   re-entrevistar. Diagnóstico, jamás plan encubierto (§3). */
+                <div className="mt-4">
+                  <div className="rounded-panel border border-accent/30 bg-accent/[0.04] p-5">
+                    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
+                      Tu diagnóstico{mundo.resumenAt ? ` · ${fechaSello(mundo.resumenAt)}` : ""}
+                    </p>
+                    <Markdown>{mundo.resumenMd}</Markdown>
+                  </div>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <button
+                      onClick={() => mundo.previewSessionId && onComprarPlanMundo(mundo.dominio, mundo.previewSessionId)}
+                      disabled={!mundo.previewSessionId}
+                      className="rounded-[10px] bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                    >
+                      Generar mi plan de {mundo.nombre}
+                    </button>
+                    <span className="text-[12.5px] text-dim">
+                      <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
+                    </span>
+                  </div>
+                </div>
               ) : (
                 <button
                   onClick={() => arrancarMundo(mundo.dominio)}
                   disabled={arrancandoMundo !== null}
                   className="mt-4 rounded-[10px] bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
                 >
-                  {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo"}
+                  {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo · gratis"}
                 </button>
               )}
 

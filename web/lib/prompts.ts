@@ -31,6 +31,7 @@ interface PromptsShape {
   SYSTEM_ORGANIZADOR: string;
   SYSTEM_REPORTE: string;
   SYSTEM_CLASIFICAR_OFERTA: string;
+  SYSTEM_DIAGNOSTICO_MUNDO: string;
 }
 
 const prompts = promptsJson as PromptsShape;
@@ -46,3 +47,4 @@ export const SYSTEM_JUEZ_SESION = prompts.SYSTEM_JUEZ_SESION;
 export const SYSTEM_ORGANIZADOR = prompts.SYSTEM_ORGANIZADOR;
 export const SYSTEM_REPORTE = prompts.SYSTEM_REPORTE;
 export const SYSTEM_CLASIFICAR_OFERTA = prompts.SYSTEM_CLASIFICAR_OFERTA;
+export const SYSTEM_DIAGNOSTICO_MUNDO = prompts.SYSTEM_DIAGNOSTICO_MUNDO;
