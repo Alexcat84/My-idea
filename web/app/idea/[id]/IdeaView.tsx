@@ -138,7 +138,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [enviando, setEnviando] = useState(false);
   const [listoParaPlan, setListoParaPlan] = useState(false);
   /** Fase 4.3 §2: el cierre honesto en pantalla (null = no hubo cierre). */
-  const [cierre, setCierre] = useState<{ mensaje: string; creditosDevueltos: number | null } | null>(null);
+  const [cierre, setCierre] = useState<{
+    tipo: "camino" | "mundo";
+    titulo: string | null;
+    cuerpo: string;
+    porque: string | null;
+    creditosDevueltos: number | null;
+  } | null>(null);
   // Phase 3.7.2 (la oferta honesta): temas sobre la mesa cuando el motor
   // OFRECE el plan (null = cierre sin vuelta: CTA unico) y la tarjeta
   // intermedia de contexto final.
@@ -213,10 +219,42 @@ export function IdeaView({ projectId }: { projectId: string }) {
       // recibia ni una palabra. Un cierre sin explicacion es degradacion
       // silenciosa en su cara.
       setPregunta(null);
+      // Canon 12: el cierre estructurado {titulo, cuerpo, porque}. Compat
+      // (amarre 1): si un payload viejo entrega solo `mensaje`, se usa de cuerpo
+      // sin titulo/porque, y nada se rompe ni se queda mudo.
+      const salio = data as {
+        cierre?: { tipo?: "camino" | "mundo"; titulo?: string | null; cuerpo?: string; porque?: string | null };
+        dominio?: string | null;
+      };
+      const c = salio.cierre;
       setCierre({
-        mensaje: data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
+        tipo: c?.tipo ?? (salio.dominio ? "mundo" : "camino"),
+        titulo: c?.titulo ?? null,
+        cuerpo: c?.cuerpo ?? data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
+        porque: c?.porque ?? null,
         creditosDevueltos: data.creditos_devueltos ?? null,
       });
+    }
+  }
+
+  /** Canon 12: "Explorar otro ángulo" tras un cierre de camino core: relanza
+   * la exploración sobre la misma idea (mismo flujo que el CTA de Claridad). */
+  async function explorar() {
+    setEnviando(true);
+    setError(null);
+    try {
+      const inicio = await fetch("/api/session/start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ texto: detalle?.idea.entrada_original, project_id: projectId }),
+      });
+      if (inicio.status === 429) setError(((await inicio.json()) as { error: string }).error);
+      else if (!inicio.ok) setError(ERROR_GENERICO);
+      else procesarTurno((await inicio.json()) as RespuestaTurno);
+    } catch {
+      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+    } finally {
+      setEnviando(false);
     }
   }
 
@@ -700,17 +738,25 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   no una pantalla en blanco. */}
               {cierre && (
                 <CierreHonesto
-                  mensaje={cierre.mensaje}
+                  tipo={cierre.tipo}
+                  titulo={cierre.titulo}
+                  cuerpo={cierre.cuerpo}
+                  porque={cierre.porque}
                   creditosDevueltos={cierre.creditosDevueltos}
                   hayPlan={Boolean(planMd)}
                   onVolverAManos={() => {
                     setCierre(null);
                     irAManos();
                   }}
-                  onVerMundos={() => {
+                  onVolverAIdea={() => {
                     setCierre(null);
-                    document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" });
+                    router.replace(`/idea/${projectId}`, { scroll: false });
                   }}
+                  onExplorarOtroAngulo={() => {
+                    setCierre(null);
+                    void explorar();
+                  }}
+                  onVerMundos={() => setCierre(null)}
                 />
               )}
               {/* Tarjeta de pregunta (una a la vez) */}

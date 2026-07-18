@@ -1,76 +1,107 @@
-// Fase 4.3 §2 — el test del componente del cierre. Protege UNA promesa: cuando
-// el motor sale, la pantalla NUNCA se queda muda.
+// FASE B (canon 12) — el test del componente del cierre honesto. Protege las
+// promesas: la pantalla NUNCA queda muda (ley 4.3 §2), el "porque" es la caja
+// de vidrio (se pinta el motivo real cuando lo hay), el reembolso cuelga del
+// ledger, las salidas core dependen del plan, y el payload viejo (solo cuerpo,
+// sin titulo) no rompe nada (compat, amarre 1).
 //
-// Nota de dependencias (docs/APK_READINESS.md §6, el freno): NO se añadió jsdom
-// ni testing-library. `renderToStaticMarkup` viene de react-dom, que ya es
-// dependencia, y alcanza de sobra para lo que hay que proteger: que el mensaje
-// y las salidas ESTEN en la pantalla. Lo que no cubre (los clics) lo cubre el
-// vuelo, que navega la UI de verdad. Una libreria nueva para asertar que un
-// texto se renderiza habria sido justo la "conveniencia" que ese § prohibe.
+// Nota (docs/APK_READINESS.md §6): sin jsdom ni testing-library.
+// renderToStaticMarkup basta para asertar que el texto y las salidas ESTAN;
+// los clics los cubre el vuelo.
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { CierreHonesto } from "./CierreHonesto";
 
-const MENSAJE_MUNDO =
-  "Calidad y Confianza está pensado para negocios con más estructura de la que tu proyecto " +
-  "necesita hoy; te lo digo antes de hacerte perder tiempo.";
-
 function pintar(props: Partial<Parameters<typeof CierreHonesto>[0]> = {}) {
   return renderToStaticMarkup(
     createElement(CierreHonesto, {
-      mensaje: MENSAJE_MUNDO,
+      tipo: "mundo",
+      titulo: "Calidad y Confianza no es para esta idea, todavía.",
+      cuerpo: "Exploré este mundo con lo que hay hoy y no encontré un subproyecto que te sume.",
+      porque: null,
       hayPlan: true,
       onVolverAManos: () => {},
+      onVolverAIdea: () => {},
+      onExplorarOtroAngulo: () => {},
       onVerMundos: () => {},
       ...props,
     })
   );
 }
 
-describe("CierreHonesto — la pantalla jamás queda muda (Fase 4.3 §2)", () => {
-  it("dice el mensaje del cierre, literal y completo", () => {
-    expect(pintar()).toContain("está pensado para negocios con más estructura");
+describe("CierreHonesto (canon 12) — la pantalla jamás queda muda", () => {
+  it("pinta el eyebrow, el título y el cuerpo del servidor", () => {
+    const html = pintar();
+    expect(html).toContain("Un alto honesto");
+    expect(html).toContain("no es para esta idea, todav");
+    expect(html).toContain("no encontré un subproyecto que te sume");
   });
 
-  it("nunca es un cierre sin salidas: con plan, ofrece Manos a la Obra y los mundos", () => {
-    const html = pintar({ hayPlan: true });
+  it("se anuncia a lectores de pantalla (aria-live)", () => {
+    expect(pintar()).toContain('aria-live="polite"');
+  });
+
+  // Amarre 2: el "porque" es la caja de vidrio, el motivo REAL del intérprete.
+  it("con motivo real, pinta la caja 'Por qué este mundo, no ahora' con ese texto", () => {
+    const html = pintar({ tipo: "mundo", porque: "este mundo brilla cuando ya tienes clientes que vuelven" });
+    expect(html).toContain("Por qué este mundo, no ahora");
+    expect(html).toContain("este mundo brilla cuando ya tienes clientes que vuelven");
+  });
+
+  it("en el camino core, la caja se llama 'Lo que vi'", () => {
+    const html = pintar({ tipo: "camino", porque: "no hay señal de demanda que sostenga las etapas" });
+    expect(html).toContain("Lo que vi");
+    expect(html).toContain("no hay señal de demanda que sostenga las etapas");
+  });
+
+  it("sin motivo (null), NO fabrica una caja de porqué", () => {
+    const html = pintar({ porque: null });
+    expect(html).not.toContain("Por qué este mundo");
+    expect(html).not.toContain("Lo que vi");
+  });
+
+  // Salidas del canon: mundo vs camino, y el core condicionado al plan.
+  it("mundo: ofrece Manos a la Obra y Ver los otros mundos", () => {
+    const html = pintar({ tipo: "mundo" });
     expect(html).toContain("Volver a Manos a la Obra");
     expect(html).toContain("Ver los otros mundos");
+    expect(html).toContain("Tu viaje principal sigue intacto");
   });
 
-  it("sin plan todavía, la única salida honesta son los mundos", () => {
-    const html = pintar({ hayPlan: false });
+  it("camino CON plan: Volver a Manos a la Obra + Explorar otro ángulo", () => {
+    const html = pintar({ tipo: "camino", hayPlan: true });
+    expect(html).toContain("Volver a Manos a la Obra");
+    expect(html).toContain("Explorar otro ángulo de la idea");
+    expect(html).not.toContain("Volver a mi idea");
+  });
+
+  it("camino SIN plan (primera exploración): Volver a mi idea, no a Manos", () => {
+    const html = pintar({ tipo: "camino", hayPlan: false });
+    expect(html).toContain("Volver a mi idea");
     expect(html).not.toContain("Volver a Manos a la Obra");
-    expect(html).toContain("Ver los otros mundos");
   });
 
-  // Fase 4.3.2 (regla de claims): la línea de reembolso cuelga de un evento del
-  // ledger (creditosDevueltos), JAMÁS de un flag. Es una afirmación de dinero.
-  it("con créditos DE VERDAD devueltos, lo dice con el monto", () => {
-    expect(pintar({ creditosDevueltos: 3 })).toContain("Te devolvimos 3 créditos");
-    expect(pintar({ creditosDevueltos: 1 })).toContain("Te devolvimos 1 crédito"); // singular
+  // Amarre reembolso solo-con-ledger.
+  it("con créditos DE VERDAD devueltos: chip + nota con el monto", () => {
+    const html = pintar({ tipo: "mundo", creditosDevueltos: 3 });
+    expect(html).toContain("Activación devuelta · 3 créditos");
+    expect(html).toContain("Te devolvimos 3 créditos");
   });
 
   it("en beta (creditosDevueltos null) NO afirma ningún reembolso", () => {
-    const html = pintar({ creditosDevueltos: null });
+    const html = pintar({ tipo: "mundo", creditosDevueltos: null });
+    expect(html).not.toContain("Activación devuelta");
     expect(html).not.toContain("Te devolvimos");
-    expect(html).not.toContain("crédito");
   });
 
   it("0 créditos tampoco afirma nada (no hubo consumo)", () => {
-    expect(pintar({ creditosDevueltos: 0 })).not.toContain("Te devolvimos");
+    expect(pintar({ tipo: "mundo", creditosDevueltos: 0 })).not.toContain("Te devolvimos");
   });
 
-  it("el cierre core también habla: el mensaje viene del servidor, no se inventa aquí", () => {
-    const html = pintar({
-      mensaje: "Tu idea queda guardada tal como está: vuelve cuando quieras y seguimos desde aquí.",
-      creditosDevueltos: null,
-    });
+  // Amarre 1: compat. Payload viejo/plano (solo cuerpo, sin título) no rompe.
+  it("compat: sin título estructurado, pinta el cuerpo y no se queda mudo", () => {
+    const html = pintar({ titulo: null, cuerpo: "Tu idea queda guardada tal como está: vuelve cuando quieras." });
     expect(html).toContain("Tu idea queda guardada tal como está");
-  });
-
-  it("se anuncia a los lectores de pantalla (aria-live): un cierre no es decorado", () => {
-    expect(pintar()).toContain('aria-live="polite"');
+    expect(html).toContain('aria-live="polite"');
   });
 });
