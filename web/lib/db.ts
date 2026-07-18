@@ -38,6 +38,9 @@ export interface Proyecto {
   /** Fase 4.0 §8 (acta de cierre): por qué el usuario cerró la idea aquí, en
    * sus palabras. null si cerró sin escribir nada (el campo es opcional). */
   cierre_motivo?: string | null;
+  /** FASE B (canon 14, migration 027): cuándo se activó Tus Números para esta
+   * idea. Ancla del cobro UNA vez por idea (ETAPA 2). null = no activado. */
+  tus_numeros_activado_at?: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -127,6 +130,126 @@ export async function actualizarProyecto(
     .update({ ...campos, updated_at: ahora() })
     .eq("id", projectId);
   if (error) throw error;
+}
+
+// ── FASE B (canon 14, migration 027): Tus Numeros como TABLERO VIVO ──────────
+
+/** Una version de cifras guardada. La tabla es APPEND-ONLY: cada fila es un
+ * snapshot inmutable, la historia no se reescribe (no hay UPDATE nunca). */
+export interface VersionNumeros {
+  id: string;
+  project_id: string;
+  numeros: NumerosProyecto;
+  tipo_oferta: string | null;
+  calculo: unknown | null;
+  narracion: string | null;
+  narracion_at: string | null;
+  created_at: string;
+}
+
+/**
+ * Activa Tus Numeros para una idea de forma IDEMPOTENTE: el ancla del cobro
+ * UNA vez por idea (ETAPA 2). El WHERE atomico (`tus_numeros_activado_at IS
+ * NULL`, via .is()) garantiza que dos requests simultaneos no marquen dos
+ * veces: la base serializa el UPDATE, el primero setea, el segundo ya no
+ * matchea y afecta 0 filas. `activadoAhora` es true solo para el que
+ * realmente activo: AHI, en la ETAPA 2, ira el cobro de PRECIOS.tus_numeros,
+ * una sola vez, nunca en el camino idempotente.
+ */
+export async function activarTusNumeros(
+  supabase: SupabaseClient,
+  projectId: string
+): Promise<{ activadoAhora: boolean; activadoAt: string | null }> {
+  const ts = ahora();
+  const { data, error } = await supabase
+    .from("projects")
+    .update({ tus_numeros_activado_at: ts, updated_at: ts })
+    .eq("id", projectId)
+    .is("tus_numeros_activado_at", null)
+    .select("tus_numeros_activado_at");
+  if (error) throw error;
+  const filas = (data ?? []) as { tus_numeros_activado_at: string }[];
+  if (filas.length > 0) {
+    return { activadoAhora: true, activadoAt: filas[0].tus_numeros_activado_at };
+  }
+  // Ya estaba activo (o no es del usuario): idempotente, sin doble marca.
+  const proyecto = await obtenerProyecto(supabase, projectId);
+  return { activadoAhora: false, activadoAt: proyecto?.tus_numeros_activado_at ?? null };
+}
+
+/** Inserta una version de cifras. Solo INSERT, jamas UPDATE: corregir cifras
+ * o re-narrar crea una fila nueva y la anterior queda archivada con su fecha. */
+export async function insertarVersionNumeros(
+  supabase: SupabaseClient,
+  projectId: string,
+  version: {
+    numeros: NumerosProyecto;
+    tipoOferta?: string | null;
+    calculo?: unknown;
+    narracion?: string | null;
+    narracionAt?: string | null;
+  }
+): Promise<string> {
+  const { data, error } = await supabase
+    .from("project_numeros_versiones")
+    .insert({
+      project_id: projectId,
+      numeros: version.numeros,
+      tipo_oferta: version.tipoOferta ?? null,
+      calculo: version.calculo ?? null,
+      narracion: version.narracion ?? null,
+      narracion_at: version.narracionAt ?? null,
+    })
+    .select("id")
+    .single();
+  if (error) throw error;
+  return (data as { id: string }).id;
+}
+
+/** La ultima version guardada (la vigente), o null si nunca se corrio. */
+export async function ultimaVersionNumeros(
+  supabase: SupabaseClient,
+  projectId: string
+): Promise<VersionNumeros | null> {
+  const { data, error } = await supabase
+    .from("project_numeros_versiones")
+    .select("*")
+    .eq("project_id", projectId)
+    .order("created_at", { ascending: false })
+    .limit(1);
+  if (error) throw error;
+  const filas = data as VersionNumeros[];
+  return filas.length > 0 ? filas[0] : null;
+}
+
+/** El historial (metadatos ligeros, sin traer numeros/calculo/narracion
+ * completos), mas recientes primero: alimenta "calculado con tus cifras del
+ * [fecha]" y la lista de versiones. */
+export async function historialVersionesNumeros(
+  supabase: SupabaseClient,
+  projectId: string
+): Promise<Array<{ id: string; created_at: string; narracion_at: string | null }>> {
+  const { data, error } = await supabase
+    .from("project_numeros_versiones")
+    .select("id, created_at, narracion_at")
+    .eq("project_id", projectId)
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  return (data ?? []) as Array<{ id: string; created_at: string; narracion_at: string | null }>;
+}
+
+/** Cuantas re-narraciones del modelo se hicieron HOY para esta idea (freno del
+ * tope diario). Cuenta filas con narracion_at desde el inicio del dia UTC. */
+export async function contarNarracionesHoy(supabase: SupabaseClient, projectId: string): Promise<number> {
+  const inicioDia = new Date();
+  inicioDia.setUTCHours(0, 0, 0, 0);
+  const { count, error } = await supabase
+    .from("project_numeros_versiones")
+    .select("id", { count: "exact", head: true })
+    .eq("project_id", projectId)
+    .gte("narracion_at", inicioDia.toISOString());
+  if (error) throw error;
+  return count ?? 0;
 }
 
 /** Fase 3.8 — bitácora de eventos de PROYECTO (migration 018): el mueble

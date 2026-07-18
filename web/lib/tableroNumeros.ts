@@ -67,6 +67,7 @@ export interface Tablero {
   precio: ValorNumerico | null;
   margen: ValorNumerico | null;
   margenPct: ValorNumerico | null;
+  fijos: ValorNumerico | null;
   puntoEquilibrio: number | Rango | null;
   puntoEquilibrioNota?: string;
   barra: BarraVerdad;
@@ -105,6 +106,7 @@ export function armarTablero(
     precio,
     margen: margen.valor,
     margenPct: margen.porcentaje,
+    fijos: valorCampo(numeros, "costos_fijos_mensuales"),
     puntoEquilibrio: equilibrio.valor,
     puntoEquilibrioNota: equilibrio.nota,
     barra: barraVerdad(medio(costoUnitario), medio(precio)),
