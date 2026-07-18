@@ -131,3 +131,37 @@ y el tooltip). Nunca pintes `titulo_concepto` directo en una superficie de
 navegación. Y en el redactor del plan: prohibido citar títulos de nodo
 verbatim cuando traen jerga o anglicismos; el plan habla español llano
 siempre.
+
+## Los precios viven en precios.ts; nada más los define (ni canon, ni comentarios)
+
+**El principio (palabra del fundador):** *el crédito paga el trabajo del motor.
+Toda acción que invoca la API para pensar cobra su precio de catálogo; el cálculo
+determinístico y el registro de avance son gratis, siempre.*
+
+**Regla:** la única fuente de verdad de los precios (créditos por concepto)
+es `web/lib/precios.ts` — respaldada por el canon de cobro de
+`docs/FLUJO_TRACKING.md §5` y los seis puntos de la ETAPA 2. **Nada más define un
+precio:** ni el canon visual (`docs/diseno-canon/`, sus mockups y su
+`REGLAS_Y_TOKENS.md`), ni **un comentario de código**. Todos ellos **reflejan**
+`precios.ts`; jamás lo contradicen. Cualquier divergencia —un mockup, un
+comentario, una nota— se resuelve **a favor de `precios.ts`** y se corrige la
+fuente divergente; si viene de una entrega de diseño, se reporta como **errata**,
+no como cambio de política.
+
+**Por qué:** en la adopción del canon 2.0 (2026-07-17), la tabla de créditos de
+Design (`REGLAS_Y_TOKENS.md §3`) decía "Seguimiento core: Gratis (es el bucle
+del viaje principal)". Nadie autorizó ese cambio: `precios.ts` dice
+`seguimiento: 2` y `FLUJO_TRACKING §5` dice "2 core / 2 mundo". Un mockup no es
+una decisión de negocio; dejar que un HTML redefina un precio por descuido es
+cómo una política se cambia sin que nadie la cambie. (El mismo error se había
+colado en un comentario de `follow/route.ts` y en `FLUJO_TRACKING §9` en la Fase
+4.2 — mi drift, propagado a Design al entregarle ese documento; las tres
+corregidas a la vez. Un comentario o una nota que contradice `precios.ts` no es
+una segunda opinión: es un bug, y gana `precios.ts`.)
+
+**Cómo aplicarla:** antes de versionar cualquier entrega de canon, además del
+chequeo de acentos (`scripts/chequeo_acentos_canon.ts`), coteja toda cifra de
+precio del `REGLAS_Y_TOKENS.md` contra `precios.ts`. Si difieren, corrige el
+canon en la adopción, deja una nota de adopción citando `precios.ts`, y avísale
+a Design para que su próxima entrega venga alineada de origen. Ninguna ruta
+hardcodea números: leen de `precios.ts` / `packs_catalog.json`.

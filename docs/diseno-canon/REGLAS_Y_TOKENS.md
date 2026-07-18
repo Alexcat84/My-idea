@@ -43,9 +43,16 @@ catálogo tachado. El candado se retiró.
 | El organizador (Claridad) | Gratis, siempre |
 | La Exploración (entrevista + plan) | 5 créditos |
 | Activar un mundo | 3 créditos (gratis en beta) |
-| Seguimiento core | Gratis (es el bucle del viaje principal) |
-| Seguimiento de mundo | 2 créditos |
+| Seguimiento core | 2 créditos (gratis en beta) |
+| Seguimiento de mundo | 2 créditos (gratis en beta) |
 | Tus Números | 2 créditos |
+
+> **Corregido en adopción (2026-07-17):** la entrega de Design ponía
+> "Seguimiento core: Gratis (es el bucle del viaje principal)". Eso **no** es una
+> decisión del fundador — nadie autorizó ese cambio de política. La **fuente de
+> verdad de los precios es `web/lib/precios.ts`** (`seguimiento: 2`) + el canon de
+> cobro de `docs/FLUJO_TRACKING.md §5` ("2 core / 2 mundo"). El canon visual
+> **refleja** los precios, jamás los define. Se corrigió aquí a **2 créditos**.
 
 Los packs del centro de créditos (10, 30, 75) son estructura, no precio: el
 precio en dinero está por definir. Sin suscripción: créditos consumibles, y el
