@@ -25,6 +25,7 @@ describe("prompts.ts re-exporta byte a byte desde assets/prompts.json", () => {
     "SYSTEM_ORGANIZADOR",
     "SYSTEM_REPORTE",
     "SYSTEM_CLASIFICAR_OFERTA",
+    "SYSTEM_DIAGNOSTICO_MUNDO",
   ] as const;
 
   for (const nombre of nombres) {
