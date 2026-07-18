@@ -24,7 +24,7 @@ evidencia (el par app-vs-canon del gate); el fundador abre el par y confirma.
 | 04 | La Exploración | **Delta (móvil)** | `03_exploracion`, `03b_oferta_honesta`, `04a_plan_en_camino` (+`_380`) | desktop calza; el riel móvil de la app es un **Acordeón**, el canon 04 pide **hoja inferior "Recorrido"** a 380. | 🟡 parcial |
 | 05 | Tu Plan | **Delta menor** | `04_tu_plan` (+`_380`) | Tus Números **duplicado** (fila-CTA + tarjeta del grid; el canon lo pone solo como fila); paso 01 con doble "PASOS" y **sin la caja "ENTREGABLE" rotulada**; copy beta ("Gratis durante la beta · un toque lo activa" vs "gratis en beta"). Estructura calza. | ✅ visto en el par |
 | 06 | Manos a la Obra | **Calza** (reorganizado 4.3.2) | `05_manos` (+`_380`) | el replanteo del 380 ya se hizo esta sesión: "contar qué pasó" arriba, plegables, modo compacto. | ⏳ por confirmar |
-| 07 | Potenciadores y Créditos | **Delta** | `z_potenciadores_SOLOCANON` (el gate no maneja `/potenciadores` como par) | existe `/potenciadores` (centro de créditos), pero packs **5/12/30 vs canon 10/30/75**; el precio en dinero es stub de Stripe = **ETAPA 2**; la activación de potenciadores vive en el grid de Tu Plan. | 🟡 parcial |
+| 07 | Potenciadores y Créditos | **Delta** | `z_potenciadores_SOLOCANON` (el gate no maneja `/potenciadores` como par) | existe `/potenciadores` (centro de créditos); layout, candados beta y tratamiento visual van contra el canon 07. El **catálogo de packs** NO se alinea al dibujo: `precios.ts` no lo define, así que los bundles (5/12/30 app vs 10/30/75 dibujo) son **decisión pendiente del fundador (ETAPA 2)**; la pantalla lee de `precios.ts` con `$ —` deshabilitado donde falte definición. La activación de potenciadores vive en el grid de Tu Plan. | 🟡 parcial |
 | 08 | Mundos Activos | **Calza / delta menor** | `10_mundo_activo`, `10b_mundo_ritual`, `10c_mundo_cierre` (+`_380`) | subproyecto con follow + acta de cierre, implementado (v1.3.2 / 4.2). | ⏳ por confirmar |
 | 09 | La Celebración | **Calza / delta menor** | `09_celebracion_cumplimiento`, `09b_celebracion_ritmo` (+`_380`) | timeline azul→verde, dos variantes (3.8). | ⏳ por confirmar |
 | 10 | Modo y Fechas | **Calza** | `06_modo`, `07_baseline` (+`_380`) | elección de modo + ritual de fechas (3.8). | ⏳ por confirmar |
@@ -53,14 +53,27 @@ evidencia (el par app-vs-canon del gate); el fundador abre el par y confirma.
    canon; adaptar salidas core (primera exploración sin plan → "Volver a mi idea"); el reembolso.
 3. **La Exploración móvil (canon 04) — delta de peso.** El riel como hoja inferior "Recorrido"
    a 380 (hoy Acordeón).
-4. **Potenciadores y Créditos (canon 07) — delta.** Alinear packs a 10/30/75 y cotejar
-   `/potenciadores` contra el canon 07; la compra en dinero queda a ETAPA 2.
+4. **Potenciadores y Créditos (canon 07) — delta.** Layout, candados beta y tratamiento
+   visual contra el canon 07. El **catálogo de packs NO se alinea al dibujo** (repetiría el
+   drift de precios que ya cerramos: el canon refleja precios, jamás los define). `precios.ts`
+   no define bundles de compra, así que 5/12/30 (app) vs 10/30/75 (dibujo) son **decisión
+   pendiente del fundador para la ETAPA 2**: la pantalla lee de `precios.ts` con `$ —`
+   deshabilitado donde falte definición. La compra en dinero queda a ETAPA 2.
 5. **Deltas menores de pulido — Tu Plan (05), Home (01), Detalle (13).** Un commit de pulido
    cada uno o agrupados.
 6. **Confirmar los que calzan — Chispa (02), Claridad (03), Manos (06), Modo (10),
    Análisis (11), Mundos (08), Celebración (09).** Abrir el par, confirmar, tocar solo lo que difiera.
 
 Al cerrar los seis: tag `web-v1.3.0`.
+
+## Decisiones pendientes (no las toma la FASE B)
+
+- **Catálogo de packs del centro de créditos (07):** `precios.ts` **no** define bundles de
+  compra (solo precios por concepto; `packs_catalog.json` es de mundos, no de bundles). Hoy
+  hay 5/12/30 hardcodeados en `/potenciadores` y el dibujo de Design propone 10/30/75.
+  **Ninguno está autorizado.** La FASE B **no** alinea al dibujo (eso repetiría el drift de
+  precios): implementa la pantalla leyendo de `precios.ts`, con `$ —` deshabilitado donde falte
+  definición. **El fundador decide el catálogo en la ETAPA 2** (frente cuentas-y-créditos).
 
 ## Mapa gate → canon
 
