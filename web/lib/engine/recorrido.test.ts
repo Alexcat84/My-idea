@@ -113,6 +113,7 @@ describe("avanzarTurno: fase esperando_respuesta (orquestacion, interpretarMulti
         numerosDetectados: null,
         tipoOfertaDetectado: null,
         unidadVentaDetectada: null,
+        razonamiento: "por aqui no hay senal de demanda real que sostenga las etapas",
       },
       acumulado: usoVacio(),
       historialMensajes: [],
@@ -137,6 +138,9 @@ describe("avanzarTurno: fase esperando_respuesta (orquestacion, interpretarMulti
     expect(r.tipo).toBe("salio");
     if (r.tipo !== "salio") throw new Error("esperaba tipo=salio");
     expect(r.estado.fase).toBe("cerrada");
+    // Canon 12: el cierre del camino core carga el motivo REAL del interprete
+    // (la caja de vidrio "Lo que vi"), no una explicacion generica.
+    expect(r.cierreCamino?.motivo).toBe("por aqui no hay senal de demanda real que sostenga las etapas");
   });
 
   it("resultado=null (fallo de red/presupuesto) se propaga como error_temporal sin mutar la ruta", async () => {

@@ -232,5 +232,25 @@ FROM (
       WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='cierre_motivo'
     )
 
+  UNION ALL
+  -- 027 · FASE B (canon 14) Tus Numeros vivo: projects.tus_numeros_activado_at
+  -- (ancla de cobro una vez por idea, ETAPA 2) + tabla append-only
+  -- project_numeros_versiones (historial de cifras con su narracion
+  -- archivada) con su RLS. Se saltan 020-024 (reservadas a cuentas y creditos).
+  SELECT '027', 'projects.tus_numeros_activado_at + project_numeros_versiones (+RLS)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='projects' AND column_name='tus_numeros_activado_at'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='project_numeros_versiones'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_policies
+      WHERE schemaname='public' AND tablename='project_numeros_versiones'
+        AND policyname='project_numeros_versiones_own'
+    )
+
 ) checks
 ORDER BY num;

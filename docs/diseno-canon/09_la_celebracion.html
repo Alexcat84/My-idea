@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · La Celebración</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Celebracion cumplimiento desktop
+      - Celebracion cumplimiento movil 380
+      - Celebracion a mi ritmo desktop
+      - Celebracion a mi ritmo movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta; el timeline va de azul a verde)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 800px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-chip-proyecto { flex: none; font-size: 12px; font-weight: 600; color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.45); border-radius: 999px; padding: 5px 12px; }
+
+    .cel-cuerpo { max-width: 940px; width: 100%; margin: 0 auto; padding: 48px 40px 60px; }
+    .lienzo--movil .cel-cuerpo { padding: 32px 18px 48px; }
+
+    /* Heroe */
+    .cel-heroe { text-align: center; margin-bottom: 40px; }
+    .cel-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--verde); }
+    .cel-titulo { font-size: 40px; font-weight: 800; letter-spacing: -0.8px; margin: 14px 0 12px; }
+    .lienzo--movil .cel-titulo { font-size: 27px; }
+    .cel-idea { font-size: 16px; line-height: 1.5; color: var(--texto-dim); max-width: 640px; margin: 0 auto 22px; text-wrap: pretty; }
+    .cel-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.5); background: rgba(63, 185, 80, 0.08); border-radius: 999px; padding: 10px 22px; box-shadow: 0 0 24px rgba(63, 185, 80, 0.18); }
+
+    /* ==========================================================================
+       TIMELINE VERTICAL que se dibuja solo (azul arriba, verde abajo)
+       ========================================================================== */
+    .timeline { position: relative; padding: 20px 0 10px; }
+    .timeline-linea { position: absolute; left: 50%; top: 0; width: 3px; height: 100%; transform: translateX(-50%); border-radius: 3px; background: linear-gradient(180deg, var(--azul) 0%, var(--azul) 42%, var(--mundos) 55%, var(--verde) 72%, var(--verde) 100%); transform-origin: top; animation: dibujar-linea 1.8s ease-out forwards; }
+    .lienzo--movil .timeline-linea { left: 20px; }
+
+    .tl-fila { position: relative; display: grid; grid-template-columns: 1fr 44px 1fr; align-items: start; margin-bottom: 34px; opacity: 0; animation: aparecer 0.5s ease-out forwards; }
+    .lienzo--movil .tl-fila { grid-template-columns: 44px 1fr; margin-bottom: 26px; }
+    .tl-fila:nth-child(2) { animation-delay: 0.25s; }
+    .tl-fila:nth-child(3) { animation-delay: 0.45s; }
+    .tl-fila:nth-child(4) { animation-delay: 0.65s; }
+    .tl-fila:nth-child(5) { animation-delay: 0.85s; }
+    .tl-fila:nth-child(6) { animation-delay: 1.05s; }
+    .tl-fila:nth-child(7) { animation-delay: 1.25s; }
+    .tl-fila:nth-child(8) { animation-delay: 1.45s; }
+    .tl-fila:nth-child(9) { animation-delay: 1.65s; }
+
+    .tl-dot-col { grid-column: 2; display: flex; justify-content: center; padding-top: 4px; }
+    .lienzo--movil .tl-dot-col { grid-column: 1; }
+    .tl-dot { width: 13px; height: 13px; border-radius: 50%; border: 3px solid var(--negro); }
+    .tl-dot--azul { background: var(--azul); }
+    .tl-dot--mundos { background: var(--mundos); }
+    .tl-dot--verde { background: var(--verde); }
+
+    .tl-lado { padding-top: 0; }
+    .tl-fila--izq .tl-lado { grid-column: 1; text-align: right; padding-right: 8px; }
+    .tl-fila--der .tl-lado { grid-column: 3; text-align: left; padding-left: 8px; }
+    .lienzo--movil .tl-fila .tl-lado { grid-column: 2; text-align: left; padding: 0; }
+
+    .tl-fecha { font-size: 12.5px; color: var(--texto-dim); margin-bottom: 4px; }
+    .tl-titulo { font-size: 16px; font-weight: 700; line-height: 1.4; text-wrap: pretty; }
+    .tl-titulo--mundos { color: var(--mundos); }
+    .tl-sub { font-size: 13px; color: var(--texto-dim); margin-top: 4px; }
+    .tl-accion { font-size: 14.5px; font-weight: 600; line-height: 1.5; text-wrap: pretty; }
+
+    /* Diana final REALIZADA */
+    .tl-final { position: relative; display: flex; flex-direction: column; align-items: center; opacity: 0; animation: aparecer 0.5s ease-out 1.7s forwards; }
+    .lienzo--movil .tl-final { align-items: flex-start; padding-left: 4px; }
+    .tl-diana { width: 30px; height: 30px; border-radius: 50%; border: 3px solid var(--verde); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(63, 185, 80, 0.4); }
+    .tl-diana::after { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--verde); }
+    .tl-realizada { font-size: 15px; font-weight: 800; letter-spacing: 1.5px; color: var(--verde); margin-top: 12px; }
+    .tl-motivo { font-size: 13px; line-height: 1.6; color: var(--texto-dim); font-style: italic; max-width: 440px; text-align: center; margin-top: 10px; text-wrap: pretty; }
+    .lienzo--movil .tl-motivo { text-align: left; }
+
+    /* Estadisticas */
+    .cel-stats-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); margin: 48px 0 18px; text-wrap: pretty; }
+    .cel-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lienzo--movil .cel-stats { grid-template-columns: 1fr 1fr; }
+    .stat { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px; }
+    .stat-num { font-size: 30px; font-weight: 800; }
+    .stat-num small { font-size: 14px; font-weight: 600; color: var(--texto-dim); }
+    .stat-etq { font-size: 12.5px; color: var(--texto-dim); margin-top: 6px; }
+
+    /* Cumplimiento (solo en variante con fechas) */
+    .cel-cumplimiento { display: flex; gap: 22px; margin-top: 22px; font-size: 14px; }
+    .cumpl { font-weight: 700; }
+    .cumpl--verde { color: var(--verde); }
+    .cumpl--azul { color: var(--azul); }
+    .cumpl--ambar { color: var(--ambar); }
+
+    .cel-enlaces { display: flex; gap: 24px; margin-top: 30px; flex-wrap: wrap; }
+    .cel-enlace { font-size: 14.5px; color: var(--texto-dim); text-decoration: none; }
+    .cel-enlace--fuerte { color: var(--azul); font-weight: 600; }
+    .cel-enlace:hover { color: var(--texto); }
+
+    @keyframes dibujar-linea { from { transform: translateX(-50%) scaleY(0); } to { transform: translateX(-50%) scaleY(1); } }
+    @keyframes aparecer { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .timeline-linea { animation: none; transform: translateX(-50%) scaleY(1); }
+      .tl-fila, .tl-final { animation: none; opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · La Celebración</div>
+      <h1 class="galeria-titulo">La Celebración</h1>
+      <p class="galeria-descripcion">
+        El momento emocional del producto: aquí acaba la idea y nace el proyecto. El timeline se dibuja
+        solo y va de azul (el pensar del viaje) a verde (la ejecución en el mundo real); el hito de mundo
+        lleva el matiz de los mundos. Dos variantes: con cumplimiento (modo fechas) y a mi ritmo (sin
+        lenguaje de calendario). El motivo del cierre aparece discreto bajo REALIZADA. Desktop 1240 y
+        móvil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) CUMPLIMIENTO (modo fechas) · DESKTOP                        -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Celebracion cumplimiento desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de huerto urbano: de tres ventas entre amigos a tu primera venta real con desconocidos</span>
+              <span class="nav-chip-proyecto">&#10003; Proyecto</span>
+            </div>
+          </nav>
+
+          <div class="cel-cuerpo">
+            <div class="cel-heroe">
+              <div class="cel-eyebrow">Realizada</div>
+              <h2 class="cel-titulo">Aquí acaba tu idea y nace tu proyecto</h2>
+              <p class="cel-idea">Kits de huerto urbano: de tres ventas entre amigos a tu primera venta real con desconocidos</p>
+              <span class="cel-pill">&#10003; Proyecto</span>
+            </div>
+
+            <!-- TIMELINE -->
+            <div class="timeline">
+              <div class="timeline-linea"></div>
+
+              <div class="tl-fila tl-fila--izq"><div class="tl-lado"><div class="tl-fecha">15 de julio</div><div class="tl-titulo">La Chispa</div><div class="tl-sub">La idea nace</div></div><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div></div>
+              <div class="tl-fila tl-fila--der"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">15 de julio</div><div class="tl-titulo">Claridad</div><div class="tl-sub">Tu idea, organizada</div></div></div>
+              <div class="tl-fila tl-fila--izq"><div class="tl-lado"><div class="tl-fecha">18 de julio</div><div class="tl-titulo">Tu Plan · ciclo 1</div><div class="tl-sub">con línea base</div></div><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div></div>
+              <div class="tl-fila tl-fila--der"><div class="tl-dot-col"><span class="tl-dot tl-dot--mundos"></span></div><div class="tl-lado"><div class="tl-fecha">2 de agosto</div><div class="tl-titulo tl-titulo--mundos">Mundo activado: Calidad y Confianza</div></div></div>
+              <div class="tl-fila tl-fila--izq"><div class="tl-lado"><div class="tl-fecha">9 de agosto</div><div class="tl-accion">Identifica un mercado, feria o grupo en línea donde haya personas que no te conocen y agenda tu primera aparición con precio real esta semana, no la próxima.</div></div><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div></div>
+              <div class="tl-fila tl-fila--der"><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div><div class="tl-lado"><div class="tl-fecha">21 de agosto</div><div class="tl-accion">Arma un kit usando esa tarjeta por primera vez y anota dónde te atrasas o dónde el criterio no está claro: esos son los puntos que necesitas afinar.</div></div></div>
+              <div class="tl-fila tl-fila--izq"><div class="tl-lado"><div class="tl-fecha">3 de septiembre</div><div class="tl-accion">Consigue tu primera venta real a precio completo con alguien fuera de tu círculo y registra cuántas personas vieron el mensaje y cuantas compraron.</div></div><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div></div>
+
+              <div class="tl-final">
+                <span class="tl-diana"></span>
+                <div class="tl-realizada">REALIZADA</div>
+                <p class="tl-motivo">"La cierro porque ya vendí a cinco desconocidos a precio completo y dos me refirieron a alguien más: la apuesta central resultó verdad, el resto lo sostengo sin plan."</p>
+              </div>
+            </div>
+
+            <!-- ESTADISTICAS -->
+            <div class="cel-stats-titulo">Estadisticas de Kits de huerto urbano: de tres ventas entre amigos a tu primera venta real con desconocidos</div>
+            <div class="cel-stats">
+              <div class="stat"><div class="stat-num">51</div><div class="stat-etq">días desde la chispa</div></div>
+              <div class="stat"><div class="stat-num">2</div><div class="stat-etq">ciclos de plan</div></div>
+              <div class="stat"><div class="stat-num">23 <small>de 30</small></div><div class="stat-etq">acciones</div></div>
+              <div class="stat"><div class="stat-num">1</div><div class="stat-etq">mundo activado</div></div>
+            </div>
+            <div class="cel-cumplimiento">
+              <span class="cumpl cumpl--verde">14 a tiempo</span>
+              <span class="cumpl cumpl--azul">3 adelantadas</span>
+              <span class="cumpl cumpl--ambar">6 tardías</span>
+            </div>
+
+            <div class="cel-enlaces">
+              <a class="cel-enlace cel-enlace--fuerte">Ver análisis completo &rarr;</a>
+              <a class="cel-enlace">Volver a mis ideas</a>
+              <a class="cel-enlace">Reabrir esta idea</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) CUMPLIMIENTO (modo fechas) · MOVIL 380                      -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Celebracion cumplimiento movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones</span><span class="nav-chip-proyecto">&#10003;</span></div>
+          </nav>
+
+          <div class="cel-cuerpo">
+            <div class="cel-heroe">
+              <div class="cel-eyebrow">Realizada</div>
+              <h2 class="cel-titulo">Aquí acaba tu idea y nace tu proyecto</h2>
+              <p class="cel-idea">Kits de huerto urbano: de tres ventas entre amigos a tu primera venta real con desconocidos</p>
+              <span class="cel-pill">&#10003; Proyecto</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-linea"></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">15 de julio</div><div class="tl-titulo">La Chispa</div><div class="tl-sub">La idea nace</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">15 de julio</div><div class="tl-titulo">Claridad</div><div class="tl-sub">Tu idea, organizada</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">18 de julio</div><div class="tl-titulo">Tu Plan · ciclo 1</div><div class="tl-sub">con línea base</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--mundos"></span></div><div class="tl-lado"><div class="tl-fecha">2 de agosto</div><div class="tl-titulo tl-titulo--mundos">Mundo activado: Calidad y Confianza</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div><div class="tl-lado"><div class="tl-fecha">9 de agosto</div><div class="tl-accion">Identifica un mercado o grupo donde haya personas que no te conocen y agenda tu primera aparición con precio real esta semana.</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div><div class="tl-lado"><div class="tl-fecha">3 de septiembre</div><div class="tl-accion">Consigue tu primera venta real a precio completo con alguien fuera de tu círculo.</div></div></div>
+
+              <div class="tl-final">
+                <span class="tl-diana"></span>
+                <div class="tl-realizada">REALIZADA</div>
+                <p class="tl-motivo">"La cierro porque ya vendí a cinco desconocidos a precio completo y dos me refirieron a alguien más."</p>
+              </div>
+            </div>
+
+            <div class="cel-stats-titulo">Estadisticas del proyecto</div>
+            <div class="cel-stats">
+              <div class="stat"><div class="stat-num">51</div><div class="stat-etq">días desde la chispa</div></div>
+              <div class="stat"><div class="stat-num">2</div><div class="stat-etq">ciclos de plan</div></div>
+              <div class="stat"><div class="stat-num">23 <small>de 30</small></div><div class="stat-etq">acciones</div></div>
+              <div class="stat"><div class="stat-num">1</div><div class="stat-etq">mundo activado</div></div>
+            </div>
+            <div class="cel-cumplimiento">
+              <span class="cumpl cumpl--verde">14 a tiempo</span>
+              <span class="cumpl cumpl--azul">3 adelantadas</span>
+              <span class="cumpl cumpl--ambar">6 tardías</span>
+            </div>
+
+            <div class="cel-enlaces">
+              <a class="cel-enlace cel-enlace--fuerte">Ver análisis completo &rarr;</a>
+              <a class="cel-enlace">Volver a mis ideas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) A MI RITMO (sin cumplimiento) · DESKTOP                     -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Celebracion a mi ritmo desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Panaderia de masa madre con entrega por suscripción semanal en mi zona</span>
+              <span class="nav-chip-proyecto">&#10003; Proyecto</span>
+            </div>
+          </nav>
+
+          <div class="cel-cuerpo">
+            <div class="cel-heroe">
+              <div class="cel-eyebrow">Realizada</div>
+              <h2 class="cel-titulo">Aquí acaba tu idea y nace tu proyecto</h2>
+              <p class="cel-idea">Panaderia de masa madre con entrega por suscripción semanal en mi zona, empezando por los edificios de mi propia cuadra</p>
+              <span class="cel-pill">&#10003; Proyecto</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-linea"></div>
+              <div class="tl-fila tl-fila--izq"><div class="tl-lado"><div class="tl-fecha">3 de marzo</div><div class="tl-titulo">La Chispa</div><div class="tl-sub">La idea nace</div></div><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div></div>
+              <div class="tl-fila tl-fila--der"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">3 de marzo</div><div class="tl-titulo">Claridad</div><div class="tl-sub">Tu idea, organizada</div></div></div>
+              <div class="tl-fila tl-fila--izq"><div class="tl-lado"><div class="tl-fecha">6 de marzo</div><div class="tl-titulo">Tu Plan · ciclo 1</div><div class="tl-sub">a mi ritmo, sin fechas</div></div><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div></div>
+              <div class="tl-fila tl-fila--der"><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div><div class="tl-lado"><div class="tl-accion">Hornea tres tandas de prueba para vecinos reales y anota cuáles masas aguantan la entrega sin perder corteza ni humedad.</div></div></div>
+              <div class="tl-fila tl-fila--izq"><div class="tl-lado"><div class="tl-accion">Consigue tus primeros ocho suscriptores de una sola cuadra y define el día fijo de entrega que puedas sostener toda la temporada.</div></div><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div></div>
+              <div class="tl-fila tl-fila--der"><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div><div class="tl-lado"><div class="tl-accion">Cierra el primer mes cobrando por adelantado y revisa si el margen por hornada aguanta cuando compras harina en volumen.</div></div></div>
+
+              <div class="tl-final">
+                <span class="tl-diana"></span>
+                <div class="tl-realizada">REALIZADA</div>
+                <p class="tl-motivo">"Lo cierro porque ya tengo doce suscriptores estables y el horno no da para más por ahora: esto ya es el negocio que quería, aunque el checklist quede a medias."</p>
+              </div>
+            </div>
+
+            <div class="cel-stats-titulo">Estadisticas de Panaderia de masa madre con entrega por suscripción semanal</div>
+            <div class="cel-stats">
+              <div class="stat"><div class="stat-num">96</div><div class="stat-etq">días desde la chispa</div></div>
+              <div class="stat"><div class="stat-num">3</div><div class="stat-etq">ciclos de plan</div></div>
+              <div class="stat"><div class="stat-num">24 <small>de 31</small></div><div class="stat-etq">acciones</div></div>
+              <div class="stat"><div class="stat-num">0</div><div class="stat-etq">mundos activados</div></div>
+            </div>
+
+            <div class="cel-enlaces">
+              <a class="cel-enlace cel-enlace--fuerte">Ver análisis completo &rarr;</a>
+              <a class="cel-enlace">Volver a mis ideas</a>
+              <a class="cel-enlace">Reabrir esta idea</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 4) A MI RITMO (sin cumplimiento) · MOVIL 380                   -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Celebracion a mi ritmo movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Panaderia de masa madre por suscripción</span><span class="nav-chip-proyecto">&#10003;</span></div>
+          </nav>
+
+          <div class="cel-cuerpo">
+            <div class="cel-heroe">
+              <div class="cel-eyebrow">Realizada</div>
+              <h2 class="cel-titulo">Aquí acaba tu idea y nace tu proyecto</h2>
+              <p class="cel-idea">Panaderia de masa madre con entrega por suscripción semanal en mi zona</p>
+              <span class="cel-pill">&#10003; Proyecto</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-linea"></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">3 de marzo</div><div class="tl-titulo">La Chispa</div><div class="tl-sub">La idea nace</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">3 de marzo</div><div class="tl-titulo">Claridad</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--azul"></span></div><div class="tl-lado"><div class="tl-fecha">6 de marzo</div><div class="tl-titulo">Tu Plan · ciclo 1</div><div class="tl-sub">a mi ritmo, sin fechas</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div><div class="tl-lado"><div class="tl-accion">Hornea tres tandas de prueba para vecinos reales y anota cuáles masas aguantan la entrega.</div></div></div>
+              <div class="tl-fila"><div class="tl-dot-col"><span class="tl-dot tl-dot--verde"></span></div><div class="tl-lado"><div class="tl-accion">Consigue tus primeros ocho suscriptores de una sola cuadra y define el día fijo de entrega.</div></div></div>
+
+              <div class="tl-final">
+                <span class="tl-diana"></span>
+                <div class="tl-realizada">REALIZADA</div>
+                <p class="tl-motivo">"Lo cierro porque ya tengo doce suscriptores estables: esto ya es el negocio que quería, aunque el checklist quede a medias."</p>
+              </div>
+            </div>
+
+            <div class="cel-stats-titulo">Estadisticas del proyecto</div>
+            <div class="cel-stats">
+              <div class="stat"><div class="stat-num">96</div><div class="stat-etq">días desde la chispa</div></div>
+              <div class="stat"><div class="stat-num">3</div><div class="stat-etq">ciclos de plan</div></div>
+              <div class="stat"><div class="stat-num">24 <small>de 31</small></div><div class="stat-etq">acciones</div></div>
+              <div class="stat"><div class="stat-num">0</div><div class="stat-etq">mundos activados</div></div>
+            </div>
+
+            <div class="cel-enlaces">
+              <a class="cel-enlace cel-enlace--fuerte">Ver análisis completo &rarr;</a>
+              <a class="cel-enlace">Volver a mis ideas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

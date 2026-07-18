@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Home / Mis ideas</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Home Mis Ideas desktop
+      - Home Mis Ideas movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;          /* exploracion, planeacion, navegacion, pensar */
+      --verde: #3FB950;         /* accion sobre el mundo real, ejecución */
+      --ambar: #E0A64A;         /* solo el guardian de datos */
+      --mundos: #3A9B8F;        /* matiz de los mundos (ni azul ni verde) */
+
+      --fondo: #0A0A0C;         /* lienzo base */
+      --negro: #000000;         /* fondo de cada frame */
+      --superficie-1: #101013;  /* tarjetas */
+      --superficie-2: #17171B;  /* campos, hover */
+
+      --texto: #F5F6F8;         /* principal */
+      --texto-dim: #A6A7AD;     /* secundario */
+      --hairline: rgba(255, 255, 255, 0.08);
+
+      --radio-tarjeta: 16px;
+      --radio-campo: 14px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* ==========================================================================
+       RESET Y GALERIA (el contenedor que el instrumento no recorta)
+       ========================================================================== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: var(--fuente);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .galeria { padding: 48px 56px; }
+
+    .galeria-cabecera {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+      max-width: 760px;
+    }
+
+    .galeria-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--azul);
+    }
+
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+
+    .galeria-descripcion {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--texto-dim);
+      text-wrap: pretty;
+    }
+
+    .galeria-frames {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    /* Cada frame de tamano fijo: lo que el instrumento recorta por su label */
+    .marco {
+      background: var(--negro);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radio-tarjeta);
+      overflow: hidden;
+    }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+
+    /* ==========================================================================
+       LIENZO DE LA PANTALLA
+       ========================================================================== */
+    .lienzo { display: flex; flex-direction: column; min-height: 820px; }
+    .lienzo--movil { min-height: 900px; }
+
+    /* Barra de navegacion */
+    .barra-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .lienzo--movil .barra-nav { padding: 18px 20px; }
+
+    .marca { font-size: 19px; font-weight: 800; letter-spacing: -0.2px; }
+    .marca-my { color: var(--texto); }
+    .marca-idea { color: var(--azul); }
+
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-link {
+      font-size: 15px;
+      color: var(--texto-dim);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .nav-link:hover { color: var(--texto); }
+
+    /* Cuerpo centrado */
+    .contenido {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 52px 40px 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .lienzo--movil .contenido { padding: 34px 20px 56px; gap: 20px; }
+
+    .saludo { font-size: 34px; font-weight: 700; letter-spacing: -0.4px; }
+    .lienzo--movil .saludo { font-size: 28px; }
+
+    /* Campo de captura (la idea nueva) */
+    .captura {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 24px;
+      background: var(--superficie-2);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radio-campo);
+    }
+    .captura-texto { flex: 1; font-size: 17px; color: var(--texto-dim); }
+    .lienzo--movil .captura-texto { font-size: 15px; }
+
+    .captura-mic {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(77, 124, 254, 0.5);
+      background: rgba(77, 124, 254, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .captura-mic svg { width: 18px; height: 18px; stroke: var(--azul); }
+
+    /* Encabezado de la lista */
+    .lista-titulo {
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--texto-dim);
+    }
+
+    .lista-ideas { display: flex; flex-direction: column; gap: 16px; }
+
+    /* ==========================================================================
+       CINTA (una idea en la lista)
+       ========================================================================== */
+    .cinta {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 22px 24px;
+      background: var(--superficie-1);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radio-tarjeta);
+    }
+    .cinta:hover { background: var(--superficie-2); }
+    .cinta--realizada { border-color: rgba(63, 185, 80, 0.28); }
+
+    .cinta-cabecera {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cinta-titulo {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.35;
+      /* trunca a dos lineas: el producto real genera titulos largos */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .lienzo--movil .cinta-titulo { font-size: 16px; }
+
+    .cinta-flecha { flex: none; color: var(--texto-dim); font-size: 20px; line-height: 1; }
+
+    .cinta-pie {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cinta-nota { font-size: 13px; color: var(--texto-dim); }
+    .cinta-nota strong { color: var(--texto); font-weight: 600; }
+
+    /* ==========================================================================
+       RIEL (el arbol: la linea desciende y toca cada punto)
+       ========================================================================== */
+    .riel { display: flex; align-items: center; gap: 6px; }
+
+    .riel-punto { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+    .riel-punto--hecho { background: var(--azul); }
+    .riel-punto--verde { background: var(--verde); }
+    .riel-punto--futuro { border: 1.5px solid rgba(255, 255, 255, 0.22); }
+    .riel-punto--pensando {
+      width: 13px;
+      height: 13px;
+      border: 2px solid var(--azul);
+      animation: pulso-pensando 1.8s ease-in-out infinite;
+    }
+
+    .riel-linea { width: 16px; height: 2px; border-radius: 2px; background: var(--azul); flex: none; }
+    .riel-linea--futuro { background: rgba(255, 255, 255, 0.14); }
+    .riel-linea--verde { background: var(--verde); }
+
+    @keyframes pulso-pensando {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(77, 124, 254, 0.4); }
+      50% { box-shadow: 0 0 0 5px rgba(77, 124, 254, 0); }
+    }
+
+    /* ==========================================================================
+       CHIP DE ESTADO
+       ========================================================================== */
+    .chip {
+      flex: none;
+      padding: 8px 15px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .chip--exploracion { color: var(--azul); border-color: rgba(77, 124, 254, 0.5); }
+    .chip--claridad { color: var(--texto); border-color: rgba(255, 255, 255, 0.24); background: rgba(255, 255, 255, 0.04); }
+    .chip--proyecto { color: var(--verde); border-color: rgba(63, 185, 80, 0.5); background: rgba(63, 185, 80, 0.08); }
+
+    /* Avatar de sesion */
+    .avatar {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--hairline);
+      background: var(--superficie-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--texto-dim);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .riel-punto--pensando { animation: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Home</div>
+      <h1 class="galeria-titulo">Home / Mis ideas</h1>
+      <p class="galeria-descripcion">
+        El punto de partida: captura rápida de una idea nueva y la lista de ideas en curso.
+        Cada cinta lleva su título (que trunca cuando es largo), el riel del arbol con su estado,
+        el chip de etapa y una nota con la última acción y su fecha. Las ideas realizadas reposan
+        al final con su distintivo Proyecto. Desktop 1240 y móvil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- FRAME DESKTOP 1240                                             -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Home Mis Ideas desktop">
+        <div class="lienzo" style="position: relative;">
+
+          <!-- NAV -->
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">idea</span></div>
+            <div class="nav-links">
+              <a class="nav-link">Potenciadores</a>
+              <a class="nav-link">Salir</a>
+            </div>
+          </nav>
+
+          <!-- CUERPO -->
+          <div class="contenido">
+            <h2 class="saludo">Buenas noches</h2>
+
+            <!-- CAPTURA -->
+            <div class="captura">
+              <span class="captura-texto">Cuéntame una idea nueva, o en qué punto estás con ella...</span>
+              <span class="captura-mic">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="3" width="6" height="11" rx="3"></rect>
+                  <path d="M6 11a6 6 0 0 0 12 0"></path>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </span>
+            </div>
+
+            <!-- LISTA -->
+            <div class="lista-titulo">Tus ideas · 133</div>
+            <div class="lista-ideas">
+
+              <!-- CINTA 1 -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Vendo un producto físico que fabrico yo mismo y no tengo claro si el precio que le puse me deja algo o estoy trabajando gratis todos los meses</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="cinta-pie">
+                  <div class="riel">
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--pensando"></span>
+                    <span class="riel-linea riel-linea--futuro"></span>
+                    <span class="riel-punto riel-punto--futuro"></span>
+                    <span class="riel-linea riel-linea--futuro"></span>
+                    <span class="riel-punto riel-punto--futuro"></span>
+                  </div>
+                  <span class="chip chip--exploracion">En exploración</span>
+                </div>
+                <p class="cinta-nota">Una pregunta te espera · última acción <strong>ayer 21:26</strong></p>
+              </article>
+
+              <!-- CINTA 2 -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Tengo una app de suscripción mensual para llevar el control de inventario de tiendas de barrio y por más que la muestro no logro que nadie la pague</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="cinta-pie">
+                  <div class="riel">
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--pensando"></span>
+                    <span class="riel-linea riel-linea--futuro"></span>
+                    <span class="riel-punto riel-punto--futuro"></span>
+                    <span class="riel-linea riel-linea--futuro"></span>
+                    <span class="riel-punto riel-punto--futuro"></span>
+                  </div>
+                  <span class="chip chip--exploracion">En exploración</span>
+                </div>
+                <p class="cinta-nota">Una pregunta te espera · última acción <strong>hace 21 min</strong></p>
+              </article>
+
+              <!-- CINTA 3 (riel mas avanzado, con un mundo activo) -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Macetas de cemento: saber si mi precio me deja ganancia real y que tendría que ajustar en materiales o en volumen para que por fin lo haga</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="cinta-pie">
+                  <div class="riel">
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--pensando"></span>
+                  </div>
+                  <span class="chip chip--exploracion">En exploración</span>
+                </div>
+                <p class="cinta-nota">Una pregunta te espera · última acción <strong>hoy 08:14</strong></p>
+              </article>
+
+              <!-- CINTA 4 (etapa temprana: Claridad) -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Quisiera crear un auditor HSEQ virtual, y también un espacio donde la gente aprenda la norma sin morir de aburrimiento en el intento</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="cinta-pie">
+                  <div class="riel">
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--pensando"></span>
+                    <span class="riel-linea riel-linea--futuro"></span>
+                    <span class="riel-punto riel-punto--futuro"></span>
+                    <span class="riel-linea riel-linea--futuro"></span>
+                    <span class="riel-punto riel-punto--futuro"></span>
+                    <span class="riel-linea riel-linea--futuro"></span>
+                    <span class="riel-punto riel-punto--futuro"></span>
+                  </div>
+                  <span class="chip chip--claridad">Con claridad</span>
+                </div>
+                <p class="cinta-nota">Tu organizador está listo · última acción <strong>hace 3 días</strong></p>
+              </article>
+
+              <!-- CINTA 5 (REALIZADA: reposa al final con su distintivo Proyecto) -->
+              <article class="cinta cinta--realizada">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Panaderia de masa madre con entrega por suscripción semanal en mi zona, empezando por los edificios de mi propia cuadra</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="cinta-pie">
+                  <div class="riel">
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea"></span>
+                    <span class="riel-punto riel-punto--hecho"></span>
+                    <span class="riel-linea riel-linea--verde"></span>
+                    <span class="riel-punto riel-punto--verde"></span>
+                  </div>
+                  <span class="chip chip--proyecto">Proyecto</span>
+                </div>
+                <p class="cinta-nota">Realizada <strong>el 12 de marzo</strong> · 24 de 31 acciones hechas</p>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- FRAME MOVIL 380                                                -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Home Mis Ideas movil 380">
+        <div class="lienzo lienzo--movil" style="position: relative;">
+
+          <!-- NAV MOVIL -->
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">idea</span></div>
+            <div class="nav-links">
+              <a class="nav-link">Potenciadores</a>
+              <a class="nav-link">Salir</a>
+            </div>
+          </nav>
+
+          <div class="contenido">
+            <h2 class="saludo">Buenas noches</h2>
+
+            <div class="captura">
+              <span class="captura-texto">Cuéntame una idea nueva...</span>
+              <span class="captura-mic">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="3" width="6" height="11" rx="3"></rect>
+                  <path d="M6 11a6 6 0 0 0 12 0"></path>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </span>
+            </div>
+
+            <div class="lista-titulo">Tus ideas · 133</div>
+            <div class="lista-ideas">
+
+              <!-- CINTA 1 MOVIL -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Vendo un producto físico que fabrico yo mismo y no tengo claro si el precio que le puse me deja algo o estoy trabajando gratis</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="riel">
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--pensando"></span>
+                  <span class="riel-linea riel-linea--futuro"></span>
+                  <span class="riel-punto riel-punto--futuro"></span>
+                  <span class="riel-linea riel-linea--futuro"></span>
+                  <span class="riel-punto riel-punto--futuro"></span>
+                </div>
+                <div class="cinta-pie">
+                  <span class="cinta-nota">Una pregunta te espera · <strong>ayer 21:26</strong></span>
+                  <span class="chip chip--exploracion">En exploración</span>
+                </div>
+              </article>
+
+              <!-- CINTA 2 MOVIL -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Tengo una app de suscripción mensual para el control de inventario de tiendas de barrio y no logro que nadie la pague</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="riel">
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--pensando"></span>
+                  <span class="riel-linea riel-linea--futuro"></span>
+                  <span class="riel-punto riel-punto--futuro"></span>
+                  <span class="riel-linea riel-linea--futuro"></span>
+                  <span class="riel-punto riel-punto--futuro"></span>
+                </div>
+                <div class="cinta-pie">
+                  <span class="cinta-nota">Una pregunta te espera · <strong>hace 21 min</strong></span>
+                  <span class="chip chip--exploracion">En exploración</span>
+                </div>
+              </article>
+
+              <!-- CINTA 3 MOVIL -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Macetas de cemento: saber si mi precio me deja ganancia real y que tendría que ajustar para que por fin lo haga</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="riel">
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--pensando"></span>
+                </div>
+                <div class="cinta-pie">
+                  <span class="cinta-nota">Una pregunta te espera · <strong>hoy 08:14</strong></span>
+                  <span class="chip chip--exploracion">En exploración</span>
+                </div>
+              </article>
+
+              <!-- CINTA 4 MOVIL -->
+              <article class="cinta">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Quisiera crear un auditor HSEQ virtual, y también un espacio donde la gente aprenda la norma sin morir de aburrimiento</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="riel">
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--pensando"></span>
+                  <span class="riel-linea riel-linea--futuro"></span>
+                  <span class="riel-punto riel-punto--futuro"></span>
+                  <span class="riel-linea riel-linea--futuro"></span>
+                  <span class="riel-punto riel-punto--futuro"></span>
+                  <span class="riel-linea riel-linea--futuro"></span>
+                  <span class="riel-punto riel-punto--futuro"></span>
+                </div>
+                <div class="cinta-pie">
+                  <span class="cinta-nota">Tu organizador está listo · <strong>hace 3 días</strong></span>
+                  <span class="chip chip--claridad">Con claridad</span>
+                </div>
+              </article>
+
+              <!-- CINTA 5 MOVIL (REALIZADA) -->
+              <article class="cinta cinta--realizada">
+                <div class="cinta-cabecera">
+                  <h3 class="cinta-titulo">Panaderia de masa madre con entrega por suscripción semanal en mi zona, empezando por mi propia cuadra</h3>
+                  <span class="cinta-flecha">&rsaquo;</span>
+                </div>
+                <div class="riel">
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea"></span>
+                  <span class="riel-punto riel-punto--hecho"></span>
+                  <span class="riel-linea riel-linea--verde"></span>
+                  <span class="riel-punto riel-punto--verde"></span>
+                </div>
+                <div class="cinta-pie">
+                  <span class="cinta-nota">Realizada <strong>el 12 de marzo</strong> · 24 de 31</span>
+                  <span class="chip chip--proyecto">Proyecto</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

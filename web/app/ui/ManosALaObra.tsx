@@ -16,6 +16,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
 import { CampoConVoz } from "./CampoConVoz";
+import { DetalleActividad } from "./DetalleActividad";
 import { PlanDocumento } from "./PlanDocumento";
 import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
@@ -40,10 +41,14 @@ export interface ItemChecklistUI {
   updated_at: string;
 }
 
-/** Cambios que un ítem puede recibir en un toque (Fase 3.8: + completed_at). */
+/** Cambios que un ítem puede recibir en un toque (Fase 3.8: + completed_at;
+ * Fase 4.3.2, detalle de actividad: + nota y fecha_base). La ruta PATCH ya los
+ * acepta todos; el detalle solo los cablea desde la UI. */
 export interface CambioItem {
   estado?: ChecklistEstado;
   completed_at?: string | null;
+  nota?: string | null;
+  fecha_base?: string | null;
 }
 
 export interface ChecklistData {
@@ -110,8 +115,17 @@ interface Props {
   /** true si hay una entrevista abierta para "Volver a la entrevista" */
   entrevistaAbierta: boolean;
   onVolverEntrevista: () => void;
-  /** PATCH aplicado: el padre refresca su copia del checklist */
-  onItemActualizado: (item: { id: string; estado?: ChecklistEstado; completed_at?: string | null }) => void;
+  /** PATCH aplicado: el padre refresca su copia del checklist. Fase 4.3.2: el
+   * detalle también mueve nota y fecha, así que el ítem actualizado los lleva. */
+  onItemActualizado: (item: {
+    id: string;
+    estado?: ChecklistEstado;
+    completed_at?: string | null;
+    nota?: string | null;
+    fecha_base?: string | null;
+    fecha_base_original?: string | null;
+    fecha_base_origen?: FechaBaseOrigen | null;
+  }) => void;
   /** el follow devolvió el primer turno: el padre entra a la entrevista */
   onSeguimientoIniciado: (turno: unknown) => void;
   /** POST world/start devolvió el primer turno del mundo */
@@ -185,10 +199,13 @@ function FilaItem({
   item,
   ocupado,
   onCambio,
+  onAbrirDetalle,
 }: {
   item: ItemChecklistUI;
   ocupado: boolean;
   onCambio: (cambio: CambioItem) => void;
+  /** Fase 4.3.2: tocar el texto abre "Explorar actividad" (el detalle). */
+  onAbrirDetalle: () => void;
 }) {
   const hecho = item.estado === "hecho";
   // Fase 3.8 §2 — timeline real: al marcar hecho, "¿Cuándo lo hiciste?
@@ -234,9 +251,15 @@ function FilaItem({
           <IconoEstado estado={item.estado} />
         </button>
         <span className="min-w-0 flex-1">
-          <span className={"block text-[14.5px] " + (hecho ? "text-dim line-through" : "text-ink")}>
+          {/* Fase 4.3.2: el texto abre "Explorar actividad". Es un botón (no un
+              div con onClick) para que el teclado y los lectores lo alcancen. */}
+          <button
+            onClick={onAbrirDetalle}
+            className={"block w-full text-left text-[14.5px] hover:underline " + (hecho ? "text-dim line-through" : "text-ink")}
+            title="Ver el detalle de esta actividad"
+          >
             {item.texto}
-          </span>
+          </button>
           {!hecho && item.estado !== "pendiente" && (
             <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
           )}
@@ -334,11 +357,14 @@ function GrupoEtapas({
   titulos,
   ocupado,
   onCambio,
+  onAbrirDetalle,
 }: {
   grupo: NonNullable<ReturnType<typeof grupoVigente>>;
   titulos: Record<number, string>;
   ocupado: boolean;
   onCambio: (item: ItemChecklistUI, cambio: CambioItem) => void;
+  /** Fase 4.3.2: abrir el detalle de un ítem, con el título de SU etapa. */
+  onAbrirDetalle: (item: ItemChecklistUI, tituloEtapa: string) => void;
 }) {
   // La primera etapa con pendientes queda abierta; las demás, plegadas.
   const primeraActiva = grupo.etapas.find((e) => e.items.some((i) => i.estado !== "hecho"))?.etapa;
@@ -362,7 +388,7 @@ function GrupoEtapas({
             <Acordeon key={etapa} titulo={encabezado}>
               <div className="flex flex-col gap-2.5">
                 {items.map((item) => (
-                  <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} />
+                  <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
                 ))}
               </div>
             </Acordeon>
@@ -373,7 +399,7 @@ function GrupoEtapas({
             <div className="mb-3">{encabezado}</div>
             <div className="flex flex-col gap-2.5">
               {items.map((item) => (
-                <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} />
+                <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
               ))}
             </div>
           </section>
@@ -601,37 +627,6 @@ function TarjetaModo({
 
 /** El interruptor permanente "Fechas y recordatorios: activados / pausados"
  * (canon 10). Alterna 'fechas' ↔ 'ritmo'; pausar nunca borra fechas. */
-function InterruptorFechas({
-  modo,
-  ocupado,
-  onToggle,
-}: {
-  modo: ModoCamino;
-  ocupado: boolean;
-  onToggle: (nuevo: ModoCamino) => void;
-}) {
-  const activo = modo === "fechas";
-  return (
-    <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
-      <div className="min-w-0">
-        <p className="text-[13px] font-semibold">Fechas y recordatorios</p>
-        <p className={"text-[12px] " + (activo ? "text-done" : "text-dim")}>{activo ? "activados" : "pausados"}</p>
-      </div>
-      <button
-        onClick={() => onToggle(activo ? "ritmo" : "fechas")}
-        disabled={ocupado}
-        className={
-          "shrink-0 rounded-[9px] px-3.5 py-1.5 text-[12.5px] font-semibold disabled:opacity-50 " +
-          (activo ? "border border-white/15 text-dim hover:text-ink" : "text-ink")
-        }
-        style={activo ? undefined : BORDE_AZUL}
-      >
-        {activo ? "Pausar" : "Activar"}
-      </button>
-    </div>
-  );
-}
-
 /** El ritual de la línea base (canon 10, vista B). Las fechas se sugieren
  * determinísticamente (fechasBase.ts, cero LLM) y el usuario ajusta la que
  * quiera. Tema azul: fijar fechas es planear. */
@@ -841,6 +836,12 @@ export function ManosALaObra({
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
   const [ritual, setRitual] = useState(false);
+  // Fase 4.3.2: el "Explorar actividad" abierto. Se guarda el ID (no el ítem):
+  // el ítem VIVO se deriva del checklist al renderizar, así el cajón refleja
+  // cada cambio (marcar hecho, mover fecha, nota) sin cerrarse ni recargar.
+  const [detalleItem, setDetalleItem] = useState<{ id: string; tituloEtapa: string } | null>(null);
+  const abrirDetalle = (item: ItemChecklistUI, tituloEtapa: string) =>
+    setDetalleItem({ id: item.id, tituloEtapa });
   // Fase 4.2: el ritual de un mundo (su dominio) y su cierre. Van aparte del
   // core a propósito: dos subproyectos abiertos a la vez no comparten estado.
   const [ritualMundo, setRitualMundo] = useState<string | null>(null);
@@ -853,6 +854,10 @@ export function ManosALaObra({
   const [error, setError] = useState<string | null>(null);
   const [errorRitual, setErrorRitual] = useState<string | null>(null);
   const [guardandoModo, setGuardandoModo] = useState(false);
+  // Fase 4.3.2 (Manos a la Obra a 380, canon refrescado): el modo se muestra
+  // COMPACTO ("Modo: a mi ritmo · cambiar"); el selector grande solo aparece en
+  // la primera entrada (modoCamino===null) o cuando el usuario toca "cambiar".
+  const [mostrarSelectorModo, setMostrarSelectorModo] = useState(false);
   // Fase 3.8 §4 — ritual de la línea base
   // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
   // real por etapa la calcula analytics.ts (§6: la única calculadora del
@@ -944,6 +949,7 @@ export function ManosALaObra({
       }
       // Reactivar fechas reabre el ritual (si aún no hay ninguna puesta).
       if (modo === "fechas") setPospuesto(false);
+      setMostrarSelectorModo(false);
       onModoCambiado(modo);
     } catch {
       setError("no pudimos guardar tu elección; revisa tu internet e intenta de nuevo");
@@ -1010,13 +1016,19 @@ export function ManosALaObra({
         setError(ERROR_GENERICO);
         return;
       }
-      // La ruta devuelve el ítem persistido (incluye completed_at ya
-      // resuelto: default now() al marcar hecho, null al desmarcar).
-      const data = (await res.json()) as { item?: { estado?: ChecklistEstado; completed_at?: string | null } };
+      // La ruta devuelve el ítem persistido COMPLETO (completed_at ya resuelto;
+      // fecha_base / fecha_base_original / origen tras una replanificación; la
+      // nota guardada). Se propaga todo para que el detalle y la fila reflejen
+      // lo persistido sin recargar.
+      const data = (await res.json()) as { item?: Partial<ItemChecklistUI> };
       onItemActualizado({
         id: item.id,
         estado: data.item?.estado ?? cambio.estado,
         completed_at: data.item?.completed_at,
+        nota: data.item?.nota ?? cambio.nota,
+        fecha_base: data.item?.fecha_base ?? cambio.fecha_base,
+        fecha_base_original: data.item?.fecha_base_original,
+        fecha_base_origen: data.item?.fecha_base_origen,
       });
     } catch {
       setError("no pudimos guardar el cambio; revisa tu internet e intenta de nuevo");
@@ -1123,12 +1135,29 @@ export function ManosALaObra({
               </span>
             </div>
           )}
+          {/* Fase 4.3.2: el modo, COMPACTO (canon refrescado). El selector grande
+              ya no vive aquí salvo en la primera entrada; "cambiar" lo reabre. */}
+          {modoCamino !== null && !mostrarSelectorModo && (
+            <p className="mt-3 text-[13px] text-dim">
+              Modo: <span className="font-semibold text-ink">{modoCamino === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
+              {" · "}
+              <button
+                onClick={() => setMostrarSelectorModo(true)}
+                className="font-semibold text-accent hover:underline"
+              >
+                cambiar
+              </button>
+            </p>
+          )}
         </header>
 
         {error && <p className="text-sm text-warn">{error}</p>}
 
-        {/* Fase 3.8 §3 — primera entrada: la elección del modo del camino */}
-        {modoCamino === null && <TarjetaModo ocupado={guardandoModo} onElegir={elegirModo} />}
+        {/* Fase 3.8 §3 — la elección del modo: primera entrada (modoCamino null)
+            o cuando el usuario toca "cambiar". */}
+        {(modoCamino === null || mostrarSelectorModo) && (
+          <TarjetaModo ocupado={guardandoModo} onElegir={elegirModo} />
+        )}
 
         {/* Fase 3.8 §4 — ritual de la línea base (modo fechas) */}
         {modoCamino === "fechas" && core && (recalcularPendientes || (!hayFechas && !pospuesto)) && (
@@ -1183,6 +1212,36 @@ export function ManosALaObra({
           />
         )}
 
+        {/* Fase 4.3.2 (Manos a la Obra a 380): "Contar qué pasó" ARRIBA en móvil.
+            Antes vivía SOLO en el aside, que en móvil cae al fondo (~2.800px): la
+            puerta principal al seguimiento quedaba enterrada. Esta tarjeta es
+            lg:hidden (la del aside es hidden lg:block): la acción sale una vez en
+            cada viewport, en su sitio. El azul dispara al motor a repensar. */}
+        {core && cCore.total > 0 && !ritual && (
+          <div className="rounded-panel border border-accent/40 bg-surface p-5 lg:hidden">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
+              Ciclo de profundización
+            </p>
+            <p className="text-[15px] font-semibold leading-relaxed">
+              ¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás.
+            </p>
+            <button
+              onClick={() => setRitual(true)}
+              className="mt-3 block w-full rounded-[10px] bg-accent py-2.5 text-center text-[13.5px] font-semibold text-white hover:opacity-90"
+            >
+              Contar qué pasó
+            </button>
+            {entrevistaAbierta && (
+              <button
+                onClick={onVolverEntrevista}
+                className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
+              >
+                Volver a la entrevista
+              </button>
+            )}
+          </div>
+        )}
+
         {/* checklist maestro: viaje core */}
         {core && mundos.length > 0 && (
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
@@ -1190,7 +1249,7 @@ export function ManosALaObra({
           </p>
         )}
         {core ? (
-          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} onCambio={aplicarCambio} />
+          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
         ) : (
           <p className="text-sm text-dim">
             Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.
@@ -1244,7 +1303,7 @@ export function ManosALaObra({
 
               {grupo ? (
                 <div className="mt-4">
-                  <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} />
+                  <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                 </div>
               ) : (
                 <button
@@ -1379,12 +1438,11 @@ export function ManosALaObra({
         )}
       </div>
 
-      {/* lateral: interruptor de fechas + ciclo de profundización + ritmo */}
+      {/* lateral: análisis + realizar + ciclo de profundización + ritmo.
+          El modo ya no vive aquí (Fase 4.3.2): es el indicador compacto del
+          header. En móvil este aside cae debajo del checklist (posición del
+          canon para análisis/ritmo); "Contar qué pasó" ya subió arriba. */}
       <aside className="flex flex-col gap-6">
-        {/* Fase 3.8 §3 — interruptor permanente (canon 10) */}
-        {modoCamino !== null && (
-          <InterruptorFechas modo={modoCamino} ocupado={guardandoModo} onToggle={elegirModo} />
-        )}
         {/* Fase 3.8 §6 — puerta al análisis del proyecto */}
         {cCore.total > 0 && (
           <button
@@ -1460,7 +1518,9 @@ export function ManosALaObra({
             )}
           </div>
         )}
-        <div className="rounded-panel border border-hairline bg-surface p-5">
+        {/* Ciclo de profundización — SOLO desktop (hidden lg:block): en móvil
+            esta acción ya subió arriba con su propia tarjeta (lg:hidden). */}
+        <div className="hidden rounded-panel border border-hairline bg-surface p-5 lg:block">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
             Ciclo de profundización
           </p>
@@ -1509,6 +1569,27 @@ export function ManosALaObra({
           </div>
         )}
       </aside>
+
+      {/* Fase 4.3.2 — "Explorar actividad": el cajón/hoja del detalle de un ítem.
+          Se deriva el ítem VIVO del checklist por su id (refleja cada cambio); si
+          el ítem desapareció (recarga), se cierra solo. */}
+      {(() => {
+        if (!detalleItem) return null;
+        const vivo = checklist.planes
+          .flatMap((p) => p.etapas)
+          .flatMap((e) => e.items)
+          .find((i) => i.id === detalleItem.id);
+        if (!vivo) return null;
+        return (
+          <DetalleActividad
+            item={vivo}
+            tituloEtapa={detalleItem.tituloEtapa}
+            ocupado={ocupado}
+            onCambio={(cambio) => aplicarCambio(vivo, cambio)}
+            onCerrar={() => setDetalleItem(null)}
+          />
+        );
+      })()}
     </div>
   );
 }

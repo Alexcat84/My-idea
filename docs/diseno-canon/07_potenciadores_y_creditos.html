@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Potenciadores y Créditos</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Potenciadores y Creditos desktop
+      - Potenciadores y Creditos movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta; el ambar es el guardian)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 780px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 18px 20px; }
+    .marca { font-size: 19px; font-weight: 800; }
+    .marca-my { color: var(--texto); }
+    .marca-idea { color: var(--azul); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-link { font-size: 15px; color: var(--texto-dim); text-decoration: none; }
+    .nav-link--activo { color: var(--texto); font-weight: 600; }
+
+    .poten-cuerpo { max-width: 1000px; width: 100%; margin: 0 auto; padding: 48px 40px 64px; display: flex; flex-direction: column; gap: 40px; }
+    .lienzo--movil .poten-cuerpo { padding: 32px 20px 52px; gap: 32px; }
+
+    .bloque-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 18px; }
+    .seccion-h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.4px; }
+    .seccion-sub { font-size: 15px; line-height: 1.6; color: var(--texto-dim); margin-top: 8px; }
+
+    /* CENTRO DE CREDITOS */
+    .creditos-panel { display: grid; grid-template-columns: 300px 1fr; gap: 22px; }
+    .lienzo--movil .creditos-panel { grid-template-columns: 1fr; }
+    .saldo { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 26px; }
+    .saldo-num { font-size: 44px; font-weight: 800; letter-spacing: -1px; }
+    .saldo-etq { font-size: 13px; color: var(--texto-dim); margin-top: 4px; }
+    .saldo-nota { font-size: 12.5px; line-height: 1.6; color: var(--texto-dim); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--hairline); }
+
+    .packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .lienzo--movil .packs { grid-template-columns: 1fr; }
+    .pack { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .pack--destacado { border-color: rgba(77, 124, 254, 0.45); background: rgba(77, 124, 254, 0.05); }
+    .pack-num { font-size: 26px; font-weight: 800; }
+    .pack-etq { font-size: 13px; color: var(--texto-dim); }
+    .pack-precio { font-size: 13px; color: var(--texto-dim); margin-top: 8px; }
+    .pack-precio strong { color: var(--texto); }
+
+    /* GRID DE POTENCIADORES (el candado se retiro: Activar beta, precio tachado) */
+    .poten-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lienzo--movil .poten-grid { grid-template-columns: 1fr; }
+    .poten-card { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+    .poten-top { display: flex; align-items: center; justify-content: space-between; }
+    .poten-mundo-punto { width: 9px; height: 9px; border-radius: 50%; background: var(--mundos); }
+    .poten-beta { font-size: 11.5px; font-weight: 600; color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.4); border-radius: 999px; padding: 4px 10px; }
+    .poten-nombre { font-size: 16px; font-weight: 700; }
+    .poten-promesa { font-size: 13px; line-height: 1.5; color: var(--texto-dim); }
+    .poten-precio { font-size: 12.5px; color: var(--texto-dim); margin-top: 4px; }
+    .precio-tachado { text-decoration: line-through; opacity: 0.7; }
+
+    /* TUS NUMEROS POR DENTRO con el guardian ambar */
+    .numeros-detalle { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 30px 32px; }
+    .lienzo--movil .numeros-detalle { padding: 24px 20px; }
+    .numeros-h { font-size: 22px; font-weight: 700; }
+    .numeros-p { font-size: 14.5px; line-height: 1.6; color: var(--texto-dim); margin-top: 8px; }
+    .numeros-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0; }
+    .lienzo--movil .numeros-grid { grid-template-columns: 1fr; }
+    .numeros-cifra { border: 1px solid var(--hairline); border-radius: 12px; padding: 18px 20px; }
+    .numeros-cifra-num { font-size: 26px; font-weight: 800; color: var(--azul); }
+    .numeros-cifra-etq { font-size: 12.5px; color: var(--texto-dim); margin-top: 4px; }
+
+    /* Guardian de datos: unico uso del ambar */
+    .guardian { display: flex; gap: 14px; border: 1px solid rgba(224, 166, 74, 0.32); background: rgba(224, 166, 74, 0.06); border-radius: 12px; padding: 18px 20px; }
+    .guardian-icono { flex: none; width: 22px; height: 22px; stroke: var(--ambar); }
+    .guardian-texto { font-size: 13.5px; line-height: 1.6; color: #E8D3AE; }
+    .guardian-texto strong { color: var(--ambar); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Potenciadores</div>
+      <h1 class="galeria-titulo">Potenciadores y Créditos</h1>
+      <p class="galeria-descripcion">
+        El centro de créditos (la moneda se llama créditos, jamás tokens) y la fila de potenciadores.
+        El candado se retiro: durante la beta cada potenciador es Activar beta, gratis, con su precio de
+        catalogo tachado. Tus Números por dentro trae el único uso del ámbar: el guardián de datos.
+        Desktop 1240 y móvil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- FRAME DESKTOP 1240                                             -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Potenciadores y Creditos desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">idea</span></div>
+            <div class="nav-links">
+              <a class="nav-link nav-link--activo">Potenciadores</a>
+              <a class="nav-link">Salir</a>
+            </div>
+          </nav>
+
+          <div class="poten-cuerpo">
+
+            <!-- CENTRO DE CREDITOS -->
+            <div>
+              <h2 class="seccion-h1">Tus créditos</h2>
+              <p class="seccion-sub">Los créditos son consumibles: sin suscripción, sin cargos recurrentes. Nunca pierdes créditos por un fallo del sistema, y registrar tu avance es gratis para siempre.</p>
+              <div class="creditos-panel" style="margin-top:24px;">
+                <div class="saldo">
+                  <div class="saldo-num">7</div>
+                  <div class="saldo-etq">créditos disponibles</div>
+                  <p class="saldo-nota">Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra nada.</p>
+                </div>
+                <div class="packs">
+                  <div class="pack"><span class="pack-num">10</span><span class="pack-etq">créditos</span><span class="pack-precio"><strong>Precio por definir</strong></span></div>
+                  <div class="pack pack--destacado"><span class="pack-num">30</span><span class="pack-etq">créditos</span><span class="pack-precio"><strong>Precio por definir</strong> · el más elegido</span></div>
+                  <div class="pack"><span class="pack-num">75</span><span class="pack-etq">créditos</span><span class="pack-precio"><strong>Precio por definir</strong></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FILA DE POTENCIADORES -->
+            <div>
+              <div class="bloque-titulo">Potencia tu idea</div>
+              <div class="poten-grid">
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Calidad y Confianza</span><p class="poten-promesa">Que tu cliente confie, vuelva y te recomiende.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Seguridad y Personas</span><p class="poten-promesa">Protege a tu gente y a tu negocio de su peor día.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Ambiente y Futuro</span><p class="poten-promesa">Convierte lo sostenible en ventaja que se nota y se cobra.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Seguridad Digital</span><p class="poten-promesa">Blinda tus datos, tus cuentas y la confianza de tus clientes.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Vender al Mundo</span><p class="poten-promesa">Lleva tu producto a clientes de otros países, con método.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Multiplica tu Negocio</span><p class="poten-promesa">Convierte tu negocio probado en muchos que funcionan igual.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Riesgos Bajo Control</span><p class="poten-promesa">Ve venir lo que puede fallar, y decide antes de que decida por ti.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><svg class="guardian-icono" style="width:18px;height:18px;stroke:var(--azul);" viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="6" y1="20" x2="6" y2="14"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="18" y1="20" x2="18" y2="10"></line></svg><span class="poten-beta" style="color:var(--azul);border-color:rgba(77,124,254,0.4);">2 créditos</span></div><span class="poten-nombre">Tus Números</span><p class="poten-promesa">Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.</p><span class="poten-precio">Se paga por uso</span></div>
+              </div>
+            </div>
+
+            <!-- TUS NUMEROS POR DENTRO + GUARDIAN AMBAR -->
+            <div class="numeros-detalle">
+              <div class="numeros-h">Tus Números, por dentro</div>
+              <p class="numeros-p">Los números los calcula código, no la IA: una calculadora determinística sobre las cifras que tu declaras. Punto de equilibrio, margen y tres escenarios, sin adivinar nada.</p>
+              <div class="numeros-grid">
+                <div class="numeros-cifra"><div class="numeros-cifra-num">170</div><div class="numeros-cifra-etq">margen por unidad, con tu costo de 180 y tu precio de 350</div></div>
+                <div class="numeros-cifra"><div class="numeros-cifra-num">36</div><div class="numeros-cifra-etq">kits al mes para cubrir tus 200 de gasto fijo declarado</div></div>
+                <div class="numeros-cifra"><div class="numeros-cifra-num">3</div><div class="numeros-cifra-etq">escenarios: prudente, esperado y optimista, sobre tus mismas cifras</div></div>
+              </div>
+              <div class="guardian">
+                <svg class="guardian-icono" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+                <p class="guardian-texto"><strong>Guardián de datos.</strong> Estos números valen exactamente lo que valen las cifras que metiste. Si tu costo real cambia o tu gasto fijo esta incompleto, el resultado cambia contigo. No sustituyen contabilidad formal ni asesoría fiscal.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- FRAME MOVIL 380                                                -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Potenciadores y Creditos movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">idea</span></div>
+            <div class="nav-links"><a class="nav-link nav-link--activo">Potenciadores</a><a class="nav-link">Salir</a></div>
+          </nav>
+
+          <div class="poten-cuerpo">
+            <div>
+              <h2 class="seccion-h1">Tus créditos</h2>
+              <p class="seccion-sub">Consumibles, sin suscripción. Nunca pierdes créditos por un fallo del sistema, y registrar tu avance es gratis.</p>
+              <div class="creditos-panel" style="margin-top:20px;">
+                <div class="saldo">
+                  <div class="saldo-num">7</div>
+                  <div class="saldo-etq">créditos disponibles</div>
+                  <p class="saldo-nota">Se verifica al inicio y se descuenta a la entrega. Si algo falla a mitad, no se cobra.</p>
+                </div>
+                <div class="packs">
+                  <div class="pack"><span class="pack-num">10</span><span class="pack-etq">créditos</span><span class="pack-precio"><strong>Precio por definir</strong></span></div>
+                  <div class="pack pack--destacado"><span class="pack-num">30</span><span class="pack-etq">créditos · el más elegido</span><span class="pack-precio"><strong>Precio por definir</strong></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="bloque-titulo">Potencia tu idea</div>
+              <div class="poten-grid">
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Calidad y Confianza</span><p class="poten-promesa">Que tu cliente confie, vuelva y te recomiende.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Seguridad y Personas</span><p class="poten-promesa">Protege a tu gente y a tu negocio de su peor día.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                <div class="poten-card"><div class="poten-top"><span class="poten-mundo-punto"></span><span class="poten-beta">Activar · beta</span></div><span class="poten-nombre">Riesgos Bajo Control</span><p class="poten-promesa">Ve venir lo que puede fallar, y decide antes de que decida por ti.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+              </div>
+            </div>
+
+            <div class="numeros-detalle">
+              <div class="numeros-h">Tus Números, por dentro</div>
+              <p class="numeros-p">Los calcula código, no la IA: calculadora determinística sobre tus cifras. Punto de equilibrio, margen y tres escenarios.</p>
+              <div class="numeros-grid">
+                <div class="numeros-cifra"><div class="numeros-cifra-num">170</div><div class="numeros-cifra-etq">margen por unidad, con costo 180 y precio 350</div></div>
+                <div class="numeros-cifra"><div class="numeros-cifra-num">36</div><div class="numeros-cifra-etq">kits al mes para cubrir 200 de gasto fijo</div></div>
+              </div>
+              <div class="guardian">
+                <svg class="guardian-icono" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+                <p class="guardian-texto"><strong>Guardián de datos.</strong> Estos números valen lo que valen las cifras que metiste. No sustituyen contabilidad formal ni asesoría fiscal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · El cierre honesto</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Cierre honesto camino desktop
+      - Cierre honesto camino movil 380
+      - Cierre honesto mundo desktop
+      - Cierre honesto mundo movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa: un alto honesto es una decision del motor)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 800px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; min-height: 760px; }
+    .lienzo--movil { min-height: 720px; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* ==========================================================================
+       EL ALTO HONESTO: jamas una pantalla muda
+       ========================================================================== */
+    .alto { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 660px; width: 100%; margin: 0 auto; padding: 48px 40px; gap: 20px; }
+    .lienzo--movil .alto { justify-content: flex-start; padding: 40px 22px; gap: 16px; }
+
+    .alto-encab { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .alto-eyebrow { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--azul); }
+    .alto-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--azul); }
+    .reembolso-chip { font-size: 12px; font-weight: 600; color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.45); background: rgba(63, 185, 80, 0.08); border-radius: 999px; padding: 5px 12px; }
+
+    .alto-titulo { font-size: 30px; font-weight: 700; line-height: 1.3; letter-spacing: -0.5px; text-wrap: pretty; }
+    .lienzo--movil .alto-titulo { font-size: 24px; }
+    .alto-cuerpo { font-size: 16px; line-height: 1.7; color: #D5D6DA; text-wrap: pretty; }
+
+    .porque { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px 24px; background: var(--superficie-1); }
+    .porque-tit { font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 10px; }
+    .porque-texto { font-size: 14.5px; line-height: 1.65; color: var(--texto); text-wrap: pretty; }
+
+    .reembolso-nota { display: flex; gap: 12px; font-size: 13.5px; line-height: 1.6; color: #BEE3C4; border: 1px solid rgba(63, 185, 80, 0.28); background: rgba(63, 185, 80, 0.05); border-radius: 12px; padding: 16px 18px; }
+    .reembolso-nota svg { flex: none; width: 18px; height: 18px; stroke: var(--verde); margin-top: 1px; }
+
+    .alto-salidas { display: flex; gap: 14px; margin-top: 6px; flex-wrap: wrap; }
+    .lienzo--movil .alto-salidas { flex-direction: column; }
+    .boton-primario { padding: 14px 24px; border-radius: 12px; border: none; background: var(--azul); color: #fff; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .boton-primario:hover { filter: brightness(1.08); }
+    .boton-borde { padding: 14px 24px; border-radius: 12px; border: 1px solid var(--hairline); background: var(--superficie-2); color: var(--texto); font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .boton-borde:hover { background: var(--superficie-1); }
+
+    .alto-guardado { font-size: 12.5px; color: var(--texto-dim); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Nuevo · El cierre honesto</div>
+      <h1 class="galeria-titulo">El cierre honesto</h1>
+      <p class="galeria-descripcion">
+        Cuando el motor decide que un camino no lleva a ningun lado, o que un mundo no es para esta idea,
+        la pantalla jamás queda muda: dice el porque en palabras de persona y ofrece dos salidas. La
+        confesión no es disculpa, es la credencial. Si era un mundo, la activación se devuelve, porque el
+        usuario nunca pierde créditos por algo que no le sirvió. Desktop 1240 y móvil 380, en dos casos.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) CAMINO SIN SALIDA (core) · DESKTOP                          -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Cierre honesto camino desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero crear una red social solo para dueños de gatos de mi ciudad, sin anuncios</span>
+            </div>
+          </nav>
+
+          <div class="alto">
+            <div class="alto-encab"><div class="alto-eyebrow">Un alto honesto</div></div>
+            <h2 class="alto-titulo">Por aquí no encuentro un plan que valga tu tiempo.</h2>
+            <p class="alto-cuerpo">Exploré lo que me contaste y, siendo honesto, este ángulo no me da material suficiente para armarte un plan que de verdad te mueva. Prefiero decírtelo a entregarte relleno. No es un no a tu idea: es un no a este camino.</p>
+            <div class="porque">
+              <div class="porque-tit">Lo que vi</div>
+              <p class="porque-texto">Tus respuestas apuntan a un grupo que hoy no puedo verificar que exista con ganas de pagar, y sin una señal real de demanda no tengo de donde sostener las etapas. Eso cambia en cuanto tengas un primer contacto con alguien fuera de tu círculo que te diga que sí con su dinero, no solo con su cariño.</p>
+            </div>
+            <div class="alto-salidas">
+              <button class="boton-primario">Volver a Manos a la Obra</button>
+              <button class="boton-borde">Explorar otro ángulo de la idea</button>
+            </div>
+            <p class="alto-guardado">Nada se pierde: tu recorrido y tu Claridad quedan guardados tal como están.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) CAMINO SIN SALIDA (core) · MOVIL 380                        -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Cierre honesto camino movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Red social solo para dueños de gatos</span></div>
+          </nav>
+
+          <div class="alto">
+            <div class="alto-encab"><div class="alto-eyebrow">Un alto honesto</div></div>
+            <h2 class="alto-titulo">Por aquí no encuentro un plan que valga tu tiempo.</h2>
+            <p class="alto-cuerpo">Exploré lo que me contaste y este ángulo no me da material suficiente para un plan que de verdad te mueva. Prefiero decírtelo a entregarte relleno. No es un no a tu idea: es un no a este camino.</p>
+            <div class="porque">
+              <div class="porque-tit">Lo que vi</div>
+              <p class="porque-texto">Tus respuestas apuntan a un grupo que hoy no puedo verificar que exista con ganas de pagar. Eso cambia en cuanto alguien fuera de tu círculo te diga que sí con su dinero.</p>
+            </div>
+            <div class="alto-salidas">
+              <button class="boton-primario">Volver a Manos a la Obra</button>
+              <button class="boton-borde">Explorar otro ángulo</button>
+            </div>
+            <p class="alto-guardado">Nada se pierde: tu recorrido y tu Claridad quedan guardados.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) MUNDO NO ES PARA ESTA IDEA (con reembolso) · DESKTOP        -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Cierre honesto mundo desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+          </nav>
+
+          <div class="alto">
+            <div class="alto-encab">
+              <div class="alto-eyebrow">Un alto honesto</div>
+              <span class="reembolso-chip">Activación devuelta · 3 créditos</span>
+            </div>
+            <h2 class="alto-titulo">Calidad y Confianza no es para esta idea, todavía.</h2>
+            <p class="alto-cuerpo">Activé y exploré este mundo con lo que hay hoy, y no encontré un subproyecto que te sume sin inventarte trabajo. Antes de darte un checklist de relleno, prefiero devolverte la activación.</p>
+            <div class="porque">
+              <div class="porque-tit">Por qué este mundo, no ahora</div>
+              <p class="porque-texto">Calidad y Confianza brilla cuando ya tienes clientes que vuelven y quieres que vuelvan más; tu idea todavía está buscando al primero que no sea un conocido. Cuando eso pase, este mundo va a tener mucho que darte, y aquí va a estar.</p>
+            </div>
+            <div class="reembolso-nota">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.7 9.7 0 0 0-6.7 2.8L3 8"></path><path d="M3 3v5h5"></path></svg>
+              <span>Te devolvimos los 3 créditos de la activación. Nunca pierdes créditos por algo que no te sirvió.</span>
+            </div>
+            <div class="alto-salidas">
+              <button class="boton-primario">Volver a Manos a la Obra</button>
+              <button class="boton-borde">Ver los otros mundos</button>
+            </div>
+            <p class="alto-guardado">Tu viaje principal sigue intacto: cerrar este mundo no toca tu idea.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 4) MUNDO NO ES PARA ESTA IDEA (con reembolso) · MOVIL 380      -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Cierre honesto mundo movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones</span></div>
+          </nav>
+
+          <div class="alto">
+            <div class="alto-encab">
+              <div class="alto-eyebrow">Un alto honesto</div>
+              <span class="reembolso-chip">Devuelto · 3 créditos</span>
+            </div>
+            <h2 class="alto-titulo">Calidad y Confianza no es para esta idea, todavía.</h2>
+            <p class="alto-cuerpo">Exploré este mundo con lo que hay hoy y no encontré un subproyecto que te sume sin inventarte trabajo. Antes que un checklist de relleno, prefiero devolverte la activación.</p>
+            <div class="porque">
+              <div class="porque-tit">Por qué no ahora</div>
+              <p class="porque-texto">Este mundo brilla cuando ya tienes clientes que vuelven; tu idea todavía busca al primero. Cuando eso pase, aquí va a estar.</p>
+            </div>
+            <div class="reembolso-nota">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.7 9.7 0 0 0-6.7 2.8L3 8"></path><path d="M3 3v5h5"></path></svg>
+              <span>Te devolvimos los 3 créditos. Nunca pierdes créditos por algo que no te sirvió.</span>
+            </div>
+            <div class="alto-salidas">
+              <button class="boton-primario">Volver a Manos a la Obra</button>
+              <button class="boton-borde">Ver los otros mundos</button>
+            </div>
+            <p class="alto-guardado">Cerrar este mundo no toca tu idea.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

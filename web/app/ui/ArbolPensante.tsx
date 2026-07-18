@@ -82,20 +82,29 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
             {nodos.map((n, i) => {
               const esUltimo = i === nodos.length - 1;
               const activo = generando && esUltimo;
-              // Hay un punto DESPUÉS de este (real o el hueco "futuro")?
+              // ¿Hay un punto DESPUÉS de este (real o el hueco "futuro")?
               const conConector = i < nodos.length - 1 || generando;
               return (
                 <li
                   key={n.id}
-                  className="anima-rail-in relative flex items-start"
+                  className="anima-rail-in relative flex items-start pb-[30px]"
                   style={{ gap: "15px" }}
                   data-transiciona
                 >
-                  {/* Conector por-nodo: del centro de ESTE punto (top:10px)
-                      al centro del SIGUIENTE (bottom:-10px). Así la línea
-                      SIEMPRE termina en un punto y jamás se pasa, sin
-                      importar cuánto ocupe la etiqueta. Va detrás del punto
-                      (su bg negro lo enmascara), como en el canon 04. */}
+                  {/* EL CONECTOR — del centro de ESTE punto (top:10px) al del
+                      SIGUIENTE. La distancia entre centros de puntos consecutivos
+                      es EXACTAMENTE la altura de esta fila (el punto va arriba de
+                      la fila con items-start; el punto siguiente está a fila-alto
+                      + 10). Por eso top:10 + bottom:-10 lo alcanza para cualquier
+                      largo de texto — SIEMPRE QUE las filas vayan pegadas.
+                      El bug del riel cortado (jul 2026): la animación railIn
+                      dejaba `margin-bottom:30px` en cada fila, 30px que el
+                      conector no cruzaba y que el `overflow:hidden` de la propia
+                      animación pintaba de negro. La solución no fue estirar el
+                      conector (frágil): fue mover esa separación a `pb-[30px]`,
+                      padding DENTRO de la fila, que es caja que el conector sí
+                      recorre. El punto de abajo queda pegado, y la línea lo toca.
+                      Va detrás del punto (su bg negro lo enmascara), canon 04. */}
                   {conConector && (
                     <span
                       aria-hidden
@@ -104,7 +113,7 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
                         left: "8px",
                         top: "10px",
                         bottom: "-10px",
-                        background: "linear-gradient(180deg, rgba(77,124,254,0.5), var(--accent))",
+                        background: "linear-gradient(180deg, rgba(77,124,254,0.35), var(--accent))",
                       }}
                     />
                   )}
@@ -137,8 +146,10 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
                 </li>
               );
             })}
-            {/* canon 04: el riel es memoria; lo futuro no tiene tema, solo
-                el punto hueco punteado mientras el motor sigue vivo */}
+            {/* canon 04: el riel es memoria; lo futuro no tiene tema, solo el
+                punto hueco punteado mientras el motor sigue vivo. Va pegado
+                (parte del <ol>, sin pb) para que el conector de la última fila
+                real lo toque como a cualquier otro punto. */}
             {generando && nodos.length > 0 && (
               <li aria-hidden className="anima-rail-in relative flex items-start" style={{ gap: "15px" }}>
                 <span

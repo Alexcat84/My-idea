@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Analisis del Proyecto</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Analisis del Proyecto desktop
+      - Analisis del Proyecto movil 380
+      - Analisis solo universal desktop
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (a tiempo verde, adelantadas azul, tardias ambar: espejo no regano)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 800px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .top-label { font-size: 13.5px; font-weight: 600; color: var(--verde); white-space: nowrap; }
+
+    .an-cuerpo { max-width: 1080px; width: 100%; margin: 0 auto; padding: 34px 40px 60px; }
+    .lienzo--movil .an-cuerpo { padding: 22px 18px 48px; }
+    .volver { display: inline-block; font-size: 14px; color: var(--texto-dim); text-decoration: none; margin-bottom: 22px; }
+    .volver:hover { color: var(--azul); }
+    .an-titulo { font-size: 34px; font-weight: 700; line-height: 1.22; letter-spacing: -0.6px; text-wrap: pretty; }
+    .lienzo--movil .an-titulo { font-size: 24px; }
+    .an-descargar { display: inline-block; margin: 20px 0 8px; padding: 12px 22px; border-radius: 11px; border: 1px solid var(--hairline); background: var(--superficie-2); color: var(--texto); font-size: 14px; font-weight: 600; cursor: pointer; }
+
+    .capa-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin: 34px 0 16px; }
+    .capa-titulo .modo { color: var(--azul); }
+
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lienzo--movil .stats { grid-template-columns: 1fr 1fr; }
+    .stat { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 24px; }
+    .stat-num { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; }
+    .stat-etq { font-size: 12.5px; line-height: 1.5; color: var(--texto-dim); margin-top: 8px; }
+
+    /* Hitos */
+    .hitos { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 24px 26px; max-width: 420px; margin-top: 16px; }
+    .hitos-tit { font-size: 15px; font-weight: 700; margin-bottom: 16px; }
+    .hito { display: flex; align-items: baseline; gap: 14px; padding: 8px 0; }
+    .hito-punto { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--azul); transform: translateY(-2px); }
+    .hito-punto--mundos { background: var(--mundos); }
+    .hito-fecha { flex: none; font-size: 13px; color: var(--texto-dim); min-width: 78px; }
+    .hito-nombre { font-size: 14.5px; font-weight: 600; }
+    .hito-nombre--mundos { color: var(--mundos); }
+
+    /* Capa de cumplimiento */
+    .cumpl-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .lienzo--movil .cumpl-cards { grid-template-columns: 1fr; }
+    .cumpl-card { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px; }
+    .cumpl-card--verde { border-color: rgba(63, 185, 80, 0.28); }
+    .cumpl-card--azul { border-color: rgba(77, 124, 254, 0.28); }
+    .cumpl-card--ambar { border-color: rgba(224, 166, 74, 0.28); }
+    .cumpl-num { font-size: 30px; font-weight: 800; }
+    .cumpl-num small { font-size: 15px; font-weight: 600; color: var(--texto-dim); }
+    .cumpl-card--verde .cumpl-num { color: var(--verde); }
+    .cumpl-card--azul .cumpl-num { color: var(--azul); }
+    .cumpl-card--ambar .cumpl-num { color: var(--ambar); }
+    .cumpl-etq { font-size: 13px; color: var(--texto-dim); margin-top: 6px; }
+
+    /* Planificado vs real */
+    .grafico-fila { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; margin-top: 16px; align-items: start; }
+    .lienzo--movil .grafico-fila { grid-template-columns: 1fr; }
+    .grafico { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 24px 26px; }
+    .grafico-cab { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+    .grafico-tit { font-size: 14.5px; font-weight: 700; }
+    .grafico-leyenda { display: flex; gap: 14px; font-size: 12px; color: var(--texto-dim); }
+    .leyenda { display: flex; align-items: center; gap: 6px; }
+    .leyenda::before { content: ""; width: 18px; height: 6px; border-radius: 3px; }
+    .leyenda--base::before { background: var(--azul); }
+    .leyenda--real::before { background: var(--verde); }
+    .barra-grupo { margin-bottom: 18px; }
+    .barra-etq { font-size: 13px; margin-bottom: 8px; text-wrap: pretty; }
+    .barra { height: 6px; border-radius: 3px; margin-bottom: 5px; }
+    .barra--base { background: var(--azul); }
+    .barra--real { background: var(--verde); }
+    .desviacion { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 24px 26px; }
+    .desviacion-num { font-size: 30px; font-weight: 800; }
+    .desviacion-etq { font-size: 13px; line-height: 1.5; color: var(--texto-dim); margin-top: 6px; }
+
+    /* Cumplimiento por mundo (fila nueva) */
+    .mundos-cumpl { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 24px 26px; margin-top: 16px; }
+    .mundos-cumpl-tit { display: flex; align-items: center; gap: 9px; font-size: 14.5px; font-weight: 700; margin-bottom: 16px; }
+    .mundos-cumpl-tit::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--mundos); }
+    .mundo-fila { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--hairline); }
+    .mundo-fila:last-child { border-bottom: none; }
+    .mundo-fila-nombre { font-size: 14.5px; font-weight: 600; }
+    .mundo-fila-datos { font-size: 13.5px; color: var(--texto-dim); }
+    .mundo-estado { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 4px 11px; }
+    .mundo-estado--completado { color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.4); }
+    .mundo-estado--abierta { color: var(--texto-dim); border: 1px solid var(--hairline); }
+
+    .an-nota { font-size: 12.5px; line-height: 1.6; color: var(--texto-dim); margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--hairline); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Analisis del proyecto</div>
+      <h1 class="galeria-titulo">Analisis del Proyecto</h1>
+      <p class="galeria-descripcion">
+        El espejo del proyecto para el humano, calculado por la unica fuente (analytics), nunca duplicada.
+        La capa universal siempre esta; la capa de cumplimiento aparece solo en modo fechas (a tiempo en
+        verde, adelantadas en azul, tardias en ambar: espejo, jamas regano). Nueva fila: cumplimiento por
+        mundo, con la jerarquia honesta (un mundo puede quedar abierto aunque la idea se cierre). En modo
+        a mi ritmo, la capa de cumplimiento no se muestra. Desktop 1240 y movil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) ANALISIS COMPLETO (modo fechas) · DESKTOP                   -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Analisis del Proyecto desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequenos con guia incluida</span>
+            </div>
+            <span class="top-label">Manos a la Obra · 13/56</span>
+          </nav>
+
+          <div class="an-cuerpo">
+            <a class="volver">&larr; Volver</a>
+            <h2 class="an-titulo">Analisis de Kits de huerto urbano: de tres ventas entre amigos a tu primera venta real con desconocidos</h2>
+            <span class="an-descargar">Descargar mi informe (.md)</span>
+
+            <!-- CAPA UNIVERSAL -->
+            <div class="capa-titulo">Capa universal</div>
+            <div class="stats">
+              <div class="stat"><div class="stat-num">51</div><div class="stat-etq">dias de duracion total</div></div>
+              <div class="stat"><div class="stat-num">2.4</div><div class="stat-etq">acciones por semana</div></div>
+              <div class="stat"><div class="stat-num">9</div><div class="stat-etq">dias de racha mas larga</div></div>
+              <div class="stat"><div class="stat-num">2 · 1</div><div class="stat-etq">ciclos · mundos</div></div>
+            </div>
+
+            <div class="hitos">
+              <div class="hitos-tit">Hitos</div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">15 de julio</span><span class="hito-nombre">La Chispa</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">15 de julio</span><span class="hito-nombre">Claridad</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">18 de julio</span><span class="hito-nombre">Tu Plan · ciclo 1</span></div>
+              <div class="hito"><span class="hito-punto hito-punto--mundos"></span><span class="hito-fecha">2 de agosto</span><span class="hito-nombre hito-nombre--mundos">Mundo activado: Calidad y Confianza</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">14 de agosto</span><span class="hito-nombre">Tu Plan · ciclo 2</span></div>
+            </div>
+
+            <!-- CAPA DE CUMPLIMIENTO -->
+            <div class="capa-titulo">Capa de cumplimiento · <span class="modo">Modo fechas</span></div>
+            <div class="cumpl-cards">
+              <div class="cumpl-card cumpl-card--verde"><div class="cumpl-num">14 <small>· 61%</small></div><div class="cumpl-etq">a tiempo</div></div>
+              <div class="cumpl-card cumpl-card--azul"><div class="cumpl-num">3 <small>· 13%</small></div><div class="cumpl-etq">adelantadas</div></div>
+              <div class="cumpl-card cumpl-card--ambar"><div class="cumpl-num">6 <small>· 26%</small></div><div class="cumpl-etq">tardias</div></div>
+            </div>
+
+            <div class="grafico-fila">
+              <div class="grafico">
+                <div class="grafico-cab">
+                  <div class="grafico-tit">Planificado vs. real por etapa</div>
+                  <div class="grafico-leyenda"><span class="leyenda leyenda--base">base</span><span class="leyenda leyenda--real">real</span></div>
+                </div>
+                <div class="barra-grupo"><div class="barra-etq">Pon por escrito las dos apuestas que tu idea necesita que sean verdad</div><div class="barra barra--base" style="width:40%;"></div><div class="barra barra--real" style="width:44%;"></div></div>
+                <div class="barra-grupo"><div class="barra-etq">Consigue tu primera venta real con un desconocido</div><div class="barra barra--base" style="width:55%;"></div><div class="barra barra--real" style="width:78%;"></div></div>
+                <div class="barra-grupo"><div class="barra-etq">Atiende a tus primeros compradores desconocidos de forma manual</div><div class="barra barra--base" style="width:62%;"></div><div class="barra barra--real" style="width:70%;"></div></div>
+                <div class="barra-grupo"><div class="barra-etq">Mide si lo que estas viendo es crecimiento real o solo actividad</div><div class="barra barra--base" style="width:74%;"></div><div class="barra barra--real" style="width:82%;"></div></div>
+                <div class="barra-grupo" style="margin-bottom:0;"><div class="barra-etq">Decide que motor puede hacer crecer esto sin depender de tu tiempo</div><div class="barra barra--base" style="width:88%;"></div><div class="barra barra--real" style="width:92%;"></div></div>
+              </div>
+              <div class="desviacion">
+                <div class="desviacion-num">3.2</div>
+                <div class="desviacion-etq">dias · desviacion media sobre lo planificado. La etapa 2 (tu bloqueo central) es donde mas se acumula.</div>
+              </div>
+            </div>
+
+            <!-- CUMPLIMIENTO POR MUNDO (fila nueva) -->
+            <div class="mundos-cumpl">
+              <div class="mundos-cumpl-tit">Cumplimiento por mundo</div>
+              <div class="mundo-fila">
+                <div>
+                  <div class="mundo-fila-nombre">Calidad y Confianza</div>
+                  <div class="mundo-fila-datos">18 de 26 acciones (69%) · 4 a tiempo, 2 adelantadas, 3 tardias en su ciclo</div>
+                </div>
+                <span class="mundo-estado mundo-estado--completado">Completado</span>
+              </div>
+              <div class="mundo-fila">
+                <div>
+                  <div class="mundo-fila-nombre">Seguridad y Personas</div>
+                  <div class="mundo-fila-datos">3 de 5 acciones (60%), sin baseline confirmada</div>
+                </div>
+                <span class="mundo-estado mundo-estado--abierta">Abierta</span>
+              </div>
+            </div>
+
+            <p class="an-nota">La historia no se reescribe: si moviste una fecha, la original se preserva y este analisis muestra la vida completa del proyecto, ciclo a ciclo. Los numeros son estimaciones sobre las cifras que declaraste; no sustituyen contabilidad formal ni asesoria fiscal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) ANALISIS COMPLETO · MOVIL 380                               -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Analisis del Proyecto movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones</span></div>
+          </nav>
+
+          <div class="an-cuerpo">
+            <a class="volver">&larr; Volver</a>
+            <h2 class="an-titulo">Analisis de Kits de huerto urbano</h2>
+            <span class="an-descargar">Descargar mi informe (.md)</span>
+
+            <div class="capa-titulo">Capa universal</div>
+            <div class="stats">
+              <div class="stat"><div class="stat-num">51</div><div class="stat-etq">dias de duracion total</div></div>
+              <div class="stat"><div class="stat-num">2.4</div><div class="stat-etq">acciones por semana</div></div>
+              <div class="stat"><div class="stat-num">9</div><div class="stat-etq">dias de racha mas larga</div></div>
+              <div class="stat"><div class="stat-num">2 · 1</div><div class="stat-etq">ciclos · mundos</div></div>
+            </div>
+
+            <div class="hitos" style="max-width:none;">
+              <div class="hitos-tit">Hitos</div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">15 de julio</span><span class="hito-nombre">La Chispa</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">18 de julio</span><span class="hito-nombre">Tu Plan · ciclo 1</span></div>
+              <div class="hito"><span class="hito-punto hito-punto--mundos"></span><span class="hito-fecha">2 de agosto</span><span class="hito-nombre hito-nombre--mundos">Mundo activado: Calidad y Confianza</span></div>
+            </div>
+
+            <div class="capa-titulo">Cumplimiento · <span class="modo">Modo fechas</span></div>
+            <div class="cumpl-cards">
+              <div class="cumpl-card cumpl-card--verde"><div class="cumpl-num">14 <small>· 61%</small></div><div class="cumpl-etq">a tiempo</div></div>
+              <div class="cumpl-card cumpl-card--azul"><div class="cumpl-num">3 <small>· 13%</small></div><div class="cumpl-etq">adelantadas</div></div>
+              <div class="cumpl-card cumpl-card--ambar"><div class="cumpl-num">6 <small>· 26%</small></div><div class="cumpl-etq">tardias</div></div>
+            </div>
+
+            <div class="mundos-cumpl">
+              <div class="mundos-cumpl-tit">Cumplimiento por mundo</div>
+              <div class="mundo-fila">
+                <div>
+                  <div class="mundo-fila-nombre">Calidad y Confianza</div>
+                  <div class="mundo-fila-datos">18 de 26 (69%)</div>
+                </div>
+                <span class="mundo-estado mundo-estado--completado">Completado</span>
+              </div>
+              <div class="mundo-fila">
+                <div>
+                  <div class="mundo-fila-nombre">Seguridad y Personas</div>
+                  <div class="mundo-fila-datos">3 de 5 (60%)</div>
+                </div>
+                <span class="mundo-estado mundo-estado--abierta">Abierta</span>
+              </div>
+            </div>
+
+            <p class="an-nota">La historia no se reescribe. Los numeros son estimaciones sobre tus cifras; no sustituyen contabilidad formal ni asesoria fiscal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) ANALISIS SOLO UNIVERSAL (a mi ritmo) · DESKTOP             -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Analisis solo universal desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Panaderia de masa madre con entrega por suscripcion semanal en mi zona</span>
+            </div>
+            <span class="top-label">Manos a la Obra · 24/31</span>
+          </nav>
+
+          <div class="an-cuerpo">
+            <a class="volver">&larr; Volver</a>
+            <h2 class="an-titulo">Analisis de Panaderia de masa madre con entrega por suscripcion semanal en mi zona</h2>
+            <span class="an-descargar">Descargar mi informe (.md)</span>
+
+            <div class="capa-titulo">Capa universal</div>
+            <div class="stats">
+              <div class="stat"><div class="stat-num">96</div><div class="stat-etq">dias de duracion total</div></div>
+              <div class="stat"><div class="stat-num">1.8</div><div class="stat-etq">acciones por semana</div></div>
+              <div class="stat"><div class="stat-num">12</div><div class="stat-etq">dias de racha mas larga</div></div>
+              <div class="stat"><div class="stat-num">3 · 0</div><div class="stat-etq">ciclos · mundos</div></div>
+            </div>
+
+            <div class="hitos">
+              <div class="hitos-tit">Hitos</div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">3 de marzo</span><span class="hito-nombre">La Chispa</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">3 de marzo</span><span class="hito-nombre">Claridad</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">6 de marzo</span><span class="hito-nombre">Tu Plan · ciclo 1</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">2 de abril</span><span class="hito-nombre">Tu Plan · ciclo 2</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">28 de abril</span><span class="hito-nombre">Tu Plan · ciclo 3</span></div>
+            </div>
+
+            <!-- Sin capa de cumplimiento: modo a mi ritmo -->
+            <div class="mundos-cumpl" style="margin-top:34px;">
+              <div class="mundos-cumpl-tit" style="color:var(--texto-dim);">Elegiste ir a tu ritmo</div>
+              <p class="mundo-fila-datos" style="border:none;">En modo a mi ritmo no se muestra cumplimiento: no se juzga contra fechas que decidiste no tener. Aqui solo veras duraciones y ritmo, nunca lenguaje de calendario.</p>
+            </div>
+
+            <p class="an-nota">La historia no se reescribe. Los numeros son estimaciones sobre tus cifras; no sustituyen contabilidad formal ni asesoria fiscal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 4) ANALISIS SOLO UNIVERSAL (a mi ritmo) · MOVIL 380           -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Analisis solo universal movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Panaderia de masa madre por suscripcion</span></div>
+          </nav>
+
+          <div class="an-cuerpo">
+            <a class="volver">&larr; Volver</a>
+            <h2 class="an-titulo">Analisis de Panaderia de masa madre</h2>
+            <span class="an-descargar">Descargar mi informe (.md)</span>
+
+            <div class="capa-titulo">Capa universal</div>
+            <div class="stats">
+              <div class="stat"><div class="stat-num">96</div><div class="stat-etq">dias de duracion total</div></div>
+              <div class="stat"><div class="stat-num">1.8</div><div class="stat-etq">acciones por semana</div></div>
+              <div class="stat"><div class="stat-num">12</div><div class="stat-etq">dias de racha mas larga</div></div>
+              <div class="stat"><div class="stat-num">3 · 0</div><div class="stat-etq">ciclos · mundos</div></div>
+            </div>
+
+            <div class="hitos" style="max-width:none;">
+              <div class="hitos-tit">Hitos</div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">3 de marzo</span><span class="hito-nombre">La Chispa</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">6 de marzo</span><span class="hito-nombre">Tu Plan · ciclo 1</span></div>
+              <div class="hito"><span class="hito-punto"></span><span class="hito-fecha">2 de abril</span><span class="hito-nombre">Tu Plan · ciclo 2</span></div>
+            </div>
+
+            <div class="mundos-cumpl" style="margin-top:26px;">
+              <div class="mundos-cumpl-tit" style="color:var(--texto-dim);">Elegiste ir a tu ritmo</div>
+              <p class="mundo-fila-datos" style="border:none;">En modo a mi ritmo no se muestra cumplimiento: no se juzga contra fechas que decidiste no tener. Solo veras duraciones y ritmo.</p>
+            </div>
+
+            <p class="an-nota">La historia no se reescribe. Los numeros son estimaciones sobre tus cifras; no sustituyen contabilidad formal ni asesoria fiscal.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

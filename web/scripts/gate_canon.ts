@@ -182,22 +182,22 @@ async function main() {
   // pantalla es la comparacion honesta, y ahi la cinta de idea SI es la vara.
   await app.goto(`${BASE_URL}/ideas`);
   await capturarApp(app, "00_home", false);
-  await capturarCanon(canon, "01 - Home - Mis Ideas.html", "00_home_canon.png", "Mis ideas desktop", true);
-  await capturarCanon(canon, "01 - Home - Mis Ideas.html", "00_home_canon_380.png", "Mis ideas mobile 380", true);
+  await capturarCanon(canon, "01_home_mis_ideas.html", "00_home_canon.png", "Home Mis Ideas desktop", true);
+  await capturarCanon(canon, "01_home_mis_ideas.html", "00_home_canon_380.png", "Home Mis Ideas movil 380", true);
 
   // 01 La Chispa
   await app.goto(`${BASE_URL}/nueva`);
   await capturarApp(app, "01_chispa");
-  await capturarCanon(canon, "02 - Etapa 1 - La Chispa.html", "01_chispa_canon.png");
-  await capturarCanon(canon, "02 - Etapa 1 - La Chispa.html", "01_chispa_canon_380.png", "La Chispa mobile 380", true);
+  await capturarCanon(canon, "02_la_chispa.html", "01_chispa_canon.png", "La Chispa desktop", true);
+  await capturarCanon(canon, "02_la_chispa.html", "01_chispa_canon_380.png", "La Chispa movil 380", true);
 
   // 02 Claridad (organizer real por la UI)
   await app.fill("#idea", IDEA);
   await app.getByRole("button", { name: /organizar|continuar|empezar|listo/i }).first().click();
   await app.getByText("Esto entendí de tu idea", { exact: false }).waitFor({ timeout: 120000 });
   await capturarApp(app, "02_claridad");
-  await capturarCanon(canon, "03 - Etapa 2 - Claridad.html", "02_claridad_canon.png");
-  await capturarCanon(canon, "03 - Etapa 2 - Claridad.html", "02_claridad_canon_380.png", "Claridad mobile 380", true);
+  await capturarCanon(canon, "03_claridad.html", "02_claridad_canon.png", "Claridad desktop", true);
+  await capturarCanon(canon, "03_claridad.html", "02_claridad_canon_380.png", "Claridad movil 380", true);
 
   // 03 La Exploración (entrevista real por la UI)
   await app.getByRole("button", { name: "Explorar estas suposiciones" }).click();
@@ -223,9 +223,10 @@ async function main() {
     ]).catch(() => {});
     if (await hayOferta()) break;
   }
-  await capturarCanon(canon, "04 - Etapa 3 - La Exploracion.html", "03_exploracion_canon.png");
-  // exacto: "1a mobile 380" es PREFIJO de "1a mobile 380 recorrido abierto".
-  await capturarCanon(canon, "04 - Etapa 3 - La Exploracion.html", "03_exploracion_canon_380.png", "1a mobile 380", true);
+  await capturarCanon(canon, "04_la_exploracion.html", "03_exploracion_canon.png", "Exploracion desktop", true);
+  // exacto: "Exploracion movil 380" convive con "Exploracion recorrido abierto
+  // movil 380" en el mismo archivo; el match exacto evita cruzarlos.
+  await capturarCanon(canon, "04_la_exploracion.html", "03_exploracion_canon_380.png", "Exploracion movil 380", true);
 
   // Phase 3.7.2 — la oferta honesta: captura del estado nuevo si apareció
   if ((await app.getByText("Tu recorrido hasta aquí", { exact: false }).count()) > 0) {
@@ -260,15 +261,37 @@ async function main() {
     throw e;
   }
   await capturarApp(app, "04_tu_plan");
-  await capturarCanon(canon, "05 - Etapa 4 - Tu Plan.html", "04_tu_plan_canon.png");
-  await capturarCanon(canon, "05 - Etapa 4 - Tu Plan.html", "04_tu_plan_canon_380.png", "Tu Plan mobile 380", true);
+  await capturarCanon(canon, "05_tu_plan.html", "04_tu_plan_canon.png", "Tu Plan desktop", true);
+  await capturarCanon(canon, "05_tu_plan.html", "04_tu_plan_canon_380.png", "Tu Plan movil 380", true);
 
   // 05 Manos a la Obra POR LA PUERTA (el CTA, sin teclear URLs) + los 6 mundos
   await app.getByRole("button", { name: "Pasar a Manos a la Obra" }).click();
   await app.waitForURL(/vista=manos/, { timeout: 30000 });
+
+  // 06 Modo del camino (vista A): en la PRIMERA entrada a Manos el selector de
+  // modo está a la vista, así que se captura aquí (antes vivía suelto más abajo).
+  await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
+  await capturarApp(app, "06_modo");
+  await capturarCanon(canon, "10_modo_y_fechas.html", "06_modo_canon.png", "Modo eleccion desktop", true);
+  await capturarCanon(canon, "10_modo_y_fechas.html", "06_modo_canon_380.png", "Modo eleccion movil 380", true);
+
+  // Fase 4.3.2: el canon de Manos muestra el estado ACTIVO (modo elegido,
+  // compacto), no el selector de primera entrada. Se elige "a mi ritmo" para
+  // capturar ESE estado -- y de paso deja el modo listo para el resto del flujo.
+  await app.getByRole("button", { name: /A mi ritmo/ }).click();
+  await app.getByText("Modo:", { exact: false }).first().waitFor({ timeout: 15000 });
   await capturarApp(app, "05_manos");
-  await capturarCanon(canon, "06 - Etapa 5 - Manos a la Obra.html", "05_manos_canon.png");
-  await capturarCanon(canon, "06 - Etapa 5 - Manos a la Obra.html", "05_manos_canon_380.png", "Manos a la Obra mobile 380", true);
+  await capturarCanon(canon, "06_manos_a_la_obra.html", "05_manos_canon.png", "Manos a la Obra desktop", true);
+  await capturarCanon(canon, "06_manos_a_la_obra.html", "05_manos_canon_380.png", "Manos a la Obra movil 380", true);
+
+  // 13 Detalle de actividad ("Explorar actividad", Fase 4.3.2): tocar el TEXTO
+  // de un ítem abre el cajón (desktop) / hoja (movil). Ya es un par vivo.
+  await app.locator('button[title="Ver el detalle de esta actividad"]').first().click();
+  await app.getByText("Detalle de la actividad", { exact: false }).waitFor({ timeout: 10000 });
+  await capturarApp(app, "13_detalle");
+  await capturarCanon(canon, "13_detalle_de_actividad.html", "13_detalle_canon.png", "Detalle de actividad desktop", true);
+  await capturarCanon(canon, "13_detalle_de_actividad.html", "13_detalle_canon_380.png", "Detalle de actividad movil 380", true);
+  await app.getByRole("button", { name: "Cerrar el detalle" }).click();
 
   // verificación C0: los 6 mundos visibles en el flujo real
   const cuerpo = (await app.textContent("body")) ?? "";
@@ -372,8 +395,8 @@ async function main() {
   const cerrarMundo = seccionMundo.getByRole("button", { name: "Marcar este mundo como completado" });
   await cerrarMundo.waitFor({ state: "visible", timeout: 15000 });
   await capturarApp(app, "10_mundo_activo");
-  await capturarCanon(canon, "08 - Mundos Activos.html", "10_mundo_activo_canon.png");
-  await capturarCanon(canon, "08 - Mundos Activos.html", "10_mundo_activo_canon_380.png", "Idea con mundo activo mobile 380", true);
+  await capturarCanon(canon, "08_mundos_activos.html", "10_mundo_activo_canon.png", "Mundo activo desktop", true);
+  await capturarCanon(canon, "08_mundos_activos.html", "10_mundo_activo_canon_380.png", "Mundo activo movil 380", true);
 
   // El ritual del mundo y su cierre: los dos estados nuevos de la 4.2. No hay
   // par de canon para ellos (el 08 es anterior a esta fase): se capturan solos,
@@ -383,13 +406,18 @@ async function main() {
   // nombra. Si esto falla, la captura habria sido una mentira.
   await seccionMundo.getByText("Continuar Calidad y Confianza", { exact: false }).waitFor({ timeout: 15000 });
   await capturarApp(app, "10b_mundo_ritual");
-  await seccionMundo.getByRole("button", { name: "Cerrar" }).click();
+  // exact: sin él, "Cerrar" (substring) choca con el aria-label de cualquier
+  // ítem del checklist cuyo texto traiga "cerrarlo"/"cerrar" — los ítems son
+  // generados y varían por corrida (cazado en vivo, jul 2026).
+  await seccionMundo.getByRole("button", { name: "Cerrar", exact: true }).click();
 
   await cerrarMundo.click();
   await seccionMundo
     .getByText("¿Diste Calidad y Confianza por terminado?", { exact: false })
     .waitFor({ timeout: 15000 });
   await capturarApp(app, "10c_mundo_cierre");
+  await capturarCanon(canon, "08_mundos_activos.html", "10c_mundo_cierre_canon.png", "Mundo cierre desktop", true);
+  await capturarCanon(canon, "08_mundos_activos.html", "10c_mundo_cierre_canon_380.png", "Mundo cierre movil 380", true);
   await seccionMundo.getByRole("button", { name: "Todavía no" }).click();
 
   // ── Fase 3.8: el sentido del tiempo (canon 09/10/11) desde la sesión real.
@@ -399,38 +427,33 @@ async function main() {
   // asegurar la vista Manos (el bloque de mundos pudo volver al plan default)
   await asegurarManos(app);
 
-  // 06 Modo del camino (vista A): la tarjeta de elección en la primera entrada
-  await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
-  await capturarApp(app, "06_modo");
-  await capturarCanon(canon, "10 - Modo y Fechas.html", "06_modo_canon.png", "Eleccion");
-  await capturarCanon(canon, "10 - Modo y Fechas.html", "06_modo_canon_380.png", "Eleccion de modo mobile 380", true);
-
-  // ── variante A-MI-RITMO: SIN baseline (cero "planificado", sin cumplimiento).
-  // Se captura primero, mientras el proyecto aún no tiene línea base.
-  await app.getByRole("button", { name: /A mi ritmo/ }).click();
-  await app.getByText("Fechas y recordatorios", { exact: false }).first().waitFor({ timeout: 15000 });
+  // ── variante A-MI-RITMO: el modo ya es "a mi ritmo" (elegido y capturado como
+  // pantalla 06 arriba). Se marca el avance SIN baseline (sin cumplimiento).
   for (let i = 0; i < 4; i++) await marcarHechoHoy(app); // completions reales, sin fechas base
   await app.getByRole("button", { name: "Marcar como realizada" }).click();
   await app.getByRole("button", { name: /Sí, es un proyecto/ }).click();
   await app.getByText("Aquí acaba tu idea y nace tu proyecto", { exact: false }).waitFor({ timeout: 30000 });
   await app.waitForTimeout(8000); // la animación 6-8s asienta
   await capturarApp(app, "09b_celebracion_ritmo");
-  await capturarCanon(canon, "09 - La Celebracion.html", "09b_celebracion_ritmo_canon.png", "variante a mi ritmo desktop");
-  // Sin par de 380: el canon 09 dibujo "variante a mi ritmo" SOLO en escritorio.
-  // La captura de la app a 380 se toma igual (arriba), sin vara contra la cual
-  // medirse: el fundador la mira sola.
+  // Refresco jul 2026: el canon nuevo SÍ trae la variante a-mi-ritmo en 380
+  // (el viejo solo la tenía en escritorio), así que ahora es un par vivo.
+  await capturarCanon(canon, "09_la_celebracion.html", "09b_celebracion_ritmo_canon.png", "Celebracion a mi ritmo desktop", true);
+  await capturarCanon(canon, "09_la_celebracion.html", "09b_celebracion_ritmo_canon_380.png", "Celebracion a mi ritmo movil 380", true);
 
   // reabrir para pasar a la variante con fechas
   const reabrir = app.getByRole("button", { name: /Reabrir esta idea/ });
   await reabrir.waitFor({ state: "visible", timeout: 15000 });
   await reabrir.click();
-  await app.getByText("Fechas y recordatorios", { exact: false }).first().waitFor({ timeout: 30000 });
 
-  // ── variante FECHAS: activar → ritual de baseline con fechas editadas para
-  // poblar las 3 clases de cumplimiento (tardía en ámbar, a tiempo, adelantadas).
-  const activar = app.getByRole("button", { name: "Activar" }).first();
-  await activar.waitFor({ state: "visible", timeout: 15000 });
-  await activar.click();
+  // ── variante FECHAS: el interruptor "Activar/Pausar" se retiró (Fase 4.3.2).
+  // Se cambia de modo reabriendo el selector con "cambiar" y eligiendo "Con
+  // fechas y recordatorios". Sin fechas aún, el ritual de baseline se abre solo,
+  // con las 3 clases de cumplimiento (tardía en ámbar, a tiempo, adelantadas).
+  const cambiar = app.getByRole("button", { name: "cambiar" }).first();
+  await cambiar.waitFor({ state: "visible", timeout: 30000 });
+  await cambiar.click();
+  await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 15000 });
+  await app.getByRole("button", { name: /Con fechas y recordatorios/ }).click();
   await app.getByText("Ponle fechas a tu camino", { exact: false }).waitFor({ timeout: 30000 });
 
   // editar las dos primeras fechas (ítems ya hechos HOY): una al pasado (→
@@ -441,8 +464,8 @@ async function main() {
   await inputs.nth(0).fill(fmtFechaLocal(new Date(Date.now() - 21 * 86400000))); // 3 semanas atrás → tardía
   await inputs.nth(1).fill(fmtFechaLocal(new Date())); // hoy → a tiempo
   await capturarApp(app, "07_baseline");
-  await capturarCanon(canon, "10 - Modo y Fechas.html", "07_baseline_canon.png", "Ritual");
-  await capturarCanon(canon, "10 - Modo y Fechas.html", "07_baseline_canon_380.png", "Ritual de fechas mobile 380", true);
+  await capturarCanon(canon, "10_modo_y_fechas.html", "07_baseline_canon.png", "Modo fechas ritual desktop", true);
+  await capturarCanon(canon, "10_modo_y_fechas.html", "07_baseline_canon_380.png", "Modo fechas ritual movil 380", true);
 
   const [respBase] = await Promise.all([
     app.waitForResponse((r) => r.url().includes("/baseline") && r.request().method() === "POST", { timeout: 15000 }),
@@ -458,8 +481,8 @@ async function main() {
   await app.getByText("Análisis de", { exact: false }).first().waitFor({ timeout: 30000 });
   await app.waitForTimeout(1500);
   await capturarApp(app, "08_analisis");
-  await capturarCanon(canon, "11 - Analisis del Proyecto.html", "08_analisis_canon.png");
-  await capturarCanon(canon, "11 - Analisis del Proyecto.html", "08_analisis_canon_380.png", "Analisis ambas capas mobile 380", true);
+  await capturarCanon(canon, "11_analisis_del_proyecto.html", "08_analisis_canon.png", "Analisis del Proyecto desktop", true);
+  await capturarCanon(canon, "11_analisis_del_proyecto.html", "08_analisis_canon_380.png", "Analisis del Proyecto movil 380", true);
   const volver = app.getByRole("button", { name: "← Volver" }).first();
   await volver.waitFor({ state: "visible", timeout: 15000 });
   await volver.click();
@@ -472,8 +495,30 @@ async function main() {
   await app.getByText("Aquí acaba tu idea y nace tu proyecto", { exact: false }).waitFor({ timeout: 30000 });
   await app.waitForTimeout(8000);
   await capturarApp(app, "09_celebracion_cumplimiento");
-  await capturarCanon(canon, "09 - La Celebracion.html", "09_celebracion_canon.png");
-  await capturarCanon(canon, "09 - La Celebracion.html", "09_celebracion_canon_380.png", "La Celebracion mobile 380", true);
+  await capturarCanon(canon, "09_la_celebracion.html", "09_celebracion_canon.png", "Celebracion cumplimiento desktop", true);
+  await capturarCanon(canon, "09_la_celebracion.html", "09_celebracion_canon_380.png", "Celebracion cumplimiento movil 380", true);
+
+  // ── Refresco jul 2026: pantallas del canon nuevo que el FLUJO del gate no
+  // visita (o que la app aun no implementa). Se capturan SOLO del canon, sin par
+  // de app, para que el fundador vea el objetivo completo. Cuando la app las
+  // tenga (o el flujo las alcance), se les cablea su captura de app y pasan a
+  // ser un par vivo. Marcadas con "SOLO CANON" en su nombre para que no se
+  // confundan con un par app-vs-canon roto.
+  await capturarCanon(canon, "07_potenciadores_y_creditos.html", "z_potenciadores_SOLOCANON.png", "Potenciadores y Creditos desktop", true);
+  await capturarCanon(canon, "07_potenciadores_y_creditos.html", "z_potenciadores_SOLOCANON_380.png", "Potenciadores y Creditos movil 380", true);
+  await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_camino_SOLOCANON.png", "Cierre honesto camino desktop", true);
+  await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_camino_SOLOCANON_380.png", "Cierre honesto camino movil 380", true);
+  await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON.png", "Cierre honesto mundo desktop", true);
+  await capturarCanon(canon, "12_el_cierre_honesto.html", "z_cierre_mundo_SOLOCANON_380.png", "Cierre honesto mundo movil 380", true);
+  // Canon 2.0: Tus Números (canon 14). La pantalla /idea/[id]/numeros YA existe
+  // (FASE B, C4). El par app-vs-canon en dos viewports lo produce su capturador
+  // dedicado, scripts/gate_numeros.ts (siembra pérdida+sano y navega a la ruta),
+  // porque no vive en el flujo lineal de este gate. Aquí quedan los frames del
+  // canon como referencia rápida.
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_perdida_SOLOCANON.png", "Tus Numeros perdida desktop", true);
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_perdida_SOLOCANON_380.png", "Tus Numeros perdida movil 380", true);
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_sano_SOLOCANON.png", "Tus Numeros sano desktop", true);
+  await capturarCanon(canon, "14_tus_numeros.html", "z_numeros_sano_SOLOCANON_380.png", "Tus Numeros sano movil 380", true);
 
   await browser.close();
   console.log(`\nGATE: capturas lado a lado en ${OUT} — el veredicto visual es del fundador/auditor.`);

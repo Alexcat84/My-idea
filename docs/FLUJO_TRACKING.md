@@ -94,6 +94,23 @@ cobro despierte) más el límite diario vigente. Regenerar por deporte cuesta;
 replanificar por realidad vale cada crédito.
 
 ## 5. EL COBRO (dónde encaja cuando el frente de cuentas despierte)
+
+**El principio que gobierna (palabra del fundador, 2026-07-17):** *el crédito
+paga el trabajo del motor. Toda acción que invoca la API para pensar cobra su
+precio de catálogo; el cálculo determinístico y el registro de avance son
+gratis, siempre.* Aplicado:
+- Plan core (La Exploración): **5** · Seguimiento core (regenera con API): **2**
+- Activar un mundo: **3** · Seguimiento de mundo: **2**
+- **Tus Números: 2, UNA VEZ por idea**, como activación del tablero vivo —
+  incluye sus recálculos determinísticos ilimitados y sus re-narraciones (con el
+  límite diario como freno). Corregir cifras y recalcular **jamás** cobra. Tus
+  Números **no tiene "seguimiento"**: no es un plan, es una calculadora viva.
+- Gratis siempre: el organizador (Claridad), marcar avance en el checklist,
+  mover fechas, escribir notas, y todo cálculo de la calculadora determinística.
+
+La fuente de verdad de las cifras es `web/lib/precios.ts`; este documento y el
+canon visual las **reflejan**, jamás las definen (ver `AGENTS.md`).
+
 - El follow es un punto de cobro del canon: 2 créditos (core) / 2 (mundo).
 - Patrón aprobado: verificar saldo al INICIO del ritual (rechazo limpio
   antes de que el usuario escriba su "qué pasó"), descontar A LA ENTREGA
@@ -230,8 +247,18 @@ Las dos direcciones, y ninguna es simétrica:
 
 ### 9.4 El cobro (cuando la ETAPA 2 despierte)
 
-El follow de mundo cuesta **2 créditos**, con el patrón de siempre: **verificar
-al inicio, descontar a la entrega**. Las dos anclas están en
+El follow cuesta **2 créditos, tanto core como mundo** (`precios.ts`:
+`seguimiento: 2`, `mundo_seguimiento: 2`; §5 arriba), con el patrón de siempre:
+**verificar al inicio, descontar a la entrega**. Las anclas están en
 `follow/route.ts`, en sus puntos exactos — la verificación **después** de validar
 el mundo (verificar antes cobraría un 403), el descuento en la entrega del primer
-turno. El follow **core no cuesta créditos**: es el bucle del viaje principal.
+turno.
+
+> **Errata corregida (2026-07-17):** una versión anterior de esta línea decía
+> "el follow core no cuesta créditos: es el bucle del viaje principal". Fue un
+> **drift mío de la Fase 4.2** — nadie autorizó esa política, contradecía el §5
+> de este mismo documento y `precios.ts`, y se propagó: se coló en un comentario
+> de `follow/route.ts` y, al entregarle este documento a Design, en la tabla del
+> `REGLAS_Y_TOKENS.md` del canon 2.0 ("Seguimiento core: Gratis"). Las tres
+> corregidas a la vez. El seguimiento core cuesta **2 créditos**, igual que el de
+> mundo.

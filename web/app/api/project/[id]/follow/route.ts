@@ -127,12 +127,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   // ── ANCLA para la ETAPA 2 del frente de cuentas (rama cuentas-y-creditos)
-  // Aqui, y NO antes, va la VERIFICACION de saldo del follow de mundo: 2
-  // creditos. Este es el punto correcto porque el mundo ya se valido (existe,
-  // esta activado y esta abierto): verificar antes cobraria un 403 o un 404.
-  // El patron es el del plan (session/[id]/plan:309): verificar saldo al inicio
-  // y DESCONTAR A LA ENTREGA — el descuento va al final de esta ruta, no aqui.
-  // El follow core no cobra creditos: es el bucle del viaje principal.
+  // Aqui, y NO antes, va la VERIFICACION de saldo del follow: 2 creditos, TANTO
+  // core como mundo. La fuente de verdad es precios.ts (seguimiento: 2,
+  // mundo_seguimiento: 2) + FLUJO_TRACKING §5 ("2 core / 2 mundo"). Este es el
+  // punto correcto porque, en el caso mundo, el mundo ya se valido (existe, esta
+  // activado y esta abierto): verificar antes cobraria un 403 o un 404. El
+  // patron es el del plan (session/[id]/plan:309): verificar saldo al inicio y
+  // DESCONTAR A LA ENTREGA — el descuento va al final de esta ruta, no aqui.
+  //
+  // Correccion 2026-07-17: un comentario anterior aqui decia "el follow core no
+  // cobra creditos: es el bucle del viaje principal". Eso divergia de precios.ts
+  // (seguimiento: 2) y nadie lo autorizo; el seguimiento core cuesta 2, igual
+  // que el de mundo.
   //
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);

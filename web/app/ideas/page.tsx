@@ -74,7 +74,7 @@ export default async function MisIdeas() {
           className="anima-plan-in mt-4 flex items-center gap-3.5 rounded-[14px] border border-accent/30 bg-surface px-5 py-4 hover:border-accent/55"
           style={{ animationDelay: "0.1s" }}
         >
-          <span className="flex-1 text-[15px] text-dim">Cuéntame una idea nueva…</span>
+          <span className="flex-1 text-[15px] text-dim">Cuéntame una idea nueva, o en qué punto estás con ella…</span>
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-accent/55">
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
               <rect x="6" y="1.5" width="4" height="7.5" rx="2" fill="var(--accent)" />

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Etapa 4 · Tu Plan</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Tu Plan desktop
+      - Tu Plan movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 760px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    /* BARRA SUPERIOR con stepper */
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .top-riel { display: flex; align-items: center; gap: 6px; flex: none; }
+    .top-punto { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+    .top-punto--hecho { background: var(--azul); }
+    .top-punto--futuro { border: 1.5px solid rgba(255, 255, 255, 0.22); }
+    .top-linea { width: 20px; height: 2px; border-radius: 2px; background: var(--azul); flex: none; }
+    .top-linea--futuro { background: rgba(255, 255, 255, 0.14); }
+    .top-label { font-size: 13.5px; font-weight: 600; color: var(--azul); margin-left: 8px; white-space: nowrap; }
+
+    /* ==========================================================================
+       DOCUMENTO DEL PLAN
+       ========================================================================== */
+    .plan-cuerpo { max-width: 1000px; width: 100%; margin: 0 auto; padding: 28px 40px 60px; }
+    .lienzo--movil .plan-cuerpo { padding: 20px 18px 48px; }
+
+    .colapsable { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; padding: 18px 24px; background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); font-size: 16px; font-weight: 600; cursor: pointer; }
+    .colapsable-flecha { color: var(--texto-dim); }
+
+    .plan-columnas { display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .lienzo--movil .plan-columnas { grid-template-columns: 1fr; gap: 26px; }
+
+    .plan-encab { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    .plan-eyebrow { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); }
+    .plan-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--azul); }
+    .plan-descargar { font-size: 13.5px; color: var(--texto-dim); text-decoration: none; white-space: nowrap; }
+    .plan-descargar:hover { color: var(--azul); }
+
+    .plan-titulo { font-size: 34px; font-weight: 700; line-height: 1.22; letter-spacing: -0.6px; margin-bottom: 18px; text-wrap: pretty; }
+    .lienzo--movil .plan-titulo { font-size: 25px; }
+    .plan-intro { font-size: 15.5px; line-height: 1.7; color: #D5D6DA; margin-bottom: 12px; }
+    .plan-limite { font-size: 14.5px; line-height: 1.6; color: var(--texto-dim); }
+    .plan-nota-etapas { font-size: 13px; color: var(--texto-dim); margin: 22px 0 18px; }
+
+    /* Rail derecho: construido con tu recorrido */
+    .rail-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 18px; }
+    .rail-lista { display: flex; flex-direction: column; gap: 14px; margin-bottom: 22px; }
+    .rail-item { display: flex; gap: 11px; font-size: 14px; line-height: 1.45; color: var(--texto); }
+    .rail-item::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 6px; border-radius: 50%; background: var(--azul); }
+    .rail-nota { font-size: 13px; line-height: 1.6; color: var(--texto-dim); }
+
+    /* CAJA "Esta semana / Primera accion": VERDE (ejecución) */
+    .accion-semana { border: 1px solid rgba(63, 185, 80, 0.32); background: rgba(63, 185, 80, 0.06); border-radius: var(--radio-tarjeta); padding: 24px 26px; margin-bottom: 22px; }
+    .accion-eyebrow { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--verde); margin-bottom: 12px; }
+    .accion-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--verde); }
+    .accion-texto { font-size: 15.5px; font-weight: 600; line-height: 1.55; margin-bottom: 18px; text-wrap: pretty; }
+    .boton-verde { padding: 12px 22px; border-radius: 11px; border: none; background: var(--verde); color: #04120A; font-size: 14.5px; font-weight: 700; font-family: inherit; cursor: pointer; }
+    .boton-verde:hover { filter: brightness(1.06); }
+
+    /* Etapas del plan */
+    .etapa { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 24px 26px; margin-bottom: 14px; }
+    .etapa--abierta { border-color: rgba(77, 124, 254, 0.4); }
+    .etapa-cabecera { display: flex; align-items: flex-start; gap: 14px; }
+    .etapa-num { flex: none; font-size: 13px; font-weight: 700; color: var(--azul); padding-top: 2px; min-width: 20px; }
+    .etapa-tit-wrap { flex: 1; }
+    .etapa-titulo { font-size: 17px; font-weight: 700; line-height: 1.4; text-wrap: pretty; }
+    .etapa-sub { font-size: 13.5px; line-height: 1.55; color: var(--texto-dim); margin-top: 6px; }
+    .etapa-flecha { flex: none; color: var(--texto-dim); }
+
+    .etapa-cuerpo { margin-top: 18px; padding-left: 34px; }
+    .etapa-parrafo { font-size: 15px; line-height: 1.7; color: #D5D6DA; margin-bottom: 18px; }
+    .pasos-titulo { font-size: 11.5px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 12px; }
+    .pasos { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+    .paso { display: flex; gap: 12px; font-size: 14.5px; line-height: 1.6; color: var(--texto); }
+    .paso::before { content: ""; flex: none; width: 7px; height: 7px; margin-top: 8px; border-radius: 50%; background: var(--azul); }
+
+    .entregable { border: 1px solid var(--hairline); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+    .entregable-titulo { font-size: 11.5px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--azul); margin-bottom: 8px; }
+    .entregable-texto { font-size: 14.5px; line-height: 1.6; color: var(--texto); }
+
+    .esta-semana { border: 1px solid rgba(63, 185, 80, 0.32); background: rgba(63, 185, 80, 0.06); border-radius: 12px; padding: 18px 20px; }
+    .esta-semana-titulo { display: flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--verde); margin-bottom: 10px; }
+    .esta-semana-titulo::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--verde); }
+    .esta-semana-texto { font-size: 14.5px; line-height: 1.6; color: var(--texto); }
+
+    /* Procedencia + CTA */
+    .procedencia { font-size: 13px; line-height: 1.6; color: var(--texto-dim); margin: 24px 0 18px; }
+    .boton-azul { padding: 14px 26px; border-radius: 12px; border: none; background: var(--azul); color: #fff; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .boton-azul:hover { filter: brightness(1.08); }
+
+    /* Tus Numeros + potenciadores */
+    .numeros-card { display: flex; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px 26px; margin-top: 26px; }
+    .numeros-info { min-width: 0; }
+    .numeros-titulo { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .numeros-sub { font-size: 13.5px; line-height: 1.5; color: var(--texto-dim); }
+    .numeros-precio { flex: none; font-size: 12.5px; font-weight: 600; color: var(--azul); border: 1px solid rgba(77, 124, 254, 0.4); border-radius: 999px; padding: 6px 12px; }
+    .boton-borde { flex: none; padding: 11px 20px; border-radius: 11px; border: 1px solid var(--hairline); background: var(--superficie-2); color: var(--texto); font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; }
+
+    .poten-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); margin: 40px 0 18px; }
+    .poten-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lienzo--movil .poten-grid { grid-template-columns: 1fr; }
+    .poten-card { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .poten-top { display: flex; align-items: center; justify-content: space-between; }
+    .poten-icono { width: 22px; height: 22px; stroke: var(--texto-dim); }
+    /* El candado se retiro: ahora es Activar · beta, gratis en beta, precio tachado */
+    .poten-beta { font-size: 11.5px; font-weight: 600; color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.4); border-radius: 999px; padding: 4px 10px; }
+    .poten-nombre { font-size: 15px; font-weight: 700; }
+    .poten-promesa { font-size: 12.5px; line-height: 1.5; color: var(--texto-dim); }
+    .poten-precio { font-size: 12px; color: var(--texto-dim); }
+    .precio-tachado { text-decoration: line-through; opacity: 0.7; }
+
+    .avatar { position: absolute; left: 22px; top: 90px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--superficie-1); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--texto-dim); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Etapa 4 de 5</div>
+      <h1 class="galeria-titulo">Tu Plan</h1>
+      <p class="galeria-descripcion">
+        El plan es un documento, no una puerta: se lee, se descarga, se navega hacia Manos a la Obra.
+        La primera acción y el bloque "esta semana" van en verde (ejecución); la estructura del plan y
+        su procedencia, en azul (planeación). Los potenciadores muestran Activar beta con su precio
+        tachado durante la beta. Desktop 1240 y móvil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- FRAME DESKTOP 1240                                             -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Tu Plan desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+            <div class="top-riel">
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-label">Tu Plan · listo</span>
+              <span class="top-linea top-linea--futuro"></span><span class="top-punto top-punto--futuro"></span>
+            </div>
+          </nav>
+
+          <div class="plan-cuerpo">
+            <div class="colapsable"><span>Recorrido (5)</span><span class="colapsable-flecha">&#9662;</span></div>
+
+            <div class="plan-columnas">
+
+              <!-- COLUMNA PRINCIPAL -->
+              <div>
+                <div class="plan-encab">
+                  <div class="plan-eyebrow">Generado de tu recorrido · 4 nodos</div>
+                  <a class="plan-descargar">Descargar .md</a>
+                </div>
+                <h2 class="plan-titulo">Kits de huerto urbano: de tres ventas entre amigos a tu primera venta real con desconocidos</h2>
+                <p class="plan-intro">Ya tienes lo más difícil: un producto armado, un costo conocido (180 por unidad), un precio definido (350) y tres personas que pagaron sin que se los regalaras. Este plan parte de ahi y tiene un solo objetivo central: confirmar que alguien fuera de tu círculo haría lo mismo, antes de producir más o invertir más.</p>
+                <p class="plan-limite">Cada etapa respeta tu límite de 200 al mes y tus 10 horas semanales disponibles.</p>
+                <p class="plan-nota-etapas">5 etapas · cada barra muestra su entregable; despliegala para ver los pasos y la acción.</p>
+
+                <!-- PRIMERA ACCION (VERDE) -->
+                <div class="accion-semana">
+                  <div class="accion-eyebrow">Tu primera acción</div>
+                  <p class="accion-texto">Abre una hoja en blanco, escribe las dos apuestas y debajo de cada una la señal concreta que te diría "esto es verdad". No avances a la siguiente etapa sin ese papel.</p>
+                  <button class="boton-verde">Empezar con esto</button>
+                </div>
+
+                <!-- ETAPA 01 (ABIERTA) -->
+                <div class="etapa etapa--abierta">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">01</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Pon por escrito las dos apuestas que tu idea necesita que sean verdad</div></div>
+                    <span class="etapa-flecha">&#9652;</span>
+                  </div>
+                  <div class="etapa-cuerpo">
+                    <p class="etapa-parrafo">Antes de salir a vender, necesitas saber exactamente que estas tratando de confirmar. Ahora mismo tu idea descansa sobre dos suposiciones que no has probado con desconocidos: que alguien que no te conoce percibe suficiente valor en el kit para pagar 350, y que ese alguien le contara a alguien más, lo que haría que crecer no dependa solo de ti buscando clientes uno por uno.</p>
+                    <div class="pasos-titulo">Pasos</div>
+                    <div class="pasos">
+                      <div class="paso">Escribe en papel o en una hoja de calculo exactamente estas dos preguntas, con tus propias palabras: pagará 350 por esto alguien que no soy yo ni conoce mi trabajo, y lo recomendará a otra persona sin que yo se lo pida. Esas son tus dos apuestas criticas.</div>
+                      <div class="paso">Para cada apuesta, escribe en una línea cuál sería la señal concreta de que sí es verdad. Ejemplo: que al menos 3 de cada 10 personas a las que les ofrezco el kit lo compren, o que al menos uno de mis primeros cinco compradores desconocidos me refiera a otro sin pedirselo.</div>
+                      <div class="paso">Anota también cuál de las dos te parece más arriesgada hoy. Esa es la que el plan ataca primero.</div>
+                      <div class="paso">Identifica por separado quién decide la compra y quién usa el kit: la misma persona planta las semillas, o el kit se compra para regalar. Tus amigos ya te dieron una pista, así que describe cada perfil en una ficha breve: que tiene, que quiere, por que pagaria 350.</div>
+                    </div>
+                    <div class="entregable">
+                      <div class="entregable-titulo">Entregable</div>
+                      <p class="entregable-texto">Dos apuestas escritas, cada una con su señal de exito medible, y dos fichas de perfil de comprador (el que planta y el que regala).</p>
+                    </div>
+                    <div class="esta-semana">
+                      <div class="esta-semana-titulo">Esta semana</div>
+                      <p class="esta-semana-texto">Abre una hoja en blanco, escribe las dos apuestas y debajo de cada una la señal concreta que te diría "esto es verdad". No avances a la siguiente etapa sin ese papel.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ETAPAS 02 a 05 (CERRADAS) -->
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">02</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Consigue tu primera venta real con un desconocido (este es el bloqueo central)</div><div class="etapa-sub">Al menos un intento de venta real a precio completo con alguien fuera de tu círculo, con registro de cuántas personas vieron el mensaje, cuantas preguntaron y cuantas compraron.</div></div>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">03</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Atiende a tus primeros compradores desconocidos de forma completamente manual y aprende de cada uno</div><div class="etapa-sub">Tabla de seguimiento de al menos tus primeros 3 compradores desconocidos, con datos de uso real y de recomendación.</div></div>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">04</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Mide si lo que estas viendo es crecimiento real o solo actividad</div><div class="etapa-sub">Una hoja con tres números: tasa de conversión real, porcentaje que recomendó y porcentaje que uso el kit. Con esos tres decides si seguir igual, ajustar o cambiar algo.</div></div>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">05</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Decide que motor puede hacer crecer esto sin que dependas solo de tu tiempo</div><div class="etapa-sub">Una decisión escrita sobre cuál es tu motor principal ahora (recomendación, canal directo u otro), con los pasos del proceso de venta documentados desde el primer contacto hasta el pago.</div></div>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="procedencia">Este plan se alimento de 32 conceptos: 7 de tu recorrido conversado y 25 del vecindario relacionado del grafo.</div>
+                <button class="boton-azul">Pasar a Manos a la Obra</button>
+
+                <!-- TUS NUMEROS -->
+                <div class="numeros-card">
+                  <div class="numeros-info">
+                    <div class="numeros-titulo">Tus Números</div>
+                    <div class="numeros-sub">Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.</div>
+                  </div>
+                  <span class="numeros-precio">2 créditos</span>
+                  <button class="boton-borde">Sacar mis números</button>
+                </div>
+
+                <!-- POTENCIA TU IDEA -->
+                <div class="poten-titulo">Potencia tu idea</div>
+                <div class="poten-grid">
+                  <div class="poten-card"><div class="poten-top"><span class="poten-nombre">Calidad y Confianza</span><span class="poten-beta">Activar · beta</span></div><p class="poten-promesa">Que tu cliente confie, vuelva y te recomiende.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                  <div class="poten-card"><div class="poten-top"><span class="poten-nombre">Seguridad y Personas</span><span class="poten-beta">Activar · beta</span></div><p class="poten-promesa">Protege a tu gente y a tu negocio de su peor día.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                  <div class="poten-card"><div class="poten-top"><span class="poten-nombre">Ambiente y Futuro</span><span class="poten-beta">Activar · beta</span></div><p class="poten-promesa">Convierte lo sostenible en ventaja que se nota y se cobra.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                  <div class="poten-card"><div class="poten-top"><span class="poten-nombre">Riesgos Bajo Control</span><span class="poten-beta">Activar · beta</span></div><p class="poten-promesa">Ve venir lo que puede fallar, y decide antes de que decida por ti.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                </div>
+              </div>
+
+              <!-- RAIL DERECHO -->
+              <aside>
+                <div class="rail-titulo">Construido con tu recorrido</div>
+                <div class="rail-lista">
+                  <div class="rail-item">Prueba tu Valor y Crecimiento</div>
+                  <div class="rail-item">Responde tus Preguntas Más Riesgosas</div>
+                  <div class="rail-item">Sirve a tus Primeros Clientes</div>
+                  <div class="rail-item">Elige tu Motor de Crecimiento</div>
+                </div>
+                <p class="rail-nota">Cambia algo en el mundo real? Vuelve a la entrevista cuando quieras: el plan se recalcula desde donde estés.</p>
+              </aside>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- FRAME MOVIL 380                                                -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Tu Plan movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones pequeños</span></div>
+          </nav>
+
+          <div class="plan-cuerpo">
+            <div class="colapsable"><span>Recorrido (5)</span><span class="colapsable-flecha">&#9662;</span></div>
+
+            <div class="plan-columnas">
+              <div>
+                <div class="plan-encab">
+                  <div class="plan-eyebrow">4 nodos</div>
+                  <a class="plan-descargar">Descargar .md</a>
+                </div>
+                <h2 class="plan-titulo">Kits de huerto urbano: de tres ventas entre amigos a tu primera venta con desconocidos</h2>
+                <p class="plan-intro">Ya tienes lo más difícil: producto armado, costo conocido (180), precio definido (350) y tres personas que pagaron sin regalo. El plan confirma que alguien fuera de tu círculo haría lo mismo, antes de invertir más.</p>
+                <p class="plan-limite">Cada etapa respeta tu límite de 200 al mes y tus 10 horas semanales.</p>
+
+                <div class="accion-semana">
+                  <div class="accion-eyebrow">Tu primera acción</div>
+                  <p class="accion-texto">Abre una hoja en blanco, escribe las dos apuestas y debajo de cada una la señal concreta que te diría "esto es verdad".</p>
+                  <button class="boton-verde">Empezar con esto</button>
+                </div>
+
+                <div class="etapa etapa--abierta">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">01</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Pon por escrito las dos apuestas que tu idea necesita que sean verdad</div></div>
+                    <span class="etapa-flecha">&#9652;</span>
+                  </div>
+                  <div class="etapa-cuerpo" style="padding-left: 0;">
+                    <p class="etapa-parrafo">Ahora tu idea descansa sobre dos suposiciones que no has probado con desconocidos: que alguien que no te conoce paga 350, y que le contara a alguien más.</p>
+                    <div class="entregable">
+                      <div class="entregable-titulo">Entregable</div>
+                      <p class="entregable-texto">Dos apuestas escritas, cada una con su señal de exito medible, y dos fichas de perfil de comprador.</p>
+                    </div>
+                    <div class="esta-semana">
+                      <div class="esta-semana-titulo">Esta semana</div>
+                      <p class="esta-semana-texto">Abre una hoja en blanco, escribe las dos apuestas y su señal concreta. No avances sin ese papel.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">02</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Consigue tu primera venta real con un desconocido (el bloqueo central)</div><div class="etapa-sub">Al menos un intento de venta a precio completo con alguien fuera de tu círculo.</div></div>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">03</span>
+                    <div class="etapa-tit-wrap"><div class="etapa-titulo">Atiende a tus primeros compradores desconocidos de forma manual</div><div class="etapa-sub">Tabla de seguimiento de tus primeros 3 compradores desconocidos.</div></div>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="procedencia">Este plan se alimento de 32 conceptos: 7 de tu recorrido conversado y 25 del vecindario del grafo.</div>
+                <button class="boton-azul" style="width:100%">Pasar a Manos a la Obra</button>
+
+                <div class="numeros-card" style="flex-direction:column; align-items:stretch; gap:14px;">
+                  <div class="numeros-info">
+                    <div class="numeros-titulo">Tus Números</div>
+                    <div class="numeros-sub">Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.</div>
+                  </div>
+                  <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+                    <span class="numeros-precio">2 créditos</span>
+                    <button class="boton-borde">Sacar mis números</button>
+                  </div>
+                </div>
+
+                <div class="poten-titulo">Potencia tu idea</div>
+                <div class="poten-grid">
+                  <div class="poten-card"><div class="poten-top"><span class="poten-nombre">Calidad y Confianza</span><span class="poten-beta">Activar · beta</span></div><p class="poten-promesa">Que tu cliente confie, vuelva y te recomiende.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                  <div class="poten-card"><div class="poten-top"><span class="poten-nombre">Seguridad y Personas</span><span class="poten-beta">Activar · beta</span></div><p class="poten-promesa">Protege a tu gente y a tu negocio de su peor día.</p><span class="poten-precio"><span class="precio-tachado">3 créditos</span> · gratis en beta</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

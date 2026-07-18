@@ -157,6 +157,10 @@ export type ResultadoTurno =
        * mundo. La ruta lo usa para revertir el unlock (y, cuando la ETAPA 2
        * despierte, reembolsar) y para que la UI hable con palabras de persona. */
       cierreMundo?: { dominio: string; motivo: string | null };
+      /** FASE B (canon 12): el cierre del viaje CORE (camino sin salida). El
+       * motivo LITERAL del interprete (su razonamiento, ~20 palabras) es la
+       * caja de vidrio de "Lo que vi": el juicio real, no prosa generica. */
+      cierreCamino?: { motivo: string | null };
     }
   | {
       tipo: "error_temporal";
@@ -573,8 +577,11 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         };
         return { tipo: "salio", estado, acumulado, cierreMundo: { dominio: estado.dominioSesion, motivo } };
       }
+      // Core: el camino sin salida. Capturamos el motivo del interprete (su
+      // razonamiento) para la caja "Lo que vi" del canon 12: es el juicio real
+      // que ocurrio, no una explicacion generica.
       estado = { ...estado, fase: "cerrada", preguntaPendiente: null };
-      return { tipo: "salio", estado, acumulado };
+      return { tipo: "salio", estado, acumulado, cierreCamino: { motivo: resultado.razonamiento ?? null } };
     }
 
     if (resultado.accion === "repreguntar") {

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Etapa 5 · Manos a la Obra</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Manos a la Obra desktop
+      - Manos a la Obra movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 780px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    /* BARRA SUPERIOR con stepper (etapa 5 en VERDE) */
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .top-riel { display: flex; align-items: center; gap: 6px; flex: none; }
+    .top-punto { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+    .top-punto--hecho { background: var(--azul); }
+    .top-punto--verde { background: var(--verde); }
+    .top-linea { width: 20px; height: 2px; border-radius: 2px; background: var(--azul); flex: none; }
+    .top-linea--verde { background: var(--verde); }
+    .top-label { font-size: 13.5px; font-weight: 600; color: var(--verde); margin-left: 8px; white-space: nowrap; }
+
+    /* ==========================================================================
+       LAYOUT: checklist a la izquierda, acciones del proyecto a la derecha
+       ========================================================================== */
+    .manos-cuerpo { max-width: 1120px; width: 100%; margin: 0 auto; padding: 30px 40px 60px; }
+    .lienzo--movil .manos-cuerpo { padding: 20px 18px 44px; }
+
+    .volver { display: inline-block; font-size: 14px; color: var(--texto-dim); text-decoration: none; margin-bottom: 22px; }
+    .volver:hover { color: var(--azul); }
+
+    .manos-columnas { display: grid; grid-template-columns: 1fr 320px; gap: 32px; align-items: start; }
+    .lienzo--movil .manos-columnas { grid-template-columns: 1fr; gap: 22px; }
+
+    .manos-eyebrow { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--verde); margin-bottom: 14px; }
+    .manos-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--verde); }
+    .manos-titulo { font-size: 32px; font-weight: 700; line-height: 1.25; letter-spacing: -0.5px; margin-bottom: 22px; text-wrap: pretty; }
+    .lienzo--movil .manos-titulo { font-size: 24px; }
+
+    /* Barra de progreso (VERDE = ejecucion) */
+    .progreso { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .progreso-riel { flex: 1; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+    .progreso-relleno { height: 100%; width: 24%; border-radius: 3px; background: var(--verde); }
+    .progreso-cifra { flex: none; font-size: 15px; font-weight: 700; color: var(--verde); }
+
+    /* Indicador de modo elegido (el elegir vive en Modo y Fechas) */
+    .modo-chip { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--texto-dim); margin-bottom: 26px; }
+    .modo-chip strong { color: var(--texto); font-weight: 600; }
+    .modo-cambiar { color: var(--azul); text-decoration: none; }
+    .modo-cambiar:hover { text-decoration: underline; }
+
+    /* Etapas del checklist */
+    .etapa { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); margin-bottom: 14px; overflow: hidden; }
+    .etapa--abierta { border-color: rgba(63, 185, 80, 0.28); }
+    .etapa-cabecera { display: flex; align-items: flex-start; gap: 14px; padding: 20px 24px; }
+    .etapa-num { flex: none; font-size: 13px; font-weight: 700; color: var(--azul); padding-top: 2px; min-width: 20px; }
+    .etapa-titulo { flex: 1; font-size: 17px; font-weight: 700; line-height: 1.4; text-wrap: pretty; }
+    .lienzo--movil .etapa-titulo { font-size: 15px; }
+    .etapa-cuenta { flex: none; font-size: 14px; font-weight: 700; color: var(--verde); }
+    .etapa-flecha { flex: none; color: var(--texto-dim); margin-left: 4px; }
+
+    .etapa-items { padding: 0 24px 12px; display: flex; flex-direction: column; gap: 10px; }
+
+    /* Item del checklist: circulo -> check verde + tachado al completar */
+    .item { display: flex; align-items: center; gap: 16px; padding: 16px 18px; background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: 12px; }
+    .item--semana { border-color: rgba(63, 185, 80, 0.3); }
+    .item-check { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; }
+    .item-check--hecho { border-color: var(--verde); background: var(--verde); }
+    .item-check--hecho svg { width: 13px; height: 13px; stroke: #04120A; }
+    .item-cuerpo { flex: 1; min-width: 0; }
+    .item-texto { font-size: 14.5px; line-height: 1.55; color: var(--texto); }
+    .item--hecho .item-texto { color: var(--texto-dim); text-decoration: line-through; }
+    .item-etiqueta { display: inline-block; font-size: 11.5px; font-weight: 600; color: var(--verde); margin-top: 6px; }
+    .item-boton { flex: none; padding: 9px 16px; border-radius: 9px; border: 1px solid rgba(63, 185, 80, 0.4); background: rgba(63, 185, 80, 0.08); color: var(--verde); font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .item-hecho-nota { flex: none; font-size: 12.5px; color: var(--texto-dim); }
+
+    /* ==========================================================================
+       COLUMNA DERECHA: acciones del proyecto
+       ========================================================================== */
+    .acciones { display: flex; flex-direction: column; gap: 16px; }
+    .accion-card { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 20px 22px; }
+    .accion-card--cierre { border-color: rgba(63, 185, 80, 0.3); }
+    .accion-titulo { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .accion-card--cierre .accion-titulo { color: var(--verde); }
+    .accion-texto { font-size: 13px; line-height: 1.55; color: var(--texto-dim); margin-bottom: 16px; }
+    .accion-eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 10px; }
+
+    .boton-bloque { width: 100%; padding: 13px; border-radius: 11px; border: 1px solid var(--hairline); background: var(--superficie-2); color: var(--texto); font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .boton-bloque--verde { border-color: rgba(63, 185, 80, 0.5); background: rgba(63, 185, 80, 0.08); color: var(--verde); }
+    /* "Contar que paso" dispara al motor a repensar: AZUL (piensa) */
+    .boton-bloque--azul { border: none; background: var(--azul); color: #fff; }
+    .accion-card--analisis { cursor: pointer; }
+
+    /* Ritmo */
+    .ritmo-fila { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--hairline); font-size: 13.5px; }
+    .ritmo-fila:last-of-type { border-bottom: none; }
+    .ritmo-clave { color: var(--texto-dim); }
+    .ritmo-valor { font-weight: 700; }
+    .ritmo-nota { font-size: 12.5px; line-height: 1.6; color: var(--texto-dim); margin-top: 10px; }
+
+    .avatar { position: absolute; left: 22px; bottom: 22px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--superficie-1); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--texto-dim); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Etapa 5 de 5</div>
+      <h1 class="galeria-titulo">Manos a la Obra</h1>
+      <p class="galeria-descripcion">
+        La ejecucion: todo en verde (etapa 5 del stepper, progreso, contadores, marcar hecho, esta semana,
+        marcar como realizada). "Contar que paso" es azul porque dispara al motor a repensar el plan. El
+        checklist agrupa por etapas plegables; los completados se distinguen por FORMA (check lleno,
+        tachado). En movil la columna lateral (analisis, cierre, ritmo) se agrupa para no caer al fondo en
+        un scroll de miles de pixeles. Desktop 1240 y movil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- FRAME DESKTOP 1240                                             -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Manos a la Obra desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequenos con guia incluida</span>
+            </div>
+            <div class="top-riel">
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea"></span>
+              <span class="top-punto top-punto--hecho"></span><span class="top-linea top-linea--verde"></span>
+              <span class="top-punto top-punto--verde"></span><span class="top-label">Manos a la Obra · 7/30</span>
+            </div>
+          </nav>
+
+          <div class="manos-cuerpo">
+            <a class="volver">&larr; Ver el plan</a>
+
+            <div class="manos-columnas">
+
+              <!-- CHECKLIST -->
+              <div>
+                <div class="manos-eyebrow">Tu idea avanza en el mundo real</div>
+                <h2 class="manos-titulo">Kits de huerto urbano: de tres ventas entre amigos a tu primera venta real con desconocidos</h2>
+                <div class="progreso">
+                  <div class="progreso-riel"><div class="progreso-relleno"></div></div>
+                  <span class="progreso-cifra">7 de 30</span>
+                </div>
+                <div class="modo-chip">Modo: <strong>a mi ritmo</strong> · <a class="modo-cambiar">cambiar</a></div>
+
+                <!-- ETAPA 01 ABIERTA -->
+                <div class="etapa etapa--abierta">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">01</span>
+                    <span class="etapa-titulo">Pon por escrito las dos apuestas que tu idea necesita que sean verdad</span>
+                    <span class="etapa-cuenta">3/5</span>
+                    <span class="etapa-flecha">&#9652;</span>
+                  </div>
+                  <div class="etapa-items">
+                    <div class="item item--hecho">
+                      <span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                      <div class="item-cuerpo"><span class="item-texto">Escribe en papel o en una hoja de calculo exactamente estas dos preguntas, con tus propias palabras: pagara 350 por esto alguien que no soy yo ni conoce mi trabajo, y lo recomendara a otra persona sin que yo se lo pida.</span></div>
+                      <span class="item-hecho-nota">hecho ayer</span>
+                    </div>
+                    <div class="item item--hecho">
+                      <span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                      <div class="item-cuerpo"><span class="item-texto">Para cada apuesta, escribe en una linea cual seria la senal concreta de que si es verdad.</span></div>
+                      <span class="item-hecho-nota">hecho ayer</span>
+                    </div>
+                    <div class="item item--hecho">
+                      <span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                      <div class="item-cuerpo"><span class="item-texto">Anota tambien cual de las dos te parece mas arriesgada hoy. Esa es la que el plan ataca primero.</span></div>
+                      <span class="item-hecho-nota">hecho hoy</span>
+                    </div>
+                    <div class="item">
+                      <span class="item-check"></span>
+                      <div class="item-cuerpo"><span class="item-texto">Identifica por separado quien decide la compra y quien usa el kit: la misma persona planta las semillas, o el kit se compra para regalar. Tus amigos ya te dieron una pista (pidieron kits adicionales para regalar), asi que tendrias al menos dos perfiles distintos.</span></div>
+                      <button class="item-boton">Marcar hecho</button>
+                    </div>
+                    <div class="item item--semana">
+                      <span class="item-check"></span>
+                      <div class="item-cuerpo"><span class="item-texto">Abre una hoja en blanco, escribe las dos apuestas y debajo de cada una la senal concreta que te diria "esto es verdad".</span><span class="item-etiqueta">esta semana</span></div>
+                      <button class="item-boton">Marcar hecho</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ETAPAS 02 a 05 CERRADAS -->
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">02</span>
+                    <span class="etapa-titulo">Consigue tu primera venta real con un desconocido (este es el bloqueo central)</span>
+                    <span class="etapa-cuenta">0/7</span>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">03</span>
+                    <span class="etapa-titulo">Atiende a tus primeros compradores desconocidos de forma completamente manual y aprende de cada uno</span>
+                    <span class="etapa-cuenta">0/6</span>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">04</span>
+                    <span class="etapa-titulo">Mide si lo que estas viendo es crecimiento real o solo actividad</span>
+                    <span class="etapa-cuenta">0/6</span>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+                <div class="etapa">
+                  <div class="etapa-cabecera">
+                    <span class="etapa-num">05</span>
+                    <span class="etapa-titulo">Decide que motor puede hacer crecer esto sin que dependas solo de tu tiempo</span>
+                    <span class="etapa-cuenta">0/6</span>
+                    <span class="etapa-flecha">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ACCIONES DEL PROYECTO -->
+              <aside class="acciones">
+                <div class="accion-card accion-card--analisis">
+                  <div class="accion-titulo">Ver analisis del proyecto</div>
+                  <div class="accion-texto" style="margin-bottom:0;">Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste.</div>
+                </div>
+
+                <div class="accion-card accion-card--cierre">
+                  <div class="accion-titulo">Tu idea ya es un proyecto?</div>
+                  <div class="accion-texto">Cuando lo sientas real, cierrala. No hace falta terminar todo el checklist.</div>
+                  <button class="boton-bloque boton-bloque--verde">Marcar como realizada</button>
+                </div>
+
+                <div class="accion-card">
+                  <div class="accion-eyebrow">Ciclo de profundizacion</div>
+                  <div class="accion-texto">La realidad te cambio el plan? Cuentame que paso y lo recalculo desde donde estas.</div>
+                  <button class="boton-bloque boton-bloque--azul">Contar que paso</button>
+                </div>
+
+                <div class="accion-card">
+                  <div class="accion-eyebrow">Ritmo</div>
+                  <div class="ritmo-fila"><span class="ritmo-clave">Ultima accion</span><span class="ritmo-valor">hoy 09:12</span></div>
+                  <div class="ritmo-fila"><span class="ritmo-clave">Manos a la Obra desde</span><span class="ritmo-valor">hace 2 semanas</span></div>
+                  <div class="ritmo-fila"><span class="ritmo-clave">Ciclos de ajuste</span><span class="ritmo-valor">1</span></div>
+                  <p class="ritmo-nota">Pausa cuando lo necesites. Cuando vuelvas, el checklist te espera exactamente donde quedaste.</p>
+                </div>
+              </aside>
+
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- FRAME MOVIL 380 (replanteo: acciones agrupadas, no al fondo)   -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Manos a la Obra movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones</span></div>
+            <span class="top-label" style="margin:0;">7/30</span>
+          </nav>
+
+          <div class="manos-cuerpo">
+            <div class="manos-eyebrow">Tu idea avanza en el mundo real</div>
+            <h2 class="manos-titulo">Kits de huerto urbano: de tres ventas entre amigos a tu primera venta con desconocidos</h2>
+            <div class="progreso">
+              <div class="progreso-riel"><div class="progreso-relleno"></div></div>
+              <span class="progreso-cifra">7 de 30</span>
+            </div>
+            <div class="modo-chip">Modo: <strong>a mi ritmo</strong> · <a class="modo-cambiar">cambiar</a></div>
+
+            <!-- ACCION PRINCIPAL arriba (jerarquia): repensar el plan -->
+            <div class="accion-card" style="margin-bottom:18px;">
+              <div class="accion-eyebrow">Ciclo de profundizacion</div>
+              <div class="accion-texto">La realidad te cambio el plan? Cuentame que paso y lo recalculo desde donde estas.</div>
+              <button class="boton-bloque boton-bloque--azul">Contar que paso</button>
+            </div>
+
+            <!-- CHECKLIST plegable -->
+            <div class="etapa etapa--abierta">
+              <div class="etapa-cabecera">
+                <span class="etapa-num">01</span>
+                <span class="etapa-titulo">Pon por escrito las dos apuestas que tu idea necesita que sean verdad</span>
+                <span class="etapa-cuenta">3/5</span>
+                <span class="etapa-flecha">&#9652;</span>
+              </div>
+              <div class="etapa-items">
+                <div class="item item--hecho">
+                  <span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <div class="item-cuerpo"><span class="item-texto">Escribe exactamente las dos preguntas con tus palabras: pagara 350 por esto alguien que no me conoce, y lo recomendara sin que se lo pida.</span></div>
+                </div>
+                <div class="item item--hecho">
+                  <span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <div class="item-cuerpo"><span class="item-texto">Para cada apuesta, escribe la senal concreta de que si es verdad.</span></div>
+                </div>
+                <div class="item item--hecho">
+                  <span class="item-check item-check--hecho"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <div class="item-cuerpo"><span class="item-texto">Anota cual de las dos te parece mas arriesgada hoy. Esa es la que el plan ataca primero.</span></div>
+                </div>
+                <div class="item">
+                  <span class="item-check"></span>
+                  <div class="item-cuerpo"><span class="item-texto">Identifica quien decide la compra y quien usa el kit: la misma persona planta, o el kit se compra para regalar. Tus amigos ya te dieron una pista.</span></div>
+                  <button class="item-boton">Marcar</button>
+                </div>
+                <div class="item item--semana">
+                  <span class="item-check"></span>
+                  <div class="item-cuerpo"><span class="item-texto">Abre una hoja en blanco, escribe las dos apuestas y su senal concreta.</span><span class="item-etiqueta">esta semana</span></div>
+                  <button class="item-boton">Marcar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="etapa">
+              <div class="etapa-cabecera">
+                <span class="etapa-num">02</span>
+                <span class="etapa-titulo">Consigue tu primera venta real con un desconocido (el bloqueo central)</span>
+                <span class="etapa-cuenta">0/7</span>
+                <span class="etapa-flecha">&#9662;</span>
+              </div>
+            </div>
+            <div class="etapa">
+              <div class="etapa-cabecera">
+                <span class="etapa-num">03</span>
+                <span class="etapa-titulo">Atiende a tus primeros compradores desconocidos de forma manual</span>
+                <span class="etapa-cuenta">0/6</span>
+                <span class="etapa-flecha">&#9662;</span>
+              </div>
+            </div>
+            <div class="etapa">
+              <div class="etapa-cabecera">
+                <span class="etapa-num">04</span>
+                <span class="etapa-titulo">Mide si lo que estas viendo es crecimiento real o solo actividad</span>
+                <span class="etapa-cuenta">0/6</span>
+                <span class="etapa-flecha">&#9662;</span>
+              </div>
+            </div>
+            <div class="etapa">
+              <div class="etapa-cabecera">
+                <span class="etapa-num">05</span>
+                <span class="etapa-titulo">Decide que motor puede hacer crecer esto sin que dependas solo de tu tiempo</span>
+                <span class="etapa-cuenta">0/6</span>
+                <span class="etapa-flecha">&#9662;</span>
+              </div>
+            </div>
+
+            <!-- ACCIONES DEL PROYECTO agrupadas (plegadas), no un volcado -->
+            <div class="accion-card accion-card--analisis" style="margin-top:6px;">
+              <div class="etapa-cabecera" style="padding:0;">
+                <span class="etapa-titulo" style="font-size:15px;">Ver analisis del proyecto</span>
+                <span class="etapa-flecha">&#9662;</span>
+              </div>
+            </div>
+            <div class="accion-card accion-card--cierre" style="margin-top:12px;">
+              <div class="accion-titulo">Tu idea ya es un proyecto?</div>
+              <div class="accion-texto">Cuando lo sientas real, cierrala. No hace falta terminar todo el checklist.</div>
+              <button class="boton-bloque boton-bloque--verde">Marcar como realizada</button>
+            </div>
+            <div class="accion-card" style="margin-top:12px;">
+              <div class="etapa-cabecera" style="padding:0;">
+                <span class="etapa-titulo" style="font-size:15px;">Ritmo del proyecto</span>
+                <span class="etapa-flecha">&#9662;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

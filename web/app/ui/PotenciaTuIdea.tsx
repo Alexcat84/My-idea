@@ -3,10 +3,17 @@
 /**
  * PotenciaTuIdea — la fila "Potencia tu idea" (canon 07-B / 08): grilla de
  * tarjetas con ícono arriba-izquierda + chip arriba-derecha (créditos /
- * "Activo · n/m" verde / candado), nombre y promesa, con hover que eleva la
- * tarjeta. Tus Números (2 créditos) + los mundos del catálogo. Precios
+ * "Activo · n/m" verde / "Activar · beta"), nombre y promesa, con hover que
+ * eleva la tarjeta. Tus Números (2 créditos) + los mundos del catálogo. Precios
  * SIEMPRE desde precios.ts / packs_catalog.json — ninguna cifra hardcodeada.
  * Azul piensa; el verde ejecuta marca el mundo activo.
+ *
+ * Beta (jul 2026): el candado se retiró. El cobro de créditos duerme hasta la
+ * ETAPA 2 (ledger, migraciones 020-024 sin aplicar), y mientras tanto activar
+ * un mundo es GRATIS y para todos — el fundador debe poder probar los 7 por
+ * igual. El precio del catálogo se muestra tachado, para que se lea como
+ * cortesía de beta y no como "siempre fue gratis". El ancla del cobro futuro
+ * vive en `activarMundo`.
  */
 import { useState, type ReactNode } from "react";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -26,9 +33,10 @@ interface Props {
   /** Fase 4.2: los mundos que el usuario dio por completados. Su chip cambia de
    * "Activo · n/m" (azul) a "Completado" (verde): el mundo tuvo un final. */
   mundosCompletados?: string[];
-  conPlan: boolean;
   onVerMundo: (dominio: string) => void;
-  onTusNumeros: () => void;
+  /** Beta: activar un mundo (gratis hasta la ETAPA 2). El padre refresca sus
+   * unlocks y entra al mundo. */
+  onActivarMundo: (dominio: string) => void;
 }
 
 /** Íconos por mundo (trazo del canon); genérico para los mundos nuevos. */
@@ -97,34 +105,42 @@ function Icono({ clave, activo }: { clave: string; activo?: boolean }) {
   );
 }
 
-function Candado() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden className="shrink-0 text-dim">
-      <rect x="2.5" y="6" width="9" height="6.5" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
-      <path d="M4.5 6V4.5a2.5 2.5 0 0 1 5 0V6" stroke="currentColor" strokeWidth="1.3" fill="none" />
-    </svg>
-  );
-}
-
 export function PotenciaTuIdea({
   projectId,
   unlocks,
   progresoMundos,
   mundosCompletados = [],
-  conPlan,
   onVerMundo,
-  onTusNumeros,
+  onActivarMundo,
 }: Props) {
-  const [avisoEn, setAvisoEn] = useState<string | null>(null);
+  const [activando, setActivando] = useState<string | null>(null);
+  const [errorEn, setErrorEn] = useState<string | null>(null);
   const packs = (catalogo as { packs: Pack[] }).packs;
 
-  function clickBloqueado(pack: Pack) {
-    setAvisoEn(pack.clave);
-    fetch("/api/packs/interes", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ pack: pack.clave, project_id: projectId }),
-    }).catch(() => {});
+  // Beta: el cobro de creditos duerme hasta la ETAPA 2 (ledger, migraciones
+  // 020-024 sin aplicar). Mientras tanto, activar un mundo es GRATIS y para
+  // todos: la web esta abierta y el fundador debe poder probar los 7 por igual.
+  // El endpoint /unlock ya es un stub sin cobro; aqui va el boton que faltaba.
+  //
+  // ── ANCLA para la ETAPA 2: cuando el ledger despierte, esta funcion verifica
+  // saldo ANTES del POST y descuenta a la activacion (los `creditos_activar` del
+  // catalogo). El boton pasa de "Activar (beta)" a "Activar · N creditos". El
+  // resto del flujo -- unlock -> world/start -> plan -- no cambia.
+  async function activarMundo(pack: Pack) {
+    setActivando(pack.clave);
+    setErrorEn(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/world/${pack.clave}/unlock`, { method: "POST" });
+      if (!res.ok) {
+        setErrorEn(pack.clave);
+        return;
+      }
+      onActivarMundo(pack.clave);
+    } catch {
+      setErrorEn(pack.clave);
+    } finally {
+      setActivando(null);
+    }
   }
 
   const claseCard =
@@ -133,28 +149,9 @@ export function PotenciaTuIdea({
   return (
     <section className="mt-2">
       <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Potencia tu idea</p>
+      {/* Canon 05: Tus Números NO va aquí (se dedujo: ya es la fila-CTA bajo el
+          plan). Este grid es solo los mundos del catálogo. */}
       <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Tus Números */}
-        <button
-          onClick={() => (conPlan ? onTusNumeros() : setAvisoEn("tus_numeros"))}
-          className={claseCard + " border-accent/35 hover:border-accent/60"}
-          data-transiciona
-        >
-          <div className="mb-3.5 flex items-center justify-between">
-            <Icono clave="tus_numeros" />
-            <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-[3px] text-[11px] font-bold text-accent">
-              {PRECIOS.tus_numeros} créditos
-            </span>
-          </div>
-          <p className="text-[15px] font-semibold">Tus Números</p>
-          <p className="mt-1.5 text-[12.5px] leading-[1.55] text-dim [text-wrap:pretty]">
-            Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
-          </p>
-          {avisoEn === "tus_numeros" && (
-            <p className="mt-2 text-[12.5px] text-accent">Primero genera el plan de tu idea.</p>
-          )}
-        </button>
-
         {/* Los mundos del catálogo */}
         {packs.map((p) => {
           const activo = unlocks.includes(p.clave);
@@ -163,8 +160,9 @@ export function PotenciaTuIdea({
           return (
             <button
               key={p.clave}
-              onClick={() => (activo ? onVerMundo(p.clave) : clickBloqueado(p))}
-              className={claseCard + " " + (activo ? "border-accent/45" : "border-hairline")}
+              onClick={() => (activo ? onVerMundo(p.clave) : activarMundo(p))}
+              disabled={activando !== null}
+              className={claseCard + " " + (activo ? "border-accent/45" : "border-hairline") + " disabled:opacity-60"}
               data-transiciona
             >
               <div className="mb-3.5 flex items-center justify-between gap-2">
@@ -183,11 +181,17 @@ export function PotenciaTuIdea({
                     Activo{progreso ? <> · <span className="text-done">{progreso.hechos}/{progreso.total}</span></> : ""}
                   </span>
                 ) : (
+                  /* Beta: sin candado. La tarjeta invita a ACTIVAR (gratis
+                     hasta la ETAPA 2). El precio del catálogo se muestra tachado
+                     al lado, para que se lea que es cortesía de beta y no que
+                     siempre fue gratis. */
                   <span className="flex shrink-0 items-center gap-2">
-                    <span className="inline-flex items-center rounded-full border border-white/20 px-2.5 py-[3px] text-[10.5px] font-bold text-dim">
+                    <span className="text-[10.5px] font-medium text-dim/60 line-through">
                       {p.creditos_activar} créditos
                     </span>
-                    <Candado />
+                    <span className="inline-flex items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
+                      {activando === p.clave ? "Activando…" : "Activar · beta"}
+                    </span>
                   </span>
                 )}
               </div>
@@ -195,8 +199,17 @@ export function PotenciaTuIdea({
               <p className={"mt-1.5 text-[12.5px] leading-[1.55] [text-wrap:pretty] text-dim" + (activo ? "" : " opacity-75")}>
                 {p.promesa}
               </p>
-              {avisoEn === p.clave && !activo && (
-                <p className="mt-2 text-[12.5px] text-accent">Disponible próximamente. Te avisaremos aquí mismo.</p>
+              {!activo && (
+                <p className="mt-2 text-[12px] text-dim/70">
+                  {errorEn === p.clave ? (
+                    "No pudimos activarlo; intenta de nuevo."
+                  ) : (
+                    <>
+                      {/* Canon 05/07: precio de catálogo tachado, leyendo de precios.ts. */}
+                      <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
+                    </>
+                  )}
+                </p>
               )}
             </button>
           );

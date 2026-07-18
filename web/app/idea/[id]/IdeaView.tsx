@@ -25,7 +25,7 @@ import { Claridad } from "../../ui/Claridad";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
-import { ReporteCard } from "../../ui/ReporteCard";
+import { PRECIOS } from "@/lib/precios";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -91,6 +91,8 @@ interface RespuestaTurno {
   mensaje?: string;
   /** el mundo era incompatible y su activación se devolvió (§1) */
   unlock_revertido?: boolean;
+  /** Fase 4.3.2: creditos DE VERDAD devueltos (evento del ledger). null en beta. */
+  creditos_devueltos?: number | null;
 }
 
 interface QA {
@@ -136,7 +138,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [enviando, setEnviando] = useState(false);
   const [listoParaPlan, setListoParaPlan] = useState(false);
   /** Fase 4.3 §2: el cierre honesto en pantalla (null = no hubo cierre). */
-  const [cierre, setCierre] = useState<{ mensaje: string; unlockRevertido: boolean } | null>(null);
+  const [cierre, setCierre] = useState<{
+    tipo: "camino" | "mundo";
+    titulo: string | null;
+    cuerpo: string;
+    porque: string | null;
+    creditosDevueltos: number | null;
+  } | null>(null);
   // Phase 3.7.2 (la oferta honesta): temas sobre la mesa cuando el motor
   // OFRECE el plan (null = cierre sin vuelta: CTA unico) y la tarjeta
   // intermedia de contexto final.
@@ -211,10 +219,42 @@ export function IdeaView({ projectId }: { projectId: string }) {
       // recibia ni una palabra. Un cierre sin explicacion es degradacion
       // silenciosa en su cara.
       setPregunta(null);
+      // Canon 12: el cierre estructurado {titulo, cuerpo, porque}. Compat
+      // (amarre 1): si un payload viejo entrega solo `mensaje`, se usa de cuerpo
+      // sin titulo/porque, y nada se rompe ni se queda mudo.
+      const salio = data as {
+        cierre?: { tipo?: "camino" | "mundo"; titulo?: string | null; cuerpo?: string; porque?: string | null };
+        dominio?: string | null;
+      };
+      const c = salio.cierre;
       setCierre({
-        mensaje: data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
-        unlockRevertido: Boolean(data.unlock_revertido),
+        tipo: c?.tipo ?? (salio.dominio ? "mundo" : "camino"),
+        titulo: c?.titulo ?? null,
+        cuerpo: c?.cuerpo ?? data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
+        porque: c?.porque ?? null,
+        creditosDevueltos: data.creditos_devueltos ?? null,
       });
+    }
+  }
+
+  /** Canon 12: "Explorar otro ángulo" tras un cierre de camino core: relanza
+   * la exploración sobre la misma idea (mismo flujo que el CTA de Claridad). */
+  async function explorar() {
+    setEnviando(true);
+    setError(null);
+    try {
+      const inicio = await fetch("/api/session/start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ texto: detalle?.idea.entrada_original, project_id: projectId }),
+      });
+      if (inicio.status === 429) setError(((await inicio.json()) as { error: string }).error);
+      else if (!inicio.ok) setError(ERROR_GENERICO);
+      else procesarTurno((await inicio.json()) as RespuestaTurno);
+    } catch {
+      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+    } finally {
+      setEnviando(false);
     }
   }
 
@@ -637,7 +677,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               }
               entrevistaAbierta={Boolean(pregunta)}
               onVolverEntrevista={volverAlViaje}
-              onItemActualizado={({ id, estado, completed_at }) => {
+              onItemActualizado={({ id, estado, completed_at, nota, fecha_base, fecha_base_original, fecha_base_origen }) => {
                 setChecklist((prev) =>
                   prev
                     ? {
@@ -652,6 +692,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                                     ...i,
                                     ...(estado !== undefined ? { estado: estado as ChecklistEstado } : {}),
                                     ...(completed_at !== undefined ? { completed_at } : {}),
+                                    ...(nota !== undefined ? { nota } : {}),
+                                    ...(fecha_base !== undefined ? { fecha_base } : {}),
+                                    ...(fecha_base_original !== undefined ? { fecha_base_original } : {}),
+                                    ...(fecha_base_origen !== undefined ? { fecha_base_origen } : {}),
                                     updated_at: new Date().toISOString(),
                                   }
                                 : i
@@ -667,7 +711,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
             />
           </>
         ) : (
-          <div className="flex flex-col gap-6 sm:grid sm:grid-cols-[190px_1fr] sm:gap-8">
+          // Fase 4.3.2: el riel pasa de 190px a 260px — a 190 las etiquetas del
+          // recorrido se cortaban ("Identifica tus Supue…"); hay espacio de
+          // sobra a la izquierda y el árbol es la superficie que enamora.
+          <div className="flex flex-col gap-6 sm:grid sm:grid-cols-[260px_1fr] sm:gap-8">
             {/* Riel izquierdo: el árbol (en móvil, acordeón arriba) */}
             {mostrarArbol && (
               <>
@@ -691,17 +738,25 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   no una pantalla en blanco. */}
               {cierre && (
                 <CierreHonesto
-                  mensaje={cierre.mensaje}
-                  unlockRevertido={cierre.unlockRevertido}
+                  tipo={cierre.tipo}
+                  titulo={cierre.titulo}
+                  cuerpo={cierre.cuerpo}
+                  porque={cierre.porque}
+                  creditosDevueltos={cierre.creditosDevueltos}
                   hayPlan={Boolean(planMd)}
                   onVolverAManos={() => {
                     setCierre(null);
                     irAManos();
                   }}
-                  onVerMundos={() => {
+                  onVolverAIdea={() => {
                     setCierre(null);
-                    document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" });
+                    router.replace(`/idea/${projectId}`, { scroll: false });
                   }}
+                  onExplorarOtroAngulo={() => {
+                    setCierre(null);
+                    void explorar();
+                  }}
+                  onVerMundos={() => setCierre(null)}
                 />
               )}
               {/* Tarjeta de pregunta (una a la vez) */}
@@ -889,15 +944,28 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 </div>
               )}
 
-              {/* Bajo el plan: Tus Números (canon 05/07, 2 créditos) */}
+              {/* Bajo el plan: Tus Números (canon 05/14, 2 créditos). El CTA
+                  lleva a la pantalla de tablero vivo /idea/[id]/numeros; las
+                  cifras se editan alli con el recolector, ya no en una
+                  mini-entrevista inline. */}
               {planMd && !generandoPlan && (
-                <div id="tus-numeros">
-                  <ReporteCard
-                    projectId={projectId}
-                    contenidoInicial={detalle.reporte?.contenido_md ?? null}
-                    preguntaPendiente={detalle.reporte_en_curso?.pregunta ?? null}
-                  />
-                </div>
+                <section className="rounded-panel border border-hairline bg-surface p-5 hover:border-accent/55" data-transiciona>
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="text-base font-semibold">Tus Números</h3>
+                    <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-1 text-[11px] font-bold text-accent">
+                      {PRECIOS.tus_numeros} créditos
+                    </span>
+                  </div>
+                  <p className="mt-1.5 text-sm text-dim">
+                    Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
+                  </p>
+                  <Link
+                    href={`/idea/${projectId}/numeros`}
+                    className="mt-4 inline-block rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-sm font-medium hover:bg-accent-soft"
+                  >
+                    Sacar mis números
+                  </Link>
+                </section>
               )}
 
               {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
@@ -946,11 +1014,19 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   unlocks={unlocks}
                   progresoMundos={progresoMundos}
                   mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
-                  conPlan={Boolean(planMd)}
                   onVerMundo={() => irAManos()}
-                  onTusNumeros={() =>
-                    document.getElementById("tus-numeros")?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onActivarMundo={(dominio) => {
+                    // Beta: el mundo quedó activado (unlock gratis). Se añade a
+                    // la lista local para que su tarjeta pase a "Activo" y su
+                    // sección aparezca en Manos a la Obra, y se entra ahí para
+                    // que el usuario lo explore de inmediato.
+                    setDetalle((prev) =>
+                      prev
+                        ? { ...prev, unlocks: [...new Set([...(prev.unlocks ?? []), dominio])] }
+                        : prev
+                    );
+                    irAManos();
+                  }}
                 />
               )}
             </div>

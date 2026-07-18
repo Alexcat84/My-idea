@@ -148,6 +148,29 @@ Antes de que una frase entre a marketing, términos o una demo, se verifica aqu�
 | Cifras de mercado (tamaño, población, número de profesionales) | **PROHIBIDO** | El sistema jamás las inventa y el marketing tampoco las afirma sin fuente citada. |
 | "Reemplaza a un consultor" | **NO USAR** | Ver §4. El encuadre correcto es democratizar el acceso. |
 | Comparaciones de precio con consultores | Usar con cuidado | Marco correcto: lo que un equipo multidisciplinario cobraría por dimensión, integrado y accionable. Sin cifras inventadas. |
+| Afirmaciones de dinero o créditos en la UI ("te devolvimos N créditos", "ahorraste X", "tienes N de saldo") | **Solo con evento del ledger que las respalde** | Ver la regla dura de abajo (§6.1). |
+
+### 6.1 Regla dura: ninguna afirmación de dinero sin evento del ledger
+
+**Jamás se muestra una afirmación sobre dinero o créditos —un cobro, un
+reembolso, un saldo— sin un evento del ledger que la respalde.** Ni un flag de
+entorno, ni una constante, ni "sabemos que el precio es 3": la UI cuelga el
+claim del dato persistido, o no lo afirma.
+
+- **El incidente que la fundó** (Fase 4.3.2): el canon del cierre honesto de un
+  mundo decía *"te devolvimos los 3 créditos"*. Pero en beta la activación es
+  **gratis** (el ledger no existe hasta la ETAPA 2): no hubo cargo, así que no
+  hay reembolso que anunciar. Prometer un reembolso que no ocurrió es la mentira
+  de dinero más fácil de colar.
+- **Cómo se cumple, en código**: el cierre honesto separa dos cosas —el **hecho**
+  (el mundo quedó reabierto, `unlock_revertido`) de la **afirmación de dinero**
+  (`creditos_devueltos: number | null`). El hecho se dice siempre; el claim de
+  dinero solo si `creditos_devueltos` trae un número, y ese número lo pone el
+  ledger (ancla de la ETAPA 2 en `apiSesion.ts`), nunca la UI. En beta es `null`
+  y la línea de reembolso no se renderiza.
+- **Hermana de la degradación silenciosa** (§9): allí el sistema no debe entregar
+  algo peor sin avisar; aquí no debe afirmar un dinero que no movió. Las dos son
+  la misma honestidad, aplicada a la cartera del usuario.
 
 ## 7. PENDIENTES JURISDICCIONALES (para el profesional que redacte lo legal)
 
