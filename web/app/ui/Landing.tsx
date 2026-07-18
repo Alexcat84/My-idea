@@ -38,7 +38,7 @@ interface EstadoEslogan {
   scatter: Dispersion[];
 }
 
-export function Landing() {
+export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {}) {
   const [typed, setTyped] = useState("");
   const [activa, setActiva] = useState<SeccionId>("inicio");
   const [eslogan, setEslogan] = useState<EstadoEslogan>({ mode: "shown", reveal: 1, scatter: [] });
@@ -739,7 +739,7 @@ export function Landing() {
             <a href="#descargar" onClick={() => marcarActiva("descargar")} style={{ position: "relative", color: colorNav("descargar"), padding: "8px 12px", borderRadius: "8px", transition: "color 180ms ease-out,background 180ms ease-out" }} className="lh0">App<span style={{ position: "absolute", left: "12px", right: "12px", bottom: "2px", height: "2px", borderRadius: "2px", background: "#4D7CFE", transform: subrayadoNav("descargar"), transformOrigin: "left center", transition: "transform 220ms ease-out" }}></span></a>
           </div>
           <span style={{ flex: "1" }}></span>
-          <a href="/login" style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">Iniciar sesión</a>
+          <a href={sesionActiva ? "/ideas" : "/login"} style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">{sesionActiva ? "Mis ideas" : "Iniciar sesión"}</a>
           <a href="/nueva" style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "10px", padding: "10px 20px", fontFamily: "inherit", fontSize: "14.5px", fontWeight: "600", cursor: "pointer", transition: "background 180ms ease-out" }} className="lh2">Comenzar</a>
         </div>
       </nav>
@@ -1011,7 +1011,7 @@ export function Landing() {
           <h2 data-reveal="true" style={{ fontSize: "clamp(34px,5.4vw,64px)", lineHeight: "1.08", letterSpacing: "-0.03em", fontWeight: "800", margin: "0", textWrap: "balance" }}>Aquí acaba tu idea y nace tu proyecto</h2>
           <div data-reveal="true" data-reveal-delay="120" style={{ display: "flex", justifyContent: "center", gap: "14px", marginTop: "36px", flexWrap: "wrap" }}>
             <a href="/nueva" style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "12px", padding: "14px 30px", fontFamily: "inherit", fontSize: "15px", fontWeight: "600", cursor: "pointer", boxShadow: "0 0 26px rgba(77,124,254,0.32)", transition: "background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh8">Comenzar gratis</a>
-            <a href="/login" style={{ display: "inline-flex", alignItems: "center", background: "transparent", border: "1px solid rgba(255,255,255,0.14)", color: "#F5F6F8", borderRadius: "12px", padding: "13px 26px", fontSize: "15px", fontWeight: "500", transition: "border-color 180ms ease-out" }} className="lh9">Iniciar sesión</a>
+            <a href={sesionActiva ? "/ideas" : "/login"} style={{ display: "inline-flex", alignItems: "center", background: "transparent", border: "1px solid rgba(255,255,255,0.14)", color: "#F5F6F8", borderRadius: "12px", padding: "13px 26px", fontSize: "15px", fontWeight: "500", transition: "border-color 180ms ease-out" }} className="lh9">{sesionActiva ? "Mis ideas" : "Iniciar sesión"}</a>
           </div>
         </div>
       </section>

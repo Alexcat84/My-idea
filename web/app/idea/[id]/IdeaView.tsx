@@ -23,6 +23,7 @@ import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Claridad } from "../../ui/Claridad";
 import { PlanDocumento } from "../../ui/PlanDocumento";
+import { ChipSaldo } from "../../ui/ChipSaldo";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { PRECIOS } from "@/lib/precios";
@@ -255,6 +256,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ texto: detalle?.idea.entrada_original, project_id: projectId }),
       });
+      if (inicio.status === 401) {
+        // ETAPA 2 (la frontera): el login nace aqui; la idea se adopta al volver.
+        router.push("/login");
+        return;
+      }
       if (inicio.status === 429) setError(((await inicio.json()) as { error: string }).error);
       else if (!inicio.ok) setError(ERROR_GENERICO);
       else procesarTurno((await inicio.json()) as RespuestaTurno);
@@ -454,6 +460,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ texto: d.idea.entrada_original, project_id: projectId }),
           });
+          if (inicio.status === 401) {
+            router.push("/login");
+            return;
+          }
           if (inicio.status === 429) {
             setError(((await inicio.json()) as { error: string }).error);
           } else if (!inicio.ok) {
@@ -679,6 +689,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
           )}
         </div>
         <span className="flex-1" />
+        {/* ETAPA 2: el saldo, discreto (canon 07). Solo con cuenta real. */}
+        <ChipSaldo />
         <div className="hidden md:block">
           <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} />
         </div>
@@ -950,8 +962,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       "Tu plan puede profundizarse después con el seguimiento."
                     ) : (
                       <>
-                        El diagnóstico es gratis. Su plan, si lo quieres:{" "}
-                        <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta.
+                        El diagnóstico es gratis. Su plan, si lo quieres: {PRECIOS.mundo_activar} créditos.
                       </>
                     )}
                   </p>
@@ -1074,7 +1085,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ texto: detalle.idea.entrada_original, project_id: projectId }),
                           });
-                          if (inicio.status === 429) {
+                          if (inicio.status === 401) {
+            router.push("/login");
+            return;
+          }
+          if (inicio.status === 429) {
                             setError(((await inicio.json()) as { error: string }).error);
                           } else if (!inicio.ok) {
                             setError(ERROR_GENERICO);

@@ -1,11 +1,12 @@
 /**
  * /potenciadores — Potenciadores y Créditos (canon 07). Tres bloques: el
- * centro de créditos, la fila de potenciadores ("Activar · beta", precio de
- * catálogo tachado LEYENDO de precios.ts, jamás hardcodeado), y "Tus Números
- * por dentro" con el único uso del ámbar, el guardián de datos.
+ * centro de créditos, la fila de potenciadores y "Tus Números por dentro"
+ * con el único uso del ámbar, el guardián de datos.
  *
- * El candado se retiró: durante la beta cada potenciador es "Activar · beta",
- * gratis, con su precio de catálogo tachado. La moneda se llama créditos.
+ * ETAPA 2 (beta viva): los precios son VIVOS y se pagan con la cortesía (20
+ * al primer login). El preview de un mundo es gratis (4.5); su PLAN cuesta
+ * su precio de catálogo, LEYENDO de precios.ts, jamás hardcodeado. El saldo
+ * del panel es el real (RLS own-select). La moneda se llama créditos.
  *
  * El catálogo de BUNDLES de compra (cuántos créditos por pack, a qué precio en
  * dinero) es una DECISIÓN PENDIENTE DEL FUNDADOR para la ETAPA 2: precios.ts no
@@ -14,7 +15,9 @@
  */
 import Link from "next/link";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { esInvitadoInvisible } from "@/lib/identidad";
 import { PRECIOS } from "@/lib/precios";
+import { createClient } from "@/lib/supabase/server";
 
 const MUNDOS = (catalogo.packs as Array<{ clave: string; nombre: string; promesa: string }>).map((p) => ({
   nombre: p.nombre,
@@ -31,7 +34,19 @@ const PACKS_PROVISIONALES = [
 
 const PUNTO_MUNDO = "#3A9B8F"; // matiz de los mundos (ni azul ni verde)
 
-export default function Potenciadores() {
+export default async function Potenciadores() {
+  // ETAPA 2: el saldo real del ledger (RLS: cada quien ve solo lo suyo). La
+  // identidad invisible no tiene ledger: sus créditos nacen con su cuenta.
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const cuentaReal = Boolean(user && !esInvitadoInvisible(user));
+  let saldo = 0;
+  if (cuentaReal) {
+    const { data: cuenta } = await supabase.from("credit_accounts").select("creditos_total").maybeSingle();
+    saldo = (cuenta as { creditos_total: number } | null)?.creditos_total ?? 0;
+  }
   return (
     <div className="flex min-h-full flex-1 flex-col">
       <header className="flex h-[58px] items-center gap-3 border-b border-hairline px-5 sm:px-6">
@@ -52,8 +67,10 @@ export default function Potenciadores() {
 
           <div className="mt-6 grid gap-4 sm:grid-cols-[280px_1fr]">
             <div className="rounded-panel border border-hairline bg-surface p-6">
-              <div className="text-[40px] font-extrabold leading-none tracking-tight">0</div>
-              <div className="mt-1.5 text-[13px] text-dim">créditos disponibles</div>
+              <div className="text-[40px] font-extrabold leading-none tracking-tight">{saldo}</div>
+              <div className="mt-1.5 text-[13px] text-dim">
+                {cuentaReal ? "créditos disponibles" : "tus créditos nacen con tu cuenta"}
+              </div>
               <p className="mt-3 text-[12.5px] leading-relaxed text-dim">
                 Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra
                 nada.
@@ -114,20 +131,18 @@ export default function Potenciadores() {
               <span className="mt-auto pt-1 text-[12.5px] text-dim">Se paga por uso</span>
             </div>
 
-            {/* Los 7 mundos (Activar · beta, precio de catálogo tachado) */}
+            {/* Los 7 mundos: el preview es gratis (4.5); el PLAN se compra. */}
             {MUNDOS.map((m) => (
               <div key={m.nombre} className="flex flex-col gap-2.5 rounded-panel border border-hairline bg-surface p-[22px]">
                 <div className="flex items-center justify-between">
                   <span className="h-2.5 w-2.5 rounded-full" style={{ background: PUNTO_MUNDO }} aria-hidden />
-                  <span className="rounded-full border border-done/40 px-2.5 py-1 text-[11.5px] font-semibold text-done">
-                    Activar · beta
+                  <span className="rounded-full border border-accent/40 px-2.5 py-1 text-[11.5px] font-semibold text-accent">
+                    Preview gratis
                   </span>
                 </div>
                 <span className="text-[15px] font-semibold">{m.nombre}</span>
                 <p className="text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">{m.promesa}</p>
-                <span className="mt-auto pt-1 text-[12.5px] text-dim">
-                  <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
-                </span>
+                <span className="mt-auto pt-1 text-[12.5px] text-dim">Su plan: {PRECIOS.mundo_activar} créditos</span>
               </div>
             ))}
           </div>
