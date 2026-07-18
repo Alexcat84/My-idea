@@ -30,6 +30,7 @@ import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import type { ChecklistEstado } from "@/lib/dbContract";
+import { estadoMundo } from "@/lib/engine/previewMundos";
 import { consumirSSE } from "@/lib/sseCliente";
 
 const NOTA_SILENCIOSO = "cubierto por lo que contaste";
@@ -67,6 +68,12 @@ interface DetalleIdea {
     /** Fase 4.2: el mundo se dio por completado (migración 026). null = abierto. */
     completado_at?: string | null;
     cierre_motivo?: string | null;
+    /** Fase 4.5 (migración 028): el escaparate del preview. */
+    preview_at?: string | null;
+    preview_session_id?: string | null;
+    resumen_md?: string | null;
+    resumen_at?: string | null;
+    plan_pagado_at?: string | null;
     plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
   }>;
   historial?: PlanHistorial[];
@@ -256,6 +263,60 @@ export function IdeaView({ projectId }: { projectId: string }) {
     } finally {
       setEnviando(false);
     }
+  }
+
+  /** Fase 4.5: re-lee el detalle sin tocar el resto del estado (para refrescar
+   * mundos tras un diagnóstico o una compra). */
+  async function refrescarDetalle() {
+    try {
+      const res = await fetch(`/api/idea/${projectId}`);
+      if (res.ok) setDetalle((await res.json()) as DetalleIdea);
+    } catch {
+      /* silencioso: el refresco es cortesía, no la acción principal */
+    }
+  }
+
+  /** Fase 4.5: la entrevista del preview terminó. Se redacta el diagnóstico
+   * (gratis, Sonnet) y el escaparate vive en la sección del mundo en Manos. */
+  async function verDiagnostico() {
+    if (!sessionId || dominioEntrevista === "core") return;
+    setEnviando(true);
+    setError(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/world/${dominioEntrevista}/diagnostico`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session_id: sessionId }),
+      });
+      const data = (await res.json()) as { error?: string };
+      if (!res.ok) {
+        setError(data.error ?? ERROR_GENERICO);
+        return;
+      }
+      // El escaparate queda persistido: salir de la entrevista, refrescar los
+      // mundos y aterrizar en la sección del mundo (Manos a la Obra).
+      setListoParaPlan(false);
+      setTemasPendientes(null);
+      setPregunta(null);
+      setPlanMd(detalle?.plan?.contenido_md ?? null);
+      await refrescarDetalle();
+      irAManos();
+    } catch {
+      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  /** Fase 4.5: la COMPRA. Genera el plan del mundo DESDE la sesión del preview
+   * (sin re-entrevistar) y refresca los mundos al terminar. El cobro (3
+   * créditos) vive en la entrega, dentro de la ruta del plan (ancla ETAPA 2). */
+  async function comprarPlanMundo(dominio: string, sid: string) {
+    setVistaManos(false);
+    setDominioEntrevista(dominio);
+    setPlanMd(null);
+    await generarPlan(sid);
+    await refrescarDetalle();
   }
 
   /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
@@ -580,8 +641,24 @@ export function IdeaView({ projectId }: { projectId: string }) {
       promesa: NOMBRE_MUNDO[dominio]?.promesa ?? "",
       plan: m?.plan ?? null,
       completadoAt: m?.completado_at ?? null,
+      // Fase 4.5: el escaparate del preview viaja a la sección del mundo.
+      resumenMd: m?.resumen_md ?? null,
+      resumenAt: m?.resumen_at ?? null,
+      previewSessionId: m?.preview_session_id ?? null,
+      planPagadoAt: m?.plan_pagado_at ?? null,
     };
   });
+
+  // Fase 4.5: la máquina de estados por mundo (bloqueado / abierto /
+  // diagnóstico listo / plan comprado) para la fila de potenciadores. El plan
+  // core puede ser el recién generado (planMd) o el persistido (detalle.plan).
+  const hayPlanCore = Boolean(planMd || detalle.plan);
+  const estadosMundo = Object.fromEntries(
+    (catalogo as { packs: Array<{ clave: string }> }).packs.map((p) => [
+      p.clave,
+      estadoMundo(detalle.mundos?.find((x) => x.dominio === p.clave) ?? null, hayPlanCore),
+    ])
+  );
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -708,6 +785,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               }}
               onSeguimientoIniciado={(data) => entrarASesionNueva(data as RespuestaTurno, "core")}
               onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio)}
+              onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
             />
           </>
         ) : (
@@ -836,12 +914,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   {temasPendientes !== null && temasPendientes.length === 0 && (
                     <p className="mt-3.5 text-[13.5px] text-dim">Cubrimos lo esencial de punta a punta.</p>
                   )}
+                  {/* Fase 4.5: en un MUNDO, la entrevista completa no vende un
+                      plan a ciegas: entrega el DIAGNÓSTICO gratis (el
+                      escaparate). El plan se compra después, desde él. */}
                   {temasPendientes === null ? (
                     <button
-                      onClick={() => setTarjetaContextoFinal(true)}
-                      className="mt-6 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
+                      onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
+                      disabled={enviando}
+                      className="mt-6 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
                     >
-                      Generar mi plan
+                      {dominioEntrevista === "core" ? "Generar mi plan" : enviando ? "Redactando tu diagnóstico…" : "Ver mi diagnóstico · gratis"}
                     </button>
                   ) : (
                     <div className="mt-6 flex gap-3">
@@ -854,27 +936,36 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         Seguimos explorando
                       </button>
                       <button
-                        onClick={() => setTarjetaContextoFinal(true)}
+                        onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
                         disabled={enviando}
                         className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
                         style={{ border: "1px solid rgba(77,124,254,0.5)" }}
                       >
-                        Generar mi plan
+                        {dominioEntrevista === "core" ? "Generar mi plan" : "Ver mi diagnóstico"}
                       </button>
                     </div>
                   )}
                   <p className="mt-4 text-center text-xs text-dim opacity-80">
-                    Tu plan puede profundizarse después con el seguimiento.
+                    {dominioEntrevista === "core" ? (
+                      "Tu plan puede profundizarse después con el seguimiento."
+                    ) : (
+                      <>
+                        El diagnóstico es gratis. Su plan, si lo quieres:{" "}
+                        <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta.
+                      </>
+                    )}
                   </p>
                 </div>
               )}
 
               {puedeGenerarPlan && pregunta && !tarjetaContextoFinal && (
                 <button
-                  onClick={() => setTarjetaContextoFinal(true)}
+                  onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
                   className="self-start text-sm text-dim hover:text-ink"
                 >
-                  Generar mi plan con lo que ya conté
+                  {dominioEntrevista === "core"
+                    ? "Generar mi plan con lo que ya conté"
+                    : "Ver mi diagnóstico con lo que ya conté"}
                 </button>
               )}
 
@@ -1012,14 +1103,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 <PotenciaTuIdea
                   projectId={projectId}
                   unlocks={unlocks}
+                  estadosMundo={estadosMundo}
                   progresoMundos={progresoMundos}
                   mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
                   onVerMundo={() => irAManos()}
                   onActivarMundo={(dominio) => {
-                    // Beta: el mundo quedó activado (unlock gratis). Se añade a
-                    // la lista local para que su tarjeta pase a "Activo" y su
-                    // sección aparezca en Manos a la Obra, y se entra ahí para
-                    // que el usuario lo explore de inmediato.
+                    // Fase 4.5: abrir el mundo es GRATIS (el cobro vive en la
+                    // entrega de su plan). Se añade a la lista local para que
+                    // su sección aparezca en Manos a la Obra, y se entra ahí
+                    // para explorarlo de inmediato.
                     setDetalle((prev) =>
                       prev
                         ? { ...prev, unlocks: [...new Set([...(prev.unlocks ?? []), dominio])] }
