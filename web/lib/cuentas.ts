@@ -15,9 +15,6 @@
  */
 import { createAdminClient } from "./supabase/admin";
 
-/** Tablas con columna user_id propia (001): el resto cuelga de project_id. */
-const TABLAS_CON_USER_ID = ["projects", "sessions", "plans"] as const;
-
 /**
  * Mueve TODOS los proyectos de un usuario (la identidad invisible del
  * navegador) al usuario real recién autenticado. Devuelve cuántos proyectos
@@ -34,19 +31,26 @@ export async function adoptarProyectosDeUsuario(deUserId: string, aUserId: strin
 }
 
 /**
- * Mueve proyectos CONCRETOS (por id) de un dueño a otro. Exige que cada
- * proyecto pertenezca hoy a `deUserId` (el .eq de cada UPDATE lo garantiza:
- * un id ajeno simplemente no matchea y no se mueve).
+ * Mueve proyectos CONCRETOS (por id) de un dueño a otro, en las TRES tablas
+ * con user_id propio (001): projects (por id), sessions (por project_id) y
+ * plans (por session_id: plans NO tiene project_id — lo cazó el vuelo de
+ * dinero). Exige que cada fila pertenezca hoy a `deUserId` (el .eq de cada
+ * UPDATE lo garantiza: un id ajeno simplemente no matchea y no se mueve).
  */
 export async function adoptarProyectosPorIds(deUserId: string, aUserId: string, projectIds: string[]): Promise<void> {
   const admin = createAdminClient();
-  for (const tabla of TABLAS_CON_USER_ID) {
-    const columnaFiltro = tabla === "projects" ? "id" : "project_id";
-    const { error } = await admin
-      .from(tabla)
-      .update({ user_id: aUserId })
-      .eq("user_id", deUserId)
-      .in(columnaFiltro, projectIds);
-    if (error) throw error;
+  // Las sesiones de esos proyectos, ANTES de mover nada (alimentan el filtro
+  // de plans).
+  const { data: sesiones, error: errSes } = await admin.from("sessions").select("id").in("project_id", projectIds);
+  if (errSes) throw errSes;
+  const sessionIds = ((sesiones ?? []) as Array<{ id: string }>).map((s) => s.id);
+
+  const { error: e1 } = await admin.from("projects").update({ user_id: aUserId }).eq("user_id", deUserId).in("id", projectIds);
+  if (e1) throw e1;
+  const { error: e2 } = await admin.from("sessions").update({ user_id: aUserId }).eq("user_id", deUserId).in("project_id", projectIds);
+  if (e2) throw e2;
+  if (sessionIds.length > 0) {
+    const { error: e3 } = await admin.from("plans").update({ user_id: aUserId }).eq("user_id", deUserId).in("session_id", sessionIds);
+    if (e3) throw e3;
   }
 }

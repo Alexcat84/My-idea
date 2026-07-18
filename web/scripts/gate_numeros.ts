@@ -37,6 +37,8 @@ async function sembrar(userId: string, titulo: string, unidad: string, numeros: 
       tipo_oferta: "producto_fisico",
       unidad_venta: unidad,
       numeros_proyecto: envuelto,
+      // ETAPA 2: el gate captura el TABLERO; la activacion va sembrada.
+      tus_numeros_activado_at: new Date().toISOString(),
     })
     .select("id")
     .single();

@@ -29,6 +29,15 @@ const admin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SU
 const MUNDO = "quality"; // Calidad y Confianza: encaja con el caso kits (clientes reales)
 
 let fallos = 0;
+
+/** ETAPA 2: los vuelos ejercen los cobros REALES; el dev user necesita saldo. */
+async function asegurarSaldoDev(userId: string) {
+  await admin.rpc("otorgar_creditos", {
+    p_user_id: userId, p_monto: 100, p_origen: "cortesia",
+    p_idempotency_key: `vuelo-topup:${Date.now()}`, p_pack: null,
+  });
+}
+
 function check(nombre: string, cond: boolean, extra?: unknown) {
   console.log(`${cond ? "OK  " : "FALLO"}: ${nombre}${cond ? "" : `  -> ${JSON.stringify(extra)}`}`);
   if (!cond) fallos++;
@@ -112,6 +121,7 @@ async function main() {
   const { data: lista } = await admin.auth.admin.listUsers();
   const dev = lista.users.find((u) => u.email === "dev@my-idea.local");
   if (!dev) throw new Error("no encuentro el dev user");
+  await asegurarSaldoDev(dev.id);
 
   // ── REGRESION: candado de secuencia (sin plan core, nada se abre) ─────────
   const { data: pv } = await admin
