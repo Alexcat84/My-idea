@@ -21,7 +21,7 @@ evidencia (el par app-vs-canon del gate); el fundador abre el par y confirma.
 | 01 | Home / Mis ideas | **Delta menor** | `00_home` (+`_380`) | placeholder acortado ("…o en qué punto estás con ella" recortado en la app); la meta line del canon **combina** invitación + sello ("Una pregunta te espera · última acción ayer 21:26"), la app muestra solo uno; mayúscula "Una/una pregunta". Estructura calza. | ✅ visto en el par |
 | 02 | La Chispa | **Calza** | `01_chispa` (+`_380`) | diff v1→2.0 = 14 (el más bajo). Momento sagrado. | ⏳ por confirmar en par |
 | 03 | Claridad | **Calza / delta menor** | `02_claridad` (+`_380`) | diff 38. Frase + lo que tienes + lo que asumes. | ⏳ por confirmar |
-| 04 | La Exploración | **Delta (móvil)** | `03_exploracion`, `03b_oferta_honesta`, `04a_plan_en_camino` (+`_380`) | desktop calza; el riel móvil de la app es un **Acordeón**, el canon 04 pide **hoja inferior "Recorrido"** a 380. | 🟡 parcial |
+| 04 | La Exploración | **Delta (móvil) — FUERA de esta FASE B** | `03_exploracion`, `03b_oferta_honesta`, `04a_plan_en_camino` (+`_380`) | desktop calza; el riel móvil de la app es un **Acordeón**, el canon 04 pide **hoja inferior "Recorrido"** a 380. Encolado al programa móvil (ver abajo). | 🟡 parcial |
 | 05 | Tu Plan | **Delta menor** | `04_tu_plan` (+`_380`) | Tus Números **duplicado** (fila-CTA + tarjeta del grid; el canon lo pone solo como fila); paso 01 con doble "PASOS" y **sin la caja "ENTREGABLE" rotulada**; copy beta ("Gratis durante la beta · un toque lo activa" vs "gratis en beta"). Estructura calza. | ✅ visto en el par |
 | 06 | Manos a la Obra | **Calza** (reorganizado 4.3.2) | `05_manos` (+`_380`) | el replanteo del 380 ya se hizo esta sesión: "contar qué pasó" arriba, plegables, modo compacto. | ⏳ por confirmar |
 | 07 | Potenciadores y Créditos | **Delta** | `z_potenciadores_SOLOCANON` (el gate no maneja `/potenciadores` como par) | existe `/potenciadores` (centro de créditos); layout, candados beta y tratamiento visual van contra el canon 07. El **catálogo de packs** NO se alinea al dibujo: `precios.ts` no lo define, así que los bundles (5/12/30 app vs 10/30/75 dibujo) son **decisión pendiente del fundador (ETAPA 2)**; la pantalla lee de `precios.ts` con `$ —` deshabilitado donde falte definición. La activación de potenciadores vive en el grid de Tu Plan. | 🟡 parcial |
@@ -38,7 +38,31 @@ evidencia (el par app-vs-canon del gate); el fundador abre el par y confirma.
 (01 Home, 05 Tu Plan, 13 Detalle), 6 que calzan y solo hay que confirmar en el par
 (02, 03, 06, 08, 09, 10, 11).
 
-## Orden recomendado de la FASE B (el fundador decide)
+## Decisión de tablero (2026-07-17): la web primero, lo móvil como programa propio
+
+El fundador revisó las 70 capturas del gate. La gran mayoría bien; las **móviles
+confirman la deuda conocida** (la web a 380 está apretada, no es experiencia móvil de
+verdad). Decisión: **la prioridad es el motor con sus visuales WEB completos**. Todo
+trabajo **específicamente-380** se ataca **como programa propio cuando la web esté full**
+(la antesala de la APK), con el canon 380 ya dibujado como vara esperando.
+
+En consecuencia, **fuera de esta FASE B** (encolados con su canon, no borrados):
+- **04 La Exploración móvil** (hoja inferior "Recorrido" a 380).
+- Cualquier ajuste que sea solo del viewport 380 en las demás pantallas.
+
+El **gate sigue capturando en dos viewports**: la evidencia 380 se acumula gratis y la
+deuda queda medida, pero no se arregla ahora.
+
+## Orden vigente de la FASE B (2026-07-17)
+
+1. **Tus Números (14)** completo — C2→C6 (en curso; C1 hecho).
+2. **El cierre honesto (12)** — web.
+3. **Potenciadores y Créditos (07)** — web; packs = decisión pendiente (ETAPA 2).
+4. **Pulido menor** — Tu Plan (05), Home (01), Detalle (13).
+5. **Confirmar los que calzan** — 02, 03, 06, 08, 09, 10, 11.
+6. Tag `web-v1.3.0`.
+
+## Orden recomendado inicial (previo a la decisión de tablero, conservado como registro)
 
 1. **Tus Números (canon 14) — trabajo grande, prioridad 1.** Es la "frenada" del fundador.
    Calculadora inversa (`precioParaMargenObjetivo`, `costoMaximoParaEquilibrio`,
