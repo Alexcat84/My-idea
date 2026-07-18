@@ -120,6 +120,8 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
 
   return NextResponse.json({
     project_id: projectId,
+    titulo: proyecto.titulo,
+    unidad: proyecto.unidad_venta ?? null,
     tablero,
     veredicto,
     narracion: ultima?.narracion ?? null,
@@ -220,6 +222,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   return NextResponse.json({
     project_id: projectId,
+    titulo: proyecto.titulo,
+    unidad,
     tablero,
     veredicto,
     narracion: narracion ?? (hayCambio ? null : ultima?.narracion ?? null),

@@ -1,0 +1,399 @@
+"use client";
+
+/**
+ * TusNumeros.tsx - FASE B (canon 14): la pantalla de Tus Numeros, replica
+ * financiera del Analisis. Veredicto de una frase con su color (ambar =
+ * perdida, jamas rojo: espejo sin regano; verde = sano; azul = faltan datos),
+ * tiles, la barra de la verdad, las tres palancas con su numero ya calculado,
+ * escenarios, faltantes y el guardian. TODOS los numeros vienen del tablero
+ * determinista (GET /api/project/[id]/numeros); la pantalla solo los pinta.
+ */
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import type { ValorNumerico } from "@/lib/calculadora";
+import type { Palanca, Palancas } from "@/lib/palancas";
+import type { Tablero } from "@/lib/tableroNumeros";
+import type { Veredicto } from "@/lib/numerosVivo";
+
+interface RespuestaNumeros {
+  titulo: string | null;
+  unidad: string | null;
+  tablero: Tablero;
+  veredicto: Veredicto;
+  narracion: string | null;
+  cifras_fecha: string | null;
+  activado: boolean;
+}
+
+// ── formato ──────────────────────────────────────────────────────────────
+function money(n: number): string {
+  const neg = n < 0;
+  const r = Math.round(Math.abs(n));
+  const s = String(r).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return (neg ? "-$" : "$") + s;
+}
+function fmt(v: ValorNumerico | null | undefined): string {
+  if (v === null || v === undefined) return "—";
+  if (typeof v === "object") return `${money(v.min)} a ${money(v.max)}`;
+  return money(v);
+}
+function medio(v: ValorNumerico | null | undefined): number | null {
+  if (v === null || v === undefined) return null;
+  return typeof v === "object" ? (v.min + v.max) / 2 : v;
+}
+
+const ETIQUETAS_FALTANTES: Record<string, { texto: string; porque: string }> = {
+  costo_materiales_unidad: { texto: "Costo de materiales por unidad", porque: "es la base para saber cuanto te cuesta cada una" },
+  horas_por_unidad: { texto: "Tu tiempo por unidad, valorado en dinero", porque: "si te pagaras el rato que tardas, el costo real sube" },
+  valor_hora: { texto: "Cuanto vale tu hora de trabajo", porque: "sin ella no se puede poner precio a tu tiempo" },
+  precio_tentativo: { texto: "El precio al que vendes", porque: "sin precio no hay margen que calcular" },
+  capacidad_semanal: { texto: "Cuantas puedes hacer en una semana", porque: "marca el techo real de lo que alcanzas a producir" },
+  costos_fijos_mensuales: { texto: "Tu gasto fijo mensual", porque: "es lo que pagas cada mes vendas o no" },
+  unidades_vendidas: { texto: "Cuantas vendes al mes, o tu meta", porque: "sin ella no hay escenarios de venta" },
+  precio_pagado_real: { texto: "Lo que de verdad te han pagado", porque: "el precio real puede diferir del que pusiste" },
+  dias_inventario: { texto: "Dias que tu dinero pasa en inventario", porque: "afecta cuando vuelve la plata a tu bolsillo" },
+  dias_cobro_clientes: { texto: "Dias que tardas en cobrar", porque: "cobrar tarde aprieta tu caja" },
+  dias_pago_proveedores: { texto: "Dias que tardas en pagar a proveedores", porque: "pagar mas tarde alivia tu caja" },
+};
+
+const TONO: Record<Veredicto["tono"], { punto: string; acento: string; borde: string; fondo: string }> = {
+  perdida: { punto: "bg-warn", acento: "text-warn", borde: "border-warn/35", fondo: "bg-warn/[0.06]" },
+  ajuste: { punto: "bg-done", acento: "text-done", borde: "border-done/30", fondo: "bg-done/[0.06]" },
+  sano: { punto: "bg-done", acento: "text-done", borde: "border-done/30", fondo: "bg-done/[0.06]" },
+  datos: { punto: "bg-accent", acento: "text-accent", borde: "border-accent/30", fondo: "bg-accent/[0.06]" },
+};
+
+function TituloSeccion({ children }: { children: React.ReactNode }) {
+  return <div className="mt-10 mb-4 text-[12px] font-semibold uppercase tracking-[1.4px] text-dim">{children}</div>;
+}
+
+function FraseConAcento({ frase, acento, clase }: { frase: string; acento: string | null; clase: string }) {
+  if (!acento || !frase.includes(acento)) return <>{frase}</>;
+  const [antes, despues] = frase.split(acento);
+  return (
+    <>
+      {antes}
+      <span className={clase}>{acento}</span>
+      {despues}
+    </>
+  );
+}
+
+// ── tiles ────────────────────────────────────────────────────────────────
+function Tiles({ t, u }: { t: Tablero; u: string }) {
+  const margen = medio(t.margen);
+  const claseMargen = margen === null ? "" : margen < 0 ? "text-warn" : "text-done";
+  const equi = t.puntoEquilibrio;
+  return (
+    <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-4">
+      <Tile num={fmt(t.costoUnitario)} etq={`te cuesta cada ${u}`} />
+      <Tile num={fmt(t.precio)} etq={`precio al que la vendes hoy`} />
+      <Tile num={margen !== null && margen >= 0 ? `+${fmt(t.margen)}` : fmt(t.margen)} etq="margen por pieza" clase={claseMargen} />
+      <Tile
+        num={equi === null ? "No hay" : String(equi)}
+        etq="punto de equilibrio"
+        clase={equi === null ? "text-warn" : "text-done"}
+      />
+    </div>
+  );
+}
+function Tile({ num, etq, clase = "" }: { num: string; etq: string; clase?: string }) {
+  return (
+    <div className="rounded-panel border border-hairline px-6 py-5">
+      <div className={`text-[32px] font-extrabold tracking-tight ${clase}`}>{num}</div>
+      <div className="mt-2 text-[12.5px] leading-snug text-dim">{etq}</div>
+    </div>
+  );
+}
+
+// ── barra de la verdad ─────────────────────────────────────────────────────
+function BarraVerdad({ t }: { t: Tablero }) {
+  const costo = fmt(t.costoUnitario);
+  const precio = fmt(t.precio);
+  const enPerdida = t.barra.enPerdida;
+  const filaCosto = (
+    <Fila clave="Te cuesta" pct={t.barra.costoPct} texto={costo} clase={enPerdida ? "bg-warn text-black" : "bg-dim/40 text-ink"} />
+  );
+  const filaPrecio = <Fila clave="Cobras" pct={t.barra.precioPct} texto={precio} clase="bg-done text-black" />;
+  return (
+    <div className="rounded-panel border border-hairline px-7 py-6">
+      {enPerdida ? filaCosto : filaPrecio}
+      {enPerdida ? filaPrecio : filaCosto}
+      <p className="mt-5 border-t border-hairline pt-4 text-[13px] leading-relaxed text-dim">
+        {enPerdida ? (
+          <>
+            La barra de lo que te cuesta es mas larga que la de lo que cobras. Ese pedazo que sobresale es{" "}
+            <strong className="font-semibold text-warn">la perdida que pones de tu bolsillo en cada venta</strong>. Mientras se vea asi, vender mas
+            solo agranda el hueco.
+          </>
+        ) : (
+          <>
+            La barra de lo que cobras es la larga, y la de lo que te cuesta no la alcanza. Ese espacio de sobra es{" "}
+            <strong className="font-semibold text-done">tu margen</strong>. Aqui, vender mas si te acerca a tu meta.
+          </>
+        )}
+      </p>
+    </div>
+  );
+}
+function Fila({ clave, pct, texto, clase }: { clave: string; pct: number | null; texto: string; clase: string }) {
+  return (
+    <div className="mb-4 grid grid-cols-[76px_1fr] items-center gap-4 last:mb-0">
+      <span className="text-right text-[13.5px] text-dim">{clave}</span>
+      <div className="relative h-[34px]">
+        <div className={`flex h-full items-center rounded-lg px-3.5 text-sm font-bold ${clase}`} style={{ width: `${pct ?? 0}%` }}>
+          {texto}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── palancas ───────────────────────────────────────────────────────────────
+function textoPalanca(p: Palanca, u: string): string {
+  const margen = p.margenResultante ? fmt(p.margenResultante.valor) : "—";
+  const margenPos = p.margenResultante && medio(p.margenResultante.valor) !== null ? `+${margen}` : margen;
+  if (p.clave === "volumen") {
+    if (p.bloqueada) return p.razonBloqueo ?? "";
+    const g = p.gananciaResultante != null ? money(p.gananciaResultante) : "—";
+    return `A ${p.meta} ${u}s al mes, tras cubrir tus fijos, te quedan ${g} de ganancia. Es tu palanca mas fuerte porque el margen ya es sano.`;
+  }
+  if (p.clave === "precio") {
+    if (p.modo === "test")
+      return `Prueba subiendo a ${fmt(p.meta)} (un 10% mas): tu margen sube a ${margenPos} por ${u}. Pruebalo con un lote antes de subirlo a todos.`;
+    const ventas = p.ventasParaCubrirFijos != null ? `, y cubres tus fijos con unas ${p.ventasParaCubrirFijos} ventas` : "";
+    return `A ${fmt(p.meta)} tu margen pasa a ${margenPos} por ${u}${ventas}.`;
+  }
+  // costo
+  if (p.modo === "test")
+    return `Prueba bajando el costo a ${fmt(p.meta)} (un 10% menos): te deja ${margenPos} por ${u}, sin tocar el precio.`;
+  return `Bajar el costo a ${fmt(p.meta)} te deja ${margenPos} por ${u}, sin tocar el precio.`;
+}
+
+function TarjetaPalanca({ p, idx, u }: { p: Palanca; idx: number; u: string }) {
+  const nombre = p.clave === "precio" ? "Sube el precio a" : p.clave === "costo" ? "Baja el costo a" : "Vende al mes";
+  const desde =
+    p.clave === "precio" && p.actual != null
+      ? `hoy cobras ${fmt(p.actual)}`
+      : p.clave === "costo" && p.actual != null
+        ? `hoy te cuesta ${fmt(p.actual)}`
+        : null;
+  const badge = p.recomendada ? (p.clave === "volumen" ? "tu meta" : "la mas directa") : null;
+  if (p.bloqueada) {
+    return (
+      <div className="flex flex-col gap-3.5 rounded-panel border border-dashed border-hairline p-6">
+        <div className="flex h-6 w-6 items-center justify-center rounded-md bg-surface-2 text-[13px] font-bold text-warn">{idx}</div>
+        <div className="text-[15px] font-bold leading-snug">Vender mas, por ahora, no</div>
+        <p className="text-[13px] leading-relaxed text-dim">
+          <strong className="text-warn">Con el margen en rojo, el volumen agranda la perdida.</strong>{" "}
+          Primero arregla el margen con la palanca 1 o 2; cuando este en verde, aqui te dire cuantas necesitas para tu meta.
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div className={`flex flex-col gap-3.5 rounded-panel border p-6 ${p.recomendada ? "border-accent/40" : "border-hairline"}`}>
+      <div className="flex items-center justify-between">
+        <div className="flex h-6 w-6 items-center justify-center rounded-md bg-surface-2 text-[13px] font-bold text-accent">{idx}</div>
+        {badge && (
+          <span className="rounded-full border border-accent/40 px-2.5 py-1 text-[11px] font-semibold text-accent">{badge}</span>
+        )}
+      </div>
+      <div className="text-[15px] font-bold leading-snug">{nombre}</div>
+      <div className="text-[32px] font-extrabold tracking-tight">
+        {p.clave === "volumen" ? (medio(p.meta) ?? "—") : fmt(p.meta)}{" "}
+        <span className="text-[15px] font-semibold text-dim">{p.clave === "volumen" ? u + "s" : `por ${u}`}</span>
+      </div>
+      {desde && <div className="text-[12.5px] text-dim">{desde}</div>}
+      <p className="text-[13px] leading-relaxed">
+        <FraseConAcento
+          frase={textoPalanca(p, u)}
+          acento={
+            p.margenResultante && medio(p.margenResultante.valor) !== null && medio(p.margenResultante.valor)! >= 0
+              ? `+${fmt(p.margenResultante.valor)} por ${u}`
+              : p.gananciaResultante != null
+                ? `${money(p.gananciaResultante)} de ganancia`
+                : null
+          }
+          clase="font-bold text-done"
+        />
+      </p>
+    </div>
+  );
+}
+
+function Palancasseccion({ pal, u }: { pal: Palancas; u: string }) {
+  // Orden: recomendada primero (canon: la de la izquierda es la protagonista).
+  const orden: Palanca[] = [pal.precio, pal.costo, pal.volumen];
+  const titulo =
+    pal.estado === "sano" ? "Tres caminos para exprimir estos numeros" : "Tres caminos para que estos numeros funcionen";
+  return (
+    <>
+      <TituloSeccion>{titulo}</TituloSeccion>
+      <div className="grid gap-3.5 sm:grid-cols-3">
+        {orden.map((p, i) => (
+          <TarjetaPalanca key={p.clave} p={p} idx={i + 1} u={u} />
+        ))}
+      </div>
+    </>
+  );
+}
+
+// ── escenarios ─────────────────────────────────────────────────────────────
+interface FilaEsc {
+  nombre: string;
+  sub: string;
+  ganancia: number | null;
+}
+function filasEscenarios(t: Tablero): FilaEsc[] {
+  const esc = t.reporte.escenarios as unknown as Record<string, unknown>;
+  const filas: FilaEsc[] = [];
+  const n = (x: unknown) => (typeof x === "number" ? x : null);
+  if ("pesimista" in esc) {
+    const p = esc.pesimista as { unidades_mes?: number; margen_mensual?: number } | null;
+    const b = esc.base as { unidades_mes?: number; margen_mensual?: number } | null;
+    if (p) filas.push({ nombre: "Pesimista", sub: `${p.unidades_mes} al mes`, ganancia: n(p.margen_mensual) });
+    if (b) filas.push({ nombre: "A capacidad plena", sub: `${b.unidades_mes} al mes`, ganancia: n(b.margen_mensual) });
+  } else {
+    for (const [k, etq] of [["50%", "mitad de tu meta"], ["100%", "tu meta"], ["200%", "el doble"]] as const) {
+      const e = esc[k] as { unidades?: number; margen_total?: number } | null;
+      if (e) filas.push({ nombre: etq, sub: `${e.unidades} al mes`, ganancia: n(e.margen_total) });
+    }
+  }
+  return filas;
+}
+function Escenarios({ t }: { t: Tablero }) {
+  const filas = filasEscenarios(t);
+  if (filas.length === 0) return null;
+  return (
+    <div className="overflow-hidden rounded-panel border border-hairline">
+      <div className="grid grid-cols-[1fr_120px] gap-4 bg-surface px-6 py-3 text-[11.5px] font-semibold uppercase tracking-wider text-dim">
+        <span>Escenario</span>
+        <span className="text-right">Ganancia</span>
+      </div>
+      {filas.map((f) => (
+        <div key={f.nombre} className="grid grid-cols-[1fr_120px] items-center gap-4 border-t border-hairline px-6 py-4">
+          <div className="text-sm font-semibold">
+            {f.nombre}
+            <span className="block text-[12px] font-normal text-dim">{f.sub}</span>
+          </div>
+          <div className={`text-right text-[15px] font-bold ${f.ganancia != null && f.ganancia < 0 ? "text-warn" : f.ganancia != null && f.ganancia > 0 ? "text-done" : ""}`}>
+            {f.ganancia != null ? money(f.ganancia) : "—"}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── faltantes ──────────────────────────────────────────────────────────────
+function Faltantes({ t }: { t: Tablero }) {
+  return (
+    <div className="rounded-panel border border-hairline px-6 py-5">
+      {t.faltantes.map((campo) => {
+        const e = ETIQUETAS_FALTANTES[campo] ?? { texto: campo, porque: "" };
+        return (
+          <div key={campo} className="flex items-start gap-3.5 border-b border-hairline py-3 last:border-b-0">
+            <span className="mt-0.5 h-5 w-5 flex-none rounded-md border-[1.5px] border-accent/55" />
+            <div className="min-w-0">
+              <div className="text-sm leading-snug">{e.texto}</div>
+              {e.porque && <div className="mt-0.5 text-[12.5px] leading-snug text-dim">{e.porque}</div>}
+            </div>
+          </div>
+        );
+      })}
+      {t.faltantes.length === 0 && <div className="py-2 text-sm text-dim">Tienes todo lo esencial. Buen trabajo.</div>}
+    </div>
+  );
+}
+
+// ── pantalla ───────────────────────────────────────────────────────────────
+export function TusNumeros({ projectId }: { projectId: string }) {
+  const [data, setData] = useState<RespuestaNumeros | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let vivo = true;
+    fetch(`/api/project/${projectId}/numeros`)
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error("no pudimos cargar tus numeros"))))
+      .then((d: RespuestaNumeros) => vivo && setData(d))
+      .catch((e) => vivo && setError(e.message));
+    return () => {
+      vivo = false;
+    };
+  }, [projectId]);
+
+  if (error) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">{error}</div>;
+  if (!data) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">Calculando tus numeros…</div>;
+
+  const { tablero: t, veredicto: v } = data;
+  const u = data.unidad || "unidad";
+  const tono = TONO[v.tono];
+
+  return (
+    <div className="min-h-full">
+      <nav className="flex items-center justify-between gap-6 border-b border-hairline px-8 py-4">
+        <div className="flex min-w-0 items-baseline gap-3">
+          <Link href="/ideas" className="flex-none text-sm text-dim hover:text-accent">
+            Mis ideas /
+          </Link>
+          <span className="truncate text-[15px] font-bold">{data.titulo ?? "Tu idea"}</span>
+        </div>
+        <span className="flex-none rounded-full border border-accent/40 px-3 py-1.5 text-[12.5px] font-semibold text-accent">
+          Tus Numeros · 2 creditos
+        </span>
+      </nav>
+
+      <div className="mx-auto w-full max-w-[1060px] px-10 pb-16 pt-8" data-screen-label="Tus Numeros vista">
+        <Link href={`/idea/${projectId}`} className="mb-6 inline-block text-sm text-dim hover:text-accent">
+          ← Volver al plan
+        </Link>
+
+        <div className="mb-3.5 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[1.3px] text-dim">
+          Calculado por codigo, sobre tus cifras
+        </div>
+        <h1 className="text-[32px] font-bold leading-tight tracking-tight">
+          Los numeros de {data.titulo ? data.titulo.toLowerCase() : "tu idea"}
+        </h1>
+
+        <div className={`mt-5 flex items-start gap-3.5 rounded-panel border px-6 py-5 ${tono.borde} ${tono.fondo}`}>
+          <span className={`mt-1.5 h-2.5 w-2.5 flex-none rounded-full ${tono.punto}`} />
+          <p className="text-[17px] font-semibold leading-normal">
+            <FraseConAcento frase={v.frase} acento={v.acento} clase={tono.acento} />
+          </p>
+        </div>
+
+        <TituloSeccion>De un vistazo</TituloSeccion>
+        <Tiles t={t} u={u} />
+
+        <TituloSeccion>La barra de la verdad</TituloSeccion>
+        <BarraVerdad t={t} />
+
+        <Palancasseccion pal={t.palancas} u={u} />
+
+        <div className="mt-10 grid gap-3.5 lg:grid-cols-[1.3fr_1fr]">
+          <div>
+            <TituloSeccion>Escenarios, a tu precio de hoy</TituloSeccion>
+            <Escenarios t={t} />
+          </div>
+          <div>
+            <TituloSeccion>Los numeros que te faltan</TituloSeccion>
+            <Faltantes t={t} />
+          </div>
+        </div>
+
+        <div className="mt-4 flex gap-3.5 rounded-panel border border-warn/30 bg-warn/[0.06] px-6 py-5">
+          <span className="mt-0.5 flex-none text-warn" aria-hidden>
+            ⚠
+          </span>
+          <p className="text-[13.5px] leading-relaxed text-warn/90">
+            <strong className="font-semibold text-warn">Guardian de datos.</strong>{" "}
+            {t.gigo.inconsistente
+              ? t.gigo.motivo
+              : "Estos numeros valen exactamente lo que valen las cifras que metiste. Cuando agregues las que faltan, el numero real puede cambiar. No sustituye contabilidad formal ni asesoria fiscal."}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
