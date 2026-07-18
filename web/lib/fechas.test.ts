@@ -6,7 +6,7 @@
 // Regla del fundador: "la UI respira, las actas constan". Esta función es SOLO
 // UI; los registros (acta, informe .md, análisis) van en absoluto y NO la usan.
 import { describe, expect, it } from "vitest";
-import { fechaSello } from "./fechas";
+import { fechaSello, momentoAbsoluto, selloVersion } from "./fechas";
 
 // Ancla de "ahora": jueves 16 de julio de 2026, 14:05 hora local.
 const AHORA = new Date(2026, 6, 16, 14, 5, 0);
@@ -55,5 +55,33 @@ describe("fechaSello — híbrido (UI viva)", () => {
   it("'ayer' y 'hoy' se deciden por FECHA de calendario, no por 24h exactas", () => {
     // 00:10 de hoy es HOY aunque hayan pasado casi 14h.
     expect(fechaSello(t(2026, 6, 16, 0, 10), AHORA)).toBe("hoy 00:10");
+  });
+});
+
+describe("selloVersion — la hora solo desambigua gemelas del mismo día", () => {
+  it("sin hermanos (conHora=false): solo la fecha híbrida", () => {
+    expect(selloVersion(t(2026, 6, 16, 10, 32), AHORA, false)).toBe("hoy");
+    expect(selloVersion(t(2026, 6, 15, 21, 26), AHORA, false)).toBe("ayer");
+    expect(selloVersion(t(2026, 6, 13, 9, 10), AHORA, false)).toBe("hace 3 días");
+    expect(selloVersion(t(2026, 2, 12, 14, 32), AHORA, false)).toBe("12 de marzo");
+  });
+
+  it("con hermanos (conHora=true): la hora aparece; lo reciente pasa a absoluto", () => {
+    expect(selloVersion(t(2026, 6, 16, 10, 32), AHORA, true)).toBe("hoy 10:32");
+    expect(selloVersion(t(2026, 6, 15, 21, 26), AHORA, true)).toBe("ayer 21:26");
+    // "hace 3 días 09:10" seria ambiguo: con hora, la fecha va absoluta.
+    expect(selloVersion(t(2026, 6, 13, 9, 10), AHORA, true)).toBe("13 de julio 09:10");
+    expect(selloVersion(t(2026, 2, 12, 14, 32), AHORA, true)).toBe("12 de marzo 14:32");
+  });
+
+  it("año distinto: el sello lo incluye", () => {
+    expect(selloVersion(t(2025, 11, 20, 8, 0), AHORA, false)).toBe("20 de diciembre de 2025");
+  });
+});
+
+describe("momentoAbsoluto — el acta consta en absoluto", () => {
+  it("'D de MES, HH:MM' (año solo si no es el actual)", () => {
+    expect(momentoAbsoluto(t(2026, 6, 18, 14, 32), AHORA)).toBe("18 de julio, 14:32");
+    expect(momentoAbsoluto(t(2025, 11, 20, 8, 5), AHORA)).toBe("20 de diciembre de 2025, 08:05");
   });
 });

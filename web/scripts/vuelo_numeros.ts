@@ -12,7 +12,7 @@
 //
 // Uso: con `pnpm dev` en :3000,  npx tsx scripts/vuelo_numeros.ts
 import { createClient } from "@supabase/supabase-js";
-import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, postJson } from "./_shared/http";
+import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, getJson, postJson } from "./_shared/http";
 import { TOPE_RENARRACION_DIA } from "../lib/numerosVivo";
 
 cargarEnvRaiz();
@@ -146,6 +146,25 @@ async function main() {
   const faltDespues = pick<string[]>(conCiclo, "tablero", "faltantes");
   check("puerta: los 3 campos del ciclo SALEN de faltantes (recompensa visible)",
     !faltDespues.includes("dias_inventario") && !faltDespues.includes("dias_cobro_clientes") && !faltDespues.includes("dias_pago_proveedores"), faltDespues);
+
+  // 4.6) El historial de versiones (la promesa "quedan guardadas" con su puerta):
+  //   la lista trae fecha + veredicto + margen de cada una, la vigente marcada,
+  //   y se puede VISITAR una pasada en modo lectura con SUS numeros de entonces.
+  const presente = await getJson(cookie, ruta);
+  const hist = pick<Array<{ id: string; tono: string | null; margen: unknown; vigente: boolean }>>(presente, "historial");
+  check("historial: lista con la vigente marcada y las demas como pasadas",
+    Array.isArray(hist) && hist.length >= 2 && hist[0].vigente === true && hist.slice(1).every((h) => h.vigente === false), hist?.length);
+  const idV1 = trasV2[0]?.id;
+  const filaV1 = hist.find((h) => h.id === idV1);
+  check("historial: v1 figura con SU veredicto (perdida) y margen (-4) de entonces",
+    !!filaV1 && filaV1.tono === "perdida" && filaV1.margen === -4, filaV1);
+  //   Visitar v1 en modo lectura: su snapshot, sus numeros de entonces.
+  const leerV1 = await getJson(cookie, `${ruta}?version=${idV1}`);
+  check("visitar v1: modo historico con SUS numeros (margen -4, veredicto perdida)",
+    pick(leerV1, "historico") === true && pick(leerV1, "tablero", "margen") === -4 && pick(leerV1, "veredicto", "tono") === "perdida",
+    { historico: pick(leerV1, "historico"), margen: pick(leerV1, "tablero", "margen") });
+  check("visitar v1: el payload de lectura NO trae puerta de edicion (numeros_declarados)",
+    pick(leerV1, "numeros_declarados") === undefined, Object.keys(leerV1));
 
   // 5) Idempotencia (repetida): activar de nuevo NO vuelve a marcar.
   const actRep = await postJson(cookie, ruta, { activar: true });

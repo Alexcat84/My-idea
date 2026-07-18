@@ -55,6 +55,47 @@ export function fechaSello(iso: string, ahora: Date = new Date()): string {
   return d.getFullYear() === ahora.getFullYear() ? base : `${base} de ${d.getFullYear()}`;
 }
 
+/**
+ * Sello de una VERSIÓN del historial de Tus Números. Igual espíritu que
+ * fechaSello (relativo lo reciente, absoluto lo viejo), pero la HORA es un
+ * DESAMBIGUADOR: se muestra solo cuando hay dos o más versiones del mismo día
+ * (conHora=true). Con hora, la parte de fecha va absoluta ("12 de julio 14:32")
+ * para no chocar con un "hace N días 14:32". El diferenciador de la fila es el
+ * contenido (veredicto, margen), no el reloj; la hora solo separa gemelas.
+ */
+export function selloVersion(iso: string, ahora: Date = new Date(), conHora = false): string {
+  const d = new Date(iso);
+  const ayer = new Date(ahora);
+  ayer.setDate(ahora.getDate() - 1);
+  let fecha: string;
+  if (d.toDateString() === ahora.toDateString()) fecha = "hoy";
+  else if (d.toDateString() === ayer.toDateString()) fecha = "ayer";
+  else {
+    const soloFecha = (x: Date) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+    const dias = Math.round((soloFecha(ahora) - soloFecha(d)) / 86_400_000);
+    const abs = d.getFullYear() === ahora.getFullYear() ? `${d.getDate()} de ${MESES[d.getMonth()]}` : `${d.getDate()} de ${MESES[d.getMonth()]} de ${d.getFullYear()}`;
+    fecha = !conHora && dias >= 2 && dias < 7 ? `hace ${dias} días` : abs;
+  }
+  if (!conHora) return fecha;
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  return `${fecha} ${hh}:${mm}`;
+}
+
+/**
+ * El MOMENTO ABSOLUTO de un acta: "18 de julio, 14:32" (con el año solo cuando
+ * no es el actual). Es lo que dice la banda de una versión histórica abierta:
+ * dentro del documento del pasado, el registro consta en absoluto, no relativo.
+ */
+export function momentoAbsoluto(iso: string, ahora: Date = new Date()): string {
+  const d = new Date(iso);
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mm = String(d.getMinutes()).padStart(2, "0");
+  const base = `${d.getDate()} de ${MESES[d.getMonth()]}`;
+  const conAno = d.getFullYear() === ahora.getFullYear() ? base : `${base} de ${d.getFullYear()}`;
+  return `${conAno}, ${hh}:${mm}`;
+}
+
 /** "viernes 20 de marzo" — la fecha en palabras del canon 10. */
 export function fechaHumana(iso: string): string {
   const d = new Date(iso);
