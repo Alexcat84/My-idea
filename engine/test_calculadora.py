@@ -303,6 +303,68 @@ def test_gigo_detecta_unidad_equivocada():
           "inconsistente; escenario sano de macetas NO dispara falso positivo)")
 
 
+def test_palancas_inversas():
+    """Palancas inversas del canon 14 (Tus Numeros). Espejo exacto de
+    describe("palancas inversas") en web/lib/calculadora.test.ts.
+
+    Calculo manual (regla de proceso: a mano ANTES del assert):
+
+    Caso PERDIDA (velas de soya): costo total $42, precio $38.
+      costo_unitario = 30 (materiales) + 2h x $6/h = 30 + 12             = 42
+      margen         = 38 - 42                                           = -4  (-10.5%)
+      precio_para_margen_objetivo(0.25) = 42 / (1 - 0.25) = 42 / 0.75    = 56.0
+      margen_con_precio(56)             = 56 - 42 = 14 ; 14/56 x 100     = 25.0%
+      costo_maximo_para_margen_objetivo(0.25) = 38 x 0.75               = 28.5
+      margen_con_costo(28.5)            = 38 - 28.5 = 9.5 ; 9.5/38 x 100 = 25.0%
+      unidades_para_ganancia_objetivo(0): margen -4 <= 0 -> None + nota
+
+    Caso SANO (kits de huerto): costo $180, precio $350, fijos $1.200.
+      costo_unitario = 100 + 4h x $20/h = 100 + 80                       = 180
+      margen         = 350 - 180                                         = 170  (48.6%)
+      unidades_para_ganancia_objetivo(0)    = ceil(1200/170) = ceil(7.06) = 8
+      unidades_para_ganancia_objetivo(2880) = ceil(4080/170) = ceil(24)  = 24
+      precio_para_margen_objetivo(0.55)  = 180 / 0.45                    = 400.0
+      costo_maximo_para_margen_objetivo(0.55) = 350 x 0.45               = 157.5
+    """
+    velas = _numeros(costo_materiales_unidad=30, horas_por_unidad=2, valor_hora=6,
+                     precio_tentativo=38, costos_fijos_mensuales=200)
+    m_base = c.margen_unitario(velas)
+    assert m_base["valor"] == -4 and m_base["porcentaje"] == -10.5, m_base
+    assert c.precio_para_margen_objetivo(velas, 0.25)["valor"] == 56, c.precio_para_margen_objetivo(velas, 0.25)
+    m56 = c.margen_con_precio(velas, 56)
+    assert m56["valor"] == 14 and m56["porcentaje"] == 25.0, m56
+    assert c.costo_maximo_para_margen_objetivo(velas, 0.25)["valor"] == 28.5, c.costo_maximo_para_margen_objetivo(velas, 0.25)
+    m28 = c.margen_con_costo(velas, 28.5)
+    assert m28["valor"] == 9.5 and m28["porcentaje"] == 25.0, m28
+    u_perdida = c.unidades_para_ganancia_objetivo(velas, 0)
+    assert u_perdida["valor"] is None and "no es positivo" in u_perdida["nota"], u_perdida
+
+    kits = _numeros(costo_materiales_unidad=100, horas_por_unidad=4, valor_hora=20,
+                    precio_tentativo=350, costos_fijos_mensuales=1200)
+    assert c.margen_unitario(kits)["valor"] == 170, c.margen_unitario(kits)
+    assert c.unidades_para_ganancia_objetivo(kits, 0)["valor"] == 8, c.unidades_para_ganancia_objetivo(kits, 0)
+    assert c.unidades_para_ganancia_objetivo(kits, 2880)["valor"] == 24, c.unidades_para_ganancia_objetivo(kits, 2880)
+    assert c.precio_para_margen_objetivo(kits, 0.55)["valor"] == 400, c.precio_para_margen_objetivo(kits, 0.55)
+    assert c.costo_maximo_para_margen_objetivo(kits, 0.55)["valor"] == 157.5, c.costo_maximo_para_margen_objetivo(kits, 0.55)
+
+    # RANGO: costo {min 42, max 52} con objetivo 25% (factor 0.75) ->
+    #   precio {min 42/0.75 = 56, max 52/0.75 = 69.33}
+    con_rango = _numeros(costo_materiales_unidad={"min": 30, "max": 40}, horas_por_unidad=2,
+                         valor_hora=6, precio_tentativo=38)
+    assert c.precio_para_margen_objetivo(con_rango, 0.25)["valor"] == {"min": 56, "max": 69.33}, \
+        c.precio_para_margen_objetivo(con_rango, 0.25)
+
+    # Objetivo >= 100% no da precio valido; sin costo no inventa margen.
+    r_inalcanzable = c.precio_para_margen_objetivo(kits, 1)
+    assert r_inalcanzable["valor"] is None and "infinito" in r_inalcanzable["nota"], r_inalcanzable
+    sin_costo = _numeros(precio_tentativo=38)
+    m_sin = c.margen_con_precio(sin_costo, 56)
+    assert m_sin["valor"] is None and "costo_materiales_unidad" in m_sin["insumos_faltantes"], m_sin
+
+    print("OK: test_palancas_inversas (perdida velas y sano kits del canon 14; "
+          "precio/costo/margen/volumen inversos con paridad TS)")
+
+
 def main():
     test_escenario_macetas()
     test_costo_con_rango()
@@ -311,6 +373,7 @@ def main():
     test_digital_founder_caso_real()
     test_digital_saas_sintetico()
     test_gigo_detecta_unidad_equivocada()
+    test_palancas_inversas()
     print("\nTODOS LOS TESTS DE calculadora.py PASARON.")
 
 

@@ -344,6 +344,133 @@ def ciclo_conversion_efectivo(numeros):
     return {"valor": _r(valor, 1), "insumos_usados": list(CAMPOS_CICLO_CONVERSION_EFECTIVO), "insumos_faltantes": []}
 
 
+# =====================================================================
+# Palancas inversas (canon 14, "Tus Numeros"): dado un OBJETIVO, que
+# precio, que costo o que volumen lo logra. Son el corazon de las tres
+# palancas de la pantalla. NO inventan el objetivo -- la politica de a
+# que apunta cada palanca (que margen es "sano", que meta de ganancia)
+# vive en la capa que arma la pantalla, no aqui; aqui solo esta la
+# aritmetica inversa, espejo exacta de margen_unitario/punto_equilibrio.
+# Como el resto del modulo: CERO LLM, rangos soportados, y el objetivo
+# escalar que se pasa (precio_nuevo, margen_pct, ganancia) nunca es rango.
+# =====================================================================
+
+
+def margen_con_precio(numeros, precio_nuevo, tipo_oferta=None):
+    """Margen por unidad si el precio fuera `precio_nuevo` en vez del
+    precio_tentativo declarado (el costo unitario no cambia). Espejo de
+    margen_unitario con el precio sustituido: sirve para narrar "a $58 tu
+    margen pasa a +$16" sin tocar numeros_proyecto."""
+    costo = costo_unitario_total(numeros, tipo_oferta=tipo_oferta)
+    if costo["valor"] is None:
+        return {"valor": None, "porcentaje": None, "insumos_usados": [],
+                "insumos_faltantes": costo["insumos_faltantes"]}
+    costo_v = costo["valor"]
+    if _es_rango(costo_v):
+        lo = precio_nuevo - _lado(costo_v, "max")
+        hi = precio_nuevo - _lado(costo_v, "min")
+        margen = {"min": _r(lo), "max": _r(hi)}
+        porcentaje = ({"min": _r(lo / precio_nuevo * 100, 1), "max": _r(hi / precio_nuevo * 100, 1)}
+                      if precio_nuevo else None)
+    else:
+        margen = _r(precio_nuevo - costo_v)
+        porcentaje = _r(margen / precio_nuevo * 100, 1) if precio_nuevo else None
+    return {"valor": margen, "porcentaje": porcentaje,
+            "insumos_usados": costo["insumos_usados"], "insumos_faltantes": []}
+
+
+def margen_con_costo(numeros, costo_nuevo, tipo_oferta=None):
+    """Margen por unidad si el costo unitario fuera `costo_nuevo` (el
+    precio_tentativo declarado no cambia). Espejo de margen_unitario con el
+    costo sustituido: la palanca "baja el costo a $24 -> +$14"."""
+    precio = _valor(numeros, "precio_tentativo")
+    if precio is None:
+        return {"valor": None, "porcentaje": None, "insumos_usados": [],
+                "insumos_faltantes": ["precio_tentativo"]}
+    if _es_rango(precio):
+        lo = _lado(precio, "min") - costo_nuevo
+        hi = _lado(precio, "max") - costo_nuevo
+        margen = {"min": _r(lo), "max": _r(hi)}
+        p_lo, p_hi = _lado(precio, "min"), _lado(precio, "max")
+        porcentaje = {"min": _r(lo / p_lo * 100, 1) if p_lo else None,
+                      "max": _r(hi / p_hi * 100, 1) if p_hi else None}
+    else:
+        margen = _r(precio - costo_nuevo)
+        porcentaje = _r(margen / precio * 100, 1) if precio else None
+    return {"valor": margen, "porcentaje": porcentaje,
+            "insumos_usados": ["precio_tentativo"], "insumos_faltantes": []}
+
+
+def precio_para_margen_objetivo(numeros, margen_pct_objetivo, tipo_oferta=None):
+    """Precio al que habria que vender para que el margen porcentual fuera
+    `margen_pct_objetivo` (fraccion, ej. 0.25 = 25%): precio = costo / (1 - m).
+    La palanca "sube el precio a X". margen_pct_objetivo en [0, 1); 100% o
+    mas es inalcanzable (precio infinito o negativo)."""
+    costo = costo_unitario_total(numeros, tipo_oferta=tipo_oferta)
+    if costo["valor"] is None:
+        return {"valor": None, "insumos_usados": [], "insumos_faltantes": costo["insumos_faltantes"]}
+    if margen_pct_objetivo is None or margen_pct_objetivo < 0 or margen_pct_objetivo >= 1:
+        return {"valor": None, "insumos_usados": [], "insumos_faltantes": [],
+                "nota": "un margen objetivo fuera de [0, 100%) no da un precio valido: 100% o mas implicaria precio infinito"}
+    factor = 1 - margen_pct_objetivo
+    costo_v = costo["valor"]
+    if _es_rango(costo_v):
+        valor = {"min": _r(_lado(costo_v, "min") / factor), "max": _r(_lado(costo_v, "max") / factor)}
+    else:
+        valor = _r(costo_v / factor)
+    return {"valor": valor, "insumos_usados": costo["insumos_usados"], "insumos_faltantes": []}
+
+
+def costo_maximo_para_margen_objetivo(numeros, margen_pct_objetivo, tipo_oferta=None):
+    """Costo unitario maximo para que, al precio_tentativo declarado, el
+    margen porcentual llegue a `margen_pct_objetivo`: costo = precio * (1 - m).
+    La palanca "baja el costo a Y". margen_pct_objetivo en [0, 1)."""
+    precio = _valor(numeros, "precio_tentativo")
+    if precio is None:
+        return {"valor": None, "insumos_usados": [], "insumos_faltantes": ["precio_tentativo"]}
+    if margen_pct_objetivo is None or margen_pct_objetivo < 0 or margen_pct_objetivo >= 1:
+        return {"valor": None, "insumos_usados": [], "insumos_faltantes": [],
+                "nota": "un margen objetivo fuera de [0, 100%) no da un costo valido"}
+    factor = 1 - margen_pct_objetivo
+    if _es_rango(precio):
+        valor = {"min": _r(_lado(precio, "min") * factor), "max": _r(_lado(precio, "max") * factor)}
+    else:
+        valor = _r(precio * factor)
+    return {"valor": valor, "insumos_usados": ["precio_tentativo"], "insumos_faltantes": []}
+
+
+def unidades_para_ganancia_objetivo(numeros, ganancia_objetivo=0, tipo_oferta=None):
+    """Unidades/mes para que, despues de cubrir los costos fijos, quede una
+    ganancia mensual de `ganancia_objetivo`: ceil((fijos + ganancia) / margen).
+    ganancia_objetivo=0 es exactamente el punto de equilibrio (cubrir fijos).
+    Redondeo hacia ARRIBA por la misma razon que punto_equilibrio_unidades_mes:
+    quedarse corto en la unidad no alcanza la meta. Requiere margen positivo:
+    con margen <= 0 no hay volumen que llegue (vender mas agranda la perdida)."""
+    margen = margen_unitario(numeros, tipo_oferta=tipo_oferta)
+    costos_fijos = _valor(numeros, "costos_fijos_mensuales")
+    faltantes = list(margen["insumos_faltantes"])
+    if costos_fijos is None:
+        faltantes.append("costos_fijos_mensuales")
+    if faltantes:
+        return {"valor": None, "insumos_usados": [], "insumos_faltantes": faltantes}
+    margen_v = margen["valor"]
+    if _hay_rango(margen_v, costos_fijos):
+        m_lo, m_hi = _lado(margen_v, "min"), _lado(margen_v, "max")
+        cf_lo, cf_hi = _lado(costos_fijos, "min"), _lado(costos_fijos, "max")
+        if m_lo <= 0 or m_hi <= 0:
+            return {"valor": None, "insumos_usados": [], "insumos_faltantes": [],
+                    "nota": "el margen por unidad no es positivo en todo el rango; ningun volumen alcanza la meta"}
+        valor = {"min": math.ceil((cf_lo + ganancia_objetivo) / m_hi),
+                 "max": math.ceil((cf_hi + ganancia_objetivo) / m_lo)}
+    else:
+        if margen_v <= 0:
+            return {"valor": None, "insumos_usados": [], "insumos_faltantes": [],
+                    "nota": "el margen por unidad no es positivo; ningun volumen alcanza la meta (vender mas agranda la perdida)"}
+        valor = math.ceil((costos_fijos + ganancia_objetivo) / margen_v)
+    return {"valor": valor,
+            "insumos_usados": margen["insumos_usados"] + ["costos_fijos_mensuales"], "insumos_faltantes": []}
+
+
 def calcular_reporte(numeros_proyecto, tipo_oferta=None):
     """Corre todos los calculos disponibles sobre numeros_proyecto y devuelve
     un dict agregado. No lanza excepciones ante datos faltantes: cada

@@ -5,13 +5,18 @@
 import { describe, expect, it } from "vitest";
 import {
   calcularReporte,
+  costoMaximoParaMargenObjetivo,
   costoUnitarioTotal,
   detectarInconsistenciaGigo,
   escenariosAdopcion,
   escenariosCapacidad,
+  margenConCosto,
+  margenConPrecio,
   margenUnitario,
+  precioParaMargenObjetivo,
   puntoEquilibrioUnidadesMes,
   techoIngresoCapacidad,
+  unidadesParaGananciaObjetivo,
   type NumerosProyecto,
 } from "./calculadora";
 
@@ -195,5 +200,83 @@ describe("calcularReporte: dispatch por tipoOferta", () => {
     const reporte = calcularReporte(n);
     expect(reporte.capacidad.unidades_mes).toBe(20);
     expect("pesimista" in reporte.escenarios).toBe(true);
+  });
+});
+
+describe("palancas inversas (canon 14) -- paridad con test_palancas_inversas de Python", () => {
+  // Caso PERDIDA (velas de soya del canon 14): costo total $42, precio $38.
+  //   costo_unitario = 30 (materiales) + 2h x $6/h = 30 + 12               = 42
+  //   margen         = 38 - 42                                             = -4  (-10.5%)
+  //   precioParaMargenObjetivo(0.25) = 42 / (1 - 0.25) = 42 / 0.75         = 56.0
+  //   margenConPrecio(56)            = 56 - 42 = 14 ; 14/56 x 100          = 25.0%
+  //   costoMaximoParaMargenObjetivo(0.25) = 38 x (1 - 0.25) = 38 x 0.75    = 28.5
+  //   margenConCosto(28.5)           = 38 - 28.5 = 9.5 ; 9.5/38 x 100      = 25.0%
+  //   unidadesParaGananciaObjetivo(0): margen -4 <= 0 -> null + nota (no hay equilibrio)
+  const velas = numeros({ costo_materiales_unidad: 30, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 38, costos_fijos_mensuales: 200 });
+
+  it("PERDIDA: margen base es -$4 (-10.5%)", () => {
+    const m = margenUnitario(velas);
+    expect(m.valor).toBe(-4);
+    expect(m.porcentaje).toBe(-10.5);
+  });
+
+  it("PERDIDA: subir el precio a $56 lleva el margen a +$14 (25%)", () => {
+    expect(precioParaMargenObjetivo(velas, 0.25).valor).toBe(56);
+    const m = margenConPrecio(velas, 56);
+    expect(m.valor).toBe(14);
+    expect(m.porcentaje).toBe(25);
+  });
+
+  it("PERDIDA: bajar el costo a $28.5 lleva el margen a +$9.5 (25%)", () => {
+    expect(costoMaximoParaMargenObjetivo(velas, 0.25).valor).toBe(28.5);
+    const m = margenConCosto(velas, 28.5);
+    expect(m.valor).toBe(9.5);
+    expect(m.porcentaje).toBe(25);
+  });
+
+  it("PERDIDA: el volumen no salva una perdida (null + nota)", () => {
+    const u = unidadesParaGananciaObjetivo(velas, 0);
+    expect(u.valor).toBeNull();
+    expect(u.nota).toContain("no es positivo");
+  });
+
+  // Caso SANO (kits de huerto del canon 14): costo total $180, precio $350, fijos $1.200.
+  //   costo_unitario = 100 (materiales) + 4h x $20/h = 100 + 80           = 180
+  //   margen         = 350 - 180                                          = 170  (48.6%)
+  //   unidadesParaGananciaObjetivo(0)    = ceil(1200 / 170) = ceil(7.06)  = 8
+  //   unidadesParaGananciaObjetivo(2880) = ceil((1200+2880)/170) = ceil(24) = 24
+  //   precioParaMargenObjetivo(0.55)  = 180 / 0.45                        = 400.0
+  //   costoMaximoParaMargenObjetivo(0.55) = 350 x 0.45                    = 157.5
+  const kits = numeros({ costo_materiales_unidad: 100, horas_por_unidad: 4, valor_hora: 20, precio_tentativo: 350, costos_fijos_mensuales: 1200 });
+
+  it("SANO: 8 unidades cubren los fijos; 24 dejan $2.880 de ganancia", () => {
+    expect(margenUnitario(kits).valor).toBe(170);
+    expect(unidadesParaGananciaObjetivo(kits, 0).valor).toBe(8);
+    expect(unidadesParaGananciaObjetivo(kits, 2880).valor).toBe(24);
+  });
+
+  it("SANO: exprimir el precio a $400 (55%) y el costo maximo a $157.5", () => {
+    expect(precioParaMargenObjetivo(kits, 0.55).valor).toBe(400);
+    expect(costoMaximoParaMargenObjetivo(kits, 0.55).valor).toBe(157.5);
+  });
+
+  // RANGOS: costo {min 42, max 52} con margen objetivo 25% -> factor 0.75
+  //   precio = {min 42/0.75 = 56, max 52/0.75 = 69.33}
+  it("RANGO: precioParaMargenObjetivo respeta el intervalo del costo", () => {
+    const conRango = numeros({ costo_materiales_unidad: { min: 30, max: 40 }, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 38 });
+    expect(precioParaMargenObjetivo(conRango, 0.25).valor).toEqual({ min: 56, max: 69.33 });
+  });
+
+  it("un margen objetivo de 100% o mas no da precio valido (null + nota)", () => {
+    const r = precioParaMargenObjetivo(kits, 1);
+    expect(r.valor).toBeNull();
+    expect(r.nota).toContain("infinito");
+  });
+
+  it("sin costo declarado, margenConPrecio devuelve el faltante, no una cifra", () => {
+    const sinCosto = numeros({ precio_tentativo: 38 });
+    const m = margenConPrecio(sinCosto, 56);
+    expect(m.valor).toBeNull();
+    expect(m.insumos_faltantes).toContain("costo_materiales_unidad");
   });
 });

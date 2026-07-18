@@ -551,6 +551,189 @@ export interface ReporteCalculado {
  * NO vive aqui adentro a proposito: el llamador (route de --reporte) lo
  * llama por separado antes de decidir si narra o no.
  */
+// =====================================================================
+// Palancas inversas (canon 14, "Tus Numeros"): dado un OBJETIVO, que
+// precio, que costo o que volumen lo logra. Son el corazon de las tres
+// palancas de la pantalla. NO inventan el objetivo -- la politica de a
+// que apunta cada palanca (que margen es "sano", que meta de ganancia)
+// vive en la capa que arma la pantalla, no aqui; aqui solo esta la
+// aritmetica inversa, espejo exacta de margenUnitario/puntoEquilibrio.
+// Paridad con engine/calculadora.py. CERO LLM, rangos soportados, y el
+// objetivo escalar (precioNuevo, margenPct, ganancia) nunca es rango.
+// =====================================================================
+
+export interface ResultadoObjetivo {
+  valor: ValorNumerico | null;
+  insumos_usados: string[];
+  insumos_faltantes: string[];
+  nota?: string;
+}
+
+/**
+ * Margen por unidad si el precio fuera `precioNuevo` en vez del
+ * precio_tentativo declarado (el costo unitario no cambia). Espejo de
+ * margenUnitario con el precio sustituido: sirve para narrar "a $58 tu
+ * margen pasa a +$16" sin tocar numeros_proyecto.
+ */
+export function margenConPrecio(numeros: NumerosProyecto, precioNuevo: number, tipoOferta?: TipoOferta): ResultadoMargen {
+  const costo = costoUnitarioTotal(numeros, tipoOferta);
+  if (costo.valor === null) {
+    return { valor: null, porcentaje: null, insumos_usados: [], insumos_faltantes: costo.insumos_faltantes };
+  }
+  const costoV = costo.valor;
+  let margen: ValorNumerico;
+  let porcentaje: ValorNumerico | null;
+  if (_esRango(costoV)) {
+    const lo = precioNuevo - _lado(costoV, "max");
+    const hi = precioNuevo - _lado(costoV, "min");
+    margen = { min: _r(lo)!, max: _r(hi)! };
+    porcentaje = precioNuevo
+      ? { min: _r((lo / precioNuevo) * 100, 1)!, max: _r((hi / precioNuevo) * 100, 1)! }
+      : null;
+  } else {
+    margen = _r(precioNuevo - (costoV as number))!;
+    porcentaje = precioNuevo ? _r(((margen as number) / precioNuevo) * 100, 1) : null;
+  }
+  return { valor: margen, porcentaje, insumos_usados: costo.insumos_usados, insumos_faltantes: [] };
+}
+
+/**
+ * Margen por unidad si el costo unitario fuera `costoNuevo` (el
+ * precio_tentativo declarado no cambia). Espejo de margenUnitario con el
+ * costo sustituido: la palanca "baja el costo a $24 -> +$14".
+ */
+export function margenConCosto(numeros: NumerosProyecto, costoNuevo: number): ResultadoMargen {
+  const precio = _valor(numeros, "precio_tentativo");
+  if (precio === null) {
+    return { valor: null, porcentaje: null, insumos_usados: [], insumos_faltantes: ["precio_tentativo"] };
+  }
+  let margen: ValorNumerico;
+  let porcentaje: ValorNumerico | null;
+  if (_esRango(precio)) {
+    const lo = _lado(precio, "min") - costoNuevo;
+    const hi = _lado(precio, "max") - costoNuevo;
+    margen = { min: _r(lo)!, max: _r(hi)! };
+    const pLo = _lado(precio, "min");
+    const pHi = _lado(precio, "max");
+    porcentaje = {
+      min: pLo ? _r((lo / pLo) * 100, 1)! : (null as unknown as number),
+      max: pHi ? _r((hi / pHi) * 100, 1)! : (null as unknown as number),
+    };
+  } else {
+    const precioN = precio as number;
+    margen = _r(precioN - costoNuevo)!;
+    porcentaje = precioN ? _r(((margen as number) / precioN) * 100, 1) : null;
+  }
+  return { valor: margen, porcentaje, insumos_usados: ["precio_tentativo"], insumos_faltantes: [] };
+}
+
+/**
+ * Precio al que habria que vender para que el margen porcentual fuera
+ * `margenPctObjetivo` (fraccion, ej. 0.25 = 25%): precio = costo / (1 - m).
+ * La palanca "sube el precio a X". margenPctObjetivo en [0, 1); 100% o
+ * mas es inalcanzable (precio infinito o negativo).
+ */
+export function precioParaMargenObjetivo(
+  numeros: NumerosProyecto,
+  margenPctObjetivo: number,
+  tipoOferta?: TipoOferta
+): ResultadoObjetivo {
+  const costo = costoUnitarioTotal(numeros, tipoOferta);
+  if (costo.valor === null) {
+    return { valor: null, insumos_usados: [], insumos_faltantes: costo.insumos_faltantes };
+  }
+  if (margenPctObjetivo === null || margenPctObjetivo === undefined || margenPctObjetivo < 0 || margenPctObjetivo >= 1) {
+    return {
+      valor: null,
+      insumos_usados: [],
+      insumos_faltantes: [],
+      nota: "un margen objetivo fuera de [0, 100%) no da un precio valido: 100% o mas implicaria precio infinito",
+    };
+  }
+  const factor = 1 - margenPctObjetivo;
+  const costoV = costo.valor;
+  const valor: ValorNumerico = _esRango(costoV)
+    ? { min: _r(_lado(costoV, "min") / factor)!, max: _r(_lado(costoV, "max") / factor)! }
+    : _r((costoV as number) / factor)!;
+  return { valor, insumos_usados: costo.insumos_usados, insumos_faltantes: [] };
+}
+
+/**
+ * Costo unitario maximo para que, al precio_tentativo declarado, el
+ * margen porcentual llegue a `margenPctObjetivo`: costo = precio * (1 - m).
+ * La palanca "baja el costo a Y". margenPctObjetivo en [0, 1).
+ */
+export function costoMaximoParaMargenObjetivo(numeros: NumerosProyecto, margenPctObjetivo: number): ResultadoObjetivo {
+  const precio = _valor(numeros, "precio_tentativo");
+  if (precio === null) {
+    return { valor: null, insumos_usados: [], insumos_faltantes: ["precio_tentativo"] };
+  }
+  if (margenPctObjetivo === null || margenPctObjetivo === undefined || margenPctObjetivo < 0 || margenPctObjetivo >= 1) {
+    return { valor: null, insumos_usados: [], insumos_faltantes: [], nota: "un margen objetivo fuera de [0, 100%) no da un costo valido" };
+  }
+  const factor = 1 - margenPctObjetivo;
+  const valor: ValorNumerico = _esRango(precio)
+    ? { min: _r(_lado(precio, "min") * factor)!, max: _r(_lado(precio, "max") * factor)! }
+    : _r((precio as number) * factor)!;
+  return { valor, insumos_usados: ["precio_tentativo"], insumos_faltantes: [] };
+}
+
+/**
+ * Unidades/mes para que, despues de cubrir los costos fijos, quede una
+ * ganancia mensual de `gananciaObjetivo`: ceil((fijos + ganancia) / margen).
+ * gananciaObjetivo=0 es exactamente el punto de equilibrio (cubrir fijos).
+ * Redondeo hacia ARRIBA por la misma razon que puntoEquilibrioUnidadesMes.
+ * Requiere margen positivo: con margen <= 0 no hay volumen que llegue
+ * (vender mas agranda la perdida).
+ */
+export function unidadesParaGananciaObjetivo(
+  numeros: NumerosProyecto,
+  gananciaObjetivo = 0,
+  tipoOferta?: TipoOferta
+): ResultadoEquilibrio {
+  const margen = margenUnitario(numeros, tipoOferta);
+  const costosFijos = _valor(numeros, "costos_fijos_mensuales");
+  const faltantes = [...margen.insumos_faltantes];
+  if (costosFijos === null) faltantes.push("costos_fijos_mensuales");
+  if (faltantes.length) {
+    return { valor: null, insumos_usados: [], insumos_faltantes: faltantes };
+  }
+  const margenV = margen.valor as ValorNumerico;
+  if (_hayRango(margenV, costosFijos)) {
+    const mLo = _lado(margenV, "min");
+    const mHi = _lado(margenV, "max");
+    const cfLo = _lado(costosFijos, "min");
+    const cfHi = _lado(costosFijos, "max");
+    if (mLo <= 0 || mHi <= 0) {
+      return {
+        valor: null,
+        insumos_usados: [],
+        insumos_faltantes: [],
+        nota: "el margen por unidad no es positivo en todo el rango; ningun volumen alcanza la meta",
+      };
+    }
+    return {
+      valor: { min: Math.ceil((cfLo + gananciaObjetivo) / mHi), max: Math.ceil((cfHi + gananciaObjetivo) / mLo) },
+      insumos_usados: [...margen.insumos_usados, "costos_fijos_mensuales"],
+      insumos_faltantes: [],
+    };
+  }
+  const margenN = margenV as number;
+  if (margenN <= 0) {
+    return {
+      valor: null,
+      insumos_usados: [],
+      insumos_faltantes: [],
+      nota: "el margen por unidad no es positivo; ningun volumen alcanza la meta (vender mas agranda la perdida)",
+    };
+  }
+  return {
+    valor: Math.ceil(((costosFijos as number) + gananciaObjetivo) / margenN),
+    insumos_usados: [...margen.insumos_usados, "costos_fijos_mensuales"],
+    insumos_faltantes: [],
+  };
+}
+
 export function calcularReporte(numerosProyecto: NumerosProyecto, tipoOferta?: TipoOferta): ReporteCalculado {
   const resultado: ReporteCalculado = {
     costo_unitario: costoUnitarioTotal(numerosProyecto, tipoOferta),
