@@ -19,6 +19,7 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerProyecto } from "@/lib/db";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { avanzarReporte, iniciarReporte } from "@/lib/engine/reporteFlow";
 import { createClient } from "@/lib/supabase/server";
 
@@ -49,6 +50,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   } = await supabase.auth.getUser();
   if (!user) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  }
+  // ETAPA 2 (la frontera): motor pagado; cuenta real.
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
   }
 
   const proyecto = await obtenerProyecto(supabase, projectId);

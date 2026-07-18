@@ -36,8 +36,11 @@ import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
+import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import type { ChecklistEstado } from "@/lib/dbContract";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { PRECIOS } from "@/lib/precios";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
@@ -86,6 +89,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   } = await supabase.auth.getUser();
   if (!user) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  }
+  // ETAPA 2 (la frontera): el seguimiento es motor pagado; cuenta real.
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
@@ -148,6 +155,17 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+  }
+
+  // ETAPA 2 — VERIFICAR al inicio (no cobrar): el seguimiento cuesta 2 (core
+  // o mundo, precios.ts). El descuento ocurre a la entrega del plan del ciclo.
+  const montoFollow = PRECIOS[dominio === "core" ? "seguimiento" : "mundo_seguimiento"];
+  const saldoFollow = await verificarSaldo(user.id, montoFollow);
+  if (!saldoFollow.alcanza) {
+    return NextResponse.json(
+      { error: mensajeSaldoInsuficiente(saldoFollow.creditos, montoFollow), saldo: saldoFollow.creditos },
+      { status: 402 }
+    );
   }
 
   // (a) El checklist del último plan DEL DOMINIO (por fecha de inserción) con

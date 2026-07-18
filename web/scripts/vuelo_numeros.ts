@@ -19,6 +19,15 @@ cargarEnvRaiz();
 const admin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
 
 let fallos = 0;
+
+/** ETAPA 2: los vuelos ejercen los cobros REALES; el dev user necesita saldo. */
+async function asegurarSaldoDev(userId: string) {
+  await admin.rpc("otorgar_creditos", {
+    p_user_id: userId, p_monto: 100, p_origen: "cortesia",
+    p_idempotency_key: `vuelo-topup:${Date.now()}`, p_pack: null,
+  });
+}
+
 function check(nombre: string, cond: boolean, extra?: unknown) {
   console.log(`${cond ? "OK  " : "FALLO"}: ${nombre}${cond ? "" : `  -> ${JSON.stringify(extra)}`}`);
   if (!cond) fallos++;
@@ -69,6 +78,7 @@ async function main() {
   const dev = lista.users.find((u) => u.email === "dev@my-idea.local");
   if (!dev) throw new Error("no encuentro el dev user dev@my-idea.local");
   const userId = dev.id;
+  await asegurarSaldoDev(userId);
 
   // ── Proyecto A: velas de soya, arranca SIN cifras (las mete el recolector).
   const pidA = await sembrarProyecto(userId, "Velas de soya del vuelo", {});
@@ -185,6 +195,7 @@ async function main() {
   // 7) Tope diario: sembramos TOPE filas narradas HOY, el narrar siguiente
   //    responde en palabras Y el recalculo sigue vivo despues del tope.
   const pidC = await sembrarProyecto(userId, "Idea para el tope diario", velasWrapped);
+  await admin.from("projects").update({ tus_numeros_activado_at: new Date().toISOString() }).eq("id", pidC);
   const rutaC = `/api/project/${pidC}/numeros`;
   const ahora = new Date().toISOString();
   await admin.from("project_numeros_versiones").insert(

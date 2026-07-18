@@ -217,15 +217,13 @@ export function PotenciaTuIdea({
                     "Primero genera el plan de tu idea."
                   ) : estado === "diagnostico_listo" ? (
                     <>
-                      Tu diagnóstico te espera · su plan:{" "}
-                      <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
+                      Tu diagnóstico te espera · su plan: {PRECIOS.mundo_activar} créditos
                     </>
                   ) : (
                     <>
-                      {/* Fase 4.5: el preview es gratis; lo que se compra es el
-                          plan (precio de catálogo, leyendo de precios.ts). */}
-                      El preview es gratis · su plan:{" "}
-                      <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
+                      {/* ETAPA 2: el precio es VIVO (se paga con la cortesía);
+                          el tachado de beta murió. Siempre de precios.ts. */}
+                      El preview es gratis · su plan: {PRECIOS.mundo_activar} créditos
                     </>
                   )}
                 </p>

@@ -44,6 +44,14 @@ export default async function MisIdeas() {
   // ambos, "Salir" les dejaría las ideas huérfanas — no se muestra.
   const esAnonimo = (auth.user?.is_anonymous ?? true) || auth.user?.user_metadata?.invitado === true;
 
+  // ETAPA 2: el saldo del chip (canon 07), leído con RLS own-select. Solo
+  // para cuentas reales: la identidad invisible no tiene ledger.
+  let saldo: number | null = null;
+  if (!esAnonimo) {
+    const { data: cuenta } = await supabase.from("credit_accounts").select("creditos_total").maybeSingle();
+    saldo = (cuenta as { creditos_total: number } | null)?.creditos_total ?? 0;
+  }
+
   if (ideas.length === 0) redirect("/nueva");
 
   // Fase 3.8: las realizadas reposan al final, bajo su propio encabezado.
@@ -57,6 +65,15 @@ export default async function MisIdeas() {
           My <span className="text-accent">idea</span>
         </Link>
         <span className="flex-1" />
+        {saldo !== null && (
+          <Link
+            href="/potenciadores"
+            className="inline-flex shrink-0 items-center rounded-full border border-accent/40 px-3 py-1 text-[12px] font-semibold text-accent hover:border-accent/70"
+            title="Tus créditos"
+          >
+            {saldo} {saldo === 1 ? "crédito" : "créditos"}
+          </Link>
+        )}
         <Link href="/potenciadores" className="text-[13.5px] text-dim hover:text-ink">
           Potenciadores
         </Link>

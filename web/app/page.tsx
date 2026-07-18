@@ -6,6 +6,8 @@
  * ahora en /ideas.
  */
 import { Landing } from "./ui/Landing";
+import { esInvitadoInvisible } from "@/lib/identidad";
+import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
   title: "My Idea — Transforma tu creatividad en acción",
@@ -13,6 +15,13 @@ export const metadata = {
     "A los emprendedores no les faltan ideas. Les falta un interlocutor serio. Cuéntala, recibe tu plan y ejecútalo.",
 };
 
-export default function PaginaPublica() {
-  return <Landing />;
+export default async function PaginaPublica() {
+  // ETAPA 2 (§6 navegación): con sesión real, el nav ofrece "Mis ideas".
+  // Leer la sesión aquí NO acuña identidad (eso sigue siendo cosa de /nueva).
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const sesionActiva = Boolean(user && !esInvitadoInvisible(user));
+  return <Landing sesionActiva={sesionActiva} />;
 }

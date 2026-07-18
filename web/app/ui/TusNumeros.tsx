@@ -35,6 +35,10 @@ interface RespuestaNumeros {
   cifras_fecha: string | null;
   activado: boolean;
   historial?: VersionResumen[];
+  /** ETAPA 2: sin activación no hay tablero; el GET devuelve la compuerta. */
+  compuerta?: boolean;
+  costo?: number;
+  creditos_restantes?: number | null;
 }
 
 /** El payload de VISITAR una version pasada (GET ?version): modo lectura. */
@@ -450,6 +454,9 @@ export function TusNumeros({ projectId }: { projectId: string }) {
   const [data, setData] = useState<RespuestaNumeros | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [editando, setEditando] = useState(false);
+  /** ETAPA 2: la compuerta de activación (2 créditos, una vez por idea). */
+  const [activando, setActivando] = useState(false);
+  const [errorCompuerta, setErrorCompuerta] = useState<string | null>(null);
   /** La puerta de un faltante: abre el recolector con foco en ese campo. */
   const [campoInicial, setCampoInicial] = useState<string | null>(null);
   /** Una version PASADA que se esta visitando en modo lectura (null = el presente). */
@@ -484,6 +491,68 @@ export function TusNumeros({ projectId }: { projectId: string }) {
 
   if (error) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">{error}</div>;
   if (!data) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">Calculando tus numeros…</div>;
+
+  // ETAPA 2 — LA COMPUERTA (canon 07): sin activación no hay tablero. Activar
+  // cuesta 2 créditos, UNA vez por idea; después todo recálculo es gratis.
+  if (data.compuerta) {
+    return (
+      <div className="min-h-full">
+        <nav className="flex items-center justify-between gap-6 border-b border-hairline px-8 py-4">
+          <div className="flex min-w-0 items-baseline gap-3">
+            <Link href="/ideas" className="flex-none text-sm text-dim hover:text-accent">
+              Mis ideas /
+            </Link>
+            <span className="truncate text-[15px] font-bold">{data.titulo ?? "Tu idea"}</span>
+          </div>
+        </nav>
+        <div className="mx-auto w-full max-w-xl px-6 py-16">
+          <Link href={`/idea/${projectId}`} className="mb-6 inline-block text-sm text-dim hover:text-accent">
+            ← Volver al plan
+          </Link>
+          <div className="rounded-panel border border-accent/35 bg-surface p-8">
+            <p className="text-[11px] font-semibold uppercase tracking-[1.3px] text-accent">Tus Números</p>
+            <h1 className="mt-2 text-2xl font-bold tracking-tight">Tus cifras reales, convertidas en decisiones</h1>
+            <p className="mt-3 text-[14.5px] leading-relaxed text-dim">
+              Margen, punto de equilibrio, tres palancas calculadas y escenarios, sobre las cifras que tú declares. Se
+              activa una vez por idea; después, corregir cifras y recalcular es gratis, siempre.
+            </p>
+            <button
+              onClick={async () => {
+                setError(null);
+                setActivando(true);
+                try {
+                  const r = await fetch(`/api/project/${projectId}/numeros`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ activar: true }),
+                  });
+                  const payload = (await r.json()) as RespuestaNumeros & { error?: string; login_requerido?: boolean };
+                  if (r.status === 401 && payload.login_requerido) {
+                    window.location.assign("/login");
+                    return;
+                  }
+                  if (!r.ok) {
+                    setErrorCompuerta(payload.error ?? "no pudimos activar Tus Números; intenta de nuevo");
+                    return;
+                  }
+                  setData(payload);
+                } catch {
+                  setErrorCompuerta("no pudimos conectar; revisa tu internet e intenta de nuevo");
+                } finally {
+                  setActivando(false);
+                }
+              }}
+              disabled={activando}
+              className="mt-6 rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
+            >
+              {activando ? "Activando…" : `Sacar mis números · ${data.costo ?? 2} créditos`}
+            </button>
+            {errorCompuerta && <p className="mt-3 text-[13px] text-warn">{errorCompuerta}</p>}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const u = (historico ?? data).unidad || "unidad";
   const titulo = (historico ?? data).titulo;

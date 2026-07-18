@@ -1062,8 +1062,14 @@ export function ManosALaObra({
         body: JSON.stringify({ detalles, enfoque, dominio }),
       });
       const data = await res.json();
+      if (res.status === 401 && data.login_requerido) {
+        // ETAPA 2 (la frontera): cuenta real para el seguimiento.
+        window.location.assign("/login");
+        return;
+      }
       if (!res.ok) {
-        setErrorRitual(res.status === 429 ? String(data.error) : ERROR_GENERICO);
+        // 429 (limite) y 402 (saldo) hablan en palabras de persona: se muestran.
+        setErrorRitual(res.status === 429 || res.status === 402 ? String(data.error) : ERROR_GENERICO);
         return;
       }
       onSeguimientoIniciado(data);
@@ -1108,6 +1114,11 @@ export function ManosALaObra({
     try {
       const res = await fetch(`/api/project/${projectId}/world/${dominio}/start`, { method: "POST" });
       const data = await res.json();
+      if (res.status === 401 && data.login_requerido) {
+        // ETAPA 2 (la frontera): el login nace aqui; la idea se adopta al volver.
+        window.location.assign("/login");
+        return;
+      }
       if (!res.ok) {
         setError(typeof data.error === "string" ? data.error : ERROR_GENERICO);
         return;
@@ -1345,9 +1356,7 @@ export function ManosALaObra({
                     >
                       Generar mi plan de {mundo.nombre}
                     </button>
-                    <span className="text-[12.5px] text-dim">
-                      <span className="line-through opacity-70">{PRECIOS.mundo_activar} créditos</span> · gratis en beta
-                    </span>
+                    <span className="text-[12.5px] text-dim">{PRECIOS.mundo_activar} créditos</span>
                   </div>
                 </div>
               ) : (

@@ -18,6 +18,7 @@ import catalogo from "@/lib/assets/packs_catalog.json";
 import { costoAcumuladoUsd } from "@/lib/costmeter";
 import { guardarEstadoSesion, obtenerProyecto, obtenerSesion, registrarBitacora } from "@/lib/db";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { materialDiagnostico, redactarDiagnostico } from "@/lib/engine/diagnosticoMundo";
 import { cargarGrafo } from "@/lib/engine/graph";
 import { createClient } from "@/lib/supabase/server";
@@ -48,6 +49,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   } = await supabase.auth.getUser();
   if (!user) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  }
+  // ETAPA 2 (la frontera): motor pagado; cuenta real.
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {

@@ -25,6 +25,8 @@ import {
   registrarUso,
   type UsoAcumulado,
 } from "@/lib/costmeter";
+import { cobrar, conceptoDelPlan, mensajeSaldoInsuficiente, montoDelPlan, reembolsar, verificarSaldo } from "@/lib/creditos";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import {
   actualizarProyecto,
   cerrarSesion,
@@ -132,6 +134,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!user) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
+  // ETAPA 2 (la frontera): generar un plan es motor pagado; cuenta real.
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
 
   const sesion = await obtenerSesion(supabase, sessionId);
   if (!sesion) {
@@ -171,12 +177,32 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
   }
 
+  // ETAPA 2 — VERIFICAR antes de abrir el stream (la unidad facturable de
+  // esta entrega): core inicial 5, core seguimiento 2, mundo inicial 3 (el
+  // preview fue gratis: lo que se compra es EL PLAN), mundo seguimiento 2.
+  // 402 limpio antes de gastar un token. El descuento va a la ENTREGA.
+  const dominioCobro = ((sesion as { dominio?: string }).dominio ?? "core") as string;
+  const conceptoCobro = conceptoDelPlan(dominioCobro, recorrido.esSeguimiento);
+  const montoCobro = montoDelPlan(dominioCobro, recorrido.esSeguimiento);
+  if (montoCobro > 0) {
+    const saldoPlan = await verificarSaldo(user.id, montoCobro);
+    if (!saldoPlan.alcanza) {
+      return NextResponse.json(
+        { error: mensajeSaldoInsuficiente(saldoPlan.creditos, montoCobro), saldo: saldoPlan.creditos },
+        { status: 402 }
+      );
+    }
+  }
+
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
       function enviar(evento: string, data: unknown) {
         controller.enqueue(encoder.encode(`event: ${evento}\ndata: ${JSON.stringify(data)}\n\n`));
       }
+      // ETAPA 2: el cobro aplicado en ESTA entrega (para la red de reembolso
+      // del catch). null = aun no se cobra, o el done ya salio.
+      let cobroAplicado: { monto: number; concepto: string } | null = null;
       const heartbeat = setInterval(() => controller.enqueue(encoder.encode(": heartbeat\n\n")), INTERVALO_HEARTBEAT_MS);
 
       try {
@@ -307,20 +333,33 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         if (titulo && !proyecto?.titulo) camposProyecto.titulo = titulo;
         await actualizarProyecto(supabase, projectId, camposProyecto);
 
-        // ── ANCLA para la ETAPA 2 del frente de cuentas (docs/FLUJO_TRACKING.md §5)
-        // Aqui, y NO antes, se cablea el consumo de creditos del plan: el
-        // patron es verificar saldo al inicio y DESCONTAR A LA ENTREGA. Este
-        // punto es la entrega: el plan ya esta redactado, persistido, con su
-        // checklist derivado y la sesion cerrada. Es prerequisito de ese cobro
-        // que el redactor reintente y, si se agota, LANCE (ver generarTextoPlan):
-        // un plan que muere a mitad jamas debe consumir creditos, y uno
-        // ensamblado offline en silencio no es lo que el usuario pago.
-        // Fase 4.5 (PREVIEW_MUNDOS_PLAN §5.3): para una sesion de MUNDO, este
-        // es ADEMAS el punto de cobro del mundo entero: el preview fue gratis
-        // y lo que se compra es EL PLAN (precios.ts: mundo_activar, 3
-        // creditos; el nombre del concepto lo reconcilia la ETAPA 2). En beta
-        // no se cobra; se sella plan_pagado_at (idempotente, WHERE IS NULL) y
-        // queda la telemetria preview_a_compra (§6).
+        // ── ETAPA 2 (VIVO): DESCONTAR A LA ENTREGA (docs/FLUJO_TRACKING.md §5,
+        // docs/CUENTAS_DISENO.md §5-6). Este punto ES la entrega: el plan ya
+        // esta redactado, persistido, con su checklist derivado y la sesion
+        // cerrada. Es prerequisito de este cobro que el redactor reintente y,
+        // si se agota, LANCE (ver generarTextoPlan): un plan que muere a mitad
+        // JAMAS consume creditos. Idempotente por `plan:{sessionId}`: un
+        // reintento de la misma entrega no cobra dos veces.
+        // Carrera rara (verifico al inicio, otra pestana gasto antes): cobrar
+        // devuelve -1 con el plan ya persistido -> ENTREGAR Y REGISTRAR, nunca
+        // cobrar de mas ni castigar (la regla sagrada).
+        let creditosRestantes: number | null = null;
+        if (montoCobro > 0) {
+          const resultadoCobro = await cobrar(user.id, conceptoCobro, montoCobro, `plan:${sessionId}`);
+          if (resultadoCobro === -1) {
+            await registrarBitacora(supabase, projectId, "cobro_carrera", {
+              session_id: sessionId,
+              concepto: conceptoCobro,
+              monto: montoCobro,
+            });
+          } else {
+            creditosRestantes = resultadoCobro;
+            cobroAplicado = { monto: montoCobro, concepto: conceptoCobro };
+          }
+        }
+        // Fase 4.5 (PREVIEW_MUNDOS_PLAN §5.3): para una sesion de MUNDO, esta
+        // entrega es ADEMAS la compra del mundo: se sella plan_pagado_at
+        // (idempotente, WHERE IS NULL) + telemetria preview_a_compra (§6).
         if (dominioSesion !== "core") {
           await supabase
             .from("project_unlocks")
@@ -336,8 +375,23 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           markdown: resultado.markdown,
           evaluacion_cobertura: resultado.evaluacionCobertura,
           costo_usd: costoAcumuladoUsd(acumuladoConJuez),
+          // El chip refresca su saldo con la entrega (patron del I Ching).
+          creditos_restantes: creditosRestantes,
         });
+        cobroAplicado = null; // el done salio: la entrega llego a su dueño
       } catch (e) {
+        // ETAPA 2 — la red del borde del streaming: si algo revento DESPUES
+        // de un cobro exitoso y ANTES de que el done llegara, se reembolsa
+        // con su log. El usuario JAMAS pierde creditos por un fallo nuestro
+        // (si ademas el plan quedo persistido, lo encuentra al recargar:
+        // generosidad a favor del usuario, nunca en contra).
+        if (cobroAplicado) {
+          try {
+            await reembolsar(user.id, cobroAplicado.monto, `fallo post-cobro plan:${sessionId} (${cobroAplicado.concepto})`);
+          } catch (errRefund) {
+            console.error("[plan] FALLO EL REEMBOLSO post-cobro (revisar a mano):", errRefund);
+          }
+        }
         enviar("error", { error: e instanceof Error ? e.message : String(e) });
       } finally {
         clearInterval(heartbeat);
