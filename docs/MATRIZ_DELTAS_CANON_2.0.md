@@ -37,6 +37,7 @@ evidencia (el par app-vs-canon del gate); el fundador abre el par y confirma.
 
 - **"Números que faltan" refleja los faltantes REALES del motor** (días de cobro/inventario/pago), no los ítems ilustrativos del dibujo (tiempo, puesto, merma). **Delta aceptado a favor de la app:** el canon ilustra, el motor confiesa. Un faltante inventado sería una mentira bonita; el real es una guía honesta.
 - **Escenarios:** ganancia **NETA de fijos** (como el canon: techo sano $3.900 = 30×170−1.200). La fila "Tu ritmo de hoy" (volumen actual) aparece **solo si el usuario declaró `unidades_vendidas`**; sin ese dato, las dos honestas (pesimista y capacidad plena). Jamás se inventa la base.
+- **Sección "Tu ciclo de caja" (la puerta de los faltantes, 2026-07-18):** el canon 14 dibujó la PREGUNTA (los días de cobro/inventario/pago en "Números que faltan") pero **no la RESPUESTA** (la sección que muestra el ciclo computado en palabras de persona). Se implementó como estado-sin-vara legítimo: faltantes tocables que abren el recolector en su campo, los campos del ciclo opcionales, y al darlos el tablero estrena "Tu ciclo de caja" ("tu dinero tarda ~N días en volver a tu bolsillo"). **Estado: implementado, vara pendiente de Design.** El próximo encargo a Design pide el frame, con `web/examples/gate-canon/numeros_sano_app.png` como captura real de referencia. El par del gate lo documenta mientras tanto.
 
 **Resumen:** 2 trabajos (14 Tus Números, 12 Cierre honesto), 2 deltas de peso
 (04 Exploración móvil, 07 Potenciadores/packs), 3 deltas menores de pulido
