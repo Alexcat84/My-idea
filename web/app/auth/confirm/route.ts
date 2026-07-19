@@ -1,5 +1,8 @@
 /**
- * GET /auth/confirm — destino del magic link. Verifica el token_hash con
+ * GET /auth/confirm — LEGACY: el destino del enlace magico. Desde jul 2026 el
+ * acceso oficial es por CODIGO (POST /api/auth/verificar-codigo); esta ruta
+ * queda viva por si un template viejo o un correo rezagado trae un enlace
+ * valido: jamas una puerta muerta. Verifica el token_hash con
  * Supabase (deja la sesión en cookies vía el cliente de server.ts) y manda
  * al usuario a sus ideas. Si el enlace venció o ya se usó, vuelve al login
  * con un aviso en palabras de persona.
@@ -16,8 +19,7 @@
  */
 import { NextResponse } from "next/server";
 import type { EmailOtpType } from "@supabase/supabase-js";
-import { adoptarProyectosDeUsuario } from "@/lib/cuentas";
-import { otorgarCortesia } from "@/lib/creditos";
+import { bienvenidaTrasLogin } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 
@@ -40,25 +42,7 @@ export async function GET(request: Request) {
       const {
         data: { user: real },
       } = await supabase.auth.getUser();
-      if (real && !esInvitadoInvisible(real)) {
-        // Cortesía primero (idempotente): la cuenta nace con sus 20.
-        try {
-          await otorgarCortesia(real.id);
-        } catch (e) {
-          // No bloquea el login, pero se dice fuerte: un invitado sin su
-          // cortesía es un bug de dinero, no un detalle.
-          console.error("[auth/confirm] fallo otorgar_cortesia:", e);
-        }
-        // Adopción del organizador anónimo (si lo había).
-        if (anonId && anonId !== real.id) {
-          try {
-            const adoptados = await adoptarProyectosDeUsuario(anonId, real.id);
-            if (adoptados > 0) console.log(`[auth/confirm] ${adoptados} proyecto(s) adoptado(s) de ${anonId}`);
-          } catch (e) {
-            console.error("[auth/confirm] fallo la adopcion:", e);
-          }
-        }
-      }
+      if (real) await bienvenidaTrasLogin(real, anonId);
       return NextResponse.redirect(new URL("/ideas", url.origin));
     }
   }

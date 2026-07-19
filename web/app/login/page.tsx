@@ -1,23 +1,29 @@
 "use client";
 
 /**
- * Login (brief 2.1): pantalla mínima — logo, campo email, frase de
- * producto. Magic link con allowlist; el no invitado recibe un mensaje
+ * Login (brief 2.1, remodelado ETAPA 2): pantalla mínima — logo, campo
+ * email, frase de producto. Allowlist; el no invitado recibe un mensaje
  * amable, jamás un error técnico.
+ *
+ * Decisión del fundador (jul 2026): el acceso es por CÓDIGO de 6 dígitos
+ * (el correo lo trae vía Resend; el usuario lo escribe aquí). El enlace
+ * mágico quedó obsoleto: sin redirects frágiles ni enlaces que caducan.
  */
 import { Suspense, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 type Estado =
   | { fase: "form"; error?: string }
-  | { fase: "enviado"; email: string }
+  | { fase: "codigo"; email: string; error?: string }
   | { fase: "no_invitado" };
 
 function LoginForm() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const enlaceVencido = searchParams.get("enlace") === "vencido";
   const [estado, setEstado] = useState<Estado>({ fase: "form" });
   const [email, setEmail] = useState("");
+  const [codigo, setCodigo] = useState("");
   const [enviando, setEnviando] = useState(false);
 
   async function enviar(e: React.FormEvent) {
@@ -36,7 +42,8 @@ function LoginForm() {
       } else if (!data.invitado) {
         setEstado({ fase: "no_invitado" });
       } else {
-        setEstado({ fase: "enviado", email });
+        setCodigo("");
+        setEstado({ fase: "codigo", email });
       }
     } catch {
       setEstado({ fase: "form", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
@@ -45,15 +52,67 @@ function LoginForm() {
     }
   }
 
-  if (estado.fase === "enviado") {
+  async function verificar(e: React.FormEvent) {
+    e.preventDefault();
+    if (enviando || estado.fase !== "codigo") return;
+    setEnviando(true);
+    try {
+      const res = await fetch("/api/auth/verificar-codigo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: estado.email, codigo }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setEstado({ fase: "codigo", email: estado.email, error: data.error ?? "algo se atoró; intenta de nuevo" });
+        return;
+      }
+      // Sesión creada (y la cortesía/adopción ya corrieron): a sus ideas.
+      router.push("/ideas");
+      router.refresh();
+    } catch {
+      setEstado({ fase: "codigo", email: estado.email, error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  if (estado.fase === "codigo") {
     return (
-      <div className="text-center">
-        <p className="text-lg">Te enviamos un enlace a</p>
-        <p className="mt-1 font-semibold">{estado.email}</p>
-        <p className="mt-4 text-sm text-dim">
-          Ábrelo desde este dispositivo para entrar. Puede tardar un minuto en llegar.
-        </p>
-      </div>
+      <form onSubmit={verificar} className="flex w-full flex-col gap-3 text-center">
+        <p className="text-lg">Te enviamos un código a</p>
+        <p className="font-semibold">{estado.email}</p>
+        <label htmlFor="codigo" className="sr-only">
+          Código de 6 dígitos
+        </label>
+        <input
+          id="codigo"
+          inputMode="numeric"
+          pattern="[0-9]{6}"
+          maxLength={6}
+          required
+          autoFocus
+          placeholder="······"
+          value={codigo}
+          onChange={(e) => setCodigo(e.target.value.replace(/\D/g, ""))}
+          className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-center text-2xl font-bold tracking-[0.5em] text-ink placeholder:text-dim"
+        />
+        {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
+        <button
+          type="submit"
+          disabled={enviando || codigo.length !== 6}
+          className="rounded-cinta bg-accent px-4 py-3 font-medium text-white hover:opacity-90 disabled:opacity-50"
+        >
+          {enviando ? "Verificando…" : "Entrar"}
+        </button>
+        <button
+          type="button"
+          onClick={() => setEstado({ fase: "form" })}
+          className="text-sm text-dim hover:text-ink"
+        >
+          Pedir otro código o cambiar de correo
+        </button>
+      </form>
     );
   }
 
@@ -101,7 +160,7 @@ function LoginForm() {
         disabled={enviando}
         className="rounded-cinta bg-accent px-4 py-3 font-medium text-white hover:opacity-90 disabled:opacity-50"
       >
-        {enviando ? "Enviando…" : "Enviarme el enlace de acceso"}
+        {enviando ? "Enviando…" : "Enviarme mi código de acceso"}
       </button>
     </form>
   );
