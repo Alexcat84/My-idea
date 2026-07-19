@@ -13,7 +13,38 @@
  * - En el script del fundador (scripts/adoptar_proyectos.ts): corre con la
  *   service-role key en la máquina del fundador, con ids explícitos.
  */
+import type { User } from "@supabase/supabase-js";
+import { otorgarCortesia } from "./creditos";
+import { esInvitadoInvisible } from "./identidad";
 import { createAdminClient } from "./supabase/admin";
+
+/**
+ * Los dos actos de la bienvenida tras un login exitoso (compartidos por el
+ * código de verificación y el enlace legacy):
+ * 1. CORTESÍA: 20 créditos al primer login (otorgar_cortesia es una-sola-vez
+ *    por cuenta vía beta_courtesy_log; repetirla no re-otorga).
+ * 2. ADOPCIÓN: si el navegador traía una identidad invisible (el organizador
+ *    anónimo), sus proyectos pasan al dueño recién autenticado. `anonId`
+ *    SIEMPRE debe venir de la sesión que el propio request traía en cookies
+ *    ANTES de verificar (prueba de posesión), jamás de un parámetro.
+ * Ninguno de los dos bloquea el login si falla; ambos se dicen fuerte.
+ */
+export async function bienvenidaTrasLogin(real: User, anonId: string | null): Promise<void> {
+  if (esInvitadoInvisible(real)) return;
+  try {
+    await otorgarCortesia(real.id);
+  } catch (e) {
+    console.error("[login] fallo otorgar_cortesia (un invitado sin su cortesia es un bug de dinero):", e);
+  }
+  if (anonId && anonId !== real.id) {
+    try {
+      const adoptados = await adoptarProyectosDeUsuario(anonId, real.id);
+      if (adoptados > 0) console.log(`[login] ${adoptados} proyecto(s) adoptado(s) de ${anonId}`);
+    } catch (e) {
+      console.error("[login] fallo la adopcion:", e);
+    }
+  }
+}
 
 /**
  * Mueve TODOS los proyectos de un usuario (la identidad invisible del

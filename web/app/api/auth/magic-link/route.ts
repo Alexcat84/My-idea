@@ -1,9 +1,14 @@
 /**
- * POST /api/auth/magic-link — Fase 3.2 (item 9 original): la allowlist
- * de beta se aplica AQUÍ, antes de que exista sesión alguna: solo los
- * emails presentes en beta_allowlist (migration 008, solo legible con
- * service role) reciben el enlace. Quien no está invitado recibe una
- * respuesta amable — jamás un error técnico.
+ * POST /api/auth/magic-link — Fase 3.2 (item 9 original), remodelada en la
+ * ETAPA 2: la allowlist de beta se aplica AQUÍ, antes de que exista sesión
+ * alguna: solo los emails presentes en beta_allowlist (migration 008, solo
+ * legible con service role) reciben el correo. Quien no está invitado recibe
+ * una respuesta amable — jamás un error técnico.
+ *
+ * Desde jul 2026 el correo trae un CÓDIGO de 6 dígitos (template de Supabase
+ * con {{ .Token }}, enviado por Resend) que se canjea en
+ * /api/auth/verificar-codigo. El enlace mágico quedó obsoleto (el
+ * emailRedirectTo se conserva solo para el camino legacy de /auth/confirm).
  */
 import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
