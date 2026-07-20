@@ -16,7 +16,7 @@ export const TOPE_RENARRACION_DIA = 5;
 /** En palabras de persona cuando se alcanza el tope (amarre del fundador):
  * espejo, sin regano, y deja claro que nada se pierde. */
 export const MENSAJE_TOPE_RENARRACION =
-  "Por hoy llegamos al limite de relecturas. Tus numeros y tus cambios quedan guardados, el recalculo sigue disponible sin limite, y manana puedes pedir una relectura nueva.";
+  "Por hoy llegamos al límite de relecturas. Tus números y tus cambios quedan guardados, el recálculo sigue disponible sin límite, y mañana puedes pedir una relectura nueva.";
 
 /** Formatea un entero de dinero al estilo del canon: "$1.200", "$170". */
 function pesos(n: number): string {
@@ -82,16 +82,16 @@ export function veredictoNumeros(tablero: Tablero, unidad?: string | null): Vere
   if (tablero.estado === "datos" || margen === null) {
     return {
       tono: "datos",
-      frase: `Aun me faltan cifras para darte el panorama: cuando completes lo que falta, aqui veras con claridad si cada ${u} te deja ganancia.`,
+      frase: `Aún me faltan cifras para darte el panorama: cuando completes lo que falta, aquí verás con claridad si cada ${u} te deja ganancia.`,
       acento: null,
     };
   }
 
   if (tablero.estado === "perdida") {
-    const acento = `${pesos(margen)} mas de lo que cobras`;
+    const acento = `${pesos(margen)} más de lo que cobras`;
     return {
       tono: "perdida",
-      frase: `Hoy, cada ${u} que vendes te cuesta ${acento}: no es problema de vender mas, es que el precio todavia no cubre lo que te cuesta hacerla.`,
+      frase: `Hoy, cada ${u} que vendes te cuesta ${acento}: no es problema de vender más, es que el precio todavía no cubre lo que te cuesta hacerla.`,
       acento,
     };
   }
@@ -101,7 +101,7 @@ export function veredictoNumeros(tablero: Tablero, unidad?: string | null): Vere
     const pct = margenPct !== null ? ` (${margenPct}%)` : "";
     return {
       tono: "ajuste",
-      frase: `Cada ${u} te deja ${acento}${pct}: ya es ganancia, pero un margen delgado, asi que conviene reforzarlo antes de crecer.`,
+      frase: `Cada ${u} te deja ${acento}${pct}: ya es ganancia, pero un margen delgado, así que conviene reforzarlo antes de crecer.`,
       acento,
     };
   }
@@ -110,7 +110,7 @@ export function veredictoNumeros(tablero: Tablero, unidad?: string | null): Vere
   const acento = `${pesos(margen)} limpios`;
   const cola =
     equilibrio !== null && fijos !== null
-      ? `, y con vender ${equilibrio} al mes ya cubres tus ${pesos(fijos)} de gasto fijo: de ahi en adelante, cada ${u} es ganancia`
+      ? `, y con vender ${equilibrio} al mes ya cubres tus ${pesos(fijos)} de gasto fijo: de ahí en adelante, cada ${u} es ganancia`
       : "";
   return {
     tono: "sano",

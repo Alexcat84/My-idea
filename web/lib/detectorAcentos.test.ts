@@ -30,3 +30,13 @@ describe("detectarFaltaDeAcentos (Fase 3.9 D11)", () => {
     expect(detectarFaltaDeAcentos(ambiguo)).toEqual([]);
   });
 });
+
+describe("falsos positivos de verbos acentuados en -cionó (lote 3 de Design)", () => {
+  it("'funcionó'/'mencionó' con tilde NO disparan (el \b ASCII veia frontera antes de la ó)", () => {
+    expect(detectarFaltaDeAcentos("nadie te dice si el kit funcionó ni si volverían")).toEqual([]);
+    expect(detectarFaltaDeAcentos("el cliente mencionó su ocasión")).toEqual([]);
+  });
+  it("la falta real sigue cazandose", () => {
+    expect(detectarFaltaDeAcentos("la funcion principal")).toEqual(["funcion"]);
+  });
+});

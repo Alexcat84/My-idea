@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Login por código</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Login correo desktop
+      - Login correo movil 380
+      - Login codigo desktop
+      - Login codigo movil 380
+      - Login no invitado desktop
+      - Login no invitado movil 380
+      - Login codigo vencido desktop
+      - Login codigo vencido movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa; el ambar es espejo, jamas regano; nunca rojo)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --radio-campo: 12px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 820px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+
+    /* LIENZO DEL LOGIN: una sola columna centrada, sin nav (es la puerta) */
+    .lienzo { position: relative; display: flex; align-items: center; justify-content: center; min-height: 760px; padding: 60px 40px; }
+    .lienzo--movil { min-height: 700px; padding: 48px 24px; }
+
+    .puerta { width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; }
+
+    .marca { font-size: 34px; font-weight: 800; letter-spacing: -0.6px; }
+    .marca-my { color: var(--texto); }
+    .marca-idea { color: var(--azul); }
+    .puerta-sub { font-size: 15px; color: var(--texto-dim); margin-top: 10px; }
+
+    .puerta-form { width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 34px; }
+
+    .campo-correo { width: 100%; background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: var(--radio-campo); padding: 16px 18px; font-size: 15px; color: var(--texto); font-family: var(--fuente); text-align: left; }
+    .campo-correo::placeholder { color: var(--texto-dim); }
+    .campo-correo--lleno { color: var(--texto); }
+
+    .cta { display: block; width: 100%; border: none; border-radius: var(--radio-campo); padding: 16px 18px; font-size: 15px; font-weight: 700; font-family: var(--fuente); cursor: pointer; text-align: center; }
+    .cta--azul { background: var(--azul); color: #fff; }
+    .cta--fantasma { background: transparent; border: 1px solid var(--hairline); color: var(--texto); font-weight: 600; }
+
+    .puerta-nota { font-size: 13px; line-height: 1.6; color: var(--texto-dim); margin-top: 20px; text-wrap: pretty; }
+
+    /* PASO B: el codigo de 6 digitos */
+    .aviso-codigo { font-size: 15px; line-height: 1.6; color: var(--texto-dim); margin-top: 30px; }
+    .aviso-codigo strong { color: var(--texto); font-weight: 600; }
+
+    .codigo { display: flex; gap: 10px; justify-content: center; margin-top: 22px; }
+    .lienzo--movil .codigo { gap: 7px; }
+    .codigo-caja { width: 52px; height: 62px; background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: var(--radio-campo); display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 800; letter-spacing: 0; }
+    .lienzo--movil .codigo-caja { width: 46px; height: 56px; font-size: 23px; }
+    .codigo-caja--activa { border-color: rgba(77, 124, 254, 0.65); box-shadow: 0 0 0 3px rgba(77, 124, 254, 0.15); }
+    .codigo-caja--vacia { color: var(--texto-dim); }
+    .codigo--vencido .codigo-caja { border-color: rgba(224, 166, 74, 0.45); }
+
+    .enlace-secundario { font-size: 13.5px; color: var(--texto-dim); text-decoration: none; margin-top: 18px; border-bottom: 1px solid transparent; }
+    .enlace-secundario:hover { color: var(--azul); }
+
+    /* ESTADOS: espejo, jamas regano */
+    .estado { width: 100%; display: flex; gap: 13px; align-items: flex-start; text-align: left; border-radius: var(--radio-campo); padding: 16px 18px; margin-top: 22px; }
+    .estado--info { border: 1px solid rgba(77, 124, 254, 0.35); background: rgba(77, 124, 254, 0.06); }
+    .estado--ambar { border: 1px solid rgba(224, 166, 74, 0.35); background: rgba(224, 166, 74, 0.06); }
+    .estado-punto { flex: none; width: 9px; height: 9px; border-radius: 50%; margin-top: 6px; }
+    .estado--info .estado-punto { background: var(--azul); }
+    .estado--ambar .estado-punto { background: var(--ambar); }
+    .estado-texto { font-size: 14px; line-height: 1.6; color: var(--texto); text-wrap: pretty; }
+    .estado--ambar .estado-texto { color: #E8D3AE; }
+
+    .avatar { position: absolute; left: 22px; bottom: 22px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hairline); background: #fff; color: #000; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Beta con identidad</div>
+      <h1 class="galeria-titulo">Login por código (la puerta de la beta)</h1>
+      <p class="galeria-descripcion">
+        La primera pantalla que ve cada invitado. Dos pasos: el correo y el código de 6 dígitos
+        (el enlace mágico murió). Dos estados: no invitado (azul informativo: es una puerta, no una falta)
+        y código vencido (ámbar espejo: algo no funcionó, se dice y se ofrece la salida). Sin nav:
+        la puerta no navega. Desktop 1240 y móvil 380 por paso.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) PASO A: CORREO · DESKTOP                                    -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Login correo desktop">
+        <div class="lienzo">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <div class="puerta-form">
+              <div class="campo-correo" aria-label="Correo">tu@correo.com</div>
+              <button class="cta cta--azul">Enviarme mi código de acceso</button>
+            </div>
+            <p class="puerta-nota">My Idea está en beta privada: se entra con un correo invitado y un código de un solo uso. Sin contraseñas.</p>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- 2) PASO A: CORREO · MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="Login correo movil 380">
+        <div class="lienzo lienzo--movil">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <div class="puerta-form">
+              <div class="campo-correo" aria-label="Correo">tu@correo.com</div>
+              <button class="cta cta--azul">Enviarme mi código de acceso</button>
+            </div>
+            <p class="puerta-nota">My Idea está en beta privada: se entra con un correo invitado y un código de un solo uso. Sin contraseñas.</p>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) PASO B: CODIGO · DESKTOP                                    -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Login codigo desktop">
+        <div class="lienzo">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="aviso-codigo">Te enviamos un código a <strong>marina.velasdesoya.emprendimiento@gmail.com</strong></p>
+            <div class="codigo">
+              <div class="codigo-caja">4</div>
+              <div class="codigo-caja">7</div>
+              <div class="codigo-caja">1</div>
+              <div class="codigo-caja codigo-caja--activa codigo-caja--vacia">·</div>
+              <div class="codigo-caja codigo-caja--vacia">·</div>
+              <div class="codigo-caja codigo-caja--vacia">·</div>
+            </div>
+            <div class="puerta-form">
+              <button class="cta cta--azul">Entrar</button>
+            </div>
+            <a class="enlace-secundario" href="#">Pedir otro código o cambiar de correo</a>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- 4) PASO B: CODIGO · MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="Login codigo movil 380">
+        <div class="lienzo lienzo--movil">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="aviso-codigo">Te enviamos un código a <strong>marina.velasdesoya.emprendimiento@gmail.com</strong></p>
+            <div class="codigo">
+              <div class="codigo-caja">4</div>
+              <div class="codigo-caja">7</div>
+              <div class="codigo-caja">1</div>
+              <div class="codigo-caja codigo-caja--activa codigo-caja--vacia">·</div>
+              <div class="codigo-caja codigo-caja--vacia">·</div>
+              <div class="codigo-caja codigo-caja--vacia">·</div>
+            </div>
+            <div class="puerta-form">
+              <button class="cta cta--azul">Entrar</button>
+            </div>
+            <a class="enlace-secundario" href="#">Pedir otro código o cambiar de correo</a>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 5) ESTADO: NO INVITADO · DESKTOP (azul informativo, es puerta) -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Login no invitado desktop">
+        <div class="lienzo">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <div class="puerta-form">
+              <div class="campo-correo campo-correo--lleno">jorge.kitsdehuerto.balcones@hotmail.com</div>
+            </div>
+            <div class="estado estado--info">
+              <span class="estado-punto"></span>
+              <p class="estado-texto">My Idea está en beta privada. Ese correo aún no está en la lista de invitados. Si alguien te invitó, pídele que confirme el correo que registró.</p>
+            </div>
+            <div class="puerta-form" style="margin-top: 14px;">
+              <button class="cta cta--fantasma">Probar con otro correo</button>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- 6) ESTADO: NO INVITADO · MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="Login no invitado movil 380">
+        <div class="lienzo lienzo--movil">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <div class="puerta-form">
+              <div class="campo-correo campo-correo--lleno" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">jorge.kitsdehuerto.balcones@hotmail.com</div>
+            </div>
+            <div class="estado estado--info">
+              <span class="estado-punto"></span>
+              <p class="estado-texto">My Idea está en beta privada. Ese correo aún no está en la lista de invitados. Si alguien te invitó, pídele que confirme el correo que registró.</p>
+            </div>
+            <div class="puerta-form" style="margin-top: 14px;">
+              <button class="cta cta--fantasma">Probar con otro correo</button>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 7) ESTADO: CODIGO VENCIDO · DESKTOP (ambar espejo, nunca rojo) -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Login codigo vencido desktop">
+        <div class="lienzo">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="aviso-codigo">Te enviamos un código a <strong>marina.velasdesoya.emprendimiento@gmail.com</strong></p>
+            <div class="codigo codigo--vencido">
+              <div class="codigo-caja">8</div>
+              <div class="codigo-caja">2</div>
+              <div class="codigo-caja">0</div>
+              <div class="codigo-caja">9</div>
+              <div class="codigo-caja">5</div>
+              <div class="codigo-caja">3</div>
+            </div>
+            <div class="estado estado--ambar">
+              <span class="estado-punto"></span>
+              <p class="estado-texto">Ese código no es válido o ya venció. Pide uno nuevo y vuelve a intentar.</p>
+            </div>
+            <div class="puerta-form" style="margin-top: 14px;">
+              <button class="cta cta--azul">Pedirme un código nuevo</button>
+            </div>
+            <a class="enlace-secundario" href="#">Cambiar de correo</a>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- 8) ESTADO: CODIGO VENCIDO · MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="Login codigo vencido movil 380">
+        <div class="lienzo lienzo--movil">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="aviso-codigo">Te enviamos un código a <strong>marina.velasdesoya.emprendimiento@gmail.com</strong></p>
+            <div class="codigo codigo--vencido">
+              <div class="codigo-caja">8</div>
+              <div class="codigo-caja">2</div>
+              <div class="codigo-caja">0</div>
+              <div class="codigo-caja">9</div>
+              <div class="codigo-caja">5</div>
+              <div class="codigo-caja">3</div>
+            </div>
+            <div class="estado estado--ambar">
+              <span class="estado-punto"></span>
+              <p class="estado-texto">Ese código no es válido o ya venció. Pide uno nuevo y vuelve a intentar.</p>
+            </div>
+            <div class="puerta-form" style="margin-top: 14px;">
+              <button class="cta cta--azul">Pedirme un código nuevo</button>
+            </div>
+            <a class="enlace-secundario" href="#">Cambiar de correo</a>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

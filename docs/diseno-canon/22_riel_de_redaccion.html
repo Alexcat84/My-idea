@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · El riel de redacción</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Riel de redaccion desktop
+      - Riel de redaccion movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa: el anillo pensando es azul, siempre)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 860px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .top-riel { display: flex; align-items: center; gap: 6px; flex: none; }
+    .top-punto { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--azul); }
+    .top-punto--futuro { background: transparent; border: 1px solid var(--texto-dim); }
+    .top-linea { width: 26px; height: 2px; background: var(--azul); opacity: 0.6; }
+    .top-linea--futuro { background: var(--texto-dim); opacity: 0.35; }
+    .top-label { font-size: 12.5px; font-weight: 600; color: var(--azul); margin: 0 4px; white-space: nowrap; }
+
+    /* Anillo pensando: azul, girando */
+    @keyframes girar { to { transform: rotate(360deg); } }
+    .anillo { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(77, 124, 254, 0.25); border-top-color: var(--azul); animation: girar 0.9s linear infinite; flex: none; }
+
+    .exp-cuerpo { display: grid; grid-template-columns: 330px 1fr; gap: 48px; max-width: 1060px; width: 100%; margin: 0 auto; padding: 40px; }
+    .lienzo--movil .exp-cuerpo { display: flex; flex-direction: column; gap: 20px; padding: 22px 18px 48px; }
+    .recorrido-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 22px; }
+
+    /* ==========================================================================
+       EL RIEL DE REDACCION: cada etapa se enciende cuando queda escrita de
+       verdad. Tres estados de nodo: escrita (punto lleno + check), en escritura
+       (anillo azul + texto vivo), por escribir (punto hueco, sin texto falso).
+       ========================================================================== */
+    .riel-vertical { display: flex; flex-direction: column; }
+    .nodo { position: relative; display: flex; gap: 16px; padding-bottom: 26px; }
+    .nodo::before { content: ""; position: absolute; left: 8px; top: 20px; bottom: 4px; width: 2px; background: var(--hairline); }
+    .nodo:last-child::before { display: none; }
+    .nodo--escrita::before { background: rgba(77, 124, 254, 0.5); }
+    .nodo-marca { flex: none; width: 18px; display: flex; justify-content: center; padding-top: 3px; }
+    .nodo-punto { width: 12px; height: 12px; border-radius: 50%; flex: none; }
+    .nodo-punto--escrita { background: var(--azul); }
+    .nodo-punto--futura { background: transparent; border: 1.5px solid var(--texto-dim); }
+    .nodo-cuerpo { min-width: 0; }
+    .nodo-label { font-size: 14px; font-weight: 600; line-height: 1.45; }
+    .nodo--futura .nodo-label { color: var(--texto-dim); font-weight: 400; }
+    .nodo-estado { font-size: 12.5px; color: var(--texto-dim); margin-top: 4px; }
+    .nodo-estado--vivo { color: var(--azul); font-weight: 600; }
+
+    /* Tarjeta central mientras se escribe */
+    .tarjeta { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); background: var(--superficie-1); padding: 30px 32px; }
+    .lienzo--movil .tarjeta { padding: 22px 18px; }
+    .tarjeta-eyebrow { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--azul); margin-bottom: 14px; }
+    .tarjeta-titulo { font-size: 22px; font-weight: 700; line-height: 1.35; text-wrap: pretty; }
+    .lienzo--movil .tarjeta-titulo { font-size: 18px; }
+    .tarjeta-sub { font-size: 14px; line-height: 1.6; color: var(--texto-dim); margin-top: 12px; text-wrap: pretty; }
+
+    /* La linea que se esta escribiendo, con cursor vivo */
+    .escribiendo { border-top: 1px solid var(--hairline); margin-top: 20px; padding-top: 20px; font-size: 14.5px; line-height: 1.7; color: var(--texto); }
+    @keyframes parpadeo { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    .cursor { display: inline-block; width: 8px; height: 16px; background: var(--azul); vertical-align: -2px; margin-left: 2px; animation: parpadeo 1s infinite; }
+
+    .barra-recorrido { display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--hairline); border-radius: 12px; padding: 13px 16px; font-size: 13.5px; font-weight: 600; color: var(--texto); }
+    .barra-recorrido span { color: var(--texto-dim); font-weight: 400; }
+
+    .avatar { position: absolute; left: 22px; bottom: 22px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hairline); background: #fff; color: #000; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · La Exploración</div>
+      <h1 class="galeria-titulo">El riel de redacción (el plan se escribe en vivo)</h1>
+      <p class="galeria-descripcion">
+        La variación del riel mientras el plan se redacta. Tres estados de nodo: etapa escrita (punto
+        azul lleno), etapa en escritura (anillo azul girando + su título llegando con cursor vivo),
+        etapa por escribir (punto hueco, sin texto inventado: el título aparece cuando existe).
+        Cada etapa se enciende en el recorrido cuando queda escrita de verdad. Todo azul: el motor
+        está pensando; el verde llega en Manos a la Obra.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) RIEL DE REDACCION · DESKTOP                                 -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Riel de redaccion desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+            <div class="top-riel">
+              <span class="top-punto"></span><span class="top-linea"></span>
+              <span class="top-punto"></span><span class="top-linea"></span>
+              <span class="top-punto"></span><span class="top-linea"></span>
+              <span class="anillo"></span><span class="top-label">Tu Plan · escribiéndose</span>
+              <span class="top-linea top-linea--futuro"></span><span class="top-punto top-punto--futuro"></span>
+            </div>
+          </nav>
+
+          <div class="exp-cuerpo">
+            <aside>
+              <div class="recorrido-titulo">Recorrido de la idea</div>
+              <div class="riel-vertical">
+                <div class="nodo nodo--escrita"><div class="nodo-marca"><span class="nodo-punto nodo-punto--escrita"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Etapa 1: Pon por escrito las dos apuestas que tu idea necesita que sean verdad</div><div class="nodo-estado">escrita</div></div></div>
+                <div class="nodo nodo--escrita"><div class="nodo-marca"><span class="nodo-punto nodo-punto--escrita"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Etapa 2: Sal a la calle y confirma que un desconocido pagaría</div><div class="nodo-estado">escrita</div></div></div>
+                <div class="nodo"><div class="nodo-marca"><span class="anillo"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Etapa 3: Sirve a tus primeros clientes sin morir en el intento</div><div class="nodo-estado nodo-estado--vivo">escribiéndose ahora</div></div></div>
+                <div class="nodo nodo--futura"><div class="nodo-marca"><span class="nodo-punto nodo-punto--futura"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Etapa 4 · por escribir</div></div></div>
+                <div class="nodo nodo--futura"><div class="nodo-marca"><span class="nodo-punto nodo-punto--futura"></span></div><div class="nodo-cuerpo"><div class="nodo-label">Etapa 5 · por escribir</div></div></div>
+              </div>
+            </aside>
+
+            <div>
+              <div class="tarjeta">
+                <div class="tarjeta-eyebrow"><span class="anillo"></span> Tu plan · en camino</div>
+                <h2 class="tarjeta-titulo">Escribiendo: Etapa 3: Sirve a tus primeros clientes sin morir en el intento</h2>
+                <p class="tarjeta-sub">Cada etapa se enciende en el recorrido cuando queda escrita de verdad. Puedes quedarte a mirar o volver luego: tu plan te espera terminado.</p>
+                <p class="escribiendo">Tus tres primeras ventas fueron a conocidos. Esta etapa arma la ruta para servir a diez clientes que no te deben ningún favor: el pedido mínimo, la entrega sin<span class="cursor"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) RIEL DE REDACCION · MOVIL 380 (riel plegado en barra)       -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Riel de redaccion movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones pequeños</span></div>
+            <span class="anillo"></span>
+          </nav>
+          <div class="exp-cuerpo">
+            <div class="barra-recorrido">Tu Plan · escribiéndose <span>Recorrido (2 de 5) &#9662;</span></div>
+            <div class="tarjeta">
+              <div class="tarjeta-eyebrow"><span class="anillo"></span> Tu plan · en camino</div>
+              <h2 class="tarjeta-titulo">Escribiendo: Etapa 3: Sirve a tus primeros clientes sin morir en el intento</h2>
+              <p class="tarjeta-sub">Cada etapa se enciende cuando queda escrita de verdad. Puedes quedarte a mirar o volver luego: tu plan te espera terminado.</p>
+              <p class="escribiendo">Tus tres primeras ventas fueron a conocidos. Esta etapa arma la ruta para servir a diez clientes que no te deben ningún favor: el pedido mínimo, la entrega sin<span class="cursor"></span></p>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

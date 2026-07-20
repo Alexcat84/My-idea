@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · El chip de saldo y el saldo insuficiente</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Chip de saldo desktop
+      - Chip de saldo movil 380
+      - Saldo insuficiente desktop
+      - Saldo insuficiente movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS. Decision de color del 402: AZUL informativo, no ambar. El ambar
+       es del guardian, la perdida y las tardias (datos del negocio del usuario);
+       quedarse sin creditos es un hecho del sistema con una puerta al frente.
+       Nada se pierde, nadie regana: se informa y se ofrece la salida.
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 860px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; gap: 10px; }
+    .marca { font-size: 19px; font-weight: 800; flex: none; }
+    .marca-my { color: var(--texto); }
+    .marca-idea { color: var(--azul); }
+    .nav-derecha { display: flex; align-items: center; gap: 20px; }
+    .lienzo--movil .nav-derecha { gap: 12px; }
+    .nav-link { font-size: 15px; color: var(--texto-dim); text-decoration: none; }
+    .nav-link--activo { color: var(--texto); font-weight: 600; }
+
+    /* EL CHIP DE SALDO: pill discreta, siempre visible, puerta al centro de creditos */
+    .chip-saldo { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; color: var(--azul); border: 1px solid rgba(77, 124, 254, 0.4); border-radius: 999px; padding: 5px 12px; white-space: nowrap; cursor: pointer; text-decoration: none; }
+    .chip-saldo--cero { color: var(--texto-dim); border-color: var(--hairline); }
+
+    .chip-cuerpo { max-width: 1000px; width: 100%; margin: 0 auto; padding: 40px; }
+    .lienzo--movil .chip-cuerpo { padding: 26px 18px; }
+    .seccion-tit { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 16px; }
+
+    /* Anatomia del chip: los tres saldos que cambian su cara */
+    .anatomia { display: flex; flex-wrap: wrap; gap: 14px; }
+    .anatomia-item { display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 20px 22px; min-width: 220px; }
+    .anatomia-etq { font-size: 12.5px; color: var(--texto-dim); line-height: 1.5; }
+
+    .ideas-lista { display: flex; flex-direction: column; gap: 12px; margin-top: 34px; }
+    .idea-fila { display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 20px 24px; background: var(--superficie-1); }
+    .idea-nombre { font-size: 15.5px; font-weight: 700; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .idea-etapa { flex: none; font-size: 12.5px; color: var(--texto-dim); }
+
+    /* ==========================================================================
+       EL 402: saldo insuficiente. Tarjeta azul informativa en el punto exacto
+       donde iba a ocurrir la accion. Espejo: el hecho, la garantia, la puerta.
+       ========================================================================== */
+    .cuerpo-402 { max-width: 640px; width: 100%; margin: 0 auto; padding: 44px 40px 70px; }
+    .lienzo--movil .cuerpo-402 { padding: 26px 18px 52px; }
+    .volver { display: inline-block; font-size: 14px; color: var(--texto-dim); text-decoration: none; margin-bottom: 22px; }
+
+    .contexto-402 { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 26px 28px; background: var(--superficie-1); }
+    .lienzo--movil .contexto-402 { padding: 20px 18px; }
+    .contexto-402-h { font-size: 19px; font-weight: 700; }
+    .contexto-402-p { font-size: 13.5px; color: var(--texto-dim); margin-top: 6px; }
+    .cta-apagado { display: inline-block; border: none; border-radius: 12px; padding: 14px 22px; background: var(--superficie-2); color: var(--texto-dim); font-size: 14.5px; font-weight: 700; font-family: var(--fuente); margin-top: 18px; }
+
+    .tarjeta-402 { border: 1px solid rgba(77, 124, 254, 0.4); background: rgba(77, 124, 254, 0.06); border-radius: var(--radio-tarjeta); padding: 24px 26px; margin-top: 16px; }
+    .lienzo--movil .tarjeta-402 { padding: 20px 18px; }
+    .t402-fila { display: flex; gap: 13px; align-items: flex-start; }
+    .t402-punto { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--azul); margin-top: 6px; }
+    .t402-hecho { font-size: 16px; font-weight: 700; line-height: 1.5; text-wrap: pretty; }
+    .t402-hecho .t402-cifra { color: var(--azul); }
+    .t402-garantia { font-size: 13.5px; line-height: 1.6; color: var(--texto-dim); margin-top: 10px; padding-left: 23px; text-wrap: pretty; }
+    .t402-ctas { display: flex; gap: 12px; margin-top: 20px; padding-left: 23px; flex-wrap: wrap; }
+    .lienzo--movil .t402-ctas { padding-left: 0; flex-direction: column; }
+    .cta-402 { border: none; border-radius: 12px; padding: 13px 20px; font-size: 14px; font-weight: 700; font-family: var(--fuente); cursor: pointer; }
+    .cta-402--azul { background: var(--azul); color: #fff; }
+    .cta-402--fantasma { background: transparent; border: 1px solid var(--hairline); color: var(--texto); font-weight: 600; }
+
+    .avatar { position: absolute; left: 22px; bottom: 22px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hairline); background: #fff; color: #000; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · La beta con créditos</div>
+      <h1 class="galeria-titulo">El chip de saldo y el saldo insuficiente (402)</h1>
+      <p class="galeria-descripcion">
+        El chip: pill discreta con el saldo real, siempre en el header junto a Potenciadores; es la
+        puerta al centro de créditos. En cero cambia a gris, sin alarma. El 402 en azul informativo,
+        no ámbar: el ámbar es del guardián, la pérdida y las tardías (datos del negocio del usuario);
+        quedarse sin créditos es un hecho del sistema con una puerta al frente. Tres piezas fijas:
+        el hecho con las cifras, la garantía (tu trabajo queda guardado tal como está) y la puerta.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) CHIP DE SALDO EN EL HEADER · DESKTOP                        -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Chip de saldo desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <div class="nav-derecha">
+              <a class="nav-link nav-link--activo" href="#">Mis ideas</a>
+              <a class="nav-link" href="#">Potenciadores</a>
+              <a class="chip-saldo" href="#">20 créditos</a>
+              <a class="nav-link" href="#">Salir</a>
+            </div>
+          </nav>
+          <div class="chip-cuerpo">
+            <div class="seccion-tit">El chip, según el saldo</div>
+            <div class="anatomia">
+              <div class="anatomia-item"><span class="chip-saldo" style="align-self: flex-start;">20 créditos</span><span class="anatomia-etq">Cortesía del primer inicio de sesión. Azul: hay con qué pensar.</span></div>
+              <div class="anatomia-item"><span class="chip-saldo" style="align-self: flex-start;">3 créditos</span><span class="anatomia-etq">Mismo azul: el chip informa, no presiona. Nunca parpadea ni regaña.</span></div>
+              <div class="anatomia-item"><span class="chip-saldo chip-saldo--cero" style="align-self: flex-start;">0 créditos</span><span class="anatomia-etq">Gris, sin alarma. La conversación del saldo ocurre donde ocurre la acción (el 402), no en el header.</span></div>
+            </div>
+            <div class="ideas-lista">
+              <div class="idea-fila"><span class="idea-nombre">Velas artesanales de soya con esencias importadas para tiendas de decoración</span><span class="idea-etapa">Tu Plan · listo</span></div>
+              <div class="idea-fila"><span class="idea-nombre">Kits de huerto urbano prearmados para balcones pequeños con guía incluida</span><span class="idea-etapa">Manos a la Obra</span></div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) CHIP DE SALDO · MOVIL 380 (el chip sobrevive, los links se  -->
+      <!-- pliegan; el saldo jamas se esconde detras de un menu)          -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Chip de saldo movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <div class="nav-derecha">
+              <a class="chip-saldo" href="#">20 créditos</a>
+              <a class="nav-link" href="#">&#9776;</a>
+            </div>
+          </nav>
+          <div class="chip-cuerpo">
+            <div class="ideas-lista" style="margin-top: 0;">
+              <div class="idea-fila"><span class="idea-nombre">Velas artesanales de soya con esencias importadas</span><span class="idea-etapa">Tu Plan</span></div>
+              <div class="idea-fila"><span class="idea-nombre">Kits de huerto urbano prearmados para balcones</span><span class="idea-etapa">Manos</span></div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) SALDO INSUFICIENTE (402) · DESKTOP                          -->
+      <!-- En el punto exacto de la accion: aqui, generar un plan de      -->
+      <!-- mundo de 3 creditos con 2 en el saldo                          -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Saldo insuficiente desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <div class="nav-derecha">
+              <a class="nav-link" href="#">Mis ideas</a>
+              <a class="nav-link nav-link--activo" href="#">Potenciadores</a>
+              <a class="chip-saldo" href="#">2 créditos</a>
+              <a class="nav-link" href="#">Salir</a>
+            </div>
+          </nav>
+          <div class="cuerpo-402">
+            <a class="volver" href="#">&#8592; Ver el plan</a>
+            <div class="contexto-402">
+              <div class="contexto-402-h">Calidad y Confianza</div>
+              <p class="contexto-402-p">Tu diagnóstico te espera · su plan: 3 créditos</p>
+              <button class="cta-apagado">Generar mi plan de Calidad y Confianza</button>
+              <div class="tarjeta-402">
+                <div class="t402-fila">
+                  <span class="t402-punto"></span>
+                  <p class="t402-hecho">Te quedan <span class="t402-cifra">2 créditos</span>; esto cuesta <span class="t402-cifra">3</span>.</p>
+                </div>
+                <p class="t402-garantia">Tu trabajo queda guardado tal como está: tu diagnóstico no caduca y no se vuelve a cobrar. Cuando sumes créditos, retomas aquí mismo.</p>
+                <div class="t402-ctas">
+                  <button class="cta-402 cta-402--azul">Ver mis créditos</button>
+                  <button class="cta-402 cta-402--fantasma">Volver a mi plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 4) SALDO INSUFICIENTE (402) · MOVIL 380                        -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Saldo insuficiente movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <div class="nav-derecha">
+              <a class="chip-saldo" href="#">2 créditos</a>
+              <a class="nav-link" href="#">&#9776;</a>
+            </div>
+          </nav>
+          <div class="cuerpo-402">
+            <a class="volver" href="#">&#8592; Ver el plan</a>
+            <div class="contexto-402">
+              <div class="contexto-402-h">Calidad y Confianza</div>
+              <p class="contexto-402-p">Tu diagnóstico te espera · su plan: 3 créditos</p>
+              <button class="cta-apagado" style="width: 100%;">Generar mi plan de Calidad y Confianza</button>
+              <div class="tarjeta-402">
+                <div class="t402-fila">
+                  <span class="t402-punto"></span>
+                  <p class="t402-hecho">Te quedan <span class="t402-cifra">2 créditos</span>; esto cuesta <span class="t402-cifra">3</span>.</p>
+                </div>
+                <p class="t402-garantia">Tu trabajo queda guardado tal como está: tu diagnóstico no caduca y no se vuelve a cobrar. Cuando sumes créditos, retomas aquí mismo.</p>
+                <div class="t402-ctas">
+                  <button class="cta-402 cta-402--azul">Ver mis créditos</button>
+                  <button class="cta-402 cta-402--fantasma">Volver a mi plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

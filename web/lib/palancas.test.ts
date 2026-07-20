@@ -60,7 +60,7 @@ describe("construirPalancas: estado PERDIDA (velas del canon 14)", () => {
 
   it("palanca volumen: bloqueada honesta", () => {
     expect(p.volumen.bloqueada).toBe(true);
-    expect(p.volumen.razonBloqueo).toContain("agranda la perdida");
+    expect(p.volumen.razonBloqueo).toContain("agranda la pérdida");
     expect(p.volumen.recomendada).toBe(false);
   });
 });

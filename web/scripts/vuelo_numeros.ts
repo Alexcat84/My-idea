@@ -209,7 +209,7 @@ async function main() {
   );
   const topeResp = await postJson(cookie, rutaC, { narrar: true });
   check("tope: responde limite_relecturas=true", topeResp.limite_relecturas === true, topeResp.limite_relecturas);
-  check("tope: el mensaje habla en palabras de persona", String(topeResp.mensaje ?? "").includes("limite de relecturas"), topeResp.mensaje);
+  check("tope: el mensaje habla en palabras de persona", String(topeResp.mensaje ?? "").includes("límite de relecturas"), topeResp.mensaje);
   const recalcTrasTope = await postJson(cookie, rutaC, { numeros: { precio_tentativo: 80 } });
   check("tope: el recalculo determinista SIGUE vivo tras el tope", pick(recalcTrasTope, "tablero", "margen") === 80 - 42, pick(recalcTrasTope, "tablero", "margen"));
 

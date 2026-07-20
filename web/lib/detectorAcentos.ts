@@ -12,8 +12,10 @@
 // Terminaciones -cion/-sion: en su forma correcta llevan tilde en la o
 // (informacion -> informacion, decision -> decision). La version sin tilde
 // que este patron caza es siempre incorrecta; la acentuada no matchea porque
-// la o con tilde no es [a-z].
-const TERMINACION = /\b[a-z]{3,}(?:cion|sion)\b/gi;
+// la o con tilde no es [a-z]. El lookahead excluye el falso positivo de los
+// verbos acentuados DESPUES de la terminacion ("funcionó", "mencionó"): \b es
+// ASCII y veia frontera antes de la ó (cazado adoptando el lote 3 de Design).
+const TERMINACION = /\b[a-z]{3,}(?:cion|sion)(?![a-záéíóúüñ])/gi;
 
 // Palabras de alta frecuencia en un plan que SIEMPRE se acentuan y no tienen
 // homografo valido sin tilde en este contexto.

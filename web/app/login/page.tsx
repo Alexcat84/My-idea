@@ -171,7 +171,7 @@ export default function LoginPage() {
     <main className="flex flex-1 items-center justify-center px-6">
       <div className="flex w-full max-w-sm flex-col items-center gap-8 py-16">
         <div className="text-center">
-          <h1 className="text-3xl font-semibold tracking-tight">My Idea</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">My <span className="text-accent">Idea</span></h1>
           <p className="mt-2 text-dim">El espacio donde tus ideas se trabajan.</p>
         </div>
         <Suspense>

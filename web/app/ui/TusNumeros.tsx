@@ -68,17 +68,17 @@ function medio(v: ValorNumerico | null | undefined): number | null {
 }
 
 const ETIQUETAS_FALTANTES: Record<string, { texto: string; porque: string }> = {
-  costo_materiales_unidad: { texto: "Costo de materiales por unidad", porque: "es la base para saber cuanto te cuesta cada una" },
+  costo_materiales_unidad: { texto: "Costo de materiales por unidad", porque: "es la base para saber cuánto te cuesta cada una" },
   horas_por_unidad: { texto: "Tu tiempo por unidad, valorado en dinero", porque: "si te pagaras el rato que tardas, el costo real sube" },
-  valor_hora: { texto: "Cuanto vale tu hora de trabajo", porque: "sin ella no se puede poner precio a tu tiempo" },
+  valor_hora: { texto: "Cuánto vale tu hora de trabajo", porque: "sin ella no se puede poner precio a tu tiempo" },
   precio_tentativo: { texto: "El precio al que vendes", porque: "sin precio no hay margen que calcular" },
-  capacidad_semanal: { texto: "Cuantas puedes hacer en una semana", porque: "marca el techo real de lo que alcanzas a producir" },
+  capacidad_semanal: { texto: "Cuántas puedes hacer en una semana", porque: "marca el techo real de lo que alcanzas a producir" },
   costos_fijos_mensuales: { texto: "Tu gasto fijo mensual", porque: "es lo que pagas cada mes vendas o no" },
-  unidades_vendidas: { texto: "Cuantas vendes al mes, o tu meta", porque: "sin ella no hay escenarios de venta" },
+  unidades_vendidas: { texto: "Cuántas vendes al mes, o tu meta", porque: "sin ella no hay escenarios de venta" },
   precio_pagado_real: { texto: "Lo que de verdad te han pagado", porque: "el precio real puede diferir del que pusiste" },
-  dias_inventario: { texto: "Dias que tu dinero pasa en inventario", porque: "afecta cuando vuelve la plata a tu bolsillo" },
-  dias_cobro_clientes: { texto: "Dias que tardas en cobrar", porque: "cobrar tarde aprieta tu caja" },
-  dias_pago_proveedores: { texto: "Dias que tardas en pagar a proveedores", porque: "pagar mas tarde alivia tu caja" },
+  dias_inventario: { texto: "Días que tu dinero pasa en inventario", porque: "afecta cuándo vuelve la plata a tu bolsillo" },
+  dias_cobro_clientes: { texto: "Días que tardas en cobrar", porque: "cobrar tarde aprieta tu caja" },
+  dias_pago_proveedores: { texto: "Días que tardas en pagar a proveedores", porque: "pagar más tarde alivia tu caja" },
 };
 
 const TONO: Record<Veredicto["tono"], { punto: string; acento: string; borde: string; fondo: string }> = {
@@ -147,14 +147,14 @@ function BarraVerdad({ t }: { t: Tablero }) {
       <p className="mt-5 border-t border-hairline pt-4 text-[13px] leading-relaxed text-dim">
         {enPerdida ? (
           <>
-            La barra de lo que te cuesta es mas larga que la de lo que cobras. Ese pedazo que sobresale es{" "}
-            <strong className="font-semibold text-warn">la perdida que pones de tu bolsillo en cada venta</strong>. Mientras se vea asi, vender mas
+            La barra de lo que te cuesta es más larga que la de lo que cobras. Ese pedazo que sobresale es{" "}
+            <strong className="font-semibold text-warn">la pérdida que pones de tu bolsillo en cada venta</strong>. Mientras se vea así, vender más
             solo agranda el hueco.
           </>
         ) : (
           <>
             La barra de lo que cobras es la larga, y la de lo que te cuesta no la alcanza. Ese espacio de sobra es{" "}
-            <strong className="font-semibold text-done">tu margen</strong>. Aqui, vender mas si te acerca a tu meta.
+            <strong className="font-semibold text-done">tu margen</strong>. Aquí, vender más sí te acerca a tu meta.
           </>
         )}
       </p>
@@ -181,11 +181,11 @@ function textoPalanca(p: Palanca, u: string): string {
   if (p.clave === "volumen") {
     if (p.bloqueada) return p.razonBloqueo ?? "";
     const g = p.gananciaResultante != null ? money(p.gananciaResultante) : "—";
-    return `A ${p.meta} ${u}s al mes, tras cubrir tus fijos, te quedan ${g} de ganancia. Es tu palanca mas fuerte porque el margen ya es sano.`;
+    return `A ${p.meta} ${u}s al mes, tras cubrir tus fijos, te quedan ${g} de ganancia. Es tu palanca más fuerte porque el margen ya es sano.`;
   }
   if (p.clave === "precio") {
     if (p.modo === "test")
-      return `Prueba subiendo a ${fmt(p.meta)} (un 10% mas): tu margen sube a ${margenPos} por ${u}. Pruebalo con un lote antes de subirlo a todos.`;
+      return `Prueba subiendo a ${fmt(p.meta)} (un 10% más): tu margen sube a ${margenPos} por ${u}. Pruébalo con un lote antes de subirlo a todos.`;
     const ventas = p.ventasParaCubrirFijos != null ? `, y cubres tus fijos con unas ${p.ventasParaCubrirFijos} ventas` : "";
     return `A ${fmt(p.meta)} tu margen pasa a ${margenPos} por ${u}${ventas}.`;
   }
@@ -210,8 +210,8 @@ function TarjetaPalanca({ p, idx, u }: { p: Palanca; idx: number; u: string }) {
         <div className="flex h-6 w-6 items-center justify-center rounded-md bg-surface-2 text-[13px] font-bold text-warn">{idx}</div>
         <div className="text-[15px] font-bold leading-snug">Vender mas, por ahora, no</div>
         <p className="text-[13px] leading-relaxed text-dim">
-          <strong className="text-warn">Con el margen en rojo, el volumen agranda la perdida.</strong>{" "}
-          Primero arregla el margen con la palanca 1 o 2; cuando este en verde, aqui te dire cuantas necesitas para tu meta.
+          <strong className="text-warn">Con el margen en rojo, el volumen agranda la pérdida.</strong>{" "}
+          Primero arregla el margen con la palanca 1 o 2; cuando esté en verde, aquí te diré cuántas necesitas para tu meta.
         </p>
       </div>
     );
@@ -369,7 +369,7 @@ function RestoTablero({ t, u, onCorregir }: { t: Tablero; u: string; onCorregir?
           <Escenarios t={t} />
         </div>
         <div>
-          <TituloSeccion>Los numeros que te faltan</TituloSeccion>
+          <TituloSeccion>Los números que te faltan</TituloSeccion>
           <Faltantes t={t} onCorregir={onCorregir} />
         </div>
       </div>
@@ -389,10 +389,10 @@ function RestoTablero({ t, u, onCorregir }: { t: Tablero; u: string; onCorregir?
           ⚠
         </span>
         <p className="text-[13.5px] leading-relaxed text-warn/90">
-          <strong className="font-semibold text-warn">Guardian de datos.</strong>{" "}
+          <strong className="font-semibold text-warn">Guardián de datos.</strong>{" "}
           {t.gigo.inconsistente
             ? t.gigo.motivo
-            : "Estos numeros valen exactamente lo que valen las cifras que metiste. Cuando agregues las que faltan, el numero real puede cambiar. No sustituye contabilidad formal ni asesoria fiscal."}
+            : "Estos números valen exactamente lo que valen las cifras que metiste. Cuando agregues las que faltan, el número real puede cambiar. No sustituye contabilidad formal ni asesoría fiscal."}
         </p>
       </div>
     </>
@@ -490,7 +490,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
   };
 
   if (error) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">{error}</div>;
-  if (!data) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">Calculando tus numeros…</div>;
+  if (!data) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">Calculando tus números…</div>;
 
   // ETAPA 2 — LA COMPUERTA (canon 07): sin activación no hay tablero. Activar
   // cuesta 2 créditos, UNA vez por idea; después todo recálculo es gratis.
@@ -566,7 +566,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
         <span className="truncate text-[15px] font-bold">{titulo ?? "Tu idea"}</span>
       </div>
       <span className="flex-none rounded-full border border-accent/40 px-3 py-1.5 text-[12.5px] font-semibold text-accent">
-        Tus Numeros · 2 creditos
+        Tus Números · 2 créditos
       </span>
     </nav>
   );
@@ -591,7 +591,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
             </button>
           </div>
           <h1 className="text-[32px] font-bold leading-tight tracking-tight">
-            Los numeros de {titulo ? titulo.toLowerCase() : "tu idea"}
+            Los números de {titulo ? titulo.toLowerCase() : "tu idea"}
           </h1>
           <VeredictoBloque v={historico.veredicto} />
           <RestoTablero t={historico.tablero} u={u} />
@@ -616,10 +616,10 @@ export function TusNumeros({ projectId }: { projectId: string }) {
         </Link>
 
         <div className="mb-3.5 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[1.3px] text-dim">
-          Calculado por codigo, sobre tus cifras
+          Calculado por código, sobre tus cifras
         </div>
         <h1 className="text-[32px] font-bold leading-tight tracking-tight">
-          Los numeros de {titulo ? titulo.toLowerCase() : "tu idea"}
+          Los números de {titulo ? titulo.toLowerCase() : "tu idea"}
         </h1>
 
         <VeredictoBloque v={v} />

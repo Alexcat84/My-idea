@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · La landing con sesión</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Landing sin sesion desktop
+      - Landing con sesion desktop
+      - Landing con sesion movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 860px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; min-height: 620px; }
+    .lienzo--movil { min-height: 560px; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 40px; }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .marca { font-size: 20px; font-weight: 800; flex: none; }
+    .marca-my { color: var(--texto); }
+    .marca-idea { color: var(--azul); }
+    .nav-derecha { display: flex; align-items: center; gap: 22px; }
+    .lienzo--movil .nav-derecha { gap: 12px; }
+    .nav-link { font-size: 15px; color: var(--texto-dim); text-decoration: none; }
+    .boton-nav { border: none; border-radius: 10px; padding: 10px 18px; background: var(--azul); color: #fff; font-size: 14px; font-weight: 700; font-family: var(--fuente); cursor: pointer; }
+    .boton-nav--fantasma { background: transparent; border: 1px solid var(--hairline); color: var(--texto); font-weight: 600; }
+
+    /* HERO */
+    .hero { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; gap: 18px; }
+    .lienzo--movil .hero { padding: 40px 24px; }
+    .hero-titulo { font-size: 46px; font-weight: 800; letter-spacing: -1px; line-height: 1.15; max-width: 640px; text-wrap: pretty; }
+    .lienzo--movil .hero-titulo { font-size: 31px; }
+    .hero-sub { font-size: 17px; color: var(--texto-dim); max-width: 520px; line-height: 1.6; text-wrap: pretty; }
+    .lienzo--movil .hero-sub { font-size: 15px; }
+    .hero-cta { border: none; border-radius: 12px; padding: 16px 30px; background: var(--azul); color: #fff; font-size: 16px; font-weight: 700; font-family: var(--fuente); cursor: pointer; margin-top: 10px; }
+
+    /* LA PUERTA DEL QUE REGRESA (propuesta): bajo el CTA, discreta, solo texto */
+    .puerta-regreso { font-size: 14px; color: var(--texto-dim); }
+    .puerta-regreso a { color: var(--azul); text-decoration: none; font-weight: 600; }
+
+    /* Con sesion: la tarjeta de regreso reemplaza a la puerta discreta */
+    .regreso { display: flex; align-items: center; gap: 16px; border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); background: var(--superficie-1); padding: 18px 22px; margin-top: 18px; max-width: 560px; width: 100%; text-align: left; }
+    .lienzo--movil .regreso { flex-direction: column; align-items: stretch; text-align: left; }
+    .regreso-texto { flex: 1; min-width: 0; }
+    .regreso-h { font-size: 14.5px; font-weight: 700; }
+    .regreso-p { font-size: 13px; color: var(--texto-dim); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .regreso-cta { flex: none; border: none; border-radius: 10px; padding: 11px 18px; background: var(--azul); color: #fff; font-size: 13.5px; font-weight: 700; font-family: var(--fuente); cursor: pointer; }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · La beta con identidad</div>
+      <h1 class="galeria-titulo">La landing con sesión</h1>
+      <p class="galeria-descripcion">
+        El nav cambia con la cuenta: sin sesión muestra "Iniciar sesión" y "Comenzar"; con sesión,
+        "Mis ideas" (la puerta al historial que la landing no tenía). Propuesta extra para el que
+        regresa con sesión viva: una tarjeta de regreso bajo el hero con su última idea y su etapa,
+        para no obligarlo a pasar por el discurso de venta que ya conoce.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) SIN SESION · DESKTOP                                        -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Landing sin sesion desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <div class="nav-derecha">
+              <a class="nav-link" href="#">Iniciar sesión</a>
+              <button class="boton-nav">Comenzar</button>
+            </div>
+          </nav>
+          <div class="hero">
+            <h1 class="hero-titulo">Transforma tu creatividad en acción.</h1>
+            <p class="hero-sub">No es un chatbot, es tu espacio de trabajo. Cuéntame tu idea, o en qué punto estás con ella: ese es todo el requisito.</p>
+            <button class="hero-cta">Comenzar</button>
+            <p class="puerta-regreso">¿Ya tienes ideas aquí? <a href="#">Inicia sesión</a> y sigue donde ibas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) CON SESION · DESKTOP (Mis ideas en el nav + tarjeta regreso)-->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Landing con sesion desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <div class="nav-derecha">
+              <button class="boton-nav boton-nav--fantasma">Mis ideas</button>
+            </div>
+          </nav>
+          <div class="hero">
+            <h1 class="hero-titulo">Transforma tu creatividad en acción.</h1>
+            <p class="hero-sub">No es un chatbot, es tu espacio de trabajo. Cuéntame tu idea, o en qué punto estás con ella: ese es todo el requisito.</p>
+            <div class="regreso">
+              <div class="regreso-texto">
+                <div class="regreso-h">Sigue donde ibas</div>
+                <p class="regreso-p">Velas artesanales de soya con esencias importadas · Tu Plan, listo</p>
+              </div>
+              <button class="regreso-cta">Ir a mis ideas</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) CON SESION · MOVIL 380                                      -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Landing con sesion movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <div class="nav-derecha">
+              <button class="boton-nav boton-nav--fantasma">Mis ideas</button>
+            </div>
+          </nav>
+          <div class="hero">
+            <h1 class="hero-titulo">Transforma tu creatividad en acción.</h1>
+            <p class="hero-sub">No es un chatbot, es tu espacio de trabajo. Cuéntame tu idea, o en qué punto estás con ella.</p>
+            <div class="regreso">
+              <div class="regreso-texto">
+                <div class="regreso-h">Sigue donde ibas</div>
+                <p class="regreso-p">Velas artesanales de soya · Tu Plan, listo</p>
+              </div>
+              <button class="regreso-cta">Ir a mis ideas</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
