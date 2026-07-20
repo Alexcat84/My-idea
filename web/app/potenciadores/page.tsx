@@ -8,29 +8,21 @@
  * su precio de catálogo, LEYENDO de precios.ts, jamás hardcodeado. El saldo
  * del panel es el real (RLS own-select). La moneda se llama créditos.
  *
- * El catálogo de BUNDLES de compra (cuántos créditos por pack, a qué precio en
- * dinero) es una DECISIÓN PENDIENTE DEL FUNDADOR para la ETAPA 2: precios.ts no
- * define bundles, así que aquí el precio en dinero va como "$ —" deshabilitado
- * y con su nota. Ver docs/MATRIZ_DELTAS_CANON_2.0.md ("Decisiones pendientes").
+ * Recargas DECIDIDAS por el fundador (2026-07-19): 1 crédito = 1 USD (ancla
+ * invariable, sin descuento por volumen), packs por entregable (5/15/30 a
+ * $4.99/$14.99/$29.99), LEYENDO de precios.ts (PACKS), jamás hardcodeado.
+ * La compra con dinero sigue dormida hasta que despierten las pasarelas.
  */
 import Link from "next/link";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { esInvitadoInvisible } from "@/lib/identidad";
-import { PRECIOS } from "@/lib/precios";
+import { PACKS, PRECIOS } from "@/lib/precios";
 import { createClient } from "@/lib/supabase/server";
 
 const MUNDOS = (catalogo.packs as Array<{ clave: string; nombre: string; promesa: string }>).map((p) => ({
   nombre: p.nombre,
   promesa: p.promesa,
 }));
-
-// Tamaños de bundle provisionales: NO son un precio decidido. El fundador fija
-// el catálogo (tamaños y dinero) en la ETAPA 2; aquí van sin precio en dinero.
-const PACKS_PROVISIONALES = [
-  { creditos: 10, destacado: false },
-  { creditos: 30, destacado: true },
-  { creditos: 75, destacado: false },
-];
 
 const PUNTO_MUNDO = "#3A9B8F"; // matiz de los mundos (ni azul ni verde)
 
@@ -78,7 +70,7 @@ export default async function Potenciadores() {
             </div>
 
             <div className="grid gap-3.5 sm:grid-cols-3">
-              {PACKS_PROVISIONALES.map((pack) => (
+              {PACKS.map((pack) => (
                 <div
                   key={pack.creditos}
                   className={
@@ -88,17 +80,20 @@ export default async function Potenciadores() {
                 >
                   <span className="text-[26px] font-extrabold leading-none">{pack.creditos}</span>
                   <span className="text-[13px] text-dim">créditos</span>
-                  <span className="mt-2 text-2xl font-bold text-dim">$ —</span>
-                  <span className="text-[12px] text-dim">{pack.destacado ? "por definir · el más elegido" : "por definir"}</span>
+                  <span className="mt-2 text-2xl font-bold">${pack.usd}</span>
+                  <span className="text-[12px] text-dim">
+                    {pack.sentido}
+                    {pack.destacado ? " · el más elegido" : ""}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
 
           <p className="mt-4 rounded-cinta border border-hairline bg-surface-2 px-4 py-3 text-[12.5px] leading-relaxed text-dim">
-            <strong className="text-ink">Catálogo de packs por definir.</strong> Cuántos créditos trae cada pack y a qué
-            precio en dinero es una decisión pendiente del fundador para la siguiente etapa. Los tamaños de arriba son
-            provisionales; la compra con dinero aún no está activa.
+            <strong className="text-ink">Un crédito es un dólar, siempre.</strong> Los packs no esconden descuentos: se
+            dimensionan por lo que compras con ellos. La compra con dinero se abre muy pronto; durante la beta trabajas
+            con tus créditos de cortesía.
           </p>
         </section>
 

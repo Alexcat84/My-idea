@@ -77,6 +77,11 @@ export default async function MisIdeas() {
         <Link href="/potenciadores" className="text-[13.5px] text-dim hover:text-ink">
           Potenciadores
         </Link>
+        {!esAnonimo && (
+          <Link href="/cuenta" className="text-[13.5px] text-dim hover:text-ink">
+            Cuenta
+          </Link>
+        )}
         {!esAnonimo && <BotonSalir />}
       </header>
 

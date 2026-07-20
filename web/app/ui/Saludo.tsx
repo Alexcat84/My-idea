@@ -5,7 +5,7 @@
  * LOCAL del visitante (por eso es cliente: el servidor no conoce su
  * huso). Sin nombre: la beta tiene invitados anónimos y no inventamos.
  */
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 function saludoPorHora(h: number): string {
   if (h >= 5 && h < 12) return "Buenos días";
@@ -13,11 +13,16 @@ function saludoPorHora(h: number): string {
   return "Buenas noches";
 }
 
+const sinSuscripcion = () => () => {};
+
 export function Saludo() {
-  // Render inicial neutro para no romper la hidratación (SSR no sabe la hora local).
-  const [texto, setTexto] = useState("Hola");
-  useEffect(() => {
-    setTexto(saludoPorHora(new Date().getHours()));
-  }, []);
+  // "Hola" neutro en el servidor (no conoce el huso); el saludo real al
+  // hidratar, sin setState en efecto (useSyncExternalStore distingue
+  // snapshot de cliente y de servidor justo para esto).
+  const texto = useSyncExternalStore(
+    sinSuscripcion,
+    () => saludoPorHora(new Date().getHours()),
+    () => "Hola"
+  );
   return <span>{texto}</span>;
 }
