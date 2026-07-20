@@ -45,8 +45,11 @@ lista de invitados…" (200 amable, jamás un error técnico).
 
 ### b) Entrar por primera vez
 
-1. `https://my-idea-psi.vercel.app/login` → tu email → clic en el enlace del correo.
-2. Al confirmar: cortesía 20 otorgada + destino `/ideas`.
+1. `https://www.myideaproject.com/login` → tu email → escribir el **código de
+   6 dígitos** que llega al correo (decisión jul 2026: el enlace mágico quedó
+   obsoleto; `/auth/confirm` sigue vivo solo para correos rezagados).
+   O bien: **"Continuar con Google"** (mismo correo = misma cuenta).
+2. Al entrar: cortesía 20 otorgada (una sola vez) + destino `/ideas`.
 
 ### c) Adoptar TUS proyectos de prueba (los que quieras seguir)
 
@@ -65,7 +68,35 @@ cuenta los ve: RLS).
 
 - `RATE_LIMIT_POR=usuario` — ahora que hay identidad real, el límite diario es
   por usuario (el fusible global sigue intacto como respaldo agregado).
+  Sembrada por el fundador el 2026-07-19 (production + preview).
 - Las demás (`SUPABASE_*`, `ANTHROPIC_API_KEY`, `VUELO_DEV_PASSWORD`) no cambian.
+- El `.env` de la raíz (local, jamás en git) es el espejo documentado de todo:
+  qué vive también en Vercel, qué vive en Supabase (Google, Resend) y qué es
+  solo de los arneses. Plantilla commitada: `.env.example`.
+
+### e) Login con Google (configuración de una sola vez, 2026-07-19)
+
+La app ofrece "Continuar con Google" además del código (réplica del I Ching:
+`/api/auth/google` inicia, `/auth/callback` recibe; la allowlist se aplica
+DESPUÉS de autenticar y el trabajo del anónimo jamás se pierde — detalle en
+los comentarios de ambas rutas).
+
+Configuración que vive FUERA del repo:
+
+1. **Google Cloud** (proyecto `my-idea-503000`): OAuth client tipo Web.
+   - Redirect URI: `https://gkcmrxkmkffkpjzmtoqm.supabase.co/auth/v1/callback`
+   - JS origins: `myideaproject.com`, `my-idea-psi.vercel.app`, el dominio de
+     staging (conviene añadir también `www.myideaproject.com`).
+   - Client ID + Secret: respaldados en el `.env` de la raíz (registro).
+2. **Supabase → Authentication → Providers → Google**: activar y pegar
+   Client ID + Secret.
+3. **Supabase → Authentication → URL Configuration → Redirect URLs**: añadir
+   `https://www.myideaproject.com/auth/callback` y
+   `http://localhost:3000/auth/callback` (y el dominio de preview si se
+   prueba en staging).
+
+Mismo correo por Google que por código = **la misma cuenta** (Supabase vincula
+por email verificado); la cortesía no se duplica (una-sola-vez por cuenta).
 
 ## 3. Estado vivo vs dormido
 
@@ -74,7 +105,8 @@ cuenta los ve: RLS).
 | Ledger 020-024 (RPCs atómicas, RLS, courtesy log, refund log) | **VIVO** |
 | Cortesía 20 al primer login | **VIVO** |
 | Los 5 puntos de cobro + 402 + idempotencia + refund | **VIVOS** (se pagan con cortesía) |
-| Magic link + allowlist + adopción al login | **VIVO** |
+| Login por código (6 dígitos) + allowlist + adopción al login | **VIVO** |
+| Login con Google (allowlist post-auth, mundo del anónimo intacto) | **VIVO** (código listo; requiere provider configurado en Supabase) |
 | Chip de saldo + precios vivos (el tachado murió) | **VIVO** |
 | RevenueCat / Stripe / Play (pasarelas, `otorgar_creditos_idempotente`, webhook) | **DORMIDO** (esquema listo, ancla en 023; post-beta) |
 | Bundles de compra del centro de créditos | **DORMIDO** ("$ —", decisión del fundador pendiente) |
