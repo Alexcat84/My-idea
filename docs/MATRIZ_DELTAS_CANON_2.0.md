@@ -98,6 +98,32 @@ deuda queda medida, pero no se arregla ahora.
 
 Al cerrar los seis: tag `web-v1.3.0`.
 
+## Lote 3 adoptado (2026-07-19): las varas pendientes ya tienen dueño
+
+La entrega `entrega-lote3-beta` de Design se adoptó completa (22 HTML en el
+canon, 1067 tildes, cero faltas; tabla de créditos citando `precios.ts`
+textual; 32 labels únicos y disjuntos). Todo lo que estaba "implementado,
+vara pendiente" quedó con vara:
+
+| Pieza | Vara nueva |
+|---|---|
+| Login por código (2 pasos + estados) | `15_login.html` |
+| Fila de potenciadores en 4 estados | `16_fila_potenciadores.html` |
+| Escaparate del mundo (diagnóstico) | `17_escaparate_del_mundo.html` |
+| Compuerta de Tus Números | `18_compuerta_tus_numeros.html` |
+| Tablero vivo completo (ciclo de caja, versiones, modo lectura, recolector) | `19_tablero_vivo_tus_numeros.html` |
+| Chip de saldo + estado 402 (cero en gris; 402 en azul) | `20_chip_saldo_y_402.html` |
+| Landing con sesión | `21_landing_con_sesion.html` |
+| Riel de redacción | `22_riel_de_redaccion.html` |
+| Potenciadores y Créditos (post-4.5, precios vivos) | `07_potenciadores_y_creditos.html` (v2; v1 en `_archivo/lote2-pre-beta/`) |
+
+Defectos de la app cazados por Design (HALLAZGOS_PILA_3) y corregidos en la
+misma adopción: acentos del copy de Tus Números (23 correcciones + veredicto
+y palancas), chip en cero ahora gris, wordmark bicolor en el login. El
+"tachado vivo" era captura vieja (muerto desde la ETAPA 2). Además la
+adopción cazó un falso positivo del detector de acentos (verbos en -cionó) y
+lo corrigió con test.
+
 ## Decisiones pendientes (no las toma la FASE B)
 
 - **Catálogo de packs del centro de créditos (07):** `precios.ts` **no** define bundles de

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Tus Números, el tablero vivo</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Tablero sano desktop
+      - Tablero sano movil 380
+      - Tablero lectura desktop
+      - Tablero lectura movil 380
+      - Recolector de cifras desktop
+      - Recolector de cifras movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta; el ambar es la perdida y el
+       guardian: espejo, jamas regano, nunca rojo)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --radio-campo: 12px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 860px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-chip { flex: none; font-size: 12.5px; font-weight: 600; color: var(--azul); border: 1px solid rgba(77, 124, 254, 0.4); border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
+
+    .num-cuerpo { max-width: 1060px; width: 100%; margin: 0 auto; padding: 30px 40px 60px; }
+    .lienzo--movil .num-cuerpo { padding: 20px 18px 48px; }
+    .volver { display: inline-block; font-size: 14px; color: var(--texto-dim); text-decoration: none; margin-bottom: 20px; }
+
+    /* BANDA DE MODO LECTURA: el pasado se visita, no se edita */
+    .banda-lectura { display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid rgba(77, 124, 254, 0.4); background: rgba(77, 124, 254, 0.07); border-radius: var(--radio-tarjeta); padding: 14px 20px; margin-bottom: 26px; }
+    .lienzo--movil .banda-lectura { flex-direction: column; align-items: stretch; gap: 12px; padding: 14px 16px; }
+    .banda-lectura-texto { font-size: 14px; font-weight: 600; color: var(--azul); }
+    .banda-lectura-cta { flex: none; border: none; border-radius: 10px; padding: 10px 18px; background: var(--azul); color: #fff; font-size: 13.5px; font-weight: 700; font-family: var(--fuente); cursor: pointer; }
+
+    .num-titulo { font-size: 32px; font-weight: 700; line-height: 1.22; letter-spacing: -0.5px; text-wrap: pretty; }
+    .lienzo--movil .num-titulo { font-size: 24px; }
+
+    /* Veredicto de una frase */
+    .veredicto { display: flex; align-items: flex-start; gap: 14px; margin-top: 18px; padding: 20px 24px; border-radius: var(--radio-tarjeta); border: 1px solid var(--hairline); }
+    .veredicto--sano { border-color: rgba(63, 185, 80, 0.3); background: rgba(63, 185, 80, 0.06); }
+    .veredicto--perdida { border-color: rgba(224, 166, 74, 0.35); background: rgba(224, 166, 74, 0.06); }
+    .veredicto-punto { flex: none; width: 11px; height: 11px; border-radius: 50%; margin-top: 7px; }
+    .veredicto--sano .veredicto-punto { background: var(--verde); }
+    .veredicto--perdida .veredicto-punto { background: var(--ambar); }
+    .veredicto-frase { font-size: 17px; font-weight: 600; line-height: 1.5; text-wrap: pretty; }
+    .lienzo--movil .veredicto-frase { font-size: 15px; }
+    .acento-verde { color: var(--verde); }
+    .acento-ambar { color: var(--ambar); }
+
+    /* SELLO DE VIGENCIA + corregir: la puerta al recolector, siempre gratis */
+    .sello { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-top: 16px; font-size: 13.5px; }
+    .sello strong { color: var(--texto); font-weight: 700; }
+    .sello-dim { color: var(--texto-dim); }
+    .sello-corregir { color: var(--azul); text-decoration: none; font-weight: 600; }
+
+    .seccion-tit { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin: 38px 0 16px; }
+
+    /* Tiles de un vistazo */
+    .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lienzo--movil .tiles { grid-template-columns: 1fr 1fr; }
+    .tile { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px 24px; background: var(--superficie-1); }
+    .lienzo--movil .tile { padding: 16px 16px; }
+    .tile-num { font-size: 34px; font-weight: 800; letter-spacing: -0.8px; }
+    .lienzo--movil .tile-num { font-size: 25px; }
+    .tile-num--verde { color: var(--verde); }
+    .tile-num--ambar { color: var(--ambar); }
+    .tile-etq { font-size: 12.5px; line-height: 1.45; color: var(--texto-dim); margin-top: 8px; }
+
+    /* Barra de la verdad */
+    .verdad { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 26px 28px; background: var(--superficie-1); }
+    .lienzo--movil .verdad { padding: 18px 16px; }
+    .verdad-fila { display: grid; grid-template-columns: 82px 1fr; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .verdad-etq { font-size: 13.5px; color: var(--texto-dim); text-align: right; }
+    .verdad-barra { height: 30px; border-radius: 999px; display: flex; align-items: center; padding: 0 14px; font-size: 13px; font-weight: 700; color: #0A0A0C; }
+    .verdad-barra--verde { background: var(--verde); }
+    .verdad-barra--gris { background: #6E6F76; }
+    .verdad-barra--ambar { background: var(--ambar); }
+    .verdad-lectura { font-size: 13.5px; line-height: 1.65; color: var(--texto-dim); border-top: 1px solid var(--hairline); padding-top: 16px; margin-top: 6px; text-wrap: pretty; }
+    .verdad-lectura strong { color: var(--texto); }
+    .verdad-lectura .acento-ambar { font-weight: 700; }
+
+    /* Palancas */
+    .palancas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .lienzo--movil .palancas { grid-template-columns: 1fr; }
+    .palanca { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 24px; background: var(--superficie-1); display: flex; flex-direction: column; gap: 10px; }
+    .palanca--destacada { border-color: rgba(77, 124, 254, 0.5); }
+    .palanca--meta { border-color: rgba(77, 124, 254, 0.5); }
+    .palanca--apagada { border-style: dashed; }
+    .palanca-top { display: flex; align-items: center; justify-content: space-between; }
+    .palanca-n { width: 26px; height: 26px; border-radius: 8px; background: var(--superficie-2); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+    .palanca-chip { font-size: 11.5px; font-weight: 600; color: var(--azul); border: 1px solid rgba(77, 124, 254, 0.4); border-radius: 999px; padding: 4px 10px; }
+    .palanca-h { font-size: 16px; font-weight: 700; }
+    .palanca-cifra { font-size: 32px; font-weight: 800; letter-spacing: -0.8px; }
+    .palanca-cifra small { font-size: 14px; font-weight: 600; color: var(--texto-dim); letter-spacing: 0; }
+    .palanca-hoy { font-size: 13px; color: var(--texto-dim); }
+    .palanca-p { font-size: 13.5px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .palanca-p strong { color: var(--verde); }
+    .palanca-p .acento-ambar { font-weight: 700; }
+
+    /* Escenarios + faltantes */
+    .dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .lienzo--movil .dos-col { grid-template-columns: 1fr; gap: 0; }
+    .tabla { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .tabla-cab { display: grid; grid-template-columns: 1fr auto; padding: 12px 20px; background: var(--superficie-2); font-size: 11.5px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--texto-dim); }
+    .tabla-fila { display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 16px 20px; border-top: 1px solid var(--hairline); }
+    .tabla-esc { font-size: 14.5px; font-weight: 700; }
+    .tabla-esc small { display: block; font-size: 12.5px; font-weight: 400; color: var(--texto-dim); margin-top: 2px; }
+    .tabla-monto { font-size: 15px; font-weight: 800; }
+    .tabla-monto--verde { color: var(--verde); }
+    .tabla-monto--ambar { color: var(--ambar); }
+
+    .faltantes { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px 24px; background: var(--superficie-1); }
+    .faltantes-ok { font-size: 14.5px; font-weight: 600; }
+    .faltantes-nota { font-size: 13px; line-height: 1.6; color: var(--texto-dim); border-top: 1px solid var(--hairline); margin-top: 16px; padding-top: 16px; }
+
+    /* Ciclo de caja */
+    .ciclo { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 26px 28px; background: var(--superficie-1); }
+    .ciclo-num { font-size: 36px; font-weight: 800; letter-spacing: -0.8px; }
+    .ciclo-num small { font-size: 15px; font-weight: 600; color: var(--texto-dim); letter-spacing: 0; }
+    .ciclo-p { font-size: 14px; line-height: 1.6; color: var(--texto-dim); margin-top: 8px; }
+
+    /* Guardian de datos: ambar espejo */
+    .guardian { display: flex; gap: 14px; border: 1px solid rgba(224, 166, 74, 0.32); background: rgba(224, 166, 74, 0.06); border-radius: var(--radio-tarjeta); padding: 18px 20px; margin-top: 38px; }
+    .guardian-icono { flex: none; width: 22px; height: 22px; stroke: var(--ambar); }
+    .guardian-texto { font-size: 13.5px; line-height: 1.6; color: #E8D3AE; }
+    .guardian-texto strong { color: var(--ambar); }
+
+    /* Versiones anteriores: la historia no se reescribe */
+    .versiones { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .version-fila { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-top: 1px solid var(--hairline); font-size: 14px; cursor: pointer; }
+    .version-fila:first-child { border-top: none; }
+    .version-fecha { font-weight: 700; flex: none; }
+    .version-punto { flex: none; width: 8px; height: 8px; border-radius: 50%; }
+    .version-punto--ambar { background: var(--ambar); }
+    .version-punto--verde { background: var(--verde); }
+    .version-veredicto { color: var(--texto-dim); flex: 1; min-width: 0; }
+    .version-margen { font-weight: 800; flex: none; }
+    .version-margen--ambar { color: var(--ambar); }
+    .version-margen--verde { color: var(--verde); }
+
+    /* ==========================================================================
+       EL RECOLECTOR: corregir cifras, gratis siempre
+       ========================================================================== */
+    .reco-cuerpo { max-width: 680px; width: 100%; margin: 0 auto; padding: 34px 40px 60px; }
+    .lienzo--movil .reco-cuerpo { padding: 22px 18px 48px; }
+    .reco-titulo { font-size: 27px; font-weight: 700; letter-spacing: -0.4px; }
+    .lienzo--movil .reco-titulo { font-size: 22px; }
+    .reco-sub { font-size: 14.5px; line-height: 1.6; color: var(--texto-dim); margin-top: 10px; text-wrap: pretty; }
+    .reco-form { display: flex; flex-direction: column; gap: 18px; margin-top: 30px; }
+    .campo { display: flex; flex-direction: column; gap: 8px; }
+    .campo-etq { font-size: 14px; font-weight: 600; }
+    .campo-etq small { font-weight: 400; color: var(--texto-dim); }
+    .campo-input { display: flex; align-items: center; gap: 8px; background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: var(--radio-campo); padding: 14px 16px; font-size: 15px; font-weight: 600; }
+    .campo-unidad { color: var(--texto-dim); font-weight: 400; font-size: 13.5px; }
+    .reco-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .lienzo--movil .reco-dos { grid-template-columns: 1fr; }
+
+    .reco-ciclo { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px 24px; margin-top: 10px; }
+    .reco-ciclo-h { font-size: 15px; font-weight: 700; }
+    .reco-ciclo-h small { font-weight: 400; color: var(--texto-dim); }
+    .reco-ciclo-p { font-size: 13px; line-height: 1.6; color: var(--texto-dim); margin-top: 6px; margin-bottom: 18px; }
+    .reco-cta { border: none; border-radius: var(--radio-campo); padding: 16px 18px; background: var(--azul); color: #fff; font-size: 15px; font-weight: 700; font-family: var(--fuente); cursor: pointer; margin-top: 10px; }
+    .reco-nota { font-size: 13px; line-height: 1.6; color: var(--texto-dim); text-align: center; margin-top: 14px; }
+
+    .avatar { position: absolute; left: 22px; bottom: 22px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hairline); background: #fff; color: #000; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Tus Números</div>
+      <h1 class="galeria-titulo">Tus Números, el tablero vivo</h1>
+      <p class="galeria-descripcion">
+        El canon 14 más las piezas que nacieron después: el sello "Tus números de HOY" con la puerta
+        "Corregir mis cifras · gratis", la sección "Tu ciclo de caja", "Versiones anteriores" (la
+        historia no se reescribe: cada recálculo guarda la versión con fecha, veredicto y margen) y el
+        modo lectura de una versión pasada (banda azul, sin edición: el pasado se visita, no se edita).
+        Cierra el recolector: el formulario pre-llenado con el bloque opcional del ciclo de caja.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) TABLERO SANO (HOY) · DESKTOP                                -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Tablero sano desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+            <span class="nav-chip">Tus Números · activado</span>
+          </nav>
+          <div class="num-cuerpo">
+            <a class="volver" href="#">&#8592; Volver al plan</a>
+            <h1 class="num-titulo">Los números de kits de huerto urbano para balcones pequeños</h1>
+            <div class="veredicto veredicto--sano">
+              <span class="veredicto-punto"></span>
+              <p class="veredicto-frase">Cada kit te deja <span class="acento-verde">$170 limpios</span>, y con vender 8 al mes ya cubres tus $1.200 de gasto fijo: de ahí en adelante, cada kit es ganancia.</p>
+            </div>
+            <div class="sello">
+              <span><strong>Tus números de HOY</strong></span>
+              <span class="sello-dim">· calculados con tus cifras del 19 de julio, 10:12</span>
+              <a class="sello-corregir" href="#">Corregir mis cifras · gratis</a>
+            </div>
+
+            <div class="seccion-tit">De un vistazo</div>
+            <div class="tiles">
+              <div class="tile"><div class="tile-num">$180</div><div class="tile-etq">te cuesta cada kit</div></div>
+              <div class="tile"><div class="tile-num">$350</div><div class="tile-etq">precio al que lo vendes hoy</div></div>
+              <div class="tile"><div class="tile-num tile-num--verde">+$170</div><div class="tile-etq">margen por pieza</div></div>
+              <div class="tile"><div class="tile-num tile-num--verde">8</div><div class="tile-etq">punto de equilibrio</div></div>
+            </div>
+
+            <div class="seccion-tit">La barra de la verdad</div>
+            <div class="verdad">
+              <div class="verdad-fila"><span class="verdad-etq">Cobras</span><div class="verdad-barra verdad-barra--verde" style="width: 96%;">$350</div></div>
+              <div class="verdad-fila"><span class="verdad-etq">Te cuesta</span><div class="verdad-barra verdad-barra--gris" style="width: 50%;">$180</div></div>
+              <p class="verdad-lectura">La barra de lo que cobras es la larga, y la de lo que te cuesta no la alcanza. Ese espacio de sobra es <strong class="acento-verde">tu margen</strong>. Aquí, vender más sí te acerca a tu meta.</p>
+            </div>
+
+            <div class="seccion-tit">Tres caminos para exprimir estos números</div>
+            <div class="palancas">
+              <div class="palanca"><div class="palanca-top"><span class="palanca-n">1</span></div><span class="palanca-h">Sube el precio a</span><span class="palanca-cifra">$385 <small>por kit</small></span><span class="palanca-hoy">hoy cobras $350</span><p class="palanca-p">Prueba subiendo a $385 (un 10% más): tu margen sube a <strong>+$205 por kit</strong>. Pruébalo con un lote antes de subirlo a todos.</p></div>
+              <div class="palanca"><div class="palanca-top"><span class="palanca-n">2</span></div><span class="palanca-h">Baja el costo a</span><span class="palanca-cifra">$160 <small>por kit</small></span><span class="palanca-hoy">hoy te cuesta $180</span><p class="palanca-p">Prueba bajando el costo a $160 (un 10% menos): te deja <strong>+$190 por kit</strong>, sin tocar el precio.</p></div>
+              <div class="palanca palanca--meta"><div class="palanca-top"><span class="palanca-n">3</span><span class="palanca-chip">tu meta</span></div><span class="palanca-h">Vende al mes</span><span class="palanca-cifra">30 <small>kits</small></span><p class="palanca-p">A 30 kits al mes, tras cubrir tus fijos, te quedan <strong>$3.900 de ganancia</strong>. Es tu palanca más fuerte porque el margen ya es sano.</p></div>
+            </div>
+
+            <div class="dos-col" style="margin-top: 38px;">
+              <div>
+                <div class="seccion-tit" style="margin-top: 0;">Escenarios, a tu precio de hoy</div>
+                <div class="tabla">
+                  <div class="tabla-cab"><span>Escenario</span><span>Ganancia</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">Pesimista<small>15 al mes</small></span><span class="tabla-monto tabla-monto--verde">$1.350</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">A capacidad plena<small>30 al mes</small></span><span class="tabla-monto tabla-monto--verde">$3.900</span></div>
+                </div>
+              </div>
+              <div>
+                <div class="seccion-tit" style="margin-top: 0;">Los números que te faltan</div>
+                <div class="faltantes">
+                  <p class="faltantes-ok">Tienes todo lo esencial. Buen trabajo.</p>
+                  <p class="faltantes-nota">Añadir o corregir cifras es gratis, siempre: tu tablero se recalcula al momento.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="seccion-tit">Tu ciclo de caja</div>
+            <div class="ciclo">
+              <div class="ciclo-num">50 <small>días</small></div>
+              <p class="ciclo-p">Tu dinero tarda unos 50 días en volver a tu bolsillo desde que pagas los materiales.</p>
+            </div>
+
+            <div class="guardian">
+              <svg class="guardian-icono" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+              <p class="guardian-texto"><strong>Guardián de datos.</strong> Estos números valen exactamente lo que valen las cifras que metiste. Cuando agregues las que faltan, el número real puede cambiar. No sustituye contabilidad formal ni asesoría fiscal.</p>
+            </div>
+
+            <div class="seccion-tit">Versiones anteriores</div>
+            <div class="versiones">
+              <div class="version-fila"><span class="version-fecha">hoy 08:25</span><span class="version-punto version-punto--ambar"></span><span class="version-veredicto">pérdida</span><span class="version-margen version-margen--ambar">-$30</span></div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) TABLERO SANO (HOY) · MOVIL 380                              -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Tablero sano movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de hue…</span>
+            </div>
+            <span class="nav-chip">Tus Números</span>
+          </nav>
+          <div class="num-cuerpo">
+            <a class="volver" href="#">&#8592; Volver al plan</a>
+            <h1 class="num-titulo">Los números de kits de huerto urbano para balcones pequeños</h1>
+            <div class="veredicto veredicto--sano">
+              <span class="veredicto-punto"></span>
+              <p class="veredicto-frase">Cada kit te deja <span class="acento-verde">$170 limpios</span>, y con vender 8 al mes ya cubres tus $1.200 de gasto fijo: de ahí en adelante, cada kit es ganancia.</p>
+            </div>
+            <div class="sello">
+              <span><strong>Tus números de HOY</strong></span>
+              <a class="sello-corregir" href="#">Corregir mis cifras · gratis</a>
+            </div>
+
+            <div class="seccion-tit">De un vistazo</div>
+            <div class="tiles">
+              <div class="tile"><div class="tile-num">$180</div><div class="tile-etq">te cuesta cada kit</div></div>
+              <div class="tile"><div class="tile-num">$350</div><div class="tile-etq">precio al que lo vendes hoy</div></div>
+              <div class="tile"><div class="tile-num tile-num--verde">+$170</div><div class="tile-etq">margen por pieza</div></div>
+              <div class="tile"><div class="tile-num tile-num--verde">8</div><div class="tile-etq">punto de equilibrio</div></div>
+            </div>
+
+            <div class="seccion-tit">La barra de la verdad</div>
+            <div class="verdad">
+              <div class="verdad-fila"><span class="verdad-etq">Cobras</span><div class="verdad-barra verdad-barra--verde" style="width: 96%;">$350</div></div>
+              <div class="verdad-fila"><span class="verdad-etq">Te cuesta</span><div class="verdad-barra verdad-barra--gris" style="width: 52%;">$180</div></div>
+              <p class="verdad-lectura">La barra de lo que cobras es la larga. Ese espacio de sobra es <strong class="acento-verde">tu margen</strong>. Aquí, vender más sí te acerca a tu meta.</p>
+            </div>
+
+            <div class="seccion-tit">Tres caminos</div>
+            <div class="palancas">
+              <div class="palanca"><div class="palanca-top"><span class="palanca-n">1</span></div><span class="palanca-h">Sube el precio a</span><span class="palanca-cifra">$385 <small>por kit</small></span><p class="palanca-p">Tu margen sube a <strong>+$205 por kit</strong>. Pruébalo con un lote antes de subirlo a todos.</p></div>
+              <div class="palanca"><div class="palanca-top"><span class="palanca-n">2</span></div><span class="palanca-h">Baja el costo a</span><span class="palanca-cifra">$160 <small>por kit</small></span><p class="palanca-p">Te deja <strong>+$190 por kit</strong>, sin tocar el precio.</p></div>
+              <div class="palanca palanca--meta"><div class="palanca-top"><span class="palanca-n">3</span><span class="palanca-chip">tu meta</span></div><span class="palanca-h">Vende al mes</span><span class="palanca-cifra">30 <small>kits</small></span><p class="palanca-p">Te quedan <strong>$3.900 de ganancia</strong>. Tu palanca más fuerte: el margen ya es sano.</p></div>
+            </div>
+
+            <div class="dos-col" style="margin-top: 8px;">
+              <div>
+                <div class="seccion-tit">Escenarios, a tu precio de hoy</div>
+                <div class="tabla">
+                  <div class="tabla-cab"><span>Escenario</span><span>Ganancia</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">Pesimista<small>15 al mes</small></span><span class="tabla-monto tabla-monto--verde">$1.350</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">A capacidad plena<small>30 al mes</small></span><span class="tabla-monto tabla-monto--verde">$3.900</span></div>
+                </div>
+              </div>
+              <div>
+                <div class="seccion-tit">Los números que te faltan</div>
+                <div class="faltantes">
+                  <p class="faltantes-ok">Tienes todo lo esencial. Buen trabajo.</p>
+                  <p class="faltantes-nota">Añadir o corregir cifras es gratis, siempre.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="seccion-tit">Tu ciclo de caja</div>
+            <div class="ciclo">
+              <div class="ciclo-num">50 <small>días</small></div>
+              <p class="ciclo-p">Tu dinero tarda unos 50 días en volver a tu bolsillo desde que pagas los materiales.</p>
+            </div>
+
+            <div class="guardian">
+              <svg class="guardian-icono" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+              <p class="guardian-texto"><strong>Guardián de datos.</strong> Estos números valen lo que valen las cifras que metiste. No sustituye contabilidad formal ni asesoría fiscal.</p>
+            </div>
+
+            <div class="seccion-tit">Versiones anteriores</div>
+            <div class="versiones">
+              <div class="version-fila"><span class="version-fecha">hoy 08:25</span><span class="version-punto version-punto--ambar"></span><span class="version-veredicto">pérdida</span><span class="version-margen version-margen--ambar">-$30</span></div>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) MODO LECTURA (version pasada) · DESKTOP                     -->
+      <!-- El pasado se visita, no se edita: sin sello HOY, sin corregir  -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Tablero lectura desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+            <span class="nav-chip">Tus Números · activado</span>
+          </nav>
+          <div class="num-cuerpo">
+            <div class="banda-lectura">
+              <span class="banda-lectura-texto">Estás viendo tus números del 18 de julio, 08:25</span>
+              <button class="banda-lectura-cta">Volver a hoy</button>
+            </div>
+            <h1 class="num-titulo">Los números de kits de huerto urbano para balcones pequeños</h1>
+            <div class="veredicto veredicto--perdida">
+              <span class="veredicto-punto"></span>
+              <p class="veredicto-frase">Hoy, cada kit que vendes te cuesta <span class="acento-ambar">$30 más de lo que cobras</span>: no es problema de vender más, es que el precio todavía no cubre lo que te cuesta hacerlo.</p>
+            </div>
+
+            <div class="seccion-tit">De un vistazo</div>
+            <div class="tiles">
+              <div class="tile"><div class="tile-num">$180</div><div class="tile-etq">te cuesta cada kit</div></div>
+              <div class="tile"><div class="tile-num">$150</div><div class="tile-etq">precio al que lo vendes</div></div>
+              <div class="tile"><div class="tile-num tile-num--ambar">-$30</div><div class="tile-etq">margen por pieza</div></div>
+              <div class="tile"><div class="tile-num tile-num--ambar">No hay</div><div class="tile-etq">punto de equilibrio</div></div>
+            </div>
+
+            <div class="seccion-tit">La barra de la verdad</div>
+            <div class="verdad">
+              <div class="verdad-fila"><span class="verdad-etq">Te cuesta</span><div class="verdad-barra verdad-barra--ambar" style="width: 96%;">$180</div></div>
+              <div class="verdad-fila"><span class="verdad-etq">Cobras</span><div class="verdad-barra verdad-barra--verde" style="width: 80%;">$150</div></div>
+              <p class="verdad-lectura">La barra de lo que te cuesta es más larga que la de lo que cobras. Ese pedazo que sobresale es <span class="acento-ambar">la pérdida que pones de tu bolsillo en cada venta</span>. Mientras se vea así, vender más solo agranda el hueco.</p>
+            </div>
+
+            <div class="seccion-tit">Tres caminos para que estos números funcionen</div>
+            <div class="palancas">
+              <div class="palanca palanca--destacada"><div class="palanca-top"><span class="palanca-n">1</span><span class="palanca-chip">la más directa</span></div><span class="palanca-h">Sube el precio a</span><span class="palanca-cifra">$255 <small>por kit</small></span><span class="palanca-hoy">ese día cobrabas $150</span><p class="palanca-p">A $255 tu margen pasa a <strong>+$75 por kit</strong>, y cubres tus fijos con unas 16 ventas.</p></div>
+              <div class="palanca"><div class="palanca-top"><span class="palanca-n">2</span></div><span class="palanca-h">Baja el costo a</span><span class="palanca-cifra">$105 <small>por kit</small></span><span class="palanca-hoy">ese día te costaba $180</span><p class="palanca-p">Bajar el costo a $105 te deja <strong>+$45 por kit</strong>, sin tocar el precio.</p></div>
+              <div class="palanca palanca--apagada"><div class="palanca-top"><span class="palanca-n">3</span></div><span class="palanca-h">Vender más, por ahora, no</span><p class="palanca-p"><span class="acento-ambar">Con el margen en pérdida, el volumen agranda el hueco.</span> Primero arregla el margen con la palanca 1 o 2; cuando esté en verde, aquí se dice cuántas necesitas para tu meta.</p></div>
+            </div>
+
+            <div class="dos-col" style="margin-top: 38px;">
+              <div>
+                <div class="seccion-tit" style="margin-top: 0;">Escenarios, al precio de ese día</div>
+                <div class="tabla">
+                  <div class="tabla-cab"><span>Escenario</span><span>Ganancia</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">Pesimista<small>15 al mes</small></span><span class="tabla-monto tabla-monto--ambar">-$1.650</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">A capacidad plena<small>30 al mes</small></span><span class="tabla-monto tabla-monto--ambar">-$2.100</span></div>
+                </div>
+              </div>
+              <div>
+                <div class="seccion-tit" style="margin-top: 0;">Los números que faltaban</div>
+                <div class="faltantes">
+                  <p class="faltantes-ok" style="color: var(--texto-dim); font-weight: 400;">Ese día faltaban los días de cobro, de inventario y de pago a proveedores.</p>
+                  <p class="faltantes-nota">Esta es una foto: para corregir cifras, vuelve a hoy.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guardian">
+              <svg class="guardian-icono" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+              <p class="guardian-texto"><strong>Guardián de datos.</strong> Estos números valen exactamente lo que valían las cifras de ese día. No sustituye contabilidad formal ni asesoría fiscal.</p>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 4) MODO LECTURA · MOVIL 380                                    -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Tablero lectura movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de hue…</span>
+            </div>
+            <span class="nav-chip">Tus Números</span>
+          </nav>
+          <div class="num-cuerpo">
+            <div class="banda-lectura">
+              <span class="banda-lectura-texto">Estás viendo tus números del 18 de julio, 08:25</span>
+              <button class="banda-lectura-cta">Volver a hoy</button>
+            </div>
+            <h1 class="num-titulo">Los números de kits de huerto urbano para balcones pequeños</h1>
+            <div class="veredicto veredicto--perdida">
+              <span class="veredicto-punto"></span>
+              <p class="veredicto-frase">Hoy, cada kit que vendes te cuesta <span class="acento-ambar">$30 más de lo que cobras</span>: no es problema de vender más, es que el precio todavía no cubre lo que te cuesta hacerlo.</p>
+            </div>
+
+            <div class="seccion-tit">De un vistazo</div>
+            <div class="tiles">
+              <div class="tile"><div class="tile-num">$180</div><div class="tile-etq">te cuesta cada kit</div></div>
+              <div class="tile"><div class="tile-num">$150</div><div class="tile-etq">precio al que lo vendes</div></div>
+              <div class="tile"><div class="tile-num tile-num--ambar">-$30</div><div class="tile-etq">margen por pieza</div></div>
+              <div class="tile"><div class="tile-num tile-num--ambar">No hay</div><div class="tile-etq">punto de equilibrio</div></div>
+            </div>
+
+            <div class="seccion-tit">La barra de la verdad</div>
+            <div class="verdad">
+              <div class="verdad-fila"><span class="verdad-etq">Te cuesta</span><div class="verdad-barra verdad-barra--ambar" style="width: 96%;">$180</div></div>
+              <div class="verdad-fila"><span class="verdad-etq">Cobras</span><div class="verdad-barra verdad-barra--verde" style="width: 80%;">$150</div></div>
+              <p class="verdad-lectura">Ese pedazo que sobresale es <span class="acento-ambar">la pérdida que pones de tu bolsillo en cada venta</span>. Mientras se vea así, vender más solo agranda el hueco.</p>
+            </div>
+
+            <div class="seccion-tit">Tres caminos</div>
+            <div class="palancas">
+              <div class="palanca palanca--destacada"><div class="palanca-top"><span class="palanca-n">1</span><span class="palanca-chip">la más directa</span></div><span class="palanca-h">Sube el precio a</span><span class="palanca-cifra">$255 <small>por kit</small></span><p class="palanca-p">Tu margen pasa a <strong>+$75 por kit</strong>, y cubres tus fijos con unas 16 ventas.</p></div>
+              <div class="palanca"><div class="palanca-top"><span class="palanca-n">2</span></div><span class="palanca-h">Baja el costo a</span><span class="palanca-cifra">$105 <small>por kit</small></span><p class="palanca-p">Te deja <strong>+$45 por kit</strong>, sin tocar el precio.</p></div>
+              <div class="palanca palanca--apagada"><div class="palanca-top"><span class="palanca-n">3</span></div><span class="palanca-h">Vender más, por ahora, no</span><p class="palanca-p"><span class="acento-ambar">Con el margen en pérdida, el volumen agranda el hueco.</span> Primero arregla el margen con la palanca 1 o 2.</p></div>
+            </div>
+
+            <div class="dos-col">
+              <div>
+                <div class="seccion-tit">Escenarios, al precio de ese día</div>
+                <div class="tabla">
+                  <div class="tabla-cab"><span>Escenario</span><span>Ganancia</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">Pesimista<small>15 al mes</small></span><span class="tabla-monto tabla-monto--ambar">-$1.650</span></div>
+                  <div class="tabla-fila"><span class="tabla-esc">A capacidad plena<small>30 al mes</small></span><span class="tabla-monto tabla-monto--ambar">-$2.100</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guardian">
+              <svg class="guardian-icono" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+              <p class="guardian-texto"><strong>Guardián de datos.</strong> Estos números valen lo que valían las cifras de ese día. No sustituye contabilidad formal ni asesoría fiscal.</p>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 5) EL RECOLECTOR · DESKTOP (corregir cifras, gratis siempre)   -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Recolector de cifras desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+            <span class="nav-chip">Tus Números · activado</span>
+          </nav>
+          <div class="reco-cuerpo">
+            <a class="volver" href="#">&#8592; Volver a mi tablero</a>
+            <h1 class="reco-titulo">Corrige tus cifras</h1>
+            <p class="reco-sub">Tus cifras de hoy, pre-llenadas. Cambia las que hayan cambiado y recalculo al momento: es gratis, siempre. Tu versión actual queda guardada en Versiones anteriores.</p>
+            <div class="reco-form">
+              <div class="reco-dos">
+                <div class="campo"><span class="campo-etq">¿Cuánto te cuesta hacer cada kit?</span><div class="campo-input"><span class="campo-unidad">$</span>180</div></div>
+                <div class="campo"><span class="campo-etq">¿A qué precio lo vendes hoy?</span><div class="campo-input"><span class="campo-unidad">$</span>350</div></div>
+              </div>
+              <div class="reco-dos">
+                <div class="campo"><span class="campo-etq">Tu gasto fijo del mes</span><div class="campo-input"><span class="campo-unidad">$</span>1.200</div></div>
+                <div class="campo"><span class="campo-etq">¿Cuántos puedes hacer al mes?</span><div class="campo-input">30 <span class="campo-unidad">kits</span></div></div>
+              </div>
+              <div class="campo"><span class="campo-etq">Un mes flojo, ¿cuántos vendes? <small>(para tu escenario pesimista)</small></span><div class="campo-input">15 <span class="campo-unidad">kits</span></div></div>
+
+              <div class="reco-ciclo">
+                <div class="reco-ciclo-h">Tu ciclo de caja <small>(opcional)</small></div>
+                <p class="reco-ciclo-p">Con estos tres, el tablero te dice cuántos días tarda tu dinero en volver a tu bolsillo.</p>
+                <div class="reco-form" style="margin-top: 0; gap: 14px;">
+                  <div class="campo"><span class="campo-etq">Días que tardas en cobrar <small>· cobrar tarde aprieta tu caja</small></span><div class="campo-input">20 <span class="campo-unidad">días</span></div></div>
+                  <div class="campo"><span class="campo-etq">Días que tu dinero pasa en inventario <small>· afecta cuándo vuelve la plata a tu bolsillo</small></span><div class="campo-input">45 <span class="campo-unidad">días</span></div></div>
+                  <div class="campo"><span class="campo-etq">Días que tardas en pagar a proveedores <small>· pagar más tarde alivia tu caja</small></span><div class="campo-input">15 <span class="campo-unidad">días</span></div></div>
+                </div>
+              </div>
+
+              <button class="reco-cta">Recalcular mis números · gratis</button>
+              <p class="reco-nota">Se recalcula al momento. La versión de hoy no se pierde: queda con su fecha en Versiones anteriores.</p>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 6) EL RECOLECTOR · MOVIL 380                                   -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Recolector de cifras movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de hue…</span>
+            </div>
+            <span class="nav-chip">Tus Números</span>
+          </nav>
+          <div class="reco-cuerpo">
+            <a class="volver" href="#">&#8592; Volver a mi tablero</a>
+            <h1 class="reco-titulo">Corrige tus cifras</h1>
+            <p class="reco-sub">Tus cifras de hoy, pre-llenadas. Cambia las que hayan cambiado y recalculo al momento: es gratis, siempre.</p>
+            <div class="reco-form">
+              <div class="campo"><span class="campo-etq">¿Cuánto te cuesta hacer cada kit?</span><div class="campo-input"><span class="campo-unidad">$</span>180</div></div>
+              <div class="campo"><span class="campo-etq">¿A qué precio lo vendes hoy?</span><div class="campo-input"><span class="campo-unidad">$</span>350</div></div>
+              <div class="campo"><span class="campo-etq">Tu gasto fijo del mes</span><div class="campo-input"><span class="campo-unidad">$</span>1.200</div></div>
+              <div class="campo"><span class="campo-etq">¿Cuántos puedes hacer al mes?</span><div class="campo-input">30 <span class="campo-unidad">kits</span></div></div>
+              <div class="campo"><span class="campo-etq">Un mes flojo, ¿cuántos vendes? <small>(escenario pesimista)</small></span><div class="campo-input">15 <span class="campo-unidad">kits</span></div></div>
+
+              <div class="reco-ciclo">
+                <div class="reco-ciclo-h">Tu ciclo de caja <small>(opcional)</small></div>
+                <p class="reco-ciclo-p">Con estos tres, el tablero te dice cuántos días tarda tu dinero en volver a tu bolsillo.</p>
+                <div class="reco-form" style="margin-top: 0; gap: 14px;">
+                  <div class="campo"><span class="campo-etq">Días que tardas en cobrar</span><div class="campo-input">20 <span class="campo-unidad">días</span></div></div>
+                  <div class="campo"><span class="campo-etq">Días que tu dinero pasa en inventario</span><div class="campo-input">45 <span class="campo-unidad">días</span></div></div>
+                  <div class="campo"><span class="campo-etq">Días que tardas en pagar a proveedores</span><div class="campo-input">15 <span class="campo-unidad">días</span></div></div>
+                </div>
+              </div>
+
+              <button class="reco-cta">Recalcular mis números · gratis</button>
+              <p class="reco-nota">La versión de hoy no se pierde: queda con su fecha en Versiones anteriores.</p>
+            </div>
+          </div>
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

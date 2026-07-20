@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · La fila de potenciadores (4 estados)</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Fila mundos bloqueada desktop
+      - Fila mundos mixta desktop
+      - Fila mundos mixta movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta; el matiz de los mundos es teal)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 860px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    /* Leyenda de los 4 estados (documentacion, no frame) */
+    .leyenda { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+    .leyenda-item { display: flex; align-items: center; gap: 8px; border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 14px; font-size: 12.5px; color: var(--texto-dim); }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-chip { flex: none; font-size: 12.5px; font-weight: 600; color: var(--azul); border: 1px solid rgba(77, 124, 254, 0.4); border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
+
+    .fila-cuerpo { max-width: 1060px; width: 100%; margin: 0 auto; padding: 40px 40px 60px; }
+    .lienzo--movil .fila-cuerpo { padding: 26px 18px 48px; }
+    .seccion-tit { font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 16px; }
+
+    /* ==========================================================================
+       LA TARJETA DE MUNDO Y SUS 4 ESTADOS
+       El estado vive en el chip superior derecho; el footer dice el precio vivo.
+       ========================================================================== */
+    .mundos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .lienzo--movil .mundos-grid { grid-template-columns: 1fr; }
+    .mundo-card { border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); padding: 22px; display: flex; flex-direction: column; gap: 10px; background: var(--superficie-1); }
+    .mundo-card--listo { border-color: rgba(77, 124, 254, 0.5); }
+    .mundo-card--activo { border-color: rgba(63, 185, 80, 0.45); }
+    .mundo-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .mundo-icono { width: 20px; height: 20px; stroke: var(--texto-dim); flex: none; }
+
+    .chip { flex: none; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+    .chip--bloqueado { color: var(--texto-dim); border: 1px solid var(--hairline); }
+    .chip--abierto { color: var(--azul); border: 1px solid rgba(77, 124, 254, 0.4); }
+    .chip--listo { color: #fff; background: var(--azul); border: 1px solid var(--azul); }
+    .chip--activo { color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.45); }
+    .chip--completado { color: var(--verde); border: 1px solid rgba(63, 185, 80, 0.45); }
+
+    .mundo-nombre { font-size: 16px; font-weight: 700; }
+    .mundo-promesa { font-size: 13px; line-height: 1.5; color: var(--texto-dim); text-wrap: pretty; }
+    .mundo-footer { font-size: 12.5px; color: var(--texto-dim); margin-top: 4px; border-top: 1px solid var(--hairline); padding-top: 12px; }
+    .mundo-footer strong { color: var(--texto); font-weight: 600; }
+    .mundo-footer--verde { color: var(--verde); }
+
+    /* Barra de progreso del mundo activo (verde: ejecucion) */
+    .mundo-progreso { height: 5px; border-radius: 999px; background: var(--superficie-2); overflow: hidden; margin-top: 6px; }
+    .mundo-progreso-lleno { height: 100%; border-radius: 999px; background: var(--verde); }
+    .check { display: inline-block; width: 14px; height: 14px; vertical-align: -2px; stroke: var(--verde); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · El preview de los mundos</div>
+      <h1 class="galeria-titulo">La fila de potenciadores, en sus 4 estados</h1>
+      <p class="galeria-descripcion">
+        El candado murió: los mundos se prueban gratis (entrevista y diagnóstico como escaparate) y lo
+        que se compra es el plan del mundo, a la entrega. El estado vive en el chip superior derecho y
+        el footer dice el precio vivo, sin tachados. Frame 1: la fila antes del plan (todo "Se abre con
+        tu plan"). Frame 2: la fila con el plan generado, los cuatro estados conviviendo.
+      </p>
+      <div class="leyenda">
+        <span class="leyenda-item"><span class="chip chip--bloqueado">Se abre con tu plan</span> antes de Tu Plan</span>
+        <span class="leyenda-item"><span class="chip chip--abierto">Explóralo gratis</span> abierto, sin diagnóstico</span>
+        <span class="leyenda-item"><span class="chip chip--listo">Listo para tu plan</span> diagnóstico hecho</span>
+        <span class="leyenda-item"><span class="chip chip--activo">Activo · 2/9</span> plan comprado</span>
+        <span class="leyenda-item"><span class="chip chip--completado">Completado</span> mundo cerrado</span>
+      </div>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) FILA BLOQUEADA (antes del plan) · DESKTOP                   -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Fila mundos bloqueada desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+            <span class="nav-chip">18 créditos</span>
+          </nav>
+          <div class="fila-cuerpo">
+            <div class="seccion-tit">Potencia tu idea</div>
+            <div class="mundos-grid">
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span class="chip chip--bloqueado">Se abre con tu plan</span></div><span class="mundo-nombre">Calidad y Confianza</span><p class="mundo-promesa">Que tu cliente confíe, vuelva y te recomiende.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"></path></svg><span class="chip chip--bloqueado">Se abre con tu plan</span></div><span class="mundo-nombre">Seguridad y Personas</span><p class="mundo-promesa">Protege a tu gente y a tu negocio de su peor día.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 20c8 0 12-5 12-13-8 0-13 4-13 12"></path><path d="M6 20c0-5 2-8 6-10"></path></svg><span class="chip chip--bloqueado">Se abre con tu plan</span></div><span class="mundo-nombre">Ambiente y Futuro</span><p class="mundo-promesa">Convierte lo sostenible en ventaja que se nota y se cobra.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path><path d="M12 11v3"></path><circle cx="12" cy="9" r="0.6"></circle></svg><span class="chip chip--bloqueado">Se abre con tu plan</span></div><span class="mundo-nombre">Seguridad Digital</span><p class="mundo-promesa">Blinda tus datos, tus cuentas y la confianza de tus clientes.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.4 3.8 5.6 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.6-3.8-9s1.3-6.6 3.8-9z"></path></svg><span class="chip chip--bloqueado">Se abre con tu plan</span></div><span class="mundo-nombre">Vender al Mundo</span><p class="mundo-promesa">Lleva tu producto a clientes de otros países, con método.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="4" y="4" width="7" height="7" rx="1.4"></rect><rect x="13" y="4" width="7" height="7" rx="1.4"></rect><rect x="4" y="13" width="7" height="7" rx="1.4"></rect><rect x="13" y="13" width="7" height="7" rx="1.4"></rect></svg><span class="chip chip--bloqueado">Se abre con tu plan</span></div><span class="mundo-nombre">Multiplica tu Negocio</span><p class="mundo-promesa">Convierte tu negocio probado en muchos que funcionan igual.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg><span class="chip chip--bloqueado">Se abre con tu plan</span></div><span class="mundo-nombre">Riesgos Bajo Control</span><p class="mundo-promesa">Ve venir lo que puede fallar, y decide antes de que decida por ti.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 2) FILA MIXTA (con plan generado) · DESKTOP                    -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Fila mundos mixta desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+            <span class="nav-chip">15 créditos</span>
+          </nav>
+          <div class="fila-cuerpo">
+            <div class="seccion-tit">Potencia tu idea</div>
+            <div class="mundos-grid">
+              <div class="mundo-card mundo-card--activo"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span class="chip chip--activo">Activo · 2/9</span></div><span class="mundo-nombre">Calidad y Confianza</span><p class="mundo-promesa">Que tu cliente confíe, vuelva y te recomiende.</p><div class="mundo-progreso"><div class="mundo-progreso-lleno" style="width: 22%;"></div></div><div class="mundo-footer">Plan activo · 2 de 9 acciones hechas</div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"></path></svg><span class="chip chip--completado"><svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 13l4 4 10-10"></path></svg> Completado</span></div><span class="mundo-nombre">Seguridad y Personas</span><p class="mundo-promesa">Protege a tu gente y a tu negocio de su peor día.</p><div class="mundo-footer mundo-footer--verde">Cerrado por ti · su checklist te espera igual</div></div>
+              <div class="mundo-card mundo-card--listo"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 20c8 0 12-5 12-13-8 0-13 4-13 12"></path><path d="M6 20c0-5 2-8 6-10"></path></svg><span class="chip chip--listo">Listo para tu plan</span></div><span class="mundo-nombre">Ambiente y Futuro</span><p class="mundo-promesa">Convierte lo sostenible en ventaja que se nota y se cobra.</p><div class="mundo-footer">Tu diagnóstico te espera · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path><path d="M12 11v3"></path><circle cx="12" cy="9" r="0.6"></circle></svg><span class="chip chip--abierto">Explóralo gratis</span></div><span class="mundo-nombre">Seguridad Digital</span><p class="mundo-promesa">Blinda tus datos, tus cuentas y la confianza de tus clientes.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.4 3.8 5.6 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.6-3.8-9s1.3-6.6 3.8-9z"></path></svg><span class="chip chip--abierto">Explóralo gratis</span></div><span class="mundo-nombre">Vender al Mundo</span><p class="mundo-promesa">Lleva tu producto a clientes de otros países, con método.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="4" y="4" width="7" height="7" rx="1.4"></rect><rect x="13" y="4" width="7" height="7" rx="1.4"></rect><rect x="4" y="13" width="7" height="7" rx="1.4"></rect><rect x="13" y="13" width="7" height="7" rx="1.4"></rect></svg><span class="chip chip--abierto">Explóralo gratis</span></div><span class="mundo-nombre">Multiplica tu Negocio</span><p class="mundo-promesa">Convierte tu negocio probado en muchos que funcionan igual.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg><span class="chip chip--abierto">Explóralo gratis</span></div><span class="mundo-nombre">Riesgos Bajo Control</span><p class="mundo-promesa">Ve venir lo que puede fallar, y decide antes de que decida por ti.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) FILA MIXTA · MOVIL 380 (apilada, mismo orden)               -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Fila mundos mixta movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Kits de hue…</span>
+            </div>
+            <span class="nav-chip">15 créditos</span>
+          </nav>
+          <div class="fila-cuerpo">
+            <div class="seccion-tit">Potencia tu idea</div>
+            <div class="mundos-grid">
+              <div class="mundo-card mundo-card--activo"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span class="chip chip--activo">Activo · 2/9</span></div><span class="mundo-nombre">Calidad y Confianza</span><p class="mundo-promesa">Que tu cliente confíe, vuelva y te recomiende.</p><div class="mundo-progreso"><div class="mundo-progreso-lleno" style="width: 22%;"></div></div><div class="mundo-footer">Plan activo · 2 de 9 acciones hechas</div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"></path></svg><span class="chip chip--completado"><svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 13l4 4 10-10"></path></svg> Completado</span></div><span class="mundo-nombre">Seguridad y Personas</span><p class="mundo-promesa">Protege a tu gente y a tu negocio de su peor día.</p><div class="mundo-footer mundo-footer--verde">Cerrado por ti · su checklist te espera igual</div></div>
+              <div class="mundo-card mundo-card--listo"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 20c8 0 12-5 12-13-8 0-13 4-13 12"></path><path d="M6 20c0-5 2-8 6-10"></path></svg><span class="chip chip--listo">Listo para tu plan</span></div><span class="mundo-nombre">Ambiente y Futuro</span><p class="mundo-promesa">Convierte lo sostenible en ventaja que se nota y se cobra.</p><div class="mundo-footer">Tu diagnóstico te espera · su plan: <strong>3 créditos</strong></div></div>
+              <div class="mundo-card"><div class="mundo-top"><svg class="mundo-icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"></path><path d="M12 11v3"></path><circle cx="12" cy="9" r="0.6"></circle></svg><span class="chip chip--abierto">Explóralo gratis</span></div><span class="mundo-nombre">Seguridad Digital</span><p class="mundo-promesa">Blinda tus datos, tus cuentas y la confianza de tus clientes.</p><div class="mundo-footer">El preview es gratis · su plan: <strong>3 créditos</strong></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

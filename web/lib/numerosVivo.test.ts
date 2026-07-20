@@ -20,8 +20,8 @@ describe("veredictoNumeros: la frase con su color, por codigo", () => {
   it("PERDIDA: ambar, dice cuanto pierde por unidad, espejo sin regano", () => {
     const v = veredictoNumeros(armarTablero(velas), "vela");
     expect(v.tono).toBe("perdida");
-    expect(v.acento).toBe("$4 mas de lo que cobras");
-    expect(v.frase).toContain("cada vela que vendes te cuesta $4 mas de lo que cobras");
+    expect(v.acento).toBe("$4 más de lo que cobras");
+    expect(v.frase).toContain("cada vela que vendes te cuesta $4 más de lo que cobras");
     expect(v.frase).not.toContain("—"); // sin guiones largos (voz)
   });
 
@@ -73,7 +73,7 @@ describe("fraseCicloCaja: el ciclo de caja en palabras de persona", () => {
 
 describe("mensaje del tope diario", () => {
   it("habla en palabras de persona y promete que nada se pierde", () => {
-    expect(MENSAJE_TOPE_RENARRACION).toContain("limite de relecturas");
+    expect(MENSAJE_TOPE_RENARRACION).toContain("límite de relecturas");
     expect(MENSAJE_TOPE_RENARRACION).toContain("quedan guardados");
   });
 });

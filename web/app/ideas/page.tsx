@@ -68,7 +68,7 @@ export default async function MisIdeas() {
         {saldo !== null && (
           <Link
             href="/potenciadores"
-            className="inline-flex shrink-0 items-center rounded-full border border-accent/40 px-3 py-1 text-[12px] font-semibold text-accent hover:border-accent/70"
+            className={`inline-flex shrink-0 items-center rounded-full border px-3 py-1 text-[12px] font-semibold ${saldo === 0 ? "border-hairline text-dim hover:border-white/25" : "border-accent/40 text-accent hover:border-accent/70"}`}
             title="Tus créditos"
           >
             {saldo} {saldo === 1 ? "crédito" : "créditos"}

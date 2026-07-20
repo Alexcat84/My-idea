@@ -208,7 +208,7 @@ export function construirPalancas(
       modo,
       bloqueada: true,
       razonBloqueo:
-        "Con el margen en rojo, el volumen agranda la perdida. Primero arregla el margen; cuando este en verde, aqui va cuantas unidades al mes necesitas para tu meta.",
+        "Con el margen en rojo, el volumen agranda la pérdida. Primero arregla el margen; cuando esté en verde, aquí va cuántas unidades al mes necesitas para tu meta.",
       meta: null,
       actual: null,
       recomendada: false,

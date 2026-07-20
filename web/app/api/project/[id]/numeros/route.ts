@@ -294,7 +294,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let mensaje: string | null = null;
   if (body.narrar === true) {
     if (tablero.gigo.inconsistente) {
-      mensaje = "No narro una conclusion con estos datos: revisa el guardian de datos y corrige la cifra que no cuadra.";
+      mensaje = "No narro una conclusión con estos datos: revisa el guardián de datos y corrige la cifra que no cuadra.";
     } else {
       const hoy = await contarNarracionesHoy(supabase, projectId);
       if (hoy >= TOPE_RENARRACION_DIA) {
