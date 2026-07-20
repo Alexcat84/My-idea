@@ -181,10 +181,21 @@ async function main() {
     check("I. borrar MI idea: se va con su cascada; la ajena queda intacta", borrarMia.status === 200 && !quedaP && (quedaS ?? []).length === 0 && !!quedaAjena, { status: borrarMia.status, quedaP, quedaS, quedaAjena });
 
     // ── J. Candado: 5 fallos -> 423 ─────────────────────────────────────
+    // Adivinar MAL contra un codigo VIGENTE (sin codigo vigente la ruta da
+    // 400 "pide uno nuevo" y no cuenta como intento, igual que el I Ching).
+    // OJO contable: el rescate repetido del paso E ya dejo UN fallo en la
+    // ventana de 15 min, asi que el candado cae al llegar a 5 acumulados
+    // (4 de aqui + 1 de E), no a 5 de este loop. Eso es lo correcto.
     const s5 = await autenticarCon(emailV, password);
-    for (let i = 0; i < 5; i += 1) await post(s5, "/api/cuenta/2fa/desafio", { emailCode: "000000" });
-    const bloqueado = await post(s5, "/api/cuenta/2fa/desafio", { emailCode: "000000" });
-    check("J. tras 5 fallos, candado 423", bloqueado.status === 423, bloqueado);
+    await sembrarCodigoEmail(V, "777777");
+    let fallos401 = 0;
+    let candados423 = 0;
+    for (let i = 0; i < 6; i += 1) {
+      const intento = await post(s5, "/api/cuenta/2fa/desafio", { emailCode: "000000" });
+      if (intento.status === 401) fallos401 += 1;
+      if (intento.status === 423) candados423 += 1;
+    }
+    check("J. los fallos acumulan (401) y el candado cae en 423 al llegar a 5", fallos401 >= 3 && candados423 >= 1 && fallos401 + candados423 === 6, { fallos401, candados423 });
 
     // ── K. Borrar la cuenta ─────────────────────────────────────────────
     const { error: eCortesia } = await admin.rpc("otorgar_cortesia", { p_user_id: V });
