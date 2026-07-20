@@ -130,7 +130,41 @@ Decisión del fundador: el login ofrece Google además del código (réplica de
 la lógica del I Ching, con allowlist post-auth y adopción del anónimo en
 `/auth/callback`). El canon `15_login.html` NO lo contempla — el botón se
 implementó con los tokens de la casa (glifo oficial, borde hairline, divisor
-"o"). **Implementado, vara pendiente de Design (encargo lote 4).**
+"o"). ~~Implementado, vara pendiente de Design (encargo lote 4).~~
+**Resuelto: lote 4 adoptado (abajo).**
+
+## Lote 4 adoptado (2026-07-19): el canon queda en 24 pantallas
+
+La entrega `entrega-lote4-beta` se adoptó completa: acentos LIMPIO (canon a
+1360 tildes, cero faltas), precios exactos citando `precios.ts` (packs
+5/$4.99 · 15/$14.99 · 30/$29.99, costos 2/3/5, cortesía 20), 32
+`data-screen-label` únicos y disjuntos.
+
+| Pieza | Vara nueva |
+|---|---|
+| Centro de cuenta (/cuenta), 8 estados incl. candado 423 y activada-correo | `23_centro_de_cuenta.html` |
+| Desafío del login (app / correo / rescate) | `24_desafio_dos_pasos.html` |
+| Login con Google + no-invitado de dos puertas | `15_login.html` v2 (v1 en `_archivo/lote3-beta/`) |
+| Potenciadores con catálogo decidido + tabla de costos | `07_potenciadores_y_creditos.html` v3 (v2 archivada) |
+
+Hallazgos de Design (HALLAZGOS_PILA_3 del lote 4) adjudicados:
+- **H1 (dígitos sin tilde) y H2 (13 X)**: falsos positivos de lectura del
+  PNG — el fuente tiene la tilde y el placeholder tiene 12 X exactas (el
+  acento de la í a 13px parece punto; el letter-spacing engaña el conteo).
+- **H3 (colisión móvil al confirmar borrado)**: real, corregido — la
+  confirmación baja a su propia línea en 380 (`w-full` + `flex-wrap`).
+- **H4 (guion largo del no-invitado)**: real, corregido con el copy del
+  canon 15 v2, que además muestra el correo intentado (el callback de
+  Google ahora lo devuelve en `?correo=`).
+- **H5 (My idea vs My Idea)**: real — /ideas y /cuenta decían "My idea";
+  unificado a "My Idea" (la grafía del canon).
+- **H6 (escenarios con nombres inventados en 07)**: real — el blurb decía
+  "prudente, esperado y optimista"; el tablero real dice Pesimista /
+  A capacidad plena. Corregido al copy del canon ("ventas" incluido).
+- **H7 (piezas del 07 ausentes en la app)**: real — la app estaba DETRÁS
+  de la vara del lote 3: se añadieron la tabla "Lo que cuesta cada cosa"
+  (leyendo de precios.ts), el chip verde "cortesía de bienvenida" y el chip
+  de mundos "Explóralo gratis" con su pie "El preview es gratis · su plan".
 
 ## Decisiones pendientes (no las toma la FASE B)
 

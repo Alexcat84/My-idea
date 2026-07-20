@@ -370,14 +370,17 @@ export function CuentaCliente({
           <p className="text-sm text-dim">No tienes ideas guardadas.</p>
         ) : (
           <ul className="flex flex-col gap-2.5">
+            {/* flex-wrap + w-full en la confirmación: en 380 baja a su propia
+                línea bajo el nombre (canon 23, hallazgo H3 del lote 4); el
+                título de la idea jamás se tapa. */}
             {ideas.map((idea) => (
-              <li key={idea.id} className="flex items-center gap-3 rounded-cinta border border-hairline px-4 py-3">
+              <li key={idea.id} className="flex flex-wrap items-center gap-3 rounded-cinta border border-hairline px-4 py-3">
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-[14px] font-medium">{idea.nombre}</p>
                   <p className="text-xs text-dim">{idea.fecha}</p>
                 </div>
                 {confirmandoIdea === idea.id ? (
-                  <span className="flex shrink-0 items-center gap-2">
+                  <span className="flex w-full shrink-0 items-center justify-end gap-2 sm:w-auto">
                     <span className="text-xs text-warn">¿Borrarla para siempre?</span>
                     <button
                       onClick={() => borrarIdea(idea.id)}

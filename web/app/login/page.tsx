@@ -291,12 +291,16 @@ function LoginForm() {
   }
 
   if (estado.fase === "no_invitado") {
+    // Canon 15 v2: el correo intentado a la vista (el dato accionable), la
+    // lista es una para las dos puertas, y cero guiones largos (ley de voz).
+    const correoIntentado = email || searchParams.get("correo") || "";
     return (
       <div className="text-center">
         <p className="text-lg">My Idea está en beta privada.</p>
+        {correoIntentado && <p className="mt-3 font-semibold">{correoIntentado}</p>}
         <p className="mt-3 text-sm text-dim">
-          Ese correo aún no está en la lista de invitados. Si crees que debería estarlo, escríbele a
-          quien te compartió el enlace — guardamos tu lugar con gusto.
+          Ese correo aún no está en la lista de invitados, entres con tu código o con Google: la lista
+          es la misma. Si alguien te invitó, pídele que confirme el correo que registró.
         </p>
         <button
           onClick={() => setEstado({ fase: "form" })}

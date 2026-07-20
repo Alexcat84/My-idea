@@ -63,6 +63,11 @@ export default async function Potenciadores() {
               <div className="mt-1.5 text-[13px] text-dim">
                 {cuentaReal ? "créditos disponibles" : "tus créditos nacen con tu cuenta"}
               </div>
+              {cuentaReal && (
+                <span className="mt-2 inline-flex items-center rounded-full border border-done/40 px-2.5 py-1 text-[11.5px] font-semibold text-done">
+                  cortesía de bienvenida
+                </span>
+              )}
               <p className="mt-3 text-[12.5px] leading-relaxed text-dim">
                 Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra
                 nada.
@@ -93,8 +98,36 @@ export default async function Potenciadores() {
           <p className="mt-4 rounded-cinta border border-hairline bg-surface-2 px-4 py-3 text-[12.5px] leading-relaxed text-dim">
             <strong className="text-ink">Un crédito es un dólar, siempre.</strong> Los packs no esconden descuentos: se
             dimensionan por lo que compras con ellos. La compra con dinero se abre muy pronto; durante la beta trabajas
-            con tus créditos de cortesía.
+            con tu cortesía de bienvenida.
           </p>
+        </section>
+
+        {/* ── LO QUE CUESTA CADA COSA (canon 07 v3; los números salen de
+            precios.ts, jamás hardcodeados) ─────────────────────────────── */}
+        <section className="anima-plan-in" style={{ animationDelay: "0.05s" }}>
+          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Lo que cuesta cada cosa</p>
+          <div className="mt-4 overflow-hidden rounded-panel border border-hairline bg-surface">
+            {[
+              { que: "El organizador (Claridad)", detalle: "tu idea ordenada: frase, lo que tienes, lo que asumes", precio: null },
+              { que: "La Exploración", detalle: "la entrevista y tu plan completo", precio: PRECIOS.plan_completo },
+              { que: "El plan de un mundo", detalle: "el preview (entrevista + diagnóstico) es gratis", precio: PRECIOS.mundo_activar },
+              { que: "Seguimiento del viaje principal", detalle: "contar qué pasó y recalcular tu plan desde donde estás", precio: PRECIOS.seguimiento },
+              { que: "Seguimiento de un mundo", detalle: "contar qué pasó en su checklist", precio: PRECIOS.mundo_seguimiento },
+              { que: "Tus Números", detalle: "una vez por idea; corregir cifras y recalcular es gratis, siempre", precio: PRECIOS.tus_numeros },
+              { que: "Registrar tu avance", detalle: "marcar hecho, notas, progreso", precio: null },
+            ].map((fila, i) => (
+              <div
+                key={fila.que}
+                className={`flex flex-wrap items-baseline gap-x-4 gap-y-1 px-5 py-3.5 sm:flex-nowrap ${i > 0 ? "border-t border-hairline" : ""}`}
+              >
+                <span className="text-[13.5px] font-semibold">{fila.que}</span>
+                <span className="min-w-0 flex-1 text-[12.5px] text-dim">{fila.detalle}</span>
+                <span className={`shrink-0 text-[12.5px] font-semibold ${fila.precio === null ? "text-done" : "text-accent"}`}>
+                  {fila.precio === null ? "Gratis, siempre" : `${fila.precio} créditos`}
+                </span>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* ── FILA DE POTENCIADORES ──────────────────────────────────────── */}
@@ -132,12 +165,14 @@ export default async function Potenciadores() {
                 <div className="flex items-center justify-between">
                   <span className="h-2.5 w-2.5 rounded-full" style={{ background: PUNTO_MUNDO }} aria-hidden />
                   <span className="rounded-full border border-accent/40 px-2.5 py-1 text-[11.5px] font-semibold text-accent">
-                    Preview gratis
+                    Explóralo gratis
                   </span>
                 </div>
                 <span className="text-[15px] font-semibold">{m.nombre}</span>
                 <p className="text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">{m.promesa}</p>
-                <span className="mt-auto pt-1 text-[12.5px] text-dim">Su plan: {PRECIOS.mundo_activar} créditos</span>
+                <span className="mt-auto pt-1 text-[12.5px] text-dim">
+                  El preview es gratis · su plan: {PRECIOS.mundo_activar} créditos
+                </span>
               </div>
             ))}
           </div>
@@ -153,8 +188,8 @@ export default async function Potenciadores() {
           <div className="mt-5 grid gap-3.5 sm:grid-cols-3">
             {[
               { num: "170", etq: "margen por unidad, con tu costo de 180 y tu precio de 350" },
-              { num: "8", etq: "unidades al mes para cubrir tus 1.200 de gasto fijo declarado" },
-              { num: "3", etq: "escenarios: prudente, esperado y optimista, sobre tus mismas cifras" },
+              { num: "8", etq: "ventas al mes para cubrir tus 1.200 de gasto fijo declarado" },
+              { num: "3", etq: "escenarios sobre tus mismas cifras: pesimista y a capacidad plena" },
             ].map((c) => (
               <div key={c.etq} className="rounded-cinta border border-hairline px-5 py-4">
                 <div className="text-[26px] font-extrabold tracking-tight">{c.num}</div>

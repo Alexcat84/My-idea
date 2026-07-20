@@ -47,7 +47,7 @@ export default async function Cuenta() {
     <div className="flex min-h-full flex-1 flex-col">
       <header className="flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6">
         <Link href="/ideas" className="text-base font-extrabold tracking-tight">
-          My <span className="text-accent">idea</span>
+          My <span className="text-accent">Idea</span>
         </Link>
         <span className="flex-1" />
         <Link

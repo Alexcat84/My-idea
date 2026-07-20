@@ -76,7 +76,11 @@ export async function GET(request: Request) {
         console.error(`[google] no se pudo restaurar la identidad invisible; proyectos bajo ${anonId}:`, e);
       }
     }
-    return NextResponse.redirect(new URL("/login?google=no-invitado", url.origin));
+    // El correo viaja de vuelta: la pantalla amable muestra QUÉ correo no
+    // está en la lista (canon 15 v2: el dato accionable).
+    return NextResponse.redirect(
+      new URL(`/login?google=no-invitado&correo=${encodeURIComponent(email)}`, url.origin)
+    );
   }
 
   await bienvenidaTrasLogin(real, anonId);
