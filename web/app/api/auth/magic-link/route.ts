@@ -11,7 +11,7 @@
  * emailRedirectTo se conserva solo para el camino legacy de /auth/confirm).
  */
 import { NextResponse } from "next/server";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { estaEnAllowlist } from "@/lib/cuentas";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
@@ -28,13 +28,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "escribe un correo valido" }, { status: 400 });
   }
 
-  const admin = createAdminClient();
-  const { data: invitado, error: errorAllowlist } = await admin
-    .from("beta_allowlist")
-    .select("email")
-    .eq("email", email)
-    .maybeSingle();
-  if (errorAllowlist) {
+  let invitado: boolean;
+  try {
+    invitado = await estaEnAllowlist(email);
+  } catch {
     return NextResponse.json(
       { error: "algo se atoro de nuestro lado; intenta de nuevo en un momento" },
       { status: 500 }

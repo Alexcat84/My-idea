@@ -124,6 +124,14 @@ y palancas), chip en cero ahora gris, wordmark bicolor en el login. El
 adopción cazó un falso positivo del detector de acentos (verbos en -cionó) y
 lo corrigió con test.
 
+### Estado-sin-vara nuevo: el botón "Continuar con Google" (2026-07-19)
+
+Decisión del fundador: el login ofrece Google además del código (réplica de
+la lógica del I Ching, con allowlist post-auth y adopción del anónimo en
+`/auth/callback`). El canon `15_login.html` NO lo contempla — el botón se
+implementó con los tokens de la casa (glifo oficial, borde hairline, divisor
+"o"). **Implementado, vara pendiente de Design (encargo lote 4).**
+
 ## Decisiones pendientes (no las toma la FASE B)
 
 - **Catálogo de packs del centro de créditos (07):** `precios.ts` **no** define bundles de

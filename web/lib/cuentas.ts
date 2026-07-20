@@ -19,6 +19,25 @@ import { esInvitadoInvisible } from "./identidad";
 import { createAdminClient } from "./supabase/admin";
 
 /**
+ * ¿Este correo está invitado a la beta? (beta_allowlist, migración 008, solo
+ * legible con service role). Compartido por el envío del código (que filtra
+ * ANTES de mandar el correo) y por el callback de Google (que solo puede
+ * filtrar DESPUÉS de autenticar, porque el email se conoce al volver).
+ * Lanza si la consulta falla: un error de infraestructura jamás debe leerse
+ * como "no invitado".
+ */
+export async function estaEnAllowlist(email: string): Promise<boolean> {
+  const admin = createAdminClient();
+  const { data, error } = await admin
+    .from("beta_allowlist")
+    .select("email")
+    .eq("email", email.trim().toLowerCase())
+    .maybeSingle();
+  if (error) throw error;
+  return data !== null;
+}
+
+/**
  * Los dos actos de la bienvenida tras un login exitoso (compartidos por el
  * código de verificación y el enlace legacy):
  * 1. CORTESÍA: 20 créditos al primer login (otorgar_cortesia es una-sola-vez
