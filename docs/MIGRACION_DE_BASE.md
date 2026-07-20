@@ -150,6 +150,49 @@ lo necesites; no intentes un pg_dump a mano.
    - /potenciadores: packs 5/15/30 con sus precios.
 3. Smoke en un preview de staging: sigue funcionando contra la base vieja.
 
+## Checklist de identidad del proyecto NUEVO (adición del auditor)
+
+La configuración de hoy vive en el proyecto que será staging y **se replica,
+no se mueve**: nada de lo de abajo se quita del proyecto viejo. Marcar cada
+casilla en el proyecto NUEVO antes de tocar Vercel:
+
+**Google Cloud Console** (proyecto `my-idea-503000`):
+- [ ] Redirect URI del Supabase nuevo AÑADIDA (no reemplazada):
+      `https://<REF-NUEVO>.supabase.co/auth/v1/callback`
+
+**Supabase NUEVO → Authentication:**
+- [ ] Email provider activado
+- [ ] **Anonymous sign-ins activado** (la identidad invisible del proxy)
+- [ ] Google provider activado con Client ID + Secret (los del `.env`)
+- [ ] SMTP Resend configurado (smtp.resend.com:465, user `resend`,
+      pass = `RESEND_API_KEY`, remitente `no-reply@myideaproject.com`)
+- [ ] Template Magic Link con **`{{ .Token }}`** (copiado de staging tal cual)
+- [ ] Rate limit de emails subido (no el default 2/hora)
+- [ ] Site URL: `https://www.myideaproject.com`
+- [ ] Redirect URLs: `/auth/confirm` y `/auth/callback` en www y apex (4)
+
+**Vercel → Environment Variables → Production (inventario COMPLETO tras la
+migración — verificar una por una, ninguna puede faltar):**
+
+| Variable | Valor en Production |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | del proyecto NUEVO |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | del proyecto NUEVO |
+| `SUPABASE_URL` | del proyecto NUEVO |
+| `SUPABASE_ANON_KEY` | del proyecto NUEVO |
+| `SUPABASE_SERVICE_ROLE_KEY` | del proyecto NUEVO |
+| `ANTHROPIC_API_KEY` | sin cambio |
+| `VOYAGE_API_KEY` | sin cambio |
+| `UPSTASH_REDIS_REST_URL` / `_TOKEN` | sin cambio (los de producción) |
+| `RATE_LIMIT_POR` | `usuario` (sin cambio) |
+| `RESEND_API_KEY` | sin cambio (el 2FA por correo la lee) |
+| `TOTP_ENCRYPTION_KEY` | **sin cambio y JAMÁS rotada** (descifra los secretos 2FA) |
+| `TWO_FACTOR_EMAIL_CODE_SECRET` | sin cambio |
+| `TWO_FACTOR_EMAIL_FROM` | `My Idea <no-reply@myideaproject.com>` (sin cambio) |
+
+**Semillas del NUEVO:** `beta_allowlist` con tu email (+ invitados) — sin
+esta fila, ni el código ni Google te dejan entrar.
+
 ## Rollback (si algo sale mal)
 
 Vercel → las cinco variables de Production de vuelta a los valores viejos →
