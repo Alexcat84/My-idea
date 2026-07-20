@@ -122,6 +122,15 @@ async function main() {
     const gateCerrado = await post(s2, "/api/session/start", { texto: "quiero vender velas artesanales en mi barrio" });
     check("D. sesion nueva sin desafio: el motor pagado da 403", gateCerrado.status === 403 && gateCerrado.json.segundo_factor_requerido === true, gateCerrado);
 
+    // El bypass que cazó el review de seguridad: una sesión con solo el
+    // primer factor NO puede reemplazar el candado (re-enrolar TOTP ni
+    // cambiar el método a correo).
+    const reEnroll = await post(s2, "/api/cuenta/2fa/enroll");
+    check("D. sesion sin desafio NO re-enrola TOTP (403)", reEnroll.status === 403 && reEnroll.json.segundo_factor_requerido === true, reEnroll);
+    await sembrarCodigoEmail(V, "999999");
+    const cambioMetodo = await post(s2, "/api/cuenta/2fa/email/verificar", { code: "999999" });
+    check("D. sesion sin desafio NO cambia el metodo a correo (403)", cambioMetodo.status === 403, cambioMetodo);
+
     const desafioRescate = await post(s2, "/api/cuenta/2fa/desafio", { recoveryCode: rescates[0] });
     check("D. el desafio con codigo de rescate abre la sesion", desafioRescate.status === 200, desafioRescate);
     const gateAbierto = await post(s2, "/api/session/start", { texto: "quiero vender velas artesanales en mi barrio" });

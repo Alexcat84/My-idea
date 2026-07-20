@@ -15,7 +15,9 @@ import {
   verifyTotpTokenWithReplayGuard,
 } from "@/lib/dosFactores";
 import {
+  AVISO_2FA,
   candado2FAActivo,
+  desafioSuperadoEnSesion,
   estadoSeguridad,
   ipDelRequest,
   normalizarCodigo,
@@ -47,6 +49,11 @@ export async function POST(request: Request) {
   }
 
   const estado = await estadoSeguridad(userId);
+  // Con 2FA ya activo, activar un secreto NUEVO = reemplazar el candado:
+  // exige el desafío superado en esta sesión (review de seguridad).
+  if (estado.habilitado && !(await desafioSuperadoEnSesion(userId, sesion.sessionId))) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
+  }
   if (!estado.totpSecret) {
     return NextResponse.json({ error: "primero genera tu código QR (paso anterior)" }, { status: 400 });
   }

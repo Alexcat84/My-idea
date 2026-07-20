@@ -9,7 +9,10 @@
 import { NextResponse } from "next/server";
 import { generateRecoveryCodes, hashEmailCode, hashRecoveryCodes } from "@/lib/dosFactores";
 import {
+  AVISO_2FA,
   candado2FAActivo,
+  desafioSuperadoEnSesion,
+  estadoSeguridad,
   ipDelRequest,
   normalizarCodigo,
   registrarIntento2FA,
@@ -42,6 +45,14 @@ export async function POST(request: Request) {
       { error: "Demasiados intentos. Espera 15 minutos y vuelve a intentar." },
       { status: 423 }
     );
+  }
+
+  // Esta ruta es el ALTA del método email (el desafío del login usa
+  // /2fa/desafio). Con 2FA ya activo, cambiar el método = reemplazar el
+  // candado: exige el desafío superado (review de seguridad del commit).
+  const previo = await estadoSeguridad(userId);
+  if (previo.habilitado && !(await desafioSuperadoEnSesion(userId, sesion.sessionId))) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
   }
 
   const codeSecret = process.env.TWO_FACTOR_EMAIL_CODE_SECRET?.trim();

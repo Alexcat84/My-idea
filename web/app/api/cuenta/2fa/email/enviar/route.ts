@@ -9,7 +9,13 @@
 import { NextResponse } from "next/server";
 import { createSixDigitCode, EMAIL_CODE_TTL_MINUTES, hashEmailCode } from "@/lib/dosFactores";
 import { limitarPorClave } from "@/lib/rateLimit";
-import { ipDelRequest, sesionRealDeCookies } from "@/lib/seguridad";
+import {
+  AVISO_2FA,
+  desafioSuperadoEnSesion,
+  estadoSeguridad,
+  ipDelRequest,
+  sesionRealDeCookies,
+} from "@/lib/seguridad";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 async function enviarPorResend(params: {
@@ -50,6 +56,19 @@ export async function POST(request: Request) {
   }
   const userId = sesion.user.id;
   const ip = ipDelRequest(request);
+
+  // Cuando el método vigente ES correo, enviar el código es el CAMINO del
+  // desafío (el login lo necesita): se permite siempre. Lo que se cierra es
+  // que la sesión sin desafío de un usuario TOTP inicie un cambio de método
+  // (review de seguridad del commit: re-enrolar = reemplazar el candado).
+  const previo = await estadoSeguridad(userId);
+  if (
+    previo.habilitado &&
+    previo.metodo !== "email" &&
+    !(await desafioSuperadoEnSesion(userId, sesion.sessionId))
+  ) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
+  }
 
   const porUsuario = await limitarPorClave(`2fa_email:user:${userId}`, 600, 5);
   if (!porUsuario.permitido) {

@@ -7,13 +7,26 @@
  */
 import { NextResponse } from "next/server";
 import { createTotpEnrollment, encryptTotpSecret } from "@/lib/dosFactores";
-import { sesionRealDeCookies } from "@/lib/seguridad";
+import {
+  AVISO_2FA,
+  desafioSuperadoEnSesion,
+  estadoSeguridad,
+  sesionRealDeCookies,
+} from "@/lib/seguridad";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function POST() {
   const sesion = await sesionRealDeCookies();
   if (!sesion || !sesion.user.email) {
     return NextResponse.json({ error: "necesitas tu cuenta para configurar la seguridad" }, { status: 401 });
+  }
+  // Con 2FA ya activo, RE-enrolar (cambiar el secreto o el método) es tan
+  // sensible como desactivar: una sesión con solo el primer factor podría
+  // reemplazar el candado en vez de abrirlo. Exige el desafío superado
+  // (hallazgo del review de seguridad del commit).
+  const previo = await estadoSeguridad(sesion.user.id);
+  if (previo.habilitado && !(await desafioSuperadoEnSesion(sesion.user.id, sesion.sessionId))) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
   }
   const encryptionKey = process.env.TOTP_ENCRYPTION_KEY;
   if (!encryptionKey || encryptionKey.length < 32) {
