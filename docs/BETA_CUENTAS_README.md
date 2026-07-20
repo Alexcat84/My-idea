@@ -8,10 +8,18 @@ La beta corre 100% con cortesía (20 créditos por invitado); **ninguna pasarela
 
 - **Libre sin login:** la web pública y el ORGANIZADOR (el gancho). La identidad
   invisible sigue existiendo solo para eso.
-- **El login nace en "Iniciar La Exploración"**: magic link + allowlist (3.2).
-  Al confirmar: los proyectos del anónimo se **adoptan** (la cookie del propio
-  request es la prueba de posesión) y la cuenta recibe su **cortesía: 20
-  créditos, una sola vez** (`beta_courtesy_log`).
+- **El login nace en "Iniciar La Exploración"**: código de 6 dígitos o Google
+  + allowlist (3.2). Al confirmar: los proyectos del anónimo se **adoptan**
+  (la cookie del propio request es la prueba de posesión) y la cuenta recibe
+  su **cortesía: 20 créditos, una sola vez** (`beta_courtesy_log`).
+  - **Gobierno de la cortesía (aclaración del fundador, 2026-07-20):**
+    `CORTESIA_BETA = 20` es la política de la **beta cerrada** (solo
+    invitados de `beta_allowlist`), **no** la cortesía de bienvenida del
+    lanzamiento público. Esa es **decisión pendiente** del fundador
+    (candidata preliminar: organizador gratis + 5 créditos = un plan
+    completo; se calibra con la telemetría de esta beta). Ver
+    `docs/MATRIZ_DELTAS_CANON_2.0.md` ("Decisiones pendientes") y el
+    comentario junto a la constante en `web/lib/creditos.ts`.
 - **Cobros (verificar-al-inicio / descontar-A-LA-ENTREGA, idempotentes):**
 
   | Unidad | Verifica | Cobra a la entrega | Créditos |
@@ -42,6 +50,24 @@ ON CONFLICT (email) DO NOTHING;
 
 Quien no está en la lista recibe en el login: "Ese correo aún no está en la
 lista de invitados…" (200 amable, jamás un error técnico).
+
+**Cerrar el grifo de la cortesía (`CORTESIA_BETA`, ver §1.b abajo) es una
+operación de datos, no de código**, y las dos puertas de entrada la
+respetan por igual: el código verifica la allowlist ANTES de mandar el correo
+(`api/auth/magic-link`) y Google la verifica DESPUÉS de autenticar, antes de
+otorgar nada (`auth/callback`) — ninguna de las dos llega a
+`otorgarCortesia` sin pasar por `estaEnAllowlist` primero. Dos formas de
+cerrar, con efectos distintos:
+
+- **Dejar de invitar** (no insertar filas nuevas): la forma quirúrgica. Los
+  invitados ya sembrados siguen entrando con su cuenta de siempre (y no
+  reciben una segunda cortesía: `beta_courtesy_log` es una-sola-vez por
+  cuenta, para siempre). Nadie NUEVO puede crear cuenta ni recibir los 20.
+- **`TRUNCATE public.beta_allowlist;`** (o `DELETE FROM ... WHERE true`): la
+  forma total. Cierra la cortesía Y bloquea el reingreso de TODOS,
+  incluidos los invitados de siempre (ambas rutas vuelven a fallar el
+  chequeo en cada intento, no solo en el primero). Úsala solo si de verdad
+  quieres cerrar la puerta completa, no solo el grifo de bienvenida.
 
 ### b) Entrar por primera vez
 

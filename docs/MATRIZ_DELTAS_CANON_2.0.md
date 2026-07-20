@@ -168,12 +168,20 @@ Hallazgos de Design (HALLAZGOS_PILA_3 del lote 4) adjudicados:
 
 ## Decisiones pendientes (no las toma la FASE B)
 
-- **Catálogo de packs del centro de créditos (07):** `precios.ts` **no** define bundles de
-  compra (solo precios por concepto; `packs_catalog.json` es de mundos, no de bundles). Hoy
-  hay 5/12/30 hardcodeados en `/potenciadores` y el dibujo de Design propone 10/30/75.
-  **Ninguno está autorizado.** La FASE B **no** alinea al dibujo (eso repetiría el drift de
-  precios): implementa la pantalla leyendo de `precios.ts`, con `$ —` deshabilitado donde falte
-  definición. **El fundador decide el catálogo en la ETAPA 2** (frente cuentas-y-créditos).
+- ~~**Catálogo de packs del centro de créditos (07)**: decisión pendiente del fundador.~~
+  **Resuelto (2026-07-19)**: packs 5/$4.99 · 15/$14.99 · 30/$29.99 en `precios.ts` (`PACKS`),
+  1 crédito = 1 USD invariable, sin descuento por volumen. Ver "Lote 4 adoptado" arriba.
+
+- **La cortesía del lanzamiento público (post-beta): DECISIÓN PENDIENTE del fundador**
+  (aclaración de gobierno, 2026-07-20). `CORTESIA_BETA = 20` (`web/lib/creditos.ts`) es la
+  política de la **BETA CERRADA** (solo invitados de `beta_allowlist`), **no** la política de
+  bienvenida del usuario nuevo tras el lanzamiento público. Confundir ambas sería autorizar por
+  omisión un monto que nadie decidió para producción. Candidata preliminar del fundador (no
+  autorizada): organizador gratis + 5 créditos de bienvenida = exactamente el costo de un plan
+  completo (`PRECIOS.plan_completo`); se calibra con la telemetría real de esta beta antes de
+  fijarse. Mientras no haya decisión, el código de producción no otorga cortesía a nadie fuera
+  de la allowlist (la frontera de la beta sigue siendo la puerta). Ver
+  `docs/BANCO_DE_TEXTOS.md` para el copy vigente y esta fila para el estado de la decisión.
 
 ## Mapa gate → canon
 
