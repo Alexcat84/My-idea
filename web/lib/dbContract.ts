@@ -70,3 +70,9 @@ export type ModoCamino = (typeof MODO_CAMINO)[number];
  * 'manual' = fecha puesta a mano sin que hubiera sugerencia previa. */
 export const FECHA_BASE_ORIGEN = ["sugerida", "ajustada", "manual"] as const;
 export type FechaBaseOrigen = (typeof FECHA_BASE_ORIGEN)[number];
+
+/** user_seguridad.two_factor_method (migración 029, centro de cuenta): el
+ * método del segundo factor. null = 2FA sin configurar. Réplica del I Ching
+ * sin 'sms' (no tenemos SMS). */
+export const METODO_2FA = ["totp", "email"] as const;
+export type Metodo2FA = (typeof METODO_2FA)[number];

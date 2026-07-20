@@ -18,6 +18,7 @@
 import { NextResponse } from "next/server";
 import { bienvenidaTrasLogin, adoptarProyectosDeUsuario, estaEnAllowlist } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
@@ -79,5 +80,20 @@ export async function GET(request: Request) {
   }
 
   await bienvenidaTrasLogin(real, anonId);
+
+  // Centro de cuenta: con 2FA activo, el login sigue con el desafío en la
+  // pantalla de login (la sesión ya existe; el motor pagado queda gateado
+  // hasta superar el desafío).
+  try {
+    const seguridad = await estadoSeguridad(real.id);
+    if (seguridad.habilitado) {
+      return NextResponse.redirect(
+        new URL(`/login?desafio=1&metodo=${seguridad.metodo ?? "totp"}`, url.origin)
+      );
+    }
+  } catch (e) {
+    console.error("[google] no se pudo leer user_seguridad:", e);
+  }
+
   return NextResponse.redirect(new URL("/ideas", url.origin));
 }

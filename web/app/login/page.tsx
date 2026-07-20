@@ -9,12 +9,13 @@
  * (el correo lo trae vía Resend; el usuario lo escribe aquí). El enlace
  * mágico quedó obsoleto: sin redirects frágiles ni enlaces que caducan.
  */
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 type Estado =
   | { fase: "form"; error?: string }
   | { fase: "codigo"; email: string; error?: string }
+  | { fase: "desafio"; metodo: "totp" | "email"; rescate: boolean; aviso?: string; error?: string }
   | { fase: "no_invitado" };
 
 /** El glifo oficial de Google (mismo trazado que usa el I Ching). */
@@ -35,13 +36,42 @@ function LoginForm() {
   const enlaceVencido = searchParams.get("enlace") === "vencido";
   const googleFallo = searchParams.get("google") === "fallo";
   // Si Google devolvió un correo que no está invitado, el callback vuelve
-  // aquí con ?google=no-invitado: se abre directo la pantalla amable.
-  const [estado, setEstado] = useState<Estado>(() =>
-    searchParams.get("google") === "no-invitado" ? { fase: "no_invitado" } : { fase: "form" }
-  );
+  // aquí con ?google=no-invitado: se abre directo la pantalla amable. Con
+  // ?desafio=1 (2FA activo), se abre directo el segundo paso.
+  const [estado, setEstado] = useState<Estado>(() => {
+    if (searchParams.get("google") === "no-invitado") return { fase: "no_invitado" };
+    if (searchParams.get("desafio") === "1") {
+      return { fase: "desafio", metodo: searchParams.get("metodo") === "email" ? "email" : "totp", rescate: false };
+    }
+    return { fase: "form" };
+  });
   const [email, setEmail] = useState("");
   const [codigo, setCodigo] = useState("");
+  const [codigoRescate, setCodigoRescate] = useState("");
   const [enviando, setEnviando] = useState(false);
+
+  // Método email del 2FA: al entrar al desafío se envía el código UNA vez
+  // (el botón "Reenviarme el código" cubre los reintentos).
+  const emailDesafioEnviado = useRef(false);
+  useEffect(() => {
+    if (estado.fase !== "desafio" || estado.metodo !== "email" || estado.rescate) return;
+    if (emailDesafioEnviado.current) return;
+    emailDesafioEnviado.current = true;
+    fetch("/api/cuenta/2fa/email/enviar", { method: "POST" })
+      .then(async (r) => {
+        const d = await r.json().catch(() => ({}));
+        setEstado((e) =>
+          e.fase === "desafio"
+            ? r.ok
+              ? { ...e, aviso: "Te enviamos un código a tu correo." }
+              : { ...e, error: d.error ?? "no pudimos enviar el código; intenta de nuevo" }
+            : e
+        );
+      })
+      .catch(() => {
+        setEstado((e) => (e.fase === "desafio" ? { ...e, error: "no pudimos conectar; intenta de nuevo" } : e));
+      });
+  }, [estado]);
 
   async function enviar(e: React.FormEvent) {
     e.preventDefault();
@@ -84,11 +114,64 @@ function LoginForm() {
         setEstado({ fase: "codigo", email: estado.email, error: data.error ?? "algo se atoró; intenta de nuevo" });
         return;
       }
+      // Con 2FA activo, el login sigue con el desafío del segundo factor.
+      if (data.requiere2FA) {
+        setCodigo("");
+        setEstado({ fase: "desafio", metodo: data.metodo === "email" ? "email" : "totp", rescate: false });
+        return;
+      }
       // Sesión creada (y la cortesía/adopción ya corrieron): a sus ideas.
       router.push("/ideas");
       router.refresh();
     } catch {
       setEstado({ fase: "codigo", email: estado.email, error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  async function resolverDesafio(e: React.FormEvent) {
+    e.preventDefault();
+    if (enviando || estado.fase !== "desafio") return;
+    setEnviando(true);
+    try {
+      const body = estado.rescate
+        ? { recoveryCode: codigoRescate.trim() }
+        : estado.metodo === "email"
+          ? { emailCode: codigo }
+          : { token: codigo };
+      const res = await fetch("/api/cuenta/2fa/desafio", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setEstado({ ...estado, error: data.error ?? "algo se atoró; intenta de nuevo" });
+        return;
+      }
+      router.push("/ideas");
+      router.refresh();
+    } catch {
+      setEstado({ ...estado, error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  async function reenviarCodigoDesafio() {
+    if (enviando || estado.fase !== "desafio") return;
+    setEnviando(true);
+    try {
+      const res = await fetch("/api/cuenta/2fa/email/enviar", { method: "POST" });
+      const data = await res.json().catch(() => ({}));
+      setEstado(
+        res.ok
+          ? { ...estado, aviso: "Código nuevo enviado a tu correo.", error: undefined }
+          : { ...estado, error: data.error ?? "no pudimos enviar el código; intenta de nuevo" }
+      );
+    } catch {
+      setEstado({ ...estado, error: "no pudimos conectar; intenta de nuevo" });
     } finally {
       setEnviando(false);
     }
@@ -128,6 +211,80 @@ function LoginForm() {
           className="text-sm text-dim hover:text-ink"
         >
           Pedir otro código o cambiar de correo
+        </button>
+      </form>
+    );
+  }
+
+  if (estado.fase === "desafio") {
+    const listo = estado.rescate ? codigoRescate.trim().length >= 6 : codigo.length === 6;
+    return (
+      <form onSubmit={resolverDesafio} className="flex w-full flex-col gap-3 text-center">
+        <p className="text-lg">Un paso más: tu verificación en dos pasos</p>
+        {estado.rescate ? (
+          <>
+            <p className="text-sm text-dim">Escribe uno de tus códigos de rescate.</p>
+            <label htmlFor="rescate" className="sr-only">
+              Código de rescate
+            </label>
+            <input
+              id="rescate"
+              autoFocus
+              required
+              maxLength={12}
+              placeholder="XXXXXXXXXXXX"
+              value={codigoRescate}
+              onChange={(e) => setCodigoRescate(e.target.value.toUpperCase().replace(/[^0-9A-F]/g, ""))}
+              className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-center font-mono text-xl tracking-[0.3em] text-ink placeholder:text-dim"
+            />
+          </>
+        ) : (
+          <>
+            <p className="text-sm text-dim">
+              {estado.metodo === "totp"
+                ? "Escribe el código de tu app de autenticación."
+                : (estado.aviso ?? "Te enviamos un código a tu correo.")}
+            </p>
+            <label htmlFor="desafio" className="sr-only">
+              Código de 6 dígitos
+            </label>
+            <input
+              id="desafio"
+              inputMode="numeric"
+              pattern="[0-9]{6}"
+              maxLength={6}
+              required
+              autoFocus
+              placeholder="······"
+              value={codigo}
+              onChange={(e) => setCodigo(e.target.value.replace(/\D/g, ""))}
+              className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-center text-2xl font-bold tracking-[0.5em] text-ink placeholder:text-dim"
+            />
+          </>
+        )}
+        {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
+        <button
+          type="submit"
+          disabled={enviando || !listo}
+          className="rounded-cinta bg-accent px-4 py-3 font-medium text-white hover:opacity-90 disabled:opacity-50"
+        >
+          {enviando ? "Verificando…" : "Verificar"}
+        </button>
+        {estado.metodo === "email" && !estado.rescate && (
+          <button type="button" onClick={reenviarCodigoDesafio} disabled={enviando} className="text-sm text-dim hover:text-ink">
+            Reenviarme el código
+          </button>
+        )}
+        <button
+          type="button"
+          onClick={() => {
+            setCodigo("");
+            setCodigoRescate("");
+            setEstado({ ...estado, rescate: !estado.rescate, error: undefined });
+          }}
+          className="text-sm text-dim hover:text-ink"
+        >
+          {estado.rescate ? "Volver al código normal" : "No tengo mi código: usar uno de rescate"}
         </button>
       </form>
     );

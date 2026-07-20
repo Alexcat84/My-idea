@@ -27,6 +27,13 @@ vi.mock("@/lib/creditos", async (importOriginal) => {
     otorgarCortesia: vi.fn(async () => 20),
   };
 });
+// El gate 2FA tiene su propia cobertura (dosFactores.test + el vuelo de
+// cuenta); aqui se abre para probar la logica de la ruta.
+vi.mock("@/lib/seguridad", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/seguridad")>()),
+  faltaSegundoFactor: async () => false,
+}));
+
 vi.mock("@/lib/supabase/server", () => ({
   createClient: vi.fn(async () => supabaseFalso),
 }));

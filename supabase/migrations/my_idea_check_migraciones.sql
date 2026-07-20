@@ -316,5 +316,38 @@ FROM (
       WHERE table_schema='public' AND table_name='project_unlocks' AND column_name='plan_pagado_at'
     )
 
+  UNION ALL
+  -- 029 · Centro de cuenta: user_seguridad (2FA) + recovery/attempts/email
+  -- codes + RPC de rotación atómica + huella de cortesía por email.
+  SELECT '029', 'user_seguridad + two_factor_* + reset_2fa_recovery_codes + cortesia_email_log',
+    EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='user_seguridad'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.check_constraints
+      WHERE constraint_schema='public' AND constraint_name='user_seguridad_two_factor_method_check'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='two_factor_recovery_codes'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='two_factor_attempts' AND column_name='session_id'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='two_factor_email_codes'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.routines
+      WHERE routine_schema='public' AND routine_name='reset_2fa_recovery_codes'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='cortesia_email_log'
+    )
+
 ) checks
 ORDER BY num;

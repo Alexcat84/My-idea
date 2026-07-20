@@ -40,6 +40,7 @@ import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import type { ChecklistEstado } from "@/lib/dbContract";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
@@ -93,6 +94,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // ETAPA 2 (la frontera): el seguimiento es motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
     return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
+  if (await faltaSegundoFactor()) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
