@@ -14,3 +14,16 @@ export const PRECIOS = {
 } as const;
 
 export type ConceptoPrecio = keyof typeof PRECIOS;
+
+/**
+ * Recargas de créditos (decisión del fundador, 2026-07-19). El ancla
+ * INVARIABLE: 1 crédito = 1 USD; los packs no descuentan por volumen, se
+ * dimensionan por entregables reales y el precio estratégico va en .99.
+ * La compra con dinero sigue DORMIDA (pasarelas post-beta): este catálogo
+ * alimenta la pantalla y, cuando despierten, los productos de RevenueCat.
+ */
+export const PACKS = [
+  { creditos: 5, usd: 4.99, sentido: "tu plan completo", destacado: false },
+  { creditos: 15, usd: 14.99, sentido: "el viaje completo de una idea", destacado: true },
+  { creditos: 30, usd: 29.99, sentido: "dos ideas trabajadas", destacado: false },
+] as const;

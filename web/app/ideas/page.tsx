@@ -62,7 +62,7 @@ export default async function MisIdeas() {
     <div className="flex min-h-full flex-1 flex-col">
       <header className="flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6">
         <Link href="/ideas" className="text-base font-extrabold tracking-tight">
-          My <span className="text-accent">idea</span>
+          My <span className="text-accent">Idea</span>
         </Link>
         <span className="flex-1" />
         {saldo !== null && (
@@ -77,6 +77,11 @@ export default async function MisIdeas() {
         <Link href="/potenciadores" className="text-[13.5px] text-dim hover:text-ink">
           Potenciadores
         </Link>
+        {!esAnonimo && (
+          <Link href="/cuenta" className="text-[13.5px] text-dim hover:text-ink">
+            Cuenta
+          </Link>
+        )}
         {!esAnonimo && <BotonSalir />}
       </header>
 

@@ -13,10 +13,49 @@
  * - En el script del fundador (scripts/adoptar_proyectos.ts): corre con la
  *   service-role key en la máquina del fundador, con ids explícitos.
  */
+import { createHash } from "node:crypto";
 import type { User } from "@supabase/supabase-js";
 import { otorgarCortesia } from "./creditos";
 import { esInvitadoInvisible } from "./identidad";
 import { createAdminClient } from "./supabase/admin";
+
+/** Huella sha256 (hex) del email en minúsculas: la llave de
+ * cortesia_email_log (migración 029, patrón trial_email_log del I Ching). */
+export function huellaDeEmail(email: string): string {
+  return createHash("sha256").update(email.trim().toLowerCase()).digest("hex");
+}
+
+/** ¿Este correo ya recibió cortesía en una cuenta que luego se borró?
+ * (El log por user_id se va con la cascada del borrado; esta huella queda.) */
+export async function cortesiaYaDadaAlCorreo(email: string): Promise<boolean> {
+  const admin = createAdminClient();
+  const { data, error } = await admin
+    .from("cortesia_email_log")
+    .select("email_hash")
+    .eq("email_hash", huellaDeEmail(email))
+    .maybeSingle();
+  if (error) throw error;
+  return data !== null;
+}
+
+/**
+ * ¿Este correo está invitado a la beta? (beta_allowlist, migración 008, solo
+ * legible con service role). Compartido por el envío del código (que filtra
+ * ANTES de mandar el correo) y por el callback de Google (que solo puede
+ * filtrar DESPUÉS de autenticar, porque el email se conoce al volver).
+ * Lanza si la consulta falla: un error de infraestructura jamás debe leerse
+ * como "no invitado".
+ */
+export async function estaEnAllowlist(email: string): Promise<boolean> {
+  const admin = createAdminClient();
+  const { data, error } = await admin
+    .from("beta_allowlist")
+    .select("email")
+    .eq("email", email.trim().toLowerCase())
+    .maybeSingle();
+  if (error) throw error;
+  return data !== null;
+}
 
 /**
  * Los dos actos de la bienvenida tras un login exitoso (compartidos por el
@@ -32,7 +71,21 @@ import { createAdminClient } from "./supabase/admin";
 export async function bienvenidaTrasLogin(real: User, anonId: string | null): Promise<void> {
   if (esInvitadoInvisible(real)) return;
   try {
-    await otorgarCortesia(real.id);
+    // Borrar-y-volver no re-otorga: si el correo ya recibió cortesía en una
+    // cuenta borrada (huella 029), no hay segunda tanda. Si la 029 aún no
+    // está aplicada, la lectura falla y la cortesía se otorga igual (el log
+    // por user_id sigue siendo el candado principal).
+    let yaDada = false;
+    try {
+      yaDada = await cortesiaYaDadaAlCorreo(real.email ?? "");
+    } catch {
+      yaDada = false;
+    }
+    if (yaDada) {
+      console.log("[login] cortesia ya dada a este correo en una cuenta borrada; no se re-otorga");
+    } else {
+      await otorgarCortesia(real.id);
+    }
   } catch (e) {
     console.error("[login] fallo otorgar_cortesia (un invitado sin su cortesia es un bug de dinero):", e);
   }

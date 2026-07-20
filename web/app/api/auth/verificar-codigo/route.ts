@@ -14,6 +14,7 @@
 import { NextResponse } from "next/server";
 import { bienvenidaTrasLogin } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
@@ -53,6 +54,21 @@ export async function POST(request: Request) {
     data: { user: real },
   } = await supabase.auth.getUser();
   if (real) await bienvenidaTrasLogin(real, anonId);
+
+  // Centro de cuenta: si la cuenta tiene 2FA, el login sigue con el desafío
+  // (la bienvenida ya corrió: cortesía y adopción son de SU propia cuenta;
+  // lo que el desafío protege es el motor pagado y los borrados).
+  if (real) {
+    try {
+      const seguridad = await estadoSeguridad(real.id);
+      if (seguridad.habilitado) {
+        return NextResponse.json({ ok: true, requiere2FA: true, metodo: seguridad.metodo ?? "totp" });
+      }
+    } catch (e) {
+      // Sin la 029 aplicada aún, el login no se rompe: solo no hay 2FA.
+      console.error("[verificar-codigo] no se pudo leer user_seguridad:", e);
+    }
+  }
 
   return NextResponse.json({ ok: true });
 }

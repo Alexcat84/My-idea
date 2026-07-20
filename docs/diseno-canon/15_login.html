@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Idea · Canon web · Login por código</title>
+  <title>My Idea · Canon web · Login por código y Google (v2)</title>
 
   <!--
     INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
@@ -72,6 +72,13 @@
     .cta--azul { background: var(--azul); color: #fff; }
     .cta--fantasma { background: transparent; border: 1px solid var(--hairline); color: var(--texto); font-weight: 600; }
 
+    /* LA SEGUNDA PUERTA: divisor "o" + Continuar con Google */
+    .divisor { display: flex; align-items: center; gap: 12px; width: 100%; margin: 4px 0; }
+    .divisor::before, .divisor::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
+    .divisor span { font-size: 12.5px; color: var(--texto-dim); }
+    .cta--google { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--superficie-1); border: 1px solid var(--hairline); color: var(--texto); font-weight: 600; }
+    .g-glifo { width: 18px; height: 18px; flex: none; }
+
     .puerta-nota { font-size: 13px; line-height: 1.6; color: var(--texto-dim); margin-top: 20px; text-wrap: pretty; }
 
     /* PASO B: el codigo de 6 digitos */
@@ -108,12 +115,13 @@
 
     <header class="galeria-cabecera">
       <div class="galeria-eyebrow">Motor My Idea · Beta con identidad</div>
-      <h1 class="galeria-titulo">Login por código (la puerta de la beta)</h1>
+      <h1 class="galeria-titulo">Login por código y Google (la puerta de la beta, v2)</h1>
       <p class="galeria-descripcion">
-        La primera pantalla que ve cada invitado. Dos pasos: el correo y el código de 6 dígitos
-        (el enlace mágico murió). Dos estados: no invitado (azul informativo: es una puerta, no una falta)
-        y código vencido (ámbar espejo: algo no funcionó, se dice y se ofrece la salida). Sin nav:
-        la puerta no navega. Desktop 1240 y móvil 380 por paso.
+        La puerta de la beta, ahora con dos entradas: el código de 6 dígitos o Google (divisor "o",
+        glifo oficial multicolor, borde hairline sobre superficie). El paso del código y el estado
+        de código vencido siguen intactos. El estado no invitado ahora recibe también a quien vino
+        de Google: la lista de invitados es la misma para las dos puertas. Sin nav: la puerta no
+        navega. Desktop 1240 y móvil 380 por paso.
       </p>
     </header>
 
@@ -130,8 +138,10 @@
             <div class="puerta-form">
               <div class="campo-correo" aria-label="Correo">tu@correo.com</div>
               <button class="cta cta--azul">Enviarme mi código de acceso</button>
+              <div class="divisor"><span>o</span></div>
+              <button class="cta cta--google"><svg class="g-glifo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path></svg><span>Continuar con Google</span></button>
             </div>
-            <p class="puerta-nota">My Idea está en beta privada: se entra con un correo invitado y un código de un solo uso. Sin contraseñas.</p>
+            <p class="puerta-nota">My Idea está en beta privada: se entra con un correo invitado: con su código de un solo uso o con tu cuenta de Google. Sin contraseñas.</p>
           </div>
           <div class="avatar">N</div>
         </div>
@@ -146,8 +156,10 @@
             <div class="puerta-form">
               <div class="campo-correo" aria-label="Correo">tu@correo.com</div>
               <button class="cta cta--azul">Enviarme mi código de acceso</button>
+              <div class="divisor"><span>o</span></div>
+              <button class="cta cta--google"><svg class="g-glifo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path></svg><span>Continuar con Google</span></button>
             </div>
-            <p class="puerta-nota">My Idea está en beta privada: se entra con un correo invitado y un código de un solo uso. Sin contraseñas.</p>
+            <p class="puerta-nota">My Idea está en beta privada: se entra con un correo invitado: con su código de un solo uso o con tu cuenta de Google. Sin contraseñas.</p>
           </div>
           <div class="avatar">N</div>
         </div>
@@ -214,7 +226,7 @@
             </div>
             <div class="estado estado--info">
               <span class="estado-punto"></span>
-              <p class="estado-texto">My Idea está en beta privada. Ese correo aún no está en la lista de invitados. Si alguien te invitó, pídele que confirme el correo que registró.</p>
+              <p class="estado-texto">My Idea está en beta privada. Ese correo aún no está en la lista de invitados, entres con tu código o con Google: la lista es la misma. Si alguien te invitó, pídele que confirme el correo que registró.</p>
             </div>
             <div class="puerta-form" style="margin-top: 14px;">
               <button class="cta cta--fantasma">Probar con otro correo</button>
@@ -235,7 +247,7 @@
             </div>
             <div class="estado estado--info">
               <span class="estado-punto"></span>
-              <p class="estado-texto">My Idea está en beta privada. Ese correo aún no está en la lista de invitados. Si alguien te invitó, pídele que confirme el correo que registró.</p>
+              <p class="estado-texto">My Idea está en beta privada. Ese correo aún no está en la lista de invitados, entres con tu código o con Google: la lista es la misma. Si alguien te invitó, pídele que confirme el correo que registró.</p>
             </div>
             <div class="puerta-form" style="margin-top: 14px;">
               <button class="cta cta--fantasma">Probar con otro correo</button>

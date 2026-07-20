@@ -27,6 +27,7 @@ import {
   ultimaVersionNumeros,
 } from "@/lib/db";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
 import { narrarReporte } from "@/lib/engine/reporte";
 import { cifrasCambiaron, MENSAJE_TOPE_RENARRACION, TOPE_RENARRACION_DIA, veredictoNumeros } from "@/lib/numerosVivo";
@@ -216,6 +217,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // ETAPA 2 (la frontera): Tus Numeros es motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
     return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
+  if (await faltaSegundoFactor()) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
   }
 
   const tipoOferta = (proyecto.tipo_oferta ?? null) as TipoOferta;

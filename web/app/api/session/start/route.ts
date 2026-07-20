@@ -23,6 +23,7 @@ import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
@@ -64,6 +65,11 @@ export async function POST(request: Request) {
   // autenticarse, nada se pierde).
   if (esInvitadoInvisible(user)) {
     return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
+  // Centro de cuenta: con 2FA activo, esta sesión debe haber superado el
+  // desafío antes de tocar el motor pagado.
+  if (await faltaSegundoFactor()) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
   }
 
   // Fusible global ANTES de cobrar creditos y de tocar la API.

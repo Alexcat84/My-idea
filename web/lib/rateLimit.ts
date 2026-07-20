@@ -114,6 +114,13 @@ export async function verificarLimiteDiario(identidad: string, email?: string | 
   return contarEnUpstash(clave, 86400, limite);
 }
 
+/** Limitador genérico por clave (patrón rateLimitByKey del I Ching): para
+ * ventanas cortas ajenas al día UTC, como los envíos de código 2FA
+ * (5 por usuario / 10 min). Upstash caído no tumba el producto. */
+export async function limitarPorClave(clave: string, ttlSegundos: number, limite: number): Promise<ResultadoLimite> {
+  return contarEnUpstash(`myidea:k:${clave}`, ttlSegundos, limite);
+}
+
 /** Mensajes en palabras de persona (el usuario web nunca ve maquinaria). */
 export const MENSAJE_LIMITE =
   "Por hoy alcanzaste el límite de la beta (5 arranques al día). " +

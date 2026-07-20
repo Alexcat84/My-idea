@@ -19,6 +19,7 @@ import { costoAcumuladoUsd } from "@/lib/costmeter";
 import { guardarEstadoSesion, obtenerProyecto, obtenerSesion, registrarBitacora } from "@/lib/db";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { materialDiagnostico, redactarDiagnostico } from "@/lib/engine/diagnosticoMundo";
 import { cargarGrafo } from "@/lib/engine/graph";
 import { createClient } from "@/lib/supabase/server";
@@ -53,6 +54,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // ETAPA 2 (la frontera): motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
     return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
+  if (await faltaSegundoFactor()) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {

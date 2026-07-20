@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · El desafío del login (dos pasos)</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Desafio app desktop
+      - Desafio app movil 380
+      - Desafio correo desktop
+      - Desafio correo movil 380
+      - Desafio rescate desktop
+      - Desafio rescate movil 380
+
+    Paso 2 del login cuando la cuenta tiene verificacion en dos pasos: tras el
+    codigo de acceso (o Google) el login continua aqui. El boton Verificar
+    despierta cuando el codigo esta completo. El enlace inferior alterna entre
+    el codigo normal y el de rescate (mono de 12).
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa; el ambar es espejo, jamas regano; nunca rojo)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --radio-campo: 12px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 820px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+
+    /* LIENZO: una sola columna centrada, sin nav (sigue siendo la puerta) */
+    .lienzo { position: relative; display: flex; align-items: center; justify-content: center; min-height: 760px; padding: 60px 40px; }
+    .lienzo--movil { min-height: 700px; padding: 48px 24px; }
+
+    .puerta { width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+    .marca { font-size: 34px; font-weight: 800; letter-spacing: -0.6px; }
+    .marca-my { color: var(--texto); }
+    .marca-idea { color: var(--azul); }
+    .puerta-sub { font-size: 15px; color: var(--texto-dim); margin-top: 10px; }
+
+    .desafio-h { font-size: 19px; font-weight: 700; margin-top: 36px; text-wrap: balance; }
+    .desafio-sub { font-size: 14px; line-height: 1.6; color: var(--texto-dim); margin-top: 10px; text-wrap: pretty; }
+
+    .campo-desafio { width: 100%; background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: var(--radio-campo); padding: 17px 18px; font-size: 16px; font-weight: 700; text-align: center; letter-spacing: 8px; color: var(--texto); margin-top: 22px; }
+    .campo-desafio--foco { border-color: rgba(77, 124, 254, 0.65); box-shadow: 0 0 0 3px rgba(77, 124, 254, 0.15); }
+    .campo-desafio--mono { font-family: var(--mono); font-size: 14px; font-weight: 400; letter-spacing: 4px; }
+    .puntos { color: var(--texto-dim); font-weight: 400; }
+    .marcador { color: var(--texto-dim); }
+
+    .cta { display: block; width: 100%; border: none; border-radius: var(--radio-campo); padding: 16px 18px; font-size: 15px; font-weight: 700; font-family: var(--fuente); cursor: pointer; text-align: center; margin-top: 12px; }
+    .cta--azul { background: var(--azul); color: #fff; }
+    .cta--dormido { background: rgba(77, 124, 254, 0.3); color: rgba(255, 255, 255, 0.55); cursor: default; }
+    .cta--fantasma { background: transparent; border: 1px solid var(--hairline); color: var(--texto); font-weight: 600; }
+
+    .enlace-alterno { font-size: 13.5px; color: var(--texto-dim); text-decoration: none; margin-top: 20px; }
+    .enlace-alterno:hover { color: var(--azul); }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Beta con identidad</div>
+      <h1 class="galeria-titulo">El desafío del login (paso 2 con verificación en dos pasos)</h1>
+      <p class="galeria-descripcion">
+        Tras el código de acceso o Google, si la cuenta tiene verificación en dos pasos el login
+        continúa aquí. Tres variantes: el código de la app, el código por correo (con reenvío) y el
+        código de rescate (mono de 12). El botón Verificar despierta cuando el código está completo;
+        el enlace inferior alterna entre el código normal y el de rescate. Sin nav: sigue siendo la puerta.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- 1) VARIANTE APP (TOTP) · DESKTOP                               -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Desafio app desktop">
+        <div class="lienzo">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <h2 class="desafio-h">Un paso más: tu verificación en dos pasos</h2>
+            <p class="desafio-sub">Escribe el código de tu app de autenticación.</p>
+            <div class="campo-desafio campo-desafio--foco"><span class="puntos">······</span></div>
+            <button class="cta cta--dormido">Verificar</button>
+            <a class="enlace-alterno" href="#">No tengo mi código: usar uno de rescate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) VARIANTE APP (TOTP) · MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="Desafio app movil 380">
+        <div class="lienzo lienzo--movil">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <h2 class="desafio-h">Un paso más: tu verificación en dos pasos</h2>
+            <p class="desafio-sub">Escribe el código de tu app de autenticación.</p>
+            <div class="campo-desafio campo-desafio--foco"><span class="puntos">······</span></div>
+            <button class="cta cta--dormido">Verificar</button>
+            <a class="enlace-alterno" href="#">No tengo mi código: usar uno de rescate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 3) VARIANTE CORREO (por descripcion) · DESKTOP                 -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Desafio correo desktop">
+        <div class="lienzo">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <h2 class="desafio-h">Un paso más: tu verificación en dos pasos</h2>
+            <p class="desafio-sub">Te enviamos un código a tu correo.</p>
+            <div class="campo-desafio campo-desafio--foco"><span class="puntos">······</span></div>
+            <button class="cta cta--dormido">Verificar</button>
+            <button class="cta cta--fantasma">Reenviarme el código</button>
+            <a class="enlace-alterno" href="#">No tengo mi código: usar uno de rescate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4) VARIANTE CORREO · MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="Desafio correo movil 380">
+        <div class="lienzo lienzo--movil">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <h2 class="desafio-h">Un paso más: tu verificación en dos pasos</h2>
+            <p class="desafio-sub">Te enviamos un código a tu correo.</p>
+            <div class="campo-desafio campo-desafio--foco"><span class="puntos">······</span></div>
+            <button class="cta cta--dormido">Verificar</button>
+            <button class="cta cta--fantasma">Reenviarme el código</button>
+            <a class="enlace-alterno" href="#">No tengo mi código: usar uno de rescate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- 5) VARIANTE RESCATE (mono de 12) · DESKTOP                     -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Desafio rescate desktop">
+        <div class="lienzo">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <h2 class="desafio-h">Un paso más: tu verificación en dos pasos</h2>
+            <p class="desafio-sub">Escribe uno de tus códigos de rescate. Cada uno abre tu cuenta una sola vez.</p>
+            <div class="campo-desafio campo-desafio--mono"><span class="marcador">XXXXXXXXXXXX</span></div>
+            <button class="cta cta--dormido">Verificar</button>
+            <a class="enlace-alterno" href="#">Volver al código normal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6) VARIANTE RESCATE · MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="Desafio rescate movil 380">
+        <div class="lienzo lienzo--movil">
+          <div class="puerta">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">Idea</span></div>
+            <p class="puerta-sub">El espacio donde tus ideas se trabajan.</p>
+            <h2 class="desafio-h">Un paso más: tu verificación en dos pasos</h2>
+            <p class="desafio-sub">Escribe uno de tus códigos de rescate. Cada uno abre tu cuenta una sola vez.</p>
+            <div class="campo-desafio campo-desafio--mono"><span class="marcador">XXXXXXXXXXXX</span></div>
+            <button class="cta cta--dormido">Verificar</button>
+            <a class="enlace-alterno" href="#">Volver al código normal</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

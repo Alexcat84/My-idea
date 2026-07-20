@@ -8,29 +8,21 @@
  * su precio de catálogo, LEYENDO de precios.ts, jamás hardcodeado. El saldo
  * del panel es el real (RLS own-select). La moneda se llama créditos.
  *
- * El catálogo de BUNDLES de compra (cuántos créditos por pack, a qué precio en
- * dinero) es una DECISIÓN PENDIENTE DEL FUNDADOR para la ETAPA 2: precios.ts no
- * define bundles, así que aquí el precio en dinero va como "$ —" deshabilitado
- * y con su nota. Ver docs/MATRIZ_DELTAS_CANON_2.0.md ("Decisiones pendientes").
+ * Recargas DECIDIDAS por el fundador (2026-07-19): 1 crédito = 1 USD (ancla
+ * invariable, sin descuento por volumen), packs por entregable (5/15/30 a
+ * $4.99/$14.99/$29.99), LEYENDO de precios.ts (PACKS), jamás hardcodeado.
+ * La compra con dinero sigue dormida hasta que despierten las pasarelas.
  */
 import Link from "next/link";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { esInvitadoInvisible } from "@/lib/identidad";
-import { PRECIOS } from "@/lib/precios";
+import { PACKS, PRECIOS } from "@/lib/precios";
 import { createClient } from "@/lib/supabase/server";
 
 const MUNDOS = (catalogo.packs as Array<{ clave: string; nombre: string; promesa: string }>).map((p) => ({
   nombre: p.nombre,
   promesa: p.promesa,
 }));
-
-// Tamaños de bundle provisionales: NO son un precio decidido. El fundador fija
-// el catálogo (tamaños y dinero) en la ETAPA 2; aquí van sin precio en dinero.
-const PACKS_PROVISIONALES = [
-  { creditos: 10, destacado: false },
-  { creditos: 30, destacado: true },
-  { creditos: 75, destacado: false },
-];
 
 const PUNTO_MUNDO = "#3A9B8F"; // matiz de los mundos (ni azul ni verde)
 
@@ -71,6 +63,11 @@ export default async function Potenciadores() {
               <div className="mt-1.5 text-[13px] text-dim">
                 {cuentaReal ? "créditos disponibles" : "tus créditos nacen con tu cuenta"}
               </div>
+              {cuentaReal && (
+                <span className="mt-2 inline-flex items-center rounded-full border border-done/40 px-2.5 py-1 text-[11.5px] font-semibold text-done">
+                  cortesía de bienvenida
+                </span>
+              )}
               <p className="mt-3 text-[12.5px] leading-relaxed text-dim">
                 Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra
                 nada.
@@ -78,7 +75,7 @@ export default async function Potenciadores() {
             </div>
 
             <div className="grid gap-3.5 sm:grid-cols-3">
-              {PACKS_PROVISIONALES.map((pack) => (
+              {PACKS.map((pack) => (
                 <div
                   key={pack.creditos}
                   className={
@@ -88,18 +85,49 @@ export default async function Potenciadores() {
                 >
                   <span className="text-[26px] font-extrabold leading-none">{pack.creditos}</span>
                   <span className="text-[13px] text-dim">créditos</span>
-                  <span className="mt-2 text-2xl font-bold text-dim">$ —</span>
-                  <span className="text-[12px] text-dim">{pack.destacado ? "por definir · el más elegido" : "por definir"}</span>
+                  <span className="mt-2 text-2xl font-bold">${pack.usd}</span>
+                  <span className="text-[12px] text-dim">
+                    {pack.sentido}
+                    {pack.destacado ? " · el más elegido" : ""}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
 
           <p className="mt-4 rounded-cinta border border-hairline bg-surface-2 px-4 py-3 text-[12.5px] leading-relaxed text-dim">
-            <strong className="text-ink">Catálogo de packs por definir.</strong> Cuántos créditos trae cada pack y a qué
-            precio en dinero es una decisión pendiente del fundador para la siguiente etapa. Los tamaños de arriba son
-            provisionales; la compra con dinero aún no está activa.
+            <strong className="text-ink">Un crédito es un dólar, siempre.</strong> Los packs no esconden descuentos: se
+            dimensionan por lo que compras con ellos. La compra con dinero se abre muy pronto; durante la beta trabajas
+            con tu cortesía de bienvenida.
           </p>
+        </section>
+
+        {/* ── LO QUE CUESTA CADA COSA (canon 07 v3; los números salen de
+            precios.ts, jamás hardcodeados) ─────────────────────────────── */}
+        <section className="anima-plan-in" style={{ animationDelay: "0.05s" }}>
+          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Lo que cuesta cada cosa</p>
+          <div className="mt-4 overflow-hidden rounded-panel border border-hairline bg-surface">
+            {[
+              { que: "El organizador (Claridad)", detalle: "tu idea ordenada: frase, lo que tienes, lo que asumes", precio: null },
+              { que: "La Exploración", detalle: "la entrevista y tu plan completo", precio: PRECIOS.plan_completo },
+              { que: "El plan de un mundo", detalle: "el preview (entrevista + diagnóstico) es gratis", precio: PRECIOS.mundo_activar },
+              { que: "Seguimiento del viaje principal", detalle: "contar qué pasó y recalcular tu plan desde donde estás", precio: PRECIOS.seguimiento },
+              { que: "Seguimiento de un mundo", detalle: "contar qué pasó en su checklist", precio: PRECIOS.mundo_seguimiento },
+              { que: "Tus Números", detalle: "una vez por idea; corregir cifras y recalcular es gratis, siempre", precio: PRECIOS.tus_numeros },
+              { que: "Registrar tu avance", detalle: "marcar hecho, notas, progreso", precio: null },
+            ].map((fila, i) => (
+              <div
+                key={fila.que}
+                className={`flex flex-wrap items-baseline gap-x-4 gap-y-1 px-5 py-3.5 sm:flex-nowrap ${i > 0 ? "border-t border-hairline" : ""}`}
+              >
+                <span className="text-[13.5px] font-semibold">{fila.que}</span>
+                <span className="min-w-0 flex-1 text-[12.5px] text-dim">{fila.detalle}</span>
+                <span className={`shrink-0 text-[12.5px] font-semibold ${fila.precio === null ? "text-done" : "text-accent"}`}>
+                  {fila.precio === null ? "Gratis, siempre" : `${fila.precio} créditos`}
+                </span>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* ── FILA DE POTENCIADORES ──────────────────────────────────────── */}
@@ -137,12 +165,14 @@ export default async function Potenciadores() {
                 <div className="flex items-center justify-between">
                   <span className="h-2.5 w-2.5 rounded-full" style={{ background: PUNTO_MUNDO }} aria-hidden />
                   <span className="rounded-full border border-accent/40 px-2.5 py-1 text-[11.5px] font-semibold text-accent">
-                    Preview gratis
+                    Explóralo gratis
                   </span>
                 </div>
                 <span className="text-[15px] font-semibold">{m.nombre}</span>
                 <p className="text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">{m.promesa}</p>
-                <span className="mt-auto pt-1 text-[12.5px] text-dim">Su plan: {PRECIOS.mundo_activar} créditos</span>
+                <span className="mt-auto pt-1 text-[12.5px] text-dim">
+                  El preview es gratis · su plan: {PRECIOS.mundo_activar} créditos
+                </span>
               </div>
             ))}
           </div>
@@ -158,8 +188,8 @@ export default async function Potenciadores() {
           <div className="mt-5 grid gap-3.5 sm:grid-cols-3">
             {[
               { num: "170", etq: "margen por unidad, con tu costo de 180 y tu precio de 350" },
-              { num: "8", etq: "unidades al mes para cubrir tus 1.200 de gasto fijo declarado" },
-              { num: "3", etq: "escenarios: prudente, esperado y optimista, sobre tus mismas cifras" },
+              { num: "8", etq: "ventas al mes para cubrir tus 1.200 de gasto fijo declarado" },
+              { num: "3", etq: "escenarios sobre tus mismas cifras: pesimista y a capacidad plena" },
             ].map((c) => (
               <div key={c.etq} className="rounded-cinta border border-hairline px-5 py-4">
                 <div className="text-[26px] font-extrabold tracking-tight">{c.num}</div>

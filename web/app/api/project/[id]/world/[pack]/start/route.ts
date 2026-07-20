@@ -24,6 +24,7 @@ import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
 import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta } from "@/lib/engine/graph";
@@ -53,6 +54,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // ETAPA 2 (la frontera): motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
     return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
+  if (await faltaSegundoFactor()) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {

@@ -1,65 +1,50 @@
-# Hallazgos de la PILA 3 — verificación contra la app viva (sin rediseños)
+# Hallazgos, pila 3 (lote 4): cacería sobre las capturas de la app viva
 
-Base de la verificación: las 19 capturas del lote (`capturas/`) más las 30 del
-refresco anterior. Donde no hay captura nueva, no afirmo nada: una vara que el
-instrumento no mira es decoración, y aquí solo reporto lo que vi.
+Defectos y derivas reales vistos en los 20 PNG del encargo. Sin rediseños:
+solo lo que la app debería corregir o el fundador decidir.
 
-## Confirmado (calza con el canon, no tocar)
+## H1 · "digitos" sin tilde en la activación con app
 
-- **Home, Chispa, Claridad, Exploración, Tu Plan, Manos a la Obra**: la
-  estructura, el orden de bloques y la regla de color calzan con el canon 2.0
-  en las capturas disponibles (claridad y plan aparecen en las capturas del
-  gate y de la fila).
-- **Tus Números, pérdida y sano** (`numeros_perdida_app`, `numeros_sano_app`):
-  veredicto de una frase con su color, tiles, barra de la verdad con la
-  lectura en prosa, palancas con la 3 apagada en pérdida y "tu meta" en sano,
-  escenarios, faltantes, guardián ámbar. Calza con el canon 14, incluidas las
-  piezas nuevas (sello HOY, corregir gratis, ciclo de caja, versiones
-  anteriores) que ahora tienen vara en el 19.
-- **Modo lectura** (`numeros_lectura_app`): banda superior con fecha absoluta y
-  "Volver a hoy", sin edición. Calza con el 19.
-- **La compuerta** (`beta_compuerta_app`): tarjeta azul, CTA "Sacar mis números
-  · 2 créditos", la ley visible. Calza con el 18.
-- **El chip de saldo** (`beta_ideas_chip_app`): pill discreta junto al header,
-  presente en /ideas y en las pantallas de idea.
+En `23_cuenta_qr_desktop.png`, el paso 2 dice "Escribe el código de 6 digitos".
+Falta la tilde: **dígitos**. Es exactamente la familia de faltas del lote 3;
+el detector de acentos debería cazarla en el copy de /cuenta.
 
-## Visto raro (defectos o residuos en la app; el canon ya trae la vara)
+## H2 · El marcador del rescate tiene 13 X para un código de 12
 
-1. **Acentos faltantes en Tus Números.** Las capturas muestran "Los numeros
-   de", "mas de lo que cobras", "todavia", "aqui te dire", "perdida",
-   "Guardian de datos", "asesoria fiscal", "Dias que tardas". El canon 19 los
-   trae correctos; el detector de adopción los va a marcar. Es el hallazgo más
-   repetido del lote.
-2. **El tachado sigue vivo en la app** (`preview_fila_app`, `preview_bloqueado_app`):
-   las tarjetas aún dicen "su plan: ~~3 créditos~~ · gratis en beta". Con la
-   ETAPA 2 los precios son vivos: la vara nueva es el 16/07 (sin tachados).
-3. **Chip en cero pintado de azul** (`beta_ideas_chip_app`): la app muestra "0
-   créditos" con el mismo azul del saldo positivo. El canon 20 define cara gris
-   para el cero (informar sin presionar ni alarmar).
-4. **El wordmark del login** (`login_form_app`): "My Idea" todo en blanco. El
-   canon 15 usa la marca bicolor canónica (My blanco + Idea azul). Decisión
-   para el gate: o la app adopta el bicolor o se declara el blanco como
-   variante de la puerta.
-5. **Texto de siembra del test filtrado** (`beta_fila_app`): la etapa se llama
-   "valida" en minúscula y su entregable es "Material del gate.". Es dato de
-   siembra, no defecto de UI; se anota para que nadie lo tome como copy real.
-6. **La barra de la verdad en pérdida** pinta "Cobras" en verde aunque el
-   veredicto sea pérdida: correcto según el canon (lo que entra es verde; la
-   pérdida es el pedazo ámbar que sobresale). No es defecto: se confirma la
-   regla.
-7. **"Tus Numeros · 2 creditos" en el header de la app** sin acentos (capturas
-   de números): mismo caso que el punto 1.
+En `24_desafio_rescate_desktop.png` y `24_desafio_rescate_mobile.png` el campo
+muestra 13 marcas X. Los códigos de rescate de `23_cuenta_rescates` tienen 12
+caracteres hex. Una X sobra; el canon 24 usa 12 exactas.
 
-## Sin captura en este lote (no se afirma nada)
+## H3 · Colisión de layout al confirmar borrado de idea en 380
 
-- Mundos Activos (08), La Celebración (09), Modo y Fechas (10), Análisis (11),
-  El cierre honesto (12), Detalle de actividad (13): sin captura nueva en la
-  carpeta del encargo. Sus varas 2.0 siguen vigentes; el gate de dos viewports
-  es quien confirma.
+En `23_cuenta_borrar_idea_mobile.png` la confirmación inline se monta sobre la
+fila: el nombre de la idea desaparece y la fecha ("19 jul 2026") se parte
+detrás de "¿Borrarla para siempre?". En el canon 23 la confirmación baja a su
+propia línea bajo el nombre en 380: el título nunca se tapa.
 
-## Lo móvil 380
+## H4 · Guion largo en el copy del no invitado
 
-Las capturas 380 del lote confirman que la app renderiza columnas apiladas
-correctas en fila, compuerta, login y números. El programa 380 profundo ya
-está encolado aparte: los frames 380 de este lote siguen la vara existente
-(replanteo, no colapso) sin rehacer los del canon 2.0.
+En `15v2_login_no_invitado` la app dice "escríbele a quien te compartió el
+enlace — guardamos tu lugar con gusto". La ley de voz es cero guiones largos.
+El canon 15 v2 propone copy sin guion y con la lista única de las dos puertas.
+
+## H5 · La marca del nav va en minúscula: "My idea"
+
+Las capturas de /cuenta muestran "My idea" (i minúscula) en el nav, mientras
+el login y el canon completo dicen "My Idea". Una marca, una grafía.
+
+## H6 · "Tus Números, por dentro" cambió de vocabulario en la app
+
+`07v3_potenciadores_packs` dice "3 escenarios: prudente, esperado y optimista"
+y "8 unidades al mes". El canon (14 y 19, la vara de los dos veredictos) dice
+**Pesimista / Base / Techo de capacidad** y habla de ventas. Si el fundador
+renombró los escenarios, hay que propagarlo a 14 y 19 con decisión explícita;
+si no, la app derivó.
+
+## H7 · En 07v3 desaparecieron piezas que nadie decidió matar
+
+En la captura ya no están ni la tabla "Lo que cuesta cada cosa" ni el chip
+verde "cortesía de bienvenida" del saldo, y el chip de los mundos dice
+"Preview gratis" en vez de "Explóralo gratis". El encargo solo decidió el
+catálogo de packs. El canon 07 v3 conserva esas piezas tal cual el lote 3;
+confirmar si su ausencia en la app es decisión o regresión.

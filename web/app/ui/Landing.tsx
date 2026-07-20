@@ -134,7 +134,9 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
             setTyped(sig);
           }
         }, 55);
-    if (reducirMovimiento) setTyped(FRASE_DEMO);
+    // Sin animación: la frase completa, fuera del render síncrono del
+    // efecto (regla de hooks; el timeout 0 la pinta en el siguiente tick).
+    const tipeoInmediato = reducirMovimiento ? setTimeout(() => setTyped(FRASE_DEMO), 0) : null;
 
     // ===== Canvas 1: estrellas del hero (idea-canvas) =====
     let rafEstrellas = 0;
@@ -719,6 +721,7 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
       io.disconnect();
       window.removeEventListener("scroll", onSpy);
       if (tipeo) clearInterval(tipeo);
+      if (tipeoInmediato) clearTimeout(tipeoInmediato);
       cancelAnimationFrame(rafEstrellas);
       cancelAnimationFrame(rafWord);
       limpiarEstrellas?.();

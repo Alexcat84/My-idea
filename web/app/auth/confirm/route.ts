@@ -21,6 +21,7 @@ import { NextResponse } from "next/server";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { bienvenidaTrasLogin } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
@@ -43,6 +44,19 @@ export async function GET(request: Request) {
         data: { user: real },
       } = await supabase.auth.getUser();
       if (real) await bienvenidaTrasLogin(real, anonId);
+      // Centro de cuenta: con 2FA activo, el login sigue con el desafío.
+      if (real) {
+        try {
+          const seguridad = await estadoSeguridad(real.id);
+          if (seguridad.habilitado) {
+            return NextResponse.redirect(
+              new URL(`/login?desafio=1&metodo=${seguridad.metodo ?? "totp"}`, url.origin)
+            );
+          }
+        } catch (e) {
+          console.error("[confirm] no se pudo leer user_seguridad:", e);
+        }
+      }
       return NextResponse.redirect(new URL("/ideas", url.origin));
     }
   }
