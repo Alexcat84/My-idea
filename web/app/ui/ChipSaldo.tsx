@@ -31,11 +31,12 @@ export function ChipSaldo({ saldo: saldoProp }: { saldo?: number | null }) {
 
   if (saldo === null) return null;
   // Canon 20 (lote 3): el cero va en GRIS, no en azul: informa sin presionar
-  // ni alarmar; la puerta al frente sigue siendo /potenciadores.
+  // ni alarmar; la puerta al frente es /creditos (el saldo es dinero, no
+  // potenciadores: no mezclar procesos).
   const claseTono = saldo === 0 ? "border-hairline text-dim hover:border-white/25" : "border-accent/40 text-accent hover:border-accent/70";
   return (
     <Link
-      href="/potenciadores"
+      href="/creditos"
       className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-[12px] font-semibold ${claseTono}`}
       title="Tus créditos"
     >
