@@ -112,10 +112,14 @@ async function main() {
   const emailB = `vuelo-beta-b-${marca}@pruebas.my-idea.local`;
   const emailInvisible = `visitante-${crypto.randomUUID()}@invitado.my-idea.local`;
 
-  // ── 1) LA ALLOWLIST (3.2 reactivada): el no invitado recibe palabras, no enlace.
-  const noInvitado = await post("", "/api/auth/magic-link", { email: `nadie-${marca}@ejemplo.com` });
-  check("allowlist: email NO invitado -> {enviado:false, invitado:false} sin enlace",
-    noInvitado.status === 200 && noInvitado.json.enviado === false && noInvitado.json.invitado === false, noInvitado.json);
+  // ── 1) LA ALLOWLIST: el no invitado recibe palabras, no cuenta (registro
+  // por correo+contraseña; magic-link/código murió por el límite de correos).
+  const noInvitado = await post("", "/api/auth/registrar", {
+    email: `nadie-${marca}@ejemplo.com`,
+    password: "Noimporta123",
+  });
+  check("allowlist: email NO invitado -> {invitado:false} sin crear cuenta",
+    noInvitado.status === 200 && noInvitado.json.invitado === false, noInvitado.json);
 
   // ── 2) Usuario A (cuenta real) + CORTESIA una sola vez.
   const A = await crearUsuario(emailA);

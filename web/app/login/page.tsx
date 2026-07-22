@@ -1,21 +1,22 @@
 "use client";
 
 /**
- * Login (brief 2.1, remodelado ETAPA 2): pantalla mínima — logo, campo
- * email, frase de producto. Allowlist; el no invitado recibe un mensaje
- * amable, jamás un error técnico.
- *
- * Decisión del fundador (jul 2026): el acceso es por CÓDIGO de 6 dígitos
- * (el correo lo trae vía Resend; el usuario lo escribe aquí). El enlace
- * mágico quedó obsoleto: sin redirects frágiles ni enlaces que caducan.
+ * Login (modelo del I Ching, jul 2026): correo + CONTRASEÑA. El
+ * código-cada-vez quedó obsoleto — chocaba con el límite de correos de
+ * producción ("esperar dos horas") y con el 2FA. Aquí: pestañas Entrar /
+ * Crear cuenta, botón de Google, "olvidé mi contraseña" y reenviar
+ * confirmación. La allowlist gatea (el no invitado recibe un mensaje amable).
+ * El desafío 2FA y el ?next= ("seguimos justo donde quedaste") se conservan.
  */
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { destinoPostLogin } from "@/lib/nextSeguro";
+import { validarPassword } from "@/lib/password";
 
 type Estado =
-  | { fase: "form"; error?: string }
-  | { fase: "codigo"; email: string; error?: string }
+  | { fase: "form"; modo: "entrar" | "crear"; error?: string; sinConfirmar?: boolean; aviso?: string }
+  | { fase: "revisa_correo"; email: string }
+  | { fase: "reset_enviado"; email: string }
   | { fase: "desafio"; metodo: "totp" | "email"; rescate: boolean; aviso?: string; error?: string }
   | { fase: "no_invitado" };
 
@@ -36,27 +37,22 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const enlaceVencido = searchParams.get("enlace") === "vencido";
   const googleFallo = searchParams.get("google") === "fallo";
-  // "Seguimos justo donde quedaste": la frontera manda aquí con ?next=<ruta>
-  // (la exploración de una idea, un seguimiento…). Al entrar, volvemos ahí en
-  // vez de al home. destinoPostLogin valida que sea una ruta interna.
+  // "Seguimos justo donde quedaste": la frontera manda aquí con ?next=<ruta>.
   const destino = destinoPostLogin(searchParams.get("next"));
-  // Si Google devolvió un correo que no está invitado, el callback vuelve
-  // aquí con ?google=no-invitado: se abre directo la pantalla amable. Con
-  // ?desafio=1 (2FA activo), se abre directo el segundo paso.
   const [estado, setEstado] = useState<Estado>(() => {
     if (searchParams.get("google") === "no-invitado") return { fase: "no_invitado" };
     if (searchParams.get("desafio") === "1") {
       return { fase: "desafio", metodo: searchParams.get("metodo") === "email" ? "email" : "totp", rescate: false };
     }
-    return { fase: "form" };
+    return { fase: "form", modo: "entrar" };
   });
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [codigo, setCodigo] = useState("");
   const [codigoRescate, setCodigoRescate] = useState("");
   const [enviando, setEnviando] = useState(false);
 
-  // Método email del 2FA: al entrar al desafío se envía el código UNA vez
-  // (el botón "Reenviarme el código" cubre los reintentos).
+  // Método email del 2FA: al entrar al desafío se envía el código UNA vez.
   const emailDesafioEnviado = useRef(false);
   useEffect(() => {
     if (estado.fase !== "desafio" || estado.metodo !== "email" || estado.rescate) return;
@@ -78,64 +74,123 @@ function LoginForm() {
       });
   }, [estado]);
 
-  async function enviar(e: React.FormEvent) {
+  // ── Entrar (correo + contraseña) ─────────────────────────────────────
+  async function entrar(e: React.FormEvent) {
     e.preventDefault();
     if (enviando) return;
     setEnviando(true);
     try {
-      const res = await fetch("/api/auth/magic-link", {
+      const res = await fetch("/api/auth/entrar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, password }),
       });
       const data = await res.json();
-      if (!res.ok) {
-        setEstado({ fase: "form", error: data.error ?? "algo se atoró; intenta de nuevo" });
-      } else if (!data.invitado) {
+      if (data.invitado === false) {
         setEstado({ fase: "no_invitado" });
-      } else {
-        setCodigo("");
-        setEstado({ fase: "codigo", email });
-      }
-    } catch {
-      setEstado({ fase: "form", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
-    } finally {
-      setEnviando(false);
-    }
-  }
-
-  async function verificar(e: React.FormEvent) {
-    e.preventDefault();
-    if (enviando || estado.fase !== "codigo") return;
-    setEnviando(true);
-    try {
-      const res = await fetch("/api/auth/verificar-codigo", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: estado.email, codigo }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setEstado({ fase: "codigo", email: estado.email, error: data.error ?? "algo se atoró; intenta de nuevo" });
         return;
       }
-      // Con 2FA activo, el login sigue con el desafío del segundo factor.
+      if (res.status === 403 && data.sinConfirmar) {
+        setEstado({ fase: "form", modo: "entrar", error: data.error, sinConfirmar: true });
+        return;
+      }
+      if (!res.ok) {
+        setEstado({ fase: "form", modo: "entrar", error: data.error ?? "algo se atoró; intenta de nuevo" });
+        return;
+      }
       if (data.requiere2FA) {
         setCodigo("");
         setEstado({ fase: "desafio", metodo: data.metodo === "email" ? "email" : "totp", rescate: false });
         return;
       }
-      // Sesión creada (y la cortesía/adopción ya corrieron): al destino que
-      // traía el ?next= (la idea que iba a explorar), o al home de ideas.
       router.push(destino);
       router.refresh();
     } catch {
-      setEstado({ fase: "codigo", email: estado.email, error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+      setEstado({ fase: "form", modo: "entrar", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
     } finally {
       setEnviando(false);
     }
   }
 
+  // ── Crear cuenta (correo + contraseña) ───────────────────────────────
+  async function crear(e: React.FormEvent) {
+    e.preventDefault();
+    if (enviando) return;
+    const problema = validarPassword(password);
+    if (problema) {
+      setEstado({ fase: "form", modo: "crear", error: problema });
+      return;
+    }
+    setEnviando(true);
+    try {
+      const res = await fetch("/api/auth/registrar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+      if (data.invitado === false) {
+        setEstado({ fase: "no_invitado" });
+        return;
+      }
+      if (!res.ok) {
+        setEstado({ fase: "form", modo: "crear", error: data.error ?? "algo se atoró; intenta de nuevo" });
+        return;
+      }
+      if (data.yaExistia) {
+        setPassword("");
+        setEstado({ fase: "form", modo: "entrar", error: "Ese correo ya tiene cuenta. Inicia sesión." });
+        return;
+      }
+      setEstado({ fase: "revisa_correo", email });
+    } catch {
+      setEstado({ fase: "form", modo: "crear", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  // ── Olvidé mi contraseña ─────────────────────────────────────────────
+  async function olvide() {
+    if (enviando) return;
+    if (!email || !email.includes("@")) {
+      setEstado({ fase: "form", modo: "entrar", error: "Escribe tu correo arriba y toca de nuevo." });
+      return;
+    }
+    setEnviando(true);
+    try {
+      await fetch("/api/auth/reset", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      setEstado({ fase: "reset_enviado", email });
+    } catch {
+      setEstado({ fase: "form", modo: "entrar", error: "no pudimos conectar; intenta de nuevo" });
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  // ── Reenviar confirmación ────────────────────────────────────────────
+  async function reenviarConfirmacion() {
+    if (enviando) return;
+    setEnviando(true);
+    try {
+      await fetch("/api/auth/reenviar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      setEstado({ fase: "form", modo: "entrar", aviso: "Te reenviamos el correo de confirmación. Revisa tu bandeja." });
+    } catch {
+      setEstado({ fase: "form", modo: "entrar", error: "no pudimos conectar; intenta de nuevo" });
+    } finally {
+      setEnviando(false);
+    }
+  }
+
+  // ── 2FA (desafío tras el login) ──────────────────────────────────────
   async function resolverDesafio(e: React.FormEvent) {
     e.preventDefault();
     if (enviando || estado.fase !== "desafio") return;
@@ -183,42 +238,34 @@ function LoginForm() {
     }
   }
 
-  if (estado.fase === "codigo") {
+  // ── Pantallas de mensaje ─────────────────────────────────────────────
+  if (estado.fase === "revisa_correo") {
     return (
-      <form onSubmit={verificar} className="flex w-full flex-col gap-3 text-center">
-        <p className="text-lg">Te enviamos un código a</p>
-        <p className="font-semibold">{estado.email}</p>
-        <label htmlFor="codigo" className="sr-only">
-          Código de 6 dígitos
-        </label>
-        <input
-          id="codigo"
-          inputMode="numeric"
-          pattern="[0-9]{6}"
-          maxLength={6}
-          required
-          autoFocus
-          placeholder="······"
-          value={codigo}
-          onChange={(e) => setCodigo(e.target.value.replace(/\D/g, ""))}
-          className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-center text-2xl font-bold tracking-[0.5em] text-ink placeholder:text-dim"
-        />
-        {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
-        <button
-          type="submit"
-          disabled={enviando || codigo.length !== 6}
-          className="rounded-cinta bg-accent px-4 py-3 font-medium text-white hover:opacity-90 disabled:opacity-50"
-        >
-          {enviando ? "Verificando…" : "Entrar"}
+      <div className="text-center">
+        <p className="text-lg">Revisa tu correo</p>
+        <p className="mt-3 text-sm text-dim">
+          Te enviamos un enlace a <span className="font-semibold text-ink">{estado.email}</span> para confirmar
+          tu cuenta. Ábrelo y quedas dentro. (Si no lo ves, revisa el spam.)
+        </p>
+        <button onClick={() => setEstado({ fase: "form", modo: "entrar" })} className="mt-6 text-sm text-accent hover:opacity-80">
+          Volver
         </button>
-        <button
-          type="button"
-          onClick={() => setEstado({ fase: "form" })}
-          className="text-sm text-dim hover:text-ink"
-        >
-          Pedir otro código o cambiar de correo
+      </div>
+    );
+  }
+
+  if (estado.fase === "reset_enviado") {
+    return (
+      <div className="text-center">
+        <p className="text-lg">Enlace enviado</p>
+        <p className="mt-3 text-sm text-dim">
+          Si <span className="font-semibold text-ink">{estado.email}</span> tiene cuenta, le llegó un enlace para
+          elegir una contraseña nueva. Revisa tu bandeja (y el spam).
+        </p>
+        <button onClick={() => setEstado({ fase: "form", modo: "entrar" })} className="mt-6 text-sm text-accent hover:opacity-80">
+          Volver
         </button>
-      </form>
+      </div>
     );
   }
 
@@ -297,19 +344,17 @@ function LoginForm() {
   }
 
   if (estado.fase === "no_invitado") {
-    // Canon 15 v2: el correo intentado a la vista (el dato accionable), la
-    // lista es una para las dos puertas, y cero guiones largos (ley de voz).
     const correoIntentado = email || searchParams.get("correo") || "";
     return (
       <div className="text-center">
         <p className="text-lg">My Idea está en beta privada.</p>
         {correoIntentado && <p className="mt-3 font-semibold">{correoIntentado}</p>}
         <p className="mt-3 text-sm text-dim">
-          Ese correo aún no está en la lista de invitados, entres con tu código o con Google: la lista
+          Ese correo aún no está en la lista de invitados, entres con tu contraseña o con Google: la lista
           es la misma. Si alguien te invitó, pídele que confirme el correo que registró.
         </p>
         <button
-          onClick={() => setEstado({ fase: "form" })}
+          onClick={() => setEstado({ fase: "form", modo: "entrar" })}
           className="mt-6 text-sm text-accent hover:opacity-80"
         >
           Probar con otro correo
@@ -318,8 +363,28 @@ function LoginForm() {
     );
   }
 
+  // ── La pantalla principal: pestañas Entrar / Crear cuenta ────────────
+  const modo = estado.modo;
+  const cambiarModo = (m: "entrar" | "crear") => setEstado({ fase: "form", modo: m });
   return (
-    <form onSubmit={enviar} className="flex w-full flex-col gap-3">
+    <form onSubmit={modo === "entrar" ? entrar : crear} className="flex w-full flex-col gap-3">
+      <div className="mb-1 flex rounded-cinta border border-hairline p-1 text-sm">
+        <button
+          type="button"
+          onClick={() => cambiarModo("entrar")}
+          className={`flex-1 rounded-[10px] py-2 font-medium ${modo === "entrar" ? "bg-surface text-ink" : "text-dim hover:text-ink"}`}
+        >
+          Entrar
+        </button>
+        <button
+          type="button"
+          onClick={() => cambiarModo("crear")}
+          className={`flex-1 rounded-[10px] py-2 font-medium ${modo === "crear" ? "bg-surface text-ink" : "text-dim hover:text-ink"}`}
+        >
+          Crear cuenta
+        </button>
+      </div>
+
       {enlaceVencido && (
         <p className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-sm text-warn">
           Ese enlace ya venció o ya se usó. Pide uno nuevo aquí abajo.
@@ -327,9 +392,13 @@ function LoginForm() {
       )}
       {googleFallo && (
         <p className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-sm text-warn">
-          No pudimos completar el acceso con Google. Intenta de nuevo, o entra con tu código.
+          No pudimos completar el acceso con Google. Intenta de nuevo, o entra con tu contraseña.
         </p>
       )}
+      {estado.aviso && (
+        <p className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-sm text-dim">{estado.aviso}</p>
+      )}
+
       <label htmlFor="email" className="sr-only">
         Correo electrónico
       </label>
@@ -343,14 +412,43 @@ function LoginForm() {
         onChange={(e) => setEmail(e.target.value)}
         className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-ink placeholder:text-dim"
       />
+      <label htmlFor="password" className="sr-only">
+        Contraseña
+      </label>
+      <input
+        id="password"
+        type="password"
+        required
+        autoComplete={modo === "entrar" ? "current-password" : "new-password"}
+        placeholder="Tu contraseña"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-ink placeholder:text-dim"
+      />
+      {modo === "crear" && (
+        <p className="text-xs text-dim">Al menos 8 caracteres, una mayúscula y un número.</p>
+      )}
       {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
+      {estado.sinConfirmar && (
+        <button type="button" onClick={reenviarConfirmacion} disabled={enviando} className="text-left text-sm text-accent hover:opacity-80">
+          Reenviarme el correo de confirmación
+        </button>
+      )}
+
       <button
         type="submit"
         disabled={enviando}
         className="rounded-cinta bg-accent px-4 py-3 font-medium text-white hover:opacity-90 disabled:opacity-50"
       >
-        {enviando ? "Enviando…" : "Enviarme mi código de acceso"}
+        {enviando ? "Un momento…" : modo === "entrar" ? "Entrar" : "Crear mi cuenta"}
       </button>
+
+      {modo === "entrar" && (
+        <button type="button" onClick={olvide} disabled={enviando} className="text-sm text-dim hover:text-ink">
+          Olvidé mi contraseña
+        </button>
+      )}
+
       <div className="flex items-center gap-3 py-1 text-xs text-dim" aria-hidden>
         <span className="h-px flex-1 bg-hairline" />
         o

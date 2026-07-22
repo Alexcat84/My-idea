@@ -27,8 +27,9 @@ import { PRECIOS, type ConceptoPrecio } from "./precios";
  * y docs/MATRIZ_DELTAS_CANON_2.0.md ("Decisiones pendientes").
  *
  * Cerrar la beta (vaciar o desactivar beta_allowlist) cierra el grifo de
- * ESTA cortesía sin tocar código: sin fila en la allowlist, magic-link
- * rechaza el login antes de que otorgar_cortesia pueda llamarse.
+ * ESTA cortesía sin tocar código: sin fila en la allowlist, las rutas de
+ * registro y de entrar (registrar/entrar) rechazan antes de que
+ * otorgar_cortesia pueda llamarse.
  */
 export const CORTESIA_BETA = 20;
 

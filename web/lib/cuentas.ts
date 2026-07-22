@@ -7,9 +7,9 @@
  * solos).
  *
  * SEGURIDAD (la regla: NADIE adopta el proyecto de otro):
- * - En el login (auth/confirm): el id anónimo sale de la SESIÓN que el
- *   propio request traía en cookies antes de verificar el OTP: prueba de
- *   posesión criptográfica. Jamás de un parámetro.
+ * - En el login (entrar/registrar/auth-callback): el id anónimo sale de la
+ *   SESIÓN que el propio request traía en cookies ANTES de autenticar:
+ *   prueba de posesión criptográfica. Jamás de un parámetro.
  * - En el script del fundador (scripts/adoptar_proyectos.ts): corre con la
  *   service-role key en la máquina del fundador, con ids explícitos.
  */

@@ -50,8 +50,17 @@ export async function GET(request: Request) {
 
   const { error } = await supabase.auth.exchangeCodeForSession(code);
   if (error) {
-    console.error("[google] fallo el intercambio del code:", error.message);
-    return responder("/login?google=fallo");
+    // Sirve a tres enlaces: Google, confirmación de registro y recuperación.
+    // Un enlace vencido o ya usado cae aquí.
+    console.error("[auth/callback] fallo el intercambio del code:", error.message);
+    return responder("/login?enlace=vencido");
+  }
+
+  // Recuperación de contraseña (resetPasswordForEmail): el enlace trae
+  // type=recovery. La sesión de recuperación ya está puesta; se fija la
+  // contraseña nueva en /auth/update-password (sin cortesía ni 2FA aquí).
+  if (url.searchParams.get("type") === "recovery") {
+    return responder("/auth/update-password");
   }
 
   const {

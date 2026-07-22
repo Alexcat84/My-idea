@@ -8,10 +8,13 @@ La beta corre 100% con cortesía (20 créditos por invitado); **ninguna pasarela
 
 - **Libre sin login:** la web pública y el ORGANIZADOR (el gancho). La identidad
   invisible sigue existiendo solo para eso.
-- **El login nace en "Iniciar La Exploración"**: código de 6 dígitos o Google
-  + allowlist (3.2). Al confirmar: los proyectos del anónimo se **adoptan**
-  (la cookie del propio request es la prueba de posesión) y la cuenta recibe
-  su **cortesía: 20 créditos, una sola vez** (`beta_courtesy_log`).
+- **El login nace en "Iniciar La Exploración"**: correo + **contraseña** o
+  Google, con allowlist. (Modelo del I Ching, jul 2026: el código-cada-vez
+  murió — chocaba con el límite de correos de producción y con el 2FA. Ahora
+  el correo solo se manda UNA vez, al confirmar el registro; entrar es por
+  contraseña, sin correos.) Al autenticarse: los proyectos del anónimo se
+  **adoptan** (la cookie del propio request es la prueba de posesión) y la
+  cuenta recibe su **cortesía: 20 créditos, una sola vez** (`beta_courtesy_log`).
   - **Gobierno de la cortesía (aclaración del fundador, 2026-07-20):**
     `CORTESIA_BETA = 20` es la política de la **beta cerrada** (solo
     invitados de `beta_allowlist`), **no** la cortesía de bienvenida del
@@ -53,8 +56,8 @@ lista de invitados…" (200 amable, jamás un error técnico).
 
 **Cerrar el grifo de la cortesía (`CORTESIA_BETA`, ver §1.b abajo) es una
 operación de datos, no de código**, y las dos puertas de entrada la
-respetan por igual: el código verifica la allowlist ANTES de mandar el correo
-(`api/auth/magic-link`) y Google la verifica DESPUÉS de autenticar, antes de
+respetan por igual: el registro y el ingreso verifican la allowlist antes de crear/entrar
+(`api/auth/registrar` y `api/auth/entrar`) y Google la verifica DESPUÉS de autenticar, antes de
 otorgar nada (`auth/callback`) — ninguna de las dos llega a
 `otorgarCortesia` sin pasar por `estaEnAllowlist` primero. Dos formas de
 cerrar, con efectos distintos:
@@ -69,13 +72,24 @@ cerrar, con efectos distintos:
   chequeo en cada intento, no solo en el primero). Úsala solo si de verdad
   quieres cerrar la puerta completa, no solo el grifo de bienvenida.
 
-### b) Entrar por primera vez
+### b) Entrar por primera vez (correo + contraseña, modelo I Ching)
 
-1. `https://www.myideaproject.com/login` → tu email → escribir el **código de
-   6 dígitos** que llega al correo (decisión jul 2026: el enlace mágico quedó
-   obsoleto; `/auth/confirm` sigue vivo solo para correos rezagados).
-   O bien: **"Continuar con Google"** (mismo correo = misma cuenta).
-2. Al entrar: cortesía 20 otorgada (una sola vez) + destino `/ideas`.
+1. `https://www.myideaproject.com/login` → pestaña **Crear cuenta** → correo +
+   contraseña (mín. 8, una mayúscula, un número) → **"Crear mi cuenta"**.
+2. Llega **un** correo de confirmación (una sola vez en la vida de la cuenta).
+   Abrir el enlace → `/auth/callback` confirma y entra.
+3. Las siguientes veces: pestaña **Entrar** → correo + contraseña. **Sin
+   correos** (por eso no choca con el límite de Resend). "Olvidé mi
+   contraseña" manda un enlace de recuperación a `/auth/update-password`.
+4. O bien, en cualquier momento: **"Continuar con Google"** (mismo correo =
+   misma cuenta).
+5. Al autenticarse la primera vez: cortesía 20 (una sola vez) + destino
+   `/ideas` (o la idea que ibas a explorar, si venías de la frontera: `?next=`).
+
+**El template del correo en Supabase** (Auth → Emails → Templates →
+**Confirm signup** y **Reset password**) debe usar el enlace, no el código:
+`{{ .ConfirmationURL }}`. (El viejo template de `{{ .Token }}` era del código
+que murió.)
 
 ### c) Adoptar TUS proyectos de prueba (los que quieras seguir)
 
@@ -102,7 +116,7 @@ cuenta los ve: RLS).
 
 ### e) Login con Google (configuración de una sola vez, 2026-07-19)
 
-La app ofrece "Continuar con Google" además del código (réplica del I Ching:
+La app ofrece "Continuar con Google" además del correo+contraseña (réplica del I Ching:
 `/api/auth/google` inicia, `/auth/callback` recibe; la allowlist se aplica
 DESPUÉS de autenticar y el trabajo del anónimo jamás se pierde — detalle en
 los comentarios de ambas rutas).
@@ -121,7 +135,7 @@ Configuración que vive FUERA del repo:
    `http://localhost:3000/auth/callback` (y el dominio de preview si se
    prueba en staging).
 
-Mismo correo por Google que por código = **la misma cuenta** (Supabase vincula
+Mismo correo por Google que por contraseña = **la misma cuenta** (Supabase vincula
 por email verificado); la cortesía no se duplica (una-sola-vez por cuenta).
 
 ## 3. Estado vivo vs dormido
@@ -131,8 +145,8 @@ por email verificado); la cortesía no se duplica (una-sola-vez por cuenta).
 | Ledger 020-024 (RPCs atómicas, RLS, courtesy log, refund log) | **VIVO** |
 | Cortesía 20 al primer login | **VIVO** |
 | Los 5 puntos de cobro + 402 + idempotencia + refund | **VIVOS** (se pagan con cortesía) |
-| Login por código (6 dígitos) + allowlist + adopción al login | **VIVO** |
-| Login con Google (allowlist post-auth, mundo del anónimo intacto) | **VIVO** (código listo; requiere provider configurado en Supabase) |
+| Login por correo + contraseña + allowlist + adopción al login | **VIVO** |
+| Login con Google (allowlist post-auth, mundo del anónimo intacto) | **VIVO** (requiere provider configurado en Supabase) |
 | Chip de saldo + precios vivos (el tachado murió) | **VIVO** |
 | RevenueCat / Stripe / Play (pasarelas, `otorgar_creditos_idempotente`, webhook) | **DORMIDO** (esquema listo, ancla en 023; post-beta) |
 | Bundles de compra del centro de créditos | **DORMIDO** ("$ —", decisión del fundador pendiente) |
