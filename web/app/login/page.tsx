@@ -11,6 +11,7 @@
  */
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { destinoPostLogin } from "@/lib/nextSeguro";
 
 type Estado =
   | { fase: "form"; error?: string }
@@ -35,6 +36,10 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const enlaceVencido = searchParams.get("enlace") === "vencido";
   const googleFallo = searchParams.get("google") === "fallo";
+  // "Seguimos justo donde quedaste": la frontera manda aquí con ?next=<ruta>
+  // (la exploración de una idea, un seguimiento…). Al entrar, volvemos ahí en
+  // vez de al home. destinoPostLogin valida que sea una ruta interna.
+  const destino = destinoPostLogin(searchParams.get("next"));
   // Si Google devolvió un correo que no está invitado, el callback vuelve
   // aquí con ?google=no-invitado: se abre directo la pantalla amable. Con
   // ?desafio=1 (2FA activo), se abre directo el segundo paso.
@@ -120,8 +125,9 @@ function LoginForm() {
         setEstado({ fase: "desafio", metodo: data.metodo === "email" ? "email" : "totp", rescate: false });
         return;
       }
-      // Sesión creada (y la cortesía/adopción ya corrieron): a sus ideas.
-      router.push("/ideas");
+      // Sesión creada (y la cortesía/adopción ya corrieron): al destino que
+      // traía el ?next= (la idea que iba a explorar), o al home de ideas.
+      router.push(destino);
       router.refresh();
     } catch {
       setEstado({ fase: "codigo", email: estado.email, error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
@@ -150,7 +156,7 @@ function LoginForm() {
         setEstado({ ...estado, error: data.error ?? "algo se atoró; intenta de nuevo" });
         return;
       }
-      router.push("/ideas");
+      router.push(destino);
       router.refresh();
     } catch {
       setEstado({ ...estado, error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
@@ -351,7 +357,7 @@ function LoginForm() {
         <span className="h-px flex-1 bg-hairline" />
       </div>
       <a
-        href="/api/auth/google"
+        href={destino !== "/ideas" ? `/api/auth/google?next=${encodeURIComponent(destino)}` : "/api/auth/google"}
         className="flex items-center justify-center gap-2.5 rounded-cinta border border-hairline bg-surface px-4 py-3 font-medium text-ink hover:border-white/25"
       >
         <GlifoGoogle />

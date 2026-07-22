@@ -16,15 +16,29 @@
  *    visitante vuelve al login con su mundo intacto.
  */
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { bienvenidaTrasLogin, adoptarProyectosDeUsuario, estaEnAllowlist } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { COOKIE_NEXT, destinoPostLogin } from "@/lib/nextSeguro";
 import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
+
+  // "Seguimos justo donde quedaste": el destino que /api/auth/google dejó en
+  // una cookie antes de salir a Google (o /ideas si no había). Toda salida de
+  // esta ruta limpia la cookie para que no quede colgada.
+  const cookieStore = await cookies();
+  const destino = destinoPostLogin(cookieStore.get(COOKIE_NEXT)?.value);
+  const responder = (ruta: string) => {
+    const res = NextResponse.redirect(new URL(ruta, url.origin));
+    res.cookies.delete(COOKIE_NEXT);
+    return res;
+  };
+
   const code = url.searchParams.get("code");
-  if (!code) return NextResponse.redirect(new URL("/login?google=fallo", url.origin));
+  if (!code) return responder("/login?google=fallo");
 
   const supabase = await createClient();
 
@@ -37,7 +51,7 @@ export async function GET(request: Request) {
   const { error } = await supabase.auth.exchangeCodeForSession(code);
   if (error) {
     console.error("[google] fallo el intercambio del code:", error.message);
-    return NextResponse.redirect(new URL("/login?google=fallo", url.origin));
+    return responder("/login?google=fallo");
   }
 
   const {
@@ -46,7 +60,7 @@ export async function GET(request: Request) {
   const email = (real?.email ?? "").trim().toLowerCase();
   if (!real || !email) {
     await supabase.auth.signOut();
-    return NextResponse.redirect(new URL("/login?google=fallo", url.origin));
+    return responder("/login?google=fallo");
   }
 
   let invitado: boolean;
@@ -57,7 +71,7 @@ export async function GET(request: Request) {
     // reintentar. Jamás dejar pasar sin veredicto de la allowlist.
     console.error("[google] fallo la consulta de allowlist:", e);
     await supabase.auth.signOut();
-    return NextResponse.redirect(new URL("/login?google=fallo", url.origin));
+    return responder("/login?google=fallo");
   }
 
   if (!invitado) {
@@ -78,26 +92,24 @@ export async function GET(request: Request) {
     }
     // El correo viaja de vuelta: la pantalla amable muestra QUÉ correo no
     // está en la lista (canon 15 v2: el dato accionable).
-    return NextResponse.redirect(
-      new URL(`/login?google=no-invitado&correo=${encodeURIComponent(email)}`, url.origin)
-    );
+    return responder(`/login?google=no-invitado&correo=${encodeURIComponent(email)}`);
   }
 
   await bienvenidaTrasLogin(real, anonId);
 
   // Centro de cuenta: con 2FA activo, el login sigue con el desafío en la
   // pantalla de login (la sesión ya existe; el motor pagado queda gateado
-  // hasta superar el desafío).
+  // hasta superar el desafío). El destino se arrastra en ?next= para que, al
+  // superar el desafío, la pantalla reanude donde el usuario iba.
   try {
     const seguridad = await estadoSeguridad(real.id);
     if (seguridad.habilitado) {
-      return NextResponse.redirect(
-        new URL(`/login?desafio=1&metodo=${seguridad.metodo ?? "totp"}`, url.origin)
-      );
+      const nextParam = destino !== "/ideas" ? `&next=${encodeURIComponent(destino)}` : "";
+      return responder(`/login?desafio=1&metodo=${seguridad.metodo ?? "totp"}${nextParam}`);
     }
   } catch (e) {
     console.error("[google] no se pudo leer user_seguridad:", e);
   }
 
-  return NextResponse.redirect(new URL("/ideas", url.origin));
+  return responder(destino);
 }
