@@ -22,6 +22,7 @@ import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContr
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
 import { PRECIOS } from "@/lib/precios";
+import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 
@@ -1063,8 +1064,9 @@ export function ManosALaObra({
       });
       const data = await res.json();
       if (res.status === 401 && data.login_requerido) {
-        // ETAPA 2 (la frontera): cuenta real para el seguimiento.
-        window.location.assign("/login");
+        // ETAPA 2 (la frontera): cuenta real para el seguimiento. Al volver,
+        // reanuda en Manos a la Obra (donde vive el ritual de seguimiento).
+        window.location.assign(loginConNext(`/idea/${projectId}?vista=manos`));
         return;
       }
       if (!res.ok) {
@@ -1115,8 +1117,9 @@ export function ManosALaObra({
       const res = await fetch(`/api/project/${projectId}/world/${dominio}/start`, { method: "POST" });
       const data = await res.json();
       if (res.status === 401 && data.login_requerido) {
-        // ETAPA 2 (la frontera): el login nace aqui; la idea se adopta al volver.
-        window.location.assign("/login");
+        // ETAPA 2 (la frontera): el login nace aqui; la idea se adopta al
+        // volver y se reanuda en Manos (donde se activan los mundos).
+        window.location.assign(loginConNext(`/idea/${projectId}?vista=manos`));
         return;
       }
       if (!res.ok) {

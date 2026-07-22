@@ -18,6 +18,19 @@
 import { createAdminClient } from "./supabase/admin";
 import { PRECIOS, type ConceptoPrecio } from "./precios";
 
+/**
+ * CORTESIA_BETA — política de la BETA CERRADA (invitados de beta_allowlist),
+ * NO la política de bienvenida del lanzamiento público. La cortesía del
+ * usuario nuevo post-beta es DECISIÓN PENDIENTE del fundador (candidata
+ * preliminar: organizador gratis + 5 de bienvenida = exactamente un plan;
+ * se calibra con la telemetría de esta beta). Ver docs/BANCO_DE_TEXTOS.md
+ * y docs/MATRIZ_DELTAS_CANON_2.0.md ("Decisiones pendientes").
+ *
+ * Cerrar la beta (vaciar o desactivar beta_allowlist) cierra el grifo de
+ * ESTA cortesía sin tocar código: sin fila en la allowlist, las rutas de
+ * registro y de entrar (registrar/entrar) rechazan antes de que
+ * otorgar_cortesia pueda llamarse.
+ */
 export const CORTESIA_BETA = 20;
 
 /** Saldo actual del usuario (0 si aún no tiene cuenta de créditos). */

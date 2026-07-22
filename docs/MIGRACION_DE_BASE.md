@@ -61,20 +61,20 @@ En el proyecto nuevo, **Authentication**:
    (el URI viejo NO se borra: le sirve a staging).
 4. **URL Configuration**:
    - Site URL: `https://www.myideaproject.com`
-   - Redirect URLs: `https://www.myideaproject.com/auth/confirm`,
-     `https://www.myideaproject.com/auth/callback`,
-     `https://myideaproject.com/auth/confirm`,
-     `https://myideaproject.com/auth/callback`
+   - Redirect URLs: `https://www.myideaproject.com/auth/callback` y
+     `https://myideaproject.com/auth/callback` (confirmación de registro,
+     recuperación de contraseña y Google llegan todas a `/auth/callback`).
    - (Las de localhost y previews NO van aquí: esos entornos usan staging.)
 5. **Emails → SMTP** (Resend, igual que hoy): host `smtp.resend.com`,
    puerto `465`, usuario `resend`, contraseña = la `RESEND_API_KEY` del
    `.env`, remitente `no-reply@myideaproject.com`, nombre "My Idea".
-6. **Emails → Templates → Magic Link**: copiar el template vigente de
-   staging TAL CUAL (el cuerpo debe llevar **`{{ .Token }}`** — el código de
-   6 dígitos; sin él, el login por código muere). Ábrelo en staging y
-   pégalo; no lo reescribas de memoria.
-7. **Rate Limits**: subir el envío de emails al valor que tiene staging
-   (el default de 2/hora es demasiado bajo para el login por código).
+6. **Emails → Templates → Confirm signup y Reset password**: el cuerpo debe
+   llevar el **enlace `{{ .ConfirmationURL }}`** (login por correo+contraseña,
+   modelo I Ching). NO el viejo `{{ .Token }}` del código, que murió. Ábrelo
+   en staging y pégalo; no lo reescribas de memoria.
+7. **Rate Limits**: el default de emails ya no es crítico (entrar es por
+   contraseña, sin correos). Solo confirmación de registro y recuperación
+   mandan correo, y son raros. Aun así, iguala el valor de staging.
 
 ## Paso 4 · Vercel: separar Production de Preview
 
@@ -166,10 +166,14 @@ casilla en el proyecto NUEVO antes de tocar Vercel:
 - [ ] Google provider activado con Client ID + Secret (los del `.env`)
 - [ ] SMTP Resend configurado (smtp.resend.com:465, user `resend`,
       pass = `RESEND_API_KEY`, remitente `no-reply@myideaproject.com`)
-- [ ] Template Magic Link con **`{{ .Token }}`** (copiado de staging tal cual)
-- [ ] Rate limit de emails subido (no el default 2/hora)
+- [ ] Templates **Confirm signup** y **Reset password** con el ENLACE
+      **`{{ .ConfirmationURL }}`** (login por correo+contraseña; NO el viejo
+      `{{ .Token }}` del código que murió). Copiar de staging tal cual.
+- [ ] Rate limit de emails: igualar staging (menos crítico ya; entrar es
+      por contraseña, sin correos)
 - [ ] Site URL: `https://www.myideaproject.com`
-- [ ] Redirect URLs: `/auth/confirm` y `/auth/callback` en www y apex (4)
+- [ ] Redirect URLs: `/auth/callback` en www y apex (confirmación, recovery
+      y Google llegan ahí)
 
 **Vercel → Environment Variables → Production (inventario COMPLETO tras la
 migración — verificar una por una, ninguna puede faltar):**

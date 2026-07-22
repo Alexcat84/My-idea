@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import type { ValorNumerico } from "@/lib/calculadora";
 import type { Palanca, Palancas } from "@/lib/palancas";
 import type { Tablero } from "@/lib/tableroNumeros";
+import { loginConNext } from "@/lib/nextSeguro";
 import { fraseCicloCaja, type Veredicto } from "@/lib/numerosVivo";
 import { fechaSello, momentoAbsoluto, selloVersion } from "@/lib/fechas";
 import { CorregirCifras } from "@/app/ui/CorregirCifras";
@@ -528,7 +529,8 @@ export function TusNumeros({ projectId }: { projectId: string }) {
                   });
                   const payload = (await r.json()) as RespuestaNumeros & { error?: string; login_requerido?: boolean };
                   if (r.status === 401 && payload.login_requerido) {
-                    window.location.assign("/login");
+                    // Al volver, reanuda en Manos (donde vive Tus Números).
+                    window.location.assign(loginConNext(`/idea/${projectId}?vista=manos`));
                     return;
                   }
                   if (!r.ok) {

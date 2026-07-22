@@ -27,6 +27,7 @@ import { ChipSaldo } from "../../ui/ChipSaldo";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { PRECIOS } from "@/lib/precios";
+import { loginConNext } from "@/lib/nextSeguro";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -258,7 +259,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       });
       if (inicio.status === 401) {
         // ETAPA 2 (la frontera): el login nace aqui; la idea se adopta al volver.
-        router.push("/login");
+        router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
         return;
       }
       if (inicio.status === 429) setError(((await inicio.json()) as { error: string }).error);
@@ -461,7 +462,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
             body: JSON.stringify({ texto: d.idea.entrada_original, project_id: projectId }),
           });
           if (inicio.status === 401) {
-            router.push("/login");
+            router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
             return;
           }
           if (inicio.status === 429) {
@@ -1086,7 +1087,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                             body: JSON.stringify({ texto: detalle.idea.entrada_original, project_id: projectId }),
                           });
                           if (inicio.status === 401) {
-            router.push("/login");
+            router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
             return;
           }
           if (inicio.status === 429) {
