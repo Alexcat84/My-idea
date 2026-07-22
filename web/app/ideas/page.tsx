@@ -11,7 +11,6 @@
  * "Salir" solo aparece para cuentas con email.
  */
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
 import { BotonSalir } from "../ui/BotonSalir";
@@ -52,11 +51,10 @@ export default async function MisIdeas() {
     saldo = (cuenta as { creditos_total: number } | null)?.creditos_total ?? 0;
   }
 
-  if (ideas.length === 0) redirect("/nueva");
-
   // Fase 3.8: las realizadas reposan al final, bajo su propio encabezado.
   const activas = ideas.filter((i) => !i.realizada);
   const realizadas = ideas.filter((i) => i.realizada);
+  const vacio = ideas.length === 0;
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -77,12 +75,22 @@ export default async function MisIdeas() {
         <Link href="/potenciadores" className="text-[13.5px] text-dim hover:text-ink">
           Potenciadores
         </Link>
+        {!esAnonimo && <BotonSalir />}
+        {/* Configuración de cuenta: engranaje en la esquina, siempre visible
+            (también con 0 ideas). Lleva al centro de cuenta (/cuenta). */}
         {!esAnonimo && (
-          <Link href="/cuenta" className="text-[13.5px] text-dim hover:text-ink">
-            Cuenta
+          <Link
+            href="/cuenta"
+            title="Tu cuenta"
+            aria-label="Tu cuenta"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-hairline text-dim hover:border-white/25 hover:text-ink"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <circle cx="12" cy="12" r="3" />
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
           </Link>
         )}
-        {!esAnonimo && <BotonSalir />}
       </header>
 
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:px-6">
@@ -90,23 +98,51 @@ export default async function MisIdeas() {
           <Saludo />
         </h1>
 
-        {/* Captura rápida: La Chispa embebida — el campo real vive en /nueva */}
-        <Link
-          href="/nueva"
-          className="anima-plan-in mt-4 flex items-center gap-3.5 rounded-[14px] border border-accent/30 bg-surface px-5 py-4 hover:border-accent/55"
-          style={{ animationDelay: "0.1s" }}
-        >
-          <span className="flex-1 text-[15px] text-dim">Cuéntame una idea nueva, o en qué punto estás con ella…</span>
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-accent/55">
-            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
-              <rect x="6" y="1.5" width="4" height="7.5" rx="2" fill="var(--accent)" />
-              <path d="M3.5 8a4.5 4.5 0 0 0 9 0" stroke="var(--accent)" strokeWidth="1.4" fill="none" />
-              <line x1="8" y1="12.6" x2="8" y2="14.5" stroke="var(--accent)" strokeWidth="1.4" />
-            </svg>
-          </span>
-        </Link>
+        {vacio ? (
+          /* Estado vacío (cuenta real, aún sin ideas): jamás saltar a /nueva
+             a espaldas del usuario — se le recibe en SU página con una
+             invitación clara. */
+          <div
+            className="anima-plan-in mt-8 flex flex-col items-center gap-5 rounded-panel border border-hairline bg-surface px-6 py-16 text-center"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <span className="flex h-16 w-16 items-center justify-center rounded-full border-[1.5px] border-accent/45">
+              <svg width="26" height="26" viewBox="0 0 16 16" fill="none" aria-hidden>
+                <rect x="6" y="1.5" width="4" height="7.5" rx="2" fill="var(--accent)" />
+                <path d="M3.5 8a4.5 4.5 0 0 0 9 0" stroke="var(--accent)" strokeWidth="1.4" fill="none" />
+                <line x1="8" y1="12.6" x2="8" y2="14.5" stroke="var(--accent)" strokeWidth="1.4" />
+              </svg>
+            </span>
+            <div>
+              <p className="text-lg font-semibold">Tus ideas esperan por ti</p>
+              <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-dim">
+                Aún no has guardado ninguna. Cuéntame la primera —lo que sea, como te salga— y la trabajamos
+                juntos, paso a paso.
+              </p>
+            </div>
+            <Link href="/nueva" className="rounded-cinta bg-accent px-6 py-3 font-medium text-white hover:opacity-90">
+              Iniciar nueva idea
+            </Link>
+          </div>
+        ) : (
+          <>
+            {/* Captura rápida: La Chispa embebida — el campo real vive en /nueva */}
+            <Link
+              href="/nueva"
+              className="anima-plan-in mt-4 flex items-center gap-3.5 rounded-[14px] border border-accent/30 bg-surface px-5 py-4 hover:border-accent/55"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <span className="flex-1 text-[15px] text-dim">Cuéntame una idea nueva, o en qué punto estás con ella…</span>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-accent/55">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
+                  <rect x="6" y="1.5" width="4" height="7.5" rx="2" fill="var(--accent)" />
+                  <path d="M3.5 8a4.5 4.5 0 0 0 9 0" stroke="var(--accent)" strokeWidth="1.4" fill="none" />
+                  <line x1="8" y1="12.6" x2="8" y2="14.5" stroke="var(--accent)" strokeWidth="1.4" />
+                </svg>
+              </span>
+            </Link>
 
-        <p
+            <p
           className="anima-plan-in mb-4 mt-10 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim"
           style={{ animationDelay: "0.2s" }}
         >
@@ -180,6 +216,8 @@ export default async function MisIdeas() {
                 </li>
               ))}
             </ul>
+          </>
+        )}
           </>
         )}
       </main>
