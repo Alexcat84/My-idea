@@ -16,6 +16,7 @@
  * queda quieto: una sola pasada estática del wordmark, sin bucles.
  */
 import { useEffect, useState } from "react";
+import { createClient } from "@/lib/supabase/client";
 import "./landing.css";
 
 type SeccionId = "inicio" | "acerca" | "como-funciona" | "descargar";
@@ -39,6 +40,17 @@ interface EstadoEslogan {
 }
 
 export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {}) {
+  // Logout desde la landing (lógica común: el botón de auth es "Iniciar
+  // sesión" cuando estás fuera y "Salir" cuando estás dentro). Recarga a "/"
+  // para que el servidor recalcule la sesión y el nav vuelva a su estado.
+  async function cerrarSesion() {
+    try {
+      await createClient().auth.signOut();
+    } catch {
+      /* aunque falle el signOut remoto, la recarga limpia la sesión local */
+    }
+    window.location.assign("/");
+  }
   const [typed, setTyped] = useState("");
   const [activa, setActiva] = useState<SeccionId>("inicio");
   const [eslogan, setEslogan] = useState<EstadoEslogan>({ mode: "shown", reveal: 1, scatter: [] });
@@ -742,8 +754,12 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
             <a href="#descargar" onClick={() => marcarActiva("descargar")} style={{ position: "relative", color: colorNav("descargar"), padding: "8px 12px", borderRadius: "8px", transition: "color 180ms ease-out,background 180ms ease-out" }} className="lh0">App<span style={{ position: "absolute", left: "12px", right: "12px", bottom: "2px", height: "2px", borderRadius: "2px", background: "#4D7CFE", transform: subrayadoNav("descargar"), transformOrigin: "left center", transition: "transform 220ms ease-out" }}></span></a>
           </div>
           <span style={{ flex: "1" }}></span>
-          <a href={sesionActiva ? "/ideas" : "/login"} style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">{sesionActiva ? "Mis ideas" : "Iniciar sesión"}</a>
-          <a href="/nueva" style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "10px", padding: "10px 20px", fontFamily: "inherit", fontSize: "14.5px", fontWeight: "600", cursor: "pointer", transition: "background 180ms ease-out" }} className="lh2">Comenzar</a>
+          {sesionActiva ? (
+            <button type="button" onClick={cerrarSesion} style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", background: "transparent", cursor: "pointer", fontFamily: "inherit", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">Salir</button>
+          ) : (
+            <a href="/login" style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">Iniciar sesión</a>
+          )}
+          <a href={sesionActiva ? "/ideas" : "/nueva"} style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "10px", padding: "10px 20px", fontFamily: "inherit", fontSize: "14.5px", fontWeight: "600", cursor: "pointer", transition: "background 180ms ease-out" }} className="lh2">{sesionActiva ? "Mis ideas" : "Comenzar"}</a>
         </div>
       </nav>
 
@@ -1013,8 +1029,12 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
         <div style={{ position: "relative", maxWidth: "1160px", margin: "0 auto", padding: "clamp(88px,11vw,150px) 24px", textAlign: "center" }}>
           <h2 data-reveal="true" style={{ fontSize: "clamp(34px,5.4vw,64px)", lineHeight: "1.08", letterSpacing: "-0.03em", fontWeight: "800", margin: "0", textWrap: "balance" }}>Aquí acaba tu idea y nace tu proyecto</h2>
           <div data-reveal="true" data-reveal-delay="120" style={{ display: "flex", justifyContent: "center", gap: "14px", marginTop: "36px", flexWrap: "wrap" }}>
-            <a href="/nueva" style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "12px", padding: "14px 30px", fontFamily: "inherit", fontSize: "15px", fontWeight: "600", cursor: "pointer", boxShadow: "0 0 26px rgba(77,124,254,0.32)", transition: "background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh8">Comenzar gratis</a>
-            <a href={sesionActiva ? "/ideas" : "/login"} style={{ display: "inline-flex", alignItems: "center", background: "transparent", border: "1px solid rgba(255,255,255,0.14)", color: "#F5F6F8", borderRadius: "12px", padding: "13px 26px", fontSize: "15px", fontWeight: "500", transition: "border-color 180ms ease-out" }} className="lh9">{sesionActiva ? "Mis ideas" : "Iniciar sesión"}</a>
+            <a href={sesionActiva ? "/ideas" : "/nueva"} style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "12px", padding: "14px 30px", fontFamily: "inherit", fontSize: "15px", fontWeight: "600", cursor: "pointer", boxShadow: "0 0 26px rgba(77,124,254,0.32)", transition: "background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh8">{sesionActiva ? "Mis ideas" : "Comenzar gratis"}</a>
+            {sesionActiva ? (
+              <button type="button" onClick={cerrarSesion} style={{ display: "inline-flex", alignItems: "center", background: "transparent", cursor: "pointer", fontFamily: "inherit", border: "1px solid rgba(255,255,255,0.14)", color: "#F5F6F8", borderRadius: "12px", padding: "13px 26px", fontSize: "15px", fontWeight: "500", transition: "border-color 180ms ease-out" }} className="lh9">Salir</button>
+            ) : (
+              <a href="/login" style={{ display: "inline-flex", alignItems: "center", background: "transparent", border: "1px solid rgba(255,255,255,0.14)", color: "#F5F6F8", borderRadius: "12px", padding: "13px 26px", fontSize: "15px", fontWeight: "500", transition: "border-color 180ms ease-out" }} className="lh9">Iniciar sesión</a>
+            )}
           </div>
         </div>
       </section>
