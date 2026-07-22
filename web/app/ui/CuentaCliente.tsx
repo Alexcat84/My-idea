@@ -1,23 +1,15 @@
 "use client";
 
 /**
- * CuentaCliente — las secciones vivas del centro de cuenta (réplica del
- * panel de opciones del I Ching): seguridad en dos pasos (TOTP con QR o
- * código por correo; códigos de rescate mostrados UNA sola vez), créditos
- * (el centro sigue siendo /potenciadores), borrar ideas concretas y borrar
- * la cuenta completa escribiendo ELIMINAR. Estado-sin-vara: el canon de
- * esta pantalla es del encargo lote 4 de Design.
+ * CuentaCliente — el centro de cuenta = SOLO opciones de cuenta (sin mezclar
+ * procesos, regla del fundador): identidad, seguridad en dos pasos (TOTP con
+ * QR o código por correo; rescates mostrados UNA sola vez) y borrar la cuenta
+ * escribiendo ELIMINAR. Los créditos viven en /creditos y las ideas en
+ * /ideas: aquí no aparecen. Estado-sin-vara: canon del encargo de Design.
  */
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-
-interface IdeaResumen {
-  id: string;
-  nombre: string;
-  fecha: string;
-}
 
 type Flujo2FA =
   | { paso: "reposo" }
@@ -43,13 +35,9 @@ function Seccion({ titulo, children }: { titulo: string; children: React.ReactNo
 export function CuentaCliente({
   email,
   proveedores,
-  saldo,
-  ideas: ideasIniciales,
 }: {
   email: string;
   proveedores: string[];
-  saldo: number;
-  ideas: IdeaResumen[];
 }) {
   const router = useRouter();
   const [seguridad, setSeguridad] = useState<Seguridad | null>(null);
@@ -57,9 +45,6 @@ export function CuentaCliente({
   const [codigo2FA, setCodigo2FA] = useState("");
   const [ocupado, setOcupado] = useState(false);
   const [avisoSeguridad, setAvisoSeguridad] = useState<string | null>(null);
-  const [ideas, setIdeas] = useState(ideasIniciales);
-  const [confirmandoIdea, setConfirmandoIdea] = useState<string | null>(null);
-  const [errorIdeas, setErrorIdeas] = useState<string | null>(null);
   const [palabraCuenta, setPalabraCuenta] = useState("");
   const [errorCuenta, setErrorCuenta] = useState<string | null>(null);
 
@@ -178,25 +163,7 @@ export function CuentaCliente({
     }
   }
 
-  // ── Ideas y cuenta ───────────────────────────────────────────────────
-
-  async function borrarIdea(id: string) {
-    if (ocupado) return;
-    setOcupado(true);
-    setErrorIdeas(null);
-    try {
-      const res = await fetch(`/api/project/${id}`, { method: "DELETE" });
-      const data = (await res.json().catch(() => ({}))) as Record<string, unknown>;
-      if (!res.ok) {
-        setErrorIdeas(String(data.error ?? "algo se atoró; intenta de nuevo"));
-        return;
-      }
-      setIdeas((xs) => xs.filter((x) => x.id !== id));
-      setConfirmandoIdea(null);
-    } finally {
-      setOcupado(false);
-    }
-  }
+  // ── Borrar la cuenta ─────────────────────────────────────────────────
 
   async function borrarCuenta(e: React.FormEvent) {
     e.preventDefault();
@@ -354,61 +321,6 @@ export function CuentaCliente({
             </div>
           </div>
         )}
-      </Seccion>
-
-      <Seccion titulo="Tus créditos">
-        <p className="text-[15px]">
-          Tienes <span className="font-semibold text-accent">{saldo}</span> {saldo === 1 ? "crédito" : "créditos"}.
-        </p>
-        <Link href="/potenciadores" className="mt-2 inline-block text-sm text-accent hover:opacity-80">
-          Ver mi centro de créditos →
-        </Link>
-      </Seccion>
-
-      <Seccion titulo="Tus ideas">
-        {ideas.length === 0 ? (
-          <p className="text-sm text-dim">No tienes ideas guardadas.</p>
-        ) : (
-          <ul className="flex flex-col gap-2.5">
-            {/* flex-wrap + w-full en la confirmación: en 380 baja a su propia
-                línea bajo el nombre (canon 23, hallazgo H3 del lote 4); el
-                título de la idea jamás se tapa. */}
-            {ideas.map((idea) => (
-              <li key={idea.id} className="flex flex-wrap items-center gap-3 rounded-cinta border border-hairline px-4 py-3">
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-[14px] font-medium">{idea.nombre}</p>
-                  <p className="text-xs text-dim">{idea.fecha}</p>
-                </div>
-                {confirmandoIdea === idea.id ? (
-                  <span className="flex w-full shrink-0 items-center justify-end gap-2 sm:w-auto">
-                    <span className="text-xs text-warn">¿Borrarla para siempre?</span>
-                    <button
-                      onClick={() => borrarIdea(idea.id)}
-                      disabled={ocupado}
-                      className="rounded-cinta border border-warn/50 px-3 py-1.5 text-xs font-semibold text-warn hover:border-warn disabled:opacity-50"
-                    >
-                      Sí, borrar
-                    </button>
-                    <button onClick={() => setConfirmandoIdea(null)} className="text-xs text-dim hover:text-ink">
-                      Cancelar
-                    </button>
-                  </span>
-                ) : (
-                  <button
-                    onClick={() => setConfirmandoIdea(idea.id)}
-                    className="shrink-0 text-xs text-dim underline-offset-2 hover:text-warn hover:underline"
-                  >
-                    Borrar
-                  </button>
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
-        {errorIdeas && <p className="mt-2 text-sm text-warn">{errorIdeas}</p>}
-        <p className="mt-3 text-xs text-dim">
-          Borrar una idea elimina su plan, su checklist y todo su historial. No hay papelera.
-        </p>
       </Seccion>
 
       <Seccion titulo="Borrar tu cuenta">

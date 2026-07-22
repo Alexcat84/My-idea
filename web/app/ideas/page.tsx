@@ -13,6 +13,7 @@
 import Link from "next/link";
 import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
+import { BorrarIdeaCinta } from "../ui/BorrarIdeaCinta";
 import { BotonSalir } from "../ui/BotonSalir";
 import { Saludo } from "../ui/Saludo";
 import { StepperMini } from "../ui/Stepper";
@@ -65,7 +66,7 @@ export default async function MisIdeas() {
         <span className="flex-1" />
         {saldo !== null && (
           <Link
-            href="/potenciadores"
+            href="/creditos"
             className={`inline-flex shrink-0 items-center rounded-full border px-3 py-1 text-[12px] font-semibold ${saldo === 0 ? "border-hairline text-dim hover:border-white/25" : "border-accent/40 text-accent hover:border-accent/70"}`}
             title="Tus créditos"
           >
@@ -116,7 +117,7 @@ export default async function MisIdeas() {
             <div>
               <p className="text-lg font-semibold">Tus ideas esperan por ti</p>
               <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-dim">
-                Aún no has guardado ninguna. Cuéntame la primera —lo que sea, como te salga— y la trabajamos
+                Aún no has guardado ninguna. Cuéntame la primera, lo que sea y como te salga, y la trabajamos
                 juntos, paso a paso.
               </p>
             </div>
@@ -151,7 +152,8 @@ export default async function MisIdeas() {
 
         <ul className="flex flex-col gap-3.5">
           {activas.map((idea, i) => (
-            <li key={idea.id} className="anima-plan-in" style={{ animationDelay: `${0.3 + i * 0.1}s` }}>
+            <li key={idea.id} className="anima-plan-in relative" style={{ animationDelay: `${0.3 + i * 0.1}s` }}>
+              <BorrarIdeaCinta id={idea.id} nombre={idea.nombre} />
               <Link
                 // C0: una idea ya en Manos a la Obra entra directo a la
                 // etapa 5 (checklist + mundos), no al documento del plan.
