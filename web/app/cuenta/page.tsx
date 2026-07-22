@@ -24,7 +24,7 @@ export default async function Cuenta() {
   // Métodos con los que esta cuenta puede entrar (Supabase los vincula por
   // email verificado).
   const proveedores = ((user.app_metadata?.providers as string[] | undefined) ?? [])
-    .map((p) => (p === "google" ? "Google" : p === "email" ? "Correo y contraseña" : p))
+    .map((p) => (p === "google" ? "Google" : p === "email" ? "correo" : p))
     .filter((v, i, a) => a.indexOf(v) === i);
 
   return (

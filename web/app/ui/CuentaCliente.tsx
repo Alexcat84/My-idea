@@ -204,7 +204,7 @@ export function CuentaCliente({
       <Seccion titulo="Tu identidad">
         <p className="text-[15px] font-semibold">{email}</p>
         <p className="mt-1 text-sm text-dim">
-          Entras con: {proveedores.length > 0 ? proveedores.join(" y ") : "código por correo"}.
+          Entras con {proveedores.length > 0 ? proveedores.join(" y ") : "correo"}.
         </p>
       </Seccion>
 
@@ -299,8 +299,7 @@ export function CuentaCliente({
         ) : (
           <div>
             <p className="text-sm text-dim">
-              Un segundo paso al entrar protege tu cuenta aunque alguien tenga acceso a tu correo. Es opcional y
-              puedes apagarlo cuando quieras.
+              Un segundo paso al entrar protege tu cuenta. Es opcional y puedes apagarlo cuando quieras.
             </p>
             {avisoSeguridad && <p className="mt-2 text-sm text-warn">{avisoSeguridad}</p>}
             <div className="mt-3 flex flex-wrap gap-3">
@@ -325,9 +324,8 @@ export function CuentaCliente({
 
       <Seccion titulo="Borrar tu cuenta">
         <p className="text-sm text-dim">
-          Se borra todo: tus ideas, tus planes, tu historial y tus créditos. No hay vuelta atrás, y los créditos
-          de cortesía no se vuelven a otorgar. Para confirmar, escribe{" "}
-          <span className="font-mono font-semibold text-warn">ELIMINAR</span>.
+          Se borra todo: tus ideas, tus planes, tu historial y tus créditos. No hay vuelta atrás. Para confirmar,
+          escribe <span className="font-mono font-semibold text-warn">ELIMINAR</span>.
         </p>
         <form onSubmit={borrarCuenta} className="mt-3 flex flex-wrap items-center gap-3">
           <input
