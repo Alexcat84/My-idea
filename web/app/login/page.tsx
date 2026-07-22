@@ -126,7 +126,9 @@ function LoginForm() {
       const res = await fetch("/api/auth/registrar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        // El destino viaja para reanudar tras confirmar el correo (si vino
+        // de la frontera de una idea); destino es /ideas si no hay next.
+        body: JSON.stringify({ email, password, next: destino }),
       });
       const data = await res.json();
       if (data.invitado === false) {

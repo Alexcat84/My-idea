@@ -8,11 +8,12 @@
  */
 import { NextResponse } from "next/server";
 import { estaEnAllowlist } from "@/lib/cuentas";
+import { COOKIE_NEXT, destinoPostLogin } from "@/lib/nextSeguro";
 import { validarPassword } from "@/lib/password";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
-  let body: { email?: unknown; password?: unknown };
+  let body: { email?: unknown; password?: unknown; next?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -20,6 +21,11 @@ export async function POST(request: Request) {
   }
   const email = String(body.email ?? "").trim().toLowerCase();
   const password = String(body.password ?? "");
+  // "Seguimos justo donde quedaste": si el registro nació en la frontera de
+  // una idea, el destino se guarda en una cookie (NO en el redirect_to de
+  // Supabase, que debe quedar limpio para no arriesgar el fallback a Site
+  // URL). /auth/callback la lee al confirmar. Validado como ruta interna.
+  const next = destinoPostLogin(typeof body.next === "string" ? body.next : null);
   if (!email || !email.includes("@") || email.length > 254) {
     return NextResponse.json({ error: "escribe un correo valido" }, { status: 400 });
   }
@@ -68,5 +74,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ creado: true, yaExistia: true, invitado: true });
   }
 
-  return NextResponse.json({ creado: true, yaExistia: false, invitado: true });
+  // Cuenta NUEVA (se envió el correo de confirmación): si el registro vino de
+  // la frontera de una idea, deja el destino en la cookie para reanudar al
+  // confirmar (mismo navegador; SameSite=Lax sobrevive el clic del enlace).
+  const res = NextResponse.json({ creado: true, yaExistia: false, invitado: true });
+  if (next !== "/ideas") {
+    res.cookies.set(COOKIE_NEXT, next, {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+      path: "/",
+      maxAge: 1800,
+    });
+  }
+  return res;
 }

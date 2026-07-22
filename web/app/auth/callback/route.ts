@@ -30,6 +30,10 @@ export async function GET(request: Request) {
   // una cookie antes de salir a Google (o /ideas si no había). Toda salida de
   // esta ruta limpia la cookie para que no quede colgada.
   const cookieStore = await cookies();
+  // El destino vive en una cookie corta: la deja /api/auth/google (antes de
+  // salir a Google) o /api/auth/registrar (antes de mandar el correo de
+  // confirmación). Así el redirect_to de Supabase queda limpio. Toda salida
+  // limpia la cookie.
   const destino = destinoPostLogin(cookieStore.get(COOKIE_NEXT)?.value);
   const responder = (ruta: string) => {
     const res = NextResponse.redirect(new URL(ruta, url.origin));
