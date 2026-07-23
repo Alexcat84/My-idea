@@ -543,12 +543,16 @@ export function finalizarPlan(
   const etiqueta = evaluacionCobertura.es_completa ? "Plan completo" : "Plan inicial";
   const totalConceptos = ruta.length + cosechaIds.length;
   const partes: string[] = [`_${etiqueta}_`, "", cuerpo];
-  partes.push(
-    "",
-    "---",
-    `_Este plan se alimento de ${totalConceptos} conceptos: ${ruta.length} de tu recorrido conversado ` +
-      `y ${cosechaIds.length} del vecindario relacionado del grafo._`
-  );
+  // CONFIDENCIAL: la cobertura de conceptos (recorrido + vecindario del
+  // grafo) es maquinaria nuestra. JAMÁS va en el plan que lee el usuario:
+  // ni una pista del sistema. Se registra como evento interno, que es
+  // donde sirve (análisis de la beta).
+  registrarEvento?.({
+    tipo: "cobertura_conceptos",
+    total: totalConceptos,
+    ruta: ruta.length,
+    cosecha: cosechaIds.length,
+  });
   if (!evaluacionCobertura.es_completa) {
     partes.push("", "## Lo que este plan aun no cubre", "");
     for (const f of evaluacionCobertura.familias_faltantes) partes.push(`- ${f}`);

@@ -184,13 +184,11 @@ export function PlanDocumento({
       <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
         <div className="mb-3 flex items-center gap-2">
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+          {/* CONFIDENCIAL: jamás exponer la maquinaria (conteo de nodos,
+              grafo, conceptos). El usuario solo ve que su plan salió de SU
+              recorrido. */}
           <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Generado de tu recorrido
-            {nodosFuente && nodosFuente.length > 0
-              ? ` · ${nodosFuente.length} ${nodosFuente.length === 1 ? "nodo" : "nodos"}`
-              : plan.etiqueta
-                ? ` · ${plan.etiqueta}`
-                : ""}
+            Generado de tu recorrido{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
           </span>
         </div>
         <button onClick={() => descargarMd(md, nombreIdea)} className="shrink-0 text-sm text-dim hover:text-ink">

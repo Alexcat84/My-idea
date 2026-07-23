@@ -29,7 +29,11 @@ export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoB
       )}
       <p className="text-[17px] font-semibold leading-[1.5] [text-wrap:pretty] sm:text-[21px]">{pregunta}</p>
       <div className="mt-5">
+        {/* key por pregunta: al cambiar de pregunta el campo se remonta, lo
+            que DETIENE el dictado anterior. Sin esto, un micrófono que quedó
+            abierto seguía escribiendo la respuesta vieja en el campo nuevo. */}
         <CampoConVoz
+          key={pregunta}
           valor={respuesta}
           onCambio={setRespuesta}
           filas={4}
