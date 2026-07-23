@@ -21,12 +21,6 @@ export default async function Cuenta() {
   } = await supabase.auth.getUser();
   if (!user || esInvitadoInvisible(user)) redirect("/login");
 
-  // Métodos con los que esta cuenta puede entrar (Supabase los vincula por
-  // email verificado).
-  const proveedores = ((user.app_metadata?.providers as string[] | undefined) ?? [])
-    .map((p) => (p === "google" ? "Google" : p === "email" ? "correo" : p))
-    .filter((v, i, a) => a.indexOf(v) === i);
-
   return (
     <div className="flex min-h-full flex-1 flex-col">
       <header className="flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6">
@@ -42,7 +36,7 @@ export default async function Cuenta() {
 
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-10 sm:px-6">
         <h1 className="text-2xl font-bold tracking-tight">Tu cuenta</h1>
-        <CuentaCliente email={user.email ?? ""} proveedores={proveedores} />
+        <CuentaCliente email={user.email ?? ""} />
       </main>
     </div>
   );

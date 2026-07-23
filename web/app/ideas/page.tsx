@@ -73,9 +73,6 @@ export default async function MisIdeas() {
             {saldo} {saldo === 1 ? "crédito" : "créditos"}
           </Link>
         )}
-        <Link href="/potenciadores" className="text-[13.5px] text-dim hover:text-ink">
-          Potenciadores
-        </Link>
         {!esAnonimo && <BotonSalir />}
         {/* Configuración de cuenta: engranaje en la esquina, siempre visible
             (también con 0 ideas). Lleva al centro de cuenta (/cuenta). */}
@@ -220,6 +217,24 @@ export default async function MisIdeas() {
             </ul>
           </>
         )}
+
+            {/* Potenciar: NO vive en el menú principal (regla del fundador).
+                Aparece al final de la lista, solo cuando ya hay ideas: se
+                elige la idea y después el potenciador. */}
+            <Link
+              href="/potenciadores"
+              className="mt-10 flex items-center justify-between gap-3 rounded-panel border border-hairline bg-surface px-5 py-4 hover:border-accent/45 sm:px-6"
+            >
+              <span>
+                <span className="block text-[15px] font-semibold">Potenciar mis ideas</span>
+                <span className="mt-0.5 block text-xs text-dim">
+                  Tus Números y los mundos, para la idea que elijas.
+                </span>
+              </span>
+              <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0">
+                <path d="M4 2l4 4-4 4" stroke="var(--text-dim)" strokeWidth="1.5" fill="none" />
+              </svg>
+            </Link>
           </>
         )}
       </main>
