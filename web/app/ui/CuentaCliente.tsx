@@ -32,6 +32,24 @@ function Seccion({ titulo, children }: { titulo: string; children: React.ReactNo
   );
 }
 
+/** Zona de peligro: lo irreversible se ve distinto desde lejos. Ámbar (la
+ * casa no usa rojo), borde y encabezado marcados, con su ícono de aviso. */
+function ZonaDePeligro({ children }: { children: React.ReactNode }) {
+  return (
+    <section className="mt-10 rounded-panel border border-warn/40 bg-warn/[0.04] px-5 py-5 sm:px-6">
+      <h2 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-warn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+          <path d="M12 9v4" />
+          <path d="M12 17h.01" />
+        </svg>
+        Zona de peligro
+      </h2>
+      <div className="mt-3">{children}</div>
+    </section>
+  );
+}
+
 export function CuentaCliente({ email }: { email: string }) {
   const router = useRouter();
   const [seguridad, setSeguridad] = useState<Seguridad | null>(null);
@@ -313,8 +331,9 @@ export function CuentaCliente({ email }: { email: string }) {
         )}
       </Seccion>
 
-      <Seccion titulo="Borrar tu cuenta">
-        <p className="text-sm text-dim">
+      <ZonaDePeligro>
+        <p className="text-[15px] font-semibold text-ink">Borrar tu cuenta</p>
+        <p className="mt-1.5 text-sm text-dim">
           Se borra todo: tus ideas, tus planes, tu historial y tus créditos. No hay vuelta atrás. Para confirmar,
           escribe <span className="font-mono font-semibold text-warn">ELIMINAR</span>.
         </p>
@@ -341,7 +360,7 @@ export function CuentaCliente({ email }: { email: string }) {
           </button>
         </form>
         {errorCuenta && <p className="mt-2 text-sm text-warn">{errorCuenta}</p>}
-      </Seccion>
+      </ZonaDePeligro>
     </>
   );
 }

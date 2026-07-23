@@ -144,6 +144,9 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     listo_para_plan: boolean;
     dominio: string;
     ruta: Array<{ id: string; titulo: string; etiqueta: string; modo: string }>;
+    /** El recorrido conversado ya persistido: al reentrar a la idea, la UI lo
+     * vuelve a pintar en vez de arrancar en blanco. */
+    turnos: Array<{ pregunta: string; respuesta: string }>;
   } | null = null;
   for (const s of ((sesiones ?? []) as Array<{
     id: string;
@@ -171,6 +174,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
         etiqueta: etiquetaArbol(nid, graph),
         modo: rec.modos[i],
       })),
+      turnos: (s.estado_recorrido.turnos ?? []).map((t) => ({ pregunta: t.pregunta, respuesta: t.respuesta })),
     };
     break;
   }

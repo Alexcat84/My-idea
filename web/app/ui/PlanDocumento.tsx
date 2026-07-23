@@ -27,6 +27,17 @@ function descargarMd(md: string, nombre: string) {
   URL.revokeObjectURL(url);
 }
 
+/** Descargar el plan en PDF: se abren TODAS las secciones (los acordeones son
+ * <details> nativos, así que el PDF sale completo, no a medias) y se manda a
+ * imprimir. La hoja de impresión (globals.css) aísla el documento y lo pasa a
+ * papel: fondo blanco, texto oscuro, sin navegación ni botones. El usuario
+ * elige "Guardar como PDF" en el diálogo de su navegador. */
+function descargarPdf() {
+  const doc = document.querySelector("[data-plan-print]");
+  doc?.querySelectorAll("details").forEach((d) => d.setAttribute("open", ""));
+  window.print();
+}
+
 /** Pasos como mini-línea de puntos (canon 04 en pequeño): sutil pero visual. */
 function PasosLista({ pasos }: { pasos: string[] }) {
   return (
@@ -179,7 +190,7 @@ export function PlanDocumento({
     etapas.find((s) => s.estaSemana)?.estaSemana ?? plan.secciones.find((s) => s.estaSemana)?.estaSemana ?? null;
 
   const documento = (
-    <div className="min-w-0 flex-1">
+    <div className="min-w-0 flex-1" data-plan-print>
       {/* encabezado del documento (canon 05) */}
       <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
         <div className="mb-3 flex items-center gap-2">
@@ -191,9 +202,14 @@ export function PlanDocumento({
             Generado de tu recorrido{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
           </span>
         </div>
-        <button onClick={() => descargarMd(md, nombreIdea)} className="shrink-0 text-sm text-dim hover:text-ink">
-          Descargar .md
-        </button>
+        <span className="flex shrink-0 items-center gap-3" data-no-print>
+          <button onClick={descargarPdf} className="text-sm text-dim hover:text-ink">
+            Descargar PDF
+          </button>
+          <button onClick={() => descargarMd(md, nombreIdea)} className="text-sm text-dim hover:text-ink">
+            Descargar .md
+          </button>
+        </span>
       </div>
       {plan.titulo && (
         <h2 className="anima-plan-in text-[26px] font-bold leading-[1.25] tracking-[-0.02em] [text-wrap:balance] sm:text-[32px]" style={{ animationDelay: "0.1s" }}>

@@ -10,7 +10,14 @@ import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import catalogo from "./assets/packs_catalog.json";
 import { costoAcumuladoUsd, PRESUPUESTO_SESION_USD_DEFAULT, type UsoAcumulado } from "./costmeter";
-import { cerrarSesion, guardarEstadoSesion, mergeNumerosProyecto, mergeTipoOferta, registrarBitacora } from "./db";
+import {
+  cerrarSesion,
+  guardarEstadoSesion,
+  mergeNumerosProyecto,
+  mergeTipoOferta,
+  registrarBitacora,
+  type TurnoRegistrado,
+} from "./db";
 import type { NodoTranscrito, ResultadoTurno } from "./engine/recorrido";
 
 /** FASE B (canon 12): el cierre honesto es una CONFESIÓN CON DIGNIDAD, no una
@@ -63,9 +70,20 @@ export async function responderResultadoTurno(
    * asi que nodosNuevosDesdeInicio() jamas la reporta y el arbol de la
    * UI arrancaria sin su primer nodo (gap real cazado por la fase 2e de
    * vuelo.ts: arbol 11 vs ruta 12). */
-  nodosPrefijo: NodoTranscrito[] = []
+  nodosPrefijo: NodoTranscrito[] = [],
+  /** El recorrido conversado acumulado (parejas pregunta/respuesta), ya con
+   * la pareja de ESTE turno si la hubo. Se persiste junto al estado para que
+   * el usuario lo vuelva a ver al reentrar y para el análisis de la beta. */
+  turnos: TurnoRegistrado[] = []
 ): Promise<NextResponse> {
-  await guardarEstadoSesion(supabase, sessionId, { recorrido: resultado.estado, acumulado: acumuladoFinal });
+  await guardarEstadoSesion(supabase, sessionId, {
+    recorrido: resultado.estado,
+    acumulado: acumuladoFinal,
+    turnos,
+    // La pregunta que queda en pantalla: con la respuesta del turno siguiente
+    // se arma la pareja.
+    ultimaPregunta: resultado.tipo === "pregunta" ? resultado.pregunta : null,
+  });
   const costoUsd = costoAcumuladoUsd(acumuladoFinal);
 
   if (resultado.tipo === "salio") {

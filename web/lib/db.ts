@@ -85,9 +85,25 @@ export interface Sesion {
  * total en dolares) -- llamarClaude necesita el desglose de tokens por
  * modelo para decidir si el presupuesto de la sesion ya se supero, asi
  * que no alcanza con persistir costo_usd. */
+/** Una pareja del recorrido conversado: la pregunta que se hizo y lo que el
+ * usuario respondió. */
+export interface TurnoRegistrado {
+  pregunta: string;
+  respuesta: string;
+  en: string;
+}
+
 export interface EstadoSesionPersistido {
   recorrido: EstadoRecorrido;
   acumulado: UsoAcumulado;
+  /** El recorrido conversado completo. Se persiste para que el usuario lo
+   * vuelva a ver al reentrar a su idea (antes solo vivía en pantalla y se
+   * perdía) y para el análisis de la beta. Es texto: unos pocos KB por
+   * sesión, sin riesgo de saturar. */
+  turnos?: TurnoRegistrado[];
+  /** La pregunta que quedó en pantalla; con la respuesta del turno siguiente
+   * se arma la pareja. */
+  ultimaPregunta?: string | null;
 }
 
 function ahora(): string {
