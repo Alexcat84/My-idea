@@ -83,5 +83,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     dbSessionId: sessionId,
   });
 
-  return responderResultadoTurno(supabase, sesion.project_id, sessionId, resultado, resultado.acumulado);
+  // El recorrido conversado: se cierra la pareja (la pregunta que estaba en
+  // pantalla + esta respuesta) y viaja al estado persistido, para que el
+  // usuario lo vuelva a ver al reentrar y para el análisis de la beta.
+  const turnos = [...(estadoPersistido.turnos ?? [])];
+  if (estadoPersistido.ultimaPregunta) {
+    turnos.push({
+      pregunta: estadoPersistido.ultimaPregunta,
+      respuesta,
+      en: new Date().toISOString(),
+    });
+  }
+
+  return responderResultadoTurno(
+    supabase,
+    sesion.project_id,
+    sessionId,
+    resultado,
+    resultado.acumulado,
+    [],
+    turnos
+  );
 }

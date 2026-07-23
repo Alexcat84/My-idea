@@ -16,6 +16,7 @@
  * vive en `activarMundo`.
  */
 import { useState, type ReactNode } from "react";
+import Link from "next/link";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import type { EstadoMundo } from "@/lib/engine/previewMundos";
 import { PRECIOS } from "@/lib/precios";
@@ -150,9 +151,24 @@ export function PotenciaTuIdea({
   return (
     <section className="mt-2">
       <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Potencia tu idea</p>
-      {/* Canon 05: Tus Números NO va aquí (se dedujo: ya es la fila-CTA bajo el
-          plan). Este grid es solo los mundos del catálogo. */}
       <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Tus Números es un potenciador COMO LOS DEMÁS (regla del fundador:
+            sin trato distinto). Va primero, en la misma grilla y con la misma
+            tarjeta; ya no como una fila aparte encima. */}
+        <Link href={`/idea/${projectId}/numeros`} className={claseCard + " border-hairline"} data-transiciona>
+          <div className="mb-3.5 flex items-center justify-between gap-2">
+            <Icono clave="tus_numeros" />
+            <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
+              {PRECIOS.tus_numeros} créditos
+            </span>
+          </div>
+          <p className="text-[15px] font-semibold">Tus Números</p>
+          <p className="mt-1.5 text-[12.5px] leading-[1.55] text-dim [text-wrap:pretty]">
+            Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
+          </p>
+          <p className="mt-2 text-[12px] text-dim/70">Una vez por idea · corregir y recalcular es gratis</p>
+        </Link>
+
         {/* Los mundos del catálogo — Fase 4.5: los CUATRO estados del preview
             (bloqueado / abierto / diagnóstico listo / plan comprado). */}
         {packs.map((p) => {

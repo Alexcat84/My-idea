@@ -61,6 +61,8 @@ interface DetalleIdea {
     listo_para_plan: boolean;
     dominio?: string;
     ruta: Array<{ id: string; titulo: string; etiqueta?: string; modo: string }>;
+    /** El recorrido conversado ya guardado: se repinta al reentrar. */
+    turnos?: Array<{ pregunta: string; respuesta: string }>;
   } | null;
   /** recorrido que construyó el plan vigente (canon 05: sidebar de nodos). */
   recorrido?: Array<{ id: string; titulo: string; etiqueta?: string; modo: string }>;
@@ -450,6 +452,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
           setDominioEntrevista(d.entrevista.dominio ?? "core");
           setNodos(d.entrevista.ruta.map(nodoArbolDesdeRuta));
           contadorNodos.current = d.entrevista.ruta.length;
+          // El recorrido conversado ya guardado: al reentrar a la idea se
+          // repinta en vez de arrancar vacío (antes solo vivía en pantalla).
+          if (d.entrevista.turnos?.length) setRecorrido(d.entrevista.turnos);
           const conversado = [...d.entrevista.ruta].reverse().find((n) => n.modo !== "silencioso");
           if (conversado) setCintillo(conversado.etiqueta ?? conversado.titulo);
         } else if (quiereEntrevista && !d.plan) {
@@ -1047,29 +1052,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 </div>
               )}
 
-              {/* Bajo el plan: Tus Números (canon 05/14, 2 créditos). El CTA
-                  lleva a la pantalla de tablero vivo /idea/[id]/numeros; las
-                  cifras se editan alli con el recolector, ya no en una
-                  mini-entrevista inline. */}
-              {planMd && !generandoPlan && (
-                <section className="rounded-panel border border-hairline bg-surface p-5 hover:border-accent/55" data-transiciona>
-                  <div className="flex items-center justify-between gap-3">
-                    <h3 className="text-base font-semibold">Tus Números</h3>
-                    <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 px-2.5 py-1 text-[11px] font-bold text-accent">
-                      {PRECIOS.tus_numeros} créditos
-                    </span>
-                  </div>
-                  <p className="mt-1.5 text-sm text-dim">
-                    Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
-                  </p>
-                  <Link
-                    href={`/idea/${projectId}/numeros`}
-                    className="mt-4 inline-block rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-sm font-medium hover:bg-accent-soft"
-                  >
-                    Sacar mis números
-                  </Link>
-                </section>
-              )}
+              {/* Tus Números ya NO va aquí como fila aparte: es un potenciador
+                  como los demás y vive PRIMERO en la grilla "Potencia tu idea"
+                  (regla del fundador: sin trato distinto). */}
 
               {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
               {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
