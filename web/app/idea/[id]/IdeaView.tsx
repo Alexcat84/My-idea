@@ -61,12 +61,12 @@ interface DetalleIdea {
     pregunta: string | null;
     listo_para_plan: boolean;
     dominio?: string;
-    ruta: Array<{ id: string; titulo: string; etiqueta?: string; modo: string }>;
+    ruta: Array<{ id: string; etiqueta: string; modo: string }>;
     /** El recorrido conversado ya guardado: se repinta al reentrar. */
     turnos?: Array<{ pregunta: string; respuesta: string }>;
   } | null;
   /** recorrido que construyó el plan vigente (canon 05: sidebar de nodos). */
-  recorrido?: Array<{ id: string; titulo: string; etiqueta?: string; modo: string }>;
+  recorrido?: Array<{ id: string; etiqueta: string; modo: string }>;
   unlocks?: string[];
   mundos?: Array<{
     dominio: string;
@@ -86,9 +86,9 @@ interface DetalleIdea {
 
 interface NodoNuevo {
   id: string;
-  titulo: string;
-  /** Fase 3.9: etiqueta_arbol para riel/cintillo; titulo respalda en detalle. */
-  etiqueta?: string;
+  /** La etiqueta_arbol: lo ÚNICO que el servidor manda para nombrar un tema.
+   * El nombre técnico del concepto se queda adentro (decisión del fundador). */
+  etiqueta: string;
   modo: string;
 }
 
@@ -112,12 +112,10 @@ interface QA {
   respuesta: string;
 }
 
-function nodoArbolDesdeRuta(n: { id: string; titulo: string; etiqueta?: string; modo: string }, idx: number): NodoArbol {
+function nodoArbolDesdeRuta(n: { id: string; etiqueta: string; modo: string }, idx: number): NodoArbol {
   return {
     id: `${idx}-${n.id}`,
-    // Fase 3.9: la etiqueta_arbol enamora en el riel; el título solo respalda.
-    label: n.etiqueta ?? n.titulo,
-    titulo: n.titulo,
+    label: n.etiqueta,
     atenuado: n.modo === "silencioso",
     salto: n.modo === "salto",
     nota: n.modo === "silencioso" ? NOTA_SILENCIOSO : undefined,
@@ -210,7 +208,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       ...nuevos.map((n) => nodoArbolDesdeRuta(n, contadorNodos.current++)),
     ]);
     const conversado = [...nuevos].reverse().find((n) => n.modo !== "silencioso");
-    if (conversado) setCintillo(conversado.etiqueta ?? conversado.titulo);
+    if (conversado) setCintillo(conversado.etiqueta);
   }
 
   function procesarTurno(data: RespuestaTurno) {
@@ -461,7 +459,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
           // repinta en vez de arrancar vacío (antes solo vivía en pantalla).
           if (d.entrevista.turnos?.length) setRecorrido(d.entrevista.turnos);
           const conversado = [...d.entrevista.ruta].reverse().find((n) => n.modo !== "silencioso");
-          if (conversado) setCintillo(conversado.etiqueta ?? conversado.titulo);
+          if (conversado) setCintillo(conversado.etiqueta);
         } else if (quiereEntrevista && !d.plan) {
           // Arranque: la entrevista sobre ESTA idea (el motor nunca
           // re-pregunta la idea inicial: se la mandamos como contexto).
@@ -673,7 +671,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // aquí (superficie de navegación), consistente entre vivo y recarga.
   const nodosFuente =
     detalle.recorrido && detalle.recorrido.length > 0
-      ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.etiqueta ?? n.titulo)
+      ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.etiqueta)
       : nodos.filter((n) => !n.atenuado && !n.id.startsWith("etapa-")).map((n) => n.label);
 
   const mundosParaObra = unlocks.map((dominio) => {

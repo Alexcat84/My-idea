@@ -23,8 +23,6 @@ export interface NodoArbol {
   id: string;
   /** lo que se muestra: la etiqueta_arbol (corta, enamora). */
   label: string;
-  /** Fase 3.9: el titulo_concepto completo — respalda en el tooltip. */
-  titulo?: string;
   /** atenuado: nodos silenciosos ("cubierto por lo que contaste") */
   atenuado?: boolean;
   /** marca sutil distinta para los saltos semánticos */
@@ -120,14 +118,15 @@ export function ArbolPensante({ nodos, generando, etiquetaGenerando }: Props) {
                   <PuntoRiel activo={activo} lleno={!activo || n.atenuado === true} />
                   <span className={"min-w-0 flex-1" + (n.atenuado ? " opacity-50" : "")}>
                     {/* B4: una línea con elipsis (el fix A ya las acorta con la
-                        etiqueta_arbol). El tooltip respalda con el título
-                        completo del concepto. */}
+                        etiqueta_arbol). El tooltip repite la MISMA etiqueta
+                        cuando el texto se corta: el nombre técnico del
+                        concepto no se le enseña al usuario ni aquí. */}
                     <span
                       className={
                         "block truncate pt-px text-sm leading-[1.45] " +
                         (esUltimo && !n.atenuado ? "font-semibold text-accent" : "font-medium text-ink")
                       }
-                      title={n.titulo ?? n.label}
+                      title={n.label}
                     >
                       {n.label}
                     </span>

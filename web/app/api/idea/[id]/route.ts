@@ -143,7 +143,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     pregunta: string | null;
     listo_para_plan: boolean;
     dominio: string;
-    ruta: Array<{ id: string; titulo: string; etiqueta: string; modo: string }>;
+    ruta: Array<{ id: string; etiqueta: string; modo: string }>;
     /** El recorrido conversado ya persistido: al reentrar a la idea, la UI lo
      * vuelve a pintar en vez de arrancar en blanco. */
     turnos: Array<{ pregunta: string; respuesta: string }>;
@@ -170,7 +170,8 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       dominio: s.dominio ?? "core",
       ruta: rec.ruta.map((nid, i) => ({
         id: nid,
-        titulo: graph[nid]?.titulo_concepto ?? nid,
+        // Solo la etiqueta de cara: el nombre técnico del concepto no sale
+        // de casa (decisión del fundador, jul 2026).
         etiqueta: etiquetaArbol(nid, graph),
         modo: rec.modos[i],
       })),
@@ -182,7 +183,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   // El recorrido que construyó el plan vigente (canon 05, sidebar "Construido
   // con tu recorrido"): disponible incluso con la sesión ya cerrada, leyendo
   // el estado_recorrido de la sesión del plan.
-  let recorrido: Array<{ id: string; titulo: string; etiqueta: string; modo: string }> = [];
+  let recorrido: Array<{ id: string; etiqueta: string; modo: string }> = [];
   if (plan) {
     const s = ((sesiones ?? []) as Array<{ id: string; estado_recorrido: EstadoSesionPersistido | null }>).find(
       (x) => x.id === plan.session_id
@@ -191,7 +192,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     if (rec) {
       recorrido = rec.ruta.map((nid, i) => ({
         id: nid,
-        titulo: graph[nid]?.titulo_concepto ?? nid,
         etiqueta: etiquetaArbol(nid, graph),
         modo: rec.modos[i],
       }));

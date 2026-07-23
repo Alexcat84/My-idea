@@ -219,7 +219,6 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   const puerta = {
     id: brecha.semillaId,
-    titulo: graph[brecha.semillaId]?.titulo_concepto ?? brecha.semillaId,
     etiqueta: etiquetaArbol(brecha.semillaId, graph),
     modo: "conversado" as const,
   };
