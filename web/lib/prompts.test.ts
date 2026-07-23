@@ -34,4 +34,29 @@ describe("prompts.ts re-exporta byte a byte desde assets/prompts.json", () => {
       expect(prompts[nombre].length).toBeGreaterThan(0);
     });
   }
+
+  // Voz de la casa: los prompts que escriben PROSA PARA EL USUARIO llevan la
+  // prohibicion del guion largo en su propio SYSTEM, y este test la mantiene
+  // ahi aunque alguien reescriba un prompt entero.
+  //
+  // Los otros cinco (CLASIFICACION, PROFUNDIZAR, ESTADO_VIVO, JUEZ_SESION,
+  // CLASIFICAR_OFERTA) no la llevan a proposito: cuatro devuelven JSON interno
+  // y el quinto (PROFUNDIZAR) escribe una pregunta que SI se muestra, pero los
+  // cinco salen por llamarClaude, que limpia en su punto unico. La red real es
+  // la limpieza de salida; la regla en el prompt solo ayuda a que llegue limpio.
+  const PROSA_AL_USUARIO = [
+    "SYSTEM_PUERTA_AVANZADA",
+    "SYSTEM_INTERPRETE_MULTI",
+    "SYSTEM_PREGUNTA_DIRIGIDA",
+    "SYSTEM_PLAN",
+    "SYSTEM_ORGANIZADOR",
+    "SYSTEM_REPORTE",
+    "SYSTEM_DIAGNOSTICO_MUNDO",
+  ] as const;
+
+  for (const nombre of PROSA_AL_USUARIO) {
+    it(`${nombre} prohibe los guiones largos en su propio SYSTEM`, () => {
+      expect(prompts[nombre]).toContain("PROHIBIDO usar guiones largos o medios");
+    });
+  }
 });

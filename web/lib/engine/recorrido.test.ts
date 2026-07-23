@@ -89,10 +89,11 @@ describe("avanzarTurno: fase esperando_respuesta (orquestacion, interpretarMulti
     expect(r.estado.ruta).toEqual(["design_thinking_fundamentos", nid]);
     expect(r.estado.modos).toEqual(["conversado", "conversado"]);
     expect(r.pregunta).toBe("¿que capas has mapeado?");
+    // El nodo que viaja al cliente lleva SOLO su etiqueta de cara: el
+    // titulo_concepto se queda adentro (decision del fundador, jul 2026).
     expect(r.nodosNuevos).toEqual([
       {
         id: nid,
-        titulo: graph[nid].titulo_concepto,
         etiqueta: graph[nid].etiqueta_arbol ?? graph[nid].titulo_concepto,
         modo: "conversado",
       },

@@ -128,9 +128,11 @@ export function estadoInicial(params: {
 
 export interface NodoTranscrito {
   id: string;
-  /** El nombre del concepto (titulo_concepto): respalda en el DETALLE. */
-  titulo: string;
-  /** Fase 3.9: lo que se muestra en riel/cintillo (etiqueta_arbol). */
+  /** LO ÚNICO que viaja al cliente: la etiqueta_arbol, en lenguaje de
+   * persona. El titulo_concepto (el nombre técnico del libro) se queda
+   * ADENTRO -- forense, digest, bitácora y logs -- por decisión del fundador
+   * (jul 2026): el usuario nunca ve los nombres internos de los conceptos.
+   * Dos idiomas: técnico adentro, natural afuera. */
   etiqueta: string;
   modo: ModoNodo;
 }
@@ -302,7 +304,6 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
   function nodosNuevosDesdeInicio(): NodoTranscrito[] {
     return estado.ruta.slice(rutaLongitudInicial).map((nid, i) => ({
       id: nid,
-      titulo: graph[nid]?.titulo_concepto ?? nid,
       etiqueta: etiquetaArbol(nid, graph),
       modo: estado.modos[rutaLongitudInicial + i],
     }));

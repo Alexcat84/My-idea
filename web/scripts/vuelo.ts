@@ -63,6 +63,24 @@ function separador(titulo: string) {
 }
 
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// Voz de la casa: ningun texto que llega al usuario lleva guiones largos o
+// medios. La regla vive en los SYSTEM y la limpieza en llamarClaude, pero la
+// puerta SSE del organizador se saltaba ese punto y de ahi salieron los dos
+// guiones que el fundador cazo en su sesion real. Este chequeo mira la salida
+// DE VERDAD, sobre el build real, que es donde se ve.
+// ---------------------------------------------------------------------------
+function exigirSinGuiones(etiqueta: string, texto: string) {
+  const sucios = [...texto.matchAll(/.{0,40}[—–].{0,40}/g)].map((m) => m[0]);
+  if (sucios.length) {
+    throw new Error(
+      `${etiqueta}: el texto llego con ${sucios.length} guion(es) largo(s) a la cara del usuario:\n  ` +
+        sucios.slice(0, 5).join("\n  ")
+    );
+  }
+  log(`  voz OK (sin guiones largos): ${etiqueta}`);
+}
+
 // Fase 1: organizer -- la idea real del "sonar" para ciegos ya presente en
 // el dataset de pruebas de este proyecto (capa gratuita, una sola llamada).
 // ---------------------------------------------------------------------------
@@ -80,6 +98,7 @@ async function faseOrganizerSonar(cookie: string) {
   if (typeof r.markdown !== "string" || !r.markdown.includes("# Organizador de tu idea")) {
     throw new Error("organizer: markdown no tiene el formato esperado");
   }
+  exigirSinGuiones("organizer (sonar)", String(r.markdown));
   return { costoUsd: Number(r.costo_usd) };
 }
 
@@ -124,6 +143,11 @@ async function faseOrganizerIdeaLarga(cookie: string) {
   if (!data?.idea_en_una_frase || !Array.isArray(data.areas_que_cubriria_tu_plan_completo)) {
     throw new Error("organizer idea larga: JSON incompleto (truncado antes de cerrar las listas)");
   }
+  // La idea larga es donde el modelo mas se suelta y donde salieron los
+  // guiones de la sesion real: se revisa el markdown Y el JSON que va al
+  // cliente (la UI pinta las secciones desde `data`, no desde el markdown).
+  exigirSinGuiones("organizer (idea larga, markdown)", String(r.markdown));
+  exigirSinGuiones("organizer (idea larga, data)", JSON.stringify(r.data));
   log(`OK -- frase: "${String(data.idea_en_una_frase).slice(0, 90)}..."`);
   return { costoUsd: Number(r.costo_usd) };
 }
