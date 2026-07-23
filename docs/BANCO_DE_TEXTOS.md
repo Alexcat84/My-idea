@@ -129,8 +129,11 @@ además argumento de venta:
 - **Sin fechas no hay recordatorios**, y se dice de frente al elegir modo.
 - **Sin suscripción.** Créditos consumibles: el usuario controla su gasto y
   nada se cobra solo.
-- **La procedencia es auditable**: cada plan declara de cuántos conceptos se
-  alimentó y de dónde vinieron.
+- **La procedencia es auditable INTERNAMENTE**: la caja de vidrio registra qué
+  conceptos alimentaron cada plan (forense y digest); de cara al usuario, el
+  plan cita sus fuentes en el detalle de cada concepto (libro y capítulo), sin
+  exponer conteos ni mecánica del grafo (decisión de confidencialidad, jul
+  2026).
 
 ## 6. REGISTRO DE CLAIMS (qué se puede afirmar y con qué respaldo)
 
@@ -142,7 +145,7 @@ Antes de que una frase entre a marketing, términos o una demo, se verifica aqu�
 | "3,742 conceptos curados de 20+ libros" | Verificable | Grafo compilado, Gate 0 verde, censo reproducible. Actualizar la cifra si cambia. |
 | "Los números los calcula código, no la IA" | Verificable | Calculadora determinística, paridad probada Python/TS. |
 | "El árbol muestra lo que el motor hizo de verdad" | Verificable | El vuelo compara los eventos mostrados contra la ruta persistida 1:1. |
-| "Cada plan cita su fuente" | Verificable | Procedencia por etapa + validador; el detalle del nodo muestra libro y capítulo. |
+| "Cada plan cita su fuente" | Verificable | El respaldo es el **detalle del concepto** (título + fuente: libro y capítulo), visible en el plan. **Ya NO** el pie con conteos de procedencia: ese pie se retiró de la salida al usuario (confidencialidad, jul 2026) y la auditoría de procedencia vive internamente (caja de vidrio: forense y digest). |
 | "Sin suscripciones ni cargos recurrentes" | Verificable | Modelo de créditos consumibles. |
 | "Tu plan está listo en minutos" | Verificable con matiz | Depende de la longitud de la entrevista; no prometer tiempo exacto. |
 | Cifras de mercado (tamaño, población, número de profesionales) | **PROHIBIDO** | El sistema jamás las inventa y el marketing tampoco las afirma sin fuente citada. |
@@ -193,6 +196,27 @@ hispana en varios países:
 > Nota: esta sección es un inventario de preguntas, no asesoría legal. La
 > respuesta la da un profesional de la jurisdicción, exactamente como el
 > producto le dice a sus usuarios.
+
+## 7.1 DECISIONES DE GOBIERNO (qué se decidió, cuándo y por qué)
+
+Decisiones del fundador que mandan sobre el copy y sobre lo que el producto
+muestra. Se registran con su porqué: quien venga después no las revierte por
+desconocer la razón.
+
+- **Confidencialidad de la mecánica interna (jul 2026).** El plan **deja de
+  mostrar al usuario** la procedencia en conteos: fuera el pie "este plan se
+  alimentó de N conceptos: X de tu recorrido y Z del vecindario relacionado
+  del grafo" y fuera el "· N nodos" del encabezado. El usuario **nunca** debe
+  ver conteos, nodos, grafo ni pista alguna del sistema que usamos.
+  **Por qué:** la mecánica interna (el grafo de conocimiento, cómo se
+  cosecha el vecindario, cuántos conceptos alimentan un plan) es **ventaja
+  competitiva**, y exponerla no le aporta nada a quien lee su plan. El valor
+  para el usuario está en **las fuentes** (qué libro y qué capítulo respaldan
+  cada concepto), no en los conteos.
+  **Qué NO cambia:** el dato sigue existiendo y siendo auditable **hacia
+  adentro** (caja de vidrio: evento `cobertura_conceptos`, forense y digest),
+  que es donde sirve para el análisis de la beta. Ver §5 y el claim "cada plan
+  cita su fuente" en §6.
 
 ## 8. FRASES DEL FUNDADOR (su voz, para cuando hable del producto)
 
