@@ -17,7 +17,7 @@ import {
 } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
-import { construirMarkdown, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
+import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
@@ -103,7 +103,8 @@ export async function POST(request: Request) {
     );
   }
 
-  const markdown = construirMarkdown(data);
+  const limpio = limpiarOrganizador(data);
+  const markdown = construirMarkdown(limpio);
   await guardarPlan(supabase, user.id, sessionId, "organizador", markdown, 0, []);
   await cerrarSesion(
     supabase,

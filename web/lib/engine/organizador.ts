@@ -4,6 +4,8 @@
  * (SSE, usado por la UI con el árbol que piensa). Una sola definición
  * del shape, del markdown y de las secciones detectables en el stream.
  */
+import { limpiarGuiones } from "../voz";
+
 
 /** Tope de tokens de salida del organizador. 600 truncaba el JSON de ideas
  * ricas/multi-dominio (auditor HSEQ, etc.) → parseo roto → fallo. 1500 da
@@ -33,6 +35,29 @@ export const SECCIONES_ORGANIZADOR: ReadonlyArray<{ clave: keyof OrganizadorData
   { clave: "lo_que_estas_asumiendo_sin_saberlo", label: "Lo que estás asumiendo sin saberlo" },
   { clave: "areas_que_cubriria_tu_plan_completo", label: "Áreas de tu plan completo" },
 ];
+
+/**
+ * Sin guiones largos, campo por campo.
+ *
+ * SYSTEM_ORGANIZADOR ya prohíbe el guion largo, y `llamarClaude` limpia su
+ * salida en un punto único... pero la puerta SSE llama a `client.messages
+ * .stream()` DIRECTO y se salta ese punto. Por ahí salieron los dos guiones
+ * que el fundador cazó en su sesión real: la regla estaba escrita y aun así
+ * el texto llegó sucio, porque una regla en el prompt es una petición, no una
+ * garantía. La garantía es esta función, aplicada a los datos ANTES de armar
+ * el markdown y ANTES de mandarlos al cliente (los dos caminos pasan por
+ * aquí).
+ */
+export function limpiarOrganizador(data: OrganizadorData): OrganizadorData {
+  const lista = (xs?: string[]) => xs?.map((x) => limpiarGuiones(x));
+  return {
+    idea_en_una_frase: data.idea_en_una_frase && limpiarGuiones(data.idea_en_una_frase),
+    etapa_detectada: data.etapa_detectada,
+    lo_que_ya_tienes_claro: lista(data.lo_que_ya_tienes_claro),
+    lo_que_estas_asumiendo_sin_saberlo: lista(data.lo_que_estas_asumiendo_sin_saberlo),
+    areas_que_cubriria_tu_plan_completo: lista(data.areas_que_cubriria_tu_plan_completo),
+  };
+}
 
 export function construirMarkdown(data: OrganizadorData): string {
   const out: string[] = [

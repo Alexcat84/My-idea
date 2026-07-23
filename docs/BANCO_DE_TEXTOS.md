@@ -134,6 +134,10 @@ además argumento de venta:
   plan cita sus fuentes en el detalle de cada concepto (libro y capítulo), sin
   exponer conteos ni mecánica del grafo (decisión de confidencialidad, jul
   2026).
+- **Los nombres internos de los conceptos tampoco se muestran**: el usuario ve
+  su equivalente en lenguaje natural (`etiqueta_arbol`), nunca el título
+  técnico del libro (`titulo_concepto`) ni jerga de manual. Dos idiomas:
+  técnico adentro, natural afuera (decisión de etiquetas de cara, jul 2026).
 
 ## 6. REGISTRO DE CLAIMS (qué se puede afirmar y con qué respaldo)
 
@@ -217,6 +221,30 @@ desconocer la razón.
   adentro** (caja de vidrio: evento `cobertura_conceptos`, forense y digest),
   que es donde sirve para el análisis de la beta. Ver §5 y el claim "cada plan
   cita su fuente" en §6.
+
+- **Etiquetas de cara (jul 2026).** El usuario **jamás ve títulos técnicos ni
+  jerga**. Toda superficie de navegación (el riel del árbol, el cintillo de la
+  tarjeta, el recorrido persistido, los tooltips, la barra "construido con tu
+  recorrido" y los documentos que se descarga) muestra `etiqueta_arbol`:
+  natural, corta y familiar, máximo 6 palabras, en segunda persona.
+  `titulo_concepto` queda reservado a forense, digest, bitácora y logs.
+  **Por qué:** el rescate de la primera idea real de la beta mostró títulos de
+  manual ("Producto Mínimo Viable (MVP)", "Earlyvangelists", "Voz del Cliente
+  (VoC)") en la cara del usuario. El problema era **de cableado, no de
+  contenido**: los 3.742 nodos ya tenían su etiqueta natural y la superficie
+  leía el campo equivocado. Un emprendedor no habla ese idioma, y hacerle
+  aprender el vocabulario del sistema es cobrarle un peaje que no pidió.
+  **Qué NO cambia:** `titulo_concepto`, `resumen_teorico` y `fuente` quedan
+  **íntegros**: ahí viven la propiedad intelectual y la paridad con los libros,
+  y son lo que sostiene el claim "cada plan cita su fuente" (§6). Tampoco se
+  regeneran las etiquetas que ya estaban bien: se curó una lista de 68, no el
+  corpus entero.
+  **Cómo se sostiene:** el diccionario de la casa (canvas → "tu mapa del
+  negocio", pivotar → "cambiar de rumbo", equity → "las acciones", feedback →
+  "opiniones", etc.) y un detector permanente en la suite: si el grafo crece
+  con una etiqueta jergosa, con una sigla no exenta o de más de 6 palabras, el
+  commit se cae. Siglas que SÍ se conservan por familiares: IA, CEO, PIB, RRHH,
+  TI, ISO, OSHA, NIOSH, FODA.
 
 ## 8. FRASES DEL FUNDADOR (su voz, para cuando hable del producto)
 
