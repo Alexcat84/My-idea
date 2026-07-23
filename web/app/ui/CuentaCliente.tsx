@@ -32,13 +32,7 @@ function Seccion({ titulo, children }: { titulo: string; children: React.ReactNo
   );
 }
 
-export function CuentaCliente({
-  email,
-  proveedores,
-}: {
-  email: string;
-  proveedores: string[];
-}) {
+export function CuentaCliente({ email }: { email: string }) {
   const router = useRouter();
   const [seguridad, setSeguridad] = useState<Seguridad | null>(null);
   const [flujo, setFlujo] = useState<Flujo2FA>({ paso: "reposo" });
@@ -203,9 +197,6 @@ export function CuentaCliente({
     <>
       <Seccion titulo="Tu identidad">
         <p className="text-[15px] font-semibold">{email}</p>
-        <p className="mt-1 text-sm text-dim">
-          Entras con {proveedores.length > 0 ? proveedores.join(" y ") : "correo"}.
-        </p>
       </Seccion>
 
       <Seccion titulo="Seguridad · verificación en dos pasos">
@@ -327,17 +318,24 @@ export function CuentaCliente({
           Se borra todo: tus ideas, tus planes, tu historial y tus créditos. No hay vuelta atrás. Para confirmar,
           escribe <span className="font-mono font-semibold text-warn">ELIMINAR</span>.
         </p>
-        <form onSubmit={borrarCuenta} className="mt-3 flex flex-wrap items-center gap-3">
+        {/* Un solo botón accionable: el campo es campo (etiqueta arriba,
+            texto a la izquierda) y el botón es el único que se pulsa. */}
+        <form onSubmit={borrarCuenta} className="mt-4 flex flex-col items-start gap-2">
+          <label htmlFor="confirmar-eliminar" className="text-xs text-dim">
+            Escribe la palabra para confirmar
+          </label>
           <input
+            id="confirmar-eliminar"
             value={palabraCuenta}
             onChange={(e) => setPalabraCuenta(e.target.value.toUpperCase())}
             placeholder="ELIMINAR"
-            className="w-44 rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-center font-mono text-sm tracking-widest text-ink placeholder:text-dim"
+            autoComplete="off"
+            className="w-full max-w-[260px] rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-left font-mono text-sm tracking-widest text-ink placeholder:text-dim/40"
           />
           <button
             type="submit"
             disabled={ocupado || palabraCuenta.trim() !== "ELIMINAR"}
-            className="rounded-cinta border border-warn/50 px-4 py-2.5 text-sm font-semibold text-warn hover:border-warn disabled:opacity-40"
+            className="mt-2 rounded-cinta border border-warn/50 px-4 py-2.5 text-sm font-semibold text-warn hover:border-warn disabled:opacity-40"
           >
             Borrar mi cuenta para siempre
           </button>
