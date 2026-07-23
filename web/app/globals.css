@@ -171,18 +171,37 @@ summary::-webkit-details-marker {
 }
 
 /* ── IMPRESIÓN / "Descargar PDF" ──────────────────────────────────────────
-   El botón abre todas las secciones (<details>) y llama a print(): el usuario
-   guarda como PDF desde su navegador. Aquí el documento del plan se AÍSLA y
-   se pasa a papel: fondo blanco, texto oscuro (la app es oscura y en papel
-   sería ilegible), sin navegación ni botones, y sin cortar secciones a la
-   mitad entre páginas. */
+   El plan se lleva a papel CONSERVANDO su identidad visual: el azul que
+   piensa, el verde que ejecuta, los puntos con sus líneas y las tarjetas.
+   La clave es NO aplanar a blanco y negro, sino REDEFINIR los tokens para
+   papel (tokens.css es la única fuente de color, así que todo el documento
+   se adapta solo). Con el margen de página en cero, el navegador omite sus
+   propios encabezados y pies (esas URLs y fechas codificadas); el respiro y
+   el pie con el nombre de la idea los ponemos nosotros. */
 @media print {
+  @page {
+    margin: 0;
+  }
+
+  :root {
+    /* Papel: superficies claras, tinta oscura. */
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f5f6f9;
+    --border: rgba(20, 22, 28, 0.14);
+    --text: #14161c;
+    --text-dim: #5b616e;
+    /* La identidad NO se toca: azul piensa, verde ejecuta, ámbar guardián. */
+    --accent-soft: rgba(77, 124, 254, 0.12);
+    --done-soft: rgba(63, 185, 80, 0.14);
+  }
+
   html,
   body {
     background: #fff !important;
-    color: #111 !important;
   }
-  /* Solo el plan se ve: el resto de la página queda fuera del papel. */
+
+  /* Solo el documento del plan viaja al papel. */
   body * {
     visibility: hidden !important;
   }
@@ -195,25 +214,62 @@ summary::-webkit-details-marker {
     left: 0;
     top: 0;
     width: 100%;
+    padding: 16mm 14mm 20mm !important;
+    background: #fff !important;
   }
+
+  /* Que el color impreso salga de verdad (Chrome lo omite si no se pide). */
+  [data-plan-print],
   [data-plan-print] * {
-    color: #111 !important;
-    background: transparent !important;
-    border-color: #d8d8d8 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
     box-shadow: none !important;
     animation: none !important;
   }
-  /* Los acordeones van abiertos (el botón ya les puso open, esto es la red). */
+
+  /* Los acordeones van abiertos: el PDF sale completo, no a medias. */
   [data-plan-print] details > *:not(summary) {
     display: block !important;
   }
+  [data-plan-print] summary {
+    list-style: none;
+  }
+
   /* Nada de botones ni adornos de pantalla en el papel. */
   [data-no-print],
   [data-no-print] * {
     display: none !important;
   }
-  /* Estructura: los títulos no quedan huérfanos al pie y las secciones no se
-     parten entre páginas. */
+
+  /* Piezas con color pensado para PANTALLA OSCURA: en papel necesitan su
+     equivalente claro, o salen como manchas negras y grises ilegibles. */
+  [data-plan-print] [data-caja-entregable] {
+    background: var(--surface-2) !important;
+  }
+  [data-plan-print] [data-prosa-plan],
+  [data-plan-print] [data-prosa-plan] * {
+    color: var(--text) !important;
+  }
+
+  /* Nuestro pie, repetido en cada página: identifica la idea. */
+  [data-print-pie] {
+    display: flex !important;
+    visibility: visible !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 6mm 14mm;
+    font-size: 9pt;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border);
+    background: #fff;
+  }
+
+  /* Estructura: títulos que no quedan huérfanos y bloques que no se parten. */
   [data-plan-print] h1,
   [data-plan-print] h2,
   [data-plan-print] h3,
@@ -226,8 +282,5 @@ summary::-webkit-details-marker {
   [data-plan-print] li {
     break-inside: avoid;
     page-break-inside: avoid;
-  }
-  @page {
-    margin: 18mm 16mm;
   }
 }

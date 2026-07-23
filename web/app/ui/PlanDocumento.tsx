@@ -97,6 +97,7 @@ function CajaEstaSemana({
       {grande && onEmpezar && (
         <button
           onClick={onEmpezar}
+          data-no-print
           className="mt-[18px] rounded-[10px] bg-done px-[22px] py-2.5 text-[13.5px] font-bold text-[#04120A] hover:opacity-90"
         >
           Empezar con esto
@@ -144,7 +145,7 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
         {s.descripcion && (
           // C7: prosa justificada con partición (lang="es" en el layout); C10:
           // cuerpo legible (gris claro, no el dim tenue), jerarquía por tamaño.
-          <div className="text-[14.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]">
+          <div data-prosa-plan className="text-[14.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]">
             <Markdown>{s.descripcion}</Markdown>
           </div>
         )}
@@ -155,7 +156,7 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
           </div>
         ))}
         {s.entregable && (
-          <div className="rounded-[10px] border border-hairline px-4 py-3" style={{ background: "#141419" }}>
+          <div data-caja-entregable className="rounded-[10px] border border-hairline px-4 py-3" style={{ background: "#141419" }}>
             <p className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-accent">Entregable</p>
             <div className="text-[13.5px] leading-[1.55] text-ink [text-wrap:pretty]">
               <Markdown>{s.entregable}</Markdown>
@@ -217,7 +218,7 @@ export function PlanDocumento({
         </h2>
       )}
       {plan.intro && (
-        <div className="anima-plan-in mt-3.5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
+        <div data-prosa-plan className="anima-plan-in mt-3.5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
           <Markdown>{plan.intro}</Markdown>
         </div>
       )}
@@ -244,6 +245,14 @@ export function PlanDocumento({
       </div>
 
       {plan.pie && <p className="mt-5 text-[13px] text-dim">{plan.pie}</p>}
+
+      {/* Pie del PDF: se repite en cada página e identifica la idea. Oculto
+          en pantalla (la hoja de impresión lo enciende); reemplaza el pie
+          codificado del navegador (URL y fecha). */}
+      <div data-print-pie className="hidden">
+        <span>{plan.titulo || nombreIdea}</span>
+        <span>My Idea</span>
+      </div>
     </div>
   );
 
