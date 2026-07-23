@@ -46,33 +46,36 @@ const JERGA: Array<{ termino: string; prefijo?: boolean }> = [
   { termino: "crowdfunding" },
   { termino: "kpi" },
   { termino: "kpis" },
+  // Añadido por la curaduría final: stage-gate → "puntos de control". Es
+  // nombre propio de metodología, y la casa traduce por función; el nombre
+  // vive en el contenido del nodo donde se enseña, no en la etiqueta.
+  { termino: "stage", prefijo: true },
 ];
 
 /** §B: siglas familiares para el público, se conservan. */
 const SIGLAS_EXENTAS = new Set(["IA", "CEO", "PIB", "RRHH", "TI", "ISO", "OSHA", "NIOSH", "FODA"]);
 
 /**
- * PENDIENTE DE CURADURÍA (§E.4: reportar, jamás inventar arreglos).
- * Anglicismos que la lista D no cubre y para los que el diccionario de la casa
- * NO prescribe traducción: decidirlos es del fundador y el auditor, no mío.
- * Están DECLARADOS, no escondidos: mientras vivan aquí la suite pasa, pero
- * cualquier etiqueta jergosa NUEVA rompe. Vaciar esta lista cierra el tema.
+ * PENDIENTE DE CURADURÍA: VACÍA, y así debe quedarse.
+ *
+ * Aquí vivieron las dos etiquetas con "Stage-Gate" mientras el diccionario de
+ * la casa no prescribía traducción. La curaduría final del auditor las cerró
+ * ("puntos de control"), así que la lista se vació: una excepción que
+ * sobrevive a su motivo se convierte en un permiso silencioso. Volver a meter
+ * algo aquí exige la firma del fundador o del auditor, nunca la mía.
  */
-const ETIQUETAS_PENDIENTES: Record<string, string> = {
-  mitos_stage_gate: "Entiende lo que Stage-Gate No Es",
-  stage_gate_tipos_proyectos: "Adapta Stage-Gate a tu Proyecto",
-};
+const ETIQUETAS_PENDIENTES: Record<string, string> = {};
 
-/** Colisiones exactas que YA existían antes de esta fase, más las dos que la
- * lista D introdujo al unificar el vocabulario. Se congelan tal cual: la
- * curaduría es del fundador y el auditor. Una colisión NUEVA rompe la suite. */
+/** Colisiones exactas ANTERIORES a esta fase, congeladas tal cual: la
+ * curaduría es del fundador y el auditor. Las dos que la lista D introdujo
+ * (build_measure_learn y medir_progreso_kpi) ya no están: el auditor decidió
+ * que las etiquetas existentes, por correctas y anteriores, conservaran la
+ * suya. Una colisión NUEVA rompe la suite. */
 const COLISIONES_CONOCIDAS = [
   "Asegura tu Crédito de Exportación",
-  "Construye, Mide y Aprende",
   "Cumple las Reglas Antiboicot",
   "Define tus Términos de Venta",
   "Elige tus Canales de Venta",
-  "Mide tu Progreso con Indicadores",
   "Protege tu Propiedad Intelectual",
 ].sort();
 
@@ -90,20 +93,47 @@ function jergaEn(etiqueta: string): string[] {
   ).map((j) => j.termino);
 }
 
-describe("etiquetas de cara: la lista curada está aplicada", () => {
-  it("las 68 etiquetas de la lista D del auditor están en el grafo", () => {
-    const lista = leerJson("dataset/metadata/etiquetas_de_cara_v1.json") as Record<string, string>;
-    expect(Object.keys(lista)).toHaveLength(68);
-    const sinAplicar = Object.entries(lista).filter(([id, etq]) => graph[id]?.etiqueta_arbol !== etq);
+/** Las tres fuentes EN ORDEN: la última manda, igual que en el script que las
+ * aplica (scripts/etiquetas_de_cara.py). Los campos "_*" son notas de
+ * procedencia, no etiquetas. */
+const FUENTES = [
+  "dataset/metadata/etiquetas_de_cara_v1.json",
+  "dataset/metadata/etiquetas_de_cara_v1_casa.json",
+  "dataset/metadata/etiquetas_de_cara_v1_curaduria_final.json",
+];
+const entradas = (rel: string): Array<[string, string]> =>
+  Object.entries(leerJson(rel) as Record<string, unknown>)
+    .filter(([k, v]) => !k.startsWith("_") && typeof v === "string")
+    .map(([k, v]) => [k, v as string]);
+
+describe("etiquetas de cara: la curaduría está aplicada", () => {
+  it("la lista D del auditor trae sus 68 entradas", () => {
+    expect(entradas(FUENTES[0])).toHaveLength(68);
+  });
+
+  it("lo que resulta de mezclar las tres fuentes está en el grafo", () => {
+    const efectiva = new Map<string, string>();
+    for (const fuente of FUENTES) for (const [id, etq] of entradas(fuente)) efectiva.set(id, etq);
+    const sinAplicar = [...efectiva].filter(([id, etq]) => graph[id]?.etiqueta_arbol !== etq);
     expect(sinAplicar, `sin aplicar: ${JSON.stringify(sinAplicar)}`).toEqual([]);
   });
 
-  it("las derivadas del diccionario de la casa también", () => {
-    const casa = leerJson("dataset/metadata/etiquetas_de_cara_v1_casa.json") as Record<string, string>;
-    for (const [id, etq] of Object.entries(casa)) {
-      if (id.startsWith("_")) continue;
-      expect(graph[id]?.etiqueta_arbol, id).toBe(etq);
+  it("la curaduría final MANDA sobre la lista D donde se pisan", () => {
+    // Sin esto, un reordenamiento del script devolvería en silencio las dos
+    // colisiones que el auditor resolvió, y nadie se enteraría.
+    const listaD = new Map(entradas(FUENTES[0]));
+    const final = new Map(entradas(FUENTES[2]));
+    const pisadas = [...final.keys()].filter((id) => listaD.has(id));
+    expect(pisadas.sort()).toEqual(["ciclo_construir_medir_aprender", "medicion_kpi"]);
+    for (const id of pisadas) {
+      expect(graph[id].etiqueta_arbol, id).toBe(final.get(id));
+      expect(graph[id].etiqueta_arbol, id).not.toBe(listaD.get(id));
     }
+  });
+
+  it("las etiquetas que cedieron su sitio conservan la suya", () => {
+    expect(graph.build_measure_learn.etiqueta_arbol).toBe("Construye, Mide y Aprende");
+    expect(graph.medir_progreso_kpi.etiqueta_arbol).toBe("Mide tu Progreso con Indicadores");
   });
 
   it("los títulos técnicos quedaron INTACTOS (ahí viven la PI y las fuentes)", () => {
@@ -188,12 +218,14 @@ describe("detector permanente de jerga (§C) sobre las 3.742 etiquetas", () => {
     expect(vacias).toEqual([]);
   });
 
-  it("lo pendiente de curaduría sigue siendo exactamente lo declarado", () => {
-    // Si el fundador cura estos dos, este test avisa para vaciar la lista: una
-    // excepción que sobrevive a su motivo se convierte en un permiso silencioso.
-    for (const [id, etq] of Object.entries(ETIQUETAS_PENDIENTES)) {
-      expect(graph[id]?.etiqueta_arbol, `${id} ya cambió: bórralo de ETIQUETAS_PENDIENTES`).toBe(etq);
-    }
+  it("no hay ninguna etiqueta exenta del detector", () => {
+    // La lista de exenciones está vacía y así debe seguir. Si alguien mete
+    // una, este test se cae y obliga a justificarla con nombre y firma en vez
+    // de colarla como un permiso silencioso.
+    expect(Object.keys(ETIQUETAS_PENDIENTES)).toEqual([]);
+    // Y lo que el auditor curó de verdad quedó curado, no exento.
+    expect(graph.mitos_stage_gate.etiqueta_arbol).toBe("Entiende los Puntos de Control");
+    expect(graph.stage_gate_tipos_proyectos.etiqueta_arbol).toBe("Adapta tus Puntos de Control");
   });
 });
 

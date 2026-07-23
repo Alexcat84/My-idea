@@ -239,12 +239,36 @@ desconocer la razón.
   y son lo que sostiene el claim "cada plan cita su fuente" (§6). Tampoco se
   regeneran las etiquetas que ya estaban bien: se curó una lista de 68, no el
   corpus entero.
-  **Cómo se sostiene:** el diccionario de la casa (canvas → "tu mapa del
-  negocio", pivotar → "cambiar de rumbo", equity → "las acciones", feedback →
-  "opiniones", etc.) y un detector permanente en la suite: si el grafo crece
-  con una etiqueta jergosa, con una sigla no exenta o de más de 6 palabras, el
-  commit se cae. Siglas que SÍ se conservan por familiares: IA, CEO, PIB, RRHH,
-  TI, ISO, OSHA, NIOSH, FODA.
+  **Cómo se sostiene:** el diccionario de la casa (abajo) y un detector
+  permanente en la suite: si el grafo crece con una etiqueta jergosa, con una
+  sigla no exenta o de más de 6 palabras, el commit se cae. Siglas que SÍ se
+  conservan por familiares: IA, CEO, PIB, RRHH, TI, ISO, OSHA, NIOSH, FODA.
+
+  **Diccionario de la casa** (para etiquetas y para nodos futuros):
+
+  | jerga | cómo se dice en casa |
+  |---|---|
+  | canvas | tu mapa del negocio |
+  | pivotar / pivote | cambiar de rumbo / cambio de rumbo |
+  | equity | las acciones, el reparto de la empresa |
+  | feedback | opiniones, hablar claro |
+  | leads | posibles clientes |
+  | benchmarking | compararte con los mejores |
+  | onboarding | la bienvenida |
+  | pitch | tu presentación |
+  | lean | sin desperdicio |
+  | crowdfunding | financiamiento colectivo |
+  | prompts | instrucciones a la IA |
+  | startup | empresa naciente, negocio que nace |
+  | KPI | indicadores |
+  | funnel | embudo |
+  | VC | fondos de inversión |
+  | stage-gate | puntos de control |
+
+  Sobre los **nombres propios de metodología** (stage-gate es el caso que lo
+  fijó): la casa los traduce **por función**. El nombre propio vive en el
+  contenido del nodo, donde se enseña y donde tiene sentido aprenderlo; en la
+  etiqueta de cara, jamás. Curaduría del auditor, jul 2026.
 
 ## 8. FRASES DEL FUNDADOR (su voz, para cuando hable del producto)
 

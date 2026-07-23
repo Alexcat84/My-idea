@@ -23,14 +23,18 @@ import sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-# Dos fuentes con procedencia SEPARADA a proposito:
-#  - la lista curada del auditor (la vara),
-#  - las que el diccionario de la casa (§C) prescribe palabra por palabra y la
-#    lista no cubrio. Nunca se inventa una etiqueta: lo que el diccionario no
-#    resuelve queda pendiente de curaduria y se reporta, no se parchea.
+# Tres fuentes con procedencia SEPARADA a proposito, y EN ORDEN: la ultima
+# manda sobre las anteriores.
+#  1. la lista curada del auditor (la vara),
+#  2. las que el diccionario de la casa (§C) prescribe palabra por palabra y la
+#     lista no cubrio (nunca se inventa: lo que el diccionario no resuelve se
+#     reporta, no se parchea),
+#  3. la curaduria FINAL del auditor, que resuelve las colisiones que la lista
+#     D introdujo y los anglicismos que no cubria.
 LISTAS = [
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1.json",
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_casa.json",
+    RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_curaduria_final.json",
 ]
 GRAFOS = [
     RAIZ / "dataset" / "metadata" / "master_graph.json",
