@@ -6,7 +6,7 @@
  * (fallback limpio: en Firefox simplemente no aparece). La transcripción
  * entra en vivo al campo y es editable antes de enviar.
  */
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSpeech } from "@/lib/useSpeech";
 
 interface Props {
@@ -20,27 +20,29 @@ interface Props {
 }
 
 export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus, deshabilitado, id }: Props) {
-  // Texto que existía antes de arrancar el dictado actual: lo dictado se
-  // agrega después, y lo provisional se muestra sin comprometerse.
-  const baseRef = useRef("");
   const [provisional, setProvisional] = useState("");
+  // El valor VIVO: el dictado agrega sobre lo que hay AHORA, aunque el
+  // usuario haya corregido a mano mientras hablaba. (Antes se guardaba una
+  // "base" al arrancar el micrófono y se recomponía desde ella; si el
+  // usuario editaba, esa base ya contenía lo dictado y todo se duplicaba.)
+  const valorRef = useRef(valor);
+  useEffect(() => {
+    valorRef.current = valor;
+  });
 
-  const { soportado, escuchando, iniciar, detener } = useSpeech((finales, prov) => {
-    const base = baseRef.current;
-    const union = base && finales ? `${base} ${finales}` : base + finales;
-    onCambio(union);
+  const { soportado, escuchando, iniciar, detener } = useSpeech((nuevoFinal, prov) => {
+    const trozo = nuevoFinal.trim();
+    if (trozo) {
+      const actual = valorRef.current;
+      onCambio(actual ? `${actual} ${trozo}` : trozo);
+    }
     setProvisional(prov);
   });
 
   function alternarMicrofono() {
-    if (escuchando) {
-      detener();
-      setProvisional("");
-    } else {
-      baseRef.current = valor.trim();
-      setProvisional("");
-      iniciar();
-    }
+    setProvisional("");
+    if (escuchando) detener();
+    else iniciar();
   }
 
   return (
@@ -53,7 +55,6 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
         placeholder={placeholder}
         value={provisional ? `${valor}${valor ? " " : ""}${provisional}` : valor}
         onChange={(e) => {
-          baseRef.current = e.target.value;
           setProvisional("");
           onCambio(e.target.value);
         }}
