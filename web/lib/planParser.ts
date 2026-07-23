@@ -29,7 +29,19 @@ export interface PlanParseado {
   titulo: string | null;
   intro: string;
   secciones: Seccion[];
-  pie: string | null;
+}
+
+/** La línea de procedencia que el motor escribía al pie de cada plan
+ * ("_Este plan se alimentó de N conceptos…_"). CONFIDENCIAL (BANCO §5): el
+ * usuario nunca debe ver la mecánica interna. El redactor ya no la escribe,
+ * pero los planes generados ANTES la llevan grabada en su markdown, así que
+ * se limpia AL LEER: si no, cada plan viejo la sigue filtrando en pantalla y
+ * en cada descarga. */
+const LINEA_PROCEDENCIA = /^\s*_?Este plan se aliment.*$/gim;
+
+/** Quita la procedencia de un markdown de plan ya guardado. */
+export function sinProcedencia(md: string): string {
+  return md.replace(LINEA_PROCEDENCIA, "").replace(/\n{3,}/g, "\n\n").trim();
 }
 
 /** Recorta "**Etiqueta:** …" (hasta la línea en blanco o el fin) del cuerpo. */
@@ -139,7 +151,6 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
 
 export function parsearPlan(md: string): PlanParseado {
   let etiqueta: string | null = null;
-  let pie: string | null = null;
   const cuerpo: string[] = [];
   for (const linea of md.split("\n")) {
     const l = linea.trim();
@@ -147,10 +158,8 @@ export function parsearPlan(md: string): PlanParseado {
       etiqueta = l.replaceAll("_", "");
       continue;
     }
-    if (!pie && /^_Este plan se aliment/i.test(l)) {
-      pie = l.replaceAll("_", "");
-      continue;
-    }
+    // La procedencia se descarta: es interna (ver sinProcedencia).
+    if (/^_?Este plan se aliment/i.test(l)) continue;
     cuerpo.push(linea);
   }
 
@@ -181,5 +190,5 @@ export function parsearPlan(md: string): PlanParseado {
 
   const secciones = rawSecc.map((s) => parsearSeccion(s.titulo, s.contenido));
   const introTxt = intro.join("\n").replace(/\n---\s*$/g, "").trim();
-  return { etiqueta, titulo, intro: introTxt, secciones, pie };
+  return { etiqueta, titulo, intro: introTxt, secciones };
 }

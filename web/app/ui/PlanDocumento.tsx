@@ -14,7 +14,7 @@
  */
 import { Markdown } from "./Markdown";
 
-import { parsearPlan, type BloquePasos, type Seccion } from "@/lib/planParser";
+import { parsearPlan, sinProcedencia, type Seccion } from "@/lib/planParser";
 
 
 function descargarMd(md: string, nombre: string) {
@@ -243,8 +243,6 @@ export function PlanDocumento({
           </div>
         ))}
       </div>
-
-      {plan.pie && <p className="mt-5 text-[13px] text-dim">{plan.pie}</p>}
 
       {/* Pie del PDF: se repite en cada página e identifica la idea. Oculto
           en pantalla (la hoja de impresión lo enciende); reemplaza el pie
