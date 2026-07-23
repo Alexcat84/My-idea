@@ -115,6 +115,8 @@ interface Props {
   onRecargarChecklist: () => void;
   /** abre la pantalla Análisis del proyecto (§6) */
   onVerAnalisis: () => void;
+  /** Fase 4.6: abre las descargas del viaje (un documento por fase) */
+  onVerDocumentos: () => void;
   /** la idea se marcó como realizada (§5): el padre abre la Celebración */
   onRealizada: () => void;
   /** Fase 4.2: un mundo se completó o se reabrió — el padre refresca su copia.
@@ -837,6 +839,7 @@ export function ManosALaObra({
   onModoCambiado,
   onRecargarChecklist,
   onVerAnalisis,
+  onVerDocumentos,
   onRealizada,
   onMundoCerrado,
   entrevistaAbierta,
@@ -1512,6 +1515,17 @@ export function ManosALaObra({
             </span>
           </button>
         )}
+
+        {/* Fase 4.6 — llevarse el trabajo: un documento por fase del camino */}
+        <button
+          onClick={onVerDocumentos}
+          className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-left text-[13px] font-semibold hover:border-accent/60"
+        >
+          Tus documentos
+          <span className="mt-0.5 block text-[12px] font-normal text-dim">
+            Tu plan, cada seguimiento y el expediente completo, en .md o en PDF.
+          </span>
+        </button>
 
         {/* Fase 3.8 §5 — marcar la idea como realizada (nace el proyecto) */}
         {cCore.total > 0 && (

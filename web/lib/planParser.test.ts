@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parsearSeccion } from "./planParser";
+import { parsearPlan, parsearSeccion, sinProcedencia } from "./planParser";
 
 // Fase 3.9.2 (C9): el texto REAL de la seccion de numeros del plan del auditor
 // HSEQ que el fundador cazo en produccion -- un parrafo denso con las etiquetas
@@ -58,5 +58,35 @@ describe("parsearSeccion — el respaldo NO se pasa de listo", () => {
     expect(etapa.bloquesPasos[0].pasos).toEqual(["Elige UNA norma.", "Estructura el banco."]);
     expect(etapa.bloquesPasos[1].label).toBe("Pasos para atacarlo");
     expect(etapa.bloquesPasos[1].pasos).toEqual(["Ronda 1: casos claros.", "Ronda 2: casos ambiguos."]);
+  });
+});
+
+describe("sinProcedencia (confidencialidad, BANCO §5)", () => {
+  it("borra la línea de procedencia que llevan grabada los planes viejos", () => {
+    const md = [
+      "# Mi plan",
+      "",
+      "cuerpo del plan",
+      "",
+      "_Este plan se alimentó de 39 conceptos: 14 de tu recorrido conversado y 25 del vecindario relacionado del grafo._",
+    ].join("\n");
+    const limpio = sinProcedencia(md);
+    expect(limpio).not.toMatch(/se aliment/i);
+    expect(limpio).not.toMatch(/conceptos|grafo|vecindario/i);
+    expect(limpio).toContain("cuerpo del plan");
+  });
+
+  it("la tolera sin cursivas y no deja un hueco de líneas en blanco", () => {
+    const limpio = sinProcedencia("# T\n\nuno\n\nEste plan se alimentó de 5 conceptos.\n\ndos");
+    expect(limpio).toBe("# T\n\nuno\n\ndos");
+  });
+
+  it("un plan que nunca la tuvo se queda igual", () => {
+    expect(sinProcedencia("# T\n\ncuerpo")).toBe("# T\n\ncuerpo");
+  });
+
+  it("el parser tampoco la deja pasar al cuerpo (no hay dónde pintarla)", () => {
+    const plan = parsearPlan("_Plan completo_\n\n# T\n\nintro\n\n_Este plan se alimentó de 9 conceptos._");
+    expect(JSON.stringify(plan)).not.toMatch(/se aliment/i);
   });
 });

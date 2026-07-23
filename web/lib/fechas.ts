@@ -108,6 +108,14 @@ export function fechaHumanaCorta(iso: string): string {
   return `${d.getDate()} de ${MESES[d.getMonth()]}`;
 }
 
+/** "20 de marzo de 2026" — con año, para documentos que se guardan y se
+ * releen fuera de la app (el expediente, los planes descargados): ahí "20 de
+ * marzo" a secas no dice de qué año se está hablando. */
+export function fechaHumanaConAno(iso: string): string {
+  const d = new Date(iso);
+  return `${d.getDate()} de ${MESES[d.getMonth()]} de ${d.getFullYear()}`;
+}
+
 /** yyyy-mm-dd LOCAL para el value/max de un <input type="date">. */
 export function fechaInputLocal(d: Date): string {
   const y = d.getFullYear();

@@ -155,11 +155,14 @@ function Timeline({ hitos, onFin }: { hitos: Hito[]; onFin: () => void }) {
 export function Celebracion({
   projectId,
   onVerAnalisis,
+  onVerDocumentos,
   onReabierto,
   onVolverIdeas,
 }: {
   projectId: string;
   onVerAnalisis: () => void;
+  /** Fase 4.6: llevarse el expediente completo del proyecto ya cerrado */
+  onVerDocumentos: () => void;
   onReabierto: () => void;
   onVolverIdeas: () => void;
 }) {
@@ -297,6 +300,10 @@ export function Celebracion({
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
         <button onClick={onVerAnalisis} className="text-[14px] font-semibold text-accent hover:underline">
           Ver análisis completo →
+        </button>
+        {/* Fase 4.6: al cerrar es cuando más se quiere el expediente entero. */}
+        <button onClick={onVerDocumentos} className="text-[14px] font-semibold text-accent hover:underline">
+          Descargar tu expediente →
         </button>
         <button onClick={onVolverIdeas} className="text-[14px] text-dim hover:text-ink">
           Volver a mis ideas

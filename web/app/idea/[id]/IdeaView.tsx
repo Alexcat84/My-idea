@@ -22,6 +22,7 @@ import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Claridad } from "../../ui/Claridad";
+import { Descargas } from "../../ui/Descargas";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { ChipSaldo } from "../../ui/ChipSaldo";
 import { CierreHonesto } from "../../ui/CierreHonesto";
@@ -137,6 +138,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereManos = searchParams.get("vista") === "manos";
   const quiereAnalisis = searchParams.get("vista") === "analisis";
   const quiereCelebracion = searchParams.get("vista") === "celebracion";
+  const quiereDocumentos = searchParams.get("vista") === "documentos";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -187,6 +189,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [modoCamino, setModoCamino] = useState<"ritmo" | "fechas" | null>(null);
   const [vistaAnalisis, setVistaAnalisis] = useState(quiereAnalisis);
   const [vistaCelebracion, setVistaCelebracion] = useState(quiereCelebracion);
+  // Fase 4.6: las descargas del viaje (un documento por fase + el expediente).
+  const [vistaDocumentos, setVistaDocumentos] = useState(quiereDocumentos);
+  const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
 
   const cargarChecklist = useCallback(async () => {
@@ -549,7 +554,28 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaManos(false);
     setVistaAnalisis(false);
     setVistaCelebracion(false);
+    setVistaDocumentos(false);
     router.replace(`/idea/${projectId}`, { scroll: false });
+  }
+
+  function irADocumentos() {
+    // Volver debe devolver a donde estabas: a la Celebración si venías de
+    // cerrar tu proyecto, a Manos a la Obra si venías del trabajo.
+    setOrigenDocumentos(vistaCelebracion ? "celebracion" : "manos");
+    setVistaDocumentos(true);
+    setVistaAnalisis(false);
+    setVistaCelebracion(false);
+    router.replace(`/idea/${projectId}?vista=documentos`, { scroll: false });
+  }
+
+  function volverDeDocumentos() {
+    if (origenDocumentos === "celebracion") {
+      setVistaDocumentos(false);
+      setVistaCelebracion(true);
+      router.replace(`/idea/${projectId}?vista=celebracion`, { scroll: false });
+      return;
+    }
+    volverAManos();
   }
 
   function irAAnalisis() {
@@ -561,6 +587,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   function volverAManos() {
     setVistaAnalisis(false);
     setVistaCelebracion(false);
+    setVistaDocumentos(false);
     setVistaManos(true);
     router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
   }
@@ -727,10 +754,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
           </div>
         )}
 
-        {vistaCelebracion ? (
+        {vistaDocumentos ? (
+          <Descargas projectId={projectId} nombreIdea={detalle.idea.nombre} onVolver={volverDeDocumentos} />
+        ) : vistaCelebracion ? (
           <Celebracion
             projectId={projectId}
             onVerAnalisis={irAAnalisis}
+            onVerDocumentos={irADocumentos}
             onVolverIdeas={() => router.push("/ideas")}
             onReabierto={() => {
               setRealizadaAt(null);
@@ -755,6 +785,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onModoCambiado={setModoCamino}
               onRecargarChecklist={cargarChecklist}
               onVerAnalisis={irAAnalisis}
+              onVerDocumentos={irADocumentos}
               onRealizada={irACelebracion}
               onMundoCerrado={(dominio, completadoAt) =>
                 // Fase 4.2 §3: cerrar un mundo NO cierra la idea — aquí no se

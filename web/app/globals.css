@@ -170,6 +170,15 @@ summary::-webkit-details-marker {
   }
 }
 
+/* Dos filetes seguidos no dicen más que uno: cuando un documento termina en
+   una regla horizontal y arranca la siguiente sección, la sección renuncia a
+   su propio filete superior. */
+[data-plan-print] hr + h2 {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 /* ── IMPRESIÓN / "Descargar PDF" ──────────────────────────────────────────
    El plan se lleva a papel CONSERVANDO su identidad visual: el azul que
    piensa, el verde que ejecuta, los puntos con sus líneas y las tarjetas.
@@ -208,6 +217,15 @@ summary::-webkit-details-marker {
   [data-plan-print],
   [data-plan-print] * {
     visibility: visible !important;
+  }
+  /* El panel de Descargas monta el documento OCULTO en pantalla (solo existe
+     para mandarlo a papel): aquí se enciende. Sin esto no se imprimiría nada,
+     porque display:none no deja hijos que renderizar.
+     Va por atributo y NO por la clase `hidden` de Tailwind: el compilador se
+     come una regla propia que use el nombre de una utilidad suya, y esta
+     desaparecía del CSS servido sin avisar. */
+  [data-plan-print][data-solo-impresion] {
+    display: block !important;
   }
   [data-plan-print] {
     position: absolute !important;
