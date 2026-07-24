@@ -447,8 +447,70 @@ async function faseChecklistSeguimiento(cookie: string, projectId: string) {
     throw new Error(`PATCH no dejo el item en 'hecho': ${JSON.stringify(rHecho)}`);
   }
   const destacado1 = items1.find((i) => i.destacado)!;
-  await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: destacado1.id, estado: "a_medias" });
-  log(`OK: '${primero.texto.slice(0, 50)}…' -> hecho (con nota); destacado etapa 1 -> a_medias.`);
+  await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: destacado1.id, estado: "en_proceso" });
+  log(`OK: '${primero.texto.slice(0, 50)}…' -> hecho (con nota); destacado etapa 1 -> en_proceso.`);
+
+  // Gestor de estados (migration 030): retirar una tarea con motivo, verificar
+  // las cuentas honestas (X de N ACTIVAS), y que reactivarla conserva historia.
+  const retirable = items1.find((i) => i.id !== primero.id && i.id !== destacado1.id)!;
+  const rRetiro = await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+    item_id: retirable.id,
+    estado: "no_aplica",
+    no_aplica_motivo: "mi negocio es 100% online, no aplica",
+  });
+  const itemRetirado = rRetiro.item as { estado?: string; no_aplica_motivo?: string | null; completed_at?: string | null };
+  if (itemRetirado.estado !== "no_aplica" || itemRetirado.no_aplica_motivo !== "mi negocio es 100% online, no aplica") {
+    throw new Error(`retirar no dejo estado/motivo esperado: ${JSON.stringify(rRetiro)}`);
+  }
+  if (itemRetirado.completed_at) throw new Error("una tarea retirada NO puede quedar con completed_at");
+
+  // Las cuentas: el resumen del dominio core cuenta ACTIVAS (sin la retirada) y
+  // 'retiradas' aparte. Calculado a mano: 1 hecho, y el total baja en 1.
+  const checklistTrasRetiro = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const resumenCore = (checklistTrasRetiro.resumen as Record<string, { total: number; hechos: number; retiradas: number }>).core;
+  if (resumenCore.retiradas !== 1) {
+    throw new Error(`el resumen debe contar 1 retirada, contó ${resumenCore.retiradas}`);
+  }
+  if (resumenCore.total !== items1.length - 1) {
+    throw new Error(`el denominador de activas debe ser ${items1.length - 1} (sin la retirada), fue ${resumenCore.total}`);
+  }
+  log(`OK: retirada '${retirable.texto.slice(0, 40)}…' con motivo; activas=${resumenCore.total}, retiradas=${resumenCore.retiradas}.`);
+
+  // El expediente muestra la retirada APARTE, con su motivo en la voz del usuario.
+  const docExp = await getJson(cookie, `/api/project/${projectId}/documentos?doc=expediente`);
+  const mdExp = String(docExp.markdown ?? "");
+  if (!/Retiradas \(no aplican\): 1/.test(mdExp) || !mdExp.includes("mi negocio es 100% online")) {
+    throw new Error("el expediente no listó la retirada con su motivo en su propia sección");
+  }
+  if (mdExp.includes(`- [ ] ${retirable.texto}`)) {
+    throw new Error("la retirada NO debe aparecer como pendiente en el expediente");
+  }
+  log("OK: el expediente muestra la retirada aparte, con su motivo, y no como pendiente.");
+
+  // Reactivarla: vuelve al plan y su fila pierde el motivo (la historia va a la
+  // bitácora). La reversión es la prueba de que retirar no es un callejón.
+  const rReactiva = await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: retirable.id, estado: "pendiente" });
+  const reactivada = rReactiva.item as { estado?: string; no_aplica_motivo?: string | null };
+  if (reactivada.estado !== "pendiente" || reactivada.no_aplica_motivo) {
+    throw new Error(`reactivar debió dejar 'pendiente' sin motivo, dio ${JSON.stringify(rReactiva)}`);
+  }
+  // La bitácora conserva los dos eventos (retiro + reactivación): nada se borra.
+  const { data: bitacora } = await supabaseAdmin
+    .from("project_bitacora")
+    .select("tipo, payload")
+    .eq("project_id", projectId)
+    .in("tipo", ["item_no_aplica", "item_reactivada"]);
+  const tipos = (bitacora ?? []).map((b: { tipo: string }) => b.tipo);
+  if (!tipos.includes("item_no_aplica") || !tipos.includes("item_reactivada")) {
+    throw new Error(`la bitácora debió registrar retiro y reactivación, tiene: ${JSON.stringify(tipos)}`);
+  }
+  log("OK: reactivación conserva historia en project_bitacora (retiro + reactivación).");
+  // Se deja retirada para el resto del vuelo (el follow debe ignorarla).
+  await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+    item_id: retirable.id,
+    estado: "no_aplica",
+    no_aplica_motivo: "mi negocio es 100% online, no aplica",
+  });
 
   // Contrato: estado invalido debe rechazarse con 400 (jamas 23514 en vivo).
   const resInvalido = await fetch(`${BASE_URL}/api/project/${projectId}/checklist`, {
