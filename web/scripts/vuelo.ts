@@ -391,7 +391,11 @@ const RESPUESTAS_SEGUIMIENTO = [
   "Mi duda ahora es si producir por lotes de 10 o seguir por pedido; por pedido no me atraso, pero pierdo el descuento de materiales.",
   "Sí: tengo dos clientes mayoristas interesados que me pidieron precio por docena, todavía no les respondo.",
   "Puedo dedicarle unas 15 horas a la semana; el resto lo cubre mi hermana cuando hay pedidos grandes.",
-  "De acuerdo, con eso es suficiente por ahora.",
+  // La respuesta REPETIDA (el bucle la reusa si la entrevista se alarga) pide
+  // el plan de frente, en vez de la vieja "suficiente por ahora" que sonaba a
+  // despedida y empujaba al interprete a 'salio': la precondicion del test es
+  // llegar a listo_para_plan para poder ejercitar la cadena follow->plan.
+  "Con eso ya tienes el panorama completo de mi negocio; ármame el plan de seguimiento con lo que te conté.",
 ];
 
 interface ItemVuelo {
@@ -673,15 +677,30 @@ async function faseMundos(cookie: string, projectId: string) {
   const grafoRes = await fetch(`${BASE_URL}/api/projects`, { headers: { Cookie: cookie } });
   void grafoRes; // el grafo no se expone por API; se detecta via el 503/200 del start
 
-  // 1. Prueba negativa: sin fila en project_unlocks, /start = 403.
-  const sinUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/quality/start`, {
+  // 1. Contrato vigente (Fase 4.5, PREVIEW_MUNDOS_PLAN): el muro de pago de
+  //    3.5 (start sin unlock -> 403) MURIÓ con el preview. Hoy el único candado
+  //    es de secuencia: sin PLAN CORE, start = 409 ("primero genera tu plan");
+  //    con plan core, start abre el preview GRATIS (200). El candado se prueba
+  //    en un proyecto VIRGEN para no consumir el preview del proyecto real.
+  //    (El ciclo 4.5 completo -- preview, diagnóstico, compra -- vive en
+  //    vuelo_preview.ts; aquí solo se cierra el contrato del start.)
+  const { data: proyRef } = await supabaseAdmin.from("projects").select("user_id").eq("id", projectId).single();
+  const devUserId = (proyRef as { user_id: string }).user_id;
+  const { data: virgen } = await supabaseAdmin
+    .from("projects")
+    .insert({ user_id: devUserId, entrada_original: "candado de mundos (vuelo)", fase_actual: "ideacion", status: "active" })
+    .select("id")
+    .single();
+  const pidVirgen = (virgen as { id: string }).id;
+  const candado = await fetch(`${BASE_URL}/api/project/${pidVirgen}/world/quality/start`, {
     method: "POST",
     headers: { Cookie: cookie },
   });
-  if (sinUnlock.status !== 403) {
-    throw new Error(`start sin unlock debio responder 403 (el muro), respondio ${sinUnlock.status}`);
+  if (candado.status !== 409) {
+    throw new Error(`sin plan core, start debio dar 409 (candado 4.5), respondio ${candado.status}`);
   }
-  log("OK: sin unlock, el mundo no existe (403 con palabras de persona).");
+  await supabaseAdmin.from("projects").delete().eq("id", pidVirgen);
+  log("OK: contrato 4.5 -- sin plan core el mundo no abre (409); el muro de pago 403 murió.");
 
   // 2. Pack inexistente -> 404.
   const packFalso = await fetch(`${BASE_URL}/api/project/${projectId}/world/finanzas/unlock`, {
@@ -796,16 +815,17 @@ async function faseMundos(cookie: string, projectId: string) {
 async function faseMundosNuevos(cookie: string, projectId: string) {
   separador("FASE 2g-bis (v1.3.2): mundos nuevos -- murallas x2 + ciclo de seguridad_digital");
 
-  // 1. Murallas negativas: sin unlock, exportacion y franquicias = 403.
+  // 1. Contrato 4.5: exportacion y franquicias ya NO son murallas. Con plan
+  //    core, su start abre el preview GRATIS (200); el muro de 3.5 (403) murió.
   for (const dominio of ["exportacion", "franquicias"]) {
-    const sinUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/${dominio}/start`, {
+    const r = await fetch(`${BASE_URL}/api/project/${projectId}/world/${dominio}/start`, {
       method: "POST",
       headers: { Cookie: cookie },
     });
-    if (sinUnlock.status !== 403) {
-      throw new Error(`start de '${dominio}' sin unlock debio responder 403 (la muralla), respondio ${sinUnlock.status}`);
+    if (r.status !== 200) {
+      throw new Error(`start de '${dominio}' con plan core debio dar 200 (preview 4.5), respondio ${r.status}`);
     }
-    log(`OK: muralla de '${dominio}' en pie (403 sin unlock).`);
+    log(`OK: '${dominio}' abre su preview gratis (200); el muro murió.`);
   }
 
   // 2. Unlock de seguridad_digital -- aqui muerde el CHECK de la migracion 017.
@@ -935,17 +955,14 @@ async function faseMundosNuevos(cookie: string, projectId: string) {
 // CHECK viejo lo rechaza, se corta con el mensaje exacto para el SQL Editor.
 // ---------------------------------------------------------------------------
 async function faseMundoRiesgos(cookie: string, projectId: string) {
-  separador("FASE 2g-ter (v1.4): Riesgos Bajo Control -- muralla + unlock 3 creditos + ciclo");
+  separador("FASE 2g-ter (v1.4): Riesgos Bajo Control -- contrato 4.5 (sin muro, unlock gratis) + ciclo");
 
-  // 1. Muralla negativa: sin unlock, risk_management = 403 (no existe para el motor).
-  const sinUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/risk_management/start`, {
-    method: "POST",
-    headers: { Cookie: cookie },
-  });
-  if (sinUnlock.status !== 403) {
-    throw new Error(`start de 'risk_management' sin unlock debio responder 403 (la muralla), respondio ${sinUnlock.status}`);
-  }
-  log("OK: muralla de 'risk_management' en pie (403 sin unlock).");
+  // 1. Contrato 4.5: risk_management ya NO es muralla (el 403 murió con el
+  //    preview). El candado de secuencia (409 sin plan core) ya quedó probado
+  //    en la fase 2g; aquí el propio ciclo (unlock -> start 200 -> plan) prueba
+  //    que el mundo abre. No se hace un start suelto para no adelantar la fila
+  //    de unlock (haría el unlock de abajo un segundo toque).
+  log("OK: risk_management sin muro de pago (contrato 4.5); el ciclo abajo prueba su preview.");
 
   // 2. Unlock -- aqui muerde el CHECK de la migracion 019.
   const resUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/risk_management/unlock`, {
@@ -964,20 +981,24 @@ async function faseMundoRiesgos(cookie: string, projectId: string) {
   if (u.ok !== true || u.dominio !== "risk_management") {
     throw new Error(`unlock de risk_management fallo: ${JSON.stringify(u)}`);
   }
+  // La respuesta reporta el PRECIO del catálogo del mundo (3): sigue vivo como
+  // el costo del PLAN (la entrega), que es donde 4.5 movió el cobro.
   if (Number(u.creditos) !== 3) {
-    throw new Error(`el unlock de risk_management debio cobrar 3 creditos, cobro ${u.creditos}`);
+    throw new Error(`el catálogo de risk_management debio reportar precio 3, reporto ${u.creditos}`);
   }
-  log(`OK: unlock de risk_management con ${u.creditos} creditos (migracion 019 viva).`);
+  log(`OK: unlock de risk_management (precio de catálogo ${u.creditos}, migracion 019 viva).`);
 
-  // La fila real: creditos_pagados = 3 (canon del catalogo).
+  // La fila real: creditos_pagados = 0. Contrato 4.5 -- ABRIR el mundo es
+  // GRATIS (el muro de pago murió); lo pagado vive en la ENTREGA del plan.
+  // creditos_pagados quedó como registro histórico del modelo 3.5, siempre 0.
   const { data: fila, error: errFila } = await supabaseAdmin
     .from("project_unlocks")
     .select("creditos_pagados")
     .eq("project_id", projectId)
     .eq("dominio", "risk_management")
     .single();
-  if (errFila || fila?.creditos_pagados !== 3) {
-    throw new Error(`fila de project_unlocks risk_management con creditos_pagados!=3: ${JSON.stringify(fila)} ${errFila?.message ?? ""}`);
+  if (errFila || fila?.creditos_pagados !== 0) {
+    throw new Error(`fila de project_unlocks risk_management: creditos_pagados debio ser 0 (unlock gratis 4.5): ${JSON.stringify(fila)} ${errFila?.message ?? ""}`);
   }
 
   // 3. Ciclo positivo completo -- la brecha elige la semilla del 7.º mundo.
@@ -2307,9 +2328,9 @@ async function main() {
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
   log("  5. bucle de checklist: derivado -> PATCH -> follow (bitacora+puerta avanzada) -> plan seguimiento encadenado (Fase 3.3): OK");
-  log("  6. mundos HSEQ: muro 403 sin unlock, unlock idempotente con creditos, y 503/ciclo segun integracion (Fase 3.5): OK");
-  log("  7. mundos nuevos v1.3.2: murallas 403 de exportacion/franquicias + ciclo completo de seguridad_digital (migracion 017): OK");
-  log("  7-bis. Riesgos Bajo Control (v1.4): muralla 403 + unlock 3 creditos (migracion 019) + ciclo completo dominio=risk_management: OK");
+  log("  6. mundos HSEQ: contrato 4.5 (candado 409 sin plan core, el muro 403 murio), unlock gratis idempotente, y ciclo positivo (preview -> plan dominio): OK");
+  log("  7. mundos nuevos v1.3.2: exportacion/franquicias abren preview gratis (200, contrato 4.5) + ciclo completo de seguridad_digital (migracion 017): OK");
+  log("  7-bis. Riesgos Bajo Control (v1.4): sin muro (contrato 4.5) + unlock (migracion 019) + ciclo completo dominio=risk_management: OK");
   log("  8. contrato de la UI de convergencia: unlocks + historial + mundos + grupo vigente (Fase 3.6): OK");
   log("  9. sentido del tiempo (Fase 3.8): modo, completed_at real, baseline con 3 clases de cumplimiento, celebracion+reabrir: OK");
   log("  10. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
