@@ -568,7 +568,10 @@ async function faseChecklistSeguimiento(cookie: string, projectId: string) {
     "Desde el último plan, este es mi avance real:",
     "HECHO (1):",
     "(nota: quedó lista la tabla de costos por pieza)",
-    "A MEDIAS (1):",
+    "EN PROCESO (1):", // gestor de estados: 'a_medias' se renombró a 'en_proceso'
+    // La retirada NO se compone como pendiente: va en su sección con su motivo.
+    "RETIRADA (no aplica) (1)",
+    "NO las vuelvas a proponer",
     "Además: Conseguí un proveedor de cemento más barato",
     "Lo que más me interesa profundizar ahora: el precio y el margen",
   ]) {
@@ -576,7 +579,11 @@ async function faseChecklistSeguimiento(cookie: string, projectId: string) {
       throw new Error(`la bitacora (mensaje_entrada) no contiene el fragmento esperado: "${fragmento}"\n---\n${mensajeEntrada}`);
     }
   }
-  log("OK: mensaje compuesto auditable en la bitacora (estados, nota, detalles y enfoque presentes).");
+  // La retirada JAMÁS aparece en un cubo de pendientes ("SIN EMPEZAR").
+  if (/SIN EMPEZAR \(\d+\):[\s\S]*Agrega una fila aparte con tus costos fijos/.test(mensajeEntrada)) {
+    throw new Error("la tarea retirada se compuso como pendiente (SIN EMPEZAR): no debe");
+  }
+  log("OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada aparte sin reproponerse).");
 
   // --- 4. la entrevista de seguimiento hasta el plan ---
   let idxSeg = 0;
