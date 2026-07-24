@@ -20,6 +20,7 @@ const base: ItemChecklistUI = {
   estado: "pendiente",
   nota: null,
   completed_at: null,
+  no_aplica_motivo: null,
   fecha_base: null,
   fecha_base_origen: null,
   fecha_base_original: null,

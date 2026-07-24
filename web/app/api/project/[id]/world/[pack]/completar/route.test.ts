@@ -47,7 +47,7 @@ function sembrar({ completadoAt = null, motivo = null }: { completadoAt?: string
   estadoFalso.checklistItems.push(
     { id: "i1", project_id: "p1", dominio: "quality", estado: "hecho" },
     { id: "i2", project_id: "p1", dominio: "quality", estado: "pendiente" },
-    { id: "i3", project_id: "p1", dominio: "quality", estado: "a_medias" }
+    { id: "i3", project_id: "p1", dominio: "quality", estado: "en_proceso" }
   );
 }
 
@@ -94,7 +94,7 @@ describe("POST world/[pack]/completar (Fase 4.2 §2)", () => {
   it("los ítems pendientes quedan INTACTOS: son testigos, no se limpian", async () => {
     sembrar();
     await POST(req({ accion: "completar" }), PARAMS);
-    expect(estadoFalso.checklistItems.map((i) => i.estado)).toEqual(["hecho", "pendiente", "a_medias"]);
+    expect(estadoFalso.checklistItems.map((i) => i.estado)).toEqual(["hecho", "pendiente", "en_proceso"]);
   });
 
   it("guarda el motivo cuando lo hay, y lo devuelve", async () => {

@@ -102,12 +102,24 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   }
 
   // ── Expediente completo ────────────────────────────────────────────────
-  const { data: itemsRaw } = await supabase
+  // no_aplica_motivo llega con la 030: se reintenta sin ella si aún no está.
+  const COLS_ACC = "dominio, etapa, texto, estado, completed_at, fecha_base, orden";
+  const accConMotivo = await supabase
     .from("checklist_items")
-    .select("dominio, etapa, texto, estado, completed_at, fecha_base, orden")
+    .select(`${COLS_ACC}, no_aplica_motivo`)
     .eq("project_id", projectId)
     .order("etapa", { ascending: true })
     .order("orden", { ascending: true });
+  const itemsRaw = accConMotivo.error
+    ? (
+        await supabase
+          .from("checklist_items")
+          .select(COLS_ACC)
+          .eq("project_id", projectId)
+          .order("etapa", { ascending: true })
+          .order("orden", { ascending: true })
+      ).data
+    : accConMotivo.data;
   // Solo el viaje principal: las acciones de un mundo se cuentan dentro de su
   // propia sección, no mezcladas con las del core (regla de no mezclar
   // procesos: cada cosa en su carril).
@@ -119,6 +131,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       estado: string;
       completed_at: string | null;
       fecha_base: string | null;
+      no_aplica_motivo?: string | null;
     }>
   )
     .filter((i) => esCore(i.dominio))
@@ -128,6 +141,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       estado: i.estado,
       completedAt: i.completed_at,
       fechaBase: i.fecha_base,
+      noAplicaMotivo: i.no_aplica_motivo ?? null,
     }));
 
   const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;

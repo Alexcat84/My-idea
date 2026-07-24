@@ -45,6 +45,13 @@ export function construirBloqueRealidad(a: Analytics): string | null {
   else ritmo.push("aún sin ningún avance registrado");
   L.push(`- Ritmo: ${ritmo.join("; ")}.`);
 
+  // Gestor de estados: las retiradas se reportan APARTE del ritmo (no son
+  // pendientes ni fracasos), para que el motor no las replanifique.
+  if (u.retiradas.length > 0) {
+    const cuales = u.retiradas.map((r) => `"${corto(r.texto)}"${r.motivo ? ` (${corto(r.motivo)})` : ""}`);
+    L.push(`- Retiré ${PLURAL(u.retiradas.length, "tarea", "tareas")} por no aplicar: ${cuales.join("; ")}.`);
+  }
+
   // Duracion real por etapa: el dato honesto que existe en los dos modos.
   if (u.duracionPorEtapa.length > 0) {
     const porEtapa = u.duracionPorEtapa.map((e) => `etapa ${e.etapa}: ${PLURAL(e.dias, "día", "días")}`);
@@ -110,6 +117,11 @@ export function construirBloqueRealidadMundo(
   if (u.diasSinAvance !== null) ritmo.push(`${PLURAL(u.diasSinAvance, "día", "días")} desde mi último avance aquí`);
   else ritmo.push("aún sin ningún avance registrado en este mundo");
   L.push(`- Ritmo en este mundo: ${ritmo.join("; ")}.`);
+
+  if (u.retiradas.length > 0) {
+    const cuales = u.retiradas.map((r) => `"${corto(r.texto)}"${r.motivo ? ` (${corto(r.motivo)})` : ""}`);
+    L.push(`- Retiré ${PLURAL(u.retiradas.length, "tarea", "tareas")} de este mundo por no aplicar: ${cuales.join("; ")}.`);
+  }
 
   if (u.duracionPorEtapa.length > 0) {
     const porEtapa = u.duracionPorEtapa.map((e) => `etapa ${e.etapa}: ${PLURAL(e.dias, "día", "días")}`);

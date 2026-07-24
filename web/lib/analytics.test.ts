@@ -84,6 +84,37 @@ describe("calcularAnalytics — capa universal", () => {
   });
 });
 
+describe("calcularAnalytics — retiradas (gestor de estados)", () => {
+  // Plan vigente único con 4 ítems: 2 hechos, 1 pendiente, 1 no_aplica.
+  // Denominador de activas = 3 (no 4); hechas = 2; retiradas listadas aparte.
+  const entrada: EntradaAnalytics = {
+    proyectoCreatedAt: iso("2026-03-01"),
+    realizadaAt: iso("2026-04-01"),
+    planesCore: [{ id: "pv", etiqueta: "inicial", created_at: iso("2026-03-02"), baseline_confirmada_at: null }],
+    mundos: [],
+    items: [
+      { plan_id: "pv", etapa: 1, estado: "hecho", destacado: false, texto: "A", completed_at: iso("2026-03-05"), fecha_base: null, fecha_base_original: null },
+      { plan_id: "pv", etapa: 1, estado: "hecho", destacado: false, texto: "B", completed_at: iso("2026-03-06"), fecha_base: null, fecha_base_original: null },
+      { plan_id: "pv", etapa: 2, estado: "pendiente", destacado: false, texto: "C", completed_at: null, fecha_base: null, fecha_base_original: null },
+      { plan_id: "pv", etapa: 2, estado: "no_aplica", destacado: false, texto: "Contrata un local", completed_at: null, fecha_base: null, fecha_base_original: null, no_aplica_motivo: "negocio online" },
+    ],
+  };
+  const u = calcularAnalytics(entrada).universal;
+
+  it("el denominador de activas excluye la retirada (2 de 3, no de 4)", () => {
+    expect(u.accionesVigente).toEqual({ hechas: 2, total: 3 });
+  });
+  it("la retirada se lista aparte, con su texto, etapa y motivo", () => {
+    expect(u.retiradas).toEqual([{ texto: "Contrata un local", etapa: 2, motivo: "negocio online" }]);
+  });
+  it("el acta nombra las retiradas con su porqué", () => {
+    const md = informeMarkdown("Mi idea", calcularAnalytics(entrada), iso("2026-04-01"));
+    expect(md).toContain("Retiradas (no aplican): 1");
+    expect(md).toContain("Contrata un local — negocio online");
+    expect(md).toContain("**2** de **3** activas");
+  });
+});
+
 describe("calcularAnalytics — capa de cumplimiento", () => {
   const c = calcularAnalytics(BASE).cumplimiento!;
 

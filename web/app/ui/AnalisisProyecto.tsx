@@ -146,6 +146,14 @@ export function AnalisisProyecto({
           <Tile valor={String(u.rachaMasLargaDias)} etiqueta="días de racha más larga" />
           <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta="ciclos · mundos" />
         </div>
+        {/* Gestor de estados: las retiradas tienen su línea propia. No cuentan
+            para el avance ni como tardías; son una decisión, no un fracaso. */}
+        {u.retiradas.length > 0 && (
+          <p className="mt-3 text-[13px] text-dim">
+            Retiradas (no aplican): <span className="font-semibold text-ink">{u.retiradas.length}</span>. Decidiste que no
+            corren para esta idea; quedan en tu expediente con su motivo.
+          </p>
+        )}
 
         {/* Canon 11: duración con barras (izq) y hitos (der) en dos columnas. */}
         {(u.duracionPorEtapa.length > 0 || a.hitos.length > 0) && (

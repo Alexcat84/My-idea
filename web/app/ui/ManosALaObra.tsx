@@ -18,7 +18,8 @@ import { Acordeon } from "./Acordeon";
 import { CampoConVoz } from "./CampoConVoz";
 import { DetalleActividad } from "./DetalleActividad";
 import { PlanDocumento } from "./PlanDocumento";
-import type { ChecklistEstado, FechaBaseOrigen, ModoCamino } from "@/lib/dbContract";
+import { ETIQUETA_ESTADO, SelectorEstado } from "./SelectorEstado";
+import { esActivo, type ChecklistEstado, type FechaBaseOrigen, type ModoCamino } from "@/lib/dbContract";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
 import { PRECIOS } from "@/lib/precios";
@@ -37,6 +38,7 @@ export interface ItemChecklistUI {
   estado: ChecklistEstado;
   nota: string | null;
   completed_at: string | null;
+  no_aplica_motivo: string | null;
   fecha_base: string | null;
   fecha_base_origen: FechaBaseOrigen | null;
   fecha_base_original: string | null;
@@ -50,6 +52,7 @@ export interface ItemChecklistUI {
 export interface CambioItem {
   estado?: ChecklistEstado;
   completed_at?: string | null;
+  no_aplica_motivo?: string | null;
   nota?: string | null;
   fecha_base?: string | null;
 }
@@ -132,6 +135,7 @@ interface Props {
     id: string;
     estado?: ChecklistEstado;
     completed_at?: string | null;
+    no_aplica_motivo?: string | null;
     nota?: string | null;
     fecha_base?: string | null;
     fecha_base_original?: string | null;
@@ -163,51 +167,20 @@ export function grupoVigente(checklist: ChecklistData, dominio: string) {
   return grupos.at(-1) ?? null;
 }
 
+/** Cuentas honestas (gestor de estados): el denominador son las ACTIVAS; las
+ * retiradas (no_aplica) salen del avance y se cuentan aparte. */
 function conteo(items: ItemChecklistUI[]) {
-  return { hechos: items.filter((i) => i.estado === "hecho").length, total: items.length };
+  const activas = items.filter((i) => esActivo(i.estado));
+  return {
+    hechos: activas.filter((i) => i.estado === "hecho").length,
+    total: activas.length,
+    retiradas: items.length - activas.length,
+  };
 }
 
-const ETIQUETA_ESTADO: Record<ChecklistEstado, string> = {
-  pendiente: "sin empezar",
-  empezado: "apenas empezado",
-  a_medias: "a medias",
-  hecho: "hecho",
-};
-
-const SIGUIENTE_ESTADO: Record<ChecklistEstado, ChecklistEstado> = {
-  pendiente: "empezado",
-  empezado: "a_medias",
-  a_medias: "hecho",
-  hecho: "pendiente",
-};
-
-/** El icono de estado distingue por FORMA, nunca solo por color. */
-function IconoEstado({ estado }: { estado: ChecklistEstado }) {
-  if (estado === "hecho") {
-    return (
-      <span className="anima-check-pop flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-full bg-done">
-        <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden>
-          <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="#04120A" strokeWidth="2" fill="none" />
-        </svg>
-      </span>
-    );
-  }
-  if (estado === "a_medias") {
-    return (
-      <span className="box-border flex h-[22px] w-[22px] shrink-0 overflow-hidden rounded-full border-[1.5px] border-done/70">
-        <span className="h-full w-1/2 bg-done/70" />
-      </span>
-    );
-  }
-  if (estado === "empezado") {
-    return (
-      <span className="box-border flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-done/70">
-        <span className="h-1.5 w-1.5 rounded-full bg-done/70" />
-      </span>
-    );
-  }
-  return <span className="box-border block h-[22px] w-[22px] shrink-0 rounded-full border-[1.5px] border-white/20" />;
-}
+// El vocabulario y los iconos de estado viven en SelectorEstado (fuente única
+// compartida con el detalle). El ciclo por toques MURIÓ: adivinar no es
+// elegir; ahora el círculo abre el menú de los 5 estados.
 
 function FilaItem({
   item,
@@ -222,66 +195,67 @@ function FilaItem({
   onAbrirDetalle: () => void;
 }) {
   const hecho = item.estado === "hecho";
-  // Fase 3.8 §2 — timeline real. Marcar hecho COMPROMETE el estado en el acto,
-  // con la fecha de hoy por defecto. Antes abría un prompt "¿cuándo lo
-  // hiciste?" que, si se cancelaba, dejaba el ítem en su estado anterior: de
-  // ahí la trampa de "a medias" sin salida (bug del fundador, jul 2026). La
-  // fecha se ajusta DESPUÉS con "cambiar"; nunca bloquea el marcado.
+  const retirada = item.estado === "no_aplica";
+  // Marcar hecho COMPROMETE el estado en el acto, con la fecha de hoy por
+  // defecto (ley vigente). La fecha se ajusta DESPUÉS con "cambiar".
   const [editandoFecha, setEditandoFecha] = useState(false);
   const hoyInput = fechaInputLocal(new Date());
 
   function marcarHecho(completedAt?: string | null) {
     setEditandoFecha(false);
-    // Sin fecha explícita, hoy: un toque marca hecho hoy, y listo.
     onCambio({ estado: "hecho", completed_at: completedAt ?? isoDesdeInputLocal(hoyInput) });
   }
 
-  function pasoDeCirculo() {
-    const siguiente = SIGUIENTE_ESTADO[item.estado];
-    if (siguiente === "hecho") marcarHecho();
-    else onCambio({ estado: siguiente }); // hecho→pendiente limpia completed_at en la ruta
+  // El menú de estados manda el cambio; 'no_aplica' viaja con su motivo.
+  function elegirEstado(estado: ChecklistEstado, motivo?: string | null) {
+    if (estado === "hecho") return marcarHecho();
+    if (estado === "no_aplica") return onCambio({ estado, no_aplica_motivo: motivo ?? null });
+    onCambio({ estado });
   }
 
   return (
     <div
       className={
         "rounded-cinta border bg-surface px-4 py-3.5 " +
-        (item.destacado && !hecho ? "border-done/35" : "border-hairline")
+        (retirada ? "border-hairline opacity-60" : item.destacado && !hecho ? "border-done/35" : "border-hairline")
       }
     >
       <div className="flex flex-wrap items-center gap-3.5">
-        {/* un toque: pendiente → empezado → a medias → hecho → pendiente */}
-        {/* Fase 4.3 §4 (deuda del barrido 380): a 380 EL CÍRCULO ES EL CONTROL,
-            como manda el frame móvil del canon 06. Su área táctil sube a 44px
-            con padding + margen negativo: el dedo recibe 44, el layout sigue
-            viendo los 22 del círculo, así que la fila no crece. En escritorio,
-            todo queda exactamente como estaba. */}
-        <button
-          onClick={pasoDeCirculo}
-          disabled={ocupado}
-          title={`Estado: ${ETIQUETA_ESTADO[item.estado]} — tocar para cambiar`}
-          aria-label={`${item.texto}: ${ETIQUETA_ESTADO[item.estado]}, tocar para cambiar`}
-          className="-m-[11px] flex h-11 w-11 shrink-0 items-center justify-center p-[11px] disabled:opacity-50 sm:m-0 sm:h-auto sm:w-auto sm:p-0"
-        >
-          <IconoEstado estado={item.estado} />
-        </button>
+        {/* El círculo abre el MENÚ de los 5 estados (el ciclo por toques murió).
+            A 380 el círculo es el control (frame móvil del canon 06); su área
+            táctil sube a 44px con padding + margen negativo dentro del selector. */}
+        <SelectorEstado
+          estado={item.estado}
+          ocupado={ocupado}
+          onElegir={elegirEstado}
+          etiquetaActual={item.no_aplica_motivo}
+        />
         <span className="min-w-0 flex-1">
           {/* Fase 4.3.2: el texto abre "Explorar actividad". Es un botón (no un
-              div con onClick) para que el teclado y los lectores lo alcancen. */}
+              div con onClick) para que el teclado y los lectores lo alcancen.
+              Hecha = tachada (trofeo); retirada = atenuada SIN tachar. */}
           <button
             onClick={onAbrirDetalle}
-            className={"block w-full text-left text-[14.5px] hover:underline " + (hecho ? "text-dim line-through" : "text-ink")}
+            className={
+              "block w-full text-left text-[14.5px] hover:underline " +
+              (hecho ? "text-dim line-through" : retirada ? "text-dim" : "text-ink")
+            }
             title="Ver el detalle de esta actividad"
           >
             {item.texto}
           </button>
-          {!hecho && item.estado !== "pendiente" && (
+          {retirada && (
+            <span className="mt-0.5 block text-[12.5px] text-dim">
+              no aplica{item.no_aplica_motivo ? ` · ${item.no_aplica_motivo}` : ""}
+            </span>
+          )}
+          {!hecho && !retirada && item.estado !== "pendiente" && (
             <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
           )}
-          {!hecho && item.destacado && (
+          {!hecho && !retirada && item.destacado && (
             <span className="mt-0.5 block text-[12.5px] text-done">esta semana</span>
           )}
-          {!hecho && item.fecha_base && (
+          {!hecho && !retirada && item.fecha_base && (
             <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
@@ -294,19 +268,9 @@ function FilaItem({
             </button>
           )}
         </span>
-        {/* Fase 4.3 §4 — el botón a 380, con sus dos reglas resueltas:
-            (a) SOLO en el ítem EN CURSO, como pediste. En los demás, el círculo
-                basta y el texto recupera el ancho entero (antes caía a una
-                columna de ~140px partida en cuatro líneas).
-            (b) DEBAJO del texto, no al lado (basis-full + el flex-wrap del
-                padre). Al lado dejaba ESE ítem en NUEVE líneas: peor que la
-                deuda que veníamos a pagar.
-            El frame móvil del canon no dibuja botón en ninguno, y aun así se
-            conserva aquí: sin él, marcar hecho a 380 pasa de UN toque a TRES
-            (el círculo cicla pendiente→empezado→a medias→hecho). Cambiar la
-            acción de la semana por tres toques no era el trato.
-            Escritorio: sin cambios, el botón sigue al lado en cada pendiente. */}
-        {!hecho && (
+        {/* "Marcar hecho" permanece como ATAJO (el menú es la vía completa).
+            Solo en el ítem destacado a 380; en escritorio, en cada pendiente. */}
+        {!hecho && !retirada && (
           <button
             onClick={() => marcarHecho()}
             disabled={ocupado}
@@ -1017,6 +981,7 @@ export function ManosALaObra({
         id: item.id,
         estado: data.item?.estado ?? cambio.estado,
         completed_at: data.item?.completed_at,
+        no_aplica_motivo: data.item?.no_aplica_motivo ?? null,
         nota: data.item?.nota ?? cambio.nota,
         fecha_base: data.item?.fecha_base ?? cambio.fecha_base,
         fecha_base_original: data.item?.fecha_base_original,
@@ -1137,6 +1102,9 @@ export function ManosALaObra({
               </div>
               <span className="shrink-0 text-sm font-bold text-done">
                 {cCore.hechos} de {cCore.total}
+                {cCore.retiradas > 0 && (
+                  <span className="ml-2 font-normal text-dim">· {cCore.retiradas} retirada{cCore.retiradas === 1 ? "" : "s"}</span>
+                )}
               </span>
             </div>
           )}

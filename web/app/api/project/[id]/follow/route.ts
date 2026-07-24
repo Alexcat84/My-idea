@@ -38,7 +38,6 @@ import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
-import type { ChecklistEstado } from "@/lib/dbContract";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
@@ -184,13 +183,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // describiendo dominios distintos. En el vuelo no se manifestó por suerte del
   // orden. Fase 4.2: el ancla que quedó aquí ya es código — el dominio entra por
   // el body y manda sobre los ítems, el bloque y la puerta.
-  const { data: filas, error: errorItems } = await supabase
-    .from("checklist_items")
-    .select("plan_id, dominio, etapa, texto, destacado, estado, nota, created_at")
-    .eq("project_id", projectId)
-    .order("created_at", { ascending: false })
-    .order("etapa", { ascending: true })
-    .order("orden", { ascending: true });
+  // no_aplica_motivo llega con la 030: se reintenta sin ella si aún no está.
+  const COLS_FOLLOW = "plan_id, dominio, etapa, texto, destacado, estado, nota, created_at";
+  const leerFollow = (cols: string) =>
+    supabase
+      .from("checklist_items")
+      .select(cols)
+      .eq("project_id", projectId)
+      .order("created_at", { ascending: false })
+      .order("etapa", { ascending: true })
+      .order("orden", { ascending: true });
+  let { data: filas, error: errorItems } = await leerFollow(`${COLS_FOLLOW}, no_aplica_motivo`);
+  if (errorItems) ({ data: filas, error: errorItems } = await leerFollow(COLS_FOLLOW));
   if (errorItems) {
     return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
   }

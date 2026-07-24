@@ -85,6 +85,9 @@ lo pendiente se nombra como testigo, jamás como deuda.
 - **La etiqueta enamora, el título respalda**: en navegación se muestra la
   etiqueta humana; el título del libro vive en el detalle, con su fuente.
 - **El azul piensa, el verde ejecuta.** (Regla de color del fundador.)
+- **Vocabulario de los estados de tarea**: sin empezar · apenas empezada · **en
+  proceso** (nunca "a medias") · hecha · **no aplica** (la tarea retirada). El
+  usuario ELIGE el estado en un menú; el sistema no lo adivina.
 
 ## 4. FRONTERAS DE ALCANCE (materia prima directa para TÉRMINOS)
 
@@ -118,6 +121,11 @@ además argumento de venta:
 - **Nada se pierde.** Todo el avance persiste del lado del servidor.
 - **La historia no se reescribe.** Si el usuario replanifica una fecha, la
   original se preserva; el informe dice "moviste la fecha de N acciones".
+- **El usuario decide qué corre y qué no.** Cualquier tarea se puede retirar
+  ("no aplica") con un motivo opcional; retirar no es fallar. El avance se mide
+  sobre las **activas** ("X de N activas"), y una tarea retirada **jamás cuenta
+  como tardía ni como pendiente**. Reversible: reactivarla la devuelve al plan,
+  y su motivo queda en la bitácora.
 - **Registrar es gratis; pedir conocimiento nuevo cuesta.** Marcar avance,
   notas y progreso: cero créditos, siempre.
 - **Los potenciadores son potencia, no peaje.** Nunca condicionan el avance
@@ -206,6 +214,22 @@ hispana en varios países:
 Decisiones del fundador que mandan sobre el copy y sobre lo que el producto
 muestra. Se registran con su porqué: quien venga después no las revierte por
 desconocer la razón.
+
+- **Gestor de estados por tarea (jul 2026).** El usuario **elige** el estado
+  de cada tarea en un menú de 5 (sin empezar, apenas empezada, en proceso,
+  hecha, no aplica); el círculo ya **no cicla** por toques. Entra el estado
+  **"no aplica"**: la tarea que el usuario retira porque no corre para su idea,
+  con un **motivo opcional** para su memoria. Las retiradas salen del
+  denominador del avance ("X de N activas") y **nunca** cuentan como tardías ni
+  como pendientes; el plan de seguimiento no las repropone.
+  **Por qué:** el ciclo por toques hacía adivinar, no elegir, y atrapaba al
+  usuario (bug real de "a medias" sin salida). Y no toda tarea del plan aplica
+  a toda idea: obligar a "pendiente eterno" lo que el usuario ya descartó es
+  medir su avance contra una meta falsa. Retirar con criterio **es** progreso.
+  **Qué NO cambia:** nada se borra. Retirar y reactivar dejan rastro en la
+  bitácora del proyecto; el motivo de una retirada se conserva aunque después
+  se reactive. La historia no se reescribe (misma ley que la replanificación).
+  Vocabulario de cara en §3; el compromiso con el usuario, en §5.
 
 - **Confidencialidad de la mecánica interna (jul 2026).** El plan **deja de
   mostrar al usuario** la procedencia en conteos: fuera el pie "este plan se

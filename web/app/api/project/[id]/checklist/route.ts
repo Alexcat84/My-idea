@@ -17,8 +17,8 @@
  *        se reescribe.
  */
 import { NextResponse } from "next/server";
-import { CHECKLIST_ESTADO, type ChecklistEstado, type FechaBaseOrigen } from "@/lib/dbContract";
-import { obtenerProyecto } from "@/lib/db";
+import { CHECKLIST_ESTADO, esActivo, type ChecklistEstado, type FechaBaseOrigen } from "@/lib/dbContract";
+import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
@@ -34,6 +34,7 @@ interface ItemChecklist {
   estado: ChecklistEstado;
   nota: string | null;
   completed_at: string | null;
+  no_aplica_motivo: string | null;
   fecha_base: string | null;
   fecha_base_origen: FechaBaseOrigen | null;
   fecha_base_original: string | null;
@@ -42,7 +43,7 @@ interface ItemChecklist {
 }
 
 const COLUMNAS =
-  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, fecha_base, fecha_base_origen, fecha_base_original, created_at, updated_at";
+  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, created_at, updated_at";
 
 /** Un timestamp ISO válido y no futuro (tolera 1 min de desfase de reloj). */
 function fechaIsoValida(valor: unknown): string | null {
@@ -70,17 +71,28 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   // Orden cronológico de planes (created_at) para que el grupo VIGENTE de
   // cada dominio sea el último (Fase 3.6: la pantalla Manos a la Obra lo
   // necesita; plan_id es uuid y su orden era arbitrario).
-  const { data, error } = await supabase
-    .from("checklist_items")
-    .select(COLUMNAS)
-    .eq("project_id", projectId)
-    .order("created_at", { ascending: true })
-    .order("etapa", { ascending: true })
-    .order("orden", { ascending: true });
+  //
+  // no_aplica_motivo llega con la migración 030. Si el código se despliega un
+  // instante antes de aplicarla, el select entero fallaría y la LECTURA del
+  // checklist se caería para todos: por eso se reintenta sin esa columna (el
+  // motivo se lee null) en vez de romper. Patrón de project_unlocks (pre-026).
+  const leer = (columnas: string) =>
+    supabase
+      .from("checklist_items")
+      .select(columnas)
+      .eq("project_id", projectId)
+      .order("created_at", { ascending: true })
+      .order("etapa", { ascending: true })
+      .order("orden", { ascending: true });
+  let { data, error } = await leer(COLUMNAS);
+  if (error) ({ data, error } = await leer(COLUMNAS.replace(", no_aplica_motivo", "")));
   if (error) {
     return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
   }
-  const items = (data ?? []) as ItemChecklist[];
+  const items = ((data ?? []) as Array<Partial<ItemChecklist>>).map((i) => ({
+    ...i,
+    no_aplica_motivo: i.no_aplica_motivo ?? null,
+  })) as ItemChecklist[];
 
   // Agrupado plan -> etapas (el orden de inserción ya viene garantizado).
   const planes: Array<{ plan_id: string; dominio: string; etapas: Array<{ etapa: number; items: ItemChecklist[] }> }> = [];
@@ -98,11 +110,19 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     etapa.items.push(item);
   }
 
-  const resumen: Record<string, { total: number; hechos: number }> = {};
+  // Cuentas honestas (gestor de estados): 'total' es el denominador de ACTIVAS
+  // (todo menos las retiradas 'no_aplica'); 'retiradas' se cuenta aparte. El
+  // avance es "hechos de total activas", nunca sobre tareas que el usuario
+  // retiró a propósito.
+  const resumen: Record<string, { total: number; hechos: number; retiradas: number }> = {};
   for (const item of items) {
-    const r = (resumen[item.dominio] ??= { total: 0, hechos: 0 });
-    r.total += 1;
-    if (item.estado === "hecho") r.hechos += 1;
+    const r = (resumen[item.dominio] ??= { total: 0, hechos: 0, retiradas: 0 });
+    if (esActivo(item.estado)) {
+      r.total += 1;
+      if (item.estado === "hecho") r.hechos += 1;
+    } else {
+      r.retiradas += 1;
+    }
   }
 
   return NextResponse.json({ planes, resumen });
@@ -113,6 +133,7 @@ interface CambiosItem {
   estado?: ChecklistEstado;
   nota?: string | null;
   completed_at?: string | null;
+  no_aplica_motivo?: string | null;
   fecha_base?: string | null;
   fecha_base_origen?: FechaBaseOrigen;
   fecha_base_original?: string | null;
@@ -126,6 +147,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     estado?: unknown;
     nota?: unknown;
     completed_at?: unknown;
+    no_aplica_motivo?: unknown;
     fecha_base?: unknown;
   };
   try {
@@ -175,6 +197,22 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     cambios.completed_at = null;
   }
 
+  // Motivo de "no aplica" (gestor de estados): opcional, para la memoria del
+  // usuario. Regla, en orden:
+  //  - al PASAR a 'no_aplica' sin motivo explícito, se conserva null.
+  //  - al SALIR de 'no_aplica' (cualquier otro estado), se limpia el motivo:
+  //    el registro del porqué queda en la bitácora, no en la fila.
+  //  - se puede editar el motivo de una tarea que ya está en 'no_aplica'.
+  if (body.no_aplica_motivo !== undefined) {
+    if (body.no_aplica_motivo !== null && typeof body.no_aplica_motivo !== "string") {
+      return NextResponse.json({ error: "no_aplica_motivo debe ser texto o null" }, { status: 400 });
+    }
+    cambios.no_aplica_motivo =
+      body.no_aplica_motivo === null ? null : (body.no_aplica_motivo as string).slice(0, 500).trim() || null;
+  } else if (cambios.estado !== undefined && cambios.estado !== "no_aplica") {
+    cambios.no_aplica_motivo = null;
+  }
+
   // Fase 3.8 §4 — fecha_base (replanificación). Se resuelve más abajo con el
   // estado previo del ítem (para preservar la primera fecha). Aquí solo se
   // valida la forma.
@@ -193,10 +231,11 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     cambios.estado === undefined &&
     cambios.nota === undefined &&
     cambios.completed_at === undefined &&
+    cambios.no_aplica_motivo === undefined &&
     nuevaFechaBase === undefined
   ) {
     return NextResponse.json(
-      { error: "nada que actualizar: manda estado, nota, completed_at y/o fecha_base" },
+      { error: "nada que actualizar: manda estado, nota, completed_at, no_aplica_motivo y/o fecha_base" },
       { status: 400 }
     );
   }
@@ -213,27 +252,36 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
   }
 
-  // Replanificación: leer el estado previo del ítem para preservar la
-  // primera fecha_base y calcular el nuevo origen. El ítem que YA tiene
-  // fecha_base pasó por una confirmación de baseline; moverla es replanificar.
-  if (nuevaFechaBase !== undefined) {
+  // Se lee el estado previo cuando lo necesita la replanificación (preservar
+  // la primera fecha_base) o el cruce de 'no_aplica' (registrar en bitácora
+  // estado_anterior). Una sola lectura para las dos cosas.
+  type PrevItem = {
+    estado: ChecklistEstado;
+    fecha_base: string | null;
+    fecha_base_origen: FechaBaseOrigen | null;
+    fecha_base_original: string | null;
+    no_aplica_motivo: string | null;
+  };
+  let prev: PrevItem | null = null;
+  if (nuevaFechaBase !== undefined || cambios.estado !== undefined) {
     const { data: previo } = await supabase
       .from("checklist_items")
-      .select("fecha_base, fecha_base_origen, fecha_base_original")
+      .select("estado, fecha_base, fecha_base_origen, fecha_base_original, no_aplica_motivo")
       .eq("id", itemId)
       .eq("project_id", projectId)
       .single();
-    const prev = (previo ?? null) as
-      | { fecha_base: string | null; fecha_base_origen: FechaBaseOrigen | null; fecha_base_original: string | null }
-      | null;
+    prev = (previo ?? null) as PrevItem | null;
+  }
+
+  // Replanificación: el ítem que YA tenía fecha_base pasó por una confirmación
+  // de baseline; moverla es replanificar y la primera fecha no se reescribe.
+  if (nuevaFechaBase !== undefined) {
     cambios.fecha_base = nuevaFechaBase;
     if (nuevaFechaBase !== null && prev?.fecha_base) {
-      // Tenía una fecha previa = replanificación: no reescribir la historia.
       if (!prev.fecha_base_original) cambios.fecha_base_original = prev.fecha_base;
       cambios.fecha_base_origen =
         prev.fecha_base_origen === "sugerida" || prev.fecha_base_origen === "ajustada" ? "ajustada" : "manual";
     } else if (nuevaFechaBase !== null) {
-      // Primera vez que se le pone fecha fuera del ritual: entrada manual.
       cambios.fecha_base_origen = "manual";
     }
   }
@@ -243,10 +291,34 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     .update(cambios)
     .eq("id", itemId)
     .eq("project_id", projectId)
-    .select("id, estado, nota, completed_at, fecha_base, fecha_base_origen, fecha_base_original, updated_at")
+    .select(
+      "id, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, updated_at"
+    )
     .single();
   if (error || !data) {
     return NextResponse.json({ error: "ítem no encontrado" }, { status: 404 });
   }
+
+  // Bitácora del gestor de estados: cada cruce de la frontera 'no_aplica' deja
+  // rastro reversible. Retirar registra {item, estado_anterior, motivo};
+  // revertir registra el motivo nuevo JUNTO al anterior (nada se reescribe: la
+  // fila pierde el motivo, la historia lo conserva). No bloquea la respuesta.
+  if (cambios.estado !== undefined && prev) {
+    const nuevo = data.estado as ChecklistEstado;
+    if (nuevo === "no_aplica" && prev.estado !== "no_aplica") {
+      await registrarBitacora(supabase, projectId, "item_no_aplica", {
+        item: itemId,
+        estado_anterior: prev.estado,
+        motivo: (cambios.no_aplica_motivo ?? null) as string | null,
+      });
+    } else if (prev.estado === "no_aplica" && nuevo !== "no_aplica") {
+      await registrarBitacora(supabase, projectId, "item_reactivada", {
+        item: itemId,
+        estado_nuevo: nuevo,
+        motivo_anterior: prev.no_aplica_motivo ?? null,
+      });
+    }
+  }
+
   return NextResponse.json({ item: data });
 }

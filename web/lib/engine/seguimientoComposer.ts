@@ -13,6 +13,8 @@ export interface ItemParaComponer {
   destacado: boolean;
   estado: ChecklistEstado;
   nota?: string | null;
+  /** gestor de estados: el porqué de una tarea retirada (estado no_aplica) */
+  noAplicaMotivo?: string | null;
 }
 
 /** Una fila cruda de checklist_items, como la devuelve la consulta del follow. */
@@ -26,6 +28,7 @@ export interface FilaChecklist {
   destacado: boolean;
   estado: ChecklistEstado;
   nota?: string | null;
+  no_aplica_motivo?: string | null;
   created_at: string;
 }
 
@@ -58,6 +61,7 @@ export function itemsDelUltimoPlanDe(filas: FilaChecklist[], dominio: string): I
       destacado: f.destacado,
       estado: f.estado,
       nota: f.nota ?? null,
+      noAplicaMotivo: f.no_aplica_motivo ?? null,
     }));
 }
 
@@ -72,9 +76,10 @@ export interface EntradaSeguimiento {
 
 const ETIQUETA: Record<ChecklistEstado, string> = {
   hecho: "HECHO",
-  a_medias: "A MEDIAS",
+  en_proceso: "EN PROCESO",
   empezado: "APENAS EMPEZADO",
   pendiente: "SIN EMPEZAR",
+  no_aplica: "RETIRADA (no aplica)",
 };
 
 function lista(items: ItemParaComponer[], estado: ChecklistEstado): string[] {
@@ -85,17 +90,33 @@ function lista(items: ItemParaComponer[], estado: ChecklistEstado): string[] {
 
 /** Mensaje compacto en el orden que mejor lee el intérprete: logros primero,
  * bloqueos después, contexto extra, y el enfoque declarado al final (la
- * prioridad_declarada del motor se alimenta de esa última línea). */
+ * prioridad_declarada del motor se alimenta de esa última línea).
+ *
+ * Gestor de estados: las RETIRADAS (no_aplica) NO se componen como pendientes.
+ * Van en su propia sección, marcadas para que el intérprete no las vuelva a
+ * proponer: retirar una tarea es una decisión del usuario, no un olvido. */
 export function componerMensajeSeguimiento(e: EntradaSeguimiento): string {
   const partes: string[] = ["Desde el último plan, este es mi avance real:"];
-  const orden: ChecklistEstado[] = ["hecho", "a_medias", "empezado", "pendiente"];
+  const orden: ChecklistEstado[] = ["hecho", "en_proceso", "empezado", "pendiente"];
   for (const estado of orden) {
     const filas = lista(e.items, estado);
     if (filas.length) {
       partes.push(`${ETIQUETA[estado]} (${filas.length}):`, ...filas);
     }
   }
-  if (e.items.length === 0) {
+  const retiradas = e.items
+    .filter((i) => i.estado === "no_aplica")
+    .map((i) => `- ${i.texto}${i.noAplicaMotivo ? ` (porque: ${i.noAplicaMotivo.trim()})` : ""}`);
+  if (retiradas.length) {
+    partes.push(
+      `${ETIQUETA.no_aplica} (${retiradas.length}) — decidí que no corren para esta idea; NO las vuelvas a proponer:`,
+      ...retiradas
+    );
+  }
+  const activas = e.items.filter((i) => i.estado !== "no_aplica");
+  if (activas.length === 0 && e.items.length > 0) {
+    partes.push("(retiré todas las tareas del plan; propón desde cero según lo que te cuento)");
+  } else if (e.items.length === 0) {
     partes.push("(aún no actualicé el checklist; cuéntame desde donde estaba)");
   }
   const detalles = e.detalles?.trim();

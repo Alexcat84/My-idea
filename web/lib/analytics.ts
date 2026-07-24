@@ -46,6 +46,8 @@ export interface ItemAnalytics {
   fecha_base_original: string | null;
   /** texto del ítem, para los hitos de acción de la Celebración */
   texto?: string;
+  /** gestor de estados: el porqué de una tarea retirada (estado 'no_aplica') */
+  no_aplica_motivo?: string | null;
 }
 
 export interface MundoAnalytics {
@@ -99,11 +101,24 @@ export interface Hito {
   cumplimiento?: CumplimientoItem;
 }
 
+/** Gestor de estados: una tarea retirada ('no_aplica'), con su porqué en la
+ * voz del usuario. Fuera del denominador del avance; el acta y el expediente
+ * la nombran aparte. */
+export interface RetiradaAnalytics {
+  texto: string;
+  etapa: number;
+  motivo: string | null;
+}
+
 export interface CapaUniversal {
   duracionTotalDias: number;
   accionesHechas: number;
-  /** X/N del checklist VIGENTE (canon 09: "19 de 24 acciones") */
+  /** X/N del checklist VIGENTE, sobre ACTIVAS (canon 09: "19 de 24 acciones").
+   * 'total' excluye las retiradas: el avance nunca se mide sobre lo que el
+   * usuario decidió que no aplica. */
   accionesVigente: { hechas: number; total: number };
+  /** las tareas retiradas del plan vigente (no_aplica), con su motivo */
+  retiradas: RetiradaAnalytics[];
   ritmoAccionesPorSemana: number;
   rachaMasLargaDias: number;
   ciclosDePlan: number;
@@ -314,15 +329,21 @@ export function capaUniversalDe(
   // "X de N acciones" (canon 09): el checklist del plan VIGENTE del tramo.
   const planVigente = [...planes].sort((a, b) => a.created_at.localeCompare(b.created_at)).at(-1);
   const itemsVigente = planVigente ? items.filter((i) => i.plan_id === planVigente.id) : [];
+  // Cuentas honestas (gestor de estados): el denominador son las ACTIVAS; las
+  // retiradas ('no_aplica') salen del avance y se listan aparte.
+  const activasVigente = itemsVigente.filter((i) => i.estado !== "no_aplica");
   const ultimoAvance = completadas.length ? completadas.reduce((a, b) => (a > b ? a : b)) : null;
 
   return {
     duracionTotalDias,
     accionesHechas,
     accionesVigente: {
-      hechas: itemsVigente.filter((i) => i.completed_at).length,
-      total: itemsVigente.length,
+      hechas: activasVigente.filter((i) => i.completed_at).length,
+      total: activasVigente.length,
     },
+    retiradas: itemsVigente
+      .filter((i) => i.estado === "no_aplica")
+      .map((i) => ({ texto: i.texto ?? "", etapa: i.etapa, motivo: i.no_aplica_motivo ?? null })),
     ritmoAccionesPorSemana: Math.round(ritmo * 10) / 10,
     rachaMasLargaDias: rachaMasLarga(completadas),
     ciclosDePlan: planes.length,
@@ -571,10 +592,19 @@ export function informeMarkdown(
   }
   l.push("## Lo que construiste");
   l.push(`- Duración total: **${u.duracionTotalDias} días**`);
-  l.push(`- Acciones completadas: **${u.accionesHechas}**`);
+  l.push(`- Acciones completadas: **${u.accionesHechas}** de **${u.accionesVigente.total}** activas`);
   l.push(`- Ritmo: **${u.ritmoAccionesPorSemana} acciones por semana**`);
   l.push(`- Racha más larga: **${u.rachaMasLargaDias} días**`);
   l.push(`- Ciclos de plan: **${u.ciclosDePlan}** · Mundos: **${u.mundos}**`);
+  // Gestor de estados: las retiradas se nombran aparte, con su porqué en la voz
+  // del usuario. No son fracaso ni pendiente: son una decisión que cuenta.
+  if (u.retiradas.length) {
+    l.push("");
+    l.push(`### Retiradas (no aplican): ${u.retiradas.length}`);
+    for (const r of u.retiradas) {
+      l.push(`- ${r.texto}${r.motivo ? ` — ${r.motivo.replace(/\s+/g, " ").trim()}` : ""}`);
+    }
+  }
   if (u.duracionPorEtapa.length) {
     l.push("");
     l.push("### Duración real por etapa");
