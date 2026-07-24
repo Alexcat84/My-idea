@@ -65,7 +65,7 @@ export function DetalleActividad({
   const hecho = item.estado === "hecho";
   const [nota, setNota] = useState(item.nota ?? "");
   const [moviendoFecha, setMoviendoFecha] = useState(false);
-  const [preguntandoHecho, setPreguntandoHecho] = useState(false);
+  const [editandoFechaHecho, setEditandoFechaHecho] = useState(false);
   const hoyInput = fechaInputLocal(new Date());
   const chip = chipCumplimiento(item);
   const notaCambiada = (item.nota ?? "") !== nota.trim();
@@ -77,9 +77,12 @@ export function DetalleActividad({
     return () => window.removeEventListener("keydown", onKey);
   }, [onCerrar]);
 
+  // Marcar hecho COMPROMETE en el acto (con la fecha de hoy por defecto). El
+  // prompt anterior no comprometía si se cancelaba y dejaba el ítem atrapado
+  // en "a medias" (bug del fundador, jul 2026). La fecha se ajusta después.
   function marcarHecho(completedAt?: string | null) {
-    setPreguntandoHecho(false);
-    onCambio({ estado: "hecho", completed_at: completedAt });
+    setEditandoFechaHecho(false);
+    onCambio({ estado: "hecho", completed_at: completedAt ?? isoDesdeInputLocal(hoyInput) });
   }
 
   return (
@@ -140,7 +143,7 @@ export function DetalleActividad({
                     key={e}
                     onClick={() => {
                       if (activo) return;
-                      if (e === "hecho") setPreguntandoHecho(true);
+                      if (e === "hecho") marcarHecho();
                       else onCambio({ estado: e });
                     }}
                     disabled={ocupado}
@@ -158,32 +161,39 @@ export function DetalleActividad({
                 );
               })}
             </div>
-            {/* mini-prompt "¿cuándo lo hiciste?" al marcar hecho desde aquí */}
-            {preguntandoHecho && (
-              <div className="mt-3 flex flex-wrap items-center gap-2.5">
-                <span className="text-[12.5px] text-dim">¿Cuándo lo hiciste?</span>
-                <button
-                  onClick={() => marcarHecho()}
-                  disabled={ocupado}
-                  className="rounded-[9px] bg-done px-3.5 py-1.5 text-[12.5px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
-                >
-                  Hoy
-                </button>
-                <input
-                  type="date"
-                  max={hoyInput}
-                  onChange={(ev) => ev.target.value && marcarHecho(isoDesdeInputLocal(ev.target.value))}
-                  disabled={ocupado}
-                  aria-label="Elegir la fecha en que lo hiciste"
-                  className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
-                />
-                <button onClick={() => setPreguntandoHecho(false)} className="text-[12.5px] text-dim hover:text-ink">
-                  cancelar
-                </button>
+            {/* Fecha de realización de un ítem YA hecho: editable, sin trampa.
+                El estado ya está comprometido; esto solo ajusta el "cuándo". */}
+            {hecho && (
+              <div className="mt-3">
+                {!editandoFechaHecho ? (
+                  <p className="text-[12.5px] text-done">
+                    {item.completed_at ? `Hecho el ${fechaHumana(item.completed_at)}.` : "Hecho."}{" "}
+                    <button
+                      onClick={() => setEditandoFechaHecho(true)}
+                      disabled={ocupado}
+                      className="font-semibold hover:underline disabled:opacity-50"
+                    >
+                      cambiar fecha
+                    </button>
+                  </p>
+                ) : (
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <span className="text-[12.5px] text-dim">¿Cuándo lo hiciste?</span>
+                    <input
+                      type="date"
+                      max={hoyInput}
+                      defaultValue={item.completed_at ? fechaInputLocal(new Date(item.completed_at)) : hoyInput}
+                      onChange={(ev) => ev.target.value && marcarHecho(isoDesdeInputLocal(ev.target.value))}
+                      disabled={ocupado}
+                      aria-label="Cambiar la fecha en que lo hiciste"
+                      className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
+                    />
+                    <button onClick={() => setEditandoFechaHecho(false)} className="text-[12.5px] text-dim hover:text-ink">
+                      listo
+                    </button>
+                  </div>
+                )}
               </div>
-            )}
-            {hecho && item.completed_at && (
-              <p className="mt-2 text-[12.5px] text-done">Hecho el {fechaHumana(item.completed_at)}.</p>
             )}
           </div>
 
@@ -248,7 +258,7 @@ export function DetalleActividad({
         <footer className="flex items-center gap-3 border-t border-hairline px-5 py-4 sm:px-6">
           {!hecho ? (
             <button
-              onClick={() => setPreguntandoHecho(true)}
+              onClick={() => marcarHecho()}
               disabled={ocupado}
               className="flex-1 rounded-[10px] bg-done py-2.5 text-[13.5px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
             >
