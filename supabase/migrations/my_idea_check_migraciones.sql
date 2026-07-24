@@ -111,9 +111,11 @@ FROM (
   SELECT '015', 'checklist_items table + estado CHECK + RLS policy',
     EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='checklist_items')
     AND EXISTS (
+      -- 'hecho' vive en el CHECK antes y después de la 030 (que renombra
+      -- a_medias->en_proceso): sirve de invariante estable para "015 aplicada".
       SELECT 1 FROM pg_constraint
       WHERE conname = 'checklist_items_estado_check' AND connamespace = 'public'::regnamespace
-        AND pg_get_constraintdef(oid) LIKE '%a_medias%'
+        AND pg_get_constraintdef(oid) LIKE '%hecho%'
     )
     AND EXISTS (SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='checklist_items' AND policyname='checklist_items_own')
 
@@ -347,6 +349,21 @@ FROM (
     AND EXISTS (
       SELECT 1 FROM information_schema.tables
       WHERE table_schema='public' AND table_name='cortesia_email_log'
+    )
+
+  UNION ALL
+  -- 030 · Gestor de estados: a_medias->en_proceso + no_aplica + motivo
+  SELECT '030', 'checklist_items.estado (en_proceso + no_aplica) + no_aplica_motivo',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'checklist_items_estado_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%no_aplica%'
+        AND pg_get_constraintdef(oid) LIKE '%en_proceso%'
+        AND pg_get_constraintdef(oid) NOT LIKE '%a_medias%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='no_aplica_motivo'
     )
 
 ) checks

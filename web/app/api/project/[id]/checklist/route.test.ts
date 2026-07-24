@@ -43,6 +43,7 @@ function sembrarItem(extra: Record<string, unknown> = {}) {
     estado: "pendiente",
     nota: null,
     completed_at: null,
+    no_aplica_motivo: null,
     fecha_base: null,
     fecha_base_origen: null,
     fecha_base_original: null,
@@ -95,6 +96,42 @@ describe("PATCH /api/project/[id]/checklist — sentido del tiempo (Fase 3.8)", 
     const { item } = await res.json();
     expect(item.estado).toBe("pendiente");
     expect(item.completed_at).toBeNull();
+  });
+
+  // Gestor de estados (migration 030): retirar una tarea guarda el motivo y no
+  // la deja como hecha; reactivarla limpia el motivo (la historia va a bitácora).
+  it("retirar (no_aplica) guarda el motivo y no queda completada", async () => {
+    sembrarItem();
+    const res = await PATCH(
+      req({ item_id: "it1", estado: "no_aplica", no_aplica_motivo: "  mi negocio es online  " }),
+      PARAMS
+    );
+    expect(res.status).toBe(200);
+    const { item } = await res.json();
+    expect(item.estado).toBe("no_aplica");
+    expect(item.no_aplica_motivo).toBe("mi negocio es online");
+    expect(item.completed_at).toBeNull();
+  });
+
+  it("retirar sin motivo → no_aplica con motivo null", async () => {
+    sembrarItem();
+    const { item } = await (await PATCH(req({ item_id: "it1", estado: "no_aplica" }), PARAMS)).json();
+    expect(item.estado).toBe("no_aplica");
+    expect(item.no_aplica_motivo).toBeNull();
+  });
+
+  it("reactivar una retirada (a pendiente) limpia el motivo", async () => {
+    sembrarItem({ estado: "no_aplica", no_aplica_motivo: "no aplicaba" });
+    const { item } = await (await PATCH(req({ item_id: "it1", estado: "empezado" }), PARAMS)).json();
+    expect(item.estado).toBe("empezado");
+    expect(item.no_aplica_motivo).toBeNull();
+  });
+
+  it("editar solo el motivo de una tarea ya retirada, sin tocar el estado", async () => {
+    sembrarItem({ estado: "no_aplica", no_aplica_motivo: "viejo" });
+    const { item } = await (await PATCH(req({ item_id: "it1", no_aplica_motivo: "nuevo motivo" }), PARAMS)).json();
+    expect(item.estado).toBe("no_aplica");
+    expect(item.no_aplica_motivo).toBe("nuevo motivo");
   });
 
   it("acepta completed_at pasado explícito", async () => {

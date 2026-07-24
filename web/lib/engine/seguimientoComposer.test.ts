@@ -8,27 +8,42 @@ import { candidatosSeguimiento } from "./puertaAvanzada";
 import { componerMensajeSeguimiento, itemsDelUltimoPlanDe } from "./seguimientoComposer";
 
 describe("componerMensajeSeguimiento", () => {
-  it("agrupa por estado en orden hecho→a_medias→empezado→pendiente, con notas", () => {
+  it("agrupa por estado en orden hecho→en_proceso→empezado→pendiente, con notas", () => {
     const msg = componerMensajeSeguimiento({
       items: [
         { etapa: 1, texto: "Habla con 3 clientes", destacado: false, estado: "pendiente" },
         { etapa: 1, texto: "Escribe la lista", destacado: false, estado: "hecho", nota: " me tomó 2 días " },
-        { etapa: 2, texto: "Prepara la demo", destacado: true, estado: "a_medias" },
+        { etapa: 2, texto: "Prepara la demo", destacado: true, estado: "en_proceso" },
       ],
       detalles: "Conseguí un local prestado",
       enfoque: "precios",
     });
     const lineas = msg.split("\n");
-    // Cálculo manual: encabezado + HECHO(1) + item + A MEDIAS(1) + item +
+    // Cálculo manual: encabezado + HECHO(1) + item + EN PROCESO(1) + item +
     // SIN EMPEZAR(1) + item + Además + enfoque = 9 líneas.
     expect(lineas).toHaveLength(9);
     expect(lineas[0]).toBe("Desde el último plan, este es mi avance real:");
     expect(lineas[1]).toBe("HECHO (1):");
     expect(lineas[2]).toBe("- Escribe la lista (nota: me tomó 2 días)");
-    expect(lineas[3]).toBe("A MEDIAS (1):");
+    expect(lineas[3]).toBe("EN PROCESO (1):");
     expect(lineas[5]).toBe("SIN EMPEZAR (1):");
     expect(lineas[7]).toBe("Además: Conseguí un local prestado");
     expect(lineas[8]).toBe("Lo que más me interesa profundizar ahora: precios");
+  });
+
+  it("las retiradas (no_aplica) NO se componen como pendientes: van aparte con su motivo", () => {
+    const msg = componerMensajeSeguimiento({
+      items: [
+        { etapa: 1, texto: "Escribe la lista", destacado: false, estado: "hecho" },
+        { etapa: 2, texto: "Contrata un local", destacado: false, estado: "no_aplica", noAplicaMotivo: "mi negocio es 100% online" },
+      ],
+    });
+    // La retirada NO aparece en ninguna sección de avance pendiente.
+    expect(msg).not.toMatch(/SIN EMPEZAR|EN PROCESO|APENAS EMPEZADO/);
+    // Sí aparece marcada como retirada, con su motivo y la instrucción de no reproponerla.
+    expect(msg).toContain("RETIRADA (no aplica) (1)");
+    expect(msg).toContain("NO las vuelvas a proponer");
+    expect(msg).toContain("- Contrata un local (porque: mi negocio es 100% online)");
   });
 
   it("sin items ni enfoque: aviso de checklist vacío + guía abierta", () => {
@@ -90,7 +105,7 @@ describe("itemsDelUltimoPlanDe (Fase 4.1 V4 + Fase 4.2)", () => {
   const filas = [
     { plan_id: "mundo1", dominio: "quality", etapa: 1, orden: 1, texto: "Audita tu calidad", destacado: false, estado: "pendiente" as const, created_at: "2026-03-10T17:08:00Z" },
     { plan_id: "mundo1", dominio: "quality", etapa: 1, orden: 2, texto: "Mide la variacion", destacado: false, estado: "pendiente" as const, created_at: "2026-03-10T17:08:00Z" },
-    { plan_id: "core2", dominio: "core", etapa: 2, orden: 1, texto: "Sal a vender", destacado: true, estado: "a_medias" as const, created_at: "2026-03-10T16:59:00Z" },
+    { plan_id: "core2", dominio: "core", etapa: 2, orden: 1, texto: "Sal a vender", destacado: true, estado: "en_proceso" as const, created_at: "2026-03-10T16:59:00Z" },
     { plan_id: "core2", dominio: "core", etapa: 1, orden: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho" as const, nota: "la tabla quedo lista", created_at: "2026-03-10T16:59:00Z" },
     { plan_id: "core1", dominio: "core", etapa: 1, orden: 1, texto: "Plan viejo, ciclo anterior", destacado: false, estado: "hecho" as const, created_at: "2026-03-01T10:00:00Z" },
   ];
@@ -108,7 +123,7 @@ describe("itemsDelUltimoPlanDe (Fase 4.1 V4 + Fase 4.2)", () => {
 
   it("conserva estado, nota, destacado y el orden etapa->orden", () => {
     const items = itemsDelUltimoPlanDe(filas, "core");
-    expect(items[0]).toEqual({ etapa: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho", nota: "la tabla quedo lista" });
+    expect(items[0]).toEqual({ etapa: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho", nota: "la tabla quedo lista", noAplicaMotivo: null });
     expect(items[1].destacado).toBe(true);
   });
 

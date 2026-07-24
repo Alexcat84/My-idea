@@ -27,10 +27,12 @@ export interface CicloExpediente {
 export interface AccionExpediente {
   etapa: number;
   texto: string;
-  /** 'pendiente' | 'hecho' | ... (dbContract CHECKLIST_ESTADO) */
+  /** dbContract CHECKLIST_ESTADO: pendiente|empezado|en_proceso|hecho|no_aplica */
   estado: string;
   completedAt: string | null;
   fechaBase: string | null;
+  /** gestor de estados: el porqué de una tarea retirada (estado 'no_aplica') */
+  noAplicaMotivo?: string | null;
 }
 
 export interface MundoExpediente {
@@ -159,14 +161,18 @@ export function cicloMarkdown(nombre: string, titulo: string, ciclo: CicloExpedi
 
 function seccionAcciones(acciones: AccionExpediente[]): string[] {
   const l: string[] = [];
-  const hechas = acciones.filter((a) => a.estado === "hecho");
-  l.push(`Completaste **${hechas.length} de ${acciones.length}** acciones.`);
+  // Cuentas honestas (gestor de estados): el avance se mide sobre las ACTIVAS;
+  // las retiradas (no_aplica) salen del denominador y van en su propia sección.
+  const activas = acciones.filter((a) => a.estado !== "no_aplica");
+  const retiradas = acciones.filter((a) => a.estado === "no_aplica");
+  const hechas = activas.filter((a) => a.estado === "hecho");
+  l.push(`Completaste **${hechas.length} de ${activas.length}** acciones activas.`);
   l.push("");
-  const etapas = [...new Set(acciones.map((a) => a.etapa))].sort((a, b) => a - b);
+  const etapas = [...new Set(activas.map((a) => a.etapa))].sort((a, b) => a - b);
   for (const etapa of etapas) {
     l.push(`### Etapa ${etapa}`);
     l.push("");
-    for (const a of acciones.filter((x) => x.etapa === etapa)) {
+    for (const a of activas.filter((x) => x.etapa === etapa)) {
       const marca = a.estado === "hecho" ? "x" : " ";
       const cuando = a.completedAt
         ? ` · hecho el ${fechaHumanaConAno(a.completedAt)}`
@@ -174,6 +180,17 @@ function seccionAcciones(acciones: AccionExpediente[]): string[] {
           ? ` · previsto para el ${fechaHumanaConAno(a.fechaBase)}`
           : "";
       l.push(`- [${marca}] ${a.texto.replace(/\s+/g, " ").trim()}${cuando}`);
+    }
+    l.push("");
+  }
+  if (retiradas.length) {
+    l.push(`### Retiradas (no aplican): ${retiradas.length}`);
+    l.push("");
+    l.push("Tareas que decidiste que no corren para esta idea. No son pendientes ni fracasos: son parte de tu criterio.");
+    l.push("");
+    for (const a of retiradas) {
+      const motivo = a.noAplicaMotivo ? ` — ${a.noAplicaMotivo.replace(/\s+/g, " ").trim()}` : "";
+      l.push(`- ${a.texto.replace(/\s+/g, " ").trim()}${motivo}`);
     }
     l.push("");
   }

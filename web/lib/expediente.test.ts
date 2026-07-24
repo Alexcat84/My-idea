@@ -139,12 +139,37 @@ describe("expedienteMarkdown", () => {
 
   it("el registro de acciones cuenta lo hecho y fecha cada una", () => {
     const md = expedienteMarkdown(datos());
-    expect(md).toContain("Completaste **1 de 3** acciones.");
+    expect(md).toContain("Completaste **1 de 3** acciones activas.");
     expect(md).toContain("- [x] Publica el video · hecho el");
     expect(md).toContain("- [ ] Habla con 5 desconocidos · previsto para el");
     expect(md).toContain("- [ ] Entrega a mano\n");
     expect(md).toContain("### Etapa 1");
     expect(md).toContain("### Etapa 2");
+  });
+
+  it("las retiradas (no_aplica) salen del denominador y van aparte con su motivo", () => {
+    const md = expedienteMarkdown(
+      datos({
+        acciones: [
+          { etapa: 1, texto: "Publica el video", estado: "hecho", completedAt: "2026-03-06T12:00:00Z", fechaBase: null },
+          { etapa: 1, texto: "Habla con 5 desconocidos", estado: "pendiente", completedAt: null, fechaBase: null },
+          {
+            etapa: 2,
+            texto: "Contrata un local",
+            estado: "no_aplica",
+            completedAt: null,
+            fechaBase: null,
+            noAplicaMotivo: "mi negocio es 100% online",
+          },
+        ],
+      })
+    );
+    // El denominador cuenta 2 activas, no 3: la retirada no infla la meta.
+    expect(md).toContain("Completaste **1 de 2** acciones activas.");
+    // La retirada no aparece como pendiente, sino en su propia sección con motivo.
+    expect(md).toContain("### Retiradas (no aplican): 1");
+    expect(md).toContain("- Contrata un local — mi negocio es 100% online");
+    expect(md).not.toContain("- [ ] Contrata un local");
   });
 
   it("una idea en marcha se declara en marcha; una cerrada, con su fecha", () => {

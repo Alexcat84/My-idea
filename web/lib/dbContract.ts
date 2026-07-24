@@ -47,8 +47,17 @@ export const PACK_CLICKS_PACK = [
 export type PackClave = (typeof PACK_CLICKS_PACK)[number];
 
 /** checklist_items.estado (Fase 3.3, migration 015): estados de un toque. */
-export const CHECKLIST_ESTADO = ["pendiente", "empezado", "a_medias", "hecho"] as const;
+// Gestor de estados (migration 030): 'a_medias' se renombró a 'en_proceso'
+// (mismo estado, vocabulario de la casa), y entró 'no_aplica' (la tarea no
+// corre para esta idea: fuera del denominador del avance, jamás tardía).
+export const CHECKLIST_ESTADO = ["pendiente", "empezado", "en_proceso", "hecho", "no_aplica"] as const;
 export type ChecklistEstado = (typeof CHECKLIST_ESTADO)[number];
+
+/** Los estados que SÍ cuentan para el avance ("X de N activas"): todo menos
+ * 'no_aplica', que el usuario retiró a propósito. Fuente única para el
+ * denominador honesto en toda superficie. */
+export const ESTADOS_ACTIVOS = CHECKLIST_ESTADO.filter((e) => e !== "no_aplica");
+export const esActivo = (estado: ChecklistEstado) => estado !== "no_aplica";
 
 /** Dominios válidos de sessions/plans/checklist_items (Fase 3.5, migration
  * 016): core + packs. Sin fila en project_unlocks, un dominio de pack no
