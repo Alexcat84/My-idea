@@ -15,6 +15,7 @@
  */
 import { useEffect, useState } from "react";
 import { CampoConVoz } from "./CampoConVoz";
+import { ETIQUETA_ESTADO, IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
 import type { ChecklistEstado } from "@/lib/dbContract";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import type { CambioItem, ItemChecklistUI } from "./ManosALaObra";
@@ -40,14 +41,9 @@ function chipCumplimiento(item: ItemChecklistUI): { texto: string; clase: string
   return null;
 }
 
-const ETIQUETA_ESTADO: Record<ChecklistEstado, string> = {
-  pendiente: "sin empezar",
-  empezado: "apenas empezado",
-  a_medias: "a medias",
-  hecho: "hecho",
-};
-
-const ORDEN_ESTADOS: ChecklistEstado[] = ["pendiente", "empezado", "a_medias", "hecho"];
+// ETIQUETA_ESTADO, ORDEN_ESTADOS e IconoEstado viven en SelectorEstado (fuente
+// única). El detalle es la vista completa: elige cualquiera de los 5 estados
+// directo, y 'no aplica' abre su motivo editable.
 
 export function DetalleActividad({
   item,
@@ -66,9 +62,12 @@ export function DetalleActividad({
   const [nota, setNota] = useState(item.nota ?? "");
   const [moviendoFecha, setMoviendoFecha] = useState(false);
   const [editandoFechaHecho, setEditandoFechaHecho] = useState(false);
+  const [editandoMotivo, setEditandoMotivo] = useState(false);
+  const [motivo, setMotivo] = useState(item.no_aplica_motivo ?? "");
   const hoyInput = fechaInputLocal(new Date());
   const chip = chipCumplimiento(item);
   const notaCambiada = (item.nota ?? "") !== nota.trim();
+  const retirada = item.estado === "no_aplica";
 
   // Cerrar con Escape: un cajón modal debe responder al teclado.
   useEffect(() => {
@@ -132,35 +131,99 @@ export function DetalleActividad({
             </span>
           )}
 
-          {/* estado: los 4, de un toque (el detalle es la vista completa) */}
+          {/* estado: los 5, de un toque (el detalle es la vista completa).
+              'no aplica' abre su motivo editable justo abajo. */}
           <div className="mt-6">
             <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Estado</p>
             <div className="flex flex-wrap gap-2">
               {ORDEN_ESTADOS.map((e) => {
                 const activo = item.estado === e;
+                const esRetirar = e === "no_aplica";
                 return (
                   <button
                     key={e}
                     onClick={() => {
-                      if (activo) return;
+                      if (activo) {
+                        if (esRetirar) setEditandoMotivo((v) => !v);
+                        return;
+                      }
                       if (e === "hecho") marcarHecho();
-                      else onCambio({ estado: e });
+                      else if (esRetirar) {
+                        setMotivo(item.no_aplica_motivo ?? "");
+                        onCambio({ estado: "no_aplica", no_aplica_motivo: item.no_aplica_motivo ?? null });
+                      } else onCambio({ estado: e });
                     }}
                     disabled={ocupado}
                     className={
-                      "rounded-[9px] border px-3 py-1.5 text-[12.5px] font-semibold disabled:opacity-50 " +
+                      "inline-flex items-center gap-2 rounded-[9px] border px-3 py-1.5 text-[12.5px] font-semibold disabled:opacity-50 " +
                       (activo
                         ? e === "hecho"
                           ? "border-done/60 bg-done-soft text-done"
-                          : "border-accent/60 bg-accent/15 text-accent"
+                          : esRetirar
+                            ? "border-hairline bg-surface-2 text-dim"
+                            : "border-accent/60 bg-accent/15 text-accent"
                         : "border-hairline text-dim hover:text-ink")
                     }
                   >
-                    {ETIQUETA_ESTADO[e]}
+                    <IconoEstado estado={e} tamano={14} />
+                    <span className="capitalize">{ETIQUETA_ESTADO[e]}</span>
                   </button>
                 );
               })}
             </div>
+
+            {/* Motivo de "no aplica": opcional, editable aquí (texto o voz). */}
+            {retirada && (
+              <div className="mt-3 rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
+                {!editandoMotivo ? (
+                  <p className="text-[12.5px] text-dim">
+                    {item.no_aplica_motivo ? (
+                      <>
+                        No aplica porque: <span className="text-ink">{item.no_aplica_motivo}</span>{" "}
+                      </>
+                    ) : (
+                      <>Retirada, sin motivo anotado. </>
+                    )}
+                    <button
+                      onClick={() => {
+                        setMotivo(item.no_aplica_motivo ?? "");
+                        setEditandoMotivo(true);
+                      }}
+                      disabled={ocupado}
+                      className="font-semibold text-accent hover:underline disabled:opacity-50"
+                    >
+                      {item.no_aplica_motivo ? "cambiar" : "añadir motivo"}
+                    </button>
+                  </p>
+                ) : (
+                  <div>
+                    <p className="mb-2 text-[12.5px] text-dim">¿Por qué no aplica? Para tu propia memoria.</p>
+                    <CampoConVoz
+                      id={`motivo-${item.id}`}
+                      valor={motivo}
+                      onCambio={setMotivo}
+                      filas={2}
+                      placeholder="No corre para esta idea porque…"
+                    />
+                    <div className="mt-2 flex items-center gap-2.5">
+                      <button
+                        onClick={() => {
+                          onCambio({ no_aplica_motivo: motivo.trim() || null });
+                          setEditandoMotivo(false);
+                        }}
+                        disabled={ocupado}
+                        className="rounded-[9px] bg-accent px-3.5 py-1.5 text-[12.5px] font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                      >
+                        Guardar
+                      </button>
+                      <button onClick={() => setEditandoMotivo(false)} className="text-[12.5px] text-dim hover:text-ink">
+                        cancelar
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
             {/* Fecha de realización de un ítem YA hecho: editable, sin trampa.
                 El estado ya está comprometido; esto solo ajusta el "cuándo". */}
             {hecho && (
