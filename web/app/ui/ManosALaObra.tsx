@@ -222,22 +222,23 @@ function FilaItem({
   onAbrirDetalle: () => void;
 }) {
   const hecho = item.estado === "hecho";
-  // Fase 3.8 §2 — timeline real: al marcar hecho, "¿Cuándo lo hiciste?
-  // HOY / elegir fecha". HOY es el default de un toque; la fecha puede ser
-  // pasada, nunca futura; editable después desde el ítem ya hecho.
-  const [preguntando, setPreguntando] = useState(false);
+  // Fase 3.8 §2 — timeline real. Marcar hecho COMPROMETE el estado en el acto,
+  // con la fecha de hoy por defecto. Antes abría un prompt "¿cuándo lo
+  // hiciste?" que, si se cancelaba, dejaba el ítem en su estado anterior: de
+  // ahí la trampa de "a medias" sin salida (bug del fundador, jul 2026). La
+  // fecha se ajusta DESPUÉS con "cambiar"; nunca bloquea el marcado.
   const [editandoFecha, setEditandoFecha] = useState(false);
   const hoyInput = fechaInputLocal(new Date());
 
   function marcarHecho(completedAt?: string | null) {
-    setPreguntando(false);
     setEditandoFecha(false);
-    onCambio({ estado: "hecho", completed_at: completedAt });
+    // Sin fecha explícita, hoy: un toque marca hecho hoy, y listo.
+    onCambio({ estado: "hecho", completed_at: completedAt ?? isoDesdeInputLocal(hoyInput) });
   }
 
   function pasoDeCirculo() {
     const siguiente = SIGUIENTE_ESTADO[item.estado];
-    if (siguiente === "hecho") setPreguntando(true);
+    if (siguiente === "hecho") marcarHecho();
     else onCambio({ estado: siguiente }); // hecho→pendiente limpia completed_at en la ruta
   }
 
@@ -305,9 +306,9 @@ function FilaItem({
             (el círculo cicla pendiente→empezado→a medias→hecho). Cambiar la
             acción de la semana por tres toques no era el trato.
             Escritorio: sin cambios, el botón sigue al lado en cada pendiente. */}
-        {!hecho && !preguntando && (
+        {!hecho && (
           <button
-            onClick={() => setPreguntando(true)}
+            onClick={() => marcarHecho()}
             disabled={ocupado}
             className={
               (item.destacado ? "basis-full py-2.5 sm:basis-auto sm:py-1.5 " : "hidden sm:block sm:py-1.5 ") +
@@ -318,31 +319,6 @@ function FilaItem({
           </button>
         )}
       </div>
-
-      {/* mini-prompt "¿Cuándo lo hiciste?" al marcar hecho */}
-      {preguntando && (
-        <div className="mt-3 flex flex-wrap items-center gap-2.5 border-t border-hairline pt-3">
-          <span className="text-[12.5px] text-dim">¿Cuándo lo hiciste?</span>
-          <button
-            onClick={() => marcarHecho()}
-            disabled={ocupado}
-            className="rounded-[9px] bg-done px-3.5 py-1.5 text-[12.5px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
-          >
-            Hoy
-          </button>
-          <input
-            type="date"
-            max={hoyInput}
-            onChange={(e) => e.target.value && marcarHecho(isoDesdeInputLocal(e.target.value))}
-            disabled={ocupado}
-            aria-label="Elegir la fecha en que lo hiciste"
-            className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
-          />
-          <button onClick={() => setPreguntando(false)} className="text-[12.5px] text-dim hover:text-ink">
-            cancelar
-          </button>
-        </div>
-      )}
 
       {/* editar la fecha de un ítem ya hecho */}
       {hecho && editandoFecha && (

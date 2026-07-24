@@ -58,14 +58,16 @@ function Punto({ estado, titulo, tamano }: { estado: "hecha" | "actual" | "pensa
 }
 
 function Guion({ ancho, lleno, orden }: { ancho: number; lleno?: boolean; orden?: number }) {
-  // Canon corregido (entrega 2026-07-11): los conectores hasta la etapa
-  // actual llevan la barra azul de relleno (stepFill, escalonada) sobre la
-  // pista punteada; los futuros quedan solo punteados.
+  // Conector CONTINUO (decisión del fundador, jul 2026: las líneas cortadas se
+  // veían partidas; "que vayan directo a los puntos"). Los tramos hasta la
+  // etapa actual llevan la barra azul de relleno (stepFill, escalonada) sobre
+  // una pista tenue; los futuros quedan solo con la pista tenue. Sólido, no
+  // punteado.
   if (!lleno) {
     return (
       <span
         aria-hidden
-        className="shrink-0 border-t-2 border-dashed"
+        className="shrink-0 border-t-2"
         style={{ width: `${ancho}px`, borderColor: "rgba(255,255,255,0.18)" }}
       />
     );
@@ -73,7 +75,7 @@ function Guion({ ancho, lleno, orden }: { ancho: number; lleno?: boolean; orden?
   return (
     <span aria-hidden className="relative shrink-0" style={{ width: `${ancho}px`, height: "4px" }}>
       <span
-        className="absolute left-0 right-0 top-px border-t-2 border-dashed"
+        className="absolute left-0 right-0 top-px border-t-2"
         style={{ borderColor: "rgba(255,255,255,0.18)" }}
       />
       <span
