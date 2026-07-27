@@ -229,12 +229,14 @@ export function DetalleActividad({
             {hecho && (
               <div className="mt-3">
                 {!editandoFechaHecho ? (
-                  <p className="text-[12.5px] text-done">
-                    {item.completed_at ? `Hecho el ${fechaHumana(item.completed_at)}.` : "Hecho."}{" "}
+                  <p className="flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[12.5px]">
+                    <span className="text-done">
+                      {item.completed_at ? `Hecho el ${fechaHumana(item.completed_at)}` : "Hecho"}
+                    </span>
                     <button
                       onClick={() => setEditandoFechaHecho(true)}
                       disabled={ocupado}
-                      className="font-semibold hover:underline disabled:opacity-50"
+                      className="font-medium text-accent hover:underline disabled:opacity-50"
                     >
                       cambiar fecha
                     </button>

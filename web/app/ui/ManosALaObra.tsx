@@ -261,13 +261,18 @@ function FilaItem({
             <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
-            <button
-              onClick={() => setEditandoFecha(true)}
-              disabled={ocupado}
-              className="mt-0.5 block text-[12.5px] text-done hover:underline disabled:opacity-50"
-            >
-              hecho el {fechaHumanaCorta(item.completed_at)} · cambiar
-            </button>
+            // La fecha es un DATO (verde, informativo); "cambiar fecha" es una
+            // ACCIÓN aparte (azul, como llamado a modificar), no parte del texto.
+            <span className="mt-0.5 flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[12.5px]">
+              <span className="text-done">hecho el {fechaHumanaCorta(item.completed_at)}</span>
+              <button
+                onClick={() => setEditandoFecha(true)}
+                disabled={ocupado}
+                className="font-medium text-accent hover:underline disabled:opacity-50"
+              >
+                cambiar fecha
+              </button>
+            </span>
           )}
         </span>
         {/* El botón "Marcar hecho" se retiró (decisión del fundador): el menú
