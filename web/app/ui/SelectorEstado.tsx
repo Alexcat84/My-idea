@@ -28,9 +28,14 @@ export const ETIQUETA_ESTADO: Record<ChecklistEstado, string> = {
   no_aplica: "no aplica",
 };
 
-/** Orden del menú: de menos a más avance, y la retirada al final (es de otra
- * naturaleza: no es progreso, es una decisión de dejarla fuera). */
+/** Orden del DETALLE (la vista completa): progresión natural, de menos a más
+ * avance, con la retirada al final. */
 export const ORDEN_ESTADOS: ChecklistEstado[] = ["pendiente", "empezado", "en_proceso", "hecho", "no_aplica"];
+
+/** Orden del MENÚ del checklist: "Hecha" PRIMERA y resaltada. Marcar hecho es
+ * el ~80% de los toques; al abrir el menú, la acción común queda a un toque de
+ * distancia (mitigación del fundador al quitar el atajo "Marcar hecho"). */
+export const ORDEN_MENU: ChecklistEstado[] = ["hecho", "en_proceso", "empezado", "pendiente", "no_aplica"];
 
 /** El icono de un estado, distinguible por FORMA además de color. Verde
  * ejecuta (empezada/en proceso/hecha); la retirada va en gris con una barra
@@ -125,6 +130,9 @@ export function SelectorEstado({
 
   return (
     <span className="relative inline-flex">
+      {/* Disparador REFORZADO: el círculo + un chevron, para que se lea como un
+          control (no un punto pasivo). El chevron es la señal de "abre un
+          menú". Área táctil de 44px a 380 (margen negativo + padding). */}
       <button
         type="button"
         onClick={() => setAbierto((v) => !v)}
@@ -133,9 +141,18 @@ export function SelectorEstado({
         aria-expanded={abierto}
         title={`Estado: ${ETIQUETA_ESTADO[estado]} — tocar para elegir`}
         aria-label={`${ETIQUETA_ESTADO[estado]}. Tocar para elegir el estado`}
-        className="-m-[11px] flex h-11 w-11 shrink-0 items-center justify-center p-[11px] disabled:opacity-50 sm:m-0 sm:h-auto sm:w-auto sm:p-0"
+        className="-m-[11px] flex h-11 shrink-0 items-center gap-1 p-[11px] transition-opacity hover:opacity-75 disabled:opacity-50 sm:m-0 sm:h-auto sm:p-0"
       >
         <IconoEstado estado={estado} />
+        <svg
+          aria-hidden
+          width="9"
+          height="9"
+          viewBox="0 0 12 12"
+          className={"shrink-0 text-dim transition-transform " + (abierto ? "rotate-180" : "")}
+        >
+          <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
+        </svg>
       </button>
 
       {abierto && (
@@ -160,8 +177,11 @@ export function SelectorEstado({
                 <p className="px-3 pb-1 pt-1 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
                   ¿Cómo va esta tarea?
                 </p>
-                {ORDEN_ESTADOS.map((e) => {
+                {ORDEN_MENU.map((e) => {
                   const actual = e === estado;
+                  // "Hecha" va resaltada SIEMPRE (acción común rápida), aunque no
+                  // sea el estado actual; el check marca el estado de verdad.
+                  const rapida = e === "hecho";
                   return (
                     <button
                       key={e}
@@ -172,13 +192,17 @@ export function SelectorEstado({
                       disabled={ocupado}
                       className={
                         "flex w-full items-center gap-3 rounded-[10px] px-3 py-2.5 text-left text-[14px] disabled:opacity-50 " +
-                        (actual ? "bg-surface-2 font-semibold" : "hover:bg-surface-2")
+                        (rapida
+                          ? "bg-done-soft font-semibold text-done hover:bg-done-soft"
+                          : actual
+                            ? "bg-surface-2 font-semibold"
+                            : "hover:bg-surface-2")
                       }
                     >
                       <IconoEstado estado={e} tamano={18} />
                       <span className="flex-1 capitalize">{ETIQUETA_ESTADO[e]}</span>
                       {actual && (
-                        <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="text-accent">
+                        <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className={rapida ? "text-done" : "text-accent"}>
                           <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="currentColor" strokeWidth="2" fill="none" />
                         </svg>
                       )}

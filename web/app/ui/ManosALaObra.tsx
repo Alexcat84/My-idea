@@ -151,6 +151,8 @@ interface Props {
 }
 
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
+/** Recuerda que el usuario ya usó el selector de estado (pista de primer uso). */
+const CLAVE_PISTA_ESTADO = "mi-idea:selector-estado-usado";
 
 /** "## Etapa N: título" del markdown real del plan → {N: título}. */
 export function titulosDeEtapas(planMd: string): Record<number, string> {
@@ -268,20 +270,9 @@ function FilaItem({
             </button>
           )}
         </span>
-        {/* "Marcar hecho" permanece como ATAJO (el menú es la vía completa).
-            Solo en el ítem destacado a 380; en escritorio, en cada pendiente. */}
-        {!hecho && !retirada && (
-          <button
-            onClick={() => marcarHecho()}
-            disabled={ocupado}
-            className={
-              (item.destacado ? "basis-full py-2.5 sm:basis-auto sm:py-1.5 " : "hidden sm:block sm:py-1.5 ") +
-              "shrink-0 rounded-[9px] border border-done/50 px-3.5 text-[12.5px] font-semibold text-done hover:bg-done-soft disabled:opacity-50"
-            }
-          >
-            Marcar hecho
-          </button>
-        )}
+        {/* El botón "Marcar hecho" se retiró (decisión del fundador): el menú
+            del círculo es la vía única, y abre con "Hecha" primera y resaltada,
+            así el caso común queda a un toque. Sin redundancia; sin adivinar. */}
       </div>
 
       {/* editar la fecha de un ítem ya hecho */}
@@ -847,6 +838,30 @@ export function ManosALaObra({
   // Fase 3.8 §5 — confirmación de "Marcar como realizada"
   const [confirmandoRealizar, setConfirmandoRealizar] = useState(false);
   const [realizando, setRealizando] = useState(false);
+  // Pista de primer uso del selector de estado (solo hasta el primer cambio,
+  // recordado en localStorage). SSR-safe: nace false y se enciende al montar.
+  const [mostrarPista, setMostrarPista] = useState(false);
+  useEffect(() => {
+    let yaUsado = true;
+    try {
+      yaUsado = Boolean(localStorage.getItem(CLAVE_PISTA_ESTADO));
+    } catch {
+      /* sin localStorage (modo privado): la pista simplemente no molesta */
+    }
+    if (yaUsado) return;
+    // setTimeout(0) difiere el setState fuera del cuerpo del efecto (patrón
+    // aceptado en este repo para set-state-in-effect; ver Landing).
+    const t = setTimeout(() => setMostrarPista(true), 0);
+    return () => clearTimeout(t);
+  }, []);
+  function pistaVista() {
+    setMostrarPista(false);
+    try {
+      localStorage.setItem(CLAVE_PISTA_ESTADO, "1");
+    } catch {
+      /* no bloquea nada */
+    }
+  }
 
   const titulosCore = useMemo(() => titulosDeEtapas(planMd), [planMd]);
   const core = grupoVigente(checklist, "core");
@@ -960,6 +975,8 @@ export function ManosALaObra({
   }
 
   async function aplicarCambio(item: ItemChecklistUI, cambio: CambioItem) {
+    // Cambiar el estado cuenta como "ya descubrió el selector": la pista se va.
+    if (cambio.estado !== undefined) pistaVista();
     setOcupado(true);
     setError(null);
     try {
@@ -1219,6 +1236,17 @@ export function ManosALaObra({
         {core && mundos.length > 0 && (
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
             Tu viaje core · <span className="text-done">{cCore.hechos}/{cCore.total}</span>
+          </p>
+        )}
+        {/* Pista de PRIMER USO (se desvanece tras el primer cambio de estado):
+            al quitar "Marcar hecho", el círculo es el único control, y hay que
+            decir de una vez que ahí se toca. */}
+        {core && cCore.total > 0 && mostrarPista && (
+          <p className="flex items-center gap-2 rounded-cinta border border-accent/30 bg-accent/5 px-3.5 py-2 text-[12.5px] text-accent">
+            <span aria-hidden className="flex h-[18px] w-[18px] shrink-0 overflow-hidden rounded-full border-[1.5px] border-accent">
+              <span className="h-full w-1/2 bg-accent/60" />
+            </span>
+            Toca el círculo de una tarea para elegir su estado (hecha, en proceso, no aplica…).
           </p>
         )}
         {core ? (
