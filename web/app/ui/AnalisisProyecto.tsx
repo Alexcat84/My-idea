@@ -82,10 +82,11 @@ export function AnalisisProyecto({
     };
   }, [projectId]);
 
+  // El horizonte de la línea de tiempo del Gantt: el mayor fin (base o real).
   const maxBarra = useMemo(() => {
     const c = datos?.analytics.cumplimiento;
     if (!c) return 1;
-    return Math.max(1, ...c.porEtapa.flatMap((e) => [e.baseDias ?? 0, e.realDias ?? 0]));
+    return Math.max(1, ...c.porEtapa.flatMap((e) => [e.baseFin ?? 0, e.realFin ?? 0]));
   }, [datos]);
 
   const maxDur = useMemo(() => {
@@ -244,32 +245,55 @@ export function AnalisisProyecto({
                     </span>
                   </p>
                 </div>
+                {/* Gantt (corrección de la errata del canon 11): cada barra
+                    ARRANCA donde terminó la anterior y su largo es su duración,
+                    sobre una línea de tiempo común. Así se leen las fronteras y
+                    el corrimiento, no una barra que solo crece. */}
                 <div className="flex flex-col gap-3">
                   {c.porEtapa.map((e) => {
-                    const tardeEtapa = (e.realDias ?? 0) > (e.baseDias ?? 0) + 1;
+                    const tardeEtapa = e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
+                    const izq = (d: number) => `${(d / maxBarra) * 100}%`;
+                    const ancho = (ini: number, fin: number) => `${(Math.max(0, fin - ini) / maxBarra) * 100}%`;
                     return (
                       <div key={e.etapa}>
                         <p className="mb-1 text-[13px]">{nombreEtapa(e.etapa)}</p>
                         <div className="flex flex-col gap-1">
-                          <div className="h-2.5 overflow-hidden rounded bg-white/5">
-                            <div
-                              className="h-full rounded"
-                              style={{ width: `${((e.baseDias ?? 0) / maxBarra) * 100}%`, background: "rgba(77,124,254,0.55)" }}
-                            />
+                          <div className="relative h-2.5 rounded bg-white/5">
+                            {e.baseFin != null && (
+                              <div
+                                className="absolute top-0 h-full rounded"
+                                style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.55)" }}
+                              />
+                            )}
                           </div>
-                          <div className="h-2.5 overflow-hidden rounded bg-white/5">
-                            <div
-                              className="h-full rounded"
-                              style={{
-                                width: `${((e.realDias ?? 0) / maxBarra) * 100}%`,
-                                background: tardeEtapa ? "var(--warn)" : "var(--done)",
-                              }}
-                            />
+                          <div className="relative h-2.5 rounded bg-white/5">
+                            {e.realFin != null && e.realInicio != null && (
+                              <div
+                                className="absolute top-0 h-full rounded"
+                                style={{
+                                  left: izq(e.realInicio),
+                                  width: ancho(e.realInicio, e.realFin),
+                                  background: tardeEtapa ? "var(--warn)" : "var(--done)",
+                                }}
+                              />
+                            )}
                           </div>
                         </div>
                       </div>
                     );
                   })}
+                </div>
+                {/* Eje de tiempo: ancla la lectura del inicio y el corrimiento. */}
+                <div className="relative mt-3 h-4 border-t border-hairline">
+                  {[0, 0.25, 0.5, 0.75, 1].map((f) => (
+                    <span
+                      key={f}
+                      className="absolute top-1 -translate-x-1/2 text-[10px] text-dim"
+                      style={{ left: `${f * 100}%` }}
+                    >
+                      {Math.round(f * maxBarra)}d
+                    </span>
+                  ))}
                 </div>
               </div>
             )}

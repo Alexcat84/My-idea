@@ -160,7 +160,19 @@ export interface CapaCumplimiento {
   pctTardias: number;
   desviacionMediaDias: number;
   replanificaciones: number;
-  porEtapa: Array<{ etapa: number; baseDias: number | null; realDias: number | null }>;
+  /** Barras "Planificado vs. real por etapa" en vista GANTT (corrección de la
+   * errata del canon 11: las barras acumuladas confundían). Cada etapa lleva su
+   * INICIO y su FIN en días desde la chispa, para base y real. El inicio de una
+   * etapa es el fin de la anterior (base con base, real con real): así se ven
+   * las fronteras y el corrimiento acumulado, no una barra que solo crece.
+   * realInicio/realFin son null si la etapa aún no tiene ninguna acción hecha. */
+  porEtapa: Array<{
+    etapa: number;
+    baseInicio: number;
+    baseFin: number | null;
+    realInicio: number | null;
+    realFin: number | null;
+  }>;
   /** Fase 4.0 §3 ("las tardías que importan"): los ítems más desviados, de
    * mayor a menor retraso — el motor debe saber DÓNDE se atora el usuario. */
   tardiasTop: Array<{ texto: string; etapa: number; diasRetraso: number }>;
@@ -433,20 +445,39 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
     const total = conFecha.length;
     const pct = (n: number) => (total > 0 ? Math.round((n / total) * 100) : 0);
 
-    // Barras gemelas por etapa: días desde la chispa hasta la última fecha
-    // base y hasta la última real de cada etapa del plan con baseline.
+    // Barras GANTT por etapa (corrección de la errata del canon 11). Primero el
+    // FIN de cada etapa (última fecha_base / última real, en días desde la
+    // chispa); luego el INICIO, que es el fin de la etapa anterior: base con
+    // base, real con la última real definida antes (así una etapa sin acciones
+    // hechas no rompe la cadena del inicio real).
     const etapas = [...new Set(delPlan.map((i) => i.etapa))].sort((a, b) => a - b);
-    const porEtapa = etapas.map((etapa) => {
+    const maxIso = (xs: string[]) => (xs.length ? xs.reduce((a, b) => (a > b ? a : b)) : null);
+    const finBase = new Map<number, number | null>();
+    const finReal = new Map<number, number | null>();
+    for (const etapa of etapas) {
       const deEtapa = delPlan.filter((i) => i.etapa === etapa);
-      const bases = deEtapa.map((i) => i.fecha_base).filter((f): f is string => Boolean(f));
-      const reales = deEtapa.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
-      const maxIso = (xs: string[]) => (xs.length ? xs.reduce((a, b) => (a > b ? a : b)) : null);
-      const baseMax = maxIso(bases);
-      const realMax = maxIso(reales);
+      const baseMax = maxIso(deEtapa.map((i) => i.fecha_base).filter((f): f is string => Boolean(f)));
+      const realMax = maxIso(deEtapa.map((i) => i.completed_at).filter((c): c is string => Boolean(c)));
+      finBase.set(etapa, baseMax ? Math.max(0, dias(chispa, baseMax)) : null);
+      finReal.set(etapa, realMax ? Math.max(0, dias(chispa, realMax)) : null);
+    }
+    const porEtapa = etapas.map((etapa, idx) => {
+      const baseInicio = idx === 0 ? 0 : finBase.get(etapas[idx - 1]) ?? 0;
+      // El inicio real es la última real terminada ANTES de esta etapa (o la
+      // chispa): si la etapa previa no tuvo acciones hechas, salta a la anterior.
+      let realInicio = 0;
+      for (const e of etapas.slice(0, idx)) {
+        const f = finReal.get(e);
+        if (f != null) realInicio = f;
+      }
+      const realFin = finReal.get(etapa) ?? null;
       return {
         etapa,
-        baseDias: baseMax ? Math.max(0, dias(chispa, baseMax)) : null,
-        realDias: realMax ? Math.max(0, dias(chispa, realMax)) : null,
+        baseInicio,
+        baseFin: finBase.get(etapa) ?? null,
+        // Sin fin real, la etapa no tiene barra real: su inicio tampoco aplica.
+        realInicio: realFin != null ? realInicio : null,
+        realFin,
       };
     });
 

@@ -135,11 +135,72 @@ describe("calcularAnalytics — capa de cumplimiento", () => {
   it("replanificaciones = 1 (solo D tiene fecha_base_original)", () => {
     expect(c.replanificaciones).toBe(1);
   });
-  it("barras gemelas: e1 base 9 / real 12; e2 base 24 / real 24", () => {
+  it("gantt por etapa: inicio = fin de la etapa previa (base con base, real con real)", () => {
+    // E1 base 0→9 / real 0→12; E2 arranca en el fin de E1: base 9→24, real 12→24.
     expect(c.porEtapa).toEqual([
-      { etapa: 1, baseDias: 9, realDias: 12 },
-      { etapa: 2, baseDias: 24, realDias: 24 },
+      { etapa: 1, baseInicio: 0, baseFin: 9, realInicio: 0, realFin: 12 },
+      { etapa: 2, baseInicio: 9, baseFin: 24, realInicio: 12, realFin: 24 },
     ]);
+  });
+});
+
+describe("calcularAnalytics — barras Gantt (semilla del spike A/B/C)", () => {
+  // La misma semilla del spike de decisión (canon11_barras_spike.png). fecha_base
+  // = fin base, completed_at = fin real; una acción por etapa. Valores a mano:
+  //   fin base [7,14,28,35,49]  ·  fin real [9,13,35,40,52]
+  const CHISPA = "2026-03-01T12:00:00.000Z";
+  const masDias = (n: number) => new Date(Date.parse(CHISPA) + n * 86_400_000).toISOString();
+  const item = (etapa: number, finBase: number, finReal: number | null) => ({
+    plan_id: "pg",
+    etapa,
+    estado: finReal != null ? "hecho" : "pendiente",
+    destacado: false,
+    texto: `E${etapa}`,
+    completed_at: finReal != null ? masDias(finReal) : null,
+    fecha_base: masDias(finBase),
+    fecha_base_original: null,
+  });
+  const SEMILLA: EntradaAnalytics = {
+    proyectoCreatedAt: CHISPA,
+    realizadaAt: masDias(60),
+    planesCore: [{ id: "pg", etiqueta: "inicial", created_at: masDias(1), baseline_confirmada_at: masDias(1) }],
+    mundos: [],
+    items: [item(1, 7, 9), item(2, 14, 13), item(3, 28, 35), item(4, 35, 40), item(5, 49, 52)],
+  };
+  const c = calcularAnalytics(SEMILLA).cumplimiento!;
+
+  it("cada etapa arranca donde terminó la anterior, base con base y real con real", () => {
+    expect(c.porEtapa).toEqual([
+      { etapa: 1, baseInicio: 0, baseFin: 7, realInicio: 0, realFin: 9 },
+      { etapa: 2, baseInicio: 7, baseFin: 14, realInicio: 9, realFin: 13 },
+      { etapa: 3, baseInicio: 14, baseFin: 28, realInicio: 13, realFin: 35 },
+      { etapa: 4, baseInicio: 28, baseFin: 35, realInicio: 35, realFin: 40 },
+      { etapa: 5, baseInicio: 35, baseFin: 49, realInicio: 40, realFin: 52 },
+    ]);
+  });
+
+  it("el caso de oro: la etapa 3 real (13→35) empuja el arranque real de la 4 (a 35) y de la 5 (a 40)", () => {
+    const e4 = c.porEtapa.find((e) => e.etapa === 4)!;
+    const e5 = c.porEtapa.find((e) => e.etapa === 5)!;
+    // el inicio real de la 4 NO es su base (28): es el fin real de la 3 (35).
+    expect(e4.realInicio).toBe(35);
+    expect(e5.realInicio).toBe(40);
+  });
+
+  it("una etapa sin acciones hechas no rompe la cadena: su barra real es null y la siguiente salta a la última real previa", () => {
+    // E4 sin completar: su real es null; E5 (sí completada el día 52) arranca su
+    // real en el fin real de la 3 (35), saltando la 4.
+    const conHueco: EntradaAnalytics = {
+      ...SEMILLA,
+      items: [item(1, 7, 9), item(2, 14, 13), item(3, 28, 35), item(4, 35, null), item(5, 49, 52)],
+    };
+    const cc = calcularAnalytics(conHueco).cumplimiento!;
+    const e4 = cc.porEtapa.find((e) => e.etapa === 4)!;
+    const e5 = cc.porEtapa.find((e) => e.etapa === 5)!;
+    expect(e4.realInicio).toBeNull();
+    expect(e4.realFin).toBeNull();
+    expect(e5.realInicio).toBe(35);
+    expect(e5.realFin).toBe(52);
   });
 });
 
