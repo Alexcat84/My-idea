@@ -120,7 +120,8 @@ va al final.
   etiqueta pequeña + valor en bold (antes lista dt/dd). Mismo tamaño, más lectura.
 - **Estadísticos centrados y más visuales:** los tiles (capa universal y
   cumplimiento) van **centrados**, con el número grande y el color en la cifra.
-- **Gantt más representativo:** barras redondeadas y gruesas (real) sobre un
-  **riel fino** (plan); **ámbar** la etapa que se pasó; los días (plan Nd · real
-  Md) suben a la leyenda numerada. Se lee el corrimiento en cascada.
-  Ref: `lote_analisis_app.png` (+`_380`).
+- **Gantt:** el rediseño (barras redondeadas gruesas + días en la leyenda) se
+  REVIRTIÓ por decisión del fundador (2026-07-28); vuelve al `gantt_v2` (leyenda
+  numerada solo con nombres + dos barras finas base/real + cuadrícula + eje). A
+  partir de esa base, los cambios del Gantt los hará **Claude Design**. Ref:
+  `gantt_v2_app.png`.

@@ -254,81 +254,59 @@ export function AnalisisProyecto({
             (() => {
               const TICKS = [0, 0.25, 0.5, 0.75, 1];
               const izq = (d: number) => `${(d / maxBarra) * 100}%`;
-              // Ancho con mínimo visible: una etapa de 0-1 días no debe desaparecer.
-              const ancho = (ini: number, fin: number) => `max(6px, ${(Math.max(0, fin - ini) / maxBarra) * 100}%)`;
-              const esTarde = (e: (typeof c.porEtapa)[number]) => e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
+              const ancho = (ini: number, fin: number) => `${(Math.max(0, fin - ini) / maxBarra) * 100}%`;
               return (
                 <div className="mt-6 rounded-panel border border-hairline bg-surface p-5">
                   <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
                     <p className="text-[13px] font-semibold">Planificado vs. real por etapa</p>
-                    <p className="flex flex-wrap gap-x-4 gap-y-1 text-[11.5px] text-dim">
+                    <p className="flex gap-4 text-[11.5px] text-dim">
                       <span className="flex items-center gap-1.5">
-                        <span className="h-1.5 w-4 rounded-full" style={{ background: "rgba(77,124,254,0.35)" }} /> plan
+                        <span className="h-2 w-4 rounded-sm" style={{ background: "rgba(77,124,254,0.55)" }} /> base
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <span className="h-2.5 w-4 rounded-full bg-done" /> real
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <span className="h-2.5 w-4 rounded-full bg-warn" /> se pasó
+                        <span className="h-2 w-4 rounded-sm bg-done" /> real
                       </span>
                     </p>
                   </div>
 
-                  {/* Leyenda numerada: el nombre UNA vez + el resumen de días
-                      (plan vs real) atado por la cifra. El diagrama de abajo queda
-                      limpio, solo número + barras. */}
-                  <ol className="mb-5 flex flex-col gap-2">
-                    {c.porEtapa.map((e, i) => {
-                      const planDias = e.baseFin != null ? Math.round(e.baseFin - e.baseInicio) : null;
-                      const realDias = e.realFin != null && e.realInicio != null ? Math.round(e.realFin - e.realInicio) : null;
-                      const tarde = esTarde(e);
-                      return (
-                        <li key={e.etapa} className="flex items-baseline justify-between gap-3 text-[12.5px]">
-                          <span className="flex min-w-0 items-baseline gap-2.5">
-                            <Numero n={i + 1} />
-                            <span className="text-dim [text-wrap:pretty]">{nombreEtapa(e.etapa)}</span>
-                          </span>
-                          <span className="shrink-0 tabular-nums text-[11.5px] text-dim">
-                            {planDias != null && <>plan {planDias}d</>}
-                            {realDias != null && (
-                              <>
-                                {planDias != null ? " · " : ""}
-                                <span className="font-semibold" style={{ color: tarde ? "var(--warn)" : "var(--done)" }}>real {realDias}d</span>
-                              </>
-                            )}
-                          </span>
-                        </li>
-                      );
-                    })}
+                  {/* Leyenda numerada: los nombres, una vez, arriba. */}
+                  <ol className="mb-5 flex flex-col gap-1.5">
+                    {c.porEtapa.map((e, i) => (
+                      <li key={e.etapa} className="flex items-start gap-2.5 text-[12.5px] text-dim">
+                        <Numero n={i + 1} />
+                        <span className="pt-0.5 [text-wrap:pretty]">{nombreEtapa(e.etapa)}</span>
+                      </li>
+                    ))}
                   </ol>
 
-                  {/* Diagrama: número + carril con el PLAN (riel fino) y lo REAL
-                      (relleno grueso) en una misma línea, con cuadrícula detrás. */}
+                  {/* Diagrama: solo números + barras, con cuadrícula detrás. */}
                   <div className="relative">
                     <div className="pointer-events-none absolute inset-y-0 left-[34px] right-0">
                       {TICKS.map((f) => (
                         <span key={f} className="absolute inset-y-0 w-px bg-hairline" style={{ left: `${f * 100}%` }} />
                       ))}
                     </div>
-                    <div className="relative flex flex-col gap-1.5">
+                    <div className="relative flex flex-col gap-2.5">
                       {c.porEtapa.map((e, i) => {
-                        const tarde = esTarde(e);
+                        const tardeEtapa = e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
                         return (
                           <div key={e.etapa} className="flex items-center gap-2.5">
                             <Numero n={i + 1} />
-                            <div className="relative h-8 flex-1" title={nombreEtapa(e.etapa)}>
-                              {/* PLAN: riel fino translúcido (la ventana planificada). */}
+                            <div className="relative h-[22px] flex-1">
                               {e.baseFin != null && (
                                 <div
-                                  className="absolute top-1/2 h-1.5 -translate-y-1/2 rounded-full"
-                                  style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.30)" }}
+                                  className="absolute top-0 h-2.5 rounded"
+                                  style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.55)" }}
                                 />
                               )}
-                              {/* REAL: relleno grueso — verde a tiempo, ámbar si se pasó. */}
                               {e.realFin != null && e.realInicio != null && (
                                 <div
-                                  className="absolute top-1/2 h-3 -translate-y-1/2 rounded-full"
-                                  style={{ left: izq(e.realInicio), width: ancho(e.realInicio, e.realFin), background: tarde ? "var(--warn)" : "var(--done)" }}
+                                  className="absolute bottom-0 h-2.5 rounded"
+                                  style={{
+                                    left: izq(e.realInicio),
+                                    width: ancho(e.realInicio, e.realFin),
+                                    background: tardeEtapa ? "var(--warn)" : "var(--done)",
+                                  }}
                                 />
                               )}
                             </div>
@@ -343,7 +321,7 @@ export function AnalisisProyecto({
                     {TICKS.map((f) => (
                       <span
                         key={f}
-                        className="absolute top-1 -translate-x-1/2 text-[10px] text-dim tabular-nums"
+                        className="absolute top-1 -translate-x-1/2 text-[10px] text-dim"
                         style={{ left: `${f * 100}%` }}
                       >
                         {Math.round(f * maxBarra)}d
