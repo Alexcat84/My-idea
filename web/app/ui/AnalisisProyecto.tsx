@@ -32,23 +32,24 @@ const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries([
 
 function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
   return (
-    <div className="rounded-panel border border-hairline bg-surface p-5">
-      <p className="text-3xl font-bold tracking-tight sm:text-[34px]">{valor}</p>
-      <p className="mt-1 text-[12.5px] text-dim">{etiqueta}</p>
+    <div className="flex flex-col items-center justify-center rounded-panel border border-hairline bg-surface px-4 py-6 text-center">
+      <p className="text-[34px] font-bold leading-none tracking-tight tabular-nums">{valor}</p>
+      <p className="mt-2 text-[12px] text-dim [text-wrap:balance]">{etiqueta}</p>
     </div>
   );
 }
 
-/** Tile compacta de cumplimiento: el número lleva el color semántico (verde a
- * tiempo, azul adelantada, ámbar tardía), el sufijo el porcentaje o la unidad,
- * y el borde queda neutro para no pelear (misma familia que la capa universal). */
+/** Tile compacta de cumplimiento: el número (grande y centrado) lleva el color
+ * semántico (verde a tiempo, azul adelantada, ámbar tardía), debajo el
+ * porcentaje o la unidad y la etiqueta. Misma familia que la capa universal. */
 function TileCumpl({ valor, sufijo, etiqueta, color }: { valor: string; sufijo: string; etiqueta: string; color?: string }) {
   return (
-    <div className="rounded-panel border border-hairline bg-surface p-4">
-      <p className="text-[26px] font-bold tracking-tight tabular-nums" style={color ? { color } : undefined}>
-        {valor} <span className="text-[15px] font-semibold text-dim">{sufijo}</span>
+    <div className="flex flex-col items-center justify-center rounded-panel border border-hairline bg-surface px-3 py-5 text-center">
+      <p className="text-[30px] font-bold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
+        {valor}
       </p>
-      <p className="mt-0.5 text-[12px] text-dim">{etiqueta}</p>
+      <p className="mt-1.5 text-[12px] font-semibold text-dim tabular-nums">{sufijo}</p>
+      <p className="mt-0.5 text-[12px] text-dim [text-wrap:balance]">{etiqueta}</p>
     </div>
   );
 }
@@ -236,9 +237,9 @@ export function AnalisisProyecto({
               adelantadas, tardías, desviación media), en la misma familia visual
               que la capa universal. El color vive en el número, no en el borde. */}
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <TileCumpl valor={String(c.aTiempo)} sufijo={`· ${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--done)" />
-            <TileCumpl valor={String(c.adelantadas)} sufijo={`· ${c.pctAdelantadas}%`} etiqueta="adelantadas" color="var(--accent)" />
-            <TileCumpl valor={String(c.tardias)} sufijo={`· ${c.pctTardias}%`} etiqueta="tardías" color="var(--warn)" />
+            <TileCumpl valor={String(c.aTiempo)} sufijo={`${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--done)" />
+            <TileCumpl valor={String(c.adelantadas)} sufijo={`${c.pctAdelantadas}%`} etiqueta="adelantadas" color="var(--accent)" />
+            <TileCumpl valor={String(c.tardias)} sufijo={`${c.pctTardias}%`} etiqueta="tardías" color="var(--warn)" />
             <TileCumpl
               valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`}
               sufijo="días"
@@ -253,59 +254,81 @@ export function AnalisisProyecto({
             (() => {
               const TICKS = [0, 0.25, 0.5, 0.75, 1];
               const izq = (d: number) => `${(d / maxBarra) * 100}%`;
-              const ancho = (ini: number, fin: number) => `${(Math.max(0, fin - ini) / maxBarra) * 100}%`;
+              // Ancho con mínimo visible: una etapa de 0-1 días no debe desaparecer.
+              const ancho = (ini: number, fin: number) => `max(6px, ${(Math.max(0, fin - ini) / maxBarra) * 100}%)`;
+              const esTarde = (e: (typeof c.porEtapa)[number]) => e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
               return (
                 <div className="mt-6 rounded-panel border border-hairline bg-surface p-5">
                   <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
                     <p className="text-[13px] font-semibold">Planificado vs. real por etapa</p>
-                    <p className="flex gap-4 text-[11.5px] text-dim">
+                    <p className="flex flex-wrap gap-x-4 gap-y-1 text-[11.5px] text-dim">
                       <span className="flex items-center gap-1.5">
-                        <span className="h-2 w-4 rounded-sm" style={{ background: "rgba(77,124,254,0.55)" }} /> base
+                        <span className="h-1.5 w-4 rounded-full" style={{ background: "rgba(77,124,254,0.35)" }} /> plan
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <span className="h-2 w-4 rounded-sm bg-done" /> real
+                        <span className="h-2.5 w-4 rounded-full bg-done" /> real
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <span className="h-2.5 w-4 rounded-full bg-warn" /> se pasó
                       </span>
                     </p>
                   </div>
 
-                  {/* Leyenda numerada: los nombres, una vez, arriba. */}
-                  <ol className="mb-5 flex flex-col gap-1.5">
-                    {c.porEtapa.map((e, i) => (
-                      <li key={e.etapa} className="flex items-start gap-2.5 text-[12.5px] text-dim">
-                        <Numero n={i + 1} />
-                        <span className="pt-0.5 [text-wrap:pretty]">{nombreEtapa(e.etapa)}</span>
-                      </li>
-                    ))}
+                  {/* Leyenda numerada: el nombre UNA vez + el resumen de días
+                      (plan vs real) atado por la cifra. El diagrama de abajo queda
+                      limpio, solo número + barras. */}
+                  <ol className="mb-5 flex flex-col gap-2">
+                    {c.porEtapa.map((e, i) => {
+                      const planDias = e.baseFin != null ? Math.round(e.baseFin - e.baseInicio) : null;
+                      const realDias = e.realFin != null && e.realInicio != null ? Math.round(e.realFin - e.realInicio) : null;
+                      const tarde = esTarde(e);
+                      return (
+                        <li key={e.etapa} className="flex items-baseline justify-between gap-3 text-[12.5px]">
+                          <span className="flex min-w-0 items-baseline gap-2.5">
+                            <Numero n={i + 1} />
+                            <span className="text-dim [text-wrap:pretty]">{nombreEtapa(e.etapa)}</span>
+                          </span>
+                          <span className="shrink-0 tabular-nums text-[11.5px] text-dim">
+                            {planDias != null && <>plan {planDias}d</>}
+                            {realDias != null && (
+                              <>
+                                {planDias != null ? " · " : ""}
+                                <span className="font-semibold" style={{ color: tarde ? "var(--warn)" : "var(--done)" }}>real {realDias}d</span>
+                              </>
+                            )}
+                          </span>
+                        </li>
+                      );
+                    })}
                   </ol>
 
-                  {/* Diagrama: solo números + barras, con cuadrícula detrás. */}
+                  {/* Diagrama: número + carril con el PLAN (riel fino) y lo REAL
+                      (relleno grueso) en una misma línea, con cuadrícula detrás. */}
                   <div className="relative">
                     <div className="pointer-events-none absolute inset-y-0 left-[34px] right-0">
                       {TICKS.map((f) => (
                         <span key={f} className="absolute inset-y-0 w-px bg-hairline" style={{ left: `${f * 100}%` }} />
                       ))}
                     </div>
-                    <div className="relative flex flex-col gap-2.5">
+                    <div className="relative flex flex-col gap-1.5">
                       {c.porEtapa.map((e, i) => {
-                        const tardeEtapa = e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
+                        const tarde = esTarde(e);
                         return (
                           <div key={e.etapa} className="flex items-center gap-2.5">
                             <Numero n={i + 1} />
-                            <div className="relative h-[22px] flex-1">
+                            <div className="relative h-8 flex-1" title={nombreEtapa(e.etapa)}>
+                              {/* PLAN: riel fino translúcido (la ventana planificada). */}
                               {e.baseFin != null && (
                                 <div
-                                  className="absolute top-0 h-2.5 rounded"
-                                  style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.55)" }}
+                                  className="absolute top-1/2 h-1.5 -translate-y-1/2 rounded-full"
+                                  style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.30)" }}
                                 />
                               )}
+                              {/* REAL: relleno grueso — verde a tiempo, ámbar si se pasó. */}
                               {e.realFin != null && e.realInicio != null && (
                                 <div
-                                  className="absolute bottom-0 h-2.5 rounded"
-                                  style={{
-                                    left: izq(e.realInicio),
-                                    width: ancho(e.realInicio, e.realFin),
-                                    background: tardeEtapa ? "var(--warn)" : "var(--done)",
-                                  }}
+                                  className="absolute top-1/2 h-3 -translate-y-1/2 rounded-full"
+                                  style={{ left: izq(e.realInicio), width: ancho(e.realInicio, e.realFin), background: tarde ? "var(--warn)" : "var(--done)" }}
                                 />
                               )}
                             </div>
@@ -320,7 +343,7 @@ export function AnalisisProyecto({
                     {TICKS.map((f) => (
                       <span
                         key={f}
-                        className="absolute top-1 -translate-x-1/2 text-[10px] text-dim"
+                        className="absolute top-1 -translate-x-1/2 text-[10px] text-dim tabular-nums"
                         style={{ left: `${f * 100}%` }}
                       >
                         {Math.round(f * maxBarra)}d

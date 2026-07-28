@@ -100,3 +100,27 @@ va al final.
   documentos"): antes la tarjeta entera era el botón y parecía informativa.
   Ahora llevan su **botón de acción abajo** ("Ver análisis" / "Abrir
   documentos"), como la de "Marcar como realizada". Ref: `stepper_v2_manos_app.png`.
+
+## 2026-07-27 — Lote visual: stepper, barra, botones, ritmo, tiles y Gantt
+- **Stepper — el verde solo en la celebración:** el punto de la etapa ACTUAL
+  (incluida Manos a la Obra) ya NO es verde; es **azul con un anillo estático +
+  halo pulsante** ("la punta viva del recorrido"). El verde queda EXCLUSIVO del
+  6.º hito Realizado. Azul = recorrido, gris = lo que falta, verde = final.
+  Los 6 hitos coinciden con el proceso real de idea a proyecto (los add-ons son
+  opcionales y llevan su propia barra). Refs: `lote_analisis_app.png` (header).
+- **Acordeón homogéneo (Manos):** TODAS las etapas son acordeón con su chevron
+  (antes la 1 y 2 eran secciones planas sin chevron). Abren por defecto hasta la
+  primera con pendientes; el resto plegadas. Ref: `lote_manos_app.png`.
+- **Barra de avance protagonista:** más gruesa (h-3.5, redondeada) y con el
+  **porcentaje** grande como segundo visual. Ref: `lote_manos_app.png`.
+- **Acciones como botones (píldoras):** "cambiar" (modo), "Recalcular
+  pendientes", "cambiar fecha", "Poner fechas ahora" dejaron de ser texto azul
+  suelto (se confundía con texto normal) y ahora se ven como pequeños botones.
+- **Panel Ritmo más visual:** cada métrica en una fila con icono en chip +
+  etiqueta pequeña + valor en bold (antes lista dt/dd). Mismo tamaño, más lectura.
+- **Estadísticos centrados y más visuales:** los tiles (capa universal y
+  cumplimiento) van **centrados**, con el número grande y el color en la cifra.
+- **Gantt más representativo:** barras redondeadas y gruesas (real) sobre un
+  **riel fino** (plan); **ámbar** la etapa que se pasó; los días (plan Nd · real
+  Md) suben a la leyenda numerada. Se lee el corrimiento en cascada.
+  Ref: `lote_analisis_app.png` (+`_380`).
