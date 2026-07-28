@@ -180,6 +180,76 @@ function conteo(items: ItemChecklistUI[]) {
   };
 }
 
+/** BotonMini — llamada a la acción secundaria que SE VE como botón (píldora),
+ * no como texto azul suelto que se confunde con el resto (cambiar fecha,
+ * Recalcular pendientes, cambiar modo…). El fundador lo pidió explícito. */
+function BotonMini({
+  children,
+  onClick,
+  disabled,
+  tono = "accent",
+}: {
+  children: React.ReactNode;
+  onClick: () => void;
+  disabled?: boolean;
+  tono?: "accent" | "neutro";
+}) {
+  const estilo =
+    tono === "accent"
+      ? "border-accent/40 bg-accent/10 text-accent hover:bg-accent/20"
+      : "border-white/15 bg-white/5 text-dim hover:border-white/30 hover:text-ink";
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={
+        "inline-flex shrink-0 items-center gap-1 rounded-full border px-2.5 py-1 text-[12px] font-semibold disabled:opacity-50 " +
+        estilo
+      }
+    >
+      {children}
+    </button>
+  );
+}
+
+/** Fila del panel Ritmo: icono en chip + etiqueta pequeña + valor en bold.
+ * Más visual que la lista dt/dd, sin ocupar más espacio (lo pidió el fundador:
+ * es un resumen importante). */
+function RitmoFila({ icono, etiqueta, valor, acento }: { icono: React.ReactNode; etiqueta: string; valor: string; acento?: boolean }) {
+  return (
+    <div className="flex items-center gap-3 rounded-[10px] border border-hairline bg-surface-2/40 px-3 py-2.5">
+      <span className={"grid h-8 w-8 shrink-0 place-items-center rounded-lg " + (acento ? "bg-accent/10 text-accent" : "bg-surface-2 text-dim")} aria-hidden>
+        {icono}
+      </span>
+      <span className="min-w-0">
+        <span className="block text-[11px] leading-tight text-dim">{etiqueta}</span>
+        <span className="block text-[14.5px] font-bold leading-tight tabular-nums">{valor}</span>
+      </span>
+    </div>
+  );
+}
+function IconoReloj() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 1.8" />
+    </svg>
+  );
+}
+function IconoBandera() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 21V4M5 4h11l-2 3.5L16 11H5" />
+    </svg>
+  );
+}
+function IconoCiclos() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 11a8 8 0 1 0-.5 4M20 5v6h-6" />
+    </svg>
+  );
+}
+
 // El vocabulario y los iconos de estado viven en SelectorEstado (fuente única
 // compartida con el detalle). El ciclo por toques MURIÓ: adivinar no es
 // elegir; ahora el círculo abre el menú de los 5 estados.
@@ -263,15 +333,11 @@ function FilaItem({
           {hecho && item.completed_at && !editandoFecha && (
             // La fecha es un DATO (verde, informativo); "cambiar fecha" es una
             // ACCIÓN aparte (azul, como llamado a modificar), no parte del texto.
-            <span className="mt-0.5 flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[12.5px]">
+            <span className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px]">
               <span className="text-done">hecho el {fechaHumanaCorta(item.completed_at)}</span>
-              <button
-                onClick={() => setEditandoFecha(true)}
-                disabled={ocupado}
-                className="font-medium text-accent hover:underline disabled:opacity-50"
-              >
+              <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="neutro">
                 cambiar fecha
-              </button>
+              </BotonMini>
             </span>
           )}
         </span>
@@ -333,26 +399,17 @@ function GrupoEtapas({
             </span>
           </span>
         );
-        if (!abierta) {
-          return (
-            <Acordeon key={etapa} titulo={encabezado}>
-              <div className="flex flex-col gap-2.5">
-                {items.map((item) => (
-                  <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
-                ))}
-              </div>
-            </Acordeon>
-          );
-        }
+        // HOMOGÉNEO: toda etapa es un acordeón (con su chevron). Las que están
+        // hasta la primera activa abren por defecto; las demás, plegadas. Antes
+        // las primeras eran secciones planas sin chevron y rompían la simetría.
         return (
-          <section key={etapa}>
-            <div className="mb-3">{encabezado}</div>
+          <Acordeon key={etapa} titulo={encabezado} abierto={abierta}>
             <div className="flex flex-col gap-2.5">
               {items.map((item) => (
                 <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
               ))}
             </div>
-          </section>
+          </Acordeon>
         );
       })}
     </div>
@@ -1115,33 +1172,38 @@ export function ManosALaObra({
             <h2 className="text-2xl font-bold leading-tight tracking-tight sm:text-[28px]">{tituloPlan}</h2>
           )}
           {cCore.total > 0 && (
-            <div className="mt-4 flex max-w-xl items-center gap-4">
-              <div className="h-2 flex-1 overflow-hidden rounded bg-white/10">
+            <div className="mt-4 max-w-xl">
+              {/* Barra protagonista: más gruesa y con el PORCENTAJE como segundo
+                  visual (el fundador lo pidió). El "X de N" queda de apoyo. */}
+              <div className="mb-2 flex items-baseline justify-between gap-3">
+                <span className="text-[22px] font-bold leading-none tracking-tight text-done tabular-nums">
+                  {barraPct}%
+                </span>
+                <span className="text-[13px] font-semibold text-dim">
+                  {cCore.hechos} de {cCore.total} hechas
+                  {cCore.retiradas > 0 && (
+                    <span className="ml-1.5 font-normal">· {cCore.retiradas} retirada{cCore.retiradas === 1 ? "" : "s"}</span>
+                  )}
+                </span>
+              </div>
+              <div className="h-3.5 overflow-hidden rounded-full bg-white/10">
                 <div
-                  className="h-2 rounded bg-gradient-to-r from-done/50 to-done"
+                  className="h-full rounded-full bg-gradient-to-r from-done/60 to-done"
                   style={{ width: `${barraPct}%`, animation: "barGrow 1.2s ease-out both" }}
                 />
               </div>
-              <span className="shrink-0 text-sm font-bold text-done">
-                {cCore.hechos} de {cCore.total}
-                {cCore.retiradas > 0 && (
-                  <span className="ml-2 font-normal text-dim">· {cCore.retiradas} retirada{cCore.retiradas === 1 ? "" : "s"}</span>
-                )}
-              </span>
             </div>
           )}
           {/* Fase 4.3.2: el modo, COMPACTO (canon refrescado). El selector grande
               ya no vive aquí salvo en la primera entrada; "cambiar" lo reabre. */}
           {modoCamino !== null && !mostrarSelectorModo && (
-            <p className="mt-3 text-[13px] text-dim">
-              Modo: <span className="font-semibold text-ink">{modoCamino === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
-              {" · "}
-              <button
-                onClick={() => setMostrarSelectorModo(true)}
-                className="font-semibold text-accent hover:underline"
-              >
+            <p className="mt-3 flex flex-wrap items-center gap-2 text-[13px] text-dim">
+              <span>
+                Modo: <span className="font-semibold text-ink">{modoCamino === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
+              </span>
+              <BotonMini onClick={() => setMostrarSelectorModo(true)} tono="neutro">
                 cambiar
-              </button>
+              </BotonMini>
             </p>
           )}
         </header>
@@ -1174,12 +1236,7 @@ export function ManosALaObra({
         {modoCamino === "fechas" && core && !recalcularPendientes && !hayFechas && pospuesto && (
           <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
             <p className="text-[13px] text-dim">Sin fechas no podré recordarte nada.</p>
-            <button
-              onClick={() => setPospuesto(false)}
-              className="shrink-0 text-[12.5px] font-semibold text-accent hover:underline"
-            >
-              Poner fechas ahora
-            </button>
+            <BotonMini onClick={() => setPospuesto(false)}>Poner fechas ahora</BotonMini>
           </div>
         )}
         {modoCamino === "fechas" && core && !recalcularPendientes && hayFechas && (
@@ -1187,12 +1244,7 @@ export function ManosALaObra({
             <p className="text-[13px] text-dim">
               <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
             </p>
-            <button
-              onClick={() => setRecalcularPendientes(true)}
-              className="shrink-0 text-[12.5px] font-semibold text-accent hover:underline"
-            >
-              Recalcular pendientes
-            </button>
+            <BotonMini onClick={() => setRecalcularPendientes(true)}>Recalcular pendientes</BotonMini>
           </div>
         )}
 
@@ -1601,24 +1653,11 @@ export function ManosALaObra({
         {cCore.total > 0 && (
           <div className="border-t border-hairline pt-5">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Ritmo</p>
-            <dl className="flex flex-col gap-3">
-              <div className="flex items-baseline justify-between">
-                <dt className="text-[13px] text-dim">Última acción</dt>
-                <dd className="text-[13px] font-semibold">
-                  {ultimaAccion ? haceCuanto(ultimaAccion) : "aún ninguna"}
-                </dd>
-              </div>
-              {desde && (
-                <div className="flex items-baseline justify-between">
-                  <dt className="text-[13px] text-dim">Manos a la Obra desde</dt>
-                  <dd className="text-[13px] font-semibold">{haceCuanto(desde)}</dd>
-                </div>
-              )}
-              <div className="flex items-baseline justify-between">
-                <dt className="text-[13px] text-dim">Ciclos de ajuste</dt>
-                <dd className="text-[13px] font-semibold">{ciclosAjuste}</dd>
-              </div>
-            </dl>
+            <div className="flex flex-col gap-2">
+              <RitmoFila icono={<IconoReloj />} etiqueta="Última acción" valor={ultimaAccion ? haceCuanto(ultimaAccion) : "aún ninguna"} />
+              {desde && <RitmoFila icono={<IconoBandera />} etiqueta="Manos a la Obra desde" valor={haceCuanto(desde)} />}
+              <RitmoFila icono={<IconoCiclos />} etiqueta="Ciclos de ajuste" valor={String(ciclosAjuste)} acento={ciclosAjuste > 0} />
+            </div>
             <p className="mt-5 text-[13px] leading-relaxed text-dim">
               Pausa cuando lo necesites. Cuando vuelvas, el checklist te espera exactamente donde quedaste.
             </p>

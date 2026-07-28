@@ -37,18 +37,21 @@ export interface EstadoStepper {
   realizada?: boolean;
 }
 
-type EstadoNodo = "hecha" | "actual" | "pensando" | "activo" | "hechoVerde" | "futura";
+type EstadoNodo = "hecha" | "actual" | "pensando" | "hechoVerde" | "futura";
 
 function estadoNodo(i: number, etapa: number, pensando: boolean, realizada: boolean): EstadoNodo {
   const n = i + 1;
-  // Realizado (último): verde SOLO en la celebración; gris mientras tanto.
+  // Realizado (último): VERDE solo en la celebración; gris mientras tanto. El
+  // verde de "terminado" NO aparece en ninguna otra etapa (regla del fundador).
   if (n === N) return realizada ? "hechoVerde" : "futura";
   if (n < etapa) return "hecha";
   if (n === etapa) {
     if (realizada) return "hechoVerde";
     if (pensando) return "pensando";
-    // Manos a la Obra (5) es ejecución: verde vivo. Las etapas 1-4 piensan: azul.
-    return n === 5 ? "activo" : "actual";
+    // El punto EN CAMINO (etapa actual, cualquiera): azul con HALO pulsante —
+    // la punta viva del recorrido. Antes Manos a la Obra era verde y parecía
+    // terminado; ahora el verde se guarda para Realizado.
+    return "actual";
   }
   return "futura";
 }
@@ -69,8 +72,16 @@ function Punto({ estado, tam, fondo, titulo }: { estado: EstadoNodo; tam: number
   }
   const base = "relative shrink-0 rounded-full";
   if (estado === "hecha") return <span title={titulo} className={base + " bg-accent"} style={s} />;
-  if (estado === "actual") return <span title={titulo} className={base + " anima-idea-pulse bg-accent"} style={s} />;
-  if (estado === "activo") return <span title={titulo} className={base + " anima-green-pulse bg-done"} style={s} />;
+  // actual: la punta viva del recorrido — azul, con un ANILLO estático (para que
+  // "dónde vas" se distinga siempre, no solo por la animación) y el halo pulsante.
+  if (estado === "actual")
+    return (
+      <span title={titulo} className="relative shrink-0" style={s}>
+        <span className="anima-idea-pulse absolute inset-0 rounded-full bg-accent" />
+        <span className="absolute rounded-full border-2 border-accent/40" style={{ inset: "-4px" }} />
+      </span>
+    );
+  // hechoVerde: verde sólido — SOLO Realizado (la celebración).
   if (estado === "hechoVerde") return <span title={titulo} className={base + " bg-done"} style={s} />;
   // futura: hueco relleno del color de fondo (tapa la línea) con borde tenue.
   return (
@@ -124,7 +135,8 @@ function Riel({
 
 /** Variante de header (58px): riel + etiqueta del hito actual al lado. */
 export function Stepper({ etapa, pensando, etiqueta, realizada }: EstadoStepper) {
-  const enVerde = realizada || etapa >= 5;
+  // La etiqueta sigue al punto: azul mientras se avanza, VERDE solo al realizar.
+  const enVerde = Boolean(realizada);
   return (
     <div aria-label={`Etapa ${etapa} de ${N}: ${ETAPAS_CANON[Math.min(etapa, N) - 1]}`} className="flex items-center gap-3">
       <Riel etapa={etapa} pensando={Boolean(pensando)} realizada={Boolean(realizada)} tam={11} ancho={150} fondo="var(--bg)" />
