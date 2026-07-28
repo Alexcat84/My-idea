@@ -39,6 +39,30 @@ function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
   );
 }
 
+/** Tile compacta de cumplimiento: el número lleva el color semántico (verde a
+ * tiempo, azul adelantada, ámbar tardía), el sufijo el porcentaje o la unidad,
+ * y el borde queda neutro para no pelear (misma familia que la capa universal). */
+function TileCumpl({ valor, sufijo, etiqueta, color }: { valor: string; sufijo: string; etiqueta: string; color?: string }) {
+  return (
+    <div className="rounded-panel border border-hairline bg-surface p-4">
+      <p className="text-[26px] font-bold tracking-tight tabular-nums" style={color ? { color } : undefined}>
+        {valor} <span className="text-[15px] font-semibold text-dim">{sufijo}</span>
+      </p>
+      <p className="mt-0.5 text-[12px] text-dim">{etiqueta}</p>
+    </div>
+  );
+}
+
+/** Chip numerado que amarra la leyenda con el diagrama (misma cifra arriba y
+ * en la barra), para que el texto no parta el Gantt. */
+function Numero({ n }: { n: number }) {
+  return (
+    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-[7px] border border-accent/30 bg-accent/5 text-[11px] font-bold tabular-nums text-accent">
+      {n}
+    </span>
+  );
+}
+
 function descargar(nombre: string, md: string) {
   const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
   const url = URL.createObjectURL(blob);
@@ -208,96 +232,107 @@ export function AnalisisProyecto({
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
             Capa de cumplimiento · <span className="text-accent">modo fechas</span>
           </p>
-          <div className="grid grid-cols-3 gap-3">
-            <div className="rounded-panel border border-done/40 bg-surface p-5">
-              <p className="text-3xl font-bold text-done">
-                {c.aTiempo} <span className="text-lg font-semibold text-dim">· {c.pctATiempo}%</span>
-              </p>
-              <p className="mt-1 text-[12.5px] text-dim">a tiempo</p>
-            </div>
-            <div className="rounded-panel border border-accent/40 bg-surface p-5">
-              <p className="text-3xl font-bold text-accent">
-                {c.adelantadas} <span className="text-lg font-semibold text-dim">· {c.pctAdelantadas}%</span>
-              </p>
-              <p className="mt-1 text-[12.5px] text-dim">adelantadas</p>
-            </div>
-            <div className="rounded-panel border border-warn/40 bg-surface p-5">
-              <p className="text-3xl font-bold text-warn">
-                {c.tardias} <span className="text-lg font-semibold text-dim">· {c.pctTardias}%</span>
-              </p>
-              <p className="mt-1 text-[12.5px] text-dim">tardías</p>
-            </div>
+          {/* Indicadores reorganizados: una fila de 4 tiles compactas (a tiempo,
+              adelantadas, tardías, desviación media), en la misma familia visual
+              que la capa universal. El color vive en el número, no en el borde. */}
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <TileCumpl valor={String(c.aTiempo)} sufijo={`· ${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--done)" />
+            <TileCumpl valor={String(c.adelantadas)} sufijo={`· ${c.pctAdelantadas}%`} etiqueta="adelantadas" color="var(--accent)" />
+            <TileCumpl valor={String(c.tardias)} sufijo={`· ${c.pctTardias}%`} etiqueta="tardías" color="var(--warn)" />
+            <TileCumpl
+              valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`}
+              sufijo="días"
+              etiqueta="desviación media"
+            />
           </div>
 
-          {/* Canon 11: barras gemelas (izq) y desviación + replanificación
-              en paneles apilados (der). */}
-          <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-start">
-            {c.porEtapa.length > 0 && (
-              <div className="flex-1 rounded-panel border border-hairline bg-surface p-5">
-                <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-                  <p className="text-[13px] font-semibold">Planificado vs. real por etapa</p>
-                  <p className="flex gap-4 text-[11.5px] text-dim">
-                    <span className="flex items-center gap-1.5">
-                      <span className="h-2 w-4 rounded-sm" style={{ background: "rgba(77,124,254,0.55)" }} /> base
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <span className="h-2 w-4 rounded-sm bg-done" /> real
-                    </span>
-                  </p>
-                </div>
-                {/* Gantt (corrección de la errata del canon 11): cada barra
-                    ARRANCA donde terminó la anterior y su largo es su duración,
-                    sobre una línea de tiempo común. Así se leen las fronteras y
-                    el corrimiento, no una barra que solo crece. */}
-                <div className="flex flex-col gap-3">
-                  {c.porEtapa.map((e) => {
-                    const tardeEtapa = e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
-                    const izq = (d: number) => `${(d / maxBarra) * 100}%`;
-                    const ancho = (ini: number, fin: number) => `${(Math.max(0, fin - ini) / maxBarra) * 100}%`;
-                    return (
-                      <div key={e.etapa}>
-                        <p className="mb-1 text-[13px]">{nombreEtapa(e.etapa)}</p>
-                        <div className="flex flex-col gap-1">
-                          <div className="relative h-2.5 rounded bg-white/5">
-                            {e.baseFin != null && (
-                              <div
-                                className="absolute top-0 h-full rounded"
-                                style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.55)" }}
-                              />
-                            )}
-                          </div>
-                          <div className="relative h-2.5 rounded bg-white/5">
-                            {e.realFin != null && e.realInicio != null && (
-                              <div
-                                className="absolute top-0 h-full rounded"
-                                style={{
-                                  left: izq(e.realInicio),
-                                  width: ancho(e.realInicio, e.realFin),
-                                  background: tardeEtapa ? "var(--warn)" : "var(--done)",
-                                }}
-                              />
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-                {/* Eje de tiempo: ancla la lectura del inicio y el corrimiento. */}
-                <div className="relative mt-3 h-4 border-t border-hairline">
-                  {[0, 0.25, 0.5, 0.75, 1].map((f) => (
-                    <span
-                      key={f}
-                      className="absolute top-1 -translate-x-1/2 text-[10px] text-dim"
-                      style={{ left: `${f * 100}%` }}
-                    >
-                      {Math.round(f * maxBarra)}d
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
+          {/* Gantt a todo el ancho: leyenda NUMERADA arriba, y abajo el diagrama
+              limpio (número + barras) con cuadrícula sutil. El texto ya no parte
+              el diagrama: la cifra amarra cada actividad con su barra. */}
+          {c.porEtapa.length > 0 &&
+            (() => {
+              const TICKS = [0, 0.25, 0.5, 0.75, 1];
+              const izq = (d: number) => `${(d / maxBarra) * 100}%`;
+              const ancho = (ini: number, fin: number) => `${(Math.max(0, fin - ini) / maxBarra) * 100}%`;
+              return (
+                <div className="mt-6 rounded-panel border border-hairline bg-surface p-5">
+                  <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+                    <p className="text-[13px] font-semibold">Planificado vs. real por etapa</p>
+                    <p className="flex gap-4 text-[11.5px] text-dim">
+                      <span className="flex items-center gap-1.5">
+                        <span className="h-2 w-4 rounded-sm" style={{ background: "rgba(77,124,254,0.55)" }} /> base
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <span className="h-2 w-4 rounded-sm bg-done" /> real
+                      </span>
+                    </p>
+                  </div>
 
+                  {/* Leyenda numerada: los nombres, una vez, arriba. */}
+                  <ol className="mb-5 flex flex-col gap-1.5">
+                    {c.porEtapa.map((e, i) => (
+                      <li key={e.etapa} className="flex items-start gap-2.5 text-[12.5px] text-dim">
+                        <Numero n={i + 1} />
+                        <span className="pt-0.5 [text-wrap:pretty]">{nombreEtapa(e.etapa)}</span>
+                      </li>
+                    ))}
+                  </ol>
+
+                  {/* Diagrama: solo números + barras, con cuadrícula detrás. */}
+                  <div className="relative">
+                    <div className="pointer-events-none absolute inset-y-0 left-[34px] right-0">
+                      {TICKS.map((f) => (
+                        <span key={f} className="absolute inset-y-0 w-px bg-hairline" style={{ left: `${f * 100}%` }} />
+                      ))}
+                    </div>
+                    <div className="relative flex flex-col gap-2.5">
+                      {c.porEtapa.map((e, i) => {
+                        const tardeEtapa = e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
+                        return (
+                          <div key={e.etapa} className="flex items-center gap-2.5">
+                            <Numero n={i + 1} />
+                            <div className="relative h-[22px] flex-1">
+                              {e.baseFin != null && (
+                                <div
+                                  className="absolute top-0 h-2.5 rounded"
+                                  style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.55)" }}
+                                />
+                              )}
+                              {e.realFin != null && e.realInicio != null && (
+                                <div
+                                  className="absolute bottom-0 h-2.5 rounded"
+                                  style={{
+                                    left: izq(e.realInicio),
+                                    width: ancho(e.realInicio, e.realFin),
+                                    background: tardeEtapa ? "var(--warn)" : "var(--done)",
+                                  }}
+                                />
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Eje de tiempo, alineado al área de barras. */}
+                  <div className="relative ml-[34px] mt-2 h-4 border-t border-hairline">
+                    {TICKS.map((f) => (
+                      <span
+                        key={f}
+                        className="absolute top-1 -translate-x-1/2 text-[10px] text-dim"
+                        style={{ left: `${f * 100}%` }}
+                      >
+                        {Math.round(f * maxBarra)}d
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
+          {/* Desviación en palabras + cumplimiento por mundo, debajo del diagrama. */}
+          <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-start">
             <div className="flex flex-col gap-4 lg:w-[340px] lg:shrink-0">
               {/* Fase 4.1 (V3b): la fila extra que admite el canon 11 — el
                   cumplimiento por dominio. Solo aparece cuando hay algún mundo
@@ -331,15 +366,6 @@ export function AnalisisProyecto({
                   </p>
                 </div>
               )}
-              <div className="rounded-panel border border-hairline bg-surface p-5">
-                <p className="text-[15px]">
-                  <span className="text-2xl font-bold text-ink">
-                    {c.desviacionMediaDias > 0 ? "+" : ""}
-                    {c.desviacionMediaDias.toFixed(1)}
-                  </span>{" "}
-                  <span className="text-dim">días · desviación media sobre lo planificado</span>
-                </p>
-              </div>
               {c.replanificaciones > 0 && (
                 <div className="rounded-panel border border-hairline bg-surface p-5">
                   <p className="text-[14px] font-semibold">

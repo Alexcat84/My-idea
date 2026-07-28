@@ -723,7 +723,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         {/* ETAPA 2: el saldo, discreto (canon 07). Solo con cuenta real. */}
         <ChipSaldo />
         <div className="hidden md:block">
-          <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} />
+          <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} realizada={Boolean(realizadaAt)} />
         </div>
         <span
           className={
