@@ -56,6 +56,33 @@ function BotonFormato({
   );
 }
 
+/** Una hoja: cada fase del camino deja su documento. */
+function IconoHoja() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path d="M14 3v5h5M8.5 13h7M8.5 16.5h5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/** Hojas apiladas: el expediente es la compilación de todo el camino. */
+function IconoExpediente() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M8 7V5a2 2 0 0 1 2-2h5l4 4v9a2 2 0 0 1-2 2h-2" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M15 3v5h4" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      <rect x="3" y="8" width="11" height="13" rx="2" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M6 12.5h5M6 16h3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function Descargas({
   projectId,
   nombreIdea,
@@ -146,11 +173,25 @@ export function Descargas({
               <div
                 key={doc.clave}
                 className={
-                  "flex flex-wrap items-center gap-x-5 gap-y-3 rounded-panel bg-surface px-5 py-4 " +
-                  (esExpediente ? "border border-accent/40" : "border border-hairline")
+                  "flex flex-wrap items-center gap-x-4 gap-y-3 rounded-panel bg-surface px-5 py-4 transition-colors " +
+                  (esExpediente
+                    ? "border border-accent/40 hover:border-accent/60"
+                    : "border border-hairline hover:border-white/20")
                 }
               >
-                <div className="min-w-[200px] flex-1">
+                {/* Icono de documento: una hoja para cada fase; el expediente
+                    lleva hojas apiladas (es la compilación de todo). Tinte azul
+                    en el expediente, neutro en los ciclos. */}
+                <span
+                  className={
+                    "grid h-11 w-11 shrink-0 place-items-center rounded-[10px] " +
+                    (esExpediente ? "bg-accent/10 text-accent" : "bg-surface-2 text-dim")
+                  }
+                  aria-hidden
+                >
+                  {esExpediente ? <IconoExpediente /> : <IconoHoja />}
+                </span>
+                <div className="min-w-[180px] flex-1">
                   <p className="text-[15px] font-semibold leading-snug">{doc.titulo}</p>
                   <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
                   {doc.fecha && (
