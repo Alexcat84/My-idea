@@ -1480,29 +1480,37 @@ export function ManosALaObra({
           header. En móvil este aside cae debajo del checklist (posición del
           canon para análisis/ritmo); "Contar qué pasó" ya subió arriba. */}
       <aside className="flex flex-col gap-6">
-        {/* Fase 3.8 §6 — puerta al análisis del proyecto */}
+        {/* Fase 3.8 §6 — puerta al análisis del proyecto. La acción vive en un
+            BOTÓN abajo (no la tarjeta entera), para que se lea como accionable
+            y no como panel informativo (igual que "Marcar como realizada"). */}
         {cCore.total > 0 && (
-          <button
-            onClick={onVerAnalisis}
-            className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-left text-[13px] font-semibold hover:border-accent/60"
-          >
-            Ver análisis del proyecto
-            <span className="mt-0.5 block text-[12px] font-normal text-dim">
+          <div className="rounded-panel border border-hairline bg-surface p-5">
+            <p className="text-[14px] font-semibold">Análisis del proyecto</p>
+            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
               Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste.
-            </span>
-          </button>
+            </p>
+            <button
+              onClick={onVerAnalisis}
+              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+            >
+              Ver análisis
+            </button>
+          </div>
         )}
 
         {/* Fase 4.6 — llevarse el trabajo: un documento por fase del camino */}
-        <button
-          onClick={onVerDocumentos}
-          className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-left text-[13px] font-semibold hover:border-accent/60"
-        >
-          Tus documentos
-          <span className="mt-0.5 block text-[12px] font-normal text-dim">
+        <div className="rounded-panel border border-hairline bg-surface p-5">
+          <p className="text-[14px] font-semibold">Tus documentos</p>
+          <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
             Tu plan, cada seguimiento y el expediente completo, en .md o en PDF.
-          </span>
-        </button>
+          </p>
+          <button
+            onClick={onVerDocumentos}
+            className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+          >
+            Abrir documentos
+          </button>
+        </div>
 
         {/* Fase 3.8 §5 — marcar la idea como realizada (nace el proyecto) */}
         {cCore.total > 0 && (

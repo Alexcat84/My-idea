@@ -10,6 +10,19 @@ va al final.
 
 ---
 
+## 2026-07-21 — El login reanuda donde ibas
+- Tras iniciar sesión, el usuario vuelve al punto exacto donde se quedó (idea +
+  vista), no al home. Copy "seguimos justo donde quedaste".
+
+## 2026-07-22 — El dictado por voz deja de duplicar
+- El campo con voz ya no repite ni arrastra la respuesta anterior al dictar de
+  nuevo. Afecta a todos los `CampoConVoz` (entrevista, cierre, motivos).
+
+## 2026-07-22 — Recorrido persistido + Tus Números en grilla + zona de peligro
+- El recorrido de la idea se guarda y se re-abre donde iba. "Tus Números" pasó a
+  una **grilla** legible. La **zona de peligro** (borrar idea) quedó separada y
+  con su color de aviso. (Base del PDF del plan que sigue abajo.)
+
 ## 2026-07-23 — PDF del plan visual + pie identificativo
 - El "Descargar PDF" del plan conserva la identidad (azul piensa, verde ejecuta,
   puntos con su línea) en papel: se redefinen los tokens para papel en vez de
@@ -70,3 +83,20 @@ va al final.
   nombres, una vez); abajo el **diagrama limpio** (número + barras base/real)
   con **cuadrícula sutil** y eje de tiempo. El texto ya no parte el diagrama.
   Ref: `gantt_v2_app.png` (+`_380`).
+
+## 2026-07-27 — Stepper de línea continua + 6.º hito "Realizado" + tarjetas accionables
+- **Stepper (header de la idea + mini del home):** reescrito como **línea
+  continua con los puntos al ras** (riel de fondo + tramo recorrido relleno +
+  puntos sentados SOBRE la línea, tapándola). Muere el hueco histórico entre el
+  círculo y la línea (el reclamo que Design no había resuelto). Referencia del
+  fundador: el patrón flexyui.
+- **Nuevo 6.º hito "Realizado"** al final del viaje (antes eran 5). Es la
+  **celebración**: el **verde de "terminado" solo se enciende ahí**. Mientras el
+  usuario trabaja en Manos a la Obra, el nodo Realizado queda **gris** — el viaje
+  aún no terminó (antes el stepper se veía "concluido" en verde a mitad de
+  camino). Manos a la Obra sigue en verde vivo (ejecución), pero ya no es el
+  final. Refs: `stepper_v2_manos_app.png`, `stepper_v2_home_app.png` (+`_380`).
+- **Tarjetas del aside de Manos a la Obra** ("Análisis del proyecto", "Tus
+  documentos"): antes la tarjeta entera era el botón y parecía informativa.
+  Ahora llevan su **botón de acción abajo** ("Ver análisis" / "Abrir
+  documentos"), como la de "Marcar como realizada". Ref: `stepper_v2_manos_app.png`.
