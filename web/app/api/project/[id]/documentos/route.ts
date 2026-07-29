@@ -14,8 +14,10 @@ import { NextResponse } from "next/server";
 import { calcularAnalytics, informeMarkdown } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
+import { bitacoraCuerpo, bitacoraMarkdown, construirBitacora, type EventoBita } from "@/lib/bitacoraCliente";
 import { obtenerProyecto } from "@/lib/db";
 import {
+  CLAVE_BITACORA,
   CLAVE_EXPEDIENTE,
   cicloMarkdown,
   expedienteMarkdown,
@@ -41,7 +43,9 @@ type FilaPlan = {
   contenido_md: string;
   created_at: string;
   dominio: string | null;
+  baseline_confirmada_at: string | null;
 };
+type FilaSesion = { id: string; created_at: string; tipo: string; dominio: string | null };
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
@@ -58,12 +62,16 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
   }
 
-  const { data: sesiones } = await supabase.from("sessions").select("id").eq("project_id", projectId);
-  const idsSesiones = ((sesiones ?? []) as Array<{ id: string }>).map((s) => s.id);
+  const { data: sesionesRaw } = await supabase
+    .from("sessions")
+    .select("id, created_at, tipo, dominio")
+    .eq("project_id", projectId);
+  const sesiones = (sesionesRaw ?? []) as FilaSesion[];
+  const idsSesiones = sesiones.map((s) => s.id);
   const { data: planesRaw } = idsSesiones.length
     ? await supabase
         .from("plans")
-        .select("id, etiqueta, contenido_md, created_at, dominio")
+        .select("id, etiqueta, contenido_md, created_at, dominio, baseline_confirmada_at")
         .in("session_id", idsSesiones)
         .order("created_at", { ascending: true })
     : { data: [] };
@@ -82,10 +90,60 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
   const realizadaAt = proyecto.realizada_at ?? null;
+  const creadaAt = proyecto.created_at; // capturado aquí para el closure de abajo
+
+  const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
+  const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
+
+  // Fase 4.8: arma las entradas de la bitácora (lector puro). Carga el checklist
+  // (id + texto + completed_at, todos los dominios) y la bitácora de eventos; el
+  // resto ya está cargado. Se usa en el documento "Tu bitácora" y como sección
+  // final del expediente.
+  async function entradasBitacora() {
+    const { data: itemsB } = await supabase
+      .from("checklist_items")
+      .select("id, texto, completed_at")
+      .eq("project_id", projectId);
+    let eventos: EventoBita[] = [];
+    try {
+      const { data, error } = await supabase
+        .from("project_bitacora")
+        .select("tipo, payload, created_at")
+        .eq("project_id", projectId);
+      if (!error) eventos = (data ?? []) as EventoBita[];
+    } catch {
+      eventos = [];
+    }
+    return construirBitacora({
+      nombreIdea: nombre,
+      creadaAt,
+      realizadaAt,
+      sesiones,
+      planes,
+      items: ((itemsB ?? []) as Array<{ id: string; texto: string; completed_at: string | null }>).map((i) => ({
+        id: i.id,
+        texto: i.texto,
+        completed_at: i.completed_at,
+      })),
+      eventos,
+      nombreMundo,
+      generadoAt: new Date().toISOString(),
+    });
+  }
 
   const doc = new URL(request.url).searchParams.get("doc");
   if (!doc) {
     return NextResponse.json({ nombre, documentos: indiceDeDocumentos(ciclos, realizadaAt) });
+  }
+
+  if (doc === CLAVE_BITACORA) {
+    const generado = new Date().toISOString();
+    return NextResponse.json({
+      titulo: "Tu bitácora",
+      nombre,
+      archivo: nombreArchivo(nombre, "Tu bitacora"),
+      markdown: bitacoraMarkdown(nombre, await entradasBitacora(), generado),
+    });
   }
 
   if (doc !== CLAVE_EXPEDIENTE) {
@@ -144,9 +202,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       noAplicaMotivo: i.no_aplica_motivo ?? null,
     }));
 
-  const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
-  const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
-
   let unlocks: Array<{ dominio: string; completado_at?: string | null }> = [];
   try {
     const { data, error } = await supabase
@@ -194,6 +249,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     // El informe entero solo tiene sentido cuando hay camino andado; si no,
     // el expediente ya cuenta lo mismo con menos ruido.
     informeMd: acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo) : null,
+    // Fase 4.8: la secuencia del viaje cierra el expediente.
+    bitacoraMd: bitacoraCuerpo(await entradasBitacora(), 3).join("\n"),
     generadoAt: ahora,
   });
 

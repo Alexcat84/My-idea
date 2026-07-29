@@ -44,7 +44,7 @@ export interface MundoExpediente {
 export interface DocumentoIndice {
   /** identificador estable que la UI manda de vuelta para pedir el contenido */
   clave: string;
-  tipo: "ciclo" | "expediente";
+  tipo: "ciclo" | "expediente" | "bitacora";
   titulo: string;
   subtitulo: string;
   /** ISO; null solo si el documento no cuelga de una fecha concreta */
@@ -64,6 +64,9 @@ export interface DatosExpediente {
   mundos: MundoExpediente[];
   /** el informe de analytics.ts, ya calculado por quien llama */
   informeMd: string | null;
+  /** Fase 4.8: el CUERPO de la bitácora (secuencia por día, sin portada), ya
+   * armado por bitacoraCliente. Entra como la sección FINAL del expediente. */
+  bitacoraMd: string | null;
   /** ISO del momento de la descarga (inyectable para tests deterministas) */
   generadoAt: string;
 }
@@ -71,6 +74,7 @@ export interface DatosExpediente {
 /** Clave del documento de un ciclo. La UI la trata como opaca. */
 export const claveDeCiclo = (planId: string) => `ciclo:${planId}`;
 export const CLAVE_EXPEDIENTE = "expediente";
+export const CLAVE_BITACORA = "bitacora";
 
 /**
  * Baja de nivel los títulos de un markdown incrustado: un plan trae su propio
@@ -133,9 +137,16 @@ export function indiceDeDocumentos(ciclos: CicloExpediente[], realizadaAt: strin
     subtitulo,
     fecha: ciclo.createdAt,
   }));
-  // El expediente existe desde el primer plan: antes de eso no hay desarrollo
-  // que contar, y ofrecer una descarga vacía sería prometer de más.
+  // El expediente y la bitácora existen desde el primer plan: antes no hay
+  // desarrollo que contar, y ofrecer una descarga vacía sería prometer de más.
   if (docs.length > 0) {
+    docs.push({
+      clave: CLAVE_BITACORA,
+      tipo: "bitacora",
+      titulo: "Tu bitácora",
+      subtitulo: "La historia de tu idea, paso a paso, del inicio a hoy",
+      fecha: null,
+    });
     docs.push({
       clave: CLAVE_EXPEDIENTE,
       tipo: "expediente",
@@ -306,6 +317,14 @@ export function expedienteMarkdown(d: DatosExpediente): string {
     l.push("## Por qué la cerraste aquí");
     l.push("");
     l.push(`> ${d.cierreMotivo.replace(/\s+/g, " ").trim()}`);
+    l.push("");
+  }
+
+  // Fase 4.8: la secuencia del viaje cierra el expediente (su sección final).
+  if (d.bitacoraMd && d.bitacoraMd.trim()) {
+    l.push("## La secuencia de tu viaje");
+    l.push("");
+    l.push(d.bitacoraMd.trim());
     l.push("");
   }
 

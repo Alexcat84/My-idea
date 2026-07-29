@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  CLAVE_BITACORA,
   CLAVE_EXPEDIENTE,
   claveDeCiclo,
   cicloMarkdown,
@@ -70,7 +71,12 @@ describe("indiceDeDocumentos", () => {
       [ciclo("p1", "completo", "2026-03-01T12:00:00Z"), ciclo("p2", "seguimiento", "2026-03-20T12:00:00Z")],
       null
     );
-    expect(docs.map((d) => d.clave)).toEqual([claveDeCiclo("p1"), claveDeCiclo("p2"), CLAVE_EXPEDIENTE]);
+    expect(docs.map((d) => d.clave)).toEqual([
+      claveDeCiclo("p1"),
+      claveDeCiclo("p2"),
+      CLAVE_BITACORA,
+      CLAVE_EXPEDIENTE,
+    ]);
     expect(docs.at(-1)!.subtitulo).toContain("hasta hoy");
   });
 
@@ -103,6 +109,7 @@ const datos = (extra: Partial<DatosExpediente> = {}): DatosExpediente => ({
   numerosMd: "# Tus Números\n\npunto de equilibrio",
   mundos: [{ nombre: "Riesgos Bajo Control", contenidoMd: "# Riesgos\n\ncuerpo", completadoAt: null }],
   informeMd: "# Análisis\n\n## Lo que construiste\ndatos",
+  bitacoraMd: "### 1 de marzo de 2026\n\n- Encendiste la chispa y escribiste tu idea.",
   generadoAt: "2026-05-01T12:00:00Z",
   ...extra,
 });
@@ -119,6 +126,7 @@ describe("expedienteMarkdown", () => {
       "## Tus Números",
       "## Riesgos Bajo Control",
       "## Tu progreso hasta aquí",
+      "## La secuencia de tu viaje",
     ];
     let cursor = -1;
     for (const seccion of orden) {
