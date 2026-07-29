@@ -168,30 +168,44 @@ export function DocumentoPapel({
       style={oculto ? { display: "none" } : undefined}
       className={oculto ? undefined : "min-w-0 flex-1"}
     >
-      {/* data-cuerpo-papel: la hoja de impresión limita la columna de lectura a
-          600px (Design), aunque la hoja tenga más ancho útil. En pantalla no
-          restringe (el ancho lo manda el contenedor). */}
-      <div data-cuerpo-papel>
-        <div className="mb-3 flex items-center gap-2">
-          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-          <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{titulo}</span>
-        </div>
-        {/* Sin data-prosa-plan a propósito: ese marcador fuerza tinta plana
-            (existe para la prosa gris de PANTALLA del plan) y aquí borraría el
-            azul de los títulos, los puntos y los números. */}
-        <ReactMarkdown remarkPlugins={[remarkGfm]} components={COMPONENTES}>
-          {markdown}
-        </ReactMarkdown>
-      </div>
-
-      {/* Pie repetido en cada página: identifica de quién es el documento y
-          reemplaza el pie codificado del navegador (URL y fecha). */}
-      <div data-print-pie className="hidden">
-        <span>
-          {nombreIdea} · {titulo}
-        </span>
-        <span>My Idea</span>
-      </div>
+      {/* El documento va dentro de una TABLA con <tfoot>: en impresión el
+          navegador repite el tfoot en CADA página Y le RESERVA su alto, así el
+          pie nunca se monta sobre el texto (el `position:fixed` anterior sí lo
+          tapaba). En pantalla la tabla es un bloque normal. */}
+      <table data-print-tabla className="w-full border-collapse">
+        <tfoot data-print-pie className="hidden">
+          <tr>
+            <td className="p-0">
+              <div className="pie-fila">
+                <span>
+                  {nombreIdea} · {titulo}
+                </span>
+                <span>My Idea</span>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td className="p-0 align-top">
+              {/* data-cuerpo-papel: la hoja de impresión limita la columna de
+                  lectura a 600px (Design), aunque la hoja tenga más ancho útil. */}
+              <div data-cuerpo-papel>
+                <div className="mb-3 flex items-center gap-2">
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{titulo}</span>
+                </div>
+                {/* Sin data-prosa-plan a propósito: ese marcador fuerza tinta
+                    plana (prosa gris de PANTALLA) y aquí borraría el azul de los
+                    títulos, los puntos y los números. */}
+                <ReactMarkdown remarkPlugins={[remarkGfm]} components={COMPONENTES}>
+                  {markdown}
+                </ReactMarkdown>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -194,10 +194,10 @@ summary::-webkit-details-marker {
      fijo (bottom:0) se montaba sobre el texto de las páginas intermedias. El
      margen inferior (20mm) reserva la banda donde vive el pie. */
   @page {
-    /* Top y BOTTOM por página (el bottom reserva la banda del pie). Los lados
-       los pone el padding del elemento, para no depender de cómo el navegador
-       ancla el bloque absoluto respecto a los márgenes de @page. */
-    margin: 15mm 0 20mm 0;
+    /* Solo el respiro de los bordes de la hoja (arriba/abajo). El pie ya no es
+       un bloque fijo que haya que esquivar: vive en un <tfoot> que reserva su
+       propio alto por página. Los lados los pone el padding del elemento. */
+    margin: 14mm 0;
   }
 
   :root {
@@ -311,22 +311,32 @@ summary::-webkit-details-marker {
     color: var(--text) !important;
   }
 
-  /* Nuestro pie, repetido en cada página: identifica la idea. */
+  /* Nuestro pie, en un <tfoot>: el navegador lo repite en CADA página y le
+     RESERVA el alto, así jamás se monta sobre el texto (el `position:fixed`
+     anterior sí lo tapaba en las páginas intermedias). */
   [data-print-pie] {
-    display: flex !important;
+    display: table-footer-group !important;
     visibility: visible !important;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  }
+  [data-print-pie] .pie-fila {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 6mm 14mm;
+    margin-top: 8mm;
+    padding-top: 3mm;
     font-size: 9pt;
     color: #6b6e75; /* tinta terciaria del papel (rótulos, pie, metadatos) */
     border-top: 1px solid var(--border);
-    background: #fff;
+  }
+  /* La tabla contenedora es solo un andamio de paginación: sin bordes ni fondo,
+     ancho completo. Las celdas no aportan padding (lo pone la hoja). */
+  [data-print-tabla],
+  [data-print-tabla] > tbody > tr > td,
+  [data-print-tabla] > tfoot > tr > td {
+    border: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
   }
 
   /* Estructura: títulos que no quedan huérfanos y bloques que no se parten. */
