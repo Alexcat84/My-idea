@@ -27,7 +27,7 @@ import remarkGfm from "remark-gfm";
 const RIEL_CLASES =
   "relative pl-6 " +
   "before:pointer-events-none before:absolute before:left-[8px] before:top-2 before:bottom-2 " +
-  "before:w-[2px] before:rounded-full before:bg-[rgba(77,124,254,0.45)] before:content-[''] " +
+  "before:w-[2px] before:rounded-full before:bg-accent/40 before:content-[''] " +
   "[&>li]:relative " +
   "[&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[20px] [&>li]:before:top-[6px] " +
   "[&>li]:before:h-2.5 [&>li]:before:w-2.5 [&>li]:before:rounded-full [&>li]:before:bg-accent";
@@ -168,16 +168,21 @@ export function DocumentoPapel({
       style={oculto ? { display: "none" } : undefined}
       className={oculto ? undefined : "min-w-0 flex-1"}
     >
-      <div className="mb-3 flex items-center gap-2">
-        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-        <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{titulo}</span>
+      {/* data-cuerpo-papel: la hoja de impresión limita la columna de lectura a
+          600px (Design), aunque la hoja tenga más ancho útil. En pantalla no
+          restringe (el ancho lo manda el contenedor). */}
+      <div data-cuerpo-papel>
+        <div className="mb-3 flex items-center gap-2">
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{titulo}</span>
+        </div>
+        {/* Sin data-prosa-plan a propósito: ese marcador fuerza tinta plana
+            (existe para la prosa gris de PANTALLA del plan) y aquí borraría el
+            azul de los títulos, los puntos y los números. */}
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={COMPONENTES}>
+          {markdown}
+        </ReactMarkdown>
       </div>
-      {/* Sin data-prosa-plan a propósito: ese marcador fuerza tinta plana
-          (existe para la prosa gris de PANTALLA del plan) y aquí borraría el
-          azul de los títulos, los puntos y los números. */}
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={COMPONENTES}>
-        {markdown}
-      </ReactMarkdown>
 
       {/* Pie repetido en cada página: identifica de quién es el documento y
           reemplaza el pie codificado del navegador (URL y fecha). */}
