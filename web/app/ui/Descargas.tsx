@@ -47,10 +47,10 @@ function BotonFormato({
       onClick={onClick}
       disabled={ocupado}
       className={
-        "rounded-[9px] border px-3.5 py-2 text-[12.5px] font-semibold disabled:opacity-50 " +
+        "rounded-[10px] border text-[12.5px] disabled:opacity-50 " +
         (marcado
-          ? "border-accent/45 bg-accent/10 text-accent hover:bg-accent/20"
-          : "border-hairline text-dim hover:border-accent/60 hover:text-ink")
+          ? "border-accent/50 bg-accent/15 px-[18px] py-[9px] font-bold text-accent hover:bg-accent/25"
+          : "border-white/[0.14] px-4 py-[9px] font-semibold text-dim hover:border-accent/60 hover:text-ink")
       }
     >
       {ocupado ? "Preparando..." : children}
@@ -69,6 +69,23 @@ function IconoHoja() {
         strokeLinejoin="round"
       />
       <path d="M14 3v5h5M8.5 13h7M8.5 16.5h5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/** Una hoja con flecha circular: cada Seguimiento recalcula el plan. */
+function IconoSeguimiento() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path d="M14 3v5h5" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M9 15.5a3 3 0 1 0 1-2.3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10 11v2.2h2.2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -184,33 +201,43 @@ export function Descargas({
         <div className="mt-7 flex flex-col gap-3">
           {documentos?.map((doc) => {
             const esExpediente = doc.tipo === "expediente";
+            const esSeguimiento = /^seguimiento/i.test(doc.titulo);
             return (
               <div
                 key={doc.clave}
                 className={
-                  "flex flex-wrap items-center gap-x-4 gap-y-3 rounded-panel bg-surface px-5 py-4 transition-colors " +
+                  "flex flex-wrap items-center gap-x-5 gap-y-3 rounded-[14px] bg-surface px-6 py-5 transition-colors hover:bg-[#141419] " +
                   (esExpediente
-                    ? "border border-accent/40 hover:border-accent/60"
-                    : "border border-hairline hover:border-white/20")
+                    ? "border border-accent/[0.28] hover:border-accent/[0.34]"
+                    : "border border-hairline hover:border-accent/[0.34]")
                 }
               >
-                {/* Icono de documento CON COLOR (más visual): una hoja para cada
-                    fase (azul), el expediente con hojas apiladas y tinte más
-                    fuerte (es la compilación de todo el camino). */}
+                {/* Icono por fase (trazo 1.6px) en chip azul: hoja=Tu Plan, hoja
+                    con flecha=Seguimiento, línea de tiempo=bitácora, hojas
+                    apiladas=Expediente. El Expediente es el único con chip azul
+                    pleno y trazo oscuro, porque contiene a los demás. */}
                 <span
                   className={
-                    "grid h-11 w-11 shrink-0 place-items-center rounded-[10px] " +
-                    (esExpediente ? "bg-accent text-white" : "bg-accent/12 text-accent")
+                    "grid h-[52px] w-[52px] shrink-0 place-items-center rounded-[12px] " +
+                    (esExpediente ? "bg-accent text-[#07070A]" : "bg-accent/12 text-[#7B9DFF]")
                   }
                   aria-hidden
                 >
-                  {esExpediente ? <IconoExpediente /> : doc.tipo === "bitacora" ? <IconoBitacora /> : <IconoHoja />}
+                  {esExpediente ? (
+                    <IconoExpediente />
+                  ) : doc.tipo === "bitacora" ? (
+                    <IconoBitacora />
+                  ) : esSeguimiento ? (
+                    <IconoSeguimiento />
+                  ) : (
+                    <IconoHoja />
+                  )}
                 </span>
                 <div className="min-w-[180px] flex-1">
                   <p className="text-[15px] font-semibold leading-snug">{doc.titulo}</p>
                   <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
                   {doc.fecha && (
-                    <p className="mt-1.5 text-[12px] text-dim">
+                    <p className="mt-1.5 text-[12px] tabular-nums text-[#6F7076]">
                       {esExpediente ? "Cerrado el " : ""}
                       {fechaHumanaConAno(doc.fecha)}
                     </p>

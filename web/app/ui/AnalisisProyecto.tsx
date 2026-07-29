@@ -33,8 +33,8 @@ const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries([
 
 function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-panel border border-hairline bg-surface px-4 py-6 text-center">
-      <p className="text-[34px] font-bold leading-none tracking-tight tabular-nums">{valor}</p>
+    <div className="flex flex-col items-center justify-center rounded-[14px] border border-hairline bg-surface-3 px-4 py-6 text-center">
+      <p className="text-[38px] font-extrabold leading-none tracking-tight tabular-nums">{valor}</p>
       <p className="mt-2 text-[12px] text-dim [text-wrap:balance]">{etiqueta}</p>
     </div>
   );
@@ -45,8 +45,8 @@ function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
  * porcentaje o la unidad y la etiqueta. Misma familia que la capa universal. */
 function TileCumpl({ valor, sufijo, etiqueta, color }: { valor: string; sufijo: string; etiqueta: string; color?: string }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-panel border border-hairline bg-surface px-3 py-5 text-center">
-      <p className="text-[30px] font-bold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
+    <div className="flex flex-col items-center justify-center rounded-[14px] border border-hairline bg-surface-3 px-3 py-5 text-center">
+      <p className="text-[34px] font-extrabold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
         {valor}
       </p>
       <p className="mt-1.5 text-[12px] font-semibold text-dim tabular-nums">{sufijo}</p>
@@ -181,20 +181,30 @@ export function AnalisisProyecto({
               <div className="flex-1 rounded-panel border border-hairline bg-surface p-5">
                 <p className="mb-4 text-[13px] font-semibold">Duración real por etapa</p>
                 <div className="flex flex-col gap-3.5">
-                  {u.duracionPorEtapa.map((e) => (
-                    <div key={e.etapa}>
-                      <div className="mb-1.5 flex items-baseline justify-between gap-3">
-                        <span className="text-[14px]">{nombreEtapa(e.etapa)}</span>
-                        <span className="text-[13px] font-semibold text-dim">{e.dias} días</span>
+                  {u.duracionPorEtapa.map((e) => {
+                    // La etapa que MÁS se estiró va en ámbar (barra + cifra), como
+                    // el guardián que avisa; las demás en azul. Nunca rojo.
+                    const masLarga = e.dias === maxDur;
+                    return (
+                      <div key={e.etapa}>
+                        <div className="mb-1.5 flex items-baseline justify-between gap-3">
+                          <span className="text-[14px]">{nombreEtapa(e.etapa)}</span>
+                          <span
+                            className="text-[13px] font-semibold tabular-nums"
+                            style={{ color: masLarga ? "var(--warn)" : "var(--text-dim)" }}
+                          >
+                            {e.dias} días
+                          </span>
+                        </div>
+                        <div className="h-[7px] overflow-hidden rounded bg-white/[0.08]">
+                          <div
+                            className="h-full rounded"
+                            style={{ width: `${(e.dias / maxDur) * 100}%`, background: masLarga ? "var(--warn)" : "var(--accent)" }}
+                          />
+                        </div>
                       </div>
-                      <div className="h-2 overflow-hidden rounded bg-white/5">
-                        <div
-                          className="h-full rounded"
-                          style={{ width: `${(e.dias / maxDur) * 100}%`, background: "var(--accent)" }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}

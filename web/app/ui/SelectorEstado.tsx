@@ -57,36 +57,36 @@ export function IconoEstado({ estado, tamano = 22 }: { estado: ChecklistEstado; 
   if (estado === "en_proceso") {
     return (
       <span
-        className="box-border flex shrink-0 overflow-hidden rounded-full border-[1.5px] border-done/70"
+        className="box-border flex shrink-0 overflow-hidden rounded-full border-[1.5px] border-done"
         style={{ width: px, height: px }}
       >
-        <span className="h-full w-1/2 bg-done/70" />
+        <span className="h-full w-1/2 bg-done" />
       </span>
     );
   }
   if (estado === "empezado") {
     return (
       <span
-        className="box-border flex shrink-0 items-center justify-center rounded-full border-[1.5px] border-done/70"
+        className="box-border flex shrink-0 items-center justify-center rounded-full border-[1.5px] border-done"
         style={{ width: px, height: px }}
       >
-        <span className="rounded-full bg-done/70" style={{ width: tamano * 0.27, height: tamano * 0.27 }} />
+        <span className="rounded-full bg-done" style={{ width: tamano * 0.32, height: tamano * 0.32 }} />
       </span>
     );
   }
   if (estado === "no_aplica") {
     return (
       <span
-        className="box-border flex shrink-0 items-center justify-center rounded-full border-[1.5px] border-dim"
+        className="box-border flex shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#5A5B62]"
         style={{ width: px, height: px }}
       >
-        <span className="block rounded-full bg-dim" style={{ width: tamano * 0.5, height: "1.5px" }} />
+        <span className="block rounded-full bg-[#8A8B92]" style={{ width: tamano * 0.5, height: "1.5px" }} />
       </span>
     );
   }
   return (
     <span
-      className="box-border block shrink-0 rounded-full border-[1.5px] border-white/20"
+      className="box-border block shrink-0 rounded-full border-[1.5px] border-white/30"
       style={{ width: px, height: px }}
     />
   );
@@ -166,7 +166,7 @@ export function SelectorEstado({
           <div
             role="menu"
             className={
-              "z-50 border border-hairline bg-surface shadow-2xl " +
+              "z-50 border border-white/[0.14] bg-surface-2 shadow-[0_18px_40px_rgba(0,0,0,0.6)] " +
               "fixed inset-x-0 bottom-0 rounded-t-[18px] p-2 pb-4 " +
               "sm:absolute sm:inset-x-auto sm:bottom-auto sm:left-0 sm:top-full sm:mt-2 sm:w-[268px] sm:rounded-[14px] sm:p-1.5 sm:pb-1.5"
             }
@@ -191,18 +191,21 @@ export function SelectorEstado({
                       onClick={() => elegir(e)}
                       disabled={ocupado}
                       className={
-                        "flex w-full items-center gap-3 rounded-[10px] px-3 py-2.5 text-left text-[14px] disabled:opacity-50 " +
+                        "flex min-h-[40px] w-full items-center gap-3 rounded-[10px] px-3 py-2.5 text-left text-[14px] disabled:opacity-50 " +
                         (rapida
-                          ? "bg-done-soft font-semibold text-done hover:bg-done-soft"
+                          ? "bg-done/[0.12] font-semibold text-done hover:bg-done/[0.12]"
                           : actual
-                            ? "bg-surface-2 font-semibold"
-                            : "hover:bg-surface-2")
+                            ? "bg-white/[0.06] font-semibold"
+                            : "hover:bg-white/[0.06]")
                       }
                     >
                       <IconoEstado estado={e} tamano={18} />
                       <span className="flex-1 capitalize">{ETIQUETA_ESTADO[e]}</span>
+                      {/* El check del estado VIGENTE va SIEMPRE en azul (Design):
+                          el azul dice "esto es lo elegido"; el verde vive solo
+                          dentro del icono de hecha, no en la marca de selección. */}
                       {actual && (
-                        <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className={rapida ? "text-done" : "text-accent"}>
+                        <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="text-accent">
                           <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="currentColor" strokeWidth="2" fill="none" />
                         </svg>
                       )}

@@ -221,7 +221,7 @@ function RitmoFila({ icono, etiqueta, valor, color }: { icono: React.ReactNode; 
   const chip = { accent: "bg-accent/12 text-accent", done: "bg-done/12 text-done", warn: "bg-warn/12 text-warn" }[color];
   return (
     <div className="flex items-center gap-3 rounded-[10px] border border-hairline bg-surface-2/40 px-3 py-2.5">
-      <span className={"grid h-8 w-8 shrink-0 place-items-center rounded-lg " + chip} aria-hidden>
+      <span className={"grid h-7 w-7 shrink-0 place-items-center rounded-lg " + chip} aria-hidden>
         {icono}
       </span>
       <span className="flex min-w-0 flex-1 items-baseline justify-between gap-2">
@@ -291,8 +291,15 @@ function FilaItem({
   return (
     <div
       className={
-        "rounded-cinta border bg-surface px-4 py-3.5 " +
-        (retirada ? "border-hairline opacity-60" : item.destacado && !hecho ? "border-done/35" : "border-hairline")
+        "rounded-cinta border px-4 py-3.5 " +
+        // No aplica: superficie un paso MÁS OSCURA (#0C0C10), no una opacidad
+        // sobre la superficie normal — así lo retirado "se apaga" sin volverse
+        // ilegible. El color nunca va solo: la forma del aro ya lo dice.
+        (retirada
+          ? "border-hairline bg-surface-3"
+          : item.destacado && !hecho
+            ? "border-done/35 bg-surface"
+            : "border-hairline bg-surface")
       }
     >
       <div className="flex items-start gap-3.5">
@@ -313,14 +320,14 @@ function FilaItem({
             onClick={onAbrirDetalle}
             className={
               "block w-full text-left text-[14.5px] hover:underline " +
-              (hecho ? "text-dim line-through" : retirada ? "text-dim" : "text-ink")
+              (hecho ? "text-dim line-through" : retirada ? "text-[#8A8B92]" : "text-ink")
             }
             title="Ver el detalle de esta actividad"
           >
             {item.texto}
           </button>
           {retirada && (
-            <span className="mt-0.5 block text-[12.5px] text-dim">
+            <span className="mt-0.5 block text-[12.5px] text-[#8A8B92]">
               no aplica{item.no_aplica_motivo ? ` · ${item.no_aplica_motivo}` : ""}
             </span>
           )}
@@ -328,7 +335,11 @@ function FilaItem({
             <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
           )}
           {!hecho && !retirada && item.destacado && (
-            <span className="mt-0.5 block text-[12.5px] text-done">esta semana</span>
+            // "esta semana": chapa de BORDE verde (no fondo lleno), como fija
+            // Design — una chapa, no una etiqueta de texto suelta.
+            <span className="mt-1 inline-block rounded-full border border-done/30 px-2.5 py-0.5 text-[11.5px] font-semibold text-done">
+              esta semana
+            </span>
           )}
           {!hecho && !retirada && item.fecha_base && (
             <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
@@ -412,7 +423,7 @@ function GrupoEtapas({
         // hasta la primera activa abren por defecto; las demás, plegadas. Antes
         // las primeras eran secciones planas sin chevron y rompían la simetría.
         return (
-          <Acordeon key={etapa} titulo={encabezado} abierto={abierta} extra={conteoEtapa}>
+          <Acordeon key={etapa} titulo={encabezado} abierto={abierta} extra={conteoEtapa} variante="etapa">
             <div className="flex flex-col gap-2.5">
               {items.map((item) => (
                 <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
@@ -1207,19 +1218,19 @@ export function ManosALaObra({
               {/* Barra protagonista: más gruesa y con el PORCENTAJE como segundo
                   visual (el fundador lo pidió). El "X de N" queda de apoyo. */}
               <div className="mb-2 flex items-baseline justify-between gap-3">
-                <span className="text-[22px] font-bold leading-none tracking-tight text-done tabular-nums">
+                <span className="text-[30px] font-extrabold leading-none tracking-tight text-done tabular-nums">
                   {barraPct}%
                 </span>
-                <span className="text-[13px] font-semibold text-dim">
+                <span className="text-[13px] font-semibold tabular-nums text-ink">
                   {cCore.hechos} de {cCore.total} hechas
                   {cCore.retiradas > 0 && (
-                    <span className="ml-1.5 font-normal">· {cCore.retiradas} retirada{cCore.retiradas === 1 ? "" : "s"}</span>
+                    <span className="ml-1.5 font-normal text-dim">· {cCore.retiradas} retirada{cCore.retiradas === 1 ? "" : "s"}</span>
                   )}
                 </span>
               </div>
-              <div className="h-3.5 overflow-hidden rounded-full bg-white/10">
+              <div className="h-2.5 overflow-hidden rounded-full bg-white/10">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-done/60 to-done"
+                  className="h-full rounded-full bg-done"
                   style={{ width: `${barraPct}%`, animation: "barGrow 1.2s ease-out both" }}
                 />
               </div>
@@ -1330,7 +1341,7 @@ export function ManosALaObra({
             al quitar "Marcar hecho", el círculo es el único control, y hay que
             decir de una vez que ahí se toca. */}
         {core && cCore.total > 0 && mostrarPista && (
-          <p className="flex items-center gap-2 rounded-cinta border border-accent/30 bg-accent/5 px-3.5 py-2 text-[12.5px] text-accent">
+          <p className="flex items-center gap-2 rounded-cinta border border-dashed border-accent/[0.34] bg-accent/5 px-3.5 py-2 text-[12.5px] text-accent">
             <span aria-hidden className="flex h-[18px] w-[18px] shrink-0 overflow-hidden rounded-full border-[1.5px] border-accent">
               <span className="h-full w-1/2 bg-accent/60" />
             </span>
@@ -1568,13 +1579,23 @@ export function ManosALaObra({
             Vive en las páginas de desarrollo, no en el panel de documentos. */}
         {onVerBitacora && cCore.total > 0 && (
           <div className="rounded-panel border border-accent/40 bg-accent/5 p-5">
-            <p className="text-[14px] font-semibold text-accent">Mi bitácora</p>
+            <p className="flex items-center gap-2 text-[14px] font-semibold text-accent">
+              {/* icono de línea de tiempo: la bitácora es la secuencia del viaje */}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0">
+                <path d="M6 4v16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                <circle cx="6" cy="7" r="1.6" fill="currentColor" />
+                <circle cx="6" cy="12.5" r="1.6" fill="currentColor" />
+                <circle cx="6" cy="18" r="1.6" fill="currentColor" />
+                <path d="M10 7h9M10 12.5h9M10 18h6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+              Mi bitácora
+            </p>
             <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
               La historia de tu viaje, paso a paso: cada decisión que has tomado.
             </p>
             <button
               onClick={onVerBitacora}
-              className="mt-3 w-full rounded-[10px] bg-accent py-2.5 text-[13px] font-semibold text-white hover:opacity-90"
+              className="mt-3 w-full rounded-[10px] border border-accent/50 bg-accent/15 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/25"
             >
               Ver mi bitácora
             </button>
