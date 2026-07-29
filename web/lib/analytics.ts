@@ -160,6 +160,13 @@ export interface CapaCumplimiento {
   pctTardias: number;
   desviacionMediaDias: number;
   replanificaciones: number;
+  /** Fase 4.7 (capa de honestidad): la desviación media medida contra la fecha
+   * ORIGINAL (fecha_base_original donde exista; si no, la vigente ES la
+   * original). El cumplimiento oficial mide contra la vigente (re-baseline =
+   * control de cambios); esta línea es INFORMATIVA, tono espejo, jamás colorea
+   * de tardía lo replanificado. Solo tiene sentido mostrarla si hubo
+   * replanificaciones. */
+  desviacionVsInicialDias: number;
   /** Barras "Planificado vs. real por etapa" en vista GANTT (corrección de la
    * errata del canon 11: las barras acumuladas confundían). Cada etapa lleva su
    * INICIO y su FIN en días desde la chispa, para base y real. El inicio de una
@@ -491,6 +498,16 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
       pctTardias: pct(tardias),
       desviacionMediaDias: total > 0 ? Math.round((sumaDesv / total) * 10) / 10 : 0,
       replanificaciones: delPlan.filter((i) => i.fecha_base_original).length,
+      // Capa de honestidad: desviación contra la fecha ORIGINAL (la que se
+      // congeló al replanificar; si nunca se movió, la vigente ES la original).
+      desviacionVsInicialDias:
+        total > 0
+          ? Math.round(
+              (conFecha.reduce((s, it) => s + difDias(it.fecha_base_original ?? it.fecha_base!, it.completed_at!), 0) /
+                total) *
+                10
+            ) / 10
+          : 0,
       porEtapa,
       // Las tardías que importan: mayor retraso primero, hasta 5.
       tardiasTop: conFecha
@@ -649,11 +666,16 @@ export function informeMarkdown(
     l.push(`- Adelantadas: **${c.adelantadas}** (${c.pctAdelantadas}%)`);
     l.push(`- Tardías: **${c.tardias}** (${c.pctTardias}%)`);
     const signo = c.desviacionMediaDias > 0 ? "+" : "";
-    l.push(`- Desviación media sobre lo planificado: **${signo}${c.desviacionMediaDias} días**`);
+    l.push(`- Desviación media sobre tu plan vigente: **${signo}${c.desviacionMediaDias} días**`);
     if (c.replanificaciones > 0) {
-      l.push(`- Moviste la fecha de **${c.replanificaciones}** acciones.`);
+      // Capa de honestidad: UNA línea contra el plan inicial (informativa, sin
+      // castigo). El cumplimiento oficial mide contra el plan vigente.
+      const signoIni = c.desviacionVsInicialDias > 0 ? "+" : "";
+      l.push(
+        `- Frente a tu plan inicial: **${signoIni}${c.desviacionVsInicialDias} días** de desviación media · **${c.replanificaciones}** replanificaciones.`
+      );
       l.push("");
-      l.push("Replanificar es parte del método. Ajustar el mapa no es fallar: es seguir con los pies en la tierra.");
+      l.push("Replanificar es parte del método. Tu plan vigente asume tu ritmo real; ajustar el mapa no es fallar.");
     }
   }
   l.push("");

@@ -175,3 +175,15 @@ va al final.
   clave según el estado. En marcha (aún hay pendientes): el registro es **"Tu
   avance"** y el resumen **"Tu progreso hasta aquí"**. Al cerrar: **"Lo que
   hiciste"** y **"Cómo te fue"**. No se habla en pasado hasta que se termina.
+
+## 2026-07-28 (d) — Línea base, recálculo y honestidad (Fase 4.7)
+- **Botones "cambiar fecha" en AZUL** (accent), ya no grises.
+- **Oferta de cascada al mover una fecha** (cajón de detalle): al mover la fecha
+  de una pendiente, si hay pendientes posteriores aparece "¿Muevo también las [N]
+  que siguen? ([X] días después/antes cada una)" con **[Sí, mover todas] / [Solo
+  esta]**. Simétrica, un toque, nada se mueve sin el sí; la original se conserva.
+  Ref: `cascada_oferta.png`. **Vara pendiente para Design.**
+- **Línea de honestidad en Análisis:** "Frente a tu plan inicial: [±X días] de
+  desviación media · [N] replanificaciones" (informativa, tono espejo, jamás
+  colorea de tardía lo replanificado). El cumplimiento oficial sigue midiendo
+  contra la fecha vigente. **Vara pendiente para Design.**

@@ -340,7 +340,7 @@ function FilaItem({
               "Marcar hecho" se retiró; el menú del círculo es la vía única. */}
           {hecho && !editandoFecha && (
             <span className="mt-2 flex justify-end">
-              <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="neutro">
+              <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="accent">
                 cambiar fecha
               </BotonMini>
             </span>
@@ -1021,6 +1021,27 @@ export function ManosALaObra({
     }
   }
 
+  // Fase 4.7: mover la fecha objetivo de una pendiente, con cascada opcional a
+  // las posteriores. El endpoint corre el mismo delta, congela originales y deja
+  // UNA entrada de bitácora. Al terminar, recargamos para reflejar todas.
+  async function moverFecha(itemId: string, fecha: string, cascada: boolean) {
+    setError(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/mover-fecha`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ item_id: itemId, fecha, cascada }),
+      });
+      if (!res.ok) {
+        setError(ERROR_GENERICO);
+        return;
+      }
+      onRecargarChecklist();
+    } catch {
+      setError("no pudimos mover la fecha; revisa tu internet e intenta de nuevo");
+    }
+  }
+
   async function marcarRealizada() {
     setRealizando(true);
     setError(null);
@@ -1682,12 +1703,18 @@ export function ManosALaObra({
           .flatMap((e) => e.items)
           .find((i) => i.id === detalleItem.id);
         if (!vivo) return null;
+        const itemsDominio = checklist.planes
+          .flatMap((p) => p.etapas)
+          .flatMap((e) => e.items)
+          .filter((i) => i.dominio === vivo.dominio);
         return (
           <DetalleActividad
             item={vivo}
             tituloEtapa={detalleItem.tituloEtapa}
             ocupado={ocupado}
             onCambio={(cambio) => aplicarCambio(vivo, cambio)}
+            onMoverFecha={(fecha, cascada) => moverFecha(vivo.id, fecha, cascada)}
+            itemsDominio={itemsDominio}
             onCerrar={() => setDetalleItem(null)}
           />
         );

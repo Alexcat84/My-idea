@@ -132,6 +132,13 @@ describe("calcularAnalytics — capa de cumplimiento", () => {
   it("desviación media = (0+3−2+0)/4 = 0.25 → 0.3 días", () => {
     expect(c.desviacionMediaDias).toBe(0.3);
   });
+  it("desviación vs plan inicial usa fecha_base_original donde exista", () => {
+    // Capa de honestidad. A: 03-10 vs 03-10 = 0; B: 03-13 vs 03-10 = +3;
+    // C: 03-20 vs 03-22 = -2; D: 03-25 vs su ORIGINAL 03-20 = +5.
+    // (0 + 3 - 2 + 5) / 4 = 1.5. Distinta de la desviación vigente (0.3).
+    expect(c.desviacionVsInicialDias).toBe(1.5);
+  });
+
   it("replanificaciones = 1 (solo D tiene fecha_base_original)", () => {
     expect(c.replanificaciones).toBe(1);
   });

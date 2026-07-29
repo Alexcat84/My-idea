@@ -247,6 +247,24 @@ export function AnalisisProyecto({
             />
           </div>
 
+          {/* Capa de honestidad: UNA línea contra el plan inicial. El
+              cumplimiento de arriba mide contra el plan VIGENTE (replanificar es
+              el control de cambios); esta línea, informativa y en tono espejo,
+              recuerda el punto de partida SIN colorear de tardía lo replanificado.
+              Solo aparece si hubo replanificaciones. */}
+          {c.replanificaciones > 0 && (
+            <p className="mt-3 text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
+              Frente a tu plan inicial:{" "}
+              <span className="font-semibold text-ink tabular-nums">
+                {c.desviacionVsInicialDias > 0 ? "+" : ""}
+                {c.desviacionVsInicialDias.toFixed(1)} días
+              </span>{" "}
+              de desviación media ·{" "}
+              <span className="font-semibold text-ink tabular-nums">{c.replanificaciones}</span>{" "}
+              replanificación{c.replanificaciones === 1 ? "" : "es"}. Tu plan vigente asume tu ritmo real.
+            </p>
+          )}
+
           {/* Gantt a todo el ancho: leyenda NUMERADA arriba, y abajo el diagrama
               limpio (número + barras) con cuadrícula sutil. El texto ya no parte
               el diagrama: la cifra amarra cada actividad con su barra. */}

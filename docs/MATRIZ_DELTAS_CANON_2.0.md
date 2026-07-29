@@ -187,6 +187,27 @@ Hallazgos de Design (HALLAZGOS_PILA_3 del lote 4) adjudicados:
   de la allowlist (la frontera de la beta sigue siendo la puerta). Ver
   `docs/BANCO_DE_TEXTOS.md` para el copy vigente y esta fila para el estado de la decisión.
 
+## Fase 4.7 — línea base, recálculo y honestidad (2026-07-28)
+
+Decisiones del fundador sobre la línea base y el recálculo. **Vara pendiente
+para Design** en dos piezas nuevas (sin pantalla de canon todavía):
+
+- **Oferta de cascada al mover una fecha** (cajón de detalle, canon 13): al mover
+  la fecha de una pendiente, si hay pendientes POSTERIORES (misma etapa o
+  posteriores, por fecha vigente; excluye hechas y no-aplica) aparece la oferta
+  con el cálculo hecho: "¿Muevo también las [N] que siguen? ([X] días
+  después/antes cada una)" con **[Sí, mover todas] / [Solo esta]**. Simétrica, un
+  toque, cero sorpresa: nada se mueve sin el sí. Ref: `cascada_oferta.png`.
+- **Línea de honestidad en Análisis** (capa de cumplimiento, canon 11): una línea
+  informativa "Frente a tu plan inicial: [±X días] de desviación media · [N]
+  replanificaciones", calculada de `fecha_base_original`. Tono espejo, jamás
+  colorea de tardía lo replanificado. El cumplimiento OFICIAL sigue midiendo
+  contra la fecha vigente (re-baseline = control de cambios). Aparece también en
+  el informe del expediente y el motor la cita como contexto en el follow.
+
+Gobierno: el cumplimiento mide contra la **fecha vigente**; medir contra la
+original sería regaño estructural. La honestidad histórica gana su capa aparte.
+
 ## Mapa gate → canon
 
 | Prefijo gate | Canon | Estado del par |

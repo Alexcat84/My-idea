@@ -74,6 +74,13 @@ export function construirBloqueRealidad(a: Analytics): string | null {
     if (c.replanificados.length > 0) {
       const cuales = c.replanificados.map((r) => `"${corto(r.texto)}" (etapa ${r.etapa})`);
       L.push(`- Moví la fecha de ${PLURAL(c.replanificados.length, "acción", "acciones")}: ${cuales.join("; ")}.`);
+      // Capa de honestidad como CONTEXTO para el motor: replanificar es control
+      // de cambios, no fracaso. El plan vigente ya asume el ritmo real; frente al
+      // plan inicial hay una desviación que el motor puede citar sin regañar.
+      L.push(
+        `- Replanifiqué ${PLURAL(c.replanificaciones, "vez", "veces")}; mi plan vigente asume mi ritmo real. ` +
+          `Frente a mi plan inicial la desviación media es de ${c.desviacionVsInicialDias > 0 ? "+" : ""}${c.desviacionVsInicialDias} días (contexto, no reproche).`
+      );
     }
   } else if (a.modoCamino === "ritmo") {
     L.push("- Elegí llevar esto a mi ritmo, sin fechas: no hay nada que medir contra un calendario.");
