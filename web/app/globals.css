@@ -234,6 +234,15 @@ summary::-webkit-details-marker {
     max-width: 600px;
   }
 
+  /* Riel de papel (Design): la ESPINA (línea de los pasos) baja a azul-riel
+     #C9D4EE, más clara que los puntos, que siguen en el azul de papel #3B6BE8.
+     Solo la espina de las listas (ul/ol ::before); los puntos (li ::before) no
+     se tocan y heredan el --accent de papel. */
+  [data-plan-print] ul::before,
+  [data-plan-print] ol::before {
+    background: #c9d4ee !important;
+  }
+
   html,
   body {
     background: #fff !important;
