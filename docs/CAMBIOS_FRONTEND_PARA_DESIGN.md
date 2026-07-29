@@ -163,3 +163,15 @@ va al final.
   al final de cada línea (un desorden) a una **tabla** con columna "Acción" y
   columna **"Cuándo"** (la fecha en su columna, verde si hecho / azul si
   previsto). Ref: `lote3_tabla_fechas.png`.
+
+## 2026-07-28 (c) — Segunda ronda de correcciones
+- **"cambiar fecha" ABAJO A LA DERECHA** (no izquierda): el fundador lo aclaró
+  con una flecha. Debajo del texto, alineado a la derecha. Ref: `lote4_cambiar_fecha.png`.
+- **PDF, riel ALINEADO sin complicar:** los puntos más grandes/línea más gruesa
+  quedaban MAL alineados respecto a la línea. Se revierte a la config EXACTA que
+  ya funciona en "¿Puede sostenerse tu idea?" (punto de 6px sobre línea de 1px,
+  bien centrado). La comparten viñetas y pasos. Ref: `lote4_riel_ol.png`.
+- **Claves de sección por estado (expediente):** cada punto de control con su
+  clave según el estado. En marcha (aún hay pendientes): el registro es **"Tu
+  avance"** y el resumen **"Tu progreso hasta aquí"**. Al cerrar: **"Lo que
+  hiciste"** y **"Cómo te fue"**. No se habla en pasado hasta que se termina.

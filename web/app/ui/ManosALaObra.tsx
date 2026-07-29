@@ -335,11 +335,11 @@ function FilaItem({
             // La fecha es un DATO (verde, informativo).
             <span className="mt-1 block text-[12.5px] text-done">hecho el {fechaHumanaCorta(item.completed_at)}</span>
           )}
-          {/* "cambiar fecha" ABAJO A LA IZQUIERDA, debajo del texto: no le roba
+          {/* "cambiar fecha" ABAJO A LA DERECHA, debajo del texto: no le roba
               espacio a la actividad (el texto es el protagonista). El botón
               "Marcar hecho" se retiró; el menú del círculo es la vía única. */}
           {hecho && !editandoFecha && (
-            <span className="mt-2 block">
+            <span className="mt-2 flex justify-end">
               <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="neutro">
                 cambiar fecha
               </BotonMini>
