@@ -240,19 +240,43 @@ export function AnalisisProyecto({
             />
           </div>
 
+          {/* Capa de honestidad (Design): una BANDA propia, gris, con icono
+              neutro, JUSTO debajo de las tiles de cumplimiento. Dice contra qué
+              se mide y por qué replanificar no vuelve tardío a nadie. Nunca
+              ámbar ni roja: es contexto, no alarma. Solo si hubo replanificaciones. */}
+          {c.replanificaciones > 0 && (
+            <div className="mt-4 flex items-start gap-3 rounded-[14px] border border-hairline px-5 py-4">
+              <span aria-hidden className="mt-0.5 grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full border border-hairline text-dim">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 11v5" />
+                  <path d="M12 7.5v.5" />
+                </svg>
+              </span>
+              <p className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
+                Frente a tu plan inicial:{" "}
+                <span className="font-semibold text-ink tabular-nums">
+                  {c.desviacionVsInicialDias > 0 ? "+" : ""}
+                  {c.desviacionVsInicialDias.toFixed(1)} días
+                </span>{" "}
+                de desviación media ·{" "}
+                <span className="font-semibold text-ink tabular-nums">{c.replanificaciones}</span>{" "}
+                replanificación{c.replanificaciones === 1 ? "" : "es"}. El cumplimiento se mide contra tu
+                fecha vigente: replanificar es el control de cambios, no una tardanza.
+              </p>
+            </div>
+          )}
+
           {/* Gantt "Cómo se movió tu camino": pieza calibrada por Design, tres
               vistas (riel fantasma / escalera / dos cintas) con selector de
-              preferencia, más la línea de honestidad contra el plan inicial.
-              Datos reales de analytics; cero LLM. HOY solo con el proyecto en
-              marcha (días desde la chispa = duración total mientras no cierra). */}
+              preferencia. Datos reales de analytics; cero LLM. HOY solo con el
+              proyecto en marcha (días desde la chispa = duración total). */}
           {c.porEtapa.length > 0 && (
             <GanttCumplimiento
               porEtapa={c.porEtapa}
               maxBarra={maxBarra}
               nombreEtapa={nombreEtapa}
               hoyDias={datos.realizada_at ? null : u.duracionTotalDias}
-              desviacionVsInicialDias={c.desviacionVsInicialDias}
-              replanificaciones={c.replanificaciones}
             />
           )}
 
