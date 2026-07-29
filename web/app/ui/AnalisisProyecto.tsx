@@ -10,6 +10,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { Analytics } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { GanttCumplimiento } from "./GanttCumplimiento";
 
 interface Respuesta {
   nombre: string;
@@ -56,14 +57,6 @@ function TileCumpl({ valor, sufijo, etiqueta, color }: { valor: string; sufijo: 
 
 /** Chip numerado que amarra la leyenda con el diagrama (misma cifra arriba y
  * en la barra), para que el texto no parta el Gantt. */
-function Numero({ n }: { n: number }) {
-  return (
-    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-[7px] border border-accent/30 bg-accent/5 text-[11px] font-bold tabular-nums text-accent">
-      {n}
-    </span>
-  );
-}
-
 function descargar(nombre: string, md: string) {
   const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
   const url = URL.createObjectURL(blob);
@@ -247,108 +240,21 @@ export function AnalisisProyecto({
             />
           </div>
 
-          {/* Capa de honestidad: UNA línea contra el plan inicial. El
-              cumplimiento de arriba mide contra el plan VIGENTE (replanificar es
-              el control de cambios); esta línea, informativa y en tono espejo,
-              recuerda el punto de partida SIN colorear de tardía lo replanificado.
-              Solo aparece si hubo replanificaciones. */}
-          {c.replanificaciones > 0 && (
-            <p className="mt-3 text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-              Frente a tu plan inicial:{" "}
-              <span className="font-semibold text-ink tabular-nums">
-                {c.desviacionVsInicialDias > 0 ? "+" : ""}
-                {c.desviacionVsInicialDias.toFixed(1)} días
-              </span>{" "}
-              de desviación media ·{" "}
-              <span className="font-semibold text-ink tabular-nums">{c.replanificaciones}</span>{" "}
-              replanificación{c.replanificaciones === 1 ? "" : "es"}. Tu plan vigente asume tu ritmo real.
-            </p>
+          {/* Gantt "Cómo se movió tu camino": pieza calibrada por Design, tres
+              vistas (riel fantasma / escalera / dos cintas) con selector de
+              preferencia, más la línea de honestidad contra el plan inicial.
+              Datos reales de analytics; cero LLM. HOY solo con el proyecto en
+              marcha (días desde la chispa = duración total mientras no cierra). */}
+          {c.porEtapa.length > 0 && (
+            <GanttCumplimiento
+              porEtapa={c.porEtapa}
+              maxBarra={maxBarra}
+              nombreEtapa={nombreEtapa}
+              hoyDias={datos.realizada_at ? null : u.duracionTotalDias}
+              desviacionVsInicialDias={c.desviacionVsInicialDias}
+              replanificaciones={c.replanificaciones}
+            />
           )}
-
-          {/* Gantt a todo el ancho: leyenda NUMERADA arriba, y abajo el diagrama
-              limpio (número + barras) con cuadrícula sutil. El texto ya no parte
-              el diagrama: la cifra amarra cada actividad con su barra. */}
-          {c.porEtapa.length > 0 &&
-            (() => {
-              const TICKS = [0, 0.25, 0.5, 0.75, 1];
-              const izq = (d: number) => `${(d / maxBarra) * 100}%`;
-              const ancho = (ini: number, fin: number) => `${(Math.max(0, fin - ini) / maxBarra) * 100}%`;
-              return (
-                <div className="mt-6 rounded-panel border border-hairline bg-surface p-5">
-                  <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-                    <p className="text-[13px] font-semibold">Planificado vs. real por etapa</p>
-                    <p className="flex gap-4 text-[11.5px] text-dim">
-                      <span className="flex items-center gap-1.5">
-                        <span className="h-2 w-4 rounded-sm" style={{ background: "rgba(77,124,254,0.55)" }} /> base
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <span className="h-2 w-4 rounded-sm bg-done" /> real
-                      </span>
-                    </p>
-                  </div>
-
-                  {/* Leyenda numerada: los nombres, una vez, arriba. */}
-                  <ol className="mb-5 flex flex-col gap-1.5">
-                    {c.porEtapa.map((e, i) => (
-                      <li key={e.etapa} className="flex items-start gap-2.5 text-[12.5px] text-dim">
-                        <Numero n={i + 1} />
-                        <span className="pt-0.5 [text-wrap:pretty]">{nombreEtapa(e.etapa)}</span>
-                      </li>
-                    ))}
-                  </ol>
-
-                  {/* Diagrama: solo números + barras, con cuadrícula detrás. */}
-                  <div className="relative">
-                    <div className="pointer-events-none absolute inset-y-0 left-[34px] right-0">
-                      {TICKS.map((f) => (
-                        <span key={f} className="absolute inset-y-0 w-px bg-hairline" style={{ left: `${f * 100}%` }} />
-                      ))}
-                    </div>
-                    <div className="relative flex flex-col gap-2.5">
-                      {c.porEtapa.map((e, i) => {
-                        const tardeEtapa = e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
-                        return (
-                          <div key={e.etapa} className="flex items-center gap-2.5">
-                            <Numero n={i + 1} />
-                            <div className="relative h-[22px] flex-1">
-                              {e.baseFin != null && (
-                                <div
-                                  className="absolute top-0 h-2.5 rounded"
-                                  style={{ left: izq(e.baseInicio), width: ancho(e.baseInicio, e.baseFin), background: "rgba(77,124,254,0.55)" }}
-                                />
-                              )}
-                              {e.realFin != null && e.realInicio != null && (
-                                <div
-                                  className="absolute bottom-0 h-2.5 rounded"
-                                  style={{
-                                    left: izq(e.realInicio),
-                                    width: ancho(e.realInicio, e.realFin),
-                                    background: tardeEtapa ? "var(--warn)" : "var(--done)",
-                                  }}
-                                />
-                              )}
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Eje de tiempo, alineado al área de barras. */}
-                  <div className="relative ml-[34px] mt-2 h-4 border-t border-hairline">
-                    {TICKS.map((f) => (
-                      <span
-                        key={f}
-                        className="absolute top-1 -translate-x-1/2 text-[10px] text-dim"
-                        style={{ left: `${f * 100}%` }}
-                      >
-                        {Math.round(f * maxBarra)}d
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })()}
 
           {/* Desviación en palabras + cumplimiento por mundo, debajo del diagrama. */}
           <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-start">
