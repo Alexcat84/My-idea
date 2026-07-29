@@ -126,10 +126,13 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     for (const [col, val] of Object.entries(b._filters)) {
       rows = rows.filter((r) => r[col] === val);
     }
-    // .single() en una lectura (Fase 3.8: la ruta lee el ítem previo para
-    // preservar la fecha_base al replanificar) devuelve la fila, no un array.
-    if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
-    return { data: rows, error: null };
+    // .single() en una lectura (Fase 3.8/4.8: la ruta lee el ítem PREVIO para
+    // preservar la fecha_base y comparar contra la bitácora) devuelve la fila,
+    // no un array. Se devuelve una COPIA: en una BD real la lectura es un
+    // snapshot; si se devolviera la referencia viva, un update posterior sobre
+    // la misma fila mutaría el "previo" y las comparaciones se romperían.
+    if (b._single) return { data: rows[0] ? { ...rows[0] } : null, error: rows[0] ? null : { message: "no encontrado" } };
+    return { data: rows.map((r) => ({ ...r })), error: null };
   }
   if (nombre === "project_unlocks") {
     if (b._insert) {

@@ -261,12 +261,22 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     fecha_base_origen: FechaBaseOrigen | null;
     fecha_base_original: string | null;
     no_aplica_motivo: string | null;
+    completed_at: string | null;
+    nota: string | null;
   };
   let prev: PrevItem | null = null;
-  if (nuevaFechaBase !== undefined || cambios.estado !== undefined) {
+  // Se lee el previo para cualquier decisión que la BITÁCORA deba comparar: el
+  // cambio de estado, mover la fecha (base o de realización) y la nota. Así la
+  // historia del usuario queda completa (Fase 4.8).
+  if (
+    nuevaFechaBase !== undefined ||
+    cambios.estado !== undefined ||
+    cambios.completed_at !== undefined ||
+    cambios.nota !== undefined
+  ) {
     const { data: previo } = await supabase
       .from("checklist_items")
-      .select("estado, fecha_base, fecha_base_origen, fecha_base_original, no_aplica_motivo")
+      .select("estado, fecha_base, fecha_base_origen, fecha_base_original, no_aplica_motivo, completed_at, nota")
       .eq("id", itemId)
       .eq("project_id", projectId)
       .single();
@@ -317,6 +327,48 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
         estado_nuevo: nuevo,
         motivo_anterior: prev.no_aplica_motivo ?? null,
       });
+    }
+  }
+
+  // Fase 4.8 (bitácora completa): cada decisión del usuario deja rastro.
+  if (prev) {
+    const nuevoEstado = data.estado as ChecklistEstado;
+    // Cambio de estado que NO es el cruce de 'no_aplica' (ya registrado arriba)
+    // ni 'hecho' (su entrada nace de completed_at, no se duplica): empezar,
+    // poner en proceso o volver a pendiente son decisiones que cuentan.
+    if (
+      cambios.estado !== undefined &&
+      nuevoEstado !== prev.estado &&
+      nuevoEstado !== "no_aplica" &&
+      prev.estado !== "no_aplica" &&
+      nuevoEstado !== "hecho"
+    ) {
+      await registrarBitacora(supabase, projectId, "item_estado", {
+        item: itemId,
+        de: prev.estado,
+        a: nuevoEstado,
+      });
+    }
+    // Ajustar la fecha de realización de algo YA hecho ("cambiar fecha"): es
+    // un cambio, no la primera marca (esa la cuenta completed_at por sí sola).
+    if (
+      body.completed_at !== undefined &&
+      cambios.estado === undefined &&
+      prev.estado === "hecho" &&
+      prev.completed_at &&
+      (data.completed_at ?? null) !== prev.completed_at
+    ) {
+      await registrarBitacora(supabase, projectId, "fecha_hecho_movida", {
+        item: itemId,
+        de: prev.completed_at,
+        a: data.completed_at ?? null,
+      });
+    }
+    // Nota escrita o cambiada (el contenido NO se guarda en la bitácora: es
+    // privado; solo queda que decidiste anotar algo).
+    const notaNueva = (data.nota ?? "").trim();
+    if (cambios.nota !== undefined && notaNueva && notaNueva !== (prev.nota ?? "").trim()) {
+      await registrarBitacora(supabase, projectId, "nota_escrita", { item: itemId });
     }
   }
 

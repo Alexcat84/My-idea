@@ -22,6 +22,10 @@ const datos = (extra: Partial<DatosBitacora> = {}): DatosBitacora => ({
     { tipo: "modo_camino", payload: { de: null, a: "fechas" }, created_at: "2026-01-06T11:00:00Z" },
     { tipo: "cobro_carrera", payload: { monto: 12 }, created_at: "2026-01-08T10:00:00Z" }, // INTERNO
     { tipo: "mundo_incompatible", payload: { mundo: "quality" }, created_at: "2026-01-09T10:00:00Z" }, // INTERNO
+    { tipo: "item_estado", payload: { item: "a1", de: "pendiente", a: "empezado" }, created_at: "2026-01-08T12:00:00Z" },
+    { tipo: "item_estado", payload: { item: "a1", de: "empezado", a: "en_proceso" }, created_at: "2026-01-09T12:00:00Z" },
+    { tipo: "fecha_hecho_movida", payload: { item: "a1", de: "2026-01-10T00:00:00Z", a: "2026-01-11T00:00:00Z" }, created_at: "2026-01-11T12:00:00Z" },
+    { tipo: "nota_escrita", payload: { item: "a2" }, created_at: "2026-01-11T13:00:00Z" },
     { tipo: "fecha_movida", payload: { item: "a2", delta_dias: 7, cascada: 3 }, created_at: "2026-01-12T10:00:00Z" },
     { tipo: "item_no_aplica", payload: { item: "a2", motivo: "mi negocio es 100% online" }, created_at: "2026-01-13T10:00:00Z" },
     { tipo: "preview_iniciado", payload: { mundo: "quality" }, created_at: "2026-01-15T10:00:00Z" },
@@ -54,6 +58,14 @@ describe("construirBitacora", () => {
     const mov = e.find((x) => x.texto.startsWith("Moviste la fecha"))!;
     expect(mov.texto).toContain("Habla con cinco personas");
     expect(mov.texto).toContain("las 3 siguientes, 7 días después");
+  });
+
+  it("registra cada decisión: cambios de estado, ajuste de fecha hecha y notas", () => {
+    const texto = construirBitacora(datos()).map((x) => x.texto).join("\n");
+    expect(texto).toContain("Empezaste «Publica el video de tu producto».");
+    expect(texto).toContain("Pusiste «Publica el video de tu producto» en proceso.");
+    expect(texto).toContain("Ajustaste la fecha en que hiciste «Publica el video de tu producto».");
+    expect(texto).toContain("Anotaste algo en «Habla con cinco personas».");
   });
 
   it("cita los motivos del usuario entre comillas", () => {

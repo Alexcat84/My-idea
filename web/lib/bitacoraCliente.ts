@@ -78,9 +78,12 @@ const corto = (s: string, max = 90) => {
  * por defecto: la lista es BLANCA, no negra. */
 const EVENTOS_NARRABLES = new Set([
   "modo_camino",
+  "item_estado",
   "item_no_aplica",
   "item_reactivada",
   "fecha_movida",
+  "fecha_hecho_movida",
+  "nota_escrita",
   "mundo_completado",
   "preview_iniciado",
   "preview_completado",
@@ -148,11 +151,24 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
         push(e.created_at, p.de ? `Cambiaste tu forma de avanzar: ${a}.` : `Elegiste llevar tu camino ${a}.`);
         break;
       }
+      case "item_estado": {
+        const t = accion(p.item);
+        if (p.a === "empezado") push(e.created_at, `Empezaste «${t}».`);
+        else if (p.a === "en_proceso") push(e.created_at, `Pusiste «${t}» en proceso.`);
+        else if (p.a === "pendiente") push(e.created_at, `Devolviste «${t}» a pendiente.`);
+        break;
+      }
       case "item_no_aplica":
         push(e.created_at, `Retiraste «${accion(p.item)}»${cita(p.motivo)}`);
         break;
       case "item_reactivada":
         push(e.created_at, `Reactivaste «${accion(p.item)}».`);
+        break;
+      case "fecha_hecho_movida":
+        push(e.created_at, `Ajustaste la fecha en que hiciste «${accion(p.item)}».`);
+        break;
+      case "nota_escrita":
+        push(e.created_at, `Anotaste algo en «${accion(p.item)}».`);
         break;
       case "fecha_movida": {
         const n = typeof p.cascada === "number" ? p.cascada : 0;
