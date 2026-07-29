@@ -5,8 +5,11 @@ contada como línea de tiempo. Existe como **documento** (.md/PDF en el panel de
 Tus documentos) y ahora como **PÁGINA en vivo** que el usuario ve antes de
 imprimir.
 **Estado actual (primera versión funcional):**
-`web/examples/gate-canon/bitapage_pagina.png` (la página),
-`bitapage_panel.png` (el botón "Ver" en el panel).
+`web/examples/gate-canon/bitapage_pagina.png` (la página).
+**Cómo se entra:** la tarjeta "Mi bitácora" con su botón "Ver mi bitácora" vive
+como **primer punto del aside** (arriba a la derecha) en las páginas de
+DESARROLLO: el plan (`bitaentry_plan.png`), Manos a la Obra (`bitaentry_manos.png`)
+y los mundos. NO vive en el panel de documentos (ese solo descarga .md/PDF).
 **Componentes:** `web/app/ui/Bitacora.tsx` (página), `web/app/ui/DocumentoPapel.tsx`
 (versión impresa/PDF). El texto sale de `lib/bitacoraCliente.ts` (una sola verdad).
 

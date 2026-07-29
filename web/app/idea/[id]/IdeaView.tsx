@@ -192,6 +192,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Fase 4.6: las descargas del viaje (un documento por fase + el expediente).
   const [vistaDocumentos, setVistaDocumentos] = useState(quiereDocumentos);
   const [vistaBitacora, setVistaBitacora] = useState(quiereBitacora);
+  const [origenBitacora, setOrigenBitacora] = useState<"manos" | "plan">("plan");
   const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
 
@@ -560,16 +561,18 @@ export function IdeaView({ projectId }: { projectId: string }) {
     router.replace(`/idea/${projectId}`, { scroll: false });
   }
 
-  // Fase 4.8: la bitácora como página en vivo. Se llega desde el panel de
-  // documentos (su botón "Ver"); "Volver" regresa al panel.
+  // Fase 4.8: la bitácora como página en vivo. Se llega desde las páginas de
+  // desarrollo (el plan, Manos a la Obra, los mundos); "Volver" regresa a donde
+  // se estaba.
   function irABitacora() {
+    setOrigenBitacora(vistaManos || enObra ? "manos" : "plan");
     setVistaBitacora(true);
-    setVistaDocumentos(false);
     router.replace(`/idea/${projectId}?vista=bitacora`, { scroll: false });
   }
   function volverDeBitacora() {
     setVistaBitacora(false);
-    irADocumentos();
+    if (origenBitacora === "manos") volverAManos();
+    else volverAlViaje();
   }
 
   function irADocumentos() {
@@ -771,12 +774,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         {vistaBitacora ? (
           <Bitacora projectId={projectId} onVolver={volverDeBitacora} />
         ) : vistaDocumentos ? (
-          <Descargas
-            projectId={projectId}
-            nombreIdea={detalle.idea.nombre}
-            onVerBitacora={irABitacora}
-            onVolver={volverDeDocumentos}
-          />
+          <Descargas projectId={projectId} nombreIdea={detalle.idea.nombre} onVolver={volverDeDocumentos} />
         ) : vistaCelebracion ? (
           <Celebracion
             projectId={projectId}
@@ -807,6 +805,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onRecargarChecklist={cargarChecklist}
               onVerAnalisis={irAAnalisis}
               onVerDocumentos={irADocumentos}
+              onVerBitacora={irABitacora}
               onRealizada={irACelebracion}
               onMundoCerrado={(dominio, completadoAt) =>
                 // Fase 4.2 §3: cerrar un mundo NO cierra la idea — aquí no se
@@ -1082,6 +1081,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   md={planMd}
                   nombreIdea={detalle.idea.nombre}
                   onEmpezar={() => irAManos()}
+                  onVerBitacora={irABitacora}
                   nodosFuente={nodosFuente}
                 />
               )}

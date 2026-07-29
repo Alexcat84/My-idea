@@ -120,6 +120,8 @@ interface Props {
   onVerAnalisis: () => void;
   /** Fase 4.6: abre las descargas del viaje (un documento por fase) */
   onVerDocumentos: () => void;
+  /** Fase 4.8: abre la bitácora en vivo (la historia del viaje) */
+  onVerBitacora?: () => void;
   /** la idea se marcó como realizada (§5): el padre abre la Celebración */
   onRealizada: () => void;
   /** Fase 4.2: un mundo se completó o se reabrió — el padre refresca su copia.
@@ -840,6 +842,7 @@ export function ManosALaObra({
   onRecargarChecklist,
   onVerAnalisis,
   onVerDocumentos,
+  onVerBitacora,
   onRealizada,
   onMundoCerrado,
   entrevistaAbierta,
@@ -1560,6 +1563,24 @@ export function ManosALaObra({
           header. En móvil este aside cae debajo del checklist (posición del
           canon para análisis/ritmo); "Contar qué pasó" ya subió arriba. */}
       <aside className="flex flex-col gap-6">
+        {/* Fase 4.8 — MI BITÁCORA como PRIMER punto del aside (arriba a la
+            derecha): la historia viva del viaje, verla antes de imprimir.
+            Vive en las páginas de desarrollo, no en el panel de documentos. */}
+        {onVerBitacora && cCore.total > 0 && (
+          <div className="rounded-panel border border-accent/40 bg-accent/5 p-5">
+            <p className="text-[14px] font-semibold text-accent">Mi bitácora</p>
+            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+              La historia de tu viaje, paso a paso: cada decisión que has tomado.
+            </p>
+            <button
+              onClick={onVerBitacora}
+              className="mt-3 w-full rounded-[10px] bg-accent py-2.5 text-[13px] font-semibold text-white hover:opacity-90"
+            >
+              Ver mi bitácora
+            </button>
+          </div>
+        )}
+
         {/* Fase 3.8 §6 — puerta al análisis del proyecto. La acción vive en un
             BOTÓN abajo (no la tarjeta entera), para que se lea como accionable
             y no como panel informativo (igual que "Marcar como realizada"). */}

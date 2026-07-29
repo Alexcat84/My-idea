@@ -207,3 +207,11 @@ va al final.
   entrada). Descargar .md / Imprimir PDF desde la misma página. Es una primera
   versión funcional; **el brief de diseño está en `docs/calibracion-design/`**.
   Refs: `bitapage_pagina.png`, `bitapage_panel.png`.
+
+## 2026-07-29 (b) — "Ver bitácora" en las páginas de desarrollo, no en documentos
+- Corrección del fundador: el panel de **Tus documentos** vuelve a mostrar SOLO
+  documentos y sus descargas (.md/PDF); se le quitó el botón "Ver". La entrada a
+  la bitácora en vivo ("Mi bitácora" + "Ver mi bitácora") pasa a ser el **primer
+  punto del aside** (arriba a la derecha) en las páginas de **desarrollo**: el
+  plan, Manos a la Obra y los mundos. Refs: `bitaentry_plan.png`,
+  `bitaentry_manos.png`, `bitaentry_docs.png`.
