@@ -140,11 +140,13 @@ describe("expedienteMarkdown", () => {
   it("el registro de acciones cuenta lo hecho y fecha cada una", () => {
     const md = expedienteMarkdown(datos());
     expect(md).toContain("Completaste **1 de 3** acciones activas.");
-    expect(md).toContain("- [x] Publica el video · [hecho el");
-    expect(md).toContain("](#f-hecho)");
-    expect(md).toContain("- [ ] Habla con 5 desconocidos · [previsto para el");
-    expect(md).toContain("](#f-prev)");
-    expect(md).toContain("- [ ] Entrega a mano\n");
+    // Las acciones van en tabla, con la fecha en su columna "Cuándo".
+    expect(md).toContain("| Acción | Cuándo |");
+    expect(md).toContain("| ✓ Publica el video | [hecho el");
+    expect(md).toContain("](#f-hecho) |");
+    expect(md).toContain("| Habla con 5 desconocidos | [previsto para el");
+    expect(md).toContain("](#f-prev) |");
+    expect(md).toContain("| Entrega a mano | sin fecha |");
     expect(md).toContain("### Etapa 1");
     expect(md).toContain("### Etapa 2");
   });

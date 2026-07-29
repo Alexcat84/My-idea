@@ -149,3 +149,17 @@ va al final.
 - **PDF — resumen honesto:** el resumen se titula "Tu progreso hasta aquí"
   mientras el proyecto está en marcha; solo dice "Cómo te fue" cuando ya se
   cerró. PENDIENTE para Design: hacer ese resumen **más visual**.
+
+## 2026-07-28 (b) — Correcciones del fundador sobre lo anterior
+- **"cambiar fecha" ABAJO A LA IZQUIERDA:** pasó de la derecha de la fila a
+  debajo del texto (abajo-izquierda). El texto de la actividad recupera todo su
+  ancho como protagonista; el botón no le roba espacio. Ref: `lote3_manos_app.png`.
+- **PDF, riel corregido:** se quitó la línea sola que se había metido en las
+  listas numeradas (se veía "inventada") y ahora los pasos de cada Etapa usan el
+  MISMO riel de puntos que las viñetas (línea + puntos encima, sin el número).
+  **Puntos más grandes (10px) y línea más gruesa (2px)** en TODO el riel.
+  Refs: `lote3_riel_ol.png`.
+- **PDF, fechas ORDENADAS en tabla:** "Lo que hiciste" pasó de fechas colgando
+  al final de cada línea (un desorden) a una **tabla** con columna "Acción" y
+  columna **"Cuándo"** (la fecha en su columna, verde si hecho / azul si
+  previsto). Ref: `lote3_tabla_fechas.png`.

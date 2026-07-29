@@ -293,7 +293,7 @@ function FilaItem({
         (retirada ? "border-hairline opacity-60" : item.destacado && !hecho ? "border-done/35" : "border-hairline")
       }
     >
-      <div className="flex flex-wrap items-center gap-3.5">
+      <div className="flex items-start gap-3.5">
         {/* El círculo abre el MENÚ de los 5 estados (el ciclo por toques murió).
             A 380 el círculo es el control (frame móvil del canon 06); su área
             táctil sube a 44px con padding + margen negativo dentro del selector. */}
@@ -332,18 +332,20 @@ function FilaItem({
             <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
-            // La fecha es un DATO (verde, informativo). "cambiar fecha" es una
-            // ACCIÓN aparte y vive a la DERECHA de la fila (no junto a la fecha).
+            // La fecha es un DATO (verde, informativo).
             <span className="mt-1 block text-[12.5px] text-done">hecho el {fechaHumanaCorta(item.completed_at)}</span>
           )}
+          {/* "cambiar fecha" ABAJO A LA IZQUIERDA, debajo del texto: no le roba
+              espacio a la actividad (el texto es el protagonista). El botón
+              "Marcar hecho" se retiró; el menú del círculo es la vía única. */}
+          {hecho && !editandoFecha && (
+            <span className="mt-2 block">
+              <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="neutro">
+                cambiar fecha
+              </BotonMini>
+            </span>
+          )}
         </span>
-        {/* "cambiar fecha" a la derecha de la fila: acción, separada del dato. El
-            botón "Marcar hecho" se retiró; el menú del círculo es la vía única. */}
-        {hecho && !editandoFecha && (
-          <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="neutro">
-            cambiar fecha
-          </BotonMini>
-        )}
       </div>
 
       {/* editar la fecha de un ítem ya hecho */}
