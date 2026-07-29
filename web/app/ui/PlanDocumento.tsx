@@ -174,12 +174,15 @@ export function PlanDocumento({
   md,
   nombreIdea,
   onEmpezar,
+  onVerBitacora,
   nodosFuente,
 }: {
   md: string;
   nombreIdea: string;
   /** CTA verde: lleva a Manos a la Obra (bloque "Tu primera acción"). */
   onEmpezar?: () => void;
+  /** Fase 4.8: abre la bitácora en vivo (primer punto del sidebar). */
+  onVerBitacora?: () => void;
   /** canon 05: nodos del recorrido → sidebar "Construido con tu recorrido". */
   nodosFuente?: string[];
 }) {
@@ -254,9 +257,34 @@ export function PlanDocumento({
     </div>
   );
 
-  // Sin nodos fuente (plan de mundo / historial): una sola columna.
+  // Fase 4.8 — MI BITÁCORA como primer punto del sidebar (arriba a la derecha):
+  // la historia viva del viaje, verla antes de imprimir. Se muestra HAYA o no
+  // recorrido (en ambos layouts).
+  const tarjetaBitacora = onVerBitacora ? (
+    <div className="mb-6 rounded-panel border border-accent/40 bg-accent/5 p-4" data-no-print>
+      <p className="text-[13.5px] font-semibold text-accent">Mi bitácora</p>
+      <p className="mt-1 text-[12px] leading-relaxed text-dim">La historia de tu viaje, paso a paso.</p>
+      <button
+        onClick={onVerBitacora}
+        className="mt-2.5 w-full rounded-[10px] bg-accent py-2 text-[12.5px] font-semibold text-white hover:opacity-90"
+      >
+        Ver mi bitácora
+      </button>
+    </div>
+  ) : null;
+
+  // Sin nodos fuente (plan de mundo / historial): una sola columna. Aun así la
+  // bitácora tiene su lugar a la derecha si hay a dónde ir.
   if (!nodosFuente || nodosFuente.length === 0) {
-    return <section className="flex flex-col">{documento}</section>;
+    if (!tarjetaBitacora) return <section className="flex flex-col">{documento}</section>;
+    return (
+      <section className="flex flex-col gap-8 lg:flex-row lg:items-start">
+        {documento}
+        <aside className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7" style={{ animationDelay: "0.5s" }}>
+          {tarjetaBitacora}
+        </aside>
+      </section>
+    );
   }
 
   // Canon 05: documento + sidebar "Construido con tu recorrido".
@@ -267,6 +295,7 @@ export function PlanDocumento({
         className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7"
         style={{ animationDelay: "0.5s" }}
       >
+        {tarjetaBitacora}
         <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Construido con tu recorrido</p>
         <ul className="flex flex-col gap-4">
           {nodosFuente.map((n, i) => (
