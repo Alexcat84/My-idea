@@ -200,16 +200,47 @@ summary::-webkit-details-marker {
   }
 
   :root {
-    /* Papel: superficies claras, tinta oscura. */
+    /* Tokens de PAPEL (calibración de Design): superficies claras, tinta
+       oscura. La identidad se conserva pero baja un punto para el papel: el
+       azul piensa (#3B6BE8), el verde cierra (#1F8A34), el ámbar guarda
+       (#96690C). Nunca rojo. */
     --bg: #ffffff;
     --surface: #ffffff;
-    --surface-2: #f5f6f9;
-    --border: rgba(20, 22, 28, 0.14);
-    --text: #14161c;
-    --text-dim: #5b616e;
-    /* La identidad NO se toca: azul piensa, verde ejecuta, ámbar guardián. */
-    --accent-soft: rgba(77, 124, 254, 0.12);
-    --done-soft: rgba(63, 185, 80, 0.14);
+    --surface-2: #f4f6f9;
+    --border: #dfe1e6;
+    --text: #16171a;
+    --text-dim: #4b4e55;
+    --accent: #3b6be8;
+    --done: #1f8a34;
+    --warn: #96690c;
+    --accent-soft: rgba(59, 107, 232, 0.1);
+    --done-soft: rgba(31, 138, 52, 0.12);
+  }
+
+  /* Dos familias, un solo documento: los TÍTULOS del papel en serif (en la app
+     real Source Serif 4; Georgia como equivalente del sistema, con pesos
+     reales). El serif es lo que separa el papel de "la app pintada de blanco";
+     jamás aparece en pantalla, solo aquí. */
+  [data-plan-print] h1,
+  [data-plan-print] h2,
+  [data-plan-print] h3,
+  [data-plan-print] h4 {
+    font-family: Georgia, "Source Serif 4", "Times New Roman", serif !important;
+  }
+
+  /* Caja de lectura: la columna del cuerpo no pasa de 600px aunque la hoja
+     tenga más ancho útil — la línea de lectura manda sobre el margen. */
+  [data-plan-print] [data-cuerpo-papel] {
+    max-width: 600px;
+  }
+
+  /* Riel de papel (Design): la ESPINA (línea de los pasos) baja a azul-riel
+     #C9D4EE, más clara que los puntos, que siguen en el azul de papel #3B6BE8.
+     Solo la espina de las listas (ul/ol ::before); los puntos (li ::before) no
+     se tocan y heredan el --accent de papel. */
+  [data-plan-print] ul::before,
+  [data-plan-print] ol::before {
+    background: #c9d4ee !important;
   }
 
   html,
@@ -292,7 +323,7 @@ summary::-webkit-details-marker {
     gap: 12px;
     padding: 6mm 14mm;
     font-size: 9pt;
-    color: var(--text-dim);
+    color: #6b6e75; /* tinta terciaria del papel (rótulos, pie, metadatos) */
     border-top: 1px solid var(--border);
     background: #fff;
   }
