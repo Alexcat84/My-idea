@@ -115,7 +115,7 @@ describe("expedienteMarkdown", () => {
       "## Tu idea, ordenada",
       "## Tu Plan",
       "## Seguimiento 1",
-      "## Lo que hiciste",
+      "## Tu avance",
       "## Tus Números",
       "## Riesgos Bajo Control",
       "## Tu progreso hasta aquí",
@@ -186,17 +186,24 @@ describe("expedienteMarkdown", () => {
     const md = expedienteMarkdown(
       datos({ organizadorMd: null, numerosMd: null, mundos: [], informeMd: null, acciones: [] })
     );
-    for (const ausente of ["## Tu idea, ordenada", "## Tus Números", "## Lo que hiciste", "## Tu progreso hasta aquí", "## Cómo te fue"]) {
+    for (const ausente of ["## Tu idea, ordenada", "## Tus Números", "## Tu avance", "## Lo que hiciste", "## Tu progreso hasta aquí", "## Cómo te fue"]) {
       expect(md).not.toContain(ausente);
     }
     expect(md).toContain("## Tu Plan");
   });
 
-  it("el resumen es 'Tu progreso' en marcha y 'Cómo te fue' al cerrar", () => {
-    expect(expedienteMarkdown(datos())).toContain("## Tu progreso hasta aquí");
-    expect(expedienteMarkdown(datos())).not.toContain("## Cómo te fue");
+  it("las claves de sección hablan en presente en marcha y en pasado al cerrar", () => {
+    // En marcha (6/30, aún hay camino): registro = "Tu avance", resumen = "Tu progreso".
+    const enMarcha = expedienteMarkdown(datos());
+    expect(enMarcha).toContain("## Tu avance");
+    expect(enMarcha).toContain("## Tu progreso hasta aquí");
+    expect(enMarcha).not.toContain("## Lo que hiciste");
+    expect(enMarcha).not.toContain("## Cómo te fue");
+    // Cerrada: voz de cierre.
     const cerrada = expedienteMarkdown(datos({ realizadaAt: "2026-05-01T12:00:00Z" }));
+    expect(cerrada).toContain("## Lo que hiciste");
     expect(cerrada).toContain("## Cómo te fue");
+    expect(cerrada).not.toContain("## Tu avance");
     expect(cerrada).not.toContain("## Tu progreso hasta aquí");
   });
 

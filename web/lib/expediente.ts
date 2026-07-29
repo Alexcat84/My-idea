@@ -212,8 +212,11 @@ function seccionAcciones(acciones: AccionExpediente[]): string[] {
  */
 export function expedienteMarkdown(d: DatosExpediente): string {
   const l: string[] = [];
-  // "Cómo te fue" solo cuando el proyecto ya se cerró; mientras está en marcha
-  // es "Tu progreso hasta aquí" (no un veredicto, un avance). Lo pidió el fundador.
+  // Claves de sección según el estado del proyecto (lo pidió el fundador: cada
+  // punto de control con su clave clara). Mientras hay camino por delante NO se
+  // habla en pasado: el registro de acciones es "Tu avance", y el resumen es
+  // "Tu progreso hasta aquí". Solo al cerrar cambian a la voz de cierre.
+  const tituloAcciones = d.realizadaAt ? "Lo que hiciste" : "Tu avance";
   const tituloResumen = d.realizadaAt ? "Cómo te fue" : "Tu progreso hasta aquí";
 
   l.push(`# ${d.nombre}`);
@@ -234,7 +237,7 @@ export function expedienteMarkdown(d: DatosExpediente): string {
   if (d.organizadorMd) secciones.push("Tu idea, ordenada");
   const ciclos = titulosDeCiclos(d.ciclos);
   for (const c of ciclos) secciones.push(c.titulo);
-  if (d.acciones.length) secciones.push("Lo que hiciste");
+  if (d.acciones.length) secciones.push(tituloAcciones);
   if (d.numerosMd) secciones.push("Tus Números");
   for (const m of d.mundos) if (m.contenidoMd) secciones.push(m.nombre);
   if (d.informeMd) secciones.push(tituloResumen);
@@ -268,7 +271,7 @@ export function expedienteMarkdown(d: DatosExpediente): string {
   }
 
   if (d.acciones.length) {
-    l.push("## Lo que hiciste");
+    l.push(`## ${tituloAcciones}`);
     l.push("");
     l.push(...seccionAcciones(d.acciones));
   }

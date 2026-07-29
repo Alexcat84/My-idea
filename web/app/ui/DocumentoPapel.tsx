@@ -17,16 +17,15 @@ import remarkGfm from "remark-gfm";
 /** El punto azul de cada viñeta, colocado SOBRE la línea de conexión de la
  * lista. Va por CSS y no como elemento: así solo lo llevan los hijos directos
  * de un <ul> y una lista numerada conserva su número sin un punto encima. */
+// Config del riel EXACTA a la que ya funciona bien en "¿Puede sostenerse tu
+// idea?" (Tus Números): el punto queda alineado sobre la línea. No la tocamos
+// (el fundador: "no nos compliquemos"). La comparten viñetas (ul) y pasos (ol).
 const PUNTOS_DE_VINETA =
-  "[&>li]:relative [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[24px] " +
-  "[&>li]:before:top-[6px] [&>li]:before:h-2.5 [&>li]:before:w-2.5 [&>li]:before:rounded-full " +
+  "[&>li]:relative [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[23px] " +
+  "[&>li]:before:top-[9px] [&>li]:before:h-1.5 [&>li]:before:w-1.5 [&>li]:before:rounded-full " +
   "[&>li]:before:bg-accent";
 
-// El riel de la casa: una línea azul a la izquierda con sus puntos ENCIMA. Lo
-// comparten las viñetas (ul) y las listas numeradas de pasos (ol): en el PDF el
-// plan se lee como una sola secuencia con su línea de avance, no como bloques
-// sueltos. Línea de 2px (antes 1px, se veía endeble).
-const RIEL_ESTILO = { borderLeft: "2px solid rgba(77,124,254,0.42)" } as const;
+const RIEL_ESTILO = { borderLeft: "1px solid rgba(77,124,254,0.28)" } as const;
 
 const COMPONENTES: Components = {
   h1: ({ children }) => (
