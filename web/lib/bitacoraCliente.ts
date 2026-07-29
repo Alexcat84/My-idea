@@ -60,11 +60,20 @@ export interface DatosBitacora {
   generadoAt: string;
 }
 
+/** El peso visual de una entrada (regla de Design). Solo lo usa el render de la
+ * página/papel para tamaño y color; el .md ignora el peso (es texto puro). */
+export type PesoBitacora = "hito" | "accion" | "retirada" | "cierre";
+
 export interface EntradaBitacora {
   /** ISO del momento; ordena y fija el día/hora en el render */
   fecha: string;
   /** la línea, en voz de persona, sin la fecha (la pone el render) */
   texto: string;
+  /** hito (momento estructural), accion (avance diario), retirada (no aplica),
+   * cierre (marcó realizada) — el único verde. */
+  peso: PesoBitacora;
+  /** nombre corto para el mapa de hitos (solo hito/cierre; el resto lo omite) */
+  titulo?: string;
 }
 
 const esCore = (d: string | null | undefined) => !d || d === "core";
@@ -94,46 +103,46 @@ const EVENTOS_NARRABLES = new Set([
 /** Ensambla las entradas de la bitácora, en orden cronológico ASCENDENTE. */
 export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
   const E: EntradaBitacora[] = [];
-  const push = (fecha: string | null | undefined, texto: string) => {
-    if (fecha) E.push({ fecha, texto });
+  const push = (fecha: string | null | undefined, texto: string, peso: PesoBitacora = "accion", titulo?: string) => {
+    if (fecha) E.push({ fecha, texto, peso, titulo });
   };
   const textoDe = new Map(d.items.map((i) => [i.id, i.texto]));
   const accion = (id: unknown) => corto(textoDe.get(String(id)) ?? "una actividad");
   const cita = (m: unknown) => (typeof m === "string" && m.trim() ? `: «${m.replace(/\s+/g, " ").trim()}»` : ".");
 
   // ── Hitos derivados de timestamps existentes ──────────────────────────────
-  push(d.creadaAt, "Encendiste la chispa y escribiste tu idea.");
+  push(d.creadaAt, "Encendiste la chispa y escribiste tu idea.", "hito", "La Chispa");
 
   const coreOrg = d.planes.find((p) => esCore(p.dominio) && p.etiqueta === "organizador");
-  push(coreOrg?.created_at, "Ordenaste tu idea y ganaste claridad.");
+  push(coreOrg?.created_at, "Ordenaste tu idea y ganaste claridad.", "hito", "Tu idea ordenada");
 
   const explora = d.sesiones.find((s) => esCore(s.dominio) && s.tipo === "inicial");
   push(explora?.created_at, "Empezaste a explorar tu idea, pregunta por pregunta.");
 
   const corePlan = d.planes.find((p) => esCore(p.dominio) && (p.etiqueta === "completo" || p.etiqueta === "inicial"));
-  push(corePlan?.created_at, "Recibiste tu plan.");
+  push(corePlan?.created_at, "Recibiste tu plan.", "hito", "Tu Plan");
 
   // Seguimientos (recálculos del plan), numerados por orden cronológico.
   const segs = d.planes
     .filter((p) => esCore(p.dominio) && p.etiqueta === "seguimiento")
     .sort((a, b) => a.created_at.localeCompare(b.created_at));
-  segs.forEach((p, i) => push(p.created_at, `Contaste qué pasó y recalculé tu plan (seguimiento ${i + 1}).`));
+  segs.forEach((p, i) => push(p.created_at, `Contaste qué pasó y recalculé tu plan (seguimiento ${i + 1}).`, "hito", `Seguimiento ${i + 1}`));
 
   // Línea base sellada: un sello por plan que tenga su marca.
   for (const p of d.planes) {
-    if (p.baseline_confirmada_at) push(p.baseline_confirmada_at, "Aceptaste tus fechas: tu línea base quedó sellada.");
+    if (p.baseline_confirmada_at) push(p.baseline_confirmada_at, "Aceptaste tus fechas: tu línea base quedó sellada.", "hito", "Tu línea base");
   }
 
   // Tus Números, versionados por orden.
   const nums = d.planes
     .filter((p) => p.etiqueta === "reporte_numeros")
     .sort((a, b) => a.created_at.localeCompare(b.created_at));
-  nums.forEach((p, i) => push(p.created_at, `Calculaste Tus Números${nums.length > 1 ? ` (versión ${i + 1})` : ""}.`));
+  nums.forEach((p, i) => push(p.created_at, `Calculaste Tus Números${nums.length > 1 ? ` (versión ${i + 1})` : ""}.`, "hito", "Tus Números"));
 
   // Planes de mundo generados.
   for (const p of d.planes) {
     if (!esCore(p.dominio) && (p.etiqueta === "inicial" || p.etiqueta === "completo" || p.etiqueta === "seguimiento")) {
-      push(p.created_at, `Se generó tu plan de ${d.nombreMundo(p.dominio!)}.`);
+      push(p.created_at, `Se generó tu plan de ${d.nombreMundo(p.dominio!)}.`, "hito", d.nombreMundo(p.dominio!));
     }
   }
 
@@ -159,7 +168,7 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
         break;
       }
       case "item_no_aplica":
-        push(e.created_at, `Retiraste «${accion(p.item)}»${cita(p.motivo)}`);
+        push(e.created_at, `Retiraste «${accion(p.item)}»${cita(p.motivo)}`, "retirada");
         break;
       case "item_reactivada":
         push(e.created_at, `Reactivaste «${accion(p.item)}».`);
@@ -181,28 +190,28 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
       case "mundo_completado": {
         const nombre = d.nombreMundo(String(p.mundo));
         if (p.accion === "reabrir") push(e.created_at, `Reabriste el mundo ${nombre}.`);
-        else push(e.created_at, `Completaste el mundo ${nombre}${cita(p.motivo)}`);
+        else push(e.created_at, `Completaste el mundo ${nombre}${cita(p.motivo)}`, "hito", nombre);
         break;
       }
       case "preview_iniciado":
         push(e.created_at, `Exploraste gratis el mundo ${d.nombreMundo(String(p.mundo))}.`);
         break;
       case "preview_completado":
-        push(e.created_at, `Tu diagnóstico de ${d.nombreMundo(String(p.mundo))} quedó listo.`);
+        push(e.created_at, `Tu diagnóstico de ${d.nombreMundo(String(p.mundo))} quedó listo.`, "hito", d.nombreMundo(String(p.mundo)));
         break;
       case "preview_a_compra":
-        push(e.created_at, `Sumaste el plan completo de ${d.nombreMundo(String(p.mundo))}.`);
+        push(e.created_at, `Sumaste el plan completo de ${d.nombreMundo(String(p.mundo))}.`, "hito", d.nombreMundo(String(p.mundo)));
         break;
       case "realizada":
         if (p.accion === "reabrir") push(e.created_at, "Reabriste tu idea para seguir trabajándola.");
-        else push(e.created_at, `Marcaste tu idea como realizada${cita(p.motivo)}`);
+        else push(e.created_at, `Marcaste tu idea como realizada${cita(p.motivo)}`, "cierre", "Realizado");
         break;
     }
   }
 
   // Honestidad con el pasado: si la idea está realizada pero su cierre es de una
   // era sin bitácora, deriva la entrada del timestamp (no se inventa: existe).
-  if (d.realizadaAt && !huboRealizada) push(d.realizadaAt, "Marcaste tu idea como realizada.");
+  if (d.realizadaAt && !huboRealizada) push(d.realizadaAt, "Marcaste tu idea como realizada.", "cierre", "Realizado");
 
   // Orden cronológico ascendente. El sort es estable: a igual instante, se
   // conserva el orden de inserción (hitos derivados antes que eventos sueltos).
