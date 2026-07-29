@@ -73,6 +73,19 @@ function IconoHoja() {
   );
 }
 
+/** Una línea de tiempo: la bitácora cuenta la secuencia del viaje. */
+function IconoBitacora() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M6 4v16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <circle cx="6" cy="7" r="1.6" fill="currentColor" />
+      <circle cx="6" cy="12.5" r="1.6" fill="currentColor" />
+      <circle cx="6" cy="18" r="1.6" fill="currentColor" />
+      <path d="M10 7h9M10 12.5h9M10 18h6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 /** Hojas apiladas: el expediente es la compilación de todo el camino. */
 function IconoExpediente() {
   return (
@@ -191,7 +204,7 @@ export function Descargas({
                   }
                   aria-hidden
                 >
-                  {esExpediente ? <IconoExpediente /> : <IconoHoja />}
+                  {esExpediente ? <IconoExpediente /> : doc.tipo === "bitacora" ? <IconoBitacora /> : <IconoHoja />}
                 </span>
                 <div className="min-w-[180px] flex-1">
                   <p className="text-[15px] font-semibold leading-snug">{doc.titulo}</p>

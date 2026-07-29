@@ -208,6 +208,23 @@ para Design** en dos piezas nuevas (sin pantalla de canon todavía):
 Gobierno: el cumplimiento mide contra la **fecha vigente**; medir contra la
 original sería regaño estructural. La honestidad histórica gana su capa aparte.
 
+## Fase 4.8 — La bitácora del cliente (2026-07-28)
+
+**Vara pendiente para Design** (documento nuevo, sin pantalla de canon aún):
+
+- **"Tu bitácora"** entra al panel de Tus documentos (.md y PDF, patrón del
+  expediente; descarga gratis, cero motor). Es un LECTOR PURO
+  (`lib/bitacoraCliente.ts`) que ensambla la línea de tiempo cronológica de una
+  idea desde las fuentes existentes (proyecto, sesiones, planes, checklist,
+  `project_bitacora`, mundos), SIN escrituras nuevas. El expediente completo gana
+  la bitácora como su sección final ("La secuencia de tu viaje").
+- **Lista blanca** de eventos: solo historia del usuario. Lo interno
+  (`cobro_carrera`, `mundo_incompatible`, telemetría, reversas técnicas) JAMÁS
+  aparece (§7.1). Voz de persona, etiquetas de cara, timestamps absolutos (hora
+  solo en días con 2+ entradas), motivos citados entre comillas.
+- **Honestidad con el pasado**: lo no registrado en su día no se muestra; nunca
+  se inventa una entrada. Ref: `bitacora_panel.png`.
+
 ## Mapa gate → canon
 
 | Prefijo gate | Canon | Estado del par |

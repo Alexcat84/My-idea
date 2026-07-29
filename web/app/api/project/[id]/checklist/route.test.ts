@@ -183,4 +183,35 @@ describe("PATCH /api/project/[id]/checklist — sentido del tiempo (Fase 3.8)", 
     expect(item.fecha_base_origen).toBe("manual");
     expect(item.fecha_base_original).toBeNull();
   });
+
+  // Fase 4.8: cada decisión deja rastro en la bitácora para la historia completa.
+  const ult = () => estadoFalso.bitacora.at(-1) as { tipo: string; payload: Record<string, unknown> } | undefined;
+
+  it("cambiar a 'empezado' o 'en proceso' registra item_estado", async () => {
+    sembrarItem();
+    await PATCH(req({ item_id: "it1", estado: "empezado" }), PARAMS);
+    expect(ult()).toMatchObject({ tipo: "item_estado", payload: { de: "pendiente", a: "empezado" } });
+    await PATCH(req({ item_id: "it1", estado: "en_proceso" }), PARAMS);
+    expect(ult()).toMatchObject({ tipo: "item_estado", payload: { a: "en_proceso" } });
+  });
+
+  it("marcar HECHO no registra item_estado (su entrada nace de completed_at)", async () => {
+    sembrarItem();
+    await PATCH(req({ item_id: "it1", estado: "hecho" }), PARAMS);
+    expect(estadoFalso.bitacora.some((b) => (b as { tipo: string }).tipo === "item_estado")).toBe(false);
+  });
+
+  it("ajustar la fecha de algo YA hecho registra fecha_hecho_movida", async () => {
+    sembrarItem({ estado: "hecho", completed_at: "2026-03-20T12:00:00.000Z" });
+    await PATCH(req({ item_id: "it1", completed_at: "2026-03-22" }), PARAMS);
+    expect(ult()).toMatchObject({ tipo: "fecha_hecho_movida", payload: { item: "it1" } });
+  });
+
+  it("escribir una nota registra nota_escrita (sin el contenido)", async () => {
+    sembrarItem();
+    await PATCH(req({ item_id: "it1", nota: "recordar llamar al proveedor" }), PARAMS);
+    const b = ult()!;
+    expect(b.tipo).toBe("nota_escrita");
+    expect(JSON.stringify(b.payload)).not.toContain("proveedor");
+  });
 });

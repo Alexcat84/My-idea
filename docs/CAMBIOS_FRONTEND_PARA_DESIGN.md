@@ -187,3 +187,14 @@ va al final.
   desviación media · [N] replanificaciones" (informativa, tono espejo, jamás
   colorea de tardía lo replanificado). El cumplimiento oficial sigue midiendo
   contra la fecha vigente. **Vara pendiente para Design.**
+
+## 2026-07-28 (e) — La bitácora del cliente (Fase 4.8)
+- **"Tu bitácora"** nuevo documento en el panel de Tus documentos (.md y PDF): la
+  historia completa de la idea, del inicio al cierre, en voz de persona y orden
+  cronológico. Icono propio (línea de tiempo). El expediente gana la bitácora
+  como su sección final ("La secuencia de tu viaje"). Ref: `bitacora_panel.png`.
+  **Vara pendiente para Design** (el documento y su presentación).
+- **PDF, riel corregido (enfoque nuevo):** el border-left dejaba la línea a un
+  LADO de los puntos. Se cambió por una **espina vertical continua** (::before
+  del contenedor) con los puntos centrados EXACTAMENTE sobre ella: la línea
+  atraviesa su centro. Ref: `riel_v3.png`.
