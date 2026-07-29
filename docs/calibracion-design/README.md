@@ -56,9 +56,12 @@ actual) para comparar contra el canon.
   para el usuario. Claude Code revirtió el rediseño anterior a este `gantt_v2`;
   desde esta base, Design propone.
 - **La bitácora del cliente (página en vivo)** → `BRIEF_BITACORA.md`. Estado
-  actual: `bitapage_pagina` (la página), `bitapage_panel` (el botón "Ver"). Es
-  una primera versión funcional (línea de tiempo con barra + puntos); Design la
-  vuelve bella.
+  actual: `bitapage_pagina` (la página), `bitaentry_manos`/`bitaentry_plan` (la
+  entrada). Es una primera versión funcional (línea de tiempo con barra +
+  puntos); Design la vuelve bella.
+- **Los PDFs (Tu Plan y Expediente completo)** → `BRIEF_PDF.md`. NO calibrados
+  aún. Estado actual: `plan_pdf_v2`, `expediente_pdf_v2` (+ `riel_v3`,
+  `lote3_tabla_fechas`). Volverlos un entregable bello en papel.
 
 ## 5. El paquete de archivos a subir
 
@@ -69,6 +72,7 @@ actual) para comparar contra el canon.
 - `docs/calibracion-design/README.md` (este archivo)
 - `docs/calibracion-design/BRIEF_GANTT.md`
 - `docs/calibracion-design/BRIEF_BITACORA.md`
+- `docs/calibracion-design/BRIEF_PDF.md`
 
 **El canon de referencia (la vara):**
 - Toda la carpeta `docs/diseno-canon/` (los `*.html` y `REGLAS_Y_TOKENS.md`).
@@ -81,10 +85,12 @@ actual) para comparar contra el canon.
 `stepper_v2_manos_app(_380)`, `stepper_v2_home_app(_380)`, `lote_manos_app(_380)`,
 `lote_analisis_app(_380)`, `docs_cintas_app(_380)`, `gantt_v2_app(_380)`,
 `cascada_oferta`, `lote3_tabla_fechas`, `riel_v3`, `bitapage_pagina`,
-`bitapage_panel`, `estados_menu_app(_380)`, `control_manos_app(_380)`.
+`bitaentry_plan`, `bitaentry_manos`, `plan_pdf_v2`, `expediente_pdf_v2`,
+`estados_menu_app(_380)`, `control_manos_app(_380)`.
 
 ## 6. Prioridades
 
 1. **Gantt** (pieza nueva, el fundador la espera con ganas). Ver `BRIEF_GANTT.md`.
 2. **Bitácora** (pieza nueva, es casi una página propia). Ver `BRIEF_BITACORA.md`.
-3. Calibración fina del resto (stepper, Manos, Análisis, documentos, PDF).
+3. **Los PDFs** (Tu Plan y Expediente, sin calibrar). Ver `BRIEF_PDF.md`.
+4. Calibración fina del resto (stepper, Manos, Análisis, documentos).
