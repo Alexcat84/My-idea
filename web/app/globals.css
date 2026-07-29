@@ -188,8 +188,15 @@ summary::-webkit-details-marker {
    propios encabezados y pies (esas URLs y fechas codificadas); el respiro y
    el pie con el nombre de la idea los ponemos nosotros. */
 @media print {
+  /* El margen va en @page (no en el padding del elemento): así se RESERVA en
+     CADA página, no solo al principio y al final del bloque. Sin esto, el pie
+     fijo (bottom:0) se montaba sobre el texto de las páginas intermedias. El
+     margen inferior (20mm) reserva la banda donde vive el pie. */
   @page {
-    margin: 0;
+    /* Top y BOTTOM por página (el bottom reserva la banda del pie). Los lados
+       los pone el padding del elemento, para no depender de cómo el navegador
+       ancla el bloque absoluto respecto a los márgenes de @page. */
+    margin: 15mm 0 20mm 0;
   }
 
   :root {
@@ -232,7 +239,10 @@ summary::-webkit-details-marker {
     left: 0;
     top: 0;
     width: 100%;
-    padding: 16mm 14mm 20mm !important;
+    /* Lados con padding del elemento (14mm); top/bottom los pone @page por
+       página. Antes el padding tenía top/bottom y por eso el margen inferior
+       solo existía al final del bloque, no en cada página: el pie tapaba texto. */
+    padding: 0 14mm !important;
     background: #fff !important;
   }
 

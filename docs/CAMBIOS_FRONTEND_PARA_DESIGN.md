@@ -125,3 +125,27 @@ va al final.
   numerada solo con nombres + dos barras finas base/real + cuadrícula + eje). A
   partir de esa base, los cambios del Gantt los hará **Claude Design**. Ref:
   `gantt_v2_app.png`.
+
+## 2026-07-28 — Ajustes de checklist, documentos y PDF
+- **Conteos del acordeón alineados:** el `X/N` de cada etapa se movió a una
+  columna a la derecha (junto al chevron), `tabular-nums`; antes lo empujaba el
+  largo del nombre y bailaban. Ref: `lote2_manos_app.png`.
+- **"cambiar fecha" a la derecha** de la fila (acción), separado de la fecha
+  (dato, a la izquierda). Ref: `lote2_manos_app.png`.
+- **Panel Ritmo con color:** los tres iconos en chip de color (azul/verde/ámbar)
+  y el texto justificado (etiqueta izquierda, valor derecha). Ref: `lote2_manos_app.png`.
+- **Documentos:** los dos botones PDF ahora son la MISMA píldora azul marcada
+  (antes uno era azul lleno y el otro plano); iconos de documento CON color (hoja
+  azul suave por fase, expediente azul lleno). Ref: `lote2_documentos_app.png`.
+- **PDF — el pie ya no tapa el texto:** el margen se movió a `@page` (top+bottom
+  por página); el bottom reserva la banda del pie. Antes el pie fijo se montaba
+  sobre el texto de las páginas intermedias. **(Verificar en un PDF real.)**
+- **PDF — rieles en las etapas 1-5:** las listas numeradas (pasos de cada Etapa)
+  ganan su línea/riel a la izquierda, como las viñetas. Antes solo la tenían las
+  viñetas (p. ej. "¿Puede sostenerse tu idea?").
+- **PDF — colores de fecha:** "hecho el X" en **verde** (cumplimiento) y
+  "previsto para el X" en **azul** (planificación). El retraso no se castiga:
+  nunca rojo. Ref: `lote2_expediente_print.png`.
+- **PDF — resumen honesto:** el resumen se titula "Tu progreso hasta aquí"
+  mientras el proyecto está en marcha; solo dice "Cómo te fue" cuando ya se
+  cerró. PENDIENTE para Design: hacer ese resumen **más visual**.

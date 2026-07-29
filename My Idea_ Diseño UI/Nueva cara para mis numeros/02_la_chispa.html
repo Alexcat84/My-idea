@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Etapa 1 · La Chispa</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - La Chispa desktop
+      - La Chispa movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el azul piensa, el verde ejecuta)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --radio-campo: 14px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: var(--fuente);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ==========================================================================
+       GALERIA
+       ========================================================================== */
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 760px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+
+    /* ==========================================================================
+       LIENZO Y NAV
+       ========================================================================== */
+    .lienzo { position: relative; display: flex; flex-direction: column; min-height: 820px; }
+    .lienzo--movil { min-height: 760px; }
+
+    .barra-nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 18px 20px; }
+    .marca { font-size: 19px; font-weight: 800; letter-spacing: -0.2px; }
+    .marca-my { color: var(--texto); }
+    .marca-idea { color: var(--azul); }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); }
+
+    /* ==========================================================================
+       LA CHISPA (el momento sagrado de la captura)
+       ========================================================================== */
+    .chispa {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px;
+      gap: 18px;
+    }
+    .lienzo--movil .chispa { padding: 32px 20px; gap: 14px; justify-content: flex-start; padding-top: 48px; }
+
+    .chispa-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .chispa-titulo { font-size: 32px; font-weight: 700; letter-spacing: -0.4px; }
+    .lienzo--movil .chispa-titulo { font-size: 26px; }
+    .chispa-sub { font-size: 16px; line-height: 1.6; color: var(--texto-dim); }
+
+    /* Campo de dictado: enfocado, con el mic. El borde azul es "estoy escuchando" */
+    .dictado {
+      position: relative;
+      margin-top: 8px;
+      background: var(--superficie-1);
+      border: 1.5px solid rgba(77, 124, 254, 0.55);
+      border-radius: var(--radio-campo);
+      min-height: 220px;
+      padding: 22px 24px;
+    }
+    .lienzo--movil .dictado { min-height: 260px; }
+
+    .dictado-texto { font-size: 18px; line-height: 1.6; color: var(--texto); }
+    .lienzo--movil .dictado-texto { font-size: 16px; }
+    .dictado-cursor { display: inline-block; width: 2px; height: 20px; vertical-align: -3px; margin-left: 2px; background: var(--azul); animation: parpadeo 1.1s step-end infinite; }
+
+    .dictado-mic {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--hairline);
+      background: var(--superficie-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dictado-mic svg { width: 17px; height: 17px; stroke: var(--texto-dim); }
+
+    .chispa-pie { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 10px; }
+    .lienzo--movil .chispa-pie { flex-direction: column-reverse; align-items: stretch; }
+    .chispa-nota { font-size: 13px; color: var(--texto-dim); }
+
+    .boton-primario {
+      flex: none;
+      padding: 14px 26px;
+      border-radius: 12px;
+      border: none;
+      background: var(--azul);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .boton-primario:hover { filter: brightness(1.08); }
+
+    .avatar { position: absolute; left: 24px; bottom: 24px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--superficie-1); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--texto-dim); }
+
+    @keyframes parpadeo { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .dictado-cursor { animation: none; } }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Etapa 1 de 5</div>
+      <h1 class="galeria-titulo">La Chispa</h1>
+      <p class="galeria-descripcion">
+        La captura de la idea, el momento sagrado. Un solo campo que escucha: se escribe o se dicta,
+        tal como la idea viene a la mente, sin plantillas ni formularios. El microfono es el protagonista.
+        Desktop 1240 y móvil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- FRAME DESKTOP 1240 -->
+      <div class="marco marco--desktop" data-screen-label="La Chispa desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">idea</span></div>
+            <span class="nav-migaja">Mis ideas</span>
+          </nav>
+
+          <!-- CAPTURA -->
+          <div class="chispa">
+            <div class="chispa-eyebrow">Nueva idea · La Chispa</div>
+            <h2 class="chispa-titulo">Cuéntame tu idea</h2>
+            <p class="chispa-sub">Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito.</p>
+
+            <div class="dictado">
+              <p class="dictado-texto">Quiero montar un servicio de reparación de bicicletas a domicilio en mi ciudad, que la gente lo pida por WhatsApp y yo llegue con las herramientas, pero no se si cobrar por visita, por suscripción mensual o por reparación, ni como voy a organizar el tiempo cuando me caigan tres pedidos el mismo día<span class="dictado-cursor"></span></p>
+              <div class="dictado-mic">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="3" width="6" height="11" rx="3"></rect>
+                  <path d="M6 11a6 6 0 0 0 12 0"></path>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+            </div>
+
+            <div class="chispa-pie">
+              <span class="chispa-nota">Sin plantillas ni formularios. Solo tu idea, en tus palabras.</span>
+              <button class="boton-primario">Continuar</button>
+            </div>
+          </div>
+
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+      <!-- FRAME MOVIL 380 -->
+      <div class="marco marco--movil" data-screen-label="La Chispa movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="marca"><span class="marca-my">My</span> <span class="marca-idea">idea</span></div>
+            <span class="nav-migaja">Mis ideas</span>
+          </nav>
+
+          <div class="chispa">
+            <div class="chispa-eyebrow">Nueva idea · La Chispa</div>
+            <h2 class="chispa-titulo">Cuéntame tu idea</h2>
+            <p class="chispa-sub">Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito.</p>
+
+            <div class="dictado">
+              <p class="dictado-texto">Quiero montar un servicio de reparación de bicicletas a domicilio, que la gente lo pida por WhatsApp y yo llegue con las herramientas, pero no se si cobrar por visita o por suscripción, ni como organizar el tiempo cuando me caigan tres pedidos el mismo día<span class="dictado-cursor"></span></p>
+              <div class="dictado-mic">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="3" width="6" height="11" rx="3"></rect>
+                  <path d="M6 11a6 6 0 0 0 12 0"></path>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+            </div>
+
+            <div class="chispa-pie">
+              <button class="boton-primario">Continuar</button>
+              <span class="chispa-nota">Sin plantillas ni formularios. Solo tu idea, en tus palabras.</span>
+            </div>
+          </div>
+
+          <div class="avatar">N</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
