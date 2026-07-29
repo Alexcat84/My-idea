@@ -16,7 +16,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { bitacoraMarkdown, type EntradaBitacora } from "@/lib/bitacoraCliente";
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
-import { DocumentoPapel } from "./DocumentoPapel";
+import { BitacoraPapel } from "./BitacoraPapel";
 
 const AZUL = "#4D7CFE";
 const CELESTE = "#8FB3F5";
@@ -119,7 +119,7 @@ function coloreaMotivo(texto: string, color: string) {
 export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver: () => void }) {
   const [datos, setDatos] = useState<{ nombre: string; entradas: EntradaBitacora[] } | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [imprimir, setImprimir] = useState<string | null>(null);
+  const [imprimir, setImprimir] = useState(false);
 
   useEffect(() => {
     let vivo = true;
@@ -134,7 +134,7 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
 
   useEffect(() => {
     if (!imprimir) return;
-    const limpiar = () => setImprimir(null);
+    const limpiar = () => setImprimir(false);
     window.addEventListener("afterprint", limpiar);
     window.print();
     return () => window.removeEventListener("afterprint", limpiar);
@@ -167,7 +167,6 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
       : 0;
   const N = hitos.length;
   const inset = N > 1 ? 100 / (2 * N) : 50;
-  const spineBottom = cerrada ? 40 : 16;
 
   return (
     <section className="mx-auto w-full max-w-[880px]">
@@ -198,7 +197,7 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
               Descargar .md
             </button>
             <button
-              onClick={() => setImprimir(markdown())}
+              onClick={() => setImprimir(true)}
               className="rounded-full border border-accent/50 bg-accent/15 px-4 py-2.5 text-[13.5px] font-semibold text-accent hover:bg-accent/25"
             >
               Imprimir / PDF
@@ -276,24 +275,35 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
             </div>
 
             {/* ── Línea de tiempo completa ─────────────────────────────── */}
+            {/* La espina NO es un elemento absoluto con "bottom" adivinado (se
+                pasaba del último punto). Cada fila dibuja SU tramo en el canal:
+                la primera arranca en el centro de su punto, las de en medio lo
+                cruzan entero, y la ÚLTIMA termina justo en el centro de su punto
+                (nunca lo sobrepasa). Verde solo en el tramo del cierre. */}
             <div className="relative mt-9 pb-1">
-              <div
-                aria-hidden
-                style={{
-                  position: "absolute",
-                  left: 13,
-                  top: 12,
-                  bottom: spineBottom,
-                  width: 2,
-                  transform: "translateX(-50%)",
-                  background: cerrada
-                    ? `linear-gradient(to bottom, rgba(77,124,254,0.85) 0%, rgba(77,124,254,0.85) 92%, rgba(63,185,80,0.9) 100%)`
-                    : `rgba(77,124,254,0.85)`,
-                }}
-              />
-              {filas.map((f, i) =>
-                f.tipo === "dia" ? (
-                  <div key={`d-${i}`} className="relative" style={{ paddingLeft: 44, paddingBottom: 10, paddingTop: i === 0 ? 2 : 8 }}>
+              {filas.map((f, i) => {
+                const esPrimera = i === 0;
+                const esUltima = i === filas.length - 1;
+                // centro del punto de esta fila, desde el borde superior de la fila
+                const centro = f.tipo === "dia" ? 12 : f.entrada.peso === "cierre" ? 13 : 11;
+                const verde = cerrada && (f.tipo === "dia" ? f.cierre : f.entrada.peso === "cierre");
+                const tramo = (
+                  <span
+                    aria-hidden
+                    style={{
+                      position: "absolute",
+                      left: 13,
+                      width: 2,
+                      transform: "translateX(-50%)",
+                      background: verde ? "rgba(63,185,80,0.9)" : "rgba(77,124,254,0.85)",
+                      top: esPrimera ? centro : 0,
+                      ...(esUltima ? { height: centro } : { bottom: 0 }),
+                    }}
+                  />
+                );
+                return f.tipo === "dia" ? (
+                  <div key={`d-${i}`} className="relative" style={{ paddingLeft: 44, paddingBottom: 10, paddingTop: esPrimera ? 2 : 8 }}>
+                    {tramo}
                     <span
                       aria-hidden
                       style={{
@@ -317,8 +327,9 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
                   <div
                     key={`e-${i}`}
                     className="relative"
-                    style={{ paddingLeft: 44, paddingBottom: f.ultima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
+                    style={{ paddingLeft: 44, paddingBottom: esUltima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
                   >
+                    {tramo}
                     <PuntoEntrada peso={f.entrada.peso} />
                     {f.conHora ? (
                       <div className="flex items-baseline gap-3">
@@ -335,8 +346,8 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
                       </span>
                     )}
                   </div>
-                )
-              )}
+                );
+              })}
             </div>
 
             <p className="mt-9 border-t border-hairline pt-5 text-[12.5px] leading-relaxed text-dim">
@@ -348,7 +359,7 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
       </div>
 
       {/* Invisible en pantalla; la hoja de impresión lo enciende en papel. */}
-      {imprimir && <DocumentoPapel oculto markdown={imprimir} nombreIdea={datos.nombre} titulo="Mi bitácora" />}
+      {imprimir && <BitacoraPapel oculto entradas={entradas} nombreIdea={datos.nombre} />}
     </section>
   );
 }
