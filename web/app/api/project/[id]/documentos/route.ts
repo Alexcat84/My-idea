@@ -14,7 +14,8 @@ import { NextResponse } from "next/server";
 import { calcularAnalytics, informeMarkdown } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
-import { bitacoraCuerpo, bitacoraMarkdown, construirBitacora, type EventoBita } from "@/lib/bitacoraCliente";
+import { bitacoraCuerpo, bitacoraMarkdown } from "@/lib/bitacoraCliente";
+import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
 import { obtenerProyecto } from "@/lib/db";
 import {
   CLAVE_BITACORA,
@@ -90,46 +91,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
   const realizadaAt = proyecto.realizada_at ?? null;
-  const creadaAt = proyecto.created_at; // capturado aquí para el closure de abajo
 
   const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
   const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
-
-  // Fase 4.8: arma las entradas de la bitácora (lector puro). Carga el checklist
-  // (id + texto + completed_at, todos los dominios) y la bitácora de eventos; el
-  // resto ya está cargado. Se usa en el documento "Tu bitácora" y como sección
-  // final del expediente.
-  async function entradasBitacora() {
-    const { data: itemsB } = await supabase
-      .from("checklist_items")
-      .select("id, texto, completed_at")
-      .eq("project_id", projectId);
-    let eventos: EventoBita[] = [];
-    try {
-      const { data, error } = await supabase
-        .from("project_bitacora")
-        .select("tipo, payload, created_at")
-        .eq("project_id", projectId);
-      if (!error) eventos = (data ?? []) as EventoBita[];
-    } catch {
-      eventos = [];
-    }
-    return construirBitacora({
-      nombreIdea: nombre,
-      creadaAt,
-      realizadaAt,
-      sesiones,
-      planes,
-      items: ((itemsB ?? []) as Array<{ id: string; texto: string; completed_at: string | null }>).map((i) => ({
-        id: i.id,
-        texto: i.texto,
-        completed_at: i.completed_at,
-      })),
-      eventos,
-      nombreMundo,
-      generadoAt: new Date().toISOString(),
-    });
-  }
 
   const doc = new URL(request.url).searchParams.get("doc");
   if (!doc) {
@@ -142,7 +106,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       titulo: "Tu bitácora",
       nombre,
       archivo: nombreArchivo(nombre, "Tu bitacora"),
-      markdown: bitacoraMarkdown(nombre, await entradasBitacora(), generado),
+      markdown: bitacoraMarkdown(nombre, await cargarEntradasBitacora(supabase, projectId, proyecto, nombre), generado),
     });
   }
 
@@ -250,7 +214,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     // el expediente ya cuenta lo mismo con menos ruido.
     informeMd: acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo) : null,
     // Fase 4.8: la secuencia del viaje cierra el expediente.
-    bitacoraMd: bitacoraCuerpo(await entradasBitacora(), 3).join("\n"),
+    bitacoraMd: bitacoraCuerpo(await cargarEntradasBitacora(supabase, projectId, proyecto, nombre), 3).join("\n"),
     generadoAt: ahora,
   });
 

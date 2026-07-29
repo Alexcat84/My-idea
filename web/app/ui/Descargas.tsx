@@ -101,10 +101,13 @@ function IconoExpediente() {
 export function Descargas({
   projectId,
   nombreIdea,
+  onVerBitacora,
   onVolver,
 }: {
   projectId: string;
   nombreIdea: string;
+  /** Fase 4.8: abrir la bitácora como PÁGINA en vivo (antes de imprimir). */
+  onVerBitacora?: () => void;
   onVolver: () => void;
 }) {
   const [documentos, setDocumentos] = useState<DocumentoIndice[] | null>(null);
@@ -217,10 +220,20 @@ export function Descargas({
                   )}
                 </div>
                 <div className="flex shrink-0 gap-2.5">
+                  {/* La bitácora se puede VER como página en vivo antes de
+                      imprimir; el resto solo se descargan. */}
+                  {doc.tipo === "bitacora" && onVerBitacora && (
+                    <button
+                      onClick={onVerBitacora}
+                      className="rounded-[9px] border border-accent/45 bg-accent/10 px-3.5 py-2 text-[12.5px] font-semibold text-accent hover:bg-accent/20"
+                    >
+                      Ver
+                    </button>
+                  )}
                   <BotonFormato onClick={() => pedir(doc, "md")} ocupado={ocupado === `${doc.clave}:md`}>
                     .md
                   </BotonFormato>
-                  <BotonFormato onClick={() => pedir(doc, "pdf")} ocupado={ocupado === `${doc.clave}:pdf`} marcado>
+                  <BotonFormato onClick={() => pedir(doc, "pdf")} ocupado={ocupado === `${doc.clave}:pdf`} marcado={doc.tipo !== "bitacora"}>
                     PDF
                   </BotonFormato>
                 </div>
