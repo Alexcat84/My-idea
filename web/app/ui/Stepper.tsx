@@ -135,8 +135,12 @@ function Riel({
 
 /** Variante de header (58px): riel + etiqueta del hito actual al lado. */
 export function Stepper({ etapa, pensando, etiqueta, realizada }: EstadoStepper) {
-  // La etiqueta sigue al punto: azul mientras se avanza, VERDE solo al realizar.
-  const enVerde = Boolean(realizada);
+  // La etiqueta sigue el color de su punto (azul mientras se avanza), con la
+  // excepción documentada por Design: "Manos a la Obra · N/M" (etapa 5) se
+  // mantiene en VERDE porque nombra la ejecución EN CURSO, no el final del
+  // viaje — aunque su punto ya sea la punta viva azul. Y verde también al
+  // realizar (la celebración).
+  const enVerde = Boolean(realizada) || etapa === 5;
   return (
     <div aria-label={`Etapa ${etapa} de ${N}: ${ETAPAS_CANON[Math.min(etapa, N) - 1]}`} className="flex items-center gap-3">
       <Riel etapa={etapa} pensando={Boolean(pensando)} realizada={Boolean(realizada)} tam={11} ancho={150} fondo="var(--bg)" />

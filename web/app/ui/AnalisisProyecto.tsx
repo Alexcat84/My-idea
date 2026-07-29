@@ -33,8 +33,8 @@ const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries([
 
 function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-panel border border-hairline bg-surface px-4 py-6 text-center">
-      <p className="text-[34px] font-bold leading-none tracking-tight tabular-nums">{valor}</p>
+    <div className="flex flex-col items-center justify-center rounded-[14px] border border-hairline bg-surface-3 px-4 py-6 text-center">
+      <p className="text-[38px] font-extrabold leading-none tracking-tight tabular-nums">{valor}</p>
       <p className="mt-2 text-[12px] text-dim [text-wrap:balance]">{etiqueta}</p>
     </div>
   );
@@ -45,8 +45,8 @@ function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
  * porcentaje o la unidad y la etiqueta. Misma familia que la capa universal. */
 function TileCumpl({ valor, sufijo, etiqueta, color }: { valor: string; sufijo: string; etiqueta: string; color?: string }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-panel border border-hairline bg-surface px-3 py-5 text-center">
-      <p className="text-[30px] font-bold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
+    <div className="flex flex-col items-center justify-center rounded-[14px] border border-hairline bg-surface-3 px-3 py-5 text-center">
+      <p className="text-[34px] font-extrabold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
         {valor}
       </p>
       <p className="mt-1.5 text-[12px] font-semibold text-dim tabular-nums">{sufijo}</p>
@@ -181,20 +181,30 @@ export function AnalisisProyecto({
               <div className="flex-1 rounded-panel border border-hairline bg-surface p-5">
                 <p className="mb-4 text-[13px] font-semibold">Duración real por etapa</p>
                 <div className="flex flex-col gap-3.5">
-                  {u.duracionPorEtapa.map((e) => (
-                    <div key={e.etapa}>
-                      <div className="mb-1.5 flex items-baseline justify-between gap-3">
-                        <span className="text-[14px]">{nombreEtapa(e.etapa)}</span>
-                        <span className="text-[13px] font-semibold text-dim">{e.dias} días</span>
+                  {u.duracionPorEtapa.map((e) => {
+                    // La etapa que MÁS se estiró va en ámbar (barra + cifra), como
+                    // el guardián que avisa; las demás en azul. Nunca rojo.
+                    const masLarga = e.dias === maxDur;
+                    return (
+                      <div key={e.etapa}>
+                        <div className="mb-1.5 flex items-baseline justify-between gap-3">
+                          <span className="text-[14px]">{nombreEtapa(e.etapa)}</span>
+                          <span
+                            className="text-[13px] font-semibold tabular-nums"
+                            style={{ color: masLarga ? "var(--warn)" : "var(--text-dim)" }}
+                          >
+                            {e.dias} días
+                          </span>
+                        </div>
+                        <div className="h-[7px] overflow-hidden rounded bg-white/[0.08]">
+                          <div
+                            className="h-full rounded"
+                            style={{ width: `${(e.dias / maxDur) * 100}%`, background: masLarga ? "var(--warn)" : "var(--accent)" }}
+                          />
+                        </div>
                       </div>
-                      <div className="h-2 overflow-hidden rounded bg-white/5">
-                        <div
-                          className="h-full rounded"
-                          style={{ width: `${(e.dias / maxDur) * 100}%`, background: "var(--accent)" }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -240,19 +250,43 @@ export function AnalisisProyecto({
             />
           </div>
 
+          {/* Capa de honestidad (Design): una BANDA propia, gris, con icono
+              neutro, JUSTO debajo de las tiles de cumplimiento. Dice contra qué
+              se mide y por qué replanificar no vuelve tardío a nadie. Nunca
+              ámbar ni roja: es contexto, no alarma. Solo si hubo replanificaciones. */}
+          {c.replanificaciones > 0 && (
+            <div className="mt-4 flex items-start gap-3 rounded-[14px] border border-hairline px-5 py-4">
+              <span aria-hidden className="mt-0.5 grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full border border-hairline text-dim">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 11v5" />
+                  <path d="M12 7.5v.5" />
+                </svg>
+              </span>
+              <p className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
+                Frente a tu plan inicial:{" "}
+                <span className="font-semibold text-ink tabular-nums">
+                  {c.desviacionVsInicialDias > 0 ? "+" : ""}
+                  {c.desviacionVsInicialDias.toFixed(1)} días
+                </span>{" "}
+                de desviación media ·{" "}
+                <span className="font-semibold text-ink tabular-nums">{c.replanificaciones}</span>{" "}
+                replanificación{c.replanificaciones === 1 ? "" : "es"}. El cumplimiento se mide contra tu
+                fecha vigente: replanificar es el control de cambios, no una tardanza.
+              </p>
+            </div>
+          )}
+
           {/* Gantt "Cómo se movió tu camino": pieza calibrada por Design, tres
               vistas (riel fantasma / escalera / dos cintas) con selector de
-              preferencia, más la línea de honestidad contra el plan inicial.
-              Datos reales de analytics; cero LLM. HOY solo con el proyecto en
-              marcha (días desde la chispa = duración total mientras no cierra). */}
+              preferencia. Datos reales de analytics; cero LLM. HOY solo con el
+              proyecto en marcha (días desde la chispa = duración total). */}
           {c.porEtapa.length > 0 && (
             <GanttCumplimiento
               porEtapa={c.porEtapa}
               maxBarra={maxBarra}
               nombreEtapa={nombreEtapa}
               hoyDias={datos.realizada_at ? null : u.duracionTotalDias}
-              desviacionVsInicialDias={c.desviacionVsInicialDias}
-              replanificaciones={c.replanificaciones}
             />
           )}
 

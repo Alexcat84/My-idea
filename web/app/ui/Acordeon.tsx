@@ -11,13 +11,23 @@ interface Props {
   children: React.ReactNode;
   /** contenido extra alineado a la derecha del título (chips, etc.) */
   extra?: React.ReactNode;
+  /** variante "etapa" (Manos a la Obra): radio 16 y, al abrir, borde verde al
+   * 28% — el verde ejecuta marca la etapa en curso. El resto de acordeones no
+   * lo llevan (mantienen radio 12 y hairline). */
+  variante?: "etapa";
 }
 
-export function Acordeon({ titulo, abierto, children, extra }: Props) {
+export function Acordeon({ titulo, abierto, children, extra, variante }: Props) {
+  const esEtapa = variante === "etapa";
   return (
     <details
       open={abierto}
-      className="group rounded-cinta border border-hairline bg-surface"
+      className={
+        "group border bg-surface " +
+        (esEtapa
+          ? "rounded-panel border-hairline open:border-done/[0.28]"
+          : "rounded-cinta border-hairline")
+      }
     >
       <summary className="flex items-center justify-between gap-3 px-5 py-4">
         <span className="font-medium leading-snug">{titulo}</span>

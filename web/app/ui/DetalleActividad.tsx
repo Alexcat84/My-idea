@@ -115,13 +115,14 @@ export function DetalleActividad({
       <button
         aria-label="Cerrar"
         onClick={onCerrar}
-        className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"
+        className="absolute inset-0 bg-black/[0.55] backdrop-blur-[1px]"
       />
-      {/* cajón: hoja inferior en móvil, cajón lateral en desktop */}
+      {/* cajón: hoja inferior en móvil, cajón lateral de 520px en desktop, sobre
+          superficie #0C0C10 (un paso más oscura, como capa flotante). */}
       <section
         className={
           "relative z-10 ml-auto flex max-h-[88vh] w-full flex-col overflow-hidden rounded-t-[20px] " +
-          "border border-hairline bg-surface sm:h-full sm:max-h-none sm:w-[440px] sm:rounded-none sm:rounded-l-[20px] " +
+          "border border-white/[0.12] bg-surface-3 sm:h-full sm:max-h-none sm:w-[520px] sm:rounded-none sm:rounded-l-[20px] " +
           "anima-hoja-in mt-auto sm:mt-0"
         }
         data-detalle-actividad
@@ -180,17 +181,16 @@ export function DetalleActividad({
                     }}
                     disabled={ocupado}
                     className={
-                      "inline-flex items-center gap-2 rounded-[9px] border px-3 py-1.5 text-[12.5px] font-semibold disabled:opacity-50 " +
+                      // El VIGENTE se marca SIEMPRE en azul (borde 60% / fondo
+                      // 14%): el azul dice "esto es lo elegido". El verde solo
+                      // vive DENTRO del icono de hecha, nunca en la pastilla.
+                      "inline-flex items-center gap-2 rounded-[11px] border px-[15px] py-2.5 text-[13.5px] font-semibold disabled:opacity-50 " +
                       (activo
-                        ? e === "hecho"
-                          ? "border-done/60 bg-done-soft text-done"
-                          : esRetirar
-                            ? "border-hairline bg-surface-2 text-dim"
-                            : "border-accent/60 bg-accent/15 text-accent"
+                        ? "border-accent/60 bg-accent/[0.14] text-ink"
                         : "border-hairline text-dim hover:text-ink")
                     }
                   >
-                    <IconoEstado estado={e} tamano={14} />
+                    <IconoEstado estado={e} tamano={17} />
                     <span className="capitalize">{ETIQUETA_ESTADO[e]}</span>
                   </button>
                 );
@@ -320,24 +320,24 @@ export function DetalleActividad({
                     setMoviendoFecha(false);
                   };
                   return (
-                    <div className="rounded-cinta border border-accent/40 bg-surface-2 px-4 py-3.5">
+                    <div className="rounded-[14px] border border-accent/[0.45] bg-accent/[0.06] px-5 py-4">
                       <p className="text-[13.5px] leading-relaxed [text-wrap:pretty]">
                         Nueva fecha: <span className="font-semibold text-accent">{fechaHumana(ofertaFecha)}</span>.{" "}
                         Hay <span className="font-semibold">{cuantos}</span> {cuantos === 1 ? "actividad pendiente que sigue" : "actividades pendientes que siguen"}.
                       </p>
                       <p className="mt-1 text-[12.5px] text-dim">¿Las muevo también, {rumbo} cada una?</p>
-                      <div className="mt-3 flex flex-wrap gap-2.5">
+                      <div className="mt-4 flex flex-wrap gap-2.5">
                         <button
                           onClick={() => mover(true)}
                           disabled={ocupado}
-                          className="rounded-[10px] bg-accent px-4 py-2 text-[13px] font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                          className="rounded-[11px] bg-accent px-5 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-50"
                         >
                           Sí, mover todas
                         </button>
                         <button
                           onClick={() => mover(false)}
                           disabled={ocupado}
-                          className="rounded-[10px] border border-hairline px-4 py-2 text-[13px] font-semibold text-dim hover:border-accent/60 hover:text-ink disabled:opacity-50"
+                          className="rounded-[11px] border border-white/[0.18] px-5 py-2.5 text-[14px] font-semibold text-ink hover:border-accent/60 disabled:opacity-50"
                         >
                           Solo esta
                         </button>
@@ -398,23 +398,16 @@ export function DetalleActividad({
 
         {/* pie: guardar la nota (si cambió) + marcar hecho */}
         <footer className="flex items-center gap-3 border-t border-hairline px-5 py-4 sm:px-6">
-          {!hecho ? (
-            <button
-              onClick={() => marcarHecho()}
-              disabled={ocupado}
-              className="flex-1 rounded-[10px] bg-done py-2.5 text-[13.5px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
-            >
-              Marcar hecho
-            </button>
-          ) : (
-            <button
-              onClick={() => onCambio({ estado: "pendiente" })}
-              disabled={ocupado}
-              className="flex-1 rounded-[10px] border border-hairline py-2.5 text-[13.5px] font-semibold text-dim hover:text-ink disabled:opacity-50"
-            >
-              Desmarcar
-            </button>
-          )}
+          {/* Acción principal a la izquierda, en verde de CONTORNO (no lleno):
+              borde 50% / fondo 10% / texto #3FB950. Si ya está hecha, cambia a
+              "Deshacer" SIN moverse de sitio (Design). */}
+          <button
+            onClick={() => (hecho ? onCambio({ estado: "pendiente" }) : marcarHecho())}
+            disabled={ocupado}
+            className="flex-1 rounded-[12px] border border-done/50 bg-done/10 py-3 text-[14.5px] font-bold text-done hover:bg-done/20 disabled:opacity-50"
+          >
+            {hecho ? "Deshacer" : "Marcar hecho"}
+          </button>
           <button
             onClick={() => onCambio({ nota: nota.trim() || null })}
             disabled={ocupado || !notaCambiada}

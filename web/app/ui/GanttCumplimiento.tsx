@@ -175,16 +175,12 @@ export function GanttCumplimiento({
   maxBarra,
   nombreEtapa,
   hoyDias,
-  desviacionVsInicialDias,
-  replanificaciones,
 }: {
   porEtapa: EtapaGantt[];
   maxBarra: number;
   nombreEtapa: (n: number) => string;
   /** días desde la chispa hasta HOY; null si el proyecto ya se cerró */
   hoyDias: number | null;
-  desviacionVsInicialDias: number;
-  replanificaciones: number;
 }) {
   const [vista, setVista] = useState<VistaGantt>("riel");
   useEffect(() => {
@@ -347,21 +343,6 @@ export function GanttCumplimiento({
           </div>
         </div>
       </div>
-
-      {replanificaciones > 0 && (
-        <p style={{ margin: "16px 0 0", fontSize: 12.5, lineHeight: 1.6, color: "#6F7076" }}>
-          Frente a tu plan inicial:{" "}
-          <span style={{ color: "#A6A7AD" }}>
-            {desviacionVsInicialDias > 0 ? "+" : ""}
-            {desviacionVsInicialDias.toFixed(1)} días
-          </span>{" "}
-          de desviación media ·{" "}
-          <span style={{ color: "#A6A7AD" }}>
-            {replanificaciones} replanificación{replanificaciones === 1 ? "" : "es"}
-          </span>
-          . El cumplimiento se mide contra tu fecha vigente.
-        </p>
-      )}
     </div>
   );
 }
