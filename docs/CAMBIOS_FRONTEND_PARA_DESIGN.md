@@ -198,3 +198,12 @@ va al final.
   LADO de los puntos. Se cambió por una **espina vertical continua** (::before
   del contenedor) con los puntos centrados EXACTAMENTE sobre ella: la línea
   atraviesa su centro. Ref: `riel_v3.png`.
+
+## 2026-07-29 — La bitácora como PÁGINA en vivo
+- La bitácora deja de ser solo documento: gana **página en vivo**
+  (`?vista=bitacora`) con su botón **"Ver"** propio en el panel de documentos.
+  Título "Mi bitácora de mi viaje «idea»" + rango, y una **línea de tiempo** con
+  barra continua y un punto por cada timestamp/actividad (aro por día, punto por
+  entrada). Descargar .md / Imprimir PDF desde la misma página. Es una primera
+  versión funcional; **el brief de diseño está en `docs/calibracion-design/`**.
+  Refs: `bitapage_pagina.png`, `bitapage_panel.png`.

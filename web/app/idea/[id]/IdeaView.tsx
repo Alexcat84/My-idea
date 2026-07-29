@@ -22,6 +22,7 @@ import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Claridad } from "../../ui/Claridad";
+import { Bitacora } from "../../ui/Bitacora";
 import { Descargas } from "../../ui/Descargas";
 import { PlanDocumento } from "../../ui/PlanDocumento";
 import { ChipSaldo } from "../../ui/ChipSaldo";
@@ -137,6 +138,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereAnalisis = searchParams.get("vista") === "analisis";
   const quiereCelebracion = searchParams.get("vista") === "celebracion";
   const quiereDocumentos = searchParams.get("vista") === "documentos";
+  const quiereBitacora = searchParams.get("vista") === "bitacora";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -189,6 +191,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [vistaCelebracion, setVistaCelebracion] = useState(quiereCelebracion);
   // Fase 4.6: las descargas del viaje (un documento por fase + el expediente).
   const [vistaDocumentos, setVistaDocumentos] = useState(quiereDocumentos);
+  const [vistaBitacora, setVistaBitacora] = useState(quiereBitacora);
   const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
 
@@ -553,7 +556,20 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaAnalisis(false);
     setVistaCelebracion(false);
     setVistaDocumentos(false);
+    setVistaBitacora(false);
     router.replace(`/idea/${projectId}`, { scroll: false });
+  }
+
+  // Fase 4.8: la bitácora como página en vivo. Se llega desde el panel de
+  // documentos (su botón "Ver"); "Volver" regresa al panel.
+  function irABitacora() {
+    setVistaBitacora(true);
+    setVistaDocumentos(false);
+    router.replace(`/idea/${projectId}?vista=bitacora`, { scroll: false });
+  }
+  function volverDeBitacora() {
+    setVistaBitacora(false);
+    irADocumentos();
   }
 
   function irADocumentos() {
@@ -752,8 +768,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
           </div>
         )}
 
-        {vistaDocumentos ? (
-          <Descargas projectId={projectId} nombreIdea={detalle.idea.nombre} onVolver={volverDeDocumentos} />
+        {vistaBitacora ? (
+          <Bitacora projectId={projectId} onVolver={volverDeBitacora} />
+        ) : vistaDocumentos ? (
+          <Descargas
+            projectId={projectId}
+            nombreIdea={detalle.idea.nombre}
+            onVerBitacora={irABitacora}
+            onVolver={volverDeDocumentos}
+          />
         ) : vistaCelebracion ? (
           <Celebracion
             projectId={projectId}
