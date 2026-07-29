@@ -13,10 +13,9 @@
  * en móvil; se cierra con la X o tocando el velo. La fila conserva sus acciones
  * rápidas (el círculo y "Marcar hecho"): el detalle es la vista profunda.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CampoConVoz } from "./CampoConVoz";
 import { ETIQUETA_ESTADO, IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
-import type { ChecklistEstado } from "@/lib/dbContract";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import type { CambioItem, ItemChecklistUI } from "./ManosALaObra";
 
@@ -50,17 +49,43 @@ export function DetalleActividad({
   tituloEtapa,
   ocupado,
   onCambio,
+  onMoverFecha,
+  itemsDominio = [],
   onCerrar,
 }: {
   item: ItemChecklistUI;
   tituloEtapa: string;
   ocupado: boolean;
   onCambio: (cambio: CambioItem) => void;
+  /** Fase 4.7: mover la fecha objetivo con cascada opcional a las posteriores.
+   * Si no viene, el detalle cae al cambio simple de una sola fecha. */
+  onMoverFecha?: (fecha: string, cascada: boolean) => void;
+  /** Los ítems del MISMO dominio, para calcular la oferta de cascada. */
+  itemsDominio?: ItemChecklistUI[];
   onCerrar: () => void;
 }) {
   const hecho = item.estado === "hecho";
   const [nota, setNota] = useState(item.nota ?? "");
   const [moviendoFecha, setMoviendoFecha] = useState(false);
+  // La nueva fecha elegida, en espera de decidir la cascada (null = sin oferta).
+  const [ofertaFecha, setOfertaFecha] = useState<string | null>(null);
+  // Pendientes POSTERIORES del mismo dominio (misma etapa o posteriores, por
+  // fecha vigente; excluye hechas y retiradas): las candidatas a la cascada.
+  const posteriores = useMemo(
+    () =>
+      item.fecha_base
+        ? itemsDominio.filter(
+            (i) =>
+              i.id !== item.id &&
+              i.estado !== "hecho" &&
+              i.estado !== "no_aplica" &&
+              i.etapa >= item.etapa &&
+              i.fecha_base !== null &&
+              Date.parse(i.fecha_base) > Date.parse(item.fecha_base!)
+          )
+        : [],
+    [itemsDominio, item.id, item.etapa, item.fecha_base]
+  );
   const [editandoFechaHecho, setEditandoFechaHecho] = useState(false);
   const [editandoMotivo, setEditandoMotivo] = useState(false);
   const [motivo, setMotivo] = useState(item.no_aplica_motivo ?? "");
@@ -277,14 +302,66 @@ export function DetalleActividad({
                     Mover fecha
                   </button>
                 </div>
+              ) : ofertaFecha ? (
+                // Oferta de CASCADA: al elegir la nueva fecha, si hay pendientes
+                // posteriores se ofrece moverlas el mismo delta. Nada se mueve
+                // sin el sí; "Solo esta" mueve únicamente esta. Simétrico
+                // (adelantar también ofrece). Fase 4.7.
+                (() => {
+                  const deltaDias = Math.round(
+                    (Date.parse(ofertaFecha) - Date.parse(item.fecha_base!)) / 86_400_000
+                  );
+                  const cuantos = posteriores.length;
+                  const magnitud = Math.abs(deltaDias);
+                  const rumbo = deltaDias >= 0 ? `${magnitud} ${magnitud === 1 ? "día" : "días"} después` : `${magnitud} ${magnitud === 1 ? "día" : "días"} antes`;
+                  const mover = (cascada: boolean) => {
+                    onMoverFecha?.(ofertaFecha, cascada);
+                    setOfertaFecha(null);
+                    setMoviendoFecha(false);
+                  };
+                  return (
+                    <div className="rounded-cinta border border-accent/40 bg-surface-2 px-4 py-3.5">
+                      <p className="text-[13.5px] leading-relaxed [text-wrap:pretty]">
+                        Nueva fecha: <span className="font-semibold text-accent">{fechaHumana(ofertaFecha)}</span>.{" "}
+                        Hay <span className="font-semibold">{cuantos}</span> {cuantos === 1 ? "actividad pendiente que sigue" : "actividades pendientes que siguen"}.
+                      </p>
+                      <p className="mt-1 text-[12.5px] text-dim">¿Las muevo también, {rumbo} cada una?</p>
+                      <div className="mt-3 flex flex-wrap gap-2.5">
+                        <button
+                          onClick={() => mover(true)}
+                          disabled={ocupado}
+                          className="rounded-[10px] bg-accent px-4 py-2 text-[13px] font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                        >
+                          Sí, mover todas
+                        </button>
+                        <button
+                          onClick={() => mover(false)}
+                          disabled={ocupado}
+                          className="rounded-[10px] border border-hairline px-4 py-2 text-[13px] font-semibold text-dim hover:border-accent/60 hover:text-ink disabled:opacity-50"
+                        >
+                          Solo esta
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })()
               ) : (
                 <div className="flex flex-wrap items-center gap-2.5 rounded-cinta border border-accent/40 bg-surface-2 px-4 py-3">
                   <input
                     type="date"
                     defaultValue={fechaInputLocal(new Date(item.fecha_base))}
                     onChange={(ev) => {
-                      if (ev.target.value) {
-                        onCambio({ fecha_base: isoDesdeInputLocal(ev.target.value) });
+                      if (!ev.target.value) return;
+                      const nueva = isoDesdeInputLocal(ev.target.value);
+                      // Con hermanos posteriores y soporte de cascada: ofrecer.
+                      // Si no, mover directo (comportamiento simple de siempre).
+                      if (onMoverFecha && posteriores.length > 0) {
+                        setOfertaFecha(nueva);
+                      } else if (onMoverFecha) {
+                        onMoverFecha(nueva, false);
+                        setMoviendoFecha(false);
+                      } else {
+                        onCambio({ fecha_base: nueva });
                         setMoviendoFecha(false);
                       }
                     }}
@@ -292,7 +369,7 @@ export function DetalleActividad({
                     aria-label="Nueva fecha objetivo"
                     className="rounded-[9px] border border-hairline bg-surface px-2.5 py-1.5 text-[13px] text-ink outline-none focus:border-accent/60 disabled:opacity-50"
                   />
-                  <button onClick={() => setMoviendoFecha(false)} className="text-[12.5px] text-dim hover:text-ink">
+                  <button onClick={() => { setMoviendoFecha(false); setOfertaFecha(null); }} className="text-[12.5px] text-dim hover:text-ink">
                     cancelar
                   </button>
                 </div>

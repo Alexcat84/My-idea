@@ -34,6 +34,7 @@ const CUMPLIMIENTO: Analytics["cumplimiento"] = {
   pctTardias: 11,
   desviacionMediaDias: 3.4,
   replanificaciones: 1,
+  desviacionVsInicialDias: 5.1,
   porEtapa: [],
   tardiasTop: [
     { texto: "Prueba 10 entregas con dos empaques", etapa: 2, diasRetraso: 12 },
