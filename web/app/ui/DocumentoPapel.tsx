@@ -18,9 +18,15 @@ import remarkGfm from "remark-gfm";
  * lista. Va por CSS y no como elemento: así solo lo llevan los hijos directos
  * de un <ul> y una lista numerada conserva su número sin un punto encima. */
 const PUNTOS_DE_VINETA =
-  "[&>li]:relative [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[23px] " +
-  "[&>li]:before:top-[9px] [&>li]:before:h-1.5 [&>li]:before:w-1.5 [&>li]:before:rounded-full " +
+  "[&>li]:relative [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[24px] " +
+  "[&>li]:before:top-[6px] [&>li]:before:h-2.5 [&>li]:before:w-2.5 [&>li]:before:rounded-full " +
   "[&>li]:before:bg-accent";
+
+// El riel de la casa: una línea azul a la izquierda con sus puntos ENCIMA. Lo
+// comparten las viñetas (ul) y las listas numeradas de pasos (ol): en el PDF el
+// plan se lee como una sola secuencia con su línea de avance, no como bloques
+// sueltos. Línea de 2px (antes 1px, se veía endeble).
+const RIEL_ESTILO = { borderLeft: "2px solid rgba(77,124,254,0.42)" } as const;
 
 const COMPONENTES: Components = {
   h1: ({ children }) => (
@@ -55,24 +61,19 @@ const COMPONENTES: Components = {
     // que no necesitan el riel de puntos: sería ruido sobre ruido.
     const tareas = typeof className === "string" && className.includes("contains-task-list");
     return tareas ? (
-      <ul className="my-3 flex flex-col gap-2">{children}</ul>
+      <ul className="my-3 flex flex-col gap-2.5">{children}</ul>
     ) : (
-      <ul
-        className={"my-3 flex flex-col gap-2 pl-5 " + PUNTOS_DE_VINETA}
-        style={{ borderLeft: "1px solid rgba(77,124,254,0.28)" }}
-      >
+      <ul className={"my-3 flex flex-col gap-2.5 pl-5 " + PUNTOS_DE_VINETA} style={RIEL_ESTILO}>
         {children}
       </ul>
     );
   },
-  // Las listas numeradas (los pasos de cada Etapa del plan) también llevan su
-  // RIEL a la izquierda, como las viñetas: la línea de avance que conecta los
-  // pasos. Antes solo la tenían las viñetas y las etapas 1-5 salían sin ella.
+  // Los pasos de cada Etapa del plan (lista numerada) usan el MISMO riel de
+  // puntos que las viñetas: línea + puntos encima. Sin el número decimal (el
+  // riel es el que ordena, como en "¿Puede sostenerse tu idea?"). Antes llevaban
+  // una línea sola sin puntos, que se veía "inventada".
   ol: ({ children }) => (
-    <ol
-      className="my-3 flex list-decimal flex-col gap-2 pl-5 marker:font-semibold marker:text-accent"
-      style={{ borderLeft: "1px solid rgba(77,124,254,0.28)" }}
-    >
+    <ol className={"my-3 flex list-none flex-col gap-2.5 pl-5 " + PUNTOS_DE_VINETA} style={RIEL_ESTILO}>
       {children}
     </ol>
   ),

@@ -172,17 +172,22 @@ function seccionAcciones(acciones: AccionExpediente[]): string[] {
   for (const etapa of etapas) {
     l.push(`### Etapa ${etapa}`);
     l.push("");
+    // Las fechas se ORDENAN en una tabla, con su propia columna "Cuándo": antes
+    // colgaban al final de cada línea y se leían como un desorden. La fecha va
+    // como enlace-centinela para que el PDF la pinte: lo HECHO en verde
+    // (cumplimiento) y lo PREVISTO en azul (planificación). El retraso no se
+    // castiga: nunca rojo. En .md la tabla se lee igual de bien.
+    l.push("| Acción | Cuándo |");
+    l.push("| :-- | :-- |");
     for (const a of activas.filter((x) => x.etapa === etapa)) {
-      const marca = a.estado === "hecho" ? "x" : " ";
-      // Las fechas van como enlaces-centinela para que el PDF las pinte: lo
-      // HECHO en verde (cumplimiento) y lo PREVISTO en azul (planificación). El
-      // retraso no se castiga: nunca rojo. En .md el texto se lee igual de bien.
+      const check = a.estado === "hecho" ? "✓ " : "";
+      const texto = a.texto.replace(/\s+/g, " ").trim().replace(/\|/g, "\\|");
       const cuando = a.completedAt
-        ? ` · [hecho el ${fechaHumanaConAno(a.completedAt)}](#f-hecho)`
+        ? `[hecho el ${fechaHumanaConAno(a.completedAt)}](#f-hecho)`
         : a.fechaBase
-          ? ` · [previsto para el ${fechaHumanaConAno(a.fechaBase)}](#f-prev)`
-          : "";
-      l.push(`- [${marca}] ${a.texto.replace(/\s+/g, " ").trim()}${cuando}`);
+          ? `[previsto para el ${fechaHumanaConAno(a.fechaBase)}](#f-prev)`
+          : "sin fecha";
+      l.push(`| ${check}${texto} | ${cuando} |`);
     }
     l.push("");
   }
