@@ -194,3 +194,7 @@ va al final.
   cronológico. Icono propio (línea de tiempo). El expediente gana la bitácora
   como su sección final ("La secuencia de tu viaje"). Ref: `bitacora_panel.png`.
   **Vara pendiente para Design** (el documento y su presentación).
+- **PDF, riel corregido (enfoque nuevo):** el border-left dejaba la línea a un
+  LADO de los puntos. Se cambió por una **espina vertical continua** (::before
+  del contenedor) con los puntos centrados EXACTAMENTE sobre ella: la línea
+  atraviesa su centro. Ref: `riel_v3.png`.

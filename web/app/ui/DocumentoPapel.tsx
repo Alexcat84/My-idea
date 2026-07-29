@@ -14,18 +14,23 @@
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-/** El punto azul de cada viñeta, colocado SOBRE la línea de conexión de la
- * lista. Va por CSS y no como elemento: así solo lo llevan los hijos directos
- * de un <ul> y una lista numerada conserva su número sin un punto encima. */
-// Config del riel EXACTA a la que ya funciona bien en "¿Puede sostenerse tu
-// idea?" (Tus Números): el punto queda alineado sobre la línea. No la tocamos
-// (el fundador: "no nos compliquemos"). La comparten viñetas (ul) y pasos (ol).
-const PUNTOS_DE_VINETA =
-  "[&>li]:relative [&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[23px] " +
-  "[&>li]:before:top-[9px] [&>li]:before:h-1.5 [&>li]:before:w-1.5 [&>li]:before:rounded-full " +
-  "[&>li]:before:bg-accent";
-
-const RIEL_ESTILO = { borderLeft: "1px solid rgba(77,124,254,0.28)" } as const;
+/** El riel del timeline: una ESPINA vertical continua (::before del contenedor,
+ * cubre también los huecos entre ítems) y los puntos de cada ítem centrados
+ * EXACTAMENTE sobre ella. Antes la línea (un border-left) quedaba al borde, a un
+ * lado de los puntos; el fundador la quiere ATRAVESANDO su centro.
+ *
+ * Geometría (todo relativo al <ul>/<ol>, con pl-6 = 24px de canal):
+ *  - espina: left 8px, ancho 2px  → su centro cae en x=9.
+ *  - punto:  el <li> arranca en x=24; con left:-20px y 10px de ancho, su centro
+ *    cae en 24-20+5 = 9. Mismo eje que la espina → la línea pasa por el centro.
+ * La comparten viñetas (ul) y pasos de etapa (ol). */
+const RIEL_CLASES =
+  "relative pl-6 " +
+  "before:pointer-events-none before:absolute before:left-[8px] before:top-2 before:bottom-2 " +
+  "before:w-[2px] before:rounded-full before:bg-[rgba(77,124,254,0.45)] before:content-[''] " +
+  "[&>li]:relative " +
+  "[&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[20px] [&>li]:before:top-[6px] " +
+  "[&>li]:before:h-2.5 [&>li]:before:w-2.5 [&>li]:before:rounded-full [&>li]:before:bg-accent";
 
 const COMPONENTES: Components = {
   h1: ({ children }) => (
@@ -62,20 +67,13 @@ const COMPONENTES: Components = {
     return tareas ? (
       <ul className="my-3 flex flex-col gap-2.5">{children}</ul>
     ) : (
-      <ul className={"my-3 flex flex-col gap-2.5 pl-5 " + PUNTOS_DE_VINETA} style={RIEL_ESTILO}>
-        {children}
-      </ul>
+      <ul className={"my-3 flex flex-col gap-2.5 " + RIEL_CLASES}>{children}</ul>
     );
   },
   // Los pasos de cada Etapa del plan (lista numerada) usan el MISMO riel de
-  // puntos que las viñetas: línea + puntos encima. Sin el número decimal (el
-  // riel es el que ordena, como en "¿Puede sostenerse tu idea?"). Antes llevaban
-  // una línea sola sin puntos, que se veía "inventada".
-  ol: ({ children }) => (
-    <ol className={"my-3 flex list-none flex-col gap-2.5 pl-5 " + PUNTOS_DE_VINETA} style={RIEL_ESTILO}>
-      {children}
-    </ol>
-  ),
+  // puntos que las viñetas: la espina + los puntos encima. Sin el número decimal
+  // (el riel es el que ordena, como en "¿Puede sostenerse tu idea?").
+  ol: ({ children }) => <ol className={"my-3 flex list-none flex-col gap-2.5 " + RIEL_CLASES}>{children}</ol>,
   li: ({ children, className }) => {
     const tarea = typeof className === "string" && className.includes("task-list-item");
     return (
