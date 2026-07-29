@@ -215,15 +215,16 @@ function BotonMini({
 /** Fila del panel Ritmo: icono en chip + etiqueta pequeña + valor en bold.
  * Más visual que la lista dt/dd, sin ocupar más espacio (lo pidió el fundador:
  * es un resumen importante). */
-function RitmoFila({ icono, etiqueta, valor, acento }: { icono: React.ReactNode; etiqueta: string; valor: string; acento?: boolean }) {
+function RitmoFila({ icono, etiqueta, valor, color }: { icono: React.ReactNode; etiqueta: string; valor: string; color: "accent" | "done" | "warn" }) {
+  const chip = { accent: "bg-accent/12 text-accent", done: "bg-done/12 text-done", warn: "bg-warn/12 text-warn" }[color];
   return (
     <div className="flex items-center gap-3 rounded-[10px] border border-hairline bg-surface-2/40 px-3 py-2.5">
-      <span className={"grid h-8 w-8 shrink-0 place-items-center rounded-lg " + (acento ? "bg-accent/10 text-accent" : "bg-surface-2 text-dim")} aria-hidden>
+      <span className={"grid h-8 w-8 shrink-0 place-items-center rounded-lg " + chip} aria-hidden>
         {icono}
       </span>
-      <span className="min-w-0">
-        <span className="block text-[11px] leading-tight text-dim">{etiqueta}</span>
-        <span className="block text-[14.5px] font-bold leading-tight tabular-nums">{valor}</span>
+      <span className="flex min-w-0 flex-1 items-baseline justify-between gap-2">
+        <span className="text-[11.5px] text-dim">{etiqueta}</span>
+        <span className="shrink-0 text-[13.5px] font-bold tabular-nums">{valor}</span>
       </span>
     </div>
   );
@@ -331,19 +332,18 @@ function FilaItem({
             <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
-            // La fecha es un DATO (verde, informativo); "cambiar fecha" es una
-            // ACCIÓN aparte (azul, como llamado a modificar), no parte del texto.
-            <span className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px]">
-              <span className="text-done">hecho el {fechaHumanaCorta(item.completed_at)}</span>
-              <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="neutro">
-                cambiar fecha
-              </BotonMini>
-            </span>
+            // La fecha es un DATO (verde, informativo). "cambiar fecha" es una
+            // ACCIÓN aparte y vive a la DERECHA de la fila (no junto a la fecha).
+            <span className="mt-1 block text-[12.5px] text-done">hecho el {fechaHumanaCorta(item.completed_at)}</span>
           )}
         </span>
-        {/* El botón "Marcar hecho" se retiró (decisión del fundador): el menú
-            del círculo es la vía única, y abre con "Hecha" primera y resaltada,
-            así el caso común queda a un toque. Sin redundancia; sin adivinar. */}
+        {/* "cambiar fecha" a la derecha de la fila: acción, separada del dato. El
+            botón "Marcar hecho" se retiró; el menú del círculo es la vía única. */}
+        {hecho && !editandoFecha && (
+          <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="neutro">
+            cambiar fecha
+          </BotonMini>
+        )}
       </div>
 
       {/* editar la fecha de un ítem ya hecho */}
@@ -390,20 +390,25 @@ function GrupoEtapas({
         const c = conteo(items);
         // Abiertas hasta la primera etapa con pendientes; las siguientes, plegadas.
         const abierta = primeraActiva === undefined || etapa <= primeraActiva;
+        // El nombre puede envolver; el conteo va en `extra` (columna derecha,
+        // junto al chevron) para que TODOS queden alineados, no empujados por el
+        // largo del título. tabular-nums para que las cifras no bailen.
         const encabezado = (
-          <span className="flex items-center gap-3">
-            <span className="text-[13px] font-bold text-accent">{String(etapa).padStart(2, "0")}</span>
-            <span className="text-[15px] font-semibold">{titulos[etapa] ?? `Etapa ${etapa}`}</span>
-            <span className="text-xs font-semibold text-done">
-              {c.hechos}/{c.total}
-            </span>
+          <span className="flex min-w-0 items-baseline gap-3">
+            <span className="shrink-0 text-[13px] font-bold text-accent">{String(etapa).padStart(2, "0")}</span>
+            <span className="text-[15px] font-semibold [text-wrap:pretty]">{titulos[etapa] ?? `Etapa ${etapa}`}</span>
+          </span>
+        );
+        const conteoEtapa = (
+          <span className="shrink-0 text-xs font-semibold tabular-nums text-done">
+            {c.hechos}/{c.total}
           </span>
         );
         // HOMOGÉNEO: toda etapa es un acordeón (con su chevron). Las que están
         // hasta la primera activa abren por defecto; las demás, plegadas. Antes
         // las primeras eran secciones planas sin chevron y rompían la simetría.
         return (
-          <Acordeon key={etapa} titulo={encabezado} abierto={abierta}>
+          <Acordeon key={etapa} titulo={encabezado} abierto={abierta} extra={conteoEtapa}>
             <div className="flex flex-col gap-2.5">
               {items.map((item) => (
                 <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
@@ -1654,9 +1659,9 @@ export function ManosALaObra({
           <div className="border-t border-hairline pt-5">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Ritmo</p>
             <div className="flex flex-col gap-2">
-              <RitmoFila icono={<IconoReloj />} etiqueta="Última acción" valor={ultimaAccion ? haceCuanto(ultimaAccion) : "aún ninguna"} />
-              {desde && <RitmoFila icono={<IconoBandera />} etiqueta="Manos a la Obra desde" valor={haceCuanto(desde)} />}
-              <RitmoFila icono={<IconoCiclos />} etiqueta="Ciclos de ajuste" valor={String(ciclosAjuste)} acento={ciclosAjuste > 0} />
+              <RitmoFila icono={<IconoReloj />} etiqueta="Última acción" valor={ultimaAccion ? haceCuanto(ultimaAccion) : "aún ninguna"} color="accent" />
+              {desde && <RitmoFila icono={<IconoBandera />} etiqueta="Manos a la Obra desde" valor={haceCuanto(desde)} color="done" />}
+              <RitmoFila icono={<IconoCiclos />} etiqueta="Ciclos de ajuste" valor={String(ciclosAjuste)} color="warn" />
             </div>
             <p className="mt-5 text-[13px] leading-relaxed text-dim">
               Pausa cuando lo necesites. Cuando vuelvas, el checklist te espera exactamente donde quedaste.

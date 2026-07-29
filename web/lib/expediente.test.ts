@@ -118,7 +118,7 @@ describe("expedienteMarkdown", () => {
       "## Lo que hiciste",
       "## Tus Números",
       "## Riesgos Bajo Control",
-      "## Cómo te fue",
+      "## Tu progreso hasta aquí",
     ];
     let cursor = -1;
     for (const seccion of orden) {
@@ -140,8 +140,10 @@ describe("expedienteMarkdown", () => {
   it("el registro de acciones cuenta lo hecho y fecha cada una", () => {
     const md = expedienteMarkdown(datos());
     expect(md).toContain("Completaste **1 de 3** acciones activas.");
-    expect(md).toContain("- [x] Publica el video · hecho el");
-    expect(md).toContain("- [ ] Habla con 5 desconocidos · previsto para el");
+    expect(md).toContain("- [x] Publica el video · [hecho el");
+    expect(md).toContain("](#f-hecho)");
+    expect(md).toContain("- [ ] Habla con 5 desconocidos · [previsto para el");
+    expect(md).toContain("](#f-prev)");
     expect(md).toContain("- [ ] Entrega a mano\n");
     expect(md).toContain("### Etapa 1");
     expect(md).toContain("### Etapa 2");
@@ -182,10 +184,18 @@ describe("expedienteMarkdown", () => {
     const md = expedienteMarkdown(
       datos({ organizadorMd: null, numerosMd: null, mundos: [], informeMd: null, acciones: [] })
     );
-    for (const ausente of ["## Tu idea, ordenada", "## Tus Números", "## Lo que hiciste", "## Cómo te fue"]) {
+    for (const ausente of ["## Tu idea, ordenada", "## Tus Números", "## Lo que hiciste", "## Tu progreso hasta aquí", "## Cómo te fue"]) {
       expect(md).not.toContain(ausente);
     }
     expect(md).toContain("## Tu Plan");
+  });
+
+  it("el resumen es 'Tu progreso' en marcha y 'Cómo te fue' al cerrar", () => {
+    expect(expedienteMarkdown(datos())).toContain("## Tu progreso hasta aquí");
+    expect(expedienteMarkdown(datos())).not.toContain("## Cómo te fue");
+    const cerrada = expedienteMarkdown(datos({ realizadaAt: "2026-05-01T12:00:00Z" }));
+    expect(cerrada).toContain("## Cómo te fue");
+    expect(cerrada).not.toContain("## Tu progreso hasta aquí");
   });
 
   it("el índice anuncia exactamente las secciones que trae", () => {

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Idea · Canon web · Detalle de actividad</title>
+
+  <!--
+    INDICE DE data-screen-label DE ESTE ARCHIVO (unicos, ninguno prefijo de otro):
+      - Detalle de actividad desktop
+      - Detalle de actividad movil 380
+  -->
+
+  <style>
+    /* ==========================================================================
+       TOKENS (el verde ejecuta; el ambar es el espejo de una tardia, no un regano)
+       ========================================================================== */
+    :root {
+      --azul: #4D7CFE;
+      --verde: #3FB950;
+      --ambar: #E0A64A;
+      --mundos: #3A9B8F;
+      --fondo: #0A0A0C;
+      --negro: #000000;
+      --superficie-1: #101013;
+      --superficie-2: #17171B;
+      --texto: #F5F6F8;
+      --texto-dim: #A6A7AD;
+      --hairline: rgba(255, 255, 255, 0.08);
+      --radio-tarjeta: 16px;
+      --radio-campo: 14px;
+      --fuente: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--fondo); color: var(--texto); font-family: var(--fuente); -webkit-font-smoothing: antialiased; }
+
+    .galeria { padding: 48px 56px; }
+    .galeria-cabecera { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; max-width: 800px; }
+    .galeria-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--azul); }
+    .galeria-titulo { font-size: 30px; font-weight: 700; }
+    .galeria-descripcion { font-size: 15px; line-height: 1.6; color: var(--texto-dim); text-wrap: pretty; }
+    .galeria-frames { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+
+    .marco { background: var(--negro); border: 1px solid var(--hairline); border-radius: var(--radio-tarjeta); overflow: hidden; }
+    .marco--desktop { width: 1240px; }
+    .marco--movil { width: 380px; }
+    .lienzo { position: relative; display: flex; flex-direction: column; min-height: 820px; overflow: hidden; }
+    .lienzo--movil { min-height: 760px; }
+
+    .barra-nav { display: flex; align-items: center; gap: 24px; padding: 18px 32px; border-bottom: 1px solid var(--hairline); }
+    .lienzo--movil .barra-nav { padding: 16px 18px; }
+    .nav-idea { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .nav-migaja { font-size: 14px; color: var(--texto-dim); flex: none; }
+    .nav-titulo-idea { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* Checklist de fondo (contexto atenuado, de donde se abre la actividad) */
+    .fondo-checklist { padding: 30px 40px; filter: brightness(0.5); }
+    .lienzo--movil .fondo-checklist { padding: 22px 18px; }
+    .fondo-eyebrow { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--verde); margin-bottom: 14px; }
+    .fondo-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--verde); }
+    .fondo-titulo { font-size: 26px; font-weight: 700; margin-bottom: 20px; }
+    .fondo-item { display: flex; align-items: center; gap: 14px; padding: 15px 18px; background: var(--superficie-1); border: 1px solid var(--hairline); border-radius: 12px; margin-bottom: 10px; max-width: 720px; }
+    .fondo-item--activa { border-color: rgba(77, 124, 254, 0.5); }
+    .fondo-check { flex: none; width: 21px; height: 21px; border-radius: 50%; border: 1.5px solid rgba(255, 255, 255, 0.3); }
+    .fondo-check--hecho { border-color: var(--verde); background: var(--verde); }
+    .fondo-item-texto { flex: 1; font-size: 14px; line-height: 1.5; }
+    .fondo-item--hecho .fondo-item-texto { color: var(--texto-dim); text-decoration: line-through; }
+
+    /* Velo */
+    .velo { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.55); }
+
+    /* ==========================================================================
+       PANEL DE DETALLE (desktop: cajon lateral; movil: hoja inferior)
+       ========================================================================== */
+    .panel { position: absolute; background: #0E0E11; display: flex; flex-direction: column; }
+    .panel--cajon { top: 0; right: 0; bottom: 0; width: 440px; border-left: 1px solid var(--hairline); box-shadow: -24px 0 48px rgba(0, 0, 0, 0.5); }
+    .panel--hoja { left: 0; right: 0; bottom: 0; border-top: 1px solid var(--hairline); border-radius: 20px 20px 0 0; box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.5); max-height: 90%; }
+
+    .panel-cab { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; border-bottom: 1px solid var(--hairline); }
+    .panel-hoja-agarre { width: 40px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.2); margin: 12px auto 0; }
+    .panel-titulo { font-size: 12px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); }
+    .panel-cerrar { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--hairline); background: var(--superficie-2); color: var(--texto-dim); display: flex; align-items: center; justify-content: center; font-size: 16px; cursor: pointer; }
+
+    .panel-cuerpo { padding: 24px 26px; display: flex; flex-direction: column; gap: 22px; overflow-y: auto; }
+
+    .det-breadcrumb { font-size: 12.5px; color: var(--texto-dim); }
+    .det-breadcrumb span { color: var(--azul); }
+    .det-texto { font-size: 17px; font-weight: 600; line-height: 1.5; text-wrap: pretty; }
+
+    .det-estado { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; font-size: 13px; font-weight: 600; border-radius: 999px; padding: 7px 14px; }
+    .det-estado--tardia { color: var(--ambar); border: 1px solid rgba(224, 166, 74, 0.4); background: rgba(224, 166, 74, 0.07); }
+
+    .det-bloque { border-top: 1px solid var(--hairline); padding-top: 20px; }
+    .det-etq { font-size: 11.5px; font-weight: 600; letter-spacing: 1.3px; text-transform: uppercase; color: var(--texto-dim); margin-bottom: 12px; }
+
+    .det-fecha { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: 11px; }
+    .det-fecha-val { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .det-fecha-val svg { width: 16px; height: 16px; stroke: var(--texto-dim); }
+    .det-mover { font-size: 13px; color: var(--azul); text-decoration: none; }
+    .det-mover:hover { text-decoration: underline; }
+    .det-preserva { font-size: 12px; line-height: 1.5; color: var(--texto-dim); margin-top: 10px; }
+
+    .det-nota { background: var(--superficie-2); border: 1px solid var(--hairline); border-radius: var(--radio-campo); padding: 15px 16px; font-size: 14px; line-height: 1.6; color: var(--texto); min-height: 96px; }
+    .det-nota-libre { font-size: 12px; color: var(--texto-dim); margin-top: 8px; }
+
+    .det-historial { display: flex; flex-direction: column; gap: 10px; }
+    .det-hist-fila { display: flex; gap: 11px; font-size: 13px; line-height: 1.5; color: var(--texto-dim); }
+    .det-hist-fila::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.25); }
+
+    .panel-pie { display: flex; gap: 12px; padding: 20px 26px; border-top: 1px solid var(--hairline); }
+    .boton-verde { flex: 1; padding: 13px; border-radius: 11px; border: none; background: var(--verde); color: #04120A; font-size: 14.5px; font-weight: 700; font-family: inherit; cursor: pointer; }
+    .boton-verde:hover { filter: brightness(1.06); }
+    .boton-borde { flex: none; padding: 13px 18px; border-radius: 11px; border: 1px solid var(--hairline); background: var(--superficie-2); color: var(--texto); font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; }
+  </style>
+</head>
+
+<body>
+  <section class="galeria">
+
+    <!-- ENCABEZADO DE GALERIA -->
+    <header class="galeria-cabecera">
+      <div class="galeria-eyebrow">Motor My Idea · Nuevo · Detalle de actividad</div>
+      <h1 class="galeria-titulo">Explorar actividad (detalle de item)</h1>
+      <p class="galeria-descripcion">
+        Abrir una actividad del checklist para ver y ajustar sus cosas dentro, en vez de tenerlas al ras
+        de la fila: su fecha (con la historia preservada al mover), su nota libre, su estado, y marcarla
+        hecha. Registrar avance y notas es gratis, siempre. Se abre tocando la fila; en desktop es un
+        cajon lateral, en móvil una hoja inferior; se cierra con la X o tocando fuera. Desktop 1240 y
+        móvil 380.
+      </p>
+    </header>
+
+    <div class="galeria-frames">
+
+      <!-- ============================================================== -->
+      <!-- FRAME DESKTOP 1240 (cajon lateral sobre el checklist)          -->
+      <!-- ============================================================== -->
+      <div class="marco marco--desktop" data-screen-label="Detalle de actividad desktop">
+        <div class="lienzo">
+          <nav class="barra-nav">
+            <div class="nav-idea">
+              <span class="nav-migaja">Mis ideas /</span>
+              <span class="nav-titulo-idea">Quiero vender kits de huerto urbano prearmados para balcones pequeños con guía incluida</span>
+            </div>
+          </nav>
+
+          <!-- CONTEXTO: checklist atenuado -->
+          <div class="fondo-checklist">
+            <div class="fondo-eyebrow">Tu idea avanza en el mundo real</div>
+            <div class="fondo-titulo">Etapa 2 · Consigue tu primera venta real con un desconocido</div>
+            <div class="fondo-item fondo-item--hecho"><span class="fondo-check fondo-check--hecho"></span><span class="fondo-item-texto">Escribe el mensaje exacto con el que vas a ofrecer el kit a alguien que no conoces.</span></div>
+            <div class="fondo-item fondo-item--activa"><span class="fondo-check"></span><span class="fondo-item-texto">Identifica un mercado, feria o grupo en línea donde haya personas que no te conocen y agenda tu primera aparición con precio real esta semana, no la próxima.</span></div>
+            <div class="fondo-item"><span class="fondo-check"></span><span class="fondo-item-texto">Registra cuántas personas vieron tu mensaje, cuantas preguntaron y cuantas compraron.</span></div>
+          </div>
+
+          <!-- VELO + CAJON -->
+          <div class="velo"></div>
+          <div class="panel panel--cajon">
+            <div class="panel-cab">
+              <span class="panel-titulo">Detalle de la actividad</span>
+              <button class="panel-cerrar">&times;</button>
+            </div>
+            <div class="panel-cuerpo">
+              <div>
+                <div class="det-breadcrumb">Etapa 2 · <span>Consigue tu primera venta real con un desconocido</span></div>
+                <p class="det-texto" style="margin-top:10px;">Identifica un mercado, feria o grupo en línea donde haya personas que no te conocen y agenda tu primera aparición con precio real esta semana, no la próxima.</p>
+              </div>
+
+              <span class="det-estado det-estado--tardia">Tardía · 4 días sobre lo planificado</span>
+
+              <div class="det-bloque">
+                <div class="det-etq">Fecha</div>
+                <div class="det-fecha">
+                  <span class="det-fecha-val"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg> lunes 7 de agosto</span>
+                  <a class="det-mover">Mover fecha</a>
+                </div>
+                <p class="det-preserva">Si la mueves, la fecha original (lunes 31 de julio) se conserva en tu historia. No se reescribe nada.</p>
+              </div>
+
+              <div class="det-bloque">
+                <div class="det-etq">Tu nota</div>
+                <div class="det-nota">Fui a la feria del sabado pero llegué tarde y solo alcancé a hablar con dos puestos vecinos, no con clientes. La reagendo para el mercado de productores del próximo fin, que tiene más paso de gente que no me conoce.</div>
+                <p class="det-nota-libre">Registrar tu nota es gratis, siempre. Escribe o dicta lo que necesites recordar.</p>
+              </div>
+
+              <div class="det-bloque">
+                <div class="det-etq">Historia</div>
+                <div class="det-historial">
+                  <div class="det-hist-fila">Moviste esta fecha 1 vez. La original (31 de julio) se conserva.</div>
+                  <div class="det-hist-fila">Creada con el plan del ciclo 1, el 18 de julio.</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-pie">
+              <button class="boton-verde">Marcar hecho</button>
+              <button class="boton-borde">Guardar nota</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- FRAME MOVIL 380 (hoja inferior sobre el checklist)             -->
+      <!-- ============================================================== -->
+      <div class="marco marco--movil" data-screen-label="Detalle de actividad movil 380">
+        <div class="lienzo lienzo--movil">
+          <nav class="barra-nav">
+            <div class="nav-idea"><span class="nav-titulo-idea">Kits de huerto urbano para balcones</span></div>
+          </nav>
+
+          <div class="fondo-checklist">
+            <div class="fondo-eyebrow">Tu idea avanza en el mundo real</div>
+            <div class="fondo-titulo" style="font-size:19px;">Etapa 2 · Consigue tu primera venta</div>
+            <div class="fondo-item fondo-item--hecho"><span class="fondo-check fondo-check--hecho"></span><span class="fondo-item-texto">Escribe el mensaje exacto con el que vas a ofrecer el kit a alguien que no conoces.</span></div>
+            <div class="fondo-item fondo-item--activa"><span class="fondo-check"></span><span class="fondo-item-texto">Identifica un mercado o grupo donde haya personas que no te conocen y agenda tu primera aparición.</span></div>
+          </div>
+
+          <div class="velo"></div>
+          <div class="panel panel--hoja">
+            <div class="panel-hoja-agarre"></div>
+            <div class="panel-cab">
+              <span class="panel-titulo">Detalle de la actividad</span>
+              <button class="panel-cerrar">&times;</button>
+            </div>
+            <div class="panel-cuerpo">
+              <div>
+                <div class="det-breadcrumb">Etapa 2 · <span>Consigue tu primera venta real</span></div>
+                <p class="det-texto" style="margin-top:10px;">Identifica un mercado, feria o grupo en línea donde haya personas que no te conocen y agenda tu primera aparición con precio real esta semana, no la próxima.</p>
+              </div>
+
+              <span class="det-estado det-estado--tardia">Tardía · 4 días</span>
+
+              <div class="det-bloque">
+                <div class="det-etq">Fecha</div>
+                <div class="det-fecha">
+                  <span class="det-fecha-val"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg> lun 7 de agosto</span>
+                  <a class="det-mover">Mover fecha</a>
+                </div>
+                <p class="det-preserva">La original (31 de julio) se conserva. No se reescribe nada.</p>
+              </div>
+
+              <div class="det-bloque">
+                <div class="det-etq">Tu nota</div>
+                <div class="det-nota">Fui a la feria del sabado pero llegué tarde. La reagendo para el mercado de productores del próximo fin, que tiene más paso de gente que no me conoce.</div>
+                <p class="det-nota-libre">Registrar tu nota es gratis, siempre.</p>
+              </div>
+            </div>
+            <div class="panel-pie">
+              <button class="boton-verde">Marcar hecho</button>
+              <button class="boton-borde">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

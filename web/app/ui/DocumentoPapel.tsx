@@ -65,8 +65,16 @@ const COMPONENTES: Components = {
       </ul>
     );
   },
+  // Las listas numeradas (los pasos de cada Etapa del plan) también llevan su
+  // RIEL a la izquierda, como las viñetas: la línea de avance que conecta los
+  // pasos. Antes solo la tenían las viñetas y las etapas 1-5 salían sin ella.
   ol: ({ children }) => (
-    <ol className="my-3 flex list-decimal flex-col gap-2 pl-5 marker:font-semibold marker:text-accent">{children}</ol>
+    <ol
+      className="my-3 flex list-decimal flex-col gap-2 pl-5 marker:font-semibold marker:text-accent"
+      style={{ borderLeft: "1px solid rgba(77,124,254,0.28)" }}
+    >
+      {children}
+    </ol>
   ),
   li: ({ children, className }) => {
     const tarea = typeof className === "string" && className.includes("task-list-item");
@@ -112,11 +120,18 @@ const COMPONENTES: Components = {
   strong: ({ children }) => <strong className="font-semibold text-ink">{children}</strong>,
   em: ({ children }) => <em className="text-dim">{children}</em>,
   hr: () => <hr className="my-7 border-hairline" />,
-  a: ({ children, href }) => (
-    <a href={href} className="text-accent underline underline-offset-2">
-      {children}
-    </a>
-  ),
+  a: ({ children, href }) => {
+    // Enlaces-centinela de fecha (los pone expediente.ts): no son enlaces, son
+    // fechas coloreadas. Verde = cumplimiento (hecho), azul = planificación
+    // (previsto). El retraso no se castiga: nunca rojo.
+    if (href === "#f-hecho") return <span className="font-semibold text-done">{children}</span>;
+    if (href === "#f-prev") return <span className="font-semibold text-accent">{children}</span>;
+    return (
+      <a href={href} className="text-accent underline underline-offset-2">
+        {children}
+      </a>
+    );
+  },
   code: ({ children }) => (
     <code className="rounded-[5px] bg-surface-2 px-1.5 py-0.5 text-[13px]">{children}</code>
   ),

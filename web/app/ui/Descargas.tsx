@@ -33,22 +33,24 @@ function BotonFormato({
   children,
   onClick,
   ocupado,
-  destacado,
+  marcado,
 }: {
   children: React.ReactNode;
   onClick: () => void;
   ocupado: boolean;
-  destacado?: boolean;
+  /** El PDF es el botón MARCADO (contorno azul con tinte), sutil pero bien
+   * visible; el .md queda como botón neutro. Igual en TODAS las cintas. */
+  marcado?: boolean;
 }) {
   return (
     <button
       onClick={onClick}
       disabled={ocupado}
       className={
-        "rounded-[9px] px-3.5 py-2 text-[12.5px] font-semibold disabled:opacity-50 " +
-        (destacado
-          ? "bg-accent text-white hover:opacity-90"
-          : "border border-hairline text-dim hover:border-accent/60 hover:text-ink")
+        "rounded-[9px] border px-3.5 py-2 text-[12.5px] font-semibold disabled:opacity-50 " +
+        (marcado
+          ? "border-accent/45 bg-accent/10 text-accent hover:bg-accent/20"
+          : "border-hairline text-dim hover:border-accent/60 hover:text-ink")
       }
     >
       {ocupado ? "Preparando..." : children}
@@ -179,13 +181,13 @@ export function Descargas({
                     : "border border-hairline hover:border-white/20")
                 }
               >
-                {/* Icono de documento: una hoja para cada fase; el expediente
-                    lleva hojas apiladas (es la compilación de todo). Tinte azul
-                    en el expediente, neutro en los ciclos. */}
+                {/* Icono de documento CON COLOR (más visual): una hoja para cada
+                    fase (azul), el expediente con hojas apiladas y tinte más
+                    fuerte (es la compilación de todo el camino). */}
                 <span
                   className={
                     "grid h-11 w-11 shrink-0 place-items-center rounded-[10px] " +
-                    (esExpediente ? "bg-accent/10 text-accent" : "bg-surface-2 text-dim")
+                    (esExpediente ? "bg-accent text-white" : "bg-accent/12 text-accent")
                   }
                   aria-hidden
                 >
@@ -205,11 +207,7 @@ export function Descargas({
                   <BotonFormato onClick={() => pedir(doc, "md")} ocupado={ocupado === `${doc.clave}:md`}>
                     .md
                   </BotonFormato>
-                  <BotonFormato
-                    onClick={() => pedir(doc, "pdf")}
-                    ocupado={ocupado === `${doc.clave}:pdf`}
-                    destacado={esExpediente}
-                  >
+                  <BotonFormato onClick={() => pedir(doc, "pdf")} ocupado={ocupado === `${doc.clave}:pdf`} marcado>
                     PDF
                   </BotonFormato>
                 </div>

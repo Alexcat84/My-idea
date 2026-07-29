@@ -174,10 +174,13 @@ function seccionAcciones(acciones: AccionExpediente[]): string[] {
     l.push("");
     for (const a of activas.filter((x) => x.etapa === etapa)) {
       const marca = a.estado === "hecho" ? "x" : " ";
+      // Las fechas van como enlaces-centinela para que el PDF las pinte: lo
+      // HECHO en verde (cumplimiento) y lo PREVISTO en azul (planificación). El
+      // retraso no se castiga: nunca rojo. En .md el texto se lee igual de bien.
       const cuando = a.completedAt
-        ? ` · hecho el ${fechaHumanaConAno(a.completedAt)}`
+        ? ` · [hecho el ${fechaHumanaConAno(a.completedAt)}](#f-hecho)`
         : a.fechaBase
-          ? ` · previsto para el ${fechaHumanaConAno(a.fechaBase)}`
+          ? ` · [previsto para el ${fechaHumanaConAno(a.fechaBase)}](#f-prev)`
           : "";
       l.push(`- [${marca}] ${a.texto.replace(/\s+/g, " ").trim()}${cuando}`);
     }
@@ -204,6 +207,9 @@ function seccionAcciones(acciones: AccionExpediente[]): string[] {
  */
 export function expedienteMarkdown(d: DatosExpediente): string {
   const l: string[] = [];
+  // "Cómo te fue" solo cuando el proyecto ya se cerró; mientras está en marcha
+  // es "Tu progreso hasta aquí" (no un veredicto, un avance). Lo pidió el fundador.
+  const tituloResumen = d.realizadaAt ? "Cómo te fue" : "Tu progreso hasta aquí";
 
   l.push(`# ${d.nombre}`);
   l.push("");
@@ -226,7 +232,7 @@ export function expedienteMarkdown(d: DatosExpediente): string {
   if (d.acciones.length) secciones.push("Lo que hiciste");
   if (d.numerosMd) secciones.push("Tus Números");
   for (const m of d.mundos) if (m.contenidoMd) secciones.push(m.nombre);
-  if (d.informeMd) secciones.push("Cómo te fue");
+  if (d.informeMd) secciones.push(tituloResumen);
 
   l.push("## Contenido");
   l.push("");
@@ -282,7 +288,7 @@ export function expedienteMarkdown(d: DatosExpediente): string {
   }
 
   if (d.informeMd) {
-    l.push("## Cómo te fue");
+    l.push(`## ${tituloResumen}`);
     l.push("");
     l.push(rebajarTitulos(d.informeMd.trim(), 1));
     l.push("");
