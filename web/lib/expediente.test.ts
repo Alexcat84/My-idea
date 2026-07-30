@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  CLAVE_ANALISIS,
   CLAVE_BITACORA,
   CLAVE_EXPEDIENTE,
   claveDeCiclo,
@@ -74,6 +75,7 @@ describe("indiceDeDocumentos", () => {
     expect(docs.map((d) => d.clave)).toEqual([
       claveDeCiclo("p1"),
       claveDeCiclo("p2"),
+      CLAVE_ANALISIS,
       CLAVE_BITACORA,
       CLAVE_EXPEDIENTE,
     ]);

@@ -18,6 +18,7 @@ import { bitacoraCuerpo, bitacoraMarkdown } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
 import { obtenerProyecto } from "@/lib/db";
 import {
+  CLAVE_ANALISIS,
   CLAVE_BITACORA,
   CLAVE_EXPEDIENTE,
   cicloMarkdown,
@@ -111,6 +112,41 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       // El PDF de la bitácora se dibuja estructurado (espina continua), no como
       // markdown; el .md sigue saliendo del mismo texto de arriba.
       papel: { entradas },
+    });
+  }
+
+  if (doc === CLAVE_ANALISIS) {
+    // El análisis del proyecto como documento: .md = el informe de analytics;
+    // PDF = la página estructurada "Cómo te fue" (ResumenPapel). Centralizado
+    // aquí; la pantalla de Análisis ya no tiene su propio botón de descarga.
+    const ahora = new Date().toISOString();
+    const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
+    const analytics = calcularAnalytics(entrada);
+    const u = analytics.universal;
+    const c = analytics.cumplimiento;
+    const resumen = {
+      cerrada: Boolean(realizadaAt),
+      cierreMotivo: proyecto.cierre_motivo ?? null,
+      intro: realizadaAt
+        ? "Empezaste con una idea y llegaste hasta el cierre. Esto es lo que dejó el camino."
+        : "Vas por buen camino. Esto es lo que llevas hasta aquí.",
+      dias: u.duracionTotalDias,
+      accionesCumplidas: u.accionesHechas,
+      hitos: analytics.hitos
+        .filter((h) => h.tipo !== "accion")
+        .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta })),
+      loQueMovio:
+        c && c.replanificaciones > 0
+          ? `Frente a tu plan inicial te moviste ${c.desviacionVsInicialDias >= 0 ? "+" : ""}${c.desviacionVsInicialDias.toFixed(1)} días de media a lo largo de ${c.replanificaciones} replanificación${c.replanificaciones === 1 ? "" : "es"}. Ajustar el mapa fue parte del método.`
+          : "Mantuviste tu ritmo cerca de tu plan a lo largo del camino.",
+      loQuePendiente: `Quedan ${Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas)} acciones por delante${u.retiradas.length ? ` y ${u.retiradas.length} que retiraste con su motivo` : ""}. Nada se borró: siguen en tu expediente.`,
+    };
+    return NextResponse.json({
+      titulo: "Análisis del proyecto",
+      nombre,
+      archivo: nombreArchivo(nombre, "Analisis del proyecto"),
+      markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo),
+      papel: { resumen },
     });
   }
 

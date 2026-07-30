@@ -98,8 +98,14 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
       bloque.pasos.push(linea.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim());
       continue;
     }
-    bloque = null; // una línea no-lista cierra el bloque de pasos
-    if (linea.trim()) descripLineas.push(linea);
+    // Una línea de PROSA (no-lista, no-blanca) cierra el bloque de pasos y va a
+    // la descripción. Una línea EN BLANCO NO lo cierra: los pasos separados por
+    // aire (como la sección "¿Puede sostenerse tu idea?") siguen siendo UN solo
+    // bloque con su riel, no uno por ítem con su "Pasos" repetido y sin línea.
+    if (linea.trim()) {
+      bloque = null;
+      descripLineas.push(linea);
+    }
   }
   for (const b of bloquesPasos) b.pasos = b.pasos.filter(Boolean);
 

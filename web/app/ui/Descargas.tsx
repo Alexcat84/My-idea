@@ -107,6 +107,19 @@ function IconoSeguimiento() {
   );
 }
 
+/** Barras: el análisis del proyecto, tu ritmo y cumplimiento de un vistazo. */
+function IconoAnalisis() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M4 20V4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M4 20h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <rect x="7" y="12" width="3" height="5" rx="0.6" stroke="currentColor" strokeWidth="1.6" />
+      <rect x="12.5" y="8" width="3" height="9" rx="0.6" stroke="currentColor" strokeWidth="1.6" />
+      <rect x="18" y="14" width="3" height="3" rx="0.6" stroke="currentColor" strokeWidth="1.6" />
+    </svg>
+  );
+}
+
 /** Una línea de tiempo: la bitácora cuenta la secuencia del viaje. */
 function IconoBitacora() {
   return (
@@ -242,6 +255,8 @@ export function Descargas({
                 >
                   {esExpediente ? (
                     <IconoExpediente />
+                  ) : doc.tipo === "analisis" ? (
+                    <IconoAnalisis />
                   ) : doc.tipo === "bitacora" ? (
                     <IconoBitacora />
                   ) : esSeguimiento ? (
@@ -303,6 +318,9 @@ export function Descargas({
                 )}
               </>
             );
+          }
+          if (p?.resumen) {
+            return <ResumenPapel oculto nombreIdea={nombreIdea} {...p.resumen} />;
           }
           if (p?.entradas) {
             return <BitacoraPapel oculto nombreIdea={nombreIdea} entradas={p.entradas} />;

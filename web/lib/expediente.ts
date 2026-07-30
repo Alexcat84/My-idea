@@ -44,7 +44,7 @@ export interface MundoExpediente {
 export interface DocumentoIndice {
   /** identificador estable que la UI manda de vuelta para pedir el contenido */
   clave: string;
-  tipo: "ciclo" | "expediente" | "bitacora";
+  tipo: "ciclo" | "expediente" | "bitacora" | "analisis";
   titulo: string;
   subtitulo: string;
   /** ISO; null solo si el documento no cuelga de una fecha concreta */
@@ -75,6 +75,7 @@ export interface DatosExpediente {
 export const claveDeCiclo = (planId: string) => `ciclo:${planId}`;
 export const CLAVE_EXPEDIENTE = "expediente";
 export const CLAVE_BITACORA = "bitacora";
+export const CLAVE_ANALISIS = "analisis";
 
 /**
  * Baja de nivel los títulos de un markdown incrustado: un plan trae su propio
@@ -140,6 +141,13 @@ export function indiceDeDocumentos(ciclos: CicloExpediente[], realizadaAt: strin
   // El expediente y la bitácora existen desde el primer plan: antes no hay
   // desarrollo que contar, y ofrecer una descarga vacía sería prometer de más.
   if (docs.length > 0) {
+    docs.push({
+      clave: CLAVE_ANALISIS,
+      tipo: "analisis",
+      titulo: "Análisis del proyecto",
+      subtitulo: "Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste",
+      fecha: null,
+    });
     docs.push({
       clave: CLAVE_BITACORA,
       tipo: "bitacora",

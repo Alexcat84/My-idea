@@ -36,6 +36,34 @@ describe("parsearSeccion — respaldo C9 de la seccion de numeros", () => {
   });
 });
 
+// El caso que el fundador cazo en produccion: los numeros SI vienen como lista,
+// pero separados por lineas en blanco. El aire no debe partir la lista en un
+// bloque por item (cada uno con su "Pasos" y sin riel): es UN bloque con su riel.
+const NUMEROS_LISTA_CON_AIRE = `Tienes un modelo freemium en mente. Aqui estan los numeros que debes calcular:
+
+- **Costo por ciclo de operacion:** cuanto te cuesta mantener la app cada mes.
+
+- **Precio estimado de la version premium:** cuanto cobrarias por el acceso.
+
+- **Usuarios de pago necesarios para cubrir costos:** divide tu costo entre el precio.
+
+- **Meses de margen disponible:** cuanto tiempo puedes operar sin ingresos.
+
+**Esta semana:** Abre una hoja con cuatro columnas.`;
+
+describe("parsearSeccion — la lista de numeros separada por aire es UN bloque", () => {
+  const s = parsearSeccion("¿Puede sostenerse tu idea? Los numeros en simple", NUMEROS_LISTA_CON_AIRE);
+
+  it("no parte la lista en un bloque por item (un solo riel, no 'Pasos' repetido)", () => {
+    expect(s.bloquesPasos).toHaveLength(1);
+    expect(s.bloquesPasos[0].pasos).toHaveLength(4);
+  });
+
+  it("saca la accion del lunes/esta semana a su caja", () => {
+    expect(s.estaSemana).toMatch(/^Abre una hoja/);
+  });
+});
+
 describe("parsearSeccion — el respaldo NO se pasa de listo", () => {
   it("una sola nota en negrita dentro de una etapa no dispara el troceo", () => {
     const etapa = parsearSeccion(
