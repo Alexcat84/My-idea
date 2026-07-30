@@ -32,6 +32,16 @@ const BASE_BORDE = "#5C5E66";
 const BASE_FONDO = "#2C2D33";
 const AZUL = "#4D7CFE";
 
+/** Los tres estados de una etapa frente a su fin base. Comparten color con las
+ * tiles de cumplimiento y la leyenda: adelantada azul, a tiempo verde, tardía
+ * ámbar. null = sin real todavía (en curso). */
+type EstadoEtapa = "adelantada" | "aTiempo" | "tarde" | null;
+const COLOR_ESTADO: Record<"adelantada" | "aTiempo" | "tarde", string> = {
+  adelantada: AZUL,
+  aTiempo: VERDE,
+  tarde: AMBAR,
+};
+
 // Nombres profesionales de las vistas (el id interno no cambia: la preferencia
 // guardada sigue siendo riel/escalera/cintas).
 const VISTAS: Array<{ id: VistaGantt; nombre: string }> = [
@@ -90,24 +100,23 @@ function FilaCarril({
   n,
   base,
   real,
-  tarde,
+  color,
   planDias,
   realTexto,
-  realColor,
   vista,
   primeraSiguienteReal,
 }: {
   n: number;
   base: { l: number; w: number } | null;
   real: { l: number; w: number } | null;
-  tarde: boolean;
+  /** color del estado (adelantada/a tiempo/tardía) para la barra y el texto real */
+  color: string;
   planDias: number | null;
   realTexto: string;
-  realColor: string;
   vista: VistaGantt;
   primeraSiguienteReal: number | null; // % del arranque de la etapa siguiente (escalón)
 }) {
-  const colorReal = tarde ? AMBAR : VERDE;
+  const colorReal = color;
   return (
     <div
       style={{
@@ -123,6 +132,9 @@ function FilaCarril({
         {n}
       </span>
       <div style={{ position: "relative", height: vista === "escalera" ? 27 : 20 }}>
+        {/* línea guía del carril: de punta a punta, enmarca la tarea (así se lee
+            dónde vive cada una aunque su barra sea corta). */}
+        <div style={{ position: "absolute", top: "50%", left: 0, right: 0, height: 1, transform: "translateY(-50%)", background: "rgba(255,255,255,0.1)" }} />
         {vista === "riel" ? (
           <>
             {base && (
@@ -166,7 +178,7 @@ function FilaCarril({
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, fontSize: 12, textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
         <span style={{ color: "#6F7076" }}>{planDias != null ? `${planDias}d` : "—"}</span>
-        <span style={{ color: realColor, fontWeight: 600 }}>{realTexto}</span>
+        <span style={{ color: colorReal, fontWeight: 600 }}>{realTexto}</span>
       </div>
     </div>
   );
@@ -203,9 +215,17 @@ export function GanttCumplimiento({
   const filas = porEtapa.map((e, i) => {
     const tieneReal = e.realFin != null && e.realInicio != null;
     const realDias = tieneReal ? Math.round(e.realFin! - e.realInicio!) : null;
-    const tarde = e.realFin != null && e.baseFin != null && e.realFin > e.baseFin + 1;
-    // "en curso": la etapa actual (tiene inicio real, aún no cerró el proyecto y
-    // es la última con avance) muestra "en curso" en vez de los días.
+    // TRES estados por etapa, comparando el fin real con el fin base (umbral 1
+    // día): adelantada (terminó antes) azul, a tiempo verde, tardía ámbar. Los
+    // mismos tres estados y colores que las tiles de cumplimiento y la leyenda.
+    const estado: EstadoEtapa =
+      !tieneReal || e.baseFin == null
+        ? null
+        : e.realFin! > e.baseFin + 1
+          ? "tarde"
+          : e.realFin! < e.baseFin - 1
+            ? "adelantada"
+            : "aTiempo";
     return {
       n: i + 1,
       nombre: nombreEtapa(e.etapa),
@@ -213,7 +233,7 @@ export function GanttCumplimiento({
       real: tieneReal ? { l: pct(e.realInicio!), w: pct(Math.max(0, e.realFin! - e.realInicio!)) } : null,
       planDias: e.baseFin != null ? Math.round(e.baseFin - e.baseInicio) : null,
       realDias,
-      tarde,
+      estado,
       realInicioPct: tieneReal ? pct(e.realInicio!) : null,
     };
   });
@@ -224,27 +244,11 @@ export function GanttCumplimiento({
     <div className="mt-6">
       <Selector vista={vista} onCambio={cambiar} />
       <div style={{ border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "26px 28px 22px" }}>
-        {/* encabezado + leyenda de colores */}
-        <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, marginBottom: 6, flexWrap: "wrap" }}>
-          <div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F6F8" }}>Cómo se movió tu camino</div>
-            <div style={{ fontSize: 13, color: "#6F7076", marginTop: 5 }}>
-              En gris, la línea base que sellaste. Encima, los días que ocupaste de verdad.
-            </div>
-          </div>
-          <div style={{ display: "flex", gap: 16, fontSize: 12, color: "#A6A7AD", paddingTop: 3, flexWrap: "wrap" }}>
-            <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
-              <span style={{ width: 18, height: 12, borderRadius: 6, border: `1px solid ${BASE_BORDE}`, background: BASE_FONDO }} />
-              tu línea base, ya no se mueve
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
-              <span style={{ width: 18, height: 6, borderRadius: 3, background: VERDE }} />
-              lo que pasó
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
-              <span style={{ width: 18, height: 6, borderRadius: 3, background: AMBAR }} />
-              tomó bastante más
-            </span>
+        {/* encabezado (la leyenda de colores va JUNTO al gráfico, más abajo) */}
+        <div style={{ marginBottom: 6 }}>
+          <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F6F8" }}>Cómo se movió tu camino</div>
+          <div style={{ fontSize: 13, color: "#6F7076", marginTop: 5 }}>
+            En gris, la línea base que sellaste. Encima, los días que ocupaste de verdad.
           </div>
         </div>
 
@@ -273,6 +277,41 @@ export function GanttCumplimiento({
               <span style={{ fontSize: 13.5, color: "#F5F6F8" }}>{f.nombre}</span>
             </div>
           ))}
+        </div>
+
+        {/* leyenda de colores JUNTO al gráfico (justo arriba), en un rectángulo
+            redondeado: la línea base y los TRES estados con su color, los mismos
+            de las tiles de cumplimiento y del texto real. */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 18,
+            alignItems: "center",
+            padding: "10px 14px",
+            marginBottom: 12,
+            border: "1px solid rgba(255,255,255,0.08)",
+            borderRadius: 12,
+            fontSize: 12,
+            color: "#A6A7AD",
+          }}
+        >
+          <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
+            <span style={{ width: 18, height: 12, borderRadius: 6, border: `1px solid ${BASE_BORDE}`, background: BASE_FONDO }} />
+            línea base
+          </span>
+          <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
+            <span style={{ width: 18, height: 6, borderRadius: 3, background: AZUL }} />
+            adelantada
+          </span>
+          <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
+            <span style={{ width: 18, height: 6, borderRadius: 3, background: VERDE }} />
+            a tiempo
+          </span>
+          <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
+            <span style={{ width: 18, height: 6, borderRadius: 3, background: AMBAR }} />
+            tardía
+          </span>
         </div>
 
         {/* diagrama */}
@@ -327,10 +366,9 @@ export function GanttCumplimiento({
                   n={f.n}
                   base={f.base}
                   real={f.real}
-                  tarde={f.tarde}
+                  color={f.estado ? COLOR_ESTADO[f.estado] : VERDE}
                   planDias={f.planDias}
                   realTexto={f.realDias != null ? `${f.realDias}d` : "en curso"}
-                  realColor={f.realDias != null ? (f.tarde ? AMBAR : VERDE) : VERDE}
                   vista={vista}
                   primeraSiguienteReal={vista === "escalera" ? filas[i + 1]?.realInicioPct ?? null : null}
                 />
@@ -356,7 +394,12 @@ export function GanttCumplimiento({
 
 /** Vista "Dos cintas": una cinta plan (gris) y una cinta real (verde/ámbar),
  * cada etapa como bloque numerado en su ventana. */
-function DosCintas({ filas }: { filas: Array<{ n: number; base: { l: number; w: number } | null; real: { l: number; w: number } | null; tarde: boolean }> }) {
+function DosCintas({ filas }: { filas: Array<{ n: number; base: { l: number; w: number } | null; real: { l: number; w: number } | null; estado: EstadoEtapa }> }) {
+  const estiloReal = (estado: EstadoEtapa): CSSProperties => {
+    if (estado === "tarde") return { background: AMBAR, color: "#2A1C05" };
+    if (estado === "adelantada") return { background: "rgba(77,124,254,0.9)", color: "#071233" };
+    return { background: "rgba(63,185,80,0.9)", color: "#04240B" };
+  };
   const bloque = (l: number, w: number, contenido: ReactNode, estilo: CSSProperties): ReactNode => (
     <div
       style={{
@@ -393,7 +436,7 @@ function DosCintas({ filas }: { filas: Array<{ n: number; base: { l: number; w: 
               f.real.l,
               f.real.w,
               f.n,
-              f.tarde ? { background: AMBAR, color: "#2A1C05" } : { background: "rgba(63,185,80,0.9)", color: "#04240B" }
+              estiloReal(f.estado)
             )
         )}
       </div>
