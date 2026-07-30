@@ -9,7 +9,6 @@
 const VERDE = "#3FB950";
 const AZUL = "#4D7CFE";
 const AMBAR = "#E0A64A";
-const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 
 function Titulo({ children, nota }: { children: React.ReactNode; nota?: string }) {
   return (
@@ -20,8 +19,8 @@ function Titulo({ children, nota }: { children: React.ReactNode; nota?: string }
   );
 }
 
-/** Reparto del cumplimiento: una barra 100% con los tres estados. El más legible:
- * de todo lo que tenía fecha, qué parte fue adelantada / a tiempo / tardía. */
+/** Reparto del cumplimiento: un gráfico CIRCULAR (dona) con los tres estados.
+ * De todo lo que tenía fecha, qué parte fue adelantada / a tiempo / tardía. */
 export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo: number; adelantadas: number; tardias: number }) {
   const total = aTiempo + adelantadas + tardias;
   if (total === 0) return null;
@@ -29,23 +28,56 @@ export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo
     { n: adelantadas, color: VERDE, label: "adelantadas" },
     { n: aTiempo, color: AZUL, label: "a tiempo" },
     { n: tardias, color: AMBAR, label: "tardías" },
-  ].filter((s) => s.n > 0);
+  ];
+  const R = 46;
+  const CIRC = 2 * Math.PI * R;
+  const conValor = seg.filter((s) => s.n > 0);
+  const gap = conValor.length > 1 ? 3 : 0; // hueco entre gajos (si hay más de uno)
+  let offset = 0;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="De todo lo que tenía fecha, cómo llegaste. La mayor franja es tu tónica.">Reparto de tu cumplimiento</Titulo>
-      <div className="flex h-4 w-full overflow-hidden rounded-full">
-        {seg.map((s, i) => (
-          <div key={i} style={{ width: `${(s.n / total) * 100}%`, background: s.color, marginLeft: i === 0 ? 0 : 2 }} />
-        ))}
-      </div>
-      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[12.5px]">
-        {seg.map((s, i) => (
-          <span key={i} className="flex items-center gap-2 text-dim">
-            <span className="h-2.5 w-2.5 rounded-full" style={{ background: s.color }} />
-            {s.label} <span className="font-semibold tabular-nums text-ink">{s.n}</span>
-            <span className="tabular-nums">· {Math.round((s.n / total) * 100)}%</span>
-          </span>
-        ))}
+      <Titulo nota="De todo lo que tenía fecha, cómo llegaste. El gajo más grande es tu tónica.">Reparto de tu cumplimiento</Titulo>
+      <div className="flex flex-wrap items-center gap-x-8 gap-y-5">
+        <svg width="128" height="128" viewBox="0 0 128 128" className="shrink-0">
+          <g transform="rotate(-90 64 64)">
+            {conValor.map((s, i) => {
+              const largo = (s.n / total) * CIRC;
+              const visible = Math.max(0, largo - gap);
+              const el = (
+                <circle
+                  key={i}
+                  cx="64"
+                  cy="64"
+                  r={R}
+                  fill="none"
+                  stroke={s.color}
+                  strokeWidth="16"
+                  strokeDasharray={`${visible} ${CIRC - visible}`}
+                  strokeDashoffset={-offset}
+                  strokeLinecap={conValor.length === 1 ? "butt" : "round"}
+                />
+              );
+              offset += largo;
+              return el;
+            })}
+          </g>
+          <text x="64" y="60" textAnchor="middle" fontSize="26" fontWeight="800" fill="#F5F6F8" style={{ fontVariantNumeric: "tabular-nums" }}>
+            {total}
+          </text>
+          <text x="64" y="79" textAnchor="middle" fontSize="10.5" fill="#6F7076">
+            con fecha
+          </text>
+        </svg>
+        <div className="flex flex-col gap-3">
+          {seg.map((s, i) => (
+            <div key={i} className="flex items-center gap-2.5 text-[13px]">
+              <span className="h-3 w-3 shrink-0 rounded-[3px]" style={{ background: s.color }} />
+              <span className="text-dim">{s.label}</span>
+              <span className="font-semibold tabular-nums text-ink">{s.n}</span>
+              <span className="tabular-nums text-dim">· {Math.round((s.n / total) * 100)}%</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -77,51 +109,90 @@ export function RitmoSemanal({ series }: { series: Array<{ semana: number; hecha
   );
 }
 
-/** Constancia: un calendario tipo mapa de calor. Los días con avance se pintan
- * (más verde = más ese día); los blancos son pausas. */
+const NOMBRE_MES = [
+  "enero", "febrero", "marzo", "abril", "mayo", "junio",
+  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+];
+const DOW = ["L", "M", "X", "J", "V", "S", "D"];
+
+/** Constancia: un CALENDARIO real (mes a mes), con el número de cada día y el
+ * color por cuánto avanzaste ese día. Verde = avanzaste; gris tenue = pausaste.
+ * Al pasar el cursor sobre un día se ve la fecha y cuántas acciones cerraste. */
 export function Constancia({ dias }: { dias: Array<{ fecha: string; hechas: number }> }) {
   if (dias.length === 0) return null;
-  const parse = (f: string) => new Date(`${f}T00:00:00Z`);
-  const primero = parse(dias[0].fecha);
-  const ultimo = parse(dias[dias.length - 1].fecha).getTime();
-  // arrancar el lunes de la primera semana
-  const inicio = primero.getTime() - (((primero.getUTCDay() + 6) % 7) * 86_400_000);
   const map = new Map(dias.map((d) => [d.fecha, d.hechas]));
   const maxH = Math.max(...dias.map((d) => d.hechas));
-  const celdas: Array<{ iso: string; h: number }> = [];
-  for (let ms = inicio; ms <= ultimo; ms += 86_400_000) {
-    const iso = new Date(ms).toISOString().slice(0, 10);
-    celdas.push({ iso, h: map.get(iso) ?? 0 });
+  const parse = (f: string) => new Date(`${f}T00:00:00Z`);
+  const primero = parse(dias[0].fecha);
+  const ultimo = parse(dias[dias.length - 1].fecha);
+
+  // meses que abarca el viaje, del primero al último día con avance
+  const meses: Array<{ y: number; m: number }> = [];
+  let y = primero.getUTCFullYear();
+  let m = primero.getUTCMonth();
+  while (y < ultimo.getUTCFullYear() || (y === ultimo.getUTCFullYear() && m <= ultimo.getUTCMonth())) {
+    meses.push({ y, m });
+    if (++m > 11) {
+      m = 0;
+      y++;
+    }
   }
-  const semanas: Array<Array<{ iso: string; h: number }>> = [];
-  for (let i = 0; i < celdas.length; i += 7) semanas.push(celdas.slice(i, i + 7));
-  const color = (h: number) => (h === 0 ? "rgba(255,255,255,0.06)" : `rgba(63,185,80,${0.3 + 0.6 * (h / maxH)})`);
-  const etiquetaMes = (semana: Array<{ iso: string; h: number }>) => {
-    const d = parse(semana[0].iso);
-    return d.getUTCDate() <= 7 ? MESES[d.getUTCMonth()] : "";
-  };
+
+  const nivel = (h: number) => (h === 0 ? 0 : Math.min(4, 1 + Math.floor((h / maxH) * 3.001)));
+  const fondo = (n: number) => (n === 0 ? "rgba(255,255,255,0.04)" : `rgba(63,185,80,${[0, 0.28, 0.5, 0.72, 0.95][n]})`);
+  const iso = (yy: number, mm: number, d: number) => `${yy}-${String(mm + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="Cada columna es una semana; cada cuadro, un día. Verde = avanzaste; en blanco, pausaste.">Tu constancia</Titulo>
-      <div className="overflow-x-auto">
-        <div className="flex gap-1">
-          {semanas.map((semana, wi) => (
-            <div key={wi} className="flex flex-col gap-1">
-              {Array.from({ length: 7 }, (_, di) => {
-                const c = semana[di];
-                return (
-                  <span
-                    key={di}
-                    className="h-[13px] w-[13px] rounded-[3px]"
-                    style={{ background: c ? color(c.h) : "transparent" }}
-                    title={c ? `${c.iso}: ${c.h}` : ""}
-                  />
-                );
-              })}
-              <span className="mt-0.5 h-3 text-[9px] text-dim">{etiquetaMes(semana)}</span>
+      <Titulo nota="Los días que avanzaste se pintan de verde (más oscuro = más acciones ese día); en gris, pausaste. Pasa el cursor por un día para ver el detalle.">
+        Tu constancia
+      </Titulo>
+      <div className="flex flex-wrap gap-x-8 gap-y-6">
+        {meses.map(({ y: yy, m: mm }) => {
+          const primerDow = (new Date(Date.UTC(yy, mm, 1)).getUTCDay() + 6) % 7; // 0 = lunes
+          const diasDelMes = new Date(Date.UTC(yy, mm + 1, 0)).getUTCDate();
+          const celdas: Array<number | null> = [
+            ...Array.from({ length: primerDow }, () => null),
+            ...Array.from({ length: diasDelMes }, (_, i) => i + 1),
+          ];
+          return (
+            <div key={`${yy}-${mm}`}>
+              <div className="mb-2 text-[13px] font-semibold capitalize">
+                {NOMBRE_MES[mm]} {yy}
+              </div>
+              <div className="grid grid-cols-7 gap-1">
+                {DOW.map((d, i) => (
+                  <span key={`h${i}`} className="text-center text-[10px] font-semibold text-dim">
+                    {d}
+                  </span>
+                ))}
+                {celdas.map((d, i) => {
+                  if (d == null) return <span key={i} />;
+                  const h = map.get(iso(yy, mm, d)) ?? 0;
+                  const n = nivel(h);
+                  return (
+                    <span
+                      key={i}
+                      title={`${d} de ${NOMBRE_MES[mm]}: ${h} ${h === 1 ? "acción" : "acciones"}`}
+                      className="grid h-8 w-8 place-items-center rounded-[7px] text-[11px] tabular-nums"
+                      style={{ background: fondo(n), color: n >= 3 ? "#04240B" : n >= 1 ? "#E9F6EC" : "#6F7076" }}
+                    >
+                      {d}
+                    </span>
+                  );
+                })}
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
+      </div>
+      {/* leyenda de intensidad */}
+      <div className="mt-5 flex items-center gap-2 text-[11px] text-dim">
+        <span>menos</span>
+        {[0, 1, 2, 3, 4].map((n) => (
+          <span key={n} className="h-[13px] w-[13px] rounded-[3px]" style={{ background: fondo(n) }} />
+        ))}
+        <span>más</span>
       </div>
     </div>
   );
