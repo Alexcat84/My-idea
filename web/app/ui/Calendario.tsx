@@ -1,17 +1,18 @@
 "use client";
 
 /**
- * Calendario — la cara del modo "con fechas" (canon nuevo, diseñado por Claude
- * Design). Fase 1: la vista AGENDA (la entrada recomendada): una sola columna
- * hacia adelante, agrupada relativa a HOY — Ya pasó y sigue abierto, Hoy,
- * Mañana, Esta semana, La próxima, Más adelante. Responde "¿qué toca ahora?".
+ * Calendario — la cara del modo "con fechas" (diseño de Claude Design). Tres
+ * vistas de una misma verdad (las tareas del plan con fecha), con selector:
+ *   - Agenda (entrada): una columna hacia adelante, agrupada relativa a HOY.
+ *   - Mes: la rejilla reconocible, huecos y racimos de un vistazo.
+ *   - Semana: los siete días en columnas.
  *
- * Reusa lo que ya existe: el icono de estado y el cajón de Detalle
- * (SelectorEstado / DetalleActividad), el endpoint de mover fecha con cascada,
- * el PATCH del checklist, y el generador .ics (Nivel 0: el aviso lo pone el
- * teléfono). Mes y Semana quedan para la fase 2 (el selector ya los anuncia).
+ * Reusa el icono de estado y el cajón de Detalle (SelectorEstado /
+ * DetalleActividad), el endpoint de mover fecha con cascada, el PATCH del
+ * checklist, y el generador .ics (Nivel 0: el aviso lo pone el teléfono).
  *
- * Ley de color: ámbar lo vencido (sin regaño), verde hoy/ejecutar, azul planear.
+ * Ley de color: ámbar lo vencido (sin regaño), verde hoy/hecho/ejecutar, azul
+ * prevista/planear; gris lo que falta.
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { IconoEstado } from "./SelectorEstado";
@@ -23,16 +24,21 @@ import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fec
 const AZUL = "#4D7CFE";
 const VERDE = "#3FB950";
 const AMBAR = "#E0A64A";
+const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+const DOW = ["LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB", "DOM"];
+const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+type Vista = "agenda" | "mes" | "semana";
+type Estatus = "prevista" | "hecha" | "vencida";
 
 /** ordinal del día (local) desde epoch, para comparar por DÍA sin la hora. */
-function diaOrdinal(iso: string): number {
-  const s = fechaInputLocal(new Date(iso));
-  return Math.floor(new Date(`${s}T00:00:00`).getTime() / 86_400_000);
+function ordinal(iso: string): number {
+  return Math.floor(new Date(`${fechaInputLocal(new Date(iso))}T00:00:00`).getTime() / 86_400_000);
 }
 function hoyOrdinal(): number {
   return Math.floor(new Date(`${fechaInputLocal(new Date())}T00:00:00`).getTime() / 86_400_000);
 }
-const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+const claveDia = (iso: string) => fechaInputLocal(new Date(iso));
 
 type Grupo = "vencidas" | "hoy" | "manana" | "semana" | "proxima" | "adelante";
 const ORDEN_GRUPOS: Grupo[] = ["vencidas", "hoy", "manana", "semana", "proxima", "adelante"];
@@ -44,7 +50,6 @@ const ROTULO: Record<Grupo, string> = {
   proxima: "La próxima semana",
   adelante: "Más adelante",
 };
-
 function grupoDe(delta: number): Grupo {
   if (delta < 0) return "vencidas";
   if (delta === 0) return "hoy";
@@ -53,7 +58,6 @@ function grupoDe(delta: number): Grupo {
   if (delta <= 14) return "proxima";
   return "adelante";
 }
-/** "hace 6 días" / "hoy" / "mañana" / "en 3 días" */
 function relativo(delta: number): string {
   if (delta === 0) return "hoy";
   if (delta === 1) return "mañana";
@@ -69,13 +73,14 @@ export function Calendario({
 }: {
   projectId: string;
   onVolver: () => void;
-  /** puerta a "Tu constancia" (vive en el Análisis) */
   onVerLoCumplido: () => void;
 }) {
   const [checklist, setChecklist] = useState<ChecklistData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [ocupado, setOcupado] = useState(false);
   const [detalle, setDetalle] = useState<{ item: ItemChecklistUI; tituloEtapa: string } | null>(null);
+  const [vista, setVista] = useState<Vista>("agenda");
+  const [refMs, setRefMs] = useState<number>(() => Date.parse(`${fechaInputLocal(new Date())}T00:00:00`));
 
   const cargar = useCallback(() => {
     fetch(`/api/project/${projectId}/checklist`)
@@ -120,6 +125,9 @@ export function Calendario({
       setOcupado(false);
     }
   }
+  const abrir = (item: ItemChecklistUI) => setDetalle({ item, tituloEtapa: `Etapa ${item.etapa}` });
+  const marcarHecha = (item: ItemChecklistUI) =>
+    aplicarCambio(item, { estado: "hecho", completed_at: isoDesdeInputLocal(fechaInputLocal(new Date())) });
 
   function descargarCalendario() {
     const tareas = itemsCore
@@ -139,24 +147,26 @@ export function Calendario({
   if (!checklist) return <p className="text-dim">Cargando tu calendario…</p>;
 
   const hoy = hoyOrdinal();
-  // "Lo que viene": tareas con fecha, aún abiertas (hecha/no_aplica salen).
-  const pendientes = itemsCore
-    .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
-    .map((i) => ({ item: i, delta: diaOrdinal(i.fecha_base!) - hoy }))
+  // TODOS los ítems con fecha (incluye hechos, para mes/semana), con su estatus.
+  const datados = itemsCore
+    .filter((i) => i.fecha_base && i.estado !== "no_aplica")
+    .map((i) => {
+      const dOrd = ordinal(i.fecha_base!);
+      const estatus: Estatus = i.estado === "hecho" ? "hecha" : dOrd < hoy ? "vencida" : "prevista";
+      return { item: i, ord: dOrd, dia: claveDia(i.fecha_base!), estatus };
+    });
+  const pendientes = datados
+    .filter((d) => d.estatus !== "hecha")
+    .map((d) => ({ item: d.item, delta: d.ord - hoy, estatus: d.estatus }))
     .sort((a, b) => a.delta - b.delta);
-  const porGrupo = new Map<Grupo, typeof pendientes>();
-  for (const p of pendientes) {
-    const g = grupoDe(p.delta);
-    (porGrupo.get(g) ?? porGrupo.set(g, []).get(g)!).push(p);
-  }
+  const vencidas = pendientes.filter((p) => p.delta < 0).length;
   const sinFecha = itemsCore.filter((i) => !i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica").length;
-  const conAviso = pendientes.length; // Nivel 0: todas las pendientes con fecha llevan aviso en el .ics
   const hoyLabel = `${DIAS[new Date().getDay()]} ${fechaHumanaCorta(new Date().toISOString())}`;
-
-  const colorGrupo = (g: Grupo) => (g === "vencidas" ? AMBAR : g === "hoy" ? VERDE : "#A6A7AD");
+  const refDate = new Date(refMs);
+  const titulo = vista === "mes" ? `${MESES[refDate.getMonth()]} ${refDate.getFullYear()}`.replace(/^./, (c) => c.toUpperCase()) : vista === "semana" ? "Tu semana" : "Lo que viene";
 
   return (
-    <section className="mx-auto flex w-full max-w-[1120px] flex-col gap-6 lg:flex-row lg:items-start">
+    <section className="mx-auto flex w-full max-w-[1176px] flex-col gap-6 lg:flex-row lg:items-start">
       <div className="min-w-0 flex-1">
         <button onClick={onVolver} className="mb-4 text-sm text-dim hover:text-ink">
           ← Volver
@@ -166,118 +176,78 @@ export function Calendario({
           Tu calendario
         </p>
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-          <h2 className="text-[28px] font-bold leading-tight tracking-[-0.02em]">Lo que viene</h2>
-          {/* selector de vista: Agenda activa; Mes/Semana llegan en la fase 2 */}
+          <div className="flex items-center gap-3">
+            <h2 className="text-[28px] font-bold leading-tight tracking-[-0.02em]">{titulo}</h2>
+            {vista === "mes" && (
+              <span className="flex items-center gap-1">
+                <button aria-label="Mes anterior" onClick={() => setRefMs(new Date(refDate.getFullYear(), refDate.getMonth() - 1, 1).getTime())} className="grid h-7 w-7 place-items-center rounded-lg border border-hairline text-dim hover:text-ink">‹</button>
+                <button onClick={() => setRefMs(Date.parse(`${fechaInputLocal(new Date())}T00:00:00`))} className="rounded-lg border border-hairline px-2.5 py-1 text-[12px] text-dim hover:text-ink">Hoy</button>
+                <button aria-label="Mes siguiente" onClick={() => setRefMs(new Date(refDate.getFullYear(), refDate.getMonth() + 1, 1).getTime())} className="grid h-7 w-7 place-items-center rounded-lg border border-hairline text-dim hover:text-ink">›</button>
+              </span>
+            )}
+          </div>
           <div className="inline-flex items-center gap-1 rounded-full border border-hairline p-1 text-[13px]">
-            <span className="cursor-not-allowed rounded-full px-3 py-1 text-dim/70" title="Próximamente">
-              Mes
-            </span>
-            <span className="cursor-not-allowed rounded-full px-3 py-1 text-dim/70" title="Próximamente">
-              Semana
-            </span>
-            <span className="rounded-full bg-accent/20 px-3 py-1 font-semibold text-accent">Agenda</span>
+            {(["mes", "semana", "agenda"] as Vista[]).map((v) => (
+              <button
+                key={v}
+                onClick={() => setVista(v)}
+                className={"rounded-full px-3 py-1 " + (vista === v ? "bg-accent/20 font-semibold text-accent" : "text-dim hover:text-ink")}
+              >
+                {v === "mes" ? "Mes" : v === "semana" ? "Semana" : "Agenda"}
+              </button>
+            ))}
           </div>
         </div>
 
         {error && <p className="mb-3 text-sm text-warn">{error}</p>}
 
-        {pendientes.length === 0 ? (
-          <p className="rounded-panel border border-hairline bg-surface p-6 text-[14px] leading-relaxed text-dim">
-            No tienes tareas con fecha por delante. Cuando pongas fechas a tus tareas, aquí verás qué toca y cuándo.
-          </p>
-        ) : (
-          <div className="flex flex-col gap-7">
-            {ORDEN_GRUPOS.filter((g) => porGrupo.get(g)?.length).map((g) => {
-              const filas = porGrupo.get(g)!;
-              return (
-                <div key={g}>
-                  <div className="mb-3 flex items-center gap-3">
-                    <span className="text-[12px] font-semibold uppercase tracking-[1.2px]" style={{ color: colorGrupo(g) }}>
-                      {ROTULO[g]}
-                    </span>
-                    <span className="h-px flex-1" style={{ background: g === "vencidas" ? "rgba(224,166,74,0.30)" : g === "hoy" ? "rgba(63,185,80,0.28)" : "rgba(255,255,255,0.08)" }} />
-                    <span className="text-[12px] tabular-nums text-dim">{filas.length}</span>
-                  </div>
-                  <div className="flex flex-col gap-2.5">
-                    {filas.map(({ item, delta }) => (
-                      <FilaAgenda
-                        key={item.id}
-                        item={item}
-                        delta={delta}
-                        grupo={g}
-                        onDetalle={() => setDetalle({ item, tituloEtapa: `Etapa ${item.etapa}` })}
-                        onMarcarHecha={() => aplicarCambio(item, { estado: "hecho", completed_at: isoDesdeInputLocal(fechaInputLocal(new Date())) })}
-                      />
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-
-            {sinFecha > 0 && (
-              <div className="flex flex-wrap items-center justify-between gap-3 rounded-cinta border border-dashed border-hairline px-4 py-3 text-[13px] text-dim">
-                <span>
-                  Después de esto, <span className="font-semibold text-ink tabular-nums">{sinFecha}</span> tarea{sinFecha === 1 ? "" : "s"} sigue{sinFecha === 1 ? "" : "n"} sin fecha.
-                </span>
-                <button onClick={onVolver} className="font-semibold text-accent hover:underline">
-                  Ponerles fecha
-                </button>
-              </div>
-            )}
+        {/* banda de vencidas (mes/semana) */}
+        {vista !== "agenda" && vencidas > 0 && (
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2 rounded-[12px] border px-4 py-3 text-[13px]" style={{ borderColor: "rgba(224,166,74,0.45)", background: "rgba(224,166,74,0.10)" }}>
+            <span style={{ color: AMBAR }}>
+              {vencidas === 1 ? "Una fecha ya pasó y sigue abierta." : `${vencidas} fechas ya pasaron y siguen abiertas.`} Puedes moverlas al día que te sirva.
+            </span>
           </div>
         )}
+
+        {vista === "agenda" && (
+          <VistaAgenda pendientes={pendientes} sinFecha={sinFecha} onVolver={onVolver} onDetalle={abrir} onMarcarHecha={marcarHecha} />
+        )}
+        {vista === "mes" && <VistaMes datados={datados} refDate={refDate} hoy={hoy} onDetalle={abrir} />}
+        {vista === "semana" && <VistaSemana datados={datados} hoy={hoy} onDetalle={abrir} onMarcarHecha={marcarHecha} />}
       </div>
 
-      {/* aside */}
+      {/* aside compartido */}
       <aside className="flex w-full flex-col gap-4 lg:w-[348px] lg:shrink-0">
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <div className="flex items-center justify-between gap-2">
             <p className="text-[14px] font-semibold">Tus recordatorios</p>
-            <span className="rounded-full border border-done/50 px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.6px] text-done">
-              Activados
-            </span>
+            <span className="rounded-full border border-done/50 px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.6px] text-done">Activados</span>
           </div>
           <p className="mt-2 text-[12.5px] leading-relaxed text-dim">La víspera a las 20:00, en el calendario de tu teléfono.</p>
           <p className="mt-3 flex items-baseline justify-between text-[13px]">
             <span className="text-dim">Tareas con aviso</span>
-            <span className="font-semibold tabular-nums">{conAviso} de {pendientes.length}</span>
+            <span className="font-semibold tabular-nums">{pendientes.length} de {pendientes.length}</span>
           </p>
         </div>
-
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <p className="text-[14px] font-semibold">Llévatelo al teléfono</p>
-          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">
-            Añade tus fechas al calendario que ya usas. El aviso lo pone tu teléfono, aunque no abras la app.
-          </p>
-          <button
-            onClick={descargarCalendario}
-            disabled={pendientes.length === 0}
-            className="mt-3 w-full rounded-[11px] bg-done py-2.5 text-[13.5px] font-bold text-[#04120A] hover:opacity-90 disabled:opacity-50"
-          >
+          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">Añade tus fechas al calendario que ya usas. El aviso lo pone tu teléfono, aunque no abras la app.</p>
+          <button onClick={descargarCalendario} disabled={pendientes.length === 0} className="mt-3 w-full rounded-[11px] bg-done py-2.5 text-[13.5px] font-bold text-[#04120A] hover:opacity-90 disabled:opacity-50">
             Añadir a mi calendario
           </button>
-          <button
-            disabled
-            title="Próximamente"
-            className="mt-2 w-full cursor-not-allowed rounded-[11px] border border-hairline py-2.5 text-[13px] font-semibold text-dim/70"
-          >
+          <button disabled title="Próximamente" className="mt-2 w-full cursor-not-allowed rounded-[11px] border border-hairline py-2.5 text-[13px] font-semibold text-dim/70">
             Conectar mi cuenta de Google
           </button>
         </div>
-
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <p className="text-[14px] font-semibold">Tu constancia</p>
           <p className="mt-2 text-[12.5px] leading-relaxed text-dim">Los días que ya avanzaste viven en el análisis, en la vista de atrás.</p>
-          <button
-            onClick={onVerLoCumplido}
-            className="mt-3 w-full rounded-[11px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
-          >
+          <button onClick={onVerLoCumplido} className="mt-3 w-full rounded-[11px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10">
             Ver lo cumplido
           </button>
         </div>
-        <p className="px-1 text-[11px] leading-relaxed text-dim/70">
-          Hoy es {hoyLabel}. El aviso llega desde el archivo que añades a tu teléfono.
-        </p>
+        <p className="px-1 text-[11px] leading-relaxed text-dim/70">Hoy es {hoyLabel}. El aviso llega desde el archivo que añades a tu teléfono.</p>
       </aside>
 
       {detalle && (
@@ -298,8 +268,105 @@ export function Calendario({
   );
 }
 
-/** Una fila de la agenda: fecha (relativa + absoluta), estado, etapa + texto y
- * las acciones según el grupo. */
+/** ProximasFechas — el visualizador COMPACTO de solo lectura para el Análisis
+ * (capa "Tu viaje de un vistazo"): hoy y esta semana, con enlace al calendario
+ * completo. Se auto-oculta si no hay tareas con fecha por delante. */
+export function ProximasFechas({ projectId, onVerCalendario }: { projectId: string; onVerCalendario: () => void }) {
+  const [items, setItems] = useState<ItemChecklistUI[] | null>(null);
+  useEffect(() => {
+    let vivo = true;
+    fetch(`/api/project/${projectId}/checklist`)
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error())))
+      .then((d: ChecklistData) => vivo && setItems(grupoVigente(d, "core")?.etapas.flatMap((e) => e.items) ?? []))
+      .catch(() => vivo && setItems([]));
+    return () => {
+      vivo = false;
+    };
+  }, [projectId]);
+  if (!items) return null;
+  const hoy = hoyOrdinal();
+  const prox = items
+    .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
+    .map((i) => ({ item: i, delta: ordinal(i.fecha_base!) - hoy }))
+    .sort((a, b) => a.delta - b.delta)
+    .slice(0, 6);
+  if (prox.length === 0) return null;
+  return (
+    <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <p className="text-[13px] font-semibold">Próximas fechas</p>
+        <button onClick={onVerCalendario} className="text-[12.5px] font-semibold text-accent hover:underline">
+          Ver calendario →
+        </button>
+      </div>
+      <ul className="flex flex-col divide-y divide-hairline">
+        {prox.map(({ item, delta }) => (
+          <li key={item.id} className="flex items-center gap-3 py-2.5">
+            <span className="w-[74px] shrink-0 text-[12.5px] font-semibold capitalize" style={{ color: delta < 0 ? AMBAR : delta === 0 ? VERDE : "#F5F6F8" }}>
+              {relativo(delta)}
+            </span>
+            <span className="min-w-0 flex-1 truncate text-[13.5px]">{item.texto}</span>
+            <span className="shrink-0 text-[11px] tabular-nums text-dim">{fechaHumanaCorta(item.fecha_base!)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// ── Vista Agenda ────────────────────────────────────────────────────────────
+type PendItem = { item: ItemChecklistUI; delta: number; estatus: Estatus };
+function VistaAgenda({
+  pendientes,
+  sinFecha,
+  onVolver,
+  onDetalle,
+  onMarcarHecha,
+}: {
+  pendientes: PendItem[];
+  sinFecha: number;
+  onVolver: () => void;
+  onDetalle: (i: ItemChecklistUI) => void;
+  onMarcarHecha: (i: ItemChecklistUI) => void;
+}) {
+  const porGrupo = new Map<Grupo, PendItem[]>();
+  for (const p of pendientes) (porGrupo.get(grupoDe(p.delta)) ?? porGrupo.set(grupoDe(p.delta), []).get(grupoDe(p.delta))!).push(p);
+  const colorGrupo = (g: Grupo) => (g === "vencidas" ? AMBAR : g === "hoy" ? VERDE : "#A6A7AD");
+  if (pendientes.length === 0)
+    return (
+      <p className="rounded-panel border border-hairline bg-surface p-6 text-[14px] leading-relaxed text-dim">
+        No tienes tareas con fecha por delante. Cuando pongas fechas a tus tareas, aquí verás qué toca y cuándo.
+      </p>
+    );
+  return (
+    <div className="flex flex-col gap-7">
+      {ORDEN_GRUPOS.filter((g) => porGrupo.get(g)?.length).map((g) => {
+        const filas = porGrupo.get(g)!;
+        return (
+          <div key={g}>
+            <div className="mb-3 flex items-center gap-3">
+              <span className="text-[12px] font-semibold uppercase tracking-[1.2px]" style={{ color: colorGrupo(g) }}>{ROTULO[g]}</span>
+              <span className="h-px flex-1" style={{ background: g === "vencidas" ? "rgba(224,166,74,0.30)" : g === "hoy" ? "rgba(63,185,80,0.28)" : "rgba(255,255,255,0.08)" }} />
+              <span className="text-[12px] tabular-nums text-dim">{filas.length}</span>
+            </div>
+            <div className="flex flex-col gap-2.5">
+              {filas.map(({ item, delta }) => (
+                <FilaAgenda key={item.id} item={item} delta={delta} grupo={g} onDetalle={() => onDetalle(item)} onMarcarHecha={() => onMarcarHecha(item)} />
+              ))}
+            </div>
+          </div>
+        );
+      })}
+      {sinFecha > 0 && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-cinta border border-dashed border-hairline px-4 py-3 text-[13px] text-dim">
+          <span>Después de esto, <span className="font-semibold text-ink tabular-nums">{sinFecha}</span> tarea{sinFecha === 1 ? "" : "s"} sigue{sinFecha === 1 ? "" : "n"} sin fecha.</span>
+          <button onClick={onVolver} className="font-semibold text-accent hover:underline">Ponerles fecha</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function FilaAgenda({
   item,
   delta,
@@ -313,12 +380,7 @@ function FilaAgenda({
   onDetalle: () => void;
   onMarcarHecha: () => void;
 }) {
-  const borde =
-    grupo === "vencidas"
-      ? "border-warn/45 bg-warn/[0.07]"
-      : grupo === "hoy"
-        ? "border-done/30 bg-done/[0.05]"
-        : "border-hairline bg-surface";
+  const borde = grupo === "vencidas" ? "border-warn/45 bg-warn/[0.07]" : grupo === "hoy" ? "border-done/30 bg-done/[0.05]" : "border-hairline bg-surface";
   const colorFecha = grupo === "vencidas" ? "text-warn" : grupo === "hoy" ? "text-done" : "text-ink";
   return (
     <div className={"grid grid-cols-[88px_34px_1fr] items-center gap-3 rounded-[12px] border px-[18px] py-3.5 sm:grid-cols-[96px_34px_1fr_auto] " + borde}>
@@ -335,23 +397,136 @@ function FilaAgenda({
       </div>
       <div className="col-span-3 flex flex-wrap items-center gap-2 sm:col-span-1 sm:justify-end">
         {grupo === "hoy" && (
-          <button
-            onClick={onMarcarHecha}
-            className="rounded-[9px] bg-done px-3.5 py-1.5 text-[12.5px] font-bold text-[#04120A] hover:opacity-90"
-          >
-            Marcar hecha
-          </button>
+          <button onClick={onMarcarHecha} className="rounded-[9px] bg-done px-3.5 py-1.5 text-[12.5px] font-bold text-[#04120A] hover:opacity-90">Marcar hecha</button>
         )}
-        <button
-          onClick={onDetalle}
-          className="rounded-[9px] border border-accent/40 bg-accent/10 px-3.5 py-1.5 text-[12.5px] font-semibold text-accent hover:bg-accent/20"
-        >
+        <button onClick={onDetalle} className="rounded-[9px] border border-accent/40 bg-accent/10 px-3.5 py-1.5 text-[12.5px] font-semibold text-accent hover:bg-accent/20">
           {grupo === "vencidas" ? "Ponerle fecha nueva" : "Mover fecha"}
         </button>
-        <button onClick={onDetalle} className="rounded-[9px] border border-hairline px-3.5 py-1.5 text-[12.5px] font-semibold text-dim hover:text-ink">
-          Detalle
-        </button>
+        <button onClick={onDetalle} className="rounded-[9px] border border-hairline px-3.5 py-1.5 text-[12.5px] font-semibold text-dim hover:text-ink">Detalle</button>
       </div>
+    </div>
+  );
+}
+
+// ── Vista Mes ───────────────────────────────────────────────────────────────
+type Datado = { item: ItemChecklistUI; ord: number; dia: string; estatus: Estatus };
+function chipMes(d: Datado, onDetalle: (i: ItemChecklistUI) => void) {
+  const c =
+    d.estatus === "hecha"
+      ? { bg: "rgba(63,185,80,0.10)", punto: VERDE, texto: "#93AE99" }
+      : d.estatus === "vencida"
+        ? { bg: "rgba(224,166,74,0.14)", punto: AMBAR, texto: "#F2DDB8" }
+        : { bg: "rgba(77,124,254,0.12)", punto: AZUL, texto: "#DCE7FF" };
+  return (
+    <button
+      key={d.item.id}
+      onClick={() => onDetalle(d.item)}
+      title={d.item.texto}
+      className="flex w-full items-center gap-1.5 truncate rounded-[6px] px-[7px] py-1 text-left text-[11px]"
+      style={{ background: c.bg, color: c.texto }}
+    >
+      {d.estatus === "hecha" ? (
+        <span className="shrink-0 text-[10px] font-bold" style={{ color: VERDE }}>✓</span>
+      ) : (
+        <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: c.punto }} />
+      )}
+      <span className="truncate">{d.item.texto}</span>
+    </button>
+  );
+}
+function VistaMes({ datados, refDate, hoy, onDetalle }: { datados: Datado[]; refDate: Date; hoy: number; onDetalle: (i: ItemChecklistUI) => void }) {
+  const y = refDate.getFullYear();
+  const m = refDate.getMonth();
+  const primero = new Date(y, m, 1);
+  const inicio = new Date(y, m, 1 - (((primero.getDay() + 6) % 7))); // lunes de la primera semana
+  const porDia = new Map<string, Datado[]>();
+  for (const d of datados) (porDia.get(d.dia) ?? porDia.set(d.dia, []).get(d.dia)!).push(d);
+  const celdas = Array.from({ length: 42 }, (_, i) => new Date(inicio.getFullYear(), inicio.getMonth(), inicio.getDate() + i));
+  return (
+    <div className="rounded-panel border border-hairline bg-surface p-3 sm:p-4">
+      <div className="grid grid-cols-7">
+        {DOW.map((d) => (
+          <div key={d} className="pb-2 text-center text-[10.5px] font-semibold tracking-[0.8px] text-dim">{d}</div>
+        ))}
+        {celdas.map((cd, i) => {
+          const clave = fechaInputLocal(cd);
+          const ord = Math.floor(new Date(`${clave}T00:00:00`).getTime() / 86_400_000);
+          const enMes = cd.getMonth() === m;
+          const esHoy = ord === hoy;
+          const chips = porDia.get(clave) ?? [];
+          return (
+            <div
+              key={i}
+              className="min-h-[92px] border border-white/[0.06] p-[7px] align-top"
+              style={{ background: esHoy ? "rgba(63,185,80,0.05)" : enMes ? "transparent" : "#08080B", boxShadow: esHoy ? "inset 0 0 0 1px rgba(63,185,80,0.28)" : undefined }}
+            >
+              <div className="mb-1 flex justify-start">
+                {esHoy ? (
+                  <span className="grid h-[22px] w-[22px] place-items-center rounded-full text-[12px] font-bold" style={{ background: VERDE, color: "#04120A" }}>{cd.getDate()}</span>
+                ) : (
+                  <span className="text-[12px] tabular-nums" style={{ color: enMes ? "#F5F6F8" : "#4A4B52" }}>{cd.getDate()}</span>
+                )}
+              </div>
+              <div className="flex flex-col gap-1">
+                {chips.slice(0, 3).map((d) => chipMes(d, onDetalle))}
+                {chips.length > 3 && <span className="px-1 text-[10.5px] text-dim">+{chips.length - 3} más</span>}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      {/* leyenda */}
+      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 px-1 text-[11.5px] text-dim">
+        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: AZUL }} />Prevista</span>
+        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: VERDE }} />Hecha</span>
+        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: AMBAR }} />Ya pasó</span>
+        <span className="flex items-center gap-2"><span className="grid h-4 w-4 place-items-center rounded-full text-[9px] font-bold" style={{ background: VERDE, color: "#04120A" }}>·</span>Hoy</span>
+      </div>
+    </div>
+  );
+}
+
+// ── Vista Semana ────────────────────────────────────────────────────────────
+function VistaSemana({ datados, hoy, onDetalle, onMarcarHecha }: { datados: Datado[]; hoy: number; onDetalle: (i: ItemChecklistUI) => void; onMarcarHecha: (i: ItemChecklistUI) => void }) {
+  // la semana (lunes a domingo) que contiene HOY
+  const base = new Date(hoy * 86_400_000);
+  const lunes = new Date(base.getFullYear(), base.getMonth(), base.getDate() - (((base.getDay() + 6) % 7)));
+  const dias = Array.from({ length: 7 }, (_, i) => new Date(lunes.getFullYear(), lunes.getMonth(), lunes.getDate() + i));
+  const porDia = new Map<string, Datado[]>();
+  for (const d of datados) (porDia.get(d.dia) ?? porDia.set(d.dia, []).get(d.dia)!).push(d);
+  return (
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
+      {dias.map((cd, i) => {
+        const clave = fechaInputLocal(cd);
+        const ord = Math.floor(new Date(`${clave}T00:00:00`).getTime() / 86_400_000);
+        const esHoy = ord === hoy;
+        const chips = porDia.get(clave) ?? [];
+        return (
+          <div key={i} className="min-h-[110px] rounded-[12px] border border-hairline p-2.5" style={{ background: esHoy ? "rgba(63,185,80,0.05)" : "#101013" }}>
+            <div className="mb-2 flex items-baseline gap-1.5">
+              <span className="text-[11px] uppercase tracking-[0.6px] text-dim">{DOW[i]}</span>
+              <span className={"text-[15px] font-bold tabular-nums " + (esHoy ? "text-done" : "")}>{cd.getDate()}</span>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              {chips.map((d) => {
+                const c = d.estatus === "hecha" ? { bg: "rgba(63,185,80,0.10)", tx: "#93AE99" } : d.estatus === "vencida" ? { bg: "rgba(224,166,74,0.14)", tx: "#F2DDB8" } : { bg: "rgba(77,124,254,0.12)", tx: "#DCE7FF" };
+                return (
+                  <button key={d.item.id} onClick={() => onDetalle(d.item)} title={d.item.texto} className="rounded-[8px] px-2 py-1.5 text-left text-[11.5px] leading-snug" style={{ background: c.bg, color: c.tx }}>
+                    <span className="line-clamp-2">{d.item.texto}</span>
+                    {d.estatus === "vencida" && <span className="mt-0.5 block text-[10px]" style={{ color: AMBAR }}>ya pasó</span>}
+                  </button>
+                );
+              })}
+              {chips.length === 0 && <span className="text-[11px] text-dim/60">—</span>}
+              {esHoy && chips.some((d) => d.estatus !== "hecha") && (
+                <button onClick={() => onMarcarHecha(chips.find((d) => d.estatus !== "hecha")!.item)} className="mt-1 rounded-[8px] bg-done px-2 py-1 text-[11px] font-bold text-[#04120A]">
+                  Marcar la primera hecha
+                </button>
+              )}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

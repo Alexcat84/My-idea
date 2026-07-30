@@ -15,6 +15,7 @@ import { MapaHitos } from "./MapaHitos";
 import { Acordeon } from "./Acordeon";
 import { BarraAvance } from "./BarraAvance";
 import { RepartoCumplimiento, RitmoSemanal, Constancia, EsfuerzoPorEtapa } from "./GraficosAnalisis";
+import { ProximasFechas } from "./Calendario";
 
 interface Respuesta {
   nombre: string;
@@ -68,10 +69,13 @@ export function AnalisisProyecto({
   projectId,
   titulos,
   onVolver,
+  onVerCalendario,
 }: {
   projectId: string;
   titulos: Record<number, string>;
   onVolver: () => void;
+  /** abre el Calendario (para el visualizador "próximas fechas") */
+  onVerCalendario?: () => void;
 }) {
   const [datos, setDatos] = useState<Respuesta | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -157,6 +161,10 @@ export function AnalisisProyecto({
         }
       >
         <div className="flex flex-col gap-6">
+          {/* Visualizador compacto del calendario (solo lectura): próximas
+              fechas, con enlace al calendario completo. Se auto-oculta si no hay
+              tareas con fecha. */}
+          {onVerCalendario && <ProximasFechas projectId={projectId} onVerCalendario={onVerCalendario} />}
           {u.accionesVigente.total > 0 && (
             <div className="rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
               <BarraAvance pct={Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)} />
