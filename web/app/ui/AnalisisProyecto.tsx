@@ -325,16 +325,6 @@ export function AnalisisProyecto({
                   </p>
                 </div>
               )}
-              {c.replanificaciones > 0 && (
-                <div className="rounded-panel border border-hairline bg-surface p-5">
-                  <p className="text-[14px] font-semibold">
-                    Moviste la fecha de {c.replanificaciones} {c.replanificaciones === 1 ? "acción" : "acciones"}
-                  </p>
-                  <p className="mt-2 text-[13.5px] leading-relaxed text-dim">
-                    Replanificar es parte del método. Ajustar el mapa no es fallar: es seguir con los pies en la tierra.
-                  </p>
-                </div>
-              )}
             </div>
           </div>
         </section>

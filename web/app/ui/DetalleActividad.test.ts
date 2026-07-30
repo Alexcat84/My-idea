@@ -82,9 +82,9 @@ describe("DetalleActividad — el chip de cumplimiento es espejo (Fase 4.3.2)", 
     expect(html).not.toContain("Mover fecha");
   });
 
-  it("con fecha → aparece 'Mover fecha' y la promesa de conservar la original", () => {
+  it("con fecha → aparece 'cambiar fecha' y la promesa de conservar la original", () => {
     const html = pintar({ fecha_base: "2026-08-07T12:00:00Z" });
-    expect(html).toContain("Mover fecha");
+    expect(html).toContain("cambiar fecha");
     expect(html).toContain("se conserva en tu historia");
   });
 
