@@ -1214,21 +1214,14 @@ export function ManosALaObra({
             <h2 className="text-2xl font-bold leading-tight tracking-tight sm:text-[28px]">{tituloPlan}</h2>
           )}
           {cCore.total > 0 && (
-            <div className="mt-4 max-w-xl">
-              {/* Barra protagonista: más gruesa y con el PORCENTAJE como segundo
-                  visual (el fundador lo pidió). El "X de N" queda de apoyo. */}
-              <div className="mb-2 flex items-baseline justify-between gap-3">
-                <span className="text-[30px] font-extrabold leading-none tracking-tight text-done tabular-nums">
-                  {barraPct}%
-                </span>
-                <span className="text-[13px] font-semibold tabular-nums text-ink">
-                  {cCore.hechos} de {cCore.total} hechas
-                  {cCore.retiradas > 0 && (
-                    <span className="ml-1.5 font-normal text-dim">· {cCore.retiradas} retirada{cCore.retiradas === 1 ? "" : "s"}</span>
-                  )}
-                </span>
-              </div>
-              <div className="h-2.5 overflow-hidden rounded-full bg-white/10">
+            // Avance en línea: el porcentaje y la barra, lado a lado (la barra
+            // ocupa el medio). El conteo "X de N hechas · retirada" se omite por
+            // decisión del fundador: el % ya cuenta el avance sin ruido de texto.
+            <div className="mt-4 flex max-w-2xl items-center gap-4">
+              <span className="flex-none text-[30px] font-extrabold leading-none tracking-[-1px] text-done tabular-nums">
+                {barraPct}%
+              </span>
+              <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/10">
                 <div
                   className="h-full rounded-full bg-done"
                   style={{ width: `${barraPct}%`, animation: "barGrow 1.2s ease-out both" }}
