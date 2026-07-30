@@ -102,11 +102,15 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
   if (doc === CLAVE_BITACORA) {
     const generado = new Date().toISOString();
+    const entradas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
     return NextResponse.json({
       titulo: "Tu bitácora",
       nombre,
       archivo: nombreArchivo(nombre, "Tu bitacora"),
-      markdown: bitacoraMarkdown(nombre, await cargarEntradasBitacora(supabase, projectId, proyecto, nombre), generado),
+      markdown: bitacoraMarkdown(nombre, entradas, generado),
+      // El PDF de la bitácora se dibuja estructurado (espina continua), no como
+      // markdown; el .md sigue saliendo del mismo texto de arriba.
+      papel: { entradas },
     });
   }
 
@@ -192,36 +196,71 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const ahora = new Date().toISOString();
   const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
   const analytics = calcularAnalytics(entrada);
+  const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
 
-  const markdown = expedienteMarkdown({
+  const organizadorMd = (() => {
+    const org = planes.find((p) => esCore(p.dominio) && p.etiqueta === "organizador");
+    return org ? sinProcedencia(org.contenido_md) : null;
+  })();
+  const numerosMd = (() => {
+    const num = planes.filter((p) => p.etiqueta === "reporte_numeros").at(-1);
+    return num ? sinProcedencia(num.contenido_md) : null;
+  })();
+  const informeMd = acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo) : null;
+
+  const baseDoc = {
     nombre,
     entradaOriginal: proyecto.entrada_original ?? "",
     creadaAt: proyecto.created_at,
     realizadaAt,
     cierreMotivo: proyecto.cierre_motivo ?? null,
-    organizadorMd: (() => {
-      const org = planes.find((p) => esCore(p.dominio) && p.etiqueta === "organizador");
-      return org ? sinProcedencia(org.contenido_md) : null;
-    })(),
+    organizadorMd,
     ciclos,
     acciones,
-    numerosMd: (() => {
-      const num = planes.filter((p) => p.etiqueta === "reporte_numeros").at(-1);
-      return num ? sinProcedencia(num.contenido_md) : null;
-    })(),
+    numerosMd,
     mundos,
-    // El informe entero solo tiene sentido cuando hay camino andado; si no,
-    // el expediente ya cuenta lo mismo con menos ruido.
-    informeMd: acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo) : null,
-    // Fase 4.8: la secuencia del viaje cierra el expediente.
-    bitacoraMd: bitacoraCuerpo(await cargarEntradasBitacora(supabase, projectId, proyecto, nombre), 3).join("\n"),
     generadoAt: ahora,
+  };
+
+  // .md descargable: el texto COMPLETO (una sola verdad), con el informe y la
+  // secuencia como markdown.
+  const markdown = expedienteMarkdown({
+    ...baseDoc,
+    informeMd,
+    bitacoraMd: bitacoraCuerpo(entradasBita, 3).join("\n"),
   });
+
+  // PDF: el CUERPO va como markdown (sin informe ni secuencia), y el resumen
+  // "Cómo te fue" + la secuencia se dibujan ESTRUCTURADOS (páginas de papel de
+  // Design), en su propia página. Los datos del resumen salen de analytics.
+  const bodyMarkdown = expedienteMarkdown({ ...baseDoc, informeMd: null, bitacoraMd: null });
+  const u = analytics.universal;
+  const c = analytics.cumplimiento;
+  const resumen = acciones.length
+    ? {
+        cerrada: Boolean(realizadaAt),
+        cierreMotivo: proyecto.cierre_motivo ?? null,
+        intro: realizadaAt
+          ? "Empezaste con una idea y llegaste hasta el cierre. Esto es lo que dejó el camino."
+          : "Vas por buen camino. Esto es lo que llevas hasta aquí.",
+        dias: u.duracionTotalDias,
+        accionesCumplidas: u.accionesHechas,
+        hitos: analytics.hitos
+          .filter((h) => h.tipo !== "accion")
+          .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta })),
+        loQueMovio:
+          c && c.replanificaciones > 0
+            ? `Frente a tu plan inicial te moviste ${c.desviacionVsInicialDias >= 0 ? "+" : ""}${c.desviacionVsInicialDias.toFixed(1)} días de media a lo largo de ${c.replanificaciones} replanificación${c.replanificaciones === 1 ? "" : "es"}. Ajustar el mapa fue parte del método.`
+            : "Mantuviste tu ritmo cerca de tu plan a lo largo del camino.",
+        loQuePendiente: `Quedan ${Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas)} acciones por delante${u.retiradas.length ? ` y ${u.retiradas.length} que retiraste con su motivo` : ""}. Nada se borró: siguen en tu expediente.`,
+      }
+    : null;
 
   return NextResponse.json({
     titulo: "Expediente completo",
     nombre,
     archivo: nombreArchivo(nombre, "Expediente completo"),
     markdown,
+    papel: { bodyMarkdown, resumen, entradas: entradasBita },
   });
 }

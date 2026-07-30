@@ -287,6 +287,13 @@ summary::-webkit-details-marker {
     animation: none !important;
   }
 
+  /* Páginas estructuradas del Expediente (resumen "Cómo te fue", secuencia):
+     cada una empieza en su propia hoja cuando se compone tras el cuerpo. */
+  [data-print-pagina] {
+    break-before: page;
+    page-break-before: always;
+  }
+
   /* Los acordeones van abiertos: el PDF sale completo, no a medias. */
   [data-plan-print] details > *:not(summary) {
     display: block !important;

@@ -39,6 +39,7 @@ export function ResumenPapel({
   loQueMovio,
   loQuePendiente,
   oculto,
+  pagina,
 }: {
   nombreIdea: string;
   cerrada: boolean;
@@ -50,6 +51,8 @@ export function ResumenPapel({
   loQueMovio: string;
   loQuePendiente: string;
   oculto?: boolean;
+  /** cuando compone dentro del Expediente: empieza en su propia hoja */
+  pagina?: boolean;
 }) {
   const titulo = cerrada ? "Cómo te fue" : "Tu progreso hasta aquí";
   const N = hitos.length;
@@ -66,6 +69,7 @@ export function ResumenPapel({
     <div
       data-plan-print
       {...(oculto ? { "data-solo-impresion": "" } : {})}
+      {...(pagina ? { "data-print-pagina": "" } : {})}
       style={oculto ? { display: "none" } : undefined}
     >
       <table data-print-tabla className="w-full border-collapse">

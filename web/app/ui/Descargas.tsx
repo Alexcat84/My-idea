@@ -13,6 +13,23 @@
  */
 import { useCallback, useEffect, useState } from "react";
 import { DocumentoPapel } from "./DocumentoPapel";
+import { ResumenPapel } from "./ResumenPapel";
+import { BitacoraPapel } from "./BitacoraPapel";
+import type { EntradaBitacora } from "@/lib/bitacoraCliente";
+
+/** Datos estructurados que la ruta manda para dibujar el PDF en papel (no
+ * markdown): el resumen "Cómo te fue" y la secuencia. Ausente en los ciclos. */
+type ResumenData = {
+  cerrada: boolean;
+  cierreMotivo: string | null;
+  intro: string;
+  dias: number;
+  accionesCumplidas: number;
+  hitos: Array<{ fecha: string; nombre: string }>;
+  loQueMovio: string;
+  loQuePendiente: string;
+};
+type PapelDoc = { bodyMarkdown?: string; resumen?: ResumenData | null; entradas?: EntradaBitacora[] };
 
 import { fechaHumanaConAno } from "@/lib/fechas";
 import type { DocumentoIndice } from "@/lib/expediente";
@@ -127,7 +144,7 @@ export function Descargas({
   const [documentos, setDocumentos] = useState<DocumentoIndice[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [ocupado, setOcupado] = useState<string | null>(null);
-  const [paraImprimir, setParaImprimir] = useState<{ titulo: string; markdown: string } | null>(null);
+  const [paraImprimir, setParaImprimir] = useState<{ titulo: string; markdown: string; papel?: PapelDoc } | null>(null);
 
   useEffect(() => {
     let vivo = true;
@@ -161,9 +178,9 @@ export function Descargas({
       try {
         const r = await fetch(`/api/project/${projectId}/documentos?doc=${encodeURIComponent(doc.clave)}`);
         if (!r.ok) throw new Error(String(r.status));
-        const d = (await r.json()) as { titulo: string; archivo: string; markdown: string };
+        const d = (await r.json()) as { titulo: string; archivo: string; markdown: string; papel?: PapelDoc };
         if (formato === "md") descargarMd(d.markdown, d.archivo);
-        else setParaImprimir({ titulo: d.titulo, markdown: d.markdown });
+        else setParaImprimir({ titulo: d.titulo, markdown: d.markdown, papel: d.papel });
       } catch {
         setError("No pudimos preparar ese documento. Vuelve a intentarlo en un momento.");
       } finally {
@@ -269,15 +286,29 @@ export function Descargas({
         )}
       </div>
 
-      {/* Invisible en pantalla; la hoja de impresión lo enciende en papel. */}
-      {paraImprimir && (
-        <DocumentoPapel
-          oculto
-          markdown={paraImprimir.markdown}
-          nombreIdea={nombreIdea}
-          titulo={paraImprimir.titulo}
-        />
-      )}
+      {/* Invisible en pantalla; la hoja de impresión lo enciende en papel.
+          El Expediente compone: cuerpo (markdown) + resumen "Cómo te fue" y
+          secuencia ESTRUCTURADOS (cada uno en su hoja). La bitácora suelta va
+          como timeline estructurado. Los ciclos, como markdown. */}
+      {paraImprimir &&
+        (() => {
+          const p = paraImprimir.papel;
+          if (p?.bodyMarkdown) {
+            return (
+              <>
+                <DocumentoPapel oculto markdown={p.bodyMarkdown} nombreIdea={nombreIdea} titulo="Expediente completo" />
+                {p.resumen && <ResumenPapel oculto pagina nombreIdea={nombreIdea} {...p.resumen} />}
+                {p.entradas && p.entradas.length > 0 && (
+                  <BitacoraPapel oculto pagina pieTitulo="Expediente" nombreIdea={nombreIdea} entradas={p.entradas} />
+                )}
+              </>
+            );
+          }
+          if (p?.entradas) {
+            return <BitacoraPapel oculto nombreIdea={nombreIdea} entradas={p.entradas} />;
+          }
+          return <DocumentoPapel oculto markdown={paraImprimir.markdown} nombreIdea={nombreIdea} titulo={paraImprimir.titulo} />;
+        })()}
     </section>
   );
 }

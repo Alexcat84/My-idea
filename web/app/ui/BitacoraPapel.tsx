@@ -66,10 +66,16 @@ export function BitacoraPapel({
   entradas,
   nombreIdea,
   oculto,
+  pagina,
+  pieTitulo = "Mi bitácora",
 }: {
   entradas: EntradaBitacora[];
   nombreIdea: string;
   oculto?: boolean;
+  /** cuando compone dentro del Expediente: empieza en su propia hoja */
+  pagina?: boolean;
+  /** el rótulo del pie (por defecto "Mi bitácora"; "Expediente" al componer) */
+  pieTitulo?: string;
 }) {
   const filas = aFilas(entradas);
   const cerrada = entradas.some((e) => e.peso === "cierre");
@@ -82,6 +88,7 @@ export function BitacoraPapel({
     <div
       data-plan-print
       {...(oculto ? { "data-solo-impresion": "" } : {})}
+      {...(pagina ? { "data-print-pagina": "" } : {})}
       style={oculto ? { display: "none" } : undefined}
     >
       <table data-print-tabla className="w-full border-collapse">
@@ -89,7 +96,9 @@ export function BitacoraPapel({
           <tr>
             <td className="p-0">
               <div className="pie-fila">
-                <span>{nombreIdea} · Mi bitácora</span>
+                <span>
+                  {nombreIdea} · {pieTitulo}
+                </span>
                 <span>My Idea</span>
               </div>
             </td>
