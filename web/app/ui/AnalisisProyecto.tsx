@@ -11,6 +11,7 @@ import type { Analytics } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { GanttCumplimiento } from "./GanttCumplimiento";
+import { MapaHitos } from "./MapaHitos";
 
 interface Respuesta {
   nombre: string;
@@ -31,10 +32,12 @@ const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries([
   ...(catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.map((p) => [p.clave, p.nombre]),
 ]);
 
-function Tile({ valor, etiqueta }: { valor: string; etiqueta: string }) {
+function Tile({ valor, etiqueta, color }: { valor: string; etiqueta: string; color?: string }) {
   return (
     <div className="flex flex-col items-center justify-center rounded-[14px] border border-hairline bg-surface-3 px-4 py-6 text-center">
-      <p className="text-[38px] font-extrabold leading-none tracking-tight tabular-nums">{valor}</p>
+      <p className="text-[38px] font-extrabold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
+        {valor}
+      </p>
       <p className="mt-2 text-[12px] text-dim [text-wrap:balance]">{etiqueta}</p>
     </div>
   );
@@ -57,17 +60,6 @@ function TileCumpl({ valor, sufijo, etiqueta, color }: { valor: string; sufijo: 
 
 /** Chip numerado que amarra la leyenda con el diagrama (misma cifra arriba y
  * en la barra), para que el texto no parta el Gantt. */
-function descargar(nombre: string, md: string) {
-  const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `analisis-${nombre.replace(/[^\p{L}\p{N}]+/gu, "-").slice(0, 40) || "proyecto"}.md`;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
 
 export function AnalisisProyecto({
   projectId,
@@ -107,11 +99,6 @@ export function AnalisisProyecto({
     return Math.max(1, ...c.porEtapa.flatMap((e) => [e.baseFin ?? 0, e.realFin ?? 0]));
   }, [datos]);
 
-  const maxDur = useMemo(() => {
-    const d = datos?.analytics.universal.duracionPorEtapa ?? [];
-    return Math.max(1, ...d.map((e) => e.dias));
-  }, [datos]);
-
   if (error) return <p className="text-sm text-warn">{error}</p>;
   if (!datos) return <p className="text-dim">Calculando tu análisis…</p>;
 
@@ -148,22 +135,20 @@ export function AnalisisProyecto({
 
       <header className="flex flex-wrap items-center justify-between gap-4">
         <h2 className="text-2xl font-bold tracking-tight sm:text-[28px]">Análisis de {nombre}</h2>
-        <button
-          onClick={() => descargar(nombre, datos.informe_md)}
-          className="rounded-[10px] border border-white/15 px-4 py-2 text-[13px] text-dim hover:border-accent/60 hover:text-ink"
-        >
-          Descargar mi informe (.md)
-        </button>
+        {/* La descarga del informe vive en "Tus documentos" (centralizado): aquí
+            ya no hay botón propio. */}
       </header>
 
       {/* ── Capa universal ── */}
       <section>
         <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Capa universal</p>
+        {/* Cifras en color (azul piensa): en blanco no lucían. Es medida sin
+            juicio, así que van todas del mismo color. */}
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <Tile valor={String(u.duracionTotalDias)} etiqueta="días de duración total" />
-          <Tile valor={u.ritmoAccionesPorSemana.toFixed(1)} etiqueta="acciones por semana" />
-          <Tile valor={String(u.rachaMasLargaDias)} etiqueta="días de racha más larga" />
-          <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta="ciclos · mundos" />
+          <Tile valor={String(u.duracionTotalDias)} etiqueta="días de duración total" color="var(--accent)" />
+          <Tile valor={u.ritmoAccionesPorSemana.toFixed(1)} etiqueta="acciones por semana" color="var(--accent)" />
+          <Tile valor={String(u.rachaMasLargaDias)} etiqueta="días de racha más larga" color="var(--accent)" />
+          <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta="ciclos · mundos" color="var(--accent)" />
         </div>
         {/* Gestor de estados: las retiradas tienen su línea propia. No cuentan
             para el avance ni como tardías; son una decisión, no un fracaso. */}
@@ -174,58 +159,19 @@ export function AnalisisProyecto({
           </p>
         )}
 
-        {/* Canon 11: duración con barras (izq) y hitos (der) en dos columnas. */}
-        {(u.duracionPorEtapa.length > 0 || a.hitos.length > 0) && (
-          <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-start">
-            {u.duracionPorEtapa.length > 0 && (
-              <div className="flex-1 rounded-panel border border-hairline bg-surface p-5">
-                <p className="mb-4 text-[13px] font-semibold">Duración real por etapa</p>
-                <div className="flex flex-col gap-3.5">
-                  {u.duracionPorEtapa.map((e) => {
-                    // La etapa que MÁS se estiró va en ámbar (barra + cifra), como
-                    // el guardián que avisa; las demás en azul. Nunca rojo.
-                    const masLarga = e.dias === maxDur;
-                    return (
-                      <div key={e.etapa}>
-                        <div className="mb-1.5 flex items-baseline justify-between gap-3">
-                          <span className="text-[14px]">{nombreEtapa(e.etapa)}</span>
-                          <span
-                            className="text-[13px] font-semibold tabular-nums"
-                            style={{ color: masLarga ? "var(--warn)" : "var(--text-dim)" }}
-                          >
-                            {e.dias} días
-                          </span>
-                        </div>
-                        <div className="h-[7px] overflow-hidden rounded bg-white/[0.08]">
-                          <div
-                            className="h-full rounded"
-                            style={{ width: `${(e.dias / maxDur) * 100}%`, background: masLarga ? "var(--warn)" : "var(--accent)" }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {a.hitos.length > 0 && (
-              <div className="rounded-panel border border-hairline bg-surface p-5 lg:w-[340px] lg:shrink-0">
-                <p className="mb-4 text-[13px] font-semibold">Hitos</p>
-                <ol className="flex flex-col gap-3 border-l border-hairline pl-4">
-                  {a.hitos.map((h, i) => (
-                    <li key={i} className="relative">
-                      <span
-                        className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full"
-                        style={{ background: h.tipo === "realizada" ? "var(--done)" : "var(--accent)" }}
-                      />
-                      <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha)}</span>
-                      <span className="ml-2 text-[13.5px]">{h.etiqueta}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            )}
+        {/* Mapa de hitos HORIZONTAL (el formato que vivía en la bitácora): el
+            viaje de un vistazo, un punto por hito. Reemplaza a la lista vertical
+            y a "Duración por etapa" (que no se entendía). */}
+        {a.hitos.length > 0 && (
+          <div className="mt-6 rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
+            <MapaHitos
+              cerrada={Boolean(datos.realizada_at)}
+              hitos={a.hitos.map((h) => ({
+                fecha: h.fecha,
+                nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta,
+                cierre: h.tipo === "realizada",
+              }))}
+            />
           </div>
         )}
       </section>
@@ -247,6 +193,7 @@ export function AnalisisProyecto({
               valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`}
               sufijo="días"
               etiqueta="desviación media"
+              color="var(--accent)"
             />
           </div>
 

@@ -32,10 +32,12 @@ const BASE_BORDE = "#5C5E66";
 const BASE_FONDO = "#2C2D33";
 const AZUL = "#4D7CFE";
 
+// Nombres profesionales de las vistas (el id interno no cambia: la preferencia
+// guardada sigue siendo riel/escalera/cintas).
 const VISTAS: Array<{ id: VistaGantt; nombre: string }> = [
-  { id: "riel", nombre: "Riel fantasma" },
-  { id: "escalera", nombre: "Escalera" },
-  { id: "cintas", nombre: "Dos cintas" },
+  { id: "riel", nombre: "Plan y real" },
+  { id: "escalera", nombre: "Escalonado" },
+  { id: "cintas", nombre: "Bandas" },
 ];
 
 function Selector({ vista, onCambio }: { vista: VistaGantt; onCambio: (v: VistaGantt) => void }) {
@@ -282,7 +284,10 @@ export function GanttCumplimiento({
         </div>
 
         <div style={{ position: "relative", paddingTop: 16 }}>
-          {/* cuadrícula del área de dibujo (deja libre la columna plan/real) */}
+          {/* cuadrícula + EJES del área de dibujo: rejilla vertical fina cada
+              12.5% para leer el tiempo, y los dos ejes principales (izquierdo y
+              inferior) BIEN marcados en su borde. Deja libre la columna
+              plan/real. */}
           <div
             style={{
               position: "absolute",
@@ -290,7 +295,9 @@ export function GanttCumplimiento({
               right: vista === "cintas" ? 0 : 150,
               top: 0,
               bottom: 34,
-              background: "repeating-linear-gradient(to right, rgba(255,255,255,0.17) 0 1px, transparent 1px 25%)",
+              background: "repeating-linear-gradient(to right, rgba(255,255,255,0.11) 0 1px, transparent 1px 12.5%)",
+              borderLeft: "1.5px solid rgba(255,255,255,0.42)",
+              borderBottom: "1.5px solid rgba(255,255,255,0.42)",
             }}
           />
           {hoyPct != null && (

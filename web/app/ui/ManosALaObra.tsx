@@ -1214,18 +1214,20 @@ export function ManosALaObra({
             <h2 className="text-2xl font-bold leading-tight tracking-tight sm:text-[28px]">{tituloPlan}</h2>
           )}
           {cCore.total > 0 && (
-            // Avance en línea: el porcentaje y la barra, lado a lado (la barra
-            // ocupa el medio). El conteo "X de N hechas · retirada" se omite por
-            // decisión del fundador: el % ya cuenta el avance sin ruido de texto.
-            <div className="mt-4 flex max-w-2xl items-center gap-4">
-              <span className="flex-none text-[30px] font-extrabold leading-none tracking-[-1px] text-done tabular-nums">
-                {barraPct}%
-              </span>
-              <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/10">
-                <div
-                  className="h-full rounded-full bg-done"
-                  style={{ width: `${barraPct}%`, animation: "barGrow 1.2s ease-out both" }}
-                />
+            // Avance en un RECUADRO propio (Design del fundador): el porcentaje y
+            // la barra lado a lado, la barra más gruesa, dentro de una tarjeta de
+            // esquinas redondeadas. El conteo textual se omite: el % ya cuenta.
+            <div className="mt-5 max-w-2xl rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
+              <div className="flex items-center gap-4">
+                <span className="flex-none text-[32px] font-extrabold leading-none tracking-[-1px] text-done tabular-nums">
+                  {barraPct}%
+                </span>
+                <div className="h-3.5 flex-1 overflow-hidden rounded-full bg-white/[0.08]">
+                  <div
+                    className="h-full rounded-full bg-done"
+                    style={{ width: `${barraPct}%`, animation: "barGrow 1.2s ease-out both" }}
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -1236,7 +1238,7 @@ export function ManosALaObra({
               <span>
                 Modo: <span className="font-semibold text-ink">{modoCamino === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
               </span>
-              <BotonMini onClick={() => setMostrarSelectorModo(true)} tono="neutro">
+              <BotonMini onClick={() => setMostrarSelectorModo(true)} tono="accent">
                 cambiar
               </BotonMini>
             </p>
@@ -1571,24 +1573,17 @@ export function ManosALaObra({
             derecha): la historia viva del viaje, verla antes de imprimir.
             Vive en las páginas de desarrollo, no en el panel de documentos. */}
         {onVerBitacora && cCore.total > 0 && (
-          <div className="rounded-panel border border-accent/40 bg-accent/5 p-5">
-            <p className="flex items-center gap-2 text-[14px] font-semibold text-accent">
-              {/* icono de línea de tiempo: la bitácora es la secuencia del viaje */}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0">
-                <path d="M6 4v16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-                <circle cx="6" cy="7" r="1.6" fill="currentColor" />
-                <circle cx="6" cy="12.5" r="1.6" fill="currentColor" />
-                <circle cx="6" cy="18" r="1.6" fill="currentColor" />
-                <path d="M10 7h9M10 12.5h9M10 18h6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-              </svg>
-              Mi bitácora
-            </p>
+          // Estandarizada como Análisis y Documentos (misma tarjeta y botón): en
+          // Manos las tres puertas del aside se leen homogéneas. La versión con
+          // acento e icono vive en la página del PLAN, donde hace juego.
+          <div className="rounded-panel border border-hairline bg-surface p-5">
+            <p className="text-[14px] font-semibold">Mi bitácora</p>
             <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
               La historia de tu viaje, paso a paso: cada decisión que has tomado.
             </p>
             <button
               onClick={onVerBitacora}
-              className="mt-3 w-full rounded-[10px] border border-accent/50 bg-accent/15 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/25"
+              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
             >
               Ver mi bitácora
             </button>
