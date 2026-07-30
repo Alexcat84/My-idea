@@ -124,6 +124,14 @@ export interface CapaUniversal {
   ciclosDePlan: number;
   mundos: number;
   duracionPorEtapa: Array<{ etapa: number; dias: number }>;
+  /** Acciones completadas por semana desde la chispa (para el gráfico de ritmo).
+   * Semanas 1..N sin huecos; N cubre la duración del viaje. */
+  avancePorSemana: Array<{ semana: number; hechas: number }>;
+  /** Acciones completadas por día (yyyy-mm-dd), solo los días con avance (para
+   * el calendario de constancia). */
+  avancePorDia: Array<{ fecha: string; hechas: number }>;
+  /** Acciones activas del plan vigente por etapa (para el gráfico de esfuerzo). */
+  accionesPorEtapa: Array<{ etapa: number; total: number; hechas: number }>;
   /** Fase 4.0 §3 (ritmo real): días desde el último avance. null si nunca hubo
    * uno. Un usuario que no toca el checklist en 30 días es otro contexto. */
   diasSinAvance: number | null;
@@ -353,6 +361,27 @@ export function capaUniversalDe(
   const activasVigente = itemsVigente.filter((i) => i.estado !== "no_aplica");
   const ultimoAvance = completadas.length ? completadas.reduce((a, b) => (a > b ? a : b)) : null;
 
+  // Series para los gráficos (deterministas, de completed_at):
+  // — por semana: índice 1-based desde la chispa, sin huecos hasta la última
+  //   semana con avance o el final del viaje (lo que sea mayor).
+  const chispaMs = new Date(chispa).getTime();
+  const semanaDe = (iso: string) => Math.floor((new Date(iso).getTime() - chispaMs) / (7 * 86_400_000)) + 1;
+  const porSemana = new Map<number, number>();
+  for (const c of completadas) porSemana.set(semanaDe(c), (porSemana.get(semanaDe(c)) ?? 0) + 1);
+  const maxSemana = Math.max(1, Math.ceil(duracionTotalDias / 7), ...completadas.map(semanaDe));
+  const avancePorSemana = Array.from({ length: maxSemana }, (_, i) => ({ semana: i + 1, hechas: porSemana.get(i + 1) ?? 0 }));
+  // — por día: solo los días con avance (calendario de constancia).
+  const porDia = new Map<string, number>();
+  for (const c of completadas) porDia.set(c.slice(0, 10), (porDia.get(c.slice(0, 10)) ?? 0) + 1);
+  const avancePorDia = [...porDia.entries()].map(([fecha, hechas]) => ({ fecha, hechas })).sort((a, b) => a.fecha.localeCompare(b.fecha));
+  // — por etapa: acciones activas del plan vigente (esfuerzo).
+  const accionesPorEtapa = [...new Set(activasVigente.map((i) => i.etapa))]
+    .sort((a, b) => a - b)
+    .map((etapa) => {
+      const de = activasVigente.filter((i) => i.etapa === etapa);
+      return { etapa, total: de.length, hechas: de.filter((i) => i.completed_at).length };
+    });
+
   return {
     duracionTotalDias,
     accionesHechas,
@@ -368,6 +397,9 @@ export function capaUniversalDe(
     ciclosDePlan: planes.length,
     mundos,
     duracionPorEtapa: duracionPorEtapa(items, chispa),
+    avancePorSemana,
+    avancePorDia,
+    accionesPorEtapa,
     diasSinAvance: ultimoAvance ? Math.max(0, dias(ultimoAvance, fin)) : null,
     planVigenteAt: planVigente?.created_at ?? null,
     diasDeVidaPlanVigente: planVigente ? Math.max(0, dias(planVigente.created_at, fin)) : 0,

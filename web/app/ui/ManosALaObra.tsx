@@ -15,6 +15,7 @@
  */
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
+import { BarraAvance } from "./BarraAvance";
 import { CampoConVoz } from "./CampoConVoz";
 import { DetalleActividad } from "./DetalleActividad";
 import { PlanDocumento } from "./PlanDocumento";
@@ -1219,39 +1220,7 @@ export function ManosALaObra({
             // su relleno es un DEGRADADO que arranca en azul (la iniciación) y se
             // torna verde puro al completar: el color cuenta el avance.
             <div className="mt-5 max-w-2xl rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
-              <div className="flex items-center gap-4">
-                <span className="flex-none text-[32px] font-extrabold leading-none tracking-[-1px] text-done tabular-nums">
-                  {barraPct}%
-                </span>
-                <div className="flex-1">
-                  <div className="relative h-4 overflow-hidden rounded-full bg-white/[0.08]">
-                    {/* relleno: recorta un gradiente azul→verde a lo ancho del
-                        riel, así el borde que avanza refleja cuánto se completó. */}
-                    <div
-                      className="h-full overflow-hidden rounded-full"
-                      style={{ width: `${barraPct}%`, animation: "barGrow 1.2s ease-out both" }}
-                    >
-                      <div
-                        className="h-full"
-                        style={{
-                          width: `${barraPct > 0 ? 10000 / barraPct : 100}%`,
-                          background: "linear-gradient(to right, #4D7CFE, #3FB950)",
-                        }}
-                      />
-                    </div>
-                    {/* divisiones de la escala */}
-                    {[25, 50, 75].map((p) => (
-                      <div key={p} className="absolute inset-y-0 w-px bg-white/25" style={{ left: `${p}%` }} />
-                    ))}
-                  </div>
-                  {/* rótulos de la escala */}
-                  <div className="mt-1.5 flex justify-between text-[10px] tabular-nums text-dim">
-                    {[0, 25, 50, 75, 100].map((p) => (
-                      <span key={p}>{p}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <BarraAvance pct={barraPct} />
             </div>
           )}
           {/* Fase 4.3.2: el modo, COMPACTO (canon refrescado). El selector grande

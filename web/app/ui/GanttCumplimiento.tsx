@@ -36,9 +36,11 @@ const AZUL = "#4D7CFE";
  * tiles de cumplimiento y la leyenda: adelantada azul, a tiempo verde, tardía
  * ámbar. null = sin real todavía (en curso). */
 type EstadoEtapa = "adelantada" | "aTiempo" | "tarde" | null;
+// Regla de color del fundador: temprano/adelantada en VERDE (terminar antes se
+// celebra), a tiempo en AZUL, tardía en ámbar. Los mismos en tiles y gráficos.
 const COLOR_ESTADO: Record<"adelantada" | "aTiempo" | "tarde", string> = {
-  adelantada: AZUL,
-  aTiempo: VERDE,
+  adelantada: VERDE,
+  aTiempo: AZUL,
   tarde: AMBAR,
 };
 
@@ -301,11 +303,11 @@ export function GanttCumplimiento({
             línea base
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
-            <span style={{ width: 18, height: 6, borderRadius: 3, background: AZUL }} />
+            <span style={{ width: 18, height: 6, borderRadius: 3, background: VERDE }} />
             adelantada
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
-            <span style={{ width: 18, height: 6, borderRadius: 3, background: VERDE }} />
+            <span style={{ width: 18, height: 6, borderRadius: 3, background: AZUL }} />
             a tiempo
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
@@ -397,8 +399,8 @@ export function GanttCumplimiento({
 function DosCintas({ filas }: { filas: Array<{ n: number; base: { l: number; w: number } | null; real: { l: number; w: number } | null; estado: EstadoEtapa }> }) {
   const estiloReal = (estado: EstadoEtapa): CSSProperties => {
     if (estado === "tarde") return { background: AMBAR, color: "#2A1C05" };
-    if (estado === "adelantada") return { background: "rgba(77,124,254,0.9)", color: "#071233" };
-    return { background: "rgba(63,185,80,0.9)", color: "#04240B" };
+    if (estado === "adelantada") return { background: "rgba(63,185,80,0.9)", color: "#04240B" };
+    return { background: "rgba(77,124,254,0.9)", color: "#071233" };
   };
   const bloque = (l: number, w: number, contenido: ReactNode, estilo: CSSProperties): ReactNode => (
     <div
