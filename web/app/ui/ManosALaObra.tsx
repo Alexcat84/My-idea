@@ -21,6 +21,7 @@ import { DetalleActividad } from "./DetalleActividad";
 import { PlanDocumento } from "./PlanDocumento";
 import { ETIQUETA_ESTADO, SelectorEstado } from "./SelectorEstado";
 import { esActivo, type ChecklistEstado, type FechaBaseOrigen, type ModoCamino } from "@/lib/dbContract";
+import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
 import { PRECIOS } from "@/lib/precios";
@@ -980,6 +981,22 @@ export function ManosALaObra({
   // un mundo nuevo entra por "recalcular pendientes" (V3a).
   const hayFechas = itemsCore.some((i) => i.fecha_base);
 
+  // Calendario Nivel 0 (.ics, sin backend): las tareas PENDIENTES con fecha se
+  // pueden llevar al calendario del teléfono, que pone el recordatorio nativo.
+  const tareasConFecha = itemsCore
+    .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
+    .map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, fechaBase: i.fecha_base! }));
+  function descargarCalendario() {
+    const ics = generarIcs({ nombreIdea: tituloPlan ?? "Mi idea", tareas: tareasConFecha });
+    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${(tituloPlan ?? "mi-idea").replace(/[^\p{L}\p{N}]+/gu, "-").slice(0, 40) || "mi-idea"}-calendario.ics`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   // Ritmo: lecturas directas de lo persistido.
   const ultimaAccion = itemsCore
     .filter((i) => i.estado !== "pendiente")
@@ -1269,11 +1286,20 @@ export function ManosALaObra({
           </div>
         )}
         {modoCamino === "fechas" && core && !recalcularPendientes && hayFechas && (
-          <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
             <p className="text-[13px] text-dim">
               <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
             </p>
-            <BotonMini onClick={() => setRecalcularPendientes(true)}>Recalcular pendientes</BotonMini>
+            <div className="flex flex-wrap items-center gap-2">
+              {/* Calendario Nivel 0: lleva las fechas pendientes al calendario del
+                  teléfono (.ics), que se encarga del recordatorio. */}
+              {tareasConFecha.length > 0 && (
+                <BotonMini onClick={descargarCalendario} tono="accent">
+                  Añadir a mi calendario
+                </BotonMini>
+              )}
+              <BotonMini onClick={() => setRecalcularPendientes(true)}>Recalcular pendientes</BotonMini>
+            </div>
           </div>
         )}
 
