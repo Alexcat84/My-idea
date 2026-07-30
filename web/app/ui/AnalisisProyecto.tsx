@@ -146,10 +146,19 @@ export function AnalisisProyecto({
           quiera ver. Cada capa es un reporte visual distinto. ── */}
 
       {/* Capa 1 — Tu viaje de un vistazo (abierta): avance + cifras + hitos. */}
-      <Acordeon titulo={<span className="text-[15px] font-semibold">Tu viaje de un vistazo</span>} abierto>
+      <Acordeon
+        variante="capa"
+        abierto
+        titulo={
+          <span className="flex items-center gap-2.5 text-[15px] font-semibold">
+            <span aria-hidden className="h-2 w-2 rounded-full bg-accent" />
+            Tu viaje de un vistazo
+          </span>
+        }
+      >
         <div className="flex flex-col gap-6">
           {u.accionesVigente.total > 0 && (
-            <div className="max-w-2xl rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
+            <div className="rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
               <BarraAvance pct={Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)} />
             </div>
           )}
@@ -185,7 +194,15 @@ export function AnalisisProyecto({
 
       {/* Capa 2 — Tu ritmo y tu constancia: ritmo semanal, calendario y esfuerzo. */}
       {(u.accionesHechas > 0 || u.accionesPorEtapa.length > 0) && (
-        <Acordeon titulo={<span className="text-[15px] font-semibold">Tu ritmo y tu constancia</span>}>
+        <Acordeon
+          variante="capa"
+          titulo={
+            <span className="flex items-center gap-2.5 text-[15px] font-semibold">
+              <span aria-hidden className="h-2 w-2 rounded-full bg-done" />
+              Tu ritmo y tu constancia
+            </span>
+          }
+        >
           <div className="flex flex-col gap-5">
             <RitmoSemanal series={u.avancePorSemana} />
             <Constancia dias={u.avancePorDia} />
@@ -196,11 +213,19 @@ export function AnalisisProyecto({
 
       {/* Capa 3 — Cómo cumpliste tus fechas (solo con línea base). */}
       {tiene_baseline && c && (
-        <Acordeon titulo={<span className="text-[15px] font-semibold">Cómo cumpliste tus fechas</span>}>
+        <Acordeon
+          variante="capa"
+          titulo={
+            <span className="flex items-center gap-2.5 text-[15px] font-semibold">
+              <span aria-hidden className="h-2 w-2 rounded-full bg-warn" />
+              Cómo cumpliste tus fechas
+            </span>
+          }
+        >
           <div className="flex flex-col gap-5">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <TileCumpl valor={String(c.aTiempo)} sufijo={`${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--accent)" />
               <TileCumpl valor={String(c.adelantadas)} sufijo={`${c.pctAdelantadas}%`} etiqueta="adelantadas" color="var(--done)" />
+              <TileCumpl valor={String(c.aTiempo)} sufijo={`${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--accent)" />
               <TileCumpl valor={String(c.tardias)} sufijo={`${c.pctTardias}%`} etiqueta="tardías" color="var(--warn)" />
               <TileCumpl
                 valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`}
@@ -258,9 +283,9 @@ export function AnalisisProyecto({
                         )}
                       </span>
                       <span className="shrink-0 text-[12.5px] tabular-nums">
-                        <span className="font-semibold text-accent">{d.aTiempo}</span>
-                        <span className="text-dim"> · </span>
                         <span className="font-semibold text-done">{d.adelantadas}</span>
+                        <span className="text-dim"> · </span>
+                        <span className="font-semibold text-accent">{d.aTiempo}</span>
                         <span className="text-dim"> · </span>
                         <span className="font-semibold text-warn">{d.tardias}</span>
                       </span>
@@ -268,7 +293,7 @@ export function AnalisisProyecto({
                   ))}
                 </ul>
                 <p className="mt-3 border-t border-hairline pt-2.5 text-[11.5px] text-dim">
-                  a tiempo · adelantadas · tardías
+                  adelantadas · a tiempo · tardías
                 </p>
               </div>
             )}
