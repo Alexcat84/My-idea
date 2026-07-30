@@ -124,6 +124,8 @@ interface Props {
   onVerDocumentos: () => void;
   /** Fase 4.8: abre la bitácora en vivo (la historia del viaje) */
   onVerBitacora?: () => void;
+  /** abre el Calendario (modo fechas): las fechas del plan, hacia adelante */
+  onVerCalendario?: () => void;
   /** la idea se marcó como realizada (§5): el padre abre la Celebración */
   onRealizada: () => void;
   /** Fase 4.2: un mundo se completó o se reabrió — el padre refresca su copia.
@@ -856,6 +858,7 @@ export function ManosALaObra({
   onVerAnalisis,
   onVerDocumentos,
   onVerBitacora,
+  onVerCalendario,
   onRealizada,
   onMundoCerrado,
   entrevistaAbierta,
@@ -1604,6 +1607,23 @@ export function ManosALaObra({
               className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
             >
               Ver mi bitácora
+            </button>
+          </div>
+        )}
+
+        {/* Puerta al Calendario (modo fechas): las fechas del plan, hacia
+            adelante, con recordatorios al teléfono. Solo cuando hay fechas. */}
+        {onVerCalendario && modoCamino === "fechas" && hayFechas && (
+          <div className="rounded-panel border border-hairline bg-surface p-5">
+            <p className="text-[14px] font-semibold">Tu calendario</p>
+            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+              Lo que viene, día por día. Llévate tus fechas al calendario del teléfono.
+            </p>
+            <button
+              onClick={onVerCalendario}
+              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+            >
+              Abrir calendario
             </button>
           </div>
         )}

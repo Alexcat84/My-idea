@@ -17,6 +17,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Acordeon } from "../../ui/Acordeon";
 import { AnalisisProyecto } from "../../ui/AnalisisProyecto";
+import { Calendario } from "../../ui/Calendario";
 import { Celebracion } from "../../ui/Celebracion";
 import { CampoConVoz } from "../../ui/CampoConVoz";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
@@ -139,6 +140,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereCelebracion = searchParams.get("vista") === "celebracion";
   const quiereDocumentos = searchParams.get("vista") === "documentos";
   const quiereBitacora = searchParams.get("vista") === "bitacora";
+  const quiereCalendario = searchParams.get("vista") === "calendario";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -192,6 +194,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Fase 4.6: las descargas del viaje (un documento por fase + el expediente).
   const [vistaDocumentos, setVistaDocumentos] = useState(quiereDocumentos);
   const [vistaBitacora, setVistaBitacora] = useState(quiereBitacora);
+  const [vistaCalendario, setVistaCalendario] = useState(quiereCalendario);
   const [origenBitacora, setOrigenBitacora] = useState<"manos" | "plan">("plan");
   const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
@@ -558,6 +561,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaCelebracion(false);
     setVistaDocumentos(false);
     setVistaBitacora(false);
+    setVistaCalendario(false);
     router.replace(`/idea/${projectId}`, { scroll: false });
   }
 
@@ -598,13 +602,25 @@ export function IdeaView({ projectId }: { projectId: string }) {
   function irAAnalisis() {
     setVistaAnalisis(true);
     setVistaCelebracion(false);
+    setVistaCalendario(false);
     router.replace(`/idea/${projectId}?vista=analisis`, { scroll: false });
+  }
+
+  function irACalendario() {
+    setVistaManos(false);
+    setVistaAnalisis(false);
+    setVistaCelebracion(false);
+    setVistaDocumentos(false);
+    setVistaBitacora(false);
+    setVistaCalendario(true);
+    router.replace(`/idea/${projectId}?vista=calendario`, { scroll: false });
   }
 
   function volverAManos() {
     setVistaAnalisis(false);
     setVistaCelebracion(false);
     setVistaDocumentos(false);
+    setVistaCalendario(false);
     setVistaManos(true);
     router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
   }
@@ -788,6 +804,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
           />
         ) : vistaAnalisis && planMd && checklist ? (
           <AnalisisProyecto projectId={projectId} titulos={titulosDeEtapas(planMd)} onVolver={volverAManos} />
+        ) : vistaCalendario && planMd && checklist ? (
+          <Calendario projectId={projectId} onVolver={volverAManos} onVerLoCumplido={irAAnalisis} />
         ) : vistaManos && planMd && checklist ? (
           <>
             <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
@@ -806,6 +824,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onVerAnalisis={irAAnalisis}
               onVerDocumentos={irADocumentos}
               onVerBitacora={irABitacora}
+              onVerCalendario={irACalendario}
               onRealizada={irACelebracion}
               onMundoCerrado={(dominio, completadoAt) =>
                 // Fase 4.2 §3: cerrar un mundo NO cierra la idea — aquí no se
