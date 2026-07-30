@@ -290,17 +290,24 @@ export function DetalleActividad({
           {/* FECHA: solo si el ítem tiene una fecha planificada (modo fechas) */}
           {item.fecha_base && (
             <div className="mt-6">
-              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Fecha</p>
-              {!moviendoFecha ? (
-                <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
-                  <span className="text-[14px]">{fechaHumana(item.fecha_base)}</span>
+              {/* Rótulo "FECHA" y la píldora "cambiar fecha" en la MISMA fila
+                  (Design): el rótulo a la izquierda, el disparador arriba-derecha
+                  de la sección; debajo, el valor o el editor. */}
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Fecha</p>
+                {!moviendoFecha && (
                   <button
                     onClick={() => setMoviendoFecha(true)}
                     disabled={ocupado}
-                    className="shrink-0 text-[12.5px] font-semibold text-accent hover:underline disabled:opacity-50"
+                    className="shrink-0 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[12px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
                   >
-                    Mover fecha
+                    cambiar fecha
                   </button>
+                )}
+              </div>
+              {!moviendoFecha ? (
+                <div className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3 text-[14px]">
+                  {fechaHumana(item.fecha_base)}
                 </div>
               ) : ofertaFecha ? (
                 // Oferta de CASCADA: al elegir la nueva fecha, si hay pendientes

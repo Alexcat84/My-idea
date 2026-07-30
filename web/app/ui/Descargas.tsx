@@ -258,6 +258,15 @@ export function Descargas({
             );
           })}
         </div>
+
+        {/* Cierre de la lista (Design): recuerda que .md y PDF son el mismo
+            texto, y dónde vive la bitácora en vivo. */}
+        {documentos && documentos.length > 0 && (
+          <p className="mt-5 text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">
+            El .md y el PDF salen del mismo texto: lo que lees aquí es lo que se imprime. Tu bitácora en vivo se
+            abre desde el plan, desde Manos a la Obra y desde tus mundos.
+          </p>
+        )}
       </div>
 
       {/* Invisible en pantalla; la hoja de impresión lo enciende en papel. */}
