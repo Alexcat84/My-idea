@@ -12,6 +12,9 @@ import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { GanttCumplimiento } from "./GanttCumplimiento";
 import { MapaHitos } from "./MapaHitos";
+import { Acordeon } from "./Acordeon";
+import { BarraAvance } from "./BarraAvance";
+import { RepartoCumplimiento, RitmoSemanal, Constancia, EsfuerzoPorEtapa } from "./GraficosAnalisis";
 
 interface Respuesta {
   nombre: string;
@@ -139,142 +142,138 @@ export function AnalisisProyecto({
             ya no hay botón propio. */}
       </header>
 
-      {/* ── Capa universal ── */}
-      <section>
-        <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Capa universal</p>
-        {/* Cifras en color (azul piensa): en blanco no lucían. Es medida sin
-            juicio, así que van todas del mismo color. */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <Tile valor={String(u.duracionTotalDias)} etiqueta="días de duración total" color="var(--accent)" />
-          <Tile valor={u.ritmoAccionesPorSemana.toFixed(1)} etiqueta="acciones por semana" color="var(--accent)" />
-          <Tile valor={String(u.rachaMasLargaDias)} etiqueta="días de racha más larga" color="var(--accent)" />
-          <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta="ciclos · mundos" color="var(--accent)" />
-        </div>
-        {/* Gestor de estados: las retiradas tienen su línea propia. No cuentan
-            para el avance ni como tardías; son una decisión, no un fracaso. */}
-        {u.retiradas.length > 0 && (
-          <p className="mt-3 text-[13px] text-dim">
-            Retiradas (no aplican): <span className="font-semibold text-ink">{u.retiradas.length}</span>. Decidiste que no
-            corren para esta idea; quedan en tu expediente con su motivo.
-          </p>
-        )}
+      {/* ── El análisis por CAPAS en acordeones: el usuario despliega lo que
+          quiera ver. Cada capa es un reporte visual distinto. ── */}
 
-        {/* Mapa de hitos HORIZONTAL (el formato que vivía en la bitácora): el
-            viaje de un vistazo, un punto por hito. Reemplaza a la lista vertical
-            y a "Duración por etapa" (que no se entendía). */}
-        {a.hitos.length > 0 && (
-          <div className="mt-6 rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-            <MapaHitos
-              cerrada={Boolean(datos.realizada_at)}
-              hitos={a.hitos.map((h) => ({
-                fecha: h.fecha,
-                nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta,
-                cierre: h.tipo === "realizada",
-              }))}
-            />
-          </div>
-        )}
-      </section>
-
-      {/* ── Capa de cumplimiento (solo con baseline) ── */}
-      {tiene_baseline && c && (
-        <section>
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Capa de cumplimiento · <span className="text-accent">modo fechas</span>
-          </p>
-          {/* Indicadores reorganizados: una fila de 4 tiles compactas (a tiempo,
-              adelantadas, tardías, desviación media), en la misma familia visual
-              que la capa universal. El color vive en el número, no en el borde. */}
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <TileCumpl valor={String(c.aTiempo)} sufijo={`${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--done)" />
-            <TileCumpl valor={String(c.adelantadas)} sufijo={`${c.pctAdelantadas}%`} etiqueta="adelantadas" color="var(--accent)" />
-            <TileCumpl valor={String(c.tardias)} sufijo={`${c.pctTardias}%`} etiqueta="tardías" color="var(--warn)" />
-            <TileCumpl
-              valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`}
-              sufijo="días"
-              etiqueta="desviación media"
-              color="var(--accent)"
-            />
-          </div>
-
-          {/* Capa de honestidad (Design): una BANDA propia, gris, con icono
-              neutro, JUSTO debajo de las tiles de cumplimiento. Dice contra qué
-              se mide y por qué replanificar no vuelve tardío a nadie. Nunca
-              ámbar ni roja: es contexto, no alarma. Solo si hubo replanificaciones. */}
-          {c.replanificaciones > 0 && (
-            <div className="mt-4 flex items-start gap-3 rounded-[14px] border border-hairline px-5 py-4">
-              <span aria-hidden className="mt-0.5 grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full border border-hairline text-dim">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 11v5" />
-                  <path d="M12 7.5v.5" />
-                </svg>
-              </span>
-              <p className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-                Frente a tu plan inicial:{" "}
-                <span className="font-semibold text-ink tabular-nums">
-                  {c.desviacionVsInicialDias > 0 ? "+" : ""}
-                  {c.desviacionVsInicialDias.toFixed(1)} días
-                </span>{" "}
-                de desviación media ·{" "}
-                <span className="font-semibold text-ink tabular-nums">{c.replanificaciones}</span>{" "}
-                replanificación{c.replanificaciones === 1 ? "" : "es"}. El cumplimiento se mide contra tu
-                fecha vigente: replanificar es el control de cambios, no una tardanza.
+      {/* Capa 1 — Tu viaje de un vistazo (abierta): avance + cifras + hitos. */}
+      <Acordeon titulo={<span className="text-[15px] font-semibold">Tu viaje de un vistazo</span>} abierto>
+        <div className="flex flex-col gap-6">
+          {u.accionesVigente.total > 0 && (
+            <div className="max-w-2xl rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
+              <BarraAvance pct={Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)} />
+            </div>
+          )}
+          <div>
+            {/* Cifras en color (azul piensa): en blanco no lucían. Medida sin juicio. */}
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <Tile valor={String(u.duracionTotalDias)} etiqueta="días de duración total" color="var(--accent)" />
+              <Tile valor={u.ritmoAccionesPorSemana.toFixed(1)} etiqueta="acciones por semana" color="var(--accent)" />
+              <Tile valor={String(u.rachaMasLargaDias)} etiqueta="días de racha más larga" color="var(--accent)" />
+              <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta="ciclos · mundos" color="var(--accent)" />
+            </div>
+            {u.retiradas.length > 0 && (
+              <p className="mt-3 text-[13px] text-dim">
+                Retiradas (no aplican): <span className="font-semibold text-ink">{u.retiradas.length}</span>. Decidiste que no
+                corren para esta idea; quedan en tu expediente con su motivo.
               </p>
-            </div>
-          )}
-
-          {/* Gantt "Cómo se movió tu camino": pieza calibrada por Design, tres
-              vistas (riel fantasma / escalera / dos cintas) con selector de
-              preferencia. Datos reales de analytics; cero LLM. HOY solo con el
-              proyecto en marcha (días desde la chispa = duración total). */}
-          {c.porEtapa.length > 0 && (
-            <GanttCumplimiento
-              porEtapa={c.porEtapa}
-              maxBarra={maxBarra}
-              nombreEtapa={nombreEtapa}
-              hoyDias={datos.realizada_at ? null : u.duracionTotalDias}
-            />
-          )}
-
-          {/* Desviación en palabras + cumplimiento por mundo, debajo del diagrama. */}
-          <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-start">
-            <div className="flex flex-col gap-4 lg:w-[340px] lg:shrink-0">
-              {/* Fase 4.1 (V3b): la fila extra que admite el canon 11 — el
-                  cumplimiento por dominio. Solo aparece cuando hay algún mundo
-                  con fechas: en un proyecto solo-core no estorba. */}
-              {c.porDominio.length > 1 && (
-                <div className="rounded-panel border border-hairline bg-surface p-5">
-                  <p className="mb-3 text-[13px] font-semibold">Cumplimiento por mundo</p>
-                  <ul className="flex flex-col gap-2.5">
-                    {c.porDominio.map((d) => (
-                      <li key={d.dominio} className="flex items-baseline justify-between gap-3">
-                        <span className="min-w-0 truncate text-[13px]">
-                          {NOMBRE_DOMINIO[d.dominio] ?? d.dominio}
-                          {/* Fase 4.2: el mundo que ya tuvo su final lo dice
-                              aquí también, sin cambiar el resto de la fila. */}
-                          {datos.analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt) && (
-                            <span className="ml-2 text-[11px] font-semibold text-done">Completado</span>
-                          )}
-                        </span>
-                        <span className="shrink-0 text-[12.5px] tabular-nums">
-                          <span className="font-semibold text-done">{d.aTiempo}</span>
-                          <span className="text-dim"> · </span>
-                          <span className="font-semibold text-accent">{d.adelantadas}</span>
-                          <span className="text-dim"> · </span>
-                          <span className="font-semibold text-warn">{d.tardias}</span>
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-3 border-t border-hairline pt-2.5 text-[11.5px] text-dim">
-                    a tiempo · adelantadas · tardías
-                  </p>
-                </div>
-              )}
-            </div>
+            )}
           </div>
-        </section>
+          {a.hitos.length > 0 && (
+            <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
+              <MapaHitos
+                cerrada={Boolean(datos.realizada_at)}
+                hitos={a.hitos.map((h) => ({
+                  fecha: h.fecha,
+                  nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta,
+                  cierre: h.tipo === "realizada",
+                }))}
+              />
+            </div>
+          )}
+        </div>
+      </Acordeon>
+
+      {/* Capa 2 — Tu ritmo y tu constancia: ritmo semanal, calendario y esfuerzo. */}
+      {(u.accionesHechas > 0 || u.accionesPorEtapa.length > 0) && (
+        <Acordeon titulo={<span className="text-[15px] font-semibold">Tu ritmo y tu constancia</span>}>
+          <div className="flex flex-col gap-5">
+            <RitmoSemanal series={u.avancePorSemana} />
+            <Constancia dias={u.avancePorDia} />
+            <EsfuerzoPorEtapa series={u.accionesPorEtapa} nombreEtapa={nombreEtapa} />
+          </div>
+        </Acordeon>
+      )}
+
+      {/* Capa 3 — Cómo cumpliste tus fechas (solo con línea base). */}
+      {tiene_baseline && c && (
+        <Acordeon titulo={<span className="text-[15px] font-semibold">Cómo cumpliste tus fechas</span>}>
+          <div className="flex flex-col gap-5">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <TileCumpl valor={String(c.aTiempo)} sufijo={`${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--accent)" />
+              <TileCumpl valor={String(c.adelantadas)} sufijo={`${c.pctAdelantadas}%`} etiqueta="adelantadas" color="var(--done)" />
+              <TileCumpl valor={String(c.tardias)} sufijo={`${c.pctTardias}%`} etiqueta="tardías" color="var(--warn)" />
+              <TileCumpl
+                valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`}
+                sufijo="días"
+                etiqueta="desviación media"
+                color="var(--accent)"
+              />
+            </div>
+
+            <RepartoCumplimiento aTiempo={c.aTiempo} adelantadas={c.adelantadas} tardias={c.tardias} />
+
+            {/* Capa de honestidad: banda gris con icono neutro. Contexto, no alarma. */}
+            {c.replanificaciones > 0 && (
+              <div className="flex items-start gap-3 rounded-[14px] border border-hairline px-5 py-4">
+                <span aria-hidden className="mt-0.5 grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full border border-hairline text-dim">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 11v5" />
+                    <path d="M12 7.5v.5" />
+                  </svg>
+                </span>
+                <p className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
+                  Frente a tu plan inicial:{" "}
+                  <span className="font-semibold text-ink tabular-nums">
+                    {c.desviacionVsInicialDias > 0 ? "+" : ""}
+                    {c.desviacionVsInicialDias.toFixed(1)} días
+                  </span>{" "}
+                  de desviación media ·{" "}
+                  <span className="font-semibold text-ink tabular-nums">{c.replanificaciones}</span>{" "}
+                  replanificación{c.replanificaciones === 1 ? "" : "es"}. El cumplimiento se mide contra tu
+                  fecha vigente: replanificar es el control de cambios, no una tardanza.
+                </p>
+              </div>
+            )}
+
+            {c.porEtapa.length > 0 && (
+              <GanttCumplimiento
+                porEtapa={c.porEtapa}
+                maxBarra={maxBarra}
+                nombreEtapa={nombreEtapa}
+                hoyDias={datos.realizada_at ? null : u.duracionTotalDias}
+              />
+            )}
+
+            {c.porDominio.length > 1 && (
+              <div className="rounded-panel border border-hairline bg-surface-3 p-5 lg:max-w-[380px]">
+                <p className="mb-3 text-[13px] font-semibold">Cumplimiento por mundo</p>
+                <ul className="flex flex-col gap-2.5">
+                  {c.porDominio.map((d) => (
+                    <li key={d.dominio} className="flex items-baseline justify-between gap-3">
+                      <span className="min-w-0 truncate text-[13px]">
+                        {NOMBRE_DOMINIO[d.dominio] ?? d.dominio}
+                        {datos.analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt) && (
+                          <span className="ml-2 text-[11px] font-semibold text-done">Completado</span>
+                        )}
+                      </span>
+                      <span className="shrink-0 text-[12.5px] tabular-nums">
+                        <span className="font-semibold text-accent">{d.aTiempo}</span>
+                        <span className="text-dim"> · </span>
+                        <span className="font-semibold text-done">{d.adelantadas}</span>
+                        <span className="text-dim"> · </span>
+                        <span className="font-semibold text-warn">{d.tardias}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-3 border-t border-hairline pt-2.5 text-[11.5px] text-dim">
+                  a tiempo · adelantadas · tardías
+                </p>
+              </div>
+            )}
+          </div>
+        </Acordeon>
       )}
     </div>
   );

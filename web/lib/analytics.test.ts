@@ -82,6 +82,25 @@ describe("calcularAnalytics — capa universal", () => {
       { etapa: 2, dias: 12 },
     ]);
   });
+
+  // Series para los gráficos. Semana = floor(díasDesdeChispa/7)+1 (chispa 03-01):
+  // 03-10 (9d)→S2, 03-13 (12d)→S2, 03-20 (19d)→S3, 03-25 (24d)→S4.
+  it("avance por semana: {S2:2, S3:1, S4:1}, sin huecos hasta ceil(61/7)=9", () => {
+    expect(a.avancePorSemana).toHaveLength(9);
+    const m = new Map(a.avancePorSemana.map((s) => [s.semana, s.hechas]));
+    expect(m.get(1)).toBe(0);
+    expect(m.get(2)).toBe(2);
+    expect(m.get(3)).toBe(1);
+    expect(m.get(4)).toBe(1);
+  });
+  it("avance por día: 4 días distintos, 1 acción cada uno, en orden", () => {
+    expect(a.avancePorDia).toEqual([
+      { fecha: "2026-03-10", hechas: 1 },
+      { fecha: "2026-03-13", hechas: 1 },
+      { fecha: "2026-03-20", hechas: 1 },
+      { fecha: "2026-03-25", hechas: 1 },
+    ]);
+  });
 });
 
 describe("calcularAnalytics — retiradas (gestor de estados)", () => {
