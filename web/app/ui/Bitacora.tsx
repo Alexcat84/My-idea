@@ -13,25 +13,18 @@
  * El .md y el PDF salen del MISMO texto (bitacoraMarkdown), la misma verdad que
  * el documento del panel.
  */
-import { useCallback, useEffect, useState } from "react";
-import { bitacoraMarkdown, type EntradaBitacora } from "@/lib/bitacoraCliente";
+import { useEffect, useState } from "react";
+import type { EntradaBitacora } from "@/lib/bitacoraCliente";
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
-import { BitacoraPapel } from "./BitacoraPapel";
 
 const AZUL = "#4D7CFE";
 const CELESTE = "#8FB3F5";
 const VERDE = "#3FB950";
-const MESES_CORTOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 const PALABRA_NUM = ["", "un", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez"];
 
 function hora(iso: string): string {
   const d = new Date(iso);
   return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
-}
-/** "1 jun" — día + mes abreviado, para el mapa de hitos. */
-function fechaMapa(iso: string): string {
-  const d = new Date(iso);
-  return `${d.getDate()} ${MESES_CORTOS[d.getMonth()]}`;
 }
 function numeroPalabra(n: number): string {
   return n <= 10 ? PALABRA_NUM[n] : String(n);
@@ -66,15 +59,6 @@ function aFilas(entradas: EntradaBitacora[]): Fila[] {
   return filas;
 }
 
-function descargarMd(markdown: string, archivo: string) {
-  const blob = new Blob([markdown], { type: "text/markdown;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `${archivo}.md`;
-  a.click();
-  URL.revokeObjectURL(url);
-}
 
 /** El punto de una fila de entrada, según su peso. */
 function PuntoEntrada({ peso }: { peso: EntradaBitacora["peso"] }) {
@@ -119,7 +103,6 @@ function coloreaMotivo(texto: string, color: string) {
 export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver: () => void }) {
   const [datos, setDatos] = useState<{ nombre: string; entradas: EntradaBitacora[] } | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [imprimir, setImprimir] = useState(false);
 
   useEffect(() => {
     let vivo = true;
@@ -132,41 +115,16 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
     };
   }, [projectId]);
 
-  useEffect(() => {
-    if (!imprimir) return;
-    const limpiar = () => setImprimir(false);
-    window.addEventListener("afterprint", limpiar);
-    window.print();
-    return () => window.removeEventListener("afterprint", limpiar);
-  }, [imprimir]);
-
-  const markdown = useCallback(
-    () => (datos ? bitacoraMarkdown(datos.nombre, datos.entradas, new Date().toISOString()) : ""),
-    [datos]
-  );
-
   if (error) return <p className="text-sm text-warn">{error}</p>;
   if (!datos) return <p className="text-dim">Cargando tu bitácora…</p>;
 
   const { entradas } = datos;
   const filas = aFilas(entradas);
+  const cerrada = entradas.some((e) => e.peso === "cierre");
   const rango =
     entradas.length > 0
       ? `del ${fechaHumanaConAno(entradas[0].fecha)} al ${fechaHumanaConAno(entradas[entradas.length - 1].fecha)}`
       : null;
-
-  // Resumen: cifras de lo persistido (el mismo criterio del análisis).
-  const hitos = entradas.filter((e) => e.peso === "hito" || e.peso === "cierre");
-  const cerrada = entradas.some((e) => e.peso === "cierre");
-  const diasDeViaje =
-    entradas.length > 0
-      ? Math.max(
-          1,
-          Math.round((new Date(entradas[entradas.length - 1].fecha).getTime() - new Date(entradas[0].fecha).getTime()) / 86_400_000) + 1
-        )
-      : 0;
-  const N = hitos.length;
-  const inset = N > 1 ? 100 / (2 * N) : 50;
 
   return (
     <section className="mx-auto w-full max-w-[880px]">
@@ -188,20 +146,8 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
               <span className="font-semibold text-ink">«{datos.nombre}»</span>
               {rango ? ` · ${rango}` : ""}
             </p>
-          </div>
-          <div className="flex flex-none gap-2.5 pt-1">
-            <button
-              onClick={() => descargarMd(markdown(), `bitacora-${datos.nombre.replace(/[^\p{L}\p{N}]+/gu, "-").slice(0, 40) || "mi-viaje"}`)}
-              className="rounded-full border border-hairline px-4 py-2.5 text-[13.5px] font-semibold text-ink hover:border-accent/60"
-            >
-              Descargar .md
-            </button>
-            <button
-              onClick={() => setImprimir(true)}
-              className="rounded-full border border-accent/50 bg-accent/15 px-4 py-2.5 text-[13.5px] font-semibold text-accent hover:bg-accent/25"
-            >
-              Imprimir / PDF
-            </button>
+            {/* Sin botones de descarga aquí: bajar la bitácora en .md o PDF vive
+                en "Tus documentos" (centralizado). Esta página es la vista viva. */}
           </div>
         </div>
 
@@ -212,67 +158,10 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
           </p>
         ) : (
           <>
-            {/* ── Resumen + mapa de hitos ──────────────────────────────── */}
-            <div className="mt-7 rounded-[16px] border border-hairline p-6 sm:p-7" style={{ background: "#0C0C10" }}>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-3.5">
-                <Cifra valor={diasDeViaje} etiqueta="días de viaje" borde />
-                <Cifra valor={entradas.length} etiqueta="momentos registrados" borde />
-                <Cifra valor={N} etiqueta="hitos de tu camino" color={AZUL} borde />
-                <Cifra valor={cerrada ? 1 : 0} etiqueta={cerrada ? "cierre: ya es proyecto" : "aún en marcha"} color={cerrada ? VERDE : undefined} />
-              </div>
-
-              {N > 0 && (
-                <div className="mt-2 border-t border-hairline pt-6">
-                  <div className="mb-5 text-[11.5px] font-semibold uppercase tracking-[1.3px] text-dim">Tus hitos, de un vistazo</div>
-                  <div className="relative overflow-x-auto">
-                    <div className="relative" style={{ minWidth: N > 6 ? N * 96 : undefined }}>
-                      <div
-                        aria-hidden
-                        style={{
-                          position: "absolute",
-                          left: `${inset}%`,
-                          right: `${inset}%`,
-                          top: 8,
-                          height: 2,
-                          background: cerrada
-                            ? `linear-gradient(to right, rgba(77,124,254,0.85) 0%, rgba(77,124,254,0.85) 82%, rgba(63,185,80,0.9) 100%)`
-                            : `rgba(77,124,254,0.85)`,
-                        }}
-                      />
-                      <div className="relative grid items-start" style={{ gridTemplateColumns: `repeat(${N}, 1fr)` }}>
-                        {hitos.map((h, i) => {
-                          const esCierre = h.peso === "cierre";
-                          const viva = !cerrada && i === N - 1;
-                          return (
-                            <div key={i} className="flex flex-col items-center gap-0 px-1 text-center">
-                              <div className="flex h-[18px] items-center justify-center">
-                                <span
-                                  className={viva ? "anima-idea-pulse" : undefined}
-                                  style={{
-                                    width: esCierre ? 13 : 11,
-                                    height: esCierre ? 13 : 11,
-                                    borderRadius: "50%",
-                                    background: esCierre ? VERDE : AZUL,
-                                    boxShadow: esCierre ? `0 0 0 4px rgba(63,185,80,0.18)` : undefined,
-                                  }}
-                                />
-                              </div>
-                              <div className="mt-2.5 text-[11.5px] tabular-nums text-dim">{fechaMapa(h.fecha)}</div>
-                              <div className="mt-1 text-[12.5px] font-semibold leading-[1.35]" style={{ color: esCierre ? VERDE : "#F5F6F8" }}>
-                                {h.titulo ?? h.texto}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-4 text-[11.5px] text-dim">
-                    Un paso por hito, en el orden en que ocurrieron. Las distancias reales entre fechas viven en la línea de abajo.
-                  </div>
-                </div>
-              )}
-            </div>
+            {/* La bitácora es un REGISTRO completo (todo, día por día), no un
+                resumen: el resumen y el mapa de hitos viven en el Análisis del
+                proyecto, que es donde tienen sentido. Aquí, solo la línea de
+                tiempo. */}
 
             {/* ── Línea de tiempo completa ─────────────────────────────── */}
             {/* La espina NO es un elemento absoluto con "bottom" adivinado (se
@@ -358,19 +247,6 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
         )}
       </div>
 
-      {/* Invisible en pantalla; la hoja de impresión lo enciende en papel. */}
-      {imprimir && <BitacoraPapel oculto entradas={entradas} nombreIdea={datos.nombre} />}
     </section>
-  );
-}
-
-function Cifra({ valor, etiqueta, color, borde }: { valor: number; etiqueta: string; color?: string; borde?: boolean }) {
-  return (
-    <div className={"px-2.5 py-3.5 text-center" + (borde ? " sm:border-r sm:border-hairline" : "")}>
-      <div className="text-[30px] font-extrabold tracking-[-0.5px] tabular-nums" style={color ? { color } : undefined}>
-        {valor}
-      </div>
-      <div className="mt-1.5 text-[12.5px] text-dim">{etiqueta}</div>
-    </div>
   );
 }
