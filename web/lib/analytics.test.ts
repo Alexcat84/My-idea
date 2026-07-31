@@ -126,6 +126,12 @@ describe("calcularAnalytics — retiradas (gestor de estados)", () => {
   it("la retirada se lista aparte, con su texto, etapa y motivo", () => {
     expect(u.retiradas).toEqual([{ texto: "Contrata un local", etapa: 2, motivo: "negocio online" }]);
   });
+  it("distribución de estados: de las 3 activas, 2 hecho + 1 pendiente (la retirada no cuenta)", () => {
+    expect(u.distribucionEstados).toEqual([
+      { estado: "hecho", n: 2 },
+      { estado: "pendiente", n: 1 },
+    ]);
+  });
   it("el acta nombra las retiradas con su porqué", () => {
     const md = informeMarkdown("Mi idea", calcularAnalytics(entrada), iso("2026-04-01"));
     expect(md).toContain("Retiradas (no aplican): 1");

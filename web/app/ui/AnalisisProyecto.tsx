@@ -14,8 +14,15 @@ import { GanttCumplimiento } from "./GanttCumplimiento";
 import { MapaHitos } from "./MapaHitos";
 import { Acordeon } from "./Acordeon";
 import { BarraAvance } from "./BarraAvance";
-import { RepartoCumplimiento, RitmoSemanal, Constancia, EsfuerzoPorEtapa } from "./GraficosAnalisis";
-import { ProximasFechas } from "./Calendario";
+import {
+  RepartoCumplimiento,
+  RitmoSemanal,
+  AvanceAcumulado,
+  EsfuerzoPorEtapa,
+  ProyeccionCierre,
+  CumplimientoPorMundoBarras,
+  DistribucionEstados,
+} from "./GraficosAnalisis";
 
 interface Respuesta {
   nombre: string;
@@ -69,13 +76,10 @@ export function AnalisisProyecto({
   projectId,
   titulos,
   onVolver,
-  onVerCalendario,
 }: {
   projectId: string;
   titulos: Record<number, string>;
   onVolver: () => void;
-  /** abre el Calendario (para el visualizador "próximas fechas") */
-  onVerCalendario?: () => void;
 }) {
   const [datos, setDatos] = useState<Respuesta | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -161,15 +165,20 @@ export function AnalisisProyecto({
         }
       >
         <div className="flex flex-col gap-6">
-          {/* Visualizador compacto del calendario (solo lectura): próximas
-              fechas, con enlace al calendario completo. Se auto-oculta si no hay
-              tareas con fecha. */}
-          {onVerCalendario && <ProximasFechas projectId={projectId} onVerCalendario={onVerCalendario} />}
           {u.accionesVigente.total > 0 && (
             <div className="rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
               <BarraAvance pct={Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)} />
             </div>
           )}
+          {/* La curva de culminación: cuánto del plan llevas cerrado en el tiempo. */}
+          <AvanceAcumulado series={u.avancePorSemana} total={u.accionesVigente.total} />
+          {/* Candidato: proyección de cierre (a tu ritmo, cuándo terminas). */}
+          <ProyeccionCierre
+            hechas={u.accionesVigente.hechas}
+            total={u.accionesVigente.total}
+            ritmoPorSemana={u.ritmoAccionesPorSemana}
+            cerrada={Boolean(datos.realizada_at)}
+          />
           <div>
             {/* Cifras en color (azul piensa): en blanco no lucían. Medida sin juicio. */}
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -200,20 +209,23 @@ export function AnalisisProyecto({
         </div>
       </Acordeon>
 
-      {/* Capa 2 — Tu ritmo y tu constancia: ritmo semanal, calendario y esfuerzo. */}
+      {/* Capa 2 — Tu ritmo y tu esfuerzo: ritmo semanal y esfuerzo por etapa.
+          El calendario de constancia se retiró: los días viven en el Calendario,
+          fuente única de las fechas. */}
       {(u.accionesHechas > 0 || u.accionesPorEtapa.length > 0) && (
         <Acordeon
           variante="capa"
           titulo={
             <span className="flex items-center gap-2.5 text-[15px] font-semibold">
               <span aria-hidden className="h-2 w-2 rounded-full bg-done" />
-              Tu ritmo y tu constancia
+              Tu ritmo y tu esfuerzo
             </span>
           }
         >
           <div className="flex flex-col gap-5">
             <RitmoSemanal series={u.avancePorSemana} />
-            <Constancia dias={u.avancePorDia} />
+            {/* Candidato: distribución de estados (cómo van tus acciones ahora). */}
+            <DistribucionEstados dist={u.distribucionEstados} />
             <EsfuerzoPorEtapa series={u.accionesPorEtapa} nombreEtapa={nombreEtapa} />
           </div>
         </Acordeon>
@@ -279,31 +291,16 @@ export function AnalisisProyecto({
             )}
 
             {c.porDominio.length > 1 && (
-              <div className="rounded-panel border border-hairline bg-surface-3 p-5 lg:max-w-[380px]">
-                <p className="mb-3 text-[13px] font-semibold">Cumplimiento por mundo</p>
-                <ul className="flex flex-col gap-2.5">
-                  {c.porDominio.map((d) => (
-                    <li key={d.dominio} className="flex items-baseline justify-between gap-3">
-                      <span className="min-w-0 truncate text-[13px]">
-                        {NOMBRE_DOMINIO[d.dominio] ?? d.dominio}
-                        {datos.analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt) && (
-                          <span className="ml-2 text-[11px] font-semibold text-done">Completado</span>
-                        )}
-                      </span>
-                      <span className="shrink-0 text-[12.5px] tabular-nums">
-                        <span className="font-semibold text-done">{d.adelantadas}</span>
-                        <span className="text-dim"> · </span>
-                        <span className="font-semibold text-accent">{d.aTiempo}</span>
-                        <span className="text-dim"> · </span>
-                        <span className="font-semibold text-warn">{d.tardias}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-3 border-t border-hairline pt-2.5 text-[11.5px] text-dim">
-                  adelantadas · a tiempo · tardías
-                </p>
-              </div>
+              <CumplimientoPorMundoBarras
+                filas={c.porDominio.map((d) => ({
+                  dominio: d.dominio,
+                  nombre: NOMBRE_DOMINIO[d.dominio] ?? d.dominio,
+                  adelantadas: d.adelantadas,
+                  aTiempo: d.aTiempo,
+                  tardias: d.tardias,
+                  completado: datos.analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt),
+                }))}
+              />
             )}
           </div>
         </Acordeon>

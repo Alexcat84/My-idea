@@ -803,9 +803,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
             }}
           />
         ) : vistaAnalisis && planMd && checklist ? (
-          <AnalisisProyecto projectId={projectId} titulos={titulosDeEtapas(planMd)} onVolver={volverAManos} onVerCalendario={irACalendario} />
+          <AnalisisProyecto projectId={projectId} titulos={titulosDeEtapas(planMd)} onVolver={volverAManos} />
         ) : vistaCalendario && planMd && checklist ? (
-          <Calendario projectId={projectId} onVolver={volverAManos} onVerLoCumplido={irAAnalisis} />
+          <Calendario
+            projectId={projectId}
+            checklist={checklist}
+            onRecargarChecklist={cargarChecklist}
+            onVolver={volverAManos}
+            onVerLoCumplido={irAAnalisis}
+          />
         ) : vistaManos && planMd && checklist ? (
           <>
             <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
