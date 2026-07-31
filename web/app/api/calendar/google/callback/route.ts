@@ -21,7 +21,10 @@ export async function GET(request: Request) {
   const jar = await cookies();
   const cookieState = jar.get("gcal_state")?.value;
   const nextRaw = jar.get("gcal_next")?.value;
-  const destino = (extra = "") => new URL((nextRaw && nextRaw.startsWith("/") ? nextRaw : "/ideas") + extra, origin);
+  // Solo rutas internas: `//host` y `/\host` son URLs protocolo-relativas que
+  // `new URL` resolvería a OTRO sitio (open redirect). Se rechazan.
+  const nextSeguro = nextRaw && nextRaw.startsWith("/") && !nextRaw.startsWith("//") && !nextRaw.startsWith("/\\") ? nextRaw : "/ideas";
+  const destino = (extra = "") => new URL(nextSeguro + extra, origin);
 
   const code = url.searchParams.get("code");
   const state = url.searchParams.get("state");

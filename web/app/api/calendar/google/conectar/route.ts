@@ -33,6 +33,8 @@ export async function GET(request: Request) {
   const opts = { httpOnly: true as const, sameSite: "lax" as const, secure: process.env.NODE_ENV === "production", path: "/", maxAge: 600 };
   res.cookies.set("gcal_state", state, opts);
   const next = url.searchParams.get("next");
-  if (next && next.startsWith("/")) res.cookies.set("gcal_next", next, opts);
+  // Solo rutas internas: `//host` y `/\host` (protocolo-relativas) redirigirían
+  // fuera del sitio tras el OAuth (open redirect); se rechazan.
+  if (next && next.startsWith("/") && !next.startsWith("//") && !next.startsWith("/\\")) res.cookies.set("gcal_next", next, opts);
   return res;
 }
