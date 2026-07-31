@@ -167,72 +167,76 @@ describe("calcularAnalytics — capa de cumplimiento", () => {
   it("replanificaciones = 1 (solo D tiene fecha_base_original)", () => {
     expect(c.replanificaciones).toBe(1);
   });
-  it("gantt por etapa: inicio = fin de la etapa previa (base con base, real con real)", () => {
-    // E1 base 0→9 / real 0→12; E2 arranca en el fin de E1: base 9→24, real 12→24.
+  it("gantt por etapa: ventana honesta = [min,max] de las fechas propias de cada etapa", () => {
+    // Ventanas de las PROPIAS fechas (no encadenadas):
+    //   E1 base A/B=03-10 → [9,9];  real A=03-10(9), B=03-13(12) → [9,12].
+    //   E2 base C=03-22(21), D=03-25(24) → [21,24]; real C=03-20(19), D=03-25(24) → [19,24].
     expect(c.porEtapa).toEqual([
-      { etapa: 1, baseInicio: 0, baseFin: 9, realInicio: 0, realFin: 12 },
-      { etapa: 2, baseInicio: 9, baseFin: 24, realInicio: 12, realFin: 24 },
+      { etapa: 1, baseInicio: 9, baseFin: 9, realInicio: 9, realFin: 12 },
+      { etapa: 2, baseInicio: 21, baseFin: 24, realInicio: 19, realFin: 24 },
     ]);
   });
 });
 
-describe("calcularAnalytics — barras Gantt (semilla del spike A/B/C)", () => {
-  // La misma semilla del spike de decisión (canon11_barras_spike.png). fecha_base
-  // = fin base, completed_at = fin real; una acción por etapa. Valores a mano:
-  //   fin base [7,14,28,35,49]  ·  fin real [9,13,35,40,52]
+describe("calcularAnalytics — Gantt de VENTANAS HONESTAS (paralelismo del fundador)", () => {
+  // El Gantt dibuja lo que el usuario decidió, no la secuencia sugerida. La
+  // ventana de cada etapa = [min, max] de SUS propias fechas. Fechas conocidas,
+  // valores a mano ANTES del assert (regla AGENTS.md).
   const CHISPA = "2026-03-01T12:00:00.000Z";
-  const masDias = (n: number) => new Date(Date.parse(CHISPA) + n * 86_400_000).toISOString();
-  const item = (etapa: number, finBase: number, finReal: number | null) => ({
+  const d = (n: number) => new Date(Date.parse(CHISPA) + n * 86_400_000).toISOString();
+  const mk = (etapa: number, baseD: number | null, realD: number | null) => ({
     plan_id: "pg",
     etapa,
-    estado: finReal != null ? "hecho" : "pendiente",
+    estado: (realD != null ? "hecho" : "pendiente") as "hecho" | "pendiente",
     destacado: false,
     texto: `E${etapa}`,
-    completed_at: finReal != null ? masDias(finReal) : null,
-    fecha_base: masDias(finBase),
+    completed_at: realD != null ? d(realD) : null,
+    fecha_base: baseD != null ? d(baseD) : null,
     fecha_base_original: null,
   });
-  const SEMILLA: EntradaAnalytics = {
+  const seed = (items: EntradaAnalytics["items"]): EntradaAnalytics => ({
     proyectoCreatedAt: CHISPA,
-    realizadaAt: masDias(60),
-    planesCore: [{ id: "pg", etiqueta: "inicial", created_at: masDias(1), baseline_confirmada_at: masDias(1) }],
+    realizadaAt: d(60),
+    planesCore: [{ id: "pg", etiqueta: "inicial", created_at: d(1), baseline_confirmada_at: d(1) }],
     mundos: [],
-    items: [item(1, 7, 9), item(2, 14, 13), item(3, 28, 35), item(4, 35, 40), item(5, 49, 52)],
-  };
-  const c = calcularAnalytics(SEMILLA).cumplimiento!;
+    items,
+  });
 
-  it("cada etapa arranca donde terminó la anterior, base con base y real con real", () => {
+  it("secuencial (idéntico a hoy): etapas contiguas → ventanas [0,7],[7,14],[14,21]", () => {
+    // Cada etapa abarca su tramo con dos ítems (inicio y fin) y NO se traslapa;
+    // la ventana honesta coincide con la vieja cadena (inicio = fin de la previa).
+    //   E1 base [0,7] real [1,8] · E2 base [7,14] real [8,15] · E3 base [14,21] real [15,22]
+    const c = calcularAnalytics(
+      seed([mk(1, 0, 1), mk(1, 7, 8), mk(2, 7, 8), mk(2, 14, 15), mk(3, 14, 15), mk(3, 21, 22)])
+    ).cumplimiento!;
     expect(c.porEtapa).toEqual([
-      { etapa: 1, baseInicio: 0, baseFin: 7, realInicio: 0, realFin: 9 },
-      { etapa: 2, baseInicio: 7, baseFin: 14, realInicio: 9, realFin: 13 },
-      { etapa: 3, baseInicio: 14, baseFin: 28, realInicio: 13, realFin: 35 },
-      { etapa: 4, baseInicio: 28, baseFin: 35, realInicio: 35, realFin: 40 },
-      { etapa: 5, baseInicio: 35, baseFin: 49, realInicio: 40, realFin: 52 },
+      { etapa: 1, baseInicio: 0, baseFin: 7, realInicio: 1, realFin: 8 },
+      { etapa: 2, baseInicio: 7, baseFin: 14, realInicio: 8, realFin: 15 },
+      { etapa: 3, baseInicio: 14, baseFin: 21, realInicio: 15, realFin: 22 },
     ]);
   });
 
-  it("el caso de oro: la etapa 3 real (13→35) empuja el arranque real de la 4 (a 35) y de la 5 (a 40)", () => {
-    const e4 = c.porEtapa.find((e) => e.etapa === 4)!;
-    const e5 = c.porEtapa.find((e) => e.etapa === 5)!;
-    // el inicio real de la 4 NO es su base (28): es el fin real de la 3 (35).
-    expect(e4.realInicio).toBe(35);
-    expect(e5.realInicio).toBe(40);
+  it("traslape manual: E1 [0,10] y E2 [5,15] → las ventanas SE SOLAPAN (el Gantt lo dibuja)", () => {
+    // El usuario movió E2 a arrancar el día 5, DENTRO de la ventana de E1. La
+    // cadena vieja habría forzado E2.baseInicio=10 (sin traslape, falso). Ahora:
+    const c = calcularAnalytics(seed([mk(1, 0, null), mk(1, 10, null), mk(2, 5, null), mk(2, 15, null)])).cumplimiento!;
+    const e1 = c.porEtapa.find((e) => e.etapa === 1)!;
+    const e2 = c.porEtapa.find((e) => e.etapa === 2)!;
+    expect(e1).toMatchObject({ baseInicio: 0, baseFin: 10 });
+    expect(e2).toMatchObject({ baseInicio: 5, baseFin: 15 });
+    // La verdad del traslape: E2 arranca (5) ANTES de que E1 termine (10).
+    expect(e2.baseInicio).toBeLessThan(e1.baseFin!);
   });
 
-  it("una etapa sin acciones hechas no rompe la cadena: su barra real es null y la siguiente salta a la última real previa", () => {
-    // E4 sin completar: su real es null; E5 (sí completada el día 52) arranca su
-    // real en el fin real de la 3 (35), saltando la 4.
-    const conHueco: EntradaAnalytics = {
-      ...SEMILLA,
-      items: [item(1, 7, 9), item(2, 14, 13), item(3, 28, 35), item(4, 35, null), item(5, 49, 52)],
-    };
-    const cc = calcularAnalytics(conHueco).cumplimiento!;
-    const e4 = cc.porEtapa.find((e) => e.etapa === 4)!;
-    const e5 = cc.porEtapa.find((e) => e.etapa === 5)!;
-    expect(e4.realInicio).toBeNull();
-    expect(e4.realFin).toBeNull();
-    expect(e5.realInicio).toBe(35);
-    expect(e5.realFin).toBe(52);
+  it("etapa sin fechas (fallback de cadena): E2 sin fecha_base → baseInicio = fin de E1, baseFin null", () => {
+    // E1 base [0,7]. E2 no tiene fecha_base: se posiciona tras E1 (cadena) y NO
+    // dibuja barra base (baseFin null). Sin acciones hechas, su real es null.
+    const c = calcularAnalytics(seed([mk(1, 0, null), mk(1, 7, null), mk(2, null, null), mk(2, null, null)])).cumplimiento!;
+    const e2 = c.porEtapa.find((e) => e.etapa === 2)!;
+    expect(e2.baseInicio).toBe(7);
+    expect(e2.baseFin).toBeNull();
+    expect(e2.realInicio).toBeNull();
+    expect(e2.realFin).toBeNull();
   });
 });
 

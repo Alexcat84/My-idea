@@ -179,12 +179,14 @@ export interface CapaCumplimiento {
    * de tardía lo replanificado. Solo tiene sentido mostrarla si hubo
    * replanificaciones. */
   desviacionVsInicialDias: number;
-  /** Barras "Planificado vs. real por etapa" en vista GANTT (corrección de la
-   * errata del canon 11: las barras acumuladas confundían). Cada etapa lleva su
-   * INICIO y su FIN en días desde la chispa, para base y real. El inicio de una
-   * etapa es el fin de la anterior (base con base, real con real): así se ven
-   * las fronteras y el corrimiento acumulado, no una barra que solo crece.
-   * realInicio/realFin son null si la etapa aún no tiene ninguna acción hecha. */
+  /** Barras "Planificado vs. real por etapa" en vista GANTT. VENTANAS HONESTAS
+   * (Fase 4.6.2): la ventana de cada etapa sale de sus PROPIAS fechas —
+   * base = [min, max] de fecha_base de sus ítems activos; real = [min, max] de
+   * completed_at (en días desde la chispa). Así, si el usuario traslapa etapas
+   * a mano, el Gantt lo DIBUJA (dos barras solapadas). La cadena (inicio = fin
+   * de la anterior) es solo el fallback de las etapas sin fecha_base (su barra
+   * base no se dibuja, baseFin null). realInicio/realFin son null si la etapa
+   * no tiene ninguna acción hecha. Ver BANCO §7.1. */
   porEtapa: Array<{
     etapa: number;
     baseInicio: number;
@@ -495,39 +497,47 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
     const total = conFecha.length;
     const pct = (n: number) => (total > 0 ? Math.round((n / total) * 100) : 0);
 
-    // Barras GANTT por etapa (corrección de la errata del canon 11). Primero el
-    // FIN de cada etapa (última fecha_base / última real, en días desde la
-    // chispa); luego el INICIO, que es el fin de la etapa anterior: base con
-    // base, real con la última real definida antes (así una etapa sin acciones
-    // hechas no rompe la cadena del inicio real).
+    // Barras GANTT por etapa — VENTANAS HONESTAS (Fase 4.6.2, hallazgo del
+    // fundador sobre el paralelismo). El usuario YA puede traslapar etapas
+    // (poner ítems de etapas distintas en fechas iguales o solapadas: no hay
+    // restricción, la cascada es opt-in), así que el Gantt debe DIBUJAR eso, no
+    // la secuencia que el motor SUGIRIÓ. Por eso la ventana de cada etapa sale
+    // de sus PROPIAS fechas:
+    //   base = [min, max] de fecha_base de sus ítems ACTIVOS,
+    //   real = [min, max] de completed_at.
+    // La cadena (inicio = fin de la anterior) queda SOLO como fallback para
+    // posicionar etapas SIN fecha_base, sin inventar ancho (su barra base no se
+    // dibuja). Los traslapes se pintan tal cual: dos barras solapadas son la
+    // verdad del plan del usuario, no un error. Ver BANCO §7.1.
     const etapas = [...new Set(delPlan.map((i) => i.etapa))].sort((a, b) => a - b);
-    const maxIso = (xs: string[]) => (xs.length ? xs.reduce((a, b) => (a > b ? a : b)) : null);
-    const finBase = new Map<number, number | null>();
-    const finReal = new Map<number, number | null>();
-    for (const etapa of etapas) {
-      const deEtapa = delPlan.filter((i) => i.etapa === etapa);
-      const baseMax = maxIso(deEtapa.map((i) => i.fecha_base).filter((f): f is string => Boolean(f)));
-      const realMax = maxIso(deEtapa.map((i) => i.completed_at).filter((c): c is string => Boolean(c)));
-      finBase.set(etapa, baseMax ? Math.max(0, dias(chispa, baseMax)) : null);
-      finReal.set(etapa, realMax ? Math.max(0, dias(chispa, realMax)) : null);
-    }
-    const porEtapa = etapas.map((etapa, idx) => {
-      const baseInicio = idx === 0 ? 0 : finBase.get(etapas[idx - 1]) ?? 0;
-      // El inicio real es la última real terminada ANTES de esta etapa (o la
-      // chispa): si la etapa previa no tuvo acciones hechas, salta a la anterior.
-      let realInicio = 0;
-      for (const e of etapas.slice(0, idx)) {
-        const f = finReal.get(e);
-        if (f != null) realInicio = f;
+    const enDias = (iso: string) => Math.max(0, dias(chispa, iso));
+    const ventana = (isos: string[]): { ini: number; fin: number } | null => {
+      const ds = isos.map(enDias);
+      return ds.length ? { ini: Math.min(...ds), fin: Math.max(...ds) } : null;
+    };
+    let cadenaBase = 0; // fin acumulado, SOLO para el fallback de etapas sin fecha
+    const porEtapa = etapas.map((etapa) => {
+      const activos = delPlan.filter((i) => i.etapa === etapa && i.estado !== "no_aplica");
+      const base = ventana(activos.map((i) => i.fecha_base).filter((f): f is string => Boolean(f)));
+      const real = ventana(activos.map((i) => i.completed_at).filter((c): c is string => Boolean(c)));
+      let baseInicio: number;
+      let baseFin: number | null;
+      if (base) {
+        baseInicio = base.ini;
+        baseFin = base.fin;
+        cadenaBase = base.fin; // avanza la cadena con la última etapa con fechas
+      } else {
+        // Fallback: sin fecha_base no hay ventana honesta. Se posiciona tras la
+        // anterior (cadena) y NO se dibuja barra base (baseFin null).
+        baseInicio = cadenaBase;
+        baseFin = null;
       }
-      const realFin = finReal.get(etapa) ?? null;
       return {
         etapa,
         baseInicio,
-        baseFin: finBase.get(etapa) ?? null,
-        // Sin fin real, la etapa no tiene barra real: su inicio tampoco aplica.
-        realInicio: realFin != null ? realInicio : null,
-        realFin,
+        baseFin,
+        realInicio: real ? real.ini : null,
+        realFin: real ? real.fin : null,
       };
     });
 
