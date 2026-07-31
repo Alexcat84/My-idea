@@ -17,6 +17,7 @@
 import { useMemo, useState } from "react";
 import { IconoEstado } from "./SelectorEstado";
 import { DetalleActividad } from "./DetalleActividad";
+import { NotaRapida } from "./NotaRapida";
 import { grupoVigente, type CambioItem, type ChecklistData, type ItemChecklistUI } from "./ManosALaObra";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
@@ -207,7 +208,15 @@ export function Calendario({
         )}
 
         {vista === "agenda" && (
-          <VistaAgenda pendientes={pendientes} sinFecha={sinFecha} onVolver={onVolver} onDetalle={abrir} onMarcarHecha={marcarHecha} />
+          <VistaAgenda
+            pendientes={pendientes}
+            sinFecha={sinFecha}
+            ocupado={ocupado}
+            onVolver={onVolver}
+            onDetalle={abrir}
+            onMarcarHecha={marcarHecha}
+            onNota={(item, nota) => aplicarCambio(item, { nota })}
+          />
         )}
         {vista === "mes" && <VistaMes datados={datados} refDate={refDate} hoy={hoy} onDetalle={abrir} />}
         {vista === "semana" && <VistaSemana datados={datados} hoy={hoy} onDetalle={abrir} onMarcarHecha={marcarHecha} />}
@@ -269,15 +278,19 @@ type PendItem = { item: ItemChecklistUI; delta: number; estatus: Estatus };
 function VistaAgenda({
   pendientes,
   sinFecha,
+  ocupado,
   onVolver,
   onDetalle,
   onMarcarHecha,
+  onNota,
 }: {
   pendientes: PendItem[];
   sinFecha: number;
+  ocupado: boolean;
   onVolver: () => void;
   onDetalle: (i: ItemChecklistUI) => void;
   onMarcarHecha: (i: ItemChecklistUI) => void;
+  onNota: (i: ItemChecklistUI, nota: string | null) => void;
 }) {
   const porGrupo = new Map<Grupo, PendItem[]>();
   for (const p of pendientes) (porGrupo.get(grupoDe(p.delta)) ?? porGrupo.set(grupoDe(p.delta), []).get(grupoDe(p.delta))!).push(p);
@@ -301,7 +314,16 @@ function VistaAgenda({
             </div>
             <div className="flex flex-col gap-2.5">
               {filas.map(({ item, delta }) => (
-                <FilaAgenda key={item.id} item={item} delta={delta} grupo={g} onDetalle={() => onDetalle(item)} onMarcarHecha={() => onMarcarHecha(item)} />
+                <FilaAgenda
+                  key={item.id}
+                  item={item}
+                  delta={delta}
+                  grupo={g}
+                  ocupado={ocupado}
+                  onDetalle={() => onDetalle(item)}
+                  onMarcarHecha={() => onMarcarHecha(item)}
+                  onGuardarNota={(nota) => onNota(item, nota)}
+                />
               ))}
             </div>
           </div>
@@ -321,14 +343,18 @@ function FilaAgenda({
   item,
   delta,
   grupo,
+  ocupado,
   onDetalle,
   onMarcarHecha,
+  onGuardarNota,
 }: {
   item: ItemChecklistUI;
   delta: number;
   grupo: Grupo;
+  ocupado: boolean;
   onDetalle: () => void;
   onMarcarHecha: () => void;
+  onGuardarNota: (nota: string | null) => void;
 }) {
   const borde = grupo === "vencidas" ? "border-warn/45 bg-warn/[0.07]" : grupo === "hoy" ? "border-done/30 bg-done/[0.05]" : "border-hairline bg-surface";
   const colorFecha = grupo === "vencidas" ? "text-warn" : grupo === "hoy" ? "text-done" : "text-ink";
@@ -353,6 +379,7 @@ function FilaAgenda({
           {grupo === "vencidas" ? "Ponerle fecha nueva" : "Mover fecha"}
         </button>
         <button onClick={onDetalle} className="rounded-[9px] border border-hairline px-3.5 py-1.5 text-[12.5px] font-semibold text-dim hover:text-ink">Detalle</button>
+        <NotaRapida id={item.id} nota={item.nota} ocupado={ocupado} onGuardar={onGuardarNota} tamano={19} />
       </div>
     </div>
   );
