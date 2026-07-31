@@ -16,28 +16,6 @@ import { Markdown } from "./Markdown";
 
 import { parsearPlan, sinProcedencia, type Seccion } from "@/lib/planParser";
 
-
-function descargarMd(md: string, nombre: string) {
-  const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `${nombre.replace(/[^\p{L}\p{N} _-]/gu, "").trim().slice(0, 60) || "plan"}.md`;
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-/** Descargar el plan en PDF: se abren TODAS las secciones (los acordeones son
- * <details> nativos, así que el PDF sale completo, no a medias) y se manda a
- * imprimir. La hoja de impresión (globals.css) aísla el documento y lo pasa a
- * papel: fondo blanco, texto oscuro, sin navegación ni botones. El usuario
- * elige "Guardar como PDF" en el diálogo de su navegador. */
-function descargarPdf() {
-  const doc = document.querySelector("[data-plan-print]");
-  doc?.querySelectorAll("details").forEach((d) => d.setAttribute("open", ""));
-  window.print();
-}
-
 /** Pasos como mini-línea de puntos (canon 04 en pequeño): sutil pero visual. */
 function PasosLista({ pasos }: { pasos: string[] }) {
   return (
@@ -206,14 +184,8 @@ export function PlanDocumento({
             Generado de tu recorrido{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
           </span>
         </div>
-        <span className="flex shrink-0 items-center gap-3" data-no-print>
-          <button onClick={descargarPdf} className="text-sm text-dim hover:text-ink">
-            Descargar PDF
-          </button>
-          <button onClick={() => descargarMd(md, nombreIdea)} className="text-sm text-dim hover:text-ink">
-            Descargar .md
-          </button>
-        </span>
+        {/* La descarga (.md / PDF) del plan y de todo el desarrollo vive
+            centralizada en "Tus documentos"; aquí ya no se duplica. */}
       </div>
       {plan.titulo && (
         <h2 className="anima-plan-in text-[26px] font-bold leading-[1.25] tracking-[-0.02em] [text-wrap:balance] sm:text-[32px]" style={{ animationDelay: "0.1s" }}>

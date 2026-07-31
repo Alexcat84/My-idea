@@ -13,6 +13,7 @@
  */
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
+import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 
 const AZUL = "#3B6BE8";
 const AZUL_CLARO = "#7FA0DE";
@@ -62,21 +63,9 @@ function conMotivo(texto: string, color: string) {
   );
 }
 
-export function BitacoraPapel({
-  entradas,
-  nombreIdea,
-  oculto,
-  pagina,
-  pieTitulo = "Mi bitácora",
-}: {
-  entradas: EntradaBitacora[];
-  nombreIdea: string;
-  oculto?: boolean;
-  /** cuando compone dentro del Expediente: empieza en su propia hoja */
-  pagina?: boolean;
-  /** el rótulo del pie (por defecto "Mi bitácora"; "Expediente" al componer) */
-  pieTitulo?: string;
-}) {
+/** El CONTENIDO de la bitácora (sin andamio), para componerlo en el Expediente
+ * o como documento suelto. */
+export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
   const filas = aFilas(entradas);
   const cerrada = entradas.some((e) => e.peso === "cierre");
   const rango =
@@ -85,28 +74,6 @@ export function BitacoraPapel({
       : "";
 
   return (
-    <div
-      data-plan-print
-      {...(oculto ? { "data-solo-impresion": "" } : {})}
-      {...(pagina ? { "data-print-pagina": "" } : {})}
-      style={oculto ? { display: "none" } : undefined}
-    >
-      <table data-print-tabla className="w-full border-collapse">
-        <tfoot data-print-pie className="hidden">
-          <tr>
-            <td className="p-0">
-              <div className="pie-fila">
-                <span>
-                  {nombreIdea} · {pieTitulo}
-                </span>
-                <span>My Idea</span>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td className="p-0 align-top">
               <div data-cuerpo-papel>
                 <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "1.6px", textTransform: "uppercase", color: AZUL }}>
                   La secuencia de tu viaje
@@ -170,10 +137,29 @@ export function BitacoraPapel({
                   Esta es tu historia tal como quedó registrada, día por día. Puedes descargarla aparte cuando quieras.
                 </p>
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  );
+}
+
+export function BitacoraPapel({
+  entradas,
+  nombreIdea,
+  oculto,
+  pagina,
+  pieTitulo = "Mi bitácora",
+}: {
+  entradas: EntradaBitacora[];
+  nombreIdea: string;
+  oculto?: boolean;
+  /** cuando compone dentro del Expediente: empieza en su propia hoja */
+  pagina?: boolean;
+  /** el rótulo del pie (por defecto "Mi bitácora"; "Expediente" al componer) */
+  pieTitulo?: string;
+}) {
+  return (
+    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={pieTitulo} oculto={oculto}>
+      <FilaPapel pagina={pagina}>
+        <ContenidoBitacora entradas={entradas} />
+      </FilaPapel>
+    </HojaImpresion>
   );
 }

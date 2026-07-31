@@ -10,6 +10,8 @@
  * El verde solo se enciende con el cierre (ley de color). Pie en <tfoot> para
  * que no tape el texto. Se monta oculto y la hoja de impresión lo enciende.
  */
+import { HojaImpresion, FilaPapel } from "./HojaImpresion";
+
 const AZUL = "#3B6BE8";
 const VERDE = "#1F8A34";
 const TINTA = "#16171A";
@@ -28,7 +30,20 @@ export interface HitoResumen {
   nombre: string;
 }
 
-export function ResumenPapel({
+export interface DatosResumen {
+  cerrada: boolean;
+  cierreMotivo: string | null;
+  intro: string;
+  dias: number;
+  accionesCumplidas: number;
+  hitos: HitoResumen[];
+  loQueMovio: string;
+  loQuePendiente: string;
+}
+
+/** El CONTENIDO del resumen (sin andamio), para componerlo en el Expediente o
+ * como documento suelto. */
+export function ContenidoResumen({
   nombreIdea,
   cerrada,
   cierreMotivo,
@@ -38,22 +53,7 @@ export function ResumenPapel({
   hitos,
   loQueMovio,
   loQuePendiente,
-  oculto,
-  pagina,
-}: {
-  nombreIdea: string;
-  cerrada: boolean;
-  cierreMotivo: string | null;
-  intro: string;
-  dias: number;
-  accionesCumplidas: number;
-  hitos: HitoResumen[];
-  loQueMovio: string;
-  loQuePendiente: string;
-  oculto?: boolean;
-  /** cuando compone dentro del Expediente: empieza en su propia hoja */
-  pagina?: boolean;
-}) {
+}: { nombreIdea: string } & DatosResumen) {
   const titulo = cerrada ? "Cómo te fue" : "Tu progreso hasta aquí";
   const N = hitos.length;
   const inset = N > 1 ? 100 / (2 * N) : 50;
@@ -66,26 +66,6 @@ export function ResumenPapel({
   );
 
   return (
-    <div
-      data-plan-print
-      {...(oculto ? { "data-solo-impresion": "" } : {})}
-      {...(pagina ? { "data-print-pagina": "" } : {})}
-      style={oculto ? { display: "none" } : undefined}
-    >
-      <table data-print-tabla className="w-full border-collapse">
-        <tfoot data-print-pie className="hidden">
-          <tr>
-            <td className="p-0">
-              <div className="pie-fila">
-                <span>{nombreIdea} · Expediente</span>
-                <span>My Idea</span>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td className="p-0 align-top">
               <div data-cuerpo-papel>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 20, paddingBottom: 14, borderBottom: `1px solid ${HILO}` }}>
                   <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "1.6px", textTransform: "uppercase", color: AZUL }}>{titulo}</span>
@@ -170,10 +150,25 @@ export function ResumenPapel({
                   </div>
                 )}
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  );
+}
+
+export function ResumenPapel({
+  nombreIdea,
+  oculto,
+  pagina,
+  ...datos
+}: {
+  nombreIdea: string;
+  oculto?: boolean;
+  /** cuando compone dentro del Expediente: empieza en su propia hoja */
+  pagina?: boolean;
+} & DatosResumen) {
+  return (
+    <HojaImpresion nombreIdea={nombreIdea} pieTitulo="Expediente" oculto={oculto}>
+      <FilaPapel pagina={pagina}>
+        <ContenidoResumen nombreIdea={nombreIdea} {...datos} />
+      </FilaPapel>
+    </HojaImpresion>
   );
 }

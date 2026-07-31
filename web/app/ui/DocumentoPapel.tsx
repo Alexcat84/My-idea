@@ -13,21 +13,24 @@
  */
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 
-/** El riel del timeline: una ESPINA vertical continua (::before del contenedor,
- * cubre también los huecos entre ítems) y los puntos de cada ítem centrados
- * EXACTAMENTE sobre ella. Antes la línea (un border-left) quedaba al borde, a un
- * lado de los puntos; el fundador la quiere ATRAVESANDO su centro.
+/** El riel del timeline: una ESPINA vertical continua y los puntos de cada ítem
+ * centrados EXACTAMENTE sobre ella (el fundador la quiere ATRAVESANDO su centro).
+ *
+ * La espina va como BACKGROUND (clase `.papel-espina` de globals.css), NO como
+ * un `::before` absoluto: en impresión un `::before` posicionado sobre el <ul>
+ * abarca TODA la altura de la lista y, si la lista cruza un salto de página,
+ * baja a través de la banda del pie y lo CRUZA (bug del fundador, jul 2026). El
+ * fondo se recorta por página y jamás cruza el pie.
  *
  * Geometría (todo relativo al <ul>/<ol>, con pl-6 = 24px de canal):
- *  - espina: left 8px, ancho 2px  → su centro cae en x=9.
+ *  - espina: background en x=8..10 (2px)  → su centro cae en x=9.
  *  - punto:  el <li> arranca en x=24; con left:-20px y 10px de ancho, su centro
  *    cae en 24-20+5 = 9. Mismo eje que la espina → la línea pasa por el centro.
  * La comparten viñetas (ul) y pasos de etapa (ol). */
 const RIEL_CLASES =
-  "relative pl-6 " +
-  "before:pointer-events-none before:absolute before:left-[8px] before:top-2 before:bottom-2 " +
-  "before:w-[2px] before:rounded-full before:bg-accent/40 before:content-[''] " +
+  "relative pl-6 papel-espina " +
   "[&>li]:relative " +
   "[&>li]:before:absolute [&>li]:before:content-[''] [&>li]:before:-left-[20px] [&>li]:before:top-[6px] " +
   "[&>li]:before:h-2.5 [&>li]:before:w-2.5 [&>li]:before:rounded-full [&>li]:before:bg-accent";
@@ -145,6 +148,26 @@ const COMPONENTES: Components = {
   td: ({ children }) => <td className="border-b border-hairline px-3 py-2 align-top">{children}</td>,
 };
 
+/** El CONTENIDO del documento (sin el andamio de tabla/pie), para poder
+ * componerlo como una fila más del Expediente o como documento suelto. */
+export function ContenidoDocumento({ markdown, titulo }: { markdown: string; titulo: string }) {
+  return (
+    // data-cuerpo-papel: la hoja de impresión limita la columna de lectura a
+    // 600px (Design), aunque la hoja tenga más ancho útil.
+    <div data-cuerpo-papel>
+      <div className="mb-3 flex items-center gap-2">
+        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+        <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{titulo}</span>
+      </div>
+      {/* Sin data-prosa-plan a propósito: ese marcador fuerza tinta plana (prosa
+          gris de PANTALLA) y aquí borraría el azul de los títulos y los puntos. */}
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={COMPONENTES}>
+        {markdown}
+      </ReactMarkdown>
+    </div>
+  );
+}
+
 export function DocumentoPapel({
   markdown,
   nombreIdea,
@@ -159,53 +182,10 @@ export function DocumentoPapel({
   oculto?: boolean;
 }) {
   return (
-    <div
-      data-plan-print
-      // Oculto en pantalla por estilo en línea y encendido en papel por la
-      // hoja de impresión (que lleva !important y gana). El atributo es la
-      // llave: una clase de Tailwind aquí no sobrevive a la compilación.
-      {...(oculto ? { "data-solo-impresion": "" } : {})}
-      style={oculto ? { display: "none" } : undefined}
-      className={oculto ? undefined : "min-w-0 flex-1"}
-    >
-      {/* El documento va dentro de una TABLA con <tfoot>: en impresión el
-          navegador repite el tfoot en CADA página Y le RESERVA su alto, así el
-          pie nunca se monta sobre el texto (el `position:fixed` anterior sí lo
-          tapaba). En pantalla la tabla es un bloque normal. */}
-      <table data-print-tabla className="w-full border-collapse">
-        <tfoot data-print-pie className="hidden">
-          <tr>
-            <td className="p-0">
-              <div className="pie-fila">
-                <span>
-                  {nombreIdea} · {titulo}
-                </span>
-                <span>My Idea</span>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td className="p-0 align-top">
-              {/* data-cuerpo-papel: la hoja de impresión limita la columna de
-                  lectura a 600px (Design), aunque la hoja tenga más ancho útil. */}
-              <div data-cuerpo-papel>
-                <div className="mb-3 flex items-center gap-2">
-                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{titulo}</span>
-                </div>
-                {/* Sin data-prosa-plan a propósito: ese marcador fuerza tinta
-                    plana (prosa gris de PANTALLA) y aquí borraría el azul de los
-                    títulos, los puntos y los números. */}
-                <ReactMarkdown remarkPlugins={[remarkGfm]} components={COMPONENTES}>
-                  {markdown}
-                </ReactMarkdown>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={titulo} oculto={oculto}>
+      <FilaPapel>
+        <ContenidoDocumento markdown={markdown} titulo={titulo} />
+      </FilaPapel>
+    </HojaImpresion>
   );
 }
