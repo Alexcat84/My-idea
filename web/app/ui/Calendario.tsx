@@ -18,6 +18,7 @@ import { useMemo, useState } from "react";
 import { IconoEstado } from "./SelectorEstado";
 import { DetalleActividad } from "./DetalleActividad";
 import { NotaRapida } from "./NotaRapida";
+import { SincroniaGoogle } from "./SincroniaGoogle";
 import { grupoVigente, type CambioItem, type ChecklistData, type ItemChecklistUI } from "./ManosALaObra";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
@@ -261,11 +262,14 @@ export function Calendario({
           <p className="text-[14px] font-semibold">Llévatelo al teléfono</p>
           <p className="mt-2 text-[12.5px] leading-relaxed text-dim">Añade tus fechas al calendario que ya usas. El aviso lo pone tu teléfono, aunque no abras la app.</p>
           <button onClick={descargarCalendario} disabled={pendientes.length === 0} className="mt-3 w-full rounded-[11px] bg-done py-2.5 text-[13.5px] font-bold text-[#04120A] hover:opacity-90 disabled:opacity-50">
-            Añadir a mi calendario
+            Añadir a mi calendario (.ics)
           </button>
-          <button disabled title="Próximamente" className="mt-2 w-full cursor-not-allowed rounded-[11px] border border-hairline py-2.5 text-[13px] font-semibold text-dim/70">
-            Conectar mi cuenta de Google
-          </button>
+          {/* Nivel 1: sincronía real con Google Calendar (una vía, calendario
+              dedicado). El texto se adapta a cómo entró el usuario. */}
+          <div className="mt-4 border-t border-hairline pt-3">
+            <p className="text-[12.5px] font-semibold">Sincronía con Google Calendar</p>
+            <SincroniaGoogle />
+          </div>
         </div>
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <p className="text-[14px] font-semibold">Tus estadísticas</p>
