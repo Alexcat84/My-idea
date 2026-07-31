@@ -12,9 +12,11 @@
  * el PDF salen del MISMO markdown del servidor: dos formatos, un solo texto.
  */
 import { useCallback, useEffect, useState } from "react";
-import { DocumentoPapel } from "./DocumentoPapel";
-import { ResumenPapel } from "./ResumenPapel";
-import { BitacoraPapel } from "./BitacoraPapel";
+import { DocumentoPapel, ContenidoDocumento } from "./DocumentoPapel";
+import { ResumenPapel, ContenidoResumen } from "./ResumenPapel";
+import { BitacoraPapel, ContenidoBitacora } from "./BitacoraPapel";
+import { AnalisisPapel, type AnalisisPapelData } from "./AnalisisPapel";
+import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
 
 /** Datos estructurados que la ruta manda para dibujar el PDF en papel (no
@@ -29,7 +31,12 @@ type ResumenData = {
   loQueMovio: string;
   loQuePendiente: string;
 };
-type PapelDoc = { bodyMarkdown?: string; resumen?: ResumenData | null; entradas?: EntradaBitacora[] };
+type PapelDoc = {
+  bodyMarkdown?: string;
+  resumen?: ResumenData | null;
+  entradas?: EntradaBitacora[];
+  analisis?: AnalisisPapelData | null;
+};
 
 import { fechaHumanaConAno } from "@/lib/fechas";
 import type { DocumentoIndice } from "@/lib/expediente";
@@ -309,15 +316,30 @@ export function Descargas({
         (() => {
           const p = paraImprimir.papel;
           if (p?.bodyMarkdown) {
+            // El Expediente compone en UNA sola hoja (un solo pie que se repite
+            // y reserva su alto): cuerpo + resumen + bitácora, cada uno en su
+            // hoja. Antes eran tres bloques absolutos que se encimaban y traían
+            // tres pies (dos por página). Ahora fluyen como filas.
             return (
-              <>
-                <DocumentoPapel oculto markdown={p.bodyMarkdown} nombreIdea={nombreIdea} titulo="Expediente completo" />
-                {p.resumen && <ResumenPapel oculto pagina nombreIdea={nombreIdea} {...p.resumen} />}
-                {p.entradas && p.entradas.length > 0 && (
-                  <BitacoraPapel oculto pagina pieTitulo="Expediente" nombreIdea={nombreIdea} entradas={p.entradas} />
+              <HojaImpresion oculto nombreIdea={nombreIdea} pieTitulo="Expediente">
+                <FilaPapel>
+                  <ContenidoDocumento markdown={p.bodyMarkdown} titulo="Expediente completo" />
+                </FilaPapel>
+                {p.resumen && (
+                  <FilaPapel pagina>
+                    <ContenidoResumen nombreIdea={nombreIdea} {...p.resumen} />
+                  </FilaPapel>
                 )}
-              </>
+                {p.entradas && p.entradas.length > 0 && (
+                  <FilaPapel pagina>
+                    <ContenidoBitacora entradas={p.entradas} />
+                  </FilaPapel>
+                )}
+              </HojaImpresion>
             );
+          }
+          if (p?.analisis) {
+            return <AnalisisPapel oculto nombre={nombreIdea} nombreIdea={nombreIdea} datos={p.analisis} />;
           }
           if (p?.resumen) {
             return <ResumenPapel oculto nombreIdea={nombreIdea} {...p.resumen} />;

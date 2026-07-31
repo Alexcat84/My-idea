@@ -11,7 +11,9 @@
  * es tuyo no se cobra.
  */
 import { NextResponse } from "next/server";
+import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
 import { calcularAnalytics, informeMarkdown } from "@/lib/analytics";
+import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
 import { bitacoraCuerpo, bitacoraMarkdown } from "@/lib/bitacoraCliente";
@@ -117,36 +119,60 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
   if (doc === CLAVE_ANALISIS) {
     // El análisis del proyecto como documento: .md = el informe de analytics;
-    // PDF = la página estructurada "Cómo te fue" (ResumenPapel). Centralizado
-    // aquí; la pantalla de Análisis ya no tiene su propio botón de descarga.
+    // PDF = la página VISUAL con toda la estadística (AnalisisPapel), no ya el
+    // resumen "Cómo te fue". Centralizado aquí; la pantalla de Análisis no tiene
+    // su propio botón de descarga.
     const ahora = new Date().toISOString();
     const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
     const analytics = calcularAnalytics(entrada);
     const u = analytics.universal;
     const c = analytics.cumplimiento;
-    const resumen = {
+    const restantes = Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas);
+    const semanas = u.ritmoAccionesPorSemana > 0 ? Math.ceil(restantes / u.ritmoAccionesPorSemana) : 0;
+    const proyeccion =
+      !realizadaAt && restantes > 0 && u.ritmoAccionesPorSemana > 0
+        ? {
+            restantes,
+            semanas,
+            ritmo: u.ritmoAccionesPorSemana,
+            fechaHumana: fechaHumanaCorta(new Date(Date.parse(ahora) + semanas * 7 * 86_400_000).toISOString()),
+          }
+        : null;
+    const nombreDom = (dom: string) => (dom === "core" ? "Tu viaje principal" : nombreMundo(dom));
+    const analisis: AnalisisPapelData = {
       cerrada: Boolean(realizadaAt),
-      cierreMotivo: proyecto.cierre_motivo ?? null,
-      intro: realizadaAt
-        ? "Empezaste con una idea y llegaste hasta el cierre. Esto es lo que dejó el camino."
-        : "Vas por buen camino. Esto es lo que llevas hasta aquí.",
-      dias: u.duracionTotalDias,
-      accionesCumplidas: u.accionesHechas,
-      hitos: analytics.hitos
-        .filter((h) => h.tipo !== "accion")
-        .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta })),
-      loQueMovio:
-        c && c.replanificaciones > 0
-          ? `Frente a tu plan inicial te moviste ${c.desviacionVsInicialDias >= 0 ? "+" : ""}${c.desviacionVsInicialDias.toFixed(1)} días de media a lo largo de ${c.replanificaciones} replanificación${c.replanificaciones === 1 ? "" : "es"}. Ajustar el mapa fue parte del método.`
-          : "Mantuviste tu ritmo cerca de tu plan a lo largo del camino.",
-      loQuePendiente: `Quedan ${Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas)} acciones por delante${u.retiradas.length ? ` y ${u.retiradas.length} que retiraste con su motivo` : ""}. Nada se borró: siguen en tu expediente.`,
+      avance: { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total },
+      cifras: { dias: u.duracionTotalDias, ritmo: u.ritmoAccionesPorSemana, racha: u.rachaMasLargaDias, ciclos: u.ciclosDePlan, mundos: u.mundos },
+      retiradas: u.retiradas.length,
+      avancePorSemana: u.avancePorSemana,
+      distribucionEstados: u.distribucionEstados,
+      accionesPorEtapa: u.accionesPorEtapa,
+      proyeccion,
+      cumplimiento: c
+        ? {
+            adelantadas: c.adelantadas,
+            aTiempo: c.aTiempo,
+            tardias: c.tardias,
+            pctAdelantadas: c.pctAdelantadas,
+            pctATiempo: c.pctATiempo,
+            pctTardias: c.pctTardias,
+            desviacionMediaDias: c.desviacionMediaDias,
+            porDominio: c.porDominio.map((d) => ({
+              nombre: nombreDom(d.dominio),
+              adelantadas: d.adelantadas,
+              aTiempo: d.aTiempo,
+              tardias: d.tardias,
+              completado: analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt),
+            })),
+          }
+        : null,
     };
     return NextResponse.json({
       titulo: "Análisis del proyecto",
       nombre,
       archivo: nombreArchivo(nombre, "Analisis del proyecto"),
       markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo),
-      papel: { resumen },
+      papel: { analisis },
     });
   }
 

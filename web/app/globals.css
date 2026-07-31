@@ -180,6 +180,20 @@ summary::-webkit-details-marker {
   padding-top: 0;
 }
 
+/* Espina del riel (viñetas/pasos del plan): una línea vertical dibujada como
+   BACKGROUND, no como un ::before absoluto. El ::before, posicionado sobre el
+   <ul>, abarca toda la altura de la lista; si la lista cruza un salto de página
+   en impresión, la línea baja a través de la banda del pie y lo CRUZA. Un fondo
+   se recorta por página y jamás cruza el pie. Geometría: 2px de ancho en x=8,
+   con 8px de respiro arriba y abajo. El color de papel se ajusta en @media
+   print (más claro que los puntos). */
+.papel-espina {
+  background-image: linear-gradient(rgba(77, 124, 254, 0.4), rgba(77, 124, 254, 0.4));
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+  background-size: 2px calc(100% - 16px);
+}
+
 /* ── IMPRESIÓN / "Descargar PDF" ──────────────────────────────────────────
    El plan se lleva a papel CONSERVANDO su identidad visual: el azul que
    piensa, el verde que ejecuta, los puntos con sus líneas y las tarjetas.
@@ -235,13 +249,11 @@ summary::-webkit-details-marker {
     max-width: 600px;
   }
 
-  /* Riel de papel (Design): la ESPINA (línea de los pasos) baja a azul-riel
+  /* Riel de papel (Design): la ESPINA (el fondo de las listas) baja a azul-riel
      #C9D4EE, más clara que los puntos, que siguen en el azul de papel #3B6BE8.
-     Solo la espina de las listas (ul/ol ::before); los puntos (li ::before) no
-     se tocan y heredan el --accent de papel. */
-  [data-plan-print] ul::before,
-  [data-plan-print] ol::before {
-    background: #c9d4ee !important;
+     Solo la espina; los puntos (li ::before) no se tocan y heredan --accent. */
+  [data-plan-print] .papel-espina {
+    background-image: linear-gradient(#c9d4ee, #c9d4ee) !important;
   }
 
   html,
