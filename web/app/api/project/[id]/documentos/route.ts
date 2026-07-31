@@ -157,6 +157,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
             pctATiempo: c.pctATiempo,
             pctTardias: c.pctTardias,
             desviacionMediaDias: c.desviacionMediaDias,
+            porEtapa: c.porEtapa,
             porDominio: c.porDominio.map((d) => ({
               nombre: nombreDom(d.dominio),
               adelantadas: d.adelantadas,
