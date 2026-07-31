@@ -403,24 +403,26 @@ export function DetalleActividad({
           </div>
         </div>
 
-        {/* pie: guardar la nota (si cambió) + marcar hecho */}
+        {/* pie: Guardar (la nota) + Cancelar. "Marcar hecho" se quitó por
+            redundante: el estado ya se elige arriba, con "Hecha" en el selector
+            (el cambio de estado se aplica al instante, no necesita el pie). */}
         <footer className="flex items-center gap-3 border-t border-hairline px-5 py-4 sm:px-6">
-          {/* Acción principal a la izquierda, en verde de CONTORNO (no lleno):
-              borde 50% / fondo 10% / texto #3FB950. Si ya está hecha, cambia a
-              "Deshacer" SIN moverse de sitio (Design). */}
           <button
-            onClick={() => (hecho ? onCambio({ estado: "pendiente" }) : marcarHecho())}
+            onClick={() => {
+              if (notaCambiada) onCambio({ nota: nota.trim() || null });
+              onCerrar();
+            }}
             disabled={ocupado}
-            className="flex-1 rounded-[12px] border border-done/50 bg-done/10 py-3 text-[14.5px] font-bold text-done hover:bg-done/20 disabled:opacity-50"
-          >
-            {hecho ? "Deshacer" : "Marcar hecho"}
-          </button>
-          <button
-            onClick={() => onCambio({ nota: nota.trim() || null })}
-            disabled={ocupado || !notaCambiada}
-            className="rounded-[10px] border border-hairline px-5 py-2.5 text-[13.5px] font-semibold text-ink hover:border-accent/60 disabled:opacity-40"
+            className="flex-1 rounded-[12px] bg-accent py-3 text-[14.5px] font-bold text-white hover:opacity-90 disabled:opacity-50"
           >
             Guardar
+          </button>
+          <button
+            onClick={onCerrar}
+            disabled={ocupado}
+            className="rounded-[10px] border border-hairline px-5 py-2.5 text-[13.5px] font-semibold text-dim hover:text-ink disabled:opacity-40"
+          >
+            Cancelar
           </button>
         </footer>
       </section>

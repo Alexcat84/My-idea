@@ -366,5 +366,17 @@ FROM (
       WHERE table_schema='public' AND table_name='checklist_items' AND column_name='no_aplica_motivo'
     )
 
+  UNION ALL
+  -- 031 · Calendario Nivel 1 (una vía): conexión Google + mapa tarea→evento
+  SELECT '031', 'google_calendar_cuenta + google_calendar_evento',
+    EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='google_calendar_cuenta'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='google_calendar_evento'
+    )
+
 ) checks
 ORDER BY num;

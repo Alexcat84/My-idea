@@ -16,10 +16,12 @@
  *        'ajustada' (o 'manual' si nunca fue 'sugerida') — la historia no
  *        se reescribe.
  */
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { CHECKLIST_ESTADO, esActivo, type ChecklistEstado, type FechaBaseOrigen } from "@/lib/dbContract";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { sincronizarIds } from "@/lib/calendarioSync";
 
 export const runtime = "nodejs";
 
@@ -369,6 +371,24 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     const notaNueva = (data.nota ?? "").trim();
     if (cambios.nota !== undefined && notaNueva && notaNueva !== (prev.nota ?? "").trim()) {
       await registrarBitacora(supabase, projectId, "nota_escrita", { item: itemId });
+    }
+  }
+
+  // Sincronía con Google Calendar (una vía, best-effort tras responder): solo
+  // cuando cambió lo que afecta al evento (la fecha o el estado). No-op si el
+  // usuario no conectó su calendario. Jamás rompe la respuesta de la acción.
+  if (cambios.estado !== undefined || cambios.fecha_base !== undefined) {
+    const uid = user.id;
+    try {
+      after(async () => {
+        try {
+          await sincronizarIds(createAdminClient(), uid, projectId, [itemId]);
+        } catch (e) {
+          console.error("[checklist] sync calendario:", (e as Error).message);
+        }
+      });
+    } catch {
+      /* `after` fuera de contexto de request (tests): sin sync, no pasa nada */
     }
   }
 
