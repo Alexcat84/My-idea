@@ -18,6 +18,7 @@ import { Acordeon } from "./Acordeon";
 import { BarraAvance } from "./BarraAvance";
 import { CampoConVoz } from "./CampoConVoz";
 import { DetalleActividad } from "./DetalleActividad";
+import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
 import { ETIQUETA_ESTADO, SelectorEstado } from "./SelectorEstado";
 import { esActivo, type ChecklistEstado, type FechaBaseOrigen, type ModoCamino } from "@/lib/dbContract";
@@ -363,6 +364,9 @@ function FilaItem({
             </span>
           )}
         </span>
+        {/* Nota rápida: indicador + entrada de un clic (mismo campo que el
+            detalle y que el Calendario; opcional siempre). */}
+        <NotaRapida id={item.id} nota={item.nota} ocupado={ocupado} onGuardar={(nota) => onCambio({ nota })} />
       </div>
 
       {/* editar la fecha de un ítem ya hecho */}
