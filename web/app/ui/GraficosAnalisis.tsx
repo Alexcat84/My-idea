@@ -6,6 +6,8 @@
  * los lea solo, sin jerga. Idioma de color de la casa: verde adelantada/ejecución,
  * azul a tiempo, ámbar tardía; gris lo que falta. Espejo, nunca juez.
  */
+import { fechaHumanaCorta } from "@/lib/fechas";
+
 const VERDE = "#3FB950";
 const AZUL = "#4D7CFE";
 const AMBAR = "#E0A64A";
@@ -206,6 +208,150 @@ export function EsfuerzoPorEtapa({
               <div className="h-full rounded-full" style={{ width: `${s.total > 0 ? (s.hechas / s.total) * 100 : 0}%`, background: VERDE }} />
             </div>
           </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ═══ Candidatos (a criba del fundador): proyección, cumplimiento por mundo en
+//     barras y distribución de estados. Todos deterministas, cero LLM. ═══
+
+/** Proyección de cierre: a tu ritmo actual, cuándo cerrarías lo que falta. Una
+ * estimación honesta (se nombra como tal), no una promesa. Fecha grande + barra
+ * de hecho (sólido) y resto (punteado). Se oculta si el proyecto ya se cerró o
+ * si aún no hay ritmo para proyectar. */
+export function ProyeccionCierre({
+  hechas,
+  total,
+  ritmoPorSemana,
+  cerrada,
+}: {
+  hechas: number;
+  total: number;
+  ritmoPorSemana: number;
+  cerrada: boolean;
+}) {
+  if (cerrada || total === 0) return null;
+  const restantes = total - hechas;
+  if (restantes <= 0) return null; // ya está todo cerrado; la barra de avance lo dice
+  const pctHecho = Math.round((hechas / total) * 100);
+  const puede = ritmoPorSemana > 0;
+  const semanasRest = puede ? Math.ceil(restantes / ritmoPorSemana) : 0;
+  const fechaCierre = puede ? fechaHumanaCorta(new Date(Date.now() + semanasRest * 7 * 86_400_000).toISOString()) : null;
+  return (
+    <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
+      <Titulo nota="A tu ritmo actual, cuándo cerrarías lo que falta. Es una estimación: si aceleras, se adelanta.">Proyección de cierre</Titulo>
+      {puede ? (
+        <>
+          <p className="text-[26px] font-extrabold leading-none tracking-tight" style={{ color: VERDE }}>
+            ~{fechaCierre}
+          </p>
+          <p className="mt-2 text-[13px] text-dim">
+            Faltan <span className="font-semibold text-ink tabular-nums">{restantes}</span> {restantes === 1 ? "acción" : "acciones"} · a{" "}
+            <span className="tabular-nums text-ink">{ritmoPorSemana}</span>/semana · ~
+            <span className="tabular-nums text-ink">{semanasRest}</span> {semanasRest === 1 ? "semana" : "semanas"}
+          </p>
+          <div className="mt-4 flex h-3 w-full overflow-hidden rounded-full bg-white/[0.06]">
+            <div style={{ width: `${pctHecho}%`, background: VERDE }} />
+            <div className="flex-1" style={{ backgroundImage: "repeating-linear-gradient(45deg, rgba(63,185,80,0.30) 0 6px, transparent 6px 12px)" }} />
+          </div>
+        </>
+      ) : (
+        <p className="text-[13.5px] text-dim">Cuando cierres tu primera acción podremos estimar tu fecha de cierre.</p>
+      )}
+    </div>
+  );
+}
+
+/** Cumplimiento por mundo, en barras apiladas: de todo lo que tenía fecha en
+ * cada mundo, qué parte fue adelantada / a tiempo / tardía. Sustituye a la lista
+ * de números por algo que se lee de un vistazo. */
+export function CumplimientoPorMundoBarras({
+  filas,
+}: {
+  filas: Array<{ dominio: string; nombre: string; adelantadas: number; aTiempo: number; tardias: number; completado: boolean }>;
+}) {
+  if (filas.length === 0) return null;
+  return (
+    <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
+      <Titulo nota="Cómo cumpliste en cada mundo.">Cumplimiento por mundo</Titulo>
+      <div className="flex flex-col gap-4">
+        {filas.map((f) => {
+          const total = f.adelantadas + f.aTiempo + f.tardias;
+          if (total === 0) return null;
+          const seg = [
+            { n: f.adelantadas, c: VERDE, l: "adelantadas" },
+            { n: f.aTiempo, c: AZUL, l: "a tiempo" },
+            { n: f.tardias, c: AMBAR, l: "tardías" },
+          ].filter((s) => s.n > 0);
+          return (
+            <div key={f.dominio}>
+              <div className="mb-1.5 flex items-baseline justify-between gap-3">
+                <span className="min-w-0 truncate text-[13.5px]">
+                  {f.nombre}
+                  {f.completado && <span className="ml-2 text-[11px] font-semibold text-done">Completado</span>}
+                </span>
+                <span className="shrink-0 text-[12px] tabular-nums text-dim">{total}</span>
+              </div>
+              <div className="flex h-3 w-full gap-[2px] overflow-hidden rounded-full bg-white/[0.06]">
+                {seg.map((s, i) => (
+                  <div key={i} title={`${s.l}: ${s.n}`} style={{ width: `${(s.n / total) * 100}%`, background: s.c, minWidth: 3 }} />
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11.5px] text-dim">
+        <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: VERDE }} />adelantadas</span>
+        <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: AZUL }} />a tiempo</span>
+        <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: AMBAR }} />tardías</span>
+      </div>
+    </div>
+  );
+}
+
+const LABEL_ESTADO: Record<string, string> = {
+  hecho: "hecha",
+  en_proceso: "en proceso",
+  empezado: "apenas empezada",
+  pendiente: "sin empezar",
+};
+/** Verde pleno = hecha; verdes cada vez más tenues = en proceso / empezada
+ * (progresión, como los iconos de estado); gris = sin empezar (lo que falta). */
+const COLOR_ESTADO: Record<string, string> = {
+  hecho: "#3FB950",
+  en_proceso: "rgba(63,185,80,0.62)",
+  empezado: "rgba(63,185,80,0.34)",
+  pendiente: "#4A4B52",
+};
+
+/** Distribución de estados: una barra apilada del estado actual de cada acción
+ * activa (hecha → en proceso → empezada → sin empezar). El "cómo van" de un
+ * vistazo, sin números en prosa. */
+export function DistribucionEstados({ dist }: { dist: Array<{ estado: string; n: number }> }) {
+  const total = dist.reduce((s, d) => s + d.n, 0);
+  if (total === 0) return null;
+  return (
+    <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
+      <Titulo nota="En qué estado está cada acción activa ahora mismo.">Cómo van tus acciones</Titulo>
+      <div className="flex h-4 w-full gap-[2px] overflow-hidden rounded-full">
+        {dist.map((d) => (
+          <div
+            key={d.estado}
+            title={`${LABEL_ESTADO[d.estado] ?? d.estado}: ${d.n}`}
+            style={{ width: `${(d.n / total) * 100}%`, background: COLOR_ESTADO[d.estado] ?? "#4A4B52", minWidth: 3 }}
+          />
+        ))}
+      </div>
+      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12px]">
+        {dist.map((d) => (
+          <span key={d.estado} className="flex items-center gap-1.5 text-dim">
+            <span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: COLOR_ESTADO[d.estado] ?? "#4A4B52" }} />
+            {LABEL_ESTADO[d.estado] ?? d.estado}
+            <span className="font-semibold tabular-nums text-ink">{d.n}</span>
+          </span>
         ))}
       </div>
     </div>

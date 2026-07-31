@@ -132,6 +132,10 @@ export interface CapaUniversal {
   avancePorDia: Array<{ fecha: string; hechas: number }>;
   /** Acciones activas del plan vigente por etapa (para el gráfico de esfuerzo). */
   accionesPorEtapa: Array<{ etapa: number; total: number; hechas: number }>;
+  /** Reparto de las acciones ACTIVAS del plan vigente por estado (para la barra
+   * de distribución). Orden de más a menos avanzado; solo estados con cuenta.
+   * Excluye las retiradas (no_aplica), que van aparte. */
+  distribucionEstados: Array<{ estado: string; n: number }>;
   /** Fase 4.0 §3 (ritmo real): días desde el último avance. null si nunca hubo
    * uno. Un usuario que no toca el checklist en 30 días es otro contexto. */
   diasSinAvance: number | null;
@@ -381,6 +385,12 @@ export function capaUniversalDe(
       const de = activasVigente.filter((i) => i.etapa === etapa);
       return { etapa, total: de.length, hechas: de.filter((i) => i.completed_at).length };
     });
+  // — por estado: reparto de las activas (de más a menos avanzado), sin las
+  //   retiradas (ya fuera de activasVigente).
+  const ORDEN_DIST = ["hecho", "en_proceso", "empezado", "pendiente"];
+  const distConteo = new Map<string, number>();
+  for (const i of activasVigente) distConteo.set(i.estado, (distConteo.get(i.estado) ?? 0) + 1);
+  const distribucionEstados = ORDEN_DIST.map((estado) => ({ estado, n: distConteo.get(estado) ?? 0 })).filter((d) => d.n > 0);
 
   return {
     duracionTotalDias,
@@ -400,6 +410,7 @@ export function capaUniversalDe(
     avancePorSemana,
     avancePorDia,
     accionesPorEtapa,
+    distribucionEstados,
     diasSinAvance: ultimoAvance ? Math.max(0, dias(ultimoAvance, fin)) : null,
     planVigenteAt: planVigente?.created_at ?? null,
     diasDeVidaPlanVigente: planVigente ? Math.max(0, dias(planVigente.created_at, fin)) : 0,
