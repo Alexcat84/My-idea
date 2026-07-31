@@ -89,6 +89,8 @@ export function Calendario({
   const [detalle, setDetalle] = useState<{ item: ItemChecklistUI; tituloEtapa: string } | null>(null);
   const [vista, setVista] = useState<Vista>("agenda");
   const [refMs, setRefMs] = useState<number>(() => Date.parse(`${fechaInputLocal(new Date())}T00:00:00`));
+  // El día abierto en la vista Mes (panel de la derecha/abajo). Por defecto, hoy.
+  const [diaSel, setDiaSel] = useState<string>(() => fechaInputLocal(new Date()));
 
   const core = grupoVigente(checklist, "core");
   const itemsCore = useMemo(() => core?.etapas.flatMap((e) => e.items) ?? [], [core]);
@@ -160,7 +162,25 @@ export function Calendario({
   const sinFecha = itemsCore.filter((i) => !i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica").length;
   const hoyLabel = `${DIAS[new Date().getDay()]} ${fechaHumanaCorta(new Date().toISOString())}`;
   const refDate = new Date(refMs);
-  const titulo = vista === "mes" ? `${MESES[refDate.getMonth()]} ${refDate.getFullYear()}`.replace(/^./, (c) => c.toUpperCase()) : vista === "semana" ? "Tu semana" : "Lo que viene";
+  const hoyMs = () => Date.parse(`${fechaInputLocal(new Date())}T00:00:00`);
+  // Navegación: en Mes salta de mes en mes; en Semana, de siete en siete días.
+  const paso = (dir: number) =>
+    setRefMs(
+      vista === "mes"
+        ? new Date(refDate.getFullYear(), refDate.getMonth() + dir, 1).getTime()
+        : new Date(refDate.getFullYear(), refDate.getMonth(), refDate.getDate() + dir * 7).getTime()
+    );
+  const lunesRef = new Date(refDate.getFullYear(), refDate.getMonth(), refDate.getDate() - (((refDate.getDay() + 6) % 7)));
+  const domRef = new Date(lunesRef.getFullYear(), lunesRef.getMonth(), lunesRef.getDate() + 6);
+  const mesCorto = (d: Date) => MESES[d.getMonth()].slice(0, 3);
+  const tituloSemana = `${lunesRef.getDate()} ${mesCorto(lunesRef)} – ${domRef.getDate()} ${mesCorto(domRef)}`;
+  const titulo =
+    vista === "mes"
+      ? `${MESES[refDate.getMonth()]} ${refDate.getFullYear()}`.replace(/^./, (c) => c.toUpperCase())
+      : vista === "semana"
+        ? tituloSemana
+        : "Lo que viene";
+  const manejo = { ocupado, onDetalle: abrir, onMarcarHecha: marcarHecha, onNota: (item: ItemChecklistUI, nota: string | null) => aplicarCambio(item, { nota }) };
 
   return (
     <section className="mx-auto flex w-full max-w-[1176px] flex-col gap-6 lg:flex-row lg:items-start">
@@ -175,11 +195,11 @@ export function Calendario({
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <h2 className="text-[28px] font-bold leading-tight tracking-[-0.02em]">{titulo}</h2>
-            {vista === "mes" && (
+            {vista !== "agenda" && (
               <span className="flex items-center gap-1">
-                <button aria-label="Mes anterior" onClick={() => setRefMs(new Date(refDate.getFullYear(), refDate.getMonth() - 1, 1).getTime())} className="grid h-7 w-7 place-items-center rounded-lg border border-hairline text-dim hover:text-ink">‹</button>
-                <button onClick={() => setRefMs(Date.parse(`${fechaInputLocal(new Date())}T00:00:00`))} className="rounded-lg border border-hairline px-2.5 py-1 text-[12px] text-dim hover:text-ink">Hoy</button>
-                <button aria-label="Mes siguiente" onClick={() => setRefMs(new Date(refDate.getFullYear(), refDate.getMonth() + 1, 1).getTime())} className="grid h-7 w-7 place-items-center rounded-lg border border-hairline text-dim hover:text-ink">›</button>
+                <button aria-label={vista === "mes" ? "Mes anterior" : "Semana anterior"} onClick={() => paso(-1)} className="grid h-7 w-7 place-items-center rounded-lg border border-hairline text-dim hover:text-ink">‹</button>
+                <button onClick={() => setRefMs(hoyMs())} className="rounded-lg border border-hairline px-2.5 py-1 text-[12px] text-dim hover:text-ink">Hoy</button>
+                <button aria-label={vista === "mes" ? "Mes siguiente" : "Semana siguiente"} onClick={() => paso(1)} className="grid h-7 w-7 place-items-center rounded-lg border border-hairline text-dim hover:text-ink">›</button>
               </span>
             )}
           </div>
@@ -218,8 +238,10 @@ export function Calendario({
             onNota={(item, nota) => aplicarCambio(item, { nota })}
           />
         )}
-        {vista === "mes" && <VistaMes datados={datados} refDate={refDate} hoy={hoy} onDetalle={abrir} />}
-        {vista === "semana" && <VistaSemana datados={datados} hoy={hoy} onDetalle={abrir} onMarcarHecha={marcarHecha} />}
+        {vista === "mes" && <VistaMes datados={datados} refDate={refDate} hoy={hoy} diaSel={diaSel} onSelDia={setDiaSel} manejo={manejo} />}
+        {vista === "semana" && (
+          <VistaSemana datados={datados} refDate={refDate} hoy={hoy} manejo={manejo} onMoverDia={(id, iso) => moverFecha(id, iso, false)} />
+        )}
       </div>
 
       {/* aside compartido */}
@@ -387,31 +409,109 @@ function FilaAgenda({
 
 // ── Vista Mes ───────────────────────────────────────────────────────────────
 type Datado = { item: ItemChecklistUI; ord: number; dia: string; estatus: Estatus };
-function chipMes(d: Datado, onDetalle: (i: ItemChecklistUI) => void) {
+const tieneNota = (i: ItemChecklistUI) => Boolean(i.nota && i.nota.trim());
+
+function chipMes(d: Datado, onDetalle: (i: ItemChecklistUI) => void, sel: boolean) {
   const c =
     d.estatus === "hecha"
       ? { bg: "rgba(63,185,80,0.10)", punto: VERDE, texto: "#93AE99" }
       : d.estatus === "vencida"
         ? { bg: "rgba(224,166,74,0.14)", punto: AMBAR, texto: "#F2DDB8" }
-        : { bg: "rgba(77,124,254,0.12)", punto: AZUL, texto: "#DCE7FF" };
+        : { bg: sel ? "rgba(77,124,254,0.16)" : "rgba(77,124,254,0.12)", punto: AZUL, texto: "#DCE7FF" };
+  const con = tieneNota(d.item);
   return (
     <button
       key={d.item.id}
-      onClick={() => onDetalle(d.item)}
-      title={d.item.texto}
+      onClick={(e) => {
+        e.stopPropagation();
+        onDetalle(d.item);
+      }}
+      title={d.item.texto + (con ? " (con nota)" : "")}
       className="flex w-full items-center gap-1.5 truncate rounded-[6px] px-[7px] py-1 text-left text-[11px]"
-      style={{ background: c.bg, color: c.texto }}
+      style={{ background: c.bg, color: c.texto, boxShadow: sel ? "inset 0 0 0 1px rgba(77,124,254,0.40)" : undefined }}
     >
       {d.estatus === "hecha" ? (
         <span className="shrink-0 text-[10px] font-bold" style={{ color: VERDE }}>✓</span>
       ) : (
         <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: c.punto }} />
       )}
-      <span className="truncate">{d.item.texto}</span>
+      <span className="min-w-0 flex-1 truncate">{d.item.texto}</span>
+      {con && <span aria-hidden className="h-[5px] w-[5px] shrink-0 rounded-full" style={{ background: c.texto }} />}
     </button>
   );
 }
-function VistaMes({ datados, refDate, hoy, onDetalle }: { datados: Datado[]; refDate: Date; hoy: number; onDetalle: (i: ItemChecklistUI) => void }) {
+
+type ManejoDia = {
+  ocupado: boolean;
+  onDetalle: (i: ItemChecklistUI) => void;
+  onMarcarHecha: (i: ItemChecklistUI) => void;
+  onNota: (i: ItemChecklistUI, nota: string | null) => void;
+};
+
+/** La fila operable de una tarea dentro del panel del día (reúsa el círculo de
+ * estados de Manos, marca hecha, mover fecha y la nota rápida). */
+function FilaDia({ d, manejo }: { d: Datado; manejo: ManejoDia }) {
+  return (
+    <div className="flex items-center gap-3 rounded-[10px] border border-hairline bg-surface-2 px-3 py-2.5">
+      <button onClick={() => manejo.onDetalle(d.item)} title="Ver el detalle" aria-label="Ver el detalle" className="shrink-0">
+        <IconoEstado estado={d.item.estado} tamano={20} />
+      </button>
+      <div className="min-w-0 flex-1">
+        <div className="text-[13px] leading-snug [text-wrap:pretty]">{d.item.texto}</div>
+        <div className="text-[11px] text-dim">
+          Etapa {d.item.etapa}
+          {d.estatus === "vencida" && <span style={{ color: AMBAR }}> · ya pasó</span>}
+        </div>
+      </div>
+      {d.estatus !== "hecha" && (
+        <button onClick={() => manejo.onMarcarHecha(d.item)} className="shrink-0 rounded-[8px] bg-done px-3 py-1 text-[12px] font-bold text-[#04120A] hover:opacity-90">
+          Hecha
+        </button>
+      )}
+      <button onClick={() => manejo.onDetalle(d.item)} className="shrink-0 rounded-[8px] border border-accent/40 bg-accent/10 px-3 py-1 text-[12px] font-semibold text-accent hover:bg-accent/20">
+        Mover
+      </button>
+      <NotaRapida id={d.item.id} nota={d.item.nota} ocupado={manejo.ocupado} onGuardar={(nota) => manejo.onNota(d.item, nota)} />
+    </div>
+  );
+}
+
+/** El panel del día elegido (Design "mes opción 1a"): las tareas de ese día,
+ * operables. Por defecto, hoy. */
+function PanelDia({ clave, items, manejo }: { clave: string; items: Datado[]; manejo: ManejoDia }) {
+  const d = new Date(`${clave}T00:00:00`);
+  const label = `${DIAS[d.getDay()]} ${d.getDate()} de ${MESES[d.getMonth()]}`;
+  return (
+    <div className="mt-4 rounded-panel border border-hairline bg-surface p-4">
+      <p className="mb-3 text-[13px] font-semibold capitalize">{label}</p>
+      {items.length === 0 ? (
+        <p className="text-[13px] text-dim">No hay tareas con fecha este día. Toca otro día para ver las suyas.</p>
+      ) : (
+        <div className="flex flex-col gap-2">
+          {items.map((it) => (
+            <FilaDia key={it.item.id} d={it} manejo={manejo} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function VistaMes({
+  datados,
+  refDate,
+  hoy,
+  diaSel,
+  onSelDia,
+  manejo,
+}: {
+  datados: Datado[];
+  refDate: Date;
+  hoy: number;
+  diaSel: string;
+  onSelDia: (clave: string) => void;
+  manejo: ManejoDia;
+}) {
   const y = refDate.getFullYear();
   const m = refDate.getMonth();
   const primero = new Date(y, m, 1);
@@ -420,66 +520,120 @@ function VistaMes({ datados, refDate, hoy, onDetalle }: { datados: Datado[]; ref
   for (const d of datados) (porDia.get(d.dia) ?? porDia.set(d.dia, []).get(d.dia)!).push(d);
   const celdas = Array.from({ length: 42 }, (_, i) => new Date(inicio.getFullYear(), inicio.getMonth(), inicio.getDate() + i));
   return (
-    <div className="rounded-panel border border-hairline bg-surface p-3 sm:p-4">
-      <div className="grid grid-cols-7">
-        {DOW.map((d) => (
-          <div key={d} className="pb-2 text-center text-[10.5px] font-semibold tracking-[0.8px] text-dim">{d}</div>
-        ))}
-        {celdas.map((cd, i) => {
-          const clave = fechaInputLocal(cd);
-          const ord = Math.floor(new Date(`${clave}T00:00:00`).getTime() / 86_400_000);
-          const enMes = cd.getMonth() === m;
-          const esHoy = ord === hoy;
-          const chips = porDia.get(clave) ?? [];
-          return (
-            <div
-              key={i}
-              className="min-h-[92px] border border-white/[0.06] p-[7px] align-top"
-              style={{ background: esHoy ? "rgba(63,185,80,0.05)" : enMes ? "transparent" : "#08080B", boxShadow: esHoy ? "inset 0 0 0 1px rgba(63,185,80,0.28)" : undefined }}
-            >
-              <div className="mb-1 flex justify-start">
-                {esHoy ? (
-                  <span className="grid h-[22px] w-[22px] place-items-center rounded-full text-[12px] font-bold" style={{ background: VERDE, color: "#04120A" }}>{cd.getDate()}</span>
-                ) : (
-                  <span className="text-[12px] tabular-nums" style={{ color: enMes ? "#F5F6F8" : "#4A4B52" }}>{cd.getDate()}</span>
-                )}
+    <>
+      <div className="rounded-panel border border-hairline bg-surface p-3 sm:p-4">
+        <div className="grid grid-cols-7">
+          {DOW.map((d) => (
+            <div key={d} className="pb-2 text-center text-[10.5px] font-semibold tracking-[0.8px] text-dim">{d}</div>
+          ))}
+          {celdas.map((cd, i) => {
+            const clave = fechaInputLocal(cd);
+            const ord = Math.floor(new Date(`${clave}T00:00:00`).getTime() / 86_400_000);
+            const enMes = cd.getMonth() === m;
+            const esHoy = ord === hoy;
+            const esSel = clave === diaSel;
+            const chips = porDia.get(clave) ?? [];
+            return (
+              <div
+                key={i}
+                role="button"
+                tabIndex={0}
+                onClick={() => onSelDia(clave)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onSelDia(clave);
+                  }
+                }}
+                aria-label={`Ver el ${cd.getDate()}`}
+                className="min-h-[92px] cursor-pointer border border-white/[0.06] p-[7px] text-left align-top"
+                style={{
+                  background: esHoy ? "rgba(63,185,80,0.05)" : enMes ? "transparent" : "#08080B",
+                  boxShadow: esSel
+                    ? "inset 0 0 0 1.5px rgba(77,124,254,0.55)"
+                    : esHoy
+                      ? "inset 0 0 0 1px rgba(63,185,80,0.28)"
+                      : undefined,
+                }}
+              >
+                <div className="mb-1 flex justify-start">
+                  {esHoy ? (
+                    <span className="grid h-[22px] w-[22px] place-items-center rounded-full text-[12px] font-bold" style={{ background: VERDE, color: "#04120A" }}>{cd.getDate()}</span>
+                  ) : (
+                    <span className="text-[12px] tabular-nums" style={{ color: enMes ? "#F5F6F8" : "#4A4B52" }}>{cd.getDate()}</span>
+                  )}
+                </div>
+                <div className="flex flex-col gap-1">
+                  {chips.slice(0, 3).map((d) => chipMes(d, manejo.onDetalle, esSel))}
+                  {chips.length > 3 && <span className="px-1 text-[10.5px] text-dim">+{chips.length - 3} más</span>}
+                </div>
               </div>
-              <div className="flex flex-col gap-1">
-                {chips.slice(0, 3).map((d) => chipMes(d, onDetalle))}
-                {chips.length > 3 && <span className="px-1 text-[10.5px] text-dim">+{chips.length - 3} más</span>}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        {/* leyenda */}
+        <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 px-1 text-[11.5px] text-dim">
+          <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: AZUL }} />Prevista</span>
+          <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: VERDE }} />Hecha</span>
+          <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: AMBAR }} />Ya pasó</span>
+          <span className="flex items-center gap-2"><span className="grid h-4 w-4 place-items-center rounded-full text-[9px] font-bold" style={{ background: VERDE, color: "#04120A" }}>·</span>Hoy</span>
+        </div>
       </div>
-      {/* leyenda */}
-      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 px-1 text-[11.5px] text-dim">
-        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: AZUL }} />Prevista</span>
-        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: VERDE }} />Hecha</span>
-        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ background: AMBAR }} />Ya pasó</span>
-        <span className="flex items-center gap-2"><span className="grid h-4 w-4 place-items-center rounded-full text-[9px] font-bold" style={{ background: VERDE, color: "#04120A" }}>·</span>Hoy</span>
-      </div>
-    </div>
+      <PanelDia clave={diaSel} items={porDia.get(diaSel) ?? []} manejo={manejo} />
+    </>
   );
 }
 
 // ── Vista Semana ────────────────────────────────────────────────────────────
-function VistaSemana({ datados, hoy, onDetalle, onMarcarHecha }: { datados: Datado[]; hoy: number; onDetalle: (i: ItemChecklistUI) => void; onMarcarHecha: (i: ItemChecklistUI) => void }) {
-  // la semana (lunes a domingo) que contiene HOY
-  const base = new Date(hoy * 86_400_000);
-  const lunes = new Date(base.getFullYear(), base.getMonth(), base.getDate() - (((base.getDay() + 6) % 7)));
+function VistaSemana({
+  datados,
+  refDate,
+  hoy,
+  manejo,
+  onMoverDia,
+}: {
+  datados: Datado[];
+  refDate: Date;
+  hoy: number;
+  manejo: ManejoDia;
+  /** arrastrar una tarea a otro día (escritorio): mueve su fecha a ese día */
+  onMoverDia: (itemId: string, nuevaIso: string) => void;
+}) {
+  // la semana (lunes a domingo) que contiene la fecha de referencia
+  const lunes = new Date(refDate.getFullYear(), refDate.getMonth(), refDate.getDate() - (((refDate.getDay() + 6) % 7)));
   const dias = Array.from({ length: 7 }, (_, i) => new Date(lunes.getFullYear(), lunes.getMonth(), lunes.getDate() + i));
   const porDia = new Map<string, Datado[]>();
   for (const d of datados) (porDia.get(d.dia) ?? porDia.set(d.dia, []).get(d.dia)!).push(d);
+  const [sobre, setSobre] = useState<string | null>(null);
   return (
     <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
       {dias.map((cd, i) => {
         const clave = fechaInputLocal(cd);
         const ord = Math.floor(new Date(`${clave}T00:00:00`).getTime() / 86_400_000);
         const esHoy = ord === hoy;
+        const esSobre = sobre === clave;
         const chips = porDia.get(clave) ?? [];
         return (
-          <div key={i} className="min-h-[110px] rounded-[12px] border border-hairline p-2.5" style={{ background: esHoy ? "rgba(63,185,80,0.05)" : "#101013" }}>
+          <div
+            key={i}
+            onDragOver={(e) => {
+              e.preventDefault();
+              if (sobre !== clave) setSobre(clave);
+            }}
+            onDragLeave={() => setSobre((s) => (s === clave ? null : s))}
+            onDrop={(e) => {
+              e.preventDefault();
+              setSobre(null);
+              const dato = e.dataTransfer.getData("text/plain");
+              const [id, diaOrigen] = dato.split("|");
+              if (id && diaOrigen !== clave) onMoverDia(id, isoDesdeInputLocal(clave));
+            }}
+            className="min-h-[110px] rounded-[12px] border p-2.5"
+            style={{
+              background: esSobre ? "rgba(77,124,254,0.10)" : esHoy ? "rgba(63,185,80,0.05)" : "#101013",
+              borderColor: esSobre ? "rgba(77,124,254,0.55)" : "var(--border)",
+            }}
+          >
             <div className="mb-2 flex items-baseline gap-1.5">
               <span className="text-[11px] uppercase tracking-[0.6px] text-dim">{DOW[i]}</span>
               <span className={"text-[15px] font-bold tabular-nums " + (esHoy ? "text-done" : "")}>{cd.getDate()}</span>
@@ -487,16 +641,32 @@ function VistaSemana({ datados, hoy, onDetalle, onMarcarHecha }: { datados: Data
             <div className="flex flex-col gap-1.5">
               {chips.map((d) => {
                 const c = d.estatus === "hecha" ? { bg: "rgba(63,185,80,0.10)", tx: "#93AE99" } : d.estatus === "vencida" ? { bg: "rgba(224,166,74,0.14)", tx: "#F2DDB8" } : { bg: "rgba(77,124,254,0.12)", tx: "#DCE7FF" };
+                const movible = d.estatus !== "hecha";
                 return (
-                  <button key={d.item.id} onClick={() => onDetalle(d.item)} title={d.item.texto} className="rounded-[8px] px-2 py-1.5 text-left text-[11.5px] leading-snug" style={{ background: c.bg, color: c.tx }}>
-                    <span className="line-clamp-2">{d.item.texto}</span>
+                  <button
+                    key={d.item.id}
+                    draggable={movible}
+                    onDragStart={(e) => {
+                      e.dataTransfer.setData("text/plain", `${d.item.id}|${d.dia}`);
+                      e.dataTransfer.effectAllowed = "move";
+                    }}
+                    onClick={() => manejo.onDetalle(d.item)}
+                    title={d.item.texto + (tieneNota(d.item) ? " (con nota)" : "") + (movible ? " · arrastra para mover" : "")}
+                    className={"rounded-[8px] px-2 py-1.5 text-left text-[11.5px] leading-snug " + (movible ? "lg:cursor-grab" : "")}
+                    style={{ background: c.bg, color: c.tx }}
+                  >
+                    <span className="flex items-start gap-1.5">
+                      <span className="line-clamp-2 min-w-0 flex-1">{d.item.texto}</span>
+                      {tieneNota(d.item) && <span aria-hidden className="mt-1 h-[5px] w-[5px] shrink-0 rounded-full" style={{ background: c.tx }} />}
+                    </span>
                     {d.estatus === "vencida" && <span className="mt-0.5 block text-[10px]" style={{ color: AMBAR }}>ya pasó</span>}
+                    {movible && <span className="mt-0.5 hidden text-[10px] opacity-60 lg:block">arrastra para mover</span>}
                   </button>
                 );
               })}
               {chips.length === 0 && <span className="text-[11px] text-dim/60">—</span>}
               {esHoy && chips.some((d) => d.estatus !== "hecha") && (
-                <button onClick={() => onMarcarHecha(chips.find((d) => d.estatus !== "hecha")!.item)} className="mt-1 rounded-[8px] bg-done px-2 py-1 text-[11px] font-bold text-[#04120A]">
+                <button onClick={() => manejo.onMarcarHecha(chips.find((d) => d.estatus !== "hecha")!.item)} className="mt-1 rounded-[8px] bg-done px-2 py-1 text-[11px] font-bold text-[#04120A]">
                   Marcar la primera hecha
                 </button>
               )}
