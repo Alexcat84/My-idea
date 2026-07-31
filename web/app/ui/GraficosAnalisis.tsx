@@ -36,7 +36,7 @@ export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo
   let offset = 0;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="De todo lo que tenía fecha, cómo llegaste. El gajo más grande es tu tónica.">Reparto de tu cumplimiento</Titulo>
+      <Titulo nota="Cómo llegaste a cada fecha que te pusiste.">Reparto de tu cumplimiento</Titulo>
       <div className="flex flex-wrap items-center gap-x-8 gap-y-5">
         <svg width="128" height="128" viewBox="0 0 128 128" className="shrink-0">
           <g transform="rotate(-90 64 64)">
@@ -90,7 +90,7 @@ export function RitmoSemanal({ series }: { series: Array<{ semana: number; hecha
   if (series.length === 0) return null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="Cuántas acciones cerraste cada semana desde que empezaste.">Tu ritmo, semana a semana</Titulo>
+      <Titulo nota="Acciones que cerraste cada semana.">Tu ritmo, semana a semana</Titulo>
       <div className="flex items-end gap-1.5 overflow-x-auto" style={{ height: 120 }}>
         {series.map((s) => (
           <div key={s.semana} className="flex min-w-[18px] flex-1 flex-col items-center gap-1.5" title={`Semana ${s.semana}: ${s.hechas}`}>
@@ -109,91 +109,69 @@ export function RitmoSemanal({ series }: { series: Array<{ semana: number; hecha
   );
 }
 
-const NOMBRE_MES = [
-  "enero", "febrero", "marzo", "abril", "mayo", "junio",
-  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
-];
-const DOW = ["L", "M", "X", "J", "V", "S", "D"];
-
-/** Constancia: un CALENDARIO real (mes a mes), con el número de cada día y el
- * color por cuánto avanzaste ese día. Verde = avanzaste; gris tenue = pausaste.
- * Al pasar el cursor sobre un día se ve la fecha y cuántas acciones cerraste. */
-export function Constancia({ dias }: { dias: Array<{ fecha: string; hechas: number }> }) {
-  if (dias.length === 0) return null;
-  const map = new Map(dias.map((d) => [d.fecha, d.hechas]));
-  const maxH = Math.max(...dias.map((d) => d.hechas));
-  const parse = (f: string) => new Date(`${f}T00:00:00Z`);
-  const primero = parse(dias[0].fecha);
-  const ultimo = parse(dias[dias.length - 1].fecha);
-
-  // meses que abarca el viaje, del primero al último día con avance
-  const meses: Array<{ y: number; m: number }> = [];
-  let y = primero.getUTCFullYear();
-  let m = primero.getUTCMonth();
-  while (y < ultimo.getUTCFullYear() || (y === ultimo.getUTCFullYear() && m <= ultimo.getUTCMonth())) {
-    meses.push({ y, m });
-    if (++m > 11) {
-      m = 0;
-      y++;
-    }
-  }
-
-  const nivel = (h: number) => (h === 0 ? 0 : Math.min(4, 1 + Math.floor((h / maxH) * 3.001)));
-  const fondo = (n: number) => (n === 0 ? "rgba(255,255,255,0.04)" : `rgba(63,185,80,${[0, 0.28, 0.5, 0.72, 0.95][n]})`);
-  const iso = (yy: number, mm: number, d: number) => `${yy}-${String(mm + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
-
+/** Avance acumulado: la curva de culminación. Suma semana a semana cuántas
+ * acciones llevas cerradas sobre el total activo, así se ve cuánto del plan va
+ * completado y a qué ritmo se acerca al 100 %. Un área verde que sube: registro
+ * y control de avance, sin una sola palabra de más. */
+export function AvanceAcumulado({ series, total }: { series: Array<{ semana: number; hechas: number }>; total: number }) {
+  if (series.length === 0 || total === 0) return null;
+  let acc = 0;
+  const pts = series.map((s) => {
+    acc += s.hechas;
+    return { semana: s.semana, pct: Math.min(100, (acc / total) * 100) };
+  });
+  const W = 640;
+  const H = 210;
+  const PL = 42;
+  const PR = 16;
+  const PT = 16;
+  const PB = 30;
+  const iw = W - PL - PR;
+  const ih = H - PT - PB;
+  const x = (i: number) => (pts.length === 1 ? PL + iw / 2 : PL + (i / (pts.length - 1)) * iw);
+  const y = (p: number) => PT + (1 - p / 100) * ih;
+  const linea = pts.map((p, i) => `${i === 0 ? "M" : "L"}${x(i).toFixed(1)} ${y(p.pct).toFixed(1)}`).join(" ");
+  const area = `${linea} L${x(pts.length - 1).toFixed(1)} ${y(0).toFixed(1)} L${x(0).toFixed(1)} ${y(0).toFixed(1)} Z`;
+  const finalPct = Math.round(pts[pts.length - 1].pct);
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="Los días que avanzaste se pintan de verde (más oscuro = más acciones ese día); en gris, pausaste. Pasa el cursor por un día para ver el detalle.">
-        Tu constancia
-      </Titulo>
-      <div className="flex flex-wrap gap-x-8 gap-y-6">
-        {meses.map(({ y: yy, m: mm }) => {
-          const primerDow = (new Date(Date.UTC(yy, mm, 1)).getUTCDay() + 6) % 7; // 0 = lunes
-          const diasDelMes = new Date(Date.UTC(yy, mm + 1, 0)).getUTCDate();
-          const celdas: Array<number | null> = [
-            ...Array.from({ length: primerDow }, () => null),
-            ...Array.from({ length: diasDelMes }, (_, i) => i + 1),
-          ];
-          return (
-            <div key={`${yy}-${mm}`}>
-              <div className="mb-2 text-[13px] font-semibold capitalize">
-                {NOMBRE_MES[mm]} {yy}
-              </div>
-              <div className="grid grid-cols-7 gap-1">
-                {DOW.map((d, i) => (
-                  <span key={`h${i}`} className="text-center text-[10px] font-semibold text-dim">
-                    {d}
-                  </span>
-                ))}
-                {celdas.map((d, i) => {
-                  if (d == null) return <span key={i} />;
-                  const h = map.get(iso(yy, mm, d)) ?? 0;
-                  const n = nivel(h);
-                  return (
-                    <span
-                      key={i}
-                      title={`${d} de ${NOMBRE_MES[mm]}: ${h} ${h === 1 ? "acción" : "acciones"}`}
-                      className="grid h-8 w-8 place-items-center rounded-[7px] text-[11px] tabular-nums"
-                      style={{ background: fondo(n), color: n >= 3 ? "#04240B" : n >= 1 ? "#E9F6EC" : "#6F7076" }}
-                    >
-                      {d}
-                    </span>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+      <div className="mb-4 flex items-baseline justify-between gap-3">
+        <p className="text-[13px] font-semibold">Tu avance acumulado</p>
+        <p className="text-[13px] tabular-nums" style={{ color: VERDE }}>
+          <span className="text-[22px] font-extrabold leading-none">{finalPct}%</span> cerrado
+        </p>
       </div>
-      {/* leyenda de intensidad */}
-      <div className="mt-5 flex items-center gap-2 text-[11px] text-dim">
-        <span>menos</span>
-        {[0, 1, 2, 3, 4].map((n) => (
-          <span key={n} className="h-[13px] w-[13px] rounded-[3px]" style={{ background: fondo(n) }} />
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" className="block" style={{ maxHeight: 220 }}>
+        <defs>
+          <linearGradient id="grad-acumulado" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={VERDE} stopOpacity="0.34" />
+            <stop offset="100%" stopColor={VERDE} stopOpacity="0.02" />
+          </linearGradient>
+        </defs>
+        {[0, 25, 50, 75, 100].map((g) => (
+          <g key={g}>
+            <line x1={PL} x2={W - PR} y1={y(g)} y2={y(g)} stroke="rgba(255,255,255,0.07)" strokeWidth="1" />
+            <text x={PL - 8} y={y(g) + 4} textAnchor="end" fontSize="11" fill="#6F7076" style={{ fontVariantNumeric: "tabular-nums" }}>
+              {g}%
+            </text>
+          </g>
         ))}
-        <span>más</span>
-      </div>
+        <path d={area} fill="url(#grad-acumulado)" />
+        <path d={linea} fill="none" stroke={VERDE} strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
+        {pts.map((p, i) => (
+          <circle key={i} cx={x(i)} cy={y(p.pct)} r={i === pts.length - 1 ? 5 : 2.5} fill={VERDE}>
+            <title>{`Semana ${p.semana}: ${Math.round(p.pct)}% cerrado`}</title>
+          </circle>
+        ))}
+        <text x={x(0)} y={H - 8} textAnchor="middle" fontSize="11" fill="#6F7076">
+          S{pts[0].semana}
+        </text>
+        {pts.length > 1 && (
+          <text x={x(pts.length - 1)} y={H - 8} textAnchor="middle" fontSize="11" fill="#6F7076">
+            S{pts[pts.length - 1].semana}
+          </text>
+        )}
+      </svg>
     </div>
   );
 }
@@ -211,7 +189,7 @@ export function EsfuerzoPorEtapa({
   if (series.length === 0) return null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="Cuántas acciones tiene cada etapa y cuántas cerraste. Se ve dónde está el grueso del trabajo.">Dónde pusiste el esfuerzo</Titulo>
+      <Titulo nota="Cuántas acciones tiene cada etapa y cuántas cerraste.">Dónde pusiste el esfuerzo</Titulo>
       <div className="flex flex-col gap-3.5">
         {series.map((s) => (
           <div key={s.etapa}>

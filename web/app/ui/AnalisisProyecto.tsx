@@ -14,8 +14,7 @@ import { GanttCumplimiento } from "./GanttCumplimiento";
 import { MapaHitos } from "./MapaHitos";
 import { Acordeon } from "./Acordeon";
 import { BarraAvance } from "./BarraAvance";
-import { RepartoCumplimiento, RitmoSemanal, Constancia, EsfuerzoPorEtapa } from "./GraficosAnalisis";
-import { ProximasFechas } from "./Calendario";
+import { RepartoCumplimiento, RitmoSemanal, AvanceAcumulado, EsfuerzoPorEtapa } from "./GraficosAnalisis";
 
 interface Respuesta {
   nombre: string;
@@ -69,13 +68,10 @@ export function AnalisisProyecto({
   projectId,
   titulos,
   onVolver,
-  onVerCalendario,
 }: {
   projectId: string;
   titulos: Record<number, string>;
   onVolver: () => void;
-  /** abre el Calendario (para el visualizador "próximas fechas") */
-  onVerCalendario?: () => void;
 }) {
   const [datos, setDatos] = useState<Respuesta | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -161,15 +157,13 @@ export function AnalisisProyecto({
         }
       >
         <div className="flex flex-col gap-6">
-          {/* Visualizador compacto del calendario (solo lectura): próximas
-              fechas, con enlace al calendario completo. Se auto-oculta si no hay
-              tareas con fecha. */}
-          {onVerCalendario && <ProximasFechas projectId={projectId} onVerCalendario={onVerCalendario} />}
           {u.accionesVigente.total > 0 && (
             <div className="rounded-[16px] border border-hairline bg-surface px-5 py-[18px]">
               <BarraAvance pct={Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)} />
             </div>
           )}
+          {/* La curva de culminación: cuánto del plan llevas cerrado en el tiempo. */}
+          <AvanceAcumulado series={u.avancePorSemana} total={u.accionesVigente.total} />
           <div>
             {/* Cifras en color (azul piensa): en blanco no lucían. Medida sin juicio. */}
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -200,20 +194,21 @@ export function AnalisisProyecto({
         </div>
       </Acordeon>
 
-      {/* Capa 2 — Tu ritmo y tu constancia: ritmo semanal, calendario y esfuerzo. */}
+      {/* Capa 2 — Tu ritmo y tu esfuerzo: ritmo semanal y esfuerzo por etapa.
+          El calendario de constancia se retiró: los días viven en el Calendario,
+          fuente única de las fechas. */}
       {(u.accionesHechas > 0 || u.accionesPorEtapa.length > 0) && (
         <Acordeon
           variante="capa"
           titulo={
             <span className="flex items-center gap-2.5 text-[15px] font-semibold">
               <span aria-hidden className="h-2 w-2 rounded-full bg-done" />
-              Tu ritmo y tu constancia
+              Tu ritmo y tu esfuerzo
             </span>
           }
         >
           <div className="flex flex-col gap-5">
             <RitmoSemanal series={u.avancePorSemana} />
-            <Constancia dias={u.avancePorDia} />
             <EsfuerzoPorEtapa series={u.accionesPorEtapa} nombreEtapa={nombreEtapa} />
           </div>
         </Acordeon>

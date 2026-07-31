@@ -14,7 +14,7 @@
  * Ley de color: ámbar lo vencido (sin regaño), verde hoy/hecho/ejecutar, azul
  * prevista/planear; gris lo que falta.
  */
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { IconoEstado } from "./SelectorEstado";
 import { DetalleActividad } from "./DetalleActividad";
 import { grupoVigente, type CambioItem, type ChecklistData, type ItemChecklistUI } from "./ManosALaObra";
@@ -68,29 +68,28 @@ function relativo(delta: number): string {
 
 export function Calendario({
   projectId,
+  checklist,
+  onRecargarChecklist,
   onVolver,
   onVerLoCumplido,
 }: {
   projectId: string;
+  /** Fuente ÚNICA de verdad: el mismo checklist que alimenta Manos a la Obra
+   *  (IdeaView es el dueño). El Calendario NO guarda copia propia — lee de aquí
+   *  y, tras cada acción, pide a IdeaView que lo recargue, para que la agenda y
+   *  el checklist nunca digan cosas distintas. */
+  checklist: ChecklistData;
+  onRecargarChecklist: () => void;
   onVolver: () => void;
   onVerLoCumplido: () => void;
 }) {
-  const [checklist, setChecklist] = useState<ChecklistData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [ocupado, setOcupado] = useState(false);
   const [detalle, setDetalle] = useState<{ item: ItemChecklistUI; tituloEtapa: string } | null>(null);
   const [vista, setVista] = useState<Vista>("agenda");
   const [refMs, setRefMs] = useState<number>(() => Date.parse(`${fechaInputLocal(new Date())}T00:00:00`));
 
-  const cargar = useCallback(() => {
-    fetch(`/api/project/${projectId}/checklist`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((d: ChecklistData) => setChecklist(d))
-      .catch(() => setError("No pudimos cargar tu calendario. Vuelve a intentarlo en un momento."));
-  }, [projectId]);
-  useEffect(() => cargar(), [cargar]);
-
-  const core = checklist ? grupoVigente(checklist, "core") : null;
+  const core = grupoVigente(checklist, "core");
   const itemsCore = useMemo(() => core?.etapas.flatMap((e) => e.items) ?? [], [core]);
 
   async function moverFecha(itemId: string, fecha: string, cascada: boolean) {
@@ -102,7 +101,7 @@ export function Calendario({
         body: JSON.stringify({ item_id: itemId, fecha, cascada }),
       });
       if (!res.ok) return setError("No pudimos mover la fecha.");
-      cargar();
+      onRecargarChecklist();
     } catch {
       setError("No pudimos mover la fecha; revisa tu internet.");
     }
@@ -117,7 +116,7 @@ export function Calendario({
         body: JSON.stringify({ item_id: item.id, ...cambio }),
       });
       if (!res.ok) return setError("No pudimos guardar el cambio.");
-      cargar();
+      onRecargarChecklist();
       setDetalle(null);
     } catch {
       setError("No pudimos guardar; revisa tu internet.");
@@ -142,9 +141,6 @@ export function Calendario({
     a.click();
     URL.revokeObjectURL(url);
   }
-
-  if (error && !checklist) return <p className="text-sm text-warn">{error}</p>;
-  if (!checklist) return <p className="text-dim">Cargando tu calendario…</p>;
 
   const hoy = hoyOrdinal();
   // TODOS los ítems con fecha (incluye hechos, para mes/semana), con su estatus.
@@ -241,10 +237,10 @@ export function Calendario({
           </button>
         </div>
         <div className="rounded-panel border border-hairline bg-surface p-5">
-          <p className="text-[14px] font-semibold">Tu constancia</p>
-          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">Los días que ya avanzaste viven en el análisis, en la vista de atrás.</p>
+          <p className="text-[14px] font-semibold">Tus estadísticas</p>
+          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">Tu avance, tu ritmo y tu cumplimiento, en gráficos. Aquí planeas; ahí ves cómo vas.</p>
           <button onClick={onVerLoCumplido} className="mt-3 w-full rounded-[11px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10">
-            Ver lo cumplido
+            Ver el análisis
           </button>
         </div>
         <p className="px-1 text-[11px] leading-relaxed text-dim/70">Hoy es {hoyLabel}. El aviso llega desde el archivo que añades a tu teléfono.</p>
@@ -265,52 +261,6 @@ export function Calendario({
         />
       )}
     </section>
-  );
-}
-
-/** ProximasFechas — el visualizador COMPACTO de solo lectura para el Análisis
- * (capa "Tu viaje de un vistazo"): hoy y esta semana, con enlace al calendario
- * completo. Se auto-oculta si no hay tareas con fecha por delante. */
-export function ProximasFechas({ projectId, onVerCalendario }: { projectId: string; onVerCalendario: () => void }) {
-  const [items, setItems] = useState<ItemChecklistUI[] | null>(null);
-  useEffect(() => {
-    let vivo = true;
-    fetch(`/api/project/${projectId}/checklist`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error())))
-      .then((d: ChecklistData) => vivo && setItems(grupoVigente(d, "core")?.etapas.flatMap((e) => e.items) ?? []))
-      .catch(() => vivo && setItems([]));
-    return () => {
-      vivo = false;
-    };
-  }, [projectId]);
-  if (!items) return null;
-  const hoy = hoyOrdinal();
-  const prox = items
-    .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
-    .map((i) => ({ item: i, delta: ordinal(i.fecha_base!) - hoy }))
-    .sort((a, b) => a.delta - b.delta)
-    .slice(0, 6);
-  if (prox.length === 0) return null;
-  return (
-    <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <div className="mb-3 flex items-center justify-between gap-3">
-        <p className="text-[13px] font-semibold">Próximas fechas</p>
-        <button onClick={onVerCalendario} className="text-[12.5px] font-semibold text-accent hover:underline">
-          Ver calendario →
-        </button>
-      </div>
-      <ul className="flex flex-col divide-y divide-hairline">
-        {prox.map(({ item, delta }) => (
-          <li key={item.id} className="flex items-center gap-3 py-2.5">
-            <span className="w-[74px] shrink-0 text-[12.5px] font-semibold capitalize" style={{ color: delta < 0 ? AMBAR : delta === 0 ? VERDE : "#F5F6F8" }}>
-              {relativo(delta)}
-            </span>
-            <span className="min-w-0 flex-1 truncate text-[13.5px]">{item.texto}</span>
-            <span className="shrink-0 text-[11px] tabular-nums text-dim">{fechaHumanaCorta(item.fecha_base!)}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
 
