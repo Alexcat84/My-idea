@@ -476,7 +476,34 @@ async function main() {
   await app.getByRole("button", { name: "Marcar hecho" }).first().waitFor({ timeout: 15000 });
   for (let i = 0; i < 2; i++) await marcarHechoHoy(app); // dos más → adelantadas
 
-  // 08 Análisis del proyecto (canon 11) — ahora con cumplimiento poblado
+  // Fase 4.6.2 — TRASLAPE sembrado para el Gantt de ventanas honestas: se mueve,
+  // por API (sesión autenticada del gate), una tarea de una etapa POSTERIOR a la
+  // fecha de una de la etapa 1, SIN cascada. Así el par del Análisis muestra dos
+  // ventanas que se solapan (la mano del usuario, no la secuencia sugerida). Va
+  // envuelto: si algo cambia, el gate no se cae (captura sin traslape y avisa).
+  try {
+    const id = new URL(app.url()).pathname.split("/")[2];
+    const cl = await (await app.request.get(`/api/project/${id}/checklist`)).json();
+    type ItemCl = { id: string; etapa: number; fecha_base: string | null; dominio: string | null };
+    const items: ItemCl[] = (cl.planes ?? []).flatMap((p: { etapas: { items: ItemCl[] }[] }) =>
+      p.etapas.flatMap((e) => e.items)
+    );
+    const core = items.filter((i) => (!i.dominio || i.dominio === "core") && i.fecha_base);
+    const e1 = core.find((i) => i.etapa === 1);
+    const posterior = core.find((i) => i.etapa > 1);
+    if (e1 && posterior) {
+      const r = await app.request.post(`/api/project/${id}/mover-fecha`, {
+        data: { item_id: posterior.id, fecha: e1.fecha_base, cascada: false },
+      });
+      if (!r.ok()) console.warn(`gate: mover-fecha traslape HTTP ${r.status()}`);
+    } else {
+      console.warn("gate: sin par de etapas para sembrar el traslape");
+    }
+  } catch (e) {
+    console.warn("gate: no se pudo sembrar el traslape:", (e as Error).message);
+  }
+
+  // 08 Análisis del proyecto (canon 11) — cumplimiento poblado + TRASLAPE sembrado
   await app.getByRole("button", { name: /Ver análisis del proyecto/ }).click();
   await app.getByText("Análisis de", { exact: false }).first().waitFor({ timeout: 30000 });
   await app.waitForTimeout(1500);

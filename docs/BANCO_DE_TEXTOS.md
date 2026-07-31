@@ -294,6 +294,21 @@ desconocer la razón.
   contenido del nodo, donde se enseña y donde tiene sentido aprenderlo; en la
   etiqueta de cara, jamás. Curaduría del auditor, jul 2026.
 
+- **Gantt de ventanas honestas — el paralelismo lo decide el usuario (jul 2026).**
+  El sistema **no paraleliza solo** (el traslape es decisión de **riesgo del
+  usuario**, jamás del motor); dentro de cada etapa los ítems **comparten
+  ventana por diseño**; entre etapas, la secuencia es **sugerencia** y la mano
+  del usuario manda: y el **Gantt dibuja lo que el usuario decidió, no lo que el
+  sugeridor propuso**.
+  **Por qué:** el usuario ya puede poner tareas de etapas distintas en fechas
+  iguales o solapadas (sin restricción, la cascada es opt-in). El Gantt
+  encadenaba por construcción (inicio de cada etapa = fin de la anterior), así
+  que un traslape manual **no se dibujaba**: el gráfico contradecía la edición
+  del usuario. Ahora la ventana de cada etapa sale de sus **propias fechas**
+  (base = min→max de fecha_base; real = min→max de completed_at); la cadena
+  queda solo como fallback para etapas sin fechas. Mismo trato en pantalla y en
+  el PDF (comparten cálculo).
+
 ## 8. FRASES DEL FUNDADOR (su voz, para cuando hable del producto)
 
 - "Una idea nace en un preciso momento; si no tienes tu teléfono a la mano
