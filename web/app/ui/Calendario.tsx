@@ -161,7 +161,6 @@ export function Calendario({
     .sort((a, b) => a.delta - b.delta);
   const vencidas = pendientes.filter((p) => p.delta < 0).length;
   const sinFecha = itemsCore.filter((i) => !i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica").length;
-  const hoyLabel = `${DIAS[new Date().getDay()]} ${fechaHumanaCorta(new Date().toISOString())}`;
   const refDate = new Date(refMs);
   const hoyMs = () => Date.parse(`${fechaInputLocal(new Date())}T00:00:00`);
   // Navegación: en Mes salta de mes en mes; en Semana, de siete en siete días.
@@ -259,24 +258,8 @@ export function Calendario({
           </p>
         </div>
         <div className="rounded-panel border border-hairline bg-surface p-5">
-          <p className="text-[14px] font-semibold">Sincronizar con mi calendario</p>
-          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">
-            Suscribe tus fechas en el calendario que ya usas. Se mantiene al día solo (una vía) y el aviso lo pone tu
-            teléfono, aunque no abras la app.
-          </p>
-          {/* Opción B (universal): suscripción a un feed en vivo (webcal). */}
-          <SuscripcionCalendario />
-          {/* Alternativa de una sola vez: descargar el .ics para importarlo. */}
-          <div className="mt-4 border-t border-hairline pt-3 text-[12px] leading-relaxed text-dim/80">
-            ¿Prefieres una sola vez?{" "}
-            <button
-              onClick={descargarCalendario}
-              disabled={pendientes.length === 0}
-              className="font-semibold text-accent hover:underline disabled:opacity-40"
-            >
-              Descargar el archivo (.ics)
-            </button>
-          </div>
+          {/* Título + info (ⓘ flotante) + dos botones estándar (suscribir / .ics). */}
+          <SuscripcionCalendario onDescargarIcs={descargarCalendario} puedeDescargar={pendientes.length > 0} />
         </div>
         <div className="rounded-panel border border-hairline bg-surface p-5">
           <p className="text-[14px] font-semibold">Tus estadísticas</p>
@@ -285,7 +268,6 @@ export function Calendario({
             Ver el análisis
           </button>
         </div>
-        <p className="px-1 text-[11px] leading-relaxed text-dim/70">Hoy es {hoyLabel}. El aviso llega desde el archivo que añades a tu teléfono.</p>
       </aside>
 
       {detalle && (
@@ -402,7 +384,8 @@ function FilaAgenda({
       </button>
       <div className="min-w-0">
         <div className="text-[11px] font-semibold uppercase tracking-[1px] text-accent">Etapa {item.etapa}</div>
-        <div className="text-[14.5px] leading-snug [text-wrap:pretty]">{item.texto}</div>
+        {/* Vista cortísima: una línea; el texto completo vive en "Detalle". */}
+        <div className="line-clamp-1 text-[14.5px] leading-snug">{item.texto}</div>
       </div>
       <div className="col-span-3 flex flex-wrap items-center gap-2 sm:col-span-1 sm:justify-end">
         {grupo === "hoy" && (
@@ -468,7 +451,7 @@ function FilaDia({ d, manejo }: { d: Datado; manejo: ManejoDia }) {
         <IconoEstado estado={d.item.estado} tamano={20} />
       </button>
       <div className="min-w-0 flex-1">
-        <div className="text-[13px] leading-snug [text-wrap:pretty]">{d.item.texto}</div>
+        <div className="line-clamp-2 text-[13px] leading-snug">{d.item.texto}</div>
         <div className="text-[11px] text-dim">
           Etapa {d.item.etapa}
           {d.estatus === "vencida" && <span style={{ color: AMBAR }}> · ya pasó</span>}
