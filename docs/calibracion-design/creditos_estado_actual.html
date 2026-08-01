@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Centro de créditos — estado ACTUAL (para Design)</title>
+<style>
+  /* Tokens de la casa (web/app/tokens.css), inlineados para que este archivo
+     sea autocontenido. Este es el ESTADO ACTUAL de /creditos tras la fase
+     "Catálogo congruente": la narración/copy ya es la correcta (§4), pero el
+     tratamiento visual es funcional — el v4 de alta industria es lo que Design
+     debe proponer (ver BRIEF_CREDITOS.md). NO es el objetivo; es el punto de
+     partida. */
+  :root{
+    --bg:#000; --surface:#101013; --surface-2:#17171b; --surface-3:#0c0c10;
+    --border:rgba(255,255,255,.08); --text:#f5f6f8; --dim:#a6a7ad;
+    --accent:#4d7cfe; --accent-soft:rgba(77,124,254,.06); --accent-b:rgba(77,124,254,.45);
+    --done:#3fb950; --radius:12px;
+    --num:"tabular-nums";
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .tab{max-width:70px;font-size:11px;color:#6b6d76;padding:14px 24px;border-bottom:1px solid var(--border)}
+  header{display:flex;align-items:center;gap:12px;height:58px;border-bottom:1px solid var(--border);padding:0 24px}
+  header a{font-size:13px;color:var(--dim);text-decoration:none}
+  header .sec{font-size:14.5px;font-weight:600}
+  main{max-width:896px;margin:0 auto;padding:40px 24px;display:flex;flex-direction:column;gap:40px}
+  h1{font-size:24px;font-weight:700;letter-spacing:-.01em}
+  .intro{margin-top:8px;max-width:640px;font-size:15px;line-height:1.6;color:var(--dim)}
+  .saldo{margin-top:24px;max-width:384px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);padding:24px}
+  .saldo .big{font-size:40px;font-weight:800;line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .saldo .lbl{margin-top:6px;font-size:13px;color:var(--dim)}
+  .saldo .rule{margin-top:12px;font-size:12.5px;line-height:1.55;color:var(--dim)}
+  .packs{margin-top:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:760px){.packs{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:420px){.packs{grid-template-columns:1fr}}
+  .pack{position:relative;display:flex;flex-direction:column;gap:6px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);padding:20px}
+  .pack.dest{border-color:var(--accent-b);background:var(--accent-soft)}
+  .pack .badge{position:absolute;right:16px;top:16px;border-radius:999px;background:rgba(77,124,254,.15);color:var(--accent);font-size:10.5px;font-weight:600;padding:2px 8px}
+  .pack .nom{font-size:13px;font-weight:600}
+  .pack .cred{margin-top:4px;font-size:26px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+  .pack .cred small{font-size:13px;font-weight:500;color:var(--dim)}
+  .pack .usd{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+  .pack .alc{min-height:32px;font-size:12px;line-height:1.35;color:var(--dim)}
+  .pack button{margin-top:4px;width:100%;border:1px solid var(--border);border-radius:10px;background:transparent;
+    padding:8px 0;font-size:12.5px;font-weight:600;color:rgba(166,167,173,.7);cursor:not-allowed}
+  .eyebrow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--dim)}
+  .tabla{margin-top:16px;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+  .fila{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:14px 20px}
+  .fila+.fila{border-top:1px solid var(--border)}
+  .fila .que{font-size:13.5px;font-weight:600}
+  .fila .det{flex:1;min-width:0;font-size:12.5px;color:var(--dim)}
+  .fila .val{flex:none;font-size:12.5px;font-weight:600}
+  .val.gratis{color:var(--done)} .val.incluido{color:var(--text)} .val.precio{color:var(--accent)}
+  .nota{margin-top:12px;font-size:12px;line-height:1.6;color:var(--dim)}
+  .flag{max-width:896px;margin:0 auto;padding:10px 24px 0;font-size:11.5px;color:#6b6d76}
+</style>
+</head>
+<body>
+  <p class="flag">▲ ESTADO ACTUAL de /creditos (post «Catálogo congruente»). La narración ya es la del §4; el tratamiento visual es funcional — el v4 de alta industria es lo que se pide en BRIEF_CREDITOS.md. Referencia, no objetivo.</p>
+  <header>
+    <a href="#">Mis ideas /</a>
+    <span class="sec">Créditos</span>
+  </header>
+  <main>
+    <section>
+      <h1>Tus créditos</h1>
+      <p class="intro">Créditos consumibles: sin suscripción y sin cargos recurrentes. Tu plan cuesta 10 créditos e incluye Tus Números; los seguimientos y los mundos, 5 cada uno. La Claridad y los diagnósticos de mundos son gratis.</p>
+
+      <div class="saldo">
+        <div class="big">30</div>
+        <div class="lbl">créditos disponibles</div>
+        <p class="rule">Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra nada.</p>
+      </div>
+
+      <div class="packs">
+        <div class="pack">
+          <span class="nom">Recarga</span>
+          <span class="cred">5 <small>créditos</small></span>
+          <span class="usd">$4.99</span>
+          <span class="alc">Alcanza para un seguimiento o un mundo suelto.</span>
+          <button disabled>La compra se abre pronto</button>
+        </div>
+        <div class="pack">
+          <span class="nom">Básico</span>
+          <span class="cred">10 <small>créditos</small></span>
+          <span class="usd">$9.99</span>
+          <span class="alc">Alcanza para tu plan completo, con tus números incluidos.</span>
+          <button disabled>La compra se abre pronto</button>
+        </div>
+        <div class="pack dest">
+          <span class="badge">El más elegido</span>
+          <span class="nom">Premium</span>
+          <span class="cred">15 <small>créditos</small></span>
+          <span class="usd">$14.99</span>
+          <span class="alc">Alcanza para tu plan y tu primer seguimiento.</span>
+          <button disabled>La compra se abre pronto</button>
+        </div>
+        <div class="pack">
+          <span class="nom">Profesional</span>
+          <span class="cred">30 <small>créditos</small></span>
+          <span class="usd">$29.99</span>
+          <span class="alc">Alcanza para el viaje entero de una idea.</span>
+          <button disabled>La compra se abre pronto</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Lo que cuesta cada cosa</p>
+      <div class="tabla">
+        <div class="fila"><span class="que">La Claridad</span><span class="det">tu idea ordenada: la frase, lo que tienes, lo que asumes</span><span class="val gratis">Gratis</span></div>
+        <div class="fila"><span class="que">El diagnóstico de un mundo</span><span class="det">el escaparate del mundo: su entrevista y su diagnóstico</span><span class="val gratis">Gratis</span></div>
+        <div class="fila"><span class="que">Tu Plan</span><span class="det">La Exploración, tu plan completo y Tus Números, todo dentro</span><span class="val precio">10 créditos</span></div>
+        <div class="fila"><span class="que">El plan de un mundo</span><span class="det">el plan del dominio; su diagnóstico ya fue gratis</span><span class="val precio">5 créditos</span></div>
+        <div class="fila"><span class="que">Seguimiento del viaje principal</span><span class="det">contar qué pasó y recalcular tu plan desde donde estás</span><span class="val precio">5 créditos</span></div>
+        <div class="fila"><span class="que">Seguimiento de un mundo</span><span class="det">contar qué pasó en su checklist</span><span class="val precio">5 créditos</span></div>
+        <div class="fila"><span class="que">Tus Números</span><span class="det">el tablero de sostenibilidad de tu idea; corregir cifras y recalcular, cuando quieras</span><span class="val incluido">Incluido con tu plan</span></div>
+        <div class="fila"><span class="que">Registrar tu avance</span><span class="det">marcar hecho, notas, tus documentos y tu bitácora</span><span class="val incluido">Incluido con tu paquete</span></div>
+      </div>
+      <p class="nota">Al comprar tu plan, Tus Números vienen dentro. Registrar tu avance, tus documentos y tu bitácora van incluidos con lo que ya compraste: nunca se cobran aparte.</p>
+    </section>
+  </main>
+</body>
+</html>

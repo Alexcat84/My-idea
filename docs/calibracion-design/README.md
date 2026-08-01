@@ -62,6 +62,14 @@ actual) para comparar contra el canon.
 - **Los PDFs (Tu Plan y Expediente completo)** → `BRIEF_PDF.md`. NO calibrados
   aún. Estado actual: `plan_pdf_v2`, `expediente_pdf_v2` (+ `riel_v3`,
   `lote3_tabla_fechas`). Volverlos un entregable bello en papel.
+- **El centro de créditos (v4 · alta industria)** → `BRIEF_CREDITOS.md` (agosto
+  2026). Estado actual: `creditos_estado_actual.html` (HTML autocontenido, en
+  esta misma carpeta — ábrelo en el navegador). Tras la fase "Catálogo
+  congruente" la **narración ya es la correcta** (catálogo §4: 4 packs con
+  nombre + "alcanza para", Tus Números incluido, sin "1 crédito = 1 dólar");
+  lo que falta es el **tratamiento visual de alta industria** (dark, color por
+  paquete SIN romper la ley). Spec de precios: `docs/ANALISIS_PRECIOS.md` §4.
+  Pide 2-3 OPCIONES.
 
 ## 5. El paquete de archivos a subir
 
@@ -73,6 +81,8 @@ actual) para comparar contra el canon.
 - `docs/calibracion-design/BRIEF_GANTT.md`
 - `docs/calibracion-design/BRIEF_BITACORA.md`
 - `docs/calibracion-design/BRIEF_PDF.md`
+- `docs/calibracion-design/BRIEF_CREDITOS.md` + `docs/ANALISIS_PRECIOS.md` (la spec §4)
+- `docs/calibracion-design/creditos_estado_actual.html` (estado actual del centro de créditos)
 
 **El canon de referencia (la vara):**
 - Toda la carpeta `docs/diseno-canon/` (los `*.html` y `REGLAS_Y_TOKENS.md`).
