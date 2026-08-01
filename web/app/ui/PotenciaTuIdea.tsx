@@ -4,7 +4,7 @@
  * PotenciaTuIdea — la fila "Potencia tu idea" (canon 07-B / 08): grilla de
  * tarjetas con ícono arriba-izquierda + chip arriba-derecha (créditos /
  * "Activo · n/m" verde / "Activar · beta"), nombre y promesa, con hover que
- * eleva la tarjeta. Tus Números (2 créditos) + los mundos del catálogo. Precios
+ * eleva la tarjeta. Tus Números (incluido en el plan) + los mundos del catálogo. Precios
  * SIEMPRE desde precios.ts / packs_catalog.json — ninguna cifra hardcodeada.
  * Azul piensa; el verde ejecuta marca el mundo activo.
  *
@@ -159,14 +159,14 @@ export function PotenciaTuIdea({
           <div className="mb-3.5 flex items-center justify-between gap-2">
             <Icono clave="tus_numeros" />
             <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-              {PRECIOS.tus_numeros} créditos
+              {PRECIOS.tus_numeros > 0 ? `${PRECIOS.tus_numeros} créditos` : "Incluido"}
             </span>
           </div>
           <p className="text-[15px] font-semibold">Tus Números</p>
           <p className="mt-1.5 text-[12.5px] leading-[1.55] text-dim [text-wrap:pretty]">
             Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
           </p>
-          <p className="mt-2 text-[12px] text-dim/70">Una vez por idea · corregir y recalcular es gratis</p>
+          <p className="mt-2 text-[12px] text-dim/70">Incluido con tu plan · una vez por idea</p>
         </Link>
 
         {/* Los mundos del catálogo — Fase 4.5: los CUATRO estados del preview

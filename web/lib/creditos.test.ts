@@ -7,7 +7,7 @@
 import { describe, expect, it } from "vitest";
 import { conceptoDelPlan, mensajeSaldoInsuficiente, montoDelPlan, CORTESIA_BETA } from "./creditos";
 import { esInvitadoInvisible } from "./identidad";
-import { PRECIOS } from "./precios";
+import { PACKS, PRECIOS } from "./precios";
 
 describe("conceptoDelPlan / montoDelPlan: la regla de concepto (§5 + Catálogo congruente §4)", () => {
   it("core inicial -> plan_completo (10; incluye Tus Números)", () => {
@@ -26,6 +26,35 @@ describe("conceptoDelPlan / montoDelPlan: la regla de concepto (§5 + Catálogo 
   it("mundo seguimiento -> mundo_seguimiento (5)", () => {
     expect(conceptoDelPlan("risk_management", true)).toBe("mundo_seguimiento");
     expect(montoDelPlan("risk_management", true)).toBe(5);
+  });
+});
+
+describe("Catálogo congruente §4: Tus Números incluido + packs == paquetes", () => {
+  const pack = (nombre: string) => PACKS.find((p) => p.nombre === nombre)!;
+
+  it("tus_numeros cuesta 0: va INCLUIDO en el plan, la activación no cobra", () => {
+    expect(PRECIOS.tus_numeros).toBe(0);
+  });
+  it("todo lo demás (salvo el plan) cuesta 5: la regla de una línea", () => {
+    expect(PRECIOS.seguimiento).toBe(5);
+    expect(PRECIOS.mundo_activar).toBe(5);
+    expect(PRECIOS.mundo_seguimiento).toBe(5);
+  });
+  it("Recarga (5) == un seguimiento o un mundo suelto", () => {
+    expect(pack("Recarga").creditos).toBe(PRECIOS.seguimiento);
+    expect(pack("Recarga").creditos).toBe(PRECIOS.mundo_activar);
+  });
+  it("Básico (10) == Tu Plan completo (con Tus Números incluido)", () => {
+    expect(pack("Básico").creditos).toBe(PRECIOS.plan_completo + PRECIOS.tus_numeros);
+  });
+  it("Premium (15) == plan + tu primer seguimiento", () => {
+    expect(pack("Premium").creditos).toBe(PRECIOS.plan_completo + PRECIOS.seguimiento);
+    expect(pack("Premium").destacado).toBe(true); // el más elegido
+  });
+  it("Profesional (30) == el viaje entero: plan + 2 seguimientos + mundo + su seguimiento", () => {
+    expect(pack("Profesional").creditos).toBe(
+      PRECIOS.plan_completo + 2 * PRECIOS.seguimiento + PRECIOS.mundo_activar + PRECIOS.mundo_seguimiento
+    );
   });
 });
 
