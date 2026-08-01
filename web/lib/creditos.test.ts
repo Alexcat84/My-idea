@@ -9,23 +9,23 @@ import { conceptoDelPlan, mensajeSaldoInsuficiente, montoDelPlan, CORTESIA_BETA 
 import { esInvitadoInvisible } from "./identidad";
 import { PRECIOS } from "./precios";
 
-describe("conceptoDelPlan / montoDelPlan: la regla de concepto (§5 + 4.5)", () => {
-  it("core inicial -> plan_completo (5)", () => {
+describe("conceptoDelPlan / montoDelPlan: la regla de concepto (§5 + Catálogo congruente §4)", () => {
+  it("core inicial -> plan_completo (10; incluye Tus Números)", () => {
     expect(conceptoDelPlan("core", false)).toBe("plan_completo");
     expect(montoDelPlan("core", false)).toBe(PRECIOS.plan_completo);
-    expect(montoDelPlan("core", false)).toBe(5);
+    expect(montoDelPlan("core", false)).toBe(10);
   });
-  it("core seguimiento -> seguimiento (2)", () => {
+  it("core seguimiento -> seguimiento (5)", () => {
     expect(conceptoDelPlan("core", true)).toBe("seguimiento");
-    expect(montoDelPlan("core", true)).toBe(2);
+    expect(montoDelPlan("core", true)).toBe(5);
   });
-  it("mundo inicial -> mundo_activar (3): el preview fue gratis, el PLAN se compra", () => {
+  it("mundo inicial -> mundo_activar (5): el preview fue gratis, el PLAN se compra", () => {
     expect(conceptoDelPlan("quality", false)).toBe("mundo_activar");
-    expect(montoDelPlan("quality", false)).toBe(3);
+    expect(montoDelPlan("quality", false)).toBe(5);
   });
-  it("mundo seguimiento -> mundo_seguimiento (2)", () => {
+  it("mundo seguimiento -> mundo_seguimiento (5)", () => {
     expect(conceptoDelPlan("risk_management", true)).toBe("mundo_seguimiento");
-    expect(montoDelPlan("risk_management", true)).toBe(2);
+    expect(montoDelPlan("risk_management", true)).toBe(5);
   });
 });
 
