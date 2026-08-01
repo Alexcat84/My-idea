@@ -12,6 +12,20 @@ con **nuestra identidad de color**. Pedimos **2–3 OPCIONES** visuales.
 > paquetes deben presentarse por **VALOR / lo que logras con ellos**, como una
 > página de precios profesional — no por una equivalencia unitaria.
 
+> **El principio comercial (2.ª decisión del fundador — clave):** lo que hoy
+> decimos "**gratis para siempre**" (registrar el avance, el seguimiento) **NO se
+> anuncia como gratis: se vende como parte de lo que INCLUYE la compra.** Al
+> comprar el plan, compras tu plan **y** el seguimiento completo del desarrollo de
+> tu idea, el acompañamiento hasta convertirla en proyecto y su cierre — porque
+> eso es lo que la app hace de verdad. Lo mismo en cada mundo: incluye su
+> seguimiento, igual que el viaje principal. Esto sostiene un precio mayor por
+> entregable (el fundador subirá el costo en créditos del plan y de los mundos).
+>
+> **Lo ÚNICO que se declara gratis: el primer vistazo** — el término ya existe en
+> la app: **Claridad** (el organizador del viaje principal, sin cuenta) y **el
+> diagnóstico** (el escaparate de un mundo: su entrevista + su diagnóstico). Nada
+> más se nombra "gratis"; todo lo demás va "incluido en tu compra".
+
 ## Para quién y dónde
 
 - **Pantalla:** `/creditos`, con su propio menú (separada de Potenciadores: cada
@@ -59,17 +73,30 @@ hardcodear números):
 | 15 | **$14.99** | el viaje completo de una idea | **el más elegido** (destacar) |
 | 30 | **$29.99** | dos ideas trabajadas | — |
 
-**Lo que cuesta cada cosa** (leído de `PRECIOS`, jamás hardcodear):
+**El primer vistazo — lo ÚNICO gratis** (nombres canónicos, ya en la app):
 
-| Cosa | Costo |
+| Gratis | Qué es |
 | --- | --- |
-| El organizador (Claridad) — tu idea ordenada | **Gratis, siempre** |
-| La Exploración — la entrevista y tu plan completo | 5 |
-| El plan de un mundo — *el preview (entrevista + diagnóstico) es gratis* | 3 |
-| Seguimiento del viaje principal — recalcular tu plan desde donde estás | 2 |
-| Seguimiento de un mundo — recalcular su checklist | 2 |
-| Tus Números — *una vez por idea; corregir cifras y recalcular es gratis* | 2 |
-| Registrar tu avance — marcar hecho, notas, progreso | **Gratis, siempre** |
+| **Claridad** (viaje principal) | tu idea ordenada: la frase, lo que tienes, lo que asumes. Sin cuenta. |
+| **El diagnóstico** (un mundo) | el escaparate del mundo: su entrevista y su diagnóstico. |
+
+**Lo que compras — y TODO lo que incluye** (leído de `PRECIOS`, jamás hardcodear;
+los números están **en revisión al alza** — ver nota):
+
+| Compra | Incluye | Costo (en revisión) |
+| --- | --- | --- |
+| **Tu Plan** (La Exploración) | tu plan completo · el seguimiento de tu idea hasta el cierre · el registro de tu avance · el acompañamiento hasta volverla proyecto | 5 → posible alza |
+| **Un mundo** | el plan del mundo · su seguimiento hasta el cierre (igual que el viaje principal) | 3 → posible alza |
+| **Tus Números** | el reporte de sostenibilidad de tu idea; corregir cifras y recalcular, incluido | 2 |
+
+> **Nota de precios (fundador):** el seguimiento y el registro **dejan de ser
+> líneas "gratis" sueltas** — se absorben en lo que incluye el plan / el mundo.
+> Por eso el costo del plan y de los mundos **sube** (el mundo podría igualarse a
+> **3** para estandarizar, ahora que incluye su seguimiento como el principal).
+> Los números finales los fija el fundador y yo los pongo en `precios.ts`; el
+> diseño solo debe dejar espacio para que el número cambie y para la lista de
+> "incluye". **No** repartir el valor en varias filas baratas: **una compra, todo
+> incluido**.
 
 ## Referencias de la industria (el listón)
 
@@ -103,17 +130,23 @@ una coherente en 1240 y 380. Ejes a explorar:
      de crecimiento) cuidando que el verde no lea como "compra celebrada" ni el
      ámbar como "alerta". Tú tienes el criterio: enséñanos la forma correcta.
    - El **"más elegido"** debe ganar el ojo (anillo/acento/degradado sutil).
-3. **"Lo que cuesta cada cosa":** la forma más clara y profesional de mostrar la
-   tabla — que **lo gratis** (organizador, registrar avance) se lea como valor, y
-   que **los mundos** se entiendan (qué es "el plan de un mundo", que su preview
-   es gratis). ¿Filas con hairline? ¿Agrupado (viaje principal / mundos / extras)?
+3. **"Qué incluye cada compra" (no "qué cuesta cada cosa"):** el eje del rediseño.
+   Mostrar cada compra (Tu Plan, Un mundo, Tus Números) con **su lista de "incluye"**
+   como valor visible — que se sienta un paquete completo (plan + seguimiento +
+   acompañamiento a proyecto), no un cargo suelto. Aparte, sobrio, **el primer
+   vistazo gratis** (Claridad · el diagnóstico) como puerta de entrada, no como
+   "línea gratis" que abarate. Ojo: el número debe poder cambiar sin romper el
+   layout, y la lista de "incluye" es la estrella (una compra, todo dentro).
 4. **El estado beta:** cómo mostrar que la compra "se abre pronto" sin matar el
    deseo (los packs se ven comprables; un aviso sobrio, no un cartel de "cerrado").
 
 **Qué NO hacer:** nada de "1 crédito = 1 dólar", nada de "sin descuentos
-ocultos", nada de tabla de equivalencias unitarias. Nada de suscripción recurrente
-(el modelo es de **créditos consumibles**, se compran por paquete; presentación de
-página de precios, sí; cobro mensual, no).
+ocultos", nada de tabla de equivalencias unitarias. **No anunciar "gratis para
+siempre"** el seguimiento ni el registro del avance: van *incluidos* en la compra,
+no como líneas gratis que abaraten el valor (lo único gratis: el primer vistazo,
+Claridad · el diagnóstico). No repartir una compra en varias filas baratas. Nada
+de suscripción recurrente (el modelo es de **créditos consumibles**, se compran
+por paquete; presentación de página de precios, sí; cobro mensual, no).
 
 ## Entrega esperada
 
