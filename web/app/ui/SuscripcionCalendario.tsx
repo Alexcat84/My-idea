@@ -59,6 +59,10 @@ export function SuscripcionCalendario() {
         Se suscribe una vez y se mantiene al día solo, en cualquier calendario (Google, Apple, Outlook…). El aviso lo
         pone tu teléfono la víspera.
       </p>
+      <p className="mt-1.5 text-[11px] leading-relaxed text-dim/70">
+        Cada cuánto se actualiza lo decide tu app de calendario, no nosotros: puede tardar desde minutos hasta unas
+        horas (Google y Apple suelen refrescar cada cierto tiempo). Si quieres verlo al instante, usa la descarga (.ics).
+      </p>
     </div>
   );
 }
