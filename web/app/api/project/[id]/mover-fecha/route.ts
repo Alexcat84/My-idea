@@ -90,6 +90,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   const deltaMs = Date.parse(datos.fecha) - Date.parse(objetivo.fecha_base);
 
+  // Mover a la MISMA fecha no es un cambio: no se escribe nada ni se registra en
+  // la bitácora (regla del fundador: cambios reales, no clics).
+  if (deltaMs === 0) {
+    return NextResponse.json({ ok: true, movidos: 0, cascada: 0 });
+  }
+
   // Posteriores del MISMO dominio: activas (no hechas ni retiradas), misma etapa
   // o posteriores, y programadas DESPUÉS del objetivo por su fecha vigente.
   const posteriores = datos.cascada
