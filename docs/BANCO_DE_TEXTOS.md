@@ -126,8 +126,11 @@ además argumento de venta:
   sobre las **activas** ("X de N activas"), y una tarea retirada **jamás cuenta
   como tardía ni como pendiente**. Reversible: reactivarla la devuelve al plan,
   y su motivo queda en la bitácora.
-- **Registrar es gratis; pedir conocimiento nuevo cuesta.** Marcar avance,
-  notas y progreso: cero créditos, siempre.
+- **Registrar va INCLUIDO; pedir conocimiento nuevo cuesta.** Marcar avance,
+  notas y progreso, tus documentos y tu bitácora: van con lo que ya compraste,
+  nunca se cobran aparte. La palabra "gratis" se reserva a la **Claridad** y a
+  los **diagnósticos de mundos** (ANÁLISIS §4/§8.2); todo lo demás que no cobra
+  se dice **"incluido"**, no "gratis".
 - **Los potenciadores son potencia, no peaje.** Nunca condicionan el avance
   del viaje principal ni bloquean el plan.
 - **El organizador es gratis y sin cuenta.** El valor se demuestra antes de
@@ -308,6 +311,39 @@ desconocer la razón.
   (base = min→max de fecha_base; real = min→max de completed_at); la cadena
   queda solo como fallback para etapas sin fechas. Mismo trato en pantalla y en
   el PDF (comparten cálculo).
+- **Catálogo congruente — packs y paquetes son el MISMO número (jul 2026).**
+  Los precios unitarios suben a múltiplos de 5 para que cada pack ES un paquete
+  real de trabajo, narrable en una línea: *"Tu plan: 10 créditos. Todo lo demás:
+  5. La Claridad y los diagnósticos: gratis."* Catálogo: plan 10, seguimiento 5,
+  mundo 5, seguimiento de mundo 5. Packs: Recarga 5, Básico 10 (= plan), Premium
+  15 (= plan + un seguimiento), Profesional 30 (= plan + 2 seguimientos + mundo +
+  su seguimiento). Los créditos son FUNGIBLES: los packs se narran por lo que
+  **"alcanza para"**, jamás como derechos cerrados ("incluye 3 seguimientos"
+  implicaría un contador de bundle que no existe). El chip de saldo + el precio
+  en cada compuerta son el contador honesto.
+  **Por qué:** la propuesta anterior metía paquetes de 13 en packs de 15 (siempre
+  sobra o falta). Subir los unitarios hasta la congruencia exacta lo resuelve de
+  raíz y duplica el ingreso por viaje (~$30 vs ~$15) sin tocar la conversión de
+  entrada (la Claridad gratis sigue siendo el gancho). **Qué NO cambia:** 1
+  crédito = 1 USD sigue siendo el ancla del ledger (no un eslogan); la fuente
+  única es `precios.ts`; ninguna ruta hardcodea números.
+- **Tus Números va INCLUIDO en el plan (jul 2026).** Deja de venderse como pieza
+  suelta (era 2 créditos): la activación ancla `activado_at` (una vez por idea) y
+  registra su evento, pero NO cobra. **Por qué:** sin él como pieza suelta TODOS
+  los paquetes cuadran exacto en múltiplos de 5; su costo marginal es ~$0.02 con
+  recálculos ya incluidos de por vida; y "tu plan trae tus números" es más fuerte
+  comercialmente que venderlos aparte. **Qué NO cambia:** el ancla `activado_at`,
+  la idempotencia y el evento del viaje siguen intactos; recalcular y corregir
+  cifras sigue sin costo.
+- **Beta sin cortesía — siembra manual para retroalimentación completa (jul 2026).**
+  Se retira el otorgamiento automático de créditos al primer login. Los invitados
+  ven la app EXACTAMENTE como se venderá (precios reales en cada compuerta, cero
+  tachados, cero "gratis en beta") y el fundador les habilita créditos a mano
+  desde Supabase (RPC `otorgar_creditos`, origen `siembra_beta`, idempotente).
+  **Por qué:** así la retroalimentación de beta incluye la percepción de precio
+  real, no un regalo que distorsiona. **Qué NO cambia:** la allowlist sigue siendo
+  la puerta (beta por invitación); la maquinaria de cortesía queda dormida, no
+  borrada, por si la cortesía PÚBLICA post-lanzamiento se decide con telemetría.
 
 ## 8. FRASES DEL FUNDADOR (su voz, para cuando hable del producto)
 

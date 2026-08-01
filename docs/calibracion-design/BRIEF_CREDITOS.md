@@ -12,19 +12,19 @@ con **nuestra identidad de color**. Pedimos **2–3 OPCIONES** visuales.
 > paquetes deben presentarse por **VALOR / lo que logras con ellos**, como una
 > página de precios profesional — no por una equivalencia unitaria.
 
-> **El principio comercial (2.ª decisión del fundador — clave):** lo que hoy
-> decimos "**gratis para siempre**" (registrar el avance, el seguimiento) **NO se
-> anuncia como gratis: se vende como parte de lo que INCLUYE la compra.** Al
-> comprar el plan, compras tu plan **y** el seguimiento completo del desarrollo de
-> tu idea, el acompañamiento hasta convertirla en proyecto y su cierre — porque
-> eso es lo que la app hace de verdad. Lo mismo en cada mundo: incluye su
-> seguimiento, igual que el viaje principal. Esto sostiene un precio mayor por
-> entregable (el fundador subirá el costo en créditos del plan y de los mundos).
+> **El principio comercial (ANÁLISIS §4, ya implementado):** lo que hoy decimos
+> "**gratis para siempre**" (registrar el avance, los documentos, los recálculos)
+> **NO se anuncia como gratis: se dice "incluido" con lo que ya compraste.** La
+> única inclusión-de-producto real es **Tus Números dentro del plan** (el plan
+> cuesta 10 e incluye Tus Números). El **seguimiento** NO va incluido: es un
+> concepto aparte de 5 créditos —lo que hace congruente el catálogo (los packs
+> ES un paquete real: Premium 15 = plan 10 + un seguimiento 5). Los créditos son
+> **fungibles**; los packs se narran por lo que **"alcanza para"**.
 >
 > **Lo ÚNICO que se declara gratis: el primer vistazo** — el término ya existe en
 > la app: **Claridad** (el organizador del viaje principal, sin cuenta) y **el
 > diagnóstico** (el escaparate de un mundo: su entrevista + su diagnóstico). Nada
-> más se nombra "gratis"; todo lo demás va "incluido en tu compra".
+> más se nombra "gratis"; lo que no cobra pero ya compraste va **"incluido"**.
 
 ## Para quién y dónde
 
@@ -34,9 +34,10 @@ con **nuestra identidad de color**. Pedimos **2–3 OPCIONES** visuales.
   cuánto le queda, qué puede comprar, y qué cuesta cada cosa — sin fricción ni
   jerga. Móvil primero (380) y escritorio (1240).
 - **Importante:** la **compra con dinero está DORMIDA** en la beta (las pasarelas
-  llegan después); hoy el usuario trabaja con una **cortesía de bienvenida**. El
-  diseño debe verse "comprable" pero contemplar el estado beta (los packs se ven,
-  con un aviso sobrio de que la compra se abre pronto).
+  llegan después); ya NO hay cortesía automática, el usuario trabaja con créditos
+  que el fundador le siembra a mano. El diseño debe verse "comprable" pero
+  contemplar el estado beta (los packs se ven, con un aviso sobrio de que la
+  compra se abre pronto).
 
 ## Reglas de la casa (no negociables)
 
@@ -59,19 +60,22 @@ con **nuestra identidad de color**. Pedimos **2–3 OPCIONES** visuales.
 
 **Saldo / manejo (cabecera):**
 - El **saldo** en créditos (número grande).
-- La **cortesía de bienvenida** (etiqueta): con qué nació la cuenta.
+- El saldo se siembra a mano en la beta (sin etiqueta de cortesía): el número es real.
 - Regla honesta ya vigente: *"Se verifica tu saldo al inicio de cada acción y se
   descuenta a la entrega. Si algo falla a mitad, no se cobra nada."* (esto SÍ se
   queda, es un compromiso real; se puede reformular pero no perder).
 
-**Los 3 paquetes de compra** (leídos de `lib/precios.ts` → `PACKS`, jamás
-hardcodear números):
+**Los 4 packs — el catálogo congruente (ANÁLISIS §4, YA es ley)** (leídos de
+`lib/precios.ts` → `PACKS`, jamás hardcodear números). Cada pack ES un paquete
+real de trabajo (congruencia exacta), y se narra por lo que **"alcanza para"**,
+nunca como derechos cerrados:
 
-| Créditos | Precio | Lo que logras | Nota |
-| --- | --- | --- | --- |
-| 5  | **$4.99**  | tu plan completo | — |
-| 15 | **$14.99** | el viaje completo de una idea | **el más elegido** (destacar) |
-| 30 | **$29.99** | dos ideas trabajadas | — |
+| Pack | Créditos | Precio | Alcanza para | Nota |
+| --- | --- | --- | --- | --- |
+| **Recarga** | 5 | **$4.99** | un seguimiento o un mundo suelto | — |
+| **Básico** | 10 | **$9.99** | tu plan completo, con Tus Números incluidos | — |
+| **Premium** | 15 | **$14.99** | tu plan y tu primer seguimiento | **el más elegido** (destacar) |
+| **Profesional** | 30 | **$29.99** | el viaje entero de una idea | — |
 
 **El primer vistazo — lo ÚNICO gratis** (nombres canónicos, ya en la app):
 
@@ -80,23 +84,25 @@ hardcodear números):
 | **Claridad** (viaje principal) | tu idea ordenada: la frase, lo que tienes, lo que asumes. Sin cuenta. |
 | **El diagnóstico** (un mundo) | el escaparate del mundo: su entrevista y su diagnóstico. |
 
-**Lo que compras — y TODO lo que incluye** (leído de `PRECIOS`, jamás hardcodear;
-los números están **en revisión al alza** — ver nota):
+**Lo que cuesta cada cosa** (leído de `PRECIOS`; la regla de una línea: *"tu plan
+10, todo lo demás 5, la Claridad y los diagnósticos gratis"*):
 
-| Compra | Incluye | Costo (en revisión) |
-| --- | --- | --- |
-| **Tu Plan** (La Exploración) | tu plan completo · el seguimiento de tu idea hasta el cierre · el registro de tu avance · el acompañamiento hasta volverla proyecto | 5 → posible alza |
-| **Un mundo** | el plan del mundo · su seguimiento hasta el cierre (igual que el viaje principal) | 3 → posible alza |
-| **Tus Números** | el reporte de sostenibilidad de tu idea; corregir cifras y recalcular, incluido | 2 |
+| Cosa | Costo |
+| --- | --- |
+| **Tu Plan** (La Exploración) — incluye **Tus Números** | **10** |
+| **Seguimiento** del viaje principal | **5** |
+| **El plan de un mundo** (su diagnóstico ya fue gratis) | **5** |
+| **Seguimiento** de un mundo | **5** |
+| **Tus Números** | **incluido con tu plan** (0) |
+| **Registrar** tu avance, documentos y bitácora | **incluido con tu paquete** |
 
-> **Nota de precios (fundador):** el seguimiento y el registro **dejan de ser
-> líneas "gratis" sueltas** — se absorben en lo que incluye el plan / el mundo.
-> Por eso el costo del plan y de los mundos **sube** (el mundo podría igualarse a
-> **3** para estandarizar, ahora que incluye su seguimiento como el principal).
-> Los números finales los fija el fundador y yo los pongo en `precios.ts`; el
-> diseño solo debe dejar espacio para que el número cambie y para la lista de
-> "incluye". **No** repartir el valor en varias filas baratas: **una compra, todo
-> incluido**.
+> **Marco comercial (ANÁLISIS §4/§7/§8, ya implementado en el código):** los
+> créditos son **fungibles** (una billetera). Los packs se narran por lo que
+> **"alcanza para"**, JAMÁS como "incluye 3 seguimientos" (eso implicaría un
+> contador de bundle que no existe). La palabra **"gratis"** se reserva a la
+> Claridad y a los diagnósticos; lo que no cobra pero ya compraste se dice
+> **"incluido"**. El único inclusión-de-producto real es **Tus Números dentro del
+> plan**. Nada de "1 crédito = 1 dólar" en la cara del usuario.
 
 ## Referencias de la industria (el listón)
 
@@ -118,35 +124,37 @@ del patrón que buscamos (por su estructura, no para copiar): **Linear**, **Verc
 Danos **2–3 opciones** de la pantalla completa (cabecera + packs + costos), cada
 una coherente en 1240 y 380. Ejes a explorar:
 
-1. **Cabecera de manejo (saldo):** cómo presentar el saldo + la cortesía + la
-   regla de "no se cobra si algo falla", con peso de "centro de cuenta", no de
-   nota al pie. ¿Barra superior de resumen? ¿Tarjeta ancla a la izquierda?
-2. **Los 3 packs como niveles, con COLOR POR PAQUETE — respetando la ley.** Aquí
-   está el reto: queremos una **identidad de color por paquete**, pero sin romper
-   el significado de los colores. Propón cómo resolverlo. Opciones que vemos:
+1. **Cabecera de manejo (saldo):** cómo presentar el saldo + la regla de "no se
+   cobra si algo falla", con peso de "centro de cuenta", no de nota al pie. (Ya
+   NO hay "cortesía de bienvenida": la beta corre con precios reales.) ¿Barra
+   superior de resumen? ¿Tarjeta ancla a la izquierda?
+2. **Los 4 packs como niveles (Recarga · Básico · Premium ⭐ · Profesional), con
+   COLOR POR PAQUETE — respetando la ley.** El reto: una **identidad de color por
+   paquete** sin romper el significado de los colores. Opciones que vemos:
    - un **acento por nivel en progresión** (tenue → pleno) manteniendo el azul
      como base y el destacado con el acento más fuerte; o
-   - **matiz frío-a-cálido** muy sutil (el más grande, "dos ideas", con un matiz
-     de crecimiento) cuidando que el verde no lea como "compra celebrada" ni el
-     ámbar como "alerta". Tú tienes el criterio: enséñanos la forma correcta.
-   - El **"más elegido"** debe ganar el ojo (anillo/acento/degradado sutil).
-3. **"Qué incluye cada compra" (no "qué cuesta cada cosa"):** el eje del rediseño.
-   Mostrar cada compra (Tu Plan, Un mundo, Tus Números) con **su lista de "incluye"**
-   como valor visible — que se sienta un paquete completo (plan + seguimiento +
-   acompañamiento a proyecto), no un cargo suelto. Aparte, sobrio, **el primer
-   vistazo gratis** (Claridad · el diagnóstico) como puerta de entrada, no como
-   "línea gratis" que abarate. Ojo: el número debe poder cambiar sin romper el
-   layout, y la lista de "incluye" es la estrella (una compra, todo dentro).
+   - **matiz frío-a-cálido** muy sutil (el más grande, "el viaje entero", con un
+     matiz de crecimiento) cuidando que el verde no lea como "compra celebrada"
+     ni el ámbar como "alerta". Tú tienes el criterio: enséñanos la forma correcta.
+   - **Premium (el más elegido)** debe ganar el ojo (anillo/acento/degradado sutil).
+   - Cada card lleva su narración **"alcanza para"** (fungible, no derechos cerrados).
+3. **"Lo que cuesta cada cosa":** la forma más clara y profesional de la tabla.
+   Que **Tu Plan (10)** se lea con **Tus Números DENTRO** (la única inclusión real);
+   que **lo gratis** (Claridad · el diagnóstico) sea la puerta de entrada; que **lo
+   incluido** (registrar, documentos, bitácora) se lea como valor ya tuyo. El
+   **seguimiento y los mundos son 5 cada uno** — líneas honestas, NO "incluidas".
 4. **El estado beta:** cómo mostrar que la compra "se abre pronto" sin matar el
    deseo (los packs se ven comprables; un aviso sobrio, no un cartel de "cerrado").
 
 **Qué NO hacer:** nada de "1 crédito = 1 dólar", nada de "sin descuentos
 ocultos", nada de tabla de equivalencias unitarias. **No anunciar "gratis para
-siempre"** el seguimiento ni el registro del avance: van *incluidos* en la compra,
-no como líneas gratis que abaraten el valor (lo único gratis: el primer vistazo,
-Claridad · el diagnóstico). No repartir una compra en varias filas baratas. Nada
-de suscripción recurrente (el modelo es de **créditos consumibles**, se compran
-por paquete; presentación de página de precios, sí; cobro mensual, no).
+siempre"** el registro / los documentos / los recálculos: van *incluidos* con lo
+que ya compraste (lo único gratis: Claridad · el diagnóstico). El **seguimiento
+NO es "incluido"**: es su propia línea de 5. No repartir el PLAN en varias filas
+baratas (Tus Números va dentro). Nada de "incluye 3 seguimientos" (los créditos
+son fungibles: se narra "alcanza para"). Nada de suscripción recurrente (el modelo
+es de **créditos consumibles**; presentación de página de precios, sí; cobro
+mensual, no).
 
 ## Entrega esperada
 
