@@ -59,7 +59,7 @@ describe("Catálogo congruente §4: Tus Números incluido + packs == paquetes", 
 });
 
 describe("la cortesia y el 402", () => {
-  it("la cortesia de beta es 20", () => {
+  it("el valor DORMIDO de la cortesia de beta sigue anclado en 20 (retirada del auto-otorgamiento, §8.3)", () => {
     expect(CORTESIA_BETA).toBe(20);
   });
   it("el 402 habla en palabras de persona y no pierde el trabajo", () => {

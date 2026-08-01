@@ -2,7 +2,13 @@
 
 Fase: identidad y créditos (rama `beta-identidad-creditos`, tag `web-v1.5.0-beta`).
 Diseño: [CUENTAS_DISENO.md](CUENTAS_DISENO.md). Migraciones 020-024: **aplicadas**.
-La beta corre 100% con cortesía (20 créditos por invitado); **ninguna pasarela activada**.
+Catálogo comercial: [ANALISIS_PRECIOS.md](ANALISIS_PRECIOS.md) (§4 es ley).
+
+**Beta sin cortesía (fase "Catálogo congruente", ANÁLISIS §4/§8.3):** ya NO hay
+otorgamiento automático al primer login. Los invitados ven la app **exactamente
+como se venderá** —precios reales en cada compuerta, cero tachados, cero "gratis
+en beta"— y el fundador **siembra créditos a mano** desde Supabase. Así la
+retroalimentación incluye la percepción de precio. Ninguna pasarela activada.
 
 ## 1. Cómo funciona (el resumen de una pantalla)
 
@@ -13,25 +19,25 @@ La beta corre 100% con cortesía (20 créditos por invitado); **ninguna pasarela
   murió — chocaba con el límite de correos de producción y con el 2FA. Ahora
   el correo solo se manda UNA vez, al confirmar el registro; entrar es por
   contraseña, sin correos.) Al autenticarse: los proyectos del anónimo se
-  **adoptan** (la cookie del propio request es la prueba de posesión) y la
-  cuenta recibe su **cortesía: 20 créditos, una sola vez** (`beta_courtesy_log`).
-  - **Gobierno de la cortesía (aclaración del fundador, 2026-07-20):**
-    `CORTESIA_BETA = 20` es la política de la **beta cerrada** (solo
-    invitados de `beta_allowlist`), **no** la cortesía de bienvenida del
-    lanzamiento público. Esa es **decisión pendiente** del fundador
-    (candidata preliminar: organizador gratis + 5 créditos = un plan
-    completo; se calibra con la telemetría de esta beta). Ver
-    `docs/MATRIZ_DELTAS_CANON_2.0.md` ("Decisiones pendientes") y el
-    comentario junto a la constante en `web/lib/creditos.ts`.
-- **Cobros (verificar-al-inicio / descontar-A-LA-ENTREGA, idempotentes):**
+  **adoptan** (la cookie del propio request es la prueba de posesión). **Ya no
+  se otorga cortesía**: la cuenta nace en 0 hasta que el fundador la siembra
+  (§2.f). El código de cortesía (`otorgarCortesia`, `CORTESIA_BETA`,
+  `beta_courtesy_log`) queda **dormido**, no borrado, por si la cortesía pública
+  post-lanzamiento se decide con telemetría.
+- **El catálogo (ANÁLISIS §4, precios REALES en créditos, 1 crédito = 1 USD):**
 
   | Unidad | Verifica | Cobra a la entrega | Créditos |
   |---|---|---|---|
-  | Plan core | `session/start` | plan entregado (`plan:{sessionId}`) | 5 |
-  | Seguimiento core | `follow` | plan del ciclo | 2 |
-  | Plan de mundo | al abrir el stream del plan | plan entregado (el **preview y el diagnóstico son gratis**, 4.5) | 3 |
-  | Seguimiento de mundo | `follow` (dominio) | plan del ciclo | 2 |
-  | Tus Números | al activar | el primer tablero (`numeros:{projectId}`), una vez por idea; recálculos gratis | 2 |
+  | Plan core (La Exploración) | `session/start` | plan entregado (`plan:{sessionId}`) | **10** |
+  | Seguimiento core | `follow` | plan del ciclo | **5** |
+  | Plan de mundo | al abrir el stream del plan | plan entregado (el **preview y el diagnóstico son gratis**) | **5** |
+  | Seguimiento de mundo | `follow` (dominio) | plan del ciclo | **5** |
+  | Tus Números | al activar | — **incluido en el plan**; la activación ancla `activado_at` pero NO cobra | **0** |
+
+  Congruencia exacta (por qué estos números): cada pack ES un paquete real —
+  Recarga 5, Básico 10 (= plan), Premium 15 (= plan + un seguimiento),
+  Profesional 30 (= plan + 2 seguimientos + mundo + su seguimiento). La
+  Claridad y los diagnósticos de mundos son **gratis**.
 
 - Saldo insuficiente: **402 antes del esfuerzo** ("Te quedan X créditos; esto
   cuesta Y. Tu trabajo queda guardado tal como está.").
@@ -52,25 +58,16 @@ ON CONFLICT (email) DO NOTHING;
 ```
 
 Quien no está en la lista recibe en el login: "Ese correo aún no está en la
-lista de invitados…" (200 amable, jamás un error técnico).
+lista de invitados…" (200 amable, jamás un error técnico). La allowlist es la
+**puerta** de la beta (no se toca al retirar la cortesía).
 
-**Cerrar el grifo de la cortesía (`CORTESIA_BETA`, ver §1.b abajo) es una
-operación de datos, no de código**, y las dos puertas de entrada la
-respetan por igual: el registro y el ingreso verifican la allowlist antes de crear/entrar
-(`api/auth/registrar` y `api/auth/entrar`) y Google la verifica DESPUÉS de autenticar, antes de
-otorgar nada (`auth/callback`) — ninguna de las dos llega a
-`otorgarCortesia` sin pasar por `estaEnAllowlist` primero. Dos formas de
-cerrar, con efectos distintos:
+Dos formas de cerrar la puerta, con efectos distintos:
 
-- **Dejar de invitar** (no insertar filas nuevas): la forma quirúrgica. Los
-  invitados ya sembrados siguen entrando con su cuenta de siempre (y no
-  reciben una segunda cortesía: `beta_courtesy_log` es una-sola-vez por
-  cuenta, para siempre). Nadie NUEVO puede crear cuenta ni recibir los 20.
-- **`TRUNCATE public.beta_allowlist;`** (o `DELETE FROM ... WHERE true`): la
-  forma total. Cierra la cortesía Y bloquea el reingreso de TODOS,
-  incluidos los invitados de siempre (ambas rutas vuelven a fallar el
-  chequeo en cada intento, no solo en el primero). Úsala solo si de verdad
-  quieres cerrar la puerta completa, no solo el grifo de bienvenida.
+- **Dejar de invitar** (no insertar filas nuevas): los invitados ya sembrados
+  siguen entrando con su cuenta de siempre. Nadie NUEVO puede crear cuenta.
+- **`TRUNCATE public.beta_allowlist;`**: bloquea el reingreso de TODOS,
+  incluidos los invitados de siempre (ambas rutas fallan el chequeo en cada
+  intento). Úsala solo si de verdad quieres cerrar la puerta completa.
 
 ### b) Entrar por primera vez (correo + contraseña, modelo I Ching)
 
@@ -83,8 +80,9 @@ cerrar, con efectos distintos:
    contraseña" manda un enlace de recuperación a `/auth/update-password`.
 4. O bien, en cualquier momento: **"Continuar con Google"** (mismo correo =
    misma cuenta).
-5. Al autenticarse la primera vez: cortesía 20 (una sola vez) + destino
-   `/ideas` (o la idea que ibas a explorar, si venías de la frontera: `?next=`).
+5. Al autenticarse la primera vez: adopción de los proyectos del anónimo +
+   destino `/ideas` (o la idea que ibas a explorar: `?next=`). **La cuenta
+   nace en 0 créditos**; siémbrala con §2.f para que pueda comprar planes.
 
 **El template del correo en Supabase** (Auth → Emails → Templates →
 **Confirm signup** y **Reset password**) debe usar el enlace, no el código:
@@ -136,22 +134,52 @@ Configuración que vive FUERA del repo:
    prueba en staging).
 
 Mismo correo por Google que por contraseña = **la misma cuenta** (Supabase vincula
-por email verificado); la cortesía no se duplica (una-sola-vez por cuenta).
+por email verificado).
+
+### f) Sembrar créditos a mano (el reemplazo de la cortesía)
+
+La cuenta nace en 0. Para que un invitado pueda trabajar, el fundador le siembra
+créditos con la RPC **`otorgar_creditos`** (idempotente, la misma que usarán las
+pasarelas). En el **SQL Editor** de Supabase (corre como `postgres`, así que
+puede ejecutar la RPC aunque esté restringida a `service_role`):
+
+```sql
+-- 1) Encontrar el user_id por correo
+select id, email from auth.users where email = 'invitado@ejemplo.com';
+
+-- 2) Sembrar (idempotente por p_idempotency_key: repetir la MISMA clave NO
+--    vuelve a sumar, solo devuelve el saldo). 30 = un viaje entero (Profesional).
+select public.otorgar_creditos(
+  p_user_id         => '00000000-0000-0000-0000-000000000000'::uuid,  -- el id del paso 1
+  p_monto           => 30,
+  p_origen          => 'siembra_beta',
+  p_idempotency_key => 'siembra_beta:00000000-0000-0000-0000-000000000000:v1',
+  p_pack            => 'siembra_beta'
+);
+```
+
+- **Para sembrar MÁS después**, cambia el sufijo de la clave (`:v1` → `:v2`); con
+  la misma clave la RPC es un no-op seguro (devuelve el saldo sin doblar).
+- `p_origen='siembra_beta'` deja rastro en `credit_transactions` (tipo `grant`)
+  para que la contabilidad de la beta sea auditable. NO uses `'revenuecat'`
+  (ese origen mueve `total_comprado`, reservado a compras reales).
+- Verás el saldo al instante en el chip de `/ideas` y en el centro `/creditos`.
 
 ## 3. Estado vivo vs dormido
 
 | Pieza | Estado |
 |---|---|
 | Ledger 020-024 (RPCs atómicas, RLS, courtesy log, refund log) | **VIVO** |
-| Cortesía 20 al primer login | **VIVO** |
-| Los 5 puntos de cobro + 402 + idempotencia + refund | **VIVOS** (se pagan con cortesía) |
+| Siembra manual de créditos (`otorgar_creditos`, origen `siembra_beta`) | **VIVA** (§2.f) |
+| Cortesía automática al primer login (`otorgarCortesia`, `CORTESIA_BETA`) | **DORMIDA** (retirada §8.3; código intacto por si vuelve) |
+| Los puntos de cobro + 402 + idempotencia + refund | **VIVOS** (precios reales del §4) |
+| Tus Números | **INCLUIDO en el plan** (activa `activado_at`, no cobra) |
 | Login por correo + contraseña + allowlist + adopción al login | **VIVO** |
 | Login con Google (allowlist post-auth, mundo del anónimo intacto) | **VIVO** (requiere provider configurado en Supabase) |
 | Chip de saldo + precios vivos (el tachado murió) | **VIVO** |
-| RevenueCat / Stripe / Play (pasarelas, `otorgar_creditos_idempotente`, webhook) | **DORMIDO** (esquema listo, ancla en 023; post-beta) |
-| Bundles de compra del centro de créditos | **DORMIDO** ("$ —", decisión del fundador pendiente) |
+| RevenueCat / Stripe / Play (pasarelas, webhook) | **DORMIDO** (esquema listo, ancla en 023; ETAPA 3) |
+| Bundles de compra del centro de créditos | **DORMIDO** ("la compra se abre pronto"; pasarela pendiente) |
 | 2FA/TOTP + dominio de correo propio | **DORMIDO** (ETAPA 2/d, anclas del diseño §1) |
-| Ruta legacy `project/[id]/report` (mini-entrevista vieja de números) | **DORMIDA para la UI** (sin botón; exige cuenta real; el tablero 14 la reemplazó) |
 
 ## 4. El vuelo de dinero (la verificación más seria)
 
@@ -161,8 +189,11 @@ Con `pnpm dev` en :3000 y la 020-024 aplicadas:
 npx tsx scripts/vuelo_beta.ts
 ```
 
-Cubre: login de un usuario sembrado → cortesía 20 → **contabilidad a mano**
-(20 −5 plan −2 números −3 plan de mundo −2 seguimiento = **8 exactos**,
-verificados contra `credit_transactions` fila por fila) → doble-submit sin
-doble cobro → 402 limpio sin cobrar → reembolso con log → organizador anónimo
-+ adopción → un segundo usuario NO ve los proyectos del primero (RLS en vivo).
+Cubre: login de un usuario sembrado → **siembra manual de 30** (`otorgar_creditos`,
+origen `siembra_beta`) → **contabilidad a mano** con el catálogo nuevo
+(30 −10 plan −5 seguimiento −5 plan de mundo −5 seguimiento de mundo = **5
+exactos**, verificados contra `credit_transactions` fila por fila) → **Tus
+Números activa sin cobrar** (ancla `activado_at`, cero transacciones) →
+doble-submit sin doble cobro → 402 limpio sin cobrar → reembolso con log →
+organizador anónimo + adopción → un segundo usuario NO ve los proyectos del
+primero (RLS en vivo).

@@ -15,7 +15,6 @@
  */
 import { createHash } from "node:crypto";
 import type { User } from "@supabase/supabase-js";
-import { otorgarCortesia } from "./creditos";
 import { esInvitadoInvisible } from "./identidad";
 import { createAdminClient } from "./supabase/admin";
 
@@ -58,37 +57,23 @@ export async function estaEnAllowlist(email: string): Promise<boolean> {
 }
 
 /**
- * Los dos actos de la bienvenida tras un login exitoso (compartidos por el
- * código de verificación y el enlace legacy):
- * 1. CORTESÍA: 20 créditos al primer login (otorgar_cortesia es una-sola-vez
- *    por cuenta vía beta_courtesy_log; repetirla no re-otorga).
- * 2. ADOPCIÓN: si el navegador traía una identidad invisible (el organizador
- *    anónimo), sus proyectos pasan al dueño recién autenticado. `anonId`
- *    SIEMPRE debe venir de la sesión que el propio request traía en cookies
- *    ANTES de verificar (prueba de posesión), jamás de un parámetro.
- * Ninguno de los dos bloquea el login si falla; ambos se dicen fuerte.
+ * El acto de la bienvenida tras un login exitoso: la ADOPCIÓN de la identidad
+ * invisible. Si el navegador traía un organizador anónimo, sus proyectos pasan
+ * al dueño recién autenticado. `anonId` SIEMPRE debe venir de la sesión que el
+ * propio request traía en cookies ANTES de verificar (prueba de posesión),
+ * jamás de un parámetro. No bloquea el login si falla; se dice fuerte.
+ *
+ * CORTESÍA RETIRADA (fase "Catálogo congruente", ANÁLISIS §4/§8.3). Ya NO se
+ * otorgan créditos automáticos al primer login: la beta trabaja con precios
+ * REALES y el fundador siembra créditos A MANO desde Supabase (RPC
+ * otorgar_creditos, origen 'siembra_beta') — ver docs/BETA_CUENTAS_README.md.
+ * La maquinaria de cortesía (otorgar_cortesia, CORTESIA_BETA, beta_courtesy_log
+ * y cortesiaYaDadaAlCorreo) queda DORMIDA, no borrada, por si la cortesía
+ * pública post-lanzamiento se decide con telemetría. La allowlist NO se toca:
+ * sigue siendo la puerta de la beta.
  */
 export async function bienvenidaTrasLogin(real: User, anonId: string | null): Promise<void> {
   if (esInvitadoInvisible(real)) return;
-  try {
-    // Borrar-y-volver no re-otorga: si el correo ya recibió cortesía en una
-    // cuenta borrada (huella 029), no hay segunda tanda. Si la 029 aún no
-    // está aplicada, la lectura falla y la cortesía se otorga igual (el log
-    // por user_id sigue siendo el candado principal).
-    let yaDada = false;
-    try {
-      yaDada = await cortesiaYaDadaAlCorreo(real.email ?? "");
-    } catch {
-      yaDada = false;
-    }
-    if (yaDada) {
-      console.log("[login] cortesia ya dada a este correo en una cuenta borrada; no se re-otorga");
-    } else {
-      await otorgarCortesia(real.id);
-    }
-  } catch (e) {
-    console.error("[login] fallo otorgar_cortesia (un invitado sin su cortesia es un bug de dinero):", e);
-  }
   if (anonId && anonId !== real.id) {
     try {
       const adoptados = await adoptarProyectosDeUsuario(anonId, real.id);
