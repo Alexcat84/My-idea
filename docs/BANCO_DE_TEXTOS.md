@@ -291,6 +291,13 @@ desconocer la razón.
   | funnel | embudo |
   | VC | fondos de inversión |
   | stage-gate | puntos de control |
+  | Gantt | tus fechas de un vistazo, el mapa de tus fechas |
+  | checklist | tus tareas, tu lista de pasos |
+  | línea base | tus fechas de referencia, el punto de partida |
+  | cascada (de fechas) | acomodar las fechas que siguen |
+  | dashboard | tu tablero |
+  | KPI | indicadores |
+  | preview | el primer vistazo, el diagnóstico |
 
   Sobre los **nombres propios de metodología** (stage-gate es el caso que lo
   fijó): la casa los traduce **por función**. El nombre propio vive en el
