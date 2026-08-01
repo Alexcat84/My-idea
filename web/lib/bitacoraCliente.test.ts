@@ -15,11 +15,13 @@ const datos = (extra: Partial<DatosBitacora> = {}): DatosBitacora => ({
     { etiqueta: "completo", created_at: "2026-01-18T10:00:00Z", dominio: "quality", baseline_confirmada_at: null },
   ],
   items: [
-    { id: "a1", texto: "Publica el video de tu producto", completed_at: "2026-01-10T15:00:00Z" },
-    { id: "a2", texto: "Habla con cinco personas", completed_at: null },
+    { id: "a1", texto: "Publica el video de tu producto", completed_at: "2026-01-10T15:00:00Z", dominio: "core" },
+    { id: "a2", texto: "Habla con cinco personas", completed_at: null, dominio: "core" },
+    { id: "m1", texto: "Define tu estándar de calidad", completed_at: "2026-01-19T15:00:00Z", dominio: "quality" },
   ],
   eventos: [
     { tipo: "modo_camino", payload: { de: null, a: "fechas" }, created_at: "2026-01-06T11:00:00Z" },
+    { tipo: "item_estado", payload: { item: "m1", de: "pendiente", a: "empezado" }, created_at: "2026-01-16T12:00:00Z" },
     { tipo: "cobro_carrera", payload: { monto: 12 }, created_at: "2026-01-08T10:00:00Z" }, // INTERNO
     { tipo: "mundo_incompatible", payload: { mundo: "quality" }, created_at: "2026-01-09T10:00:00Z" }, // INTERNO
     { tipo: "item_estado", payload: { item: "a1", de: "pendiente", a: "empezado" }, created_at: "2026-01-08T12:00:00Z" },
@@ -79,6 +81,16 @@ describe("construirBitacora", () => {
     const texto = construirBitacora(datos()).map((x) => x.texto).join("\n");
     expect(texto).toContain("Calidad Impecable");
     expect(texto).not.toContain("quality");
+  });
+
+  it("etiqueta las actividades de un MUNDO con su mundo (mapa de lecciones); las del core no", () => {
+    const texto = construirBitacora(datos()).map((x) => x.texto).join("\n");
+    // hecha y cambio de estado de un ítem de mundo llevan su mundo…
+    expect(texto).toContain("Marcaste hecha «Define tu estándar de calidad» · en Calidad Impecable.");
+    expect(texto).toContain("Empezaste «Define tu estándar de calidad» · en Calidad Impecable.");
+    // …y las del viaje principal NO llevan sufijo de mundo.
+    expect(texto).toContain("Marcaste hecha «Publica el video de tu producto».");
+    expect(texto).toContain("Empezaste «Publica el video de tu producto».");
   });
 
   it("deriva la realización de un proyecto viejo sin evento en bitácora", () => {

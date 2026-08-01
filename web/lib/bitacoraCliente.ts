@@ -38,6 +38,9 @@ export interface ItemBita {
   id: string;
   texto: string;
   completed_at: string | null;
+  /** dominio del ítem: null/'core' = viaje principal; otro = un mundo. Sirve
+   * para etiquetar en la bitácora QUÉ mundo (mapa de lecciones aprendidas). */
+  dominio: string | null;
 }
 
 export interface EventoBita {
@@ -107,7 +110,15 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
     if (fecha) E.push({ fecha, texto, peso, titulo });
   };
   const textoDe = new Map(d.items.map((i) => [i.id, i.texto]));
+  const dominioDe = new Map(d.items.map((i) => [i.id, i.dominio]));
   const accion = (id: unknown) => corto(textoDe.get(String(id)) ?? "una actividad");
+  // Sufijo de mundo: si el ítem pertenece a un mundo (no al core), la entrada
+  // dice EN QUÉ mundo pasó. Así el mapa de lecciones distingue cada carril.
+  const sufMundo = (id: unknown) => {
+    const dom = dominioDe.get(String(id));
+    return dom && !esCore(dom) ? ` · en ${d.nombreMundo(dom)}` : "";
+  };
+  const ref = (id: unknown) => `«${accion(id)}»${sufMundo(id)}`;
   const cita = (m: unknown) => (typeof m === "string" && m.trim() ? `: «${m.replace(/\s+/g, " ").trim()}»` : ".");
 
   // ── Hitos derivados de timestamps existentes ──────────────────────────────
@@ -146,8 +157,10 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
     }
   }
 
-  // Cada acción marcada HECHA, con su fecha de realización.
-  for (const it of d.items) if (it.completed_at) push(it.completed_at, `Marcaste hecha «${corto(it.texto)}».`);
+  // Cada acción marcada HECHA, con su fecha de realización (y el mundo, si aplica).
+  for (const it of d.items)
+    if (it.completed_at)
+      push(it.completed_at, `Marcaste hecha «${corto(it.texto)}»${esCore(it.dominio) ? "" : ` · en ${d.nombreMundo(it.dominio!)}`}.`);
 
   // ── Eventos registrados (lista blanca) ────────────────────────────────────
   const huboRealizada = d.eventos.some((e) => e.tipo === "realizada" && (e.payload?.accion ?? "realizar") === "realizar");
@@ -161,30 +174,29 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
         break;
       }
       case "item_estado": {
-        const t = accion(p.item);
-        if (p.a === "empezado") push(e.created_at, `Empezaste «${t}».`);
-        else if (p.a === "en_proceso") push(e.created_at, `Pusiste «${t}» en proceso.`);
-        else if (p.a === "pendiente") push(e.created_at, `Devolviste «${t}» a pendiente.`);
+        if (p.a === "empezado") push(e.created_at, `Empezaste ${ref(p.item)}.`);
+        else if (p.a === "en_proceso") push(e.created_at, `Pusiste ${ref(p.item)} en proceso.`);
+        else if (p.a === "pendiente") push(e.created_at, `Devolviste ${ref(p.item)} a pendiente.`);
         break;
       }
       case "item_no_aplica":
-        push(e.created_at, `Retiraste «${accion(p.item)}»${cita(p.motivo)}`, "retirada");
+        push(e.created_at, `Retiraste ${ref(p.item)}${cita(p.motivo)}`, "retirada");
         break;
       case "item_reactivada":
-        push(e.created_at, `Reactivaste «${accion(p.item)}».`);
+        push(e.created_at, `Reactivaste ${ref(p.item)}.`);
         break;
       case "fecha_hecho_movida":
-        push(e.created_at, `Ajustaste la fecha en que hiciste «${accion(p.item)}».`);
+        push(e.created_at, `Ajustaste la fecha en que hiciste ${ref(p.item)}.`);
         break;
       case "nota_escrita":
-        push(e.created_at, `Anotaste algo en «${accion(p.item)}».`);
+        push(e.created_at, `Anotaste algo en ${ref(p.item)}.`);
         break;
       case "fecha_movida": {
         const n = typeof p.cascada === "number" ? p.cascada : 0;
         const delta = typeof p.delta_dias === "number" ? p.delta_dias : 0;
         const rumbo = delta >= 0 ? `${Math.abs(delta)} ${Math.abs(delta) === 1 ? "día" : "días"} después` : `${Math.abs(delta)} ${Math.abs(delta) === 1 ? "día" : "días"} antes`;
         const cola = n > 0 ? ` y las ${n} siguientes, ${rumbo} cada una.` : ".";
-        push(e.created_at, `Moviste la fecha de «${accion(p.item)}»${cola}`);
+        push(e.created_at, `Moviste la fecha de ${ref(p.item)}${cola}`);
         break;
       }
       case "mundo_completado": {
