@@ -247,15 +247,17 @@ export function Calendario({
       {/* aside compartido */}
       <aside className="flex w-full flex-col gap-4 lg:w-[348px] lg:shrink-0">
         <div className="rounded-panel border border-hairline bg-surface p-5">
-          <div className="flex items-center justify-between gap-2">
-            <p className="text-[14px] font-semibold">Tus recordatorios</p>
-            <span className="rounded-full border border-done/50 px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.6px] text-done">Activados</span>
-          </div>
-          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">La víspera a las 20:00, en el calendario de tu teléfono.</p>
-          <p className="mt-3 flex items-baseline justify-between text-[13px]">
-            <span className="text-dim">Tareas con aviso</span>
-            <span className="font-semibold tabular-nums">{pendientes.length} de {pendientes.length}</span>
+          <p className="text-[14px] font-semibold">Recordatorios</p>
+          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">
+            Cada tarea con fecha te avisa <span className="text-ink">el día antes</span>, en el calendario de tu
+            teléfono. Para recibirlos, suscribe o descarga tu calendario aquí abajo.
           </p>
+          {pendientes.length > 0 && (
+            <p className="mt-3 text-[12.5px] text-dim">
+              Tienes <span className="font-semibold tabular-nums text-ink">{pendientes.length}</span>{" "}
+              {pendientes.length === 1 ? "tarea con fecha" : "tareas con fecha"} por delante.
+            </p>
+          )}
         </div>
         <div className="rounded-panel border border-hairline bg-surface p-5">
           {/* Título + info (ⓘ flotante) + dos botones estándar (suscribir / .ics). */}

@@ -59,12 +59,13 @@ export function SuscripcionCalendario({
           {info && (
             <>
               <button type="button" aria-label="Cerrar" onClick={() => setInfo(false)} className="fixed inset-0 z-40 cursor-default" />
-              <div className="absolute left-0 top-full z-50 mt-2 w-[248px] rounded-[12px] border border-white/[0.14] bg-surface-2 p-3 text-[12px] leading-relaxed text-dim shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
-                Te suscribes una vez y tus fechas se mantienen al día solas, en cualquier calendario (Google, Apple,
-                Outlook…). El aviso lo pone tu teléfono la víspera a las 20:00.
+              <div className="absolute left-0 top-full z-50 mt-2 w-[256px] rounded-[12px] border border-white/[0.14] bg-surface-2 p-3 text-[12px] leading-relaxed text-dim shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
+                Te suscribes una sola vez. Después, tus fechas aparecen en el calendario que ya usas (Google, Apple,
+                Outlook…) y se actualizan solas cuando cambias algo aquí. Tu teléfono te recuerda cada tarea el día
+                antes.
                 <span className="mt-2 block text-dim/80">
-                  Cada cuánto se actualiza lo decide tu app de calendario (de minutos a unas horas). Para verlo al
-                  instante, descarga el archivo.
+                  No aparecen al instante: tu calendario se refresca cada cierto tiempo (a veces minutos, a veces horas).
+                  Si quieres verlas ya mismo, descarga el archivo.
                 </span>
               </div>
             </>
