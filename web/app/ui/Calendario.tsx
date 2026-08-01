@@ -247,19 +247,6 @@ export function Calendario({
       {/* aside compartido */}
       <aside className="flex w-full flex-col gap-4 lg:w-[348px] lg:shrink-0">
         <div className="rounded-panel border border-hairline bg-surface p-5">
-          <p className="text-[14px] font-semibold">Recordatorios</p>
-          <p className="mt-2 text-[12.5px] leading-relaxed text-dim">
-            Cada tarea con fecha te avisa <span className="text-ink">el día antes</span>, en el calendario de tu
-            teléfono. Para recibirlos, suscribe o descarga tu calendario aquí abajo.
-          </p>
-          {pendientes.length > 0 && (
-            <p className="mt-3 text-[12.5px] text-dim">
-              Tienes <span className="font-semibold tabular-nums text-ink">{pendientes.length}</span>{" "}
-              {pendientes.length === 1 ? "tarea con fecha" : "tareas con fecha"} por delante.
-            </p>
-          )}
-        </div>
-        <div className="rounded-panel border border-hairline bg-surface p-5">
           {/* Título + info (ⓘ flotante) + dos botones estándar (suscribir / .ics). */}
           <SuscripcionCalendario onDescargarIcs={descargarCalendario} puedeDescargar={pendientes.length > 0} />
         </div>
@@ -312,6 +299,22 @@ function VistaAgenda({
   const porGrupo = new Map<Grupo, PendItem[]>();
   for (const p of pendientes) (porGrupo.get(grupoDe(p.delta)) ?? porGrupo.set(grupoDe(p.delta), []).get(grupoDe(p.delta))!).push(p);
   const colorGrupo = (g: Grupo) => (g === "vencidas" ? AMBAR : g === "hoy" ? VERDE : "#A6A7AD");
+  const renderizados = ORDEN_GRUPOS.filter((g) => porGrupo.get(g)?.length);
+  // Acordeones por periodo: lo CERCANO abierto (para que "lo que viene" se vea de
+  // una); lo FUTURO colapsado, para no abrumar. Siempre queda algo abierto.
+  const CERCANOS: Grupo[] = ["vencidas", "hoy", "manana", "semana"];
+  const [abiertos, setAbiertos] = useState<Set<Grupo>>(() => {
+    const s = new Set<Grupo>(renderizados.filter((g) => CERCANOS.includes(g)));
+    if (s.size === 0 && renderizados.length) s.add(renderizados[0]);
+    return s;
+  });
+  const toggle = (g: Grupo) =>
+    setAbiertos((prev) => {
+      const n = new Set(prev);
+      if (n.has(g)) n.delete(g);
+      else n.add(g);
+      return n;
+    });
   if (pendientes.length === 0)
     return (
       <p className="rounded-panel border border-hairline bg-surface p-6 text-[14px] leading-relaxed text-dim">
@@ -320,29 +323,40 @@ function VistaAgenda({
     );
   return (
     <div className="flex flex-col gap-7">
-      {ORDEN_GRUPOS.filter((g) => porGrupo.get(g)?.length).map((g) => {
+      {renderizados.map((g) => {
         const filas = porGrupo.get(g)!;
+        const abierto = abiertos.has(g);
         return (
           <div key={g}>
-            <div className="mb-3 flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => toggle(g)}
+              aria-expanded={abierto}
+              className={"flex w-full items-center gap-3 text-left " + (abierto ? "mb-3" : "")}
+            >
               <span className="text-[12px] font-semibold uppercase tracking-[1.2px]" style={{ color: colorGrupo(g) }}>{ROTULO[g]}</span>
               <span className="h-px flex-1" style={{ background: g === "vencidas" ? "rgba(224,166,74,0.30)" : g === "hoy" ? "rgba(63,185,80,0.28)" : "rgba(255,255,255,0.08)" }} />
               <span className="text-[12px] tabular-nums text-dim">{filas.length}</span>
-            </div>
-            <div className="flex flex-col gap-2.5">
-              {filas.map(({ item, delta }) => (
-                <FilaAgenda
-                  key={item.id}
-                  item={item}
-                  delta={delta}
-                  grupo={g}
-                  ocupado={ocupado}
-                  onDetalle={() => onDetalle(item)}
-                  onMarcarHecha={() => onMarcarHecha(item)}
-                  onGuardarNota={(nota) => onNota(item, nota)}
-                />
-              ))}
-            </div>
+              <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden className={"shrink-0 text-dim transition-transform " + (abierto ? "" : "-rotate-90")}>
+                <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
+              </svg>
+            </button>
+            {abierto && (
+              <div className="flex flex-col gap-2.5">
+                {filas.map(({ item, delta }) => (
+                  <FilaAgenda
+                    key={item.id}
+                    item={item}
+                    delta={delta}
+                    grupo={g}
+                    ocupado={ocupado}
+                    onDetalle={() => onDetalle(item)}
+                    onMarcarHecha={() => onMarcarHecha(item)}
+                    onGuardarNota={(nota) => onNota(item, nota)}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         );
       })}
