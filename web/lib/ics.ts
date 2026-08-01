@@ -14,6 +14,9 @@ export interface TareaIcs {
   etapa: number;
   /** ISO de la fecha prevista (fecha_base) */
   fechaBase: string;
+  /** nombre de la idea de esta tarea (para el feed que mezcla varias ideas);
+   * si falta, se usa el nombreIdea general del calendario. */
+  nombreIdea?: string;
 }
 
 /** Escapa los caracteres especiales de un valor de texto iCalendar. */
@@ -81,7 +84,7 @@ export function generarIcs({
       `DTSTART:${inicio}`,
       `DTEND:${fin}`,
       `SUMMARY:${escapar(t.texto)}`,
-      `DESCRIPTION:${escapar(`Etapa ${t.etapa} · ${nombreIdea}`)}`,
+      `DESCRIPTION:${escapar(`Etapa ${t.etapa} · ${t.nombreIdea ?? nombreIdea}`)}`,
       "BEGIN:VALARM",
       "ACTION:DISPLAY",
       `DESCRIPTION:${escapar(t.texto)}`,
