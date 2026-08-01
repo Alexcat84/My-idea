@@ -15,11 +15,9 @@
  * cambios); la honestidad histórica vive en analytics (línea "frente a tu plan
  * inicial", desde fecha_base_original).
  */
-import { NextResponse, after } from "next/server";
+import { NextResponse } from "next/server";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
-import { createAdminClient } from "@/lib/supabase/admin";
-import { sincronizarIds } from "@/lib/calendarioSync";
 
 export const runtime = "nodejs";
 
@@ -119,22 +117,6 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     delta_dias: Math.round(deltaMs / 86_400_000),
     cascada: datos.cascada ? posteriores.length : "solo",
   });
-
-  // Sincronía con Google Calendar (una vía, best-effort tras responder): mueve
-  // el evento del objetivo y de cada posterior arrastrado. No-op si no conectado.
-  const uid = user.id;
-  const afectados = [objetivo.id, ...posteriores.map((p) => p.id)];
-  try {
-    after(async () => {
-      try {
-        await sincronizarIds(createAdminClient(), uid, projectId, afectados);
-      } catch (e) {
-        console.error("[mover-fecha] sync calendario:", (e as Error).message);
-      }
-    });
-  } catch {
-    /* `after` fuera de contexto de request (tests): sin sync, no pasa nada */
-  }
 
   return NextResponse.json({ ok: true, movidos: 1 + posteriores.length, cascada: posteriores.length });
 }

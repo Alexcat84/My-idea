@@ -17,6 +17,7 @@ import { useEffect, useMemo, useState } from "react";
 import { CampoConVoz } from "./CampoConVoz";
 import { ETIQUETA_ESTADO, IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
+import type { ChecklistEstado } from "@/lib/dbContract";
 import type { CambioItem, ItemChecklistUI } from "./ManosALaObra";
 
 /** Días redondeados entre dos fechas (para el chip de cumplimiento). */
@@ -64,7 +65,6 @@ export function DetalleActividad({
   itemsDominio?: ItemChecklistUI[];
   onCerrar: () => void;
 }) {
-  const hecho = item.estado === "hecho";
   const [nota, setNota] = useState(item.nota ?? "");
   const [moviendoFecha, setMoviendoFecha] = useState(false);
   // La nueva fecha elegida, en espera de decidir la cascada (null = sin oferta).
@@ -86,28 +86,50 @@ export function DetalleActividad({
         : [],
     [itemsDominio, item.id, item.etapa, item.fecha_base]
   );
-  const [editandoFechaHecho, setEditandoFechaHecho] = useState(false);
-  const [editandoMotivo, setEditandoMotivo] = useState(false);
-  const [motivo, setMotivo] = useState(item.no_aplica_motivo ?? "");
   const hoyInput = fechaInputLocal(new Date());
   const chip = chipCumplimiento(item);
   const notaCambiada = (item.nota ?? "") !== nota.trim();
-  const retirada = item.estado === "no_aplica";
 
-  // Cerrar con Escape: un cajón modal debe responder al teclado.
+  // BORRADOR (jul 2026, pedido del fundador): en el CAJÓN el estado NO se guarda
+  // al elegirlo; queda pendiente hasta "Guardar". (En la FILA del checklist el
+  // cambio sigue siendo inmediato: allí está bien.) Se acumulan estado, motivo
+  // de "no aplica" y la fecha de realización de "hecha" como borrador.
+  const [bEstado, setBEstado] = useState<ChecklistEstado>(item.estado);
+  const [bMotivo, setBMotivo] = useState(item.no_aplica_motivo ?? "");
+  const [bCompletado, setBCompletado] = useState<string | null>(item.completed_at ?? null);
+  const [menuAbierto, setMenuAbierto] = useState(false);
+  const hecho = bEstado === "hecho";
+  const retirada = bEstado === "no_aplica";
+
+  function elegirEstado(e: ChecklistEstado) {
+    setBEstado(e);
+    setMenuAbierto(false);
+    if (e === "hecho" && !bCompletado) setBCompletado(isoDesdeInputLocal(hoyInput));
+  }
+
+  // Guardar el borrador (estado + motivo + fecha de realización + nota) en UN
+  // solo cambio. Cancelar descarta todo.
+  function guardar() {
+    const cambio: CambioItem = {};
+    if (bEstado !== item.estado) cambio.estado = bEstado;
+    if (bEstado === "hecho") {
+      const c = bCompletado ?? isoDesdeInputLocal(hoyInput);
+      if (bEstado !== item.estado || c !== (item.completed_at ?? null)) cambio.completed_at = c;
+    }
+    if (bEstado === "no_aplica" && (bMotivo.trim() || null) !== (item.no_aplica_motivo ?? null)) {
+      cambio.no_aplica_motivo = bMotivo.trim() || null;
+    }
+    if (notaCambiada) cambio.nota = nota.trim() || null;
+    if (Object.keys(cambio).length > 0) onCambio(cambio);
+    onCerrar();
+  }
+
+  // Cerrar con Escape: un cajón modal debe responder al teclado (descarta).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onCerrar();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onCerrar]);
-
-  // Marcar hecho COMPROMETE en el acto (con la fecha de hoy por defecto). El
-  // prompt anterior no comprometía si se cancelaba y dejaba el ítem atrapado
-  // en "a medias" (bug del fundador, jul 2026). La fecha se ajusta después.
-  function marcarHecho(completedAt?: string | null) {
-    setEditandoFechaHecho(false);
-    onCambio({ estado: "hecho", completed_at: completedAt ?? isoDesdeInputLocal(hoyInput) });
-  }
 
   return (
     <div className="fixed inset-0 z-50 flex" aria-modal role="dialog" aria-label="Detalle de la actividad">
@@ -157,132 +179,84 @@ export function DetalleActividad({
             </span>
           )}
 
-          {/* estado: los 5, de un toque (el detalle es la vista completa).
-              'no aplica' abre su motivo editable justo abajo. */}
+          {/* estado: LISTA DESPLEGABLE (no cintas) — más fácil de escoger y
+              visual (la forma de cada estado). En el CAJÓN es BORRADOR: elegir
+              NO guarda; se compromete con "Guardar". 'no aplica' y 'hecha' abren
+              su editor (motivo / fecha) justo abajo, también en borrador. */}
           <div className="mt-6">
             <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Estado</p>
-            <div className="flex flex-wrap gap-2">
-              {ORDEN_ESTADOS.map((e) => {
-                const activo = item.estado === e;
-                const esRetirar = e === "no_aplica";
-                return (
-                  <button
-                    key={e}
-                    onClick={() => {
-                      if (activo) {
-                        if (esRetirar) setEditandoMotivo((v) => !v);
-                        return;
-                      }
-                      if (e === "hecho") marcarHecho();
-                      else if (esRetirar) {
-                        setMotivo(item.no_aplica_motivo ?? "");
-                        onCambio({ estado: "no_aplica", no_aplica_motivo: item.no_aplica_motivo ?? null });
-                      } else onCambio({ estado: e });
-                    }}
-                    disabled={ocupado}
-                    className={
-                      // El VIGENTE se marca SIEMPRE en azul (borde 60% / fondo
-                      // 14%): el azul dice "esto es lo elegido". El verde solo
-                      // vive DENTRO del icono de hecha, nunca en la pastilla.
-                      "inline-flex items-center gap-2 rounded-[11px] border px-[15px] py-2.5 text-[13.5px] font-semibold disabled:opacity-50 " +
-                      (activo
-                        ? "border-accent/60 bg-accent/[0.14] text-ink"
-                        : "border-hairline text-dim hover:text-ink")
-                    }
-                  >
-                    <IconoEstado estado={e} tamano={17} />
-                    <span className="capitalize">{ETIQUETA_ESTADO[e]}</span>
-                  </button>
-                );
-              })}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setMenuAbierto((v) => !v)}
+                disabled={ocupado}
+                aria-haspopup="listbox"
+                aria-expanded={menuAbierto}
+                className="flex w-full items-center gap-3 rounded-[12px] border border-hairline bg-surface-2 px-4 py-3 text-left transition-colors hover:border-white/25 disabled:opacity-50"
+              >
+                <IconoEstado estado={bEstado} tamano={20} />
+                <span className="flex-1 text-[14.5px] font-semibold capitalize">{ETIQUETA_ESTADO[bEstado]}</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden className={"shrink-0 text-dim transition-transform " + (menuAbierto ? "rotate-180" : "")}>
+                  <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                </svg>
+              </button>
+              {menuAbierto && (
+                <div role="listbox" aria-label="Elegir estado" className="mt-2 overflow-hidden rounded-[12px] border border-white/[0.14] bg-surface-2">
+                  {ORDEN_ESTADOS.map((e) => {
+                    const activo = e === bEstado;
+                    return (
+                      <button
+                        key={e}
+                        type="button"
+                        role="option"
+                        aria-selected={activo}
+                        onClick={() => elegirEstado(e)}
+                        disabled={ocupado}
+                        className={
+                          "flex min-h-[44px] w-full items-center gap-3 px-4 py-2.5 text-left text-[14px] hover:bg-white/[0.05] disabled:opacity-50 " +
+                          (activo ? "bg-white/[0.06] font-semibold" : "")
+                        }
+                      >
+                        <IconoEstado estado={e} tamano={18} />
+                        <span className="flex-1 capitalize">{ETIQUETA_ESTADO[e]}</span>
+                        {activo && (
+                          <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="text-accent">
+                            <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="currentColor" strokeWidth="2" fill="none" />
+                          </svg>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
-            {/* Motivo de "no aplica": opcional, editable aquí (texto o voz). */}
+            {/* Motivo de "no aplica" (borrador): opcional, texto o voz. */}
             {retirada && (
               <div className="mt-3 rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
-                {!editandoMotivo ? (
-                  <p className="text-[12.5px] text-dim">
-                    {item.no_aplica_motivo ? (
-                      <>
-                        No aplica porque: <span className="text-ink">{item.no_aplica_motivo}</span>{" "}
-                      </>
-                    ) : (
-                      <>Retirada, sin motivo anotado. </>
-                    )}
-                    <button
-                      onClick={() => {
-                        setMotivo(item.no_aplica_motivo ?? "");
-                        setEditandoMotivo(true);
-                      }}
-                      disabled={ocupado}
-                      className="font-semibold text-accent hover:underline disabled:opacity-50"
-                    >
-                      {item.no_aplica_motivo ? "cambiar" : "añadir motivo"}
-                    </button>
-                  </p>
-                ) : (
-                  <div>
-                    <p className="mb-2 text-[12.5px] text-dim">¿Por qué no aplica? Para tu propia memoria.</p>
-                    <CampoConVoz
-                      id={`motivo-${item.id}`}
-                      valor={motivo}
-                      onCambio={setMotivo}
-                      filas={2}
-                      placeholder="No corre para esta idea porque…"
-                    />
-                    <div className="mt-2 flex items-center gap-2.5">
-                      <button
-                        onClick={() => {
-                          onCambio({ no_aplica_motivo: motivo.trim() || null });
-                          setEditandoMotivo(false);
-                        }}
-                        disabled={ocupado}
-                        className="rounded-[9px] bg-accent px-3.5 py-1.5 text-[12.5px] font-semibold text-white hover:opacity-90 disabled:opacity-50"
-                      >
-                        Guardar
-                      </button>
-                      <button onClick={() => setEditandoMotivo(false)} className="text-[12.5px] text-dim hover:text-ink">
-                        cancelar
-                      </button>
-                    </div>
-                  </div>
-                )}
+                <p className="mb-2 text-[12.5px] text-dim">¿Por qué no aplica? Para tu propia memoria (opcional).</p>
+                <CampoConVoz
+                  id={`motivo-${item.id}`}
+                  valor={bMotivo}
+                  onCambio={setBMotivo}
+                  filas={2}
+                  placeholder="No corre para esta idea porque…"
+                />
               </div>
             )}
-            {/* Fecha de realización de un ítem YA hecho: editable, sin trampa.
-                El estado ya está comprometido; esto solo ajusta el "cuándo". */}
+            {/* Fecha de realización (borrador) al marcar hecha. */}
             {hecho && (
-              <div className="mt-3">
-                {!editandoFechaHecho ? (
-                  <p className="flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[12.5px]">
-                    <span className="text-done">
-                      {item.completed_at ? `Hecho el ${fechaHumana(item.completed_at)}` : "Hecho"}
-                    </span>
-                    <button
-                      onClick={() => setEditandoFechaHecho(true)}
-                      disabled={ocupado}
-                      className="font-medium text-accent hover:underline disabled:opacity-50"
-                    >
-                      cambiar fecha
-                    </button>
-                  </p>
-                ) : (
-                  <div className="flex flex-wrap items-center gap-2.5">
-                    <span className="text-[12.5px] text-dim">¿Cuándo lo hiciste?</span>
-                    <input
-                      type="date"
-                      max={hoyInput}
-                      defaultValue={item.completed_at ? fechaInputLocal(new Date(item.completed_at)) : hoyInput}
-                      onChange={(ev) => ev.target.value && marcarHecho(isoDesdeInputLocal(ev.target.value))}
-                      disabled={ocupado}
-                      aria-label="Cambiar la fecha en que lo hiciste"
-                      className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
-                    />
-                    <button onClick={() => setEditandoFechaHecho(false)} className="text-[12.5px] text-dim hover:text-ink">
-                      listo
-                    </button>
-                  </div>
-                )}
+              <div className="mt-3 flex flex-wrap items-center gap-2.5">
+                <span className="text-[12.5px] text-dim">¿Cuándo lo hiciste?</span>
+                <input
+                  type="date"
+                  max={hoyInput}
+                  value={bCompletado ? fechaInputLocal(new Date(bCompletado)) : hoyInput}
+                  onChange={(ev) => ev.target.value && setBCompletado(isoDesdeInputLocal(ev.target.value))}
+                  disabled={ocupado}
+                  aria-label="Cuándo lo hiciste"
+                  className="rounded-[9px] border border-hairline bg-surface px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
+                />
               </div>
             )}
           </div>
@@ -408,10 +382,7 @@ export function DetalleActividad({
             (el cambio de estado se aplica al instante, no necesita el pie). */}
         <footer className="flex items-center gap-3 border-t border-hairline px-5 py-4 sm:px-6">
           <button
-            onClick={() => {
-              if (notaCambiada) onCambio({ nota: nota.trim() || null });
-              onCerrar();
-            }}
+            onClick={guardar}
             disabled={ocupado}
             className="flex-1 rounded-[12px] bg-accent py-3 text-[14.5px] font-bold text-white hover:opacity-90 disabled:opacity-50"
           >
