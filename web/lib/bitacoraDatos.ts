@@ -46,7 +46,7 @@ export async function cargarEntradasBitacora(
 
   const { data: itemsRaw } = await supabase
     .from("checklist_items")
-    .select("id, texto, completed_at")
+    .select("id, texto, completed_at, dominio")
     .eq("project_id", projectId);
 
   let eventos: EventoBita[] = [];
@@ -66,10 +66,11 @@ export async function cargarEntradasBitacora(
     realizadaAt: proyecto.realizada_at ?? null,
     sesiones,
     planes,
-    items: ((itemsRaw ?? []) as Array<{ id: string; texto: string; completed_at: string | null }>).map((i) => ({
+    items: ((itemsRaw ?? []) as Array<{ id: string; texto: string; completed_at: string | null; dominio: string | null }>).map((i) => ({
       id: i.id,
       texto: i.texto,
       completed_at: i.completed_at,
+      dominio: i.dominio ?? null,
     })),
     eventos,
     nombreMundo,

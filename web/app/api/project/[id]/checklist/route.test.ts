@@ -214,4 +214,28 @@ describe("PATCH /api/project/[id]/checklist — sentido del tiempo (Fase 3.8)", 
     expect(b.tipo).toBe("nota_escrita");
     expect(JSON.stringify(b.payload)).not.toContain("proveedor");
   });
+
+  // Regla del fundador (ago 2026): la bitácora registra CAMBIOS REALES, no clics.
+  // Un PATCH que repite el mismo valor NO deja rastro.
+  it("repetir el MISMO estado no registra item_estado (clic sin cambio real)", async () => {
+    sembrarItem({ estado: "empezado" });
+    const antes = estadoFalso.bitacora.length;
+    await PATCH(req({ item_id: "it1", estado: "empezado" }), PARAMS);
+    expect(estadoFalso.bitacora.length).toBe(antes);
+  });
+
+  it("repetir la MISMA nota no registra nota_escrita otra vez", async () => {
+    sembrarItem();
+    await PATCH(req({ item_id: "it1", nota: "recordar algo" }), PARAMS); // 1.ª vez: sí registra
+    const antes = estadoFalso.bitacora.length;
+    await PATCH(req({ item_id: "it1", nota: "recordar algo" }), PARAMS); // misma nota
+    expect(estadoFalso.bitacora.length).toBe(antes);
+  });
+
+  it("guardar una nota VACÍA sobre algo sin nota no registra nada", async () => {
+    sembrarItem();
+    const antes = estadoFalso.bitacora.length;
+    await PATCH(req({ item_id: "it1", nota: "" }), PARAMS);
+    expect(estadoFalso.bitacora.length).toBe(antes);
+  });
 });
