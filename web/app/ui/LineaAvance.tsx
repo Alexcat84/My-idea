@@ -2,16 +2,19 @@
 
 /**
  * LineaAvance — campaña "Espacios", la cara "Tu avance". CALCO del riel de hitos
- * de La Celebración (docs/diseno-canon/09_la_celebracion.html), estático salvo el
- * LATIDO de la punta viva. Reglas del fundador:
- *  - El riel se dibuja POR TRAMOS y NUNCA pasa del último punto alcanzado.
+ * de La Celebración (docs/diseno-canon/09_la_celebracion.html). Reglas del fundador:
+ *  - UNA línea CONTINUA (no por tramos: los tramos por fila no empalmaban).
+ *  - La línea NUNCA pasa del último punto alcanzado: se mide del primer nodo al
+ *    último nodo vivo (o a la meta si hay cierre real) y termina ahí.
  *  - La PUNTA VIVA (el último punto, dónde vas ahora) LATE; si aparece otro
  *    punto, el latido pasa a ese.
  *  - El CIERRE (la meta) solo aparece cuando hay cierre REAL, nunca antes.
- * Eje central (a la izquierda en móvil), hitos alternando lados, nodos que toman
- * el color a su altura (azul del pensar → verde del ejecutar). Lo más importante
- * (los hitos), no cada acción.
+ * Se mide con getBoundingClientRect (como el knob del selector) para ser robusto
+ * a alturas de fila variables. Eje central (a la izquierda en móvil), hitos
+ * alternando lados, nodos que toman el color a su altura (azul del pensar → verde
+ * del ejecutar). Lo más importante (los hitos), no cada acción.
  */
+import { useEffect, useRef, useState } from "react";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import type { HitoEspacio, TipoHito } from "@/lib/hitosEspacio";
 
@@ -27,11 +30,6 @@ function colorNodo(tipo: TipoHito): string {
   if (tipo === "plan") return MEDIO;
   return AZUL; // chispa, claridad, diagnostico
 }
-function colorTraza(tipo: TipoHito): string {
-  if (tipo === "cierre") return VERDE_T;
-  if (tipo === "plan") return MEDIO_T;
-  return AZUL_T;
-}
 
 export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
   const cierre = hitos.at(-1);
@@ -41,32 +39,78 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
   // termina el riel y ahí late).
   const vivaIndex = cerrado ? -1 : arranques.length - 1;
 
+  const contRef = useRef<HTMLDivElement | null>(null);
+  const primeraRef = useRef<HTMLSpanElement | null>(null);
+  const ultimaRef = useRef<HTMLSpanElement | null>(null);
+  const [linea, setLinea] = useState<{ top: number; height: number } | null>(null);
+
+  useEffect(() => {
+    const c = contRef.current;
+    if (!c) return;
+    const medir = () => {
+      const a = primeraRef.current;
+      const b = ultimaRef.current;
+      if (!a || !b) {
+        setLinea(null);
+        return;
+      }
+      const rc = c.getBoundingClientRect();
+      const ra = a.getBoundingClientRect();
+      const rb = b.getBoundingClientRect();
+      const top = ra.top + ra.height / 2 - rc.top;
+      const bottom = rb.top + rb.height / 2 - rc.top;
+      setLinea({ top, height: Math.max(0, bottom - top) });
+    };
+    medir();
+    // Auto-ajustable a CUALQUIER cambio de alto: puntos nuevos, reflujo por
+    // carga de fuente, cambio de ancho del contenedor sin resize de ventana...
+    // La línea es absoluta, no altera el alto del contenedor, así que observarlo
+    // no crea bucle. (Se conserva el listener de resize por si acaso.)
+    const ro = new ResizeObserver(medir);
+    ro.observe(c);
+    window.addEventListener("resize", medir);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", medir);
+    };
+  }, [hitos, cerrado]);
+
   return (
     <div className="anima-plan-in">
       <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tu avance</p>
       <p className="mb-8 mt-1 text-[13px] leading-relaxed text-dim">Del inicio a donde vas, los hitos de este espacio.</p>
 
-      <div className="relative mx-auto max-w-[620px]">
+      <div ref={contRef} className="relative mx-auto max-w-[620px]">
+        {/* la línea CONTINUA, del primer hito al último alcanzado (nunca más allá) */}
+        {linea && linea.height > 0 && (
+          <span
+            aria-hidden
+            className="absolute left-5 w-[4px] -translate-x-1/2 rounded sm:left-1/2"
+            style={{
+              top: linea.top,
+              height: linea.height,
+              background: `linear-gradient(to bottom, ${AZUL_T}, ${MEDIO_T} 62%, ${VERDE_T})`,
+            }}
+          />
+        )}
+
         {arranques.map((h, i) => {
           const izq = i % 2 === 0;
           const color = colorNodo(h.tipo);
           const viva = i === vivaIndex;
-          // Dibuja el tramo hacia el siguiente nodo SALVO que sea el último punto
-          // actual sin cierre real: el riel nunca pasa del último punto.
-          const dibujaTramo = i < arranques.length - 1 || cerrado;
-          const colorNext = i < arranques.length - 1 ? colorTraza(arranques[i + 1].tipo) : VERDE_T;
+          const esUltima = !cerrado && i === arranques.length - 1;
           return (
             <div key={i} className="grid grid-cols-[40px_1fr] pb-8 sm:grid-cols-[1fr_4px_1fr] sm:gap-x-7">
               <div className="relative col-start-1 sm:col-start-2">
-                {dibujaTramo && (
-                  <span
-                    aria-hidden
-                    className="absolute left-5 w-[4px] -translate-x-1/2 rounded sm:left-1/2"
-                    style={{ top: 13, bottom: -45, background: `linear-gradient(to bottom, ${colorTraza(h.tipo)}, ${colorNext})` }}
-                  />
-                )}
                 <span
-                  className={"absolute left-5 top-[7px] h-[13px] w-[13px] -translate-x-1/2 rounded-full sm:left-1/2 " + (viva ? "anima-halo-viva" : "")}
+                  ref={(el) => {
+                    if (i === 0) primeraRef.current = el;
+                    if (esUltima) ultimaRef.current = el;
+                  }}
+                  className={
+                    "absolute left-5 top-[7px] z-[1] h-[13px] w-[13px] -translate-x-1/2 rounded-full sm:left-1/2 " +
+                    (viva ? "anima-halo-viva" : "")
+                  }
                   style={viva ? { background: color } : { background: color, boxShadow: "0 0 0 4px var(--bg)" }}
                 />
               </div>
@@ -88,7 +132,10 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
         {cerrado && cierre && (
           <div className="relative pt-1">
             <span
-              className="absolute left-5 top-1 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full text-[17px] leading-none sm:left-1/2"
+              ref={(el) => {
+                ultimaRef.current = el;
+              }}
+              className="absolute left-5 top-1 z-[1] flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full text-[17px] leading-none sm:left-1/2"
               style={{ background: "var(--bg)", border: `2.5px solid ${VERDE}`, boxShadow: "0 0 0 5px var(--bg), 0 0 0 12px rgba(63,185,80,0.22)" }}
             >
               🎉
