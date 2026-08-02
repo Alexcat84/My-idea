@@ -210,11 +210,12 @@ export function PlanDocumento({
         </div>
       )}
 
-      {/* barras-topic (acordeones): los topics primero, primera abierta */}
+      {/* barras-topic (acordeones): TODAS colapsadas en la primera vista
+          (decisión del fundador: nunca desplegado; el lector abre la que quiere). */}
       <div className="mt-6 flex flex-col gap-3">
         {plan.secciones.map((s, i) => (
           <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
-            <BarraTopic s={s} abierta={i === 0} />
+            <BarraTopic s={s} />
           </div>
         ))}
       </div>
