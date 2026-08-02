@@ -942,6 +942,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
               realizadaAt={realizadaAt}
             />
           </>
+        ) : vistaManos || vistaMundo ? (
+          // Campaña "Espacios": Manos/Mundo ya está pedido pero planMd/checklist
+          // aún cargan. NO caer a la vista del plan como fallback: eso causaba el
+          // parpadeo plan→Manos al abrir una idea. Un placeholder discreto hasta
+          // que la vista real esté lista.
+          <p className="px-1 py-20 text-dim">Cargando tu espacio…</p>
         ) : (
           // Fase 4.3.2: el riel pasa de 190px a 260px — a 190 las etiquetas del
           // recorrido se cortaban ("Identifica tus Supue…"); hay espacio de
