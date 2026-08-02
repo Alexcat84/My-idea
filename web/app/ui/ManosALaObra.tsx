@@ -1409,10 +1409,19 @@ export function ManosALaObra({
           const c = conteo(items);
           const titulosMundo = mundo.plan ? titulosDeEtapas(mundo.plan.contenido_md) : {};
           const completado = Boolean(mundo.completadoAt);
+          // En SU hub (soloMundo === este dominio) la sección es la PANTALLA
+          // entera: sin marco de tarjeta y con el nombre como título grande.
+          // Apilada bajo el core, conserva su tarjeta para separarse del resto.
+          const esHub = soloMundo === mundo.dominio;
           return (
-            <section key={mundo.dominio} className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
+            <section
+              key={mundo.dominio}
+              className={esHub ? "anima-plan-in" : "rounded-panel border border-hairline bg-surface p-5 sm:p-6"}
+            >
               <div className="flex flex-wrap items-center gap-3">
-                <h3 className="text-base font-semibold">{mundo.nombre}</h3>
+                <h3 className={esHub ? "text-2xl font-bold tracking-tight sm:text-[26px]" : "text-base font-semibold"}>
+                  {mundo.nombre}
+                </h3>
                 {/* Fase 4.2: el chip del mundo completado. Distingue por FORMA
                     (el check) además de por color, como el resto del canon. */}
                 {completado ? (
@@ -1488,6 +1497,14 @@ export function ManosALaObra({
                 </div>
               ) : (
                 <div className="mt-4">
+                  {/* En el hub, el precio del plan al frente y EN GRANDE; el
+                      diagnóstico es la rampa gratis. Apilado, la nota compacta. */}
+                  {esHub && (
+                    <p className="mb-3 text-[13.5px] leading-relaxed text-dim">
+                      Empieza con un diagnóstico <span className="font-semibold text-done">gratis</span>. Su plan cuesta{" "}
+                      <span className="text-xl font-bold text-ink tabular-nums">{PRECIOS.mundo_activar}</span> créditos.
+                    </p>
+                  )}
                   <button
                     onClick={() => arrancarMundo(mundo.dominio)}
                     disabled={arrancandoMundo !== null}
@@ -1495,10 +1512,11 @@ export function ManosALaObra({
                   >
                     {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo"}
                   </button>
-                  {/* El diagnóstico es la RAMPA gratis; el precio del plan, al frente. */}
-                  <p className="mt-2 text-[12.5px] text-dim">
-                    Empieza con un diagnóstico gratis · su plan: {PRECIOS.mundo_activar} créditos
-                  </p>
+                  {!esHub && (
+                    <p className="mt-2 text-[12.5px] text-dim">
+                      Empieza con un diagnóstico gratis · su plan: {PRECIOS.mundo_activar} créditos
+                    </p>
+                  )}
                 </div>
               )}
 

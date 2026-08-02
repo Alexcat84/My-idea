@@ -6,6 +6,8 @@
 //   beta_fila_*        la fila de potenciadores con precios vivos ("su plan: 5 creditos")
 //   beta_ideas_chip_*  /ideas con el chip de saldo del dev user
 //   beta_creditos_*    /creditos: 4 packs "alcanza para" + "lo que cuesta cada cosa"
+//   espacios_core_manos_*  core Manos con el CAMBIADOR de tabs (Tu viaje | Calidad | +)
+//   espacios_hub_mundo_*   el HUB de un mundo (sin explorar, precio al frente)
 //
 // Uso: con `pnpm dev` en :3000,  npx tsx scripts/gate_beta.ts
 import { chromium, type Page } from "playwright";
@@ -62,15 +64,29 @@ async function main() {
     .insert({ project_id: pid, user_id: dev.id, session_position: 1, tipo: "inicial", mensaje_entrada: "gate", dominio: "core", closed_at: new Date().toISOString() })
     .select("id")
     .single();
-  await admin.from("plans").insert({
-    session_id: (s as { id: string }).id,
-    user_id: dev.id,
-    etiqueta: "completo",
-    dominio: "core",
-    contenido_md: "# Velas de soya: de tus conocidos al mercado real\n## Etapa 1: valida\nMaterial del gate.\n**Esta semana:** habla con un desconocido.",
-    conceptos_usados: 5,
-    familias_cubiertas: ["general"],
-  });
+  const { data: planCore } = await admin
+    .from("plans")
+    .insert({
+      session_id: (s as { id: string }).id,
+      user_id: dev.id,
+      etiqueta: "completo",
+      dominio: "core",
+      contenido_md: "# Velas de soya: de tus conocidos al mercado real\n## Etapa 1: valida\nMaterial del gate.\n**Esta semana:** habla con un desconocido.",
+      conceptos_usados: 5,
+      familias_cubiertas: ["general"],
+    })
+    .select("id")
+    .single();
+  const planId = (planCore as { id: string }).id;
+  // Checklist core (para que Manos a la Obra pinte de verdad, no el vacío).
+  await admin.from("checklist_items").insert([
+    { project_id: pid, plan_id: planId, dominio: "core", etapa: 1, orden: 1, texto: "Habla con un desconocido de tu producto.", destacado: true },
+    { project_id: pid, plan_id: planId, dominio: "core", etapa: 1, orden: 2, texto: "Anota qué precio te aceptan sin dudar." },
+    { project_id: pid, plan_id: planId, dominio: "core", etapa: 2, orden: 1, texto: "Prepara diez velas para la próxima feria." },
+  ]);
+  // Campaña "Espacios": un mundo ACTIVO (sin explorar aún) dispara el cambiador
+  // de tabs y su hub. quality es válido en el CHECK de project_unlocks (016).
+  await admin.from("project_unlocks").insert({ project_id: pid, dominio: "quality" });
 
   const browser = await chromium.launch();
   const context = await browser.newContext({ viewport: VP_ESCRITORIO, deviceScaleFactor: 1 });
@@ -95,11 +111,17 @@ async function main() {
 
     console.log("[centro de creditos: packs 'alcanza para' + lo que cuesta cada cosa]");
     await capturarDos(app, `${BASE_URL}/creditos`, "Lo que cuesta cada cosa", "beta_creditos");
+
+    console.log("[Espacios: core Manos con el cambiador de tabs (Tu viaje | Calidad | +)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=manos`, "Tu viaje", "espacios_core_manos");
+
+    console.log("[Espacios: hub del mundo (sin explorar, precio al frente)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality`, "Explorar este mundo", "espacios_hub_mundo");
   } finally {
     await browser.close();
     await admin.from("projects").delete().eq("id", pid);
   }
-  console.log("\nGATE DE LA BETA: compuerta + precios vivos + chip + centro de creditos capturados (2 viewports).");
+  console.log("\nGATE DE LA BETA: compuerta + precios vivos + chip + centro de creditos + cambiador/hub de Espacios capturados (2 viewports).");
 }
 
 main().catch((e) => {

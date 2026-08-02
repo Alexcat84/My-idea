@@ -29,6 +29,7 @@ import { PlanDocumento } from "../../ui/PlanDocumento";
 import { ChipSaldo } from "../../ui/ChipSaldo";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
+import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import { PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
@@ -837,9 +838,23 @@ export function IdeaView({ projectId }: { projectId: string }) {
           />
         ) : (vistaManos || vistaMundo) && planMd && checklist ? (
           <>
-            <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
-              {vistaMundo ? "← Volver al viaje" : "← Ver el plan"}
-            </button>
+            {/* Campaña "Espacios": el cambiador de tabs (ruido cero: solo cuando
+                hay al menos un mundo activo; un proyecto solo-core conserva su
+                "Ver el plan"). "Tu viaje" (core) · cada mundo por su nombre de
+                cara · "+" (a la fila). Salta entre espacios en un clic. */}
+            {mundosParaObra.length > 0 ? (
+              <CambiadorEspacios
+                activo={vistaMundo && hubDominio ? hubDominio : "core"}
+                mundos={mundosParaObra.map((m) => ({ dominio: m.dominio, nombre: m.nombre }))}
+                onIrCore={irAManos}
+                onIrMundo={irAMundo}
+                onMas={volverAlViaje}
+              />
+            ) : (
+              <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
+                ← Ver el plan
+              </button>
+            )}
             <ManosALaObra
               projectId={projectId}
               planMd={planMd}
