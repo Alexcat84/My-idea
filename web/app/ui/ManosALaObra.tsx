@@ -411,14 +411,10 @@ function GrupoEtapas({
   /** Fase 4.3.2: abrir el detalle de un ítem, con el título de SU etapa. */
   onAbrirDetalle: (item: ItemChecklistUI, tituloEtapa: string) => void;
 }) {
-  // La primera etapa con pendientes queda abierta; las demás, plegadas.
-  const primeraActiva = grupo.etapas.find((e) => e.items.some((i) => i.estado !== "hecho"))?.etapa;
   return (
     <div className="flex flex-col gap-5">
       {grupo.etapas.map(({ etapa, items }) => {
         const c = conteo(items);
-        // Abiertas hasta la primera etapa con pendientes; las siguientes, plegadas.
-        const abierta = primeraActiva === undefined || etapa <= primeraActiva;
         // El nombre puede envolver; el conteo va en `extra` (columna derecha,
         // junto al chevron) para que TODOS queden alineados, no empujados por el
         // largo del título. tabular-nums para que las cifras no bailen.
@@ -433,11 +429,11 @@ function GrupoEtapas({
             {c.hechos}/{c.total}
           </span>
         );
-        // HOMOGÉNEO: toda etapa es un acordeón (con su chevron). Las que están
-        // hasta la primera activa abren por defecto; las demás, plegadas. Antes
-        // las primeras eran secciones planas sin chevron y rompían la simetría.
+        // HOMOGÉNEO: toda etapa es un acordeón (con su chevron). Decisión del
+        // fundador: la primera vista SIEMPRE colapsada — ninguna etapa abre
+        // sola; el lector despliega la que quiere trabajar.
         return (
-          <Acordeon key={etapa} titulo={encabezado} abierto={abierta} extra={conteoEtapa} variante="etapa">
+          <Acordeon key={etapa} titulo={encabezado} abierto={false} extra={conteoEtapa} variante="etapa">
             <div className="flex flex-col gap-2.5">
               {items.map((item) => (
                 <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
@@ -1372,6 +1368,15 @@ export function ManosALaObra({
           </div>
         )}
 
+        {/* MOD 3 (el plan dentro de su espacio): el documento del PLAN del core,
+            colapsado. Así el usuario ve su plan aquí mismo, no solo el Manos a
+            la Obra. La progresión del espacio: idea → plan → manos a la obra. */}
+        {planMd && (
+          <Acordeon titulo="Tu plan">
+            <PlanDocumento md={planMd} nombreIdea={tituloPlan ?? "Tu plan"} />
+          </Acordeon>
+        )}
+
         {/* checklist maestro: viaje core. El rótulo solo desambigua cuando hay
             mundos VISIBLES apilados debajo (comportamiento histórico); en el
             core-solo de su hub no hay mundos abajo, así que no aparece. */}
@@ -1466,7 +1471,20 @@ export function ManosALaObra({
               </div>
 
               {grupo ? (
-                <div className="mt-4">
+                <div className="mt-4 flex flex-col gap-3">
+                  {/* MOD 3: dentro del espacio del mundo, su progresión completa,
+                      colapsada: su diagnóstico (la entrevista) y su plan, y debajo
+                      sus tareas. No solo el Manos a la Obra. */}
+                  {mundo.resumenMd && (
+                    <Acordeon titulo="Tu diagnóstico">
+                      <Markdown>{mundo.resumenMd}</Markdown>
+                    </Acordeon>
+                  )}
+                  {mundo.plan && (
+                    <Acordeon titulo={`El plan de ${mundo.nombre}`}>
+                      <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
+                    </Acordeon>
+                  )}
                   <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                 </div>
               ) : mundo.resumenMd && !mundo.plan ? (
