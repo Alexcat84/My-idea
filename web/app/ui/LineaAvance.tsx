@@ -1,13 +1,13 @@
 "use client";
 
 /**
- * LineaAvance — campaña "Espacios", la cara "Tu avance": un TIMELINE VERTICAL
- * visual de los hitos reales del espacio (de hitosEspacio.ts). Mismo lenguaje
- * que la Celebración (eje + barra azul→verde que sube, nodos sobre el eje, un
- * anillo mayor en el cierre), pero ESTÁTICO — la animación con constelación y
- * pulso es de la Celebración grande, del PROYECTO. Ley de color: el azul piensa
- * (arranque: chispa/claridad/plan/diagnóstico), el verde ejecuta (acciones y
- * cierre alcanzado); el cierre pendiente, hueco gris. Cero estadística.
+ * LineaAvance — campaña "Espacios", la cara "Tu avance". CALCO del timeline
+ * vertical de La Celebración (docs/diseno-canon/09_la_celebracion.html): eje
+ * central con degradado azul→verde, filas que ALTERNAN lados (izq/der en
+ * escritorio; todo a la derecha del eje en móvil), nodos sobre el eje, y una
+ * DIANA para el cierre. ESTÁTICO (sin la animación de dibujarse: esa es la
+ * Celebración grande, del proyecto). Muestra LO MÁS IMPORTANTE (los hitos), no
+ * cada acción (eso es el Manos a la obra / la bitácora). Cero estadística.
  */
 import { fechaHumanaCorta } from "@/lib/fechas";
 import type { HitoEspacio } from "@/lib/hitosEspacio";
@@ -15,84 +15,74 @@ import type { HitoEspacio } from "@/lib/hitosEspacio";
 const AZUL = "#4D7CFE";
 const VERDE = "#3FB950";
 
-function colorNodo(h: HitoEspacio): string {
-  if (!h.alcanzado) return "";
-  // Arranque = azul (piensa); acción y cierre = verde (ejecuta/celebra).
-  return h.tipo === "accion" || h.tipo === "cierre" ? VERDE : AZUL;
-}
-
 export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
+  // El último hito es el cierre (la diana final); el resto, los arranques.
+  const cierre = hitos.at(-1);
+  const arranques = hitos.slice(0, -1);
   const total = hitos.length;
   const alcanzados = hitos.filter((h) => h.alcanzado).length;
-  const pct = total > 1 ? (alcanzados - 1) / (total - 1) : alcanzados > 0 ? 1 : 0;
+  const pct = total > 1 ? Math.round(((alcanzados - 1) / (total - 1)) * 100) : 0;
 
   return (
     <div className="anima-plan-in">
-      <div className="mb-6 flex items-baseline justify-between gap-3">
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tu avance</p>
-          <p className="mt-1 text-[13px] leading-relaxed text-dim">Del inicio al cierre, los hitos que has alcanzado.</p>
-        </div>
-        <span className="shrink-0 text-[13px] font-semibold tabular-nums text-done">
-          {alcanzados}/{total}
-        </span>
-      </div>
+      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tu avance</p>
+      <p className="mb-7 mt-1 text-[13px] leading-relaxed text-dim">Del inicio al cierre, los hitos de este espacio.</p>
 
-      <div className="relative py-1">
-        {/* el eje: pista hairline + barra azul→verde que sube hasta lo alcanzado */}
-        <span className="absolute bottom-3 left-[9px] top-3 w-[2px] rounded bg-hairline" />
+      <div className="relative">
+        {/* el eje: pista hairline + degradado azul→verde hasta lo alcanzado.
+            Central en escritorio (left-1/2), a la izquierda en móvil (20px). */}
+        <span className="absolute bottom-0 left-5 top-1 w-[3px] -translate-x-1/2 rounded bg-hairline sm:left-1/2" />
         <span
-          className="absolute left-[9px] top-3 w-[2px] rounded bg-gradient-to-b from-accent to-done transition-[height] duration-500 ease-out"
-          style={{ height: `calc(${Math.round(pct * 100)}% - 24px)` }}
+          className="absolute left-5 top-1 w-[3px] -translate-x-1/2 rounded sm:left-1/2"
+          style={{ height: `${pct}%`, background: `linear-gradient(180deg, ${AZUL}, ${VERDE})` }}
         />
 
-        <ol className="flex flex-col gap-6">
-          {hitos.map((h, i) => {
-            const cierre = h.tipo === "cierre";
-            const color = colorNodo(h);
+        {/* los arranques: filas alternando lado */}
+        <div className="flex flex-col gap-[26px] sm:gap-[34px]">
+          {arranques.map((h, i) => {
+            const izq = i % 2 === 0;
             return (
-              <li key={i} className="grid grid-cols-[20px_1fr] gap-4">
-                {/* el nodo sobre el eje: anillo mayor en el cierre; punto en el resto */}
-                <span className="relative flex justify-center pt-0.5">
-                  {cierre ? (
-                    <span
-                      className={
-                        "z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 " +
-                        (h.alcanzado ? "bg-black" : "border-hairline bg-bg")
-                      }
-                      style={h.alcanzado ? { borderColor: VERDE } : undefined}
-                    >
-                      {h.alcanzado && <span className="h-2 w-2 rounded-full" style={{ background: VERDE }} />}
-                    </span>
-                  ) : (
-                    <span className="z-10 mt-1 h-3 w-3 rounded-full ring-4 ring-bg" style={{ background: color }} />
-                  )}
-                </span>
-
-                {/* contenido: fecha + etiqueta del hito */}
-                <div className={cierre && !h.alcanzado ? "opacity-70" : ""}>
-                  {h.fecha ? (
-                    <p className="text-[12px] text-dim">{fechaHumanaCorta(h.fecha)}</p>
-                  ) : (
-                    <p className="text-[12px] text-dim/70">tu próxima meta</p>
-                  )}
-                  <p
-                    className={
-                      "mt-0.5 leading-snug [text-wrap:pretty] " +
-                      (cierre && h.alcanzado
-                        ? "text-[15px] font-bold uppercase tracking-wide text-done"
-                        : h.alcanzado
-                          ? "text-[14.5px] font-medium text-ink"
-                          : "text-[14.5px] font-medium text-dim")
-                    }
-                  >
-                    {h.etiqueta}
-                  </p>
+              <div key={i} className="grid grid-cols-[40px_1fr] items-start sm:grid-cols-[1fr_44px_1fr]">
+                <div className="col-start-1 flex justify-center pt-1 sm:col-start-2">
+                  <span
+                    className="h-[13px] w-[13px] rounded-full border-[3px] border-black"
+                    style={{ background: h.alcanzado ? AZUL : "transparent", borderColor: h.alcanzado ? "#000" : undefined }}
+                  />
                 </div>
-              </li>
+                <div
+                  className={
+                    "col-start-2 " +
+                    (izq ? "sm:col-start-1 sm:pr-4 sm:text-right" : "sm:col-start-3 sm:pl-4 sm:text-left")
+                  }
+                >
+                  {h.fecha && <p className="text-[12.5px] text-dim">{fechaHumanaCorta(h.fecha)}</p>}
+                  <p className="text-[16px] font-bold leading-[1.4] [text-wrap:pretty]">{h.etiqueta}</p>
+                  {h.subtitulo && <p className="mt-1 text-[13px] leading-snug text-dim">{h.subtitulo}</p>}
+                </div>
+              </div>
             );
           })}
-        </ol>
+        </div>
+
+        {/* la diana del cierre: verde con brillo si ya cerró; hueca gris si falta */}
+        {cierre && (
+          <div className="mt-[26px] flex flex-col items-start pl-[7px] sm:mt-[34px] sm:items-center sm:pl-0">
+            <span
+              className="flex h-[30px] w-[30px] items-center justify-center rounded-full border-[3px]"
+              style={
+                cierre.alcanzado
+                  ? { borderColor: VERDE, boxShadow: "0 0 20px rgba(63,185,80,0.35)" }
+                  : { borderColor: "rgba(255,255,255,0.18)" }
+              }
+            >
+              {cierre.alcanzado && <span className="h-3 w-3 rounded-full" style={{ background: VERDE }} />}
+            </span>
+            <p className={"mt-3 text-[15px] font-extrabold uppercase tracking-[1.5px] " + (cierre.alcanzado ? "text-done" : "text-dim")}>
+              {cierre.etiqueta}
+            </p>
+            {cierre.subtitulo && <p className="mt-1.5 text-[13px] text-dim sm:text-center">{cierre.subtitulo}</p>}
+          </div>
+        )}
       </div>
     </div>
   );

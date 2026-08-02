@@ -1036,7 +1036,6 @@ export function ManosALaObra({
     claridadAt: organizadorAt,
     planAt: planCreatedAt,
     realizadaAt,
-    items: itemsCore.map((i) => ({ texto: i.texto, completedAt: i.completed_at ?? null })),
   });
   // Fase 3.8: la baseline está confirmada si algún ítem core ya tiene fecha.
   // Fase 4.1 (V3a): el ritual cubre el proyecto ENTERO. Cada tramo lleva su
@@ -1564,7 +1563,6 @@ export function ManosALaObra({
                             diagnosticoAt: mundo.resumenAt,
                             planAt: mundo.plan?.created_at,
                             cerradoAt: mundo.completadoAt,
-                            items: items.map((i) => ({ texto: i.texto, completedAt: i.completed_at ?? null })),
                           })}
                         />
                       </div>
