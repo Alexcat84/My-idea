@@ -27,6 +27,9 @@ import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInp
 import { Markdown } from "./Markdown";
 import { PRECIOS } from "@/lib/precios";
 import { ESPACIO_CORE, mundosDelEspacio } from "@/lib/espacios";
+import { hitosDeEspacio } from "@/lib/hitosEspacio";
+import { SelectorCara, type Cara } from "./SelectorCara";
+import { LineaAvance } from "./LineaAvance";
 import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
@@ -161,6 +164,15 @@ interface Props {
    * (los mundos viven en su hub). Un dominio de mundo → solo la sección de ESE
    * mundo (su hub). */
   soloDominio?: string;
+  /** Campaña "Espacios": la cara activa del espacio (Plan · Manos a la obra ·
+   * Tu avance). Deep-linkeable: nace de ?cara= y se refleja de vuelta. La cara
+   * "manos" es el comportamiento actual (aditivo). */
+  caraInicial?: Cara;
+  onCaraCambio?: (c: string) => void;
+  /** Fechas para la cara "Tu avance" del CORE (los del mundo viajan en `mundos`). */
+  proyectoCreatedAt?: string | null; // La Chispa
+  organizadorAt?: string | null; // Claridad
+  realizadaAt?: string | null; // Realizada
 }
 
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
@@ -851,6 +863,32 @@ function RitualFechas({
   );
 }
 
+/** Los iconos de las tres caras del espacio (para el selector segmentado). */
+function IconoCara({ cara }: { cara: Cara }) {
+  const p = { stroke: "currentColor", strokeWidth: 1.6, fill: "none" as const, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  return (
+    <svg width="15" height="15" viewBox="0 0 20 20" aria-hidden>
+      {cara === "plan" ? (
+        <>
+          <rect x="4" y="3" width="12" height="14" rx="1.5" {...p} />
+          <line x1="7" y1="7" x2="13" y2="7" {...p} />
+          <line x1="7" y1="10" x2="13" y2="10" {...p} />
+          <line x1="7" y1="13" x2="11" y2="13" {...p} />
+        </>
+      ) : cara === "manos" ? (
+        <path d="M4 10.5l3 3 9-9" {...p} strokeWidth={2} />
+      ) : (
+        <>
+          <line x1="3" y1="10" x2="17" y2="10" {...p} />
+          <circle cx="5" cy="10" r="1.7" fill="currentColor" stroke="none" />
+          <circle cx="10" cy="10" r="1.7" fill="currentColor" stroke="none" />
+          <circle cx="15" cy="10" r="1.5" {...p} strokeWidth={1.4} />
+        </>
+      )}
+    </svg>
+  );
+}
+
 export function ManosALaObra({
   projectId,
   planMd,
@@ -874,6 +912,11 @@ export function ManosALaObra({
   onMundoIniciado,
   onComprarPlanMundo,
   soloDominio,
+  caraInicial,
+  onCaraCambio,
+  proyectoCreatedAt,
+  organizadorAt,
+  realizadaAt,
 }: Props) {
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
@@ -972,6 +1015,29 @@ export function ManosALaObra({
   const soloMundo = soloDominio && soloDominio !== ESPACIO_CORE ? soloDominio : null;
   const mostrarCore = !soloMundo;
   const mundosVisibles = mundosDelEspacio(mundos, soloDominio);
+
+  // Campaña "Espacios": la cara activa (Plan · Manos a la obra · Tu avance). La
+  // cara "manos" es el comportamiento actual (aditivo). El core la muestra en su
+  // espacio; un mundo, solo cuando ya tiene plan (grupo). La URL la persiste.
+  const [cara, setCara] = useState<Cara>(caraInicial ?? "manos");
+  const cambiarCara = (c: Cara) => {
+    setCara(c);
+    onCaraCambio?.(c);
+  };
+  const coreEnEspacio = mostrarCore && soloDominio === ESPACIO_CORE;
+  const opcionesCara: { id: Cara; nombre: string; icono: ReactNode }[] = [
+    { id: "plan", nombre: "Plan", icono: <IconoCara cara="plan" /> },
+    { id: "manos", nombre: "Manos a la obra", icono: <IconoCara cara="manos" /> },
+    { id: "avance", nombre: "Tu avance", icono: <IconoCara cara="avance" /> },
+  ];
+  const hitosCore = hitosDeEspacio({
+    espacio: "core",
+    chispaAt: proyectoCreatedAt,
+    claridadAt: organizadorAt,
+    planAt: planCreatedAt,
+    realizadaAt,
+    items: itemsCore.map((i) => ({ texto: i.texto, completedAt: i.completed_at ?? null })),
+  });
   // Fase 3.8: la baseline está confirmada si algún ítem core ya tiene fecha.
   // Fase 4.1 (V3a): el ritual cubre el proyecto ENTERO. Cada tramo lleva su
   // propio ancla (el created_at del plan de SU dominio) y sus propios titulos
@@ -1280,6 +1346,15 @@ export function ManosALaObra({
 
         {mostrarCore && (
           <>
+        {/* Campaña "Espacios": el selector segmentado de las tres caras del core.
+            La cara "manos" (default) es el comportamiento actual (aditivo). */}
+        {coreEnEspacio && <SelectorCara valor={cara} onCambio={cambiarCara} opciones={opcionesCara} />}
+        {coreEnEspacio && cara === "plan" && planMd && (
+          <PlanDocumento md={planMd} nombreIdea={tituloPlan ?? "Tu plan"} />
+        )}
+        {coreEnEspacio && cara === "avance" && <LineaAvance hitos={hitosCore} />}
+        {(!coreEnEspacio || cara === "manos") && (
+          <>
         {/* Fase 3.8 §3 — la elección del modo: primera entrada (modoCamino null)
             o cuando el usuario toca "cambiar". */}
         {(modoCamino === null || mostrarSelectorModo) && (
@@ -1368,15 +1443,6 @@ export function ManosALaObra({
           </div>
         )}
 
-        {/* MOD 3 (el plan dentro de su espacio): el documento del PLAN del core,
-            colapsado. Así el usuario ve su plan aquí mismo, no solo el Manos a
-            la Obra. La progresión del espacio: idea → plan → manos a la obra. */}
-        {planMd && (
-          <Acordeon titulo="Tu plan">
-            <PlanDocumento md={planMd} nombreIdea={tituloPlan ?? "Tu plan"} />
-          </Acordeon>
-        )}
-
         {/* checklist maestro: viaje core. El rótulo solo desambigua cuando hay
             mundos VISIBLES apilados debajo (comportamiento histórico); en el
             core-solo de su hub no hay mundos abajo, así que no aparece. */}
@@ -1402,6 +1468,8 @@ export function ManosALaObra({
           <p className="text-sm text-dim">
             Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.
           </p>
+        )}
+          </>
         )}
           </>
         )}
@@ -1471,22 +1539,59 @@ export function ManosALaObra({
               </div>
 
               {grupo ? (
-                <div className="mt-4 flex flex-col gap-3">
-                  {/* MOD 3: dentro del espacio del mundo, su progresión completa,
-                      colapsada: su diagnóstico (la entrevista) y su plan, y debajo
-                      sus tareas. No solo el Manos a la Obra. */}
-                  {mundo.resumenMd && (
-                    <Acordeon titulo="Tu diagnóstico">
-                      <Markdown>{mundo.resumenMd}</Markdown>
-                    </Acordeon>
-                  )}
-                  {mundo.plan && (
-                    <Acordeon titulo={`El plan de ${mundo.nombre}`}>
-                      <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
-                    </Acordeon>
-                  )}
-                  <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
-                </div>
+                esHub ? (
+                  /* Campaña "Espacios": en su hub, el mundo tiene las TRES caras
+                     (selector segmentado). La cara "manos" es su checklist. */
+                  <div className="mt-4">
+                    <SelectorCara valor={cara} onCambio={cambiarCara} opciones={opcionesCara} />
+                    {cara === "plan" && (
+                      <div className="mt-4 flex flex-col gap-4">
+                        {mundo.resumenMd && (
+                          <div className="rounded-panel border border-accent/30 bg-accent/[0.04] p-5">
+                            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">Tu diagnóstico</p>
+                            <Markdown>{mundo.resumenMd}</Markdown>
+                          </div>
+                        )}
+                        {mundo.plan && <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />}
+                      </div>
+                    )}
+                    {cara === "avance" && (
+                      <div className="mt-4">
+                        <LineaAvance
+                          hitos={hitosDeEspacio({
+                            espacio: "mundo",
+                            nombre: mundo.nombre,
+                            diagnosticoAt: mundo.resumenAt,
+                            planAt: mundo.plan?.created_at,
+                            cerradoAt: mundo.completadoAt,
+                            items: items.map((i) => ({ texto: i.texto, completedAt: i.completed_at ?? null })),
+                          })}
+                        />
+                      </div>
+                    )}
+                    {cara === "manos" && (
+                      <div className="mt-4">
+                        <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  /* Modo apilado histórico (sin caras): diagnóstico + plan
+                     colapsados + checklist. */
+                  <div className="mt-4 flex flex-col gap-3">
+                    {mundo.resumenMd && (
+                      <Acordeon titulo="Tu diagnóstico">
+                        <Markdown>{mundo.resumenMd}</Markdown>
+                      </Acordeon>
+                    )}
+                    {mundo.plan && (
+                      <Acordeon titulo={`El plan de ${mundo.nombre}`}>
+                        <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
+                      </Acordeon>
+                    )}
+                    <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+                  </div>
+                )
               ) : mundo.resumenMd && !mundo.plan ? (
                 /* Fase 4.5: EL ESCAPARATE. El diagnóstico persiste y se relee;
                    la compra genera el plan desde la sesión del preview, sin
@@ -1539,8 +1644,9 @@ export function ManosALaObra({
               )}
 
               {/* Fase 4.2 §1 — el ritual de 3 tarjetas, TAMBIÉN aquí: un mundo
-                  es un subproyecto y tiene su propio ciclo de seguimiento. */}
-              {grupo && !completado && ritualMundo === mundo.dominio && (
+                  es un subproyecto y tiene su propio ciclo de seguimiento. En su
+                  hub vive en la cara "manos" (la ejecución). */}
+              {grupo && (!esHub || cara === "manos") && !completado && ritualMundo === mundo.dominio && (
                 <div className="mt-4">
                   <RitualContinuar
                     resumen={c}
@@ -1555,8 +1661,9 @@ export function ManosALaObra({
 
               {/* Fase 4.2 §2 — el cierre del mundo: el acta en miniatura. Sobrio
                   a propósito (§2: un momento, no la fiesta): la Celebración
-                  grande, con su constelación y su pulso, es del PROYECTO. */}
-              {grupo && (
+                  grande, con su constelación y su pulso, es del PROYECTO. En su
+                  hub vive en la cara "manos". */}
+              {grupo && (!esHub || cara === "manos") && (
                 <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-hairline pt-4">
                   {completado ? (
                     <>
@@ -1644,9 +1751,9 @@ export function ManosALaObra({
           );
         })}
 
-        {/* Historia: los planes anteriores del core, releíbles (la del mundo va
-            en su hub, Fase 3). */}
-        {mostrarCore && historial.length > 0 && (
+        {/* Historia: los planes anteriores del core, releíbles. Vive en la cara
+            "manos" (o en el modo apilado histórico, sin caras). */}
+        {mostrarCore && (!coreEnEspacio || cara === "manos") && historial.length > 0 && (
           <Acordeon titulo={`Historia (${historial.length})`}>
             <div className="flex flex-col gap-3">
               {historial.map((h, i) => (

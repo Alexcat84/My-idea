@@ -83,6 +83,7 @@ actual) para comparar contra el canon.
 - `docs/calibracion-design/BRIEF_PDF.md`
 - `docs/calibracion-design/BRIEF_CREDITOS.md` + `docs/ANALISIS_PRECIOS.md` (la spec §4)
 - `docs/calibracion-design/creditos_estado_actual.html` (estado actual del centro de créditos)
+- `docs/calibracion-design/BRIEF_ESPACIOS.md` (pestañas-fichero + hub + caras del espacio; capturas `espacios_*`)
 
 **El canon de referencia (la vara):**
 - Toda la carpeta `docs/diseno-canon/` (los `*.html` y `REGLAS_Y_TOKENS.md`).

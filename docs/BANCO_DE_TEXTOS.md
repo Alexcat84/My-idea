@@ -352,6 +352,29 @@ desconocer la razón.
   la puerta (beta por invitación); la maquinaria de cortesía queda dormida, no
   borrada, por si la cortesía PÚBLICA post-lanzamiento se decide con telemetría.
 
+- **Un proyecto, muchos espacios — cada espacio, un expediente de tres caras (ago 2026).**
+  Un proyecto = el viaje **core** ("Tu viaje") + sus **mundos**; cada uno es un ESPACIO
+  con operación propia, y se navega como **pestañas-fichero** (folders con icono +
+  nombre). Dentro de cada espacio, un **selector segmentado** (píldora) separa tres
+  CARAS y se ve **una a la vez**: **Plan** · **Manos a la obra** · **Tu avance**.
+  - **Regla global/específico:** *"lo que cuenta historia es global; lo que mide
+    operación es del espacio."* La bitácora, el expediente y la Celebración grande son
+    del proyecto; el plan, las tareas y la línea de avance son de cada espacio.
+  - **"Tu avance"** son los **hitos REALES** del espacio (de datos persistidos: inicio →
+    cada acción hecha → cierre), **no estadística** (las métricas viven en Análisis). El
+    core arranca en La Chispa → Claridad → Tu Plan; un mundo en su Diagnóstico → su Plan.
+  - **"Tu recorrido" queda reservado** al árbol de conceptos ("Construido con tu
+    recorrido"); la línea de hitos se llama **"Tu avance"** para no chocar.
+  - **El precio al frente sobre el gratis:** las tarjetas de mundo lideran con su precio
+    ("su plan: N créditos"); el diagnóstico es la **rampa gratis**, no el titular. Murió
+    "Explóralo gratis".
+  **Por qué:** antes todo se apilaba en una sola vista (scroll abrumador) y el clic en un
+  mundo caía en el core. Separar en espacios + caras da a cada idea/mundo su expediente
+  legible. **Qué NO cambia:** la cara "manos" es el comportamiento de siempre (aditivo);
+  cero migraciones (todo de datos ya persistidos); dos niveles de navegación horizontal
+  (pestañas de espacio vs. píldora de caras) **distinguibles por FORMA siempre**, también
+  a 380 (folder angular arriba, píldora redonda debajo).
+
 ## 8. FRASES DEL FUNDADOR (su voz, para cuando hable del producto)
 
 - "Una idea nace en un preciso momento; si no tienes tu teléfono a la mano
