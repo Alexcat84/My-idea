@@ -30,6 +30,7 @@ import { ChipSaldo } from "../../ui/ChipSaldo";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
+import type { Cara } from "../../ui/SelectorCara";
 import { PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
@@ -55,8 +56,10 @@ interface DetalleIdea {
     entrada_original: string;
     modo_camino?: "ritmo" | "fechas" | null;
     realizada_at?: string | null;
+    /** Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto. */
+    created_at?: string | null;
   };
-  organizador: { contenido_md: string } | null;
+  organizador: { contenido_md: string; created_at?: string | null } | null;
   plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
   reporte: { contenido_md: string; created_at: string } | null;
   reporte_en_curso: { pregunta: string } | null;
@@ -145,6 +148,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereCalendario = searchParams.get("vista") === "calendario";
   // Campaña "Espacios": el hub de un mundo. Deep-linkeable: ?vista=mundo&dominio=X.
   const quiereMundo = searchParams.get("vista") === "mundo";
+  // La cara activa del espacio (Plan · Manos a la obra · Tu avance), deep-linkeable.
+  const caraInicial: Cara = (["plan", "manos", "avance"] as const).find((c) => c === searchParams.get("cara")) ?? "manos";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -575,6 +580,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
     router.replace(urlDelEspacio(projectId, dominio), { scroll: false });
   }
 
+  // Campaña "Espacios": la cara activa vive en la URL (?cara=) para deep-link —
+  // el gate captura cada cara por URL, y el usuario vuelve a la que dejó.
+  function actualizarCara(c: string) {
+    const base =
+      vistaMundo && hubDominio
+        ? `/idea/${projectId}?vista=mundo&dominio=${hubDominio}`
+        : `/idea/${projectId}?vista=manos`;
+    router.replace(`${base}&cara=${c}`, { scroll: false });
+  }
+
   function volverAlViaje() {
     setVistaManos(false);
     setVistaMundo(false);
@@ -920,6 +935,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio)}
               onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
               soloDominio={vistaMundo && hubDominio ? hubDominio : "core"}
+              caraInicial={caraInicial}
+              onCaraCambio={actualizarCara}
+              proyectoCreatedAt={detalle.idea.created_at ?? null}
+              organizadorAt={detalle.organizador?.created_at ?? null}
+              realizadaAt={realizadaAt}
             />
           </>
         ) : (

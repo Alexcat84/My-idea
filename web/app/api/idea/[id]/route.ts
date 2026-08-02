@@ -224,8 +224,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       // Fase 3.8: el modo del camino y si la idea ya es un proyecto realizado.
       modo_camino: proyecto.modo_camino ?? null,
       realizada_at: proyecto.realizada_at ?? null,
+      // Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto.
+      created_at: proyecto.created_at,
     },
-    organizador: organizador && { contenido_md: organizador.contenido_md },
+    organizador: organizador && { contenido_md: organizador.contenido_md, created_at: organizador.created_at },
     plan: plan && { etiqueta: plan.etiqueta, contenido_md: plan.contenido_md, created_at: plan.created_at },
     reporte: reporte && { contenido_md: reporte.contenido_md, created_at: reporte.created_at },
     reporte_en_curso: reporteEnCurso,

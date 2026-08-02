@@ -6,8 +6,9 @@
 //   beta_fila_*        la fila de potenciadores con precios vivos ("su plan: 5 creditos")
 //   beta_ideas_chip_*  /ideas con el chip de saldo del dev user
 //   beta_creditos_*    /creditos: 4 packs "alcanza para" + "lo que cuesta cada cosa"
-//   espacios_core_manos_*  core Manos con el CAMBIADOR de tabs (Tu viaje | Calidad | +)
-//   espacios_hub_mundo_*   el HUB de un mundo (sin explorar, precio al frente)
+//   espacios_core_{manos,plan,avance}_*  las 3 CARAS del core (cambiador + segmentado)
+//   espacios_hub_sinexplorar_*           un mundo sin explorar (precio al frente)
+//   espacios_hub_{manos,plan,avance}_*   las 3 CARAS del hub de un mundo con plan
 //
 // Uso: con `pnpm dev` en :3000,  npx tsx scripts/gate_beta.ts
 import { chromium, type Page } from "playwright";
@@ -84,9 +85,37 @@ async function main() {
     { project_id: pid, plan_id: planId, dominio: "core", etapa: 1, orden: 2, texto: "Anota qué precio te aceptan sin dudar." },
     { project_id: pid, plan_id: planId, dominio: "core", etapa: 2, orden: 1, texto: "Prepara diez velas para la próxima feria." },
   ]);
-  // Campaña "Espacios": un mundo ACTIVO (sin explorar aún) dispara el cambiador
-  // de tabs y su hub. quality es válido en el CHECK de project_unlocks (016).
-  await admin.from("project_unlocks").insert({ project_id: pid, dominio: "quality" });
+  // Campaña "Espacios": dos mundos activos (dominios válidos en el CHECK de la
+  // 016) para el cambiador de tabs. `health_safety` sin explorar (su hub muestra
+  // "Explorar este mundo"); `quality` con plan+checklist → su hub muestra las
+  // TRES caras (Plan · Manos a la obra · Tu avance).
+  await admin.from("project_unlocks").insert([
+    { project_id: pid, dominio: "quality" },
+    { project_id: pid, dominio: "health_safety" },
+  ]);
+  const { data: sMundo } = await admin
+    .from("sessions")
+    .insert({ project_id: pid, user_id: dev.id, session_position: 2, tipo: "inicial", mensaje_entrada: "gate mundo", dominio: "quality", closed_at: new Date().toISOString() })
+    .select("id")
+    .single();
+  const { data: planMundo } = await admin
+    .from("plans")
+    .insert({
+      session_id: (sMundo as { id: string }).id,
+      user_id: dev.id,
+      etiqueta: "completo",
+      dominio: "quality",
+      contenido_md: "# Calidad: que tus clientes vuelvan\n## Etapa 1: escucha\n**Esta semana:** llama a un cliente que se fue.",
+      conceptos_usados: 4,
+      familias_cubiertas: ["general"],
+    })
+    .select("id")
+    .single();
+  const planMundoId = (planMundo as { id: string }).id;
+  await admin.from("checklist_items").insert([
+    { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 1, texto: "Llama a un cliente que se fue.", destacado: true },
+    { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 2, texto: "Anota por qué no volvió." },
+  ]);
 
   const browser = await chromium.launch();
   const context = await browser.newContext({ viewport: VP_ESCRITORIO, deviceScaleFactor: 1 });
@@ -112,11 +141,18 @@ async function main() {
     console.log("[centro de creditos: packs 'alcanza para' + lo que cuesta cada cosa]");
     await capturarDos(app, `${BASE_URL}/creditos`, "Lo que cuesta cada cosa", "beta_creditos");
 
-    console.log("[Espacios: core Manos con el cambiador de tabs (Tu viaje | Calidad | +)]");
-    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=manos`, "Tu viaje", "espacios_core_manos");
+    console.log("[Espacios: las 3 caras del CORE (cambiador + segmentado)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=manos&cara=manos`, "Tu viaje", "espacios_core_manos");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=manos&cara=plan`, "Tu viaje", "espacios_core_plan");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=manos&cara=avance`, "Tu avance", "espacios_core_avance");
 
-    console.log("[Espacios: hub del mundo (sin explorar, precio al frente)]");
-    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality`, "Explorar este mundo", "espacios_hub_mundo");
+    console.log("[Espacios: hub de un mundo SIN explorar (precio al frente)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=health_safety`, "Explorar este mundo", "espacios_hub_sinexplorar");
+
+    console.log("[Espacios: las 3 caras del hub de un mundo CON plan]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=manos`, "Manos a la obra", "espacios_hub_manos");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=plan`, "Manos a la obra", "espacios_hub_plan");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=avance`, "Tu avance", "espacios_hub_avance");
   } finally {
     await browser.close();
     await admin.from("projects").delete().eq("id", pid);
