@@ -45,11 +45,12 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
   const [linea, setLinea] = useState<{ top: number; height: number } | null>(null);
 
   useEffect(() => {
+    const c = contRef.current;
+    if (!c) return;
     const medir = () => {
-      const c = contRef.current;
       const a = primeraRef.current;
       const b = ultimaRef.current;
-      if (!c || !a || !b) {
+      if (!a || !b) {
         setLinea(null);
         return;
       }
@@ -61,8 +62,17 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
       setLinea({ top, height: Math.max(0, bottom - top) });
     };
     medir();
+    // Auto-ajustable a CUALQUIER cambio de alto: puntos nuevos, reflujo por
+    // carga de fuente, cambio de ancho del contenedor sin resize de ventana...
+    // La línea es absoluta, no altera el alto del contenedor, así que observarlo
+    // no crea bucle. (Se conserva el listener de resize por si acaso.)
+    const ro = new ResizeObserver(medir);
+    ro.observe(c);
     window.addEventListener("resize", medir);
-    return () => window.removeEventListener("resize", medir);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", medir);
+    };
   }, [hitos, cerrado]);
 
   return (
