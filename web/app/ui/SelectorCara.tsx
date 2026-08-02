@@ -2,12 +2,13 @@
 
 /**
  * SelectorCara — campaña "Espacios". El selector SEGMENTADO de las tres caras de
- * un espacio: Plan · Manos a la obra · Tu avance. Ocupa TODO el ancho, dividido
- * en tres iguales. El "knob" activo es una superficie ELEVADA (como un selector
- * físico: poco azul — el azul vive solo en el icono/texto de la cara activa),
- * que se DESLIZA midiendo la celda activa (robusto a 380 y a etiquetas de
- * distinto largo). Su FORMA (cápsula) lo distingue siempre de las
- * pestañas-fichero (angulares) de los espacios.
+ * un espacio: Plan · Manos a la obra · Tu avance. A todo el ancho, en tres
+ * iguales. Se lee CLARAMENTE como un selector: pista recesada oscura con borde
+ * visible (contorno), divisores internos en los tercios (interno), y un "knob"
+ * ELEVADO (superficie más clara + borde + sombra) que se DESLIZA a la celda
+ * activa midiéndola (robusto a 380 y a etiquetas de distinto largo). El azul
+ * vive solo en el icono/texto de la cara activa. Su FORMA (cápsula) lo distingue
+ * siempre de las pestañas-fichero (angulares) de los espacios.
  */
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
@@ -39,13 +40,19 @@ export function SelectorCara({
     <div
       role="tablist"
       aria-label="Las caras de este espacio"
-      className="relative flex w-full rounded-[13px] border border-hairline bg-surface-2 p-1"
+      className="relative flex w-full rounded-[13px] border border-white/[0.14] bg-surface-3 p-1"
     >
+      {/* divisores internos (los tercios): dan lectura de "segmentado" */}
+      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-1/3 top-2.5 w-px bg-white/[0.08]" />
+      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-2/3 top-2.5 w-px bg-white/[0.08]" />
+
+      {/* el knob elevado que se desliza a la celda activa */}
       <span
         aria-hidden
-        className="pointer-events-none absolute bottom-1 top-1 rounded-[10px] border border-white/[0.08] bg-surface shadow-[0_1px_2px_rgba(0,0,0,0.4)] transition-[left,width] duration-300 ease-out"
+        className="pointer-events-none absolute bottom-1 top-1 z-[1] rounded-[10px] border border-white/[0.18] bg-surface-2 shadow-[0_2px_5px_rgba(0,0,0,0.55)] transition-[left,width] duration-300 ease-out"
         style={{ left: ind.left, width: ind.width }}
       />
+
       {opciones.map((o) => {
         const activa = o.id === valor;
         return (
