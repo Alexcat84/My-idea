@@ -1,18 +1,23 @@
 // ETAPA 2 — EL VUELO DE DINERO (la verificacion mas seria del proyecto:
 // es dinero + identidad). HTTP real contra `next dev` en :3000 + ledger real.
 //
-// LA CONTABILIDAD A MANO (regla AGENTS.md, aqui con creditos):
-//   cortesia +20                       -> saldo 20
-//   plan core            -5 (entrega)  -> saldo 15
-//   Tus Numeros          -2 (activar)  -> saldo 13
-//   plan de mundo        -3 (entrega; preview y diagnostico GRATIS) -> saldo 10
-//   seguimiento core     -2 (entrega)  -> saldo  8   <- EXACTO
+// LA CONTABILIDAD A MANO (regla AGENTS.md, catalogo congruente §4):
+//   siembra manual +30                  -> saldo 30
+//   plan core           -10 (entrega; INCLUYE Tus Numeros) -> saldo 20
+//   Tus Numeros           0 (activar; INCLUIDO, no cobra)  -> saldo 20
+//   plan de mundo        -5 (entrega; preview y diagnostico GRATIS) -> saldo 15
+//   seguimiento core     -5 (entrega)  -> saldo 10
+//   seguimiento de mundo -5 (entrega)  -> saldo  5   <- EXACTO
 // verificada contra credit_transactions FILA POR FILA (delta, concepto,
-// saldo_resultante). Despues: idempotencia en vivo (doble submit no descuenta
-// dos veces), 402 limpio sin cobrar y sin perder trabajo, reembolso con su
-// log, organizador anonimo + adopcion, y RLS en vivo (B no ve lo de A).
+// saldo_resultante). Tus Numeros NO genera transaccion (incluido). Despues:
+// idempotencia en vivo (doble submit no descuenta dos veces), 402 limpio sin
+// cobrar y sin perder trabajo, reembolso con su log, organizador anonimo +
+// adopcion, y RLS en vivo (B no ve lo de A).
 //
-// Costo real: ~$0.35-0.50 (entrevistas + 3 planes + diagnostico). Es el
+// Cortesia RETIRADA (§8.3): la siembra es MANUAL via otorgar_creditos (origen
+// 'siembra_beta'), la misma RPC que usaran las pasarelas.
+//
+// Costo real: ~$0.45-0.65 (entrevistas + 4 planes + diagnostico). Es el
 // precio de probar dinero de verdad.
 //
 // Uso: con `pnpm dev` en :3000,  npx tsx scripts/vuelo_beta.ts
@@ -121,14 +126,17 @@ async function main() {
   check("allowlist: email NO invitado -> {invitado:false} sin crear cuenta",
     noInvitado.status === 200 && noInvitado.json.invitado === false, noInvitado.json);
 
-  // ── 2) Usuario A (cuenta real) + CORTESIA una sola vez.
+  // ── 2) Usuario A (cuenta real) + SIEMBRA MANUAL (reemplaza la cortesia, §8.3).
   const A = await crearUsuario(emailA);
-  const { data: c1, error: ec1 } = await admin.rpc("otorgar_cortesia", { p_user_id: A.id, p_monto: 20 });
-  check("cortesia: primer otorgamiento deja saldo 20", !ec1 && c1 === 20, { c1, ec1 });
-  const { data: c2 } = await admin.rpc("otorgar_cortesia", { p_user_id: A.id, p_monto: 20 });
-  check("cortesia: segundo intento NO re-otorga (sigue 20)", c2 === 20 && (await saldoDe(A.id)) === 20, c2);
-  const { count: logCortesia } = await admin.from("beta_courtesy_log").select("*", { count: "exact", head: true }).eq("user_id", A.id);
-  check("cortesia: beta_courtesy_log tiene UNA fila", logCortesia === 1, logCortesia);
+  const claveSiembra = `siembra_beta:${A.id}`;
+  const { data: s1, error: es1 } = await admin.rpc("otorgar_creditos", {
+    p_user_id: A.id, p_monto: 30, p_origen: "siembra_beta", p_idempotency_key: claveSiembra, p_pack: "siembra_beta",
+  });
+  check("siembra: otorgar_creditos deja saldo 30", !es1 && s1 === 30, { s1, es1 });
+  const { data: s2 } = await admin.rpc("otorgar_creditos", {
+    p_user_id: A.id, p_monto: 30, p_origen: "siembra_beta", p_idempotency_key: claveSiembra, p_pack: "siembra_beta",
+  });
+  check("siembra: misma clave NO re-otorga (sigue 30)", s2 === 30 && (await saldoDe(A.id)) === 30, s2);
 
   // ── 3) LA FRONTERA: la identidad invisible no pasa de "Iniciar La Exploracion".
   const I = await crearUsuario(emailInvisible);
@@ -151,13 +159,13 @@ async function main() {
     check("adopcion: el organizador devolvio project_id", false, org.json);
   }
 
-  // ── 5) LA CONTABILIDAD A MANO (A: 20 -5 -2 -3 -2 = 8).
-  console.log("\n-- plan core (-5) --");
+  // ── 5) LA CONTABILIDAD A MANO (A: 30 -10 -5 -5 -5 = 5; Tus Numeros GRATIS).
+  console.log("\n-- plan core (-10; incluye Tus Numeros) --");
   const inicio = await post(A.cookie, "/api/session/start", {
     texto: "Quiero vender velas artesanales de soya con esencias en ferias; ya vendi seis a conocidos y quiero llegar a desconocidos.",
     project_id: proyectoAnon,
   });
-  check("plan core: start pasa la verificacion (saldo 20 >= 5)", inicio.status === 200, inicio);
+  check("plan core: start pasa la verificacion (saldo 30 >= 10)", inicio.status === 200, inicio);
   const sesionCore = inicio.json.session_id as string;
   await turnosYPlan(A.cookie, sesionCore, [
     "Cada vela me cuesta unos 30 en materiales y la vendo a 80; tardo dos horas por vela.",
@@ -165,19 +173,20 @@ async function main() {
     "Puedo dedicarle 10 horas a la semana y tengo 200 al mes para invertir.",
     "Con eso te conte lo importante, arma mi plan.",
   ]);
-  check("plan core: saldo 20 - 5 = 15", (await saldoDe(A.id)) === 15, await saldoDe(A.id));
+  check("plan core: saldo 30 - 10 = 20", (await saldoDe(A.id)) === 20, await saldoDe(A.id));
 
-  console.log("\n-- Tus Numeros (-2, activacion unica) --");
+  console.log("\n-- Tus Numeros (INCLUIDO: activa sin cobrar) --");
   const act = await post(A.cookie, `/api/project/${proyectoAnon}/numeros`, { activar: true });
   check("numeros: activar entrega el primer tablero", act.status === 200 && act.json.tablero !== undefined, act.status);
-  check("numeros: saldo 15 - 2 = 13", (await saldoDe(A.id)) === 13, await saldoDe(A.id));
-  // DOBLE-SUBMIT EN VIVO (ruta): repetir activar no descuenta de nuevo.
+  check("numeros: INCLUIDO, saldo sigue 20 (no cobra)", (await saldoDe(A.id)) === 20, await saldoDe(A.id));
+  check("numeros: no genero transaccion (siguen 2: siembra + plan)", (await transaccionesDe(A.id)).length === 2, (await transaccionesDe(A.id)).length);
+  // DOBLE-SUBMIT EN VIVO (ruta): repetir activar sigue sin cobrar ni duplicar.
   const act2 = await post(A.cookie, `/api/project/${proyectoAnon}/numeros`, { activar: true });
-  check("doble-submit numeros: sigue 13 (idempotente en la ruta)", act2.status === 200 && (await saldoDe(A.id)) === 13, await saldoDe(A.id));
+  check("doble-submit numeros: sigue 20 (idempotente, incluido)", act2.status === 200 && (await saldoDe(A.id)) === 20, await saldoDe(A.id));
 
-  console.log("\n-- plan de mundo (-3; preview y diagnostico GRATIS) --");
+  console.log("\n-- plan de mundo (-5; preview y diagnostico GRATIS) --");
   const mundoInicio = await post(A.cookie, `/api/project/${proyectoAnon}/world/quality/start`);
-  check("preview: arranca gratis (saldo sigue 13)", mundoInicio.status === 200 && (await saldoDe(A.id)) === 13, mundoInicio.status);
+  check("preview: arranca gratis (saldo sigue 20)", mundoInicio.status === 200 && (await saldoDe(A.id)) === 20, mundoInicio.status);
   const sesionMundo = mundoInicio.json.session_id as string;
   for (const r of [
     "Mis clientes compran una vez y no vuelvo a saber de ellos; no registro quejas.",
@@ -186,33 +195,43 @@ async function main() {
     await post(A.cookie, `/api/session/${sesionMundo}/turn`, { respuesta: r });
   }
   const diag = await post(A.cookie, `/api/project/${proyectoAnon}/world/quality/diagnostico`, { session_id: sesionMundo });
-  check("diagnostico: gratis (saldo sigue 13)", diag.status === 200 && (await saldoDe(A.id)) === 13, diag.status);
+  check("diagnostico: gratis (saldo sigue 20)", diag.status === 200 && (await saldoDe(A.id)) === 20, diag.status);
   const resPlanMundo = await fetch(`${BASE_URL}/api/session/${sesionMundo}/plan`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Cookie: A.cookie },
     body: JSON.stringify({}),
   });
-  check("plan de mundo: la compra pasa la verificacion (13 >= 3)", resPlanMundo.ok, resPlanMundo.status);
+  check("plan de mundo: la compra pasa la verificacion (20 >= 5)", resPlanMundo.ok, resPlanMundo.status);
   await consumirSSE(resPlanMundo, () => {});
-  check("plan de mundo: saldo 13 - 3 = 10", (await saldoDe(A.id)) === 10, await saldoDe(A.id));
+  check("plan de mundo: saldo 20 - 5 = 15", (await saldoDe(A.id)) === 15, await saldoDe(A.id));
 
-  console.log("\n-- seguimiento core (-2) --");
+  console.log("\n-- seguimiento core (-5) --");
   const follow = await post(A.cookie, `/api/project/${proyectoAnon}/follow`, { detalles: "Vendi dos velas a desconocidos en la feria." });
-  check("follow: pasa la verificacion (10 >= 2)", follow.status === 200, follow);
+  check("follow core: pasa la verificacion (15 >= 5)", follow.status === 200, follow);
   const sesionFollow = follow.json.session_id as string;
   await turnosYPlan(A.cookie, sesionFollow, ["Las dos ventas fueron a precio completo; quiero repetirlo cada fin de semana."]);
-  check("seguimiento: saldo 10 - 2 = 8 EXACTOS", (await saldoDe(A.id)) === 8, await saldoDe(A.id));
+  check("seguimiento core: saldo 15 - 5 = 10", (await saldoDe(A.id)) === 10, await saldoDe(A.id));
 
-  // ── FILA POR FILA contra credit_transactions.
+  console.log("\n-- seguimiento de mundo (-5) --");
+  const followMundo = await post(A.cookie, `/api/project/${proyectoAnon}/follow`, {
+    dominio: "quality",
+    detalles: "Un cliente volvio y trajo a una amiga a la feria; quiero que se repita.",
+  });
+  check("follow mundo: pasa la verificacion (10 >= 5)", followMundo.status === 200, followMundo);
+  const sesionFollowMundo = followMundo.json.session_id as string;
+  await turnosYPlan(A.cookie, sesionFollowMundo, ["Quiero un guion corto para pedirles que vuelvan y recomienden."]);
+  check("seguimiento de mundo: saldo 10 - 5 = 5 EXACTOS", (await saldoDe(A.id)) === 5, await saldoDe(A.id));
+
+  // ── FILA POR FILA contra credit_transactions (Tus Numeros NO aparece: incluido).
   const trans = await transaccionesDe(A.id);
   const esperadas = [
-    { delta: 20, saldo_resultante: 20, tipo: "grant", concepto: "cortesia" },
-    { delta: -5, saldo_resultante: 15, tipo: "consumo", concepto: "plan_completo" },
-    { delta: -2, saldo_resultante: 13, tipo: "consumo", concepto: "tus_numeros" },
-    { delta: -3, saldo_resultante: 10, tipo: "consumo", concepto: "mundo_activar" },
-    { delta: -2, saldo_resultante: 8, tipo: "consumo", concepto: "seguimiento" },
+    { delta: 30, saldo_resultante: 30, tipo: "grant", concepto: "siembra_beta" },
+    { delta: -10, saldo_resultante: 20, tipo: "consumo", concepto: "plan_completo" },
+    { delta: -5, saldo_resultante: 15, tipo: "consumo", concepto: "mundo_activar" },
+    { delta: -5, saldo_resultante: 10, tipo: "consumo", concepto: "seguimiento" },
+    { delta: -5, saldo_resultante: 5, tipo: "consumo", concepto: "mundo_seguimiento" },
   ];
-  check("ledger: exactamente 5 transacciones", trans.length === 5, trans);
+  check("ledger: exactamente 5 transacciones (Tus Numeros no genera ninguna)", trans.length === 5, trans);
   esperadas.forEach((e, i) => {
     const t = trans[i];
     check(
@@ -224,10 +243,10 @@ async function main() {
 
   // ── 6) IDEMPOTENCIA EN VIVO a nivel ledger: la misma clave no descuenta dos veces.
   const { data: idem } = await admin.rpc("consumir_creditos", {
-    p_user_id: A.id, p_concepto: "plan_completo", p_monto: 5, p_idempotency_key: `plan:${sesionCore}`,
+    p_user_id: A.id, p_concepto: "plan_completo", p_monto: 10, p_idempotency_key: `plan:${sesionCore}`,
   });
   check("idempotencia ledger: repetir plan:{sessionId} devuelve el saldo previo sin descontar",
-    idem === 15 && (await saldoDe(A.id)) === 8, { idem, saldo: await saldoDe(A.id) });
+    idem === 20 && (await saldoDe(A.id)) === 5, { idem, saldo: await saldoDe(A.id) });
 
   // ── 7) SALDO INSUFICIENTE: rechazo limpio ANTES del esfuerzo, sin cobrar.
   const B = await crearUsuario(emailB); // sin cortesia: saldo 0
@@ -242,7 +261,7 @@ async function main() {
     p_user_id: A.id, p_monto: 2, p_motivo: "vuelo_beta: fallo simulado post-cobro",
   });
   const { count: refundLog } = await admin.from("credit_refund_log").select("*", { count: "exact", head: true }).eq("user_id", A.id);
-  check("reembolso: 8 + 2 = 10 con su fila en credit_refund_log", saldoTrasRefund === 10 && refundLog === 1, { saldoTrasRefund, errRefund, refundLog });
+  check("reembolso: 5 + 2 = 7 con su fila en credit_refund_log", saldoTrasRefund === 7 && refundLog === 1, { saldoTrasRefund, errRefund, refundLog });
 
   // ── 9) RLS EN VIVO: B no ve NADA de A.
   const clienteB = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
@@ -259,7 +278,7 @@ async function main() {
   await admin.from("projects").delete().eq("user_id", A.id);
   for (const uid of [A.id, B.id, I.id]) await admin.auth.admin.deleteUser(uid);
 
-  console.log(`\n${fallos === 0 ? "VUELO DE DINERO: TODO VERDE (contabilidad 20-5-2-3-2=8 verificada fila por fila)" : `VUELO CON ${fallos} FALLO(S)`}`);
+  console.log(`\n${fallos === 0 ? "VUELO DE DINERO: TODO VERDE (contabilidad 30-10-[0]-5-5-5=5 verificada fila por fila; Tus Numeros incluido)" : `VUELO CON ${fallos} FALLO(S)`}`);
   console.log("(nota honesta: la cortesia y la adopcion se prueban por el MISMO mecanismo que usa auth/confirm; el clic del enlace de correo real no se automatiza)");
   if (fallos > 0) process.exit(1);
 }

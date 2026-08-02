@@ -7,30 +7,59 @@
 import { describe, expect, it } from "vitest";
 import { conceptoDelPlan, mensajeSaldoInsuficiente, montoDelPlan, CORTESIA_BETA } from "./creditos";
 import { esInvitadoInvisible } from "./identidad";
-import { PRECIOS } from "./precios";
+import { PACKS, PRECIOS } from "./precios";
 
-describe("conceptoDelPlan / montoDelPlan: la regla de concepto (§5 + 4.5)", () => {
-  it("core inicial -> plan_completo (5)", () => {
+describe("conceptoDelPlan / montoDelPlan: la regla de concepto (§5 + Catálogo congruente §4)", () => {
+  it("core inicial -> plan_completo (10; incluye Tus Números)", () => {
     expect(conceptoDelPlan("core", false)).toBe("plan_completo");
     expect(montoDelPlan("core", false)).toBe(PRECIOS.plan_completo);
-    expect(montoDelPlan("core", false)).toBe(5);
+    expect(montoDelPlan("core", false)).toBe(10);
   });
-  it("core seguimiento -> seguimiento (2)", () => {
+  it("core seguimiento -> seguimiento (5)", () => {
     expect(conceptoDelPlan("core", true)).toBe("seguimiento");
-    expect(montoDelPlan("core", true)).toBe(2);
+    expect(montoDelPlan("core", true)).toBe(5);
   });
-  it("mundo inicial -> mundo_activar (3): el preview fue gratis, el PLAN se compra", () => {
+  it("mundo inicial -> mundo_activar (5): el preview fue gratis, el PLAN se compra", () => {
     expect(conceptoDelPlan("quality", false)).toBe("mundo_activar");
-    expect(montoDelPlan("quality", false)).toBe(3);
+    expect(montoDelPlan("quality", false)).toBe(5);
   });
-  it("mundo seguimiento -> mundo_seguimiento (2)", () => {
+  it("mundo seguimiento -> mundo_seguimiento (5)", () => {
     expect(conceptoDelPlan("risk_management", true)).toBe("mundo_seguimiento");
-    expect(montoDelPlan("risk_management", true)).toBe(2);
+    expect(montoDelPlan("risk_management", true)).toBe(5);
+  });
+});
+
+describe("Catálogo congruente §4: Tus Números incluido + packs == paquetes", () => {
+  const pack = (nombre: string) => PACKS.find((p) => p.nombre === nombre)!;
+
+  it("tus_numeros cuesta 0: va INCLUIDO en el plan, la activación no cobra", () => {
+    expect(PRECIOS.tus_numeros).toBe(0);
+  });
+  it("todo lo demás (salvo el plan) cuesta 5: la regla de una línea", () => {
+    expect(PRECIOS.seguimiento).toBe(5);
+    expect(PRECIOS.mundo_activar).toBe(5);
+    expect(PRECIOS.mundo_seguimiento).toBe(5);
+  });
+  it("Recarga (5) == un seguimiento o un mundo suelto", () => {
+    expect(pack("Recarga").creditos).toBe(PRECIOS.seguimiento);
+    expect(pack("Recarga").creditos).toBe(PRECIOS.mundo_activar);
+  });
+  it("Básico (10) == Tu Plan completo (con Tus Números incluido)", () => {
+    expect(pack("Básico").creditos).toBe(PRECIOS.plan_completo + PRECIOS.tus_numeros);
+  });
+  it("Premium (15) == plan + tu primer seguimiento", () => {
+    expect(pack("Premium").creditos).toBe(PRECIOS.plan_completo + PRECIOS.seguimiento);
+    expect(pack("Premium").destacado).toBe(true); // el más elegido
+  });
+  it("Profesional (30) == el viaje entero: plan + 2 seguimientos + mundo + su seguimiento", () => {
+    expect(pack("Profesional").creditos).toBe(
+      PRECIOS.plan_completo + 2 * PRECIOS.seguimiento + PRECIOS.mundo_activar + PRECIOS.mundo_seguimiento
+    );
   });
 });
 
 describe("la cortesia y el 402", () => {
-  it("la cortesia de beta es 20", () => {
+  it("el valor DORMIDO de la cortesia de beta sigue anclado en 20 (retirada del auto-otorgamiento, §8.3)", () => {
     expect(CORTESIA_BETA).toBe(20);
   });
   it("el 402 habla en palabras de persona y no pierde el trabajo", () => {

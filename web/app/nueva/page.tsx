@@ -13,6 +13,7 @@ import { ArbolPensante, type NodoArbol } from "../ui/ArbolPensante";
 import { CampoConVoz } from "../ui/CampoConVoz";
 import { consumirSSE } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
+import { PRECIOS } from "@/lib/precios";
 
 type Fase =
   | { fase: "captura"; error?: string }
@@ -178,7 +179,8 @@ export default function NuevaIdea() {
           </button>
         </div>
         <p className="anima-plan-in mt-3.5 text-[13px] text-dim" style={{ animationDelay: "0.75s" }}>
-          La Exploración usa 5 créditos. Tu Claridad es gratis y queda guardada para siempre.
+          La Exploración usa {PRECIOS.plan_completo} créditos e incluye Tus Números. Tu Claridad es gratis y queda guardada
+          para siempre.
         </p>
       </main>
     );

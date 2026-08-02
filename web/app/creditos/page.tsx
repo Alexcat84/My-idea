@@ -43,53 +43,52 @@ export default async function Creditos() {
         <section className="anima-plan-in">
           <h1 className="text-2xl font-bold tracking-tight">Tus créditos</h1>
           <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-dim">
-            Los créditos son consumibles: sin suscripción, sin cargos recurrentes. Nunca pierdes créditos por un fallo del
-            sistema, y registrar tu avance es gratis para siempre.
+            Créditos consumibles: sin suscripción y sin cargos recurrentes. Tu plan cuesta {PRECIOS.plan_completo} créditos
+            e incluye Tus Números; los seguimientos y los mundos, {PRECIOS.seguimiento} cada uno. La Claridad y los
+            diagnósticos de mundos son gratis.
           </p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-[280px_1fr]">
-            <div className="rounded-panel border border-hairline bg-surface p-6">
-              <div className="text-[40px] font-extrabold leading-none tracking-tight">{saldo}</div>
-              <div className="mt-1.5 text-[13px] text-dim">
-                {cuentaReal ? "créditos disponibles" : "tus créditos nacen con tu cuenta"}
-              </div>
-              {cuentaReal && (
-                <span className="mt-2 inline-flex items-center rounded-full border border-done/40 px-2.5 py-1 text-[11.5px] font-semibold text-done">
-                  cortesía de bienvenida
-                </span>
-              )}
-              <p className="mt-3 text-[12.5px] leading-relaxed text-dim">
-                Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra
-                nada.
-              </p>
+          <div className="mt-6 rounded-panel border border-hairline bg-surface p-6 sm:max-w-sm">
+            <div className="text-[40px] font-extrabold leading-none tracking-tight tabular-nums">{saldo}</div>
+            <div className="mt-1.5 text-[13px] text-dim">
+              {cuentaReal ? "créditos disponibles" : "tus créditos viven en tu cuenta"}
             </div>
-
-            <div className="grid gap-3.5 sm:grid-cols-3">
-              {PACKS.map((pack) => (
-                <div
-                  key={pack.creditos}
-                  className={
-                    "relative flex flex-col gap-1.5 rounded-panel border bg-surface p-5 " +
-                    (pack.destacado ? "border-accent/45 bg-accent/[0.05]" : "border-hairline")
-                  }
-                >
-                  <span className="text-[26px] font-extrabold leading-none">{pack.creditos}</span>
-                  <span className="text-[13px] text-dim">créditos</span>
-                  <span className="mt-2 text-2xl font-bold">${pack.usd}</span>
-                  <span className="text-[12px] text-dim">
-                    {pack.sentido}
-                    {pack.destacado ? " · el más elegido" : ""}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <p className="mt-3 text-[12.5px] leading-relaxed text-dim">
+              Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra
+              nada.
+            </p>
           </div>
 
-          <p className="mt-4 rounded-cinta border border-hairline bg-surface-2 px-4 py-3 text-[12.5px] leading-relaxed text-dim">
-            <strong className="text-ink">Un crédito es un dólar, siempre.</strong> Los packs no esconden descuentos: se
-            dimensionan por lo que compras con ellos. La compra con dinero se abre muy pronto; durante la beta trabajas
-            con tu cortesía de bienvenida.
-          </p>
+          <div className="mt-4 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+            {PACKS.map((pack) => (
+              <div
+                key={pack.nombre}
+                className={
+                  "relative flex flex-col gap-1.5 rounded-panel border bg-surface p-5 " +
+                  (pack.destacado ? "border-accent/45 bg-accent/[0.05]" : "border-hairline")
+                }
+              >
+                {pack.destacado && (
+                  <span className="absolute right-4 top-4 rounded-full bg-accent/15 px-2 py-0.5 text-[10.5px] font-semibold text-accent">
+                    El más elegido
+                  </span>
+                )}
+                <span className="text-[13px] font-semibold">{pack.nombre}</span>
+                <span className="mt-1 text-[26px] font-extrabold leading-none tabular-nums">
+                  {pack.creditos} <span className="text-[13px] font-medium text-dim">créditos</span>
+                </span>
+                <span className="text-2xl font-bold tabular-nums">${pack.usd}</span>
+                <span className="min-h-[32px] text-[12px] leading-snug text-dim">Alcanza para {pack.alcanza}.</span>
+                <button
+                  type="button"
+                  disabled
+                  className="mt-1 w-full cursor-not-allowed rounded-[10px] border border-hairline py-2 text-[12.5px] font-semibold text-dim/70"
+                >
+                  La compra se abre pronto
+                </button>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* ── LO QUE CUESTA CADA COSA (números de precios.ts, jamás hardcodeados) */}
@@ -97,13 +96,14 @@ export default async function Creditos() {
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Lo que cuesta cada cosa</p>
           <div className="mt-4 overflow-hidden rounded-panel border border-hairline bg-surface">
             {[
-              { que: "El organizador (Claridad)", detalle: "tu idea ordenada: frase, lo que tienes, lo que asumes", precio: null },
-              { que: "La Exploración", detalle: "la entrevista y tu plan completo", precio: PRECIOS.plan_completo },
-              { que: "El plan de un mundo", detalle: "el preview (entrevista + diagnóstico) es gratis", precio: PRECIOS.mundo_activar },
-              { que: "Seguimiento del viaje principal", detalle: "contar qué pasó y recalcular tu plan desde donde estás", precio: PRECIOS.seguimiento },
-              { que: "Seguimiento de un mundo", detalle: "contar qué pasó en su checklist", precio: PRECIOS.mundo_seguimiento },
-              { que: "Tus Números", detalle: "una vez por idea; corregir cifras y recalcular es gratis, siempre", precio: PRECIOS.tus_numeros },
-              { que: "Registrar tu avance", detalle: "marcar hecho, notas, progreso", precio: null },
+              { que: "La Claridad", detalle: "tu idea ordenada: la frase, lo que tienes, lo que asumes", etiqueta: "Gratis", tono: "gratis" },
+              { que: "El diagnóstico de un mundo", detalle: "el escaparate del mundo: su entrevista y su diagnóstico", etiqueta: "Gratis", tono: "gratis" },
+              { que: "Tu Plan", detalle: "La Exploración, tu plan completo y Tus Números, todo dentro", etiqueta: `${PRECIOS.plan_completo} créditos`, tono: "precio" },
+              { que: "El plan de un mundo", detalle: "el plan del dominio; su diagnóstico ya fue gratis", etiqueta: `${PRECIOS.mundo_activar} créditos`, tono: "precio" },
+              { que: "Seguimiento del viaje principal", detalle: "contar qué pasó y recalcular tu plan desde donde estás", etiqueta: `${PRECIOS.seguimiento} créditos`, tono: "precio" },
+              { que: "Seguimiento de un mundo", detalle: "contar qué pasó en su checklist", etiqueta: `${PRECIOS.mundo_seguimiento} créditos`, tono: "precio" },
+              { que: "Tus Números", detalle: "el tablero de sostenibilidad de tu idea; corregir cifras y recalcular, cuando quieras", etiqueta: "Incluido con tu plan", tono: "incluido" },
+              { que: "Registrar tu avance", detalle: "marcar hecho, notas, tus documentos y tu bitácora", etiqueta: "Incluido con tu paquete", tono: "incluido" },
             ].map((fila, i) => (
               <div
                 key={fila.que}
@@ -111,12 +111,20 @@ export default async function Creditos() {
               >
                 <span className="text-[13.5px] font-semibold">{fila.que}</span>
                 <span className="min-w-0 flex-1 text-[12.5px] text-dim">{fila.detalle}</span>
-                <span className={`shrink-0 text-[12.5px] font-semibold ${fila.precio === null ? "text-done" : "text-accent"}`}>
-                  {fila.precio === null ? "Gratis, siempre" : `${fila.precio} créditos`}
+                <span
+                  className={`shrink-0 text-[12.5px] font-semibold ${
+                    fila.tono === "gratis" ? "text-done" : fila.tono === "incluido" ? "text-ink" : "text-accent"
+                  }`}
+                >
+                  {fila.etiqueta}
                 </span>
               </div>
             ))}
           </div>
+          <p className="mt-3 text-[12px] leading-relaxed text-dim">
+            Al comprar tu plan, Tus Números vienen dentro. Registrar tu avance, tus documentos y tu bitácora van incluidos
+            con lo que ya compraste: nunca se cobran aparte.
+          </p>
         </section>
       </main>
     </div>

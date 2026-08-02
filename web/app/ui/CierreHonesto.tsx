@@ -15,7 +15,8 @@
  *
  * Reembolso solo-con-ledger (Fase 4.3.2): el chip y la nota de créditos
  * devueltos aparecen SOLO si `creditosDevueltos` trae un número respaldado por
- * el ledger. En beta la activación es gratis: no hay claim de dinero.
+ * el ledger. Si no hubo cobro que revertir (o el ledger no lo respalda), el
+ * hecho se dice igual pero SIN claim de dinero.
  */
 export function CierreHonesto({
   tipo,

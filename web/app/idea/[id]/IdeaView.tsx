@@ -1172,7 +1172,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     </button>
                   </div>
                   <p className="text-xs text-dim">
-                    La Exploración usa 5 créditos. Tu Claridad es gratis y queda guardada para siempre.
+                    La Exploración usa {PRECIOS.plan_completo} créditos e incluye Tus Números. Tu Claridad es gratis y
+                    queda guardada para siempre.
                   </p>
                 </>
               )}

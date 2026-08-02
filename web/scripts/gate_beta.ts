@@ -1,10 +1,11 @@
-// ETAPA 2 - gate de la beta con cuentas: la COMPUERTA de Tus Numeros, el CHIP
-// de saldo en el header y los PRECIOS VIVOS (el tachado murio). Dos viewports.
-// Sin vara de canon nueva: documenta la implementacion (patron ciclo-de-caja).
+// Catalogo congruente - gate de la beta con cuentas: la COMPUERTA de Tus Numeros
+// (ahora INCLUIDA), el CHIP de saldo, los PRECIOS VIVOS del §4 y el CENTRO de
+// creditos. Dos viewports. Documenta la implementacion (patron ciclo-de-caja).
 //
-//   beta_compuerta_*   /idea/[id]/numeros SIN activacion: "Sacar mis numeros · 2 creditos"
-//   beta_fila_*        la fila de potenciadores con precios vivos ("su plan: 3 creditos")
+//   beta_compuerta_*   /idea/[id]/numeros SIN activacion: "Activar mis numeros · incluido con tu plan"
+//   beta_fila_*        la fila de potenciadores con precios vivos ("su plan: 5 creditos")
 //   beta_ideas_chip_*  /ideas con el chip de saldo del dev user
+//   beta_creditos_*    /creditos: 4 packs "alcanza para" + "lo que cuesta cada cosa"
 //
 // Uso: con `pnpm dev` en :3000,  npx tsx scripts/gate_beta.ts
 import { chromium, type Page } from "playwright";
@@ -83,19 +84,22 @@ async function main() {
   const app = await context.newPage();
 
   try {
-    console.log("[compuerta de Tus Numeros]");
-    await capturarDos(app, `${BASE_URL}/idea/${pid}/numeros`, "Sacar mis números", "beta_compuerta");
+    console.log("[compuerta de Tus Numeros: incluida con tu plan]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}/numeros`, "Tus cifras reales", "beta_compuerta");
 
     console.log("[fila de potenciadores con precios vivos]");
     await capturarDos(app, `${BASE_URL}/idea/${pid}`, "Su plan:", "beta_fila");
 
     console.log("[/ideas con el chip de saldo]");
     await capturarDos(app, `${BASE_URL}/ideas`, "créditos", "beta_ideas_chip");
+
+    console.log("[centro de creditos: packs 'alcanza para' + lo que cuesta cada cosa]");
+    await capturarDos(app, `${BASE_URL}/creditos`, "Lo que cuesta cada cosa", "beta_creditos");
   } finally {
     await browser.close();
     await admin.from("projects").delete().eq("id", pid);
   }
-  console.log("\nGATE DE LA BETA: compuerta + precios vivos + chip capturados (2 viewports).");
+  console.log("\nGATE DE LA BETA: compuerta + precios vivos + chip + centro de creditos capturados (2 viewports).");
 }
 
 main().catch((e) => {

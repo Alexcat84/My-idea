@@ -140,9 +140,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if ("error" in ctx) return ctx.error;
   const { supabase, proyecto } = ctx;
 
-  // ETAPA 2 — la compuerta del canon 07: sin activacion, el tablero no se
-  // muestra. La pantalla pinta la compuerta ("Sacar mis numeros · 2
-  // creditos") y el POST {activar:true} verifica saldo, activa y cobra.
+  // Catalogo congruente (§4): sin activacion, el tablero no se muestra. La
+  // pantalla pinta la compuerta y el POST {activar:true} activa. Tus Numeros
+  // va INCLUIDO en el plan (tus_numeros: 0): la compuerta ya no cobra, pero
+  // sigue anclando activado_at (una vez por idea) para la idempotencia y para
+  // que el viaje registre que sacaste tus numeros. costo 0 => "incluido".
   if (proyecto.tus_numeros_activado_at == null) {
     return NextResponse.json({
       project_id: projectId,
@@ -253,7 +255,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let activadoAt = proyecto.tus_numeros_activado_at ?? null;
   let creditosRestantes: number | null = null;
   if (body.activar === true) {
-    if (!yaActivado) {
+    // Tus Numeros va INCLUIDO en el plan (PRECIOS.tus_numeros === 0): no se
+    // verifica saldo ni se cobra. El guard `> 0` deja intacto el camino de
+    // cobro por si el precio volviera a ser positivo, sin ensuciar el ledger
+    // con transacciones de delta 0. La activacion (activado_at) SI ocurre.
+    if (!yaActivado && PRECIOS.tus_numeros > 0) {
       const saldoNum = await verificarSaldo(user.id, PRECIOS.tus_numeros);
       if (!saldoNum.alcanza) {
         return NextResponse.json(
@@ -265,7 +271,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const r = await activarTusNumeros(supabase, projectId);
     activadoAhora = r.activadoAhora;
     activadoAt = r.activadoAt;
-    if (activadoAhora) {
+    if (activadoAhora && PRECIOS.tus_numeros > 0) {
       const resultadoCobro = await cobrar(user.id, "tus_numeros", PRECIOS.tus_numeros, `numeros:${projectId}`);
       if (resultadoCobro === -1) {
         await registrarBitacora(supabase, projectId, "cobro_carrera", {

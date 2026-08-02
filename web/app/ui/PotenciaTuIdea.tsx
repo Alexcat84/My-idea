@@ -4,16 +4,15 @@
  * PotenciaTuIdea — la fila "Potencia tu idea" (canon 07-B / 08): grilla de
  * tarjetas con ícono arriba-izquierda + chip arriba-derecha (créditos /
  * "Activo · n/m" verde / "Activar · beta"), nombre y promesa, con hover que
- * eleva la tarjeta. Tus Números (2 créditos) + los mundos del catálogo. Precios
+ * eleva la tarjeta. Tus Números (incluido en el plan) + los mundos del catálogo. Precios
  * SIEMPRE desde precios.ts / packs_catalog.json — ninguna cifra hardcodeada.
  * Azul piensa; el verde ejecuta marca el mundo activo.
  *
- * Beta (jul 2026): el candado se retiró. El cobro de créditos duerme hasta la
- * ETAPA 2 (ledger, migraciones 020-024 sin aplicar), y mientras tanto activar
- * un mundo es GRATIS y para todos — el fundador debe poder probar los 7 por
- * igual. El precio del catálogo se muestra tachado, para que se lea como
- * cortesía de beta y no como "siempre fue gratis". El ancla del cobro futuro
- * vive en `activarMundo`.
+ * Beta (Catálogo congruente, jul 2026): el candado se retiró y los precios son
+ * REALES (ledger 020-024 aplicado). Activar un mundo cuesta `mundo_activar`
+ * créditos —el preview y el diagnóstico siguen gratis—, y el usuario paga con
+ * los créditos que el fundador le sembró a mano (no hay cortesía automática).
+ * Nada de tachados ni "gratis en beta". El ancla del cobro vive en `activarMundo`.
  */
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
@@ -159,14 +158,14 @@ export function PotenciaTuIdea({
           <div className="mb-3.5 flex items-center justify-between gap-2">
             <Icono clave="tus_numeros" />
             <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-              {PRECIOS.tus_numeros} créditos
+              {PRECIOS.tus_numeros > 0 ? `${PRECIOS.tus_numeros} créditos` : "Incluido"}
             </span>
           </div>
           <p className="text-[15px] font-semibold">Tus Números</p>
           <p className="mt-1.5 text-[12.5px] leading-[1.55] text-dim [text-wrap:pretty]">
             Tus cifras reales convertidas en margen, punto de equilibrio y escenarios.
           </p>
-          <p className="mt-2 text-[12px] text-dim/70">Una vez por idea · corregir y recalcular es gratis</p>
+          <p className="mt-2 text-[12px] text-dim/70">Incluido con tu plan · una vez por idea</p>
         </Link>
 
         {/* Los mundos del catálogo — Fase 4.5: los CUATRO estados del preview

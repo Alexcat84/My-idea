@@ -19,17 +19,16 @@ import { createAdminClient } from "./supabase/admin";
 import { PRECIOS, type ConceptoPrecio } from "./precios";
 
 /**
- * CORTESIA_BETA — política de la BETA CERRADA (invitados de beta_allowlist),
- * NO la política de bienvenida del lanzamiento público. La cortesía del
- * usuario nuevo post-beta es DECISIÓN PENDIENTE del fundador (candidata
- * preliminar: organizador gratis + 5 de bienvenida = exactamente un plan;
- * se calibra con la telemetría de esta beta). Ver docs/BANCO_DE_TEXTOS.md
- * y docs/MATRIZ_DELTAS_CANON_2.0.md ("Decisiones pendientes").
+ * CORTESIA_BETA — DORMIDA desde la fase "Catálogo congruente" (ANÁLISIS §4/§8.3).
+ * El otorgamiento automático al primer login se retiró: la beta trabaja con
+ * precios REALES y el fundador siembra créditos A MANO (RPC otorgar_creditos,
+ * origen 'siembra_beta'; ver docs/BETA_CUENTAS_README.md). Esta constante y
+ * `otorgarCortesia` quedan aquí, sin llamador, por si la cortesía PÚBLICA
+ * post-lanzamiento se decide con telemetría (candidata preliminar: organizador
+ * gratis + un plan de bienvenida). No borrar: es el ancla dormida.
  *
- * Cerrar la beta (vaciar o desactivar beta_allowlist) cierra el grifo de
- * ESTA cortesía sin tocar código: sin fila en la allowlist, las rutas de
- * registro y de entrar (registrar/entrar) rechazan antes de que
- * otorgar_cortesia pueda llamarse.
+ * La allowlist NO se toca: sigue siendo la puerta de la beta (sin fila en
+ * beta_allowlist, registrar/entrar rechazan antes de crear la cuenta).
  */
 export const CORTESIA_BETA = 20;
 

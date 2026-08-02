@@ -455,7 +455,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
   const [data, setData] = useState<RespuestaNumeros | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [editando, setEditando] = useState(false);
-  /** ETAPA 2: la compuerta de activación (2 créditos, una vez por idea). */
+  /** La compuerta de activación (incluida con el plan, una vez por idea). */
   const [activando, setActivando] = useState(false);
   const [errorCompuerta, setErrorCompuerta] = useState<string | null>(null);
   /** La puerta de un faltante: abre el recolector con foco en ese campo. */
@@ -493,8 +493,10 @@ export function TusNumeros({ projectId }: { projectId: string }) {
   if (error) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">{error}</div>;
   if (!data) return <div className="mx-auto max-w-2xl px-6 py-16 text-dim">Calculando tus números…</div>;
 
-  // ETAPA 2 — LA COMPUERTA (canon 07): sin activación no hay tablero. Activar
-  // cuesta 2 créditos, UNA vez por idea; después todo recálculo es gratis.
+  // Catálogo congruente (§4): sin activación no hay tablero. Tus Números va
+  // INCLUIDO en el plan: activar no cuesta, pero sigue siendo UNA vez por idea
+  // (ancla activado_at). Si `data.costo` llegara > 0, el botón vuelve a mostrar
+  // el precio; con 0 muestra "incluido con tu plan".
   if (data.compuerta) {
     return (
       <div className="min-h-full">
@@ -514,8 +516,8 @@ export function TusNumeros({ projectId }: { projectId: string }) {
             <p className="text-[11px] font-semibold uppercase tracking-[1.3px] text-accent">Tus Números</p>
             <h1 className="mt-2 text-2xl font-bold tracking-tight">Tus cifras reales, convertidas en decisiones</h1>
             <p className="mt-3 text-[14.5px] leading-relaxed text-dim">
-              Margen, punto de equilibrio, tres palancas calculadas y escenarios, sobre las cifras que tú declares. Se
-              activa una vez por idea; después, corregir cifras y recalcular es gratis, siempre.
+              Margen, punto de equilibrio, tres palancas calculadas y escenarios, sobre las cifras que tú declares. Vienen
+              incluidos con tu plan. Se activan una vez por idea; corregir cifras y recalcular, cuando quieras.
             </p>
             <button
               onClick={async () => {
@@ -547,7 +549,11 @@ export function TusNumeros({ projectId }: { projectId: string }) {
               disabled={activando}
               className="mt-6 rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
             >
-              {activando ? "Activando…" : `Sacar mis números · ${data.costo ?? 2} créditos`}
+              {activando
+                ? "Activando…"
+                : (data.costo ?? 0) > 0
+                  ? `Sacar mis números · ${data.costo} créditos`
+                  : "Activar mis números · incluido con tu plan"}
             </button>
             {errorCompuerta && <p className="mt-3 text-[13px] text-warn">{errorCompuerta}</p>}
           </div>
@@ -568,7 +574,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
         <span className="truncate text-[15px] font-bold">{titulo ?? "Tu idea"}</span>
       </div>
       <span className="flex-none rounded-full border border-accent/40 px-3 py-1.5 text-[12.5px] font-semibold text-accent">
-        Tus Números · 2 créditos
+        Tus Números · incluido
       </span>
     </nav>
   );
