@@ -107,6 +107,15 @@ summary::-webkit-details-marker {
 .anima-plan-in { animation: planIn 0.6s ease-out both; }
 .anima-check-pop { animation: checkPop 0.4s ease-out both; }
 .anima-spin-ring { animation: spinRing 0.9s linear infinite; }
+/* Campaña "Espacios" — "Tu avance": el latido de la PUNTA VIVA (dónde vas ahora)
+ * en el riel de hitos. Calco del haloViva del canon 09; el recorte de 4px es el
+ * fondo (separa el nodo del trazo). */
+@keyframes haloViva {
+  0%   { box-shadow: 0 0 0 4px var(--bg), 0 0 0 7px rgba(77, 124, 254, 0.34), 0 0 0 7px rgba(77, 124, 254, 0.42); }
+  70%  { box-shadow: 0 0 0 4px var(--bg), 0 0 0 7px rgba(77, 124, 254, 0.34), 0 0 0 20px rgba(77, 124, 254, 0); }
+  100% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 7px rgba(77, 124, 254, 0.34), 0 0 0 20px rgba(77, 124, 254, 0); }
+}
+.anima-halo-viva { animation: haloViva 2.6s ease-out infinite; }
 
 /* Phase 3.7 (C1, canon 04): cada fila nueva del riel crece desde cero;
  * la barra de gradiente (absoluta, top/bottom fijos) se estira con el

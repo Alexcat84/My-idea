@@ -40,16 +40,16 @@ export function SelectorCara({
     <div
       role="tablist"
       aria-label="Las caras de este espacio"
-      className="relative flex w-full rounded-[13px] border border-accent/70 bg-surface-3 p-1 shadow-[0_0_12px_rgba(77,124,254,0.22)]"
+      className="relative flex w-full rounded-[13px] border-2 border-accent/80 bg-surface-3 p-1 shadow-[0_0_16px_rgba(77,124,254,0.30)]"
     >
-      {/* divisores internos (los tercios): dan lectura de "segmentado" */}
-      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-1/3 top-2.5 w-px bg-white/[0.08]" />
-      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-2/3 top-2.5 w-px bg-white/[0.08]" />
+      {/* divisores internos (los tercios), pintados en azul para que se noten */}
+      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-1/3 top-2.5 w-px bg-accent/45" />
+      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-2/3 top-2.5 w-px bg-accent/45" />
 
       {/* el knob elevado que se desliza a la celda activa */}
       <span
         aria-hidden
-        className="pointer-events-none absolute bottom-1 top-1 z-[1] rounded-[10px] border border-accent bg-surface-2 shadow-[0_1px_3px_rgba(0,0,0,0.5),0_0_10px_rgba(77,124,254,0.5)] transition-[left,width] duration-300 ease-out"
+        className="pointer-events-none absolute bottom-1 top-1 z-[1] rounded-[10px] border-2 border-accent bg-surface-2 shadow-[inset_0_0_14px_rgba(77,124,254,0.30),0_0_14px_rgba(77,124,254,0.55)] transition-[left,width] duration-300 ease-out"
         style={{ left: ind.left, width: ind.width }}
       />
 

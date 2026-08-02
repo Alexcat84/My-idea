@@ -100,14 +100,9 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
           <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
         )}
         <span className="min-w-0 flex-1">
+          {/* Solo el título en la barra colapsada (como Manos a la obra): limpio.
+              El entregable y todo el detalle viven adentro, al desplegar. */}
           <span className="block text-[15.5px] font-semibold leading-snug">{s.titulo}</span>
-          {/* Entregable como subtítulo de la barra colapsada: saber de qué va
-              sin expandir. Se oculta al abrir (dentro va la caja completa). */}
-          {s.entregable && (
-            <span className="mt-1 line-clamp-2 block text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty] group-open:hidden">
-              {s.entregable}
-            </span>
-          )}
         </span>
         <svg
           aria-hidden
