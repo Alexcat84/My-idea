@@ -26,6 +26,7 @@ import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
 import { PRECIOS } from "@/lib/precios";
+import { ESPACIO_CORE, mundosDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
@@ -155,6 +156,11 @@ interface Props {
   /** Fase 4.5: comprar el plan del mundo desde su escaparate (el diagnóstico).
    * El padre genera el plan DESDE la sesión del preview, sin re-entrevistar. */
   onComprarPlanMundo: (dominio: string, sessionId: string) => void;
+  /** Campaña "Espacios": esta misma vista sirve UN espacio. Sin la prop →
+   * comportamiento histórico (core + mundos apilados). `"core"` → solo el core
+   * (los mundos viven en su hub). Un dominio de mundo → solo la sección de ESE
+   * mundo (su hub). */
+  soloDominio?: string;
 }
 
 const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
@@ -871,6 +877,7 @@ export function ManosALaObra({
   onSeguimientoIniciado,
   onMundoIniciado,
   onComprarPlanMundo,
+  soloDominio,
 }: Props) {
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
@@ -960,6 +967,15 @@ export function ManosALaObra({
   const itemsCore = core?.etapas.flatMap((e) => e.items) ?? [];
   const cCore = conteo(itemsCore);
   const tituloPlan = planMd.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? null;
+
+  // Campaña "Espacios": esta vista sirve UN espacio. `soloMundo` = el dominio
+  // del mundo cuando estamos en su hub (si no, null). `mostrarCore` gatea todo
+  // lo del core (header, rituales, checklist, historia, aside). `mundosVisibles`
+  // filtra la sección de mundos: en el hub, solo ese mundo; en el core, ninguno
+  // (viven en su hub); sin la prop, todos (comportamiento histórico intacto).
+  const soloMundo = soloDominio && soloDominio !== ESPACIO_CORE ? soloDominio : null;
+  const mostrarCore = !soloMundo;
+  const mundosVisibles = mundosDelEspacio(mundos, soloDominio);
   // Fase 3.8: la baseline está confirmada si algún ítem core ya tiene fecha.
   // Fase 4.1 (V3a): el ritual cubre el proyecto ENTERO. Cada tramo lleva su
   // propio ancla (el created_at del plan de SU dominio) y sus propios titulos
@@ -1227,9 +1243,11 @@ export function ManosALaObra({
   const barraPct = cCore.total > 0 ? Math.round((cCore.hechos / cCore.total) * 100) : 0;
 
   return (
-    <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[1fr_300px] lg:items-start lg:gap-8">
+    <div className={"flex flex-col gap-6" + (soloMundo ? "" : " lg:grid lg:grid-cols-[1fr_300px] lg:items-start lg:gap-8")}>
       <div className="flex min-w-0 flex-col gap-7">
-        {/* encabezado: verde ejecuta */}
+        {/* encabezado del core: verde ejecuta. En el hub de un mundo no va (su
+            sección trae su propio encabezado). */}
+        {mostrarCore && (
         <header className="anima-plan-in">
           <p className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[1.2px] text-done">
             <span className="anima-green-pulse h-2 w-2 rounded-full bg-done" />
@@ -1260,9 +1278,12 @@ export function ManosALaObra({
             </p>
           )}
         </header>
+        )}
 
         {error && <p className="text-sm text-warn">{error}</p>}
 
+        {mostrarCore && (
+          <>
         {/* Fase 3.8 §3 — la elección del modo: primera entrada (modoCamino null)
             o cuando el usuario toca "cambiar". */}
         {(modoCamino === null || mostrarSelectorModo) && (
@@ -1351,8 +1372,10 @@ export function ManosALaObra({
           </div>
         )}
 
-        {/* checklist maestro: viaje core */}
-        {core && mundos.length > 0 && (
+        {/* checklist maestro: viaje core. El rótulo solo desambigua cuando hay
+            mundos VISIBLES apilados debajo (comportamiento histórico); en el
+            core-solo de su hub no hay mundos abajo, así que no aparece. */}
+        {core && mundosVisibles.length > 0 && (
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
             Tu viaje core · <span className="text-done">{cCore.hechos}/{cCore.total}</span>
           </p>
@@ -1375,18 +1398,30 @@ export function ManosALaObra({
             Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.
           </p>
         )}
+          </>
+        )}
 
-        {/* mundos activos: checklist agrupado por mundo (canon 08) */}
-        {mundos.map((mundo) => {
+        {/* mundos activos: cada uno su sección/hub (canon 08). En el core-solo
+            no se apila ninguno; en el hub, solo el suyo; sin la prop, todos. */}
+        {mundosVisibles.map((mundo) => {
           const grupo = grupoVigente(checklist, mundo.dominio);
           const items = grupo?.etapas.flatMap((e) => e.items) ?? [];
           const c = conteo(items);
           const titulosMundo = mundo.plan ? titulosDeEtapas(mundo.plan.contenido_md) : {};
           const completado = Boolean(mundo.completadoAt);
+          // En SU hub (soloMundo === este dominio) la sección es la PANTALLA
+          // entera: sin marco de tarjeta y con el nombre como título grande.
+          // Apilada bajo el core, conserva su tarjeta para separarse del resto.
+          const esHub = soloMundo === mundo.dominio;
           return (
-            <section key={mundo.dominio} className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
+            <section
+              key={mundo.dominio}
+              className={esHub ? "anima-plan-in" : "rounded-panel border border-hairline bg-surface p-5 sm:p-6"}
+            >
               <div className="flex flex-wrap items-center gap-3">
-                <h3 className="text-base font-semibold">{mundo.nombre}</h3>
+                <h3 className={esHub ? "text-2xl font-bold tracking-tight sm:text-[26px]" : "text-base font-semibold"}>
+                  {mundo.nombre}
+                </h3>
                 {/* Fase 4.2: el chip del mundo completado. Distingue por FORMA
                     (el check) además de por color, como el resto del canon. */}
                 {completado ? (
@@ -1407,7 +1442,7 @@ export function ManosALaObra({
                   </span>
                 ) : (
                   <span className="inline-flex items-center rounded-full border border-accent/45 px-3 py-1 text-[11px] font-bold text-accent">
-                    {mundo.plan ? "Mundo activo" : "Explóralo gratis"}
+                    {mundo.plan ? "Mundo activo" : "Por explorar"}
                   </span>
                 )}
               </div>
@@ -1445,25 +1480,44 @@ export function ManosALaObra({
                     </p>
                     <Markdown>{mundo.resumenMd}</Markdown>
                   </div>
-                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                  {/* Compuerta clara (campaña "Espacios" §1.3): el costo se dice
+                      ANTES de generar; el usuario sabe que se descuenta. */}
+                  <p className="mt-4 text-[12.5px] text-dim">
+                    Esto usará <span className="font-semibold text-ink">{PRECIOS.mundo_activar} créditos</span> de tu saldo.
+                  </p>
+                  <div className="mt-2 flex flex-wrap items-center gap-3">
                     <button
                       onClick={() => mundo.previewSessionId && onComprarPlanMundo(mundo.dominio, mundo.previewSessionId)}
                       disabled={!mundo.previewSessionId}
                       className="rounded-[10px] bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
                     >
-                      Generar mi plan de {mundo.nombre}
+                      Generar mi plan de {mundo.nombre} · {PRECIOS.mundo_activar} créditos
                     </button>
-                    <span className="text-[12.5px] text-dim">{PRECIOS.mundo_activar} créditos</span>
                   </div>
                 </div>
               ) : (
-                <button
-                  onClick={() => arrancarMundo(mundo.dominio)}
-                  disabled={arrancandoMundo !== null}
-                  className="mt-4 rounded-[10px] bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
-                >
-                  {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo · gratis"}
-                </button>
+                <div className="mt-4">
+                  {/* En el hub, el precio del plan al frente y EN GRANDE; el
+                      diagnóstico es la rampa gratis. Apilado, la nota compacta. */}
+                  {esHub && (
+                    <p className="mb-3 text-[13.5px] leading-relaxed text-dim">
+                      Empieza con un diagnóstico <span className="font-semibold text-done">gratis</span>. Su plan cuesta{" "}
+                      <span className="text-xl font-bold text-ink tabular-nums">{PRECIOS.mundo_activar}</span> créditos.
+                    </p>
+                  )}
+                  <button
+                    onClick={() => arrancarMundo(mundo.dominio)}
+                    disabled={arrancandoMundo !== null}
+                    className="rounded-[10px] bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
+                  >
+                    {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo"}
+                  </button>
+                  {!esHub && (
+                    <p className="mt-2 text-[12.5px] text-dim">
+                      Empieza con un diagnóstico gratis · su plan: {PRECIOS.mundo_activar} créditos
+                    </p>
+                  )}
+                </div>
               )}
 
               {/* Fase 4.2 §1 — el ritual de 3 tarjetas, TAMBIÉN aquí: un mundo
@@ -1572,8 +1626,9 @@ export function ManosALaObra({
           );
         })}
 
-        {/* Historia: los planes anteriores, releíbles */}
-        {historial.length > 0 && (
+        {/* Historia: los planes anteriores del core, releíbles (la del mundo va
+            en su hub, Fase 3). */}
+        {mostrarCore && historial.length > 0 && (
           <Acordeon titulo={`Historia (${historial.length})`}>
             <div className="flex flex-col gap-3">
               {historial.map((h, i) => (
@@ -1589,10 +1644,10 @@ export function ManosALaObra({
         )}
       </div>
 
-      {/* lateral: análisis + realizar + ciclo de profundización + ritmo.
-          El modo ya no vive aquí (Fase 4.3.2): es el indicador compacto del
-          header. En móvil este aside cae debajo del checklist (posición del
-          canon para análisis/ritmo); "Contar qué pasó" ya subió arriba. */}
+      {/* lateral (solo core): análisis + realizar + documentos + bitácora. En el
+          hub de un mundo no va — su documentación/estadística/bitácora propias
+          llegan en la Fase 3. */}
+      {mostrarCore && (
       <aside className="flex flex-col gap-6">
         {/* Fase 4.8 — MI BITÁCORA como PRIMER punto del aside (arriba a la
             derecha): la historia viva del viaje, verla antes de imprimir.
@@ -1764,6 +1819,7 @@ export function ManosALaObra({
           </div>
         )}
       </aside>
+      )}
 
       {/* Fase 4.3.2 — "Explorar actividad": el cajón/hoja del detalle de un ítem.
           Se deriva el ítem VIVO del checklist por su id (refleja cada cambio); si

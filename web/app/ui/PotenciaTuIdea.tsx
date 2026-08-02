@@ -216,7 +216,7 @@ export function PotenciaTuIdea({
                   </span>
                 ) : (
                   <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
-                    {activando === p.clave ? "Abriendo…" : "Explóralo gratis"}
+                    {activando === p.clave ? "Abriendo…" : `${PRECIOS.mundo_activar} créditos`}
                   </span>
                 )}
               </div>
@@ -235,11 +235,9 @@ export function PotenciaTuIdea({
                       Tu diagnóstico te espera · su plan: {PRECIOS.mundo_activar} créditos
                     </>
                   ) : (
-                    <>
-                      {/* ETAPA 2: el precio es VIVO (se paga con la cortesía);
-                          el tachado de beta murió. Siempre de precios.ts. */}
-                      El preview es gratis · su plan: {PRECIOS.mundo_activar} créditos
-                    </>
+                    /* Campaña "Espacios": el precio va al frente (chip); el
+                       diagnóstico es la rampa gratis, no el titular. */
+                    "Empieza con un diagnóstico gratis"
                   )}
                 </p>
               )}

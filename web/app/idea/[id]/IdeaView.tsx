@@ -29,7 +29,9 @@ import { PlanDocumento } from "../../ui/PlanDocumento";
 import { ChipSaldo } from "../../ui/ChipSaldo";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
+import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import { PRECIOS } from "@/lib/precios";
+import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
@@ -141,6 +143,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereDocumentos = searchParams.get("vista") === "documentos";
   const quiereBitacora = searchParams.get("vista") === "bitacora";
   const quiereCalendario = searchParams.get("vista") === "calendario";
+  // Campaña "Espacios": el hub de un mundo. Deep-linkeable: ?vista=mundo&dominio=X.
+  const quiereMundo = searchParams.get("vista") === "mundo";
 
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
@@ -195,6 +199,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [vistaDocumentos, setVistaDocumentos] = useState(quiereDocumentos);
   const [vistaBitacora, setVistaBitacora] = useState(quiereBitacora);
   const [vistaCalendario, setVistaCalendario] = useState(quiereCalendario);
+  // Campaña "Espacios": el hub del mundo activo (?vista=mundo&dominio=X).
+  const [vistaMundo, setVistaMundo] = useState(quiereMundo);
+  const [hubDominio, setHubDominio] = useState<string | null>(quiereMundo ? searchParams.get("dominio") : null);
   const [origenBitacora, setOrigenBitacora] = useState<"manos" | "plan">("plan");
   const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
@@ -332,6 +339,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
    * créditos) vive en la entrega, dentro de la ruta del plan (ancla ETAPA 2). */
   async function comprarPlanMundo(dominio: string, sid: string) {
     setVistaManos(false);
+    setVistaMundo(false);
     setDominioEntrevista(dominio);
     setPlanMd(null);
     await generarPlan(sid);
@@ -350,6 +358,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setContextoFinal("");
     setPlanMd(null);
     setVistaManos(false);
+    setVistaMundo(false);
     setDominioEntrevista(dominio);
     planPedidoRef.current = false;
     procesarTurno(data);
@@ -552,11 +561,24 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   function irAManos() {
     setVistaManos(true);
+    setVistaMundo(false);
+    setHubDominio(null);
     router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
+  }
+
+  // Campaña "Espacios": entrar al HUB de un mundo (su espacio propio), jamás a
+  // ?vista=manos (que es el core). Deep-linkeable y con dominio explícito.
+  function irAMundo(dominio: string) {
+    setVistaManos(false);
+    setVistaMundo(true);
+    setHubDominio(dominio);
+    router.replace(urlDelEspacio(projectId, dominio), { scroll: false });
   }
 
   function volverAlViaje() {
     setVistaManos(false);
+    setVistaMundo(false);
+    setHubDominio(null);
     setVistaAnalisis(false);
     setVistaCelebracion(false);
     setVistaDocumentos(false);
@@ -621,6 +643,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaCelebracion(false);
     setVistaDocumentos(false);
     setVistaCalendario(false);
+    setVistaMundo(false);
+    setHubDominio(null);
     setVistaManos(true);
     router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
   }
@@ -812,11 +836,25 @@ export function IdeaView({ projectId }: { projectId: string }) {
             onVolver={volverAManos}
             onVerLoCumplido={irAAnalisis}
           />
-        ) : vistaManos && planMd && checklist ? (
+        ) : (vistaManos || vistaMundo) && planMd && checklist ? (
           <>
-            <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
-              ← Ver el plan
-            </button>
+            {/* Campaña "Espacios": el cambiador de tabs (ruido cero: solo cuando
+                hay al menos un mundo activo; un proyecto solo-core conserva su
+                "Ver el plan"). "Tu viaje" (core) · cada mundo por su nombre de
+                cara · "+" (a la fila). Salta entre espacios en un clic. */}
+            {mundosParaObra.length > 0 ? (
+              <CambiadorEspacios
+                activo={vistaMundo && hubDominio ? hubDominio : "core"}
+                mundos={mundosParaObra.map((m) => ({ dominio: m.dominio, nombre: m.nombre }))}
+                onIrCore={irAManos}
+                onIrMundo={irAMundo}
+                onMas={volverAlViaje}
+              />
+            ) : (
+              <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
+                ← Ver el plan
+              </button>
+            )}
             <ManosALaObra
               projectId={projectId}
               planMd={planMd}
@@ -881,6 +919,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onSeguimientoIniciado={(data) => entrarASesionNueva(data as RespuestaTurno, "core")}
               onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio)}
               onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
+              soloDominio={vistaMundo && hubDominio ? hubDominio : "core"}
             />
           </>
         ) : (
@@ -1186,18 +1225,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   estadosMundo={estadosMundo}
                   progresoMundos={progresoMundos}
                   mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
-                  onVerMundo={() => irAManos()}
+                  onVerMundo={(dominio) => irAMundo(dominio)}
                   onActivarMundo={(dominio) => {
-                    // Fase 4.5: abrir el mundo es GRATIS (el cobro vive en la
-                    // entrega de su plan). Se añade a la lista local para que
-                    // su sección aparezca en Manos a la Obra, y se entra ahí
-                    // para explorarlo de inmediato.
+                    // Campaña "Espacios": abrir el mundo lo añade a la lista local
+                    // y ATERRIZA EN SU HUB (jamás en ?vista=manos, que es el core).
+                    // El cobro vive en la entrega de su plan (dentro del hub).
                     setDetalle((prev) =>
                       prev
                         ? { ...prev, unlocks: [...new Set([...(prev.unlocks ?? []), dominio])] }
                         : prev
                     );
-                    irAManos();
+                    irAMundo(dominio);
                   }}
                 />
               )}
