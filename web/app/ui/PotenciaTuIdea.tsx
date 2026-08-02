@@ -44,10 +44,18 @@ interface Props {
 }
 
 /** Íconos por mundo (trazo del canon); genérico para los mundos nuevos. */
-function Icono({ clave, activo }: { clave: string; activo?: boolean }) {
+// Exportado para el cambiador de espacios (mismas piezas de icono por dominio).
+export function Icono({ clave, activo }: { clave: string; activo?: boolean }) {
   const color = clave === "tus_numeros" ? "#F5F6F8" : activo ? "#4D7CFE" : "#A6A7AD";
   const p = { stroke: color, strokeWidth: 1.5, fill: "none" as const };
   const paths: Record<string, ReactNode> = {
+    // El espacio CORE ("Tu viaje"): una brújula — el viaje principal.
+    core: (
+      <>
+        <circle cx="10" cy="10" r="7.5" {...p} />
+        <path d="M10 5.5l1.7 2.8L10 14.5l-1.7-6.2z" {...p} strokeWidth={1.2} />
+      </>
+    ),
     tus_numeros: (
       <>
         <line x1="4" y1="16" x2="4" y2="10" stroke="#F5F6F8" strokeWidth="1.6" />
