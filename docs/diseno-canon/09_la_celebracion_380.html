@@ -3,58 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>09 · La Celebración · 1240</title>
+<title>09 · La Celebración · 380</title>
 <style>
   /* ============================================================
-     09 · LA CELEBRACIÓN · escritorio
-     Resumen del viaje, no la bitácora: solo los hitos importantes.
-     La pieza central es el RIEL VERTICAL CENTRADO dentro de su
-     panel: trazo grueso que desciende virando de azul a verde
-     hasta el nodo de meta, con su icono de celebración.
-     Todo el CSS a la vista, sin minificar.
+     09 · LA CELEBRACIÓN · móvil (380)
+     Mismo canon que en escritorio: resumen con los hitos
+     importantes, trazo grueso que vira de azul a verde y nodo de
+     meta con su icono. En 380 el eje va al margen izquierdo y
+     todos los hitos caen a su derecha.
      ============================================================ */
 
   :root {
-    /* ---- lienzo ---- */
     --bg:              #000000;
     --panel:           #0C0C10;
-    --surface-3:       #101013;
     --border:          rgba(255, 255, 255, 0.08);
     --border-suave:    rgba(255, 255, 255, 0.06);
 
-    /* ---- tinta ---- */
     --text:            #F5F6F8;
     --text-dim:        #A6A7AD;
     --text-mute:       #6F7076;
 
-    /* ---- identidad: el azul piensa, el verde ejecuta y cierra ---- */
     --accent:          #4D7CFE;
-    --accent-medio:    #3F9B8E;   /* el paso del azul al verde */
+    --accent-medio:    #3F9B8E;
     --done:            #3FB950;
     --done-soft:       rgba(63, 185, 80, 0.10);
     --done-borde:      rgba(63, 185, 80, 0.40);
     --done-anillo:     rgba(63, 185, 80, 0.22);
     --done-texto:      #7FD68C;
-    --warn:            #E0A64A;   /* el ámbar avisa */
-    --mundo:           #35A05C;   /* el hito de un mundo activado */
+    --warn:            #E0A64A;
+    --mundo:           #35A05C;
 
-    /* la traza va más sutil que los puntos: mismo color, menos presencia */
+    /* la traza va más sutil que los puntos */
     --traza-azul:      rgba(77, 124, 254, 0.34);
     --traza-medio:     rgba(63, 155, 142, 0.34);
     --traza-verde:     rgba(63, 185, 80, 0.34);
-    --gris-pendiente:  #5A5B62;   /* lo que aún no ocurre */
+    --gris-pendiente:  #5A5B62;
 
-    /* ---- forma ---- */
-    --radio-panel:     20px;
+    --radio-panel:     18px;
     --radio-tarjeta:   14px;
     --radio-chip:      999px;
 
-    /* ---- medidas del riel ---- */
-    --riel-ancho:      4px;    /* grosor del trazo */
-    --nodo:            13px;   /* diámetro del nodo */
-    --nodo-meta:       36px;   /* diámetro del nodo de meta */
-    --hito-hueco:      52px;   /* aire entre el carril y el texto */
-    --hito-aire:       58px;   /* aire entre un hito y el siguiente */
+    /* medidas del riel en móvil */
+    --riel-ancho:      4px;
+    --riel-carril:     22px;
+    --nodo:            12px;
+    --nodo-meta:       34px;
+    --nodo-centro:     8px;   /* del borde del hito al centro del nodo */
+    --hito-aire:       34px;  /* aire entre un hito y el siguiente */
   }
 
   * { box-sizing: border-box; }
@@ -71,7 +66,7 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { color: #7B9DFF; }
 
-  .pantalla { width: 1240px; margin: 0 auto; }
+  .pantalla { width: 380px; margin: 0 auto; }
 
   /* ============================================================
      CABECERA
@@ -80,35 +75,19 @@
   .cabecera {
     display: flex;
     align-items: center;
-    gap: 10px;
-    height: 66px;
-    padding: 0 32px;
+    gap: 8px;
+    padding: 14px 18px;
     border-bottom: 1px solid var(--border);
   }
 
-  .cabecera__miga { font-size: 14px; color: var(--text-dim); flex: none; }
-  .cabecera__barra { font-size: 14px; color: #4A4B52; flex: none; }
+  .cabecera__miga { font-size: 13px; color: var(--text-dim); flex: none; }
+  .cabecera__barra { font-size: 13px; color: #4A4B52; flex: none; }
 
   .cabecera__idea {
-    font-size: 15px;
+    font-size: 13.5px;
     font-weight: 700;
+    line-height: 1.35;
     letter-spacing: -0.01em;
-  }
-
-  /* el distintivo: el verde solo aparece porque la idea se cerró */
-  .distintivo {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    height: 26px;
-    padding: 0 12px;
-    border: 1px solid var(--done-borde);
-    border-radius: var(--radio-chip);
-    background: var(--done-soft);
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--done-texto);
-    white-space: nowrap;
   }
 
   /* ============================================================
@@ -116,44 +95,42 @@
      ============================================================ */
 
   .heroe {
-    padding: 44px 32px 0;
+    padding: 30px 18px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 13px;
     text-align: center;
   }
 
   .heroe__rotulo {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 2.2px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--done);
   }
 
   .heroe__titulo {
     margin: 0;
-    max-width: 860px;
-    font-size: 42px;
+    font-size: 28px;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.15;
     letter-spacing: -0.025em;
   }
 
   .heroe__idea {
     margin: 0;
-    max-width: 660px;
-    font-size: 15px;
+    font-size: 13.5px;
     line-height: 1.55;
     color: var(--text-dim);
     text-wrap: pretty;
   }
 
   .heroe__distintivo {
-    height: 42px;
-    padding: 0 24px;
-    font-size: 15px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
     font-weight: 700;
     border-radius: var(--radio-chip);
     border: 1px solid var(--done-borde);
@@ -162,81 +139,69 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    white-space: nowrap;
   }
 
   /* ============================================================
-     EL RIEL VERTICAL CENTRADO
+     EL RIEL · un solo lado
 
-     Anatomía:
-       .panel-riel      la tarjeta donde vive el riel
-       .riel            contenedor; la línea corre por su centro
-       .riel__linea     el trazo: azul arriba, verde al descender
-       .hito            rejilla: lado izquierdo | carril | lado derecho
-       .hito__carril    columna 2 siempre (no depende del markup)
-       .hito__nodo      el punto, centrado sobre el trazo
-       .hito--izquierda / --derecha   de qué lado cae el texto
-       .hito--mundo     el hito de un mundo activado
-       .hito--meta      el cierre: nodo de meta con anillo e icono
-     Solo van hitos importantes: la bitácora es la que cuenta todo.
+     Cada hito dibuja el tramo que lo une con el siguiente:
+     .hito__carril::before va del centro de su nodo al centro del
+     siguiente, así el riel termina exacto en el nodo de meta.
+     El color del tramo lo pone la clase del hito: azul al empezar,
+     .hito--vira donde pasa a verde, verde de ahí en adelante.
      ============================================================ */
 
-  .seccion-riel { padding: 34px 32px 0; }
+  .seccion-riel { padding: 26px 18px 0; }
 
   .panel-riel {
-    padding: 52px 40px 44px;
+    padding: 26px 20px 24px;
     border: 1px solid var(--border-suave);
     border-radius: var(--radio-panel);
     background: var(--panel);
   }
 
-  .riel {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  /* el trazo: un solo degradado vertical, del azul del comienzo al
-     verde del cierre. Moviendo estas paradas se mueve el viraje. */
-  /* el trazo termina en el CENTRO del nodo de meta: el riel acaba en
-     ese nodo (el rótulo del cierre va fuera, como hermano). */
-  .riel__linea {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 7px;
-    bottom: calc(var(--nodo-meta) / 2);
-    width: var(--riel-ancho);
-    border-radius: var(--riel-ancho);
-    /* el trazo va translúcido: los puntos, a color pleno, resaltan sobre él */
-    background: linear-gradient(
-      to bottom,
-      var(--traza-azul) 0%,
-      var(--traza-azul) 24%,
-      var(--traza-medio) 44%,
-      var(--traza-verde) 62%,
-      var(--traza-verde) 100%
-    );
-  }
-
   .hito {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr var(--riel-ancho) 1fr;
-    column-gap: var(--hito-hueco);
+    display: flex;
+    gap: 14px;
     padding-bottom: var(--hito-aire);
   }
 
-  /* el carril es SIEMPRE la columna del medio */
+  .hito:last-child { padding-bottom: 0; }
+
   .hito__carril {
     position: relative;
-    grid-column: 2;
+    flex: none;
+    width: var(--riel-carril);
   }
+
+  .hito__carril::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: var(--nodo-centro);
+    bottom: calc(-1 * (var(--hito-aire) + var(--nodo-centro)));
+    width: var(--riel-ancho);
+    border-radius: var(--riel-ancho);
+    /* la traza va translúcida: los puntos, a color pleno, resaltan */
+    background: var(--traza-azul);
+  }
+
+  /* el tramo donde el azul vira a verde */
+  .hito--vira .hito__carril::before {
+    background: linear-gradient(to bottom, var(--traza-azul) 0%, var(--traza-medio) 50%, var(--traza-verde) 100%);
+  }
+
+  /* de aquí en adelante, verde */
+  .hito--verde .hito__carril::before { background: var(--traza-verde); }
+
+  .hito:last-child .hito__carril::before { display: none; }
 
   .hito__nodo {
     position: absolute;
     left: 50%;
-    top: 7px;
+    top: calc(var(--nodo-centro) - var(--nodo) / 2);
     transform: translateX(-50%);
     width: var(--nodo);
     height: var(--nodo);
@@ -245,31 +210,30 @@
     box-shadow: 0 0 0 4px var(--panel);
   }
 
-  /* la punta viva: el hito donde va el usuario ahora mismo.
-     Anillo fijo + halo que late. Se apaga con prefers-reduced-motion. */
+  /* la punta viva: el hito donde va el usuario ahora mismo */
   .hito--viva .hito__nodo {
-    box-shadow: 0 0 0 4px var(--panel), 0 0 0 7px rgba(77, 124, 254, 0.30);
+    box-shadow: 0 0 0 4px var(--panel), 0 0 0 6px rgba(77, 124, 254, 0.30);
     animation: haloViva 2.6s ease-out infinite;
   }
 
   @keyframes haloViva {
-    0%   { box-shadow: 0 0 0 4px var(--panel), 0 0 0 7px rgba(77, 124, 254, 0.30), 0 0 0 7px rgba(77, 124, 254, 0.42); }
-    70%  { box-shadow: 0 0 0 4px var(--panel), 0 0 0 7px rgba(77, 124, 254, 0.30), 0 0 0 20px rgba(77, 124, 254, 0); }
-    100% { box-shadow: 0 0 0 4px var(--panel), 0 0 0 7px rgba(77, 124, 254, 0.30), 0 0 0 20px rgba(77, 124, 254, 0); }
+    0%   { box-shadow: 0 0 0 4px var(--panel), 0 0 0 6px rgba(77, 124, 254, 0.30), 0 0 0 6px rgba(77, 124, 254, 0.42); }
+    70%  { box-shadow: 0 0 0 4px var(--panel), 0 0 0 6px rgba(77, 124, 254, 0.30), 0 0 0 18px rgba(77, 124, 254, 0); }
+    100% { box-shadow: 0 0 0 4px var(--panel), 0 0 0 6px rgba(77, 124, 254, 0.30), 0 0 0 18px rgba(77, 124, 254, 0); }
   }
 
   .hito__cuerpo {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
+    padding-top: 1px;
     min-width: 0;
   }
 
-  /* los textos se ajustan solos cuando el hito trae un nombre largo */
+  /* los textos se ajustan cuando el hito trae un nombre largo */
   .hito__nombre,
   .hito__nota { overflow-wrap: anywhere; text-wrap: pretty; }
 
-  /* si un texto se pasa de largo, se recorta a tres líneas con puntos */
   .hito__nota--recorta {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -277,39 +241,30 @@
     overflow: hidden;
   }
 
-  .hito--izquierda .hito__cuerpo { grid-column: 1; align-items: flex-end; text-align: right; }
-  .hito--derecha .hito__cuerpo { grid-column: 3; align-items: flex-start; text-align: left; }
-
-  .hito__fecha { font-size: 13px; color: var(--text-dim); }
+  .hito__fecha { font-size: 12.5px; color: var(--text-dim); }
 
   .hito__nombre {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.01em;
   }
 
-  .hito__nota { font-size: 13.5px; color: var(--text-dim); }
+  .hito__nota { font-size: 13px; color: var(--text-dim); }
 
-/* cada nodo toma el color del trazo a su altura: el traspaso
-     azul → verde se lee igual en la línea y en los puntos */
-  .hito--paso .hito__nodo { background: var(--accent-medio); }
+  /* cada nodo toma el color del trazo a su altura */
+  .hito--vira .hito__nodo { background: var(--accent-medio); }
   .hito--verde .hito__nodo { background: var(--done); }
 
-  /* el mundo activado: pertenece al camino, ya en tono verde */
+  /* el mundo activado */
   .hito--mundo .hito__nodo { background: var(--mundo); }
   .hito--mundo .hito__nombre { color: var(--done-texto); }
 
-  /* ---- el cierre: nodo de meta con anillo, icono y rótulo ---- */
+  /* ---- el cierre: nodo de meta con anillo e icono ---- */
 
-  .hito--meta {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding-bottom: 0;
-  }
+  .hito--meta { align-items: center; padding-bottom: 0; }
 
   .hito--meta .hito__carril {
-    grid-column: 1;
-    width: var(--nodo-meta);
+    width: var(--riel-carril);
     height: var(--nodo-meta);
   }
 
@@ -319,110 +274,99 @@
     height: var(--nodo-meta);
     background: var(--panel); /* opaco: el trazo no se ve por detrás */
     border: 2.5px solid var(--done);
-    box-shadow: 0 0 0 5px var(--panel), 0 0 0 12px var(--done-anillo);
+    box-shadow: 0 0 0 5px var(--panel), 0 0 0 11px var(--done-anillo);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1;
     animation: haloMeta 2.8s ease-out infinite;
   }
 
   @keyframes haloMeta {
-    0%   { box-shadow: 0 0 0 5px var(--panel), 0 0 0 12px rgba(63, 185, 80, 0.30); }
-    70%  { box-shadow: 0 0 0 5px var(--panel), 0 0 0 26px rgba(63, 185, 80, 0); }
-    100% { box-shadow: 0 0 0 5px var(--panel), 0 0 0 26px rgba(63, 185, 80, 0); }
+    0%   { box-shadow: 0 0 0 5px var(--panel), 0 0 0 11px rgba(63, 185, 80, 0.30); }
+    70%  { box-shadow: 0 0 0 5px var(--panel), 0 0 0 24px rgba(63, 185, 80, 0); }
+    100% { box-shadow: 0 0 0 5px var(--panel), 0 0 0 24px rgba(63, 185, 80, 0); }
   }
 
-  /* La meta EN GRIS mientras nadie declaró el final y el sistema
-     tampoco lo detectó: el mismo nodo, sin color, sin latido.
-     Se activa poniendo .hito--pendiente en el hito de meta. */
+  /* la meta en gris mientras nadie declaró el final ni el sistema
+     lo detectó: .hito--pendiente sobre el hito de meta */
   .hito--meta.hito--pendiente .hito__nodo {
     border-color: var(--gris-pendiente);
-    box-shadow: 0 0 0 5px var(--panel), 0 0 0 12px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 5px var(--panel), 0 0 0 11px rgba(255, 255, 255, 0.05);
     animation: none;
     filter: grayscale(1);
     opacity: 0.75;
   }
 
-  .hito--meta.hito--pendiente ~ .meta-cierre .meta__rotulo,
   .hito--pendiente .meta__rotulo { color: var(--gris-pendiente); }
 
-  /* el rótulo del cierre, debajo del riel */
-  .meta-cierre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    margin-top: 14px;
-    text-align: center;
-  }
-
-  .meta-cierre__fecha { font-size: 13px; color: var(--text-dim); }
+  .hito--meta .hito__cuerpo { padding-left: 8px; }
 
   .meta__rotulo {
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 800;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--done);
   }
 
-  .meta__frase {
-    font-size: 14px;
-    color: var(--text-dim);
-  }
+  .meta__frase { font-size: 13px; color: var(--text-dim); }
 
   /* ---- el lienzo del confeti: por encima de todo, sin estorbar ---- */
+  /* en el teléfono el confeti vive dentro de la pantalla: el lienzo
+     mide los 380 del aparato y el alto de lo que se ve, no la
+     ventana entera del navegador */
   .confeti {
     position: fixed;
-    inset: 0;
-    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 380px;
     height: 100%;
     pointer-events: none;
     z-index: 40;
   }
 
   /* ============================================================
-     ESTADÍSTICAS · centradas y con el color del tema
+     ESTADÍSTICAS · centradas, dos por dos
      ============================================================ */
 
   .estadisticas {
-    padding: 44px 32px 0;
+    padding: 30px 18px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     text-align: center;
   }
 
   .estadisticas__rotulo {
     margin: 0;
-    max-width: 720px;
-    font-size: 11.5px;
+    font-size: 10.5px;
     font-weight: 700;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--text-mute);
     line-height: 1.5;
   }
 
   .tarjetas {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 210px);
-    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .tarjeta {
-    padding: 24px 20px;
+    padding: 18px 14px;
     border: 1px solid var(--border-suave);
     border-radius: var(--radio-tarjeta);
     background: var(--panel);
-    text-align: center;
   }
 
   .tarjeta__dato {
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 800;
     line-height: 1;
     letter-spacing: -0.035em;
@@ -433,41 +377,37 @@
   .tarjeta__dato--verde { color: var(--done); }
 
   .tarjeta__de {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-mute);
     letter-spacing: 0;
   }
 
   .tarjeta__rotulo {
-    margin-top: 10px;
-    font-size: 13px;
+    margin-top: 8px;
+    font-size: 12.5px;
     color: var(--text-dim);
   }
 
-  /* el reparto del cumplimiento: verde, azul y ámbar. Nunca rojo. */
   .cumplimiento {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
   }
 
   .cuenta {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    height: 34px;
-    padding: 0 16px;
+    gap: 7px;
+    height: 32px;
+    padding: 0 14px;
     border-radius: var(--radio-chip);
-    font-size: 13.5px;
+    font-size: 12.5px;
     font-weight: 700;
   }
 
-  .cuenta__punto {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-  }
+  .cuenta__punto { width: 6px; height: 6px; border-radius: 50%; }
 
   .cuenta--tiempo { background: rgba(63, 185, 80, 0.12); color: var(--done); }
   .cuenta--tiempo .cuenta__punto { background: var(--done); }
@@ -484,17 +424,15 @@
 
   .salidas {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 28px;
-    padding: 34px 32px 64px;
+    gap: 16px;
+    padding: 28px 18px 44px;
     font-size: 14px;
   }
 
   .salida { color: var(--text-dim); cursor: pointer; }
-  .salida:hover { color: var(--text); }
   .salida--principal { color: var(--accent); font-weight: 600; }
-  .salida--principal:hover { color: #7B9DFF; }
 
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
@@ -503,17 +441,14 @@
 </head>
 <body>
 
-  <main class="pantalla" data-screen-label="09 La Celebracion 1240">
+  <main class="pantalla" data-screen-label="09 La Celebracion 380">
 
-    <!-- ===== cabecera ===== -->
     <header class="cabecera">
       <span class="cabecera__miga">Mis ideas</span>
       <span class="cabecera__barra">/</span>
       <span class="cabecera__idea">Kits de huerto urbano en balcones: del círculo cercano al primer comprador desconocido</span>
-      <span class="distintivo">✓ Proyecto</span>
     </header>
 
-    <!-- ===== el héroe ===== -->
     <section class="heroe">
       <span class="heroe__rotulo">Realizada</span>
       <h1 class="heroe__titulo">Aquí acaba tu idea y nace tu proyecto</h1>
@@ -524,71 +459,67 @@
     <!-- ===== EL RIEL DE HITOS (resumen, no bitácora) ===== -->
     <section class="seccion-riel">
       <div class="panel-riel">
-        <div class="riel">
-          <span class="riel__linea" aria-hidden="true"></span>
 
-          <article class="hito hito--izquierda">
-            <div class="hito__cuerpo">
-              <span class="hito__fecha">16 de julio</span>
-              <span class="hito__nombre">La Chispa</span>
-              <span class="hito__nota">La idea nace</span>
-            </div>
-            <div class="hito__carril"><span class="hito__nodo"></span></div>
-          </article>
+        <article class="hito">
+          <div class="hito__carril"><span class="hito__nodo"></span></div>
+          <div class="hito__cuerpo">
+            <span class="hito__fecha">16 de julio</span>
+            <span class="hito__nombre">La Chispa</span>
+            <span class="hito__nota">La idea nace</span>
+          </div>
+        </article>
 
-          <article class="hito hito--derecha">
-            <div class="hito__carril"><span class="hito__nodo"></span></div>
-            <div class="hito__cuerpo">
-              <span class="hito__fecha">16 de julio</span>
-              <span class="hito__nombre">Claridad</span>
-              <span class="hito__nota">Tu idea, organizada</span>
-            </div>
-          </article>
+        <article class="hito">
+          <div class="hito__carril"><span class="hito__nodo"></span></div>
+          <div class="hito__cuerpo">
+            <span class="hito__fecha">16 de julio</span>
+            <span class="hito__nombre">Claridad</span>
+            <span class="hito__nota">Tu idea, organizada</span>
+          </div>
+        </article>
 
-          <article class="hito hito--izquierda hito--paso">
-            <div class="hito__cuerpo">
-              <span class="hito__fecha">18 de julio</span>
-              <span class="hito__nombre">Tu Plan · ciclo 1</span>
-              <span class="hito__nota">con línea base</span>
-            </div>
-            <div class="hito__carril"><span class="hito__nodo"></span></div>
-          </article>
+        <article class="hito hito--vira">
+          <div class="hito__carril"><span class="hito__nodo"></span></div>
+          <div class="hito__cuerpo">
+            <span class="hito__fecha">18 de julio</span>
+            <span class="hito__nombre">Tu Plan · ciclo 1</span>
+            <span class="hito__nota">con línea base</span>
+          </div>
+        </article>
 
-          <article class="hito hito--derecha hito--verde">
-            <div class="hito__carril"><span class="hito__nodo"></span></div>
-            <div class="hito__cuerpo">
-              <span class="hito__fecha">24 de julio</span>
-              <span class="hito__nombre">Tu Plan · ciclo 2</span>
-              <span class="hito__nota">un cambio de rumbo</span>
-            </div>
-          </article>
+        <article class="hito hito--verde">
+          <div class="hito__carril"><span class="hito__nodo"></span></div>
+          <div class="hito__cuerpo">
+            <span class="hito__fecha">24 de julio</span>
+            <span class="hito__nombre">Tu Plan · ciclo 2</span>
+            <span class="hito__nota">un cambio de rumbo</span>
+          </div>
+        </article>
 
-          <article class="hito hito--izquierda hito--mundo">
-            <div class="hito__cuerpo">
-              <span class="hito__fecha">2 de agosto</span>
-              <span class="hito__nombre">Mundo activado: Calidad y Confianza</span>
-              <span class="hito__nota">un frente más, dentro del mismo viaje</span>
-            </div>
-            <div class="hito__carril"><span class="hito__nodo"></span></div>
-          </article>
+        <article class="hito hito--verde hito--mundo">
+          <div class="hito__carril"><span class="hito__nodo"></span></div>
+          <div class="hito__cuerpo">
+            <span class="hito__fecha">2 de agosto</span>
+            <span class="hito__nombre">Mundo activado: Calidad y Confianza</span>
+            <span class="hito__nota">un frente más, dentro del mismo viaje</span>
+          </div>
+        </article>
 
-          <!-- el cierre: la meta, con su icono de celebración -->
-          <article class="hito hito--meta">
-            <div class="hito__carril">
-              <span class="hito__nodo" role="img" aria-label="Celebración">🎉</span>
-            </div>
-          </article>
-        </div>
+        <!-- el cierre: la meta, con su icono de celebración -->
+        <article class="hito hito--meta">
+          <div class="hito__carril">
+            <span class="hito__nodo" role="img" aria-label="Celebración">🎉</span>
+          </div>
+          <div class="hito__cuerpo">
+            <span class="hito__fecha">6 de septiembre</span>
+            <span class="meta__rotulo">Realizada</span>
+            <span class="meta__frase">Aquí acaba tu idea y nace tu proyecto</span>
+          </div>
+        </article>
 
-        <div class="meta-cierre">
-          <span class="meta-cierre__fecha">6 de septiembre</span>
-          <span class="meta__rotulo">Realizada</span>
-          <span class="meta__frase">Aquí acaba tu idea y nace tu proyecto</span>
-        </div>
       </div>
     </section>
 
-    <!-- ===== estadísticas ===== -->
     <section class="estadisticas">
       <h2 class="estadisticas__rotulo">Estadísticas de Kits de huerto urbano en balcones: del círculo cercano al primer comprador desconocido</h2>
 
@@ -618,7 +549,6 @@
       </div>
     </section>
 
-    <!-- ===== las salidas ===== -->
     <nav class="salidas">
       <span class="salida salida--principal">Ver análisis completo →</span>
       <span class="salida">Volver a mis ideas</span>
@@ -658,7 +588,7 @@
      freno, la gravedad, el giro y la vida, así las piezas llegan
      igual de lejos, solo que tardan más en hacerlo. */
   var RITMO = 0.55;
-  var ESCALA_BASE = 1;          // el móvil lleva piezas algo menores
+  var ESCALA_BASE = 0.85;          // el móvil lleva piezas algo menores
 
   var lienzo = document.getElementById('confeti');
   var pincel = lienzo.getContext('2d');
@@ -697,8 +627,8 @@
         vy: -Math.sin(giro) * fuerza * 0.28,
         giro: Math.random() * Math.PI,
         vueltas: (Math.random() - 0.5) * 0.24 * RITMO,
-        ancho: (5) * escala,
-        alto: (8) * escala,
+        ancho: (4.5) * escala,
+        alto: (7) * escala,
         color: paleta[(Math.random() * paleta.length) | 0],
         decaimiento: 1 - (1 - decaimiento) * RITMO,
         gravedad: gravedad * RITMO * RITMO,
@@ -762,7 +692,7 @@
 
     /* 1 · EL CHORRO DEL NODO DE META: un golpe al abrir y luego un
        surtidor hacia arriba que no para hasta el final */
-    lanza({ cantidad: 80, origen: origenMeta(), angulo: 90, apertura: 90, velocidad: 70 });
+    lanza({ cantidad: 46, origen: origenMeta(), angulo: 90, apertura: 90, velocidad: 42, decaimiento: 0.90 });
 
     (function chorro() {
       lanza({
@@ -770,10 +700,10 @@
         origen: origenMeta(),
         angulo: 90,
         apertura: 30,
-        velocidad: 135,
-        decaimiento: 0.94,
-        gravedad: 0.38,
-        vida: 155
+        velocidad: 82,
+        decaimiento: 0.91,
+        gravedad: 0.34,
+        vida: 150
       });
       if (Date.now() < final) requestAnimationFrame(chorro);
     }());
@@ -781,7 +711,7 @@
     /* 2 · los cañones de los lados, abajo: suben, cruzan hasta el
        centro de la pantalla y descienden. Van en cafés. */
     (function lados() {
-      var tiro = { angulo: 64, apertura: 48, velocidad: 225, decaimiento: 0.965, gravedad: 0.22, vida: 190, colores: CAFES };
+      var tiro = { angulo: 64, apertura: 48, velocidad: 78, decaimiento: 0.90, gravedad: 0.20, vida: 175, colores: CAFES };
       lanza(Object.assign({ cantidad: 2, origen: { x: 0, y: 0.78 } }, tiro));
       lanza(Object.assign({ cantidad: 2, origen: { x: 1, y: 0.78 } }, tiro, { angulo: 116 }));
       if (Date.now() < final) requestAnimationFrame(lados);
@@ -792,9 +722,9 @@
     var reloj = setInterval(function () {
       var queda = final - Date.now();
       if (queda <= 0) return clearInterval(reloj);
-      var cantidad = Math.floor(34 * (queda / DURACION)) + 6;
+      var cantidad = Math.floor(16 * (queda / DURACION)) + 5;
       var alAzar = function (min, max) { return Math.random() * (max - min) + min; };
-      var fuego = { apertura: 360, velocidad: 28, decaimiento: 0.90, gravedad: 0, vida: 72, desvanece: true };
+      var fuego = { apertura: 360, velocidad: 17, decaimiento: 0.88, gravedad: 0, vida: 70, desvanece: true };
       lanza(Object.assign({ cantidad: cantidad, origen: { x: alAzar(0.08, 0.92), y: alAzar(0.10, 0.86) } }, fuego));
       lanza(Object.assign({ cantidad: cantidad, origen: { x: alAzar(0.08, 0.92), y: alAzar(0.10, 0.86) } }, fuego));
     }, 250);
