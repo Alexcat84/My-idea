@@ -39,11 +39,12 @@ Refinemos el COPY del centro de créditos ("Usa tus créditos según lo que nece
 - Etiqueta: **Un mundo**
 - Título: **El plan de un mundo** · precio **5**
 - Bajada: Un frente entero de tu negocio (calidad, riesgos, seguridad…) con su propio plan y su Manos a la obra, dentro de tu mismo proyecto.
+- Bajada: Un frente entero de tu negocio (calidad, riesgos, seguridad…), con **su propio espacio** dentro de tu mismo proyecto.
 - Bullets (con su check):
   - **Su plan y su Manos a la obra:** las etapas, tareas y fechas de ese frente, listas para ejecutar igual que tu viaje.
-  - **Sus documentos:** el plan y los resúmenes del mundo, junto a los de tu viaje.
-  - **Se suma a tu proyecto:** vive en tu mismo viaje, con un tablero y una historia compartidos. No es otra cuenta ni otra idea.
-- Nota: Su diagnóstico es gratis; su plan cuesta 5.
+  - **Todo lo del mundo, por separado:** su avance, sus documentos y su bitácora, solo de ese frente.
+  - **Y suma al general:** cada mundo se refleja también en la vista completa de tu proyecto. Ves el frente solo, o el panorama entero.
+  - **Un mismo proyecto:** no es otra cuenta ni otra idea.
 - Ítem aparte (misma tarjeta, separado por una línea):
   - Título: **Un cambio de rumbo en un mundo** · precio **5**
   - Lo mismo dentro de ese frente, cuando lo que planeaste ahí deja de servirte.
