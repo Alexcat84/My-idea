@@ -5,6 +5,10 @@ Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 
 ## 1. Campaña "Espacios" — Fase 3 restante (en cola)
 
+**Plan detallado: `docs/PLAN_ESPACIOS_FASE3.md`** (propuesta pendiente del visto
+del fundador y del auditor; enfoque Opción A "dentro de Tu avance", garantías de
+fuente única / partición exacta / sin doble conteo, y las 5 tandas).
+
 La Fase 1+2 y las 3 caras del espacio (Plan · Manos a la obra · Tu avance) ya
 están en producción. Queda el resto de la Fase 3:
 
