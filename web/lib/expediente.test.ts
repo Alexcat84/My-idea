@@ -9,6 +9,7 @@ import {
   indiceDeDocumentos,
   nombreArchivo,
   rebajarTitulos,
+  reporteMundoMarkdown,
   titulosDeCiclos,
   type CicloExpediente,
   type DatosExpediente,
@@ -88,7 +89,21 @@ describe("indiceDeDocumentos", () => {
 
   it("ya cerrada, el expediente se presenta como el recorrido completo", () => {
     const docs = indiceDeDocumentos([ciclo("p1", "completo", "2026-03-01T12:00:00Z")], "2026-05-01T12:00:00Z");
-    expect(docs.at(-1)!.subtitulo).toContain("de la idea al cierre");
+    // el expediente es el último ANTES de los reportes por mundo; sin mundos, es el último.
+    expect(docs.find((d) => d.tipo === "expediente")!.subtitulo).toContain("de la idea al cierre");
+  });
+
+  it("con mundos, añade un Reporte por espacio, etiquetado con su nombre de cara (Fase 3, tanda 5)", () => {
+    const docs = indiceDeDocumentos([ciclo("p1", "completo", "2026-03-01T12:00:00Z")], null, [
+      { dominio: "quality", nombre: "Calidad y Confianza" },
+      { dominio: "risk_management", nombre: "Riesgos Bajo Control" },
+    ]);
+    const reportes = docs.filter((d) => d.tipo === "reporte");
+    expect(reportes.map((d) => d.clave)).toEqual(["reporte:quality", "reporte:risk_management"]);
+    expect(reportes.map((d) => d.espacio)).toEqual(["Calidad y Confianza", "Riesgos Bajo Control"]);
+    expect(reportes[0].titulo).toBe("Reporte de Calidad y Confianza");
+    // ruido cero: sin mundos, ningún reporte
+    expect(indiceDeDocumentos([ciclo("p1", "completo", "2026-03-01T12:00:00Z")], null).some((d) => d.tipo === "reporte")).toBe(false);
   });
 });
 
@@ -234,6 +249,68 @@ describe("expedienteMarkdown", () => {
 
   it("sin guiones largos: es copy visible", () => {
     expect(expedienteMarkdown(datos())).not.toMatch(/[—–]/);
+  });
+});
+
+describe("expedienteMarkdown: el mundo se COMPLETA (Fase 3, tanda 5)", () => {
+  it("un mundo trae su plan, SU avance (### Tu avance, #### Etapa) y su cómo te fue, no solo el plan", () => {
+    const md = expedienteMarkdown(
+      datos({
+        mundos: [
+          {
+            nombre: "Riesgos Bajo Control",
+            contenidoMd: "# Riesgos\n\ncuerpo",
+            completadoAt: null,
+            acciones: [{ etapa: 1, texto: "Mapea tus riesgos", estado: "hecho", completedAt: "2026-04-01T12:00:00Z", fechaBase: null }],
+            comoTeFueMd: "- Duración: **10 días**",
+          },
+        ],
+      }),
+    );
+    expect(md).toContain("## Riesgos Bajo Control");
+    expect(md).toContain("### Tu avance"); // en marcha (h3 bajo el mundo)
+    expect(md).toContain("#### Etapa 1"); // las etapas del mundo bajan a h4
+    expect(md).toContain("Completaste **1 de 1** acciones activas.");
+    expect(md).toContain("### Tu progreso hasta aquí");
+    expect(md).toContain("- Duración: **10 días**");
+  });
+});
+
+describe("reporteMundoMarkdown (Fase 3, tanda 5): el documento por espacio", () => {
+  const base = {
+    nombreIdea: "Kits de huerto urbano",
+    nombreMundo: "Calidad y Confianza",
+    ciclos: [ciclo("q1", "completo", "2026-03-10T12:00:00Z", "# Plan de calidad\n\n## Etapa 1\npasos")],
+    acciones: [{ etapa: 1, texto: "Define tu estándar", estado: "hecho", completedAt: "2026-03-15T12:00:00Z", fechaBase: null }],
+    comoTeFueMd: "- Duración: **20 días**",
+    bitacoraMd: "### 10 de marzo de 2026\n\n- Se generó tu plan.",
+    completadoAt: null,
+    generadoAt: "2026-05-01T12:00:00Z",
+  };
+
+  it("titula 'Reporte de {mundo}' y trae plan, avance, cómo te fue y secuencia scopeada", () => {
+    const md = reporteMundoMarkdown(base);
+    expect(md.split("\n")[0]).toBe("# Reporte de Calidad y Confianza");
+    expect(md).toContain("> Kits de huerto urbano · generado el");
+    expect(md).toContain("**Estado** En marcha");
+    expect(md).toContain("## Tu Plan");
+    expect(md).toContain("### Plan de calidad"); // el H1 del plan, rebajado
+    expect(md).toContain("## Tu avance");
+    expect(md).toContain("Completaste **1 de 1** acciones activas.");
+    expect(md).toContain("## Tu progreso hasta aquí");
+    expect(md).toContain("- Duración: **20 días**");
+    expect(md).toContain("## La secuencia de este mundo");
+  });
+
+  it("cerrado, habla en pasado (Terminado / Lo que hiciste / Cómo te fue)", () => {
+    const md = reporteMundoMarkdown({ ...base, completadoAt: "2026-04-01T12:00:00Z" });
+    expect(md).toContain("**Estado** Terminado el");
+    expect(md).toContain("## Lo que hiciste");
+    expect(md).toContain("## Cómo te fue");
+  });
+
+  it("sin guiones largos: es copy visible", () => {
+    expect(reporteMundoMarkdown(base)).not.toMatch(/[—–]/);
   });
 });
 

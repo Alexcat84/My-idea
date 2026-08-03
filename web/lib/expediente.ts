@@ -39,16 +39,24 @@ export interface MundoExpediente {
   nombre: string;
   contenidoMd: string | null;
   completadoAt: string | null;
+  /** Fase 3 (tanda 5): las acciones del mundo (su checklist) y su "cómo te fue"
+   * (resumenEspacioMd ya armado por quien llama), para COMPLETAR su sección en el
+   * expediente global — no solo su plan. */
+  acciones?: AccionExpediente[];
+  comoTeFueMd?: string | null;
 }
 
 export interface DocumentoIndice {
   /** identificador estable que la UI manda de vuelta para pedir el contenido */
   clave: string;
-  tipo: "ciclo" | "expediente" | "bitacora" | "analisis";
+  tipo: "ciclo" | "expediente" | "bitacora" | "analisis" | "reporte";
   titulo: string;
   subtitulo: string;
   /** ISO; null solo si el documento no cuelga de una fecha concreta */
   fecha: string | null;
+  /** Fase 3 (tanda 5): el espacio (nombre de cara) de un documento por-mundo,
+   * para agruparlo/etiquetarlo. Ausente en los del viaje principal. */
+  espacio?: string;
 }
 
 export interface DatosExpediente {
@@ -73,6 +81,8 @@ export interface DatosExpediente {
 
 /** Clave del documento de un ciclo. La UI la trata como opaca. */
 export const claveDeCiclo = (planId: string) => `ciclo:${planId}`;
+/** Fase 3 (tanda 5): la clave del Reporte de un mundo (documento por espacio). */
+export const claveDeReporte = (dominio: string) => `reporte:${dominio}`;
 export const CLAVE_EXPEDIENTE = "expediente";
 export const CLAVE_BITACORA = "bitacora";
 export const CLAVE_ANALISIS = "analisis";
@@ -129,8 +139,13 @@ export function titulosDeCiclos(ciclos: CicloExpediente[]): Array<{ ciclo: Ciclo
   });
 }
 
-/** El índice de descargas: un documento por fase del viaje, más el completo. */
-export function indiceDeDocumentos(ciclos: CicloExpediente[], realizadaAt: string | null): DocumentoIndice[] {
+/** El índice de descargas: un documento por fase del viaje, más el completo, y
+ * un Reporte por cada mundo (Fase 3, tanda 5). */
+export function indiceDeDocumentos(
+  ciclos: CicloExpediente[],
+  realizadaAt: string | null,
+  mundos: Array<{ dominio: string; nombre: string }> = [],
+): DocumentoIndice[] {
   const docs: DocumentoIndice[] = titulosDeCiclos(ciclos).map(({ ciclo, titulo, subtitulo }) => ({
     clave: claveDeCiclo(ciclo.planId),
     tipo: "ciclo" as const,
@@ -164,6 +179,18 @@ export function indiceDeDocumentos(ciclos: CicloExpediente[], realizadaAt: strin
         : "Todo tu desarrollo hasta hoy, en un solo documento",
       fecha: realizadaAt,
     });
+    // Fase 3 (tanda 5): un Reporte por cada mundo — su plan, su avance y su cómo
+    // te fue, scopeado. Etiquetado con el nombre de cara del espacio.
+    for (const m of mundos) {
+      docs.push({
+        clave: claveDeReporte(m.dominio),
+        tipo: "reporte",
+        titulo: `Reporte de ${m.nombre}`,
+        subtitulo: "El plan, el avance y el cómo te fue de este mundo",
+        fecha: null,
+        espacio: m.nombre,
+      });
+    }
   }
   return docs;
 }
@@ -178,8 +205,9 @@ export function cicloMarkdown(nombre: string, titulo: string, ciclo: CicloExpedi
   return l.join("\n");
 }
 
-function seccionAcciones(acciones: AccionExpediente[]): string[] {
+export function seccionAcciones(acciones: AccionExpediente[], nivelEtapa = 3): string[] {
   const l: string[] = [];
+  const alm = "#".repeat(nivelEtapa);
   // Cuentas honestas (gestor de estados): el avance se mide sobre las ACTIVAS;
   // las retiradas (no_aplica) salen del denominador y van en su propia sección.
   const activas = acciones.filter((a) => a.estado !== "no_aplica");
@@ -189,7 +217,7 @@ function seccionAcciones(acciones: AccionExpediente[]): string[] {
   l.push("");
   const etapas = [...new Set(activas.map((a) => a.etapa))].sort((a, b) => a - b);
   for (const etapa of etapas) {
-    l.push(`### Etapa ${etapa}`);
+    l.push(`${alm} Etapa ${etapa}`);
     l.push("");
     // Las fechas se ORDENAN en una tabla, con su propia columna "Cuándo": antes
     // colgaban al final de cada línea y se leían como un desorden. La fecha va
@@ -211,7 +239,7 @@ function seccionAcciones(acciones: AccionExpediente[]): string[] {
     l.push("");
   }
   if (retiradas.length) {
-    l.push(`### Retiradas (no aplican): ${retiradas.length}`);
+    l.push(`${alm} Retiradas (no aplican): ${retiradas.length}`);
     l.push("");
     l.push("Tareas que decidiste que no corren para esta idea. No son pendientes ni fracasos: son parte de tu criterio.");
     l.push("");
@@ -312,6 +340,19 @@ export function expedienteMarkdown(d: DatosExpediente): string {
     }
     l.push(rebajarTitulos(m.contenidoMd.trim(), 2));
     l.push("");
+    // Fase 3 (tanda 5): el mundo se COMPLETA con su avance y su cómo te fue, no
+    // solo su plan. Las etapas van a h4 (### Etapa) bajo el ### de la sección.
+    if (m.acciones && m.acciones.length) {
+      l.push(`### ${m.completadoAt ? "Lo que hiciste" : "Tu avance"}`);
+      l.push("");
+      l.push(...seccionAcciones(m.acciones, 4));
+    }
+    if (m.comoTeFueMd && m.comoTeFueMd.trim()) {
+      l.push(`### ${m.completadoAt ? "Cómo te fue" : "Tu progreso hasta aquí"}`);
+      l.push("");
+      l.push(m.comoTeFueMd.trim());
+      l.push("");
+    }
   }
 
   if (d.informeMd) {
@@ -331,6 +372,70 @@ export function expedienteMarkdown(d: DatosExpediente): string {
   // Fase 4.8: la secuencia del viaje cierra el expediente (su sección final).
   if (d.bitacoraMd && d.bitacoraMd.trim()) {
     l.push("## La secuencia de tu viaje");
+    l.push("");
+    l.push(d.bitacoraMd.trim());
+    l.push("");
+  }
+
+  return l.join("\n");
+}
+
+/** Los datos del Reporte de UN mundo (Fase 3, tanda 5): filtrados a su dominio. */
+export interface DatosReporteMundo {
+  nombreIdea: string;
+  nombreMundo: string;
+  /** el plan del mundo + sus seguimientos (ya filtrados por dominio) */
+  ciclos: CicloExpediente[];
+  acciones: AccionExpediente[];
+  /** "cómo te fue" del mundo (resumenEspacioMd, ya armado por quien llama) */
+  comoTeFueMd: string | null;
+  /** la secuencia (bitácora) del mundo, scopeada, ya armada por quien llama */
+  bitacoraMd: string | null;
+  completadoAt: string | null;
+  generadoAt: string;
+}
+
+/**
+ * El Reporte de un mundo: el MISMO armador del expediente (sus builders), pero
+ * scopeado a un espacio — su plan y seguimientos, su avance, su cómo te fue y su
+ * secuencia. Sin las secciones del viaje principal (idea original, Tus Números):
+ * un mundo es un frente, no la idea entera.
+ */
+export function reporteMundoMarkdown(d: DatosReporteMundo): string {
+  const l: string[] = [];
+  l.push(`# Reporte de ${d.nombreMundo}`);
+  l.push("");
+  l.push(`> ${d.nombreIdea} · generado el ${fechaHumanaConAno(d.generadoAt)}`);
+  l.push("");
+  l.push(d.completadoAt ? `**Estado** Terminado el ${fechaHumanaConAno(d.completadoAt)}` : "**Estado** En marcha");
+  l.push("");
+
+  // El plan del mundo + sus seguimientos, con el mismo naming ("Tu Plan",
+  // "Seguimiento N") filtrado a su dominio.
+  for (const { ciclo, titulo } of titulosDeCiclos(d.ciclos)) {
+    l.push(`## ${titulo}`);
+    l.push("");
+    l.push(`_${fechaHumanaConAno(ciclo.createdAt)}_`);
+    l.push("");
+    l.push(rebajarTitulos(ciclo.contenidoMd.trim(), 2));
+    l.push("");
+  }
+
+  if (d.acciones.length) {
+    l.push(`## ${d.completadoAt ? "Lo que hiciste" : "Tu avance"}`);
+    l.push("");
+    l.push(...seccionAcciones(d.acciones, 3));
+  }
+
+  if (d.comoTeFueMd && d.comoTeFueMd.trim()) {
+    l.push(`## ${d.completadoAt ? "Cómo te fue" : "Tu progreso hasta aquí"}`);
+    l.push("");
+    l.push(d.comoTeFueMd.trim());
+    l.push("");
+  }
+
+  if (d.bitacoraMd && d.bitacoraMd.trim()) {
+    l.push("## La secuencia de este mundo");
     l.push("");
     l.push(d.bitacoraMd.trim());
     l.push("");

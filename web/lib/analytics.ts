@@ -659,6 +659,25 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
  * usuario manda —, y por eso mismo el acta no lo esconde: "Calidad y Confianza:
  * 3 de 5 (60%), abierta". El nombre humano lo resuelve quien llama
  * (`nombreMundo`); este módulo es puro y no conoce el catálogo. */
+/**
+ * "Cómo te fue" COMPACTO de UN espacio (Fase 3, tanda 5): unas líneas de su capa
+ * universal (+ cumplimiento si lo tiene), con la MISMA vara del informe. Lo usan
+ * la sección de un mundo en el expediente global y el Reporte de un mundo. Puro.
+ */
+export function resumenEspacioMd(u: CapaUniversal, cumplimiento?: CumplimientoDominio | null): string[] {
+  const l: string[] = [];
+  l.push(`- Duración: **${u.duracionTotalDias} días**`);
+  l.push(`- Acciones completadas: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}** activas`);
+  l.push(`- Ritmo: **${u.ritmoAccionesPorSemana} acciones por semana**`);
+  l.push(`- Racha más larga: **${u.rachaMasLargaDias} días**`);
+  if (u.retiradas.length) l.push(`- Retiradas (no aplican): **${u.retiradas.length}**`);
+  if (cumplimiento && cumplimiento.total > 0) {
+    const c = cumplimiento;
+    l.push(`- Cumplimiento: **${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardías** (de ${c.total} con fecha)`);
+  }
+  return l;
+}
+
 export function informeMarkdown(
   nombre: string,
   a: Analytics,

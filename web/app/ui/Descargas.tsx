@@ -262,7 +262,7 @@ export function Descargas({
                 >
                   {esExpediente ? (
                     <IconoExpediente />
-                  ) : doc.tipo === "analisis" ? (
+                  ) : doc.tipo === "analisis" || doc.tipo === "reporte" ? (
                     <IconoAnalisis />
                   ) : doc.tipo === "bitacora" ? (
                     <IconoBitacora />
@@ -273,6 +273,13 @@ export function Descargas({
                   )}
                 </span>
                 <div className="min-w-[180px] flex-1">
+                  {/* Fase 3 (tanda 5): la etiqueta de espacio de un documento por
+                      mundo (solo los reportes la traen; los del viaje, no). */}
+                  {doc.espacio && (
+                    <span className="mb-1 inline-flex items-center rounded-full border border-hairline bg-surface-3 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.6px] text-dim">
+                      {doc.espacio}
+                    </span>
+                  )}
                   <p className="text-[15px] font-semibold leading-snug">{doc.titulo}</p>
                   <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
                   {doc.fecha && (

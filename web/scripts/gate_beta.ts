@@ -138,8 +138,8 @@ async function main() {
     console.log("[/ideas con el chip de saldo]");
     await capturarDos(app, `${BASE_URL}/ideas`, "créditos", "beta_ideas_chip");
 
-    console.log("[centro de creditos: packs 'alcanza para' + lo que cuesta cada cosa]");
-    await capturarDos(app, `${BASE_URL}/creditos`, "Lo que cuesta cada cosa", "beta_creditos");
+    console.log("[centro de creditos: heroe del saldo + Sumar creditos + Usa tus creditos]");
+    await capturarDos(app, `${BASE_URL}/creditos`, "Sumar créditos", "beta_creditos");
 
     console.log("[Espacios: las 3 caras del CORE (cambiador + segmentado)]");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=manos&cara=manos`, "Tu viaje", "espacios_core_manos");
@@ -153,11 +153,23 @@ async function main() {
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=manos`, "Manos a la obra", "espacios_hub_manos");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=plan`, "Manos a la obra", "espacios_hub_plan");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=avance`, "Tu avance", "espacios_hub_avance");
+
+    // Fase 3 tandas 4-5: las lecturas GLOBALES de la campaña.
+    console.log("[Espacios: bitacora global con etiquetas de espacio (chips)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=bitacora`, "Mi bitácora de mi viaje", "espacios_bitacora_etiquetas");
+
+    console.log("[Espacios: Analisis global con 'Tu proyecto completo' (desglose por mundo)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=analisis`, "Tu proyecto completo", "espacios_analisis_desglose");
+
+    console.log("[Espacios: documentos con el Reporte por mundo (tanda 5)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=documentos`, "Reporte de", "espacios_documentos_reporte");
   } finally {
     await browser.close();
     await admin.from("projects").delete().eq("id", pid);
   }
-  console.log("\nGATE DE LA BETA: compuerta + precios vivos + chip + centro de creditos + cambiador/hub de Espacios capturados (2 viewports).");
+  console.log(
+    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, bitacora con etiquetas, desglose del Analisis, reportes por mundo) capturados (2 viewports).",
+  );
 }
 
 main().catch((e) => {
