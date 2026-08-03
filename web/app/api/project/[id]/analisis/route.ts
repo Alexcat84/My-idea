@@ -8,7 +8,7 @@
  * (hitos sin acciones), hitosCelebracion (con acciones), informe_md.
  */
 import { NextResponse } from "next/server";
-import { agregadoDeIdea, calcularAnalytics, construirHitos, informeMarkdown } from "@/lib/analytics";
+import { calcularAnalytics, construirHitos, informeMarkdown } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
 import { obtenerProyecto } from "@/lib/db";
@@ -50,10 +50,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     cierre_motivo: proyecto.cierre_motivo ?? null,
     tiene_baseline: analytics.cumplimiento !== null,
     analytics,
-    // Frente "La idea completa": el agregado del nivel general (total, ritmo,
-    // racha unificados + desglose por espacio). El motor ya garantiza sin doble
-    // conteo; la pantalla lo pinta y lo gatea con ruido cero.
-    agregado: agregadoDeIdea(entrada),
     hitosCelebracion: construirHitos(entrada, ahora, true),
     informe_md: informeMarkdown(nombre, analytics, proyecto.realizada_at ?? null, nombreMundo),
   });

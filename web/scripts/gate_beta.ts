@@ -117,44 +117,6 @@ async function main() {
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 2, texto: "Anota por qué no volvió." },
   ]);
 
-  // Frente "La idea completa": un SEGUNDO proyecto SOLO-CORE (sin mundos) para
-  // probar el RUIDO CERO en el otro sentido: el nivel general no debe existir.
-  const { data: pSolo } = await admin
-    .from("projects")
-    .insert({
-      user_id: dev.id,
-      entrada_original: "Solo nucleo (gate)",
-      titulo: "Solo nucleo (gate)",
-      fase_actual: "planificacion",
-      status: "active",
-      tipo_oferta: "producto_fisico",
-      unidad_venta: "vela",
-    })
-    .select("id")
-    .single();
-  const pidSolo = (pSolo as { id: string }).id;
-  const { data: sSolo } = await admin
-    .from("sessions")
-    .insert({ project_id: pidSolo, user_id: dev.id, session_position: 1, tipo: "inicial", mensaje_entrada: "gate solo", dominio: "core", closed_at: new Date().toISOString() })
-    .select("id")
-    .single();
-  const { data: planSolo } = await admin
-    .from("plans")
-    .insert({
-      session_id: (sSolo as { id: string }).id,
-      user_id: dev.id,
-      etiqueta: "completo",
-      dominio: "core",
-      contenido_md: "# Solo nucleo\n## Etapa 1: valida\n**Esta semana:** da un paso.",
-      conceptos_usados: 3,
-      familias_cubiertas: ["general"],
-    })
-    .select("id")
-    .single();
-  await admin
-    .from("checklist_items")
-    .insert([{ project_id: pidSolo, plan_id: (planSolo as { id: string }).id, dominio: "core", etapa: 1, orden: 1, texto: "Un paso del nucleo.", destacado: true }]);
-
   const browser = await chromium.launch();
   const context = await browser.newContext({ viewport: VP_ESCRITORIO, deviceScaleFactor: 1 });
   const url = new URL(BASE_URL);
@@ -196,26 +158,17 @@ async function main() {
     console.log("[Espacios: bitacora global con etiquetas de espacio (chips)]");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=bitacora`, "Mi bitácora de mi viaje", "espacios_bitacora_etiquetas");
 
-    console.log("[Espacios: Analisis global con 'Tu proyecto completo' (desglose por mundo)]");
-    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=analisis`, "Tu proyecto completo", "espacios_analisis_desglose");
+    console.log("[Espacios: Analisis del proyecto (nucleo)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=analisis`, "Análisis de", "espacios_analisis");
 
     console.log("[Espacios: documentos con el Reporte por mundo (tanda 5)]");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=documentos`, "Reporte de", "espacios_documentos_reporte");
-
-    // Frente "La idea completa": el nivel GENERAL y su RUIDO CERO (ambos sentidos).
-    console.log("[La idea completa: el nivel GENERAL aparece con >=1 mundo]");
-    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=idea`, "Lo general", "idea_completa_general");
-
-    console.log("[La idea completa: RUIDO CERO en solo-core (el nivel general NO existe)]");
-    await capturarDos(app, `${BASE_URL}/idea/${pidSolo}?vista=idea`, "aparece cuando abres tu primer mundo", "idea_completa_ruido_cero_deeplink");
-    await capturarDos(app, `${BASE_URL}/idea/${pidSolo}?vista=manos`, "Manos a la obra", "idea_completa_solocore_sin_control");
   } finally {
     await browser.close();
     await admin.from("projects").delete().eq("id", pid);
-    await admin.from("projects").delete().eq("id", pidSolo);
   }
   console.log(
-    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, bitacora con etiquetas, desglose del Analisis, reportes por mundo) + La idea completa (nivel general + ruido cero ambos sentidos) capturados (2 viewports).",
+    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, bitacora con etiquetas, analisis, reportes por mundo) capturados (2 viewports).",
   );
 }
 
