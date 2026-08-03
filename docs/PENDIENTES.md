@@ -22,15 +22,23 @@ para main + tag de la campaña).
   cómo te fue+secuencia, del mismo armador), Expediente completado por-mundo (acciones
   + cómo te fue), etiqueta de espacio en los documentos.
 
-## 1b. "La idea completa" — el nivel GENERAL sobre los espacios (propuesta)
+## 1b. "La idea completa" — el nivel GENERAL sobre los espacios (EN STAGING)
 
-**Plan/contrato: `docs/PLAN_IDEA_COMPLETA.md`** (propuesta pendiente del visto del
-fundador y del auditor). El núcleo (core) es el corazón, marcado y con registros
-propios, pero cuenta en el total; **encima** aparece un control GENERAL cuando hay
-≥1 mundo (ruido cero) con el **agregado** de toda la idea (total, ritmo, racha y
-timeline unificados) = **suma de la partición exacta, sin doble conteo**. Lo por-etapa
-NO se unifica. Motor `agregadoDeIdea` + pantalla `?vista=idea` + entrada en el
-cambiador. Boceto ya mostrado al fundador. Cero código hasta el visto.
+**Plan/contrato: `docs/PLAN_IDEA_COMPLETA.md`** (APROBADO, 4 decisiones cerradas). El
+núcleo es el corazón (marcado, con registros propios) pero cuenta en el total; **encima**
+un control GENERAL aparece con ≥1 mundo (ruido cero) con el **agregado** unificado
+(total, ritmo, racha) = **suma de la partición exacta, sin doble conteo**; lo por-etapa
+jamás se unifica; timeline y documento reusan la bitácora y el Expediente globales.
+
+- **T0 — gobierno** ✓: enmienda BANCO §7.1.
+- **T1 — motor** ✓: `agregadoDeIdea` (puro), universo vigente-activo, racha unificada
+  respetando vigencia por espacio; tests a mano (no doble conteo + una fecha de mundo
+  EXTIENDE la racha del núcleo: 8 > 3).
+- **T2 — pantalla + control** ✓: `IdeaCompleta.tsx` (`?vista=idea`), entrada distinguida
+  "La idea completa" al frente del cambiador (nunca un tercer riel), navegación coherente.
+- Tandas en **staging**, pendientes del visto para main + tag. Gate ampliado con el nivel
+  general + ruido cero en ambos sentidos (proyecto solo-core sembrado aparte). **No
+  corrido en vivo** (lo corre el fundador/auditor).
 
 ## 2. Claude Design (encargos)
 
