@@ -12,11 +12,11 @@
  */
 import { NextResponse } from "next/server";
 import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
-import { calcularAnalytics, informeMarkdown } from "@/lib/analytics";
+import { analyticsDeMundo, calcularAnalytics, informeMarkdown, resumenEspacioMd } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
-import { bitacoraCuerpo, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
+import { bitacoraCuerpo, bitacoraDeEspacio, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
 import { obtenerProyecto } from "@/lib/db";
 import {
@@ -27,6 +27,7 @@ import {
   expedienteMarkdown,
   indiceDeDocumentos,
   nombreArchivo,
+  reporteMundoMarkdown,
   titulosDeCiclos,
   type AccionExpediente,
   type CicloExpediente,
@@ -50,6 +51,48 @@ type FilaPlan = {
   baseline_confirmada_at: string | null;
 };
 type FilaSesion = { id: string; created_at: string; tipo: string; dominio: string | null };
+type FilaAccion = {
+  dominio: string | null;
+  etapa: number;
+  texto: string;
+  estado: string;
+  completed_at: string | null;
+  fecha_base: string | null;
+  no_aplica_motivo?: string | null;
+};
+
+/** Carga TODAS las acciones (checklist) con el fallback de no_aplica_motivo (030:
+ * se reintenta sin esa columna si aún no está). Compartido por el expediente y el
+ * Reporte de un mundo, que luego filtran por dominio. */
+async function cargarAcciones(supabase: Awaited<ReturnType<typeof createClient>>, projectId: string): Promise<FilaAccion[]> {
+  const COLS = "dominio, etapa, texto, estado, completed_at, fecha_base, orden";
+  const con = await supabase
+    .from("checklist_items")
+    .select(`${COLS}, no_aplica_motivo`)
+    .eq("project_id", projectId)
+    .order("etapa", { ascending: true })
+    .order("orden", { ascending: true });
+  const raw = con.error
+    ? (
+        await supabase
+          .from("checklist_items")
+          .select(COLS)
+          .eq("project_id", projectId)
+          .order("etapa", { ascending: true })
+          .order("orden", { ascending: true })
+      ).data
+    : con.data;
+  return ((raw ?? []) as FilaAccion[]).map((i) => ({ ...i, no_aplica_motivo: i.no_aplica_motivo ?? null }));
+}
+
+const aAccion = (i: FilaAccion): AccionExpediente => ({
+  etapa: i.etapa,
+  texto: i.texto,
+  estado: i.estado,
+  completedAt: i.completed_at,
+  fechaBase: i.fecha_base,
+  noAplicaMotivo: i.no_aplica_motivo ?? null,
+});
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
@@ -98,9 +141,59 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
   const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
 
+  // Fase 3 (tanda 5): los mundos con plan (dominios distintos entre los planes de
+  // mundo), para el Reporte por espacio del índice. Los ciclos de un dominio se
+  // arman igual que los del core (plan + seguimientos), filtrados por dominio.
+  const ciclosDeDominio = (dominio: string): CicloExpediente[] =>
+    planes
+      .filter((p) => p.dominio === dominio && ETIQUETAS_CICLO.includes(p.etiqueta))
+      .map((p) => ({ planId: p.id, etiqueta: p.etiqueta, createdAt: p.created_at, contenidoMd: sinProcedencia(p.contenido_md) }));
+  const dominiosMundo = [
+    ...new Set(planes.filter((p) => !esCore(p.dominio) && ETIQUETAS_CICLO.includes(p.etiqueta)).map((p) => p.dominio!)),
+  ];
+  const mundosIndice = dominiosMundo.map((dom) => ({ dominio: dom, nombre: nombreMundo(dom) }));
+
   const doc = new URL(request.url).searchParams.get("doc");
   if (!doc) {
-    return NextResponse.json({ nombre, documentos: indiceDeDocumentos(ciclos, realizadaAt) });
+    return NextResponse.json({ nombre, documentos: indiceDeDocumentos(ciclos, realizadaAt, mundosIndice) });
+  }
+
+  // ── Reporte de un mundo (documento por espacio) ────────────────────────────
+  if (doc.startsWith("reporte:")) {
+    const dominio = doc.slice("reporte:".length);
+    const ciclosMundo = ciclosDeDominio(dominio);
+    if (ciclosMundo.length === 0) {
+      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+    }
+    const ahora = new Date().toISOString();
+    const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
+    const am = analyticsDeMundo(entrada, dominio);
+    const comoTeFueMd = am ? resumenEspacioMd(am.universal, am.cumplimiento).join("\n") : null;
+
+    const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+    // Scopeado: la secuencia del mundo NO se auto-etiqueta (ya estás en su espacio).
+    const bitacoraMd = bitacoraCuerpo(bitacoraDeEspacio(entradasBita, dominio), 3).join("\n");
+
+    const accionesMundo = (await cargarAcciones(supabase, projectId))
+      .filter((i) => i.dominio === dominio)
+      .map(aAccion);
+
+    const nombreDom = nombreMundo(dominio);
+    return NextResponse.json({
+      titulo: `Reporte de ${nombreDom}`,
+      nombre,
+      archivo: nombreArchivo(nombre, `Reporte de ${nombreDom}`),
+      markdown: reporteMundoMarkdown({
+        nombreIdea: nombre,
+        nombreMundo: nombreDom,
+        ciclos: ciclosMundo,
+        acciones: accionesMundo,
+        comoTeFueMd,
+        bitacoraMd,
+        completadoAt: am?.completadoAt ?? null,
+        generadoAt: ahora,
+      }),
+    });
   }
 
   if (doc === CLAVE_BITACORA) {
@@ -196,47 +289,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   }
 
   // ── Expediente completo ────────────────────────────────────────────────
-  // no_aplica_motivo llega con la 030: se reintenta sin ella si aún no está.
-  const COLS_ACC = "dominio, etapa, texto, estado, completed_at, fecha_base, orden";
-  const accConMotivo = await supabase
-    .from("checklist_items")
-    .select(`${COLS_ACC}, no_aplica_motivo`)
-    .eq("project_id", projectId)
-    .order("etapa", { ascending: true })
-    .order("orden", { ascending: true });
-  const itemsRaw = accConMotivo.error
-    ? (
-        await supabase
-          .from("checklist_items")
-          .select(COLS_ACC)
-          .eq("project_id", projectId)
-          .order("etapa", { ascending: true })
-          .order("orden", { ascending: true })
-      ).data
-    : accConMotivo.data;
-  // Solo el viaje principal: las acciones de un mundo se cuentan dentro de su
-  // propia sección, no mezcladas con las del core (regla de no mezclar
-  // procesos: cada cosa en su carril).
-  const acciones: AccionExpediente[] = (
-    (itemsRaw ?? []) as Array<{
-      dominio: string | null;
-      etapa: number;
-      texto: string;
-      estado: string;
-      completed_at: string | null;
-      fecha_base: string | null;
-      no_aplica_motivo?: string | null;
-    }>
-  )
-    .filter((i) => esCore(i.dominio))
-    .map((i) => ({
-      etapa: i.etapa,
-      texto: i.texto,
-      estado: i.estado,
-      completedAt: i.completed_at,
-      fechaBase: i.fecha_base,
-      noAplicaMotivo: i.no_aplica_motivo ?? null,
-    }));
+  const todasAcciones = await cargarAcciones(supabase, projectId);
+  // Solo el viaje principal en la sección de acciones del core: las de un mundo
+  // van dentro de SU sección (cada cosa en su carril).
+  const acciones: AccionExpediente[] = todasAcciones.filter((i) => esCore(i.dominio)).map(aAccion);
 
   let unlocks: Array<{ dominio: string; completado_at?: string | null }> = [];
   try {
@@ -252,19 +308,25 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   } catch {
     unlocks = [];
   }
-  const mundos: MundoExpediente[] = unlocks.map((u) => {
-    const planMundo = planes.filter((p) => p.dominio === u.dominio && ETIQUETAS_CICLO.includes(p.etiqueta)).at(-1);
-    return {
-      nombre: nombreMundo(u.dominio),
-      contenidoMd: planMundo ? sinProcedencia(planMundo.contenido_md) : null,
-      completadoAt: u.completado_at ?? null,
-    };
-  });
 
   const ahora = new Date().toISOString();
   const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
   const analytics = calcularAnalytics(entrada);
   const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+
+  // Fase 3 (tanda 5): cada mundo se COMPLETA con su plan, SUS acciones y su cómo
+  // te fue (su capa universal ya calculada en analytics.mundos, sin recalcular).
+  const mundos: MundoExpediente[] = unlocks.map((u) => {
+    const planMundo = planes.filter((p) => p.dominio === u.dominio && ETIQUETAS_CICLO.includes(p.etiqueta)).at(-1);
+    const am = analytics.mundos.find((m) => m.dominio === u.dominio);
+    return {
+      nombre: nombreMundo(u.dominio),
+      contenidoMd: planMundo ? sinProcedencia(planMundo.contenido_md) : null,
+      completadoAt: u.completado_at ?? null,
+      acciones: todasAcciones.filter((i) => i.dominio === u.dominio).map(aAccion),
+      comoTeFueMd: am ? resumenEspacioMd(am.universal, am.cumplimiento).join("\n") : null,
+    };
+  });
 
   const organizadorMd = (() => {
     const org = planes.find((p) => esCore(p.dominio) && p.etiqueta === "organizador");

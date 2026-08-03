@@ -372,6 +372,15 @@ desconocer la razón.
     bitácora)". **Por qué:** la Opción A de la Fase 3 mete las estadísticas y la
     bitácora por-espacio DENTRO de "Tu avance" en vez de abrir una 4ª cara; el banco
     no contradice la pantalla.
+  - **La PERTENENCIA es un dato, no una frase (Fase 3, tanda 4).** El espacio de
+    una entrada de bitácora **NO se embebe en el texto** (murió el sufijo " · en
+    {mundo}"): viaja como **campo `dominio`** de la entrada y se muestra como
+    **etiqueta de espacio** (nombre de cara) en la global/expediente, con **ruido
+    cero** (proyecto solo-core no etiqueta nada). **Por qué:** una historia que
+    *pertenece* a su espacio (dato) es más honesta que una que solo lo *menciona*
+    (texto); la vista scopeada deja de repetirse ("en Calidad" dentro de la bitácora
+    de Calidad era ruido), y cualquier lector futuro (filtros, exports, telemetría)
+    hereda la pertenencia como campo, no por parsing.
   - **"Tu recorrido" queda reservado** al árbol de conceptos ("Construido con tu
     recorrido"); la línea de hitos se llama **"Tu avance"** para no chocar.
   - **El precio al frente sobre el gratis:** las tarjetas de mundo lideran con su precio

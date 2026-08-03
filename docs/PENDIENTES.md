@@ -3,26 +3,24 @@
 Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 (Última actualización: agosto 2026.)
 
-## 1. Campaña "Espacios" — Fase 3 restante (en cola)
+## 1. Campaña "Espacios" — Fase 3 (COMPLETA, en staging)
 
-**Plan detallado: `docs/PLAN_ESPACIOS_FASE3.md`** (propuesta pendiente del visto
-del fundador y del auditor; enfoque Opción A "dentro de Tu avance", garantías de
-fuente única / partición exacta / sin doble conteo, y las 5 tandas).
+**Plan y contrato: `docs/PLAN_ESPACIOS_FASE3.md`** (Opción A "dentro de Tu avance";
+garantías de fuente única / partición exacta / sin doble conteo / ruido cero).
+Las 5 tandas cerradas; tandas 1-4 en main, tanda 5 en staging (pendiente del visto
+para main + tag de la campaña).
 
-La Fase 1+2 y las 3 caras del espacio (Plan · Manos a la obra · Tu avance) ya
-están en producción. Queda el resto de la Fase 3:
-
-- **Documentos por espacio**: el plan y los seguimientos de cada espacio en .md/PDF,
-  filtrados por dominio (del mismo texto del servidor).
-- **Estadísticas por espacio**: dibujar `analyticsDeMundo` (ya calculado en
-  `analytics.ts`) en el hub de cada mundo.
-- **Etiquetas de espacio** (nombres de cara) en la bitácora y el expediente; **regla
-  de ruido cero**: solo aparecen cuando el proyecto tiene ≥1 mundo.
-- **Addendum — bitácora y reporte POR ESPACIO** como vistas filtradas de la fuente
-  única ("una fuente, muchas lecturas": nunca registros paralelos). Partición EXACTA:
-  cada entrada de la global aparece en exactamente una específica.
-- **Análisis del proyecto sin doble conteo**: "Tu proyecto completo: core y N mundos";
-  el avance de cada nivel es el suyo, el del proyecto es la suma declarada.
+- **T1 — la fuente etiquetada** ✓: `EntradaBitacora.dominio` ("core" | mundo | null
+  no-derivable), partición exacta, estampado de `payload.dominio` en los writes.
+- **T2 — estadísticas por espacio** ✓: `analyticsDeMundo` pintado en "Tu avance"
+  (core y cada mundo), tiles reusados, test de no doble conteo.
+- **T3 — bitácora por espacio** ✓: filtro en servidor con `bitacoraDeEspacio`, reuso
+  de `LineaBitacora`/`BitacoraPapel`, descarga .md/PDF scopeada.
+- **T4 — Análisis global + etiquetas + ruido cero** ✓: "Tu proyecto completo" (suma
+  declarada), etiqueta de espacio como DATO estructural (murió el sufijo de texto).
+- **T5 — documentos por espacio** ✓: "Reporte de {mundo}" (plan+seguimientos+avance+
+  cómo te fue+secuencia, del mismo armador), Expediente completado por-mundo (acciones
+  + cómo te fue), etiqueta de espacio en los documentos.
 
 ## 2. Claude Design (encargos)
 
@@ -44,9 +42,11 @@ están en producción. Queda el resto de la Fase 3:
 - **Vuelo de dinero** (`web/scripts/vuelo_beta.ts`): la contabilidad nueva del Catálogo
   congruente (siembra 30 → plan −10 → Tus Números 0 → mundo −5 → seguimiento −5 →
   seguimiento de mundo −5 = 5). **NO corrido en vivo.**
-- **Gate** (`web/scripts/gate_beta.ts`): capturas de `/creditos`, del cambiador, del hub
-  y de las **3 caras** de Espacios (dos viewports). La **siembra de un mundo con plan**
-  en el gate es nueva y **no se corrió en vivo** → verificar el esquema al ejecutarlo.
+- **Gate** (`web/scripts/gate_beta.ts`): capturas en dos viewports de `/creditos`, el
+  cambiador, el hub y las **3 caras**, **más (Fase 3 T4-T5)** la **bitácora global con
+  etiquetas** (`?vista=bitacora`), el **desglose "Tu proyecto completo"** del Análisis
+  (`?vista=analisis`) y los **reportes por mundo** (`?vista=documentos`). **NO corrido en
+  vivo** → verificar al ejecutarlo (la siembra del mundo con plan y las esperas nuevas).
 - **Veredicto visual del fundador** sobre el conjunto de Espacios y sobre el centro de
   créditos (cuando pruebe en producción).
 - **Auditoría**: Catálogo congruente y Espacios quedan en revisión del auditor.
@@ -63,6 +63,10 @@ están en producción. Queda el resto de la Fase 3:
 
 - **Ajustes visuales de Espacios** que salgan de la prueba del fundador (grosor del eje y
   tamaño de nodos de "Tu avance", cuánto se "levanta" la pestaña activa, el segmentado).
+- **Varas de Design de la Fase 3** (calibración visual, front funcional ya en su sitio):
+  las estadísticas por espacio (T2), la bitácora por espacio (T3), los chips de etiqueta
+  en la bitácora global (T4), el desglose "Tu proyecto completo" del Análisis (T4) y las
+  fichas de Reporte por mundo en Documentos (T5). Encargo a CD si el fundador quiere pulir.
 - **Píldora-humana** en las fechas: backlog post-beta (de la fidelidad al canon).
 - La **decoración de papel** de los interiores del Expediente (ver §2, ligado al pedido a CD).
 - **`cumplimiento-desglose-core-multiciclo`** (analytics): la fila "core" de

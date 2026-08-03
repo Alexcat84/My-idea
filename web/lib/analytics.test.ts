@@ -22,6 +22,7 @@ import {
   calcularAnalytics,
   clasificarCumplimiento,
   construirHitos,
+  resumenEspacioMd,
   type EntradaAnalytics,
 } from "./analytics";
 
@@ -575,6 +576,22 @@ describe("Fase 3 (tanda 2): estadísticas por espacio SIN doble conteo contra el
 
   it("el 'mundos' del global es un CONTEO, no una suma de las tareas del mundo", () => {
     expect(global.mundos).toBe(1);
+  });
+});
+
+describe("resumenEspacioMd (Fase 3, tanda 5): el 'cómo te fue' compacto de un espacio", () => {
+  const m = analyticsDeMundo(CON_SUBPROYECTO, "quality")!;
+  it("resume la capa universal (+ cumplimiento) del mundo con su misma vara", () => {
+    const md = resumenEspacioMd(m.universal, m.cumplimiento).join("\n");
+    expect(md).toContain("Duración: **42 días**");
+    expect(md).toContain("Acciones completadas: **3 de 4** activas");
+    expect(md).toContain("Ritmo: **0.5 acciones por semana**");
+    expect(md).toContain("Racha más larga: **7 días**");
+    expect(md).toContain("Cumplimiento: **1 a tiempo, 1 adelantadas, 1 tardías** (de 3 con fecha)");
+  });
+  it("sin cumplimiento (nadie fechó), omite esa línea", () => {
+    const md = resumenEspacioMd(m.universal, null).join("\n");
+    expect(md).not.toContain("Cumplimiento:");
   });
 });
 
