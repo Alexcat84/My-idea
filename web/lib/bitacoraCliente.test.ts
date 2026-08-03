@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bitacoraMarkdown, construirBitacora, type DatosBitacora } from "./bitacoraCliente";
+import { bitacoraDeEspacio, bitacoraMarkdown, construirBitacora, type DatosBitacora } from "./bitacoraCliente";
 
 const nombreMundo = (d: string) => (d === "quality" ? "Calidad Impecable" : d);
 
@@ -101,6 +101,62 @@ describe("construirBitacora", () => {
   it("no duplica la realización cuando ya hay evento en bitácora", () => {
     const reals = construirBitacora(datos({ realizadaAt: "2026-01-25T10:00:00Z" })).filter((x) => x.texto.includes("realizada"));
     expect(reals).toHaveLength(1);
+  });
+});
+
+describe("bitacoraDeEspacio (Fase 3): partición exacta, sin inventar pertenencia", () => {
+  it("cada entrada derivable cae en EXACTAMENTE un espacio (unión = global, sin solapes)", () => {
+    const e = construirBitacora(datos());
+    const core = bitacoraDeEspacio(e, "core");
+    const quality = bitacoraDeEspacio(e, "quality");
+    const noDerivables = e.filter((x) => x.dominio === null);
+    // el dataset base no tiene ítems borrados → nada no-derivable
+    expect(noDerivables).toHaveLength(0);
+    // fórmula: unión de específicas = global − {no-derivables}
+    expect(core.length + quality.length).toBe(e.length - noDerivables.length);
+    // sin solapes: cada slice solo trae su espacio
+    expect(core.every((x) => x.dominio === "core")).toBe(true);
+    expect(quality.every((x) => x.dominio === "quality")).toBe(true);
+    // lo del mundo NO aparece en el core (y viceversa)
+    expect(core.some((x) => x.texto.includes("Calidad Impecable"))).toBe(false);
+    expect(quality.some((x) => x.titulo === "La Chispa")).toBe(false);
+    // el core conserva la chispa y la realización; el mundo, su diagnóstico/plan
+    expect(core.some((x) => x.titulo === "La Chispa")).toBe(true);
+    expect(core.some((x) => x.texto.includes("realizada"))).toBe(true);
+    expect(quality.some((x) => x.texto.includes("Calidad Impecable"))).toBe(true);
+  });
+
+  it("borde no-derivable: evento de ítem borrado y sin estampa → dominio null, SOLO en la global", () => {
+    const e = construirBitacora(
+      datos({
+        eventos: [{ tipo: "item_estado", payload: { item: "borrado-x", de: "pendiente", a: "empezado" }, created_at: "2026-01-14T10:00:00Z" }],
+      }),
+    );
+    const fantasma = e.find((x) => x.texto === "Empezaste «una actividad».")!;
+    expect(fantasma).toBeDefined();
+    expect(fantasma.dominio).toBeNull();
+    // etiqueta neutra: sin mundo inventado
+    expect(fantasma.texto).not.toContain(" · en ");
+    // presente en la global, AUSENTE de todas las específicas
+    expect(e).toContain(fantasma);
+    expect(bitacoraDeEspacio(e, "core")).not.toContain(fantasma);
+    expect(bitacoraDeEspacio(e, "quality")).not.toContain(fantasma);
+    // la fórmula se sostiene con la no-derivable listada explícita
+    const noDerivables = e.filter((x) => x.dominio === null);
+    expect(noDerivables).toContain(fantasma);
+    expect(bitacoraDeEspacio(e, "core").length + bitacoraDeEspacio(e, "quality").length).toBe(e.length - noDerivables.length);
+  });
+
+  it("estampa: un evento con payload.dominio se atribuye por la estampa aunque el ítem ya no exista (borde solo arqueológico)", () => {
+    const e = construirBitacora(
+      datos({
+        eventos: [{ tipo: "nota_escrita", payload: { item: "borrado-y", dominio: "quality" }, created_at: "2026-01-14T10:00:00Z" }],
+      }),
+    );
+    const nota = e.find((x) => x.texto.startsWith("Anotaste"))!;
+    expect(nota.dominio).toBe("quality");
+    expect(bitacoraDeEspacio(e, "quality")).toContain(nota);
+    expect(e.filter((x) => x.dominio === null)).toHaveLength(0);
   });
 });
 

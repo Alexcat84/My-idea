@@ -302,12 +302,17 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     .eq("id", itemId)
     .eq("project_id", projectId)
     .select(
-      "id, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, updated_at"
+      "id, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, dominio, updated_at"
     )
     .single();
   if (error || !data) {
     return NextResponse.json({ error: "ítem no encontrado" }, { status: 404 });
   }
+
+  // Fase 3 (Espacios): cada evento de bitácora de un ítem viaja con el dominio
+  // del ítem, para que la entrada sea auto-descriptiva y su espacio no dependa
+  // de que el ítem siga existiendo (deja el borde no-derivable solo arqueológico).
+  const dom = (data.dominio as string | null) ?? null;
 
   // Bitácora del gestor de estados: cada cruce de la frontera 'no_aplica' deja
   // rastro reversible. Retirar registra {item, estado_anterior, motivo};
@@ -318,12 +323,14 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     if (nuevo === "no_aplica" && prev.estado !== "no_aplica") {
       await registrarBitacora(supabase, projectId, "item_no_aplica", {
         item: itemId,
+        dominio: dom,
         estado_anterior: prev.estado,
         motivo: (cambios.no_aplica_motivo ?? null) as string | null,
       });
     } else if (prev.estado === "no_aplica" && nuevo !== "no_aplica") {
       await registrarBitacora(supabase, projectId, "item_reactivada", {
         item: itemId,
+        dominio: dom,
         estado_nuevo: nuevo,
         motivo_anterior: prev.no_aplica_motivo ?? null,
       });
@@ -345,6 +352,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     ) {
       await registrarBitacora(supabase, projectId, "item_estado", {
         item: itemId,
+        dominio: dom,
         de: prev.estado,
         a: nuevoEstado,
       });
@@ -360,6 +368,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     ) {
       await registrarBitacora(supabase, projectId, "fecha_hecho_movida", {
         item: itemId,
+        dominio: dom,
         de: prev.completed_at,
         a: data.completed_at ?? null,
       });
@@ -368,7 +377,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     // privado; solo queda que decidiste anotar algo).
     const notaNueva = (data.nota ?? "").trim();
     if (cambios.nota !== undefined && notaNueva && notaNueva !== (prev.nota ?? "").trim()) {
-      await registrarBitacora(supabase, projectId, "nota_escrita", { item: itemId });
+      await registrarBitacora(supabase, projectId, "nota_escrita", { item: itemId, dominio: dom });
     }
   }
 

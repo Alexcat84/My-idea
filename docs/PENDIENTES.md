@@ -5,6 +5,10 @@ Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 
 ## 1. Campaña "Espacios" — Fase 3 restante (en cola)
 
+**Plan detallado: `docs/PLAN_ESPACIOS_FASE3.md`** (propuesta pendiente del visto
+del fundador y del auditor; enfoque Opción A "dentro de Tu avance", garantías de
+fuente única / partición exacta / sin doble conteo, y las 5 tandas).
+
 La Fase 1+2 y las 3 caras del espacio (Plan · Manos a la obra · Tu avance) ya
 están en producción. Queda el resto de la Fase 3:
 
@@ -61,6 +65,12 @@ están en producción. Queda el resto de la Fase 3:
   tamaño de nodos de "Tu avance", cuánto se "levanta" la pestaña activa, el segmentado).
 - **Píldora-humana** en las fechas: backlog post-beta (de la fidelidad al canon).
 - La **decoración de papel** de los interiores del Expediente (ver §2, ligado al pedido a CD).
+- **`cumplimiento-desglose-core-multiciclo`** (analytics): la fila "core" de
+  `cumplimientoPorDominio` cuenta ítems de cualquier ciclo, mientras los tiles globales
+  cuentan solo el plan baseline vigente. No es doble conteo; criterio distinto que puede
+  no cuadrar con varios ciclos. Arreglo NO es de una línea (pasar el id del baseline a
+  `cumplimientoPorDominio`). Nombrado en `docs/PLAN_ESPACIOS_FASE3.md §6`; **jamás
+  arreglar "de paso"**.
 
 ## Hecho recientemente (para no reabrirlo por error)
 
