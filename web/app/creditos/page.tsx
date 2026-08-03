@@ -75,12 +75,39 @@ const INCLUYE_MUNDO: [string, string][] = [
   ["Un mismo proyecto:", "no es otra cuenta ni otra idea."],
 ];
 
-// Una FICHA de crédito: una monedita azul con brillo. Su cantidad (no un número
-// suelto) es lo que hace ver el tamaño de cada recarga.
-const FICHA_ESTILO = {
-  background: "radial-gradient(circle at 35% 30%, #8FB0FF, #4D7CFE 72%)",
-  boxShadow: "0 1px 1.5px rgba(0,0,0,0.45)",
-} as const;
+// Estilo de cada escalón de recarga (calco de los cuatro del diseño).
+function estiloRecarga(i: number, destacado: boolean) {
+  if (destacado) {
+    return {
+      caja: "relative border-accent/60 shadow-[0_0_0_1px_rgba(77,124,254,0.16),0_18px_44px_rgba(0,0,0,0.55)]",
+      fondo: "linear-gradient(180deg, rgba(77,124,254,0.20) 0%, rgba(77,124,254,0.05) 50%, rgba(77,124,254,0.02) 100%)",
+      ficha: "border-transparent bg-accent text-[#04102C]",
+      cantidad: "text-[#8FB0FF]",
+    };
+  }
+  if (i === 1) {
+    return {
+      caja: "border-accent/[0.22]",
+      fondo: "linear-gradient(180deg, rgba(77,124,254,0.05) 0%, #101013 70%)",
+      ficha: "border-accent/40 bg-accent/[0.12] text-[#A9C4FF]",
+      cantidad: "text-dim",
+    };
+  }
+  if (i === 3) {
+    return {
+      caja: "border-accent/[0.34]",
+      fondo: "linear-gradient(180deg, rgba(77,124,254,0.08) 0%, #0c0c10 70%)",
+      ficha: "border-accent/[0.55] bg-accent/[0.18] text-[#DCE7FF]",
+      cantidad: "text-dim",
+    };
+  }
+  return {
+    caja: "border-hairline",
+    fondo: "#101013",
+    ficha: "border-accent/25 bg-accent/[0.07] text-[#8FB0FF]",
+    cantidad: "text-dim",
+  };
+}
 
 export default async function Creditos() {
   const supabase = await createClient();
@@ -138,33 +165,41 @@ export default async function Creditos() {
         <section className="anima-plan-in flex flex-col items-center gap-6" style={{ animationDelay: "0.05s" }}>
           <h2 className="text-center text-[22px] font-bold tracking-tight">Sumar créditos</h2>
           <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {PACKS.map((pack) => (
-              <article
-                key={pack.nombre}
-                className="flex flex-col items-center gap-4 rounded-panel border border-hairline bg-surface p-6 text-center"
-              >
-                {/* el cúmulo de fichas: la cantidad se VE (5 vs 30 de un vistazo) */}
-                <div className="flex h-[80px] w-[168px] flex-wrap content-center items-center justify-center gap-1.5">
-                  {Array.from({ length: pack.creditos }).map((_, k) => (
-                    <span key={k} className="h-3 w-3 rounded-full" style={FICHA_ESTILO} />
-                  ))}
-                </div>
-                <span className="flex flex-col gap-1">
-                  <span className="text-[15px] font-semibold">{pack.nombre}</span>
-                  <span className="text-[12.5px] text-dim">{pack.creditos} créditos</span>
-                </span>
-                <span className="text-[30px] font-extrabold leading-none tracking-[-0.025em] tabular-nums">
-                  ${pack.usd}
-                </span>
-                <button
-                  type="button"
-                  disabled
-                  className="mt-1 flex w-full cursor-not-allowed items-center justify-center rounded-[11px] border border-hairline py-2.5 text-[12.5px] font-semibold text-dim/70"
+            {PACKS.map((pack, i) => {
+              const s = estiloRecarga(i, Boolean(pack.destacado));
+              return (
+                <article
+                  key={pack.nombre}
+                  className={`flex flex-col items-center gap-4 rounded-panel border p-6 text-center ${s.caja}`}
+                  style={{ background: s.fondo }}
                 >
-                  La compra se abre pronto
-                </button>
-              </article>
-            ))}
+                  {pack.destacado && (
+                    <span className="absolute -top-2.5 left-1/2 flex h-[22px] -translate-x-1/2 items-center rounded-full bg-accent px-3 text-[11px] font-extrabold text-[#04102C]">
+                      El más elegido
+                    </span>
+                  )}
+                  <span
+                    className={`flex h-[54px] w-[54px] items-center justify-center rounded-full border text-[20px] font-extrabold tabular-nums ${s.ficha}`}
+                  >
+                    {pack.creditos}
+                  </span>
+                  <span className="flex flex-col gap-1">
+                    <span className="text-[15px] font-semibold">{pack.nombre}</span>
+                    <span className={`text-[12.5px] ${s.cantidad}`}>{pack.creditos} créditos</span>
+                  </span>
+                  <span className="text-[30px] font-extrabold leading-none tracking-[-0.025em] tabular-nums">
+                    ${pack.usd}
+                  </span>
+                  <button
+                    type="button"
+                    disabled
+                    className="mt-1 flex w-full cursor-not-allowed items-center justify-center rounded-[11px] border border-hairline py-2.5 text-[12.5px] font-semibold text-dim/70"
+                  >
+                    La compra se abre pronto
+                  </button>
+                </article>
+              );
+            })}
           </div>
         </section>
 
