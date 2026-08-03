@@ -22,6 +22,7 @@ import {
   ProyeccionCierre,
   CumplimientoPorMundoBarras,
   DistribucionEstados,
+  Tile,
 } from "./GraficosAnalisis";
 
 interface Respuesta {
@@ -42,17 +43,6 @@ const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries([
   ["core", "Tu viaje principal"],
   ...(catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.map((p) => [p.clave, p.nombre]),
 ]);
-
-function Tile({ valor, etiqueta, color }: { valor: string; etiqueta: string; color?: string }) {
-  return (
-    <div className="flex flex-col items-center justify-center rounded-[14px] border border-hairline bg-surface-3 px-4 py-6 text-center">
-      <p className="text-[38px] font-extrabold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
-        {valor}
-      </p>
-      <p className="mt-2 text-[12px] text-dim [text-wrap:balance]">{etiqueta}</p>
-    </div>
-  );
-}
 
 /** Tile compacta de cumplimiento: el número (grande y centrado) lleva el color
  * semántico (verde a tiempo, azul adelantada, ámbar tardía), debajo el

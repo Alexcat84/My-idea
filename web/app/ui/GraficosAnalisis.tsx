@@ -21,6 +21,20 @@ function Titulo({ children, nota }: { children: React.ReactNode; nota?: string }
   );
 }
 
+/** La tile de una cifra (grande, centrada) con su etiqueta. Compartida por el
+ * Análisis del proyecto (global) y las Estadísticas por espacio (Fase 3): la
+ * misma vara visual mide el proyecto y cada espacio. */
+export function Tile({ valor, etiqueta, color }: { valor: string; etiqueta: string; color?: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center rounded-[14px] border border-hairline bg-surface-3 px-4 py-6 text-center">
+      <p className="text-[38px] font-extrabold leading-none tracking-tight tabular-nums" style={color ? { color } : undefined}>
+        {valor}
+      </p>
+      <p className="mt-2 text-[12px] text-dim [text-wrap:balance]">{etiqueta}</p>
+    </div>
+  );
+}
+
 /** Reparto del cumplimiento: un gráfico CIRCULAR (dona) con los tres estados.
  * De todo lo que tenía fecha, qué parte fue adelantada / a tiempo / tardía. */
 export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo: number; adelantadas: number; tardias: number }) {
