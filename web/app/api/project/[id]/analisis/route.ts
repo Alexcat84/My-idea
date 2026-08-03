@@ -45,7 +45,8 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
 
   return NextResponse.json({
     nombre,
-    modo_camino: proyecto.modo_camino ?? null,
+    // "Todo separado" (T3): el modo del core, ya dual-read en cargarEntradaAnalytics.
+    modo_camino: entrada.modoCamino,
     realizada_at: proyecto.realizada_at ?? null,
     cierre_motivo: proyecto.cierre_motivo ?? null,
     tiene_baseline: analytics.cumplimiento !== null,

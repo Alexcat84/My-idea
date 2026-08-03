@@ -17,6 +17,8 @@ export interface EstadoFalso {
   /** Fase 4.2: los eventos de proyecto (migracion 018), para poder asertar
    * que el cierre de un mundo deja rastro. */
   bitacora: Record<string, unknown>[];
+  /** "Todo separado" (migracion 032): el modo del camino por espacio. */
+  projectModos: Record<string, unknown>[];
   contadorProject: number;
   contadorSession: number;
   contadorPlan: number;
@@ -31,6 +33,7 @@ export function estadoFalsoVacio(): EstadoFalso {
     checklistItems: [],
     projectUnlocks: [],
     bitacora: [],
+    projectModos: [],
     contadorProject: 0,
     contadorSession: 0,
     contadorPlan: 0,
@@ -40,6 +43,7 @@ export function estadoFalsoVacio(): EstadoFalso {
 interface Builder {
   _insert?: Record<string, unknown> | Record<string, unknown>[];
   _update?: Record<string, unknown>;
+  _upsert?: Record<string, unknown>;
   _filters: Record<string, unknown>;
   _single: boolean;
   _order?: { col: string; ascending: boolean };
@@ -165,6 +169,22 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     }
     return { data: rows, error: null };
   }
+  if (nombre === "project_modos") {
+    if (b._upsert) {
+      const fila = b._upsert as { project_id: string; dominio: string };
+      const existente = estado.projectModos.find(
+        (r) => (r as Record<string, unknown>).project_id === fila.project_id && (r as Record<string, unknown>).dominio === fila.dominio
+      );
+      if (existente) Object.assign(existente, fila);
+      else estado.projectModos.push({ ...fila });
+      return { data: null, error: null };
+    }
+    let rows = estado.projectModos;
+    for (const [col, val] of Object.entries(b._filters)) {
+      rows = rows.filter((r) => (r as Record<string, unknown>)[col] === val);
+    }
+    return { data: rows, error: null };
+  }
   if (nombre === "project_nodes") {
     if (b._insert) {
       const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
@@ -188,6 +208,10 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
     },
     update(payload: Record<string, unknown>) {
       builder._update = payload;
+      return builder;
+    },
+    upsert(payload: Record<string, unknown>) {
+      builder._upsert = payload;
       return builder;
     },
     select() {
