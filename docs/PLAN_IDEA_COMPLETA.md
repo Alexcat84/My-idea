@@ -84,11 +84,18 @@ Devuelve:
   desglose (núcleo primero, marcado), para las tarjetas.
 - La **timeline unificada** se toma de la bitácora global existente (no se recalcula).
 
-**Precisión abierta (para el auditor):** el DOMINIO de las fechas para ritmo/racha
-unificados. Default propuesto: las acciones **activas del plan vigente** de cada
-espacio (consistente con el `total` de X de N). Alternativa: todos los `completed_at`
-de la historia (incluye ciclos viejos). Se decide y se documenta en la tanda 1; el
-default mantiene ritmo/racha/total en el mismo universo (auditables entre sí).
+**Dominio de ritmo/racha — CERRADO: vigente-activo.** Las tres métricas del agregado
+(total, ritmo, racha) salen del **MISMO universo**: las acciones **activas del plan
+vigente** de cada espacio. **Por qué:** así son **auditables entre sí** (la racha y el
+ritmo miden sobre exactamente lo que suma el total); el histórico (ciclos viejos) ya
+vive en la bitácora y en la línea "frente a tu plan inicial" del cumplimiento.
+
+**Precisión de la racha unificada (tanda 1):** la unión de `completed_at` respeta la
+**vigencia POR ESPACIO** — de cada espacio entran solo los ítems de su plan vigente
+(`grupoVigente` por dominio en los mundos; el plan vigente del core para el núcleo).
+Luego se aplica `rachaMasLarga` sobre esa unión. **Test a mano obligatorio:** un caso
+donde una fecha de un MUNDO **extiende** una racha que el core solo no tendría (la
+prueba de que la unión es real, no la racha del core disfrazada).
 
 ## 5. Las tandas (commits "Idea completa:")
 
@@ -140,12 +147,12 @@ default mantiene ritmo/racha/total en el mismo universo (auditables entre sí).
 - Un documento nuevo de "idea completa" (default: reusar el Expediente; ver decisión 3).
 - ETAPA 3 (pasarelas) y las varas de Design de la Fase 3 (encargo aparte).
 
-## 8. Decisiones abiertas (para el visto del fundador/auditor)
-1. **El control**: entrada al frente del cambiador (default del boceto) vs una barra/
-   fila separada "por encima" de las pestañas. *Default: entrada al frente, distinguida.*
-2. **Qué se unifica**: total + ritmo + racha + timeline; lo por-etapa NO. *Confirmado en
-   §2 como garantía; se puede ampliar/recortar.*
-3. **Documento unificado**: reusar el Expediente/Análisis global (default) vs un
-   "Resumen de la idea completa" descargable propio. *Default: reusar.*
-4. **Precisión del dominio de ritmo/racha** (§4): vigente-activo (default) vs todo el
-   histórico.
+## 8. Decisiones CERRADAS (visto del fundador, 2026-08-03)
+1. **El control** = una **entrada al frente del cambiador, distinguida**. **Jamás un
+   tercer riel de navegación.**
+2. **Qué se unifica** = total + ritmo + racha + timeline. **Lo por-etapa jamás.**
+3. **Documento** = **reusar el Expediente/Análisis global**, sin documento nuevo (dos
+   documentos casi-iguales esperan divergir; no se crean por crear).
+4. **Dominio de ritmo/racha** = **vigente-activo**, con el porqué documentado (§4): las
+   tres métricas salen del mismo universo que el total → auditables entre sí; el
+   histórico ya vive en la bitácora y en "frente a tu plan inicial".
