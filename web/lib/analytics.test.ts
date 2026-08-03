@@ -20,6 +20,7 @@ import {
   analyticsDeMundo,
   informeMarkdown,
   calcularAnalytics,
+  capaCumplimientoDe,
   clasificarCumplimiento,
   construirHitos,
   resumenEspacioMd,
@@ -177,6 +178,14 @@ describe("calcularAnalytics — capa de cumplimiento", () => {
       { etapa: 2, baseInicio: 21, baseFin: 24, realInicio: 19, realFin: 24 },
     ]);
   });
+  // GOLDEN de la extracción (T3 "todo separado"): pinta los ÚLTIMOS campos del
+  // cumplimiento (tardiasTop, replanificados) para que extraer capaCumplimientoDe
+  // no cambie NADA de la salida del núcleo. Verificado a mano contra BASE.
+  it("tardiasTop y replanificados del núcleo (golden de la extracción)", () => {
+    // tardía: solo B (+3, etapa 1). replanificado: solo D (tiene fecha_base_original).
+    expect(c.tardiasTop).toEqual([{ texto: "B", etapa: 1, diasRetraso: 3 }]);
+    expect(c.replanificados).toEqual([{ texto: "D", etapa: 2 }]);
+  });
 });
 
 describe("calcularAnalytics — Gantt de VENTANAS HONESTAS (paralelismo del fundador)", () => {
@@ -238,6 +247,32 @@ describe("calcularAnalytics — Gantt de VENTANAS HONESTAS (paralelismo del fund
     expect(e2.baseFin).toBeNull();
     expect(e2.realInicio).toBeNull();
     expect(e2.realFin).toBeNull();
+  });
+});
+
+describe("capaCumplimientoDe — la capa EXTRAÍDA (T3): misma vara para core y mundo", () => {
+  // BASE.items son todos del plan baseline (p1), chispa 03-01: capaCumplimientoDe
+  // sobre ellos debe dar EXACTAMENTE el cumplimiento del núcleo (sin porDominio).
+  const c = capaCumplimientoDe(BASE.items, iso("2026-03-01"));
+
+  it("produce el cumplimiento sin porDominio (lo añade el llamador)", () => {
+    expect(c).not.toHaveProperty("porDominio");
+    expect(c.aTiempo).toBe(2);
+    expect(c.adelantadas).toBe(1);
+    expect(c.tardias).toBe(1);
+    expect(c.totalConFecha).toBe(4);
+    expect(c.porEtapa).toEqual([
+      { etapa: 1, baseInicio: 9, baseFin: 9, realInicio: 9, realFin: 12 },
+      { etapa: 2, baseInicio: 21, baseFin: 24, realInicio: 19, realFin: 24 },
+    ]);
+    expect(c.tardiasTop).toEqual([{ texto: "B", etapa: 1, diasRetraso: 3 }]);
+    expect(c.replanificados).toEqual([{ texto: "D", etapa: 2 }]);
+  });
+
+  it("es IDÉNTICA a la capa del núcleo dentro de calcularAnalytics (golden de la extracción)", () => {
+    const { porDominio: _pd, ...delNucleo } = calcularAnalytics(BASE).cumplimiento!;
+    void _pd;
+    expect(c).toEqual(delNucleo);
   });
 });
 

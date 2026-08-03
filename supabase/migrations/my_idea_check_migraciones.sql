@@ -378,5 +378,23 @@ FROM (
       WHERE table_schema='public' AND table_name='google_calendar_evento'
     )
 
+  UNION ALL
+  -- 032 · Modo del camino POR ESPACIO: tabla project_modos + CHECK + unique
+  SELECT '032', 'project_modos (modo por dominio) + CHECK (ritmo|fechas) + unique',
+    EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='project_modos'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_modos_modo_camino_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%ritmo%'
+        AND pg_get_constraintdef(oid) LIKE '%fechas%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_modos_project_dominio_uniq' AND connamespace = 'public'::regnamespace
+    )
+
 ) checks
 ORDER BY num;
