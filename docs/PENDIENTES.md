@@ -45,9 +45,16 @@ jamás se unifica; timeline y documento reusan la bitácora y el Expediente glob
 - **Centro de créditos v4** (alta industria, modelo de consumible): brief y prompt v2
   listos (`docs/calibracion-design/BRIEF_CREDITOS.md`, `PROMPT_CREDITOS_CD.md`).
   Esperando opciones de CD.
-- **Espacios** (pestañas-fichero + hub + caras): `docs/calibracion-design/BRIEF_ESPACIOS.md`
-  listo, con el riesgo de los dos niveles de navegación explícito. Encargo a CD para
-  calibrar la vara visual (incluida la cara "Tu avance").
+- **Espacios + La idea completa (encargo ACUMULADO, front funcional ya en su sitio):**
+  `docs/calibracion-design/BRIEF_ESPACIOS.md` listo (dos niveles de navegación
+  explícitos). Calibración visual de CD sobre TODAS las superficies del frente:
+  - hub + **cambiador** de espacios (pestañas-fichero, la activa levantada);
+  - las **3 caras** (Plan · Manos a la obra · Tu avance), con estadísticas y bitácora
+    por espacio dentro de "Tu avance";
+  - el **nivel GENERAL "La idea completa"** con su **entrada distinguida** al frente del
+    cambiador, la banda "Lo general", el núcleo distinguido y las tarjetas de mundo;
+  - las **varas previas**: chips de etiqueta en la bitácora global, el desglose "Tu
+    proyecto completo" del Análisis, y las fichas de Reporte por mundo en Documentos.
 - **PDF Expediente · interiores (DIFERIDO post-beta):** el diseño YA existe
   (`_entrega-claude-design/Entrega-desing 20260729/entrega2/pdf-expediente-interiores/`:
   Tus Números, un mundo, "Cómo te fue", "La secuencia de tu viaje"). **Cuando sea el
