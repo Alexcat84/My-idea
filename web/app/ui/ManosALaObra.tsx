@@ -31,6 +31,7 @@ import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
 import { LineaAvance } from "./LineaAvance";
 import { EstadisticasEspacio } from "./EstadisticasEspacio";
+import { BitacoraEspacio } from "./BitacoraEspacio";
 import type { Analytics } from "@/lib/analytics";
 import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
@@ -1363,6 +1364,8 @@ export function ManosALaObra({
             {/* Fase 3: las estadísticas del core (su capa universal ya calculada
                 en analytics.universal, que ES core-only: sin doble conteo). */}
             {analytics && <EstadisticasEspacio universal={analytics.universal} titulos={titulosCore} />}
+            {/* Fase 3 (tanda 3): la bitácora del core, filtrada de la fuente única. */}
+            <BitacoraEspacio projectId={projectId} dominio={ESPACIO_CORE} />
           </>
         )}
         {(!coreEnEspacio || cara === "manos") && (
@@ -1585,6 +1588,9 @@ export function ManosALaObra({
                           const am = analytics?.mundos.find((m) => m.dominio === mundo.dominio);
                           return am ? <EstadisticasEspacio universal={am.universal} titulos={titulosMundo} /> : null;
                         })()}
+                        {/* Fase 3 (tanda 3): la bitácora de ESTE mundo, filtrada de la
+                            fuente única (jamás una entrada de otro espacio ni las null). */}
+                        <BitacoraEspacio projectId={projectId} dominio={mundo.dominio} />
                       </div>
                     )}
                     {cara === "manos" && (

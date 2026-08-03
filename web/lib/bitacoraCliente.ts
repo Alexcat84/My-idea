@@ -324,9 +324,11 @@ export function bitacoraCuerpo(entradas: EntradaBitacora[], nivel = 3): string[]
 
 /** El documento markdown de la bitácora: portada + la secuencia. El .md y el
  * PDF salen de aquí (una sola verdad). */
-export function bitacoraMarkdown(nombreIdea: string, entradas: EntradaBitacora[], generadoAt: string): string {
+export function bitacoraMarkdown(nombreIdea: string, entradas: EntradaBitacora[], generadoAt: string, titulo?: string): string {
   const l: string[] = [];
-  l.push(`# La historia de ${nombreIdea}`);
+  // `titulo` sobreescribe el H1 (Fase 3: la bitácora POR ESPACIO se titula
+  // "Bitácora de {espacio}"); sin él, el título de siempre.
+  l.push(titulo ?? `# La historia de ${nombreIdea}`);
   l.push("");
   if (entradas.length === 0) {
     l.push(`> Generada el ${fechaHumanaConAno(generadoAt)}`);

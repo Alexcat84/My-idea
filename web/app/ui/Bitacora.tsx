@@ -100,6 +100,88 @@ function coloreaMotivo(texto: string, color: string) {
   );
 }
 
+/**
+ * La LÍNEA DE TIEMPO en sí (sin encabezado ni descarga). Reutilizable: la usa la
+ * página global "Mi bitácora" y la bitácora POR ESPACIO de la cara "Tu avance"
+ * (Fase 3), que le pasa las entradas ya filtradas con `bitacoraDeEspacio`. La
+ * espina dibuja su tramo por fila y termina justo en el centro del último punto.
+ */
+export function LineaBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
+  const filas = aFilas(entradas);
+  const cerrada = entradas.some((e) => e.peso === "cierre");
+  return (
+    <div className="relative mt-9 pb-1">
+      {filas.map((f, i) => {
+        const esPrimera = i === 0;
+        const esUltima = i === filas.length - 1;
+        // centro del punto de esta fila, desde el borde superior de la fila
+        const centro = f.tipo === "dia" ? 12 : f.entrada.peso === "cierre" ? 13 : 11;
+        const verde = cerrada && (f.tipo === "dia" ? f.cierre : f.entrada.peso === "cierre");
+        const tramo = (
+          <span
+            aria-hidden
+            style={{
+              position: "absolute",
+              left: 13,
+              width: 2,
+              transform: "translateX(-50%)",
+              background: verde ? "rgba(63,185,80,0.9)" : "rgba(77,124,254,0.85)",
+              top: esPrimera ? centro : 0,
+              ...(esUltima ? { height: centro } : { bottom: 0 }),
+            }}
+          />
+        );
+        return f.tipo === "dia" ? (
+          <div key={`d-${i}`} className="relative" style={{ paddingLeft: 44, paddingBottom: 10, paddingTop: esPrimera ? 2 : 8 }}>
+            {tramo}
+            <span
+              aria-hidden
+              style={{
+                position: "absolute",
+                left: 13,
+                top: 6,
+                transform: "translateX(-50%)",
+                width: 13,
+                height: 13,
+                borderRadius: "50%",
+                background: f.cierre ? VERDE : AZUL,
+                boxShadow: `0 0 0 4px ${f.cierre ? "rgba(63,185,80,0.16)" : "rgba(77,124,254,0.16)"}`,
+              }}
+            />
+            <div className="text-[15px] font-bold" style={{ color: f.cierre ? VERDE : "#F5F6F8" }}>
+              {fechaHumanaConAno(f.fecha)}
+            </div>
+            {f.sub && <div className="mt-[3px] text-[12px] text-dim">{f.sub}</div>}
+          </div>
+        ) : (
+          <div
+            key={`e-${i}`}
+            className="relative"
+            style={{ paddingLeft: 44, paddingBottom: esUltima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
+          >
+            {tramo}
+            <PuntoEntrada peso={f.entrada.peso} />
+            {f.conHora ? (
+              <div className="flex items-baseline gap-3">
+                <span className="flex-none text-[12px] tabular-nums text-dim" style={{ minWidth: 38 }}>
+                  {hora(f.entrada.fecha)}
+                </span>
+                <span className="[text-wrap:pretty]">
+                  <TextoEntrada e={f.entrada} />
+                </span>
+              </div>
+            ) : (
+              <span className="[text-wrap:pretty]">
+                <TextoEntrada e={f.entrada} />
+              </span>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver: () => void }) {
   const [datos, setDatos] = useState<{ nombre: string; entradas: EntradaBitacora[] } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -119,8 +201,6 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
   if (!datos) return <p className="text-dim">Cargando tu bitácora…</p>;
 
   const { entradas } = datos;
-  const filas = aFilas(entradas);
-  const cerrada = entradas.some((e) => e.peso === "cierre");
   const rango =
     entradas.length > 0
       ? `del ${fechaHumanaConAno(entradas[0].fecha)} al ${fechaHumanaConAno(entradas[entradas.length - 1].fecha)}`
@@ -163,81 +243,8 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
                 proyecto, que es donde tienen sentido. Aquí, solo la línea de
                 tiempo. */}
 
-            {/* ── Línea de tiempo completa ─────────────────────────────── */}
-            {/* La espina NO es un elemento absoluto con "bottom" adivinado (se
-                pasaba del último punto). Cada fila dibuja SU tramo en el canal:
-                la primera arranca en el centro de su punto, las de en medio lo
-                cruzan entero, y la ÚLTIMA termina justo en el centro de su punto
-                (nunca lo sobrepasa). Verde solo en el tramo del cierre. */}
-            <div className="relative mt-9 pb-1">
-              {filas.map((f, i) => {
-                const esPrimera = i === 0;
-                const esUltima = i === filas.length - 1;
-                // centro del punto de esta fila, desde el borde superior de la fila
-                const centro = f.tipo === "dia" ? 12 : f.entrada.peso === "cierre" ? 13 : 11;
-                const verde = cerrada && (f.tipo === "dia" ? f.cierre : f.entrada.peso === "cierre");
-                const tramo = (
-                  <span
-                    aria-hidden
-                    style={{
-                      position: "absolute",
-                      left: 13,
-                      width: 2,
-                      transform: "translateX(-50%)",
-                      background: verde ? "rgba(63,185,80,0.9)" : "rgba(77,124,254,0.85)",
-                      top: esPrimera ? centro : 0,
-                      ...(esUltima ? { height: centro } : { bottom: 0 }),
-                    }}
-                  />
-                );
-                return f.tipo === "dia" ? (
-                  <div key={`d-${i}`} className="relative" style={{ paddingLeft: 44, paddingBottom: 10, paddingTop: esPrimera ? 2 : 8 }}>
-                    {tramo}
-                    <span
-                      aria-hidden
-                      style={{
-                        position: "absolute",
-                        left: 13,
-                        top: 6,
-                        transform: "translateX(-50%)",
-                        width: 13,
-                        height: 13,
-                        borderRadius: "50%",
-                        background: f.cierre ? VERDE : AZUL,
-                        boxShadow: `0 0 0 4px ${f.cierre ? "rgba(63,185,80,0.16)" : "rgba(77,124,254,0.16)"}`,
-                      }}
-                    />
-                    <div className="text-[15px] font-bold" style={{ color: f.cierre ? VERDE : "#F5F6F8" }}>
-                      {fechaHumanaConAno(f.fecha)}
-                    </div>
-                    {f.sub && <div className="mt-[3px] text-[12px] text-dim">{f.sub}</div>}
-                  </div>
-                ) : (
-                  <div
-                    key={`e-${i}`}
-                    className="relative"
-                    style={{ paddingLeft: 44, paddingBottom: esUltima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
-                  >
-                    {tramo}
-                    <PuntoEntrada peso={f.entrada.peso} />
-                    {f.conHora ? (
-                      <div className="flex items-baseline gap-3">
-                        <span className="flex-none text-[12px] tabular-nums text-dim" style={{ minWidth: 38 }}>
-                          {hora(f.entrada.fecha)}
-                        </span>
-                        <span className="[text-wrap:pretty]">
-                          <TextoEntrada e={f.entrada} />
-                        </span>
-                      </div>
-                    ) : (
-                      <span className="[text-wrap:pretty]">
-                        <TextoEntrada e={f.entrada} />
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+            {/* ── Línea de tiempo completa (componente reutilizable) ─────── */}
+            <LineaBitacora entradas={entradas} />
 
             <p className="mt-9 border-t border-hairline pt-5 text-[12.5px] leading-relaxed text-dim">
               Esta es tu historia tal como quedó registrada, día por día. Nada se reescribe: si moviste una fecha, la

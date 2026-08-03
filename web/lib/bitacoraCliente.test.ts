@@ -158,6 +158,45 @@ describe("bitacoraDeEspacio (Fase 3): partición exacta, sin inventar pertenenci
     expect(bitacoraDeEspacio(e, "quality")).toContain(nota);
     expect(e.filter((x) => x.dominio === null)).toHaveLength(0);
   });
+
+  it("la vista de un espacio JAMÁS muestra una entrada de otro espacio ni una no-derivable", () => {
+    // Proyecto con DOS mundos (quality, health_safety) + core + una entrada
+    // no-derivable (evento de ítem borrado, sin estampa). La vista de un espacio
+    // debe traer SOLO lo suyo.
+    const e = construirBitacora(
+      datos({
+        planes: [
+          { etiqueta: "organizador", created_at: "2026-01-02T10:00:00Z", dominio: "core", baseline_confirmada_at: null },
+          { etiqueta: "completo", created_at: "2026-01-05T10:00:00Z", dominio: "core", baseline_confirmada_at: null },
+          { etiqueta: "completo", created_at: "2026-01-18T10:00:00Z", dominio: "quality", baseline_confirmada_at: null },
+          { etiqueta: "completo", created_at: "2026-01-19T10:00:00Z", dominio: "health_safety", baseline_confirmada_at: null },
+        ],
+        items: [
+          { id: "c1", texto: "Algo del core", completed_at: "2026-01-10T15:00:00Z", dominio: "core" },
+          { id: "q1", texto: "Algo de quality", completed_at: "2026-01-20T15:00:00Z", dominio: "quality" },
+          { id: "h1", texto: "Algo de health_safety", completed_at: "2026-01-21T15:00:00Z", dominio: "health_safety" },
+        ],
+        eventos: [
+          { tipo: "nota_escrita", payload: { item: "q1" }, created_at: "2026-01-22T10:00:00Z" },
+          { tipo: "nota_escrita", payload: { item: "borrado-z" }, created_at: "2026-01-23T10:00:00Z" }, // no-derivable → null
+        ],
+      }),
+    );
+
+    const quality = bitacoraDeEspacio(e, "quality");
+    expect(quality.length).toBeGreaterThan(0);
+    // SOLO quality: nunca core, nunca el otro mundo, nunca null
+    expect(quality.every((x) => x.dominio === "quality")).toBe(true);
+    expect(quality.some((x) => x.dominio === "core")).toBe(false);
+    expect(quality.some((x) => x.dominio === "health_safety")).toBe(false);
+    expect(quality.some((x) => x.dominio === null)).toBe(false);
+
+    // la no-derivable existe (solo-global) y en NINGUNA específica
+    expect(e.filter((x) => x.dominio === null)).toHaveLength(1);
+    for (const dom of ["core", "quality", "health_safety"]) {
+      expect(bitacoraDeEspacio(e, dom).some((x) => x.dominio === null)).toBe(false);
+    }
+  });
 });
 
 describe("bitacoraMarkdown", () => {
