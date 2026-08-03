@@ -85,11 +85,13 @@ Verificado en el código (esta fase es sobre todo *pintar*, no *calcular*):
 
 - **Una fuente, muchas lecturas.** Cero tablas/registros paralelos. Toda vista
   por-espacio es un **filtro** de la bitácora/analytics únicos.
-- **Partición exacta.** Cada entrada de bitácora se asigna a **exactamente un**
-  espacio, derivado en el lector. La unión de las específicas = la global, sin
-  solapes. **Sin migración** (reversible). Borde documentado y aceptado: si un
-  `checklist_item` se borra, su entrada de ítem cae a **core** por defecto (sigue
-  siendo una partición válida; es un evento raro en beta).
+- **Partición exacta, sin inventar pertenencia.** Cada entrada de bitácora se asigna a
+  **exactamente un** espacio cuando su dominio es derivable. Una entrada
+  **no-derivable** (evento de ítem cuyo ítem ya no existe y que no estampó dominio)
+  **NO se asigna a core**: se muestra **solo en la bitácora global**, con **etiqueta
+  neutra**, y queda **ausente de todas las específicas**. Inventar pertenencia está
+  **prohibido** (addendum). Fórmula de partición: **unión de las específicas = global −
+  {no-derivables listadas explícitamente}**. **Sin migración** (reversible).
 - **Sin doble conteo.** El universal global sigue siendo core-only; el "proyecto
   completo" se presenta como **"core y N mundos"** con el avance de cada nivel por
   separado y la suma **declarada**, nunca un número mezclado.
@@ -99,15 +101,42 @@ Verificado en el código (esta fase es sobre todo *pintar*, no *calcular*):
 ## 4. Las tandas (commits "Espacios Fase 3:")
 
 ### Tanda 1 — La fuente etiquetada (bitácora dominio-aware) + tests
-- `web/lib/bitacoraCliente.ts`: añadir `dominio: string` (y `espacio: "core" | pack)
-  a `EntradaBitacora`; `construirBitacora` ya conoce el dominio de cada entrada — solo
-  emitirlo. Corregir los **dos hitos que hoy agrupan sin mirar dominio**: "Tus Números"
-  (`:148-151`) y "línea base sellada" (`:143-145`) → leer `plan.dominio` (ya disponible).
-- Helper puro nuevo `bitacoraDeEspacio(entradas, dominio): EntradaBitacora[]`
-  (filtro por espacio; core = `esEspacioCore`).
-- Tests (`bitacoraCliente.test.ts` o nuevo): **partición exacta** (unión de específicas
-  = global; cada entrada en exactamente un espacio) y el borde (ítem borrado → core).
-- **Sin migración, sin cambio de API.** Solo el lector y un helper.
+
+**Gobierno primero (antes de pintar):** la ENMIENDA del BANCO §7.1 ya está hecha ("Tu
+avance" = hitos + estadísticas + bitácora del espacio; las métricas globales viven en
+Análisis). El banco lidera; la pantalla lo sigue en las tandas 2-3.
+
+- `web/lib/bitacoraCliente.ts`: `EntradaBitacora` gana **`dominio: string | null`**
+  (`null` = **no-derivable**, NO core). `construirBitacora` resuelve el dominio con
+  esta PRIORIDAD, sin inventar:
+  1. `payload.dominio` si está (eventos nuevos, ver estampado abajo).
+  2. JOIN a `checklist_items.dominio` por `payload.item` (mientras el ítem exista).
+  3. `payload.mundo` directo (eventos de mundo).
+  4. **core** para eventos intrínsecamente de proyecto (`modo_camino`, `realizada`) y
+     los hitos de core (chispa/orden/plan). Esto NO es invención: esos eventos SON del
+     viaje entero por naturaleza.
+  5. Si nada resuelve (evento de ítem, sin `payload.dominio`, ítem borrado) → **`null`
+     (no-derivable)**.
+  - Corregir los **dos hitos que hoy agrupan sin mirar dominio**: "Tus Números"
+    (`:148-151`) y "línea base sellada" (`:143-145`) → leer `plan.dominio`.
+- **Estampar `payload.dominio` al ESCRIBIR** los eventos de ítem (los que hoy solo
+  guardan `payload.item`): `checklist/route.ts` (`:319,325,346,361,371`) y
+  `mover-fecha/route.ts` (`:121`) ya tienen el ítem a mano → añadir su `dominio` al
+  payload. Así los eventos NUEVOS son auto-descriptivos y **el borde no-derivable queda
+  solo ARQUEOLÓGICO** (filas viejas pre-estampado cuyo ítem además se borró). Verificado
+  (exploración): hoy los eventos de ítem llevan `payload.item` (derivable por JOIN
+  mientras el ítem exista), los de mundo `payload.mundo`, los de proyecto nada (core por
+  naturaleza). **Sin migración** (payload es jsonb).
+- Helper puro nuevo `bitacoraDeEspacio(entradas, dominio): EntradaBitacora[]` — filtra
+  por espacio (core = `esEspacioCore`); **nunca incluye entradas `dominio: null`**.
+- La **bitácora global** muestra TODAS las entradas, incluidas las `null`, estas con
+  **etiqueta neutra** (sin espacio inventado).
+- Tests (`bitacoraCliente.test.ts`): **partición exacta** con la fórmula *unión de
+  específicas = global − {no-derivables}*, declarando la lista de no-derivables
+  explícita; y que una entrada de ítem con ítem borrado y sin `payload.dominio` cae a
+  `null` (no a core) y solo aparece en la global.
+- **Sin migración, sin cambio de contrato de API.** Solo el lector, el estampado en los
+  writes y un helper.
 
 ### Tanda 2 — Estadísticas por espacio (pintar lo ya calculado)
 - Componente nuevo `web/app/ui/EstadisticasEspacio.tsx`: la **capa universal** (ritmo,
@@ -161,13 +190,22 @@ Verificado en el código (esta fase es sobre todo *pintar*, no *calcular*):
 - **Scripts:** `web/scripts/vuelo_beta.ts`, `web/scripts/gate_beta.ts`.
 - **Migración:** **ninguna.**
 
-## 6. Riesgos y decisiones abiertas
-- **Borde de partición** (ítem borrado → core): aceptado y documentado; alternativa
-  futura sería estampar `payload.dominio`/columna en `project_bitacora` al escribir
-  (requeriría migración + backfill). No se hace ahora para mantener la fase reversible.
-- **Inconsistencia menor de cumplimiento** (`analytics.ts`): la fila "core" de
-  `porDominio` cuenta ítems core de **cualquier ciclo**, mientras los tiles globales
-  cuentan solo el plan baseline vigente. No es doble conteo; se anota para que el
-  desglose por espacio use el mismo criterio y no confunda.
+## 6. Riesgos y decisiones nombradas
+- **Borde `bitacora-no-derivable`** (ítem borrado, sin `payload.dominio`): NO cae a
+  core. Va **solo a la bitácora global con etiqueta neutra**, ausente de todas las
+  específicas; el test de partición lo declara explícito (unión de específicas = global
+  − {no-derivables}). Con el **estampado de `payload.dominio` en los writes** (tanda 1)
+  el borde queda **arqueológico**: solo filas viejas cuyo ítem además se borró. Estampar
+  las filas históricas requeriría migración + backfill; no se hace ahora (reversible).
+- **`cumplimiento-desglose-core-multiciclo`** (inconsistencia NOMBRADA, `analytics.ts`):
+  la fila "core" de `cumplimientoPorDominio` (`:288`) cuenta ítems core con fecha de
+  **cualquier ciclo**, mientras los tiles globales de cumplimiento (`aTiempo/adelantadas/
+  tardias`) cuentan solo el **plan baseline vigente** (`:484`). **No es doble conteo**;
+  es un criterio distinto que puede no cuadrar si hubo varios ciclos. **Disposición:** el
+  arreglo NO es de una línea (habría que pasarle el id del baseline vigente a
+  `cumplimientoPorDominio` para acotar la fila core, y los mundos no comparten ese
+  concepto) → va al **backlog nombrado** (`PENDIENTES.md §5`), **jamás arreglado "de
+  paso" sin decirlo**. En la tanda 4, el desglose por-espacio se rotula con qué mide (sin
+  cambiar el conteo), para no confundir mientras el arreglo espera.
 - **Fetch de analytics en el hub**: hoy solo lo pide `AnalisisProyecto`. Si el peso
   molesta, se cachea en `IdeaView` y se pasa por props.

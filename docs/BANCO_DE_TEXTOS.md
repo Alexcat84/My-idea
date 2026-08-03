@@ -358,11 +358,20 @@ desconocer la razón.
   nombre). Dentro de cada espacio, un **selector segmentado** (píldora) separa tres
   CARAS y se ve **una a la vez**: **Plan** · **Manos a la obra** · **Tu avance**.
   - **Regla global/específico:** *"lo que cuenta historia es global; lo que mide
-    operación es del espacio."* La bitácora, el expediente y la Celebración grande son
-    del proyecto; el plan, las tareas y la línea de avance son de cada espacio.
-  - **"Tu avance"** son los **hitos REALES** del espacio (de datos persistidos: inicio →
-    cada acción hecha → cierre), **no estadística** (las métricas viven en Análisis). El
-    core arranca en La Chispa → Claridad → Tu Plan; un mundo en su Diagnóstico → su Plan.
+    operación es del espacio."* La lectura COMPLETA del viaje (Análisis del proyecto,
+    Mi bitácora, el Expediente y la Celebración grande) es del proyecto; cada espacio
+    muestra su PROPIA lectura filtrada de esa misma fuente. **Una fuente, muchas
+    lecturas: jamás registros paralelos.** El plan y las tareas son de cada espacio.
+  - **"Tu avance"** es **todo el progreso del espacio**: sus **hitos**, sus
+    **estadísticas** y su **bitácora** (de datos persistidos, filtrados a ese espacio).
+    Las **métricas del PROYECTO GLOBAL** (core + N mundos, sin doble conteo) viven en
+    **Análisis del proyecto**, no aquí. El core arranca en La Chispa → Claridad → Tu
+    Plan; un mundo en su Diagnóstico → su Plan.
+    **Enmienda (Fase 3 de Espacios, ago 2026):** "Tu avance" evolucionó de "hitos
+    reales, no estadística" a "todo el progreso del espacio (hitos + estadísticas +
+    bitácora)". **Por qué:** la Opción A de la Fase 3 mete las estadísticas y la
+    bitácora por-espacio DENTRO de "Tu avance" en vez de abrir una 4ª cara; el banco
+    no contradice la pantalla.
   - **"Tu recorrido" queda reservado** al árbol de conceptos ("Construido con tu
     recorrido"); la línea de hitos se llama **"Tu avance"** para no chocar.
   - **El precio al frente sobre el gratis:** las tarjetas de mundo lideran con su precio
