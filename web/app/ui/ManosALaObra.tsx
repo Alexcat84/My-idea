@@ -26,7 +26,7 @@ import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
 import { PRECIOS } from "@/lib/precios";
-import { ESPACIO_CORE, mundosDelEspacio } from "@/lib/espacios";
+import { dominiosDelRitual, ESPACIO_CORE, esEspacioCore, mundosDelEspacio } from "@/lib/espacios";
 import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
 import { LineaAvance } from "./LineaAvance";
@@ -1042,24 +1042,18 @@ export function ManosALaObra({
   // propio ancla (el created_at del plan de SU dominio) y sus propios titulos
   // de etapa: un mundo activado en abril no puede fechar desde un plan core de
   // marzo. Un mundo sin plan o sin checklist todavia no tiene nada que fechar.
+  // "Todo separado" (T3c, B5): el ritual del CORE es SOLO del core — ya NO
+  // arrastra los tramos de los mundos (dominiosDelRitual). Cada mundo sella su
+  // baseline en SU hub (T3c-2). Antes cubría el proyecto entero, mezclando medidas.
   const gruposRitual: GrupoRitual[] = useMemo(() => {
     const out: GrupoRitual[] = [];
-    if (core) {
-      out.push({ dominio: "core", nombre: "Tu viaje principal", planCreatedAt, titulos: titulosCore, items: itemsCore });
-    }
-    for (const mundo of mundos) {
-      const g = grupoVigente(checklist, mundo.dominio);
-      if (!g || !mundo.plan) continue;
-      out.push({
-        dominio: mundo.dominio,
-        nombre: mundo.nombre,
-        planCreatedAt: mundo.plan.created_at,
-        titulos: titulosDeEtapas(mundo.plan.contenido_md),
-        items: g.etapas.flatMap((e) => e.items),
-      });
+    for (const dom of dominiosDelRitual(ESPACIO_CORE)) {
+      if (esEspacioCore(dom) && core) {
+        out.push({ dominio: "core", nombre: "Tu viaje principal", planCreatedAt, titulos: titulosCore, items: itemsCore });
+      }
     }
     return out;
-  }, [core, planCreatedAt, titulosCore, itemsCore, mundos, checklist]);
+  }, [core, planCreatedAt, titulosCore, itemsCore]);
 
   // Con fechas ya puestas en CUALQUIER dominio no se reabre el ritual inicial;
   // un mundo nuevo entra por "recalcular pendientes" (V3a).
@@ -1090,14 +1084,14 @@ export function ManosALaObra({
   const desde = itemsCore.map((i) => i.created_at).sort()[0];
   const ciclosAjuste = historial.filter((h) => h.etiqueta === "seguimiento").length;
 
-  async function elegirModo(modo: ModoCamino) {
+  async function elegirModo(dominio: string, modo: ModoCamino) {
     setGuardandoModo(true);
     setError(null);
     try {
       const res = await fetch(`/api/project/${projectId}/modo`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ modo_camino: modo }),
+        body: JSON.stringify({ modo_camino: modo, dominio }),
       });
       if (!res.ok) {
         setError(ERROR_GENERICO);
@@ -1114,15 +1108,16 @@ export function ManosALaObra({
     }
   }
 
-  async function confirmarBaseline(fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) {
-    if (!core) return;
+  // "Todo separado" (T3c): sella la baseline del plan del ESPACIO indicado (el
+  // core o un mundo), no siempre el del core. Cada espacio sella lo suyo.
+  async function confirmarBaseline(planId: string, fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) {
     setGuardandoBaseline(true);
     setErrorBaseline(null);
     try {
       const res = await fetch(`/api/project/${projectId}/baseline`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan_id: core.plan_id, fechas }),
+        body: JSON.stringify({ plan_id: planId, fechas }),
       });
       if (!res.ok) {
         setErrorBaseline(ERROR_GENERICO);
@@ -1360,10 +1355,10 @@ export function ManosALaObra({
         {/* Fase 3.8 §3 — la elección del modo: primera entrada (modoCamino null)
             o cuando el usuario toca "cambiar". */}
         {(modoCamino === null || mostrarSelectorModo) && (
-          <TarjetaModo ocupado={guardandoModo} onElegir={elegirModo} />
+          <TarjetaModo ocupado={guardandoModo} onElegir={(modo) => elegirModo(ESPACIO_CORE, modo)} />
         )}
 
-        {/* Fase 3.8 §4 — ritual de la línea base (modo fechas) */}
+        {/* Fase 3.8 §4 — ritual de la línea base (modo fechas) — SOLO del core (B5) */}
         {modoCamino === "fechas" && core && (recalcularPendientes || (!hayFechas && !pospuesto)) && (
           <RitualFechas
             grupos={gruposRitual}
@@ -1371,7 +1366,7 @@ export function ManosALaObra({
             soloPendientes={recalcularPendientes}
             guardando={guardandoBaseline}
             error={errorBaseline}
-            onAceptar={confirmarBaseline}
+            onAceptar={(fechas) => confirmarBaseline(core.plan_id, fechas)}
             onPosponer={() => {
               setPospuesto(true);
               setRecalcularPendientes(false);

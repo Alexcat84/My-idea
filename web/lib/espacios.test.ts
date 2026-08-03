@@ -1,7 +1,7 @@
 // Campaña "Espacios" — la regla de pertenencia por espacio (fuente única que
 // comparten ManosALaObra e IdeaView). Casos a mano: un proyecto core + 2 mundos.
 import { describe, expect, it } from "vitest";
-import { ESPACIO_CORE, esEspacioCore, mundosDelEspacio, urlDelEspacio } from "./espacios";
+import { dominiosDelRitual, ESPACIO_CORE, esEspacioCore, mundosDelEspacio, urlDelEspacio } from "./espacios";
 
 const MUNDOS = [{ dominio: "quality" }, { dominio: "risk_management" }];
 
@@ -49,5 +49,15 @@ describe("urlDelEspacio: el deep-link con dominio", () => {
   it("un mundo lleva a su hub con el dominio, JAMÁS a ?vista=manos", () => {
     expect(urlDelEspacio("p1", "quality")).toBe("/idea/p1?vista=mundo&dominio=quality");
     expect(urlDelEspacio("p1", "risk_management")).toBe("/idea/p1?vista=mundo&dominio=risk_management");
+  });
+});
+
+describe("dominiosDelRitual (T3c, B5): el ritual de un espacio es SOLO suyo (no-arrastre)", () => {
+  it("el ritual del CORE no arrastra los mundos (antes cubría el proyecto entero)", () => {
+    expect(dominiosDelRitual("core")).toEqual(["core"]);
+  });
+  it("el ritual de un MUNDO es solo ese mundo", () => {
+    expect(dominiosDelRitual("quality")).toEqual(["quality"]);
+    expect(dominiosDelRitual("risk_management")).toEqual(["risk_management"]);
   });
 });
