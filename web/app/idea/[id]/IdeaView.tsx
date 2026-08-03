@@ -30,7 +30,6 @@ import { ChipSaldo } from "../../ui/ChipSaldo";
 import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
-import { IdeaCompleta } from "../../ui/IdeaCompleta";
 import type { Cara } from "../../ui/SelectorCara";
 import { PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
@@ -149,8 +148,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereCalendario = searchParams.get("vista") === "calendario";
   // Campaña "Espacios": el hub de un mundo. Deep-linkeable: ?vista=mundo&dominio=X.
   const quiereMundo = searchParams.get("vista") === "mundo";
-  // Frente "La idea completa": el nivel GENERAL sobre los espacios (?vista=idea).
-  const quiereIdea = searchParams.get("vista") === "idea";
   // La cara activa del espacio (Plan · Manos a la obra · Tu avance), deep-linkeable.
   const caraInicial: Cara = (["plan", "manos", "avance"] as const).find((c) => c === searchParams.get("cara")) ?? "manos";
 
@@ -210,10 +207,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Campaña "Espacios": el hub del mundo activo (?vista=mundo&dominio=X).
   const [vistaMundo, setVistaMundo] = useState(quiereMundo);
   const [hubDominio, setHubDominio] = useState<string | null>(quiereMundo ? searchParams.get("dominio") : null);
-  // Frente "La idea completa": el nivel GENERAL (?vista=idea).
-  const [vistaIdea, setVistaIdea] = useState(quiereIdea);
-  const [origenBitacora, setOrigenBitacora] = useState<"manos" | "plan" | "idea">("plan");
-  const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion" | "idea">("manos");
+  const [origenBitacora, setOrigenBitacora] = useState<"manos" | "plan">("plan");
+  const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
 
   const cargarChecklist = useCallback(async () => {
@@ -572,7 +567,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
   function irAManos() {
     setVistaManos(true);
     setVistaMundo(false);
-    setVistaIdea(false);
     setHubDominio(null);
     router.replace(`/idea/${projectId}?vista=manos`, { scroll: false });
   }
@@ -582,24 +576,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   function irAMundo(dominio: string) {
     setVistaManos(false);
     setVistaMundo(true);
-    setVistaIdea(false);
     setHubDominio(dominio);
     router.replace(urlDelEspacio(projectId, dominio), { scroll: false });
-  }
-
-  // Frente "La idea completa": el nivel GENERAL (agregado de toda la idea). Se
-  // entra desde la entrada distinguida del cambiador (solo con >=1 mundo).
-  function irAIdeaCompleta() {
-    setVistaManos(false);
-    setVistaMundo(false);
-    setHubDominio(null);
-    setVistaAnalisis(false);
-    setVistaCelebracion(false);
-    setVistaDocumentos(false);
-    setVistaBitacora(false);
-    setVistaCalendario(false);
-    setVistaIdea(true);
-    router.replace(`/idea/${projectId}?vista=idea`, { scroll: false });
   }
 
   // Campaña "Espacios": la cara activa vive en la URL (?cara=) para deep-link —
@@ -615,7 +593,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
   function volverAlViaje() {
     setVistaManos(false);
     setVistaMundo(false);
-    setVistaIdea(false);
     setHubDominio(null);
     setVistaAnalisis(false);
     setVistaCelebracion(false);
@@ -629,23 +606,20 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // desarrollo (el plan, Manos a la Obra, los mundos); "Volver" regresa a donde
   // se estaba.
   function irABitacora() {
-    setOrigenBitacora(vistaIdea ? "idea" : vistaManos || enObra ? "manos" : "plan");
-    setVistaIdea(false);
+    setOrigenBitacora(vistaManos || enObra ? "manos" : "plan");
     setVistaBitacora(true);
     router.replace(`/idea/${projectId}?vista=bitacora`, { scroll: false });
   }
   function volverDeBitacora() {
     setVistaBitacora(false);
-    if (origenBitacora === "idea") irAIdeaCompleta();
-    else if (origenBitacora === "manos") volverAManos();
+    if (origenBitacora === "manos") volverAManos();
     else volverAlViaje();
   }
 
   function irADocumentos() {
     // Volver debe devolver a donde estabas: a la Celebración si venías de
     // cerrar tu proyecto, a Manos a la Obra si venías del trabajo.
-    setOrigenDocumentos(vistaIdea ? "idea" : vistaCelebracion ? "celebracion" : "manos");
-    setVistaIdea(false);
+    setOrigenDocumentos(vistaCelebracion ? "celebracion" : "manos");
     setVistaDocumentos(true);
     setVistaAnalisis(false);
     setVistaCelebracion(false);
@@ -653,11 +627,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   function volverDeDocumentos() {
-    if (origenDocumentos === "idea") {
-      setVistaDocumentos(false);
-      irAIdeaCompleta();
-      return;
-    }
     if (origenDocumentos === "celebracion") {
       setVistaDocumentos(false);
       setVistaCelebracion(true);
@@ -882,28 +851,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
             onVolver={volverAManos}
             onVerLoCumplido={irAAnalisis}
           />
-        ) : vistaIdea ? (
-          <>
-            {/* Frente "La idea completa": el nivel GENERAL. El cambiador muestra
-                su entrada distinguida al frente (solo con >=1 mundo, ruido cero). */}
-            {mundosParaObra.length > 0 && (
-              <CambiadorEspacios
-                activo="idea"
-                mundos={mundosParaObra.map((m) => ({ dominio: m.dominio, nombre: m.nombre }))}
-                onIrIdea={irAIdeaCompleta}
-                onIrCore={irAManos}
-                onIrMundo={irAMundo}
-                onMas={volverAlViaje}
-              />
-            )}
-            <IdeaCompleta
-              projectId={projectId}
-              onIrNucleo={irAManos}
-              onIrMundo={irAMundo}
-              onIrBitacora={irABitacora}
-              onIrDocumentos={irADocumentos}
-            />
-          </>
         ) : (vistaManos || vistaMundo) && planMd && checklist ? (
           <>
             {/* Campaña "Espacios": el cambiador de tabs (ruido cero: solo cuando
@@ -914,7 +861,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
               <CambiadorEspacios
                 activo={vistaMundo && hubDominio ? hubDominio : "core"}
                 mundos={mundosParaObra.map((m) => ({ dominio: m.dominio, nombre: m.nombre }))}
-                onIrIdea={irAIdeaCompleta}
                 onIrCore={irAManos}
                 onIrMundo={irAMundo}
                 onMas={volverAlViaje}
