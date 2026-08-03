@@ -22,6 +22,16 @@ para main + tag de la campaña).
   cómo te fue+secuencia, del mismo armador), Expediente completado por-mundo (acciones
   + cómo te fue), etiqueta de espacio en los documentos.
 
+## 1b. "La idea completa" — el nivel GENERAL sobre los espacios (propuesta)
+
+**Plan/contrato: `docs/PLAN_IDEA_COMPLETA.md`** (propuesta pendiente del visto del
+fundador y del auditor). El núcleo (core) es el corazón, marcado y con registros
+propios, pero cuenta en el total; **encima** aparece un control GENERAL cuando hay
+≥1 mundo (ruido cero) con el **agregado** de toda la idea (total, ritmo, racha y
+timeline unificados) = **suma de la partición exacta, sin doble conteo**. Lo por-etapa
+NO se unifica. Motor `agregadoDeIdea` + pantalla `?vista=idea` + entrada en el
+cambiador. Boceto ya mostrado al fundador. Cero código hasta el visto.
+
 ## 2. Claude Design (encargos)
 
 - **Centro de créditos v4** (alta industria, modelo de consumible): brief y prompt v2
