@@ -550,6 +550,34 @@ describe("analyticsDeMundo — el mundo medido con la vara del core (Fase 4.2)",
   });
 });
 
+describe("Fase 3 (tanda 2): estadísticas por espacio SIN doble conteo contra el global", () => {
+  // El mismo proyecto sembrado: core con 4 acciones hechas (A,B,C,D) + mundo
+  // quality con 3 hechas (Q1,Q2,Q3; Q4 pendiente). Total del proyecto = 7.
+  const global = calcularAnalytics(CON_SUBPROYECTO).universal;
+  const quality = analyticsDeMundo(CON_SUBPROYECTO, "quality")!.universal;
+  const totalHechas = CON_SUBPROYECTO.items.filter((i) => i.completed_at).length; // 4 + 3 = 7
+
+  it("el universal GLOBAL es core-only: NO absorbe las tareas del mundo", () => {
+    expect(global.accionesHechas).toBe(4);
+  });
+
+  it("el universal del MUNDO cuenta solo lo suyo (desde su unlock)", () => {
+    expect(quality.accionesHechas).toBe(3);
+  });
+
+  it("sin doble conteo: core + cada mundo = total, ninguna tarea se cuenta dos veces", () => {
+    expect(totalHechas).toBe(7);
+    // si algo se contara dos veces, la suma pasaría del total
+    expect(global.accionesHechas + quality.accionesHechas).toBe(totalHechas);
+    // partición sin solape: el core es EXACTAMENTE lo que no es del mundo
+    expect(global.accionesHechas).toBe(totalHechas - quality.accionesHechas);
+  });
+
+  it("el 'mundos' del global es un CONTEO, no una suma de las tareas del mundo", () => {
+    expect(global.mundos).toBe(1);
+  });
+});
+
 describe("el cierre de un mundo (Fase 4.2)", () => {
   const CERRADO: EntradaAnalytics = {
     ...CON_SUBPROYECTO,
