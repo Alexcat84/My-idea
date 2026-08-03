@@ -381,6 +381,22 @@ desconocer la razón.
     (texto); la vista scopeada deja de repetirse ("en Calidad" dentro de la bitácora
     de Calidad era ruido), y cualquier lector futuro (filtros, exports, telemetría)
     hereda la pertenencia como campo, no por parsing.
+  - **El NÚCLEO cuenta, y hay un nivel GENERAL encima (frente "La idea completa").**
+    El core es el **núcleo**: el corazón de la idea, **marcado como tal**, con sus
+    **registros propios** (plan, manos, avance, bitácora) — NO una card igual a un
+    mundo. Pero **cuenta dentro del total**. Cuando aparece **≥1 mundo** (RUIDO CERO),
+    surge un **nivel GENERAL** por encima de los espacios — una **entrada distinguida
+    al frente del cambiador** (jamás un tercer riel de navegación): **"La idea
+    completa"**. Ahí vive lo **COMPARTIDO/AGREGADO** de toda la idea: **total, ritmo,
+    racha y timeline UNIFICADOS** = la **suma de la partición exacta, sin doble
+    conteo**. **Lo POR ETAPA jamás se unifica** ("etapa 1" es distinta en cada
+    espacio; sumarla mentiría): se queda en cada hub. Las tres métricas del agregado
+    (total, ritmo, racha) salen del **MISMO universo** (las activas del plan vigente
+    por espacio) para ser **auditables entre sí**; el histórico ya vive en la bitácora
+    y en "frente a tu plan inicial". **Documento:** el general **reusa el Expediente/
+    Análisis global**, no inventa uno nuevo. **Por qué:** hoy el "general" es en
+    realidad el core (juega dos papeles); este nivel lo separa: cada espacio conserva
+    lo suyo, y arriba se lee la idea entera de verdad.
   - **"Tu recorrido" queda reservado** al árbol de conceptos ("Construido con tu
     recorrido"); la línea de hitos se llama **"Tu avance"** para no chocar.
   - **El precio al frente sobre el gratis:** las tarjetas de mundo lideran con su precio

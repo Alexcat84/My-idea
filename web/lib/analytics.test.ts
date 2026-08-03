@@ -17,6 +17,7 @@
 //     D e2 completed 03-25 · base 03-25 · orig 03-20 → dif 0 (a tiempo, replan)
 import { describe, expect, it } from "vitest";
 import {
+  agregadoDeIdea,
   analyticsDeMundo,
   informeMarkdown,
   calcularAnalytics,
@@ -592,6 +593,69 @@ describe("resumenEspacioMd (Fase 3, tanda 5): el 'cómo te fue' compacto de un e
   it("sin cumplimiento (nadie fechó), omite esa línea", () => {
     const md = resumenEspacioMd(m.universal, null).join("\n");
     expect(md).not.toContain("Cumplimiento:");
+  });
+});
+
+describe("agregadoDeIdea — el nivel GENERAL 'La idea completa' (frente post-Fase 3)", () => {
+  it("consistente con los hubs y SIN doble conteo (Σ espacios = total)", () => {
+    const ag = agregadoDeIdea(CON_SUBPROYECTO);
+    const an = calcularAnalytics(CON_SUBPROYECTO);
+    // el núcleo va primero y marcado; sus cifras = las del hub del core
+    const core = ag.espacios[0];
+    expect(core).toMatchObject({ dominio: "core", nucleo: true });
+    expect({ hechas: core.hechas, total: core.total }).toEqual(an.universal.accionesVigente);
+    // cada mundo = su propio analyticsDeMundo
+    const q = ag.espacios.find((e) => e.dominio === "quality")!;
+    expect({ hechas: q.hechas, total: q.total }).toEqual(analyticsDeMundo(CON_SUBPROYECTO, "quality")!.universal.accionesVigente);
+    // sin doble conteo: la suma de los espacios ES el total
+    expect(ag.espacios.reduce((s, e) => s + e.hechas, 0)).toBe(ag.total.hechas);
+    expect(ag.espacios.reduce((s, e) => s + e.total, 0)).toBe(ag.total.total);
+  });
+
+  // La UNIÓN es real: una fecha de un MUNDO extiende una racha que el núcleo solo
+  // no tendría. Fechas (chispa 03-01, ahora 03-31):
+  //   core:  03-01, 03-04, 03-21  -> gaps 3, 17  -> racha del core = 3 días
+  //   mundo: 03-09
+  //   unión: 03-01, 03-04, 03-09, 03-21 -> gaps 3, 5, 12 -> racha = 03-01→03-09 = 8
+  const RACHA_UNION: EntradaAnalytics = {
+    proyectoCreatedAt: iso("2026-03-01"),
+    realizadaAt: null,
+    organizadorAt: iso("2026-03-01"),
+    ahora: iso("2026-03-31"),
+    planesCore: [{ id: "pc", etiqueta: "inicial", created_at: iso("2026-03-01"), baseline_confirmada_at: null }],
+    planesMundo: [{ id: "pm", dominio: "quality", etiqueta: "completo", created_at: iso("2026-03-01"), baseline_confirmada_at: null }],
+    mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-01") }],
+    items: [
+      { plan_id: "pc", etapa: 1, estado: "hecho", destacado: false, texto: "C1", completed_at: iso("2026-03-01"), fecha_base: null, fecha_base_original: null },
+      { plan_id: "pc", etapa: 1, estado: "hecho", destacado: false, texto: "C2", completed_at: iso("2026-03-04"), fecha_base: null, fecha_base_original: null },
+      { plan_id: "pc", etapa: 2, estado: "hecho", destacado: false, texto: "C3", completed_at: iso("2026-03-21"), fecha_base: null, fecha_base_original: null },
+      { plan_id: "pm", dominio: "quality", etapa: 1, estado: "hecho", destacado: false, texto: "Q1", completed_at: iso("2026-03-09"), fecha_base: null, fecha_base_original: null },
+    ],
+  };
+
+  it("la racha unificada UNE los completed_at por espacio: una fecha de mundo extiende la racha del núcleo", () => {
+    const ag = agregadoDeIdea(RACHA_UNION);
+    const soloCore = calcularAnalytics(RACHA_UNION).universal.rachaMasLargaDias;
+    expect(soloCore).toBe(3); // el núcleo solo
+    expect(ag.rachaUnificadaDias).toBe(8); // la unión (la fecha del mundo la extiende)
+    expect(ag.rachaUnificadaDias).toBeGreaterThan(soloCore); // la unión es REAL
+  });
+
+  it("total, ritmo y duración salen del mismo universo (vigente-activo), auditables entre sí", () => {
+    const ag = agregadoDeIdea(RACHA_UNION);
+    expect(ag.total).toEqual({ hechas: 4, total: 4 }); // 3 del núcleo + 1 del mundo
+    expect(ag.duracionTotalDias).toBe(30); // 03-01 → 03-31
+    expect(ag.ritmoUnificado).toBe(0.9); // 4 / (30/7) = 0.933 → 0.9
+    expect(ag.espacios[0]).toMatchObject({ dominio: "core", nucleo: true, hechas: 3, total: 3 });
+    expect(ag.espacios[1]).toMatchObject({ dominio: "quality", nucleo: false, hechas: 1, total: 1 });
+  });
+
+  it("solo-core: el agregado es el núcleo (la pantalla lo gatea con ruido cero, no el motor)", () => {
+    const soloCore: EntradaAnalytics = { ...RACHA_UNION, planesMundo: [], mundos: [], items: RACHA_UNION.items.filter((i) => !i.dominio) };
+    const ag = agregadoDeIdea(soloCore);
+    expect(ag.espacios).toHaveLength(1);
+    expect(ag.espacios[0].nucleo).toBe(true);
+    expect(ag.total).toEqual({ hechas: 3, total: 3 });
   });
 });
 

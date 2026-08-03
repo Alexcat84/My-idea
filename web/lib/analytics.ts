@@ -464,6 +464,67 @@ export function analyticsDeMundo(entrada: EntradaAnalytics, dominio: string): An
 
 const ETIQUETAS_CICLO_PLAN = ["inicial", "completo", "seguimiento"];
 
+/**
+ * El AGREGADO de toda la idea (frente "La idea completa"): el nivel GENERAL por
+ * encima de los espacios. Une lo AGNÓSTICO al espacio — total, ritmo, racha — de
+ * la partición exacta: cada acción vive en un solo espacio, así que la suma NO
+ * dobla conteo. Lo por-etapa JAMÁS se une (colisionaría, ver calcularAnalytics).
+ *
+ * Universo ÚNICO (decisión de gobierno): las tres métricas salen de las acciones
+ * ACTIVAS del plan VIGENTE de cada espacio (mismo universo que el total → son
+ * auditables entre sí). La racha une los `completed_at` respetando esa vigencia
+ * POR ESPACIO: una fecha de un mundo puede EXTENDER una racha que el núcleo solo
+ * no tendría. El núcleo cuenta como un sumando más (aunque la UI lo distinga).
+ */
+export interface AgregadoIdea {
+  duracionTotalDias: number;
+  total: { hechas: number; total: number };
+  ritmoUnificado: number;
+  rachaUnificadaDias: number;
+  espacios: Array<{ dominio: string; nucleo: boolean; hechas: number; total: number; cerrado: boolean }>;
+}
+
+export function agregadoDeIdea(entrada: EntradaAnalytics): AgregadoIdea {
+  const ahora = entrada.ahora ?? new Date().toISOString();
+  const chispa = entrada.proyectoCreatedAt;
+  const fin = entrada.realizadaAt ?? ahora;
+  const duracionTotalDias = Math.max(0, dias(chispa, fin));
+
+  // Vigente-activo de un espacio: los ítems de su plan VIGENTE (el último por
+  // created_at) sin las retiradas (no_aplica). Misma vara que capaUniversalDe.
+  const vigenteActivo = (items: ItemAnalytics[], planes: PlanCoreAnalytics[]): ItemAnalytics[] => {
+    const pv = [...planes].sort((a, b) => a.created_at.localeCompare(b.created_at)).at(-1);
+    return (pv ? items.filter((i) => i.plan_id === pv.id) : []).filter((i) => i.estado !== "no_aplica");
+  };
+
+  const espacios: AgregadoIdea["espacios"] = [];
+  const fechasUnion: string[] = [];
+  const acumular = (dominio: string, nucleo: boolean, items: ItemAnalytics[], planes: PlanCoreAnalytics[], cerrado: boolean) => {
+    const act = vigenteActivo(items, planes);
+    const hechas = act.map((i) => i.completed_at).filter((c): c is string => Boolean(c));
+    espacios.push({ dominio, nucleo, hechas: hechas.length, total: act.length, cerrado });
+    fechasUnion.push(...hechas);
+  };
+
+  // El NÚCLEO (core): cuenta como un espacio más del total.
+  acumular("core", true, entrada.items.filter(esItemCore), entrada.planesCore, Boolean(entrada.realizadaAt));
+  // Cada mundo, con su plan vigente por dominio.
+  for (const m of entrada.mundos) {
+    const items = entrada.items.filter((i) => dominioDe(i) === m.dominio);
+    const planes = (entrada.planesMundo ?? [])
+      .filter((p) => p.dominio === m.dominio && ETIQUETAS_CICLO_PLAN.includes(p.etiqueta))
+      .map(({ id, etiqueta, created_at, baseline_confirmada_at }) => ({ id, etiqueta, created_at, baseline_confirmada_at }));
+    acumular(m.dominio, false, items, planes, Boolean(m.completado_at));
+  }
+
+  const hechas = espacios.reduce((s, e) => s + e.hechas, 0);
+  const total = espacios.reduce((s, e) => s + e.total, 0);
+  const semanas = duracionTotalDias / 7;
+  const ritmoUnificado = Math.round((semanas > 0 ? hechas / semanas : hechas) * 10) / 10;
+
+  return { duracionTotalDias, total: { hechas, total }, ritmoUnificado, rachaUnificadaDias: rachaMasLarga(fechasUnion), espacios };
+}
+
 export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   const ahora = entrada.ahora ?? new Date().toISOString();
   const chispa = entrada.proyectoCreatedAt;
