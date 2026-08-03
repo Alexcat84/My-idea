@@ -62,6 +62,26 @@ function TileCumpl({ valor, sufijo, etiqueta, color }: { valor: string; sufijo: 
 /** Chip numerado que amarra la leyenda con el diagrama (misma cifra arriba y
  * en la barra), para que el texto no parta el Gantt. */
 
+/** Una fila del desglose "Tu proyecto completo" (Fase 3, tanda 4): un nivel
+ * (el viaje o un mundo, o la suma declarada) con su X de N y su %. Cada acción
+ * pertenece a UN solo nivel: el total es la suma, nunca un número mezclado. */
+function NivelFila({ nombre, hechas, total, destacado }: { nombre: string; hechas: number; total: number; destacado?: boolean }) {
+  const pct = total > 0 ? Math.round((hechas / total) * 100) : 0;
+  return (
+    <div
+      className={
+        "flex items-center justify-between gap-3 rounded-[12px] px-3.5 py-2.5 " +
+        (destacado ? "border border-accent/25 bg-accent/[0.06]" : "bg-surface")
+      }
+    >
+      <span className={"min-w-0 flex-1 truncate text-[13.5px] " + (destacado ? "font-bold" : "font-semibold")}>{nombre}</span>
+      <span className="flex-none text-[12.5px] tabular-nums text-dim">
+        {hechas} de {total} · {pct}%
+      </span>
+    </div>
+  );
+}
+
 export function AnalisisProyecto({
   projectId,
   titulos,
@@ -139,6 +159,43 @@ export function AnalisisProyecto({
         {/* La descarga del informe vive en "Tus documentos" (centralizado): aquí
             ya no hay botón propio. */}
       </header>
+
+      {/* Fase 3 (tanda 4): "Tu proyecto completo" — DECLARA la composición (core y
+          N mundos), cada nivel su avance, el del proyecto = la SUMA declarada, sin
+          doble conteo. RUIDO CERO: solo aparece cuando hay mundos. */}
+      {a.mundos.length > 0 &&
+        (() => {
+          const sumHechas = u.accionesVigente.hechas + a.mundos.reduce((s, m) => s + m.universal.accionesVigente.hechas, 0);
+          const sumTotal = u.accionesVigente.total + a.mundos.reduce((s, m) => s + m.universal.accionesVigente.total, 0);
+          return (
+            <section className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">Tu proyecto completo</p>
+              <p className="mt-2 text-[14px] leading-relaxed [text-wrap:pretty]">
+                Tu proyecto completo: <strong>tu viaje</strong> y{" "}
+                <strong>
+                  {a.mundos.length} {a.mundos.length === 1 ? "mundo" : "mundos"}
+                </strong>
+                . Cada nivel avanza por su cuenta; el del proyecto es la <strong>suma</strong> de todos, sin mezclarlos.
+              </p>
+              <div className="mt-4 flex flex-col gap-2">
+                <NivelFila nombre={NOMBRE_DOMINIO.core} hechas={u.accionesVigente.hechas} total={u.accionesVigente.total} />
+                {a.mundos.map((m) => (
+                  <NivelFila
+                    key={m.dominio}
+                    nombre={NOMBRE_DOMINIO[m.dominio] ?? m.dominio}
+                    hechas={m.universal.accionesVigente.hechas}
+                    total={m.universal.accionesVigente.total}
+                  />
+                ))}
+                <NivelFila nombre="Todo el proyecto (suma)" hechas={sumHechas} total={sumTotal} destacado />
+              </div>
+              <p className="mt-3 text-[12px] leading-relaxed text-dim [text-wrap:pretty]">
+                Ninguna acción se cuenta dos veces: cada una pertenece a un solo nivel. El total es la suma declarada, nunca un
+                número mezclado.
+              </p>
+            </section>
+          );
+        })()}
 
       {/* ── El análisis por CAPAS en acordeones: el usuario despliega lo que
           quiera ver. Cada capa es un reporte visual distinto. ── */}
