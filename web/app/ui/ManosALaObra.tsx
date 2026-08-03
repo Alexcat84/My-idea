@@ -30,9 +30,6 @@ import { ESPACIO_CORE, mundosDelEspacio } from "@/lib/espacios";
 import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
 import { LineaAvance } from "./LineaAvance";
-import { EstadisticasEspacio } from "./EstadisticasEspacio";
-import { BitacoraEspacio } from "./BitacoraEspacio";
-import type { Analytics } from "@/lib/analytics";
 import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
@@ -951,20 +948,16 @@ export function ManosALaObra({
   // real por etapa la calcula analytics.ts (§6: la única calculadora del
   // tiempo); aquí solo se deriva la cadencia. /analisis es cero-LLM, cero costo.
   const [cadenciaSemanas, setCadenciaSemanas] = useState(1);
-  // Fase 3 (tanda 2): el MISMO fetch alimenta la cadencia y las estadísticas por
-  // espacio de la cara "Tu avance". Un solo /analisis (cero LLM, cero costo)
-  // devuelve el analytics entero: `universal` (core) + `mundos[]` (cada mundo).
-  const [analytics, setAnalytics] = useState<Analytics | null>(null);
   useEffect(() => {
     let vivo = true;
     (async () => {
       try {
         const res = await fetch(`/api/project/${projectId}/analisis`);
         if (!res.ok) return;
-        const d = (await res.json()) as { analytics?: Analytics };
-        if (!vivo) return;
-        setCadenciaSemanas(cadenciaRealSemanas(d.analytics?.universal?.duracionPorEtapa ?? []));
-        setAnalytics(d.analytics ?? null);
+        const d = (await res.json()) as {
+          analytics?: { universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> } };
+        };
+        if (vivo) setCadenciaSemanas(cadenciaRealSemanas(d.analytics?.universal?.duracionPorEtapa ?? []));
       } catch {
         /* sin datos: se queda la cadencia por defecto (1 semana por etapa) */
       }
@@ -1358,16 +1351,10 @@ export function ManosALaObra({
         {coreEnEspacio && cara === "plan" && planMd && (
           <PlanDocumento md={planMd} nombreIdea={tituloPlan ?? "Tu plan"} />
         )}
-        {coreEnEspacio && cara === "avance" && (
-          <>
-            <LineaAvance hitos={hitosCore} />
-            {/* Fase 3: las estadísticas del core (su capa universal ya calculada
-                en analytics.universal, que ES core-only: sin doble conteo). */}
-            {analytics && <EstadisticasEspacio universal={analytics.universal} titulos={titulosCore} />}
-            {/* Fase 3 (tanda 3): la bitácora del core, filtrada de la fuente única. */}
-            <BitacoraEspacio projectId={projectId} dominio={ESPACIO_CORE} />
-          </>
-        )}
+        {/* "Todo separado" (T2): "Tu avance" = SOLO la línea de hitos del espacio.
+            Las estadísticas y la bitácora salieron de aquí; viven en sus propios
+            accesos por espacio (Análisis / Mi bitácora). */}
+        {coreEnEspacio && cara === "avance" && <LineaAvance hitos={hitosCore} />}
         {(!coreEnEspacio || cara === "manos") && (
           <>
         {/* Fase 3.8 §3 — la elección del modo: primera entrada (modoCamino null)
@@ -1572,6 +1559,9 @@ export function ManosALaObra({
                     )}
                     {cara === "avance" && (
                       <div className="mt-4">
+                        {/* "Todo separado" (T2): "Tu avance" del mundo = SOLO su línea
+                            de hitos. Estadísticas y bitácora del mundo viven en sus
+                            accesos por espacio (Análisis / Mi bitácora), no aquí. */}
                         <LineaAvance
                           hitos={hitosDeEspacio({
                             espacio: "mundo",
@@ -1581,16 +1571,6 @@ export function ManosALaObra({
                             cerradoAt: mundo.completadoAt,
                           })}
                         />
-                        {/* Fase 3: las estadísticas de ESTE mundo, su capa universal
-                            ya calculada por analyticsDeMundo (cuenta desde su unlock,
-                            aparte del core: ninguna métrica se cuenta doble). */}
-                        {(() => {
-                          const am = analytics?.mundos.find((m) => m.dominio === mundo.dominio);
-                          return am ? <EstadisticasEspacio universal={am.universal} titulos={titulosMundo} /> : null;
-                        })()}
-                        {/* Fase 3 (tanda 3): la bitácora de ESTE mundo, filtrada de la
-                            fuente única (jamás una entrada de otro espacio ni las null). */}
-                        <BitacoraEspacio projectId={projectId} dominio={mundo.dominio} />
                       </div>
                     )}
                     {cara === "manos" && (
