@@ -130,13 +130,11 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
   const textoDe = new Map(d.items.map((i) => [i.id, i.texto]));
   const dominioDe = new Map(d.items.map((i) => [i.id, i.dominio]));
   const accion = (id: unknown) => corto(textoDe.get(String(id)) ?? "una actividad");
-  // Sufijo de mundo: si el ítem pertenece a un mundo (no al core), la entrada
-  // dice EN QUÉ mundo pasó. Así el mapa de lecciones distingue cada carril.
-  const sufMundo = (id: unknown) => {
-    const dom = dominioDe.get(String(id));
-    return dom && !esCore(dom) ? ` · en ${d.nombreMundo(dom)}` : "";
-  };
-  const ref = (id: unknown) => `«${accion(id)}»${sufMundo(id)}`;
+  // El espacio del ítem NO va embebido en el texto (Fase 3): viaja como
+  // `dominio` de la entrada, y se muestra como ETIQUETA DE ESPACIO estructural
+  // (etiquetaEspacio) en la global/expediente, con ruido cero. Así la vista de
+  // un mundo no repite "en X" dentro de su propio espacio.
+  const ref = (id: unknown) => `«${accion(id)}»`;
   const cita = (m: unknown) => (typeof m === "string" && m.trim() ? `: «${m.replace(/\s+/g, " ").trim()}»` : ".");
 
   // ── Hitos derivados de timestamps existentes ──────────────────────────────
@@ -180,16 +178,11 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
     }
   }
 
-  // Cada acción marcada HECHA, con su fecha de realización (y el mundo, si aplica).
+  // Cada acción marcada HECHA, con su fecha de realización. El espacio va en el
+  // `dominio` de la entrada (etiqueta estructural), no en el texto.
   for (const it of d.items)
     if (it.completed_at)
-      push(
-        it.completed_at,
-        `Marcaste hecha «${corto(it.texto)}»${esCore(it.dominio) ? "" : ` · en ${d.nombreMundo(it.dominio!)}`}.`,
-        "accion",
-        undefined,
-        esCore(it.dominio) ? "core" : it.dominio,
-      );
+      push(it.completed_at, `Marcaste hecha «${corto(it.texto)}».`, "accion", undefined, esCore(it.dominio) ? "core" : it.dominio);
 
   // ── Eventos registrados (lista blanca) ────────────────────────────────────
   const huboRealizada = d.eventos.some((e) => e.tipo === "realizada" && (e.payload?.accion ?? "realizar") === "realizar");
@@ -290,6 +283,27 @@ export function bitacoraDeEspacio(entradas: EntradaBitacora[], dominio: string):
   return entradas.filter((e) => e.dominio === clave);
 }
 
+/**
+ * ¿El proyecto tiene al menos un mundo? Se lee de las entradas ya etiquetadas:
+ * alguna con dominio de mundo (no core, no null). Base de la regla de RUIDO CERO.
+ */
+export function proyectoTieneMundos(entradas: EntradaBitacora[]): boolean {
+  return entradas.some((e) => e.dominio !== null && !esCore(e.dominio));
+}
+
+/**
+ * La ETIQUETA DE ESPACIO de una entrada, con nombre de CARA (Fase 3), para la
+ * bitácora GLOBAL y el expediente. RUIDO CERO: si el proyecto no tiene mundos,
+ * no etiqueta NADA (todo es el viaje, es obvio) → null. Una entrada NO-DERIVABLE
+ * (dominio null) tampoco se etiqueta: jamás se le inventa un espacio.
+ * Core → "Tu viaje"; un mundo → su nombre de cara.
+ */
+export function etiquetaEspacio(dominio: string | null, hayMundos: boolean, nombreMundo: (d: string) => string): string | null {
+  if (!hayMundos) return null;
+  if (dominio === null) return null;
+  return esCore(dominio) ? "Tu viaje" : nombreMundo(dominio);
+}
+
 function hora(iso: string): string {
   const d = new Date(iso);
   return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
@@ -299,7 +313,11 @@ function hora(iso: string): string {
  * documento suelto y la sección del expediente. La hora solo aparece en los
  * días con 2+ entradas (regla del historial). `nivel` es el de los subtítulos
  * de día (### suelto; #### bajo el ## del expediente). */
-export function bitacoraCuerpo(entradas: EntradaBitacora[], nivel = 3): string[] {
+export function bitacoraCuerpo(
+  entradas: EntradaBitacora[],
+  nivel = 3,
+  etiquetar?: (e: EntradaBitacora) => string | null,
+): string[] {
   const l: string[] = [];
   const almo = "#".repeat(nivel);
   const porDia = new Map<string, number>();
@@ -317,14 +335,24 @@ export function bitacoraCuerpo(entradas: EntradaBitacora[], nivel = 3): string[]
       diaAnterior = dia;
     }
     const conHora = (porDia.get(dia) ?? 0) >= 2;
-    l.push(`- ${conHora ? `**${hora(e.fecha)}** · ` : ""}${e.texto}`);
+    // Etiqueta de espacio (Fase 3): solo cuando el llamador la pide (global/
+    // expediente con mundos); en un documento scopeado no se etiqueta.
+    const etq = etiquetar?.(e);
+    const prefijo = etq ? `**[${etq}]** ` : "";
+    l.push(`- ${conHora ? `**${hora(e.fecha)}** · ` : ""}${prefijo}${e.texto}`);
   }
   return l;
 }
 
 /** El documento markdown de la bitácora: portada + la secuencia. El .md y el
  * PDF salen de aquí (una sola verdad). */
-export function bitacoraMarkdown(nombreIdea: string, entradas: EntradaBitacora[], generadoAt: string, titulo?: string): string {
+export function bitacoraMarkdown(
+  nombreIdea: string,
+  entradas: EntradaBitacora[],
+  generadoAt: string,
+  titulo?: string,
+  etiquetar?: (e: EntradaBitacora) => string | null,
+): string {
   const l: string[] = [];
   // `titulo` sobreescribe el H1 (Fase 3: la bitácora POR ESPACIO se titula
   // "Bitácora de {espacio}"); sin él, el título de siempre.
@@ -338,7 +366,7 @@ export function bitacoraMarkdown(nombreIdea: string, entradas: EntradaBitacora[]
     return l.join("\n");
   }
   l.push(`> Del ${fechaHumanaConAno(entradas[0].fecha)} al ${fechaHumanaConAno(entradas[entradas.length - 1].fecha)}`);
-  l.push(...bitacoraCuerpo(entradas, 3));
+  l.push(...bitacoraCuerpo(entradas, 3, etiquetar));
   l.push("");
   return l.join("\n");
 }

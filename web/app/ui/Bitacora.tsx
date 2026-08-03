@@ -14,8 +14,15 @@
  * el documento del panel.
  */
 import { useEffect, useState } from "react";
-import type { EntradaBitacora } from "@/lib/bitacoraCliente";
+import { etiquetaEspacio, proyectoTieneMundos, type EntradaBitacora } from "@/lib/bitacoraCliente";
+import catalogo from "@/lib/assets/packs_catalog.json";
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
+
+/** dominio (clave) → nombre de cara del mundo; "core" lo resuelve etiquetaEspacio. */
+const NOMBRE_MUNDO: Record<string, string> = Object.fromEntries(
+  (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.map((p) => [p.clave, p.nombre]),
+);
+const nombreMundo = (d: string) => NOMBRE_MUNDO[d] ?? d;
 
 const AZUL = "#4D7CFE";
 const CELESTE = "#8FB3F5";
@@ -106,7 +113,15 @@ function coloreaMotivo(texto: string, color: string) {
  * (Fase 3), que le pasa las entradas ya filtradas con `bitacoraDeEspacio`. La
  * espina dibuja su tramo por fila y termina justo en el centro del último punto.
  */
-export function LineaBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
+export function LineaBitacora({
+  entradas,
+  etiquetar,
+}: {
+  entradas: EntradaBitacora[];
+  /** Fase 3 (tanda 4): la ETIQUETA DE ESPACIO por entrada (nombre de cara), solo
+   * en la vista GLOBAL y con ruido cero. La vista por-espacio no la pasa. */
+  etiquetar?: (e: EntradaBitacora) => string | null;
+}) {
   const filas = aFilas(entradas);
   const cerrada = entradas.some((e) => e.peso === "cierre");
   return (
@@ -161,6 +176,16 @@ export function LineaBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
           >
             {tramo}
             <PuntoEntrada peso={f.entrada.peso} />
+            {(() => {
+              const etq = etiquetar?.(f.entrada);
+              return etq ? (
+                <div className="mb-1">
+                  <span className="inline-flex items-center rounded-full border border-hairline bg-surface-3 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.6px] text-dim">
+                    {etq}
+                  </span>
+                </div>
+              ) : null;
+            })()}
             {f.conHora ? (
               <div className="flex items-baseline gap-3">
                 <span className="flex-none text-[12px] tabular-nums text-dim" style={{ minWidth: 38 }}>
@@ -244,7 +269,12 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
                 tiempo. */}
 
             {/* ── Línea de tiempo completa (componente reutilizable) ─────── */}
-            <LineaBitacora entradas={entradas} />
+            {/* Vista GLOBAL: etiqueta cada entrada con su espacio (nombre de
+                cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada. */}
+            <LineaBitacora
+              entradas={entradas}
+              etiquetar={(e) => etiquetaEspacio(e.dominio, proyectoTieneMundos(entradas), nombreMundo)}
+            />
 
             <p className="mt-9 border-t border-hairline pt-5 text-[12.5px] leading-relaxed text-dim">
               Esta es tu historia tal como quedó registrada, día por día. Nada se reescribe: si moviste una fecha, la

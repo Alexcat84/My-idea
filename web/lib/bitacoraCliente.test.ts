@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { bitacoraDeEspacio, bitacoraMarkdown, construirBitacora, type DatosBitacora } from "./bitacoraCliente";
+import {
+  bitacoraDeEspacio,
+  bitacoraMarkdown,
+  construirBitacora,
+  etiquetaEspacio,
+  proyectoTieneMundos,
+  type DatosBitacora,
+} from "./bitacoraCliente";
 
 const nombreMundo = (d: string) => (d === "quality" ? "Calidad Impecable" : d);
 
@@ -83,14 +90,18 @@ describe("construirBitacora", () => {
     expect(texto).not.toContain("quality");
   });
 
-  it("etiqueta las actividades de un MUNDO con su mundo (mapa de lecciones); las del core no", () => {
-    const texto = construirBitacora(datos()).map((x) => x.texto).join("\n");
-    // hecha y cambio de estado de un ítem de mundo llevan su mundo…
-    expect(texto).toContain("Marcaste hecha «Define tu estándar de calidad» · en Calidad Impecable.");
-    expect(texto).toContain("Empezaste «Define tu estándar de calidad» · en Calidad Impecable.");
-    // …y las del viaje principal NO llevan sufijo de mundo.
-    expect(texto).toContain("Marcaste hecha «Publica el video de tu producto».");
-    expect(texto).toContain("Empezaste «Publica el video de tu producto».");
+  it("las actividades de un MUNDO llevan su dominio (etiqueta estructural), no embebido en el texto", () => {
+    const e = construirBitacora(datos());
+    // El espacio va en `dominio`, NO en el texto (Fase 3): el texto es neutro.
+    const hecha = e.find((x) => x.texto === "Marcaste hecha «Define tu estándar de calidad».")!;
+    expect(hecha.dominio).toBe("quality");
+    const empezada = e.find((x) => x.texto === "Empezaste «Define tu estándar de calidad».")!;
+    expect(empezada.dominio).toBe("quality");
+    // las del viaje principal, en core
+    const coreHecha = e.find((x) => x.texto === "Marcaste hecha «Publica el video de tu producto».")!;
+    expect(coreHecha.dominio).toBe("core");
+    // el texto ya NO embebe el mundo (eso es ahora la etiqueta de espacio)
+    expect(e.map((x) => x.texto).join("\n")).not.toContain(" · en ");
   });
 
   it("deriva la realización de un proyecto viejo sin evento en bitácora", () => {
@@ -196,6 +207,48 @@ describe("bitacoraDeEspacio (Fase 3): partición exacta, sin inventar pertenenci
     for (const dom of ["core", "quality", "health_safety"]) {
       expect(bitacoraDeEspacio(e, dom).some((x) => x.dominio === null)).toBe(false);
     }
+  });
+});
+
+describe("etiquetas de espacio + ruido cero (Fase 3, tanda 4)", () => {
+  const nm = (d: string) => (d === "quality" ? "Calidad Impecable" : d);
+  const soloCore = (): DatosBitacora =>
+    datos({
+      planes: [{ etiqueta: "completo", created_at: "2026-01-05T10:00:00Z", dominio: "core", baseline_confirmada_at: null }],
+      items: [{ id: "a1", texto: "Algo del core", completed_at: "2026-01-10T15:00:00Z", dominio: "core" }],
+      eventos: [],
+    });
+
+  it("CON mundos: core → 'Tu viaje', un mundo → su nombre de cara; una no-derivable no se etiqueta", () => {
+    expect(etiquetaEspacio("core", true, nm)).toBe("Tu viaje");
+    expect(etiquetaEspacio("quality", true, nm)).toBe("Calidad Impecable");
+    expect(etiquetaEspacio(null, true, nm)).toBeNull();
+  });
+
+  it("RUIDO CERO: sin mundos, no etiqueta NADA (ni el core)", () => {
+    expect(etiquetaEspacio("core", false, nm)).toBeNull();
+    expect(etiquetaEspacio("quality", false, nm)).toBeNull();
+    expect(etiquetaEspacio(null, false, nm)).toBeNull();
+  });
+
+  it("proyectoTieneMundos: true con un mundo, false solo-core (no cuenta core ni null)", () => {
+    expect(proyectoTieneMundos(construirBitacora(datos()))).toBe(true);
+    expect(proyectoTieneMundos(construirBitacora(soloCore()))).toBe(false);
+  });
+
+  it("el .md etiqueta CON mundos y NO etiqueta solo-core (ambos sentidos)", () => {
+    const conMundo = construirBitacora(datos());
+    const md = bitacoraMarkdown("Idea", conMundo, "2026-02-01T10:00:00Z", undefined, (e) =>
+      etiquetaEspacio(e.dominio, proyectoTieneMundos(conMundo), nm),
+    );
+    expect(md).toContain("**[Tu viaje]**");
+    expect(md).toContain("**[Calidad Impecable]**");
+
+    const core = construirBitacora(soloCore());
+    const mdCore = bitacoraMarkdown("Idea", core, "2026-02-01T10:00:00Z", undefined, (e) =>
+      etiquetaEspacio(e.dominio, proyectoTieneMundos(core), nm),
+    );
+    expect(mdCore).not.toContain("**[");
   });
 });
 

@@ -16,7 +16,7 @@ import { calcularAnalytics, informeMarkdown } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
-import { bitacoraCuerpo, bitacoraMarkdown } from "@/lib/bitacoraCliente";
+import { bitacoraCuerpo, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
 import { obtenerProyecto } from "@/lib/db";
 import {
@@ -106,11 +106,16 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if (doc === CLAVE_BITACORA) {
     const generado = new Date().toISOString();
     const entradas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+    // Fase 3 (tanda 4): la bitácora GLOBAL etiqueta cada entrada con su espacio
+    // (nombre de cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada.
+    const hayMundos = proyectoTieneMundos(entradas);
     return NextResponse.json({
       titulo: "Tu bitácora",
       nombre,
       archivo: nombreArchivo(nombre, "Tu bitacora"),
-      markdown: bitacoraMarkdown(nombre, entradas, generado),
+      markdown: bitacoraMarkdown(nombre, entradas, generado, undefined, (e) =>
+        etiquetaEspacio(e.dominio, hayMundos, nombreMundo),
+      ),
       // El PDF de la bitácora se dibuja estructurado (espina continua), no como
       // markdown; el .md sigue saliendo del mismo texto de arriba.
       papel: { entradas },
@@ -290,7 +295,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const markdown = expedienteMarkdown({
     ...baseDoc,
     informeMd,
-    bitacoraMd: bitacoraCuerpo(entradasBita, 3).join("\n"),
+    // Fase 3 (tanda 4): la secuencia del expediente etiqueta cada entrada con su
+    // espacio (nombre de cara), con RUIDO CERO (solo-core no etiqueta nada).
+    bitacoraMd: bitacoraCuerpo(entradasBita, 3, (e) =>
+      etiquetaEspacio(e.dominio, proyectoTieneMundos(entradasBita), nombreMundo),
+    ).join("\n"),
   });
 
   // PDF: el CUERPO va como markdown (sin informe ni secuencia), y el resumen
