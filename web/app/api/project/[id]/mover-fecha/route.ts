@@ -120,6 +120,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   await registrarBitacora(supabase, projectId, "fecha_movida", {
     item: objetivo.id,
+    dominio: objetivo.dominio ?? null, // Fase 3: el evento viaja con su espacio
     delta_dias: Math.round(deltaMs / 86_400_000),
     cascada: datos.cascada ? posteriores.length : "solo",
   });
