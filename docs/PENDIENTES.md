@@ -22,23 +22,28 @@ para main + tag de la campaña).
   cómo te fue+secuencia, del mismo armador), Expediente completado por-mundo (acciones
   + cómo te fue), etiqueta de espacio en los documentos.
 
-## 1b. "La idea completa" — el nivel GENERAL sobre los espacios (EN STAGING)
+## 1b. "La idea completa" (nivel general) — ANULADA por "Todo separado"
 
-**Plan/contrato: `docs/PLAN_IDEA_COMPLETA.md`** (APROBADO, 4 decisiones cerradas). El
-núcleo es el corazón (marcado, con registros propios) pero cuenta en el total; **encima**
-un control GENERAL aparece con ≥1 mundo (ruido cero) con el **agregado** unificado
-(total, ritmo, racha) = **suma de la partición exacta, sin doble conteo**; lo por-etapa
-jamás se unifica; timeline y documento reusan la bitácora y el Expediente globales.
+El frente "La idea completa" (tag `web-v2.1.0-beta`) fue **anulado** por el veredicto
+"todo separado": muere el nivel general (no hay análisis ni medida global; la única vista
+global es el Expediente). Se elimina en la tanda 1 de la restructuración. (El plan
+`docs/PLAN_IDEA_COMPLETA.md` queda como archivo histórico.)
 
-- **T0 — gobierno** ✓: enmienda BANCO §7.1.
-- **T1 — motor** ✓: `agregadoDeIdea` (puro), universo vigente-activo, racha unificada
-  respetando vigencia por espacio; tests a mano (no doble conteo + una fecha de mundo
-  EXTIENDE la racha del núcleo: 8 > 3).
-- **T2 — pantalla + control** ✓: `IdeaCompleta.tsx` (`?vista=idea`), entrada distinguida
-  "La idea completa" al frente del cambiador (nunca un tercer riel), navegación coherente.
-- Tandas en **staging**, pendientes del visto para main + tag. Gate ampliado con el nivel
-  general + ruido cero en ambos sentidos (proyecto solo-core sembrado aparte). **No
-  corrido en vivo** (lo corre el fundador/auditor).
+## 1c. Restructuración "TODO SEPARADO" (APROBADA, EN CURSO)
+
+**Plan/contrato: `docs/PLAN_TODO_SEPARADO.md`** (aprobado por fundador y auditor, 6
+decisiones cerradas). Cada espacio se mide/registra/documenta solo; el mundo es espejo
+TOTAL del core (su análisis con Gantt, su calendario, su modo de fechas y línea base);
+única vista global = Expediente. 8 tandas (T0 gobierno · T1 eliminar nivel general · T2
+"Tu avance"→hitos · **T3 paridad de fechas por mundo, con migración `project_modos`** · T4
+vistas scopeables · T5 seis accesos/acciones uniformes · T6 calendario etiquetado · T7
+documentos en dos recuadros · cierre). Tag propuesto `web-v2.2.0-beta`.
+
+- **Migración T3** (`project_modos`): la aplica el fundador; se le entrega el SQL y se
+  espera su "aplicada" antes del vuelo de esa tanda.
+- **B5 bendecido:** cada espacio sella SU baseline en SU ritual; el core deja de arrastrar
+  los mundos (con dual-read de transición del modo del core).
+- **Golden test obligatorio** antes de extraer `capaCumplimientoDe` de `calcularAnalytics`.
 
 ## 2. Claude Design (encargos)
 
@@ -47,14 +52,19 @@ jamás se unifica; timeline y documento reusan la bitácora y el Expediente glob
   Esperando opciones de CD.
 - **Espacios + La idea completa (encargo ACUMULADO, front funcional ya en su sitio):**
   `docs/calibracion-design/BRIEF_ESPACIOS.md` listo (dos niveles de navegación
-  explícitos). Calibración visual de CD sobre TODAS las superficies del frente:
+  explícitos). Calibración visual de CD sobre las superficies del frente **tras "todo
+  separado"** (el nivel general SE ELIMINA del encargo):
   - hub + **cambiador** de espacios (pestañas-fichero, la activa levantada);
-  - las **3 caras** (Plan · Manos a la obra · Tu avance), con estadísticas y bitácora
-    por espacio dentro de "Tu avance";
-  - el **nivel GENERAL "La idea completa"** con su **entrada distinguida** al frente del
-    cambiador, la banda "Lo general", el núcleo distinguido y las tarjetas de mundo;
-  - las **varas previas**: chips de etiqueta en la bitácora global, el desglose "Tu
-    proyecto completo" del Análisis, y las fichas de Reporte por mundo en Documentos.
+  - las **3 caras** (Plan · Manos a la obra · **Tu avance = solo la línea de hitos**);
+  - **las seis tarjetas hermanas** por espacio (Mi bitácora · Tu calendario · Análisis ·
+    Tus documentos · Marcar realizada/Cerrar · Contar qué pasó), mismo formato de tarjeta;
+  - el **Análisis por mundo** (con su Gantt) y el **modo de fechas/ritual en el hub del
+    mundo** (paridad total);
+  - el **calendario etiquetado** (`[Espacio]` en cada actividad) y los **documentos en dos
+    recuadros** (Global + del espacio);
+  - las **varas previas** que quedan: chips de etiqueta en la bitácora global y las fichas
+    de Reporte por mundo. (Muere del encargo: la banda "Lo general" y el desglose "Tu
+    proyecto completo".)
 - **PDF Expediente · interiores (DIFERIDO post-beta):** el diseño YA existe
   (`_entrega-claude-design/Entrega-desing 20260729/entrega2/pdf-expediente-interiores/`:
   Tus Números, un mundo, "Cómo te fue", "La secuencia de tu viaje"). **Cuando sea el

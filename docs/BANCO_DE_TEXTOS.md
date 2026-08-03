@@ -357,21 +357,22 @@ desconocer la razón.
   con operación propia, y se navega como **pestañas-fichero** (folders con icono +
   nombre). Dentro de cada espacio, un **selector segmentado** (píldora) separa tres
   CARAS y se ve **una a la vez**: **Plan** · **Manos a la obra** · **Tu avance**.
-  - **Regla global/específico:** *"lo que cuenta historia es global; lo que mide
-    operación es del espacio."* La lectura COMPLETA del viaje (Análisis del proyecto,
-    Mi bitácora, el Expediente y la Celebración grande) es del proyecto; cada espacio
-    muestra su PROPIA lectura filtrada de esa misma fuente. **Una fuente, muchas
-    lecturas: jamás registros paralelos.** El plan y las tareas son de cada espacio.
-  - **"Tu avance"** es **todo el progreso del espacio**: sus **hitos**, sus
-    **estadísticas** y su **bitácora** (de datos persistidos, filtrados a ese espacio).
-    Las **métricas del PROYECTO GLOBAL** (core + N mundos, sin doble conteo) viven en
-    **Análisis del proyecto**, no aquí. El core arranca en La Chispa → Claridad → Tu
-    Plan; un mundo en su Diagnóstico → su Plan.
-    **Enmienda (Fase 3 de Espacios, ago 2026):** "Tu avance" evolucionó de "hitos
-    reales, no estadística" a "todo el progreso del espacio (hitos + estadísticas +
-    bitácora)". **Por qué:** la Opción A de la Fase 3 mete las estadísticas y la
-    bitácora por-espacio DENTRO de "Tu avance" en vez de abrir una 4ª cara; el banco
-    no contradice la pantalla.
+  - **Regla "TODO SEPARADO" (veredicto del fundador, ago 2026 — anula la Opción A de la
+    Fase 3):** **cada espacio se mide, registra y documenta SOLO**, con sus indicadores;
+    **cero mezcla de medidas**. El proyecto principal ("Tu viaje") es el centro; los
+    mundos son su **espejo TOTAL** (misma estructura y comportamiento, scopeado). **NO
+    existe nivel ni análisis global**; la **ÚNICA vista global es el Expediente completo**.
+    El plan, las tareas, el análisis, la bitácora, el calendario y las acciones son de
+    cada espacio. (Antes: *"lo que cuenta historia es global"* — revertido: hasta la
+    bitácora y el análisis se leen por espacio; lo global es solo el Expediente.)
+  - **"Tu avance"** es **SOLO la línea de hitos del espacio, nada más** (única y propia:
+    los hitos del core no son estándar para los mundos). El core arranca en La Chispa →
+    Claridad → Tu Plan; un mundo en su Diagnóstico → su Plan.
+    **Historia de la enmienda (ida y vuelta):** la Fase 3 (Opción A) cargó "Tu avance"
+    con estadísticas y bitácora; **"todo separado" lo REVIERTE** a solo hitos. Las
+    estadísticas y la bitácora del espacio pasan a **sus propios accesos por espacio**
+    (Análisis de {espacio}, Mi bitácora de {espacio}), estandarizados. La lección: no
+    meter dos lecturas en una cara — cada lectura, su acceso.
   - **La PERTENENCIA es un dato, no una frase (Fase 3, tanda 4).** El espacio de
     una entrada de bitácora **NO se embebe en el texto** (murió el sufijo " · en
     {mundo}"): viaja como **campo `dominio`** de la entrada y se muestra como
@@ -381,22 +382,30 @@ desconocer la razón.
     (texto); la vista scopeada deja de repetirse ("en Calidad" dentro de la bitácora
     de Calidad era ruido), y cualquier lector futuro (filtros, exports, telemetría)
     hereda la pertenencia como campo, no por parsing.
-  - **El NÚCLEO cuenta, y hay un nivel GENERAL encima (frente "La idea completa").**
-    El core es el **núcleo**: el corazón de la idea, **marcado como tal**, con sus
-    **registros propios** (plan, manos, avance, bitácora) — NO una card igual a un
-    mundo. Pero **cuenta dentro del total**. Cuando aparece **≥1 mundo** (RUIDO CERO),
-    surge un **nivel GENERAL** por encima de los espacios — una **entrada distinguida
-    al frente del cambiador** (jamás un tercer riel de navegación): **"La idea
-    completa"**. Ahí vive lo **COMPARTIDO/AGREGADO** de toda la idea: **total, ritmo,
-    racha y timeline UNIFICADOS** = la **suma de la partición exacta, sin doble
-    conteo**. **Lo POR ETAPA jamás se unifica** ("etapa 1" es distinta en cada
-    espacio; sumarla mentiría): se queda en cada hub. Las tres métricas del agregado
-    (total, ritmo, racha) salen del **MISMO universo** (las activas del plan vigente
-    por espacio) para ser **auditables entre sí**; el histórico ya vive en la bitácora
-    y en "frente a tu plan inicial". **Documento:** el general **reusa el Expediente/
-    Análisis global**, no inventa uno nuevo. **Por qué:** hoy el "general" es en
-    realidad el core (juega dos papeles); este nivel lo separa: cada espacio conserva
-    lo suyo, y arriba se lee la idea entera de verdad.
+  - **NO hay nivel general; PARIDAD TOTAL por espacio (ago 2026).** **Murió el frente
+    "La idea completa"** (el nivel agregado sobre los espacios, tag v2.1.0): no existe
+    análisis ni medida global. Cada mundo es **espejo del core**: su **Análisis completo**
+    (misma vara, su Gantt, su cumplimiento), su **calendario**, y **su modo de fechas y su
+    línea base** — donde la infraestructura no existía por mundo, **SE EXTIENDE** (cada
+    espacio corre SU ritual y sella SU baseline; el core deja de arrastrar los mundos). Lo
+    que el core tiene, el mundo lo tiene, scopeado. **Nunca se aligera la vista del mundo.**
+  - **Los SEIS accesos/acciones, seis tarjetas hermanas por espacio.** En CADA espacio,
+    con el **mismo formato de tarjeta** (icono + título + descripción + botón): **Mi
+    bitácora · Tu calendario · Análisis · Tus documentos · (Marcar realizada / Cerrar el
+    mundo) · (Contar qué pasó)**, etiquetados con el nombre de cara. La tarjeta es la
+    entrada; el flujo (confirmación/ritual) se abre al pulsar. El seguimiento de un mundo
+    recalcula **solo ese mundo** ("…lo recalculo desde donde estás"), **jamás "todo"**.
+  - **Calendario etiquetado por espacio.** Un solo calendario personal por usuario que
+    **crece con los mundos**; cada actividad lleva **VISIBLE la etiqueta de su espacio**
+    en el título (`[Calidad y Confianza] …`), para distinguir de un vistazo a qué espacio
+    pertenece. El `UID` por ítem no cambia (el Nivel 1 de Google Calendar sigue sano).
+  - **Documentos: dos recuadros.** "Reportes globales" (el Expediente, etiquetado
+    **Global**, presente en todos los espacios) y "Reportes de {espacio}" (plan,
+    seguimientos, bitácora y análisis del espacio actual). El Expediente es el único doc
+    global; su orden: principal completo → cada mundo → la secuencia global de cierre.
+  - **Por qué (fundador):** gobernanza separada por espacio, cero mezcla de medidas. Un
+    análisis que suma core y mundos confunde; cada frente se dirige con SUS números. La
+    única lectura de la idea entera es el Expediente, y su broche es la secuencia global.
   - **"Tu recorrido" queda reservado** al árbol de conceptos ("Construido con tu
     recorrido"); la línea de hitos se llama **"Tu avance"** para no chocar.
   - **El precio al frente sobre el gratis:** las tarjetas de mundo lideran con su precio
