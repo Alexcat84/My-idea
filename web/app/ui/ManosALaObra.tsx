@@ -31,7 +31,7 @@ import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
 import { LineaAvance } from "./LineaAvance";
 import { loginConNext } from "@/lib/nextSeguro";
-import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "@/lib/fechasBase";
+import { cadenciaRealSemanas, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 
 export interface ItemChecklistUI {
@@ -288,11 +288,14 @@ function IconoCiclos() {
 function FilaItem({
   item,
   ocupado,
+  modo,
   onCambio,
   onAbrirDetalle,
 }: {
   item: ItemChecklistUI;
   ocupado: boolean;
+  /** el modo del espacio: decide si la chapa "esta semana" es de fecha o de bit. */
+  modo: ModoCamino | null;
   onCambio: (cambio: CambioItem) => void;
   /** Fase 4.3.2: tocar el texto abre "Explorar actividad" (el detalle). */
   onAbrirDetalle: () => void;
@@ -362,9 +365,10 @@ function FilaItem({
           {!hecho && !retirada && item.estado !== "pendiente" && (
             <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
           )}
-          {!hecho && !retirada && item.destacado && (
-            // "esta semana": chapa de BORDE verde (no fondo lleno), como fija
-            // Design — una chapa, no una etiqueta de texto suelta.
+          {!hecho && !retirada && chapaEstaSemana(modo, item) && (
+            // "esta semana": chapa HONESTA (adjudicación ago 2026). En modo fechas
+            // solo si la fecha vigente cae en la semana actual; en a-mi-ritmo,
+            // atada a `destacado`. Borde verde (no fondo lleno), como fija Design.
             <span className="mt-1 inline-block rounded-full border border-done/30 px-2.5 py-0.5 text-[11.5px] font-semibold text-done">
               esta semana
             </span>
@@ -418,12 +422,16 @@ function GrupoEtapas({
   grupo,
   titulos,
   ocupado,
+  modo,
   onCambio,
   onAbrirDetalle,
 }: {
   grupo: NonNullable<ReturnType<typeof grupoVigente>>;
   titulos: Record<number, string>;
   ocupado: boolean;
+  /** el modo del ESPACIO: en 'fechas' la fila lee por fecha vigente y la chapa
+   * "esta semana" es honesta; en 'ritmo'/null, orden del plan + chapa=destacado. */
+  modo: ModoCamino | null;
   onCambio: (item: ItemChecklistUI, cambio: CambioItem) => void;
   /** Fase 4.3.2: abrir el detalle de un ítem, con el título de SU etapa. */
   onAbrirDetalle: (item: ItemChecklistUI, tituloEtapa: string) => void;
@@ -452,8 +460,12 @@ function GrupoEtapas({
         return (
           <Acordeon key={etapa} titulo={encabezado} abierto={false} extra={conteoEtapa} variante="etapa">
             <div className="flex flex-col gap-2.5">
-              {items.map((item) => (
-                <FilaItem key={item.id} item={item} ocupado={ocupado} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
+              {/* Orden (adjudicación ago 2026): en modo FECHAS, por fecha vigente
+                  asc (la destacada del lunes sube al frente); en a-mi-ritmo, el
+                  orden del plan intacto. La fecha (el viernes compartido) NO se
+                  toca: solo el orden de lectura. */}
+              {(modo === "fechas" ? ordenarEnFechas(items) : items).map((item) => (
+                <FilaItem key={item.id} item={item} ocupado={ocupado} modo={modo} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
               ))}
             </div>
           </Acordeon>
@@ -1636,7 +1648,7 @@ export function ManosALaObra({
           </p>
         )}
         {core ? (
-          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+          <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} modo={modoCamino} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
         ) : (
           <p className="text-sm text-dim">
             Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.
@@ -1795,7 +1807,7 @@ export function ManosALaObra({
                           onRecalcular={() => setRecalcularPendientes(true)}
                           onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre, mundo.nombre)}
                         />
-                        <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+                        <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} modo={modoMundo} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                         {/* "Todo separado" (T5, D6): los CUATRO accesos scopeados
                             del espacio, en el orden del aside del núcleo, como
                             TARJETAS HERMANAS (misma forma, tarjeta entera). Sus dos
@@ -1850,7 +1862,7 @@ export function ManosALaObra({
                         <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
                       </Acordeon>
                     )}
-                    <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+                    <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} modo={modoMundo} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                   </div>
                 )
               ) : mundo.resumenMd && !mundo.plan ? (

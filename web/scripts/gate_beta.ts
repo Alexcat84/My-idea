@@ -122,7 +122,7 @@ async function main() {
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 2, texto: "Anota por qué no volvió." },
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 2, orden: 1, texto: "Cambia una cosa del proceso." },
     // Un pendiente con fecha FUTURA: le da al calendario del mundo "lo que viene".
-    { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 2, orden: 2, texto: "Revisa los resultados en un mes." },
+    { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 2, orden: 2, texto: "Revisa los resultados en un mes.", destacado: true },
   ]);
 
   const browser = await chromium.launch();
@@ -173,6 +173,50 @@ async function main() {
       .from("project_modos")
       .upsert({ project_id: pid, dominio: "quality", modo_camino: "fechas" }, { onConflict: "project_id,dominio" });
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=manos`, "Manos a la obra", "espacios_hub_mundo_ritual");
+
+    // Sugeridor de fechas (adjudicación ago 2026): el CHECKLIST en modo fechas
+    // con la CHAPA "esta semana" HONESTA y el ORDEN por fecha vigente. Se fechan
+    // los 4 items (pendientes) para exhibir ambos arreglos, con los acordeones de
+    // etapa ABIERTOS (van colapsados por defecto):
+    //   etapa 1: destacada = LUNES de ESTA semana (chapa + primera por fecha);
+    //            regular  = VIERNES de esta semana (sin chapa).
+    //   etapa 2: destacada = LUNES de la semana QUE VIENE (SIN chapa aunque sea
+    //            destacada: la fecha manda -> el arreglo del choque) + primera;
+    //            regular  = VIERNES de la semana que viene.
+    console.log("[Sugeridor (ago 2026): checklist en modo fechas -- chapa honesta + orden por fecha]");
+    const ahoraChk = new Date();
+    const lunesBase = new Date(ahoraChk);
+    lunesBase.setDate(ahoraChk.getDate() - ((ahoraChk.getDay() + 6) % 7)); // lunes de esta semana
+    const diaSem = (semanas: number, weekday: number) => {
+      const d = new Date(lunesBase);
+      d.setDate(lunesBase.getDate() + semanas * 7 + weekday); // weekday: 0=lun..4=vie
+      d.setHours(12, 0, 0, 0);
+      return d.toISOString();
+    };
+    const { data: itsChk } = await admin
+      .from("checklist_items")
+      .select("id")
+      .eq("project_id", pid)
+      .eq("dominio", "quality")
+      .order("etapa")
+      .order("orden");
+    const fechasChk = [diaSem(0, 0), diaSem(0, 4), diaSem(1, 4), diaSem(1, 0)]; // e1-dest, e1-reg, e2-reg, e2-dest
+    for (const [k, r] of ((itsChk ?? []) as Array<{ id: string }>).slice(0, 4).entries()) {
+      await admin.from("checklist_items").update({ fecha_base: fechasChk[k] }).eq("id", r.id);
+    }
+    await app.setViewportSize(VP_ESCRITORIO);
+    await app.goto(`${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=manos`);
+    await app.waitForSelector("text=Manos a la obra", { timeout: 30000 });
+    await app.evaluate(() => document.querySelectorAll("details").forEach((d) => (d.open = true)));
+    await app.waitForTimeout(800);
+    await app.screenshot({ path: path.join(OUT, "espacios_hub_checklist_fechas_app.png"), fullPage: true });
+    console.log("  espacios_hub_checklist_fechas_app.png");
+    await app.setViewportSize(VP_MOVIL);
+    await app.evaluate(() => document.querySelectorAll("details").forEach((d) => (d.open = true)));
+    await app.waitForTimeout(600);
+    await app.screenshot({ path: path.join(OUT, "espacios_hub_checklist_fechas_app_380.png"), fullPage: true });
+    console.log("  espacios_hub_checklist_fechas_app_380.png");
+    await app.setViewportSize(VP_ESCRITORIO);
 
     // "Todo separado" (T4, pair B): AHORA el mundo SELLA su baseline y completa
     // sus items con fechas conocidas -> su Analisis scopeado (?dominio=quality)
@@ -245,7 +289,7 @@ async function main() {
     await admin.from("projects").delete().eq("id", pid);
   }
   console.log(
-    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], los CUATRO accesos scopeados del mundo [T4: analisis con su Gantt sellado, bitacora, calendario, documentos], calendario GLOBAL etiquetado por espacio [T6], panel de documentos en DOS recuadros -Global + del espacio- en mundo y en nucleo [T7], bitacora global con etiquetas, analisis nucleo) capturados (2 viewports).",
+    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], checklist en modo fechas con chapa 'esta semana' honesta + orden por fecha [sugeridor ago 2026], los CUATRO accesos scopeados del mundo [T4: analisis con su Gantt sellado, bitacora, calendario, documentos], calendario GLOBAL etiquetado por espacio [T6], panel de documentos en DOS recuadros -Global + del espacio- en mundo y en nucleo [T7], bitacora global con etiquetas, analisis nucleo) capturados (2 viewports).",
   );
 }
 

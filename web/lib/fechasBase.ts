@@ -14,7 +14,7 @@
  * corrimiento de zona horaria. La persistencia (ISO mediodía local) la hace
  * isoDesdeInputLocal(); la lectura humana, fechaHumana().
  */
-import { fechaInputLocal } from "./fechas";
+import { esEstaSemana, fechaInputLocal } from "./fechas";
 
 const VIERNES = 5; // fin de la semana laboral
 const LUNES = 1; // inicio de la semana
@@ -73,6 +73,45 @@ export function cadenciaRealSemanas(duracionPorEtapa: Array<{ etapa: number; dia
   if (dias.length === 0) return 1;
   const media = dias.reduce((a, b) => a + b, 0) / dias.length;
   return Math.min(6, Math.max(1, Math.round(media / 7)));
+}
+
+/**
+ * La chapa "esta semana", HONESTA (adjudicación fundador+auditor, ago 2026).
+ *   - En modo FECHAS: aparece SOLO si la fecha vigente del ítem cae en la
+ *     semana ISO actual (no en el bit `destacado`). Así, la destacada de una
+ *     etapa FUTURA (fecha la semana que viene) NO la lleva: el rótulo deja de
+ *     mentir sobre el calendario.
+ *   - En modo A-MI-RITMO (o sin modo): se conserva atada a `destacado` — sin
+ *     fechas, es la señal de arranque de la etapa, no un claim de calendario.
+ * El gate !hecho/!retirada lo pone el llamador (la fila).
+ */
+export function chapaEstaSemana(
+  modo: "ritmo" | "fechas" | null | undefined,
+  item: { destacado: boolean; fecha_base?: string | null },
+  ahora?: Date
+): boolean {
+  return modo === "fechas" ? esEstaSemana(item.fecha_base, ahora) : item.destacado;
+}
+
+/**
+ * El ORDEN de lectura de los ítems de UNA etapa en modo FECHAS (adjudicación
+ * ago 2026): por FECHA VIGENTE ascendente, con desempate ESTABLE por el orden
+ * del plan (el sort estable de ES2019 conserva el orden de entrada ante fechas
+ * iguales). Así la destacada del lunes sube al frente ("empieza por esta") y los
+ * movimientos manuales de fecha del usuario también reordenan. Los sin-fecha van
+ * al final. NO cambia la fecha (el viernes compartido de la etapa se respeta):
+ * solo el orden en que se leen. En a-mi-ritmo el llamador NO ordena (deja el
+ * orden del plan intacto).
+ */
+export function ordenarEnFechas<T extends { fecha_base?: string | null }>(items: T[]): T[] {
+  return [...items].sort((a, b) => {
+    const fa = a.fecha_base ?? null;
+    const fb = b.fecha_base ?? null;
+    if (fa && fb) return fa < fb ? -1 : fa > fb ? 1 : 0;
+    if (fa) return -1;
+    if (fb) return 1;
+    return 0;
+  });
 }
 
 /** Sugiere una fecha de calendario para cada ítem (determinístico). */

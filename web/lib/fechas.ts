@@ -116,6 +116,23 @@ export function fechaHumanaConAno(iso: string): string {
   return `${d.getDate()} de ${MESES[d.getMonth()]} de ${d.getFullYear()}`;
 }
 
+/**
+ * ¿La fecha cae en la MISMA semana ISO (lunes–domingo) que `ahora`? Local
+ * (getDay/getDate): la semana del calendario del usuario, no una ventana UTC.
+ * Vacío/inválido → false. `ahora` inyectable para tests deterministas. La usa la
+ * chapa "esta semana" honesta del modo fechas (§4).
+ */
+export function esEstaSemana(fechaIso: string | null | undefined, ahora: Date = new Date()): boolean {
+  if (!fechaIso) return false;
+  const f = new Date(fechaIso);
+  if (Number.isNaN(f.getTime())) return false;
+  const lunesDe = (d: Date) => {
+    const desdeLunes = (d.getDay() + 6) % 7; // 0=lunes .. 6=domingo
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate() - desdeLunes).getTime();
+  };
+  return lunesDe(f) === lunesDe(ahora);
+}
+
 /** yyyy-mm-dd LOCAL para el value/max de un <input type="date">. */
 export function fechaInputLocal(d: Date): string {
   const y = d.getFullYear();
