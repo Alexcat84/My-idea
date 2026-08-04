@@ -156,10 +156,17 @@ export function Descargas({
   projectId,
   nombreIdea,
   onVolver,
+  dominio,
+  nombreEspacio,
 }: {
   projectId: string;
   nombreIdea: string;
   onVolver: () => void;
+  /** "Todo separado" (T4): scopeado a un mundo → solo SUS documentos (los que
+   * llevan su etiqueta de espacio). Los DOS recuadros (global + espacio) son T7;
+   * aquí el acceso abre el panel ya filtrado a su espacio. */
+  dominio?: string;
+  nombreEspacio?: string;
 }) {
   const [documentos, setDocumentos] = useState<DocumentoIndice[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -210,6 +217,10 @@ export function Descargas({
     [projectId]
   );
 
+  // "Todo separado" (T4): scopeado, solo los documentos de ESE espacio (los que
+  // llevan su etiqueta). Los del viaje principal / globales no llevan `espacio`.
+  const docsVista = dominio ? (documentos ?? []).filter((d) => d.espacio === nombreEspacio) : documentos;
+
   return (
     <section className="mx-auto w-full max-w-[720px]">
       <button onClick={onVolver} className="mb-5 text-sm text-dim hover:text-ink" data-no-print>
@@ -218,25 +229,28 @@ export function Descargas({
 
       <div data-no-print>
         <h2 className="text-[24px] font-bold leading-tight tracking-[-0.02em] [text-wrap:balance] sm:text-[28px]">
-          Tus documentos
+          {dominio ? `Documentos de ${nombreEspacio ?? "este mundo"}` : "Tus documentos"}
         </h2>
         <p className="mt-2.5 max-w-[560px] text-[14.5px] leading-[1.65] text-dim [text-wrap:pretty]">
-          Cada fase de tu camino deja su propio documento. Llévatelos en .md para editarlos o en PDF para leerlos e
-          imprimirlos.
+          {dominio
+            ? "Los documentos de este mundo: su reporte y lo que deje cada fase de su camino, en .md o en PDF."
+            : "Cada fase de tu camino deja su propio documento. Llévatelos en .md para editarlos o en PDF para leerlos e imprimirlos."}
         </p>
 
         {error && <p className="mt-5 text-sm text-warn">{error}</p>}
 
         {documentos === null && !error && <p className="mt-6 text-sm text-dim">Cargando...</p>}
 
-        {documentos?.length === 0 && (
+        {docsVista?.length === 0 && (
           <p className="mt-6 text-[14px] leading-relaxed text-dim">
-            Todavía no hay nada que descargar. Cuando tengas tu plan, aparecerá aquí.
+            {dominio
+              ? "Este mundo todavía no tiene documentos. Cuando genere su reporte, aparecerá aquí."
+              : "Todavía no hay nada que descargar. Cuando tengas tu plan, aparecerá aquí."}
           </p>
         )}
 
         <div className="mt-7 flex flex-col gap-3">
-          {documentos?.map((doc) => {
+          {docsVista?.map((doc) => {
             const esExpediente = doc.tipo === "expediente";
             const esSeguimiento = /^seguimiento/i.test(doc.titulo);
             return (

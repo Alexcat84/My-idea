@@ -89,8 +89,11 @@ async function main() {
   // 016) para el cambiador de tabs. `health_safety` sin explorar (su hub muestra
   // "Explorar este mundo"); `quality` con plan+checklist → su hub muestra las
   // TRES caras (Plan · Manos a la obra · Tu avance).
+  // "Todo separado" (T4, pair B): quality se activa en el PASADO para que el
+  // Gantt de su análisis tenga ventanas reales (el dia-0 del Gantt es su unlock).
+  const dia = (o: number) => new Date(Date.now() + o * 86_400_000).toISOString();
   await admin.from("project_unlocks").insert([
-    { project_id: pid, dominio: "quality" },
+    { project_id: pid, dominio: "quality", unlocked_at: dia(-45) },
     { project_id: pid, dominio: "health_safety" },
   ]);
   const { data: sMundo } = await admin
@@ -105,7 +108,9 @@ async function main() {
       user_id: dev.id,
       etiqueta: "completo",
       dominio: "quality",
-      contenido_md: "# Calidad: que tus clientes vuelvan\n## Etapa 1: escucha\n**Esta semana:** llama a un cliente que se fue.",
+      created_at: dia(-45),
+      contenido_md:
+        "# Calidad: que tus clientes vuelvan\n## Etapa 1: escucha\n**Esta semana:** llama a un cliente que se fue.\n## Etapa 2: mejora\nCambia una cosa del proceso.",
       conceptos_usados: 4,
       familias_cubiertas: ["general"],
     })
@@ -115,6 +120,9 @@ async function main() {
   await admin.from("checklist_items").insert([
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 1, texto: "Llama a un cliente que se fue.", destacado: true },
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 2, texto: "Anota por qué no volvió." },
+    { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 2, orden: 1, texto: "Cambia una cosa del proceso." },
+    // Un pendiente con fecha FUTURA: le da al calendario del mundo "lo que viene".
+    { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 2, orden: 2, texto: "Revisa los resultados en un mes." },
   ]);
 
   const browser = await chromium.launch();
@@ -166,6 +174,44 @@ async function main() {
       .upsert({ project_id: pid, dominio: "quality", modo_camino: "fechas" }, { onConflict: "project_id,dominio" });
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=manos`, "Manos a la obra", "espacios_hub_mundo_ritual");
 
+    // "Todo separado" (T4, pair B): AHORA el mundo SELLA su baseline y completa
+    // sus items con fechas conocidas -> su Analisis scopeado (?dominio=quality)
+    // trae su capa COMPLETA con el Gantt porEtapa. Va DESPUES del ritual: sellar
+    // activa las fechas y el ritual ya no se veria. Ventanas A MANO desde el
+    // unlock (-45d): e1 fb20 real[20,27] (a tiempo + tardia); e2 fb33 real30
+    // (adelantada). 1/1/1 de 3.
+    console.log("[Espacios (T4): el ANALISIS del mundo con su Gantt sellado (pair B)]");
+    await admin.from("plans").update({ baseline_confirmada_at: dia(-44) }).eq("id", planMundoId);
+    const { data: itsQ } = await admin
+      .from("checklist_items")
+      .select("id, etapa, orden")
+      .eq("project_id", pid)
+      .eq("dominio", "quality")
+      .order("etapa")
+      .order("orden");
+    const fechados = [
+      { fb: dia(-25), comp: dia(-25) }, // e1 o1: a tiempo
+      { fb: dia(-25), comp: dia(-18) }, // e1 o2: tardia
+      { fb: dia(-12), comp: dia(-15) }, // e2 o1: adelantada
+    ];
+    const idsQ = ((itsQ ?? []) as Array<{ id: string }>).map((r) => r.id);
+    for (const [k, id] of idsQ.slice(0, 3).entries()) {
+      await admin
+        .from("checklist_items")
+        .update({ fecha_base: fechados[k].fb, completed_at: fechados[k].comp, estado: "hecho" })
+        .eq("id", id);
+    }
+    // el 4.º queda PENDIENTE con fecha futura (para el calendario del mundo).
+    if (idsQ[3]) await admin.from("checklist_items").update({ fecha_base: dia(30) }).eq("id", idsQ[3]);
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=analisis&dominio=quality`, "Análisis de", "espacios_analisis_mundo");
+
+    // "Todo separado" (T4b): los otros TRES accesos del espacio, scopeados —
+    // bitácora, calendario y documentos del mundo (misma tarjeta, en su hub).
+    console.log("[Espacios (T4b): bitacora + calendario + documentos DEL MUNDO (scopeados)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=bitacora&dominio=quality`, "Bitácora de", "espacios_bitacora_mundo");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=calendario&dominio=quality`, "Calendario de", "espacios_calendario_mundo");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=documentos&dominio=quality`, "Documentos de", "espacios_documentos_mundo");
+
     // Fase 3 tandas 4-5: las lecturas GLOBALES de la campaña.
     console.log("[Espacios: bitacora global con etiquetas de espacio (chips)]");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=bitacora`, "Mi bitácora de mi viaje", "espacios_bitacora_etiquetas");
@@ -180,7 +226,7 @@ async function main() {
     await admin.from("projects").delete().eq("id", pid);
   }
   console.log(
-    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], bitacora con etiquetas, analisis, reportes por mundo) capturados (2 viewports).",
+    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], los CUATRO accesos scopeados del mundo [T4: analisis con su Gantt sellado, bitacora, calendario, documentos], bitacora global con etiquetas, analisis nucleo, reportes por mundo) capturados (2 viewports).",
   );
 }
 

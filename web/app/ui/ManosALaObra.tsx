@@ -127,14 +127,15 @@ interface Props {
   onModoCambiado: (modo: ModoCamino) => void;
   /** tras confirmar la línea base: el padre recarga el checklist entero */
   onRecargarChecklist: () => void;
-  /** abre la pantalla Análisis del proyecto (§6) */
-  onVerAnalisis: () => void;
-  /** Fase 4.6: abre las descargas del viaje (un documento por fase) */
-  onVerDocumentos: () => void;
-  /** Fase 4.8: abre la bitácora en vivo (la historia del viaje) */
-  onVerBitacora?: () => void;
-  /** abre el Calendario (modo fechas): las fechas del plan, hacia adelante */
-  onVerCalendario?: () => void;
+  /** abre la pantalla Análisis (§6). "Todo separado" (T4): con dominio, scopea el
+   * análisis a ESE espacio (el mundo con su Gantt); sin dominio, el del núcleo. */
+  onVerAnalisis: (dominio?: string) => void;
+  /** Fase 4.6: abre las descargas del viaje. T4: con dominio, las del mundo. */
+  onVerDocumentos: (dominio?: string) => void;
+  /** Fase 4.8: abre la bitácora en vivo. T4: con dominio, la del mundo. */
+  onVerBitacora?: (dominio?: string) => void;
+  /** abre el Calendario. T4: con dominio, el del mundo (sus actividades). */
+  onVerCalendario?: (dominio?: string) => void;
   /** la idea se marcó como realizada (§5): el padre abre la Celebración */
   onRealizada: () => void;
   /** Fase 4.2: un mundo se completó o se reabrió — el padre refresca su copia.
@@ -990,6 +991,81 @@ function PanelModoFechas({
   );
 }
 
+// "Todo separado" (T5, D6): las SEIS tarjetas hermanas de un espacio — sus
+// cuatro accesos (bitácora · calendario · análisis · documentos) y sus dos
+// acciones (realizar/cerrar · ciclo de profundización) — comparten UNA sola
+// forma: icono + título + descripción, y la TARJETA ENTERA es el botón. En las
+// de acción, pulsar abre el flujo de confirmación/ritual: cambia la forma,
+// jamás la función. Ninguna tarjeta de aside vive fuera de este componente
+// (lo prueba un test de contrato). El `tono` 'done' viste la de realizar/cierre.
+const ICONO_ACCESO = {
+  bitacora: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M12 5v14" /><circle cx="12" cy="6.5" r="1.6" /><circle cx="12" cy="12" r="1.6" /><circle cx="12" cy="17.5" r="1.6" />
+      <path d="M14 6.5h4M14 12h4M14 17.5h3" />
+    </svg>
+  ),
+  calendario: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="3.5" y="5" width="17" height="15" rx="2.5" /><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3" />
+    </svg>
+  ),
+  analisis: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 20V4" /><path d="M4 20h16" /><rect x="7.5" y="12" width="3" height="5" rx="0.8" /><rect x="13.5" y="8" width="3" height="9" rx="0.8" />
+    </svg>
+  ),
+  documentos: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M8 4h6l4 4v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" /><path d="M13.5 4v4.5H18M9.5 13h5M9.5 16.5h5" />
+    </svg>
+  ),
+  realizar: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M5 21V4h11l-2 3.5L16 11H5" /><path d="M5 4v17" />
+    </svg>
+  ),
+  ciclo: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4.5 12a7.5 7.5 0 0 1 12.9-5.2l1.6 1.6" /><path d="M19.5 12a7.5 7.5 0 0 1-12.9 5.2l-1.6-1.6" />
+      <path d="M18.5 3.5v4.9h-4.9M5.5 20.5v-4.9h4.9" />
+    </svg>
+  ),
+} as const;
+
+function TarjetaAcceso({
+  icono,
+  titulo,
+  descripcion,
+  onClick,
+  tono = "accent",
+}: {
+  icono: keyof typeof ICONO_ACCESO;
+  titulo: string;
+  descripcion: string;
+  onClick: () => void;
+  tono?: "accent" | "done";
+}) {
+  const chip = tono === "done" ? "bg-done/12 text-done" : "bg-accent/12 text-[#7B9DFF]";
+  const borde = tono === "done" ? "hover:border-done/45" : "hover:border-accent/45";
+  return (
+    <button
+      onClick={onClick}
+      className={`w-full rounded-panel border border-hairline bg-surface p-5 text-left transition-colors hover:bg-[#141419] ${borde}`}
+    >
+      <div className="flex items-start gap-3.5">
+        <span aria-hidden className={`grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[11px] ${chip}`}>
+          {ICONO_ACCESO[icono]}
+        </span>
+        <div className="min-w-0">
+          <p className={`text-[14px] font-semibold ${tono === "done" ? "text-done" : "text-ink"}`}>{titulo}</p>
+          <p className="mt-1 text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">{descripcion}</p>
+        </div>
+      </div>
+    </button>
+  );
+}
+
 export function ManosALaObra({
   projectId,
   planMd,
@@ -1508,19 +1584,13 @@ export function ManosALaObra({
             lg:hidden (la del aside es hidden lg:block): la acción sale una vez en
             cada viewport, en su sitio. El azul dispara al motor a repensar. */}
         {core && cCore.total > 0 && !ritual && (
-          <div className="rounded-panel border border-accent/40 bg-surface p-5 lg:hidden">
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-              Ciclo de profundización
-            </p>
-            <p className="text-[15px] font-semibold leading-relaxed">
-              ¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás.
-            </p>
-            <button
+          <div className="lg:hidden">
+            <TarjetaAcceso
+              icono="ciclo"
+              titulo="Ciclo de profundización"
+              descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
               onClick={() => setRitual(true)}
-              className="mt-3 block w-full rounded-[10px] bg-accent py-2.5 text-center text-[13.5px] font-semibold text-white hover:opacity-90"
-            >
-              Contar qué pasó
-            </button>
+            />
             {entrevistaAbierta && (
               <button
                 onClick={onVolverEntrevista}
@@ -1712,6 +1782,43 @@ export function ManosALaObra({
                           onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre)}
                         />
                         <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+                        {/* "Todo separado" (T5, D6): los CUATRO accesos scopeados
+                            del espacio, en el orden del aside del núcleo, como
+                            TARJETAS HERMANAS (misma forma, tarjeta entera). Sus dos
+                            acciones (cerrar · contar qué pasó) también son hermanas,
+                            más abajo en el hub. */}
+                        {c.total > 0 && (
+                          <div className="flex flex-col gap-3">
+                            {onVerBitacora && (
+                              <TarjetaAcceso
+                                icono="bitacora"
+                                titulo={`Bitácora de ${mundo.nombre}`}
+                                descripcion="La historia de este mundo, paso a paso: cada decisión que has tomado aquí."
+                                onClick={() => onVerBitacora(mundo.dominio)}
+                              />
+                            )}
+                            {onVerCalendario && modoMundo === "fechas" && hayFechasMundo && (
+                              <TarjetaAcceso
+                                icono="calendario"
+                                titulo={`Calendario de ${mundo.nombre}`}
+                                descripcion="Lo que viene en este mundo, día por día. Sus fechas, hacia adelante."
+                                onClick={() => onVerCalendario(mundo.dominio)}
+                              />
+                            )}
+                            <TarjetaAcceso
+                              icono="analisis"
+                              titulo={`Análisis de ${mundo.nombre}`}
+                              descripcion="El ritmo, las etapas y el cumplimiento de este mundo, calculados de lo que hiciste."
+                              onClick={() => onVerAnalisis(mundo.dominio)}
+                            />
+                            <TarjetaAcceso
+                              icono="documentos"
+                              titulo={`Documentos de ${mundo.nombre}`}
+                              descripcion="El reporte de este mundo y lo que deje cada fase de su camino, en .md o PDF."
+                              onClick={() => onVerDocumentos(mundo.dominio)}
+                            />
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
@@ -1857,26 +1964,31 @@ export function ManosALaObra({
                       </div>
                     </div>
                   ) : (
-                    <>
-                      <button
+                    /* "Todo separado" (T5, D6): las DOS acciones del mundo como
+                       TARJETAS HERMANAS (copy scopeado), la tarjeta entera abre su
+                       flujo (ritual / acta de cierre). Misma forma que las del
+                       núcleo; cambia la forma, jamás la función. */
+                    <div className="flex w-full flex-col gap-3">
+                      <TarjetaAcceso
+                        icono="ciclo"
+                        titulo="Ciclo de profundización"
+                        descripcion={`¿La realidad te cambió el plan de ${mundo.nombre}? Cuéntame qué pasó y lo recalculo desde donde estás.`}
                         onClick={() => {
                           setRitualMundo(mundo.dominio);
                           setErrorRitual(null);
                         }}
-                        className="rounded-[10px] bg-accent px-4 py-2.5 text-[13px] font-semibold text-white hover:opacity-90"
-                      >
-                        Contar qué pasó
-                      </button>
-                      <button
+                      />
+                      <TarjetaAcceso
+                        icono="realizar"
+                        titulo={`¿Diste ${mundo.nombre} por terminado?`}
+                        descripcion="Márcalo como completado cuando lo sientas cerrado. Lo que quede pendiente se guarda; podrás reabrirlo cuando quieras."
                         onClick={() => {
                           setCerrandoMundo(mundo.dominio);
                           setMotivoMundo("");
                         }}
-                        className="rounded-[10px] border border-done/50 px-4 py-2.5 text-[13px] font-semibold text-done hover:bg-done-soft"
-                      >
-                        Marcar este mundo como completado
-                      </button>
-                    </>
+                        tono="done"
+                      />
+                    </div>
                   )}
                 </div>
               )}
@@ -1914,153 +2026,106 @@ export function ManosALaObra({
           llegan en la Fase 3. */}
       {mostrarCore && (
       <aside className="flex flex-col gap-6">
-        {/* Fase 4.8 — MI BITÁCORA como PRIMER punto del aside (arriba a la
-            derecha): la historia viva del viaje, verla antes de imprimir.
-            Vive en las páginas de desarrollo, no en el panel de documentos. */}
+        {/* "Todo separado" (T5, D6): los cuatro accesos del núcleo como TARJETAS
+            HERMANAS (bitácora · calendario · análisis · documentos), la misma
+            forma que sus dos acciones (realizar · ciclo) más abajo. */}
         {onVerBitacora && cCore.total > 0 && (
-          // Estandarizada como Análisis y Documentos (misma tarjeta y botón): en
-          // Manos las tres puertas del aside se leen homogéneas. La versión con
-          // acento e icono vive en la página del PLAN, donde hace juego.
-          <div className="rounded-panel border border-hairline bg-surface p-5">
-            <p className="text-[14px] font-semibold">Mi bitácora</p>
-            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
-              La historia de tu viaje, paso a paso: cada decisión que has tomado.
-            </p>
-            <button
-              onClick={onVerBitacora}
-              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
-            >
-              Ver mi bitácora
-            </button>
-          </div>
+          <TarjetaAcceso
+            icono="bitacora"
+            titulo="Mi bitácora"
+            descripcion="La historia de tu viaje, paso a paso: cada decisión que has tomado."
+            onClick={() => onVerBitacora?.()}
+          />
         )}
-
-        {/* Puerta al Calendario (modo fechas): las fechas del plan, hacia
-            adelante, con recordatorios al teléfono. Solo cuando hay fechas. */}
         {onVerCalendario && modoCamino === "fechas" && hayFechas && (
-          <div className="rounded-panel border border-hairline bg-surface p-5">
-            <p className="text-[14px] font-semibold">Tu calendario</p>
-            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
-              Lo que viene, día por día. Llévate tus fechas al calendario del teléfono.
-            </p>
-            <button
-              onClick={onVerCalendario}
-              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
-            >
-              Abrir calendario
-            </button>
-          </div>
+          <TarjetaAcceso
+            icono="calendario"
+            titulo="Tu calendario"
+            descripcion="Lo que viene, día por día. Llévate tus fechas al calendario del teléfono."
+            onClick={() => onVerCalendario?.()}
+          />
         )}
-
-        {/* Fase 3.8 §6 — puerta al análisis del proyecto. La acción vive en un
-            BOTÓN abajo (no la tarjeta entera), para que se lea como accionable
-            y no como panel informativo (igual que "Marcar como realizada"). */}
         {cCore.total > 0 && (
-          <div className="rounded-panel border border-hairline bg-surface p-5">
-            <p className="text-[14px] font-semibold">Análisis del proyecto</p>
-            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
-              Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste.
-            </p>
-            <button
-              onClick={onVerAnalisis}
-              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
-            >
-              Ver análisis
-            </button>
-          </div>
+          <TarjetaAcceso
+            icono="analisis"
+            titulo="Análisis del proyecto"
+            descripcion="Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste."
+            onClick={() => onVerAnalisis()}
+          />
         )}
+        <TarjetaAcceso
+          icono="documentos"
+          titulo="Tus documentos"
+          descripcion="Tu plan, cada seguimiento y el expediente completo, en .md o en PDF."
+          onClick={() => onVerDocumentos()}
+        />
 
-        {/* Fase 4.6 — llevarse el trabajo: un documento por fase del camino */}
-        <div className="rounded-panel border border-hairline bg-surface p-5">
-          <p className="text-[14px] font-semibold">Tus documentos</p>
-          <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
-            Tu plan, cada seguimiento y el expediente completo, en .md o en PDF.
-          </p>
-          <button
-            onClick={onVerDocumentos}
-            className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
-          >
-            Abrir documentos
-          </button>
-        </div>
-
-        {/* Fase 3.8 §5 — marcar la idea como realizada (nace el proyecto) */}
-        {cCore.total > 0 && (
-          <div className="rounded-panel border border-done/40 bg-surface p-5">
-            {!confirmandoRealizar ? (
-              <>
-                <p className="text-[13px] font-semibold text-done">¿Tu idea ya es un proyecto?</p>
-                <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
-                  Cuando lo sientas real, ciérrala. No hace falta terminar todo el checklist.
-                </p>
+        {/* "Todo separado" (T5, D6): la acción "realizar" como TARJETA HERMANA —
+            la tarjeta ENTERA abre el acta de cierre (el mismo mini-ritual). Cambia
+            la forma (antes: pitch + botón), jamás la función. */}
+        {cCore.total > 0 &&
+          (!confirmandoRealizar ? (
+            <TarjetaAcceso
+              icono="realizar"
+              titulo="¿Tu idea ya es un proyecto?"
+              descripcion="Cuando lo sientas real, ciérrala. No hace falta terminar todo el checklist."
+              onClick={() => setConfirmandoRealizar(true)}
+              tono="done"
+            />
+          ) : (
+            /* Fase 4.0 §8 — EL ACTA DE CIERRE: mini-ritual de dos elementos.
+               (a) el espejo del momento, con los números reales y SIN juicio;
+               (b) el porqué, OPCIONAL. Cero fricción: se cierra sin escribir nada. */
+            <div className="rounded-panel border border-done/40 bg-surface p-5">
+              <p className="text-[14px] font-semibold leading-relaxed">
+                Esto cierra tu idea y nace tu proyecto. Podrás reabrirla cuando quieras.
+              </p>
+              <p className="mt-2 text-[12.5px] text-dim">
+                Llevas {cCore.hechos} de {cCore.total} acciones
+                {cCore.total > 0 ? ` (${Math.round((cCore.hechos / cCore.total) * 100)}%)` : ""}. Las que queden
+                pendientes se guardan tal cual: son parte de tu historia.
+              </p>
+              <label htmlFor="cierre-motivo" className="mt-3.5 block text-[12.5px] text-dim">
+                ¿Por qué la cierras aquí? <span className="text-dim/70">(opcional, para tu propia memoria)</span>
+              </label>
+              <div className="mt-1.5">
+                <CampoConVoz
+                  id="cierre-motivo"
+                  valor={cierreMotivo}
+                  onCambio={setCierreMotivo}
+                  filas={2}
+                  placeholder="La cierro porque…"
+                />
+              </div>
+              <div className="mt-3 flex items-center gap-3">
                 <button
-                  onClick={() => setConfirmandoRealizar(true)}
-                  className="mt-3 w-full rounded-[10px] border border-done/50 py-2.5 text-[13px] font-semibold text-done hover:bg-done-soft"
+                  onClick={marcarRealizada}
+                  disabled={realizando}
+                  className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
                 >
-                  Marcar como realizada
+                  {realizando ? "Cerrando…" : "Sí, es un proyecto"}
                 </button>
-              </>
-            ) : (
-              /* Fase 4.0 §8 — EL ACTA DE CIERRE: mini-ritual de dos elementos.
-                 (a) el espejo del momento, con los números reales y SIN juicio;
-                 (b) el porqué, OPCIONAL. Cero fricción: se cierra sin escribir
-                 nada, como siempre. */
-              <>
-                <p className="text-[14px] font-semibold leading-relaxed">
-                  Esto cierra tu idea y nace tu proyecto. Podrás reabrirla cuando quieras.
-                </p>
-                <p className="mt-2 text-[12.5px] text-dim">
-                  Llevas {cCore.hechos} de {cCore.total} acciones
-                  {cCore.total > 0 ? ` (${Math.round((cCore.hechos / cCore.total) * 100)}%)` : ""}. Las que queden
-                  pendientes se guardan tal cual: son parte de tu historia.
-                </p>
-                <label htmlFor="cierre-motivo" className="mt-3.5 block text-[12.5px] text-dim">
-                  ¿Por qué la cierras aquí? <span className="text-dim/70">(opcional, para tu propia memoria)</span>
-                </label>
-                <div className="mt-1.5">
-                  <CampoConVoz
-                    id="cierre-motivo"
-                    valor={cierreMotivo}
-                    onCambio={setCierreMotivo}
-                    filas={2}
-                    placeholder="La cierro porque…"
-                  />
-                </div>
-                <div className="mt-3 flex items-center gap-3">
-                  <button
-                    onClick={marcarRealizada}
-                    disabled={realizando}
-                    className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
-                  >
-                    {realizando ? "Cerrando…" : "Sí, es un proyecto"}
-                  </button>
-                  <button
-                    onClick={() => setConfirmandoRealizar(false)}
-                    disabled={realizando}
-                    className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
-                  >
-                    Todavía no
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
-        )}
-        {/* Ciclo de profundización — SOLO desktop (hidden lg:block): en móvil
-            esta acción ya subió arriba con su propia tarjeta (lg:hidden). */}
-        <div className="hidden rounded-panel border border-hairline bg-surface p-5 lg:block">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Ciclo de profundización
-          </p>
-          <p className="text-[15px] font-semibold leading-relaxed">
-            ¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás.
-          </p>
-          <button
+                <button
+                  onClick={() => setConfirmandoRealizar(false)}
+                  disabled={realizando}
+                  className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
+                >
+                  Todavía no
+                </button>
+              </div>
+            </div>
+          ))}
+        {/* "Todo separado" (T5, D6): "ciclo de profundización" como TARJETA
+            HERMANA — SOLO desktop (en móvil ya subió arriba con su propia). La
+            tarjeta entera abre el ritual (setRitual); "volver a la entrevista"
+            queda como enlace aparte (acción secundaria, no una tarjeta más). */}
+        <div className="hidden lg:block">
+          <TarjetaAcceso
+            icono="ciclo"
+            titulo="Ciclo de profundización"
+            descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
             onClick={() => setRitual(true)}
-            className="mt-4 block w-full rounded-[10px] bg-accent py-2.5 text-center text-[13.5px] font-semibold text-white hover:opacity-90"
-          >
-            Contar qué pasó
-          </button>
+          />
           {entrevistaAbierta && (
             <button
               onClick={onVolverEntrevista}

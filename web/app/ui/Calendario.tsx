@@ -74,6 +74,8 @@ export function Calendario({
   onRecargarChecklist,
   onVolver,
   onVerLoCumplido,
+  dominio,
+  nombreEspacio,
 }: {
   projectId: string;
   /** Fuente ÚNICA de verdad: el mismo checklist que alimenta Manos a la Obra
@@ -84,6 +86,11 @@ export function Calendario({
   onRecargarChecklist: () => void;
   onVolver: () => void;
   onVerLoCumplido: () => void;
+  /** "Todo separado" (T4): scopeado a un mundo → SUS actividades (grupoVigente de
+   * su dominio). El feed personal global con etiquetas [Espacio] es la T6; esta
+   * es la vista in-app del espacio. Sin dominio, el calendario del núcleo. */
+  dominio?: string;
+  nombreEspacio?: string;
 }) {
   const [error, setError] = useState<string | null>(null);
   const [ocupado, setOcupado] = useState(false);
@@ -93,7 +100,8 @@ export function Calendario({
   // El día abierto en la vista Mes (panel de la derecha/abajo). Por defecto, hoy.
   const [diaSel, setDiaSel] = useState<string>(() => fechaInputLocal(new Date()));
 
-  const core = grupoVigente(checklist, "core");
+  // "Todo separado" (T4): el grupo del ESPACIO en foco (el núcleo, o un mundo).
+  const core = grupoVigente(checklist, dominio ?? "core");
   const itemsCore = useMemo(() => core?.etapas.flatMap((e) => e.items) ?? [], [core]);
 
   async function moverFecha(itemId: string, fecha: string, cascada: boolean) {
@@ -190,7 +198,7 @@ export function Calendario({
         </button>
         <p className="mb-2 flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[1.5px]" style={{ color: AZUL }}>
           <span aria-hidden className="h-[7px] w-[7px] rounded-full" style={{ background: AZUL }} />
-          Tu calendario
+          {dominio ? `Calendario de ${nombreEspacio ?? "este mundo"}` : "Tu calendario"}
         </p>
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">

@@ -57,13 +57,22 @@ export function AnalisisProyecto({
   projectId,
   titulos,
   onVolver,
+  dominio,
+  nombreEspacio,
 }: {
   projectId: string;
   titulos: Record<number, string>;
   onVolver: () => void;
+  /** "Todo separado" (T4): si es un mundo, el análisis se scopea a ESE espacio
+   * (su capa universal + su cumplimiento con Gantt, de analytics.mundos[dominio]).
+   * Sin dominio (o "core") es el análisis del núcleo, como siempre. */
+  dominio?: string;
+  /** el nombre humano del espacio scopeado (el catálogo lo resuelve el llamador). */
+  nombreEspacio?: string;
 }) {
   const [datos, setDatos] = useState<Respuesta | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const esCore = !dominio || dominio === "core";
 
   useEffect(() => {
     let vivo = true;
@@ -84,19 +93,34 @@ export function AnalisisProyecto({
     };
   }, [projectId]);
 
+  // "Todo separado" (T4): la capa que se pinta es la del ESPACIO en foco — el
+  // núcleo, o un mundo de analytics.mundos[dominio]. El mundo trae su capa
+  // completa (con Gantt porEtapa) desde T3d; sin `porDominio`, que esta pantalla
+  // no pinta, así que el MISMO render sirve para ambos.
+  const mundo = esCore ? null : datos?.analytics.mundos.find((m) => m.dominio === dominio) ?? null;
+
   // El horizonte de la línea de tiempo del Gantt: el mayor fin (base o real).
   const maxBarra = useMemo(() => {
-    const c = datos?.analytics.cumplimiento;
+    const c = esCore ? datos?.analytics.cumplimiento : mundo?.cumplimiento;
     if (!c) return 1;
     return Math.max(1, ...c.porEtapa.flatMap((e) => [e.baseFin ?? 0, e.realFin ?? 0]));
-  }, [datos]);
+  }, [datos, esCore, mundo]);
 
   if (error) return <p className="text-sm text-warn">{error}</p>;
   if (!datos) return <p className="text-dim">Calculando tu análisis…</p>;
+  if (!esCore && !mundo) return <p className="text-sm text-warn">No encontramos el análisis de este espacio.</p>;
 
-  const { analytics: a, nombre, tiene_baseline } = datos;
-  const u = a.universal;
-  const c = a.cumplimiento;
+  const a = datos.analytics;
+  // El núcleo pinta su capa; un mundo pinta la suya (universal + cumplimiento del
+  // propio espacio, su cierre propio). Los hitos del mapa son del proyecto: un
+  // mundo no los lleva (su avance vive en su cara "Tu avance").
+  const u = esCore ? a.universal : mundo!.universal;
+  const c = esCore ? a.cumplimiento : mundo!.cumplimiento;
+  const nombre = esCore ? datos.nombre : nombreEspacio ?? datos.nombre;
+  const tiene_baseline = esCore ? datos.tiene_baseline : c !== null;
+  const realizadaAt = esCore ? datos.realizada_at ?? null : mundo!.completadoAt;
+  const cierreMotivo = esCore ? datos.cierre_motivo ?? null : mundo!.cierreMotivo;
+  const hitos = esCore ? a.hitos : [];
   const nombreEtapa = (n: number) => titulos[n] ?? `Etapa ${n}`;
 
   return (
@@ -107,19 +131,19 @@ export function AnalisisProyecto({
 
       {/* Fase 4.0 §8: el acta de cierre encabeza el análisis de un proyecto
           ya cerrado: estado final y el porqué, en la voz del usuario. */}
-      {datos.realizada_at && (
+      {realizadaAt && (
         <section className="rounded-panel border border-done/40 bg-surface p-5">
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">Acta de cierre</p>
           <p className="mt-2 text-[14px]">
-            Cerrado el {fechaHumanaCorta(datos.realizada_at)} con{" "}
+            Cerrado el {fechaHumanaCorta(realizadaAt)} con{" "}
             <span className="font-semibold">
-              {a.universal.accionesVigente.hechas} de {a.universal.accionesVigente.total}
+              {u.accionesVigente.hechas} de {u.accionesVigente.total}
             </span>{" "}
             acciones. Lo que quedó pendiente sigue en tu historia, tal cual.
           </p>
-          {datos.cierre_motivo && (
+          {cierreMotivo && (
             <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
-              «{datos.cierre_motivo}»
+              «{cierreMotivo}»
             </blockquote>
           )}
         </section>
@@ -158,7 +182,7 @@ export function AnalisisProyecto({
             hechas={u.accionesVigente.hechas}
             total={u.accionesVigente.total}
             ritmoPorSemana={u.ritmoAccionesPorSemana}
-            cerrada={Boolean(datos.realizada_at)}
+            cerrada={Boolean(realizadaAt)}
           />
           <div>
             {/* Cifras en color (azul piensa): en blanco no lucían. Medida sin juicio. */}
@@ -175,11 +199,11 @@ export function AnalisisProyecto({
               </p>
             )}
           </div>
-          {a.hitos.length > 0 && (
+          {hitos.length > 0 && (
             <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
               <MapaHitos
-                cerrada={Boolean(datos.realizada_at)}
-                hitos={a.hitos.map((h) => ({
+                cerrada={Boolean(realizadaAt)}
+                hitos={hitos.map((h) => ({
                   fecha: h.fecha,
                   nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta,
                   cierre: h.tipo === "realizada",
@@ -267,7 +291,7 @@ export function AnalisisProyecto({
                 porEtapa={c.porEtapa}
                 maxBarra={maxBarra}
                 nombreEtapa={nombreEtapa}
-                hoyDias={datos.realizada_at ? null : u.duracionTotalDias}
+                hoyDias={realizadaAt ? null : u.duracionTotalDias}
               />
             )}
           </div>

@@ -207,20 +207,36 @@ export function LineaBitacora({
   );
 }
 
-export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver: () => void }) {
+export function Bitacora({
+  projectId,
+  onVolver,
+  dominio,
+  nombreEspacio,
+}: {
+  projectId: string;
+  onVolver: () => void;
+  /** "Todo separado" (T4): scopeada a un mundo → su bitácora (filtro de servidor
+   * de la Fase 3, ?dominio=X); sin dominio, la historia entera del proyecto. */
+  dominio?: string;
+  nombreEspacio?: string;
+}) {
   const [datos, setDatos] = useState<{ nombre: string; entradas: EntradaBitacora[] } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let vivo = true;
-    fetch(`/api/project/${projectId}/bitacora`)
+    // El filtro por espacio vive en el SERVIDOR (Fase 3): aquí solo se pide.
+    const url = dominio
+      ? `/api/project/${projectId}/bitacora?dominio=${dominio}`
+      : `/api/project/${projectId}/bitacora`;
+    fetch(url)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((d: { nombre: string; entradas: EntradaBitacora[] }) => vivo && setDatos(d))
       .catch(() => vivo && setError("No pudimos cargar tu bitácora. Vuelve a intentarlo en un momento."));
     return () => {
       vivo = false;
     };
-  }, [projectId]);
+  }, [projectId, dominio]);
 
   if (error) return <p className="text-sm text-warn">{error}</p>;
   if (!datos) return <p className="text-dim">Cargando tu bitácora…</p>;
@@ -245,7 +261,7 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
               Tu historia
             </p>
             <h2 className="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] [text-wrap:balance] sm:text-[34px]">
-              Mi bitácora de mi viaje
+              {dominio ? `Bitácora de ${nombreEspacio ?? "este mundo"}` : "Mi bitácora de mi viaje"}
             </h2>
             <p className="mt-3 text-[15px] text-dim">
               <span className="font-semibold text-ink">«{datos.nombre}»</span>
@@ -270,10 +286,11 @@ export function Bitacora({ projectId, onVolver }: { projectId: string; onVolver:
 
             {/* ── Línea de tiempo completa (componente reutilizable) ─────── */}
             {/* Vista GLOBAL: etiqueta cada entrada con su espacio (nombre de
-                cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada. */}
+                cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada. La
+                vista POR ESPACIO (T4) ya es de un solo espacio: no etiqueta. */}
             <LineaBitacora
               entradas={entradas}
-              etiquetar={(e) => etiquetaEspacio(e.dominio, proyectoTieneMundos(entradas), nombreMundo)}
+              etiquetar={dominio ? undefined : (e) => etiquetaEspacio(e.dominio, proyectoTieneMundos(entradas), nombreMundo)}
             />
 
             <p className="mt-9 border-t border-hairline pt-5 text-[12.5px] leading-relaxed text-dim">

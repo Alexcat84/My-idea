@@ -65,6 +65,11 @@ documentos en dos recuadros · cierre). Tag propuesto `web-v2.2.0-beta`.
   - las **varas previas** que quedan: chips de etiqueta en la bitácora global y las fichas
     de Reporte por mundo. (Muere del encargo: la banda "Lo general" y el desglose "Tu
     proyecto completo".)
+  - **Estado del frente (staging):** el modo/ritual del mundo (T3c-2), el **Análisis del
+    mundo con su Gantt** (T4a) y **los cuatro accesos scopeados** del espacio (T4b) ya
+    están funcionales; sus pares de gate para calibrar están en §3 (`espacios_*_mundo`).
+    Pendientes del propio "todo separado": T5 (seis tarjetas hermanas uniformes), T6
+    (calendario con `[Espacio]`), T7 (documentos en dos recuadros).
 - **PDF Expediente · interiores (DIFERIDO post-beta):** el diseño YA existe
   (`_entrega-claude-design/Entrega-desing 20260729/entrega2/pdf-expediente-interiores/`:
   Tus Números, un mundo, "Cómo te fue", "La secuencia de tu viaje"). **Cuando sea el
@@ -79,9 +84,22 @@ documentos en dos recuadros · cierre). Tag propuesto `web-v2.2.0-beta`.
   seguimiento de mundo −5 = 5). **NO corrido en vivo.**
 - **Gate** (`web/scripts/gate_beta.ts`): capturas en dos viewports de `/creditos`, el
   cambiador, el hub y las **3 caras**, **más (Fase 3 T4-T5)** la **bitácora global con
-  etiquetas** (`?vista=bitacora`), el **desglose "Tu proyecto completo"** del Análisis
-  (`?vista=analisis`) y los **reportes por mundo** (`?vista=documentos`). **NO corrido en
-  vivo** → verificar al ejecutarlo (la siembra del mundo con plan y las esperas nuevas).
+  etiquetas** (`?vista=bitacora`), el Análisis del núcleo (`?vista=analisis`) y los
+  **reportes por mundo** (`?vista=documentos`). **NO corrido en vivo** → verificar al
+  ejecutarlo (la siembra del mundo con plan y las esperas nuevas).
+- **Gate — "todo separado" (T3c-2/T4), pares nuevos del ESPACIO** (referencia para el
+  encargo de Design; el run en vivo y el veredicto los da el fundador). Al ejecutar
+  `gate_beta` se generan en `web/examples/gate-canon/` (tracked en staging, excluidos del
+  release a main por patrón):
+  - `espacios_hub_mundo_ritual` — el hub del mundo con **su** modo/ritual de fechas
+    scopeado (T3c-2, paridad con el núcleo).
+  - `espacios_analisis_mundo` — el **Análisis del mundo** a pantalla completa con **su
+    Gantt** (`porEtapa`) sellado (T4a, el "pair B"): quality activada en el pasado, su
+    baseline sellada, 1/1/1 de 3 a mano.
+  - `espacios_bitacora_mundo` · `espacios_calendario_mundo` · `espacios_documentos_mundo`
+    — los otros **tres accesos scopeados** del espacio (T4b), misma tarjeta que el núcleo.
+  Vara para Design: los **cuatro accesos del espacio** con formato de tarjeta UNIFORME (la
+  vara de las seis hermanas de T5 llega después; aquí no hay formato nuevo que deshacer).
 - **Veredicto visual del fundador** sobre el conjunto de Espacios y sobre el centro de
   créditos (cuando pruebe en producción).
 - **Auditoría**: Catálogo congruente y Espacios quedan en revisión del auditor.
