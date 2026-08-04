@@ -127,8 +127,9 @@ interface Props {
   onModoCambiado: (modo: ModoCamino) => void;
   /** tras confirmar la línea base: el padre recarga el checklist entero */
   onRecargarChecklist: () => void;
-  /** abre la pantalla Análisis del proyecto (§6) */
-  onVerAnalisis: () => void;
+  /** abre la pantalla Análisis (§6). "Todo separado" (T4): con dominio, scopea el
+   * análisis a ESE espacio (el mundo con su Gantt); sin dominio, el del núcleo. */
+  onVerAnalisis: (dominio?: string) => void;
   /** Fase 4.6: abre las descargas del viaje (un documento por fase) */
   onVerDocumentos: () => void;
   /** Fase 4.8: abre la bitácora en vivo (la historia del viaje) */
@@ -1712,6 +1713,25 @@ export function ManosALaObra({
                           onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre)}
                         />
                         <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+                        {/* "Todo separado" (T4): el acceso al Análisis de ESTE
+                            mundo (su capa con su Gantt porEtapa), scopeado — como
+                            el núcleo lo tiene en su aside. Los otros tres accesos
+                            del espacio (bitácora, calendario, documentos) llegan
+                            en las siguientes piezas de T4. */}
+                        {c.total > 0 && (
+                          <div className="rounded-panel border border-hairline bg-surface p-5">
+                            <p className="text-[14px] font-semibold">Análisis de {mundo.nombre}</p>
+                            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+                              El ritmo, las etapas y el cumplimiento de este mundo, calculados de lo que hiciste.
+                            </p>
+                            <button
+                              onClick={() => onVerAnalisis(mundo.dominio)}
+                              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+                            >
+                              Ver análisis
+                            </button>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
@@ -1962,7 +1982,7 @@ export function ManosALaObra({
               Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste.
             </p>
             <button
-              onClick={onVerAnalisis}
+              onClick={() => onVerAnalisis()}
               className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
             >
               Ver análisis

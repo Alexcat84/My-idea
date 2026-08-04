@@ -206,6 +206,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // al instante lo que el mundo acaba de elegir.
   const [modos, setModos] = useState<Record<string, "ritmo" | "fechas">>({});
   const [vistaAnalisis, setVistaAnalisis] = useState(quiereAnalisis);
+  // "Todo separado" (T4): el análisis scopeado a un espacio (?vista=analisis&dominio=X).
+  // null = el análisis del núcleo (comportamiento histórico).
+  const [analisisDominio, setAnalisisDominio] = useState<string | null>(
+    quiereAnalisis ? searchParams.get("dominio") : null
+  );
   const [vistaCelebracion, setVistaCelebracion] = useState(quiereCelebracion);
   // Fase 4.6: las descargas del viaje (un documento por fase + el expediente).
   const [vistaDocumentos, setVistaDocumentos] = useState(quiereDocumentos);
@@ -644,11 +649,31 @@ export function IdeaView({ projectId }: { projectId: string }) {
     volverAManos();
   }
 
-  function irAAnalisis() {
+  function irAAnalisis(dominio?: string) {
     setVistaAnalisis(true);
     setVistaCelebracion(false);
     setVistaCalendario(false);
-    router.replace(`/idea/${projectId}?vista=analisis`, { scroll: false });
+    // "Todo separado" (T4): con dominio, el análisis se scopea a ese espacio.
+    setAnalisisDominio(dominio ?? null);
+    const q = dominio ? `?vista=analisis&dominio=${dominio}` : "?vista=analisis";
+    router.replace(`/idea/${projectId}${q}`, { scroll: false });
+  }
+
+  // "Todo separado" (T4): volver del análisis scopeado regresa a SU hub; el del
+  // núcleo, a Manos a la Obra.
+  function volverDeAnalisis() {
+    const d = analisisDominio;
+    setAnalisisDominio(null);
+    if (d) {
+      setVistaAnalisis(false);
+      setVistaCelebracion(false);
+      setVistaDocumentos(false);
+      setVistaCalendario(false);
+      setVistaBitacora(false);
+      irAMundo(d);
+    } else {
+      volverAManos();
+    }
   }
 
   function irACalendario() {
@@ -663,6 +688,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   function volverAManos() {
     setVistaAnalisis(false);
+    setAnalisisDominio(null);
     setVistaCelebracion(false);
     setVistaDocumentos(false);
     setVistaCalendario(false);
@@ -850,7 +876,19 @@ export function IdeaView({ projectId }: { projectId: string }) {
             }}
           />
         ) : vistaAnalisis && planMd && checklist ? (
-          <AnalisisProyecto projectId={projectId} titulos={titulosDeEtapas(planMd)} onVolver={volverAManos} />
+          <AnalisisProyecto
+            projectId={projectId}
+            // "Todo separado" (T4): scopeado a un mundo → su nombre, sus etapas y
+            // su capa (analytics.mundos[dominio]); sin dominio, el análisis del núcleo.
+            titulos={
+              analisisDominio
+                ? titulosDeEtapas(mundosParaObra.find((m) => m.dominio === analisisDominio)?.plan?.contenido_md ?? "")
+                : titulosDeEtapas(planMd)
+            }
+            onVolver={volverDeAnalisis}
+            dominio={analisisDominio ?? undefined}
+            nombreEspacio={mundosParaObra.find((m) => m.dominio === analisisDominio)?.nombre}
+          />
         ) : vistaCalendario && planMd && checklist ? (
           <Calendario
             projectId={projectId}
