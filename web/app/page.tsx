@@ -11,7 +11,7 @@ import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
-  title: "My Idea — Transforma tu creatividad en acción",
+  title: "My Idea: Transforma tu creatividad en acción",
   description:
     "A los emprendedores no les faltan ideas. Les falta un interlocutor serio. Cuéntala, recibe tu plan y ejecútalo.",
 };

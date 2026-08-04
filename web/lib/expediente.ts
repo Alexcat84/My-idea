@@ -269,7 +269,7 @@ export function seccionAcciones(acciones: AccionExpediente[], nivelEtapa = 3): s
     l.push("Tareas que decidiste que no corren para esta idea. No son pendientes ni fracasos: son parte de tu criterio.");
     l.push("");
     for (const a of retiradas) {
-      const motivo = a.noAplicaMotivo ? ` — ${a.noAplicaMotivo.replace(/\s+/g, " ").trim()}` : "";
+      const motivo = a.noAplicaMotivo ? ` (${a.noAplicaMotivo.replace(/\s+/g, " ").trim()})` : "";
       l.push(`- ${a.texto.replace(/\s+/g, " ").trim()}${motivo}`);
     }
     l.push("");

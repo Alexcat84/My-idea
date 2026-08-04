@@ -109,7 +109,7 @@ export function componerMensajeSeguimiento(e: EntradaSeguimiento): string {
     .map((i) => `- ${i.texto}${i.noAplicaMotivo ? ` (porque: ${i.noAplicaMotivo.trim()})` : ""}`);
   if (retiradas.length) {
     partes.push(
-      `${ETIQUETA.no_aplica} (${retiradas.length}) — decidí que no corren para esta idea; NO las vuelvas a proponer:`,
+      `${ETIQUETA.no_aplica} (${retiradas.length}). Decidí que no corren para esta idea; NO las vuelvas a proponer:`,
       ...retiradas
     );
   }

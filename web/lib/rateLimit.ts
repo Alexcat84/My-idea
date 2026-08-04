@@ -124,6 +124,6 @@ export async function limitarPorClave(clave: string, ttlSegundos: number, limite
 /** Mensajes en palabras de persona (el usuario web nunca ve maquinaria). */
 export const MENSAJE_LIMITE =
   "Por hoy alcanzaste el límite de la beta (5 arranques al día). " +
-  "Tus ideas quedan guardadas — vuelve mañana y seguimos donde quedamos.";
+  "Tus ideas quedan guardadas. Vuelve mañana y seguimos donde quedamos.";
 
 export const MENSAJE_FUSIBLE = "Estamos a capacidad por hoy; tus ideas te esperan mañana.";

@@ -81,7 +81,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     : { data: [] };
   if (!planesCore || planesCore.length === 0) {
     return NextResponse.json(
-      { error: "Primero genera el plan de tu idea — el mundo se construye sobre él." },
+      { error: "Primero genera el plan de tu idea. El mundo se construye sobre él." },
       { status: 409 }
     );
   }
@@ -131,7 +131,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!(brecha.semillaId in graph)) {
     console.warn(`world/start: semilla '${brecha.semillaId}' de '${pack}' no está en el grafo (línea de ensamblaje pendiente)`);
     return NextResponse.json(
-      { error: "Este mundo se está preparando — muy pronto podrás explorarlo." },
+      { error: "Este mundo se está preparando. Muy pronto podrás explorarlo." },
       { status: 503 }
     );
   }
