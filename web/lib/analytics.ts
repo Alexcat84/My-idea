@@ -206,6 +206,12 @@ export interface CapaCumplimiento {
   porDominio: CumplimientoDominio[];
 }
 
+/** La capa de cumplimiento de UN espacio (el core o un mundo) SIN el desglose
+ * cross-dominio `porDominio` (que es del proyecto entero). Es exactamente lo que
+ * devuelve capaCumplimientoDe: un mundo la tiene IDÉNTICA al core —su Gantt de
+ * ventanas honestas incluido (`porEtapa`)— salvo esa fila. "Todo separado" (T3d). */
+export type CapaCumplimientoEspacio = Omit<CapaCumplimiento, "porDominio">;
+
 export interface Analytics {
   universal: CapaUniversal;
   cumplimiento: CapaCumplimiento | null;
@@ -432,7 +438,10 @@ export function capaUniversalDe(
 export interface AnalyticsMundo {
   dominio: string;
   universal: CapaUniversal;
-  cumplimiento: CumplimientoDominio | null;
+  /** "Todo separado" (T3d): la capa COMPLETA del mundo (misma vara que el core,
+   * con su Gantt `porEtapa`), no ya el resumen ligero por dominio. Solo con
+   * baseline confirmada del propio mundo; si no, null. */
+  cumplimiento: CapaCumplimientoEspacio | null;
   completadoAt: string | null;
   cierreMotivo: string | null;
 }
@@ -453,10 +462,21 @@ export function analyticsDeMundo(entrada: EntradaAnalytics, dominio: string): An
   // El mundo cierra cuando el usuario lo cierra; si la IDEA entera se cerró
   // antes, ese es su horizonte. Un mundo abierto se mide hasta hoy.
   const fin = mundo.completado_at ?? entrada.realizadaAt ?? ahora;
+  // "Todo separado" (T3d): el cumplimiento del MUNDO con la MISMA vara que el
+  // core (capaCumplimientoDe → su Gantt de ventanas honestas), SOLO si SU plan
+  // tiene baseline confirmada. El día-0 del Gantt es el nacimiento del mundo
+  // (unlocked_at), igual que el ancla de su capa universal.
+  const baselinePlan = planBaselineVigente(planes);
+  const cumplimiento = baselinePlan
+    ? capaCumplimientoDe(
+        items.filter((i) => i.plan_id === baselinePlan.id),
+        mundo.unlocked_at
+      )
+    : null;
   return {
     dominio,
     universal: capaUniversalDe(items, planes, mundo.unlocked_at, fin, 0),
-    cumplimiento: cumplimientoPorDominio(items)[0] ?? null,
+    cumplimiento,
     completadoAt: mundo.completado_at ?? null,
     cierreMotivo: mundo.cierre_motivo ?? null,
   };
@@ -650,16 +670,18 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
  * universal (+ cumplimiento si lo tiene), con la MISMA vara del informe. Lo usan
  * la sección de un mundo en el expediente global y el Reporte de un mundo. Puro.
  */
-export function resumenEspacioMd(u: CapaUniversal, cumplimiento?: CumplimientoDominio | null): string[] {
+export function resumenEspacioMd(u: CapaUniversal, cumplimiento?: CapaCumplimientoEspacio | null): string[] {
   const l: string[] = [];
   l.push(`- Duración: **${u.duracionTotalDias} días**`);
   l.push(`- Acciones completadas: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}** activas`);
   l.push(`- Ritmo: **${u.ritmoAccionesPorSemana} acciones por semana**`);
   l.push(`- Racha más larga: **${u.rachaMasLargaDias} días**`);
   if (u.retiradas.length) l.push(`- Retiradas (no aplican): **${u.retiradas.length}**`);
-  if (cumplimiento && cumplimiento.total > 0) {
+  if (cumplimiento && cumplimiento.totalConFecha > 0) {
     const c = cumplimiento;
-    l.push(`- Cumplimiento: **${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardías** (de ${c.total} con fecha)`);
+    l.push(
+      `- Cumplimiento: **${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardías** (de ${c.totalConFecha} con fecha)`
+    );
   }
   return l;
 }

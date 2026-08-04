@@ -508,7 +508,9 @@ const PLAN_MUNDO = {
   id: "pq1",
   etiqueta: "inicial",
   created_at: iso("2026-03-21"),
-  baseline_confirmada_at: null,
+  // "Todo separado" (T3d): el mundo SELLÓ su línea base → tiene cumplimiento con
+  // la misma vara que el core (su Gantt incluido). Sin baseline, sería null.
+  baseline_confirmada_at: iso("2026-03-25"),
   dominio: "quality",
 };
 const CON_SUBPROYECTO: EntradaAnalytics = { ...CON_MUNDO, planesMundo: [PLAN_MUNDO] };
@@ -542,7 +544,19 @@ describe("analyticsDeMundo — el mundo medido con la vara del core (Fase 4.2)",
   });
 
   it("su cumplimiento es el de SUS ítems (1/1/1 de 3), nunca el del core", () => {
-    expect(m.cumplimiento).toMatchObject({ aTiempo: 1, adelantadas: 1, tardias: 1, total: 3 });
+    expect(m.cumplimiento).toMatchObject({ aTiempo: 1, adelantadas: 1, tardias: 1, totalConFecha: 3 });
+  });
+
+  it("T3d: es la capa COMPLETA (misma vara que el core) — trae el Gantt por etapa", () => {
+    // porEtapa en días desde el UNLOCK del mundo (03-20), no desde la chispa:
+    //   e1 (Q1,Q2): base [fb 04-10]=21; real [04-10,04-15]=[21,26]
+    //   e2 (Q3,Q4): base [fb 04-20, fb 04-25]=[31,36]; real [04-17]=28 (Q4 pendiente)
+    expect(m.cumplimiento!.porEtapa).toEqual([
+      { etapa: 1, baseInicio: 21, baseFin: 21, realInicio: 21, realFin: 26 },
+      { etapa: 2, baseInicio: 31, baseFin: 36, realInicio: 28, realFin: 28 },
+    ]);
+    // el resumen ligero (CumplimientoDominio) NO tenía porEtapa ni dominio propio
+    expect(m.cumplimiento).not.toHaveProperty("dominio");
   });
 
   it("un mundo abierto no reporta cierre", () => {

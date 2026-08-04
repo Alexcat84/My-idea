@@ -170,13 +170,20 @@ const MUNDO: AnalyticsMundo = {
     planVigenteAt: "2026-04-15T12:00:00Z",
     diasDeVidaPlanVigente: 16,
   },
+  // "Todo separado" (T3d): la capa COMPLETA del mundo (misma forma que la del
+  // core), no ya el resumen ligero por dominio. Mismos números del cumplimiento.
   cumplimiento: {
-    dominio: "quality",
     aTiempo: 2,
     adelantadas: 0,
     tardias: 2,
-    total: 4,
+    totalConFecha: 4,
+    pctATiempo: 50,
+    pctAdelantadas: 0,
+    pctTardias: 50,
     desviacionMediaDias: 5.5,
+    replanificaciones: 1,
+    desviacionVsInicialDias: 5.5,
+    porEtapa: [],
     tardiasTop: [{ texto: "Escribe tu protocolo de curado", etapa: 1, diasRetraso: 9 }],
     replanificados: [{ texto: "Compra el termómetro", etapa: 2 }],
   },
