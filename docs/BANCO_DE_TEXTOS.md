@@ -412,9 +412,13 @@ desconocer la razón.
     única lectura de la idea entera es el Expediente, y su broche es la secuencia global.
   - **"Tu recorrido" queda reservado** al árbol de conceptos ("Construido con tu
     recorrido"); la línea de hitos se llama **"Tu avance"** para no chocar.
-  - **El precio al frente sobre el gratis:** las tarjetas de mundo lideran con su precio
-    ("su plan: N créditos"); el diagnóstico es la **rampa gratis**, no el titular. Murió
-    "Explóralo gratis".
+  - **El precio se dice al GENERAR, no al invitar a explorar (ago 2026, recorrido del
+    fundador):** el hub "por explorar" de un mundo ya **NO** lleva la nota "empieza con un
+    diagnóstico gratis · su plan: N créditos" (salió de TODOS los mundos); solo la puerta
+    **"Explorar este mundo"**. El costo del plan aparece cuando se **va a generar** (la
+    compuerta "Esto usará N créditos de tu saldo"), donde es accionable. (Historia: antes
+    el precio iba al frente sobre el gratis; murió "Explóralo gratis"; ahora el precio no
+    lidera la invitación, solo la decisión de pagar.)
   **Por qué:** antes todo se apilaba en una sola vista (scroll abrumador) y el clic en un
   mundo caía en el core. Separar en espacios + caras da a cada idea/mundo su expediente
   legible. **Qué NO cambia:** la cara "manos" es el comportamiento de siempre (aditivo);

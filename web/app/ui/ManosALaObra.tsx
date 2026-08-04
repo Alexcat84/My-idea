@@ -1881,14 +1881,10 @@ export function ManosALaObra({
                 </div>
               ) : (
                 <div className="mt-4">
-                  {/* En el hub, el precio del plan al frente y EN GRANDE; el
-                      diagnóstico es la rampa gratis. Apilado, la nota compacta. */}
-                  {esHub && (
-                    <p className="mb-3 text-[13.5px] leading-relaxed text-dim">
-                      Empieza con un diagnóstico <span className="font-semibold text-done">gratis</span>. Su plan cuesta{" "}
-                      <span className="text-xl font-bold text-ink tabular-nums">{PRECIOS.mundo_activar}</span> créditos.
-                    </p>
-                  )}
+                  {/* "Por explorar": solo la puerta al diagnóstico. El precio del
+                      plan se dice cuando SE VA A GENERAR (la compuerta "Esto usará
+                      N créditos"), no en la invitación a explorar (decisión del
+                      fundador): el texto de precio/gratis salió de aquí. */}
                   <button
                     onClick={() => arrancarMundo(mundo.dominio)}
                     disabled={arrancandoMundo !== null}
@@ -1896,11 +1892,6 @@ export function ManosALaObra({
                   >
                     {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo"}
                   </button>
-                  {!esHub && (
-                    <p className="mt-2 text-[12.5px] text-dim">
-                      Empieza con un diagnóstico gratis · su plan: {PRECIOS.mundo_activar} créditos
-                    </p>
-                  )}
                 </div>
               )}
 
