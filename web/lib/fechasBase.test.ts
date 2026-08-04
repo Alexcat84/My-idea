@@ -13,7 +13,8 @@
 //     Sem del 16-mar: lun 16 ... vie 20
 //     Sem del 23-mar: lun 23 ... vie 27
 import { describe, expect, it } from "vitest";
-import { cadenciaRealSemanas, diaDominante, sugerirFechasBase } from "./fechasBase";
+import { cadenciaRealSemanas, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "./fechasBase";
+import { isoDesdeInputLocal } from "./fechas";
 
 const BASE = "2026-03-02T10:00:00"; // lunes 2 de marzo 2026, local
 
@@ -137,5 +138,64 @@ describe("sugerirFechasBase — la cadencia aprendida espacia las etapas", () =>
     // etapa 2 -> viernes de la semana +6 = 2026-04-17
     const r = sugerirFechasBase({ planCreatedAt: "2026-03-05T12:00:00Z", items, cadenciaSemanas: 3 });
     expect(r.map((f) => f.fecha)).toEqual(["2026-03-27", "2026-04-17"]);
+  });
+});
+
+// martes 4-ago-2026; su semana ISO = lun 3 – dom 9 de agosto.
+const HOY = new Date("2026-08-04T10:00:00");
+const fb = (d: string) => isoDesdeInputLocal(d); // fecha_base como la persiste la app
+
+describe("chapaEstaSemana (adjudicación ago 2026): la chapa 'esta semana' honesta", () => {
+  it("modo a-mi-ritmo: atada a `destacado` (señal de arranque, sin claim de fecha)", () => {
+    expect(chapaEstaSemana("ritmo", { destacado: true, fecha_base: null }, HOY)).toBe(true);
+    expect(chapaEstaSemana("ritmo", { destacado: false, fecha_base: null }, HOY)).toBe(false);
+    // aunque tuviera una fecha de otra semana, en a-mi-ritmo manda `destacado`.
+    expect(chapaEstaSemana("ritmo", { destacado: true, fecha_base: fb("2026-08-31") }, HOY)).toBe(true);
+  });
+
+  it("modo fechas: SOLO si la fecha vigente cae en la semana ISO actual", () => {
+    // lunes 3-ago (destacada) y viernes 7-ago (regular) están en la semana de hoy.
+    expect(chapaEstaSemana("fechas", { destacado: true, fecha_base: fb("2026-08-03") }, HOY)).toBe(true);
+    expect(chapaEstaSemana("fechas", { destacado: false, fecha_base: fb("2026-08-07") }, HOY)).toBe(true);
+    // sin fecha vigente → no hay claim de semana.
+    expect(chapaEstaSemana("fechas", { destacado: true, fecha_base: null }, HOY)).toBe(false);
+  });
+
+  it("modo fechas: la destacada de una ETAPA FUTURA no lleva chapa (el choque de hoy)", () => {
+    // lunes 10-ago = semana que viene: `destacado` no basta, la fecha manda → sin chapa.
+    expect(chapaEstaSemana("fechas", { destacado: true, fecha_base: fb("2026-08-10") }, HOY)).toBe(false);
+  });
+});
+
+describe("ordenarEnFechas (adjudicación ago 2026): en modo fechas, por fecha vigente asc", () => {
+  it("el caso del fundador: 5 al viernes + 1 al lunes → la del lunes PRIMERA", () => {
+    // los 5 regulares comparten el viernes 7-ago; la destacada es el lunes 3-ago
+    // (llega la ÚLTIMA por el orden del plan, pero su fecha es la más temprana).
+    const items = [
+      { id: "r1", fecha_base: fb("2026-08-07") },
+      { id: "r2", fecha_base: fb("2026-08-07") },
+      { id: "r3", fecha_base: fb("2026-08-07") },
+      { id: "r4", fecha_base: fb("2026-08-07") },
+      { id: "r5", fecha_base: fb("2026-08-07") },
+      { id: "dest", fecha_base: fb("2026-08-03") },
+    ];
+    expect(ordenarEnFechas(items).map((i) => i.id)).toEqual(["dest", "r1", "r2", "r3", "r4", "r5"]);
+  });
+
+  it("desempate ESTABLE por el orden del plan (fechas iguales conservan su orden)", () => {
+    const items = [
+      { id: "a", fecha_base: fb("2026-08-07") },
+      { id: "b", fecha_base: fb("2026-08-07") },
+      { id: "c", fecha_base: fb("2026-08-07") },
+    ];
+    expect(ordenarEnFechas(items).map((i) => i.id)).toEqual(["a", "b", "c"]);
+  });
+
+  it("un ítem SIN fecha va al final", () => {
+    const items = [
+      { id: "sinf", fecha_base: null },
+      { id: "conf", fecha_base: fb("2026-08-07") },
+    ];
+    expect(ordenarEnFechas(items).map((i) => i.id)).toEqual(["conf", "sinf"]);
   });
 });

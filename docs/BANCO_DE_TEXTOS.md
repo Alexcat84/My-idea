@@ -318,6 +318,16 @@ desconocer la razón.
   (base = min→max de fecha_base; real = min→max de completed_at); la cadena
   queda solo como fallback para etapas sin fechas. Mismo trato en pantalla y en
   el PDF (comparten cálculo).
+  - **Reafirmado en el SUGERIDOR de fechas (adjudicación fundador+auditor, 2026-08-04):**
+    el sugeridor pone a TODOS los ítems regulares de una etapa el MISMO día (el
+    viernes de su semana). La fecha es el **compromiso de entrega de la etapa**, no
+    una agenda diaria; **escalonarla sería precisión inventada**. NO se toca. Si la
+    beta muestra confusión con el viernes compartido, la palanca es de **presentación
+    (Design)**, jamás del sugeridor. Lo que SÍ se corrigió en la misma adjudicación
+    (bugs, no doctrina): la chapa **"esta semana" honesta** (en modo fechas aparece
+    solo si la fecha vigente cae en la semana ISO actual; en a-mi-ritmo sigue atada a
+    `destacado`) y el **orden por fecha vigente** dentro de la etapa en modo fechas
+    (la destacada del lunes sube al frente; en a-mi-ritmo, orden del plan intacto).
 - **Catálogo congruente — packs y paquetes son el MISMO número (jul 2026).**
   Los precios unitarios suben a múltiplos de 5 para que cada pack ES un paquete
   real de trabajo, narrable en una línea: *"Tu plan: 10 créditos. Todo lo demás:

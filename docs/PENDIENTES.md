@@ -80,6 +80,13 @@ extraer `capaCumplimientoDe`. **Pendiente SOLO la calibración visual de Design 
     **seis tarjetas hermanas** (`TarjetaAcceso` uniforme), el **calendario etiquetado**
     `[Espacio]`, y los **documentos en dos recuadros**. El front no espera a Design: lo que
     CD calibre se aplica encima. Pares en `web/examples/gate-canon/` (`espacios_*`).
+- **NOTA (no pedido) — el "viernes compartido" del sugeridor de fechas:** en modo
+  fechas, todos los ítems regulares de una etapa caen el mismo día (el viernes de su
+  semana): es **doctrina** (la fecha es el compromiso de entrega de la etapa, no una
+  agenda diaria — BANCO §7.1). Si en la beta el fundador ve confusión con ese día
+  compartido, la palanca es **de presentación (CD)** —agrupar, un encabezado de
+  "entrega de la etapa", lo que sea visual— **jamás del sugeridor** (escalonar sería
+  precisión inventada). Se anota aquí para tenerlo a mano; NO es un encargo abierto.
 - **PDF Expediente · interiores (DIFERIDO post-beta):** el diseño YA existe
   (`_entrega-claude-design/Entrega-desing 20260729/entrega2/pdf-expediente-interiores/`:
   Tus Números, un mundo, "Cómo te fue", "La secuencia de tu viaje"). **Cuando sea el
