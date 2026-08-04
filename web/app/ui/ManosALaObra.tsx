@@ -117,9 +117,13 @@ interface Props {
   checklist: ChecklistData;
   historial: PlanHistorial[];
   mundos: MundoInfo[];
-  /** Fase 3.8: modo del camino; null hasta la primera elección. */
+  /** Fase 3.8: modo del camino del CORE; null hasta la primera elección. */
   modoCamino: ModoCamino | null;
-  /** el PATCH /modo respondió: el padre refresca su copia del modo */
+  /** "Todo separado" (T3c): el modo POR ESPACIO (mapa dominio→modo, migration
+   * 032). El hub del mundo lee de aquí su propio modo; el core sigue por
+   * modoCamino (dual-read en el padre). */
+  modos: Record<string, ModoCamino>;
+  /** el PATCH /modo respondió: el padre refresca su copia del modo del CORE */
   onModoCambiado: (modo: ModoCamino) => void;
   /** tras confirmar la línea base: el padre recarga el checklist entero */
   onRecargarChecklist: () => void;
@@ -889,6 +893,103 @@ function IconoCara({ cara }: { cara: Cara }) {
   );
 }
 
+/**
+ * "Todo separado" (T3c): el modo del camino + ritual de fechas de UN espacio
+ * (el core o un mundo). Misma experiencia scopeada: el selector, el ritual de
+ * línea base, y el estado "fechas activas / pospuesta" — todo del `dominio`
+ * que se le pase. Antes vivía embebido en el bloque del core; extraído para
+ * que el hub del mundo lo renderice idéntico con SU contexto (grupos, plan,
+ * modo). El estado (mostrarSelector/recalcular/pospuesto) es del espacio en
+ * pantalla — ManosALaObra scopea una sola vista, así que uno basta.
+ */
+function PanelModoFechas({
+  dominio,
+  modo,
+  planId,
+  hayFechas,
+  grupos,
+  cadenciaSemanas,
+  tieneTareasConFecha,
+  mostrarSelector,
+  guardandoModo,
+  guardandoBaseline,
+  errorBaseline,
+  recalcularPendientes,
+  pospuesto,
+  onElegir,
+  onConfirmar,
+  onPosponer,
+  onPonerFechas,
+  onRecalcular,
+  onDescargarIcs,
+}: {
+  dominio: string;
+  modo: ModoCamino | null;
+  planId: string | null;
+  hayFechas: boolean;
+  grupos: GrupoRitual[];
+  cadenciaSemanas: number;
+  tieneTareasConFecha: boolean;
+  mostrarSelector: boolean;
+  guardandoModo: boolean;
+  guardandoBaseline: boolean;
+  errorBaseline: string | null;
+  recalcularPendientes: boolean;
+  pospuesto: boolean;
+  onElegir: (dominio: string, modo: ModoCamino) => void;
+  onConfirmar: (planId: string, fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) => void;
+  onPosponer: () => void;
+  onPonerFechas: () => void;
+  onRecalcular: () => void;
+  onDescargarIcs: () => void;
+}) {
+  return (
+    <>
+      {/* la elección del modo: primera entrada (modo null) o al tocar "cambiar" */}
+      {(modo === null || mostrarSelector) && (
+        <TarjetaModo ocupado={guardandoModo} onElegir={(m) => onElegir(dominio, m)} />
+      )}
+
+      {/* ritual de la línea base (modo fechas) — SOLO de este espacio (B5) */}
+      {modo === "fechas" && planId && (recalcularPendientes || (!hayFechas && !pospuesto)) && (
+        <RitualFechas
+          grupos={grupos}
+          cadenciaSemanas={cadenciaSemanas}
+          soloPendientes={recalcularPendientes}
+          guardando={guardandoBaseline}
+          error={errorBaseline}
+          onAceptar={(fechas) => onConfirmar(planId, fechas)}
+          onPosponer={onPosponer}
+        />
+      )}
+
+      {/* fechas ya puestas: pospuesta (reabrir) o activas (recalcular) */}
+      {modo === "fechas" && planId && !recalcularPendientes && !hayFechas && pospuesto && (
+        <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
+          <p className="text-[13px] text-dim">Sin fechas no podré recordarte nada.</p>
+          <BotonMini onClick={onPonerFechas}>Poner fechas ahora</BotonMini>
+        </div>
+      )}
+      {modo === "fechas" && planId && !recalcularPendientes && hayFechas && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
+          <p className="text-[13px] text-dim">
+            <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            {/* Calendario Nivel 0: las fechas pendientes de ESTE espacio al .ics */}
+            {tieneTareasConFecha && (
+              <BotonMini onClick={onDescargarIcs} tono="accent">
+                Añadir a mi calendario
+              </BotonMini>
+            )}
+            <BotonMini onClick={onRecalcular}>Recalcular pendientes</BotonMini>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export function ManosALaObra({
   projectId,
   planMd,
@@ -897,6 +998,7 @@ export function ManosALaObra({
   historial,
   mundos,
   modoCamino,
+  modos,
   onModoCambiado,
   onRecargarChecklist,
   onVerAnalisis,
@@ -943,6 +1045,13 @@ export function ManosALaObra({
   // COMPACTO ("Modo: a mi ritmo · cambiar"); el selector grande solo aparece en
   // la primera entrada (modoCamino===null) o cuando el usuario toca "cambiar".
   const [mostrarSelectorModo, setMostrarSelectorModo] = useState(false);
+  // "Todo separado" (T3c): copia local del modo POR ESPACIO para reflejar al
+  // instante el modo que un MUNDO acaba de elegir en su hub (el core sigue por
+  // modoCamino, refrescado por el padre vía onModoCambiado). Se resincroniza si
+  // el padre recarga y trae otro mapa.
+  const [modosLocal, setModosLocal] = useState<Record<string, ModoCamino>>(modos);
+  useEffect(() => setModosLocal(modos), [modos]);
+  const modoDeMundo = (dominio: string): ModoCamino | null => modosLocal[dominio] ?? null;
   // Fase 3.8 §4 — ritual de la línea base
   // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
   // real por etapa la calcula analytics.ts (§6: la única calculadora del
@@ -1064,13 +1173,14 @@ export function ManosALaObra({
   const tareasConFecha = itemsCore
     .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
     .map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, fechaBase: i.fecha_base! }));
-  function descargarCalendario() {
-    const ics = generarIcs({ nombreIdea: tituloPlan ?? "Mi idea", tareas: tareasConFecha });
+  // Calendario .ics de UN espacio (T3c: cada espacio se lleva SUS fechas).
+  function descargarIcsDe(tareas: Array<{ id: string; texto: string; etapa: number; fechaBase: string }>, nombre: string) {
+    const ics = generarIcs({ nombreIdea: nombre, tareas });
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${(tituloPlan ?? "mi-idea").replace(/[^\p{L}\p{N}]+/gu, "-").slice(0, 40) || "mi-idea"}-calendario.ics`;
+    a.download = `${nombre.replace(/[^\p{L}\p{N}]+/gu, "-").slice(0, 40) || "mi-idea"}-calendario.ics`;
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -1100,7 +1210,9 @@ export function ManosALaObra({
       // Reactivar fechas reabre el ritual (si aún no hay ninguna puesta).
       if (modo === "fechas") setPospuesto(false);
       setMostrarSelectorModo(false);
-      onModoCambiado(modo);
+      // El core lo refresca el padre (dual-read); el mundo, la copia local.
+      if (dominio === ESPACIO_CORE) onModoCambiado(modo);
+      else setModosLocal((prev) => ({ ...prev, [dominio]: modo }));
     } catch {
       setError("no pudimos guardar tu elección; revisa tu internet e intenta de nuevo");
     } finally {
@@ -1352,52 +1464,32 @@ export function ManosALaObra({
         {coreEnEspacio && cara === "avance" && <LineaAvance hitos={hitosCore} />}
         {(!coreEnEspacio || cara === "manos") && (
           <>
-        {/* Fase 3.8 §3 — la elección del modo: primera entrada (modoCamino null)
-            o cuando el usuario toca "cambiar". */}
-        {(modoCamino === null || mostrarSelectorModo) && (
-          <TarjetaModo ocupado={guardandoModo} onElegir={(modo) => elegirModo(ESPACIO_CORE, modo)} />
-        )}
-
-        {/* Fase 3.8 §4 — ritual de la línea base (modo fechas) — SOLO del core (B5) */}
-        {modoCamino === "fechas" && core && (recalcularPendientes || (!hayFechas && !pospuesto)) && (
-          <RitualFechas
-            grupos={gruposRitual}
-            cadenciaSemanas={cadenciaSemanas}
-            soloPendientes={recalcularPendientes}
-            guardando={guardandoBaseline}
-            error={errorBaseline}
-            onAceptar={(fechas) => confirmarBaseline(core.plan_id, fechas)}
-            onPosponer={() => {
-              setPospuesto(true);
-              setRecalcularPendientes(false);
-            }}
-          />
-        )}
-
-        {/* fechas ya puestas: pospuesta (reabrir) o activas (recalcular) */}
-        {modoCamino === "fechas" && core && !recalcularPendientes && !hayFechas && pospuesto && (
-          <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
-            <p className="text-[13px] text-dim">Sin fechas no podré recordarte nada.</p>
-            <BotonMini onClick={() => setPospuesto(false)}>Poner fechas ahora</BotonMini>
-          </div>
-        )}
-        {modoCamino === "fechas" && core && !recalcularPendientes && hayFechas && (
-          <div className="flex flex-wrap items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
-            <p className="text-[13px] text-dim">
-              <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
-            </p>
-            <div className="flex flex-wrap items-center gap-2">
-              {/* Calendario Nivel 0: lleva las fechas pendientes al calendario del
-                  teléfono (.ics), que se encarga del recordatorio. */}
-              {tareasConFecha.length > 0 && (
-                <BotonMini onClick={descargarCalendario} tono="accent">
-                  Añadir a mi calendario
-                </BotonMini>
-              )}
-              <BotonMini onClick={() => setRecalcularPendientes(true)}>Recalcular pendientes</BotonMini>
-            </div>
-          </div>
-        )}
+        {/* "Todo separado" (T3c): el modo + ritual del CORE, con el panel común
+            scopeado a su espacio (mismo componente que usa el hub del mundo). */}
+        <PanelModoFechas
+          dominio={ESPACIO_CORE}
+          modo={modoCamino}
+          planId={core?.plan_id ?? null}
+          hayFechas={hayFechas}
+          grupos={gruposRitual}
+          cadenciaSemanas={cadenciaSemanas}
+          tieneTareasConFecha={tareasConFecha.length > 0}
+          mostrarSelector={mostrarSelectorModo}
+          guardandoModo={guardandoModo}
+          guardandoBaseline={guardandoBaseline}
+          errorBaseline={errorBaseline}
+          recalcularPendientes={recalcularPendientes}
+          pospuesto={pospuesto}
+          onElegir={elegirModo}
+          onConfirmar={confirmarBaseline}
+          onPosponer={() => {
+            setPospuesto(true);
+            setRecalcularPendientes(false);
+          }}
+          onPonerFechas={() => setPospuesto(false)}
+          onRecalcular={() => setRecalcularPendientes(true)}
+          onDescargarIcs={() => descargarIcsDe(tareasConFecha, tituloPlan ?? "Mi idea")}
+        />
 
         {/* ritual de continuación (3 tarjetas) */}
         {ritual && (
@@ -1478,6 +1570,18 @@ export function ManosALaObra({
           const items = grupo?.etapas.flatMap((e) => e.items) ?? [];
           const c = conteo(items);
           const titulosMundo = mundo.plan ? titulosDeEtapas(mundo.plan.contenido_md) : {};
+          // "Todo separado" (T3c): el contexto de modo/fechas de ESTE mundo (su
+          // plan, su modo, sus fechas) para su propio ritual — idéntico al del
+          // core, scopeado. El ancla del sugeridor es el created_at de SU plan.
+          const modoMundo = modoDeMundo(mundo.dominio);
+          const hayFechasMundo = items.some((i) => i.fecha_base);
+          const gruposMundo: GrupoRitual[] =
+            grupo && mundo.plan
+              ? [{ dominio: mundo.dominio, nombre: mundo.nombre, planCreatedAt: mundo.plan.created_at, titulos: titulosMundo, items }]
+              : [];
+          const tareasMundo = items
+            .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
+            .map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, fechaBase: i.fecha_base! }));
           const completado = Boolean(mundo.completadoAt);
           // En SU hub (soloMundo === este dominio) la sección es la PANTALLA
           // entera: sin marco de tarjeta y con el nombre como título grande.
@@ -1569,7 +1673,44 @@ export function ManosALaObra({
                       </div>
                     )}
                     {cara === "manos" && (
-                      <div className="mt-4">
+                      <div className="mt-4 flex flex-col gap-4">
+                        {/* "Todo separado" (T3c): el mundo invita a SU propio
+                            modo/fechas como el core — misma experiencia scopeada,
+                            no la arrastra el ritual del core (B5). */}
+                        {modoMundo !== null && !mostrarSelectorModo && (
+                          <p className="flex flex-wrap items-center gap-2 text-[13px] text-dim">
+                            <span>
+                              Modo: <span className="font-semibold text-ink">{modoMundo === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
+                            </span>
+                            <BotonMini onClick={() => setMostrarSelectorModo(true)} tono="accent">
+                              cambiar
+                            </BotonMini>
+                          </p>
+                        )}
+                        <PanelModoFechas
+                          dominio={mundo.dominio}
+                          modo={modoMundo}
+                          planId={grupo?.plan_id ?? null}
+                          hayFechas={hayFechasMundo}
+                          grupos={gruposMundo}
+                          cadenciaSemanas={cadenciaSemanas}
+                          tieneTareasConFecha={tareasMundo.length > 0}
+                          mostrarSelector={mostrarSelectorModo}
+                          guardandoModo={guardandoModo}
+                          guardandoBaseline={guardandoBaseline}
+                          errorBaseline={errorBaseline}
+                          recalcularPendientes={recalcularPendientes}
+                          pospuesto={pospuesto}
+                          onElegir={elegirModo}
+                          onConfirmar={confirmarBaseline}
+                          onPosponer={() => {
+                            setPospuesto(true);
+                            setRecalcularPendientes(false);
+                          }}
+                          onPonerFechas={() => setPospuesto(false)}
+                          onRecalcular={() => setRecalcularPendientes(true)}
+                          onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre)}
+                        />
                         <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                       </div>
                     )}
