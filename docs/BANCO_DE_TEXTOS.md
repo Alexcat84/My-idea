@@ -357,6 +357,10 @@ desconocer la razón.
   con operación propia, y se navega como **pestañas-fichero** (folders con icono +
   nombre). Dentro de cada espacio, un **selector segmentado** (píldora) separa tres
   CARAS y se ve **una a la vez**: **Plan** · **Manos a la obra** · **Tu avance**.
+  - **CIERRE — la campaña "todo separado" cerró el 2026-08-04.** El modelo final es el
+    del veredicto del fundador: **el núcleo es el corazón, cada mundo su espejo completo, y
+    la única vista global es el Expediente.** (Frente T3c-2..T7 en producción; tag
+    `web-v2.2.0-beta`. El detalle de la regla, abajo.)
   - **Regla "TODO SEPARADO" (veredicto del fundador, ago 2026 — anula la Opción A de la
     Fase 3):** **cada espacio se mide, registra y documenta SOLO**, con sus indicadores;
     **cero mezcla de medidas**. El proyecto principal ("Tu viaje") es el centro; los
