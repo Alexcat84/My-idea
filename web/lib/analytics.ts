@@ -206,6 +206,12 @@ export interface CapaCumplimiento {
   porDominio: CumplimientoDominio[];
 }
 
+/** La capa de cumplimiento de UN espacio (el core o un mundo) SIN el desglose
+ * cross-dominio `porDominio` (que es del proyecto entero). Es exactamente lo que
+ * devuelve capaCumplimientoDe: un mundo la tiene IDÉNTICA al core —su Gantt de
+ * ventanas honestas incluido (`porEtapa`)— salvo esa fila. "Todo separado" (T3d). */
+export type CapaCumplimientoEspacio = Omit<CapaCumplimiento, "porDominio">;
+
 export interface Analytics {
   universal: CapaUniversal;
   cumplimiento: CapaCumplimiento | null;
@@ -432,7 +438,10 @@ export function capaUniversalDe(
 export interface AnalyticsMundo {
   dominio: string;
   universal: CapaUniversal;
-  cumplimiento: CumplimientoDominio | null;
+  /** "Todo separado" (T3d): la capa COMPLETA del mundo (misma vara que el core,
+   * con su Gantt `porEtapa`), no ya el resumen ligero por dominio. Solo con
+   * baseline confirmada del propio mundo; si no, null. */
+  cumplimiento: CapaCumplimientoEspacio | null;
   completadoAt: string | null;
   cierreMotivo: string | null;
 }
@@ -453,16 +462,106 @@ export function analyticsDeMundo(entrada: EntradaAnalytics, dominio: string): An
   // El mundo cierra cuando el usuario lo cierra; si la IDEA entera se cerró
   // antes, ese es su horizonte. Un mundo abierto se mide hasta hoy.
   const fin = mundo.completado_at ?? entrada.realizadaAt ?? ahora;
+  // "Todo separado" (T3d): el cumplimiento del MUNDO con la MISMA vara que el
+  // core (capaCumplimientoDe → su Gantt de ventanas honestas), SOLO si SU plan
+  // tiene baseline confirmada. El día-0 del Gantt es el nacimiento del mundo
+  // (unlocked_at), igual que el ancla de su capa universal.
+  const baselinePlan = planBaselineVigente(planes);
+  const cumplimiento = baselinePlan
+    ? capaCumplimientoDe(
+        items.filter((i) => i.plan_id === baselinePlan.id),
+        mundo.unlocked_at
+      )
+    : null;
   return {
     dominio,
     universal: capaUniversalDe(items, planes, mundo.unlocked_at, fin, 0),
-    cumplimiento: cumplimientoPorDominio(items)[0] ?? null,
+    cumplimiento,
     completadoAt: mundo.completado_at ?? null,
     cierreMotivo: mundo.cierre_motivo ?? null,
   };
 }
 
 const ETIQUETAS_CICLO_PLAN = ["inicial", "completo", "seguimiento"];
+
+/**
+ * La CAPA DE CUMPLIMIENTO de un tramo (T3 "todo separado"): extraída VERBATIM del
+ * cuerpo de calcularAnalytics para que un MUNDO se mida con la MISMA vara que el
+ * core — su Gantt de ventanas honestas, sus tardías, sus replanificaciones.
+ * Recibe los ítems del plan BASELINE del tramo (`delPlan`) y su `chispa` (día-0).
+ * Devuelve TODO menos `porDominio` (cross-dominio, de proyecto): lo añade el
+ * llamador. El gate de política (solo con baseline confirmada) también es del
+ * llamador. Golden: la salida del núcleo NO cambia (analytics.test.ts).
+ */
+export function capaCumplimientoDe(delPlan: ItemAnalytics[], chispa: string): Omit<CapaCumplimiento, "porDominio"> {
+  const conFecha = delPlan.filter((i) => i.completed_at && i.fecha_base);
+  let aTiempo = 0;
+  let adelantadas = 0;
+  let tardias = 0;
+  let sumaDesv = 0;
+  for (const it of conFecha) {
+    const clase = clasificarCumplimiento(it.completed_at!, it.fecha_base!);
+    if (clase === "a_tiempo") aTiempo += 1;
+    else if (clase === "adelantada") adelantadas += 1;
+    else tardias += 1;
+    sumaDesv += difDias(it.fecha_base!, it.completed_at!);
+  }
+  const total = conFecha.length;
+  const pct = (n: number) => (total > 0 ? Math.round((n / total) * 100) : 0);
+
+  // Barras GANTT por etapa — VENTANAS HONESTAS (Fase 4.6.2): la ventana de cada
+  // etapa = [min,max] de sus PROPIAS fechas (base = fecha_base activas; real =
+  // completed_at). La cadena es solo el fallback de etapas sin fecha_base (su
+  // barra base no se dibuja, baseFin null). Los traslapes se pintan tal cual.
+  const etapas = [...new Set(delPlan.map((i) => i.etapa))].sort((a, b) => a - b);
+  const enDias = (iso: string) => Math.max(0, dias(chispa, iso));
+  const ventana = (isos: string[]): { ini: number; fin: number } | null => {
+    const ds = isos.map(enDias);
+    return ds.length ? { ini: Math.min(...ds), fin: Math.max(...ds) } : null;
+  };
+  let cadenaBase = 0;
+  const porEtapa = etapas.map((etapa) => {
+    const activos = delPlan.filter((i) => i.etapa === etapa && i.estado !== "no_aplica");
+    const base = ventana(activos.map((i) => i.fecha_base).filter((f): f is string => Boolean(f)));
+    const real = ventana(activos.map((i) => i.completed_at).filter((c): c is string => Boolean(c)));
+    let baseInicio: number;
+    let baseFin: number | null;
+    if (base) {
+      baseInicio = base.ini;
+      baseFin = base.fin;
+      cadenaBase = base.fin;
+    } else {
+      baseInicio = cadenaBase;
+      baseFin = null;
+    }
+    return { etapa, baseInicio, baseFin, realInicio: real ? real.ini : null, realFin: real ? real.fin : null };
+  });
+
+  return {
+    aTiempo,
+    adelantadas,
+    tardias,
+    totalConFecha: total,
+    pctATiempo: pct(aTiempo),
+    pctAdelantadas: pct(adelantadas),
+    pctTardias: pct(tardias),
+    desviacionMediaDias: total > 0 ? Math.round((sumaDesv / total) * 10) / 10 : 0,
+    replanificaciones: delPlan.filter((i) => i.fecha_base_original).length,
+    desviacionVsInicialDias:
+      total > 0
+        ? Math.round(
+            (conFecha.reduce((s, it) => s + difDias(it.fecha_base_original ?? it.fecha_base!, it.completed_at!), 0) / total) * 10
+          ) / 10
+        : 0,
+    porEtapa,
+    tardiasTop: conFecha
+      .filter((i) => clasificarCumplimiento(i.completed_at!, i.fecha_base!) === "tardia")
+      .map((i) => ({ texto: i.texto ?? "", etapa: i.etapa, diasRetraso: Math.round(difDias(i.fecha_base!, i.completed_at!)) }))
+      .sort((a, b) => b.diasRetraso - a.diasRetraso)
+      .slice(0, 5),
+    replanificados: delPlan.filter((i) => i.fecha_base_original).map((i) => ({ texto: i.texto ?? "", etapa: i.etapa })),
+  };
+}
 
 export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   const ahora = entrada.ahora ?? new Date().toISOString();
@@ -482,102 +581,9 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   const baselinePlan = planBaselineVigente(entrada.planesCore);
   if (baselinePlan) {
     const delPlan = itemsCore.filter((i) => i.plan_id === baselinePlan.id);
-    const conFecha = delPlan.filter((i) => i.completed_at && i.fecha_base);
-    let aTiempo = 0;
-    let adelantadas = 0;
-    let tardias = 0;
-    let sumaDesv = 0;
-    for (const it of conFecha) {
-      const clase = clasificarCumplimiento(it.completed_at!, it.fecha_base!);
-      if (clase === "a_tiempo") aTiempo += 1;
-      else if (clase === "adelantada") adelantadas += 1;
-      else tardias += 1;
-      sumaDesv += difDias(it.fecha_base!, it.completed_at!);
-    }
-    const total = conFecha.length;
-    const pct = (n: number) => (total > 0 ? Math.round((n / total) * 100) : 0);
-
-    // Barras GANTT por etapa — VENTANAS HONESTAS (Fase 4.6.2, hallazgo del
-    // fundador sobre el paralelismo). El usuario YA puede traslapar etapas
-    // (poner ítems de etapas distintas en fechas iguales o solapadas: no hay
-    // restricción, la cascada es opt-in), así que el Gantt debe DIBUJAR eso, no
-    // la secuencia que el motor SUGIRIÓ. Por eso la ventana de cada etapa sale
-    // de sus PROPIAS fechas:
-    //   base = [min, max] de fecha_base de sus ítems ACTIVOS,
-    //   real = [min, max] de completed_at.
-    // La cadena (inicio = fin de la anterior) queda SOLO como fallback para
-    // posicionar etapas SIN fecha_base, sin inventar ancho (su barra base no se
-    // dibuja). Los traslapes se pintan tal cual: dos barras solapadas son la
-    // verdad del plan del usuario, no un error. Ver BANCO §7.1.
-    const etapas = [...new Set(delPlan.map((i) => i.etapa))].sort((a, b) => a - b);
-    const enDias = (iso: string) => Math.max(0, dias(chispa, iso));
-    const ventana = (isos: string[]): { ini: number; fin: number } | null => {
-      const ds = isos.map(enDias);
-      return ds.length ? { ini: Math.min(...ds), fin: Math.max(...ds) } : null;
-    };
-    let cadenaBase = 0; // fin acumulado, SOLO para el fallback de etapas sin fecha
-    const porEtapa = etapas.map((etapa) => {
-      const activos = delPlan.filter((i) => i.etapa === etapa && i.estado !== "no_aplica");
-      const base = ventana(activos.map((i) => i.fecha_base).filter((f): f is string => Boolean(f)));
-      const real = ventana(activos.map((i) => i.completed_at).filter((c): c is string => Boolean(c)));
-      let baseInicio: number;
-      let baseFin: number | null;
-      if (base) {
-        baseInicio = base.ini;
-        baseFin = base.fin;
-        cadenaBase = base.fin; // avanza la cadena con la última etapa con fechas
-      } else {
-        // Fallback: sin fecha_base no hay ventana honesta. Se posiciona tras la
-        // anterior (cadena) y NO se dibuja barra base (baseFin null).
-        baseInicio = cadenaBase;
-        baseFin = null;
-      }
-      return {
-        etapa,
-        baseInicio,
-        baseFin,
-        realInicio: real ? real.ini : null,
-        realFin: real ? real.fin : null,
-      };
-    });
-
-    cumplimiento = {
-      aTiempo,
-      adelantadas,
-      tardias,
-      totalConFecha: total,
-      pctATiempo: pct(aTiempo),
-      pctAdelantadas: pct(adelantadas),
-      pctTardias: pct(tardias),
-      desviacionMediaDias: total > 0 ? Math.round((sumaDesv / total) * 10) / 10 : 0,
-      replanificaciones: delPlan.filter((i) => i.fecha_base_original).length,
-      // Capa de honestidad: desviación contra la fecha ORIGINAL (la que se
-      // congeló al replanificar; si nunca se movió, la vigente ES la original).
-      desviacionVsInicialDias:
-        total > 0
-          ? Math.round(
-              (conFecha.reduce((s, it) => s + difDias(it.fecha_base_original ?? it.fecha_base!, it.completed_at!), 0) /
-                total) *
-                10
-            ) / 10
-          : 0,
-      porEtapa,
-      // Las tardías que importan: mayor retraso primero, hasta 5.
-      tardiasTop: conFecha
-        .filter((i) => clasificarCumplimiento(i.completed_at!, i.fecha_base!) === "tardia")
-        .map((i) => ({
-          texto: i.texto ?? "",
-          etapa: i.etapa,
-          diasRetraso: Math.round(difDias(i.fecha_base!, i.completed_at!)),
-        }))
-        .sort((a, b) => b.diasRetraso - a.diasRetraso)
-        .slice(0, 5),
-      replanificados: delPlan
-        .filter((i) => i.fecha_base_original)
-        .map((i) => ({ texto: i.texto ?? "", etapa: i.etapa })),
-      // V3b: aqui SI entran los mundos, con TODOS los items del proyecto.
-      porDominio: cumplimientoPorDominio(entrada.items),
-    };
+    // La capa se calcula con la función extraída (misma vara para core y mundo);
+    // `porDominio` (cross-dominio, de proyecto) lo añade aquí el llamador.
+    cumplimiento = { ...capaCumplimientoDe(delPlan, chispa), porDominio: cumplimientoPorDominio(entrada.items) };
   }
 
   const hitos = construirHitos(entrada, ahora);
@@ -664,16 +670,18 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
  * universal (+ cumplimiento si lo tiene), con la MISMA vara del informe. Lo usan
  * la sección de un mundo en el expediente global y el Reporte de un mundo. Puro.
  */
-export function resumenEspacioMd(u: CapaUniversal, cumplimiento?: CumplimientoDominio | null): string[] {
+export function resumenEspacioMd(u: CapaUniversal, cumplimiento?: CapaCumplimientoEspacio | null): string[] {
   const l: string[] = [];
   l.push(`- Duración: **${u.duracionTotalDias} días**`);
   l.push(`- Acciones completadas: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}** activas`);
   l.push(`- Ritmo: **${u.ritmoAccionesPorSemana} acciones por semana**`);
   l.push(`- Racha más larga: **${u.rachaMasLargaDias} días**`);
   if (u.retiradas.length) l.push(`- Retiradas (no aplican): **${u.retiradas.length}**`);
-  if (cumplimiento && cumplimiento.total > 0) {
+  if (cumplimiento && cumplimiento.totalConFecha > 0) {
     const c = cumplimiento;
-    l.push(`- Cumplimiento: **${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardías** (de ${c.total} con fecha)`);
+    l.push(
+      `- Cumplimiento: **${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardías** (de ${c.totalConFecha} con fecha)`
+    );
   }
   return l;
 }

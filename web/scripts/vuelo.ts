@@ -1647,6 +1647,173 @@ async function gruposChecklist(cookie: string, projectId: string): Promise<Grupo
 const grupoVigenteDe = (grupos: GrupoChecklist[], dominio: string) =>
   grupos.filter((g) => g.dominio === dominio).at(-1);
 
+// ── Helpers de auditoría directa para "todo separado" (T3) ──
+/** plans.baseline_confirmada_at de UN plan (para el no-arrastre: ¿se selló o no?). */
+async function baselineDePlan(planId: string): Promise<string | null> {
+  const { data } = await supabaseAdmin.from("plans").select("baseline_confirmada_at").eq("id", planId).single();
+  return (data as { baseline_confirmada_at: string | null } | null)?.baseline_confirmada_at ?? null;
+}
+/** El modo de UN espacio en project_modos (core dual-lee projects.modo_camino). */
+async function modoDeEspacio(projectId: string, dominio: string): Promise<string | null> {
+  const { data } = await supabaseAdmin
+    .from("project_modos")
+    .select("modo_camino")
+    .eq("project_id", projectId)
+    .eq("dominio", dominio);
+  const fila = (data as Array<{ modo_camino: string }> | null)?.[0];
+  if (fila) return fila.modo_camino;
+  if (dominio === "core") {
+    const { data: p } = await supabaseAdmin.from("projects").select("modo_camino").eq("id", projectId).single();
+    return (p as { modo_camino: string | null } | null)?.modo_camino ?? null;
+  }
+  return null;
+}
+/** El mapa dominio→modo de todos los espacios (para ver los modos VIVOS a la vez). */
+async function todosLosModos(projectId: string): Promise<Record<string, string>> {
+  const { data } = await supabaseAdmin.from("project_modos").select("dominio, modo_camino").eq("project_id", projectId);
+  const map: Record<string, string> = {};
+  for (const r of (data as Array<{ dominio: string; modo_camino: string }> | null) ?? []) map[r.dominio] = r.modo_camino;
+  if (!map.core) {
+    const { data: p } = await supabaseAdmin.from("projects").select("modo_camino").eq("id", projectId).single();
+    const m = (p as { modo_camino: string | null } | null)?.modo_camino;
+    if (m) map.core = m;
+  }
+  return map;
+}
+
+// ---------------------------------------------------------------------------
+// Fase 2i-ter (T3 "todo separado"): el tiempo POR ESPACIO, de punta a punta.
+// La 2i probó el modo/baseline del CORE; la 2k/2L dieron fechas al mundo pero
+// por el camino VIEJO (bajo el plan del core). T3 separó las medidas: cada
+// espacio elige SU modo (project_modos con su dominio) y sella SU plan, y el
+// ritual del core dejó de arrastrar los mundos. Esta fase lo ejercita en vivo,
+// con conteos y asserts A MANO, y SIN una sola llamada al LLM (solo modo /
+// baseline / checklist / analisis sobre lo que las fases previas ya sembraron):
+//   1. El mundo con plan elige SU modo 'fechas' -> project_modos con su dominio,
+//      y su ritual sella SU plan (grupo.plan_id del mundo), no el del core.
+//   2. No-arrastre e2e: tocar el mundo NO mueve el modo ni la baseline del core.
+//   3. Tras sellar, el análisis del mundo trae SU capa de cumplimiento con
+//      porEtapa (el Gantt del mundo existe y sale de SUS ítems, no del core).
+//   4. Un mundo 'a mi ritmo' convive con el core 'con fechas' (modos VIVOS a la
+//      vez e independientes).
+//   5. Regresión del core: su ritual sigue sellando SOLO lo suyo (su baseline
+//      intacta tras todo el ciclo del mundo).
+// Usa risk_management (W1: ningún fase posterior lo toca -> seguro para sellar y
+// marcar) y quality (W2: solo su modo, sin tocar su checklist).
+// ---------------------------------------------------------------------------
+async function faseTodoSeparado(cookie: string, projectId: string) {
+  separador("FASE 2i-ter (T3 'todo separado'): modo/ritual/cumplimiento POR ESPACIO -- no-arrastre e2e");
+  const W1 = "risk_management"; // sella SU plan + marca sus ítems + su Gantt
+  const W2 = "quality"; //          solo su modo (convivencia), sin tocar su checklist
+
+  // Punto de partida conocido: el core en 'fechas' con SU baseline sellada (2i).
+  const rCore = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
+  if (rCore.modo_camino !== "fechas" || rCore.dominio !== "core") {
+    throw new Error(`/modo sin dominio debe devolver el core en fechas: ${JSON.stringify(rCore)}`);
+  }
+  const modoCoreAntes = await modoDeEspacio(projectId, "core");
+  const grupos0 = await gruposChecklist(cookie, projectId);
+  const gCore = grupoVigenteDe(grupos0, "core")!;
+  const gW1 = grupoVigenteDe(grupos0, W1);
+  if (!gW1) throw new Error(`el mundo ${W1} no tiene checklist: la fase 2g-ter debió dejarlo`);
+  const baselineCoreAntes = await baselineDePlan(gCore.plan_id);
+  if (!baselineCoreAntes) throw new Error("la fase 2i debió dejar la baseline del core sellada");
+  log("OK: partida -- core 'fechas' con baseline sellada; mundo con checklist propio.");
+
+  // ── 1. El mundo elige SU modo 'fechas' -> project_modos con SU dominio ──
+  const rW1modo = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas", dominio: W1 });
+  if (rW1modo.dominio !== W1 || rW1modo.modo_camino !== "fechas") {
+    throw new Error(`/modo del mundo no respondió con su dominio/fechas: ${JSON.stringify(rW1modo)}`);
+  }
+  if ((await modoDeEspacio(projectId, W1)) !== "fechas") {
+    throw new Error(`project_modos no guardó el modo 'fechas' de ${W1}`);
+  }
+
+  // ── 2. Su ritual sella SU plan (grupo.plan_id del MUNDO), no el del core ──
+  const itemsW1 = gW1.etapas.flatMap((e) => e.items);
+  if (itemsW1.length < 3) throw new Error(`el mundo ${W1} dejó ${itemsW1.length} ítems: pocos para el escenario`);
+  const dia = (o: number) => new Date(Date.now() + o * 86_400_000).toISOString();
+  const aFechar = itemsW1.slice(0, 3);
+  const BASES = [dia(-20), dia(-20), dia(-10)];
+  const rSeal = await postJson(cookie, `/api/project/${projectId}/baseline`, {
+    plan_id: gW1.plan_id, // el plan DEL MUNDO (T3c-2 sella por espacio), no el core
+    fechas: aFechar.map((it, k) => ({ item_id: it.id as string, fecha: BASES[k], origen: "sugerida" })),
+  });
+  if (!rSeal || (rSeal as { error?: string }).error) throw new Error(`/baseline del mundo falló: ${JSON.stringify(rSeal)}`);
+  if (!(await baselineDePlan(gW1.plan_id))) {
+    throw new Error(`el plan del mundo ${W1} no quedó sellado (baseline_confirmada_at nulo)`);
+  }
+  log(`OK: ${W1} selló SU propia baseline (plan ${gW1.plan_id}).`);
+
+  // ── no-arrastre e2e: el core NO se movió (ni modo ni baseline) ──
+  if ((await modoDeEspacio(projectId, "core")) !== modoCoreAntes) {
+    throw new Error("el modo del core cambió al tocar el mundo (arrastre)");
+  }
+  if ((await baselineDePlan(gCore.plan_id)) !== baselineCoreAntes) {
+    throw new Error("la baseline del core se re-selló al sellar el mundo (arrastre)");
+  }
+  log("OK: no-arrastre e2e -- sellar el mundo no tocó el modo ni la baseline del core.");
+
+  // ── 3. Completar sus ítems -> el análisis del mundo trae SU Gantt (porEtapa) ──
+  // A MANO: base -20, hecho -20 -> 0 A TIEMPO; base -20, hecho -12 -> +8 TARDÍA;
+  //         base -10, hecho -15 -> -5 ADELANTADA.  (1 / 1 / 1 de 3)
+  const REALES = [dia(-20), dia(-12), dia(-15)];
+  for (const [k, it] of aFechar.entries()) {
+    await patchJson(cookie, `/api/project/${projectId}/checklist`, {
+      item_id: it.id as string,
+      estado: "hecho",
+      completed_at: REALES[k],
+    });
+  }
+  type CumplMundo = {
+    porEtapa: Array<{ etapa: number; baseInicio: number; baseFin: number | null; realInicio: number | null; realFin: number | null }>;
+    aTiempo: number;
+    adelantadas: number;
+    tardias: number;
+    totalConFecha: number;
+  };
+  const an = (await getJson(cookie, `/api/project/${projectId}/analisis`)) as {
+    analytics: { mundos: Array<{ dominio: string; cumplimiento: CumplMundo | null }> };
+  };
+  const aW1 = an.analytics.mundos.find((m) => m.dominio === W1);
+  if (!aW1) throw new Error(`el análisis no trae el mundo ${W1}`);
+  const c = aW1.cumplimiento;
+  if (!c) throw new Error(`${W1} selló su baseline pero su cumplimiento es null (T3d roto)`);
+  if (!Array.isArray(c.porEtapa) || c.porEtapa.length === 0) {
+    throw new Error(`el cumplimiento de ${W1} no trae Gantt (porEtapa vacío): la capa ligera no tenía porEtapa`);
+  }
+  // Cada entrada del Gantt trae las 4 ventanas (base/real) medidas en días: es la
+  // capa COMPLETA del mundo, no el resumen ligero (que no tenía porEtapa).
+  for (const e of c.porEtapa) {
+    if (typeof e.etapa !== "number" || typeof e.baseInicio !== "number") {
+      throw new Error(`porEtapa del mundo malformado (sin ventanas honestas): ${JSON.stringify(e)}`);
+    }
+  }
+  if (c.aTiempo !== 1 || c.tardias !== 1 || c.adelantadas !== 1 || c.totalConFecha !== 3) {
+    throw new Error(`cumplimiento del mundo != cálculo a mano (1/1/1 de 3): ${JSON.stringify(c)}`);
+  }
+  log(`OK: el análisis de ${W1} trae SU capa completa -- Gantt de ${c.porEtapa.length} etapa(s), 1/1/1 de 3 (a mano).`);
+
+  // ── 4. Un mundo 'a mi ritmo' convive con el core 'con fechas' ──
+  const rW2 = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "ritmo", dominio: W2 });
+  if (rW2.dominio !== W2 || rW2.modo_camino !== "ritmo") {
+    throw new Error(`/modo de ${W2} no respondió 'ritmo': ${JSON.stringify(rW2)}`);
+  }
+  const modos = await todosLosModos(projectId);
+  if (modos.core !== "fechas" || modos[W1] !== "fechas" || modos[W2] !== "ritmo") {
+    throw new Error(`los tres modos no son independientes/vivos a la vez: ${JSON.stringify(modos)}`);
+  }
+  log(`OK: tres modos VIVOS e independientes -- core:fechas, ${W1}:fechas, ${W2}:ritmo.`);
+
+  // ── 5. Regresión del core: su ritual siguió sellando SOLO lo suyo ──
+  if ((await baselineDePlan(gCore.plan_id)) !== baselineCoreAntes) {
+    throw new Error("la baseline del core cambió al final: su ritual dejó de sellar solo lo suyo");
+  }
+  log("OK: el ritual del core sigue sellando solo el core (su baseline intacta tras el ciclo del mundo).");
+
+  return { costoUsd: 0 }; // sin LLM: solo modo/baseline/checklist/analisis
+}
+
 // ---------------------------------------------------------------------------
 // Fase 2L (Fase 4.2): EL MUNDO COMO SUBPROYECTO COMPLETO. La 4.1 le dio al
 // mundo fechas y cumplimiento; le faltaba lo que hace de un tramo un
@@ -2298,6 +2465,7 @@ async function main() {
     costos.bucleTracking = (await faseBucleTracking(cookie, macetas.projectId)).costoUsd;
     costos.paridadMundos = (await faseParidadMundos(cookie, macetas.projectId)).costoUsd;
     costos.mundoSubproyecto = (await faseMundoSubproyecto(cookie, macetas.projectId)).costoUsd;
+    costos.todoSeparado = (await faseTodoSeparado(cookie, macetas.projectId)).costoUsd;
     costos.mundoNuncaAbandona = (await faseMundoNuncaAbandona(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
@@ -2324,6 +2492,7 @@ async function main() {
   log("  2j. bucle de tracking (Fase 4.0): bloque de realidad al motor en DOS ciclos (fechas con desviacion / a-mi-ritmo sin cumplimiento), plan sin regaño, acta de cierre completa y motivo que sobrevive al reabrir: OK");
   log("  2M. el mundo nunca abandona (Fase 4.3): con un estado_vivo de artesana sembrado contra el mundo de calidad, cada 'salir' del interprete termina en re-eleccion de puerta o en cierre HONESTO con mensaje y activacion devuelta -- jamas en pantalla muda; el ciclo acaba en plan del mundo: OK");
   log("  2L. el mundo como subproyecto (Fase 4.2): su follow recibe SU cumplimiento (1/1/3 de 5, +4.8 dias) y NO el del core, con UNA linea de contexto rotulada; su plan nuevo asume la desviacion sin regañar y regenera SOLO el suyo; cierre al 70% con motivo -> chip, bitacora, hito en el timeline y desglose; ni un mundo ni TODOS cierran la idea (§3); reabrir preserva el motivo: OK");
+  log("  2i-ter. todo separado (T3): el mundo elige SU modo 'fechas' (project_modos con su dominio) y sella SU plan (no el del core); no-arrastre e2e (tocar el mundo no mueve modo ni baseline del core); su Analisis trae SU capa COMPLETA con Gantt porEtapa (1/1/1 de 3 a mano); un mundo 'a mi ritmo' convive con el core 'con fechas' (3 modos vivos e independientes); el ritual del core sigue sellando solo lo suyo: OK");
   log("  2k. paridad de mundos (Fase 4.1): mundo activado POST-baseline recibe fechas por el ritual del proyecto (V3a), su cumplimiento aparece en el desglose por dominio del Analisis con conteos a mano (V3b), y el follow core NO toma sus items aunque sean los mas recientes (V4): OK");
   log(`  3. salto semantico real persistido sin 23514, con bitacora+score, procedencia valida (Fase 3.1): OK (${saltosVerificados} salto(s))`);
   log("  4. eventos del arbol que piensa == ruta persistida 1:1 (Fase 3.2): OK");
@@ -2336,7 +2505,7 @@ async function main() {
   log("  10. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
   log("  11. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 15/15 verificaciones OK");
+  separador("VUELO COMPLETO: 16/16 verificaciones OK");
   escribirTranscripcion();
 }
 

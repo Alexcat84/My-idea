@@ -7,7 +7,7 @@
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { EntradaAnalytics, ItemAnalytics, MundoAnalytics, PlanCoreAnalytics } from "./analytics";
-import type { Proyecto } from "./db";
+import { obtenerModosPorEspacio, type Proyecto } from "./db";
 
 const ETIQUETAS_CICLO = ["inicial", "completo", "seguimiento"];
 const esCore = (dominio: string | null | undefined) => !dominio || dominio === "core";
@@ -106,6 +106,12 @@ export async function cargarEntradaAnalytics(
     mundos = [];
   }
 
+  // "Todo separado" (T3): el modo del CORE viene de project_modos (dual-read del
+  // core en la transición: si no hay fila 'core', cae a projects.modo_camino).
+  // El analytics del core es core-centrico, así que su modo es el del core.
+  const modos = await obtenerModosPorEspacio(supabase, projectId);
+  const modoCore = modos.core ?? (proyecto.modo_camino as "ritmo" | "fechas" | null) ?? null;
+
   return {
     proyectoCreatedAt: proyecto.created_at,
     realizadaAt: proyecto.realizada_at ?? null,
@@ -114,7 +120,7 @@ export async function cargarEntradaAnalytics(
     planesMundo,
     items,
     mundos,
-    modoCamino: (proyecto.modo_camino as "ritmo" | "fechas" | null) ?? null,
+    modoCamino: modoCore,
     cierreMotivo: proyecto.cierre_motivo ?? null,
     ahora,
   };

@@ -1,5 +1,6 @@
-// Fase 3.8 §3 — PATCH /api/project/[id]/modo: elegir/alternar el modo del
-// camino. Valida contra MODO_CAMINO y persiste projects.modo_camino.
+// PATCH /api/project/[id]/modo: elegir/alternar el modo del camino POR ESPACIO
+// ("todo separado", migration 032). Valida contra MODO_CAMINO y persiste en
+// project_modos (project_id, dominio). El core dual-lee su modo previo.
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { crearSupabaseFalso, estadoFalsoVacio, type EstadoFalso } from "@/lib/testUtils/fakeSupabase";
 
@@ -33,7 +34,14 @@ function sembrarProyecto(modo: string | null = null) {
   };
 }
 
-describe("PATCH /api/project/[id]/modo (Fase 3.8)", () => {
+function modoDe(dominio: string): string | undefined {
+  const fila = estadoFalso.projectModos.find(
+    (r) => (r as Record<string, unknown>).project_id === "p1" && (r as Record<string, unknown>).dominio === dominio
+  );
+  return fila ? ((fila as Record<string, unknown>).modo_camino as string) : undefined;
+}
+
+describe("PATCH /api/project/[id]/modo (todo separado: modo por espacio)", () => {
   beforeEach(() => {
     estadoFalso = estadoFalsoVacio();
     supabaseFalso = crearSupabaseFalso(estadoFalso);
@@ -52,18 +60,28 @@ describe("PATCH /api/project/[id]/modo (Fase 3.8)", () => {
     expect(res.status).toBe(401);
   });
 
-  it("persiste 'fechas' y lo devuelve", async () => {
+  it("persiste 'fechas' del core en project_modos y lo devuelve", async () => {
     sembrarProyecto(null);
     const res = await PATCH(req({ modo_camino: "fechas" }), PARAMS);
     expect(res.status).toBe(200);
     expect((await res.json()).modo_camino).toBe("fechas");
-    expect(estadoFalso.projects["p1"].modo_camino).toBe("fechas");
+    expect(modoDe("core")).toBe("fechas");
   });
 
-  it("pausar (fechas→ritmo) cambia el modo sin tocar nada más", async () => {
-    sembrarProyecto("fechas");
+  it("pausar (fechas→ritmo) del core: dual-read del previo y upsert del nuevo", async () => {
+    sembrarProyecto("fechas"); // sin fila en project_modos: el previo cae a projects.modo_camino
     const res = await PATCH(req({ modo_camino: "ritmo" }), PARAMS);
     expect(res.status).toBe(200);
-    expect(estadoFalso.projects["p1"].modo_camino).toBe("ritmo");
+    expect(modoDe("core")).toBe("ritmo");
+  });
+
+  it("un MUNDO tiene su propio modo, SEPARADO del core", async () => {
+    sembrarProyecto("ritmo");
+    const res = await PATCH(req({ modo_camino: "fechas", dominio: "quality" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect((await res.json()).dominio).toBe("quality");
+    expect(modoDe("quality")).toBe("fechas");
+    // escribir el modo del mundo NO crea ni toca la fila del core
+    expect(modoDe("core")).toBeUndefined();
   });
 });

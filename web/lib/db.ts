@@ -148,6 +148,37 @@ export async function actualizarProyecto(
   if (error) throw error;
 }
 
+// ── "Todo separado" (T3, migration 032): el MODO del camino POR ESPACIO ───────
+// Cada espacio (core y cada mundo) elige su modo ('ritmo' | 'fechas') por su
+// cuenta. Vive en project_modos (project_id, dominio, modo_camino). El core
+// DUAL-LEE en la transición: si no hay fila 'core', el llamador cae a
+// projects.modo_camino (que 032 dejó de escribir pero conserva).
+
+/** El mapa dominio → modo desde project_modos (vacío si el proyecto no tiene). */
+export async function obtenerModosPorEspacio(
+  supabase: SupabaseClient,
+  projectId: string
+): Promise<Record<string, "ritmo" | "fechas">> {
+  const { data, error } = await supabase.from("project_modos").select("dominio, modo_camino").eq("project_id", projectId);
+  if (error) throw error;
+  const modos: Record<string, "ritmo" | "fechas"> = {};
+  for (const f of (data ?? []) as Array<{ dominio: string; modo_camino: "ritmo" | "fechas" }>) modos[f.dominio] = f.modo_camino;
+  return modos;
+}
+
+/** Upsert del modo de UN espacio (por project_id + dominio) en project_modos. */
+export async function guardarModoEspacio(
+  supabase: SupabaseClient,
+  projectId: string,
+  dominio: string,
+  modo: "ritmo" | "fechas"
+): Promise<void> {
+  const { error } = await supabase
+    .from("project_modos")
+    .upsert({ project_id: projectId, dominio, modo_camino: modo, updated_at: ahora() }, { onConflict: "project_id,dominio" });
+  if (error) throw error;
+}
+
 // ── FASE B (canon 14, migration 027): Tus Numeros como TABLERO VIVO ──────────
 
 /** Una version de cifras guardada. La tabla es APPEND-ONLY: cada fila es un

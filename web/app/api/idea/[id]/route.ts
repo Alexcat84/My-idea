@@ -7,7 +7,8 @@
  */
 import { NextResponse } from "next/server";
 import { PREGUNTA_TIPO_OFERTA } from "@/lib/engine/constants";
-import { obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
+import { obtenerModosPorEspacio, obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
+import { ESPACIO_CORE } from "@/lib/espacios";
 import { cargarGrafo, etiquetaArbol } from "@/lib/engine/graph";
 import { preguntasPorTipo } from "@/lib/engine/reporte";
 import { nombreDeIdea } from "@/lib/ideas";
@@ -214,6 +215,12 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     }
   }
 
+  // "Todo separado" (T3): el modo del camino POR ESPACIO (project_modos). El core
+  // dual-lee (project_modos.core ó projects.modo_camino). `modos` es el mapa que
+  // usará el selector/ritual de cada espacio; `modo_camino` es el del core (compat).
+  const modos = await obtenerModosPorEspacio(supabase, projectId);
+  const modoCore = modos[ESPACIO_CORE] ?? proyecto.modo_camino ?? null;
+
   return NextResponse.json({
     idea: {
       id: proyecto.id,
@@ -221,8 +228,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       entrada_original: proyecto.entrada_original,
       fase_actual: proyecto.fase_actual,
       tipo_oferta: proyecto.tipo_oferta ?? null,
-      // Fase 3.8: el modo del camino y si la idea ya es un proyecto realizado.
-      modo_camino: proyecto.modo_camino ?? null,
+      // El modo del camino del CORE (dual-read) y si la idea ya es un proyecto.
+      modo_camino: modoCore,
+      // El modo por espacio (dominio → 'ritmo'|'fechas'); el core no está si nunca eligió.
+      modos,
       realizada_at: proyecto.realizada_at ?? null,
       // Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto.
       created_at: proyecto.created_at,

@@ -39,3 +39,15 @@ export function urlDelEspacio(projectId: string, dominio: string): string {
     ? `/idea/${projectId}?vista=manos`
     : `/idea/${projectId}?vista=mundo&dominio=${dominio}`;
 }
+
+/**
+ * "Todo separado" (T3c, B5): qué ESPACIOS entran en el ritual de fechas/línea
+ * base de un espacio dado. La respuesta es **SOLO ese espacio** — el ritual del
+ * core JAMÁS arrastra los tramos de los mundos, y el de un mundo es solo suyo.
+ * (Antes, el ritual del core cubría el proyecto entero: core + todos los mundos;
+ * eso mezclaba medidas entre espacios. Cada espacio sella SU baseline en SU
+ * ritual.) Fuente única para que la UI y el test del no-arrastre no discrepen.
+ */
+export function dominiosDelRitual(espacioActual: string): string[] {
+  return [espacioActual];
+}

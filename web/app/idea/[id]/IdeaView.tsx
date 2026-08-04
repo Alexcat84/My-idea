@@ -55,6 +55,9 @@ interface DetalleIdea {
     nombre: string;
     entrada_original: string;
     modo_camino?: "ritmo" | "fechas" | null;
+    /** "Todo separado" (T3c): el modo POR ESPACIO (mapa dominio→modo). El core
+     * también viene en modo_camino (dual-read); aquí el core y cada mundo. */
+    modos?: Record<string, "ritmo" | "fechas">;
     realizada_at?: string | null;
     /** Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto. */
     created_at?: string | null;
@@ -196,8 +199,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // --- Manos a la Obra (Fase 3.6) ---
   const [vistaManos, setVistaManos] = useState(quiereManos);
   const [checklist, setChecklist] = useState<ChecklistData | null>(null);
-  // Fase 3.8: el modo del camino ('ritmo'|'fechas'|null hasta elegir).
+  // Fase 3.8: el modo del camino del CORE ('ritmo'|'fechas'|null hasta elegir).
   const [modoCamino, setModoCamino] = useState<"ritmo" | "fechas" | null>(null);
+  // "Todo separado" (T3c): el modo POR ESPACIO (mapa dominio→modo). El hub del
+  // mundo lee de aquí su propio modo; ManosALaObra lo copia local para reflejar
+  // al instante lo que el mundo acaba de elegir.
+  const [modos, setModos] = useState<Record<string, "ritmo" | "fechas">>({});
   const [vistaAnalisis, setVistaAnalisis] = useState(quiereAnalisis);
   const [vistaCelebracion, setVistaCelebracion] = useState(quiereCelebracion);
   // Fase 4.6: las descargas del viaje (un documento por fase + el expediente).
@@ -461,6 +468,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         const d = (await res.json()) as DetalleIdea;
         setDetalle(d);
         setModoCamino(d.idea.modo_camino ?? null);
+        setModos(d.idea.modos ?? {});
         setRealizadaAt(d.idea.realizada_at ?? null);
         // Una idea ya realizada abre en su Celebración (salvo que la URL
         // pida otra vista explícita).
@@ -878,6 +886,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               historial={detalle.historial ?? []}
               mundos={mundosParaObra}
               modoCamino={modoCamino}
+              modos={modos}
               onModoCambiado={setModoCamino}
               onRecargarChecklist={cargarChecklist}
               onVerAnalisis={irAAnalisis}

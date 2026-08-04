@@ -20,6 +20,7 @@ import {
   analyticsDeMundo,
   informeMarkdown,
   calcularAnalytics,
+  capaCumplimientoDe,
   clasificarCumplimiento,
   construirHitos,
   resumenEspacioMd,
@@ -177,6 +178,14 @@ describe("calcularAnalytics — capa de cumplimiento", () => {
       { etapa: 2, baseInicio: 21, baseFin: 24, realInicio: 19, realFin: 24 },
     ]);
   });
+  // GOLDEN de la extracción (T3 "todo separado"): pinta los ÚLTIMOS campos del
+  // cumplimiento (tardiasTop, replanificados) para que extraer capaCumplimientoDe
+  // no cambie NADA de la salida del núcleo. Verificado a mano contra BASE.
+  it("tardiasTop y replanificados del núcleo (golden de la extracción)", () => {
+    // tardía: solo B (+3, etapa 1). replanificado: solo D (tiene fecha_base_original).
+    expect(c.tardiasTop).toEqual([{ texto: "B", etapa: 1, diasRetraso: 3 }]);
+    expect(c.replanificados).toEqual([{ texto: "D", etapa: 2 }]);
+  });
 });
 
 describe("calcularAnalytics — Gantt de VENTANAS HONESTAS (paralelismo del fundador)", () => {
@@ -238,6 +247,32 @@ describe("calcularAnalytics — Gantt de VENTANAS HONESTAS (paralelismo del fund
     expect(e2.baseFin).toBeNull();
     expect(e2.realInicio).toBeNull();
     expect(e2.realFin).toBeNull();
+  });
+});
+
+describe("capaCumplimientoDe — la capa EXTRAÍDA (T3): misma vara para core y mundo", () => {
+  // BASE.items son todos del plan baseline (p1), chispa 03-01: capaCumplimientoDe
+  // sobre ellos debe dar EXACTAMENTE el cumplimiento del núcleo (sin porDominio).
+  const c = capaCumplimientoDe(BASE.items, iso("2026-03-01"));
+
+  it("produce el cumplimiento sin porDominio (lo añade el llamador)", () => {
+    expect(c).not.toHaveProperty("porDominio");
+    expect(c.aTiempo).toBe(2);
+    expect(c.adelantadas).toBe(1);
+    expect(c.tardias).toBe(1);
+    expect(c.totalConFecha).toBe(4);
+    expect(c.porEtapa).toEqual([
+      { etapa: 1, baseInicio: 9, baseFin: 9, realInicio: 9, realFin: 12 },
+      { etapa: 2, baseInicio: 21, baseFin: 24, realInicio: 19, realFin: 24 },
+    ]);
+    expect(c.tardiasTop).toEqual([{ texto: "B", etapa: 1, diasRetraso: 3 }]);
+    expect(c.replanificados).toEqual([{ texto: "D", etapa: 2 }]);
+  });
+
+  it("es IDÉNTICA a la capa del núcleo dentro de calcularAnalytics (golden de la extracción)", () => {
+    const { porDominio: _pd, ...delNucleo } = calcularAnalytics(BASE).cumplimiento!;
+    void _pd;
+    expect(c).toEqual(delNucleo);
   });
 });
 
@@ -473,7 +508,9 @@ const PLAN_MUNDO = {
   id: "pq1",
   etiqueta: "inicial",
   created_at: iso("2026-03-21"),
-  baseline_confirmada_at: null,
+  // "Todo separado" (T3d): el mundo SELLÓ su línea base → tiene cumplimiento con
+  // la misma vara que el core (su Gantt incluido). Sin baseline, sería null.
+  baseline_confirmada_at: iso("2026-03-25"),
   dominio: "quality",
 };
 const CON_SUBPROYECTO: EntradaAnalytics = { ...CON_MUNDO, planesMundo: [PLAN_MUNDO] };
@@ -507,7 +544,19 @@ describe("analyticsDeMundo — el mundo medido con la vara del core (Fase 4.2)",
   });
 
   it("su cumplimiento es el de SUS ítems (1/1/1 de 3), nunca el del core", () => {
-    expect(m.cumplimiento).toMatchObject({ aTiempo: 1, adelantadas: 1, tardias: 1, total: 3 });
+    expect(m.cumplimiento).toMatchObject({ aTiempo: 1, adelantadas: 1, tardias: 1, totalConFecha: 3 });
+  });
+
+  it("T3d: es la capa COMPLETA (misma vara que el core) — trae el Gantt por etapa", () => {
+    // porEtapa en días desde el UNLOCK del mundo (03-20), no desde la chispa:
+    //   e1 (Q1,Q2): base [fb 04-10]=21; real [04-10,04-15]=[21,26]
+    //   e2 (Q3,Q4): base [fb 04-20, fb 04-25]=[31,36]; real [04-17]=28 (Q4 pendiente)
+    expect(m.cumplimiento!.porEtapa).toEqual([
+      { etapa: 1, baseInicio: 21, baseFin: 21, realInicio: 21, realFin: 26 },
+      { etapa: 2, baseInicio: 31, baseFin: 36, realInicio: 28, realFin: 28 },
+    ]);
+    // el resumen ligero (CumplimientoDominio) NO tenía porEtapa ni dominio propio
+    expect(m.cumplimiento).not.toHaveProperty("dominio");
   });
 
   it("un mundo abierto no reporta cierre", () => {

@@ -109,6 +109,10 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     assertSubconjuntoDelContrato("projects.modo_camino", MODO_CAMINO);
   });
 
+  it("project_modos.modo_camino (Todo separado, migration 032: modo por espacio)", () => {
+    assertSubconjuntoDelContrato("project_modos.modo_camino", MODO_CAMINO);
+  });
+
   it("checklist_items.fecha_base_origen (Fase 3.8, migration 018)", () => {
     assertSubconjuntoDelContrato("checklist_items.fecha_base_origen", FECHA_BASE_ORIGEN);
   });

@@ -138,10 +138,10 @@ export function construirBloqueRealidadMundo(
   // Cumplimiento: el del MUNDO, contra las fechas de SUS ítems. Misma regla del
   // modo que el core — sin fechas no se juzga contra un calendario.
   const c = aMundo.cumplimiento;
-  if (aProyecto.modoCamino === "fechas" && c && c.total > 0) {
+  if (aProyecto.modoCamino === "fechas" && c && c.totalConFecha > 0) {
     L.push(
       `- Cumplimiento de este mundo contra las fechas que acepté: ${c.aTiempo} a tiempo, ` +
-        `${c.adelantadas} adelantadas, ${c.tardias} tardías (de ${c.total} con fecha); desviación media de ` +
+        `${c.adelantadas} adelantadas, ${c.tardias} tardías (de ${c.totalConFecha} con fecha); desviación media de ` +
         `${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias} días.`
     );
     if (c.tardiasTop.length > 0) {

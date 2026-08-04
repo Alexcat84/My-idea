@@ -150,9 +150,21 @@ async function main() {
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=health_safety`, "Explorar este mundo", "espacios_hub_sinexplorar");
 
     console.log("[Espacios: las 3 caras del hub de un mundo CON plan]");
+    // Con modo=null (aún sin elegir), la cara "manos" del hub muestra el SELECTOR
+    // de modo (TarjetaModo) sobre el checklist: "el mundo invita a SU modo" (T3c-2).
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=manos`, "Manos a la obra", "espacios_hub_manos");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=plan`, "Manos a la obra", "espacios_hub_plan");
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=avance`, "Tu avance", "espacios_hub_avance");
+
+    // "Todo separado" (T3c-2): el mundo elige SU modo 'fechas' → su hub INVITA a
+    // SU ritual de fechas (RitualFechas), misma experiencia del core scopeada. El
+    // par del ANÁLISIS del mundo con su Gantt sellado llega con T4 (la vista
+    // scopeable de análisis por espacio); su DATO ya lo prueba el vuelo 2i-ter.
+    console.log("[Espacios (T3c-2): el hub del mundo con SU ritual de fechas scopeado]");
+    await admin
+      .from("project_modos")
+      .upsert({ project_id: pid, dominio: "quality", modo_camino: "fechas" }, { onConflict: "project_id,dominio" });
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=mundo&dominio=quality&cara=manos`, "Manos a la obra", "espacios_hub_mundo_ritual");
 
     // Fase 3 tandas 4-5: las lecturas GLOBALES de la campaña.
     console.log("[Espacios: bitacora global con etiquetas de espacio (chips)]");
@@ -168,7 +180,7 @@ async function main() {
     await admin.from("projects").delete().eq("id", pid);
   }
   console.log(
-    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, bitacora con etiquetas, analisis, reportes por mundo) capturados (2 viewports).",
+    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], bitacora con etiquetas, analisis, reportes por mundo) capturados (2 viewports).",
   );
 }
 
