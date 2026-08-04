@@ -22,6 +22,14 @@ import { SuscripcionCalendario } from "./SuscripcionCalendario";
 import { grupoVigente, type CambioItem, type ChecklistData, type ItemChecklistUI } from "./ManosALaObra";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
+import catalogo from "@/lib/assets/packs_catalog.json";
+
+// "Todo separado" (T6, D3): el nombre de cara de un espacio para la etiqueta.
+const PACKS_CAL = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
+const esCoreCal = (d: string | null | undefined) => !d || d === "core";
+const nombreEspacioCal = (d: string) => (esCoreCal(d) ? "Tu viaje" : PACKS_CAL.find((p) => p.clave === d)?.nombre ?? d);
+/** un ítem del calendario que recuerda de qué espacio es (para etiquetar). */
+type ItemCal = ItemChecklistUI & { _dominio: string };
 
 const AZUL = "#4D7CFE";
 const VERDE = "#3FB950";
@@ -100,9 +108,22 @@ export function Calendario({
   // El día abierto en la vista Mes (panel de la derecha/abajo). Por defecto, hoy.
   const [diaSel, setDiaSel] = useState<string>(() => fechaInputLocal(new Date()));
 
-  // "Todo separado" (T4): el grupo del ESPACIO en foco (el núcleo, o un mundo).
-  const core = grupoVigente(checklist, dominio ?? "core");
-  const itemsCore = useMemo(() => core?.etapas.flatMap((e) => e.items) ?? [], [core]);
+  // "Todo separado" (T4/T6): scopeado a un mundo → SUS actividades; GLOBAL (sin
+  // dominio) → las de TODOS los espacios (el feed personal in-app, que crece con
+  // los mundos), cada ítem recordando su espacio para etiquetar la mezcla.
+  const esScoped = Boolean(dominio);
+  const hayMundos = useMemo(() => checklist.planes.some((p) => !esCoreCal(p.dominio)), [checklist]);
+  const itemsCore = useMemo<ItemCal[]>(() => {
+    const doms = esScoped ? [dominio!] : [...new Set(checklist.planes.map((p) => p.dominio))];
+    return doms.flatMap((dom) => {
+      const g = grupoVigente(checklist, dom);
+      return (g?.etapas.flatMap((e) => e.items) ?? []).map((i) => ({ ...i, _dominio: dom }));
+    });
+  }, [checklist, dominio, esScoped]);
+  // La etiqueta [Espacio] SOLO donde hay MEZCLA: el global con mundos. El
+  // scopeado (T4b) ya es de un espacio y no etiqueta; sin mundos, ruido cero.
+  const etiquetaDe = (dom: string): string | undefined =>
+    esScoped || !hayMundos ? undefined : nombreEspacioCal(dom);
 
   async function moverFecha(itemId: string, fecha: string, cascada: boolean) {
     setError(null);
@@ -143,7 +164,7 @@ export function Calendario({
   function descargarCalendario() {
     const tareas = itemsCore
       .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
-      .map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, fechaBase: i.fecha_base! }));
+      .map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, fechaBase: i.fecha_base!, espacio: etiquetaDe(i._dominio) }));
     const ics = generarIcs({ nombreIdea: "Mi idea", tareas });
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -161,11 +182,12 @@ export function Calendario({
     .map((i) => {
       const dOrd = ordinal(i.fecha_base!);
       const estatus: Estatus = i.estado === "hecho" ? "hecha" : dOrd < hoy ? "vencida" : "prevista";
-      return { item: i, ord: dOrd, dia: claveDia(i.fecha_base!), estatus };
+      // T6: la etiqueta [Espacio] del ítem, solo en el global con mezcla.
+      return { item: i, ord: dOrd, dia: claveDia(i.fecha_base!), estatus, etiqueta: etiquetaDe(i._dominio) };
     });
   const pendientes = datados
     .filter((d) => d.estatus !== "hecha")
-    .map((d) => ({ item: d.item, delta: d.ord - hoy, estatus: d.estatus }))
+    .map((d) => ({ item: d.item, delta: d.ord - hoy, estatus: d.estatus, etiqueta: d.etiqueta }))
     .sort((a, b) => a.delta - b.delta);
   const vencidas = pendientes.filter((p) => p.delta < 0).length;
   const sinFecha = itemsCore.filter((i) => !i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica").length;
@@ -277,7 +299,9 @@ export function Calendario({
             moverFecha(detalle.item.id, fecha, cascada);
             setDetalle(null);
           }}
-          itemsDominio={itemsCore}
+          // T6: la cascada de fechas es DENTRO del espacio del ítem — en el
+          // calendario global, solo los del mismo espacio; en el scopeado, todos.
+          itemsDominio={itemsCore.filter((i) => i._dominio === (detalle.item as ItemCal)._dominio)}
           onCerrar={() => setDetalle(null)}
         />
       )}
@@ -286,7 +310,7 @@ export function Calendario({
 }
 
 // ── Vista Agenda ────────────────────────────────────────────────────────────
-type PendItem = { item: ItemChecklistUI; delta: number; estatus: Estatus };
+type PendItem = { item: ItemChecklistUI; delta: number; estatus: Estatus; etiqueta?: string };
 function VistaAgenda({
   pendientes,
   sinFecha,
@@ -351,12 +375,13 @@ function VistaAgenda({
             </button>
             {abierto && (
               <div className="flex flex-col gap-2.5">
-                {filas.map(({ item, delta }) => (
+                {filas.map(({ item, delta, etiqueta }) => (
                   <FilaAgenda
                     key={item.id}
                     item={item}
                     delta={delta}
                     grupo={g}
+                    etiqueta={etiqueta}
                     ocupado={ocupado}
                     onDetalle={() => onDetalle(item)}
                     onMarcarHecha={() => onMarcarHecha(item)}
@@ -382,6 +407,7 @@ function FilaAgenda({
   item,
   delta,
   grupo,
+  etiqueta,
   ocupado,
   onDetalle,
   onMarcarHecha,
@@ -390,6 +416,8 @@ function FilaAgenda({
   item: ItemChecklistUI;
   delta: number;
   grupo: Grupo;
+  /** T6: el espacio del ítem, en el calendario global con mezcla. */
+  etiqueta?: string;
   ocupado: boolean;
   onDetalle: () => void;
   onMarcarHecha: () => void;
@@ -407,7 +435,13 @@ function FilaAgenda({
         <IconoEstado estado={item.estado} tamano={22} />
       </button>
       <div className="min-w-0">
-        <div className="text-[11px] font-semibold uppercase tracking-[1px] text-accent">Etapa {item.etapa}</div>
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="text-[11px] font-semibold uppercase tracking-[1px] text-accent">Etapa {item.etapa}</span>
+          {/* T6: la etiqueta [Espacio], solo en el calendario global con mezcla. */}
+          {etiqueta && (
+            <span className="rounded-full bg-accent/12 px-2 py-0.5 text-[10px] font-semibold text-[#7B9DFF]">{etiqueta}</span>
+          )}
+        </div>
         {/* Vista cortísima: una línea; el texto completo vive en "Detalle". */}
         <div className="line-clamp-1 text-[14.5px] leading-snug">{item.texto}</div>
       </div>
@@ -426,7 +460,7 @@ function FilaAgenda({
 }
 
 // ── Vista Mes ───────────────────────────────────────────────────────────────
-type Datado = { item: ItemChecklistUI; ord: number; dia: string; estatus: Estatus };
+type Datado = { item: ItemChecklistUI; ord: number; dia: string; estatus: Estatus; etiqueta?: string };
 const tieneNota = (i: ItemChecklistUI) => Boolean(i.nota && i.nota.trim());
 
 function chipMes(d: Datado, onDetalle: (i: ItemChecklistUI) => void, sel: boolean) {
@@ -444,7 +478,7 @@ function chipMes(d: Datado, onDetalle: (i: ItemChecklistUI) => void, sel: boolea
         e.stopPropagation();
         onDetalle(d.item);
       }}
-      title={d.item.texto + (con ? " (con nota)" : "")}
+      title={(d.etiqueta ? `[${d.etiqueta}] ` : "") + d.item.texto + (con ? " (con nota)" : "")}
       className="flex w-full items-center gap-1.5 truncate rounded-[6px] px-[7px] py-1 text-left text-[11px]"
       style={{ background: c.bg, color: c.texto, boxShadow: sel ? "inset 0 0 0 1px rgba(77,124,254,0.40)" : undefined }}
     >
@@ -453,7 +487,11 @@ function chipMes(d: Datado, onDetalle: (i: ItemChecklistUI) => void, sel: boolea
       ) : (
         <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: c.punto }} />
       )}
-      <span className="min-w-0 flex-1 truncate">{d.item.texto}</span>
+      {/* T6: prefijo [Espacio] en la mezcla del calendario global. */}
+      <span className="min-w-0 flex-1 truncate">
+        {d.etiqueta ? <span className="font-semibold opacity-80">[{d.etiqueta}] </span> : ""}
+        {d.item.texto}
+      </span>
       {con && <span aria-hidden className="h-[5px] w-[5px] shrink-0 rounded-full" style={{ background: c.texto }} />}
     </button>
   );
@@ -669,12 +707,16 @@ function VistaSemana({
                       e.dataTransfer.effectAllowed = "move";
                     }}
                     onClick={() => manejo.onDetalle(d.item)}
-                    title={d.item.texto + (tieneNota(d.item) ? " (con nota)" : "") + (movible ? " · arrastra para mover" : "")}
+                    title={(d.etiqueta ? `[${d.etiqueta}] ` : "") + d.item.texto + (tieneNota(d.item) ? " (con nota)" : "") + (movible ? " · arrastra para mover" : "")}
                     className={"rounded-[8px] px-2 py-1.5 text-left text-[11.5px] leading-snug " + (movible ? "lg:cursor-grab" : "")}
                     style={{ background: c.bg, color: c.tx }}
                   >
                     <span className="flex items-start gap-1.5">
-                      <span className="line-clamp-2 min-w-0 flex-1">{d.item.texto}</span>
+                      <span className="line-clamp-2 min-w-0 flex-1">
+                        {/* T6: prefijo [Espacio] en la mezcla del calendario global. */}
+                        {d.etiqueta ? <span className="font-semibold opacity-80">[{d.etiqueta}] </span> : ""}
+                        {d.item.texto}
+                      </span>
                       {tieneNota(d.item) && <span aria-hidden className="mt-1 h-[5px] w-[5px] shrink-0 rounded-full" style={{ background: c.tx }} />}
                     </span>
                     {d.estatus === "vencida" && <span className="mt-0.5 block text-[10px]" style={{ color: AMBAR }}>ya pasó</span>}

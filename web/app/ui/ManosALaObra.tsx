@@ -1249,9 +1249,15 @@ export function ManosALaObra({
   const tareasConFecha = itemsCore
     .filter((i) => i.fecha_base && i.estado !== "hecho" && i.estado !== "no_aplica")
     .map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, fechaBase: i.fecha_base! }));
-  // Calendario .ics de UN espacio (T3c: cada espacio se lleva SUS fechas).
-  function descargarIcsDe(tareas: Array<{ id: string; texto: string; etapa: number; fechaBase: string }>, nombre: string) {
-    const ics = generarIcs({ nombreIdea: nombre, tareas });
+  // Calendario .ics de UN espacio (T3c: cada espacio se lleva SUS fechas). T6:
+  // cada evento lleva el prefijo [Espacio] en el título (mismo UID) para leerse
+  // en el calendario del teléfono; `espacio` undefined = sin prefijo (ruido cero).
+  function descargarIcsDe(
+    tareas: Array<{ id: string; texto: string; etapa: number; fechaBase: string }>,
+    nombre: string,
+    espacio?: string
+  ) {
+    const ics = generarIcs({ nombreIdea: nombre, tareas: tareas.map((t) => ({ ...t, espacio })) });
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -1564,7 +1570,7 @@ export function ManosALaObra({
           }}
           onPonerFechas={() => setPospuesto(false)}
           onRecalcular={() => setRecalcularPendientes(true)}
-          onDescargarIcs={() => descargarIcsDe(tareasConFecha, tituloPlan ?? "Mi idea")}
+          onDescargarIcs={() => descargarIcsDe(tareasConFecha, tituloPlan ?? "Mi idea", mundos.length > 0 ? "Tu viaje" : undefined)}
         />
 
         {/* ritual de continuación (3 tarjetas) */}
@@ -1779,7 +1785,7 @@ export function ManosALaObra({
                           }}
                           onPonerFechas={() => setPospuesto(false)}
                           onRecalcular={() => setRecalcularPendientes(true)}
-                          onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre)}
+                          onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre, mundo.nombre)}
                         />
                         <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                         {/* "Todo separado" (T5, D6): los CUATRO accesos scopeados
