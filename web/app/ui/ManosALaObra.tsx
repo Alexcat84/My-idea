@@ -2066,9 +2066,29 @@ export function ManosALaObra({
           onClick={() => onVerDocumentos()}
         />
 
-        {/* "Todo separado" (T5, D6): la acción "realizar" como TARJETA HERMANA —
-            la tarjeta ENTERA abre el acta de cierre (el mismo mini-ritual). Cambia
-            la forma (antes: pitch + botón), jamás la función. */}
+        {/* "Ciclo de profundización" como TARJETA HERMANA — SOLO desktop (en móvil
+            ya subió arriba con su propia). La tarjeta entera abre el ritual
+            (setRitual); "volver a la entrevista" queda como enlace aparte. Orden
+            (recorrido del fundador): sube sobre "realizar", que cierra el aside. */}
+        <div className="hidden lg:block">
+          <TarjetaAcceso
+            icono="ciclo"
+            titulo="Ciclo de profundización"
+            descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
+            onClick={() => setRitual(true)}
+          />
+          {entrevistaAbierta && (
+            <button
+              onClick={onVolverEntrevista}
+              className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
+            >
+              Volver a la entrevista
+            </button>
+          )}
+        </div>
+        {/* La acción "realizar" como TARJETA HERMANA — la tarjeta ENTERA abre el
+            acta de cierre (el mismo mini-ritual). Va AL FINAL del aside (recorrido
+            del fundador): cerrar la idea es el último paso, no uno del medio. */}
         {cCore.total > 0 &&
           (!confirmandoRealizar ? (
             <TarjetaAcceso
@@ -2121,26 +2141,6 @@ export function ManosALaObra({
               </div>
             </div>
           ))}
-        {/* "Todo separado" (T5, D6): "ciclo de profundización" como TARJETA
-            HERMANA — SOLO desktop (en móvil ya subió arriba con su propia). La
-            tarjeta entera abre el ritual (setRitual); "volver a la entrevista"
-            queda como enlace aparte (acción secundaria, no una tarjeta más). */}
-        <div className="hidden lg:block">
-          <TarjetaAcceso
-            icono="ciclo"
-            titulo="Ciclo de profundización"
-            descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
-            onClick={() => setRitual(true)}
-          />
-          {entrevistaAbierta && (
-            <button
-              onClick={onVolverEntrevista}
-              className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
-            >
-              Volver a la entrevista
-            </button>
-          )}
-        </div>
         {cCore.total > 0 && (
           <div className="border-t border-hairline pt-5">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Ritmo</p>
