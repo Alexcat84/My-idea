@@ -104,9 +104,9 @@ function BarraAvance({ pct }: { pct: number }) {
 /** Curva de avance acumulado (área). */
 function AvanceAcumulado({ series, total }: { series: Array<{ semana: number; hechas: number }>; total: number }) {
   if (series.length === 0 || total === 0) return null;
-  let acc = 0;
-  const pts = series.map((s) => {
-    acc += s.hechas;
+  // Suma acumulada SIN reasignar durante el render (react-hooks/immutability).
+  const pts = series.map((s, i) => {
+    const acc = series.slice(0, i + 1).reduce((sum, x) => sum + x.hechas, 0);
     return { semana: s.semana, pct: Math.min(100, (acc / total) * 100) };
   });
   const W = 540, H = 180, PL = 34, PR = 10, PT = 12, PB = 24;
@@ -297,8 +297,6 @@ function RepartoDonut({ adelantadas, aTiempo, tardias }: { adelantadas: number; 
  * de forma SÍNCRONA en el primer render (window.print dispara enseguida). */
 function GanttPapel({
   porEtapa,
-  dias,
-  cerrada,
 }: {
   porEtapa: NonNullable<AnalisisPapelData["cumplimiento"]>["porEtapa"];
   dias: number;

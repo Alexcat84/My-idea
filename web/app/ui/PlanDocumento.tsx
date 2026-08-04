@@ -14,7 +14,7 @@
  */
 import { Markdown } from "./Markdown";
 
-import { parsearPlan, sinProcedencia, type Seccion } from "@/lib/planParser";
+import { parsearPlan, type Seccion } from "@/lib/planParser";
 
 /** Pasos como mini-línea de puntos (canon 04 en pequeño): sutil pero visual. */
 function PasosLista({ pasos }: { pasos: string[] }) {

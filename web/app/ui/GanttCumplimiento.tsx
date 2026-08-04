@@ -14,7 +14,7 @@
  * Portado fiel de la entrega de Design (medidas/tokens en su `notas.md`); los
  * números salen de analytics (cero LLM).
  */
-import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { useState, type CSSProperties, type ReactNode } from "react";
 
 export type VistaGantt = "riel" | "escalera" | "cintas";
 
@@ -198,11 +198,14 @@ export function GanttCumplimiento({
   /** días desde la chispa hasta HOY; null si el proyecto ya se cerró */
   hoyDias: number | null;
 }) {
-  const [vista, setVista] = useState<VistaGantt>("riel");
-  useEffect(() => {
+  // El Análisis es client-only (renderiza tras el fetch), así que leer la vista
+  // persistida en el inicializador perezoso es seguro (sin desajuste de
+  // hidratación) y evita el setState-en-efecto (react-hooks/set-state-in-effect).
+  const [vista, setVista] = useState<VistaGantt>(() => {
+    if (typeof window === "undefined") return "riel";
     const v = localStorage.getItem("mi-idea:gantt-vista");
-    if (v === "riel" || v === "escalera" || v === "cintas") setVista(v);
-  }, []);
+    return v === "riel" || v === "escalera" || v === "cintas" ? v : "riel";
+  });
   const cambiar = (v: VistaGantt) => {
     setVista(v);
     try {
