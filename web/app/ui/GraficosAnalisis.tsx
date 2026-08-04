@@ -131,9 +131,10 @@ export function RitmoSemanal({ series }: { series: Array<{ semana: number; hecha
  * y control de avance, sin una sola palabra de más. */
 export function AvanceAcumulado({ series, total }: { series: Array<{ semana: number; hechas: number }>; total: number }) {
   if (series.length === 0 || total === 0) return null;
-  let acc = 0;
-  const pts = series.map((s) => {
-    acc += s.hechas;
+  // Suma acumulada SIN reasignar durante el render (regla react-hooks/immutability):
+  // cada punto suma lo suyo y lo previo. Series cortas (semanas): el costo no importa.
+  const pts = series.map((s, i) => {
+    const acc = series.slice(0, i + 1).reduce((sum, x) => sum + x.hechas, 0);
     return { semana: s.semana, pct: Math.min(100, (acc / total) * 100) };
   });
   const W = 640;
@@ -252,6 +253,11 @@ export function ProyeccionCierre({
   const pctHecho = Math.round((hechas / total) * 100);
   const puede = ritmoPorSemana > 0;
   const semanasRest = puede ? Math.ceil(restantes / ritmoPorSemana) : 0;
+  // Proyección "a tu ritmo, cuándo cerrarías": la fecha se estima DESDE HOY, así
+  // que Date.now() aquí es intencional (una estimación de display, no un valor de
+  // dominio). Cualquier forma de "capturar ahora" cae en otra regla (setState en
+  // efecto); se exime la de pureza SOLO en esta línea.
+  // eslint-disable-next-line react-hooks/purity
   const fechaCierre = puede ? fechaHumanaCorta(new Date(Date.now() + semanasRest * 7 * 86_400_000).toISOString()) : null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">

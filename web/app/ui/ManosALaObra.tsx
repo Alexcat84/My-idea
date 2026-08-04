@@ -1124,9 +1124,15 @@ export function ManosALaObra({
   // "Todo separado" (T3c): copia local del modo POR ESPACIO para reflejar al
   // instante el modo que un MUNDO acaba de elegir en su hub (el core sigue por
   // modoCamino, refrescado por el padre vía onModoCambiado). Se resincroniza si
-  // el padre recarga y trae otro mapa.
+  // el padre recarga y trae otro mapa — AJUSTE DURANTE EL RENDER (no en efecto),
+  // el patrón de React de "guardar info de renders previos": evita el setState
+  // en efecto y el render en cascada (react-hooks/set-state-in-effect).
   const [modosLocal, setModosLocal] = useState<Record<string, ModoCamino>>(modos);
-  useEffect(() => setModosLocal(modos), [modos]);
+  const [modosPrevios, setModosPrevios] = useState(modos);
+  if (modos !== modosPrevios) {
+    setModosPrevios(modos);
+    setModosLocal(modos);
+  }
   const modoDeMundo = (dominio: string): ModoCamino | null => modosLocal[dominio] ?? null;
   // Fase 3.8 §4 — ritual de la línea base
   // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
@@ -1188,7 +1194,9 @@ export function ManosALaObra({
 
   const titulosCore = useMemo(() => titulosDeEtapas(planMd), [planMd]);
   const core = grupoVigente(checklist, "core");
-  const itemsCore = core?.etapas.flatMap((e) => e.items) ?? [];
+  // useMemo: estabiliza la referencia para que las deps de los useMemo que lo
+  // usan (gruposRitual) no cambien en cada render (react-hooks/exhaustive-deps).
+  const itemsCore = useMemo(() => core?.etapas.flatMap((e) => e.items) ?? [], [core]);
   const cCore = conteo(itemsCore);
   const tituloPlan = planMd.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? null;
 

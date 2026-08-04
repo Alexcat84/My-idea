@@ -12,7 +12,7 @@
 //
 // Uso: con `pnpm dev` en :3000,  npx tsx scripts/vuelo_numeros.ts
 import { createClient } from "@supabase/supabase-js";
-import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, getJson, postJson } from "./_shared/http";
+import { autenticarComoDevUser, cargarEnvRaiz, getJson, postJson } from "./_shared/http";
 import { TOPE_RENARRACION_DIA } from "../lib/numerosVivo";
 
 cargarEnvRaiz();
