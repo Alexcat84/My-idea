@@ -236,13 +236,16 @@ async function main() {
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=analisis`, "Análisis de", "espacios_analisis");
 
     console.log("[Espacios: documentos con el Reporte por mundo (tanda 5)]");
-    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=documentos`, "Reporte de", "espacios_documentos_reporte");
+    // "Todo separado" (T7, D4): el panel del NÚCLEO en dos recuadros — "Reportes
+    // globales" (el Expediente) + "Reportes de Tu viaje". (El del MUNDO, arriba,
+    // muestra los mismos dos recuadros con "Reportes de Calidad".)
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=documentos`, "Reportes globales", "espacios_documentos_nucleo");
   } finally {
     await browser.close();
     await admin.from("projects").delete().eq("id", pid);
   }
   console.log(
-    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], los CUATRO accesos scopeados del mundo [T4: analisis con su Gantt sellado, bitacora, calendario, documentos], calendario GLOBAL etiquetado por espacio [T6], bitacora global con etiquetas, analisis nucleo, reportes por mundo) capturados (2 viewports).",
+    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], los CUATRO accesos scopeados del mundo [T4: analisis con su Gantt sellado, bitacora, calendario, documentos], calendario GLOBAL etiquetado por espacio [T6], panel de documentos en DOS recuadros -Global + del espacio- en mundo y en nucleo [T7], bitacora global con etiquetas, analisis nucleo) capturados (2 viewports).",
   );
 }
 

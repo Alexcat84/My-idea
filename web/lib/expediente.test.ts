@@ -8,11 +8,13 @@ import {
   expedienteMarkdown,
   indiceDeDocumentos,
   nombreArchivo,
+  particionDocumentos,
   rebajarTitulos,
   reporteMundoMarkdown,
   titulosDeCiclos,
   type CicloExpediente,
   type DatosExpediente,
+  type DocumentoIndice,
 } from "./expediente";
 
 const ciclo = (planId: string, etiqueta: string, createdAt: string, md = "# Plan\n\ncuerpo"): CicloExpediente => ({
@@ -331,5 +333,53 @@ describe("nombreArchivo", () => {
   it("aguanta nombres con signos y vacíos", () => {
     expect(nombreArchivo("¿Y si...? / mi idea", "Tu Plan")).toBe("y-si-mi-idea-tu-plan");
     expect(nombreArchivo("", "")).toBe("mi-idea-documento");
+  });
+});
+
+describe("particionDocumentos (T7, D4): el panel en dos recuadros, en ambos sentidos", () => {
+  const doc = (clave: string, tipo: DocumentoIndice["tipo"], espacio?: string): DocumentoIndice => ({
+    clave,
+    tipo,
+    titulo: clave,
+    subtitulo: "",
+    fecha: null,
+    ...(espacio ? { espacio } : {}),
+  });
+  // Un proyecto con un mundo: docs del viaje (plan, bitácora) + reporte del mundo
+  // (con etiqueta) + el expediente global.
+  const CON_MUNDO: DocumentoIndice[] = [
+    doc("plan", "ciclo"),
+    doc("bitacora", "bitacora"),
+    doc("reporte-quality", "reporte", "Calidad"),
+    doc("expediente", "expediente"),
+  ];
+
+  it("desde el NÚCLEO: Global = el expediente; del espacio = los del viaje (sin el reporte del mundo)", () => {
+    const { hayMundos, globales, delEspacio } = particionDocumentos(CON_MUNDO);
+    expect(hayMundos).toBe(true);
+    expect(globales.map((d) => d.clave)).toEqual(["expediente"]);
+    expect(delEspacio.map((d) => d.clave)).toEqual(["plan", "bitacora"]);
+    // el reporte del mundo NO se cuela en el recuadro del núcleo (todo separado)
+    expect(delEspacio.some((d) => d.clave === "reporte-quality")).toBe(false);
+  });
+
+  it("desde un MUNDO: Global = el expediente; del espacio = SOLO los de su etiqueta", () => {
+    const { hayMundos, globales, delEspacio } = particionDocumentos(CON_MUNDO, "quality", "Calidad");
+    expect(hayMundos).toBe(true);
+    expect(globales.map((d) => d.clave)).toEqual(["expediente"]);
+    expect(delEspacio.map((d) => d.clave)).toEqual(["reporte-quality"]);
+  });
+
+  it("el Expediente cae en Global desde CUALQUIER espacio (siempre presente)", () => {
+    expect(particionDocumentos(CON_MUNDO).globales.map((d) => d.clave)).toEqual(["expediente"]);
+    expect(particionDocumentos(CON_MUNDO, "quality", "Calidad").globales.map((d) => d.clave)).toEqual(["expediente"]);
+  });
+
+  it("SIN mundos: hayMundos false (el panel muestra un solo recuadro, sin etiquetas)", () => {
+    const SIN_MUNDO = [doc("plan", "ciclo"), doc("expediente", "expediente")];
+    const { hayMundos, globales, delEspacio } = particionDocumentos(SIN_MUNDO);
+    expect(hayMundos).toBe(false);
+    expect(globales.map((d) => d.clave)).toEqual(["expediente"]);
+    expect(delEspacio.map((d) => d.clave)).toEqual(["plan"]);
   });
 });

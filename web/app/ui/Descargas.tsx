@@ -39,7 +39,7 @@ type PapelDoc = {
 };
 
 import { fechaHumanaConAno } from "@/lib/fechas";
-import type { DocumentoIndice } from "@/lib/expediente";
+import { particionDocumentos, type DocumentoIndice } from "@/lib/expediente";
 
 type Formato = "md" | "pdf";
 
@@ -217,9 +217,77 @@ export function Descargas({
     [projectId]
   );
 
-  // "Todo separado" (T4): scopeado, solo los documentos de ESE espacio (los que
-  // llevan su etiqueta). Los del viaje principal / globales no llevan `espacio`.
-  const docsVista = dominio ? (documentos ?? []).filter((d) => d.espacio === nombreEspacio) : documentos;
+  // "Todo separado" (T7, D4): el panel de CUALQUIER espacio se parte en dos
+  // recuadros — arriba "Reportes globales" (el Expediente, etiquetado "Global",
+  // SIEMPRE presente); abajo "Reportes de {espacio}" (los del espacio actual:
+  // su plan, sus seguimientos, su bitácora, su reporte). Sin mundos: un solo
+  // recuadro sin etiquetas (ruido cero). El orden interno del Expediente no
+  // cambia (D5): eso lo arma la ruta, no este panel.
+  const docs = documentos ?? [];
+  const esScoped = Boolean(dominio);
+  const caraActual = esScoped ? nombreEspacio ?? "este mundo" : "Tu viaje";
+  const { hayMundos, globales, delEspacio } = particionDocumentos(docs, dominio, nombreEspacio);
+
+  const renderDoc = (doc: DocumentoIndice, etiqueta?: string) => {
+    const esExpediente = doc.tipo === "expediente";
+    const esSeguimiento = /^seguimiento/i.test(doc.titulo);
+    return (
+      <div
+        key={doc.clave}
+        className={
+          "flex flex-wrap items-center gap-x-5 gap-y-3 rounded-[14px] bg-surface px-6 py-5 transition-colors hover:bg-[#141419] " +
+          (esExpediente ? "border border-accent/[0.28] hover:border-accent/[0.34]" : "border border-hairline hover:border-accent/[0.34]")
+        }
+      >
+        <span
+          className={
+            "grid h-[52px] w-[52px] shrink-0 place-items-center rounded-[12px] " +
+            (esExpediente ? "bg-accent text-[#07070A]" : "bg-accent/12 text-[#7B9DFF]")
+          }
+          aria-hidden
+        >
+          {esExpediente ? (
+            <IconoExpediente />
+          ) : doc.tipo === "analisis" || doc.tipo === "reporte" ? (
+            <IconoAnalisis />
+          ) : doc.tipo === "bitacora" ? (
+            <IconoBitacora />
+          ) : esSeguimiento ? (
+            <IconoSeguimiento />
+          ) : (
+            <IconoHoja />
+          )}
+        </span>
+        <div className="min-w-[180px] flex-1">
+          {/* T7: la etiqueta la fija el recuadro ("Global" o el nombre de cara);
+              ruido cero cuando no hay mundos (sin etiqueta). */}
+          {etiqueta && (
+            <span className="mb-1 inline-flex items-center rounded-full border border-hairline bg-surface-3 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.6px] text-dim">
+              {etiqueta}
+            </span>
+          )}
+          <p className="text-[15px] font-semibold leading-snug">{doc.titulo}</p>
+          <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
+          {doc.fecha && (
+            <p className="mt-1.5 text-[12px] tabular-nums text-[#6F7076]">
+              {esExpediente ? "Cerrado el " : ""}
+              {fechaHumanaConAno(doc.fecha)}
+            </p>
+          )}
+        </div>
+        {/* El panel de documentos SOLO descarga (.md / PDF). "Ver" la bitácora en
+            vivo vive en las páginas de desarrollo. */}
+        <div className="flex shrink-0 gap-2.5">
+          <BotonFormato onClick={() => pedir(doc, "md")} ocupado={ocupado === `${doc.clave}:md`}>
+            .md
+          </BotonFormato>
+          <BotonFormato onClick={() => pedir(doc, "pdf")} ocupado={ocupado === `${doc.clave}:pdf`} marcado>
+            PDF
+          </BotonFormato>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <section className="mx-auto w-full max-w-[720px]">
@@ -241,83 +309,53 @@ export function Descargas({
 
         {documentos === null && !error && <p className="mt-6 text-sm text-dim">Cargando...</p>}
 
-        {docsVista?.length === 0 && (
-          <p className="mt-6 text-[14px] leading-relaxed text-dim">
-            {dominio
-              ? "Este mundo todavía no tiene documentos. Cuando genere su reporte, aparecerá aquí."
-              : "Todavía no hay nada que descargar. Cuando tengas tu plan, aparecerá aquí."}
-          </p>
-        )}
-
-        <div className="mt-7 flex flex-col gap-3">
-          {docsVista?.map((doc) => {
-            const esExpediente = doc.tipo === "expediente";
-            const esSeguimiento = /^seguimiento/i.test(doc.titulo);
-            return (
-              <div
-                key={doc.clave}
-                className={
-                  "flex flex-wrap items-center gap-x-5 gap-y-3 rounded-[14px] bg-surface px-6 py-5 transition-colors hover:bg-[#141419] " +
-                  (esExpediente
-                    ? "border border-accent/[0.28] hover:border-accent/[0.34]"
-                    : "border border-hairline hover:border-accent/[0.34]")
-                }
-              >
-                {/* Icono por fase (trazo 1.6px) en chip azul: hoja=Tu Plan, hoja
-                    con flecha=Seguimiento, línea de tiempo=bitácora, hojas
-                    apiladas=Expediente. El Expediente es el único con chip azul
-                    pleno y trazo oscuro, porque contiene a los demás. */}
-                <span
-                  className={
-                    "grid h-[52px] w-[52px] shrink-0 place-items-center rounded-[12px] " +
-                    (esExpediente ? "bg-accent text-[#07070A]" : "bg-accent/12 text-[#7B9DFF]")
-                  }
-                  aria-hidden
-                >
-                  {esExpediente ? (
-                    <IconoExpediente />
-                  ) : doc.tipo === "analisis" || doc.tipo === "reporte" ? (
-                    <IconoAnalisis />
-                  ) : doc.tipo === "bitacora" ? (
-                    <IconoBitacora />
-                  ) : esSeguimiento ? (
-                    <IconoSeguimiento />
+        {documentos !== null && !error && (
+          hayMundos ? (
+            // Con mundos: DOS recuadros (D4). Arriba, lo Global (el Expediente,
+            // siempre presente); abajo, lo del espacio actual.
+            <div className="mt-7 flex flex-col gap-8">
+              <section>
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Reportes globales</p>
+                <div className="flex flex-col gap-3">
+                  {globales.length ? (
+                    globales.map((d) => renderDoc(d, "Global"))
                   ) : (
-                    <IconoHoja />
-                  )}
-                </span>
-                <div className="min-w-[180px] flex-1">
-                  {/* Fase 3 (tanda 5): la etiqueta de espacio de un documento por
-                      mundo (solo los reportes la traen; los del viaje, no). */}
-                  {doc.espacio && (
-                    <span className="mb-1 inline-flex items-center rounded-full border border-hairline bg-surface-3 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.6px] text-dim">
-                      {doc.espacio}
-                    </span>
-                  )}
-                  <p className="text-[15px] font-semibold leading-snug">{doc.titulo}</p>
-                  <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
-                  {doc.fecha && (
-                    <p className="mt-1.5 text-[12px] tabular-nums text-[#6F7076]">
-                      {esExpediente ? "Cerrado el " : ""}
-                      {fechaHumanaConAno(doc.fecha)}
+                    <p className="text-[13.5px] leading-relaxed text-dim">
+                      Tu expediente completo aparecerá aquí cuando tengas tu plan.
                     </p>
                   )}
                 </div>
-                {/* El panel de documentos SOLO descarga (.md / PDF). "Ver" la
-                    bitácora en vivo vive en las páginas de desarrollo (plan,
-                    Manos, mundos), no aquí. */}
-                <div className="flex shrink-0 gap-2.5">
-                  <BotonFormato onClick={() => pedir(doc, "md")} ocupado={ocupado === `${doc.clave}:md`}>
-                    .md
-                  </BotonFormato>
-                  <BotonFormato onClick={() => pedir(doc, "pdf")} ocupado={ocupado === `${doc.clave}:pdf`} marcado>
-                    PDF
-                  </BotonFormato>
+              </section>
+              <section>
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+                  Reportes de {caraActual}
+                </p>
+                <div className="flex flex-col gap-3">
+                  {delEspacio.length ? (
+                    delEspacio.map((d) => renderDoc(d, caraActual))
+                  ) : (
+                    <p className="text-[13.5px] leading-relaxed text-dim">
+                      {esScoped
+                        ? "Este mundo todavía no tiene documentos propios. Cuando genere su reporte, aparecerá aquí."
+                        : "Aún no hay documentos de tu viaje principal. Cuando tengas tu plan, aparecerán aquí."}
+                    </p>
+                  )}
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              </section>
+            </div>
+          ) : (
+            // Sin mundos: UN solo recuadro, sin etiquetas (ruido cero).
+            <div className="mt-7 flex flex-col gap-3">
+              {docs.length ? (
+                docs.map((d) => renderDoc(d))
+              ) : (
+                <p className="mt-6 text-[14px] leading-relaxed text-dim">
+                  Todavía no hay nada que descargar. Cuando tengas tu plan, aparecerá aquí.
+                </p>
+              )}
+            </div>
+          )
+        )}
 
         {/* Cierre de la lista (Design): recuerda que .md y PDF son el mismo
             texto, y dónde vive la bitácora en vivo. */}
