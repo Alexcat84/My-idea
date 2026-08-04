@@ -130,12 +130,12 @@ interface Props {
   /** abre la pantalla Análisis (§6). "Todo separado" (T4): con dominio, scopea el
    * análisis a ESE espacio (el mundo con su Gantt); sin dominio, el del núcleo. */
   onVerAnalisis: (dominio?: string) => void;
-  /** Fase 4.6: abre las descargas del viaje (un documento por fase) */
-  onVerDocumentos: () => void;
-  /** Fase 4.8: abre la bitácora en vivo (la historia del viaje) */
-  onVerBitacora?: () => void;
-  /** abre el Calendario (modo fechas): las fechas del plan, hacia adelante */
-  onVerCalendario?: () => void;
+  /** Fase 4.6: abre las descargas del viaje. T4: con dominio, las del mundo. */
+  onVerDocumentos: (dominio?: string) => void;
+  /** Fase 4.8: abre la bitácora en vivo. T4: con dominio, la del mundo. */
+  onVerBitacora?: (dominio?: string) => void;
+  /** abre el Calendario. T4: con dominio, el del mundo (sus actividades). */
+  onVerCalendario?: (dominio?: string) => void;
   /** la idea se marcó como realizada (§5): el padre abre la Celebración */
   onRealizada: () => void;
   /** Fase 4.2: un mundo se completó o se reabrió — el padre refresca su copia.
@@ -1713,23 +1713,67 @@ export function ManosALaObra({
                           onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre)}
                         />
                         <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
-                        {/* "Todo separado" (T4): el acceso al Análisis de ESTE
-                            mundo (su capa con su Gantt porEtapa), scopeado — como
-                            el núcleo lo tiene en su aside. Los otros tres accesos
-                            del espacio (bitácora, calendario, documentos) llegan
-                            en las siguientes piezas de T4. */}
+                        {/* "Todo separado" (T4): los CUATRO accesos scopeados de
+                            este espacio, en el orden del aside del núcleo (bitácora
+                            · calendario · análisis · documentos), con la MISMA
+                            tarjeta que el núcleo. La vara uniforme de las seis
+                            hermanas es T5; aquí NO se introduce un formato que T5
+                            deba deshacer. El feed global etiquetado del calendario
+                            es T6; los dos recuadros de documentos, T7. */}
                         {c.total > 0 && (
-                          <div className="rounded-panel border border-hairline bg-surface p-5">
-                            <p className="text-[14px] font-semibold">Análisis de {mundo.nombre}</p>
-                            <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
-                              El ritmo, las etapas y el cumplimiento de este mundo, calculados de lo que hiciste.
-                            </p>
-                            <button
-                              onClick={() => onVerAnalisis(mundo.dominio)}
-                              className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
-                            >
-                              Ver análisis
-                            </button>
+                          <div className="flex flex-col gap-3">
+                            {onVerBitacora && (
+                              <div className="rounded-panel border border-hairline bg-surface p-5">
+                                <p className="text-[14px] font-semibold">Bitácora de {mundo.nombre}</p>
+                                <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+                                  La historia de este mundo, paso a paso: cada decisión que has tomado aquí.
+                                </p>
+                                <button
+                                  onClick={() => onVerBitacora(mundo.dominio)}
+                                  className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+                                >
+                                  Ver la bitácora
+                                </button>
+                              </div>
+                            )}
+                            {onVerCalendario && modoMundo === "fechas" && hayFechasMundo && (
+                              <div className="rounded-panel border border-hairline bg-surface p-5">
+                                <p className="text-[14px] font-semibold">Calendario de {mundo.nombre}</p>
+                                <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+                                  Lo que viene en este mundo, día por día. Sus fechas, hacia adelante.
+                                </p>
+                                <button
+                                  onClick={() => onVerCalendario(mundo.dominio)}
+                                  className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+                                >
+                                  Abrir calendario
+                                </button>
+                              </div>
+                            )}
+                            <div className="rounded-panel border border-hairline bg-surface p-5">
+                              <p className="text-[14px] font-semibold">Análisis de {mundo.nombre}</p>
+                              <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+                                El ritmo, las etapas y el cumplimiento de este mundo, calculados de lo que hiciste.
+                              </p>
+                              <button
+                                onClick={() => onVerAnalisis(mundo.dominio)}
+                                className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+                              >
+                                Ver análisis
+                              </button>
+                            </div>
+                            <div className="rounded-panel border border-hairline bg-surface p-5">
+                              <p className="text-[14px] font-semibold">Documentos de {mundo.nombre}</p>
+                              <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
+                                El reporte de este mundo y lo que deje cada fase de su camino, en .md o PDF.
+                              </p>
+                              <button
+                                onClick={() => onVerDocumentos(mundo.dominio)}
+                                className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
+                              >
+                                Abrir documentos
+                              </button>
+                            </div>
                           </div>
                         )}
                       </div>
@@ -1947,7 +1991,7 @@ export function ManosALaObra({
               La historia de tu viaje, paso a paso: cada decisión que has tomado.
             </p>
             <button
-              onClick={onVerBitacora}
+              onClick={() => onVerBitacora?.()}
               className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
             >
               Ver mi bitácora
@@ -1964,7 +2008,7 @@ export function ManosALaObra({
               Lo que viene, día por día. Llévate tus fechas al calendario del teléfono.
             </p>
             <button
-              onClick={onVerCalendario}
+              onClick={() => onVerCalendario?.()}
               className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
             >
               Abrir calendario
@@ -1997,7 +2041,7 @@ export function ManosALaObra({
             Tu plan, cada seguimiento y el expediente completo, en .md o en PDF.
           </p>
           <button
-            onClick={onVerDocumentos}
+            onClick={() => onVerDocumentos()}
             className="mt-3 w-full rounded-[10px] border border-accent/50 py-2.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
           >
             Abrir documentos

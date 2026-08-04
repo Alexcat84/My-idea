@@ -121,6 +121,8 @@ async function main() {
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 1, texto: "Llama a un cliente que se fue.", destacado: true },
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 1, orden: 2, texto: "Anota por qué no volvió." },
     { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 2, orden: 1, texto: "Cambia una cosa del proceso." },
+    // Un pendiente con fecha FUTURA: le da al calendario del mundo "lo que viene".
+    { project_id: pid, plan_id: planMundoId, dominio: "quality", etapa: 2, orden: 2, texto: "Revisa los resultados en un mes." },
   ]);
 
   const browser = await chromium.launch();
@@ -192,13 +194,23 @@ async function main() {
       { fb: dia(-25), comp: dia(-18) }, // e1 o2: tardia
       { fb: dia(-12), comp: dia(-15) }, // e2 o1: adelantada
     ];
-    for (const [k, it] of ((itsQ ?? []) as Array<{ id: string }>).slice(0, 3).entries()) {
+    const idsQ = ((itsQ ?? []) as Array<{ id: string }>).map((r) => r.id);
+    for (const [k, id] of idsQ.slice(0, 3).entries()) {
       await admin
         .from("checklist_items")
         .update({ fecha_base: fechados[k].fb, completed_at: fechados[k].comp, estado: "hecho" })
-        .eq("id", it.id);
+        .eq("id", id);
     }
+    // el 4.º queda PENDIENTE con fecha futura (para el calendario del mundo).
+    if (idsQ[3]) await admin.from("checklist_items").update({ fecha_base: dia(30) }).eq("id", idsQ[3]);
     await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=analisis&dominio=quality`, "Análisis de", "espacios_analisis_mundo");
+
+    // "Todo separado" (T4b): los otros TRES accesos del espacio, scopeados —
+    // bitácora, calendario y documentos del mundo (misma tarjeta, en su hub).
+    console.log("[Espacios (T4b): bitacora + calendario + documentos DEL MUNDO (scopeados)]");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=bitacora&dominio=quality`, "Bitácora de", "espacios_bitacora_mundo");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=calendario&dominio=quality`, "Calendario de", "espacios_calendario_mundo");
+    await capturarDos(app, `${BASE_URL}/idea/${pid}?vista=documentos&dominio=quality`, "Documentos de", "espacios_documentos_mundo");
 
     // Fase 3 tandas 4-5: las lecturas GLOBALES de la campaña.
     console.log("[Espacios: bitacora global con etiquetas de espacio (chips)]");
@@ -214,7 +226,7 @@ async function main() {
     await admin.from("projects").delete().eq("id", pid);
   }
   console.log(
-    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], ANALISIS del mundo con su Gantt sellado [T4 pair B], bitacora con etiquetas, analisis nucleo, reportes por mundo) capturados (2 viewports).",
+    "\nGATE DE LA BETA: compuerta + precios + chip + creditos + Espacios (cambiador, hubs, 3 caras, ritual de modo/fechas del mundo [T3c-2], los CUATRO accesos scopeados del mundo [T4: analisis con su Gantt sellado, bitacora, calendario, documentos], bitacora global con etiquetas, analisis nucleo, reportes por mundo) capturados (2 viewports).",
   );
 }
 
