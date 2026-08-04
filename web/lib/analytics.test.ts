@@ -137,7 +137,7 @@ describe("calcularAnalytics — retiradas (gestor de estados)", () => {
   it("el acta nombra las retiradas con su porqué", () => {
     const md = informeMarkdown("Mi idea", calcularAnalytics(entrada), iso("2026-04-01"));
     expect(md).toContain("Retiradas (no aplican): 1");
-    expect(md).toContain("Contrata un local — negocio online");
+    expect(md).toContain("Contrata un local (negocio online)");
     expect(md).toContain("**2** de **3** activas");
   });
 });

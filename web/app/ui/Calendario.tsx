@@ -203,7 +203,7 @@ export function Calendario({
   const lunesRef = new Date(refDate.getFullYear(), refDate.getMonth(), refDate.getDate() - (((refDate.getDay() + 6) % 7)));
   const domRef = new Date(lunesRef.getFullYear(), lunesRef.getMonth(), lunesRef.getDate() + 6);
   const mesCorto = (d: Date) => MESES[d.getMonth()].slice(0, 3);
-  const tituloSemana = `${lunesRef.getDate()} ${mesCorto(lunesRef)} – ${domRef.getDate()} ${mesCorto(domRef)}`;
+  const tituloSemana = `${lunesRef.getDate()} ${mesCorto(lunesRef)} a ${domRef.getDate()} ${mesCorto(domRef)}`;
   const titulo =
     vista === "mes"
       ? `${MESES[refDate.getMonth()]} ${refDate.getFullYear()}`.replace(/^./, (c) => c.toUpperCase())

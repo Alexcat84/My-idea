@@ -529,7 +529,7 @@ function RitualContinuar({
           </p>
           <p className="mt-2 text-sm text-dim">
             Llevas {resumen.hechos} de {resumen.total} acciones {mundo ? `de ${mundo} ` : ""}hechas. Ajusta arriba
-            lo que haga falta — de eso compongo el «qué ha pasado», sin que lo redactes dos veces.
+            lo que haga falta. De eso compongo el «qué ha pasado», sin que lo redactes dos veces.
           </p>
           <button
             onClick={() => setPaso(2)}

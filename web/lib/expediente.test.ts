@@ -199,7 +199,7 @@ describe("expedienteMarkdown", () => {
     expect(md).toContain("Completaste **1 de 2** acciones activas.");
     // La retirada no aparece como pendiente, sino en su propia sección con motivo.
     expect(md).toContain("### Retiradas (no aplican): 1");
-    expect(md).toContain("- Contrata un local — mi negocio es 100% online");
+    expect(md).toContain("- Contrata un local (mi negocio es 100% online)");
     expect(md).not.toContain("- [ ] Contrata un local");
   });
 

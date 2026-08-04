@@ -730,7 +730,7 @@ export function informeMarkdown(
     l.push("");
     l.push(`### Retiradas (no aplican): ${u.retiradas.length}`);
     for (const r of u.retiradas) {
-      l.push(`- ${r.texto}${r.motivo ? ` — ${r.motivo.replace(/\s+/g, " ").trim()}` : ""}`);
+      l.push(`- ${r.texto}${r.motivo ? ` (${r.motivo.replace(/\s+/g, " ").trim()})` : ""}`);
     }
   }
   if (u.duracionPorEtapa.length) {

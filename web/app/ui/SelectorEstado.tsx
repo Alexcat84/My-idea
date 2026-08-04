@@ -139,7 +139,7 @@ export function SelectorEstado({
         disabled={ocupado}
         aria-haspopup="menu"
         aria-expanded={abierto}
-        title={`Estado: ${ETIQUETA_ESTADO[estado]} — tocar para elegir`}
+        title={`Estado: ${ETIQUETA_ESTADO[estado]} · tocar para elegir`}
         aria-label={`${ETIQUETA_ESTADO[estado]}. Tocar para elegir el estado`}
         className="-m-[11px] flex h-11 shrink-0 items-center gap-1 p-[11px] transition-opacity hover:opacity-75 disabled:opacity-50 sm:m-0 sm:h-auto sm:p-0"
       >
