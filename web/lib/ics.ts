@@ -17,6 +17,12 @@ export interface TareaIcs {
   /** nombre de la idea de esta tarea (para el feed que mezcla varias ideas);
    * si falta, se usa el nombreIdea general del calendario. */
   nombreIdea?: string;
+  /** "Todo separado" (T6, D3): el nombre de CARA del espacio de esta tarea
+   * ("Tu viaje" o el nombre del mundo). Si está, el SUMMARY se prefija con
+   * "[Espacio] " para que en el calendario del teléfono —mezclado con toda la
+   * vida— se lea de qué espacio es. Ausente = sin prefijo (ruido cero: un
+   * proyecto sin mundos no etiqueta nada). NO toca el UID: mismo evento. */
+  espacio?: string;
 }
 
 /** Escapa los caracteres especiales de un valor de texto iCalendar. */
@@ -83,7 +89,9 @@ export function generarIcs({
       `DTSTAMP:${stamp}`,
       `DTSTART:${inicio}`,
       `DTEND:${fin}`,
-      `SUMMARY:${escapar(t.texto)}`,
+      // El prefijo "[Espacio] " va en el TÍTULO; el UID (arriba) no cambia, así
+      // que Google/Apple ACTUALIZAN el evento en vez de duplicarlo (Nivel 1).
+      `SUMMARY:${escapar(t.espacio ? `[${t.espacio}] ${t.texto}` : t.texto)}`,
       `DESCRIPTION:${escapar(`Etapa ${t.etapa} · ${t.nombreIdea ?? nombreIdea}`)}`,
       "BEGIN:VALARM",
       "ACTION:DISPLAY",

@@ -59,6 +59,31 @@ export interface DocumentoIndice {
   espacio?: string;
 }
 
+/**
+ * "Todo separado" (T7, D4): parte el índice de documentos, visto desde UN
+ * espacio, en dos recuadros — lo GLOBAL (el Expediente completo, SIEMPRE
+ * presente en todo espacio) y lo DEL ESPACIO actual (el núcleo, o un mundo).
+ *   - globales   = los de tipo "expediente" (etiquetados "Global" en el panel).
+ *   - delEspacio = si es un mundo, los que llevan SU etiqueta de espacio; si es
+ *     el núcleo, los del viaje principal (sin `espacio`) que NO son el expediente.
+ *   - hayMundos  = si el proyecto tiene algún documento por-mundo. En false, el
+ *     panel muestra UN solo recuadro sin etiquetas (ruido cero).
+ * Puro y testeable en los dos sentidos (núcleo / mundo).
+ */
+export function particionDocumentos(
+  docs: DocumentoIndice[],
+  dominio?: string,
+  nombreEspacio?: string
+): { hayMundos: boolean; globales: DocumentoIndice[]; delEspacio: DocumentoIndice[] } {
+  const hayMundos = docs.some((d) => d.espacio);
+  const esScoped = Boolean(dominio);
+  const globales = docs.filter((d) => d.tipo === "expediente");
+  const delEspacio = esScoped
+    ? docs.filter((d) => d.espacio === nombreEspacio)
+    : docs.filter((d) => !d.espacio && d.tipo !== "expediente");
+  return { hayMundos, globales, delEspacio };
+}
+
 export interface DatosExpediente {
   nombre: string;
   entradaOriginal: string;

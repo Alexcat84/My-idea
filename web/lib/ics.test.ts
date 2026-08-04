@@ -49,3 +49,37 @@ describe("generarIcs — Nivel 0 del calendario (.ics)", () => {
     expect(vacio).not.toContain("BEGIN:VEVENT");
   });
 });
+
+describe("generarIcs — [Espacio] en el SUMMARY (T6, D3): la etiqueta de espacio", () => {
+  const base = { id: "w1", texto: "Llama a un cliente", etapa: 1, fechaBase: "2026-08-05T00:00:00Z" };
+  const uidDe = (s: string) => s.match(/UID:[^\r\n]+/)![0];
+
+  it("con espacio, prefija el SUMMARY con [Espacio] — y el UID NO cambia", () => {
+    const con = generarIcs({ nombreIdea: "Idea", ahora: AHORA, tareas: [{ ...base, espacio: "Calidad" }] });
+    expect(con).toContain("SUMMARY:[Calidad] Llama a un cliente");
+    // el UID sale del id, no del título: mismo evento, sin duplicar en Google (Nivel 1)
+    expect(con).toContain("UID:w1@myideaproject.com");
+  });
+
+  it("sin espacio, el SUMMARY va sin prefijo (ruido cero)", () => {
+    const sin = generarIcs({ nombreIdea: "Idea", ahora: AHORA, tareas: [base] });
+    expect(sin).toContain("SUMMARY:Llama a un cliente");
+    expect(sin).not.toContain("[");
+  });
+
+  it("el UID es IDÉNTICO con y sin etiqueta: cambiar el título NO re-crea el evento", () => {
+    const con = generarIcs({ nombreIdea: "Idea", ahora: AHORA, tareas: [{ ...base, espacio: "Calidad" }] });
+    const sin = generarIcs({ nombreIdea: "Idea", ahora: AHORA, tareas: [base] });
+    expect(uidDe(con)).toBe("UID:w1@myideaproject.com");
+    expect(uidDe(con)).toBe(uidDe(sin));
+  });
+
+  it("escapa el texto pero conserva el prefijo del espacio", () => {
+    const c = generarIcs({
+      nombreIdea: "Idea",
+      ahora: AHORA,
+      tareas: [{ ...base, texto: "Habla; toma notas", espacio: "Calidad" }],
+    });
+    expect(c).toContain("SUMMARY:[Calidad] Habla\\; toma notas");
+  });
+});

@@ -29,21 +29,28 @@ El frente "La idea completa" (tag `web-v2.1.0-beta`) fue **anulado** por el vere
 global es el Expediente). Se elimina en la tanda 1 de la restructuración. (El plan
 `docs/PLAN_IDEA_COMPLETA.md` queda como archivo histórico.)
 
-## 1c. Restructuración "TODO SEPARADO" (APROBADA, EN CURSO)
+## 1c. Restructuración "TODO SEPARADO" (COMPLETA — T0..T7, cerrada 2026-08-04)
 
 **Plan/contrato: `docs/PLAN_TODO_SEPARADO.md`** (aprobado por fundador y auditor, 6
 decisiones cerradas). Cada espacio se mide/registra/documenta solo; el mundo es espejo
 TOTAL del core (su análisis con Gantt, su calendario, su modo de fechas y línea base);
-única vista global = Expediente. 8 tandas (T0 gobierno · T1 eliminar nivel general · T2
-"Tu avance"→hitos · **T3 paridad de fechas por mundo, con migración `project_modos`** · T4
-vistas scopeables · T5 seis accesos/acciones uniformes · T6 calendario etiquetado · T7
-documentos en dos recuadros · cierre). Tag propuesto `web-v2.2.0-beta`.
+única vista global = Expediente. **Cerrada con el veredicto del fundador y el tag
+`web-v2.2.0-beta`.** Matriz de las 8 tandas — **todas ✓, en producción (main):**
 
-- **Migración T3** (`project_modos`): la aplica el fundador; se le entrega el SQL y se
-  espera su "aplicada" antes del vuelo de esa tanda.
-- **B5 bendecido:** cada espacio sella SU baseline en SU ritual; el core deja de arrastrar
-  los mundos (con dual-read de transición del modo del core).
-- **Golden test obligatorio** antes de extraer `capaCumplimientoDe` de `calcularAnalytics`.
+- **T0 gobierno** ✓ · **T1 eliminar nivel general** ✓ (murió "La idea completa",
+  `IdeaCompleta.tsx` borrado, barras cross-mundo muertas) · **T2 "Tu avance"→solo hitos** ✓.
+- **T3 paridad de fechas por mundo** ✓ (migración `project_modos` aplicada; B5 no-arrastre;
+  `capaCumplimientoDe` extraída con golden; hub del mundo con su modo/ritual; Gantt del mundo).
+- **T4 vistas scopeables** ✓ (Análisis del mundo con su Gantt; los cuatro accesos del espacio).
+- **T5 seis tarjetas hermanas** ✓ (`TarjetaAcceso` único, contrato que lo blinda).
+- **T6 calendario etiquetado `[Espacio]`** ✓ (feed que crece con los mundos; UID intacto).
+- **T7 documentos en dos recuadros** ✓ ("Reportes globales" + "Reportes de {espacio}").
+- **Cierre** ✓: corrida única del fundador (vuelo `faseTodoSeparado` 16/16 + gate del frente
+  entero) + veredicto visual; merge de cierre + tag `web-v2.2.0-beta`.
+
+Notas de método (para memoria): la migración `project_modos` la aplicó el fundador; B5
+bendecido (cada espacio sella SU baseline, el core no arrastra); golden test antes de
+extraer `capaCumplimientoDe`. **Pendiente SOLO la calibración visual de Design (§2).**
 
 ## 2. Claude Design (encargos)
 
@@ -65,11 +72,14 @@ documentos en dos recuadros · cierre). Tag propuesto `web-v2.2.0-beta`.
   - las **varas previas** que quedan: chips de etiqueta en la bitácora global y las fichas
     de Reporte por mundo. (Muere del encargo: la banda "Lo general" y el desglose "Tu
     proyecto completo".)
-  - **Estado del frente (staging):** el modo/ritual del mundo (T3c-2), el **Análisis del
-    mundo con su Gantt** (T4a) y **los cuatro accesos scopeados** del espacio (T4b) ya
-    están funcionales; sus pares de gate para calibrar están en §3 (`espacios_*_mundo`).
-    Pendientes del propio "todo separado": T5 (seis tarjetas hermanas uniformes), T6
-    (calendario con `[Espacio]`), T7 (documentos en dos recuadros).
+  - **Estado del frente: COMPLETO Y EN PRODUCCIÓN (tag `web-v2.2.0-beta`).** La
+    restructuración "todo separado" (T3c-2..T7) está entera y funcional; este encargo
+    queda **consolidado como la SPEC VISUAL pendiente** — la calibración de CD sobre TODOS
+    sus pares del frente, capturados por el gate (§3): hub + su **modo/ritual** de fechas
+    del mundo, **Análisis del mundo con su Gantt**, los **cuatro accesos** scopeados, las
+    **seis tarjetas hermanas** (`TarjetaAcceso` uniforme), el **calendario etiquetado**
+    `[Espacio]`, y los **documentos en dos recuadros**. El front no espera a Design: lo que
+    CD calibre se aplica encima. Pares en `web/examples/gate-canon/` (`espacios_*`).
 - **PDF Expediente · interiores (DIFERIDO post-beta):** el diseño YA existe
   (`_entrega-claude-design/Entrega-desing 20260729/entrega2/pdf-expediente-interiores/`:
   Tus Números, un mundo, "Cómo te fue", "La secuencia de tu viaje"). **Cuando sea el
