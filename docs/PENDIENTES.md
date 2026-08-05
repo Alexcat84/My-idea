@@ -52,7 +52,7 @@ Notas de método (para memoria): la migración `project_modos` la aplicó el fun
 bendecido (cada espacio sella SU baseline, el core no arrastra); golden test antes de
 extraer `capaCumplimientoDe`. **Pendiente SOLO la calibración visual de Design (§2).**
 
-## 1d. Campaña "SCHEDULER INTELIGENTE" (APROBADA — plan listo, F0 pendiente del disparo del fundador)
+## 1d. Campaña "SCHEDULER INTELIGENTE" (EN CURSO — F0 y F1 hechas, F2 es la siguiente)
 
 **Visión original del fundador (PM):** un programador de fechas que entienda la
 complejidad de cada tarea y sugiera fechas que respiran según la capacidad real del
@@ -62,16 +62,28 @@ commits `Scheduler:`. **Anclajes verificados contra main 943ce0d** (planRedactor
 pasos+entregable; project_modos es la casa de la capacidad; diaDominante/cadenciaReal
 son la capa 3 embrionaria). Matriz de fases:
 
-- **F0 — SPIKE de estimación** (la puerta de todo; SIN producción): **script LISTO**
-  (`web/scripts/spike_estimacion.ts`, `pnpm run spike`): ~36 tareas reales del grafo
-  (variadas por dominio/fase) → bandas S/M/L/XL + espera_externa, 3 corridas,
-  concordancia inter-corrida + matriz de discordantes en `web/examples/spike_estimacion.md`.
-  **Puerta >80% exacta-o-adyacente.** Costo <$1. **PENDIENTE la corrida en vivo del
-  fundador** (llama al LLM); su veredicto abre F1. Si no abre: iterar el prompt del
-  spike o degradar a 3 bandas (fusionar L+XL).
-- **F1 — la estimación nace con el plan:** migración 033 (banda, espera_externa,
-  capacidad_semanal), batch de estimación tras el plan (la prosa no se toca; fallo =
-  sin banda), rangos "~2-4 h" en el detalle + corrección (evento `banda_corregida`).
+- **F0 — SPIKE de estimación: PUERTA ABIERTA.** Corrido en vivo (`pnpm run spike` y
+  `spike -- items`), reportes en `web/examples/spike_estimacion.md` y `_items.md`.
+  **97.2% exacta-o-adyacente en las DOS granularidades**, costo real $0.31. El
+  hallazgo del spike: a nivel CONCEPTO la distribución se apelmaza arriba
+  (0S/8M/5L/23XL) porque el nodo es un bundle; a nivel ÍTEM (la unidad real que ve
+  el usuario, la que produce `derivarChecklist`) reparte de verdad (9S/23M/1L/3XL).
+  **Afinamiento decidido:** producción usa **MAYORÍA-DE-3** (tres corridas batch,
+  banda = voto mayoritario; empates → la banda MAYOR de las empatadas, conservador;
+  mismo criterio para `espera_externa`).
+- **F1 — la estimación nace con el plan: HECHA** (staging `98bdee9`, migración 033
+  **aplicada**). Al nacer TODO plan nuevo (core y mundo) corre el lote de
+  mayoría-de-3 después del plan; el prompt validado vive en `lib/prompts.ts` como
+  `SYSTEM_ESTIMACION_BANDA` con su procedencia (criterios de banda palabra por
+  palabra del spike; solo cambia el empaquetado a lote con id). Motor puro en
+  `lib/engine/estimacion.ts`. **Fallback declarado:** la estimación que falla deja
+  los ítems sin banda y el plan JAMÁS se bloquea; el fallo deja síntoma en
+  `sessions.decisiones` (`estimacion_banda` con el conteo, o `estimacion_fallida`).
+  El detalle muestra el **rango honesto** (~1 h / ~2-4 h / una jornada / varios días)
+  con corrección del usuario → evento `banda_corregida {de, a}` (telemetría del
+  multiplicador de F4). Planes viejos sin banda: sin sección de esfuerzo, cero
+  invención. 732/732 tests. **Pendiente del fundador:** correr el verificador de
+  migraciones y el vuelo/gate en vivo antes del merge a main.
 - **F2 — capacidad + empaquetado (el corazón):** pregunta de capacidad por espacio +
   `empaquetado.ts` puro (etapas=puertas, semanas contra capacidad; tests a mano 3h vs
   20h); "Con fechas"/"Recalcular" lo usan; fallback intacto. **Addendum:** assert ICS
