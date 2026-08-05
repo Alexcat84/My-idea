@@ -218,6 +218,45 @@ Decisiones del fundador que mandan sobre el copy y sobre lo que el producto
 muestra. Se registran con su porqué: quien venga después no las revierte por
 desconocer la razón.
 
+- **LAS DOS FAMILIAS DE MUNDOS (campaña "Mundos de protección", ago 2026).**
+  Un mundo no es un tema suelto: es una de dos cosas, y de ahí sale todo lo demás.
+  - **Mejora y expansión** (Calidad, Internacionalización, Multiplica,
+    Sostenibilidad): construyen **su** plan desde el contexto del negocio. Como
+    hoy. **No se tocan.**
+  - **Protección** (Riesgos, HSEQ, Seguridad Digital): su evaluación, su
+    entrevista y su plan se aplican **SOBRE las actividades reales** del núcleo.
+    Su forma natural es *registro → detección → respuesta enlazada*: "estos son
+    tus riesgos y aquí sus mitigaciones", apuntando a lo que el usuario de verdad
+    va a hacer.
+  **Por qué:** el modelo de trabajo del fundador (PM) es que el registro de
+  riesgos se levanta **sobre la WBS**, no al lado. Un plan de protección que
+  hablara en general sería una plantilla; aplicado sobre las actividades del
+  usuario, es su plan.
+
+- **EL ENLACE JAMÁS ES FUSIÓN (misma campaña).** Un mundo **lee** el núcleo y
+  **nunca lo escribe**. El snapshot de las actividades viaja como contexto y
+  muere con la sesión; lo único que queda es el **enlace** (`protege_item`), que
+  nace con el plan del mundo y **no es editable por el usuario**: es estructura
+  del plan, no percepción suya (mismo criterio que `espera_externa`). Las vistas
+  que cruzan mundos (el carril del Gantt, los chips) son **lecturas**: **jamás
+  cuentan en las medidas del núcleo**. Una fuente, muchas lecturas.
+  **Muralla:** un mundo de protección **sin plan de núcleo** no puede evaluar
+  sobre nada, así que lo dice en persona y ofrece el camino, en vez de generar un
+  plan genérico. **Fallar honesto, jamás plantilla.**
+
+- **LA SEVERIDAD SE DICE EN PALABRAS, JAMÁS EN PUNTAJES (misma campaña).** La
+  regla no la inventamos: la trae el **propio grafo**, en el nodo *"la matriz de
+  colores te engaña"*. Un riesgo se describe con **cuán probable** y **cuánto
+  dolería**, en vocabulario cerrado (`poco_probable | probable | muy_probable` ×
+  `poco | bastante | mucho`), y lo que caiga fuera de ese vocabulario **se
+  descarta, no se aproxima**. Nada de números de riesgo, ni colores que fingen
+  precisión. **Por qué:** un puntaje inventado se siente exacto y no lo es; el
+  teatro de la matriz es justo lo que el material canónico enseña a evitar.
+  **Y en las anclas de protección: jamás una fecha mentida.** Si una respuesta no
+  llega antes de la actividad que protege, se **dice** ("esta protección no llega
+  antes de X: muévela o acepta el riesgo"). El silencio ahí sería la degradación
+  callada que §9 prohíbe.
+
 - **DOCTRINA DEL SCHEDULER (campaña "Scheduler Inteligente", cerrada ago 2026).**
   El sistema que pone fechas se rige por esto, y quien lo toque lo hace sabiendo
   por qué está escrito así:

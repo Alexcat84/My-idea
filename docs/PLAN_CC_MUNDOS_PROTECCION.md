@@ -155,7 +155,34 @@ tag menor.
 
 ---
 
-## C. Dudas numeradas (bloquean el arranque)
+## C. Dudas numeradas — **TODAS ADJUDICADAS** (fundador + auditor, 5 ago 2026)
+
+Veredicto de cada una, arriba de su enunciado original. Lo adjudicado manda.
+
+1. **Enlazador = (a) segunda llamada**, hermana de la estimación de F1, con su
+   fallback declarado. **(c) rechazada con nombre:** la coincidencia de texto es
+   adivinación.
+2. **Copy de muralla ÚNICO e interpolado:** *"Primero genera el plan de tu idea:
+   tu mundo de {nombre} se construirá sobre él."*
+3. **Vigentes = el ciclo vigente del núcleo, INCLUYENDO las hechas** (con su
+   estado marcado en el snapshot) y **excluyendo las retiradas**.
+4. **Mi propuesta aprobada entera** (`SET NULL`; `no_aplica` no rompe el enlace)
+   **+ regla anti-silencio:** el chip de la respuesta renderiza **siempre** su
+   detección, y si lo protegido se retiró, **lo dice** ("la actividad que
+   protegía fue retirada").
+5. **Carril = (a) bajo la barra de su etapa.** El Gantt no se reconstruye; la
+   precisión ítem a ítem vive en los chips y en el registro. Revocable por el ojo
+   del fundador en el gate de P4.
+6. **`MARGEN_ANCLA_SEMANAS = 1`**, constante nombrada con su porqué, hermana de
+   `LEAD_ESPERA_SEMANAS`. **Por banda: rechazado** (el colchón es post-entrega; la
+   duración ya la empaqueta F2). Revisable con telemetría.
+7. **La severidad la emite el enlazador** en el mismo JSON, contra **vocabulario
+   cerrado** del nodo canónico: `probabilidad: poco_probable|probable|muy_probable`
+   y `dolor: poco|bastante|mucho`. **Fuera del enum → null** (no se aproxima).
+8. **Costo ABSORBIDO**, y **reportado MEDIDO en el checkpoint de P2**. Si supera
+   **$0.25 por plan**, se trae al fundador antes del merge.
+
+### Enunciados originales (para que se lea el porqué de cada veredicto)
 
 **1. La forma de la salida estructurada del enlazador.** El plan es prosa en
 streaming (ancla 2). Tres caminos:
