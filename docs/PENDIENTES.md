@@ -240,7 +240,15 @@ son la capa 3 embrionaria). Matriz de fases:
   etiquetas** (`?vista=bitacora`), el Análisis del núcleo (`?vista=analisis`) y los
   **reportes por mundo** (`?vista=documentos`). **NO corrido en vivo** → verificar al
   ejecutarlo (la siembra del mundo con plan y las esperas nuevas).
-- **CORRIDA ÚNICA DEL CIERRE de Mundos de protección (P0..P5) — instrucciones:**
+- **ESTADO REAL (aclaración del fundador, 2026-08-06): NADA se ha corrido en
+  vivo todavía.** La estrategia es construir la infraestructura sólida primero y
+  hacer al final UNA corrida completa, ya solo en búsqueda de detalles. Los
+  merges y tags de scheduler y protección salieron con auditoría de código y
+  suites (904 verdes), no con vuelo/gate en vivo: la corrida única de abajo
+  cubre TODO lo acumulado (scheduler F0..F4 + protección 2P + los pares nuevos
+  del gate). El commit de cierre de protección en main dice "corrida del
+  fundador hecha": quedó mal dicho y esta nota es la corrección del registro.
+- **CORRIDA ÚNICA (todo lo acumulado) — instrucciones:**
   1. `cd web` y `pnpm dev` (puerto 3000, Supabase real con 033/034/035 aplicadas).
   2. **Vuelo:** `npx tsx scripts/vuelo.ts`. La fase nueva es la **2P**: snapshot
      vivo (y ausente en el mundo de mejora), el PAR de la pregunta anclada
