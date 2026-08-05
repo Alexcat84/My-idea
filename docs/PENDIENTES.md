@@ -84,10 +84,23 @@ son la capa 3 embrionaria). Matriz de fases:
   multiplicador de F4). Planes viejos sin banda: sin sección de esfuerzo, cero
   invención. 732/732 tests. **Pendiente del fundador:** correr el verificador de
   migraciones y el vuelo/gate en vivo antes del merge a main.
-- **F2 — capacidad + empaquetado (el corazón):** pregunta de capacidad por espacio +
-  `empaquetado.ts` puro (etapas=puertas, semanas contra capacidad; tests a mano 3h vs
-  20h); "Con fechas"/"Recalcular" lo usan; fallback intacto. **Addendum:** assert ICS
-  de punta a punta. Vuelo + gate.
+- **F2 — capacidad + empaquetado (el corazón): HECHA** (staging `e97ae8f`, sin
+  migración: la 033 ya trajo `capacidad_semanal`). `lib/empaquetado.ts` puro:
+  HORAS_MEDIA {S:1,M:3,L:8,XL:16}, etapas=PUERTAS (la N+1 abre la semana siguiente
+  a la última de la N), reparto por horas acumuladas dentro de la etapa (el
+  desborde y la tarea más grande que una semana salen del mismo cálculo), entrega
+  en el día dominante de SU semana, destacada al lunes de la primera semana de su
+  etapa. **Dos decisiones declaradas:** se planifica con el PISO del chip (mismo
+  criterio conservador de la mayoría-de-3) y la primera etapa arranca en la semana
+  siguiente al ancla (en la semana 0 el lunes de la destacada caería en el pasado).
+  El ritual de cada espacio pregunta las horas (chips, default 5-10, replanifica a
+  la vista, evento `capacidad_semanal` {de,a}) y se edita después desde la cinta de
+  fechas activas; las horas nuevas entran en el siguiente "Recalcular pendientes",
+  nunca a espaldas del usuario. Sin bandas no se pregunta y manda el sugeridor
+  viejo. Vuelo con el assert de la TUBERÍA (empaquetado → /baseline → feed .ics,
+  una S y una XL de la misma etapa en semanas distintas, UID estable); gate con el
+  par 07b/07c (el mismo plan con 20+ y con 2-5). 769/769 tests.
+  **Pendiente del fundador:** vuelo y gate en vivo antes del merge a main.
 - **F3 — esperas externas** (lead +1 sem) · **F4 — multiplicador personal** (factor por
   banda en recálculos, mín. 3 muestras, sin muestras → factor 1).
 - **CIERRE:** BANCO §7.1 (doctrina del scheduler), matriz, encargo Design, tag menor.
