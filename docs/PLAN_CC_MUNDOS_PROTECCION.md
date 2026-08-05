@@ -74,7 +74,18 @@ Ocho anclajes. Tres cambian el plan de forma importante y están marcados.
 
 ---
 
-## B. Tandas propuestas
+## B0. Estado final (cierre de contenido, ago 2026)
+
+**TODAS las tandas ejecutadas y en producción**, cada una auditada y con visto:
+P0+P1 (`ca67af4`, con la corrección del snapshot ilegible que falla honesto) →
+P2 el enlace (`2c8fac5`; migración 034) → P2b la pregunta anclada (`c818d06`) →
+P3 el registro completo (`d0ebf48`; migración 035, el camino como dato) →
+P4 carril y chips (`6cdb68f`) → P5 anclas (`39f0c3f`). El **cierre** (vuelo 2P +
+doctrina al BANCO + encargo Design + este estado) queda en staging esperando la
+corrida única del fundador y su "visto, mergea y etiqueta" (tag propuesto:
+`web-v2.4.0-beta`). Instrucciones de corrida: PENDIENTES §3.
+
+## B. Tandas propuestas (el plan original, ejecutado)
 
 Sigo el orden de la spec §6 (P0..P5 + cierre). Cambios respecto de ella,
 declarados: **P1 encoge** (la muralla existe) y **P2 crece** (el enlazador es la

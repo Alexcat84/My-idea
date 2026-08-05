@@ -187,6 +187,22 @@ son la capa 3 embrionaria). Matriz de fases:
     de que la fecha ya trae el colchón y el tiempo ajeno no se le cuenta al
     usuario). Lo que se juega: que se lea como un aviso útil y **no como una
     disculpa ni un regaño**. Par del gate: `13b_detalle_espera`.
+- **Mundos de protección — encargo CONSOLIDADO (campaña cerrada en contenido,
+  ago 2026; front funcional en producción, esto es calibración visual):**
+  - **El carril y sus rombos** en el Gantt del núcleo: toggle "Ver protección",
+    sub-fila anidada bajo la banda de su etapa (restricción ya fijada: DENTRO de
+    la jerarquía de fase), rombos verde=hecha / contorno azul=pendiente, title
+    con mundo y texto. Par del gate: `14c_proteccion_carril`.
+  - **El registro** en el hub del mundo: filas con detección · severidad en
+    palabras · camino · "Protege: #N · título"; el estado vacío honesto. Pares:
+    `14_proteccion_registro` y `14b_proteccion_documentos` (dos recuadros + chip).
+  - **Los chips bidireccionales** del detalle: "Protegida" en el ítem del núcleo,
+    la detección + "Protege:" en la respuesta del mundo, el retiro dicho. Par:
+    `14d_proteccion_chip`.
+  - **El aviso de no-llego** en el ritual de fechas del mundo: ámbar espejo,
+    jamás regaño. Par: `14e_proteccion_no_llega`.
+  - Más las **fases visuales del Gantt** ya fichadas (abajo): calibrar una vez,
+    heredar en las tres vistas, y vestir el carril sin deshacerlo.
 - **Fases visuales en el Gantt (ficha del fundador, ago 2026):** el Gantt ya es
   **por fases en datos y geometría** (una barra = una etapa; un solo cálculo y un
   solo componente sirven a las tres vistas: Análisis del núcleo, análisis de
@@ -224,6 +240,22 @@ son la capa 3 embrionaria). Matriz de fases:
   etiquetas** (`?vista=bitacora`), el Análisis del núcleo (`?vista=analisis`) y los
   **reportes por mundo** (`?vista=documentos`). **NO corrido en vivo** → verificar al
   ejecutarlo (la siembra del mundo con plan y las esperas nuevas).
+- **CORRIDA ÚNICA DEL CIERRE de Mundos de protección (P0..P5) — instrucciones:**
+  1. `cd web` y `pnpm dev` (puerto 3000, Supabase real con 033/034/035 aplicadas).
+  2. **Vuelo:** `npx tsx scripts/vuelo.ts`. La fase nueva es la **2P**: snapshot
+     vivo (y ausente en el mundo de mejora), el PAR de la pregunta anclada
+     impreso para tu muestreo (DE/A), plan enlazado sin fallos del enlazador,
+     registro sin puntajes, carril en la etapa del protegido, anclas con
+     prioridad y no-llego. **Tu censo de costos** sale al final de esa fase:
+     "CENSO DE COSTOS DE PROTECCION (por pieza)" con diagnóstico / anclaje /
+     estimación / enlace y su total; la única alarma es la mención de sentido
+     común si una pieza llega a $0.50+.
+  3. **Gate:** `npx tsx scripts/gate_canon.ts` (dev corriendo). Los pares de la
+     campaña: `14_proteccion_registro`, `14b_proteccion_documentos`,
+     `14c_proteccion_carril`, `14d_proteccion_chip`, `14e_proteccion_no_llega`,
+     en `web/examples/gate-canon/`.
+  4. Con tu **"visto, mergea y etiqueta"**: merge del cierre a main + tag
+     propuesto **`web-v2.4.0-beta`**.
 - **Vuelo y gate del SCHEDULER (F0..F4), corrida del fundador.** El vuelo gana dos
   asserts que solo viven en vivo: la **tubería del calendario** (empaquetado →
   `/baseline` → feed `.ics`: una S y una XL de la misma etapa en semanas distintas,
