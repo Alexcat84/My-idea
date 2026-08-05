@@ -110,8 +110,19 @@ son la capa 3 embrionaria). Matriz de fases:
   tarea más tardía de verdad, colchón incluido. El detalle lo dice en persona sin
   colgarle la demora al usuario, con un test que vigila que el copy no derive al
   reproche. Gate `13b`. 780/780 tests.
-- **F4 — multiplicador personal** (factor por banda en recálculos, mín. 3 muestras,
-  sin muestras → factor 1). La telemetría ya corre: evento `banda_corregida`.
+- **F4 — multiplicador personal: HECHA** (staging `c1f1aa4`, sin migración).
+  `factorPorBanda` compara lo que las tareas tardaron de verdad (tiempo desde el
+  cierre de la anterior) contra lo que su banda prometía con esa capacidad, **por
+  espacio**, **mín. 3 muestras**, **sin muestras → factor 1 (cero invención)**, y
+  se aplica **SOLO en los recálculos**. Decisiones escritas en el código: la
+  primera cumplida no da muestra; las tareas con espera externa se excluyen (F3 ya
+  les puso colchón); manda la **mediana** (una vacación no reescribe una banda);
+  el factor se acota a **[0.5, 4]** con el criterio del clamp de
+  `cadenciaRealSemanas`. Las muestras salen del checklist **completo** del espacio,
+  no del ciclo vigente. 793/793 tests.
+  **Pendiente del fundador:** vuelo y gate en vivo antes del merge a main.
+- **CIERRE de campaña pendiente:** BANCO §7.1 (doctrina del scheduler), tag menor y
+  encargo a Design. Solo eso queda.
 - **CIERRE:** BANCO §7.1 (doctrina del scheduler), matriz, encargo Design, tag menor.
   El sugeridor viejo queda como **fallback documentado, jamás muere**.
 
