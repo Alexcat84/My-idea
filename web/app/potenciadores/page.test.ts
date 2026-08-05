@@ -12,15 +12,22 @@ const pagina = readFileSync(path.join(__dirname, "page.tsx"), "utf-8");
 const fila = readFileSync(path.join(__dirname, "..", "ui", "PotenciaTuIdea.tsx"), "utf-8");
 
 describe("contrato: /potenciadores redirige, no duplica", () => {
-  it("con idea elegida, REDIRIGE a la fuente de verdad ATERRIZANDO en la fila (potenciar=1)", () => {
-    expect(pagina).toContain("redirect(`/idea/${ideaId}?vista=manos&potenciar=1`)");
+  it("con idea elegida, la pantalla enfocada renderiza LA MISMA fila (ElegirPotenciador → PotenciaTuIdea)", () => {
+    expect(pagina).toContain("<ElegirPotenciador ideaId={ideaId} />");
+    const enfocada = readFileSync(path.join(__dirname, "ElegirPotenciador.tsx"), "utf-8");
+    expect(enfocada).toContain('from "@/app/ui/PotenciaTuIdea"');
+    expect(enfocada).toContain("<PotenciaTuIdea");
+    // y sus derivadores son los de la casa, no reglas propias
+    expect(enfocada).toContain("estadoMundo(");
+    expect(enfocada).toContain("grupoVigente(");
+    // sin parrilla propia: ni promesas ni precios repintados a mano
+    expect(enfocada).not.toContain("promesa");
+    expect(enfocada).not.toContain("PRECIOS");
   });
 
-  it("la idea sabe aterrizar: IdeaView lee potenciar=1 y desplaza a la fila", () => {
-    const ideaView = readFileSync(path.join(__dirname, "..", "idea", "[id]", "IdeaView.tsx"), "utf-8");
-    expect(ideaView).toContain('searchParams.get("potenciar") === "1"');
-    expect(ideaView).toContain("potenciadoresRef");
-    expect(ideaView).toContain("scrollIntoView");
+  it("aplicar el potenciador vuelve a la idea (el mundo queda en su menú y todo sigue igual)", () => {
+    const enfocada = readFileSync(path.join(__dirname, "ElegirPotenciador.tsx"), "utf-8");
+    expect(enfocada).toContain("vista=mundo&dominio=");
   });
 
   it("la página NO tiene parrilla propia: ni catálogo, ni precios, ni promesas de mundos", () => {
