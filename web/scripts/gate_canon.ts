@@ -505,6 +505,33 @@ async function main() {
     }
     await app.getByRole("button", { name: "Pasar a Manos a la Obra" }).first().waitFor({ timeout: 240000 });
 
+    // P4: un enlace DETERMINÍSTICO por service role (el enlazador vivo ya corrió,
+    // pero sus enlaces varían por corrida y el par del carril/chip necesita algo
+    // que siempre exista): la primera respuesta del mundo protege a la primera
+    // actividad del núcleo, con detección, severidad, camino y una fecha para
+    // que el carril tenga dónde dibujarla.
+    const clProt = await (await app.request.get(`/api/project/${idProyecto}/checklist`)).json();
+    type ItemP = { id: string; dominio: string | null };
+    const itemsProt: ItemP[] = (clProt.planes ?? []).flatMap((pl: { etapas: { items: ItemP[] }[] }) =>
+      pl.etapas.flatMap((e) => e.items)
+    );
+    const coreP = itemsProt.find((i) => !i.dominio || i.dominio === "core");
+    const riesgoP = itemsProt.find((i) => i.dominio === "risk_management");
+    if (coreP && riesgoP) {
+      const { error: errSem } = await supabaseAdmin
+        .from("checklist_items")
+        .update({
+          protege_item: coreP.id,
+          deteccion: "depende de un solo proveedor de sustrato",
+          probabilidad: "probable",
+          dolor: "mucho",
+          camino: "mitigar",
+          fecha_base: new Date(Date.now() + 10 * 86400000).toISOString(),
+        })
+        .eq("id", riesgoP.id);
+      if (errSem) console.warn("gate: siembra del enlace:", errSem.message);
+    }
+
     // El registro vive en el HUB del mundo: se entra por su puerta.
     await app.goto(`${BASE_URL}/idea/${idProyecto}?vista=mundo&dominio=risk_management`);
     await app.getByText("Registro de Riesgos Bajo Control", { exact: false }).waitFor({ timeout: 30000 });
@@ -656,9 +683,42 @@ async function main() {
   await capturarApp(app, "08_analisis");
   await capturarCanon(canon, "11_analisis_del_proyecto.html", "08_analisis_canon.png", "Analisis del Proyecto desktop", true);
   await capturarCanon(canon, "11_analisis_del_proyecto.html", "08_analisis_canon_380.png", "Analisis del Proyecto movil 380", true);
+
+  // P4 — el CARRIL de protección, anidado bajo la banda de su etapa. Solo si el
+  // toggle existe (hay marcas: la siembra del bloque de protección las dejó).
+  // Envuelto: sin protección sembrada, el gate sigue y avisa.
+  try {
+    const toggleProt = app.getByRole("button", { name: "Ver protección" });
+    await toggleProt.waitFor({ state: "visible", timeout: 10000 });
+    await toggleProt.click();
+    await app.waitForTimeout(400);
+    await capturarApp(app, "14c_proteccion_carril");
+    await toggleProt.click();
+  } catch (e) {
+    console.warn("gate: sin carril de protección que capturar:", (e as Error).message);
+  }
+
   const volver = app.getByRole("button", { name: "← Volver" }).first();
   await volver.waitFor({ state: "visible", timeout: 15000 });
   await volver.click();
+
+  // P4 — el CHIP del ítem protegido, en el detalle del núcleo. El primer ítem
+  // es el que la siembra enlazó. Envuelto.
+  try {
+    await asegurarManos(app);
+    await app.locator('button[title="Ver el detalle de esta actividad"]').first().click();
+    await app.getByText("Detalle de la actividad", { exact: false }).waitFor({ timeout: 10000 });
+    await app.getByText("Protegida", { exact: false }).waitFor({ timeout: 8000 });
+    await capturarApp(app, "14d_proteccion_chip");
+    await app.getByRole("button", { name: "Cerrar el detalle" }).click();
+  } catch (e) {
+    console.warn("gate: sin chip de protección que capturar:", (e as Error).message);
+    try {
+      await app.getByRole("button", { name: "Cerrar el detalle" }).click({ timeout: 3000 });
+    } catch {
+      /* el cajón no estaba abierto */
+    }
+  }
 
   // 09 La Celebración (canon 09) — variante con cumplimiento (modo fechas)
   const marcarReal = app.getByRole("button", { name: "Marcar como realizada" }).first();

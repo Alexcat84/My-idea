@@ -719,3 +719,74 @@ describe("informeMarkdown — el acta dice cómo quedaron los mundos (Fase 4.2 �
     expect(md).not.toContain("quality");
   });
 });
+
+// ─── Mundos de protección (P4): el carril, DERIVADO y sin doble conteo ───────
+describe("carrilProteccion (P4): lectura pura que jamás toca las medidas", () => {
+  // Los ítems del núcleo de BASE, ahora con id (el carril resuelve por id).
+  const CORE_CON_ID: EntradaAnalytics = {
+    ...BASE,
+    items: BASE.items.map((i, n) => ({ ...i, id: `core-${n + 1}` })),
+    mundos: [{ dominio: "risk_management", unlocked_at: iso("2026-03-20") }],
+  };
+  // Una respuesta de protección enlazada al ítem C (etapa 2), con fecha base
+  // el 30 de marzo. A MANO: chispa 01-mar → 30-mar = 29 días.
+  const RESPUESTA = {
+    id: "resp-1",
+    plan_id: "pm1",
+    dominio: "risk_management",
+    etapa: 1, // la SUYA: el carril debe usar la del PROTEGIDO (etapa 2), no esta
+    estado: "pendiente",
+    destacado: false,
+    texto: "Consigue un proveedor alterno",
+    completed_at: null,
+    fecha_base: iso("2026-03-30"),
+    fecha_base_original: null,
+    protege_item: "core-3",
+  };
+  const CON_PROTECCION: EntradaAnalytics = { ...CORE_CON_ID, items: [...CORE_CON_ID.items, RESPUESTA] };
+
+  it("la marca se ancla a la etapa del PROTEGIDO y al día real (29, a mano)", () => {
+    const carril = calcularAnalytics(CON_PROTECCION).carrilProteccion;
+    expect(carril).toEqual([
+      { etapa: 2, dia: 29, hecho: false, dominio: "risk_management", texto: "Consigue un proveedor alterno" },
+    ]);
+  });
+
+  it("NO DOBLE CONTEO: añadir la respuesta no mueve NI UNA medida del núcleo", () => {
+    const sin = calcularAnalytics(CORE_CON_ID);
+    const con = calcularAnalytics(CON_PROTECCION);
+    expect(con.universal).toEqual(sin.universal);
+    // la capa de cumplimiento del NÚCLEO, número a número (el desglose por
+    // dominio SÍ ve al mundo en su propia fila: eso es partición, no doble conteo)
+    expect(con.cumplimiento!.totalConFecha).toBe(sin.cumplimiento!.totalConFecha);
+    expect(con.cumplimiento!.aTiempo).toBe(sin.cumplimiento!.aTiempo);
+    expect(con.cumplimiento!.tardias).toBe(sin.cumplimiento!.tardias);
+    expect(con.cumplimiento!.adelantadas).toBe(sin.cumplimiento!.adelantadas);
+    expect(con.cumplimiento!.porEtapa).toEqual(sin.cumplimiento!.porEtapa);
+  });
+
+  it("una respuesta SIN fecha vive en el registro, no en el carril", () => {
+    const sinFecha = { ...RESPUESTA, fecha_base: null };
+    const carril = calcularAnalytics({ ...CORE_CON_ID, items: [...CORE_CON_ID.items, sinFecha] }).carrilProteccion;
+    expect(carril).toEqual([]);
+  });
+
+  it("una respuesta RETIRADA no se dibuja; una HECHA usa su día real", () => {
+    const retirada = { ...RESPUESTA, estado: "no_aplica" };
+    expect(calcularAnalytics({ ...CORE_CON_ID, items: [...CORE_CON_ID.items, retirada] }).carrilProteccion).toEqual([]);
+    // hecha el 05-abr: chispa 01-mar → 35 días, y manda sobre la fecha base
+    const hecha = { ...RESPUESTA, estado: "hecho", completed_at: iso("2026-04-05") };
+    const carril = calcularAnalytics({ ...CORE_CON_ID, items: [...CORE_CON_ID.items, hecha] }).carrilProteccion;
+    expect(carril[0]).toMatchObject({ dia: 35, hecho: true });
+  });
+
+  it("un mundo de MEJORA jamás aporta al carril, aunque tuviera un enlace fantasma", () => {
+    const mejora = { ...RESPUESTA, dominio: "quality" };
+    expect(calcularAnalytics({ ...CORE_CON_ID, items: [...CORE_CON_ID.items, mejora] }).carrilProteccion).toEqual([]);
+  });
+
+  it("un enlace a un ítem que ya no existe no inventa marca", () => {
+    const huerfana = { ...RESPUESTA, protege_item: "no-existe" };
+    expect(calcularAnalytics({ ...CORE_CON_ID, items: [...CORE_CON_ID.items, huerfana] }).carrilProteccion).toEqual([]);
+  });
+});

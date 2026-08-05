@@ -14,6 +14,8 @@
  * adelantada < −1 día; tardía > +1 día. Tono espejo: las tardías se pintan
  * en ámbar, jamás en rojo (eso lo decide la UI).
  */
+import { esMundoProteccion } from "./espacios";
+
 const DIA = 86_400_000;
 
 function difDias(desdeIso: string, hastaIso: string): number {
@@ -34,6 +36,10 @@ export interface PlanCoreAnalytics {
 
 export interface ItemAnalytics {
   plan_id: string;
+  /** Mundos de protección (P4): el uuid del ítem y a quién protege. Solo los
+   * usa el carril; ausentes en lecturas viejas (la degradación los deja fuera). */
+  id?: string;
+  protege_item?: string | null;
   /** Fase 4.1 (V3b): null = core. Los items de mundo YA no se excluyen en la
    * entrada; la capa universal los ignora (sus etapas colisionarian con las del
    * core y le moverian el ritmo al viaje principal) y el desglose los cuenta. */
@@ -212,9 +218,25 @@ export interface CapaCumplimiento {
  * ventanas honestas incluido (`porEtapa`)— salvo esa fila. "Todo separado" (T3d). */
 export type CapaCumplimientoEspacio = Omit<CapaCumplimiento, "porDominio">;
 
+/** Mundos de protección (P4): una marca del carril del Gantt del núcleo. La
+ * ETAPA es la de la actividad PROTEGIDA (adjudicación 5: el carril se anida
+ * bajo la banda de su etapa); el día, el de la fecha vigente de la respuesta
+ * (la real si ya se hizo). Solo-lectura: NADA de esto entra en las medidas. */
+export interface MarcaCarril {
+  etapa: number;
+  dia: number;
+  hecho: boolean;
+  dominio: string;
+  texto: string;
+}
+
 export interface Analytics {
   universal: CapaUniversal;
   cumplimiento: CapaCumplimiento | null;
+  /** Mundos de protección (P4): el carril del Gantt del núcleo. DERIVADO puro:
+   * se calcula aparte de universal/cumplimiento y jamás toca sus números (lo
+   * vigila el test de no doble conteo). Vacío sin mundos de protección. */
+  carrilProteccion: MarcaCarril[];
   hitos: Hito[];
   /** Fase 4.0 §3: se arrastra tal cual para que el bloque de realidad elija su
    * lenguaje (con fechas: cumplimiento; a mi ritmo: solo duraciones y ritmo). */
@@ -587,9 +609,35 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   }
 
   const hitos = construirHitos(entrada, ahora);
+
+  // Mundos de protección (P4): el carril. Las respuestas ENLAZADAS de los
+  // mundos de protección, ancladas a la etapa de lo que protegen. Solo las que
+  // tienen una fecha que dibujar (la vigente, o la real si ya se hicieron): una
+  // respuesta sin fecha vive en el registro, no en un eje de tiempo. Las
+  // retiradas no se dibujan (misma regla que el resto del Gantt).
+  const porIdCore = new Map(itemsCore.filter((i) => i.id).map((i) => [i.id as string, i]));
+  const carrilProteccion: MarcaCarril[] = entrada.items
+    .filter((i) => esMundoProteccion(i.dominio) && i.protege_item && i.estado !== "no_aplica")
+    .flatMap((i) => {
+      const protegido = porIdCore.get(i.protege_item as string);
+      const fecha = i.completed_at ?? i.fecha_base;
+      if (!protegido || !fecha) return [];
+      return [
+        {
+          etapa: protegido.etapa,
+          dia: Math.max(0, dias(chispa, fecha)),
+          hecho: i.estado === "hecho",
+          dominio: i.dominio as string,
+          texto: i.texto ?? "",
+        },
+      ];
+    })
+    .sort((a, b) => a.etapa - b.etapa || a.dia - b.dia);
+
   return {
     universal,
     cumplimiento,
+    carrilProteccion,
     hitos,
     modoCamino: entrada.modoCamino ?? null,
     cierreMotivo: entrada.cierreMotivo ?? null,

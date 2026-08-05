@@ -64,6 +64,7 @@ const CUMPLIMIENTO: Analytics["cumplimiento"] = {
 const base = (over: Partial<Analytics> = {}): Analytics => ({
   universal: UNIVERSAL,
   cumplimiento: CUMPLIMIENTO,
+  carrilProteccion: [],
   hitos: [],
   modoCamino: "fechas",
   cierreMotivo: null,

@@ -153,3 +153,57 @@ describe("DetalleActividad — el chip de cumplimiento es espejo (Fase 4.3.2)", 
     expect(html).toContain('role="dialog"');
   });
 });
+
+// ─── Mundos de protección (P4): los chips bidireccionales del enlace ─────────
+describe("los chips de protección (P4): las dos direcciones, sin silencio", () => {
+  function pintarCon(extra: Record<string, unknown>, over: Partial<ItemChecklistUI> = {}) {
+    return renderToStaticMarkup(
+      createElement(DetalleActividad, {
+        item: { ...base, ...over },
+        tituloEtapa: "Consigue tu primera venta real",
+        ocupado: false,
+        onCambio: () => {},
+        onCerrar: () => {},
+        ...extra,
+      })
+    );
+  }
+
+  it("el ítem del núcleo protegido muestra quién lo cuida y de qué mundo", () => {
+    const html = pintarCon({
+      protegidaPor: [{ respuesta: "Consigue un proveedor alterno", mundo: "Riesgos Bajo Control" }],
+    });
+    expect(html).toContain("Protegida");
+    expect(html).toContain("Consigue un proveedor alterno");
+    expect(html).toContain("Riesgos Bajo Control");
+  });
+
+  it("la respuesta del mundo muestra SIEMPRE su detección junto a lo que protege", () => {
+    const html = pintarCon({
+      protege: { titulo: "Cierra el acuerdo con el proveedor", deteccion: "depende de un solo proveedor", retirada: false, sistemica: false },
+    });
+    expect(html).toContain("depende de un solo proveedor");
+    expect(html).toContain("Cierra el acuerdo con el proveedor");
+  });
+
+  it("ANTI-SILENCIO: si lo protegido se retiró, el chip lo DICE y la detección no desaparece", () => {
+    const html = pintarCon({
+      protege: { titulo: "Cierra el acuerdo", deteccion: "depende de un solo proveedor", retirada: true, sistemica: false },
+    });
+    expect(html).toContain("la actividad que protegía fue retirada");
+    expect(html).toContain("depende de un solo proveedor");
+  });
+
+  it("la sistémica dice que protege al negocio entero", () => {
+    const html = pintarCon({
+      protege: { titulo: null, deteccion: "no hay respaldo de los datos", retirada: false, sistemica: true },
+    });
+    expect(html).toContain("tu negocio entero");
+  });
+
+  it("sin enlace no hay chip alguno (ruido cero)", () => {
+    const html = pintarCon({});
+    expect(html).not.toContain("data-chip-proteccion");
+    expect(html).not.toContain("Protege:");
+  });
+});

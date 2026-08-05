@@ -8,6 +8,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import type { Analytics } from "@/lib/analytics";
+import catalogo from "@/lib/assets/packs_catalog.json";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import { GanttCumplimiento } from "./GanttCumplimiento";
 import { MapaHitos } from "./MapaHitos";
@@ -34,6 +35,11 @@ interface Respuesta {
 }
 
 const ERROR = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
+
+/** El nombre de cara de un mundo (P4: las marcas del carril se etiquetan así). */
+const nombreDeMundo = (dominio: string): string =>
+  (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.find((p) => p.clave === dominio)?.nombre ??
+  dominio;
 
 /** Tile compacta de cumplimiento: el número (grande y centrado) lleva el color
  * semántico (verde a tiempo, azul adelantada, ámbar tardía), debajo el
@@ -292,6 +298,10 @@ export function AnalisisProyecto({
                 maxBarra={maxBarra}
                 nombreEtapa={nombreEtapa}
                 hoyDias={realizadaAt ? null : u.duracionTotalDias}
+                /* P4: el carril SOLO en el Gantt del NÚCLEO. El análisis de un
+                   mundo mide SU espacio; cruzarle el carril sería doble lectura. */
+                carril={esCore ? a.carrilProteccion ?? [] : []}
+                nombreMundo={nombreDeMundo}
               />
             )}
           </div>
