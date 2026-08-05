@@ -358,6 +358,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
             deteccion: enlace.enlaces[i]?.deteccion ?? null,
             probabilidad: enlace.enlaces[i]?.probabilidad ?? null,
             dolor: enlace.enlaces[i]?.dolor ?? null,
+            camino: enlace.enlaces[i]?.camino ?? null,
           }));
           // El costo va MEDIDO al evento (el fundador lo pidio asi), junto con
           // cuantos enlaces se descartaron por apuntar a algo inexistente.

@@ -11,6 +11,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   armarRegistro,
+  PALABRA_CAMINO,
   registroMarkdown,
   severidadEnPalabras,
   textoProtege,
@@ -138,6 +139,37 @@ describe("LA SEVERIDAD: en palabras, jamás en puntajes", () => {
     // nada de multiplicar probabilidad por impacto: esa es justo la matriz que engaña
     expect(fuente).not.toMatch(/probabilidad\s*\*\s*/);
     expect(fuente).not.toMatch(/Math\.(round|max|min)\(.*dolor/);
+  });
+});
+
+describe("EL CAMINO en la fila: se muestra cuando existe, se calla cuando no", () => {
+  it("con camino, el documento lo dice en palabras de persona", () => {
+    const md = registroMarkdown(
+      "Riesgos Bajo Control",
+      armarRegistro(
+        [respuesta({ id: "r1", deteccion: "depende de un solo proveedor", protege_item: "nuc-a", camino: "mitigar" })],
+        NUCLEO
+      )
+    );
+    expect(md).toContain("El camino: reducirlo.");
+  });
+
+  it("sin camino, NO hay línea de camino (nada de 'sin clasificar')", () => {
+    const md = registroMarkdown(
+      "Riesgos Bajo Control",
+      armarRegistro([respuesta({ id: "r1", deteccion: "algo", protege_item: "nuc-a" })], NUCLEO)
+    );
+    expect(md).not.toContain("El camino:");
+    expect(md.toLowerCase()).not.toContain("sin clasificar");
+  });
+
+  it("los cuatro caminos tienen su palabra y ninguna es un tecnicismo", () => {
+    expect(PALABRA_CAMINO).toEqual({
+      evitar: "evitarlo",
+      mitigar: "reducirlo",
+      transferir: "pasárselo a otro",
+      aceptar: "aceptarlo con los ojos abiertos",
+    });
   });
 });
 

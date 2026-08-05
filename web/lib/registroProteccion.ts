@@ -14,7 +14,7 @@
  * Nada de puntajes, porcentajes ni colores que finjan precisión. Este módulo no
  * calcula ningún número de riesgo y un test vigila que no empiece a hacerlo.
  */
-import type { Dolor, Probabilidad } from "./dbContract";
+import type { Camino, Dolor, Probabilidad } from "./dbContract";
 
 /** Una respuesta del plan del mundo, tal como sale del checklist. */
 export interface FilaRespuesta {
@@ -27,6 +27,7 @@ export interface FilaRespuesta {
   deteccion?: string | null;
   probabilidad?: Probabilidad | null;
   dolor?: Dolor | null;
+  camino?: Camino | null;
 }
 
 /** Una actividad del núcleo, para resolver a qué apunta cada respuesta. */
@@ -43,6 +44,8 @@ export interface EntradaRegistro {
   /** La severidad EN PALABRAS. null cuando no vino o cayó fuera del enum. */
   probabilidad: Probabilidad | null;
   dolor: Dolor | null;
+  /** El camino elegido (035). null = el enlazador no lo clasificó: se calla. */
+  camino: Camino | null;
   /** La respuesta: la actividad del plan del mundo. */
   respuesta: string;
   estado: string;
@@ -66,6 +69,14 @@ export const PALABRA_DOLOR: Record<Dolor, string> = {
   poco: "dolería poco",
   bastante: "dolería bastante",
   mucho: "dolería mucho",
+};
+
+/** El camino en palabras de persona. Fuente única para pantalla y papel. */
+export const PALABRA_CAMINO: Record<Camino, string> = {
+  evitar: "evitarlo",
+  mitigar: "reducirlo",
+  transferir: "pasárselo a otro",
+  aceptar: "aceptarlo con los ojos abiertos",
 };
 
 /**
@@ -107,6 +118,7 @@ export function armarRegistro(
         deteccion: r.deteccion ?? null,
         probabilidad: r.probabilidad ?? null,
         dolor: r.dolor ?? null,
+        camino: r.camino ?? null,
         respuesta: r.texto,
         estado: r.estado,
         protege,
@@ -142,6 +154,7 @@ export function registroMarkdown(nombreMundo: string, entradas: EntradaRegistro[
     l.push("");
     const sev = severidadEnPalabras(e);
     if (sev) l.push(`Qué tan serio: ${sev}.`);
+    if (e.camino) l.push(`El camino: ${PALABRA_CAMINO[e.camino]}.`);
     l.push(`Qué protege: ${textoProtege(e)}.`);
     l.push(`Tu respuesta: ${e.respuesta}`);
     l.push("");

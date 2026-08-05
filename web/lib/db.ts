@@ -632,6 +632,7 @@ export async function insertarChecklist(
     deteccion?: string | null;
     probabilidad?: string | null;
     dolor?: string | null;
+    camino?: string | null;
   }>,
   dominio: string = "core"
 ): Promise<void> {
@@ -655,6 +656,7 @@ export async function insertarChecklist(
             deteccion: i.deteccion ?? null,
             probabilidad: i.probabilidad ?? null,
             dolor: i.dolor ?? null,
+            camino: i.camino ?? null,
           }
         : {}),
     }))

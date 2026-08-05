@@ -25,6 +25,7 @@ import {
   CAPACIDAD_SEMANAL,
   esActivo,
   type Banda,
+  type Camino,
   type CapacidadSemanal,
   type ChecklistEstado,
   type Dolor,
@@ -43,6 +44,7 @@ import {
 import { armarSnapshot } from "@/lib/engine/snapshotProyecto";
 import {
   armarRegistro,
+  PALABRA_CAMINO,
   severidadEnPalabras,
   textoProtege,
   type EntradaRegistro,
@@ -84,6 +86,7 @@ export interface ItemChecklistUI {
   deteccion?: string | null;
   probabilidad?: Probabilidad | null;
   dolor?: Dolor | null;
+  camino?: Camino | null;
   created_at: string;
   updated_at: string;
 }
@@ -1121,6 +1124,11 @@ function RegistroProteccion({ nombreMundo, entradas }: { nombreMundo: string; en
               <li key={e.id} className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
                 <p className="text-[14px] font-semibold [text-wrap:pretty]">{e.deteccion ?? e.respuesta}</p>
                 {sev && <p className="mt-1 text-[12.5px] text-warn">{sev}</p>}
+                {e.camino && (
+                  <p className="mt-1 text-[12.5px] text-dim">
+                    El camino: <span className="text-ink">{PALABRA_CAMINO[e.camino]}</span>
+                  </p>
+                )}
                 <p className="mt-1.5 text-[12.5px] text-dim [text-wrap:pretty]">
                   Protege: <span className="text-ink">{textoProtege(e)}</span>
                 </p>

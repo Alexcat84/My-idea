@@ -124,7 +124,7 @@ export const SYSTEM_ENLACE_PROTECCION = [
   "- ACTIVIDADES DEL NÚCLEO: lo que la persona va a hacer de verdad (#1, #2…).",
   "- RESPUESTAS DEL PLAN DE PROTECCIÓN: las acciones del plan nuevo (#1, #2…).",
   "",
-  "Por CADA respuesta dices tres cosas:",
+  "Por CADA respuesta dices cuatro cosas:",
   "1. LA DETECCIÓN que la originó, en UNA frase corta y concreta, en palabras de",
   "   persona (ejemplo: 'depende de un solo proveedor').",
   "2. A QUÉ ACTIVIDAD del núcleo protege: el número de esa actividad. Si protege",
@@ -132,6 +132,12 @@ export const SYSTEM_ENLACE_PROTECCION = [
   "3. La SEVERIDAD en palabras, JAMÁS en números ni colores:",
   "   probabilidad: poco_probable | probable | muy_probable",
   "   dolor: poco | bastante | mucho",
+  "4. EL CAMINO que la respuesta toma ante lo detectado:",
+  "   camino: evitar | mitigar | transferir | aceptar",
+  "   (evitar = eliminar la causa; mitigar = reducir probabilidad o dolor;",
+  "   transferir = pasárselo a otro, como un seguro o un contrato;",
+  "   aceptar = asumirlo con los ojos abiertos). Si la respuesta no encaja",
+  "   claramente en uno, devuelve null: no fuerces la clasificación.",
   "",
   "Reglas duras:",
   "- El número de actividad tiene que existir en la lista que te di. Si dudas,",
@@ -142,7 +148,7 @@ export const SYSTEM_ENLACE_PROTECCION = [
   "",
   "Responde SOLO un array JSON, sin una palabra más, con EXACTAMENTE un objeto",
   "por respuesta, con esta forma EXACTA:",
-  '[{"item_orden":1,"deteccion":"depende de un solo proveedor","protege_indice":3,"probabilidad":"probable","dolor":"mucho"}]',
+  '[{"item_orden":1,"deteccion":"depende de un solo proveedor","protege_indice":3,"probabilidad":"probable","dolor":"mucho","camino":"mitigar"}]',
 ].join("\n");
 
 export const SYSTEM_ESTIMACION_BANDA = [
