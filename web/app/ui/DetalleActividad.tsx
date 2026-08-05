@@ -53,6 +53,8 @@ export function DetalleActividad({
   onCambio,
   onMoverFecha,
   itemsDominio = [],
+  protegidaPor = [],
+  protege = null,
   onCerrar,
 }: {
   item: ItemChecklistUI;
@@ -64,6 +66,13 @@ export function DetalleActividad({
   onMoverFecha?: (fecha: string, cascada: boolean) => void;
   /** Los ítems del MISMO dominio, para calcular la oferta de cascada. */
   itemsDominio?: ItemChecklistUI[];
+  /** Mundos de protección (P4): las respuestas que cuidan a ESTE ítem del
+   * núcleo. Vacío/ausente = sin chip (ruido cero). */
+  protegidaPor?: Array<{ respuesta: string; mundo: string }>;
+  /** P4: si ESTE ítem es una respuesta de protección, a qué protege. La
+   * detección se muestra SIEMPRE que exista (regla anti-silencio); si lo
+   * protegido se retiró, se dice. */
+  protege?: { titulo: string | null; deteccion: string | null; retirada: boolean; sistemica: boolean } | null;
   onCerrar: () => void;
 }) {
   const [nota, setNota] = useState(item.nota ?? "");
@@ -183,6 +192,38 @@ export function DetalleActividad({
             <span className={"mt-3 inline-flex items-center rounded-full border px-3 py-1 text-[12px] font-bold " + chip.clase}>
               {chip.texto}
             </span>
+          )}
+
+          {/* P4 — el enlace de protección, en las dos direcciones. Solo-lectura:
+              nace del plan del mundo y no se edita aquí. */}
+          {protegidaPor.length > 0 && (
+            <div className="mt-3 flex flex-col gap-1.5" data-chip-proteccion>
+              {protegidaPor.map((pr, i) => (
+                <p key={i} className="text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">
+                  <span className="mr-1.5 inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.6px] text-accent">
+                    Protegida
+                  </span>
+                  {pr.respuesta} <span className="text-dim/70">· {pr.mundo}</span>
+                </p>
+              ))}
+            </div>
+          )}
+          {protege && (
+            <div className="mt-3 rounded-cinta border border-hairline bg-surface-2 px-4 py-3" data-chip-proteccion>
+              {protege.deteccion && (
+                <p className="text-[13px] font-semibold [text-wrap:pretty]">{protege.deteccion}</p>
+              )}
+              <p className={"text-[12.5px] text-dim [text-wrap:pretty]" + (protege.deteccion ? " mt-1" : "")}>
+                Protege:{" "}
+                <span className="text-ink">
+                  {protege.retirada
+                    ? "la actividad que protegía fue retirada"
+                    : protege.sistemica
+                      ? "tu negocio entero"
+                      : protege.titulo ?? "una actividad que ya no está en tu plan"}
+                </span>
+              </p>
+            </div>
           )}
 
           {/* estado: LISTA DESPLEGABLE (no cintas) — más fácil de escoger y

@@ -2568,10 +2568,29 @@ export function ManosALaObra({
           .flatMap((e) => e.items)
           .find((i) => i.id === detalleItem.id);
         if (!vivo) return null;
-        const itemsDominio = checklist.planes
-          .flatMap((p) => p.etapas)
-          .flatMap((e) => e.items)
-          .filter((i) => i.dominio === vivo.dominio);
+        const todos = checklist.planes.flatMap((p) => p.etapas).flatMap((e) => e.items);
+        const itemsDominio = todos.filter((i) => i.dominio === vivo.dominio);
+        // Mundos de protección (P4): los CHIPS bidireccionales del enlace.
+        //  - Ítem del núcleo: qué respuestas de protección lo cuidan.
+        //  - Respuesta de un mundo: a qué actividad protege, con su detección
+        //    SIEMPRE visible (regla anti-silencio de la adjudicación 4) y, si
+        //    lo protegido se retiró, diciéndolo.
+        const nombreMundoDe = (dom: string) => mundos.find((m) => m.dominio === dom)?.nombre ?? dom;
+        const protegidaPor = esEspacioCore(vivo.dominio)
+          ? todos
+              .filter((i) => esMundoProteccion(i.dominio) && i.protege_item === vivo.id && i.estado !== "no_aplica")
+              .map((i) => ({ respuesta: i.texto, mundo: nombreMundoDe(i.dominio) }))
+          : [];
+        const objetivo = vivo.protege_item ? todos.find((i) => i.id === vivo.protege_item) ?? null : null;
+        const protege =
+          esMundoProteccion(vivo.dominio) && (vivo.protege_item || vivo.deteccion)
+            ? {
+                titulo: objetivo?.texto ?? null,
+                deteccion: vivo.deteccion ?? null,
+                retirada: objetivo?.estado === "no_aplica",
+                sistemica: !vivo.protege_item,
+              }
+            : null;
         return (
           <DetalleActividad
             item={vivo}
@@ -2580,6 +2599,8 @@ export function ManosALaObra({
             onCambio={(cambio) => aplicarCambio(vivo, cambio)}
             onMoverFecha={(fecha, cascada) => moverFecha(vivo.id, fecha, cascada)}
             itemsDominio={itemsDominio}
+            protegidaPor={protegidaPor}
+            protege={protege}
             onCerrar={() => setDetalleItem(null)}
           />
         );

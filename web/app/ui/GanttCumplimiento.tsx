@@ -14,7 +14,8 @@
  * Portado fiel de la entrega de Design (medidas/tokens en su `notas.md`); los
  * números salen de analytics (cero LLM).
  */
-import { useState, type CSSProperties, type ReactNode } from "react";
+import { Fragment, useState, type CSSProperties, type ReactNode } from "react";
+import type { MarcaCarril } from "@/lib/analytics";
 
 export type VistaGantt = "riel" | "escalera" | "cintas";
 
@@ -191,12 +192,19 @@ export function GanttCumplimiento({
   maxBarra,
   nombreEtapa,
   hoyDias,
+  carril = [],
+  nombreMundo = (d) => d,
 }: {
   porEtapa: EtapaGantt[];
   maxBarra: number;
   nombreEtapa: (n: number) => string;
   /** días desde la chispa hasta HOY; null si el proyecto ya se cerró */
   hoyDias: number | null;
+  /** Mundos de protección (P4): las respuestas enlazadas, ancladas a la etapa
+   * de lo que protegen. Solo-lectura, jamás cuenta en las medidas. Vacío = el
+   * toggle ni aparece (ruido cero: el núcleo sin protección no lo menciona). */
+  carril?: MarcaCarril[];
+  nombreMundo?: (dominio: string) => string;
 }) {
   // El Análisis es client-only (renderiza tras el fetch), así que leer la vista
   // persistida en el inicializador perezoso es seguro (sin desajuste de
@@ -206,6 +214,9 @@ export function GanttCumplimiento({
     const v = localStorage.getItem("mi-idea:gantt-vista");
     return v === "riel" || v === "escalera" || v === "cintas" ? v : "riel";
   });
+  // P4: el carril se muestra a pedido. Nace apagado: es una lectura extra, no
+  // una medida, y el Gantt del núcleo debe abrir igual que siempre.
+  const [verProteccion, setVerProteccion] = useState(false);
   const cambiar = (v: VistaGantt) => {
     setVista(v);
     try {
@@ -233,6 +244,7 @@ export function GanttCumplimiento({
             : "aTiempo";
     return {
       n: i + 1,
+      etapa: e.etapa,
       nombre: nombreEtapa(e.etapa),
       base: e.baseFin != null ? { l: pct(e.baseInicio), w: pct(Math.max(0, e.baseFin - e.baseInicio)) } : null,
       real: tieneReal ? { l: pct(e.realInicio!), w: pct(Math.max(0, e.realFin! - e.realInicio!)) } : null,
@@ -250,11 +262,32 @@ export function GanttCumplimiento({
       <Selector vista={vista} onCambio={cambiar} />
       <div style={{ border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "26px 28px 22px" }}>
         {/* encabezado (la leyenda de colores va JUNTO al gráfico, más abajo) */}
-        <div style={{ marginBottom: 6 }}>
-          <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F6F8" }}>Cómo se movió tu camino</div>
-          <div style={{ fontSize: 13, color: "#6F7076", marginTop: 5 }}>
-            En gris, la línea base que sellaste. Encima, los días que ocupaste de verdad.
+        <div style={{ marginBottom: 6, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }}>
+          <div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F6F8" }}>Cómo se movió tu camino</div>
+            <div style={{ fontSize: 13, color: "#6F7076", marginTop: 5 }}>
+              En gris, la línea base que sellaste. Encima, los días que ocupaste de verdad.
+            </div>
           </div>
+          {carril.length > 0 && (
+            <button
+              onClick={() => setVerProteccion((v) => !v)}
+              aria-pressed={verProteccion}
+              style={{
+                flex: "none",
+                fontSize: 12,
+                fontWeight: 600,
+                padding: "5px 12px",
+                borderRadius: 999,
+                border: verProteccion ? "1px solid rgba(77,124,254,0.55)" : "1px solid rgba(255,255,255,0.14)",
+                background: verProteccion ? "rgba(77,124,254,0.14)" : "transparent",
+                color: verProteccion ? AZUL : "#A6A7AD",
+                cursor: "pointer",
+              }}
+            >
+              Ver protección
+            </button>
+          )}
         </div>
 
         {/* leyenda numerada (nombres una vez) */}
@@ -366,17 +399,24 @@ export function GanttCumplimiento({
                 </div>
               </div>
               {filas.map((f, i) => (
-                <FilaCarril
-                  key={f.n}
-                  n={f.n}
-                  base={f.base}
-                  real={f.real}
-                  color={f.estado ? COLOR_ESTADO[f.estado] : VERDE}
-                  planDias={f.planDias}
-                  realTexto={f.realDias != null ? `${f.realDias}d` : "en curso"}
-                  vista={vista}
-                  primeraSiguienteReal={vista === "escalera" ? filas[i + 1]?.realInicioPct ?? null : null}
-                />
+                <Fragment key={f.n}>
+                  <FilaCarril
+                    n={f.n}
+                    base={f.base}
+                    real={f.real}
+                    color={f.estado ? COLOR_ESTADO[f.estado] : VERDE}
+                    planDias={f.planDias}
+                    realTexto={f.realDias != null ? `${f.realDias}d` : "en curso"}
+                    vista={vista}
+                    primeraSiguienteReal={vista === "escalera" ? filas[i + 1]?.realInicioPct ?? null : null}
+                  />
+                  {/* P4 (restricción del fundador): el carril nace DENTRO de la
+                      jerarquía visual de fase, anidado bajo la banda de SU
+                      etapa. Solo-lectura: rombos en el día de cada respuesta. */}
+                  {verProteccion && (
+                    <SubfilaProteccion marcas={carril.filter((m) => m.etapa === f.etapa)} pct={pct} nombreMundo={nombreMundo} />
+                  )}
+                </Fragment>
               ))}
             </div>
           )}
@@ -393,6 +433,48 @@ export function GanttCumplimiento({
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+/** P4: la sub-fila del carril de protección, anidada bajo la banda de su
+ * etapa. La vista "cintas" no tiene filas por etapa (dos cintas corridas), así
+ * que el carril vive en riel y escalera; se declara aquí, no se finge. */
+function SubfilaProteccion({
+  marcas,
+  pct,
+  nombreMundo,
+}: {
+  marcas: MarcaCarril[];
+  pct: (d: number) => number;
+  nombreMundo: (dominio: string) => string;
+}) {
+  if (marcas.length === 0) return null;
+  return (
+    <div style={{ display: "grid", gridTemplateColumns: "20px 1fr 136px", gap: 14, alignItems: "center" }}>
+      <span />
+      <div style={{ position: "relative", height: 16 }}>
+        {marcas.map((m, i) => (
+          <span
+            key={i}
+            title={`${nombreMundo(m.dominio)}: ${m.texto}${m.hecho ? " (hecha)" : ""}`}
+            style={{
+              position: "absolute",
+              left: `${Math.min(100, pct(m.dia))}%`,
+              top: 3,
+              width: 9,
+              height: 9,
+              transform: "translateX(-50%) rotate(45deg)",
+              borderRadius: 2,
+              background: m.hecho ? VERDE : "transparent",
+              border: `1.5px solid ${m.hecho ? VERDE : AZUL}`,
+            }}
+          />
+        ))}
+      </div>
+      <span style={{ fontSize: 10.5, textAlign: "right", color: "#6F7076", letterSpacing: "0.6px", textTransform: "uppercase" }}>
+        protección
+      </span>
     </div>
   );
 }

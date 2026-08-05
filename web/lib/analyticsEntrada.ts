@@ -59,14 +59,20 @@ export async function cargarEntradaAnalytics(
 
   // no_aplica_motivo llega con la 030: se reintenta sin ella si aún no se
   // aplicó, para no romper el Análisis ni el follow. Patrón de project_unlocks.
-  const COLS_ITEMS = "plan_id, dominio, etapa, estado, destacado, texto, completed_at, fecha_base, fecha_base_original";
-  const conMotivo = await supabase
-    .from("checklist_items")
-    .select(`${COLS_ITEMS}, no_aplica_motivo`)
-    .eq("project_id", projectId);
-  const itemsRaw = conMotivo.error
-    ? (await supabase.from("checklist_items").select(COLS_ITEMS).eq("project_id", projectId)).data
-    : conMotivo.data;
+  // P4: id + protege_item alimentan el carril de protección. Degradación en
+  // cadena (patrón del GET del checklist): si una columna nueva aún no existe,
+  // se recorta y el Análisis sigue; el carril simplemente sale vacío.
+  const COLS_ITEMS = "id, plan_id, dominio, etapa, estado, destacado, texto, completed_at, fecha_base, fecha_base_original, protege_item";
+  const COLS_VIEJAS = COLS_ITEMS.replace("id, ", "").replace(", protege_item", "");
+  const candidatas = [`${COLS_ITEMS}, no_aplica_motivo`, COLS_ITEMS, `${COLS_VIEJAS}, no_aplica_motivo`, COLS_VIEJAS];
+  let itemsRaw: unknown[] | null = null;
+  for (const cols of candidatas) {
+    const r = await supabase.from("checklist_items").select(cols).eq("project_id", projectId);
+    if (!r.error) {
+      itemsRaw = (r.data ?? []) as unknown[];
+      break;
+    }
+  }
   // Fase 4.1 (V3b): ya NO se excluyen los mundos. La entrada los lleva CON su
   // dominio; analytics decide que capa los usa (la universal los ignora para no
   // mover el ritmo del viaje principal; el desglose de cumplimiento los cuenta).
