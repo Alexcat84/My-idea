@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { CHECKLIST_ESTADO, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { BANDA, CAPACIDAD_SEMANAL, CHECKLIST_ESTADO, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -117,7 +117,15 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     assertSubconjuntoDelContrato("checklist_items.fecha_base_origen", FECHA_BASE_ORIGEN);
   });
 
-  it("parseo de sanidad: encontro los 10 CHECK esperados con al menos un literal cada uno", () => {
+  it("checklist_items.banda (Scheduler F1, migration 033)", () => {
+    assertSubconjuntoDelContrato("checklist_items.banda", BANDA);
+  });
+
+  it("project_modos.capacidad_semanal (Scheduler F1, migration 033)", () => {
+    assertSubconjuntoDelContrato("project_modos.capacidad_semanal", CAPACIDAD_SEMANAL);
+  });
+
+  it("parseo de sanidad: encontro los 12 CHECK esperados con al menos un literal cada uno", () => {
     for (const clave of [
       "sessions.tipo",
       "plans.etiqueta",
@@ -129,6 +137,8 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
       "project_unlocks.dominio",
       "projects.modo_camino",
       "checklist_items.fecha_base_origen",
+      "checklist_items.banda",
+      "project_modos.capacidad_semanal",
     ]) {
       const permitidos = contrato.get(clave);
       expect(permitidos).toBeDefined();

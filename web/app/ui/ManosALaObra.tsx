@@ -21,7 +21,7 @@ import { DetalleActividad } from "./DetalleActividad";
 import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
 import { ETIQUETA_ESTADO, SelectorEstado } from "./SelectorEstado";
-import { esActivo, type ChecklistEstado, type FechaBaseOrigen, type ModoCamino } from "@/lib/dbContract";
+import { esActivo, type Banda, type ChecklistEstado, type FechaBaseOrigen, type ModoCamino } from "@/lib/dbContract";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
@@ -49,6 +49,10 @@ export interface ItemChecklistUI {
   fecha_base: string | null;
   fecha_base_origen: FechaBaseOrigen | null;
   fecha_base_original: string | null;
+  /** Scheduler F1: la banda de esfuerzo estimada al nacer el plan. null = plan
+   * viejo o estimación fallida: sin rango, cero invención. */
+  banda: Banda | null;
+  espera_externa: boolean | null;
   created_at: string;
   updated_at: string;
 }
@@ -62,6 +66,8 @@ export interface CambioItem {
   no_aplica_motivo?: string | null;
   nota?: string | null;
   fecha_base?: string | null;
+  /** Scheduler F1: corrección de la banda por el usuario (evento banda_corregida). */
+  banda?: Banda;
 }
 
 export interface ChecklistData {
@@ -156,6 +162,7 @@ interface Props {
     fecha_base?: string | null;
     fecha_base_original?: string | null;
     fecha_base_origen?: FechaBaseOrigen | null;
+    banda?: Banda | null;
   }) => void;
   /** el follow devolvió el primer turno: el padre entra a la entrevista */
   onSeguimientoIniciado: (turno: unknown) => void;
@@ -1418,6 +1425,9 @@ export function ManosALaObra({
         fecha_base: data.item?.fecha_base ?? cambio.fecha_base,
         fecha_base_original: data.item?.fecha_base_original,
         fecha_base_origen: data.item?.fecha_base_origen,
+        // Scheduler F1: la banda corregida vuelve persistida (la ruta solo la
+        // devuelve cuando se corrigió; si no, se conserva la del estado).
+        banda: data.item?.banda ?? cambio.banda,
       });
     } catch {
       setError("no pudimos guardar el cambio; revisa tu internet e intenta de nuevo");

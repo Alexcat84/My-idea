@@ -80,6 +80,20 @@ export type ModoCamino = (typeof MODO_CAMINO)[number];
 export const FECHA_BASE_ORIGEN = ["sugerida", "ajustada", "manual"] as const;
 export type FechaBaseOrigen = (typeof FECHA_BASE_ORIGEN)[number];
 
+/** checklist_items.banda (Scheduler F1, migración 033): la banda de esfuerzo
+ * estimada por el LLM al nacer el plan (mayoría-de-3). null = plan viejo sin
+ * estimación, o la estimación falló (fallback declarado: el plan JAMÁS se
+ * bloquea por esto). Rangos honestos, JAMÁS horas numéricas:
+ * S = una sentada de ≤1 h; M = 2-4 h; L = una jornada; XL = varios días. */
+export const BANDA = ["S", "M", "L", "XL"] as const;
+export type Banda = (typeof BANDA)[number];
+
+/** project_modos.capacidad_semanal (Scheduler F1, migración 033): cuántas horas
+ * a la semana dedica el usuario a este espacio. La usa el empaquetado de F2
+ * para repartir las bandas en el calendario. null = sin declarar. */
+export const CAPACIDAD_SEMANAL = ["2-5", "5-10", "10-20", "20+"] as const;
+export type CapacidadSemanal = (typeof CAPACIDAD_SEMANAL)[number];
+
 /** user_seguridad.two_factor_method (migración 029, centro de cuenta): el
  * método del segundo factor. null = 2FA sin configurar. Réplica del I Ching
  * sin 'sms' (no tenemos SMS). */

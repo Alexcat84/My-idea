@@ -532,7 +532,16 @@ export async function insertarChecklist(
   supabase: SupabaseClient,
   projectId: string,
   planId: string,
-  items: Array<{ etapa: number; orden: number; texto: string; destacado: boolean }>,
+  items: Array<{
+    etapa: number;
+    orden: number;
+    texto: string;
+    destacado: boolean;
+    // Scheduler F1: la banda de esfuerzo estimada (mayoría-de-3) al nacer el
+    // plan. Ausente/null = estimación fallida o plan sin scheduler (fallback).
+    banda?: string | null;
+    espera_externa?: boolean | null;
+  }>,
   dominio: string = "core"
 ): Promise<void> {
   if (items.length === 0) return;
@@ -545,6 +554,8 @@ export async function insertarChecklist(
       orden: i.orden,
       texto: i.texto,
       destacado: i.destacado,
+      banda: i.banda ?? null,
+      espera_externa: i.espera_externa ?? null,
     }))
   );
   if (error) throw error;
