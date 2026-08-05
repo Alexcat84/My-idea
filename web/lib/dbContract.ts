@@ -94,6 +94,17 @@ export type Banda = (typeof BANDA)[number];
 export const CAPACIDAD_SEMANAL = ["2-5", "5-10", "10-20", "20+"] as const;
 export type CapacidadSemanal = (typeof CAPACIDAD_SEMANAL)[number];
 
+/** checklist_items.probabilidad y .dolor (Mundos de protección, migración 034):
+ * la SEVERIDAD EN PALABRAS. El vocabulario es CERRADO y no lo inventamos: lo
+ * manda el nodo canónico del grafo "la matriz de colores te engaña". Nada de
+ * puntajes numéricos ni colores que fingen precisión; lo que el enlazador
+ * devuelva fuera de estos valores se descarta (queda null), no se aproxima. */
+export const PROBABILIDAD = ["poco_probable", "probable", "muy_probable"] as const;
+export type Probabilidad = (typeof PROBABILIDAD)[number];
+
+export const DOLOR = ["poco", "bastante", "mucho"] as const;
+export type Dolor = (typeof DOLOR)[number];
+
 /** user_seguridad.two_factor_method (migración 029, centro de cuenta): el
  * método del segundo factor. null = 2FA sin configurar. Réplica del I Ching
  * sin 'sms' (no tenemos SMS). */

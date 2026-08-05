@@ -1,6 +1,8 @@
 // Fase 3.8 §2/§4 — pruebas del PATCH del checklist ampliado con el sentido
 // del tiempo: completed_at (timeline real, para TODOS) y fecha_base
 // (replanificación que NO reescribe la historia).
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { crearSupabaseFalso, estadoFalsoVacio, type EstadoFalso } from "@/lib/testUtils/fakeSupabase";
 
@@ -283,5 +285,48 @@ describe("PATCH banda (Scheduler F1): corrección del usuario", () => {
     const res = await PATCH(req({ item_id: "it1", banda: "XXL" }), PARAMS);
     expect(res.status).toBe(400);
     expect(estadoFalso.checklistItems[0].banda).toBe("M");
+  });
+});
+
+// Mundos de protección (P2): el ENLACE es estructura del plan, no percepción del
+// usuario. Nace con el plan y NO se corrige por PATCH, exactamente como
+// espera_externa. El usuario corrige su banda; de qué protege su tarea, no.
+describe("PATCH y el enlace de protección: protege_item NO es editable", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("un PATCH que solo manda protege_item no actualiza nada (400)", async () => {
+    sembrarItem({ protege_item: "nuc-a" });
+    const res = await PATCH(req({ item_id: "it1", protege_item: "otro-item" }), PARAMS);
+    expect(res.status).toBe(400);
+    expect(estadoFalso.checklistItems[0].protege_item).toBe("nuc-a");
+  });
+
+  it("colado junto a un cambio válido, el enlace tampoco se mueve", async () => {
+    sembrarItem({ protege_item: "nuc-a", deteccion: "depende de un solo proveedor" });
+    const res = await PATCH(req({ item_id: "it1", estado: "hecho", protege_item: "otro-item" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(estadoFalso.checklistItems[0].estado).toBe("hecho"); // lo válido sí se aplicó
+    expect(estadoFalso.checklistItems[0].protege_item).toBe("nuc-a"); // el enlace, intacto
+  });
+
+  it("la detección y la severidad tampoco se editan desde el PATCH", async () => {
+    sembrarItem({ deteccion: "depende de un solo proveedor", probabilidad: "probable", dolor: "mucho" });
+    await PATCH(
+      req({ item_id: "it1", estado: "empezado", deteccion: "otra cosa", probabilidad: "poco_probable", dolor: "poco" }),
+      PARAMS
+    );
+    const item = estadoFalso.checklistItems[0];
+    expect(item.deteccion).toBe("depende de un solo proveedor");
+    expect(item.probabilidad).toBe("probable");
+    expect(item.dolor).toBe("mucho");
+  });
+
+  it("el fuente del PATCH no nombra esas columnas (la puerta está cerrada, no vigilada)", () => {
+    const fuente = readFileSync(path.join(__dirname, "route.ts"), "utf-8");
+    expect(fuente).not.toContain("cambios.protege_item");
+    expect(fuente).not.toContain("cambios.deteccion");
   });
 });
