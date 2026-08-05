@@ -62,10 +62,13 @@ commits `Scheduler:`. **Anclajes verificados contra main 943ce0d** (planRedactor
 pasos+entregable; project_modos es la casa de la capacidad; diaDominante/cadenciaReal
 son la capa 3 embrionaria). Matriz de fases:
 
-- **F0 — SPIKE de estimación** (la puerta de todo; SIN producción): `spike_estimacion.ts`,
-  30-40 tareas reales → bandas S/M/L/XL + espera_externa, 3 corridas, concordancia
-  inter-corrida + matriz de discordantes. **Puerta >80% exacta-o-adyacente.** Costo <$1.
-  **La corrida en vivo la dispara el fundador**; su veredicto abre F1. — PENDIENTE.
+- **F0 — SPIKE de estimación** (la puerta de todo; SIN producción): **script LISTO**
+  (`web/scripts/spike_estimacion.ts`, `pnpm run spike`): ~36 tareas reales del grafo
+  (variadas por dominio/fase) → bandas S/M/L/XL + espera_externa, 3 corridas,
+  concordancia inter-corrida + matriz de discordantes en `web/examples/spike_estimacion.md`.
+  **Puerta >80% exacta-o-adyacente.** Costo <$1. **PENDIENTE la corrida en vivo del
+  fundador** (llama al LLM); su veredicto abre F1. Si no abre: iterar el prompt del
+  spike o degradar a 3 bandas (fusionar L+XL).
 - **F1 — la estimación nace con el plan:** migración 033 (banda, espera_externa,
   capacidad_semanal), batch de estimación tras el plan (la prosa no se toca; fallo =
   sin banda), rangos "~2-4 h" en el detalle + corrección (evento `banda_corregida`).
