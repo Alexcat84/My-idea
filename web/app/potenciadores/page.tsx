@@ -46,11 +46,14 @@ export default async function Potenciadores({
   if (!user || esInvitadoInvisible(user)) redirect("/login");
 
   // Con idea elegida: DERECHO a la fuente de verdad. RLS: si la idea no es
-  // suya (o no existe), vuelve a elegir.
+  // suya (o no existe), vuelve a elegir. `potenciar=1` hace que la idea abra
+  // ATERRIZANDO en su fila de potenciadores (no arriba del todo): este acceso
+  // existe para elegir el potenciador y terminar añadiendo un mundo nuevo
+  // sobre esa idea, no para pasear por Manos a la Obra.
   if (ideaId) {
     const { data: proyecto } = await supabase.from("projects").select("id").eq("id", ideaId).maybeSingle();
     if (!proyecto) redirect("/potenciadores");
-    redirect(`/idea/${ideaId}?vista=manos`);
+    redirect(`/idea/${ideaId}?vista=manos&potenciar=1`);
   }
 
   // ── El único paso propio: ¿qué idea quieres potenciar? ──────────────────
@@ -76,17 +79,25 @@ export default async function Potenciadores({
             <p className="mt-2 text-[15px] leading-relaxed text-dim">
               Elige una y te llevo a sus potenciadores.
             </p>
-            <ul className="mt-6 flex flex-col gap-3">
+            {/* Las filas hablan el MISMO idioma visual que la lista normal de
+                /ideas (mismo contenedor, mismo cuerpo, misma pista): este es un
+                acceso distinto, no un menú distinto. */}
+            <ul className="mt-6 flex flex-col gap-3.5">
               {ideas.map((idea) => (
                 <li key={idea.id}>
                   <Link
                     href={`/potenciadores?idea=${idea.id}`}
-                    className="flex items-center justify-between gap-3 rounded-panel border border-hairline bg-surface px-5 py-4 hover:border-accent/55"
+                    className="block rounded-panel border border-hairline bg-surface px-5 py-5 hover:border-accent/55 sm:px-6"
                   >
-                    <span className="min-w-0 flex-1 truncate text-[15px] font-semibold">{idea.nombre}</span>
-                    <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0">
-                      <path d="M4 2l4 4-4 4" stroke="var(--text-dim)" strokeWidth="1.5" fill="none" />
-                    </svg>
+                    <div className="flex items-center gap-3">
+                      <p className="min-w-0 flex-1 text-[15px] font-semibold leading-snug sm:text-[17px]">
+                        {idea.nombre}
+                      </p>
+                      <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0">
+                        <path d="M4 2l4 4-4 4" stroke="var(--text-dim)" strokeWidth="1.5" fill="none" />
+                      </svg>
+                    </div>
+                    <p className="mt-2 text-xs text-dim">Añádele un mundo o revisa sus potenciadores.</p>
                   </Link>
                 </li>
               ))}
