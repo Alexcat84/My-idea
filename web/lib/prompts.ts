@@ -64,6 +64,43 @@ export const SYSTEM_DIAGNOSTICO_MUNDO = prompts.SYSTEM_DIAGNOSTICO_MUNDO;
  * exige re-correr el spike (`npm run spike -- items`) y re-medir la puerta.
  */
 /**
+ * SYSTEM_REFORMULADOR_PROTECCION — Mundos de protección (P2b): EL ANCLAJE.
+ *
+ * PROCEDENCIA: nace en TS y NO toca ningún prompt del motor. Se escribió así a
+ * propósito: los doce SYSTEM_* de engine/prototipo_motor.py son GLOBALES y los
+ * comparte toda entrevista del producto, el núcleo incluido; meterles el
+ * snapshot habría cambiado entrevistas que esta campaña promete no tocar. Y las
+ * preguntas de los turnos no las escribe un modelo: salen del caché del grafo.
+ * Por eso esto es un reformulador que corre DESPUÉS, solo en los tres mundos de
+ * protección.
+ *
+ * BARANDA (a), la que define la pieza: ANCLA, jamás cambia QUÉ se pregunta. La
+ * pregunta del grafo trae una intención metodológica que costó construir; esto
+ * solo la apunta a la actividad concreta de la persona. Si ninguna encaja, la
+ * devuelve tal cual: forzar un anclaje sería peor que no anclar.
+ */
+export const SYSTEM_REFORMULADOR_PROTECCION = [
+  "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas:",
+  "usa comas, dos puntos o parentesis.",
+  "",
+  "Recibes UNA pregunta de una entrevista de proteccion (riesgos, seguridad y",
+  "salud, o seguridad digital) y la lista numerada de las ACTIVIDADES REALES del",
+  "plan de la persona.",
+  "",
+  "Tu unico trabajo es ANCLARLA: reformula la pregunta apuntandola a la actividad",
+  "concreta del snapshot (su numero #N y su titulo), CONSERVANDO INTACTA su",
+  "intencion metodologica. Lo que la pregunta busca averiguar no cambia; solo",
+  "cambia que ahora habla de algo que la persona de verdad va a hacer.",
+  "",
+  "Si NINGUNA actividad aplica a esa pregunta, DEVUELVELA TAL CUAL, palabra por",
+  "palabra. Forzar un anclaje que no existe es peor que no anclar.",
+  "",
+  "Reglas: UNA sola pregunta, en segunda persona, sin explicar teoria antes, sin",
+  "comillas y sin JSON. Menciona la actividad por su titulo (puedes citar su #N).",
+  "Responde SOLO el texto de la pregunta.",
+].join("\n");
+
+/**
  * SYSTEM_ENLACE_PROTECCION — Mundos de protección (P2): el ENLAZADOR.
  *
  * PROCEDENCIA: nace en TS, como el estimador (por eso es una const nativa y no

@@ -15,6 +15,7 @@ import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
 import { avanzarTurno } from "@/lib/engine/recorrido";
+import { anclarResultadoTurno } from "@/lib/engine/reformuladorProteccion";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -95,12 +96,17 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     });
   }
 
+  // P2b: en los mundos de protección la pregunta del turno se ancla a una
+  // actividad real antes de responder (y de persistirse). En todo lo demás el
+  // resultado pasa intacto: el estado no lleva snapshot y el anclaje no corre.
+  const anclado = await anclarResultadoTurno(client, resultado, resultado.acumulado);
+
   return responderResultadoTurno(
     supabase,
     sesion.project_id,
     sessionId,
-    resultado,
-    resultado.acumulado,
+    anclado.resultado,
+    anclado.acumulado,
     [],
     turnos
   );
