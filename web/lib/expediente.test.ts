@@ -107,6 +107,43 @@ describe("indiceDeDocumentos", () => {
     // ruido cero: sin mundos, ningún reporte
     expect(indiceDeDocumentos([ciclo("p1", "completo", "2026-03-01T12:00:00Z")], null).some((d) => d.tipo === "reporte")).toBe(false);
   });
+
+  // Mundos de protección (P3): el registro es SU herramienta canónica.
+  it("el Registro aparece SOLO en los tres mundos de protección (ruido cero)", () => {
+    const docs = indiceDeDocumentos([ciclo("p1", "completo", "2026-03-01T12:00:00Z")], null, [
+      { dominio: "quality", nombre: "Calidad y Confianza" },
+      { dominio: "risk_management", nombre: "Riesgos Bajo Control" },
+      { dominio: "health_safety", nombre: "Trabajo Seguro" },
+    ]);
+    const registros = docs.filter((d) => d.tipo === "registro");
+    // Calidad (mejora) NO tiene registro; los dos de protección sí, con su etiqueta.
+    expect(registros.map((d) => d.clave)).toEqual(["registro:risk_management", "registro:health_safety"]);
+    expect(registros.map((d) => d.espacio)).toEqual(["Riesgos Bajo Control", "Trabajo Seguro"]);
+    expect(registros[0].titulo).toBe("Registro de Riesgos Bajo Control");
+  });
+
+  // LA LEY DE LAS DOS CATEGORÍAS (T7, re-confirmada ahora que la familia creció):
+  // en el panel de TODO espacio, "Reportes globales" PRIMERO (el Expediente) y
+  // debajo "Reportes de {espacio}" con sus etiquetas. Nada sin categoría.
+  it("la ley completa: en un mundo de protección, ambos recuadros, en orden y sin huérfanos", () => {
+    const docs = indiceDeDocumentos([ciclo("p1", "completo", "2026-03-01T12:00:00Z")], null, [
+      { dominio: "risk_management", nombre: "Riesgos Bajo Control" },
+    ]);
+    const { globales, delEspacio } = particionDocumentos(docs, "risk_management", "Riesgos Bajo Control");
+    // el recuadro global trae el Expediente
+    expect(globales.map((d) => d.tipo)).toEqual(["expediente"]);
+    // el del espacio trae su Reporte (que empaqueta plan + seguimientos +
+    // bitácora + cómo te fue) y su Registro, en ese orden
+    expect(delEspacio.map((d) => d.tipo)).toEqual(["reporte", "registro"]);
+    // ningún documento del espacio queda sin etiqueta
+    for (const d of delEspacio) expect(d.espacio).toBe("Riesgos Bajo Control");
+    // y ningún documento del índice queda sin categoría: cada uno tiene tipo, y
+    // todo documento por-mundo lleva su espacio
+    for (const d of docs) {
+      expect(["ciclo", "expediente", "bitacora", "analisis", "reporte", "registro"]).toContain(d.tipo);
+      if (d.tipo === "reporte" || d.tipo === "registro") expect(d.espacio).toBeTruthy();
+    }
+  });
 });
 
 const datos = (extra: Partial<DatosExpediente> = {}): DatosExpediente => ({
