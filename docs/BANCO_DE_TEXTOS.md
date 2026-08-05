@@ -218,6 +218,34 @@ Decisiones del fundador que mandan sobre el copy y sobre lo que el producto
 muestra. Se registran con su porqué: quien venga después no las revierte por
 desconocer la razón.
 
+- **DOCTRINA DEL SCHEDULER (campaña "Scheduler Inteligente", cerrada ago 2026).**
+  El sistema que pone fechas se rige por esto, y quien lo toque lo hace sabiendo
+  por qué está escrito así:
+  - **Las bandas son rangos honestos**, estimados desde el grafo (que sabe qué
+    implica cada tarea) por **mayoría de 3** y **validadas en F0 al 97.2 %** de
+    concordancia. Se muestran como rango ("~2-4 h", "una jornada"), **jamás como
+    un número de horas inventado**, y el usuario puede **corregirlas**: su
+    corrección es la mejor señal que tenemos.
+  - **El empaquetado es determinístico.** Mismo insumo, mismas fechas, cero IA en
+    el momento de calcular. Se audita con **aritmética hecha a mano** en el
+    comentario antes del assert: si un cambio no se puede verificar con lápiz, no
+    entra.
+  - **La capacidad es por espacio** (cada mundo lleva su propio ritmo) y se
+    planifica con **el piso** del rango que el usuario eligió: a quien le sobre
+    tiempo va adelantado, en vez de recibir un calendario que su semana floja no
+    aguanta.
+  - **Las esperas de terceros no consumen la capacidad del usuario** (su tiempo no
+    se le cobra a la semana de nadie), **pero sí mandan en las puertas**: una etapa
+    no cierra mientras su espera siga viva, y la siguiente no se monta encima.
+  - **El aprendizaje usa mediana acotada**, excluye el tiempo ajeno, y **solo
+    re-fecha lo que el usuario pide recalcular**. Nada se mueve a sus espaldas.
+  - **El sugeridor simple no muere: vive como fallback.** Sin estimación, el plan
+    se reparte como siempre y no se pregunta nada que no vaya a cambiar nada.
+  - **Por qué todo esto junto: cero invención.** Cada número que el usuario ve
+    sale de algo que existe (su plan, su capacidad declarada, su historial) o no
+    se muestra. Un calendario que promete de más no es optimismo: es la forma más
+    cara de perder la confianza de alguien que está apostando su tiempo.
+
 - **Gestor de estados por tarea (jul 2026).** El usuario **elige** el estado
   de cada tarea en un menú de 5 (sin empezar, apenas empezada, en proceso,
   hecha, no aplica); el círculo ya **no cicla** por toques. Entra el estado

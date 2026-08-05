@@ -52,7 +52,7 @@ Notas de método (para memoria): la migración `project_modos` la aplicó el fun
 bendecido (cada espacio sella SU baseline, el core no arrastra); golden test antes de
 extraer `capaCumplimientoDe`. **Pendiente SOLO la calibración visual de Design (§2).**
 
-## 1d. Campaña "SCHEDULER INTELIGENTE" (EN CURSO — F0 y F1 hechas, F2 es la siguiente)
+## 1d. Campaña "SCHEDULER INTELIGENTE" (COMPLETA — F0..F4, cerrada 2026-08-05)
 
 **Visión original del fundador (PM):** un programador de fechas que entienda la
 complejidad de cada tarea y sugiera fechas que respiran según la capacidad real del
@@ -82,8 +82,8 @@ son la capa 3 embrionaria). Matriz de fases:
   El detalle muestra el **rango honesto** (~1 h / ~2-4 h / una jornada / varios días)
   con corrección del usuario → evento `banda_corregida {de, a}` (telemetría del
   multiplicador de F4). Planes viejos sin banda: sin sección de esfuerzo, cero
-  invención. 732/732 tests. **Pendiente del fundador:** correr el verificador de
-  migraciones y el vuelo/gate en vivo antes del merge a main.
+  invención. 732/732 tests. **EN PRODUCCIÓN** (main `a307d1f`; migración 033
+  aplicada por el fundador).
 - **F2 — capacidad + empaquetado (el corazón): HECHA** (staging `e97ae8f`, sin
   migración: la 033 ya trajo `capacidad_semanal`). `lib/empaquetado.ts` puro:
   HORAS_MEDIA {S:1,M:3,L:8,XL:16}, etapas=PUERTAS (la N+1 abre la semana siguiente
@@ -100,7 +100,7 @@ son la capa 3 embrionaria). Matriz de fases:
   viejo. Vuelo con el assert de la TUBERÍA (empaquetado → /baseline → feed .ics,
   una S y una XL de la misma etapa en semanas distintas, UID estable); gate con el
   par 07b/07c (el mismo plan con 20+ y con 2-5). 769/769 tests.
-  **Pendiente del fundador:** vuelo y gate en vivo antes del merge a main.
+  **EN PRODUCCIÓN** (main `d808a99`).
 - **F3 — esperas externas: HECHA** (staging `89cdab6`, sin migración). La tarea con
   `espera_externa` se dispara temprano (inicio = lunes de la primera semana de su
   etapa) y entrega con colchón (`LEAD_ESPERA_SEMANAS = 1`, constante nombrada con
@@ -109,7 +109,10 @@ son la capa 3 embrionaria). Matriz de fases:
   hermanas), pero **sí manda en la puerta**: una etapa cierra cuando cierra su
   tarea más tardía de verdad, colchón incluido. El detalle lo dice en persona sin
   colgarle la demora al usuario, con un test que vigila que el copy no derive al
-  reproche. Gate `13b`. 780/780 tests.
+  reproche. Gate `13b`. 780/780 tests. **EN PRODUCCIÓN** (main `8f3a3f3`).
+  Decisión propia bendecida: la destacada con espera conserva su lunes y corre de
+  semana; `espera_externa` NO se abre al PATCH (contención de superficie,
+  revisable con la telemetría de la beta).
 - **F4 — multiplicador personal: HECHA** (staging `c1f1aa4`, sin migración).
   `factorPorBanda` compara lo que las tareas tardaron de verdad (tiempo desde el
   cierre de la anterior) contra lo que su banda prometía con esa capacidad, **por
@@ -119,12 +122,22 @@ son la capa 3 embrionaria). Matriz de fases:
   les puso colchón); manda la **mediana** (una vacación no reescribe una banda);
   el factor se acota a **[0.5, 4]** con el criterio del clamp de
   `cadenciaRealSemanas`. Las muestras salen del checklist **completo** del espacio,
-  no del ciclo vigente. 793/793 tests.
-  **Pendiente del fundador:** vuelo y gate en vivo antes del merge a main.
-- **CIERRE de campaña pendiente:** BANCO §7.1 (doctrina del scheduler), tag menor y
-  encargo a Design. Solo eso queda.
-- **CIERRE:** BANCO §7.1 (doctrina del scheduler), matriz, encargo Design, tag menor.
-  El sugeridor viejo queda como **fallback documentado, jamás muere**.
+  no del ciclo vigente. 793/793 tests. **EN PRODUCCIÓN** (main `0475e33`).
+  Decisiones propias bendecidas: el historial COMPLETO del espacio como memoria que
+  sobrevive a los ciclos, y el borde de capacidad-vigente resuelto por el lado
+  barato del error (subir la capacidad deja el recálculo conservador hasta que
+  entren muestras nuevas).
+- **CIERRE: HECHO.** La **doctrina del scheduler** queda escrita en **BANCO §7.1**
+  (bandas como rangos honestos corregibles; empaquetado determinístico auditado con
+  aritmética a mano; capacidad por espacio planificada con su piso; las esperas no
+  consumen capacidad pero mandan en las puertas; aprendizaje con mediana acotada que
+  solo re-fecha lo que el usuario pide; el sugeridor simple vivo como fallback;
+  **cero invención** como razón de todo lo anterior). Las piezas visuales van al
+  encargo de Design (§2). Tag **`web-v2.3.0-beta`**. El sugeridor viejo queda como
+  **fallback documentado, jamás muere**.
+  **Lo único que sigue del fundador:** vuelo y gate en vivo de las fases que no los
+  han tenido (§3), y la ficha `mundos-de-proteccion-sobre-lo-existente` del backlog
+  (§5), que espera su propia mini campaña.
 
 ## 2. Claude Design (encargos)
 
@@ -154,6 +167,26 @@ son la capa 3 embrionaria). Matriz de fases:
     **seis tarjetas hermanas** (`TarjetaAcceso` uniforme), el **calendario etiquetado**
     `[Espacio]`, y los **documentos en dos recuadros**. El front no espera a Design: lo que
     CD calibre se aplica encima. Pares en `web/examples/gate-canon/` (`espacios_*`).
+- **Scheduler Inteligente — las tres superficies nuevas (front funcional YA en
+  producción, `web-v2.3.0-beta`; esto es calibración visual, no función):**
+  - **La pregunta de capacidad**, dentro del ritual de fechas de cada espacio:
+    *"¿Cuántas horas por semana puedes darle a este espacio?"* con cuatro chips
+    (2 a 5 · 5 a 10 · 10 a 20 · Más de 20) y la línea que explica que se planifica
+    con el piso. Lo que se juega: es **la premisa** del calendario entero y hoy es
+    un bloque más del ritual; merece leerse como la pregunta que manda. Su gemela
+    reducida vive en la cinta de "fechas activas" ("Le das 5 a 10 horas por
+    semana · cambiar"). Pares del gate: `07b_capacidad_20mas` y `07c_capacidad_2a5`
+    (el MISMO plan con dos capacidades: la comparación es el punto).
+  - **El rango de esfuerzo en el detalle de la tarea**: la sección "Esfuerzo" con
+    su valor en rango (`~1 h`, `~2-4 h`, `una jornada`, `varios días`), su píldora
+    "corregir" y los cuatro chips de corrección. Regla que no se toca: **jamás un
+    número de horas exacto**, y sin banda la sección **no existe** (nada de
+    placeholders). Par del gate: `13_detalle`.
+  - **El copy del colchón de esperas**, en esa misma sección cuando la tarea
+    depende de terceros ("· depende de terceros" junto al rango, y la explicación
+    de que la fecha ya trae el colchón y el tiempo ajeno no se le cuenta al
+    usuario). Lo que se juega: que se lea como un aviso útil y **no como una
+    disculpa ni un regaño**. Par del gate: `13b_detalle_espera`.
 - **NOTA (no pedido) — el "viernes compartido" del sugeridor de fechas:** en modo
   fechas, todos los ítems regulares de una etapa caen el mismo día (el viernes de su
   semana): es **doctrina** (la fecha es el compromiso de entrega de la etapa, no una
@@ -161,6 +194,10 @@ son la capa 3 embrionaria). Matriz de fases:
   compartido, la palanca es **de presentación (CD)** —agrupar, un encabezado de
   "entrega de la etapa", lo que sea visual— **jamás del sugeridor** (escalonar sería
   precisión inventada). Se anota aquí para tenerlo a mano; NO es un encargo abierto.
+  **Precisado por el scheduler (F2):** con el empaquetado, los ítems de una etapa
+  siguen cayendo **siempre en el día de cierre** (nada de agenda diaria), pero la
+  **semana** puede cambiar si el trabajo no cabe en la capacidad declarada. El día
+  compartido sigue siendo doctrina; la semana compartida ya no.
 - **PDF Expediente · interiores (DIFERIDO post-beta):** el diseño YA existe
   (`_entrega-claude-design/Entrega-desing 20260729/entrega2/pdf-expediente-interiores/`:
   Tus Números, un mundo, "Cómo te fue", "La secuencia de tu viaje"). **Cuando sea el
@@ -178,6 +215,15 @@ son la capa 3 embrionaria). Matriz de fases:
   etiquetas** (`?vista=bitacora`), el Análisis del núcleo (`?vista=analisis`) y los
   **reportes por mundo** (`?vista=documentos`). **NO corrido en vivo** → verificar al
   ejecutarlo (la siembra del mundo con plan y las esperas nuevas).
+- **Vuelo y gate del SCHEDULER (F0..F4), corrida del fundador.** El vuelo gana dos
+  asserts que solo viven en vivo: la **tubería del calendario** (empaquetado →
+  `/baseline` → feed `.ics`: una S y una XL de la misma etapa en semanas distintas,
+  con UID estable) y que el plan de **SEGUIMIENTO nace estimado** (si sale 0 bandas,
+  el mensaje apunta a `sessions.decisiones`). El gate añade `07b_capacidad_20mas` /
+  `07c_capacidad_2a5` (el mismo plan con dos capacidades: **si las dos capturas se
+  parecen, el empaquetado no está haciendo nada**) y `13b_detalle_espera` (el copy
+  del colchón). El gate siembra bandas y la espera por service role, a propósito:
+  no depende de lo que la estimación en vivo decida ese día.
 - **Gate — "todo separado" (T3c-2/T4), pares nuevos del ESPACIO** (referencia para el
   encargo de Design; el run en vivo y el veredicto los da el fundador). Al ejecutar
   `gate_beta` se generan en `web/examples/gate-canon/` (tracked en staging, excluidos del
