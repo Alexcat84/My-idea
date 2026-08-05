@@ -146,6 +146,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const searchParams = useSearchParams();
   const quiereEntrevista = searchParams.get("entrevista") === "1";
   const quiereManos = searchParams.get("vista") === "manos";
+  // /potenciadores (acceso "Potenciar mis ideas"): aterrizar EN la fila de
+  // potenciadores de esta idea, que es a lo que ese camino viene.
+  const quierePotenciar = searchParams.get("potenciar") === "1";
+  const potenciadoresRef = useRef<HTMLDivElement | null>(null);
+  const yaAterrizoEnPotenciadores = useRef(false);
+  useEffect(() => {
+    if (!quierePotenciar || yaAterrizoEnPotenciadores.current) return;
+    if (!potenciadoresRef.current) return; // la fila aun no se pinto (cargando)
+    yaAterrizoEnPotenciadores.current = true;
+    potenciadoresRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
   const quiereAnalisis = searchParams.get("vista") === "analisis";
   const quiereCelebracion = searchParams.get("vista") === "celebracion";
   const quiereDocumentos = searchParams.get("vista") === "documentos";
@@ -1322,8 +1333,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 </>
               )}
 
-              {/* Fila de potenciadores (canon 07 B): visible desde Claridad */}
+              {/* Fila de potenciadores (canon 07 B): visible desde Claridad.
+                  El div ancla el aterrizaje de /potenciadores (potenciar=1). */}
               {!entrevistaActiva && !generandoPlan && (planMd || detalle.organizador) && (
+                <div ref={potenciadoresRef}>
                 <PotenciaTuIdea
                   projectId={projectId}
                   unlocks={unlocks}
@@ -1343,6 +1356,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     irAMundo(dominio);
                   }}
                 />
+                </div>
               )}
             </div>
           </div>
