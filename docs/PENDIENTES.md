@@ -52,6 +52,32 @@ Notas de método (para memoria): la migración `project_modos` la aplicó el fun
 bendecido (cada espacio sella SU baseline, el core no arrastra); golden test antes de
 extraer `capaCumplimientoDe`. **Pendiente SOLO la calibración visual de Design (§2).**
 
+## 1d. Campaña "SCHEDULER INTELIGENTE" (APROBADA — plan listo, F0 pendiente del disparo del fundador)
+
+**Visión original del fundador (PM):** un programador de fechas que entienda la
+complejidad de cada tarea y sugiera fechas que respiran según la capacidad real del
+usuario. **Spec:** `docs/SCHEDULER_INTELIGENTE.md`. **Plan de ejecución:**
+`docs/PLAN_SCHEDULER_INTELIGENTE.md`. Cadencia: checkpoint por fase, merge con visto,
+commits `Scheduler:`. **Anclajes verificados contra main 943ce0d** (planRedactor conoce
+pasos+entregable; project_modos es la casa de la capacidad; diaDominante/cadenciaReal
+son la capa 3 embrionaria). Matriz de fases:
+
+- **F0 — SPIKE de estimación** (la puerta de todo; SIN producción): `spike_estimacion.ts`,
+  30-40 tareas reales → bandas S/M/L/XL + espera_externa, 3 corridas, concordancia
+  inter-corrida + matriz de discordantes. **Puerta >80% exacta-o-adyacente.** Costo <$1.
+  **La corrida en vivo la dispara el fundador**; su veredicto abre F1. — PENDIENTE.
+- **F1 — la estimación nace con el plan:** migración 033 (banda, espera_externa,
+  capacidad_semanal), batch de estimación tras el plan (la prosa no se toca; fallo =
+  sin banda), rangos "~2-4 h" en el detalle + corrección (evento `banda_corregida`).
+- **F2 — capacidad + empaquetado (el corazón):** pregunta de capacidad por espacio +
+  `empaquetado.ts` puro (etapas=puertas, semanas contra capacidad; tests a mano 3h vs
+  20h); "Con fechas"/"Recalcular" lo usan; fallback intacto. **Addendum:** assert ICS
+  de punta a punta. Vuelo + gate.
+- **F3 — esperas externas** (lead +1 sem) · **F4 — multiplicador personal** (factor por
+  banda en recálculos, mín. 3 muestras, sin muestras → factor 1).
+- **CIERRE:** BANCO §7.1 (doctrina del scheduler), matriz, encargo Design, tag menor.
+  El sugeridor viejo queda como **fallback documentado, jamás muere**.
+
 ## 2. Claude Design (encargos)
 
 - **Centro de créditos v4** (alta industria, modelo de consumible): brief y prompt v2
