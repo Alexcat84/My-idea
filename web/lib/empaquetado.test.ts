@@ -20,7 +20,14 @@
  *                                            semana 18 → lun 07-dic · vie 11-dic
  */
 import { describe, expect, it } from "vitest";
-import { CAPACIDAD_DEFAULT, HORAS_MEDIA, HORAS_POR_SEMANA, empaquetarFechas, hayBandas } from "./empaquetado";
+import {
+  CAPACIDAD_DEFAULT,
+  HORAS_MEDIA,
+  HORAS_POR_SEMANA,
+  LEAD_ESPERA_SEMANAS,
+  empaquetarFechas,
+  hayBandas,
+} from "./empaquetado";
 import { sugerirFechasBase } from "./fechasBase";
 import type { ItemEmpaquetable } from "./empaquetado";
 
@@ -253,6 +260,148 @@ describe("REGRESIÓN: sin bandas no se empaqueta, y el sugeridor viejo sigue int
     });
     const sug = sugerirFechasBase({ planCreatedAt: ANCLA, items: [{ id: "a", etapa: 1, destacado: false }] });
     expect(emp.fechas[0].fecha).toBe(sug[0].fecha);
+  });
+});
+
+describe("F3 — la espera de terceros: se dispara temprano y entrega tarde", () => {
+  it("la constante del colchón es UNA semana, nombrada", () => {
+    expect(LEAD_ESPERA_SEMANAS).toBe(1);
+  });
+
+  it("la entrega de la tarea con espera corre +1 semana", () => {
+    // A MANO, capacidad 20 h/sem, etapa 1 (abre en la semana 1):
+    //   A (M, espera): trabajo → ceil(3/20)-1 = 0; entrega = 0 + 1 (colchón)
+    //     → semana 1+1 = 2 → viernes = 21-ago
+    // Sin espera, esa misma A entregaría el viernes de la semana 1 = 14-ago.
+    const { mapa } = fechasDe([{ id: "a", etapa: 1, destacado: false, banda: "M", espera_externa: true }], "20+");
+    expect(mapa["a"]).toBe("2026-08-21");
+    const { mapa: sinEspera } = fechasDe([{ id: "a", etapa: 1, destacado: false, banda: "M" }], "20+");
+    expect(sinEspera["a"]).toBe("2026-08-14");
+  });
+
+  it("la espera NO consume capacidad: sus hermanas de etapa no se mueven", () => {
+    // A MANO, capacidad 5 h/sem, etapa 1 = [A (M, espera), B (M), C (M)]:
+    //   A: trabajo ceil((0+3)/5)-1 = 0; entrega 0+1 = 1 → semana 2 → vie 21-ago
+    //      NO suma al acumulado (sigue en 0).
+    //   B: trabajo ceil((0+3)/5)-1 = 0 → semana 1 → vie 14-ago; acumulado = 3
+    //   C: trabajo ceil((3+3)/5)-1 = 1 → semana 2 → vie 21-ago; acumulado = 6
+    const conEspera = fechasDe(
+      [
+        { id: "a", etapa: 1, destacado: false, banda: "M", espera_externa: true },
+        { id: "b", etapa: 1, destacado: false, banda: "M" },
+        { id: "c", etapa: 1, destacado: false, banda: "M" },
+      ],
+      "5-10"
+    ).mapa;
+    expect(conEspera["a"]).toBe("2026-08-21");
+    expect(conEspera["b"]).toBe("2026-08-14");
+    expect(conEspera["c"]).toBe("2026-08-21");
+
+    // Si A SÍ consumiera capacidad, B se iría a la semana 2 y C a la 2 también:
+    //   A: acumulado 3 → semana 1; B: acumulado 6 → ceil(6/5)-1 = 1 → semana 2;
+    //   C: acumulado 9 → ceil(9/5)-1 = 1 → semana 2.
+    // Ese es exactamente el empujón que la regla evita: el tiempo de terceros no
+    // se le cobra a la semana del usuario.
+    const siConsumiera = fechasDe(
+      [
+        { id: "a", etapa: 1, destacado: false, banda: "M" },
+        { id: "b", etapa: 1, destacado: false, banda: "M" },
+        { id: "c", etapa: 1, destacado: false, banda: "M" },
+      ],
+      "5-10"
+    ).mapa;
+    expect(siConsumiera["b"]).toBe("2026-08-21"); // empujada
+    expect(conEspera["b"]).not.toBe(siConsumiera["b"]);
+  });
+
+  it("la tarea con espera trae su INICIO temprano: el lunes de la primera semana de su etapa", () => {
+    // A MANO: la etapa 1 abre en la semana 1 → su lunes = 10-ago. La entrega es
+    // el 21-ago (viernes de la semana 2, con colchón): empieza pronto, entrega tarde.
+    const { r } = fechasDe([{ id: "a", etapa: 1, destacado: false, banda: "M", espera_externa: true }], "20+");
+    const a = r.fechas.find((f) => f.id === "a")!;
+    expect(a.inicioTemprano).toBe("2026-08-10");
+    expect(a.fecha).toBe("2026-08-21");
+    expect(a.inicioTemprano! < a.fecha).toBe(true);
+  });
+
+  it("una espera de una etapa POSTERIOR arranca el lunes de SU etapa, no el de la primera", () => {
+    // A MANO, capacidad 20: la etapa 1 (M) ocupa la semana 1; puerta → la etapa 2
+    // abre en la semana 2, cuyo lunes es 17-ago. Su espera entrega el viernes de
+    // la semana 2+1 = 3 → 28-ago.
+    const { r } = fechasDe(
+      [
+        { id: "e1", etapa: 1, destacado: false, banda: "M" },
+        { id: "e2", etapa: 2, destacado: false, banda: "M", espera_externa: true },
+      ],
+      "20+"
+    );
+    const e2 = r.fechas.find((f) => f.id === "e2")!;
+    expect(e2.inicioTemprano).toBe("2026-08-17");
+    expect(e2.fecha).toBe("2026-08-28");
+  });
+
+  it("la PUERTA respeta el cierre real: si la espera cierra la etapa, la siguiente abre después", () => {
+    // A MANO, capacidad 20, etapa 1 = [A (M, espera), B (M)], etapa 2 = [C (M)]:
+    //   A: trabajo 0, entrega 0+1 = 1 → semana 2 (21-ago). No consume.
+    //   B: trabajo ceil(3/20)-1 = 0 → semana 1 (14-ago).
+    //   cierre de la etapa 1 = max(trabajo 0, entrega 1) = 1
+    //   PUERTA → la etapa 2 abre en 1+1+1 = semana 3 → C = viernes 28-ago.
+    const { mapa } = fechasDe(
+      [
+        { id: "a", etapa: 1, destacado: false, banda: "M", espera_externa: true },
+        { id: "b", etapa: 1, destacado: false, banda: "M" },
+        { id: "c", etapa: 2, destacado: false, banda: "M" },
+      ],
+      "20+"
+    );
+    expect(mapa["a"]).toBe("2026-08-21");
+    expect(mapa["b"]).toBe("2026-08-14");
+    expect(mapa["c"]).toBe("2026-08-28");
+    // Sin la espera, el cierre de la etapa 1 sería la semana 1 y C abriría en la
+    // 2 (21-ago): la etapa siguiente NO se monta encima de la espera pendiente.
+    const sinEspera = fechasDe(
+      [
+        { id: "a", etapa: 1, destacado: false, banda: "M" },
+        { id: "b", etapa: 1, destacado: false, banda: "M" },
+        { id: "c", etapa: 2, destacado: false, banda: "M" },
+      ],
+      "20+"
+    ).mapa;
+    expect(sinEspera["c"]).toBe("2026-08-21");
+    expect(mapa["c"] > sinEspera["c"]).toBe(true);
+  });
+
+  it("la destacada con espera conserva su LUNES y corre de semana", () => {
+    // A MANO, capacidad 20: la destacada de la etapa 1 entrega el lunes de la
+    // semana 1 (10-ago); con espera, el lunes de la semana 1+1 = 2 → 17-ago.
+    // El día no cambia (sigue siendo el arranque), la semana sí.
+    const { mapa } = fechasDe([{ id: "d", etapa: 1, destacado: true, banda: "S", espera_externa: true }], "20+");
+    expect(mapa["d"]).toBe("2026-08-17");
+    const { mapa: sinEspera } = fechasDe([{ id: "d", etapa: 1, destacado: true, banda: "S" }], "20+");
+    expect(sinEspera["d"]).toBe("2026-08-10");
+  });
+
+  it("REGRESIÓN: con espera_externa false o ausente, nada cambió", () => {
+    // El plan de referencia (sin esperas) tiene que dar EXACTAMENTE las mismas
+    // fechas que antes de F3, y declarar false explícito debe ser idéntico a
+    // omitirlo.
+    const { mapa: omitido } = fechasDe(PLAN, "2-5");
+    expect(omitido["e1-destacada"]).toBe("2026-08-10");
+    expect(omitido["e1-a"]).toBe("2026-08-21");
+    expect(omitido["e1-b"]).toBe("2026-09-04");
+    expect(omitido["e1-c"]).toBe("2026-10-02");
+    expect(omitido["e2-a"]).toBe("2026-10-16");
+    expect(omitido["e2-b"]).toBe("2026-12-11");
+    const { mapa: explicito } = fechasDe(
+      PLAN.map((i) => ({ ...i, espera_externa: false })),
+      "2-5"
+    );
+    expect(explicito).toEqual(omitido);
+  });
+
+  it("sin espera NO se inventa un inicio temprano", () => {
+    const { r } = fechasDe([{ id: "a", etapa: 1, destacado: false, banda: "M" }], "20+");
+    expect(r.fechas[0].inicioTemprano).toBeUndefined();
   });
 });
 

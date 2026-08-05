@@ -101,8 +101,17 @@ son la capa 3 embrionaria). Matriz de fases:
   una S y una XL de la misma etapa en semanas distintas, UID estable); gate con el
   par 07b/07c (el mismo plan con 20+ y con 2-5). 769/769 tests.
   **Pendiente del fundador:** vuelo y gate en vivo antes del merge a main.
-- **F3 — esperas externas** (lead +1 sem) · **F4 — multiplicador personal** (factor por
-  banda en recálculos, mín. 3 muestras, sin muestras → factor 1).
+- **F3 — esperas externas: HECHA** (staging `89cdab6`, sin migración). La tarea con
+  `espera_externa` se dispara temprano (inicio = lunes de la primera semana de su
+  etapa) y entrega con colchón (`LEAD_ESPERA_SEMANAS = 1`, constante nombrada con
+  su porqué y su criterio de revisión: los `completed_at` reales, no la intuición).
+  **La espera NO consume capacidad** (el tiempo de terceros no empuja a las tareas
+  hermanas), pero **sí manda en la puerta**: una etapa cierra cuando cierra su
+  tarea más tardía de verdad, colchón incluido. El detalle lo dice en persona sin
+  colgarle la demora al usuario, con un test que vigila que el copy no derive al
+  reproche. Gate `13b`. 780/780 tests.
+- **F4 — multiplicador personal** (factor por banda en recálculos, mín. 3 muestras,
+  sin muestras → factor 1). La telemetría ya corre: evento `banda_corregida`.
 - **CIERRE:** BANCO §7.1 (doctrina del scheduler), matriz, encargo Design, tag menor.
   El sugeridor viejo queda como **fallback documentado, jamás muere**.
 

@@ -18,12 +18,20 @@
 // (Fase 4.2: el canon 08 exige un mundo con checklist real). Las capturas de
 // 380 anaden CERO tokens: es el mismo flujo, redimensionado.
 import { chromium, type Page } from "playwright";
+import { createClient } from "@supabase/supabase-js";
 import { mkdirSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, ROOT } from "./_shared/http";
 
 cargarEnvRaiz();
+
+// Scheduler F3: `espera_externa` la escribe la estimación al nacer el plan y NO
+// es corregible por API (el usuario corrige la banda, no de quién depende su
+// tarea). Para poder capturar el detalle con el colchón sin depender de que la
+// estimación en vivo marque una espera, el gate la siembra por service role,
+// como hace el vuelo. Es un script de dev contra la base de dev.
+const supabaseAdmin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
 
 const OUT = path.join(ROOT, "web", "examples", "gate-canon");
 const CANON = path.join(ROOT, "docs", "diseno-canon");
@@ -292,6 +300,34 @@ async function main() {
   await capturarCanon(canon, "13_detalle_de_actividad.html", "13_detalle_canon.png", "Detalle de actividad desktop", true);
   await capturarCanon(canon, "13_detalle_de_actividad.html", "13_detalle_canon_380.png", "Detalle de actividad movil 380", true);
   await app.getByRole("button", { name: "Cerrar el detalle" }).click();
+
+  // 13b Detalle de una tarea con ESPERA EXTERNA (Scheduler F3): el copy del
+  // colchón. Se siembra la espera (y una banda, sin la cual no hay sección de
+  // esfuerzo que leer) en el PRIMER ítem, se recarga y se abre su detalle.
+  // Envuelto: si algo cambia, el gate sigue sin esta captura y avisa.
+  try {
+    const idIdea = new URL(app.url()).pathname.split("/")[2];
+    const cl = await (await app.request.get(`/api/project/${idIdea}/checklist`)).json();
+    type ItemE = { id: string; dominio: string | null };
+    const items: ItemE[] = (cl.planes ?? []).flatMap((p: { etapas: { items: ItemE[] }[] }) =>
+      p.etapas.flatMap((e) => e.items)
+    );
+    const primero = items.find((i) => !i.dominio || i.dominio === "core");
+    if (!primero) throw new Error("sin ítems del núcleo para sembrar la espera");
+    const { error } = await supabaseAdmin
+      .from("checklist_items")
+      .update({ banda: "M", espera_externa: true })
+      .eq("id", primero.id);
+    if (error) throw error;
+    await app.reload({ waitUntil: "networkidle" });
+    await app.locator('button[title="Ver el detalle de esta actividad"]').first().click();
+    await app.getByText("Detalle de la actividad", { exact: false }).waitFor({ timeout: 10000 });
+    await app.getByText("depende de terceros", { exact: false }).waitFor({ timeout: 10000 });
+    await capturarApp(app, "13b_detalle_espera");
+    await app.getByRole("button", { name: "Cerrar el detalle" }).click();
+  } catch (e) {
+    console.warn("gate: no se pudo capturar el detalle con espera externa:", (e as Error).message);
+  }
 
   // verificación C0: los 6 mundos visibles en el flujo real
   const cuerpo = (await app.textContent("body")) ?? "";

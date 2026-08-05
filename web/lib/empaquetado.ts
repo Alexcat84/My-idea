@@ -21,10 +21,11 @@
  *    día en que el usuario suele cerrar) de SU semana empaquetada.
  *  - La DESTACADA ("Esta semana") es el arranque de su etapa: se empaqueta
  *    primero y entrega el LUNES de la primera semana de la etapa.
- *
- * Lo que este módulo NO hace todavía: `espera_externa` viaja en la entrada pero
- * aún no mueve nada. El colchón por espera de terceros es F3 (lead de una
- * semana); se declara aquí para que la firma no cambie cuando llegue.
+ *  - La tarea con ESPERA EXTERNA (F3) se dispara temprano y entrega tarde: su
+ *    inicio se fija en el lunes de la primera semana de su etapa y su entrega
+ *    lleva el colchón de LEAD_ESPERA_SEMANAS. La espera NO consume capacidad:
+ *    el tiempo de terceros no es tiempo del usuario, así que no empuja a las
+ *    tareas hermanas; solo corre su propio reloj de entrega.
  */
 import { fechaInputLocal } from "./fechas";
 import type { Banda, CapacidadSemanal } from "./dbContract";
@@ -60,6 +61,20 @@ export const HORAS_POR_SEMANA: Record<CapacidadSemanal, number> = {
 
 /** El chip por defecto del ritual cuando el usuario aún no ha declarado nada. */
 export const CAPACIDAD_DEFAULT: CapacidadSemanal = "5-10";
+
+/**
+ * El colchón, en semanas, que se le da a una tarea que depende de terceros.
+ *
+ * Por qué UNA y no dos ni media: es el ciclo de respuesta más común de lo que el
+ * plan pide de fuera (un correo a un proveedor, una cotización, una cita, un
+ * permiso que alguien tiene que mirar). Una semana es el mínimo honesto que
+ * cambia el calendario sin inflarlo: dos empujarían un plan entero por tareas
+ * que muchas veces se resuelven en tres días, y media semana no sobrevive a un
+ * fin de semana. Si la beta muestra que el colchón se queda corto, esta
+ * constante es la palanca, y se mueve con datos (los completed_at reales de las
+ * tareas con espera), no por intuición.
+ */
+export const LEAD_ESPERA_SEMANAS = 1;
 
 const VIERNES = 5;
 const LUNES = 1;
@@ -97,6 +112,12 @@ export interface ItemEmpaquetado extends FechaSugerida {
    * para poder asertar el reparto sin leer fechas. */
   semana: number;
   etapa: number;
+  /** F3: SOLO en las tareas con espera externa — el día en que conviene
+   * dispararla (el lunes de la primera semana de su etapa). No se persiste: es
+   * un dato derivable que la pantalla usa para decir "empiézala temprano". En
+   * las demás tareas no existe, porque inventarles un inicio sería precisión
+   * fabricada: su fecha ya es su compromiso. */
+  inicioTemprano?: string;
 }
 
 export interface ResultadoEmpaquetado {
@@ -149,20 +170,38 @@ export function empaquetarFechas(opts: {
     let ultimaSemanaEtapa = 0; // relativa al inicio de la etapa
 
     for (const it of ordenados) {
-      horasAcumuladas += HORAS_MEDIA[it.banda as Banda];
-      // La semana (dentro de la etapa) donde cae la hora final de esta tarea.
-      const semanaEnEtapa = Math.ceil(horasAcumuladas / capacidad) - 1;
-      if (semanaEnEtapa > ultimaSemanaEtapa) ultimaSemanaEtapa = semanaEnEtapa;
+      const espera = it.espera_externa === true;
+      // La semana (dentro de la etapa) donde caería la hora final de esta tarea
+      // con la capacidad gastada hasta aquí.
+      const semanaTrabajo = Math.ceil((horasAcumuladas + HORAS_MEDIA[it.banda as Banda]) / capacidad) - 1;
+      // F3: la espera NO consume la capacidad del usuario. Su trabajo propio es
+      // disparar y esperar; cargar esas horas contra la semana empujaría a las
+      // tareas hermanas por tiempo que el usuario no está gastando.
+      if (!espera) horasAcumuladas += HORAS_MEDIA[it.banda as Banda];
 
       // La destacada entrega el LUNES de la primera semana de su etapa; el resto,
-      // el día de cierre de la semana en que terminan.
-      const semana = it.destacado ? semanaInicioEtapa : semanaInicioEtapa + semanaEnEtapa;
+      // el día de cierre de la semana en que terminan. La espera suma su colchón
+      // a la semana de entrega, sin cambiar el día.
+      const semanaBase = it.destacado ? 0 : semanaTrabajo;
+      const semanaEntrega = semanaBase + (espera ? LEAD_ESPERA_SEMANAS : 0);
+      const semana = semanaInicioEtapa + semanaEntrega;
       const weekday = it.destacado ? LUNES : diaEntrega;
+
+      // La etapa cierra cuando cierra su tarea más tardía DE VERDAD: cuenta la
+      // entrega con colchón, no solo el reparto de horas. Así la puerta de la
+      // etapa siguiente respeta la espera en vez de abrir sobre ella.
+      if (semanaTrabajo > ultimaSemanaEtapa) ultimaSemanaEtapa = semanaTrabajo;
+      if (semanaEntrega > ultimaSemanaEtapa) ultimaSemanaEtapa = semanaEntrega;
+
       fechas.push({
         id: it.id,
         fecha: fechaInputLocal(diaDeSemana(base, semana, weekday)),
         semana,
         etapa,
+        // Dispararla pronto es lo único que el usuario controla de una espera.
+        ...(espera
+          ? { inicioTemprano: fechaInputLocal(diaDeSemana(base, semanaInicioEtapa, LUNES)) }
+          : {}),
       });
     }
 
