@@ -422,5 +422,33 @@ FROM (
       WHERE conname = 'project_modos_capacidad_semanal_check' AND connamespace = 'public'::regnamespace
     )
 
+  UNION ALL
+  -- 034 · Mundos de proteccion: el enlace (protege_item + deteccion + severidad)
+  SELECT '034', 'checklist_items.protege_item (FK SET NULL) + deteccion + probabilidad/dolor con enum',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='protege_item'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='deteccion'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE contype = 'f' AND conrelid = 'public.checklist_items'::regclass
+        AND confrelid = 'public.checklist_items'::regclass
+        AND confdeltype = 'n'   -- 'n' = ON DELETE SET NULL
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'checklist_items_probabilidad_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%muy_probable%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'checklist_items_dolor_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%bastante%'
+    )
+
 ) checks
 ORDER BY num;

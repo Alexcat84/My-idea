@@ -571,6 +571,25 @@ export async function guardarPlan(
 /** Fase 3.3: persiste el checklist derivado de un plan recién guardado.
  * Solo los planes de entrevista (inicial|completo|seguimiento) derivan
  * checklist; organizador y reporte_numeros NO llegan aquí. */
+/** Mundos de proteccion (P2): el id del plan de NUCLEO mas reciente, que es el
+ * "ciclo vigente" contra el que se enlaza. Misma consulta que el candado de
+ * secuencia de world/start, en un solo sitio. null si el proyecto aun no tiene
+ * plan de nucleo (entonces no hay nada que proteger). */
+export async function obtenerPlanCoreVigente(supabase: SupabaseClient, projectId: string): Promise<string | null> {
+  const { data: sesiones } = await supabase.from("sessions").select("id").eq("project_id", projectId);
+  const ids = (sesiones ?? []).map((x: { id: string }) => x.id);
+  if (ids.length === 0) return null;
+  const { data } = await supabase
+    .from("plans")
+    .select("id")
+    .in("session_id", ids)
+    .eq("dominio", "core")
+    .in("etiqueta", ["inicial", "completo", "seguimiento"])
+    .order("created_at", { ascending: false })
+    .limit(1);
+  return ((data ?? [])[0] as { id: string } | undefined)?.id ?? null;
+}
+
 /** Mundos de proteccion (P1): las actividades de UN plan (el ciclo vigente del
  * nucleo). Lectura pura: la usa el armador del snapshot, que jamas escribe. Las
  * retiradas las filtra el armador, no la consulta, para que el corte de
@@ -606,6 +625,13 @@ export async function insertarChecklist(
     // plan. Ausente/null = estimación fallida o plan sin scheduler (fallback).
     banda?: string | null;
     espera_externa?: boolean | null;
+    // Mundos de proteccion (P2): el enlace con la actividad del nucleo que esta
+    // respuesta protege, su deteccion y su severidad en palabras. Ausente en
+    // todo lo que no sea un plan de proteccion.
+    protege_item?: string | null;
+    deteccion?: string | null;
+    probabilidad?: string | null;
+    dolor?: string | null;
   }>,
   dominio: string = "core"
 ): Promise<void> {
@@ -621,6 +647,16 @@ export async function insertarChecklist(
       destacado: i.destacado,
       banda: i.banda ?? null,
       espera_externa: i.espera_externa ?? null,
+      // Solo viajan si el plan es de proteccion: en los demas ni siquiera se
+      // nombran, para no escribir cuatro nulls por item en cada plan de la casa.
+      ...(i.protege_item !== undefined || i.deteccion !== undefined
+        ? {
+            protege_item: i.protege_item ?? null,
+            deteccion: i.deteccion ?? null,
+            probabilidad: i.probabilidad ?? null,
+            dolor: i.dolor ?? null,
+          }
+        : {}),
     }))
   );
   if (error) throw error;

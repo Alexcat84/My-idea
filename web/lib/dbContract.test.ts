@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { BANDA, CAPACIDAD_SEMANAL, CHECKLIST_ESTADO, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { BANDA, CAPACIDAD_SEMANAL, CHECKLIST_ESTADO, DOLOR, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROBABILIDAD, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -125,7 +125,20 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     assertSubconjuntoDelContrato("project_modos.capacidad_semanal", CAPACIDAD_SEMANAL);
   });
 
-  it("parseo de sanidad: encontro los 12 CHECK esperados con al menos un literal cada uno", () => {
+  it("checklist_items.probabilidad y .dolor (Mundos de protección, migration 034)", () => {
+    assertSubconjuntoDelContrato("checklist_items.probabilidad", PROBABILIDAD);
+    assertSubconjuntoDelContrato("checklist_items.dolor", DOLOR);
+  });
+
+  it("la severidad NO admite puntajes numéricos (lo manda el grafo, no nosotros)", () => {
+    for (const clave of ["checklist_items.probabilidad", "checklist_items.dolor"]) {
+      for (const permitido of contrato.get(clave)!) {
+        expect(permitido).not.toMatch(/^\d+$/);
+      }
+    }
+  });
+
+  it("parseo de sanidad: encontro los 14 CHECK esperados con al menos un literal cada uno", () => {
     for (const clave of [
       "sessions.tipo",
       "plans.etiqueta",
@@ -139,6 +152,8 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
       "checklist_items.fecha_base_origen",
       "checklist_items.banda",
       "project_modos.capacidad_semanal",
+      "checklist_items.probabilidad",
+      "checklist_items.dolor",
     ]) {
       const permitidos = contrato.get(clave);
       expect(permitidos).toBeDefined();

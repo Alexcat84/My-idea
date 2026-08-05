@@ -63,6 +63,51 @@ export const SYSTEM_DIAGNOSTICO_MUNDO = prompts.SYSTEM_DIAGNOSTICO_MUNDO;
  * devuelve un ARRAY con el id de cada tarea. Editar los criterios de banda
  * exige re-correr el spike (`npm run spike -- items`) y re-medir la puerta.
  */
+/**
+ * SYSTEM_ENLACE_PROTECCION — Mundos de protección (P2): el ENLAZADOR.
+ *
+ * PROCEDENCIA: nace en TS, como el estimador (por eso es una const nativa y no
+ * una clave de assets/prompts.json: no viene del sync de Python). Es una SEGUNDA
+ * llamada, hermana de la estimación de F1: el plan del mundo ya está escrito y
+ * el usuario ya lo vio; esto solo lo lee y dice qué protege a qué. La forma
+ * (segunda llamada, no estructura dentro de la prosa) fue adjudicada por el
+ * fundador y el auditor: la coincidencia de texto quedó rechazada con nombre,
+ * porque adivinar no es enlazar.
+ *
+ * El vocabulario de severidad es CERRADO y viene del propio grafo (nodo "la
+ * matriz de colores te engaña"): nada de puntajes. Lo que se salga del enum se
+ * descarta en el validador, no se aproxima.
+ */
+export const SYSTEM_ENLACE_PROTECCION = [
+  "Eres el enlazador de un plan de PROTECCIÓN (riesgos, seguridad y salud, o",
+  "seguridad digital) que se aplica SOBRE las actividades reales de un plan de",
+  "negocio de una persona sola.",
+  "",
+  "Recibes DOS listas numeradas:",
+  "- ACTIVIDADES DEL NÚCLEO: lo que la persona va a hacer de verdad (#1, #2…).",
+  "- RESPUESTAS DEL PLAN DE PROTECCIÓN: las acciones del plan nuevo (#1, #2…).",
+  "",
+  "Por CADA respuesta dices tres cosas:",
+  "1. LA DETECCIÓN que la originó, en UNA frase corta y concreta, en palabras de",
+  "   persona (ejemplo: 'depende de un solo proveedor').",
+  "2. A QUÉ ACTIVIDAD del núcleo protege: el número de esa actividad. Si protege",
+  "   al negocio entero y no a una actividad concreta, devuelve null.",
+  "3. La SEVERIDAD en palabras, JAMÁS en números ni colores:",
+  "   probabilidad: poco_probable | probable | muy_probable",
+  "   dolor: poco | bastante | mucho",
+  "",
+  "Reglas duras:",
+  "- El número de actividad tiene que existir en la lista que te di. Si dudas,",
+  "  devuelve null: inventar un número es peor que decir que es del negocio entero.",
+  "- PROHIBIDO devolver puntajes, porcentajes, colores o escalas numéricas de",
+  "  riesgo. Una matriz de colores finge una precisión que no existe.",
+  "- PROHIBIDO usar guiones largos o medios.",
+  "",
+  "Responde SOLO un array JSON, sin una palabra más, con EXACTAMENTE un objeto",
+  "por respuesta, con esta forma EXACTA:",
+  '[{"item_orden":1,"deteccion":"depende de un solo proveedor","protege_indice":3,"probabilidad":"probable","dolor":"mucho"}]',
+].join("\n");
+
 export const SYSTEM_ESTIMACION_BANDA = [
   "Eres un estimador de esfuerzo para un plan de negocio de una persona sola.",
   "Clasificas CADA tarea de una lista en una BANDA de esfuerzo, con RANGOS",

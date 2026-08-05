@@ -35,6 +35,8 @@ import {
   guardarPlan,
   insertarChecklist,
   mergeNumerosProyecto,
+  obtenerItemsDePlan,
+  obtenerPlanCoreVigente,
   mergeTipoOferta,
   obtenerProyecto,
   obtenerSesion,
@@ -44,7 +46,10 @@ import {
   type NodoConTipo,
 } from "@/lib/db";
 import { derivarChecklist } from "@/lib/engine/checklist";
+import { enlazarPlanProteccion } from "@/lib/engine/enlazador";
 import { estimarLoteMayoria } from "@/lib/engine/estimacion";
+import { armarSnapshot, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
+import { esMundoProteccion } from "@/lib/espacios";
 import { cargarGrafo } from "@/lib/engine/graph";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
@@ -329,6 +334,41 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           eventosPlan.push({
             tipo: "estimacion_fallida",
             texto: e instanceof Error ? e.message : String(e),
+          });
+        }
+        // Mundos de proteccion (P2): el ENLACE. Segunda llamada, hermana de la
+        // estimacion: el plan ya esta escrito y el usuario ya lo vio; esto solo
+        // lo lee y dice que respuesta protege a que actividad del nucleo. Se
+        // re-lee el nucleo AHORA (no se reusa el snapshot de la entrevista):
+        // el enlace tiene que apuntar a ids que existan en este momento.
+        if (esMundoProteccion(dominioSesion)) {
+          const planCore = await obtenerPlanCoreVigente(supabase, projectId);
+          const filasNucleo = planCore ? await obtenerItemsDePlan(supabase, projectId, planCore) : [];
+          const snapshot = armarSnapshot(filasNucleo as unknown as FilaChecklistSnapshot[]);
+          const enlace = await enlazarPlanProteccion(
+            client,
+            itemsDerivados.map((i) => ({ texto: i.texto, etapa: i.etapa })),
+            snapshot,
+            acumuladoTrasEstimacion
+          );
+          acumuladoTrasEstimacion = enlace.acumulado;
+          itemsChecklist = itemsChecklist.map((it, i) => ({
+            ...it,
+            protege_item: enlace.enlaces[i]?.protege_item ?? null,
+            deteccion: enlace.enlaces[i]?.deteccion ?? null,
+            probabilidad: enlace.enlaces[i]?.probabilidad ?? null,
+            dolor: enlace.enlaces[i]?.dolor ?? null,
+          }));
+          // El costo va MEDIDO al evento (el fundador lo pidio asi), junto con
+          // cuantos enlaces se descartaron por apuntar a algo inexistente.
+          eventosPlan.push({
+            tipo: enlace.fallo ? "enlace_proteccion_fallido" : "enlace_proteccion",
+            mundo: dominioSesion,
+            total: itemsDerivados.length,
+            enlazados: enlace.enlaces.filter(Boolean).length,
+            descartados: enlace.descartados,
+            costo_usd: Number(enlace.costoUsd.toFixed(4)),
+            ...(enlace.fallo ? { texto: enlace.fallo } : {}),
           });
         }
         await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion);
