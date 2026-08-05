@@ -18,6 +18,7 @@ import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import type { EstadoMundo } from "@/lib/engine/previewMundos";
+import { murallaSinPlan } from "@/lib/espacios";
 import { PRECIOS } from "@/lib/precios";
 
 interface Pack {
@@ -237,7 +238,10 @@ export function PotenciaTuIdea({
                   {errorEn === p.clave ? (
                     "No pudimos abrirlo; intenta de nuevo."
                   ) : avisoBloqueado === p.clave ? (
-                    "Primero genera el plan de tu idea."
+                    /* La muralla del sin plan: la MISMA frase que responde la
+                       ruta, interpolada con el nombre del mundo (fuente única
+                       en espacios.ts). */
+                    murallaSinPlan(p.nombre)
                   ) : estado === "diagnostico_listo" ? (
                     <>
                       Tu diagnóstico te espera · su plan: {PRECIOS.mundo_activar} créditos

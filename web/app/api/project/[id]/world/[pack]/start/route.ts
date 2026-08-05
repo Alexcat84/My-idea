@@ -21,7 +21,16 @@ import { NextResponse } from "next/server";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { usoVacio } from "@/lib/costmeter";
-import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto, registrarBitacora } from "@/lib/db";
+import {
+  crearSesion,
+  dominiosDesbloqueados,
+  nodosCubiertos,
+  obtenerItemsDePlan,
+  obtenerProyecto,
+  registrarBitacora,
+} from "@/lib/db";
+import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
+import { armarSnapshot, snapshotComoTexto, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
@@ -80,12 +89,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         .limit(1)
     : { data: [] };
   if (!planesCore || planesCore.length === 0) {
-    return NextResponse.json(
-      { error: "Primero genera el plan de tu idea. El mundo se construye sobre él." },
-      { status: 409 }
-    );
+    // La muralla del sin-plan (BANCO §7.1): un mundo de protección no puede
+    // evaluar sobre nada, así que se dice en persona y se ofrece el camino, en
+    // vez de generar un plan genérico. Copy ÚNICO e interpolado: el mundo se
+    // nombra, para que la frase diga de qué se está hablando.
+    return NextResponse.json({ error: murallaSinPlan(entrada.nombre) }, { status: 409 });
   }
-  const planCoreMasNuevoAt = (planesCore[0] as { created_at: string }).created_at;
+  const planCoreMasNuevo = planesCore[0] as { id: string; created_at: string };
+  const planCoreMasNuevoAt = planCoreMasNuevo.created_at;
 
   // Un preview por mundo por proyecto (§4): con diagnóstico listo y sin
   // compra, solo un ciclo nuevo del proyecto re-abre la mirada gratis.
@@ -183,6 +194,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   const dominios = await dominiosDesbloqueados(supabase, projectId);
+
+  // Mundos de protección (P1): su entrevista se aplica SOBRE las actividades
+  // reales del núcleo, así que el snapshot del ciclo vigente viaja con la
+  // sesión. LECTURA pura: nada del núcleo se muda ni se copia. Los mundos de
+  // mejora no lo llevan (su plan sale del contexto del negocio, como siempre).
+  // Si la lectura falla, el mundo arranca SIN snapshot en vez de no arrancar:
+  // el preview es gratis y romperlo sería peor que evaluarlo con menos.
+  let snapshotNucleo: string | null = null;
+  if (esMundoProteccion(pack)) {
+    try {
+      const filas = await obtenerItemsDePlan(supabase, projectId, planCoreMasNuevo.id);
+      snapshotNucleo = snapshotComoTexto(
+        armarSnapshot(filas as unknown as FilaChecklistSnapshot[], estadoVivo ?? null)
+      ) || null;
+    } catch {
+      snapshotNucleo = null;
+    }
+  }
+
   const estado = estadoInicial({
     actualId: brecha.semillaId,
     perfilSesion: estadoVivo ?? "",
@@ -193,6 +223,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // 'salir' cerraria en vez de re-elegir puerta y el usuario que pago por
     // este mundo se quedaria mirando una pantalla muda.
     dominioSesion: pack,
+    snapshotNucleo,
   });
 
   // Fase v1.3.2 (cazado por el vuelo, dos veces): la PRIMERA pregunta del
