@@ -41,12 +41,24 @@ interface ItemChecklist {
   // Scheduler F1: la banda de esfuerzo estimada + si arrastra espera de terceros.
   banda: Banda | null;
   espera_externa: boolean | null;
+  // Mundos de protección (P2): el enlace con la actividad del núcleo, su
+  // detección y su severidad en palabras. Solo los planes de protección los
+  // traen; en el resto son null.
+  protege_item: string | null;
+  deteccion: string | null;
+  probabilidad: string | null;
+  dolor: string | null;
   created_at: string;
   updated_at: string;
 }
 
 const COLUMNAS =
-  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, created_at, updated_at";
+  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, created_at, updated_at";
+
+/** Las columnas que llegaron con una migración posterior al primer despliegue.
+ * Si el código se adelanta a la migración, se leen null en vez de caerse la
+ * lectura entera del checklist (patrón de project_unlocks, pre-026). */
+const COLUMNAS_NUEVAS = [", protege_item, deteccion, probabilidad, dolor", ", banda, espera_externa"];
 
 /** Un timestamp ISO válido y no futuro (tolera 1 min de desfase de reloj). */
 function fechaIsoValida(valor: unknown): string | null {
@@ -89,9 +101,13 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       .order("etapa", { ascending: true })
       .order("orden", { ascending: true });
   let { data, error } = await leer(COLUMNAS);
-  if (error) ({ data, error } = await leer(COLUMNAS.replace(", banda, espera_externa", "")));
-  if (error)
-    ({ data, error } = await leer(COLUMNAS.replace(", banda, espera_externa", "").replace(", no_aplica_motivo", "")));
+  let recorte = COLUMNAS;
+  for (const nuevas of COLUMNAS_NUEVAS) {
+    if (!error) break;
+    recorte = recorte.replace(nuevas, "");
+    ({ data, error } = await leer(recorte));
+  }
+  if (error) ({ data, error } = await leer(recorte.replace(", no_aplica_motivo", "")));
   if (error) {
     return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
   }
@@ -100,6 +116,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     no_aplica_motivo: i.no_aplica_motivo ?? null,
     banda: i.banda ?? null,
     espera_externa: i.espera_externa ?? null,
+    protege_item: i.protege_item ?? null,
+    deteccion: i.deteccion ?? null,
+    probabilidad: i.probabilidad ?? null,
+    dolor: i.dolor ?? null,
   })) as ItemChecklist[];
 
   // Agrupado plan -> etapas (el orden de inserción ya viene garantizado).
