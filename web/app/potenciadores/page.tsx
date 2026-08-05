@@ -2,8 +2,9 @@
  * /potenciadores — los ADD-ONS de las ideas (regla del fundador: no mezclar
  * procesos, y esto NO vive en el menú principal). Se llega desde el final de
  * la lista de ideas ("Potenciar mis ideas") y hace UNA sola cosa: elegir la
- * idea. Con la idea elegida, REDIRIGE a su Manos a la Obra, donde vive la
- * ÚNICA fila de potenciadores (PotenciaTuIdea).
+ * idea. Con la idea elegida, muestra la pantalla enfocada de ELEGIR EL
+ * POTENCIADOR, que renderiza la ÚNICA fila real (PotenciaTuIdea): aplicarlo lo
+ * agrega al menú de la idea y desde ahí todo sigue igual.
  *
  * Por qué redirección y no una segunda parrilla (decisión del fundador, ago
  * 2026, no discutible): esta página tuvo su propia copia de las tarjetas y se
@@ -15,6 +16,7 @@
  */
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { ElegirPotenciador } from "./ElegirPotenciador";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 
@@ -45,15 +47,20 @@ export default async function Potenciadores({
   } = await supabase.auth.getUser();
   if (!user || esInvitadoInvisible(user)) redirect("/login");
 
-  // Con idea elegida: DERECHO a la fuente de verdad. RLS: si la idea no es
-  // suya (o no existe), vuelve a elegir. `potenciar=1` hace que la idea abra
-  // ATERRIZANDO en su fila de potenciadores (no arriba del todo): este acceso
-  // existe para elegir el potenciador y terminar añadiendo un mundo nuevo
-  // sobre esa idea, no para pasear por Manos a la Obra.
+  // Con idea elegida: la pantalla enfocada de elegir potenciador. RLS: si la
+  // idea no es suya (o no existe), vuelve a elegir. La parrilla que se pinta
+  // ahí es EL MISMO componente de la idea (PotenciaTuIdea), no una copia.
   if (ideaId) {
     const { data: proyecto } = await supabase.from("projects").select("id").eq("id", ideaId).maybeSingle();
     if (!proyecto) redirect("/potenciadores");
-    redirect(`/idea/${ideaId}?vista=manos&potenciar=1`);
+    return (
+      <div className="flex min-h-full flex-1 flex-col">
+        <Cabecera titulo="Potenciar" />
+        <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-10 sm:px-6">
+          <ElegirPotenciador ideaId={ideaId} />
+        </main>
+      </div>
+    );
   }
 
   // ── El único paso propio: ¿qué idea quieres potenciar? ──────────────────
