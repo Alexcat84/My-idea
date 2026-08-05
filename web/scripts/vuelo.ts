@@ -37,6 +37,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, patchJson, postJson, ROOT } from "./_shared/http";
 import { verificarNumerosHuerfanos } from "../lib/verificadorHuerfanos";
+import { empaquetarFechas } from "../lib/empaquetado";
 
 cargarEnvRaiz();
 
@@ -1225,7 +1226,92 @@ async function faseSentidoDelTiempo(cookie: string, projectId: string) {
   if (rReab.realizada_at !== null) throw new Error("reabrir no puso realizada_at a null");
   log("OK: reabrir puso realizada_at a null (la idea vuelve a estar viva).");
 
+  // ---- (c) Scheduler F2: LA TUBERIA DEL CALENDARIO, custodiada ----
+  // Lo que ningun unitario prueba: que la fecha que SALE del empaquetado es la
+  // misma que termina en el .ics del usuario, sin que nadie la reinterprete por
+  // el camino. Se siembran bandas CONTROLADAS (una S y una XL en la MISMA etapa)
+  // para que la capacidad las separe en semanas distintas de verdad; si el .ics
+  // las volviera a juntar, la herencia estaria rota y esto lo grita.
+  await tuberiaDelCalendario(cookie, projectId, vig0.plan_id, items);
+
   return { costoUsd: 0 };
+}
+
+/** Scheduler F2 (assert de la tuberia): empaquetado -> /baseline -> feed .ics.
+ * La herencia del calendario es GRATIS pero no se supone: se custodia. */
+async function tuberiaDelCalendario(
+  cookie: string,
+  projectId: string,
+  planId: string,
+  items: Array<{ id: string; etapa: number }>
+) {
+  if (items.length < 2) {
+    log("AVISO: menos de 2 items en el plan vigente; no se puede probar la tuberia del calendario.");
+    return;
+  }
+  const [itA, itB] = items;
+  // Bandas sembradas a proposito: S (1 h) y XL (16 h) en la MISMA etapa.
+  await supabaseAdmin.from("checklist_items").update({ banda: "S", espera_externa: false }).eq("id", itA.id);
+  await supabaseAdmin.from("checklist_items").update({ banda: "XL", espera_externa: false }).eq("id", itB.id);
+  await supabaseAdmin.from("checklist_items").update({ etapa: itA.etapa }).eq("id", itB.id);
+
+  // El MISMO empaquetado puro que corre en el ritual, con capacidad 5-10 (=5 h/sem).
+  // A mano: la S acumula 1 h -> ceil(1/5)-1 = 0 -> primera semana de la etapa;
+  // la XL acumula 1+16 = 17 h -> ceil(17/5)-1 = 3 -> cuatro semanas despues.
+  const ancla = new Date().toISOString();
+  const { fechas: empaquetadas } = empaquetarFechas({
+    ancla,
+    capacidad: "5-10",
+    items: [
+      { id: itA.id, etapa: itA.etapa, destacado: false, banda: "S" },
+      { id: itB.id, etapa: itA.etapa, destacado: false, banda: "XL" },
+    ],
+  });
+  const semanaA = empaquetadas.find((f) => f.id === itA.id)!;
+  const semanaB = empaquetadas.find((f) => f.id === itB.id)!;
+  if (semanaA.semana === semanaB.semana) {
+    throw new Error(`la capacidad debia separar la S de la XL en semanas distintas: ${JSON.stringify(empaquetadas)}`);
+  }
+  log(`OK: empaquetado -- la S cae en la semana ${semanaA.semana} y la XL en la ${semanaB.semana} (misma etapa, capacidad 5-10).`);
+
+  // Se sellan TAL CUAL en la baseline (mediodia local, como hace el ritual).
+  const aIso = (f: string) => new Date(`${f}T12:00:00`).toISOString();
+  const rBase = await postJson(cookie, `/api/project/${projectId}/baseline`, {
+    plan_id: planId,
+    fechas: [
+      { item_id: itA.id, fecha: aIso(semanaA.fecha), origen: "sugerida" },
+      { item_id: itB.id, fecha: aIso(semanaB.fecha), origen: "sugerida" },
+    ],
+  });
+  if ((rBase as { ok?: boolean }).ok !== true) throw new Error(`/baseline rechazo las fechas empaquetadas: ${JSON.stringify(rBase)}`);
+
+  // Las dos tareas tienen que estar PENDIENTES para salir al feed.
+  for (const it of [itA, itB]) {
+    await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: it.id, estado: "pendiente" });
+  }
+
+  // El feed .ics del usuario: la fecha que sale tiene que ser la empaquetada.
+  const feed = (await getJson(cookie, "/api/calendar/feed-url")) as { disponible?: boolean; url?: string };
+  if (!feed.disponible || !feed.url) throw new Error("/api/calendar/feed-url no dio URL de feed");
+  const ics = await (await fetch(feed.url)).text();
+
+  const yyyymmdd = (f: string) => f.replace(/-/g, "");
+  const bloques = ics.split("BEGIN:VEVENT").slice(1);
+  const bloqueDe = (id: string) => bloques.find((b) => b.includes(id));
+  for (const [it, esperada] of [
+    [itA, semanaA],
+    [itB, semanaB],
+  ] as const) {
+    const bloque = bloqueDe(it.id);
+    if (!bloque) throw new Error(`el feed .ics no trae la tarea ${it.id}`);
+    if (!bloque.includes(yyyymmdd(esperada.fecha))) {
+      throw new Error(`el .ics no exporto la fecha empaquetada (${esperada.fecha}) de ${it.id}: ${bloque.slice(0, 220)}`);
+    }
+    // UID estable: el id del item manda, no la fecha (mover la fecha actualiza
+    // el evento en vez de duplicarlo).
+    if (!/UID:[^\r\n]*/.test(bloque)) throw new Error(`la tarea ${it.id} salio sin UID`);
+  }
+  log("OK: tuberia del calendario -- el .ics exporta las fechas EMPAQUETADAS tal cual, con UID estable.");
 }
 
 

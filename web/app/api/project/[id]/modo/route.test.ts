@@ -85,3 +85,74 @@ describe("PATCH /api/project/[id]/modo (todo separado: modo por espacio)", () =>
     expect(modoDe("core")).toBeUndefined();
   });
 });
+
+// Scheduler F2: las horas por semana viven en la misma fila del espacio porque
+// son la misma decisión (cómo lleva el tiempo ESTE espacio). Pueden venir solas.
+describe("PATCH capacidad_semanal (Scheduler F2): las horas por semana del espacio", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  function capacidadDe(dominio: string): string | undefined {
+    const fila = estadoFalso.projectModos.find(
+      (r) => (r as Record<string, unknown>).project_id === "p1" && (r as Record<string, unknown>).dominio === dominio
+    );
+    return fila ? ((fila as Record<string, unknown>).capacidad_semanal as string) : undefined;
+  }
+
+  it("400 si la capacidad no es uno de los chips", async () => {
+    sembrarProyecto("fechas");
+    const res = await PATCH(req({ capacidad_semanal: "40-60" }), PARAMS);
+    expect(res.status).toBe(400);
+    expect(capacidadDe("core")).toBeUndefined();
+  });
+
+  it("400 si no viene ni modo ni capacidad (nada que actualizar)", async () => {
+    sembrarProyecto("fechas");
+    expect((await PATCH(req({}), PARAMS)).status).toBe(400);
+  });
+
+  it("la capacidad puede venir SOLA: se guarda sin tocar el modo vigente", async () => {
+    sembrarProyecto("fechas");
+    await PATCH(req({ modo_camino: "fechas" }), PARAMS); // el espacio ya está en fechas
+    const res = await PATCH(req({ capacidad_semanal: "2-5" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(capacidadDe("core")).toBe("2-5");
+    expect(modoDe("core")).toBe("fechas");
+  });
+
+  it("cambiarla deja rastro capacidad_semanal {de, a} en la bitácora", async () => {
+    sembrarProyecto("fechas");
+    await PATCH(req({ capacidad_semanal: "5-10" }), PARAMS);
+    await PATCH(req({ capacidad_semanal: "20+" }), PARAMS);
+    const eventos = estadoFalso.bitacora.filter((b) => b.tipo === "capacidad_semanal");
+    expect(eventos).toHaveLength(2);
+    expect(eventos[0].payload).toMatchObject({ de: null, a: "5-10", dominio: "core" });
+    expect(eventos[1].payload).toMatchObject({ de: "5-10", a: "20+", dominio: "core" });
+  });
+
+  it("re-elegir la MISMA capacidad no registra nada (cambios reales, no clics)", async () => {
+    sembrarProyecto("fechas");
+    await PATCH(req({ capacidad_semanal: "5-10" }), PARAMS);
+    const antes = estadoFalso.bitacora.length;
+    await PATCH(req({ capacidad_semanal: "5-10" }), PARAMS);
+    expect(estadoFalso.bitacora.length).toBe(antes);
+  });
+
+  it("cada espacio tiene la SUYA: la del mundo no toca la del núcleo", async () => {
+    sembrarProyecto("fechas");
+    await PATCH(req({ capacidad_semanal: "20+" }), PARAMS);
+    await PATCH(req({ capacidad_semanal: "2-5", dominio: "quality" }), PARAMS);
+    expect(capacidadDe("core")).toBe("20+");
+    expect(capacidadDe("quality")).toBe("2-5");
+  });
+
+  it("modo y capacidad en el MISMO cuerpo: el espacio nace con las dos", async () => {
+    sembrarProyecto(null);
+    const res = await PATCH(req({ modo_camino: "fechas", capacidad_semanal: "10-20", dominio: "quality" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(modoDe("quality")).toBe("fechas");
+    expect(capacidadDe("quality")).toBe("10-20");
+  });
+});

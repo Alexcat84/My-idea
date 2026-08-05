@@ -328,6 +328,16 @@ desconocer la razón.
     solo si la fecha vigente cae en la semana ISO actual; en a-mi-ritmo sigue atada a
     `destacado`) y el **orden por fecha vigente** dentro de la etapa en modo fechas
     (la destacada del lunes sube al frente; en a-mi-ritmo, orden del plan intacto).
+  - **Precisado por el SCHEDULER (F2, ago 2026):** la doctrina es **"nada de agenda
+    diaria"**, no "una etapa entera cabe siempre en una semana". Cuando el
+    empaquetado corre (todas las tareas estimadas), los ítems de una etapa siguen
+    cayendo **siempre en el día de cierre** (el viernes, o el día que el usuario
+    demostró usar): jamás se escalonan lunes/martes/miércoles. Lo que ahora puede
+    cambiar es **la SEMANA**: una etapa con más trabajo del que cabe en la capacidad
+    declarada se reparte en varios viernes consecutivos, porque prometer que treinta
+    horas caben en una semana de cinco es la mentira que el scheduler vino a
+    arreglar. Sin bandas, manda el sugeridor viejo y el viernes compartido se
+    conserva tal cual.
 - **Catálogo congruente — packs y paquetes son el MISMO número (jul 2026).**
   Los precios unitarios suben a múltiplos de 5 para que cada pack ES un paquete
   real de trabajo, narrable en una línea: *"Tu plan: 10 créditos. Todo lo demás:

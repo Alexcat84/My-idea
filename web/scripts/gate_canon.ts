@@ -449,12 +449,56 @@ async function main() {
   // Se cambia de modo reabriendo el selector con "cambiar" y eligiendo "Con
   // fechas y recordatorios". Sin fechas aún, el ritual de baseline se abre solo,
   // con las 3 clases de cumplimiento (tardía en ámbar, a tiempo, adelantadas).
+  // Scheduler F2: se SIEMBRAN bandas variadas antes de abrir el ritual. La
+  // pregunta de capacidad solo aparece cuando TODAS las tareas están estimadas
+  // (si falta una, el plan cae al sugeridor viejo y preguntar sería teatro), y
+  // la estimación en vivo del plan del gate puede haber fallado o traer bandas
+  // planas. Con bandas controladas, el par de capturas de abajo compara peras
+  // con peras. Va envuelto: si algo cambia, el gate sigue con el ritual viejo.
+  try {
+    const id = new URL(app.url()).pathname.split("/")[2];
+    const cl = await (await app.request.get(`/api/project/${id}/checklist`)).json();
+    type ItemB = { id: string; dominio: string | null };
+    const items: ItemB[] = (cl.planes ?? []).flatMap((p: { etapas: { items: ItemB[] }[] }) =>
+      p.etapas.flatMap((e) => e.items)
+    );
+    const core = items.filter((i) => !i.dominio || i.dominio === "core");
+    const RUEDA = ["S", "M", "XL", "M", "L", "S"] as const; // variadas a propósito
+    for (const [i, it] of core.entries()) {
+      const r = await app.request.patch(`/api/project/${id}/checklist`, {
+        data: { item_id: it.id, banda: RUEDA[i % RUEDA.length] },
+      });
+      if (!r.ok()) console.warn(`gate: sembrar banda HTTP ${r.status()}`);
+    }
+  } catch (e) {
+    console.warn("gate: no se pudieron sembrar las bandas:", (e as Error).message);
+  }
+
   const cambiar = app.getByRole("button", { name: "cambiar" }).first();
   await cambiar.waitFor({ state: "visible", timeout: 30000 });
   await cambiar.click();
   await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 15000 });
   await app.getByRole("button", { name: /Con fechas y recordatorios/ }).click();
   await app.getByText("Ponle fechas a tu camino", { exact: false }).waitFor({ timeout: 30000 });
+
+  // Scheduler F2 — EL PAR QUE JUZGA EL FUNDADOR: el MISMO plan repartido con dos
+  // capacidades distintas. Si las dos capturas se parecen, el empaquetado no está
+  // haciendo nada y hay que mirarlo.
+  const pregunta = app.getByText("¿Cuántas horas por semana puedes darle a este espacio?", { exact: false });
+  if (await pregunta.isVisible().catch(() => false)) {
+    await app.getByRole("button", { name: "Más de 20 horas" }).click();
+    await app.waitForTimeout(400);
+    await capturarApp(app, "07b_capacidad_20mas");
+    await app.getByRole("button", { name: "2 a 5 horas" }).click();
+    await app.waitForTimeout(400);
+    await capturarApp(app, "07c_capacidad_2a5");
+    // Se deja en el chip por defecto para que el resto del gate no cambie de
+    // premisa a mitad de camino.
+    await app.getByRole("button", { name: "5 a 10 horas" }).click();
+    await app.waitForTimeout(400);
+  } else {
+    console.warn("gate: el ritual no mostró la pregunta de capacidad (¿faltan bandas?)");
+  }
 
   // editar las dos primeras fechas (ítems ya hechos HOY): una al pasado (→
   // tardía) y otra a hoy (→ a tiempo); el resto quedan en su sugerida futura

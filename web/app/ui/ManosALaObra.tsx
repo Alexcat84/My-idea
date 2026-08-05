@@ -21,7 +21,16 @@ import { DetalleActividad } from "./DetalleActividad";
 import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
 import { ETIQUETA_ESTADO, SelectorEstado } from "./SelectorEstado";
-import { esActivo, type Banda, type ChecklistEstado, type FechaBaseOrigen, type ModoCamino } from "@/lib/dbContract";
+import {
+  CAPACIDAD_SEMANAL,
+  esActivo,
+  type Banda,
+  type CapacidadSemanal,
+  type ChecklistEstado,
+  type FechaBaseOrigen,
+  type ModoCamino,
+} from "@/lib/dbContract";
+import { CAPACIDAD_DEFAULT, empaquetarFechas, hayBandas } from "@/lib/empaquetado";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
@@ -129,6 +138,9 @@ interface Props {
    * 032). El hub del mundo lee de aquí su propio modo; el core sigue por
    * modoCamino (dual-read en el padre). */
   modos: Record<string, ModoCamino>;
+  /** Scheduler F2: las horas por semana POR ESPACIO (mapa dominio→capacidad,
+   * migración 033). El ritual de cada espacio empaqueta contra la suya. */
+  capacidades?: Record<string, CapacidadSemanal>;
   /** el PATCH /modo respondió: el padre refresca su copia del modo del CORE */
   onModoCambiado: (modo: ModoCamino) => void;
   /** tras confirmar la línea base: el padre recarga el checklist entero */
@@ -700,15 +712,71 @@ function TarjetaModo({
 
 /** El interruptor permanente "Fechas y recordatorios: activados / pausados"
  * (canon 10). Alterna 'fechas' ↔ 'ritmo'; pausar nunca borra fechas. */
-/** El ritual de la línea base (canon 10, vista B). Las fechas se sugieren
- * determinísticamente (fechasBase.ts, cero LLM) y el usuario ajusta la que
- * quiera. Tema azul: fijar fechas es planear. */
+/** Los chips de capacidad en palabras de persona (el valor que viaja a la base
+ * es el literal de CAPACIDAD_SEMANAL; esto es solo cómo se lee en pantalla). */
+const ETIQUETA_CAPACIDAD: Record<CapacidadSemanal, string> = {
+  "2-5": "2 a 5 horas",
+  "5-10": "5 a 10 horas",
+  "10-20": "10 a 20 horas",
+  "20+": "Más de 20 horas",
+};
+
+/**
+ * Las fechas propuestas del ritual, por tramo (cada dominio cuenta desde su
+ * propio plan). Scheduler F2: con TODAS las tareas estimadas se EMPAQUETA contra
+ * la capacidad declarada (lib/empaquetado.ts); si falta una sola banda, el tramo
+ * entero cae al sugeridor viejo (lib/fechasBase.ts), que sigue vivo y jamás
+ * muere. La decisión es por tramo y `empaquetable` la toma el llamador mirando
+ * todos: media planificación por capacidad y media por etapa sería un calendario
+ * mentiroso.
+ */
+export function calcularFechasRitual(
+  tramos: GrupoRitual[],
+  opts: {
+    diaPreferido: number | null;
+    cadenciaSemanas?: number;
+    capacidad: CapacidadSemanal;
+    empaquetable: boolean;
+  }
+): Record<string, string> {
+  return Object.fromEntries(
+    tramos.flatMap((g) => {
+      const propuestas = opts.empaquetable
+        ? empaquetarFechas({
+            ancla: g.planCreatedAt,
+            capacidad: opts.capacidad,
+            diaPreferido: opts.diaPreferido,
+            items: g.items.map((i) => ({
+              id: i.id,
+              etapa: i.etapa,
+              destacado: i.destacado,
+              banda: i.banda,
+              espera_externa: i.espera_externa,
+            })),
+          }).fechas
+        : sugerirFechasBase({
+            planCreatedAt: g.planCreatedAt,
+            diaPreferido: opts.diaPreferido,
+            cadenciaSemanas: opts.cadenciaSemanas,
+            items: g.items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
+          });
+      return propuestas.map((s) => [s.id, s.fecha] as const);
+    })
+  );
+}
+
+/** El ritual de la línea base (canon 10, vista B). Las fechas se reparten
+ * determinísticamente (empaquetado.ts contra la capacidad, o fechasBase.ts de
+ * fallback; cero LLM en los dos) y el usuario ajusta la que quiera. Tema azul:
+ * fijar fechas es planear. */
 function RitualFechas({
   grupos,
   cadenciaSemanas,
   soloPendientes,
   guardando,
   error,
+  capacidad,
+  onCapacidad,
   onAceptar,
   onPosponer,
 }: {
@@ -720,6 +788,11 @@ function RitualFechas({
   onPosponer: () => void;
   /** Fase 4.0 §1[8]: semanas por etapa aprendidas del ciclo previo. */
   cadenciaSemanas?: number;
+  /** Scheduler F2: horas por semana declaradas para ESTE espacio (null = sin
+   * declarar; el ritual arranca en el chip por defecto). */
+  capacidad?: CapacidadSemanal | null;
+  /** Persiste la capacidad elegida. Sin este manejador la pregunta no aparece. */
+  onCapacidad?: (c: CapacidadSemanal) => void;
 }) {
   // Con "recalcular", solo lo que sigue vivo. Un mundo recien activado trae
   // todos sus items pendientes: por eso aparece aqui aunque la baseline core
@@ -733,24 +806,33 @@ function RitualFechas({
   );
   const items = useMemo(() => tramos.flatMap((g) => g.items), [tramos]);
   const diaPreferido = useMemo(() => diaDominante(items.map((i) => i.completed_at)), [items]);
-  // Una llamada al sugeridor POR TRAMO: cada dominio cuenta desde su propio plan.
+  // Scheduler F2: la capacidad SOLO manda si todas las tareas traen banda. Con
+  // una sin estimar, el plan entero cae al sugeridor viejo (fallback declarado)
+  // y la pregunta de capacidad no se hace: preguntar algo que no mueve nada
+  // sería teatro.
+  const empaquetable = useMemo(() => tramos.every((g) => hayBandas(g.items)), [tramos]);
+  const [capacidadLocal, setCapacidadLocal] = useState<CapacidadSemanal>(capacidad ?? CAPACIDAD_DEFAULT);
+  const preguntarCapacidad = empaquetable && Boolean(onCapacidad);
+
+  // Una llamada al repartidor POR TRAMO: cada dominio cuenta desde su propio plan.
   const sugeridas = useMemo(
-    () =>
-      Object.fromEntries(
-        tramos.flatMap((g) =>
-          sugerirFechasBase({
-            planCreatedAt: g.planCreatedAt,
-            diaPreferido,
-            cadenciaSemanas,
-            items: g.items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
-          }).map((s) => [s.id, s.fecha])
-        )
-      ),
-    [tramos, diaPreferido, cadenciaSemanas]
+    () => calcularFechasRitual(tramos, { diaPreferido, cadenciaSemanas, capacidad: capacidadLocal, empaquetable }),
+    [tramos, diaPreferido, cadenciaSemanas, capacidadLocal, empaquetable]
   );
   // Fecha vigente por ítem (YYYY-MM-DD) y qué ítems tocó el usuario (=ajustada).
   const [fechas, setFechas] = useState<Record<string, string>>(sugeridas);
   const [editados, setEditados] = useState<Record<string, true>>({});
+
+  // Cambiar la capacidad es cambiar la premisa: se replanifica TODO el ritual y
+  // los ajustes manuales previos se descartan (quedarían mezclados con dos
+  // repartos distintos). Se persiste para que el espacio lo recuerde.
+  function elegirCapacidad(c: CapacidadSemanal) {
+    if (c === capacidadLocal) return;
+    setCapacidadLocal(c);
+    setFechas(calcularFechasRitual(tramos, { diaPreferido, cadenciaSemanas, capacidad: c, empaquetable }));
+    setEditados({});
+    onCapacidad?.(c);
+  }
 
   const porTramo = useMemo(
     () =>
@@ -806,6 +888,38 @@ function RitualFechas({
           Te propongo estas fechas en lenguaje humano; ajusta la que quieras. La hora es opcional.
         </p>
       </div>
+
+      {/* Scheduler F2: la pregunta de capacidad. Es la premisa del reparto, así
+          que va ARRIBA de las fechas y cambiarla las recalcula a la vista. */}
+      {preguntarCapacidad && (
+        <div className="mx-6 mb-2 rounded-cinta border border-hairline bg-surface-2 px-5 py-4 sm:mx-8">
+          <p className="text-[14px] font-semibold">¿Cuántas horas por semana puedes darle a este espacio?</p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {CAPACIDAD_SEMANAL.map((c) => {
+              const activa = c === capacidadLocal;
+              return (
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => elegirCapacidad(c)}
+                  disabled={guardando}
+                  aria-pressed={activa}
+                  className={
+                    "min-h-[40px] rounded-[10px] border px-4 py-2 text-[13.5px] font-semibold disabled:opacity-50 " +
+                    (activa ? "border-accent bg-accent/15 text-accent" : "border-hairline text-ink hover:border-accent/60")
+                  }
+                >
+                  {ETIQUETA_CAPACIDAD[c]}
+                </button>
+              );
+            })}
+          </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-dim">
+            Reparto las semanas según el trabajo que lleva cada tarea, y planeo con el piso de lo que me des: si te
+            sobra tiempo, vas adelantado. Puedes cambiarlo cuando quieras.
+          </p>
+        </div>
+      )}
 
       <div className="flex flex-col gap-1 px-6 pb-2 sm:px-8">
         {porTramo.map((tramo) => (
@@ -913,6 +1027,56 @@ function IconoCara({ cara }: { cara: Cara }) {
   );
 }
 
+/** Scheduler F2: las horas por semana de un espacio, ya declaradas, con su
+ * corrección. Vive en la cinta de "fechas activas" porque es donde el usuario
+ * viene cuando su semana cambió. */
+function CapacidadDelEspacio({
+  dominio,
+  capacidad,
+  onCapacidad,
+}: {
+  dominio: string;
+  capacidad: CapacidadSemanal;
+  onCapacidad: (dominio: string, c: CapacidadSemanal) => void;
+}) {
+  const [editando, setEditando] = useState(false);
+  if (!editando) {
+    return (
+      <p className="mt-2.5 border-t border-hairline pt-2.5 text-[12.5px] text-dim">
+        Le das <span className="font-semibold text-ink">{ETIQUETA_CAPACIDAD[capacidad].toLowerCase()}</span> por semana.{" "}
+        <button onClick={() => setEditando(true)} className="text-accent hover:underline">
+          cambiar
+        </button>
+      </p>
+    );
+  }
+  return (
+    <div className="mt-2.5 border-t border-hairline pt-2.5">
+      <p className="text-[12.5px] text-dim">¿Cuántas horas por semana puedes darle ahora?</p>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {CAPACIDAD_SEMANAL.map((c) => (
+          <button
+            key={c}
+            type="button"
+            onClick={() => {
+              if (c !== capacidad) onCapacidad(dominio, c);
+              setEditando(false);
+            }}
+            aria-pressed={c === capacidad}
+            className={
+              "min-h-[36px] rounded-[9px] border px-3 py-1.5 text-[12.5px] font-semibold " +
+              (c === capacidad ? "border-accent bg-accent/15 text-accent" : "border-hairline text-ink hover:border-accent/60")
+            }
+          >
+            {ETIQUETA_CAPACIDAD[c]}
+          </button>
+        ))}
+      </div>
+      <p className="mt-2 text-[12px] text-dim">Las nuevas horas entran cuando toques Recalcular pendientes.</p>
+    </div>
+  );
+}
+
 /**
  * "Todo separado" (T3c): el modo del camino + ritual de fechas de UN espacio
  * (el core o un mundo). Misma experiencia scopeada: el selector, el ritual de
@@ -936,6 +1100,8 @@ function PanelModoFechas({
   errorBaseline,
   recalcularPendientes,
   pospuesto,
+  capacidad,
+  onCapacidad,
   onElegir,
   onConfirmar,
   onPosponer,
@@ -956,6 +1122,9 @@ function PanelModoFechas({
   errorBaseline: string | null;
   recalcularPendientes: boolean;
   pospuesto: boolean;
+  /** Scheduler F2: las horas por semana de ESTE espacio (null = sin declarar). */
+  capacidad?: CapacidadSemanal | null;
+  onCapacidad?: (dominio: string, c: CapacidadSemanal) => void;
   onElegir: (dominio: string, modo: ModoCamino) => void;
   onConfirmar: (planId: string, fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) => void;
   onPosponer: () => void;
@@ -978,6 +1147,8 @@ function PanelModoFechas({
           soloPendientes={recalcularPendientes}
           guardando={guardandoBaseline}
           error={errorBaseline}
+          capacidad={capacidad}
+          onCapacidad={onCapacidad ? (c) => onCapacidad(dominio, c) : undefined}
           onAceptar={(fechas) => onConfirmar(planId, fechas)}
           onPosponer={onPosponer}
         />
@@ -991,19 +1162,27 @@ function PanelModoFechas({
         </div>
       )}
       {modo === "fechas" && planId && !recalcularPendientes && hayFechas && (
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
-          <p className="text-[13px] text-dim">
-            <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
-          </p>
-          <div className="flex flex-wrap items-center gap-2">
-            {/* Calendario Nivel 0: las fechas pendientes de ESTE espacio al .ics */}
-            {tieneTareasConFecha && (
-              <BotonMini onClick={onDescargarIcs} tono="accent">
-                Añadir a mi calendario
-              </BotonMini>
-            )}
-            <BotonMini onClick={onRecalcular}>Recalcular pendientes</BotonMini>
+        <div className="rounded-cinta border border-hairline bg-surface px-4 py-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <p className="text-[13px] text-dim">
+              <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
+            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              {/* Calendario Nivel 0: las fechas pendientes de ESTE espacio al .ics */}
+              {tieneTareasConFecha && (
+                <BotonMini onClick={onDescargarIcs} tono="accent">
+                  Añadir a mi calendario
+                </BotonMini>
+              )}
+              <BotonMini onClick={onRecalcular}>Recalcular pendientes</BotonMini>
+            </div>
           </div>
+          {/* Scheduler F2: las horas por semana de este espacio, editables aquí.
+              Cambiarlas NO reescribe el calendario a tus espaldas: se usan en el
+              siguiente "Recalcular pendientes", y se dice. */}
+          {capacidad && onCapacidad && (
+            <CapacidadDelEspacio dominio={dominio} capacidad={capacidad} onCapacidad={onCapacidad} />
+          )}
         </div>
       )}
     </>
@@ -1094,6 +1273,7 @@ export function ManosALaObra({
   mundos,
   modoCamino,
   modos,
+  capacidades = {},
   onModoCambiado,
   onRecargarChecklist,
   onVerAnalisis,
@@ -1153,6 +1333,14 @@ export function ManosALaObra({
     setModosLocal(modos);
   }
   const modoDeMundo = (dominio: string): ModoCamino | null => modosLocal[dominio] ?? null;
+  // Scheduler F2: misma mecánica para las horas por semana de cada espacio.
+  const [capacidadesLocal, setCapacidadesLocal] = useState<Record<string, CapacidadSemanal>>(capacidades);
+  const [capacidadesPrevias, setCapacidadesPrevias] = useState(capacidades);
+  if (capacidades !== capacidadesPrevias) {
+    setCapacidadesPrevias(capacidades);
+    setCapacidadesLocal(capacidades);
+  }
+  const capacidadDe = (dominio: string): CapacidadSemanal | null => capacidadesLocal[dominio] ?? null;
   // Fase 3.8 §4 — ritual de la línea base
   // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
   // real por etapa la calcula analytics.ts (§6: la única calculadora del
@@ -1326,6 +1514,24 @@ export function ManosALaObra({
       setError("no pudimos guardar tu elección; revisa tu internet e intenta de nuevo");
     } finally {
       setGuardandoModo(false);
+    }
+  }
+
+  // Scheduler F2: las horas por semana que el usuario le da a ESTE espacio. Se
+  // guardan en su fila de project_modos; el estado local manda mientras dure la
+  // pantalla para que el ritual replanifique sin esperar al servidor. Si la
+  // llamada falla, se avisa: la elección no se pierde en silencio.
+  async function elegirCapacidad(dominio: string, capacidad: CapacidadSemanal) {
+    setCapacidadesLocal((prev) => ({ ...prev, [dominio]: capacidad }));
+    try {
+      const res = await fetch(`/api/project/${projectId}/modo`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ capacidad_semanal: capacidad, dominio }),
+      });
+      if (!res.ok) setError(ERROR_GENERICO);
+    } catch {
+      setError("no pudimos guardar tus horas por semana; revisa tu internet e intenta de nuevo");
     }
   }
 
@@ -1592,6 +1798,8 @@ export function ManosALaObra({
           errorBaseline={errorBaseline}
           recalcularPendientes={recalcularPendientes}
           pospuesto={pospuesto}
+          capacidad={capacidadDe(ESPACIO_CORE)}
+          onCapacidad={elegirCapacidad}
           onElegir={elegirModo}
           onConfirmar={confirmarBaseline}
           onPosponer={() => {
@@ -1807,6 +2015,8 @@ export function ManosALaObra({
                           errorBaseline={errorBaseline}
                           recalcularPendientes={recalcularPendientes}
                           pospuesto={pospuesto}
+                          capacidad={capacidadDe(mundo.dominio)}
+                          onCapacidad={elegirCapacidad}
                           onElegir={elegirModo}
                           onConfirmar={confirmarBaseline}
                           onPosponer={() => {
