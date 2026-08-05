@@ -105,9 +105,27 @@ describe("DetalleActividad — el chip de cumplimiento es espejo (Fase 4.3.2)", 
     expect(html).not.toMatch(/\d+\s*horas/);
   });
 
-  it("con espera externa → lo dice, sin culpar al usuario del tiempo de otros", () => {
+  // F3: la tarea que depende de otros se dispara temprano y entrega con colchón.
+  // El copy tiene que decir las dos cosas y NO culpar al usuario del tiempo ajeno.
+  it("con espera externa → lo dice, manda empezar temprano y explica el colchón", () => {
     const html = pintar({ banda: "S", espera_externa: true });
     expect(html).toContain("depende de terceros");
+    expect(html).toContain("empiézala temprano");
+    expect(html).toContain("colchón");
+    expect(html).toContain("no se te cuenta");
+  });
+
+  it("el copy de la espera no regaña ni le cuelga la demora al usuario", () => {
+    const html = pintar({ banda: "S", espera_externa: true }).toLowerCase();
+    for (const reproche of ["deberías", "no olvides", "atrasado", "tu culpa", "recuerda que"]) {
+      expect(html).not.toContain(reproche);
+    }
+  });
+
+  it("sin espera externa, el copy NO habla de terceros ni de colchón", () => {
+    const html = pintar({ banda: "S", espera_externa: false });
+    expect(html).not.toContain("depende de terceros");
+    expect(html).not.toContain("colchón");
   });
 
   it("sin banda (plan viejo o estimación fallida) → NO hay sección de esfuerzo: cero invención", () => {

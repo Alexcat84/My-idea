@@ -290,9 +290,9 @@ export function DetalleActividad({
                     <span className="font-semibold">{rangoDeBanda(bBanda)}</span>
                     {item.espera_externa ? <span className="text-dim"> · depende de terceros</span> : null}
                   </p>
-                  <p className="mt-1 text-[12px] text-dim">
+                  <p className="mt-1 text-[12px] leading-relaxed text-dim">
                     {item.espera_externa
-                      ? "Es un estimado del trabajo tuyo. Además arrastra espera de otros, así que en el calendario ocupa más de lo que trabajas."
+                      ? "Es un estimado de tu trabajo. Esta tarea depende de respuestas de otros: empiézala temprano, que tu fecha ya trae el colchón de esa espera y el tiempo que ellos tarden no se te cuenta."
                       : "Es un estimado para orientarte. Si no calza con tu realidad, corrígelo."}
                   </p>
                 </div>
