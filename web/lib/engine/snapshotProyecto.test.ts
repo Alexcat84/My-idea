@@ -11,6 +11,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  ERROR_SNAPSHOT_ILEGIBLE,
   TOPE_TOKENS_SNAPSHOT,
   armarSnapshot,
   snapshotComoTexto,
@@ -18,6 +19,14 @@ import {
   type FilaChecklistSnapshot,
 } from "./snapshotProyecto";
 import { esMundoProteccion, murallaSinPlan, MUNDOS_PROTECCION } from "../espacios";
+
+/** El fuente de world/[pack]/start, que varios contratos de abajo inspeccionan. */
+function rutaStart(): string {
+  return readFileSync(
+    path.join(__dirname, "..", "..", "app", "api", "project", "[id]", "world", "[pack]", "start", "route.ts"),
+    "utf-8"
+  );
+}
 
 function fila(over: Partial<FilaChecklistSnapshot> & { id: string }): FilaChecklistSnapshot {
   return {
@@ -178,10 +187,7 @@ describe("la muralla del sin plan: una sola frase, interpolada", () => {
   });
 
   it("la ruta y la pantalla usan la MISMA fuente (nadie la reescribe por su cuenta)", () => {
-    const ruta = readFileSync(
-      path.join(__dirname, "..", "..", "app", "api", "project", "[id]", "world", "[pack]", "start", "route.ts"),
-      "utf-8"
-    );
+    const ruta = rutaStart();
     const pantalla = readFileSync(path.join(__dirname, "..", "..", "app", "ui", "PotenciaTuIdea.tsx"), "utf-8");
     expect(ruta).toContain("murallaSinPlan(");
     expect(pantalla).toContain("murallaSinPlan(");
@@ -193,13 +199,43 @@ describe("la muralla del sin plan: una sola frase, interpolada", () => {
 
 describe("el enganche: el snapshot llega donde tiene que llegar", () => {
   it("world/start lo siembra SOLO para los mundos de protección", () => {
-    const ruta = readFileSync(
-      path.join(__dirname, "..", "..", "app", "api", "project", "[id]", "world", "[pack]", "start", "route.ts"),
-      "utf-8"
-    );
+    const ruta = rutaStart();
     expect(ruta).toContain("esMundoProteccion(pack)");
     expect(ruta).toContain("snapshotComoTexto(");
     expect(ruta).toContain("snapshotNucleo,");
+  });
+
+  // BANCO §9 + la premisa de la campaña: un mundo de protección SIN snapshot es
+  // el plan genérico que vinimos a matar, y esta sesión es la misma de la que
+  // luego se compra el plan. Si la lectura falla, el start falla honesto.
+  it("si la lectura del snapshot falla, el start NO degrada: responde error con síntoma", () => {
+    const ruta = rutaStart();
+    // no queda ningún camino que se trague el fallo dejando el snapshot en null
+    expect(ruta).not.toMatch(/catch\s*\{\s*snapshotNucleo = null;?\s*\}/);
+    // el fallo responde al usuario y deja rastro persistido
+    expect(ruta).toContain("ERROR_SNAPSHOT_ILEGIBLE");
+    expect(ruta).toContain('"snapshot_ilegible"');
+    expect(ruta).toContain("status: 502");
+  });
+
+  it("JAMÁS nace una sesión sin snapshot: la lectura va ANTES de crearSesion", () => {
+    // Garantía estructural, que es la que de verdad lo impide: si el snapshot se
+    // leyera después, un fallo dejaría la sesión (y su preview_session_id) ya
+    // creados y huérfanos, y el usuario entraría al mundo sin sus actividades.
+    const ruta = rutaStart();
+    const lectura = ruta.indexOf("obtenerItemsDePlan(supabase");
+    const creacion = ruta.indexOf("const sessionId = await crearSesion(");
+    expect(lectura).toBeGreaterThan(-1);
+    expect(creacion).toBeGreaterThan(-1);
+    expect(lectura).toBeLessThan(creacion);
+  });
+
+  it("el mensaje del fallo es honesto y no culpa al usuario", () => {
+    expect(ERROR_SNAPSHOT_ILEGIBLE).toContain("intenta de nuevo");
+    expect(ERROR_SNAPSHOT_ILEGIBLE).not.toContain("—");
+    for (const reproche of ["error del sistema", "no deberías", "inválido"]) {
+      expect(ERROR_SNAPSHOT_ILEGIBLE.toLowerCase()).not.toContain(reproche);
+    }
   });
 
   it("el material del diagnóstico lo lleva, y se OMITE cuando no hay", () => {

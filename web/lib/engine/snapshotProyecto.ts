@@ -128,3 +128,17 @@ export const TOPE_TOKENS_SNAPSHOT = 1200;
 export function tokensAprox(texto: string): number {
   return Math.ceil(texto.length / 4);
 }
+
+/**
+ * El mensaje cuando el snapshot no se puede leer y por eso el mundo de
+ * protección NO arranca (BANCO §9: fallar ruidoso, jamás degradar callado).
+ *
+ * Por qué no se degrada a "arranca sin snapshot": un mundo de protección sin
+ * las actividades reales produce exactamente el plan genérico que esta campaña
+ * existe para matar, y la sesión del preview es la misma de la que después se
+ * compra el plan. Degradar en silencio dejaría al usuario pagando por lo que
+ * vinimos a eliminar. Es una lectura transitoria de sus propios datos: se le
+ * dice y reintenta, como hace el diagnóstico cuando su redactor falla.
+ */
+export const ERROR_SNAPSHOT_ILEGIBLE =
+  "no pudimos leer las actividades de tu plan; intenta de nuevo en un momento";

@@ -30,7 +30,12 @@ import {
   registrarBitacora,
 } from "@/lib/db";
 import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
-import { armarSnapshot, snapshotComoTexto, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
+import {
+  armarSnapshot,
+  ERROR_SNAPSHOT_ILEGIBLE,
+  snapshotComoTexto,
+  type FilaChecklistSnapshot,
+} from "@/lib/engine/snapshotProyecto";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
@@ -179,6 +184,35 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const mensaje = `Exploración del mundo "${entrada.nombre}" (${entrada.promesa}) para mi idea. Contexto actual: ${
     estadoVivo ?? (proyecto.entrada_original as string | null) ?? ""
   }`;
+  // Mundos de protección (P1): su entrevista y su diagnóstico se aplican SOBRE
+  // las actividades reales del núcleo, así que el snapshot del ciclo vigente
+  // viaja con la sesión. LECTURA pura: nada del núcleo se muda ni se copia.
+  // Los mundos de mejora no lo llevan (su plan sale del contexto del negocio).
+  //
+  // VA ANTES DE crearSesion A PROPÓSITO. Si la lectura falla, el mundo NO
+  // arranca: un mundo de protección sin snapshot es exactamente el plan
+  // genérico que esta campaña existe para matar, y esta misma sesión es de la
+  // que después se compra el plan. Degradar en silencio dejaría al usuario
+  // pagando por lo que vinimos a eliminar (BANCO §9). Es lectura transitoria de
+  // sus propios datos: se falla honesto y reintenta, como el 502 del
+  // diagnóstico. Leerlo aquí garantiza que jamás nazca una sesión sin él.
+  let snapshotNucleo: string | null = null;
+  if (esMundoProteccion(pack)) {
+    try {
+      const filas = await obtenerItemsDePlan(supabase, projectId, planCoreMasNuevo.id);
+      snapshotNucleo =
+        snapshotComoTexto(armarSnapshot(filas as unknown as FilaChecklistSnapshot[], estadoVivo ?? null)) || null;
+    } catch (e) {
+      console.error("[world/start] no se pudo leer el snapshot del núcleo:", e);
+      await registrarBitacora(supabase, projectId, "snapshot_ilegible", {
+        mundo: pack,
+        plan: planCoreMasNuevo.id,
+        motivo: e instanceof Error ? e.message : String(e),
+      });
+      return NextResponse.json({ error: ERROR_SNAPSHOT_ILEGIBLE }, { status: 502 });
+    }
+  }
+
   const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", mensaje, brecha.semillaId, pack);
 
   // La sesión del preview queda amarrada a la fila: la compra genera el plan
@@ -194,24 +228,6 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   const dominios = await dominiosDesbloqueados(supabase, projectId);
-
-  // Mundos de protección (P1): su entrevista se aplica SOBRE las actividades
-  // reales del núcleo, así que el snapshot del ciclo vigente viaja con la
-  // sesión. LECTURA pura: nada del núcleo se muda ni se copia. Los mundos de
-  // mejora no lo llevan (su plan sale del contexto del negocio, como siempre).
-  // Si la lectura falla, el mundo arranca SIN snapshot en vez de no arrancar:
-  // el preview es gratis y romperlo sería peor que evaluarlo con menos.
-  let snapshotNucleo: string | null = null;
-  if (esMundoProteccion(pack)) {
-    try {
-      const filas = await obtenerItemsDePlan(supabase, projectId, planCoreMasNuevo.id);
-      snapshotNucleo = snapshotComoTexto(
-        armarSnapshot(filas as unknown as FilaChecklistSnapshot[], estadoVivo ?? null)
-      ) || null;
-    } catch {
-      snapshotNucleo = null;
-    }
-  }
 
   const estado = estadoInicial({
     actualId: brecha.semillaId,
