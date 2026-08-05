@@ -77,6 +77,11 @@ export interface EstadoRecorrido {
    * descarta la rama entera, no el nodo: el interprete rechaza "el nodo_actual
    * y todos sus sucesores". */
   puertasDescartadas: string[];
+  /** Mundos de proteccion (P1): el retrato de las actividades vigentes del
+   * NUCLEO, ya en texto listo para inyectar. Solo lo llevan las sesiones de los
+   * tres mundos de proteccion; null en todo lo demas. Viaja con la sesion y
+   * MUERE con ella: lo unico que sobrevive son los enlaces (P2). */
+  snapshotNucleo: string | null;
   fallbackEvents: EventoInterprete[];
   prioridadDeclarada: PrioridadDeclarada | null;
   preguntaPendiente: string | null;
@@ -99,6 +104,8 @@ export function estadoInicial(params: {
   nodosCubiertosPrevios?: string[];
   dominiosDesbloqueados?: string[];
   dominioSesion?: string;
+  /** Mundos de proteccion (P1): el snapshot del nucleo ya renderizado. */
+  snapshotNucleo?: string | null;
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -112,6 +119,7 @@ export function estadoInicial(params: {
     dominiosDesbloqueados: params.dominiosDesbloqueados ?? ["core"],
     dominioSesion: params.dominioSesion ?? "core",
     puertasDescartadas: [],
+    snapshotNucleo: params.snapshotNucleo ?? null,
     fallbackEvents: [],
     prioridadDeclarada: null,
     preguntaPendiente: null,

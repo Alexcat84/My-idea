@@ -251,9 +251,11 @@ son la capa 3 embrionaria). Matriz de fases:
 
 ## 5. Backlog / afinar
 
-- **`mundos-de-proteccion-sobre-lo-existente`** (ficha de diseño registrada 2026-08-05;
-  **NO implementar**: alcance, copy y murallas se deciden en su propia mini campaña
-  **post-F4**). Decisión futura del fundador: alimentar a **Riesgos Bajo Control, HSEQ
+- **`mundos-de-proteccion-sobre-lo-existente`** → **PROMOVIDA A CAMPAÑA.** La spec del
+  fundador es **`docs/PLAN_MUNDOS_PROTECCION.md`** (5 ago 2026), que responde las
+  cuatro preguntas que esta ficha dejó abiertas y añade las herramientas canónicas
+  minadas del grafo. La ficha se conserva abajo como el origen de la decisión; **lo
+  que manda es la spec**. Decisión futura del fundador: alimentar a **Riesgos Bajo Control, HSEQ
   y Seguridad Digital** con el **snapshot del plan vigente del núcleo** (títulos de las
   actividades + sus estados) como insumo de su entrevista/diagnóstico, para que el plan
   del mundo se aplique **SOBRE las actividades reales** del usuario y no sobre una idea

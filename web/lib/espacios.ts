@@ -18,6 +18,37 @@ export function esEspacioCore(dominio: string | null | undefined): boolean {
 }
 
 /**
+ * LAS DOS FAMILIAS DE MUNDOS (BANCO §7.1, campaña "Mundos de protección"). Los
+ * de PROTECCIÓN se aplican SOBRE las actividades reales del núcleo: su
+ * entrevista y su diagnóstico reciben el snapshot del plan vigente, y su plan
+ * enlaza cada respuesta con lo que protege. Los de mejora y expansión (Calidad,
+ * Internacionalización, Multiplica, Sostenibilidad) construyen su plan desde el
+ * contexto del negocio, como siempre, y NO se tocan.
+ *
+ * Esta lista es la frontera: si un dominio no está aquí, ninguna pieza de la
+ * campaña de protección lo mira.
+ */
+export const MUNDOS_PROTECCION = ["risk_management", "health_safety", "seguridad_digital"] as const;
+
+export function esMundoProteccion(dominio: string | null | undefined): boolean {
+  return !!dominio && (MUNDOS_PROTECCION as readonly string[]).includes(dominio);
+}
+
+/**
+ * LA MURALLA DEL SIN PLAN (BANCO §7.1). Un mundo se construye sobre la idea ya
+ * trabajada, y uno de protección literalmente no tiene nada sobre lo cual
+ * evaluar sin el plan del núcleo. Se dice en persona y se ofrece el camino, en
+ * vez de generar una plantilla: fallar honesto, jamás plantilla.
+ *
+ * UNA sola frase para toda la casa: la escribe la ruta cuando responde 409 y la
+ * pinta la pantalla del escaparate. Si vivieran en dos sitios, algún día dirían
+ * cosas distintas.
+ */
+export function murallaSinPlan(nombreDelMundo: string): string {
+  return `Primero genera el plan de tu idea: tu mundo de ${nombreDelMundo} se construirá sobre él.`;
+}
+
+/**
  * Qué mundos se muestran en una vista scopeada a `soloDominio`:
  * - sin `soloDominio` (undefined/null) → TODOS (comportamiento histórico:
  *   los mundos apilados bajo el core en la misma vista).

@@ -21,7 +21,21 @@ import { NextResponse } from "next/server";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { usoVacio } from "@/lib/costmeter";
-import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto, registrarBitacora } from "@/lib/db";
+import {
+  crearSesion,
+  dominiosDesbloqueados,
+  nodosCubiertos,
+  obtenerItemsDePlan,
+  obtenerProyecto,
+  registrarBitacora,
+} from "@/lib/db";
+import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
+import {
+  armarSnapshot,
+  ERROR_SNAPSHOT_ILEGIBLE,
+  snapshotComoTexto,
+  type FilaChecklistSnapshot,
+} from "@/lib/engine/snapshotProyecto";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
@@ -80,12 +94,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         .limit(1)
     : { data: [] };
   if (!planesCore || planesCore.length === 0) {
-    return NextResponse.json(
-      { error: "Primero genera el plan de tu idea. El mundo se construye sobre él." },
-      { status: 409 }
-    );
+    // La muralla del sin-plan (BANCO §7.1): un mundo de protección no puede
+    // evaluar sobre nada, así que se dice en persona y se ofrece el camino, en
+    // vez de generar un plan genérico. Copy ÚNICO e interpolado: el mundo se
+    // nombra, para que la frase diga de qué se está hablando.
+    return NextResponse.json({ error: murallaSinPlan(entrada.nombre) }, { status: 409 });
   }
-  const planCoreMasNuevoAt = (planesCore[0] as { created_at: string }).created_at;
+  const planCoreMasNuevo = planesCore[0] as { id: string; created_at: string };
+  const planCoreMasNuevoAt = planCoreMasNuevo.created_at;
 
   // Un preview por mundo por proyecto (§4): con diagnóstico listo y sin
   // compra, solo un ciclo nuevo del proyecto re-abre la mirada gratis.
@@ -168,6 +184,35 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const mensaje = `Exploración del mundo "${entrada.nombre}" (${entrada.promesa}) para mi idea. Contexto actual: ${
     estadoVivo ?? (proyecto.entrada_original as string | null) ?? ""
   }`;
+  // Mundos de protección (P1): su entrevista y su diagnóstico se aplican SOBRE
+  // las actividades reales del núcleo, así que el snapshot del ciclo vigente
+  // viaja con la sesión. LECTURA pura: nada del núcleo se muda ni se copia.
+  // Los mundos de mejora no lo llevan (su plan sale del contexto del negocio).
+  //
+  // VA ANTES DE crearSesion A PROPÓSITO. Si la lectura falla, el mundo NO
+  // arranca: un mundo de protección sin snapshot es exactamente el plan
+  // genérico que esta campaña existe para matar, y esta misma sesión es de la
+  // que después se compra el plan. Degradar en silencio dejaría al usuario
+  // pagando por lo que vinimos a eliminar (BANCO §9). Es lectura transitoria de
+  // sus propios datos: se falla honesto y reintenta, como el 502 del
+  // diagnóstico. Leerlo aquí garantiza que jamás nazca una sesión sin él.
+  let snapshotNucleo: string | null = null;
+  if (esMundoProteccion(pack)) {
+    try {
+      const filas = await obtenerItemsDePlan(supabase, projectId, planCoreMasNuevo.id);
+      snapshotNucleo =
+        snapshotComoTexto(armarSnapshot(filas as unknown as FilaChecklistSnapshot[], estadoVivo ?? null)) || null;
+    } catch (e) {
+      console.error("[world/start] no se pudo leer el snapshot del núcleo:", e);
+      await registrarBitacora(supabase, projectId, "snapshot_ilegible", {
+        mundo: pack,
+        plan: planCoreMasNuevo.id,
+        motivo: e instanceof Error ? e.message : String(e),
+      });
+      return NextResponse.json({ error: ERROR_SNAPSHOT_ILEGIBLE }, { status: 502 });
+    }
+  }
+
   const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", mensaje, brecha.semillaId, pack);
 
   // La sesión del preview queda amarrada a la fila: la compra genera el plan
@@ -183,6 +228,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   const dominios = await dominiosDesbloqueados(supabase, projectId);
+
   const estado = estadoInicial({
     actualId: brecha.semillaId,
     perfilSesion: estadoVivo ?? "",
@@ -193,6 +239,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // 'salir' cerraria en vez de re-elegir puerta y el usuario que pago por
     // este mundo se quedaria mirando una pantalla muda.
     dominioSesion: pack,
+    snapshotNucleo,
   });
 
   // Fase v1.3.2 (cazado por el vuelo, dos veces): la PRIMERA pregunta del

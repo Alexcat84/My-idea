@@ -24,6 +24,12 @@ export interface MaterialDiagnostico {
   estado_vivo: string | null;
   temas_recorridos: string[];
   lo_que_conto: string;
+  /** Mundos de proteccion (P1): las actividades vigentes del NUCLEO. Solo viaja
+   * en los tres mundos de proteccion, que evaluan SOBRE lo que la persona de
+   * verdad va a hacer; en los de mejora no existe y el diagnostico es el de
+   * siempre. Se omite del JSON cuando es null: un campo vacio en el prompt solo
+   * gasta tokens. */
+  actividades_del_nucleo?: string;
 }
 
 /**
@@ -37,6 +43,8 @@ export function materialDiagnostico(
   mundo: { nombre: string; promesa: string },
   estadoVivo: string | null
 ): MaterialDiagnostico {
+  // El snapshot viaja en el estado del recorrido (lo sembro world/start solo
+  // para los mundos de proteccion): aqui solo se pasa al material.
   const temas: string[] = [];
   for (let i = 0; i < recorrido.ruta.length; i++) {
     if (recorrido.modos[i] === "silencioso") continue;
@@ -47,6 +55,7 @@ export function materialDiagnostico(
     estado_vivo: estadoVivo,
     temas_recorridos: temas,
     lo_que_conto: recorrido.perfilSesion ?? "",
+    ...(recorrido.snapshotNucleo ? { actividades_del_nucleo: recorrido.snapshotNucleo } : {}),
   };
 }
 

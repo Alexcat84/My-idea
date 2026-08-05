@@ -571,6 +571,28 @@ export async function guardarPlan(
 /** Fase 3.3: persiste el checklist derivado de un plan recién guardado.
  * Solo los planes de entrevista (inicial|completo|seguimiento) derivan
  * checklist; organizador y reporte_numeros NO llegan aquí. */
+/** Mundos de proteccion (P1): las actividades de UN plan (el ciclo vigente del
+ * nucleo). Lectura pura: la usa el armador del snapshot, que jamas escribe. Las
+ * retiradas las filtra el armador, no la consulta, para que el corte de
+ * "vigentes" viva en un solo sitio testeado. */
+export async function obtenerItemsDePlan(
+  supabase: SupabaseClient,
+  projectId: string,
+  planId: string
+): Promise<Array<{ id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null }>> {
+  const columnas = "id, texto, etapa, orden, estado, fecha_base, banda";
+  const leer = (cols: string) =>
+    supabase.from("checklist_items").select(cols).eq("project_id", projectId).eq("plan_id", planId);
+  let { data, error } = await leer(columnas);
+  // Resiliencia de columnas (patron del GET del checklist): si 'banda' aun no
+  // existiera, el snapshot se arma sin ella en vez de caerse entero.
+  if (error) ({ data, error } = await leer(columnas.replace(", banda", "")));
+  if (error) throw error;
+  return (data ?? []) as unknown as Array<{
+    id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null;
+  }>;
+}
+
 export async function insertarChecklist(
   supabase: SupabaseClient,
   projectId: string,
