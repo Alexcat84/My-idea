@@ -22,10 +22,14 @@
 import { describe, expect, it } from "vitest";
 import {
   CAPACIDAD_DEFAULT,
+  FACTOR_MAX,
+  FACTOR_MIN,
   HORAS_MEDIA,
   HORAS_POR_SEMANA,
   LEAD_ESPERA_SEMANAS,
+  MIN_MUESTRAS_FACTOR,
   empaquetarFechas,
+  factorPorBanda,
   hayBandas,
 } from "./empaquetado";
 import { sugerirFechasBase } from "./fechasBase";
@@ -402,6 +406,129 @@ describe("F3 — la espera de terceros: se dispara temprano y entrega tarde", ()
   it("sin espera NO se inventa un inicio temprano", () => {
     const { r } = fechasDe([{ id: "a", etapa: 1, destacado: false, banda: "M" }], "20+");
     expect(r.fechas[0].inicioTemprano).toBeUndefined();
+  });
+});
+
+describe("F4 — el multiplicador personal: se aprende del ritmo real, sin inventar", () => {
+  // A MANO, la vara: con capacidad "20+" se planifica con 20 h/semana, así que
+  // una M (3 h) PROMETE 3/20 x 7 = 1.05 días de calendario = 25.2 horas.
+  // Para que el usuario tarde EL DOBLE, sus cierres van cada 2.1 días = 50.4 h
+  // = 50 h 24 min. Desde el 03-ago 12:00:
+  //   t0 = 03-ago 12:00   (ancla: la primera cumplida NO da muestra)
+  //   t1 = 05-ago 14:24   (+50 h 24 min)  → muestra 1
+  //   t2 = 07-ago 16:48   (+50 h 24 min)  → muestra 2
+  //   t3 = 09-ago 19:12   (+50 h 24 min)  → muestra 3
+  // Tres muestras de razón 2.1 / 1.05 = 2.0 exacta → factor M = 2.
+  const CIERRES_DOBLE = [
+    "2026-08-03T12:00:00.000Z",
+    "2026-08-05T14:24:00.000Z",
+    "2026-08-07T16:48:00.000Z",
+    "2026-08-09T19:12:00.000Z",
+  ];
+  const hechasM = CIERRES_DOBLE.map((completed_at) => ({ banda: "M" as const, completed_at }));
+
+  it("el usuario cuyas M tardan el DOBLE: su factor M es 2", () => {
+    const f = factorPorBanda({ hechas: hechasM, capacidad: "20+" });
+    expect(f.M).toBeCloseTo(2, 6);
+  });
+
+  it("y su recálculo lo refleja: las mismas tareas se reparten con las horas reales", () => {
+    // A MANO, capacidad "5-10" (5 h/sem), etapa 1 con dos M:
+    //   SIN factor: 3 h → ceil(3/5)-1 = 0 → semana 1 (vie 14-ago)
+    //               6 h → ceil(6/5)-1 = 1 → semana 2 (vie 21-ago)
+    //   CON factor 2 (una M son 6 h para este usuario):
+    //               6 h  → ceil(6/5)-1  = 1 → semana 2 (vie 21-ago)
+    //               12 h → ceil(12/5)-1 = 2 → semana 3 (vie 28-ago)
+    const items: ItemEmpaquetable[] = [
+      { id: "a", etapa: 1, destacado: false, banda: "M" },
+      { id: "b", etapa: 1, destacado: false, banda: "M" },
+    ];
+    const sin = empaquetarFechas({ ancla: ANCLA, items, capacidad: "5-10" });
+    const con = empaquetarFechas({ ancla: ANCLA, items, capacidad: "5-10", factores: { M: 2 } });
+    const m = (r: typeof sin) => Object.fromEntries(r.fechas.map((f) => [f.id, f.fecha]));
+    expect(m(sin)).toEqual({ a: "2026-08-14", b: "2026-08-21" });
+    expect(m(con)).toEqual({ a: "2026-08-21", b: "2026-08-28" });
+  });
+
+  it("SIN muestras: el mapa sale vacío y el empaquetado no cambia una sola fecha", () => {
+    expect(factorPorBanda({ hechas: [], capacidad: "5-10" })).toEqual({});
+    const items: ItemEmpaquetable[] = [{ id: "a", etapa: 1, destacado: false, banda: "M" }];
+    const sin = empaquetarFechas({ ancla: ANCLA, items, capacidad: "5-10" });
+    const conVacio = empaquetarFechas({ ancla: ANCLA, items, capacidad: "5-10", factores: {} });
+    expect(conVacio.fechas).toEqual(sin.fechas);
+  });
+
+  it("con MENOS de 3 muestras no se aprende nada (dos tareas no son un patrón)", () => {
+    // Los mismos cierres, recortados a tres cumplidas = solo DOS muestras.
+    const f = factorPorBanda({ hechas: hechasM.slice(0, 3), capacidad: "20+" });
+    expect(f.M).toBeUndefined();
+    expect(MIN_MUESTRAS_FACTOR).toBe(3);
+  });
+
+  it("la banda sin muestras no contagia a la que sí las tiene", () => {
+    // Tres muestras de M (factor 2) y ninguna de L: L no aparece, y en el
+    // empaquetado se comporta como factor 1.
+    const f = factorPorBanda({ hechas: hechasM, capacidad: "20+" });
+    expect(f.M).toBeCloseTo(2, 6);
+    expect(f.L).toBeUndefined();
+  });
+
+  it("las tareas con ESPERA EXTERNA no ensucian el factor (su reloj lo mueven otros)", () => {
+    // Entre t0 y t1 se cuela una tarea con espera cerrada 30 días después: si
+    // contara, arrastraría el factor M por las nubes. Se excluye, y quedan las
+    // muestras limpias de razón 2.
+    const conEspera = [
+      { banda: "M" as const, completed_at: "2026-08-03T12:00:00.000Z" },
+      { banda: "M" as const, completed_at: "2026-08-05T14:24:00.000Z" },
+      { banda: "M" as const, completed_at: "2026-08-07T16:48:00.000Z" },
+      { banda: "M" as const, completed_at: "2026-08-09T19:12:00.000Z" },
+      { banda: "M" as const, completed_at: "2026-09-10T19:12:00.000Z", espera_externa: true },
+    ];
+    expect(factorPorBanda({ hechas: conEspera, capacidad: "20+" }).M).toBeCloseTo(2, 6);
+  });
+
+  it("una vacación no reescribe el calendario: manda la mediana, no la media", () => {
+    // A MANO: cuatro muestras de M. Tres de 2.1 días (razón 2) y una de 42 días
+    // (razón 40) por un hueco largo. La MEDIA sería (2+2+2+40)/4 = 11.5, que a
+    // 3 h la M daría 34.5 h por tarea: absurdo. La MEDIANA de [2,2,2,40] es 2.
+    const conHueco = [
+      { banda: "M" as const, completed_at: "2026-08-03T12:00:00.000Z" },
+      { banda: "M" as const, completed_at: "2026-08-05T14:24:00.000Z" }, // razón 2
+      { banda: "M" as const, completed_at: "2026-08-07T16:48:00.000Z" }, // razón 2
+      { banda: "M" as const, completed_at: "2026-08-09T19:12:00.000Z" }, // razón 2
+      { banda: "M" as const, completed_at: "2026-09-20T19:12:00.000Z" }, // razón 40
+    ];
+    expect(factorPorBanda({ hechas: conHueco, capacidad: "20+" }).M).toBeCloseTo(2, 6);
+  });
+
+  it("el factor se acota: ni un dato sucio dispara el plan a un año, ni lo colapsa", () => {
+    // Tres cierres separados un año → razones enormes; el techo las corta en 4.
+    const lentisimo = [
+      { banda: "S" as const, completed_at: "2026-01-01T12:00:00.000Z" },
+      { banda: "S" as const, completed_at: "2026-05-01T12:00:00.000Z" },
+      { banda: "S" as const, completed_at: "2026-09-01T12:00:00.000Z" },
+      { banda: "S" as const, completed_at: "2027-01-01T12:00:00.000Z" },
+    ];
+    expect(factorPorBanda({ hechas: lentisimo, capacidad: "2-5" }).S).toBe(FACTOR_MAX);
+
+    // Cuatro cerradas el MISMO día → razón 0; el piso las sube a 0.5.
+    const todasDeGolpe = [
+      { banda: "S" as const, completed_at: "2026-08-03T09:00:00.000Z" },
+      { banda: "S" as const, completed_at: "2026-08-03T09:00:00.000Z" },
+      { banda: "S" as const, completed_at: "2026-08-03T09:00:00.000Z" },
+      { banda: "S" as const, completed_at: "2026-08-03T09:00:00.000Z" },
+    ];
+    expect(factorPorBanda({ hechas: todasDeGolpe, capacidad: "2-5" }).S).toBe(FACTOR_MIN);
+  });
+
+  it("las tareas sin banda o sin fecha de cierre no cuentan", () => {
+    const sucias = [
+      { banda: null, completed_at: "2026-08-03T12:00:00.000Z" },
+      { banda: "M" as const, completed_at: null },
+      { banda: "M" as const, completed_at: "no es una fecha" },
+      ...hechasM,
+    ];
+    expect(factorPorBanda({ hechas: sucias, capacidad: "20+" }).M).toBeCloseTo(2, 6);
   });
 });
 

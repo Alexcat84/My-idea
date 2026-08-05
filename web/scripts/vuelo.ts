@@ -407,6 +407,9 @@ interface ItemVuelo {
   destacado: boolean;
   estado: string;
   nota: string | null;
+  /** Scheduler F1: la banda estimada al nacer el plan (null si la estimacion
+   * fallo -- el plan nunca se bloquea por eso, pero el vuelo lo mira). */
+  banda?: string | null;
 }
 
 async function faseChecklistSeguimiento(cookie: string, projectId: string) {
@@ -659,6 +662,23 @@ async function faseChecklistSeguimiento(cookie: string, projectId: string) {
     throw new Error(`el resumen perdio los hechos previos: ${JSON.stringify(resumen2)}`);
   }
   log(`OK: checklist encadenado (${itemsNuevo.length} items nuevos del plan de seguimiento; hechos previos preservados).`);
+
+  // --- 6. Scheduler F1: el REPLAN tambien nace estimado ---
+  // La estimacion cuelga de la ruta unica del plan, asi que cubre inicial,
+  // seguimiento y mundo por construccion. "Por construccion" es justo la clase
+  // de herencia que se rompe callada el dia que alguien mueva la llamada: aqui
+  // se custodia explicita para el plan de SEGUIMIENTO, que es el que nace ya
+  // empezado el viaje. La estimacion puede fallar sin bloquear el plan
+  // (fallback declarado), asi que un cero se AVISA y no se traga: es la senal
+  // de que la tuberia del replan se corto.
+  const conBanda = itemsNuevo.filter((i) => i.banda);
+  if (conBanda.length === 0) {
+    throw new Error(
+      `el plan de SEGUIMIENTO nacio sin una sola banda en sus ${itemsNuevo.length} items: ` +
+        "la estimacion no corrio en el replan (revisa sessions.decisiones: estimacion_fallida)"
+    );
+  }
+  log(`OK: el replan nace estimado -- ${conBanda.length}/${itemsNuevo.length} items del plan de seguimiento traen banda.`);
 
   return { costoUsd: costoSeg };
 }

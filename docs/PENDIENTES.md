@@ -110,8 +110,19 @@ son la capa 3 embrionaria). Matriz de fases:
   tarea más tardía de verdad, colchón incluido. El detalle lo dice en persona sin
   colgarle la demora al usuario, con un test que vigila que el copy no derive al
   reproche. Gate `13b`. 780/780 tests.
-- **F4 — multiplicador personal** (factor por banda en recálculos, mín. 3 muestras,
-  sin muestras → factor 1). La telemetría ya corre: evento `banda_corregida`.
+- **F4 — multiplicador personal: HECHA** (staging `c1f1aa4`, sin migración).
+  `factorPorBanda` compara lo que las tareas tardaron de verdad (tiempo desde el
+  cierre de la anterior) contra lo que su banda prometía con esa capacidad, **por
+  espacio**, **mín. 3 muestras**, **sin muestras → factor 1 (cero invención)**, y
+  se aplica **SOLO en los recálculos**. Decisiones escritas en el código: la
+  primera cumplida no da muestra; las tareas con espera externa se excluyen (F3 ya
+  les puso colchón); manda la **mediana** (una vacación no reescribe una banda);
+  el factor se acota a **[0.5, 4]** con el criterio del clamp de
+  `cadenciaRealSemanas`. Las muestras salen del checklist **completo** del espacio,
+  no del ciclo vigente. 793/793 tests.
+  **Pendiente del fundador:** vuelo y gate en vivo antes del merge a main.
+- **CIERRE de campaña pendiente:** BANCO §7.1 (doctrina del scheduler), tag menor y
+  encargo a Design. Solo eso queda.
 - **CIERRE:** BANCO §7.1 (doctrina del scheduler), matriz, encargo Design, tag menor.
   El sugeridor viejo queda como **fallback documentado, jamás muere**.
 
@@ -194,6 +205,20 @@ son la capa 3 embrionaria). Matriz de fases:
 
 ## 5. Backlog / afinar
 
+- **`mundos-de-proteccion-sobre-lo-existente`** (ficha de diseño registrada 2026-08-05;
+  **NO implementar**: alcance, copy y murallas se deciden en su propia mini campaña
+  **post-F4**). Decisión futura del fundador: alimentar a **Riesgos Bajo Control, HSEQ
+  y Seguridad Digital** con el **snapshot del plan vigente del núcleo** (títulos de las
+  actividades + sus estados) como insumo de su entrevista/diagnóstico, para que el plan
+  del mundo se aplique **SOBRE las actividades reales** del usuario y no sobre una idea
+  contada de nuevo. Es el modelo PM del fundador: el **risk register se levanta sobre la
+  WBS**, no al lado. Frontera de la ficha: los mundos de **mejora/expansión** (Calidad,
+  Exportación, Franquicias, Medio Ambiente) **quedan como están** (el plan del núcleo
+  como contexto narrativo, que es lo correcto para ellos). Lo que esa mini campaña
+  tendrá que decidir y por eso NO se toca ahora: qué se manda exactamente (¿solo títulos
+  y estados, o también fechas y bandas?), qué ve el usuario de ese traspaso (nada
+  silencioso), el efecto en el costo del diagnóstico, y la muralla de que un mundo de
+  protección **sin** plan de núcleo siga funcionando.
 - **Ajustes visuales de Espacios** que salgan de la prueba del fundador (grosor del eje y
   tamaño de nodos de "Tu avance", cuánto se "levanta" la pestaña activa, el segmentado).
 - **Varas de Design de la Fase 3** (calibración visual, front funcional ya en su sitio):

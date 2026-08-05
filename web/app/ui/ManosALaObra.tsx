@@ -30,7 +30,14 @@ import {
   type FechaBaseOrigen,
   type ModoCamino,
 } from "@/lib/dbContract";
-import { CAPACIDAD_DEFAULT, empaquetarFechas, hayBandas } from "@/lib/empaquetado";
+import {
+  CAPACIDAD_DEFAULT,
+  empaquetarFechas,
+  factorPorBanda,
+  hayBandas,
+  type FactoresPorBanda,
+  type MuestraCumplida,
+} from "@/lib/empaquetado";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
@@ -737,6 +744,9 @@ export function calcularFechasRitual(
     cadenciaSemanas?: number;
     capacidad: CapacidadSemanal;
     empaquetable: boolean;
+    /** F4: el multiplicador personal de cada espacio. Solo llega en los
+     * RECÁLCULOS; vacío o ausente = factor 1 (el reparto de siempre). */
+    factoresPorDominio?: Record<string, FactoresPorBanda>;
   }
 ): Record<string, string> {
   return Object.fromEntries(
@@ -746,6 +756,7 @@ export function calcularFechasRitual(
             ancla: g.planCreatedAt,
             capacidad: opts.capacidad,
             diaPreferido: opts.diaPreferido,
+            factores: opts.factoresPorDominio?.[g.dominio],
             items: g.items.map((i) => ({
               id: i.id,
               etapa: i.etapa,
@@ -776,6 +787,7 @@ function RitualFechas({
   guardando,
   error,
   capacidad,
+  cumplidasPorDominio = {},
   onCapacidad,
   onAceptar,
   onPosponer,
@@ -791,6 +803,9 @@ function RitualFechas({
   /** Scheduler F2: horas por semana declaradas para ESTE espacio (null = sin
    * declarar; el ritual arranca en el chip por defecto). */
   capacidad?: CapacidadSemanal | null;
+  /** Scheduler F4: las tareas cumplidas de cada espacio (todos sus ciclos), la
+   * materia prima del multiplicador personal. Solo se usan en el recálculo. */
+  cumplidasPorDominio?: Record<string, MuestraCumplida[]>;
   /** Persiste la capacidad elegida. Sin este manejador la pregunta no aparece. */
   onCapacidad?: (c: CapacidadSemanal) => void;
 }) {
@@ -814,10 +829,32 @@ function RitualFechas({
   const [capacidadLocal, setCapacidadLocal] = useState<CapacidadSemanal>(capacidad ?? CAPACIDAD_DEFAULT);
   const preguntarCapacidad = empaquetable && Boolean(onCapacidad);
 
+  // Scheduler F4: el multiplicador personal manda SOLO en los recálculos. La
+  // primera línea base se pone con el modelo limpio: todavía no hay ritmo real
+  // que aprender, y estrenar un plan ya corregido por la historia de otro ciclo
+  // sería adivinar. La vara del factor es la capacidad VIGENTE, así que subirla
+  // deja el recálculo momentáneamente conservador hasta que entren muestras
+  // nuevas: se prefiere ese error al de prometer de más.
+  const factoresPorDominio = useMemo(() => {
+    if (!soloPendientes || !empaquetable) return {};
+    const out: Record<string, FactoresPorBanda> = {};
+    for (const g of tramos) {
+      out[g.dominio] = factorPorBanda({ hechas: cumplidasPorDominio[g.dominio] ?? [], capacidad: capacidadLocal });
+    }
+    return out;
+  }, [tramos, soloPendientes, empaquetable, capacidadLocal, cumplidasPorDominio]);
+
   // Una llamada al repartidor POR TRAMO: cada dominio cuenta desde su propio plan.
   const sugeridas = useMemo(
-    () => calcularFechasRitual(tramos, { diaPreferido, cadenciaSemanas, capacidad: capacidadLocal, empaquetable }),
-    [tramos, diaPreferido, cadenciaSemanas, capacidadLocal, empaquetable]
+    () =>
+      calcularFechasRitual(tramos, {
+        diaPreferido,
+        cadenciaSemanas,
+        capacidad: capacidadLocal,
+        empaquetable,
+        factoresPorDominio,
+      }),
+    [tramos, diaPreferido, cadenciaSemanas, capacidadLocal, empaquetable, factoresPorDominio]
   );
   // Fecha vigente por ítem (YYYY-MM-DD) y qué ítems tocó el usuario (=ajustada).
   const [fechas, setFechas] = useState<Record<string, string>>(sugeridas);
@@ -829,7 +866,23 @@ function RitualFechas({
   function elegirCapacidad(c: CapacidadSemanal) {
     if (c === capacidadLocal) return;
     setCapacidadLocal(c);
-    setFechas(calcularFechasRitual(tramos, { diaPreferido, cadenciaSemanas, capacidad: c, empaquetable }));
+    // Los factores se rebasan con la capacidad nueva (la vara del "prometido"
+    // cambia con ella), así que se recalculan aquí y no se arrastran.
+    const factores: Record<string, FactoresPorBanda> = {};
+    if (soloPendientes && empaquetable) {
+      for (const g of tramos) {
+        factores[g.dominio] = factorPorBanda({ hechas: cumplidasPorDominio[g.dominio] ?? [], capacidad: c });
+      }
+    }
+    setFechas(
+      calcularFechasRitual(tramos, {
+        diaPreferido,
+        cadenciaSemanas,
+        capacidad: c,
+        empaquetable,
+        factoresPorDominio: factores,
+      })
+    );
     setEditados({});
     onCapacidad?.(c);
   }
@@ -1101,6 +1154,7 @@ function PanelModoFechas({
   recalcularPendientes,
   pospuesto,
   capacidad,
+  cumplidasPorDominio,
   onCapacidad,
   onElegir,
   onConfirmar,
@@ -1124,6 +1178,8 @@ function PanelModoFechas({
   pospuesto: boolean;
   /** Scheduler F2: las horas por semana de ESTE espacio (null = sin declarar). */
   capacidad?: CapacidadSemanal | null;
+  /** Scheduler F4: las cumplidas por espacio, para el multiplicador personal. */
+  cumplidasPorDominio?: Record<string, MuestraCumplida[]>;
   onCapacidad?: (dominio: string, c: CapacidadSemanal) => void;
   onElegir: (dominio: string, modo: ModoCamino) => void;
   onConfirmar: (planId: string, fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) => void;
@@ -1148,6 +1204,7 @@ function PanelModoFechas({
           guardando={guardandoBaseline}
           error={errorBaseline}
           capacidad={capacidad}
+          cumplidasPorDominio={cumplidasPorDominio}
           onCapacidad={onCapacidad ? (c) => onCapacidad(dominio, c) : undefined}
           onAceptar={(fechas) => onConfirmar(planId, fechas)}
           onPosponer={onPosponer}
@@ -1341,6 +1398,28 @@ export function ManosALaObra({
     setCapacidadesLocal(capacidades);
   }
   const capacidadDe = (dominio: string): CapacidadSemanal | null => capacidadesLocal[dominio] ?? null;
+  // Scheduler F4: las tareas YA cumplidas de cada espacio, de TODOS sus ciclos.
+  // Son la materia prima del multiplicador personal. Se toman del checklist
+  // completo y no del grupo vigente a propósito: un plan de seguimiento nace sin
+  // ninguna hecha, y tirar la historia del ciclo anterior sería empezar a
+  // aprender de cero cada vez que el usuario avanza.
+  const cumplidasPorDominio = useMemo(() => {
+    const out: Record<string, MuestraCumplida[]> = {};
+    for (const p of checklist?.planes ?? []) {
+      for (const e of p.etapas) {
+        for (const i of e.items) {
+          if (i.estado === "hecho" && i.completed_at && i.banda) {
+            (out[i.dominio] ??= []).push({
+              banda: i.banda,
+              completed_at: i.completed_at,
+              espera_externa: i.espera_externa,
+            });
+          }
+        }
+      }
+    }
+    return out;
+  }, [checklist]);
   // Fase 3.8 §4 — ritual de la línea base
   // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
   // real por etapa la calcula analytics.ts (§6: la única calculadora del
@@ -1799,6 +1878,7 @@ export function ManosALaObra({
           recalcularPendientes={recalcularPendientes}
           pospuesto={pospuesto}
           capacidad={capacidadDe(ESPACIO_CORE)}
+          cumplidasPorDominio={cumplidasPorDominio}
           onCapacidad={elegirCapacidad}
           onElegir={elegirModo}
           onConfirmar={confirmarBaseline}
@@ -2016,6 +2096,7 @@ export function ManosALaObra({
                           recalcularPendientes={recalcularPendientes}
                           pospuesto={pospuesto}
                           capacidad={capacidadDe(mundo.dominio)}
+                          cumplidasPorDominio={cumplidasPorDominio}
                           onCapacidad={elegirCapacidad}
                           onElegir={elegirModo}
                           onConfirmar={confirmarBaseline}
