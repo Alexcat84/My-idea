@@ -76,6 +76,19 @@ export const CAPACIDAD_DEFAULT: CapacidadSemanal = "5-10";
  */
 export const LEAD_ESPERA_SEMANAS = 1;
 
+/**
+ * Mundos de protección (P5): el colchón, en semanas, entre la entrega de una
+ * respuesta enlazada y la fecha de la actividad que protege. Hermana declarada
+ * de LEAD_ESPERA_SEMANAS, y con el mismo porqué: una semana es el mínimo
+ * honesto que cambia el calendario sin inflarlo. Asegurar el proveedor alterno
+ * la víspera de la compra no protege nada; asegurarlo una semana antes deja
+ * margen para que la protección falle y todavía haya tiempo de reaccionar. El
+ * por-banda quedó RECHAZADO en la adjudicación 6: el colchón es post-entrega
+ * (la duración del trabajo ya la empaqueta la capacidad); se revisa con
+ * telemetría, no por intuición.
+ */
+export const MARGEN_ANCLA_SEMANAS = 1;
+
 const VIERNES = 5;
 const LUNES = 1;
 
@@ -170,6 +183,11 @@ export interface ItemEmpaquetable {
   banda: Banda | null;
   /** F3 usará esto para el colchón de espera; F2 lo recibe y no lo aplica. */
   espera_externa?: boolean | null;
+  /** Mundos de protección (P5): el ANCLA de precedencia. La fecha vigente (ISO)
+   * de la actividad del núcleo que esta respuesta protege: la entrega debe caer
+   * ANTES de ella, con el colchón de MARGEN_ANCLA_SEMANAS. null/ausente =
+   * sistémica o plan sin protección: se empaqueta normal. */
+  entregaAntesDe?: string | null;
 }
 
 /** ¿Se puede empaquetar? Solo si TODAS las tareas traen banda. Con una sola sin
@@ -196,6 +214,12 @@ export interface ItemEmpaquetado extends FechaSugerida {
    * para poder asertar el reparto sin leer fechas. */
   semana: number;
   etapa: number;
+  /** P5: true cuando la capacidad NO alcanza para entregar antes del ancla
+   * (fecha vigente de lo protegido menos el margen). La fecha se queda en la
+   * HONESTA por capacidad, jamás se adelanta a una que no se puede cumplir; la
+   * pantalla lo dice en persona. Silencio aquí sería la degradación callada que
+   * el BANCO §9 prohíbe. */
+  noLlegaAlAncla?: boolean;
   /** F3: SOLO en las tareas con espera externa — el día en que conviene
    * dispararla (el lunes de la primera semana de su etapa). No se persiste: es
    * un dato derivable que la pantalla usa para decir "empiézala temprano". En
@@ -253,8 +277,16 @@ export function empaquetarFechas(opts: {
 
   for (const etapa of etapas) {
     const items = porEtapa.get(etapa)!;
-    // Orden estable: las destacadas al frente, el resto como venían del plan.
-    const ordenados = [...items.filter((i) => i.destacado), ...items.filter((i) => !i.destacado)];
+    // Orden estable: las destacadas al frente; después las ANCLADAS (P5), la de
+    // ancla más cercana primero: lo que protege algo con fecha se hace ANTES,
+    // que es la única forma honesta de "adelantar" una entrega sin mentir la
+    // capacidad. El resto, como venía del plan.
+    const conAncla = (i: ItemEmpaquetable) => !i.destacado && i.entregaAntesDe;
+    const ordenados = [
+      ...items.filter((i) => i.destacado),
+      ...items.filter(conAncla).sort((x, y) => Date.parse(x.entregaAntesDe!) - Date.parse(y.entregaAntesDe!)),
+      ...items.filter((i) => !i.destacado && !i.entregaAntesDe),
+    ];
 
     let horasAcumuladas = 0;
     let ultimaSemanaEtapa = 0; // relativa al inicio de la etapa
@@ -284,11 +316,29 @@ export function empaquetarFechas(opts: {
       if (semanaTrabajo > ultimaSemanaEtapa) ultimaSemanaEtapa = semanaTrabajo;
       if (semanaEntrega > ultimaSemanaEtapa) ultimaSemanaEtapa = semanaEntrega;
 
+      const fecha = fechaInputLocal(diaDeSemana(base, semana, weekday));
+      // P5 — el veredicto del ancla: la entrega debe caer antes de la fecha de
+      // lo protegido, menos el margen. Si aun con la prioridad de reparto la
+      // capacidad no alcanza, la fecha se queda en la honesta y se DICE: una
+      // fecha adelantada que la semana del usuario no puede cumplir es una
+      // mentira con buena intención, que sigue siendo una mentira.
+      let noLlega = false;
+      if (it.entregaAntesDe) {
+        const limite = new Date(it.entregaAntesDe);
+        const deseada = new Date(
+          limite.getFullYear(),
+          limite.getMonth(),
+          limite.getDate() - MARGEN_ANCLA_SEMANAS * 7,
+          12
+        );
+        noLlega = new Date(`${fecha}T12:00:00`) > deseada;
+      }
       fechas.push({
         id: it.id,
-        fecha: fechaInputLocal(diaDeSemana(base, semana, weekday)),
+        fecha,
         semana,
         etapa,
+        ...(noLlega ? { noLlegaAlAncla: true } : {}),
         // Dispararla pronto es lo único que el usuario controla de una espera.
         ...(espera
           ? { inicioTemprano: fechaInputLocal(diaDeSemana(base, semanaInicioEtapa, LUNES)) }

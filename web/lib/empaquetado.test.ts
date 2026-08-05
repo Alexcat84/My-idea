@@ -27,6 +27,7 @@ import {
   HORAS_MEDIA,
   HORAS_POR_SEMANA,
   LEAD_ESPERA_SEMANAS,
+  MARGEN_ANCLA_SEMANAS,
   MIN_MUESTRAS_FACTOR,
   empaquetarFechas,
   factorPorBanda,
@@ -529,6 +530,121 @@ describe("F4 — el multiplicador personal: se aprende del ritmo real, sin inven
       ...hechasM,
     ];
     expect(factorPorBanda({ hechas: sucias, capacidad: "20+" }).M).toBeCloseTo(2, 6);
+  });
+});
+
+describe("P5 — las anclas de precedencia: proteger ANTES de lo protegido", () => {
+  it("la constante del margen es UNA semana, hermana declarada del lead de espera", () => {
+    expect(MARGEN_ANCLA_SEMANAS).toBe(1);
+  });
+
+  it("EL ANCLA QUE ADELANTA: la respuesta enlazada se reparte primero y entrega antes", () => {
+    // A MANO, capacidad 5 h/sem, etapa 1 = [A (M), B (M, ancla vie 28-ago)]:
+    //   SIN ancla: A acum 3 → semana 1 (vie 14-ago); B acum 6 → semana 2 (vie 21-ago).
+    //   CON ancla, B gana prioridad de reparto:
+    //     B acum 3 → semana 1 → vie 14-ago; A acum 6 → semana 2 → vie 21-ago.
+    //   Deseada de B = 28-ago − 7 días = 21-ago; 14-ago ≤ 21-ago → llega, sin aviso.
+    //   B pasó del 21-ago (sin ancla) al 14-ago: adelantó UNA semana sin mentir
+    //   capacidad, porque lo que cambió fue el ORDEN del trabajo, no las horas.
+    const sin = empaquetarFechas({
+      ancla: ANCLA,
+      capacidad: "5-10",
+      items: [
+        { id: "a", etapa: 1, destacado: false, banda: "M" },
+        { id: "b", etapa: 1, destacado: false, banda: "M" },
+      ],
+    });
+    const con = empaquetarFechas({
+      ancla: ANCLA,
+      capacidad: "5-10",
+      items: [
+        { id: "a", etapa: 1, destacado: false, banda: "M" },
+        { id: "b", etapa: 1, destacado: false, banda: "M", entregaAntesDe: "2026-08-28T12:00:00.000Z" },
+      ],
+    });
+    const m = (r: typeof sin) => Object.fromEntries(r.fechas.map((f) => [f.id, f.fecha]));
+    expect(m(sin)["b"]).toBe("2026-08-21");
+    expect(m(con)["b"]).toBe("2026-08-14");
+    expect(m(con)["a"]).toBe("2026-08-21");
+    expect(con.fechas.find((f) => f.id === "b")!.noLlegaAlAncla).toBeUndefined();
+  });
+
+  it("LA CAPACIDAD QUE NO ALCANZA LO DICE: fecha honesta + noLlegaAlAncla, jamás adelantada a mano", () => {
+    // A MANO, capacidad 5: B con ancla 18-ago → deseada = 11-ago. Aun repartida
+    // PRIMERA, B entrega el vie de la semana 1 = 14-ago > 11-ago → no llega.
+    // La fecha se queda en la honesta (14-ago): adelantarla al 11 mentiría la
+    // capacidad, y esa mentira es justo lo que el flag existe para evitar.
+    const r = empaquetarFechas({
+      ancla: ANCLA,
+      capacidad: "5-10",
+      items: [{ id: "b", etapa: 1, destacado: false, banda: "M", entregaAntesDe: "2026-08-18T12:00:00.000Z" }],
+    });
+    expect(r.fechas[0].fecha).toBe("2026-08-14");
+    expect(r.fechas[0].noLlegaAlAncla).toBe(true);
+  });
+
+  it("LA SISTÉMICA se empaqueta normal: sin ancla no hay prioridad ni aviso", () => {
+    // A MANO, capacidad 5, etapa 1 = [A (M), S (M, sistémica)]: reparto por
+    // orden del plan, idéntico a F2: A vie 14-ago, S vie 21-ago, sin flags.
+    const r = empaquetarFechas({
+      ancla: ANCLA,
+      capacidad: "5-10",
+      items: [
+        { id: "a", etapa: 1, destacado: false, banda: "M" },
+        { id: "s", etapa: 1, destacado: false, banda: "M", entregaAntesDe: null },
+      ],
+    });
+    const m = Object.fromEntries(r.fechas.map((f) => [f.id, f.fecha]));
+    expect(m["a"]).toBe("2026-08-14");
+    expect(m["s"]).toBe("2026-08-21");
+    expect(r.fechas.every((f) => !f.noLlegaAlAncla)).toBe(true);
+  });
+
+  it("EL CASO COMBINADO: espera_externa + ancla conviven (colchón de terceros + entrega antes)", () => {
+    // A MANO, capacidad 20, X (M, espera, ancla 04-sep):
+    //   trabajo ceil(3/20)-1 = 0; entrega = 0 + LEAD(1) → semana 2 → vie 21-ago.
+    //   inicio temprano = lunes de la semana 1 = 10-ago.
+    //   Deseada = 04-sep − 7 = 28-ago; 21-ago ≤ 28-ago → llega CON su colchón.
+    const llega = empaquetarFechas({
+      ancla: ANCLA,
+      capacidad: "20+",
+      items: [{ id: "x", etapa: 1, destacado: false, banda: "M", espera_externa: true, entregaAntesDe: "2026-09-04T12:00:00.000Z" }],
+    });
+    expect(llega.fechas[0]).toMatchObject({ fecha: "2026-08-21", inicioTemprano: "2026-08-10" });
+    expect(llega.fechas[0].noLlegaAlAncla).toBeUndefined();
+
+    //   Con ancla 22-ago → deseada = 15-ago; la entrega con colchón (21-ago) no
+    //   llega. El lead NO se recorta (el tiempo de terceros no se negocia con un
+    //   deseo): fecha honesta + aviso.
+    const noLlega = empaquetarFechas({
+      ancla: ANCLA,
+      capacidad: "20+",
+      items: [{ id: "x", etapa: 1, destacado: false, banda: "M", espera_externa: true, entregaAntesDe: "2026-08-22T12:00:00.000Z" }],
+    });
+    expect(noLlega.fechas[0].fecha).toBe("2026-08-21");
+    expect(noLlega.fechas[0].noLlegaAlAncla).toBe(true);
+  });
+
+  it("dos ancladas: la de ancla más CERCANA se reparte primero", () => {
+    // A MANO, capacidad 5: P (ancla 04-sep) y Q (ancla 21-ago). Q va primero
+    // aunque el plan la traiga después: Q vie 14-ago, P vie 21-ago.
+    const r = empaquetarFechas({
+      ancla: ANCLA,
+      capacidad: "5-10",
+      items: [
+        { id: "p", etapa: 1, destacado: false, banda: "M", entregaAntesDe: "2026-09-04T12:00:00.000Z" },
+        { id: "q", etapa: 1, destacado: false, banda: "M", entregaAntesDe: "2026-08-21T12:00:00.000Z" },
+      ],
+    });
+    const m = Object.fromEntries(r.fechas.map((f) => [f.id, f.fecha]));
+    expect(m["q"]).toBe("2026-08-14");
+    expect(m["p"]).toBe("2026-08-21");
+  });
+
+  it("REGRESIÓN: sin entregaAntesDe en ningún ítem, F2/F3 no cambiaron ni un día", () => {
+    const { mapa } = fechasDe(PLAN, "2-5");
+    expect(mapa["e1-destacada"]).toBe("2026-08-10");
+    expect(mapa["e2-b"]).toBe("2026-12-11");
   });
 });
 

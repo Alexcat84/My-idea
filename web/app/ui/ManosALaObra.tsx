@@ -765,33 +765,50 @@ export function calcularFechasRitual(
     /** F4: el multiplicador personal de cada espacio. Solo llega en los
      * RECÁLCULOS; vacío o ausente = factor 1 (el reparto de siempre). */
     factoresPorDominio?: Record<string, FactoresPorBanda>;
+    /** P5: las ANCLAS de precedencia de un plan de protección — por ítem del
+     * mundo, la fecha vigente de lo que protege y su etiqueta (#N · título)
+     * para el aviso. Ausente en el núcleo y en los mundos de mejora. El
+     * FALLBACK (sin bandas) no ancla: el sugeridor viejo no sabe de enlaces,
+     * y se declara aquí en vez de fingirse. */
+    anclas?: Record<string, { fecha: string; etiqueta: string }>;
   }
-): Record<string, string> {
-  return Object.fromEntries(
-    tramos.flatMap((g) => {
-      const propuestas = opts.empaquetable
-        ? empaquetarFechas({
-            ancla: g.planCreatedAt,
-            capacidad: opts.capacidad,
-            diaPreferido: opts.diaPreferido,
-            factores: opts.factoresPorDominio?.[g.dominio],
-            items: g.items.map((i) => ({
-              id: i.id,
-              etapa: i.etapa,
-              destacado: i.destacado,
-              banda: i.banda,
-              espera_externa: i.espera_externa,
-            })),
-          }).fechas
-        : sugerirFechasBase({
-            planCreatedAt: g.planCreatedAt,
-            diaPreferido: opts.diaPreferido,
-            cadenciaSemanas: opts.cadenciaSemanas,
-            items: g.items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
-          });
-      return propuestas.map((s) => [s.id, s.fecha] as const);
-    })
-  );
+): { fechas: Record<string, string>; noLlegan: Record<string, string> } {
+  const fechas: Record<string, string> = {};
+  const noLlegan: Record<string, string> = {};
+  for (const g of tramos) {
+    if (opts.empaquetable) {
+      const r = empaquetarFechas({
+        ancla: g.planCreatedAt,
+        capacidad: opts.capacidad,
+        diaPreferido: opts.diaPreferido,
+        factores: opts.factoresPorDominio?.[g.dominio],
+        items: g.items.map((i) => ({
+          id: i.id,
+          etapa: i.etapa,
+          destacado: i.destacado,
+          banda: i.banda,
+          espera_externa: i.espera_externa,
+          entregaAntesDe: opts.anclas?.[i.id]?.fecha ?? null,
+        })),
+      });
+      for (const f of r.fechas) {
+        fechas[f.id] = f.fecha;
+        // El aviso viaja con la etiqueta de lo protegido: la pantalla lo dice
+        // en persona, con nombre, no con un uuid.
+        if (f.noLlegaAlAncla && opts.anclas?.[f.id]) noLlegan[f.id] = opts.anclas[f.id].etiqueta;
+      }
+    } else {
+      for (const f of sugerirFechasBase({
+        planCreatedAt: g.planCreatedAt,
+        diaPreferido: opts.diaPreferido,
+        cadenciaSemanas: opts.cadenciaSemanas,
+        items: g.items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),
+      })) {
+        fechas[f.id] = f.fecha;
+      }
+    }
+  }
+  return { fechas, noLlegan };
 }
 
 /** El ritual de la línea base (canon 10, vista B). Las fechas se reparten
@@ -806,6 +823,7 @@ function RitualFechas({
   error,
   capacidad,
   cumplidasPorDominio = {},
+  anclas = {},
   onCapacidad,
   onAceptar,
   onPosponer,
@@ -824,6 +842,9 @@ function RitualFechas({
   /** Scheduler F4: las tareas cumplidas de cada espacio (todos sus ciclos), la
    * materia prima del multiplicador personal. Solo se usan en el recálculo. */
   cumplidasPorDominio?: Record<string, MuestraCumplida[]>;
+  /** P5: las anclas de precedencia (ítem del mundo → fecha y etiqueta de lo que
+   * protege). Solo llegan en el ritual de un mundo de protección. */
+  anclas?: Record<string, { fecha: string; etiqueta: string }>;
   /** Persiste la capacidad elegida. Sin este manejador la pregunta no aparece. */
   onCapacidad?: (c: CapacidadSemanal) => void;
 }) {
@@ -863,7 +884,7 @@ function RitualFechas({
   }, [tramos, soloPendientes, empaquetable, capacidadLocal, cumplidasPorDominio]);
 
   // Una llamada al repartidor POR TRAMO: cada dominio cuenta desde su propio plan.
-  const sugeridas = useMemo(
+  const propuesta = useMemo(
     () =>
       calcularFechasRitual(tramos, {
         diaPreferido,
@@ -871,9 +892,14 @@ function RitualFechas({
         capacidad: capacidadLocal,
         empaquetable,
         factoresPorDominio,
+        anclas,
       }),
-    [tramos, diaPreferido, cadenciaSemanas, capacidadLocal, empaquetable, factoresPorDominio]
+    [tramos, diaPreferido, cadenciaSemanas, capacidadLocal, empaquetable, factoresPorDominio, anclas]
   );
+  const sugeridas = propuesta.fechas;
+  // P5: los avisos de no-llego del reparto vigente (id → etiqueta de lo
+  // protegido). Se recalculan con la capacidad: subirla puede hacerlos llegar.
+  const [noLlegan, setNoLlegan] = useState<Record<string, string>>(propuesta.noLlegan);
   // Fecha vigente por ítem (YYYY-MM-DD) y qué ítems tocó el usuario (=ajustada).
   const [fechas, setFechas] = useState<Record<string, string>>(sugeridas);
   const [editados, setEditados] = useState<Record<string, true>>({});
@@ -892,15 +918,16 @@ function RitualFechas({
         factores[g.dominio] = factorPorBanda({ hechas: cumplidasPorDominio[g.dominio] ?? [], capacidad: c });
       }
     }
-    setFechas(
-      calcularFechasRitual(tramos, {
-        diaPreferido,
-        cadenciaSemanas,
-        capacidad: c,
-        empaquetable,
-        factoresPorDominio: factores,
-      })
-    );
+    const re = calcularFechasRitual(tramos, {
+      diaPreferido,
+      cadenciaSemanas,
+      capacidad: c,
+      empaquetable,
+      factoresPorDominio: factores,
+      anclas,
+    });
+    setFechas(re.fechas);
+    setNoLlegan(re.noLlegan);
     setEditados({});
     onCapacidad?.(c);
   }
@@ -1028,7 +1055,18 @@ function RitualFechas({
                       className="h-4 w-4 shrink-0 rounded-full border-[1.6px]"
                       style={{ borderColor: "var(--accent)" }}
                     />
-                    <span className="min-w-0 flex-1 text-[14.5px]">{it.texto}</span>
+                    <span className="min-w-0 flex-1 text-[14.5px]">
+                      {it.texto}
+                      {/* P5 — el aviso de no-llego, en persona y en ÁMBAR espejo
+                          (aviso, jamás regaño): la fecha es la honesta por
+                          capacidad y por eso mismo no alcanza el ancla. */}
+                      {noLlegan[it.id] && (
+                        <span className="mt-1 block text-[12.5px] leading-relaxed text-warn [text-wrap:pretty]" data-aviso-ancla>
+                          Esta protección no llega antes de {noLlegan[it.id]}: muévela o acepta el riesgo con los
+                          ojos abiertos.
+                        </span>
+                      )}
+                    </span>
                     <span className="flex items-center gap-2">
                       <span className="hidden text-[12.5px] text-dim sm:inline">{fechaHumana(isoDesdeInputLocal(fecha))}</span>
                       <input
@@ -1221,6 +1259,7 @@ function PanelModoFechas({
   pospuesto,
   capacidad,
   cumplidasPorDominio,
+  anclas,
   onCapacidad,
   onElegir,
   onConfirmar,
@@ -1246,6 +1285,8 @@ function PanelModoFechas({
   capacidad?: CapacidadSemanal | null;
   /** Scheduler F4: las cumplidas por espacio, para el multiplicador personal. */
   cumplidasPorDominio?: Record<string, MuestraCumplida[]>;
+  /** P5: las anclas de precedencia del espacio (solo mundos de protección). */
+  anclas?: Record<string, { fecha: string; etiqueta: string }>;
   onCapacidad?: (dominio: string, c: CapacidadSemanal) => void;
   onElegir: (dominio: string, modo: ModoCamino) => void;
   onConfirmar: (planId: string, fechas: Array<{ item_id: string; fecha: string; origen: FechaBaseOrigen }>) => void;
@@ -1271,6 +1312,7 @@ function PanelModoFechas({
           error={errorBaseline}
           capacidad={capacidad}
           cumplidasPorDominio={cumplidasPorDominio}
+          anclas={anclas}
           onCapacidad={onCapacidad ? (c) => onCapacidad(dominio, c) : undefined}
           onAceptar={(fechas) => onConfirmar(planId, fechas)}
           onPosponer={onPosponer}
@@ -1560,6 +1602,30 @@ export function ManosALaObra({
       ).actividades.map((a) => ({ id: a.id, indice: a.indice, titulo: a.titulo })),
     [itemsCore]
   );
+  // P5: las ANCLAS de precedencia por mundo de protección — para cada respuesta
+  // enlazada, la fecha VIGENTE de lo que protege y su etiqueta (#N · título)
+  // para el aviso. Solo existen si lo protegido tiene fecha: sin fecha del
+  // núcleo no hay precedencia que exigir.
+  const anclasPorDominio = useMemo(() => {
+    const corePorId = new Map(itemsCore.map((i) => [i.id, i]));
+    const indicePorId = new Map(actividadesNucleo.map((a) => [a.id, a]));
+    const out: Record<string, Record<string, { fecha: string; etiqueta: string }>> = {};
+    for (const p of checklist.planes) {
+      if (!esMundoProteccion(p.dominio)) continue;
+      for (const it of p.etapas.flatMap((e) => e.items)) {
+        if (!it.protege_item) continue;
+        const nucleo = corePorId.get(it.protege_item);
+        const idx = indicePorId.get(it.protege_item);
+        if (!nucleo?.fecha_base || !idx) continue;
+        (out[p.dominio] ??= {})[it.id] = {
+          fecha: nucleo.fecha_base,
+          etiqueta: `#${idx.indice} · ${idx.titulo}`,
+        };
+      }
+    }
+    return out;
+  }, [checklist, itemsCore, actividadesNucleo]);
+
   const cCore = conteo(itemsCore);
   const tituloPlan = planMd.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? null;
 
@@ -2174,6 +2240,7 @@ export function ManosALaObra({
                           pospuesto={pospuesto}
                           capacidad={capacidadDe(mundo.dominio)}
                           cumplidasPorDominio={cumplidasPorDominio}
+                          anclas={anclasPorDominio[mundo.dominio]}
                           onCapacidad={elegirCapacidad}
                           onElegir={elegirModo}
                           onConfirmar={confirmarBaseline}

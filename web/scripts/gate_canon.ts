@@ -676,6 +676,42 @@ async function main() {
     console.warn("gate: no se pudo sembrar el traslape:", (e as Error).message);
   }
 
+  // P5 — el AVISO DE NO-LLEGO en el ritual del mundo de protección. Se siembra
+  // el borde a propósito: la actividad protegida del núcleo queda a 3 días
+  // (ancla − 1 semana ya pasó) y las respuestas del mundo con banda, así que el
+  // empaquetado corre y NINGUNA fecha honesta puede llegar antes del ancla. La
+  // pantalla tiene que decirlo en persona, jamás mentir la fecha. Envuelto.
+  try {
+    const idP5 = new URL(app.url()).pathname.split("/")[2];
+    const clP5 = await (await app.request.get(`/api/project/${idP5}/checklist`)).json();
+    type ItemP5 = { id: string; dominio: string | null; protege_item?: string | null };
+    const itemsP5: ItemP5[] = (clP5.planes ?? []).flatMap((pl: { etapas: { items: ItemP5[] }[] }) =>
+      pl.etapas.flatMap((e) => e.items)
+    );
+    const riesgos = itemsP5.filter((i) => i.dominio === "risk_management");
+    const enlazada = riesgos.find((i) => i.protege_item);
+    if (!enlazada) throw new Error("sin respuesta enlazada que anclar");
+    // el protegido, a 3 días: el margen de una semana ya es imposible
+    await supabaseAdmin
+      .from("checklist_items")
+      .update({ fecha_base: new Date(Date.now() + 3 * 86400000).toISOString() })
+      .eq("id", enlazada.protege_item as string);
+    // todas las respuestas con banda: sin una, el tramo cae al fallback y no ancla
+    for (const r of riesgos) await supabaseAdmin.from("checklist_items").update({ banda: "M" }).eq("id", r.id);
+
+    await app.goto(`${BASE_URL}/idea/${idP5}?vista=mundo&dominio=risk_management`);
+    await app.getByText("¿Cómo quieres llevar tu camino?", { exact: false }).waitFor({ timeout: 30000 });
+    await app.getByRole("button", { name: /Con fechas y recordatorios/ }).click();
+    await app.getByText("no llega antes de", { exact: false }).waitFor({ timeout: 30000 });
+    await capturarApp(app, "14e_proteccion_no_llega");
+    await app.getByRole("button", { name: "Ponerlas después" }).click().catch(() => {});
+    await app.goto(`${BASE_URL}/idea/${idP5}?vista=manos`);
+    await asegurarManos(app);
+  } catch (e) {
+    console.warn("gate: no se pudo capturar el aviso de no-llego:", (e as Error).message);
+    await asegurarManos(app);
+  }
+
   // 08 Análisis del proyecto (canon 11) — cumplimiento poblado + TRASLAPE sembrado
   await app.getByRole("button", { name: /Ver análisis del proyecto/ }).click();
   await app.getByText("Análisis de", { exact: false }).first().waitFor({ timeout: 30000 });
