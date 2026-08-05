@@ -257,6 +257,25 @@ desconocer la razón.
   antes de X: muévela o acepta el riesgo"). El silencio ahí sería la degradación
   callada que §9 prohíbe.
 
+- **DOCTRINA DE LA PROTECCIÓN EN EJECUCIÓN (cierre de la campaña, ago 2026).**
+  Tres reglas que no estaban en la spec: nacieron al construir, y quedan escritas
+  para que nadie las deshaga por desconocer su porqué.
+  - **"El ancla cambia el orden del trabajo, jamás las horas."** Una respuesta
+    enlazada entrega antes de lo que protege porque **se hace primero** (prioridad
+    de reparto en su etapa, como la destacada), no porque nadie le regale una
+    semana. Cuando ni así alcanza, la fecha se queda en la honesta por capacidad y
+    el aviso lo dice: una fecha adelantada que la semana del usuario no puede
+    cumplir es una mentira con buena intención, que sigue siendo una mentira.
+  - **"El tiempo de terceros no se negocia con un deseo."** El colchón de espera
+    externa (F3) jamás se recorta para alcanzar un ancla. Si con colchón no llega,
+    se dice; recortarlo sería prometer que el proveedor contestará más rápido
+    porque nos conviene.
+  - **"El carril es lectura, el registro es el artefacto, los chips son la
+    costura."** El carril del Gantt jamás cuenta en una medida (nace apagado: se
+    pide, no se impone); el registro es la herramienta canónica instanciada y lo
+    que se descarga; los chips cosen las dos direcciones en el detalle, con la
+    detección siempre visible y el retiro de lo protegido dicho, jamás callado.
+
 - **DOCTRINA DEL SCHEDULER (campaña "Scheduler Inteligente", cerrada ago 2026).**
   El sistema que pone fechas se rige por esto, y quien lo toque lo hace sabiendo
   por qué está escrito así:

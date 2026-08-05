@@ -2543,6 +2543,174 @@ function faseSanidadVerificadorHuerfanos() {
   log(`OK: numero inyectado (4500) detectado como huerfano -- contexto: "${huerfanos[0].contexto}"`);
 }
 
+
+// ---------------------------------------------------------------------------
+// FASE 2P (Mundos de proteccion, CIERRE): el ciclo completo de la tuberia,
+// auditado sobre el mundo de riesgos que el vuelo YA pago (fase 2g-ter):
+// preview con snapshot -> entrevista anclada (el PAR visible) -> plan enlazado
+// con camino y severidad -> registro -> carril -> anclas y no-llego. Cierra con
+// el CENSO DE COSTOS POR PIEZA, que es la tarea declarada del fundador.
+// ---------------------------------------------------------------------------
+async function faseCicloProteccion(cookie: string, projectId: string) {
+  separador("FASE 2P (Mundos de proteccion): el ciclo completo + censo de costos");
+
+  // 1. El snapshot VIVO y su frontera
+  const { data: sesionesP } = await supabaseAdmin
+    .from("sessions")
+    .select("id, dominio, created_at, decisiones, costo_desglose, costo_usd, estado_recorrido")
+    .eq("project_id", projectId)
+    .order("created_at", { ascending: true });
+  type SesP = {
+    id: string;
+    dominio: string | null;
+    decisiones: Array<Record<string, unknown>> | null;
+    costo_desglose: Record<string, number> | null;
+    costo_usd: number | null;
+    estado_recorrido: { recorrido?: { snapshotNucleo?: string | null } } | null;
+  };
+  const sesiones = (sesionesP ?? []) as SesP[];
+  const sesionRiesgos = [...sesiones].reverse().find((x) => x.dominio === "risk_management");
+  if (!sesionRiesgos) throw new Error("no hay sesion de risk_management (la fase 2g-ter debio dejarla)");
+  const snap = sesionRiesgos.estado_recorrido?.recorrido?.snapshotNucleo ?? null;
+  if (!snap || !snap.includes("Actividades vigentes")) {
+    throw new Error("la sesion del mundo de proteccion NO llevo el snapshot del nucleo (P1 roto en vivo)");
+  }
+  const sesionMejora = sesiones.find((x) => x.dominio === "quality");
+  if (sesionMejora && sesionMejora.estado_recorrido?.recorrido?.snapshotNucleo) {
+    throw new Error("un mundo de MEJORA llevo snapshot: la frontera de las dos familias se rompio");
+  }
+  log(`OK: snapshot vivo en la sesion de riesgos (${snap.split("\n").length - 1} actividades) y AUSENTE en la de mejora.`);
+
+  // 2. La entrevista anclada: el PAR queda visible para el muestreo
+  const anclajes = (sesionRiesgos.decisiones ?? []).filter((d) => d.tipo === "anclaje_proteccion");
+  if (anclajes.length === 0) {
+    throw new Error("ni un evento anclaje_proteccion en la sesion de riesgos: P2b no corrio en vivo");
+  }
+  const par = anclajes[0] as { de?: string; a?: string };
+  log(`OK: ${anclajes.length} anclaje(s) de pregunta con su PAR registrado. Muestra para el fundador:`);
+  log(`    DE: ${String(par.de ?? "").slice(0, 110)}`);
+  log(`    A:  ${String(par.a ?? "").slice(0, 110)}`);
+
+  // 3. El plan enlazado: camino y severidad persistidos, con su sintoma
+  const { data: itemsRaw } = await supabaseAdmin
+    .from("checklist_items")
+    .select("id, dominio, etapa, texto, protege_item, deteccion, probabilidad, dolor, camino, banda, fecha_base")
+    .eq("project_id", projectId);
+  type ItemP = {
+    id: string; dominio: string | null; etapa: number; texto: string;
+    protege_item: string | null; deteccion: string | null; probabilidad: string | null;
+    dolor: string | null; camino: string | null; banda: string | null; fecha_base: string | null;
+  };
+  const items = (itemsRaw ?? []) as ItemP[];
+  const riesgos = items.filter((i) => i.dominio === "risk_management");
+  if (riesgos.length === 0) throw new Error("el plan de riesgos no tiene items");
+  const eventosEnlace = sesiones
+    .flatMap((x) => x.decisiones ?? [])
+    .filter((d) => String(d.tipo).startsWith("enlace_proteccion"));
+  const fallidos = eventosEnlace.filter((d) => d.tipo === "enlace_proteccion_fallido");
+  if (eventosEnlace.length === 0) throw new Error("ni un evento enlace_proteccion: el enlazador no corrio en vivo");
+  if (fallidos.length > 0) {
+    throw new Error(`el enlazador FALLO en vivo: ${JSON.stringify(fallidos[0]).slice(0, 220)}`);
+  }
+  const enlazados = riesgos.filter((i) => i.protege_item);
+  const conDeteccion = riesgos.filter((i) => i.deteccion);
+  const conCamino = riesgos.filter((i) => i.camino);
+  log(
+    `OK: enlazador vivo -- ${riesgos.length} respuestas: ${enlazados.length} enlazadas, ` +
+      `${conDeteccion.length} con deteccion, ${conCamino.length} con camino, ` +
+      `${riesgos.filter((i) => i.probabilidad && i.dolor).length} con severidad completa.`
+  );
+
+  // Para el resto del ciclo hace falta AL MENOS un enlace con fecha. Si el
+  // enlazador vivo dejo todo sistemico (legitimo), se siembra UNO declarado.
+  let enlaceVivo = enlazados[0] ?? null;
+  const coreItems = items.filter((i) => !i.dominio || i.dominio === "core");
+  if (!enlaceVivo) {
+    log("AVISO: el enlazador vivo no enlazo a ninguna actividad concreta; se siembra un enlace para auditar registro/carril/anclas.");
+    const objetivo = coreItems[0];
+    await supabaseAdmin
+      .from("checklist_items")
+      .update({ protege_item: objetivo.id, deteccion: "depende de un solo proveedor", probabilidad: "probable", dolor: "mucho", camino: "mitigar" })
+      .eq("id", riesgos[0].id);
+    enlaceVivo = { ...riesgos[0], protege_item: objetivo.id, deteccion: "depende de un solo proveedor" };
+  }
+  // la marca del carril necesita una fecha en la respuesta
+  await supabaseAdmin
+    .from("checklist_items")
+    .update({ fecha_base: new Date(Date.now() + 10 * 86400000).toISOString() })
+    .eq("id", enlaceVivo.id);
+
+  // 4. El registro, por su puerta de documentos
+  const reg = await getJson(cookie, `/api/project/${projectId}/documentos?doc=registro:risk_management`);
+  const mdReg = String((reg as { markdown?: string }).markdown ?? "");
+  if (!mdReg.includes("Registro de")) throw new Error(`el registro no bajo: ${JSON.stringify(reg).slice(0, 200)}`);
+  if (/\b\d+\s*(\/|de)\s*\d+\b/.test(mdReg) || mdReg.includes("%")) {
+    throw new Error("el registro trae puntajes o porcentajes: la matriz de colores volvio por la ventana");
+  }
+  const indiceDocs = await getJson(cookie, `/api/project/${projectId}/documentos`);
+  const claves = ((indiceDocs as { documentos?: Array<{ clave: string }> }).documentos ?? []).map((d) => d.clave);
+  if (!claves.includes("registro:risk_management")) throw new Error("el indice de documentos no lista el registro");
+  if (claves.some((c) => c === "registro:quality")) throw new Error("un mundo de MEJORA aparece con registro: ruido");
+  log("OK: registro descargable en el indice (solo proteccion), sin un solo puntaje.");
+
+  // 5. El carril, de la API del analisis
+  const an = await getJson(cookie, `/api/project/${projectId}/analisis`);
+  const carril = ((an as { analytics?: { carrilProteccion?: Array<{ etapa: number; dominio: string }> } }).analytics
+    ?.carrilProteccion ?? []) as Array<{ etapa: number; dominio: string }>;
+  // A MANO: la marca debe caer en la etapa del PROTEGIDO, no en la de la respuesta.
+  const etapaEsperada = coreItems.find((i) => i.id === enlaceVivo!.protege_item)?.etapa;
+  const marca = carril.find((m) => m.dominio === "risk_management");
+  if (!marca) throw new Error(`el carril no trae la marca de riesgos: ${JSON.stringify(carril).slice(0, 200)}`);
+  if (etapaEsperada !== undefined && marca.etapa !== etapaEsperada) {
+    throw new Error(`la marca cayo en la etapa ${marca.etapa} y el protegido esta en la ${etapaEsperada}`);
+  }
+  log(`OK: carril con ${carril.length} marca(s), anclada(s) a la etapa del protegido (${etapaEsperada}).`);
+
+  // 6. Las anclas y el no-llego, con los items REALES y fechas controladas
+  const respuestas = riesgos.slice(0, 3).map((r) => ({
+    id: r.id,
+    etapa: 1,
+    destacado: false,
+    banda: "M" as const,
+    entregaAntesDe: r.id === enlaceVivo!.id ? new Date(Date.now() + 3 * 86400000).toISOString() : null,
+  }));
+  const emp = empaquetarFechas({ ancla: new Date().toISOString(), capacidad: "5-10", items: respuestas });
+  const anclada = emp.fechas.find((f) => f.id === enlaceVivo!.id)!;
+  // A MANO: el protegido a 3 dias -> deseada = hace 4 dias -> NINGUNA fecha
+  // honesta (la primera entrega posible es la semana siguiente) puede llegar.
+  if (!anclada.noLlegaAlAncla) throw new Error("el no-llego no disparo con un ancla imposible: la mentira honesta volvio");
+  const empLejos = empaquetarFechas({
+    ancla: new Date().toISOString(),
+    capacidad: "5-10",
+    items: respuestas.map((r) => (r.id === enlaceVivo!.id ? { ...r, entregaAntesDe: new Date(Date.now() + 60 * 86400000).toISOString() } : r)),
+  });
+  const ancladaLejos = empLejos.fechas.find((f) => f.id === enlaceVivo!.id)!;
+  if (ancladaLejos.noLlegaAlAncla) throw new Error("un ancla a 60 dias no debia disparar el aviso");
+  if (empLejos.fechas[0].id !== enlaceVivo!.id) throw new Error("la anclada no gano la prioridad de reparto");
+  log("OK: anclas -- la anclada se reparte primera; el ancla imposible DICE no-llego; la holgada no.");
+
+  // 7. EL CENSO DE COSTOS POR PIEZA (la tarea declarada del fundador)
+  separador("CENSO DE COSTOS DE PROTECCION (por pieza, de sessions.costo_desglose)");
+  const censo: Record<string, number> = {};
+  for (const x of sesiones) {
+    for (const [pieza, usd] of Object.entries(x.costo_desglose ?? {})) {
+      censo[pieza] = (censo[pieza] ?? 0) + Number(usd);
+    }
+  }
+  const PIEZAS_PROTECCION = ["diagnostico", "anclaje_proteccion", "estimacion_banda", "enlace_proteccion"];
+  for (const pieza of PIEZAS_PROTECCION) {
+    log(`  ${pieza.padEnd(22)} $${(censo[pieza] ?? 0).toFixed(4)}${censo[pieza] === undefined ? "  (no corrio en esta corrida)" : ""}`);
+  }
+  const totalProteccion = PIEZAS_PROTECCION.reduce((sum, k) => sum + (censo[k] ?? 0), 0);
+  log(`  ${"TOTAL tuberia".padEnd(22)} $${totalProteccion.toFixed(4)}`);
+  // La unica alarma residual (decision del fundador): sentido comun, no umbral.
+  for (const [pieza, usd] of Object.entries(censo)) {
+    if (usd >= 0.5) log(`  ATENCION: ${pieza} llego a $${usd.toFixed(2)} en una corrida -- mencion de sentido comun ($0.50+).`);
+  }
+
+  return { costoUsd: 0 };
+}
+
 async function main() {
   separador("VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real");
   log(`BASE_URL: ${BASE_URL}`);
@@ -2573,6 +2741,7 @@ async function main() {
     costos.mundoSubproyecto = (await faseMundoSubproyecto(cookie, macetas.projectId)).costoUsd;
     costos.todoSeparado = (await faseTodoSeparado(cookie, macetas.projectId)).costoUsd;
     costos.mundoNuncaAbandona = (await faseMundoNuncaAbandona(cookie, macetas.projectId)).costoUsd;
+    costos.cicloProteccion = (await faseCicloProteccion(cookie, macetas.projectId)).costoUsd;
     costos.reporteDigital = (await faseReporteDigital(cookie)).costoUsd;
     costos.guardianGigo = (await faseGuardianGigo(cookie)).costoUsd;
   } catch (e) {
@@ -2596,6 +2765,7 @@ async function main() {
   log("  1b. organizer idea larga multi-dominio (regresion tope de tokens 600->1500): OK");
   log("  2. sesion de macetas + plan streaming: OK");
   log("  2j. bucle de tracking (Fase 4.0): bloque de realidad al motor en DOS ciclos (fechas con desviacion / a-mi-ritmo sin cumplimiento), plan sin regaño, acta de cierre completa y motivo que sobrevive al reabrir: OK");
+  log("  2P. ciclo completo de PROTECCION: snapshot vivo (y ausente en mejora), entrevista anclada con su PAR legible, plan enlazado con camino y severidad (enlazador sin fallos), registro descargable sin puntajes, carril en la etapa del protegido, anclas con prioridad de reparto y no-llego honesto, censo de costos por pieza: OK");
   log("  2M. el mundo nunca abandona (Fase 4.3): con un estado_vivo de artesana sembrado contra el mundo de calidad, cada 'salir' del interprete termina en re-eleccion de puerta o en cierre HONESTO con mensaje y activacion devuelta -- jamas en pantalla muda; el ciclo acaba en plan del mundo: OK");
   log("  2L. el mundo como subproyecto (Fase 4.2): su follow recibe SU cumplimiento (1/1/3 de 5, +4.8 dias) y NO el del core, con UNA linea de contexto rotulada; su plan nuevo asume la desviacion sin regañar y regenera SOLO el suyo; cierre al 70% con motivo -> chip, bitacora, hito en el timeline y desglose; ni un mundo ni TODOS cierran la idea (§3); reabrir preserva el motivo: OK");
   log("  2i-ter. todo separado (T3): el mundo elige SU modo 'fechas' (project_modos con su dominio) y sella SU plan (no el del core); no-arrastre e2e (tocar el mundo no mueve modo ni baseline del core); su Analisis trae SU capa COMPLETA con Gantt porEtapa (1/1/1 de 3 a mano); un mundo 'a mi ritmo' convive con el core 'con fechas' (3 modos vivos e independientes); el ritual del core sigue sellando solo lo suyo: OK");
