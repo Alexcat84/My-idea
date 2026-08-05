@@ -194,6 +194,20 @@ son la capa 3 embrionaria). Matriz de fases:
 
 ## 5. Backlog / afinar
 
+- **`mundos-de-proteccion-sobre-lo-existente`** (ficha de diseño registrada 2026-08-05;
+  **NO implementar**: alcance, copy y murallas se deciden en su propia mini campaña
+  **post-F4**). Decisión futura del fundador: alimentar a **Riesgos Bajo Control, HSEQ
+  y Seguridad Digital** con el **snapshot del plan vigente del núcleo** (títulos de las
+  actividades + sus estados) como insumo de su entrevista/diagnóstico, para que el plan
+  del mundo se aplique **SOBRE las actividades reales** del usuario y no sobre una idea
+  contada de nuevo. Es el modelo PM del fundador: el **risk register se levanta sobre la
+  WBS**, no al lado. Frontera de la ficha: los mundos de **mejora/expansión** (Calidad,
+  Exportación, Franquicias, Medio Ambiente) **quedan como están** (el plan del núcleo
+  como contexto narrativo, que es lo correcto para ellos). Lo que esa mini campaña
+  tendrá que decidir y por eso NO se toca ahora: qué se manda exactamente (¿solo títulos
+  y estados, o también fechas y bandas?), qué ve el usuario de ese traspaso (nada
+  silencioso), el efecto en el costo del diagnóstico, y la muralla de que un mundo de
+  protección **sin** plan de núcleo siga funcionando.
 - **Ajustes visuales de Espacios** que salgan de la prueba del fundador (grosor del eje y
   tamaño de nodos de "Tu avance", cuánto se "levanta" la pestaña activa, el segmentado).
 - **Varas de Design de la Fase 3** (calibración visual, front funcional ya en su sitio):

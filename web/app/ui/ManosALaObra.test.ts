@@ -125,6 +125,67 @@ describe("cada tramo cuenta desde SU plan (un mundo activado después no hereda 
   });
 });
 
+describe("F4 — el multiplicador personal entra por el mismo cable, y solo donde debe", () => {
+  it("con factor 2 en las M, el reparto usa las horas REALES del usuario", () => {
+    // A MANO, capacidad 5 h/sem: con factor 2, una M son 6 h para este usuario.
+    //   a: 6 h  → ceil(6/5)-1  = 1 → semana 2 → vie 21-ago
+    //   b: 12 h → ceil(12/5)-1 = 2 → semana 3 → vie 28-ago
+    const f = calcularFechasRitual(tramo(DOS_M), {
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: true,
+      factoresPorDominio: { core: { M: 2 } },
+    });
+    expect(f["a"]).toBe("2026-08-21");
+    expect(f["b"]).toBe("2026-08-28");
+  });
+
+  it("el factor es POR ESPACIO: el del núcleo no toca las fechas del mundo", () => {
+    // A MANO, capacidad 5: la M del núcleo lleva factor 2 (6 h → semana 2 desde
+    // su ancla = 21-ago); la del mundo no tiene factor (3 h → su semana 1 = 28-ago,
+    // contando desde SU ancla del 17-ago).
+    const tramos: GrupoRitual[] = [
+      { dominio: "core", nombre: "Tu viaje principal", planCreatedAt: ANCLA, titulos: {}, items: [item({ id: "c", etapa: 1, banda: "M" })] },
+      {
+        dominio: "quality",
+        nombre: "Calidad",
+        planCreatedAt: "2026-08-17T10:00:00",
+        titulos: {},
+        items: [item({ id: "m", etapa: 1, banda: "M", dominio: "quality" })],
+      },
+    ];
+    const f = calcularFechasRitual(tramos, {
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: true,
+      factoresPorDominio: { core: { M: 2 } },
+    });
+    expect(f["c"]).toBe("2026-08-21");
+    expect(f["m"]).toBe("2026-08-28");
+  });
+
+  it("sin factores el reparto es idéntico al de siempre (cero invención)", () => {
+    const base = calcularFechasRitual(tramo(DOS_M), { diaPreferido: null, capacidad: "5-10", empaquetable: true });
+    const vacio = calcularFechasRitual(tramo(DOS_M), {
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: true,
+      factoresPorDominio: { core: {} },
+    });
+    expect(vacio).toEqual(base);
+  });
+
+  it("en el FALLBACK el factor no pinta nada (el sugeridor viejo no sabe de bandas)", () => {
+    const conFactor = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), {
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: false,
+      factoresPorDominio: { core: { M: 4 } },
+    });
+    expect(conFactor["a"]).toBe("2026-08-14");
+  });
+});
+
 describe("el día de cierre aprendido se conserva en los dos caminos", () => {
   it("empaquetando: con diaPreferido sábado, la entrega cae en sábado", () => {
     // A MANO: sábado = 6 → semana 1 → 15-ago.

@@ -79,6 +79,90 @@ export const LEAD_ESPERA_SEMANAS = 1;
 const VIERNES = 5;
 const LUNES = 1;
 
+/**
+ * F4 — EL MULTIPLICADOR PERSONAL. Cuántas muestras hacen falta por banda antes
+ * de creerle a los datos. Con menos, el factor es 1: cero invención. Dos tareas
+ * no son un patrón, son dos tareas.
+ */
+export const MIN_MUESTRAS_FACTOR = 3;
+
+/**
+ * El factor aprendido se acota a [0.5, 4]. Mismo criterio (y misma razón) que el
+ * clamp de `cadenciaRealSemanas` en fechasBase.ts: un dato sucio o una tarea rara
+ * (la que se marcó hecha volviendo de tres semanas de vacaciones) no puede
+ * disparar fechas absurdas a un año vista ni colapsar el plan a un día. Aprender
+ * es corregir el rumbo, no entregarle el timón a un solo dato.
+ */
+export const FACTOR_MIN = 0.5;
+export const FACTOR_MAX = 4;
+
+/** Una tarea YA cumplida de un espacio, tal como se lee del checklist. */
+export interface MuestraCumplida {
+  banda: Banda | null;
+  completed_at: string | null;
+  espera_externa?: boolean | null;
+}
+
+export type FactoresPorBanda = Partial<Record<Banda, number>>;
+
+const mediana = (xs: number[]): number => {
+  const s = [...xs].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 === 1 ? s[m] : (s[m - 1] + s[m]) / 2;
+};
+
+/** Los días que la banda PROMETE tardar con esa capacidad (la vara contra la que
+ * se compara la realidad). Una M son 3 h; a 5 h/semana, 4.2 días de calendario. */
+function diasPrometidos(banda: Banda, capacidad: CapacidadSemanal): number {
+  return (HORAS_MEDIA[banda] / HORAS_POR_SEMANA[capacidad]) * 7;
+}
+
+/**
+ * F4 — el multiplicador personal por banda, de UN espacio.
+ *
+ * Compara lo que las tareas TARDARON DE VERDAD contra lo que su banda prometía.
+ * La duración real de una tarea es el tiempo transcurrido desde que se cerró la
+ * anterior: es la única medida de esfuerzo que la app tiene sin pedirle al
+ * usuario que fiche horas, y es la que de verdad describe su ritmo.
+ *
+ * Decisiones que valen la pena saber:
+ *  - **La primera cumplida no da muestra**: no hay "anterior" contra la cual
+ *    medirla, y anclarla al nacimiento del plan mediría la procrastinación
+ *    inicial, no el esfuerzo de la tarea.
+ *  - **Las tareas con espera externa se excluyen**: su reloj lo mueven terceros,
+ *    y F3 ya les puso su colchón. Contarlas aquí sería cobrarle dos veces al
+ *    usuario el tiempo de otros, y encima inflaría el factor de toda su banda.
+ *  - **Mediana, no media**: un solo hueco largo (unas vacaciones, una gripe) no
+ *    puede reescribir el calendario de todas las tareas de esa banda.
+ *  - Sin `MIN_MUESTRAS_FACTOR` muestras de una banda, esa banda NO aparece en el
+ *    resultado, y el empaquetado la trata como factor 1.
+ */
+export function factorPorBanda(opts: {
+  /** Las tareas cumplidas del MISMO espacio (mezclar espacios mezclaría ritmos). */
+  hechas: MuestraCumplida[];
+  capacidad: CapacidadSemanal;
+}): FactoresPorBanda {
+  const utiles = opts.hechas
+    .filter((h) => h.banda && h.completed_at && !Number.isNaN(Date.parse(h.completed_at)))
+    .sort((a, b) => Date.parse(a.completed_at!) - Date.parse(b.completed_at!));
+
+  const razones: Partial<Record<Banda, number[]>> = {};
+  for (let i = 1; i < utiles.length; i += 1) {
+    const actual = utiles[i];
+    if (actual.espera_externa === true) continue; // el reloj de terceros no es su ritmo
+    const dias = (Date.parse(actual.completed_at!) - Date.parse(utiles[i - 1].completed_at!)) / 86_400_000;
+    const banda = actual.banda as Banda;
+    (razones[banda] ??= []).push(dias / diasPrometidos(banda, opts.capacidad));
+  }
+
+  const factores: FactoresPorBanda = {};
+  for (const [banda, xs] of Object.entries(razones) as Array<[Banda, number[]]>) {
+    if (xs.length < MIN_MUESTRAS_FACTOR) continue; // cero invención
+    factores[banda] = Math.min(FACTOR_MAX, Math.max(FACTOR_MIN, mediana(xs)));
+  }
+  return factores;
+}
+
 export interface ItemEmpaquetable {
   id: string;
   etapa: number;
@@ -141,10 +225,16 @@ export function empaquetarFechas(opts: {
   capacidad: CapacidadSemanal;
   /** Día en que el usuario suele cerrar (0=Dom..6=Sáb). null → viernes. */
   diaPreferido?: number | null;
+  /** F4: el multiplicador personal por banda (`factorPorBanda`). Solo se pasa en
+   * los RECÁLCULOS; ausente = factor 1 en todas, que es el comportamiento de
+   * siempre. Una banda sin muestras suficientes no viene en el mapa. */
+  factores?: FactoresPorBanda;
 }): ResultadoEmpaquetado {
   const base = new Date(opts.ancla);
   const capacidad = HORAS_POR_SEMANA[opts.capacidad];
   const diaEntrega = opts.diaPreferido ?? VIERNES;
+  // Las horas que ESTE usuario tarda de verdad en una tarea de esa banda.
+  const horasDe = (banda: Banda) => HORAS_MEDIA[banda] * (opts.factores?.[banda] ?? 1);
 
   // Etapas en orden; dentro de cada una, la destacada primero (es el arranque).
   const porEtapa = new Map<number, ItemEmpaquetable[]>();
@@ -173,11 +263,12 @@ export function empaquetarFechas(opts: {
       const espera = it.espera_externa === true;
       // La semana (dentro de la etapa) donde caería la hora final de esta tarea
       // con la capacidad gastada hasta aquí.
-      const semanaTrabajo = Math.ceil((horasAcumuladas + HORAS_MEDIA[it.banda as Banda]) / capacidad) - 1;
+      const horas = horasDe(it.banda as Banda);
+      const semanaTrabajo = Math.ceil((horasAcumuladas + horas) / capacidad) - 1;
       // F3: la espera NO consume la capacidad del usuario. Su trabajo propio es
       // disparar y esperar; cargar esas horas contra la semana empujaría a las
       // tareas hermanas por tiempo que el usuario no está gastando.
-      if (!espera) horasAcumuladas += HORAS_MEDIA[it.banda as Banda];
+      if (!espera) horasAcumuladas += horas;
 
       // La destacada entrega el LUNES de la primera semana de su etapa; el resto,
       // el día de cierre de la semana en que terminan. La espera suma su colchón
