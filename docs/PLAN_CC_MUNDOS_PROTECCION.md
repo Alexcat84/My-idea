@@ -179,8 +179,17 @@ Veredicto de cada una, arriba de su enunciado original. Lo adjudicado manda.
 7. **La severidad la emite el enlazador** en el mismo JSON, contra **vocabulario
    cerrado** del nodo canónico: `probabilidad: poco_probable|probable|muy_probable`
    y `dolor: poco|bastante|mucho`. **Fuera del enum → null** (no se aproxima).
-8. **Costo ABSORBIDO**, y **reportado MEDIDO en el checkpoint de P2**. Si supera
-   **$0.25 por plan**, se trae al fundador antes del merge.
+8. **Costo ABSORBIDO**, y **reportado MEDIDO en los checkpoints**.
+   **CORREGIDO por el fundador (5 ago 2026), y esto es lo que manda:** el umbral
+   de $0.25 venía del catálogo VIEJO (mundo a 3). Con el catálogo vigente (plan
+   10, todo lo demás 5, fijado con análisis de mercado precisamente para
+   financiar más calidad por entrega), el peor caso de la tubería completa de
+   protección queda lejísimos del precio. **El umbral MUERE como puerta**; la
+   medición **vive como telemetría de margen** (el costo por entrega ya se
+   persiste en el evento de sesión) y se reporta **informativa, sin condición
+   asociada**. Única alarma residual, de sentido común y no de umbral: si una
+   entrega individual se acercara a un orden de magnitud del precio (**$0.50+**),
+   se menciona. **Jamás se frena nada por centavos.**
 
 ### Enunciados originales (para que se lea el porqué de cada veredicto)
 

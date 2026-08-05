@@ -29,6 +29,8 @@ import {
   obtenerProyecto,
   registrarBitacora,
 } from "@/lib/db";
+import { createAnthropicClient } from "@/lib/anthropicClient";
+import { anclarResultadoTurno } from "@/lib/engine/reformuladorProteccion";
 import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
 import {
   armarSnapshot,
@@ -269,5 +271,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     etiqueta: etiquetaArbol(brecha.semillaId, graph),
     modo: "conversado" as const,
   };
-  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [puerta]);
+  // P2b: en un mundo de protección la primera pregunta ya se ancla a una
+  // actividad real. Si el anclaje falla, sigue la pregunta del grafo tal cual.
+  const anclado = await anclarResultadoTurno(createAnthropicClient(), resultado, resultado.acumulado);
+  return responderResultadoTurno(supabase, projectId, sessionId, anclado.resultado, anclado.acumulado, [puerta]);
 }
