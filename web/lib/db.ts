@@ -10,7 +10,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { NumerosProyecto } from "./calculadora";
 import type { UsoAcumulado } from "./costmeter";
-import type { ModoCamino, ModoRuta, PlanEtiqueta, ProjectNodeTipo, SessionTipo } from "./dbContract";
+import type { CapacidadSemanal, ModoCamino, ModoRuta, PlanEtiqueta, ProjectNodeTipo, SessionTipo } from "./dbContract";
 import type { EstadoRecorrido } from "./engine/recorrido";
 import type { EstadoReporte } from "./engine/reporteFlow";
 
@@ -164,6 +164,49 @@ export async function obtenerModosPorEspacio(
   const modos: Record<string, "ritmo" | "fechas"> = {};
   for (const f of (data ?? []) as Array<{ dominio: string; modo_camino: "ritmo" | "fechas" }>) modos[f.dominio] = f.modo_camino;
   return modos;
+}
+
+/** Scheduler F2: las horas por semana que el usuario le da a CADA espacio
+ * (project_modos.capacidad_semanal, migración 033). El empaquetado las usa para
+ * repartir las semanas. Un espacio sin declarar no aparece en el mapa: el ritual
+ * arranca con el chip por defecto y no inventa una capacidad ajena. */
+export async function obtenerCapacidadesPorEspacio(
+  supabase: SupabaseClient,
+  projectId: string
+): Promise<Record<string, CapacidadSemanal>> {
+  const { data, error } = await supabase
+    .from("project_modos")
+    .select("dominio, capacidad_semanal")
+    .eq("project_id", projectId);
+  if (error) throw error;
+  const caps: Record<string, CapacidadSemanal> = {};
+  for (const f of (data ?? []) as Array<{ dominio: string; capacidad_semanal: CapacidadSemanal | null }>) {
+    if (f.capacidad_semanal) caps[f.dominio] = f.capacidad_semanal;
+  }
+  return caps;
+}
+
+/** Guarda la capacidad de un espacio. modo_camino es NOT NULL en la tabla, así
+ * que el upsert lleva el modo vigente; el llamador ya lo leyó (y un espacio que
+ * está declarando capacidad está, por definición, en modo fechas). */
+export async function guardarCapacidadEspacio(
+  supabase: SupabaseClient,
+  projectId: string,
+  dominio: string,
+  capacidad: CapacidadSemanal,
+  modoVigente: "ritmo" | "fechas" = "fechas"
+): Promise<void> {
+  const { error } = await supabase.from("project_modos").upsert(
+    {
+      project_id: projectId,
+      dominio,
+      modo_camino: modoVigente,
+      capacidad_semanal: capacidad,
+      updated_at: ahora(),
+    },
+    { onConflict: "project_id,dominio" }
+  );
+  if (error) throw error;
 }
 
 /** Upsert del modo de UN espacio (por project_id + dominio) en project_modos. */

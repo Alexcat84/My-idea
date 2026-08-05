@@ -7,7 +7,7 @@
  */
 import { NextResponse } from "next/server";
 import { PREGUNTA_TIPO_OFERTA } from "@/lib/engine/constants";
-import { obtenerModosPorEspacio, obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
+import { obtenerCapacidadesPorEspacio, obtenerModosPorEspacio, obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
 import { ESPACIO_CORE } from "@/lib/espacios";
 import { cargarGrafo, etiquetaArbol } from "@/lib/engine/graph";
 import { preguntasPorTipo } from "@/lib/engine/reporte";
@@ -220,6 +220,9 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   // usará el selector/ritual de cada espacio; `modo_camino` es el del core (compat).
   const modos = await obtenerModosPorEspacio(supabase, projectId);
   const modoCore = modos[ESPACIO_CORE] ?? proyecto.modo_camino ?? null;
+  // Scheduler F2: las horas por semana declaradas por espacio. El ritual las usa
+  // para empaquetar; un espacio sin declarar no aparece (arranca en el default).
+  const capacidades = await obtenerCapacidadesPorEspacio(supabase, projectId);
 
   return NextResponse.json({
     idea: {
@@ -232,6 +235,8 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       modo_camino: modoCore,
       // El modo por espacio (dominio → 'ritmo'|'fechas'); el core no está si nunca eligió.
       modos,
+      // La capacidad por espacio (dominio → '2-5'|'5-10'|'10-20'|'20+').
+      capacidades,
       realizada_at: proyecto.realizada_at ?? null,
       // Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto.
       created_at: proyecto.created_at,

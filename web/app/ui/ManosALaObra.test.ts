@@ -1,0 +1,147 @@
+/**
+ * Scheduler Fase 2 — el CABLEADO del ritual: "Con fechas" y "Recalcular
+ * pendientes" usan el empaquetado cuando hay bandas, y caen al sugeridor viejo
+ * cuando falta una. Se prueba `calcularFechasRitual`, que es la decisión (el
+ * resto del ritual es pintar); el reparto en sí ya lo prueba empaquetado.test.
+ *
+ * ANCLA 2026-08-03 (lunes). Semanas desde la del ancla:
+ *   semana 1 → lun 10-ago · vie 14-ago     semana 3 → lun 24-ago · vie 28-ago
+ *   semana 2 → lun 17-ago · vie 21-ago     semana 4 → lun 31-ago · vie 04-sep
+ */
+import { describe, expect, it } from "vitest";
+import { calcularFechasRitual } from "./ManosALaObra";
+import type { GrupoRitual, ItemChecklistUI } from "./ManosALaObra";
+
+const ANCLA = "2026-08-03T10:00:00";
+
+function item(over: Partial<ItemChecklistUI> & { id: string; etapa: number }): ItemChecklistUI {
+  return {
+    plan_id: "plan-1",
+    dominio: "core",
+    orden: 1,
+    texto: "una tarea",
+    destacado: false,
+    estado: "pendiente",
+    nota: null,
+    completed_at: null,
+    no_aplica_motivo: null,
+    fecha_base: null,
+    fecha_base_origen: null,
+    fecha_base_original: null,
+    banda: null,
+    espera_externa: null,
+    created_at: ANCLA,
+    updated_at: ANCLA,
+    ...over,
+  };
+}
+
+function tramo(items: ItemChecklistUI[]): GrupoRitual[] {
+  return [{ dominio: "core", nombre: "Tu viaje principal", planCreatedAt: ANCLA, titulos: {}, items }];
+}
+
+/** Dos M (3 h + 3 h) en la etapa 1: con 5 h/semana desbordan a dos semanas;
+ *  el sugeridor viejo los pondría a los dos en el mismo viernes. */
+const DOS_M = [
+  item({ id: "a", etapa: 1, banda: "M" }),
+  item({ id: "b", etapa: 1, banda: "M" }),
+];
+
+describe("el ritual EMPAQUETA cuando todas las tareas tienen banda", () => {
+  it("con capacidad 5-10 (5 h/sem) las dos M caen en semanas distintas", () => {
+    // A MANO: M(3 h) → acumulado 3 → ceil(3/5)-1 = 0 → semana 1 → vie 14-ago.
+    //         M(3 h) → acumulado 6 → ceil(6/5)-1 = 1 → semana 2 → vie 21-ago.
+    const f = calcularFechasRitual(tramo(DOS_M), {
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: true,
+    });
+    expect(f["a"]).toBe("2026-08-14");
+    expect(f["b"]).toBe("2026-08-21");
+  });
+
+  it("la capacidad MANDA: con 20+ las mismas dos tareas caben en la misma semana", () => {
+    // A MANO, 20 h/sem: acumulados 3 y 6 → las dos ceil(x/20)-1 = 0 → semana 1.
+    const f = calcularFechasRitual(tramo(DOS_M), {
+      diaPreferido: null,
+      capacidad: "20+",
+      empaquetable: true,
+    });
+    expect(f["a"]).toBe("2026-08-14");
+    expect(f["b"]).toBe("2026-08-14");
+  });
+});
+
+describe("FALLBACK: con una sola tarea sin banda, el tramo entero vuelve al sugeridor viejo", () => {
+  it("reparte por ETAPA, no por capacidad (las dos de la etapa 1, el mismo viernes)", () => {
+    // A MANO (sugeridor viejo): etapa 1 → semana 1 → viernes 14-ago para las dos,
+    // aunque una sea una XL de 16 h. Es el comportamiento histórico, intacto.
+    const f = calcularFechasRitual(
+      tramo([item({ id: "a", etapa: 1, banda: "XL" }), item({ id: "b", etapa: 1, banda: null })]),
+      { diaPreferido: null, capacidad: "2-5", empaquetable: false }
+    );
+    expect(f["a"]).toBe("2026-08-14");
+    expect(f["b"]).toBe("2026-08-14");
+  });
+
+  it("en el fallback la capacidad elegida NO cambia ninguna fecha", () => {
+    const items = [item({ id: "a", etapa: 1, banda: null }), item({ id: "b", etapa: 2, banda: null })];
+    const lento = calcularFechasRitual(tramo(items), { diaPreferido: null, capacidad: "2-5", empaquetable: false });
+    const rapido = calcularFechasRitual(tramo(items), { diaPreferido: null, capacidad: "20+", empaquetable: false });
+    expect(lento).toEqual(rapido);
+  });
+
+  it("el fallback sigue respetando la cadencia aprendida del ciclo previo", () => {
+    // A MANO: con cadenciaSemanas = 2, la etapa 1 cae a 1x2 = 2 semanas → vie 21-ago
+    // (el aprendizaje de la Fase 4.0 no se pierde por la llegada del scheduler).
+    const f = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), {
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: false,
+      cadenciaSemanas: 2,
+    });
+    expect(f["a"]).toBe("2026-08-21");
+  });
+});
+
+describe("cada tramo cuenta desde SU plan (un mundo activado después no hereda el ancla del núcleo)", () => {
+  it("dos tramos con anclas distintas producen fechas distintas para la misma etapa", () => {
+    // A MANO: el tramo del núcleo ancla el 03-ago → su etapa 1 cae en la semana 1
+    // (vie 14-ago). El del mundo ancla dos semanas después (17-ago) → su etapa 1
+    // cae en SU semana 1 (vie 28-ago).
+    const tramos: GrupoRitual[] = [
+      { dominio: "core", nombre: "Tu viaje principal", planCreatedAt: ANCLA, titulos: {}, items: [item({ id: "c", etapa: 1, banda: "M" })] },
+      {
+        dominio: "quality",
+        nombre: "Calidad",
+        planCreatedAt: "2026-08-17T10:00:00",
+        titulos: {},
+        items: [item({ id: "m", etapa: 1, banda: "M", dominio: "quality" })],
+      },
+    ];
+    const f = calcularFechasRitual(tramos, { diaPreferido: null, capacidad: "5-10", empaquetable: true });
+    expect(f["c"]).toBe("2026-08-14");
+    expect(f["m"]).toBe("2026-08-28");
+  });
+});
+
+describe("el día de cierre aprendido se conserva en los dos caminos", () => {
+  it("empaquetando: con diaPreferido sábado, la entrega cae en sábado", () => {
+    // A MANO: sábado = 6 → semana 1 → 15-ago.
+    const f = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: "M" })]), {
+      diaPreferido: 6,
+      capacidad: "5-10",
+      empaquetable: true,
+    });
+    expect(f["a"]).toBe("2026-08-15");
+  });
+
+  it("en el fallback también", () => {
+    const f = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), {
+      diaPreferido: 6,
+      capacidad: "5-10",
+      empaquetable: false,
+    });
+    expect(f["a"]).toBe("2026-08-15");
+  });
+});

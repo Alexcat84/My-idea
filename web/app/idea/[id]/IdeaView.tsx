@@ -37,7 +37,7 @@ import { loginConNext } from "@/lib/nextSeguro";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import type { ChecklistEstado } from "@/lib/dbContract";
+import type { CapacidadSemanal, ChecklistEstado } from "@/lib/dbContract";
 import { estadoMundo } from "@/lib/engine/previewMundos";
 import { consumirSSE } from "@/lib/sseCliente";
 
@@ -58,6 +58,8 @@ interface DetalleIdea {
     /** "Todo separado" (T3c): el modo POR ESPACIO (mapa dominio→modo). El core
      * también viene en modo_camino (dual-read); aquí el core y cada mundo. */
     modos?: Record<string, "ritmo" | "fechas">;
+    /** Scheduler F2: las horas por semana POR ESPACIO (dominio→capacidad). */
+    capacidades?: Record<string, CapacidadSemanal>;
     realizada_at?: string | null;
     /** Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto. */
     created_at?: string | null;
@@ -205,6 +207,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // mundo lee de aquí su propio modo; ManosALaObra lo copia local para reflejar
   // al instante lo que el mundo acaba de elegir.
   const [modos, setModos] = useState<Record<string, "ritmo" | "fechas">>({});
+  const [capacidades, setCapacidades] = useState<Record<string, CapacidadSemanal>>({});
   const [vistaAnalisis, setVistaAnalisis] = useState(quiereAnalisis);
   // "Todo separado" (T4): la vista scopeada a un espacio (?vista=X&dominio=Y) —
   // análisis, bitácora, calendario o documentos de un mundo. null = del núcleo.
@@ -477,6 +480,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         setDetalle(d);
         setModoCamino(d.idea.modo_camino ?? null);
         setModos(d.idea.modos ?? {});
+        setCapacidades(d.idea.capacidades ?? {});
         setRealizadaAt(d.idea.realizada_at ?? null);
         // Una idea ya realizada abre en su Celebración (salvo que la URL
         // pida otra vista explícita).
@@ -951,6 +955,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               mundos={mundosParaObra}
               modoCamino={modoCamino}
               modos={modos}
+              capacidades={capacidades}
               onModoCambiado={setModoCamino}
               onRecargarChecklist={cargarChecklist}
               onVerAnalisis={irAAnalisis}
