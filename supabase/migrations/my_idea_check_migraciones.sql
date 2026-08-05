@@ -450,5 +450,19 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%bastante%'
     )
 
+  UNION ALL
+  -- 035 · Mundos de proteccion: el camino elegido ante el riesgo
+  SELECT '035', 'checklist_items.camino con CHECK (evitar|mitigar|transferir|aceptar)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='camino'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'checklist_items_camino_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%transferir%'
+        AND pg_get_constraintdef(oid) LIKE '%aceptar%'
+    )
+
 ) checks
 ORDER BY num;

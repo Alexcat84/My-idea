@@ -22,7 +22,7 @@
  *    JAMÁS se bloquea** (fallback declarado, con síntoma persistido).
  */
 import type Anthropic from "@anthropic-ai/sdk";
-import { DOLOR, PROBABILIDAD, type Dolor, type Probabilidad } from "../dbContract";
+import { CAMINO, DOLOR, PROBABILIDAD, type Camino, type Dolor, type Probabilidad } from "../dbContract";
 import { costoAcumuladoUsd, llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_ENLACE_PROTECCION } from "../prompts";
 import type { SnapshotNucleo } from "./snapshotProyecto";
@@ -34,6 +34,9 @@ export interface EnlaceProteccion {
   deteccion: string | null;
   probabilidad: Probabilidad | null;
   dolor: Dolor | null;
+  /** El camino elegido ante lo detectado (migración 035): la anatomía canónica
+   * del risk register. Fuera del enum o sin confianza → null (se calla). */
+  camino: Camino | null;
 }
 
 /** Tope de la detección: es una frase, no un párrafo. */
@@ -45,6 +48,7 @@ interface EnlaceCrudo {
   protege_indice: number | null;
   probabilidad: string | null;
   dolor: string | null;
+  camino: string | null;
 }
 
 /** Parsea el array JSON del enlazador. Robusto a fences y a prosa alrededor;
@@ -74,6 +78,7 @@ export function parsearEnlaces(texto: string): EnlaceCrudo[] {
       protege_indice: o.protege_indice === null ? null : protege === null ? Number.NaN : protege,
       probabilidad: typeof o.probabilidad === "string" ? o.probabilidad : null,
       dolor: typeof o.dolor === "string" ? o.dolor : null,
+      camino: typeof o.camino === "string" ? o.camino : null,
     });
   }
   return out;
@@ -125,6 +130,7 @@ export function validarEnlaces(
         ? (c.probabilidad as Probabilidad)
         : null,
       dolor: (DOLOR as readonly string[]).includes(c.dolor ?? "") ? (c.dolor as Dolor) : null,
+      camino: (CAMINO as readonly string[]).includes(c.camino ?? "") ? (c.camino as Camino) : null,
     };
   }
   return { enlaces, descartados };

@@ -25,8 +25,11 @@ import {
   CAPACIDAD_SEMANAL,
   esActivo,
   type Banda,
+  type Camino,
   type CapacidadSemanal,
   type ChecklistEstado,
+  type Dolor,
+  type Probabilidad,
   type FechaBaseOrigen,
   type ModoCamino,
 } from "@/lib/dbContract";
@@ -38,11 +41,19 @@ import {
   type FactoresPorBanda,
   type MuestraCumplida,
 } from "@/lib/empaquetado";
+import { armarSnapshot } from "@/lib/engine/snapshotProyecto";
+import {
+  armarRegistro,
+  PALABRA_CAMINO,
+  severidadEnPalabras,
+  textoProtege,
+  type EntradaRegistro,
+} from "@/lib/registroProteccion";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
 import { PRECIOS } from "@/lib/precios";
-import { dominiosDelRitual, ESPACIO_CORE, esEspacioCore, mundosDelEspacio } from "@/lib/espacios";
+import { dominiosDelRitual, ESPACIO_CORE, esEspacioCore, esMundoProteccion, mundosDelEspacio } from "@/lib/espacios";
 import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
 import { LineaAvance } from "./LineaAvance";
@@ -69,6 +80,13 @@ export interface ItemChecklistUI {
    * viejo o estimación fallida: sin rango, cero invención. */
   banda: Banda | null;
   espera_externa: boolean | null;
+  /** Mundos de protección (P2): el enlace con la actividad del núcleo que esta
+   * respuesta protege, su detección y su severidad. null fuera de protección. */
+  protege_item?: string | null;
+  deteccion?: string | null;
+  probabilidad?: Probabilidad | null;
+  dolor?: Dolor | null;
+  camino?: Camino | null;
   created_at: string;
   updated_at: string;
 }
@@ -1080,6 +1098,54 @@ function IconoCara({ cara }: { cara: Cara }) {
   );
 }
 
+/**
+ * Mundos de protección (P3): EL REGISTRO VISIBLE. La herramienta canónica del
+ * mundo (el registro de riesgos, el de peligros, el inventario de activos)
+ * instanciada sobre las actividades reales de la persona.
+ *
+ * Ruido cero: solo aparece en los mundos de PROTECCIÓN, y si todavía no hay
+ * enlaces dice honesto que se llenará con su plan, en vez de pintar una tabla
+ * vacía que parezca rota.
+ */
+function RegistroProteccion({ nombreMundo, entradas }: { nombreMundo: string; entradas: EntradaRegistro[] }) {
+  return (
+    <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
+      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Registro de {nombreMundo}</p>
+      {entradas.length === 0 ? (
+        <p className="mt-2.5 text-[13.5px] leading-relaxed text-dim [text-wrap:pretty]">
+          Este registro se llenará con el plan de este mundo: cada cosa que detecte quedará aquí junto a la
+          respuesta que la atiende.
+        </p>
+      ) : (
+        <ul className="mt-3 flex flex-col gap-2.5">
+          {entradas.map((e) => {
+            const sev = severidadEnPalabras(e);
+            return (
+              <li key={e.id} className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
+                <p className="text-[14px] font-semibold [text-wrap:pretty]">{e.deteccion ?? e.respuesta}</p>
+                {sev && <p className="mt-1 text-[12.5px] text-warn">{sev}</p>}
+                {e.camino && (
+                  <p className="mt-1 text-[12.5px] text-dim">
+                    El camino: <span className="text-ink">{PALABRA_CAMINO[e.camino]}</span>
+                  </p>
+                )}
+                <p className="mt-1.5 text-[12.5px] text-dim [text-wrap:pretty]">
+                  Protege: <span className="text-ink">{textoProtege(e)}</span>
+                </p>
+                {e.deteccion && (
+                  <p className="mt-1 text-[12.5px] text-dim [text-wrap:pretty]">
+                    Tu respuesta: <span className="text-ink">{e.respuesta}</span>
+                  </p>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </section>
+  );
+}
+
 /** Scheduler F2: las horas por semana de un espacio, ya declaradas, con su
  * corrección. Vive en la cinta de "fechas activas" porque es donde el usuario
  * viene cuando su semana cambió. */
@@ -1483,6 +1549,17 @@ export function ManosALaObra({
   // useMemo: estabiliza la referencia para que las deps de los useMemo que lo
   // usan (gruposRitual) no cambien en cada render (react-hooks/exhaustive-deps).
   const itemsCore = useMemo(() => core?.etapas.flatMap((e) => e.items) ?? [], [core]);
+  // Mundos de protección (P3): las actividades vigentes del núcleo con su #N,
+  // del MISMO armador que usó el enlazador. El enlace se resuelve por id, así
+  // que el número es solo cómo se nombra hoy: si el plan cambió, el registro
+  // muestra la posición actual y no una congelada que ya no existe.
+  const actividadesNucleo = useMemo(
+    () =>
+      armarSnapshot(
+        itemsCore.map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, orden: i.orden, estado: i.estado }))
+      ).actividades.map((a) => ({ id: a.id, indice: a.indice, titulo: a.titulo })),
+    [itemsCore]
+  );
   const cCore = conteo(itemsCore);
   const tituloPlan = planMd.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? null;
 
@@ -2109,6 +2186,18 @@ export function ManosALaObra({
                           onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre, mundo.nombre)}
                         />
                         <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} modo={modoMundo} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
+                        {/* P3: la herramienta canónica del mundo, instanciada
+                            sobre las actividades reales. Ruido cero: solo en
+                            los mundos de PROTECCIÓN, y solo en su hub. */}
+                        {esMundoProteccion(mundo.dominio) && (
+                          <RegistroProteccion
+                            nombreMundo={mundo.nombre}
+                            entradas={armarRegistro(
+                              grupo.etapas.flatMap((e) => e.items),
+                              actividadesNucleo
+                            )}
+                          />
+                        )}
                         {/* "Todo separado" (T5, D6): los CUATRO accesos scopeados
                             del espacio, en el orden del aside del núcleo, como
                             TARJETAS HERMANAS (misma forma, tarjeta entera). Sus dos

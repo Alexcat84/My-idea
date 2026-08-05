@@ -126,6 +126,11 @@ merge solo con visto.
   test que vigila que el copy del colchón no derive al reproche).
 
 ### P4 — El carril y los chips
+
+**Restricción de diseño del fundador (ago 2026, incorporada antes de arrancar):**
+el carril de protección nace **DENTRO de la jerarquía visual de fase** del Gantt
+(anidado bajo la banda de su etapa), para que la calibración de fases visuales
+que hará CD (ficha en PENDIENTES §2) lo vista sin deshacerlo.
 - Los **chips bidireccionales** en el detalle: baratos y de alto valor, con los
   datos que P2 ya persistió.
 - El **carril del Gantt**: depende de **Duda 5**. Si la respuesta es "bajo la

@@ -312,6 +312,13 @@ describe("PATCH y el enlace de protección: protege_item NO es editable", () => 
     expect(estadoFalso.checklistItems[0].protege_item).toBe("nuc-a"); // el enlace, intacto
   });
 
+  it("el CAMINO tampoco se edita: nace del enlazador, como sus hermanos", async () => {
+    sembrarItem({ camino: "mitigar" });
+    const res = await PATCH(req({ item_id: "it1", estado: "empezado", camino: "aceptar" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(estadoFalso.checklistItems[0].camino).toBe("mitigar");
+  });
+
   it("la detección y la severidad tampoco se editan desde el PATCH", async () => {
     sembrarItem({ deteccion: "depende de un solo proveedor", probabilidad: "probable", dolor: "mucho" });
     await PATCH(

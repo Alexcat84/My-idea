@@ -187,6 +187,15 @@ son la capa 3 embrionaria). Matriz de fases:
     de que la fecha ya trae el colchón y el tiempo ajeno no se le cuenta al
     usuario). Lo que se juega: que se lea como un aviso útil y **no como una
     disculpa ni un regaño**. Par del gate: `13b_detalle_espera`.
+- **Fases visuales en el Gantt (ficha del fundador, ago 2026):** el Gantt ya es
+  **por fases en datos y geometría** (una barra = una etapa; un solo cálculo y un
+  solo componente sirven a las tres vistas: Análisis del núcleo, análisis de
+  mundo y PDF). **La vara de CD:** tratamiento visual de fase (títulos
+  jerarquizados, bandas/separadores, numeración visible) **calibrado UNA vez y
+  heredado por las tres vistas**, más cualquier adición visual que CD proponga
+  sobre el frente. Restricción ya fijada para P4 de protección: el **carril de
+  protección nace DENTRO de la jerarquía visual de fase** (anidado bajo la banda
+  de su etapa), para que la calibración de CD lo vista sin deshacerlo.
 - **NOTA (no pedido) — el "viernes compartido" del sugeridor de fechas:** en modo
   fechas, todos los ítems regulares de una etapa caen el mismo día (el viernes de su
   semana): es **doctrina** (la fecha es el compromiso de entrega de la etapa, no una

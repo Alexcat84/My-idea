@@ -17,6 +17,7 @@ import {
 } from "./enlazador";
 import { armarSnapshot, type FilaChecklistSnapshot } from "./snapshotProyecto";
 import { usoVacio } from "../costmeter";
+import { SYSTEM_ENLACE_PROTECCION } from "../prompts";
 
 /** Snapshot del núcleo con tres actividades: #1, #2 y #3. */
 function snapshotTres() {
@@ -45,6 +46,7 @@ describe("parsearEnlaces: lee lo que hay, no arregla lo que falta", () => {
         protege_indice: 1,
         probabilidad: "probable",
         dolor: "mucho",
+        camino: null,
       },
     ]);
   });
@@ -67,7 +69,7 @@ describe("parsearEnlaces: lee lo que hay, no arregla lo que falta", () => {
 describe("validarEnlaces: todo enlace apunta a algo real, o es NULL declarado", () => {
   it("traduce el índice del snapshot a su uuid (el mapa vive en el servidor)", () => {
     const { enlaces } = validarEnlaces(
-      [{ item_orden: 1, deteccion: "depende de un solo proveedor", protege_indice: 1, probabilidad: "probable", dolor: "mucho" }],
+      [{ item_orden: 1, deteccion: "depende de un solo proveedor", protege_indice: 1, probabilidad: "probable", dolor: "mucho", camino: null }],
       snapshotTres(),
       2
     );
@@ -76,13 +78,14 @@ describe("validarEnlaces: todo enlace apunta a algo real, o es NULL declarado", 
       deteccion: "depende de un solo proveedor",
       probabilidad: "probable",
       dolor: "mucho",
+      camino: null,
     });
     expect(enlaces[1]).toBeNull();
   });
 
   it("null es un valor DECLARADO: la respuesta protege al negocio entero", () => {
     const { enlaces, descartados } = validarEnlaces(
-      [{ item_orden: 1, deteccion: "el negocio no tiene respaldo de datos", protege_indice: null, probabilidad: null, dolor: null }],
+      [{ item_orden: 1, deteccion: "el negocio no tiene respaldo de datos", protege_indice: null, probabilidad: null, dolor: null, camino: null }],
       snapshotTres(),
       1
     );
@@ -94,7 +97,7 @@ describe("validarEnlaces: todo enlace apunta a algo real, o es NULL declarado", 
     // #9 no existe en un snapshot de tres. Convertirlo en null diría "protege al
     // negocio entero", que es una intención que el modelo no tuvo.
     const { enlaces, descartados } = validarEnlaces(
-      [{ item_orden: 1, deteccion: "algo", protege_indice: 9, probabilidad: "probable", dolor: "poco" }],
+      [{ item_orden: 1, deteccion: "algo", protege_indice: 9, probabilidad: "probable", dolor: "poco", camino: null }],
       snapshotTres(),
       1
     );
@@ -104,7 +107,7 @@ describe("validarEnlaces: todo enlace apunta a algo real, o es NULL declarado", 
 
   it("un item_orden fuera del plan del mundo también se descarta", () => {
     const { enlaces, descartados } = validarEnlaces(
-      [{ item_orden: 7, deteccion: "algo", protege_indice: 1, probabilidad: null, dolor: null }],
+      [{ item_orden: 7, deteccion: "algo", protege_indice: 1, probabilidad: null, dolor: null, camino: null }],
       snapshotTres(),
       2
     );
@@ -117,8 +120,8 @@ describe("validarEnlaces: todo enlace apunta a algo real, o es NULL declarado", 
     const idsDelNucleo = new Set(snap.actividades.map((a) => a.id));
     const { enlaces } = validarEnlaces(
       [
-        { item_orden: 1, deteccion: "a", protege_indice: 1, probabilidad: null, dolor: null },
-        { item_orden: 2, deteccion: "b", protege_indice: 3, probabilidad: null, dolor: null },
+        { item_orden: 1, deteccion: "a", protege_indice: 1, probabilidad: null, dolor: null, camino: null },
+        { item_orden: 2, deteccion: "b", protege_indice: 3, probabilidad: null, dolor: null, camino: null },
       ],
       snap,
       2
@@ -133,8 +136,8 @@ describe("la severidad: vocabulario CERRADO, y lo inventado se cae", () => {
   it("acepta los seis valores del nodo canónico", () => {
     const { enlaces } = validarEnlaces(
       [
-        { item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: "muy_probable", dolor: "bastante" },
-        { item_orden: 2, deteccion: "b", protege_indice: null, probabilidad: "poco_probable", dolor: "poco" },
+        { item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: "muy_probable", dolor: "bastante", camino: null },
+        { item_orden: 2, deteccion: "b", protege_indice: null, probabilidad: "poco_probable", dolor: "poco", camino: null },
       ],
       snapshotTres(),
       2
@@ -145,7 +148,7 @@ describe("la severidad: vocabulario CERRADO, y lo inventado se cae", () => {
 
   it("un PUNTAJE numérico se descarta (la matriz de colores te engaña)", () => {
     const { enlaces } = validarEnlaces(
-      [{ item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: "8", dolor: "10" }],
+      [{ item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: "8", dolor: "10", camino: null }],
       snapshotTres(),
       1
     );
@@ -156,11 +159,49 @@ describe("la severidad: vocabulario CERRADO, y lo inventado se cae", () => {
 
   it("una escala inventada en palabras tampoco pasa ('alta', 'crítico')", () => {
     const { enlaces } = validarEnlaces(
-      [{ item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: "alta", dolor: "critico" }],
+      [{ item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: "alta", dolor: "critico", camino: null }],
       snapshotTres(),
       1
     );
     expect(enlaces[0]).toMatchObject({ probabilidad: null, dolor: null });
+  });
+});
+
+describe("EL CAMINO (035): vocabulario cerrado, y lo forzado se calla", () => {
+  it("acepta los cuatro caminos del nodo canónico", () => {
+    const { enlaces } = validarEnlaces(
+      [
+        { item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: null, dolor: null, camino: "evitar" },
+        { item_orden: 2, deteccion: "b", protege_indice: null, probabilidad: null, dolor: null, camino: "transferir" },
+      ],
+      snapshotTres(),
+      2
+    );
+    expect(enlaces[0]).toMatchObject({ camino: "evitar" });
+    expect(enlaces[1]).toMatchObject({ camino: "transferir" });
+  });
+
+  it("un camino inventado ('ignorar', 'escalar') cae a null sin llevarse el resto", () => {
+    const { enlaces } = validarEnlaces(
+      [{ item_orden: 1, deteccion: "a", protege_indice: 1, probabilidad: "probable", dolor: "poco", camino: "ignorar" }],
+      snapshotTres(),
+      1
+    );
+    expect(enlaces[0]).toMatchObject({ camino: null, protege_item: "nuc-a", probabilidad: "probable" });
+  });
+
+  it("sin camino (el modelo no clasificó): null declarado, se calla", () => {
+    const { enlaces } = validarEnlaces(
+      [{ item_orden: 1, deteccion: "a", protege_indice: null, probabilidad: null, dolor: null, camino: null }],
+      snapshotTres(),
+      1
+    );
+    expect(enlaces[0]!.camino).toBeNull();
+  });
+
+  it("el prompt lo pide contra el enum y con la salida del sin-confianza", () => {
+    expect(SYSTEM_ENLACE_PROTECCION).toContain("evitar | mitigar | transferir | aceptar");
+    expect(SYSTEM_ENLACE_PROTECCION).toContain("no fuerces la clasificación");
   });
 });
 

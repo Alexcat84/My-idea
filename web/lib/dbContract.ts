@@ -105,6 +105,14 @@ export type Probabilidad = (typeof PROBABILIDAD)[number];
 export const DOLOR = ["poco", "bastante", "mucho"] as const;
 export type Dolor = (typeof DOLOR)[number];
 
+/** checklist_items.camino (Mundos de protección, migración 035): el camino
+ * elegido ante el riesgo, la anatomía canónica del risk register. El vocabulario
+ * lo manda el nodo del grafo "cuatro caminos ante un riesgo". Lo emite el
+ * enlazador; fuera del enum o sin confianza queda null (se calla, patrón de la
+ * severidad: jamás se aproxima). */
+export const CAMINO = ["evitar", "mitigar", "transferir", "aceptar"] as const;
+export type Camino = (typeof CAMINO)[number];
+
 /** user_seguridad.two_factor_method (migración 029, centro de cuenta): el
  * método del segundo factor. null = 2FA sin configurar. Réplica del I Ching
  * sin 'sms' (no tenemos SMS). */

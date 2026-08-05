@@ -18,7 +18,10 @@ import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
 import { bitacoraCuerpo, bitacoraDeEspacio, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
-import { obtenerProyecto } from "@/lib/db";
+import { obtenerItemsDePlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
+import { esMundoProteccion } from "@/lib/espacios";
+import { armarSnapshot, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
+import { armarRegistro, registroMarkdown, type FilaRespuesta } from "@/lib/registroProteccion";
 import {
   CLAVE_ANALISIS,
   CLAVE_BITACORA,
@@ -193,6 +196,47 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
         completadoAt: am?.completadoAt ?? null,
         generadoAt: ahora,
       }),
+    });
+  }
+
+  // ── Registro de protección (documento del espacio, P3) ────────────────────
+  if (doc.startsWith("registro:")) {
+    const dominio = doc.slice("registro:".length);
+    // Solo los tres mundos de protección y solo con plan: el índice no lo ofrece
+    // en ningún otro caso, así que llegar aquí sin eso es una clave inventada.
+    if (!esMundoProteccion(dominio) || ciclosDeDominio(dominio).length === 0) {
+      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+    }
+    const { data: filasMundo, error: errRegistro } = await supabase
+      .from("checklist_items")
+      .select("id, texto, etapa, orden, estado, protege_item, deteccion, probabilidad, dolor, camino")
+      .eq("project_id", projectId)
+      .eq("dominio", dominio);
+    if (errRegistro) {
+      // Fallar ruidoso (BANCO §9): sin registro a medias ni plantilla.
+      return NextResponse.json({ error: "no pudimos leer tu registro; intenta de nuevo en un momento" }, { status: 500 });
+    }
+    // Las actividades del núcleo con su #N, del MISMO armador que usó el
+    // enlazador: pantalla, papel y enlace comparten numeración.
+    const planCore = await obtenerPlanCoreVigente(supabase, projectId);
+    const filasNucleo = planCore ? await obtenerItemsDePlan(supabase, projectId, planCore) : [];
+    const actividades = armarSnapshot(filasNucleo as unknown as FilaChecklistSnapshot[]).actividades.map((a) => ({
+      id: a.id,
+      indice: a.indice,
+      titulo: a.titulo,
+    }));
+    const entradas = armarRegistro((filasMundo ?? []) as unknown as FilaRespuesta[], actividades);
+    const nombreDom = nombreMundo(dominio);
+    const generado = new Date().toISOString();
+    return NextResponse.json({
+      titulo: `Registro de ${nombreDom}`,
+      nombre,
+      archivo: nombreArchivo(nombre, `Registro de ${nombreDom}`),
+      markdown: [
+        `> ${nombre} · Registro de ${nombreDom} · ${fechaHumanaCorta(generado)}`,
+        "",
+        registroMarkdown(nombreDom, entradas),
+      ].join("\n"),
     });
   }
 

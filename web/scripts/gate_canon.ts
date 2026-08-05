@@ -456,6 +456,72 @@ async function main() {
   await capturarCanon(canon, "08_mundos_activos.html", "10c_mundo_cierre_canon_380.png", "Mundo cierre movil 380", true);
   await seccionMundo.getByRole("button", { name: "Todavía no" }).click();
 
+  // ── Mundos de protección (P3): el REGISTRO y sus documentos, con la tubería
+  // VIVA (snapshot → entrevista anclada → plan → enlazador → registro). Es el
+  // par que el fundador pidió para el registro, y de paso la corrida real de
+  // P1/P2/P2b. Un segundo mundo (risk_management) porque el del canon 08 es de
+  // mejora (quality) y ahí el registro no existe por diseño (ruido cero).
+  // Envuelto: si algo falla, el gate sigue y avisa; las demás pantallas no
+  // dependen de esto.
+  try {
+    const resUnlockProt = await context.request.post(
+      `${BASE_URL}/api/project/${idProyecto}/world/risk_management/unlock`
+    );
+    if (!resUnlockProt.ok()) throw new Error(`unlock risk_management HTTP ${resUnlockProt.status()}`);
+    await app.goto(`${BASE_URL}/idea/${idProyecto}?vista=mundo&dominio=risk_management`);
+    const explorarProt = app.getByRole("button", { name: "Explorar este mundo" }).first();
+    await explorarProt.waitFor({ state: "visible", timeout: 30000 });
+    await explorarProt.click();
+
+    const RESPUESTAS_PROT = [
+      "Todo mi sustrato viene de un solo proveedor y si me falla me quedo sin armar kits.",
+      "Cobro por adelantado y entrego a mano; si me enfermo una semana, no entrego nada.",
+      "No tengo escrito que hacer si un cliente reclama un kit danado.",
+      "Con eso me basta por ahora, armemos el plan.",
+    ];
+    const hayOfertaProt = async () =>
+      (await app.getByText("Tu recorrido hasta aquí", { exact: false }).count()) +
+        (await app.getByText("Suficiente para avanzar", { exact: false }).count()) >
+      0;
+    for (const respuesta of RESPUESTAS_PROT) {
+      if (await hayOfertaProt()) break;
+      const campo = app.locator("textarea:not([disabled])").first();
+      await campo.waitFor({ timeout: 120000 });
+      await campo.fill(respuesta);
+      await app.getByRole("button", { name: "Enviar" }).click();
+      await Promise.race([
+        app.locator("textarea:not([disabled])").first().waitFor({ timeout: 180000 }),
+        app.getByText("Tu recorrido hasta aquí", { exact: false }).waitFor({ timeout: 180000 }),
+        app.getByText("Suficiente para avanzar", { exact: false }).waitFor({ timeout: 180000 }),
+      ]).catch(() => {});
+    }
+    const btnPlanProt = app.getByRole("button", { name: /Generar mi plan/i }).first();
+    if ((await btnPlanProt.count()) > 0) await btnPlanProt.click();
+    else await app.getByText("Generar mi plan con lo que ya conté").click();
+    const ctxProt = app.locator("#contexto-final");
+    if ((await ctxProt.count()) > 0) {
+      await ctxProt.fill("Trabajo sola; que las protecciones sean simples.");
+      await app.getByRole("button", { name: "Armar mi plan" }).click();
+    }
+    await app.getByRole("button", { name: "Pasar a Manos a la Obra" }).first().waitFor({ timeout: 240000 });
+
+    // El registro vive en el HUB del mundo: se entra por su puerta.
+    await app.goto(`${BASE_URL}/idea/${idProyecto}?vista=mundo&dominio=risk_management`);
+    await app.getByText("Registro de Riesgos Bajo Control", { exact: false }).waitFor({ timeout: 30000 });
+    await capturarApp(app, "14_proteccion_registro");
+
+    // Los documentos del espacio: ambos recuadros, el Registro con su chip.
+    await app.getByRole("button", { name: "Tus documentos" }).first().click();
+    await app.getByText("Reportes globales", { exact: false }).waitFor({ timeout: 30000 });
+    await app.getByText("Registro de Riesgos Bajo Control", { exact: false }).waitFor({ timeout: 15000 });
+    await capturarApp(app, "14b_proteccion_documentos");
+    await app.getByRole("button", { name: "← Volver" }).first().click();
+    await asegurarManos(app);
+  } catch (e) {
+    console.warn("gate: no se pudo capturar el registro de protección:", (e as Error).message);
+    await asegurarManos(app);
+  }
+
   // ── Fase 3.8: el sentido del tiempo (canon 09/10/11) desde la sesión real.
   // Requiere la migración 018 aplicada. CERO swallow: cada paso espera lo suyo
   // y LANZA si falla -- el gate es un instrumento permanente, no un adorno.

@@ -13,6 +13,7 @@
  *
  * Sin guiones largos en el texto generado: es copy visible.
  */
+import { esMundoProteccion } from "./espacios";
 import { fechaHumanaConAno } from "./fechas";
 
 /** Un ciclo del viaje: el plan original o cada seguimiento posterior. */
@@ -49,7 +50,7 @@ export interface MundoExpediente {
 export interface DocumentoIndice {
   /** identificador estable que la UI manda de vuelta para pedir el contenido */
   clave: string;
-  tipo: "ciclo" | "expediente" | "bitacora" | "analisis" | "reporte";
+  tipo: "ciclo" | "expediente" | "bitacora" | "analisis" | "reporte" | "registro";
   titulo: string;
   subtitulo: string;
   /** ISO; null solo si el documento no cuelga de una fecha concreta */
@@ -108,6 +109,8 @@ export interface DatosExpediente {
 export const claveDeCiclo = (planId: string) => `ciclo:${planId}`;
 /** Fase 3 (tanda 5): la clave del Reporte de un mundo (documento por espacio). */
 export const claveDeReporte = (dominio: string) => `reporte:${dominio}`;
+/** Mundos de protección (P3): la herramienta canónica instanciada, descargable. */
+export const claveDeRegistro = (dominio: string) => `registro:${dominio}`;
 export const CLAVE_EXPEDIENTE = "expediente";
 export const CLAVE_BITACORA = "bitacora";
 export const CLAVE_ANALISIS = "analisis";
@@ -215,6 +218,19 @@ export function indiceDeDocumentos(
         fecha: null,
         espacio: m.nombre,
       });
+      // Mundos de protección (P3): el registro es SU herramienta canónica, así
+      // que solo existe en los tres mundos de protección (ruido cero: un mundo
+      // de mejora no lo lista jamás).
+      if (esMundoProteccion(m.dominio)) {
+        docs.push({
+          clave: claveDeRegistro(m.dominio),
+          tipo: "registro",
+          titulo: `Registro de ${m.nombre}`,
+          subtitulo: "Lo que este mundo detectó y la respuesta que lo atiende, sobre tu plan real",
+          fecha: null,
+          espacio: m.nombre,
+        });
+      }
     }
   }
   return docs;

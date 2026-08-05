@@ -248,7 +248,7 @@ export function Descargas({
         >
           {esExpediente ? (
             <IconoExpediente />
-          ) : doc.tipo === "analisis" || doc.tipo === "reporte" ? (
+          ) : doc.tipo === "analisis" || doc.tipo === "reporte" || doc.tipo === "registro" ? (
             <IconoAnalisis />
           ) : doc.tipo === "bitacora" ? (
             <IconoBitacora />

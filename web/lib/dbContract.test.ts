@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { BANDA, CAPACIDAD_SEMANAL, CHECKLIST_ESTADO, DOLOR, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROBABILIDAD, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { BANDA, CAMINO, CAPACIDAD_SEMANAL, CHECKLIST_ESTADO, DOLOR, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROBABILIDAD, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -130,6 +130,10 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     assertSubconjuntoDelContrato("checklist_items.dolor", DOLOR);
   });
 
+  it("checklist_items.camino (Mundos de protección, migration 035)", () => {
+    assertSubconjuntoDelContrato("checklist_items.camino", CAMINO);
+  });
+
   it("la severidad NO admite puntajes numéricos (lo manda el grafo, no nosotros)", () => {
     for (const clave of ["checklist_items.probabilidad", "checklist_items.dolor"]) {
       for (const permitido of contrato.get(clave)!) {
@@ -138,7 +142,7 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
     }
   });
 
-  it("parseo de sanidad: encontro los 14 CHECK esperados con al menos un literal cada uno", () => {
+  it("parseo de sanidad: encontro los 15 CHECK esperados con al menos un literal cada uno", () => {
     for (const clave of [
       "sessions.tipo",
       "plans.etiqueta",
@@ -154,6 +158,7 @@ describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta 
       "project_modos.capacidad_semanal",
       "checklist_items.probabilidad",
       "checklist_items.dolor",
+      "checklist_items.camino",
     ]) {
       const permitidos = contrato.get(clave);
       expect(permitidos).toBeDefined();
