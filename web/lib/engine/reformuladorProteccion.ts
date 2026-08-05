@@ -26,6 +26,7 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import { costoAcumuladoUsd, llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_REFORMULADOR_PROTECCION } from "../prompts";
+import type { EventoInterprete } from "./interprete";
 
 /** Una pregunta es una línea corta. Más allá de esto, lo que volvió no es una
  * pregunta anclada: es el modelo explicando teoría, y se descarta. */
@@ -119,7 +120,16 @@ export async function anclarPregunta(
  * solo en los mundos de protección: nadie más lo lleva).
  */
 export async function anclarResultadoTurno<
-  R extends { tipo: string; pregunta?: string; estado: { snapshotNucleo: string | null; preguntaPendiente: string | null; ultimasPreguntas: string[] } }
+  R extends {
+    tipo: string;
+    pregunta?: string;
+    estado: {
+      snapshotNucleo: string | null;
+      preguntaPendiente: string | null;
+      ultimasPreguntas: string[];
+      fallbackEvents: EventoInterprete[];
+    };
+  }
 >(
   client: Anthropic,
   resultado: R,
@@ -131,14 +141,28 @@ export async function anclarResultadoTurno<
   }
   const original = resultado.pregunta;
   const anclaje = await anclarPregunta(client, original, resultado.estado.snapshotNucleo, acumulado, opts);
-  if (!anclaje.anclada) return { resultado, acumulado: anclaje.acumulado, anclaje };
+
+  // El PAR va siempre a los eventos de la sesion, se haya anclado o no: es lo
+  // que le permite al fundador muestrear si la intencion sobrevivio, y lo que
+  // convierte un anclaje pobre en algo visible en vez de invisible.
+  const evento: EventoInterprete = {
+    tipo: "anclaje_proteccion",
+    de: original,
+    a: anclaje.pregunta,
+    ...(anclaje.fallo ? { motivo: anclaje.fallo } : {}),
+  };
+  const conEvento = { ...resultado.estado, fallbackEvents: [...resultado.estado.fallbackEvents, evento] };
+
+  if (!anclaje.anclada) {
+    return { resultado: { ...resultado, estado: conEvento }, acumulado: anclaje.acumulado, anclaje };
+  }
 
   const ultimas = resultado.estado.ultimasPreguntas.map((q) => (q === original ? anclaje.pregunta : q));
   return {
     resultado: {
       ...resultado,
       pregunta: anclaje.pregunta,
-      estado: { ...resultado.estado, preguntaPendiente: anclaje.pregunta, ultimasPreguntas: ultimas },
+      estado: { ...conEvento, preguntaPendiente: anclaje.pregunta, ultimasPreguntas: ultimas },
     },
     acumulado: anclaje.acumulado,
     anclaje,

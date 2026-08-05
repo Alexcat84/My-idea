@@ -127,11 +127,25 @@ export interface EventoMundoIncompatible {
   motivo: string | null;
 }
 
+/** Mundos de proteccion (P2b): el par que deja ver si el anclaje conservo la
+ * intencion. `de` es la pregunta del grafo y `a` la anclada, juntas, para que el
+ * fundador pueda muestrear la supervivencia real sin reconstruir nada: la
+ * garantia mecanica es el contrato del prompt y el fallback, pero el juicio de
+ * si la intencion sobrevivio es humano y necesita ver las dos. Cuando el anclaje
+ * falla, viaja `motivo` y `a` queda igual que `de`. */
+export interface EventoAnclajeProteccion {
+  tipo: "anclaje_proteccion";
+  de: string;
+  a: string;
+  motivo?: string;
+}
+
 export type EventoInterprete =
   | EventoFallback
   | EventoDecisionTurno
   | EventoPuertaReelegida
-  | EventoMundoIncompatible;
+  | EventoMundoIncompatible
+  | EventoAnclajeProteccion;
 
 /** Reparo 1 (cadena estricta): ver docstring de _reparar_camino_cadena. */
 function repararCaminoCadena(actualId: string, camino: string[], graph: Grafo, visitados: Set<string>): string[] {

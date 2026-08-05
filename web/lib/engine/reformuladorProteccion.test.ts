@@ -19,6 +19,7 @@ import { anclarPregunta, anclarResultadoTurno, esPreguntaUsable } from "./reform
 import { SYSTEM_REFORMULADOR_PROTECCION } from "../prompts";
 import { armarSnapshot, snapshotComoTexto, type FilaChecklistSnapshot } from "./snapshotProyecto";
 import { usoVacio } from "../costmeter";
+import type { EventoInterprete } from "./interprete";
 
 const PREGUNTA_DEL_GRAFO = "¿Qué podría salir mal en tu operación y qué harías si pasara?";
 
@@ -147,7 +148,12 @@ describe("BARANDA (c): calidad plena y costo medido", () => {
 });
 
 describe("LA FRONTERA: los mundos de mejora y el núcleo no se tocan", () => {
-  const estadoBase = { snapshotNucleo: null as string | null, preguntaPendiente: "x", ultimasPreguntas: ["x"] };
+  const estadoBase = {
+    snapshotNucleo: null as string | null,
+    preguntaPendiente: "x",
+    ultimasPreguntas: ["x"],
+    fallbackEvents: [] as EventoInterprete[],
+  };
 
   it("sin snapshot (núcleo y mundos de mejora) NO se llama al modelo", async () => {
     const c = clienteFalso("no debería usarse");
@@ -185,6 +191,7 @@ describe("LA FRONTERA: los mundos de mejora y el núcleo no se tocan", () => {
           snapshotNucleo: snapshotTexto(),
           preguntaPendiente: PREGUNTA_DEL_GRAFO,
           ultimasPreguntas: ["algo previo", PREGUNTA_DEL_GRAFO],
+          fallbackEvents: [] as EventoInterprete[],
         },
       },
       usoVacio()
@@ -204,6 +211,7 @@ describe("LA FRONTERA: los mundos de mejora y el núcleo no se tocan", () => {
           snapshotNucleo: snapshotTexto(),
           preguntaPendiente: PREGUNTA_DEL_GRAFO,
           ultimasPreguntas: [PREGUNTA_DEL_GRAFO],
+          fallbackEvents: [] as EventoInterprete[],
         },
       },
       usoVacio()
@@ -211,6 +219,59 @@ describe("LA FRONTERA: los mundos de mejora y el núcleo no se tocan", () => {
     expect(r.resultado.pregunta).toBe(PREGUNTA_DEL_GRAFO);
     expect(r.resultado.estado.preguntaPendiente).toBe(PREGUNTA_DEL_GRAFO);
     expect(r.anclaje!.fallo).toContain("caída");
+  });
+
+  // El fundador muestrea a mano si la intención sobrevivió: para eso necesita
+  // ver LA PAREJA (la del grafo y la anclada) sin reconstruir nada.
+  it("el PAR queda registrado en los eventos de la sesión, se haya anclado o no", async () => {
+    const anclada = "Para cerrar el acuerdo con el proveedor (#1), ¿qué podría salir mal?";
+    const r = await anclarResultadoTurno(
+      clienteFalso(anclada),
+      {
+        tipo: "pregunta",
+        pregunta: PREGUNTA_DEL_GRAFO,
+        estado: {
+          snapshotNucleo: snapshotTexto(),
+          preguntaPendiente: PREGUNTA_DEL_GRAFO,
+          ultimasPreguntas: [PREGUNTA_DEL_GRAFO],
+          fallbackEvents: [] as EventoInterprete[],
+        },
+      },
+      usoVacio()
+    );
+    const evento = r.resultado.estado.fallbackEvents.at(-1);
+    expect(evento).toMatchObject({ tipo: "anclaje_proteccion", de: PREGUNTA_DEL_GRAFO, a: anclada });
+  });
+
+  it("cuando el anclaje falla, el par lleva el motivo y las dos preguntas iguales", async () => {
+    const r = await anclarResultadoTurno(
+      clienteFalso(new Error("caída")),
+      {
+        tipo: "pregunta",
+        pregunta: PREGUNTA_DEL_GRAFO,
+        estado: {
+          snapshotNucleo: snapshotTexto(),
+          preguntaPendiente: PREGUNTA_DEL_GRAFO,
+          ultimasPreguntas: [PREGUNTA_DEL_GRAFO],
+          fallbackEvents: [] as EventoInterprete[],
+        },
+      },
+      usoVacio()
+    );
+    const evento = r.resultado.estado.fallbackEvents.at(-1) as { tipo: string; de: string; a: string; motivo?: string };
+    expect(evento.tipo).toBe("anclaje_proteccion");
+    expect(evento.de).toBe(PREGUNTA_DEL_GRAFO);
+    expect(evento.a).toBe(PREGUNTA_DEL_GRAFO);
+    expect(evento.motivo).toContain("caída");
+  });
+
+  it("sin snapshot no se registra ningún par (no hubo anclaje que muestrear)", async () => {
+    const r = await anclarResultadoTurno(
+      clienteFalso("no debería usarse"),
+      { tipo: "pregunta", pregunta: PREGUNTA_DEL_GRAFO, estado: { ...estadoBase } },
+      usoVacio()
+    );
+    expect(r.resultado.estado.fallbackEvents).toEqual([]);
   });
 
   it("los dos sitios donde nace una pregunta de mundo lo enganchan", () => {
