@@ -17,7 +17,8 @@ import { useEffect, useMemo, useState } from "react";
 import { CampoConVoz } from "./CampoConVoz";
 import { ETIQUETA_ESTADO, IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
-import type { ChecklistEstado } from "@/lib/dbContract";
+import { BANDA, type Banda, type ChecklistEstado } from "@/lib/dbContract";
+import { rangoDeBanda } from "@/lib/engine/estimacion";
 import type { CambioItem, ItemChecklistUI } from "./ManosALaObra";
 
 /** Días redondeados entre dos fechas (para el chip de cumplimiento). */
@@ -98,6 +99,10 @@ export function DetalleActividad({
   const [bMotivo, setBMotivo] = useState(item.no_aplica_motivo ?? "");
   const [bCompletado, setBCompletado] = useState<string | null>(item.completed_at ?? null);
   const [menuAbierto, setMenuAbierto] = useState(false);
+  // Scheduler F1: la banda también es borrador (se corrige y se guarda con el
+  // resto). null = sin estimar; entonces no se muestra la sección de esfuerzo.
+  const [bBanda, setBBanda] = useState<Banda | null>(item.banda ?? null);
+  const [corrigiendoBanda, setCorrigiendoBanda] = useState(false);
   const hecho = bEstado === "hecho";
   const retirada = bEstado === "no_aplica";
 
@@ -120,6 +125,7 @@ export function DetalleActividad({
       cambio.no_aplica_motivo = bMotivo.trim() || null;
     }
     if (notaCambiada) cambio.nota = nota.trim() || null;
+    if (bBanda && bBanda !== (item.banda ?? null)) cambio.banda = bBanda;
     if (Object.keys(cambio).length > 0) onCambio(cambio);
     onCerrar();
   }
@@ -260,6 +266,77 @@ export function DetalleActividad({
               </div>
             )}
           </div>
+
+          {/* ESFUERZO (Scheduler F1): el rango HONESTO de la banda estimada, con
+              corrección del usuario. Si el ítem no tiene banda (plan viejo o la
+              estimación falló) la sección NO aparece: sin rango, cero invención. */}
+          {bBanda && (
+            <div className="mt-6">
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Esfuerzo</p>
+                {!corrigiendoBanda && (
+                  <button
+                    onClick={() => setCorrigiendoBanda(true)}
+                    disabled={ocupado}
+                    className="shrink-0 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[12px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
+                  >
+                    corregir
+                  </button>
+                )}
+              </div>
+              {!corrigiendoBanda ? (
+                <div className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
+                  <p className="text-[14px]">
+                    <span className="font-semibold">{rangoDeBanda(bBanda)}</span>
+                    {item.espera_externa ? <span className="text-dim"> · depende de terceros</span> : null}
+                  </p>
+                  <p className="mt-1 text-[12px] text-dim">
+                    {item.espera_externa
+                      ? "Es un estimado del trabajo tuyo. Además arrastra espera de otros, así que en el calendario ocupa más de lo que trabajas."
+                      : "Es un estimado para orientarte. Si no calza con tu realidad, corrígelo."}
+                  </p>
+                </div>
+              ) : (
+                <div className="rounded-cinta border border-accent/40 bg-surface-2 px-4 py-3">
+                  <p className="mb-2.5 text-[12.5px] text-dim">¿Cuánto te toma de verdad?</p>
+                  <div className="flex flex-wrap gap-2">
+                    {BANDA.map((b) => {
+                      const activa = b === bBanda;
+                      return (
+                        <button
+                          key={b}
+                          type="button"
+                          onClick={() => {
+                            setBBanda(b);
+                            setCorrigiendoBanda(false);
+                          }}
+                          disabled={ocupado}
+                          aria-pressed={activa}
+                          className={
+                            "min-h-[40px] rounded-[10px] border px-3.5 py-2 text-[13px] font-semibold disabled:opacity-50 " +
+                            (activa
+                              ? "border-accent bg-accent/15 text-accent"
+                              : "border-hairline text-ink hover:border-accent/60")
+                          }
+                        >
+                          {rangoDeBanda(b)}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <button
+                    onClick={() => {
+                      setBBanda(item.banda ?? null);
+                      setCorrigiendoBanda(false);
+                    }}
+                    className="mt-3 text-[12.5px] text-dim hover:text-ink"
+                  >
+                    cancelar
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* FECHA: solo si el ítem tiene una fecha planificada (modo fechas) */}
           {item.fecha_base && (

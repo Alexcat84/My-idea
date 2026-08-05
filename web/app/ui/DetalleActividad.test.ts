@@ -24,6 +24,8 @@ const base: ItemChecklistUI = {
   fecha_base: null,
   fecha_base_origen: null,
   fecha_base_original: null,
+  banda: null,
+  espera_externa: null,
   created_at: "2026-07-01T10:00:00Z",
   updated_at: "2026-07-01T10:00:00Z",
 };
@@ -86,6 +88,32 @@ describe("DetalleActividad — el chip de cumplimiento es espejo (Fase 4.3.2)", 
     const html = pintar({ fecha_base: "2026-08-07T12:00:00Z" });
     expect(html).toContain("cambiar fecha");
     expect(html).toContain("se conserva en tu historia");
+  });
+
+  // Scheduler F1: el esfuerzo se muestra como RANGO honesto, jamás como un
+  // número de horas inventado, y solo si el ítem tiene banda estimada.
+  it("con banda → muestra el rango honesto y ofrece corregirlo", () => {
+    const html = pintar({ banda: "M" });
+    expect(html).toContain("Esfuerzo");
+    expect(html).toContain("~2-4 h");
+    expect(html).toContain("corregir");
+  });
+
+  it("banda XL → 'varios días' (rango, no un número de horas)", () => {
+    const html = pintar({ banda: "XL" });
+    expect(html).toContain("varios días");
+    expect(html).not.toMatch(/\d+\s*horas/);
+  });
+
+  it("con espera externa → lo dice, sin culpar al usuario del tiempo de otros", () => {
+    const html = pintar({ banda: "S", espera_externa: true });
+    expect(html).toContain("depende de terceros");
+  });
+
+  it("sin banda (plan viejo o estimación fallida) → NO hay sección de esfuerzo: cero invención", () => {
+    const html = pintar({ banda: null });
+    expect(html).not.toContain("Esfuerzo");
+    expect(html).not.toContain("~2-4 h");
   });
 
   it("ya movida → dice cuál era la original (la historia no se reescribe)", () => {

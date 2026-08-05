@@ -17,7 +17,7 @@
  *        se reescribe.
  */
 import { NextResponse } from "next/server";
-import { CHECKLIST_ESTADO, esActivo, type ChecklistEstado, type FechaBaseOrigen } from "@/lib/dbContract";
+import { BANDA, CHECKLIST_ESTADO, esActivo, type Banda, type ChecklistEstado, type FechaBaseOrigen } from "@/lib/dbContract";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
 
@@ -38,12 +38,15 @@ interface ItemChecklist {
   fecha_base: string | null;
   fecha_base_origen: FechaBaseOrigen | null;
   fecha_base_original: string | null;
+  // Scheduler F1: la banda de esfuerzo estimada + si arrastra espera de terceros.
+  banda: Banda | null;
+  espera_externa: boolean | null;
   created_at: string;
   updated_at: string;
 }
 
 const COLUMNAS =
-  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, created_at, updated_at";
+  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, created_at, updated_at";
 
 /** Un timestamp ISO válido y no futuro (tolera 1 min de desfase de reloj). */
 function fechaIsoValida(valor: unknown): string | null {
@@ -72,10 +75,11 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   // cada dominio sea el último (Fase 3.6: la pantalla Manos a la Obra lo
   // necesita; plan_id es uuid y su orden era arbitrario).
   //
-  // no_aplica_motivo llega con la migración 030. Si el código se despliega un
-  // instante antes de aplicarla, el select entero fallaría y la LECTURA del
-  // checklist se caería para todos: por eso se reintenta sin esa columna (el
-  // motivo se lee null) en vez de romper. Patrón de project_unlocks (pre-026).
+  // no_aplica_motivo llega con la migración 030, y banda/espera_externa con la
+  // 033. Si el código se despliega un instante antes de aplicar alguna, el
+  // select entero fallaría y la LECTURA del checklist se caería para todos: por
+  // eso se reintenta degradando las columnas nuevas (se leen null) en vez de
+  // romper. Patrón de project_unlocks (pre-026).
   const leer = (columnas: string) =>
     supabase
       .from("checklist_items")
@@ -85,13 +89,17 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       .order("etapa", { ascending: true })
       .order("orden", { ascending: true });
   let { data, error } = await leer(COLUMNAS);
-  if (error) ({ data, error } = await leer(COLUMNAS.replace(", no_aplica_motivo", "")));
+  if (error) ({ data, error } = await leer(COLUMNAS.replace(", banda, espera_externa", "")));
+  if (error)
+    ({ data, error } = await leer(COLUMNAS.replace(", banda, espera_externa", "").replace(", no_aplica_motivo", "")));
   if (error) {
     return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
   }
   const items = ((data ?? []) as Array<Partial<ItemChecklist>>).map((i) => ({
     ...i,
     no_aplica_motivo: i.no_aplica_motivo ?? null,
+    banda: i.banda ?? null,
+    espera_externa: i.espera_externa ?? null,
   })) as ItemChecklist[];
 
   // Agrupado plan -> etapas (el orden de inserción ya viene garantizado).
@@ -137,6 +145,7 @@ interface CambiosItem {
   fecha_base?: string | null;
   fecha_base_origen?: FechaBaseOrigen;
   fecha_base_original?: string | null;
+  banda?: Banda;
 }
 
 export async function PATCH(request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -149,6 +158,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     completed_at?: unknown;
     no_aplica_motivo?: unknown;
     fecha_base?: unknown;
+    banda?: unknown;
   };
   try {
     body = await request.json();
@@ -213,6 +223,16 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     cambios.no_aplica_motivo = null;
   }
 
+  // Scheduler F1 — corrección de banda: el usuario ajusta la estimación del
+  // modelo. Se valida contra BANDA; solo corrige (no admite null: para "quitar"
+  // no hay caso de uso, y null es "sin estimar", no una elección del usuario).
+  if (body.banda !== undefined) {
+    if (typeof body.banda !== "string" || !(BANDA as readonly string[]).includes(body.banda)) {
+      return NextResponse.json({ error: `banda inválida; usa una de: ${BANDA.join(", ")}` }, { status: 400 });
+    }
+    cambios.banda = body.banda as Banda;
+  }
+
   // Fase 3.8 §4 — fecha_base (replanificación). Se resuelve más abajo con el
   // estado previo del ítem (para preservar la primera fecha). Aquí solo se
   // valida la forma.
@@ -232,10 +252,11 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     cambios.nota === undefined &&
     cambios.completed_at === undefined &&
     cambios.no_aplica_motivo === undefined &&
-    nuevaFechaBase === undefined
+    nuevaFechaBase === undefined &&
+    cambios.banda === undefined
   ) {
     return NextResponse.json(
-      { error: "nada que actualizar: manda estado, nota, completed_at, no_aplica_motivo y/o fecha_base" },
+      { error: "nada que actualizar: manda estado, nota, completed_at, no_aplica_motivo, fecha_base y/o banda" },
       { status: 400 }
     );
   }
@@ -263,20 +284,27 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     no_aplica_motivo: string | null;
     completed_at: string | null;
     nota: string | null;
+    banda?: Banda | null;
   };
   let prev: PrevItem | null = null;
   // Se lee el previo para cualquier decisión que la BITÁCORA deba comparar: el
-  // cambio de estado, mover la fecha (base o de realización) y la nota. Así la
-  // historia del usuario queda completa (Fase 4.8).
+  // cambio de estado, mover la fecha (base o de realización), la nota y la banda
+  // corregida. Así la historia del usuario queda completa (Fase 4.8).
+  // 'banda' solo se pide cuando se corrige banda: ese camino está UI-gated a que
+  // 033 exista, así que un PATCH de estado normal jamás depende de esa columna.
   if (
     nuevaFechaBase !== undefined ||
     cambios.estado !== undefined ||
     cambios.completed_at !== undefined ||
-    cambios.nota !== undefined
+    cambios.nota !== undefined ||
+    cambios.banda !== undefined
   ) {
+    const colsPrev =
+      "estado, fecha_base, fecha_base_origen, fecha_base_original, no_aplica_motivo, completed_at, nota" +
+      (cambios.banda !== undefined ? ", banda" : "");
     const { data: previo } = await supabase
       .from("checklist_items")
-      .select("estado, fecha_base, fecha_base_origen, fecha_base_original, no_aplica_motivo, completed_at, nota")
+      .select(colsPrev)
       .eq("id", itemId)
       .eq("project_id", projectId)
       .single();
@@ -296,18 +324,35 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     }
   }
 
-  const { data, error } = await supabase
+  // 'banda' solo se pide de vuelta cuando se corrigió: así un PATCH normal no
+  // depende de la 033. Con la lista de columnas armada en runtime, Supabase no
+  // puede inferir la fila: se castea al tipo real (mismo patrón que el GET).
+  const colsRet =
+    "id, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, dominio, updated_at" +
+    (cambios.banda !== undefined ? ", banda" : "");
+  const { data: filaCruda, error } = await supabase
     .from("checklist_items")
     .update(cambios)
     .eq("id", itemId)
     .eq("project_id", projectId)
-    .select(
-      "id, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, dominio, updated_at"
-    )
+    .select(colsRet)
     .single();
-  if (error || !data) {
+  if (error || !filaCruda) {
     return NextResponse.json({ error: "ítem no encontrado" }, { status: 404 });
   }
+  const data = filaCruda as unknown as {
+    id: string;
+    estado: ChecklistEstado;
+    nota: string | null;
+    completed_at: string | null;
+    no_aplica_motivo: string | null;
+    fecha_base: string | null;
+    fecha_base_origen: FechaBaseOrigen | null;
+    fecha_base_original: string | null;
+    dominio: string | null;
+    updated_at: string;
+    banda?: Banda | null;
+  };
 
   // Fase 3 (Espacios): cada evento de bitácora de un ítem viaja con el dominio
   // del ítem, para que la entrada sea auto-descriptiva y su espacio no dependa
@@ -378,6 +423,18 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     const notaNueva = (data.nota ?? "").trim();
     if (cambios.nota !== undefined && notaNueva && notaNueva !== (prev.nota ?? "").trim()) {
       await registrarBitacora(supabase, projectId, "nota_escrita", { item: itemId, dominio: dom });
+    }
+    // Scheduler F1 — banda corregida por el usuario {de, a}: telemetría de oro
+    // para el multiplicador por banda de F4 (dónde el modelo se equivoca y hacia
+    // dónde). Solo cuando de verdad cambió (no re-elegir la misma).
+    const bandaNueva = (data.banda ?? null) as Banda | null;
+    if (cambios.banda !== undefined && bandaNueva && bandaNueva !== (prev.banda ?? null)) {
+      await registrarBitacora(supabase, projectId, "banda_corregida", {
+        item: itemId,
+        dominio: dom,
+        de: prev.banda ?? null,
+        a: bandaNueva,
+      });
     }
   }
 

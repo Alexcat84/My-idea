@@ -44,6 +44,7 @@ import {
   type NodoConTipo,
 } from "@/lib/db";
 import { derivarChecklist } from "@/lib/engine/checklist";
+import { estimarLoteMayoria } from "@/lib/engine/estimacion";
 import { cargarGrafo } from "@/lib/engine/graph";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
@@ -302,14 +303,42 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // Fase 3.3: todo plan de entrevista (inicial|completo|seguimiento)
         // deriva su checklist determinístico; organizador y reporte_numeros
         // nunca pasan por esta ruta.
-        await insertarChecklist(supabase, projectId, planId, derivarChecklist(resultado.markdown), dominioSesion);
+        // Scheduler F1: la estimación NACE con el plan. Se estima la banda de
+        // esfuerzo (mayoría-de-3) de cada ítem ANTES de insertarlo. Si la
+        // estimación falla, los ítems quedan SIN banda y el plan JAMÁS se
+        // bloquea (fallback declarado); el fallo deja síntoma en los eventos.
+        const itemsDerivados = derivarChecklist(resultado.markdown);
+        let itemsChecklist: Parameters<typeof insertarChecklist>[3] = itemsDerivados;
+        let acumuladoTrasEstimacion = acumuladoFinal;
+        try {
+          const est = await estimarLoteMayoria(client, itemsDerivados, acumuladoFinal);
+          acumuladoTrasEstimacion = est.acumulado;
+          itemsChecklist = itemsDerivados.map((it, i) => ({
+            ...it,
+            banda: est.estimaciones[i]?.banda ?? null,
+            espera_externa: est.estimaciones[i]?.espera_externa ?? null,
+          }));
+          const conBanda = est.estimaciones.filter(Boolean).length;
+          eventosPlan.push({
+            tipo: "estimacion_banda",
+            total: itemsDerivados.length,
+            con_banda: conBanda,
+          });
+        } catch (e) {
+          // Fallback ruidoso: el plan sigue sin bandas, pero queda el síntoma.
+          eventosPlan.push({
+            tipo: "estimacion_fallida",
+            texto: e instanceof Error ? e.message : String(e),
+          });
+        }
+        await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion);
 
         const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];
         const { calidad, acumulado: acumuladoConJuez } = await evaluarCalidadSesion(
           client,
           eventosSesion,
           graph,
-          acumuladoFinal
+          acumuladoTrasEstimacion
         );
 
         const rutaConModos = recorrido.ruta.map((nid, i) => ({ node_id: nid, tipo: recorrido.modos[i] }));

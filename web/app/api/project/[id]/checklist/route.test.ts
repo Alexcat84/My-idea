@@ -239,3 +239,49 @@ describe("PATCH /api/project/[id]/checklist — sentido del tiempo (Fase 3.8)", 
     expect(estadoFalso.bitacora.length).toBe(antes);
   });
 });
+
+// Scheduler F1 — la corrección de la banda por el usuario. Es telemetría de oro
+// para el multiplicador por banda de F4: dónde se equivoca el modelo y hacia
+// dónde. Por eso el evento guarda {de, a} y solo se registra si CAMBIÓ de veras.
+describe("PATCH banda (Scheduler F1): corrección del usuario", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("corrige la banda y la persiste en el ítem", async () => {
+    sembrarItem({ banda: "M" });
+    const res = await PATCH(req({ item_id: "it1", banda: "L" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(estadoFalso.checklistItems[0].banda).toBe("L");
+  });
+
+  it("registra banda_corregida {de, a} con el dominio del ítem", async () => {
+    sembrarItem({ banda: "M" });
+    await PATCH(req({ item_id: "it1", banda: "XL" }), PARAMS);
+    const evento = estadoFalso.bitacora.find((b) => b.tipo === "banda_corregida");
+    expect(evento).toBeDefined();
+    expect(evento!.payload).toMatchObject({ item: "it1", dominio: "core", de: "M", a: "XL" });
+  });
+
+  it("corregir un ítem SIN banda previa registra de: null (el modelo no estimó)", async () => {
+    sembrarItem({ banda: null });
+    await PATCH(req({ item_id: "it1", banda: "S" }), PARAMS);
+    const evento = estadoFalso.bitacora.find((b) => b.tipo === "banda_corregida");
+    expect(evento!.payload).toMatchObject({ de: null, a: "S" });
+  });
+
+  it("re-elegir la MISMA banda no registra nada (clic sin cambio real)", async () => {
+    sembrarItem({ banda: "M" });
+    const antes = estadoFalso.bitacora.length;
+    await PATCH(req({ item_id: "it1", banda: "M" }), PARAMS);
+    expect(estadoFalso.bitacora.length).toBe(antes);
+  });
+
+  it("una banda inválida se rechaza con 400 y no toca el ítem", async () => {
+    sembrarItem({ banda: "M" });
+    const res = await PATCH(req({ item_id: "it1", banda: "XXL" }), PARAMS);
+    expect(res.status).toBe(400);
+    expect(estadoFalso.checklistItems[0].banda).toBe("M");
+  });
+});

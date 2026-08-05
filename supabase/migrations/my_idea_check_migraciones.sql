@@ -396,5 +396,31 @@ FROM (
       WHERE conname = 'project_modos_project_dominio_uniq' AND connamespace = 'public'::regnamespace
     )
 
+  UNION ALL
+  -- 033 · Scheduler F1: banda de esfuerzo estimada + espera_externa + capacidad
+  SELECT '033', 'checklist_items.banda (S|M|L|XL) + espera_externa + project_modos.capacidad_semanal',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='banda'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='espera_externa'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'checklist_items_banda_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%''S''%'
+        AND pg_get_constraintdef(oid) LIKE '%''XL''%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_modos' AND column_name='capacidad_semanal'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_modos_capacidad_semanal_check' AND connamespace = 'public'::regnamespace
+    )
+
 ) checks
 ORDER BY num;
