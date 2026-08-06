@@ -187,6 +187,16 @@ son la capa 3 embrionaria). Matriz de fases:
     de que la fecha ya trae el colchón y el tiempo ajeno no se le cuenta al
     usuario). Lo que se juega: que se lea como un aviso útil y **no como una
     disculpa ni un regaño**. Par del gate: `13b_detalle_espera`.
+- **Tiempo y protección — VUELTA 1 ENTREGADA Y ELEGIDA (2026-08-06):** CD entregó
+  las piezas A, B y C (2 opciones cada una, formato perfecto, vara pasada:
+  `_entrega-claude-design/Entrega 20260805`). **Veredicto del fundador: A2 (la
+  pregunta y su escalera) · B1 (el rango como dato del cajón) · C2 (documento de
+  columnas suaves).** En curso con CD: el cierre de v1 (los 380 SOLO de las tres
+  elegidas + notas finales + rename de "línea base" tipográfica) y la vuelta 2
+  (D carril y chips con los dos colores de rombo a explorar, E no-llego con vista
+  en contexto obligatoria, F fases sobre los tres archivos versionados), prompt en
+  `PROMPT_VUELTA2_CD.md`. Pendiente mío: aplicar A2/B1/C2 al front con sus
+  notas.md como contrato (decidir si antes o después de los 380).
 - **Scheduler + Protección + fases del Gantt — PAQUETE DE ENCARGO LISTO
   (ago 2026):** brief y prompt en `docs/calibracion-design/`
   (`BRIEF_TIEMPO_Y_PROTECCION.md` + `PROMPT_TIEMPO_Y_PROTECCION_CD.md`, seis
