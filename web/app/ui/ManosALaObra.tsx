@@ -602,13 +602,15 @@ function RitualContinuar({
           <p className="mt-2 text-sm text-dim">
             Lo que pasó fuera del checklist: una sorpresa, un cambio, algo que descubriste. Opcional.
           </p>
-          <textarea
-            value={detalles}
-            onChange={(e) => setDetalles(e.target.value)}
-            rows={3}
-            className="mt-3 w-full resize-y rounded-cinta border border-hairline bg-surface-2 p-3 text-[15px] outline-none focus:border-accent/60"
-            placeholder="Cuéntame en tus palabras…"
-          />
+          <div className="mt-3">
+            <CampoConVoz
+              id="ritual-detalles"
+              valor={detalles}
+              onCambio={setDetalles}
+              filas={3}
+              placeholder="Cuéntame en tus palabras, escribe o dicta…"
+            />
+          </div>
           <div className="mt-3 flex items-center gap-3">
             <button
               onClick={() => setPaso(3)}
@@ -629,20 +631,26 @@ function RitualContinuar({
           <p className="mt-2 text-sm text-dim">
             Si algo te quita el sueño o te urge resolver, dilo aquí. Si no, yo te guío según tu avance.
           </p>
-          <textarea
-            value={enfoque}
-            onChange={(e) => setEnfoque(e.target.value)}
-            rows={2}
-            className="mt-3 w-full resize-y rounded-cinta border border-hairline bg-surface-2 p-3 text-[15px] outline-none focus:border-accent/60"
-            placeholder="Lo que más me interesa ahora es…"
-          />
+          <div className="mt-3">
+            <CampoConVoz
+              id="ritual-enfoque"
+              valor={enfoque}
+              onCambio={setEnfoque}
+              filas={2}
+              placeholder="Lo que más me interesa ahora es… (escribe o dicta)"
+            />
+          </div>
           <div className="mt-3 flex flex-wrap items-center gap-3">
             <button
               onClick={() => onEnviar(detalles.trim() || null, enfoque.trim() || null)}
               disabled={enviando}
               className="rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90 disabled:opacity-50"
             >
-              {enviando ? "Pensando…" : mundo ? "Continuar este mundo" : "Continuar mi idea"}
+              {enviando
+                ? "Pensando…"
+                : mundo
+                  ? `Continuar este mundo · ${PRECIOS.mundo_seguimiento} créditos`
+                  : `Continuar mi idea · ${PRECIOS.seguimiento} créditos`}
             </button>
             <button
               onClick={() => onEnviar(detalles.trim() || null, null)}
@@ -655,6 +663,11 @@ function RitualContinuar({
               Atrás
             </button>
           </div>
+          {/* La garantia del cobro, en el momento de decidir: los DOS botones de
+              arriba entregan (y cobran), asi que la promesa va bajo la fila. */}
+          <p className="mt-3 text-xs text-dim opacity-80">
+            Se descuentan al entregarse. Si algo falla, no se cobra nada.
+          </p>
         </>
       )}
       {error && <p className="mt-3 text-sm text-warn">{error}</p>}

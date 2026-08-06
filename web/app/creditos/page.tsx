@@ -124,7 +124,7 @@ export default async function Creditos() {
   return (
     <div className="flex min-h-full flex-1 flex-col">
       {/* Barra: dónde estoy y cuánto tengo */}
-      <header className="flex h-[58px] items-center gap-3 border-b border-hairline px-5 sm:px-6">
+      <header className="sticky top-0 z-30 flex h-[58px] items-center gap-3 border-b border-hairline px-5 sm:px-6" style={{ background: "rgba(0,0,0,0.82)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
         <Link href="/ideas" className="text-[13px] text-dim hover:text-ink">
           Mis ideas /
         </Link>
