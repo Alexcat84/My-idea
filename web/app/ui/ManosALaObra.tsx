@@ -1409,7 +1409,7 @@ function TarjetaAcceso({
   onClick: () => void;
   tono?: "accent" | "done";
 }) {
-  const chip = tono === "done" ? "bg-done/12 text-done" : "bg-accent/12 text-[#7B9DFF]";
+  const chip = tono === "done" ? "bg-done/12 text-done" : "bg-accent/12 text-accent";
   const borde = tono === "done" ? "hover:border-done/45" : "hover:border-accent/45";
   return (
     <button

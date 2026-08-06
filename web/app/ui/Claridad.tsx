@@ -60,9 +60,14 @@ function PuntoLleno() {
 }
 
 function Rombo() {
+  // RELLENO, no contorno (ago 2026, cazado por el fundador en su corrida): el
+  // rombo era del mismo azul que el punto de al lado, pero un contorno de
+  // 1.5px sobre 8px se lava opticamente y se lee celeste. La distincion entre
+  // "lo que tienes" y "lo que asumes" la carga la FORMA (circulo contra
+  // rombo), que no necesita ayuda del peso para leerse.
   return (
     <span aria-hidden className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center bg-black">
-      <span className="h-2 w-2 rotate-45 border-[1.5px] border-accent" />
+      <span className="h-2 w-2 rotate-45 bg-accent" />
     </span>
   );
 }

@@ -838,8 +838,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
-      {/* header canon: breadcrumb + stepper de 5 etapas */}
-      <header className="flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6">
+      {/* header canon: breadcrumb + stepper de 5 etapas.
+          STICKY (ago 2026, cazado por el fundador en su corrida): al bajar a
+          leer la Claridad, el header se iba y con el se iban las DOS cosas que
+          el usuario necesita tener siempre a mano: su saldo y la vuelta a Mis
+          ideas. Un header que desaparece deja al usuario sin salida visible en
+          la pantalla donde mas probable es que quiera pausar. */}
+      <header className="sticky top-0 z-30 flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6" style={{ background: "rgba(0,0,0,0.82)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
         <div className="flex min-w-0 items-center gap-2.5">
           <Link href="/ideas" className="shrink-0 text-[13px] text-dim hover:text-ink">
             Mis ideas /
@@ -1125,7 +1130,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     }}
                     className="mt-5 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
                   >
-                    Armar mi plan
+                    Armar mi plan · {PRECIOS.plan_completo} créditos
                   </button>
                 </div>
               )}
@@ -1173,7 +1178,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       disabled={enviando}
                       className="mt-6 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
                     >
-                      {dominioEntrevista === "core" ? "Generar mi plan" : enviando ? "Redactando tu diagnóstico…" : "Ver mi diagnóstico · gratis"}
+                      {dominioEntrevista === "core"
+                        ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
+                        : enviando
+                          ? "Redactando tu diagnóstico…"
+                          : "Ver mi diagnóstico · gratis"}
                     </button>
                   ) : (
                     <div className="mt-6 flex gap-3">
@@ -1191,13 +1200,18 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
                         style={{ border: "1px solid rgba(77,124,254,0.5)" }}
                       >
-                        {dominioEntrevista === "core" ? "Generar mi plan" : "Ver mi diagnóstico"}
+                        {dominioEntrevista === "core"
+                          ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
+                          : "Ver mi diagnóstico"}
                       </button>
                     </div>
                   )}
                   <p className="mt-4 text-center text-xs text-dim opacity-80">
                     {dominioEntrevista === "core" ? (
-                      "Tu plan puede profundizarse después con el seguimiento."
+                      // La promesa del cobro, en el momento de decidir (canon de
+                      // creditos): se descuenta A LA ENTREGA, y si algo falla no
+                      // se cobra. El precio va en el boton; esto es la garantia.
+                      "Se descuentan al entregarse tu plan. Si algo falla, no se cobra nada."
                     ) : (
                       <>
                         El diagnóstico es gratis. Su plan, si lo quieres: {PRECIOS.mundo_activar} créditos.
@@ -1326,10 +1340,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       Explorar estas suposiciones
                     </button>
                   </div>
-                  <p className="text-xs text-dim">
-                    La Exploración usa {PRECIOS.plan_completo} créditos e incluye Tus Números. Tu Claridad es gratis y
-                    queda guardada para siempre.
-                  </p>
                 </>
               )}
 
