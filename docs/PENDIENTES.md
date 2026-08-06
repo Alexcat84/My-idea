@@ -187,16 +187,41 @@ son la capa 3 embrionaria). Matriz de fases:
     de que la fecha ya trae el colchón y el tiempo ajeno no se le cuenta al
     usuario). Lo que se juega: que se lea como un aviso útil y **no como una
     disculpa ni un regaño**. Par del gate: `13b_detalle_espera`.
+- **APLICACIÓN DE LA CALIBRACIÓN: EN PAUSA hasta la corrida del fundador
+  (decisión, 2026-08-06).** Las entregas de CD están completas y guardadas, pero
+  **nada se aplica al front todavía**: el fundador corre su idea nueva paso a
+  paso sobre main y, al llegar a cada pantalla, decide. El front que se prueba es
+  el implementado, sin vestir. Nada de esto es función: aplicar después no cuesta
+  más que aplicar ahora, y probar sobre lo ya conocido evita confundir un fallo
+  de función con uno de calibración.
+- **PREGUNTA ABIERTA del fundador sobre el diagrama de fechas (a resolver cuando
+  su corrida llegue ahí):**
+  1. **Los rombos de protección chocan con la notación PM**: el rombo ES el
+     símbolo del hito, y en este producto los hitos ya tienen lenguaje propio
+     (la línea de "Tu avance", el timeline de La Celebración). **El error es de
+     origen: lo especifiqué yo en el brief de P4**, CD solo lo dibujó. Caminos:
+     (a) que la protección use un segmento corto en su renglón (marca de
+     duración, no de hito) y el rombo quede reservado; (b) mantener el rombo y
+     declarar que en este gráfico jamás se dibujan hitos.
+  2. **Pieza F (letras junto a las barras): el fundador la rechaza** ("para eso
+     existen las leyendas"). Producción YA respeta su regla (leyenda numerada
+     arriba, solo números en las barras): F es lo que rompería eso. Si algo se
+     toma de F, sería solo la jerarquía tipográfica de la leyenda.
+  3. **Pregunta de fondo:** ¿el carril de protección debe vivir en el diagrama
+     del núcleo, o su casa natural es el registro del mundo? Lo aprobó como
+     lectura, pero si al verlo genera "¿esto es de riesgos o son hitos?", el
+     gráfico del núcleo podría quedarse limpio.
 - **Tiempo y protección — VUELTA 1 ENTREGADA Y ELEGIDA (2026-08-06):** CD entregó
   las piezas A, B y C (2 opciones cada una, formato perfecto, vara pasada:
   `_entrega-claude-design/Entrega 20260805`). **Veredicto del fundador: A2 (la
   pregunta y su escalera) · B1 (el rango como dato del cajón) · C2 (documento de
-  columnas suaves).** En curso con CD: el cierre de v1 (los 380 SOLO de las tres
-  elegidas + notas finales + rename de "línea base" tipográfica) y la vuelta 2
-  (D carril y chips con los dos colores de rombo a explorar, E no-llego con vista
-  en contexto obligatoria, F fases sobre los tres archivos versionados), prompt en
-  `PROMPT_VUELTA2_CD.md`. Pendiente mío: aplicar A2/B1/C2 al front con sus
-  notas.md como contrato (decidir si antes o después de los 380).
+  columnas suaves).** **VUELTA 2 ENTREGADA** (`Entrega-desing 20260729/entrega-tiempo-y-proteccion-v2`):
+  el cierre de v1 completo (los 380 de A2/B1/C2 + notas de dos viewports + el
+  rename de "línea base" hecho) y D, E, F con dos opciones cada una (CD perfila
+  D2 con el matiz de mundo, E1, F1). **Vara pasada salvo dos guiones medios en
+  las notas de D y F** (ninguno en pantallas). **Sin veredicto de D/E/F: la
+  pieza F está cuestionada de raíz por el fundador (ver arriba).** Aplicación al
+  front: EN PAUSA.
 - **Scheduler + Protección + fases del Gantt — PAQUETE DE ENCARGO LISTO
   (ago 2026):** brief y prompt en `docs/calibracion-design/`
   (`BRIEF_TIEMPO_Y_PROTECCION.md` + `PROMPT_TIEMPO_Y_PROTECCION_CD.md`, seis
