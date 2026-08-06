@@ -22,8 +22,9 @@ funcionales; ahora necesitan leerse con el peso que tienen.
 1. **Sin jerga.** Gantt → "tus fechas de un vistazo" · checklist → "tus tareas" ·
    línea base → "tus fechas de referencia" · preview → "el diagnóstico". Ante la
    duda: ¿lo diría alguien que nunca estudió administración?
-2. **Sin guiones largos ni medios** en ningún texto visible. Comas, dos puntos o
-   paréntesis.
+2. **Sin guiones en ningún texto visible**: ni largos (—), ni medios (–), ni
+   cortos (-) usados como puntuación o separador. Comas, dos puntos o
+   paréntesis. La regla aplica también a las notas.md del handoff.
 3. **Jamás un número de horas exacto** en el esfuerzo de una tarea: se habla en
    RANGOS (`~1 h`, `~2-4 h`, `una jornada`, `varios días`).
 4. **La severidad de un riesgo jamás es un puntaje, un porcentaje ni un color de
