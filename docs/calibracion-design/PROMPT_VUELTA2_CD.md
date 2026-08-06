@@ -1,8 +1,8 @@
-Veredicto del fundador sobre la vuelta 1: elegidas A2 (la pregunta y su escalera), B1 (el rango como dato del cajon) y C2 (documento de columnas suaves). Con eso, este encargo tiene dos partes: el CIERRE de la vuelta 1 y la VUELTA 2 (piezas D, E y F del brief), que hereda el tono de las ganadoras.
+El veredicto de la vuelta 1 ya lo conoces: quedo registrado en tu propia entrega, con las tres opciones marcadas como elegidas en tu NOTAS_DE_DECISIONES. Este encargo tiene dos partes: el CIERRE de la vuelta 1 y la VUELTA 2 (piezas D, E y F del brief), que hereda el tono de las ganadoras.
 
 ## PARTE 1: el cierre de la vuelta 1
 
-1. Los `_380.html` de las tres elegidas: `A_opcion2_380.html`, `B_opcion1_380.html`, `C_opcion2_380.html`. Misma opcion, mismo copy, compuesta para 380 (la APK renderiza en telefono: no es un extra).
+1. Los `_380.html` UNICAMENTE de las tres opciones que el fundador escogio (ya sabes cuales: las marcadas como elegidas). Nada de 380 para las descartadas. Misma opcion, mismo copy, compuesta para 380 (la APK renderiza en telefono: no es un extra).
 2. Las `notas.md` finales de cada pieza: solo la opcion elegida, con Medidas de los DOS viewports, Colores por token y Estados completos.
 3. Un rename menor en `B_esfuerzo/notas.md`: donde dice "alineado a la linea base del valor", di "alineado a la base tipografica del valor". Es el termino tipografico, pero "linea base" es vocabulario del producto (las fechas de referencia) y no puede aparecer con otro sentido en ningun documento de la casa.
 
@@ -10,7 +10,7 @@ Veredicto del fundador sobre la vuelta 1: elegidas A2 (la pregunta y su escalera
 
 Mismas condiciones que la vuelta 1: 2 opciones por pieza, bien distintas entre si; divergencia media (puedes cambiar la composicion del bloque, no la pantalla); todo a 1240 para elegir (los 380 al cerrar); bloque suelto para las opciones y una vista en contexto de la que perfiles ganadora. Las reglas duras del brief siguen enteras (sin jerga, sin guiones de ningun tipo como puntuacion, severidad en palabras jamas matriz, ambar espejo, verde solo para lo hecho, ruido cero, copy exacto).
 
-**El tono ya esta elegido y se hereda, no se reabre:** manda por jerarquia y no por color (A2), el azul se gasta solo en la accion o lo elegido, los datos se dicen sin encuadrarlos de mas (B1), y lo serio se lee como documento, no como tabla fria (C2).
+**El tono ya esta elegido y se hereda, no se reabre:** manda por jerarquia y no por color, el azul se gasta solo en la accion o lo elegido, los datos se dicen sin encuadrarlos de mas, y lo serio se lee como documento, no como tabla fria. Es el tono de las tres elegidas de la vuelta 1.
 
 ### PIEZA D: el carril y los chips (la costura de la proteccion)
 
@@ -33,12 +33,8 @@ Un ZIP, carpeta raiz `entrega-tiempo-y-proteccion-v2/`:
 ```
 entrega-tiempo-y-proteccion-v2/
   cierre_v1/
-    A_opcion2_380.html
-    B_opcion1_380.html
-    C_opcion2_380.html
-    A_capacidad_notas.md
-    B_esfuerzo_notas.md
-    C_registro_notas.md
+    (los _380.html de las tres elegidas, con su nombre de opcion real)
+    (las tres notas.md finales)
   00_calibracion_lado_a_lado.html      (las opciones de D, E y F)
   D_carril_y_chips/
     D_opcion1_1240.html
