@@ -439,7 +439,7 @@ function FilaAgenda({
           <span className="text-[11px] font-semibold uppercase tracking-[1px] text-accent">Etapa {item.etapa}</span>
           {/* T6: la etiqueta [Espacio], solo en el calendario global con mezcla. */}
           {etiqueta && (
-            <span className="rounded-full bg-accent/12 px-2 py-0.5 text-[10px] font-semibold text-[#7B9DFF]">{etiqueta}</span>
+            <span className="rounded-full bg-accent/12 px-2 py-0.5 text-[10px] font-semibold text-accent">{etiqueta}</span>
           )}
         </div>
         {/* Vista cortísima: una línea; el texto completo vive en "Detalle". */}

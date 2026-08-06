@@ -242,7 +242,7 @@ export function Descargas({
         <span
           className={
             "grid h-[52px] w-[52px] shrink-0 place-items-center rounded-[12px] " +
-            (esExpediente ? "bg-accent text-[#07070A]" : "bg-accent/12 text-[#7B9DFF]")
+            (esExpediente ? "bg-accent text-[#07070A]" : "bg-accent/12 text-accent")
           }
           aria-hidden
         >
