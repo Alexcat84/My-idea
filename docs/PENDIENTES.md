@@ -187,6 +187,12 @@ son la capa 3 embrionaria). Matriz de fases:
     de que la fecha ya trae el colchón y el tiempo ajeno no se le cuenta al
     usuario). Lo que se juega: que se lea como un aviso útil y **no como una
     disculpa ni un regaño**. Par del gate: `13b_detalle_espera`.
+- **Scheduler + Protección + fases del Gantt — PAQUETE DE ENCARGO LISTO
+  (ago 2026):** brief y prompt en `docs/calibracion-design/`
+  (`BRIEF_TIEMPO_Y_PROTECCION.md` + `PROMPT_TIEMPO_Y_PROTECCION_CD.md`, seis
+  piezas A-F con copy exacto y reglas duras). Archivos base para CD: esos dos +
+  `REGLAS_Y_TOKENS.md` + canon 06/10/11/13 + `BRIEF_GANTT.md`; los pares del
+  gate (07b/07c, 13/13b, 14..14e) se adjuntan tras la corrida del fundador.
 - **Mundos de protección — encargo CONSOLIDADO (campaña cerrada en contenido,
   ago 2026; front funcional en producción, esto es calibración visual):**
   - **El carril y sus rombos** en el Gantt del núcleo: toggle "Ver protección",
