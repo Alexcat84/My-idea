@@ -445,38 +445,15 @@ que alguien mejore la densidad el test lo canta en vez de dejarlo pasar.
 **Por qué post-beta**: arreglarlo es podar aristas, y qué aristas sobran lo dice
 el recorrido real de la gente, no el grafo mirándose a sí mismo.
 
-## Ficha: `ancla-de-puente-mal-rotulada`
-
-**Encontrada al construir la aserción del tejedor** (ago 2026). Un puente se
-declara "del core hacia un mundo" y su campo se llama `core` por eso. Pero el
-proponedor busca sobre el master graph entero, donde los packs ya integrados
-también viven: nada le impedía anclar un puente de entrega en un nodo de quality
-y llamarlo core.
-
-**Censo: 22 puentes ya tejidos tienen el ancla fuera del core.** Entre ellos 13
-de compras y entrega, los dos mundos más nuevos. Ejemplos:
-
-- `compras` anclado en `calificacion_de_calidad_de_proveedores` (quality)
-- `compras` anclado en `transfiere_lo_que_no_debes_cargar` (risk_management)
-- `entrega` anclado en `embalaje_exportacion` (exportacion)
-
-**La duda estructural, para el fundador**: ¿son un defecto o son buenos puentes
-mal rotulados? Un puente quality→compras puede ser una conexión legítima y
-valiosa. Pero ata dos mundos entre sí, y eso significa que la puerta solo abre
-si el usuario tiene AMBOS desbloqueados, cosa que nadie declaró.
-
-**Ya cazado en vivo**: al deprecar nodos de quality en la cirugía se rompieron un
-puente de entrega y otro de risk_management, y no se vieron hasta que el Gate 0
-aprendió a mirarlos.
-
-**Lo que sí quedó hecho**: la aserción en `integrar_packs.py` mata la clase en la
-fábrica para todo pack NUEVO. Los 22 existentes no se tocan: la aserción solo
-corre sobre packs pendientes de integrar, así que hoy no rompe nada. **Pero
-re-integrar cualquier pack fallará hasta que esto se adjudique.**
-
 ## Hecho recientemente (para no reabrirlo por error)
 
 - **Calendario**: modo con-fechas + recordatorios + `.ics` universal (webcal) EN PRODUCCIÓN.
   El **Google Calendar Nivel 1 se RETIRÓ** a favor del webcal universal (no reabrir).
 - **Catálogo congruente** (precios 10/5, Tus Números incluido, beta sin cortesía): EN PRODUCCIÓN.
 - **Espacios** Fase 1+2 + las 3 caras (Plan · Manos a la obra · Tu avance): EN PRODUCCIÓN.
+- **`ancla-de-puente-mal-rotulada`**: CERRADA (ago 2026). **La ley: un puente ancla en el
+  NÚCLEO, siempre.** El acoplamiento mundo↔mundo queda prohibido como accidente; el día que
+  valga será clase declarada con su regla de desbloqueo, jamás un anclaje del proponedor
+  buscando sobre el master entero. Los 22 mal anclados se re-anclaron (0 podados: todos
+  superaban el piso calibrado), el proponedor ya solo mira candidatos de dominio `core`, y la
+  aserción pasó de "packs pendientes" a **todos los puentes en cada corrida**.

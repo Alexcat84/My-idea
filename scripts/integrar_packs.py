@@ -177,6 +177,31 @@ def validar_prerequisitos(packs):
     return puentes_por_dominio
 
 
+def validar_anclas_de_todos_los_puentes():
+    """LA LEY DEL ANCLA, sobre TODOS los puentes y no solo los pendientes.
+
+    Un puente conecta mundo -> corazon y ancla SIEMPRE en el nucleo. La
+    asercion del tejedor mataba la clase solo en los packs que estaban por
+    integrarse; los 22 que ya vivian en disco no los miraba nadie. Aqui se
+    revisan todos, en cada corrida, incluida la de --dry-run.
+    """
+    grafo_path = BASE / "dataset" / "metadata" / "master_graph.json"
+    if not grafo_path.exists():
+        return
+    grafo = cargar_json(grafo_path)["nodos"]
+    malos = []
+    for ruta in sorted((BASE / "packs").glob("*/metadata/bridges_aprobados.json")):
+        pack = ruta.parent.parent.name
+        for x in cargar_json(ruta).get("aprobados", []):
+            dom = grafo.get(x.get("core"), {}).get("dominio", "core")
+            if dom != "core":
+                malos.append(f"{pack}: ancla '{x.get('core')}' es de '{dom}'")
+    if malos:
+        detalle = "\n  ".join(malos[:10])
+        fallar(f"puentes anclados FUERA del nucleo (la ley del ancla): {len(malos)}\n  {detalle}")
+    print(f"  Ley del ancla: todos los puentes de todos los packs anclan en el nucleo.")
+
+
 def paso_a_integrar_nodos_y_puentes(packs, puentes_por_dominio):
     """Copia los nodos de packs al dataset y teje los puentes bidireccionales."""
     print("\n=== a. Integrando nodos de packs + puentes aprobados ===")
@@ -266,6 +291,7 @@ def main():
     modo.add_argument("--ejecutar", action="store_true", help="corre la línea de ensamblaje completa")
     args = ap.parse_args()
 
+    validar_anclas_de_todos_los_puentes()
     integrados, pendientes = descubrir_packs()
     estado = json.loads(ESTADO.read_text(encoding="utf-8")) if ESTADO.exists() else None
     accion, detalle = decidir_accion(estado, pendientes)

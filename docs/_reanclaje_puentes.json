@@ -1,0 +1,205 @@
+{
+  "piso": 0.5427,
+  "tope_por_ancla": 2,
+  "cambios": [
+    {
+      "pack": "compras",
+      "nodo_del_mundo": "punto_unico_contacto_proveedores",
+      "ancla_vieja": "contacto_con_el_cliente",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "negociacion_contratos_proveedores",
+      "score": 0.7616,
+      "titulo_nuevo": "Negociación de Contratos con Proveedores"
+    },
+    {
+      "pack": "compras",
+      "nodo_del_mundo": "decide_criterio_eleccion_proveedor",
+      "ancla_vieja": "fin_precio_como_criterio_unico",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "negociacion_contratos_proveedores",
+      "score": 0.7461,
+      "titulo_nuevo": "Negociación de Contratos con Proveedores"
+    },
+    {
+      "pack": "compras",
+      "nodo_del_mundo": "lleva_scorecard_desempeno_proveedor",
+      "ancla_vieja": "calificacion_de_calidad_de_proveedores",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "gestion_contratos_desempeno",
+      "score": 0.6826,
+      "titulo_nuevo": "Gestión y Seguimiento del Desempeño de Proveedores"
+    },
+    {
+      "pack": "compras",
+      "nodo_del_mundo": "ata_el_pago_al_cumplimiento_real_del_servicio",
+      "ancla_vieja": "transfiere_lo_que_no_debes_cargar",
+      "dominio_viejo": "risk_management",
+      "ancla_nueva": "contract_close_out",
+      "score": 0.6687,
+      "titulo_nuevo": "Cierre de Contrato"
+    },
+    {
+      "pack": "compras",
+      "nodo_del_mundo": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+      "ancla_vieja": "aceptacion_bienes_comprados",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "obtencion_de_compromiso",
+      "score": 0.7011,
+      "titulo_nuevo": "Las Cuatro Acciones para Obtener Compromiso"
+    },
+    {
+      "pack": "entrega",
+      "nodo_del_mundo": "saber_hasta_donde_mejorar_servicio",
+      "ancla_vieja": "servicio_postventa_internacional",
+      "dominio_viejo": "exportacion",
+      "ancla_nueva": "trade_off_responsividad_eficiencia",
+      "score": 0.6459,
+      "titulo_nuevo": "Balance entre Capacidad de Respuesta y Eficiencia"
+    },
+    {
+      "pack": "entrega",
+      "nodo_del_mundo": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+      "ancla_vieja": "evalua_la_gravedad_sin_autoengano",
+      "dominio_viejo": "risk_management",
+      "ancla_nueva": "garantias_implicitas_vs_expresas",
+      "score": 0.5962,
+      "titulo_nuevo": "Diferenciar Garantías Implícitas y Expresas"
+    },
+    {
+      "pack": "entrega",
+      "nodo_del_mundo": "tratar_packaging_costo_marca",
+      "ancla_vieja": "embalaje_exportacion",
+      "dominio_viejo": "exportacion",
+      "ancla_nueva": "programacion_entregas_delivery_scheduling",
+      "score": 0.5916,
+      "titulo_nuevo": "Programación de Entregas: Directas vs. Milk Run"
+    },
+    {
+      "pack": "entrega",
+      "nodo_del_mundo": "revisar_necesidades_de_empaque",
+      "ancla_vieja": "decision_aptitud_uso",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "logistica_inversa_retornos",
+      "score": 0.5915,
+      "titulo_nuevo": "Procesamiento de Retornos (Logística Inversa)"
+    },
+    {
+      "pack": "entrega",
+      "nodo_del_mundo": "detectar_empaque_poco_rigido",
+      "ancla_vieja": "pruebas_destructivas",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "regla_disponibilidad_previa_venta",
+      "score": 0.5803,
+      "titulo_nuevo": "Disponibilidad de la Garantía Antes de la Venta (Pre-Sale Availability Rule)"
+    },
+    {
+      "pack": "entrega",
+      "nodo_del_mundo": "reconocer_mercancia_peligrosa_disfrazada",
+      "ancla_vieja": "diagnostico_de_productos_crudos",
+      "dominio_viejo": "environmental",
+      "ancla_nueva": "garantias_implicitas_vs_expresas",
+      "score": 0.5604,
+      "titulo_nuevo": "Diferenciar Garantías Implícitas y Expresas"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "deja_de_ignorar_el_riesgo",
+      "ancla_vieja": "eliminar_miedo",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "sesgo_optimismo_fundador",
+      "score": 0.7724,
+      "titulo_nuevo": "Sesgo de Optimismo y Sobreconfianza del Fundador"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "empieza_con_lo_que_ya_funciona",
+      "ancla_vieja": "estrategia_gestion_riesgo_tolerancia",
+      "dominio_viejo": "seguridad_digital",
+      "ancla_nueva": "reglas_gestion_riesgo_gambling",
+      "score": 0.7656,
+      "titulo_nuevo": "Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "caza_las_oportunidades_no_solo_amenazas",
+      "ancla_vieja": "identificacion_de_riesgos",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "reglas_gestion_riesgo_gambling",
+      "score": 0.7572,
+      "titulo_nuevo": "Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "plan_b_antes_de_necesitarlo",
+      "ancla_vieja": "plan_de_gestion_de_riesgos",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "plan_de_contingencia_b",
+      "score": 0.7572,
+      "titulo_nuevo": "Plan de Contingencia B mediante Pregunta Inversa"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "cuanto_sabes_y_cuanto_solo_crees",
+      "ancla_vieja": "sesgo_retrospectivo_hindsight",
+      "dominio_viejo": "health_safety",
+      "ancla_nueva": "sesgo_optimismo_fundador",
+      "score": 0.7225,
+      "titulo_nuevo": "Sesgo de Optimismo y Sobreconfianza del Fundador"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "evalua_la_gravedad_sin_autoengano",
+      "ancla_vieja": "identificacion_de_riesgos",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "matriz_probabilidad_impacto",
+      "score": 0.6819,
+      "titulo_nuevo": "Matriz de Probabilidad e Impacto"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "como_sabes_que_tu_metodo_sirve",
+      "ancla_vieja": "enfoque_situacional_vs_personal_2",
+      "dominio_viejo": "health_safety",
+      "ancla_nueva": "aprendizaje_validado",
+      "score": 0.6614,
+      "titulo_nuevo": "Aprendizaje Validado (Validated Learning)"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "gestionar_el_riesgo_es_de_adultos",
+      "ancla_vieja": "enfoque_situacional_vs_personal_2",
+      "dominio_viejo": "health_safety",
+      "ancla_nueva": "decision_consciente_de_crecimiento",
+      "score": 0.6831,
+      "titulo_nuevo": "El Crecimiento como Decisión Consciente"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "un_dueno_para_cada_riesgo",
+      "ancla_vieja": "identificacion_de_riesgos",
+      "dominio_viejo": "quality",
+      "ancla_nueva": "capacidad_de_respuesta_responsable",
+      "score": 0.677,
+      "titulo_nuevo": "Prepararse para Responder (Responsabilidad como Capacidad de Respuesta)"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "evitar_o_asumir_decide_a_conciencia",
+      "ancla_vieja": "estrategia_gestion_riesgo_tolerancia",
+      "dominio_viejo": "seguridad_digital",
+      "ancla_nueva": "gestion_riesgo_incremental",
+      "score": 0.6669,
+      "titulo_nuevo": "Gestión de Riesgo Incremental (Reglas de Apuesta)"
+    },
+    {
+      "pack": "risk_management",
+      "nodo_del_mundo": "plan_de_desastre_y_recuperacion",
+      "ancla_vieja": "planificacion_recuperacion_post_accidente",
+      "dominio_viejo": "health_safety",
+      "ancla_nueva": "plan_de_contingencia_b",
+      "score": 0.6618,
+      "titulo_nuevo": "Plan de Contingencia B mediante Pregunta Inversa"
+    }
+  ],
+  "podados": []
+}

@@ -1,20 +1,23 @@
 {
-  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad.",
+  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
   "aprobados": [
     {
-      "core": "identificacion_de_riesgos",
+      "core": "reglas_gestion_riesgo_gambling",
       "dominio": "caza_las_oportunidades_no_solo_amenazas",
-      "score": 0.8304
+      "score": 0.7572,
+      "reanclado_de": "identificacion_de_riesgos"
     },
     {
-      "core": "identificacion_de_riesgos",
+      "core": "matriz_probabilidad_impacto",
       "dominio": "evalua_la_gravedad_sin_autoengano",
-      "score": 0.8254
+      "score": 0.6819,
+      "reanclado_de": "identificacion_de_riesgos"
     },
     {
-      "core": "enfoque_situacional_vs_personal_2",
+      "core": "aprendizaje_validado",
       "dominio": "como_sabes_que_tu_metodo_sirve",
-      "score": 0.7844
+      "score": 0.6614,
+      "reanclado_de": "enfoque_situacional_vs_personal_2"
     },
     {
       "core": "manejo_de_incertidumbre_proyectos_innovadores",
@@ -22,40 +25,47 @@
       "score": 0.7739
     },
     {
-      "core": "planificacion_recuperacion_post_accidente",
+      "core": "plan_de_contingencia_b",
       "dominio": "plan_de_desastre_y_recuperacion",
-      "score": 0.768
+      "score": 0.6618,
+      "reanclado_de": "planificacion_recuperacion_post_accidente"
     },
     {
-      "core": "eliminar_miedo",
+      "core": "sesgo_optimismo_fundador",
       "dominio": "deja_de_ignorar_el_riesgo",
-      "score": 0.767
+      "score": 0.7724,
+      "reanclado_de": "eliminar_miedo"
     },
     {
-      "core": "identificacion_de_riesgos",
+      "core": "capacidad_de_respuesta_responsable",
       "dominio": "un_dueno_para_cada_riesgo",
-      "score": 0.7642,
-      "redirigido_de_core": "gestion_riesgo_identificacion"
+      "score": 0.677,
+      "redirigido_de_core": "gestion_riesgo_identificacion",
+      "reanclado_de": "identificacion_de_riesgos"
     },
     {
-      "core": "plan_de_gestion_de_riesgos",
+      "core": "plan_de_contingencia_b",
       "dominio": "plan_b_antes_de_necesitarlo",
-      "score": 0.7562
+      "score": 0.7572,
+      "reanclado_de": "plan_de_gestion_de_riesgos"
     },
     {
-      "core": "estrategia_gestion_riesgo_tolerancia",
+      "core": "gestion_riesgo_incremental",
       "dominio": "evitar_o_asumir_decide_a_conciencia",
-      "score": 0.7516
+      "score": 0.6669,
+      "reanclado_de": "estrategia_gestion_riesgo_tolerancia"
     },
     {
-      "core": "sesgo_retrospectivo_hindsight",
+      "core": "sesgo_optimismo_fundador",
       "dominio": "cuanto_sabes_y_cuanto_solo_crees",
-      "score": 0.7512
+      "score": 0.7225,
+      "reanclado_de": "sesgo_retrospectivo_hindsight"
     },
     {
-      "core": "estrategia_gestion_riesgo_tolerancia",
+      "core": "reglas_gestion_riesgo_gambling",
       "dominio": "empieza_con_lo_que_ya_funciona",
-      "score": 0.7414
+      "score": 0.7656,
+      "reanclado_de": "estrategia_gestion_riesgo_tolerancia"
     },
     {
       "core": "leap_of_faith_assumptions",
@@ -63,9 +73,10 @@
       "score": 0.7395
     },
     {
-      "core": "enfoque_situacional_vs_personal_2",
+      "core": "decision_consciente_de_crecimiento",
       "dominio": "gestionar_el_riesgo_es_de_adultos",
-      "score": 0.7369
+      "score": 0.6831,
+      "reanclado_de": "enfoque_situacional_vs_personal_2"
     }
   ],
   "rechazados": [

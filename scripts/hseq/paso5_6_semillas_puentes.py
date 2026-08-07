@@ -44,9 +44,23 @@ def _texto(d: dict) -> str:
 
 def proponer_puentes(cat: str) -> None:
     dominio = cargar_dominio(cat)
+    # LA LEY DEL ANCLA (adjudicada ago 2026): un puente conecta MUNDO -> CORAZON,
+    # y ancla SIEMPRE en el nucleo. El acoplamiento mundo<->mundo queda prohibido
+    # como accidente: si algun dia vale, sera una clase DECLARADA con su regla de
+    # desbloqueo explicita, jamas un anclaje que salio de buscar sobre el master
+    # entero.
+    #
+    # Aqui estaba la fabrica del defecto: dataset/nodos/ contiene TODO el
+    # universo, incluidos los packs ya integrados, asi que el proponedor podia
+    # anclar un puente de entrega en un nodo de quality y llamarlo "core". Salieron
+    # 22 asi. Ahora los candidatos se filtran por dominio, y los deprecados
+    # tampoco entran: anclar en un nodo que ya no se ofrece es una puerta muerta.
     core = {}
     for f in (RAIZ / "dataset" / "nodos").glob("*.json"):
-        core[f.stem] = json.load(open(f, encoding="utf-8"))
+        d = json.load(open(f, encoding="utf-8"))
+        if d.get("dominio", "core") == "core" and not d.get("deprecado"):
+            core[f.stem] = d
+    print(f"  candidatos de ancla: {len(core)} nodos del nucleo (solo dominio 'core', sin deprecados)")
     pares = []
     try:
         from sentence_transformers import SentenceTransformer, util  # type: ignore
