@@ -1,8 +1,12 @@
 # Indice propuesto de compras
 
-45 conceptos, tras la poda de la auditoria (de 69: 25 borrados, 1 anadido).
+46 conceptos, tras la poda de la auditoria (de 69: 25 borrados, 2 anadidos).
 
 Borra las lineas de lo que NO debe nacer. Lo que quede se genera.
+
+## ideacion (1)
+
+- **Decide si lo compras o lo haces tu** - Antes de salir a buscar proveedor, saca lo que te cuesta hacerlo por dentro (tu tiempo, materiales, equipo y gastos fijos) y comparalo con lo que te costaria comprarlo. Sin ese numero no sabes si estas ahorrando.
 
 ## validacion (5)
 

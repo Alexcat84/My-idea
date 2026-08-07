@@ -75,6 +75,11 @@ CONCEPTOS_POR_TANDA = 8
 # un indice de 700 lineas no lo revisa nadie. El tope obliga a ELEGIR en la
 # fuente, que es donde se ve cual concepto vale.
 MAX_CONCEPTOS_POR_TROZO = 6
+# Fragmentos que se mandan por concepto. Un concepto fundido de seis apariciones
+# arrastra seis trozos de 5.000 palabras, y el sexto no anade nada que el primero
+# no diga: solo encarece el envio y diluye la atencion. Los dos primeros son los
+# de mayor peso porque la consolidacion ordena por apariciones.
+MAX_CHUNKS_POR_CONCEPTO = 2
 # El indice consolidado que se le entrega al fundador (rango del SOP).
 RANGO_INDICE = (40, 80)
 PALABRAS_RESUMEN = (80, 150)
@@ -602,9 +607,12 @@ REGLAS QUE NO SE NEGOCIAN:
    que el nodo se rechace.
 2. resumen_teorico: entre {PALABRAS_RESUMEN[0]} y {PALABRAS_RESUMEN[1]} palabras,
    con acentos correctos del espanol.
-3. El tono le habla a UNA persona que puede estar sola, sin equipo y sin jefe.
-   Cero "su organizacion", cero "el comite", cero "el departamento". Si la fuente
-   habla en corporativo, traducelo a emprendedor individual.
+3. LA LENTE: quien lee esto es UNA persona sola, con un telefono. Sin equipo,
+   sin jefe, sin departamento, sin abogado en la puerta de al lado. Cero "su
+   organizacion", cero "el comite", cero "los stakeholders". Si el paso solo se
+   puede dar teniendo personal a cargo, el paso esta mal escrito: reescribelo
+   para quien lo hace con sus propias manos. Si la fuente habla en corporativo,
+   traducelo.
 4. pasos_accionables: de 3 a 6, imperativos, concretos, hacibles esta semana.
 5. condiciones_activacion: de 2 a 4 SITUACIONES del emprendedor, en lenguaje
    llano. No describen el capitulo del libro, describen a la persona.
@@ -614,6 +622,30 @@ REGLAS QUE NO SE NEGOCIAN:
 8. etiqueta_arbol: maximo 6 palabras y 40 caracteres, en segunda persona o
    imperativo. Cero anglicismos de manual, cero nombres de autores. Es el
    titular que ve el emprendedor en el riel.
+
+LAS CUATRO BARANDAS DE LA AUDITORIA (2026-08-07). Un nodo que rompa una de
+estas es un nodo que hace dano, no uno imperfecto:
+
+A. LA RELACION QUE SIGUE. Todo nodo que trate de negociar se escribe sabiendo
+   que a ese proveedor le vas a comprar OTRA VEZ. Las tacticas que ganan hoy y
+   queman la relacion no entran: el emprendedor no negocia rehenes, negocia con
+   quien le va a surtir el mes que viene. Si una tecnica solo sirve para un
+   trato de una sola vez, dilo dentro del nodo o no la escribas.
+
+B. LOS DATOS LOCALES NO SE CABLEAN. Divisores de peso, tarifas, precios,
+   comisiones, plazos de courier, nombres de canales y umbrales legales CAMBIAN
+   por pais, por proveedor y por ano. Escribe el METODO y manda a preguntar
+   ("pregunta a tu courier cual es su divisor"). Una cifra cableada envejece
+   mal y el usuario la toma por verdad.
+
+C. NADA DE MATRICES NI PUNTAJES. Si el concepto tienta con puntuar algo por
+   probabilidad e impacto, o con una matriz de dos ejes, NO la escribas. La
+   severidad se dice con palabras que una persona entiende, no con numeros que
+   aparentan precision. Vale describir el criterio, jamas inventar una escala.
+
+D. SIN INVENTAR NADA. Si el fragmento no da para escribir el nodo completo, es
+   preferible devolver menos nodos que rellenar con lo que suena bien. Lo que
+   no esta en el fragmento, no se escribe.
 
 Devuelve EXCLUSIVAMENTE un arreglo JSON. Nada antes, nada despues, sin markdown.
 Cada objeto, con estos campos y ninguno mas:
@@ -649,15 +681,32 @@ def ids_del_universo():
 def enviar_tanda(cliente, system, tanda, cache, uso, dominio, ids_tomados, nodos_dir, rechazos):
     """Una tanda de conceptos. Si la respuesta se corta hasta el ultimo techo,
     la tanda se PARTE y cada mitad se reenvia: un concepto solo siempre cabe."""
-    bloques = []
+    # Los fragmentos van UNA vez y los conceptos los referencian. Varios
+    # conceptos de una tanda suelen salir del mismo trozo (el indice se fundio
+    # por tema, no por fragmento), y mandar el mismo texto cinco veces es pagar
+    # cinco veces por lo mismo y ademas diluir la atencion del modelo.
+    etiquetas, textos = {}, []
     for c in tanda:
-        ref = c["chunks"][0]
-        fragmento = texto_del_chunk(ref["fuente"], ref["chunk"], cache)
+        for ref in c["chunks"][:MAX_CHUNKS_POR_CONCEPTO]:
+            k = (ref["fuente"], ref["chunk"])
+            if k in etiquetas:
+                continue
+            texto = texto_del_chunk(ref["fuente"], ref["chunk"], cache)
+            if not texto:
+                continue
+            etiquetas[k] = f"F{len(etiquetas) + 1}"
+            textos.append(f"[{etiquetas[k]}] {c.get('fuente_label','')}\n{texto}")
+
+    bloques = ["## FRAGMENTOS DE LAS FUENTES", *textos, "", "## CONCEPTOS APROBADOS"]
+    for c in tanda:
+        refs = [etiquetas[(r["fuente"], r["chunk"])]
+                for r in c["chunks"][:MAX_CHUNKS_POR_CONCEPTO]
+                if (r["fuente"], r["chunk"]) in etiquetas]
         bloques.append(
-            f"### Concepto: {c['titulo']}\n"
+            f"### {c['titulo']}\n"
             f"Fase: {c['fase']}\nQue aporta: {c.get('aporta','')}\n"
             f"Fuente: {c.get('fuente_label','')}\n"
-            f"Fragmento real de la fuente:\n{fragmento}\n")
+            f"Se destila de: {', '.join(dict.fromkeys(refs)) or 'sin fragmento'}")
     nodos, err = llamar(cliente, system, "\n\n".join(bloques), uso)
 
     if err == "corte":
@@ -675,18 +724,16 @@ def enviar_tanda(cliente, system, tanda, cache, uso, dominio, ids_tomados, nodos
             rechazos.append({"titulo": c["titulo"], "motivo": err})
         return 0
 
+    # El texto contra el que se compara la copia literal: TODOS los fragmentos
+    # de la tanda. Comparar solo contra el fragmento del concepto dejaria pasar
+    # una frase copiada del fragmento vecino, que tambien viajo en el envio.
+    todo_el_texto = "\n".join(textos)
+
     guardados = 0
     for nodo in nodos:
         if not isinstance(nodo, dict):
             continue
-        ref = tanda[0]["chunks"][0]
-        fragmento = texto_del_chunk(ref["fuente"], ref["chunk"], cache)
-        for c in tanda:
-            if c["titulo"] == nodo.get("titulo_concepto"):
-                r = c["chunks"][0]
-                fragmento = texto_del_chunk(r["fuente"], r["chunk"], cache)
-                break
-        fallas = revisar_nodo(nodo, fragmento, ids_tomados)
+        fallas = revisar_nodo(nodo, todo_el_texto, ids_tomados)
         if fallas:
             rechazos.append({"titulo": nodo.get("titulo_concepto", "?"),
                              "node_id": nodo.get("node_id"), "motivo": fallas})
@@ -738,17 +785,68 @@ def etapa_nodos(mundo, cliente, uso, max_llamadas=None, dry_run=False):
     if max_llamadas:
         tandas = tandas[:max_llamadas]
 
+    # Checkpoint por lote: cuantos nacieron, de que etapa y cuanto costo ESE
+    # lote. Un total al final no deja ver si un lote concreto salio caro o
+    # vacio, que es justo cuando hay que parar y mirar.
     for n, tanda in enumerate(tandas, start=1):
-        print(f"  [tanda {n}/{len(tandas)}] {len(tanda)} conceptos ({tanda[0]['fase']})")
-        guardados += enviar_tanda(cliente, system, tanda, cache, uso, cfg["dominio"],
-                                  ids_tomados, nodos_dir, rechazos)
+        fases = sorted({c["fase"] for c in tanda})
+        antes_in, antes_out, antes_rech = uso["in"], uso["out"], len(rechazos)
+        print(f"  [lote {n}/{len(tandas)}] {len(tanda)} conceptos de {'/'.join(fases)}")
+        nacidos = enviar_tanda(cliente, system, tanda, cache, uso, cfg["dominio"],
+                               ids_tomados, nodos_dir, rechazos)
+        guardados += nacidos
+        costo = ((uso["in"] - antes_in) / 1e6 * PRECIO_IN_MTOK
+                 + (uso["out"] - antes_out) / 1e6 * PRECIO_OUT_MTOK)
+        print(f"      -> {nacidos} nodos, {len(rechazos) - antes_rech} rechazados, ${costo:.2f}")
+
+    # REPESCA, una sola vuelta. Un nodo bueno no puede morir porque su etiqueta
+    # traia una palabra de mas: eso no es "no pudo nacer con fuente", es un
+    # formato que se corrige diciendo cual fue la falla. Lo que NO se hace es
+    # rellenar: se reenvia el mismo concepto con el mismo fragmento y con sus
+    # fallas concretas, y si vuelve mal, se queda fuera y se reporta.
+    por_titulo = {c["titulo"]: c for c in conceptos}
+    repescables = [r for r in rechazos
+                   if r.get("titulo") in por_titulo and isinstance(r.get("motivo"), list)]
+    if repescables and not max_llamadas:
+        print(f"\n  Repesca de {len(repescables)} que fallaron por forma, no por fuente")
+        fallidos = {r["titulo"]: r["motivo"] for r in repescables}
+        rechazos[:] = [r for r in rechazos if r.get("titulo") not in fallidos]
+        detalle = "\n".join(f"- '{t}': {'; '.join(m)}" for t, m in fallidos.items())
+        system_repesca = system + (
+            "\n\nESTOS NODOS YA SE RECHAZARON. Corrige EXACTAMENTE estas fallas y "
+            "no toques nada mas. No inventes contenido para rellenar:\n" + detalle)
+        for i in range(0, len(repescables), CONCEPTOS_POR_TANDA):
+            grupo = [por_titulo[r["titulo"]] for r in repescables[i:i + CONCEPTOS_POR_TANDA]]
+            antes = len(rechazos)
+            n = enviar_tanda(cliente, system_repesca, grupo, cache, uso, cfg["dominio"],
+                             ids_tomados, nodos_dir, rechazos)
+            guardados += n
+            print(f"      -> repescados {n}, siguen fuera {len(rechazos) - antes}")
 
     if rechazos:
         (nodos_dir / "_rechazos.json").write_text(
             json.dumps(rechazos, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\n  Guardados {guardados} nodos. Rechazados {len(rechazos)}.")
+    elif (nodos_dir / "_rechazos.json").exists():
+        (nodos_dir / "_rechazos.json").unlink()
+
+    # Conteo final por etapa, contra el indice aprobado.
+    from collections import Counter
+    reales = Counter()
+    for p in nodos_dir.glob("*.json"):
+        if p.name.startswith("_"):
+            continue
+        try:
+            reales[json.loads(p.read_text(encoding="utf-8"))["fase_proyecto"]] += 1
+        except Exception:
+            continue
+    esperados = Counter(c["fase"] for c in conceptos)
+    print(f"\n  Nacidos {guardados} en esta corrida. Rechazados {len(rechazos)}.")
+    print("  Conteo por etapa (nacidos / aprobados en el indice):")
+    for fase in ORDEN_FASES:
+        if esperados.get(fase) or reales.get(fase):
+            print(f"     {fase:<14} {reales.get(fase, 0):>3} / {esperados.get(fase, 0)}")
     if rechazos:
-        print(f"  Los rechazos, con su motivo, en {nodos_dir / '_rechazos.json'}")
+        print(f"  Los que no nacieron, con su motivo, en {nodos_dir / '_rechazos.json'}")
 
 
 def _titulos_hechos(nodos_dir):
