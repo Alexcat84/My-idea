@@ -32,6 +32,7 @@
  * relativo importa, y ese orden se preservo.
  */
 import semanticIndexJson from "./assets/semantic_index.json";
+import { esOfrecible } from "./engine/graph";
 
 export const MIN_SCORE_SALTO = 0.3;
 export const MAX_SALTOS_POSIBLES_OFRECIDOS = 8;
@@ -145,7 +146,10 @@ export async function buscarAfines(
   const resultados: CandidatoAfin[] = [];
   for (const { id, score } of puntuados) {
     if (excluidos.has(id)) continue;
-    if (opts.graph && opts.graph[id] && !dominios.includes(opts.graph[id].dominio ?? "core")) continue;
+    // Por LA PUERTA ÚNICA, no por una copia del filtro. Aquí vivía un chequeo
+    // de dominio escrito a mano que ignoraba la deprecación: el índice
+    // semántico habría seguido ofreciendo nodos fundidos.
+    if (opts.graph && opts.graph[id] && !esOfrecible(id, opts.graph, dominios)) continue;
     if (score < minScore) break; // orden descendente: nada mas adelante supera el umbral
     resultados.push({ id, score });
     if (resultados.length >= k) break;

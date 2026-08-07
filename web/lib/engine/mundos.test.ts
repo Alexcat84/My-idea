@@ -3,7 +3,7 @@
 // fila (solo core), invisible. Esperados calculados a mano sobre un
 // mini-grafo de 3 nodos (regla AGENTS.md).
 import { describe, expect, it } from "vitest";
-import { dominioPermitido, sucesoresNivel, type Grafo } from "./graph";
+import { esOfrecible, sucesoresNivel, type Grafo } from "./graph";
 import { cosecharVecindario } from "./planRedactor";
 import { candidatosSeguimiento } from "./puertaAvanzada";
 
@@ -43,10 +43,10 @@ const SOLO_CORE = null; // default del motor
 const CON_QUALITY = ["core", "quality"];
 
 describe("el muro de dominios (Fase 3.5): 4 capas, con y sin unlock", () => {
-  it("capa dominioPermitido: la base del muro", () => {
-    expect(dominioPermitido("q_1", graph, SOLO_CORE)).toBe(false);
-    expect(dominioPermitido("q_1", graph, CON_QUALITY)).toBe(true);
-    expect(dominioPermitido("core_b", graph, SOLO_CORE)).toBe(true);
+  it("capa esOfrecible: la base del muro", () => {
+    expect(esOfrecible("q_1", graph, SOLO_CORE)).toBe(false);
+    expect(esOfrecible("q_1", graph, CON_QUALITY)).toBe(true);
+    expect(esOfrecible("core_b", graph, SOLO_CORE)).toBe(true);
   });
 
   it("capa sucesores (turno): q_1 invisible sin unlock, visible con él", () => {

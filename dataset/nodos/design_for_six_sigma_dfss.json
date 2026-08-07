@@ -4,25 +4,54 @@
   "dominio": "quality",
   "titulo_concepto": "Design for Six Sigma (DFSS) y Metodología DMADV",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "DFSS es un enfoque para crear simultáneamente un diseño de producto y su proceso de producción de manera que los defectos sean extremadamente raros y predecibles, incluso al inicio de la producción a gran escala. Se ejecuta mediante las fases DMADV: Definir, Medir, Analizar, Diseñar y Verificar, e inicia siempre con la identificación de clientes y sus necesidades, usando intensivamente métodos estadísticos.",
+  "resumen_teorico": "DFSS es un enfoque sistemático para crear, al mismo tiempo, un producto nuevo y su proceso de producción con niveles de calidad cercanos a Six Sigma, minimizando fallas desde el inicio en lugar de corregirlas después. A diferencia de DMAIC, que mejora procesos existentes, DMADV (Definir, Medir, Analizar, Diseñar, Verificar) se usa cuando no hay un proceso previo que mejorar sino que debe crearse desde cero. Parte siempre de escuchar la voz del cliente y traducir sus necesidades en CTQs (Critical to Quality) medibles, evalúa varios conceptos de diseño con métodos estadísticos, detalla el diseño ganador y verifica que cumpla tanto las necesidades del negocio como del cliente antes de pasar a producción a escala completa.",
   "pasos_accionables": [
-    "Definir el proyecto de diseño y los clientes objetivo.",
-    "Medir las necesidades del cliente y traducirlas en requerimientos medibles.",
-    "Analizar opciones de diseño usando métodos estadísticos.",
-    "Diseñar el producto y proceso de manera integrada.",
-    "Verificar que el diseño cumple los niveles de calidad Six Sigma antes de producción a escala completa."
+    "Revisa tu plan de negocio y define el alcance del proyecto de diseño antes de empezar.",
+    "Identifica a tus clientes objetivo y traduce sus necesidades en requerimientos medibles (CTQs).",
+    "Analiza la voz del cliente y evalúa varios conceptos de diseño usando métodos estadísticos.",
+    "Diseña el producto y su proceso de producción de forma integrada, incorporando los CTQs como criterios de decisión.",
+    "Verifica que el diseño detallado cumple los niveles de calidad Six Sigma y los CTQs antes de producir a escala completa.",
+    "Prepara el plan de lanzamiento y define mecanismos de control para asegurar que se mantenga el cumplimiento de los CTQs."
   ],
-  "entregable_esperado": "Diseño de producto/proceso verificado bajo metodología DMADV con niveles de calidad Six Sigma.",
+  "entregable_esperado": "Diseño de producto/proceso completamente desarrollado y verificado contra los CTQs del cliente, con plan de producción y lanzamiento a escala completa.",
   "nodos_previos": [
     "herramientas_de_diseno_de_calidad",
-    "diseno_de_procesos_por_caracteristicas"
+    "diseno_de_procesos_por_caracteristicas",
+    "innovacion_tipo_ii",
+    "quality_by_design",
+    "six_sigma_dmaic",
+    "descubrir_necesidades_cliente",
+    "six_sigma_dmaic_2"
   ],
   "nodos_siguientes": [
-    "establecer_capacidad_del_proceso"
+    "establecer_capacidad_del_proceso",
+    "ctq_caracteristicas_criticas",
+    "qfd_matriz",
+    "roles_six_sigma",
+    "control_del_proceso_del_proveedor",
+    "dmadv_fase_diseno"
   ],
   "condiciones_activacion": [
-    "Cuando se busca un nuevo diseño de producto/proceso con niveles de calidad Six Sigma",
-    "Cuando se rediseña un producto existente"
+    "Cuando necesitas desarrollar un producto, servicio o proceso completamente nuevo con calidad Six Sigma.",
+    "Cuando el diseño actual no satisface las necesidades del mercado y requiere un rediseño total.",
+    "Cuando no existe un proceso previo que mejorar sino que debe crearse desde cero.",
+    "Cuando necesitas asegurar que el diseño cumpla múltiples requisitos críticos del cliente desde el inicio."
   ],
-  "etiqueta_arbol": "Diseña casi sin Errores"
+  "etiqueta_arbol": "Diseña casi sin Errores",
+  "ids_alias": [
+    "dfss_metodologia",
+    "dmadv_design_for_six_sigma"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "dfss_metodologia",
+      "titulo": "Design for Six Sigma (DFSS)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "dmadv_design_for_six_sigma",
+      "titulo": "DMADV / Design for Six Sigma (DFSS)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

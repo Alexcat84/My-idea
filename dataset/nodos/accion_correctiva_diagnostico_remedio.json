@@ -16,7 +16,8 @@
   "entregable_esperado": "Reporte de diagnóstico con cronología de eventos y plan de remedio para restaurar la conformidad",
   "nodos_previos": [
     "decision_aptitud_para_uso",
-    "limites_control_estadistico_vs_tolerancias"
+    "limites_control_estadistico_vs_tolerancias",
+    "decision_aptitud_uso"
   ],
   "nodos_siguientes": [
     "sistema_informacion_calidad"
@@ -25,5 +26,6 @@
     "Cuando ocurre un pico o desviación esporádica no conforme en el proceso",
     "Si se necesita distinguir entre un problema esporádico y un desperdicio crónico"
   ],
-  "etiqueta_arbol": "Diagnostica y Remedia lo Esporádico"
+  "etiqueta_arbol": "Diagnostica y Remedia lo Esporádico",
+  "deprecado": true
 }

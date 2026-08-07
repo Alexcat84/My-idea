@@ -4,24 +4,42 @@
   "dominio": "quality",
   "titulo_concepto": "Takt Time y Producción en Flujo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El takt time es el ritmo al cual el cliente compra una unidad de producto, y sirve como el 'compás' que marca la pauta de producción en un sistema pull. Calcular el takt time permite dimensionar personal, balancear procesos y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando es posible.",
+  "resumen_teorico": "El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos, dimensionar tu dotación de trabajo y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando sea posible. Si la demanda varía mucho, considera manejar líneas de valor separadas para no desbalancear tu operación completa.",
   "pasos_accionables": [
     "Calcular la demanda del cliente en un periodo definido",
-    "Determinar el takt time dividiendo tiempo disponible entre demanda",
-    "Ajustar dotación de personal y balancear las estaciones de trabajo según el takt",
-    "Reducir tiempos de cambio (setup) para permitir lotes más pequeños"
+    "Determinar el takt time dividiendo el tiempo disponible entre la demanda",
+    "Comparar el takt time con tu capacidad demostrada y teórica",
+    "Ajustar tu dotación de trabajo y balancear las estaciones según el takt",
+    "Reducir tiempos de cambio (setup) para permitir lotes más pequeños",
+    "Si la demanda varía significativamente, separa tus líneas de valor"
   ],
-  "entregable_esperado": "Cálculo de takt time y plan de balanceo de línea",
+  "entregable_esperado": "Cálculo de takt time documentado con plan de balanceo de línea y ajuste de recursos según demanda",
   "nodos_previos": [
     "ocho_desperdicios",
-    "lean_manufacturing"
+    "lean_manufacturing",
+    "value_stream_mapping",
+    "value_stream_mapping_2",
+    "ocho_desperdicios_lean"
   ],
   "nodos_siguientes": [
     "mapeo_flujo_valor",
-    "mapeo_flujo_valor_2"
+    "mapeo_flujo_valor_2",
+    "constraint_management"
   ],
   "condiciones_activacion": [
-    "Cuando se busca sincronizar la producción con la demanda real del cliente"
+    "Cuando buscas sincronizar tu producción con la demanda real del cliente",
+    "Si detectas variabilidad significativa en la demanda",
+    "Cuando necesitas dimensionar personal o balancear procesos"
   ],
-  "etiqueta_arbol": "Marca tu Ritmo de Producción"
+  "etiqueta_arbol": "Marca tu Ritmo de Producción",
+  "ids_alias": [
+    "takt_time_demand"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "takt_time_demand",
+      "titulo": "Takt Time y Gestión de la Demanda",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

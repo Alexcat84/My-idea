@@ -4,23 +4,54 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema Estable y Responsabilidad de la Gerencia sobre la Variación",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando un proceso muestra variación aleatoria estable (dentro de límites predecibles) alrededor de un promedio, se dice que está en un 'sistema estable'. En ese caso, la responsabilidad de mejorar radica exclusivamente en la gerencia, ya que los trabajadores no pueden, por su propio esfuerzo, cambiar el sistema. Pedir a los trabajadores que 'hagan mejor su trabajo' es inútil si el problema es del sistema, no de las personas.",
+  "resumen_teorico": "Un sistema estable es aquel cuya variación proviene solo de causas comunes, manteniéndose dentro de límites predecibles a lo largo del tiempo, a diferencia de las causas especiales que señalan algo puntual. Cuando confirmas que tu proceso es estable, la responsabilidad de mejorarlo es tuya como responsable del negocio, no de quien ejecuta la tarea, porque nadie puede superar por esfuerzo personal las limitaciones que trae el propio sistema. Pedir que 'trabajen mejor' o fijar metas numéricas sin cambiar materiales, herramientas, definiciones o capacitación es inútil y desmoralizante. La mejora real exige identificar qué cambio estructural puede mover la capacidad del sistema antes de exigir resultados distintos.",
   "pasos_accionables": [
     "Recolectar datos diarios de defectos o errores durante varias semanas.",
-    "Graficar los datos en una carta de corrida o carta de control para verificar si la variación es estable (causas comunes) o inestable (causas especiales).",
-    "Si el sistema es estable, dirigir los esfuerzos de mejora hacia el sistema (procesos, definiciones, materiales) y no hacia el desempeño individual de los trabajadores."
+    "Graficar los datos en una carta de corrida o carta de control para verificar si la variación es estable o inestable.",
+    "Clasificar la variación como causa común (del sistema) o causa especial (puntual).",
+    "Si el sistema es estable, identificar qué cambios estructurales, como materiales, herramientas o capacitación, pueden mover su capacidad.",
+    "Evitar fijar metas numéricas o culpar el desempeño individual hasta haber intervenido sobre el sistema mismo."
   ],
-  "entregable_esperado": "Una carta de control o run chart con el análisis de si el proceso está en control estadístico, y un plan de acción dirigido al sistema si corresponde.",
+  "entregable_esperado": "Una carta de control o run chart con el diagnóstico de estabilidad del proceso, la clasificación de causas y un plan de acción dirigido a cambiar el sistema si corresponde.",
   "nodos_previos": [
-    "cadena_reaccion_calidad_productividad"
+    "cadena_reaccion_calidad_productividad",
+    "critica_gestion_por_objetivos",
+    "eliminar_slogans_y_exhortaciones"
   ],
   "nodos_siguientes": [
     "definiciones_operacionales",
-    "control_estadistico_proceso"
+    "control_estadistico_proceso",
+    "critica_gestion_por_objetivos",
+    "eliminacion_estandares_trabajo",
+    "estadistico_competente_organizacion",
+    "inspeccion_optima_proceso",
+    "eliminar_metas_numericas_gerencia",
+    "eliminar_cuotas_numericas_trabajadores",
+    "falacia_meta_numerica_sin_metodo",
+    "sistemas_recompensa_aleatorios",
+    "trampa_del_promedio_como_estandar"
   ],
   "condiciones_activacion": [
-    "Cuando la gerencia culpa a los trabajadores por defectos o errores recurrentes.",
-    "Antes de implementar cualquier plan de mejora de calidad, para diagnosticar si el problema es sistémico."
+    "Cuando culpas a alguien por defectos o errores recurrentes en su trabajo.",
+    "Antes de implementar un plan de mejora de calidad, para diagnosticar si el problema es sistémico.",
+    "Cuando quieres fijar una meta de productividad o calidad.",
+    "Cuando tienes dudas sobre si un problema es del proceso o de quien lo ejecuta."
   ],
-  "etiqueta_arbol": "Entiende tu Sistema Estable"
+  "etiqueta_arbol": "Entiende tu Sistema Estable",
+  "ids_alias": [
+    "sistema_estable_deming",
+    "sistema_estable_variacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "sistema_estable_deming",
+      "titulo": "Concepto de Sistema Estable",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "sistema_estable_variacion",
+      "titulo": "Sistema Estable y Responsabilidad de la Variación",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

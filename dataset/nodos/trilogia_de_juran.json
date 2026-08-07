@@ -4,21 +4,24 @@
   "dominio": "quality",
   "titulo_concepto": "Trilogía de Juran (Planificación, Control y Mejora)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: (1) Planificación de la calidad -diseñar procesos para crear productos/servicios que satisfagan necesidades-, (2) Control de calidad -asegurar que la producción cumpla los criterios de diseño-, y (3) Mejora de la calidad -eliminar fallos crónicos mediante mejoras sistemáticas o disruptivas (breakthrough)-. Estos tres procesos constituyen la base científica de la gestión de calidad moderna, incluyendo metodologías como Six Sigma.",
+  "resumen_teorico": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: planificación de la calidad, que diseña procesos para crear productos o servicios que satisfagan necesidades; control de calidad, que asegura que la producción cumpla los criterios de diseño eliminando picos esporádicos que se alejan del nivel planificado; y mejora de la calidad, que reduce el desperdicio crónico mediante cambios sistemáticos o disruptivos tipo breakthrough. Distinguir si un problema es un pico esporádico o un desperdicio crónico te permite elegir el método correcto: apagar incendios no es lo mismo que mejorar de forma estructural, y cada uno exige un tratamiento distinto aunque compartan herramientas. Estos tres procesos son la base científica de la gestión de calidad moderna, incluyendo metodologías como Six Sigma.",
   "pasos_accionables": [
-    "Diseñar procesos de planificación para traducir la voz del cliente en especificaciones de producto/servicio",
-    "Implementar procesos de control que verifiquen la conformidad del producto con el diseño",
-    "Establecer un proceso sistemático de mejora continua o breakthrough para eliminar fallos crónicos",
-    "Integrar los tres procesos como un ciclo continuo dentro de la gestión organizacional"
+    "Diseña tus procesos traduciendo lo que pide tu cliente en especificaciones concretas de tu producto o servicio",
+    "Verifica si el problema que enfrentas es un pico esporádico o un desperdicio crónico antes de decidir cómo actuar",
+    "Aplica control de proceso para eliminar picos esporádicos y devolver el desempeño al nivel planificado",
+    "Aplica un proceso de mejora o breakthrough para reducir el desperdicio crónico a un nivel sin precedentes",
+    "Revisa que lo que produces cumpla con los criterios de diseño originales",
+    "Integra los tres procesos como un ciclo continuo en tu forma de gestionar la calidad"
   ],
-  "entregable_esperado": "Diagrama o plan que muestre los tres procesos (planificación, control, mejora) aplicados al producto o servicio de la organización",
+  "entregable_esperado": "Un diagrama o plan que muestre los tres procesos (planificación, control y mejora) aplicados a tu producto o servicio, incluyendo la clasificación del problema como esporádico o crónico.",
   "nodos_previos": [
     "gestion_para_la_calidad",
     "costo_de_mala_calidad_copq",
     "definicion_calidad_fitness_for_purpose",
     "costo_de_mala_calidad_copq_2",
     "enfoques_gurus_calidad",
-    "vacios_conocimiento_cliente"
+    "vacios_conocimiento_cliente",
+    "mantener_las_ganancias"
   ],
   "nodos_siguientes": [
     "doble_significado_calidad",
@@ -27,11 +30,14 @@
     "costo_de_mala_calidad",
     "sistema_gestion_calidad",
     "oficina_calidad_y_excelencia",
-    "sistemas_sociotecnicos"
+    "sistemas_sociotecnicos",
+    "enfoque_proyecto_por_proyecto"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita una estructura completa de gestión de calidad desde el diseño hasta la mejora",
-    "Si la organización presenta fallos recurrentes que requieren un enfoque sistemático"
+    "Cuando necesitas una estructura completa de gestión de calidad, desde el diseño hasta la mejora",
+    "Si tu negocio presenta fallos recurrentes que requieren un enfoque sistemático",
+    "Cuando debes distinguir entre apagar incendios y hacer una mejora estructural",
+    "Cuando necesitas definir tu estrategia de gestión de calidad como emprendedor individual"
   ],
   "merged_originals": [
     {
@@ -43,12 +49,18 @@
       "node_id": "trilogia_de_juran",
       "titulo": "Trilogía de Juran: Planificación, Control y Mejora de la Calidad",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "juran_trilogy",
+      "titulo": "La Trilogía de Juran: Planificación, Control y Mejora",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
   ],
   "ids_alias": [
     "trilogia_de_juran_3",
     "trilogia_de_juran",
-    "trilogia_de_juran_2"
+    "trilogia_de_juran_2",
+    "juran_trilogy"
   ],
   "etiqueta_arbol": "Planifica, Controla y Mejora tu Calidad"
 }

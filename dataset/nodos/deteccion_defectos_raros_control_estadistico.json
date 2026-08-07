@@ -4,23 +4,37 @@
   "dominio": "quality",
   "titulo_concepto": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando la fracción defectuosa es extremadamente baja (ej. 1 en 5000 o menos), la inspección del producto terminado es ineficaz e imprecisa, requiriendo tamaños de muestra enormes con alto error estándar. La única forma confiable de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) que usan mediciones reales durante el proceso, permitiendo detectar cambios en el proceso antes de que se traduzcan en defectos.",
+  "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, permitiéndote detener la producción antes de que la variación se traduzca en defectos. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
   "pasos_accionables": [
-    "Determinar si la fracción defectuosa del proceso es extremadamente baja (ej. menor a 1/1000).",
-    "Reemplazar la inspección masiva del producto terminado por mediciones continuas en proceso.",
-    "Establecer cartas de control X-barra y R con muestras pequeñas y frecuentes (ej. 4 unidades, 25 veces al día).",
-    "Detener la producción cuando la carta señale una causa especial, investigar la causa antes de liberar el lote.",
-    "Decidir racionalmente si condenar todo el lote o liberar parte de él según los hallazgos."
+    "Determina si la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo menor a 1 en 1000).",
+    "Reemplaza la inspección masiva del producto terminado por mediciones continuas durante el proceso.",
+    "Diseña un esquema de muestreo pequeño y frecuente (por ejemplo 4 unidades, 25 veces al día) y construye tus cartas X-barra y R con esas mediciones.",
+    "Detén la producción en cuanto la carta señale una causa especial de variación.",
+    "Investiga la causa raíz antes de decidir si liberas o rechazas el lote.",
+    "Decide racionalmente si condenas todo el lote o liberas solo la parte que corresponda según lo que encontraste."
   ],
-  "entregable_esperado": "Sistema de cartas de control en proceso implementado para monitorear procesos con fracción defectuosa extremadamente baja.",
+  "entregable_esperado": "Sistema de cartas de control en proceso (X-barra y R) implementado con datos en tiempo real, para monitorear procesos con fracción defectuosa extremadamente baja.",
   "nodos_previos": [
     "pruebas_destructivas",
     "control_estadistico_de_procesos"
   ],
-  "nodos_siguientes": [],
-  "condiciones_activacion": [
-    "Cuando la fracción defectuosa del proceso es tan baja que la inspección del producto terminado resulta estadísticamente poco confiable",
-    "Cuando existen requisitos extremos de confiabilidad (ej. menos de 1 falla en 10^9 unidades)"
+  "nodos_siguientes": [
+    "comparacion_metodos_inspeccion"
   ],
-  "etiqueta_arbol": "Detecta Defectos Muy Raros"
+  "condiciones_activacion": [
+    "Cuando la fracción defectuosa de tu proceso es tan baja que inspeccionar el producto terminado resulta estadísticamente poco confiable.",
+    "Cuando tienes requisitos extremos de confiabilidad (por ejemplo menos de 1 falla en 10^9 unidades).",
+    "Cuando la inspección final no te permite detectar suficientes defectos para estimar con confianza la calidad de tu proceso."
+  ],
+  "etiqueta_arbol": "Detecta Defectos Muy Raros",
+  "ids_alias": [
+    "graficos_control_defectos_raros"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "graficos_control_defectos_raros",
+      "titulo": "Uso de Gráficos de Control para Detectar Defectos Raros",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

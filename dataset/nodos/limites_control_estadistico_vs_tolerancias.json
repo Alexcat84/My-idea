@@ -13,11 +13,13 @@
   ],
   "entregable_esperado": "Documento de guías de decisión (matriz de cuadrantes) que clarifique cuándo tomar acción correctiva según el estado del proceso y del producto",
   "nodos_previos": [
-    "ciclo_de_retroalimentacion_control"
+    "ciclo_de_retroalimentacion_control",
+    "bucle_retroalimentacion_control"
   ],
   "nodos_siguientes": [
     "autocontrol_y_controlabilidad",
-    "accion_correctiva_diagnostico_remedio"
+    "accion_correctiva_diagnostico_remedio",
+    "accion_correctiva"
   ],
   "condiciones_activacion": [
     "Cuando el equipo detecta puntos fuera de los límites de control pero el producto sigue cumpliendo especificaciones",

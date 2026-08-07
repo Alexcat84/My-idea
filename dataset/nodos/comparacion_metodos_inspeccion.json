@@ -14,11 +14,13 @@
   ],
   "entregable_esperado": "Análisis de costo-beneficio documentado que determine si el método de inspección barato debe reemplazar al método maestro.",
   "nodos_previos": [
-    "graficos_control_defectos_raros"
+    "graficos_control_defectos_raros",
+    "deteccion_defectos_raros_control_estadistico"
   ],
   "nodos_siguientes": [
     "punto_equilibrio_calidad",
-    "cribado_prueba_barata"
+    "cribado_prueba_barata",
+    "punto_equilibrio_calidad_inspeccion"
   ],
   "condiciones_activacion": [
     "Cuando se busca reducir costos de inspección sin sacrificar calidad.",

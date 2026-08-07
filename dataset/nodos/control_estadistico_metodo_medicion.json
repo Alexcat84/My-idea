@@ -4,18 +4,21 @@
   "dominio": "quality",
   "titulo_concepto": "Control Estadístico del Método de Medición (Condición de Validez)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming establece que ninguna medición (visual, manual o instrumental) puede considerarse confiable a menos que el sistema completo -instrumento y operador- se encuentre en control estadístico. Esto implica que mediciones repetidas del mismo ítem deben mostrar estabilidad estadística (bajo un R-chart aceptable) y ser reproducibles entre distintos operadores o instrumentos. Sin este control, no se puede atribuir precisión ni exactitud a ningún método de prueba, sin importar el costo del equipo.",
+  "resumen_teorico": "Deming establece que ninguna medición, visual, manual o instrumental, puede considerarte confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
   "pasos_accionables": [
-    "Realizar mediciones repetidas del mismo ítem con el mismo operador e instrumento y graficar en un R-chart.",
-    "Verificar que el rango de variación (R) se mantenga dentro de límites de control estadístico.",
-    "Comparar resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.",
-    "Comparar resultados entre diferentes instrumentos usados por el mismo operador.",
-    "Establecer criterios de reproducibilidad aceptable antes de iniciar las pruebas."
+    "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.",
+    "Verifica que el rango de variación se mantenga dentro de límites de control estadístico.",
+    "Compara resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.",
+    "Compara resultados entre diferentes instrumentos usados por el mismo operador.",
+    "Establece criterios de reproducibilidad aceptable antes de iniciar las pruebas.",
+    "Rechaza el método de medición si no logras control estadístico o reproducibilidad adecuada."
   ],
-  "entregable_esperado": "Un reporte de control estadístico del sistema de medición que confirme la validez del método de prueba (instrumento + operador) antes de su uso en producción o inspección.",
+  "entregable_esperado": "Un reporte de control estadístico del sistema de medición que confirme la validez y reproducibilidad del método de prueba antes de usarlo en producción o inspección.",
   "nodos_previos": [
     "control_estadistico_proceso",
-    "definiciones_operacionales_4"
+    "definiciones_operacionales_4",
+    "administracion_de_inspeccion",
+    "definiciones_operacionales_2"
   ],
   "nodos_siguientes": [
     "definiciones_operacionales",
@@ -24,7 +27,18 @@
   "condiciones_activacion": [
     "Cuando existan discrepancias entre mediciones de vendedor y comprador.",
     "Cuando distintas máquinas de prueba den resultados inconsistentes entre sí.",
+    "Cuando se cuestione la fiabilidad de un instrumento o método de medición.",
     "Antes de aceptar cualquier sistema de inspección o prueba como confiable."
   ],
-  "etiqueta_arbol": "Confía Solo en Mediciones Validadas"
+  "etiqueta_arbol": "Confía Solo en Mediciones Validadas",
+  "ids_alias": [
+    "control_estadistico_de_metodo_de_prueba"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "control_estadistico_de_metodo_de_prueba",
+      "titulo": "Control Estadístico del Método de Prueba (Instrumento y Operador)",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

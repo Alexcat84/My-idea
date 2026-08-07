@@ -27,7 +27,7 @@ import {
   type Familia,
 } from "../readiness";
 import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAMILIA_FALTANTE } from "./constants";
-import { dominioPermitido, type Grafo } from "./graph";
+import { esOfrecible, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
 import {
@@ -83,7 +83,7 @@ export function cosecharVecindario(
     for (const vecino of [...(n.nodos_siguientes ?? []), ...(n.nodos_previos ?? [])]) {
       // Fase 3.5: hermana de la bomba dormida de recorrido.ts:239 — la
       // cosecha también filtraba con el default {core}.
-      if (vecino in graph && !rutaSet.has(vecino) && dominioPermitido(vecino, graph, dominiosDesbloqueados)) {
+      if (vecino in graph && !rutaSet.has(vecino) && esOfrecible(vecino, graph, dominiosDesbloqueados)) {
         candidatos.add(vecino);
       }
     }

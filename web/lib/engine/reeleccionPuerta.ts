@@ -26,7 +26,7 @@
  * ninguna. La brújula propone; el intérprete dispone.
  */
 import { semillasDelPack } from "./evaluacionBrecha";
-import { dominioPermitido, type Grafo } from "./graph";
+import { esOfrecible, type Grafo } from "./graph";
 import { tokensCosecha } from "./tokens";
 
 /**
@@ -99,7 +99,7 @@ export function reelegirPuertaDeMundo(params: {
     nid in graph &&
     !cubiertos.has(nid) &&
     !descartados.has(nid) &&
-    dominioPermitido(nid, graph, [dominio]);
+    esOfrecible(nid, graph, [dominio]);
 
   const ordenar = (ids: string[]) =>
     ids

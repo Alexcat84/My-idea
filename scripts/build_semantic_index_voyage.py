@@ -109,7 +109,13 @@ def main():
 
     print(f"Cargando grafo desde {GRAPH_PATH}...")
     graph = json.load(open(GRAPH_PATH, encoding="utf-8"))["nodos"]
-    ids = list(graph.keys())
+    # Los DEPRECADOS no se embeben. Sin esto la deprecacion seria decorativa: el
+    # nodo saldria de la seleccion del motor y el buscador semantico lo seguiria
+    # proponiendo, que es el mismo nodo entrando por la otra puerta.
+    deprecados = [k for k, n in graph.items() if n.get("deprecado")]
+    ids = [k for k in graph.keys() if not graph[k].get("deprecado")]
+    if deprecados:
+        print(f"  {len(deprecados)} deprecados fuera del indice (siguen en el grafo).")
     textos = [texto_nodo(graph[nid]) for nid in ids]
     print(f"{len(ids)} nodos a embeber con {VOYAGE_MODEL} (dim={OUTPUT_DIMENSION}).")
 

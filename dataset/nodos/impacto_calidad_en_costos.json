@@ -13,11 +13,13 @@
   ],
   "entregable_esperado": "Reporte de Costo de Mala Calidad (COPQ) con líneas base y metas de reducción",
   "nodos_previos": [
-    "definicion_fitness_for_purpose"
+    "definicion_fitness_for_purpose",
+    "definicion_calidad_fitness_for_purpose"
   ],
   "nodos_siguientes": [
     "dmaic_six_sigma",
-    "carryover_fallas_producto"
+    "carryover_fallas_producto",
+    "six_sigma_dmaic"
   ],
   "condiciones_activacion": [
     "Cuando la organización busca justificar económicamente una inversión en calidad",

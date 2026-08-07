@@ -4,24 +4,38 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación de Firmas y Revisiones Redundantes en Procesos Administrativos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming demuestra con casos reales (tarjetas de nómina, órdenes de compra, formularios de viáticos) que exigir múltiples firmas o revisiones diluye la responsabilidad ('si todos son responsables, nadie lo es') y genera más errores, no menos. La solución es simplificar el proceso, asignar responsabilidad clara a una sola persona y devolver inmediatamente los documentos incorrectos a su origen para corrección, en lugar de corregirlos en el flujo posterior.",
+  "resumen_teorico": "Deming demuestra con casos reales (tarjetas de nómina, órdenes de compra, formularios de viáticos) que exigir múltiples firmas o revisiones diluye la responsabilidad, porque si todos son responsables, nadie lo es, y genera más errores, no menos. La solución es simplificar el proceso, asignar responsabilidad clara a una sola persona, eliminar tareas que no le corresponden como cálculos aritméticos que debe hacer el área técnica, y devolver inmediatamente los documentos incorrectos a su origen para corrección, en lugar de corregirlos en el flujo posterior. Reducir revisores a uno solo simplifica el proceso y reduce drásticamente los errores.",
   "pasos_accionables": [
-    "Mapear todos los procesos administrativos que requieren múltiples firmas o aprobaciones",
-    "Eliminar firmas redundantes y asignar responsabilidad única y clara por cada documento",
-    "Implementar el retorno inmediato de documentos incorrectos al originador, con explicación del error",
-    "Medir el porcentaje de error antes y después del cambio para verificar mejora"
+    "Mapea todos los puntos de firma o revisión en tus procesos administrativos",
+    "Identifica si existe una única persona claramente responsable de la exactitud de cada documento",
+    "Elimina firmas o revisiones redundantes que no agregan valor de control real",
+    "Reasigna tareas de cálculo o verificación al área técnica correspondiente, no al usuario final",
+    "Implementa el retorno inmediato de documentos incorrectos a quien los originó, con explicación del error",
+    "Mide tu tasa de errores durante 2 a 4 semanas antes y después del cambio para verificar la mejora"
   ],
-  "entregable_esperado": "Proceso administrativo rediseñado con responsabilidad única definida y tasa de error reducida documentada",
+  "entregable_esperado": "Un proceso administrativo rediseñado con un único responsable claro por documento y una tasa de error reducida y documentada.",
   "nodos_previos": [
-    "retroalimentacion_cliente_mejora_servicio"
+    "retroalimentacion_cliente_mejora_servicio",
+    "identificacion_causa_raiz_no_culpa_individual"
   ],
   "nodos_siguientes": [
     "adaptacion_14_puntos_servicio_medico",
-    "handoff_transicion_ventas_cuentas"
+    "handoff_transicion_ventas_cuentas",
+    "retroalimentacion_inmediata_de_errores"
   ],
   "condiciones_activacion": [
-    "Cuando existen múltiples firmas o revisiones en un proceso sin mejora en la tasa de errores",
-    "Si un proceso administrativo (nómina, compras, viáticos) presenta alta tasa de retrabajo"
+    "Cuando un proceso administrativo tiene múltiples firmantes o revisores sin responsabilidad clara",
+    "Si la tasa de errores o retrabajo en documentos internos como nómina, compras o viáticos es alta y persistente"
   ],
-  "etiqueta_arbol": "Elimina Firmas Innecesarias"
+  "etiqueta_arbol": "Elimina Firmas Innecesarias",
+  "ids_alias": [
+    "eliminacion_de_firmas_duplicadas_responsabilidad_unica"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "eliminacion_de_firmas_duplicadas_responsabilidad_unica",
+      "titulo": "Eliminación de firmas duplicadas y asignación de responsabilidad única",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

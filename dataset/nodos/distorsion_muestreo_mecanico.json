@@ -4,23 +4,38 @@
   "dominio": "quality",
   "titulo_concepto": "Distorsión por Muestreo Mecánico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El muestreo mecánico (seleccionar muestras de arriba, abajo y medio de un lote por juicio del inspector) puede distorsionar el promedio real del proceso, a diferencia del muestreo por números aleatorios que sí refleja la teoría estadística de probabilidad. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado.",
+  "resumen_teorico": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
   "pasos_accionables": [
-    "Evaluar si el método actual de muestreo usa selección aleatoria o mecánica",
-    "Si es posible, implementar selección por números aleatorios para eliminar sesgos",
-    "Si no es practicable el muestreo aleatorio, considerar inspección 100% de una selección aleatoria de lotes",
-    "Documentar cualquier cambio en el método de muestreo como posible causa de puntos fuera de control"
+    "Evalúa si tu método actual de muestreo usa selección aleatoria o mecánica",
+    "Si usas un instrumento físico para muestrear, documenta y calibra el sesgo propio de esa herramienta",
+    "Si es posible, implementa selección por números aleatorios generados formalmente para eliminar sesgos",
+    "Si no puedes aplicar muestreo aleatorio, considera inspeccionar el 100% de una selección aleatoria de lotes",
+    "Registra las características del instrumento o método de muestreo como parte de tus datos",
+    "Documenta cualquier cambio en el método de muestreo como posible causa de puntos fuera de control"
   ],
-  "entregable_esperado": "Protocolo de muestreo definido y documentado, indicando método usado y su justificación",
+  "entregable_esperado": "Protocolo de muestreo documentado que especifique el método usado, su justificación y su posible sesgo frente al ideal aleatorio.",
   "nodos_previos": [
-    "concepto_variacion_estadistica"
+    "concepto_variacion_estadistica",
+    "experimento_cuentas_rojas"
   ],
   "nodos_siguientes": [
-    "control_estadistico_no_implica_cero_defectos"
+    "control_estadistico_no_implica_cero_defectos",
+    "control_estadistico_del_proceso"
   ],
   "condiciones_activacion": [
-    "Cuando se detecten discrepancias entre el promedio esperado y el observado en inspecciones",
-    "Cuando se sospeche que el método de muestreo introduce sesgo"
+    "Cuando detectes discrepancias entre el promedio esperado y el observado en tus inspecciones",
+    "Cuando sospeches que tu método de muestreo introduce sesgo",
+    "Cuando diseñes un sistema de muestreo de calidad para inspección de lotes"
   ],
-  "etiqueta_arbol": "Muestrea Siempre al Azar"
+  "etiqueta_arbol": "Muestrea Siempre al Azar",
+  "ids_alias": [
+    "muestreo_aleatorio_vs_mecanico"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "muestreo_aleatorio_vs_mecanico",
+      "titulo": "Muestreo Aleatorio vs Muestreo Mecánico",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

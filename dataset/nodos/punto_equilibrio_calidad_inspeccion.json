@@ -4,29 +4,45 @@
   "dominio": "quality",
   "titulo_concepto": "Punto de Equilibrio de Calidad (Break-even Quality) para Decisiones de Inspección",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming demuestra matemáticamente que existe un punto de equilibrio (k1/k2) entre el costo de inspeccionar una pieza (k1) y el costo de reparar/reensamblar un ensamble que falla por una pieza defectuosa (k2). Si la fracción defectuosa entrante p es menor que k1/k2, la estrategia de costo mínimo es cero inspección (Caso 1). Si p es mayor que k1/k2, la estrategia de costo mínimo es inspección 100% (Caso 2). Cualquier plan de muestreo intermedio entre estos dos extremos, cuando la calidad se sitúa consistentemente a un lado del punto de equilibrio, aumenta el costo total en comparación con las reglas de todo-o-nada.",
+  "resumen_teorico": "Existe un punto de equilibrio de calidad (break-even quality) definido como p = k1/k2, donde k1 es el costo de inspeccionar una pieza y k2 es el costo de reparar o reensamblar un producto que falla por una pieza defectuosa no detectada. Si la fracción defectuosa entrante p es menor que este punto, la estrategia de costo minimo es no inspeccionar. Si p es mayor, la inspeccion al 100% da el costo minimo. Cualquier plan de muestreo intermedio entre estos dos extremos aumenta el costo total cuando la calidad se ubica consistentemente de un lado del punto de equilibrio: casi nunca conviene un plan parcial. Cuando manejas varias piezas o proveedores a la vez, ordena los terminos (ki menos K por pi) de mayor a menor para aplicar la regla a cada una.",
   "pasos_accionables": [
-    "Calcular k1 (costo de inspeccionar una pieza) y k2 (costo de reparar un ensamble fallido por pieza defectuosa)",
-    "Determinar el punto de equilibrio k1/k2",
-    "Estimar la fracción defectuosa promedio entrante p mediante datos históricos en estado de control estadístico",
-    "Comparar p contra k1/k2 para decidir entre cero inspección o inspección 100%",
-    "Evitar planes de muestreo intermedios (aceptación por muestreo) cuando p esté consistentemente de un lado del punto de equilibrio"
+    "Calcula k1, el costo de inspeccionar una pieza, y k2, el costo de reparar un ensamble que falla por esa pieza defectuosa",
+    "Determina el punto de equilibrio dividiendo k1 entre k2",
+    "Estima la fraccion defectuosa entrante p usando datos historicos del proceso o proveedor en estado de control estadistico",
+    "Compara p contra el punto de equilibrio: si p es menor, elimina la inspeccion; si p es mayor, aplica inspeccion al 100%",
+    "Evita planes de muestreo intermedios cuando p este consistentemente de un lado del punto de equilibrio",
+    "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una"
   ],
-  "entregable_esperado": "Tabla de costos comparativos (Tabla 6 tipo) que justifique la decisión de inspección (cero, muestreo o 100%) con base en datos reales de costos y calidad entrante",
+  "entregable_esperado": "Tabla de costos comparativos que documente, por cada componente o proveedor, la politica de inspeccion aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
   "nodos_previos": [
     "control_estadistico_proceso",
     "costo_de_la_calidad",
-    "correlacion_cero_muestra_remanente"
+    "correlacion_cero_muestra_remanente",
+    "comparacion_metodos_inspeccion",
+    "redundancia_en_diseno",
+    "costo_de_calidad_6"
   ],
   "nodos_siguientes": [
     "programa_cero_defectos",
     "equipo_conjunto_de_mejora_con_proveedores",
-    "regla_todo_o_nada_inspeccion_2"
+    "regla_todo_o_nada_inspeccion_2",
+    "cribado_prueba_barata"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa recibe lotes de materiales o piezas y debe decidir el nivel de inspección de entrada",
-    "Cuando existen costos definibles de inspección y de falla por defectos",
-    "Cuando se sospecha que un plan de muestreo intermedio está aumentando costos innecesariamente"
+    "Cuando recibes lotes de materiales o piezas y debes decidir el nivel de inspeccion de entrada",
+    "Cuando puedes definir con datos los costos de inspeccionar y de que falle una pieza defectuosa",
+    "Cuando manejas multiples piezas o proveedores y necesitas optimizar el costo total de inspeccion",
+    "Cuando sospechas que un plan de muestreo intermedio esta aumentando tus costos innecesariamente"
   ],
-  "etiqueta_arbol": "Decide Cuánto Inspeccionar"
+  "etiqueta_arbol": "Decide Cuánto Inspeccionar",
+  "ids_alias": [
+    "punto_equilibrio_calidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "punto_equilibrio_calidad",
+      "titulo": "Punto de Equilibrio de Calidad y Regla Todo-o-Nada en Inspección",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

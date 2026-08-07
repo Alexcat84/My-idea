@@ -205,6 +205,37 @@ def paso_a_integrar_nodos_y_puentes(packs, puentes_por_dominio):
                 fallar(f"puente {core_id} -> {pack_id}: alguno de los dos no existe en dataset/nodos/")
             nodo_core = cargar_json(ruta_core)
             nodo_pack = cargar_json(ruta_pack)
+
+            # EL ANCLA MAL ROTULADA MUERE AQUÍ, en la fábrica.
+            #
+            # Un puente es "del core hacia un mundo", y el campo se llama `core`
+            # por eso. Pero el proponedor de puentes busca sobre el master graph
+            # entero, donde los packs YA integrados también viven: nada le
+            # impedía anclar un puente de entrega en un nodo de quality y
+            # llamarlo "core". La cirugía de Calidad pagó esa lección con dos
+            # especímenes: al deprecar nodos de quality se rompieron un puente
+            # de entrega y otro de risk_management, y no se vieron hasta que el
+            # Gate 0 aprendió a mirarlos.
+            #
+            # El Gate los caza DESPUÉS, con el daño hecho y a mano. Aquí se
+            # cazan ANTES, cuando todavía es un dato en un archivo: el dominio
+            # REAL del ancla tiene que ser 'core', y el del otro extremo tiene
+            # que ser el pack que el puente declara.
+            dom_core = nodo_core.get("dominio", "core")
+            if dom_core != "core":
+                fallar(
+                    f"puente de '{d}' anclado en '{core_id}', que NO es del core "
+                    f"sino de '{dom_core}'. Un puente sale del core; si el ancla "
+                    f"pertenece a otro pack, el puente ata dos mundos entre sí y "
+                    f"nadie lo sabe hasta que uno de los dos cambie."
+                )
+            dom_pack = nodo_pack.get("dominio")
+            if dom_pack != d:
+                fallar(
+                    f"puente de '{d}' cuyo extremo '{pack_id}' pertenece a "
+                    f"'{dom_pack}', no a '{d}'."
+                )
+
             if pack_id not in nodo_core.get("nodos_siguientes", []):
                 nodo_core.setdefault("nodos_siguientes", []).append(pack_id)
             if core_id not in nodo_pack.get("nodos_previos", []):
@@ -288,8 +319,12 @@ def main():
     paso("a_nodos_y_puentes", _a)
 
     # e-parte-1. recompilar master_graph + Gate 0 (los nodos ya están en dataset/)
+    # --reaplico-curaduria: run_phase1 avisa a gritos y FALLA cuando la
+    # recompilación revierte las etiquetas de cara. Aquí ese aviso sobra,
+    # porque el paso siguiente (e-bis) las reaplica; sin la bandera pararía la
+    # línea justo antes de arreglarlo.
     paso("e_gate0", lambda: correr(
-        [sys.executable, "scripts/run_phase1.py"],
+        [sys.executable, "scripts/run_phase1.py", "--reaplico-curaduria"],
         "e. run_phase1: recompilación + Gate 0 (debe quedar VERDE)"))
 
     # e-parte-1b. RE-APLICAR las etiquetas de cara. Cazado el 2026-08-07

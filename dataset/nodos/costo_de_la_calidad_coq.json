@@ -14,13 +14,15 @@
   ],
   "entregable_esperado": "Reporte de Costo de Calidad (COQ) validado por contabilidad, con categorías de prevención, evaluación y fallas, y meta de reducción anual definida",
   "nodos_previos": [
-    "medicion_de_calidad"
+    "medicion_de_calidad",
+    "medicion_calidad"
   ],
   "nodos_siguientes": [
     "programa_de_mejora_de_calidad",
     "costo_de_calidad_2",
     "categorias_costo_de_calidad",
-    "conciencia_de_calidad"
+    "conciencia_de_calidad",
+    "conciencia_calidad"
   ],
   "condiciones_activacion": [
     "Cuando la dirección no considera la calidad como un factor medible junto a ventas e inventario",

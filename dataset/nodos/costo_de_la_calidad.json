@@ -13,15 +13,18 @@
   ],
   "entregable_esperado": "Reporte de costo de calidad desglosado por categoría (prevención, evaluación, fallas) como porcentaje de ventas",
   "nodos_previos": [
-    "definicion_calidad_conformidad_requisitos"
+    "definicion_calidad_conformidad_requisitos",
+    "definicion_calidad_conformidad"
   ],
   "nodos_siguientes": [
     "quality_management_maturity_grid",
-    "punto_equilibrio_calidad_inspeccion"
+    "punto_equilibrio_calidad_inspeccion",
+    "rejilla_madurez_gestion_calidad"
   ],
   "condiciones_activacion": [
     "Cuando la dirección considera que la calidad es intangible y no medible",
     "Al necesitar justificar económicamente una inversión en gestión de calidad"
   ],
-  "etiqueta_arbol": "Mide el Costo de Fallar"
+  "etiqueta_arbol": "Mide el Costo de Fallar",
+  "deprecado": true
 }

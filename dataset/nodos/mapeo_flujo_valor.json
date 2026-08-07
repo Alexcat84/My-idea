@@ -4,28 +4,50 @@
   "dominio": "quality",
   "titulo_concepto": "Mapeo de Flujo de Valor (De la Concepción a la Comercialización)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El mapeo de flujo de valor documenta todas las actividades necesarias para llevar un producto desde la concepción hasta la comercialización, incluyendo flujo de materiales e información. Permite distinguir actividades de valor agregado, actividades sin valor agregado pero necesarias, y actividades sin valor agregado. Se desarrollan mapas del estado actual y estado futuro para guiar la implementación de mejoras hacia el estado deseado.",
+  "resumen_teorico": "El mapeo de flujo de valor documenta todas las actividades, con y sin valor agregado, necesarias para llevar un producto desde la concepción hasta la comercialización, incluyendo el flujo de materiales e información. Permite distinguir actividades de valor agregado, actividades sin valor agregado pero necesarias, y desperdicio puro mediante un análisis de descomposición del proceso. Se elabora primero un mapa del estado actual, registrando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y luego un mapa del estado futuro que incorpora las mejoras deseadas. Este par de mapas guía la implementación de cambios y sirve de base para definir mecanismos de control que verifiquen si el proceso avanza hacia el estado deseado.",
   "pasos_accionables": [
-    "Entrenar al equipo en conceptos clave de Lean y VSM",
-    "Mapear el estado actual documentando tiempos de ciclo, inventarios, tiempos de espera y capacidad",
-    "Clasificar actividades en valor agregado, no valor agregado necesario, y desperdicio puro",
-    "Diseñar el mapa del estado futuro deseado",
-    "Implementar cambios y validar mejoras contra el mapa futuro"
+    "Repasa los conceptos clave de Lean y Value Stream Mapping antes de empezar",
+    "Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad",
+    "Clasifica cada actividad en valor agregado, no valor agregado pero necesaria, o desperdicio puro",
+    "Diseña y documenta el mapa del estado futuro con las mejoras que quieres lograr",
+    "Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro"
   ],
-  "entregable_esperado": "Mapa de flujo de valor actual y futuro documentado con métricas de proceso y plan de implementación",
+  "entregable_esperado": "Mapa de flujo de valor del estado actual y del estado futuro, con métricas de proceso, plan de implementación y mecanismos de control.",
   "nodos_previos": [
     "ocho_desperdicios_lean",
-    "takt_time"
+    "takt_time",
+    "planificacion_economica_conjunta"
   ],
   "nodos_siguientes": [
     "sistema_pull_push",
     "eventos_kaizen_rie",
     "planificacion_inicial_calidad",
-    "tres_tipos_desperdicio_tps"
+    "tres_tipos_desperdicio_tps",
+    "value_non_value_added_analysis",
+    "takt_time_demand",
+    "kanban_pull_system"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita entender el estado actual de un proceso para identificar oportunidades de mejora",
-    "Cuando se planifica una transformación Lean en una línea de producción o servicio"
+    "Cuando necesitas entender el estado actual de un proceso para identificar oportunidades de mejora",
+    "Cuando planificas una transformación Lean en tu línea de producción o servicio",
+    "Cuando necesitas visualizar y rediseñar integralmente un proceso productivo",
+    "Si existe desperdicio no identificado en el flujo actual"
   ],
-  "etiqueta_arbol": "Documenta el Camino del Producto"
+  "etiqueta_arbol": "Documenta el Camino del Producto",
+  "ids_alias": [
+    "mapeo_flujo_valor_2",
+    "value_stream_mapping_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "mapeo_flujo_valor_2",
+      "titulo": "Mapeo de Flujo de Valor (Valor Agregado y No Agregado)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "value_stream_mapping_2",
+      "titulo": "Value Stream Mapping (Distinguir Valor de Desperdicio)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

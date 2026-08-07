@@ -1,0 +1,112 @@
+# -*- coding: utf-8 -*-
+"""El aviso de curaduria revertida de scripts/run_phase1.py.
+
+LA AVERIA DE ORIGEN (2026-08-07, integrando compras y entrega): run_phase1
+recompila master_graph.json desde dataset/nodos/, y la curaduria de etiquetas
+de cara no vive en los nodos, vive en dataset/metadata/etiquetas_de_cara_v1*
+y se aplica sobre las dos COPIAS del grafo. Cada recompilacion la borra. Se
+llevo por delante 71 etiquetas del core, que volvieron a su titulo de libro
+("Canvas", "Pivotar", "SPIN", "DMAIC"), y NADA se quejo: el grafo seguia
+siendo valido y el Gate 0 daba OK.
+
+Es la clase mas peligrosa de averia: degrada la VOZ sin romper la estructura,
+y el Gate solo mira la estructura. Volvio a morder en la verificacion previa
+al tag de produccion, esta vez por la via de fuera (correr run_phase1 suelto
+para comprobar el Gate), que el paso e-bis de integrar_packs no cubre.
+
+Los dos escenarios que definen el arreglo:
+  - run_phase1 SUELTO sobre una copia curada -> grita y falla (codigo != 0)
+  - el flujo via integrar_packs, que reaplica justo despues -> limpio y callado
+
+Y lo que JAMAS hace: auto-aplicar. Eso creaeria una segunda fuente de
+curaduria, prohibida por el remache del e-bis.
+"""
+import io
+import sys
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(BASE / "scripts"))
+
+from run_phase1 import avisar_curaduria, curaduria_revertida, etiquetas_curadas  # noqa: E402
+
+
+def capturar(fn):
+    """Ejecuta fn con la salida capturada; devuelve (resultado, texto)."""
+    antes, buf = sys.stdout, io.StringIO()
+    sys.stdout = buf
+    try:
+        return fn(), buf.getvalue()
+    finally:
+        sys.stdout = antes
+
+
+def grafo_curado():
+    """Un grafo minimo con las etiquetas EN SU FORMA CURADA."""
+    return {nid: {"etiqueta_arbol": etiqueta}
+            for nid, etiqueta in list(etiquetas_curadas().items())[:5]}
+
+
+def test_la_curaduria_real_existe():
+    curadas = etiquetas_curadas()
+    assert len(curadas) > 50, f"solo {len(curadas)} etiquetas curadas; listas mal leidas"
+    print(f"  ok: la curaduria real trae {len(curadas)} etiquetas")
+
+
+def test_suelto_sobre_copia_revertida_grita_y_falla():
+    nodos = grafo_curado()
+    victima = next(iter(nodos))
+    nodos[victima]["etiqueta_arbol"] = "Actualiza tu Canvas tras Descubrir"
+
+    assert curaduria_revertida(nodos) == [victima], curaduria_revertida(nodos)
+    codigo, salida = capturar(lambda: avisar_curaduria(nodos, reaplico=False))
+    assert codigo != 0, "no fallo: un script que lo llame se lo tragaria en silencio"
+    assert "REVERTISTE LA CURADURIA DE ETIQUETAS" in salida, salida
+    assert "etiquetas_de_cara.py --aplicar" in salida, salida
+    assert "\033[1;31m" in salida, "el aviso no sale en rojo"
+    assert victima in salida, "no dice CUAL etiqueta se perdio"
+    print(f"  ok: suelto sobre copia revertida grita en rojo y sale con {codigo}")
+
+
+def test_via_integrar_packs_limpio_y_callado():
+    # El flujo de la linea de ensamblaje: recompila y reaplica acto seguido,
+    # asi que el aviso sobra; sin la bandera pararia justo antes de arreglarlo.
+    nodos = grafo_curado()
+    nodos[next(iter(nodos))]["etiqueta_arbol"] = "Actualiza tu Canvas tras Descubrir"
+    codigo, salida = capturar(lambda: avisar_curaduria(nodos, reaplico=True))
+    assert codigo == 0, codigo
+    assert salida == "", f"deberia callar y dijo: {salida!r}"
+    print("  ok: via integrar_packs (con e-bis detras) pasa limpio y callado")
+
+
+def test_copia_intacta_no_molesta():
+    nodos = grafo_curado()
+    assert curaduria_revertida(nodos) == []
+    codigo, salida = capturar(lambda: avisar_curaduria(nodos, reaplico=False))
+    assert codigo == 0 and salida == "", (codigo, salida)
+    print("  ok: sobre una copia intacta no dice nada")
+
+
+def test_jamas_auto_aplica():
+    # La baranda del remache: avisar_curaduria NO puede escribir. Si algun dia
+    # alguien "resuelve" el aviso aplicando la curaduria aqui, habria dos
+    # fuentes y el bug volveria con otro disfraz.
+    fuente = (BASE / "scripts" / "run_phase1.py").read_text(encoding="utf-8")
+    cuerpo = fuente[fuente.index("def avisar_curaduria"):fuente.index("def main():")]
+    for prohibido in ("write_text", "json.dump", 'open(', "etiqueta_arbol ="):
+        assert prohibido not in cuerpo, f"el aviso escribe: '{prohibido}'"
+    print("  ok: el aviso avisa; no toca un solo archivo")
+
+
+def main():
+    for f in (test_la_curaduria_real_existe,
+              test_suelto_sobre_copia_revertida_grita_y_falla,
+              test_via_integrar_packs_limpio_y_callado,
+              test_copia_intacta_no_molesta,
+              test_jamas_auto_aplica):
+        f()
+    print("OK: la curaduria revertida grita, falla y jamas se auto-aplica.")
+
+
+if __name__ == "__main__":
+    main()

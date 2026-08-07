@@ -4,29 +4,47 @@
   "dominio": "quality",
   "titulo_concepto": "Modelo Six Sigma DMAIC",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El modelo de mejora Six Sigma DMAIC (Define, Measure, Analyze, Improve, Control) es la versión más aceptada y utilizada del enfoque de mejora de Juran. Consiste en seleccionar y lanzar el proyecto, definir el problema, medir la magnitud de los síntomas, analizar la información para descubrir causas raíz, mejorar proporcionando un remedio, y controlar para sostener las ganancias.",
+  "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.",
   "pasos_accionables": [
-    "Seleccionar el problema y lanzar el proyecto (a cargo de la dirección)",
-    "Definir el problema claramente (a cargo de champions y dirección)",
-    "Medir la magnitud de los síntomas (a cargo del equipo del proyecto)",
-    "Analizar la información para descubrir la(s) causa(s) raíz",
-    "Mejorar implementando un remedio para la(s) causa(s)",
-    "Controlar para sostener las ganancias logradas"
+    "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
+    "Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.",
+    "Mide la magnitud real de los síntomas con datos, no con impresiones.",
+    "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",
+    "Implementa un remedio dirigido específicamente a esa causa raíz.",
+    "Controla los resultados periódicamente para asegurar que la mejora se mantenga."
   ],
-  "entregable_esperado": "Proyecto Six Sigma completo con las cinco fases documentadas y resultados medibles",
+  "entregable_esperado": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
   "nodos_previos": [
     "secuencia_universal_breakthrough",
     "viaje_diagnostico_remedial",
     "analisis_pareto_priorizacion",
-    "mistake_proofing_poka_yoke_2"
+    "mistake_proofing_poka_yoke_2",
+    "secuencia_universal_para_el_breakthrough",
+    "dmaic_fase_improve",
+    "impacto_calidad_en_costos",
+    "analisis_pareto"
   ],
   "nodos_siguientes": [
     "sostener_las_ganancias",
     "dmadv_design_for_six_sigma",
-    "roles_six_sigma"
+    "roles_six_sigma",
+    "consejo_ejecutivo_calidad",
+    "design_for_six_sigma_dfss"
   ],
   "condiciones_activacion": [
-    "Cuando se busca un método estructurado y ampliamente aceptado para mejora de procesos con métricas cuantificables"
+    "Cuando enfrentas un problema crónico de calidad que ya intentaste resolver sin éxito duradero.",
+    "Cuando necesitas un método estructurado y probado para mejorar un proceso con métricas cuantificables.",
+    "Cuando quieres asegurar que una mejora se mantenga en el tiempo y no se revierta a los pocos meses."
   ],
-  "etiqueta_arbol": "Mejora con el Modelo DMAIC"
+  "etiqueta_arbol": "Mejora con el Modelo DMAIC",
+  "ids_alias": [
+    "dmaic_six_sigma"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "dmaic_six_sigma",
+      "titulo": "Modelo de Mejora DMAIC de Six Sigma",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

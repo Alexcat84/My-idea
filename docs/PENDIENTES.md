@@ -372,6 +372,108 @@ son la capa 3 embrionaria). Matriz de fases:
   `cumplimientoPorDominio`). Nombrado en `docs/PLAN_ESPACIOS_FASE3.md §6`; **jamás
   arreglar "de paso"**.
 
+## Campaña fichada: `re-voz-de-quality`
+
+**Se dispara al CERRAR la cirugía de fusión de Calidad, no antes.** La secuencia
+fusión-primero es aritmética: los nodos absorbidos ya no hay que re-vozarlos.
+
+**El hallazgo que la origina** (cirugía de Calidad, 2026-08-07): los detectores
+de las tres barandas sobre los **896** nodos de `quality` marcaron **209 (23%)**.
+El censo los había muestreado con 10 nodos y dio 0/10; una muestra detecta lo
+sistémico, no mide prevalencia. Verificado leyendo, no confiando en el patrón:
+son reales.
+
+| patrón | nodos |
+|---|---:|
+| "la gerencia" / "la alta dirección" | 149 |
+| "el equipo" | 21 |
+| "el departamento" | 17 |
+| matriz o puntaje | 9 |
+| dato local cableado | 4 |
+
+Calidad está escrito en **voz de dirección corporativa**: *"justificar ante la
+alta dirección"*, *"comparar con las expectativas de la gerencia"*. Eso viola la
+lente de persona-sola-con-teléfono de la vara vigente.
+
+**El trabajo**: regeneración-CON-ANCLAJE de los supervivientes que estén entre
+los 209 marcados. Mismo fragmento de fuente, lente persona-sola, la gerencia
+muere. Por lotes, con muestreo del fundador entre lote y lote. Cero invención:
+lo que no esté en el fragmento no se escribe.
+
+**EL PACIENTE REAL, tras la fusión** (2026-08-07): de los 209 marcados, **24 se
+deprecaron** al fundirse y **185 sobrevivieron**. Ese es el lote a regenerar:
+
+| patrón | nodos vivos |
+|---|---:|
+| residuo corporativo | 174 |
+| matriz o puntaje | 8 |
+| dato local cableado | 4 |
+
+La secuencia fusión-primero se pagó sola: 24 nodos que habrían costado API ya
+no existen como sujetos.
+
+**Los datos ya están**: `packs/quality/poda/_revoz_lote.json` trae la lista
+exacta de los 185 vivos, y `_poda_quality.json` la cita textual y el patrón de
+cada uno. La campaña arranca sin volver a medir nada.
+
+## Ficha post-beta: `densidad-de-quality`
+
+**Marcada post-beta-con-telemetría**: informa, no receta, igual que el núcleo.
+
+**El diagnóstico** (cirugía de Calidad, ago 2026). `ramaDe()` desde **cualquiera**
+de las 7 semillas de quality alcanza el tope de 500 nodos. El pack está tan
+conectado que "descartar la rama" descarta casi todo lo alcanzable:
+
+| semilla rechazada | semillas que quedan fuera de su rama |
+|---|---:|
+| accion_correctiva · programa_mejora_calidad_14_pasos · costo_de_calidad · medicion_calidad | **0** |
+| control_estadistico_de_procesos · trilogia_de_juran | 1 |
+| mejora_continua_del_proceso | 3 |
+
+**El efecto real**: cuando el usuario rechaza una puerta del mundo, la reelección
+debería ofrecerle otra semilla fuera de esa rama. En 4 de las 7 no queda ninguna,
+así que cae al vecino. La regla existe en el código y no se puede ejercer.
+
+**La fusión no lo causó.** Medido contra el grafo anterior: la rama de
+`medicion_calidad` ya se tragaba 6 de las 7 semillas; el test pasaba por **una**
+de margen y la fusión se comió la séptima. Lo que hizo fue destaparlo.
+
+**El test de guardia** ya está puesto (`reeleccionPuerta.test.ts`, describe "la
+densidad del pack, fijada como está hoy"): fija el estado actual, así que el día
+que alguien mejore la densidad el test lo canta en vez de dejarlo pasar.
+
+**Por qué post-beta**: arreglarlo es podar aristas, y qué aristas sobran lo dice
+el recorrido real de la gente, no el grafo mirándose a sí mismo.
+
+## Ficha: `ancla-de-puente-mal-rotulada`
+
+**Encontrada al construir la aserción del tejedor** (ago 2026). Un puente se
+declara "del core hacia un mundo" y su campo se llama `core` por eso. Pero el
+proponedor busca sobre el master graph entero, donde los packs ya integrados
+también viven: nada le impedía anclar un puente de entrega en un nodo de quality
+y llamarlo core.
+
+**Censo: 22 puentes ya tejidos tienen el ancla fuera del core.** Entre ellos 13
+de compras y entrega, los dos mundos más nuevos. Ejemplos:
+
+- `compras` anclado en `calificacion_de_calidad_de_proveedores` (quality)
+- `compras` anclado en `transfiere_lo_que_no_debes_cargar` (risk_management)
+- `entrega` anclado en `embalaje_exportacion` (exportacion)
+
+**La duda estructural, para el fundador**: ¿son un defecto o son buenos puentes
+mal rotulados? Un puente quality→compras puede ser una conexión legítima y
+valiosa. Pero ata dos mundos entre sí, y eso significa que la puerta solo abre
+si el usuario tiene AMBOS desbloqueados, cosa que nadie declaró.
+
+**Ya cazado en vivo**: al deprecar nodos de quality en la cirugía se rompieron un
+puente de entrega y otro de risk_management, y no se vieron hasta que el Gate 0
+aprendió a mirarlos.
+
+**Lo que sí quedó hecho**: la aserción en `integrar_packs.py` mata la clase en la
+fábrica para todo pack NUEVO. Los 22 existentes no se tocan: la aserción solo
+corre sobre packs pendientes de integrar, así que hoy no rompe nada. **Pero
+re-integrar cualquier pack fallará hasta que esto se adjudique.**
+
 ## Hecho recientemente (para no reabrirlo por error)
 
 - **Calendario**: modo con-fechas + recordatorios + `.ics` universal (webcal) EN PRODUCCIÓN.

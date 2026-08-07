@@ -28,6 +28,11 @@ export interface NodoGrafo {
   nodos_previos?: string[];
   nodos_siguientes?: string[];
   condiciones_activacion?: string[];
+  /** Fusión de duplicados: el nodo sigue EXISTIENDO (su historia resuelve) pero
+   * ya no se ofrece. Ver esOfrecible: es la única puerta que lo mira. */
+  deprecado?: boolean;
+  /** Los ids que este nodo absorbió al fusionarse. */
+  ids_alias?: string[];
 }
 
 export type Grafo = Record<string, NodoGrafo>;
@@ -57,11 +62,13 @@ export function cargarPreguntasCache(): PreguntasCache {
   return _preguntasCache;
 }
 
-export function cargarEntrySeeds(): string[] {
+/** Las semillas de entrada. Con el grafo, pasan por la PUERTA ÚNICA: una
+ * semilla deprecada abriría el recorrido por un nodo que ya no se ofrece. */
+export function cargarEntrySeeds(graph?: Grafo): string[] {
   if (!_entrySeeds) {
     _entrySeeds = (entrySeedsJson as { seeds: string[] }).seeds;
   }
-  return _entrySeeds;
+  return graph ? _entrySeeds.filter((nid) => esOfrecible(nid, graph)) : _entrySeeds;
 }
 
 /** Fase 3.9: lo que se muestra en las SUPERFICIES DE NAVEGACIÓN (riel del
@@ -74,10 +81,38 @@ export function etiquetaArbol(nid: string, graph: Grafo): string {
   return graph[nid]?.etiqueta_arbol ?? graph[nid]?.titulo_concepto ?? nid;
 }
 
-/** Hotfix v2.1.1: groundwork de dominios. Hoy todo el dataset es "core" y
- * todo proyecto tiene ["core"] desbloqueado por defecto. */
-export function dominioPermitido(nid: string, graph: Grafo, dominiosDesbloqueados?: string[] | null): boolean {
-  return (dominiosDesbloqueados ?? DOMINIOS_DESBLOQUEADOS_DEFECTO).includes(graph[nid]?.dominio ?? "core");
+/**
+ * LA PUERTA ÚNICA DE OFERTA. Todo camino que le proponga un nodo al usuario
+ * pasa por aquí: los sucesores del recorrido, las semillas de entrada y los
+ * resultados del índice semántico.
+ *
+ * Es única a propósito, y es ley de la casa (adjudicada ago 2026). Antes había
+ * dos filtros de dominio: éste y una copia a mano dentro de compass.ts. Un
+ * criterio de elegibilidad repartido en varios sitios no falla de golpe: falla
+ * en el camino que alguien olvidó actualizar, y el síntoma aparece semanas
+ * después en el recorrido de una persona. Si mañana hace falta una condición
+ * nueva para ofrecer un nodo, se escribe AQUÍ o no se escribe.
+ *
+ * Tres cosas mira, en este orden:
+ *   1. que el nodo exista en el grafo,
+ *   2. que NO esté deprecado (fusionado dentro de otro: sigue existiendo para
+ *      que la historia resuelva, pero ya no se ofrece),
+ *   3. que su dominio esté desbloqueado para este proyecto.
+ */
+export type NodoOfrecible = { dominio?: string; deprecado?: boolean };
+
+export function esOfrecible(
+  nid: string,
+  // Lo MÍNIMO que la puerta necesita mirar. Así la usan igual el motor (que
+  // tiene el grafo entero) y el índice semántico (que solo carga dominio), sin
+  // que ninguno tenga excusa para escribirse su propio filtro.
+  graph: Record<string, NodoOfrecible>,
+  dominiosDesbloqueados?: string[] | null,
+): boolean {
+  const n = graph[nid];
+  if (!n) return false;
+  if (n.deprecado) return false;
+  return (dominiosDesbloqueados ?? DOMINIOS_DESBLOQUEADOS_DEFECTO).includes(n.dominio ?? "core");
 }
 
 export function sucesoresNivel(
@@ -89,7 +124,7 @@ export function sucesoresNivel(
 ): string[] {
   const siguientes = graph[nid]?.nodos_siguientes ?? [];
   return siguientes
-    .filter((c) => c in graph && !visitados.has(c) && dominioPermitido(c, graph, dominiosDesbloqueados))
+    .filter((c) => !visitados.has(c) && esOfrecible(c, graph, dominiosDesbloqueados))
     .slice(0, limite);
 }
 

@@ -14,7 +14,7 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_PUERTA_AVANZADA } from "../prompts";
-import { dominioPermitido, type Grafo } from "./graph";
+import { esOfrecible, type Grafo } from "./graph";
 import { tokensCosecha } from "./tokens";
 
 const ORDEN_FASES: Record<string, number> = { ideacion: 0, validacion: 1, planificacion: 2, ejecucion: 3 };
@@ -55,7 +55,7 @@ export function candidatosSeguimiento(
   };
 
   return Object.keys(graph)
-    .filter((nid) => !cubiertos.has(nid) && dominioPermitido(nid, graph, dominiosDesbloqueados))
+    .filter((nid) => !cubiertos.has(nid) && esOfrecible(nid, graph, dominiosDesbloqueados))
     .sort((a, b) => puntaje(b) - puntaje(a))
     .slice(0, tope);
 }

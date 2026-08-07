@@ -4,25 +4,40 @@
   "dominio": "quality",
   "titulo_concepto": "Decisión de Aptitud para el Uso (Fitness for Use)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto o no para el uso previsto. Esta decisión requiere recopilar información sobre el usuario, el uso real del producto, riesgos de seguridad, urgencia, economía y las medidas de aptitud del cliente. Se disponen opciones como desecho, clasificación, reproceso, devolución al proveedor o venta con descuento.",
+  "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. La decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
   "pasos_accionables": [
-    "Identificar quién será el usuario final y su nivel de sofisticación técnica.",
-    "Determinar cómo se usará realmente el producto.",
-    "Evaluar riesgos de seguridad humana o integridad estructural.",
-    "Analizar urgencia y economía de reparación vs uso tal cual.",
-    "Consultar medidas de aptitud del cliente, que pueden diferir de las del fabricante.",
-    "Asignar la decisión a un especialista, gerente de calidad o comité (material review board) según el monto en juego."
+    "Identifica quién es el usuario final y su nivel de sofisticación técnica.",
+    "Determina cómo se usará realmente el producto no conforme.",
+    "Evalúa los riesgos de seguridad, integridad estructural o impacto ambiental.",
+    "Analiza la urgencia y la economía de reparar frente a usar el producto tal cual.",
+    "Consulta las medidas de aptitud del cliente, aunque difieran de las tuyas.",
+    "Define un criterio de delegación: resuelve tú mismo los casos menores y escala a un especialista o comité los de alto impacto, documentando la decisión para evitar buscar culpables."
   ],
-  "entregable_esperado": "Informe de análisis de aptitud para el uso con recomendación de disposición del lote no conforme.",
+  "entregable_esperado": "Informe de análisis de aptitud para el uso con recomendación de disposición del lote no conforme y criterio de delegación según el impacto de la decisión.",
   "nodos_previos": [
-    "decision_conformidad_producto"
+    "decision_conformidad_producto",
+    "auto_inspeccion"
   ],
   "nodos_siguientes": [
     "decision_comunicacion",
-    "disposicion_producto_no_conforme"
+    "disposicion_producto_no_conforme",
+    "accion_correctiva_diagnostico_remedio",
+    "revisar_necesidades_de_empaque"
   ],
   "condiciones_activacion": [
-    "Cuando un producto no cumple especificaciones pero podría seguir siendo funcionalmente útil."
+    "Cuando un producto no cumple especificaciones pero podría seguir siendo funcionalmente útil.",
+    "Cuando necesitas decidir la disposición de un lote no conforme sin tener claro el impacto en el usuario final.",
+    "Si requieres un proceso ágil que evite sobrecargar la revisión formal en casos de bajo impacto."
   ],
-  "etiqueta_arbol": "Juzga la Aptitud para el Uso"
+  "etiqueta_arbol": "Juzga la Aptitud para el Uso",
+  "ids_alias": [
+    "decision_aptitud_para_uso"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "decision_aptitud_para_uso",
+      "titulo": "Decisión de Aptitud para el Uso (Fitness for Purpose)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

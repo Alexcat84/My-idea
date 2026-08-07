@@ -4,25 +4,40 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría del Sistema de Control de Calidad (Verificación Periódica)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los sistemas de control de calidad tienden a deteriorarse con el tiempo debido a la rotación de personal, cambios no anticipados y atajos que erosionan su efectividad. La auditoría periódica e independiente es la herramienta principal para verificar si el sistema de control sigue siendo adecuado y si realmente se está siguiendo. Además de informar a los líderes operativos, la auditoría cumple la función de mantener informados a los altos directivos, quienes deben priorizar la calidad como responsabilidad de liderazgo.",
+  "resumen_teorico": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personal, cambios no anticipados y atajos que erosionan su efectividad. La auditoría periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Como responsable del negocio, debes mandatar esta revisión para mantenerte informado sobre la salud del sistema, incluso si no participas directamente en las operaciones diarias. La auditoría también exige clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando el producto está fuera de límites estadísticos pero aún dentro de tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
   "pasos_accionables": [
-    "Establecer un calendario de auditorías periódicas e independientes del sistema de control de calidad",
-    "Definir preguntas clave de auditoría: ¿el sistema sigue siendo adecuado? ¿se está siguiendo correctamente?",
-    "Clarificar responsabilidades para acciones correctivas cuando los puntos salen de los límites de control",
-    "Establecer guías de acción quensuo el producto está fuera de límites estadísticos pero dentro de tolerancia",
-    "Auditar periódicamente la vigencia del manual de control de calidad y su nivel de conformidad"
+    "Establece un calendario de auditorías periódicas e independientes del sistema de control de calidad",
+    "Define las preguntas clave de cada auditoría: si el sistema sigue siendo adecuado y si se está siguiendo correctamente",
+    "Verifica el grado real de cumplimiento del sistema en las operaciones diarias",
+    "Clarifica qué acciones tomar cuando los puntos salen de los límites de control",
+    "Establece guías de acción para cuando el producto está fuera de límites estadísticos pero dentro de tolerancia",
+    "Actualiza el manual de calidad y los procedimientos según los hallazgos de la auditoría"
   ],
   "entregable_esperado": "Informe de auditoría periódico del sistema de control de calidad con hallazgos, brechas y plan de acción correctiva",
   "nodos_previos": [
-    "desarrollar_controles_transferir_operaciones"
+    "desarrollar_controles_transferir_operaciones",
+    "manual_de_calidad",
+    "medicion_kpi"
   ],
   "nodos_siguientes": [
-    "planificacion_estrategica_despliegue"
+    "planificacion_estrategica_despliegue",
+    "planificacion_estrategica_despliegue_2"
   ],
   "condiciones_activacion": [
-    "Cuando el usuario ya tiene un sistema de control de calidad implementado y necesita verificar su vigencia",
+    "Cuando ya tienes un sistema de control de calidad implementado y necesitas verificar su vigencia",
+    "Cuando ha pasado un periodo significativo desde la última revisión del sistema",
     "Cuando hay rotación de personal o cambios significativos en los procesos",
-    "Cuando la alta dirección requiere garantías sobre el estado del sistema de calidad"
+    "Si sospechas deterioro o desactualización de los procedimientos de control de calidad"
   ],
-  "etiqueta_arbol": "Verifica tu Control de Calidad"
+  "etiqueta_arbol": "Verifica tu Control de Calidad",
+  "ids_alias": [
+    "auditoria_sistema_control_calidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "auditoria_sistema_control_calidad",
+      "titulo": "Auditoría del Sistema de Control de Calidad (Por Qué se Deteriora)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

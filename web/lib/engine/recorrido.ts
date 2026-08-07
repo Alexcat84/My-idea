@@ -26,7 +26,7 @@ import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
-import { dominioPermitido, etiquetaArbol, obtenerPregunta, sucesoresNivel, type Grafo, type PreguntasCache } from "./graph";
+import { esOfrecible, etiquetaArbol, obtenerPregunta, sucesoresNivel, type Grafo, type PreguntasCache } from "./graph";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import {
   interpretarMultiSalto,
@@ -362,7 +362,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         (nid) =>
           !visitados.has(nid) &&
           familiasFaltantesKeys.includes(families[nid] ?? "general") &&
-          dominioPermitido(nid, graph, estado.dominiosDesbloqueados)
+          esOfrecible(nid, graph, estado.dominiosDesbloqueados)
       );
     }
     const elegidos = candidatosFamilia.slice(0, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO);

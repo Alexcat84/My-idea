@@ -23,6 +23,7 @@ node_id, nodos_previos y nodos_siguientes.
 Uso:
   python scripts/run_phase1.py
 """
+import argparse
 import collections
 import json
 import sys
@@ -30,6 +31,9 @@ import unicodedata
 from pathlib import Path
 
 from rapidfuzz import fuzz
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from etiquetas_de_cara import LISTAS as LISTAS_CURADURIA  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 NODOS_DIR = BASE / "dataset" / "nodos"
@@ -690,12 +694,61 @@ def step7_validate(master, parse_errors):
         f"{total_asymmetric} (sin previo reciproco: {missing_previo}, sin siguiente reciproco: {missing_siguiente})",
     ))
 
+    # --- El Gate aprende `deprecado` (cirugia de Calidad, ago 2026) ---------
+    # Un deprecado sigue EN el grafo, con sus aristas intactas: el grafo
+    # historico queda integro. Lo que pierde es la elegibilidad. Asi que:
+    #   * no se le exige alcance (no es alcanzable por definicion: nadie lo
+    #     ofrece), y por eso el porcentaje se mide sobre el universo ACTIVO;
+    #   * no cuenta como huerfano;
+    #   * pero NO puede ser semilla ni destino de un puente activo, porque eso
+    #     seria una puerta que abre a un nodo que ya no se ofrece.
+    nodos_todos = master["nodos"]
+    deprecados = {k for k, n in nodos_todos.items() if n.get("deprecado")}
+    activos = {k: v for k, v in nodos_todos.items() if k not in deprecados}
+    checks.append((
+        "Universo: activos / deprecados",
+        True,
+        f"{len(activos)} activos, {len(deprecados)} deprecados (siguen en el grafo)",
+    ))
+
     seeds = load_entry_seeds()
-    reached, total, pct = compute_directed_reachability(master["nodos"], seeds)
+    seeds_deprecadas = sorted(set(seeds) & deprecados)
+    checks.append((
+        "Ninguna semilla de entrada esta deprecada",
+        not seeds_deprecadas,
+        f"{len(seeds_deprecadas)} deprecadas" + (f": {seeds_deprecadas[:5]}" if seeds_deprecadas else ""),
+    ))
+
+    # La otra mitad del requisito: ningun deprecado puede ser DESTINO de un
+    # puente aprobado. Un puente es una puerta del core hacia un mundo; si su
+    # destino ya no se ofrece, es una puerta que no abre. Cazado a mano en la
+    # cirugia de Calidad (un puente apuntaba a medir_progreso_kpi tras
+    # deprecarse), que es justo lo que este chequeo evita repetir.
+    puentes_muertos = []
+    for ruta_b in sorted(BASE.glob("packs/*/metadata/bridges_aprobados.json")):
+        try:
+            with open(ruta_b, encoding="utf-8") as fh:
+                for x in json.load(fh).get("aprobados", []):
+                    for extremo in ("core", "dominio"):
+                        if x.get(extremo) in deprecados:
+                            puentes_muertos.append(f"{ruta_b.parent.parent.name}:{x[extremo]}")
+        except (OSError, json.JSONDecodeError):
+            continue
+    checks.append((
+        "Ningun puente aprobado apunta a un nodo deprecado",
+        not puentes_muertos,
+        f"{len(puentes_muertos)} rotos" + (f": {puentes_muertos[:5]}" if puentes_muertos else ""),
+    ))
+
+    # La alcanzabilidad se mide sobre el universo ACTIVO: exigirsela a un
+    # deprecado seria pedirle que sea alcanzable justo despues de sacarlo de
+    # todos los caminos de oferta.
+    seeds_vivas = [s for s in seeds if s not in deprecados]
+    reached, total, pct = compute_directed_reachability(activos, seeds_vivas)
     checks.append((
         f"Alcanzabilidad dirigida >= {MIN_DIRECTED_REACHABILITY_PCT}% desde entry_seeds.json",
-        bool(seeds) and pct >= MIN_DIRECTED_REACHABILITY_PCT,
-        f"{pct}% ({reached}/{total}, semillas validas: {len(seeds)})",
+        bool(seeds_vivas) and pct >= MIN_DIRECTED_REACHABILITY_PCT,
+        f"{pct}% ({reached}/{total} activos, semillas validas: {len(seeds_vivas)})",
     ))
 
     near_duplicates = find_near_duplicate_titles(master["nodos"], threshold=95)
@@ -707,7 +760,68 @@ def step7_validate(master, parse_errors):
 # Main
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# EL AVISO DE LA CURADURIA REVERTIDA
+#
+# Este script recompila master_graph.json desde dataset/nodos/, y la curaduria
+# de etiquetas de cara NO vive en los nodos: vive en dataset/metadata/
+# etiquetas_de_cara_v1*.json y se aplica sobre las dos COPIAS del grafo. O sea,
+# cada recompilacion la borra. Cazado el 2026-08-07 integrando compras y
+# entrega: 71 etiquetas del core volvieron a su titulo de libro ("Canvas",
+# "Pivotar", "SPIN", "DMAIC") y el grafo seguia siendo valido, asi que nada se
+# quejo. Es la clase mas peligrosa de averia: degrada la VOZ sin romper la
+# estructura, y el Gate solo mira la estructura.
+#
+# Aqui SOLO se avisa y se falla. Jamas se auto-aplica: eso creaeria una segunda
+# fuente de curaduria, y el remache del e-bis de integrar_packs la prohibe.
+# Quien recompila, reaplica.
+#
+# La lista de listas se IMPORTA de etiquetas_de_cara, que es quien la define.
+# ---------------------------------------------------------------------------
+def etiquetas_curadas():
+    """El mapa node_id -> etiqueta que la curaduria manda. La ultima lista gana."""
+    curadas = {}
+    for ruta in LISTAS_CURADURIA:
+        with open(ruta, encoding="utf-8") as fh:
+            curadas.update({k: v for k, v in json.load(fh).items() if not k.startswith("_")})
+    return curadas
+
+
+def curaduria_revertida(nodos):
+    """Los node_id cuya etiqueta en el grafo NO es la curada. Vacio = intacta."""
+    return sorted(
+        nid for nid, esperada in etiquetas_curadas().items()
+        if nid in nodos and nodos[nid].get("etiqueta_arbol") != esperada
+    )
+
+
+def avisar_curaduria(nodos, reaplico):
+    """Grita y devuelve el codigo de salida. 0 = nada que decir."""
+    revertidas = curaduria_revertida(nodos)
+    if not revertidas or reaplico:
+        return 0
+    rojo, fin = "\033[1;31m", "\033[0m"
+    print(f"\n{rojo}{'=' * 70}")
+    print("REVERTISTE LA CURADURIA DE ETIQUETAS")
+    print(f"{'=' * 70}{fin}")
+    print(f"  {len(revertidas)} etiquetas volvieron al titulo del libro al recompilar.")
+    for nid in revertidas[:8]:
+        print(f"    {nid}: '{nodos[nid].get('etiqueta_arbol')}'")
+    if len(revertidas) > 8:
+        print(f"    ... y {len(revertidas) - 8} mas")
+    print(f"\n  {rojo}Corre esto antes de usar esta copia:{fin}")
+    print("    python scripts/etiquetas_de_cara.py --aplicar")
+    print("\n  (Si vienes de integrar_packs, su paso e-bis ya lo hace; ese flujo")
+    print("   pasa --reaplico-curaduria para que este aviso no lo pare.)")
+    return 2
+
+
 def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument(
+        "--reaplico-curaduria", action="store_true",
+        help="quien llama reaplica las etiquetas justo despues (lo usa integrar_packs)")
+    args = ap.parse_args()
     log = {
         "ascii_renames": [],
         "ascii_rename_collisions": [],
@@ -777,6 +891,10 @@ def main():
         sys.exit(1)
 
     print("\nGATE 0: OK")
+
+    # El Gate mira la ESTRUCTURA; esto mira la VOZ. Va despues del OK a
+    # proposito: un grafo puede estar impecable y sonar a manual otra vez.
+    sys.exit(avisar_curaduria(master["nodos"], args.reaplico_curaduria))
 
 
 if __name__ == "__main__":
