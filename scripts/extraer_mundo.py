@@ -70,6 +70,13 @@ BACKOFF_BASE_SEG = 5
 MAX_WORDS_POR_CHUNK = 5000
 OVERLAP_WORDS = 500
 CONCEPTOS_POR_TANDA = 8
+# Tope de conceptos por fragmento. Sin tope, la sonda del 2026-08-07 devolvio 16
+# por fragmento: a ese ritmo salen ~220 conceptos en entrega y ~700 en compras, y
+# un indice de 700 lineas no lo revisa nadie. El tope obliga a ELEGIR en la
+# fuente, que es donde se ve cual concepto vale.
+MAX_CONCEPTOS_POR_TROZO = 6
+# El indice consolidado que se le entrega al fundador (rango del SOP).
+RANGO_INDICE = (40, 80)
 PALABRAS_RESUMEN = (80, 150)
 # Tirada de palabras literales que delata copia en vez de destilado.
 TIRADA_LITERAL = 12
@@ -163,6 +170,29 @@ def _extraer_arreglo(texto):
     return t
 
 
+def _mensaje(cliente, techo, system, prompt):
+    """SIEMPRE por streaming.
+
+    Cazado en vivo el 2026-08-07: el SDK RECHAZA la llamada sin streaming
+    cuando el techo es lo bastante alto como para que la peticion pudiera
+    pasar de 10 minutos ("Streaming is required for operations that may take
+    longer than 10 minutes"). O sea, la escalera de techos choca contra una
+    segunda baranda del SDK justo cuando mas falta hace subir el techo.
+
+    Se transmite siempre, no solo en los techos altos: un umbral seria una
+    rama que casi nunca se ejercita y que envejece sin que nadie lo note.
+    El precio de transmitir es que el SDK ya no reintenta solo lo transitorio,
+    y por eso el bucle de reintentos de aqui abajo es obligatorio.
+    """
+    with cliente.messages.stream(
+        model=MODEL,
+        max_tokens=techo,
+        system=system,
+        messages=[{"role": "user", "content": prompt}],
+    ) as s:
+        return s.get_final_message()
+
+
 def llamar(cliente, system, prompt, uso):
     """Una llamada, con la escalera de techos y el backoff de red.
 
@@ -173,12 +203,7 @@ def llamar(cliente, system, prompt, uso):
     for intento, techo in enumerate(TECHOS, start=1):
         for red in range(1, MAX_REINTENTOS_RED + 1):
             try:
-                r = cliente.messages.create(
-                    model=MODEL,
-                    max_tokens=techo,
-                    system=system,
-                    messages=[{"role": "user", "content": prompt}],
-                )
+                r = _mensaje(cliente, techo, system, prompt)
                 uso["in"] += r.usage.input_tokens
                 uso["out"] += r.usage.output_tokens
 
@@ -302,7 +327,11 @@ Un concepto merece entrar si un emprendedor SOLO, sin equipo y sin jefe, puede
 hacer algo con el. Descarta lo que solo aplique a una corporacion con
 departamentos, y descarta el relleno (historias, anecdotas, biografias).
 
-Un concepto = una idea. No agrupes tres ni partas una en cinco.{extra}
+Un concepto = una idea. No agrupes tres ni partas una en cinco.
+
+DEVUELVE COMO MUCHO {MAX_CONCEPTOS_POR_TROZO} CONCEPTOS, los mas valiosos del
+fragmento. Si hay mas candidatos, ELIGE: prefiere el concepto que cambia lo que
+la persona hace, sobre el que solo describe. Devolver menos es correcto.{extra}
 
 Devuelve EXCLUSIVAMENTE un arreglo JSON. Nada antes, nada despues, sin markdown.
 Cada objeto:
@@ -423,6 +452,129 @@ def consolidar_indice(mundo, crudos, salida):
     (salida / f"INDICE_TEMATICO_{mundo}.md").write_text("\n".join(md), encoding="utf-8")
     print(f"\n  Indice: {len(lista)} conceptos distintos de {len(crudos)} apariciones")
     print(f"  -> {salida / f'INDICE_TEMATICO_{mundo}.md'}")
+
+
+# ---------------------------------------------------------------------------
+# Etapa 1-bis: consolidar el indice
+#
+# El dedupe local funde titulos IDENTICOS, que es lo que produce el solape entre
+# trozos. No ve los casi-iguales: "Eleccion de canal de encuesta" y "Seleccion de
+# metodo de encuesta segun canal" son el mismo concepto con dos nombres, y un
+# diccionario no puede saberlo. Eso si necesita una lectura, y es UNA llamada
+# sobre titulos cortos: barata comparada con generar los nodos repetidos y
+# tirarlos despues.
+# ---------------------------------------------------------------------------
+def prompt_consolidar(mundo_label, cuantos):
+    return f"""Eres un editor de indices de conocimiento sobre {mundo_label}.
+
+Recibes una lista numerada de conceptos extraidos de varias fuentes. Muchos son
+EL MISMO concepto con nombres distintos, o uno el caso particular de otro.
+
+Tu trabajo: agruparlos en {cuantos[0]} a {cuantos[1]} conceptos finales.
+
+REGLAS:
+1. Cada numero de la entrada va en EXACTAMENTE UN grupo. Ninguno se queda fuera.
+   Si un concepto no merece nacer, agrupalo igual y marcalo con "descartar": true.
+2. El titulo final le habla al emprendedor, no al libro. Sin anglicismos de
+   manual, sin nombres de autores, sin guiones largos.
+3. Funde lo que es lo mismo. No fundas lo que solo se parece: si dos conceptos
+   llevan a acciones distintas, son dos.
+4. Marca "descartar": true lo que sea relleno, teoria sin accion, o que solo
+   aplique a una corporacion con departamentos.
+
+Devuelve EXCLUSIVAMENTE un arreglo JSON, sin markdown. Cada objeto:
+{{
+  "titulo": "El titulo final del concepto",
+  "aporta": "Una linea: que se lleva el emprendedor",
+  "fase": "ideacion | validacion | planificacion | ejecucion",
+  "miembros": [3, 17, 42],
+  "descartar": false
+}}"""
+
+
+def etapa_consolidar(mundo, cliente, uso, max_llamadas=None, dry_run=False):
+    cfg = MUNDOS[mundo]
+    salida = BASE / "packs" / mundo / "indice"
+    fundidos_path = salida / "_conceptos_fundidos.json"
+    if not fundidos_path.exists():
+        print(f"ERROR: falta {fundidos_path}. Corre antes la etapa 'indice'.")
+        sys.exit(2)
+    fundidos = json.loads(fundidos_path.read_text(encoding="utf-8"))
+    print(f"\n== {mundo}: {len(fundidos)} conceptos a consolidar en "
+          f"{RANGO_INDICE[0]}-{RANGO_INDICE[1]}")
+    if dry_run:
+        return
+
+    lista = "\n".join(f"{i}. {c['titulo']} :: {c.get('aporta','')}"
+                      for i, c in enumerate(fundidos))
+    grupos, err = llamar(cliente, prompt_consolidar(cfg["label"], RANGO_INDICE),
+                         f"Conceptos:\n\n{lista}", uso)
+    if err:
+        print(f"ERROR: la consolidacion fallo ({err}). No se escribe nada.")
+        sys.exit(1)
+
+    # Verificacion LOCAL, sin creerle al modelo: ningun concepto puede
+    # desaparecer en silencio ni aparecer de la nada.
+    asignados, inventados = set(), []
+    propuesto = []
+    for g in grupos:
+        if not isinstance(g, dict) or not g.get("titulo"):
+            continue
+        miembros = []
+        for i in g.get("miembros", []):
+            if not isinstance(i, int) or not (0 <= i < len(fundidos)):
+                inventados.append(i)
+                continue
+            miembros.append(i)
+            asignados.add(i)
+        if not miembros or g.get("descartar"):
+            continue
+        chunks, fuentes, label = [], [], ""
+        for i in miembros:
+            chunks.extend(fundidos[i]["chunks"])
+            for f in fundidos[i]["fuentes"]:
+                if f not in fuentes:
+                    fuentes.append(f)
+            label = label or fundidos[i].get("fuente_label", "")
+        propuesto.append({
+            "titulo": g["titulo"],
+            "aporta": g.get("aporta", ""),
+            "fase": g.get("fase", "planificacion"),
+            "fuentes": fuentes,
+            "fuente_label": label,
+            "chunks": chunks,
+            "fundidos_de": [fundidos[i]["titulo"] for i in miembros],
+        })
+
+    huerfanos = [fundidos[i]["titulo"] for i in range(len(fundidos)) if i not in asignados]
+    (salida / "_indice_propuesto.json").write_text(
+        json.dumps(propuesto, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    orden = ["ideacion", "validacion", "planificacion", "ejecucion"]
+    md = [f"# Indice propuesto de {mundo}", "",
+          f"{len(propuesto)} conceptos finales, fundidos de {len(fundidos)}.", "",
+          "Borra las lineas de lo que NO debe nacer. Lo que quede se genera.", ""]
+    for fase in orden:
+        de_fase = [c for c in propuesto if c["fase"] == fase]
+        if not de_fase:
+            continue
+        md += [f"## {fase} ({len(de_fase)})", ""]
+        for c in de_fase:
+            md.append(f"- **{c['titulo']}** - {c['aporta']}")
+            if len(c["fundidos_de"]) > 1:
+                md.append(f"  - funde: {', '.join(c['fundidos_de'])}")
+        md.append("")
+    if huerfanos:
+        md += ["## Sin agrupar (se perderian si no los reclamas)", ""]
+        md += [f"- {t}" for t in huerfanos] + [""]
+    (salida / f"INDICE_PROPUESTO_{mundo}.md").write_text("\n".join(md), encoding="utf-8")
+
+    print(f"  {len(propuesto)} conceptos finales, {len(fundidos) - len(asignados)} sin agrupar")
+    if inventados:
+        print(f"  AVISO: el modelo cito {len(inventados)} indices que no existen; descartados")
+    if huerfanos:
+        print(f"  AVISO: {len(huerfanos)} conceptos quedaron fuera de todo grupo; van listados al final")
+    print(f"  -> {salida / f'INDICE_PROPUESTO_{mundo}.md'}")
 
 
 # ---------------------------------------------------------------------------
@@ -605,7 +757,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--mundo", required=True, choices=sorted(MUNDOS))
-    ap.add_argument("--etapa", required=True, choices=("indice", "nodos"))
+    ap.add_argument("--etapa", required=True, choices=("indice", "consolidar", "nodos"))
     ap.add_argument("--dry-run", action="store_true", help="cuenta y estima, no llama")
     ap.add_argument("--max-llamadas", type=int, help="tope de llamadas de esta corrida")
     args = ap.parse_args()
@@ -623,8 +775,8 @@ def main():
 
     uso = {"in": 0, "out": 0}
     inicio = time.time()
-    (etapa_indice if args.etapa == "indice" else etapa_nodos)(
-        args.mundo, cliente, uso, args.max_llamadas, args.dry_run)
+    {"indice": etapa_indice, "consolidar": etapa_consolidar, "nodos": etapa_nodos}[
+        args.etapa](args.mundo, cliente, uso, args.max_llamadas, args.dry_run)
 
     if uso["in"] or uso["out"]:
         costo = uso["in"] / 1e6 * PRECIO_IN_MTOK + uso["out"] / 1e6 * PRECIO_OUT_MTOK

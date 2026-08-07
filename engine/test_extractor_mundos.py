@@ -133,32 +133,71 @@ def test_bloque_de_pensamiento_no_rompe():
     print("  ok: el texto se busca por tipo, no en content[0]")
 
 
+class _Flujo:
+    """El contexto que devuelve messages.stream()."""
+
+    def __init__(self, respuesta):
+        self._r = respuesta
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+    def get_final_message(self):
+        return self._r
+
+
+def _cliente_falso(guion, vistos):
+    """Un cliente que SOLO sabe transmitir. Si el codigo llamara a
+    messages.create, aqui reventaria: es la forma de que el test note si
+    alguien vuelve al camino sin streaming, que el SDK rechaza en techos
+    altos."""
+    class _Mensajes:
+        def stream(self, **kw):
+            vistos.append(kw["max_tokens"])
+            return _Flujo(guion(len(vistos)))
+
+    return type("C", (), {"messages": _Mensajes()})()
+
+
 def test_el_techo_escala_en_vez_de_repetirse():
     """La averia de origen: ante un corte, reintentar con el MISMO techo se
     corta identico las tres veces y el trozo se pierde. El techo tiene que
     subir."""
     vistos = []
 
-    class _Mensajes:
-        def create(self, **kw):
-            vistos.append(kw["max_tokens"])
-            if len(vistos) == 1:
-                return _Respuesta([_Bloque("text", '[{"cort')], stop="max_tokens")
-            return _Respuesta([_Bloque("text", '[{"ok": true}]')])
+    def guion(n):
+        if n == 1:
+            return _Respuesta([_Bloque("text", '[{"cort')], stop="max_tokens")
+        return _Respuesta([_Bloque("text", '[{"ok": true}]')])
 
-    cliente = type("C", (), {"messages": _Mensajes()})()
-    datos, err = llamar(cliente, "sys", "prompt", {"in": 0, "out": 0})
+    datos, err = llamar(_cliente_falso(guion, vistos), "sys", "prompt", {"in": 0, "out": 0})
     assert err is None, err
     assert datos == [{"ok": True}]
     assert vistos == [TECHOS[0], TECHOS[1]], f"no escalo el techo: {vistos}"
     print(f"  ok: el techo subio de {TECHOS[0]} a {TECHOS[1]} en vez de repetirse")
 
 
+def test_siempre_transmite():
+    """El SDK rechaza la llamada sin streaming cuando el techo es alto
+    ('Streaming is required for operations that may take longer than 10
+    minutes'), justo cuando la escalera mas la necesita. Cazado en vivo el
+    2026-08-07. El cliente falso no tiene messages.create: si alguien vuelve
+    a ese camino, esto revienta."""
+    vistos = []
+    datos, err = llamar(_cliente_falso(lambda n: _Respuesta([_Bloque("text", "[]")]), vistos),
+                        "sys", "prompt", {"in": 0, "out": 0})
+    assert err is None and datos == [] and vistos == [TECHOS[0]], (err, datos, vistos)
+    print("  ok: siempre se transmite, en todos los techos")
+
+
 def main():
     for f in (test_nodo_limpio_pasa, test_copia_literal, test_campo_renegado_y_obligatorio,
               test_fase_inventada, test_largo_del_resumen, test_guion_largo_y_etiqueta,
               test_id_colisionado, test_bloque_de_pensamiento_no_rompe,
-              test_el_techo_escala_en_vez_de_repetirse):
+              test_el_techo_escala_en_vez_de_repetirse, test_siempre_transmite):
         f()
     print("OK: las barandas del extractor de mundos sostienen.")
 
