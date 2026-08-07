@@ -382,3 +382,72 @@ summary::-webkit-details-marker {
     page-break-inside: avoid;
   }
 }
+
+/* ═══ El lenguaje de botón de la casa (ago 2026) ══════════════════════════
+   Dos carriles: el HÉROE con su chispa (los momentos que abren camino, uno
+   por pantalla) y el ESTÁNDAR, que es tinta pura y no necesita CSS propio.
+   Ver lib/boton.ts para el porqué de cada decisión. */
+
+.boton-heroe {
+  position: relative;
+  overflow: visible;
+  transition: background 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.boton-heroe:hover:not(:disabled) {
+  background: rgba(77, 124, 254, 0.18);
+  box-shadow: 0 0 24px rgba(77, 124, 254, 0.28);
+}
+/* Las chispas nacen escondidas DENTRO del botón y salen disparadas al pasar el
+   ratón. Son decoración pura: aria-hidden y sin capturar el puntero. */
+.boton-heroe .chispa {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  fill: var(--accent);
+  transition: all 0.9s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+.boton-heroe .chispa-1 { top: 24%; left: 22%; width: 16px; }
+.boton-heroe .chispa-2 { top: 46%; left: 46%; width: 10px; }
+.boton-heroe .chispa-3 { top: 38%; left: 38%; width: 6px; }
+.boton-heroe .chispa-4 { top: 22%; left: 42%; width: 8px; }
+.boton-heroe .chispa-5 { top: 26%; left: 48%; width: 11px; }
+.boton-heroe:hover:not(:disabled) .chispa {
+  opacity: 1;
+  filter: drop-shadow(0 0 7px rgba(77, 124, 254, 0.9));
+}
+.boton-heroe:hover:not(:disabled) .chispa-1 { top: -78%; left: -26%; }
+.boton-heroe:hover:not(:disabled) .chispa-2 { top: -22%; left: 8%; }
+.boton-heroe:hover:not(:disabled) .chispa-3 { top: 56%; left: 24%; }
+.boton-heroe:hover:not(:disabled) .chispa-4 { top: 30%; left: 82%; }
+.boton-heroe:hover:not(:disabled) .chispa-5 { top: 24%; left: 106%; }
+
+/* El intercambiador de caras: hueco hundido y luz que viaja con rebote. La luz
+   NO late: en una herramienta de trabajo, algo que parpadea sin parar compite
+   con lo que el usuario está leyendo. Brilla, pero quieta. */
+.cambiador-luz {
+  box-shadow: 0 0 18px rgba(77, 124, 254, 0.3), inset 0 0 14px rgba(77, 124, 254, 0.14);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* El filete de luz superior, que le da el relieve de cristal. */
+.cambiador-luz::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boton-heroe,
+  .boton-heroe .chispa,
+  .cambiador-luz {
+    transition: none !important;
+  }
+  /* Sin movimiento, las chispas no aparecen: serían adorno inmóvil encima del
+     texto. El botón sigue respondiendo con su fondo. */
+  .boton-heroe:hover .chispa { opacity: 0 !important; }
+}

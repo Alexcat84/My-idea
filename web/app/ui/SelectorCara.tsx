@@ -1,14 +1,22 @@
 "use client";
 
 /**
- * SelectorCara — campaña "Espacios". El selector SEGMENTADO de las tres caras de
- * un espacio: Plan · Manos a la obra · Tu avance. A todo el ancho, en tres
- * iguales. Se lee CLARAMENTE como un selector: pista recesada oscura con borde
- * visible (contorno), divisores internos en los tercios (interno), y un "knob"
- * ELEVADO (superficie más clara + borde + sombra) que se DESLIZA a la celda
- * activa midiéndola (robusto a 380 y a etiquetas de distinto largo). El azul
- * vive solo en el icono/texto de la cara activa. Su FORMA (cápsula) lo distingue
- * siempre de las pestañas-fichero (angulares) de los espacios.
+ * SelectorCara — campaña "Espacios". El selector de las tres caras de un
+ * espacio: Plan · Manos a la obra · Tu avance.
+ *
+ * Calibrado por el fundador (ago 2026, carril C): hueco HUNDIDO (sombra
+ * interior, como una ranura tallada) y una LUZ que se desliza a la cara activa
+ * con rebote suave, con su filete de cristal arriba y el icono que crece al
+ * activarse. La luz mide la celda real, así que aguanta 380 y etiquetas de
+ * distinto largo.
+ *
+ * La luz NO late. El original de referencia pulsaba en bucle; en una
+ * herramienta de trabajo, algo que parpadea sin parar en la esquina del ojo
+ * compite con lo que el usuario está leyendo. Brilla, pero quieta.
+ *
+ * Su FORMA (cápsula ancha con ranura) lo distingue siempre de las
+ * pestañas-fichero (angulares) que cambian de ESPACIO: aquí se cambia de cara
+ * dentro del mismo espacio.
  */
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
@@ -40,17 +48,19 @@ export function SelectorCara({
     <div
       role="tablist"
       aria-label="Las caras de este espacio"
-      className="relative flex w-full rounded-[13px] border-2 border-accent/80 bg-surface-3 p-1 shadow-[0_0_16px_rgba(77,124,254,0.30)]"
+      // La ranura: superficie más honda que el lienzo y sombra INTERIOR. El
+      // borde es casi negro, no azul: lo que brilla es la luz, no el marco.
+      className="relative flex w-full rounded-[16px] border border-[#1c1c22] bg-surface-3 p-[5px] shadow-[inset_0_2px_5px_rgba(0,0,0,0.75),inset_0_-1px_2px_rgba(255,255,255,0.04)]"
     >
-      {/* divisores internos (los tercios), pintados en azul para que se noten */}
-      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-1/3 top-2.5 w-px bg-accent/45" />
-      <span aria-hidden className="pointer-events-none absolute bottom-2.5 left-2/3 top-2.5 w-px bg-accent/45" />
-
-      {/* el knob elevado que se desliza a la celda activa */}
+      {/* La luz que viaja a la cara activa. */}
       <span
         aria-hidden
-        className="pointer-events-none absolute bottom-1 top-1 z-[1] rounded-[10px] border-2 border-accent bg-surface-2 shadow-[inset_0_0_14px_rgba(77,124,254,0.30),0_0_14px_rgba(77,124,254,0.55)] transition-[left,width] duration-300 ease-out"
-        style={{ left: ind.left, width: ind.width }}
+        className="cambiador-luz pointer-events-none absolute bottom-[5px] top-[5px] z-[1] rounded-[12px] border border-accent/[0.42]"
+        style={{
+          left: ind.left,
+          width: ind.width,
+          background: "linear-gradient(145deg, rgba(77,124,254,0.16), rgba(77,124,254,0.05))",
+        }}
       />
 
       {opciones.map((o) => {
@@ -65,11 +75,17 @@ export function SelectorCara({
             aria-selected={activa}
             onClick={() => onCambio(o.id)}
             className={
-              "relative z-10 flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-[10px] px-2 py-2.5 text-[11.5px] font-semibold transition-colors duration-200 sm:px-4 sm:text-[13px] " +
-              (activa ? "text-accent" : "text-dim hover:text-ink")
+              "relative z-10 flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-[12px] px-2 py-2.5 text-[11.5px] font-semibold transition-colors duration-200 sm:px-4 sm:text-[13px] " +
+              (activa ? "text-ink" : "text-dim hover:text-[#cfd2d8]")
             }
           >
-            <span aria-hidden className="shrink-0">
+            <span
+              aria-hidden
+              className={
+                "shrink-0 transition-transform duration-[350ms] ease-[cubic-bezier(.34,1.56,.64,1)] " +
+                (activa ? "scale-110" : "")
+              }
+            >
               {o.icono}
             </span>
             {o.nombre}

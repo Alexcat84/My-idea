@@ -109,7 +109,7 @@ export function CierreHonesto({
         </button>
         <button
           onClick={esMundo ? onVerMundos : onExplorarOtroAngulo}
-          className="rounded-[10px] border border-white/15 px-4 py-2.5 text-[13px] text-dim hover:border-accent/60 hover:text-ink"
+          className="rounded-[10px] border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-[13px] font-medium"
         >
           {esMundo ? "Ver los otros mundos" : "Explorar otro ángulo de la idea"}
         </button>

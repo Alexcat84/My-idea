@@ -20,6 +20,7 @@ import { AnalisisProyecto } from "../../ui/AnalisisProyecto";
 import { Calendario } from "../../ui/Calendario";
 import { Celebracion } from "../../ui/Celebracion";
 import { CampoConVoz } from "../../ui/CampoConVoz";
+import { BotonHeroe } from "../../ui/BotonHeroe";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
 import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
 import { Claridad } from "../../ui/Claridad";
@@ -1122,16 +1123,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       placeholder="Opcional: escríbelo o díctalo…"
                     />
                   </div>
-                  <button
+                  <BotonHeroe
                     onClick={() => {
                       if (!sessionId) return;
                       setTarjetaContextoFinal(false);
                       generarPlan(sessionId, contextoFinal.trim() || undefined);
                     }}
-                    className="mt-5 w-full rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-accent hover:bg-accent/20"
+                    className="mt-5 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                   >
                     Armar mi plan · {PRECIOS.plan_completo} créditos
-                  </button>
+                  </BotonHeroe>
                 </div>
               )}
 
@@ -1173,17 +1174,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       plan a ciegas: entrega el DIAGNÓSTICO gratis (el
                       escaparate). El plan se compra después, desde él. */}
                   {temasPendientes === null ? (
-                    <button
+                    <BotonHeroe
                       onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
                       disabled={enviando}
-                      className="mt-6 w-full rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
+                      className="mt-6 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                     >
                       {dominioEntrevista === "core"
                         ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
                         : enviando
                           ? "Redactando tu diagnóstico…"
                           : "Ver mi diagnóstico · gratis"}
-                    </button>
+                    </BotonHeroe>
                   ) : (
                     <div className="mt-6 flex gap-3">
                       <button
@@ -1308,7 +1309,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 <>
                   <Claridad md={detalle.organizador.contenido_md} />
                   <div className="flex flex-wrap items-center gap-3">
-                    <button
+                    <BotonHeroe
                       onClick={async () => {
                         setEnviando(true);
                         setError(null);
@@ -1335,10 +1336,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                           setEnviando(false);
                         }
                       }}
-                      className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-3 font-medium text-accent hover:bg-accent/20"
+                      className="rounded-[10px] px-5 py-3 font-medium"
                     >
                       Explorar estas suposiciones
-                    </button>
+                    </BotonHeroe>
                   </div>
                 </>
               )}
