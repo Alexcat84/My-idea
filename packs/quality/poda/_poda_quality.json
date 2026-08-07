@@ -9,7 +9,6 @@
       "nodos": [
         "costo_de_mala_calidad_3",
         "costo_de_mala_calidad_copq",
-        "costo_de_mala_calidad_copq_2",
         "costo_de_mala_calidad_copq_3",
         "costo_de_mala_calidad_copq_4",
         "costo_mala_calidad_copq",
@@ -29,10 +28,6 @@
           "visto": 10,
           "cosechado": 9
         },
-        "costo_de_mala_calidad_copq_2": {
-          "visto": 8,
-          "cosechado": 7
-        },
         "costo_de_mala_calidad_copq_3": {
           "visto": 1,
           "cosechado": 1
@@ -49,6 +44,10 @@
           "visto": 0,
           "cosechado": 0
         }
+      },
+      "excluido_por_el_auditor": {
+        "node_id": "costo_de_mala_calidad_copq_2",
+        "motivo": "definir el COPQ y medirlo son acciones distintas (la prueba caja-vs-relleno); su telemetria lo confirma puerta viva"
       }
     },
     {
@@ -673,7 +672,8 @@
           "visto": 2,
           "cosechado": 2
         }
-      }
+      },
+      "bandera_revoz": "candidato a frontera con Riesgos"
     },
     {
       "orden": 25,
@@ -1110,7 +1110,8 @@
           "visto": 3,
           "cosechado": 3
         }
-      }
+      },
+      "bandera_revoz": "voz corporativa (supervisores): especimen para la re-voz"
     },
     {
       "orden": 44,
@@ -1133,7 +1134,8 @@
           "visto": 2,
           "cosechado": 2
         }
-      }
+      },
+      "bandera_revoz": "puntajes Shingo: al examen anti-matriz de la re-voz"
     },
     {
       "orden": 45,
@@ -1455,7 +1457,8 @@
           "visto": 12,
           "cosechado": 12
         }
-      }
+      },
+      "bandera_revoz": "voz corporativa (sindicato): especimen para la re-voz"
     },
     {
       "orden": 59,
@@ -2901,5 +2904,17 @@
         "cita": "...ón laboral, sino la declaración clara del estándar que la gerencia exige: hacerlo bien la primera vez. Crosby argumenta q..."
       }
     ]
+  },
+  "poda_del_auditor": {
+    "clusters_que_se_funden": 66,
+    "excluidos": [
+      "costo_de_mala_calidad_copq_2"
+    ],
+    "banderas_revoz": {
+      "24": "candidato a frontera con Riesgos",
+      "44": "puntajes Shingo: al examen anti-matriz de la re-voz",
+      "43": "voz corporativa (supervisores): especimen para la re-voz",
+      "58": "voz corporativa (sindicato): especimen para la re-voz"
+    }
   }
 }
