@@ -547,7 +547,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
                 }
               }}
               disabled={activando}
-              className="mt-6 rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
+              className="mt-6 rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
             >
               {activando
                 ? "Activando…"
@@ -593,7 +593,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
             </p>
             <button
               onClick={volverAHoy}
-              className="rounded-cinta bg-accent px-4 py-2 text-[13px] font-medium text-white hover:opacity-90"
+              className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2 text-[13px] font-medium text-accent hover:bg-accent/20"
             >
               Volver a hoy
             </button>

@@ -118,7 +118,7 @@ export default async function MisIdeas() {
                 juntos, paso a paso.
               </p>
             </div>
-            <Link href="/nueva" className="rounded-cinta bg-accent px-6 py-3 font-medium text-white hover:opacity-90">
+            <Link href="/nueva" className="rounded-cinta border border-accent/40 bg-accent/10 px-6 py-3 font-medium text-accent hover:bg-accent/20">
               Iniciar nueva idea
             </Link>
           </div>

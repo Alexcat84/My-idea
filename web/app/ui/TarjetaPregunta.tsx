@@ -48,7 +48,7 @@ export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoB
           setRespuesta("");
         }}
         disabled={!respuesta.trim() || enviando}
-        className="mt-3 rounded-cinta bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90 disabled:opacity-40"
+        className="mt-3 rounded-cinta border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"
       >
         {enviando ? "Pensando…" : textoBoton}
       </button>

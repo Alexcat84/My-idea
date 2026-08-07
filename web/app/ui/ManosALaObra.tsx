@@ -571,7 +571,7 @@ function RitualContinuar({
           </p>
           <button
             onClick={() => setPaso(2)}
-            className="mt-4 rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90"
+            className="mt-4 rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20"
           >
             Te cuento
           </button>
@@ -589,7 +589,7 @@ function RitualContinuar({
           </p>
           <button
             onClick={() => setPaso(2)}
-            className="mt-4 rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90"
+            className="mt-4 rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20"
           >
             Así va, sigamos
           </button>
@@ -614,7 +614,7 @@ function RitualContinuar({
           <div className="mt-3 flex items-center gap-3">
             <button
               onClick={() => setPaso(3)}
-              className="rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90"
+              className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20"
             >
               Seguir
             </button>
@@ -644,7 +644,7 @@ function RitualContinuar({
             <button
               onClick={() => onEnviar(detalles.trim() || null, enfoque.trim() || null)}
               disabled={enviando}
-              className="rounded-[10px] bg-accent px-5 py-2.5 font-medium text-white hover:opacity-90 disabled:opacity-50"
+              className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
             >
               {enviando
                 ? "Pensando…"
@@ -1108,7 +1108,7 @@ function RitualFechas({
         <button
           onClick={aceptar}
           disabled={guardando}
-          className="rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
+          className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
         >
           {guardando ? "Guardando…" : "Aceptar estas fechas"}
         </button>
@@ -2355,7 +2355,7 @@ export function ManosALaObra({
                     <button
                       onClick={() => mundo.previewSessionId && onComprarPlanMundo(mundo.dominio, mundo.previewSessionId)}
                       disabled={!mundo.previewSessionId}
-                      className="rounded-[10px] bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                      className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
                     >
                       Generar mi plan de {mundo.nombre} · {PRECIOS.mundo_activar} créditos
                     </button>
@@ -2370,7 +2370,7 @@ export function ManosALaObra({
                   <button
                     onClick={() => arrancarMundo(mundo.dominio)}
                     disabled={arrancandoMundo !== null}
-                    className="rounded-[10px] bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
+                    className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
                   >
                     {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo"}
                   </button>

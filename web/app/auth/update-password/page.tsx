@@ -96,7 +96,7 @@ export default function UpdatePassword() {
             <button
               type="submit"
               disabled={enviando}
-              className="rounded-cinta bg-accent px-4 py-3 font-medium text-white hover:opacity-90 disabled:opacity-50"
+              className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
             >
               {enviando ? "Guardando…" : "Guardar contraseña"}
             </button>

@@ -232,7 +232,7 @@ export function SelectorEstado({
                       cerrar();
                     }}
                     disabled={ocupado}
-                    className="rounded-[9px] bg-accent px-3.5 py-1.5 text-[12.5px] font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                    className="rounded-[9px] border border-accent/40 bg-accent/10 px-3.5 py-1.5 text-[12.5px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
                   >
                     Retirar tarea
                   </button>
