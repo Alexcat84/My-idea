@@ -1,0 +1,27 @@
+{
+  "node_id": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "fase_proyecto": "validacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Identificar si tu producto necesita protección especial",
+  "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+  "resumen_teorico": "Antes de decidir como vas a empacar y probar tus envios, necesitas saber a que categoria pertenece tu producto. Si se rompe facilmente con un golpe (vidrio, ceramica, electronica) se considera fragil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorias exigen mas cuidado que un producto solido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Ademas, la forma fisica del producto (si es plano, alargado o de forma estandar) determina que tipo de prueba de caida le corresponde, asi que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+  "pasos_accionables": [
+    "Revisa si tu producto se rompe facilmente al caer, como vidrio, ceramica o electronica.",
+    "Revisa si tu producto es liquido o puede volverse liquido con el calor y derramarse.",
+    "Si es fragil o liquido, prueba con al menos dos unidades distintas, no solo una.",
+    "Clasifica la forma de tu empaque (estandar, plano o alargado) para saber que prueba de caida aplica.",
+    "Refuerza el empaque de lo fragil o liquido antes de escalar el volumen de envios."
+  ],
+  "entregable_esperado": "Una ficha por producto que indique si es fragil, liquido o normal, y cuantas muestras probaste.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "Definir qué cuenta como daño antes de probar el empaque",
+    "Reconocer productos que en realidad son mercancía peligrosa"
+  ],
+  "condiciones_activacion": [
+    "Vas a empezar a enviar un producto nuevo y no sabes si es delicado.",
+    "Has tenido quejas de producto roto o derramado en el camino.",
+    "Quieres decidir cuantas pruebas de caida hacerle a tu empaque antes de vender mas."
+  ],
+  "etiqueta_arbol": "Detecta si tu producto es frágil"
+}

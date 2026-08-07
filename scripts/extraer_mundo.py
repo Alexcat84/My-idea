@@ -161,7 +161,16 @@ def _texto_de(respuesta):
 
 
 def _extraer_arreglo(texto):
-    """Tolera preambulos y vallas de markdown alrededor del JSON."""
+    """Tolera preambulos y vallas de markdown, y devuelve SIEMPRE un arreglo.
+
+    Cazado el 2026-08-07: cuando el lote trae un solo concepto, el modelo
+    devuelve el OBJETO pelado en vez de un arreglo de uno. Recortar del primer
+    '[' al ultimo ']' se llevaba entonces el arreglo INTERNO del nodo (el de
+    pasos_accionables), y eso reventaba con "Extra data" o, peor, parseaba
+    limpio y devolvia una lista de strings que luego se filtraba a cero nodos
+    sin una sola queja. Por eso cada candidato se PRUEBA antes de devolverlo:
+    un recorte que no parsea no es un recorte.
+    """
     t = texto.strip()
     for valla in ("```json", "```"):
         if t.startswith(valla):
@@ -169,9 +178,24 @@ def _extraer_arreglo(texto):
     if t.endswith("```"):
         t = t[:-3]
     t = t.strip()
+
     ini, fin = t.find("["), t.rfind("]")
     if ini != -1 and fin > ini:
-        t = t[ini:fin + 1]
+        candidato = t[ini:fin + 1]
+        try:
+            if isinstance(json.loads(candidato), list):
+                return candidato
+        except json.JSONDecodeError:
+            pass
+
+    ini, fin = t.find("{"), t.rfind("}")
+    if ini != -1 and fin > ini:
+        candidato = t[ini:fin + 1]
+        try:
+            if isinstance(json.loads(candidato), dict):
+                return "[" + candidato + "]"
+        except json.JSONDecodeError:
+            pass
     return t
 
 

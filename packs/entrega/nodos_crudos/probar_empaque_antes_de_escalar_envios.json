@@ -1,0 +1,29 @@
+{
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "fase_proyecto": "validacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Prueba tu empaque antes de escalar envios",
+  "fuente": "Guia de empaque para envios (FedEx)",
+  "resumen_teorico": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presion de altitud y manejo brusco pueden danar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos dias, sin costo. Esto te evita descubrir una falla de diseno despues de haber comprado cien cajas iguales o de haber perdido mercancia en transito. La prueba tambien sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por danos y rechazos en bodega. Pregunta a tu proveedor de envios si ofrece este servicio y en que consiste antes de escalar volumen.",
+  "pasos_accionables": [
+    "Arma una muestra de tu empaque exactamente como la enviarias a un cliente real.",
+    "Preguntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
+    "Envia la muestra marcada como paquete de prueba segun sus instrucciones.",
+    "Espera el resultado y ajusta grosor de caja o relleno segun lo que senalen.",
+    "Repite la prueba si cambias de proveedor de cajas o de material de relleno."
+  ],
+  "entregable_esperado": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o que debes cambiar.",
+  "nodos_previos": [
+    "Detectar señales de un empaque poco rígido",
+    "Simular los riesgos del tránsito antes de enviar"
+  ],
+  "nodos_siguientes": [
+    "Calcular el peso dimensional antes de cotizar"
+  ],
+  "condiciones_activacion": [
+    "Estas por firmar un acuerdo de volumen con un courier y quieres asegurar que tu caja no falle.",
+    "Ya tuviste productos danados en transito y no sabes si el problema es el empaque o el manejo.",
+    "Vas a cambiar de proveedor de cajas o de material de relleno y no sabes si sigue funcionando igual."
+  ],
+  "etiqueta_arbol": "Prueba tu empaque antes de escalar"
+}

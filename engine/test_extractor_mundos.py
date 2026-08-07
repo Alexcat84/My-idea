@@ -10,6 +10,7 @@ Dos de estas pruebas cubren trampas ya cazadas en corridas anteriores:
   - el corte por techo de tokens, que no se arregla reintentando contra el
     mismo techo.
 """
+import json
 import sys
 from pathlib import Path
 
@@ -18,6 +19,7 @@ sys.path.insert(0, str(BASE / "scripts"))
 
 from extraer_mundo import (  # noqa: E402
     PALABRAS_RESUMEN,
+    _extraer_arreglo,
     TECHOS,
     _texto_de,
     llamar,
@@ -127,6 +129,23 @@ class _Respuesta:
         self.usage = type("U", (), {"input_tokens": 10, "output_tokens": 5})()
 
 
+def test_un_solo_nodo_llega_pelado():
+    """Cazado en vivo (2026-08-07): con UN concepto en el lote, el modelo
+    devuelve el objeto sin envolver. Recortar del primer '[' al ultimo ']' se
+    llevaba el arreglo INTERNO de pasos_accionables: a veces reventaba con
+    "Extra data" y a veces parseaba limpio devolviendo la lista equivocada,
+    que luego se filtraba a cero nodos sin una sola queja."""
+    pelado = ('Aqui tienes el nodo:\n{"node_id": "x", "pasos_accionables": ["a", "b"], '
+              '"condiciones_activacion": ["c"]}')
+    datos = json.loads(_extraer_arreglo(pelado))
+    assert isinstance(datos, list) and len(datos) == 1, datos
+    assert datos[0]["node_id"] == "x", datos
+    # y el arreglo de verdad sigue ganando cuando viene envuelto
+    envuelto = '```json\n[{"node_id": "y", "pasos_accionables": ["a"]}]\n```'
+    assert json.loads(_extraer_arreglo(envuelto))[0]["node_id"] == "y"
+    print("  ok: un objeto pelado se envuelve; no se cuela el arreglo interno")
+
+
 def test_bloque_de_pensamiento_no_rompe():
     r = _Respuesta([_Bloque("thinking"), _Bloque("text", '[{"a":1}]')])
     assert _texto_de(r) == '[{"a":1}]'
@@ -196,7 +215,8 @@ def test_siempre_transmite():
 def main():
     for f in (test_nodo_limpio_pasa, test_copia_literal, test_campo_renegado_y_obligatorio,
               test_fase_inventada, test_largo_del_resumen, test_guion_largo_y_etiqueta,
-              test_id_colisionado, test_bloque_de_pensamiento_no_rompe,
+              test_id_colisionado, test_un_solo_nodo_llega_pelado,
+              test_bloque_de_pensamiento_no_rompe,
               test_el_techo_escala_en_vez_de_repetirse, test_siempre_transmite):
         f()
     print("OK: las barandas del extractor de mundos sostienen.")
