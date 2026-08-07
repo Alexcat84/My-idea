@@ -162,6 +162,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereCelebracion = searchParams.get("vista") === "celebracion";
   const quiereDocumentos = searchParams.get("vista") === "documentos";
   const quiereBitacora = searchParams.get("vista") === "bitacora";
+  // La puerta del mini-gate: ?ver=ocultos revela los mundos SIN PUBLICAR, con
+  // su marca, para que el fundador los camine antes de decidir si los publica.
+  // No publica nada: solo los vuelve alcanzables desde su propia idea.
+  const verOcultos = searchParams.get("ver") === "ocultos";
   const quiereCalendario = searchParams.get("vista") === "calendario";
   // Campaña "Espacios": el hub de un mundo. Deep-linkeable: ?vista=mundo&dominio=X.
   const quiereMundo = searchParams.get("vista") === "mundo";
@@ -1354,6 +1358,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   estadosMundo={estadosMundo}
                   progresoMundos={progresoMundos}
                   mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
+                  mostrarOcultos={verOcultos}
                   onVerMundo={(dominio) => irAMundo(dominio)}
                   onActivarMundo={(dominio) => {
                     // Campaña "Espacios": abrir el mundo lo añade a la lista local

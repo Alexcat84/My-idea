@@ -26,6 +26,8 @@ interface Pack {
   nombre: string;
   promesa: string;
   creditos_activar: number;
+  /** true = existe y funciona, pero no se ofrece (ver catalogoMundos). */
+  oculto?: boolean;
 }
 
 interface Props {
@@ -42,6 +44,10 @@ interface Props {
   /** Fase 4.5: ABRIR un mundo es gratis (el cobro vive en la entrega de su
    * plan). El padre refresca sus unlocks y entra al mundo. */
   onActivarMundo: (dominio: string) => void;
+  /** La puerta del mini-gate (?ver=ocultos): revela los mundos SIN PUBLICAR,
+   * marcados como tales, para que el fundador pueda caminarlos antes de
+   * decidir si los publica. No los publica; solo los deja alcanzables. */
+  mostrarOcultos?: boolean;
 }
 
 /** Íconos por mundo (trazo del canon); genérico para los mundos nuevos. */
@@ -126,13 +132,15 @@ export function PotenciaTuIdea({
   estadosMundo,
   onVerMundo,
   onActivarMundo,
+  mostrarOcultos = false,
 }: Props) {
   const [activando, setActivando] = useState<string | null>(null);
   const [errorEn, setErrorEn] = useState<string | null>(null);
   const [avisoBloqueado, setAvisoBloqueado] = useState<string | null>(null);
-  // Solo los PUBLICADOS: un mundo oculto existe y funciona, pero no se
-  // ofrece hasta que el fundador lo camine y lo publique.
-  const packs = mundosVisibles() as unknown as Pack[];
+  // Solo los PUBLICADOS, salvo que se abra la puerta del mini-gate: un mundo
+  // oculto existe y funciona, pero no se ofrece hasta que el fundador lo camine
+  // y lo publique.
+  const packs = mundosVisibles(mostrarOcultos) as unknown as Pack[];
 
   // Fase 4.5 (PREVIEW_MUNDOS_PLAN): abrir un mundo es GRATIS, siempre. Lo que
   // se compra es su PLAN, a la entrega (ancla ETAPA 2 en la ruta del plan).
@@ -231,7 +239,17 @@ export function PotenciaTuIdea({
                   </span>
                 )}
               </div>
-              <p className={"text-[15px] font-semibold" + (destacado ? "" : " text-dim")}>{p.nombre}</p>
+              <p className={"text-[15px] font-semibold" + (destacado ? "" : " text-dim")}>
+                {p.nombre}
+                {p.oculto && (
+                  /* Solo se ve con la puerta del mini-gate abierta. Sin esta
+                     marca, un paseo de prueba se confunde con un mundo en
+                     venta, que es exactamente el error que hay que evitar. */
+                  <span className="ml-2 rounded-full border border-warn/40 px-2 py-0.5 align-middle text-[10.5px] font-bold uppercase tracking-wide text-warn">
+                    sin publicar
+                  </span>
+                )}
+              </p>
               <p className={"mt-1.5 text-[12.5px] leading-[1.55] [text-wrap:pretty] text-dim" + (destacado ? "" : " opacity-75")}>
                 {p.promesa}
               </p>

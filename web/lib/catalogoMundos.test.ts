@@ -40,6 +40,29 @@ describe("el catálogo de mundos", () => {
     expect(visibles).toHaveLength(7);
   });
 
+  it("la puerta del mini-gate los revela sin publicarlos", () => {
+    // Sin la puerta no habria mini-gate posible: un mundo sin tarjeta no tiene
+    // por donde empezar su preview, y el fundador no podria caminarlo antes de
+    // decidir si lo publica. La puerta los hace alcanzables, no ofrecidos.
+    const conPuerta = mundosVisibles(true).map((m) => m.clave);
+    for (const clave of OCULTOS_HASTA_EL_VISTO) expect(conPuerta).toContain(clave);
+    expect(conPuerta).toHaveLength(9);
+    // y abrirla NO cambia el estado de publicacion de nadie
+    for (const clave of OCULTOS_HASTA_EL_VISTO) expect(estaPublicado(clave)).toBe(false);
+    // la puerta es explicita: por defecto sigue cerrada
+    expect(mundosVisibles()).toHaveLength(7);
+  });
+
+  it("un mundo sin publicar se ve MARCADO como tal", () => {
+    // Un paseo de prueba que se ve igual que un mundo en venta es la confusion
+    // que hay que evitar: la tarjeta lleva su marca cuando el pack esta oculto.
+    const fuente = leer("app/ui/PotenciaTuIdea.tsx");
+    expect(fuente).toContain("sin publicar");
+    expect(fuente).toContain("p.oculto &&");
+    // y la puerta llega desde la URL, no esta encendida en el codigo
+    expect(leer("app/idea/[id]/IdeaView.tsx")).toContain('searchParams.get("ver") === "ocultos"');
+  });
+
   it("pero SÍ se resuelven por clave: ocultar no es romper", () => {
     // El fundador camina el mundo por URL en su mini-gate. Tiene que ver su
     // nombre y su precio de verdad, no un hueco ni "mundo desconocido".

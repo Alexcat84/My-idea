@@ -35,9 +35,18 @@ export type Mundo = {
 /** Todos, publicados u ocultos. Para resolver por clave, jamás para listar. */
 export const MUNDOS: readonly Mundo[] = (catalogo as { packs: Mundo[] }).packs;
 
-/** Los que se le muestran al usuario. Esta es la lista de las vitrinas. */
-export function mundosVisibles(): Mundo[] {
-  return MUNDOS.filter((m) => !m.oculto);
+/**
+ * Los que se le muestran al usuario. Esta es la lista de las vitrinas.
+ *
+ * `incluirOcultos` es la PUERTA DEL MINI-GATE, no una publicación. Un mundo
+ * oculto no tiene tarjeta, y sin tarjeta no hay por dónde empezar su preview:
+ * ocultarlo dejaría al propio fundador sin poder caminarlo antes de decidir si
+ * lo publica, que es justo lo contrario de lo que se busca. Con la puerta
+ * abierta el mundo aparece MARCADO como sin publicar, para que nadie confunda
+ * un paseo de prueba con un mundo en venta.
+ */
+export function mundosVisibles(incluirOcultos = false): Mundo[] {
+  return incluirOcultos ? [...MUNDOS] : MUNDOS.filter((m) => !m.oculto);
 }
 
 /** Resolución por clave: funciona también para los ocultos (ver cabecera). */
