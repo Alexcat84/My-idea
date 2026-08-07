@@ -288,8 +288,12 @@ def main():
     paso("a_nodos_y_puentes", _a)
 
     # e-parte-1. recompilar master_graph + Gate 0 (los nodos ya están en dataset/)
+    # --reaplico-curaduria: run_phase1 avisa a gritos y FALLA cuando la
+    # recompilación revierte las etiquetas de cara. Aquí ese aviso sobra,
+    # porque el paso siguiente (e-bis) las reaplica; sin la bandera pararía la
+    # línea justo antes de arreglarlo.
     paso("e_gate0", lambda: correr(
-        [sys.executable, "scripts/run_phase1.py"],
+        [sys.executable, "scripts/run_phase1.py", "--reaplico-curaduria"],
         "e. run_phase1: recompilación + Gate 0 (debe quedar VERDE)"))
 
     # e-parte-1b. RE-APLICAR las etiquetas de cara. Cazado el 2026-08-07
