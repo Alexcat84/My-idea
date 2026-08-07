@@ -416,6 +416,19 @@ no existen como sujetos.
 exacta de los 185 vivos, y `_poda_quality.json` la cita textual y el patrón de
 cada uno. La campaña arranca sin volver a medir nada.
 
+## Al margen, sin acción: `matriz_probabilidad_impacto` (núcleo)
+
+Anotado al re-anclar los puentes (ago 2026), **sin acción y sin urgencia**: el
+núcleo tiene un nodo `matriz_probabilidad_impacto` que es doctrinalmente lo
+contrario de la doctrina anti-matriz de la casa. Hoy es útil justo por eso: es el
+ancla del **puente correctivo** hacia "Evalúa la gravedad sin autoengaño" del
+mundo de Riesgos, y el antídoto se ancla en el punto de exposición.
+
+Queda como **candidato a ojo en la eventual revisión del núcleo post-beta**, con
+la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes de
+tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
+ancla, el correctivo pierde su punto de exposición.
+
 ## Ficha post-beta: `densidad-de-quality`
 
 **Marcada post-beta-con-telemetría**: informa, no receta, igual que el núcleo.
