@@ -1,0 +1,28 @@
+{
+  "node_id": "calcula_costo_de_mantener_contra_costo_de_reponer",
+  "fase_proyecto": "planificacion",
+  "dominio": "compras",
+  "titulo_concepto": "Calcula cuánto te cuesta guardar stock contra cuánto te cuesta reponerlo",
+  "fuente": "Max Muller, Essentials of Inventory Management",
+  "resumen_teorico": "Cada producto guardado te cuesta dinero solo por estar ahi: espacio, seguro, deterioro y el efectivo que tienes inmovilizado en el. A esto se le llama costo de mantener. Cada pedido que haces tambien te cuesta tiempo y esfuerzo en armarlo, negociarlo y recibirlo: es el costo de reponer. Si compras poco y muy seguido, el costo de reponer se dispara. Si compras mucho de una vez, el costo de mantener se dispara. El punto optimo esta en el equilibrio entre ambos: ni tanto stock que se te muera en la bodega, ni tan poco que compres todos los dias. Calcula cuanto te cuesta cada peso de inventario guardado por año y usa ese numero para decidir cuanto pedir cada vez que reabastezcas.",
+  "pasos_accionables": [
+    "Suma cuanto gastas al año en espacio, seguro, deterioro y dinero inmovilizado por tener inventario guardado.",
+    "Divide ese total entre el valor de tu inventario promedio para sacar tu porcentaje de costo de mantener por año.",
+    "Calcula cuanto te cuesta en tiempo y gestion cada pedido que haces a un proveedor.",
+    "Compara pedir poco y seguido contra pedir mucho y espaciado, usando ambos costos, y ajusta tu cantidad de pedido hacia el punto donde ambos costos se equilibran.",
+    "Revisa este calculo cada vez que cambien tus volumenes de venta o tus condiciones con el proveedor."
+  ],
+  "entregable_esperado": "Una cantidad de pedido calculada que equilibra el costo de guardar inventario con el costo de reponerlo.",
+  "nodos_previos": [
+    "Decide si lo compras o lo haces tu"
+  ],
+  "nodos_siguientes": [
+    "Ten un checklist de cláusulas que todo contrato necesita"
+  ],
+  "condiciones_activacion": [
+    "Sientes que tienes demasiado inventario guardado sin moverse.",
+    "Haces pedidos pequeños muy seguido y sientes que pierdes tiempo en cada uno.",
+    "Quieres decidir cuanto pedir de un producto sin adivinar al ojo."
+  ],
+  "etiqueta_arbol": "Calcula tu punto optimo de pedido"
+}

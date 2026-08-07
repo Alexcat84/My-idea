@@ -1,0 +1,28 @@
+{
+  "node_id": "simular_riesgos_transito_antes_de_enviar",
+  "fase_proyecto": "validacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Simular los riesgos del tránsito antes de enviar",
+  "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+  "resumen_teorico": "Cuando disenas o cambias tu empaque, no necesitas un laboratorio certificado para saber si aguantara el viaje: existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia logica y tu puedes copiar esa logica de forma casera. Primero se somete el paquete a caidas desde distintas alturas segun su peso, despues a vibracion simulando el traqueteo del transporte, luego a caidas sobre una esquina o borde para probar puntos debiles, y finalmente, si el contenido es liquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos los golpes que tu paquete recibira entre tu mesa de trabajo y la puerta del cliente.",
+  "pasos_accionables": [
+    "Suelta tu paquete cerrado desde la altura de tu cintura sobre una superficie dura, varias veces.",
+    "Agitalo con fuerza dentro de una caja de carton simulando vibracion de varios minutos.",
+    "Dejalo caer sobre una esquina o borde para probar el punto mas debil del empaque.",
+    "Si envias liquidos, deja el paquete cerrado ocho horas y revisa si hay fugas.",
+    "Abre el paquete despues de cada prueba y registra que se rompio o se movio."
+  ],
+  "entregable_esperado": "Un registro casero de que tan bien resistio tu empaque cada tipo de golpe, antes de despachar en volumen.",
+  "nodos_previos": [
+    "Detectar señales de un empaque poco rígido"
+  ],
+  "nodos_siguientes": [
+    "Prueba tu empaque antes de escalar envios"
+  ],
+  "condiciones_activacion": [
+    "Cambiaste el diseno de tu caja o el material de relleno y no sabes si sigue protegiendo igual.",
+    "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se dana.",
+    "Vas a lanzar un producto nuevo por primera vez y no tienes historial de danos para guiarte."
+  ],
+  "etiqueta_arbol": "Simula golpes de transporte en casa"
+}

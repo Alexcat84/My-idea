@@ -1,0 +1,1466 @@
+[
+  {
+    "fantasma": "Aplica el modelo Ackerman de ofertas decrecientes",
+    "destino": "aplica_modelo_ackerman",
+    "score": 0.854,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "aplica_modelo_ackerman",
+        "score": 0.854,
+        "titulo": "Aplica el modelo Ackerman de ofertas decrecientes"
+      },
+      {
+        "id": "ofrece_valor_no_economico",
+        "score": 0.4326,
+        "titulo": "Ofrece valor no económico cuando el precio se estanca"
+      },
+      {
+        "id": "plantea_oferta_como_rango_o_cifra_precisa",
+        "score": 0.4234,
+        "titulo": "Plantea tu oferta como un rango o con una cifra precisa, no redonda"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "usa_silencio_no_partas_diferencia",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "usa_silencio_no_partas_diferencia",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Busca el interés, no la postura",
+    "destino": "negocia_por_intereses_no_posiciones",
+    "score": 0.5996,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "negocia_por_intereses_no_posiciones",
+        "score": 0.5996,
+        "titulo": "Negocia por intereses, no por posiciones"
+      },
+      {
+        "id": "muestra_puntos_en_comun_antes_de_negociar",
+        "score": 0.4994,
+        "titulo": "Muestra puntos en común para ganar confianza antes de negociar"
+      },
+      {
+        "id": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+        "score": 0.4373,
+        "titulo": "Separa la visita de evaluación de la decisión de compra"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "plantea_oferta_como_rango_o_cifra_precisa",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "plantea_oferta_como_rango_o_cifra_precisa",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Clasifica tu inventario y define qué meta persigues",
+    "destino": "clasifica_tu_inventario",
+    "score": 0.7972,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "clasifica_tu_inventario",
+        "score": 0.7972,
+        "titulo": "Clasifica tu inventario y define qué meta persigues"
+      },
+      {
+        "id": "prepara_posicion_agenda_antes_negociar",
+        "score": 0.7221,
+        "titulo": "Prepara tu posicion y la agenda antes de negociar"
+      },
+      {
+        "id": "define_punto_maximo_de_stock",
+        "score": 0.6407,
+        "titulo": "Define tu punto máximo de stock y cada cuánto lo revisas"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "conoce_insumos_vitales",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "conoce_insumos_vitales",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Compara precios de varios proveedores antes de negociar",
+    "destino": "plantilla_fija_cotizaciones",
+    "score": 0.6766,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "decide_criterio_eleccion_proveedor",
+        "score": 0.6766,
+        "titulo": "Decide cómo vas a elegir proveedor antes de buscar"
+      },
+      {
+        "id": "deja_que_el_proveedor_diga_el_precio_primero",
+        "score": 0.6366,
+        "titulo": "Deja que el proveedor diga el precio primero"
+      },
+      {
+        "id": "domina_lo_que_compras",
+        "score": 0.6073,
+        "titulo": "Domina lo que compras antes de negociarlo"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "etiqueta_lo_que_piensa_el_proveedor",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "presentate_con_tu_nombre_para_descuento",
+        "campo": "nodos_previos"
+      }
+    ],
+    "nota": "redirigido: el destino propuesto no era el concepto",
+    "aplicado_en": [
+      {
+        "en": "etiqueta_lo_que_piensa_el_proveedor",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "presentate_con_tu_nombre_para_descuento",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Comunica tu plazo limite en vez de esconderlo",
+    "destino": "revela_tu_propio_plazo_limite_al_negociar",
+    "score": 0.7304,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "revela_tu_propio_plazo_limite_al_negociar",
+        "score": 0.7304,
+        "titulo": "Revela tu propio plazo límite al negociar"
+      },
+      {
+        "id": "prepara_posicion_agenda_antes_negociar",
+        "score": 0.5317,
+        "titulo": "Prepara tu posicion y la agenda antes de negociar"
+      },
+      {
+        "id": "documenta_lo_que_no_incluye_tu_compra",
+        "score": 0.4775,
+        "titulo": "Documenta lo que no incluye tu compra y frena cualquier cambio de alcance"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "usa_reglas_proveedor_palabra_justo",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "usa_reglas_proveedor_palabra_justo",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Conoce tus insumos vitales",
+    "destino": "clasifica_tu_inventario",
+    "score": 0.3773,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "clasifica_tu_inventario",
+        "score": 0.3773,
+        "titulo": "Clasifica tu inventario y define qué meta persigues"
+      },
+      {
+        "id": "conoce_insumos_vitales",
+        "score": 0.3537,
+        "titulo": "Conoce tus insumos vitales"
+      },
+      {
+        "id": "escucha_activa_requisitos",
+        "score": 0.3478,
+        "titulo": "Escucha activamente para captar los requisitos reales"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "clasifica_tu_inventario",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Decide cómo vas a elegir proveedor antes de buscar",
+    "destino": "decide_criterio_eleccion_proveedor",
+    "score": 0.7928,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "decide_criterio_eleccion_proveedor",
+        "score": 0.7928,
+        "titulo": "Decide cómo vas a elegir proveedor antes de buscar"
+      },
+      {
+        "id": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+        "score": 0.6768,
+        "titulo": "Investiga con fuentes objetivas antes de contactar al proveedor"
+      },
+      {
+        "id": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+        "score": 0.6761,
+        "titulo": "Separa la visita de evaluación de la decisión de compra"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "domina_lo_que_compras",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "gestiona_contrato_tras_firma",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "plantilla_fija_cotizaciones",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "domina_lo_que_compras",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "gestiona_contrato_tras_firma",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "plantilla_fija_cotizaciones",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Depura tu lista de proveedores que no responden",
+    "destino": "depura_proveedores_sin_respuesta",
+    "score": 0.7952,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "depura_proveedores_sin_respuesta",
+        "score": 0.7952,
+        "titulo": "Depura tu lista de proveedores que no responden"
+      },
+      {
+        "id": "plantilla_fija_cotizaciones",
+        "score": 0.6511,
+        "titulo": "Usa una plantilla fija para pedir y comparar cotizaciones"
+      },
+      {
+        "id": "punto_unico_contacto_proveedores",
+        "score": 0.6124,
+        "titulo": "Designa un único punto de contacto con proveedores"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decide_criterio_eleccion_proveedor",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preguntas_abiertas_motivacion_proveedor",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "decide_criterio_eleccion_proveedor",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preguntas_abiertas_motivacion_proveedor",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Descubre las motivaciones emocionales detras del precio",
+    "destino": "ofrece_valor_no_economico",
+    "score": 0.4739,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "ofrece_valor_no_economico",
+        "score": 0.4739,
+        "titulo": "Ofrece valor no económico cuando el precio se estanca"
+      },
+      {
+        "id": "muestra_puntos_en_comun_antes_de_negociar",
+        "score": 0.4301,
+        "titulo": "Muestra puntos en común para ganar confianza antes de negociar"
+      },
+      {
+        "id": "negocia_por_intereses_no_posiciones",
+        "score": 0.4224,
+        "titulo": "Negocia por intereses, no por posiciones"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "usa_reglas_proveedor_palabra_justo",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Designa un único punto de contacto con proveedores",
+    "destino": "punto_unico_contacto_proveedores",
+    "score": 0.6675,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "punto_unico_contacto_proveedores",
+        "score": 0.6675,
+        "titulo": "Designa un único punto de contacto con proveedores"
+      },
+      {
+        "id": "depura_proveedores_sin_respuesta",
+        "score": 0.5554,
+        "titulo": "Depura tu lista de proveedores que no responden"
+      },
+      {
+        "id": "lleva_scorecard_desempeno_proveedor",
+        "score": 0.4914,
+        "titulo": "Lleva un scorecard de desempeño de cada proveedor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "autoacusacion_antes_mala_noticia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preguntas_abiertas_motivacion_proveedor",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "autoacusacion_antes_mala_noticia",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preguntas_abiertas_motivacion_proveedor",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Documenta el ahorro real de cada compra con una fórmula simple",
+    "destino": "documenta_el_ahorro_real_de_cada_compra",
+    "score": 0.7693,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "documenta_el_ahorro_real_de_cada_compra",
+        "score": 0.7693,
+        "titulo": "Documenta el ahorro real de cada compra con una fórmula simple"
+      },
+      {
+        "id": "calcula_costo_de_mantener_contra_costo_de_reponer",
+        "score": 0.4991,
+        "titulo": "Calcula cuánto te cuesta guardar stock contra cuánto te cuesta reponerlo"
+      },
+      {
+        "id": "aplica_modelo_ackerman",
+        "score": 0.4956,
+        "titulo": "Aplica el modelo Ackerman de ofertas decrecientes"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "documenta_lo_que_no_incluye_tu_compra",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preparate_para_marcharte_del_trato",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "documenta_lo_que_no_incluye_tu_compra",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "preparate_para_marcharte_del_trato",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Documenta lo que no incluye tu compra y frena cualquier cambio de alcance",
+    "destino": "documenta_lo_que_no_incluye_tu_compra",
+    "score": 0.7951,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "documenta_lo_que_no_incluye_tu_compra",
+        "score": 0.7951,
+        "titulo": "Documenta lo que no incluye tu compra y frena cualquier cambio de alcance"
+      },
+      {
+        "id": "domina_lo_que_compras",
+        "score": 0.5313,
+        "titulo": "Domina lo que compras antes de negociarlo"
+      },
+      {
+        "id": "registro_lecciones_aprendidas_compra",
+        "score": 0.518,
+        "titulo": "Registra qué funcionó en cada compra"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "documenta_el_ahorro_real_de_cada_compra",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "verifica_que_el_si_es_real",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "documenta_el_ahorro_real_de_cada_compra",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "verifica_que_el_si_es_real",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Encuentra puntos en común",
+    "destino": "muestra_puntos_en_comun_antes_de_negociar",
+    "score": 0.5106,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "muestra_puntos_en_comun_antes_de_negociar",
+        "score": 0.5106,
+        "titulo": "Muestra puntos en común para ganar confianza antes de negociar"
+      },
+      {
+        "id": "define_punto_maximo_de_stock",
+        "score": 0.3742,
+        "titulo": "Define tu punto máximo de stock y cada cuánto lo revisas"
+      },
+      {
+        "id": "lleva_scorecard_desempeno_proveedor",
+        "score": 0.3152,
+        "titulo": "Lleva un scorecard de desempeño de cada proveedor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "lleva_scorecard_desempeno_proveedor",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Envía tu solicitud de cotización a varios proveedores",
+    "destino": "plantilla_fija_cotizaciones",
+    "score": 0.6151,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "depura_proveedores_sin_respuesta",
+        "score": 0.6151,
+        "titulo": "Depura tu lista de proveedores que no responden"
+      },
+      {
+        "id": "plantilla_fija_cotizaciones",
+        "score": 0.5664,
+        "titulo": "Usa una plantilla fija para pedir y comparar cotizaciones"
+      },
+      {
+        "id": "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos",
+        "score": 0.5608,
+        "titulo": "Ten reglas claras para avisar a proveedores no elegidos"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "depura_proveedores_sin_respuesta",
+        "campo": "nodos_previos"
+      }
+    ],
+    "nota": "redirigido: el destino propuesto no era el concepto",
+    "aplicado_en": [
+      {
+        "en": "depura_proveedores_sin_respuesta",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Escucha activamente para captar los requisitos reales",
+    "destino": "escucha_activa_requisitos",
+    "score": 0.767,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "escucha_activa_requisitos",
+        "score": 0.767,
+        "titulo": "Escucha activamente para captar los requisitos reales"
+      },
+      {
+        "id": "prepara_posicion_agenda_antes_negociar",
+        "score": 0.477,
+        "titulo": "Prepara tu posicion y la agenda antes de negociar"
+      },
+      {
+        "id": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+        "score": 0.4643,
+        "titulo": "Investiga con fuentes objetivas antes de contactar al proveedor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "documento_alcance_servicio",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "documento_alcance_servicio",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Etiqueta lo que crees que piensa el otro para sacarle información",
+    "destino": "etiqueta_lo_que_piensa_el_proveedor",
+    "score": 0.7613,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "etiqueta_lo_que_piensa_el_proveedor",
+        "score": 0.7613,
+        "titulo": "Etiqueta lo que crees que piensa el otro para sacarle información"
+      },
+      {
+        "id": "autoacusacion_antes_mala_noticia",
+        "score": 0.6045,
+        "titulo": "Acúsate tú mismo antes de dar una mala noticia"
+      },
+      {
+        "id": "muestra_puntos_en_comun_antes_de_negociar",
+        "score": 0.5803,
+        "titulo": "Muestra puntos en común para ganar confianza antes de negociar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "usa_preguntas_de_como_para_negociar_precio",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "usa_preguntas_de_como_para_negociar_precio",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Firma el contrato con terminos claros",
+    "destino": "ten_un_checklist_de_clausulas_de_contrato",
+    "score": 0.5582,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "ten_un_checklist_de_clausulas_de_contrato",
+        "score": 0.5582,
+        "titulo": "Ten un checklist de cláusulas que todo contrato necesita"
+      },
+      {
+        "id": "gestiona_contrato_tras_firma",
+        "score": 0.5312,
+        "titulo": "Gestiona el contrato después de firmarlo, no lo archives"
+      },
+      {
+        "id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+        "score": 0.5306,
+        "titulo": "Investiga a fondo antes de renovar un contrato existente"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "prepara_posicion_agenda_antes_negociar",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "prepara_posicion_agenda_antes_negociar",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Gestiona el contrato después de firmarlo, no lo archives",
+    "destino": "gestiona_contrato_tras_firma",
+    "score": 0.7528,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "gestiona_contrato_tras_firma",
+        "score": 0.7528,
+        "titulo": "Gestiona el contrato después de firmarlo, no lo archives"
+      },
+      {
+        "id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+        "score": 0.6735,
+        "titulo": "Investiga a fondo antes de renovar un contrato existente"
+      },
+      {
+        "id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+        "score": 0.6511,
+        "titulo": "Pide una revisión externa antes de firmar cualquier contrato"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "autoacusacion_antes_mala_noticia",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "punto_unico_contacto_proveedores",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "registro_lecciones_aprendidas_compra",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "autoacusacion_antes_mala_noticia",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "punto_unico_contacto_proveedores",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "registro_lecciones_aprendidas_compra",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Investiga a tu proveedor antes de negociar",
+    "destino": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+    "score": 0.7223,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
+        "score": 0.7223,
+        "titulo": "Separa la visita de evaluación de la decisión de compra"
+      },
+      {
+        "id": "deja_que_el_proveedor_diga_el_precio_primero",
+        "score": 0.7201,
+        "titulo": "Deja que el proveedor diga el precio primero"
+      },
+      {
+        "id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+        "score": 0.7058,
+        "titulo": "Pide una revisión externa antes de firmar cualquier contrato"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "prepara_posicion_agenda_antes_negociar",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "prepara_posicion_agenda_antes_negociar",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Negocia buscando beneficio mutuo",
+    "destino": "muestra_puntos_en_comun_antes_de_negociar",
+    "score": 0.4845,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "muestra_puntos_en_comun_antes_de_negociar",
+        "score": 0.4845,
+        "titulo": "Muestra puntos en común para ganar confianza antes de negociar"
+      },
+      {
+        "id": "negocia_por_intereses_no_posiciones",
+        "score": 0.4436,
+        "titulo": "Negocia por intereses, no por posiciones"
+      },
+      {
+        "id": "ofrece_valor_no_economico",
+        "score": 0.4396,
+        "titulo": "Ofrece valor no económico cuando el precio se estanca"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "prepara_posicion_agenda_antes_negociar",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Negocia el precio con el proveedor seleccionado",
+    "destino": "negocia_por_intereses_no_posiciones",
+    "score": 0.6813,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "decide_criterio_eleccion_proveedor",
+        "score": 0.6813,
+        "titulo": "Decide cómo vas a elegir proveedor antes de buscar"
+      },
+      {
+        "id": "deja_que_el_proveedor_diga_el_precio_primero",
+        "score": 0.6573,
+        "titulo": "Deja que el proveedor diga el precio primero"
+      },
+      {
+        "id": "decide_si_lo_compras_o_lo_haces_tu",
+        "score": 0.6411,
+        "titulo": "Decide si lo compras o lo haces tu"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "depura_proveedores_sin_respuesta",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "nota": "redirigido: el destino propuesto no era el concepto",
+    "aplicado_en": [
+      {
+        "en": "depura_proveedores_sin_respuesta",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Negocia la renovación del contrato con el mismo proveedor",
+    "destino": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+    "score": 0.736,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+        "score": 0.736,
+        "titulo": "Investiga a fondo antes de renovar un contrato existente"
+      },
+      {
+        "id": "gestiona_contrato_tras_firma",
+        "score": 0.549,
+        "titulo": "Gestiona el contrato después de firmarlo, no lo archives"
+      },
+      {
+        "id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+        "score": 0.5392,
+        "titulo": "Pide una revisión externa antes de firmar cualquier contrato"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "documenta_el_ahorro_real_de_cada_compra",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "documenta_el_ahorro_real_de_cada_compra",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Negocia por intereses, no por posiciones",
+    "destino": "negocia_por_intereses_no_posiciones",
+    "score": 0.6798,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "negocia_por_intereses_no_posiciones",
+        "score": 0.6798,
+        "titulo": "Negocia por intereses, no por posiciones"
+      },
+      {
+        "id": "domina_lo_que_compras",
+        "score": 0.5112,
+        "titulo": "Domina lo que compras antes de negociarlo"
+      },
+      {
+        "id": "gestiona_contrato_tras_firma",
+        "score": 0.5081,
+        "titulo": "Gestiona el contrato después de firmarlo, no lo archives"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "ofrece_valor_no_economico",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "ofrece_valor_no_economico",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Ofrece algo más que precio",
+    "destino": "ofrece_valor_no_economico",
+    "score": 0.6888,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "ofrece_valor_no_economico",
+        "score": 0.6888,
+        "titulo": "Ofrece valor no económico cuando el precio se estanca"
+      },
+      {
+        "id": "conoce_insumos_vitales",
+        "score": 0.552,
+        "titulo": "Conoce tus insumos vitales"
+      },
+      {
+        "id": "domina_lo_que_compras",
+        "score": 0.5506,
+        "titulo": "Domina lo que compras antes de negociarlo"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "aplica_modelo_ackerman",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "aplica_modelo_ackerman",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Ofrece rangos, no cifras redondas",
+    "destino": "plantea_oferta_como_rango_o_cifra_precisa",
+    "score": 0.5756,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "plantea_oferta_como_rango_o_cifra_precisa",
+        "score": 0.5756,
+        "titulo": "Plantea tu oferta como un rango o con una cifra precisa, no redonda"
+      },
+      {
+        "id": "define_punto_maximo_de_stock",
+        "score": 0.435,
+        "titulo": "Define tu punto máximo de stock y cada cuánto lo revisas"
+      },
+      {
+        "id": "lleva_scorecard_desempeno_proveedor",
+        "score": 0.3404,
+        "titulo": "Lleva un scorecard de desempeño de cada proveedor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "muestra_puntos_en_comun_antes_de_negociar",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "muestra_puntos_en_comun_antes_de_negociar",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Plantea tu oferta como un rango o con una cifra precisa",
+    "destino": "plantea_oferta_como_rango_o_cifra_precisa",
+    "score": 0.7562,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "plantea_oferta_como_rango_o_cifra_precisa",
+        "score": 0.7562,
+        "titulo": "Plantea tu oferta como un rango o con una cifra precisa, no redonda"
+      },
+      {
+        "id": "define_punto_maximo_de_stock",
+        "score": 0.6268,
+        "titulo": "Define tu punto máximo de stock y cada cuánto lo revisas"
+      },
+      {
+        "id": "prepara_posicion_agenda_antes_negociar",
+        "score": 0.6176,
+        "titulo": "Prepara tu posicion y la agenda antes de negociar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "aplica_modelo_ackerman",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "aplica_modelo_ackerman",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Prepara tu posicion y la agenda antes de negociar",
+    "destino": "prepara_posicion_agenda_antes_negociar",
+    "score": 0.801,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "prepara_posicion_agenda_antes_negociar",
+        "score": 0.801,
+        "titulo": "Prepara tu posicion y la agenda antes de negociar"
+      },
+      {
+        "id": "preparate_para_marcharte_del_trato",
+        "score": 0.6452,
+        "titulo": "Prepárate para marcharte del trato si no te conviene"
+      },
+      {
+        "id": "revela_tu_propio_plazo_limite_al_negociar",
+        "score": 0.5891,
+        "titulo": "Revela tu propio plazo límite al negociar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "domina_lo_que_compras",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "domina_lo_que_compras",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Redacta un documento detallado de lo que esperas del servicio",
+    "destino": "documento_alcance_servicio",
+    "score": 0.6775,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "documento_alcance_servicio",
+        "score": 0.6775,
+        "titulo": "Redacta un documento detallado de lo que esperas del servicio"
+      },
+      {
+        "id": "lleva_scorecard_desempeno_proveedor",
+        "score": 0.5232,
+        "titulo": "Lleva un scorecard de desempeño de cada proveedor"
+      },
+      {
+        "id": "prepara_posicion_agenda_antes_negociar",
+        "score": 0.4989,
+        "titulo": "Prepara tu posicion y la agenda antes de negociar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "escucha_activa_requisitos",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "escucha_activa_requisitos",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Registra cómo cumple tu proveedor",
+    "destino": "lleva_scorecard_desempeno_proveedor",
+    "score": 0.6494,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "lleva_scorecard_desempeno_proveedor",
+        "score": 0.6494,
+        "titulo": "Lleva un scorecard de desempeño de cada proveedor"
+      },
+      {
+        "id": "decide_si_lo_compras_o_lo_haces_tu",
+        "score": 0.6451,
+        "titulo": "Decide si lo compras o lo haces tu"
+      },
+      {
+        "id": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+        "score": 0.5802,
+        "titulo": "Investiga con fuentes objetivas antes de contactar al proveedor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "define_punto_maximo_de_stock",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "muestra_puntos_en_comun_antes_de_negociar",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "define_punto_maximo_de_stock",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "muestra_puntos_en_comun_antes_de_negociar",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Registra qué funcionó en cada compra",
+    "destino": "registro_lecciones_aprendidas_compra",
+    "score": 0.6714,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "registro_lecciones_aprendidas_compra",
+        "score": 0.6714,
+        "titulo": "Registra qué funcionó en cada compra"
+      },
+      {
+        "id": "clasifica_tu_inventario",
+        "score": 0.6028,
+        "titulo": "Clasifica tu inventario y define qué meta persigues"
+      },
+      {
+        "id": "domina_lo_que_compras",
+        "score": 0.5707,
+        "titulo": "Domina lo que compras antes de negociarlo"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "gestiona_contrato_tras_firma",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "gestiona_contrato_tras_firma",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Sube tu oferta en tramos",
+    "destino": "aplica_modelo_ackerman",
+    "score": 0.6297,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "preparate_para_marcharte_del_trato",
+        "score": 0.6297,
+        "titulo": "Prepárate para marcharte del trato si no te conviene"
+      },
+      {
+        "id": "prepara_posicion_agenda_antes_negociar",
+        "score": 0.6119,
+        "titulo": "Prepara tu posicion y la agenda antes de negociar"
+      },
+      {
+        "id": "presentate_con_tu_nombre_para_descuento",
+        "score": 0.5834,
+        "titulo": "Preséntate por tu nombre para abrir la puerta a un descuento informal"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "negocia_por_intereses_no_posiciones",
+        "campo": "nodos_previos"
+      }
+    ],
+    "nota": "redirigido: el destino propuesto no era el concepto",
+    "aplicado_en": [
+      {
+        "en": "negocia_por_intereses_no_posiciones",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Ten un checklist de cláusulas que todo contrato necesita",
+    "destino": "ten_un_checklist_de_clausulas_de_contrato",
+    "score": 0.8506,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "ten_un_checklist_de_clausulas_de_contrato",
+        "score": 0.8506,
+        "titulo": "Ten un checklist de cláusulas que todo contrato necesita"
+      },
+      {
+        "id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+        "score": 0.5863,
+        "titulo": "Investiga a fondo antes de renovar un contrato existente"
+      },
+      {
+        "id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+        "score": 0.5559,
+        "titulo": "Pide una revisión externa antes de firmar cualquier contrato"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "calcula_costo_de_mantener_contra_costo_de_reponer",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "calcula_costo_de_mantener_contra_costo_de_reponer",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Usa el silencio al negociar",
+    "destino": "usa_silencio_no_partas_diferencia",
+    "score": 0.5721,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "usa_silencio_no_partas_diferencia",
+        "score": 0.5721,
+        "titulo": "Usa el silencio y no aceptes partir el precio a la mitad"
+      },
+      {
+        "id": "destraba_una_negociacion_que_se_quedo_estancada",
+        "score": 0.563,
+        "titulo": "Destraba una negociación que se quedó estancada"
+      },
+      {
+        "id": "usa_el_no_del_proveedor_a_tu_favor",
+        "score": 0.5322,
+        "titulo": "Usa el 'no' del proveedor a tu favor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "ofrece_valor_no_economico",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "ofrece_valor_no_economico",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Usa preguntas abiertas para descubrir la motivación real del proveedor",
+    "destino": "preguntas_abiertas_motivacion_proveedor",
+    "score": 0.889,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "preguntas_abiertas_motivacion_proveedor",
+        "score": 0.889,
+        "titulo": "Usa preguntas abiertas para descubrir la motivación real del proveedor"
+      },
+      {
+        "id": "escucha_activa_requisitos",
+        "score": 0.6416,
+        "titulo": "Escucha activamente para captar los requisitos reales"
+      },
+      {
+        "id": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+        "score": 0.6165,
+        "titulo": "Investiga con fuentes objetivas antes de contactar al proveedor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decide_criterio_eleccion_proveedor",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "punto_unico_contacto_proveedores",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "decide_criterio_eleccion_proveedor",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "punto_unico_contacto_proveedores",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Usa preguntas de 'cómo' para rebajar un precio sin decir que no",
+    "destino": "usa_preguntas_de_como_para_negociar_precio",
+    "score": 0.8933,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "usa_preguntas_de_como_para_negociar_precio",
+        "score": 0.8933,
+        "titulo": "Usa preguntas de 'cómo' para rebajar un precio sin decir que no"
+      },
+      {
+        "id": "preguntas_abiertas_motivacion_proveedor",
+        "score": 0.6578,
+        "titulo": "Usa preguntas abiertas para descubrir la motivación real del proveedor"
+      },
+      {
+        "id": "ofrece_valor_no_economico",
+        "score": 0.6461,
+        "titulo": "Ofrece valor no económico cuando el precio se estanca"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "etiqueta_lo_que_piensa_el_proveedor",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "presentate_con_tu_nombre_para_descuento",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "verifica_que_el_si_es_real",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "etiqueta_lo_que_piensa_el_proveedor",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "presentate_con_tu_nombre_para_descuento",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "verifica_que_el_si_es_real",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Verifica que el 'sí' del proveedor es real antes de cerrar",
+    "destino": "verifica_que_el_si_es_real",
+    "score": 0.7599,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "verifica_que_el_si_es_real",
+        "score": 0.7599,
+        "titulo": "Verifica que el 'sí' del proveedor es real antes de cerrar"
+      },
+      {
+        "id": "lleva_scorecard_desempeno_proveedor",
+        "score": 0.5151,
+        "titulo": "Lleva un scorecard de desempeño de cada proveedor"
+      },
+      {
+        "id": "usa_el_no_del_proveedor_a_tu_favor",
+        "score": 0.4925,
+        "titulo": "Usa el 'no' del proveedor a tu favor"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "ata_el_pago_al_cumplimiento_real_del_servicio",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "destraba_una_negociacion_que_se_quedo_estancada",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "documenta_lo_que_no_incluye_tu_compra",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "preparate_para_marcharte_del_trato",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "usa_preguntas_de_como_para_negociar_precio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "ata_el_pago_al_cumplimiento_real_del_servicio",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "destraba_una_negociacion_que_se_quedo_estancada",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "documenta_lo_que_no_incluye_tu_compra",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "preparate_para_marcharte_del_trato",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "usa_preguntas_de_como_para_negociar_precio",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Verifica quién tiene realmente el poder de decidir o de vetar",
+    "destino": "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
+    "score": 0.7437,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
+        "score": 0.7437,
+        "titulo": "Verifica quién tiene realmente el poder de decidir o de vetar"
+      },
+      {
+        "id": "muestra_puntos_en_comun_antes_de_negociar",
+        "score": 0.5746,
+        "titulo": "Muestra puntos en común para ganar confianza antes de negociar"
+      },
+      {
+        "id": "usa_reglas_proveedor_palabra_justo",
+        "score": 0.5446,
+        "titulo": "Usa las reglas del proveedor y la palabra 'justo' como palanca"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  }
+]

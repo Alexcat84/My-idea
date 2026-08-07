@@ -4,7 +4,7 @@
 // (congruencia exacta: 10+5+5+5+5 = 30), y una regla narrable en una línea:
 //   "Tu plan: 10 créditos. Todo lo demás: 5. La Claridad y los diagnósticos:
 //    gratis."
-// Los precios viven AQUÍ y en packs_catalog.json (mundos); ninguna ruta
+// Los precios viven AQUÍ y SOLO aquí; ninguna ruta
 // hardcodea números. 1 crédito = 1 USD sigue siendo el ancla del ledger, pero
 // NO se le vende al usuario como eslogan. Pagos reales (pasarelas) llegan en la
 // ETAPA 3: por ahora los endpoints validan contra estas constantes.

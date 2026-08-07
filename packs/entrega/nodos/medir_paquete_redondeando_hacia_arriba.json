@@ -1,0 +1,28 @@
+{
+  "node_id": "medir_paquete_redondeando_hacia_arriba",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Medir el paquete redondeando hacia arriba",
+  "fuente": "Guia visual de empaque",
+  "resumen_teorico": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumetrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumetrico y peso minimo facturable. La formula y el divisor exactos varian segun el courier y el pais, asi que hay que confirmarlos directamente con quien te va a hacer el envio.",
+  "pasos_accionables": [
+    "Mide largo, ancho y alto de la caja ya cerrada y empacada, no del producto solo.",
+    "Define el lado mas largo como el largo del paquete.",
+    "Redondea cada medida hacia arriba a la unidad completa antes de anotarla.",
+    "Pregunta a tu courier cual es su formula y su divisor para calcular el peso volumetrico.",
+    "Compara peso real, peso volumetrico y peso minimo facturable, y usa el mayor para presupuestar el envio."
+  ],
+  "entregable_esperado": "Una medida confiable del paquete que evita sorpresas en el cobro del courier.",
+  "nodos_previos": [
+    "colocar_etiquetas_de_manejo_correctamente"
+  ],
+  "nodos_siguientes": [
+    "elegir_caja_correcta"
+  ],
+  "condiciones_activacion": [
+    "Te ha llegado una factura de envio mas alta de lo que cotizaste.",
+    "Vendes productos livianos pero voluminosos, como ropa o articulos inflables.",
+    "Vas a comparar tarifas entre varios couriers y necesitas medir igual con todos."
+  ],
+  "etiqueta_arbol": "Mide y redondea hacia arriba"
+}

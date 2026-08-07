@@ -1,0 +1,28 @@
+{
+  "node_id": "elegir_resistencia_caja_peso",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Elegir resistencia de caja según peso del contenido",
+  "fuente": "DHL Express, Guia de empaque",
+  "resumen_teorico": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Usar una caja por debajo de su capacidad real termina en cajas que se aplastan o revientan en tránsito, mientras que sobredimensionar la resistencia solo cuesta dinero de más sin necesidad real. La clave es mirar el sello del fabricante en la caja y hacerlo coincidir con el peso real de lo que va adentro.",
+  "pasos_accionables": [
+    "Pesa el contenido completo, incluyendo el relleno que vas a usar.",
+    "Busca el sello del fabricante en la caja: te dice su resistencia y tipo de pared.",
+    "Si tu contenido pesa cerca del límite de una pared simple, sube a pared doble.",
+    "Pregunta a tu proveedor de cajas cuál es el límite de peso exacto para cada tipo que vende.",
+    "Nunca reutilices una caja que ya perdió rigidez, aunque el peso a enviar sea bajo."
+  ],
+  "entregable_esperado": "Una tabla propia de peso del pedido y el tipo de caja a usar, según lo que ofrece tu proveedor local.",
+  "nodos_previos": [
+    "Clasificar el tipo de paquete antes de despachar"
+  ],
+  "nodos_siguientes": [
+    "Hacer cajas a medida del pedido"
+  ],
+  "condiciones_activacion": [
+    "Has tenido cajas que llegan aplastadas o rotas al destino.",
+    "Empacas productos pesados y usas la misma caja liviana de siempre.",
+    "Quieres dejar de adivinar y empezar a decidir la caja según datos reales de peso."
+  ],
+  "etiqueta_arbol": "Combina resistencia de caja con peso"
+}

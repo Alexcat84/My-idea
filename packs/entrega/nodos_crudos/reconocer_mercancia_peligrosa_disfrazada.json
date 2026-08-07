@@ -1,0 +1,26 @@
+{
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "fase_proyecto": "validacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Reconocer productos que en realidad son mercancía peligrosa",
+  "fuente": "Guia de empaque para envios (FedEx)",
+  "resumen_teorico": "Muchos productos comunes se clasifican como mercancia peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterias, aerosoles y solventes entran en esta categoria porque pueden generar reacciones quimicas o electricas riesgosas durante el transporte. Vender algo asi sin identificarlo correctamente puede provocar que el courier rechace el envio o, peor, que provoque un incidente en transito. Cada tipo de mercancia peligrosa tiene un numero y nombre de clasificacion oficial que debe usarse para empacarlo, marcarlo y declararlo. Ademas, quien despacha estos envios sin la capacitacion adecuada puede enfrentar sanciones, asi que identificar el producto antes de escalar volumen es un paso que no se puede saltar.",
+  "pasos_accionables": [
+    "Revisa si tu producto contiene liquidos inflamables, baterias, aerosoles o quimicos.",
+    "Busca la clasificacion oficial de ese tipo de producto (numero y nombre de envio).",
+    "Pregunta a tu courier si acepta ese producto y bajo que condiciones de empaque.",
+    "Capacitate tu mismo antes de despachar el primer envio de este tipo.",
+    "Guarda la documentacion exigida junto con cada envio de mercancia peligrosa."
+  ],
+  "entregable_esperado": "Una lista de tus productos marcados como mercancia peligrosa o no, con su clasificacion oficial.",
+  "nodos_previos": [
+    "Identificar si tu producto necesita protección especial"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Vendes perfumes, pinturas, baterias o aerosoles y no sabes si necesitan tramite especial.",
+    "Un courier te rechazo un envio sin darte una explicacion clara.",
+    "Estas por escalar ventas de un producto que contiene liquidos o electricidad."
+  ],
+  "etiqueta_arbol": "Detecta mercancía peligrosa oculta"
+}

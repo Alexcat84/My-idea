@@ -1,0 +1,26 @@
+{
+  "node_id": "pagar_mas_por_velocidad",
+  "fase_proyecto": "planificacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Pagar más por velocidad cuando conviene",
+  "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+  "resumen_teorico": "El transporte mas barato no siempre es la mejor decision. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, es mayor que la diferencia de precio entre un envio rapido y uno lento, conviene pagar mas por la velocidad. Esta logica aplica sobre todo a pedidos urgentes, insumos criticos o productos donde el cliente no esperara mucho tiempo antes de buscar otro proveedor. La decision no es una regla fija, depende de tu margen, de tu tipo de producto y de cuanto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder mas dinero del que ahorras en el flete.",
+  "pasos_accionables": [
+    "Calcula cuanto te cuesta quedarte sin stock o perder una venta por tardar en llegar.",
+    "Compara ese costo contra la diferencia de precio entre el envio rapido y el barato.",
+    "Elige el envio rapido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
+    "Revisa esta decision cada vez que cambien tus proveedores de envio o tus margenes."
+  ],
+  "entregable_esperado": "Un criterio simple para decidir cuando pagar envio rapido y cuando no.",
+  "nodos_previos": [
+    "detectar_prioridad_cliente_entrega",
+    "reduccion_tiempo_de_mercado_velocidad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Perdiste una venta o un cliente porque el pedido llego tarde",
+    "Tienes que elegir entre dos couriers y uno es mas caro pero mas confiable",
+    "Vendes algo urgente, como repuestos o insumos, donde la demora cuesta mas que el flete"
+  ],
+  "etiqueta_arbol": "Decide cuándo pagar más rápido"
+}

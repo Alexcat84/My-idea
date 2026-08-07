@@ -1,0 +1,29 @@
+{
+  "node_id": "clasificar_tipo_paquete",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Clasificar el tipo de paquete antes de despachar",
+  "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+  "resumen_teorico": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones y volumen. Esto importa porque cada tipo enfrenta riesgos distintos en tránsito, como caídas, rotación o golpes concentrados en una esquina, y por eso pide refuerzos diferentes. También hay que anotar si el contenido es frágil o si puede derramarse, porque eso suma necesidades de protección adicionales. Esta clasificación no es un capricho de laboratorio: es una guía práctica para decidir cuánto acolchado usar, qué tipo de caja elegir y qué refuerzos aplicar antes de que el paquete salga de tus manos, evitando adivinar la protección al ojo cada vez que empacas algo nuevo.",
+  "pasos_accionables": [
+    "Mide las tres dimensiones y calcula el volumen de tu paquete ya armado.",
+    "Compara esas medidas contra las categorías: volumen grande con dimensión corta es plano, una dimensión mucho mayor que las otras dos es alargado.",
+    "Marca si el contenido es frágil o si puede derramarse.",
+    "Anota la categoría en tu checklist de empaque antes de elegir caja y relleno."
+  ],
+  "entregable_esperado": "Una ficha por producto que indica su categoría de paquete y sus riesgos asociados en tránsito.",
+  "nodos_previos": [
+    "revisar_necesidades_de_empaque"
+  ],
+  "nodos_siguientes": [
+    "elegir_resistencia_caja_peso",
+    "elegir_sobre_o_caja_tamano",
+    "empacar_liquidos_doble_barrera"
+  ],
+  "condiciones_activacion": [
+    "Vendes productos de formas muy distintas y usas la misma caja para todos.",
+    "Te ha pasado que un paquete alargado o plano llega dañado más seguido que los demás.",
+    "Vas a empezar a despachar un producto nuevo y no sabes qué protección necesita."
+  ],
+  "etiqueta_arbol": "Clasifica tu tipo de paquete"
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "elegir_sobre_o_caja_tamano",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Elegir sobre o caja según el tamaño final del paquete",
+  "fuente": "Guia de empaque para envios (FedEx)",
+  "resumen_teorico": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que cierto tamaño mínimo, se usa sobre o bolsa reforzada; si supera ese tamaño, pasa a caja rígida. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Definir este umbral para tu propio catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+  "pasos_accionables": [
+    "Arma el paquete completo con su protección antes de decidir el contenedor.",
+    "Mide el resultado final: si es menor a un tamaño mínimo que definas, usa sobre o bolsa reforzada; si es mayor, usa caja.",
+    "Pregunta a tu courier cuál es su tamaño mínimo aceptado para caja y cuál para sobre o bolsa.",
+    "Ajusta tu inventario de empaque para tener ambos formatos disponibles según ese umbral."
+  ],
+  "entregable_esperado": "Un criterio escrito de tamaño final armado y su formato correspondiente, sobre o caja, para tu catálogo.",
+  "nodos_previos": [
+    "Clasificar el tipo de paquete antes de despachar"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Envías productos pequeños siempre en caja grande y sientes que gastas de más.",
+    "No sabes si tu courier acepta sobres reforzados para tu tipo de producto.",
+    "Tu catálogo tiene productos de tamaños muy distintos y usas un solo tipo de empaque para todos."
+  ],
+  "etiqueta_arbol": "Decide entre sobre o caja"
+}

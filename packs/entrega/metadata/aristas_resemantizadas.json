@@ -1,0 +1,1483 @@
+[
+  {
+    "fantasma": "Acolchado según la forma de la pieza",
+    "destino": "acolchado_segun_forma",
+    "score": 0.6288,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "acolchado_segun_forma",
+        "score": 0.6288,
+        "titulo": "Acolchado según la forma de la pieza"
+      },
+      {
+        "id": "colocar_etiquetas_de_manejo_correctamente",
+        "score": 0.4705,
+        "titulo": "Colocar y usar etiquetas de manejo correctamente"
+      },
+      {
+        "id": "hacer_cajas_a_medida_del_pedido",
+        "score": 0.4461,
+        "titulo": "Hacer cajas a medida del pedido"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "elegir_caja_correcta",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "elegir_caja_correcta",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Adaptar el empaque según el tipo de artículo",
+    "destino": "adaptar_empaque_segun_tipo_de_articulo",
+    "score": 0.4695,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "adaptar_empaque_segun_tipo_de_articulo",
+        "score": 0.4695,
+        "titulo": "Adaptar el empaque según el tipo de artículo"
+      },
+      {
+        "id": "clasificar_tipo_paquete",
+        "score": 0.4397,
+        "titulo": "Clasificar el tipo de paquete antes de despachar"
+      },
+      {
+        "id": "colocar_etiquetas_de_manejo_correctamente",
+        "score": 0.4256,
+        "titulo": "Colocar y usar etiquetas de manejo correctamente"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "clasificar_tipo_paquete",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "elegir_material_de_relleno_segun_producto",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "sellar_cajas_metodo_cinta_en_h",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Aplicar una regla fija de colchón de relleno",
+    "destino": "aplicar_regla_fija_de_colchon_de_relleno",
+    "score": 0.5552,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "colocar_etiquetas_de_manejo_correctamente",
+        "score": 0.5552,
+        "titulo": "Colocar y usar etiquetas de manejo correctamente"
+      },
+      {
+        "id": "sellar_cajas_metodo_cinta_en_h",
+        "score": 0.5198,
+        "titulo": "Sellar cajas con el método de cinta en H"
+      },
+      {
+        "id": "aplicar_regla_fija_de_colchon_de_relleno",
+        "score": 0.4915,
+        "titulo": "Aplicar una regla fija de colchón de relleno"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "elegir_material_de_relleno_segun_producto",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "hacer_cajas_a_medida_del_pedido",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "nota": "redirigido: el destino propuesto no era el concepto",
+    "aplicado_en": [
+      {
+        "en": "elegir_material_de_relleno_segun_producto",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "hacer_cajas_a_medida_del_pedido",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Calcular el peso dimensional antes de cotizar",
+    "destino": "calcular_peso_dimensional_antes_cotizar",
+    "score": 0.7562,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "calcular_peso_dimensional_antes_cotizar",
+        "score": 0.7562,
+        "titulo": "Calcular el peso dimensional antes de cotizar"
+      },
+      {
+        "id": "conocer_limites_peso_tamano_courier",
+        "score": 0.6202,
+        "titulo": "Conocer los límites de peso y tamaño del courier"
+      },
+      {
+        "id": "medir_paquete_redondeando_hacia_arriba",
+        "score": 0.4912,
+        "titulo": "Medir el paquete redondeando hacia arriba"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decidir_cobro_velocidad_ventana_entrega",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "probar_empaque_antes_de_escalar_envios",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "decidir_cobro_velocidad_ventana_entrega",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "probar_empaque_antes_de_escalar_envios",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Clasificar el tipo de paquete antes de despachar",
+    "destino": "clasificar_tipo_paquete",
+    "score": 0.7518,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "clasificar_tipo_paquete",
+        "score": 0.7518,
+        "titulo": "Clasificar el tipo de paquete antes de despachar"
+      },
+      {
+        "id": "colocar_etiquetas_de_manejo_correctamente",
+        "score": 0.6322,
+        "titulo": "Colocar y usar etiquetas de manejo correctamente"
+      },
+      {
+        "id": "medir_paquete_redondeando_hacia_arriba",
+        "score": 0.583,
+        "titulo": "Medir el paquete redondeando hacia arriba"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "elegir_resistencia_caja_peso",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "elegir_sobre_o_caja_tamano",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "empacar_liquidos_doble_barrera",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "elegir_resistencia_caja_peso",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "elegir_sobre_o_caja_tamano",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "empacar_liquidos_doble_barrera",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Colocar y usar etiquetas de manejo correctamente",
+    "destino": "colocar_etiquetas_de_manejo_correctamente",
+    "score": 0.6588,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "colocar_etiquetas_de_manejo_correctamente",
+        "score": 0.6588,
+        "titulo": "Colocar y usar etiquetas de manejo correctamente"
+      },
+      {
+        "id": "etiqueta_duplicada_dentro_del_paquete",
+        "score": 0.5275,
+        "titulo": "Poner una etiqueta duplicada dentro del paquete"
+      },
+      {
+        "id": "identificar_si_tu_producto_necesita_proteccion_especial",
+        "score": 0.4361,
+        "titulo": "Identificar si tu producto necesita protección especial"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "empacar_flores_plantas_sin_agua",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "etiqueta_duplicada_dentro_del_paquete",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "empacar_flores_plantas_sin_agua",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "etiqueta_duplicada_dentro_del_paquete",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Conocer los límites de peso y tamaño del courier",
+    "destino": "conocer_limites_peso_tamano_courier",
+    "score": 0.8844,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "conocer_limites_peso_tamano_courier",
+        "score": 0.8844,
+        "titulo": "Conocer los límites de peso y tamaño del courier"
+      },
+      {
+        "id": "calcular_peso_dimensional_antes_cotizar",
+        "score": 0.7531,
+        "titulo": "Calcular el peso dimensional antes de cotizar"
+      },
+      {
+        "id": "elegir_modo_transporte_volumen_distancia",
+        "score": 0.5724,
+        "titulo": "Elegir el modo de transporte según volumen y distancia"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "elegir_modo_transporte_volumen_distancia",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "revisar_necesidades_de_empaque",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "elegir_modo_transporte_volumen_distancia",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "revisar_necesidades_de_empaque",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Cómo elegir la caja correcta para tu envío",
+    "destino": "elegir_caja_correcta",
+    "score": 0.7532,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "elegir_caja_correcta",
+        "score": 0.7532,
+        "titulo": "Cómo elegir la caja correcta para tu envío"
+      },
+      {
+        "id": "hacer_cajas_a_medida_del_pedido",
+        "score": 0.6229,
+        "titulo": "Hacer cajas a medida del pedido"
+      },
+      {
+        "id": "etiqueta_duplicada_dentro_del_paquete",
+        "score": 0.5702,
+        "titulo": "Poner una etiqueta duplicada dentro del paquete"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "acolchado_segun_forma",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "disenar_empaque_logistica",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "tratar_packaging_costo_marca",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "acolchado_segun_forma",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "disenar_empaque_logistica",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "tratar_packaging_costo_marca",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Decidir cuánto cobrar por velocidad y ventana de entrega",
+    "destino": "decidir_cobro_velocidad_ventana_entrega",
+    "score": 0.7668,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "decidir_cobro_velocidad_ventana_entrega",
+        "score": 0.7668,
+        "titulo": "Decidir cuánto cobrar por velocidad y ventana de entrega"
+      },
+      {
+        "id": "pagar_mas_por_velocidad",
+        "score": 0.5469,
+        "titulo": "Pagar más por velocidad cuando conviene"
+      },
+      {
+        "id": "detectar_prioridad_cliente_entrega",
+        "score": 0.5375,
+        "titulo": "Detectar lo que el cliente realmente prioriza en la entrega"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "calcular_peso_dimensional_antes_cotizar",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "detectar_prioridad_cliente_entrega",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "saber_hasta_donde_mejorar_servicio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "calcular_peso_dimensional_antes_cotizar",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "detectar_prioridad_cliente_entrega",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "saber_hasta_donde_mejorar_servicio",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Decidir si empacas tú mismo o subcontratas el envío",
+    "destino": "decidir_empacar_tu_mismo_o_subcontratar",
+    "score": 0.7934,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "decidir_empacar_tu_mismo_o_subcontratar",
+        "score": 0.7934,
+        "titulo": "Decidir si empacas tú mismo o subcontratas el envío"
+      },
+      {
+        "id": "ofrecer_puntos_recogida",
+        "score": 0.615,
+        "titulo": "Ofrecer puntos de recogida en vez de entrega a domicilio"
+      },
+      {
+        "id": "mapear_servicio_antes_durante_despues",
+        "score": 0.5735,
+        "titulo": "Mapear el servicio antes, durante y después de la entrega"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "vender_sin_stock_con_drop_shipping",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "vender_sin_stock_con_drop_shipping",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Decidir si vendes solo online o también en tienda física",
+    "destino": "decidir_vender_solo_online_o_tambien_tienda_fisica",
+    "score": 0.9142,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "decidir_vender_solo_online_o_tambien_tienda_fisica",
+        "score": 0.9142,
+        "titulo": "Decidir si vendes solo online o también en tienda física"
+      },
+      {
+        "id": "decidir_empacar_tu_mismo_o_subcontratar",
+        "score": 0.5753,
+        "titulo": "Decidir si empacas tú mismo o subcontratas el envío"
+      },
+      {
+        "id": "vender_sin_stock_con_drop_shipping",
+        "score": 0.5572,
+        "titulo": "Vender sin stock con drop-shipping"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "encuestar_al_cliente_para_saber_que_valora",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "vender_sin_stock_con_drop_shipping",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "encuestar_al_cliente_para_saber_que_valora",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "vender_sin_stock_con_drop_shipping",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Definir qué cuenta como daño antes de probar el empaque",
+    "destino": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+    "score": 0.8242,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+        "score": 0.8242,
+        "titulo": "Definir qué cuenta como daño antes de probar el empaque"
+      },
+      {
+        "id": "detectar_empaque_poco_rigido",
+        "score": 0.5956,
+        "titulo": "Detectar señales de un empaque poco rígido"
+      },
+      {
+        "id": "proteger_fragiles_caja_dentro_de_caja",
+        "score": 0.5083,
+        "titulo": "Proteger fragiles con el metodo caja dentro de caja"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "identificar_si_tu_producto_necesita_proteccion_especial",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "identificar_si_tu_producto_necesita_proteccion_especial",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Detectar lo que el cliente realmente prioriza en la entrega",
+    "destino": "detectar_prioridad_cliente_entrega",
+    "score": 0.6992,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "detectar_prioridad_cliente_entrega",
+        "score": 0.6992,
+        "titulo": "Detectar lo que el cliente realmente prioriza en la entrega"
+      },
+      {
+        "id": "encuestar_al_cliente_para_saber_que_valora",
+        "score": 0.6671,
+        "titulo": "Encuestar al cliente para saber qué valora del servicio"
+      },
+      {
+        "id": "medir_satisfaccion_real_del_cliente",
+        "score": 0.6565,
+        "titulo": "Medir la satisfacción real del cliente, no la que crees dar"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decidir_cobro_velocidad_ventana_entrega",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "decidir_cobro_velocidad_ventana_entrega",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Detectar señales de un empaque poco rígido",
+    "destino": "detectar_empaque_poco_rigido",
+    "score": 0.7045,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "detectar_empaque_poco_rigido",
+        "score": 0.7045,
+        "titulo": "Detectar señales de un empaque poco rígido"
+      },
+      {
+        "id": "medir_paquete_redondeando_hacia_arriba",
+        "score": 0.383,
+        "titulo": "Medir el paquete redondeando hacia arriba"
+      },
+      {
+        "id": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+        "score": 0.3386,
+        "titulo": "Definir qué cuenta como daño antes de probar el empaque"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "probar_empaque_antes_de_escalar_envios",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "simular_riesgos_transito_antes_de_enviar",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "probar_empaque_antes_de_escalar_envios",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "simular_riesgos_transito_antes_de_enviar",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Diseñar el empaque para la logística, no solo para el producto",
+    "destino": "disenar_empaque_logistica",
+    "score": 0.8821,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "disenar_empaque_logistica",
+        "score": 0.8821,
+        "titulo": "Diseñar el empaque para la logística, no solo para el producto"
+      },
+      {
+        "id": "hacer_cajas_a_medida_del_pedido",
+        "score": 0.5965,
+        "titulo": "Hacer cajas a medida del pedido"
+      },
+      {
+        "id": "evitar_materiales_blandos_contenedor_final",
+        "score": 0.5794,
+        "titulo": "Evitar materiales blandos como contenedor final"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "ofrecer_puntos_recogida",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "revisar_necesidades_de_empaque",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "tratar_packaging_costo_marca",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "ofrecer_puntos_recogida",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "revisar_necesidades_de_empaque",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "tratar_packaging_costo_marca",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Elegir el material de relleno según el producto",
+    "destino": "elegir_material_de_relleno_segun_producto",
+    "score": 0.6908,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "elegir_material_de_relleno_segun_producto",
+        "score": 0.6908,
+        "titulo": "Elegir el material de relleno según el producto"
+      },
+      {
+        "id": "revisar_necesidades_de_empaque",
+        "score": 0.6684,
+        "titulo": "Revisar necesidades de empaque antes de comprar materiales"
+      },
+      {
+        "id": "tratar_packaging_costo_marca",
+        "score": 0.6167,
+        "titulo": "Tratar el packaging como variable de costo y de marca"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "adaptar_empaque_segun_tipo_de_articulo",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "aplicar_regla_fija_de_colchon_de_relleno",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "adaptar_empaque_segun_tipo_de_articulo",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "aplicar_regla_fija_de_colchon_de_relleno",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Elegir el modo de transporte según volumen y distancia",
+    "destino": "elegir_modo_transporte_volumen_distancia",
+    "score": 0.8343,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "elegir_modo_transporte_volumen_distancia",
+        "score": 0.8343,
+        "titulo": "Elegir el modo de transporte según volumen y distancia"
+      },
+      {
+        "id": "conocer_limites_peso_tamano_courier",
+        "score": 0.6217,
+        "titulo": "Conocer los límites de peso y tamaño del courier"
+      },
+      {
+        "id": "pagar_mas_por_velocidad",
+        "score": 0.5821,
+        "titulo": "Pagar más por velocidad cuando conviene"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "conocer_limites_peso_tamano_courier",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "conocer_limites_peso_tamano_courier",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Elegir la caja correcta para tu envio",
+    "destino": "elegir_caja_correcta",
+    "score": 0.6976,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "elegir_caja_correcta",
+        "score": 0.6976,
+        "titulo": "Cómo elegir la caja correcta para tu envío"
+      },
+      {
+        "id": "hacer_cajas_a_medida_del_pedido",
+        "score": 0.5963,
+        "titulo": "Hacer cajas a medida del pedido"
+      },
+      {
+        "id": "colocar_etiquetas_de_manejo_correctamente",
+        "score": 0.5757,
+        "titulo": "Colocar y usar etiquetas de manejo correctamente"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "colocar_etiquetas_de_manejo_correctamente",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "empacar_flores_plantas_sin_agua",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "evitar_materiales_blandos_contenedor_final",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "medir_paquete_redondeando_hacia_arriba",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "proteger_fragiles_caja_dentro_de_caja",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "colocar_etiquetas_de_manejo_correctamente",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "empacar_flores_plantas_sin_agua",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "evitar_materiales_blandos_contenedor_final",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "medir_paquete_redondeando_hacia_arriba",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "proteger_fragiles_caja_dentro_de_caja",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Elegir resistencia de caja según peso del contenido",
+    "destino": "elegir_resistencia_caja_peso",
+    "score": 0.8306,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "elegir_resistencia_caja_peso",
+        "score": 0.8306,
+        "titulo": "Elegir resistencia de caja según peso del contenido"
+      },
+      {
+        "id": "proteger_fragiles_caja_dentro_de_caja",
+        "score": 0.6633,
+        "titulo": "Proteger fragiles con el metodo caja dentro de caja"
+      },
+      {
+        "id": "elegir_sobre_o_caja_tamano",
+        "score": 0.6287,
+        "titulo": "Elegir sobre o caja según el tamaño final del paquete"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "clasificar_tipo_paquete",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "clasificar_tipo_paquete",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Encuestar al cliente para saber qué valora del servicio",
+    "destino": "encuestar_al_cliente_para_saber_que_valora",
+    "score": 0.7605,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "encuestar_al_cliente_para_saber_que_valora",
+        "score": 0.7605,
+        "titulo": "Encuestar al cliente para saber qué valora del servicio"
+      },
+      {
+        "id": "medir_satisfaccion_real_del_cliente",
+        "score": 0.7116,
+        "titulo": "Medir la satisfacción real del cliente, no la que crees dar"
+      },
+      {
+        "id": "segmentar_clientes_nivel_servicio",
+        "score": 0.6589,
+        "titulo": "Segmentar clientes por nivel de servicio que necesitan"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "medir_satisfaccion_real_del_cliente",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "medir_satisfaccion_real_del_cliente",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Evaluar el proceso completo, no cada métrica por separado",
+    "destino": "evaluar_proceso_completo_no_cada_metrica",
+    "score": 0.762,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "evaluar_proceso_completo_no_cada_metrica",
+        "score": 0.762,
+        "titulo": "Evaluar el proceso completo, no cada métrica por separado"
+      },
+      {
+        "id": "descomponer_tiempo_ciclo_pedido",
+        "score": 0.4528,
+        "titulo": "Descomponer el tiempo de ciclo del pedido"
+      },
+      {
+        "id": "medir_paquete_redondeando_hacia_arriba",
+        "score": 0.397,
+        "titulo": "Medir el paquete redondeando hacia arriba"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "definir_tu_propio_pedido_perfecto",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "definir_tu_propio_pedido_perfecto",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "La regla de los 5 cm de colchon",
+    "destino": "aplicar_regla_fija_de_colchon_de_relleno",
+    "score": 0.4791,
+    "banda": "poda",
+    "veredicto": "poda_definitiva",
+    "candidatos": [
+      {
+        "id": "aplicar_regla_fija_de_colchon_de_relleno",
+        "score": 0.4791,
+        "titulo": "Aplicar una regla fija de colchón de relleno"
+      },
+      {
+        "id": "medir_paquete_redondeando_hacia_arriba",
+        "score": 0.4717,
+        "titulo": "Medir el paquete redondeando hacia arriba"
+      },
+      {
+        "id": "conocer_limites_peso_tamano_courier",
+        "score": 0.42,
+        "titulo": "Conocer los límites de peso y tamaño del courier"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "proteger_fragiles_caja_dentro_de_caja",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Los diez derechos del servicio al cliente",
+    "destino": "diez_derechos_servicio_cliente",
+    "score": 0.7955,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "diez_derechos_servicio_cliente",
+        "score": 0.7955,
+        "titulo": "Los diez derechos del servicio al cliente"
+      },
+      {
+        "id": "segmentar_clientes_nivel_servicio",
+        "score": 0.5013,
+        "titulo": "Segmentar clientes por nivel de servicio que necesitan"
+      },
+      {
+        "id": "encuestar_al_cliente_para_saber_que_valora",
+        "score": 0.4927,
+        "titulo": "Encuestar al cliente para saber qué valora del servicio"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "definir_tu_propio_pedido_perfecto",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "definir_tu_propio_pedido_perfecto",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Mapear el servicio antes, durante y después de la entrega",
+    "destino": "mapear_servicio_antes_durante_despues",
+    "score": 0.7904,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "mapear_servicio_antes_durante_despues",
+        "score": 0.7904,
+        "titulo": "Mapear el servicio antes, durante y después de la entrega"
+      },
+      {
+        "id": "descomponer_tiempo_ciclo_pedido",
+        "score": 0.4437,
+        "titulo": "Descomponer el tiempo de ciclo del pedido"
+      },
+      {
+        "id": "diez_derechos_servicio_cliente",
+        "score": 0.4373,
+        "titulo": "Los diez derechos del servicio al cliente"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "segmentar_clientes_nivel_servicio",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "segmentar_clientes_nivel_servicio",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Medir la satisfacción real del cliente, no la que crees dar",
+    "destino": "medir_satisfaccion_real_del_cliente",
+    "score": 0.8532,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "medir_satisfaccion_real_del_cliente",
+        "score": 0.8532,
+        "titulo": "Medir la satisfacción real del cliente, no la que crees dar"
+      },
+      {
+        "id": "encuestar_al_cliente_para_saber_que_valora",
+        "score": 0.6874,
+        "titulo": "Encuestar al cliente para saber qué valora del servicio"
+      },
+      {
+        "id": "segmentar_clientes_nivel_servicio",
+        "score": 0.6597,
+        "titulo": "Segmentar clientes por nivel de servicio que necesitan"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "encuestar_al_cliente_para_saber_que_valora",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "encuestar_al_cliente_para_saber_que_valora",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Ofrecer puntos de recogida en vez de entrega a domicilio",
+    "destino": "ofrecer_puntos_recogida",
+    "score": 0.677,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "ofrecer_puntos_recogida",
+        "score": 0.677,
+        "titulo": "Ofrecer puntos de recogida en vez de entrega a domicilio"
+      },
+      {
+        "id": "mapear_servicio_antes_durante_despues",
+        "score": 0.4543,
+        "titulo": "Mapear el servicio antes, durante y después de la entrega"
+      },
+      {
+        "id": "etiqueta_duplicada_dentro_del_paquete",
+        "score": 0.4,
+        "titulo": "Poner una etiqueta duplicada dentro del paquete"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "decidir_cobro_velocidad_ventana_entrega",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "detectar_prioridad_cliente_entrega",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "segmentar_clientes_nivel_servicio",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "decidir_cobro_velocidad_ventana_entrega",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "detectar_prioridad_cliente_entrega",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "segmentar_clientes_nivel_servicio",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Poner una etiqueta duplicada dentro del paquete",
+    "destino": "etiqueta_duplicada_dentro_del_paquete",
+    "score": 0.7083,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "etiqueta_duplicada_dentro_del_paquete",
+        "score": 0.7083,
+        "titulo": "Poner una etiqueta duplicada dentro del paquete"
+      },
+      {
+        "id": "colocar_etiquetas_de_manejo_correctamente",
+        "score": 0.4824,
+        "titulo": "Colocar y usar etiquetas de manejo correctamente"
+      },
+      {
+        "id": "aplicar_regla_fija_de_colchon_de_relleno",
+        "score": 0.256,
+        "titulo": "Aplicar una regla fija de colchón de relleno"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "colocar_etiquetas_de_manejo_correctamente",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "colocar_etiquetas_de_manejo_correctamente",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Prueba tu empaque antes de escalar envios",
+    "destino": "probar_empaque_antes_de_escalar_envios",
+    "score": 0.6589,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "probar_empaque_antes_de_escalar_envios",
+        "score": 0.6589,
+        "titulo": "Prueba tu empaque antes de escalar envios"
+      },
+      {
+        "id": "elegir_sobre_o_caja_tamano",
+        "score": 0.4527,
+        "titulo": "Elegir sobre o caja según el tamaño final del paquete"
+      },
+      {
+        "id": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+        "score": 0.4448,
+        "titulo": "Definir qué cuenta como daño antes de probar el empaque"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "detectar_empaque_poco_rigido",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "simular_riesgos_transito_antes_de_enviar",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "detectar_empaque_poco_rigido",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "simular_riesgos_transito_antes_de_enviar",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Reconocer productos que en realidad son mercancía peligrosa",
+    "destino": "reconocer_mercancia_peligrosa_disfrazada",
+    "score": 0.8436,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "reconocer_mercancia_peligrosa_disfrazada",
+        "score": 0.8436,
+        "titulo": "Reconocer productos que en realidad son mercancía peligrosa"
+      },
+      {
+        "id": "identificar_si_tu_producto_necesita_proteccion_especial",
+        "score": 0.6282,
+        "titulo": "Identificar si tu producto necesita protección especial"
+      },
+      {
+        "id": "proteger_fragiles_caja_dentro_de_caja",
+        "score": 0.4927,
+        "titulo": "Proteger fragiles con el metodo caja dentro de caja"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "identificar_si_tu_producto_necesita_proteccion_especial",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "identificar_si_tu_producto_necesita_proteccion_especial",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Revisar necesidades de empaque antes de comprar materiales",
+    "destino": "revisar_necesidades_de_empaque",
+    "score": 0.8385,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "revisar_necesidades_de_empaque",
+        "score": 0.8385,
+        "titulo": "Revisar necesidades de empaque antes de comprar materiales"
+      },
+      {
+        "id": "evitar_materiales_blandos_contenedor_final",
+        "score": 0.6272,
+        "titulo": "Evitar materiales blandos como contenedor final"
+      },
+      {
+        "id": "tratar_packaging_costo_marca",
+        "score": 0.5771,
+        "titulo": "Tratar el packaging como variable de costo y de marca"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "conocer_limites_peso_tamano_courier",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "conocer_limites_peso_tamano_courier",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Segmentar clientes por nivel de servicio que necesitan",
+    "destino": "segmentar_clientes_nivel_servicio",
+    "score": 0.7127,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "segmentar_clientes_nivel_servicio",
+        "score": 0.7127,
+        "titulo": "Segmentar clientes por nivel de servicio que necesitan"
+      },
+      {
+        "id": "diez_derechos_servicio_cliente",
+        "score": 0.603,
+        "titulo": "Los diez derechos del servicio al cliente"
+      },
+      {
+        "id": "encuestar_al_cliente_para_saber_que_valora",
+        "score": 0.5797,
+        "titulo": "Encuestar al cliente para saber qué valora del servicio"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "mapear_servicio_antes_durante_despues",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "ofrecer_puntos_recogida",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "mapear_servicio_antes_durante_despues",
+        "campo": "nodos_previos"
+      },
+      {
+        "en": "ofrecer_puntos_recogida",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Sellar cajas con el metodo de cinta en H",
+    "destino": "sellar_cajas_metodo_cinta_en_h",
+    "score": 0.8398,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "sellar_cajas_metodo_cinta_en_h",
+        "score": 0.8398,
+        "titulo": "Sellar cajas con el método de cinta en H"
+      },
+      {
+        "id": "hacer_cajas_a_medida_del_pedido",
+        "score": 0.6145,
+        "titulo": "Hacer cajas a medida del pedido"
+      },
+      {
+        "id": "elegir_caja_correcta",
+        "score": 0.5847,
+        "titulo": "Cómo elegir la caja correcta para tu envío"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "empacar_flores_plantas_sin_agua",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "etiqueta_duplicada_dentro_del_paquete",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evitar_materiales_blandos_contenedor_final",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "proteger_fragiles_caja_dentro_de_caja",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "empacar_flores_plantas_sin_agua",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "etiqueta_duplicada_dentro_del_paquete",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "evitar_materiales_blandos_contenedor_final",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "proteger_fragiles_caja_dentro_de_caja",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Sellar cajas con el método de cinta en H",
+    "destino": "sellar_cajas_metodo_cinta_en_h",
+    "score": 0.8341,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "sellar_cajas_metodo_cinta_en_h",
+        "score": 0.8341,
+        "titulo": "Sellar cajas con el método de cinta en H"
+      },
+      {
+        "id": "hacer_cajas_a_medida_del_pedido",
+        "score": 0.5981,
+        "titulo": "Hacer cajas a medida del pedido"
+      },
+      {
+        "id": "elegir_caja_correcta",
+        "score": 0.5735,
+        "titulo": "Cómo elegir la caja correcta para tu envío"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "adaptar_empaque_segun_tipo_de_articulo",
+        "campo": "nodos_siguientes"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "adaptar_empaque_segun_tipo_de_articulo",
+        "campo": "nodos_siguientes"
+      }
+    ]
+  },
+  {
+    "fantasma": "Simular los riesgos del tránsito antes de enviar",
+    "destino": "simular_riesgos_transito_antes_de_enviar",
+    "score": 0.6613,
+    "banda": "revision",
+    "veredicto": "aprobado_revision",
+    "candidatos": [
+      {
+        "id": "simular_riesgos_transito_antes_de_enviar",
+        "score": 0.6613,
+        "titulo": "Simular los riesgos del tránsito antes de enviar"
+      },
+      {
+        "id": "elegir_modo_transporte_volumen_distancia",
+        "score": 0.5401,
+        "titulo": "Elegir el modo de transporte según volumen y distancia"
+      },
+      {
+        "id": "ofrecer_puntos_recogida",
+        "score": 0.5068,
+        "titulo": "Ofrecer puntos de recogida en vez de entrega a domicilio"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "detectar_empaque_poco_rigido",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "probar_empaque_antes_de_escalar_envios",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "detectar_empaque_poco_rigido",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "probar_empaque_antes_de_escalar_envios",
+        "campo": "nodos_previos"
+      }
+    ]
+  },
+  {
+    "fantasma": "Tratar el packaging como variable de costo y de marca",
+    "destino": "tratar_packaging_costo_marca",
+    "score": 0.79,
+    "banda": "auto",
+    "veredicto": "aprobado_auto",
+    "candidatos": [
+      {
+        "id": "tratar_packaging_costo_marca",
+        "score": 0.79,
+        "titulo": "Tratar el packaging como variable de costo y de marca"
+      },
+      {
+        "id": "elegir_material_de_relleno_segun_producto",
+        "score": 0.5465,
+        "titulo": "Elegir el material de relleno según el producto"
+      },
+      {
+        "id": "disenar_empaque_logistica",
+        "score": 0.5461,
+        "titulo": "Diseñar el empaque para la logística, no solo para el producto"
+      }
+    ],
+    "referenciado_desde": [
+      {
+        "en": "disenar_empaque_logistica",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "elegir_caja_correcta",
+        "campo": "nodos_previos"
+      }
+    ],
+    "aplicado_en": [
+      {
+        "en": "disenar_empaque_logistica",
+        "campo": "nodos_siguientes"
+      },
+      {
+        "en": "elegir_caja_correcta",
+        "campo": "nodos_previos"
+      }
+    ]
+  }
+]

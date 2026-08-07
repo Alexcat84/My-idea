@@ -1,0 +1,28 @@
+{
+  "node_id": "clasifica_tu_inventario",
+  "fase_proyecto": "planificacion",
+  "dominio": "compras",
+  "titulo_concepto": "Clasifica tu inventario y define qué meta persigues",
+  "fuente": "Max Muller, Essentials of Inventory Management, capitulo 1",
+  "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercaderia lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operacion diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorias sin distincion hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes segun su funcion real y define una meta concreta para ti mismo: cuantos dias de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decision de compra es a ciegas.",
+  "pasos_accionables": [
+    "Separa lo que tienes en bodega segun su funcion: para vender, para producir, para reponer piezas o consumibles de operacion.",
+    "Identifica cuanto de ese stock es reserva de seguridad y cuanto es exceso sin proposito claro.",
+    "Decide una meta concreta: dias de stock, numero de rotaciones al ano, o nivel de disponibilidad para tus clientes.",
+    "Revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta."
+  ],
+  "entregable_esperado": "Una lista de tu inventario dividido por tipo, con una meta numerica escrita para cada categoria relevante.",
+  "nodos_previos": [
+    "prepara_posicion_agenda_antes_negociar",
+    "gestion_inventario"
+  ],
+  "nodos_siguientes": [
+    "conoce_insumos_vitales"
+  ],
+  "condiciones_activacion": [
+    "Tienes bodega o estante lleno y no sabes cuanto de eso es realmente necesario.",
+    "Compras sin saber si estas por encima o por debajo de lo que tu negocio necesita.",
+    "Quieres liberar capital atrapado en mercaderia sin arriesgarte a quedarte sin stock."
+  ],
+  "etiqueta_arbol": "Clasifica tu inventario y su meta"
+}

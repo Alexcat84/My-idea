@@ -1,0 +1,385 @@
+{
+  "reparadas": [
+    {
+      "en": "aplicar_regla_fija_de_colchon_de_relleno",
+      "campo": "nodos_previos",
+      "de": "Hacer cajas a medida del pedido",
+      "a": "hacer_cajas_a_medida_del_pedido"
+    },
+    {
+      "en": "decidir_empacar_tu_mismo_o_subcontratar",
+      "campo": "nodos_previos",
+      "de": "Vender sin stock con drop-shipping",
+      "a": "vender_sin_stock_con_drop_shipping"
+    },
+    {
+      "en": "decidir_empacar_tu_mismo_o_subcontratar",
+      "campo": "nodos_siguientes",
+      "de": "Identificar si tu producto necesita protección especial",
+      "a": "identificar_si_tu_producto_necesita_proteccion_especial"
+    },
+    {
+      "en": "decidir_vender_solo_online_o_tambien_tienda_fisica",
+      "campo": "nodos_siguientes",
+      "de": "Vender sin stock con drop-shipping",
+      "a": "vender_sin_stock_con_drop_shipping"
+    },
+    {
+      "en": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+      "campo": "nodos_previos",
+      "de": "Identificar si tu producto necesita protección especial",
+      "a": "identificar_si_tu_producto_necesita_proteccion_especial"
+    },
+    {
+      "en": "diez_derechos_servicio_cliente",
+      "campo": "nodos_siguientes",
+      "de": "Definir tu propio 'pedido perfecto'",
+      "a": "definir_tu_propio_pedido_perfecto"
+    },
+    {
+      "en": "elegir_resistencia_caja_peso",
+      "campo": "nodos_siguientes",
+      "de": "Hacer cajas a medida del pedido",
+      "a": "hacer_cajas_a_medida_del_pedido"
+    },
+    {
+      "en": "evaluar_proceso_completo_no_cada_metrica",
+      "campo": "nodos_previos",
+      "de": "Definir tu propio 'pedido perfecto'",
+      "a": "definir_tu_propio_pedido_perfecto"
+    },
+    {
+      "en": "reconocer_mercancia_peligrosa_disfrazada",
+      "campo": "nodos_previos",
+      "de": "Identificar si tu producto necesita protección especial",
+      "a": "identificar_si_tu_producto_necesita_proteccion_especial"
+    }
+  ],
+  "podadas": [
+    {
+      "en": "acolchado_segun_forma",
+      "campo": "nodos_previos",
+      "ref": "Cómo elegir la caja correcta para tu envío"
+    },
+    {
+      "en": "adaptar_empaque_segun_tipo_de_articulo",
+      "campo": "nodos_previos",
+      "ref": "Elegir el material de relleno según el producto"
+    },
+    {
+      "en": "adaptar_empaque_segun_tipo_de_articulo",
+      "campo": "nodos_siguientes",
+      "ref": "Sellar cajas con el método de cinta en H"
+    },
+    {
+      "en": "aplicar_regla_fija_de_colchon_de_relleno",
+      "campo": "nodos_siguientes",
+      "ref": "Elegir el material de relleno según el producto"
+    },
+    {
+      "en": "calcular_peso_dimensional_antes_cotizar",
+      "campo": "nodos_previos",
+      "ref": "Decidir cuánto cobrar por velocidad y ventana de entrega"
+    },
+    {
+      "en": "clasificar_tipo_paquete",
+      "campo": "nodos_siguientes",
+      "ref": "Elegir resistencia de caja según peso del contenido"
+    },
+    {
+      "en": "clasificar_tipo_paquete",
+      "campo": "nodos_siguientes",
+      "ref": "Adaptar el empaque según el tipo de artículo"
+    },
+    {
+      "en": "colocar_etiquetas_de_manejo_correctamente",
+      "campo": "nodos_previos",
+      "ref": "Elegir la caja correcta para tu envio"
+    },
+    {
+      "en": "colocar_etiquetas_de_manejo_correctamente",
+      "campo": "nodos_siguientes",
+      "ref": "Poner una etiqueta duplicada dentro del paquete"
+    },
+    {
+      "en": "conocer_limites_peso_tamano_courier",
+      "campo": "nodos_previos",
+      "ref": "Revisar necesidades de empaque antes de comprar materiales"
+    },
+    {
+      "en": "conocer_limites_peso_tamano_courier",
+      "campo": "nodos_siguientes",
+      "ref": "Elegir el modo de transporte según volumen y distancia"
+    },
+    {
+      "en": "decidir_cobro_velocidad_ventana_entrega",
+      "campo": "nodos_previos",
+      "ref": "Ofrecer puntos de recogida en vez de entrega a domicilio"
+    },
+    {
+      "en": "decidir_cobro_velocidad_ventana_entrega",
+      "campo": "nodos_previos",
+      "ref": "Detectar lo que el cliente realmente prioriza en la entrega"
+    },
+    {
+      "en": "decidir_cobro_velocidad_ventana_entrega",
+      "campo": "nodos_siguientes",
+      "ref": "Calcular el peso dimensional antes de cotizar"
+    },
+    {
+      "en": "definir_tu_propio_pedido_perfecto",
+      "campo": "nodos_previos",
+      "ref": "Los diez derechos del servicio al cliente"
+    },
+    {
+      "en": "definir_tu_propio_pedido_perfecto",
+      "campo": "nodos_siguientes",
+      "ref": "Evaluar el proceso completo, no cada métrica por separado"
+    },
+    {
+      "en": "detectar_empaque_poco_rigido",
+      "campo": "nodos_siguientes",
+      "ref": "Simular los riesgos del tránsito antes de enviar"
+    },
+    {
+      "en": "detectar_empaque_poco_rigido",
+      "campo": "nodos_siguientes",
+      "ref": "Prueba tu empaque antes de escalar envios"
+    },
+    {
+      "en": "detectar_prioridad_cliente_entrega",
+      "campo": "nodos_siguientes",
+      "ref": "Decidir cuánto cobrar por velocidad y ventana de entrega"
+    },
+    {
+      "en": "detectar_prioridad_cliente_entrega",
+      "campo": "nodos_siguientes",
+      "ref": "Ofrecer puntos de recogida en vez de entrega a domicilio"
+    },
+    {
+      "en": "disenar_empaque_logistica",
+      "campo": "nodos_siguientes",
+      "ref": "Tratar el packaging como variable de costo y de marca"
+    },
+    {
+      "en": "disenar_empaque_logistica",
+      "campo": "nodos_siguientes",
+      "ref": "Cómo elegir la caja correcta para tu envío"
+    },
+    {
+      "en": "elegir_caja_correcta",
+      "campo": "nodos_previos",
+      "ref": "Tratar el packaging como variable de costo y de marca"
+    },
+    {
+      "en": "elegir_caja_correcta",
+      "campo": "nodos_siguientes",
+      "ref": "Acolchado según la forma de la pieza"
+    },
+    {
+      "en": "elegir_material_de_relleno_segun_producto",
+      "campo": "nodos_previos",
+      "ref": "Aplicar una regla fija de colchón de relleno"
+    },
+    {
+      "en": "elegir_material_de_relleno_segun_producto",
+      "campo": "nodos_siguientes",
+      "ref": "Adaptar el empaque según el tipo de artículo"
+    },
+    {
+      "en": "elegir_modo_transporte_volumen_distancia",
+      "campo": "nodos_previos",
+      "ref": "Conocer los límites de peso y tamaño del courier"
+    },
+    {
+      "en": "elegir_resistencia_caja_peso",
+      "campo": "nodos_previos",
+      "ref": "Clasificar el tipo de paquete antes de despachar"
+    },
+    {
+      "en": "elegir_sobre_o_caja_tamano",
+      "campo": "nodos_previos",
+      "ref": "Clasificar el tipo de paquete antes de despachar"
+    },
+    {
+      "en": "empacar_flores_plantas_sin_agua",
+      "campo": "nodos_previos",
+      "ref": "Elegir la caja correcta para tu envio"
+    },
+    {
+      "en": "empacar_flores_plantas_sin_agua",
+      "campo": "nodos_siguientes",
+      "ref": "Sellar cajas con el metodo de cinta en H"
+    },
+    {
+      "en": "empacar_flores_plantas_sin_agua",
+      "campo": "nodos_siguientes",
+      "ref": "Colocar y usar etiquetas de manejo correctamente"
+    },
+    {
+      "en": "empacar_liquidos_doble_barrera",
+      "campo": "nodos_previos",
+      "ref": "Clasificar el tipo de paquete antes de despachar"
+    },
+    {
+      "en": "encuestar_al_cliente_para_saber_que_valora",
+      "campo": "nodos_previos",
+      "ref": "Decidir si vendes solo online o también en tienda física"
+    },
+    {
+      "en": "encuestar_al_cliente_para_saber_que_valora",
+      "campo": "nodos_siguientes",
+      "ref": "Medir la satisfacción real del cliente, no la que crees dar"
+    },
+    {
+      "en": "etiqueta_duplicada_dentro_del_paquete",
+      "campo": "nodos_previos",
+      "ref": "Colocar y usar etiquetas de manejo correctamente"
+    },
+    {
+      "en": "etiqueta_duplicada_dentro_del_paquete",
+      "campo": "nodos_siguientes",
+      "ref": "Sellar cajas con el metodo de cinta en H"
+    },
+    {
+      "en": "evitar_materiales_blandos_contenedor_final",
+      "campo": "nodos_previos",
+      "ref": "Elegir la caja correcta para tu envio"
+    },
+    {
+      "en": "evitar_materiales_blandos_contenedor_final",
+      "campo": "nodos_siguientes",
+      "ref": "Sellar cajas con el metodo de cinta en H"
+    },
+    {
+      "en": "hacer_cajas_a_medida_del_pedido",
+      "campo": "nodos_siguientes",
+      "ref": "Aplicar una regla fija de colchón de relleno"
+    },
+    {
+      "en": "identificar_si_tu_producto_necesita_proteccion_especial",
+      "campo": "nodos_siguientes",
+      "ref": "Definir qué cuenta como daño antes de probar el empaque"
+    },
+    {
+      "en": "identificar_si_tu_producto_necesita_proteccion_especial",
+      "campo": "nodos_siguientes",
+      "ref": "Reconocer productos que en realidad son mercancía peligrosa"
+    },
+    {
+      "en": "mapear_servicio_antes_durante_despues",
+      "campo": "nodos_previos",
+      "ref": "Segmentar clientes por nivel de servicio que necesitan"
+    },
+    {
+      "en": "medir_paquete_redondeando_hacia_arriba",
+      "campo": "nodos_siguientes",
+      "ref": "Elegir la caja correcta para tu envio"
+    },
+    {
+      "en": "medir_satisfaccion_real_del_cliente",
+      "campo": "nodos_previos",
+      "ref": "Encuestar al cliente para saber qué valora del servicio"
+    },
+    {
+      "en": "ofrecer_puntos_recogida",
+      "campo": "nodos_previos",
+      "ref": "Diseñar el empaque para la logística, no solo para el producto"
+    },
+    {
+      "en": "ofrecer_puntos_recogida",
+      "campo": "nodos_siguientes",
+      "ref": "Segmentar clientes por nivel de servicio que necesitan"
+    },
+    {
+      "en": "probar_empaque_antes_de_escalar_envios",
+      "campo": "nodos_previos",
+      "ref": "Detectar señales de un empaque poco rígido"
+    },
+    {
+      "en": "probar_empaque_antes_de_escalar_envios",
+      "campo": "nodos_previos",
+      "ref": "Simular los riesgos del tránsito antes de enviar"
+    },
+    {
+      "en": "probar_empaque_antes_de_escalar_envios",
+      "campo": "nodos_siguientes",
+      "ref": "Calcular el peso dimensional antes de cotizar"
+    },
+    {
+      "en": "proteger_fragiles_caja_dentro_de_caja",
+      "campo": "nodos_previos",
+      "ref": "Elegir la caja correcta para tu envio"
+    },
+    {
+      "en": "proteger_fragiles_caja_dentro_de_caja",
+      "campo": "nodos_previos",
+      "ref": "La regla de los 5 cm de colchon"
+    },
+    {
+      "en": "proteger_fragiles_caja_dentro_de_caja",
+      "campo": "nodos_siguientes",
+      "ref": "Sellar cajas con el metodo de cinta en H"
+    },
+    {
+      "en": "revisar_necesidades_de_empaque",
+      "campo": "nodos_previos",
+      "ref": "Diseñar el empaque para la logística, no solo para el producto"
+    },
+    {
+      "en": "revisar_necesidades_de_empaque",
+      "campo": "nodos_siguientes",
+      "ref": "Conocer los límites de peso y tamaño del courier"
+    },
+    {
+      "en": "saber_hasta_donde_mejorar_servicio",
+      "campo": "nodos_siguientes",
+      "ref": "Decidir cuánto cobrar por velocidad y ventana de entrega"
+    },
+    {
+      "en": "segmentar_clientes_nivel_servicio",
+      "campo": "nodos_previos",
+      "ref": "Ofrecer puntos de recogida en vez de entrega a domicilio"
+    },
+    {
+      "en": "segmentar_clientes_nivel_servicio",
+      "campo": "nodos_siguientes",
+      "ref": "Mapear el servicio antes, durante y después de la entrega"
+    },
+    {
+      "en": "sellar_cajas_metodo_cinta_en_h",
+      "campo": "nodos_previos",
+      "ref": "Adaptar el empaque según el tipo de artículo"
+    },
+    {
+      "en": "simular_riesgos_transito_antes_de_enviar",
+      "campo": "nodos_previos",
+      "ref": "Detectar señales de un empaque poco rígido"
+    },
+    {
+      "en": "simular_riesgos_transito_antes_de_enviar",
+      "campo": "nodos_siguientes",
+      "ref": "Prueba tu empaque antes de escalar envios"
+    },
+    {
+      "en": "tratar_packaging_costo_marca",
+      "campo": "nodos_previos",
+      "ref": "Diseñar el empaque para la logística, no solo para el producto"
+    },
+    {
+      "en": "tratar_packaging_costo_marca",
+      "campo": "nodos_siguientes",
+      "ref": "Cómo elegir la caja correcta para tu envío"
+    },
+    {
+      "en": "vender_sin_stock_con_drop_shipping",
+      "campo": "nodos_previos",
+      "ref": "Decidir si vendes solo online o también en tienda física"
+    },
+    {
+      "en": "vender_sin_stock_con_drop_shipping",
+      "campo": "nodos_siguientes",
+      "ref": "Decidir si empacas tú mismo o subcontratas el envío"
+    }
+  ]
+}

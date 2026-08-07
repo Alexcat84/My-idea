@@ -11,9 +11,9 @@ import {
 } from "./graph";
 
 describe("cargarGrafo / cargarEntrySeeds / cargarPreguntasCache", () => {
-  it("carga los 3742 nodos reales (1721 core + 1539 HSEQ + 427 mundos v1.3.2 + 55 risk_management)", () => {
+  it("carga los 3835 nodos reales (3742 + 46 compras + 47 entrega)", () => {
     const graph = cargarGrafo();
-    expect(Object.keys(graph).length).toBe(3742);
+    expect(Object.keys(graph).length).toBe(3835);
   });
 
   it("carga las 20 puertas de entrada", () => {

@@ -10,7 +10,8 @@
  *  3. Usa tus créditos: lo gratis primero, luego los tres planes (Tu proyecto,
  *     Un mundo, y el catálogo de mundos por desbloquear).
  *
- * Números SIEMPRE de precios.ts / packs_catalog.json, jamás hardcodeados. La
+ * Números SIEMPRE de precios.ts, jamás hardcodeados ni copiados al catálogo
+ * (que los llevaba y envejecieron diciendo 3 cuando se cobraban 5). La
  * compra con dinero sigue dormida hasta que despierten las pasarelas: el botón
  * lo dice honesto ("La compra se abre pronto"), no finge cobrar.
  *
@@ -18,7 +19,7 @@
  * fundador la va a recalibrar con opciones más visuales. Todo lo demás es canon.
  */
 import Link from "next/link";
-import catalogo from "@/lib/assets/packs_catalog.json";
+import { mundosVisibles } from "@/lib/catalogoMundos";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { PACKS, PRECIOS } from "@/lib/precios";
 import { createClient } from "@/lib/supabase/server";
@@ -288,7 +289,7 @@ export default async function Creditos() {
               </span>
 
               <div className="flex flex-col gap-3.5">
-                {catalogo.packs.map((mundo) => (
+                {mundosVisibles().map((mundo) => (
                   <div key={mundo.clave} className="flex flex-col gap-0.5">
                     <span className="text-[13.5px] font-bold text-ink">{mundo.nombre}</span>
                     <span className="text-[12.5px] leading-snug text-dim [text-wrap:pretty]">{mundo.promesa}</span>

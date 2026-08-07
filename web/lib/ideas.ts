@@ -8,6 +8,7 @@
  * "continúa donde quedaste"); luego seguimiento > con plan > organizada.
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { nombreDeMundo } from "./catalogoMundos";
 import { listarProyectos } from "./db";
 import { fechaSello } from "./fechas";
 
@@ -44,16 +45,9 @@ export function nombreDeIdea(titulo: string | null, entradaOriginal: string): st
   return palabras.length < entradaOriginal.trim().length ? `${palabras}…` : palabras;
 }
 
-/** Nombre canon de cada mundo para los chips (espejo de packs_catalog). */
-const NOMBRE_MUNDO: Record<string, string> = {
-  quality: "Calidad y Confianza",
-  health_safety: "Seguridad y Personas",
-  environmental: "Ambiente y Futuro",
-  seguridad_digital: "Seguridad Digital",
-  exportacion: "Vender al Mundo",
-  franquicias: "Multiplica tu Negocio",
-  risk_management: "Riesgos Bajo Control",
-};
+// El "espejo de packs_catalog" que vivia aqui era una COPIA de los nombres, y
+// una copia se separa: bastaba un mundo nuevo para que esta pantalla lo llamara
+// por su clave mientras las demas lo nombraban. Ahora se lee de la fuente.
 
 export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Cinta[]> {
   const proyectos = await listarProyectos(supabase);
@@ -142,7 +136,7 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
       chips.push({ texto: `Manos a la Obra · ${core.hechos}/${core.total}`, tono: "verde" });
       for (const [dominio, r] of porDominio) {
         if (dominio === "core") continue;
-        chips.push({ texto: `${NOMBRE_MUNDO[dominio] ?? dominio} · ${r.hechos}/${r.total}`, tono: "verde" });
+        chips.push({ texto: `${nombreDeMundo(dominio)} · ${r.hechos}/${r.total}`, tono: "verde" });
       }
     } else if (pensando) {
       chips.push({ texto: "En exploración", tono: "azul" });

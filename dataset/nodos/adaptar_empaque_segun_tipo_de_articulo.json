@@ -1,0 +1,28 @@
+{
+  "node_id": "adaptar_empaque_segun_tipo_de_articulo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Adaptar el empaque según el tipo de artículo",
+  "fuente": "Guia visual de empaque",
+  "resumen_teorico": "Cada categoría de producto tiene un punto débil distinto durante el transporte, y el empaque genérico no lo resuelve. Los líquidos necesitan un envase sellado dentro de una bolsa plástica adicional para contener fugas. Los artículos pesados requieren cajas de doble pared y cinta reforzada, revisando que no superen el límite de peso de la caja. Los objetos irregulares, como tubos o piezas con bordes filosos, se protegen con tubos rígidos o cubriendo cada borde con cartón. Los artículos frágiles se benefician del método de caja dentro de caja, con una caja exterior más grande y colchón entre ambas. Reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento, reduce las devoluciones por daño.",
+  "pasos_accionables": [
+    "Clasifica cada producto que vendes en una de estas categorías: líquido, pesado, frágil o de forma irregular.",
+    "Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+    "Para piezas pesadas, usa caja de doble pared y confirma que no exceda el límite de peso impreso en la caja.",
+    "Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+    "Documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas."
+  ],
+  "entregable_esperado": "Una guía breve por categoría de producto con el método de empaque que le corresponde.",
+  "nodos_previos": [
+    "elegir_material_de_relleno_segun_producto"
+  ],
+  "nodos_siguientes": [
+    "sellar_cajas_metodo_cinta_en_h"
+  ],
+  "condiciones_activacion": [
+    "Vendes productos de distinto tipo (líquidos, frágiles, pesados) y empacas todos igual.",
+    "Has recibido reclamos por fugas o roturas en categorías específicas de tu catálogo.",
+    "No sabes si tu caja actual soporta el peso del producto que estás enviando."
+  ],
+  "etiqueta_arbol": "Adapta el empaque a cada artículo"
+}

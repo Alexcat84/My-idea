@@ -50,9 +50,15 @@ REF_KEYS = ("nodos_previos", "nodos_siguientes")
 # scripts/integrar_packs.py viven en el mismo dataset con su dominio propio.
 # Fase v1.3.2: tres mundos nuevos (seguridad_digital, exportacion, franquicias).
 # Fase v1.4: septimo pack risk_management.
+# Extraccion 2026-08-07: octavo y noveno, compras y entrega. Esta lista es la
+# que hace fallar el Gate cuando alguien integra un pack y se olvida de
+# registrarlo aqui: el grafo sale perfecto y el Gate dice FALLIDO sin mas
+# pista que "dominio invalido". Es intencional: mejor un Gate rojo que un
+# dominio fantasma paseandose por el dataset.
 DOMINIOS_PERMITIDOS = {
     "core", "quality", "health_safety", "environmental",
     "seguridad_digital", "exportacion", "franquicias", "risk_management",
+    "compras", "entrega",
 }
 
 # Mapa de fusion de duplicados, tal como quedo definido en

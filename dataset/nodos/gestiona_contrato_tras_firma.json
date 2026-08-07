@@ -1,0 +1,30 @@
+{
+  "node_id": "gestiona_contrato_tras_firma",
+  "fase_proyecto": "ejecucion",
+  "dominio": "compras",
+  "titulo_concepto": "Gestiona el contrato después de firmarlo, no lo archives",
+  "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+  "resumen_teorico": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Muchos emprendedores guardan el contrato en una carpeta y no vuelven a mirarlo hasta que algo falla. Para evitarlo, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+  "pasos_accionables": [
+    "Anota en tu calendario la fecha de vencimiento del contrato y una alerta unos meses antes.",
+    "Revisa cada factura del proveedor contra lo que realmente se pactó antes de pagarla.",
+    "Habla cada uno o dos meses con tu contacto en el proveedor para saber cómo va el servicio.",
+    "Decide con anticipación si vas a renovar, renegociar o cambiar de proveedor cuando se acerque el vencimiento.",
+    "Guarda una copia del contrato firmado en un lugar donde puedas encontrarla en minutos."
+  ],
+  "entregable_esperado": "Un calendario de vencimientos y una rutina de revisión de facturas y desempeño del proveedor.",
+  "nodos_previos": [
+    "decide_criterio_eleccion_proveedor",
+    "punto_unico_contacto_proveedores"
+  ],
+  "nodos_siguientes": [
+    "registro_lecciones_aprendidas_compra",
+    "autoacusacion_antes_mala_noticia"
+  ],
+  "condiciones_activacion": [
+    "Acabas de firmar un contrato con un proveedor y no tienes un sistema para recordar sus fechas clave.",
+    "Te has dado cuenta de que un contrato se venció sin que lo notaras.",
+    "Pagas facturas de un proveedor sin comparar si coinciden con lo pactado."
+  ],
+  "etiqueta_arbol": "Administra el contrato ya firmado"
+}
