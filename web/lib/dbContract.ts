@@ -34,7 +34,11 @@ export type ModoRuta = (typeof MODO_RUTA)[number];
  * claves de dominio de los mundos -- las mismas de packs/<clave>/ y del campo
  * `dominio` de sus nodos, y las que emite POST /api/packs/interes.
  * Fase v1.3.2 (migration 017): + seguridad_digital, exportacion, franquicias.
- * Fase v1.4 (migration 019): + risk_management (séptimo pack). */
+ * Fase v1.4 (migration 019): + risk_management (séptimo pack).
+ * Extracción (migration 036): + compras, entrega (octavo y noveno). Que estén
+ * aquí NO los publica: la aduana de la base y la visibilidad del catálogo son
+ * cosas distintas, y el interruptor de publicación es `oculto` en
+ * packs_catalog.json. */
 export const PACK_CLICKS_PACK = [
   "quality",
   "health_safety",
@@ -43,6 +47,8 @@ export const PACK_CLICKS_PACK = [
   "exportacion",
   "franquicias",
   "risk_management",
+  "compras",
+  "entrega",
 ] as const;
 export type PackClave = (typeof PACK_CLICKS_PACK)[number];
 

@@ -16,7 +16,7 @@
  */
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
-import catalogo from "@/lib/assets/packs_catalog.json";
+import { mundosVisibles } from "@/lib/catalogoMundos";
 import type { EstadoMundo } from "@/lib/engine/previewMundos";
 import { murallaSinPlan } from "@/lib/espacios";
 import { PRECIOS } from "@/lib/precios";
@@ -130,7 +130,9 @@ export function PotenciaTuIdea({
   const [activando, setActivando] = useState<string | null>(null);
   const [errorEn, setErrorEn] = useState<string | null>(null);
   const [avisoBloqueado, setAvisoBloqueado] = useState<string | null>(null);
-  const packs = (catalogo as { packs: Pack[] }).packs;
+  // Solo los PUBLICADOS: un mundo oculto existe y funciona, pero no se
+  // ofrece hasta que el fundador lo camine y lo publique.
+  const packs = mundosVisibles() as unknown as Pack[];
 
   // Fase 4.5 (PREVIEW_MUNDOS_PLAN): abrir un mundo es GRATIS, siempre. Lo que
   // se compra es su PLAN, a la entrega (ancla ETAPA 2 en la ruta del plan).

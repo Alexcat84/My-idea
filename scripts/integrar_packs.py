@@ -75,6 +75,54 @@ def fallar(msg):
     sys.exit(1)
 
 
+# ---------------------------------------------------------------------------
+# Reanudación POR PASO.
+#
+# La avería de origen (2026-08-07, integrando compras y entrega): el paso (a)
+# copió los nodos a dataset/ y el paso (e) fallo. Al reintentar, descubrir_packs
+# vio los nodos ya en dataset/, declaro los packs "ya integrados" y el script
+# dijo "no hay packs pendientes, nada que hacer" — con los pasos b a f sin
+# correr. Salio en verde con la mitad del trabajo sin hacer.
+#
+# La causa es que el estado se DEDUCIA de un efecto de un solo paso. Ahora se
+# ESCRIBE, paso a paso: el archivo nace antes del primero y muere despues del
+# ultimo, asi que su sola existencia significa "esto quedo a medias".
+# ---------------------------------------------------------------------------
+ESTADO = BASE / "dataset" / "metadata" / "_integracion_en_curso.json"
+
+PASOS = [
+    "a_nodos_y_puentes", "e_gate0", "e_bis_etiquetas", "b_familias",
+    "c_cache_preguntas", "d_indice_voyage", "f_sync", "f_suite_web", "f_suite_python",
+]
+
+
+def pasos_pendientes(estado):
+    hechos = set((estado or {}).get("hechos", []))
+    return [p for p in PASOS if p not in hechos]
+
+
+def decidir_accion(estado, pendientes):
+    """Que hacer, en una funcion pura y testeable.
+
+    Devuelve ('reanudar', faltan) | ('integrar', packs) | ('nada', []).
+    NUNCA devuelve 'nada' habiendo trabajo a medias: ese era el bug.
+    """
+    if estado:
+        faltan = pasos_pendientes(estado)
+        if faltan:
+            return "reanudar", faltan
+        # Archivo huerfano: todos los pasos hechos pero nadie lo borro.
+        return "nada", []
+    if pendientes:
+        return "integrar", pendientes
+    return "nada", []
+
+
+def guardar_estado(estado):
+    ESTADO.parent.mkdir(parents=True, exist_ok=True)
+    ESTADO.write_text(json.dumps(estado, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def cargar_json(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
@@ -188,12 +236,31 @@ def main():
     args = ap.parse_args()
 
     integrados, pendientes = descubrir_packs()
+    estado = json.loads(ESTADO.read_text(encoding="utf-8")) if ESTADO.exists() else None
+    accion, detalle = decidir_accion(estado, pendientes)
+
     if integrados:
         print(f"Packs ya integrados (congelados, no se tocan): {', '.join(integrados)}")
-    if not pendientes:
+
+    if accion == "nada":
+        if estado:
+            print(f"Todos los pasos estaban hechos; borrando {ESTADO.name} huerfano.")
+            ESTADO.unlink(missing_ok=True)
         print("No hay packs pendientes de integrar. Nada que hacer.")
         return
-    print(f"Packs pendientes: {', '.join(pendientes)}")
+
+    if accion == "reanudar":
+        pendientes = estado["packs"]
+        print(f"\nINTEGRACION A MEDIAS de {', '.join(pendientes)}: "
+              f"{len(estado['hechos'])} pasos hechos, faltan {len(detalle)}.")
+        for p in detalle:
+            print(f"   pendiente: {p}")
+        if args.dry_run:
+            print("\n--dry-run: nada tocado. Para reanudar: python scripts/integrar_packs.py --ejecutar")
+            return
+        print("Se REANUDA desde el primer paso pendiente.\n")
+    else:
+        print(f"Packs pendientes: {', '.join(pendientes)}")
 
     puentes = validar_prerequisitos(pendientes)
     total_pack_nodes = sum(len(list((BASE / "packs" / d / "nodos").glob("*.json"))) for d in pendientes)
@@ -203,10 +270,27 @@ def main():
         print("\n--dry-run: nada tocado. Para ejecutar: python scripts/integrar_packs.py --ejecutar")
         return
 
-    tocados_core = paso_a_integrar_nodos_y_puentes(pendientes, puentes)
+    if estado is None:
+        estado = {"packs": pendientes, "hechos": [], "tocados_core": []}
+        guardar_estado(estado)
+
+    def paso(nombre, fn):
+        """Corre el paso si falta; lo marca solo DESPUES de que salga bien."""
+        if nombre in estado["hechos"]:
+            print(f"\n=== [ya hecho, se salta] {nombre} ===")
+            return
+        fn()
+        estado["hechos"].append(nombre)
+        guardar_estado(estado)
+
+    def _a():
+        estado["tocados_core"] = sorted(paso_a_integrar_nodos_y_puentes(pendientes, puentes))
+    paso("a_nodos_y_puentes", _a)
 
     # e-parte-1. recompilar master_graph + Gate 0 (los nodos ya están en dataset/)
-    correr([sys.executable, "scripts/run_phase1.py"], "e. run_phase1: recompilación + Gate 0 (debe quedar VERDE)")
+    paso("e_gate0", lambda: correr(
+        [sys.executable, "scripts/run_phase1.py"],
+        "e. run_phase1: recompilación + Gate 0 (debe quedar VERDE)"))
 
     # e-parte-1b. RE-APLICAR las etiquetas de cara. Cazado el 2026-08-07
     # integrando compras y entrega: la curaduría de etiquetas parchea las dos
@@ -215,36 +299,59 @@ def main():
     # integración devuelve a 71 nodos del core su jerga original ("Canvas",
     # "Pivotar", "SPIN") sin que nada se queje: el grafo queda válido y el
     # usuario ve palabras que el fundador saco de la casa hace una fase.
-    correr([sys.executable, "scripts/etiquetas_de_cara.py", "--aplicar"],
-           "e-bis. Re-aplicar las etiquetas de cara (run_phase1 las revierte)")
+    #
+    # ESTE PASO ES LA UNICA FUENTE DE CURADURIA DE ETIQUETAS. La capa
+    # re-aplicable solo es legitima mientras sea unica: si alguien cura una
+    # etiqueta en otro sitio (a mano en un nodo, en un script aparte, en el
+    # espejo de la web), la proxima recompilacion revive el bug con otro
+    # disfraz y ademas nadie sabra cual de las dos curadurias manda. Lo que
+    # haya que curar se escribe en dataset/metadata/etiquetas_de_cara_v1*.json
+    # y entra por aqui, o no entra.
+    paso("e_bis_etiquetas", lambda: correr(
+        [sys.executable, "scripts/etiquetas_de_cara.py", "--aplicar"],
+        "e-bis. Re-aplicar las etiquetas de cara (run_phase1 las revierte)"))
 
     # b. familias (sin costo) — DESPUÉS de run_phase1: plan_readiness lee
     # master_graph.json, que recién queda recompilado con el grafo ampliado.
-    correr([sys.executable, "engine/plan_readiness.py"], "b. Etiquetas de familia (readiness) para el grafo ampliado")
+    paso("b_familias", lambda: correr(
+        [sys.executable, "engine/plan_readiness.py"],
+        "b. Etiquetas de familia (readiness) para el grafo ampliado"))
 
     # c. caché de preguntas PARCIAL: nodos de packs + cores tocados por puentes.
     # La lista va en un archivo (--patch-file): 1500+ ids exceden el límite de
     # línea de comandos de Windows.
-    pack_ids = [p.stem for d in pendientes for p in (BASE / "packs" / d / "nodos").glob("*.json")]
-    a_parchear = pack_ids + sorted(tocados_core)
-    print(f"\n  caché parcial: {len(pack_ids)} nodos de packs + {len(tocados_core)} cores con sucesores nuevos")
-    patch_file = BASE / "engine" / "_patch_pendientes.txt"
-    patch_file.write_text("\n".join(a_parchear) + "\n", encoding="utf-8")
-    correr(
-        [sys.executable, "engine/build_question_cache.py", "--patch-file", str(patch_file)],
-        "c. Caché de preguntas parcial (packs + cores tocados)",
-    )
-    patch_file.unlink(missing_ok=True)
+    def _c():
+        pack_ids = [p.stem for d in pendientes for p in (BASE / "packs" / d / "nodos").glob("*.json")]
+        tocados_core = estado.get("tocados_core", [])
+        a_parchear = pack_ids + sorted(tocados_core)
+        print(f"\n  caché parcial: {len(pack_ids)} nodos de packs + {len(tocados_core)} cores con sucesores nuevos")
+        patch_file = BASE / "engine" / "_patch_pendientes.txt"
+        patch_file.write_text("\n".join(a_parchear) + "\n", encoding="utf-8")
+        correr(
+            [sys.executable, "engine/build_question_cache.py", "--patch-file", str(patch_file)],
+            "c. Caché de preguntas parcial (packs + cores tocados)",
+        )
+        patch_file.unlink(missing_ok=True)
+    paso("c_cache_preguntas", _c)
 
     # d. índice Voyage completo
-    correr([sys.executable, "scripts/build_semantic_index_voyage.py"], "d. Índice semántico Voyage completo")
+    paso("d_indice_voyage", lambda: correr(
+        [sys.executable, "scripts/build_semantic_index_voyage.py"],
+        "d. Índice semántico Voyage completo"))
 
     # f. sync de assets a la web + suites
-    correr([sys.executable, "scripts/sync_assets_web.py"], "f. Sync de assets a web/lib/assets")
+    paso("f_sync", lambda: correr(
+        [sys.executable, "scripts/sync_assets_web.py"], "f. Sync de assets a web/lib/assets"))
     # 'run test' (script del package.json), no 'vitest run' bare: pnpm bajo
     # subprocess de Windows mal-parsea el binario suelto ("web" not found).
-    correr(["pnpm", "-C", "web", "run", "test"], "f. Suite web (checksums + contrato) — debe quedar verde")
-    correr([sys.executable, "engine/run_all_tests.py"], "f. Suite python — debe quedar verde")
+    paso("f_suite_web", lambda: correr(
+        ["pnpm", "-C", "web", "run", "test"],
+        "f. Suite web (checksums + contrato) — debe quedar verde"))
+    paso("f_suite_python", lambda: correr(
+        [sys.executable, "engine/run_all_tests.py"], "f. Suite python — debe quedar verde"))
+
+    # Solo aqui, con TODOS los pasos hechos, desaparece la marca de "a medias".
+    ESTADO.unlink(missing_ok=True)
 
     print(
         "\nLÍNEA DE ENSAMBLAJE COMPLETA. Revisar los costos reales que reportaron "

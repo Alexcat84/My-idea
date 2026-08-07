@@ -464,5 +464,36 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%aceptar%'
     )
 
+  UNION ALL
+  -- 036 · Octavo y noveno mundo: los 4 CHECK de dominio amplian a 9 packs
+  -- (compras y entrega). ANTES de aplicar debe decir MISSING pero los 4 conname
+  -- deben EXISTIR; DESPUÉS, ✓ OK. Se comprueban los DOS dominios en cada uno:
+  -- comprobar solo uno dejaria pasar una migracion aplicada a medias.
+  SELECT '036', 'CHECKs de dominio con 9 packs (+compras, +entrega)',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'project_unlocks_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%compras%'
+        AND pg_get_constraintdef(oid) LIKE '%entrega%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'sessions_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%compras%'
+        AND pg_get_constraintdef(oid) LIKE '%entrega%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'plans_dominio_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%compras%'
+        AND pg_get_constraintdef(oid) LIKE '%entrega%'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'pack_clicks_pack_check' AND connamespace = 'public'::regnamespace
+        AND pg_get_constraintdef(oid) LIKE '%compras%'
+        AND pg_get_constraintdef(oid) LIKE '%entrega%'
+    )
+
 ) checks
 ORDER BY num;
