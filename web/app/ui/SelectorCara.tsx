@@ -33,15 +33,31 @@ export function SelectorCara({
 }) {
   const refs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [ind, setInd] = useState<{ left: number; width: number }>({ left: 0, width: 0 });
+  // La luz viaja con TRANSFORM, no con left. El CSS (.cambiador-luz) siempre
+  // animo transform y width; mover el elemento con `left` dejaba el salto
+  // horizontal fuera de la transicion, asi que la luz se teletransportaba y
+  // solo el ancho rebotaba. Cazado por el fundador en su corrida (ago 2026).
+  //
+  // Y viaja SOLO cuando el usuario cambia de cara: en el montaje y al
+  // redimensionar se COLOCA sin transicion, o la luz entraria volando desde el
+  // borde izquierdo cada vez que se abre la pantalla.
+  const [viaja, setViaja] = useState(false);
+  const montado = useRef(false);
 
   useEffect(() => {
     const medir = () => {
       const el = refs.current[valor];
       if (el) setInd({ left: el.offsetLeft, width: el.offsetWidth });
     };
+    setViaja(montado.current);
+    montado.current = true;
     medir();
-    window.addEventListener("resize", medir);
-    return () => window.removeEventListener("resize", medir);
+    const alRedimensionar = () => {
+      setViaja(false);
+      medir();
+    };
+    window.addEventListener("resize", alRedimensionar);
+    return () => window.removeEventListener("resize", alRedimensionar);
   }, [valor, opciones]);
 
   return (
@@ -55,11 +71,12 @@ export function SelectorCara({
       {/* La luz que viaja a la cara activa. */}
       <span
         aria-hidden
-        className="cambiador-luz pointer-events-none absolute bottom-[5px] top-[5px] z-[1] rounded-[12px] border border-accent/[0.42]"
+        className="cambiador-luz pointer-events-none absolute bottom-[5px] left-0 top-[5px] z-[1] rounded-[12px] border border-accent/[0.42]"
         style={{
-          left: ind.left,
+          transform: `translateX(${ind.left}px)`,
           width: ind.width,
           background: "linear-gradient(145deg, rgba(77,124,254,0.16), rgba(77,124,254,0.05))",
+          ...(viaja ? null : { transition: "none" }),
         }}
       />
 
