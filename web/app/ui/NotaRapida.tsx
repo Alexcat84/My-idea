@@ -107,7 +107,7 @@ export function NotaRapida({
                 type="button"
                 onClick={guardar}
                 disabled={ocupado}
-                className="rounded-[9px] bg-accent px-4 py-1.5 text-[13px] font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                className="rounded-[9px] border border-accent/40 bg-accent/10 px-4 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
               >
                 Guardar
               </button>

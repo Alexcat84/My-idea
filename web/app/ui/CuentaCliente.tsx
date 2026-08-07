@@ -236,7 +236,7 @@ export function CuentaCliente({ email }: { email: string }) {
             </div>
             <button
               onClick={() => setFlujo({ paso: "reposo" })}
-              className="mt-4 rounded-cinta bg-accent px-4 py-2.5 text-sm font-medium text-white hover:opacity-90"
+              className="mt-4 rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20"
             >
               Ya los guardé
             </button>
@@ -277,7 +277,7 @@ export function CuentaCliente({ email }: { email: string }) {
               <button
                 type="submit"
                 disabled={ocupado || codigo2FA.length !== 6}
-                className="rounded-cinta bg-accent px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
+                className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
               >
                 {ocupado ? "Verificando…" : "Activar"}
               </button>
@@ -295,7 +295,7 @@ export function CuentaCliente({ email }: { email: string }) {
               <button
                 type="submit"
                 disabled={ocupado || codigo2FA.length !== 6}
-                className="rounded-cinta bg-accent px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
+                className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
               >
                 {ocupado ? "Verificando…" : "Activar"}
               </button>

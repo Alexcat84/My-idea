@@ -172,7 +172,7 @@ export default function NuevaIdea() {
         <div className="anima-plan-in mt-9" style={{ animationDelay: "0.65s" }}>
           <button
             onClick={() => router.push(`/idea/${estado.projectId}?entrevista=1`)}
-            className="rounded-[10px] bg-accent px-[26px] py-3 text-sm font-semibold text-white hover:opacity-90"
+            className="rounded-[10px] border border-accent/40 bg-accent/10 px-[26px] py-3 text-sm font-semibold text-accent hover:bg-accent/20"
           >
             Explorar estas suposiciones
           </button>
@@ -219,7 +219,7 @@ export default function NuevaIdea() {
         <button
           onClick={enviar}
           disabled={!texto.trim()}
-          className="rounded-[10px] bg-accent px-6 py-3 font-medium text-white hover:opacity-90 disabled:opacity-40"
+          className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"
         >
           Continuar
         </button>

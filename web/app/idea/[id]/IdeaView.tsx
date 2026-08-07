@@ -1128,7 +1128,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       setTarjetaContextoFinal(false);
                       generarPlan(sessionId, contextoFinal.trim() || undefined);
                     }}
-                    className="mt-5 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
+                    className="mt-5 w-full rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-accent hover:bg-accent/20"
                   >
                     Armar mi plan · {PRECIOS.plan_completo} créditos
                   </button>
@@ -1176,7 +1176,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     <button
                       onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
                       disabled={enviando}
-                      className="mt-6 w-full rounded-[10px] bg-accent px-5 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                      className="mt-6 w-full rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
                     >
                       {dominioEntrevista === "core"
                         ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
@@ -1292,7 +1292,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 <div className="flex flex-wrap items-center gap-3">
                   <button
                     onClick={() => irAManos()}
-                    className="rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
+                    className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-semibold text-accent hover:bg-accent/20"
                   >
                     Pasar a Manos a la Obra
                   </button>
@@ -1335,7 +1335,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                           setEnviando(false);
                         }
                       }}
-                      className="rounded-[10px] bg-accent px-5 py-3 font-medium text-white hover:opacity-90"
+                      className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-3 font-medium text-accent hover:bg-accent/20"
                     >
                       Explorar estas suposiciones
                     </button>

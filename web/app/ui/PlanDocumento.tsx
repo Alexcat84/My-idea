@@ -234,7 +234,7 @@ export function PlanDocumento({
       <p className="mt-1 text-[12px] leading-relaxed text-dim">La historia de tu viaje, paso a paso.</p>
       <button
         onClick={onVerBitacora}
-        className="mt-2.5 w-full rounded-[10px] bg-accent py-2 text-[12.5px] font-semibold text-white hover:opacity-90"
+        className="mt-2.5 w-full rounded-[10px] border border-accent/40 bg-accent/10 py-2 text-[12.5px] font-semibold text-accent hover:bg-accent/20"
       >
         Ver mi bitácora
       </button>

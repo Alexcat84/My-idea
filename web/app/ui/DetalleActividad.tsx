@@ -429,7 +429,7 @@ export function DetalleActividad({
                         <button
                           onClick={() => mover(true)}
                           disabled={ocupado}
-                          className="rounded-[11px] bg-accent px-5 py-2.5 text-[14px] font-bold text-white hover:opacity-90 disabled:opacity-50"
+                          className="rounded-[11px] border border-accent/40 bg-accent/10 px-5 py-2.5 text-[14px] font-bold text-accent hover:bg-accent/20 disabled:opacity-50"
                         >
                           Sí, mover todas
                         </button>
@@ -502,7 +502,7 @@ export function DetalleActividad({
           <button
             onClick={guardar}
             disabled={ocupado}
-            className="flex-1 rounded-[12px] bg-accent py-3 text-[14.5px] font-bold text-white hover:opacity-90 disabled:opacity-50"
+            className="flex-1 rounded-[12px] border border-accent/40 bg-accent/10 py-3 text-[14.5px] font-bold text-accent hover:bg-accent/20 disabled:opacity-50"
           >
             Guardar
           </button>
