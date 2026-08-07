@@ -372,6 +372,37 @@ son la capa 3 embrionaria). Matriz de fases:
   `cumplimientoPorDominio`). Nombrado en `docs/PLAN_ESPACIOS_FASE3.md §6`; **jamás
   arreglar "de paso"**.
 
+## Campaña fichada: `re-voz-de-quality`
+
+**Se dispara al CERRAR la cirugía de fusión de Calidad, no antes.** La secuencia
+fusión-primero es aritmética: los nodos absorbidos ya no hay que re-vozarlos.
+
+**El hallazgo que la origina** (cirugía de Calidad, 2026-08-07): los detectores
+de las tres barandas sobre los **896** nodos de `quality` marcaron **209 (23%)**.
+El censo los había muestreado con 10 nodos y dio 0/10; una muestra detecta lo
+sistémico, no mide prevalencia. Verificado leyendo, no confiando en el patrón:
+son reales.
+
+| patrón | nodos |
+|---|---:|
+| "la gerencia" / "la alta dirección" | 149 |
+| "el equipo" | 21 |
+| "el departamento" | 17 |
+| matriz o puntaje | 9 |
+| dato local cableado | 4 |
+
+Calidad está escrito en **voz de dirección corporativa**: *"justificar ante la
+alta dirección"*, *"comparar con las expectativas de la gerencia"*. Eso viola la
+lente de persona-sola-con-teléfono de la vara vigente.
+
+**El trabajo**: regeneración-CON-ANCLAJE de los supervivientes que estén entre
+los 209 marcados. Mismo fragmento de fuente, lente persona-sola, la gerencia
+muere. Por lotes, con muestreo del fundador entre lote y lote. Cero invención:
+lo que no esté en el fragmento no se escribe.
+
+**Los datos ya están**: `packs/quality/poda/_poda_quality.json` lleva los 209 con
+su cita textual y su patrón.
+
 ## Hecho recientemente (para no reabrirlo por error)
 
 - **Calendario**: modo con-fechas + recordatorios + `.ics` universal (webcal) EN PRODUCCIÓN.

@@ -1,4 +1,5 @@
 {
+  "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
   "pack": "quality",
   "umbral": 0.9,
   "clusters": [
@@ -17,6 +18,8 @@
       "similitud": 0.9665945768356323,
       "por_que": "Los siete nodos describen el mismo indicador COPQ: costos que desaparecerían si no hubiera fallos, con distintos matices de medición pero misma acción de cuantificar.",
       "quedaria": "Costo de la Mala Calidad (Cost of Poor Quality - COPQ)",
+      "sobrevive": "costo_de_mala_calidad_copq",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "costo_de_mala_calidad_3": {
           "visto": 0,
@@ -62,6 +65,8 @@
       "similitud": 0.9522719979286194,
       "por_que": "Los seis nodos son la misma definición central de Crosby: calidad = conformidad con los requisitos, rechazando nociones subjetivas.",
       "quedaria": "Calidad como Conformidad con los Requisitos",
+      "sobrevive": "definicion_calidad_conformidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "conformance_to_requirements": {
           "visto": 2,
@@ -101,6 +106,8 @@
       "similitud": 0.9569813013076782,
       "por_que": "Los cuatro nodos describen el mismo concepto de Crosby: Zero Defects como actitud/estándar, no programa motivacional.",
       "quedaria": "Cero Defectos (Zero Defects - ZD)",
+      "sobrevive": "cero_defectos",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "cero_defectos": {
           "visto": 16,
@@ -132,6 +139,8 @@
       "similitud": 0.9345832467079163,
       "por_que": "Las cuatro versiones describen la misma herramienta de Crosby con las mismas cinco etapas de madurez.",
       "quedaria": "Quality Management Maturity Grid (Las Cinco Etapas de Madurez)",
+      "sobrevive": "rejilla_madurez_gestion_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "quality_management_maturity_grid": {
           "visto": 2,
@@ -162,6 +171,8 @@
       "similitud": 0.9604043960571289,
       "por_que": "Los tres describen el mismo proceso de certificación/registro por tercera parte de sistemas de calidad tipo ISO 9000/9001.",
       "quedaria": "Certificación y Registro de Sistemas de Calidad (Auditorías de Tercera Parte)",
+      "sobrevive": "certificacion_registro_sistema_calidad",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "certificacion_iso_9000": {
           "visto": 0,
@@ -188,6 +199,8 @@
       "similitud": 0.9494844079017639,
       "por_que": "Misma herramienta (Customer Needs Spreadsheet) descrita tres veces con distinto nombre",
       "quedaria": "Hoja de Cálculo de Necesidades del Cliente (Customer Needs Spreadsheet)",
+      "sobrevive": "customer_needs_spreadsheet",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "customer_needs_spreadsheet": {
           "visto": 0,
@@ -214,6 +227,8 @@
       "similitud": 0.9481145143508911,
       "por_que": "Los tres nodos son la misma distinción de Deming entre causas comunes (sistema/gerencia) y causas especiales (asignables).",
       "quedaria": "Causas Comunes y Causas Especiales de Variación",
+      "sobrevive": "causas_comunes_vs_especiales",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "causas_comunes_causas_especiales": {
           "visto": 1,
@@ -240,6 +255,8 @@
       "similitud": 0.9462536573410034,
       "por_que": "Los tres describen la misma técnica de Value Stream Mapping con el mismo propósito y alcance.",
       "quedaria": "Mapeo de Flujo de Valor (Value Stream Mapping)",
+      "sobrevive": "mapeo_flujo_valor",
+      "sobrevive_por": "primero (sin historia y sin propuesta legible)",
       "telemetria": {
         "mapeo_flujo_valor": {
           "visto": 0,
@@ -266,6 +283,8 @@
       "similitud": 0.9442559480667114,
       "por_que": "Las tres versiones describen la misma técnica de normalizar datos para comparar unidades distintas de forma justa.",
       "quedaria": "Normalización de Datos en Benchmarking (Comparación Justa)",
+      "sobrevive": "normalizacion_datos_benchmarking",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "normalizacion_datos_benchmarking": {
           "visto": 0,
@@ -292,6 +311,8 @@
       "similitud": 0.9348530173301697,
       "por_que": "Los tres describen el mismo concepto de sistema estable y la misma conclusión sobre responsabilidad gerencial de la variación.",
       "quedaria": "Sistema Estable y Responsabilidad de la Gerencia sobre la Variación",
+      "sobrevive": "sistema_estable_causas_comunes",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "sistema_estable_causas_comunes": {
           "visto": 7,
@@ -318,6 +339,8 @@
       "similitud": 0.9253164529800415,
       "por_que": "Mismo mecanismo ECR para que empleados reporten causas de error, repetido tres veces",
       "quedaria": "Eliminación de Causas de Error (Error-Cause Removal, ECR)",
+      "sobrevive": "eliminacion_causas_error_4",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "eliminacion_causas_error_3": {
           "visto": 0,
@@ -344,6 +367,8 @@
       "similitud": 0.9220505952835083,
       "por_que": "Mismo concepto de poka-yoke/mistake-proofing con los mismos cinco principios",
       "quedaria": "Mistake Proofing / Poka-Yoke",
+      "sobrevive": "mistake_proofing_poka_yoke_2",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "errores_a_prueba_poka_yoke": {
           "visto": 0,
@@ -370,6 +395,8 @@
       "similitud": 0.9207216501235962,
       "por_que": "Las tres describen la misma metodología DFSS/DMADV de cinco fases para diseño sin defectos",
       "quedaria": "Design for Six Sigma (DFSS) y Metodología DMADV",
+      "sobrevive": "design_for_six_sigma_dfss",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "design_for_six_sigma_dfss": {
           "visto": 0,
@@ -396,6 +423,8 @@
       "similitud": 0.9201205372810364,
       "por_que": "Los tres nodos describen la misma técnica lean de 6 pasos (sort, set in order, shine/sweep, standardize, sustain, safety) para organizar el lugar de trabajo.",
       "quedaria": "Metodología 6S (Sort, Set in order, Shine, Standardize, Sustain, Safety)",
+      "sobrevive": "metodologia_6s",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "6s_lugar_trabajo": {
           "visto": 0,
@@ -422,6 +451,8 @@
       "similitud": 0.903995156288147,
       "por_que": "Los tres describen el mismo modelo de Crosby de costo de calidad compuesto por prevención, evaluación y fallas.",
       "quedaria": "Costo de la Calidad (Cost of Quality - COQ)",
+      "sobrevive": "costo_de_calidad_6",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "costo_de_calidad_5": {
           "visto": 1,
@@ -447,6 +478,8 @@
       "similitud": 0.9740885496139526,
       "por_que": "Mismo gráfico de cinco números (mín, Q1, mediana, Q3, máx) para comparar dispersión de datos.",
       "quedaria": "Diagrama de Caja (Box Plot)",
+      "sobrevive": "boxplot_resumen_datos",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "boxplot_resumen_datos": {
           "visto": 2,
@@ -468,6 +501,8 @@
       "similitud": 0.9702348709106445,
       "por_que": "Mismo quinto paso del programa de Crosby: comunicar el costo de la no calidad a los empleados.",
       "quedaria": "Conciencia de Calidad (Paso 5)",
+      "sobrevive": "conciencia_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "conciencia_calidad": {
           "visto": 21,
@@ -489,6 +524,8 @@
       "similitud": 0.9677942991256714,
       "por_que": "Misma comparación entre sistemas push y pull con la misma definición y consecuencias.",
       "quedaria": "Sistemas Pull versus Push en Producción",
+      "sobrevive": "sistema_pull_push",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "pull_vs_push_systems": {
           "visto": 0,
@@ -510,6 +547,8 @@
       "similitud": 0.9627506732940674,
       "por_que": "Mismos cinco principios del programa de auditoría de calidad descritos igual, solo con distinto pilar.",
       "quedaria": "Principios del Programa de Auditoría de Calidad (Los Cinco Principios)",
+      "sobrevive": "principios_auditoria_calidad",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "principios_auditoria_calidad": {
           "visto": 0,
@@ -531,6 +570,8 @@
       "similitud": 0.9561018943786621,
       "por_que": "Misma distinción entre características clave de producto (salidas) y de proceso (entradas).",
       "quedaria": "Características Clave de Producto y Proceso (KPC)",
+      "sobrevive": "key_process_product_characteristics",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "caracteristicas_clave_producto_proceso": {
           "visto": 0,
@@ -552,6 +593,8 @@
       "similitud": 0.9557772874832153,
       "por_que": "Mismo principio de diseño de redundancia en paralelo para reducir probabilidad de falla, mismo cálculo pi².",
       "quedaria": "Uso de Redundancia en el Diseño de Componentes Críticos",
+      "sobrevive": "redundancia_en_diseno",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "redundancia_diseno_confiabilidad": {
           "visto": 0,
@@ -573,6 +616,8 @@
       "similitud": 0.9542180895805359,
       "por_que": "Misma clasificación de las cuatro escalas de medición (razón, intervalo, ordinal, nominal) con los mismos ejemplos.",
       "quedaria": "Tipos de Escalas de Medición de Datos",
+      "sobrevive": "tipos_escalas_medicion",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "tipos_de_escalas_de_medicion": {
           "visto": 0,
@@ -594,6 +639,8 @@
       "similitud": 0.9513788223266602,
       "por_que": "Misma definición de calidad como aptitud para el propósito, misma idea repetida",
       "quedaria": "Definición de Calidad como 'Fitness for Purpose'",
+      "sobrevive": "definicion_calidad_fitness_for_purpose",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "definicion_calidad_fitness_for_purpose": {
           "visto": 8,
@@ -615,6 +662,8 @@
       "similitud": 0.9500328302383423,
       "por_que": "Misma idea de identificar riesgos antes de gestionarlos, con la misma definición de riesgo",
       "quedaria": "Identificación de Riesgos",
+      "sobrevive": "identificacion_de_riesgos",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "gestion_riesgo_identificacion": {
           "visto": 1,
@@ -636,6 +685,8 @@
       "similitud": 0.9489650130271912,
       "por_que": "Ambos describen el mismo modelo que grafica costos de falla vs evaluación/prevención para hallar el punto óptimo.",
       "quedaria": "Modelo de Costo Óptimo de Calidad",
+      "sobrevive": "modelo_costo_optimo_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "costo_optimo_calidad": {
           "visto": 0,
@@ -657,6 +708,8 @@
       "similitud": 0.9481789469718933,
       "por_que": "Mismo paso del programa de calidad (medir estado actual incluyendo áreas no productivas) con distinto pilar asignado.",
       "quedaria": "Medición de la Calidad (Paso 3)",
+      "sobrevive": "medicion_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "medicion_calidad": {
           "visto": 21,
@@ -678,6 +731,8 @@
       "similitud": 0.9474811553955078,
       "por_que": "Ambos describen la misma auditoría periódica del sistema de control de calidad y por qué se deteriora.",
       "quedaria": "Auditoría del Sistema de Control de Calidad (Verificación Periódica)",
+      "sobrevive": "auditoria_sistema_control_calidad_2",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "auditoria_sistema_control_calidad": {
           "visto": 0,
@@ -699,6 +754,8 @@
       "similitud": 0.9455341696739197,
       "por_que": "Mismo caso de Deming sobre eliminar firmas/revisiones redundantes y diluir responsabilidad",
       "quedaria": "Eliminación de Firmas y Revisiones Redundantes en Procesos Administrativos",
+      "sobrevive": "eliminacion_firmas_redundantes",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "eliminacion_de_firmas_duplicadas_responsabilidad_unica": {
           "visto": 0,
@@ -720,6 +777,8 @@
       "similitud": 0.9423307180404663,
       "por_que": "Ambos describen el mismo sistema de KPIs vinculado a metas estratégicas con los mismos criterios de diseño.",
       "quedaria": "Sistema de Medición con Indicadores Clave de Desempeño (KPI)",
+      "sobrevive": "sistema_medicion_kpi",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "medir_progreso_kpi": {
           "visto": 0,
@@ -741,6 +800,8 @@
       "similitud": 0.9422516226768494,
       "por_que": "Mismo hallazgo sobre el impacto del manejo de quejas en la lealtad, con las mismas estadísticas del 70%",
       "quedaria": "Sistema Organizado de Manejo de Quejas",
+      "sobrevive": "sistema_manejo_quejas",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "gestion_de_quejas_y_fidelizacion": {
           "visto": 0,
@@ -762,6 +823,8 @@
       "similitud": 0.9379476308822632,
       "por_que": "Mismo concepto de los ocho desperdicios de Ohno, con la misma lista de tipos de desperdicio.",
       "quedaria": "Los Ocho Desperdicios de Lean (Ohno)",
+      "sobrevive": "ocho_desperdicios_lean",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "ocho_desperdicios": {
           "visto": 0,
@@ -783,6 +846,8 @@
       "similitud": 0.9369471669197083,
       "por_que": "Mismo enfoque de operaciones ante problemas esporádicos y crónicos usando mejora y planificación de calidad",
       "quedaria": "Enfoque de Mejora Continua en Operaciones",
+      "sobrevive": "mejora_continua_operaciones",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "enfoque_mejora_continua_operaciones": {
           "visto": 0,
@@ -804,6 +869,8 @@
       "similitud": 0.9304745197296143,
       "por_que": "Misma metáfora de Crosby (ballet vs hockey) para describir los mismos dos estilos de gestión de calidad",
       "quedaria": "Estilo Gerencial: Ballet (Prevención) vs. Hockey (Detección)",
+      "sobrevive": "estilo_gerencial_ballet_vs_hockey",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "crosby_estilo_ballet_vs_hockey": {
           "visto": 0,
@@ -825,6 +892,8 @@
       "similitud": 0.9303136467933655,
       "por_que": "Mismo modelo DMAIC de Six Sigma descrito con las mismas fases y origen",
       "quedaria": "Modelo Six Sigma DMAIC",
+      "sobrevive": "six_sigma_dmaic",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "dmaic_six_sigma": {
           "visto": 0,
@@ -846,6 +915,8 @@
       "similitud": 0.9279415607452393,
       "por_que": "Mismo modelo Juran de Quality by Design, primer proceso de la Trilogía",
       "quedaria": "Modelo Universal de Quality by Design (Juran)",
+      "sobrevive": "juran_quality_by_design",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "juran_quality_by_design": {
           "visto": 1,
@@ -867,6 +938,8 @@
       "similitud": 0.9262774586677551,
       "por_que": "Mismo mecanismo de impacto de la calidad en ingresos (premium, liderazgo), el segundo solo añade la relación con costos",
       "quedaria": "Impacto de la Calidad en Ingresos y Costos",
+      "sobrevive": "impacto_calidad_ingresos_costos",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "impacto_calidad_en_ingresos": {
           "visto": 0,
@@ -888,6 +961,8 @@
       "similitud": 0.9249155521392822,
       "por_que": "Mismo programa de catorce pasos de Crosby descrito con la misma estructura y propósito.",
       "quedaria": "Los Catorce Pasos de Mejora de Calidad de Crosby",
+      "sobrevive": "programa_de_mejora_de_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "programa_catorce_pasos_crosby": {
           "visto": 0,
@@ -909,6 +984,8 @@
       "similitud": 0.9243250489234924,
       "por_que": "Mismo punto de equilibrio de calidad (k1/k2) y misma regla todo-o-nada de inspección de Deming.",
       "quedaria": "Punto de Equilibrio de Calidad (Break-even Quality) para Decisiones de Inspección",
+      "sobrevive": "punto_equilibrio_calidad_inspeccion",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "punto_equilibrio_calidad": {
           "visto": 2,
@@ -930,6 +1007,8 @@
       "similitud": 0.9221171736717224,
       "por_que": "Contenido idéntico sobre usar histogramas y curva de probabilidad para evaluar capacidad de proceso; solo cambia la etiqueta de tipo.",
       "quedaria": "Análisis de Capacidad de Proceso mediante Histogramas",
+      "sobrevive": "analisis_capacidad_procesos",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "analisis_capacidad_procesos": {
           "visto": 1,
@@ -951,6 +1030,8 @@
       "similitud": 0.9220885634422302,
       "por_que": "Ambos describen el mismo enfoque estadístico para tolerancias interactuantes frente a la suma tradicional conservadora.",
       "quedaria": "Tolerancia Estadística para Dimensiones Interactuantes",
+      "sobrevive": "limites_especificacion_dimensiones_interactuantes",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "limites_especificacion_dimensiones_interactuantes": {
           "visto": 1,
@@ -972,6 +1053,8 @@
       "similitud": 0.9219329953193665,
       "por_que": "Mismo concepto sobre cuándo el perfeccionismo es desperdicio versus cuándo es necesario, con los mismos ejemplos.",
       "quedaria": "Perfeccionismo como Desperdicio de Valor (Contextos Críticos vs Desperdicio)",
+      "sobrevive": "perfeccionismo_vs_valor",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "perfeccionismo_vs_valor": {
           "visto": 1,
@@ -993,6 +1076,8 @@
       "similitud": 0.9215266704559326,
       "por_que": "Ambos son el mismo punto de Deming sobre el propósito del liderazgo: mejorar el sistema, no señalar culpables.",
       "quedaria": "Objetivo del Liderazgo (Deming)",
+      "sobrevive": "aim_of_leadership",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "aim_of_leadership": {
           "visto": 2,
@@ -1014,6 +1099,8 @@
       "similitud": 0.9196946620941162,
       "por_que": "Mismo punto de Crosby sobre el supervisor como clave y su necesidad de entrenamiento",
       "quedaria": "Entrenamiento de Supervisores (El Supervisor como Clave)",
+      "sobrevive": "entrenamiento_supervisores_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "entrenamiento_supervisores_2": {
           "visto": 0,
@@ -1035,6 +1122,8 @@
       "similitud": 0.9175660610198975,
       "por_que": "Mismo modelo de evaluación Shingo con las mismas cuatro dimensiones y puntajes",
       "quedaria": "Modelo Shingo de Evaluación de Excelencia Operacional",
+      "sobrevive": "modelo_shingo_evaluacion_excelencia",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "evaluacion_madurez_shingo": {
           "visto": 0,
@@ -1056,6 +1145,8 @@
       "similitud": 0.9173778295516968,
       "por_que": "Mismo fenómeno (necesidades ocultas/vacíos de conocimiento del cliente) con el mismo ejemplo del Walkman",
       "quedaria": "Descubrimiento de Necesidades Ocultas del Cliente",
+      "sobrevive": "vacios_conocimiento_cliente",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "descubrir_necesidades_ocultas": {
           "visto": 0,
@@ -1077,6 +1168,8 @@
       "similitud": 0.9171777963638306,
       "por_que": "Ambos plantean la misma idea de Crosby: la calidad es gratis, lo que cuesta es el incumplimiento.",
       "quedaria": "Quality is Free (La Calidad es Gratis)",
+      "sobrevive": "concepto_quality_is_free",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "concepto_quality_is_free": {
           "visto": 0,
@@ -1098,6 +1191,8 @@
       "similitud": 0.9150168895721436,
       "por_que": "Mismo primer punto de Deming sobre falta de constancia de propósito y ausencia de plan a largo plazo",
       "quedaria": "Falta de Constancia de Propósito (La Enfermedad Más Incapacitante)",
+      "sobrevive": "falta_de_constancia_de_proposito",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "falta_de_constancia_de_proposito": {
           "visto": 0,
@@ -1119,6 +1214,8 @@
       "similitud": 0.9137340784072876,
       "por_que": "Mismo problema (defectos raros) y misma solución (cartas/gráficos de control) descritos igual",
       "quedaria": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
+      "sobrevive": "deteccion_defectos_raros_control_estadistico",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "deteccion_defectos_raros_control_estadistico": {
           "visto": 2,
@@ -1140,6 +1237,8 @@
       "similitud": 0.9129912853240967,
       "por_que": "Ambos describen el mismo concepto del costo de calidad como suma de gastos por hacer las cosas mal (scrap, rework, garantías, inspección).",
       "quedaria": "Costo de Calidad (Cost of Quality)",
+      "sobrevive": "costo_de_calidad_3",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "costo_de_calidad_3": {
           "visto": 15,
@@ -1161,6 +1260,8 @@
       "similitud": 0.9108840227127075,
       "por_que": "Ambos tratan la misma idea de que la superioridad de calidad afecta la cuota de mercado solo si es percibida claramente.",
       "quedaria": "Superioridad de Calidad y Participación de Mercado",
+      "sobrevive": "superioridad_calidad_market_share",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "relacion_calidad_cuota_mercado": {
           "visto": 0,
@@ -1182,6 +1283,8 @@
       "similitud": 0.9108033776283264,
       "por_que": "Ambos describen el mismo tercer punto de Deming: dejar de depender de la inspección masiva porque no construye calidad.",
       "quedaria": "Cesar la Dependencia de la Inspección Masiva",
+      "sobrevive": "abolir_inspeccion_masiva",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "abolir_inspeccion_masiva": {
           "visto": 2,
@@ -1203,6 +1306,8 @@
       "similitud": 0.9070397615432739,
       "por_que": "Mismo fenómeno de sesgo por muestreo mecánico frente al aleatorio, descrito desde dos ángulos del mismo hecho",
       "quedaria": "Muestreo Aleatorio vs Muestreo Mecánico",
+      "sobrevive": "distorsion_muestreo_mecanico",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "distorsion_muestreo_mecanico": {
           "visto": 2,
@@ -1224,6 +1329,8 @@
       "similitud": 0.9068672060966492,
       "por_que": "Misma decisión de aptitud para el uso, solo varía la traducción del término en inglés (Purpose/Use)",
       "quedaria": "Decisión de Aptitud para el Uso (Fitness for Use)",
+      "sobrevive": "decision_aptitud_uso",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "decision_aptitud_para_uso": {
           "visto": 0,
@@ -1245,6 +1352,8 @@
       "similitud": 0.9068591594696045,
       "por_que": "Ambos describen las mismas cuatro categorías de costos de calidad (apreciación, fallo interno, fallo externo, prevención), uno aplicado a un caso concreto.",
       "quedaria": "Los Cuatro Costos de la Calidad",
+      "sobrevive": "cuatro_costos_de_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "costos_de_calidad_cuatro_categorias": {
           "visto": 0,
@@ -1266,6 +1375,8 @@
       "similitud": 0.9061838984489441,
       "por_que": "Ambos describen el mismo ciclo iterativo PDSA de Shewhart/Deming.",
       "quedaria": "Ciclo Plan-Do-Study-Act (PDSA / Ciclo de Shewhart-Deming)",
+      "sobrevive": "pdsa_shewhart_cycle",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "ciclo_pdsa": {
           "visto": 0,
@@ -1287,6 +1398,8 @@
       "similitud": 0.9053826928138733,
       "por_que": "Ambos describen la misma condición de Deming: el método de medición (instrumento+operador) debe estar en control estadístico para ser válido.",
       "quedaria": "Control Estadístico del Método de Medición (Condición de Validez)",
+      "sobrevive": "control_estadistico_metodo_medicion",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "control_estadistico_de_metodo_de_prueba": {
           "visto": 1,
@@ -1308,6 +1421,8 @@
       "similitud": 0.9035834670066833,
       "por_que": "Mismo marco conceptual (planificación, control, mejora de Juran) descrito con las mismas tres fases.",
       "quedaria": "Trilogía de Juran (Planificación, Control y Mejora)",
+      "sobrevive": "trilogia_de_juran",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "juran_trilogy": {
           "visto": 1,
@@ -1329,6 +1444,8 @@
       "similitud": 0.902652382850647,
       "por_que": "Mismo llamado a involucrar al sindicato tempranamente en el programa de calidad",
       "quedaria": "Involucramiento del Sindicato en Programas de Calidad",
+      "sobrevive": "involucramiento_sindical_calidad",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "involucramiento_sindical": {
           "visto": 1,
@@ -1350,6 +1467,8 @@
       "similitud": 0.9019394516944885,
       "por_que": "Mismo sistema de normas ISO 9000, descrito con distinto énfasis pero mismo referente",
       "quedaria": "Familia de Normas ISO 9000",
+      "sobrevive": "familia_normas_iso_9000",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "familia_normas_iso_9000": {
           "visto": 0,
@@ -1371,6 +1490,8 @@
       "similitud": 0.9018263220787048,
       "por_que": "Ambos explican el mismo concepto de takt time como ritmo de demanda que guía el cálculo y diseño de producción.",
       "quedaria": "Takt Time y Producción en Flujo",
+      "sobrevive": "takt_time",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "takt_time": {
           "visto": 0,
@@ -1392,6 +1513,8 @@
       "similitud": 0.9017245173454285,
       "por_que": "Ambos explican la acción correctiva como troubleshooting de no conformidades esporádicas, distinguiéndola de los problemas crónicos.",
       "quedaria": "Acción Correctiva (Esporádica vs Crónica)",
+      "sobrevive": "accion_correctiva",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "accion_correctiva": {
           "visto": 8,
@@ -1413,6 +1536,8 @@
       "similitud": 0.9015077352523804,
       "por_que": "Mismo concepto de QFD como matrices que traducen necesidades del cliente en características técnicas.",
       "quedaria": "Despliegue de la Función de Calidad (QFD)",
+      "sobrevive": "qfd_matriz",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "qfd_matriz": {
           "visto": 0,
@@ -1434,6 +1559,8 @@
       "similitud": 0.9013121128082275,
       "por_que": "Ambos describen el mismo mecanismo sensor-comparador(umpire)-actuador del control de calidad.",
       "quedaria": "El Bucle de Retroalimentación (Feedback Loop) en Control de Calidad",
+      "sobrevive": "bucle_retroalimentacion_control",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "bucle_retroalimentacion_control": {
           "visto": 0,
@@ -1455,6 +1582,8 @@
       "similitud": 0.9012778997421265,
       "por_que": "Mismo concepto de diseño para factores críticos y reducción de error humano, solo cambia la fase asignada",
       "quedaria": "Diseño para Factores Críticos y Reducción de Error Humano",
+      "sobrevive": "diseno_para_factores_criticos_y_error_humano",
+      "sobrevive_por": "propuesto",
       "telemetria": {
         "diseno_para_factores_criticos": {
           "visto": 0,
@@ -1476,6 +1605,8 @@
       "similitud": 0.9011414051055908,
       "por_que": "Ambos describen el mismo sexto paso del programa de Crosby: un método sistemático para resolver problemas identificados.",
       "quedaria": "Paso Seis: Acción Correctiva",
+      "sobrevive": "accion_correctiva_5",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "accion_correctiva_3": {
           "visto": 0,
@@ -1497,6 +1628,8 @@
       "similitud": 0.9007673263549805,
       "por_que": "Misma herramienta (principio de Pareto, pocos vitales/muchos útiles) para priorizar problemas.",
       "quedaria": "Análisis de Pareto para Priorización de Problemas",
+      "sobrevive": "analisis_pareto",
+      "sobrevive_por": "telemetría",
       "telemetria": {
         "analisis_pareto": {
           "visto": 2,

@@ -92,23 +92,49 @@ def main():
     hall = {k: v for k, v in hall.items() if v}
     por_baranda = Counter(h["baranda"] for v in hall.values() for h in v)
 
+    # LA REGLA DEL SUPERVIVIENTE (adjudicada por fundador+auditor, 2026-08-07).
+    # El consolidador juzga por CONTENIDO y no ve la telemetria. Cuando
+    # discrepan manda la telemetria: la continuidad del id mas pisado es la que
+    # menos fricción crea con project_nodes, que es historia de gente real. El
+    # contenido del propuesto no se pierde: se rescata DENTRO del superviviente.
+    # Sin historia en ningun nodo del cluster, manda el propuesto.
+    def superviviente(c, v):
+        con_historia = [n for n in c if vis.get(n)]
+        if con_historia:
+            elegido = max(con_historia, key=lambda n: (vis.get(n, 0), cos.get(n, 0)))
+            return elegido, "telemetría"
+        for n in c:
+            if grafo[n].get("titulo_concepto") == v.get("quedaria"):
+                return n, "propuesto"
+        return c[0], "primero (sin historia y sin propuesta legible)"
+
     md = [f"# Índice de fusión de {pack}", "",
           f"{len(confirmados)} clusters propuestos, {sum(len(c) for _, c in confirmados)} nodos "
           f"de los {len(del_pack)} del pack.", "",
           "**Borra las líneas de lo que NO debe fundirse. Lo que quede se consolida.**", "",
-          "Cada nodo trae su telemetría: `visto N` = veces que apareció en el recorrido "
-          "de alguien, `cosechado N` = veces que se llevó a un plan. Un nodo con historia "
-          "no se borra nunca (su id sobrevive); pero si es el que la gente pisa, "
-          "probablemente sea el que debe quedarse como superviviente.", ""]
+          "## La regla del superviviente (vigente)", "",
+          "**Sobrevive el nodo con más historia.** La telemetría es la voz de los "
+          "caminos reales, y conservar el id más pisado es lo que menos fricción crea "
+          "con `project_nodes`. El contenido del que proponía el consolidador **no se "
+          "pierde**: se rescata dentro del superviviente.", "",
+          "Si ningún nodo del cluster tiene historia, manda el propuesto del "
+          "consolidador. **Tu ojo es la única excepción**: donde discrepes, tacha y "
+          "escribe cuál debe quedarse.", "",
+          "`visto N` = veces que apareció en el recorrido de alguien. "
+          "`cosechado N` = veces que se llevó a un plan. Ningún nodo se borra: los "
+          "absorbidos salen de la selección y su id sigue existiendo.", ""]
 
     for orden, (i, c) in enumerate(confirmados, start=1):
         v = ver[str(i)]
         sim = float(peor.get(str(i), 0))
         tocados = sum(1 for n in c if vis.get(n))
+        gana, motivo = superviviente(c, v)
         md.append(f"## {orden}. {len(c)} nodos · similitud {sim:.3f}"
                   + (f" · **{tocados} con historia**" if tocados else " · sin historia"))
         md.append("")
         md.append(f"> {v.get('por_que','')}")
+        md.append("")
+        md.append(f"**Sobrevive: `{gana}`** ({motivo})")
         md.append("")
         for nid in c:
             n = grafo[nid]
@@ -120,9 +146,13 @@ def main():
             for h in hall.get(nid, []):
                 marcas.append(f"**{NOMBRE_BARANDA[h['baranda']]}**")
             sufijo = f"  ·  {' · '.join(marcas)}" if marcas else ""
-            propuesto = "**←  propuesto**" if n.get("titulo_concepto") == v.get("quedaria") else ""
+            marca = ""
+            if nid == gana:
+                marca = "**← SOBREVIVE**"
+            elif n.get("titulo_concepto") == v.get("quedaria"):
+                marca = "*(el consolidador proponía este; su contenido se rescata)*"
             md.append(f"- [{ETAPA.get(n.get('fase_proyecto'), '?')}] "
-                      f"**{n.get('titulo_concepto')}** `{nid}`{sufijo} {propuesto}")
+                      f"**{n.get('titulo_concepto')}** `{nid}`{sufijo} {marca}")
             for h in hall.get(nid, []):
                 md.append(f"    - {NOMBRE_BARANDA[h['baranda']]}: {h['cita'][:170]}")
         md.append("")
@@ -147,11 +177,14 @@ def main():
     salida.mkdir(parents=True, exist_ok=True)
     (salida / f"INDICE_DE_FUSION_{pack}.md").write_text("\n".join(md), encoding="utf-8")
     (salida / f"_poda_{pack}.json").write_text(json.dumps({
+        "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
         "pack": pack, "umbral": censo["umbral"],
         "clusters": [{"orden": o, "indice": i, "nodos": c,
                       "similitud": float(peor.get(str(i), 0)),
                       "por_que": ver[str(i)].get("por_que"),
                       "quedaria": ver[str(i)].get("quedaria"),
+                      "sobrevive": superviviente(c, ver[str(i)])[0],
+                      "sobrevive_por": superviviente(c, ver[str(i)])[1],
                       "telemetria": {n: {"visto": vis.get(n, 0), "cosechado": cos.get(n, 0)} for n in c}}
                      for o, (i, c) in enumerate(confirmados, start=1)],
         "barandas": {k: v for k, v in hall.items()},
