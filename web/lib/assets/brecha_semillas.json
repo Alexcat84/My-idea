@@ -1,5 +1,5 @@
 {
-  "_nota": "Fase v1.3.2 — mapeo determinístico fase_proyecto → semilla de entrada para evaluacionBrecha (patch del usuario, verbatim). Cero LLM. Los packs HSEQ no están aquí a propósito: conservan el puntaje dinámico original de la Fase 3.5. Las claves 'construccion'/'operacion' del patch no existen en el canon de fases (ideacion/validacion/planificacion/ejecucion), así que cada pack lleva además 'planificacion' y 'ejecucion' como alias con el mismo valor — verificado contra la fase real de los nodos semilla: los de 'construccion' son fase planificacion y los de 'operacion' son fase ejecucion. 'crecimiento' se conserva del patch para el futuro (hoy ninguna fase del motor la emite). Si un mapeo chirría, se cambia editando este JSON, sin tocar código.",
+  "_nota": "Fase v1.3.2 — mapeo determinístico fase_proyecto → semilla de entrada para evaluacionBrecha (patch del usuario, verbatim). Cero LLM. Los packs HSEQ no están aquí a propósito: conservan el puntaje dinámico original de la Fase 3.5. Las claves 'construccion'/'operacion' del patch no existen en el canon de fases (ideacion/validacion/planificacion/ejecucion), así que cada pack lleva además 'planificacion' y 'ejecucion' como alias con el mismo valor — verificado contra la fase real de los nodos semilla: los de 'construccion' son fase planificacion y los de 'operacion' son fase ejecucion. 'crecimiento' se conserva del patch para el futuro (hoy ninguna fase del motor la emite). Si un mapeo chirría, se cambia editando este JSON, sin tocar código. Compras y entrega (2026-08-07) se hornean A MANO: integrar_packs no produce ni brecha_semillas ni packs_entry_seeds, y sin ellos el mundo nace mudo porque la brecha nunca dispara.",
   "seguridad_digital": {
     "ideacion": "fundamentos_gestion_riesgo",
     "validacion": "control_minimizacion_datos",
@@ -39,5 +39,25 @@
     "ejecucion": "revisa_tus_riesgos_con_un_ritmo",
     "crecimiento": "del_caos_al_metodo_madurez_de_riesgo",
     "_defecto": "correr_hacia_el_riesgo"
+  },
+  "compras": {
+    "ideacion": "decide_si_lo_compras_o_lo_haces_tu",
+    "validacion": "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+    "construccion": "decide_criterio_eleccion_proveedor",
+    "planificacion": "decide_criterio_eleccion_proveedor",
+    "operacion": "gestiona_contrato_tras_firma",
+    "ejecucion": "gestiona_contrato_tras_firma",
+    "crecimiento": "documenta_el_ahorro_real_de_cada_compra",
+    "_defecto": "decide_si_lo_compras_o_lo_haces_tu"
+  },
+  "entrega": {
+    "ideacion": "decidir_empacar_tu_mismo_o_subcontratar",
+    "validacion": "identificar_si_tu_producto_necesita_proteccion_especial",
+    "construccion": "disenar_empaque_logistica",
+    "planificacion": "disenar_empaque_logistica",
+    "operacion": "elegir_caja_correcta",
+    "ejecucion": "elegir_caja_correcta",
+    "crecimiento": "segmentar_clientes_nivel_servicio",
+    "_defecto": "decidir_empacar_tu_mismo_o_subcontratar"
   }
 }

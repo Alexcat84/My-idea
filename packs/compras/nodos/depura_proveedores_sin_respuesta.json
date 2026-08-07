@@ -1,0 +1,30 @@
+{
+  "node_id": "depura_proveedores_sin_respuesta",
+  "fase_proyecto": "ejecucion",
+  "dominio": "compras",
+  "titulo_concepto": "Depura tu lista de proveedores que no responden",
+  "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Anexo de aviso de no participación",
+  "resumen_teorico": "Cuando envías una solicitud de cotización a varios proveedores, es común que algunos no respondan nunca. Sin un mecanismo para cerrar ese silencio, terminas persiguiendo contactos que ya decidieron no participar, perdiendo tiempo valioso. La solución es enviar un aviso corto pidiendo confirmación explícita: que digan si participan, si no pueden esta vez pero quieren seguir en tu lista, o si prefieren salir de ella por completo. Esto te permite depurar tu base de proveedores, quedarte solo con contactos activos y mantener una relación cordial con quienes no participan hoy pero podrían servirte en el futuro. Un silencio total, sin ninguna respuesta, es la señal más clara de que ese contacto ya no es confiable para tu proceso de compra.",
+  "pasos_accionables": [
+    "Envía un mensaje corto a cada proveedor que no cotizó pidiendo que confirme si participa o no.",
+    "Da un plazo breve de unos días para que respondan antes de tu fecha límite de decisión.",
+    "Marca como inactivos a quienes no respondan en ese plazo y quítalos de tu lista activa.",
+    "Guarda a quienes contesten que no participan esta vez pero quieren seguir en tu lista para la próxima.",
+    "Actualiza tu lista de proveedores con esta información antes de avanzar con la compra."
+  ],
+  "entregable_esperado": "Una lista de proveedores depurada con el estado confirmado de cada contacto.",
+  "nodos_previos": [
+    "plantilla_fija_cotizaciones",
+    "decide_criterio_eleccion_proveedor"
+  ],
+  "nodos_siguientes": [
+    "negocia_por_intereses_no_posiciones",
+    "preguntas_abiertas_motivacion_proveedor"
+  ],
+  "condiciones_activacion": [
+    "Enviaste una solicitud de cotización a varios proveedores y algunos no contestaron.",
+    "Necesitas cerrar tu lista de contactos antes de avanzar con la compra.",
+    "Quieres saber si un proveedor sigue interesado en trabajar contigo en el futuro."
+  ],
+  "etiqueta_arbol": "Depura proveedores sin respuesta"
+}

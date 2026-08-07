@@ -1,0 +1,29 @@
+{
+  "node_id": "define_punto_maximo_de_stock",
+  "fase_proyecto": "ejecucion",
+  "dominio": "compras",
+  "titulo_concepto": "Define tu punto máximo de stock y cada cuánto lo revisas",
+  "fuente": "Max Muller, Essentials of Inventory Management",
+  "resumen_teorico": "Para no quedarte sin producto ni acumular de más, conviene fijar un punto de reorden: la cantidad mínima con la que todavía puedes esperar a que llegue el próximo pedido sin quedarte a cero. Ese punto se calcula combinando cuánto vendes por semana, cuánto tarda tu proveedor en entregar, y un colchón extra por si hay retrasos o defectos. A partir de ahí también puedes fijar un máximo: cuánto quieres tener en total antes de dejar de pedir más. Estos números no son fijos para siempre: cambian si tu ritmo de ventas cambia o si tu proveedor modifica sus tiempos de entrega, así que conviene revisarlos cada vez que eso ocurra.",
+  "pasos_accionables": [
+    "Calcula cuánto vendes o usas de ese producto en una semana normal.",
+    "Pregunta a tu proveedor cuánto tarda en llegar un pedido desde que lo haces.",
+    "Multiplica tu uso semanal por el tiempo de entrega para saber tu reserva de trabajo.",
+    "Añade un colchón de seguridad, una porción extra de esa reserva, para cubrir retrasos o defectos.",
+    "Suma reserva más colchón para obtener tu punto de reorden, y anótalo junto al producto.",
+    "Revisa estos cálculos cada vez que cambie tu volumen de ventas o el proveedor cambie su plazo de entrega."
+  ],
+  "entregable_esperado": "Un punto de reorden y un nivel máximo de stock calculados y escritos para cada producto clave.",
+  "nodos_previos": [
+    "plantea_oferta_como_rango_o_cifra_precisa"
+  ],
+  "nodos_siguientes": [
+    "lleva_scorecard_desempeno_proveedor"
+  ],
+  "condiciones_activacion": [
+    "Te has quedado sin stock de un producto que se vende bien y perdiste ventas.",
+    "Tienes dinero atrapado en productos que compraste de más y no se mueven.",
+    "No sabes con certeza cuándo volver a pedir un producto a tu proveedor."
+  ],
+  "etiqueta_arbol": "Fija tu punto de reorden"
+}

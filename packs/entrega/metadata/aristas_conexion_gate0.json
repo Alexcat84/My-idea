@@ -1,0 +1,83 @@
+[
+  {
+    "ronda": 1,
+    "padre": "detectar_prioridad_cliente_entrega",
+    "hijo": "pagar_mas_por_velocidad",
+    "score": 0.657,
+    "titulo_padre": "Detectar lo que el cliente realmente prioriza en la entrega",
+    "titulo_hijo": "Pagar más por velocidad cuando conviene",
+    "tamano_cluster_conectado": 1
+  },
+  {
+    "ronda": 1,
+    "padre": "revisar_necesidades_de_empaque",
+    "hijo": "clasificar_tipo_paquete",
+    "score": 0.6995,
+    "titulo_padre": "Revisar necesidades de empaque antes de comprar materiales",
+    "titulo_hijo": "Clasificar el tipo de paquete antes de despachar",
+    "tamano_cluster_conectado": 8
+  },
+  {
+    "ronda": 1,
+    "padre": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+    "hijo": "detectar_empaque_poco_rigido",
+    "score": 0.6694,
+    "titulo_padre": "Definir qué cuenta como daño antes de probar el empaque",
+    "titulo_hijo": "Detectar señales de un empaque poco rígido",
+    "tamano_cluster_conectado": 3
+  },
+  {
+    "ronda": 1,
+    "padre": "colocar_etiquetas_de_manejo_correctamente",
+    "hijo": "medir_paquete_redondeando_hacia_arriba",
+    "score": 0.7012,
+    "titulo_padre": "Colocar y usar etiquetas de manejo correctamente",
+    "titulo_hijo": "Medir el paquete redondeando hacia arriba",
+    "tamano_cluster_conectado": 1
+  },
+  {
+    "ronda": 1,
+    "padre": "encuestar_al_cliente_para_saber_que_valora",
+    "hijo": "diez_derechos_servicio_cliente",
+    "score": 0.6208,
+    "titulo_padre": "Encuestar al cliente para saber qué valora del servicio",
+    "titulo_hijo": "Los diez derechos del servicio al cliente",
+    "tamano_cluster_conectado": 3
+  },
+  {
+    "ronda": 1,
+    "padre": "encuestar_al_cliente_para_saber_que_valora",
+    "hijo": "saber_hasta_donde_mejorar_servicio",
+    "score": 0.7137,
+    "titulo_padre": "Encuestar al cliente para saber qué valora del servicio",
+    "titulo_hijo": "Saber hasta dónde vale la pena mejorar el servicio",
+    "tamano_cluster_conectado": 1
+  },
+  {
+    "ronda": 1,
+    "padre": "mapear_servicio_antes_durante_despues",
+    "hijo": "descomponer_tiempo_ciclo_pedido",
+    "score": 0.566,
+    "titulo_padre": "Mapear el servicio antes, durante y después de la entrega",
+    "titulo_hijo": "Descomponer el tiempo de ciclo del pedido",
+    "tamano_cluster_conectado": 1
+  },
+  {
+    "ronda": 1,
+    "padre": "detectar_prioridad_cliente_entrega",
+    "hijo": "reducir_devoluciones_mejorando_informacion_previa",
+    "score": 0.7439,
+    "titulo_padre": "Detectar lo que el cliente realmente prioriza en la entrega",
+    "titulo_hijo": "Reducir devoluciones mejorando la informacion previa",
+    "tamano_cluster_conectado": 1
+  },
+  {
+    "ronda": 1,
+    "padre": "detectar_prioridad_cliente_entrega",
+    "hijo": "flujo_decision_devoluciones",
+    "score": 0.6804,
+    "titulo_padre": "Detectar lo que el cliente realmente prioriza en la entrega",
+    "titulo_hijo": "Tener un flujo de decisión para cada devolución",
+    "tamano_cluster_conectado": 1
+  }
+]

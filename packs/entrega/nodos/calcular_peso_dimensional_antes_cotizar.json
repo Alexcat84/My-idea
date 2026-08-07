@@ -1,0 +1,27 @@
+{
+  "node_id": "calcular_peso_dimensional_antes_cotizar",
+  "fase_proyecto": "planificacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Calcular el peso dimensional antes de cotizar",
+  "fuente": "Guia de empaque para envios (FedEx)",
+  "resumen_teorico": "Cuando un courier cotiza tu envio, no siempre cobra por el peso real de la bascula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un numero fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese calculo puede darte un peso mayor al real, y el courier siempre te cobra por el mas alto de los dos. El divisor cambia entre couriers y entre paises, y tambien puede cambiar de un ano a otro, asi que no sirve memorizar un numero: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este calculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas mas ajustadas al tamano real de tu producto.",
+  "pasos_accionables": [
+    "Mide el largo, ancho y alto de tu caja en las unidades que use tu courier.",
+    "Pregunta a tu courier cual es su divisor de peso dimensional actual.",
+    "Multiplica las tres medidas y divide el resultado entre ese divisor.",
+    "Compara ese numero contra el peso real de tu paquete en la bascula.",
+    "Usa el mayor de los dos numeros para calcular el costo antes de cotizar con el cliente."
+  ],
+  "entregable_esperado": "El peso facturable real de tu paquete, calculado con el divisor vigente de tu courier, listo para cotizar sin sorpresas.",
+  "nodos_previos": [
+    "decidir_cobro_velocidad_ventana_entrega",
+    "probar_empaque_antes_de_escalar_envios"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Te sorprendio una factura de envio mas alta de lo que esperabas segun el peso de tu producto.",
+    "Estas eligiendo el tamano de caja para un producto liviano pero voluminoso.",
+    "Vas a cotizar un envio nuevo y no sabes si te cobraran por peso real o por volumen."
+  ],
+  "etiqueta_arbol": "Calcula el peso dimensional"
+}

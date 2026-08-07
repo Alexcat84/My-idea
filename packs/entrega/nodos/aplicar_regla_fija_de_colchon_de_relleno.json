@@ -1,0 +1,27 @@
+{
+  "node_id": "aplicar_regla_fija_de_colchon_de_relleno",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Aplicar una regla fija de colchón de relleno",
+  "fuente": "Requisitos de empaque de los couriers",
+  "resumen_teorico": "Adivinar cuánto relleno poner en cada caja es una fuente constante de daños y devoluciones. Los couriers coinciden en una cifra similar: deja entre cinco y seis centímetros de separación entre el producto y cada pared de la caja, y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
+  "pasos_accionables": [
+    "Mide con una regla la distancia entre el producto y cada pared de la caja antes de cerrarla.",
+    "Ajusta el tamaño de caja si la distancia es menor a cinco centímetros en algún lado.",
+    "Rellena cualquier espacio vacío hasta que el producto no se mueva al agitar la caja con cuidado.",
+    "Anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez."
+  ],
+  "entregable_esperado": "Una regla escrita de cinco a seis centímetros de colchón en todos los lados, aplicada en cada envío.",
+  "nodos_previos": [
+    "hacer_cajas_a_medida_del_pedido"
+  ],
+  "nodos_siguientes": [
+    "elegir_material_de_relleno_segun_producto"
+  ],
+  "condiciones_activacion": [
+    "Empacas cada pedido a ojo y a veces el producto llega golpeado.",
+    "No sabes cuánto relleno es suficiente y por eso usas de más o de menos.",
+    "Recibes quejas de clientes porque el producto se movió dentro de la caja."
+  ],
+  "etiqueta_arbol": "Deja 5 cm de colchón siempre"
+}

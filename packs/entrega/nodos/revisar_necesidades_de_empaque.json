@@ -1,0 +1,29 @@
+{
+  "node_id": "revisar_necesidades_de_empaque",
+  "fase_proyecto": "planificacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Revisar necesidades de empaque antes de comprar materiales",
+  "fuente": "DHL Express, Guia de empaque",
+  "resumen_teorico": "Antes de comprar cajas, sobres o material de relleno, conviene revisar de forma ordenada las caracteristicas de lo que vas a enviar: cuanto pesa, que tan fragil es, si tiene forma irregular, si es liquido o polvo, cual es su valor y si su uso final exige algo especial. Tambien hay que revisar si el producto cae dentro de alguna categoria regulada, como perfumes, baterias o quimicos, que exigen empaque especifico. Esta evaluacion previa evita comprar el tipo de caja equivocado o descubrir demasiado tarde que el material elegido no protege lo que necesitas proteger. Cada factor apunta a un tipo distinto de solucion, por lo que revisarlos todos antes de comprar ahorra dinero y devoluciones.",
+  "pasos_accionables": [
+    "Antes de comprar cajas o bolsas, anota el peso y la fragilidad de lo que vas a enviar.",
+    "Pregunta si el contenido es liquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+    "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+    "Revisa si tu producto entra en alguna categoria regulada, como baterias, perfumes o quimicos, antes de despacharlo.",
+    "Con esa informacion decide si necesitas caja simple, de doble pared o bolsa plastica."
+  ],
+  "entregable_esperado": "Una lista de requisitos de empaque especificos para tu producto, lista antes de comprar materiales.",
+  "nodos_previos": [
+    "disenar_empaque_logistica"
+  ],
+  "nodos_siguientes": [
+    "conocer_limites_peso_tamano_courier",
+    "clasificar_tipo_paquete"
+  ],
+  "condiciones_activacion": [
+    "Vas a empezar a enviar un producto nuevo y no sabes que tipo de caja comprar.",
+    "Has tenido devoluciones por daño y no sabes si el problema es el empaque o el contenido.",
+    "Sospechas que tu producto podria clasificar como mercancia peligrosa, como perfumes o baterias."
+  ],
+  "etiqueta_arbol": "Evalúa antes de empacar"
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "descomponer_tiempo_ciclo_pedido",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Descomponer el tiempo de ciclo del pedido",
+  "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+  "resumen_teorico": "El tiempo total desde que un cliente hace un pedido hasta que lo recibe no es un solo número: es la suma de varias etapas separadas. Se puede dividir en el tiempo desde que llega el pedido hasta que lo registras, de ahí hasta que lo asignas para armar, de ahí hasta que efectivamente lo armas, de ahí hasta que sale de tu punto de despacho, y finalmente desde que sale hasta que llega al cliente. Cuando alguien se queja de que el pedido tardó mucho, medir solo el total no dice nada útil. Medir cada tramo por separado sí permite encontrar exactamente dónde se atora el proceso, en vez de adivinar o culpar al courier cuando el problema real estaba en tu propia demora para armar el paquete.",
+  "pasos_accionables": [
+    "Lista las etapas de tu propio proceso: recepción, registro, asignación para armar, armado, despacho y entrega.",
+    "Anota fecha y hora en que cada pedido pasa por cada etapa, aunque sea en una hoja simple.",
+    "Cuando un pedido se demore, revisa en cuál etapa específica se quedó más tiempo de lo normal.",
+    "Ataca esa etapa puntual en vez de intentar cambiar todo el proceso de golpe."
+  ],
+  "entregable_esperado": "Una tabla de tiempos por etapa para tus últimos veinte pedidos, con el cuello de botella identificado.",
+  "nodos_previos": [
+    "mapear_servicio_antes_durante_despues"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Los clientes se quejan de lentitud pero no sabes en qué parte del proceso se pierde el tiempo.",
+    "Quieres reducir el tiempo de entrega pero no sabes por dónde empezar.",
+    "Manejas varios pedidos a la vez y algunos tardan mucho más que otros sin razón clara."
+  ],
+  "etiqueta_arbol": "Mide cada etapa de tu pedido"
+}

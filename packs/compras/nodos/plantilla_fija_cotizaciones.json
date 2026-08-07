@@ -1,0 +1,29 @@
+{
+  "node_id": "plantilla_fija_cotizaciones",
+  "fase_proyecto": "planificacion",
+  "dominio": "compras",
+  "titulo_concepto": "Usa una plantilla fija para pedir y comparar cotizaciones",
+  "fuente": "Diana L. Lindstrom, Procurement Project Management Success, Apendice B (RFPS)",
+  "resumen_teorico": "Cuando pides cotizaciones a distintos proveedores sin una guia fija, cada uno responde a una version distinta de tu necesidad y comparar precios se vuelve imposible. La solucion es armar un formulario propio, corto, que capture siempre lo mismo: que necesitas, cuanto, para cuando, y cualquier condicion especial. Ese mismo formulario, o la lista de requisitos que contiene, se envia igual a todos los proveedores que cotices. Asi cada cotizacion responde a la misma pregunta y puedes comparar peras con peras. Si al final decides quedarte con un solo proveedor sin comparar, el mismo documento te sirve para anotar por que, de modo que la decision quede registrada y no dependa solo de la memoria o de la simpatia del momento.",
+  "pasos_accionables": [
+    "Crea un formulario simple con: que necesitas, cantidad, fecha de entrega requerida y presupuesto aproximado.",
+    "Envia el mismo formulario o lista de requisitos a cada proveedor que vayas a cotizar.",
+    "Pide a cada proveedor que cotice exactamente los mismos items, cantidades y plazos.",
+    "Guarda las cotizaciones recibidas junto con la fecha en que las pediste.",
+    "Si eliges un proveedor unico sin comparar, escribe la razon en el mismo documento."
+  ],
+  "entregable_esperado": "Un formulario de solicitud de compra que reutilizas cada vez que pides cotizaciones a proveedores.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "decide_criterio_eleccion_proveedor",
+    "depura_proveedores_sin_respuesta",
+    "etiqueta_lo_que_piensa_el_proveedor",
+    "presentate_con_tu_nombre_para_descuento"
+  ],
+  "condiciones_activacion": [
+    "Estas recibiendo cotizaciones de varios proveedores y no sabes si son comparables entre si.",
+    "Compras el mismo tipo de insumo cada mes y cada vez improvisas el pedido desde cero.",
+    "Sospechas que estas pagando precios distintos por lo mismo segun a quien le preguntes."
+  ],
+  "etiqueta_arbol": "Pide cotizaciones con la misma plantilla"
+}

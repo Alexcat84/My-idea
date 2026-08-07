@@ -1,0 +1,29 @@
+{
+  "node_id": "detectar_empaque_poco_rigido",
+  "fase_proyecto": "validacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Detectar señales de un empaque poco rígido",
+  "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+  "resumen_teorico": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque tiene fallas evidentes de rigidez. Los protocolos de prueba profesionales describen ciertas senales que anuncian un empaque debil: caras muy grandes sin soporte interno, uso de envoltura plastica estirable como unica proteccion, carton de calibre delgado o simple papel envolviendo el producto, y el peor de todos, que la pared de la caja toque directamente el producto sin ningun relleno de por medio. Cualquiera de estas senales significa que el paquete probablemente fallara ante un golpe o una caida normal durante el transporte. Revisar tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar te ahorra dinero y evita que descubras el problema cuando ya tienes producto danado en manos de tus clientes.",
+  "pasos_accionables": [
+    "Revisa si alguna cara de tu caja es grande y no tiene refuerzo ni soporte interno.",
+    "Verifica que el producto nunca toque directamente la pared de la caja.",
+    "Cambia el papel o el plastico estirable por carton corrugado si es tu unica proteccion.",
+    "Aprieta la caja armada con las manos para sentir si el carton es demasiado delgado.",
+    "Anota cada senal de debilidad que encuentres antes de decidir si necesitas rediseñar."
+  ],
+  "entregable_esperado": "Una lista de las fallas de rigidez encontradas en tu empaque actual, lista para corregir antes de escalar.",
+  "nodos_previos": [
+    "definir_que_cuenta_como_dano_antes_de_probar_empaque"
+  ],
+  "nodos_siguientes": [
+    "simular_riesgos_transito_antes_de_enviar",
+    "probar_empaque_antes_de_escalar_envios"
+  ],
+  "condiciones_activacion": [
+    "Estas eligiendo entre varias opciones de caja o material y no sabes cual es realmente resistente.",
+    "Te preocupa que tu empaque actual sea demasiado delgado pero no tienes forma de comprobarlo.",
+    "Recibiste quejas de productos rotos y sospechas que el empaque no protege lo suficiente."
+  ],
+  "etiqueta_arbol": "Detecta fallas en tu empaque"
+}
