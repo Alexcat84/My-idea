@@ -120,4 +120,27 @@ describe("el intercambiador de caras", () => {
     // ninguna animación en bucle sobre la luz
     expect(css.slice(i, i + 600)).not.toContain("animation");
   });
+
+  it("mueve la luz con la MISMA propiedad que el CSS anima", () => {
+    // La avería de origen (cazada por el fundador, ago 2026): el CSS animaba
+    // `transform` y el componente movía la luz con `left`. Como left no estaba
+    // en la lista de transiciones, el salto horizontal era instantáneo: la luz
+    // se teletransportaba y solo el ancho rebotaba. Nada fallaba, solo no
+    // animaba. Este assert ata las dos mitades.
+    const fuente = leer("ui/SelectorCara.tsx");
+    const css = readFileSync(path.join(RAIZ, "globals.css"), "utf-8");
+    const regla = css.slice(css.indexOf(".cambiador-luz"), css.indexOf(".cambiador-luz") + 400);
+    const transicion = regla.slice(regla.indexOf("transition:"), regla.indexOf("}"));
+
+    expect(fuente).toContain("translateX(");
+    expect(transicion).toContain("transform");
+    expect(transicion).toContain("width");
+    // y no la mueve por el carril viejo, que la transición no cubre
+    expect(fuente).not.toContain("left: ind.left");
+  });
+
+  it("coloca la luz sin transición en el montaje (no entra volando)", () => {
+    const fuente = leer("ui/SelectorCara.tsx");
+    expect(fuente).toContain('transition: "none"');
+  });
 });
