@@ -208,6 +208,16 @@ def main():
     # e-parte-1. recompilar master_graph + Gate 0 (los nodos ya están en dataset/)
     correr([sys.executable, "scripts/run_phase1.py"], "e. run_phase1: recompilación + Gate 0 (debe quedar VERDE)")
 
+    # e-parte-1b. RE-APLICAR las etiquetas de cara. Cazado el 2026-08-07
+    # integrando compras y entrega: la curaduría de etiquetas parchea las dos
+    # COPIAS del grafo, no los archivos de nodo, así que run_phase1 la revierte
+    # cada vez que recompila el master desde dataset/nodos/. Sin este paso, una
+    # integración devuelve a 71 nodos del core su jerga original ("Canvas",
+    # "Pivotar", "SPIN") sin que nada se queje: el grafo queda válido y el
+    # usuario ve palabras que el fundador saco de la casa hace una fase.
+    correr([sys.executable, "scripts/etiquetas_de_cara.py", "--aplicar"],
+           "e-bis. Re-aplicar las etiquetas de cara (run_phase1 las revierte)")
+
     # b. familias (sin costo) — DESPUÉS de run_phase1: plan_readiness lee
     # master_graph.json, que recién queda recompilado con el grafo ampliado.
     correr([sys.executable, "engine/plan_readiness.py"], "b. Etiquetas de familia (readiness) para el grafo ampliado")

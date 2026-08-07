@@ -1,0 +1,28 @@
+{
+  "node_id": "proteger_fragiles_caja_dentro_de_caja",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Proteger fragiles con el metodo caja dentro de caja",
+  "fuente": "DHL Express, Guia de empaque",
+  "resumen_teorico": "Para articulos fragiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El metodo caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa mas grande, dejando un colchon de relleno entre ambas paredes. Como referencia general, la caja externa suele ser entre 14 y 15 centimetros mas grande que la interna en cada dimension, con varios centimetros de relleno separandolas por los seis lados, pero conviene confirmar la medida exacta con tu courier o probarla vos mismo. Este doble amortiguamiento absorbe golpes que una sola caja no aguanta, y es la tecnica recomendada cuando el producto original ya viene en su empaque de fabrica, que no esta pensado para reenviarse.",
+  "pasos_accionables": [
+    "Acolchona el producto y colocalo dentro de una caja interna resistente.",
+    "Elige una caja externa varios centimetros mas grande en cada dimension que la interna.",
+    "Pon relleno en el fondo de la caja externa antes de meter la caja interna.",
+    "Centra la caja interna dentro de la externa y rellena todos los espacios vacios alrededor.",
+    "Sella ambas cajas con el metodo de cinta en H antes de despachar."
+  ],
+  "entregable_esperado": "Un envio fragil protegido con dos capas de caja y relleno entre ambas.",
+  "nodos_previos": [
+    "elegir_caja_correcta"
+  ],
+  "nodos_siguientes": [
+    "sellar_cajas_metodo_cinta_en_h"
+  ],
+  "condiciones_activacion": [
+    "Vendes productos fragiles, filosos o de valor alto que no puedes arriesgar a que lleguen rotos.",
+    "Estas reenviando un producto en su empaque original de fabrica.",
+    "Ya tuviste reclamos por daños con una sola caja y necesitas mas proteccion."
+  ],
+  "etiqueta_arbol": "Usa el sandwich de dos cajas"
+}

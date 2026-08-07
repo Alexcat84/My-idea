@@ -1,0 +1,28 @@
+{
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Elegir el material de relleno según el producto",
+  "fuente": "Guia de empaque para transporte",
+  "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles y económicos. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+  "pasos_accionables": [
+    "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
+    "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados.",
+    "Evita maníes de poliestireno comunes con productos planos o electrónicos; usa la versión antiestática si es necesario.",
+    "Reserva el papel kraft arrugado para artículos resistentes y de bajo valor.",
+    "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve."
+  ],
+  "entregable_esperado": "Una lista corta de qué material de relleno usar para cada tipo de producto que vendes.",
+  "nodos_previos": [
+    "aplicar_regla_fija_de_colchon_de_relleno"
+  ],
+  "nodos_siguientes": [
+    "adaptar_empaque_segun_tipo_de_articulo"
+  ],
+  "condiciones_activacion": [
+    "Usas siempre el mismo relleno sin importar si el producto es electrónico, plano o frágil.",
+    "Has tenido productos electrónicos dañados por estática después de usar maníes de poliestireno.",
+    "No sabes cuál material comprar porque hay demasiadas opciones en la tienda de empaques."
+  ],
+  "etiqueta_arbol": "Elige el relleno según tu producto"
+}

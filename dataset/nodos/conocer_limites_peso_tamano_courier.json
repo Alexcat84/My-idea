@@ -1,0 +1,28 @@
+{
+  "node_id": "conocer_limites_peso_tamano_courier",
+  "fase_proyecto": "planificacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Conocer los límites de peso y tamaño del courier",
+  "fuente": "Guia visual de empaque",
+  "resumen_teorico": "Cada courier fija un peso maximo y unas dimensiones maximas por paquete, ademas de un metodo para calcular el peso volumetrico: el volumen del paquete dividido entre un factor propio de cada transportista. El costo se cobra por el mayor entre el peso real y ese peso volumetrico, asi que una caja demasiado grande para su contenido puede salir mas cara aunque pese poco. Tambien existen recargos por manejo adicional cuando el paquete tiene forma irregular, materiales rigidos como metal o madera, o cuando supera ciertos umbrales de largo o de suma de largo mas perimetro. Estos numeros cambian por courier y por pais, asi que hay que preguntarlos directamente en lugar de asumirlos.",
+  "pasos_accionables": [
+    "Pregunta a tu courier cual es el peso maximo y las dimensiones maximas que acepta sin cargo extra.",
+    "Pide el divisor que usa tu courier para calcular el peso volumetrico de tus paquetes.",
+    "Calcula el peso volumetrico de tu paquete tipico y comparalo contra su peso real.",
+    "Usa el mayor de los dos valores para estimar el costo real de cada envio.",
+    "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de mas."
+  ],
+  "entregable_esperado": "Una tabla propia con peso, medidas y peso volumetrico de tus paquetes tipicos, comparada contra los limites de tu courier.",
+  "nodos_previos": [
+    "revisar_necesidades_de_empaque"
+  ],
+  "nodos_siguientes": [
+    "elegir_modo_transporte_volumen_distancia"
+  ],
+  "condiciones_activacion": [
+    "Te sorprendio un cargo adicional en la factura de tu courier y no sabes por que.",
+    "Estas eligiendo entre dos couriers y quieres saber cual acepta mejor tus medidas.",
+    "Tu producto es pesado, voluminoso o tiene una forma irregular, como una llanta o un cilindro."
+  ],
+  "etiqueta_arbol": "Conoce los límites de tu courier"
+}

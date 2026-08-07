@@ -1,0 +1,26 @@
+{
+  "node_id": "traduce_stock_muerto_numeros",
+  "fase_proyecto": "ejecucion",
+  "dominio": "compras",
+  "titulo_concepto": "Traduce el stock muerto a números duros",
+  "fuente": "Max Muller, Essentials of Inventory Management",
+  "resumen_teorico": "El inventario que no se vende no es gratis, aunque ya lo hayas pagado: sigue costando espacio, tiempo y dinero cada día que se queda contigo. Para convencerte a ti mismo, o a quien decide, de deshacerte de mercancía muerta, no digas que ocupa espacio: calcula cuántos metros ocupa, cuánto pagas de renta o de tiempo de manejo por ese espacio al mes, y cuánto te cuesta cada peso invertido en esa mercancía por año simplemente por tenerla guardada. Sumado a lo largo del tiempo, ese costo de mantener puede superar lo que ganarías si la vendieras con descuento hoy. Traducir el problema a números concretos, en vez de quedarte en generalidades, es lo que te permite decidir liquidar a tiempo en lugar de esperar a que la mercancía valga menos.",
+  "pasos_accionables": [
+    "Mide cuánto espacio ocupa la mercancía que no se mueve, en metros o en estantes.",
+    "Pregunta cuánto pagas por ese espacio al mes, en renta o en tiempo de tu gente moviéndola.",
+    "Calcula qué porcentaje de esa inversión te cuesta mantenerla guardada cada año.",
+    "Compara ese costo acumulado contra lo que recuperarías si la vendes con descuento ahora.",
+    "Decide una fecha límite para liquidar si el costo de mantener supera lo que puedes recuperar."
+  ],
+  "entregable_esperado": "Un cálculo simple del costo de mantener el inventario muerto, en dinero y espacio.",
+  "nodos_previos": [
+    "conoce_insumos_vitales"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Tienes mercancía guardada hace meses que no se ha vendido y no sabes si liquidarla.",
+    "Alguien te dice que no vendas con pérdida porque ya está pagado.",
+    "Necesitas espacio en tu bodega o local y no sabes qué justifica sacar primero."
+  ],
+  "etiqueta_arbol": "Calcula el costo del stock muerto"
+}

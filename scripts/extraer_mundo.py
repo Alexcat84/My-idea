@@ -335,6 +335,14 @@ def revisar_nodo(nodo, fragmento, ids_tomados):
             fallas.append(f"guion largo en '{campo}'")
 
     etiqueta = nodo.get("etiqueta_arbol", "")
+    # Las palabras que SIEMPRE llevan tilde. La etiqueta es lo que el usuario
+    # lee en el riel: una tilde perdida ahi se ve mas que en ningun otro campo.
+    # Cazado el 2026-08-07 por el detector de etiquetas de cara, no por aqui.
+    # ("solo" queda fuera a proposito: sin tilde es la forma correcta hoy.)
+    for palabra in ("rapido", "rapida", "mas", "cuando", "aqui", "asi", "despues",
+                    "segun", "quien", "cuanto", "cuanta", "tambien"):
+        if palabra in etiqueta.lower().split():
+            fallas.append(f"etiqueta_arbol sin tilde: '{palabra}' en '{etiqueta}'")
     if etiqueta and (len(etiqueta) > 40 or len(etiqueta.split()) > 6):
         fallas.append(f"etiqueta_arbol de {len(etiqueta.split())} palabras y "
                       f"{len(etiqueta)} caracteres (max 6 y 40)")
@@ -645,7 +653,9 @@ REGLAS QUE NO SE NEGOCIAN:
    conceptos (no como identificadores). El pipeline los resuelve despues.
 8. etiqueta_arbol: maximo 6 palabras y 40 caracteres, en segunda persona o
    imperativo. Cero anglicismos de manual, cero nombres de autores. Es el
-   titular que ve el emprendedor en el riel.
+   titular que ve el emprendedor en el riel, asi que lleva SUS TILDES
+   (rapida se escribe rapida con tilde, cuando interrogativo lleva tilde):
+   una etiqueta sin tildes se ve descuidada justo donde mas se mira.
 
 LAS CUATRO BARANDAS DE LA AUDITORIA (2026-08-07). Un nodo que rompa una de
 estas es un nodo que hace dano, no uno imperfecto:
