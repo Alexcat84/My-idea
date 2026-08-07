@@ -1,10 +1,11 @@
 {
-  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad.",
+  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
   "aprobados": [
     {
-      "core": "diagnostico_de_productos_crudos",
+      "core": "garantias_implicitas_vs_expresas",
       "dominio": "reconocer_mercancia_peligrosa_disfrazada",
-      "score": 0.8145
+      "score": 0.5604,
+      "reanclado_de": "diagnostico_de_productos_crudos"
     },
     {
       "core": "diseno_producto_cadena_suministro",
@@ -12,10 +13,11 @@
       "score": 0.7531
     },
     {
-      "core": "decision_aptitud_uso",
+      "core": "logistica_inversa_retornos",
       "dominio": "revisar_necesidades_de_empaque",
-      "score": 0.7386,
-      "redirigido_de_core": "decision_aptitud_para_uso"
+      "score": 0.5915,
+      "redirigido_de_core": "decision_aptitud_para_uso",
+      "reanclado_de": "decision_aptitud_uso"
     },
     {
       "core": "experiencia_del_cliente_proactiva",
@@ -33,19 +35,22 @@
       "score": 0.7248
     },
     {
-      "core": "pruebas_destructivas",
+      "core": "regla_disponibilidad_previa_venta",
       "dominio": "detectar_empaque_poco_rigido",
-      "score": 0.7232
+      "score": 0.5803,
+      "reanclado_de": "pruebas_destructivas"
     },
     {
-      "core": "embalaje_exportacion",
+      "core": "programacion_entregas_delivery_scheduling",
       "dominio": "tratar_packaging_costo_marca",
-      "score": 0.7207
+      "score": 0.5916,
+      "reanclado_de": "embalaje_exportacion"
     },
     {
-      "core": "servicio_postventa_internacional",
+      "core": "trade_off_responsividad_eficiencia",
       "dominio": "saber_hasta_donde_mejorar_servicio",
-      "score": 0.7202
+      "score": 0.6459,
+      "reanclado_de": "servicio_postventa_internacional"
     },
     {
       "core": "driver_transporte",
@@ -73,9 +78,10 @@
       "score": 0.6982
     },
     {
-      "core": "evalua_la_gravedad_sin_autoengano",
+      "core": "garantias_implicitas_vs_expresas",
       "dominio": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
-      "score": 0.6884
+      "score": 0.5962,
+      "reanclado_de": "evalua_la_gravedad_sin_autoengano"
     }
   ],
   "rechazados": [

@@ -1,10 +1,11 @@
 {
-  "nota": "Curaduria de la extraccion 2026-08-07: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Rechazos uno a uno con motivo abajo.",
+  "nota": "Curaduria de la extraccion 2026-08-07: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Rechazos uno a uno con motivo abajo. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
   "aprobados": [
     {
-      "core": "calificacion_de_calidad_de_proveedores",
+      "core": "gestion_contratos_desempeno",
       "dominio": "lleva_scorecard_desempeno_proveedor",
-      "score": 0.8106
+      "score": 0.6826,
+      "reanclado_de": "calificacion_de_calidad_de_proveedores"
     },
     {
       "core": "ecuacion_de_valor",
@@ -27,9 +28,10 @@
       "score": 0.7714
     },
     {
-      "core": "fin_precio_como_criterio_unico",
+      "core": "negociacion_contratos_proveedores",
       "dominio": "decide_criterio_eleccion_proveedor",
-      "score": 0.7669
+      "score": 0.7461,
+      "reanclado_de": "fin_precio_como_criterio_unico"
     },
     {
       "core": "venta_interna_cliente",
@@ -42,14 +44,16 @@
       "score": 0.7467
     },
     {
-      "core": "aceptacion_bienes_comprados",
+      "core": "obtencion_de_compromiso",
       "dominio": "separa_la_visita_de_evaluacion_de_la_decision_de_compra",
-      "score": 0.7438
+      "score": 0.7011,
+      "reanclado_de": "aceptacion_bienes_comprados"
     },
     {
-      "core": "contacto_con_el_cliente",
+      "core": "negociacion_contratos_proveedores",
       "dominio": "punto_unico_contacto_proveedores",
-      "score": 0.7337
+      "score": 0.7616,
+      "reanclado_de": "contacto_con_el_cliente"
     },
     {
       "core": "fase_assess",
@@ -57,9 +61,10 @@
       "score": 0.7245
     },
     {
-      "core": "transfiere_lo_que_no_debes_cargar",
+      "core": "contract_close_out",
       "dominio": "ata_el_pago_al_cumplimiento_real_del_servicio",
-      "score": 0.7127
+      "score": 0.6687,
+      "reanclado_de": "transfiere_lo_que_no_debes_cargar"
     },
     {
       "core": "elementos_contrato_legal",
