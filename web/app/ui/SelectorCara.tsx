@@ -64,18 +64,18 @@ export function SelectorCara({
     <div
       role="tablist"
       aria-label="Las caras de este espacio"
-      // La ranura: superficie más honda que el lienzo y sombra INTERIOR. El
-      // borde es casi negro, no azul: lo que brilla es la luz, no el marco.
-      className="relative flex w-full rounded-[16px] border border-[#1c1c22] bg-surface-3 p-[5px] shadow-[inset_0_2px_5px_rgba(0,0,0,0.75),inset_0_-1px_2px_rgba(255,255,255,0.04)]"
+      // La ranura y el cristal viven en globals.css: son piezas compartidas
+      // con las tarjetas de acceso del riel, que lucen igual estando quietas.
+      // El borde de la ranura es casi negro, no azul: brilla la luz, no el marco.
+      className="ranura relative flex w-full rounded-[16px] p-[5px]"
     >
       {/* La luz que viaja a la cara activa. */}
       <span
         aria-hidden
-        className="cambiador-luz pointer-events-none absolute bottom-[5px] left-0 top-[5px] z-[1] rounded-[12px] border border-accent/[0.42]"
+        className="cristal cambiador-luz pointer-events-none absolute bottom-[5px] left-0 top-[5px] z-[1] rounded-[12px]"
         style={{
           transform: `translateX(${ind.left}px)`,
           width: ind.width,
-          background: "linear-gradient(145deg, rgba(77,124,254,0.16), rgba(77,124,254,0.05))",
           ...(viaja ? null : { transition: "none" }),
         }}
       />
