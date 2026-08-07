@@ -137,9 +137,10 @@ export function PotenciaTuIdea({
   const [activando, setActivando] = useState<string | null>(null);
   const [errorEn, setErrorEn] = useState<string | null>(null);
   const [avisoBloqueado, setAvisoBloqueado] = useState<string | null>(null);
-  // Solo los PUBLICADOS, salvo que se abra la puerta del mini-gate: un mundo
-  // oculto existe y funciona, pero no se ofrece hasta que el fundador lo camine
-  // y lo publique.
+  // Solo los PUBLICADOS, salvo que se abra la puerta del mini-gate. Hoy los
+  // nueve estan publicados, asi que esto no filtra nada; el filtro sigue en
+  // pie para el proximo mundo que nazca, que entrara oculto hasta que el
+  // fundador lo camine.
   const packs = mundosVisibles(mostrarOcultos) as unknown as Pack[];
 
   // Fase 4.5 (PREVIEW_MUNDOS_PLAN): abrir un mundo es GRATIS, siempre. Lo que

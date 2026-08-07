@@ -1,5 +1,5 @@
 {
-  "comentario": "Catalogo ESTATICO de los mundos: UNICA fuente autorizada para hablar de mundos bloqueados (la fachada jamas lee nodos de packs/). Copy de produccion: nombre y promesa. 'clave' coincide con el campo dominio de los nodos y con los CHECK de pack_clicks, project_unlocks, sessions y plans (migraciones 014, 016, 017, 019 y 036). AQUI NO HAY PRECIOS. Los llevaba (creditos_activar 3, creditos_seguimiento 2) y envejecieron sin que nadie lo notara, porque quien cobra y quien pinta leen web/lib/precios.ts (mundo_activar, mundo_seguimiento). Dos copias del mismo numero se separan; se quitaron en vez de alinearlas. VISIBILIDAD: el campo 'oculto' es el interruptor de publicacion del fundador. Un mundo oculto no se LISTA en ninguna pantalla (mundosVisibles en web/lib/catalogoMundos.ts) pero SI se resuelve por clave, y ?ver=ocultos lo revela MARCADO para que el fundador pueda caminarlo antes de publicarlo.",
+  "comentario": "Catalogo ESTATICO de los mundos: UNICA fuente autorizada para hablar de mundos bloqueados (la fachada jamas lee nodos de packs/). Copy de produccion: nombre y promesa. 'clave' coincide con el campo dominio de los nodos y con los CHECK de pack_clicks, project_unlocks, sessions y plans (migraciones 014, 016, 017, 019 y 036). AQUI NO HAY PRECIOS. Los llevaba (creditos_activar 3, creditos_seguimiento 2) y envejecieron sin que nadie lo notara, porque quien cobra y quien pinta leen web/lib/precios.ts (mundo_activar, mundo_seguimiento). Dos copias del mismo numero se separan; se quitaron en vez de alinearlas. VISIBILIDAD: el campo opcional 'oculto' es el interruptor de publicacion del fundador. Hoy NINGUN pack lo lleva: los nueve estan publicados (compras y entrega entraron ocultos el 2026-08-07 y el fundador los publico el mismo dia). El mecanismo sigue vivo y probado para el proximo mundo que nazca: un pack con oculto true no se LISTA en ninguna pantalla (mundosVisibles en web/lib/catalogoMundos.ts) pero SI se resuelve por clave, y ?ver=ocultos lo revela MARCADO para poder caminarlo antes de publicarlo.",
   "packs": [
     {
       "clave": "quality",
@@ -39,14 +39,12 @@
     {
       "clave": "compras",
       "nombre": "Tu Compra Correcta",
-      "promesa": "Compra lo que toca, al que toca, al precio que toca.",
-      "oculto": true
+      "promesa": "Compra lo que toca, al que toca, al precio que toca."
     },
     {
       "clave": "entrega",
       "nombre": "Del Taller a sus Manos",
-      "promesa": "Que llegue entero, a tiempo y sin sorpresas de costo.",
-      "oculto": true
+      "promesa": "Que llegue entero, a tiempo y sin sorpresas de costo."
     }
   ]
 }

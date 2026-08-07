@@ -39,6 +39,20 @@ export type Mundo = {
 export const MUNDOS: readonly Mundo[] = (catalogo as { packs: Mundo[] }).packs;
 
 /**
+ * El filtro, PURO y aparte del catálogo real.
+ *
+ * Está separado a propósito: hoy los nueve mundos están publicados, así que
+ * `mundosVisibles()` no filtra nada y un test sobre el catálogo real no probaría
+ * el mecanismo, solo lo recorrería. Un mecanismo sin sujeto deja de estar
+ * probado sin que nadie lo note, y el día que nazca el décimo mundo se
+ * descubriría roto. Con esta función el filtro se prueba con datos sintéticos,
+ * exista o no un pack oculto de verdad.
+ */
+export function filtrarVisibles(lista: readonly Mundo[], incluirOcultos = false): Mundo[] {
+  return incluirOcultos ? [...lista] : lista.filter((m) => !m.oculto);
+}
+
+/**
  * Los que se le muestran al usuario. Esta es la lista de las vitrinas.
  *
  * `incluirOcultos` es la PUERTA DEL MINI-GATE, no una publicación. Un mundo
@@ -49,7 +63,7 @@ export const MUNDOS: readonly Mundo[] = (catalogo as { packs: Mundo[] }).packs;
  * un paseo de prueba con un mundo en venta.
  */
 export function mundosVisibles(incluirOcultos = false): Mundo[] {
-  return incluirOcultos ? [...MUNDOS] : MUNDOS.filter((m) => !m.oculto);
+  return filtrarVisibles(MUNDOS, incluirOcultos);
 }
 
 /** Resolución por clave: funciona también para los ocultos (ver cabecera). */

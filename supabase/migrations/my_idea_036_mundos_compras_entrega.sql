@@ -17,10 +17,11 @@
 -- El bloque 036 de my_idea_check_migraciones.sql confirma los 4 contra
 -- pg_constraint ANTES y DESPUÉS (paste-and-run en SQL Editor).
 --
--- NOTA DE VISIBILIDAD: esta migración solo abre la ADUANA de la base. Los dos
--- mundos quedan OCULTOS en el catálogo hasta el visto del fundador; el
--- interruptor es el campo `oculto` de web/lib/assets/packs_catalog.json, que
--- respeta mundosVisibles() en web/lib/catalogoMundos.ts. No vive aquí.
+-- NOTA DE VISIBILIDAD: esta migración solo abre la ADUANA de la base; no
+-- publica nada. Los dos mundos entraron OCULTOS y el fundador los publicó el
+-- mismo día (2026-08-07). El interruptor es el campo `oculto` de
+-- web/lib/assets/packs_catalog.json, que respeta mundosVisibles() en
+-- web/lib/catalogoMundos.ts. Nunca vivió aquí.
 
 ALTER TABLE public.project_unlocks
   DROP CONSTRAINT project_unlocks_dominio_check;
