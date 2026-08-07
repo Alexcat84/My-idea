@@ -10,7 +10,8 @@
  *  3. Usa tus créditos: lo gratis primero, luego los tres planes (Tu proyecto,
  *     Un mundo, y el catálogo de mundos por desbloquear).
  *
- * Números SIEMPRE de precios.ts / packs_catalog.json, jamás hardcodeados. La
+ * Números SIEMPRE de precios.ts, jamás hardcodeados ni copiados al catálogo
+ * (que los llevaba y envejecieron diciendo 3 cuando se cobraban 5). La
  * compra con dinero sigue dormida hasta que despierten las pasarelas: el botón
  * lo dice honesto ("La compra se abre pronto"), no finge cobrar.
  *

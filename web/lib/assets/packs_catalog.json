@@ -1,69 +1,51 @@
 {
-  "comentario": "Catalogo ESTATICO de los mundos: UNICA fuente autorizada para hablar de mundos bloqueados (la fachada jamas lee nodos de packs/). Copy de produccion. 'clave' coincide con el campo dominio de los nodos y con los CHECK de pack_clicks, project_unlocks, sessions y plans (migraciones 014, 016, 017, 019 y 036). PRECIOS: lo que se cobra y lo que se muestra sale de web/lib/precios.ts (mundo_activar y mundo_seguimiento), NO de los campos creditos_* de este archivo: esos quedaron en 3 y 2 de julio 2026 y nadie los lee para cobrar ni para pintar. El comentario anterior decia que precios.ts era el espejo y era al reves. Los dos mundos de agosto llevan 5 y 5, que es lo vigente. VISIBILIDAD: el campo 'oculto' es el interruptor de publicacion del fundador. Un mundo oculto no se LISTA en ninguna pantalla (mundosVisibles en web/lib/catalogoMundos.ts) pero SI se resuelve por clave, para que quien lo camine por URL en el mini-gate vea su nombre de verdad y no un hueco.",
+  "comentario": "Catalogo ESTATICO de los mundos: UNICA fuente autorizada para hablar de mundos bloqueados (la fachada jamas lee nodos de packs/). Copy de produccion: nombre y promesa. 'clave' coincide con el campo dominio de los nodos y con los CHECK de pack_clicks, project_unlocks, sessions y plans (migraciones 014, 016, 017, 019 y 036). AQUI NO HAY PRECIOS. Los llevaba (creditos_activar 3, creditos_seguimiento 2) y envejecieron sin que nadie lo notara, porque quien cobra y quien pinta leen web/lib/precios.ts (mundo_activar, mundo_seguimiento). Dos copias del mismo numero se separan; se quitaron en vez de alinearlas. VISIBILIDAD: el campo 'oculto' es el interruptor de publicacion del fundador. Un mundo oculto no se LISTA en ninguna pantalla (mundosVisibles en web/lib/catalogoMundos.ts) pero SI se resuelve por clave, y ?ver=ocultos lo revela MARCADO para que el fundador pueda caminarlo antes de publicarlo.",
   "packs": [
     {
       "clave": "quality",
       "nombre": "Calidad y Confianza",
-      "promesa": "Que tu cliente confíe, vuelva y te recomiende.",
-      "creditos_activar": 3,
-      "creditos_seguimiento": 2
+      "promesa": "Que tu cliente confíe, vuelva y te recomiende."
     },
     {
       "clave": "health_safety",
       "nombre": "Seguridad y Personas",
-      "promesa": "Protege a tu gente y a tu negocio de su peor día.",
-      "creditos_activar": 3,
-      "creditos_seguimiento": 2
+      "promesa": "Protege a tu gente y a tu negocio de su peor día."
     },
     {
       "clave": "environmental",
       "nombre": "Ambiente y Futuro",
-      "promesa": "Convierte lo sostenible en ventaja que se nota y se cobra.",
-      "creditos_activar": 3,
-      "creditos_seguimiento": 2
+      "promesa": "Convierte lo sostenible en ventaja que se nota y se cobra."
     },
     {
       "clave": "seguridad_digital",
       "nombre": "Seguridad Digital",
-      "promesa": "Blinda tus datos, tus cuentas y la confianza de tus clientes.",
-      "creditos_activar": 3,
-      "creditos_seguimiento": 2
+      "promesa": "Blinda tus datos, tus cuentas y la confianza de tus clientes."
     },
     {
       "clave": "exportacion",
       "nombre": "Vender al Mundo",
-      "promesa": "Lleva tu producto a clientes de otros países, con método.",
-      "creditos_activar": 3,
-      "creditos_seguimiento": 2
+      "promesa": "Lleva tu producto a clientes de otros países, con método."
     },
     {
       "clave": "franquicias",
       "nombre": "Multiplica tu Negocio",
-      "promesa": "Convierte tu negocio probado en muchos que funcionan igual.",
-      "creditos_activar": 3,
-      "creditos_seguimiento": 2
+      "promesa": "Convierte tu negocio probado en muchos que funcionan igual."
     },
     {
       "clave": "risk_management",
       "nombre": "Riesgos Bajo Control",
-      "promesa": "Ve venir lo que puede fallar, y decide antes de que decida por ti.",
-      "creditos_activar": 3,
-      "creditos_seguimiento": 2
+      "promesa": "Ve venir lo que puede fallar, y decide antes de que decida por ti."
     },
     {
       "clave": "compras",
       "nombre": "Tu Compra Correcta",
       "promesa": "Compra lo que toca, al que toca, al precio que toca.",
-      "creditos_activar": 5,
-      "creditos_seguimiento": 5,
       "oculto": true
     },
     {
       "clave": "entrega",
       "nombre": "Del Taller a sus Manos",
       "promesa": "Que llegue entero, a tiempo y sin sorpresas de costo.",
-      "creditos_activar": 5,
-      "creditos_seguimiento": 5,
       "oculto": true
     }
   ]

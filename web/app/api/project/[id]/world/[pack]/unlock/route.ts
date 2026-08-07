@@ -9,6 +9,7 @@
  * creditos_pagados queda en 0 siempre: registro histórico del modelo viejo.
  */
 import { NextResponse } from "next/server";
+import { PRECIOS } from "@/lib/precios";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { obtenerProyecto } from "@/lib/db";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
@@ -19,7 +20,7 @@ export const runtime = "nodejs";
 export async function POST(_request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
   const { id: projectId, pack } = await params;
 
-  const entrada = (catalogo.packs as Array<{ clave: string; nombre: string; creditos_activar: number }>).find(
+  const entrada = (catalogo.packs as Array<{ clave: string; nombre: string }>).find(
     (p) => p.clave === pack
   );
   if (!entrada || !(PACK_CLICKS_PACK as readonly string[]).includes(pack)) {
@@ -51,5 +52,8 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
     }
     return NextResponse.json({ error: "no pudimos activar el mundo, intenta de nuevo" }, { status: 500 });
   }
-  return NextResponse.json({ ok: true, dominio: pack, creditos: entrada.creditos_activar });
+  // El precio sale de precios.ts, no del catalogo: el catalogo lo llevaba y
+  // decia 3 cuando se cobraban 5. Abrir el mundo es GRATIS; este numero es lo
+  // que costara su plan, y tiene que ser el mismo que pinta la tarjeta.
+  return NextResponse.json({ ok: true, dominio: pack, creditos: PRECIOS.mundo_activar });
 }

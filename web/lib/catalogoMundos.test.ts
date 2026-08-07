@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { MUNDOS, estaPublicado, mundo, mundosVisibles, nombreDeMundo } from "./catalogoMundos";
+import { PRECIOS } from "./precios";
 
 const RAIZ = path.resolve(__dirname, "..");
 const leer = (rel: string) => readFileSync(path.join(RAIZ, rel), "utf-8");
@@ -24,11 +25,20 @@ describe("el catálogo de mundos", () => {
     expect(nombreDeMundo("entrega")).toBe("Del Taller a sus Manos");
   });
 
-  it("los dos nuevos cuestan 5 créditos, como el catálogo congruente", () => {
-    for (const clave of OCULTOS_HASTA_EL_VISTO) {
-      expect(mundo(clave)?.creditos_activar, clave).toBe(5);
-      expect(mundo(clave)?.creditos_seguimiento, clave).toBe(5);
+  it("el catálogo NO guarda precios: los guarda precios.ts y nadie más", () => {
+    // El catálogo los llevaba y envejecieron en silencio: decían 3 y 2 mientras
+    // se cobraban 5, porque quien cobra (montoDelPlan) y quien pinta la tarjeta
+    // leen precios.ts. Se quitaron en vez de alinearlos, que es lo único que
+    // impide que se vuelvan a separar.
+    // Se revisan las CLAVES de cada pack, no el texto del archivo: el
+    // comentario del catalogo nombra los campos para explicar por que se
+    // fueron, y un grep crudo confundiria esa explicacion con una recaida.
+    for (const m of MUNDOS) {
+      expect(Object.keys(m).sort().join(","), m.clave)
+        .toMatch(/^(clave,nombre,oculto,promesa|clave,nombre,promesa)$/);
     }
+    // y el mundo cuesta lo que dice la única fuente
+    expect(PRECIOS.mundo_activar).toBe(5);
   });
 
   it("los dos nuevos NO se listan: siguen ocultos hasta el visto del fundador", () => {
@@ -70,6 +80,8 @@ describe("el catálogo de mundos", () => {
       expect(mundo(clave), clave).toBeDefined();
       expect(nombreDeMundo(clave)).not.toBe(clave);
       expect(mundo(clave)!.promesa.length).toBeGreaterThan(10);
+      // su precio no sale de aqui: sale de precios.ts, igual que el de todos
+      expect(mundo(clave)).not.toHaveProperty("creditos_activar");
     }
   });
 

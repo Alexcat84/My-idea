@@ -13,12 +13,17 @@
  *   mundo(clave)      — la resolución por clave. NO respeta `oculto`.
  *
  * La diferencia es deliberada. Un mundo oculto no aparece en ninguna vitrina,
- * pero si el fundador lo camina por URL durante su mini-gate tiene que ver su
- * nombre y su precio de verdad, no un hueco ni un "mundo desconocido". Ocultar
- * es no ofrecerlo; no es romperlo.
+ * pero si el fundador lo camina durante su mini-gate tiene que ver su nombre y
+ * su promesa de verdad, no un hueco ni un "mundo desconocido". Ocultar es no
+ * ofrecerlo; no es romperlo.
  *
  * La publicación es un interruptor del fundador: se quita `oculto` del pack en
  * packs_catalog.json y el mundo entra al catálogo. Nada más.
+ *
+ * AQUÍ NO HAY PRECIOS. El catálogo los llevaba y envejecieron en silencio
+ * (decían 3 y 2 cuando se cobraban 5), porque quien cobra y quien pinta leen
+ * precios.ts. Se quitaron en vez de alinearlos: dos copias del mismo número se
+ * separan otra vez. Para el precio de un mundo, PRECIOS.mundo_activar.
  */
 import catalogo from "./assets/packs_catalog.json";
 
@@ -26,8 +31,6 @@ export type Mundo = {
   clave: string;
   nombre: string;
   promesa: string;
-  creditos_activar: number;
-  creditos_seguimiento: number;
   /** Ausente o false = publicado. true = existe y funciona, pero no se ofrece. */
   oculto?: boolean;
 };

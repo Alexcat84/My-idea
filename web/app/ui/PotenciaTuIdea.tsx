@@ -5,7 +5,8 @@
  * tarjetas con ícono arriba-izquierda + chip arriba-derecha (créditos /
  * "Activo · n/m" verde / "Activar · beta"), nombre y promesa, con hover que
  * eleva la tarjeta. Tus Números (incluido en el plan) + los mundos del catálogo. Precios
- * SIEMPRE desde precios.ts / packs_catalog.json — ninguna cifra hardcodeada.
+ * SIEMPRE desde precios.ts, que es la única fuente de precios: el catálogo
+ * guarda nombre y promesa, jamás cifras. Ninguna cifra hardcodeada.
  * Azul piensa; el verde ejecuta marca el mundo activo.
  *
  * Beta (Catálogo congruente, jul 2026): el candado se retiró y los precios son
@@ -25,7 +26,6 @@ interface Pack {
   clave: string;
   nombre: string;
   promesa: string;
-  creditos_activar: number;
   /** true = existe y funciona, pero no se ofrece (ver catalogoMundos). */
   oculto?: boolean;
 }
