@@ -1,6 +1,6 @@
 # Indice propuesto de compras
 
-69 conceptos finales, fundidos de 201.
+45 conceptos, tras la poda de la auditoria (de 69: 25 borrados, 1 anadido).
 
 Borra las lineas de lo que NO debe nacer. Lo que quede se genera.
 
@@ -14,70 +14,31 @@ Borra las lineas de lo que NO debe nacer. Lo que quede se genera.
 - **Pide una revisión externa antes de firmar cualquier contrato** - Alguien con más experiencia encuentra huecos que tú no ves.
 - **Separa la visita de evaluación de la decisión de compra** - Decidir de antemano que una visita es solo para probar, no para comprar, te protege de decisiones apresuradas.
 
-## planificacion (30)
+## planificacion (10)
 
-- **Adopta un sistema de gestión por partes, no de golpe** - Puedes instalar un ERP módulo por módulo y con un horizonte de al menos un año, reduciendo riesgo y frustración.
-  - funde: Adopcion modular de ERP, Horizonte realista de implementacion
-- **Entiende qué resuelve un sistema integrado antes de comprarlo** - Un ERP conecta ventas, inventario y finanzas en tiempo real, pero el verdadero obstáculo para adoptarlo es cambiar tus hábitos de trabajo, no el software.
-  - funde: ERP: sistema integrado vs. software aislado, El obstaculo real es el cambio de habitos, no el software, Las cinco razones para integrar informacion de negocio
-- **Agrega un colchón de tiempo a tu cronograma, no a cada tarea** - Distintas formas de reservar margen (visible al final, oculto, o duplicando estimaciones) absorben imprevistos sin comprometer la fecha final.
-  - funde: Añadir contingencia (2-7% del tiempo total), Contingencia al final del cronograma en vez de colchón por tarea, Contingencia oculta en el cronograma, Duplicar el tiempo estimado por tarea
 - **Calcula cuánto te cuesta guardar stock contra cuánto te cuesta reponerlo** - Con el costo de mantener y el costo de ordenar sacas la cantidad óptima de pedido, evitando sobre-stock y exceso de órdenes pequeñas.
   - funde: Balancear costo de mantener contra costo de reponer, Calcular el K Factor (costo de mantener inventario), Calcular el R Factor (costo de reponer), Cantidad económica de pedido (EOQ)
 - **Ten un checklist de cláusulas que todo contrato necesita** - Precio, plazos, garantías, seguro, indemnización, terminación por conveniencia y escalamiento por incumplimiento te protegen sin depender de un abogado.
   - funde: Blindaje contractual básico (seguro, indemnización, exclusividad de oferta), Checklist de partes del contrato, Checklist de partes esenciales de un contrato, Cláusula de escalamiento por incumplimiento, Cláusula de renegociación por cambio regulatorio, Cláusula de terminación por conveniencia, Exigir seguro y ser nombrado asegurado adicional, Terminación por incumplimiento documentada
-- **Calcula el tiempo real que tienes, no el que crees tener** - Estimar la holgura y convertir horas de esfuerzo en días de calendario evita comprometerte con fechas imposibles.
-  - funde: Calcular tiempo de holgura (float), Diferenciar esfuerzo de duración calendario
 - **Usa una plantilla fija para pedir y comparar cotizaciones** - Un formulario de solicitud de compra y una lista de lo que todo proveedor debe entregar te permite comparar ofertas en igualdad de condiciones.
   - funde: Checklist de contenido mínimo para pedir propuestas, Diagnóstico previo a cualquier compra, Formulario de desviaciones en propuestas, Formulario de solicitud de compra (RFPS), RFP como plantilla de compra
 - **Domina lo que compras antes de negociarlo** - Conocer a fondo el rubro y las habilidades clave de comprar te pone en ventaja frente a quien te vende.
   - funde: Checklist de habilidades específicas de compras, Dominar el rubro que compras
-- **Documenta los supuestos, hitos y avance de tu cronograma** - Escribir qué asumes, marcar hitos clave y reportar avance semanal te permite detectar fechas imposibles y saber si vas a tiempo.
-  - funde: Checklist de revisión del cronograma, Documentar los supuestos del cronograma, Identificar hitos para gestionar el avance, Reporte de estado con Lista de Acción
 - **Clasifica tu inventario y define qué meta persigues** - Distinguir tipo de inventario y demanda, y fijar tu objetivo (días de stock, rotaciones, nivel de servicio), te dice si tu stock es necesario o desperdicio.
   - funde: Clasificar el inventario por tipo y funcion, Definir tu objetivo de inventario, Demanda independiente vs dependiente, Diferenciar demanda dependiente vs independiente
-- **Identifica y clasifica los riesgos de tu compra antes de que ocurran** - Un proceso de cuatro pasos y técnicas concretas para descubrir riesgos conocidos, predecibles e imprevisibles.
-  - funde: Clasificar riesgos por tipo (conocido, predecible, impredecible), Plan de riesgo en cuatro pasos, Riesgos predecibles vs impredecibles, Técnicas para identificar riesgos antes de que ocurran, Técnicas para identificar riesgos de compra
 - **Prepara tu posición, tu equipo y la agenda antes de negociar** - Fijar objetivos más allá del precio, un objetivo alto por escrito, el compromiso de tu equipo, investigar a la otra parte y controlar la agenda te da ventaja antes de empezar.
   - funde: Compromiso previo del equipo negociador, Controlar la negociación fijando la agenda, Definir objetivos más allá del precio antes de negociar, Fijar un objetivo alto en vez de basarte en tu BATNA, Investigar al equipo negociador de la otra parte, Objetivo alto y anotado antes de negociar, Preparar un pliego de negociación antes de comprar, Resumen de hechos compartido antes de negociar
 - **Decide cómo vas a elegir proveedor antes de buscar** - Definir criterios ponderados, decidir si compras por precio o por valor, y justificar cuándo conviene un proveedor único evita pagar de más por comodidad.
   - funde: Costo más bajo vs mejor valor, Criterios de evaluación ponderados, Cuándo justifica un proveedor único vs. competir, Decisión de comprar por competencia vs. proveedor único, Definir criterios de decisión antes de buscar, Justificación de proveedor único
-- **Calcula tu tarifa real y muéstrasela al cliente como valor** - Tu costo real por hora y el presupuesto total de tu gestión evitan que subcotices y te ganan la confianza de quien te contrata.
-  - funde: Costo real por hora: directo + indirecto, Presupuesto y cronograma como herramienta de venta de valor
-- **Fija y comunica un cronograma público del proceso de compra** - Publicar fechas límite para preguntas, propuesta final y adjudicación pone a los proveedores a competir bajo presión de tiempo.
-- **Define de antemano qué harás con cada riesgo** - Evitar, mitigar, transferir o aceptar: decide la respuesta a cada riesgo antes de que aparezca.
-  - funde: Cuatro estrategias de respuesta al riesgo, Plan de respuesta a riesgos (evitar, mitigar, aceptar)
-- **Prioriza tu tiempo con una matriz y aprende a decir no** - Clasificar tareas en hacer ahora, planificar, rechazar o eliminar, y tener frases para rechazar lo urgente-no-importante, evita que vivas apagando incendios.
-  - funde: Decir no diplomáticamente a lo urgente-no-importante, Lista de 'Dejar de hacer', Matriz de prioridades (4 cuadrantes), Matriz de prioridades para decidir qué atender ya, Rechazar con diplomacia
-- **Deja explícito que el contratista es independiente, no tu empleado** - Redactar la relación como contratista independiente te protege de reclamos laborales y define quién dirige el trabajo diario.
-- **Divide la compra en tareas pequeñas y numeradas** - Un desglose jerárquico con regla de parada te muestra todo el trabajo pendiente sin perder tiempo sobre-planificando.
-  - funde: Desglose de tareas en estructura jerárquica (WBS), Desglose en tareas pequeñas (WBS), Regla de parada al descomponer tareas
-- **Mapea las dependencias de tu cronograma con cajas y flechas** - Un diagrama de precedencia simple te muestra qué tarea depende de cuál, sin herramientas complejas.
 - **Escucha activamente para captar los requisitos reales** - Parafrasear, bloquear distracciones y confirmar comprensión evita malentendidos con proveedores y clientes.
 - **Redacta un documento detallado de lo que esperas del servicio** - Describir tareas, frecuencia y estándares de calidad por escrito te da la vara para medir cumplimiento y evitar disputas.
   - funde: Especificación detallada del servicio esperado, Especificar el alcance del servicio en detalle (Schedule of Services), Statement of Work (SOW) detallado, Statement of Work detallado como contrato de expectativas
-- **Estima cada tarea con tres escenarios, no a ciegas** - Un cálculo optimista, más probable y pesimista te da una duración realista en vez de una cifra al azar.
-  - funde: Estimación PERT de tres puntos, Estimación de esfuerzo con tres escenarios
-- **Puntúa cada riesgo por probabilidad e impacto** - Con un umbral de tolerancia definido por ti, decides qué riesgos merecen acción inmediata y cuáles puedes ignorar.
-  - funde: Evaluar probabilidad e impacto de cada riesgo, Matriz de probabilidad-impacto para priorizar, Priorizar riesgos con umbral de tolerancia
-- **Trata cada compra como un proceso de cinco fases** - Planificar, ejecutar, controlar y cerrar cada compra como si fuera un proyecto evita que te saltes pasos importantes.
-- **Enfócate en el 20% de tareas que definen el éxito del cronograma** - Detectar las pocas tareas críticas y darles más tiempo y recursos rinde más que perseguir la ruta crítica formal.
-  - funde: Lista de tareas prioritarias en vez de ruta crítica, Regla 80/20 aplicada al cronograma
-- **Mapea a todos los interesados y qué gana cada uno** - Identificar quién paga, quién usa y quién firma, y responder 'qué gano yo' desde su punto de vista, anticipa resistencias.
-  - funde: Mapa de interesados con WIIFM, Mapeo de interesados (stakeholders)
-- **Arma tu presupuesto en pasos y verifícalo antes de defenderlo** - Combina una expectativa general con estimaciones reales tarea por tarea, revisa a mano los cálculos, y negocia cualquier recorte desde tu contingencia.
-  - funde: Método combinado de presupuesto (arriba-abajo + abajo-arriba), Negociar reducciones de presupuesto con preguntas, Proceso de creación de presupuesto en 5 pasos, Verificación manual de cálculos de presupuesto
-- **Crea un plan de adquisición y de comunicación como línea base** - Un documento formal con cronograma, presupuesto, supuestos y quién necesita saber qué te da una referencia para medir cualquier cambio posterior.
-  - funde: Plan de adquisición como línea base, Plan de comunicación mínimo viable
-- **Lleva un registro de riesgos con responsable asignado** - Una tabla simple con riesgo, probabilidad, impacto, respuesta y responsable te obliga a dar seguimiento real, no solo a identificar.
-  - funde: Registro de riesgos (risk log), Registro de riesgos con respuesta y responsable
+- **Conoce tus insumos vitales** - Cuales de tus compras pesan de verdad: las de mas valor y las que te dejan parado si faltan. No es lo mismo lo caro que lo critico.
 
-## ejecucion (34)
+## ejecucion (30)
 
 - **Gestiona el contrato después de firmarlo, no lo archives** - Un calendario de vencimientos y una revisión periódica evitan que un contrato se venza o se te escape sin decisión.
   - funde: Administración del contrato como rutina, no proyecto, Calendario de vencimientos de contrato
-- **Abre la negociación con un ancla extrema** - Lanzar una oferta muy alejada del precio pedido te da margen para negociar desde una posición ventajosa.
-  - funde: Ancla extrema en la primera oferta, Punto de anclaje extremo
 - **Acúsate tú mismo antes de dar una mala noticia** - Verbalizar primero las quejas que te podrían hacer, o etiquetar el miedo del otro, desarma la reacción antes de anunciar un recorte.
   - funde: Anclar las emociones del proveedor antes de dar una mala noticia de precio, Autoacusación antes de renegociar un contrato, Autoacusación anticipada antes de negociar recortes, Etiquetar el miedo del otro lado antes de dar una mala noticia contractual
 - **Registra qué funcionó en cada compra** - Un archivo de lecciones aprendidas, separado del contrato, mejora tu próxima negociación o elección de proveedor.
@@ -118,15 +79,12 @@ Borra las lineas de lo que NO debe nacer. Lo que quede se genera.
   - funde: Evita el acuerdo de punto medio, No caer en el regateo del punto medio, Silencio y retirada como herramientas de negociación, Silencio y retirada como tácticas de negociación, Usar el silencio tras plantear tu límite de compra
 - **Ofrece valor no económico cuando el precio se estanca** - Garantías de plazo, exclusividad o condiciones de entrega pueden desbloquear un acuerdo sin ceder en el número.
   - funde: Identificar valor no económico para cerrar el trato, Ofrecer garantías de plazo para reducir el riesgo percibido, Pivotar hacia términos no monetarios, Pivotar hacia términos no monetarios en la negociación
-- **Usa los siete desperdicios como checklist de pérdidas ocultas** - Sobreproducción, espera, transporte, inventario, movimiento, defectos y procesamiento de más te muestran dónde estás perdiendo dinero sin notarlo.
 - **Aplica el modelo Ackerman de ofertas decrecientes** - Una secuencia de pasos (ancla al 65%, subidas graduales, cifras no redondas, remate no monetario) para negociar un precio paso a paso.
   - funde: Modelo Ackerman de contraofertas, Plan Ackerman de ofertas decrecientes
-- **Revisa tu registro de riesgos durante toda la ejecución** - El hábito de monitorear periódicamente detecta disparadores nuevos y valida si tus respuestas siguen funcionando.
 - **Negocia por intereses, no por posiciones** - Preguntar el porqué detrás de la postura fija del otro y buscar juntos opciones de beneficio mutuo lleva a acuerdos más sostenibles.
   - funde: Negociación ganar-ganar (Getting to Yes), Negociación por intereses en vez de posiciones (ganar-ganar)
 - **Plantea tu oferta como un rango o con una cifra precisa, no redonda** - Un rango ambicioso o un número exacto da más credibilidad y menos espacio para que te presionen a bajar.
   - funde: Oferta firme con cifra exacta y sin margen aparente, Proponer un rango en vez de una cifra exacta
-- **Formaliza un período de silencio con tu proveedor actual al buscar otro** - Una carta con acuse de recibo que evite contacto informal protege tu negociación futura mientras exploras alternativas.
 - **Muestra puntos en común para ganar confianza antes de negociar** - Compartir lenguaje, valores o forma de ver el negocio con tu contraparte reduce la resistencia y facilita mejores condiciones.
 - **Define tu punto máximo de stock y cada cuánto lo revisas** - Un sistema min-max con punto de reorden te dice exactamente cuándo comprar sin sobre-stockear.
   - funde: Punto máximo y ciclo de revisión, Sistema de tres compartimentos (Min-Max)

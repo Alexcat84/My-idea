@@ -82,29 +82,6 @@
     ]
   },
   {
-    "titulo": "Agrupar productos en cargas unitarias",
-    "aporta": "Usar pallets o contenedores estandarizados reduce el manejo manual y el costo total de distribución",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/RUSHTON_EXTRACTO_MINERIA.md"
-    ],
-    "fuente_label": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/RUSHTON_EXTRACTO_MINERIA.md",
-        "chunk": 2
-      },
-      {
-        "fuente": "txt/Supply chain/RUSHTON_EXTRACTO_MINERIA.md",
-        "chunk": 1
-      }
-    ],
-    "fundidos_de": [
-      "Carga unitaria (unit load)",
-      "Concepto de unidad de carga (unit load)"
-    ]
-  },
-  {
     "titulo": "Clasificar el tipo de paquete antes de despachar",
     "aporta": "Saber si tu paquete es estándar, plano, alargado o pequeño te dice qué riesgos y refuerzos necesita",
     "fase": "ejecucion",
@@ -123,24 +100,6 @@
     ]
   },
   {
-    "titulo": "Clasificar baterías antes de enviarlas",
-    "aporta": "Distinguir entre baterías húmedas, secas y de litio define qué documentación y empaque necesitas para no ser rechazado",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/HowToPack_fxcom.txt"
-    ],
-    "fuente_label": "Guia de empaque para envios (FedEx)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/HowToPack_fxcom.txt",
-        "chunk": 3
-      }
-    ],
-    "fundidos_de": [
-      "Clasificar baterías antes de enviarlas"
-    ]
-  },
-  {
     "titulo": "Decidir cuánto cobrar por velocidad y ventana de entrega",
     "aporta": "Cada nivel de servicio (mismo día, franja de 2h) sube el costo logístico, así que decide con cuidado cuánto ofrecer",
     "fase": "planificacion",
@@ -156,24 +115,6 @@
     ],
     "fundidos_de": [
       "Costo y ventana de entrega como palanca competitiva"
-    ]
-  },
-  {
-    "titulo": "Cumplir la normativa para envíos con hielo seco",
-    "aporta": "Reglas obligatorias de marcado y ventilación para hielo seco que evitan rechazo o multas",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/HowToPack_fxcom.txt"
-    ],
-    "fuente_label": "Guia de empaque para envios (FedEx)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/HowToPack_fxcom.txt",
-        "chunk": 0
-      }
-    ],
-    "fundidos_de": [
-      "Cumplimiento normativo para envíos con hielo seco"
     ]
   },
   {
@@ -196,7 +137,7 @@
   },
   {
     "titulo": "Calcular el peso dimensional antes de cotizar",
-    "aporta": "Calcular (largo x ancho x alto)/5000 para saber el peso facturable real que cobrará el courier",
+    "aporta": "Multiplica largo por ancho por alto y divide entre el divisor que use tu courier: eso da el peso facturable, que suele ser mayor que el peso real. Pregunta cual es tu divisor, porque cambia entre couriers y entre paises.",
     "fase": "planificacion",
     "fuentes": [
       "txt/Supply chain/HowToPack_fxcom.txt",
@@ -245,24 +186,6 @@
       "Decisión rápida sobre mercancía devuelta",
       "Gestión de devoluciones (reverse logistics)",
       "Opciones de logistica inversa"
-    ]
-  },
-  {
-    "titulo": "Cumplir con la declaración y capacitación para mercancías peligrosas",
-    "aporta": "Enviar mercancías peligrosas exige formación certificada y formulario firmado; ignorarlo expone a multas",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/HowToPack_fxcom.txt"
-    ],
-    "fuente_label": "Guia de empaque para envios (FedEx)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/HowToPack_fxcom.txt",
-        "chunk": 3
-      }
-    ],
-    "fundidos_de": [
-      "Declaración del remitente y capacitación obligatoria"
     ]
   },
   {
@@ -497,30 +420,6 @@
     ]
   },
   {
-    "titulo": "Asegurar pallets y cargas de freight",
-    "aporta": "Cómo envolver y asegurar pallets (film, bandas, esquineros) para que un envío grande no sea rechazado o dañado",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/HowToPack_fxcom.txt",
-      "txt/Supply chain/Packaging_Guidelines.txt"
-    ],
-    "fuente_label": "Guia de empaque para envios (FedEx)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/HowToPack_fxcom.txt",
-        "chunk": 3
-      },
-      {
-        "fuente": "txt/Supply chain/Packaging_Guidelines.txt",
-        "chunk": 0
-      }
-    ],
-    "fundidos_de": [
-      "Empaque para envíos de carga (freight)",
-      "Paletizado seguro para envíos de carga"
-    ]
-  },
-  {
     "titulo": "Encuestar al cliente para saber qué valora del servicio",
     "aporta": "Usar encuestas para descubrir qué elementos de servicio importan realmente antes de fijar estándares",
     "fase": "validacion",
@@ -647,24 +546,6 @@
     ]
   },
   {
-    "titulo": "Aplicar la excepción para baterías de litio pequeñas",
-    "aporta": "Si la batería cumple límites de watt-hora, puedes enviarla sin declaración completa de mercancía peligrosa",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/HowToPack_fxcom.txt"
-    ],
-    "fuente_label": "Guia de empaque para envios (FedEx)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/HowToPack_fxcom.txt",
-        "chunk": 3
-      }
-    ],
-    "fundidos_de": [
-      "Excepción Section II para baterías de litio"
-    ]
-  },
-  {
     "titulo": "Decidir si empacas tú mismo o subcontratas el envío",
     "aporta": "Elegir entre fulfilment propio o de terceros define costos fijos y nivel de control sobre tu marca",
     "fase": "ideacion",
@@ -734,24 +615,6 @@
     ],
     "fundidos_de": [
       "Los diez derechos del servicio al cliente"
-    ]
-  },
-  {
-    "titulo": "Marcar correctamente envíos con mercancía regulada",
-    "aporta": "Si envías muestras biológicas, saber qué texto y símbolo imprimir para que no sea rechazado en el mostrador",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/HowToPack_fxcom.txt"
-    ],
-    "fuente_label": "Guia de empaque para envios (FedEx)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/HowToPack_fxcom.txt",
-        "chunk": 2
-      }
-    ],
-    "fundidos_de": [
-      "Marcado obligatorio para mercancías reguladas (UN 3373)"
     ]
   },
   {
@@ -883,24 +746,6 @@
     ]
   },
   {
-    "titulo": "Optimizar rondas de reparto por densidad",
-    "aporta": "Maximizar entregas por ruta y mantener choferes fijos en zonas para bajar el costo por entrega",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md"
-    ],
-    "fuente_label": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
-        "chunk": 1
-      }
-    ],
-    "fundidos_de": [
-      "Optimización de rondas de reparto (drop density)"
-    ]
-  },
-  {
     "titulo": "Tratar el packaging como variable de costo y de marca",
     "aporta": "Ajustar la cantidad de empaque usado afecta peso, eficiencia y percepción ambiental del cliente",
     "fase": "planificacion",
@@ -955,8 +800,8 @@
     ]
   },
   {
-    "titulo": "Probar tu empaque gratis antes de escalar envíos",
-    "aporta": "Usa el servicio gratuito de testeo de empaque para validar que resiste el transporte antes de comprometerte a volumen",
+    "titulo": "Prueba tu empaque antes de escalar envios",
+    "aporta": "Valida que el empaque resiste el transporte antes de comprometerte a volumen. Algunos couriers ofrecen esa prueba sin costo: pregunta al tuyo que ofrece.",
     "fase": "validacion",
     "fuentes": [
       "txt/Supply chain/HowToPack_fxcom.txt"
@@ -1089,24 +934,6 @@
     ],
     "fundidos_de": [
       "Selección de material de relleno según tipo de producto"
-    ]
-  },
-  {
-    "titulo": "Elegir el refrigerante según la temperatura objetivo",
-    "aporta": "Decide entre gel refrigerante o hielo seco según el rango de temperatura que necesita el producto",
-    "fase": "ejecucion",
-    "fuentes": [
-      "txt/Supply chain/HowToPack_fxcom.txt"
-    ],
-    "fuente_label": "Guia de empaque para envios (FedEx)",
-    "chunks": [
-      {
-        "fuente": "txt/Supply chain/HowToPack_fxcom.txt",
-        "chunk": 0
-      }
-    ],
-    "fundidos_de": [
-      "Selección de refrigerante según temperatura objetivo"
     ]
   },
   {

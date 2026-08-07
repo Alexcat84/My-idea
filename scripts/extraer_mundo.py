@@ -492,6 +492,31 @@ Devuelve EXCLUSIVAMENTE un arreglo JSON, sin markdown. Cada objeto:
 }}"""
 
 
+ORDEN_FASES = ["ideacion", "validacion", "planificacion", "ejecucion"]
+
+
+def escribir_indice_md(mundo, propuesto, salida, cabecera, huerfanos=()):
+    """El indice legible. Vive en UNA funcion porque lo escriben dos: la
+    consolidacion y la poda del fundador. Dos versiones del mismo formato se
+    separarian a la primera edicion."""
+    md = [f"# Indice propuesto de {mundo}", "", cabecera, "",
+          "Borra las lineas de lo que NO debe nacer. Lo que quede se genera.", ""]
+    for fase in ORDEN_FASES:
+        de_fase = [c for c in propuesto if c["fase"] == fase]
+        if not de_fase:
+            continue
+        md += [f"## {fase} ({len(de_fase)})", ""]
+        for c in de_fase:
+            md.append(f"- **{c['titulo']}** - {c['aporta']}")
+            if len(c.get("fundidos_de", [])) > 1:
+                md.append(f"  - funde: {', '.join(c['fundidos_de'])}")
+        md.append("")
+    if huerfanos:
+        md += ["## Sin agrupar (se perderian si no los reclamas)", ""]
+        md += [f"- {t}" for t in huerfanos] + [""]
+    (salida / f"INDICE_PROPUESTO_{mundo}.md").write_text("\n".join(md), encoding="utf-8")
+
+
 def etapa_consolidar(mundo, cliente, uso, max_llamadas=None, dry_run=False):
     cfg = MUNDOS[mundo]
     salida = BASE / "packs" / mundo / "indice"
@@ -549,25 +574,9 @@ def etapa_consolidar(mundo, cliente, uso, max_llamadas=None, dry_run=False):
     huerfanos = [fundidos[i]["titulo"] for i in range(len(fundidos)) if i not in asignados]
     (salida / "_indice_propuesto.json").write_text(
         json.dumps(propuesto, ensure_ascii=False, indent=2), encoding="utf-8")
+    cabecera = f"{len(propuesto)} conceptos finales, fundidos de {len(fundidos)}."
 
-    orden = ["ideacion", "validacion", "planificacion", "ejecucion"]
-    md = [f"# Indice propuesto de {mundo}", "",
-          f"{len(propuesto)} conceptos finales, fundidos de {len(fundidos)}.", "",
-          "Borra las lineas de lo que NO debe nacer. Lo que quede se genera.", ""]
-    for fase in orden:
-        de_fase = [c for c in propuesto if c["fase"] == fase]
-        if not de_fase:
-            continue
-        md += [f"## {fase} ({len(de_fase)})", ""]
-        for c in de_fase:
-            md.append(f"- **{c['titulo']}** - {c['aporta']}")
-            if len(c["fundidos_de"]) > 1:
-                md.append(f"  - funde: {', '.join(c['fundidos_de'])}")
-        md.append("")
-    if huerfanos:
-        md += ["## Sin agrupar (se perderian si no los reclamas)", ""]
-        md += [f"- {t}" for t in huerfanos] + [""]
-    (salida / f"INDICE_PROPUESTO_{mundo}.md").write_text("\n".join(md), encoding="utf-8")
+    escribir_indice_md(mundo, propuesto, salida, cabecera, huerfanos)
 
     print(f"  {len(propuesto)} conceptos finales, {len(fundidos) - len(asignados)} sin agrupar")
     if inventados:
