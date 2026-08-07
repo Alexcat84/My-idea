@@ -4,21 +4,36 @@
   "dominio": "quality",
   "titulo_concepto": "Boxplot (Diagrama de Caja)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El boxplot es un resumen gráfico de cinco números: mediana, valor máximo, valor mínimo, primer cuartil y tercer cuartil. Permite comparar rápidamente la dispersión y simetría de conjuntos de datos, siendo útil para comparar el desempeño de diferentes proveedores o procesos.",
+  "resumen_teorico": "El boxplot es un resumen gráfico de cinco números: valor mínimo, primer cuartil, mediana, tercer cuartil y valor máximo, que muestra la dispersión, tendencia central y simetría de un conjunto de datos. Te permite comparar rápidamente la variabilidad y consistencia entre dos o más procesos, grupos o proveedores con solo mirar un gráfico. Antes de dibujarlo debes decidir qué tipo de boxplot construir según lo que quieras analizar, y luego etiquetar bien los ejes para que la comparación visual sea clara. Es una herramienta simple con tu teléfono para tomar decisiones basadas en datos cuando necesitas evaluar desempeño o consistencia entre alternativas.",
   "pasos_accionables": [
-    "Ordenar los datos de menor a mayor",
-    "Calcular la mediana, cuartiles, y valores máximo/mínimo",
-    "Dibujar la caja delimitada por los cuartiles con la mediana dentro",
-    "Extender las líneas ('bigotes') hacia los valores extremos",
-    "Comparar boxplots de diferentes grupos para tomar decisiones"
+    "Recolectar los datos crudos y ordenarlos de menor a mayor",
+    "Decidir qué tipo de boxplot vas a construir según tu objetivo",
+    "Calcular la mediana, los cuartiles y los valores máximo y mínimo",
+    "Dibujar la caja delimitada por los cuartiles con la mediana marcada dentro",
+    "Extender los bigotes hacia los valores extremos y etiquetar los ejes",
+    "Comparar los boxplots de los distintos grupos para tomar tu decisión"
   ],
-  "entregable_esperado": "Boxplot construido para comparar variabilidad y tendencia central entre grupos de datos",
+  "entregable_esperado": "Boxplot construido y etiquetado que muestra la distribución y variabilidad de los datos para comparar grupos o proveedores",
   "nodos_previos": [
-    "concepto_variacion_estadistica"
+    "concepto_variacion_estadistica",
+    "estadistica_basica_calidad"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "plan_de_control"
+  ],
   "condiciones_activacion": [
-    "Si se requiere comparar la variabilidad y consistencia entre dos o más procesos o proveedores"
+    "Si necesitas comparar la variabilidad y consistencia entre dos o más procesos o proveedores",
+    "Cuando quieres evaluar la distribución de un proceso entre múltiples grupos antes de decidir"
   ],
-  "etiqueta_arbol": "Resume tus Datos con Cajas"
+  "etiqueta_arbol": "Resume tus Datos con Cajas",
+  "ids_alias": [
+    "diagrama_caja"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "diagrama_caja",
+      "titulo": "Diagrama de Caja (Box Plot)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

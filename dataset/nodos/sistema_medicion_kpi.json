@@ -4,29 +4,45 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema de Medición con Indicadores Clave de Desempeño (KPI)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un sistema de medición efectivo debe vincular indicadores a metas estratégicas, incluir las preocupaciones del cliente, mantener un número reducido de medidas clave de fácil obtención, e identificar el desperdicio crónico o costo de mala calidad. Estos indicadores permiten monitorear el progreso hacia los objetivos y facilitar la toma de decisiones ejecutivas oportunas.",
+  "resumen_teorico": "Un sistema de medición efectivo vincula indicadores a tus metas estratégicas (visión, misión y objetivos), incluye las preocupaciones de tus clientes internos y externos, mantiene un número reducido de medidas clave de fácil obtención, e identifica el desperdicio crónico o costo de mala calidad. Estos indicadores te permiten monitorear el progreso hacia tus objetivos y facilitar decisiones oportunas. Un buen reporte es simple, cuantitativo y visual, como un scorecard, y debe revisarse periódicamente frente a las metas establecidas para verificar cumplimiento, especialmente cuando aún no cuentas con un sistema formal de seguimiento de desempeño.",
   "pasos_accionables": [
-    "Identificar indicadores que se vinculen directamente con los objetivos estratégicos",
-    "Incluir métricas que reflejen las necesidades de clientes internos y externos",
-    "Limitar el número de indicadores clave para facilitar el análisis ejecutivo",
-    "Establecer mecanismos para identificar desperdicio crónico y costos de mala calidad",
-    "Crear una hoja de cálculo o tablero simple que documente cada medida y su método de implementación"
+    "Define indicadores que se vinculen directamente con tu visión, misión y metas estratégicas",
+    "Incluye métricas que reflejen las necesidades de tus clientes internos y externos",
+    "Limita el número de indicadores clave a los más relevantes para facilitar tu análisis y decisiones",
+    "Establece mecanismos para identificar desperdicio crónico y costos de mala calidad",
+    "Crea una hoja de cálculo o tablero simple que documente cada medida, su método de recolección y frecuencia de reporte",
+    "Revisa periódicamente tu desempeño frente a las metas establecidas"
   ],
-  "entregable_esperado": "Un conjunto documentado de KPIs vinculados a la estrategia, con método de recolección y frecuencia de reporte definidos",
+  "entregable_esperado": "Un tablero o hoja de cálculo con KPIs documentados, vinculados a tu estrategia, con método de recolección y frecuencia de reporte definidos",
   "nodos_previos": [
     "diagrama_arbol_despliegue",
     "planificacion_estrategica_despliegue_2",
-    "costo_de_mala_calidad_2"
+    "costo_de_mala_calidad_2",
+    "catch_ball_comunicacion",
+    "desplegar_metas_organizacion",
+    "data_integrity_forecasting"
   ],
   "nodos_siguientes": [
     "revision_progreso",
     "tablero_control_scorecard",
     "principios_medicion_efectiva",
-    "tipos_de_escalas_de_medicion"
+    "tipos_de_escalas_de_medicion",
+    "tipos_escalas_medicion"
   ],
   "condiciones_activacion": [
-    "Cuando se han establecido metas organizacionales y se requiere monitorear su cumplimiento",
-    "Cuando la alta dirección necesita información oportuna para la toma de decisiones"
+    "Cuando ya definiste tus metas y necesitas verificar su cumplimiento",
+    "Cuando no tienes un sistema formal de monitoreo de desempeño",
+    "Cuando necesitas información oportuna para tomar decisiones"
   ],
-  "etiqueta_arbol": "Mide lo que Importa de Verdad"
+  "etiqueta_arbol": "Mide lo que Importa de Verdad",
+  "ids_alias": [
+    "medir_progreso_kpi"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "medir_progreso_kpi",
+      "titulo": "Medir el Progreso con Indicadores Clave de Desempeño (KPI)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

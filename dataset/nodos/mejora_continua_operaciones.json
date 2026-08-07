@@ -4,22 +4,38 @@
   "dominio": "quality",
   "titulo_concepto": "Enfoque de Mejora Continua en Operaciones",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El personal de operaciones debe abordar tanto problemas esporádicos (crisis) como crónicos mediante troubleshooting, mejora de calidad y planificación de calidad. Mantener este enfoque requiere una cultura de calidad positiva y el apoyo del departamento de calidad como facilitador interno, incluyendo equipos multifuncionales para resolver problemas causados por otras áreas.",
+  "resumen_teorico": "El responsable de operaciones enfrenta dos tipos de problemas de calidad: los esporádicos, que exigen troubleshooting inmediato, y los crónicos, que requieren mejora de calidad y replanificación. Existen tres tipos de acción: control, mejora y planificación. Sostener este enfoque más allá de proyectos puntuales exige diagnosticar y construir una cultura de calidad positiva, contando con el departamento de calidad como socio y facilitador interno que brinda soporte técnico y capacitación. Cuando un problema involucra causas de otras áreas, conviene formar equipos multifuncionales que ataquen la raíz interdepartamental del problema, en lugar de intentar resolverlo solo desde operaciones.",
   "pasos_accionables": [
-    "Clasificar problemas en esporádicos vs. crónicos",
-    "Asignar recursos de troubleshooting para problemas urgentes",
-    "Establecer equipos multifuncionales para causas raíz interdepartamentales",
-    "Dar soporte técnico continuo desde el departamento de calidad a operaciones"
+    "Diagnostica la cultura de calidad actual de tu operación",
+    "Clasifica cada problema como esporádico o crónico antes de actuar",
+    "Aplica troubleshooting inmediato a los problemas esporádicos o urgentes",
+    "Forma equipos de mejora de calidad para atacar problemas crónicos",
+    "Convoca equipos multifuncionales cuando la causa raíz involucre a otras áreas",
+    "Solicita al departamento de calidad soporte técnico y capacitación continua"
   ],
-  "entregable_esperado": "Sistema de gestión de problemas esporádicos y crónicos con equipos asignados",
+  "entregable_esperado": "Sistema de gestión de problemas esporádicos y crónicos con equipos asignados y cultura de calidad diagnosticada",
   "nodos_previos": [
-    "gestion_datos_calidad"
+    "gestion_datos_calidad",
+    "medicion_de_calidad_en_manufactura"
   ],
   "nodos_siguientes": [
-    "lean_manufacturing"
+    "lean_manufacturing",
+    "error_proofing_six_sigma_lean"
   ],
   "condiciones_activacion": [
-    "Cuando una organización necesita sostener la mejora de calidad más allá de proyectos puntuales"
+    "Cuando persisten problemas crónicos de calidad no resueltos por acciones correctivas puntuales",
+    "Cuando necesitas sostener la mejora de calidad más allá de proyectos puntuales",
+    "Cuando un problema de calidad involucra causas originadas en otras áreas de la empresa"
   ],
-  "etiqueta_arbol": "Mejora Continua en tus Operaciones"
+  "etiqueta_arbol": "Mejora Continua en tus Operaciones",
+  "ids_alias": [
+    "enfoque_mejora_continua_operaciones"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "enfoque_mejora_continua_operaciones",
+      "titulo": "Enfoque en la Mejora Continua en Operaciones",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

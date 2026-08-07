@@ -15,7 +15,8 @@
   "entregable_esperado": "Cálculo de takt time documentado y plan de ajuste de recursos según demanda",
   "nodos_previos": [
     "value_stream_mapping",
-    "value_stream_mapping_2"
+    "value_stream_mapping_2",
+    "mapeo_flujo_valor"
   ],
   "nodos_siguientes": [
     "constraint_management"
@@ -24,5 +25,6 @@
     "Cuando se necesita sincronizar producción con demanda del cliente",
     "Si hay variabilidad significativa en la demanda"
   ],
-  "etiqueta_arbol": "Sincroniza tu Ritmo con la Demanda"
+  "etiqueta_arbol": "Sincroniza tu Ritmo con la Demanda",
+  "deprecado": true
 }

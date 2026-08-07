@@ -13,15 +13,18 @@
   ],
   "entregable_esperado": "Un informe cuantificado del costo de no conformidad en la operación, presentado a la gerencia.",
   "nodos_previos": [
-    "conformance_to_requirements"
+    "conformance_to_requirements",
+    "definicion_calidad_conformidad"
   ],
   "nodos_siguientes": [
     "quality_awareness_crosby",
-    "programa_catorce_pasos_crosby"
+    "programa_catorce_pasos_crosby",
+    "programa_de_mejora_de_calidad"
   ],
   "condiciones_activacion": [
     "Cuando se necesita justificar económicamente un programa de mejora de calidad",
     "Cuando la gerencia no percibe la gravedad del problema de calidad"
   ],
-  "etiqueta_arbol": "La Calidad Nunca Cuesta"
+  "etiqueta_arbol": "La Calidad Nunca Cuesta",
+  "deprecado": true
 }

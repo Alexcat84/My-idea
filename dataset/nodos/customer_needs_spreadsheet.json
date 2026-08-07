@@ -4,25 +4,49 @@
   "dominio": "quality",
   "titulo_concepto": "Hoja de Cálculo de Necesidades del Cliente (Customer Needs Spreadsheet)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Herramienta de planificación que organiza en una matriz los clientes (internos y externos) en orden de prioridad como filas, y sus necesidades identificadas como columnas. Permite visualizar de forma sistemática la importancia relativa de cada necesidad para cada cliente, asegurando que el presupuesto de desarrollo de producto se enfoque en lo más importante. Es la base para convertir necesidades en características y luego en procesos, según la secuencia de Quality by Design.",
+  "resumen_teorico": "Es una matriz de planificación que organiza tus clientes, internos y externos, en filas ordenadas por prioridad, y las necesidades que descubriste en columnas. Te permite correlacionar cada relación con evidencia sólida y analizar tanto la fuerza de esa relación como la importancia relativa del cliente, para determinar qué necesidades son más críticas. Es especialmente útil cuando la información de voz del cliente que recolectaste es demasiado amplia, vaga o voluminosa para usarla directamente en el diseño. Resume esos datos en un formato claro que asegura que tu presupuesto de desarrollo se enfoque en lo más importante. Es la base para convertir necesidades en características y luego en procesos, siguiendo la secuencia de Quality by Design.",
   "pasos_accionables": [
-    "Listar todos los clientes externos e internos en orden de prioridad",
-    "Identificar y listar todas las necesidades descubiertas como encabezados de columna",
-    "Marcar o calificar la importancia de cada necesidad para cada cliente",
-    "Usar la matriz resultante para enfocar recursos de diseño en las necesidades más críticas"
+    "Crea una hoja de cálculo multicolumna",
+    "Lista en la primera columna a tus clientes, internos y externos, en orden de prioridad",
+    "Lista en la fila superior todas las necesidades descubiertas, una por columna",
+    "Correlaciona cada cliente con cada necesidad usando una leyenda basada en evidencia",
+    "Analiza la fuerza de cada relación y la importancia del cliente para priorizar las necesidades",
+    "Usa la matriz resultante para enfocar tus recursos de diseño en lo más crítico"
   ],
-  "entregable_esperado": "Una matriz completa de clientes vs necesidades con calificaciones de importancia que sirve de insumo para el diseño de producto",
+  "entregable_esperado": "Una matriz completa de clientes vs necesidades, correlacionadas con evidencia y priorizadas, lista para guiar el diseño de tu producto o servicio.",
   "nodos_previos": [
     "identificar_clientes_externos_e_internos",
-    "hoja_necesidades_cliente"
+    "hoja_necesidades_cliente",
+    "sipoc",
+    "diagrama_afinidad"
   ],
   "nodos_siguientes": [
     "traduccion_necesidades_cliente",
-    "product_design_spreadsheet"
+    "product_design_spreadsheet",
+    "sipoc",
+    "matriz_de_seleccion",
+    "matriz_pugh"
   ],
   "condiciones_activacion": [
-    "Cuando se ha completado la recolección de necesidades de clientes y se requiere priorizarlas",
-    "Cuando el presupuesto de desarrollo es limitado y se debe decidir en qué enfocarse"
+    "Cuando has completado la recolección de necesidades de tus clientes y necesitas priorizarlas",
+    "Cuando tu presupuesto de desarrollo es limitado y debes decidir en qué enfocarte",
+    "Cuando la información recolectada es demasiado amplia, vaga o voluminosa para usarse directamente en el diseño"
   ],
-  "etiqueta_arbol": "Organiza las Necesidades del Cliente"
+  "etiqueta_arbol": "Organiza las Necesidades del Cliente",
+  "ids_alias": [
+    "hoja_de_necesidades_del_cliente",
+    "hoja_necesidades_cliente"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "hoja_de_necesidades_del_cliente",
+      "titulo": "Customer Needs Spreadsheet",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "hoja_necesidades_cliente",
+      "titulo": "Hoja de Necesidades del Cliente (Customer Needs Spreadsheet)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

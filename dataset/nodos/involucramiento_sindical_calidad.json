@@ -4,24 +4,39 @@
   "dominio": "quality",
   "titulo_concepto": "Involucramiento del Sindicato en Programas de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Los programas de mejora de calidad requieren la colaboración de representantes sindicales, no como aprobación formal sino como participación activa e individual. Esto legitima el programa ante los trabajadores y facilita la identificación de personas clave para integrar el equipo de mejora.",
+  "resumen_teorico": "Los programas de mejora de calidad requieren la colaboración de representantes sindicales desde etapas tempranas, no como aprobación formal o automática sino como participación activa e individual. Esto evita que el programa sea percibido como una imposición o 'aceleración de trabajo' (speedup), legitima el esfuerzo ante los trabajadores y facilita identificar personas clave para integrar el equipo de mejora. Se trata de invitar a los líderes sindicales a aportar recomendaciones y designar empleados colaboradores, manteniendo comunicación abierta y transparente que reduzca la resistencia al cambio. Además, conviene resolver aspectos contractuales como horas extra o turnos que puedan afectar su participación efectiva en el programa.",
   "pasos_accionables": [
-    "Convocar a representantes sindicales para explicar el programa de mejora de calidad",
-    "Solicitar su participación individual, no como aprobación institucional",
-    "Pedir recomendaciones de empleados que puedan sumarse al equipo de mejora",
-    "Resolver aspectos contractuales (horas extra, turnos) que permitan su participación"
+    "Programa una reunión temprana con los representantes sindicales para explicar el propósito del programa de calidad",
+    "Aclara que buscas participación individual y consultiva, no aprobación institucional automática",
+    "Pide recomendaciones de empleados que puedan integrarse al equipo de mejora",
+    "Resuelve aspectos contractuales como horas extra o turnos que permitan su participación",
+    "Mantén comunicación abierta y transparente para evitar percepciones de imposición o speedup"
   ],
-  "entregable_esperado": "Acuerdo de colaboración con representantes sindicales y al menos un representante integrado al equipo de mejora",
+  "entregable_esperado": "Acuerdo de colaboración con representantes sindicales, con al menos un representante integrado al equipo de mejora.",
   "nodos_previos": [
-    "equipo_mejora_calidad"
+    "equipo_mejora_calidad",
+    "consejo_de_calidad",
+    "consejo_de_calidad_2",
+    "equipo_mejora_calidad_2"
   ],
   "nodos_siguientes": [
     "medicion_calidad",
     "medicion_calidad_2"
   ],
   "condiciones_activacion": [
-    "Cuando la organización tiene personal sindicalizado",
-    "Al formar el equipo de mejora de calidad"
+    "Cuando tienes personal sindicalizado y planeas implementar cambios operativos de calidad",
+    "Al formar tu equipo de mejora de calidad",
+    "Cuando existe riesgo de que el programa se perciba como presión adicional sobre los trabajadores"
   ],
-  "etiqueta_arbol": "Suma al Sindicato en Calidad"
+  "etiqueta_arbol": "Suma al Sindicato en Calidad",
+  "ids_alias": [
+    "involucramiento_sindical"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "involucramiento_sindical",
+      "titulo": "Involucramiento del Sindicato en el Programa de Calidad",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

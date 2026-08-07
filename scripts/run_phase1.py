@@ -719,6 +719,27 @@ def step7_validate(master, parse_errors):
         f"{len(seeds_deprecadas)} deprecadas" + (f": {seeds_deprecadas[:5]}" if seeds_deprecadas else ""),
     ))
 
+    # La otra mitad del requisito: ningun deprecado puede ser DESTINO de un
+    # puente aprobado. Un puente es una puerta del core hacia un mundo; si su
+    # destino ya no se ofrece, es una puerta que no abre. Cazado a mano en la
+    # cirugia de Calidad (un puente apuntaba a medir_progreso_kpi tras
+    # deprecarse), que es justo lo que este chequeo evita repetir.
+    puentes_muertos = []
+    for ruta_b in sorted(BASE.glob("packs/*/metadata/bridges_aprobados.json")):
+        try:
+            with open(ruta_b, encoding="utf-8") as fh:
+                for x in json.load(fh).get("aprobados", []):
+                    for extremo in ("core", "dominio"):
+                        if x.get(extremo) in deprecados:
+                            puentes_muertos.append(f"{ruta_b.parent.parent.name}:{x[extremo]}")
+        except (OSError, json.JSONDecodeError):
+            continue
+    checks.append((
+        "Ningun puente aprobado apunta a un nodo deprecado",
+        not puentes_muertos,
+        f"{len(puentes_muertos)} rotos" + (f": {puentes_muertos[:5]}" if puentes_muertos else ""),
+    ))
+
     # La alcanzabilidad se mide sobre el universo ACTIVO: exigirsela a un
     # deprecado seria pedirle que sea alcanzable justo despues de sacarlo de
     # todos los caminos de oferta.

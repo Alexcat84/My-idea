@@ -4,24 +4,38 @@
   "dominio": "quality",
   "titulo_concepto": "Vacíos en el Conocimiento del Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los clientes no siempre conocen completamente sus propias necesidades; en muchos casos son los últimos en descubrirlas (ej. el Walkman). Estos vacíos de conocimiento son llenados por las fuerzas del mercado competitivo y por la acción de emprendedores que identifican oportunidades donde los productos disponibles son inadecuados, lentos o imperfectos.",
+  "resumen_teorico": "Como emprendedor, no des por hecho que tu cliente conoce sus propias necesidades: en muchos casos son los últimos en descubrirlas, como pasó con el Walkman. Estos vacíos de conocimiento se llenan por la competencia del mercado y por quien detecta oportunidades donde los productos disponibles son inadecuados, lentos, escasos o de mala calidad. Una señal clara de vacío es cuando el usuario ya está creando soluciones informales por su cuenta, comprando en mercados no oficiales o improvisando alternativas caseras porque nada de lo disponible le sirve. Ahí, más que preguntar, tienes que observar y anticipar lo que nadie te va a decir directamente en una encuesta.",
   "pasos_accionables": [
-    "No depender únicamente de la investigación de mercado tradicional para descubrir necesidades",
-    "Observar productos o servicios existentes percibidos como inadecuados por los usuarios",
-    "Identificar vacíos de mercado generados por escasez, lentitud o mala calidad de servicio actual",
-    "Evaluar oportunidades de innovación disruptiva basadas en necesidades no articuladas"
+    "No depender únicamente de encuestas o investigación de mercado tradicional para descubrir necesidades",
+    "Observar productos o servicios existentes que los usuarios perciben como inadecuados, lentos o escasos",
+    "Detectar soluciones informales que la gente ya inventa por su cuenta, como arreglos caseros o compras en mercados no oficiales",
+    "Prototipar una solución que anticipe la necesidad no articulada por el cliente",
+    "Lanzar un piloto pequeño para validar si esa necesidad latente es real"
   ],
-  "entregable_esperado": "Documento de oportunidades de innovación basado en necesidades latentes no expresadas por el cliente",
+  "entregable_esperado": "Documento de oportunidades de innovación basado en necesidades latentes no expresadas por el cliente, validadas con un piloto.",
   "nodos_previos": [
-    "ingenieria_calidad_proveedores"
+    "ingenieria_calidad_proveedores",
+    "sistema_manejo_quejas",
+    "necesidades_reales_vs_declaradas"
   ],
   "nodos_siguientes": [
     "gestion_para_la_calidad",
     "trilogia_de_juran"
   ],
   "condiciones_activacion": [
-    "Cuando el usuario busca identificar nuevas oportunidades de producto o servicio",
-    "Si el mercado no puede articular claramente sus necesidades mediante encuestas convencionales"
+    "Cuando quieres identificar nuevas oportunidades de producto o servicio",
+    "Si el mercado no puede articular claramente sus necesidades en encuestas convencionales",
+    "Cuando ves gente usando soluciones improvisadas o de mercado negro en vez de lo que ofrece el mercado formal"
   ],
-  "etiqueta_arbol": "Descubre lo que el Cliente Ignora"
+  "etiqueta_arbol": "Descubre lo que el Cliente Ignora",
+  "ids_alias": [
+    "descubrir_necesidades_ocultas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "descubrir_necesidades_ocultas",
+      "titulo": "Descubrimiento de Necesidades Ocultas del Cliente",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

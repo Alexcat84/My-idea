@@ -4,24 +4,38 @@
   "dominio": "quality",
   "titulo_concepto": "Uso de Redundancia en el Diseño de Componentes Críticos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "En el diseño de aparatos complejos, puede ser útil colocar dos o más componentes en paralelo, de manera que si uno falla, otro lo reemplace automáticamente. Dos partes en paralelo con fracción defectuosa promedio p cada una son equivalentes a una sola parte con fracción defectuosa p². Sin embargo, restricciones de peso, tamaño o la incertidumbre de si el componente redundante realmente activará cuando se necesite pueden hacer que la mejor solución sea simplemente lograr alta confiabilidad en una sola parte.",
+  "resumen_teorico": "Cuando diseñas un aparato o sistema complejo, identifica primero los componentes críticos cuya falla tendría alto costo o riesgo. Para esos casos, considera colocar dos o más partes en paralelo, de modo que si una falla, otra la reemplace automáticamente: dos componentes con fracción defectuosa promedio p equivalen a uno solo con fracción defectuosa aproximada p², reduciendo drásticamente la probabilidad de falla del conjunto. Sin embargo, esta estrategia tiene límites prácticos: restricciones de peso, tamaño y costo, además de la incertidumbre de si el componente redundante realmente se activará cuando se necesite. Por eso, en algunos casos la mejor solución no es duplicar partes, sino enfocar el esfuerzo en lograr alta confiabilidad en una sola pieza bien diseñada.",
   "pasos_accionables": [
-    "Evaluar si el diseño del producto permite componentes redundantes en paralelo.",
-    "Calcular la fracción defectuosa combinada (p²) si se usa redundancia.",
-    "Verificar restricciones de peso, tamaño y costo que puedan impedir la redundancia.",
-    "Confirmar que el mecanismo redundante realmente actúe cuando el componente principal falle.",
-    "Comparar el costo-beneficio de la redundancia contra mejorar la confiabilidad de una sola parte."
+    "Identifica los componentes críticos cuya falla tendría alto impacto o costo en tu producto.",
+    "Evalúa si el diseño permite colocar un componente redundante en paralelo sin romper restricciones de peso o tamaño.",
+    "Calcula la fracción defectuosa combinada esperada, aproximadamente p², si usas redundancia.",
+    "Verifica y prueba que el mecanismo redundante realmente actúe cuando el componente principal falle.",
+    "Compara el costo beneficio de agregar redundancia contra invertir en mejorar la confiabilidad de una sola parte.",
+    "Documenta tu decisión final sobre el enfoque elegido."
   ],
   "entregable_esperado": "Decisión documentada sobre si el diseño incluirá redundancia de componentes o se enfocará en mejorar la confiabilidad individual de la parte.",
   "nodos_previos": [
-    "redundancia_diseno_confiabilidad"
+    "redundancia_diseno_confiabilidad",
+    "probabilidad_falla_ensamblaje_multiple"
   ],
   "nodos_siguientes": [
-    "punto_equilibrio_calidad"
+    "punto_equilibrio_calidad",
+    "punto_equilibrio_calidad_inspeccion"
   ],
   "condiciones_activacion": [
-    "Cuando se diseña un aparato o sistema complejo donde la falla de un componente crítico es inaceptable.",
-    "Cuando existe flexibilidad de peso y tamaño para agregar componentes paralelos."
+    "Cuando diseñas un componente o sistema crítico cuya falla es inaceptable por su alto costo o riesgo.",
+    "Cuando tienes flexibilidad de peso, tamaño o costo para agregar componentes en paralelo.",
+    "Cuando lograr alta confiabilidad en una sola parte resulta difícil o costoso."
   ],
-  "etiqueta_arbol": "Respalda tus Componentes Críticos"
+  "etiqueta_arbol": "Respalda tus Componentes Críticos",
+  "ids_alias": [
+    "redundancia_diseno_confiabilidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "redundancia_diseno_confiabilidad",
+      "titulo": "Uso de Redundancia en Diseño para Mejorar la Confiabilidad",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

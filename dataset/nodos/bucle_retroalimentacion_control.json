@@ -4,23 +4,41 @@
   "dominio": "quality",
   "titulo_concepto": "El Bucle de Retroalimentación (Feedback Loop) en Control de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor evalúa el desempeño real, un árbitro (umpire) lo compara contra el estándar, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Puede ser automatizado, de autocontrol del empleado, o mediante inspección externa.",
+  "resumen_teorico": "El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor mide el desempeño real del proceso, un árbitro (umpire) compara esa medición contra un estándar definido, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Este ciclo puede ser automatizado, de autocontrol del empleado, mediante inspección externa, o híbrido, y opera en distintos niveles del negocio. Documentar cada ciclo permite trazabilidad: saber qué se midió, contra qué estándar y qué corrección se aplicó, para repetir el control de forma consistente en el tiempo.",
   "pasos_accionables": [
-    "Instalar un sensor adecuado para medir el sujeto de control elegido",
-    "Definir el estándar o meta de calidad contra la cual comparar",
-    "Establecer un árbitro (persona o sistema) que compare desempeño real vs meta",
-    "Diseñar un actuador que corrija el proceso cuando exista desviación significativa"
+    "Instalar un sensor adecuado (instrumento, sistema de datos o tu propia observación) para medir el sujeto de control elegido",
+    "Definir la unidad de medida y el estándar o meta de calidad contra la cual comparar",
+    "Establecer un árbitro (tú mismo o un sistema) que compare desempeño real vs meta e interprete las diferencias",
+    "Diseñar un actuador que corrija el proceso cuando exista desviación significativa",
+    "Registrar los resultados de cada ciclo para tener trazabilidad"
   ],
-  "entregable_esperado": "Diagrama de bucle de retroalimentación documentado para el proceso crítico seleccionado",
+  "entregable_esperado": "Diagrama de bucle de retroalimentación documentado con sensor, estándar de comparación y actuador definidos para el proceso crítico seleccionado",
   "nodos_previos": [
-    "control_calidad_definicion"
+    "control_calidad_definicion",
+    "establecimiento_metas_de_calidad",
+    "auditoria_de_producto"
   ],
   "nodos_siguientes": [
     "sujetos_de_control",
-    "autocontrol_y_controlabilidad"
+    "autocontrol_y_controlabilidad",
+    "ciclo_pdca_pdsa",
+    "piramide_de_control",
+    "limites_control_estadistico_vs_tolerancias"
   ],
   "condiciones_activacion": [
-    "Si se necesita diseñar un sistema de control para un proceso nuevo o existente"
+    "Si necesitas diseñar un sistema de control para un proceso nuevo o existente",
+    "Cuando requieres controlar la conformidad de un proceso en tiempo real",
+    "Si existen desviaciones no gestionadas entre el desempeño real y la meta"
   ],
-  "etiqueta_arbol": "Cierra tu Bucle de Control"
+  "etiqueta_arbol": "Cierra tu Bucle de Control",
+  "ids_alias": [
+    "ciclo_de_retroalimentacion_control"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "ciclo_de_retroalimentacion_control",
+      "titulo": "Ciclo de Retroalimentación de Control (Sensor-Estándar-Actuador)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

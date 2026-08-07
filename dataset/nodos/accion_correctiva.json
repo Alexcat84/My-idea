@@ -4,14 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Acción Correctiva (Esporádica vs Crónica)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Diferencia entre no conformidades esporádicas (cambios aislados en un proceso normalmente bueno, resueltos mediante troubleshooting local) y no conformidades crónicas o 'repetidoras' (requieren diagnóstico profundo mediante proyectos de mejora, análisis de causa raíz o metodologías Six Sigma).",
+  "resumen_teorico": "Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien y se resuelve con troubleshooting local o proceso 8D, cuyo diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.",
   "pasos_accionables": [
     "Clasificar la no conformidad como esporádica o crónica según su recurrencia.",
-    "Para casos esporádicos, aplicar troubleshooting local o proceso 8D.",
-    "Para casos crónicos, organizar un proyecto formal de mejora de calidad.",
-    "Utilizar técnicas de análisis de causa raíz o Six Sigma para diagnosticar condiciones crónicas."
+    "Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.",
+    "Reconstruir la cronología de eventos como cambios de turno, mantenimiento o personal nuevo para formular y descartar teorías de causa.",
+    "Restaurar el proceso al estado previo una vez identificada la causa y verificar que el ajuste sea predecible y accesible.",
+    "Para casos crónicos, organizar un proyecto formal de mejora de calidad con análisis de causa raíz o Six Sigma."
   ],
-  "entregable_esperado": "Plan de acción correctiva documentado, diferenciando resolución esporádica de proyecto de mejora crónica.",
+  "entregable_esperado": "Plan de acción correctiva documentado con cronología de eventos si es esporádico, o esquema de proyecto de mejora si es crónico.",
   "nodos_previos": [
     "disposicion_producto_no_conforme",
     "analisis_datos_reporte_estatus",
@@ -25,16 +26,31 @@
     "ingenieria_calidad",
     "programa_de_mejora_de_calidad",
     "programa_make_certain_3",
-    "rework_por_el_causante"
+    "rework_por_el_causante",
+    "decision_aptitud_para_uso",
+    "limites_control_estadistico_vs_tolerancias"
   ],
   "nodos_siguientes": [
     "comite_cero_defectos",
     "eliminacion_causas_error_4",
     "manejo_problemas",
-    "planificacion_calidad_crosby"
+    "planificacion_calidad_crosby",
+    "sistema_informacion_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando existe una no conformidad recurrente o aislada que requiere prevención de repetición."
+    "Cuando aparece un pico o desviación aislada no conforme en tu proceso.",
+    "Cuando detectas un problema que se repite una y otra vez pese a corregirlo.",
+    "Cuando necesitas decidir si basta con restaurar el estado anterior o si hace falta rediseñar el proceso."
   ],
-  "etiqueta_arbol": "Distingue Fallas Esporádicas y Crónicas"
+  "etiqueta_arbol": "Distingue Fallas Esporádicas y Crónicas",
+  "ids_alias": [
+    "accion_correctiva_diagnostico_remedio"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "accion_correctiva_diagnostico_remedio",
+      "titulo": "Acción Correctiva: Diagnóstico y Remedio de Problemas Esporádicos",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

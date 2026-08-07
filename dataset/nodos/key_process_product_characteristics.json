@@ -4,27 +4,42 @@
   "dominio": "quality",
   "titulo_concepto": "Características Clave de Producto y Proceso (KPC)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las características clave de producto son salidas de un proceso medibles y percibidas por el cliente, mientras que las características clave de proceso (KPC) son entradas o factores del proceso que afectan las salidas pero no son vistas directamente por el cliente. Identificarlas permite priorizar recursos, usando herramientas como investigación de mercado, QFD, revisión de diseño y AMFE.",
+  "resumen_teorico": "Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.",
   "pasos_accionables": [
-    "Recolectar inputs de investigación de mercado, QFD, revisión de diseño y AMFE",
-    "Clasificar las características del producto según su importancia relativa (crítica, mayor, menor, incidental)",
-    "Identificar partes 'sensibles a calidad' usando criterios de complejidad y tasa de fallos",
-    "Documentar las características clave en planos y especificaciones"
+    "Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE",
+    "Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental",
+    "Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos",
+    "Documenta la relación entre las características de proceso y los resultados de producto",
+    "Registra las características clave en planos y especificaciones"
   ],
-  "entregable_esperado": "Listado clasificado de características clave de producto y proceso con su nivel de criticidad",
+  "entregable_esperado": "Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.",
   "nodos_previos": [
     "qfd_matriz_calidad",
     "fmea_analisis_de_modos_de_falla",
-    "estrategia_cuatro_capacidades_mercado"
+    "estrategia_cuatro_capacidades_mercado",
+    "planificacion_inicial_calidad",
+    "qfd_matriz"
   ],
   "nodos_siguientes": [
     "analisis_flujo_proceso",
     "control_proceso_variables",
-    "bucle_retroalimentacion_autoajustable"
+    "bucle_retroalimentacion_autoajustable",
+    "autocontrol_y_controlabilidad"
   ],
   "condiciones_activacion": [
-    "Cuando se inicia la planificación de manufactura de un nuevo producto",
-    "Cuando se requiere priorizar recursos de control de calidad"
+    "Cuando inicias la planificación de manufactura de un producto nuevo",
+    "Cuando necesitas priorizar tus recursos de control de calidad sobre atributos críticos",
+    "Cuando revisas un producto existente y quieres enfocar mejor tus esfuerzos de mejora"
   ],
-  "etiqueta_arbol": "Mide lo que Importa al Cliente"
+  "etiqueta_arbol": "Mide lo que Importa al Cliente",
+  "ids_alias": [
+    "caracteristicas_clave_producto_proceso"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "caracteristicas_clave_producto_proceso",
+      "titulo": "Identificación de Características Clave de Producto y Proceso",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

@@ -4,21 +4,37 @@
   "dominio": "quality",
   "titulo_concepto": "Límites de Especificación para Dimensiones Interactuantes (Stack-up de Tolerancias)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando múltiples componentes se ensamblan para formar un resultado final, sus tolerancias interactúan. El método tradicional de sumar tolerancias directamente es matemáticamente correcto pero demasiado conservador. El enfoque estadístico, basado en la suma de varianzas (raíz cuadrada de la suma de cuadrados de tolerancias), reconoce que es estadísticamente improbable que todos los componentes estén simultáneamente en el extremo de su tolerancia, resultando en límites de ensamble más realistas.",
+  "resumen_teorico": "Cuando varios componentes se ensamblan para formar una dimensión final, sus tolerancias interactúan. Sumarlas directamente es matemáticamente correcto pero demasiado conservador para tu manufactura. El método estadístico usa la raíz de la suma de cuadrados de las tolerancias, porque es estadísticamente improbable que todos los componentes caigan a la vez en el extremo de su tolerancia. Esto exige que cada componente se fabrique de forma independiente y que su dimensión siga una distribución normal; si no se cumple, puedes corregir con el factor de Bender (1.5). El resultado son límites de ensamble más realistas, tolerancias de componente más amplias sin penalizar el ensamble, y un riesgo residual calculable de que una pieza caiga fuera de especificación.",
   "pasos_accionables": [
-    "Identificar todas las dimensiones de componentes que interactúan en el ensamble final",
-    "Determinar las tolerancias individuales de cada componente",
-    "Aplicar el método estadístico de raíz de suma de cuadrados de las tolerancias en lugar de suma simple",
-    "Calcular la tolerancia resultante del ensamble completo",
-    "Comparar contra el método de suma simple para validar el ahorro en restricciones de manufactura"
+    "Identifica todas las dimensiones de componentes que interactúan en tu ensamble final",
+    "Anota la tolerancia individual de cada componente",
+    "Verifica que cada componente se fabrique de forma independiente y aleatoria, y que su dimensión siga una distribución normal",
+    "Aplica la raíz de la suma de cuadrados de las tolerancias para calcular la tolerancia del ensamble",
+    "Ajusta las tolerancias individuales con el factor de corrección de Bender (1.5) si las condiciones de independencia o normalidad no se cumplen del todo",
+    "Compara el resultado contra la suma simple y calcula el riesgo residual de que el ensamble caiga fuera de tolerancia"
   ],
-  "entregable_esperado": "Cálculo de tolerancia de ensamble mediante método estadístico, documentado junto con la comparación frente al método aditivo tradicional",
+  "entregable_esperado": "Cálculo de tolerancia de ensamble por método estadístico, con tolerancias de componente ajustadas, comparación frente al método aditivo y riesgo residual documentado",
   "nodos_previos": [
-    "limites_tolerancia_estadistica"
+    "limites_tolerancia_estadistica",
+    "funcion_perdida_limites_especificacion"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "capacidad_proceso_concepto"
+  ],
   "condiciones_activacion": [
-    "Cuando se diseñan ensambles mecánicos con múltiples componentes cuyas tolerancias individuales afectan una dimensión final crítica"
+    "Cuando diseñas un ensamble con múltiples componentes cuyas tolerancias afectan una dimensión final crítica",
+    "Cuando la suma simple de tolerancias resulta demasiado restrictiva para tu proceso de manufactura",
+    "Cuando necesitas ampliar las tolerancias de componentes individuales sin comprometer la tolerancia del ensamble"
   ],
-  "etiqueta_arbol": "Suma Bien tus Tolerancias Combinadas"
+  "etiqueta_arbol": "Suma Bien tus Tolerancias Combinadas",
+  "ids_alias": [
+    "tolerancia_estadistica_dimensiones_interactuantes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "tolerancia_estadistica_dimensiones_interactuantes",
+      "titulo": "Tolerancia Estadística para Dimensiones Interactuantes",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

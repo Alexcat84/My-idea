@@ -4,17 +4,22 @@
   "dominio": "quality",
   "titulo_concepto": "Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El COPQ (Cost of Poor Quality) engloba todos los costos que desaparecerían si no existieran fallos: errores, retrabajo, fallos en campo, reclamos, garantías, etc. Se mide típicamente como porcentaje de ventas o costos totales. Estudios históricos han estimado que el COPQ puede representar entre 20-25% de los ingresos por ventas en organizaciones que no gestionan la calidad de forma activa, llegando a cifras alarmantes en sectores como salud (hasta 30% de costos directos).",
+  "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3 (Cost of Poorly Performing Processes), agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en cuatro categorías: prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. Estudios muestran que en manufactura promedia 15% de ingresos (rango 5-35%) y en servicios hasta 30% de gastos operativos (rango 25-40%), superando incluso la utilidad anual del negocio. Reducirlo raramente exige inversión de capital, por lo que ofrece un retorno alto y es clave para decidir entre mejora real o recortes que dañan la calidad.",
   "pasos_accionables": [
-    "Identificar y categorizar todos los costos asociados a fallos internos y externos",
-    "Calcular el COPQ como porcentaje de ventas, costos operativos o valor agregado",
-    "Usar el cálculo de COPQ como mapa de ruta para priorizar iniciativas de mejora",
-    "Comparar el COPQ actual con benchmarks de la industria para evaluar el nivel de madurez en gestión de calidad"
+    "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio",
+    "Calcula el COPQ total como porcentaje de tus ventas o costos operativos",
+    "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real",
+    "Identifica los pocos procesos o productos que concentran la mayor parte del costo",
+    "Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio"
   ],
-  "entregable_esperado": "Reporte de Costo de Mala Calidad (COPQ) con desglose de categorías y porcentaje sobre ingresos",
+  "entregable_esperado": "Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo",
   "nodos_previos": [
     "doble_significado_calidad",
-    "trilogia_de_juran"
+    "trilogia_de_juran",
+    "evaluacion_riesgo_calidad_organizacional",
+    "proyectos_vitales_pocos",
+    "alineacion_estrategica_despliegue",
+    "evaluacion_organizacional_calidad"
   ],
   "nodos_siguientes": [
     "perfeccionismo_vs_valor",
@@ -24,11 +29,50 @@
     "perfeccionismo_vs_valor_2",
     "trilogia_de_juran",
     "costo_de_mala_calidad_copq_2",
-    "costo_de_mala_calidad_copq_3"
+    "costo_de_mala_calidad_copq_3",
+    "categorias_costos_calidad",
+    "costos_ocultos_calidad",
+    "metodologia_medicion_copq",
+    "roi_breakthrough"
   ],
   "condiciones_activacion": [
-    "Cuando la organización necesita justificar financieramente un programa de mejora de calidad",
-    "Si se sospecha que los fallos internos o externos están afectando significativamente la rentabilidad"
+    "Cuando sospechas que los fallos internos o externos están afectando tu rentabilidad",
+    "Cuando necesitas justificar ante ti mismo o inversionistas la inversión en mejora de calidad",
+    "Al iniciar un plan estratégico de calidad o una evaluación integral de tu negocio"
   ],
-  "etiqueta_arbol": "Calcula lo que Fallar te Cuesta"
+  "etiqueta_arbol": "Calcula lo que Fallar te Cuesta",
+  "ids_alias": [
+    "costo_de_mala_calidad_3",
+    "costo_de_mala_calidad_copq_3",
+    "costo_de_mala_calidad_copq_4",
+    "costo_mala_calidad_copq",
+    "costo_pobre_calidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "costo_de_mala_calidad_3",
+      "titulo": "Costo de Mala Calidad (Cost of Poor Quality - COPQ)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "costo_de_mala_calidad_copq_3",
+      "titulo": "Costo de la Mala Calidad — COPQ (Incumplimiento de Requisitos)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "costo_de_mala_calidad_copq_4",
+      "titulo": "Costo de la Mala Calidad (En Promedio 15% de los Ingresos)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "costo_mala_calidad_copq",
+      "titulo": "Costo de la Mala Calidad (Cost of Poor Quality - COPQ)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "costo_pobre_calidad",
+      "titulo": "Costo de la Calidad Pobre (COPQ / COP3)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

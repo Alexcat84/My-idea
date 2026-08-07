@@ -4,22 +4,36 @@
   "dominio": "quality",
   "titulo_concepto": "Tipos de Escalas de Medición",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existen cuatro escalas de medición fundamentales que determinan qué tipo de análisis estadístico es apropiado: escala de razón (registra cantidades reales con un origen aritmético, ej. peso), escala de intervalo (números ordenados sin origen aritmético, ej. tiempo del reloj), escala ordinal (categorías ordenadas por rango, ej. preferencia del cliente) y escala nominal (clasificación en categorías sin orden, ej. género, color, turno de producción).",
+  "resumen_teorico": "Existen cuatro escalas de medición fundamentales que determinan qué análisis estadístico puedes aplicar a tus datos. La escala de razón registra cantidades reales con un origen aritmético cero, como el peso, y es la más potente para el análisis. La escala de intervalo usa números ordenados sin origen aritmético, como el tiempo del reloj. La escala ordinal clasifica en categorías con un orden o rango, como la preferencia de un cliente. La escala nominal solo clasifica en categorías sin ningún orden, como género, color o turno de producción. Reconocer la escala natural de cada variable, ya sea que midas un atributo o una variable continua, es el primer paso antes de elegir cualquier herramienta estadística.",
   "pasos_accionables": [
-    "Identificar el tipo de dato que se va a recolectar (variable o atributo)",
-    "Determinar si la escala es de razón, intervalo, ordinal o nominal",
-    "Seleccionar las herramientas estadísticas apropiadas según la escala identificada",
-    "Documentar la definición operacional de cada medida"
+    "Identifica el tipo de dato que vas a recolectar, si es variable o atributo",
+    "Clasifica cada variable según su escala natural: razón, intervalo, ordinal o nominal",
+    "Selecciona las herramientas estadísticas apropiadas según la escala identificada",
+    "Documenta la definición operacional de cada medida para asegurar consistencia en análisis futuros"
   ],
-  "entregable_esperado": "Clasificación documentada de cada variable de estudio según su escala de medición",
+  "entregable_esperado": "Documento con la clasificación de cada variable de estudio según su escala de medición, listo para diseñar la recolección de datos",
   "nodos_previos": [
-    "planificacion_recoleccion_datos"
+    "planificacion_recoleccion_datos",
+    "sistema_medicion_kpi"
   ],
   "nodos_siguientes": [
-    "control_charts_shewhart"
+    "control_charts_shewhart",
+    "diseno_de_metodos_de_recoleccion_de_datos",
+    "clases_de_medidas_de_calidad"
   ],
   "condiciones_activacion": [
-    "Al diseñar un plan de recolección de datos y seleccionar herramientas estadísticas de análisis"
+    "Al iniciar la planificación de un proyecto de recolección y análisis de datos de calidad",
+    "Al diseñar un plan de recolección de datos y necesitar elegir herramientas estadísticas de análisis"
   ],
-  "etiqueta_arbol": "Domina las Escalas de Medición"
+  "etiqueta_arbol": "Domina las Escalas de Medición",
+  "ids_alias": [
+    "tipos_de_escalas_de_medicion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "tipos_de_escalas_de_medicion",
+      "titulo": "Tipos de Escalas de Medición de Datos",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

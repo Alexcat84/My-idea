@@ -4,24 +4,50 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación de Causas de Error (Error Cause Removal - ECR)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "ECR es un mecanismo del programa de mejora de calidad mediante el cual los propios empleados identifican y reportan las causas de error que enfrentan en su trabajo diario, para que la gerencia las elimine de forma sistemática. Es un paso clave posterior al establecimiento de metas de Cero Defectos, ya que traslada la responsabilidad de detección de obstáculos al nivel operativo.",
+  "resumen_teorico": "ECR es el mecanismo del programa de mejora de calidad mediante el cual cualquier empleado reporta, sin necesidad de proponer la solución, una causa raíz que le impide hacer su trabajo bien: herramientas inadecuadas, iluminación deficiente, procesos ineficientes, etc. Se lanza una vez que el programa de conciencia y las metas de Cero Defectos ya están establecidos, trasladando la detección de obstáculos al nivel operativo. Cada reporte recibe respuesta rápida y agradecimiento personal; si no se actúa, la decisión debe justificarse ante uno o dos niveles superiores de supervisión. Bien gestionado, genera alta participación positiva sin derivar en quejas destructivas, y sirve como base para reconocimientos periódicos entre quienes reportan.",
   "pasos_accionables": [
-    "Habilitar un canal formal para que los empleados reporten causas de error",
-    "Clasificar y priorizar las causas reportadas según impacto",
-    "Asignar recursos y responsables para eliminar cada causa",
-    "Retroalimentar a los empleados sobre las acciones tomadas"
+    "Habilita un canal formal con formulario simple para que los empleados reporten causas de error sin tener que proponer solución",
+    "Envía una nota de agradecimiento personal inmediata a quien presenta un ECR",
+    "Clasifica y prioriza cada causa reportada y reenvíala al área o responsable correspondiente",
+    "Asigna recursos y actúa con rapidez para eliminar la causa",
+    "Si decides no actuar, exige justificación y aprobación de uno o dos niveles superiores de supervisión",
+    "Da acuse de recibo con la decisión tomada a cada empleado y considera sorteos periódicos como reconocimiento"
   ],
-  "entregable_esperado": "Sistema de reporte y eliminación de causas de error en funcionamiento con retroalimentación a empleados",
+  "entregable_esperado": "Sistema ECR operativo con formulario, flujo de respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a los empleados.",
   "nodos_previos": [
     "cero_defectos",
-    "accion_correctiva"
+    "accion_correctiva",
+    "zero_defects_concepto",
+    "accion_correctiva_crosby",
+    "analisis_datos_atributos",
+    "dia_cero_defectos"
   ],
   "nodos_siguientes": [
-    "consejo_de_calidad"
+    "consejo_de_calidad",
+    "reconocimiento_crosby",
+    "consejos_de_calidad",
+    "reconocimiento_al_desempeno"
   ],
   "condiciones_activacion": [
+    "Después de que los empleados comprenden que la mejora es necesaria y las metas de Cero Defectos ya están establecidas",
     "Cuando los empleados identifican obstáculos recurrentes que impiden alcanzar cero defectos",
-    "Cuando se requiere involucrar al personal operativo en la mejora continua"
+    "Cuando se busca involucrar al personal operativo en la mejora continua sin generar quejas destructivas"
   ],
-  "etiqueta_arbol": "Identifica las Causas de Error"
+  "etiqueta_arbol": "Identifica las Causas de Error",
+  "ids_alias": [
+    "eliminacion_causas_error_3",
+    "programa_ecr_causa_de_error"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "eliminacion_causas_error_3",
+      "titulo": "Eliminación de Causas de Error (Error-Cause Removal, ECR)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    },
+    {
+      "node_id": "programa_ecr_causa_de_error",
+      "titulo": "Sistema ECR (Error Cause Removal)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

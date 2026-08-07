@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo.",
+  "nota": "Curaduria de la extraccion 2026-08-07: 15 aprobados, 5 rechazados. Regla: ninguna ancla core pasa de 2 (max real 1). Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad.",
   "aprobados": [
     {
       "core": "diagnostico_de_productos_crudos",
@@ -12,9 +12,10 @@
       "score": 0.7531
     },
     {
-      "core": "decision_aptitud_para_uso",
+      "core": "decision_aptitud_uso",
       "dominio": "revisar_necesidades_de_empaque",
-      "score": 0.7386
+      "score": 0.7386,
+      "redirigido_de_core": "decision_aptitud_para_uso"
     },
     {
       "core": "experiencia_del_cliente_proactiva",

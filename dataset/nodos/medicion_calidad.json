@@ -4,21 +4,23 @@
   "dominio": "quality",
   "titulo_concepto": "Medición de la Calidad (Paso 3)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Consiste en determinar el estado actual de la calidad en toda la organización, estableciendo métricas específicas para cada área de actividad, incluyendo funciones no productivas como contabilidad, finanzas, marketing e ingeniería. El objetivo es documentar dónde es posible mejorar, dónde se requiere acción correctiva y crear una base para medir mejoras futuras.",
+  "resumen_teorico": "Consiste en determinar el estado actual de la calidad en todo tu negocio, estableciendo métricas específicas para cada área de actividad, incluyendo funciones no productivas como contabilidad, finanzas, marketing e ingeniería. Donde ya existan métricas, revísalas; donde no existan, créalas desde cero. El objetivo es documentar con claridad dónde es posible mejorar, dónde se requiere acción correctiva, y construir una base objetiva que te permita medir mejoras futuras y, más adelante, calcular el costo real de la calidad en tu operación. Sin esta línea base inicial, cualquier esfuerzo de mejora posterior carecerá de referencia para comprobar si realmente funcionó.",
   "pasos_accionables": [
-    "Identificar métricas de calidad para cada departamento (errores, reprocesos, retrasos)",
-    "Involucrar a supervisores en la definición de indicadores de su propia área",
-    "Registrar el estado actual como línea base",
-    "Publicar los resultados en gráficos visibles para toda la organización"
+    "Identifica métricas de calidad para cada área de tu negocio, como errores, reprocesos o retrasos",
+    "Revisa las métricas que ya existan y crea nuevas donde falten, incluyendo áreas administrativas",
+    "Involucra a las personas responsables de cada área en la definición de sus propios indicadores",
+    "Registra el estado actual como línea base documentada",
+    "Publica los resultados en gráficos visibles para toda la organización"
   ],
-  "entregable_esperado": "Sistema de medición de calidad documentado por área, con línea base registrada y visible.",
+  "entregable_esperado": "Sistema de medición de calidad documentado por área, con línea base registrada y visible, listo para calcular el costo de la calidad.",
   "nodos_previos": [
     "equipo_mejora_calidad",
     "compromiso_gerencial_calidad",
     "concepto_vs_tecnica",
     "filosofia_zero_defectos",
     "involucramiento_sindical_calidad",
-    "repeticion_programa"
+    "repeticion_programa",
+    "programa_de_mejora_de_calidad"
   ],
   "nodos_siguientes": [
     "costo_de_calidad",
@@ -27,11 +29,25 @@
     "costo_de_calidad_2",
     "costo_de_calidad_3",
     "medicion_servicios",
-    "rejilla_madurez_gestion_calidad"
+    "rejilla_madurez_gestion_calidad",
+    "costo_de_la_calidad_coq",
+    "conciencia_de_calidad",
+    "costo_de_calidad_4"
   ],
   "condiciones_activacion": [
-    "Cuando la organización no tiene métricas claras de calidad en áreas no manufactureras",
-    "Cuando se necesita una línea base antes de iniciar mejoras"
+    "Cuando tu negocio no tiene métricas claras de calidad en áreas no productivas",
+    "Cuando necesitas una línea base antes de iniciar mejoras",
+    "Cuando necesitas establecer una línea base objetiva antes de calcular el costo de calidad"
   ],
-  "etiqueta_arbol": "Mide tu Calidad Actual"
+  "etiqueta_arbol": "Mide tu Calidad Actual",
+  "ids_alias": [
+    "medicion_de_calidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "medicion_de_calidad",
+      "titulo": "Paso Tres: Medición de Calidad",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

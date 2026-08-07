@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo.",
+  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad.",
   "aprobados": [
     {
       "core": "identificacion_de_riesgos",
@@ -32,9 +32,10 @@
       "score": 0.767
     },
     {
-      "core": "gestion_riesgo_identificacion",
+      "core": "identificacion_de_riesgos",
       "dominio": "un_dueno_para_cada_riesgo",
-      "score": 0.7642
+      "score": 0.7642,
+      "redirigido_de_core": "gestion_riesgo_identificacion"
     },
     {
       "core": "plan_de_gestion_de_riesgos",

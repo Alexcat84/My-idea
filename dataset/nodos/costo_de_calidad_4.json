@@ -14,15 +14,18 @@
   ],
   "entregable_esperado": "Un reporte de costo de calidad desglosado por categoría (scrap, rework, garantía, inspección) expresado como porcentaje de las ventas, presentado al equipo directivo",
   "nodos_previos": [
-    "medicion_de_calidad"
+    "medicion_de_calidad",
+    "medicion_calidad"
   ],
   "nodos_siguientes": [
     "conciencia_de_calidad",
-    "accion_correctiva"
+    "accion_correctiva",
+    "conciencia_calidad"
   ],
   "condiciones_activacion": [
     "Cuando la organización no tiene visibilidad financiera del impacto de los defectos",
     "Cuando se necesita justificar ante la gerencia una inversión en programas de mejora de calidad"
   ],
-  "etiqueta_arbol": "Mide el Costo de la Calidad"
+  "etiqueta_arbol": "Mide el Costo de la Calidad",
+  "deprecado": true
 }

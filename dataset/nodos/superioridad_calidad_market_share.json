@@ -4,20 +4,37 @@
   "dominio": "quality",
   "titulo_concepto": "Superioridad de Calidad y Participación de Mercado",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero esto depende de que el cliente perciba dicha superioridad claramente (por evidencia obvia, traducción a términos económicos, o incluso por fe en la marca). Cuando la diferencia de calidad es evidente para el usuario, esta diferencia es decisiva en la cuota de mercado; cuando es mínima, predominan las habilidades de marketing. Se recomienda invertir en mejoras de calidad solo cuando estas puedan pasar de una preferencia débil a aceptable, o de aceptable a claramente dominante.",
+  "resumen_teorico": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
   "pasos_accionables": [
-    "Realizar pruebas de preferencia del consumidor (forced-choice testing) frente a competidores",
-    "Determinar si la diferencia de calidad es perceptible y valorada por el cliente",
-    "Traducir ventajas técnicas a términos económicos comprensibles para el comprador (costo por uso, ahorro, etc.)",
-    "Decidir si conviene invertir en mejoras de calidad o en estrategias de marketing según el nivel de diferenciación detectado"
+    "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder",
+    "Determinar si la diferencia de preferencia cae fuera del rango 25-75 por ciento",
+    "Traducir las ventajas técnicas a términos económicos comprensibles para el comprador, como costo por uso o ahorro",
+    "Si la diferencia es amplia invertir en mejoras de calidad; si es pequeña invertir en marketing",
+    "Evitar mejoras menores de calidad que el cliente no perciba ni valore"
   ],
-  "entregable_esperado": "Estudio de preferencia de consumidor correlacionado con cuota de mercado",
+  "entregable_esperado": "Informe de análisis de preferencia de consumidor frente a cuota de mercado con recomendación de invertir en calidad o en marketing.",
   "nodos_previos": [
-    "liderazgo_calidad_mercado"
+    "liderazgo_calidad_mercado",
+    "analisis_licitaciones_no_ganadas"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "fitness_for_purpose_vs_conformance",
+    "perfeccionismo_vs_valor"
+  ],
   "condiciones_activacion": [
-    "Cuando se evalúa si invertir en mejorar la calidad del producto generará retorno en cuota de mercado"
+    "Cuando necesitas decidir entre invertir en mejora de calidad o en marketing",
+    "Cuando existe un competidor directo con cuota de mercado dominante",
+    "Cuando evalúas si mejorar la calidad de tu producto generará retorno real en cuota de mercado"
   ],
-  "etiqueta_arbol": "Haz Visible tu Calidad Superior"
+  "etiqueta_arbol": "Haz Visible tu Calidad Superior",
+  "ids_alias": [
+    "relacion_calidad_cuota_mercado"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "relacion_calidad_cuota_mercado",
+      "titulo": "Relación entre Calidad y Cuota de Mercado",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

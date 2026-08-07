@@ -4,25 +4,43 @@
   "dominio": "quality",
   "titulo_concepto": "Identificación de Riesgos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un riesgo es algo que puede salir mal y resultar en una pérdida. Antes de poder gestionar o mitigar riesgos, es indispensable identificarlos de forma sistemática, ya que suelen permanecer ocultos mientras las condiciones son favorables. El primer paso es formar un equipo multifuncional con amplio conocimiento del negocio, sus sistemas, personas y procesos, y examinar de forma crítica qué puede fallar.",
+  "resumen_teorico": "Un riesgo es cualquier cosa que puede salir mal y resultar en una pérdida. Antes de gestionar o mitigar riesgos es indispensable identificarlos de forma sistemática, porque suelen permanecer invisibles mientras las condiciones son favorables y solo se manifiestan bajo condiciones adversas. El primer paso es reunir conocimiento amplio sobre tu negocio, sus sistemas, personas y procesos, y examinar de forma crítica qué puede fallar en cada uno. Usa el sombrero negro de los Seis Sombreros de pensar para cuestionar cada respuesta y evitar quedarte solo con lo obvio. Revisar fallas pasadas ayuda a completar la lista. El resultado debe documentarse por completo antes de pasar a evaluar la probabilidad o el impacto de cada riesgo.",
   "pasos_accionables": [
-    "Formar un equipo de crisis multifuncional con conocimiento amplio del negocio.",
-    "Elaborar una lista de actividades, sistemas y procesos usados en la organización.",
-    "Preguntar sistemáticamente '¿qué puede salir mal?' para cada elemento de la lista.",
-    "Revisar fallas significativas ocurridas en los últimos 3 años para identificar riesgos adicionales."
+    "Reúne conocimiento amplio de tu negocio consultando por teléfono a quienes conocen sus sistemas, personas y procesos, o revisando tú mismo cada área si trabajas solo.",
+    "Elabora una lista de actividades, sistemas y procesos usados en tu negocio.",
+    "Pregunta sistemáticamente qué puede salir mal para cada elemento de la lista.",
+    "Aplica el sombrero negro de los Seis Sombreros de pensar para cuestionar críticamente cada respuesta y evitar quedarte con lo superficial.",
+    "Revisa las fallas significativas ocurridas en los últimos 3 años para identificar riesgos adicionales.",
+    "Documenta todos los riesgos identificados antes de pasar a evaluarlos."
   ],
-  "entregable_esperado": "Lista documentada de riesgos potenciales relevantes para la organización.",
+  "entregable_esperado": "Lista documentada de riesgos potenciales identificados por proceso, sistema o actividad, lista para su evaluación.",
   "nodos_previos": [
-    "prevencion_de_groupthink_en_evaluacion_de_riesgos"
+    "prevencion_de_groupthink_en_evaluacion_de_riesgos",
+    "teoremas_probabilidad",
+    "distribucion_weibull"
   ],
   "nodos_siguientes": [
     "evaluacion_de_factores_de_riesgo",
     "caza_las_oportunidades_no_solo_amenazas",
-    "evalua_la_gravedad_sin_autoengano"
+    "evalua_la_gravedad_sin_autoengano",
+    "evaluacion_gestion_riesgos",
+    "evitacion_del_riesgo",
+    "un_dueno_para_cada_riesgo"
   ],
   "condiciones_activacion": [
-    "Al iniciar cualquier proceso de gestión de riesgos en una organización.",
-    "Cuando no existe un inventario documentado de riesgos potenciales."
+    "Al iniciar cualquier proceso de gestión de riesgos en tu negocio.",
+    "Cuando no existe un inventario documentado de riesgos potenciales.",
+    "Cuando necesitas anticipar pérdidas potenciales bajo condiciones adversas."
   ],
-  "etiqueta_arbol": "Identifica tus Riesgos a Tiempo"
+  "etiqueta_arbol": "Identifica tus Riesgos a Tiempo",
+  "ids_alias": [
+    "gestion_riesgo_identificacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "gestion_riesgo_identificacion",
+      "titulo": "Identificación de Riesgos Operacionales",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

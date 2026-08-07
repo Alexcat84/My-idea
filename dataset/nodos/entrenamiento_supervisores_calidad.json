@@ -4,18 +4,25 @@
   "dominio": "quality",
   "titulo_concepto": "Entrenamiento de Supervisores (El Supervisor como Clave)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El supervisor, desde el presidente hasta el nivel más bajo, es la clave para lograr las metas de mejora ya que transmite actitudes y estándares de trabajo a los empleados. Por ello, debe recibir entrenamiento específico y estructurado en distintas etapas: primero sobre el sistema de medición de calidad y costos de calidad, luego sobre el programa de Cero Defectos (ZD) y el sistema de eliminación de causas de error, para que puedan responder con seguridad a las preguntas de sus subordinados.",
+  "resumen_teorico": "El supervisor, desde el nivel más alto hasta el piso, es la clave para lograr las metas de mejora porque transmite actitudes y estándares de trabajo a los empleados. Por eso necesita un entrenamiento específico y estructurado por etapas, que va más allá de la comunicación general del equipo de tarea. Primero debe entender el sistema de medición de calidad y los costos de calidad, luego el programa de Cero Defectos (ZD) y el sistema de eliminación de causas de error. Así podrá responder con seguridad a las preguntas de su gente y evitar que crea entender el concepto de calidad sin dominarlo realmente en la práctica antes de replicarlo con su equipo.",
   "pasos_accionables": [
-    "Programar al menos 6 horas de instrucción sobre el sistema de medición de calidad, costos de calidad y acciones correctivas al iniciar la conciencia de calidad.",
-    "Realizar la instrucción con la participación de niveles significativos de gerencia y asegurar la asistencia obligatoria de todos.",
-    "Brindar una sesión de briefing completa sobre el programa ZD y ECR al menos 4 semanas antes del día ZD.",
-    "Preparar un manual o guía detallada del programa para los supervisores.",
-    "Aplicar un test de comprensión sobre el concepto ZD para verificar que los supervisores realmente entienden el programa antes de transmitirlo."
+    "Programa al menos 6 horas de instrucción sobre el sistema de medición de calidad, costos de calidad y acciones correctivas al iniciar la etapa de conciencia de calidad.",
+    "Da una sesión de briefing completa sobre el programa Cero Defectos y el sistema de eliminación de causas de error al menos 4 semanas antes del día ZD.",
+    "Prepara un manual o guía detallada del programa para que el supervisor la use como referencia.",
+    "Aplica un test de comprensión sobre el concepto ZD antes de que el supervisor lo replique con su equipo.",
+    "Resuelve de forma individual las dudas de cada supervisor antes de la implementación.",
+    "Verifica que cada supervisor refuerce la formación en su área de responsabilidad."
   ],
-  "entregable_esperado": "Supervisores capacitados y evaluados (mediante test) que puedan explicar y sostener el programa ZD ante sus equipos.",
+  "entregable_esperado": "Supervisores capacitados y evaluados mediante test, capaces de explicar y sostener correctamente el programa de calidad y Cero Defectos ante sus equipos.",
   "nodos_previos": [
     "conciencia_de_calidad",
-    "medicion_calidad_2"
+    "medicion_calidad_2",
+    "dia_cero_defectos",
+    "planificacion_cero_defectos",
+    "identificacion_empleado_con_el_trabajo",
+    "intercambio_de_roles_para_motivacion",
+    "programa_cero_defectos",
+    "conciencia_calidad"
   ],
   "nodos_siguientes": [
     "dia_cero_defectos",
@@ -24,8 +31,19 @@
     "identificacion_empleado_con_el_trabajo"
   ],
   "condiciones_activacion": [
-    "Cuando se ha iniciado la fase de conciencia de calidad y se necesita preparar a los mandos medios antes del lanzamiento formal de Cero Defectos.",
-    "Si existe riesgo de que los supervisores no comprendan realmente el concepto ZD antes de comunicarlo a sus equipos."
+    "Cuando has iniciado la etapa de conciencia de calidad y necesitas preparar a tus mandos medios antes del lanzamiento formal de Cero Defectos.",
+    "Si existe riesgo de que los supervisores no comprendan realmente el concepto ZD antes de comunicarlo a sus equipos.",
+    "Si detectas que los mandos medios creen entender el concepto de calidad pero en la práctica no lo dominan."
   ],
-  "etiqueta_arbol": "El Supervisor, tu Pieza Clave"
+  "etiqueta_arbol": "El Supervisor, tu Pieza Clave",
+  "ids_alias": [
+    "entrenamiento_supervisores_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "entrenamiento_supervisores_2",
+      "titulo": "Entrenamiento de Supervisores (Paso 8 de Crosby)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

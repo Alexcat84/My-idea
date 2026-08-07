@@ -15,11 +15,13 @@
   "entregable_esperado": "Mapa SIPOC validado que define alcance, proveedores, entradas, proceso, salidas y clientes",
   "nodos_previos": [
     "hoja_de_necesidades_del_cliente",
-    "definicion_sistema_calidad_proveedor"
+    "definicion_sistema_calidad_proveedor",
+    "customer_needs_spreadsheet"
   ],
   "nodos_siguientes": [
     "diagrama_de_flujo_proceso_map",
-    "hoja_de_necesidades_del_cliente"
+    "hoja_de_necesidades_del_cliente",
+    "customer_needs_spreadsheet"
   ],
   "condiciones_activacion": [
     "Cuando se inicia un proyecto de mejora y se necesita entender el alcance del proceso",

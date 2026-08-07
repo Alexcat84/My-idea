@@ -4,24 +4,46 @@
   "dominio": "quality",
   "titulo_concepto": "Certificación y Registro de Sistemas de Calidad (Auditorías de Tercera Parte)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para reducir la redundancia de auditorías de segunda parte (cliente-proveedor) en toda la cadena de suministro, surgen organismos de certificación/registro de tercera parte que auditan la conformidad de una organización con normas como ISO 9001. Al aprobar, emiten un certificado y registran públicamente al proveedor, reduciendo costos y mejorando consistencia. Se requieren auditorías de vigilancia periódicas para mantener el registro.",
+  "resumen_teorico": "Los estándares ISO 9000, adoptados por más de 100 países, ofrecen un marco no prescriptivo para asegurar calidad en diseño, producción, entrega y soporte. Para evitar que cada cliente audite por separado a su proveedor, surgen organismos certificadores de tercera parte que auditan la conformidad de tu sistema de gestión de calidad frente a normas como ISO 9001 o ISO 9002. Al aprobar, emiten un certificado público y te registran, lo que reduce costos, elimina auditorías redundantes y da credibilidad internacional en la cadena de suministro. El estatus se mantiene con auditorías de vigilancia periódicas, usualmente semestrales, y auditorías completas cada cierto tiempo.",
   "pasos_accionables": [
-    "Seleccionar un organismo certificador/registrador acreditado",
-    "Preparar la documentación del sistema de gestión de calidad para la auditoría formal",
-    "Someterse a la auditoría de conformidad con la norma aplicable (ej. ISO 9001)",
-    "Mantener el registro mediante auditorías de vigilancia periódicas (usualmente semestrales)"
+    "Elige el estándar de referencia aplicable a tu negocio, como ISO 9001 o ISO 9002",
+    "Implementa tu sistema de gestión de calidad conforme a los requisitos de esa norma",
+    "Revisa tú mismo la conformidad antes de la auditoría formal, a modo de chequeo interno",
+    "Contrata un organismo certificador acreditado para la auditoría de tercera parte",
+    "Obtén el certificado y regístrate públicamente como conforme",
+    "Agenda y supera las auditorías de vigilancia periódicas para no perder el registro"
   ],
-  "entregable_esperado": "Certificado de conformidad ISO 9001 emitido por un registrador acreditado",
+  "entregable_esperado": "Certificado de conformidad ISO 9001 vigente, emitido por un organismo acreditado, con tu sistema de gestión de calidad documentado y registrado públicamente.",
   "nodos_previos": [
     "familia_normas_iso_9000",
-    "trilogia_juran_qa_qc"
+    "trilogia_juran_qa_qc",
+    "auditorias_primera_segunda_tercera_parte"
   ],
   "nodos_siguientes": [
-    "acreditacion_organismos_certificadores"
+    "acreditacion_organismos_certificadores",
+    "adopciones_industria_especifica_iso9000",
+    "familia_normas_iso_9000"
   ],
   "condiciones_activacion": [
-    "Cuando la organización necesita reducir auditorías redundantes de múltiples clientes",
-    "Cuando se busca credibilidad de mercado internacional"
+    "Cuando necesitas reducir auditorías redundantes de múltiples clientes",
+    "Cuando buscas credibilidad de mercado internacional o en tu cadena de suministro",
+    "Cuando el mercado te exige evidencia pública de cumplimiento de estándares de calidad"
   ],
-  "etiqueta_arbol": "Audita con Terceros Independientes"
+  "etiqueta_arbol": "Audita con Terceros Independientes",
+  "ids_alias": [
+    "certificacion_iso_9000",
+    "certificacion_registro_sistemas_calidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "certificacion_iso_9000",
+      "titulo": "Certificación/Registro del Sistema de Gestión de Calidad ISO 9000",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "certificacion_registro_sistemas_calidad",
+      "titulo": "Certificación y Registro de Sistemas de Calidad (ISO 9001/9002)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

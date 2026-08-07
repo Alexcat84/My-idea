@@ -4,16 +4,16 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Capacidad de Proceso mediante Histogramas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Combina el concepto de histograma con la curva de probabilidad para evaluar si un proceso puede cumplir con los límites de especificación. Se analiza el centrado (aim del proceso), el ancho (variabilidad) y la forma (normalidad) del histograma para determinar la capacidad del proceso y las acciones correctivas necesarias.",
+  "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
   "pasos_accionables": [
-    "Seleccionar una muestra aleatoria del proceso y medir la característica de calidad",
+    "Seleccionar una muestra aleatoria de al menos 40 mediciones del proceso",
     "Construir el histograma con los límites de especificación superpuestos",
     "Evaluar el centrado del histograma respecto al objetivo del proceso",
     "Evaluar el ancho de la distribución respecto a los límites de especificación",
-    "Evaluar la forma de la distribución para detectar mezclas de poblaciones o problemas de calidad",
+    "Evaluar la forma de la distribución e investigar picos múltiples como indicio de mezcla de poblaciones o procesos distintos",
     "Determinar si el proceso es capaz y definir acciones correctivas si no lo es"
   ],
-  "entregable_esperado": "Informe de capacidad de proceso indicando si el proceso cumple especificaciones y qué acciones tomar",
+  "entregable_esperado": "Histograma con límites de especificación e informe de capacidad de proceso indicando si cumple especificaciones y qué acciones tomar",
   "nodos_previos": [
     "histograma_calidad",
     "distribucion_normal_probabilidad"
@@ -22,7 +22,19 @@
     "control_estadistico_proceso"
   ],
   "condiciones_activacion": [
-    "Si se necesita determinar si un proceso productivo es capaz de cumplir con las especificaciones del cliente"
+    "Si necesitas determinar si tu proceso productivo es capaz de cumplir con las especificaciones del cliente",
+    "Si sospechas variabilidad no controlada en tu proceso",
+    "Si necesitas validar si tu proceso es capaz de cumplir tolerancias"
   ],
-  "etiqueta_arbol": "Evalúa tu Proceso con Histogramas"
+  "etiqueta_arbol": "Evalúa tu Proceso con Histogramas",
+  "ids_alias": [
+    "histograma_analisis"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "histograma_analisis",
+      "titulo": "Análisis de Histogramas para Capacidad de Proceso",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

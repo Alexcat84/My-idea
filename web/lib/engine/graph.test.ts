@@ -65,7 +65,12 @@ describe("esOfrecible: el muro de mundos (Fase 3.5/3.6)", () => {
     const graph = cargarGrafo();
     // Fase v1.3.2: la muralla vale para los 6 mundos. Fase v1.4: 7.º mundo risk_management.
     for (const dominio of ["quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias", "risk_management"]) {
-      const delPack = Object.keys(graph).filter((id) => graph[id].dominio === dominio);
+      // Se excluyen los DEPRECADOS: este test es sobre la muralla de DOMINIO
+      // (un nodo de pack no pasa sin su unlock), no sobre la deprecación. Un
+      // nodo fundido no es ofrecible ni con su mundo abierto, y eso lo prueba
+      // puertaUnica.test.ts, que es donde vive esa ley.
+      const delPack = Object.keys(graph).filter(
+        (id) => graph[id].dominio === dominio && !graph[id].deprecado);
       expect(delPack.length).toBeGreaterThan(0);
       for (const id of delPack.slice(0, 10)) {
         expect(esOfrecible(id, graph)).toBe(false);

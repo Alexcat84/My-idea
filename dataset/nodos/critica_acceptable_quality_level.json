@@ -14,11 +14,13 @@
   "entregable_esperado": "Análisis comparativo del costo de reprocesos actuales frente al costo estimado de prevención, y eliminación de estándares AQL tolerantes al defecto.",
   "nodos_previos": [
     "definicion_calidad_conformidad_requisitos",
-    "definicion_calidad_conformidad_requisitos_3"
+    "definicion_calidad_conformidad_requisitos_3",
+    "definicion_calidad_conformidad"
   ],
   "nodos_siguientes": [
     "programa_zero_defects",
-    "costo_de_la_no_calidad"
+    "costo_de_la_no_calidad",
+    "cero_defectos"
   ],
   "condiciones_activacion": [
     "Cuando la empresa usa estándares de calidad que aceptan un porcentaje de defectos como normal.",

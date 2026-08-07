@@ -4,22 +4,37 @@
   "dominio": "quality",
   "titulo_concepto": "Perfeccionismo como Desperdicio de Valor (Cuándo la Perfección Sí Vale)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existe una tendencia humana instintiva hacia la perfección que, en contextos críticos (seguridad, salud), es necesaria y valiosa. Sin embargo, en otros contextos, perseguir la perfección más allá de lo que aporta valor real o estético constituye 'perfeccionismo': consumo de recursos sin aumentar la aptitud para el propósito.",
+  "resumen_teorico": "Existe un impulso humano instintivo hacia la precisión y la perfección que en ciertos contextos, como seguridad alimentaria, salud, energía nuclear o aviación, resulta indispensable y necesario. Sin embargo, en la mayoría de las demás situaciones, perseguir la perfección más allá de lo que aporta valor real, estético o tecnológico se convierte en 'perfeccionismo': un consumo de materiales, energía y recursos que agrega costo sin aumentar la aptitud del producto para su propósito ni la satisfacción del cliente. Evitar este desperdicio requiere un análisis de 'fit for purpose' que distinga con claridad los atributos críticos de los que no lo son, evitando así la sobreingeniería y sus costos innecesarios.",
   "pasos_accionables": [
-    "Clasificar los atributos del producto/servicio según su criticidad para seguridad/salud vs estética/preferencia",
-    "Determinar el nivel de precisión que realmente agrega valor percibido por el cliente",
-    "Eliminar inversión en refinamientos que no sean perceptibles ni valorados por el cliente",
-    "Reservar el estándar de perfección solo para atributos críticos de seguridad"
+    "Clasifica los atributos de tu producto o servicio según su criticidad para seguridad o salud frente a lo estético o preferencial",
+    "Evalúa cada especificación o nivel de precisión contra su verdadero impacto en la satisfacción de tu cliente",
+    "Elimina inversión en refinamientos, procesos o controles que no sean perceptibles ni valorados por el cliente",
+    "Reserva el estándar de perfección únicamente para los atributos críticos de seguridad o salud",
+    "Define tus propios criterios de 'fit for purpose' para detectar sobreingeniería antes de invertir recursos"
   ],
-  "entregable_esperado": "Matriz de criticidad de atributos de calidad (crítico de seguridad vs. no crítico) con recomendaciones de inversión",
+  "entregable_esperado": "Matriz de criticidad de atributos de calidad (crítico de seguridad vs no crítico) con recomendaciones de inversión y especificaciones revisadas.",
   "nodos_previos": [
     "relacion_calidad_cuota_mercado",
-    "costo_de_mala_calidad_copq"
+    "costo_de_mala_calidad_copq",
+    "superioridad_calidad_market_share"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "filosofia_zero_defectos"
+  ],
   "condiciones_activacion": [
-    "Cuando se invierten recursos significativos en mejorar atributos no críticos",
-    "Cuando existe riesgo de sobre-ingeniería sin retorno perceptible para el cliente"
+    "Cuando inviertes recursos significativos en mejorar atributos no críticos",
+    "Cuando notas altos costos sin mejora perceptible en la satisfacción del cliente",
+    "Cuando tiendes a sobre especificar tu producto más allá de lo que el cliente requiere"
   ],
-  "etiqueta_arbol": "Sabe Cuándo Buscar la Perfección"
+  "etiqueta_arbol": "Sabe Cuándo Buscar la Perfección",
+  "ids_alias": [
+    "perfeccionismo_vs_valor_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "perfeccionismo_vs_valor_2",
+      "titulo": "Perfeccionismo como Desperdicio de Valor (Contextos Críticos vs Desperdicio)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

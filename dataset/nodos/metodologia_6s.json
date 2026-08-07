@@ -4,23 +4,46 @@
   "dominio": "quality",
   "titulo_concepto": "Metodología 6S (Sort, Set in order, Shine, Standardize, Sustain, Safety)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Método Lean para lograr un lugar de trabajo altamente eficiente, limpio y organizado. Sus beneficios incluyen la prevención de defectos, la prevención de accidentes y la eliminación de tiempo perdido buscando herramientas, documentación u otros insumos necesarios para producir bienes o servicios.",
+  "resumen_teorico": "El 6S es una técnica japonesa de lean manufacturing para organizar tu lugar de trabajo, prevenir defectos y accidentes, y mejorar el flujo de trabajo. Es simple de implementar y debe aplicarse antes de poner en marcha otras soluciones de mejora de procesos, ya que sirve como base. Reduce el tiempo perdido buscando herramientas, documentación u otros insumos necesarios para producir bienes o servicios. Consta de seis pasos: clasificar lo necesario, ordenarlo para fácil acceso, limpiar el área, estandarizar la limpieza como hábito, sostener la disciplina creando las condiciones de tiempo, recursos e incentivos necesarias, y asegurar la seguridad en cada operación.",
   "pasos_accionables": [
-    "Sort (clasificar): eliminar elementos innecesarios del área de trabajo",
-    "Set in order (ordenar): organizar herramientas y materiales de forma accesible",
-    "Shine (limpiar): mantener el área limpia y libre de suciedad",
-    "Standardize (estandarizar): crear procedimientos consistentes de organización",
-    "Sustain (sostener): mantener disciplina para conservar el sistema en el tiempo",
-    "Safety (seguridad): integrar prácticas seguras en cada etapa"
+    "Sort: elimina de tu área de trabajo todo lo que no necesites",
+    "Set in order: organiza tus herramientas y materiales para acceder y devolverlos fácilmente",
+    "Shine: limpia tu espacio y mantenlo libre de suciedad",
+    "Standardize: crea procedimientos que conviertan la limpieza y el orden en un hábito",
+    "Sustain: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo",
+    "Safety: revisa e integra prácticas seguras en cada etapa de tu trabajo"
   ],
-  "entregable_esperado": "Área de trabajo organizada según los 6 principios, con checklist de auditoría 6S",
+  "entregable_esperado": "Área de trabajo organizada según los 6 principios 6S, con checklist de auditoría periódica establecido",
   "nodos_previos": [
-    "introduccion_lean"
+    "introduccion_lean",
+    "errores_a_prueba_poka_yoke"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "validacion_sistema_medicion",
+    "validacion_sistema_medicion_2",
+    "mistake_proofing_poka_yoke",
+    "tpm_maintenance"
+  ],
   "condiciones_activacion": [
-    "Cuando existe desorden en el área de trabajo que genera pérdida de tiempo o defectos",
-    "Cuando se busca prevenir accidentes mediante organización del espacio físico"
+    "Cuando tu lugar de trabajo está desorganizado, sucio o te hace perder tiempo buscando cosas",
+    "Antes de implementar cualquier otra solución de mejora de procesos",
+    "Cuando quieres prevenir defectos o accidentes mediante la organización de tu espacio físico"
   ],
-  "etiqueta_arbol": "Organiza tu Espacio de Trabajo"
+  "etiqueta_arbol": "Organiza tu Espacio de Trabajo",
+  "ids_alias": [
+    "6s_lugar_trabajo",
+    "6s_workplace_organization"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "6s_lugar_trabajo",
+      "titulo": "Metodología 6S para Lugares de Trabajo",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "6s_workplace_organization",
+      "titulo": "6S – Organización del Lugar de Trabajo",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }
