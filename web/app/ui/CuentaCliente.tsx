@@ -281,7 +281,7 @@ export function CuentaCliente({ email }: { email: string }) {
               >
                 {ocupado ? "Verificando…" : "Activar"}
               </button>
-              <button type="button" onClick={() => setFlujo({ paso: "reposo" })} className="text-sm text-dim hover:text-ink">
+              <button type="button" onClick={() => setFlujo({ paso: "reposo" })} className="rounded-cinta border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-sm font-medium">
                 Cancelar
               </button>
             </div>
@@ -299,7 +299,7 @@ export function CuentaCliente({ email }: { email: string }) {
               >
                 {ocupado ? "Verificando…" : "Activar"}
               </button>
-              <button type="button" onClick={() => setFlujo({ paso: "reposo" })} className="text-sm text-dim hover:text-ink">
+              <button type="button" onClick={() => setFlujo({ paso: "reposo" })} className="rounded-cinta border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-sm font-medium">
                 Cancelar
               </button>
             </div>

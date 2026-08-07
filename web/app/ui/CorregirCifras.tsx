@@ -171,7 +171,7 @@ export function CorregirCifras({
         >
           {guardando ? "Calculando…" : "Volver a calcular"}
         </button>
-        <button onClick={onCancelar} disabled={guardando} className="text-sm text-dim hover:text-ink disabled:opacity-50">
+        <button onClick={onCancelar} disabled={guardando} className="rounded-cinta border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-5 py-2.5 text-sm font-medium disabled:opacity-50">
           Cancelar
         </button>
       </div>

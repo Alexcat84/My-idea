@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ArbolPensante, type NodoArbol } from "../ui/ArbolPensante";
 import { CampoConVoz } from "../ui/CampoConVoz";
+import { BotonHeroe } from "../ui/BotonHeroe";
 import { consumirSSE } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
 
@@ -170,12 +171,12 @@ export default function NuevaIdea() {
         </div>
 
         <div className="anima-plan-in mt-9" style={{ animationDelay: "0.65s" }}>
-          <button
+          <BotonHeroe
             onClick={() => router.push(`/idea/${estado.projectId}?entrevista=1`)}
-            className="rounded-[10px] border border-accent/40 bg-accent/10 px-[26px] py-3 text-sm font-semibold text-accent hover:bg-accent/20"
+            className="rounded-[10px] px-[26px] py-3 text-sm font-semibold"
           >
             Explorar estas suposiciones
-          </button>
+          </BotonHeroe>
         </div>
       </main>
     );

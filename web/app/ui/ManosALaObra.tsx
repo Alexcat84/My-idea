@@ -17,6 +17,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
 import { BarraAvance } from "./BarraAvance";
 import { CampoConVoz } from "./CampoConVoz";
+import { BotonHeroe } from "./BotonHeroe";
 import { DetalleActividad } from "./DetalleActividad";
 import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
@@ -655,7 +656,7 @@ function RitualContinuar({
             <button
               onClick={() => onEnviar(detalles.trim() || null, null)}
               disabled={enviando}
-              className="rounded-[10px] border border-white/15 px-4 py-2.5 text-sm text-dim hover:border-accent/60 hover:text-ink disabled:opacity-50"
+              className="rounded-[10px] border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-sm font-medium disabled:opacity-50"
             >
               No estoy seguro
             </button>
@@ -2352,13 +2353,13 @@ export function ManosALaObra({
                     Esto usará <span className="font-semibold text-ink">{PRECIOS.mundo_activar} créditos</span> de tu saldo.
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-3">
-                    <button
+                    <BotonHeroe
                       onClick={() => mundo.previewSessionId && onComprarPlanMundo(mundo.dominio, mundo.previewSessionId)}
                       disabled={!mundo.previewSessionId}
-                      className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
+                      className="rounded-[10px] px-5 py-2.5 text-sm font-semibold"
                     >
                       Generar mi plan de {mundo.nombre} · {PRECIOS.mundo_activar} créditos
-                    </button>
+                    </BotonHeroe>
                   </div>
                 </div>
               ) : (

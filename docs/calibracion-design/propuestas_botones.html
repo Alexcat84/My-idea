@@ -1,0 +1,262 @@
+<meta charset="utf-8">
+<title>My Idea · propuestas de botón</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #000; --surface: #101013; --surface-2: #17171b; --surface-3: #0c0c10;
+    --hair: rgba(255,255,255,0.08);
+    --ink: #f5f6f8; --dim: #a6a7ad;
+    --accent: #4d7cfe; --done: #3fb950; --warn: #e0a64a;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:44px 26px 90px; background:var(--bg); color:var(--ink);
+         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:1080px; margin:0 auto; }
+  h1 { font-size:26px; font-weight:700; letter-spacing:-0.02em; margin:0 0 8px; }
+  .lead { font-size:14.5px; color:var(--dim); line-height:1.65; max-width:66ch; margin:0 0 14px; }
+  h2 { font-size:11px; font-weight:600; letter-spacing:1.3px; text-transform:uppercase;
+       color:var(--dim); margin:52px 0 6px; }
+  .h2sub { font-size:13.5px; color:var(--dim); line-height:1.6; max-width:68ch; margin:0 0 26px; }
+  .caso { display:grid; grid-template-columns:190px 1fr; gap:26px; align-items:center;
+          padding:26px 0; border-top:1px solid var(--hair); }
+  .caso .id { font-size:14px; font-weight:600; }
+  .caso .por { font-size:12.5px; color:#6f7076; margin-top:5px; line-height:1.55; }
+  .lienzo { display:flex; flex-wrap:wrap; gap:26px; align-items:center; min-height:64px; }
+  .nota { margin-top:12px; font-size:12.5px; color:var(--warn); line-height:1.6; }
+  .reco { display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px;
+          border:1px solid rgba(77,124,254,0.4); background:rgba(77,124,254,0.10);
+          color:var(--accent); font-size:10.5px; font-weight:700; letter-spacing:0.4px;
+          text-transform:uppercase; vertical-align:middle; }
+
+  /* ══ base común: tamaño, radio y peso de la casa ══ */
+  .b { position:relative; cursor:pointer; font-family:inherit; font-size:14px; font-weight:600;
+       padding:12px 24px; border-radius:10px; border:1px solid transparent;
+       background:transparent; color:var(--ink); transition:all .28s cubic-bezier(.2,.8,.2,1); }
+
+  /* ── A1 · chispa (héroe) ───────────────────────────── */
+  .a1 { border-color:rgba(77,124,254,0.42); background:rgba(77,124,254,0.10); color:var(--accent); overflow:visible; }
+  .a1 .sp { position:absolute; pointer-events:none; opacity:0; fill:var(--accent);
+            transition:all .9s cubic-bezier(.05,.83,.43,.96); }
+  .a1 .s1 { top:24%; left:22%; width:16px; } .a1 .s2 { top:46%; left:46%; width:10px; }
+  .a1 .s3 { top:38%; left:38%; width:6px; }  .a1 .s4 { top:22%; left:42%; width:8px; }
+  .a1 .s5 { top:26%; left:48%; width:11px; }
+  .a1:hover { background:rgba(77,124,254,0.18); box-shadow:0 0 24px rgba(77,124,254,0.28); }
+  .a1:hover .s1 { top:-78%; left:-26%; opacity:1; filter:drop-shadow(0 0 7px rgba(77,124,254,0.9)); }
+  .a1:hover .s2 { top:-22%; left:8%;   opacity:1; filter:drop-shadow(0 0 7px rgba(77,124,254,0.9)); }
+  .a1:hover .s3 { top:56%;  left:24%;  opacity:1; filter:drop-shadow(0 0 7px rgba(77,124,254,0.9)); }
+  .a1:hover .s4 { top:30%;  left:82%;  opacity:1; filter:drop-shadow(0 0 7px rgba(77,124,254,0.9)); }
+  .a1:hover .s5 { top:24%;  left:106%; opacity:1; filter:drop-shadow(0 0 7px rgba(77,124,254,0.9)); }
+
+  /* ── A2 · trazo que recorre el borde (héroe) ───────── */
+  .a2wrap { position:relative; display:inline-block; }
+  .a2 { border-color:rgba(77,124,254,0.42); background:rgba(77,124,254,0.10); color:var(--accent); }
+  .a2wrap i { position:absolute; display:block; pointer-events:none; opacity:0; transition:opacity .3s; }
+  .a2wrap .t1 { top:0; left:-100%; width:100%; height:1.5px;
+                background:linear-gradient(90deg,transparent,var(--accent)); }
+  .a2wrap .t2 { bottom:0; right:-100%; width:100%; height:1.5px;
+                background:linear-gradient(90deg,var(--accent),transparent); }
+  .a2wrap:hover .t1 { opacity:1; left:100%; transition:left .75s ease, opacity .2s; }
+  .a2wrap:hover .t2 { opacity:1; right:100%; transition:right .75s ease .28s, opacity .2s; }
+  .a2wrap:hover .a2 { background:rgba(77,124,254,0.18); box-shadow:0 0 22px rgba(77,124,254,0.22); }
+
+  /* ── A3 · la marea que sube (héroe) ────────────────── */
+  .a3 { border-color:rgba(77,124,254,0.42); color:var(--accent); overflow:hidden; z-index:1;
+        background:rgba(77,124,254,0.06); }
+  .a3 b { position:absolute; bottom:0; width:34%; height:100%; border-radius:50%;
+          background:var(--accent); transform:translateY(120%) scale(1.35);
+          transition:transform .6s cubic-bezier(.2,.8,.2,1); z-index:-1; }
+  .a3 b:nth-of-type(1){ left:-6%; } .a3 b:nth-of-type(2){ left:33%; transition-delay:.07s; }
+  .a3 b:nth-of-type(3){ left:70%; transition-delay:.03s; }
+  .a3:hover { color:#07070A; border-color:var(--accent); }
+  .a3:hover b { transform:translateY(38%) scale(1.35); }
+
+  /* ── B1 · tinta (lo que hay hoy) ───────────────────── */
+  .b1 { border-color:rgba(77,124,254,0.40); background:rgba(77,124,254,0.10); color:var(--accent); }
+  .b1:hover { background:rgba(77,124,254,0.20); }
+
+  /* ── B2 · relleno que entra por la izquierda ───────── */
+  .b2 { border-color:rgba(77,124,254,0.40); color:var(--accent); overflow:hidden; z-index:1;
+        background:transparent; }
+  .b2::before { content:""; position:absolute; inset:0; background:var(--accent);
+                transform:translateX(-101%); transition:transform .3s ease; z-index:-1; }
+  .b2:hover { color:#07070A; border-color:var(--accent); }
+  .b2:hover::before { transform:translateX(0); }
+
+  /* ── B3 · el halo que crece desde las esquinas ─────── */
+  .b3 { border-color:rgba(77,124,254,0.40); color:var(--accent); overflow:hidden; z-index:1;
+        background:transparent; }
+  .b3::before, .b3::after { content:""; position:absolute; width:44px; height:44px;
+        border-radius:50%; background:var(--accent); z-index:-1;
+        transform:translate(-50%,-50%); transition:width .55s ease, height .55s ease; }
+  .b3::before { top:-14px; left:-14px; }
+  .b3::after  { left:calc(100% + 14px); top:calc(100% + 14px); }
+  .b3:hover { color:#07070A; border-color:var(--accent); }
+  .b3:hover::before, .b3:hover::after { width:340px; height:340px; }
+
+  /* ── secundario de la casa (para las tres) ─────────── */
+  .sec { border-color:rgba(255,255,255,0.15); color:var(--dim); background:transparent; }
+  .sec:hover { border-color:rgba(77,124,254,0.6); color:var(--ink); }
+
+  /* ══ C · el intercambiador ══ */
+  .cambiador { --pad:5px; --alto:60px; position:relative; display:flex; align-items:center;
+    width:330px; height:var(--alto); padding:var(--pad); box-sizing:border-box;
+    background:var(--surface-3); border:1px solid #1c1c22; border-radius:16px; overflow:hidden;
+    box-shadow:inset 0 2px 5px rgba(0,0,0,.75), inset 0 -1px 2px rgba(255,255,255,.04); }
+  .cambiador input { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
+  .cambiador label { flex:1; height:100%; display:flex; flex-direction:column; gap:3px;
+    align-items:center; justify-content:center; cursor:pointer; z-index:2; border-radius:12px;
+    color:var(--dim); transition:color .3s ease; -webkit-tap-highlight-color:transparent; }
+  .cambiador label svg { width:19px; height:19px; transition:transform .35s cubic-bezier(.34,1.56,.64,1); }
+  .cambiador label span { font-size:11px; font-weight:600; letter-spacing:.2px; }
+  .cambiador .luz { position:absolute; top:var(--pad); left:var(--pad); z-index:1; pointer-events:none;
+    width:calc((330px - var(--pad)*2)/3); height:calc(var(--alto) - var(--pad)*2);
+    transition:transform .45s cubic-bezier(.34,1.56,.64,1); }
+  .cambiador .luz i { display:block; width:100%; height:100%; border-radius:12px;
+    background:linear-gradient(145deg, rgba(77,124,254,.16), rgba(77,124,254,.05));
+    border:1px solid rgba(77,124,254,.42);
+    box-shadow:0 0 18px rgba(77,124,254,.30), inset 0 0 14px rgba(77,124,254,.14); position:relative; }
+  .cambiador .luz i::after { content:""; position:absolute; top:0; left:12%; width:76%; height:1px;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent); }
+  .cambiador #c1:checked ~ .luz { transform:translateX(0); }
+  .cambiador #c2:checked ~ .luz { transform:translateX(100%); }
+  .cambiador #c3:checked ~ .luz { transform:translateX(200%); }
+  .cambiador #c1:checked ~ [for=c1], .cambiador #c2:checked ~ [for=c2], .cambiador #c3:checked ~ [for=c3] { color:var(--ink); }
+  .cambiador #c1:checked ~ [for=c1] svg, .cambiador #c2:checked ~ [for=c2] svg, .cambiador #c3:checked ~ [for=c3] svg { transform:scale(1.08); }
+  .cambiador label:hover { color:#cfd2d8; }
+  .cambiador input:focus-visible ~ .luz i { border-color:#fff; box-shadow:0 0 26px rgba(77,124,254,.55); }
+
+  .comparte { display:flex; flex-wrap:wrap; gap:34px; align-items:center; }
+  .viejo { display:inline-flex; gap:4px; padding:4px; background:var(--surface-2);
+           border:1px solid var(--hair); border-radius:10px; }
+  .viejo button { border:0; background:transparent; color:var(--dim); font:inherit; font-size:12.5px;
+                  font-weight:600; padding:7px 14px; border-radius:8px; cursor:pointer; }
+  .viejo button.on { background:rgba(77,124,254,0.14); color:var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
+</style>
+<div class="wrap">
+  <h1>Propuestas de botón</h1>
+  <p class="lead">
+    Todas adaptadas a los colores de la casa (azul #4D7CFE, negro real, verde solo para lo terminado)
+    y al lenguaje que ya decidiste: el azul es tinta, no mancha. Pasa el ratón por encima de cada uno.
+    Dime el nombre del que quieres para cada carril.
+  </p>
+
+  <h2>Carril A · el botón héroe</h2>
+  <p class="h2sub">
+    Animado, reservado para los momentos que abren camino: explorar las suposiciones, armar el plan,
+    generar el plan de un mundo. Uno por pantalla, nunca dos.
+  </p>
+
+  <div class="caso">
+    <div>
+      <div class="id">A1 · La chispa <span class="reco">recomendado</span></div>
+      <div class="por">Las chispas salen disparadas al pasar por encima. Es la metáfora de la casa: tu idea empieza con una chispa.</div>
+    </div>
+    <div class="lienzo">
+      <button class="b a1">
+        Explorar estas suposiciones
+        <svg class="sp s1" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+        <svg class="sp s2" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+        <svg class="sp s3" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+        <svg class="sp s4" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+        <svg class="sp s5" viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="caso">
+    <div>
+      <div class="id">A2 · El trazo</div>
+      <div class="por">Dos trazos recorren el borde, arriba y abajo, con retardo. Sobrio y elegante, sin fuegos artificiales.</div>
+    </div>
+    <div class="lienzo">
+      <span class="a2wrap"><button class="b a2">Explorar estas suposiciones</button><i class="t1"></i><i class="t2"></i></span>
+    </div>
+  </div>
+
+  <div class="caso">
+    <div>
+      <div class="id">A3 · La marea</div>
+      <div class="por">Tres burbujas suben y llenan el botón. El más físico de los tres: se siente como algo que se activa.</div>
+    </div>
+    <div class="lienzo">
+      <button class="b a3">Explorar estas suposiciones<b></b><b></b><b></b></button>
+    </div>
+  </div>
+
+  <h2>Carril B · el botón estándar</h2>
+  <p class="h2sub">
+    El de todos los días: guardar, enviar, continuar, entrar. Uno solo por página, y todos iguales dentro
+    de ella. Aquí no hay animación llamativa, solo la respuesta al ratón. Cada uno va con su secundario.
+  </p>
+
+  <div class="caso">
+    <div>
+      <div class="id">B1 · Tinta</div>
+      <div class="por">Lo que ya tienes desde hoy. El más discreto y el que menos pelea con el contenido.</div>
+    </div>
+    <div class="lienzo">
+      <button class="b b1">Guardar</button><button class="b sec">Cancelar</button>
+    </div>
+  </div>
+
+  <div class="caso">
+    <div>
+      <div class="id">B2 · La cortina <span class="reco">recomendado</span></div>
+      <div class="por">El azul entra por la izquierda y el texto se invierte a negro. Nítido, rápido, sin ruido.</div>
+    </div>
+    <div class="lienzo">
+      <button class="b b2">Guardar</button><button class="b sec">Cancelar</button>
+    </div>
+  </div>
+
+  <div class="caso">
+    <div>
+      <div class="id">B3 · El halo</div>
+      <div class="por">Dos círculos crecen desde las esquinas hasta llenar. Más suave que la cortina, un punto más lento.</div>
+    </div>
+    <div class="lienzo">
+      <button class="b b3">Guardar</button><button class="b sec">Cancelar</button>
+    </div>
+  </div>
+
+  <h2>Carril C · el intercambiador</h2>
+  <p class="h2sub">
+    El que pediste, en nuestro azul. Arriba el nuevo, abajo el actual, para que compares.
+    Toca las tres opciones: la luz se desliza.
+  </p>
+
+  <div class="caso">
+    <div>
+      <div class="id">C · Luz deslizante</div>
+      <div class="por">Hueco hundido, luz que viaja con rebote suave y el icono que crece al activarse.</div>
+    </div>
+    <div class="lienzo comparte">
+      <div class="cambiador">
+        <input type="radio" name="cara" id="c1" checked><input type="radio" name="cara" id="c2"><input type="radio" name="cara" id="c3">
+        <label for="c1"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="12" height="14" rx="1.5"/><line x1="7" y1="7" x2="13" y2="7"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg><span>Plan</span></label>
+        <label for="c2"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5l3 3 9-9"/></svg><span>Manos a la obra</span></label>
+        <label for="c3"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="10" x2="17" y2="10"/><circle cx="5" cy="10" r="1.7" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="1.7" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1.5"/></svg><span>Tu avance</span></label>
+        <span class="luz"><i></i></span>
+      </div>
+      <div class="viejo">
+        <button>Plan</button><button class="on">Manos a la obra</button><button>Tu avance</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Lo que ajusté por mi cuenta, y por qué</h2>
+  <p class="h2sub" style="max-width:74ch">
+    <b style="color:var(--ink)">Fuera el pulso infinito.</b> El original late para siempre. En una app de
+    trabajo, algo que parpadea sin parar en la esquina de tu ojo cansa a los diez minutos y compite con lo
+    que estás leyendo. La luz brilla, pero quieta.<br><br>
+    <b style="color:var(--ink)">Fuera el neón cian y morado.</b> Nuestro azul manda; meter un segundo color
+    de acento rompería la regla de que el azul piensa y el verde ejecuta.<br><br>
+    <b style="color:var(--ink)">Los héroes invierten a negro, no a blanco.</b> Cuando el azul llena el botón,
+    el texto pasa a negro (#07070A), no a blanco: es la única forma de que un relleno azul no se lea lavado,
+    que es justo lo que acabas de corregir.<br><br>
+    <b style="color:var(--ink)">Todos respetan "menos movimiento".</b> Si el sistema del usuario pide reducir
+    animaciones, se quedan quietos y siguen funcionando.
+  </p>
+</div>

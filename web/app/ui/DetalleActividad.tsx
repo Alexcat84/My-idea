@@ -509,7 +509,7 @@ export function DetalleActividad({
           <button
             onClick={onCerrar}
             disabled={ocupado}
-            className="rounded-[10px] border border-hairline px-5 py-2.5 text-[13.5px] font-semibold text-dim hover:text-ink disabled:opacity-40"
+            className="rounded-[10px] border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-5 py-2.5 text-[13.5px] font-semibold disabled:opacity-40"
           >
             Cancelar
           </button>
