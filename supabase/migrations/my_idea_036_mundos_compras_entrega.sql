@@ -19,7 +19,8 @@
 --
 -- NOTA DE VISIBILIDAD: esta migración solo abre la ADUANA de la base. Los dos
 -- mundos quedan OCULTOS en el catálogo hasta el visto del fundador; el
--- interruptor vive en el front (web/lib/espacios.ts), no aquí.
+-- interruptor es el campo `oculto` de web/lib/assets/packs_catalog.json, que
+-- respeta mundosVisibles() en web/lib/catalogoMundos.ts. No vive aquí.
 
 ALTER TABLE public.project_unlocks
   DROP CONSTRAINT project_unlocks_dominio_check;
