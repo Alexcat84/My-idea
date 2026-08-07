@@ -144,3 +144,38 @@ describe("el intercambiador de caras", () => {
     expect(fuente).toContain('transition: "none"');
   });
 });
+
+describe("el cristal encendido", () => {
+  const css = () => readFileSync(path.join(RAIZ, "globals.css"), "utf-8");
+
+  it("es UNA sola receta: nadie repite el degradado por su cuenta", () => {
+    // Ley de la casa: no dos versiones de lo mismo. El aspecto lo llevan la luz
+    // del intercambiador (que viaja) y las tarjetas de acceso (que están
+    // quietas); si cada una guardara su propio degradado, se separarían a la
+    // primera calibración.
+    const hoja = css();
+    expect(hoja).toContain(".cristal {");
+    expect(hoja.match(/linear-gradient\(145deg/g) ?? []).toHaveLength(2); // base y hover
+    for (const archivo of ["ui/SelectorCara.tsx", "ui/ManosALaObra.tsx"]) {
+      expect(leer(archivo)).toContain("cristal");
+      expect(leer(archivo)).not.toContain("linear-gradient(145deg");
+    }
+  });
+
+  it("la tarjeta verde conserva SU color: cambia el tono, no la receta", () => {
+    // Palabra del fundador (ago 2026): al verde se le aplica el tema verde.
+    // La receta no se duplica en verde; solo se le pasa el otro tono.
+    expect(css()).toContain(".cristal-done {");
+    expect(css()).toContain("--cristal: var(--done-rgb)");
+    const tarjeta = leer("ui/ManosALaObra.tsx");
+    expect(tarjeta).toContain('"cristal-done"');
+    // y el tono sale del token, no de un hex suelto
+    expect(readFileSync(path.join(RAIZ, "tokens.css"), "utf-8")).toContain("--done-rgb:");
+  });
+
+  it("el icono se hunde en la ranura, que también es compartida", () => {
+    expect(css()).toContain(".ranura {");
+    expect(leer("ui/ManosALaObra.tsx")).toContain("ranura grid");
+    expect(leer("ui/SelectorCara.tsx")).toContain("ranura relative");
+  });
+});

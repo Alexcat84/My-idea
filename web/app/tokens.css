@@ -38,6 +38,11 @@
   --accent-soft: rgba(77, 124, 254, 0.14); /* fondos de estado activo azul */
   --done: #3fb950;             /* verde: ejecuta (etapa 5, checklist, Esta semana) */
   --done-soft: rgba(63, 185, 80, 0.14);    /* fondos de progreso/ejecución */
+  /* Los mismos dos colores en tripleta, para las recetas que necesitan
+     variar la opacidad (el cristal encendido). Si cambia el hex de arriba,
+     cambia este; son el mismo color escrito de dos maneras. */
+  --accent-rgb: 77, 124, 254;
+  --done-rgb: 63, 185, 80;
   --warn: #e0a64a;             /* ámbar guardián de datos (GIGO), tono acompañante */
   --radius: 12px;
   --radius-lg: 16px;

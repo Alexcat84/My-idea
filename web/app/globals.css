@@ -425,13 +425,29 @@ summary::-webkit-details-marker {
 /* El intercambiador de caras: hueco hundido y luz que viaja con rebote. La luz
    NO late: en una herramienta de trabajo, algo que parpadea sin parar compite
    con lo que el usuario está leyendo. Brilla, pero quieta. */
-.cambiador-luz {
-  box-shadow: 0 0 18px rgba(77, 124, 254, 0.3), inset 0 0 14px rgba(77, 124, 254, 0.14);
-  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
-              width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+/* ── El cristal encendido ───────────────────────────────────────────────────
+   El aspecto de la luz del intercambiador de caras: vidrio del color de la
+   casa, filete de brillo arriba y halo alrededor.
+
+   Vive aqui, en UNA regla, porque lo llevan dos cosas: la luz que VIAJA en el
+   intercambiador y las tarjetas de acceso del riel, que son estaticas pero
+   lucen igual (decision del fundador, ago 2026). Dos copias de este aspecto
+   se separarian a la primera calibracion.
+
+   El tono es una variable: .cristal-done lo pasa a verde sin repetir la
+   receta. Quien lo use tiene que estar POSICIONADO, porque el filete es un
+   ::after absoluto. */
+.cristal {
+  --cristal: var(--accent-rgb);
+  border: 1px solid rgba(var(--cristal), 0.42);
+  background: linear-gradient(145deg, rgba(var(--cristal), 0.16), rgba(var(--cristal), 0.05));
+  box-shadow: 0 0 18px rgba(var(--cristal), 0.3), inset 0 0 14px rgba(var(--cristal), 0.14);
+}
+.cristal-done {
+  --cristal: var(--done-rgb);
 }
 /* El filete de luz superior, que le da el relieve de cristal. */
-.cambiador-luz::after {
+.cristal::after {
   content: "";
   position: absolute;
   top: 0;
@@ -439,6 +455,31 @@ summary::-webkit-details-marker {
   width: 76%;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+}
+/* Cuando el cristal es un boton, el hover SUBE la luz; no la mueve. */
+.cristal-boton {
+  transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.cristal-boton:hover {
+  border-color: rgba(var(--cristal), 0.6);
+  background: linear-gradient(145deg, rgba(var(--cristal), 0.24), rgba(var(--cristal), 0.09));
+  box-shadow: 0 0 26px rgba(var(--cristal), 0.4), inset 0 0 16px rgba(var(--cristal), 0.2);
+}
+
+/* ── La ranura ──────────────────────────────────────────────────────────────
+   La otra mitad del intercambiador: el hueco tallado donde se apoya la luz.
+   La comparte el carril del intercambiador y el cajetin del icono de las
+   tarjetas, que necesita hundirse para no perderse contra el cristal. */
+.ranura {
+  border: 1px solid #1c1c22;
+  background: var(--surface-3);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.75), inset 0 -1px 2px rgba(255, 255, 255, 0.04);
+}
+
+/* El intercambiador lleva el mismo cristal; lo suyo es que ademas VIAJA. */
+.cambiador-luz {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {

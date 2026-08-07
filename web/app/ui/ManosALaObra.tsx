@@ -1423,15 +1423,21 @@ function TarjetaAcceso({
   onClick: () => void;
   tono?: "accent" | "done";
 }) {
-  const chip = tono === "done" ? "bg-done/12 text-done" : "bg-accent/12 text-accent";
-  const borde = tono === "done" ? "hover:border-done/45" : "hover:border-accent/45";
+  // Llevan el CRISTAL del intercambiador de caras (decision del fundador, ago
+  // 2026): estas tarjetas son puertas, igual que las caras, y ahora se leen
+  // como la misma familia. Estan quietas, asi que se quedan con el aspecto y
+  // no con el viaje. La receta esta en globals.css, en una sola regla.
+  //
+  // El icono se hunde en la RANURA (la otra mitad del intercambiador): un
+  // cajetin del color del cristal se perderia contra el cristal.
+  const tinta = tono === "done" ? "text-done" : "text-accent";
   return (
     <button
       onClick={onClick}
-      className={`w-full rounded-panel border border-hairline bg-surface p-5 text-left transition-colors hover:bg-[#141419] ${borde}`}
+      className={`cristal cristal-boton relative w-full rounded-panel p-5 text-left ${tono === "done" ? "cristal-done" : ""}`}
     >
       <div className="flex items-start gap-3.5">
-        <span aria-hidden className={`grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[11px] ${chip}`}>
+        <span aria-hidden className={`ranura grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[11px] ${tinta}`}>
           {ICONO_ACCESO[icono]}
         </span>
         <div className="min-w-0">
