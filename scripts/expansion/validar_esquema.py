@@ -19,6 +19,21 @@ CAMPOS_PERMITIDOS = {
     "nodos_previos", "nodos_siguientes", "condiciones_activacion",
     # legado del saneamiento (paso1 ascii) y estándar nuevo v1.3:
     "ids_alias", "etiqueta_arbol",
+    # Fusión de duplicados (cirugía de Calidad, ago 2026):
+    #  * `deprecado`: el nodo sigue existiendo para que la historia resuelva,
+    #    pero ya no se ofrece. La única puerta que lo mira es esOfrecible().
+    #  * `merged_originals`: la procedencia de una fusión (qué nodo absorbió a
+    #    cuál, con su título y su fuente).
+    #
+    # ADJUDICACIÓN de `merged_originals`, con criterio declarado: se LEGALIZA,
+    # no se migra. Ya lo llevan 32 nodos de dataset/nodos/ desde la fusión HSEQ
+    # de la Fase 3.5, y nadie se enteró porque este validador se corre a mano
+    # sobre carpetas concretas y jamás sobre dataset/nodos/. Migrarlos a otro
+    # campo sería tocar 32 nodos de producción para renombrar un dato correcto;
+    # legalizarlo hace que la lista blanca diga la verdad sobre lo que el
+    # dataset contiene de verdad, que es para lo que existe una lista blanca.
+    # La deuda se paga reconociéndola, no reescribiéndola.
+    "deprecado", "merged_originals",
 }
 OBLIGATORIOS_NO_VACIOS = {
     "node_id", "fase_proyecto", "dominio", "titulo_concepto", "fuente",

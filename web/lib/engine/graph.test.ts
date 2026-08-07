@@ -4,7 +4,7 @@ import {
   cargarEntrySeeds,
   cargarGrafo,
   cargarPreguntasCache,
-  dominioPermitido,
+  esOfrecible,
   obtenerPregunta,
   resumenNodo,
   sucesoresNivel,
@@ -49,7 +49,7 @@ describe("sucesoresNivel: mismos sucesores reales que engine/prototipo_motor.py"
   });
 });
 
-describe("dominioPermitido: el muro de mundos (Fase 3.5/3.6)", () => {
+describe("esOfrecible: el muro de mundos (Fase 3.5/3.6)", () => {
   it("los nodos core pasan con el default {core}", () => {
     const graph = cargarGrafo();
     const cores = Object.keys(graph)
@@ -57,7 +57,7 @@ describe("dominioPermitido: el muro de mundos (Fase 3.5/3.6)", () => {
       .slice(0, 50);
     expect(cores.length).toBe(50);
     for (const id of cores) {
-      expect(dominioPermitido(id, graph)).toBe(true);
+      expect(esOfrecible(id, graph)).toBe(true);
     }
   });
 
@@ -68,8 +68,8 @@ describe("dominioPermitido: el muro de mundos (Fase 3.5/3.6)", () => {
       const delPack = Object.keys(graph).filter((id) => graph[id].dominio === dominio);
       expect(delPack.length).toBeGreaterThan(0);
       for (const id of delPack.slice(0, 10)) {
-        expect(dominioPermitido(id, graph)).toBe(false);
-        expect(dominioPermitido(id, graph, ["core", dominio])).toBe(true);
+        expect(esOfrecible(id, graph)).toBe(false);
+        expect(esOfrecible(id, graph, ["core", dominio])).toBe(true);
       }
     }
   });

@@ -694,12 +694,40 @@ def step7_validate(master, parse_errors):
         f"{total_asymmetric} (sin previo reciproco: {missing_previo}, sin siguiente reciproco: {missing_siguiente})",
     ))
 
+    # --- El Gate aprende `deprecado` (cirugia de Calidad, ago 2026) ---------
+    # Un deprecado sigue EN el grafo, con sus aristas intactas: el grafo
+    # historico queda integro. Lo que pierde es la elegibilidad. Asi que:
+    #   * no se le exige alcance (no es alcanzable por definicion: nadie lo
+    #     ofrece), y por eso el porcentaje se mide sobre el universo ACTIVO;
+    #   * no cuenta como huerfano;
+    #   * pero NO puede ser semilla ni destino de un puente activo, porque eso
+    #     seria una puerta que abre a un nodo que ya no se ofrece.
+    nodos_todos = master["nodos"]
+    deprecados = {k for k, n in nodos_todos.items() if n.get("deprecado")}
+    activos = {k: v for k, v in nodos_todos.items() if k not in deprecados}
+    checks.append((
+        "Universo: activos / deprecados",
+        True,
+        f"{len(activos)} activos, {len(deprecados)} deprecados (siguen en el grafo)",
+    ))
+
     seeds = load_entry_seeds()
-    reached, total, pct = compute_directed_reachability(master["nodos"], seeds)
+    seeds_deprecadas = sorted(set(seeds) & deprecados)
+    checks.append((
+        "Ninguna semilla de entrada esta deprecada",
+        not seeds_deprecadas,
+        f"{len(seeds_deprecadas)} deprecadas" + (f": {seeds_deprecadas[:5]}" if seeds_deprecadas else ""),
+    ))
+
+    # La alcanzabilidad se mide sobre el universo ACTIVO: exigirsela a un
+    # deprecado seria pedirle que sea alcanzable justo despues de sacarlo de
+    # todos los caminos de oferta.
+    seeds_vivas = [s for s in seeds if s not in deprecados]
+    reached, total, pct = compute_directed_reachability(activos, seeds_vivas)
     checks.append((
         f"Alcanzabilidad dirigida >= {MIN_DIRECTED_REACHABILITY_PCT}% desde entry_seeds.json",
-        bool(seeds) and pct >= MIN_DIRECTED_REACHABILITY_PCT,
-        f"{pct}% ({reached}/{total}, semillas validas: {len(seeds)})",
+        bool(seeds_vivas) and pct >= MIN_DIRECTED_REACHABILITY_PCT,
+        f"{pct}% ({reached}/{total} activos, semillas validas: {len(seeds_vivas)})",
     ))
 
     near_duplicates = find_near_duplicate_titles(master["nodos"], threshold=95)

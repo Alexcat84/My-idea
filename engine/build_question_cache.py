@@ -63,9 +63,23 @@ def cargar_grafo():
 
 
 def nodos_elegibles(graph):
+    """Los nodos para los que vale la pena generar pregunta.
+
+    Los DEPRECADOS quedan fuera: no se les ofrece al usuario, asi que gastar API
+    en sus preguntas seria pagar por algo que nadie va a ver. Tampoco pueden ser
+    CANDIDATOS de la pregunta de otro, por lo mismo.
+
+    Pero la poda es HACIA ADELANTE, jamas hacia atras: las preguntas ya
+    cacheadas de un nodo deprecado NO se borran. Son lectura historica potencial
+    y guardadas no cuestan nada (palabra del fundador, ago 2026). Esta funcion
+    decide a quien se le GENERA, no a quien se le borra.
+    """
     elegibles = {}
     for nid, n in graph.items():
-        candidatos = [s for s in n.get("nodos_siguientes", []) if s in graph and s != nid]
+        if n.get("deprecado"):
+            continue
+        candidatos = [s for s in n.get("nodos_siguientes", [])
+                      if s in graph and s != nid and not graph[s].get("deprecado")]
         if candidatos:
             elegibles[nid] = candidatos
     return elegibles
