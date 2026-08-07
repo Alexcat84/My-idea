@@ -1,0 +1,26 @@
+{
+  "node_id": "hacer_cajas_a_medida_del_pedido",
+  "fase_proyecto": "ejecucion",
+  "dominio": "entrega",
+  "titulo_concepto": "Hacer cajas a medida del pedido",
+  "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+  "resumen_teorico": "El empaque no es un accesorio: es la forma física con la que tu producto realmente viaja y se almacena. Una caja que ajusta perfecto al contenido no deja espacio para protegerlo con relleno, y una caja demasiado grande desperdicia espacio, encarece el transporte por peso volumétrico y permite que el producto se mueva durante el trayecto. El tamaño correcto equilibra protección, facilidad de manejo y costo, y las formas cúbicas suelen aprovechar mejor el espacio que las cilíndricas. Pensar la caja como parte del producto que se mueve, y no como un detalle final, ayuda a calcular el tamaño adecuado para cada pedido en vez de usar siempre el mismo empaque.",
+  "pasos_accionables": [
+    "Mide las tres dimensiones del producto antes de elegir la caja.",
+    "Suma entre 5 y 6 cm por lado para dejar espacio al relleno protector.",
+    "Evita usar un solo tamaño de caja para todos tus pedidos: ten al menos tres tamaños disponibles.",
+    "Prefiere formas cúbicas sobre cilíndricas cuando el producto lo permita, porque aprovechan mejor el espacio de transporte.",
+    "Revisa el peso volumétrico que cobra tu courier antes de decidir el tamaño final."
+  ],
+  "entregable_esperado": "Una tabla simple con dos o tres tamaños de caja asignados a tus productos o rangos de pedido.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "Aplicar una regla fija de colchón de relleno"
+  ],
+  "condiciones_activacion": [
+    "Usas la misma caja para todos tus pedidos sin importar el tamaño del producto.",
+    "Notas que pagas de más en el courier por peso volumétrico aunque tu producto es liviano.",
+    "El producto llega dañado porque se movió dentro de una caja demasiado grande."
+  ],
+  "etiqueta_arbol": "Elige el tamaño justo de caja"
+}

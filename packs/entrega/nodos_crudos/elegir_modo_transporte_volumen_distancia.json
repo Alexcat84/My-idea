@@ -1,0 +1,26 @@
+{
+  "node_id": "elegir_modo_transporte_volumen_distancia",
+  "fase_proyecto": "planificacion",
+  "dominio": "entrega",
+  "titulo_concepto": "Elegir el modo de transporte según volumen y distancia",
+  "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management, capitulo 25",
+  "resumen_teorico": "Como primera aproximacion, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relacion es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rapido o mas puntual, incluso si el criterio de costo puro sugeriria otra cosa. Los umbrales exactos de tamaño y distancia varian segun el pais y el proveedor, asi que sirven como metodo de razonamiento, no como tabla fija.",
+  "pasos_accionables": [
+    "Ubica el tamaño tipico de tus envios (paquete individual, pallet, carga grande) y la distancia que recorren.",
+    "Pregunta a tus posibles transportistas que modo usan normalmente para ese tamaño y esa distancia.",
+    "Si el pedido es urgente, pregunta el costo de subir a un modo mas rapido y comparalo con el costo de hacer esperar al cliente.",
+    "Si necesitas una fecha de entrega confiable, prioriza el modo con mejor historial de puntualidad aunque sea mas caro.",
+    "Revisa esta eleccion cada vez que cambie el volumen o el destino habitual de tus envios."
+  ],
+  "entregable_esperado": "Un criterio simple para decidir que modo de transporte usar segun el tamaño y la distancia de cada envio.",
+  "nodos_previos": [
+    "Conocer los límites de peso y tamaño del courier"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Estas empezando a enviar a clientes lejanos y no sabes si conviene tierra, aire o mar.",
+    "Un cliente pide entrega urgente y no sabes si vale la pena pagar mas por rapidez.",
+    "Has tenido retrasos usando el modo de transporte mas barato y quieres decidir mejor."
+  ],
+  "etiqueta_arbol": "Elige transporte por tamaño y distancia"
+}
