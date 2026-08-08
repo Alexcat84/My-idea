@@ -2,17 +2,17 @@
   "node_id": "kanban_validacion_aprendizaje",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Kanban de Validación de Aprendizaje",
+  "titulo_concepto": "El tablero de tareas donde nada cuenta hasta que aprendes algo real (kanban)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Adaptación del principio de manufactura esbelta (kanban) al desarrollo de producto, donde una historia de usuario no se considera completa hasta que ha sido validada mediante aprendizaje real (no solo terminada técnicamente). Se establecen cuatro estados: backlog, en desarrollo, terminada (completa técnicamente) y validada. Cada estado tiene un límite de capacidad (WIP limit), forzando al equipo a priorizar la validación por encima de la mera producción de features.",
+  "resumen_teorico": "Piensa en esto como aplicar la lógica de manufactura esbelta (kanban) a tu desarrollo de producto: no consideras una tarea terminada solo porque la construiste, sino hasta que compruebas con datos reales que aprendiste algo de ella. Divides tu trabajo en cuatro estados: pendiente, en desarrollo, terminada y validada. En cada estado pones un límite máximo de tareas permitidas (límite de trabajo en curso), lo que te obliga a priorizar validar por encima de simplemente sacar funciones nuevas.",
   "pasos_accionables": [
-    "Crear un tablero con cuatro columnas: Backlog, En desarrollo, Terminado, Validado",
-    "Establecer un límite máximo de tareas permitidas en cada columna",
-    "No permitir mover una tarea a 'Validado' sin evidencia de aprendizaje (split-test, entrevistas, encuestas)",
-    "Si una historia falla en validación, eliminar la funcionalidad del producto",
-    "Medir productividad del equipo en base a aprendizaje validado, no en features entregadas"
+    "Crea un tablero con cuatro columnas: Pendiente, En desarrollo, Terminado, Validado",
+    "Pon un límite máximo de tareas permitidas en cada columna",
+    "No muevas una tarea a 'Validado' sin evidencia real de aprendizaje (prueba A/B, entrevistas, encuestas)",
+    "Si una idea falla en la validación, quita esa función de tu producto",
+    "Mide tu avance por aprendizaje validado, no por cantidad de funciones entregadas"
   ],
-  "entregable_esperado": "Tablero Kanban funcionando con límites de capacidad y criterios claros de validación para cada historia de usuario",
+  "entregable_esperado": "Tienes tu tablero funcionando con límites de capacidad y un criterio claro de qué significa validar cada tarea",
   "nodos_previos": [
     "split_testing_experimentos_ab",
     "sprint_board_burn_down"
@@ -21,8 +21,8 @@
     "tres_as_de_metricas"
   ],
   "condiciones_activacion": [
-    "Si el equipo de desarrollo mide su éxito solo por cantidad de features entregadas",
-    "Si existe desconexión entre lo que se construye y lo que realmente aprende el negocio"
+    "Si mides tu éxito solo por cuántas funciones entregas",
+    "Si notas una desconexión entre lo que construyes y lo que realmente estás aprendiendo de tu negocio"
   ],
   "etiqueta_arbol": "Valida el Aprendizaje Real"
 }

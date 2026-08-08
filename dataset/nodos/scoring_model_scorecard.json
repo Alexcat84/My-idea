@@ -2,17 +2,17 @@
   "node_id": "scoring_model_scorecard",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Modelo de Puntuación (Scorecard) para Seleccionar Proyectos",
+  "titulo_concepto": "Modelo de puntuación para elegir qué proyectos seguir (Scorecard)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los scorecards son herramientas que permiten a los gerentes calificar proyectos según factores no financieros comprobados como predictores de éxito: ajuste estratégico, ventaja del producto, aprovechamiento de competencias centrales, atractivo del mercado, factibilidad técnica y relación riesgo-retorno. A diferencia de los modelos financieros (que suelen basarse en datos poco confiables en etapas tempranas), los scorecards son más efectivos y eficientes para decisiones Go/Kill en las primeras gates, protegiendo proyectos audaces mientras avanzan por el 'valle de la muerte'.",
+  "resumen_teorico": "Un scorecard es una herramienta que te permite calificar tus proyectos según factores comprobados que predicen el éxito, más allá de lo financiero: qué tan bien encaja el proyecto con tu estrategia, la ventaja real del producto, si aprovecha lo que ya sabes hacer bien, qué tan atractivo es el mercado, si es viable técnicamente y cómo se equilibra el riesgo con el retorno. A diferencia de los modelos financieros, que en las etapas tempranas suelen apoyarse en datos poco confiables, el scorecard te ayuda a decidir si sigues o frenas un proyecto de forma más efectiva en tus primeras revisiones, protegiendo las ideas audaces mientras atraviesan el tramo más difícil del camino.",
   "pasos_accionables": [
-    "Seleccionar entre 6 y 10 preguntas robustas basadas en investigación (ajuste estratégico, ventaja de producto, competencias, atractivo de mercado, factibilidad técnica, riesgo/retorno)",
-    "Hacer que cada gatekeeper califique el proyecto en escalas de 1-5 o 0-10 en cada criterio",
-    "Sumar (ponderada o no) las calificaciones para obtener el Project Attractiveness Score",
-    "Usar este score junto al Productivity Index para ordenar y priorizar proyectos en revisiones de portafolio",
-    "Usar diferentes scorecards según el tipo de proyecto (nuevo producto estándar vs. tecnología avanzada)"
+    "Elige entre 6 y 10 preguntas sólidas, basadas en investigación, que cubran: el encaje con tu estrategia, la ventaja de tu producto, si aprovecha lo que ya sabes hacer, qué tan atractivo es el mercado, si es viable técnicamente y la relación entre riesgo y retorno",
+    "Califica el proyecto en cada criterio usando una escala simple, por ejemplo del 1 al 5 o del 0 al 10",
+    "Suma esas calificaciones, dándole más peso a algunas si quieres, para obtener un puntaje de qué tan atractivo es el proyecto",
+    "Usa ese puntaje junto con otro indicador de productividad para ordenar y priorizar tus proyectos cuando revises en qué estás trabajando",
+    "Usa un scorecard distinto según el tipo de proyecto: no es lo mismo un producto estándar nuevo que una tecnología avanzada"
   ],
-  "entregable_esperado": "Scorecard aplicado con Project Attractiveness Score calculado para cada proyecto en evaluación",
+  "entregable_esperado": "Un scorecard aplicado, con el puntaje de atractivo calculado para cada proyecto que estés evaluando",
   "nodos_previos": [
     "testing_process_completo",
     "data_integrity_forecasting",
@@ -26,9 +26,9 @@
     "technology_platform_evaluation"
   ],
   "condiciones_activacion": [
-    "Cuando los datos financieros son poco confiables en las primeras etapas del proyecto",
-    "Cuando se necesita evaluar proyectos audaces o innovadores con alta incertidumbre",
-    "Al diseñar criterios de decisión para gates 1, 2 y 3"
+    "Cuando los datos financieros todavía no son confiables porque el proyecto está en una etapa temprana",
+    "Cuando necesitas evaluar proyectos audaces o innovadores con mucha incertidumbre",
+    "Cuando estás definiendo los criterios para tus primeros puntos de decisión sobre seguir o frenar un proyecto"
   ],
   "etiqueta_arbol": "Elige con un Puntaje Claro"
 }

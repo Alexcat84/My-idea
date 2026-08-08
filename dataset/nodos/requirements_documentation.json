@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Documentación de Requisitos",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Registro detallado de las necesidades de los stakeholders traducidas en requisitos medibles y validables, agrupados por categorías (negocio, stakeholder, solución, transición, proyecto, calidad). Sirve de base para el scope baseline y la toma de decisiones de trade-off.",
+  "resumen_teorico": "Anota con detalle lo que cada persona interesada necesita y conviértelo en requisitos claros y comprobables, agrupados por tipo: negocio, interesados, solución, transición, proyecto y calidad. Esta lista te sirve de base para definir el alcance del proyecto (scope baseline) y para decidir qué priorizar cuando tengas que elegir entre opciones.",
   "pasos_accionables": [
-    "Identificar y listar cada requisito junto al stakeholder que lo originó",
-    "Clasificar cada requisito según su categoría correspondiente",
-    "Asignar un nivel de prioridad a cada requisito",
-    "Definir criterios de aceptación claros para cada requisito"
+    "Identifica y anota cada requisito junto a la persona que lo pidió",
+    "Clasifica cada requisito según su categoría",
+    "Asigna un nivel de prioridad a cada requisito",
+    "Define criterios claros para saber si el requisito quedó cumplido"
   ],
-  "entregable_esperado": "Una tabla de requisitos documentados con categoría, prioridad, criterios de aceptación y stakeholder de origen.",
+  "entregable_esperado": "Una tabla de requisitos con categoría, prioridad, criterios de aceptación y de quién vino cada uno.",
   "nodos_previos": [
     "requirements_management_plan",
     "stakeholder_register"
@@ -21,8 +21,8 @@
     "project_scope_statement"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita convertir necesidades vagas de stakeholders en especificaciones medibles",
-    "Cuando el equipo requiere una base formal para el scope baseline"
+    "Cuando necesitas convertir necesidades vagas de las personas interesadas en especificaciones medibles",
+    "Cuando necesitas una base formal para definir el alcance del proyecto"
   ],
   "etiqueta_arbol": "Documenta tus Requisitos Clave"
 }

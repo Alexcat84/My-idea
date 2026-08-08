@@ -2,16 +2,16 @@
   "node_id": "diseno_metricas_lideres_rezagados",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Diseño de Métricas: Indicadores Líderes y Rezagados",
+  "titulo_concepto": "Cómo diseñar tus métricas: señales tempranas y resultados finales",
   "fuente": "The Hard Thing About Hard Thing - Ben Horowitz",
-  "resumen_teorico": "Un buen diseño de métricas organizacionales requiere emparejar apropiadamente indicadores líderes (que predicen resultados futuros) con indicadores rezagados (que miden resultados pasados), evitando efectos secundarios negativos. Por ejemplo, valorar solo la velocidad sin medir también la calidad puede generar comportamientos disfuncionales en el equipo.",
+  "resumen_teorico": "Cuando diseñas tus métricas, tienes que combinar señales tempranas (indicadores líderes, que te avisan hacia dónde vas antes de llegar) con resultados finales (indicadores rezagados, que miden lo que ya pasó). Si mides solo una cosa, por ejemplo la velocidad, sin vigilar también la calidad, puedes terminar empujando a tu equipo hacia comportamientos que te perjudican.",
   "pasos_accionables": [
-    "Identifica los indicadores líderes y rezagados clave de tu organización o área",
-    "Verifica que estén correctamente emparejados (ej. velocidad con calidad, no solo velocidad)",
-    "Anticipa posibles efectos secundarios negativos de cada métrica antes de implementarla",
-    "Documenta el proceso usado para diseñar cada métrica y su justificación"
+    "Identifica cuáles son tus señales tempranas y cuáles tus resultados finales clave",
+    "Revisa que estén bien combinados: por ejemplo, si mides velocidad, mide también calidad, no solo velocidad",
+    "Antes de poner en marcha una métrica, piensa qué comportamientos raros o dañinos podría provocar",
+    "Anota por qué elegiste cada métrica, para que quede claro el motivo detrás de ella"
   ],
-  "entregable_esperado": "Dashboard de métricas con indicadores líderes y rezagados balanceados y justificados",
+  "entregable_esperado": "Un panel de métricas con señales tempranas y resultados finales balanceados, con la razón de cada uno anotada",
   "nodos_previos": [
     "preguntas_excelencia_operacional"
   ],
@@ -19,8 +19,8 @@
     "diseno_organizacional"
   ],
   "condiciones_activacion": [
-    "Cuando se establecen KPIs para un equipo o departamento nuevo",
-    "Si las métricas actuales generan comportamientos no deseados en el equipo"
+    "Cuando defines cómo vas a medir el trabajo de tu equipo o de un área nueva",
+    "Si notas que tus métricas actuales están provocando comportamientos que no quieres en tu equipo"
   ],
   "etiqueta_arbol": "Combina Métricas de Hoy y Mañana"
 }

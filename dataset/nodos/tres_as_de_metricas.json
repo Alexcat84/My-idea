@@ -2,17 +2,17 @@
   "node_id": "tres_as_de_metricas",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Las Tres A's de las Métricas (Accionables, Accesibles, Auditables)",
+  "titulo_concepto": "Las tres cualidades de una métrica útil (accionable, accesible, auditable)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Marco para evaluar si un sistema de métricas es útil para el aprendizaje validado. Accionable: demuestra una relación clara de causa y efecto que permite replicar resultados. Accesible: los reportes son simples, comprensibles y usan unidades tangibles (personas, no datos abstractos), y están disponibles para todo el equipo. Auditable: los datos son creíbles y se pueden verificar manualmente hablando con clientes reales, evitando que se cuestione la validez de los resultados cuando contradicen creencias previas.",
+  "resumen_teorico": "Antes de confiar en un número, pregúntate si cumple tres condiciones. Accionable: te muestra una relación clara de causa y efecto que puedes repetir para lograr el mismo resultado otra vez. Accesible: el reporte es simple, se entiende de un vistazo y usa unidades que representan personas reales, no datos abstractos, y cualquiera que trabaje contigo puede verlo. Auditable: los datos son creíbles y puedes comprobarlos tú mismo hablando con clientes reales, así nadie duda de un resultado solo porque contradice lo que creías.",
   "pasos_accionables": [
-    "Revisar cada métrica actual y preguntar si demuestra causa-efecto claro (¿es accionable?)",
-    "Simplificar los reportes usando unidades centradas en personas, no en datos abstractos",
-    "Distribuir los reportes a todo el equipo de forma automática y regular",
-    "Establecer mecanismos para verificar manualmente los datos hablando con clientes reales",
-    "Generar los reportes directamente desde los datos maestros, evitando sistemas intermedios"
+    "Revisa cada métrica que uses hoy y pregúntate si muestra una causa y un efecto claros",
+    "Simplifica tus reportes usando unidades centradas en personas, no en datos abstractos",
+    "Comparte los reportes con quien trabaje contigo de forma automática y regular",
+    "Verifica los datos a mano hablando con clientes reales de vez en cuando",
+    "Genera tus reportes directamente desde los datos originales, sin pasos intermedios que los puedan distorsionar"
   ],
-  "entregable_esperado": "Sistema de reportes de métricas que cumpla los tres criterios (accionable, accesible, auditable) y esté disponible para todo el equipo",
+  "entregable_esperado": "Un sistema de reportes que cumpla las tres condiciones (accionable, accesible, auditable) y que cualquiera que trabaje contigo pueda consultar",
   "nodos_previos": [
     "metricas_cohortes",
     "kanban_validacion_aprendizaje",
@@ -24,9 +24,9 @@
     "vanity_metrics_vs_accionables"
   ],
   "condiciones_activacion": [
-    "Si existen discusiones internas sobre qué causó cambios en las métricas",
-    "Si los equipos desconfían de los datos o los cuestionan cuando contradicen sus proyectos",
-    "Antes de tomar decisiones de priorización de producto basadas en datos"
+    "Cuando tú y quien trabaja contigo discuten qué causó un cambio en tus métricas",
+    "Cuando desconfías de tus datos o los cuestionas porque contradicen lo que esperabas",
+    "Antes de decidir qué construir primero basándote en datos"
   ],
   "etiqueta_arbol": "Mide con Métricas Realmente Útiles"
 }

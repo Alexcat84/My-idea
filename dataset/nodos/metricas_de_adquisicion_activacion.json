@@ -2,21 +2,21 @@
   "node_id": "metricas_de_adquisicion_activacion",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Métricas de Adquisición y Activación",
+  "titulo_concepto": "Cuántos llegan y cuántos se quedan usando (adquisición y activación)",
   "fuente": "The Startup Owner's Manual | Traction - Gabriel Weinberg",
-  "resumen_teorico": "Los negocios web/mobile deben instrumentar cada clic para medir el funnel completo de conversión. Se deben priorizar menos de una docena de métricas accionables organizadas en 'cuántos, qué tan rápido, cuánto cuesta, y qué tan buenos son' los clientes. Las métricas se dividen en adquisición (visitas, fuentes, costo por adquisición) y activación (número de activaciones, costo por activación, calidad de usuarios).",
+  "resumen_teorico": "Si tienes un negocio web o de aplicación, mide cada clic para ver el camino completo que recorre alguien hasta convertirse en cliente (el embudo de conversión). Elige menos de una docena de métricas que te ayuden a decidir, organizadas en cuántos llegan, qué tan rápido, cuánto te cuesta y qué tan buenos son esos clientes. Divide tus métricas en dos grupos: adquisición (visitas, de dónde vienen, cuánto te cuesta conseguir cada uno) y activación (cuántos activan, cuánto cuesta cada activación, qué tan buena es la calidad de esos usuarios).",
   "pasos_accionables": [
-    "Definir hipótesis de relación con clientes y derivar métricas de éxito",
-    "Limitar métricas a menos de 12, todas accionables",
-    "Medir métricas de adquisición: visitas totales, fuente, conversión, costo por adquisición",
-    "Medir métricas de activación: número/porcentaje de activaciones por fuente, costo por activación, calidad de usuario",
-    "Construir un dashboard que resuma comportamientos de usuario clave y tendencias accionables",
-    "Definir el objetivo de conversión (compra, registro, lead) antes de lanzar campañas",
-    "Calcular el CTR, CPC y CPA de cada campaña de prueba",
-    "Comparar el CPA contra el valor de vida del cliente (LTV) para evaluar rentabilidad",
-    "Usar SEM como herramienta de aprendizaje temprano sobre mensajes y producto, no solo como canal de ventas"
+    "Define qué relación quieres tener con tus clientes y a partir de ahí decide qué métricas te dirán si vas bien",
+    "Quédate con menos de 12 métricas, todas deben ayudarte a decidir algo",
+    "Mide tus métricas de adquisición: visitas totales, de dónde vienen, cuántas convierten y cuánto te cuesta conseguir cada cliente",
+    "Mide tus métricas de activación: cuántos o qué porcentaje se activa según la fuente, cuánto cuesta cada activación y qué tan buena es la calidad de esos usuarios",
+    "Arma un tablero que resuma el comportamiento clave de tus usuarios y las tendencias que te ayuden a decidir",
+    "Antes de lanzar cualquier campaña, define qué es una conversión para ti: una compra, un registro o un contacto interesado",
+    "Calcula en cada campaña de prueba cuántos hacen clic sobre los que la ven, cuánto pagas por cada clic y cuánto te cuesta cada cliente conseguido (CTR, CPC y CPA)",
+    "Compara lo que te cuesta conseguir un cliente con lo que ese cliente te va a dar durante toda su relación contigo (LTV), para saber si el negocio es rentable",
+    "Usa la publicidad en buscadores (SEM) para aprender temprano qué mensaje funciona y qué dice tu producto, no solo como un canal para vender"
   ],
-  "entregable_esperado": "Un dashboard de métricas con menos de 12 indicadores accionables cubriendo adquisición y activación, actualizado en tiempo real",
+  "entregable_esperado": "Un tablero con menos de 12 indicadores que te ayuden a decidir, cubriendo adquisición y activación, actualizado en tiempo real",
   "nodos_previos": [
     "plan_de_activacion",
     "mvp_alta_fidelidad",
@@ -30,8 +30,8 @@
     "reunion_pivotar_o_perseverar"
   ],
   "condiciones_activacion": [
-    "Cuando el equipo necesita decidir en qué invertir basado en datos reales de comportamiento",
-    "Si no existe un sistema para medir el funnel de conversión"
+    "Cuando necesitas decidir en qué invertir basándote en datos reales de comportamiento",
+    "Si todavía no tienes forma de medir el camino completo que recorre alguien hasta convertirse en cliente"
   ],
   "etiqueta_arbol": "Mide Cómo Llegan tus Clientes"
 }

@@ -2,16 +2,16 @@
   "node_id": "gates_sin_dientes_problema",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Diagnóstico: Gates sin Dientes (Gates with No Teeth)",
+  "titulo_concepto": "Diagnóstico: Compuertas sin Dientes (Gates with No Teeth)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Muchas empresas tienen un sistema Stage-Gate instalado pero los gates carecen de poder real: una vez aprobado, un proyecto rara vez se mata, convirtiendo el proceso en un 'túnel' en vez de un 'embudo'. La causa raíz es que la gerencia no sabe decir 'no' por razones de momentum, política, o falta de criterios claros de decisión.",
+  "resumen_teorico": "Puede que tengas un sistema de etapas y filtros instalado, pero si los filtros no tienen poder real, una vez que apruebas un proyecto casi nunca lo detienes, y el proceso se vuelve un 'túnel' en vez de un 'embudo'. La raíz del problema es que no sabes decir 'no' por inercia, por política interna, o porque te faltan criterios claros para decidir.",
   "pasos_accionables": [
-    "Dibujar la curva de atrición del portafolio actual (proyectos que sobreviven cada gate)",
-    "Verificar si la tasa de eliminación en gates tempranos es cercana a cero (señal de alerta)",
-    "Identificar cuáles de las '7 razones para no matar proyectos' aplican en la organización",
-    "Evaluar si los gates funcionan como reuniones de inversión o solo como checkpoints de status"
+    "Dibuja la curva de cuántos proyectos sobreviven cada filtro de tu proceso actual",
+    "Revisa si casi ningún proyecto se elimina en los filtros tempranos (es una señal de alerta)",
+    "Identifica cuáles de las '7 razones para no matar proyectos' te están pasando a ti",
+    "Evalúa si tus filtros funcionan como verdaderas decisiones de inversión o solo como reuniones de seguimiento"
   ],
-  "entregable_esperado": "Diagnóstico documentado del estado actual de los gates con curva de atrición y razones identificadas de resistencia a matar proyectos",
+  "entregable_esperado": "Un diagnóstico escrito del estado actual de tus filtros, con la curva de supervivencia de proyectos y las razones que identificaste detrás de tu resistencia a matar proyectos",
   "nodos_previos": [
     "gates_go_kill_decision_points",
     "requisitos_gates_con_dientes"
@@ -22,8 +22,8 @@
     "gates_huecos_hollow_gates"
   ],
   "condiciones_activacion": [
-    "Si la empresa tiene demasiados proyectos activos sin claridad de prioridad",
-    "Si ningún proyecto ha sido cancelado en el último año a pesar de tener un proceso Stage-Gate"
+    "Si tienes demasiados proyectos activos sin claridad de cuál es prioridad",
+    "Si no has cancelado ningún proyecto en el último año a pesar de tener un proceso de etapas y filtros"
   ],
   "etiqueta_arbol": "Dale Poder Real a tus Filtros"
 }

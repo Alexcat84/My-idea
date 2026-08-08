@@ -2,17 +2,17 @@
   "node_id": "diagrama_riesgo_recompensa",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Diagrama de Burbujas Riesgo-Recompensa para el Portafolio",
+  "titulo_concepto": "Mapa de Riesgo y Recompensa de tus Proyectos (diagrama de burbujas)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Herramienta visual que grafica los proyectos como burbujas en dos ejes: la probabilidad de éxito (técnico y/o comercial) en el eje vertical, y la recompensa (NPV, ventas acumuladas, o score cualitativo) en el eje horizontal. El tamaño de la burbuja representa los recursos asignados al proyecto. Esta visualización obliga a la gerencia a confrontar la restricción de recursos: si se agrega un proyecto, otro debe reducirse o eliminarse, ya que la suma de las áreas de las burbujas es constante.",
+  "resumen_teorico": "Es una forma de dibujar todos tus proyectos en un solo mapa: en un eje pones qué tan probable es que cada proyecto funcione, técnica o comercialmente, y en el otro qué tan grande sería la recompensa si funciona, ya sea en ventas, en valor presente neto (NPV) o en tu propia evaluación. Cada proyecto se dibuja como un círculo, y el tamaño del círculo muestra cuántos recursos le estás dedicando. Este mapa te obliga a ver de frente que tus recursos son limitados: si quieres meter un proyecto nuevo, tienes que reducir o sacar otro, porque el espacio total de los círculos no puede crecer.",
   "pasos_accionables": [
-    "Seleccionar los ejes: probabilidad de éxito (vertical) y recompensa/NPV (horizontal).",
-    "Graficar cada proyecto como una burbuja, cuyo tamaño representa los recursos asignados.",
-    "Clasificar visualmente los proyectos en cuadrantes (ej. Perlas, Ostras, Pan y Mantequilla, Elefantes Blancos).",
-    "Identificar desequilibrios: exceso de proyectos de bajo valor o falta de recursos en proyectos de alto potencial.",
-    "Usar el diagrama en revisiones de portafolio para decidir qué proyectos podar o reforzar."
+    "Elige tus dos referencias: qué tan probable es que el proyecto tenga éxito, y qué tanta recompensa traería si funciona.",
+    "Dibuja cada proyecto como un círculo, con un tamaño que represente los recursos que le estás dando.",
+    "Ubica cada proyecto en una de cuatro zonas: apuestas seguras y valiosas (Perlas), apuestas arriesgadas pero prometedoras (Ostras), trabajo rutinario de bajo riesgo (Pan y Mantequilla), o proyectos que te consumen recursos sin dar mucho a cambio (Elefantes Blancos).",
+    "Revisa si tienes demasiados proyectos de bajo valor o si te faltan recursos en los que sí tienen potencial.",
+    "Usa este mapa cuando revises tu conjunto de proyectos para decidir cuáles cortar y cuáles reforzar."
   ],
-  "entregable_esperado": "Un diagrama de burbujas actualizado que muestre el balance riesgo-recompensa del portafolio completo de proyectos de innovación.",
+  "entregable_esperado": "Un mapa de círculos, actualizado, que te muestre el balance de riesgo y recompensa de todos tus proyectos en marcha.",
   "nodos_previos": [
     "categorizacion_ranking_proyectos_cubetas"
   ],
@@ -20,8 +20,8 @@
     "revision_portafolio_periodica"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita visualizar el balance de riesgo del portafolio completo.",
-    "Cuando se sospecha que hay demasiados proyectos de bajo valor consumiendo recursos."
+    "Cuando necesitas ver de un vistazo el balance de riesgo de todos tus proyectos juntos.",
+    "Cuando sospechas que tienes demasiados proyectos de bajo valor consumiendo tus recursos."
   ],
   "etiqueta_arbol": "Compara Riesgo y Recompensa"
 }

@@ -2,17 +2,17 @@
   "node_id": "warrants_deuda_convertible",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Warrants como mecanismo alternativo de descuento",
+  "titulo_concepto": "Los warrants como alternativa al descuento (warrants)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Los warrants son una alternativa al descuento directo en deuda convertible, otorgando al inversionista la opción de comprar acciones a un precio predeterminado. Son más complejos legalmente y generan temas contables como el Original Issue Discount (OID). Se recomienda no combinar warrants con descuento (evitar 'double dipping').",
+  "resumen_teorico": "Un warrant es una opción distinta al descuento directo en deuda convertible: le da a quien te presta el derecho a comprar acciones a un precio ya fijado desde el inicio. Es más complejo legalmente y trae temas de contabilidad que conviene revisar con quien te asesora. No combines warrants con descuento a la vez: si haces las dos cosas juntas, estás pagando de más por lo mismo.",
   "pasos_accionables": [
-    "Evaluar si conviene usar warrants en lugar de un descuento simple (generalmente solo en rondas posteriores).",
-    "Definir el porcentaje de warrant coverage (ej. 20% del monto de la nota).",
-    "Determinar el precio de ejercicio y la clase de acciones subyacente (común o preferente).",
-    "Establecer el plazo de ejercicio de los warrants (5-10 años) y qué ocurre en caso de fusión.",
-    "Asegurar el pago separado de los warrants para evitar problemas de Original Issue Discount (OID)."
+    "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto aplica más en rondas posteriores, no en las primeras.",
+    "Define qué porcentaje del monto de la nota cubrirán los warrants (por ejemplo, un 20%).",
+    "Decide el precio al que se podrán ejercer y si será sobre acciones comunes o preferentes.",
+    "Fija el plazo para ejercer los warrants (entre 5 y 10 años) y qué pasa con ellos si tu negocio se fusiona con otro.",
+    "Pide que el pago de los warrants quede separado del resto, para evitar problemas contables (Original Issue Discount, OID)."
   ],
-  "entregable_esperado": "Términos de warrants definidos: porcentaje de cobertura, precio de ejercicio, plazo y tratamiento en fusión.",
+  "entregable_esperado": "Los términos de los warrants ya definidos: porcentaje de cobertura, precio de ejercicio, plazo y qué ocurre en caso de fusión.",
   "nodos_previos": [
     "convertible_debt_fundamentos",
     "warrants_financiamiento"
@@ -21,8 +21,8 @@
     "warrant_pricing_venture_debt"
   ],
   "condiciones_activacion": [
-    "Si los inversionistas insisten en warrants en lugar de descuento.",
-    "En rondas de deuda convertible en etapas más avanzadas de la empresa."
+    "Si quien te presta insiste en warrants en lugar de descuento.",
+    "Si estás levantando deuda convertible en una etapa más avanzada de tu negocio."
   ],
   "etiqueta_arbol": "Usa Opciones en vez de Descuento"
 }

@@ -2,16 +2,16 @@
   "node_id": "employee_pool_esop",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Pool de Opciones para Empleados (Employee Pool / ESOP)",
+  "titulo_concepto": "Reserva de acciones para empleados (Employee Pool o ESOP)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Reserva de acciones comunes que se aparta antes del cierre de una ronda de inversión, destinada a futuras contrataciones de directores, oficiales, empleados y consultores. Este pool se calcula como un porcentaje del capital totalmente diluido post-inversión y afecta directamente el precio de compra de la ronda, ya que diluye a todos los accionistas existentes antes de la entrada del nuevo inversionista.",
+  "resumen_teorico": "Antes de cerrar una ronda de inversión, apartas un porcentaje de acciones comunes para futuras contrataciones de directores, empleados y consultores. Esa reserva se calcula como un porcentaje del capital total ya diluido después de la inversión, y afecta directamente el precio de compra de la ronda, porque diluye a todos los que ya tienen acciones antes de que entre el nuevo inversionista.",
   "pasos_accionables": [
-    "Negociar el tamaño del employee pool como porcentaje del cap table post-money.",
-    "Definir si el pool incluye opciones ya emitidas o solo reservas futuras.",
-    "Calcular el impacto de la dilución del pool en el precio por acción de los fundadores.",
-    "Planificar la asignación futura del pool según el plan de contrataciones."
+    "Negocia el tamaño de la reserva de acciones para empleados como porcentaje de tu tabla de capital después de la inversión.",
+    "Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.",
+    "Calcula cómo esa dilución afecta el precio por acción que te queda a ti como fundador.",
+    "Planea cómo vas a repartir esa reserva según a quién piensas contratar más adelante."
   ],
-  "entregable_esperado": "Tamaño del employee pool acordado y reflejado en la cap table pre-cierre.",
+  "entregable_esperado": "El tamaño de la reserva de acciones para empleados acordado y reflejado en tu tabla de capital antes de cerrar la ronda.",
   "nodos_previos": [
     "cap_table_basico",
     "term_sheet_negociacion",
@@ -23,8 +23,8 @@
     "asuncion_stock_options_adquisicion"
   ],
   "condiciones_activacion": [
-    "Cuando se está negociando el pre-money valuation de una ronda",
-    "Si la empresa planea contratar personal clave usando equity como incentivo"
+    "Cuando estás negociando cuánto vale tu negocio antes de recibir la inversión",
+    "Si piensas contratar gente clave usando participación en el negocio como incentivo"
   ],
   "etiqueta_arbol": "Reserva Opciones para tu Equipo"
 }

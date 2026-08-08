@@ -2,17 +2,17 @@
   "node_id": "expected_commercial_value_ecv",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Valor Comercial Esperado (ECV) para Decisiones de Inversión",
+  "titulo_concepto": "El valor de seguir invirtiendo en tu proyecto (Valor Comercial Esperado o ECV)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El ECV es un método de árbol de decisión que aproxima la teoría de precios de opciones financieras para evaluar proyectos de innovación bajo incertidumbre. A diferencia del NPV tradicional, el ECV reconoce que la inversión en un nuevo producto se realiza en incrementos (como comprar opciones en cada gate), considerando las probabilidades de éxito comercial y técnico en cada fase. Esto revela que proyectos riesgosos pero prometedores, que el NPV clásico rechazaría, pueden tener un valor mucho mayor cuando se evalúan etapa por etapa.",
+  "resumen_teorico": "El ECV es una forma de mirar tu proyecto como un árbol de decisiones, parecida a cómo se valora una opción financiera, para decidir cuánto invertir cuando no sabes qué va a pasar. A diferencia del cálculo de valor presente neto (NPV) tradicional, el ECV parte de que tú inviertes en pasos, como quien compra el derecho a seguir en cada etapa, y en cada paso consideras la probabilidad de que funcione comercial y técnicamente. Así puedes ver que un proyecto que parece muy arriesgado pero prometedor, y que el NPV normal rechazaría, en realidad puede valer mucho más cuando lo evalúas etapa por etapa.",
   "pasos_accionables": [
-    "Dividir el proyecto en fases secuenciales de inversión (ej: investigación preliminar, desarrollo, lanzamiento)",
-    "Asignar una probabilidad de éxito técnico y comercial a cada fase",
-    "Construir un árbol de decisión calculando el valor esperado hacia atrás desde el payoff final",
-    "Comparar el ECV resultante en cada gate contra el costo de avanzar a la siguiente fase",
-    "Usar el ECV, no el NPV simple, para decidir Go/Kill en proyectos grandes y riesgosos"
+    "Divide tu proyecto en pasos de inversión sucesivos, por ejemplo: investigación inicial, desarrollo y lanzamiento",
+    "Asigna a cada paso una probabilidad de que funcione, tanto en lo técnico como en lo comercial",
+    "Dibuja un árbol de decisiones y calcula el valor esperado hacia atrás, partiendo del resultado final",
+    "Compara el ECV que obtienes en cada punto de decisión contra lo que cuesta avanzar al siguiente paso",
+    "Usa el ECV, no solo el NPV simple, para decidir si sigues o paras en proyectos grandes y riesgosos"
   ],
-  "entregable_esperado": "Árbol de decisión con el cálculo de ECV en cada gate, mostrando el valor del proyecto y la decisión de inversión correspondiente",
+  "entregable_esperado": "Un árbol de decisiones con el cálculo del ECV en cada punto de decisión, que te muestre cuánto vale el proyecto y qué decisión tomar sobre seguir invirtiendo",
   "nodos_previos": [
     "ranking_proyectos_por_npv",
     "testing_process_completo",
@@ -29,8 +29,8 @@
     "portfolio_management_triangulation"
   ],
   "condiciones_activacion": [
-    "Cuando el NPV tradicional rechaza un proyecto riesgoso pero potencialmente valioso",
-    "Cuando el proyecto tiene múltiples fases de inversión incremental con incertidumbre técnica y comercial"
+    "Cuando el cálculo de NPV tradicional te hace descartar un proyecto arriesgado que en realidad podría valer mucho",
+    "Cuando tu proyecto tiene varias etapas de inversión, con incertidumbre técnica y comercial en cada una"
   ],
   "etiqueta_arbol": "Calcula tu Valor Comercial Esperado"
 }

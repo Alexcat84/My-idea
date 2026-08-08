@@ -2,16 +2,16 @@
   "node_id": "sistema_gestion_recursos_en_gates",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Asignación y Seguimiento de Recursos en Gates",
+  "titulo_concepto": "Cómo asignar y seguir los recursos en cada decisión de avance (gate)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Para evitar 'gates huecos' (decisiones Go sin recursos reales comprometidos), las empresas deben implementar un método formal de seguimiento y asignación de recursos en cada reunión de gate. Esto puede ir desde una lista informal de candidatos preparada por el líder del proyecto en empresas pequeñas, hasta software avanzado de gestión de recursos con escenarios 'what if' en empresas grandes.",
+  "resumen_teorico": "Para evitar que apruebes seguir adelante con un proyecto sin comprometer recursos reales, es decir, decisiones de avance vacías, necesitas un método claro para seguir y asignar recursos en cada reunión de decisión de avance. Puede ser algo tan simple como una lista de candidatos que prepares tú mismo antes de la reunión, o algo más avanzado, como un programa de gestión de recursos que te permita probar distintos escenarios de qué pasaría si cambias las asignaciones, según el tamaño de tu equipo.",
   "pasos_accionables": [
-    "Elegir un método de seguimiento de recursos (lista manual, hoja de cálculo, o software especializado).",
-    "Antes de cada gate, verificar disponibilidad real de personas por departamento.",
-    "Registrar los compromisos de recursos de todos los proyectos activos para evitar sobre-asignación.",
-    "En la reunión de gate, comprometer explícitamente personas y presupuesto para la siguiente etapa."
+    "Elige un método de seguimiento de recursos: lista manual, hoja de cálculo o algún programa especializado.",
+    "Antes de cada reunión de avance, revisa si realmente tienes disponibles las personas de cada área.",
+    "Anota los compromisos de recursos de todos tus proyectos activos para no comprometer a la misma persona dos veces.",
+    "En la reunión, comprométete de forma explícita a asignar personas y presupuesto para la siguiente etapa."
   ],
-  "entregable_esperado": "Un modelo de recursos (spreadsheet o software) que muestre personas vs. proyectos y su disponibilidad temporal.",
+  "entregable_esperado": "Un modelo de recursos (hoja de cálculo o programa) que te muestre qué personas están asignadas a qué proyectos y cuándo están disponibles.",
   "nodos_previos": [
     "mitos_stage_gate",
     "asignacion_recursos_en_gates"
@@ -22,8 +22,8 @@
     "gestion_portafolio_formal"
   ],
   "condiciones_activacion": [
-    "Si los proyectos aprobados en gates no reciben recursos reales (gates huecos).",
-    "Si hay múltiples proyectos compitiendo por el mismo personal."
+    "Si los proyectos que apruebas para seguir adelante no reciben los recursos reales que necesitan.",
+    "Si tienes varios proyectos compitiendo por las mismas personas."
   ],
   "etiqueta_arbol": "Asigna Recursos Reales en Cada Etapa"
 }

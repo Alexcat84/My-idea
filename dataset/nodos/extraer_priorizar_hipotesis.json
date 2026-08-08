@@ -2,17 +2,17 @@
   "node_id": "extraer_priorizar_hipotesis",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Extraer y Priorizar Hipótesis",
+  "titulo_concepto": "Saca y Ordena tus Hipótesis por Prioridad",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "A partir de los Canvas de Value Proposition y Business Model se identifican todas las suposiciones (hipótesis de negocio) que deben ser verdaderas para que la idea funcione. No todas las hipótesis son igual de críticas: se deben identificar primero los 'asesinos de negocio' (business killers), aquellas hipótesis cuya invalidación acabaría con el proyecto, y testearlas primero.",
+  "resumen_teorico": "A partir de tu mapa de propuesta de valor y tu modelo de negocio, identifica todas las suposiciones que tienen que ser ciertas para que tu idea funcione. No todas pesan igual: primero busca las que pueden matar tu negocio si resultan falsas, y esas son las que testeas primero.",
   "pasos_accionables": [
-    "Listar todo lo que debe ser cierto sobre el modelo de negocio, la propuesta de valor y el cliente",
-    "Escribir cada hipótesis en una nota individual (ej. post-it)",
-    "Eliminar hipótesis duplicadas",
-    "Identificar cuáles son 'business killers' (críticas para la supervivencia)",
-    "Ordenar todas las hipótesis según su criticidad para el éxito del proyecto"
+    "Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente",
+    "Escribe cada hipótesis por separado, una por nota",
+    "Elimina las que estén repetidas",
+    "Identifica cuáles son capaces de acabar con tu proyecto si fallan",
+    "Ordena todas tus hipótesis según qué tan crítica es cada una para que tu proyecto funcione"
   ],
-  "entregable_esperado": "Lista priorizada de hipótesis de negocio, con las más críticas ('business killers') en la parte superior",
+  "entregable_esperado": "Tu lista de hipótesis ordenada por prioridad, con las que pueden matar tu negocio arriba de todo",
   "nodos_previos": [
     "diez_principios_testing",
     "testear_circulo_cuadrado_rectangulo",
@@ -22,7 +22,7 @@
     "test_card"
   ],
   "condiciones_activacion": [
-    "Cuando el usuario tiene un Value Proposition Canvas o Business Model Canvas completo y necesita decidir qué testear primero"
+    "Cuando ya tienes tu mapa de propuesta de valor o tu modelo de negocio completo y necesitas decidir qué probar primero"
   ],
   "etiqueta_arbol": "Prioriza tus Hipótesis Clave"
 }

@@ -2,16 +2,16 @@
   "node_id": "protocepto",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Protocepto (Protocept): Iteración entre Concepto y Prototipo",
+  "titulo_concepto": "Versión intermedia entre idea y prototipo (protocept)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Un 'protocepto' es una versión intermedia del producto entre un concepto (dibujos y palabras) y un prototipo listo para pruebas. Puede ser un dibujo 3D generado por computadora, un prototipo virtual, un modelo rudimentario o impreso en 3D. Sirve para validar hipótesis de mercado con el cliente, buscar prueba de concepto técnica y obtener el respaldo de la gerencia, sin necesidad de tener un producto completamente funcional.",
+  "resumen_teorico": "Un 'protocept' es una versión intermedia de tu producto, entre la idea (dibujos y palabras) y un prototipo listo para probar. Puede ser un dibujo en 3D hecho por computadora, un prototipo virtual, un modelo rudimentario o algo impreso en 3D. Te sirve para validar con el cliente si tu hipótesis de mercado tiene sentido, buscar la primera prueba de que la idea funciona tecnicamente, y conseguir el respaldo que necesitas para seguir adelante, sin tener que construir todavia un producto completamente funcional.",
   "pasos_accionables": [
-    "Generar una representación tangible del producto (dibujo 3D, modelo impreso, prototipo virtual) en cada iteración",
-    "Presentar el protocepto al cliente para recoger feedback sobre la hipótesis de mercado",
-    "Usar el protocepto también para validar la viabilidad técnica ante el equipo",
-    "Iterar el protocepto en ciclos cortos (semanas) hasta acercarse a un prototipo funcional"
+    "En cada vuelta de trabajo, crea una representacion tangible de tu producto: un dibujo en 3D, un modelo impreso, un prototipo virtual",
+    "Muestra ese protocept al cliente y recoge lo que piensa sobre tu hipótesis de mercado",
+    "Usa el mismo protocept para comprobar con quien te ayuda si la idea es viable tecnicamente",
+    "Repite el ciclo en periodos cortos, de semanas, acercandote cada vez mas a un prototipo que funcione de verdad"
   ],
-  "entregable_esperado": "Una serie de protoceptos iterativos documentados con feedback de cliente y ajustes técnicos en cada ciclo.",
+  "entregable_esperado": "Una serie de versiones intermedias de tu producto, una tras otra, con el feedback del cliente y los ajustes tecnicos que hiciste en cada ciclo.",
   "nodos_previos": [
     "definicion_sprint_terminado",
     "diseno_fugitivo_runaway_design",
@@ -21,8 +21,8 @@
     "rol_gates_agile"
   ],
   "condiciones_activacion": [
-    "Si el producto no puede subdividirse en partes funcionales demostrables como el software",
-    "Si se necesita validar mercado y viabilidad técnica antes de construir un prototipo completo"
+    "Si tu producto no se puede dividir en partes que puedas demostrar por separado, como si fuera software",
+    "Si necesitas validar mercado y viabilidad técnica antes de construir el prototipo completo"
   ],
   "etiqueta_arbol": "Itera entre Concepto y Prototipo"
 }

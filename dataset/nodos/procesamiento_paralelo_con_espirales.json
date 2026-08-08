@@ -2,21 +2,21 @@
   "node_id": "procesamiento_paralelo_con_espirales",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Procesamiento Paralelo con Espirales de Validación",
+  "titulo_concepto": "Trabajo en Paralelo con Ciclos Rápidos de Validación",
   "fuente": "Winning at New Products - Robert G. Cooper | Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "En vez de un enfoque secuencial tipo 'carrera de relevos' (una función pasa el proyecto a la siguiente), se recomienda un enfoque tipo 'rugby': múltiples funciones trabajan en paralelo e interactúan constantemente, acelerando el desarrollo sin sacrificar calidad. Se complementa con 'espirales de validación': ciclos rápidos de construir-probar-retroalimentar-revisar con clientes usando prototipos económicos (protoceptos) antes de invertir más dinero, basado en la premisa de que los clientes no saben lo que quieren hasta que lo ven.",
+  "resumen_teorico": "En vez de avanzar como en una carrera de relevos, donde una área termina su parte y se la pasa a la siguiente, trabaja como en rugby: haz que distintas áreas avancen al mismo tiempo y se comuniquen todo el rato, así aceleras el desarrollo sin bajar la calidad. Complementa esto con ciclos de validación: construye, prueba, escucha la respuesta y ajusta usando prototipos económicos antes de gastar más dinero, partiendo de la idea de que tus clientes no saben lo que quieren hasta que lo ven.",
   "pasos_accionables": [
-    "Reorganizar el equipo para que las funciones trabajen simultáneamente en vez de secuencialmente",
-    "Crear versiones tempranas y económicas del producto (mockups, prototipos virtuales)",
-    "Ejecutar ciclos rápidos de prueba con clientes y ajustar el diseño antes de avanzar",
-    "Repetir las espirales de validación en cada etapa de desarrollo",
-    "Dividir el sistema en componentes independientes con mínima interdependencia",
-    "Diseñar tareas para que puedan ejecutarse en paralelo, no en cascada",
-    "Asignar personal con habilidades transferibles entre distintos objetivos",
-    "Crear un plan alternativo (plan B) ante fallas o retrasos en algún objetivo",
-    "Diseñar el sistema de forma que se puedan recortar funciones sin perder valor central"
+    "Reorganiza el trabajo para que las distintas áreas avancen al mismo tiempo y no una detrás de la otra",
+    "Crea versiones tempranas y baratas de tu producto (bocetos, prototipos virtuales)",
+    "Haz ciclos rápidos de prueba con tus clientes y ajusta el diseño antes de seguir avanzando",
+    "Repite estos ciclos de validación en cada etapa de tu desarrollo",
+    "Divide tu proyecto en partes independientes que dependan lo menos posible entre sí",
+    "Diseña las tareas para que puedas ejecutarlas en paralelo, no en cascada",
+    "Asigna a las personas que trabajan contigo según habilidades que sirvan para más de un objetivo",
+    "Ten un plan B listo por si algo falla o se atrasa",
+    "Diseña tu producto de forma que puedas recortar funciones sin perder lo esencial"
   ],
-  "entregable_esperado": "Cronograma de trabajo paralelo entre funciones y al menos un ciclo de espiral de validación documentado con feedback de clientes",
+  "entregable_esperado": "Un cronograma de trabajo en paralelo entre tus áreas y al menos un ciclo de validación documentado con la retroalimentación de tus clientes",
   "nodos_previos": [
     "sistema_gates_go_kill",
     "equipo_multifuncional_real"
@@ -26,8 +26,8 @@
     "definicion_objetivos_proyecto_sistema"
   ],
   "condiciones_activacion": [
-    "Cuando el proceso actual es secuencial y lento (relay race)",
-    "Cuando se necesita reducir el tiempo de ciclo sin perder calidad de ejecución"
+    "Cuando tu proceso actual es secuencial y lento (carrera de relevos)",
+    "Cuando necesitas reducir el tiempo del ciclo sin perder calidad en la ejecución"
   ],
   "etiqueta_arbol": "Trabaja en Paralelo, Siempre"
 }

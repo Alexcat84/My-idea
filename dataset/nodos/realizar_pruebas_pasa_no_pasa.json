@@ -2,16 +2,16 @@
   "node_id": "realizar_pruebas_pasa_no_pasa",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Realizar Pruebas Pasa/No Pasa (Pass/Fail Tests)",
+  "titulo_concepto": "Haz pruebas de pasa o no pasa (pass/fail tests)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Cada hipótesis de negocio debe tener un criterio de éxito binario definido de antemano. No basta con obtener una respuesta 'aprobatoria': se debe buscar una reacción masiva y contundente de los earlyvangelists antes de avanzar a la etapa de Customer Validation. El criterio de éxito debe estar ligado al modelo de negocio (ej. costo de adquisición vs. precio del producto).",
+  "resumen_teorico": "Antes de avanzar, define de antemano qué significa que tu hipótesis de negocio funcionó o no. No te conformes con una respuesta positiva de un par de personas: busca una reacción masiva y contundente de tus primeros clientes entusiastas antes de pasar a la etapa de validación de clientes. El criterio de éxito debe estar ligado a tu modelo de negocio, por ejemplo comparando cuánto te cuesta conseguir un cliente contra lo que cobras por tu producto.",
   "pasos_accionables": [
-    "Definir de antemano el número o porcentaje de clientes 'suficiente' para considerar la prueba exitosa",
-    "Comparar el costo de adquisición de cliente contra el precio del producto",
-    "Enviar invitaciones múltiples (email, ads) y medir tasas de respuesta en términos absolutos y porcentuales",
-    "Clasificar las reacciones de los clientes en categorías (aman el producto, piden features, no ven necesidad, etc.)"
+    "Define de antemano el número o porcentaje de clientes que consideras suficiente para decir que la prueba funcionó",
+    "Compara cuánto te cuesta conseguir un cliente contra el precio de tu producto",
+    "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden, en números absolutos y en porcentaje",
+    "Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que no ven la necesidad, etc."
   ],
-  "entregable_esperado": "Documento de criterios pass/fail con resultados reales comparados y decisión de avanzar o pivotar",
+  "entregable_esperado": "Un documento con tus criterios de pasa o no pasa, los resultados reales comparados, y tu decisión de seguir adelante o pivotar",
   "nodos_previos": [
     "medir_comportamiento_cliente_mvp",
     "introduccion_validacion_clientes",
@@ -23,7 +23,7 @@
     "actualizar_business_model_canvas_tuneup"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita una decisión objetiva (no basada en opiniones) sobre si continuar o pivotar"
+    "Cuando necesitas decidir de forma objetiva, sin opiniones, si sigues adelante o pivotas"
   ],
   "etiqueta_arbol": "Define Pruebas de Pasa o No"
 }

@@ -2,16 +2,16 @@
   "node_id": "rol_gates_agile",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "El Rol de los Gates en un Sistema Ágil",
+  "titulo_concepto": "El papel de los puntos de decisión (gates) cuando trabajas ágil",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los gates (puntos de decisión Go/Kill) siguen siendo esenciales incluso en un sistema ágil: la flexibilidad de Agile aplica al 'qué' se entrega, no a la rigurosidad de la decisión de continuar o no el proyecto. Los gates permiten a la gerencia revisar periódicamente el proyecto, matar iniciativas débiles, reasignar recursos y comprometer los recursos necesarios para que el equipo avance con velocidad. También deben mantenerse gates unificados (no separados por hardware/software) cuando las partes son interdependientes.",
+  "resumen_teorico": "Los puntos de decisión para seguir o parar un proyecto (gates) siguen siendo esenciales aunque trabajes con métodos ágiles (Agile): la flexibilidad de lo ágil se aplica a qué entregas, no a la seriedad con la que decides si el proyecto continúa o no. Estos puntos te permiten revisar el proyecto cada cierto tiempo, cancelar las iniciativas débiles, reasignar recursos y comprometer lo necesario para que avances con velocidad. Si tu proyecto combina partes de hardware y software que dependen entre sí, mantén un solo punto de decisión para ambas, no uno separado para cada una.",
   "pasos_accionables": [
-    "Mantener los gates de decisión Go/Kill en puntos clave del proyecto, incluso usando Agile",
-    "Usar los gates como checkpoint de recursos, no solo de calidad",
-    "Evitar gates separados para hardware y software si ambos son interdependientes",
-    "Establecer un cronograma de alto nivel con hitos que se mantenga estable, aunque el detalle de cada sprint sea flexible"
+    "Mantén los puntos de decisión para seguir o parar en los momentos clave del proyecto, aunque trabajes con métodos ágiles",
+    "Usa cada punto de decisión para revisar también los recursos disponibles, no solo la calidad de lo entregado",
+    "Evita separar los puntos de decisión de hardware y de software cuando ambas partes dependen entre sí",
+    "Define un cronograma general con hitos que se mantenga estable, aunque el detalle de cada sprint cambie"
   ],
-  "entregable_esperado": "Calendario de gates definido con criterios claros de decisión Go/Kill y de asignación de recursos en cada punto.",
+  "entregable_esperado": "Un calendario con los puntos de decisión definidos, con criterios claros para seguir o parar el proyecto y para asignar recursos en cada uno.",
   "nodos_previos": [
     "product_backlog_fisico",
     "protocepto",
@@ -21,8 +21,8 @@
     "etapa_pruebas_necesaria"
   ],
   "condiciones_activacion": [
-    "Si el equipo cuestiona si los gates siguen siendo necesarios al adoptar metodologías ágiles",
-    "Si existe riesgo de decisiones inconsistentes entre distintas áreas funcionales del mismo proyecto"
+    "Si te preguntas si los puntos de decisión siguen siendo necesarios al trabajar con métodos ágiles",
+    "Si hay riesgo de que distintas partes del mismo proyecto decidan de forma distinta e inconsistente"
   ],
   "etiqueta_arbol": "Mantén tus Puntos de Decisión"
 }

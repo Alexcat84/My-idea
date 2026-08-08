@@ -2,17 +2,17 @@
   "node_id": "matriz_probabilidad_impacto",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Matriz de Probabilidad e Impacto",
+  "titulo_concepto": "Prioriza tus riesgos según qué tan probable y qué tan grave es cada uno",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Cuadrícula que combina la probabilidad de ocurrencia de un riesgo con su impacto en los objetivos del proyecto, permitiendo priorizar riesgos y visualizar el nivel general de riesgo del proyecto. El sombreado refleja la tolerancia al riesgo de la organización.",
+  "resumen_teorico": "Se trata de cruzar dos cosas de cada riesgo: qué tan probable es que pase y qué tanto te afectaría si pasa. Con eso puedes ordenar tus riesgos por prioridad y ver de un vistazo qué tan expuesto está tu proyecto en general. Qué tanto riesgo consideras alto o bajo depende de cuánto estés dispuesto a aceptar tú.",
   "pasos_accionables": [
-    "Definir escalas de probabilidad e impacto (muy baja a muy alta)",
-    "Construir la matriz cruzando ambas escalas",
-    "Asignar niveles de riesgo (alto, medio, bajo) según la tolerancia organizacional",
-    "Ubicar cada riesgo del registro en la celda correspondiente",
-    "Determinar estrategias de respuesta según la zona de riesgo"
+    "Define escalas simples de probabilidad e impacto, de muy baja a muy alta",
+    "Cruza ambas escalas para cada riesgo que tengas identificado",
+    "Decide qué combinaciones consideras riesgo alto, medio o bajo, según lo que estés dispuesto a aceptar",
+    "Ubica cada riesgo de tu lista según su probabilidad y su impacto",
+    "Define cómo vas a responder a cada riesgo según qué tan urgente y grave sea"
   ],
-  "entregable_esperado": "Una matriz visual con los riesgos posicionados según probabilidad e impacto, y su nivel de prioridad asignado.",
+  "entregable_esperado": "Una lista de tus riesgos ordenados según probabilidad e impacto, con el nivel de prioridad que le asignaste a cada uno.",
   "nodos_previos": [
     "registro_de_riesgos",
     "plan_gestion_riesgos"
@@ -22,8 +22,8 @@
     "getting_started_risk_assessment"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita priorizar riesgos para asignar recursos de respuesta",
-    "Durante el análisis cualitativo de riesgos"
+    "Cuando necesitas decidir a qué riesgos ponerle atención primero y con qué recursos",
+    "Durante el análisis de tus riesgos, antes de decidir cómo responder a cada uno"
   ],
   "etiqueta_arbol": "Evalúa Probabilidad e Impacto"
 }

@@ -80,6 +80,39 @@ SALIDA_MEJORA = 2
 #   - todo lo demas se comporta igual.
 # Sin la bandera, el trinquete manda entero.
 CAMPANA_ENV = "RUMBOS_CAMPANA"
+LOTE_ENV = "RUMBOS_LOTE"
+
+# LA REGLA DEL AMBAR POR VECINO MEJORADO (adjudicada ago 2026, decimo paro).
+#
+#   "El ambar por SUB-FUSION y el ambar por VECINO MEJORADO tienen el mismo
+#    sintoma y la causa opuesta; el remedio no puede ser el mismo."
+#
+# La regla de campana de arriba nacio para el primero: un ancla desplazada por
+# GEMELOS SIN FUNDIR, es decir, por trabajo que faltaba. Durante la campana de
+# voz aparecio el segundo: un ancla intacta y BIEN ESCRITA desplazada por
+# vecinos que la re-voz acababa de mejorar. Es el efecto que la campana busca,
+# no una averia, y parar en cada uno con 337 nodos por delante habria hecho
+# imposible la campana.
+#
+# Un ambar SE ACUMULA al cierre solo si se cumplen LAS TRES:
+#   (a) el ancla NO estaba en el lote que se acaba de re-vozar,
+#   (b) sus desplazantes SI estaban,
+#   (c) el ancla sigue dentro de la BANDA DE PUESTOS.
+#
+# Cualquier otra combinacion es PARO DURO. Y en particular, la que jamas se
+# acumula: SI EL ANCLA ESTABA EN EL LOTE Y CAYO, se para siempre. Esa es
+# nuestra propia re-voz degradando un nodo, la unica averia que esta campana
+# puede causar, y esconderla entre el ruido seria justo lo que el trinquete
+# existe para impedir.
+#
+# LA BANDA, calibrada con datos y no adivinada (2026-08-08): se midio el puesto
+# real de las 28 anclas de la vara sobre el indice vivo. Mediana 2, p75 5,
+# p90 17, p95 26; 22 de 28 dentro del top-10. La banda se fija en el p95 = 26:
+# un ancla dentro del percentil 95 de donde viven las anclas de verdad sigue
+# compitiendo arriba; una que cae mas abajo dejo de competir, y eso no es un
+# empujon de vecino. El caso que origino la regla, `analisis_competitivo`,
+# quedo en el PUESTO 11: un puesto por debajo de la linea.
+BANDA_PUESTO = 26
 
 
 def puerta(nid, grafo, dominios):
@@ -155,6 +188,10 @@ def main():
             if grafo.get(ids[i], {}).get("deprecado") and ids[i] in [t[0] for t in top]:
                 deprecados_ofrecidos.append({"rumbo": r["id"], "node_id": ids[i]})
 
+        # El ranking COMPLETO de lo ofrecible, para saber el PUESTO real de un
+        # ancla que se cayo del top-K. Sin esto solo se sabe "no entro", que no
+        # distingue el puesto 11 del 200.
+        orden_completo = [ids[i] for i in orden if puerta(ids[i], grafo, dominios)]
         doms_top = [t[2] for t in top]
         ids_top = [t[0] for t in top]
         dom_ok = any(d in r["dominios"] for d in doms_top)
@@ -192,6 +229,10 @@ def main():
             "clase": "diagnostico" if r.get("diagnostico") else ("hueco" if r.get("hueco") else "vara"),
             "expectativa": r.get("expectativa"),
             "top3": [{"id": t[0], "dominio": t[2], "score": round(t[1], 4)} for t in top[:3]],
+            # puesto real de cada ancla, dentro o fuera del top-K
+            "puestos_ancla": {a: (orden_completo.index(a) + 1 if a in orden_completo else None)
+                              for a in (anclas + conjunto)},
+            "ids_top": ids_top,
         })
 
     total = sum(1 for x in resultados if not x["fuera_del_marcador"])
@@ -289,6 +330,80 @@ def main():
 
     # 2. Los ambares no pueden crecer, y ningun rumbo puede bajar de estado.
     #    Salvo los del pack EN CAMPANA: esos se acumulan (ver REGLA DE CAMPANA).
+    # ── LA REGLA DEL AMBAR POR VECINO MEJORADO ─────────────────────────────
+    acumulados, duros = [], []
+    # Un rumbo YA ACUMULADO no vuelve a parar la campaña: su caida ya esta
+    # registrada con su puesto y sus desplazantes, y espera adjudicacion al
+    # cierre. Sin esto, el lote 3 paraba por el mismo ambar que el lote 1 ya
+    # habia registrado -- y con el motivo equivocado ("ningun desplazante estaba
+    # en el lote"), porque quienes lo desplazaron venian de los lotes ANTERIORES.
+    # La campaña es acumulativa; el registro tambien tiene que serlo.
+    registro_previo = AQUI / "_ambares_acumulados.json"
+    ya_registrados = set()
+    if registro_previo.exists():
+        ya_registrados = {x["rumbo"] for x in
+                          json.loads(registro_previo.read_text(encoding="utf-8"))}
+    lote = set()
+    ruta_lote = os.getenv(LOTE_ENV, "").strip()
+    if ruta_lote and Path(ruta_lote).exists():
+        lote = set(json.loads(Path(ruta_lote).read_text(encoding="utf-8"))["sobrevivientes"])
+    if lote:
+        por_id = {x["id"]: x for x in resultados}
+        restantes = []
+        for d in peores:
+            rid = d.split(":")[0]
+            x = por_id.get(rid)
+            if not x or x["estado"] != "ambar":
+                restantes.append(d)
+                continue
+            if rid in ya_registrados:
+                acumulados.append({"rumbo": rid, "ya_registrado": True,
+                                   "por_que": "acumulado en un lote anterior de esta campaña"})
+                continue
+            # las anclas que se cayeron, con su puesto real
+            caidas = {a: p for a, p in (x.get("puestos_ancla") or {}).items()
+                      if a not in x.get("ids_top", [])}
+            en_lote = [a for a in caidas if a in lote]
+            desplazantes = [n for n in x.get("ids_top", []) if n in lote]
+            peor_puesto = max([p for p in caidas.values() if p] or [10**9])
+            motivo = None
+            if en_lote:
+                motivo = (f"EL ANCLA ESTABA EN EL LOTE y cayo: {en_lote}. Nuestra propia "
+                          "re-voz degradando un nodo. No se acumula jamas.")
+            elif not desplazantes:
+                motivo = "ningun desplazante estaba en el lote: no lo movio esta campana"
+            elif peor_puesto > BANDA_PUESTO:
+                motivo = (f"el ancla cayo al puesto {peor_puesto}, fuera de la banda "
+                          f"({BANDA_PUESTO}): dejo de competir arriba")
+            if motivo:
+                duros.append(f"{d}\n-> PARO DURO: {motivo}")
+                restantes.append(d)
+            else:
+                acumulados.append({"rumbo": rid, "anclas_caidas": caidas,
+                                   "puesto": peor_puesto, "banda": BANDA_PUESTO,
+                                   "desplazantes_del_lote": desplazantes,
+                                   "por_que": "ancla intacta, desplazada por vecinos del lote, "
+                                              "dentro de la banda"})
+        peores = restantes if duros else [d for d in peores
+                                          if d.split(":")[0] not in {a["rumbo"] for a in acumulados}]
+        if acumulados:
+            registro = AQUI / "_ambares_acumulados.json"
+            previos = json.loads(registro.read_text(encoding="utf-8")) if registro.exists() else []
+            previos += acumulados
+            registro.write_text(json.dumps(previos, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"\nAMBARES ACUMULADOS AL CIERRE ({len(acumulados)}), por vecino mejorado:")
+            for a in acumulados:
+                if a.get("ya_registrado"):
+                    print(f"    {a['rumbo']}: {a['por_que']}")
+                    continue
+                print(f"    {a['rumbo']}: ancla en el puesto {a['puesto']} (banda {a['banda']}), "
+                      f"desplazada por {len(a['desplazantes_del_lote'])} del lote")
+            marcador = dict(marcador, ambar=marcador["ambar"] - len(acumulados))
+        if duros:
+            print(f"\nPARO DURO ({len(duros)}): no cumplen las tres condiciones")
+            for d in duros:
+                print(f"    {d}")
+
     campana = os.getenv(CAMPANA_ENV, "").strip()
     if campana:
         de_la_campana = [d for d in peores if any(
@@ -303,6 +418,11 @@ def main():
     # Los ambares se cuentan SOLO sobre los rumbos que la linea base conocia:
     # un banco mas grande no es una punteria peor.
     conocidos = set(base["por_rumbo"])
+    # Los acumulados por vecino mejorado no cuentan en el trinquete: ya se
+    # registraron con su puesto, su caida y sus desplazantes, y se adjudican al
+    # cierre. Si contaran, la regla no serviria de nada.
+    acumulados_ids = {a["rumbo"] for a in acumulados}
+    conocidos = conocidos - acumulados_ids
     ambar_conocidos = sum(1 for rid, x in foto["por_rumbo"].items()
                           if rid in conocidos and x["estado"] == "ambar")
     if ambar_conocidos > base["marcador"]["ambar"] or peores:

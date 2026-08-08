@@ -2,20 +2,20 @@
   "node_id": "sem_estrategia_ejecucion",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Estrategia y Ejecución de Campañas SEM",
+  "titulo_concepto": "Cómo planear y lanzar tus campañas de anuncios de búsqueda (SEM)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "El proceso básico de SEM consiste en investigar keywords de alto potencial, agruparlas en ad groups, y testear diferentes anuncios (ad copy) y landing pages dentro de cada grupo. Se recomienda usar 'long-tail keywords' (términos más específicos y largos) porque son menos competitivos y más baratos, ideales para pruebas iniciales con grupos pequeños de usuarios. El caso de Archives.com (Inflection) muestra cómo se puede testear el interés en distintos enfoques de producto usando landing pages antes de construir el producto final, alineando desarrollo de producto con datos reales de mercado.",
+  "resumen_teorico": "El proceso básico consiste en investigar palabras clave con buen potencial, agruparlas en conjuntos de anuncios (ad groups) y probar distintas versiones de texto (ad copy) y páginas de destino (landing pages) dentro de cada grupo. Conviene usar palabras clave largas y específicas (long-tail keywords) porque tienen menos competencia y cuestan menos, ideales para tus primeras pruebas con pocos usuarios. El caso de Archives.com (Inflection) muestra cómo puedes probar el interés en distintos enfoques de producto usando páginas de destino antes de construir el producto final, para que lo que desarrolles esté alineado con datos reales del mercado.",
   "pasos_accionables": [
-    "Investigar palabras clave usando Google Keyword Planner, SEMrush o SpyFu",
-    "Crear long-tail keywords agregando calificadores específicos a términos base",
-    "Crear ad groups organizados por tipo de producto o intención de búsqueda",
-    "Escribir anuncios con título llamativo, keyword incluida y llamado a la acción claro",
-    "Crear landing pages específicas para cada concepto de producto a testear",
-    "Usar Google Analytics URL Builder para rastrear conversiones por anuncio",
-    "Comenzar con un conjunto pequeño (ej. 4 anuncios) para obtener una línea base",
-    "Eliminar anuncios de bajo rendimiento y optimizar los que funcionan"
+    "Investiga palabras clave usando Google Keyword Planner, SEMrush o SpyFu",
+    "Crea palabras clave largas y específicas agregando calificadores a los términos base",
+    "Organiza tus anuncios en grupos según el tipo de producto o la intención de búsqueda",
+    "Escribe anuncios con un título llamativo, la palabra clave incluida y un llamado a la acción claro",
+    "Crea una página de destino específica para cada concepto de producto que quieras probar",
+    "Usa el Generador de URL de Google Analytics para rastrear las conversiones de cada anuncio",
+    "Empieza con un conjunto pequeño, por ejemplo 4 anuncios, para tener una línea base",
+    "Elimina los anuncios que no funcionan y mejora los que sí dan resultado"
   ],
-  "entregable_esperado": "Una campaña SEM activa con al menos 4 variantes de anuncios, cada una vinculada a una landing page distinta y con tracking de conversión configurado.",
+  "entregable_esperado": "Tienes una campaña de anuncios activa con al menos 4 variantes, cada una conectada a una página de destino distinta y con el seguimiento de conversiones ya configurado.",
   "nodos_previos": [
     "ad_tracking"
   ],
@@ -24,8 +24,8 @@
     "retargeting_display"
   ],
   "condiciones_activacion": [
-    "Cuando ya se definieron métricas base de CTR/CPC/CPA y se quiere escalar la prueba",
-    "Cuando se busca validar mensajes de producto antes de invertir en desarrollo completo"
+    "Cuando ya definiste tus métricas base de clics, costo por clic y costo por conversión, y quieres escalar la prueba",
+    "Cuando quieres validar tus mensajes de producto antes de invertir en desarrollarlo por completo"
   ],
   "etiqueta_arbol": "Ejecuta tu Campaña de Búsqueda"
 }
