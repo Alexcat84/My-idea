@@ -573,6 +573,24 @@ que alguien mejore la densidad el test lo canta en vez de dejarlo pasar.
 **Por qué post-beta**: arreglarlo es podar aristas, y qué aristas sobran lo dice
 el recorrido real de la gente, no el grafo mirándose a sí mismo.
 
+## El NÚCLEO gana su TERCER argumento de espera (ago 2026)
+
+Aprendido en quality, y es el más fuerte de los tres:
+
+> **La fusión mueve el vecindario entero. Operar el corazón antes de la beta
+> contaminaría la línea base que debe juzgarlo.**
+
+Lo vimos con datos: al re-vozar y fundir quality, un nodo que nadie tocó perdió
+su puesto porque sus vecinos cambiaron, y la densidad del pack pasó de dejar 3
+puertas alternativas a no dejar ninguna. Si eso se hace en el núcleo **antes** de
+que la beta corra, la telemetría que debía decidir qué se poda ya vendría medida
+sobre un grafo movido por la propia poda.
+
+Los tres argumentos, juntos: (1) el núcleo es el único validado por meses de uso
+real; (2) cinco definiciones de *startup* pueden ser cinco nodos que sobran o
+cinco puertas por las que entraron cinco personas distintas, y el censo no
+distingue; (3) esta.
+
 ## Hecho recientemente (para no reabrirlo por error)
 
 - **Calendario**: modo con-fechas + recordatorios + `.ics` universal (webcal) EN PRODUCCIÓN.
