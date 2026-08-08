@@ -218,10 +218,24 @@ def main():
 
     base = json.loads(LINEA_BASE.read_text(encoding="utf-8"))
     RANGO = {"verde": 2, "ambar": 1, "rojo": 0}
-    peores, mejores = [], []
+    peores, mejores, estrenos = [], [], []
     for rid, ahora in foto["por_rumbo"].items():
         antes = base["por_rumbo"].get(rid)
-        if not antes or antes["estado"] == ahora["estado"]:
+        if not antes:
+            # RUMBO NUEVO. No puede romper el trinquete: no tenia estado
+            # anterior que empeorar. Cazado al ampliar el banco de 30 a 48 para
+            # cubrir el nucleo (ago 2026): el trinquete conto 1 ambar -> 10 y
+            # grito DERIVA, cuando ninguno de los 30 originales se habia movido
+            # ni un milimetro. Un guardian que grita cuando le amplias la ronda
+            # deja de creerse, y ese es el peor final para un guardian.
+            #
+            # Pero tampoco se callan: un ambar nuevo es una debilidad que el
+            # banco viejo no veia, y hornearla en la linea base sin decirlo
+            # seria estrenar la ceguera. Se listan aparte, con nombre.
+            if ahora["estado"] != "verde":
+                estrenos.append(f"{rid}: {ahora['estado']} (rumbo NUEVO, sin foto anterior)")
+            continue
+        if antes["estado"] == ahora["estado"]:
             continue
         linea = (f"{rid}: {antes['estado']} -> {ahora['estado']} "
                  f"(antes {antes['devolvio'][:2]}, ahora {ahora['devolvio'][:2]})")
@@ -249,19 +263,43 @@ def main():
                 print(f"    {d}")
             peores = [d for d in peores if d not in de_la_campana]
             marcador = dict(marcador, ambar=base["marcador"]["ambar"])
-    if marcador["ambar"] > base["marcador"]["ambar"] or peores:
+    # Los ambares se cuentan SOLO sobre los rumbos que la linea base conocia:
+    # un banco mas grande no es una punteria peor.
+    conocidos = set(base["por_rumbo"])
+    ambar_conocidos = sum(1 for rid, x in foto["por_rumbo"].items()
+                          if rid in conocidos and x["estado"] == "ambar")
+    if ambar_conocidos > base["marcador"]["ambar"] or peores:
         print(f"\n  TRINQUETE ROTO: la punteria empeoro "
-              f"({base['marcador']['ambar']} ambares -> {marcador['ambar']})")
+              f"({base['marcador']['ambar']} ambares -> {ambar_conocidos} "
+              f"sobre los {len(conocidos)} rumbos de la linea base)")
         for d in peores:
             print(f"    {d}")
         return SALIDA_DERIVA
 
+    if estrenos:
+        print(f"\n  RUMBOS NUEVOS QUE NO SALEN VERDES ({len(estrenos)}). No rompen el "
+              f"trinquete -- no tenian foto anterior -- pero son debilidades que el "
+              f"banco viejo no veia. Adjudicalos ANTES de re-committear la vara:")
+        for d in estrenos:
+            print(f"    {d}")
+
     # 3. Si mejoro, la vara se quedo vieja: hay que re-committearla.
-    if mejores or marcador["verde"] > base["marcador"]["verde"]:
-        print(f"\n  LA PUNTERIA SUBIO ({base['verde_pct']}% -> {pct}%). La vara se quedo vieja:")
+    #    Tambien se mide sobre los CONOCIDOS: 18 rumbos nuevos suben el conteo
+    #    bruto de verdes sin que la punteria haya mejorado en nada.
+    verde_conocidos = sum(1 for rid, x in foto["por_rumbo"].items()
+                          if rid in conocidos and x["estado"] == "verde")
+    if mejores or verde_conocidos > base["marcador"]["verde"]:
+        print(f"\n  LA PUNTERIA SUBIO sobre los {len(conocidos)} rumbos de la vara "
+              f"({base['marcador']['verde']} -> {verde_conocidos} verdes). "
+              f"La vara se quedo vieja:")
         for d in mejores:
             print(f"    {d}")
         print("    re-committea con: python scripts/rumbos/prueba_rumbos.py --linea-base")
+        return SALIDA_MEJORA
+
+    if estrenos:
+        # Ni deriva ni mejora: el banco crecio y trajo hallazgos. La vara se
+        # re-committea a proposito, despues de adjudicarlos, no de rebote.
         return SALIDA_MEJORA
 
     print(f"\n  Sin deriva contra la linea base ({base['verde_pct']}% verde).")

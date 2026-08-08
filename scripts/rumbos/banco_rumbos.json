@@ -1,5 +1,5 @@
 {
-  "_nota": "BANCO DE RUMBOS — BORRADOR PARA LA PODA DEL AUDITOR Y EL FUNDADOR. Ningún rumbo entra sin su visto, igual que en F0. Cada rumbo es una consulta REAL en palabras de persona (no una consulta de laboratorio: así es como el usuario escribe) y la expectativa de a dónde debe apuntar la brújula. Los 'ancla' son node_id que DEBEN salir en el top-K; los 'prohibido' son dominios que NO pueden salir en el top-3 (rumbos de frontera). Borra los rumbos que no te convenzan y corrige las expectativas que no compartas: el estándar de oro es tu ojo, no el mío.",
+  "_nota": "BANCO DE RUMBOS — BORRADOR PARA LA PODA DEL AUDITOR Y EL FUNDADOR. Ningún rumbo entra sin su visto, igual que en F0. Cada rumbo es una consulta REAL en palabras de persona (no una consulta de laboratorio: así es como el usuario escribe) y la expectativa de a dónde debe apuntar la brújula. Los 'ancla' son node_id que DEBEN salir en el top-K; los 'prohibido' son dominios que NO pueden salir en el top-3 (rumbos de frontera). Borra los rumbos que no te convenzan y corrige las expectativas que no compartas: el estándar de oro es tu ojo, no el mío. AMPLIACIÓN DE COBERTURA DEL NÚCLEO (ago 2026, borrador): 18 rumbos nuevos, 15 de núcleo y 3 de frontera núcleo↔mundos. Motivo: el banco tenía 4 rumbos de core para 1.721 nodos, y el núcleo se va a operar. Sin monitor no se opera el corazón. Cubren idea, validación, modelo de negocio, clientes, dinero, legal y arranque. Todas las anclas se verificaron una a una contra el dataset: son core, activas y existen. Uno (`nucleo_no_doy_abasto_solo`) es de DIAGNÓSTICO y no de puntería: el núcleo no tiene nodo de primera contratación y este rumbo existe para medir a dónde manda la brújula una pregunta sin respuesta escrita.",
   "_como_se_lee": "verde = dominio correcto y todas sus anclas en el top-K, sin dominio prohibido en top-3. ámbar = dominio correcto pero falta alguna ancla. rojo = dominio equivocado, o frontera violada, o un deprecado ofrecido.",
   "rumbos": [
     {
@@ -313,6 +313,209 @@
       ],
       "ancla": [],
       "por_que": "TRAMPA. Phishing es seguridad digital concreta, no gestión de riesgo abstracta."
+    },
+    {
+      "id": "nucleo_ya_hay_alguien_haciendolo",
+      "consulta": "busqué en internet y ya hay dos empresas haciendo algo muy parecido a lo mío, no sé si seguir o dejarlo",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "analisis_competitivo"
+      ],
+      "por_que": "El miedo más común después de la chispa. Debe caer en análisis competitivo, no en 'pivotar'."
+    },
+    {
+      "id": "nucleo_quiero_algo_propio_sin_idea",
+      "consulta": "quiero montar algo mío pero todavía no tengo claro qué problema vale la pena resolver",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "analisis_disrupciones_mercado"
+      ],
+      "por_que": "La entrada sin idea. Distinta de 'no sé por dónde empezar', que ya tiene idea."
+    },
+    {
+      "id": "nucleo_validar_antes_de_gastar",
+      "consulta": "no quiero gastarme los ahorros en algo que después no compre nadie, cómo lo compruebo antes",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "customer_discovery_get_out_of_building",
+        "diseno_experimentos_hipotesis"
+      ],
+      "por_que": "El corazón de la fase de validación: salir a la calle y diseñar el experimento."
+    },
+    {
+      "id": "nucleo_que_pregunto_en_la_entrevista",
+      "consulta": "voy a hablar con posibles clientes y no sé qué preguntarles sin que me digan que sí por educación",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "guia_entrevista_hcd"
+      ],
+      "por_que": "Muy específico: la guía de entrevista, no la filosofía de validación."
+    },
+    {
+      "id": "nucleo_dicen_que_si_pero_no_compran",
+      "consulta": "todo el mundo me dice que está buenísimo pero todavía nadie me ha pagado un peso",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "get_out_building_test_sell"
+      ],
+      "por_que": "La señal falsa clásica. Debe llevar a vender para aprender, no a marketing."
+    },
+    {
+      "id": "nucleo_como_gano_dinero_con_esto",
+      "consulta": "tengo clarísimo el producto pero no tengo ni idea de cómo se gana dinero con esto",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "flujos_de_ingresos"
+      ],
+      "por_que": "El bloque de ingresos del modelo, no el precio de una unidad."
+    },
+    {
+      "id": "nucleo_por_que_me_comprarian_a_mi",
+      "consulta": "por qué alguien me compraría a mí y no al que ya lleva años en esto",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "value_proposition_startup"
+      ],
+      "por_que": "Propuesta de valor. Frontera fina con análisis competitivo: aquí el foco es lo propio."
+    },
+    {
+      "id": "nucleo_le_sirve_a_todo_el_mundo",
+      "consulta": "siento que esto le puede servir a todo el mundo y me dicen que eso está mal",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "customer_segments_hypothesis",
+        "segmentos_de_clientes_problema_necesidad"
+      ],
+      "por_que": "Segmentación. Es la corrección más repetida a un fundador primerizo."
+    },
+    {
+      "id": "nucleo_cuanto_vendo_para_no_perder",
+      "consulta": "no sé cuánto tengo que vender al mes para dejar de estar perdiendo plata",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "punto_equilibrio_unidades"
+      ],
+      "por_que": "Punto de equilibrio, en palabras de persona. Ninguna otra respuesta sirve."
+    },
+    {
+      "id": "nucleo_cuanto_aguanto_con_lo_que_tengo",
+      "consulta": "llevo seis meses metiendo dinero de mi bolsillo y no sé cuánto tiempo aguanto así",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "cash_burn_calculation"
+      ],
+      "por_que": "Quema de efectivo. Frontera con punto de equilibrio: aquí la pregunta es el tiempo, no el volumen."
+    },
+    {
+      "id": "nucleo_me_conviene_un_inversionista",
+      "consulta": "me dijeron que busque un inversionista y no sé si me conviene o si es mejor ir despacio con lo mío",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "decision_autofinanciamiento_vs_inversion"
+      ],
+      "por_que": "La decisión, no la mecánica de la ronda."
+    },
+    {
+      "id": "nucleo_registrar_el_nombre",
+      "consulta": "quiero registrar el nombre de mi negocio antes de que alguien me lo quite",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "marcas_registradas"
+      ],
+      "por_que": "Marca registrada. Prueba que el núcleo tiene respuesta legal concreta."
+    },
+    {
+      "id": "nucleo_me_pueden_copiar_el_diseno",
+      "consulta": "diseñé una pieza propia y me da miedo que me la copien apenas la saque",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "intellectual_property_strategy",
+        "patentes_startup"
+      ],
+      "por_que": "Propiedad intelectual: la estrategia y la patente, no solo la marca."
+    },
+    {
+      "id": "nucleo_sacar_algo_pequeno_primero",
+      "consulta": "quiero sacar algo pequeño para probar sin construir el producto entero de una vez",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [
+        "construir_mvp_baja_fidelidad",
+        "concierge_mvp"
+      ],
+      "por_que": "MVP. Las dos anclas son las dos formas baratas, y ambas deben salir."
+    },
+    {
+      "id": "nucleo_no_doy_abasto_solo",
+      "consulta": "estoy haciéndolo todo yo y ya no doy abasto, no sé si es momento de meter a alguien",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [],
+      "por_que": "DIAGNÓSTICO: el núcleo NO tiene nodo de primera contratación (0 aciertos en el barrido). Este rumbo existe para ver a dónde manda la brújula una pregunta cuya respuesta no está escrita. Su resultado es un hallazgo de CONTENIDO, no de puntería."
+    },
+    {
+      "id": "frontera_precio_a_cliente_es_nucleo",
+      "consulta": "no sé cuánto cobrarle a mis clientes por lo que hago",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [],
+      "prohibido": [
+        "compras"
+      ],
+      "por_que": "Precio DE VENTA es núcleo. Compras es negociar con el proveedor: la palabra 'precio' no puede arrastrarlo al mundo pagado."
+    },
+    {
+      "id": "frontera_producto_disparejo_es_calidad",
+      "consulta": "mis clientes se quejan de que el producto no siempre sale igual, unas veces bien y otras mal",
+      "dominios": [
+        "quality"
+      ],
+      "ancla": [],
+      "prohibido": [
+        "core"
+      ],
+      "por_que": "Variación del proceso es Calidad. Si cae en núcleo, el mundo no se ofrece cuando de verdad hace falta."
+    },
+    {
+      "id": "frontera_contratar_es_nucleo_no_hseq",
+      "consulta": "voy a contratar a mi primera persona para que me ayude en el taller",
+      "dominios": [
+        "core"
+      ],
+      "ancla": [],
+      "prohibido": [
+        "health_safety"
+      ],
+      "por_que": "Contratar es del núcleo. La palabra 'taller' no puede arrastrarlo a Seguridad y Personas antes de tiempo."
     }
   ],
   "_umbrales": {

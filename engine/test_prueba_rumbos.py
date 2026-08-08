@@ -110,8 +110,35 @@ def test_el_trinquete_existe_y_tiene_sus_tres_salidas():
     assert "K = 10" in src and "TOP_FRONTERA = 3" in src, "los umbrales aprobados cambiaron"
     # las tres guardas, en orden: rojos, ambares que crecen, y la mejora
     assert 'marcador["rojo"] or deprecados_ofrecidos' in src, "no corta con rojos"
-    assert 'marcador["ambar"] > base["marcador"]["ambar"]' in src, "no corta si crecen los ambares"
+    assert 'ambar_conocidos > base["marcador"]["ambar"]' in src, "no corta si crecen los ambares"
     assert "return SALIDA_MEJORA" in src, "una mejora no pide re-committear la vara"
+
+
+def test_ampliar_el_banco_no_es_deriva():
+    """Cazado al ampliar el banco de 30 a 48 para poder operar el nucleo (ago
+    2026): el trinquete comparaba CONTEOS BRUTOS de ambares, asi que 18 rumbos
+    nuevos lo hicieron gritar DERIVA cuando ninguno de los 30 originales se
+    habia movido un milimetro.
+
+    Un guardian que grita cuando le amplias la ronda deja de creerse, y ese es
+    el peor final para un guardian. Pero un rumbo nuevo en ambar TAMPOCO se
+    calla: es una debilidad que el banco viejo no veia, y hornearla en la linea
+    base sin decirlo seria estrenar la ceguera."""
+    src = CORREDOR.read_text(encoding="utf-8")
+    # se cuenta sobre los rumbos que la vara conocia, no sobre el banco entero
+    assert "conocidos = set(base[\"por_rumbo\"])" in src, "no acota al conjunto conocido"
+    for var in ("ambar_conocidos", "verde_conocidos"):
+        assert f"{var} = sum(" in src, f"{var} no se calcula sobre los conocidos"
+        assert f'if rid in conocidos' in src, "el conteo no filtra por conocidos"
+    # el rumbo nuevo no-verde se nombra, uno por uno
+    assert "estrenos" in src, "los rumbos nuevos no se listan aparte"
+    assert "RUMBOS NUEVOS QUE NO SALEN VERDES" in src, "no los canta"
+    assert 'ahora["estado"] != "verde"' in src, "canta tambien los nuevos que salen verdes"
+    # y salir con estrenos NO es OK: la vara se re-committea a proposito
+    bloque = src[src.index("    if estrenos:", src.index("verde_conocidos = sum(")):]
+    assert "return SALIDA_MEJORA" in bloque[:300], (
+        "con estrenos sin adjudicar la corrida sale 0 y el ciclo sigue sin que nadie mire")
+    print("  ok: ampliar el banco no es deriva, y un estreno en ambar no pasa callado")
     # y el banco declara los umbrales, para que se lean sin abrir el codigo
     u = json.loads(BANCO.read_text(encoding="utf-8"))["_umbrales"]
     assert u["K"] == 10 and u["top_frontera"] == 3
@@ -122,7 +149,8 @@ def main():
     for f in (test_el_banco_cubre_el_catalogo, test_hay_rumbos_trampa_de_frontera,
               test_los_ids_de_ancla_existen_de_verdad, test_las_dos_puertas_dicen_lo_mismo,
               test_la_linea_base_esta_committeada,
-              test_el_trinquete_existe_y_tiene_sus_tres_salidas):
+              test_el_trinquete_existe_y_tiene_sus_tres_salidas,
+              test_ampliar_el_banco_no_es_deriva):
         f()
     print("OK: el banco de rumbos y su puerta sostienen.")
 
