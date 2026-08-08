@@ -52,7 +52,10 @@ VETADO = {
         r"\blos stakeholders\b", r"\blas partes interesadas\b",
         r"\b[st]u organizaci[óo]n\b", r"\brecursos humanos\b",
     ],
-    "voseo": [r"\bvos\b", r"\bpod[ée]s\b", r"\bten[ée]s\b", r"\bquer[ée]s\b", r"\bsab[ée]s\b"],
+    # OJO con las ambiguas: "sabes", "puedes" y "tienes" son el TU correcto;
+    # el voseo lleva TILDE ("sabes" con tilde). El patron [ee] cazaba las dos
+    # y rechazo tres nodos bien escritos. Para esas formas se EXIGE la tilde.
+    "voseo": [r"\bvos\b", r"\bpodés\b", r"\btenés\b", r"\bquerés\b", r"\bsabés\b", r"\bhacés\b"],
     "matriz o puntaje": [
         r"\bmatriz de (?:riesgo|probabilidad|impacto|prioridad)", r"\bpunt[úu][ae]\b",
         r"\bescala de\s*1\s*a\s*(?:5|10)\b", r"\bprobabilidad\s*(?:x|por|\*)\s*impacto\b",
@@ -242,6 +245,7 @@ def main():
     ap.add_argument("--lote", required=True)
     ap.add_argument("--extra", nargs="*", default=[], help="node_id sueltos a incluir")
     ap.add_argument("--tanda", type=int, default=POR_TANDA)
+    ap.add_argument("--saltar", help="json con una lista de node_id a NO tocar")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -249,7 +253,16 @@ def main():
     ids = list(lote["sobrevivientes"]) + list(args.extra)
     hechos_path = Path(args.lote).parent / "_revoz_hechos.json"
     hechos = json.loads(hechos_path.read_text(encoding="utf-8")) if hechos_path.exists() else {}
-    pendientes = [n for n in ids if n not in hechos]
+    # SKIP-LIST: nodos que pueden evaporarse en una fusion pendiente. Gastar API
+    # en re-vozarlos seria pagar por texto que va a desaparecer. Fusion primero,
+    # voz despues: la misma aritmetica de la campana, aplicada a escala micro.
+    saltar = set()
+    if args.saltar:
+        crudo = json.loads(Path(args.saltar).read_text(encoding="utf-8"))
+        saltar = set(crudo if isinstance(crudo, list) else
+                     [x["node_id"] for x in crudo.get("familia", [])])
+        print(f"  skip-list: {len(saltar)} nodos fuera de esta campana")
+    pendientes = [n for n in ids if n not in hechos and n not in saltar]
     print(f"  {len(ids)} en el lote, {len(pendientes)} pendientes, tanda de {args.tanda}")
     if args.dry_run:
         return

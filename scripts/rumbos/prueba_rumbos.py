@@ -62,6 +62,25 @@ SALIDA_OK = 0
 SALIDA_DERIVA = 1
 SALIDA_MEJORA = 2
 
+# REGLA DE CAMPANA (adoptada ago 2026, durante la re-voz de quality). Cuando una
+# campana reescribe un pack ENTERO, un rumbo suyo puede pasar a ambar sin que
+# nada haya empeorado: el texto re-vozado es mas coloquial, las consultas
+# tambien lo son, y los nodos tocados le ganan el puesto a un vecino intacto.
+# Eso NO es deriva de punteria: es el vecindario moviendose.
+#
+# Se descubrio cazando algo mejor. El rumbo guardian del COPQ paso a ambar y el
+# guardian no habia sido tocado: quienes lo desplazaron eran sus GEMELOS SIN
+# FUNDIR. El ambar por apinamiento resulto ser sintoma de FUSION INCOMPLETA, una
+# via que el diseno del guardian no contemplaba.
+#
+# Asi que durante una campana declarada (--campana <pack>):
+#   - los rojos y las fronteras PARAN SIEMPRE, sin excepcion;
+#   - los ambares cuyo dominio esperado es el pack en campana se ACUMULAN y se
+#     adjudican al cierre, en vez de parar cada lote;
+#   - todo lo demas se comporta igual.
+# Sin la bandera, el trinquete manda entero.
+CAMPANA_ENV = "RUMBOS_CAMPANA"
+
 
 def puerta(nid, grafo, dominios):
     """LA MISMA puerta que el motor (esOfrecible en web/lib/engine/graph.ts):
@@ -218,6 +237,18 @@ def main():
         return SALIDA_DERIVA
 
     # 2. Los ambares no pueden crecer, y ningun rumbo puede bajar de estado.
+    #    Salvo los del pack EN CAMPANA: esos se acumulan (ver REGLA DE CAMPANA).
+    campana = os.getenv(CAMPANA_ENV, "").strip()
+    if campana:
+        de_la_campana = [d for d in peores if any(
+            r["id"] == d.split(":")[0] and campana in r["dominios"] for r in banco)]
+        if de_la_campana:
+            print(f"\n  ACUMULADOS por la campana de '{campana}' "
+                  f"({len(de_la_campana)}), se adjudican al cierre:")
+            for d in de_la_campana:
+                print(f"    {d}")
+            peores = [d for d in peores if d not in de_la_campana]
+            marcador = dict(marcador, ambar=base["marcador"]["ambar"])
     if marcador["ambar"] > base["marcador"]["ambar"] or peores:
         print(f"\n  TRINQUETE ROTO: la punteria empeoro "
               f"({base['marcador']['ambar']} ambares -> {marcador['ambar']})")

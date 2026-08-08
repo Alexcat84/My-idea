@@ -1,126 +1,36 @@
 {
-  "regenerados": 39,
-  "rechazos": [
-    {
-      "node_id": "evaluacion_de_factores_de_riesgo",
-      "motivo": [
-        "voseo sobrevivio: 'sabes'"
-      ]
-    }
-  ],
+  "regenerados": 2,
+  "rechazos": [],
   "muestra": [
     {
-      "node_id": "caso_definicion_arruga",
+      "node_id": "evaluacion_de_factores_de_riesgo",
       "antes": {
-        "titulo_concepto": "Caso Práctico: Definición Operacional de una 'Arruga'",
-        "resumen_teorico": "Ejemplo real de una planta de paneles de instrumentos para automóviles con 35-50% de defectos diarios. El problema no era de producción sino de definición: cada inspector tenía su propia percepción visual de lo que constituía una 'arruga'. Al reunir a la gerencia e inspectores para establecer una definición operacional común (qué es y qué no es una arruga), los defectos bajaron a 10% en una semana sin costo adicional, solo mediante consenso y comunicación clara."
+        "titulo_concepto": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)",
+        "resumen_teorico": "Una vez identificados los riesgos, deben priorizarse asignando valores numéricos a distintos factores: severidad (magnitud de la pérdida potencial), probabilidad (frecuencia de ocurrencia), impacto de la velocidad, indignación del consumidor, complejidad, alcance (scope) e incertidumbre. Multiplicando o sumando estos valores se obtiene una lista priorizada que permite enfocar los esfuerzos de prevención en los riesgos más importantes."
       },
       "despues": {
-        "titulo_concepto": "Caso Práctico: Definición Operacional de una 'Arruga'",
-        "resumen_teorico": "Ejemplo real de una planta de paneles de instrumentos para automóviles con 35-50% de defectos diarios. El problema no era de producción sino de definición: cada persona que revisaba las piezas tenía su propia idea de lo que era una 'arruga'. Cuando se reunieron los responsables y quienes hacían la inspección para acordar una definición común (qué es y qué no es una arruga), los defectos bajaron a 10% en una semana sin gastar nada extra, solo con consenso y comunicación clara."
+        "titulo_concepto": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)",
+        "resumen_teorico": "Cuando identificas varios riesgos, conviene ordenarlos para saber cuál atacar primero. Para eso, revisas cada uno según su gravedad, qué tan probable es que ocurra, qué tan rápido golpearía, cuánto indignaría a tus clientes, su complejidad, su alcance y cuánta incertidumbre tiene. Combinando estos factores obtienes una lista clara de prioridades para enfocar tu esfuerzo de prevención."
       }
     },
     {
-      "node_id": "compra_por_precio_mas_bajo_como_error",
+      "node_id": "matriz_riesgo_conocido_desconocido",
       "antes": {
-        "titulo_concepto": "Riesgo de comprar solo por el precio más bajo",
-        "resumen_teorico": "Deming critica la práctica de otorgar contratos y compras exclusivamente al proveedor de menor precio, ya que esto ignora el costo total (rework, fallas de compatibilidad, pérdidas de producción) y no garantiza calidad. El precio inicial bajo puede esconder costos ocultos mucho mayores en producción, ensamblaje o servicio."
+        "titulo_concepto": "Matriz de Riesgo: Conocidos, Desconocidos y Desconocidos Desconocidos",
+        "resumen_teorico": "La incertidumbre en la evaluación de riesgos se clasifica en tres niveles: 'desconocidos desconocidos' (no sabemos que no sabemos, la posición más peligrosa), 'conocidos desconocidos' (sabemos que existe un riesgo pero carecemos de datos para evaluarlo) y 'conocidos conocidos' (tenemos datos y confianza, pero esa confianza puede ser infundada). Reconocer en qué categoría cae cada riesgo ayuda a decidir qué acción tomar: educación, recopilación de datos o revisión crítica de supuestos existentes."
       },
       "despues": {
-        "titulo_concepto": "Riesgo de comprar solo por el precio más bajo",
-        "resumen_teorico": "Elegir siempre al proveedor más barato es un riesgo que muchas veces no se ve a tiempo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. Un precio inicial bajo no garantiza calidad y puede esconder costos ocultos mucho mayores que aparecen después, en producción, ensamblaje o servicio."
-      }
-    },
-    {
-      "node_id": "concepto_haciendo_la_calidad_cierta",
-      "antes": {
-        "titulo_concepto": "Haciendo la Calidad Cierta (Making Quality Certain)",
-        "resumen_teorico": "Concepto definido por Crosby como 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberían estar haciendo'. Implica que la responsabilidad de la calidad recae en todos los niveles, incluida la alta dirección, y que el rol del gerente de calidad es educar a la dirección de forma clara y sin jerga técnica para lograr compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior."
-      },
-      "despues": {
-        "titulo_concepto": "Haciendo la Calidad Cierta (Making Quality Certain)",
-        "resumen_teorico": "Concepto definido por Crosby como 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberian estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevencion de defectos, en lugar de la deteccion y correccion posterior."
-      }
-    },
-    {
-      "node_id": "concepto_quality_is_free",
-      "antes": {
-        "titulo_concepto": "Quality is Free (La Calidad es Gratis)",
-        "resumen_teorico": "Crosby plantea que la calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento (nonconformance), es decir, todas las acciones derivadas de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantías e inspecciones adicionales. Calcular este costo permite dimensionar la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes incrementar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente la rentabilidad, adoptando hacer las cosas bien la primera vez como filosofía de trabajo."
-      },
-      "despues": {
-        "titulo_concepto": "Quality is Free (La Calidad es Gratis)",
-        "resumen_teorico": "Crosby plantea que la calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantias e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes aumentar tus utilidades entre un 5% y 10% de las ventas sin inversion adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevencion reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofia de trabajo."
-      }
-    },
-    {
-      "node_id": "consejo_de_calidad",
-      "antes": {
-        "titulo_concepto": "Consejo de Calidad (Liderazgo y Selección de Proyectos — Juran)",
-        "resumen_teorico": "Estructura organizacional formada por el gerente general y sus reportes directos, responsable de nominar, evaluar y seleccionar proyectos de mejora, asignar recursos (entrenamiento, tiempo, personal), formar y capacitar equipos, y revisar el progreso otorgando reconocimiento. Es el mecanismo mediante el cual la alta dirección lidera personalmente las iniciativas de calidad."
-      },
-      "despues": {
-        "titulo_concepto": "Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)",
-        "resumen_teorico": "Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitacion, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo."
+        "titulo_concepto": "Los tres niveles de riesgo: lo que no sabes que no sabes, lo que sabes que no sabes y lo que crees saber",
+        "resumen_teorico": "La incertidumbre en tu negocio se puede pensar en tres niveles. Primero, lo que no sabes que no sabes: la posicion mas peligrosa, porque ni siquiera ves el riesgo. Segundo, lo que sabes que no sabes: ya identificaste el riesgo pero te faltan datos para evaluarlo. Tercero, lo que crees saber: tienes datos y confianza, pero esa confianza puede estar mal puesta. Reconocer en cual de los tres estas te ayuda a decidir que hacer: aprender mas, buscar datos, o revisar con ojo critico lo que dabas por hecho."
       }
     }
   ],
   "titulos_cambiados": [
     {
-      "node_id": "consejo_de_calidad",
-      "de": "Consejo de Calidad (Liderazgo y Selección de Proyectos — Juran)",
-      "a": "Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)"
-    },
-    {
-      "node_id": "consejo_de_calidad_2",
-      "de": "Consejo de Calidad (Red Autogestionada de Profesionales — Crosby)",
-      "a": "Consejo de Calidad (Red Autogestionada de Profesionales, Crosby)"
-    },
-    {
-      "node_id": "consejos_de_calidad",
-      "de": "Paso 13: Consejos de Calidad (Quality Councils)",
-      "a": "Paso 13: Consejos de Calidad"
-    },
-    {
-      "node_id": "distincion_causas_comunes_especiales_2",
-      "de": "Distinción entre Causas Comunes y Causas Especiales",
-      "a": "Distincion entre Causas Comunes y Causas Especiales"
-    },
-    {
-      "node_id": "eliminar_barreras_departamentales",
-      "de": "Romper Barreras entre Áreas de Staff (Punto 9)",
-      "a": "Romper las barreras entre las areas de tu negocio"
-    },
-    {
-      "node_id": "entrenamiento_supervisores",
-      "de": "Entrenamiento de Supervisores (Orientación Previa al Programa)",
-      "a": "Preparación de Quienes te Ayudan (Orientación Previa al Programa)"
-    },
-    {
-      "node_id": "establecer_equipo_multifuncional",
-      "de": "Establecimiento de Equipo Multifuncional para Diseño de Calidad",
-      "a": "Formar el grupo de personas correctas para diseñar con calidad"
-    },
-    {
-      "node_id": "establecer_vision_organizacional",
-      "de": "Establecimiento de Visión, Misión y Estrategias Organizacionales",
-      "a": "Establecimiento de Visión, Misión y Estrategias"
-    },
-    {
-      "node_id": "establecer_vision_organizacional_2",
-      "de": "Establecer una Visión Organizacional",
-      "a": "Establecer una Visión para tu Negocio"
-    },
-    {
-      "node_id": "evaluacion_encuesta_calidad_proveedor",
-      "de": "Encuesta de Evaluación de Calidad del Proveedor (Supplier Quality Survey)",
-      "a": "Encuesta de Evaluación de Calidad del Proveedor"
-    },
-    {
-      "node_id": "evaluacion_organizacional_calidad",
-      "de": "Evaluación Integral de la Organización (Quality Risk Assessment)",
-      "a": "Evaluación Integral de tu Negocio (Quality Risk Assessment)"
+      "node_id": "matriz_riesgo_conocido_desconocido",
+      "de": "Matriz de Riesgo: Conocidos, Desconocidos y Desconocidos Desconocidos",
+      "a": "Los tres niveles de riesgo: lo que no sabes que no sabes, lo que sabes que no sabes y lo que crees saber"
     }
   ],
-  "costo_usd": 0.76
+  "costo_usd": 0.06
 }

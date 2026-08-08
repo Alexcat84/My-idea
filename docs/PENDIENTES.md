@@ -451,6 +451,27 @@ la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes 
 tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
 ancla, el correctivo pierde su punto de exposición.
 
+## DOCTRINA del taller de re-voz (ago 2026)
+
+**La vara de largo de la extracción, aplicada a lo existente, es presión de
+invención.** Exigí 80-150 palabras a nodos que ya vivían con 55-75. Pedirle a
+una reescritura de VOZ que alargue un texto es pedirle que invente, justo donde
+está prohibido inventar. El largo se mide contra el original.
+
+**Una baranda que caza lo correcto no es estricta: está rota.** Dos veces en esta
+campaña. Metí *cuando*, *quién*, *cuánto* y *más* en la lista de tildes
+obligatorias, cuando solo la llevan si son interrogativas o de cantidad: rechazó
+39 nodos buenos de 40. Y puse `sab[ée]s` como voseo, cazando *sabes*, que es el
+tú correcto: rechazó tres más.
+
+**Una función que existe, se llama, no revienta y no hace nada** es la peor de
+las averías. La corrección mecánica de tildes tenía un carácter de retroceso en
+vez de un límite de palabra, porque el heredoc del shell come un nivel de
+escapado. `re.sub` sin coincidencias devuelve el texto igual, en silencio.
+
+**El plural no lleva la tilde del singular.** *Acción* pero *acciones*. Un
+detector que no lo sabe reporta 525 fallos donde hay 284.
+
 ## DOCTRINA: la ortografía NO mueve la recuperación semántica
 
 **Experimento controlado** (ago 2026), a raíz del único ámbar de la prueba de

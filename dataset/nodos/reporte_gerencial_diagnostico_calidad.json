@@ -2,17 +2,17 @@
   "node_id": "reporte_gerencial_diagnostico_calidad",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Reporte de Diagnóstico a la Gerencia sobre Fallas del Sistema de Calidad",
+  "titulo_concepto": "Diagnostico de fallas en el sistema de calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming presenta un modelo real de informe consultivo a la alta dirección, que documenta con datos existentes (auditorías de calidad) los problemas sistémicos de una planta: defectos mayores constantes, inspección al 200% ineficaz, retrabajo excesivo, trabajo a destajo (piece work) como causa raíz de mala calidad, y ausencia de definiciones operacionales claras. El reporte concluye que la inspección masiva y la nueva maquinaria no resuelven el problema si la gerencia no asume su responsabilidad de rediseñar el sistema.",
+  "resumen_teorico": "Deming muestra un caso real de diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
   "pasos_accionables": [
-    "Recopilar y analizar datos históricos de auditoría de calidad (defectos mayores/menores) que ya existen en la organización",
-    "Documentar el flujo real de detección y manejo de defectos (quién los repara, quién los deja pasar y por qué)",
-    "Identificar si existe trabajo a destajo (piece work) y evaluar su impacto en la calidad",
-    "Redactar un informe estructurado a la gerencia con hallazgos, causas raíz y opciones de acción (mantener status quo, reducir costos manteniendo defectos, o rediseñar el sistema)",
-    "Recomendar explícitamente la eliminación de la distinción arbitraria entre defectos mayores/menores y la creación de definiciones operacionales claras"
+    "Recopilar y revisar los datos historicos de auditoria de calidad (defectos mayores y menores) que ya tienes disponibles",
+    "Documentar como funciona realmente la detección de defectos: quien los repara, quien los deja pasar y por que",
+    "Revisar si pagas por pieza producida y evaluar que impacto tiene eso en la calidad",
+    "Escribir un diagnostico claro para ti mismo con los hallazgos, las causas raiz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema",
+    "Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de que cuenta como defecto"
   ],
-  "entregable_esperado": "Documento de diagnóstico e informe a la gerencia con datos de auditoría, causas raíz identificadas y plan de acción para rediseño del sistema de calidad",
+  "entregable_esperado": "Un documento de diagnostico con los datos de auditoria, las causas raiz identificadas y un plan de acción para rediseñar tu sistema de calidad",
   "nodos_previos": [
     "trampa_del_promedio_como_estandar",
     "causas_comunes_vs_especiales"
@@ -23,8 +23,8 @@
     "abolir_inspeccion_masiva"
   ],
   "condiciones_activacion": [
-    "Cuando una planta tiene niveles crónicos de defectos y la gerencia atribuye el problema solo a falta de maquinaria nueva",
-    "Cuando existen datos de auditoría de calidad que nunca han sido analizados con fines de mejora"
+    "Cuando tu negocio tiene niveles constantes de defectos y tu única explicación es que falta maquinaria nueva",
+    "Cuando tienes datos de auditoria de calidad que nunca has analizado para mejorar algo"
   ],
   "etiqueta_arbol": "Diagnostica las Fallas de Calidad"
 }

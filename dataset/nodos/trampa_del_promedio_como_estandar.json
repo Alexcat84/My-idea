@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "La Trampa del Promedio como Estándar de Desempeño",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming ilustra un error común de gestión: usar el promedio del grupo como umbral para identificar 'bajo desempeño' e intervenir individualmente. Como en cualquier distribución la mitad de los puntos estarán por debajo del promedio (es matemáticamente inevitable), este método selecciona aleatoriamente a la mitad del personal cada período sin distinguir causas especiales de variación común, generando frustración y ningún beneficio real. La solución es aplicar límites de control estadísticos (no el simple promedio) para distinguir variación aleatoria de causas reales de bajo desempeño.",
+  "resumen_teorico": "Deming muestra un error comun: usar el promedio de un grupo como limite para decidir quien tiene 'bajo desempeño' e intervenir uno por uno. Como en toda distribución la mitad de los puntos queda por debajo del promedio (eso es matematicamente inevitable), este método señala al azar a la mitad de las personas en cada periodo, sin distinguir causas puntuales de la variación normal, y eso genera frustración sin ningun beneficio real. La solución es usar limites de control estadisticos, no el promedio simple, para separar la variación aleatoria de las causas reales de bajo desempeño.",
   "pasos_accionables": [
     "Dejar de usar el promedio simple como línea de corte para intervenciones individuales",
-    "Construir un gráfico de control con límites superior e inferior calculados estadísticamente",
-    "Identificar solo los puntos que caen fuera de los límites de control como candidatos a intervención",
-    "Investigar causas especiales (ej. problemas de visión, capacitación) solo en esos casos atípicos"
+    "Construir un grafico de control con limites superior e inferior calculados estadisticamente",
+    "Identificar solo los puntos que caen fuera de los limites de control como candidatos a intervención",
+    "Investigar causas especiales (por ejemplo problemas de visión o de capacitación) solo en esos casos atipicos"
   ],
-  "entregable_esperado": "Gráfico de control con límites estadísticos aplicado al indicador de desempeño, y protocolo de intervención basado en señales reales, no en el promedio",
+  "entregable_esperado": "Grafico de control con limites estadisticos aplicado al indicador de desempeño, y un protocolo de intervención basado en señales reales, no en el promedio",
   "nodos_previos": [
     "sistema_estable_variacion",
     "sistema_estable_causas_comunes"
@@ -22,8 +22,8 @@
     "reporte_gerencial_diagnostico_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando la gerencia usa el promedio del grupo como criterio de intervención individual",
-    "Cuando existe alta rotación de personal 'señalado' semana a semana sin mejora real"
+    "Cuando usas el promedio del grupo como criterio para intervenir con una persona en particular",
+    "Cuando cambia cada semana quien es la persona 'señalada' sin que haya mejora real"
   ],
   "etiqueta_arbol": "No Uses el Promedio como Meta"
 }
