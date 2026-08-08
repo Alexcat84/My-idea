@@ -69,7 +69,7 @@
       "devolvio": [
         "compras",
         "compras",
-        "compras"
+        "core"
       ]
     },
     "compras_negociar_precio": {
@@ -131,25 +131,25 @@
     "riesgos_proveedor_falla": {
       "estado": "verde",
       "devolvio": [
-        "risk_management",
         "core",
-        "risk_management"
+        "risk_management",
+        "core"
       ]
     },
     "riesgos_que_puede_salir_mal": {
       "estado": "verde",
       "devolvio": [
-        "risk_management",
         "core",
-        "risk_management"
+        "risk_management",
+        "core"
       ]
     },
     "seguridad_digital_datos": {
       "estado": "verde",
       "devolvio": [
         "core",
-        "seguridad_digital",
-        "seguridad_digital"
+        "core",
+        "core"
       ]
     },
     "exportacion_primer_envio_fuera": {
@@ -189,7 +189,7 @@
       "devolvio": [
         "core",
         "core",
-        "quality"
+        "core"
       ]
     },
     "frontera_inventario_es_compras": {
@@ -204,8 +204,8 @@
       "estado": "verde",
       "devolvio": [
         "risk_management",
-        "risk_management",
-        "risk_management"
+        "core",
+        "core"
       ]
     },
     "proteccion_hseq_sobre_plan": {
@@ -383,7 +383,7 @@
       ]
     },
     "nucleo_sacar_algo_pequeno_primero": {
-      "estado": "ambar",
+      "estado": "verde",
       "clase": "diagnostico",
       "devolvio": [
         "core",

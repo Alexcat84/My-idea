@@ -1,0 +1,37 @@
+#!/bin/sh
+# GUARDIAN DE COMMIT: ninguna suite en rojo entra al historial.
+#
+# POR QUE EXISTE (ago 2026): la regla "ningun commit con suites en rojo" era de
+# atencion, y la atencion falla. Un commit salio con la suite web en rojo porque
+# se encadeno detras de un `grep` que devolvia exito y nadie miro el resultado.
+# El auditor lo dijo claro: el remedio es MECANICO, no de atencion.
+#
+# Es la misma cura que se le aplico a las otras averias de este ciclo: una clave
+# mal escrita no falla, se silencia -> fixtures obligatorios; una corrida cortada
+# pierde la cuenta -> persistencia por nodo; un commit sin mirar -> esto.
+#
+# Se activa con:  git config core.hooksPath .githooks
+# (versionado a proposito: un hook en .git/hooks/ no viaja con el repo y se
+#  pierde en el siguiente clon, que es como esta clase de guardian se muere.)
+set -e
+
+RAIZ=$(git rev-parse --show-toplevel)
+cd "$RAIZ"
+
+echo "  [guardian] motor..."
+if ! python engine/run_all_tests.py > /tmp/_suite_motor.log 2>&1; then
+  echo ""
+  echo "  COMMIT ABORTADO: la suite del motor esta en ROJO."
+  tail -25 /tmp/_suite_motor.log
+  exit 1
+fi
+
+echo "  [guardian] web..."
+if ! (cd web && npx vitest run > /tmp/_suite_web.log 2>&1); then
+  echo ""
+  echo "  COMMIT ABORTADO: la suite web esta en ROJO."
+  grep -E "FAIL|AssertionError|Tests " /tmp/_suite_web.log | head -25
+  exit 1
+fi
+
+echo "  [guardian] verde. Commit permitido."
