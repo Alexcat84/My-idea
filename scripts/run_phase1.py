@@ -711,6 +711,27 @@ def step7_validate(master, parse_errors):
         f"{len(activos)} activos, {len(deprecados)} deprecados (siguen en el grafo)",
     ))
 
+    # EL NODO FANTASMA CON NOMBRE, cero tolerancia (adoptado ago 2026 tras la
+    # deprecacion de los programas de OSHA). Un nodo ACTIVO cuya UNICA entrada
+    # esta deprecada sigue existiendo, con su titulo y su contenido, y NADIE
+    # puede llegar a el por ningun camino. No es un huerfano historico: es una
+    # baja causada por una deprecacion, y el efecto es DOMINO (al cerrar una
+    # puerta se llevo por delante a tres nodos universales que estaban detras).
+    #
+    # Va aparte del porcentaje de alcanzabilidad a proposito: ese umbral existe
+    # para el flotante historico y con 99.5% este caso PASABA. Aqui no se
+    # tolera ni uno.
+    fantasmas = []
+    for nid, n in activos.items():
+        entradas = [r for r in (n.get("nodos_previos") or []) if r in nodos_todos]
+        if entradas and all(r in deprecados for r in entradas):
+            fantasmas.append(nid)
+    checks.append((
+        "Ningun nodo ACTIVO cuya unica entrada este deprecada",
+        not fantasmas,
+        f"{len(fantasmas)} fantasmas" + (f": {fantasmas[:5]}" if fantasmas else ""),
+    ))
+
     seeds = load_entry_seeds()
     seeds_deprecadas = sorted(set(seeds) & deprecados)
     checks.append((

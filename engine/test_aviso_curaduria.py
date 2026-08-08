@@ -98,8 +98,28 @@ def test_jamas_auto_aplica():
     print("  ok: el aviso avisa; no toca un solo archivo")
 
 
+def test_el_nodo_fantasma_con_nombre():
+    """Un nodo ACTIVO cuya UNICA entrada esta deprecada existe, tiene titulo y
+    contenido, y NADIE puede llegar a el. No es un huerfano historico: es una
+    baja causada por una deprecacion, y el efecto es DOMINO.
+
+    Cazado al deprecar los programas de OSHA (ago 2026): cerrar esa puerta dejo
+    colgando a "Derecho del Trabajador a Rechazar Trabajo Peligroso", que el
+    auditor habia protegido expresamente como universal. El porcentaje de
+    alcanzabilidad NO lo cazo: con 99.86% pasaba de largo. Por eso este chequeo
+    es de CERO TOLERANCIA y va aparte del umbral, que existe para el flotante
+    historico."""
+    src = (BASE / "scripts" / "run_phase1.py").read_text(encoding="utf-8")
+    assert "Ningun nodo ACTIVO cuya unica entrada este deprecada" in src, "falta el chequeo"
+    cuerpo = src[src.index("fantasmas = []"):src.index("seeds = load_entry_seeds()")]
+    assert "all(r in deprecados for r in entradas)" in cuerpo, "no exige que TODAS lo esten"
+    assert "if entradas and" in cuerpo, "un nodo sin entradas no es un fantasma, es una raiz"
+    assert "not fantasmas" in src, "el chequeo tolera fantasmas"
+    print("  ok: el nodo-fantasma-con-nombre tiene su chequeo de cero tolerancia")
+
+
 def main():
-    for f in (test_la_curaduria_real_existe,
+    for f in (test_el_nodo_fantasma_con_nombre, test_la_curaduria_real_existe,
               test_suelto_sobre_copia_revertida_grita_y_falla,
               test_via_integrar_packs_limpio_y_callado,
               test_copia_intacta_no_molesta,
