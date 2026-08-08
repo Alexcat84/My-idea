@@ -4,17 +4,20 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Seguridad y Salud Ocupacional (Marco de 7 Elementos)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Marco flexible y proactivo propuesto por OSHA para gestionar la seguridad y salud en el trabajo, aplicable a cualquier tipo de organización (pequeña, mediana o grande, fija o móvil). Se compone de siete elementos centrales interrelacionados: Liderazgo Gerencial, Participación de los Trabajadores, Identificación y Evaluación de Peligros, Prevención y Control de Peligros, Educación y Capacitación, Evaluación y Mejora del Programa, y Comunicación/Coordinación para Empleadores Múltiples. Enfatiza la mejora continua sobre el enfoque reactivo tradicional (actuar solo después de un incidente).",
+  "resumen_teorico": "Marco flexible y proactivo propuesto por OSHA para gestionar la seguridad y salud en el trabajo, aplicable a cualquier tipo de organización (pequeña, mediana o grande, fija o móvil). Se compone de siete elementos centrales interrelacionados: Liderazgo Gerencial, Participación de los Trabajadores, Identificación y Evaluación de Peligros, Prevención y Control de Peligros, Educación y Capacitación, Evaluación y Mejora del Programa, y Comunicación/Coordinación con contratistas y agencias de personal temporal. Busca prevenir lesiones, enfermedades y muertes laborales, reduciendo costos asociados como primas de compensación, gastos médicos, legales y pérdida de productividad, mientras mejora el cumplimiento normativo y la moral del personal. Enfatiza la mejora continua sobre el enfoque reactivo tradicional de actuar solo después de un incidente.",
   "pasos_accionables": [
-    "Diagnosticar el estado actual de la seguridad y salud en el lugar de trabajo",
+    "Diagnosticar el estado actual de la seguridad y salud en tu lugar de trabajo",
     "Definir metas modestas e iniciales para comenzar el programa",
-    "Establecer un ciclo de monitoreo y evaluación de desempeño",
-    "Integrar los siete elementos de forma coordinada, no aislada",
-    "Adaptar el nivel de formalidad del programa al tamaño y complejidad de la organización"
+    "Establecer procedimientos para identificar y evaluar peligros, e implementar controles de prevención",
+    "Capacitarte y capacitar a quienes trabajan contigo en identificación y control de peligros",
+    "Establecer un ciclo de monitoreo y evaluación de desempeño, ajustando según resultados",
+    "Coordinar la comunicación con contratistas o personal temporal si los hay"
   ],
-  "entregable_esperado": "Documento marco del programa de seguridad y salud con los siete elementos identificados y un plan inicial de implementación",
+  "entregable_esperado": "Documento marco del programa de seguridad y salud con los siete elementos identificados, evidencia de implementación y un plan inicial de mejora continua.",
   "nodos_previos": [
-    "diez_pasos_iniciales_programa"
+    "diez_pasos_iniciales_programa",
+    "capacitacion_conciencia_programa",
+    "nueve_pasos_iniciar_programa"
   ],
   "nodos_siguientes": [
     "liderazgo_gerencial_seguridad",
@@ -22,11 +25,25 @@
     "identificacion_evaluacion_peligros",
     "prevencion_control_peligros",
     "autoinspeccion_lugar_de_trabajo",
-    "coordinacion_empleadores_multiples"
+    "coordinacion_empleadores_multiples",
+    "registro_reporte_lesiones",
+    "evaluacion_periodica_programa_seguridad",
+    "coordinacion_sitios_multiempleador"
   ],
   "condiciones_activacion": [
-    "Cuando la organización no cuenta con un programa formal de seguridad y salud",
-    "Cuando se busca pasar de un enfoque reactivo a uno proactivo en gestión de riesgos laborales"
+    "Cuando no cuentas con un programa formal de seguridad y salud",
+    "Cuando buscas pasar de un enfoque reactivo a uno proactivo en gestión de riesgos laborales",
+    "Cuando buscas reducir costos por accidentes o mejorar el cumplimiento normativo de OSHA"
   ],
-  "etiqueta_arbol": "Construye tu Programa de Seguridad"
+  "etiqueta_arbol": "Construye tu Programa de Seguridad",
+  "ids_alias": [
+    "programa_seguridad_salud_ocupacional_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "programa_seguridad_salud_ocupacional_2",
+      "titulo": "Programa de Seguridad y Salud Ocupacional",
+      "fuente": "SMALL_BUSINESS"
+    }
+  ]
 }

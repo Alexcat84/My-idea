@@ -4,16 +4,21 @@
   "dominio": "health_safety",
   "titulo_concepto": "Crítica a los Programas de Seguridad Basados en Comportamiento",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Los programas de seguridad basados en el comportamiento (behavior-based safety) atribuyen la responsabilidad del riesgo al trabajador individual, no a las condiciones estructurales del trabajo. Preguntan 'quién' es responsable en lugar de 'qué' genera el riesgo, y suelen usar incentivos (premios, bonos) o castigos (pérdida de beneficios, pruebas de drogas obligatorias) que desincentivan el reporte honesto de incidentes, generando un clima de miedo y erosionando la solidaridad laboral.",
+  "resumen_teorico": "Los programas de seguridad basados en el comportamiento asumen que la mayoría de los incidentes son causados por actos inseguros de los trabajadores, colocando la responsabilidad en el individuo y no en las condiciones estructurales del trabajo. Preguntan quién es responsable en lugar de qué genera el riesgo. Suelen apoyarse en incentivos como premios o bonos, o en castigos como pérdida de beneficios y pruebas de drogas obligatorias, lo que desincentiva el reporte honesto de incidentes. Esto genera un clima de miedo, erosiona la solidaridad entre trabajadores y puede llevar a prácticas que estigmatizan a quienes se lesionan, como identificarlos visiblemente frente al resto del equipo.",
   "pasos_accionables": [
-    "Auditar los programas de incentivos de seguridad existentes para identificar si penalizan el reporte de lesiones",
-    "Eliminar premios grupales condicionados a la ausencia de reportes de incidentes",
-    "Sustituir métricas basadas en tasas de incidentes por métricas de proceso o inputs de seguridad",
-    "Evaluar el clima de reporte mediante entrevistas anónimas a trabajadores"
+    "Audita los programas de incentivos de seguridad existentes para identificar si penalizan el reporte de lesiones, incluyendo premios grupales o pérdida de bonos",
+    "Elimina premios grupales condicionados a la ausencia de reportes de incidentes",
+    "Elimina prácticas que estigmaticen a trabajadores lesionados, como identificadores visibles frente al resto del equipo",
+    "Evalúa si las políticas posteriores a un incidente, como pruebas de drogas obligatorias, desincentivan el reporte",
+    "Sustituye las métricas basadas en tasas de incidentes por métricas de proceso o de condiciones de seguridad",
+    "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
   ],
-  "entregable_esperado": "Diagnóstico documentado de los efectos del sistema actual de incentivos sobre el reporte de incidentes, con recomendaciones de rediseño",
+  "entregable_esperado": "Diagnóstico documentado de los efectos del sistema actual de incentivos sobre el reporte de incidentes, con recomendaciones de rediseño.",
   "nodos_previos": [
-    "participacion_trabajadores"
+    "participacion_trabajadores",
+    "vieja_vision_vs_nueva_vision_seguridad",
+    "cultura_de_seguridad_interpretivista_funcionalista",
+    "proteccion_organizacion_matriz_experimentos"
   ],
   "nodos_siguientes": [
     "cuestionar_vision_zero",
@@ -21,8 +26,19 @@
     "paradoja_bajos_incidentes_altas_fatalidades"
   ],
   "condiciones_activacion": [
-    "Si la organización tiene un programa de incentivos ligado a bajos números de incidentes reportados",
-    "Si se sospecha subreporte de lesiones o incidentes"
+    "Si tienes un programa de incentivos de seguridad ligado a bajos números de incidentes reportados",
+    "Si sospechas que existe subreporte de lesiones o incidentes en tu negocio",
+    "Si detectas miedo entre tus trabajadores a reportar lesiones"
   ],
-  "etiqueta_arbol": "Mira Más Allá del Trabajador"
+  "etiqueta_arbol": "Mira Más Allá del Trabajador",
+  "ids_alias": [
+    "riesgos_programas_seguridad_conductual"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "riesgos_programas_seguridad_conductual",
+      "titulo": "Riesgos de los Programas de Seguridad Basados en Comportamiento",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ]
 }

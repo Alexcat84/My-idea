@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Diagrama causal de tres niveles (organización-lugar de trabajo-individuo) aplicado al incidente analizado",
   "nodos_previos": [
-    "diferenciacion_accidente_individual_organizacional"
+    "diferenciacion_accidente_individual_organizacional",
+    "accidentes_individuales_vs_organizacionales"
   ],
   "nodos_siguientes": [
     "reglas_parada_investigacion_accidentes",
@@ -23,7 +24,9 @@
     "formal_safety_assessment_safety_case",
     "normalizacion_de_la_desviacion",
     "safety_ii_resiliencia",
-    "seduccion_modelo_persona"
+    "seduccion_modelo_persona",
+    "safety_case_evaluacion_formal",
+    "safety_i_safety_ii"
   ],
   "condiciones_activacion": [
     "Cuando se investiga un accidente organizacional y se necesita estructurar la cadena causal",

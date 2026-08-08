@@ -4,24 +4,37 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sesgo de Continuación del Plan (Plan Continuation)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Fenómeno psicológico donde las personas persisten con un plan original aunque la situación haya cambiado y requiera un plan distinto. La toma de decisiones en entornos dinámicos está 'front-loaded': la mayoría de los recursos cognitivos se dedican a evaluar y reevaluar continuamente la situación, más que a comparar opciones. Las señales tempranas que sugieren que el plan original es correcto suelen ser fuertes e inequívocas, mientras que las señales tardías que sugieren abandonar el plan son más débiles y ambiguas, lo que dificulta el cambio de curso incluso cuando ya se perciben.",
+  "resumen_teorico": "El sesgo de continuación del plan ocurre cuando te mantienes fiel a un plan original aunque la situación haya cambiado y exija uno distinto. En entornos dinámicos, la toma de decisiones está cargada al frente: dedicas la mayoría de tus recursos cognitivos a evaluar y reevaluar continuamente la situación, más que a comparar opciones formalmente. Las señales iniciales que confirman que el plan es correcto suelen ser fuertes y claras, mientras que las señales posteriores que sugieren abandonarlo llegan más débiles, ambiguas y tarde, lo que te dificulta desviar el curso de acción ya en marcha incluso cuando empiezas a percibirlas.",
   "pasos_accionables": [
-    "Construir una línea de tiempo detallada de las señales (cues) que fueron apareciendo durante el incidente",
-    "Clasificar las señales según su fuerza, ambigüedad y momento de aparición (tempranas vs tardías)",
-    "Analizar qué señales reforzaron la creencia de que el plan original funcionaba",
-    "Evitar juzgar con el conocimiento del resultado (hindsight); reconstruir la perspectiva del momento"
+    "Construir una línea de tiempo detallada con las señales que fueron apareciendo durante el incidente",
+    "Clasificar cada señal según su fuerza, ambigüedad y momento de aparición, distinguiendo tempranas de tardías",
+    "Analizar por qué las señales tempranas dominaron sobre las tardías y reforzaron la creencia de que el plan funcionaba",
+    "Evitar juzgar con el conocimiento del resultado; reconstruye la perspectiva que tenías en ese momento"
   ],
-  "entregable_esperado": "Línea de tiempo de señales situacionales con análisis de por qué el plan original no fue abandonado a tiempo",
+  "entregable_esperado": "Línea de tiempo de señales situacionales con análisis de por qué no abandonaste el plan original a tiempo.",
   "nodos_previos": [
-    "fijacion_cognitiva"
+    "fijacion_cognitiva",
+    "gestion_dinamica_de_fallas"
   ],
   "nodos_siguientes": [
     "unstabilized_approach_go_around",
-    "buggy_inert_knowledge"
+    "buggy_inert_knowledge",
+    "recomendaciones_smart"
   ],
   "condiciones_activacion": [
-    "Cuando se investiga un incidente donde el equipo continuó una acción pese a señales de alerta",
-    "Cuando se analiza por qué un operador no abandonó un procedimiento a tiempo"
+    "Cuando persistes en un curso de acción pese a señales de deterioro de la situación",
+    "Cuando revisas un incidente en el que seguiste actuando a pesar de señales de alerta",
+    "Cuando analizas por qué no abandonaste un procedimiento a tiempo"
   ],
-  "etiqueta_arbol": "No Sigas un Plan Roto"
+  "etiqueta_arbol": "No Sigas un Plan Roto",
+  "ids_alias": [
+    "continuacion_de_plan"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "continuacion_de_plan",
+      "titulo": "Continuación de Plan (Plan Continuation)",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ]
 }

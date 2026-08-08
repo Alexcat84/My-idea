@@ -4,16 +4,16 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Peligros para la Salud (Industria General)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible. Requiere revisar SDS, realizar evaluaciones cuantitativas de exposición y examinar registros médicos para detectar patrones relacionados con el trabajo.",
+  "resumen_teorico": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y requieren conocimiento especializado para detectarlos. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Requiere revisar SDS, realizar evaluaciones cuantitativas de exposición y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
   "pasos_accionables": [
-    "Revisar SDS y etiquetas de productos para identificar químicos de riesgo",
-    "Evaluar exposición a ruido, calor o radiación",
-    "Identificar fuentes de riesgo biológico (enfermedades infecciosas, moho, alérgenos)",
-    "Analizar tareas con factores de riesgo ergonómico (levantamiento, repetición, vibración)",
-    "Realizar muestreos de aire o mediciones directas cuando sea posible",
-    "Revisar registros médicos (anonimizados) para detectar patrones de enfermedad ocupacional"
+    "Revisa SDS y etiquetas de productos para identificar químicos de riesgo",
+    "Evalúa tu exposición a ruido, calor o radiación",
+    "Identifica fuentes de riesgo biológico como moho, plantas tóxicas, animales o alérgenos",
+    "Analiza tus tareas con factores de riesgo ergonómico como levantamiento de carga, repetición o vibración",
+    "Realiza muestreos de aire o mediciones directas cuando sea posible",
+    "Revisa tus registros médicos anonimizados para detectar patrones de enfermedad ocupacional"
   ],
-  "entregable_esperado": "Listado de peligros de salud identificados con su nivel de exposición estimado",
+  "entregable_esperado": "Listado clasificado de peligros de salud identificados con su nivel de exposición estimado.",
   "nodos_previos": [
     "inspeccion_lugar_trabajo_peligros",
     "identificacion_recopilacion_informacion_peligros",
@@ -24,11 +24,24 @@
     "caracterizacion_priorizacion_peligros",
     "investigacion_incidentes",
     "peligros_emergencias_no_rutinarias_2",
-    "programa_proteccion_respiratoria"
+    "programa_proteccion_respiratoria",
+    "peligros_emergencias_no_rutinarias",
+    "prevencion_control_peligros"
   ],
   "condiciones_activacion": [
-    "Cuando existen procesos con uso de químicos, ruido, calor, o tareas repetitivas",
-    "Si se requiere un diagnóstico de salud ocupacional"
+    "Cuando existen procesos con uso de químicos, ruido, calor o tareas repetitivas",
+    "Si se requiere un diagnóstico de salud ocupacional",
+    "Cuando no se ha evaluado la exposición a riesgos de salud ocupacional"
   ],
-  "etiqueta_arbol": "Detecta Peligros para la Salud"
+  "etiqueta_arbol": "Detecta Peligros para la Salud",
+  "ids_alias": [
+    "identificacion_peligros_salud_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "identificacion_peligros_salud_2",
+      "titulo": "Identificación de Peligros para la Salud (Construcción)",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

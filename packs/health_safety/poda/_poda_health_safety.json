@@ -1,0 +1,463 @@
+{
+  "pack": "health_safety",
+  "ronda": "27 clusters + familia OSHA",
+  "dudas": [],
+  "clusters": [
+    {
+      "orden": 1,
+      "indice": 0,
+      "nodos": [
+        "fallas_activas_condiciones_latentes",
+        "fallas_activas_condiciones_latentes_2",
+        "fallos_activos_condiciones_latentes"
+      ],
+      "sobrevive": "fallas_activas_condiciones_latentes",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Fallas Activas y Condiciones Latentes",
+      "por_que": "Los tres describen el mismo par conceptual de fallas activas y condiciones latentes.",
+      "telemetria": {}
+    },
+    {
+      "orden": 2,
+      "indice": 1,
+      "nodos": [
+        "correccion_deficiencias_programa_sst",
+        "evaluacion_mejora_programa",
+        "evaluacion_mejora_programa_2",
+        "evaluacion_mejora_programa_3",
+        "evaluacion_periodica_programa_seguridad",
+        "verificacion_implementacion_programa_sst"
+      ],
+      "sobrevive": "evaluacion_mejora_programa",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Evaluación y Mejora del Programa de Seguridad y Salud",
+      "por_que": "Los tres describen la misma acción de evaluar periódicamente el programa de seguridad con indicadores leading/lagging.",
+      "telemetria": {}
+    },
+    {
+      "orden": 3,
+      "indice": 2,
+      "nodos": [
+        "resiliencia_organizacional",
+        "safety_i_safety_ii",
+        "safety_ii_resiliencia"
+      ],
+      "sobrevive": "safety_i_safety_ii",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Safety I versus Safety II",
+      "por_que": "Las tres describen el mismo cambio de paradigma (seguridad como presencia de capacidades vs ausencia de fallos), solo con distinto énfasis narrativo, sin implicar acciones distintas.",
+      "telemetria": {}
+    },
+    {
+      "orden": 4,
+      "indice": 3,
+      "nodos": [
+        "diseno_recordatorios_efectivos",
+        "diseno_recordatorios_efectivos_2"
+      ],
+      "sobrevive": "diseno_recordatorios_efectivos_2",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Diseño de Recordatorios Efectivos para Prevenir Omisiones",
+      "por_que": "Ambos describen los mismos criterios de diseño de recordatorios contra omisiones.",
+      "telemetria": {}
+    },
+    {
+      "orden": 5,
+      "indice": 4,
+      "nodos": [
+        "formal_safety_assessment_safety_case",
+        "safety_case_evaluacion_formal"
+      ],
+      "sobrevive": "safety_case_evaluacion_formal",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Safety Case y Evaluación Formal de Seguridad (FSA)",
+      "por_que": "Ambos describen el mismo modelo regulatorio del Safety Case surgido del Informe Cullen.",
+      "telemetria": {}
+    },
+    {
+      "orden": 6,
+      "indice": 5,
+      "nodos": [
+        "establecer_metas_seguridad_correctas",
+        "metas_de_seguridad_correctas"
+      ],
+      "sobrevive": "metas_de_seguridad_correctas",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos",
+      "por_que": "Ambos plantean la misma crítica a fijar metas de reducción de accidentes en vez de gestionar procesos.",
+      "telemetria": {}
+    },
+    {
+      "orden": 7,
+      "indice": 6,
+      "nodos": [
+        "modelo_barreras_defensas",
+        "modelo_barreras_swiss_cheese"
+      ],
+      "sobrevive": "modelo_barreras_defensas",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Modelo de Barreras y Defensas (Swiss Cheese)",
+      "por_que": "Ambos describen el mismo modelo de barreras y defensas tipo Swiss Cheese.",
+      "telemetria": {}
+    },
+    {
+      "orden": 8,
+      "indice": 7,
+      "nodos": [
+        "critica_behavior_based_safety",
+        "riesgos_programas_seguridad_conductual"
+      ],
+      "sobrevive": "critica_behavior_based_safety",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Crítica a los Programas de Seguridad Basados en Comportamiento",
+      "por_que": "Ambos critican el mismo enfoque de seguridad basada en comportamiento por culpar al individuo.",
+      "telemetria": {}
+    },
+    {
+      "orden": 9,
+      "indice": 8,
+      "nodos": [
+        "caracterizacion_priorizacion_peligros",
+        "priorizacion_caracterizacion_peligros"
+      ],
+      "sobrevive": "caracterizacion_priorizacion_peligros",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
+      "por_que": "Ambos describen el mismo proceso de evaluar severidad, probabilidad y exposición para priorizar peligros.",
+      "telemetria": {}
+    },
+    {
+      "orden": 10,
+      "indice": 9,
+      "nodos": [
+        "elevated_surfaces_fall_protection",
+        "superficies_elevadas_proteccion_caidas"
+      ],
+      "sobrevive": "elevated_surfaces_fall_protection",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Protección contra Caídas en Superficies Elevadas (Medidas y Sistemas)",
+      "por_que": "Ambos describen el mismo requisito de protección contra caídas desde más de 4 pies.",
+      "telemetria": {}
+    },
+    {
+      "orden": 11,
+      "indice": 10,
+      "nodos": [
+        "jerarquia_controles",
+        "prevencion_control_peligros",
+        "prevencion_control_peligros_2"
+      ],
+      "sobrevive": "prevencion_control_peligros",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Prevención y Control de Peligros (Jerarquía de Controles)",
+      "por_que": "Ambos describen el mismo proceso de seleccionar e implementar la jerarquía de controles; la separación planificación/ejecución es solo el momento, no una acción distinta.",
+      "telemetria": {}
+    },
+    {
+      "orden": 12,
+      "indice": 11,
+      "nodos": [
+        "identificacion_recopilacion_informacion_peligros",
+        "recopilacion_informacion_peligros"
+      ],
+      "sobrevive": "identificacion_recopilacion_informacion_peligros",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Recopilación y Revisión de Información sobre Peligros",
+      "por_que": "Ambos describen la misma acción de reunir información existente sobre peligros antes de controlarlos.",
+      "telemetria": {}
+    },
+    {
+      "orden": 13,
+      "indice": 12,
+      "nodos": [
+        "heart_evaluacion_probabilidad_error",
+        "heart_metodo_evaluacion_error_humano"
+      ],
+      "sobrevive": "heart_metodo_evaluacion_error_humano",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "HEART: Human Error Assessment and Reduction Technique",
+      "por_que": "Ambos describen la misma técnica HEART para evaluar y reducir errores humanos.",
+      "telemetria": {}
+    },
+    {
+      "orden": 14,
+      "indice": 13,
+      "nodos": [
+        "abandonar_arreglos_rapidos",
+        "abandonar_la_falacia_del_arreglo_rapido"
+      ],
+      "sobrevive": "abandonar_arreglos_rapidos",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Abandonar la Falacia del Arreglo Rápido",
+      "por_que": "Ambos describen el mismo concepto de rechazar soluciones superficiales tras un accidente.",
+      "telemetria": {}
+    },
+    {
+      "orden": 15,
+      "indice": 14,
+      "nodos": [
+        "seguimiento_efectividad_controles",
+        "seguimiento_efectividad_controles_2"
+      ],
+      "sobrevive": "seguimiento_efectividad_controles",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Seguimiento de la Efectividad de los Controles (Industria General)",
+      "por_que": "El proceso de verificar, inspeccionar y mantener los controles es el mismo; la distinción por industria (general/construcción) no cambia la acción a realizar.",
+      "telemetria": {}
+    },
+    {
+      "orden": 16,
+      "indice": 15,
+      "nodos": [
+        "continuacion_de_plan",
+        "plan_continuation_bias"
+      ],
+      "sobrevive": "plan_continuation_bias",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Sesgo de Continuación del Plan (Plan Continuation)",
+      "por_que": "Ambos describen el mismo sesgo de persistir con un plan pese a señales de cambio de situación.",
+      "telemetria": {}
+    },
+    {
+      "orden": 17,
+      "indice": 16,
+      "nodos": [
+        "inspeccion_lugar_trabajo_peligros",
+        "inspeccion_sitio_peligros"
+      ],
+      "sobrevive": "inspeccion_lugar_trabajo_peligros",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Inspección del Lugar de Trabajo para Identificar Peligros de Seguridad",
+      "por_que": "Ambos describen la misma acción de inspeccionar regularmente el sitio para identificar peligros.",
+      "telemetria": {}
+    },
+    {
+      "orden": 18,
+      "indice": 17,
+      "nodos": [
+        "enfoque_situacional_vs_personal",
+        "enfoque_situacional_vs_personal_2"
+      ],
+      "sobrevive": "enfoque_situacional_vs_personal",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Enfoque Situacional vs. Personal en la Gestión de Errores",
+      "por_que": "Ambos comparan el mismo dilema entre abordar a la persona o la situación en la gestión de errores.",
+      "telemetria": {}
+    },
+    {
+      "orden": 19,
+      "indice": 18,
+      "nodos": [
+        "lockout_tagout_procedures",
+        "procedimientos_lockout_tagout"
+      ],
+      "sobrevive": "lockout_tagout_procedures",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Procedimientos de Bloqueo y Etiquetado (Control de Energías Peligrosas)",
+      "por_que": "Ambos describen el mismo procedimiento de bloqueo y etiquetado para controlar energías peligrosas.",
+      "telemetria": {}
+    },
+    {
+      "orden": 20,
+      "indice": 19,
+      "nodos": [
+        "investigacion_incidentes",
+        "investigacion_incidentes_2"
+      ],
+      "sobrevive": "investigacion_incidentes",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Investigación de Incidentes y Casi Accidentes",
+      "por_que": "Ambos describen la misma acción de investigar incidentes y casi accidentes para hallar causas raíz.",
+      "telemetria": {}
+    },
+    {
+      "orden": 21,
+      "indice": 20,
+      "nodos": [
+        "accidentes_individuales_vs_organizacionales",
+        "diferenciacion_accidente_individual_organizacional"
+      ],
+      "sobrevive": "accidentes_individuales_vs_organizacionales",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Distinción entre Accidentes Individuales y Organizacionales",
+      "por_que": "Ambos describen la misma distinción entre accidentes individuales y organizacionales.",
+      "telemetria": {}
+    },
+    {
+      "orden": 22,
+      "indice": 21,
+      "nodos": [
+        "programa_seguridad_salud_ocupacional",
+        "programa_seguridad_salud_ocupacional_2"
+      ],
+      "sobrevive": "programa_seguridad_salud_ocupacional",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Programa de Seguridad y Salud Ocupacional (Marco de 7 Elementos)",
+      "por_que": "Es el mismo marco de 7 elementos de OSHA descrito dos veces con distinto nivel de detalle en el título.",
+      "telemetria": {}
+    },
+    {
+      "orden": 23,
+      "indice": 22,
+      "nodos": [
+        "ciclo_de_culpa_2",
+        "ciclo_de_culpa_blame_cycle"
+      ],
+      "sobrevive": "ciclo_de_culpa_2",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "El Ciclo de la Culpa (Blame Cycle)",
+      "por_que": "Ambos describen el mismo ciclo de culpa derivado del supuesto de libre albedrío.",
+      "telemetria": {}
+    },
+    {
+      "orden": 25,
+      "indice": 24,
+      "nodos": [
+        "bad_apple_theory",
+        "old_view_bad_apple_theory"
+      ],
+      "sobrevive": "bad_apple_theory",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Teoría de la Manzana Podrida (Bad Apple Theory)",
+      "por_que": "Ambos describen la misma teoría clásica de la manzana podrida (Old View).",
+      "telemetria": {}
+    },
+    {
+      "orden": 26,
+      "indice": 25,
+      "nodos": [
+        "implementacion_controles",
+        "implementacion_controles_2"
+      ],
+      "sobrevive": "implementacion_controles",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Implementación de Controles en el Lugar de Trabajo",
+      "por_que": "Ambos describen la misma acción de implementar controles según prioridades del plan.",
+      "telemetria": {}
+    },
+    {
+      "orden": 27,
+      "indice": 26,
+      "nodos": [
+        "normalizacion_de_la_desviacion",
+        "regulador_fallas_sistemicas"
+      ],
+      "sobrevive": "normalizacion_de_la_desviacion",
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Normalización de la Desviación",
+      "por_que": "Ambos describen el mismo fenómeno de normalización de la desviación de Vaughan, uno solo extiende su implicación regulatoria.",
+      "telemetria": {}
+    },
+    {
+      "orden": 28,
+      "indice": 27,
+      "nodos": [
+        "comunicacion_coordinacion_multiempleador",
+        "comunicacion_coordinacion_multiempleador_2",
+        "coordinacion_empleadores_multiples",
+        "coordinacion_multiempleador",
+        "coordinacion_sitios_multiempleador",
+        "establecer_comunicacion_efectiva_contratistas",
+        "establecer_comunicacion_efectiva_hostempleador",
+        "establecer_coordinacion_efectiva_contratistas",
+        "establecer_coordinacion_efectiva_hostempleador"
+      ],
+      "sobrevive": "coordinacion_sitios_multiempleador",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Coordinación y Comunicación en Sitios Multiempleador",
+      "por_que": "familia OSHA, grupo alfa: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 29,
+      "indice": 28,
+      "nodos": [
+        "identificacion_evaluacion_peligros",
+        "identificacion_evaluacion_peligros_2"
+      ],
+      "sobrevive": "identificacion_evaluacion_peligros",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Identificación y Evaluación de Peligros (Industria General)",
+      "por_que": "familia OSHA, grupo gamma_a: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 30,
+      "indice": 29,
+      "nodos": [
+        "identificacion_peligros_salud",
+        "identificacion_peligros_salud_2"
+      ],
+      "sobrevive": "identificacion_peligros_salud",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Identificación de Peligros para la Salud (Industria General)",
+      "por_que": "familia OSHA, grupo gamma_b: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 31,
+      "indice": 30,
+      "nodos": [
+        "peligros_emergencias_no_rutinarias",
+        "peligros_emergencias_no_rutinarias_2"
+      ],
+      "sobrevive": "peligros_emergencias_no_rutinarias",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias",
+      "por_que": "familia OSHA, grupo gamma_c: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 32,
+      "indice": 31,
+      "nodos": [
+        "capacitacion_educacion_seguridad",
+        "educacion_entrenamiento_seguridad"
+      ],
+      "sobrevive": "capacitacion_educacion_seguridad",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Educación y Capacitación en Seguridad y Salud Ocupacional",
+      "por_que": "familia OSHA, grupo delta: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 33,
+      "indice": 32,
+      "nodos": [
+        "compromiso_gerencial_seguridad",
+        "liderazgo_gerencial_seguridad"
+      ],
+      "sobrevive": "liderazgo_gerencial_seguridad",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Liderazgo Gerencial en Seguridad y Salud",
+      "por_que": "familia OSHA, grupo epsilon: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 34,
+      "indice": 33,
+      "nodos": [
+        "diez_pasos_iniciales_programa",
+        "nueve_pasos_iniciar_programa"
+      ],
+      "sobrevive": "nueve_pasos_iniciar_programa",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Nueve Pasos Simples para Iniciar un Programa de Seguridad",
+      "por_que": "familia OSHA, grupo zeta: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 35,
+      "indice": 34,
+      "nodos": [
+        "participacion_trabajadores",
+        "participacion_trabajadores_2"
+      ],
+      "sobrevive": "participacion_trabajadores",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Participación de los Trabajadores en el Programa de Seguridad",
+      "por_que": "familia OSHA, grupo eta: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    }
+  ]
+}

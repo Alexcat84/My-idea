@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Participación de los Trabajadores en el Programa de Seguridad",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Elemento que reconoce que los trabajadores poseen conocimiento crítico sobre los peligros de su labor y deben participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras. Requiere eliminar barreras (idioma, miedo a represalias, incentivos mal diseñados) y garantizar canales de comunicación abiertos y protegidos legalmente contra represalias (Sección 11(c) del OSH Act).",
+  "resumen_teorico": "Elemento que reconoce que los trabajadores, incluidos subcontratistas y temporales, poseen conocimiento crítico sobre los peligros de su labor y deben participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin temor a represalias. Requiere eliminar barreras de idioma, habilidad, educación o miedo a represalias, e incentivos mal diseñados que desalienten el reporte. Se debe garantizar canales de comunicación abiertos, retroalimentación frecuente sobre las acciones tomadas ante los reportes, y protección legal explícita contra represalias conforme a la Sección 11(c) del OSH Act.",
   "pasos_accionables": [
-    "Establecer un proceso de reporte de peligros e incidentes, incluyendo opción anónima",
-    "Dar acceso a los trabajadores a información de seguridad (SDS, datos de lesiones, inspecciones)",
-    "Involucrar a trabajadores en el diseño de metas, análisis de peligros, inspecciones y capacitación",
-    "Eliminar barreras de idioma, educación o miedo a represalias",
-    "Publicar y difundir las protecciones anti-represalia (11(c))",
-    "Revisar programas de incentivos para asegurar que no desalienten el reporte"
+    "Establecer un proceso simple de reporte de peligros, incidentes y casi accidentes, incluyendo opción anónima",
+    "Dar retroalimentación frecuente sobre las acciones tomadas ante cada reporte recibido",
+    "Dar acceso a información de seguridad como SDS, datos de lesiones e inspecciones",
+    "Involucrar a los trabajadores en el diseño de metas, análisis de peligros, inspecciones, capacitación y desarrollo de soluciones",
+    "Eliminar barreras de idioma, habilidad, educación o miedo a represalias",
+    "Publicar las protecciones anti represalia de la Sección 11(c) y revisar que los incentivos no desalienten el reporte"
   ],
   "entregable_esperado": "Sistema de reporte implementado y funcionando, con evidencia de participación activa de trabajadores en al menos dos fases del programa",
   "nodos_previos": [
@@ -29,11 +29,25 @@
     "identificacion_evaluacion_peligros_2",
     "seguridad_soldadura_corte_bronceado",
     "seguridad_trabajadores_jovenes",
-    "critica_behavior_based_safety"
+    "critica_behavior_based_safety",
+    "responsabilizacion_del_trabajador",
+    "preguntar_que_no_quien",
+    "capacitacion_educacion_seguridad"
   ],
   "condiciones_activacion": [
-    "Cuando existe baja tasa de reporte de incidentes o peligros",
-    "Cuando los trabajadores no participan en decisiones de seguridad"
+    "Cuando existe baja tasa de reporte de incidentes o peligros por miedo a represalias",
+    "Cuando los trabajadores no participan en decisiones de seguridad",
+    "Cuando se busca mejorar la detección temprana de riesgos"
   ],
-  "etiqueta_arbol": "Involucra a tus Trabajadores en Seguridad"
+  "etiqueta_arbol": "Involucra a tus Trabajadores en Seguridad",
+  "ids_alias": [
+    "participacion_trabajadores_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "participacion_trabajadores_2",
+      "titulo": "Participación Activa de los Trabajadores",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

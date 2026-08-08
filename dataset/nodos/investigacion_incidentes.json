@@ -4,18 +4,23 @@
   "dominio": "health_safety",
   "titulo_concepto": "Investigación de Incidentes y Casi Accidentes",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Los incidentes, lesiones, enfermedades y casi accidentes son indicadores claros de peligros existentes. Investigarlos a fondo permite identificar las causas raíz (usualmente múltiples) para prevenir futuras ocurrencias, en lugar de detenerse en el primer factor evidente.",
+  "resumen_teorico": "Cada lesión, enfermedad, casi accidente o reporte de preocupación es una señal de que existe un peligro real en tu lugar de trabajo. Investigarlos a fondo te permite descubrir las causas raíz, que casi siempre son múltiples, en lugar de quedarte con el primer factor evidente. Una investigación efectiva pregunta reiteradamente por qué hasta llegar a las fallas sistémicas del programa de seguridad. Debes incluir en el proceso tanto la perspectiva de gestión como la de los trabajadores, capacitarte en técnicas objetivas de análisis y no limitarte a los incidentes con daño, ya que los casi accidentes también cuentan. Además, recuerda que existen plazos de reporte ante OSHA, 8 horas para fatalidad y 24 horas para hospitalización o amputación, que debes cumplir.",
   "pasos_accionables": [
-    "Desarrollar un plan y procedimiento claro para investigaciones de incidentes",
-    "Capacitar equipos investigativos en técnicas de investigación y objetividad",
-    "Incluir representantes de gestión y trabajadores en el equipo investigador",
-    "Investigar también los casi accidentes (near misses)",
-    "Identificar y analizar causas raíz, no solo el factor desencadenante inmediato",
-    "Comunicar resultados a gerentes, supervisores y trabajadores"
+    "Desarrolla un plan y procedimiento claro para investigar incidentes, con roles definidos",
+    "Capacita al equipo investigador en técnicas objetivas de análisis",
+    "Incluye en cada investigación representantes de gestión y de los trabajadores",
+    "Investiga también los casi accidentes y reportes de preocupación, no solo los incidentes con daño",
+    "Pregunta reiteradamente por qué hasta identificar las causas raíz, sin detenerte en el primer factor evidente",
+    "Comunica los resultados a gerentes, supervisores y trabajadores, y cumple los plazos de reporte a OSHA, 8 horas para fatalidad y 24 horas para hospitalización o amputación"
   ],
-  "entregable_esperado": "Informe de investigación de incidente con causas raíz identificadas y acciones correctivas propuestas",
+  "entregable_esperado": "Informe de investigación de incidente con causas raíz identificadas y plan de acción correctiva.",
   "nodos_previos": [
-    "identificacion_peligros_salud"
+    "identificacion_peligros_salud",
+    "inspeccion_sitio_peligros",
+    "evitar_cherry_picking",
+    "evitar_micro_matching",
+    "evitar_shopping_bag",
+    "five_whys_inversion_proporcional"
   ],
   "nodos_siguientes": [
     "jerarquia_controles",
@@ -23,11 +28,23 @@
     "caracterizacion_priorizacion_peligros",
     "construccion_timeline_resolucion",
     "peligros_emergencias_no_rutinarias",
-    "declive_teoria_manzana_podrida"
+    "declive_teoria_manzana_podrida",
+    "prevencion_control_peligros"
   ],
   "condiciones_activacion": [
-    "Cuando ocurre una lesión, enfermedad, o casi accidente en el lugar de trabajo",
-    "Al recibir reporte OSHA 300/301"
+    "Cuando ocurre una lesión, enfermedad, casi accidente o reporte de preocupación en tu lugar de trabajo",
+    "Al completar el reporte OSHA 300/301",
+    "Cuando necesitas cumplir con los plazos de reporte a OSHA"
   ],
-  "etiqueta_arbol": "Investiga cada Casi Accidente"
+  "etiqueta_arbol": "Investiga cada Casi Accidente",
+  "ids_alias": [
+    "investigacion_incidentes_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "investigacion_incidentes_2",
+      "titulo": "Investigación de Incidentes y Cuasi-Accidentes",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

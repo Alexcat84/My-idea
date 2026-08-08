@@ -14,16 +14,19 @@
   ],
   "entregable_esperado": "Un compendio organizado de fuentes de información sobre peligros del sitio, disponible para el equipo de seguridad",
   "nodos_previos": [
-    "identificacion_evaluacion_peligros_2"
+    "identificacion_evaluacion_peligros_2",
+    "identificacion_evaluacion_peligros"
   ],
   "nodos_siguientes": [
     "inspeccion_sitio_peligros",
     "identificacion_peligros_salud",
-    "identificacion_peligros_salud_2"
+    "identificacion_peligros_salud_2",
+    "inspeccion_lugar_trabajo_peligros"
   ],
   "condiciones_activacion": [
     "Cuando se inicia o revisa el programa de seguridad de un sitio de trabajo",
     "Cuando se carece de un registro consolidado de riesgos"
   ],
-  "etiqueta_arbol": "Reúne Información sobre tus Riesgos"
+  "etiqueta_arbol": "Reúne Información sobre tus Riesgos",
+  "deprecado": true
 }

@@ -4,26 +4,41 @@
   "dominio": "health_safety",
   "titulo_concepto": "Safety Case y Evaluación Formal de Seguridad (FSA)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Modelo regulatorio surgido del Informe Cullen sobre el desastre de Piper Alpha, que exige a los operadores de instalaciones de alto riesgo demostrar formalmente, mediante un documento denominado Safety Case, que los peligros mayores han sido identificados y controlados adecuadamente. La Evaluación Formal de Seguridad (FSA) comprende cinco pasos: identificación de peligros, evaluación de riesgos, consideración de alternativas de gestión de riesgo, análisis costo-beneficio y decisión sobre las opciones a implementar. La responsabilidad de la seguridad recae en el operador, no se transfiere al regulador.",
+  "resumen_teorico": "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo cada vez que cambien las circunstancias de la operación de forma significativa.",
   "pasos_accionables": [
-    "Identificar todos los peligros mayores asociados a la instalación u operación",
-    "Evaluar los riesgos asociados a cada peligro identificado",
-    "Considerar formas alternativas de gestionar cada riesgo",
-    "Realizar un análisis costo-beneficio de las opciones de gestión de riesgo",
-    "Documentar la decisión final y las medidas de control implementadas",
-    "Actualizar el Safety Case ante cualquier cambio significativo en la operación"
+    "Identifica todos los peligros mayores de tu instalación u operación",
+    "Evalúa el riesgo asociado a cada peligro identificado",
+    "Considera alternativas concretas para gestionar cada riesgo",
+    "Haz un análisis costo beneficio de esas alternativas de gestión",
+    "Documenta tu decisión final y las medidas de control que implementarás en el Safety Case",
+    "Actualiza el Safety Case cada vez que haya un cambio significativo en la operación"
   ],
-  "entregable_esperado": "Documento Safety Case completo, actualizado y presentado al organismo regulador correspondiente",
+  "entregable_esperado": "Documento Safety Case completo, actualizado y presentado al organismo regulador correspondiente.",
   "nodos_previos": [
     "autorregulacion_seguridad",
-    "autonomia_dependencia_regulatoria"
+    "autonomia_dependencia_regulatoria",
+    "modelo_accidente_organizacional"
   ],
   "nodos_siguientes": [
-    "coshh_procedimiento_rolling"
+    "coshh_procedimiento_rolling",
+    "regulatory_process_model",
+    "safety_culture_engineering",
+    "self_regulation_deregulation_tradeoffs"
   ],
   "condiciones_activacion": [
-    "Cuando se opera una instalación de alto riesgo (petróleo/gas offshore, industria química, naval)",
-    "Cuando el regulador exige demostración formal y documentada de gestión de riesgos mayores"
+    "Operas o gestionas una instalación de alto riesgo, como offshore de petróleo/gas, planta química o instalación naval",
+    "El regulador te exige demostrar de forma formal y documentada la gestión de riesgos mayores",
+    "Ha ocurrido un cambio significativo en tu operación que puede afectar los peligros ya identificados"
   ],
-  "etiqueta_arbol": "Documenta Formalmente los Riesgos"
+  "etiqueta_arbol": "Documenta Formalmente los Riesgos",
+  "ids_alias": [
+    "formal_safety_assessment_safety_case"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "formal_safety_assessment_safety_case",
+      "titulo": "Evaluación Formal de Seguridad (Safety Case)",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

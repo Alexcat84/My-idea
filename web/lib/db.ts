@@ -529,6 +529,25 @@ export async function registrarNodos(
   sessionId: string,
   nodosConTipo: NodoConTipo[]
 ): Promise<void> {
+  // EL DIARIO (migracion 037). Va PRIMERO y con TODOS los nodos, no solo los
+  // nuevos: project_nodes es el ESTADO (un nodo, una vez por proyecto, y su
+  // UNIQUE es lo que hace que nodosCubiertos devuelva el conjunto limpio que el
+  // motor usa de lista de exclusion) y node_visits es el DIARIO, donde cada
+  // visita es una fila. Si el diario filtrara por "nuevos" no seria un diario:
+  // seria una copia del estado, y la pregunta que existe para contestar
+  // (cuantas veces se vuelve a un nodo) se quedaria sin respuesta.
+  //
+  // Su fallo NO tumba el recorrido: un sensor que rompe lo que mide deja de ser
+  // un sensor. Se avisa y se sigue.
+  const { error: errorDiario } = await supabase.from("node_visits").insert(
+    nodosConTipo.map((n) => ({
+      project_id: projectId, session_id: sessionId, node_id: n.node_id, tipo: n.tipo,
+    }))
+  );
+  if (errorDiario) {
+    console.warn("[node_visits] no se pudo escribir el diario:", errorDiario.message);
+  }
+
   const yaCubiertos = await nodosCubiertos(supabase, projectId);
   const nuevos = nodosConTipo.filter((n) => !yaCubiertos.has(n.node_id));
   if (nuevos.length === 0) return;
@@ -634,7 +653,13 @@ export async function insertarChecklist(
     dolor?: string | null;
     camino?: string | null;
   }>,
-  dominio: string = "core"
+  dominio: string = "core",
+  // b1 (migracion 037): el mapa etapa -> node_ids que el redactor YA autodeclara
+  // desde la Fase 3.1, ya verificado contra alucinaciones por
+  // verificarProcedenciaEtapas. Aqui solo se PERSISTE: cero API, cero cambios
+  // al prompt. Si no viene, cada item guarda null, que se lee como "nacio antes
+  // del sensor" y NO como "no vino de ningun nodo".
+  nodosPorEtapa?: Record<string, string[]> | null
 ): Promise<void> {
   if (items.length === 0) return;
   const { error } = await supabase.from("checklist_items").insert(
@@ -648,6 +673,9 @@ export async function insertarChecklist(
       destacado: i.destacado,
       banda: i.banda ?? null,
       espera_externa: i.espera_externa ?? null,
+      // La autodeclaracion es por ETAPA, no por item: este item hereda los
+      // nodos de SU etapa. Documentado como limite en docs/SENSORES_DEL_PANEL.
+      nodos_origen: nodosPorEtapa?.[String(i.etapa)] ?? null,
       // Solo viajan si el plan es de proteccion: en los demas ni siquiera se
       // nombran, para no escribir cuatro nulls por item en cada plan de la casa.
       ...(i.protege_item !== undefined || i.deteccion !== undefined

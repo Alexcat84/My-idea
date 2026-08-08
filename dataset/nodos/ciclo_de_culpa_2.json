@@ -4,23 +4,38 @@
   "dominio": "health_safety",
   "titulo_concepto": "El Ciclo de la Culpa (Blame Cycle)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "El ciclo de la culpa surge de la ilusión del libre albedrío: como las personas se consideran agentes libres, sus errores se ven como acciones al menos parcialmente voluntarias, lo que lleva a advertencias, sanciones y amenazas. Estas medidas tienen poco o ningún efecto sobre los factores reales que producen errores, por lo que los errores continúan ocurriendo. Esto genera una doble frustración en los directivos (las personas fueron advertidas y castigadas, pero persisten en errar), lo que se interpreta como desafío deliberado a la autoridad, y conduce a sanciones aún más fuertes, perpetuando el ciclo sin resolver la causa raíz.",
+  "resumen_teorico": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces cometen los peores errores en las circunstancias equivocadas es el punto de partida para romperlo.",
   "pasos_accionables": [
-    "Reconocer que las acciones humanas están casi siempre limitadas por factores fuera del control inmediato del individuo",
-    "Evitar el uso de sanciones y advertencias como única respuesta a errores recurrentes",
-    "Redirigir el análisis hacia los factores personales, de tarea, situacionales y organizacionales que causan el error",
-    "Reconocer que las mejores personas pueden cometer los peores errores en las circunstancias equivocadas"
+    "Reconocer que las acciones humanas están casi siempre limitadas por factores fuera del control inmediato de la persona",
+    "Evitar usar sanciones o advertencias como única respuesta a errores recurrentes",
+    "Revisar tus registros o informes de incidentes evitando atribuir la causa solo a la acción humana",
+    "Identificar los factores personales, de tarea, situacionales y organizacionales que precedieron al error",
+    "Diferenciar entre error genuino y violación deliberada antes de decidir cómo responder"
   ],
-  "entregable_esperado": "Política de gestión de errores que rompa explícitamente el ciclo de culpa mediante análisis de causa raíz sistémico",
+  "entregable_esperado": "Un documento o política personal de gestión de errores que identifique causas sistémicas y rompa explícitamente el ciclo de culpa en lugar de solo señalar al individuo.",
   "nodos_previos": [
-    "errores_como_consecuencia"
+    "errores_como_consecuencia",
+    "reconstruccion_contexto_situacional"
   ],
   "nodos_siguientes": [
-    "enfoque_situacional_vs_personal"
+    "enfoque_situacional_vs_personal",
+    "tripod_delta_general_failure_types",
+    "enfoque_situacional_vs_personal_2"
   ],
   "condiciones_activacion": [
-    "Cuando la organización responde a errores repetidos únicamente con sanciones crecientes",
-    "Al diseñar una cultura justa (just culture) de reporte de errores"
+    "Cuando respondes a errores repetidos únicamente con sanciones cada vez más duras",
+    "Cuando los incidentes se repiten a pesar de advertencias o sanciones anteriores",
+    "Al diseñar tu propio sistema o cultura de reporte justo de errores"
   ],
-  "etiqueta_arbol": "Evita Culpar sin Razón"
+  "etiqueta_arbol": "Evita Culpar sin Razón",
+  "ids_alias": [
+    "ciclo_de_culpa_blame_cycle"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "ciclo_de_culpa_blame_cycle",
+      "titulo": "El Ciclo de Culpa (El Supuesto del Agente Libre)",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

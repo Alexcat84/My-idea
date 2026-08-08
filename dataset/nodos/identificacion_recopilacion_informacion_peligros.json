@@ -4,24 +4,38 @@
   "dominio": "health_safety",
   "titulo_concepto": "Recopilación y Revisión de Información sobre Peligros",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Antes de controlar los riesgos, es necesario reunir y organizar toda la información disponible (manuales de equipos, SDS, reportes de inspección, registros OSHA 300/301, resultados de monitoreo de exposición, JHAs) junto con los trabajadores, para determinar qué peligros existen y quién está expuesto. También se debe consultar fuentes externas como OSHA, NIOSH, CDC, asociaciones gremiales y sindicatos.",
+  "resumen_teorico": "Antes de controlar los riesgos, reúne y organiza toda la información disponible sobre peligros en tu lugar de trabajo, tanto interna como externa. Esto incluye manuales de equipos, hojas de datos de seguridad (SDS), reportes de autoinspección, registros de lesiones (OSHA 300/301), resultados de monitoreo de exposición, programas de seguridad existentes y JHAs. Complementa esto con los aportes directos de los trabajadores, ya sea mediante encuestas o conversaciones en comités de seguridad, para saber quién está expuesto a qué. También consulta fuentes externas como OSHA, NIOSH, CDC, asociaciones gremiales, sindicatos y consultores de seguridad. El objetivo es tener un panorama completo antes de decidir cómo actuar frente a los riesgos identificados.",
   "pasos_accionables": [
-    "Reunir documentación interna: manuales, SDS, reportes de inspección, registros de incidentes, JHAs",
-    "Consultar fuentes externas: OSHA, NIOSH, CDC, sindicatos, consultores de seguridad",
-    "Involucrar a los trabajadores mediante encuestas o comités de seguridad",
-    "Organizar la información recopilada para identificar patrones de lesiones/enfermedades"
+    "Reúne documentación interna: manuales de equipos, SDS, reportes de inspección, registros de incidentes y JHAs",
+    "Revisa los registros de lesiones y enfermedades (OSHA 300/301) y resultados de monitoreo de exposición",
+    "Consulta fuentes externas como OSHA, NIOSH, CDC, sindicatos y consultores de seguridad",
+    "Recoge los aportes de los trabajadores mediante encuestas o comités de seguridad",
+    "Organiza toda la información recopilada para identificar patrones de lesiones o enfermedades"
   ],
-  "entregable_esperado": "Inventario documentado de fuentes de información y peligros potenciales identificados en el lugar de trabajo",
+  "entregable_esperado": "Un inventario documentado y organizado de fuentes de información y peligros potenciales identificados en el lugar de trabajo",
   "nodos_previos": [
-    "identificacion_evaluacion_peligros"
+    "identificacion_evaluacion_peligros",
+    "identificacion_evaluacion_peligros_2"
   ],
   "nodos_siguientes": [
     "inspeccion_lugar_trabajo_peligros",
-    "identificacion_peligros_salud"
+    "identificacion_peligros_salud",
+    "inspeccion_sitio_peligros",
+    "identificacion_peligros_salud_2"
   ],
   "condiciones_activacion": [
-    "Al iniciar un programa de seguridad y salud ocupacional",
-    "Cuando no existe un diagnóstico previo de riesgos en la organización"
+    "Al iniciar o revisar un programa de seguridad y salud ocupacional",
+    "Cuando no existe un diagnóstico previo o registro consolidado de riesgos en la organización"
   ],
-  "etiqueta_arbol": "Reúne toda la Información"
+  "etiqueta_arbol": "Reúne toda la Información",
+  "ids_alias": [
+    "recopilacion_informacion_peligros"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "recopilacion_informacion_peligros",
+      "titulo": "Recopilación de Información Existente sobre Peligros",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

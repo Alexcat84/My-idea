@@ -384,6 +384,26 @@ Reencuadrarlos a persona-sola habría sido escribir un nodo que la fuente no
 escribió. Siguen en el grafo (nadie se borra) y **su minería propia podrá
 renacerlos desde sus fuentes** cuando ese mundo exista.
 
+## Campaña fichada: `re-voz-de-hseq` — PRIORIDAD ALTA, PRE-BETA
+
+**Se dispara tras la fusión de Seguridad y Personas**, que ya está hecha. La
+secuencia fusión-primero volvió a pagarse sola: el censo previo marcaba 57 nodos
+con hallazgo y tras absorber 48, el paciente quedó en **49**.
+
+**Censo post-fusión**: {'matriz_o_puntaje': 3, 'residuo_corporativo': 20, 'dato_local_cableado': 27}
+
+**Por qué es prioridad alta y no puede esperar a después de la beta**, a
+diferencia de la de quality: **27 de los hallazgos son DATO LOCAL CABLEADO, y casi
+todos son OSHA** — un organismo de Estados Unidos citado como si fuera el marco
+de todos. Para un usuario de cualquier otro país eso no es un defecto de estilo:
+es una **deuda de credibilidad**. Un emprendedor en Bogotá o en Lima que lee
+"según exige OSHA" descubre en dos clics que OSHA no le aplica, y con eso pierde
+la confianza en el resto del mundo, no solo en ese nodo.
+
+El trabajo: el método se conserva, el organismo se vuelve *"averigua qué
+organismo regula esto en tu país"*. Mismo circuito de re-voz ya curtido, con las
+barandas del taller (no las de la fábrica) y el guardián de rumbos vigilando.
+
 ## Campaña CERRADA: `re-voz-de-quality`
 
 **Se dispara al CERRAR la cirugía de fusión de Calidad, no antes.** La secuencia
@@ -572,6 +592,24 @@ que alguien mejore la densidad el test lo canta en vez de dejarlo pasar.
 
 **Por qué post-beta**: arreglarlo es podar aristas, y qué aristas sobran lo dice
 el recorrido real de la gente, no el grafo mirándose a sí mismo.
+
+## El NÚCLEO gana su TERCER argumento de espera (ago 2026)
+
+Aprendido en quality, y es el más fuerte de los tres:
+
+> **La fusión mueve el vecindario entero. Operar el corazón antes de la beta
+> contaminaría la línea base que debe juzgarlo.**
+
+Lo vimos con datos: al re-vozar y fundir quality, un nodo que nadie tocó perdió
+su puesto porque sus vecinos cambiaron, y la densidad del pack pasó de dejar 3
+puertas alternativas a no dejar ninguna. Si eso se hace en el núcleo **antes** de
+que la beta corra, la telemetría que debía decidir qué se poda ya vendría medida
+sobre un grafo movido por la propia poda.
+
+Los tres argumentos, juntos: (1) el núcleo es el único validado por meses de uso
+real; (2) cinco definiciones de *startup* pueden ser cinco nodos que sobran o
+cinco puertas por las que entraron cinco personas distintas, y el censo no
+distingue; (3) esta.
 
 ## Hecho recientemente (para no reabrirlo por error)
 

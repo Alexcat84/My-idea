@@ -4,13 +4,15 @@
   "dominio": "health_safety",
   "titulo_concepto": "Implementación de Controles en el Lugar de Trabajo",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Una vez definido el plan de control, los controles deben implementarse según las prioridades establecidas, aplicando primero medidas simples y económicas (orden y limpieza, remoción de riesgos de tropiezo) sin importar su nivel de prioridad relativa.",
+  "resumen_teorico": "Una vez definido y aprobado el plan de control, los controles deben implementarse siguiendo las prioridades establecidas en él. Cuando los recursos son limitados, aplica el enfoque 'lo peor primero', priorizando el control de los peligros más serios. Independientemente del nivel de prioridad relativa, implementa de inmediato las medidas simples y económicas, como orden, limpieza, iluminación y remoción de riesgos de tropiezo. Los peligros serios reconocidos deben controlarse sin demora. Este proceso también aplica cuando necesitas ejecutar medidas correctivas identificadas en inspecciones previas, asegurando que la ejecución en el sitio sea consistente con lo planificado.",
   "pasos_accionables": [
-    "Implementar medidas según prioridades del plan de control",
-    "Aplicar el enfoque 'lo peor primero' cuando los recursos son limitados",
-    "Implementar de inmediato medidas simples y económicas independientemente de su prioridad"
+    "Implementar los controles según las prioridades establecidas en el plan",
+    "Aplicar de inmediato medidas simples y económicas como orden, limpieza e iluminación, sin importar su prioridad relativa",
+    "Usar el enfoque 'lo peor primero' cuando los recursos sean limitados",
+    "Controlar sin demora los peligros serios reconocidos",
+    "Ejecutar las medidas correctivas identificadas en inspecciones previas"
   ],
-  "entregable_esperado": "Controles de peligros instalados o implementados conforme al plan",
+  "entregable_esperado": "Controles de peligros instalados y operativos conforme al plan de control aprobado.",
   "nodos_previos": [
     "plan_control_peligros",
     "controles_no_rutinarias_emergencias"
@@ -18,10 +20,23 @@
   "nodos_siguientes": [
     "seguimiento_efectividad_controles",
     "seguimiento_efectividad_controles_2",
-    "segregacion_funciones_trading_settlement"
+    "segregacion_funciones_trading_settlement",
+    "autonomia_dependencia_regulatoria"
   ],
   "condiciones_activacion": [
-    "Cuando el plan de control de peligros ha sido aprobado y está listo para ejecutarse"
+    "Cuando el plan de control de peligros ha sido aprobado y está listo para ejecutarse",
+    "Cuando necesitas ejecutar medidas correctivas identificadas en inspecciones",
+    "Cuando los recursos disponibles son limitados y debes priorizar"
   ],
-  "etiqueta_arbol": "Aplica tus Controles Ya"
+  "etiqueta_arbol": "Aplica tus Controles Ya",
+  "ids_alias": [
+    "implementacion_controles_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "implementacion_controles_2",
+      "titulo": "Implementación de Controles Seleccionados en el Sitio",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

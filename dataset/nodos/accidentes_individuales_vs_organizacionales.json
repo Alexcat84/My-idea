@@ -4,23 +4,39 @@
   "dominio": "health_safety",
   "titulo_concepto": "Distinción entre Accidentes Individuales y Organizacionales",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona es tanto el agente como la víctima, con efectos limitados; y los organizacionales, raros pero catastróficos, que surgen de múltiples causas distribuidas en distintos niveles de la organización y afectan a poblaciones no involucradas, activos y el ambiente. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación.",
+  "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona es tanto el agente como la víctima, con causas y consecuencias localizadas (por ejemplo resbalones o caídas) y efectos limitados; y los organizacionales, un fenómeno moderno, raro pero catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que afecta a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
   "pasos_accionables": [
-    "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales.",
+    "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación.",
     "Identificar si el enfoque actual de gestión de riesgos se centra solo en errores individuales, ignorando causas sistémicas.",
+    "Evitar centrarte únicamente en el error del operador cuando el sistema es tecnológicamente complejo.",
+    "Mapear todos los actores del sistema, como operador, fabricante y regulador, que pudieron contribuir al evento.",
     "Establecer un proceso de análisis diferenciado para accidentes con potencial catastrófico organizacional."
   ],
-  "entregable_esperado": "Un documento de clasificación de incidentes históricos de la organización según tipo (individual/organizacional) con implicaciones para el análisis.",
+  "entregable_esperado": "Un documento de clasificación de incidentes históricos de la organización según tipo (individual/organizacional), con actores involucrados e implicaciones para el análisis.",
   "nodos_previos": [
     "trayectoria_del_accidente"
   ],
   "nodos_siguientes": [
     "produccion_y_proteccion",
-    "modelo_queso_suizo"
+    "modelo_queso_suizo",
+    "modelo_accidente_organizacional",
+    "defensas_en_profundidad",
+    "defensas_en_profundidad_2"
   ],
   "condiciones_activacion": [
     "Cuando la organización opera tecnología peligrosa y necesita definir el alcance de su gestión de riesgos.",
-    "Si el análisis de incidentes solo culpa al trabajador de primera línea sin considerar factores organizacionales."
+    "Si el análisis de incidentes solo culpa al trabajador de primera línea sin considerar factores organizacionales.",
+    "Cuando ocurre un accidente en un sistema tecnológico complejo y se necesita determinar el alcance de la investigación."
   ],
-  "etiqueta_arbol": "Distingue Accidentes Individuales y Organizacionales"
+  "etiqueta_arbol": "Distingue Accidentes Individuales y Organizacionales",
+  "ids_alias": [
+    "diferenciacion_accidente_individual_organizacional"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "diferenciacion_accidente_individual_organizacional",
+      "titulo": "Diferenciación entre Accidente Individual y Accidente Organizacional",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

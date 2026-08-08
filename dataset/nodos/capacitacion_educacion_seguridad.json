@@ -4,28 +4,43 @@
   "dominio": "health_safety",
   "titulo_concepto": "Educación y Capacitación en Seguridad y Salud Ocupacional",
   "fuente": "OSHA3886",
-  "resumen_teorico": "La capacitación proporciona a trabajadores, supervisores y empleadores el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y comprender su rol dentro del programa de seguridad. Puede impartirse formalmente o mediante charlas diarias (toolbox talks) y capacitación entre pares.",
+  "resumen_teorico": "La capacitación da a trabajadores, supervisores y empleadores el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y entender su rol dentro del programa de seguridad, incluyendo cómo funciona el programa y la protección de los derechos de los trabajadores. Puede impartirse de forma formal, mediante charlas diarias (toolbox talks), capacitación entre pares o con herramientas como el Hazard Identification Training Tool de OSHA. Debe dirigirse tanto a trabajadores nuevos como a los que ya están en el sitio, asegurando que todos comprendan las medidas de control implementadas y sepan cómo reportar incidentes, peligros y cuasi accidentes.",
   "pasos_accionables": [
-    "Capacitar a todos en políticas, metas y procedimientos del programa de seguridad",
-    "Formar a empleadores y supervisores en su rol de liderazgo y en investigación de incidentes",
-    "Entrenar a los trabajadores en el reporte de incidentes, peligros y cuasi-accidentes",
-    "Capacitar en reconocimiento de peligros y en la jerarquía de controles",
-    "Impartir capacitación en el idioma y nivel de alfabetización adecuado para todos los trabajadores",
-    "Considerar cursos OSHA 10-horas o 30-horas según el rol"
+    "Capacita a todos en las políticas, metas y procedimientos del programa de seguridad, explicando cómo funciona y cuál es su rol",
+    "Forma a supervisores y empleadores en su rol de liderazgo, la investigación de incidentes y la protección de los derechos de los trabajadores",
+    "Entrena a los trabajadores en el reporte de incidentes, peligros y cuasi accidentes",
+    "Capacita en el reconocimiento de peligros y en la jerarquía de controles, apoyándote en herramientas como el Hazard Identification Training Tool de OSHA",
+    "Imparte la capacitación en el idioma y nivel de alfabetización adecuado, tanto a trabajadores nuevos como actuales",
+    "Considera cursos OSHA 10 horas o 30 horas según el rol de cada persona"
   ],
-  "entregable_esperado": "Plan de capacitación implementado con registros de asistencia y competencias verificadas",
+  "entregable_esperado": "Plan de capacitación implementado con registros de asistencia, contenidos impartidos y competencias verificadas para todos los niveles.",
   "nodos_previos": [
     "seguimiento_efectividad_controles",
     "prevencion_control_peligros",
-    "seguimiento_efectividad_controles_2"
+    "seguimiento_efectividad_controles_2",
+    "participacion_trabajadores",
+    "participacion_trabajadores_2",
+    "prevencion_control_peligros_2"
   ],
   "nodos_siguientes": [
     "evaluacion_mejora_programa",
-    "evaluacion_mejora_programa_3"
+    "evaluacion_mejora_programa_3",
+    "evaluacion_mejora_programa_2"
   ],
   "condiciones_activacion": [
     "Cuando se incorporan nuevos trabajadores, equipos o procesos al sitio",
-    "Cuando se detectan brechas de conocimiento en el reconocimiento de peligros"
+    "Cuando se detectan brechas de conocimiento en el reconocimiento de peligros",
+    "Cuando se implementan nuevos controles o procedimientos de seguridad"
   ],
-  "etiqueta_arbol": "Capacita en Seguridad Laboral"
+  "etiqueta_arbol": "Capacita en Seguridad Laboral",
+  "ids_alias": [
+    "educacion_entrenamiento_seguridad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "educacion_entrenamiento_seguridad",
+      "titulo": "Educación y Entrenamiento en Seguridad",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

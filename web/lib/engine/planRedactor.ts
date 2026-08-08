@@ -424,6 +424,31 @@ export function verificarProcedenciaEtapas(
   }
 }
 
+/** b1 del panel (migracion 037): el mapa etapa -> node_ids VALIDADO, listo para
+ * persistir. Reusa exactamente la misma nocion de "material valido" que
+ * verificarProcedenciaEtapas: si un id no vino en la ruta ni en la cosecha es
+ * una alucinacion de procedencia y NO se guarda. El sensor puede quedarse
+ * corto; lo que no puede es guardar procedencia falsa.
+ *
+ * Devuelve null cuando no hubo autodeclaracion, para que el AUSENTE se
+ * distinga del VACIO: null es "no autodeclaro" y {} seria "autodeclaro nada". */
+export function nodosPorEtapaValidados(
+  autodeclaracion: AutodeclaracionPlan | null,
+  ruta: string[],
+  cosechaIds: string[]
+): Record<string, string[]> | null {
+  const etapas = autodeclaracion?.etapas;
+  if (!etapas || typeof etapas !== "object" || Object.keys(etapas).length === 0) return null;
+  const materialValido = new Set([...ruta, ...cosechaIds]);
+  const salida: Record<string, string[]> = {};
+  for (const [etapa, ids] of Object.entries(etapas)) {
+    if (!Array.isArray(ids)) continue;
+    const limpios = ids.filter((nid) => materialValido.has(nid));
+    if (limpios.length > 0) salida[etapa] = limpios;
+  }
+  return Object.keys(salida).length > 0 ? salida : null;
+}
+
 /** Fase 3.1: la seccion financiera del plan (desde el encabezado fijo
  * SECCION_ECONOMICA_TITULO hasta el proximo encabezado o el final), para
  * acotar el verificador de numeros huerfanos a la parte del plan que
@@ -473,6 +498,11 @@ export interface ResultadoEnsamblado {
   markdown: string;
   cosechaIds: string[];
   evaluacionCobertura: CoberturaPlan;
+  /** b1 del panel (migracion 037): el mapa etapa -> node_ids que el redactor
+   * autodeclaro, YA filtrado por verificarProcedenciaEtapas. null si no
+   * autodeclaro. Los ids alucinados NO viajan aqui: el sensor no puede
+   * guardar procedencia falsa. */
+  nodosPorEtapa: Record<string, string[]> | null;
 }
 
 /**
@@ -559,7 +589,12 @@ export function finalizarPlan(
     partes.push("", "Para profundizar, continua la conversacion en esta misma sesion.");
   }
 
-  return { markdown: partes.join("\n"), cosechaIds, evaluacionCobertura };
+  return {
+    markdown: partes.join("\n"),
+    cosechaIds,
+    evaluacionCobertura,
+    nodosPorEtapa: nodosPorEtapaValidados(autodeclaracion, ruta, cosechaIds),
+  };
 }
 
 /** Port de comprimir_estado_vivo: comprime estado_anterior + novedades de

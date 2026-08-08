@@ -4,26 +4,42 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Las emergencias (incendios, derrames químicos, desastres naturales) y las tareas no rutinarias (mantenimiento infrecuente, arranques/paradas) presentan peligros específicos que deben identificarse y planificarse con anticipación para responder de forma segura.",
+  "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos, vertidos de concreto) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
   "pasos_accionables": [
-    "Identificar escenarios de emergencia previsibles según el tipo de instalación",
-    "Listar tareas no rutinarias como mantenimiento infrecuente o arranques de equipo",
-    "Desarrollar planes de respuesta específicos para cada escenario",
-    "Revisar JHAs con los trabajadores antes de iniciar tareas no rutinarias"
+    "Identificar escenarios de emergencia previsibles según el tipo de instalación, material manejado y ubicación",
+    "Listar tareas no rutinarias como mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos o vertidos de concreto",
+    "Desarrollar planes o procedimientos de respuesta específicos para cada escenario identificado",
+    "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria",
+    "Actualizar el plan de emergencia cuando no exista uno vigente"
   ],
-  "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con planes de respuesta asociados",
+  "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con planes o procedimientos de respuesta asociados",
   "nodos_previos": [
-    "investigacion_incidentes"
+    "investigacion_incidentes",
+    "identificacion_peligros_salud",
+    "inspeccion_sitio_peligros"
   ],
   "nodos_siguientes": [
     "plan_control_peligros",
     "controles_no_rutinarias_emergencias",
     "priorizacion_caracterizacion_peligros",
-    "accidentes_organizacionales_por_mantenimiento"
+    "accidentes_organizacionales_por_mantenimiento",
+    "caracterizacion_priorizacion_peligros"
   ],
   "condiciones_activacion": [
-    "Cuando la organización maneja materiales peligrosos o procesos complejos",
-    "Al preparar planes de emergencia"
+    "Cuando manejas materiales peligrosos o procesos complejos",
+    "Cuando tu proyecto incluye actividades de alto riesgo poco frecuentes",
+    "Al preparar o actualizar un plan de emergencia",
+    "Cuando no existe un plan de emergencia actualizado"
   ],
-  "etiqueta_arbol": "Anticipa Peligros en Emergencias"
+  "etiqueta_arbol": "Anticipa Peligros en Emergencias",
+  "ids_alias": [
+    "peligros_emergencias_no_rutinarias_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "peligros_emergencias_no_rutinarias_2",
+      "titulo": "Identificación de Peligros en Emergencias y Tareas No Rutinarias",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

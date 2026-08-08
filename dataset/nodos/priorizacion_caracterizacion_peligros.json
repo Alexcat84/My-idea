@@ -16,10 +16,12 @@
     "peligros_emergencias_no_rutinarias"
   ],
   "nodos_siguientes": [
-    "jerarquia_controles"
+    "jerarquia_controles",
+    "prevencion_control_peligros"
   ],
   "condiciones_activacion": [
     "Cuando existen múltiples peligros identificados y recursos limitados para atenderlos todos a la vez"
   ],
-  "etiqueta_arbol": "Prioriza los Peligros Detectados"
+  "etiqueta_arbol": "Prioriza los Peligros Detectados",
+  "deprecado": true
 }

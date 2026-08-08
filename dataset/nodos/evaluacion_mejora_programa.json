@@ -4,29 +4,75 @@
   "dominio": "health_safety",
   "titulo_concepto": "Evaluación y Mejora del Programa de Seguridad y Salud",
   "fuente": "OSHA3885",
-  "resumen_teorico": "El programa debe evaluarse inicialmente y al menos anualmente para verificar que opera según lo previsto, usando indicadores adelantados (leading) y rezagados (lagging), e involucrando a los trabajadores en la identificación de oportunidades de mejora.",
+  "resumen_teorico": "Evalúa tu programa de seguridad y salud desde el inicio y luego al menos una vez al año, para confirmar que se implementa según lo previsto en tu sitio de trabajo y que avanza hacia sus metas. Usa indicadores adelantados y rezagados, y verifica que los procesos clave, como reporte de incidentes, inspecciones y control de peligros, funcionen correctamente. Involucra a los trabajadores en la identificación de oportunidades de mejora y comparte con ellos los resultados. Cuando detectes deficiencias, actúa de inmediato para corregirlas y evitar que se repitan. La mejora es continua: empieza con metas modestas y ajústalas cuando dejen de ser relevantes o cuando cambien procesos, equipos o personal clave. Puedes apoyarte en herramientas de autoevaluación disponibles en la web de OSHA.",
   "pasos_accionables": [
-    "Definir indicadores de progreso (lagging y leading)",
-    "Recolectar y analizar datos de desempeño periódicamente",
-    "Verificar que los procesos clave del programa estén operando correctamente",
-    "Corregir deficiencias identificadas y ajustar metas si es necesario",
-    "Compartir resultados con los trabajadores y celebrar éxitos"
+    "Definir indicadores rezagados (lesiones, enfermedades) y adelantados (participación, capacitación)",
+    "Recolectar y analizar datos de desempeño periódicamente y compartirlos con los trabajadores",
+    "Verificar que los procesos clave y controles del programa operen según lo diseñado en tu sitio de trabajo",
+    "Revisar si los indicadores y metas siguen siendo relevantes y ajustarlos si es necesario",
+    "Corregir de inmediato cualquier deficiencia detectada, documentando responsables y plazos",
+    "Usar herramientas de autoevaluación de OSHA y celebrar los éxitos alcanzados"
   ],
-  "entregable_esperado": "Informe anual de evaluación del programa con indicadores de desempeño y plan de mejora",
+  "entregable_esperado": "Informe anual de evaluación del programa con indicadores de desempeño, hallazgos y plan de acción correctiva con responsables y plazos.",
   "nodos_previos": [
     "capacitacion_identificacion_peligros",
     "capacitacion_educacion_seguridad",
     "educacion_entrenamiento_seguridad",
     "prevencion_control_peligros",
     "prevencion_control_peligros_2",
-    "seguimiento_efectividad_controles_2"
+    "seguimiento_efectividad_controles_2",
+    "calidad_de_ejecucion_proceso_innovacion",
+    "seguimiento_efectividad_controles",
+    "programa_seguridad_salud_ocupacional_2"
   ],
   "nodos_siguientes": [
-    "coordinacion_multiempleador"
+    "coordinacion_multiempleador",
+    "comunicacion_coordinacion_multiempleador",
+    "comunicacion_coordinacion_multiempleador_2",
+    "compromiso_gerencial_seguridad",
+    "programa_consulta_osha_onsite",
+    "nueve_pasos_iniciar_programa",
+    "legislacion_especifica_vs_accidente_organizacional",
+    "coordinacion_sitios_multiempleador"
   ],
   "condiciones_activacion": [
-    "Al menos una vez al año",
-    "Después de un incidente grave o cambio significativo en procesos"
+    "Al menos una vez al año o al completar un ciclo del programa",
+    "Cuando ocurre un incidente grave, daño significativo a la propiedad o aumento de quejas de seguridad",
+    "Cuando hay un cambio significativo en procesos, equipos o personal clave"
   ],
-  "etiqueta_arbol": "Revisa y Mejora tu Programa"
+  "etiqueta_arbol": "Revisa y Mejora tu Programa",
+  "ids_alias": [
+    "correccion_deficiencias_programa_sst",
+    "evaluacion_mejora_programa_2",
+    "evaluacion_mejora_programa_3",
+    "evaluacion_periodica_programa_seguridad",
+    "verificacion_implementacion_programa_sst"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "correccion_deficiencias_programa_sst",
+      "titulo": "Corrección de Deficiencias y Mejora Continua del Programa",
+      "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "evaluacion_mejora_programa_2",
+      "titulo": "Evaluación y Mejora del Programa de Seguridad (Elemento del Programa)",
+      "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "evaluacion_mejora_programa_3",
+      "titulo": "Evaluación y Mejora del Programa de Seguridad (Verificación Inicial y Anual)",
+      "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "evaluacion_periodica_programa_seguridad",
+      "titulo": "Evaluación Periódica del Programa de Seguridad",
+      "fuente": "OSHA3885"
+    },
+    {
+      "node_id": "verificacion_implementacion_programa_sst",
+      "titulo": "Verificación de la Implementación y Operación del Programa",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

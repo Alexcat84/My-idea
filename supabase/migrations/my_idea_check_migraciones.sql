@@ -495,5 +495,32 @@ FROM (
         AND pg_get_constraintdef(oid) LIKE '%entrega%'
     )
 
+  UNION ALL
+  -- 037 · Los dos sensores del panel: la columna nodos_origen y el diario
+  -- node_visits. ANTES de aplicar debe decir MISSING; DESPUÉS, ✓ OK.
+  SELECT '037', 'sensores del panel (nodos_origen + node_visits con RLS)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items'
+        AND column_name='nodos_origen'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='node_visits'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_policies
+      WHERE schemaname='public' AND tablename='node_visits' AND policyname='node_visits_own'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_indexes
+      WHERE schemaname='public' AND tablename='node_visits' AND indexname='node_visits_node_idx'
+    )
+    -- y el UNIQUE de project_nodes SIGUE en pie: el diario no lo reemplaza
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conrelid = 'public.project_nodes'::regclass AND contype = 'u'
+    )
+
 ) checks
 ORDER BY num;

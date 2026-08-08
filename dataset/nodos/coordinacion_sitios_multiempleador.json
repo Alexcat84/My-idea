@@ -4,24 +4,86 @@
   "dominio": "health_safety",
   "titulo_concepto": "Coordinación y Comunicación en Sitios Multiempleador",
   "fuente": "OSHA3886",
-  "resumen_teorico": "En sitios de construcción donde participan múltiples empleadores (contratistas generales, subcontratistas, agencias de personal temporal), es crítico coordinar y comunicar los peligros existentes y garantizar el mismo nivel de protección de seguridad y salud para todos los trabajadores presentes.",
+  "resumen_teorico": "Cuando en tu sitio de trabajo coexisten contratistas, subcontratistas o personal de agencias de staffing junto a tu propio equipo, necesitas coordinar y comunicar los peligros presentes para que todos reciban el mismo nivel de protección. La falta de coordinación genera políticas inconsistentes, como el uso de EPP, lo que debilita la credibilidad de tu programa de seguridad y reduce la participación de los trabajadores en la prevención. Esto implica intercambiar información sobre riesgos y controles antes de iniciar labores y ante cualquier cambio de condiciones, definir a quién se reportan incidentes, dar acceso a registros de lesiones e inspecciones, incluir requisitos de seguridad en los contratos, y asegurar que el personal temporal llegue capacitado y equipado antes de comenzar a trabajar.",
   "pasos_accionables": [
-    "Establecer compromiso de brindar el mismo nivel de protección a todos los empleados del sitio",
-    "Comunicar peligros presentes en el sitio entre contratistas y subcontratistas",
-    "Definir especificaciones y calificaciones de seguridad para contratistas y agencias de personal",
-    "Coordinar planificación y programación de trabajo antes de iniciar actividades",
-    "Resolver conflictos que puedan impactar la seguridad antes de comenzar el trabajo"
+    "Establece el compromiso de brindar el mismo nivel de protección a todos los trabajadores presentes en el sitio, sin importar su empleador",
+    "Comunica los peligros del sitio y las medidas de control antes de iniciar el trabajo, incluyendo riesgos no rutinarios o de emergencia, y actualiza esta información cuando cambien las condiciones",
+    "Define especificaciones y calificaciones de seguridad para contratistas y agencias de personal e inclúyelas en los contratos",
+    "Coordina la planificación y el cronograma de trabajo, acordando antes de empezar quién implementa cada parte del programa de seguridad",
+    "Establece un canal para reportar incidentes y otorga acceso a registros de lesiones e inspecciones entre las partes",
+    "Resuelve conflictos de políticas de seguridad, como el uso de EPP, antes de que comience el trabajo"
   ],
-  "entregable_esperado": "Protocolo de coordinación documentado entre todos los empleadores presentes en el sitio de trabajo",
+  "entregable_esperado": "Protocolo de coordinación documentado entre todos los empleadores del sitio, con roles definidos, canal de comunicación de peligros y procedimiento de resolución de conflictos.",
   "nodos_previos": [
-    "compromiso_gerencial_seguridad"
+    "compromiso_gerencial_seguridad",
+    "evaluacion_periodica_programa_seguridad",
+    "correccion_deficiencias_programa_sst",
+    "buen_lugar_para_trabajar",
+    "programa_seguridad_salud_ocupacional",
+    "evaluacion_mejora_programa",
+    "liderazgo_gerencial_seguridad"
   ],
   "nodos_siguientes": [
-    "identificacion_evaluacion_peligros"
+    "identificacion_evaluacion_peligros",
+    "tecnica_freaky_friday"
   ],
   "condiciones_activacion": [
-    "Cuando en el sitio de trabajo participan múltiples contratistas o subcontratistas",
-    "Al contratar personal de agencias de staffing temporal"
+    "Cuando en tu sitio de trabajo participan múltiples contratistas o subcontratistas",
+    "Al contratar personal de una agencia de staffing temporal",
+    "Cuando detectas políticas de seguridad inconsistentes entre distintos empleadores del sitio",
+    "Antes de negociar o firmar contratos con contratistas o agencias de personal"
   ],
-  "etiqueta_arbol": "Coordina Sitios con Varios Empleadores"
+  "etiqueta_arbol": "Coordina Sitios con Varios Empleadores",
+  "ids_alias": [
+    "comunicacion_coordinacion_multiempleador",
+    "comunicacion_coordinacion_multiempleador_2",
+    "coordinacion_empleadores_multiples",
+    "coordinacion_multiempleador",
+    "establecer_comunicacion_efectiva_contratistas",
+    "establecer_comunicacion_efectiva_hostempleador",
+    "establecer_coordinacion_efectiva_contratistas",
+    "establecer_coordinacion_efectiva_hostempleador"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "comunicacion_coordinacion_multiempleador",
+      "titulo": "Comunicación y Coordinación Multiempleador (Industria General)",
+      "fuente": "OSHA3885"
+    },
+    {
+      "node_id": "comunicacion_coordinacion_multiempleador_2",
+      "titulo": "Comunicación y Coordinación Multiempleador (Construcción)",
+      "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "coordinacion_empleadores_multiples",
+      "titulo": "Comunicación y Coordinación para Empleadores Múltiples (Host, Contratistas, Agencias de Personal)",
+      "fuente": "OSHA3885"
+    },
+    {
+      "node_id": "coordinacion_multiempleador",
+      "titulo": "Coordinación Multiempleador (Agencias de Personal y Empleador Anfitrión)",
+      "fuente": "OSHA3885"
+    },
+    {
+      "node_id": "establecer_comunicacion_efectiva_contratistas",
+      "titulo": "Establecimiento de Comunicación Efectiva entre Contratistas",
+      "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "establecer_comunicacion_efectiva_hostempleador",
+      "titulo": "Establecer Comunicación Efectiva entre Empleador Anfitrión y Contratistas",
+      "fuente": "OSHA3885"
+    },
+    {
+      "node_id": "establecer_coordinacion_efectiva_contratistas",
+      "titulo": "Establecimiento de Coordinación Efectiva entre Empleadores",
+      "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "establecer_coordinacion_efectiva_hostempleador",
+      "titulo": "Establecer Coordinación Efectiva entre Empleadores en Sitio Compartido",
+      "fuente": "OSHA3885"
+    }
+  ]
 }
