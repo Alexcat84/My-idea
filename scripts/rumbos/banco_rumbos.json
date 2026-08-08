@@ -1,6 +1,6 @@
 {
   "_nota": "BANCO DE RUMBOS — BORRADOR PARA LA PODA DEL AUDITOR Y EL FUNDADOR. Ningún rumbo entra sin su visto, igual que en F0. Cada rumbo es una consulta REAL en palabras de persona (no una consulta de laboratorio: así es como el usuario escribe) y la expectativa de a dónde debe apuntar la brújula. Los 'ancla' son node_id que DEBEN salir en el top-K; los 'prohibido' son dominios que NO pueden salir en el top-3 (rumbos de frontera). Borra los rumbos que no te convenzan y corrige las expectativas que no compartas: el estándar de oro es tu ojo, no el mío. AMPLIACIÓN DE COBERTURA DEL NÚCLEO (ago 2026, borrador): 18 rumbos nuevos, 15 de núcleo y 3 de frontera núcleo↔mundos. Motivo: el banco tenía 4 rumbos de core para 1.721 nodos, y el núcleo se va a operar. Sin monitor no se opera el corazón. Cubren idea, validación, modelo de negocio, clientes, dinero, legal y arranque. Todas las anclas se verificaron una a una contra el dataset: son core, activas y existen. Uno (`nucleo_no_doy_abasto_solo`) es de DIAGNÓSTICO y no de puntería: el núcleo no tiene nodo de primera contratación y este rumbo existe para medir a dónde manda la brújula una pregunta sin respuesta escrita.",
-  "_como_se_lee": "verde = dominio correcto y todas sus anclas en el top-K, sin dominio prohibido en top-3. ámbar = dominio correcto pero falta alguna ancla. rojo = dominio equivocado, o frontera violada, o un deprecado ofrecido.",
+  "_como_se_lee": "verde = dominio correcto y todas sus anclas en el top-K, sin dominio prohibido en top-3. ámbar = dominio correcto pero falta alguna ancla. rojo = dominio equivocado, o frontera violada, o un deprecado ofrecido. TRES CLASES (adjudicadas ago 2026): los rumbos normales cuentan en el marcador y en el trinquete; los de `diagnostico: true` quedan FUERA del marcador con su `expectativa` escrita al lado, hasta que el trabajo que deben medir se haga; el de `hueco: true` queda fuera porque documenta un vacio del catalogo y no una punteria. `ancla` exige TODAS; `ancla_conjunto` exige AL MENOS UNA.",
   "rumbos": [
     {
       "id": "nucleo_no_se_por_donde_empezar",
@@ -331,10 +331,12 @@
       "dominios": [
         "core"
       ],
-      "ancla": [
+      "por_que": "La entrada sin idea. Distinta de 'no sé por dónde empezar', que ya tiene idea. Encuadrar un problema que valga la pena tiene mas de una puerta legitima: el How Might We, identificar el problema del cliente, o la busqueda de grandes disrupciones. Basta que salga una.",
+      "ancla_conjunto": [
+        "how_might_we_hmw",
+        "identificacion_problema_cliente",
         "analisis_disrupciones_mercado"
-      ],
-      "por_que": "La entrada sin idea. Distinta de 'no sé por dónde empezar', que ya tiene idea."
+      ]
     },
     {
       "id": "nucleo_validar_antes_de_gastar",
@@ -346,7 +348,9 @@
         "customer_discovery_get_out_of_building",
         "diseno_experimentos_hipotesis"
       ],
-      "por_que": "El corazón de la fase de validación: salir a la calle y diseñar el experimento."
+      "por_que": "El corazón de la fase de validación: salir a la calle y diseñar el experimento.",
+      "diagnostico": true,
+      "expectativa": "La usuaria habla como persona y le responde el nodo escrito en jerga. Debe ponerse VERDE tras la fusion y re-voz del nucleo. Si sigue ambar despues, no es contenido: es RECUPERACION (hibrida, embedding de consultas), y eso vive en docs/AUDITORIA_MOTOR.md."
     },
     {
       "id": "nucleo_que_pregunto_en_la_entrevista",
@@ -354,10 +358,12 @@
       "dominios": [
         "core"
       ],
-      "ancla": [
-        "guia_entrevista_hcd"
-      ],
-      "por_que": "Muy específico: la guía de entrevista, no la filosofía de validación."
+      "por_que": "Muy específico: la guía de entrevista, no la filosofía de validación. La guia de entrevista cualitativa y las preguntas de SPIN son dos escuelas y las dos contestan la pregunta. Fingir que solo vale una era mi expectativa, no la realidad.",
+      "ancla_conjunto": [
+        "guia_entrevista_hcd",
+        "preguntas_situacion",
+        "preguntas_necesidad_beneficio"
+      ]
     },
     {
       "id": "nucleo_dicen_que_si_pero_no_compran",
@@ -368,7 +374,9 @@
       "ancla": [
         "get_out_building_test_sell"
       ],
-      "por_que": "La señal falsa clásica. Debe llevar a vender para aprender, no a marketing."
+      "por_que": "La señal falsa clásica. Debe llevar a vender para aprender, no a marketing.",
+      "diagnostico": true,
+      "expectativa": "Se engancho a 'pagado' y se fue a capital privado. Debe ponerse VERDE tras la fusion y re-voz del nucleo; si no, es frente de recuperacion."
     },
     {
       "id": "nucleo_como_gano_dinero_con_esto",
@@ -390,7 +398,9 @@
       "ancla": [
         "value_proposition_startup"
       ],
-      "por_que": "Propuesta de valor. Frontera fina con análisis competitivo: aquí el foco es lo propio."
+      "por_que": "Propuesta de valor. Frontera fina con análisis competitivo: aquí el foco es lo propio.",
+      "diagnostico": true,
+      "expectativa": "Se engancho a 'me comprarian' y se fue a fusiones y adquisiciones. Debe ponerse VERDE tras la fusion y re-voz del nucleo; si no, es recuperacion."
     },
     {
       "id": "nucleo_le_sirve_a_todo_el_mundo",
@@ -402,7 +412,9 @@
         "customer_segments_hypothesis",
         "segmentos_de_clientes_problema_necesidad"
       ],
-      "por_que": "Segmentación. Es la corrección más repetida a un fundador primerizo."
+      "por_que": "Segmentación. Es la corrección más repetida a un fundador primerizo.",
+      "diagnostico": true,
+      "expectativa": "Se engancho a 'esta mal' y se fue a consecuencias negativas. Debe ponerse VERDE tras la fusion y re-voz del nucleo; si no, es frente de recuperacion."
     },
     {
       "id": "nucleo_cuanto_vendo_para_no_perder",
@@ -432,10 +444,12 @@
       "dominios": [
         "core"
       ],
-      "ancla": [
-        "decision_autofinanciamiento_vs_inversion"
-      ],
-      "por_que": "La decisión, no la mecánica de la ronda."
+      "por_que": "La decisión, no la mecánica de la ronda. La decision, el tipo de inversor y el encuadre del fundraising: tres entradas buenas a la misma duda.",
+      "ancla_conjunto": [
+        "decision_autofinanciamiento_vs_inversion",
+        "evaluacion_tipos_inversores",
+        "mercado_de_uno_fundraising"
+      ]
     },
     {
       "id": "nucleo_registrar_el_nombre",
@@ -454,11 +468,12 @@
       "dominios": [
         "core"
       ],
-      "ancla": [
+      "por_que": "Propiedad intelectual: la estrategia y la patente, no solo la marca. proteccion_propiedad_intelectual salio primera y es MEJOR que la expectativa que yo habia escrito. Se corrige el ancla, no el catalogo.",
+      "ancla_conjunto": [
+        "proteccion_propiedad_intelectual",
         "intellectual_property_strategy",
         "patentes_startup"
-      ],
-      "por_que": "Propiedad intelectual: la estrategia y la patente, no solo la marca."
+      ]
     },
     {
       "id": "nucleo_sacar_algo_pequeno_primero",
@@ -470,7 +485,9 @@
         "construir_mvp_baja_fidelidad",
         "concierge_mvp"
       ],
-      "por_que": "MVP. Las dos anclas son las dos formas baratas, y ambas deben salir."
+      "por_que": "MVP. Las dos anclas son las dos formas baratas, y ambas deben salir.",
+      "diagnostico": true,
+      "expectativa": "Los dos nodos de MVP barato no salen. Debe ponerse VERDE tras la fusion y re-voz del nucleo; si no, es frente de recuperacion."
     },
     {
       "id": "nucleo_no_doy_abasto_solo",
@@ -479,7 +496,8 @@
         "core"
       ],
       "ancla": [],
-      "por_que": "DIAGNÓSTICO: el núcleo NO tiene nodo de primera contratación (0 aciertos en el barrido). Este rumbo existe para ver a dónde manda la brújula una pregunta cuya respuesta no está escrita. Su resultado es un hallazgo de CONTENIDO, no de puntería."
+      "por_que": "RUMBO-HUECO: sin ancla y fuera del marcador a proposito. Documenta un VACIO REAL del catalogo: el nucleo no tiene un solo nodo de primera contratacion (cero aciertos en el barrido). Ese contenido es del futuro mundo `Primer Equipo`, cuya ficha ya esta abierta y que heredo dos conceptos deprecados de quality. El dia que ese mundo nazca, este rumbo lo estrena. Inventarle un ancla habria sido fingir que la respuesta existe.",
+      "hueco": true
     },
     {
       "id": "frontera_precio_a_cliente_es_nucleo",
@@ -488,10 +506,10 @@
         "core"
       ],
       "ancla": [],
-      "prohibido": [
+      "por_que": "Precio DE VENTA es núcleo. Compras es negociar con el proveedor: la palabra 'precio' no puede arrastrarlo al mundo pagado.",
+      "prohibido_top3": [
         "compras"
-      ],
-      "por_que": "Precio DE VENTA es núcleo. Compras es negociar con el proveedor: la palabra 'precio' no puede arrastrarlo al mundo pagado."
+      ]
     },
     {
       "id": "frontera_producto_disparejo_es_calidad",
@@ -500,10 +518,10 @@
         "quality"
       ],
       "ancla": [],
-      "prohibido": [
+      "por_que": "Variación del proceso es Calidad. Si cae en núcleo, el mundo no se ofrece cuando de verdad hace falta.",
+      "prohibido_top3": [
         "core"
-      ],
-      "por_que": "Variación del proceso es Calidad. Si cae en núcleo, el mundo no se ofrece cuando de verdad hace falta."
+      ]
     },
     {
       "id": "frontera_contratar_es_nucleo_no_hseq",
@@ -512,10 +530,10 @@
         "core"
       ],
       "ancla": [],
-      "prohibido": [
+      "por_que": "Contratar es del núcleo. La palabra 'taller' no puede arrastrarlo a Seguridad y Personas antes de tiempo.",
+      "prohibido_top3": [
         "health_safety"
-      ],
-      "por_que": "Contratar es del núcleo. La palabra 'taller' no puede arrastrarlo a Seguridad y Personas antes de tiempo."
+      ]
     }
   ],
   "_umbrales": {
@@ -523,5 +541,10 @@
     "top_frontera": 3,
     "aprobados_por": "fundador+auditor, ago 2026",
     "trinquete": "cero rojos siempre + ambares <= linea base + toda mejora re-committea la linea base"
+  },
+  "_reglas": {
+    "el_ancla_se_corrige_contra_la_realidad": "Cuando lo que sale es defendible y MEJOR que la expectativa, se corrige el ancla, no el catalogo: la vara se calibra contra la realidad. Y siempre lo adjudica un ojo, jamas el automatismo: un banco que se auto-corrige con la salida de hoy deja de medir manana.",
+    "ancla_por_conjunto": "En el nucleo se permite el ancla por conjunto (2-4 nodos aceptables) donde la pregunta tenga varias respuestas legitimas. Es mas honesto que fingir una sola.",
+    "el_guardian_que_grita_cuando_le_amplian_la_ronda": "Un guardian que grita cuando le amplias la ronda deja de creerse, y ese es el peor final para un guardian. Pero hornear un ambar nuevo en la linea base sin decirlo seria estrenar la ceguera: los estrenos no rompen el trinquete y se listan aparte, con nombre."
   }
 }

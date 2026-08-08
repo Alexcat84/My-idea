@@ -1,11 +1,11 @@
 {
   "k": 10,
   "marcador": {
-    "verde": 38,
-    "ambar": 10,
+    "verde": 41,
+    "ambar": 1,
     "rojo": 0
   },
-  "verde_pct": 79.2,
+  "verde_pct": 97.6,
   "deprecados_ofrecidos": [],
   "por_rumbo": {
     "nucleo_no_se_por_donde_empezar": {
@@ -257,15 +257,7 @@
       ]
     },
     "nucleo_quiero_algo_propio_sin_idea": {
-      "estado": "ambar",
-      "devolvio": [
-        "core",
-        "core",
-        "core"
-      ]
-    },
-    "nucleo_validar_antes_de_gastar": {
-      "estado": "ambar",
+      "estado": "verde",
       "devolvio": [
         "core",
         "core",
@@ -273,15 +265,7 @@
       ]
     },
     "nucleo_que_pregunto_en_la_entrevista": {
-      "estado": "ambar",
-      "devolvio": [
-        "core",
-        "core",
-        "core"
-      ]
-    },
-    "nucleo_dicen_que_si_pero_no_compran": {
-      "estado": "ambar",
+      "estado": "verde",
       "devolvio": [
         "core",
         "core",
@@ -290,22 +274,6 @@
     },
     "nucleo_como_gano_dinero_con_esto": {
       "estado": "verde",
-      "devolvio": [
-        "core",
-        "core",
-        "core"
-      ]
-    },
-    "nucleo_por_que_me_comprarian_a_mi": {
-      "estado": "ambar",
-      "devolvio": [
-        "core",
-        "core",
-        "core"
-      ]
-    },
-    "nucleo_le_sirve_a_todo_el_mundo": {
-      "estado": "ambar",
       "devolvio": [
         "core",
         "core",
@@ -329,7 +297,7 @@
       ]
     },
     "nucleo_me_conviene_un_inversionista": {
-      "estado": "ambar",
+      "estado": "verde",
       "devolvio": [
         "core",
         "core",
@@ -345,22 +313,6 @@
       ]
     },
     "nucleo_me_pueden_copiar_el_diseno": {
-      "estado": "ambar",
-      "devolvio": [
-        "core",
-        "core",
-        "core"
-      ]
-    },
-    "nucleo_sacar_algo_pequeno_primero": {
-      "estado": "ambar",
-      "devolvio": [
-        "core",
-        "core",
-        "core"
-      ]
-    },
-    "nucleo_no_doy_abasto_solo": {
       "estado": "verde",
       "devolvio": [
         "core",
@@ -386,6 +338,62 @@
     },
     "frontera_contratar_es_nucleo_no_hseq": {
       "estado": "verde",
+      "devolvio": [
+        "core",
+        "core",
+        "core"
+      ]
+    }
+  },
+  "fuera_del_marcador": {
+    "nucleo_validar_antes_de_gastar": {
+      "estado": "ambar",
+      "clase": "diagnostico",
+      "devolvio": [
+        "core",
+        "core",
+        "core"
+      ]
+    },
+    "nucleo_dicen_que_si_pero_no_compran": {
+      "estado": "ambar",
+      "clase": "diagnostico",
+      "devolvio": [
+        "core",
+        "core",
+        "core"
+      ]
+    },
+    "nucleo_por_que_me_comprarian_a_mi": {
+      "estado": "ambar",
+      "clase": "diagnostico",
+      "devolvio": [
+        "core",
+        "core",
+        "core"
+      ]
+    },
+    "nucleo_le_sirve_a_todo_el_mundo": {
+      "estado": "ambar",
+      "clase": "diagnostico",
+      "devolvio": [
+        "core",
+        "core",
+        "core"
+      ]
+    },
+    "nucleo_sacar_algo_pequeno_primero": {
+      "estado": "ambar",
+      "clase": "diagnostico",
+      "devolvio": [
+        "core",
+        "core",
+        "core"
+      ]
+    },
+    "nucleo_no_doy_abasto_solo": {
+      "estado": "verde",
+      "clase": "hueco",
       "devolvio": [
         "core",
         "core",

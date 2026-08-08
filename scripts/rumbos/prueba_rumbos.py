@@ -156,9 +156,16 @@ def main():
                 deprecados_ofrecidos.append({"rumbo": r["id"], "node_id": ids[i]})
 
         doms_top = [t[2] for t in top]
+        ids_top = [t[0] for t in top]
         dom_ok = any(d in r["dominios"] for d in doms_top)
+        # `ancla` exige TODAS. `ancla_conjunto` exige AL MENOS UNA: en el nucleo
+        # hay preguntas con varias respuestas legitimas, y fingir una sola vara
+        # unica es menos honesto que declarar el abanico.
         anclas = r.get("ancla") or []
-        faltan = [a for a in anclas if a not in [t[0] for t in top]]
+        faltan = [a for a in anclas if a not in ids_top]
+        conjunto = r.get("ancla_conjunto") or []
+        if conjunto and not any(a in ids_top for a in conjunto):
+            faltan = faltan + [f"ninguna de {conjunto}"]
         prohibidos = r.get("prohibido_top3") or []
         violada = [d for d in prohibidos if d in doms_top[:TOP_FRONTERA]]
 
@@ -168,17 +175,30 @@ def main():
             estado = "ambar"
         else:
             estado = "verde"
-        marcador[estado] += 1
+        # FUERA DEL MARCADOR (adjudicado ago 2026): los rumbos de DIAGNOSTICO
+        # miden un trabajo que todavia no se ha hecho, y el rumbo-HUECO mide un
+        # vacio del catalogo. Contarlos seria pedirle al trinquete que vigile
+        # algo que ya sabemos que esta mal: el guardian se volveria un
+        # recordatorio, y un guardian que siempre esta rojo no guarda nada.
+        # Se imprimen aparte, con su expectativa, para que nadie los olvide.
+        fuera = bool(r.get("diagnostico") or r.get("hueco"))
+        if not fuera:
+            marcador[estado] += 1
         resultados.append({
             "id": r["id"], "estado": estado, "consulta": r["consulta"],
             "esperaba": r["dominios"], "devolvio": doms_top[:5],
             "anclas_faltantes": faltan, "frontera_violada": violada,
+            "fuera_del_marcador": fuera,
+            "clase": "diagnostico" if r.get("diagnostico") else ("hueco" if r.get("hueco") else "vara"),
+            "expectativa": r.get("expectativa"),
             "top3": [{"id": t[0], "dominio": t[2], "score": round(t[1], 4)} for t in top[:3]],
         })
 
-    total = len(banco)
+    total = sum(1 for x in resultados if not x["fuera_del_marcador"])
     print(f"\n{'estado':<8}{'rumbo':<42}devolvio")
     for x in resultados:
+        if x["fuera_del_marcador"]:
+            continue
         marca = {"verde": "OK  ", "ambar": "~   ", "rojo": "ROJO"}[x["estado"]]
         print(f"{marca:<8}{x['id']:<42}{', '.join(x['devolvio'][:3])}")
         if x["estado"] != "verde":
@@ -188,9 +208,18 @@ def main():
                 print(f"        anclas ausentes: {x['anclas_faltantes']}")
             print(f"        top3: {[(t['id'][:36], t['score']) for t in x['top3']]}")
 
+    aparte = [x for x in resultados if x["fuera_del_marcador"]]
+    if aparte:
+        print(f"\n  FUERA DEL MARCADOR ({len(aparte)}), a proposito y con fecha de vencimiento:")
+        for x in aparte:
+            marca = {"verde": "OK", "ambar": "~ ", "rojo": "RJ"}[x["estado"]]
+            print(f"    [{marca}] {x['id']}  ({x['clase']})  -> {', '.join(t['id'] for t in x['top3'][:2])}")
+            if x["expectativa"]:
+                print(f"         {x['expectativa']}")
+
     pct = round(100 * marcador["verde"] / total, 1)
     print(f"\n  MARCADOR: {marcador['verde']} verdes, {marcador['ambar']} ambares, "
-          f"{marcador['rojo']} rojos  ({pct}% verde de {total})")
+          f"{marcador['rojo']} rojos  ({pct}% verde de {total} en la vara)")
     if deprecados_ofrecidos:
         print(f"  ROJO ABSOLUTO: {len(deprecados_ofrecidos)} deprecados ofrecidos: "
               f"{deprecados_ofrecidos[:3]}")
@@ -201,8 +230,16 @@ def main():
 
     foto = {"k": K, "marcador": marcador, "verde_pct": pct,
             "deprecados_ofrecidos": deprecados_ofrecidos,
+            # La vara guarda SOLO los rumbos que mide. Un rumbo de diagnostico
+            # dentro de por_rumbo entraria despues en las comparaciones del
+            # trinquete por la puerta de atras, y el dia que se ponga verde
+            # -- que es justo lo que se espera de el -- se leeria como "mejora"
+            # sin que nadie lo adjudique.
             "por_rumbo": {x["id"]: {"estado": x["estado"], "devolvio": x["devolvio"][:3]}
-                          for x in resultados}}
+                          for x in resultados if not x["fuera_del_marcador"]},
+            "fuera_del_marcador": {x["id"]: {"estado": x["estado"], "clase": x["clase"],
+                                             "devolvio": x["devolvio"][:3]}
+                                   for x in resultados if x["fuera_del_marcador"]}}
     (AQUI / "_ultima_corrida.json").write_text(
         json.dumps({"foto": foto, "detalle": resultados}, ensure_ascii=False, indent=2),
         encoding="utf-8")
