@@ -10,11 +10,13 @@
         "definicion_startup",
         "definicion_startup_busqueda_modelo_negocio",
         "definicion_startup_incertidumbre",
+        "search_for_business_model",
         "startup_como_busqueda_vs_ejecucion"
       ],
-      "tam": 5,
+      "tam": 6,
       "etapas": [
-        "ideacion"
+        "ideacion",
+        "validacion"
       ],
       "toca_puerta": false,
       "miembros": [
@@ -86,6 +88,21 @@
           ]
         },
         {
+          "id": "search_for_business_model",
+          "titulo": "Búsqueda de un Modelo de Negocio (Search)",
+          "etapa": "validacion",
+          "etiqueta": "Busca Tu Modelo de Negocio",
+          "condiciones_activacion": [
+            "Al inicio de un startup, antes de tener un modelo de negocio comprobado"
+          ],
+          "visitas": 3,
+          "cosechas": 3,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
           "id": "startup_como_busqueda_vs_ejecucion",
           "titulo": "Definición de Startup: Búsqueda vs. Ejecución",
           "etapa": "ideacion",
@@ -105,9 +122,14 @@
       "veredicto": {
         "grupo": 0,
         "fundir": true,
-        "por_que": "Todas describen la misma definición de startup como organización temporal en búsqueda de un modelo de negocio bajo incertidumbre, en contraste con ejecución.",
-        "quedaria": "Definición de Startup: Búsqueda vs. Ejecución"
-      }
+        "por_que": "Los seis nodos son la misma idea central: startup = organización temporal que busca (no ejecuta) un modelo de negocio repetible y escalable bajo incertidumbre; llevan a la misma acción de entender el concepto base.",
+        "quedaria": "Búsqueda vs. Ejecución: Definición de Startup"
+      },
+      "ampliado_a_mano": [
+        "search_for_business_model"
+      ],
+      "sobrevive": "search_for_business_model",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -212,7 +234,9 @@
         "fundir": true,
         "por_que": "Todas describen el mismo hito: revisar el Business Model Canvas al final de Validación de Clientes para decidir pivotar o proceder.",
         "quedaria": "Pivot or Proceed: La Decisión Crítica"
-      }
+      },
+      "sobrevive": "decision_pivotar_o_proceder",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -297,7 +321,9 @@
         "fundir": true,
         "por_que": "Todas describen la misma fase 'Affirm' del proceso de venta, centrada en gestionar el remordimiento del comprador.",
         "quedaria": "Fase Affirm: Gestionar el Remordimiento del Comprador"
-      }
+      },
+      "sobrevive": "fase_affirm_buyers_remorse",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -382,7 +408,9 @@
         "fundir": true,
         "por_que": "Todas describen la misma técnica de venta SPIN: preguntas de necesidad-beneficio (need-payoff).",
         "quedaria": "Preguntas de Necesidad-Beneficio (Need-Payoff Questions)"
-      }
+      },
+      "sobrevive": "preguntas_need_payoff",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -451,7 +479,9 @@
         "fundir": true,
         "por_que": "Todas describen la misma técnica de MVP Concierge: entrega manual y personalizada sin escalar.",
         "quedaria": "MVP Conserje (Concierge MVP)"
-      }
+      },
+      "sobrevive": "concierge_mvp",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -519,7 +549,9 @@
         "fundir": true,
         "por_que": "Todas describen el mismo concepto de earlyvangelists como clientes visionarios con las mismas características distintivas.",
         "quedaria": "Earlyvangelists: Los Clientes Visionarios"
-      }
+      },
+      "sobrevive": "identificar_earlyvangelists",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -589,7 +621,9 @@
         "fundir": true,
         "por_que": "Mismo principio de Customer Development: preservar caja durante la búsqueda e invertir agresivamente al encontrar el modelo.",
         "quedaria": "Preservar Caja Mientras se Busca, Gastar Cuando se Encuentra"
-      }
+      },
+      "sobrevive": "preservar_efectivo_buscar_modelo",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -655,7 +689,9 @@
         "fundir": true,
         "por_que": "Todas listan el mismo catálogo de modelos de fijación de precios para elegir según mercado y producto.",
         "quedaria": "Modelos y Tácticas de Fijación de Precios"
-      }
+      },
+      "sobrevive": "seleccion_estrategia_pricing",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -705,7 +741,9 @@
         "fundir": true,
         "por_que": "Ambas describen la misma práctica de actualizar el BMC tras cada ronda de Customer Discovery, enfocándose en propuesta de valor.",
         "quedaria": "Actualización Iterativa del Business Model Canvas ('Tune-up')"
-      }
+      },
+      "sobrevive": "actualizar_business_model_canvas_tuneup",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -756,7 +794,9 @@
         "fundir": true,
         "por_que": "Ambas describen el mismo uso de IA/LLMs en las mismas áreas clave de supply chain (pronóstico, rutas, almacén).",
         "quedaria": "Inteligencia Artificial Aplicada a la Cadena de Suministro"
-      }
+      },
+      "sobrevive": "ia_en_supply_chain",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -807,7 +847,9 @@
         "fundir": true,
         "por_que": "Ambas describen la misma técnica de análisis de cohortes para detectar patrones de retención por segmento.",
         "quedaria": "Análisis de Cohortes para Retención de Clientes"
-      }
+      },
+      "sobrevive": "analisis_de_cohortes",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -860,7 +902,9 @@
         "fundir": true,
         "por_que": "Ambas describen la misma técnica lean de mapear el flujo de valor para eliminar actividades sin valor.",
         "quedaria": "Análisis de Flujo de Valor (Value-Stream Analysis) para Lean Idea-to-Launch"
-      }
+      },
+      "sobrevive": "analisis_flujo_de_valor",
+      "sobrevive_por": "semilla"
     },
     {
       "nodos": [
@@ -913,7 +957,9 @@
         "fundir": true,
         "por_que": "Ambas describen el mismo concepto de definir arenas estratégicas antes de generar ideas de producto.",
         "quedaria": "Selección de Arenas Estratégicas (Pick Your Battlefields)"
-      }
+      },
+      "sobrevive": "seleccion_arenas_estrategicas",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -965,7 +1011,9 @@
         "fundir": true,
         "por_que": "Ambas describen el mismo proceso de tres pasos del Bullseye Framework para hallar el canal de tracción.",
         "quedaria": "Bullseye Framework (Diana de Tracción)"
-      }
+      },
+      "sobrevive": "bullseye_framework",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1016,7 +1064,9 @@
         "fundir": true,
         "por_que": "Ambas describen el mismo uso del BMC como scorecard semanal para rastrear pivotes durante Customer Discovery.",
         "quedaria": "Business Model Canvas como Scorecard de Customer Discovery"
-      }
+      },
+      "sobrevive": "business_model_canvas_scorecard",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1069,7 +1119,9 @@
         "fundir": true,
         "por_que": "Ambas describen la misma regla del Manifiesto: reemplazar el plan de negocio estático por el BMC dinámico.",
         "quedaria": "Business Model Canvas vs. Plan de Negocio Tradicional"
-      }
+      },
+      "sobrevive": "business_model_canvas_vs_plan",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1120,7 +1172,9 @@
         "fundir": true,
         "por_que": "Ambas describen la misma necesidad de alinear a fundadores, junta e inversionistas antes de iniciar Customer Development.",
         "quedaria": "Buy-In del Equipo y la Junta para Customer Development"
-      }
+      },
+      "sobrevive": "buyin_customer_development",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1171,14 +1225,18 @@
         "fundir": true,
         "por_que": "Ambas describen el mismo principio de aplicar calidad total (TQM/DIRTFT) al proceso de innovación.",
         "quedaria": "Calidad de Ejecución en el Proceso de Innovación"
-      }
+      },
+      "sobrevive": "calidad_de_ejecucion_proceso_innovacion",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
         "catalogo_pivotes",
+        "pivote_startup",
+        "reempaquetado_producto",
         "tipos_de_pivote"
       ],
-      "tam": 2,
+      "tam": 4,
       "etapas": [
         "planificacion",
         "validacion"
@@ -1204,6 +1262,39 @@
           "hallazgos": []
         },
         {
+          "id": "pivote_startup",
+          "titulo": "Pivot (Pivote)",
+          "etapa": "validacion",
+          "etiqueta": "Cambia tu Modelo de Negocio",
+          "condiciones_activacion": [
+            "Si los datos de clientes contradicen las hipótesis iniciales del modelo de negocio",
+            "Si la startup está estancada y necesita un cambio dramático para avanzar"
+          ],
+          "visitas": 23,
+          "cosechas": 18,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 10,
+          "hallazgos": []
+        },
+        {
+          "id": "reempaquetado_producto",
+          "titulo": "Reempaquetado del Producto (Estrategia de Pivote)",
+          "etapa": "validacion",
+          "etiqueta": "Repiensa el Empaque del Producto",
+          "condiciones_activacion": [
+            "Cuando la tecnología central es válida pero el mercado no reacciona bien a cómo se vende el producto",
+            "Cuando un paquete monolítico resulta muy caro o complejo de vender",
+            "Si el producto tiene buena tecnología pero baja conversión de compra debido a su forma de venta"
+          ],
+          "visitas": 5,
+          "cosechas": 5,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
           "id": "tipos_de_pivote",
           "titulo": "Tipos de Pivote (Zoom-in, Segmento de Cliente, Plataforma)",
           "etapa": "planificacion",
@@ -1222,11 +1313,17 @@
         }
       ],
       "veredicto": {
-        "grupo": 18,
-        "fundir": true,
-        "por_que": "Ambas presentan el mismo catálogo de tipos de pivote (zoom-in, segmento de cliente, plataforma, etc.).",
-        "quedaria": "Catálogo de Tipos de Pivote"
-      }
+        "grupo": 1,
+        "fundir": false,
+        "por_que": "Mezcla conceptos distintos: la definición general de pivote, el catálogo/tipos de pivote y una estrategia específica (reempaquetado) que implica acciones muy distintas cada una.",
+        "quedaria": ""
+      },
+      "ampliado_a_mano": [
+        "pivote_startup",
+        "reempaquetado_producto"
+      ],
+      "sobrevive": "pivote_startup",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1278,7 +1375,9 @@
         "fundir": true,
         "por_que": "Ambas describen la misma distinción de Horowitz entre liderazgo en tiempos de paz y de guerra.",
         "quedaria": "CEO de Guerra vs. CEO de Paz"
-      }
+      },
+      "sobrevive": "ceo_de_guerra_vs_paz",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1328,7 +1427,9 @@
         "fundir": true,
         "por_que": "Mismo formulario y mismo proceso de revisión por el Comité de Control de Cambios.",
         "quedaria": "Solicitud de Cambio (Change Request)"
-      }
+      },
+      "sobrevive": "solicitud_cambio",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1379,7 +1480,9 @@
         "fundir": true,
         "por_que": "Ambas describen el mismo modelo de cuatro cuadrantes de mercado según oferta y demanda, con la misma acción de clasificar el mercado.",
         "quedaria": "Clasificación de Mercados por Oferta y Demanda"
-      }
+      },
+      "sobrevive": "clasificacion_mercados_cadena_suministro",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1431,7 +1534,9 @@
         "fundir": true,
         "por_que": "Ambas describen los mismos elementos de clima y cultura organizacional que diferencian a los mejores innovadores.",
         "quedaria": "Clima y Cultura Organizacional que Fomenta la Innovación"
-      }
+      },
+      "sobrevive": "cultura_de_innovacion",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1482,7 +1587,9 @@
         "fundir": false,
         "por_que": "El primero advierte específicamente sobre riesgos de fundar con amigos/familia; el segundo mapea el riesgo según todo el espectro de relaciones previas, guiando una decisión más amplia de con quién cofundar.",
         "quedaria": ""
-      }
+      },
+      "sobrevive": "cofundar_con_amigos_familia_riesgos",
+      "sobrevive_por": "primero"
     },
     {
       "nodos": [
@@ -1533,7 +1640,9 @@
         "fundir": true,
         "por_que": "Ambas explican la misma distinción matizada entre qué costos van en COGS/COS versus gastos operativos.",
         "quedaria": "Distinción entre COGS y Gastos Operativos"
-      }
+      },
+      "sobrevive": "distincion_cogs_gastos_operativos",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1584,7 +1693,9 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo eje de motivaciones riqueza vs control entre cofundadores y sus implicaciones.",
         "quedaria": "Compatibilidad de Motivaciones: Riqueza vs. Control"
-      }
+      },
+      "sobrevive": "compatibilidad_motivaciones_riqueza_control",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1635,7 +1746,9 @@
         "fundir": true,
         "por_que": "Mismo hábito de comunicar aprendizaje continuamente durante el descubrimiento de clientes.",
         "quedaria": "Comunicar y Compartir el Aprendizaje Continuamente"
-      }
+      },
+      "sobrevive": "comunicacion_aprendizaje_continuo",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1685,7 +1798,9 @@
         "fundir": false,
         "por_que": "Uno es la ejecución legal de ofrecer contratos de servicio y otro es la distinción conceptual entre garantía y contrato de servicio, usados en momentos distintos.",
         "quedaria": ""
-      }
+      },
+      "sobrevive": "contratos_de_servicio_garantia",
+      "sobrevive_por": "primero"
     },
     {
       "nodos": [
@@ -1734,7 +1849,9 @@
         "fundir": true,
         "por_que": "Es el mismo plan de gestión de costos, uno en inglés y otro en español.",
         "quedaria": "Plan de Gestión de Costos"
-      }
+      },
+      "sobrevive": "cost_management_plan",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1784,7 +1901,9 @@
         "fundir": true,
         "por_que": "Mismo documento de cronograma del proyecto, en inglés y español.",
         "quedaria": "Cronograma del Proyecto (Project Schedule)"
-      }
+      },
+      "sobrevive": "cronograma_proyecto",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1836,7 +1955,9 @@
         "fundir": true,
         "por_que": "Ambos describen las mismas cuatro categorías de desempeño de la cadena de suministro.",
         "quedaria": "Cuatro Categorías de Desempeño de la Cadena de Suministro"
-      }
+      },
+      "sobrevive": "cuatro_categorias_desempeno_cadena_suministro",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -1889,7 +2010,9 @@
         "fundir": true,
         "por_que": "Duplicado del mismo modelo de Wallas de cuatro etapas del pensamiento creativo.",
         "quedaria": "Las Cuatro Etapas del Pensamiento Creativo (Wallas)"
-      }
+      },
+      "sobrevive": "cuatro_etapas_del_pensamiento_creativo",
+      "sobrevive_por": "semilla"
     },
     {
       "nodos": [
@@ -1941,7 +2064,9 @@
         "fundir": true,
         "por_que": "Mismo requisito legal de vender solo a inversionistas acreditados, con distinto nombre.",
         "quedaria": "Cumplimiento con Regulación de Inversionistas Acreditados"
-      }
+      },
+      "sobrevive": "cumplimiento_inversionistas_acreditados",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -1992,7 +2117,9 @@
         "fundir": false,
         "por_que": "Magnuson-Moss regula requisitos generales de garantías escritas, mientras que la Disclosure Rule es una obligación específica de la FTC sobre divulgación de términos; llevan a acciones de cumplimiento distintas.",
         "quedaria": ""
-      }
+      },
+      "sobrevive": "cumplimiento_magnuson_moss",
+      "sobrevive_por": "primero"
     },
     {
       "nodos": [
@@ -2044,19 +2171,59 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo proceso de adquisición y activación en canales web/mobile.",
         "quedaria": "Embudo de Adquisición y Activación Web/Mobile"
-      }
+      },
+      "sobrevive": "get_customers_funnel_webmobile",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
+        "customer_development_process",
+        "customer_discovery",
         "customer_discovery_cuatro_fases",
-        "customer_discovery_overview"
+        "customer_discovery_get_out_of_building",
+        "customer_discovery_introduccion",
+        "customer_discovery_overview",
+        "get_out_of_the_building",
+        "manifiesto_regla1_hechos_fuera_del_edificio"
       ],
-      "tam": 2,
+      "tam": 8,
       "etapas": [
         "validacion"
       ],
       "toca_puerta": false,
       "miembros": [
+        {
+          "id": "customer_development_process",
+          "titulo": "Proceso de Customer Development",
+          "etapa": "validacion",
+          "etiqueta": "Descubre, Valida, Crea y Escala",
+          "condiciones_activacion": [
+            "Cuando el usuario necesita ubicar en qué etapa de validación está su startup",
+            "Si aún no ha salido a hablar con clientes reales"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "customer_discovery",
+          "titulo": "Customer Discovery",
+          "etapa": "validacion",
+          "etiqueta": "Descubre a tus Clientes",
+          "condiciones_activacion": [
+            "Si la startup solo tiene una visión del founder sin hechos de mercado",
+            "Si aún no se ha probado el problema/solución con clientes reales"
+          ],
+          "visitas": 41,
+          "cosechas": 20,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 10,
+          "hallazgos": []
+        },
         {
           "id": "customer_discovery_cuatro_fases",
           "titulo": "Las Cuatro Fases del Customer Discovery",
@@ -2074,6 +2241,38 @@
           "hallazgos": []
         },
         {
+          "id": "customer_discovery_get_out_of_building",
+          "titulo": "Customer Discovery: Salir del Edificio",
+          "etapa": "validacion",
+          "etiqueta": "Sal del Edificio a Validar",
+          "condiciones_activacion": [
+            "Cuando el equipo tiene un plan de negocio basado solo en supuestos internos sin validar",
+            "Si el startup aún no ha hablado con clientes reales"
+          ],
+          "visitas": 34,
+          "cosechas": 32,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "customer_discovery_introduccion",
+          "titulo": "Introducción al Customer Discovery",
+          "etapa": "validacion",
+          "etiqueta": "Convierte Hipótesis en Hechos",
+          "condiciones_activacion": [
+            "Al iniciar la etapa de validación de una startup",
+            "Si el equipo tiene un plan de negocio pero no ha hablado con clientes reales"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
           "id": "customer_discovery_overview",
           "titulo": "Proceso de Customer Discovery (Cuatro Fases)",
           "etapa": "validacion",
@@ -2088,14 +2287,56 @@
           "cabeza_de_rama": false,
           "entrantes": 2,
           "hallazgos": []
+        },
+        {
+          "id": "get_out_of_the_building",
+          "titulo": "Get Out of the Building (Salir del Edificio)",
+          "etapa": "validacion",
+          "etiqueta": "Sal a Hablar con Clientes",
+          "condiciones_activacion": [
+            "Si el equipo está construyendo producto sin validar con clientes reales",
+            "Si las decisiones se basan en suposiciones internas del equipo"
+          ],
+          "visitas": 12,
+          "cosechas": 12,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "manifiesto_regla1_hechos_fuera_del_edificio",
+          "titulo": "No Hay Hechos Dentro del Edificio: Sal a Buscarlos",
+          "etapa": "validacion",
+          "etiqueta": "Sal a Buscar los Hechos",
+          "condiciones_activacion": [
+            "Al iniciar el proceso de Customer Discovery",
+            "Cuando el equipo depende demasiado de reportes internos en lugar de contacto directo con clientes"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
         }
       ],
       "veredicto": {
-        "grupo": 35,
-        "fundir": true,
-        "por_que": "Mismo proceso de cuatro fases del Customer Discovery descrito dos veces.",
-        "quedaria": "Las Cuatro Fases del Customer Discovery"
-      }
+        "grupo": 2,
+        "fundir": false,
+        "por_que": "Agrupa niveles distintos: el proceso completo de Customer Development (4 pasos macro), el Customer Discovery como paso específico y el principio 'Get Out of the Building', cada uno con acciones distintas para el emprendedor.",
+        "quedaria": ""
+      },
+      "ampliado_a_mano": [
+        "manifiesto_regla1_hechos_fuera_del_edificio",
+        "get_out_of_the_building",
+        "customer_discovery",
+        "customer_discovery_introduccion",
+        "customer_development_process",
+        "customer_discovery_get_out_of_building"
+      ],
+      "sobrevive": "customer_discovery",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -2146,7 +2387,9 @@
         "fundir": true,
         "por_que": "La estrategia y las tácticas de retención describen el mismo esfuerzo de reducir el churn con las mismas herramientas.",
         "quedaria": "Tácticas de Retención de Clientes (Keep)"
-      }
+      },
+      "sobrevive": "customer_retention_tactics",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2198,7 +2441,9 @@
         "fundir": true,
         "por_que": "Ambos describen los escenarios de cliente como herramienta para el diseño del modelo de negocio.",
         "quedaria": "Escenarios para Guiar el Diseño del Modelo de Negocio"
-      }
+      },
+      "sobrevive": "escenarios_diseno_modelo_negocio",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -2248,7 +2493,9 @@
         "fundir": true,
         "por_que": "Mismo mapeo de roles (usuario, influenciador, recomendador, etc.) en la decisión de compra.",
         "quedaria": "Tipos de Clientes en el Proceso de Decisión de Compra"
-      }
+      },
+      "sobrevive": "tipos_de_clientes",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -2300,7 +2547,9 @@
         "fundir": false,
         "por_que": "Uno cubre Customer Validation y el sales roadmap en general, el otro es una advertencia específica contra contratar fuerza de ventas prematuramente.",
         "quedaria": ""
-      }
+      },
+      "sobrevive": "customer_validation_sales_roadmap",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -2351,7 +2600,9 @@
         "fundir": true,
         "por_que": "Ambos tratan la misma clasificación de decisiones reversibles vs irreversibles y su velocidad de ejecución.",
         "quedaria": "Decisiones Reversibles vs Irreversibles"
-      }
+      },
+      "sobrevive": "decisiones_reversibles_irreversibles",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2403,7 +2654,9 @@
         "fundir": true,
         "por_que": "Mismo concepto de definir y seleccionar gatekeepers con las mismas responsabilidades.",
         "quedaria": "Definición y Selección de Gatekeepers"
-      }
+      },
+      "sobrevive": "definicion_gatekeepers",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2455,7 +2708,9 @@
         "fundir": true,
         "por_que": "Mismo concepto de redefinir 'sprint terminado' para productos físicos.",
         "quedaria": "Definir un 'Sprint Terminado' para Productos Físicos"
-      }
+      },
+      "sobrevive": "definicion_sprint_terminado_fisico",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2509,7 +2764,9 @@
         "fundir": true,
         "por_que": "Mismo enfoque de desarrollo en espiral iterativo de construir-probar-revisar.",
         "quedaria": "Desarrollo en Espiral (Spiral Development)"
-      }
+      },
+      "sobrevive": "desarrollo_en_espiral",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -2560,7 +2817,9 @@
         "fundir": true,
         "por_que": "Mismo marco de los cuatro tipos de mercado para definir estrategia de startup.",
         "quedaria": "Determinar el Tipo de Mercado"
-      }
+      },
+      "sobrevive": "determinar_tipo_de_mercado",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -2609,7 +2868,9 @@
         "fundir": true,
         "por_que": "Ambos tratan la necesidad de mantener al equipo durante todo el ciclo del proyecto de diseño disruptivo.",
         "quedaria": "Diseñar para el Ciclo Completo del Proyecto"
-      }
+      },
+      "sobrevive": "diseno_para_el_ciclo_completo",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2660,7 +2921,9 @@
         "fundir": true,
         "por_que": "Mismo concepto del balancín entre salario en efectivo y equity en compensación.",
         "quedaria": "El Balancín Salario vs. Equity"
-      }
+      },
+      "sobrevive": "seesaw_salario_equity",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2709,7 +2972,9 @@
         "fundir": true,
         "por_que": "Mismo ciclo de convertir hipótesis en experimentos pass/fail para validarlas.",
         "quedaria": "Diseño de Experimentos Pass/Fail para Validar Hipótesis"
-      }
+      },
+      "sobrevive": "diseno_experimentos_pass_fail",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -2758,7 +3023,9 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo diseño de landing page en los mismos cuatro ejes para lograr activación/conversión.",
         "quedaria": "Diseño de Landing Page para Activación"
-      }
+      },
+      "sobrevive": "diseno_landing_page",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2811,7 +3078,9 @@
         "fundir": true,
         "por_que": "Mismo concepto del índice de reparabilidad inspirado en la ley francesa.",
         "quedaria": "Diseñar un Índice de Reparabilidad"
-      }
+      },
+      "sobrevive": "indice_de_reparabilidad",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2862,7 +3131,9 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo concepto: la información como driver que conecta y coordina las decisiones de la cadena de suministro.",
         "quedaria": "El Rol de la Información como Driver de la Cadena de Suministro"
-      }
+      },
+      "sobrevive": "information_driver_supply_chain",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2912,7 +3183,9 @@
         "fundir": true,
         "por_que": "Definen y aplican el mismo concepto de drones/vehículos autónomos en logística con casi idéntica descripción.",
         "quedaria": "Drones y Vehículos Autónomos en la Cadena de Suministro"
-      }
+      },
+      "sobrevive": "vehiculos_autonomos_drones_supply_chain",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -2963,7 +3236,9 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo hallazgo: la IA reduce la brecha de desempeño elevando a los trabajadores de bajo rendimiento.",
         "quedaria": "IA como Nivelador de Habilidades (Great Leveler)"
-      }
+      },
+      "sobrevive": "ia_como_nivelador_habilidades",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3015,7 +3290,9 @@
         "fundir": true,
         "por_que": "Es el mismo framework 'Get, Keep, Grow' descrito con las mismas palabras y propósito.",
         "quedaria": "Framework 'Get, Keep, Grow' Customers"
-      }
+      },
+      "sobrevive": "embudo_get_keep_grow",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -3066,7 +3343,9 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo error (enfocarse en características y ventajas) y la misma recomendación de evitarlo en lanzamientos.",
         "quedaria": "Evitar el Enfoque 'Bells-and-Whistles' en Lanzamientos de Nuevos Productos"
-      }
+      },
+      "sobrevive": "lanzamiento_nuevos_productos_enfoque_problema",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3118,7 +3397,9 @@
         "fundir": true,
         "por_que": "Ambos explican qué es y cómo leer el balance general (activos, pasivos, patrimonio).",
         "quedaria": "Lectura y Análisis del Balance General"
-      }
+      },
+      "sobrevive": "lectura_balance_general",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -3169,7 +3450,9 @@
         "fundir": true,
         "por_que": "Ambos tratan la misma idea de Wallas: ser 'amo y no esclavo' de los hábitos y romperlos cuando se vuelven improductivos.",
         "quedaria": "Ruptura Deliberada de Hábitos para Renovar el Estímulo Creativo"
-      }
+      },
+      "sobrevive": "ruptura_de_habitos_para_estimulo",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3221,7 +3504,9 @@
         "fundir": true,
         "por_que": "Describen los mismos tres espacios superpuestos del design thinking con la misma estructura conceptual.",
         "quedaria": "Los Tres Espacios del Design Thinking: Inspiración, Ideación e Implementación"
-      }
+      },
+      "sobrevive": "espacios_de_diseno_superpuestos",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3274,7 +3559,9 @@
         "fundir": true,
         "por_que": "Ambos explican las mismas tres categorías del estado de flujo de efectivo/caja.",
         "quedaria": "Lectura del Estado de Flujo de Efectivo"
-      }
+      },
+      "sobrevive": "estado_flujo_de_caja_tres_categorias",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -3326,7 +3613,9 @@
         "fundir": true,
         "por_que": "Misma estrategia de re-segmentar el mercado ante un competidor dominante, mismas tácticas (nicho o bajo costo).",
         "quedaria": "Re-segmentación de Mercado (Nicho o Bajo Costo)"
-      }
+      },
+      "sobrevive": "resegmentacion_mercado_nicho_bajo_costo",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -3376,7 +3665,9 @@
         "fundir": true,
         "por_que": "Es la misma etapa del proceso descrita con título traducido y contenido casi idéntico.",
         "quedaria": "Etapa 4: Pruebas y Validación"
-      }
+      },
+      "sobrevive": "etapa_testing_validation",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -3428,7 +3719,9 @@
         "fundir": true,
         "por_que": "Ambos describen la misma técnica de usar materiales/medios inesperados para revelar sesgos de diseño.",
         "quedaria": "Use Unconventional Mediums: Prototipar con Materiales Inesperados"
-      }
+      },
+      "sobrevive": "prototipar_con_medios_no_convencionales",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3479,7 +3772,9 @@
         "fundir": true,
         "por_que": "Misma fase de investigación/inmersión en el entorno del modelo de negocio, mismas actividades descritas.",
         "quedaria": "Fase de Entendimiento: Investigación del Entorno"
-      }
+      },
+      "sobrevive": "fase_entendimiento_investigacion_mercado",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3531,7 +3826,9 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo conjunto de diez actividades de 'homework' previas al desarrollo.",
         "quedaria": "Front-End Loading / Homework Predesarrollo"
-      }
+      },
+      "sobrevive": "homework_frontend_loading",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3583,7 +3880,9 @@
         "fundir": true,
         "por_que": "Ambos tratan la evolución de las fuentes de contratación ejecutiva (red del fundador vs red externa/inversor) con los mismos datos.",
         "quedaria": "Fuentes de Contratación de Ejecutivos"
-      }
+      },
+      "sobrevive": "fuentes_contratacion_ejecutivos",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3634,7 +3933,9 @@
         "fundir": true,
         "por_que": "Describen el mismo sistema de revisión periódica de portafolio integrado con gates.",
         "quedaria": "Sistema Formal de Gestión de Portafolio Integrado con Gates"
-      }
+      },
+      "sobrevive": "gestion_portafolio_formal",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3685,7 +3986,9 @@
         "fundir": true,
         "por_que": "Son las mismas cinco reglas de gestión de riesgo basadas en la analogía de apuestas.",
         "quedaria": "Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)"
-      }
+      },
+      "sobrevive": "reglas_gestion_riesgo_gambling",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3737,7 +4040,9 @@
         "fundir": true,
         "por_que": "Ambos advierten sobre el mismo error de omitir homework/VoC en metodologías Agile-Stage-Gate.",
         "quedaria": "Necesidad de Homework Temprano y Voice-of-Customer en Metodologías Ágiles"
-      }
+      },
+      "sobrevive": "voc_temprano_en_agile_stage_gate",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3788,7 +4093,9 @@
         "fundir": true,
         "por_que": "Ambos describen la misma idea de Wallas sobre el humor como ruptura de censuras internas.",
         "quedaria": "El Sentido del Humor como Ruptura de Barreras Cognitivas"
-      }
+      },
+      "sobrevive": "sentido_del_humor_como_herramienta_de_pensamiento",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3841,7 +4148,9 @@
         "fundir": true,
         "por_que": "Ambos describen cómo identificar pensadores de diseño marginados dentro de la organización.",
         "quedaria": "Encontrar Talento de Design Thinking dentro de la Organización"
-      }
+      },
+      "sobrevive": "identificar_pensadores_de_diseno_internos",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -3894,7 +4203,9 @@
         "fundir": true,
         "por_que": "Ambos describen identificar durante customer discovery a personas que pueden ser asesores informales.",
         "quedaria": "Identificar los Primeros Miembros del Consejo Asesor"
-      }
+      },
+      "sobrevive": "identificar_consejo_asesores",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -3947,7 +4258,9 @@
         "fundir": true,
         "por_que": "Es la misma herramienta canvas para mapear el plan de acción del proyecto de innovación.",
         "quedaria": "Innovation Project Canvas"
-      }
+      },
+      "sobrevive": "lienzo_proyecto_innovacion",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -3999,7 +4312,9 @@
         "fundir": true,
         "por_que": "Ambos describen la misma estrategia 'Keep' de retención de clientes con las mismas tácticas de bajo costo.",
         "quedaria": "Estrategia de Retención de Clientes (Keep)"
-      }
+      },
+      "sobrevive": "keep_customers_strategy",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -4049,7 +4364,9 @@
         "fundir": true,
         "por_que": "Ambos describen el mismo kit de bienvenida diseñado para sorprender y deleitar al nuevo cliente.",
         "quedaria": "Kit de 'Shock and Awe' para Nuevos Clientes"
-      }
+      },
+      "sobrevive": "shock_and_awe_kit_bienvenida",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4100,7 +4417,9 @@
         "fundir": true,
         "por_que": "Ambos definen igual la diferencia entre pivote (cambio sustantivo) e iteración (cambio menor) en el Business Model Canvas.",
         "quedaria": "Pivotes e Iteraciones Continuas"
-      }
+      },
+      "sobrevive": "pivotes_e_iteraciones",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4150,7 +4469,9 @@
         "fundir": true,
         "por_que": "Mismo concepto (tipo de mercado determina curva de ingresos) con títulos casi idénticos",
         "quedaria": "El Tipo de Mercado Afecta la Curva de Ingresos"
-      }
+      },
+      "sobrevive": "market_type_revenue_growth",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -4200,7 +4521,9 @@
         "fundir": true,
         "por_que": "Ambos describen las mismas cuatro métricas de comportamiento del cliente para medir entusiasmo real",
         "quedaria": "Medir el Comportamiento del Cliente (Purchase, Engagement, Retention, Referral)"
-      }
+      },
+      "sobrevive": "medir_comportamiento_cliente_mvp",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -4255,7 +4578,9 @@
         "fundir": true,
         "por_que": "Mismo método de Strategic Buckets con traducción de nombre distinta",
         "quedaria": "Método de Strategic Buckets (Cubetas Estratégicas)"
-      }
+      },
+      "sobrevive": "metodo_strategic_buckets",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4307,7 +4632,9 @@
         "fundir": true,
         "por_que": "Mismo concepto de distinción entre métricas de vanidad y accionables",
         "quedaria": "Métricas Accionables vs Métricas de Vanidad"
-      }
+      },
+      "sobrevive": "metricas_accionables",
+      "sobrevive_por": "semilla"
     },
     {
       "nodos": [
@@ -4358,7 +4685,9 @@
         "fundir": true,
         "por_que": "Mismo enfoque Metrics That Matter para validar viabilidad financiera del modelo de negocio",
         "quedaria": "Metrics That Matter (Métricas que Importan)"
-      }
+      },
+      "sobrevive": "metrics_that_matter_framework",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -4410,7 +4739,9 @@
         "fundir": true,
         "por_que": "Mismo modelo SPIN de secuencia de preguntas de venta",
         "quedaria": "Modelo SPIN: Secuencia de Preguntas para Ventas Grandes"
-      }
+      },
+      "sobrevive": "modelo_spin_preguntas",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -4460,7 +4791,9 @@
         "fundir": true,
         "por_que": "Mismo patrón de modelo de negocio de plataformas multilaterales",
         "quedaria": "Plataformas Multilaterales (Multi-Sided Platforms)"
-      }
+      },
+      "sobrevive": "multi_sided_platforms",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4511,7 +4844,9 @@
         "fundir": true,
         "por_que": "Mismo concepto de optimizar crecimiento de ingresos por cliente vía upsell/referidos",
         "quedaria": "Optimización de Métricas de Crecimiento (Grow Customers)"
-      }
+      },
+      "sobrevive": "optimizacion_metricas_crecimiento",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4565,7 +4900,9 @@
         "fundir": true,
         "por_que": "Mismo concepto de prevenir objeciones en lugar de manejarlas",
         "quedaria": "Prevención de Objeciones vs. Manejo de Objeciones"
-      }
+      },
+      "sobrevive": "prevencion_objeciones_vs_manejo",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -4617,7 +4954,9 @@
         "fundir": true,
         "por_que": "Mismo tema de cumplimiento legal FTC al publicitar garantías",
         "quedaria": "Publicidad Correcta de Garantías y Guarantees"
-      }
+      },
+      "sobrevive": "publicidad_garantia_conforme",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4668,7 +5007,9 @@
         "fundir": true,
         "por_que": "Mismo concepto de reconstruir el equipo ejecutivo tras cambio de modelo/etapa",
         "quedaria": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio"
-      }
+      },
+      "sobrevive": "reconstruccion_de_equipo_ejecutivo",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4718,7 +5059,9 @@
         "fundir": true,
         "por_que": "Mismo documento de reporte periódico del miembro del equipo",
         "quedaria": "Reporte de Estado del Miembro del Equipo"
-      }
+      },
+      "sobrevive": "reporte_estado_miembro_equipo",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4769,7 +5112,9 @@
         "fundir": true,
         "por_que": "Mismo riesgo de precedente por términos en ronda seed/semilla",
         "quedaria": "Riesgos de Precedente en Rondas Semilla"
-      }
+      },
+      "sobrevive": "seed_deals_riesgos_precedente",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4822,7 +5167,9 @@
         "fundir": true,
         "por_que": "Mismo sistema de gates/compuertas con criterios go/kill en el embudo de innovación",
         "quedaria": "Sistema de Gates (Puntos de Decisión Go/Kill)"
-      }
+      },
+      "sobrevive": "sistema_gates_go_kill",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4876,7 +5223,9 @@
         "fundir": true,
         "por_que": "Misma herramienta Strat-Map de mapeo/priorización de arenas estratégicas",
         "quedaria": "Strat-Map: Mapeo de Arenas Estratégicas"
-      }
+      },
+      "sobrevive": "strat_map_arenas_estrategicas",
+      "sobrevive_por": "propuesto"
     },
     {
       "nodos": [
@@ -4929,7 +5278,9 @@
         "fundir": true,
         "por_que": "Mismo concepto de validar la estrategia de canal con socios de distribución",
         "quedaria": "Validar Socios de Canal de Distribución (Channel Partners)"
-      }
+      },
+      "sobrevive": "validar_canal_distribucion",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -4979,7 +5330,9 @@
         "fundir": true,
         "por_que": "Mismo proceso de consolidar datos para pronóstico de ingresos y evaluar rentabilidad",
         "quedaria": "Verificar si el Negocio Puede Ser Rentable (Revenue Model Data)"
-      }
+      },
+      "sobrevive": "verificar_modelo_ingresos",
+      "sobrevive_por": "telemetría"
     },
     {
       "nodos": [
@@ -5028,8 +5381,12 @@
         "fundir": true,
         "por_que": "Misma práctica del War Room para decisión pivot-or-proceed",
         "quedaria": "Crear un 'War Room' para el Análisis Pivot-or-Proceed"
-      }
+      },
+      "sobrevive": "war_room_pivot_proceed",
+      "sobrevive_por": "telemetría"
     }
   ],
-  "costo_veredictos_usd": 0.2
+  "costo_veredictos_usd": 0.2,
+  "regla_superviviente": "SEMILLA > TELEMETRIA > PROPUESTO; entre dos semillas decide la telemetria",
+  "costo_veredictos_gordas_usd": 0.03
 }

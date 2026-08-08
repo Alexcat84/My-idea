@@ -35,6 +35,12 @@ BASE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from censo_duplicacion import BARANDAS, revisar_barandas  # noqa: E402
 
+# Las PUERTAS de entrada. Se leen del asset que usa el motor de verdad, no de
+# una copia: la precedencia del superviviente depende de esto y una lista vieja
+# aqui deprecaria una puerta creyendo que no lo era.
+SEMILLAS = set(json.loads(
+    (BASE / "web" / "lib" / "assets" / "entry_seeds.json").read_text(encoding="utf-8"))["seeds"])
+
 ETAPA = {"ideacion": "ideación", "validacion": "validación",
          "planificacion": "planificación", "ejecucion": "ejecución"}
 NOMBRE_BARANDA = {
@@ -98,7 +104,30 @@ def main():
     # menos fricción crea con project_nodes, que es historia de gente real. El
     # contenido del propuesto no se pierde: se rescata DENTRO del superviviente.
     # Sin historia en ningun nodo del cluster, manda el propuesto.
+    # LA PRECEDENCIA (adjudicada ago 2026, Fase 2 de la curacion del motor):
+    #
+    #     SEMILLA  >  TELEMETRIA  >  PROPUESTO
+    #
+    # Entre DOS semillas del mismo cluster decide la telemetria.
+    #
+    # POR QUE, y salio de un caso real: en el cluster 11 del nucleo la regla
+    # vieja habria deprecado la semilla `analisis_flujo_de_valor` (0 visitas)
+    # en favor de `value_stream_analysis_lean` (1 visita). UNA VISITA CONTRA
+    # CERO cerrando una puerta de entrada del recorrido.
+    #
+    #   "Las visitas de una PUERTA y las de un nodo INTERIOR miden cosas
+    #    distintas, asi que no compiten."
+    #
+    # El Gate 0 lo habria cazado despues ("ninguna semilla deprecada"), y por
+    # eso el arreglo va aqui:
+    #
+    #   "El Gate es el paracaidas, no el diseño."
     def superviviente(c, v):
+        semillas = [n for n in c if n in SEMILLAS]
+        if semillas:
+            elegido = max(semillas, key=lambda n: (vis.get(n, 0), cos.get(n, 0)))
+            return elegido, ("semilla" if len(semillas) == 1
+                             else "semilla (dos en el cluster: decidio la telemetria)")
         con_historia = [n for n in c if vis.get(n)]
         if con_historia:
             elegido = max(con_historia, key=lambda n: (vis.get(n, 0), cos.get(n, 0)))
@@ -113,7 +142,8 @@ def main():
           f"de los {len(del_pack)} del pack.", "",
           "**Borra las líneas de lo que NO debe fundirse. Lo que quede se consolida.**", "",
           "## La regla del superviviente (vigente)", "",
-          "**Sobrevive el nodo con más historia.** La telemetría es la voz de los "
+          "**SEMILLA > TELEMETRÍA > PROPUESTO.** Si el cluster contiene una semilla de entrada, **la semilla sobrevive siempre**: las visitas de una puerta y las de un nodo interior miden cosas distintas, así que no compiten. Entre dos semillas del mismo cluster decide la telemetría.", "",
+          "Sin semilla, **sobrevive el nodo con más historia.** La telemetría es la voz de los "
           "caminos reales, y conservar el id más pisado es lo que menos fricción crea "
           "con `project_nodes`. El contenido del que proponía el consolidador **no se "
           "pierde**: se rescata dentro del superviviente.", "",
@@ -177,7 +207,7 @@ def main():
     salida.mkdir(parents=True, exist_ok=True)
     (salida / f"INDICE_DE_FUSION_{pack}.md").write_text("\n".join(md), encoding="utf-8")
     (salida / f"_poda_{pack}.json").write_text(json.dumps({
-        "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
+        "regla_superviviente": "SEMILLA > TELEMETRIA > PROPUESTO; entre dos semillas decide la telemetria",
         "pack": pack, "umbral": censo["umbral"],
         "clusters": [{"orden": o, "indice": i, "nodos": c,
                       "similitud": float(peor.get(str(i), 0)),
