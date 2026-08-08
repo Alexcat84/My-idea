@@ -37,6 +37,9 @@ import time
 import unicodedata
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import libro_mayor  # noqa: E402
+
 BASE = Path(__file__).resolve().parent.parent
 NODOS = BASE / "dataset" / "nodos"
 MODEL = "claude-sonnet-5"
@@ -340,7 +343,10 @@ def main():
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n  Regenerados {ok}. Rechazados {len(rechazos)}. "
           f"Titulos cambiados {len(titulos_cambiados)}.")
-    print(f"  Costo de la tanda: ${uso['in']/1e6*PRECIO_IN + uso['out']/1e6*PRECIO_OUT:.2f}")
+    costo = uso["in"] / 1e6 * PRECIO_IN + uso["out"] / 1e6 * PRECIO_OUT
+    libro_mayor.anotar(libro_mayor.pack_del_lote(args.lote), "re-voz", costo,
+                       nodos=ok, lote=Path(args.lote).name, tokens=uso)
+    print(f"  Costo de la tanda: ${costo:.2f}")
     print(f"  Hechos en total: {len(hechos)}/{len(ids)}")
     if titulos_cambiados:
         print("  OJO: hay titulos cambiados; sus aristas entrantes se re-verifican al cierre.")

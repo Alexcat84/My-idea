@@ -483,6 +483,55 @@ la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes 
 tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
 ancla, el correctivo pierde su punto de exposición.
 
+## Ficha: `re-voz-de-environmental` — REGISTRADA, SIN DISPARO
+
+**El plan escalonado del censo está COMPLETO.** Esta ficha no es un pendiente
+del ciclo: es el candidato natural del siguiente, y **el tablero es del
+fundador**.
+
+`environmental` cerró con **291 activos y 23 hallazgos** (7,9%), el más alto de
+los cinco packs de este ciclo y por encima de la media del catálogo (6,6%). Su
+fusión ya corrió; lo que queda es la voz.
+
+No se dispara nada hasta que el fundador lo ponga en el tablero.
+
+## DOCTRINA DE LA VÁLVULA (ago 2026)
+
+> **El título mentía, los pasos no.**
+
+**La válvula de `pasos_accionables` es la última palabra de toda fusión.** Un
+índice de fusión propone por parecido de superficie —título, resumen, sigla,
+vocabulario— y ese parecido es una **pista, no una prueba**. Lo que decide es si
+el lector *hace* lo mismo en los dos sitios. Cuando el solape de pasos cae bajo
+el umbral, la fusión **no se ejecuta y no se discute**: vuelve como duda para
+adjudicación.
+
+En el ciclo del censo revocó **tres** fusiones que el índice daba por hechas, y
+las tres se conservaron como nodos propios. Las adjudicaciones, con el porqué de
+cada par, en `packs/environmental/poda/DUDAS_DE_LA_VALVULA.md` y
+`packs/exportacion/poda/DUDAS_DE_LA_VALVULA.md`.
+
+Corolario: **una institución no es un concepto.** Dos nodos que citan la misma
+sigla pueden pedir cosas opuestas al lector.
+
+## POLÍTICA DEL NÚMERO HONESTO (ago 2026)
+
+> **Un número honesto con su límite declarado vale más que uno redondo de
+> memoria.**
+
+Nace de una confesión propia: al cerrar el ciclo del censo no se pudo certificar
+el costo total. Cada corrida imprimía lo suyo y lo escribía en un informe que la
+corrida siguiente **pisaba**, así que al final solo quedaba la última tanda de
+cada script. La suma habría tenido que salir del chat.
+
+El arreglo: **`docs/COSTOS.jsonl`**, un libro de apéndice —una línea por corrida,
+nunca se reescribe— que `revoz_pack.py` y `consolidar_pack.py` alimentan con
+fecha, pack, operación y costo. `python scripts/libro_mayor.py` lo suma.
+
+Las filas rescatadas del ciclo viejo van marcadas **`parcial`** y el resumen lo
+dice en voz alta: un total con filas dudosas se declara dudoso en vez de sonar
+exacto. **El próximo ciclo cierra con total certificable.**
+
 ## Ficha permanente: `vigencia-del-marco-internacional`
 
 Nace con el ciclo del censo (ago 2026). Los nodos de exportación que citan

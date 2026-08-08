@@ -37,6 +37,9 @@ import sys
 import time
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import libro_mayor  # noqa: E402
+
 BASE = Path(__file__).resolve().parent.parent
 NODOS = BASE / "dataset" / "nodos"
 MODEL = "claude-sonnet-5"
@@ -150,7 +153,7 @@ def main():
     load_dotenv(BASE / ".env")
     cli = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
     uso = {"in": 0, "out": 0}
-    hechos, rechazos, muestra = 0, [], []
+    hechos, rechazos, muestra, absorbidos_hechos = 0, [], [], 0
 
     for c in clusters:
         gana = c["sobrevive"]
@@ -222,6 +225,7 @@ def main():
             rutas[n].write_text(json.dumps(nodos[n], ensure_ascii=False, indent=2), encoding="utf-8")
 
         hechos += 1
+        absorbidos_hechos += len(otros)
         if len(muestra) < 5:
             muestra.append({"cluster": c["orden"], "superviviente": gana,
                             "titulo": d.get("titulo_concepto"),
@@ -236,7 +240,10 @@ def main():
         "tokens": uso,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n  Fundidos {hechos}/{len(clusters)}. Rechazados {len(rechazos)}.")
-    print(f"  Costo: ${uso['in']/1e6*PRECIO_IN + uso['out']/1e6*PRECIO_OUT:.2f}")
+    costo = uso["in"] / 1e6 * PRECIO_IN + uso["out"] / 1e6 * PRECIO_OUT
+    libro_mayor.anotar(args.pack, "consolidacion", costo,
+                       clusters=hechos, absorbidos=absorbidos_hechos, tokens=uso)
+    print(f"  Costo: ${costo:.2f}")
     if rechazos:
         print(f"  Los rechazos, con motivo, en {salida / '_consolidacion.json'}")
 
