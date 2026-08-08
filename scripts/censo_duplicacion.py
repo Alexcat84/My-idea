@@ -269,7 +269,10 @@ BARANDAS = {
         r"\blas empresas deben\b|\blos fundadores deben\b",
         # El IMPERSONAL REFLEXIVO, que es lo que se le escapo a
         # value_proposition_startup ("el trabajo que SE REALIZA para el cliente").
-        r"\bse (?:debe|deben|realiza|traduce|estructura|recomienda|utiliza|busca|espera)\b",
+        # "se debe A" (= es causado por) no es el impersonal de obligacion:
+        # "el silencio se debe a falta de informacion" es correcto. Cazado
+        # leyendo la muestra ciega, no contandola.
+        r"\bse (?:debe|deben)\b(?! a )|\bse (?:realiza|traduce|estructura|recomienda|utiliza|espera)\b",
         r"\bes la (?:fase|etapa) (?:donde|en (?:la )?que)\b",
     ],
     "residuo_corporativo": [
@@ -358,20 +361,31 @@ def revisar_barandas(nodo, incluir_juzgados=False):
         " ".join(nodo.get("condiciones_activacion") or []),
         nodo.get("entregable_esperado", "") or "",
     ])
+    # `condiciones_activacion` describe la SITUACION en tercera persona POR
+    # DISEÑO ("Cuando el usuario necesita proyectar cuantas franquicias
+    # vendera"): es la convencion del campo, no voz de libro. Marcarla seria
+    # marcar el diseño. Las otras tres barandas si la miran: un comite o un
+    # importe en dolares dentro de una condicion siguen siendo defectos.
+    texto_sin_condiciones = " ".join([
+        nodo.get("titulo_concepto", ""), nodo.get("resumen_teorico", ""),
+        " ".join(nodo.get("pasos_accionables") or []),
+        nodo.get("entregable_esperado", "") or "",
+    ])
     hallazgos = []
     for baranda, patrones in BARANDAS.items():
+        texto_baranda = texto_sin_condiciones if baranda == "voz_de_libro" else texto
         marcado = False
         for p in patrones:
-            for m in re.finditer(p, texto, re.I):
+            for m in re.finditer(p, texto_baranda, re.I):
                 # La exencion de localizacion solo aplica a las siglas: una
                 # sigla acompañada de "o el equivalente en tu mercado" no es un
                 # dato cableado, es un ejemplo ya localizado. Se busca la
                 # SIGUIENTE ocurrencia, no se abandona el patron: un nodo puede
                 # localizar una sigla y cablear otra.
-                if baranda == "dato_local_cableado" and _esta_localizada(texto, m.start(), m.end()):
+                if baranda == "dato_local_cableado" and _esta_localizada(texto_baranda, m.start(), m.end()):
                     continue
                 ini = max(0, m.start() - 55)
-                cita = " ".join(texto[ini:m.end() + 55].split())
+                cita = " ".join(texto_baranda[ini:m.end() + 55].split())
                 h = {"baranda": baranda, "cita": f"...{cita}..."}
                 # YA JUZGADO: se reporta como tal, no se vuelve a discutir. Por
                 # defecto NO entra en la lista, para que un lote de trabajo no

@@ -372,18 +372,6 @@
         "sal tú"
       ]
     },
-    "\\bse (?:debe|deben|realiza|traduce|estructura|recomienda|utiliza|busca|espera)\\b": {
-      "caza": [
-        "el trabajo que se realiza",
-        "se debe entender",
-        "se recomienda medir"
-      ],
-      "no_caza": [
-        "realiza el trabajo",
-        "entiende a tu cliente",
-        "te recomiendo medir"
-      ]
-    },
     "\\bes la (?:fase|etapa) (?:donde|en (?:la )?que)\\b": {
       "caza": [
         "es la fase donde el fundador vende",
@@ -392,6 +380,18 @@
       "no_caza": [
         "en esta fase vendes",
         "la fase que sigue"
+      ]
+    },
+    "\\bse (?:debe|deben)\\b(?! a )|\\bse (?:realiza|traduce|estructura|recomienda|utiliza|espera)\\b": {
+      "caza": [
+        "se debe entender al cliente",
+        "se recomienda medir",
+        "el trabajo que se realiza"
+      ],
+      "no_caza": [
+        "el silencio se debe a falta de informacion",
+        "la demora se debe a un retraso",
+        "entiende a tu cliente"
       ]
     }
   }
