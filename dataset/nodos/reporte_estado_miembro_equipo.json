@@ -4,25 +4,40 @@
   "dominio": "core",
   "titulo_concepto": "Reporte de Estado del Miembro del Equipo",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Informe periódico completado por los miembros del equipo que documenta el avance de actividades, gastos, variaciones de costo y cronograma, riesgos nuevos e issues identificados, sirviendo de insumo para el Reporte de Desempeño del Proyecto.",
+  "resumen_teorico": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo y cronograma. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto, así que entre más completo y honesto sea, mejor reflejará la realidad de tu avance.",
   "pasos_accionables": [
-    "Listar actividades planeadas y completadas en el periodo",
-    "Registrar fondos gastados versus planeados",
-    "Identificar causas raíz de variaciones de actividades y costos",
-    "Reportar nuevos riesgos e issues detectados",
-    "Planificar actividades y costos para el siguiente periodo"
+    "Listar las actividades planeadas, completadas y no logradas en el periodo",
+    "Registrar los fondos gastados versus lo planeado",
+    "Identificar las causas raíz de las variaciones en actividades y costos",
+    "Documentar las acciones correctivas o preventivas que vas a aplicar",
+    "Reportar los nuevos riesgos e issues que detectaste",
+    "Planificar las actividades y costos para el siguiente periodo"
   ],
-  "entregable_esperado": "Un reporte de estado individual completado periódicamente por cada miembro del equipo.",
+  "entregable_esperado": "Un reporte de estado individual que completas periódicamente para dejar registro de tu avance.",
   "nodos_previos": [
     "plan_gestion_comunicaciones",
-    "team_member_status_report"
+    "team_member_status_report",
+    "team_directory"
   ],
   "nodos_siguientes": [
-    "registro_de_riesgos"
+    "registro_de_riesgos",
+    "project_performance_report",
+    "contractor_status_report"
   ],
   "condiciones_activacion": [
-    "Durante la ejecución del proyecto en cada periodo de reporte",
-    "Cuando se requiere consolidar el desempeño del equipo"
+    "Estás ejecutando el proyecto y llega el momento de reportar el periodo",
+    "Necesitas dar seguimiento a tus propias tareas y compromisos",
+    "Alguien necesita consolidar el desempeño general a partir de tu avance individual"
   ],
-  "etiqueta_arbol": "Reporta tu Avance de Equipo"
+  "etiqueta_arbol": "Reporta tu Avance de Equipo",
+  "ids_alias": [
+    "team_member_status_report"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "team_member_status_report",
+      "titulo": "Informe de Estado del Miembro del Equipo",
+      "fuente": "A Project Manager's Book of Forms"
+    }
+  ]
 }

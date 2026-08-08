@@ -4,23 +4,38 @@
   "dominio": "core",
   "titulo_concepto": "Etapa 4 - Testing and Validation",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Esta etapa valida la viabilidad completa del proyecto: el producto, el proceso de producción/operaciones, la aceptación del cliente y la economía del proyecto. Incluye pruebas internas extendidas, pruebas de campo con usuarios reales, producción piloto, pruebas de mercado simuladas o 'soft launch', y un análisis financiero revisado con datos más precisos.",
+  "resumen_teorico": "Esta etapa valida la viabilidad completa de tu proyecto: el producto, el proceso de producción u operaciones, la aceptación del cliente y la economía del negocio. Incluye pruebas técnicas internas (alfa) bajo condiciones controladas, pruebas de campo con usuarios reales, producción piloto o limitada, y un test de mercado simulado o soft launch a escala reducida. También implica actualizar el análisis financiero con datos reales de ingresos y costos para confirmar la rentabilidad. Es normal que si los resultados son negativos tengas que volver a etapas anteriores del proyecto para ajustar el producto o el enfoque antes de intentar lanzarlo de nuevo.",
   "pasos_accionables": [
-    "Ejecutar pruebas técnicas extendidas en condiciones controladas",
-    "Realizar pruebas de campo con usuarios reales para verificar funcionamiento e intención de compra",
-    "Llevar a cabo producción piloto o limitada para probar el proceso de operaciones",
-    "Ejecutar un test de mercado simulado o soft launch con clientes limitados",
-    "Actualizar el análisis financiero con datos reales de ingresos y costos"
+    "Ejecuta pruebas técnicas internas (alfa) en condiciones controladas",
+    "Realiza pruebas de campo con usuarios reales para verificar funcionamiento e intención de compra",
+    "Lleva a cabo una producción piloto o limitada para calcular costos y rendimientos reales",
+    "Ejecuta un test de mercado simulado o soft launch con clientes limitados",
+    "Actualiza tu análisis financiero con los datos reales de ingresos y costos obtenidos",
+    "Si los resultados son negativos, regresa a la etapa anterior para ajustar el proyecto"
   ],
-  "entregable_esperado": "Resultados validados de pruebas técnicas, de mercado y de producción, junto con análisis financiero actualizado",
+  "entregable_esperado": "Un informe con los resultados validados de pruebas técnicas, de campo, de producción y financieras que confirme o refute la viabilidad total del proyecto antes del lanzamiento.",
   "nodos_previos": [
-    "gate4_go_to_testing"
+    "gate4_go_to_testing",
+    "etapa_development",
+    "analisis_de_sensibilidad_riesgo"
   ],
   "nodos_siguientes": [
-    "gate5_go_to_launch"
+    "gate5_go_to_launch",
+    "stage5_launch"
   ],
   "condiciones_activacion": [
-    "Cuando el producto ha sido desarrollado y necesita validación completa antes del lanzamiento comercial"
+    "Cuando ya desarrollaste tu producto y necesitas validarlo por completo antes de lanzarlo al mercado",
+    "Cuando necesitas confirmar con datos reales la aceptación del cliente y la viabilidad económica del proyecto"
   ],
-  "etiqueta_arbol": "Valida tu Producto Completo"
+  "etiqueta_arbol": "Valida tu Producto Completo",
+  "ids_alias": [
+    "stage4_testing_validation"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "stage4_testing_validation",
+      "titulo": "Etapa 4: Pruebas y Validación",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

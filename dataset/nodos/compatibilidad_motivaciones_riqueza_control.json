@@ -4,25 +4,41 @@
   "dominio": "core",
   "titulo_concepto": "Compatibilidad de Motivaciones: Riqueza vs. Control",
   "fuente": "The Founder's Dilemmas",
-  "resumen_teorico": "Los fundadores tienen motivaciones subyacentes distintas: buscar riqueza (maximizar valor financiero, sin importar quién controle) o buscar control (mantener autoridad y dirección personal del proyecto, aunque implique menor valor final). Dos fundadores motivados por control suelen generar inestabilidad (ambos quieren ser CEO). Dos motivados por riqueza tienden a alinearse mejor. Un mix funciona si el motivado por riqueza confía en las capacidades del motivado por control.",
+  "resumen_teorico": "Los fundadores tienen motivaciones subyacentes distintas: buscar riqueza, maximizando el valor financiero sin importar quién controle, o buscar control, manteniendo autoridad y dirección personal del proyecto aunque implique menor valor final. Estas motivaciones determinan gran parte de la estabilidad futura del equipo. Dos fundadores motivados por control suelen competir por el rol de CEO, generando inestabilidad y conflicto de roles. Dos motivados por riqueza tienden a alinearse mejor. Un mix funciona si el fundador motivado por riqueza confía realmente en las capacidades del motivado por control para liderar. Evita soluciones ambiguas como compartir el liderazgo cuando ambos son fuertemente motivados por control, ya que eso no resuelve la competencia de fondo.",
   "pasos_accionables": [
-    "Antes de asociarse, cada fundador debe reflexionar honestamente si busca principalmente riqueza o control",
-    "Discutir abiertamente estas motivaciones con potenciales cofundadores antes de lanzar el startup",
-    "Si ambos son motivados por control, anticipar conflictos de poder y diseñar mecanismos de resolución desde el inicio",
-    "Si hay un mix, validar que el fundador motivado por riqueza tenga confianza real en las capacidades del motivado por control"
+    "Reflexiona honestamente si tu motivación principal es la riqueza o el control antes de asociarte",
+    "Discute abiertamente tus motivaciones con tus potenciales cofundadores antes de lanzar el proyecto",
+    "Identifica posibles fuentes de conflicto de roles si las motivaciones son incompatibles",
+    "Si ambos son motivados por control, anticipa conflictos de poder y diseña mecanismos de resolución desde el inicio, evitando soluciones ambiguas como liderazgo compartido",
+    "Si hay un mix de motivaciones, valida que confíes realmente en las capacidades de tu cofundador motivado por control antes de cederle esa autoridad"
   ],
-  "entregable_esperado": "Una conversación documentada (o acuerdo informal) sobre las motivaciones de cada fundador y su compatibilidad",
+  "entregable_esperado": "Una conversación documentada o acuerdo informal sobre las motivaciones de cada fundador y el análisis de compatibilidad del equipo",
   "nodos_previos": [
     "seleccion_relaciones_cofundadores",
-    "dilema_riqueza_vs_control"
+    "dilema_riqueza_vs_control",
+    "decision_fundador_solo_vs_equipo"
   ],
   "nodos_siguientes": [
     "reparto_inicial_equity",
-    "decision_egalitaria_vs_jerarquica"
+    "decision_egalitaria_vs_jerarquica",
+    "seleccion_ceo_fundador",
+    "criterios_equity_split",
+    "timing_equity_split"
   ],
   "condiciones_activacion": [
     "Antes de formalizar una sociedad de cofundadores",
-    "Si hay tensiones recurrentes sobre dirección estratégica o control del startup"
+    "Si hay tensiones recurrentes sobre dirección estratégica o control del startup",
+    "Si existe tensión sobre quién debe liderar la startup"
   ],
-  "etiqueta_arbol": "Elige Riqueza o Control"
+  "etiqueta_arbol": "Elige Riqueza o Control",
+  "ids_alias": [
+    "evaluar_motivaciones_cofundadores"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "evaluar_motivaciones_cofundadores",
+      "titulo": "Evaluación de Motivaciones de los Cofundadores",
+      "fuente": "The Founder's Dilemmas"
+    }
+  ]
 }

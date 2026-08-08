@@ -1,0 +1,104 @@
+{
+  "pack": "_core",
+  "etapa": "ejecucion_resto",
+  "regla_superviviente": "SEMILLA > TELEMETRIA > PROPUESTO",
+  "nota": "Continuacion: el lote se corto a la mitad por tiempo. Los clusters cuyos absorbidos YA estan deprecados se saltan para no re-pagar la API.",
+  "clusters": [
+    {
+      "orden": 59,
+      "indice": 64,
+      "nodos": [
+        "fuentes_contratacion_ejecutivos",
+        "red_fundador_vs_inversor_hiring"
+      ],
+      "sobrevive": "fuentes_contratacion_ejecutivos",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos tratan la evolución de las fuentes de contratación ejecutiva (red del fundador vs red externa/inversor) con los mismos datos.",
+      "quedaria": "Fuentes de Contratación de Ejecutivos"
+    },
+    {
+      "orden": 64,
+      "indice": 69,
+      "nodos": [
+        "identificacion_talento_design_thinking",
+        "identificar_pensadores_de_diseno_internos"
+      ],
+      "sobrevive": "identificar_pensadores_de_diseno_internos",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen cómo identificar pensadores de diseño marginados dentro de la organización.",
+      "quedaria": "Encontrar Talento de Design Thinking dentro de la Organización"
+    },
+    {
+      "orden": 68,
+      "indice": 73,
+      "nodos": [
+        "kit_shock_and_awe_bienvenida",
+        "shock_and_awe_kit_bienvenida"
+      ],
+      "sobrevive": "shock_and_awe_kit_bienvenida",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo kit de bienvenida diseñado para sorprender y deleitar al nuevo cliente.",
+      "quedaria": "Kit de 'Shock and Awe' para Nuevos Clientes"
+    },
+    {
+      "orden": 77,
+      "indice": 82,
+      "nodos": [
+        "optimizacion_grow_customers",
+        "optimizacion_metricas_crecimiento"
+      ],
+      "sobrevive": "optimizacion_metricas_crecimiento",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto de optimizar crecimiento de ingresos por cliente vía upsell/referidos",
+      "quedaria": "Optimización de Métricas de Crecimiento (Grow Customers)"
+    },
+    {
+      "orden": 78,
+      "indice": 83,
+      "nodos": [
+        "prevencion_de_objeciones",
+        "prevencion_objeciones_vs_manejo"
+      ],
+      "sobrevive": "prevencion_objeciones_vs_manejo",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo concepto de prevenir objeciones en lugar de manejarlas",
+      "quedaria": "Prevención de Objeciones vs. Manejo de Objeciones"
+    },
+    {
+      "orden": 79,
+      "indice": 84,
+      "nodos": [
+        "publicidad_garantia",
+        "publicidad_garantia_conforme"
+      ],
+      "sobrevive": "publicidad_garantia_conforme",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo tema de cumplimiento legal FTC al publicitar garantías",
+      "quedaria": "Publicidad Correcta de Garantías y Guarantees"
+    },
+    {
+      "orden": 80,
+      "indice": 85,
+      "nodos": [
+        "reconstruccion_de_equipo_ejecutivo",
+        "reconstruir_equipo_ejecutivo_para_nueva_etapa"
+      ],
+      "sobrevive": "reconstruccion_de_equipo_ejecutivo",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto de reconstruir el equipo ejecutivo tras cambio de modelo/etapa",
+      "quedaria": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio"
+    },
+    {
+      "orden": 81,
+      "indice": 86,
+      "nodos": [
+        "reporte_estado_miembro_equipo",
+        "team_member_status_report"
+      ],
+      "sobrevive": "reporte_estado_miembro_equipo",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo documento de reporte periódico del miembro del equipo",
+      "quedaria": "Reporte de Estado del Miembro del Equipo"
+    }
+  ]
+}

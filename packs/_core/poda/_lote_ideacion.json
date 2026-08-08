@@ -1,0 +1,167 @@
+{
+  "pack": "_core",
+  "etapa": "ideacion",
+  "regla_superviviente": "SEMILLA > TELEMETRIA > PROPUESTO",
+  "clusters": [
+    {
+      "orden": 1,
+      "indice": 0,
+      "nodos": [
+        "busqueda_vs_ejecucion",
+        "definicion_startup",
+        "definicion_startup_busqueda_modelo_negocio",
+        "definicion_startup_incertidumbre",
+        "search_for_business_model",
+        "startup_como_busqueda_vs_ejecucion"
+      ],
+      "sobrevive": "search_for_business_model",
+      "sobrevive_por": "telemetría",
+      "por_que": "Los seis nodos son la misma idea central: startup = organización temporal que busca (no ejecuta) un modelo de negocio repetible y escalable bajo incertidumbre; llevan a la misma acción de entender el concepto base.",
+      "quedaria": "Búsqueda vs. Ejecución: Definición de Startup"
+    },
+    {
+      "orden": 13,
+      "indice": 12,
+      "nodos": [
+        "arenas_estrategicas",
+        "seleccion_arenas_estrategicas"
+      ],
+      "sobrevive": "seleccion_arenas_estrategicas",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambas describen el mismo concepto de definir arenas estratégicas antes de generar ideas de producto.",
+      "quedaria": "Selección de Arenas Estratégicas (Pick Your Battlefields)"
+    },
+    {
+      "orden": 24,
+      "indice": 25,
+      "nodos": [
+        "compatibilidad_motivaciones_riqueza_control",
+        "evaluar_motivaciones_cofundadores"
+      ],
+      "sobrevive": "compatibilidad_motivaciones_riqueza_control",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo eje de motivaciones riqueza vs control entre cofundadores y sus implicaciones.",
+      "quedaria": "Compatibilidad de Motivaciones: Riqueza vs. Control"
+    },
+    {
+      "orden": 29,
+      "indice": 31,
+      "nodos": [
+        "cuatro_etapas_del_pensamiento_creativo",
+        "wallas_cuatro_etapas_pensamiento_creativo"
+      ],
+      "sobrevive": "cuatro_etapas_del_pensamiento_creativo",
+      "sobrevive_por": "semilla",
+      "por_que": "Duplicado del mismo modelo de Wallas de cuatro etapas del pensamiento creativo.",
+      "quedaria": "Las Cuatro Etapas del Pensamiento Creativo (Wallas)"
+    },
+    {
+      "orden": 33,
+      "indice": 37,
+      "nodos": [
+        "customer_scenarios_business_model",
+        "escenarios_diseno_modelo_negocio"
+      ],
+      "sobrevive": "escenarios_diseno_modelo_negocio",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambos describen los escenarios de cliente como herramienta para el diseño del modelo de negocio.",
+      "quedaria": "Escenarios para Guiar el Diseño del Modelo de Negocio"
+    },
+    {
+      "orden": 39,
+      "indice": 44,
+      "nodos": [
+        "determinar_tipo_de_mercado",
+        "market_type_definicion"
+      ],
+      "sobrevive": "determinar_tipo_de_mercado",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo marco de los cuatro tipos de mercado para definir estrategia de startup.",
+      "quedaria": "Determinar el Tipo de Mercado"
+    },
+    {
+      "orden": 51,
+      "indice": 56,
+      "nodos": [
+        "equilibrio_habito_estimulo",
+        "ruptura_de_habitos_para_estimulo"
+      ],
+      "sobrevive": "ruptura_de_habitos_para_estimulo",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos tratan la misma idea de Wallas: ser 'amo y no esclavo' de los hábitos y romperlos cuando se vuelven improductivos.",
+      "quedaria": "Ruptura Deliberada de Hábitos para Renovar el Estímulo Creativo"
+    },
+    {
+      "orden": 56,
+      "indice": 61,
+      "nodos": [
+        "explorar_medios_no_convencionales",
+        "prototipar_con_medios_no_convencionales"
+      ],
+      "sobrevive": "prototipar_con_medios_no_convencionales",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen la misma técnica de usar materiales/medios inesperados para revelar sesgos de diseño.",
+      "quedaria": "Use Unconventional Mediums: Prototipar con Materiales Inesperados"
+    },
+    {
+      "orden": 57,
+      "indice": 62,
+      "nodos": [
+        "fase_entender_modelo_negocio",
+        "fase_entendimiento_investigacion_mercado"
+      ],
+      "sobrevive": "fase_entendimiento_investigacion_mercado",
+      "sobrevive_por": "propuesto",
+      "por_que": "Misma fase de investigación/inmersión en el entorno del modelo de negocio, mismas actividades descritas.",
+      "quedaria": "Fase de Entendimiento: Investigación del Entorno"
+    },
+    {
+      "orden": 58,
+      "indice": 63,
+      "nodos": [
+        "front_end_homework",
+        "homework_frontend_loading"
+      ],
+      "sobrevive": "homework_frontend_loading",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo conjunto de diez actividades de 'homework' previas al desarrollo.",
+      "quedaria": "Front-End Loading / Homework Predesarrollo"
+    },
+    {
+      "orden": 62,
+      "indice": 67,
+      "nodos": [
+        "homework_voc_previo_agile",
+        "voc_temprano_en_agile_stage_gate"
+      ],
+      "sobrevive": "voc_temprano_en_agile_stage_gate",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos advierten sobre el mismo error de omitir homework/VoC en metodologías Agile-Stage-Gate.",
+      "quedaria": "Necesidad de Homework Temprano y Voice-of-Customer en Metodologías Ágiles"
+    },
+    {
+      "orden": 63,
+      "indice": 68,
+      "nodos": [
+        "humor_como_herramienta_creativa",
+        "sentido_del_humor_como_herramienta_de_pensamiento"
+      ],
+      "sobrevive": "sentido_del_humor_como_herramienta_de_pensamiento",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen la misma idea de Wallas sobre el humor como ruptura de censuras internas.",
+      "quedaria": "El Sentido del Humor como Ruptura de Barreras Cognitivas"
+    },
+    {
+      "orden": 76,
+      "indice": 81,
+      "nodos": [
+        "multi_sided_platform_pattern",
+        "multi_sided_platforms"
+      ],
+      "sobrevive": "multi_sided_platforms",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo patrón de modelo de negocio de plataformas multilaterales",
+      "quedaria": "Plataformas Multilaterales (Multi-Sided Platforms)"
+    }
+  ]
+}

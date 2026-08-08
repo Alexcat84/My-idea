@@ -4,30 +4,56 @@
   "dominio": "core",
   "titulo_concepto": "Identificar Earlyvangelists (Clientes Visionarios con Presupuesto)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Los earlyvangelists son clientes visionarios que no solo reconocen tener un problema, sino que están motivados a resolverlo, ya probaron soluciones caseras, y tienen el presupuesto y poder de decisión para comprar. Se diferencian de otros tipos de clientes (evaluadores tempranos, clientes escalables, clientes mainstream) por su urgencia y capacidad de pago. Son socios en el proceso de venta y toleran features faltantes porque creen en la visión del producto.",
+  "resumen_teorico": "Los earlyvangelists son clientes visionarios que compran un producto inacabado porque quieren ser los primeros y creen en tu visión. Se diferencian de evaluadores tempranos, clientes escalables y mainstream porque reconocen su problema, lo buscan resolver con urgencia y un plazo definido, ya improvisaron una solución casera dolorosa, y tienen o pueden conseguir presupuesto rápido. Están dispuestos a pagar, no solo a probar gratis, y toleran features faltantes porque actúan como socios en el proceso de venta. Evita prospectos que solo quieren aprender sobre la tecnología sin intención de compra, y detecta change agents sin autoridad real para decidir. Prioriza a quienes acepten ser referencia o caso de estudio.",
   "pasos_accionables": [
-    "Revisar las características de earlyvangelists identificadas en customer discovery",
-    "Crear una lista objetivo de earlyvangelists potenciales",
-    "Repetir técnicas de generación de citas: lista de clientes, email introductorio, guion de referencia",
-    "Diferenciar earlyvangelists de evaluadores tempranos, clientes escalables y mainstream",
-    "Aceptar una tasa de rechazo alta (asumir 95% de rechazo es normal)",
-    "Rastrear resultados de tasa de éxito (hit-rate)"
+    "Revisa las características de earlyvangelists que identificaste en tu customer discovery: problema reconocido, solución casera, presupuesto y urgencia",
+    "Crea una lista de earlyvangelists potenciales y verifica que tengan presupuesto disponible o accesible rápidamente",
+    "Contacta a cada uno usando tu lista de clientes, un email introductorio y un guion de referencia para agendar citas",
+    "Pregunta si antes implementaron tecnología nueva en su empresa y descarta a quienes solo buscan aprender sin intención de compra",
+    "Confirma que estén dispuestos a pagar por tu solución incompleta y a servir como referencia o caso de estudio",
+    "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no, y registra tu hit rate para mejorar"
   ],
-  "entregable_esperado": "Lista de earlyvangelists con citas de ventas agendadas",
+  "entregable_esperado": "Una lista de earlyvangelists con evidencia de dolor, presupuesto y disposición de compra, con citas de ventas ya agendadas.",
   "nodos_previos": [
     "customer_discovery",
     "pivot_post_ventas",
     "pivote_o_proceder",
-    "scorecard_descubrimiento_cliente"
+    "scorecard_descubrimiento_cliente",
+    "get_out_of_the_building",
+    "customer_discovery_introduccion",
+    "customer_discovery_overview",
+    "problem_solution_fit",
+    "actualizar_modelo_de_negocio_pivot_o_proceed"
   ],
   "nodos_siguientes": [
     "get_out_building_test_sell",
     "proceso_venta_b2b",
-    "formalizar_junta_asesora"
+    "formalizar_junta_asesora",
+    "producto_minimo_viable",
+    "contratar_cerrador_de_ventas",
+    "tecnica_cinco_porques"
   ],
   "condiciones_activacion": [
-    "Cuando la startup está lista para intentar la primera venta real",
-    "Si el equipo no distingue entre visionarios con y sin poder de compra"
+    "Cuando buscas tus primeros clientes para testear el MVP y el mercado mainstream aún no está listo",
+    "Cuando estás listo para intentar tu primera venta real",
+    "Si intentas vender a clientes mainstream con un producto no terminado",
+    "Si no distingues entre visionarios con poder de compra y change agents sin autoridad"
   ],
-  "etiqueta_arbol": "Busca Clientes Visionarios"
+  "etiqueta_arbol": "Busca Clientes Visionarios",
+  "ids_alias": [
+    "earlyvangelists",
+    "earlyvangelists_identificacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "earlyvangelists",
+      "titulo": "Earlyvangelists: Los Clientes Visionarios",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "earlyvangelists_identificacion",
+      "titulo": "Identificación de Earlyvangelists",
+      "fuente": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"
+    }
+  ]
 }

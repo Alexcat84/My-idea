@@ -50,14 +50,29 @@ describe("sucesoresNivel: mismos sucesores reales que engine/prototipo_motor.py"
 });
 
 describe("esOfrecible: el muro de mundos (Fase 3.5/3.6)", () => {
-  it("los nodos core pasan con el default {core}", () => {
+  it("los nodos core ACTIVOS pasan con el default {core}", () => {
+    // El filtro tomaba las 50 primeras claves del core sin mirar `deprecado`, y
+    // pasaba porque hasta ago 2026 el core no tenia ninguno. Al fundir el
+    // nucleo, una de esas 50 quedo absorbida y el test cayo -- diciendo la
+    // verdad: esOfrecible hace bien en rechazarla. El fixture era el accidente.
     const graph = cargarGrafo();
     const cores = Object.keys(graph)
-      .filter((id) => (graph[id].dominio ?? "core") === "core")
+      .filter((id) => (graph[id].dominio ?? "core") === "core" && !graph[id].deprecado)
       .slice(0, 50);
     expect(cores.length).toBe(50);
     for (const id of cores) {
       expect(esOfrecible(id, graph)).toBe(true);
+    }
+  });
+
+  it("un nodo core DEPRECADO no pasa, que es lo que el fixture tapaba", () => {
+    const graph = cargarGrafo();
+    const absorbidos = Object.keys(graph).filter(
+      (id) => (graph[id].dominio ?? "core") === "core" && graph[id].deprecado);
+    expect(absorbidos.length, "el core ya no tiene absorbidos: revisa la fusion")
+      .toBeGreaterThan(0);
+    for (const id of absorbidos) {
+      expect(esOfrecible(id, graph), `${id} se sigue ofreciendo`).toBe(false);
     }
   });
 

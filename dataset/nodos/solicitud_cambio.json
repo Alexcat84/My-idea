@@ -4,17 +4,20 @@
   "dominio": "core",
   "titulo_concepto": "Solicitud de Cambio (Change Request)",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Formulario utilizado para solicitar cambios en cualquier aspecto del proyecto (alcance, cronograma, costo, documentos), el cual se somete al Comité de Control de Cambios para su revisión y disposición formal.",
+  "resumen_teorico": "Es un formulario formal para solicitar cualquier cambio al proyecto o producto, ya sea en alcance, calidad, requisitos, costo, cronograma o documentos. Antes de describir el cambio, identifica quién lo solicita y asígnale un número identificador, y categoriza qué tipo de cambio es. Luego se detalla la justificación y se evalúa su impacto en las distintas áreas del proyecto. La solicitud se revisa formalmente para decidir su disposición final: aprobado, diferido o rechazado, dejando constancia de esa decisión. Este proceso aplica sobre todo durante la ejecución o el monitoreo del proyecto, cuando aparecen necesidades reales de ajuste que no estaban contempladas al inicio.",
   "pasos_accionables": [
-    "Identificar quién solicita el cambio y asignar un número identificador",
-    "Categorizar el tipo de cambio",
-    "Describir detalladamente el cambio propuesto y su justificación",
-    "Evaluar impactos en alcance, calidad, costo, cronograma y documentos",
-    "Someter la solicitud al Comité de Control de Cambios para su disposición"
+    "Identifica quién solicita el cambio y asígnale un número identificador",
+    "Categoriza el tipo de cambio propuesto",
+    "Describe detalladamente el cambio y su justificación",
+    "Evalúa el impacto en alcance, calidad, costo, cronograma y documentos del proyecto",
+    "Revisa la solicitud y registra la disposición final con su justificación: aprobado, diferido o rechazado"
   ],
-  "entregable_esperado": "Un formulario de solicitud de cambio completo, listo para revisión del comité de control de cambios.",
+  "entregable_esperado": "Un formulario de solicitud de cambio completo, con la disposición final registrada.",
   "nodos_previos": [
-    "plan_gestion_cambios"
+    "plan_gestion_cambios",
+    "variance_analysis",
+    "issue_log",
+    "quality_audit"
   ],
   "nodos_siguientes": [
     "change_log"
@@ -23,5 +26,15 @@
     "Cuando surge la necesidad de modificar alcance, cronograma, costo o algún documento del proyecto",
     "Durante la ejecución o monitoreo del proyecto"
   ],
-  "etiqueta_arbol": "Formaliza tu Solicitud de Cambio"
+  "etiqueta_arbol": "Formaliza tu Solicitud de Cambio",
+  "ids_alias": [
+    "change_request"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "change_request",
+      "titulo": "Solicitud de Cambio",
+      "fuente": "A Project Manager's Book of Forms"
+    }
+  ]
 }

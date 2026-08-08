@@ -4,25 +4,44 @@
   "dominio": "core",
   "titulo_concepto": "Tipos de Clientes en el Proceso de Decisión de Compra",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Toda venta involucra un conjunto de tomadores de decisiones distintos: usuarios finales (usan el producto día a día), influenciadores (moldean tendencias y opiniones), recomendadores (pueden hacer o deshacer una venta), compradores económicos (controlan el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia.",
+  "resumen_teorico": "Toda venta involucra un conjunto de tomadores de decisiones distintos que rara vez son la misma persona: usuarios finales (usan el producto día a día), influenciadores (opinan y moldean tendencias pero no deciden), recomendadores (su opinión puede hacer o deshacer la venta), compradores económicos (controlan el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia y donde más de una persona participa en la decisión.",
   "pasos_accionables": [
-    "Identificar quién será el usuario final día a día del producto",
-    "Mapear quiénes son los influenciadores y recomendadores en el proceso",
-    "Determinar quién es el comprador económico (de quién sale el presupuesto)",
-    "Identificar al decisor final (UDM/VITO)",
-    "Buscar posibles saboteadores que puedan vetar la compra"
+    "Lista quién usará el producto día a día (usuario final)",
+    "Mapea quiénes son los influenciadores y recomendadores, internos y externos",
+    "Determina quién controla el presupuesto (comprador económico)",
+    "Identifica al decisor final con autoridad de compra (UDM/VITO)",
+    "Detecta posibles saboteadores que puedan vetar la compra"
   ],
-  "entregable_esperado": "Mapa de los seis tipos de clientes (end users, influencers, recommenders, economic buyers, decision-makers, saboteurs) aplicado al segmento objetivo",
+  "entregable_esperado": "Mapa de los seis tipos de clientes (usuarios finales, influenciadores, recomendadores, compradores económicos, decisores, saboteadores) con nombres o perfiles aplicado a tu segmento objetivo",
   "nodos_previos": [
-    "identificacion_problema_cliente"
+    "identificacion_problema_cliente",
+    "customer_segments_hypothesis"
   ],
   "nodos_siguientes": [
     "arquetipos_de_cliente",
     "mapa_organizacional_influencia",
-    "segmentar_clientes_nivel_servicio"
+    "segmentar_clientes_nivel_servicio",
+    "consecuencias_no_intencionadas_sistemicas",
+    "flexible_go_kill_criteria",
+    "manejo_de_incertidumbre_proyectos_innovadores",
+    "pensar_en_grande_empezar_pequeno",
+    "customer_archetypes",
+    "investigar_datos_cliente",
+    "multiples_compradores_influyentes"
   ],
   "condiciones_activacion": [
-    "Si el usuario vende un producto B2B complejo o tiene múltiples actores en la decisión de compra"
+    "Si vendes un producto B2B complejo",
+    "Cuando la venta involucra más de una persona en la decisión de compra"
   ],
-  "etiqueta_arbol": "Conoce a Todos tus Compradores"
+  "etiqueta_arbol": "Conoce a Todos tus Compradores",
+  "ids_alias": [
+    "customer_types_mapping"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "customer_types_mapping",
+      "titulo": "Mapeo de Tipos de Cliente en la Decisión de Compra",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

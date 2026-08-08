@@ -4,14 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Definir un 'Sprint Terminado' para Productos Físicos",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "A diferencia del software (donde 'terminado' significa código funcional y potencialmente liberable), en productos físicos un sprint no siempre produce un incremento funcional completo. Puede producir un diseño, un concepto, un prototipo rápido o resultados de un estudio VoC documentados en un formato estándar ('single-page report', revisado por un colega, archivado). Es crítico adaptar la definición de 'terminado' según la naturaleza no incremental del hardware.",
+  "resumen_teorico": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. Usar límites de tiempo en las tareas de evaluación evita caer en sobre ingeniería al intentar cerrar un sprint.",
   "pasos_accionables": [
-    "Determinar qué constituye un entregable tangible válido para cada tipo de sprint (diseño, prototipo, informe VoC, etc.)",
-    "Establecer un formato estándar de documentación de 'terminado' (ej. reporte de una página, revisado, archivado)",
-    "Usar time-boxing en tareas de evaluación para evitar sobre-ingeniería (ej. 'usar máximo 10 horas para evaluar el concepto X')",
-    "Comunicar claramente estos criterios al equipo antes de iniciar el sprint"
+    "Define qué entregable tangible marca el cierre de cada sprint: boceto, prototipo, modelo de trabajo o informe de estudio de mercado",
+    "Crea una checklist de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
+    "Establece un formato estándar de documentación para cada entregable, por ejemplo un reporte de una página",
+    "Fija un límite de horas para las tareas de evaluación o diseño y evita sobre ingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
+    "Valida el sprint terminado con un experto o revisor externo antes de cerrarlo",
+    "Comunica los criterios de terminado antes de iniciar cada sprint"
   ],
-  "entregable_esperado": "Criterio de 'Definición de Terminado' documentado y acordado por el equipo para cada tipo de sprint del proyecto",
+  "entregable_esperado": "Checklist de definición de terminado documentada, con formato estándar y validada por un revisor externo para cada tipo de sprint.",
   "nodos_previos": [
     "modelo_hibrido_agile_stage_gate",
     "product_backlog_fisico"
@@ -19,11 +21,25 @@
   "nodos_siguientes": [
     "definicion_sprint_terminado",
     "spiral_development",
-    "espiral_mortal_lotes_grandes"
+    "espiral_mortal_lotes_grandes",
+    "protocepto",
+    "desarrollo_en_espiral"
   ],
   "condiciones_activacion": [
-    "Si el proyecto involucra desarrollo de hardware, dispositivos médicos, maquinaria u otros productos no divisibles como el software",
-    "Cuando el equipo tiene dificultad para saber cuándo detenerse en una tarea de evaluación o diseño"
+    "Si intentas aplicar Scrum de software directamente a un producto físico sin adaptarlo",
+    "Si no tienes claro qué debes entregar al final de cada sprint",
+    "Si tu proyecto involucra hardware, dispositivos médicos, maquinaria u otros productos no divisibles como el software",
+    "Si te cuesta saber cuándo detener una tarea de evaluación o diseño"
   ],
-  "etiqueta_arbol": "Adapta 'Terminado' a Productos Físicos"
+  "etiqueta_arbol": "Adapta 'Terminado' a Productos Físicos",
+  "ids_alias": [
+    "definicion_sprint_terminado"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "definicion_sprint_terminado",
+      "titulo": "Definición de 'Sprint Terminado' para Productos Físicos",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

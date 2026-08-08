@@ -4,17 +4,20 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Cohortes para Retención",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "El análisis de cohortes agrupa a los clientes según características compartidas (fuente de adquisición, fecha de registro, tipo de plan) para identificar patrones de retención. Permite descubrir qué segmentos de clientes permanecen más tiempo y por qué, revelando estrategias específicas de mejora de retención.",
+  "resumen_teorico": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo, como ocurre al comparar clientes en prueba gratis versus quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
   "pasos_accionables": [
-    "Segmentar usuarios por fuente de referencia (Google, Bing, redes sociales, etc.)",
-    "Comparar tiempo de permanencia entre cohortes (ej: prueba gratis vs pago desde día uno)",
-    "Identificar patrones de abandono por cohorte",
-    "Diseñar estrategias de retención específicas para cada cohorte problemática"
+    "Agrupa tus usuarios según un atributo relevante: fuente de referencia, fecha de activación o tipo de oferta aceptada",
+    "Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto",
+    "Compara las cohortes entre sí para detectar patrones de abandono y señales de alerta temprana",
+    "Determina si algún canal de adquisición te está trayendo clientes más leales que otros",
+    "Diseña y ajusta tus estrategias de retención según los hallazgos de cada cohorte problemática"
   ],
-  "entregable_esperado": "Reporte de análisis de cohortes con estrategias de mejora de retención por segmento",
+  "entregable_esperado": "Reporte de análisis de cohortes con patrones de retención identificados y estrategias correctivas propuestas por segmento",
   "nodos_previos": [
     "plan_de_adquisicion_acquire",
-    "cohort_analysis_retencion"
+    "cohort_analysis_retencion",
+    "funnel_get_customers_optimizacion",
+    "ab_testing_optimizacion"
   ],
   "nodos_siguientes": [
     "optimizacion_metricas_crecimiento",
@@ -23,11 +26,25 @@
     "estrategia_plataformas_existentes",
     "apertura_efectiva_llamada_venta",
     "metodologia_spin_selling",
-    "preguntas_situacion"
+    "preguntas_situacion",
+    "optimizacion_keep_retencion",
+    "hablar_con_clientes_desmontar_supuestos",
+    "war_room_pivot_proceed"
   ],
   "condiciones_activacion": [
-    "Cuando el startup tiene al menos varios miles de clientes",
-    "Si se necesita mejorar la retención de usuarios"
+    "Cuando ya tienes al menos varios miles de clientes para poder segmentar con sentido",
+    "Cuando necesitas mejorar la retención de tus usuarios",
+    "Cuando tus métricas de retención promedio parecen saludables pero sospechas que ocultan problemas en ciertos grupos"
   ],
-  "etiqueta_arbol": "Agrupa Clientes por Cohortes"
+  "etiqueta_arbol": "Agrupa Clientes por Cohortes",
+  "ids_alias": [
+    "cohort_analysis_retencion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "cohort_analysis_retencion",
+      "titulo": "Análisis de Cohortes para Retención de Clientes",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

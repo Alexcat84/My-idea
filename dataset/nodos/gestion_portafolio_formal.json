@@ -4,27 +4,43 @@
   "dominio": "core",
   "titulo_concepto": "Sistema Formal de Gestión de Portafolio Integrado con Gates",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Además de las decisiones individuales en cada gate, se requiere una revisión periódica (2-4 veces al año) de todo el conjunto de proyectos para evaluar mezcla, balance y alineación estratégica del portafolio completo. El uso de 'Strategic Buckets' permite asignar recursos por categorías (tipo de proyecto, línea de producto) y priorizar proyectos dentro de cada categoría según su valor.",
+  "resumen_teorico": "Este sistema combina dos niveles de decisión: los gates evalúan cada proyecto de forma individual (seguir o matar), mientras que la revisión de portafolio compara y prioriza todos tus proyectos activos en conjunto, buscando el mix, balance y alineación correctos con tu estrategia de negocio. Hazlo 2-4 veces al año, revisando los proyectos que ya superaron cierta etapa. Usa criterios financieros y estratégicos comunes para rankear, y aplica un ejercicio de poda inicial para eliminar los proyectos más débiles antes de asignar recursos por Strategic Buckets, es decir, categorías como tipo de proyecto o línea de producto.",
   "pasos_accionables": [
-    "Establecer reuniones de revisión de portafolio 2-4 veces al año con liderazgo senior",
-    "Definir Strategic Buckets según dimensiones relevantes (tipo de proyecto, línea de producto)",
-    "Asignar recursos a cada bucket según prioridad estratégica",
-    "Rankear proyectos dentro de cada bucket de mejor a peor hasta el límite de recursos del bucket",
-    "Presentar la lista priorizada en las reuniones de gate para apoyar decisiones individuales"
+    "Agenda revisiones de tu portafolio completo 2-4 veces al año",
+    "Reúne todos los proyectos que ya superaron cierta etapa o gate inicial",
+    "Haz una poda inicial eliminando los proyectos más débiles del conjunto",
+    "Define Strategic Buckets según tipo de proyecto o línea de producto y asigna recursos a cada uno",
+    "Rankea los proyectos dentro de cada bucket con criterios financieros y estratégicos hasta el límite de recursos",
+    "Usa esa lista priorizada como apoyo en tus próximas decisiones de gate"
   ],
-  "entregable_esperado": "Sistema de gestión de portafolio con Strategic Buckets definidos, calendario de revisiones periódicas, y lista de proyectos priorizados por bucket",
+  "entregable_esperado": "Sistema de gestión de portafolio con Strategic Buckets definidos, calendario de revisiones periódicas y lista de proyectos priorizados y podados por bucket.",
   "nodos_previos": [
     "asignacion_recursos_en_gates",
     "pruning_portafolio",
     "requisitos_gates_con_dientes",
-    "portafolio_formal_management"
+    "portafolio_formal_management",
+    "sistema_gestion_recursos_en_gates",
+    "estructura_de_gates"
   ],
   "nodos_siguientes": [
-    "sistema_de_gates_go_kill"
+    "sistema_de_gates_go_kill",
+    "sistema_gates_go_kill",
+    "governance_integration_gates_portfolio_roadmap"
   ],
   "condiciones_activacion": [
-    "Cuando la organización maneja múltiples líneas de producto o tipos de proyecto simultáneamente",
-    "Si no existe alineación clara entre estrategia de negocio y portafolio de proyectos activos"
+    "Cuando manejas múltiples proyectos o líneas de producto de forma simultánea",
+    "Si no existe alineación clara entre tu estrategia de negocio y los proyectos activos",
+    "Cuando necesitas decidir cómo repartir tus recursos limitados entre varios proyectos en curso"
   ],
-  "etiqueta_arbol": "Revisa tu Portafolio Periódicamente"
+  "etiqueta_arbol": "Revisa tu Portafolio Periódicamente",
+  "ids_alias": [
+    "portafolio_formal_management"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "portafolio_formal_management",
+      "titulo": "Sistema Formal de Gestión de Portafolio",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

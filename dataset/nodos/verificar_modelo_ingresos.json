@@ -4,16 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Verificar si se Puede Generar Ingresos y Crecer (Revenue Model Data)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Se debe consolidar toda la información financiera recopilada (precios, ingresos, costos de adquisición, tamaño de mercado) para construir un pronóstico de ingresos netos realista para los próximos 4-8 trimestres. Este análisis de 'gut check' permite decidir si el negocio será rentable y escalable antes de invertir más recursos en validación de clientes.",
+  "resumen_teorico": "Consolida en tu teléfono todos los datos duros que ya recopilaste: precios, ingresos, costos de adquisición, tamaño de mercado y costos de canal. Con eso arma un pronóstico de ingresos netos realista para los próximos 4 a 8 trimestres. No busques precisión exacta, se trata de un chequeo de sensatez que te diga si tu negocio sobrevivirá y crecerá de forma rentable antes de invertir más tiempo en validar clientes. Trabaja siempre con tres escenarios, optimista, esperado y pesimista, para no depender de un único número. Este ejercicio te permite ver con claridad si el modelo aguanta o si necesitas ajustar precios, costos o velocidad de crecimiento antes de comprometer más recursos.",
   "pasos_accionables": [
-    "Calcular el ingreso bruto directo estimado por trimestre",
-    "Calcular ingresos netos de canal (descontando costos de margen, comisiones, etc.)",
-    "Sumar ingresos directos y de canal para obtener ingreso total",
-    "Calcular costos de adquisición de clientes por trimestre",
-    "Desarrollar tres escenarios: optimista, esperado y pesimista",
-    "Evaluar el 'cash burn' y la caja disponible por trimestre"
+    "Recopila tus datos de precios, costos de adquisición, tamaño de mercado y costos de canal",
+    "Calcula el ingreso bruto directo estimado por trimestre",
+    "Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales",
+    "Suma los ingresos totales y resta los costos operativos y de adquisición de clientes",
+    "Repite el cálculo en tres escenarios: optimista, esperado y pesimista",
+    "Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado"
   ],
-  "entregable_esperado": "Pronóstico financiero de ingresos netos a 4-8 trimestres con tres escenarios (bueno/mejor/óptimo) y análisis de flujo de caja",
+  "entregable_esperado": "Pronóstico financiero de ingresos netos a 4-8 trimestres en tres escenarios, con análisis de cash burn y Business Model Canvas actualizado.",
   "nodos_previos": [
     "verificar_clientes_y_canales",
     "escenarios_diseno_modelo_negocio",
@@ -23,10 +23,24 @@
     "decision_pivotar_o_proceder",
     "preservar_caja_buscar_gastar",
     "metodo_valor_presente_neto",
-    "metodos_de_valuacion"
+    "metodos_de_valuacion",
+    "pivotar_o_proceder",
+    "preservar_efectivo_buscar_modelo"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita decidir si el modelo de negocio es financieramente viable antes de escalar"
+    "Cuando necesitas decidir si tu modelo de negocio es financieramente viable antes de escalar",
+    "Cuando inversionistas o tú mismo requieren evidencia numérica de rentabilidad potencial",
+    "Cuando quieres saber si tu negocio sobrevivirá y crecerá de forma rentable"
   ],
-  "etiqueta_arbol": "Verifica que Puedas Crecer"
+  "etiqueta_arbol": "Verifica que Puedas Crecer",
+  "ids_alias": [
+    "verificar_modelo_rentable"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "verificar_modelo_rentable",
+      "titulo": "Verificar si el Negocio Puede Ser Rentable (Revenue Model Data)",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

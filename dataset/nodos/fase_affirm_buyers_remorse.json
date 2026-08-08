@@ -4,29 +4,63 @@
   "dominio": "core",
   "titulo_concepto": "Fase Affirm: Gestionar el Remordimiento del Comprador",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Después de la euforia de convertirse en cliente (fase Admit), el cliente entra en la fase Affirm, donde experimenta 'buyer's remorse' (remordimiento del comprador). Esto ocurre porque el dopamina que generó euforia en la decisión de compra disminuye, y el cliente enfrenta disonancia cognitiva postdecisión: dudas sobre si tomó la decisión correcta, miedo a perder dinero, y ansiedad por el compromiso a largo plazo. Las empresas que no abordan esta fase corren el riesgo de que el cliente se aleje o abandone la relación antes de recibir valor real.",
+  "resumen_teorico": "Después de la euforia de la fase Admit, el cliente entra en Affirm y experimenta 'buyer's remorse': la dopamina de la decisión baja y aparece disonancia cognitiva postdecisión, con dudas, miedo a perder dinero y ansiedad por el compromiso. Esto se agrava en la 'zona de silencio', el lapso entre la compra y el primer uso o entrega de valor real, especialmente en productos de alto costo o compromiso. Si no actúas proactivamente en ese vacío, la incertidumbre lo llena por ti y el cliente puede cancelar antes de recibir valor. La clave es anticiparte con comunicación honesta, incluso sobre posibles obstáculos, en vez de esperar a que la duda se manifieste.",
   "pasos_accionables": [
-    "Mapear el periodo de tiempo entre la compra y el primer uso/entrega de valor real",
-    "Identificar los momentos de silencio o 'tumbleweed zone' donde el cliente queda sin comunicación",
-    "Diseñar una secuencia de comunicaciones post-venta que reafirmen la decisión del cliente",
-    "Crear espacios explícitos para que el cliente exprese dudas o preocupaciones (llamada de bienvenida, check-in)",
-    "Entrenar al equipo para normalizar y validar las emociones de duda del cliente"
+    "Mapea cuánto dura el periodo de silencio entre la compra y el primer uso o entrega de valor real",
+    "Diseña al menos un punto de contacto proactivo (llamada, email, correo físico) durante ese periodo de silencio",
+    "Redacta comunicaciones que reafirmen los beneficios, la garantía y la validez de la decisión tomada",
+    "Anticipa y comunica con honestidad posibles obstáculos antes de que el cliente los descubra solo",
+    "Crea un espacio explícito donde el cliente pueda expresar sus dudas, como una llamada de bienvenida o check-in",
+    "Mide la tasa de cancelaciones o devoluciones en este periodo como termómetro del remordimiento"
   ],
-  "entregable_esperado": "Un mapa del 'customer journey' emocional en la fase Affirm con puntos de contacto diseñados para contrarrestar la disonancia cognitiva",
+  "entregable_esperado": "Un plan de comunicación calendarizado para el periodo entre compra y primer uso, con al menos un mensaje de reafirmación diseñado para contrarrestar la duda del cliente.",
   "nodos_previos": [
     "cierre_satisfaccion_postventa",
-    "handoff_transicion_ventas_cuentas"
+    "handoff_transicion_ventas_cuentas",
+    "fase_admit",
+    "fase_admit_celebracion",
+    "ocho_fases_experiencia_cliente",
+    "gestion_de_quejas_y_fidelizacion",
+    "calibracion_intensidad_celebracion",
+    "sistema_manejo_quejas",
+    "cierre_segun_complejidad_venta"
   ],
   "nodos_siguientes": [
     "gamificacion_onboarding_visual",
     "conversacion_emocional_postcompra",
     "garantia_devolucion_dinero",
-    "hacer_remarcable_lo_requerido"
+    "hacer_remarcable_lo_requerido",
+    "fase_activate",
+    "fase_acclimate_experiencia_cliente",
+    "fase_activate_primera_impresion",
+    "welcome_call_cliente_veterano"
   ],
   "condiciones_activacion": [
-    "Cuando el usuario tiene un producto/servicio de alto costo o compromiso (ej: membresías, contratos largos)",
-    "Cuando existe una brecha de tiempo entre la compra y la entrega de valor",
-    "Si se detectan altas tasas de cancelación temprana o abandono post-venta"
+    "Cuando vendes un producto o servicio de alto costo o compromiso, como membresías o contratos largos",
+    "Cuando existe una brecha de tiempo notable entre el pago y la entrega o primer uso real",
+    "Si detectas tasas altas de cancelación o devoluciones poco después de la compra"
   ],
-  "etiqueta_arbol": "Disipa el Remordimiento del Comprador"
+  "etiqueta_arbol": "Disipa el Remordimiento del Comprador",
+  "ids_alias": [
+    "fase_affirm",
+    "fase_affirm_reduccion_incertidumbre",
+    "fase_affirm_reducir_remordimiento"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "fase_affirm",
+      "titulo": "Fase 3: Affirm (Afirmar)",
+      "fuente": "Never Lose a Customer Again - Joey Coleman"
+    },
+    {
+      "node_id": "fase_affirm_reduccion_incertidumbre",
+      "titulo": "Fase Affirm: Reducción del 'Buyer's Remorse'",
+      "fuente": "Never Lose a Customer Again - Joey Coleman"
+    },
+    {
+      "node_id": "fase_affirm_reducir_remordimiento",
+      "titulo": "Fase Affirm: Contrarrestar el Remordimiento del Comprador",
+      "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ]
 }

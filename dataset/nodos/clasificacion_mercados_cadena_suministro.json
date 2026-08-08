@@ -4,17 +4,19 @@
   "dominio": "core",
   "titulo_concepto": "Clasificación de Mercados por Oferta y Demanda",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Los mercados se clasifican en cuatro cuadrantes según la relación oferta-demanda: mercados en desarrollo (demanda incierta, oferta y demanda bajas pero creciendo), mercados de crecimiento (demanda mayor que oferta), mercados estables (oferta y demanda altas y predecibles) y mercados maduros (oferta excede demanda, alta competencia). Cada cuadrante presenta oportunidades y requerimientos de desempeño distintos para la cadena de suministro que lo sirve.",
+  "resumen_teorico": "Los mercados se clasifican en cuatro cuadrantes según la relación oferta-demanda: mercados en desarrollo (oferta y demanda bajas e impredecibles), mercados de crecimiento (demanda mayor que oferta), mercados estables (oferta y demanda altas y predecibles) y mercados maduros (oferta excede demanda, alta competencia). Cada cuadrante presenta oportunidades distintas: en desarrollo se buscan alianzas e inteligencia de mercado, en crecimiento servicio al cliente confiable, en estable optimización interna, y en maduro flexibilidad y conveniencia de compra. El cuadrante en que opera un mercado puede cambiar con el tiempo, por lo que conviene revisarlo periódicamente, especialmente si tu negocio atiende varios mercados con dinámicas distintas.",
   "pasos_accionables": [
-    "Identificar en qué cuadrante de mercado opera tu empresa: desarrollo, crecimiento, estable o maduro",
+    "Identificar en qué cuadrante opera cada mercado que atiendes: desarrollo, crecimiento, estable o maduro",
     "Analizar la relación actual entre oferta y demanda en tu industria",
-    "Determinar qué oportunidades específicas ofrece ese cuadrante (fill rate, eficiencia, flexibilidad o desarrollo de producto)",
-    "Ajustar la estrategia de inventario y precios según el cuadrante identificado"
+    "Determinar qué oportunidades específicas ofrece ese cuadrante: alianzas, servicio al cliente, eficiencia o flexibilidad",
+    "Ajustar tu estrategia de inventario, precios y cadena de suministro según el cuadrante identificado",
+    "Revisar periódicamente el cuadrante de cada mercado, ya que puede cambiar con el tiempo"
   ],
-  "entregable_esperado": "Diagnóstico escrito del cuadrante de mercado en que opera el negocio y las implicaciones estratégicas correspondientes",
+  "entregable_esperado": "Diagnóstico escrito del cuadrante de mercado en que opera cada negocio o mercado atendido, con la estrategia correspondiente asociada",
   "nodos_previos": [
     "market_type_revenue_growth",
-    "estudio_mercado_calidad"
+    "estudio_mercado_calidad",
+    "lienzo_modelo_negocio"
   ],
   "nodos_siguientes": [
     "metricas_desempeno_cadena_suministro",
@@ -22,8 +24,19 @@
     "cuatro_categorias_desempeno_cadena_suministro"
   ],
   "condiciones_activacion": [
-    "Cuando el usuario necesita definir su estrategia de cadena de suministro",
-    "Si hay incertidumbre sobre cómo priorizar recursos según el tipo de mercado"
+    "Cuando necesitas definir tu estrategia de cadena de suministro",
+    "Si hay incertidumbre sobre cómo priorizar recursos según el tipo de mercado",
+    "Cuando atiendes varios mercados con dinámicas distintas de oferta y demanda"
   ],
-  "etiqueta_arbol": "Ubica tu Mercado en el Mapa"
+  "etiqueta_arbol": "Ubica tu Mercado en el Mapa",
+  "ids_alias": [
+    "modelo_cuatro_cuadrantes_mercado"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "modelo_cuatro_cuadrantes_mercado",
+      "titulo": "Modelo de los Cuatro Cuadrantes de Mercado para Cadena de Suministro",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

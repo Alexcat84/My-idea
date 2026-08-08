@@ -4,33 +4,47 @@
   "dominio": "core",
   "titulo_concepto": "Análisis del Flujo de Valor (Value-Stream Analysis)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Técnica tomada de la manufactura esbelta (lean manufacturing) aplicada al proceso de innovación. Consiste en mapear todas las etapas, decisiones y actividades de un proyecto típico de desarrollo para identificar cuáles agregan valor al cliente y cuáles son desperdicio (burocracia, tiempos muertos, retrabajos). El objetivo es eliminar actividades sin valor agregado y acelerar el proceso de idea-a-lanzamiento.",
+  "resumen_teorico": "Técnica de manufactura esbelta aplicada a tu proceso de innovación para separar lo que agrega valor al cliente de lo que es puro desperdicio: papeleo, aprobaciones redundantes, esperas y retrabajos. En vez de mapear el proceso ideal, documentas cómo funciona realmente tu desarrollo, etapa por etapa, con tiempos típicos, y comparas ambas versiones. Cada actividad se somete a preguntas simples: qué trabajo implica, cuánto tarda, si es necesaria y cómo acelerarla. El fin es reducir el ciclo de idea a lanzamiento eliminando entregables excesivos y templates sobrecargados, por ejemplo recortando documentos extensos a lo esencial, y resolviendo cuellos de botella mediante análisis de causa raíz para llegar más rápido al mercado.",
   "pasos_accionables": [
-    "Formar un equipo de trabajo (task force) para mapear el flujo de valor real del proceso de desarrollo",
-    "Documentar en un mapa visual todas las etapas, decisiones y actividades con sus tiempos típicos",
-    "Para cada actividad, responder: ¿qué trabajo se hace?, ¿qué tan bien se ejecuta y cuánto tarda?, ¿es realmente necesaria?, ¿cómo se puede mejorar o acelerar?",
-    "Identificar actividades que no agregan valor (papeleo excesivo, aprobaciones redundantes, esperas)",
-    "Realizar un análisis de causa raíz sobre los cuellos de botella identificados",
-    "Implementar soluciones concretas para eliminar el desperdicio detectado"
+    "Mapea en un documento o papel todas las etapas, decisiones y actividades reales de tu proceso de desarrollo, con tiempos típicos, sin idealizar",
+    "Compara cómo crees que funciona tu proceso versus cómo funciona realmente en la práctica",
+    "Para cada actividad pregunta: qué trabajo se hace, cuánto tarda, si es realmente necesaria y cómo se puede acelerar",
+    "Identifica actividades sin valor agregado como papeleo excesivo, aprobaciones redundantes, esperas y templates sobrecargados",
+    "Realiza un análisis de causa raíz sobre los cuellos de botella que detectes",
+    "Elimina o simplifica esas actividades, por ejemplo recortando documentos extensos a lo esencial, e implementa las mejoras"
   ],
-  "entregable_esperado": "Mapa de flujo de valor documentado con actividades clasificadas (valor agregado / no valor agregado) y un plan de acción con soluciones implementadas para eliminar cuellos de botella",
+  "entregable_esperado": "Mapa de flujo de valor documentado con actividades clasificadas en valor agregado o desperdicio y un plan de acción con mejoras implementadas y tiempos de ciclo reducidos.",
   "nodos_previos": [
     "mitos_stage_gate",
     "afinar_frente_difuso_innovacion",
     "plan_mejora_procesos",
-    "value_stream_analysis_lean"
+    "value_stream_analysis_lean",
+    "overlapping_stages_concurrent_execution"
   ],
   "nodos_siguientes": [
     "equipos_dedicados_de_proyecto",
     "modelo_hibrido_agile_stage_gate",
     "ciclo_de_conversion_de_efectivo",
     "decision_consciente_de_crecimiento",
-    "gestion_cuentas_por_pagar_dpo"
+    "gestion_cuentas_por_pagar_dpo",
+    "pull_no_push",
+    "valor_vs_desperdicio"
   ],
   "condiciones_activacion": [
-    "Cuando el proceso de desarrollo de productos es lento y burocrático",
-    "Si existen retrabajos frecuentes o ciclos repetidos en pruebas de campo",
-    "Cuando se busca acelerar el tiempo de lanzamiento al mercado (speed to market)"
+    "Cuando tu proceso de desarrollo se siente lento y burocrático",
+    "Si notas retrabajos frecuentes o ciclos repetidos en pruebas o validaciones",
+    "Cuando tienes demasiados entregables, templates o aprobaciones para avanzar en cada etapa",
+    "Cuando buscas acelerar el tiempo de lanzamiento al mercado"
   ],
-  "etiqueta_arbol": "Mapea tu Flujo de Valor"
+  "etiqueta_arbol": "Mapea tu Flujo de Valor",
+  "ids_alias": [
+    "value_stream_analysis_lean"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "value_stream_analysis_lean",
+      "titulo": "Análisis de Flujo de Valor (Value-Stream Analysis) para Lean Idea-to-Launch",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

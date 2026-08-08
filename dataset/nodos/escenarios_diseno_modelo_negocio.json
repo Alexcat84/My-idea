@@ -4,28 +4,45 @@
   "dominio": "core",
   "titulo_concepto": "Escenarios para Guiar el Diseño del Modelo de Negocio",
   "fuente": "Business Model Generation (Osterwalder)",
-  "resumen_teorico": "Los escenarios son historias concretas que hacen tangible el contexto de diseño, ya sea describiendo situaciones específicas de clientes (cómo usan un producto, sus preocupaciones y objetivos) o imaginando futuros entornos competitivos posibles. No buscan predecir el futuro, sino reflexionar sobre cómo debería evolucionar un modelo de negocio bajo distintas condiciones, ayudando a decidir sobre canales, relaciones con clientes y disposición a pagar, y a preparar la organización para el futuro.",
+  "resumen_teorico": "Los escenarios son historias concretas que hacen tangible el contexto de diseño, ya sea describiendo situaciones específicas de clientes (cómo usan el producto, sus preocupaciones y objetivos) o imaginando futuros entornos competitivos posibles. Van más allá de los insights sueltos al convertirlos en imágenes específicas que guían decisiones sobre canales, relaciones con clientes y propuestas de valor. No buscan predecir el futuro, sino reflexionar sobre cómo debería evolucionar tu modelo de negocio bajo distintas condiciones. Cada escenario debe cerrar con preguntas abiertas sobre value proposition, canales, relaciones y disposición a pagar. También sirven para evaluar si un único modelo de negocio puede servir a varios segmentos o si necesitas adaptarlo, y para preparar tu proyecto frente a cambios del entorno.",
   "pasos_accionables": [
-    "Define el tipo de escenario a construir: de cliente (uso, contexto, deseos) o de entorno futuro (competencia, tecnología, sociedad).",
-    "Escribe escenarios detallados y concretos para diferentes segmentos de clientes o futuros posibles.",
-    "Usa los escenarios para responder preguntas clave: ¿qué canales son apropiados?, ¿qué relaciones establecer?, ¿por qué solución pagaría el cliente?",
-    "Evalúa si un solo modelo de negocio sirve para todos los escenarios o si se requiere adaptarlo por segmento.",
-    "Aplica los escenarios de entorno futuro para anticipar cómo debería evolucionar el modelo actual (scenario planning)."
+    "Define el tipo de escenario que vas a construir: de cliente (uso, contexto, deseos) o de entorno futuro (competencia, tecnología, sociedad)",
+    "Identifica los segmentos de clientes relevantes para tu innovación",
+    "Escribe una historia concreta y específica para cada segmento o futuro posible, describiendo su contexto",
+    "Cierra cada escenario con preguntas abiertas sobre canales, relaciones, propuesta de valor y por qué pagaría el cliente",
+    "Evalúa si un solo modelo de negocio sirve para todos los escenarios o si necesitas adaptarlo por segmento",
+    "Usa los escenarios de entorno futuro para anticipar cómo debería evolucionar tu modelo actual"
   ],
-  "entregable_esperado": "Un set de 2-3 escenarios narrativos (de cliente y/o de entorno futuro) que informan decisiones concretas sobre los bloques del Business Model Canvas.",
+  "entregable_esperado": "Un set de 2 a 3 escenarios narrativos, de cliente y/o de entorno futuro, con preguntas de diseño asociadas a cada bloque del Business Model Canvas.",
   "nodos_previos": [
     "customer_insights_design",
     "empathy_map",
-    "fase_entender_modelo_negocio"
+    "fase_entender_modelo_negocio",
+    "resegmentacion_mercado_nicho_bajo_costo",
+    "multi_sided_platforms",
+    "fase_entendimiento_investigacion_mercado"
   ],
   "nodos_siguientes": [
     "prototipado_modelos_negocio",
-    "verificar_modelo_ingresos"
+    "verificar_modelo_ingresos",
+    "lienzo_modelo_negocio",
+    "fit_value_proposition"
   ],
   "condiciones_activacion": [
-    "Si el usuario tiene múltiples segmentos de clientes y no sabe si necesita un modelo distinto para cada uno",
-    "Cuando se necesita anticipar cómo el entorno futuro (tecnología, competencia) impactará el modelo de negocio actual",
-    "Si las decisiones sobre canales o relaciones con clientes son ambiguas y requieren contexto específico"
+    "Tienes insights de clientes pero no sabes cómo traducirlos en decisiones de modelo de negocio",
+    "Tienes múltiples segmentos de clientes y no sabes si necesitas un modelo distinto para cada uno",
+    "Necesitas anticipar cómo un entorno futuro, como tecnología o competencia, impactará tu modelo de negocio actual",
+    "Las decisiones sobre canales o relaciones con clientes son ambiguas y requieren contexto específico"
   ],
-  "etiqueta_arbol": "Diseña tu Modelo con Escenarios"
+  "etiqueta_arbol": "Diseña tu Modelo con Escenarios",
+  "ids_alias": [
+    "customer_scenarios_business_model"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "customer_scenarios_business_model",
+      "titulo": "Escenarios de Cliente para Diseño de Modelo de Negocio",
+      "fuente": "Business Model Generation (Osterwalder)"
+    }
+  ]
 }

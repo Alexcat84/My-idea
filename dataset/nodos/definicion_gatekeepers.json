@@ -4,26 +4,39 @@
   "dominio": "core",
   "titulo_concepto": "Definición y Selección de Gatekeepers",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los gatekeepers son el grupo multifuncional de personas senior que poseen los recursos necesarios para que un proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go/Kill en cada gate. Deben representar diferentes áreas funcionales (I+D, marketing, ingeniería, operaciones) y su composición puede variar según el gate, el nivel de riesgo del proyecto y el tipo de proyecto (Full, XPress, Lite). Los mejores innovadores definen claramente quiénes son estos gatekeepers en un 85% de los casos.",
+  "resumen_teorico": "Los gatekeepers son el grupo multifuncional de personas senior que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad) y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite). Los mejores innovadores definen claramente quiénes son estos gatekeepers en el 85% de los casos, asegurando que tengan autoridad real para comprometer recursos, no solo opinión.",
   "pasos_accionables": [
-    "Identificar quién posee la autoridad para comprometer los recursos de la siguiente etapa.",
-    "Formar un grupo multifuncional que represente todas las áreas relevantes.",
-    "Definir si los gatekeepers cambiarán según el gate o el tipo de proyecto (riesgo/tamaño).",
-    "Asegurar continuidad de algunos miembros entre gates para evitar tener que justificar el proyecto desde cero.",
-    "Considerar incluir a stakeholders futuros clave (ej. unidades de negocio que comercializarán una tecnología)."
+    "Identifica quién posee la autoridad real para comprometer los recursos de la siguiente etapa de tu proyecto.",
+    "Arma un grupo multifuncional que represente todas las áreas relevantes, no solo una función.",
+    "Define si los gatekeepers cambiarán según el gate o el tipo de proyecto según su riesgo y tamaño.",
+    "Verifica que cada gatekeeper tenga autoridad real para comprometer recursos, no solo emitir opinión.",
+    "Mantén continuidad de algunos miembros entre gates para no justificar el proyecto desde cero.",
+    "Considera incluir a stakeholders futuros clave, como quienes comercializarán la solución."
   ],
-  "entregable_esperado": "Una matriz o organigrama que defina claramente quiénes son los gatekeepers en cada gate, según tipo y riesgo del proyecto.",
+  "entregable_esperado": "Una matriz o lista documentada que defina quiénes son los gatekeepers en cada gate, con su autoridad y área funcional según tipo y riesgo del proyecto.",
   "nodos_previos": [
     "scorecards_criterios_gate",
     "card_sort",
-    "categorizacion_ranking_proyectos_cubetas"
+    "categorizacion_ranking_proyectos_cubetas",
+    "tipos_criterios_gate"
   ],
   "nodos_siguientes": [
     "protocolo_reuniones_gate"
   ],
   "condiciones_activacion": [
-    "Si el usuario no tiene claro quién toma las decisiones Go/Kill en su proceso de innovación.",
-    "Si existen múltiples tipos de proyectos con distintos niveles de riesgo que requieren distintos niveles de autoridad."
+    "Cuando no tienes claro quién toma las decisiones de Go o Kill en tu proceso de innovación.",
+    "Cuando manejas múltiples tipos de proyectos con distintos niveles de riesgo que requieren distinta autoridad.",
+    "Cuando las decisiones de avance las está tomando una sola persona o función sin representar otras áreas."
   ],
-  "etiqueta_arbol": "Elige a tus Guardianes Clave"
+  "etiqueta_arbol": "Elige a tus Guardianes Clave",
+  "ids_alias": [
+    "seleccion_gatekeepers"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seleccion_gatekeepers",
+      "titulo": "Selección y Rol de los Gatekeepers",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

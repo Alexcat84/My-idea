@@ -4,27 +4,59 @@
   "dominio": "core",
   "titulo_concepto": "Preguntas de Beneficio (Need-Payoff)",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Las Need-payoff Questions son preguntas centradas en la solución que buscan que el propio cliente exprese el valor o utilidad de resolver su problema. A diferencia de las Implication Questions (que agravan el problema), estas preguntas generan un ambiente positivo, hacen que el cliente verbalice los beneficios y reducen la resistencia a objeciones porque el cliente mismo articula por qué la solución le sirve, en lugar de que el vendedor se lo imponga.",
+  "resumen_teorico": "Las preguntas de beneficio son preguntas centradas en la solucion que buscan que el propio cliente exprese el valor de resolver su problema. A diferencia de las preguntas de implicacion, que pueden agravar la incomodidad, estas generan un ambiente positivo y reducen la resistencia a objeciones porque es el cliente quien articula el beneficio, no tu. Los vendedores mas efectivos usan este tipo de pregunta muchas mas veces que el promedio. Es clave no usarlas al inicio de la llamada ni sobre necesidades que no puedes resolver, porque eso solo fortalece una necesidad que no vas a poder satisfacer. El momento optimo es cuando el cliente ya reconoce un problema serio pero todavia no valora la solucion.",
   "pasos_accionables": [
-    "Una vez que el cliente reconoce la seriedad de un problema (Implied Need explícito), formula preguntas como '¿Sería útil para usted resolver esto?' o '¿De qué otra forma le ayudaría esta solución?'",
-    "Deja que el cliente describa los beneficios con sus propias palabras en vez de enumerarlos tú mismo",
-    "Usa estas preguntas para cada componente de la solución que el cliente valore, evitando afirmar que tu solución resuelve todo el problema"
+    "Espera a que el cliente reconozca un problema serio o exprese una necesidad explicita que tu solucion pueda resolver",
+    "Pregunta directamente si resolver eso seria valioso o importante para el, por ejemplo 'seria util para usted resolver esto'",
+    "Pide que explique por que le resultaria valiosa la solucion, dejando que el mismo enuncie los beneficios",
+    "Explora beneficios adicionales con preguntas como 'de que otra forma le ayudaria esto'",
+    "Evita usar estas preguntas al inicio de la conversacion o sobre necesidades que no puedes cubrir",
+    "Guarda las respuestas del cliente en sus propias palabras para usarlas como argumento de cierre"
   ],
-  "entregable_esperado": "Lista de beneficios articulados por el cliente en sus propias palabras, vinculados a necesidades explícitas detectadas durante la conversación",
+  "entregable_esperado": "Lista de beneficios articulados por el cliente en sus propias palabras, vinculados a sus necesidades explicitas y lista para usarse como argumento de cierre.",
   "nodos_previos": [
     "preguntas_implicacion",
     "necesidades_implicitas_vs_explicitas",
     "modelo_spin",
-    "planificacion_preguntas_implicacion"
+    "planificacion_preguntas_implicacion",
+    "ecuacion_de_valor_venta"
   ],
   "nodos_siguientes": [
     "venta_interna_cliente",
-    "obtencion_compromiso_venta"
+    "obtencion_compromiso_venta",
+    "cierre_segun_complejidad_venta",
+    "value_proposition_startup",
+    "obtencion_compromiso",
+    "encuestar_al_cliente_para_saber_que_valora",
+    "framework_caracteristicas_ventajas_beneficios"
   ],
   "condiciones_activacion": [
-    "Cuando el cliente ya reconoce que tiene un problema serio pero aún no valora la solución",
-    "Cuando se busca reducir objeciones en ventas complejas con soluciones parciales",
-    "Cuando se necesita que el cliente 'venda' internamente la solución a otros stakeholders"
+    "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solucion",
+    "Cuando has desarrollado el problema con preguntas de implicacion y buscas transicionar hacia el cierre de forma positiva",
+    "Cuando el cliente parece incomodo tras varias preguntas de implicacion y necesitas reequilibrar la conversacion",
+    "Cuando buscas que el cliente valide internamente la solucion antes de presentarla formalmente"
   ],
-  "etiqueta_arbol": "Haz Preguntas de Need-Payoff"
+  "etiqueta_arbol": "Haz Preguntas de Need-Payoff",
+  "ids_alias": [
+    "preguntas_beneficio",
+    "preguntas_necesidad_beneficio",
+    "uso_preguntas_necesidad_beneficio"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "preguntas_beneficio",
+      "titulo": "Preguntas de Beneficio o Need-Payoff (Need-Payoff Questions)",
+      "fuente": "SPIN Selling - Neil Rackham"
+    },
+    {
+      "node_id": "preguntas_necesidad_beneficio",
+      "titulo": "Preguntas de Necesidad-Beneficio",
+      "fuente": "SPIN Selling - Neil Rackham"
+    },
+    {
+      "node_id": "uso_preguntas_necesidad_beneficio",
+      "titulo": "Uso Efectivo de Preguntas de Necesidad-Beneficio",
+      "fuente": "SPIN Selling - Neil Rackham"
+    }
+  ]
 }

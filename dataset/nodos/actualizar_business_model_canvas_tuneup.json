@@ -4,28 +4,47 @@
   "dominio": "core",
   "titulo_concepto": "Actualización Iterativa del Business Model Canvas ('Tune-up')",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Práctica recurrente de revisar y ajustar el Business Model Canvas después de cada ronda de Customer Discovery, enfocándose especialmente en la propuesta de valor y los segmentos de clientes, que son los elementos más afectados por el feedback de descubrimiento de solución.",
+  "resumen_teorico": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
   "pasos_accionables": [
-    "Revisar la propuesta de valor a la luz del feedback de clientes",
-    "Revisar segmentos de clientes: identificar si el producto resuena solo con un subconjunto",
-    "Ajustar hipótesis de ingresos según los segmentos que mostraron entusiasmo",
-    "Documentar cambios como parte de un 'tune-up', no una revisión exhaustiva final"
+    "Revisa tu propuesta de valor a la luz del feedback de clientes recibido",
+    "Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto",
+    "Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real",
+    "Documenta los cambios, sorpresas y decepciones como parte de un tune-up, no una revisión final"
   ],
-  "entregable_esperado": "Business Model Canvas actualizado con anotaciones de cambios en propuesta de valor y segmentos de cliente",
+  "entregable_esperado": "Business Model Canvas actualizado con anotaciones de cambios en propuesta de valor, segmentos de cliente e hipótesis de ingresos",
   "nodos_previos": [
     "prueba_solucion_con_cliente",
     "categorias_entusiasmo_cliente",
-    "reempaquetado_producto"
+    "reempaquetado_producto",
+    "realizar_pruebas_pasa_no_pasa",
+    "medir_comportamiento_cliente_mvp",
+    "customer_discovery_phase2_problem_test"
   ],
   "nodos_siguientes": [
     "product_market_fit",
     "identificar_advisory_board",
     "genchi_gembutsu_salir_del_edificio",
-    "manifiesto_regla1_hechos_fuera_del_edificio"
+    "manifiesto_regla1_hechos_fuera_del_edificio",
+    "identificar_consejo_asesores",
+    "verificar_product_market_fit",
+    "customer_discovery_introduccion",
+    "testear_circulo_cuadrado_rectangulo",
+    "reempaquetado_producto"
   ],
   "condiciones_activacion": [
     "Después de cada ronda de entrevistas de solución con clientes",
-    "Cuando se detecta que el producto resuena solo con parte del mercado objetivo"
+    "Cuando los resultados de las pruebas muestran que alguna hipótesis del modelo de negocio no se cumple",
+    "Cuando detectas que el producto resuena solo con parte del mercado objetivo"
   ],
-  "etiqueta_arbol": "Ajusta tu Canvas Constantemente"
+  "etiqueta_arbol": "Ajusta tu Canvas Constantemente",
+  "ids_alias": [
+    "actualizar_business_model_canvas_discovery"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "actualizar_business_model_canvas_discovery",
+      "titulo": "Actualizar el Business Model Canvas tras Customer Discovery",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

@@ -4,28 +4,45 @@
   "dominio": "core",
   "titulo_concepto": "Cost Management Plan",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Parte del plan de gestión del proyecto que especifica cómo se estimarán, estructurarán, monitorearán y controlarán los costos del proyecto, incluyendo nivel de precisión, unidades de medida, umbrales de varianza y reglas de medición de desempeño.",
+  "resumen_teorico": "Es la parte de tu plan de proyecto que define cómo vas a estimar, estructurar, monitorear y controlar los costos a lo largo de todo el ciclo de vida del proyecto. Incluye el nivel de precisión que necesitas en tus estimaciones, las unidades de medida y la moneda que usarás, los umbrales de varianza para detectar desviaciones del presupuesto, y las reglas de medición de desempeño, como el valor ganado. También cubre las técnicas de estimación que aplicarás y el proceso para desarrollar el presupuesto por fases, así como quién tiene autoridad para asignar partidas presupuestarias. Este documento te da el marco de referencia para tomar decisiones financieras consistentes durante toda la ejecución del proyecto.",
   "pasos_accionables": [
-    "Definir el nivel de precisión requerido para las estimaciones de costo",
-    "Establecer unidades de medida y umbrales de varianza",
-    "Documentar el proceso para estimar costos y desarrollar presupuesto por fases",
-    "Especificar reglas de medición de desempeño y niveles de autoridad para asignación de presupuesto"
+    "Define el nivel de precisión requerido para tus estimaciones de costo",
+    "Establece las unidades de medida, la moneda y los umbrales de varianza que usarás para detectar desviaciones",
+    "Documenta las técnicas de estimación y el proceso para desarrollar el presupuesto por fases",
+    "Especifica las reglas de medición de desempeño, como el valor ganado, y quién tiene autoridad para asignar presupuesto"
   ],
-  "entregable_esperado": "Plan de gestión de costos documentado",
+  "entregable_esperado": "Un plan de gestión de costos documentado y aprobado que guía la estimación, el presupuesto y el control financiero del proyecto.",
   "nodos_previos": [
     "project_charter",
     "business_plan_cinco_secciones",
     "stakeholder_analysis_matrix",
-    "stakeholder_register"
+    "stakeholder_register",
+    "project_management_plan",
+    "plan_gestion_interesados",
+    "definicion_objetivos_proyecto_sistema"
   ],
   "nodos_siguientes": [
     "activity_duration_estimates",
     "linea_base_costos",
     "stakeholder_register",
-    "risk_audit"
+    "risk_audit",
+    "estimacion_costos_actividad",
+    "cronograma_proyecto",
+    "ejecucion_incremental_transicion_tecnologica"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita establecer cómo se gestionarán los costos a lo largo del ciclo de vida del proyecto"
+    "Cuando necesitas establecer cómo gestionarás los costos a lo largo de todo el ciclo de vida del proyecto",
+    "Cuando inicias la planificación financiera formal del proyecto"
   ],
-  "etiqueta_arbol": "Planea Cómo Controlar Costos"
+  "etiqueta_arbol": "Planea Cómo Controlar Costos",
+  "ids_alias": [
+    "plan_gestion_costos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "plan_gestion_costos",
+      "titulo": "Plan de Gestión de Costos",
+      "fuente": "A Project Manager's Book of Forms"
+    }
+  ]
 }

@@ -16,12 +16,15 @@
   "nodos_previos": [
     "escala_actitud_cierre",
     "modelo_spin",
-    "preguntas_beneficio"
+    "preguntas_beneficio",
+    "preguntas_need_payoff"
   ],
   "nodos_siguientes": [
     "tacticas_cierre_ventas",
     "fase_affirm_reducir_remordimiento",
-    "kit_shock_and_awe_bienvenida"
+    "kit_shock_and_awe_bienvenida",
+    "fase_affirm_buyers_remorse",
+    "shock_and_awe_kit_bienvenida"
   ],
   "condiciones_activacion": [
     "Cuando la empresa vende productos o servicios de alto valor con ciclos de venta largos",

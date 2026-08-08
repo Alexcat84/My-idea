@@ -4,23 +4,40 @@
   "dominio": "core",
   "titulo_concepto": "Pivotes e Iteraciones Continuas",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Un pivote es un cambio sustantivo en uno o más de los nueve componentes del Business Model Canvas (ej. cambio de segmento de cliente o modelo de precios). Una iteración es un cambio menor (ej. ajustar precio de $99 a $79). Los pivotes están guiados por aprendizajes de pruebas pasa/no pasa constantes, como el famoso pivote de $12 mil millones de Groupon (de 'The Point' a cupones grupales).",
+  "resumen_teorico": "Un pivote es un cambio sustantivo en uno o más de los nueve componentes del Business Model Canvas (ej. cambio de segmento de cliente o modelo de precios). Una iteración es un cambio menor (ej. ajustar precio de $99 a $79). Los pivotes están guiados por aprendizajes de pruebas pasa/no pasa constantes durante discovery y validation, como el famoso pivote de $12 mil millones de Groupon (de 'The Point' a cupones grupales), que muestra cómo un pivote decisivo basado en datos puede transformar una startup fallida en un éxito masivo.",
   "pasos_accionables": [
+    "Distinguir claramente entre una iteración menor y un pivote sustantivo",
     "Ejecutar pruebas pasa/no pasa continuas sobre las hipótesis del modelo de negocio",
-    "Cuando los datos contradicen una hipótesis, decidir si es una iteración menor o un pivote mayor",
+    "Usar el Business Model Canvas para localizar qué componente necesita el cambio",
+    "Cuando los datos contradicen una hipótesis, admitir el error y decidir si iteras o pivotas sin demora",
     "Documentar cada pivote como una nueva versión del Business Model Canvas",
-    "No aferrarse a la idea original si los datos indican lo contrario"
+    "No aferrarte a la idea original si los datos indican lo contrario"
   ],
-  "entregable_esperado": "Historial versionado ('flip book') de Business Model Canvas mostrando la evolución del modelo",
+  "entregable_esperado": "Historial versionado ('flip book') de Business Model Canvas con la justificación basada en datos de cada iteración y pivote",
   "nodos_previos": [
-    "fallo_como_aprendizaje_startup"
+    "fallo_como_aprendizaje_startup",
+    "fracaso_como_aprendizaje_startup",
+    "customer_development_agile_pairing"
   ],
   "nodos_siguientes": [
-    "business_model_canvas_como_scorecard"
+    "business_model_canvas_como_scorecard",
+    "pivot_o_proceder_revalidar_modelo_negocio",
+    "business_model_canvas_scorecard"
   ],
   "condiciones_activacion": [
+    "Si las pruebas con clientes muestran resultados negativos o ambiguos",
     "Si las métricas de validación muestran que una hipótesis del modelo de negocio es falsa",
-    "Si el crecimiento se ha estancado"
+    "Si tu crecimiento está estancado y necesitas un cambio para sobrevivir"
   ],
-  "etiqueta_arbol": "Ajusta o Cambia de Rumbo"
+  "etiqueta_arbol": "Ajusta o Cambia de Rumbo",
+  "ids_alias": [
+    "manifiesto_regla4_iteraciones_pivotes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "manifiesto_regla4_iteraciones_pivotes",
+      "titulo": "Iteraciones Continuas y Pivotes",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

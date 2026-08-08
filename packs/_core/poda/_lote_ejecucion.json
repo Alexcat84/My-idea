@@ -1,0 +1,395 @@
+{
+  "pack": "_core",
+  "etapa": "ejecucion",
+  "regla_superviviente": "SEMILLA > TELEMETRIA > PROPUESTO",
+  "clusters": [
+    {
+      "orden": 3,
+      "indice": 2,
+      "nodos": [
+        "fase_affirm",
+        "fase_affirm_buyers_remorse",
+        "fase_affirm_reduccion_incertidumbre",
+        "fase_affirm_reducir_remordimiento"
+      ],
+      "sobrevive": "fase_affirm_buyers_remorse",
+      "sobrevive_por": "propuesto",
+      "por_que": "Todas describen la misma fase 'Affirm' del proceso de venta, centrada en gestionar el remordimiento del comprador.",
+      "quedaria": "Fase Affirm: Gestionar el Remordimiento del Comprador"
+    },
+    {
+      "orden": 4,
+      "indice": 3,
+      "nodos": [
+        "preguntas_beneficio",
+        "preguntas_necesidad_beneficio",
+        "preguntas_need_payoff",
+        "uso_preguntas_necesidad_beneficio"
+      ],
+      "sobrevive": "preguntas_need_payoff",
+      "sobrevive_por": "telemetría",
+      "por_que": "Todas describen la misma técnica de venta SPIN: preguntas de necesidad-beneficio (need-payoff).",
+      "quedaria": "Preguntas de Necesidad-Beneficio (Need-Payoff Questions)"
+    },
+    {
+      "orden": 10,
+      "indice": 9,
+      "nodos": [
+        "ai_supply_chain",
+        "ia_en_supply_chain"
+      ],
+      "sobrevive": "ia_en_supply_chain",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambas describen el mismo uso de IA/LLMs en las mismas áreas clave de supply chain (pronóstico, rutas, almacén).",
+      "quedaria": "Inteligencia Artificial Aplicada a la Cadena de Suministro"
+    },
+    {
+      "orden": 12,
+      "indice": 11,
+      "nodos": [
+        "analisis_flujo_de_valor",
+        "value_stream_analysis_lean"
+      ],
+      "sobrevive": "analisis_flujo_de_valor",
+      "sobrevive_por": "semilla",
+      "por_que": "Ambas describen la misma técnica lean de mapear el flujo de valor para eliminar actividades sin valor.",
+      "quedaria": "Análisis de Flujo de Valor (Value-Stream Analysis) para Lean Idea-to-Launch"
+    },
+    {
+      "orden": 18,
+      "indice": 17,
+      "nodos": [
+        "calidad_de_ejecucion_proceso_innovacion",
+        "calidad_ejecucion_proceso"
+      ],
+      "sobrevive": "calidad_de_ejecucion_proceso_innovacion",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambas describen el mismo principio de aplicar calidad total (TQM/DIRTFT) al proceso de innovación.",
+      "quedaria": "Calidad de Ejecución en el Proceso de Innovación"
+    },
+    {
+      "orden": 19,
+      "indice": 19,
+      "nodos": [
+        "ceo_de_guerra_vs_paz",
+        "liderazgo_wartime_peacetime"
+      ],
+      "sobrevive": "ceo_de_guerra_vs_paz",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambas describen la misma distinción de Horowitz entre liderazgo en tiempos de paz y de guerra.",
+      "quedaria": "CEO de Guerra vs. CEO de Paz"
+    },
+    {
+      "orden": 20,
+      "indice": 20,
+      "nodos": [
+        "change_request",
+        "solicitud_cambio"
+      ],
+      "sobrevive": "solicitud_cambio",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo formulario y mismo proceso de revisión por el Comité de Control de Cambios.",
+      "quedaria": "Solicitud de Cambio (Change Request)"
+    },
+    {
+      "orden": 23,
+      "indice": 24,
+      "nodos": [
+        "cogs_vs_operating_expenses",
+        "distincion_cogs_gastos_operativos"
+      ],
+      "sobrevive": "distincion_cogs_gastos_operativos",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambas explican la misma distinción matizada entre qué costos van en COGS/COS versus gastos operativos.",
+      "quedaria": "Distinción entre COGS y Gastos Operativos"
+    },
+    {
+      "orden": 25,
+      "indice": 26,
+      "nodos": [
+        "comunicacion_aprendizaje_continuo",
+        "comunicacion_aprendizaje_startup"
+      ],
+      "sobrevive": "comunicacion_aprendizaje_continuo",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo hábito de comunicar aprendizaje continuamente durante el descubrimiento de clientes.",
+      "quedaria": "Comunicar y Compartir el Aprendizaje Continuamente"
+    },
+    {
+      "orden": 31,
+      "indice": 34,
+      "nodos": [
+        "customer_acquisition_activation_web",
+        "get_customers_funnel_webmobile"
+      ],
+      "sobrevive": "get_customers_funnel_webmobile",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambos describen el mismo proceso de adquisición y activación en canales web/mobile.",
+      "quedaria": "Embudo de Adquisición y Activación Web/Mobile"
+    },
+    {
+      "orden": 32,
+      "indice": 36,
+      "nodos": [
+        "customer_retention_strategy",
+        "customer_retention_tactics"
+      ],
+      "sobrevive": "customer_retention_tactics",
+      "sobrevive_por": "propuesto",
+      "por_que": "La estrategia y las tácticas de retención describen el mismo esfuerzo de reducir el churn con las mismas herramientas.",
+      "quedaria": "Tácticas de Retención de Clientes (Keep)"
+    },
+    {
+      "orden": 35,
+      "indice": 40,
+      "nodos": [
+        "decisiones_rapidas_reversibles",
+        "decisiones_reversibles_irreversibles"
+      ],
+      "sobrevive": "decisiones_reversibles_irreversibles",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos tratan la misma clasificación de decisiones reversibles vs irreversibles y su velocidad de ejecución.",
+      "quedaria": "Decisiones Reversibles vs Irreversibles"
+    },
+    {
+      "orden": 36,
+      "indice": 41,
+      "nodos": [
+        "definicion_gatekeepers",
+        "seleccion_gatekeepers"
+      ],
+      "sobrevive": "definicion_gatekeepers",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto de definir y seleccionar gatekeepers con las mismas responsabilidades.",
+      "quedaria": "Definición y Selección de Gatekeepers"
+    },
+    {
+      "orden": 37,
+      "indice": 42,
+      "nodos": [
+        "definicion_sprint_terminado",
+        "definicion_sprint_terminado_fisico"
+      ],
+      "sobrevive": "definicion_sprint_terminado_fisico",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto de redefinir 'sprint terminado' para productos físicos.",
+      "quedaria": "Definir un 'Sprint Terminado' para Productos Físicos"
+    },
+    {
+      "orden": 38,
+      "indice": 43,
+      "nodos": [
+        "desarrollo_en_espiral",
+        "spiral_development"
+      ],
+      "sobrevive": "desarrollo_en_espiral",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo enfoque de desarrollo en espiral iterativo de construir-probar-revisar.",
+      "quedaria": "Desarrollo en Espiral (Spiral Development)"
+    },
+    {
+      "orden": 40,
+      "indice": 45,
+      "nodos": [
+        "diseno_ciclo_completo_equipo",
+        "diseno_para_el_ciclo_completo"
+      ],
+      "sobrevive": "diseno_para_el_ciclo_completo",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos tratan la necesidad de mantener al equipo durante todo el ciclo del proyecto de diseño disruptivo.",
+      "quedaria": "Diseñar para el Ciclo Completo del Proyecto"
+    },
+    {
+      "orden": 41,
+      "indice": 46,
+      "nodos": [
+        "diseno_compensacion_equidad",
+        "seesaw_salario_equity"
+      ],
+      "sobrevive": "seesaw_salario_equity",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto del balancín entre salario en efectivo y equity en compensación.",
+      "quedaria": "El Balancín Salario vs. Equity"
+    },
+    {
+      "orden": 45,
+      "indice": 50,
+      "nodos": [
+        "driver_informacion",
+        "information_driver_supply_chain"
+      ],
+      "sobrevive": "information_driver_supply_chain",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo concepto: la información como driver que conecta y coordina las decisiones de la cadena de suministro.",
+      "quedaria": "El Rol de la Información como Driver de la Cadena de Suministro"
+    },
+    {
+      "orden": 46,
+      "indice": 51,
+      "nodos": [
+        "drones_autonomous_vehicles",
+        "vehiculos_autonomos_drones_supply_chain"
+      ],
+      "sobrevive": "vehiculos_autonomos_drones_supply_chain",
+      "sobrevive_por": "propuesto",
+      "por_que": "Definen y aplican el mismo concepto de drones/vehículos autónomos en logística con casi idéntica descripción.",
+      "quedaria": "Drones y Vehículos Autónomos en la Cadena de Suministro"
+    },
+    {
+      "orden": 47,
+      "indice": 52,
+      "nodos": [
+        "efecto_nivelador_ia",
+        "ia_como_nivelador_habilidades"
+      ],
+      "sobrevive": "ia_como_nivelador_habilidades",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo hallazgo: la IA reduce la brecha de desempeño elevando a los trabajadores de bajo rendimiento.",
+      "quedaria": "IA como Nivelador de Habilidades (Great Leveler)"
+    },
+    {
+      "orden": 48,
+      "indice": 53,
+      "nodos": [
+        "embudo_get_keep_grow",
+        "framework_get_keep_grow"
+      ],
+      "sobrevive": "embudo_get_keep_grow",
+      "sobrevive_por": "telemetría",
+      "por_que": "Es el mismo framework 'Get, Keep, Grow' descrito con las mismas palabras y propósito.",
+      "quedaria": "Framework 'Get, Keep, Grow' Customers"
+    },
+    {
+      "orden": 49,
+      "indice": 54,
+      "nodos": [
+        "enfoque_resolucion_problemas_lanzamiento_producto",
+        "lanzamiento_nuevos_productos_enfoque_problema"
+      ],
+      "sobrevive": "lanzamiento_nuevos_productos_enfoque_problema",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo error (enfocarse en características y ventajas) y la misma recomendación de evitarlo en lanzamientos.",
+      "quedaria": "Evitar el Enfoque 'Bells-and-Whistles' en Lanzamientos de Nuevos Productos"
+    },
+    {
+      "orden": 50,
+      "indice": 55,
+      "nodos": [
+        "entendiendo_balance_general_basico",
+        "lectura_balance_general"
+      ],
+      "sobrevive": "lectura_balance_general",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambos explican qué es y cómo leer el balance general (activos, pasivos, patrimonio).",
+      "quedaria": "Lectura y Análisis del Balance General"
+    },
+    {
+      "orden": 53,
+      "indice": 58,
+      "nodos": [
+        "estado_flujo_de_caja_tres_categorias",
+        "lectura_estado_flujo_efectivo"
+      ],
+      "sobrevive": "estado_flujo_de_caja_tres_categorias",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambos explican las mismas tres categorías del estado de flujo de efectivo/caja.",
+      "quedaria": "Lectura del Estado de Flujo de Efectivo"
+    },
+    {
+      "orden": 59,
+      "indice": 64,
+      "nodos": [
+        "fuentes_contratacion_ejecutivos",
+        "red_fundador_vs_inversor_hiring"
+      ],
+      "sobrevive": "fuentes_contratacion_ejecutivos",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos tratan la evolución de las fuentes de contratación ejecutiva (red del fundador vs red externa/inversor) con los mismos datos.",
+      "quedaria": "Fuentes de Contratación de Ejecutivos"
+    },
+    {
+      "orden": 64,
+      "indice": 69,
+      "nodos": [
+        "identificacion_talento_design_thinking",
+        "identificar_pensadores_de_diseno_internos"
+      ],
+      "sobrevive": "identificar_pensadores_de_diseno_internos",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen cómo identificar pensadores de diseño marginados dentro de la organización.",
+      "quedaria": "Encontrar Talento de Design Thinking dentro de la Organización"
+    },
+    {
+      "orden": 68,
+      "indice": 73,
+      "nodos": [
+        "kit_shock_and_awe_bienvenida",
+        "shock_and_awe_kit_bienvenida"
+      ],
+      "sobrevive": "shock_and_awe_kit_bienvenida",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo kit de bienvenida diseñado para sorprender y deleitar al nuevo cliente.",
+      "quedaria": "Kit de 'Shock and Awe' para Nuevos Clientes"
+    },
+    {
+      "orden": 77,
+      "indice": 82,
+      "nodos": [
+        "optimizacion_grow_customers",
+        "optimizacion_metricas_crecimiento"
+      ],
+      "sobrevive": "optimizacion_metricas_crecimiento",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto de optimizar crecimiento de ingresos por cliente vía upsell/referidos",
+      "quedaria": "Optimización de Métricas de Crecimiento (Grow Customers)"
+    },
+    {
+      "orden": 78,
+      "indice": 83,
+      "nodos": [
+        "prevencion_de_objeciones",
+        "prevencion_objeciones_vs_manejo"
+      ],
+      "sobrevive": "prevencion_objeciones_vs_manejo",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo concepto de prevenir objeciones en lugar de manejarlas",
+      "quedaria": "Prevención de Objeciones vs. Manejo de Objeciones"
+    },
+    {
+      "orden": 79,
+      "indice": 84,
+      "nodos": [
+        "publicidad_garantia",
+        "publicidad_garantia_conforme"
+      ],
+      "sobrevive": "publicidad_garantia_conforme",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo tema de cumplimiento legal FTC al publicitar garantías",
+      "quedaria": "Publicidad Correcta de Garantías y Guarantees"
+    },
+    {
+      "orden": 80,
+      "indice": 85,
+      "nodos": [
+        "reconstruccion_de_equipo_ejecutivo",
+        "reconstruir_equipo_ejecutivo_para_nueva_etapa"
+      ],
+      "sobrevive": "reconstruccion_de_equipo_ejecutivo",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto de reconstruir el equipo ejecutivo tras cambio de modelo/etapa",
+      "quedaria": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio"
+    },
+    {
+      "orden": 81,
+      "indice": 86,
+      "nodos": [
+        "reporte_estado_miembro_equipo",
+        "team_member_status_report"
+      ],
+      "sobrevive": "reporte_estado_miembro_equipo",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo documento de reporte periódico del miembro del equipo",
+      "quedaria": "Reporte de Estado del Miembro del Equipo"
+    }
+  ]
+}

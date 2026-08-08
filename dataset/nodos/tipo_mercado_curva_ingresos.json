@@ -15,14 +15,17 @@
   "entregable_esperado": "Proyección de crecimiento de ingresos ajustada al tipo de mercado específico del producto, con supuestos documentados",
   "nodos_previos": [
     "metricas_que_importan",
-    "restriccion_gasto_validacion"
+    "restriccion_gasto_validacion",
+    "metrics_that_matter_framework"
   ],
   "nodos_siguientes": [
     "revalidar_modelo_negocio",
-    "revalidacion_modelo_negocio"
+    "revalidacion_modelo_negocio",
+    "decision_pivotar_o_proceder"
   ],
   "condiciones_activacion": [
     "Cuando se necesita proyectar ingresos futuros y el equipo no ha considerado el tipo de mercado en sus estimaciones"
   ],
-  "etiqueta_arbol": "Anticipa tu Curva de Ingresos"
+  "etiqueta_arbol": "Anticipa tu Curva de Ingresos",
+  "deprecado": true
 }

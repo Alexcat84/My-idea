@@ -4,18 +4,21 @@
   "dominio": "core",
   "titulo_concepto": "Re-segmentación de Mercado (Nicho o Bajo Costo)",
   "fuente": "The Startup Owner's Manual",
-  "resumen_teorico": "Cuando un startup enfrenta un competidor dominante, atacarlo de frente es inviable por falta de recursos. La alternativa es re-segmentar el mercado existente creando un submercado único mediante diferenciación (nicho) o precio bajo, o combinando ambos en una estrategia de Océano Azul que hace irrelevante a la competencia. El objetivo es ser el número uno en algo importante para el cliente, aunque sea un segmento pequeño.",
+  "resumen_teorico": "Cuando eres el jugador más débil frente a un competidor dominante, atacarlo de frente es inviable por falta de recursos, así que debes aprovechar tu agilidad en lugar de tu tamaño. La alternativa es re-segmentar el mercado existente creando un submercado único mediante diferenciación de nicho o precio bajo, o combinando ambos en una estrategia de Océano Azul que vuelve irrelevante a la competencia. Para elegir el camino correcto evalúa si ese segmento desatendido pagaría más por características específicas o aceptaría menor desempeño a cambio de un precio menor. El objetivo no es ser el más grande, sino ser el número uno en algo importante para ese cliente, aunque sea un segmento pequeño.",
   "pasos_accionables": [
-    "Identificar de qué mercados existentes vendrían los clientes",
-    "Definir características únicas de esos clientes y necesidades insatisfechas",
-    "Determinar qué características del producto harían que abandonen a su proveedor actual",
-    "Dibujar un 'mapa de mercado' con el startup en el centro",
-    "Probar cuantitativamente el costo de cambio (switching cost) si la estrategia es bajo costo"
+    "Identifica de qué mercados existentes vendrían tus clientes desatendidos",
+    "Evalúa si ese segmento pagaría más por características específicas o aceptaría menor desempeño por menor precio",
+    "Define las características únicas de esos clientes y sus necesidades insatisfechas",
+    "Determina qué características de tu producto harían que abandonen a su proveedor actual",
+    "Dibuja un mapa de mercado con tu startup en el centro",
+    "Prueba cuantitativamente el costo de cambio (switching cost) si tu estrategia es de bajo costo"
   ],
-  "entregable_esperado": "Un mapa de mercado (market map) y un brief de re-segmentación con hipótesis validables",
+  "entregable_esperado": "Un mapa de mercado y un brief de re-segmentación con hipótesis validables sobre el nicho elegido",
   "nodos_previos": [
     "tipo_de_mercado_estrategia_competitiva",
-    "actualizar_modelo_de_negocio_pivot_o_proceed"
+    "actualizar_modelo_de_negocio_pivot_o_proceed",
+    "hipotesis_tipo_mercado",
+    "analisis_costo_entrada_mercado"
   ],
   "nodos_siguientes": [
     "brief_competitivo",
@@ -23,12 +26,24 @@
     "customer_scenarios_business_model",
     "multi_sided_platform_pattern",
     "seleccion_estrategia_pricing",
-    "tipo_de_mercado_estrategia_competitiva"
+    "tipo_de_mercado_estrategia_competitiva",
+    "escenarios_diseno_modelo_negocio",
+    "multi_sided_platforms"
   ],
   "condiciones_activacion": [
     "Si existe un competidor con más del 26% de cuota de mercado",
-    "Si el startup no tiene recursos para competir de frente",
-    "Si se busca diferenciación por nicho o precio"
+    "Si no tienes recursos para competir de frente con el líder del mercado",
+    "Si buscas diferenciarte por nicho o por precio en lugar de competir directamente"
   ],
-  "etiqueta_arbol": "Evita el Ataque Frontal Directo"
+  "etiqueta_arbol": "Evita el Ataque Frontal Directo",
+  "ids_alias": [
+    "estrategia_resegmentacion_mercado"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "estrategia_resegmentacion_mercado",
+      "titulo": "Estrategia de Re-segmentación de Mercado Existente",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

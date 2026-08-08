@@ -1,0 +1,277 @@
+{
+  "pack": "_core",
+  "etapa": "validacion",
+  "regla_superviviente": "SEMILLA > TELEMETRIA > PROPUESTO",
+  "clusters": [
+    {
+      "orden": 2,
+      "indice": 1,
+      "nodos": [
+        "decision_pivotar_o_proceder",
+        "pivot_o_proceder",
+        "pivot_o_proceder_revalidar_modelo_negocio",
+        "revalidacion_modelo_negocio",
+        "revalidar_modelo_negocio"
+      ],
+      "sobrevive": "decision_pivotar_o_proceder",
+      "sobrevive_por": "telemetría",
+      "por_que": "Todas describen el mismo hito: revisar el Business Model Canvas al final de Validación de Clientes para decidir pivotar o proceder.",
+      "quedaria": "Pivot or Proceed: La Decisión Crítica"
+    },
+    {
+      "orden": 5,
+      "indice": 4,
+      "nodos": [
+        "concierge_mvp",
+        "mvp_concierge",
+        "mvp_tipo_concierge"
+      ],
+      "sobrevive": "concierge_mvp",
+      "sobrevive_por": "telemetría",
+      "por_que": "Todas describen la misma técnica de MVP Concierge: entrega manual y personalizada sin escalar.",
+      "quedaria": "MVP Conserje (Concierge MVP)"
+    },
+    {
+      "orden": 6,
+      "indice": 5,
+      "nodos": [
+        "earlyvangelists",
+        "earlyvangelists_identificacion",
+        "identificar_earlyvangelists"
+      ],
+      "sobrevive": "identificar_earlyvangelists",
+      "sobrevive_por": "telemetría",
+      "por_que": "Todas describen el mismo concepto de earlyvangelists como clientes visionarios con las mismas características distintivas.",
+      "quedaria": "Earlyvangelists: Los Clientes Visionarios"
+    },
+    {
+      "orden": 7,
+      "indice": 6,
+      "nodos": [
+        "preservar_caja_buscar_gastar",
+        "preservar_caja_hasta_validar",
+        "preservar_efectivo_buscar_modelo"
+      ],
+      "sobrevive": "preservar_efectivo_buscar_modelo",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo principio de Customer Development: preservar caja durante la búsqueda e invertir agresivamente al encontrar el modelo.",
+      "quedaria": "Preservar Caja Mientras se Busca, Gastar Cuando se Encuentra"
+    },
+    {
+      "orden": 9,
+      "indice": 8,
+      "nodos": [
+        "actualizar_business_model_canvas_discovery",
+        "actualizar_business_model_canvas_tuneup"
+      ],
+      "sobrevive": "actualizar_business_model_canvas_tuneup",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambas describen la misma práctica de actualizar el BMC tras cada ronda de Customer Discovery, enfocándose en propuesta de valor.",
+      "quedaria": "Actualización Iterativa del Business Model Canvas ('Tune-up')"
+    },
+    {
+      "orden": 11,
+      "indice": 10,
+      "nodos": [
+        "analisis_de_cohortes",
+        "cohort_analysis_retencion"
+      ],
+      "sobrevive": "analisis_de_cohortes",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambas describen la misma técnica de análisis de cohortes para detectar patrones de retención por segmento.",
+      "quedaria": "Análisis de Cohortes para Retención de Clientes"
+    },
+    {
+      "orden": 15,
+      "indice": 14,
+      "nodos": [
+        "business_model_canvas_como_scorecard",
+        "business_model_canvas_scorecard"
+      ],
+      "sobrevive": "business_model_canvas_scorecard",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambas describen el mismo uso del BMC como scorecard semanal para rastrear pivotes durante Customer Discovery.",
+      "quedaria": "Business Model Canvas como Scorecard de Customer Discovery"
+    },
+    {
+      "orden": 34,
+      "indice": 38,
+      "nodos": [
+        "customer_types_mapping",
+        "tipos_de_clientes"
+      ],
+      "sobrevive": "tipos_de_clientes",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo mapeo de roles (usuario, influenciador, recomendador, etc.) en la decisión de compra.",
+      "quedaria": "Tipos de Clientes en el Proceso de Decisión de Compra"
+    },
+    {
+      "orden": 42,
+      "indice": 47,
+      "nodos": [
+        "diseno_experimentos_pass_fail",
+        "pass_fail_experiment_design"
+      ],
+      "sobrevive": "diseno_experimentos_pass_fail",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo ciclo de convertir hipótesis en experimentos pass/fail para validarlas.",
+      "quedaria": "Diseño de Experimentos Pass/Fail para Validar Hipótesis"
+    },
+    {
+      "orden": 43,
+      "indice": 48,
+      "nodos": [
+        "diseno_landing_page",
+        "diseno_landing_page_conversion"
+      ],
+      "sobrevive": "diseno_landing_page",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen el mismo diseño de landing page en los mismos cuatro ejes para lograr activación/conversión.",
+      "quedaria": "Diseño de Landing Page para Activación"
+    },
+    {
+      "orden": 55,
+      "indice": 60,
+      "nodos": [
+        "etapa_testing_validation",
+        "stage4_testing_validation"
+      ],
+      "sobrevive": "etapa_testing_validation",
+      "sobrevive_por": "telemetría",
+      "por_que": "Es la misma etapa del proceso descrita con título traducido y contenido casi idéntico.",
+      "quedaria": "Etapa 4: Pruebas y Validación"
+    },
+    {
+      "orden": 67,
+      "indice": 72,
+      "nodos": [
+        "keep_customers_strategy",
+        "optimizacion_keep_retencion"
+      ],
+      "sobrevive": "keep_customers_strategy",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambos describen la misma estrategia 'Keep' de retención de clientes con las mismas tácticas de bajo costo.",
+      "quedaria": "Estrategia de Retención de Clientes (Keep)"
+    },
+    {
+      "orden": 69,
+      "indice": 74,
+      "nodos": [
+        "manifiesto_regla4_iteraciones_pivotes",
+        "pivotes_e_iteraciones"
+      ],
+      "sobrevive": "pivotes_e_iteraciones",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos definen igual la diferencia entre pivote (cambio sustantivo) e iteración (cambio menor) en el Business Model Canvas.",
+      "quedaria": "Pivotes e Iteraciones Continuas"
+    },
+    {
+      "orden": 70,
+      "indice": 75,
+      "nodos": [
+        "market_type_revenue_growth",
+        "tipo_mercado_curva_ingresos"
+      ],
+      "sobrevive": "market_type_revenue_growth",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo concepto (tipo de mercado determina curva de ingresos) con títulos casi idénticos",
+      "quedaria": "El Tipo de Mercado Afecta la Curva de Ingresos"
+    },
+    {
+      "orden": 71,
+      "indice": 76,
+      "nodos": [
+        "medir_comportamiento_cliente_mvp",
+        "medir_comportamiento_y_entusiasmo_del_cliente"
+      ],
+      "sobrevive": "medir_comportamiento_cliente_mvp",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambos describen las mismas cuatro métricas de comportamiento del cliente para medir entusiasmo real",
+      "quedaria": "Medir el Comportamiento del Cliente (Purchase, Engagement, Retention, Referral)"
+    },
+    {
+      "orden": 73,
+      "indice": 78,
+      "nodos": [
+        "metricas_accionables",
+        "vanity_metrics_vs_accionables"
+      ],
+      "sobrevive": "metricas_accionables",
+      "sobrevive_por": "semilla",
+      "por_que": "Mismo concepto de distinción entre métricas de vanidad y accionables",
+      "quedaria": "Métricas Accionables vs Métricas de Vanidad"
+    },
+    {
+      "orden": 74,
+      "indice": 79,
+      "nodos": [
+        "metricas_que_importan",
+        "metrics_that_matter_framework"
+      ],
+      "sobrevive": "metrics_that_matter_framework",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo enfoque Metrics That Matter para validar viabilidad financiera del modelo de negocio",
+      "quedaria": "Metrics That Matter (Métricas que Importan)"
+    },
+    {
+      "orden": 75,
+      "indice": 80,
+      "nodos": [
+        "modelo_spin_preguntas",
+        "modelo_spin_secuencia_preguntas"
+      ],
+      "sobrevive": "modelo_spin_preguntas",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo modelo SPIN de secuencia de preguntas de venta",
+      "quedaria": "Modelo SPIN: Secuencia de Preguntas para Ventas Grandes"
+    },
+    {
+      "orden": 85,
+      "indice": 90,
+      "nodos": [
+        "test_sell_channel_partners",
+        "validar_canal_distribucion"
+      ],
+      "sobrevive": "validar_canal_distribucion",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo concepto de validar la estrategia de canal con socios de distribución",
+      "quedaria": "Validar Socios de Canal de Distribución (Channel Partners)"
+    },
+    {
+      "orden": 86,
+      "indice": 91,
+      "nodos": [
+        "verificar_modelo_ingresos",
+        "verificar_modelo_rentable"
+      ],
+      "sobrevive": "verificar_modelo_ingresos",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo proceso de consolidar datos para pronóstico de ingresos y evaluar rentabilidad",
+      "quedaria": "Verificar si el Negocio Puede Ser Rentable (Revenue Model Data)"
+    },
+    {
+      "orden": 87,
+      "indice": 92,
+      "nodos": [
+        "war_room_datos",
+        "war_room_pivot_proceed"
+      ],
+      "sobrevive": "war_room_pivot_proceed",
+      "sobrevive_por": "telemetría",
+      "por_que": "Misma práctica del War Room para decisión pivot-or-proceed",
+      "quedaria": "Crear un 'War Room' para el Análisis Pivot-or-Proceed"
+    },
+    {
+      "orden": 88,
+      "indice": 18,
+      "nodos": [
+        "catalogo_pivotes",
+        "tipos_de_pivote"
+      ],
+      "sobrevive": "catalogo_pivotes",
+      "sobrevive_por": "telemetría (par adjudicado a mano)",
+      "por_que": "ADJUDICADO: de los seis pares posibles de la familia del pivote, este es el UNICO que la valvula deja pasar (21%). La definicion general y el reempaquetado sobreviven como nodos propios.",
+      "quedaria": "Catálogo de Tipos de Pivote"
+    }
+  ]
+}

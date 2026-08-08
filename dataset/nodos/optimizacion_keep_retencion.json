@@ -26,14 +26,17 @@
   "nodos_previos": [
     "cohort_analysis_retencion",
     "customer_jobs",
-    "funnel_get_customers_optimizacion"
+    "funnel_get_customers_optimizacion",
+    "analisis_de_cohortes"
   ],
   "nodos_siguientes": [
-    "optimizacion_grow_customers"
+    "optimizacion_grow_customers",
+    "optimizacion_metricas_crecimiento"
   ],
   "condiciones_activacion": [
     "Cuando el startup ya cuenta con una base de clientes activos que requiere fidelización",
     "Cuando el costo de adquisición es alto y se necesita maximizar el valor de vida del cliente"
   ],
-  "etiqueta_arbol": "Optimiza la Retención de Clientes"
+  "etiqueta_arbol": "Optimiza la Retención de Clientes",
+  "deprecado": true
 }

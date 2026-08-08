@@ -1,0 +1,260 @@
+{
+  "pack": "_core",
+  "etapa": "planificacion",
+  "regla_superviviente": "SEMILLA > TELEMETRIA > PROPUESTO",
+  "clusters": [
+    {
+      "orden": 8,
+      "indice": 7,
+      "nodos": [
+        "pricing_models_selection",
+        "pricing_tactics_models",
+        "seleccion_estrategia_pricing"
+      ],
+      "sobrevive": "seleccion_estrategia_pricing",
+      "sobrevive_por": "telemetría",
+      "por_que": "Todas listan el mismo catálogo de modelos de fijación de precios para elegir según mercado y producto.",
+      "quedaria": "Modelos y Tácticas de Fijación de Precios"
+    },
+    {
+      "orden": 14,
+      "indice": 13,
+      "nodos": [
+        "bullseye_framework",
+        "framework_bullseye"
+      ],
+      "sobrevive": "bullseye_framework",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambas describen el mismo proceso de tres pasos del Bullseye Framework para hallar el canal de tracción.",
+      "quedaria": "Bullseye Framework (Diana de Tracción)"
+    },
+    {
+      "orden": 16,
+      "indice": 15,
+      "nodos": [
+        "business_model_canvas_vs_plan",
+        "business_model_canvas_vs_plan_negocio"
+      ],
+      "sobrevive": "business_model_canvas_vs_plan",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambas describen la misma regla del Manifiesto: reemplazar el plan de negocio estático por el BMC dinámico.",
+      "quedaria": "Business Model Canvas vs. Plan de Negocio Tradicional"
+    },
+    {
+      "orden": 17,
+      "indice": 16,
+      "nodos": [
+        "buy_in_customer_development",
+        "buyin_customer_development"
+      ],
+      "sobrevive": "buyin_customer_development",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambas describen la misma necesidad de alinear a fundadores, junta e inversionistas antes de iniciar Customer Development.",
+      "quedaria": "Buy-In del Equipo y la Junta para Customer Development"
+    },
+    {
+      "orden": 21,
+      "indice": 21,
+      "nodos": [
+        "clasificacion_mercados_cadena_suministro",
+        "modelo_cuatro_cuadrantes_mercado"
+      ],
+      "sobrevive": "clasificacion_mercados_cadena_suministro",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambas describen el mismo modelo de cuatro cuadrantes de mercado según oferta y demanda, con la misma acción de clasificar el mercado.",
+      "quedaria": "Clasificación de Mercados por Oferta y Demanda"
+    },
+    {
+      "orden": 22,
+      "indice": 22,
+      "nodos": [
+        "clima_positivo_innovacion",
+        "cultura_de_innovacion"
+      ],
+      "sobrevive": "cultura_de_innovacion",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambas describen los mismos elementos de clima y cultura organizacional que diferencian a los mejores innovadores.",
+      "quedaria": "Clima y Cultura Organizacional que Fomenta la Innovación"
+    },
+    {
+      "orden": 26,
+      "indice": 28,
+      "nodos": [
+        "cost_management_plan",
+        "plan_gestion_costos"
+      ],
+      "sobrevive": "cost_management_plan",
+      "sobrevive_por": "telemetría",
+      "por_que": "Es el mismo plan de gestión de costos, uno en inglés y otro en español.",
+      "quedaria": "Plan de Gestión de Costos"
+    },
+    {
+      "orden": 27,
+      "indice": 29,
+      "nodos": [
+        "cronograma_proyecto",
+        "project_schedule"
+      ],
+      "sobrevive": "cronograma_proyecto",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo documento de cronograma del proyecto, en inglés y español.",
+      "quedaria": "Cronograma del Proyecto (Project Schedule)"
+    },
+    {
+      "orden": 28,
+      "indice": 30,
+      "nodos": [
+        "cuatro_categorias_desempeno_cadena_suministro",
+        "metricas_desempeno_cadena_suministro"
+      ],
+      "sobrevive": "cuatro_categorias_desempeno_cadena_suministro",
+      "sobrevive_por": "propuesto",
+      "por_que": "Ambos describen las mismas cuatro categorías de desempeño de la cadena de suministro.",
+      "quedaria": "Cuatro Categorías de Desempeño de la Cadena de Suministro"
+    },
+    {
+      "orden": 30,
+      "indice": 32,
+      "nodos": [
+        "cumplimiento_inversionistas_acreditados",
+        "inversionistas_acreditados"
+      ],
+      "sobrevive": "cumplimiento_inversionistas_acreditados",
+      "sobrevive_por": "telemetría",
+      "por_que": "Mismo requisito legal de vender solo a inversionistas acreditados, con distinto nombre.",
+      "quedaria": "Cumplimiento con Regulación de Inversionistas Acreditados"
+    },
+    {
+      "orden": 44,
+      "indice": 49,
+      "nodos": [
+        "diseno_reparabilidad_cultura_arreglo",
+        "indice_de_reparabilidad"
+      ],
+      "sobrevive": "indice_de_reparabilidad",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo concepto del índice de reparabilidad inspirado en la ley francesa.",
+      "quedaria": "Diseñar un Índice de Reparabilidad"
+    },
+    {
+      "orden": 52,
+      "indice": 57,
+      "nodos": [
+        "espacios_de_diseno_superpuestos",
+        "tres_espacios_innovacion"
+      ],
+      "sobrevive": "espacios_de_diseno_superpuestos",
+      "sobrevive_por": "propuesto",
+      "por_que": "Describen los mismos tres espacios superpuestos del design thinking con la misma estructura conceptual.",
+      "quedaria": "Los Tres Espacios del Design Thinking: Inspiración, Ideación e Implementación"
+    },
+    {
+      "orden": 54,
+      "indice": 59,
+      "nodos": [
+        "estrategia_resegmentacion_mercado",
+        "resegmentacion_mercado_nicho_bajo_costo"
+      ],
+      "sobrevive": "resegmentacion_mercado_nicho_bajo_costo",
+      "sobrevive_por": "telemetría",
+      "por_que": "Misma estrategia de re-segmentar el mercado ante un competidor dominante, mismas tácticas (nicho o bajo costo).",
+      "quedaria": "Re-segmentación de Mercado (Nicho o Bajo Costo)"
+    },
+    {
+      "orden": 60,
+      "indice": 65,
+      "nodos": [
+        "gestion_portafolio_formal",
+        "portafolio_formal_management"
+      ],
+      "sobrevive": "gestion_portafolio_formal",
+      "sobrevive_por": "propuesto",
+      "por_que": "Describen el mismo sistema de revisión periódica de portafolio integrado con gates.",
+      "quedaria": "Sistema Formal de Gestión de Portafolio Integrado con Gates"
+    },
+    {
+      "orden": 61,
+      "indice": 66,
+      "nodos": [
+        "gestion_riesgo_incremental",
+        "reglas_gestion_riesgo_gambling"
+      ],
+      "sobrevive": "reglas_gestion_riesgo_gambling",
+      "sobrevive_por": "propuesto",
+      "por_que": "Son las mismas cinco reglas de gestión de riesgo basadas en la analogía de apuestas.",
+      "quedaria": "Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)"
+    },
+    {
+      "orden": 65,
+      "indice": 70,
+      "nodos": [
+        "identificar_advisory_board",
+        "identificar_consejo_asesores"
+      ],
+      "sobrevive": "identificar_consejo_asesores",
+      "sobrevive_por": "telemetría",
+      "por_que": "Ambos describen identificar durante customer discovery a personas que pueden ser asesores informales.",
+      "quedaria": "Identificar los Primeros Miembros del Consejo Asesor"
+    },
+    {
+      "orden": 66,
+      "indice": 71,
+      "nodos": [
+        "innovation_project_canvas",
+        "lienzo_proyecto_innovacion"
+      ],
+      "sobrevive": "lienzo_proyecto_innovacion",
+      "sobrevive_por": "telemetría",
+      "por_que": "Es la misma herramienta canvas para mapear el plan de acción del proyecto de innovación.",
+      "quedaria": "Innovation Project Canvas"
+    },
+    {
+      "orden": 72,
+      "indice": 77,
+      "nodos": [
+        "metodo_strategic_buckets",
+        "strategic_buckets"
+      ],
+      "sobrevive": "metodo_strategic_buckets",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo método de Strategic Buckets con traducción de nombre distinta",
+      "quedaria": "Método de Strategic Buckets (Cubetas Estratégicas)"
+    },
+    {
+      "orden": 82,
+      "indice": 87,
+      "nodos": [
+        "riesgos_terminos_favorables_seed",
+        "seed_deals_riesgos_precedente"
+      ],
+      "sobrevive": "seed_deals_riesgos_precedente",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo riesgo de precedente por términos en ronda seed/semilla",
+      "quedaria": "Riesgos de Precedente en Rondas Semilla"
+    },
+    {
+      "orden": 83,
+      "indice": 88,
+      "nodos": [
+        "sistema_de_gates_go_kill",
+        "sistema_gates_go_kill"
+      ],
+      "sobrevive": "sistema_gates_go_kill",
+      "sobrevive_por": "propuesto",
+      "por_que": "Mismo sistema de gates/compuertas con criterios go/kill en el embudo de innovación",
+      "quedaria": "Sistema de Gates (Puntos de Decisión Go/Kill)"
+    },
+    {
+      "orden": 84,
+      "indice": 89,
+      "nodos": [
+        "strat_map",
+        "strat_map_arenas_estrategicas"
+      ],
+      "sobrevive": "strat_map_arenas_estrategicas",
+      "sobrevive_por": "propuesto",
+      "por_que": "Misma herramienta Strat-Map de mapeo/priorización de arenas estratégicas",
+      "quedaria": "Strat-Map: Mapeo de Arenas Estratégicas"
+    }
+  ]
+}

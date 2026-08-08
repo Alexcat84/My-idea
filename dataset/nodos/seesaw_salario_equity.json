@@ -4,23 +4,41 @@
   "dominio": "core",
   "titulo_concepto": "El Balancín Salario vs. Equity",
   "fuente": "The Founder's Dilemmas",
-  "resumen_teorico": "Existe una relación negativa entre el salario en efectivo y la participación en equity ofrecida a ejecutivos y empleados clave. Diseñar paquetes de compensación implica decidir si se ofrece alto salario/bajo equity o bajo salario/alto equity, lo cual atrae distintos perfiles de riesgo y alinea incentivos de forma diferente (crecimiento de largo plazo vs. seguridad inmediata).",
+  "resumen_teorico": "Existe una relación negativa entre el salario en efectivo y la participación en equity ofrecida a ejecutivos y empleados clave: a mayor salario, menor equity, y viceversa. Diseñar paquetes de compensación implica decidir entre alto salario/bajo equity o bajo salario/alto equity, lo cual atrae distintos perfiles de riesgo y alinea incentivos de forma diferente (crecimiento de largo plazo vs. seguridad inmediata). Esta decisión debe alinearse con tu perfil de riesgo, tus objetivos y tu 'burn rate', y ajustarse según el cargo y la etapa de madurez de tu startup, ya que la dilución esperada varía con el tiempo. Mantener consistencia entre las personas que contratas evita conflictos futuros, especialmente si la empresa crece en valor o se vende.",
   "pasos_accionables": [
-    "Definir el rango de compensación disponible según la etapa de financiamiento del startup.",
-    "Preguntar a cada candidato clave su preferencia en el espectro salario-equity.",
-    "Documentar la decisión para evitar conflictos futuros ('sin quejas' si eligieron salario y luego la empresa crece en valor)."
+    "Define el rango de compensación disponible según tu etapa de financiamiento.",
+    "Establece un espectro de paquetes posibles, de bajo salario/alto equity a alto salario/bajo equity.",
+    "Pregunta a cada candidato clave su preferencia de riesgo entre salario y equity.",
+    "Ajusta los niveles de equity según el cargo y la etapa de madurez de tu startup.",
+    "Documenta la decisión de cada persona para evitar conflictos futuros si la empresa crece en valor.",
+    "Mantén consistencia entre los paquetes de equity de las personas que contratas."
   ],
-  "entregable_esperado": "Política de compensación con opciones de mezcla salario/equity para roles clave.",
+  "entregable_esperado": "Tabla de compensación estructurada por rol, con rangos de salario y equity definidos y una política de consistencia entre contrataciones.",
   "nodos_previos": [
     "decision_fundador_solo_vs_equipo",
-    "compensacion_fundadores_cash_vs_equity"
+    "compensacion_fundadores_cash_vs_equity",
+    "contratacion_experiencia_vs_potencial",
+    "transicion_organizacional_fluido_a_formal",
+    "gestion_expectativas_equity_empleados"
   ],
   "nodos_siguientes": [
-    "creacion_option_pool"
+    "creacion_option_pool",
+    "eleccion_estructura_vesting_founder"
   ],
   "condiciones_activacion": [
-    "Cuando se contrata al primer equipo ejecutivo.",
-    "Cuando se necesita atraer talento sin recursos de efectivo suficientes."
+    "Cuando estás negociando una oferta con un ejecutivo o empleado clave.",
+    "Cuando necesitas atraer talento sin tener suficiente efectivo disponible.",
+    "Cuando existen arreglos de equity inconsistentes entre tus primeras contrataciones."
   ],
-  "etiqueta_arbol": "Equilibra Salario y Participación"
+  "etiqueta_arbol": "Equilibra Salario y Participación",
+  "ids_alias": [
+    "diseno_compensacion_equidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "diseno_compensacion_equidad",
+      "titulo": "Balance entre Salario y Equity (Cash-versus-Equity Seesaw)",
+      "fuente": "The Founder's Dilemmas - Wasserman, Noam"
+    }
+  ]
 }
