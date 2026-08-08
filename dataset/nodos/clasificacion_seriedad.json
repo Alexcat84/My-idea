@@ -4,15 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Clasificación de Seriedad (Seriousness Classification)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Sistema formal, generado por un comité interdepartamental, que clasifica características y defectos en clases de seriedad (usualmente 3 o 4: crítico, mayor, menor, incidental) para determinar el nivel de atención en planificación, muestreo y criterios de conformidad. Ayuda a enfocar recursos en lo verdaderamente crítico.",
+  "resumen_teorico": "Es un sistema para clasificar las características y los defectos de tu producto según su gravedad, generalmente en tres o cuatro niveles: crítico, mayor, menor e incidental. Así decides cuánta atención darle a cada uno al planificar, muestrear o definir qué es aceptable. Te ayuda a enfocar tus recursos en lo que realmente importa.",
   "pasos_accionables": [
-    "Formar un comité interdepartamental (diseño, calidad, producción).",
-    "Decidir el número de clases de seriedad a utilizar.",
-    "Definir cada clase con criterios claros.",
-    "Clasificar cada característica y defecto en su clase correspondiente.",
-    "Aplicar la clasificación en planificación de inspección, especificaciones y auditorías de producto."
+    "Reúne a las pocas personas que te ayudan en diseño, calidad y producción, si las tienes; si trabajas solo, hazlo tú mismo.",
+    "Decide cuántos niveles de gravedad vas a usar, normalmente tres o cuatro.",
+    "Define cada nivel con criterios claros, para que no haya dudas al clasificar.",
+    "Clasifica cada característica y cada defecto de tu producto en el nivel que le corresponde.",
+    "Usa esa clasificación para planificar tus inspecciones, especificaciones y revisiones del producto."
   ],
-  "entregable_esperado": "Tabla de clasificación de seriedad aprobada y aplicada a características y defectos del producto.",
+  "entregable_esperado": "Una tabla de clasificación de gravedad aprobada por ti y aplicada a las características y defectos de tu producto.",
   "nodos_previos": [
     "clasificacion_caracteristicas_calidad",
     "decision_conformidad_producto"
@@ -21,7 +21,7 @@
     "inspeccion_automatizada"
   ],
   "condiciones_activacion": [
-    "Cuando existe gran cantidad de características a inspeccionar y se necesita priorizar esfuerzos."
+    "Cuando tienes muchas características que revisar y necesitas priorizar tus esfuerzos."
   ],
   "etiqueta_arbol": "Clasifica la Seriedad de tus Defectos"
 }

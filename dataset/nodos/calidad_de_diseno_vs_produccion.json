@@ -13,13 +13,15 @@
   ],
   "entregable_esperado": "Especificación de diseño validada contra necesidades del cliente y sistema de medición de conformidad en producción",
   "nodos_previos": [
-    "cuatro_costos_de_calidad"
+    "cuatro_costos_de_calidad",
+    "costo_de_mala_calidad_copq"
   ],
   "nodos_siguientes": [
     "cuatro_costos_de_calidad",
     "capacidad_de_proceso",
     "capacidad_de_proceso_2",
-    "diferencia_planeacion_mejora"
+    "diferencia_planeacion_mejora",
+    "costo_de_mala_calidad_copq"
   ],
   "condiciones_activacion": [
     "Cuando se está definiendo un nuevo producto o servicio",

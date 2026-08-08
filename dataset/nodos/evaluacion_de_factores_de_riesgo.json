@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Una vez identificados los riesgos, deben priorizarse asignando valores numéricos a distintos factores: severidad (magnitud de la pérdida potencial), probabilidad (frecuencia de ocurrencia), impacto de la velocidad, indignación del consumidor, complejidad, alcance (scope) e incertidumbre. Multiplicando o sumando estos valores se obtiene una lista priorizada que permite enfocar los esfuerzos de prevención en los riesgos más importantes.",
+  "resumen_teorico": "Cuando identificas varios riesgos, conviene ordenarlos para saber cuál atacar primero. Para eso, revisas cada uno según su gravedad, qué tan probable es que ocurra, qué tan rápido golpearía, cuánto indignaría a tus clientes, su complejidad, su alcance y cuánta incertidumbre tiene. Combinando estos factores obtienes una lista clara de prioridades para enfocar tu esfuerzo de prevención.",
   "pasos_accionables": [
-    "Asignar una escala numérica (ej. 1-3 o 1-5) a cada riesgo identificado según severidad y probabilidad.",
-    "Evaluar factores adicionales: velocidad de impacto, indignación pública, complejidad, alcance e incertidumbre.",
-    "Combinar los valores (multiplicando o sumando) para obtener una puntuación de prioridad por riesgo.",
-    "Ordenar la lista de riesgos de mayor a menor prioridad para enfocar los recursos."
+    "Revisa cada riesgo que identificaste y decide qué tan grave sería y qué tan probable es que pase, usando categorías simples como alto, medio o bajo.",
+    "Piensa también en qué tan rápido te golpearía, cuánto molestaría a tus clientes, qué tan complicado es de manejar, cuánto alcance tiene y cuánta incertidumbre hay alrededor.",
+    "Junta estas impresiones para tener una idea clara de qué tan urgente es cada riesgo.",
+    "Ordena tus riesgos del más urgente al menos urgente para saber dónde poner tu atención primero."
   ],
-  "entregable_esperado": "Matriz de riesgos priorizada con puntuaciones numéricas por cada factor evaluado.",
+  "entregable_esperado": "Una lista de tus riesgos, ordenada del más urgente al menos urgente, con una nota breve de por qué cada uno quedó en ese lugar.",
   "nodos_previos": [
     "identificacion_de_riesgos",
     "prevencion_de_groupthink_en_evaluacion_de_riesgos"
@@ -21,8 +21,8 @@
     "plan_de_gestion_de_riesgos"
   ],
   "condiciones_activacion": [
-    "Cuando se cuenta con una lista de riesgos pero no se sabe cuáles priorizar.",
-    "Antes de asignar recursos limitados a la mitigación de riesgos."
+    "Cuando ya tienes una lista de riesgos pero no sabes cuál atender primero.",
+    "Antes de repartir tu tiempo o dinero limitado en prevenir riesgos."
   ],
   "etiqueta_arbol": "Prioriza tus Riesgos Reales"
 }

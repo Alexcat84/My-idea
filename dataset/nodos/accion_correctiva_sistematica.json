@@ -4,16 +4,16 @@
   "dominio": "quality",
   "titulo_concepto": "Acción Correctiva Sistemática (Paso 6 de Crosby)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Método formal para resolver definitivamente los problemas identificados durante la operación de aceptación u otras fuentes, estableciendo cuatro niveles de actividad constante: reuniones diarias entre supervisores de área y calidad, reuniones semanales entre supervisión de producción y gerencia de calidad, reuniones mensuales de gerencia general para revisar problemas no resueltos, y equipos de tarea (task teams) para problemas complejos o de largo plazo. Se basa en el principio de Pareto: atacar primero los problemas más grandes e importantes.",
+  "resumen_teorico": "Método para resolver de una vez los problemas que vas detectando, ya sea en la revisión de tu trabajo o en cualquier otra parte del proceso. Se organiza en cuatro ritmos de seguimiento constante: revisión diaria de lo que surgió ese día, revisión semanal de lo que quedó sin resolver, revisión mensual de lo que sigue pendiente después de eso, y grupos puntuales para los problemas más complejos o de largo plazo. La lógica de fondo es el principio de Pareto: atacar primero los problemas más grandes e importantes, no los más fáciles.",
   "pasos_accionables": [
-    "Documentar cada problema detectado en un gráfico de acción ítem por ítem (problema, gravedad, causa, responsable, plazo)",
-    "Establecer reuniones diarias entre supervisor de área y un ingeniero/supervisor de calidad",
-    "Escalar problemas no resueltos a reuniones semanales entre supervisión de producción y alta gerencia de calidad",
-    "Revisar mensualmente los problemas no resueltos con la gerencia general y asignar equipos de tarea si es necesario",
-    "Formar equipos de tarea con miembros responsables de cada organización afectada y un presidente designado; disolverlos al resolver el problema",
-    "Priorizar los problemas según el principio de Pareto (los más grandes primero)"
+    "Documenta cada problema detectado en una ficha simple: qué pasó, qué tan grave es, por qué pasó, quién se encarga y para cuándo",
+    "Revisa a diario los problemas nuevos junto con la persona que te ayuda con calidad o producción, si la tienes",
+    "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo",
+    "Revisa una vez al mes lo que sigue sin resolverse y decide si necesita un esfuerzo dedicado aparte",
+    "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, y disuélvelo en cuanto el problema quede resuelto",
+    "Ordena los problemas por gravedad y ataca primero los más grandes"
   ],
-  "entregable_esperado": "Sistema documentado de acción correctiva con gráficos de seguimiento por nivel (diario, semanal, mensual) y comunicaciones formales de cierre de problemas",
+  "entregable_esperado": "Un sistema documentado de seguimiento de problemas, con fichas de control en tres ritmos (diario, semanal, mensual) y un registro claro de cuándo se cierra cada problema",
   "nodos_previos": [
     "metodologia_medicion_copq",
     "muestreo_de_aceptacion"
@@ -23,9 +23,9 @@
     "auditoria_calidad_proveedores"
   ],
   "condiciones_activacion": [
-    "Cuando se detectan defectos recurrentes que no se resuelven de forma permanente",
-    "Cuando existe descoordinación entre departamentos que genera errores repetidos",
-    "Si el usuario necesita un mecanismo formal de escalamiento de problemas de calidad"
+    "Cuando se detectan defectos que se repiten y no se resuelven de forma definitiva",
+    "Cuando hay descoordinación entre distintas partes del proceso que genera errores repetidos",
+    "Si necesitas una forma ordenada de escalar y cerrar problemas de calidad"
   ],
   "etiqueta_arbol": "Establece Niveles de Acción Correctiva"
 }

@@ -4,16 +4,16 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Tendencias con Gráficos de Control (Cause-Effect Charting)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, un supervisor puede detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa. Este análisis permite pasar de una gestión reactiva basada en intuición a una gestión predictiva basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
+  "resumen_teorico": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, puedes detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa. Este análisis te permite pasar de una gestión reactiva basada en intuición a una gestión predictiva basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
   "pasos_accionables": [
     "Recopilar los gráficos históricos de las métricas clave: cumplimiento de programa, defectos por unidad, ausentismo y faltantes.",
     "Superponer los gráficos en el mismo eje temporal para comparar visualmente.",
-    "Identificar puntos de inflexión y marcar los momentos donde se requirió acción ('take action points').",
-    "Buscar correlaciones temporales: ¿qué indicador sube o baja antes que los demás?",
-    "Formular una hipótesis de causa-efecto y probarla haciendo predicciones sobre la siguiente semana.",
-    "Validar la hipótesis comparando la predicción contra los resultados reales."
+    "Identificar los puntos de inflexión y marcar los momentos en los que tuviste que actuar.",
+    "Buscar correlaciones temporales: qué indicador sube o baja antes que los demás.",
+    "Formular una hipótesis de causa y efecto y probarla haciendo una predicción sobre la siguiente semana.",
+    "Validar la hipótesis comparando tu predicción contra los resultados reales."
   ],
-  "entregable_esperado": "Un informe de análisis de tendencias con gráficos superpuestos que identifique la cadena causal entre defectos, ausentismo, faltantes y cumplimiento de programa, más una predicción validada.",
+  "entregable_esperado": "Un análisis de tendencias con gráficos superpuestos que muestre la cadena causal entre defectos, ausentismo, faltantes y cumplimiento de programa, más una predicción que hayas comprobado.",
   "nodos_previos": [
     "diseno_de_metodos_de_recoleccion_de_datos"
   ],
@@ -21,9 +21,9 @@
     "programa_cero_defectos"
   ],
   "condiciones_activacion": [
-    "Cuando existan múltiples métricas de desempeño sin analizar de forma conjunta.",
-    "Cuando un supervisor confíe solo en su intuición y rechace el uso de datos históricos.",
-    "Cuando se necesite justificar ante la gerencia la causa raíz de un problema de calidad recurrente."
+    "Cuando tengas varias métricas de desempeño que no has analizado de forma conjunta.",
+    "Cuando confíes solo en tu intuición y dejes de lado los datos históricos.",
+    "Cuando necesites tener claro cuál es la causa raíz de un problema de calidad recurrente antes de decidir qué hacer."
   ],
   "etiqueta_arbol": "Compara Indicadores en el Tiempo"
 }

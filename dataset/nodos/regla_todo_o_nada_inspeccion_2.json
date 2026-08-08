@@ -4,15 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Regla de Inspección Todo-o-Nada (All-or-None Rules)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Concepto derivado del análisis de punto de equilibrio: cuando la calidad entrante se ubica consistentemente a un lado del punto de equilibrio (k1/k2), la política óptima es un extremo absoluto —cero inspección o inspección 100%— y no un muestreo parcial. Deming critica las reglas arbitrarias impuestas a proveedores (ej. 'una pieza defectuosa rechaza todo el lote') porque ignoran esta lógica de costos y pueden aumentar el costo total sin mejorar la calidad real, especialmente si el material ya fue puesto en producción antes de completar la inspección.",
+  "resumen_teorico": "Concepto que viene del análisis de punto de equilibrio: cuando la calidad de lo que recibes se ubica siempre del mismo lado de un punto de equilibrio (k1/k2), lo óptimo es un extremo total, cero inspección o inspección al 100 por ciento, y no revisar solo una muestra parcial. Deming cuestiona las reglas arbitrarias que le impones a quien te provee, por ejemplo 'una pieza defectuosa y rechazo todo el lote', porque ignoran esta lógica de costos y pueden subir el costo total sin mejorar realmente la calidad, sobre todo si el material ya entró a producción antes de terminar de revisarlo.",
   "pasos_accionables": [
-    "Evaluar si el proceso de calidad entrante está en estado de control estadístico",
-    "Si p < k1/k2, eliminar la inspección de entrada y enfocar el esfuerzo en mejorar la relación con el proveedor",
-    "Si p > k1/k2, implementar inspección 100% en lugar de un plan de muestreo parcial",
-    "Descartar reglas de rechazo de lote basadas en umbrales fijos arbitrarios sin sustento en costos reales",
-    "Si el proceso está fuera de control (straddling el punto de equilibrio), aplicar inspección 100% o las reglas de Joyce Orsini como solución temporal"
+    "Revisa si el proceso de calidad de lo que te llega está en control estadístico",
+    "Si p es menor que k1/k2, elimina la inspección de entrada y pon el esfuerzo en mejorar la relación con quien te provee",
+    "Si p es mayor que k1/k2, aplica inspección al 100 por ciento en vez de revisar solo una muestra",
+    "Descarta las reglas de rechazo de lote basadas en umbrales fijos que no tengan sustento en costos reales",
+    "Si el proceso está fuera de control, entre los dos extremos, aplica inspección al 100 por ciento o usa las reglas de Joyce Orsini como solución temporal"
   ],
-  "entregable_esperado": "Política de inspección de entrada formalizada y justificada por análisis de costos, reemplazando reglas arbitrarias de aceptación de lotes",
+  "entregable_esperado": "Una política de inspección de entrada clara y justificada por costos reales, en lugar de reglas arbitrarias para aceptar o rechazar lotes",
   "nodos_previos": [
     "punto_equilibrio_calidad_inspeccion"
   ],
@@ -20,8 +20,8 @@
     "equipo_conjunto_de_mejora_con_proveedores"
   ],
   "condiciones_activacion": [
-    "Cuando existe una política de rechazo de lotes basada en reglas fijas no fundamentadas en costos",
-    "Cuando se necesita justificar ante la gerencia el cambio de un plan de muestreo a inspección 100% o cero"
+    "Cuando tienes una regla fija para rechazar lotes que no está basada en costos reales",
+    "Cuando necesitas tener claro, con números, si conviene pasar de revisar una muestra a inspeccionar todo o nada"
   ],
   "etiqueta_arbol": "Elige un Extremo de Inspección"
 }

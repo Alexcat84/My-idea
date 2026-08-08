@@ -4,19 +4,20 @@
   "dominio": "quality",
   "titulo_concepto": "Equipo de Mejora de Calidad (Quality Improvement Team)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El equipo de mejora de calidad es un grupo multidisciplinario, generalmente compuesto por los jefes de departamento, encargado de liderar la implementación del programa de calidad en toda la organización. Debe tener un líder designado (no necesariamente del área de calidad), contar con apoyo administrativo dedicado, y trabajar de forma colaborativa para identificar problemas, definir acciones correctivas y medir resultados. Es clave que el equipo tenga autonomía para elegir a sus propios miembros y estructura de trabajo.",
+  "resumen_teorico": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien disena, quien compra, quien atiende al cliente y quien vigila la calidad. Necesita alguien que lo lidere (no necesariamente quien se encarga de calidad), alguien que documente y de seguimiento, y trabajar en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Es clave que quien lidera tenga libertad para elegir a quienes participan y como se organiza el trabajo.",
   "pasos_accionables": [
-    "Designar un líder del equipo de mejora de calidad, idealmente desde una función con visibilidad transversal (ej. marketing, operaciones).",
-    "Seleccionar representantes de cada departamento clave (manufactura, diseño, compras, servicio, marketing, calidad).",
-    "Asignar un administrador/facilitador que documente reuniones, dé seguimiento a acciones y mantenga el impulso del programa.",
-    "Establecer una cadencia regular de reuniones (ej. semanal) con agenda y actas claras.",
-    "Definir el alcance de autoridad del equipo para proponer y ejecutar acciones correctivas."
+    "Elegir a la persona que va a liderar la mejora de calidad, idealmente alguien con visión de todo el negocio, por ejemplo quien se encarga de marketing u operaciones.",
+    "Identificar quien representa cada area clave de tu negocio: producción o entrega, diseno, compras, atención al cliente, marketing y calidad.",
+    "Asignar a alguien que documente las reuniones, de seguimiento a las acciones y mantenga el impulso del programa.",
+    "Establecer una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.",
+    "Definir hasta donde puede llegar este grupo para proponer y ejecutar acciones correctivas."
   ],
-  "entregable_esperado": "Equipo de mejora de calidad formalmente constituido, con líder, miembros, administrador y calendario de reuniones definido.",
+  "entregable_esperado": "Un grupo de mejora de calidad definido, con quien lo lidera, quien participa, quien documenta y un calendario de reuniones establecido.",
   "nodos_previos": [
     "programa_zero_defects",
     "costo_de_la_no_calidad",
-    "cero_defectos"
+    "cero_defectos",
+    "costo_de_mala_calidad_copq"
   ],
   "nodos_siguientes": [
     "consejo_de_calidad",
@@ -24,8 +25,9 @@
     "involucramiento_sindical_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando la dirección ha decidido lanzar formalmente un programa de mejora de calidad.",
-    "Cuando se requiere coordinación entre departamentos para resolver problemas de calidad transversales."
+    "Cuando decides lanzar formalmente un programa de mejora de calidad en tu negocio.",
+    "Cuando necesitas coordinar distintas areas de tu negocio para resolver problemas de calidad que las atraviesan a todas."
   ],
-  "etiqueta_arbol": "Lidera con tu Equipo de Calidad"
+  "etiqueta_arbol": "Lidera con tu Equipo de Calidad",
+  "deprecado": true
 }
