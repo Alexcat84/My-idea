@@ -451,20 +451,39 @@ la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes 
 tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
 ancla, el correctivo pierde su punto de exposición.
 
-## Al margen, sin acción: `proteger_fragiles_caja_dentro_de_caja` (entrega)
+## DOCTRINA: la ortografía NO mueve la recuperación semántica
 
-Encontrado por la primera corrida de la prueba de rumbos (ago 2026), **sin acción
-porque esa pieza solo mide**: es el ÚNICO nodo de compras y entrega cuyo título
-va sin tildes, *"Proteger **fragiles** con el **metodo** caja dentro de caja"*, y
-su resumen igual (*"Para **articulos fragiles**…"*).
+**Experimento controlado** (ago 2026), a raíz del único ámbar de la prueba de
+rumbos. `proteger_fragiles_caja_dentro_de_caja` era el único nodo de compras y
+entrega escrito **entero sin tildes**, y quedaba 14.º dentro de su propio mundo
+para la consulta que debía ganar.
 
-Y le cuesta puntería: para la consulta *"vendo velas aromáticas y me llegan
-rotas"* queda **14.º dentro de su propio mundo**, detrás de flores, líquidos y
-relleno. La consulta lleva tildes y sus rivales también.
+Se corrigieron **18 tildes** en título, resumen, pasos y condiciones. Nada de
+contenido, el anclaje a fuente intacto. Se re-embebió solo ese nodo, con el mismo
+`input_type` del corpus, y se volvió a correr la prueba completa.
 
-No prueba causalidad, pero la coincidencia es exacta y la baranda de tildes del
-extractor nació después de él. Si se corrige, la prueba de rumbos dirá si
-recupera el puesto: ese rumbo ya está en el banco esperándolo.
+| | puesto | score |
+|---|---:|---:|
+| antes | 14.º | 0,5140 |
+| después | **15.º** | 0,5062 |
+
+**Resultado negativo, y es doctrina igual.** En este espacio (voyage-4-lite,
+multilingüe), la ortografía **no** mueve la recuperación: la diferencia cabe en el
+ruido. La causa del puesto 14 es **semántica**, no ortográfica — los nodos que le
+ganan hablan de empacar cosas concretas (flores, líquidos, relleno) y la consulta
+pregunta *cómo empacar*, no *qué método de doble caja usar*.
+
+**Lo que esto significa para `re-voz-de-quality`:** la ortografía impecable sigue
+siendo obligatoria, pero **por la voz, no por la puntería**. El lector ve el
+texto; la brújula, aparentemente, no lo nota. No se puede justificar una
+regeneración con el argumento de que mejora la recuperación.
+
+La corrección se conserva (el español correcto es correcto igual), y el rumbo
+sigue en el banco vigilando ese nodo.
+
+**Hallazgo al margen, sin acción**: ese nodo dice *"probarla **vos** mismo"* —
+voseo, que desentona con el tú de la casa. No se tocó para no contaminar el
+experimento. Va al lote de `re-voz`.
 
 ## Ficha post-beta: `densidad-de-quality`
 

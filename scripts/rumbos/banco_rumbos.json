@@ -5,218 +5,320 @@
     {
       "id": "nucleo_no_se_por_donde_empezar",
       "consulta": "tengo una idea de negocio en la cabeza desde hace meses pero no sé por dónde empezar ni si sirve",
-      "dominios": ["core"],
+      "dominios": [
+        "core"
+      ],
       "ancla": [],
       "por_que": "La entrada más común de todas. Si esto no cae en el núcleo, nada lo hace."
     },
     {
       "id": "nucleo_precio_no_se_cuanto_cobrar",
       "consulta": "hago tortas por encargo y no sé cuánto cobrar, siento que estoy trabajando gratis",
-      "dominios": ["core"],
+      "dominios": [
+        "core"
+      ],
       "ancla": [],
-      "por_que": "Precio y costos son del corazón, no de un mundo."
+      "por_que": "Precio y costos son del corazón, no de un mundo.",
+      "evolucion": "Cuando nazca el mundo Vender, este rumbo gana expectativa nueva: hoy espera core y entonces habra que decidir si el mundo se lo lleva o si el core sigue siendo su casa. Nota del auditor, no bloqueo."
     },
     {
       "id": "nucleo_primeros_clientes",
       "consulta": "ya tengo el producto listo pero no sé cómo conseguir mis primeros clientes",
-      "dominios": ["core"],
+      "dominios": [
+        "core"
+      ],
       "ancla": [],
-      "por_que": "Validación y clientes: núcleo puro."
+      "por_que": "Validación y clientes: núcleo puro.",
+      "evolucion": "Cuando nazca el mundo Vender, este rumbo gana expectativa nueva: hoy espera core y entonces habra que decidir si el mundo se lo lleva o si el core sigue siendo su casa. Nota del auditor, no bloqueo."
     },
     {
       "id": "nucleo_socio_reparto",
       "consulta": "mi socio y yo no nos ponemos de acuerdo en cómo repartir la empresa",
-      "dominios": ["core"],
+      "dominios": [
+        "core"
+      ],
       "ancla": [],
       "por_que": "Reparto entre fundadores vive en el núcleo."
     },
     {
       "id": "entrega_empaque_fragil",
       "consulta": "vendo velas aromáticas por Instagram y me llegan rotas a los clientes, no sé cómo empacarlas",
-      "dominios": ["entrega"],
-      "ancla": ["proteger_fragiles_caja_dentro_de_caja"],
+      "dominios": [
+        "entrega"
+      ],
+      "ancla": [
+        "proteger_fragiles_caja_dentro_de_caja"
+      ],
       "por_que": "El rumbo de empaque más típico del mundo nuevo."
     },
     {
       "id": "entrega_costo_envio",
       "consulta": "el courier me cobra más de lo que pesa mi paquete y no entiendo por qué",
-      "dominios": ["entrega"],
-      "ancla": ["calcular_peso_dimensional_antes_cotizar"],
+      "dominios": [
+        "entrega"
+      ],
+      "ancla": [
+        "calcular_peso_dimensional_antes_cotizar"
+      ],
       "por_que": "Peso dimensional: el concepto que explica exactamente esa queja."
     },
     {
       "id": "entrega_devoluciones",
       "consulta": "me están devolviendo muchos pedidos y no tengo un proceso para eso",
-      "dominios": ["entrega"],
-      "ancla": ["flujo_decision_devoluciones"],
+      "dominios": [
+        "entrega"
+      ],
+      "ancla": [
+        "flujo_decision_devoluciones"
+      ],
       "por_que": "Logística inversa."
     },
     {
       "id": "compras_elegir_proveedor",
       "consulta": "necesito encontrar un proveedor de telas y no sé cómo elegir entre los que me cotizaron",
-      "dominios": ["compras"],
-      "ancla": ["decide_criterio_eleccion_proveedor", "plantilla_fija_cotizaciones"],
+      "dominios": [
+        "compras"
+      ],
+      "ancla": [
+        "decide_criterio_eleccion_proveedor",
+        "plantilla_fija_cotizaciones"
+      ],
       "por_que": "La entrada natural al mundo de comprar."
     },
     {
       "id": "compras_negociar_precio",
       "consulta": "mi proveedor me subió el precio y no sé cómo negociar sin perder la relación",
-      "dominios": ["compras"],
+      "dominios": [
+        "compras"
+      ],
       "ancla": [],
-      "por_que": "Negociación con la relación recurrente encima: la baranda de Voss hecha rumbo."
+      "por_que": "Negociación con la relación recurrente encima: la baranda de Voss hecha rumbo.",
+      "evolucion": "Ancla OPCIONAL para cuando se quiera reforzar la vigilancia de la baranda de Voss (la relacion que sigue): p.ej. negocia_por_intereses_no_posiciones o aplica_modelo_ackerman. Hoy se deja sin ancla a proposito: el rumbo vigila el DOMINIO, y atarlo a un nodo concreto lo volveria fragil ante una fusion."
     },
     {
       "id": "compras_contrato",
       "consulta": "voy a firmar con un proveedor grande y no sé qué debería decir el contrato",
-      "dominios": ["compras"],
-      "ancla": ["ten_un_checklist_de_clausulas_de_contrato"],
+      "dominios": [
+        "compras"
+      ],
+      "ancla": [
+        "ten_un_checklist_de_clausulas_de_contrato"
+      ],
       "por_que": "Contratos de suministro."
     },
     {
       "id": "compras_o_lo_hago_yo",
       "consulta": "no sé si comprar las cajas ya hechas o armarlas yo misma en el taller",
-      "dominios": ["compras"],
-      "ancla": ["decide_si_lo_compras_o_lo_haces_tu"],
+      "dominios": [
+        "compras"
+      ],
+      "ancla": [
+        "decide_si_lo_compras_o_lo_haces_tu"
+      ],
       "por_que": "El único nodo de ideación de compras: si no sale aquí, no sale nunca."
     },
     {
       "id": "quality_reclamos",
       "consulta": "me llegan muchos reclamos por defectos y no sé cómo dejar de repetir los mismos errores",
-      "dominios": ["quality"],
+      "dominios": [
+        "quality"
+      ],
       "ancla": [],
       "por_que": "Calidad post-fusión: el rumbo debe seguir cayendo aquí."
     },
     {
       "id": "quality_costo_mala_calidad",
       "consulta": "quiero saber cuánto me está costando de verdad rehacer trabajos y atender quejas",
-      "dominios": ["quality"],
-      "ancla": ["costo_de_mala_calidad_copq"],
+      "dominios": [
+        "quality"
+      ],
+      "ancla": [
+        "costo_de_mala_calidad_copq"
+      ],
       "por_que": "GUARDIÁN DE LA FUSIÓN: el superviviente del cluster de 6. Si sale un deprecado, la cirugía dejó una puerta abierta."
     },
     {
       "id": "health_safety_accidente",
       "consulta": "un trabajador se cortó con la máquina y no sé qué debo hacer ni cómo evitar que vuelva a pasar",
-      "dominios": ["health_safety"],
+      "dominios": [
+        "health_safety"
+      ],
       "ancla": [],
       "por_que": "Seguridad de personas."
     },
     {
       "id": "environmental_residuos",
       "consulta": "genero mucho desperdicio de material y quiero reducirlo sin gastar más",
-      "dominios": ["environmental"],
+      "dominios": [
+        "environmental"
+      ],
       "ancla": [],
       "por_que": "Ambiente."
     },
     {
       "id": "riesgos_proveedor_falla",
       "consulta": "dependo de un solo proveedor y me da miedo qué pasa si me falla justo en temporada alta",
-      "dominios": ["risk_management"],
-      "prohibido_top3": ["compras"],
+      "dominios": [
+        "risk_management"
+      ],
+      "prohibido_top3": [
+        "compras"
+      ],
       "ancla": [],
       "por_que": "TRAMPA DE FRONTERA. Suena a compras (habla de un proveedor) pero es riesgo: la pregunta es qué pasa SI falla, no a quién comprarle."
     },
     {
       "id": "riesgos_que_puede_salir_mal",
       "consulta": "voy a lanzar el mes que viene y quiero pensar antes qué cosas pueden salir mal",
-      "dominios": ["risk_management"],
+      "dominios": [
+        "risk_management"
+      ],
       "ancla": [],
       "por_que": "Identificación de riesgos, la puerta del mundo."
     },
     {
       "id": "seguridad_digital_datos",
       "consulta": "guardo los datos de mis clientes en una hoja de cálculo y me da miedo que se filtren",
-      "dominios": ["seguridad_digital"],
+      "dominios": [
+        "seguridad_digital"
+      ],
       "ancla": [],
       "por_que": "Seguridad digital."
     },
     {
       "id": "exportacion_primer_envio_fuera",
       "consulta": "un cliente de otro país quiere comprarme y nunca he exportado, no sé qué papeles necesito",
-      "dominios": ["exportacion"],
+      "dominios": [
+        "exportacion"
+      ],
       "ancla": [],
       "por_que": "Exportación con aduana de por medio."
     },
     {
       "id": "franquicias_replicar",
       "consulta": "mi local funciona bien y quiero abrir más sin tener que estar yo en cada uno",
-      "dominios": ["franquicias"],
+      "dominios": [
+        "franquicias"
+      ],
       "ancla": [],
       "por_que": "Franquicias."
     },
     {
       "id": "frontera_empaque_domestico_no_exportacion",
       "consulta": "mando mis pedidos por courier dentro del país y quiero que lleguen bien empacados",
-      "dominios": ["entrega"],
-      "prohibido_top3": ["exportacion"],
+      "dominios": [
+        "entrega"
+      ],
+      "prohibido_top3": [
+        "exportacion"
+      ],
       "ancla": [],
       "por_que": "TRAMPA DE FRONTERA (la que el encargo nombra). Empaque doméstico es ENTREGA. Exportación comparte vocabulario de empaque y no debe aparecer: 'dentro del país' es la señal."
     },
     {
       "id": "frontera_exportar_si_es_exportacion",
       "consulta": "quiero vender a Estados Unidos y no sé qué me van a pedir en la aduana",
-      "dominios": ["exportacion"],
-      "prohibido_top3": ["entrega"],
+      "dominios": [
+        "exportacion"
+      ],
+      "prohibido_top3": [
+        "entrega"
+      ],
       "ancla": [],
       "por_que": "El espejo del anterior: aquí SÍ es exportación, y entrega no debe robárselo."
     },
     {
       "id": "frontera_calidad_no_riesgos",
       "consulta": "mis productos salen desparejos y quiero que todos queden iguales",
-      "dominios": ["quality"],
-      "prohibido_top3": ["risk_management"],
+      "dominios": [
+        "quality"
+      ],
+      "prohibido_top3": [
+        "risk_management"
+      ],
       "ancla": [],
       "por_que": "TRAMPA. Variación de proceso es calidad, no gestión de riesgo, aunque ambos hablen de 'lo que puede salir mal'."
     },
     {
       "id": "frontera_inventario_es_compras",
       "consulta": "tengo la bodega llena de material que no rota y me quedé sin efectivo",
-      "dominios": ["compras"],
-      "prohibido_top3": ["entrega"],
-      "ancla": ["traduce_stock_muerto_numeros"],
+      "dominios": [
+        "compras"
+      ],
+      "prohibido_top3": [
+        "entrega"
+      ],
+      "ancla": [
+        "traduce_stock_muerto_numeros"
+      ],
       "por_que": "TRAMPA. El inventario quedó en COMPRAS por adjudicación del fundador, no en entrega. Este rumbo lo verifica."
     },
     {
       "id": "proteccion_snapshot_riesgos",
       "consulta": "ya tengo mi plan armado y quiero revisar qué riesgos tiene lo que estoy a punto de hacer",
-      "dominios": ["risk_management"],
+      "dominios": [
+        "risk_management"
+      ],
       "ancla": [],
       "por_que": "El mundo de protección sobre lo existente: la consulta habla de un plan YA hecho."
     },
     {
       "id": "proteccion_hseq_sobre_plan",
       "consulta": "mi plan ya está listo y quiero revisar si estoy exponiendo a alguien a un peligro",
-      "dominios": ["health_safety"],
+      "dominios": [
+        "health_safety"
+      ],
       "ancla": [],
       "por_que": "Protección HSEQ sobre el plan existente."
     },
     {
       "id": "nucleo_pivotar",
       "consulta": "llevo seis meses y no despega, no sé si insistir o cambiar de rumbo",
-      "dominios": ["core"],
+      "dominios": [
+        "core"
+      ],
       "ancla": [],
       "por_que": "GUARDIÁN DE LA FUSIÓN DEL NÚCLEO (si algún día se hace): hoy el núcleo tiene 5 nodos de pivotar-o-proceder. Este rumbo fija su puntería antes de tocarlos."
     },
     {
       "id": "quality_mejora_continua",
       "consulta": "quiero mejorar mi proceso poco a poco en vez de cambiarlo todo de golpe",
-      "dominios": ["quality"],
-      "ancla": ["mejora_continua_del_proceso"],
+      "dominios": [
+        "quality"
+      ],
+      "ancla": [
+        "mejora_continua_del_proceso"
+      ],
       "por_que": "Ancla que además es semilla del pack: verifica que las semillas siguen siendo alcanzables tras la fusión."
     },
     {
       "id": "entrega_subcontratar",
       "consulta": "ya no doy abasto empacando y despachando yo mismo, ¿lo dejo en manos de alguien?",
-      "dominios": ["entrega"],
-      "ancla": ["decidir_empacar_tu_mismo_o_subcontratar"],
+      "dominios": [
+        "entrega"
+      ],
+      "ancla": [
+        "decidir_empacar_tu_mismo_o_subcontratar"
+      ],
       "por_que": "Nodo de ideación de entrega: su puerta de entrada."
     },
     {
       "id": "frontera_seguridad_digital_no_riesgos",
       "consulta": "me llegó un correo raro pidiéndome la contraseña de mi cuenta del banco del negocio",
-      "dominios": ["seguridad_digital"],
-      "prohibido_top3": ["risk_management"],
+      "dominios": [
+        "seguridad_digital"
+      ],
+      "prohibido_top3": [
+        "risk_management"
+      ],
       "ancla": [],
       "por_que": "TRAMPA. Phishing es seguridad digital concreta, no gestión de riesgo abstracta."
     }
-  ]
+  ],
+  "_umbrales": {
+    "K": 10,
+    "top_frontera": 3,
+    "aprobados_por": "fundador+auditor, ago 2026",
+    "trinquete": "cero rojos siempre + ambares <= linea base + toda mejora re-committea la linea base"
+  }
 }

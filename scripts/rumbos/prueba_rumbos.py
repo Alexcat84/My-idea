@@ -45,10 +45,22 @@ GRAFO = BASE / "dataset" / "metadata" / "master_graph.json"
 # Los mismos que produccion (web/lib/compass.ts).
 VOYAGE_MODEL = "voyage-4-lite"
 VOYAGE_URL = "https://api.voyageai.com/v1/embeddings"
-# K: cuantos candidatos se miran. Produccion pide entre 5 y 20 segun el caso;
-# 10 es el punto medio y el que usa la brujula de familias.
+# K y TOP_FRONTERA: aprobados por el fundador (ago 2026). Produccion pide entre
+# 5 y 20 candidatos segun el caso; 10 es el punto medio. Las fronteras se miran
+# en el top-3, que es lo que un usuario alcanza a leer de un vistazo.
 K = 10
 TOP_FRONTERA = 3
+
+# EL TRINQUETE (ley adoptada, ago 2026): la punteria SOLO SUBE O CANTA.
+#   - cero rojos, siempre, y eso no se negocia contra ninguna linea base;
+#   - ambares <= los de la linea base vigente;
+#   - y si MEJORA, la corrida tambien para: hay que re-committear la linea base.
+#     Un trinquete que deja pasar las mejoras sin registrarlas se afloja solo,
+#     porque la vara se queda vieja y deja de medir. Es un fallo bueno, del
+#     mismo tipo que el de una foto que hay que actualizar.
+SALIDA_OK = 0
+SALIDA_DERIVA = 1
+SALIDA_MEJORA = 2
 
 
 def puerta(nid, grafo, dominios):
@@ -186,19 +198,43 @@ def main():
         return 0
 
     base = json.loads(LINEA_BASE.read_text(encoding="utf-8"))
-    derivas = []
+    RANGO = {"verde": 2, "ambar": 1, "rojo": 0}
+    peores, mejores = [], []
     for rid, ahora in foto["por_rumbo"].items():
         antes = base["por_rumbo"].get(rid)
-        if antes and antes["estado"] != ahora["estado"]:
-            derivas.append(f"{rid}: {antes['estado']} -> {ahora['estado']} "
-                           f"(antes {antes['devolvio'][:2]}, ahora {ahora['devolvio'][:2]})")
-    if derivas or deprecados_ofrecidos:
-        print(f"\n  DERIVA DE PUNTERIA: {len(derivas)} rumbos cambiaron de estado")
-        for d in derivas:
+        if not antes or antes["estado"] == ahora["estado"]:
+            continue
+        linea = (f"{rid}: {antes['estado']} -> {ahora['estado']} "
+                 f"(antes {antes['devolvio'][:2]}, ahora {ahora['devolvio'][:2]})")
+        (mejores if RANGO[ahora["estado"]] > RANGO[antes["estado"]] else peores).append(linea)
+
+    # 1. Cero rojos. No se negocia contra ninguna linea base.
+    if marcador["rojo"] or deprecados_ofrecidos:
+        print(f"\n  TRINQUETE ROTO: {marcador['rojo']} rumbos en rojo"
+              + (f", {len(deprecados_ofrecidos)} deprecados ofrecidos" if deprecados_ofrecidos else ""))
+        for x in resultados:
+            if x["estado"] == "rojo":
+                print(f"    {x['id']}: esperaba {x['esperaba']}, devolvio {x['devolvio'][:3]}")
+        return SALIDA_DERIVA
+
+    # 2. Los ambares no pueden crecer, y ningun rumbo puede bajar de estado.
+    if marcador["ambar"] > base["marcador"]["ambar"] or peores:
+        print(f"\n  TRINQUETE ROTO: la punteria empeoro "
+              f"({base['marcador']['ambar']} ambares -> {marcador['ambar']})")
+        for d in peores:
             print(f"    {d}")
-        return 1
+        return SALIDA_DERIVA
+
+    # 3. Si mejoro, la vara se quedo vieja: hay que re-committearla.
+    if mejores or marcador["verde"] > base["marcador"]["verde"]:
+        print(f"\n  LA PUNTERIA SUBIO ({base['verde_pct']}% -> {pct}%). La vara se quedo vieja:")
+        for d in mejores:
+            print(f"    {d}")
+        print("    re-committea con: python scripts/rumbos/prueba_rumbos.py --linea-base")
+        return SALIDA_MEJORA
+
     print(f"\n  Sin deriva contra la linea base ({base['verde_pct']}% verde).")
-    return 0
+    return SALIDA_OK
 
 
 if __name__ == "__main__":

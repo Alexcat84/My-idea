@@ -100,10 +100,29 @@ def test_la_linea_base_esta_committeada():
     print(f"  ok: linea base con {base['verde_pct']}% verde, 0 rojos, 0 deprecados")
 
 
+def test_el_trinquete_existe_y_tiene_sus_tres_salidas():
+    """La punteria solo sube o canta. Tres salidas distintas, y la de MEJORA
+    tambien para: un trinquete que deja pasar las mejoras sin registrarlas se
+    afloja solo, porque la vara se queda vieja y deja de medir."""
+    src = CORREDOR.read_text(encoding="utf-8")
+    for nombre in ("SALIDA_OK = 0", "SALIDA_DERIVA = 1", "SALIDA_MEJORA = 2"):
+        assert nombre in src, f"falta {nombre}"
+    assert "K = 10" in src and "TOP_FRONTERA = 3" in src, "los umbrales aprobados cambiaron"
+    # las tres guardas, en orden: rojos, ambares que crecen, y la mejora
+    assert 'marcador["rojo"] or deprecados_ofrecidos' in src, "no corta con rojos"
+    assert 'marcador["ambar"] > base["marcador"]["ambar"]' in src, "no corta si crecen los ambares"
+    assert "return SALIDA_MEJORA" in src, "una mejora no pide re-committear la vara"
+    # y el banco declara los umbrales, para que se lean sin abrir el codigo
+    u = json.loads(BANCO.read_text(encoding="utf-8"))["_umbrales"]
+    assert u["K"] == 10 and u["top_frontera"] == 3
+    print("  ok: trinquete con sus tres salidas y los umbrales aprobados")
+
+
 def main():
     for f in (test_el_banco_cubre_el_catalogo, test_hay_rumbos_trampa_de_frontera,
               test_los_ids_de_ancla_existen_de_verdad, test_las_dos_puertas_dicen_lo_mismo,
-              test_la_linea_base_esta_committeada):
+              test_la_linea_base_esta_committeada,
+              test_el_trinquete_existe_y_tiene_sus_tres_salidas):
         f()
     print("OK: el banco de rumbos y su puerta sostienen.")
 
