@@ -4,24 +4,48 @@
   "dominio": "environmental",
   "titulo_concepto": "Los Dos Metabolismos: Biosfera y Tecnosfera",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Marco conceptual que divide todos los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes circulan de forma segura en los ciclos naturales, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin degradarse ni perder calidad. Para que ambos sistemas funcionen de forma saludable, deben mantenerse separados y no contaminarse mutuamente.",
+  "resumen_teorico": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros de 8000 posibles. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
   "pasos_accionables": [
-    "Determinar si cada material del producto pertenece al metabolismo biológico o técnico",
-    "Diseñar el producto de manera que sus componentes puedan separarse fácilmente al final de su vida útil",
-    "Evitar 'híbridos monstruosos' que mezclen materiales biológicos y técnicos de forma inseparable",
-    "Establecer sistemas de recolección o retorno específicos para cada tipo de metabolismo"
+    "Determina si cada material de tu producto pertenece al metabolismo biológico o técnico",
+    "Audita los componentes biológicos para eliminar mutágenos, carcinógenos, tóxicos persistentes y bioacumulativos desde el diseño inicial",
+    "Clasifica los componentes técnicos (metales, plásticos, aleaciones) evitando mezclarlos con materiales incompatibles",
+    "Diseña el producto para que sus partes se separen fácilmente al final de su vida útil, evitando híbridos monstruosos",
+    "Establece rutas de retorno específicas: compostaje o biodegradación para lo biológico, y recuperación con el fabricante priorizando upcycling sobre downcycling para lo técnico"
   ],
-  "entregable_esperado": "Especificación técnica del producto indicando qué componentes son nutrientes biológicos y cuáles son nutrientes técnicos, con su ruta de retorno correspondiente",
+  "entregable_esperado": "Especificación técnica del producto que cataloga cada componente como nutriente biológico o técnico, con su ruta de retorno correspondiente.",
   "nodos_previos": [
-    "waste_equals_food"
+    "waste_equals_food",
+    "eco_efectividad",
+    "desperdicio_es_alimento"
   ],
   "nodos_siguientes": [
     "nutrientes_biologicos",
-    "hibridos_monstruosos"
+    "hibridos_monstruosos",
+    "productos_de_servicio",
+    "energia_eolica_distribuida",
+    "manejo_de_hibridos_monstruosos"
   ],
   "condiciones_activacion": [
-    "Cuando el usuario diseña un producto que mezcla materiales orgánicos y sintéticos",
-    "Cuando se busca definir estrategias de fin de vida útil para un producto"
+    "Si diseñas empaques, textiles o productos de consumo de vida corta",
+    "Si tu producto contiene materiales durables como metales, plásticos técnicos o electrónicos",
+    "Si mezclas materiales orgánicos y sintéticos en un mismo producto",
+    "Si buscas definir estrategias de fin de vida útil para tu producto"
   ],
-  "etiqueta_arbol": "Distingue Biosfera de Tecnosfera"
+  "etiqueta_arbol": "Distingue Biosfera de Tecnosfera",
+  "ids_alias": [
+    "metabolismo_biologico",
+    "metabolismo_tecnico"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "metabolismo_biologico",
+      "titulo": "Metabolismo Biológico y Nutrientes Biológicos",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    },
+    {
+      "node_id": "metabolismo_tecnico",
+      "titulo": "Metabolismo Técnico y Nutrientes Técnicos",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    }
+  ]
 }

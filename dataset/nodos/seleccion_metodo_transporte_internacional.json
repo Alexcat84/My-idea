@@ -4,24 +4,41 @@
   "dominio": "exportacion",
   "titulo_concepto": "Selección del Método de Transporte Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La elección del método de envío (aéreo, marítimo, multimodal) depende del costo, tiempo de entrega y accesibilidad para el comprador. El transporte multimodal implica que un operador único asume la responsabilidad de todo el trayecto desde fábrica hasta destino final. Reservar espacio anticipadamente (booking contract) es clave para grandes envíos.",
+  "resumen_teorico": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo suele ser más caro, puede compensarse con menores costos de transporte doméstico y entregas más rápidas, dándote ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, reservar espacio con anticipación mediante un booking contract es clave. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
   "pasos_accionables": [
-    "Comparar costos y tiempos entre transporte aéreo y marítimo",
-    "Consultar con freight forwarder sobre transporte multimodal si aplica",
-    "Reservar espacio en el medio de transporte con anticipación (booking contract)",
-    "Verificar si el comprador requiere envío a zona franca o puerto libre",
-    "Confirmar instrucciones de notificación al freight forwarder por parte del transportista terrestre"
+    "Consulta con un freight forwarder internacional para determinar el mejor método de envío.",
+    "Compara costos y tiempos de entrega entre transporte aéreo, marítimo y multimodal.",
+    "Reserva espacio con anticipación mediante un booking contract si tu carga es voluminosa.",
+    "Verifica con el comprador el destino final de la mercancía, incluyendo zonas francas o puertos libres.",
+    "Agrega las marcas de exportación requeridas a tu documentación de embarque.",
+    "Confirma las instrucciones de notificación al freight forwarder por parte del transportista terrestre."
   ],
-  "entregable_esperado": "Método de transporte y reserva de espacio confirmados para el embarque",
+  "entregable_esperado": "Método de transporte internacional seleccionado, con booking contract confirmado y documentación de embarque preparada con marcas de exportación.",
   "nodos_previos": [
-    "documentacion_exportacion"
+    "documentacion_exportacion",
+    "definicion_terminos_de_venta",
+    "incoterms_reglas_comerciales_internacionales"
   ],
   "nodos_siguientes": [
-    "seguro_exportacion"
+    "seguro_exportacion",
+    "seguro_de_carga_transporte",
+    "documentacion_exportacion_basica"
   ],
   "condiciones_activacion": [
-    "Cuando se planifica el envío físico de la mercancía",
-    "Si existe presión de tiempo de entrega o restricciones de costo"
+    "Cuando debes decidir cómo transportar tu mercancía al mercado extranjero.",
+    "Si buscas optimizar costos y tiempos de entrega para ganar ventaja competitiva.",
+    "Cuando estás planificando el envío físico de tu producto.",
+    "Si tienes presión de tiempo de entrega o restricciones de costo."
   ],
-  "etiqueta_arbol": "Elige tu Transporte Internacional"
+  "etiqueta_arbol": "Elige tu Transporte Internacional",
+  "ids_alias": [
+    "seleccion_metodo_envio_internacional"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seleccion_metodo_envio_internacional",
+      "titulo": "Selección del Método de Envío Internacional",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

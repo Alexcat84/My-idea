@@ -4,22 +4,37 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cumplimiento de las Regulaciones Antiboicot",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "EE.UU. tiene una política de oposición a prácticas comerciales restrictivas o boicots impuestos por países extranjeros contra países amigos. Estas regulaciones prohíben a las personas y empresas de EE.UU. participar en boicots extranjeros o tomar acciones que los apoyen, incluyendo discriminación basada en raza, religión, género u origen nacional. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Estados Unidos se opone a boicots comerciales impuestos por países extranjeros contra naciones amigas. Las regulaciones antiboicot te prohíben, como persona o negocio de EE.UU., participar en boicots extranjeros o apoyarlos: negarte a hacer negocios con empresas en listas negras, discriminar por raza, religión, género u origen nacional para cumplir un boicot, o proporcionar información sobre tus relaciones comerciales con países boicoteados. También te exigen reportar al Departamento de Comercio cualquier solicitud de cumplimiento de boicot que recibas y divulgar públicamente si la cumpliste o no. Esta mecánica refleja la normativa y los acuerdos vigentes en EE.UU. a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
-    "Revisar solicitudes comerciales de socios extranjeros para detectar lenguaje de boicot",
-    "Rechazar participar en boicots contra países amigos de EE.UU.",
-    "Reportar al Departamento de Comercio cualquier solicitud de cumplimiento de boicot recibida",
-    "Documentar y divulgar públicamente si se cumplió o no con solicitudes de boicot"
+    "Revisar contratos y solicitudes comerciales de socios o clientes extranjeros para detectar lenguaje de boicot",
+    "Rechazar participar en boicots contra países amigos de EE.UU., incluyendo negarte a hacer negocios con empresas en listas negras",
+    "Evitar acuerdos que discriminen por raza, religión, género u origen nacional bajo demanda de boicot",
+    "No proporcionar información sobre tus relaciones comerciales con países boicoteados",
+    "Reportar al Departamento de Comercio cualquier solicitud de cumplimiento de boicot que recibas",
+    "Documentar y divulgar públicamente si cumpliste o no con solicitudes de boicot"
   ],
-  "entregable_esperado": "Proceso interno de revisión de contratos internacionales para detectar cláusulas de boicot, y reportes presentados al Departamento de Comercio si aplica",
+  "entregable_esperado": "Proceso interno de revisión de contratos internacionales para detectar cláusulas de boicot, con reportes presentados al Departamento de Comercio si aplica",
   "nodos_previos": [
-    "export_administration_regulations"
+    "export_administration_regulations",
+    "clausula_antidesviacion",
+    "regulaciones_exportacion_ear"
   ],
   "nodos_siguientes": [
     "foreign_corrupt_practices_act"
   ],
   "condiciones_activacion": [
-    "Si el usuario recibe solicitudes contractuales de socios en países que exigen boicotear a terceros países"
+    "Si recibes solicitudes contractuales de socios en países que exigen boicotear a terceros países",
+    "Al hacer negocios con países involucrados en boicots contra naciones amigas de EE.UU."
   ],
-  "etiqueta_arbol": "Cumple las Reglas Antiboicot"
+  "etiqueta_arbol": "Cumple las Reglas Antiboicot",
+  "ids_alias": [
+    "regulaciones_antiboicot"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "regulaciones_antiboicot",
+      "titulo": "Regulaciones Antiboicot en el Comercio Exterior",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

@@ -4,28 +4,40 @@
   "dominio": "franquicias",
   "titulo_concepto": "Elección de un Abogado Especializado en Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El derecho de franquicias es altamente especializado y complejo debido a la variedad de regulaciones estatales en EE.UU. No basta con un abogado general; se requiere experiencia específica del lado franquiciante (no franquiciado), enfoque transaccional, conocimiento de la industria específica y tamaño de firma adecuado. Se recomienda contratar primero al consultor y después al abogado, ya que el consultor validará si franquiciar es viable, ahorrando tiempo y honorarios legales innecesarios.",
+  "resumen_teorico": "El derecho de franquicias es un área altamente especializada y compleja por la variedad de regulaciones estatales en EE.UU., por lo que no debes delegarlo en un abogado generalista. Necesitas verificar que tenga experiencia específica representando al lado franquiciante (no franquiciado), un enfoque transaccional o litigioso según tu caso, conocimiento de tu industria y un tamaño de firma acorde a tu estilo de comunicación. Conviene contratar primero al consultor de franquicias, quien validará si franquiciar es la estrategia correcta, y después al abogado: esto hace el trabajo legal más eficiente y puede reducir honorarios, ya que llegarás con decisiones estratégicas ya tomadas.",
   "pasos_accionables": [
-    "Verificar que el abogado tenga 'derecho de franquicias' como práctica separada en su firma",
-    "Confirmar experiencia representando franquiciantes (no solo franquiciados)",
-    "Evaluar si el enfoque es transaccional, litigioso o ambos según necesidades",
-    "Preguntar sobre modelo de honorarios (tarifa plana vs por hora) y qué incluye exactamente",
-    "Considerar conocimiento específico de la industria del negocio a franquiciar",
-    "Evaluar tamaño de firma, accesibilidad y estilo de comunicación preferido",
-    "Contratar al abogado después de confirmar con el consultor que franquiciar es viable"
+    "Confirma primero con tu consultor que franquiciar es la estrategia correcta antes de buscar abogado",
+    "Busca un abogado con derecho de franquicias como práctica separada en su firma, no un generalista",
+    "Verifica que tenga experiencia representando franquiciantes, no solo franquiciados",
+    "Pregunta si su enfoque es transaccional, litigioso o ambos según lo que necesitas",
+    "Solicita su modelo de honorarios (tarifa plana o por hora) y qué incluye exactamente, mencionando que ya cuentas con un consultor",
+    "Valida su experiencia en el marco regulatorio estatal y en la industria de tu negocio"
   ],
-  "entregable_esperado": "Un abogado especializado en franquicias contratado, con experiencia franquiciante verificada y modelo de honorarios claro",
+  "entregable_esperado": "Un abogado especializado en franquicias contratado, con experiencia franquiciante verificada, modelo de honorarios claro y alineado con las decisiones estratégicas ya tomadas.",
   "nodos_previos": [
-    "seleccion_consultor_franquicias"
+    "seleccion_consultor_franquicias",
+    "criterios_seleccion_consultor_franquicia",
+    "otros_terminos_contractuales"
   ],
   "nodos_siguientes": [
     "contratacion_abogado_franquicia",
     "criterio_bazooka_peashooter",
-    "gestion_tiempo_lanzamiento_franquicia"
+    "gestion_tiempo_lanzamiento_franquicia",
+    "elaboracion_fdd"
   ],
   "condiciones_activacion": [
-    "Si el usuario ya validó con un consultor que franquiciar es viable",
-    "Si el usuario necesita redactar el FDD y el contrato de franquicia"
+    "Cuando ya decidiste franquiciar y ya trabajaste con un consultor de franquicias",
+    "Antes de elaborar el Franchise Disclosure Document (FDD) o los contratos de franquicia"
   ],
-  "etiqueta_arbol": "Elige tu Abogado de Franquicias"
+  "etiqueta_arbol": "Elige tu Abogado de Franquicias",
+  "ids_alias": [
+    "contratacion_abogado_franquicia"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "contratacion_abogado_franquicia",
+      "titulo": "Contratación de Asesoría Legal Especializada en Franquicias",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

@@ -1,0 +1,548 @@
+{
+  "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
+  "pack": "environmental",
+  "umbral": 0.9,
+  "clusters": [
+    {
+      "orden": 1,
+      "indice": 3,
+      "nodos": [
+        "contratacion_desempeno_energetico_esco",
+        "contratos_desempeno_energetico_esco"
+      ],
+      "similitud": 0.9548047780990601,
+      "por_que": "Mismo mecanismo de externalizar eficiencia energética mediante contratos con ESCOs.",
+      "quedaria": "Contratos de Desempeño Energético con ESCOs",
+      "sobrevive": "contratos_desempeno_energetico_esco",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "contratacion_desempeno_energetico_esco": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "contratos_desempeno_energetico_esco": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 2,
+      "indice": 14,
+      "nodos": [
+        "mantenimiento_productivo_total_energia",
+        "mantenimiento_productivo_total_verde"
+      ],
+      "similitud": 0.9394753575325012,
+      "por_que": "Mismo enfoque de TPM con componente energético y mantenimiento autónomo por todos los niveles.",
+      "quedaria": "Mantenimiento Productivo Total (TPM) con Enfoque Energético",
+      "sobrevive": "mantenimiento_productivo_total_verde",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "mantenimiento_productivo_total_energia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "mantenimiento_productivo_total_verde": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 3,
+      "indice": 5,
+      "nodos": [
+        "diseno_para_el_ambiente_dfe",
+        "equipos_multifuncionales_dfe"
+      ],
+      "similitud": 0.938406765460968,
+      "por_que": "Ambos describen la misma necesidad de equipos multifuncionales para el diseño sostenible/DfE.",
+      "quedaria": "Equipos Multifuncionales para el Diseño Sostenible",
+      "sobrevive": "equipos_multifuncionales_dfe",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "diseno_para_el_ambiente_dfe": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "equipos_multifuncionales_dfe": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 4,
+      "indice": 9,
+      "nodos": [
+        "etapas_creacion_valor_sostenibilidad",
+        "modelo_lubin_esty_4_etapas"
+      ],
+      "similitud": 0.9286831617355347,
+      "por_que": "Mismo modelo de 4 etapas de Lubin-Esty para maduración en sostenibilidad.",
+      "quedaria": "Modelo de 4 Etapas de Creación de Valor en Sostenibilidad (Lubin-Esty)",
+      "sobrevive": "modelo_lubin_esty_4_etapas",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "etapas_creacion_valor_sostenibilidad": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "modelo_lubin_esty_4_etapas": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 5,
+      "indice": 15,
+      "nodos": [
+        "mapeo_stakeholders",
+        "stakeholder_mapping_wheel"
+      ],
+      "similitud": 0.9286450147628784,
+      "por_que": "Misma herramienta Stakeholder Wheel para mapear grupos de interés y sus issues.",
+      "quedaria": "Mapeo de Stakeholders (Stakeholder Wheel)",
+      "sobrevive": "stakeholder_mapping_wheel",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "mapeo_stakeholders": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "stakeholder_mapping_wheel": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 6,
+      "indice": 19,
+      "nodos": [
+        "vehiculos_combustibles_alternativos",
+        "vehiculos_combustibles_alternativos_2"
+      ],
+      "similitud": 0.9274638891220093,
+      "por_que": "Misma acción de migrar flotas a combustibles alternativos para reducir emisiones y costos.",
+      "quedaria": "Adopción de Vehículos de Combustibles Alternativos",
+      "sobrevive": "vehiculos_combustibles_alternativos_2",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "vehiculos_combustibles_alternativos": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "vehiculos_combustibles_alternativos_2": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 7,
+      "indice": 8,
+      "nodos": [
+        "eficiencia_hidrica_edificios",
+        "eficiencia_hidrica_edificios_2"
+      ],
+      "similitud": 0.9243202209472656,
+      "por_que": "Mismas prácticas de eficiencia y reciclaje de agua en edificios (agua de lluvia, agua gris, bajo flujo).",
+      "quedaria": "Eficiencia Hídrica en Edificios",
+      "sobrevive": "eficiencia_hidrica_edificios_2",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "eficiencia_hidrica_edificios": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "eficiencia_hidrica_edificios_2": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 8,
+      "indice": 17,
+      "nodos": [
+        "oficina_digital_sin_papel",
+        "oficina_digital_sin_papel_2"
+      ],
+      "similitud": 0.9221916198730469,
+      "por_que": "Misma iniciativa de digitalizar procesos para eliminar papel, con los mismos casos de ejemplo.",
+      "quedaria": "Digitalización y Reducción de Papel",
+      "sobrevive": "oficina_digital_sin_papel_2",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "oficina_digital_sin_papel": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "oficina_digital_sin_papel_2": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 9,
+      "indice": 4,
+      "nodos": [
+        "critica_del_pib_como_metrica_de_progreso",
+        "pib_como_medida_erronea_de_progreso"
+      ],
+      "similitud": 0.9217848777770996,
+      "por_que": "Misma crítica al PIB usando el mismo ejemplo del Exxon Valdez como métrica engañosa de progreso.",
+      "quedaria": "Crítica al PIB como Métrica de Progreso",
+      "sobrevive": "critica_del_pib_como_metrica_de_progreso",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "critica_del_pib_como_metrica_de_progreso": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "pib_como_medida_erronea_de_progreso": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 10,
+      "indice": 1,
+      "nodos": [
+        "business_materiality_assessment",
+        "evaluacion_materialidad_empresarial"
+      ],
+      "similitud": 0.9196933507919312,
+      "por_que": "Mismo framework de evaluación de materialidad de issues de sostenibilidad para el negocio.",
+      "quedaria": "Evaluación de Materialidad del Negocio",
+      "sobrevive": "business_materiality_assessment",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "business_materiality_assessment": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "evaluacion_materialidad_empresarial": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 11,
+      "indice": 11,
+      "nodos": [
+        "frameworks_para_innovacion_eco",
+        "marcos_pensamiento_dfe"
+      ],
+      "similitud": 0.9179369807243347,
+      "por_que": "Mismos marcos conceptuales (ecología industrial, cradle-to-cradle) para pensamiento eco-innovador en DfE.",
+      "quedaria": "Marcos Conceptuales para Impulsar el Pensamiento de Diseño Sostenible",
+      "sobrevive": "marcos_pensamiento_dfe",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "frameworks_para_innovacion_eco": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "marcos_pensamiento_dfe": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 12,
+      "indice": 10,
+      "nodos": [
+        "formar_equipo_verde_oficina",
+        "green_team_oficina"
+      ],
+      "similitud": 0.9167178869247437,
+      "por_que": "Misma práctica de formar un 'green team' interno para sostenibilidad de oficina.",
+      "quedaria": "Formación de un Green Team en la Oficina",
+      "sobrevive": "green_team_oficina",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "formar_equipo_verde_oficina": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "green_team_oficina": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 13,
+      "indice": 2,
+      "nodos": [
+        "construccion_valor_intangible",
+        "valor_intangible_sostenibilidad"
+      ],
+      "similitud": 0.9103814363479614,
+      "por_que": "Ambos describen la misma idea de generar valor intangible (marca, reputación) mediante sostenibilidad.",
+      "quedaria": "Creación de Valor Intangible mediante Sostenibilidad Corporativa",
+      "sobrevive": "valor_intangible_sostenibilidad",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "construccion_valor_intangible": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "valor_intangible_sostenibilidad": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 14,
+      "indice": 0,
+      "nodos": [
+        "alcance_profundo_cadena_suministro",
+        "profundizacion_cadena_suministro"
+      ],
+      "similitud": 0.9088988304138184,
+      "por_que": "Ambos describen la misma práctica de extender la gestión de proveedores a niveles tier 2/3.",
+      "quedaria": "Alcance Profundo en la Cadena de Suministro (Tier 2/3)",
+      "sobrevive": "alcance_profundo_cadena_suministro",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "alcance_profundo_cadena_suministro": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "profundizacion_cadena_suministro": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 15,
+      "indice": 18,
+      "nodos": [
+        "reduccion_viajes_negocio",
+        "videoconferencia_reduccion_viajes"
+      ],
+      "similitud": 0.9037865400314331,
+      "por_que": "Misma práctica de usar videoconferencia para sustituir viajes de negocio y reducir huella.",
+      "quedaria": "Uso de Videoconferencia para Reducir Viajes Corporativos",
+      "sobrevive": "videoconferencia_reduccion_viajes",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "reduccion_viajes_negocio": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "videoconferencia_reduccion_viajes": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 16,
+      "indice": 12,
+      "nodos": [
+        "incentivar_reconocer_recompensar",
+        "incentivos_reconocimiento_sostenibilidad"
+      ],
+      "similitud": 0.903363823890686,
+      "por_que": "Mismo conjunto de tácticas de reconocimiento, concursos e incentivos para comportamiento sostenible.",
+      "quedaria": "Incentivos, Reconocimiento y Recompensas por Desempeño Sostenible",
+      "sobrevive": "incentivos_reconocimiento_sostenibilidad",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "incentivar_reconocer_recompensar": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "incentivos_reconocimiento_sostenibilidad": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 17,
+      "indice": 7,
+      "nodos": [
+        "eco_efectividad_2",
+        "eco_efectividad_vs_eco_eficiencia"
+      ],
+      "similitud": 0.9015885591506958,
+      "por_que": "Ambos explican el mismo paradigma de eco-efectividad, uno con contraste explícito a eco-eficiencia pero misma acción de rediseño.",
+      "quedaria": "Eco-Efectividad",
+      "sobrevive": "eco_efectividad_2",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "eco_efectividad_2": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "eco_efectividad_vs_eco_eficiencia": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    }
+  ],
+  "barandas": {
+    "alineacion_engagement_estrategia_general": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...sostenibilidad de la empresa Asegurar apoyo visible de la alta dirección ('walk the talk') Elegir mensajeros y líderes con cred..."
+      }
+    ],
+    "biomimicry_diseno": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...able y diseño para evolución en lugar de perfección Si el equipo de diseño busca soluciones innovadoras y sostenibles fuer..."
+      }
+    ],
+    "certificacion_leed_energy_star": [
+      {
+        "baranda": "dato_local_cableado",
+        "cita": "...r si el proyecto califica para LEED o Energy Star Usar EPA Portfolio Manager para medir eficiencia energética act..."
+      }
+    ],
+    "chief_sustainability_officer": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...ecer mecanismos para que el CSO reporte directamente a la alta dirección Fomentar que cada líder de negocio incorpore la sosten..."
+      }
+    ],
+    "contabilidad_ambiental": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...ambiental más adecuadas para el negocio Colaborar con el equipo de sostenibilidad para implementar estas herramientas Si..."
+      }
+    ],
+    "cradle_to_cradle_concepto": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...erar el producto al final de su vida útil Involucrar a la alta dirección de la empresa para que el enfoque sea transversal y no..."
+      }
+    ],
+    "establecimiento_metas_publicas": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...ad Publicar métricas de desempeño ya no es suficiente; los stakeholders esperan conocer los planes futuros de la empresa para..."
+      }
+    ],
+    "estrategia_proactiva_ambiental": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...reactiva (solo cumplimiento) o proactiva Involucrar a la alta dirección en la definición de sostenibilidad como imperativo est..."
+      }
+    ],
+    "evaluar_huella_carbono": [
+      {
+        "baranda": "dato_local_cableado",
+        "cita": "...cumplir con regulaciones obligatorias de divulgación (EPA, SEC) Si la empresa no conoce su nivel actual de emisi..."
+      }
+    ],
+    "frameworks_para_innovacion_eco": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...sts rígidos; fomentar prototipado e iteración libre Si el equipo de diseño necesita inspiración o un cambio de mentalidad..."
+      }
+    ],
+    "identificacion_oportunidades_sostenibilidad_marketing": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...pago de los consumidores por atributos verdes. Cuando el equipo de marketing considera lanzar una campaña o línea de prod..."
+      }
+    ],
+    "indicadores_desempeno_recursos": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...o real de la ineficiencia. Presentar los indicadores a la gerencia como argumento de mejora de productividad. Cuando se r..."
+      }
+    ],
+    "involucramiento_empleados_sostenibilidad": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...ión amplia de los empleados. Se requiere ejemplo desde la alta dirección, visibilidad y facilidad en las prácticas, incentivos..."
+      }
+    ],
+    "marcos_pensamiento_dfe": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...rco conceptual influye en las decisiones de diseño. Si el equipo de diseño necesita un marco de referencia para estructura..."
+      }
+    ],
+    "medir_huella_carbono_corporativa": [
+      {
+        "baranda": "dato_local_cableado",
+        "cita": "...s ya están obligadas por regulaciones gubernamentales (EPA en EE.UU., normativas europeas, SEC) a divulgar sus em..."
+      }
+    ],
+    "metricas_impacto_ambiental": [
+      {
+        "baranda": "dato_local_cableado",
+        "cita": "...arizarse con el universo de métricas disponibles (GRI, EPA Lean, etc.) Seleccionar métricas absolutas relevantes..."
+      },
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...del sector, objetivos de la empresa y expectativas de los stakeholders. Familiarizarse con el universo de métricas disponible..."
+      }
+    ],
+    "modelo_eco_criterios_ponderados": [
+      {
+        "baranda": "matriz_o_puntaje",
+        "cita": "...ar inversiones sostenibles. Un modelo estandarizado de puntuación ponderada (Eco-model) validado por un equipo multifunc..."
+      }
+    ],
+    "ownership_accountability_sostenibilidad": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...gnados, sistema EMS implementado y respaldo visible de la alta dirección..."
+      }
+    ],
+    "quimica_verde": [
+      {
+        "baranda": "dato_local_cableado",
+        "cita": "...ctos proactivamente Considerar certificación DfE de la EPA para productos de limpieza Si el producto contiene sus..."
+      }
+    ],
+    "stakeholder_mapping_wheel": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...akeholder Wheel) Herramienta para identificar y mapear los stakeholders críticos que definen, en parte, las prioridades de sos..."
+      }
+    ],
+    "ti_para_desempeno_ecologico": [
+      {
+        "baranda": "dato_local_cableado",
+        "cita": "...r con exigencias regulatorias y voluntarias (CDP, GRI, EPA). Implementar sistemas de análisis en tiempo real para..."
+      }
+    ],
+    "vehiculos_combustibles_alternativos": [
+      {
+        "baranda": "dato_local_cableado",
+        "cita": "...incentivos fiscales y programas de certificación como EPA SmartWay. Diseñar un portafolio balanceado de solucion..."
+      }
+    ],
+    "vision_alineacion_sostenibilidad": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...etas de largo y corto plazo, validado y comunicado por la alta dirección..."
+      }
+    ],
+    "vision_clara_sostenibilidad": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...zación Asegurar el respaldo y liderazgo continuo desde la alta dirección Si la empresa carece de dirección clara en su estrateg..."
+      }
+    ]
+  }
+}

@@ -4,25 +4,41 @@
   "dominio": "environmental",
   "titulo_concepto": "El Desperdicio Es Alimento (Waste Equals Food)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Principio central de Cradle to Cradle: en la naturaleza no existe el desperdicio, todo residuo de un proceso se convierte en nutriente de otro. Este concepto propone diseñar productos con dos metabolismos posibles: el biológico (materiales que se biodegradan de forma segura y nutren el suelo) y el técnico (materiales que circulan indefinidamente en ciclos industriales cerrados sin degradarse ni contaminar).",
+  "resumen_teorico": "En la naturaleza no existe el desperdicio: cada residuo de un proceso biológico se convierte en nutriente de otro, como ocurre con los ciclos de carbono, hidrógeno, oxígeno y nitrógeno que se reciclan continuamente en la biosfera. Esto contrasta con el modelo industrial de cuna a tumba, donde extraes, usas y desechas materiales sin retorno útil. Aplicado a tu producto, este principio te invita a pensar en dos metabolismos posibles: el biológico, con materiales que se biodegradan de forma segura y nutren el suelo, y el técnico, con materiales que circulan indefinidamente en ciclos industriales cerrados sin degradarse ni contaminar. Diseñar bajo esta lógica implica revisar el ciclo de vida completo de lo que fabricas y decidir a qué ciclo pertenece cada componente.",
   "pasos_accionables": [
-    "Clasificar cada material del producto como nutriente biológico o técnico",
-    "Diseñar el producto para que sus componentes puedan separarse fácilmente al final de su vida útil",
-    "Eliminar sustancias tóxicas que impidan la reintegración segura del material a un ciclo",
-    "Explorar modelos de servicio (como 'rent-a-solvent') donde el fabricante retiene la propiedad del material técnico y lo recupera para reutilizarlo"
+    "Analiza el ciclo de vida completo de tu producto identificando qué sucede con cada residuo o salida",
+    "Clasifica cada material como nutriente biológico o técnico",
+    "Diseña el producto para que sus componentes se separen fácilmente al final de su vida útil",
+    "Elimina sustancias tóxicas que impidan reintegrar el material a un ciclo de forma segura",
+    "Rediseña el proceso para que los subproductos alimenten otro ciclo en lugar de convertirse en basura",
+    "Explora modelos de servicio, como retener la propiedad del material técnico para recuperarlo y reutilizarlo"
   ],
-  "entregable_esperado": "Un mapa de materiales del producto clasificado en ciclo biológico/técnico y un plan de recuperación o biodegradación al final de su vida útil.",
+  "entregable_esperado": "Un mapa de flujo de materiales de tu producto que identifica entradas, salidas y su clasificación como nutriente biológico o técnico, junto con un plan de recuperación o biodegradación al final de su vida útil.",
   "nodos_previos": [
     "eco_efectividad",
-    "eco_efectividad_2"
+    "eco_efectividad_2",
+    "nuevo_encargo_de_diseno"
   ],
   "nodos_siguientes": [
     "respeto_a_la_diversidad",
-    "quimicos_toxicos_en_diseno"
+    "quimicos_toxicos_en_diseno",
+    "metabolismo_biologico_y_tecnico",
+    "nutrientes_biologicos"
   ],
   "condiciones_activacion": [
-    "Cuando se diseña un producto nuevo o se rediseña uno existente para reducir su impacto",
-    "Cuando la organización busca modelos de negocio circulares"
+    "Cuando diseñas un producto o proceso desde cero",
+    "Cuando rediseñas uno existente para reducir su impacto",
+    "Cuando buscas eliminar el concepto de residuo en tu cadena de valor o adoptar modelos de negocio circulares"
   ],
-  "etiqueta_arbol": "Convierte tu Desperdicio en Alimento"
+  "etiqueta_arbol": "Convierte tu Desperdicio en Alimento",
+  "ids_alias": [
+    "waste_equals_food"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "waste_equals_food",
+      "titulo": "Waste Equals Food",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    }
+  ]
 }

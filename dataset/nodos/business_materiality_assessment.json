@@ -4,25 +4,40 @@
   "dominio": "environmental",
   "titulo_concepto": "Evaluación de Materialidad del Negocio",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Framework basado en las fuerzas competitivas de Michael Porter para evaluar qué tan material es cada issue de sostenibilidad para el negocio. Se evalúa el potencial de cada issue para impactar: costos y riesgos operativos, relaciones con proveedores, lealtad del cliente, diferenciación de producto, barreras de entrada, oportunidades de innovación, tasa de crecimiento de la industria, prioridades de stakeholders y políticas gubernamentales. Es un proceso iterativo que debe revisarse regularmente.",
+  "resumen_teorico": "Framework basado en las fuerzas competitivas de Michael Porter para evaluar qué tan material es cada issue de sostenibilidad para tu negocio, es decir, cuáles son verdaderamente relevantes frente a la sobrecarga de posibles iniciativas ambientales o sociales sin criterio de priorización. Evalúas el potencial de cada issue para impactar costos y riesgos operativos, relaciones con proveedores, lealtad del cliente, diferenciación de producto, barreras de entrada, oportunidades de innovación, tasa de crecimiento de la industria, prioridades de stakeholders y políticas gubernamentales. Es un proceso iterativo que debes revisar de forma regular, ya sea anualmente o cada 3 a 4 años, para mantener la priorización alineada con los cambios del negocio y su entorno.",
   "pasos_accionables": [
-    "Listar todos los issues de sostenibilidad identificados previamente (via AUDIO o issue spotting)",
-    "Evaluar cada issue contra los 9 factores de impacto competitivo (costos, proveedores, clientes, diferenciación, barreras de entrada, innovación, crecimiento, stakeholders, regulación)",
-    "Priorizar los issues con mayor potencial de impacto en la posición competitiva",
-    "Establecer un proceso de revisión periódica de la priorización",
-    "Complementar con el análisis externo de stakeholders (Stakeholder Wheel)"
+    "Lista todos los issues de sostenibilidad identificados previamente que sean relevantes para tu industria",
+    "Evalúa cada issue contra los 9 factores de impacto competitivo: costos, proveedores, clientes, diferenciación, barreras de entrada, innovación, crecimiento, stakeholders y regulación",
+    "Crea un scorecard de materialidad clasificando cada issue según su impacto potencial",
+    "Prioriza los issues con mayor potencial de impacto en tu posición competitiva para enfoque inmediato",
+    "Complementa con el análisis externo de stakeholders",
+    "Programa una revisión periódica de la priorización, ya sea anual o cada 3 a 4 años"
   ],
-  "entregable_esperado": "Scorecard de materialidad con issues priorizados según su impacto potencial en la posición competitiva de la empresa",
+  "entregable_esperado": "Scorecard de materialidad con issues de sostenibilidad priorizados según su impacto potencial en la posición competitiva del negocio",
   "nodos_previos": [
     "issue_spotting_ambiental",
-    "audio_analysis_framework"
+    "audio_analysis_framework",
+    "priorizacion_iniciativas_sostenibilidad"
   ],
   "nodos_siguientes": [
-    "stakeholder_mapping_wheel"
+    "stakeholder_mapping_wheel",
+    "mapeo_stakeholders",
+    "priorizacion_issues"
   ],
   "condiciones_activacion": [
-    "Cuando existen múltiples issues identificados y se necesita determinar cuáles requieren enfoque estratégico prioritario",
-    "Si la empresa tiene recursos limitados y debe decidir dónde enfocar esfuerzos de sostenibilidad"
+    "Cuando tienes múltiples issues de sostenibilidad identificados y necesitas determinar cuáles requieren enfoque estratégico prioritario",
+    "Si tus recursos son limitados y debes decidir dónde enfocar tus esfuerzos de sostenibilidad",
+    "Cuando sientes sobrecarga de posibles iniciativas ambientales o sociales sin un criterio claro de priorización"
   ],
-  "etiqueta_arbol": "Evalúa qué Es Material"
+  "etiqueta_arbol": "Evalúa qué Es Material",
+  "ids_alias": [
+    "evaluacion_materialidad_empresarial"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "evaluacion_materialidad_empresarial",
+      "titulo": "Evaluación de Materialidad Empresarial",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ]
 }

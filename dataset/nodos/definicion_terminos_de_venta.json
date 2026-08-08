@@ -19,11 +19,13 @@
   "nodos_siguientes": [
     "elaboracion_pro_forma_invoice",
     "seguro_de_carga_transporte",
-    "seleccion_metodo_envio_internacional"
+    "seleccion_metodo_envio_internacional",
+    "seleccion_metodo_transporte_internacional"
   ],
   "condiciones_activacion": [
     "Cuando el usuario debe preparar una cotización o pro forma invoice para un comprador extranjero.",
     "Si existe confusión sobre quién asume los costos y riesgos del transporte internacional."
   ],
-  "etiqueta_arbol": "Define tus Términos de Venta"
+  "etiqueta_arbol": "Define tus Términos de Venta",
+  "deprecado": true
 }

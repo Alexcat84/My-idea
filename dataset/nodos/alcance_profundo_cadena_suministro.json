@@ -4,26 +4,39 @@
   "dominio": "environmental",
   "titulo_concepto": "Alcance Profundo en la Cadena de Suministro (Tier 2/3)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las empresas con programas avanzados de gestión de proveedores no solo se preocupan por sus proveedores directos (tier 1), sino también por los proveedores de sus proveedores (tier 2 y tier 3). Esto se logra incluyendo requisitos en los estándares de los proveedores directos o exigiendo que estos apliquen el código de conducta de la empresa a sus propios proveedores.",
+  "resumen_teorico": "Cuando gestionas proveedores de forma avanzada, tu responsabilidad no termina en quien te vende directamente (tier 1). También debes preocuparte por los proveedores de tus proveedores (tier 2 y 3), porque ahí pueden esconderse riesgos ambientales, de materiales peligrosos o reputacionales que tú no ves a simple vista. Logras este alcance incluyendo requisitos en los contratos con tus proveedores directos, exigiéndoles que trasladen tu código de conducta a quienes ellos les compran. Algunas empresas llegan a rastrear hasta el 4to o 5to nivel para verificar fórmulas químicas en los materiales que usan. Esto solo tiene sentido si ya tienes un programa maduro de gestión de proveedores y sospechas que el riesgo real está en niveles profundos de tu cadena.",
   "pasos_accionables": [
-    "Mapear la cadena de suministro más allá del primer nivel (tier 1)",
-    "Incluir cláusulas contractuales que exijan a los proveedores tier 1 aplicar los mismos estándares a sus propios proveedores",
-    "Solicitar trazabilidad de materiales y químicos hasta niveles tier 3, 4 o 5 si es necesario",
-    "Desarrollar mecanismos de verificación para validar el cumplimiento en niveles profundos"
+    "Mapea tu cadena de suministro más allá del primer nivel, identificando quién le vende a tus proveedores directos",
+    "Incluye en tus contratos con proveedores tier 1 la exigencia de que apliquen tu código de conducta a sus propios proveedores",
+    "Pide trazabilidad de materiales o químicos críticos hasta tier 3, 4 o 5 si el riesgo lo justifica",
+    "Solicita documentación o evidencia que te permita verificar el cumplimiento en esos niveles inferiores"
   ],
-  "entregable_esperado": "Un mapa extendido de la cadena de suministro con requisitos de sostenibilidad aplicados a múltiples niveles (tier 2, 3, etc.)",
+  "entregable_esperado": "Un mapa extendido de tu cadena de suministro con requisitos de sostenibilidad y cláusulas de cumplimiento en cascada aplicados hasta tier 2 o 3.",
   "nodos_previos": [
     "programa_mentoria_proveedores",
     "codigo_conducta_proveedores",
-    "gestion_procurement_consumo"
+    "gestion_procurement_consumo",
+    "plataforma_colaboracion_tiempo_real"
   ],
   "nodos_siguientes": [
     "optimizacion_tecnologia_cadena_suministro",
-    "negociacion_contratos_proveedores"
+    "negociacion_contratos_proveedores",
+    "identificacion_proveedores_criticos"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa tiene un programa maduro de gestión de proveedores",
-    "Si existen riesgos de materiales peligrosos o no sostenibles en niveles profundos de la cadena"
+    "Cuando ya tienes un programa maduro de gestión de proveedores",
+    "Si sospechas riesgos de materiales peligrosos o no sostenibles en niveles profundos de tu cadena",
+    "Si necesitas trazabilidad completa de un material crítico para tu producto"
   ],
-  "etiqueta_arbol": "Vigila a tus Subproveedores"
+  "etiqueta_arbol": "Vigila a tus Subproveedores",
+  "ids_alias": [
+    "profundizacion_cadena_suministro"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "profundizacion_cadena_suministro",
+      "titulo": "Profundización en la Cadena de Suministro (Tier 2/3)",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ]
 }

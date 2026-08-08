@@ -52,12 +52,15 @@ describe("evaluacionBrecha (determinística, sin LLM)", () => {
     expect(evaluacionBrecha("exportacion", null, null, "ideacion")!.semillaId).toBe("evaluacion_mercados_objetivo");
     expect(evaluacionBrecha("exportacion", null, null, "validacion")!.semillaId).toBe("evaluacion_mercados_objetivo");
     // Franquicias: validación = probar que UNA funciona antes de multiplicar.
-    expect(evaluacionBrecha("franquicias", null, null, "validacion")!.semillaId).toBe("leverage_una_sola_franquicia");
+    // El id cambió en la fusión del trío (ago 2026): leverage_una_sola_franquicia
+    // fue absorbido por el principio del apalancamiento, que hereda su contenido.
+    // La DECISIÓN DE PRODUCTO no cambió; cambió el nodo que la sostiene.
+    expect(evaluacionBrecha("franquicias", null, null, "validacion")!.semillaId).toBe("principio_apalancamiento_numero_magico");
     // Seguridad digital: al que idea, fundamentos de gestión de riesgo.
     expect(evaluacionBrecha("seguridad_digital", null, null, "ideacion")!.semillaId).toBe("fundamentos_gestion_riesgo");
     // Alias del canon: planificacion/ejecucion (patch decía construccion/operacion).
     expect(evaluacionBrecha("seguridad_digital", null, null, "planificacion")!.semillaId).toBe("getting_started_planning");
-    expect(evaluacionBrecha("exportacion", null, null, "ejecucion")!.semillaId).toBe("documentacion_exportacion_basica");
+    expect(evaluacionBrecha("exportacion", null, null, "ejecucion")!.semillaId).toBe("documentacion_exportacion");
     // Riesgos Bajo Control (v1.4): una puerta honesta por fase del canon.
     expect(evaluacionBrecha("risk_management", null, null, "ideacion")!.semillaId).toBe("correr_hacia_el_riesgo");
     expect(evaluacionBrecha("risk_management", null, null, "validacion")!.semillaId).toBe("haz_tu_lista_de_lo_que_puede_fallar");
@@ -67,9 +70,11 @@ describe("evaluacionBrecha (determinística, sin LLM)", () => {
   });
 
   it("mundos nuevos: semilla mapeada ya cubierta -> cae al puntaje dinámico", () => {
-    const r = evaluacionBrecha("franquicias", null, null, "validacion", new Set(["leverage_una_sola_franquicia"]));
+    // Mismo cambio de id que arriba: el nodo que sostiene el mapeo se fundió.
+    const r = evaluacionBrecha("franquicias", null, null, "validacion",
+      new Set(["principio_apalancamiento_numero_magico"]));
     expect(r).not.toBeNull();
-    expect(r!.semillaId).not.toBe("leverage_una_sola_franquicia");
+    expect(r!.semillaId).not.toBe("principio_apalancamiento_numero_magico");
     // el fallback es el puntaje clásico, no otro mapeo
     expect(r!.razonamiento).toContain("puntaje");
   });

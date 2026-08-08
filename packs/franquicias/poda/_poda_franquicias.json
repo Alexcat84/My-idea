@@ -301,6 +301,36 @@
           "cosechado": 0
         }
       }
+    },
+    {
+      "orden": 14,
+      "indice": 13,
+      "nodos": [
+        "decision_final_franquiciar",
+        "evaluacion_franquiciabilidad_negocio",
+        "evaluacion_necesidad_franquiciar",
+        "evaluar_ventajas_desventajas_franquicia",
+        "explorar_franquicia_como_estrategia_expansion",
+        "preguntas_clave_decision_franquiciar"
+      ],
+      "sobrevive": "evaluacion_necesidad_franquiciar",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Evaluación de la Necesidad de Franquiciar",
+      "por_que": "familia gorda que el umbral no agrupo.",
+      "telemetria": {}
+    },
+    {
+      "orden": 15,
+      "indice": 14,
+      "nodos": [
+        "evaluacion_riesgo_mercado_dinero_gestion",
+        "factores_exito_franquicia_mercado_capital_gestion"
+      ],
+      "sobrevive": "evaluacion_riesgo_mercado_dinero_gestion",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Evaluación de los Tres Riesgos Clave: Mercado, Dinero y Gestión",
+      "por_que": "familia gorda que el umbral no agrupo.",
+      "telemetria": {}
     }
   ],
   "barandas": {

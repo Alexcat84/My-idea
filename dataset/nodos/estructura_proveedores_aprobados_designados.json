@@ -4,23 +4,36 @@
   "dominio": "franquicias",
   "titulo_concepto": "Definir Estructura de Proveedores (Aprobados vs. Designados)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El franquiciador tiene derecho a controlar cualquier compra del franquiciado que impacte la calidad de la operación. Existen dos modelos: proveedor aprobado (el franquiciado elige entre una lista de vendedores autorizados) y proveedor designado (el franquiciado debe comprar a un vendedor específico, que puede ser el propio franquiciador). Esta decisión afecta tanto el control de marca como una fuente potencial de ingresos.",
+  "resumen_teorico": "El franquiciador tiene derecho a controlar cualquier compra del franquiciado que impacte la calidad y consistencia de la operación de marca. Existen dos modelos: proveedor aprobado, donde el franquiciado elige entre una lista de vendedores autorizados, y proveedor designado, donde debe comprar a un vendedor específico que puede ser el propio franquiciador. Esta decisión afecta el control de marca y puede generar una fuente adicional de ingresos vía markups, especialmente cuando el negocio tiene productos o insumos propietarios clave para la experiencia de marca. Sin embargo, debe considerarse el riesgo legal de tying o venta atada bajo leyes antimonopolio, así como la equidad de precios frente al mercado para evitar fricciones con los franquiciados.",
   "pasos_accionables": [
     "Identificar qué productos o insumos son críticos para la calidad y consistencia de la marca",
-    "Decidir si se actuará como proveedor aprobado o designado para cada categoría de producto",
-    "Evaluar implicaciones legales de tying (venta atada) con un abogado especializado en franquicias",
-    "Definir política de precios competitivos para evitar fricción con franquiciados"
+    "Decidir si actuarás como proveedor aprobado o designado para cada categoría de producto",
+    "Evalúa el riesgo legal de tying con un abogado especializado en franquicias",
+    "Define una política de precios competitivos frente al mercado para evitar fricción con franquiciados",
+    "Documenta la política de proveedores en el manual de operaciones y en el FDD"
   ],
-  "entregable_esperado": "Documento de política de proveedores que especifique categorías aprobadas/designadas y justificación de cada una",
+  "entregable_esperado": "Documento de política de proveedores, revisado legalmente, que especifique categorías aprobadas o designadas y la justificación de cada una",
   "nodos_previos": [
-    "seleccion_estructura_franquicia"
+    "seleccion_estructura_franquicia",
+    "determinacion_regalias"
   ],
   "nodos_siguientes": [
     "decision_royalties_vs_venta_producto"
   ],
   "condiciones_activacion": [
-    "Cuando el franquiciador vende productos/equipos a sus franquiciados",
-    "Cuando se busca una fuente adicional de ingresos más allá del royalty"
+    "Cuando vendes productos o equipos a tus franquiciados",
+    "Cuando buscas una fuente adicional de ingresos más allá del royalty",
+    "Cuando tu negocio tiene productos o insumos propietarios clave para la experiencia de marca"
   ],
-  "etiqueta_arbol": "Define tus Proveedores Permitidos"
+  "etiqueta_arbol": "Define tus Proveedores Permitidos",
+  "ids_alias": [
+    "ventas_productos_markup_proveedores"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "ventas_productos_markup_proveedores",
+      "titulo": "Ventas de Productos y Estructura de Proveedores (Aprobados/Designados)",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

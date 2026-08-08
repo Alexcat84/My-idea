@@ -1,5 +1,5 @@
 {
-  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; CEPI reducido de 7 a 2 usos legitimos, validar_posicionamiento a 2, rechazado gestion_eco_riesgos por redundancia con mitigacion, y metas publicas/reduccion por casi-duplicado interno del pack). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
+  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; CEPI reducido de 7 a 2 usos legitimos, validar_posicionamiento a 2, rechazado gestion_eco_riesgos por redundancia con mitigacion, y metas publicas/reduccion por casi-duplicado interno del pack). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | fusion del trio: puentes redirigidos.",
   "aprobados": [
     {
       "core": "validar_posicionamiento_con_analistas",
@@ -23,8 +23,9 @@
     },
     {
       "core": "ventaja_competitiva_producto",
-      "dominio": "construccion_valor_intangible",
-      "score": 0.81
+      "dominio": "valor_intangible_sostenibilidad",
+      "score": 0.81,
+      "redir_trio_dominio": "construccion_valor_intangible"
     },
     {
       "core": "calidad_de_ejecucion_proceso_innovacion",
@@ -58,8 +59,9 @@
     },
     {
       "core": "estrategia_de_innovacion_y_tecnologia",
-      "dominio": "frameworks_para_innovacion_eco",
-      "score": 0.79
+      "dominio": "marcos_pensamiento_dfe",
+      "score": 0.79,
+      "redir_trio_dominio": "frameworks_para_innovacion_eco"
     }
   ]
 }

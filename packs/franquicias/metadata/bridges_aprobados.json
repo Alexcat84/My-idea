@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria v1.3.2. Hallazgo estructural: 8/20 propuestas originales de bridges_propuestos.json tenian ancla en OTRO pack (quality/health_safety) - un puente pack-a-pack queda muerto tras las murallas de dominio, asi que se rechazaron en bloque y se regeneraron candidatos con el mismo metodo restringido a anclas dominio=core (bridges_candidatos_core_only.json). Reglas: max 2-3 por ancla core, cero trampas semanticas (homonimos riesgo/sistema/cultura/investigacion verificados leyendo resumen_teorico), cero redundantes. Rechazos uno a uno con motivo en bridges_curaduria.json. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
+  "nota": "Curaduria v1.3.2. Hallazgo estructural: 8/20 propuestas originales de bridges_propuestos.json tenian ancla en OTRO pack (quality/health_safety) - un puente pack-a-pack queda muerto tras las murallas de dominio, asi que se rechazaron en bloque y se regeneraron candidatos con el mismo metodo restringido a anclas dominio=core (bridges_candidatos_core_only.json). Reglas: max 2-3 por ancla core, cero trampas semanticas (homonimos riesgo/sistema/cultura/investigacion verificados leyendo resumen_teorico), cero redundantes. Rechazos uno a uno con motivo en bridges_curaduria.json. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | fusion del trio: puentes redirigidos.",
   "aprobados": [
     {
       "core": "evaluacion_fit_cultural",
@@ -18,8 +18,9 @@
     },
     {
       "core": "decision_intensidad_capital",
-      "dominio": "evaluar_ventajas_desventajas_franquicia",
-      "score": 0.8332
+      "dominio": "evaluacion_necesidad_franquiciar",
+      "score": 0.8332,
+      "redir_trio_dominio": "evaluar_ventajas_desventajas_franquicia"
     },
     {
       "core": "decision_intensidad_capital",
@@ -33,8 +34,9 @@
     },
     {
       "core": "conversacion_emocional_postcompra",
-      "dominio": "mensaje_emocional_racional",
-      "score": 0.789
+      "dominio": "mensaje_marketing_franquicia",
+      "score": 0.789,
+      "redir_trio_dominio": "mensaje_emocional_racional"
     },
     {
       "core": "intellectual_property_strategy",
@@ -43,8 +45,9 @@
     },
     {
       "core": "costo_de_oportunidad",
-      "dominio": "evaluar_ventajas_desventajas_franquicia",
-      "score": 0.7797
+      "dominio": "evaluacion_necesidad_franquiciar",
+      "score": 0.7797,
+      "redir_trio_dominio": "evaluar_ventajas_desventajas_franquicia"
     },
     {
       "core": "estrategia_ventas_enterprise",
