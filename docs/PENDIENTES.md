@@ -372,7 +372,19 @@ son la capa 3 embrionaria). Matriz de fases:
   `cumplimientoPorDominio`). Nombrado en `docs/PLAN_ESPACIOS_FASE3.md §6`; **jamás
   arreglar "de paso"**.
 
-## Campaña fichada: `re-voz-de-quality`
+## Ficha del futuro mundo `Primer Equipo`
+
+Dos conceptos de quality se deprecaron de la selección en la re-voz (ago 2026)
+**no por malos, sino porque su concepto anclado es la estructura de equipo**:
+
+- **Equipo de Mejora de Calidad** `equipo_mejora_calidad_2`
+- **Involucramiento del Sindicato en Programas de Calidad** `involucramiento_sindical_calidad`
+
+Reencuadrarlos a persona-sola habría sido escribir un nodo que la fuente no
+escribió. Siguen en el grafo (nadie se borra) y **su minería propia podrá
+renacerlos desde sus fuentes** cuando ese mundo exista.
+
+## Campaña CERRADA: `re-voz-de-quality`
 
 **Se dispara al CERRAR la cirugía de fusión de Calidad, no antes.** La secuencia
 fusión-primero es aritmética: los nodos absorbidos ya no hay que re-vozarlos.
@@ -450,6 +462,32 @@ Queda como **candidato a ojo en la eventual revisión del núcleo post-beta**, c
 la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes de
 tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
 ancla, el correctivo pierde su punto de exposición.
+
+## DOCTRINA DE CAMPAÑA (re-voz de quality, cerrada ago 2026)
+
+**Fusión primero, a toda escala.** La secuencia se pagó sola tres veces: 24
+nodos del lote original se deprecaron antes de tocarlos, y otros 15 en la
+ronda 2. Cada nodo fundido antes de re-vozar es API que no se gasta en texto
+que va a desaparecer. Cuando el guardián delató la familia COQ a mitad de
+campaña, la respuesta correcta no fue seguir: fue una skip-list y una ronda 2.
+
+**Un ámbar por vecindario es síntoma de sub-fusión.** El rumbo guardián del
+COPQ cayó sin que su nodo se tocara: lo desplazaron sus gemelos sin fundir, que
+la re-voz volvió más coloquiales. Re-vozar un pack **mueve el vecindario
+entero**. Un ámbar cuyo nodo esperado no cambió y aun así perdió el puesto es la
+firma de que quedan duplicados. Al fundirlos, recuperó el top-10 exactamente
+como se declaró de antemano.
+
+**Las barandas del taller no son las de la fábrica.** La vara de la extracción
+mide texto que nace; la del taller mide texto que se traduce. Aplicar la primera
+a la segunda produjo el peor tipo de error: rechazar lo correcto (39 nodos
+buenos de 40) y empujar a rellenar. Cada taller declara sus propias barandas.
+
+**Dos conceptos murieron por la regla de cero invención, no por su calidad.**
+`Equipo de Mejora de Calidad` e `Involucramiento del Sindicato` se deprecaron de
+la selección porque el concepto ANCLADO es la estructura: la versión sin ella es
+un nodo que la fuente no escribió. Quedan anotados para el futuro mundo **Primer
+Equipo**, cuya minería propia podrá renacerlos desde sus fuentes.
 
 ## DOCTRINA del taller de re-voz (ago 2026)
 
