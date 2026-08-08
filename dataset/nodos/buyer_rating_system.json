@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema de Calificación de Compradores (Buyer Rating)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Método de medición aplicado al área de compras que consiste en cargar a cada agente comprador los errores causados por los proveedores que gestiona, generando una tasa de defectos por comprador. Esto expone diferencias de desempeño entre compradores y motiva mayor cuidado en la selección y gestión de proveedores.",
+  "resumen_teorico": "Método para medir el desempeño de quien gestiona tus compras. Consiste en registrar los errores causados por cada proveedor y asociarlos a la persona que lo eligió o lo gestiona, generando una tasa de defectos por persona. Esto muestra diferencias de desempeño entre quienes compran para ti y te ayuda a exigir mayor cuidado en la selección y el seguimiento de proveedores.",
   "pasos_accionables": [
-    "Definir un sistema de registro de defectos por proveedor asociado a cada comprador",
-    "Calcular tasas de defectos por comprador en lugar de solo por proveedor",
-    "Discutir los resultados con el equipo de compras antes de implementar",
-    "Usar los resultados para mejorar la selección y gestión de proveedores"
+    "Definir una forma simple de registrar los defectos de cada proveedor y a quién corresponde esa relación",
+    "Calcular la tasa de defectos por persona que gestiona proveedores, no solo por proveedor",
+    "Conversar los resultados con quienes te ayudan a comprar antes de aplicar cambios",
+    "Usar los resultados para mejorar cómo eliges y gestionas a tus proveedores"
   ],
-  "entregable_esperado": "Reporte de tasas de defectos por comprador implementado y compartido con el departamento de compras",
+  "entregable_esperado": "Un reporte de tasas de defectos por persona compradora, compartido con quienes participan en tus decisiones de compra",
   "nodos_previos": [
     "medicion_calidad"
   ],
@@ -20,7 +20,7 @@
     "costo_de_calidad_3"
   ],
   "condiciones_activacion": [
-    "Cuando existen múltiples proveedores y no es práctico medir a cada uno individualmente"
+    "Cuando tienes varios proveedores y no es práctico medir a cada uno por separado"
   ],
   "etiqueta_arbol": "Califica a tus Compradores"
 }
