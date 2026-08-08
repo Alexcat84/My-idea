@@ -495,6 +495,50 @@ fusión ya corrió; lo que queda es la voz.
 
 No se dispara nada hasta que el fundador lo ponga en el tablero.
 
+## FRENTE DE RECUPERACIÓN — abierto con evidencia, para la campaña del motor
+
+**Demostrado experimentalmente (ago 2026), no supuesto.** La voz **no** cura la
+puntería de la brújula.
+
+**La evidencia**: se re-vozó el vecindario completo de tres rumbos que subían sin
+llegar (13 rivales directos + su rama). Con todo el vecindario hablando igual de
+bien, **los blancos no subieron: retrocedieron**, y los rivales —todos en el
+lote— siguieron ganando.
+
+| rumbo | blanco | rivales que ganan |
+|---|---|---|
+| *"nadie me ha pagado"* | 67 → **78** | `profit_vs_cash`, `cash_is_king` |
+| *"por qué me comprarían"* | 82 → **83** | `necesidad_vs_deseo_en_ma` (¡fusiones y adquisiciones!) |
+| *"le sirve a todo el mundo"* | 245 → **252** | `anticipar_consecuencias_negativas` |
+
+**El diagnóstico**: la brújula se engancha a **palabras sueltas**. *"pagado"* la
+lleva a las finanzas, *"me comprarían"* a M&A, *"está mal"* a las consecuencias
+no intencionadas. Ninguna es un problema de contenido ni de voz.
+
+Y el contraste lo cierra: los dos rumbos cuyo vecindario **no** competía por las
+mismas palabras **sí** llegaron al top-10 con solo re-vozar.
+
+### PRUEBA DE ACEPTACIÓN del frente
+
+> **Los tres rumbos de arriba se ponen VERDES.** Están en el banco como
+> `diagnostico: true`, fuera del marcador y con su expectativa escrita al lado.
+> El día que el frente funcione, se quitan de diagnóstico y entran a la vara.
+
+### Hipótesis del auditor para ese día, sin diseñarla ahora
+
+**Embeber también las `condiciones_activacion`.** Están escritas como
+situaciones —*"Cuando el emprendedor está tratando de…"*, *"Si dudas entre pagar
+más por mejores profesionales"*— y **se parecen mucho más a como escribe un
+usuario** que el texto conceptual del resumen. Es dato que **ya existe** en los
+3.511 nodos: sería un spike barato.
+
+Nota mía sobre esa hipótesis, de este mismo ciclo: cuando se excluyó ese campo de
+la cuarta baranda fue precisamente porque **describe la situación del lector en
+tercera persona por diseño**. Ese es el argumento a favor: es el campo escrito
+desde la situación, no desde el concepto.
+
+Lo demás del frente vive en `docs/AUDITORIA_MOTOR.md`, archivada.
+
 ## Ficha: `huecos-de-contenido` — documentados sin inventarlos
 
 Vacíos REALES del catálogo, encontrados midiendo y **no rellenados a mano**.

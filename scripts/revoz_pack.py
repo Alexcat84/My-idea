@@ -248,7 +248,12 @@ def revisar(nuevo, viejo):
     # justo donde se prohibe inventar. Se admite +/-35% y nunca mas de 150.
     pal = len((nuevo.get("resumen_teorico") or "").split())
     pal_viejo = len((viejo.get("resumen_teorico") or "").split())
-    piso, techo = max(45, int(pal_viejo * 0.65)), min(PALABRAS[1], int(pal_viejo * 1.35) + 10)
+    # EL PISO NUNCA PIDE MAS DE LO QUE EL ORIGINAL TENIA. Con 45 fijo, un
+    # nodo de 26 palabras recibia la banda "45-45": imposible de cumplir, y
+    # cumplirla habria sido RELLENAR, que es presion de invencion justo donde
+    # se prohibe inventar. Cazado en la tanda 2 con `hojas_de_verificacion`.
+    piso = min(45, max(20, int(pal_viejo * 0.65)))
+    techo = max(piso + 15, min(PALABRAS[1], int(pal_viejo * 1.35) + 10))
     if not (piso <= pal <= techo):
         fallas.append(f"resumen de {pal} palabras (el original tenia {pal_viejo}; "
                       f"se admite {piso}-{techo})")

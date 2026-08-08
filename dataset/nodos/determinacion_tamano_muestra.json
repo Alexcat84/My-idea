@@ -2,17 +2,17 @@
   "node_id": "determinacion_tamano_muestra",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Determinación del Tamaño de Muestra",
+  "titulo_concepto": "Cuántos datos necesitas para confiar en tu prueba (tamaño de muestra)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El tamaño de muestra adecuado depende de los riesgos de muestreo deseados (alfa y beta), el tamaño de la diferencia mínima que se desea detectar, y la variación de la característica medida. Un tamaño de muestra insuficiente o excesivo desperdicia tiempo y esfuerzo; se recomienda usar calculadoras de poder y tamaño de muestra en lugar de reglas empíricas.",
+  "resumen_teorico": "Cuántos datos necesitas para tu prueba depende de cuánto riesgo estás dispuesto a aceptar de sacar una conclusión equivocada (los llamados riesgos alfa y beta), de qué tan pequeña es la diferencia que quieres poder detectar y de cuánto varía lo que estás midiendo. Si recolectas de menos, arriesgas conclusiones poco confiables; si recolectas de más, pierdes tiempo y esfuerzo. En vez de usar una regla al ojo, usa una calculadora de tamaño de muestra.",
   "pasos_accionables": [
-    "Definir el riesgo alfa (error tipo I) aceptable",
-    "Definir el riesgo beta (error tipo II) o poder de la prueba deseado",
-    "Estimar la diferencia mínima que se desea detectar",
-    "Estimar la variación de la característica a medir",
-    "Usar una calculadora de poder y tamaño de muestra para determinar el n requerido"
+    "Decide qué tan dispuesto estás a equivocarte diciendo que hay un efecto cuando no lo hay (riesgo alfa)",
+    "Decide qué tan dispuesto estás a equivocarte diciendo que no hay efecto cuando sí lo hay (riesgo beta), o cuánta seguridad quieres tener de detectarlo",
+    "Estima la diferencia mínima que te importaría detectar",
+    "Estima cuánto varía lo que vas a medir",
+    "Usa una calculadora de tamaño de muestra para saber cuántos datos necesitas"
   ],
-  "entregable_esperado": "Tamaño de muestra calculado y justificado antes de la recolección de datos",
+  "entregable_esperado": "El número de datos que vas a recolectar, calculado y justificado antes de empezar",
   "nodos_previos": [
     "estimacion_intervalos_confianza",
     "inferencia_estadistica_muestreo"
@@ -21,8 +21,8 @@
     "prueba_hipotesis"
   ],
   "condiciones_activacion": [
-    "Antes de diseñar un experimento o estudio de recolección de datos",
-    "Cuando se necesita balancear el costo de muestreo con la precisión deseada"
+    "Antes de diseñar una prueba o salir a recolectar datos",
+    "Cuando necesitas equilibrar el costo de recolectar datos con la precisión que quieres lograr"
   ],
   "etiqueta_arbol": "Calcula Cuántas Muestras Necesitas"
 }

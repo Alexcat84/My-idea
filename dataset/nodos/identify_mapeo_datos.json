@@ -2,17 +2,17 @@
   "node_id": "identify_mapeo_datos",
   "fase_proyecto": "ideacion",
   "dominio": "seguridad_digital",
-  "titulo_concepto": "Identify: Mapeo de Datos y Evaluación de Riesgo de Privacidad",
+  "titulo_concepto": "Mapea tus datos y evalúa el riesgo de privacidad (Identify)",
   "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
-  "resumen_teorico": "La función Identify implica mapear qué datos procesa la organización (recolección, uso, compartición, almacenamiento) a lo largo de todo su ciclo de vida, desde la recolección hasta la disposición. Con este mapa se realiza una evaluación de riesgo de privacidad que analiza cómo las actividades de procesamiento de datos podrían causar problemas a los individuos (vergüenza, discriminación, pérdida económica) y cómo esos problemas impactarían a la organización (pérdida de confianza, daño reputacional).",
+  "resumen_teorico": "Antes de proteger algo tienes que saber qué tienes. Este paso consiste en mapear qué datos maneja tu negocio: qué recolectas, para qué los usas, con quién los compartes y dónde los guardas, a lo largo de todo su recorrido, desde que entran hasta que los eliminas. Con ese mapa en la mano, evalúas el riesgo: piensas en cómo el manejo de esos datos podría afectar a las personas (vergüenza, discriminación, pérdida de dinero) y cómo eso te afectaría a ti (pérdida de confianza, daño a tu reputación).",
   "pasos_accionables": [
-    "Crear un mapa de datos que identifique qué información se recolecta, usa, comparte y almacena",
-    "Documentar el ciclo de vida completo de los datos, desde la recolección hasta la disposición",
-    "Realizar una evaluación de riesgo de privacidad usando el mapa de datos como base",
-    "Evaluar impactos potenciales tanto en individuos como en la organización",
-    "Revisar contratos y productos/servicios de terceros para asegurar alineación con prioridades de privacidad"
+    "Haz un mapa de datos: qué recolectas, cómo lo usas, con quién lo compartes y dónde lo guardas",
+    "Sigue el recorrido completo de los datos, desde que los recibes hasta que los eliminas",
+    "Con ese mapa como base, evalúa el riesgo de privacidad",
+    "Piensa en qué le podría pasar a las personas y qué te pasaría a ti si algo sale mal",
+    "Revisa los contratos y los productos o servicios de terceros para asegurarte de que respeten tus prioridades de privacidad"
   ],
-  "entregable_esperado": "Mapa de flujo de datos documentado y una evaluación inicial de riesgo de privacidad",
+  "entregable_esperado": "Un mapa del recorrido de tus datos y una primera evaluación del riesgo de privacidad",
   "nodos_previos": [
     "nist_privacy_framework_introduccion"
   ],
@@ -21,8 +21,8 @@
     "control_minimizacion_datos"
   ],
   "condiciones_activacion": [
-    "Cuando se inicia un programa de privacidad desde cero",
-    "Si la organización no tiene claridad sobre qué datos personales maneja"
+    "Cuando empiezas a construir tu manejo de privacidad desde cero",
+    "Si no tienes claro qué datos personales manejas en tu negocio"
   ],
   "etiqueta_arbol": "Mapea Tus Datos Sensibles"
 }

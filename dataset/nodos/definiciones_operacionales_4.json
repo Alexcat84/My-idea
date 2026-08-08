@@ -2,17 +2,17 @@
   "node_id": "definiciones_operacionales_4",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Definiciones Operacionales (Significado Comunicable)",
+  "titulo_concepto": "Ponle una prueba clara a cada palabra vaga (definición operacional)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un concepto (como 'limpio', 'rojo', 'contaminación', 'arruga') no tiene significado comunicable hasta que se traduce en una definición operacional: un procedimiento específico de prueba, un criterio de decisión, y una regla clara de aceptación o rechazo. Sin definiciones operacionales, cualquier especificación, ley o estándar de calidad se vuelve ambigua, generando disputas costosas e interminables. No existe un 'valor verdadero' de nada; solo existe el número que se obtiene siguiendo un procedimiento de prueba prescrito y acordado.",
+  "resumen_teorico": "Cuando usas una palabra como 'limpio', 'rojo', 'contaminado' o 'con arrugas', esa palabra no significa nada comunicable hasta que tú la traduces en una prueba concreta: un procedimiento específico, un criterio de decisión y una regla clara de cuándo aceptas y cuándo rechazas. Si no haces esa traducción, cualquier especificación, contrato o estándar de calidad que escribas se vuelve ambiguo y te lleva a disputas costosas e interminables. No existe un 'valor verdadero' de nada: solo existe el número que obtienes siguiendo el procedimiento de prueba que acordaste.",
   "pasos_accionables": [
-    "Identifica los términos ambiguos o adjetivos vagos en tu especificación (por ejemplo 'limpio', 'seguro', 'representativo').",
-    "Define un procedimiento de prueba específico y replicable para medir ese atributo.",
-    "Establece un criterio numérico claro de aceptación o rechazo basado en los resultados de la prueba.",
-    "Documenta el procedimiento para que cualquier persona capacitada llegue al mismo resultado.",
-    "Valida que el criterio y el procedimiento sean aceptados por todas las partes involucradas antes de aplicarlos."
+    "Revisa tu especificación y marca las palabras ambiguas o los adjetivos vagos que usaste (por ejemplo 'limpio', 'seguro', 'representativo').",
+    "Define un procedimiento de prueba específico y repetible para medir ese atributo.",
+    "Fija un criterio numérico claro que te diga cuándo aceptas y cuándo rechazas según el resultado de la prueba.",
+    "Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú.",
+    "Antes de aplicar el criterio, confírmalo con todas las partes involucradas para que todos midan lo mismo de la misma forma."
   ],
-  "entregable_esperado": "Un documento de definición operacional que incluya: el concepto a medir, el procedimiento de prueba paso a paso, el criterio numérico de aceptación o rechazo, y el método de muestreo.",
+  "entregable_esperado": "Un documento donde definas: el concepto que quieres medir, el procedimiento de prueba paso a paso, el criterio numérico de aceptación o rechazo, y cómo tomas la muestra.",
   "nodos_previos": [
     "definiciones_operacionales_3"
   ],
@@ -21,9 +21,9 @@
     "control_estadistico_metodo_medicion"
   ],
   "condiciones_activacion": [
-    "Cuando una especificación de calidad usa adjetivos subjetivos sin criterios medibles.",
-    "Cuando hay disputas sobre qué constituye un defecto.",
-    "Cuando redactas una ley, regulación o contrato que debe ser exigible legalmente."
+    "Cuando escribes una especificación de calidad usando adjetivos subjetivos sin criterios medibles.",
+    "Cuando tienes una disputa sobre qué cuenta como defecto.",
+    "Cuando redactas un contrato o una regla que necesitas poder exigir con claridad."
   ],
   "etiqueta_arbol": "Dale Significado Comunicable"
 }

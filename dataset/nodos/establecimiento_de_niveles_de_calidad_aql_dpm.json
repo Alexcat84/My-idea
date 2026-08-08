@@ -2,16 +2,16 @@
   "node_id": "establecimiento_de_niveles_de_calidad_aql_dpm",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Establecimiento de Niveles de Calidad (AQL/DPM)",
+  "titulo_concepto": "Cómo fijar el nivel de calidad que aceptas (AQL/DPM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El AQL (Acceptable Quality Level) es un punto en la curva de característica operativa que describe los riesgos de los planes de muestreo, pero frecuentemente es malinterpretado por proveedores como un nivel de defectos permitido. Se recomienda establecer contractualmente que todo producto debe cumplir especificaciones, usando en su lugar la métrica de Defectos Por Millón (DPM) para mayor claridad y rigor en muchas industrias.",
+  "resumen_teorico": "El AQL (nivel de calidad aceptable) es un punto en la curva que describe los riesgos de los planes de muestreo, pero muchos proveedores lo malinterpretan como si fuera el nivel de defectos que se permite tener. Por eso conviene dejar en el contrato que todo el producto debe cumplir las especificaciones, y usar en su lugar la métrica de defectos por millón (DPM), que resulta más clara y rigurosa en muchas industrias.",
   "pasos_accionables": [
-    "Evitar comunicar AQL como nivel de defectos aceptable",
-    "Establecer contractualmente que todo el producto debe cumplir especificaciones",
-    "Adoptar la métrica DPM para mayor precisión",
-    "Definir el proceso de devolución de producto no conforme"
+    "No comuniques el AQL como si fuera un nivel de defectos aceptable",
+    "Deja establecido en el contrato que todo el producto debe cumplir las especificaciones",
+    "Usa la métrica DPM (defectos por millón) para tener mayor precisión",
+    "Define con tu proveedor el proceso para devolver el producto que no cumple"
   ],
-  "entregable_esperado": "Cláusula contractual clara sobre niveles de calidad esperados usando DPM u otra métrica no ambigua",
+  "entregable_esperado": "Una cláusula en tu contrato que diga con claridad qué nivel de calidad esperas, usando DPM u otra métrica sin ambigüedad",
   "nodos_previos": [
     "planes_de_muestreo_de_aceptacion"
   ],
@@ -20,8 +20,8 @@
     "trazabilidad_de_lotes"
   ],
   "condiciones_activacion": [
-    "Cuando se redactan contratos de suministro con métricas de calidad",
-    "Cuando existe confusión entre proveedor y comprador sobre niveles de defectos aceptables"
+    "Cuando redactas un contrato de suministro y necesitas fijar métricas de calidad",
+    "Cuando tú y tu proveedor no tienen claro qué nivel de defectos es aceptable"
   ],
   "etiqueta_arbol": "Define tus Niveles de Calidad"
 }

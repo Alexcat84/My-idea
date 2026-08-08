@@ -2,16 +2,16 @@
   "node_id": "conversion_datos_co2e",
   "fase_proyecto": "ejecucion",
   "dominio": "environmental",
-  "titulo_concepto": "Conversión de Datos a Unidades CO2e",
+  "titulo_concepto": "Convertir tus datos en unidades de CO2 equivalente (CO2e)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Una vez recolectados los datos crudos (litros de gasolina, kilowatts-hora), se deben convertir a unidades estándar de CO2 equivalente usando factores de conversión predeterminados. Existen herramientas como calculadoras en línea, hojas de cálculo y software especializado que facilitan este proceso. Es importante ser transparente sobre recalculos si surgen errores significativos.",
+  "resumen_teorico": "Una vez que reuniste los datos crudos (litros de gasolina, kilowatts hora), tienes que convertirlos a unidades estándar de CO2 equivalente usando factores de conversión ya establecidos. Puedes apoyarte en calculadoras en línea, hojas de calculo o programas especializados para hacer esto mas facil. Si después encuentras un error importante en tus números, se transparente y recalcula.",
   "pasos_accionables": [
-    "Seleccionar una herramienta o calculadora con factores de conversión estándar",
-    "Convertir cada tipo de dato crudo a toneladas/kilogramos de CO2e",
-    "Revisar y validar los cálculos con un tercero si es posible",
-    "Estar preparado para recalcular si se detectan errores importantes"
+    "Elige una herramienta o calculadora que use factores de conversión estándar",
+    "Convierte cada tipo de dato crudo a toneladas o kilogramos de CO2e",
+    "Revisa tus calculos y, si puedes, pide que alguien mas los valide",
+    "Si detectas un error importante, recalcula y avisa"
   ],
-  "entregable_esperado": "Reporte de huella de carbono en unidades CO2e estandarizadas por fuente de emisión",
+  "entregable_esperado": "Un reporte de tu huella de carbono en unidades CO2e, organizado por cada fuente de emision",
   "nodos_previos": [
     "estrategia_recoleccion_datos_carbono",
     "definir_limites_huella_carbono"
@@ -21,7 +21,7 @@
     "neutralidad_carbono"
   ],
   "condiciones_activacion": [
-    "Cuando ya se tienen datos crudos de energía y combustible listos para procesar"
+    "Cuando ya tienes los datos crudos de energia y combustible listos para procesar"
   ],
   "etiqueta_arbol": "Convierte tus Datos a CO2e"
 }

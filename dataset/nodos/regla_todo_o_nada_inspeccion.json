@@ -2,17 +2,17 @@
   "node_id": "regla_todo_o_nada_inspeccion",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Regla de Todo-o-Nada para Inspección (Teoría de Costos k1/k2)",
+  "titulo_concepto": "Decide si inspeccionar todo o nada (regla de costos k1/k2)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming propone un modelo matemático para decidir si se debe inspeccionar el 100% de un material entrante o no inspeccionarlo en absoluto, comparando el costo de inspección (k1) con el costo de reparación aguas abajo (k2) y la fracción defectuosa (p). Si p < k1/k2, no se debe inspeccionar (Caso 1); si p > k1/k2, se debe inspeccionar el 100% (Caso 2). La inspección parcial (muestreo) casi nunca minimiza el costo total; solo las estrategias extremas (0% o 100%) lo hacen.",
+  "resumen_teorico": "Puedes decidir si te conviene revisar el 100% de un material que te llega o no revisarlo en absoluto, comparando el costo de inspeccionar cada unidad (k1) con el costo de arreglar el problema más adelante (k2), y la fracción de piezas defectuosas (p). Si p es menor que k1/k2, no te conviene inspeccionar. Si p es mayor que k1/k2, te conviene inspeccionar el 100%. Revisar solo una parte (muestreo) casi nunca es la opción que menos te cuesta; lo que funciona son los extremos: nada o todo.",
   "pasos_accionables": [
-    "Calcular el costo de inspección por unidad (k1) del material o proceso.",
-    "Calcular el costo promedio de corrección aguas abajo (k2) si el defecto no se detecta a tiempo.",
-    "Estimar la fracción defectuosa histórica (p) del proveedor o proceso.",
-    "Comparar p con el punto de equilibrio k1/k2 para decidir entre Caso 1 (sin inspección) o Caso 2 (inspección 100%).",
-    "Documentar la decisión y monitorear con cartas de control para verificar que la fracción defectuosa se mantenga estable."
+    "Calcula el costo de inspeccionar cada unidad (k1) del material o proceso.",
+    "Calcula el costo promedio de corregir el problema más adelante (k2) si el defecto no se detecta a tiempo.",
+    "Calcula la fracción de piezas defectuosas (p) que históricamente te da ese proveedor o proceso.",
+    "Compara p con k1/k2 para decidir si inspeccionas el 100% o no inspeccionas nada.",
+    "Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable."
   ],
-  "entregable_esperado": "Análisis de costos k1/k2 con la decisión documentada (inspeccionar 100% o no inspeccionar) para cada material o etapa crítica del proceso.",
+  "entregable_esperado": "Un análisis con los costos k1 y k2, y tu decisión documentada (inspeccionar todo o no inspeccionar) para cada material o etapa clave de tu proceso.",
   "nodos_previos": [
     "control_estadistico_de_procesos",
     "relacion_largo_plazo_proveedor_unico"
@@ -25,8 +25,8 @@
     "verificacion_paralela_trabajo_critico"
   ],
   "condiciones_activacion": [
-    "Cuando se debe decidir sobre políticas de inspección de materiales entrantes o productos en proceso",
-    "Cuando existen costos significativos de reparación aguas abajo por defectos no detectados"
+    "Cuando tienes que decidir si inspeccionas los materiales que te llegan o los productos en proceso",
+    "Cuando corregir un defecto que no detectaste a tiempo te sale caro"
   ],
   "etiqueta_arbol": "Decide Inspeccionar Todo o Nada"
 }

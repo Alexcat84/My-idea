@@ -2,16 +2,16 @@
   "node_id": "gestion_datos_calidad",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Gestión del Problema de 'No Hay Datos' en Programas de Calidad",
+  "titulo_concepto": "Que hacer cuando crees que no tienes datos para medir la calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un lamento común al iniciar programas de calidad es la falta de datos. Sin embargo, frecuentemente existen datos no explotados en sistemas de TI. Si realmente no existen o son poco confiables, se debe iniciar recolección nueva, gestionando el cambio cultural asociado y explicando el propósito a empleados para evitar resistencia.",
+  "resumen_teorico": "Es comun pensar que no tienes datos para empezar a medir la calidad de tu negocio. Pero casi siempre existen datos sin explotar guardados en tus sistemas. Revisalos antes de asumir que no hay nada. Si de verdad no existen o no son confiables, empieza a recolectarlos desde cero, y explica a las personas con las que trabajas por que lo haces, para evitar resistencia al cambio.",
   "pasos_accionables": [
-    "Consultar al departamento de TI sobre bases de datos existentes",
-    "Verificar la veracidad y utilidad de los datos disponibles",
-    "Si no hay datos confiables, diseñar un plan de recolección nueva",
-    "Comunicar el propósito de la recolección de datos a empleados para reducir resistencia al cambio"
+    "Pregunta a quien maneja tus sistemas si ya existen bases de datos que puedas usar",
+    "Revisa si esos datos son confiables y realmente te sirven",
+    "Si no hay datos confiables, diseña un plan para empezar a recolectarlos",
+    "Explica a las personas con las que trabajas por que estas recolectando estos datos, para reducir la resistencia al cambio"
   ],
-  "entregable_esperado": "Plan de auditoría y recolección de datos de calidad validado",
+  "entregable_esperado": "Un plan de revisión y recoleccion de datos de calidad, ya validado",
   "nodos_previos": [
     "framework_efectividad_procesos"
   ],
@@ -19,7 +19,7 @@
     "mejora_continua_operaciones"
   ],
   "condiciones_activacion": [
-    "Cuando se inicia un programa de calidad y se percibe ausencia de datos medibles"
+    "Cuando empiezas un programa de calidad y sientes que no tienes datos para medir nada"
   ],
   "etiqueta_arbol": "Busca Datos Antes de Quejarte"
 }

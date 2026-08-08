@@ -2,15 +2,15 @@
   "node_id": "limites_especificacion_funcionales",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Límites de Especificación Basados en Necesidades Funcionales",
+  "titulo_concepto": "Define los límites de tus piezas según lo que el producto realmente necesita",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Al establecer límites de especificación para las características de un producto, se debe considerar el valor nominal deseado y los límites de tolerancia que reflejen las necesidades funcionales reales del producto, no solo criterios arbitrarios. Esto se logra desarrollando datos que relacionen el desempeño del producto con mediciones críticas de componentes mediante diagramas de dispersión y ecuaciones de regresión.",
+  "resumen_teorico": "Cuando pones un valor deseado y un margen de tolerancia para una característica de tu producto, no lo saques de la manga ni copies un criterio arbitrario: basalo en lo que tu producto necesita para funcionar bien. Para eso, junta datos que relacionen el desempeño de tu producto con las mediciones críticas de sus componentes, usando diagramas de dispersión y ecuaciones de regresión.",
   "pasos_accionables": [
-    "Identificar las características críticas del producto que afectan su función",
-    "Diseñar experimentos o pruebas para relacionar variaciones del componente con el desempeño del producto",
-    "Construir diagramas de dispersión y ecuaciones de regresión",
-    "Establecer límites de tolerancia con base científica dentro de límites de confianza",
-    "Validar que el tamaño de muestra sea suficiente y el proceso esté controlado estadísticamente"
+    "Identifica qué características son críticas para que tu producto funcione",
+    "Diseña pruebas que relacionen las variaciones de un componente con el desempeño del producto",
+    "Construye diagramas de dispersión y ecuaciones de regresión con esos datos",
+    "Define tus límites de tolerancia con base en esos datos, dentro de márgenes de confianza",
+    "Verifica que tu muestra sea suficiente y que tu proceso esté bajo control estadístico"
   ],
   "entregable_esperado": "Documento de especificaciones técnicas con límites de tolerancia justificados por datos funcionales",
   "nodos_previos": [
@@ -21,7 +21,7 @@
     "funcion_perdida_taguchi"
   ],
   "condiciones_activacion": [
-    "Cuando se están definiendo especificaciones de diseño de un producto nuevo o rediseño"
+    "Cuando estás definiendo las especificaciones de diseño de un producto nuevo o un rediseño"
   ],
   "etiqueta_arbol": "Define Límites Según la Función"
 }

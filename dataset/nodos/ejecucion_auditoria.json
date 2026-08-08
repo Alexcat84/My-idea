@@ -2,16 +2,16 @@
   "node_id": "ejecucion_auditoria",
   "fase_proyecto": "ejecucion",
   "dominio": "quality",
-  "titulo_concepto": "Ejecución y Verificación de Hechos en la Auditoría",
+  "titulo_concepto": "Verificar los hechos antes de escribir el reporte de auditoría",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Durante la ejecución, los auditores deben verificar los hechos (síntomas observables) con la supervisión de línea antes de incluirlos en el reporte. Se debe decidir si el auditor investigará las causas de las deficiencias mayores o si esto queda a cargo del personal de línea. Los auditores generalmente deben hacer recomendaciones pero evitar diseñar los remedios ellos mismos.",
+  "resumen_teorico": "Cuando estás revisando algo por dentro, no anotes un problema sin confirmarlo antes con la persona responsable de esa parte del negocio. Verifica cada hallazgo con ella antes de ponerlo en el reporte. Decide también si tú vas a investigar por qué pasó el problema o si eso queda en manos de quien maneja esa área. En general puedes proponer mejoras, pero evita diseñar tú mismo la solución exacta.",
   "pasos_accionables": [
-    "Verificar y acordar los hechos encontrados con la supervisión de línea antes de reportarlos",
-    "Determinar el alcance de la investigación de causas (auditor vs. personal de línea)",
-    "Formular recomendaciones de mejora sin diseñar directamente las soluciones",
-    "Mantener informado al cliente clave sobre el avance de la auditoría (status reporting)"
+    "Confirma cada hallazgo con la persona responsable de esa área antes de escribirlo en el reporte",
+    "Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio",
+    "Propón mejoras, pero evita diseñar tú mismo la solución final",
+    "Mantén al cliente clave al tanto de cómo va avanzando la revisión"
   ],
-  "entregable_esperado": "Registro de hallazgos verificados y acordados con el área auditada",
+  "entregable_esperado": "Lista de hallazgos verificados y acordados con la persona del área revisada",
   "nodos_previos": [
     "checklist_estandares_auditoria",
     "planificacion_auditoria_individual",
@@ -22,7 +22,7 @@
     "relaciones_humanas_auditoria"
   ],
   "condiciones_activacion": [
-    "Cuando se está en la fase activa de recolección de evidencia de la auditoría"
+    "Cuando estás en la etapa de recolectar evidencia durante una revisión o auditoría"
   ],
   "etiqueta_arbol": "Verifica los Hechos, no Supongas"
 }

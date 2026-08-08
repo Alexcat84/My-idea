@@ -2,18 +2,18 @@
   "node_id": "ingenieria_inversa_metas",
   "fase_proyecto": "planificacion",
   "dominio": "franquicias",
-  "titulo_concepto": "Ingeniería Inversa de Metas Financieras",
+  "titulo_concepto": "Calcula hacia atrás desde tu meta financiera (ingeniería inversa)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Proceso de planificación que parte de la meta final deseada (ej. vender la empresa en $10M en 5 años) y retrocede para calcular el crecimiento en valoración necesario, las ganancias (EBIT) requeridas, y el número de franquicias que deben venderse y abrirse para alcanzar esa meta. Se basa en estimar ingresos por regalías, márgenes netos por franquiciado y multiplicar por el número de unidades necesarias.",
+  "resumen_teorico": "Parte de la meta final que quieres lograr, por ejemplo vender tu negocio en $10M dentro de 5 años, y retrocede desde ahí para calcular cuánto tiene que crecer tu valoración, cuánta ganancia operativa (EBIT) necesitas generar y cuántas franquicias tienes que vender y abrir para llegar a esa meta. Te apoyas en estimar cuánto te deja cada franquiciado en regalías y margen neto, y multiplicas por el número de unidades que necesitas.",
   "pasos_accionables": [
-    "Definir el valor de venta deseado a futuro (ej. $10M en 5 años)",
-    "Restar el valor actual del negocio para obtener el crecimiento en valoración requerido",
-    "Dividir ese crecimiento entre un múltiplo de ganancias conservador del sector para obtener el EBIT objetivo",
-    "Estimar ingresos promedio por franquiciado (regalías, ventas de producto) y margen neto de contribución",
-    "Dividir el EBIT objetivo entre la contribución neta por franquiciado para calcular el número de franquicias necesarias",
-    "Distribuir esas ventas de franquicia en un cronograma de 5 años, priorizando crecimiento gradual al inicio"
+    "Define el valor de venta que quieres alcanzar y en cuánto tiempo, por ejemplo $10M en 5 años",
+    "Resta el valor actual de tu negocio para saber cuánto crecimiento en valoración necesitas",
+    "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánto EBIT necesitas generar",
+    "Calcula cuánto te deja en promedio cada franquiciado en regalías y ventas de producto, y cuál es tu margen neto por unidad",
+    "Divide el EBIT que necesitas entre lo que te deja cada franquiciado para saber cuántas franquicias tienes que vender",
+    "Reparte esas ventas en un cronograma de 5 años, empezando con crecimiento gradual al inicio"
   ],
-  "entregable_esperado": "Modelo financiero con el número objetivo de franquicias a vender y abrir por año para alcanzar la meta de valoración",
+  "entregable_esperado": "Un plan con el número de franquicias que necesitas vender y abrir cada año para llegar a tu meta de valoración",
   "nodos_previos": [
     "plan_estrategico_franquicia"
   ],
@@ -23,8 +23,8 @@
     "velocidad_crecimiento_franquicia_2"
   ],
   "condiciones_activacion": [
-    "El usuario tiene una meta financiera clara de venta o valoración futura",
-    "Se necesita traducir metas financieras en un número concreto de franquicias a vender"
+    "Tienes una meta financiera clara de venta o valoración a futuro",
+    "Necesitas traducir esa meta en un número concreto de franquicias que tienes que vender"
   ],
   "etiqueta_arbol": "Calcula tu Meta al Revés"
 }
