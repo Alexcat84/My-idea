@@ -1,36 +1,41 @@
 {
-  "regenerados": 2,
+  "regenerados": 3,
   "rechazos": [],
   "muestra": [
     {
-      "node_id": "evaluacion_de_factores_de_riesgo",
+      "node_id": "impacto_calidad_ingresos_costos",
       "antes": {
-        "titulo_concepto": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)",
-        "resumen_teorico": "Una vez identificados los riesgos, deben priorizarse asignando valores numéricos a distintos factores: severidad (magnitud de la pérdida potencial), probabilidad (frecuencia de ocurrencia), impacto de la velocidad, indignación del consumidor, complejidad, alcance (scope) e incertidumbre. Multiplicando o sumando estos valores se obtiene una lista priorizada que permite enfocar los esfuerzos de prevención en los riesgos más importantes."
+        "titulo_concepto": "Impacto de la Calidad en Ingresos y Costos",
+        "resumen_teorico": "La calidad afecta tanto costos como ingresos, y estos efectos interactúan entre sí. Por el lado de costos, mayor calidad reduce fallas y gastos asociados. Por el lado de ingresos, entregar características que responden mejor a las necesidades del cliente hace el producto más vendible y puede generar precios premium, e incluso mayor participación de mercado si eres líder en calidad. Además, productos con deficiencias no solo aumentan costos sino que desalientan la recompra y generan publicidad negativa boca a boca, afectando las ventas futuras de forma indirecta. Históricamente se ha estudiado más el efecto en costos que en ingresos, lo que representa una oportunidad de análisis para tu negocio."
       },
       "despues": {
-        "titulo_concepto": "Evaluación de Factores de Riesgo (Severidad, Probabilidad y más)",
-        "resumen_teorico": "Cuando identificas varios riesgos, conviene ordenarlos para saber cuál atacar primero. Para eso, revisas cada uno según su gravedad, qué tan probable es que ocurra, qué tan rápido golpearía, cuánto indignaría a tus clientes, su complejidad, su alcance y cuánta incertidumbre tiene. Combinando estos factores obtienes una lista clara de prioridades para enfocar tu esfuerzo de prevención."
+        "titulo_concepto": "Impacto de la Calidad en Ingresos y Costos",
+        "resumen_teorico": "La calidad afecta tanto los costos como los ingresos, y estos efectos se relacionan entre si. Por el lado de los costos, mas calidad reduce fallas y gastos asociados. Por el lado de los ingresos, entregar caracteristicas que responden mejor a las necesidades del cliente hace tu producto mas vendible y puede permitirte cobrar un precio premium, e incluso ganar mas participacion de mercado si eres lider en calidad. Además, los productos con defectos no solo aumentan costos sino que desalientan la recompra y generan comentarios negativos, afectando tus ventas futuras de forma indirecta. Historicamente se ha estudiado mas el efecto en costos que en ingresos, lo que representa una oportunidad de análisis para tu negocio."
       }
     },
     {
-      "node_id": "matriz_riesgo_conocido_desconocido",
+      "node_id": "limitaciones_analisis_costo_beneficio",
       "antes": {
-        "titulo_concepto": "Matriz de Riesgo: Conocidos, Desconocidos y Desconocidos Desconocidos",
-        "resumen_teorico": "La incertidumbre en la evaluación de riesgos se clasifica en tres niveles: 'desconocidos desconocidos' (no sabemos que no sabemos, la posición más peligrosa), 'conocidos desconocidos' (sabemos que existe un riesgo pero carecemos de datos para evaluarlo) y 'conocidos conocidos' (tenemos datos y confianza, pero esa confianza puede ser infundada). Reconocer en qué categoría cae cada riesgo ayuda a decidir qué acción tomar: educación, recopilación de datos o revisión crítica de supuestos existentes."
+        "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
+        "resumen_teorico": "Deming advierte que el análisis costo/beneficio (ΔC/ΔB) frecuentemente falla en calidad porque tanto los costos (ej. costo real de un defecto que llega al cliente) como los beneficios (satisfacción, reputación) son extremadamente difíciles de cuantificar en términos monetarios. Si no se puede estimar confiablemente el numerador ni el denominador, la fracción resultante carece de valor real, y su uso puede ser peligroso, especialmente en decisiones de diseño de producto donde hay riesgo de lesión o pérdida de vida."
       },
       "despues": {
-        "titulo_concepto": "Los tres niveles de riesgo: lo que no sabes que no sabes, lo que sabes que no sabes y lo que crees saber",
-        "resumen_teorico": "La incertidumbre en tu negocio se puede pensar en tres niveles. Primero, lo que no sabes que no sabes: la posicion mas peligrosa, porque ni siquiera ves el riesgo. Segundo, lo que sabes que no sabes: ya identificaste el riesgo pero te faltan datos para evaluarlo. Tercero, lo que crees saber: tienes datos y confianza, pero esa confianza puede estar mal puesta. Reconocer en cual de los tres estas te ayuda a decidir que hacer: aprender mas, buscar datos, o revisar con ojo critico lo que dabas por hecho."
+        "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
+        "resumen_teorico": "Deming advierte que el análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado."
+      }
+    },
+    {
+      "node_id": "metodologia_medicion_copq",
+      "antes": {
+        "titulo_concepto": "Metodología de Medición del Costo de Mala Calidad",
+        "resumen_teorico": "Consiste en cuatro pasos estructurados para medir el COPQ de forma práctica y útil para la toma de decisiones gerenciales: (1) Identificar las actividades que resultan de la mala calidad mediante brainstorming y entrevistas con niveles medios y altos de la organización; (2) Decidir cómo estimar los costos, usando el enfoque de recursos totales o el de costo unitario; (3) Recolectar datos y estimar costos siguiendo buenas prácticas de recolección (formularios simples, capacitación de recolectores, auditoría de resultados); (4) Analizar los resultados y decidir los siguientes pasos, como seleccionar proyectos de mejora prioritarios. No se requiere alta precisión contable, solo estimaciones consistentes y no sesgadas."
+      },
+      "despues": {
+        "titulo_concepto": "Metodología de Medición del Costo de Mala Calidad",
+        "resumen_teorico": "Consiste en cuatro pasos para medir el costo de la mala calidad de forma práctica y útil para decidir qué hacer: (1) Identificar las actividades que resultan de la mala calidad mediante lluvia de ideas y conversaciones con quienes conocen bien el negocio; (2) Decidir cómo estimar los costos, usando el enfoque de recursos totales o el de costo unitario; (3) Recolectar datos y estimar costos siguiendo buenas prácticas de recolección (formularios simples, capacitación de quienes recolectan, revisión de los resultados); (4) Analizar los resultados y decidir los siguientes pasos, como elegir qué mejorar primero. No se necesita precisión contable exacta, solo estimaciones consistentes y sin sesgo."
       }
     }
   ],
-  "titulos_cambiados": [
-    {
-      "node_id": "matriz_riesgo_conocido_desconocido",
-      "de": "Matriz de Riesgo: Conocidos, Desconocidos y Desconocidos Desconocidos",
-      "a": "Los tres niveles de riesgo: lo que no sabes que no sabes, lo que sabes que no sabes y lo que crees saber"
-    }
-  ],
-  "costo_usd": 0.06
+  "titulos_cambiados": [],
+  "costo_usd": 0.04
 }

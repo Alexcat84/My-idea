@@ -4,39 +4,49 @@
   "dominio": "quality",
   "titulo_concepto": "Paso 4: Costo de la Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras. Es una herramienta que convierte un problema abstracto de calidad en dinero concreto, lo que te ayuda a comprometerte de verdad con la mejora en lugar de quedarte en buenas intenciones. Crosby marca como referencia que este costo no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras también sirven para priorizar dónde actuar, favoreciendo la prevención sobre la inspección.",
+  "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Crosby marca como referencia que no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
   "pasos_accionables": [
-    "Identifica y suma todos los componentes del costo de calidad: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, incluyendo tu tiempo o salario asociado, sin minimizar cifras",
-    "Calcula el costo de calidad total como porcentaje de tus ventas",
-    "Compara el resultado con el estándar de referencia del 2.5% al 4% de ventas",
+    "Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad",
+    "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras",
+    "Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%",
     "Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección",
-    "Establece una meta de reducción progresiva del costo de calidad"
+    "Establece una meta de reducción progresiva del costo de calidad",
+    "Convierte este cálculo en una medición recurrente de cómo va tu gestión de calidad"
   ],
-  "entregable_esperado": "Reporte desglosado por categoría del costo de calidad actual, expresado como porcentaje de tus ventas, con una meta de reducción definida.",
+  "entregable_esperado": "Reporte desglosado por categoría del costo de calidad actual, elaborado por quien te lleva las cuentas, expresado como porcentaje de tus ventas y con una meta de reducción definida.",
   "nodos_previos": [
     "medicion_calidad",
     "medicion_servicios",
     "buyer_rating_system",
-    "medicion_de_calidad"
+    "medicion_de_calidad",
+    "costo_de_la_calidad_coq"
   ],
   "nodos_siguientes": [
     "conciencia_calidad",
     "accion_correctiva",
-    "conciencia_de_calidad"
+    "conciencia_de_calidad",
+    "concepto_quality_is_free"
   ],
   "condiciones_activacion": [
     "Cuando no tienes visibilidad financiera del impacto de tus defectos o errores",
-    "Cuando necesitas justificar una inversión en un programa de mejora de calidad",
-    "Al completar la fase de medición inicial de tu proceso"
+    "Cuando necesitas justificar con números si vale la pena invertir en un programa de mejora de calidad",
+    "Al completar la fase de medición inicial de tu proceso",
+    "Cuando quieres evidencia financiera clara del impacto de la falta de calidad antes de decidir"
   ],
   "etiqueta_arbol": "Cuantifica el Costo de Hacerlo Mal",
   "ids_alias": [
-    "costo_de_calidad_4"
+    "costo_de_calidad_4",
+    "costo_de_calidad_2"
   ],
   "merged_originals": [
     {
       "node_id": "costo_de_calidad_4",
       "titulo": "Costo de Calidad (Cost of Quality)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    },
+    {
+      "node_id": "costo_de_calidad_2",
+      "titulo": "Evaluación del Costo de la Calidad (Paso 4)",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
     }
   ]

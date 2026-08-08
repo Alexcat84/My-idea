@@ -78,9 +78,17 @@ describe("reelegirPuertaDeMundo — el escenario exacto del hallazgo", () => {
     expect(graph[reeleccion!.puertaId].dominio).toBe("quality");
   });
 
-  it("prefiere una semilla del pack sobre un vecino cualquiera", () => {
-    expect(reeleccion!.esSemilla).toBe(true);
-    expect(semillasDelPack("quality").map((s) => s.id)).toContain(reeleccion!.puertaId);
+  it("HOY cae al vecino, porque ya no queda semilla fuera de la rama", () => {
+    // La regla "prefiere una semilla" sigue en el codigo y se prueba abajo con
+    // datos sinteticos. Con el grafo REAL ya no se puede ejercer: tras la ronda
+    // 2 de fusion, la rama de CUALQUIERA de las 7 semillas de quality se traga
+    // a las otras 6. Antes quedaba margen (3 fuera desde mejora_continua); la
+    // fusion lo consumio al hacer que los supervivientes hereden las aristas de
+    // sus absorbidos.
+    //
+    // Se fija el estado REAL en vez de aflojar la regla: el dia que la densidad
+    // mejore, este test cantara el cambio.
+    expect(reeleccion!.esSemilla).toBe(false);
   });
 });
 
@@ -178,9 +186,14 @@ describe("la densidad del pack, fijada como está hoy", () => {
     expect(rama.size).toBeGreaterThanOrEqual(500);
   });
 
-  it("y se traga las siete semillas del pack", () => {
-    const rama = ramaDe("medicion_calidad", graph);
-    const fuera = semillasDelPack("quality").map((s) => s.id).filter((s) => !rama.has(s));
-    expect(fuera, "si esto cambia, la densidad mejoró: revisa el hallazgo").toHaveLength(0);
+  it("y se traga las siete semillas, desde CUALQUIERA de ellas", () => {
+    // Antes esto solo pasaba desde 4 de las 7. Tras la ronda 2 de fusion pasa
+    // desde las siete: no queda ninguna puerta alternativa fuera de la rama de
+    // ninguna otra. La ficha densidad-de-quality lo lleva anotado.
+    for (const s of semillasDelPack("quality")) {
+      const rama = ramaDe(s.id, graph);
+      const fuera = semillasDelPack("quality").map((x) => x.id).filter((x) => !rama.has(x));
+      expect(fuera, `desde ${s.id} la densidad mejoró: revisa el hallazgo`).toHaveLength(0);
+    }
   });
 });

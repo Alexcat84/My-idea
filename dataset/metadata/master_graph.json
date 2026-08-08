@@ -395,7 +395,8 @@
         "programa_make_certain_3",
         "rework_por_el_causante",
         "decision_aptitud_para_uso",
-        "limites_control_estadistico_vs_tolerancias"
+        "limites_control_estadistico_vs_tolerancias",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "comite_cero_defectos",
@@ -6412,7 +6413,8 @@
         "costo_de_mala_calidad",
         "consejo_calidad_2",
         "costo_de_mala_calidad_2",
-        "revision_progreso"
+        "revision_progreso",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "consejo_calidad",
@@ -9758,7 +9760,8 @@
       ],
       "entregable_esperado": "Estimación de ROI y costo de mala calidad (COPQ) documentado, con un rango de confianza aceptable para tomar tu decisión",
       "nodos_previos": [
-        "categorias_copq"
+        "categorias_copq",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "presentaciones_alta_direccion",
@@ -9885,13 +9888,15 @@
       ],
       "entregable_esperado": "Especificación de diseño validada contra necesidades del cliente y sistema de medición de conformidad en producción",
       "nodos_previos": [
-        "cuatro_costos_de_calidad"
+        "cuatro_costos_de_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "cuatro_costos_de_calidad",
         "capacidad_de_proceso",
         "capacidad_de_proceso_2",
-        "diferencia_planeacion_mejora"
+        "diferencia_planeacion_mejora",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando se está definiendo un nuevo producto o servicio",
@@ -9924,7 +9929,8 @@
         "costo_de_mala_calidad_2",
         "evaluacion_mejora_programa_2",
         "mejora_continua_sostenibilidad",
-        "implementar_estrategias_reduccion_emisiones"
+        "implementar_estrategias_reduccion_emisiones",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando el equipo detecta que los productos fallan por ejecución deficiente más que por falta de ideas",
@@ -10409,7 +10415,8 @@
         "circulos_de_calidad_para_mejora_operativa",
         "cuatro_costos_de_calidad",
         "entrenamiento_y_control_estadistico",
-        "moral_y_sistema_no_individuo"
+        "moral_y_sistema_no_individuo",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando se planifica un nuevo proceso o se evalúa uno existente",
@@ -11021,7 +11028,8 @@
       ],
       "entregable_esperado": "Plan de eliminación de fallas recurrentes con responsables y metas por versión de producto",
       "nodos_previos": [
-        "impacto_calidad_en_costos"
+        "impacto_calidad_en_costos",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -11482,7 +11490,8 @@
         "Cuando se ha identificado un COPQ elevado y se necesita saber dónde concentrar los esfuerzos de reducción",
         "Cuando se preparan proyectos de mejora y se requiere priorizar áreas de impacto"
       ],
-      "etiqueta_arbol": "Clasifica Fallas y Apreciación"
+      "etiqueta_arbol": "Clasifica Fallas y Apreciación",
+      "deprecado": true
     },
     "categorias_costo_de_calidad": {
       "node_id": "categorias_costo_de_calidad",
@@ -11508,7 +11517,8 @@
       "condiciones_activacion": [
         "Cuando se inicia el cálculo formal del COQ y se necesita una estructura clara para organizarlo"
       ],
-      "etiqueta_arbol": "Divide Prevención y Fallas"
+      "etiqueta_arbol": "Divide Prevención y Fallas",
+      "deprecado": true
     },
     "categorias_costos_calidad": {
       "node_id": "categorias_costos_calidad",
@@ -11539,7 +11549,8 @@
         "Cuando se requiere detallar el origen específico de los costos de mala calidad",
         "Al decidir dónde invertir en mejora: prevención vs corrección"
       ],
-      "etiqueta_arbol": "Ordena las Cuatro Categorías"
+      "etiqueta_arbol": "Ordena las Cuatro Categorías",
+      "deprecado": true
     },
     "categorias_de_material_entrante": {
       "node_id": "categorias_de_material_entrante",
@@ -12008,7 +12019,8 @@
         "definicion_calidad_conformidad_requisitos",
         "critica_acceptable_quality_level",
         "costo_de_la_no_calidad",
-        "definicion_calidad_conformidad_requisitos_3"
+        "definicion_calidad_conformidad_requisitos_3",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "eliminacion_causas_error",
@@ -12072,7 +12084,8 @@
         "costo_de_calidad_5",
         "estilo_gerencial_ballet_vs_hockey",
         "programa_make_certain_2",
-        "costo_de_calidad_6"
+        "costo_de_calidad_6",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "medicion_calidad_2"
@@ -16759,7 +16772,8 @@
         "Cuando se necesita justificar financieramente un programa de mejora de calidad.",
         "Cuando la dirección exige métricas tangibles antes de aprobar iniciativas de calidad."
       ],
-      "etiqueta_arbol": "Calcula el Costo de Fallar"
+      "etiqueta_arbol": "Calcula el Costo de Fallar",
+      "deprecado": true
     },
     "concepto_cuatro_pilares_programa_calidad": {
       "node_id": "concepto_cuatro_pilares_programa_calidad",
@@ -16990,7 +17004,8 @@
       "entregable_esperado": "Un plan piloto de implementación del programa de catorce pasos en al menos una unidad de negocio, con métricas de seguimiento.",
       "nodos_previos": [
         "concepto_cuatro_pilares_programa_calidad",
-        "concepto_costo_de_calidad"
+        "concepto_costo_de_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "concepto_zero_defects",
@@ -17045,13 +17060,15 @@
       "entregable_esperado": "Un diagnostico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
       "nodos_previos": [
         "costo_de_calidad_2",
-        "conformance_to_requirements"
+        "conformance_to_requirements",
+        "costo_de_calidad_3"
       ],
       "nodos_siguientes": [
         "concepto_costo_de_calidad",
         "concepto_haciendo_la_calidad_cierta",
         "quality_awareness_crosby",
-        "programa_catorce_pasos_crosby"
+        "programa_catorce_pasos_crosby",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando crees que mejorar la calidad implica gastar mas dinero.",
@@ -17240,7 +17257,8 @@
         "medicion_de_calidad",
         "costo_de_calidad_4",
         "programa_de_mejora_de_calidad",
-        "rotacion_de_puestos_para_mejora_calidad"
+        "rotacion_de_puestos_para_mejora_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "accion_correctiva",
@@ -17289,7 +17307,8 @@
         "programa_de_mejora_de_calidad",
         "rotacion_de_puestos_para_mejora_calidad",
         "costo_de_calidad_3",
-        "medicion_calidad"
+        "medicion_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "accion_correctiva",
@@ -20253,7 +20272,8 @@
         "cuatro_costos_de_calidad",
         "matriz_de_control_de_proceso",
         "mejora_continua_del_sistema",
-        "mistake_proofing_poka_yoke_2"
+        "mistake_proofing_poka_yoke_2",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "matriz_de_control_de_proceso",
@@ -20465,7 +20485,8 @@
         "control_estadistico_metodo_medicion",
         "correlacion_cero_muestra_remanente",
         "organizacion_liderazgo_estadistico",
-        "punto_equilibrio_calidad_inspeccion"
+        "punto_equilibrio_calidad_inspeccion",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando se considera invertir en nueva maquinaria para resolver un problema de calidad sin haber estabilizado el proceso actual.",
@@ -21357,7 +21378,8 @@
       "entregable_esperado": "Un informe del costo de calidad elaborado por quien te lleva las cuentas.",
       "nodos_previos": [
         "medicion_calidad",
-        "costo_de_la_calidad_coq"
+        "costo_de_la_calidad_coq",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "conciencia_calidad",
@@ -21367,7 +21389,8 @@
         "Cuando necesitas justificar con números si vale la pena invertir en calidad",
         "Cuando quieres tener evidencia financiera clara del impacto de la falta de calidad antes de decidir"
       ],
-      "etiqueta_arbol": "Evalúa el Costo de la Calidad"
+      "etiqueta_arbol": "Evalúa el Costo de la Calidad",
+      "deprecado": true
     },
     "costo_de_calidad_3": {
       "node_id": "costo_de_calidad_3",
@@ -21375,39 +21398,49 @@
       "dominio": "quality",
       "titulo_concepto": "Paso 4: Costo de la Calidad",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-      "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras. Es una herramienta que convierte un problema abstracto de calidad en dinero concreto, lo que te ayuda a comprometerte de verdad con la mejora en lugar de quedarte en buenas intenciones. Crosby marca como referencia que este costo no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras también sirven para priorizar dónde actuar, favoreciendo la prevención sobre la inspección.",
+      "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Crosby marca como referencia que no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
       "pasos_accionables": [
-        "Identifica y suma todos los componentes del costo de calidad: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, incluyendo tu tiempo o salario asociado, sin minimizar cifras",
-        "Calcula el costo de calidad total como porcentaje de tus ventas",
-        "Compara el resultado con el estándar de referencia del 2.5% al 4% de ventas",
+        "Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad",
+        "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras",
+        "Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%",
         "Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección",
-        "Establece una meta de reducción progresiva del costo de calidad"
+        "Establece una meta de reducción progresiva del costo de calidad",
+        "Convierte este cálculo en una medición recurrente de cómo va tu gestión de calidad"
       ],
-      "entregable_esperado": "Reporte desglosado por categoría del costo de calidad actual, expresado como porcentaje de tus ventas, con una meta de reducción definida.",
+      "entregable_esperado": "Reporte desglosado por categoría del costo de calidad actual, elaborado por quien te lleva las cuentas, expresado como porcentaje de tus ventas y con una meta de reducción definida.",
       "nodos_previos": [
         "medicion_calidad",
         "medicion_servicios",
         "buyer_rating_system",
-        "medicion_de_calidad"
+        "medicion_de_calidad",
+        "costo_de_la_calidad_coq"
       ],
       "nodos_siguientes": [
         "conciencia_calidad",
         "accion_correctiva",
-        "conciencia_de_calidad"
+        "conciencia_de_calidad",
+        "concepto_quality_is_free"
       ],
       "condiciones_activacion": [
         "Cuando no tienes visibilidad financiera del impacto de tus defectos o errores",
-        "Cuando necesitas justificar una inversión en un programa de mejora de calidad",
-        "Al completar la fase de medición inicial de tu proceso"
+        "Cuando necesitas justificar con números si vale la pena invertir en un programa de mejora de calidad",
+        "Al completar la fase de medición inicial de tu proceso",
+        "Cuando quieres evidencia financiera clara del impacto de la falta de calidad antes de decidir"
       ],
       "etiqueta_arbol": "Cuantifica el Costo de Hacerlo Mal",
       "ids_alias": [
-        "costo_de_calidad_4"
+        "costo_de_calidad_4",
+        "costo_de_calidad_2"
       ],
       "merged_originals": [
         {
           "node_id": "costo_de_calidad_4",
           "titulo": "Costo de Calidad (Cost of Quality)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "costo_de_calidad_2",
+          "titulo": "Evaluación del Costo de la Calidad (Paso 4)",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
       ]
@@ -21523,7 +21556,8 @@
           "titulo": "Costo de la Calidad como Medida Objetiva",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "costo_de_calidad_crosby": {
       "node_id": "costo_de_calidad_crosby",
@@ -21665,13 +21699,15 @@
         "costo_de_calidad_2",
         "categorias_costo_de_calidad",
         "conciencia_de_calidad",
-        "conciencia_calidad"
+        "conciencia_calidad",
+        "costo_de_calidad_3"
       ],
       "condiciones_activacion": [
         "Cuando no consideras la calidad como un factor medible junto a ventas e inventario",
         "Cuando necesitas justificar económicamente un programa de mejora de calidad"
       ],
-      "etiqueta_arbol": "Suma lo que Cuesta Fallar"
+      "etiqueta_arbol": "Suma lo que Cuesta Fallar",
+      "deprecado": true
     },
     "costo_de_la_mala_calidad": {
       "node_id": "costo_de_la_mala_calidad",
@@ -21699,7 +21735,8 @@
         "Cuando existe un porcentaje significativo de tu tiempo o del de tu equipo dedicado a retrabajo.",
         "Cuando subestimas el impacto económico de los defectos de calidad."
       ],
-      "etiqueta_arbol": "Pagas Dos Veces el Error"
+      "etiqueta_arbol": "Pagas Dos Veces el Error",
+      "deprecado": true
     },
     "costo_de_la_no_calidad": {
       "node_id": "costo_de_la_no_calidad",
@@ -21728,7 +21765,8 @@
         "Cuando se necesita justificar económicamente un programa de calidad ante la dirección.",
         "Cuando existen síntomas de reprocesos frecuentes sin medición formal de su costo."
       ],
-      "etiqueta_arbol": "Cuenta lo que Cuesta el Error"
+      "etiqueta_arbol": "Cuenta lo que Cuesta el Error",
+      "deprecado": true
     },
     "costo_de_mala_calidad": {
       "node_id": "costo_de_mala_calidad",
@@ -21758,7 +21796,8 @@
         "Cuando los costos de retrabajo o desperdicio afectan significativamente la rentabilidad",
         "Al justificar económicamente una inversión en mejora de calidad ante el liderazgo"
       ],
-      "etiqueta_arbol": "Menos Errores, Menos Costos"
+      "etiqueta_arbol": "Menos Errores, Menos Costos",
+      "deprecado": true
     },
     "costo_de_mala_calidad_2": {
       "node_id": "costo_de_mala_calidad_2",
@@ -21788,7 +21827,8 @@
         "Cuando quieres justificar una inversión en mejorar la calidad",
         "Cuando tus cuentas no muestran con claridad los costos de las fallas de calidad"
       ],
-      "etiqueta_arbol": "Imagina Cero Desperdicio"
+      "etiqueta_arbol": "Imagina Cero Desperdicio",
+      "deprecado": true
     },
     "costo_de_mala_calidad_3": {
       "node_id": "costo_de_mala_calidad_3",
@@ -21810,7 +21850,8 @@
       ],
       "nodos_siguientes": [
         "categorias_costos_calidad",
-        "costos_ocultos_calidad"
+        "costos_ocultos_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando la gerencia subestima el impacto financiero de los problemas de calidad",
@@ -21826,22 +21867,44 @@
       "dominio": "quality",
       "titulo_concepto": "Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-      "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3 (Cost of Poorly Performing Processes), agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en cuatro categorías: prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. Estudios muestran que en manufactura promedia 15% de ingresos (rango 5-35%) y en servicios hasta 30% de gastos operativos (rango 25-40%), superando incluso la utilidad anual del negocio. Reducirlo raramente exige inversión de capital, por lo que ofrece un retorno alto y es clave para decidir entre mejora real o recortes que dañan la calidad.",
+      "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios hasta 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa maduro de calidad puede bajar a menos de 2.5% de ventas. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
       "pasos_accionables": [
-        "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio",
-        "Calcula el COPQ total como porcentaje de tus ventas o costos operativos",
+        "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad",
+        "Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
         "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real",
         "Identifica los pocos procesos o productos que concentran la mayor parte del costo",
-        "Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio"
+        "Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio",
+        "Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia"
       ],
-      "entregable_esperado": "Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo",
+      "entregable_esperado": "Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual",
       "nodos_previos": [
         "doble_significado_calidad",
         "trilogia_de_juran",
         "evaluacion_riesgo_calidad_organizacional",
         "proyectos_vitales_pocos",
         "alineacion_estrategica_despliegue",
-        "evaluacion_organizacional_calidad"
+        "evaluacion_organizacional_calidad",
+        "costo_de_mala_calidad_copq_3",
+        "rejilla_madurez_gestion_calidad",
+        "definicion_calidad_conformidad",
+        "definicion_calidad_conformidad_requisitos",
+        "capacidad_de_proceso",
+        "calidad_de_diseno_vs_produccion",
+        "diseno_de_calidad_desde_planificacion",
+        "costo_de_mala_calidad_3",
+        "medicion_de_calidad",
+        "medicion_calidad",
+        "concepto_quality_is_free",
+        "politica_formal_de_calidad",
+        "critica_acceptable_quality_level",
+        "costo_optimo_calidad",
+        "calidad_de_ejecucion_proceso_innovacion",
+        "modelo_costo_optimo_calidad",
+        "definicion_calidad_fitness_for_purpose",
+        "definicion_fitness_for_purpose",
+        "definiciones_operacionales",
+        "control_estadistico_proceso",
+        "innovacion_tras_control_estadistico"
       ],
       "nodos_siguientes": [
         "perfeccionismo_vs_valor",
@@ -21855,12 +21918,41 @@
         "categorias_costos_calidad",
         "costos_ocultos_calidad",
         "metodologia_medicion_copq",
-        "roi_breakthrough"
+        "roi_breakthrough",
+        "secuencia_universal_breakthrough",
+        "calculo_roi_calidad",
+        "programa_mejora_calidad_14_pasos",
+        "accion_correctiva",
+        "programa_make_certain",
+        "cero_defectos_zd",
+        "quality_management_maturity_grid",
+        "punto_equilibrio_calidad_inspeccion",
+        "calidad_de_diseno_vs_produccion",
+        "control_estadistico_de_procesos",
+        "identificacion_causa_raiz_no_culpa_individual",
+        "costo_optimo_calidad",
+        "programa_de_mejora_de_calidad",
+        "costo_de_calidad_2",
+        "conciencia_de_calidad",
+        "conciencia_calidad",
+        "concepto_programa_catorce_pasos",
+        "equipo_mejora_calidad",
+        "programa_zero_defects",
+        "equipo_mejora_calidad_2",
+        "cero_defectos",
+        "sistema_medicion_kpi",
+        "auditoria_negocio",
+        "impacto_calidad_ingresos_costos",
+        "dmaic_six_sigma",
+        "carryover_fallas_producto",
+        "six_sigma_dmaic",
+        "medidas_productividad_no_mejoran"
       ],
       "condiciones_activacion": [
         "Cuando sospechas que los fallos internos o externos están afectando tu rentabilidad",
         "Cuando necesitas justificar ante ti mismo o inversionistas la inversión en mejora de calidad",
-        "Al iniciar un plan estratégico de calidad o una evaluación integral de tu negocio"
+        "Al iniciar un plan estratégico de calidad o una evaluación integral de tu negocio",
+        "Cuando el COPQ reportado parece bajo en comparación con la percepción real de los problemas de calidad"
       ],
       "etiqueta_arbol": "Calcula lo que Fallar te Cuesta",
       "ids_alias": [
@@ -21868,7 +21960,21 @@
         "costo_de_mala_calidad_copq_3",
         "costo_de_mala_calidad_copq_4",
         "costo_mala_calidad_copq",
-        "costo_pobre_calidad"
+        "costo_pobre_calidad",
+        "costo_de_mala_calidad_copq_2",
+        "categorias_copq",
+        "costo_de_calidad_6",
+        "cuatro_costos_de_calidad",
+        "categorias_costos_calidad",
+        "costo_de_la_calidad_coq",
+        "concepto_costo_de_calidad",
+        "costos_ocultos_calidad",
+        "costo_de_la_no_calidad",
+        "costo_de_mala_calidad_2",
+        "categorias_costo_de_calidad",
+        "costo_de_mala_calidad",
+        "impacto_calidad_en_costos",
+        "costo_de_la_mala_calidad"
       ],
       "merged_originals": [
         {
@@ -21895,6 +22001,76 @@
           "node_id": "costo_pobre_calidad",
           "titulo": "Costo de la Calidad Pobre (COPQ / COP3)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "costo_de_mala_calidad_copq_2",
+          "titulo": "Costo de la Mala Calidad — COPQ (Cómo se Mide)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "categorias_copq",
+          "titulo": "Categorías de Costos de Mala Calidad: Apreciación, Fallo Interno y Fallo Externo",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "costo_de_calidad_6",
+          "titulo": "Costo de la Calidad (Cost of Quality - COQ)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "cuatro_costos_de_calidad",
+          "titulo": "Los Cuatro Costos de la Calidad",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "categorias_costos_calidad",
+          "titulo": "Categorías de Costos de Calidad: Fallas Internas, Externas, Evaluación y Prevención",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "costo_de_la_calidad_coq",
+          "titulo": "Costo de la Calidad (COQ)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "concepto_costo_de_calidad",
+          "titulo": "Costo de la Calidad (El Gasto de Hacer las Cosas Mal)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "costos_ocultos_calidad",
+          "titulo": "Costos Ocultos de la Mala Calidad",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "costo_de_la_no_calidad",
+          "titulo": "Costo de la No Calidad (Hacer las Cosas Mal)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "costo_de_mala_calidad_2",
+          "titulo": "Costo de la Mala Calidad (Si Productos y Procesos Fueran Perfectos)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "categorias_costo_de_calidad",
+          "titulo": "Categorías del Costo de Calidad: Prevención, Evaluación y Fallas",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "costo_de_mala_calidad",
+          "titulo": "Costo de la Mala Calidad (Efecto Directo sobre los Costos)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "impacto_calidad_en_costos",
+          "titulo": "Impacto de la Calidad en los Costos (Costo de Mala Calidad)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "costo_de_la_mala_calidad",
+          "titulo": "Costo Oculto de la Mala Calidad y el Retrabajo",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
         }
       ]
     },
@@ -21923,7 +22099,8 @@
         "Cuando la organización desconoce el impacto financiero real de sus fallos de calidad",
         "Cuando se necesita justificar inversión en programas de mejora de calidad"
       ],
-      "etiqueta_arbol": "Mide tus Fallos en Dinero"
+      "etiqueta_arbol": "Mide tus Fallos en Dinero",
+      "deprecado": true
     },
     "costo_de_mala_calidad_copq_3": {
       "node_id": "costo_de_mala_calidad_copq_3",
@@ -21944,7 +22121,8 @@
       ],
       "nodos_siguientes": [
         "categorias_copq",
-        "metodologia_medicion_copq"
+        "metodologia_medicion_copq",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando la organización busca justificar la inversión en programas de mejora de calidad",
@@ -22079,12 +22257,14 @@
       "entregable_esperado": "Análisis gráfico o numérico del punto óptimo de costo de calidad y recomendaciones de inversión",
       "nodos_previos": [
         "categorias_costos_calidad",
-        "costos_ocultos_calidad"
+        "costos_ocultos_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "estudio_mercado_calidad",
         "limitaciones_analisis_costo_beneficio",
-        "costo_de_mala_calidad_2"
+        "costo_de_mala_calidad_2",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando se necesita decidir cuánto invertir en prevención versus aceptar cierto nivel de fallas",
@@ -22228,7 +22408,8 @@
         "Cuando el COPQ reportado parece bajo en comparación con la percepción de problemas",
         "Al realizar un estudio exhaustivo de costos de calidad"
       ],
-      "etiqueta_arbol": "Busca los Costos Invisibles"
+      "etiqueta_arbol": "Busca los Costos Invisibles",
+      "deprecado": true
     },
     "costos_personal_franquicia": {
       "node_id": "costos_personal_franquicia",
@@ -23020,7 +23201,8 @@
       "nodos_siguientes": [
         "programa_zero_defects",
         "costo_de_la_no_calidad",
-        "cero_defectos"
+        "cero_defectos",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando usas estándares de calidad que aceptan un porcentaje de defectos como algo normal.",
@@ -24049,7 +24231,8 @@
           "titulo": "Los cuatro costos de calidad: apreciación, fallo interno, fallo externo y prevención",
           "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "cuatro_etapas_del_pensamiento_creativo": {
       "fase_proyecto": "ideacion",
@@ -28218,7 +28401,8 @@
         "costo_de_calidad_diagnostico",
         "programa_mejora_calidad_14_pasos",
         "equipo_mejora_calidad",
-        "costo_de_calidad_6"
+        "costo_de_calidad_6",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando no tienes claro qué significa calidad para lo que ofreces.",
@@ -28284,7 +28468,8 @@
         "critica_acceptable_quality_level",
         "programa_zero_defects",
         "cero_defectos",
-        "costo_de_calidad_6"
+        "costo_de_calidad_6",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando el equipo usa términos ambiguos sobre calidad sin definiciones claras",
@@ -28376,7 +28561,8 @@
         "trilogia_de_juran",
         "costo_de_mala_calidad",
         "impacto_calidad_en_costos",
-        "impacto_calidad_en_ingresos"
+        "impacto_calidad_en_ingresos",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando existe confusión sobre qué significa calidad en tu negocio",
@@ -28469,7 +28655,8 @@
       "nodos_siguientes": [
         "impacto_calidad_en_costos",
         "impacto_calidad_en_ingresos",
-        "impacto_calidad_ingresos_costos"
+        "impacto_calidad_ingresos_costos",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando el usuario está iniciando la definición de un proyecto de calidad y necesita establecer qué significa 'calidad' para su organización o producto"
@@ -28986,7 +29173,8 @@
         "muestreo_aleatorio_operacional",
         "concepto_supuestos_erroneos_sobre_calidad",
         "falacia_problemas_diferentes",
-        "definiciones_operacionales_de_calidad"
+        "definiciones_operacionales_de_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando existe alta variabilidad en la aceptación de productos entre inspectores o turnos.",
@@ -33593,7 +33781,8 @@
       "nodos_siguientes": [
         "sistema_estable_responsabilidad_gerencial",
         "costos_de_calidad_cuatro_categorias",
-        "cuatro_costos_de_calidad"
+        "cuatro_costos_de_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Si el proyecto es de tipo 'único' (construcción, instalación) donde no habrá una segunda oportunidad de corrección fácil.",
@@ -36027,7 +36216,8 @@
       "nodos_previos": [
         "secuencia_universal_para_el_breakthrough",
         "dmaic_fase_improve",
-        "impacto_calidad_en_costos"
+        "impacto_calidad_en_costos",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "consejo_ejecutivo_calidad"
@@ -41685,7 +41875,8 @@
         "programa_de_mejora_de_calidad",
         "programa_zero_defects",
         "cero_defectos",
-        "definicion_calidad_conformidad"
+        "definicion_calidad_conformidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "medicion_de_calidad",
@@ -41717,7 +41908,8 @@
       "nodos_previos": [
         "programa_zero_defects",
         "costo_de_la_no_calidad",
-        "cero_defectos"
+        "cero_defectos",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "consejo_de_calidad",
@@ -59797,7 +59989,8 @@
       "nodos_previos": [
         "costos_de_calidad_cuatro_categorias",
         "sistema_estable_responsabilidad_gerencial",
-        "cuatro_costos_de_calidad"
+        "cuatro_costos_de_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "eliminacion_de_firmas_duplicadas_responsabilidad_unica",
@@ -60700,7 +60893,8 @@
         "Cuando la organización busca justificar económicamente una inversión en calidad",
         "Cuando existen altos niveles de reprocesos o quejas"
       ],
-      "etiqueta_arbol": "Reduce Costos con Calidad"
+      "etiqueta_arbol": "Reduce Costos con Calidad",
+      "deprecado": true
     },
     "impacto_calidad_en_ingresos": {
       "node_id": "impacto_calidad_en_ingresos",
@@ -60735,27 +60929,28 @@
       "dominio": "quality",
       "titulo_concepto": "Impacto de la Calidad en Ingresos y Costos",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-      "resumen_teorico": "La calidad afecta tanto costos como ingresos, y estos efectos interactúan entre sí. Por el lado de costos, mayor calidad reduce fallas y gastos asociados. Por el lado de ingresos, entregar características que responden mejor a las necesidades del cliente hace el producto más vendible y puede generar precios premium, e incluso mayor participación de mercado si eres líder en calidad. Además, productos con deficiencias no solo aumentan costos sino que desalientan la recompra y generan publicidad negativa boca a boca, afectando las ventas futuras de forma indirecta. Históricamente se ha estudiado más el efecto en costos que en ingresos, lo que representa una oportunidad de análisis para tu negocio.",
+      "resumen_teorico": "La calidad afecta tanto los costos como los ingresos, y estos efectos se relacionan entre si. Por el lado de los costos, mas calidad reduce fallas y gastos asociados. Por el lado de los ingresos, entregar caracteristicas que responden mejor a las necesidades del cliente hace tu producto mas vendible y puede permitirte cobrar un precio premium, e incluso ganar mas participacion de mercado si eres lider en calidad. Además, los productos con defectos no solo aumentan costos sino que desalientan la recompra y generan comentarios negativos, afectando tus ventas futuras de forma indirecta. Historicamente se ha estudiado mas el efecto en costos que en ingresos, lo que representa una oportunidad de análisis para tu negocio.",
       "pasos_accionables": [
-        "Analizar la percepción de tus clientes sobre las características diferenciadoras de tu producto o servicio",
-        "Comparar tu desempeño de ventas frente a competidores con menor calidad percibida",
-        "Analizar la correlación entre nivel de calidad percibida y tasa de recompra de tus clientes",
-        "Evaluar si puedes cobrar un precio premium por tu nivel de calidad actual o mejorado",
-        "Monitorear indicadores de ingresos vinculados a las mejoras de calidad que implementes",
-        "Incluir métricas de impacto en ingresos, no solo en costos, al justificar tus iniciativas de calidad"
+        "Analiza la percepcion de tus clientes sobre las caracteristicas que diferencian tu producto o servicio",
+        "Compara tu desempeno de ventas frente a competidores con menor calidad percibida",
+        "Analiza la relacion entre el nivel de calidad percibida y la tasa de recompra de tus clientes",
+        "Evalua si puedes cobrar un precio premium por tu nivel de calidad actual o mejorado",
+        "Monitorea indicadores de ingresos vinculados a las mejoras de calidad que implementes",
+        "Incluye metricas de impacto en ingresos, no solo en costos, cuando evalues tus iniciativas de calidad"
       ],
-      "entregable_esperado": "Análisis de negocio que vincule mejoras de calidad con proyecciones de ingresos, ventas y retención de clientes",
+      "entregable_esperado": "Análisis de negocio que vincule mejoras de calidad con proyecciones de ingresos, ventas y retencion de clientes",
       "nodos_previos": [
         "costo_de_mala_calidad",
-        "definicion_fitness_for_purpose"
+        "definicion_fitness_for_purpose",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "cadena_reaccion_calidad_productividad",
         "liderazgo_calidad_mercado"
       ],
       "condiciones_activacion": [
-        "Cuando necesitas justificar una inversión en calidad desde la perspectiva de crecimiento de ingresos, no solo de reducción de costos",
-        "Al construir un caso de negocio para una iniciativa de mejora de calidad"
+        "Cuando necesitas justificar una inversion en calidad pensando en el crecimiento de ingresos, no solo en la reduccion de costos",
+        "Al construir el caso de negocio de una iniciativa de mejora de calidad"
       ],
       "etiqueta_arbol": "Calidad, Costos e Ingresos",
       "ids_alias": [
@@ -61871,7 +62066,8 @@
         "control_estadistico_proceso"
       ],
       "nodos_siguientes": [
-        "costo_de_la_mala_calidad"
+        "costo_de_la_mala_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando el proceso ya está en control estadístico y se busca ir más allá del mantenimiento hacia la mejora activa.",
@@ -65856,22 +66052,22 @@
       "dominio": "quality",
       "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-      "resumen_teorico": "Deming advierte que el análisis costo/beneficio (ΔC/ΔB) frecuentemente falla en calidad porque tanto los costos (ej. costo real de un defecto que llega al cliente) como los beneficios (satisfacción, reputación) son extremadamente difíciles de cuantificar en términos monetarios. Si no se puede estimar confiablemente el numerador ni el denominador, la fracción resultante carece de valor real, y su uso puede ser peligroso, especialmente en decisiones de diseño de producto donde hay riesgo de lesión o pérdida de vida.",
+      "resumen_teorico": "Deming advierte que el análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
       "pasos_accionables": [
-        "Antes de aplicar análisis costo/beneficio, verificar si los costos y beneficios pueden estimarse con precisión razonable",
-        "Usar análisis de trade-off (rangos de beneficios) cuando la cuantificación monetaria no sea posible",
-        "Evitar el uso de costo/beneficio en decisiones de diseño donde exista riesgo para la seguridad o vida humana",
-        "Documentar los supuestos y limitaciones de cualquier análisis costo/beneficio presentado a la gerencia"
+        "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precision razonable",
+        "Si no puedes ponerle número al beneficio, usa un análisis de rangos o de opciones en lugar de forzar una cifra monetaria",
+        "Evita apoyarte en costo/beneficio cuando la decision de diseño ponga en juego la seguridad o la vida de alguien",
+        "Anota los supuestos y los limites de cualquier análisis costo/beneficio que uses para decidir"
       ],
-      "entregable_esperado": "Informe crítico que identifique los supuestos y limitaciones de cualquier análisis costo/beneficio propuesto en un proyecto de calidad",
+      "entregable_esperado": "Un informe corto donde queden claros los supuestos y los limites de cualquier análisis costo/beneficio que estes usando en tu proyecto de calidad",
       "nodos_previos": [
         "costo_optimo_calidad",
         "modelo_costo_optimo_calidad"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
-        "Cuando se propone justificar una inversión en calidad mediante análisis costo/beneficio",
-        "Cuando el análisis involucra decisiones de diseño con riesgo de seguridad"
+        "Cuando quieras justificar una inversion en calidad usando un análisis costo/beneficio",
+        "Cuando la decision de diseño involucre riesgo de seguridad"
       ],
       "etiqueta_arbol": "Cuestiona el Costo Beneficio en Calidad"
     },
@@ -68873,7 +69069,8 @@
         "rejilla_madurez_gestion_calidad",
         "costo_de_la_calidad_coq",
         "conciencia_de_calidad",
-        "costo_de_calidad_4"
+        "costo_de_calidad_4",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando tu negocio no tiene métricas claras de calidad en áreas no productivas",
@@ -68980,7 +69177,8 @@
         "conciencia_de_calidad",
         "costo_de_calidad_4",
         "conciencia_calidad",
-        "costo_de_calidad_3"
+        "costo_de_calidad_3",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando se necesita establecer una línea base objetiva antes de calcular el costo de calidad"
@@ -69230,7 +69428,8 @@
       ],
       "entregable_esperado": "Un análisis crítico de las actividades de la organización que evalúe su coherencia con los objetivos reales, más allá de indicadores numéricos de productividad.",
       "nodos_previos": [
-        "costo_de_la_mala_calidad"
+        "costo_de_la_mala_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -70662,15 +70861,15 @@
       "dominio": "quality",
       "titulo_concepto": "Metodología de Medición del Costo de Mala Calidad",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-      "resumen_teorico": "Consiste en cuatro pasos estructurados para medir el COPQ de forma práctica y útil para la toma de decisiones gerenciales: (1) Identificar las actividades que resultan de la mala calidad mediante brainstorming y entrevistas con niveles medios y altos de la organización; (2) Decidir cómo estimar los costos, usando el enfoque de recursos totales o el de costo unitario; (3) Recolectar datos y estimar costos siguiendo buenas prácticas de recolección (formularios simples, capacitación de recolectores, auditoría de resultados); (4) Analizar los resultados y decidir los siguientes pasos, como seleccionar proyectos de mejora prioritarios. No se requiere alta precisión contable, solo estimaciones consistentes y no sesgadas.",
+      "resumen_teorico": "Consiste en cuatro pasos para medir el costo de la mala calidad de forma práctica y útil para decidir qué hacer: (1) Identificar las actividades que resultan de la mala calidad mediante lluvia de ideas y conversaciones con quienes conocen bien el negocio; (2) Decidir cómo estimar los costos, usando el enfoque de recursos totales o el de costo unitario; (3) Recolectar datos y estimar costos siguiendo buenas prácticas de recolección (formularios simples, capacitación de quienes recolectan, revisión de los resultados); (4) Analizar los resultados y decidir los siguientes pasos, como elegir qué mejorar primero. No se necesita precisión contable exacta, solo estimaciones consistentes y sin sesgo.",
       "pasos_accionables": [
-        "Formar un equipo o task force para identificar procesos organizacionales y sus clientes",
+        "Identificar los procesos de tu negocio y quién se beneficia de cada uno",
         "Hacer una lluvia de ideas de actividades asociadas a la mala calidad usando palabras clave (retrabajo, desperdicio, reparación, devolución, queja, etc.)",
         "Elegir la estrategia de estimación de costos más adecuada (recursos totales o costo unitario)",
-        "Diseñar formularios simples de recolección de datos y capacitar a quienes los recolectarán",
-        "Analizar los resultados para seleccionar los proyectos de mejora con mayor potencial de ahorro"
+        "Diseñar formularios simples de recolección de datos y explicar bien a quien los va a llenar",
+        "Analizar los resultados para elegir las mejoras con mayor potencial de ahorro"
       ],
-      "entregable_esperado": "Un listado priorizado de actividades relacionadas con la mala calidad junto con sus estimaciones de costo, listo para seleccionar proyectos",
+      "entregable_esperado": "Un listado priorizado de actividades relacionadas con la mala calidad junto con sus estimaciones de costo, listo para elegir en qué mejorar primero",
       "nodos_previos": [
         "categorias_copq",
         "costo_de_mala_calidad_copq_3",
@@ -70682,8 +70881,8 @@
         "accion_correctiva_sistematica"
       ],
       "condiciones_activacion": [
-        "Cuando la organización necesita datos concretos sobre dónde se generan los costos de mala calidad",
-        "Cuando se prepara la selección de proyectos de mejora (Six Sigma u otros)"
+        "Cuando necesitas datos concretos sobre dónde se generan los costos de mala calidad en tu negocio",
+        "Cuando estás preparando la selección de mejoras a implementar (Six Sigma u otro método)"
       ],
       "etiqueta_arbol": "Mide el Costo de tus Errores"
     },
@@ -72054,7 +72253,8 @@
       "nodos_siguientes": [
         "estudio_mercado_calidad",
         "limitaciones_analisis_costo_beneficio",
-        "costo_de_mala_calidad_2"
+        "costo_de_mala_calidad_2",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando necesites decidir cuánto invertir en prevención versus aceptar cierto nivel de fallas",
@@ -80919,7 +81119,8 @@
         "organizacion_independiente_de_calidad",
         "concepto_costo_de_calidad",
         "prevencion_versus_control_de_calidad",
-        "seminario_de_exito_para_gerencia"
+        "seminario_de_exito_para_gerencia",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando la empresa no tiene una política de calidad documentada.",
@@ -85576,7 +85777,8 @@
         "conformance_to_requirements",
         "zero_defects_concepto",
         "consejo_de_calidad_3",
-        "costo_de_calidad_crosby"
+        "costo_de_calidad_crosby",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "compromiso_gerencial_calidad",
@@ -85762,7 +85964,8 @@
         "costo_de_calidad_5",
         "definicion_calidad_conformidad",
         "estilo_gerencial_ballet_vs_hockey",
-        "costo_de_calidad_6"
+        "costo_de_calidad_6",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "cero_defectos_zd",
@@ -85860,7 +86063,8 @@
         "definicion_calidad_conformidad_requisitos_2",
         "estilo_gerencial_hockey_vs_ballet",
         "quality_management_maturity_grid_2",
-        "definicion_calidad_conformidad"
+        "definicion_calidad_conformidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "cero_defectos",
@@ -86120,7 +86324,8 @@
         "critica_acceptable_quality_level",
         "costo_de_la_no_calidad",
         "definicion_calidad_conformidad_requisitos_3",
-        "definicion_calidad_conformidad"
+        "definicion_calidad_conformidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "equipo_mejora_calidad",
@@ -88305,7 +88510,8 @@
         "correlacion_cero_muestra_remanente",
         "comparacion_metodos_inspeccion",
         "redundancia_en_diseno",
-        "costo_de_calidad_6"
+        "costo_de_calidad_6",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "programa_cero_defectos",
@@ -88642,7 +88848,8 @@
         "definicion_calidad_como_conformidad",
         "responsabilidad_personal_en_gestion",
         "costo_de_calidad_6",
-        "definicion_calidad_conformidad"
+        "definicion_calidad_conformidad",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "cambio_actitud_gerencial",
@@ -91739,7 +91946,8 @@
         "cambio_actitud_gerencial",
         "costo_de_calidad_diagnostico",
         "prevencion_gestion_calidad",
-        "compromiso_gerencial_calidad"
+        "compromiso_gerencial_calidad",
+        "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
         "Cuando necesitas un diagnóstico objetivo y no basado en percepciones subjetivas del estado de calidad",
@@ -96863,7 +97071,8 @@
       "nodos_previos": [
         "juran_quality_by_design",
         "costo_de_mala_calidad_copq_2",
-        "diferencia_planeacion_mejora"
+        "diferencia_planeacion_mejora",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "six_sigma_dmaic",
@@ -100505,7 +100714,8 @@
         "costo_de_mala_calidad_2",
         "catch_ball_comunicacion",
         "desplegar_metas_organizacion",
-        "data_integrity_forecasting"
+        "data_integrity_forecasting",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "revision_progreso",
@@ -101126,7 +101336,8 @@
         "secuencia_universal_para_el_breakthrough",
         "dmaic_fase_improve",
         "impacto_calidad_en_costos",
-        "analisis_pareto"
+        "analisis_pareto",
+        "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
         "sostener_las_ganancias",
