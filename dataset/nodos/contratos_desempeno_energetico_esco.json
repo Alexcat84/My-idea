@@ -4,21 +4,38 @@
   "dominio": "environmental",
   "titulo_concepto": "Contratos de Desempeño Energético con ESCOs",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las Energy Service Companies (ESCOs) permiten externalizar la implementación de mejoras de eficiencia energética, financiando proyectos a cambio de una parte de los ahorros generados, con garantías de cumplimiento de resultados.",
+  "resumen_teorico": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa e implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta util cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiendote modernizar tus sistemas energeticos minimizando el riesgo financiero en mejoras de gran escala.",
   "pasos_accionables": [
-    "Evaluar proveedores de ESCO disponibles en el mercado",
-    "Negociar contrato de desempeño energético con garantías de ahorro",
-    "Definir alcance de auditoría, implementación y mantenimiento a cargo del ESCO",
-    "Monitorear cumplimiento de ahorros garantizados durante el contrato"
+    "Investigar y evaluar ESCOs certificadas disponibles en tu region",
+    "Solicitar una evaluacion inicial de oportunidades de eficiencia energetica",
+    "Negociar el contrato de desempeño energetico con garantias de ahorro",
+    "Definir el alcance de auditoria, implementacion y mantenimiento a cargo del ESCO",
+    "Establecer mecanismos de monitoreo y verificacion de los ahorros durante el contrato",
+    "Capacitarte o capacitar a alguien de confianza para el mantenimiento a largo plazo"
   ],
-  "entregable_esperado": "Contrato firmado con ESCO y plan de implementación de mejoras energéticas",
+  "entregable_esperado": "Contrato firmado con ESCO especificando garantias de ahorro y plan de implementacion de mejoras energeticas",
   "nodos_previos": [
-    "eficiencia_hidrica_edificios"
+    "eficiencia_hidrica_edificios",
+    "benchmark_auditoria_energetica",
+    "eficiencia_hidrica_edificios_2"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "integracion_sistemas_medicion_avanzada"
+  ],
   "condiciones_activacion": [
-    "Si la empresa no tiene capacidad interna para gestionar proyectos de eficiencia energética",
-    "Si se busca minimizar riesgo financiero en mejoras de gran escala"
+    "Si no tienes capital inicial para invertir en eficiencia energetica pero deseas modernizar tus sistemas",
+    "Si no tienes capacidad interna para gestionar un proyecto de eficiencia energetica",
+    "Si buscas minimizar el riesgo financiero en mejoras de gran escala"
   ],
-  "etiqueta_arbol": "Firma Contratos de Ahorro Energético"
+  "etiqueta_arbol": "Firma Contratos de Ahorro Energético",
+  "ids_alias": [
+    "contratacion_desempeno_energetico_esco"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "contratacion_desempeno_energetico_esco",
+      "titulo": "Contratación de Desempeño Energético mediante ESCOs",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ]
 }

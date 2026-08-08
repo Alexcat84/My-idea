@@ -4,29 +4,52 @@
   "dominio": "exportacion",
   "titulo_concepto": "Documentación de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La exportación requiere múltiples documentos según el destino y tipo de mercancía: air waybill, bill of lading, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle/almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque de exportación y certificado de seguro. La precisión documental es crítica: errores pueden causar retrasos, impago o confiscación de mercancía. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "La exportación exige múltiples documentos según destino y tipo de mercancía: pro forma invoice, air waybill, bill of lading, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle/almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La pro forma invoice sirve para cotizar al comprador antes del envío con bienes, valor y especificaciones. La precisión documental es crítica: errores pueden causar retrasos, impago o confiscación de mercancía. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Determinar qué documentos son requeridos según destino y tipo de producto",
-    "Delegar preparación de documentos en freight forwarder o customs broker",
-    "Verificar el uso del código del Sistema Armonizado (HS) para clasificación aduanera",
+    "Preparar la pro forma invoice para cotizar al comprador antes del envío",
+    "Emitir la commercial invoice una vez confirmada la venta, incluyendo términos de venta y pago, y elaborar el packing list con contenido, pesos y dimensiones",
+    "Verificar el código del Sistema Armonizado (HS) para clasificación aduanera y delegar la preparación en un freight forwarder o customs broker",
     "Presentar el SED electrónicamente vía AESDirect si el valor supera $2,500 o se requiere licencia de exportación",
-    "Revisar toda la documentación antes del embarque, especialmente con cartas de crédito",
-    "Confirmar plazos de presentación de documentos de cobro ante el banco"
+    "Revisar toda la documentación antes del embarque, confirmando plazos de cobro ante el banco si hay carta de crédito"
   ],
   "entregable_esperado": "Carpeta completa de documentos de exportación por embarque, validada antes del envío",
   "nodos_previos": [
     "etiquetado_exportacion",
     "carta_de_credito_letter_of_credit",
     "certificacion_origen_producto",
-    "seleccion_agente_carga_internacional"
+    "seleccion_agente_carga_internacional",
+    "certificado_de_origen_coo",
+    "glosario_terminos_incoterms",
+    "autocertificacion_del_exportador",
+    "certificados_genericos_de_origen",
+    "elaboracion_pro_forma_invoice",
+    "seguro_de_carga_transporte",
+    "seleccion_metodo_envio_internacional",
+    "terminos_de_venta_incoterms"
   ],
   "nodos_siguientes": [
     "seguro_exportacion",
-    "seleccion_metodo_transporte_internacional"
+    "seleccion_metodo_transporte_internacional",
+    "metodos_de_pago_internacional",
+    "certificado_de_origen_coo",
+    "certificado_de_origen_tratados_libre_comercio",
+    "incoterms_reglas_comerciales_internacionales"
   ],
   "condiciones_activacion": [
     "Antes de cualquier embarque internacional",
-    "Si el usuario exporta por primera vez a un país con requisitos documentales desconocidos"
+    "Cuando has cerrado una venta de exportación y debes preparar el envío",
+    "Si exportas por primera vez a un país con requisitos documentales desconocidos"
   ],
-  "etiqueta_arbol": "Reúne tus Documentos de Exportación"
+  "etiqueta_arbol": "Reúne tus Documentos de Exportación",
+  "ids_alias": [
+    "documentacion_exportacion_basica"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "documentacion_exportacion_basica",
+      "titulo": "Documentación Básica de Exportación (Pro Forma Invoice, Commercial Invoice, Packing List, SED)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

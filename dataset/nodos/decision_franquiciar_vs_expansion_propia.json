@@ -4,25 +4,40 @@
   "dominio": "franquicias",
   "titulo_concepto": "Decisión Estratégica: Franquiciar vs. Expansión con Unidades Propias vs. Capital Externo",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Franquiciar es una herramienta estratégica para lograr metas de expansión agresivas, no un fin en sí mismo. La elección entre franquiciar, abrir más unidades propias, o traer un socio de capital depende de comparar la brecha entre el objetivo financiero personal y la capacidad de cada estrategia para cerrarla, dado el capital disponible, el tiempo y el nivel de riesgo aceptable. Si las metas son moderadas y hay tolerancia baja al riesgo, la expansión propia puede bastar; si las metas son muy agresivas (ej. vender en $10M en 5 años), franquiciar (o combinarlo con crecimiento propio) suele ser la única vía viable.",
+  "resumen_teorico": "Franquiciar es una herramienta estratégica para crecer, no un fin en sí mismo. Antes de elegir entre franquiciar, abrir más unidades propias o traer un socio de capital, define tu meta financiera personal (valoración deseada y plazo de retiro o venta) y compara la brecha entre esa meta y lo que cada estrategia puede entregar, dado tu capital disponible, tiempo y tolerancia al riesgo. Si tus metas son moderadas y prefieres bajo riesgo, la expansión propia puede bastar. Si son muy agresivas y el capital propio es limitado, franquiciar (solo o combinado con crecimiento propio) suele ser la única vía viable para cerrar esa brecha en el plazo deseado.",
   "pasos_accionables": [
-    "Modelar escenario de expansión con unidades propias: capital requerido, financiamiento, retorno proyectado a 5-10 años.",
-    "Modelar escenario de franquiciar: ingresos por regalías y fees, inversión inicial requerida en el programa.",
-    "Modelar escenario de socio de capital: dilución de equity vs. capital aportado.",
-    "Comparar cada escenario contra el 'número objetivo' definido en la fase de objetivos personales.",
-    "Seleccionar la estrategia (o combinación) que cierre la brecha dentro del plazo y tolerancia al riesgo aceptados."
+    "Define tu meta financiera personal: valoración objetivo del negocio y plazo de retiro o venta.",
+    "Calcula el escenario de mantener el negocio tal como está (status quo) a 5-10 años.",
+    "Modela el escenario de abrir más unidades propias: capital requerido, financiamiento y retorno proyectado.",
+    "Modela el escenario de franquiciar: ingresos por regalías y fees, inversión inicial del programa y ritmo de apertura.",
+    "Modela el escenario de traer un socio de capital: dilución de equity versus capital aportado.",
+    "Compara todos los escenarios contra tu meta y selecciona la estrategia, o combinación, que cierre la brecha dentro del plazo y riesgo que aceptas."
   ],
-  "entregable_esperado": "Comparativa financiera de escenarios (expansión propia, franquicia, capital externo) con recomendación de estrategia final.",
+  "entregable_esperado": "Documento comparativo de escenarios de crecimiento (status quo, unidades propias, franquicia, capital externo) con proyecciones a 5-10 años y la estrategia final seleccionada.",
   "nodos_previos": [
     "definicion_objetivos_personales_expansion",
-    "calculo_roi_franquiciado_2"
+    "calculo_roi_franquiciado_2",
+    "definir_meta_a_5_anos_antes_de_franquiciar"
   ],
   "nodos_siguientes": [
-    "calculo_roi_franquiciado_2"
+    "calculo_roi_franquiciado_2",
+    "evaluacion_riesgo_mercado_dinero_gestion",
+    "franquicia_mas_crecimiento_corporativo_hibrido"
   ],
   "condiciones_activacion": [
-    "Cuando el negocio ya es franquiciable pero no está decidido el vehículo de crecimiento",
-    "Si existen metas financieras agresivas que la expansión orgánica no puede alcanzar"
+    "Cuando tienes un negocio probado y debes decidir entre expandirte con capital propio, socio o franquicia.",
+    "Cuando el negocio ya es franquiciable pero aún no decides el vehículo de crecimiento.",
+    "Si tus metas financieras son muy agresivas y la expansión orgánica no puede alcanzarlas."
   ],
-  "etiqueta_arbol": "Elige tu Camino de Expansión"
+  "etiqueta_arbol": "Elige tu Camino de Expansión",
+  "ids_alias": [
+    "analisis_estrategia_crecimiento_franquicia_vs_corporativo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "analisis_estrategia_crecimiento_franquicia_vs_corporativo",
+      "titulo": "Análisis de Estrategia de Crecimiento: Franquicia vs. Crecimiento Corporativo",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

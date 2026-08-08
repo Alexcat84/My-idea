@@ -4,22 +4,37 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cláusula Antidesviación (Destination Control Statement)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El gobierno de EE.UU. requiere una declaración de control de destino en los documentos de embarque (factura comercial y conocimiento de embarque) para casi todos los envíos comerciales, notificando que la mercancía ha sido aprobada para exportar solo a ciertos destinos y no puede ser desviada. Existen excepciones detalladas en la sección 758.6 del EAR. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Si exportas mercancia comercial desde Estados Unidos, casi siempre necesitas incluir una declaracion de control de destino en tus documentos de embarque, es decir, en la factura comercial y en el conocimiento de embarque. Esta declaracion avisa que la mercancia fue aprobada para exportarse solo a ciertos destinos y no puede desviarse a otros. Debe aparecer tanto en la factura comercial como en el bill of lading o air waybill. Existen excepciones detalladas en la seccion 758.6 del EAR que pueden eximirte de este requisito. Esta mecanica refleja la normativa de Estados Unidos vigente a la fecha de la fuente; verifica la regulacion vigente en tu mercado antes de actuar.",
   "pasos_accionables": [
-    "Incluir la declaración de control de destino en factura comercial y bill of lading/air waybill",
-    "Verificar si el envío califica para alguna excepción según la Parte 758.6 del EAR",
-    "Consultar con un abogado, el Departamento de Comercio o el freight forwarder sobre la declaración adecuada"
+    "Incluye la declaracion minima de control de destino en tu factura comercial",
+    "Incluye la misma declaracion en el bill of lading o air waybill",
+    "Verifica si tu envio califica para alguna excepcion según la Parte 758.6 del EAR",
+    "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio de tu pais sobre la declaracion adecuada"
   ],
-  "entregable_esperado": "Documentos de embarque con la declaración antidesviación correctamente incluida",
+  "entregable_esperado": "Documentos de embarque (factura comercial y bill of lading) con la declaracion antidesviacion correctamente incluida.",
   "nodos_previos": [
-    "regulaciones_exportacion_ear"
+    "regulaciones_exportacion_ear",
+    "export_administration_regulations"
   ],
   "nodos_siguientes": [
-    "regulaciones_antiboicot"
+    "regulaciones_antiboicot",
+    "documentacion_viaje_internacional",
+    "antiboycott_regulations"
   ],
   "condiciones_activacion": [
-    "En cada embarque de exportación sujeto a las EAR",
-    "Cuando se prepara la documentación de transporte internacional"
+    "Cuando estas preparando documentos de embarque para una exportacion comercial",
+    "En cada envio sujeto a las EAR",
+    "Cuando preparas la documentacion de transporte internacional"
   ],
-  "etiqueta_arbol": "Declara el Control de Destino"
+  "etiqueta_arbol": "Declara el Control de Destino",
+  "ids_alias": [
+    "antidiversion_clause"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "antidiversion_clause",
+      "titulo": "Declaración de Control de Destino (Antidiversion Clause)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

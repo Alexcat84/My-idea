@@ -4,25 +4,39 @@
   "dominio": "environmental",
   "titulo_concepto": "Eficiencia Hídrica en Edificios",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo, medidores inteligentes y sistemas de recolección de agua de lluvia o reciclaje de aguas grises puede generar ahorros significativos tanto en agua como en energía asociada a su calentamiento.",
+  "resumen_teorico": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises reduce la dependencia del suministro municipal hasta en un 50-74%, con ahorros adicionales en energía asociada al calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
   "pasos_accionables": [
-    "Reducir la temperatura del calentador de agua de 140°F a 120°F",
-    "Reparar fugas de tuberías y realizar mantenimiento preventivo regular",
-    "Instalar accesorios de bajo flujo (inodoros, duchas, grifos)",
-    "Instalar medidores de agua inteligentes para detectar ineficiencias",
-    "Considerar calentadores solares de agua",
-    "Implementar sistemas de recolección de agua de lluvia o reciclaje de aguas grises",
-    "Usar plantas nativas y sistemas de riego inteligente en jardinería"
+    "Reduce la temperatura del calentador de agua de 140°F a 120°F",
+    "Repara fugas de tuberías y establece mantenimiento preventivo regular",
+    "Instala accesorios de bajo flujo en grifos, duchas e inodoros",
+    "Instala medidores de agua inteligentes para detectar ineficiencias",
+    "Implementa un sistema de recolección de agua de lluvia o reciclaje de aguas grises"
   ],
-  "entregable_esperado": "Plan de reducción de consumo de agua con medidas implementadas y métricas de ahorro documentadas",
+  "entregable_esperado": "Plan de gestión hídrica con medidas implementadas y métricas documentadas de reducción de consumo de agua y energía",
   "nodos_previos": [
-    "benchmark_auditoria_energetica"
+    "benchmark_auditoria_energetica",
+    "gestion_energia_equipos",
+    "actualizacion_hvac"
   ],
   "nodos_siguientes": [
-    "certificacion_leed_energy_star"
+    "certificacion_leed_energy_star",
+    "contratos_desempeno_energetico_esco",
+    "critica_del_pib_como_metrica_de_progreso"
   ],
   "condiciones_activacion": [
-    "Si el usuario busca reducir costos operativos de agua y energía en instalaciones existentes"
+    "Si el edificio tiene alto consumo de agua o está en zona de sequía",
+    "Si buscas reducir costos de calentamiento de agua",
+    "Si buscas reducir costos operativos de agua y energía en instalaciones existentes"
   ],
-  "etiqueta_arbol": "Ahorra Agua en tu Edificio"
+  "etiqueta_arbol": "Ahorra Agua en tu Edificio",
+  "ids_alias": [
+    "eficiencia_hidrica_edificios"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "eficiencia_hidrica_edificios",
+      "titulo": "Eficiencia y Reciclaje de Agua en Edificios",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ]
 }

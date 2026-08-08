@@ -4,23 +4,36 @@
   "dominio": "franquicias",
   "titulo_concepto": "Evaluación de la Publicidad Impresa en Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Aunque en declive, la publicidad impresa (directorios de franquicia, publicaciones específicas de industria) puede seguir siendo efectiva en ciertos contextos, aunque tiene costos por lead más altos y tasas de cierre promedio. Su medición es compleja porque los interesados suelen terminar buscando información en internet, dificultando atribuir el lead correctamente. Sus ventajas incluyen la posibilidad de transmitir mensajes más extensos, fácil localización geográfica y valor de permanencia ('pass around value').",
+  "resumen_teorico": "Aunque en declive, la publicidad impresa (directorios de franquicia, publicaciones específicas de industria) puede seguir siendo efectiva en ciertos contextos, especialmente en mercados locales o regionales, aunque tiene costos por lead más altos y tasas de cierre promedio frente a canales digitales. Su medición es compleja porque los interesados suelen terminar buscando información en internet, ocultando el origen real del lead y dificultando su atribución. Sus ventajas incluyen la posibilidad de transmitir mensajes más extensos, fácil localización geográfica y valor de permanencia ('pass around value'), lo que la hace útil cuando el perfil de franquiciado objetivo aún consume este tipo de medios.",
   "pasos_accionables": [
-    "Identificar directorios y publicaciones específicas relevantes para el perfil del franquiciado objetivo",
-    "Evaluar el costo por lead y tasa de cierre esperada frente a otros canales",
-    "Considerar el uso de ediciones regionales o locales para mensajes más específicos",
-    "Implementar mecanismos de tracking (códigos, URLs específicas) para medir el impacto real del impreso",
-    "Decidir la prioridad presupuestaria del impreso según el presupuesto total disponible"
+    "Identifica directorios y publicaciones específicas de la industria o de franquicias relevantes para el perfil de franquiciado que buscas",
+    "Evalúa el costo por lead y la tasa de cierre esperada, junto con el 'pass around value' de la publicación, antes de invertir",
+    "Prioriza ediciones regionales o locales si buscas un despliegue localizado en vez de nacional",
+    "Implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal",
+    "Decide la prioridad presupuestaria del impreso según el presupuesto total disponible"
   ],
-  "entregable_esperado": "Análisis de viabilidad de publicidad impresa con métricas estimadas de costo-beneficio frente a otros canales",
+  "entregable_esperado": "Análisis costo-beneficio de medios impresos disponibles con métricas estimadas frente a otros canales y decisión documentada sobre su inclusión en el presupuesto de marketing.",
   "nodos_previos": [
     "ferias_comerciales_franquicia",
-    "mix_medios_marketing_franquicia"
+    "mix_medios_marketing_franquicia",
+    "mensaje_marketing_franquicia"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "seo_para_captacion_de_franquiciados"
+  ],
   "condiciones_activacion": [
-    "Cuando existe presupuesto disponible más allá de los canales prioritarios (PR, brokers, referidos)",
-    "Cuando el perfil de franquiciado objetivo consume medios impresos especializados"
+    "Cuando dispones de presupuesto adicional más allá de los canales prioritarios como PR, brokers o referidos",
+    "Cuando el perfil de franquiciado objetivo aún consume medios impresos especializados"
   ],
-  "etiqueta_arbol": "Evalúa tu Publicidad Impresa"
+  "etiqueta_arbol": "Evalúa tu Publicidad Impresa",
+  "ids_alias": [
+    "publicidad_impresa_para_franquicias"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "publicidad_impresa_para_franquicias",
+      "titulo": "Publicidad Impresa en la Venta de Franquicias",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

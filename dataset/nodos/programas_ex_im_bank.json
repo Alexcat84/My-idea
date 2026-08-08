@@ -4,25 +4,52 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas de Financiamiento del Ex-Im Bank",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Export-Import Bank de EE.UU. ofrece seguro de crédito a la exportación, garantías de préstamo y préstamos directos para reducir riesgos comerciales y políticos. Incluye la Garantía de Capital de Trabajo (preexportación) con tasas de anticipo hasta 90% en cuentas por cobrar, y programas de financiamiento postexportación como el seguro de crédito a la exportación y la Bank Buyer Credit Policy para plazos medianos y largos.",
+  "resumen_teorico": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportacion, garantias de prestamo y prestamos directos de mediano (1 a 5 anios) y largo plazo (hasta 10 anios) para reducir riesgos comerciales y politicos, especialmente en proyectos de bienes de capital como plantas de energia, telecomunicaciones y transporte. La Garantia de Capital de Trabajo cubre la etapa previa a la exportacion, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (100% si tu negocio es de minorias, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantia suele salir mas económica que un prestamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
   "pasos_accionables": [
-    "Solicitar la Garantía de Capital de Trabajo de Ex-Im Bank para financiar producción o cuentas por cobrar",
-    "Evaluar la contratación de seguro de crédito a la exportación de Ex-Im Bank",
-    "Revisar elegibilidad para Bank Buyer Credit Policy en ventas de bienes de capital",
-    "Consultar con la oficina local del U.S. Commercial Service sobre el proceso de aplicación"
+    "Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion",
+    "Determina si te conviene mas una garantia de prestamo, que suele ser mas económica, o un prestamo directo de mediano o largo plazo para la venta",
+    "Evalua contratar un seguro de crédito a la exportacion, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
+    "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energia, telecomunicaciones o transporte",
+    "Presenta tu inventario y tus cuentas por cobrar de exportacion como garantia y negocia las tasas de anticipo con el prestamista",
+    "Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes"
   ],
-  "entregable_esperado": "Solicitud o precalificación completada para un programa de Ex-Im Bank",
+  "entregable_esperado": "Tu solicitud o precalificacion completada para un programa del Ex-Im Bank, con la garantia, el prestamo o el seguro y el banco participante ya identificados.",
   "nodos_previos": [
     "descuento_aceptaciones_bancarias",
     "decisiones_de_financiamiento_exportacion",
-    "trabajo_con_bancos_comerciales"
+    "trabajo_con_bancos_comerciales",
+    "asistencia_us_commercial_service",
+    "enfoques_generales_exportacion",
+    "elementos_plan_exportacion_ejemplo"
   ],
   "nodos_siguientes": [
-    "programas_sba_exportacion"
+    "programas_sba_exportacion",
+    "financiamiento_sba_exportacion",
+    "seguro_de_credito_a_la_exportacion",
+    "elementos_plan_exportacion_ejemplo",
+    "enfoques_generales_exportacion"
   ],
   "condiciones_activacion": [
-    "Si el usuario necesita reducir riesgo comercial o político en una venta de exportación",
-    "Si el usuario requiere capital de trabajo para producir bienes de exportación"
+    "Si necesitas reducir el riesgo comercial o politico de una venta de exportacion",
+    "Si te falta capital de trabajo para producir o cumplir una orden de exportacion",
+    "Si tu comprador en el extranjero necesita financiamiento a mediano o largo plazo para bienes de capital",
+    "Si tu banco local es reacio a asumir el riesgo de cobro en mercados que no conoce"
   ],
-  "etiqueta_arbol": "Asegura tu Crédito de Exportación"
+  "etiqueta_arbol": "Asegura tu Crédito de Exportación",
+  "ids_alias": [
+    "financiamiento_exim_bank_3",
+    "garantia_capital_trabajo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "financiamiento_exim_bank_3",
+      "titulo": "Financiamiento y Garantías del Ex-Im Bank",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    },
+    {
+      "node_id": "garantia_capital_trabajo",
+      "titulo": "Garantía de Capital de Trabajo (Working Capital Guarantee)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

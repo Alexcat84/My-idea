@@ -1,0 +1,386 @@
+{
+  "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
+  "pack": "franquicias",
+  "umbral": 0.9,
+  "clusters": [
+    {
+      "orden": 1,
+      "indice": 9,
+      "nodos": [
+        "estrategia_ubicacion_franquicia_corporativa",
+        "mix_ubicaciones_corporativas_franquicia"
+      ],
+      "similitud": 0.9593692421913147,
+      "por_que": "Describen las mismas estrategias (Home-Sweet-Home, Spiking, etc.) para mezclar ubicaciones corporativas y franquiciadas.",
+      "quedaria": "Estrategia de Mezcla entre Ubicaciones Corporativas y de Franquicia",
+      "sobrevive": "mix_ubicaciones_corporativas_franquicia",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "estrategia_ubicacion_franquicia_corporativa": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "mix_ubicaciones_corporativas_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 2,
+      "indice": 12,
+      "nodos": [
+        "leverage_una_sola_franquicia",
+        "principio_apalancamiento_numero_magico"
+      ],
+      "similitud": 0.9425297379493713,
+      "por_que": "Mismo principio de apalancamiento: no existe número mínimo de franquicias para ser rentable.",
+      "quedaria": "Principio del Apalancamiento: No Existe un 'Número Mágico' de Franquicias",
+      "sobrevive": "principio_apalancamiento_numero_magico",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "leverage_una_sola_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "principio_apalancamiento_numero_magico": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 3,
+      "indice": 15,
+      "nodos": [
+        "publicidad_impresa_franquicia",
+        "publicidad_impresa_para_franquicias"
+      ],
+      "similitud": 0.9356056451797485,
+      "por_que": "Mismo tema y misma acción: evaluar la efectividad y costos de la publicidad impresa en franquicias.",
+      "quedaria": "Evaluación de la Publicidad Impresa en Franquicias",
+      "sobrevive": "publicidad_impresa_franquicia",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "publicidad_impresa_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "publicidad_impresa_para_franquicias": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 4,
+      "indice": 2,
+      "nodos": [
+        "ciclo_venta_calidad_franquicia",
+        "ciclo_ventas_calidad_franquicia"
+      ],
+      "similitud": 0.9332422614097595,
+      "por_que": "Mismo ciclo de venta-calidad de franquicia descrito con palabras casi idénticas y la misma acción de balancear venta selectiva con soporte.",
+      "quedaria": "Ciclo de Ventas-Calidad de la Franquicia",
+      "sobrevive": "ciclo_ventas_calidad_franquicia",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "ciclo_venta_calidad_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "ciclo_ventas_calidad_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 5,
+      "indice": 5,
+      "nodos": [
+        "criterios_seleccion_consultor_franquicia",
+        "seleccion_consultor_franquicias"
+      ],
+      "similitud": 0.9249852895736694,
+      "por_que": "Mismos criterios para seleccionar consultor de franquicias, misma acción de evaluación.",
+      "quedaria": "Selección de un Consultor de Franquicias",
+      "sobrevive": "seleccion_consultor_franquicias",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "criterios_seleccion_consultor_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "seleccion_consultor_franquicias": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 6,
+      "indice": 6,
+      "nodos": [
+        "definicion_objetivos_personales_expansion",
+        "definir_meta_a_5_anos_antes_de_franquiciar"
+      ],
+      "similitud": 0.9233314990997314,
+      "por_que": "Misma acción: definir metas personales a 5 años antes de elegir estrategia de crecimiento.",
+      "quedaria": "Definir la Meta Personal a 5 Años Antes de Elegir Estrategia de Crecimiento",
+      "sobrevive": "definir_meta_a_5_anos_antes_de_franquiciar",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "definicion_objetivos_personales_expansion": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "definir_meta_a_5_anos_antes_de_franquiciar": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 7,
+      "indice": 8,
+      "nodos": [
+        "diferenciacion_estructura_legal_franquicia",
+        "evitar_copia_estructura_competencia"
+      ],
+      "similitud": 0.9227175712585449,
+      "por_que": "Misma advertencia y acción: no copiar la estructura legal/financiera de competidores al franquiciar.",
+      "quedaria": "Evitar Copiar la Estructura Legal/Financiera de Competidores",
+      "sobrevive": "evitar_copia_estructura_competencia",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "diferenciacion_estructura_legal_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "evitar_copia_estructura_competencia": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 8,
+      "indice": 4,
+      "nodos": [
+        "contratacion_abogado_franquicia",
+        "eleccion_abogado_franquicias"
+      ],
+      "similitud": 0.9190846085548401,
+      "por_que": "Ambos tratan la misma acción: contratar/elegir un abogado especializado en franquicias por su complejidad regulatoria.",
+      "quedaria": "Elección de un Abogado Especializado en Franquicias",
+      "sobrevive": "eleccion_abogado_franquicias",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "contratacion_abogado_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "eleccion_abogado_franquicias": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 9,
+      "indice": 10,
+      "nodos": [
+        "estructura_proveedores_aprobados_designados",
+        "ventas_productos_markup_proveedores"
+      ],
+      "similitud": 0.9184786081314087,
+      "por_que": "Mismo concepto de definir estructura de proveedores aprobados vs designados, misma acción de control de compras.",
+      "quedaria": "Definir Estructura de Proveedores (Aprobados vs. Designados)",
+      "sobrevive": "estructura_proveedores_aprobados_designados",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "estructura_proveedores_aprobados_designados": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "ventas_productos_markup_proveedores": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 10,
+      "indice": 7,
+      "nodos": [
+        "desarrollar_manual_operaciones",
+        "manual_operaciones_desarrollo"
+      ],
+      "similitud": 0.9178369045257568,
+      "por_que": "Ambos describen la misma acción de desarrollar el manual de operaciones como documento central del sistema.",
+      "quedaria": "Desarrollo del Manual de Operaciones de Franquicia",
+      "sobrevive": "desarrollar_manual_operaciones",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "desarrollar_manual_operaciones": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "manual_operaciones_desarrollo": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 11,
+      "indice": 1,
+      "nodos": [
+        "calificacion_candidatos_franquicia",
+        "calificacion_prospectos_award"
+      ],
+      "similitud": 0.9049742221832275,
+      "por_que": "Es el mismo concepto de 'Award vs Sale' en la calificación de candidatos a franquiciados, con texto casi idéntico.",
+      "quedaria": "Calificación de Prospectos: Concepto de 'Award' vs. 'Sale'",
+      "sobrevive": "calificacion_prospectos_award",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "calificacion_candidatos_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "calificacion_prospectos_award": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 12,
+      "indice": 0,
+      "nodos": [
+        "analisis_estrategia_crecimiento_franquicia_vs_corporativo",
+        "decision_franquiciar_vs_expansion_propia"
+      ],
+      "similitud": 0.9042547345161438,
+      "por_que": "Ambos describen el mismo análisis comparativo de estrategias de crecimiento (franquiciar vs. unidades propias vs. capital externo) antes de decidir franquiciar.",
+      "quedaria": "Decisión Estratégica: Franquiciar vs. Expansión con Unidades Propias vs. Capital Externo",
+      "sobrevive": "decision_franquiciar_vs_expansion_propia",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "analisis_estrategia_crecimiento_franquicia_vs_corporativo": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "decision_franquiciar_vs_expansion_propia": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 13,
+      "indice": 13,
+      "nodos": [
+        "mensaje_emocional_racional",
+        "mensaje_marketing_franquicia"
+      ],
+      "similitud": 0.9031950831413269,
+      "por_que": "Ambos describen la misma acción de diseñar el mensaje de marketing balanceando contenido racional y emocional.",
+      "quedaria": "Diseño del Mensaje de Marketing de Franquicia (Contenido y Emoción)",
+      "sobrevive": "mensaje_marketing_franquicia",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "mensaje_emocional_racional": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "mensaje_marketing_franquicia": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 14,
+      "indice": 13,
+      "nodos": [
+        "decision_final_franquiciar",
+        "evaluacion_franquiciabilidad_negocio",
+        "evaluacion_necesidad_franquiciar",
+        "evaluar_ventajas_desventajas_franquicia",
+        "explorar_franquicia_como_estrategia_expansion",
+        "preguntas_clave_decision_franquiciar"
+      ],
+      "sobrevive": "evaluacion_necesidad_franquiciar",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Evaluación de la Necesidad de Franquiciar",
+      "por_que": "familia gorda que el umbral no agrupo.",
+      "telemetria": {}
+    },
+    {
+      "orden": 15,
+      "indice": 14,
+      "nodos": [
+        "evaluacion_riesgo_mercado_dinero_gestion",
+        "factores_exito_franquicia_mercado_capital_gestion"
+      ],
+      "sobrevive": "evaluacion_riesgo_mercado_dinero_gestion",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Evaluación de los Tres Riesgos Clave: Mercado, Dinero y Gestión",
+      "por_que": "familia gorda que el umbral no agrupo.",
+      "telemetria": {}
+    }
+  ],
+  "barandas": {
+    "construccion_equipo_franquicia": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...r lanzar su programa de franquicias y necesita definir su equipo Un plan de staffing con roles definidos, momento de co..."
+      }
+    ],
+    "costos_preparacion_franquicia": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...Presupuestar costos de viaje, equipo y mobiliario para el equipo de franquicia Cuando el usuario está finalizando el presu..."
+      }
+    ],
+    "criterio_bazooka_peashooter": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...ustificación financiera documentada de la inversión en el equipo de consultores y abogados elegido..."
+      }
+    ],
+    "efecto_palo_hockey": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...operador único a propietario multi-unidad Fomentar que el equipo de soporte de campo actúe como facilitador de crecimiento..."
+      }
+    ],
+    "posicionamiento_vs_competidores": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...z de benchmarking competitivo con USP documentado para el equipo de ventas..."
+      }
+    ],
+    "proceso_primera_llamada": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...enda estandarizada de primera llamada implementada por el equipo de ventas..."
+      }
+    ],
+    "programa_cumplimiento_legal": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...cia cero ante infracciones. Entrenar anualmente a todo el equipo de ventas en ley de franquicias con evaluación documentad..."
+      }
+    ],
+    "rechazo_gentil_prospecto": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...nciera o de perfil Guion de rechazo estandarizado para el equipo de ventas..."
+      }
+    ]
+  }
+}

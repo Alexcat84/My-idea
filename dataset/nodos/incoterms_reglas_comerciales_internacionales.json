@@ -4,26 +4,53 @@
   "dominio": "exportacion",
   "titulo_concepto": "Incoterms: Términos Comerciales Internacionales (EXW, FCA, FAS, FOB)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los Incoterms son reglas estandarizadas que definen las responsabilidades, costos y riesgos entre comprador y vendedor en una transacción internacional. Términos como EXW (Ex Works) indican mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB definen distintos puntos donde se transfiere el riesgo, generalmente relacionados con la entrega al transportista o buque. Cada término aplica a modos de transporte específicos (ej. FAS y FOB solo marítimos) y determina quién asume el despacho de exportación, carga y transporte.",
+  "resumen_teorico": "Los Incoterms son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CFR, CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total. El Incoterm elegido debe ser compatible con la documentación que exige el país importador.",
   "pasos_accionables": [
-    "Identificar el modo de transporte que se usará (marítimo, aéreo, terrestre, intermodal)",
-    "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que el exportador desea asumir",
-    "Especificar claramente el Incoterm y el lugar/puerto nombrado en la cotización y el contrato de venta",
-    "Consultar con el forwarder o agente aduanal sobre las obligaciones específicas de cada término elegido"
+    "Identificar el modo de transporte que se usará (marítimo, aéreo, terrestre o intermodal).",
+    "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, considerando CIF o CIP si buscas mostrar el costo total al comprador.",
+    "Negociar con el comprador el punto exacto de transferencia de riesgo y costo.",
+    "Especificar el Incoterm y el lugar o puerto nombrado en la cotización, pro forma invoice, factura comercial y contrato de venta.",
+    "Consultar con un freight forwarder o agente aduanal las obligaciones específicas del término elegido, incluyendo el cálculo de precios CIF o CIP si aplica.",
+    "Verificar que el Incoterm sea compatible con los requisitos de documentación del país importador."
   ],
-  "entregable_esperado": "Cotización de exportación (pro forma invoice) con el Incoterm y lugar nombrado claramente especificado",
+  "entregable_esperado": "Cotización o pro forma invoice y contrato de venta con el Incoterm y el lugar o puerto nombrado claramente especificado.",
   "nodos_previos": [
     "seleccion_de_metodo_de_pago",
-    "documentacion_exportacion_basica"
+    "documentacion_exportacion_basica",
+    "fijacion_precio_exportacion",
+    "evaluacion_mercados_objetivo",
+    "documentacion_exportacion"
   ],
   "nodos_siguientes": [
     "letters_of_credit",
     "seleccion_metodo_envio_internacional",
-    "seleccion_de_metodo_de_pago"
+    "seleccion_de_metodo_de_pago",
+    "elaboracion_pro_forma_invoice",
+    "seguro_de_carga_transporte",
+    "certificado_de_origen_coo",
+    "documentacion_exportacion_basica",
+    "seleccion_metodo_transporte_internacional"
   ],
   "condiciones_activacion": [
-    "Cuando el exportador necesita definir en un contrato quién asume los costos y riesgos del transporte internacional",
-    "Cuando se está preparando una cotización o pro forma invoice para un comprador extranjero"
+    "Cuando necesitas preparar una cotización o pro forma invoice para un comprador extranjero.",
+    "Cuando estás negociando un contrato de exportación y hay que definir quién asume costos y riesgos.",
+    "Si existe confusión sobre las responsabilidades de transporte, seguro o despacho aduanero."
   ],
-  "etiqueta_arbol": "Define Quién Asume Cada Riesgo"
+  "etiqueta_arbol": "Define Quién Asume Cada Riesgo",
+  "ids_alias": [
+    "definicion_terminos_de_venta",
+    "glosario_terminos_incoterms"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "definicion_terminos_de_venta",
+      "titulo": "Definición de Términos de Venta (Incoterms)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    },
+    {
+      "node_id": "glosario_terminos_incoterms",
+      "titulo": "Términos de Comercio Internacional (Incoterms)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

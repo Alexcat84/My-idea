@@ -4,24 +4,37 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas de Financiamiento de la SBA para Exportadores",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La U.S. Small Business Administration (SBA) ofrece garantías de préstamo para capital de trabajo de exportación (EWCP, hasta 1.5 millones o 90% del préstamo), el International Trade Loan Program (hasta 1.25 millones combinando capital de trabajo y activos fijos) y Export Express (préstamos rápidos hasta 250,000 con garantía del 75-85%). También ofrece el Surety Bond Program para fianzas de licitación y desempeño en contratos internacionales.",
+  "resumen_teorico": "Si eres una pequeña empresa exportadora en Estados Unidos, la SBA te ofrece garantías de préstamo pensadas para tu negocio. El Export Working Capital Program (EWCP) garantiza hasta 1.5 millones de dólares o el 90% del préstamo para capital de trabajo. El International Trade Loan Program puede garantizar hasta 1.25 millones combinando capital de trabajo y financiamiento de activos fijos. Export Express te da préstamos rápidos de hasta 250,000 dólares con garantía del 75 al 85%. El Surety Bond Program cubre fianzas de licitación y desempeño en contratos internacionales. Para acceder necesitas al menos un año en operación y poder mostrar el impacto en tus ventas de exportación. Antes de acudir a un prestamista, puedes pedir orientación gratuita en la oficina local de la SBA o del U.S. Commercial Service.",
   "pasos_accionables": [
-    "Determinar la necesidad específica: capital de trabajo, activos fijos, o fianzas de licitación",
-    "Contactar a un prestamista comercial que participe en programas SBA",
-    "Preparar documentación según el programa elegido (formulario de una página para EWCP)",
-    "Solicitar carta de precalificación a SBA si es necesario",
-    "Verificar elegibilidad: al menos 1 año en operación y demostrar impacto en ventas de exportación"
+    "Define tu necesidad concreta: capital de trabajo, activos fijos o fianzas de licitación",
+    "Busca orientación en la oficina local de la SBA o del U.S. Commercial Service",
+    "Verifica si cumples los requisitos: al menos un año en operación y evidencia de impacto en tus ventas de exportación",
+    "Busca un prestamista comercial que participe en programas de la SBA",
+    "Prepara la documentación según el programa que elijas, como el formulario de una página para EWCP",
+    "Si te sirve, pide a la SBA una carta de precalificación antes de negociar con el prestamista"
   ],
   "entregable_esperado": "Solicitud de préstamo o garantía SBA presentada ante un prestamista participante",
   "nodos_previos": [
-    "financiamiento_exim_bank_3"
+    "financiamiento_exim_bank_3",
+    "programas_ex_im_bank"
   ],
   "nodos_siguientes": [
     "financiamiento_usda_agricola"
   ],
   "condiciones_activacion": [
-    "La pequeña empresa necesita capital de trabajo para exportar pero carece de garantías suficientes",
-    "Se requiere financiamiento rápido y de menor cuantía (Export Express)"
+    "Necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+    "Requieres financiamiento rápido y de menor monto a través de Export Express",
+    "Necesitas financiar instalaciones o equipo junto con capital de trabajo para exportación"
   ],
-  "etiqueta_arbol": "Aprovecha Créditos para Pequeñas Empresas"
+  "etiqueta_arbol": "Aprovecha Créditos para Pequeñas Empresas",
+  "ids_alias": [
+    "programas_sba_exportacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "programas_sba_exportacion",
+      "titulo": "Programas de la SBA para Financiamiento de Exportación",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

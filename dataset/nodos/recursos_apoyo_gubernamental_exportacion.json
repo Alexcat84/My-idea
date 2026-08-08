@@ -4,23 +4,46 @@
   "dominio": "exportacion",
   "titulo_concepto": "Recursos de Apoyo Gubernamental para Exportadores (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Existen múltiples agencias gubernamentales de EE.UU. que apoyan a las PyMEs exportadoras: el U.S. Commercial Service (CS) es el brazo de promoción comercial del Departamento de Comercio; la Small Business Administration (SBA) gestiona programas de financiamiento; los Small Business Development Centers (SBDC) ofrecen asesoría gratuita a exportadores primerizos; USTDA financia estudios de factibilidad en países en desarrollo; y USAID adquiere bienes y servicios de empresas estadounidenses para países en desarrollo.",
+  "resumen_teorico": "En Estados Unidos existen varias agencias que apoyan a los negocios pequeños que exportan. El U.S. Commercial Service (CS) es el brazo de promocion comercial que depende de Comercio de Estados Unidos; la SBA gestiona programas de financiamiento; los SBDC ofrecen asesoria gratuita si es tu primera vez exportando; USTDA financia estudios de factibilidad en paises en desarrollo cuando tu producto enfrenta competencia subsidiada, es prioridad de desarrollo del pais destino o cuenta con aval de una embajada de EE.UU.; USAID y el Foreign Agricultural Service (FAS) apoyan comodities y asistencia técnica en mercados emergentes; Estado, a traves de su base BIDS, ofrece leads comerciales; y las oficinas estatales de comercio internacional te dan leads y acceso a misiones comerciales. Registrarte en Federal Business Opportunities (FedBizOpps) te permite monitorear contratos de subcontratacion disponibles.",
   "pasos_accionables": [
-    "Contactar la oficina local del U.S. Commercial Service para asesoría inicial y estudios de mercado",
-    "Consultar con un SBDC cercano si es la primera experiencia exportadora",
-    "Evaluar programas de financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantías de exportación",
-    "Explorar oportunidades de USTDA o USAID si el mercado objetivo es un país en desarrollo"
+    "Contacta la oficina local del U.S. Commercial Service para asesoria inicial y estudios de mercado",
+    "Consulta con un SBDC cercano si es tu primera experiencia exportadora",
+    "Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion",
+    "Verifica si tu producto o servicio califica para financiamiento de USTDA o asistencia de FAS/USAID según tu sector",
+    "Registrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales",
+    "Contacta la oficina estatal de comercio internacional para obtener leads y participar en misiones comerciales"
   ],
-  "entregable_esperado": "Lista de agencias y programas de apoyo contactados con reuniones o solicitudes iniciadas",
+  "entregable_esperado": "Lista de agencias y programas de apoyo que contactaste, con registro en plataformas de oportunidades (FedBizOpps, BIDS) y reuniones o solicitudes iniciadas.",
   "nodos_previos": [
-    "recursos_apoyo_pymes_sba"
+    "recursos_apoyo_pymes_sba",
+    "evaluacion_mercados_objetivo",
+    "trade_missions"
   ],
   "nodos_siguientes": [
-    "investigacion_mercado_primaria_secundaria_2"
+    "investigacion_mercado_primaria_secundaria_2",
+    "centro_asesoria_advocacy_center"
   ],
   "condiciones_activacion": [
-    "Cuando la PyME inicia su proceso de internacionalización y necesita orientación o financiamiento",
-    "Si el usuario no sabe por dónde empezar en el proceso de exportación"
+    "Cuando inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
+    "Si no sabes por donde empezar en el proceso de exportacion",
+    "Si exportas comodities agricolas, servicios tecnicos, o buscas contratos gubernamentales internacionales",
+    "Si necesitas financiamiento o apoyo para proyectos de infraestructura en mercados emergentes"
   ],
-  "etiqueta_arbol": "Usa Apoyos Gubernamentales para Exportar"
+  "etiqueta_arbol": "Usa Apoyos Gubernamentales para Exportar",
+  "ids_alias": [
+    "programas_asistencia_gubernamental_exportacion",
+    "recursos_gubernamentales_exportacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "programas_asistencia_gubernamental_exportacion",
+      "titulo": "Programas Gubernamentales de Asistencia a la Exportación",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    },
+    {
+      "node_id": "recursos_gubernamentales_exportacion",
+      "titulo": "Recursos de Agencias Gubernamentales para Exportadores",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

@@ -483,6 +483,32 @@ la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes 
 tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
 ancla, el correctivo pierde su punto de exposición.
 
+## Ficha permanente: `vigencia-del-marco-internacional`
+
+Nace con el ciclo del censo (ago 2026). Los nodos de exportación que citan
+**marcos versionados o tratados vigentes** —Incoterms, cartas de crédito,
+códigos arancelarios, cláusula antidesviación, EAR— ganan nota de vigencia y
+entran a revisión cuando el comercio cambie de rumbo.
+
+**Las instituciones-de-libro jamás se omiten: se mantienen al día.** Incoterms
+2020 no es un dato local ni un detalle de estilo: es el vocabulario acordado
+entre países, y un catálogo que lo cite desactualizado miente con precisión.
+
+Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviación)
+viven aquí también: su condición honesta —*"si tu producto lleva componentes de
+EE.UU. o tu ruta lo toca"*— depende de acuerdos que cambian.
+
+## DOCTRINA DE LA CLASE (ago 2026)
+
+**"Los programas de tu estado no significan nada donde no hay estados con
+programa."** Cuando un nodo describe algo subnacional de un país concreto, no
+hay clase universal a la que reencuadrarlo: prometer un equivalente que en
+varios países no existe es doblemente deshonesto. Deprecar de selección es la
+única salida honesta.
+
+**Y la ley de la lectura pagó su primer dividendo**: leer los 28 encontró 30. El
+grep había perdido dos.
+
 ## DOCTRINA DE CAMPAÑA (re-voz de quality, cerrada ago 2026)
 
 **Fusión primero, a toda escala.** La secuencia se pagó sola tres veces: 24

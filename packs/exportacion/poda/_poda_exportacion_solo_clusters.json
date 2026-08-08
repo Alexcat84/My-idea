@@ -1,0 +1,223 @@
+{
+  "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
+  "pack": "exportacion",
+  "umbral": 0.9,
+  "clusters": [
+    {
+      "orden": 1,
+      "indice": 3,
+      "nodos": [
+        "definicion_terminos_de_venta",
+        "glosario_terminos_incoterms",
+        "incoterms_reglas_comerciales_internacionales"
+      ],
+      "similitud": 0.9417719841003418,
+      "por_que": "Todos describen el mismo concepto de Incoterms y las mismas obligaciones/costos entre comprador y vendedor.",
+      "quedaria": "Incoterms: Términos Comerciales Internacionales (EXW, FCA, FAS, FOB)",
+      "sobrevive": "incoterms_reglas_comerciales_internacionales",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "definicion_terminos_de_venta": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "glosario_terminos_incoterms": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "incoterms_reglas_comerciales_internacionales": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 2,
+      "indice": 1,
+      "nodos": [
+        "antidiversion_clause",
+        "clausula_antidesviacion"
+      ],
+      "similitud": 0.960666835308075,
+      "por_que": "Es la misma cláusula de control de destino exigida en documentos de embarque, solo cambia el nombre.",
+      "quedaria": "Cláusula Antidesviación (Destination Control Statement)",
+      "sobrevive": "clausula_antidesviacion",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "antidiversion_clause": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "clausula_antidesviacion": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 3,
+      "indice": 5,
+      "nodos": [
+        "financiamiento_sba_exportacion",
+        "programas_sba_exportacion"
+      ],
+      "similitud": 0.9583041071891785,
+      "por_que": "Ambos describen los mismos programas de financiamiento de la SBA para exportadores.",
+      "quedaria": "Programas de Financiamiento de la SBA para Exportadores",
+      "sobrevive": "financiamiento_sba_exportacion",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "financiamiento_sba_exportacion": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "programas_sba_exportacion": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 4,
+      "indice": 7,
+      "nodos": [
+        "seleccion_metodo_envio_internacional",
+        "seleccion_metodo_transporte_internacional"
+      ],
+      "similitud": 0.9437987208366394,
+      "por_que": "Ambos describen la misma decisión sobre el método de transporte internacional (marítimo, aéreo, multimodal).",
+      "quedaria": "Selección del Método de Transporte Internacional",
+      "sobrevive": "seleccion_metodo_transporte_internacional",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "seleccion_metodo_envio_internacional": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "seleccion_metodo_transporte_internacional": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 5,
+      "indice": 4,
+      "nodos": [
+        "enfoque_paso_a_paso_investigacion_mercado",
+        "investigacion_mercado_paso_a_paso"
+      ],
+      "similitud": 0.9434452056884766,
+      "por_que": "Ambas describen la misma metodología de tres pasos para investigar mercados de exportación.",
+      "quedaria": "Enfoque Paso a Paso para la Investigación de Mercados de Exportación",
+      "sobrevive": "enfoque_paso_a_paso_investigacion_mercado",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "enfoque_paso_a_paso_investigacion_mercado": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "investigacion_mercado_paso_a_paso": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 6,
+      "indice": 6,
+      "nodos": [
+        "licenciamiento_tecnologia",
+        "licenciamiento_tecnologico"
+      ],
+      "similitud": 0.9381738901138306,
+      "por_que": "Ambos describen el mismo acuerdo contractual de licenciamiento de tecnología con fines de internacionalización.",
+      "quedaria": "Licenciamiento de Tecnología (Technology Licensing)",
+      "sobrevive": "licenciamiento_tecnologico",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "licenciamiento_tecnologia": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "licenciamiento_tecnologico": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    },
+    {
+      "orden": 7,
+      "indice": 0,
+      "nodos": [
+        "antiboycott_regulations",
+        "regulaciones_antiboicot"
+      ],
+      "similitud": 0.9336167573928833,
+      "por_que": "Ambos describen la misma normativa antiboicot de EE.UU. y la misma acción de cumplimiento.",
+      "quedaria": "Cumplimiento de las Regulaciones Antiboicot",
+      "sobrevive": "antiboycott_regulations",
+      "sobrevive_por": "propuesto",
+      "telemetria": {
+        "antiboycott_regulations": {
+          "visto": 0,
+          "cosechado": 0
+        },
+        "regulaciones_antiboicot": {
+          "visto": 0,
+          "cosechado": 0
+        }
+      }
+    }
+  ],
+  "barandas": {
+    "asistencia_agencias_minoritarias_mbda": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...rticipar en eventos comerciales coordinados por MBDA y el Departamento de Comercio Utilizar los servicios de preparación de plan..."
+      }
+    ],
+    "autoevaluacion_gerencial_exportacion": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...Exportar Antes de iniciar un esfuerzo de exportación, la gerencia debe examinar honestamente sus objetivos, experiencia..."
+      }
+    ],
+    "clausula_antidesviacion": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...según la Parte 758.6 del EAR Consultar con un abogado, el Departamento de Comercio o el freight forwarder sobre la declaración a..."
+      }
+    ],
+    "enfoque_paso_a_paso_investigacion_mercado": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...justificar con datos la elección de mercados meta ante la gerencia o inversionistas Lista corta (3-5) de mercados meta se..."
+      }
+    ],
+    "evaluacion_preparacion_empresa_exportar": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...empresa está considerando exportar por primera vez Si la gerencia necesita justificar la inversión en exportación Inform..."
+      }
+    ],
+    "recursos_gubernamentales_exportacion": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...istencia técnica y comodities en países en desarrollo, el Departamento de Estado (BIDS) para leads comerciales vía embajadas, la..."
+      }
+    ],
+    "seleccion_representante_extranjero": [
+      {
+        "baranda": "matriz_o_puntaje",
+        "cita": "...arativo de candidatos a representante/distribuidor con puntuación por criterio..."
+      }
+    ],
+    "trade_missions": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...ade Missions) Las misiones comerciales organizadas por el Departamento de Comercio de EE.UU. involucran viajes a países extranje..."
+      }
+    ]
+  }
+}

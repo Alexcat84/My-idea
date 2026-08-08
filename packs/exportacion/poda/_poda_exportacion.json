@@ -1,0 +1,112 @@
+{
+  "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
+  "pack": "exportacion",
+  "umbral": 0.9,
+  "clusters": [
+    {
+      "orden": 1,
+      "indice": 0,
+      "nodos": [
+        "programas_asistencia_gubernamental_exportacion",
+        "recursos_apoyo_gubernamental_exportacion",
+        "recursos_gubernamentales_exportacion"
+      ],
+      "sobrevive": "recursos_apoyo_gubernamental_exportacion",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Recursos de Apoyo Gubernamental para Exportadores (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank)",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
+      "telemetria": {}
+    },
+    {
+      "orden": 2,
+      "indice": 1,
+      "nodos": [
+        "financiamiento_exim_bank_3",
+        "garantia_capital_trabajo",
+        "programas_ex_im_bank"
+      ],
+      "sobrevive": "programas_ex_im_bank",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Programas de Financiamiento del Ex-Im Bank",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
+      "telemetria": {}
+    },
+    {
+      "orden": 3,
+      "indice": 2,
+      "nodos": [
+        "asistencia_us_commercial_service",
+        "uso_del_us_commercial_service"
+      ],
+      "sobrevive": "uso_del_us_commercial_service",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Aprovechamiento del U.S. Commercial Service",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
+      "telemetria": {}
+    },
+    {
+      "orden": 4,
+      "indice": 3,
+      "nodos": [
+        "gold_key_matching_service",
+        "international_company_profile",
+        "international_partner_search"
+      ],
+      "sobrevive": "international_partner_search",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Búsqueda Internacional de Socios (International Partner Search)",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
+      "telemetria": {}
+    }
+  ],
+  "barandas": {
+    "asistencia_agencias_minoritarias_mbda": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...rticipar en eventos comerciales coordinados por MBDA y el Departamento de Comercio Utilizar los servicios de preparación de plan..."
+      }
+    ],
+    "autoevaluacion_gerencial_exportacion": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...Exportar Antes de iniciar un esfuerzo de exportación, la gerencia debe examinar honestamente sus objetivos, experiencia..."
+      }
+    ],
+    "clausula_antidesviacion": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...según la Parte 758.6 del EAR Consultar con un abogado, el Departamento de Comercio o el freight forwarder sobre la declaración a..."
+      }
+    ],
+    "enfoque_paso_a_paso_investigacion_mercado": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...justificar con datos la elección de mercados meta ante la gerencia o inversionistas Lista corta (3-5) de mercados meta se..."
+      }
+    ],
+    "evaluacion_preparacion_empresa_exportar": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...empresa está considerando exportar por primera vez Si la gerencia necesita justificar la inversión en exportación Inform..."
+      }
+    ],
+    "recursos_gubernamentales_exportacion": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...istencia técnica y comodities en países en desarrollo, el Departamento de Estado (BIDS) para leads comerciales vía embajadas, la..."
+      }
+    ],
+    "seleccion_representante_extranjero": [
+      {
+        "baranda": "matriz_o_puntaje",
+        "cita": "...arativo de candidatos a representante/distribuidor con puntuación por criterio..."
+      }
+    ],
+    "trade_missions": [
+      {
+        "baranda": "residuo_corporativo",
+        "cita": "...ade Missions) Las misiones comerciales organizadas por el Departamento de Comercio de EE.UU. involucran viajes a países extranje..."
+      }
+    ]
+  }
+}
