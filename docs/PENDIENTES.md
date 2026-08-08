@@ -416,6 +416,28 @@ no existen como sujetos.
 exacta de los 185 vivos, y `_poda_quality.json` la cita textual y el patrón de
 cada uno. La campaña arranca sin volver a medir nada.
 
+## REQUISITO DE TODA REGENERACIÓN: la prueba de rumbos
+
+**Cualquier cosa que cambie el índice semántico corre `scripts/rumbos/prueba_rumbos.py`
+antes de darse por hecha.** Sin excepción, y aunque el cambio "sea pequeño".
+
+Qué la dispara:
+- un reindex de Voyage (`build_semantic_index_voyage.py`)
+- la re-voz de un pack (185 nodos regenerados = 185 embeddings nuevos)
+- una fusión, una deprecación, un pack nuevo
+- cualquier edición masiva de `resumen_teorico` o `titulo_concepto`
+
+Ya está cableada como paso `d-bis` de `integrar_packs.py`, justo detrás del
+reindex. Fuera de ese flujo, se corre a mano.
+
+**Por qué**: Gate 0 dice que el grafo está sano, las suites que el código cumple,
+el vuelo que el viaje corre. Ninguno dice si la brújula APUNTA BIEN. Una deriva
+de puntería no rompe nada: manda a la persona equivocada al mundo equivocado, en
+silencio, y se descubre en el recorrido de alguien.
+
+La línea base vive committeada en `scripts/rumbos/linea_base_rumbos.json`. La
+prueba sale con código 1 si algún rumbo cambia de estado.
+
 ## Al margen, sin acción: `matriz_probabilidad_impacto` (núcleo)
 
 Anotado al re-anclar los puentes (ago 2026), **sin acción y sin urgencia**: el
@@ -428,6 +450,40 @@ Queda como **candidato a ojo en la eventual revisión del núcleo post-beta**, c
 la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes de
 tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
 ancla, el correctivo pierde su punto de exposición.
+
+## DOCTRINA: la ortografía NO mueve la recuperación semántica
+
+**Experimento controlado** (ago 2026), a raíz del único ámbar de la prueba de
+rumbos. `proteger_fragiles_caja_dentro_de_caja` era el único nodo de compras y
+entrega escrito **entero sin tildes**, y quedaba 14.º dentro de su propio mundo
+para la consulta que debía ganar.
+
+Se corrigieron **18 tildes** en título, resumen, pasos y condiciones. Nada de
+contenido, el anclaje a fuente intacto. Se re-embebió solo ese nodo, con el mismo
+`input_type` del corpus, y se volvió a correr la prueba completa.
+
+| | puesto | score |
+|---|---:|---:|
+| antes | 14.º | 0,5140 |
+| después | **15.º** | 0,5062 |
+
+**Resultado negativo, y es doctrina igual.** En este espacio (voyage-4-lite,
+multilingüe), la ortografía **no** mueve la recuperación: la diferencia cabe en el
+ruido. La causa del puesto 14 es **semántica**, no ortográfica — los nodos que le
+ganan hablan de empacar cosas concretas (flores, líquidos, relleno) y la consulta
+pregunta *cómo empacar*, no *qué método de doble caja usar*.
+
+**Lo que esto significa para `re-voz-de-quality`:** la ortografía impecable sigue
+siendo obligatoria, pero **por la voz, no por la puntería**. El lector ve el
+texto; la brújula, aparentemente, no lo nota. No se puede justificar una
+regeneración con el argumento de que mejora la recuperación.
+
+La corrección se conserva (el español correcto es correcto igual), y el rumbo
+sigue en el banco vigilando ese nodo.
+
+**Hallazgo al margen, sin acción**: ese nodo dice *"probarla **vos** mismo"* —
+voseo, que desentona con el tú de la casa. No se tocó para no contaminar el
+experimento. Va al lote de `re-voz`.
 
 ## Ficha post-beta: `densidad-de-quality`
 
