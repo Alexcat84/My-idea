@@ -4,16 +4,16 @@
   "dominio": "health_safety",
   "titulo_concepto": "Modelo de Barreras y Defensas (Swiss Cheese)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
-  "resumen_teorico": "Modelo que propone que los sistemas críticos están protegidos por capas de defensas duras y blandas (muros, procedimientos). Los accidentes ocurren cuando errores activos (actos inseguros en la primera línea) se combinan con errores latentes (condiciones organizacionales dormidas como diseño inadecuado, falta de entrenamiento o mantenimiento diferido) que alinean agujeros en las capas de defensa, permitiendo que el riesgo se propague. Inspirado en industrias de contención de energía peligrosa (nuclear, petróleo, procesos químicos), popularizado tras accidentes como Bhopal en 1984. Aunque dirige la atención a factores organizacionales upstream, el modelo aún preserva el papel del acto inseguro como causa final, lo que puede reintroducir la culpa al error humano si no se investiga con cuidado el trasfondo sistémico.",
+  "resumen_teorico": "Este modelo explica que los sistemas criticos se protegen con capas de defensa, unas duras (muros, barreras fisicas) y otras blandas (procedimientos, revisiones). Los accidentes ocurren cuando un error en el momento de ejecutar una tarea se combina con condiciones que ya existian de antes en tu negocio, como un diseno inadecuado, falta de entrenamiento o mantenimiento postergado, y esas condiciones alinean agujeros en las capas de defensa dejando que el riesgo se propague. Surgio en industrias que manejan energia peligrosa (nuclear, petroleo, procesos quimicos) y se populariza tras accidentes como el de Bhopal en 1984. Aunque dirige la atencion hacia los factores de fondo, el modelo todavia deja un lugar al error puntual como causa final, lo que puede terminar culpando a la persona que ejecuto la tarea si no investigas con cuidado el trasfondo completo.",
   "pasos_accionables": [
     "Identifica las defensas duras y blandas que existen en tu sistema o negocio",
-    "Mapea posibles condiciones latentes en tu organización como diseño, mantenimiento o capacitación deficientes",
-    "Evalúa si tus defensas están realmente instaladas y funcionando o solo existen en papel",
-    "Analiza cómo un error en la línea frontal puede combinarse con fallas latentes para causar un problema mayor",
-    "Evita centrar tu análisis únicamente en el acto inseguro final de la persona que ejecuta la tarea",
-    "Investiga qué condiciones organizacionales contribuyeron sistemáticamente al fallo de tus barreras"
+    "Mapea posibles condiciones latentes en tu negocio como diseno, mantenimiento o capacitacion deficientes",
+    "Evalua si tus defensas estan realmente instaladas y funcionando o solo existen en el papel",
+    "Analiza como un error de quien ejecuta la tarea puede combinarse con fallas latentes para causar un problema mayor",
+    "Evita centrar tu análisis unicamente en el acto inseguro final de la persona que hizo la tarea",
+    "Investiga que condiciones de tu negocio contribuyeron de fondo a que fallaran tus barreras"
   ],
-  "entregable_esperado": "Mapa de capas de defensa del sistema con identificación de brechas latentes y activas, evitando culpar únicamente al operador de primera línea",
+  "entregable_esperado": "Mapa de capas de defensa de tu sistema con identificacion de brechas latentes y activas, evitando culpar unicamente a quien ejecuto la tarea",
   "nodos_previos": [
     "modelo_queso_suizo",
     "no_usar_triangulo_heinrich",
@@ -26,9 +26,9 @@
     "confusion_de_modos_automatizacion"
   ],
   "condiciones_activacion": [
-    "Cuando investigas un accidente o incidente en un sistema que contiene riesgo o energía peligrosa",
-    "Cuando necesitas entender cómo se combinaron fallas humanas y organizacionales en un incidente",
-    "Al diseñar defensas en profundidad para procesos riesgosos de tu negocio"
+    "Cuando investigas un accidente o incidente en un sistema que contiene riesgo o energia peligrosa",
+    "Cuando necesitas entender como se combinaron fallas humanas y de fondo en un incidente",
+    "Al disenar defensas en profundidad para procesos riesgosos de tu negocio"
   ],
   "etiqueta_arbol": "Refuerza tus Defensas Contra Errores",
   "ids_alias": [

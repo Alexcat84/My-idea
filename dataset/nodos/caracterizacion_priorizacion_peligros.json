@@ -4,15 +4,15 @@
   "dominio": "health_safety",
   "titulo_concepto": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
   "fuente": "OSHA3886",
-  "resumen_teorico": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de trabajadores expuestos a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes para los peligros de mayor riesgo, debes aplicar controles interinos que reduzcan la exposición de inmediato. Esta priorización no exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en la lista. La evaluación te da un criterio objetivo para justificar el orden en que actúas y para no dejar peligros serios sin atención indefinida.",
+  "resumen_teorico": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de personas expuestas a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes para los peligros de mayor riesgo, debes aplicar controles provisionales que reduzcan la exposición de inmediato. Esta priorización no te exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en tu lista. La evaluación te da un criterio objetivo para justificar el orden en que actúas y para no dejar peligros serios sin atención indefinidamente.",
   "pasos_accionables": [
     "Evalúa la severidad potencial y la probabilidad de ocurrencia de cada peligro identificado",
-    "Determina el número de trabajadores expuestos a cada peligro",
-    "Aplica controles interinos de inmediato mientras desarrollas las soluciones permanentes",
+    "Determina el número de personas expuestas a cada peligro",
+    "Aplica controles provisionales de inmediato mientras desarrollas las soluciones permanentes",
     "Prioriza los peligros de mayor riesgo para atenderlos primero",
     "Mantén el compromiso de controlar todos los peligros graves reconocidos aunque no sean tu prioridad inmediata"
   ],
-  "entregable_esperado": "Matriz de riesgos priorizada con peligros clasificados por severidad, probabilidad y nivel de riesgo asignado",
+  "entregable_esperado": "Lista de peligros ordenada de mayor a menor riesgo, indicando para cada uno su severidad, su probabilidad y el número de personas expuestas",
   "nodos_previos": [
     "inspeccion_sitio_peligros",
     "identificacion_peligros_salud",
@@ -30,7 +30,7 @@
   ],
   "condiciones_activacion": [
     "Cuando existen múltiples peligros identificados y recursos limitados para atenderlos todos a la vez",
-    "Cuando necesitas justificar el orden de implementación de controles"
+    "Cuando necesitas justificar el orden en que implementas los controles"
   ],
   "etiqueta_arbol": "Prioriza tus Peligros Reales",
   "ids_alias": [
