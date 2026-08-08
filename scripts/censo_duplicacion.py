@@ -248,7 +248,24 @@ BARANDAS = {
         r"\bnivel de riesgo\s*=\s*",
     ],
     "residuo_corporativo": [
-        r"\btu equipo\b|\bsu equipo\b|\bel equipo de\b",
+        # `tu equipo` SALIO del patron (adjudicado ago 2026). Era correcto en la
+        # era de la EXTRACCION: un nodo recien sacado del libro que decia "tu
+        # equipo" arrastraba un organigrama. Pero la re-voz lo escribio A
+        # PROPOSITO: es la voz de la casa para quien tiene dos o tres personas
+        # trabajando con el. Trece nodos ya re-vozados -- ocho de HSEQ -- caian
+        # aqui, y ocho los habia re-vozado esta misma casa.
+        #
+        # DOCTRINA HERMANA DE LA DE LOS ACENTOS:
+        #   "Los detectores deben conocer el trabajo ya hecho, o acaban
+        #    cobrandolo dos veces."
+        # Y la de origen: una baranda que caza lo correcto no es estricta, esta
+        # rota. Aqui ademas no era gratis: re-vozar trece nodos buenos cuesta
+        # dinero y arriesga DEGRADARLOS, porque el modelo tiene que cambiar algo
+        # para justificar su turno.
+        #
+        # Los marcadores de TERCERA persona se quedan: esos si delatan que el
+        # nodo le habla a una empresa que no es la del lector.
+        r"\bsu equipo\b|\bel equipo de\b",
         r"\bel comit[ée]\b|\bun comit[ée]\b",
         r"\btu departamento\b|\bel departamento de\b",
         r"\blos stakeholders\b|\blas partes interesadas\b",
@@ -257,6 +274,35 @@ BARANDAS = {
         r"\brecursos humanos\b",
     ],
 }
+
+# LA EXENCION DE LOCALIZACION (adjudicada ago 2026, mismo principio).
+#
+# `adaptaciones_sectoriales_iso` decia: "las cGMP que exige la FDA en Estados
+# Unidos, O EL ORGANISMO EQUIVALENTE EN TU MERCADO". Es decir: el nodo YA trae
+# el reencuadre hecho, y la baranda saltaba por la sigla suelta. Es la ley que
+# el auditor ya adjudico: detectar por LO QUE EL NODO DESCRIBE, no por lo que
+# menciona.
+#
+# Si la formula de localizacion aparece cerca de la sigla, el nodo esta
+# localizado y no se marca. "Cerca" es la misma frase, no el nodo entero: un
+# nodo que localiza una sigla al principio no queda exento para otra que
+# cablee al final.
+VENTANA_LOCALIZACION = 160
+LOCALIZACION = re.compile(
+    r"\b(?:o el|o la|o su)\s+(?:organismo|entidad|agencia|autoridad|norma|"
+    r"equivalente|etiqueta|sello|regulador)\w*\s+(?:\w+\s+){0,3}"
+    r"(?:equivalente\s+)?(?:en|de)\s+tu\s+(?:mercado|pa[ií]s|regi[óo]n)"
+    r"|\bla\s+(?:que|de)\s+\w+\s+en\s+tu\s+(?:mercado|pa[ií]s)"
+    r"|\baverigua\s+(?:cu[áa]l\s+es\s+)?la\s+de\s+tu\s+(?:mercado|pa[ií]s)"
+    r"|\bseg[úu]n\s+tu\s+mercado\b"
+    r"|\bexisten\s+en\s+muchos\s+pa[ií]ses\b",
+    re.I)
+
+
+def _esta_localizada(texto, ini, fin):
+    """True si la formula de localizacion acompaña a esta mencion concreta."""
+    ventana = texto[max(0, ini - VENTANA_LOCALIZACION): fin + VENTANA_LOCALIZACION]
+    return bool(LOCALIZACION.search(ventana))
 
 
 def revisar_barandas(nodo):
@@ -269,12 +315,22 @@ def revisar_barandas(nodo):
     ])
     hallazgos = []
     for baranda, patrones in BARANDAS.items():
+        marcado = False
         for p in patrones:
-            m = re.search(p, texto, re.I)
-            if m:
+            for m in re.finditer(p, texto, re.I):
+                # La exencion de localizacion solo aplica a las siglas: una
+                # sigla acompañada de "o el equivalente en tu mercado" no es un
+                # dato cableado, es un ejemplo ya localizado. Se busca la
+                # SIGUIENTE ocurrencia, no se abandona el patron: un nodo puede
+                # localizar una sigla y cablear otra.
+                if baranda == "dato_local_cableado" and _esta_localizada(texto, m.start(), m.end()):
+                    continue
                 ini = max(0, m.start() - 55)
                 cita = " ".join(texto[ini:m.end() + 55].split())
                 hallazgos.append({"baranda": baranda, "cita": f"...{cita}..."})
+                marcado = True
+                break
+            if marcado:
                 break
     return hallazgos
 

@@ -76,9 +76,20 @@ def leer(desde=None):
 
 
 def total(filas=None):
-    """La suma certificable: solo lo que el libro registro de verdad."""
+    """La suma de TODO lo anotado, parciales incluidos. Se declara como tal."""
     filas = leer() if filas is None else filas
     return round(sum(float(f.get("costo_usd") or 0) for f in filas), 2)
+
+
+def total_certificable(filas=None):
+    """LA CIFRA QUE SE PUEDE DEFENDER: solo las corridas que se anotaron solas,
+    sin las rescatadas del ciclo viejo. Es la que se lleva a un cierre.
+
+    La distincion es el libro entero: un total que suma filas rescatadas suena
+    exacto y no lo es. Un numero honesto con su limite declarado vale mas que
+    uno redondo de memoria."""
+    filas = leer() if filas is None else filas
+    return round(sum(float(f.get("costo_usd") or 0) for f in filas if not f.get("parcial")), 2)
 
 
 def main():
@@ -94,10 +105,12 @@ def main():
         print(f"  {pack:<16} {op:<16} ${c:.2f}")
     parciales = [f for f in filas if f.get("parcial")]
     print(f"\n  {len(filas)} corridas anotadas. TOTAL ${total(filas):.2f}")
+    print(f"  CERTIFICABLE (sin las rescatadas): ${total_certificable(filas):.2f} "
+          f"de {len(filas) - len(parciales)} corridas que se anotaron solas.")
     if parciales:
-        print(f"  OJO: {len(parciales)} filas marcadas parcial: rescatadas de "
-              f"informes que se pisaban. El total NO es certificable hasta que "
-              f"salgan del libro por antiguedad.")
+        print(f"  Las otras {len(parciales)} van marcadas parcial: rescatadas de "
+              f"informes que se pisaban, y son la ULTIMA corrida de su script "
+              f"sobre ese pack, no el total.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,29 @@
+{
+  "pack": "environmental",
+  "umbral": "zona gris 13-19%: manda la pregunta del lector, no el numero",
+  "regla_superviviente": "telemetria; sin historia, el mas rico",
+  "clusters": [
+    {
+      "orden": 1,
+      "nodos": [
+        "medir_huella_carbono_corporativa",
+        "evaluar_huella_carbono"
+      ],
+      "sobrevive": "medir_huella_carbono_corporativa",
+      "similitud": 0.19,
+      "por_que": "MISMO LIBRO (Esty), MISMO entregable (inventario completo de emisiones de GEI) y MISMAS condiciones. Se verifico la hipotesis del auditor -- uno inventario formal por alcances y el otro estimacion de taller -- y NO es asi: los dos son inventario formal. Sobrevive el que nombra el GHG Protocol y sus tres alcances; el otro aporta el CDP.",
+      "quedaria": "Medir la Huella de Carbono Corporativa"
+    },
+    {
+      "orden": 2,
+      "nodos": [
+        "vision_alineacion_sostenibilidad",
+        "vision_clara_sostenibilidad"
+      ],
+      "sobrevive": "vision_alineacion_sostenibilidad",
+      "similitud": 0.16,
+      "por_que": "Los dos piden redactar una vision de sostenibilidad, comunicarla a todos y alinearla con la estrategia. Sobrevive el que ademas pide la meta aspiracional y las metas operativas medibles.",
+      "quedaria": "Vision y Alineacion Estrategica de Sostenibilidad"
+    }
+  ]
+}

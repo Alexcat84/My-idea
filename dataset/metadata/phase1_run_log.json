@@ -5,5 +5,41 @@
   "alias_redirects": [],
   "alias_unresolved_removed": [],
   "final_cleanup_removed": [],
-  "symmetrize_added": []
+  "symmetrize_added": [
+    {
+      "node": "decisiones_de_financiamiento_exportacion",
+      "key": "nodos_siguientes",
+      "added": "evaluacion_preparacion_empresa_exportar"
+    },
+    {
+      "node": "estructura_plan_exportacion",
+      "key": "nodos_previos",
+      "added": "evaluacion_preparacion_empresa_exportar"
+    },
+    {
+      "node": "etapas_creacion_valor_sostenibilidad",
+      "key": "nodos_previos",
+      "added": "vision_alineacion_sostenibilidad"
+    },
+    {
+      "node": "modelo_lubin_esty_4_etapas",
+      "key": "nodos_previos",
+      "added": "vision_alineacion_sostenibilidad"
+    },
+    {
+      "node": "plan_accion_corto_mediano_largo_plazo",
+      "key": "nodos_siguientes",
+      "added": "vision_alineacion_sostenibilidad"
+    },
+    {
+      "node": "plan_cambio_climatico",
+      "key": "nodos_siguientes",
+      "added": "medir_huella_carbono_corporativa"
+    },
+    {
+      "node": "realizar_analisis_ciclo_de_vida_lca",
+      "key": "nodos_previos",
+      "added": "medir_huella_carbono_corporativa"
+    }
+  ]
 }
