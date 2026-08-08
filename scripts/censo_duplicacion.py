@@ -305,7 +305,27 @@ def _esta_localizada(texto, ini, fin):
     return bool(LOCALIZACION.search(ventana))
 
 
-def revisar_barandas(nodo):
+REGISTRO_FP = BASE / "dataset" / "metadata" / "falsos_positivos_adjudicados.json"
+_fp = None
+
+
+def falsos_positivos():
+    """(node_id, baranda) -> motivo, de los hallazgos YA JUZGADOS.
+
+    Nace del ciclo de la curacion (ago 2026): tres hallazgos distintos costaron
+    tres lecturas para llegar a la misma conclusion -- el detector vio la
+    palabra, no lo que el nodo describe. Un hallazgo juzgado no se re-litiga.
+    """
+    global _fp
+    if _fp is None:
+        _fp = {}
+        if REGISTRO_FP.exists():
+            for a in json.loads(REGISTRO_FP.read_text(encoding="utf-8"))["adjudicados"]:
+                _fp[(a["node_id"], a["baranda"])] = a["motivo"]
+    return _fp
+
+
+def revisar_barandas(nodo, incluir_juzgados=False):
     """Hallazgos con su CITA textual. Vacio = limpio en la muestra."""
     texto = " ".join([
         nodo.get("titulo_concepto", ""), nodo.get("resumen_teorico", ""),
@@ -327,7 +347,17 @@ def revisar_barandas(nodo):
                     continue
                 ini = max(0, m.start() - 55)
                 cita = " ".join(texto[ini:m.end() + 55].split())
-                hallazgos.append({"baranda": baranda, "cita": f"...{cita}..."})
+                h = {"baranda": baranda, "cita": f"...{cita}..."}
+                # YA JUZGADO: se reporta como tal, no se vuelve a discutir. Por
+                # defecto NO entra en la lista, para que un lote de trabajo no
+                # arrastre nodos que ya se leyeron y estaban bien.
+                juzgado = falsos_positivos().get((nodo.get("node_id"), baranda))
+                if juzgado:
+                    if incluir_juzgados:
+                        hallazgos.append(dict(h, ya_juzgado=juzgado))
+                    marcado = True
+                    break
+                hallazgos.append(h)
                 marcado = True
                 break
             if marcado:

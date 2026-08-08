@@ -495,6 +495,27 @@ fusión ya corrió; lo que queda es la voz.
 
 No se dispara nada hasta que el fundador lo ponga en el tablero.
 
+## Ficha: `huecos-de-contenido` — documentados sin inventarlos
+
+Vacíos REALES del catálogo, encontrados midiendo y **no rellenados a mano**.
+Material de minería futura: el día que se extraiga un libro que los cubra, ya
+está dicho qué falta y por qué se supo.
+
+- **El núcleo no tiene nodo de PRIMERA CONTRATACIÓN.** Cero aciertos en el
+  barrido sobre los 1.721. El rumbo `nucleo_no_doy_abasto_solo` lo documenta: sin
+  contenido, la brújula manda esa consulta a *"quemar las naves"*. El contenido
+  natural es del futuro mundo **Primer Equipo**, cuya ficha ya está abierta y que
+  heredó dos conceptos deprecados de quality. El día que ese mundo nazca, ese
+  rumbo lo estrena.
+- **`environmental` no tiene huella de carbono a ESCALA DE TALLER.** Los dos
+  nodos que había (`evaluar_huella_carbono` y `medir_huella_carbono_corporativa`)
+  eran **el mismo inventario corporativo formal** del mismo libro, con el mismo
+  entregable, y se fundieron. Nadie cubre *"cuánto contamina lo que hago yo"* a
+  escala de una persona con un taller.
+
+Ninguno se inventa. **Un hueco documentado vale más que un nodo fabricado para
+taparlo**: el nodo fabricado se ofrece, y lo que se ofrece se cree.
+
 ## DOCTRINA DE LA VÁLVULA (ago 2026)
 
 > **El título mentía, los pasos no.**

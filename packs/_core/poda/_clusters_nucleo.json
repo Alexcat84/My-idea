@@ -1,0 +1,5035 @@
+{
+  "umbral": 0.9,
+  "total_clusters": 93,
+  "telemetria_filas": 4463,
+  "nota_brecha": "El nucleo no tiene destinos de brecha: brecha_semillas.json es de packs. Su equivalente son las entry_seeds.",
+  "clusters": [
+    {
+      "nodos": [
+        "busqueda_vs_ejecucion",
+        "definicion_startup",
+        "definicion_startup_busqueda_modelo_negocio",
+        "definicion_startup_incertidumbre",
+        "startup_como_busqueda_vs_ejecucion"
+      ],
+      "tam": 5,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "busqueda_vs_ejecucion",
+          "titulo": "Búsqueda vs. Ejecución: Definición de Startup",
+          "etapa": "ideacion",
+          "etiqueta": "Busca antes de Ejecutar",
+          "condiciones_activacion": [
+            "Si el fundador está organizando la empresa como si ya conociera su modelo de negocio",
+            "Al inicio de cualquier startup, antes de definir estructura organizacional"
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "definicion_startup",
+          "titulo": "Definición de Startup",
+          "etapa": "ideacion",
+          "etiqueta": "Entiende qué Empresa Estás Creando",
+          "condiciones_activacion": [
+            "Si el proyecto está iniciando con alta incertidumbre sobre clientes o producto",
+            "Al inicio de cualquier proyecto emprendedor, para alinear expectativas del equipo"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 6,
+          "hallazgos": []
+        },
+        {
+          "id": "definicion_startup_busqueda_modelo_negocio",
+          "titulo": "La Startup como Organización Temporal en Búsqueda de un Modelo de Negocio",
+          "etapa": "ideacion",
+          "etiqueta": "Busca tu Modelo, no lo Ejecutes",
+          "condiciones_activacion": [
+            "Cuando el emprendedor está tratando de aplicar planes de negocio tradicionales a una startup",
+            "Al inicio de cualquier proyecto de emprendimiento antes de definir procesos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "definicion_startup_incertidumbre",
+          "titulo": "Definición de Startup bajo Incertidumbre Extrema",
+          "etapa": "ideacion",
+          "etiqueta": "Abraza la Incertidumbre Extrema",
+          "condiciones_activacion": [
+            "Al iniciar cualquier proyecto para confirmar que amerita metodología Lean Startup.",
+            "Cuando el usuario no está seguro si su idea de negocio es realmente una 'startup' o un negocio tradicional.",
+            "Si el usuario trabaja dentro de una empresa grande y duda si aplican los mismos principios de emprendimiento."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        },
+        {
+          "id": "startup_como_busqueda_vs_ejecucion",
+          "titulo": "Definición de Startup: Búsqueda vs. Ejecución",
+          "etapa": "ideacion",
+          "etiqueta": "Busca, No Ejecutes Aún",
+          "condiciones_activacion": [
+            "Al iniciar cualquier nuevo proyecto o venture para determinar la metodología de gestión adecuada.",
+            "Si el equipo fundador viene de grandes corporaciones y tiende a aplicar procesos de ejecución conocidos."
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 0,
+        "fundir": true,
+        "por_que": "Todas describen la misma definición de startup como organización temporal en búsqueda de un modelo de negocio bajo incertidumbre, en contraste con ejecución.",
+        "quedaria": "Definición de Startup: Búsqueda vs. Ejecución"
+      }
+    },
+    {
+      "nodos": [
+        "decision_pivotar_o_proceder",
+        "pivot_o_proceder",
+        "pivot_o_proceder_revalidar_modelo_negocio",
+        "revalidacion_modelo_negocio",
+        "revalidar_modelo_negocio"
+      ],
+      "tam": 5,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "decision_pivotar_o_proceder",
+          "titulo": "Decisión: Pivotar o Proceder",
+          "etapa": "validacion",
+          "etiqueta": "Cambiar de Rumbo o Avanzar",
+          "condiciones_activacion": [
+            "Cuando se ha completado el análisis financiero y de modelo de negocio",
+            "Cuando el equipo debe decidir si escalar la inversión o volver a la fase de búsqueda",
+            "Si existen dudas sobre si el modelo de negocio es realmente repetible y escalable",
+            "Cuando los inversionistas necesitan un criterio objetivo antes de aumentar el gasto"
+          ],
+          "visitas": 36,
+          "cosechas": 25,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 11,
+          "hallazgos": []
+        },
+        {
+          "id": "pivot_o_proceder",
+          "titulo": "Pivot or Proceed: La Decisión Crítica",
+          "etapa": "validacion",
+          "etiqueta": "La Decisión de Cambiar Rumbo",
+          "condiciones_activacion": [
+            "Cuando se ha completado la validación de clientes y se debe decidir si escalar la inversión"
+          ],
+          "visitas": 2,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 7,
+          "hallazgos": []
+        },
+        {
+          "id": "pivot_o_proceder_revalidar_modelo_negocio",
+          "titulo": "Pivot o Proceder: Re-validar el Modelo de Negocio",
+          "etapa": "validacion",
+          "etiqueta": "Revalida Antes de Avanzar",
+          "condiciones_activacion": [
+            "Cuando el equipo ha completado la fase de Customer Validation y debe decidir si escalar",
+            "Cuando los inversionistas están por comprometer sumas grandes de dinero de forma irrevocable"
+          ],
+          "visitas": 3,
+          "cosechas": 3,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        },
+        {
+          "id": "revalidacion_modelo_negocio",
+          "titulo": "Re-Validación del Modelo de Negocio (Pivot-or-Proceed)",
+          "etapa": "validacion",
+          "etiqueta": "Revalida tu Modelo de Negocio",
+          "condiciones_activacion": [
+            "Cuando el equipo está a punto de aumentar drásticamente el gasto para pasar a la fase de creación de clientes",
+            "Cuando los inversionistas exigen una última validación antes de comprometer fondos grandes"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "revalidar_modelo_negocio",
+          "titulo": "Re-Validar el Modelo de Negocio (Business Model Canvas)",
+          "etapa": "validacion",
+          "etiqueta": "Revisa tu Mapa Antes de Ejecutar",
+          "condiciones_activacion": [
+            "Cuando el equipo está a punto de comprometer inversión significativa para escalar",
+            "Cuando existen dudas sobre si se ha elegido la mejor apuesta de negocio"
+          ],
+          "visitas": 13,
+          "cosechas": 13,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 1,
+        "fundir": true,
+        "por_que": "Todas describen el mismo hito: revisar el Business Model Canvas al final de Validación de Clientes para decidir pivotar o proceder.",
+        "quedaria": "Pivot or Proceed: La Decisión Crítica"
+      }
+    },
+    {
+      "nodos": [
+        "fase_affirm",
+        "fase_affirm_buyers_remorse",
+        "fase_affirm_reduccion_incertidumbre",
+        "fase_affirm_reducir_remordimiento"
+      ],
+      "tam": 4,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "fase_affirm",
+          "titulo": "Fase 3: Affirm (Afirmar)",
+          "etapa": "ejecucion",
+          "etiqueta": "Calma la Duda del Comprador",
+          "condiciones_activacion": [
+            "Cuando se detecta riesgo de cancelación o arrepentimiento poco después del cierre de venta."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "fase_affirm_buyers_remorse",
+          "titulo": "Fase Affirm: Gestionar el Remordimiento del Comprador",
+          "etapa": "ejecucion",
+          "etiqueta": "Disipa el Remordimiento del Comprador",
+          "condiciones_activacion": [
+            "Cuando el usuario tiene un producto/servicio de alto costo o compromiso (ej: membresías, contratos largos)",
+            "Cuando existe una brecha de tiempo entre la compra y la entrega de valor",
+            "Si se detectan altas tasas de cancelación temprana o abandono post-venta"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "fase_affirm_reduccion_incertidumbre",
+          "titulo": "Fase Affirm: Reducción del 'Buyer's Remorse'",
+          "etapa": "ejecucion",
+          "etiqueta": "Reduce la Duda tras Comprar",
+          "condiciones_activacion": [
+            "Cuando existe alta tasa de cancelación o devoluciones poco después de la compra",
+            "Si el producto/servicio requiere tiempo de implementación antes de mostrar resultados"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "fase_affirm_reducir_remordimiento",
+          "titulo": "Fase Affirm: Contrarrestar el Remordimiento del Comprador",
+          "etapa": "ejecucion",
+          "etiqueta": "Contrarresta el Remordimiento del Comprador",
+          "condiciones_activacion": [
+            "Cuando existe un lapso considerable entre el pago y la entrega o primer uso del producto/servicio",
+            "Cuando el producto o servicio tiene un costo alto y por tanto mayor riesgo de remordimiento del comprador"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 2,
+        "fundir": true,
+        "por_que": "Todas describen la misma fase 'Affirm' del proceso de venta, centrada en gestionar el remordimiento del comprador.",
+        "quedaria": "Fase Affirm: Gestionar el Remordimiento del Comprador"
+      }
+    },
+    {
+      "nodos": [
+        "preguntas_beneficio",
+        "preguntas_necesidad_beneficio",
+        "preguntas_need_payoff",
+        "uso_preguntas_necesidad_beneficio"
+      ],
+      "tam": 4,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "preguntas_beneficio",
+          "titulo": "Preguntas de Beneficio o Need-Payoff (Need-Payoff Questions)",
+          "etapa": "ejecucion",
+          "etiqueta": "Haz Preguntas de Beneficio",
+          "condiciones_activacion": [
+            "Cuando se ha desarrollado suficientemente un problema y se busca hacer la transición hacia el cierre de manera positiva.",
+            "Cuando el cliente parece agobiado o incómodo tras varias preguntas de implicación y se necesita reequilibrar la conversación."
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "preguntas_necesidad_beneficio",
+          "titulo": "Preguntas de Necesidad-Beneficio",
+          "etapa": "ejecucion",
+          "etiqueta": "Haz que Vean el Beneficio",
+          "condiciones_activacion": [
+            "Antes de pasar a la demostración de capacidad o al cierre de la venta"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "preguntas_need_payoff",
+          "titulo": "Preguntas de Beneficio (Need-Payoff)",
+          "etapa": "ejecucion",
+          "etiqueta": "Haz Preguntas de Need-Payoff",
+          "condiciones_activacion": [
+            "Cuando el cliente ya reconoce que tiene un problema serio pero aún no valora la solución",
+            "Cuando se busca reducir objeciones en ventas complejas con soluciones parciales",
+            "Cuando se necesita que el cliente 'venda' internamente la solución a otros stakeholders"
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "uso_preguntas_necesidad_beneficio",
+          "titulo": "Uso Efectivo de Preguntas de Necesidad-Beneficio",
+          "etapa": "ejecucion",
+          "etiqueta": "Haz Preguntas de Necesidad-Beneficio",
+          "condiciones_activacion": [
+            "Cuando el cliente ya ha expresado una necesidad explícita que el vendedor puede satisfacer",
+            "Cuando se busca consolidar el compromiso del cliente antes de presentar la solución"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 3,
+        "fundir": true,
+        "por_que": "Todas describen la misma técnica de venta SPIN: preguntas de necesidad-beneficio (need-payoff).",
+        "quedaria": "Preguntas de Necesidad-Beneficio (Need-Payoff Questions)"
+      }
+    },
+    {
+      "nodos": [
+        "concierge_mvp",
+        "mvp_concierge",
+        "mvp_tipo_concierge"
+      ],
+      "tam": 3,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "concierge_mvp",
+          "titulo": "MVP Conserje (Concierge MVP)",
+          "etapa": "validacion",
+          "etiqueta": "Atiende a Mano, Primero",
+          "condiciones_activacion": [
+            "Cuando el emprendedor no sabe si su modelo de crecimiento es válido.",
+            "Cuando se necesita aprender rápido sin invertir en desarrollo de producto.",
+            "Cuando el equipo tiene pocos recursos y quiere evitar construir algo que nadie quiere."
+          ],
+          "visitas": 33,
+          "cosechas": 27,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "mvp_concierge",
+          "titulo": "MVP Concierge (Producto Mínimo Viable de Servicio Personalizado)",
+          "etapa": "validacion",
+          "etiqueta": "Personaliza sin Automatizar Aún",
+          "condiciones_activacion": [
+            "Cuando se necesita validar una hipótesis de valor sin construir infraestructura escalable",
+            "Cuando el equipo no sabe aún qué características son esenciales para el cliente"
+          ],
+          "visitas": 1,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "mvp_tipo_concierge",
+          "titulo": "MVP tipo Concierge",
+          "etapa": "validacion",
+          "etiqueta": "Sirve a tus Primeros Clientes",
+          "condiciones_activacion": [
+            "Cuando el servicio es complejo de automatizar desde el inicio (ej: requiere curación humana)",
+            "Si se necesita validar el modelo de crecimiento con clientes reales antes de construir infraestructura tecnológica"
+          ],
+          "visitas": 27,
+          "cosechas": 19,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 4,
+        "fundir": true,
+        "por_que": "Todas describen la misma técnica de MVP Concierge: entrega manual y personalizada sin escalar.",
+        "quedaria": "MVP Conserje (Concierge MVP)"
+      }
+    },
+    {
+      "nodos": [
+        "earlyvangelists",
+        "earlyvangelists_identificacion",
+        "identificar_earlyvangelists"
+      ],
+      "tam": 3,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "earlyvangelists",
+          "titulo": "Earlyvangelists: Los Clientes Visionarios",
+          "etapa": "validacion",
+          "etiqueta": "Encuentra tus Clientes Visionarios",
+          "condiciones_activacion": [
+            "Si el equipo intenta vender a clientes mainstream con un producto no terminado",
+            "Al buscar los primeros clientes de una startup"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "earlyvangelists_identificacion",
+          "titulo": "Identificación de Earlyvangelists",
+          "etapa": "validacion",
+          "etiqueta": "Reconoce a tus Primeros Visionarios",
+          "condiciones_activacion": [
+            "Cuando se necesita un primer grupo de clientes para testear el MVP",
+            "Si el mercado mainstream aún no está listo para el producto"
+          ],
+          "visitas": 15,
+          "cosechas": 4,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "identificar_earlyvangelists",
+          "titulo": "Identificar Earlyvangelists (Clientes Visionarios con Presupuesto)",
+          "etapa": "validacion",
+          "etiqueta": "Busca Clientes Visionarios",
+          "condiciones_activacion": [
+            "Cuando la startup está lista para intentar la primera venta real",
+            "Si el equipo no distingue entre visionarios con y sin poder de compra"
+          ],
+          "visitas": 16,
+          "cosechas": 16,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 5,
+        "fundir": true,
+        "por_que": "Todas describen el mismo concepto de earlyvangelists como clientes visionarios con las mismas características distintivas.",
+        "quedaria": "Earlyvangelists: Los Clientes Visionarios"
+      }
+    },
+    {
+      "nodos": [
+        "preservar_caja_buscar_gastar",
+        "preservar_caja_hasta_validar",
+        "preservar_efectivo_buscar_modelo"
+      ],
+      "tam": 3,
+      "etapas": [
+        "ejecucion",
+        "planificacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "preservar_caja_buscar_gastar",
+          "titulo": "Preservar Caja Mientras se Busca, Gastar Cuando se Encuentra",
+          "etapa": "validacion",
+          "etiqueta": "Preserva Caja, Luego Invierte",
+          "condiciones_activacion": [
+            "Si el startup está gastando en marketing y ventas antes de validar su modelo de negocio.",
+            "Si hay confusión sobre cuándo 'pisar el acelerador' de gasto."
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "preservar_caja_hasta_validar",
+          "titulo": "Preservar la Caja Hasta Encontrar el Modelo Escalable",
+          "etapa": "ejecucion",
+          "etiqueta": "Preserva Caja Hasta Validar",
+          "condiciones_activacion": [
+            "Antes de contratar equipo comercial",
+            "Si hay presión de inversionistas para escalar prematuramente"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "preservar_efectivo_buscar_modelo",
+          "titulo": "Preservar Efectivo Mientras se Busca el Modelo de Negocio",
+          "etapa": "planificacion",
+          "etiqueta": "Cuida tu Efectivo al Buscar",
+          "condiciones_activacion": [
+            "Si la startup está gastando en marketing/ventas antes de validar el modelo",
+            "Si el equipo confunde ventas puntuales con un modelo repetible"
+          ],
+          "visitas": 11,
+          "cosechas": 8,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 6,
+        "fundir": true,
+        "por_que": "Mismo principio de Customer Development: preservar caja durante la búsqueda e invertir agresivamente al encontrar el modelo.",
+        "quedaria": "Preservar Caja Mientras se Busca, Gastar Cuando se Encuentra"
+      }
+    },
+    {
+      "nodos": [
+        "pricing_models_selection",
+        "pricing_tactics_models",
+        "seleccion_estrategia_pricing"
+      ],
+      "tam": 3,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "pricing_models_selection",
+          "titulo": "Selección de Modelo de Precios",
+          "etapa": "planificacion",
+          "etiqueta": "Elige tu Modelo de Precios",
+          "condiciones_activacion": [
+            "Cuando se necesita definir el mecanismo específico de cobro al cliente"
+          ],
+          "visitas": 1,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "pricing_tactics_models",
+          "titulo": "Modelos y Tácticas de Fijación de Precios",
+          "etapa": "planificacion",
+          "etiqueta": "Ajusta tus Tácticas de Precio",
+          "condiciones_activacion": [
+            "Cuando el usuario no tiene claro cómo debe cobrar por su producto o servicio"
+          ],
+          "visitas": 6,
+          "cosechas": 5,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "seleccion_estrategia_pricing",
+          "titulo": "Selección de Estrategia de Pricing",
+          "etapa": "planificacion",
+          "etiqueta": "Define Tu Estrategia de Precios",
+          "condiciones_activacion": [
+            "Cuando el emprendedor necesita definir cómo cobrará por su producto o servicio",
+            "Si existen dudas sobre qué modelo de precio maximiza rentabilidad y adopción"
+          ],
+          "visitas": 27,
+          "cosechas": 27,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 7,
+        "fundir": true,
+        "por_que": "Todas listan el mismo catálogo de modelos de fijación de precios para elegir según mercado y producto.",
+        "quedaria": "Modelos y Tácticas de Fijación de Precios"
+      }
+    },
+    {
+      "nodos": [
+        "actualizar_business_model_canvas_discovery",
+        "actualizar_business_model_canvas_tuneup"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "actualizar_business_model_canvas_discovery",
+          "titulo": "Actualizar el Business Model Canvas tras Customer Discovery",
+          "etapa": "validacion",
+          "etiqueta": "Actualiza tu Mapa tras Descubrir",
+          "condiciones_activacion": [
+            "Cuando los resultados de las pruebas muestran que alguna hipótesis del modelo de negocio no se cumple"
+          ],
+          "visitas": 7,
+          "cosechas": 6,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "actualizar_business_model_canvas_tuneup",
+          "titulo": "Actualización Iterativa del Business Model Canvas ('Tune-up')",
+          "etapa": "validacion",
+          "etiqueta": "Ajusta tu Mapa Constantemente",
+          "condiciones_activacion": [
+            "Después de cada ronda de entrevistas de solución con clientes",
+            "Cuando se detecta que el producto resuena solo con parte del mercado objetivo"
+          ],
+          "visitas": 11,
+          "cosechas": 10,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 8,
+        "fundir": true,
+        "por_que": "Ambas describen la misma práctica de actualizar el BMC tras cada ronda de Customer Discovery, enfocándose en propuesta de valor.",
+        "quedaria": "Actualización Iterativa del Business Model Canvas ('Tune-up')"
+      }
+    },
+    {
+      "nodos": [
+        "ai_supply_chain",
+        "ia_en_supply_chain"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "ai_supply_chain",
+          "titulo": "Inteligencia Artificial en la Cadena de Suministro",
+          "etapa": "ejecucion",
+          "etiqueta": "Usa IA en tu Cadena",
+          "condiciones_activacion": [
+            "Si la empresa tiene grandes volúmenes de datos históricos de demanda o transporte sin analizar",
+            "Si se busca ventaja competitiva mediante optimización basada en datos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "ia_en_supply_chain",
+          "titulo": "Inteligencia Artificial Aplicada a la Cadena de Suministro",
+          "etapa": "ejecucion",
+          "etiqueta": "Aplica IA en tu Cadena",
+          "condiciones_activacion": [
+            "Cuando la empresa tiene grandes volúmenes de datos de demanda, rutas o inventario sin explotar",
+            "Si los métodos tradicionales de pronóstico no logran precisión suficiente ante demanda volátil"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 9,
+        "fundir": true,
+        "por_que": "Ambas describen el mismo uso de IA/LLMs en las mismas áreas clave de supply chain (pronóstico, rutas, almacén).",
+        "quedaria": "Inteligencia Artificial Aplicada a la Cadena de Suministro"
+      }
+    },
+    {
+      "nodos": [
+        "analisis_de_cohortes",
+        "cohort_analysis_retencion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "analisis_de_cohortes",
+          "titulo": "Análisis de Cohortes para Retención",
+          "etapa": "validacion",
+          "etiqueta": "Agrupa Clientes por Cohortes",
+          "condiciones_activacion": [
+            "Cuando el startup tiene al menos varios miles de clientes",
+            "Si se necesita mejorar la retención de usuarios"
+          ],
+          "visitas": 26,
+          "cosechas": 26,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "cohort_analysis_retencion",
+          "titulo": "Análisis de Cohortes para Retención de Clientes",
+          "etapa": "validacion",
+          "etiqueta": "Analiza tus Cohortes de Clientes",
+          "condiciones_activacion": [
+            "Cuando las métricas de retención promedio parecen saludables pero se sospecha de problemas ocultos",
+            "Cuando ya existen suficientes clientes (miles) para segmentar por fuente o fecha"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 10,
+        "fundir": true,
+        "por_que": "Ambas describen la misma técnica de análisis de cohortes para detectar patrones de retención por segmento.",
+        "quedaria": "Análisis de Cohortes para Retención de Clientes"
+      }
+    },
+    {
+      "nodos": [
+        "analisis_flujo_de_valor",
+        "value_stream_analysis_lean"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": true,
+      "miembros": [
+        {
+          "id": "analisis_flujo_de_valor",
+          "titulo": "Análisis del Flujo de Valor (Value-Stream Analysis)",
+          "etapa": "ejecucion",
+          "etiqueta": "Mapea tu Flujo de Valor",
+          "condiciones_activacion": [
+            "Cuando el proceso de desarrollo de productos es lento y burocrático",
+            "Si existen retrabajos frecuentes o ciclos repetidos en pruebas de campo",
+            "Cuando se busca acelerar el tiempo de lanzamiento al mercado (speed to market)"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": true,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "value_stream_analysis_lean",
+          "titulo": "Análisis de Flujo de Valor (Value-Stream Analysis) para Lean Idea-to-Launch",
+          "etapa": "ejecucion",
+          "etiqueta": "Elimina Pasos sin Valor",
+          "condiciones_activacion": [
+            "Cuando el proceso de innovación se ha vuelto burocrático con demasiados entregables y templates",
+            "Si el equipo del proyecto se queja de exceso de trabajo administrativo para los gates",
+            "Cuando se busca reducir el tiempo de ciclo (cycle time) del desarrollo de nuevos productos"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 11,
+        "fundir": true,
+        "por_que": "Ambas describen la misma técnica lean de mapear el flujo de valor para eliminar actividades sin valor.",
+        "quedaria": "Análisis de Flujo de Valor (Value-Stream Analysis) para Lean Idea-to-Launch"
+      }
+    },
+    {
+      "nodos": [
+        "arenas_estrategicas",
+        "seleccion_arenas_estrategicas"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "arenas_estrategicas",
+          "titulo": "Definición de Arenas Estratégicas (Campos de Batalla)",
+          "etapa": "ideacion",
+          "etiqueta": "Elige tus Campos de Batalla",
+          "condiciones_activacion": [
+            "Cuando la búsqueda de ideas de nuevos productos es difusa o no está dirigida",
+            "Cuando el portafolio de proyectos contiene iniciativas no relacionadas entre sí",
+            "Si el usuario necesita decidir dónde invertir esfuerzos de I+D"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "seleccion_arenas_estrategicas",
+          "titulo": "Selección de Arenas Estratégicas (Pick Your Battlefields)",
+          "etapa": "ideacion",
+          "etiqueta": "Elige Tus Batallas Estratégicas",
+          "condiciones_activacion": [
+            "Cuando la empresa no tiene un foco claro de innovación",
+            "Cuando el portafolio de proyectos está disperso y poco rentable",
+            "Antes de iniciar cualquier búsqueda de ideas de nuevos productos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 8,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 12,
+        "fundir": true,
+        "por_que": "Ambas describen el mismo concepto de definir arenas estratégicas antes de generar ideas de producto.",
+        "quedaria": "Selección de Arenas Estratégicas (Pick Your Battlefields)"
+      }
+    },
+    {
+      "nodos": [
+        "bullseye_framework",
+        "framework_bullseye"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "bullseye_framework",
+          "titulo": "Bullseye Framework (Diana de Tracción)",
+          "etapa": "planificacion",
+          "etiqueta": "Encuentra tu Canal Ganador",
+          "condiciones_activacion": [
+            "Cuando el usuario tiene un producto validado pero no sabe qué canal de marketing/distribución usar",
+            "Cuando los canales actuales no generan crecimiento suficiente"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "framework_bullseye",
+          "titulo": "Framework Bullseye para Canales de Tracción",
+          "etapa": "validacion",
+          "etiqueta": "Prueba y Descarta Canales",
+          "condiciones_activacion": [
+            "Cuando la startup no sabe qué canal de marketing priorizar",
+            "Cuando se están dispersando recursos en múltiples canales sin resultados claros"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 13,
+        "fundir": true,
+        "por_que": "Ambas describen el mismo proceso de tres pasos del Bullseye Framework para hallar el canal de tracción.",
+        "quedaria": "Bullseye Framework (Diana de Tracción)"
+      }
+    },
+    {
+      "nodos": [
+        "business_model_canvas_como_scorecard",
+        "business_model_canvas_scorecard"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "business_model_canvas_como_scorecard",
+          "titulo": "Business Model Canvas como Scorecard de Customer Discovery",
+          "etapa": "validacion",
+          "etiqueta": "Usa tu Mapa como Marcador",
+          "condiciones_activacion": [
+            "Cuando el equipo carece de un entendimiento compartido del modelo de negocio",
+            "Cuando se necesita rastrear pivotes a lo largo del tiempo"
+          ],
+          "visitas": 7,
+          "cosechas": 7,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "business_model_canvas_scorecard",
+          "titulo": "El Business Model Canvas como Scorecard Semanal",
+          "etapa": "validacion",
+          "etiqueta": "Registra tu Progreso Semanal",
+          "condiciones_activacion": [
+            "Cuando el equipo necesita rastrear cambios de hipótesis a lo largo del tiempo",
+            "Si no hay un entendimiento compartido y claro del modelo de negocio en la empresa"
+          ],
+          "visitas": 22,
+          "cosechas": 20,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 14,
+        "fundir": true,
+        "por_que": "Ambas describen el mismo uso del BMC como scorecard semanal para rastrear pivotes durante Customer Discovery.",
+        "quedaria": "Business Model Canvas como Scorecard de Customer Discovery"
+      }
+    },
+    {
+      "nodos": [
+        "business_model_canvas_vs_plan",
+        "business_model_canvas_vs_plan_negocio"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "business_model_canvas_vs_plan",
+          "titulo": "Business Model Canvas como Reemplazo del Plan de Negocio",
+          "etapa": "planificacion",
+          "etiqueta": "Cambia el Plan por el Mapa",
+          "condiciones_activacion": [
+            "Si el usuario tiene un plan de negocio estático y rígido en lugar de un modelo dinámico.",
+            "Si el emprendedor confunde el plan de negocio con un manual de ejecución."
+          ],
+          "visitas": 4,
+          "cosechas": 4,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": [
+            "matriz_o_puntaje"
+          ]
+        },
+        {
+          "id": "business_model_canvas_vs_plan_negocio",
+          "titulo": "Business Model Canvas vs. Plan de Negocio Tradicional",
+          "etapa": "planificacion",
+          "etiqueta": "Prefiere el Mapa al Plan",
+          "condiciones_activacion": [
+            "Si el emprendedor está a punto de escribir un plan de negocio tradicional para inversionistas",
+            "Si la organización trata el plan de negocio como un documento de ejecución fijo"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 15,
+        "fundir": true,
+        "por_que": "Ambas describen la misma regla del Manifiesto: reemplazar el plan de negocio estático por el BMC dinámico.",
+        "quedaria": "Business Model Canvas vs. Plan de Negocio Tradicional"
+      }
+    },
+    {
+      "nodos": [
+        "buy_in_customer_development",
+        "buyin_customer_development"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "buy_in_customer_development",
+          "titulo": "Lograr el Compromiso (Buy-In) del Equipo y la Junta con Customer Development",
+          "etapa": "planificacion",
+          "etiqueta": "Logra el Compromiso del Equipo",
+          "condiciones_activacion": [
+            "Antes de comenzar formalmente el proceso de Customer Discovery",
+            "Si hay resistencia del equipo de ingeniería o la junta directiva al enfoque iterativo"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "buyin_customer_development",
+          "titulo": "Buy-In del Equipo y la Junta para Customer Development",
+          "etapa": "planificacion",
+          "etiqueta": "Alinea a tu Equipo y Junta",
+          "condiciones_activacion": [
+            "Si hay resistencia del equipo de ingeniería o la junta a cambiar el plan de negocio",
+            "Al inicio de cualquier startup antes de comenzar Customer Development"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 16,
+        "fundir": true,
+        "por_que": "Ambas describen la misma necesidad de alinear a fundadores, junta e inversionistas antes de iniciar Customer Development.",
+        "quedaria": "Buy-In del Equipo y la Junta para Customer Development"
+      }
+    },
+    {
+      "nodos": [
+        "calidad_de_ejecucion_proceso_innovacion",
+        "calidad_ejecucion_proceso"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "calidad_de_ejecucion_proceso_innovacion",
+          "titulo": "Calidad de Ejecución como Proceso de Innovación",
+          "etapa": "ejecucion",
+          "etiqueta": "Gestiona tu Proceso de Innovación",
+          "condiciones_activacion": [
+            "Cuando el equipo detecta que los productos fallan por ejecución deficiente más que por falta de ideas",
+            "Cuando no existe un proceso formal de desarrollo de nuevos productos"
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "calidad_ejecucion_proceso",
+          "titulo": "Calidad de Ejecución en el Proceso de Innovación",
+          "etapa": "ejecucion",
+          "etiqueta": "Ejecuta Bien la Primera Vez",
+          "condiciones_activacion": [
+            "Si los proyectos fallan repetidamente por errores de omisión o baja calidad en su ejecución.",
+            "Si se detectan brechas entre lo planificado y lo realmente ejecutado en el desarrollo de producto."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 17,
+        "fundir": true,
+        "por_que": "Ambas describen el mismo principio de aplicar calidad total (TQM/DIRTFT) al proceso de innovación.",
+        "quedaria": "Calidad de Ejecución en el Proceso de Innovación"
+      }
+    },
+    {
+      "nodos": [
+        "catalogo_pivotes",
+        "tipos_de_pivote"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "catalogo_pivotes",
+          "titulo": "Catálogo de Tipos de Pivote",
+          "etapa": "validacion",
+          "etiqueta": "Conoce los Cambios de Rumbo",
+          "condiciones_activacion": [
+            "Cuando se ha decidido pivotar en la reunión de pivotar o perseverar",
+            "Si el producto resuelve un problema real pero para el cliente equivocado",
+            "Si el cliente correcto tiene un problema distinto al anticipado",
+            "Si el modelo de monetización o canal de distribución no está funcionando"
+          ],
+          "visitas": 14,
+          "cosechas": 14,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "tipos_de_pivote",
+          "titulo": "Tipos de Pivote (Zoom-in, Segmento de Cliente, Plataforma)",
+          "etapa": "planificacion",
+          "etiqueta": "Elige tu Cambio de Rumbo",
+          "condiciones_activacion": [
+            "Cuando se decide pivotar tras una reunión de pivote/perseverar",
+            "Si el feedback de clientes señala valor en una sola funcionalidad del producto",
+            "Si el segmento de cliente actual no muestra disposición a pagar o convertir"
+          ],
+          "visitas": 1,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 18,
+        "fundir": true,
+        "por_que": "Ambas presentan el mismo catálogo de tipos de pivote (zoom-in, segmento de cliente, plataforma, etc.).",
+        "quedaria": "Catálogo de Tipos de Pivote"
+      }
+    },
+    {
+      "nodos": [
+        "ceo_de_guerra_vs_paz",
+        "liderazgo_wartime_peacetime"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "ceo_de_guerra_vs_paz",
+          "titulo": "CEO de Guerra vs. CEO de Paz",
+          "etapa": "ejecucion",
+          "etiqueta": "Reconoce si Lideras en Guerra",
+          "condiciones_activacion": [
+            "Cuando la empresa enfrenta una amenaza existencial real (quiebra, pérdida de cliente mayor, colapso de mercado)",
+            "Cuando el equipo ejecutivo presenta desacuerdos que paralizan decisiones urgentes"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "liderazgo_wartime_peacetime",
+          "titulo": "CEO en Tiempos de Paz vs. CEO en Tiempos de Guerra",
+          "etapa": "ejecucion",
+          "etiqueta": "Lidera Según Paz o Guerra",
+          "condiciones_activacion": [
+            "Cuando la empresa enfrenta una amenaza competitiva o financiera existencial",
+            "Cuando el estilo de gestión actual no está generando resultados adecuados al contexto",
+            "Cuando hay confusión en el equipo sobre el nivel de urgencia o tolerancia a errores esperado"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 19,
+        "fundir": true,
+        "por_que": "Ambas describen la misma distinción de Horowitz entre liderazgo en tiempos de paz y de guerra.",
+        "quedaria": "CEO de Guerra vs. CEO de Paz"
+      }
+    },
+    {
+      "nodos": [
+        "change_request",
+        "solicitud_cambio"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "change_request",
+          "titulo": "Solicitud de Cambio",
+          "etapa": "ejecucion",
+          "etiqueta": "Solicita un Cambio Formal",
+          "condiciones_activacion": [
+            "Si surge la necesidad de modificar alcance, cronograma, costo o cualquier documento del proyecto"
+          ],
+          "visitas": 1,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "solicitud_cambio",
+          "titulo": "Solicitud de Cambio (Change Request)",
+          "etapa": "ejecucion",
+          "etiqueta": "Formaliza tu Solicitud de Cambio",
+          "condiciones_activacion": [
+            "Cuando surge la necesidad de modificar alcance, cronograma, costo o algún documento del proyecto",
+            "Durante la ejecución o monitoreo del proyecto"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 20,
+        "fundir": true,
+        "por_que": "Mismo formulario y mismo proceso de revisión por el Comité de Control de Cambios.",
+        "quedaria": "Solicitud de Cambio (Change Request)"
+      }
+    },
+    {
+      "nodos": [
+        "clasificacion_mercados_cadena_suministro",
+        "modelo_cuatro_cuadrantes_mercado"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "clasificacion_mercados_cadena_suministro",
+          "titulo": "Clasificación de Mercados por Oferta y Demanda",
+          "etapa": "planificacion",
+          "etiqueta": "Ubica tu Mercado en el Mapa",
+          "condiciones_activacion": [
+            "Cuando el usuario necesita definir su estrategia de cadena de suministro",
+            "Si hay incertidumbre sobre cómo priorizar recursos según el tipo de mercado"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "modelo_cuatro_cuadrantes_mercado",
+          "titulo": "Modelo de los Cuatro Cuadrantes de Mercado para Cadena de Suministro",
+          "etapa": "planificacion",
+          "etiqueta": "Clasifica tu Mercado en Cuadrantes",
+          "condiciones_activacion": [
+            "Cuando la empresa necesita definir qué tipo de desempeño de cadena de suministro priorizar",
+            "Cuando se atienden múltiples mercados con dinámicas distintas de oferta/demanda"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 21,
+        "fundir": true,
+        "por_que": "Ambas describen el mismo modelo de cuatro cuadrantes de mercado según oferta y demanda, con la misma acción de clasificar el mercado.",
+        "quedaria": "Clasificación de Mercados por Oferta y Demanda"
+      }
+    },
+    {
+      "nodos": [
+        "clima_positivo_innovacion",
+        "cultura_de_innovacion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "clima_positivo_innovacion",
+          "titulo": "Clima y Cultura Positiva para la Innovación",
+          "etapa": "planificacion",
+          "etiqueta": "Crea un Clima que Innove",
+          "condiciones_activacion": [
+            "Si la organización presenta baja tasa de generación de ideas o proyectos innovadores.",
+            "Si los empleados no se sienten motivados a proponer o liderar proyectos de innovación."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "cultura_de_innovacion",
+          "titulo": "Clima y Cultura Organizacional que Fomenta la Innovación",
+          "etapa": "ejecucion",
+          "etiqueta": "Construye un Clima Innovador",
+          "condiciones_activacion": [
+            "Cuando los empleados no entienden ni apoyan el proceso de innovación de la empresa",
+            "Cuando la organización es excesivamente averso al riesgo en su portafolio de proyectos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 22,
+        "fundir": true,
+        "por_que": "Ambas describen los mismos elementos de clima y cultura organizacional que diferencian a los mejores innovadores.",
+        "quedaria": "Clima y Cultura Organizacional que Fomenta la Innovación"
+      }
+    },
+    {
+      "nodos": [
+        "cofundar_con_amigos_familia_riesgos",
+        "riesgo_cofundadores_relacion_previa"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "cofundar_con_amigos_familia_riesgos",
+          "titulo": "Riesgos de Cofundar con Amigos y Familia (Relational Teams)",
+          "etapa": "ideacion",
+          "etiqueta": "Piensa Antes de Cofundar en Familia",
+          "condiciones_activacion": [
+            "Si los cofundadores potenciales son familiares, amigos cercanos o parejas",
+            "Si el equipo fundador no ha trabajado profesionalmente junto antes"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "riesgo_cofundadores_relacion_previa",
+          "titulo": "Riesgo de Cofundar según Tipo de Relación Previa",
+          "etapa": "ideacion",
+          "etiqueta": "Evalúa el Vínculo entre Cofundadores",
+          "condiciones_activacion": [
+            "Cuando el usuario está considerando fundar una startup con amigos o familiares",
+            "Al formar el equipo fundador inicial"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 23,
+        "fundir": false,
+        "por_que": "El primero advierte específicamente sobre riesgos de fundar con amigos/familia; el segundo mapea el riesgo según todo el espectro de relaciones previas, guiando una decisión más amplia de con quién cofundar.",
+        "quedaria": ""
+      }
+    },
+    {
+      "nodos": [
+        "cogs_vs_operating_expenses",
+        "distincion_cogs_gastos_operativos"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "cogs_vs_operating_expenses",
+          "titulo": "Clasificación entre COGS/COS y Gastos Operativos",
+          "etapa": "ejecucion",
+          "etiqueta": "Separa Costos y Gastos Operativos",
+          "condiciones_activacion": [
+            "Si el usuario necesita calcular márgenes brutos o comparar rentabilidad con otras empresas"
+          ],
+          "visitas": 4,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "distincion_cogs_gastos_operativos",
+          "titulo": "Distinción entre COGS y Gastos Operativos",
+          "etapa": "planificacion",
+          "etiqueta": "Separa tus Costos y Gastos",
+          "condiciones_activacion": [
+            "Si el usuario necesita construir o interpretar un estado de resultados",
+            "Si hay confusión sobre por qué el margen bruto cambia sin razón aparente"
+          ],
+          "visitas": 10,
+          "cosechas": 10,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 24,
+        "fundir": true,
+        "por_que": "Ambas explican la misma distinción matizada entre qué costos van en COGS/COS versus gastos operativos.",
+        "quedaria": "Distinción entre COGS y Gastos Operativos"
+      }
+    },
+    {
+      "nodos": [
+        "compatibilidad_motivaciones_riqueza_control",
+        "evaluar_motivaciones_cofundadores"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "compatibilidad_motivaciones_riqueza_control",
+          "titulo": "Compatibilidad de Motivaciones: Riqueza vs. Control",
+          "etapa": "ideacion",
+          "etiqueta": "Elige Riqueza o Control",
+          "condiciones_activacion": [
+            "Antes de formalizar una sociedad de cofundadores",
+            "Si hay tensiones recurrentes sobre dirección estratégica o control del startup"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "evaluar_motivaciones_cofundadores",
+          "titulo": "Evaluación de Motivaciones de los Cofundadores",
+          "etapa": "ideacion",
+          "etiqueta": "Revisa Motivaciones de tus Socios",
+          "condiciones_activacion": [
+            "Antes de formalizar una sociedad de cofundadores",
+            "Si existe tensión sobre quién debe liderar la startup"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 25,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo eje de motivaciones riqueza vs control entre cofundadores y sus implicaciones.",
+        "quedaria": "Compatibilidad de Motivaciones: Riqueza vs. Control"
+      }
+    },
+    {
+      "nodos": [
+        "comunicacion_aprendizaje_continuo",
+        "comunicacion_aprendizaje_startup"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "comunicacion_aprendizaje_continuo",
+          "titulo": "Comunicar y Compartir el Aprendizaje Continuamente",
+          "etapa": "ejecucion",
+          "etiqueta": "Comparte lo que Aprendes",
+          "condiciones_activacion": [
+            "Si los inversionistas se quejan de falta de visibilidad",
+            "Al iniciar formalmente el Customer Discovery"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "comunicacion_aprendizaje_startup",
+          "titulo": "Comunicar y Compartir el Aprendizaje del Descubrimiento de Clientes",
+          "etapa": "ejecucion",
+          "etiqueta": "Comparte el Aprendizaje del Cliente",
+          "condiciones_activacion": [
+            "Si el equipo o los inversionistas no tienen visibilidad del progreso real del descubrimiento de clientes.",
+            "Si las reuniones de directorio se centran solo en métricas financieras tradicionales."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 26,
+        "fundir": true,
+        "por_que": "Mismo hábito de comunicar aprendizaje continuamente durante el descubrimiento de clientes.",
+        "quedaria": "Comunicar y Compartir el Aprendizaje Continuamente"
+      }
+    },
+    {
+      "nodos": [
+        "contratos_de_servicio_garantia",
+        "diferenciacion_garantia_contrato_servicio"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "contratos_de_servicio_garantia",
+          "titulo": "Ofrecer Contratos de Servicio (Service Contracts) Correctamente",
+          "etapa": "ejecucion",
+          "etiqueta": "Ofrece Contratos de Servicio Claros",
+          "condiciones_activacion": [
+            "Cuando la empresa quiere monetizar servicios postventa adicionales (extended warranty, mantenimiento pago)."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "diferenciacion_garantia_contrato_servicio",
+          "titulo": "Diferenciación entre Garantía y Contrato de Servicio",
+          "etapa": "planificacion",
+          "etiqueta": "Distingue Garantía de Contrato",
+          "condiciones_activacion": [
+            "Cuando el negocio ofrece planes de protección extendida o servicios postventa pagados adicionales"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 27,
+        "fundir": false,
+        "por_que": "Uno es la ejecución legal de ofrecer contratos de servicio y otro es la distinción conceptual entre garantía y contrato de servicio, usados en momentos distintos.",
+        "quedaria": ""
+      }
+    },
+    {
+      "nodos": [
+        "cost_management_plan",
+        "plan_gestion_costos"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "cost_management_plan",
+          "titulo": "Cost Management Plan",
+          "etapa": "planificacion",
+          "etiqueta": "Planea Cómo Controlar Costos",
+          "condiciones_activacion": [
+            "Cuando se necesita establecer cómo se gestionarán los costos a lo largo del ciclo de vida del proyecto"
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "plan_gestion_costos",
+          "titulo": "Plan de Gestión de Costos",
+          "etapa": "planificacion",
+          "etiqueta": "Controla los Costos del Proyecto",
+          "condiciones_activacion": [
+            "Cuando se inicia la planificación financiera formal del proyecto"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 28,
+        "fundir": true,
+        "por_que": "Es el mismo plan de gestión de costos, uno en inglés y otro en español.",
+        "quedaria": "Plan de Gestión de Costos"
+      }
+    },
+    {
+      "nodos": [
+        "cronograma_proyecto",
+        "project_schedule"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "cronograma_proyecto",
+          "titulo": "Cronograma del Proyecto (Project Schedule)",
+          "etapa": "planificacion",
+          "etiqueta": "Traza tu Cronograma de Proyecto",
+          "condiciones_activacion": [
+            "Cuando se necesita visualizar la secuencia temporal de actividades del proyecto",
+            "Cuando se requiere comunicar plazos a stakeholders"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "project_schedule",
+          "titulo": "Project Schedule",
+          "etapa": "planificacion",
+          "etiqueta": "Define el Cronograma del Proyecto",
+          "condiciones_activacion": [
+            "Cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final del proyecto"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 7,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 29,
+        "fundir": true,
+        "por_que": "Mismo documento de cronograma del proyecto, en inglés y español.",
+        "quedaria": "Cronograma del Proyecto (Project Schedule)"
+      }
+    },
+    {
+      "nodos": [
+        "cuatro_categorias_desempeno_cadena_suministro",
+        "metricas_desempeno_cadena_suministro"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "cuatro_categorias_desempeno_cadena_suministro",
+          "titulo": "Cuatro Categorías de Desempeño de la Cadena de Suministro",
+          "etapa": "planificacion",
+          "etiqueta": "Mide tu Desempeño Integral",
+          "condiciones_activacion": [
+            "Cuando se necesita establecer KPIs de cadena de suministro",
+            "Si la empresa no sabe en qué área enfocar sus esfuerzos operativos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "metricas_desempeno_cadena_suministro",
+          "titulo": "Categorías de Métricas de Desempeño de Cadena de Suministro",
+          "etapa": "ejecucion",
+          "etiqueta": "Mide tu Cadena de Suministro",
+          "condiciones_activacion": [
+            "Cuando la empresa necesita evaluar objetivamente el desempeño de su cadena de suministro",
+            "Cuando se quiere justificar inversión en mejoras de operación logística"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 30,
+        "fundir": true,
+        "por_que": "Ambos describen las mismas cuatro categorías de desempeño de la cadena de suministro.",
+        "quedaria": "Cuatro Categorías de Desempeño de la Cadena de Suministro"
+      }
+    },
+    {
+      "nodos": [
+        "cuatro_etapas_del_pensamiento_creativo",
+        "wallas_cuatro_etapas_pensamiento_creativo"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": true,
+      "miembros": [
+        {
+          "id": "cuatro_etapas_del_pensamiento_creativo",
+          "titulo": "Las Cuatro Etapas del Pensamiento Creativo (Wallas)",
+          "etapa": "ideacion",
+          "etiqueta": "Sigue las Etapas de tu Creatividad",
+          "condiciones_activacion": [
+            "Cuando el equipo está bloqueado buscando una solución creativa y fuerza el pensamiento sin resultados",
+            "Al iniciar la fase de ideación de un proyecto de innovación o diseño",
+            "Cuando se necesita estructurar un proceso creativo caótico o intuitivo en pasos gestionables",
+            "Si se requiere justificar tiempos de 'no trabajo aparente' dentro de un cronograma de innovación"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": true,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "wallas_cuatro_etapas_pensamiento_creativo",
+          "titulo": "Las Cuatro Etapas del Pensamiento Creativo",
+          "etapa": "ideacion",
+          "etiqueta": "Recorre las Cuatro Etapas Creativas",
+          "condiciones_activacion": [
+            "Cuando el usuario está atascado en un problema creativo o de diseño y no sabe cómo avanzar.",
+            "Cuando se busca entender por qué las ideas no llegan bajo presión constante."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 31,
+        "fundir": true,
+        "por_que": "Duplicado del mismo modelo de Wallas de cuatro etapas del pensamiento creativo.",
+        "quedaria": "Las Cuatro Etapas del Pensamiento Creativo (Wallas)"
+      }
+    },
+    {
+      "nodos": [
+        "cumplimiento_inversionistas_acreditados",
+        "inversionistas_acreditados"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "cumplimiento_inversionistas_acreditados",
+          "titulo": "Cumplimiento con Regulación de Inversionistas Acreditados",
+          "etapa": "planificacion",
+          "etiqueta": "Verifica tus Inversionistas Acreditados",
+          "condiciones_activacion": [
+            "Cuando la empresa planea vender acciones o levantar capital de terceros",
+            "Cuando existe presión de familiares o amigos para invertir en la startup"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "inversionistas_acreditados",
+          "titulo": "Cumplimiento de Normas de Inversionistas Acreditados",
+          "etapa": "planificacion",
+          "etiqueta": "Cumple Normas de Inversionistas",
+          "condiciones_activacion": [
+            "Si el usuario está por levantar capital de inversionistas privados"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": [
+            "dato_local_cableado"
+          ]
+        }
+      ],
+      "veredicto": {
+        "grupo": 32,
+        "fundir": true,
+        "por_que": "Mismo requisito legal de vender solo a inversionistas acreditados, con distinto nombre.",
+        "quedaria": "Cumplimiento con Regulación de Inversionistas Acreditados"
+      }
+    },
+    {
+      "nodos": [
+        "cumplimiento_magnuson_moss",
+        "regla_divulgacion_garantia"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "cumplimiento_magnuson_moss",
+          "titulo": "Cumplimiento de la Ley Federal Magnuson-Moss",
+          "etapa": "planificacion",
+          "etiqueta": "Cumple las Reglas de Garantía",
+          "condiciones_activacion": [
+            "Cuando el producto cuesta más de $15 USD y se vende a consumidores finales en EE.UU.",
+            "Antes de imprimir o publicar cualquier documento de garantía."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "regla_divulgacion_garantia",
+          "titulo": "Regla de Divulgación de Términos de Garantía (Disclosure Rule)",
+          "etapa": "ejecucion",
+          "etiqueta": "Aclara los Términos de tu Garantía",
+          "condiciones_activacion": [
+            "Cuando la empresa ya decidió ofrecer garantía escrita y necesita redactar el texto legal."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 33,
+        "fundir": false,
+        "por_que": "Magnuson-Moss regula requisitos generales de garantías escritas, mientras que la Disclosure Rule es una obligación específica de la FTC sobre divulgación de términos; llevan a acciones de cumplimiento distintas.",
+        "quedaria": ""
+      }
+    },
+    {
+      "nodos": [
+        "customer_acquisition_activation_web",
+        "get_customers_funnel_webmobile"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "customer_acquisition_activation_web",
+          "titulo": "Adquisición y Activación de Clientes en Canales Web/Mobile",
+          "etapa": "ejecucion",
+          "etiqueta": "Atrae y Activa Clientes Digitales",
+          "condiciones_activacion": [
+            "Cuando el startup opera en canal web/mobile y necesita atraer sus primeros clientes",
+            "Cuando se está en Fase 2 o 3 de customer discovery probando reacción inicial al MVP"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "get_customers_funnel_webmobile",
+          "titulo": "Embudo de Adquisición y Activación Web/Mobile",
+          "etapa": "validacion",
+          "etiqueta": "Atrae y Activa Usuarios Digitales",
+          "condiciones_activacion": [
+            "Si el startup opera en canal digital (web o mobile)",
+            "Si se necesita validar cómo atraer tráfico de calidad a bajo costo antes de un lanzamiento masivo"
+          ],
+          "visitas": 17,
+          "cosechas": 17,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 34,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo proceso de adquisición y activación en canales web/mobile.",
+        "quedaria": "Embudo de Adquisición y Activación Web/Mobile"
+      }
+    },
+    {
+      "nodos": [
+        "customer_discovery_cuatro_fases",
+        "customer_discovery_overview"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "customer_discovery_cuatro_fases",
+          "titulo": "Las Cuatro Fases del Customer Discovery",
+          "etapa": "validacion",
+          "etiqueta": "Avanza en Cuatro Fases",
+          "condiciones_activacion": [
+            "Cuando se necesita estructurar el proceso completo de descubrimiento de clientes de forma metódica",
+            "Al iniciar el proceso formal de descubrimiento de clientes en un proyecto nuevo"
+          ],
+          "visitas": 12,
+          "cosechas": 12,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "customer_discovery_overview",
+          "titulo": "Proceso de Customer Discovery (Cuatro Fases)",
+          "etapa": "validacion",
+          "etiqueta": "Prueba tu Modelo en Fases",
+          "condiciones_activacion": [
+            "Si el usuario tiene una hipótesis de negocio pero no ha salido a hablar con clientes reales",
+            "Si el equipo quiere evitar construir un producto completo sin validar el problema primero"
+          ],
+          "visitas": 33,
+          "cosechas": 33,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 35,
+        "fundir": true,
+        "por_que": "Mismo proceso de cuatro fases del Customer Discovery descrito dos veces.",
+        "quedaria": "Las Cuatro Fases del Customer Discovery"
+      }
+    },
+    {
+      "nodos": [
+        "customer_retention_strategy",
+        "customer_retention_tactics"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "customer_retention_strategy",
+          "titulo": "Estrategia de Retención de Clientes (Keep Customers)",
+          "etapa": "ejecucion",
+          "etiqueta": "Diseña tu Estrategia de Retención",
+          "condiciones_activacion": [
+            "Cuando el startup ya tiene una base inicial de clientes y necesita reducir el churn",
+            "Cuando se detecta alta tasa de abandono de usuarios activados"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 10,
+          "hallazgos": []
+        },
+        {
+          "id": "customer_retention_tactics",
+          "titulo": "Tácticas de Retención de Clientes (Keep)",
+          "etapa": "ejecucion",
+          "etiqueta": "Aplica Tácticas para Retener Clientes",
+          "condiciones_activacion": [
+            "Si el startup ya tiene clientes activos y busca reducir el churn",
+            "Si el modelo de negocio depende de suscripciones o repetición de compra"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 36,
+        "fundir": true,
+        "por_que": "La estrategia y las tácticas de retención describen el mismo esfuerzo de reducir el churn con las mismas herramientas.",
+        "quedaria": "Tácticas de Retención de Clientes (Keep)"
+      }
+    },
+    {
+      "nodos": [
+        "customer_scenarios_business_model",
+        "escenarios_diseno_modelo_negocio"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "customer_scenarios_business_model",
+          "titulo": "Escenarios de Cliente para Diseño de Modelo de Negocio",
+          "etapa": "ideacion",
+          "etiqueta": "Imagina Escenarios de tus Clientes",
+          "condiciones_activacion": [
+            "Si el equipo tiene insights de clientes pero no sabe cómo traducirlos en decisiones de modelo de negocio",
+            "Si se necesita validar si un modelo sirve a múltiples segmentos"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "escenarios_diseno_modelo_negocio",
+          "titulo": "Escenarios para Guiar el Diseño del Modelo de Negocio",
+          "etapa": "ideacion",
+          "etiqueta": "Diseña tu Modelo con Escenarios",
+          "condiciones_activacion": [
+            "Si el usuario tiene múltiples segmentos de clientes y no sabe si necesita un modelo distinto para cada uno",
+            "Cuando se necesita anticipar cómo el entorno futuro (tecnología, competencia) impactará el modelo de negocio actual",
+            "Si las decisiones sobre canales o relaciones con clientes son ambiguas y requieren contexto específico"
+          ],
+          "visitas": 3,
+          "cosechas": 3,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 37,
+        "fundir": true,
+        "por_que": "Ambos describen los escenarios de cliente como herramienta para el diseño del modelo de negocio.",
+        "quedaria": "Escenarios para Guiar el Diseño del Modelo de Negocio"
+      }
+    },
+    {
+      "nodos": [
+        "customer_types_mapping",
+        "tipos_de_clientes"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "customer_types_mapping",
+          "titulo": "Mapeo de Tipos de Cliente en la Decisión de Compra",
+          "etapa": "validacion",
+          "etiqueta": "Identifica Quién Decide la Compra",
+          "condiciones_activacion": [
+            "Si el producto se vende en un contexto B2B complejo",
+            "Cuando la venta involucra más de una persona en la decisión"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "tipos_de_clientes",
+          "titulo": "Tipos de Clientes en el Proceso de Decisión de Compra",
+          "etapa": "validacion",
+          "etiqueta": "Conoce a Todos tus Compradores",
+          "condiciones_activacion": [
+            "Si el usuario vende un producto B2B complejo o tiene múltiples actores en la decisión de compra"
+          ],
+          "visitas": 5,
+          "cosechas": 5,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 38,
+        "fundir": true,
+        "por_que": "Mismo mapeo de roles (usuario, influenciador, recomendador, etc.) en la decisión de compra.",
+        "quedaria": "Tipos de Clientes en el Proceso de Decisión de Compra"
+      }
+    },
+    {
+      "nodos": [
+        "customer_validation_sales_roadmap",
+        "sales_roadmap_vs_sales_force"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "customer_validation_sales_roadmap",
+          "titulo": "Customer Validation y Sales Roadmap",
+          "etapa": "planificacion",
+          "etiqueta": "Traza tu Ruta de Ventas",
+          "condiciones_activacion": [
+            "Cuando el startup ya validó el problema/solución y busca confirmar que puede vender de forma repetible y escalable",
+            "Si el CEO quiere acelerar contratando vendedores antes de validar el modelo"
+          ],
+          "visitas": 26,
+          "cosechas": 20,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "sales_roadmap_vs_sales_force",
+          "titulo": "Construir un Sales Roadmap antes que una Fuerza de Ventas",
+          "etapa": "validacion",
+          "etiqueta": "Planifica antes de Vender Más",
+          "condiciones_activacion": [
+            "Si el CEO quiere acelerar ventas contratando personal antes de validar el modelo",
+            "Si la startup está en fase de customer validation"
+          ],
+          "visitas": 18,
+          "cosechas": 17,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 39,
+        "fundir": false,
+        "por_que": "Uno cubre Customer Validation y el sales roadmap en general, el otro es una advertencia específica contra contratar fuerza de ventas prematuramente.",
+        "quedaria": ""
+      }
+    },
+    {
+      "nodos": [
+        "decisiones_rapidas_reversibles",
+        "decisiones_reversibles_irreversibles"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "decisiones_rapidas_reversibles",
+          "titulo": "Toma de Decisiones Rápida y Reversible",
+          "etapa": "ejecucion",
+          "etiqueta": "Decide Rápido lo Reversible",
+          "condiciones_activacion": [
+            "Si el equipo tiende a paralizarse buscando la decisión perfecta",
+            "En reuniones de equipo donde se debaten cambios de producto o mercado"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "decisiones_reversibles_irreversibles",
+          "titulo": "Decisiones Reversibles vs Irreversibles",
+          "etapa": "ejecucion",
+          "etiqueta": "Distingue lo Reversible e Irreversible",
+          "condiciones_activacion": [
+            "Si el equipo tarda demasiado en decidir sobre features o segmentos de mercado",
+            "Si la startup se compara con procesos de gran empresa"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 40,
+        "fundir": true,
+        "por_que": "Ambos tratan la misma clasificación de decisiones reversibles vs irreversibles y su velocidad de ejecución.",
+        "quedaria": "Decisiones Reversibles vs Irreversibles"
+      }
+    },
+    {
+      "nodos": [
+        "definicion_gatekeepers",
+        "seleccion_gatekeepers"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "definicion_gatekeepers",
+          "titulo": "Definición y Selección de Gatekeepers",
+          "etapa": "ejecucion",
+          "etiqueta": "Elige a tus Guardianes Clave",
+          "condiciones_activacion": [
+            "Si el usuario no tiene claro quién toma las decisiones Go/Kill en su proceso de innovación.",
+            "Si existen múltiples tipos de proyectos con distintos niveles de riesgo que requieren distintos niveles de autoridad."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "seleccion_gatekeepers",
+          "titulo": "Selección y Rol de los Gatekeepers",
+          "etapa": "planificacion",
+          "etiqueta": "Elige a los Guardianes Clave",
+          "condiciones_activacion": [
+            "Si no está claro quién debe autorizar el avance de un proyecto.",
+            "Si las decisiones de gate son tomadas por personas de una sola función."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 41,
+        "fundir": true,
+        "por_que": "Mismo concepto de definir y seleccionar gatekeepers con las mismas responsabilidades.",
+        "quedaria": "Definición y Selección de Gatekeepers"
+      }
+    },
+    {
+      "nodos": [
+        "definicion_sprint_terminado",
+        "definicion_sprint_terminado_fisico"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "definicion_sprint_terminado",
+          "titulo": "Definición de 'Sprint Terminado' para Productos Físicos",
+          "etapa": "ejecucion",
+          "etiqueta": "Redefine 'Terminado' para lo Físico",
+          "condiciones_activacion": [
+            "Si el equipo intenta aplicar Scrum de software directamente a un producto físico sin adaptación",
+            "Si existe confusión sobre qué se debe entregar al final de cada sprint"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "definicion_sprint_terminado_fisico",
+          "titulo": "Definir un 'Sprint Terminado' para Productos Físicos",
+          "etapa": "planificacion",
+          "etiqueta": "Adapta 'Terminado' a Productos Físicos",
+          "condiciones_activacion": [
+            "Si el proyecto involucra desarrollo de hardware, dispositivos médicos, maquinaria u otros productos no divisibles como el software",
+            "Cuando el equipo tiene dificultad para saber cuándo detenerse en una tarea de evaluación o diseño"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 42,
+        "fundir": true,
+        "por_que": "Mismo concepto de redefinir 'sprint terminado' para productos físicos.",
+        "quedaria": "Definir un 'Sprint Terminado' para Productos Físicos"
+      }
+    },
+    {
+      "nodos": [
+        "desarrollo_en_espiral",
+        "spiral_development"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "desarrollo_en_espiral",
+          "titulo": "Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)",
+          "etapa": "ejecucion",
+          "etiqueta": "Construye, Prueba y Ajusta",
+          "condiciones_activacion": [
+            "Si los clientes no tienen claro lo que quieren o necesitan",
+            "Si el proyecto es de alto riesgo o innovación radical",
+            "Si los requerimientos del producto pueden cambiar durante el desarrollo"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 8,
+          "hallazgos": []
+        },
+        {
+          "id": "spiral_development",
+          "titulo": "Desarrollo en Espiral (Spiral Development)",
+          "etapa": "ejecucion",
+          "etiqueta": "Desarrolla tu Producto en Espiral",
+          "condiciones_activacion": [
+            "Cuando el mercado es dinámico y las necesidades del cliente son fluidas o inciertas",
+            "Si el equipo sigue un proceso lineal rígido y descubre tarde que el producto no cumple expectativas",
+            "Durante toda la etapa de desarrollo y pruebas del producto",
+            "Cuando se requiere reducir el riesgo de tener que rehacer el trabajo después del desarrollo completo"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 7,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 43,
+        "fundir": true,
+        "por_que": "Mismo enfoque de desarrollo en espiral iterativo de construir-probar-revisar.",
+        "quedaria": "Desarrollo en Espiral (Spiral Development)"
+      }
+    },
+    {
+      "nodos": [
+        "determinar_tipo_de_mercado",
+        "market_type_definicion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "determinar_tipo_de_mercado",
+          "titulo": "Determinar el Tipo de Mercado",
+          "etapa": "ideacion",
+          "etiqueta": "Identifica tu Tipo de Mercado",
+          "condiciones_activacion": [
+            "Al iniciar el Customer Discovery",
+            "Si la estrategia de marketing no está funcionando y se sospecha error de tipo de mercado"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "market_type_definicion",
+          "titulo": "Definir el Tipo de Mercado (Market Type)",
+          "etapa": "ideacion",
+          "etiqueta": "Define tu Tipo de Mercado",
+          "condiciones_activacion": [
+            "Si el emprendedor aplica la misma estrategia de marketing sin importar si el mercado es nuevo o existente.",
+            "Si hay confusión sobre quién es el competidor real."
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 5,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 44,
+        "fundir": true,
+        "por_que": "Mismo marco de los cuatro tipos de mercado para definir estrategia de startup.",
+        "quedaria": "Determinar el Tipo de Mercado"
+      }
+    },
+    {
+      "nodos": [
+        "diseno_ciclo_completo_equipo",
+        "diseno_para_el_ciclo_completo"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "diseno_ciclo_completo_equipo",
+          "titulo": "Continuidad del Equipo en el Ciclo Completo del Proyecto",
+          "etapa": "ejecucion",
+          "etiqueta": "Mantén tu Equipo Hasta el Final",
+          "condiciones_activacion": [
+            "Cuando la política de rotación de personal de la empresa amenaza con interrumpir un proyecto de innovación en curso."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "diseno_para_el_ciclo_completo",
+          "titulo": "Diseñar para el Ciclo Completo del Proyecto",
+          "etapa": "ejecucion",
+          "etiqueta": "Sostén tu Equipo Completo",
+          "condiciones_activacion": [
+            "Si la política de rotación de personal amenaza la continuidad de un proyecto de innovación"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 45,
+        "fundir": true,
+        "por_que": "Ambos tratan la necesidad de mantener al equipo durante todo el ciclo del proyecto de diseño disruptivo.",
+        "quedaria": "Diseñar para el Ciclo Completo del Proyecto"
+      }
+    },
+    {
+      "nodos": [
+        "diseno_compensacion_equidad",
+        "seesaw_salario_equity"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "diseno_compensacion_equidad",
+          "titulo": "Balance entre Salario y Equity (Cash-versus-Equity Seesaw)",
+          "etapa": "ejecucion",
+          "etiqueta": "Balancea Salario y Participación",
+          "condiciones_activacion": [
+            "Cuando se está negociando una oferta con un ejecutivo clave",
+            "Cuando existen arreglos de equity inconsistentes entre empleados tempranos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "seesaw_salario_equity",
+          "titulo": "El Balancín Salario vs. Equity",
+          "etapa": "ejecucion",
+          "etiqueta": "Equilibra Salario y Participación",
+          "condiciones_activacion": [
+            "Cuando se contrata al primer equipo ejecutivo.",
+            "Cuando se necesita atraer talento sin recursos de efectivo suficientes."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 46,
+        "fundir": true,
+        "por_que": "Mismo concepto del balancín entre salario en efectivo y equity en compensación.",
+        "quedaria": "El Balancín Salario vs. Equity"
+      }
+    },
+    {
+      "nodos": [
+        "diseno_experimentos_pass_fail",
+        "pass_fail_experiment_design"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "diseno_experimentos_pass_fail",
+          "titulo": "Diseño de Experimentos Pass/Fail para Probar Hipótesis",
+          "etapa": "validacion",
+          "etiqueta": "Diseña Pruebas Simples y Claras",
+          "condiciones_activacion": [
+            "Cuando las hipótesis del modelo de negocio ya están definidas y se necesita evidencia empírica antes de invertir más recursos"
+          ],
+          "visitas": 16,
+          "cosechas": 13,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "pass_fail_experiment_design",
+          "titulo": "Diseño de Experimentos Pass/Fail para Validar Hipótesis",
+          "etapa": "validacion",
+          "etiqueta": "Diseña Experimentos Pasa o Falla",
+          "condiciones_activacion": [
+            "Cuando el usuario tiene hipótesis de negocio sin validar y necesita salir a probarlas con clientes reales"
+          ],
+          "visitas": 12,
+          "cosechas": 5,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 47,
+        "fundir": true,
+        "por_que": "Mismo ciclo de convertir hipótesis en experimentos pass/fail para validarlas.",
+        "quedaria": "Diseño de Experimentos Pass/Fail para Validar Hipótesis"
+      }
+    },
+    {
+      "nodos": [
+        "diseno_landing_page",
+        "diseno_landing_page_conversion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "diseno_landing_page",
+          "titulo": "Diseño de Landing Page para Activación",
+          "etapa": "validacion",
+          "etiqueta": "Diseña tu Página de Activación",
+          "condiciones_activacion": [
+            "Cuando se necesita diseñar o rediseñar la página principal de captación de un producto digital"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "diseno_landing_page_conversion",
+          "titulo": "Diseño de Landing Page para Conversión",
+          "etapa": "validacion",
+          "etiqueta": "Diseña tu Página que Convierte",
+          "condiciones_activacion": [
+            "Cuando se necesita mejorar la tasa de conversión de visitantes a usuarios activados"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 48,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo diseño de landing page en los mismos cuatro ejes para lograr activación/conversión.",
+        "quedaria": "Diseño de Landing Page para Activación"
+      }
+    },
+    {
+      "nodos": [
+        "diseno_reparabilidad_cultura_arreglo",
+        "indice_de_reparabilidad"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "diseno_reparabilidad_cultura_arreglo",
+          "titulo": "Diseñar para la Reparabilidad: Índice de Reparabilidad",
+          "etapa": "planificacion",
+          "etiqueta": "Diseña para que se Repare",
+          "condiciones_activacion": [
+            "Si el producto es físico y tiene un ciclo de vida largo (electrodomésticos, dispositivos, mobiliario).",
+            "Si la empresa quiere diferenciarse por sostenibilidad o responsabilidad ambiental."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": [
+            "matriz_o_puntaje"
+          ]
+        },
+        {
+          "id": "indice_de_reparabilidad",
+          "titulo": "Diseñar un Índice de Reparabilidad",
+          "etapa": "planificacion",
+          "etiqueta": "Diseña tu Índice de Reparación",
+          "condiciones_activacion": [
+            "Cuando el producto es físico y susceptible a romperse u obsolescencia.",
+            "Si se busca sostenibilidad y reducción de residuos en el modelo de negocio."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 49,
+        "fundir": true,
+        "por_que": "Mismo concepto del índice de reparabilidad inspirado en la ley francesa.",
+        "quedaria": "Diseñar un Índice de Reparabilidad"
+      }
+    },
+    {
+      "nodos": [
+        "driver_informacion",
+        "information_driver_supply_chain"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "driver_informacion",
+          "titulo": "Driver de Información: Coordinación y Pronóstico en la Cadena de Suministro",
+          "etapa": "ejecucion",
+          "etiqueta": "Usa la Información para Decidir",
+          "condiciones_activacion": [
+            "Cuando existe desconexión de información entre los participantes de la cadena de suministro.",
+            "Cuando el usuario necesita mejorar la precisión de sus pronósticos de demanda."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "information_driver_supply_chain",
+          "titulo": "El Rol de la Información como Driver de la Cadena de Suministro",
+          "etapa": "planificacion",
+          "etiqueta": "Comparte Información en tu Cadena",
+          "condiciones_activacion": [
+            "Si el usuario ya tiene una operación con múltiples proveedores o distribuidores y necesita optimizar decisiones"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 50,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo concepto: la información como driver que conecta y coordina las decisiones de la cadena de suministro.",
+        "quedaria": "El Rol de la Información como Driver de la Cadena de Suministro"
+      }
+    },
+    {
+      "nodos": [
+        "drones_autonomous_vehicles",
+        "vehiculos_autonomos_drones_supply_chain"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "drones_autonomous_vehicles",
+          "titulo": "Drones y Vehículos Autónomos en Logística",
+          "etapa": "ejecucion",
+          "etiqueta": "Usa Drones en tu Logística",
+          "condiciones_activacion": [
+            "Si la empresa busca reducir costos o tiempos de entrega mediante automatización de transporte"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "vehiculos_autonomos_drones_supply_chain",
+          "titulo": "Drones y Vehículos Autónomos en la Cadena de Suministro",
+          "etapa": "ejecucion",
+          "etiqueta": "Usa Drones en tu Cadena",
+          "condiciones_activacion": [
+            "Cuando la empresa busca reducir costos logísticos y tiempos de entrega mediante automatización",
+            "Si existe alto volumen de entregas repetitivas entre nodos fijos de la cadena"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 51,
+        "fundir": true,
+        "por_que": "Definen y aplican el mismo concepto de drones/vehículos autónomos en logística con casi idéntica descripción.",
+        "quedaria": "Drones y Vehículos Autónomos en la Cadena de Suministro"
+      }
+    },
+    {
+      "nodos": [
+        "efecto_nivelador_ia",
+        "ia_como_nivelador_habilidades"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "efecto_nivelador_ia",
+          "titulo": "Efecto Nivelador de la IA en el Desempeño de los Equipos",
+          "etapa": "ejecucion",
+          "etiqueta": "Nivela tu Equipo con IA",
+          "condiciones_activacion": [
+            "Cuando el equipo tiene alta variabilidad de habilidades y recursos limitados para contratar solo talento senior.",
+            "Si se busca escalar rápidamente sin depender exclusivamente de contratar 'estrellas' del rubro."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "ia_como_nivelador_habilidades",
+          "titulo": "IA como Nivelador de Habilidades (Great Leveler)",
+          "etapa": "ejecucion",
+          "etiqueta": "La IA Nivela tus Talentos",
+          "condiciones_activacion": [
+            "Si se busca maximizar el ROI de la adopción de IA en equipos heterogéneos",
+            "Al evaluar el impacto de IA en la productividad organizacional"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 52,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo hallazgo: la IA reduce la brecha de desempeño elevando a los trabajadores de bajo rendimiento.",
+        "quedaria": "IA como Nivelador de Habilidades (Great Leveler)"
+      }
+    },
+    {
+      "nodos": [
+        "embudo_get_keep_grow",
+        "framework_get_keep_grow"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "embudo_get_keep_grow",
+          "titulo": "Embudo Get, Keep, Grow Customers",
+          "etapa": "ejecucion",
+          "etiqueta": "Consigue, Mantén y Crece Clientes",
+          "condiciones_activacion": [
+            "Cuando el startup ya tiene un MVP y necesita definir cómo conseguirá, retendrá y hará crecer su base de clientes",
+            "Cuando se está construyendo el business model canvas y falta la sección de canales/relación con clientes"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "framework_get_keep_grow",
+          "titulo": "Framework 'Get, Keep, Grow' Customers",
+          "etapa": "validacion",
+          "etiqueta": "Consigue, Mantén y Haz Crecer",
+          "condiciones_activacion": [
+            "Si el usuario está diseñando su estrategia de relación con clientes",
+            "Si aún no ha definido cómo adquirirá, retendrá y hará crecer su base de clientes"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 53,
+        "fundir": true,
+        "por_que": "Es el mismo framework 'Get, Keep, Grow' descrito con las mismas palabras y propósito.",
+        "quedaria": "Framework 'Get, Keep, Grow' Customers"
+      }
+    },
+    {
+      "nodos": [
+        "enfoque_resolucion_problemas_lanzamiento_producto",
+        "lanzamiento_nuevos_productos_enfoque_problema"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "enfoque_resolucion_problemas_lanzamiento_producto",
+          "titulo": "Enfoque de Resolución de Problemas en Lanzamientos de Producto",
+          "etapa": "ejecucion",
+          "etiqueta": "Enfócate en el Problema del Cliente",
+          "condiciones_activacion": [
+            "Cuando el usuario está por lanzar un nuevo producto o feature al mercado.",
+            "Cuando las ventas de un producto nuevo están muy por debajo de las proyecciones iniciales."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "lanzamiento_nuevos_productos_enfoque_problema",
+          "titulo": "Evitar el Enfoque 'Bells-and-Whistles' en Lanzamientos de Nuevos Productos",
+          "etapa": "ejecucion",
+          "etiqueta": "Habla del Problema, no del Producto",
+          "condiciones_activacion": [
+            "Cuando se está preparando el lanzamiento comercial de un nuevo producto",
+            "Cuando las ventas de un producto nuevo están por debajo de lo proyectado y se sospecha un enfoque excesivo en características"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 54,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo error (enfocarse en características y ventajas) y la misma recomendación de evitarlo en lanzamientos.",
+        "quedaria": "Evitar el Enfoque 'Bells-and-Whistles' en Lanzamientos de Nuevos Productos"
+      }
+    },
+    {
+      "nodos": [
+        "entendiendo_balance_general_basico",
+        "lectura_balance_general"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "entendiendo_balance_general_basico",
+          "titulo": "Entendiendo los Fundamentos del Balance General",
+          "etapa": "ejecucion",
+          "etiqueta": "Comprende tu Balance General",
+          "condiciones_activacion": [
+            "Si el usuario solo revisa el estado de resultados y necesita entender la salud financiera completa de su negocio",
+            "Si el usuario busca financiamiento y debe presentar estados financieros a inversores"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "lectura_balance_general",
+          "titulo": "Lectura y Análisis del Balance General",
+          "etapa": "planificacion",
+          "etiqueta": "Lee tu Balance General",
+          "condiciones_activacion": [
+            "Si el usuario necesita preparar documentación financiera para inversionistas",
+            "Si el usuario quiere evaluar la solidez financiera de su empresa o una empresa objetivo"
+          ],
+          "visitas": 3,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 6,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 55,
+        "fundir": true,
+        "por_que": "Ambos explican qué es y cómo leer el balance general (activos, pasivos, patrimonio).",
+        "quedaria": "Lectura y Análisis del Balance General"
+      }
+    },
+    {
+      "nodos": [
+        "equilibrio_habito_estimulo",
+        "ruptura_de_habitos_para_estimulo"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "equilibrio_habito_estimulo",
+          "titulo": "Equilibrio entre Hábito y Ruptura de Hábito",
+          "etapa": "ideacion",
+          "etiqueta": "Equilibra Hábito y Novedad",
+          "condiciones_activacion": [
+            "Si el usuario siente que su pensamiento se ha vuelto rígido, repetitivo o poco creativo.",
+            "Si una rutina que antes era productiva ha dejado de generar ideas nuevas."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "ruptura_de_habitos_para_estimulo",
+          "titulo": "Ruptura Deliberada de Hábitos para Renovar el Estímulo Creativo",
+          "etapa": "ideacion",
+          "etiqueta": "Rompe tus Hábitos Creativos",
+          "condiciones_activacion": [
+            "Cuando el pensador siente que su trabajo se ha vuelto 'estancado' o mecánico",
+            "Cuando la productividad creativa disminuye pese a mantener la disciplina habitual"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 56,
+        "fundir": true,
+        "por_que": "Ambos tratan la misma idea de Wallas: ser 'amo y no esclavo' de los hábitos y romperlos cuando se vuelven improductivos.",
+        "quedaria": "Ruptura Deliberada de Hábitos para Renovar el Estímulo Creativo"
+      }
+    },
+    {
+      "nodos": [
+        "espacios_de_diseno_superpuestos",
+        "tres_espacios_innovacion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "espacios_de_diseno_superpuestos",
+          "titulo": "Los Tres Espacios del Design Thinking: Inspiración, Ideación e Implementación",
+          "etapa": "planificacion",
+          "etiqueta": "Inspírate, Idea e Implementa",
+          "condiciones_activacion": [
+            "Cuando una organización tradicional se resiste al desorden aparente del proceso creativo",
+            "Si el equipo necesita justificar ante stakeholders por qué el proceso de diseño no sigue un cronograma lineal"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "tres_espacios_innovacion",
+          "titulo": "Los Tres Espacios de la Innovación (Inspiración, Ideación, Implementación)",
+          "etapa": "ideacion",
+          "etiqueta": "Recorre los Tres Espacios Creativos",
+          "condiciones_activacion": [
+            "Si el equipo espera un proceso lineal de innovación y se siente frustrado por la falta de estructura",
+            "Si el proyecto requiere descubrimiento continuo de insumos del usuario"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 57,
+        "fundir": true,
+        "por_que": "Describen los mismos tres espacios superpuestos del design thinking con la misma estructura conceptual.",
+        "quedaria": "Los Tres Espacios del Design Thinking: Inspiración, Ideación e Implementación"
+      }
+    },
+    {
+      "nodos": [
+        "estado_flujo_de_caja_tres_categorias",
+        "lectura_estado_flujo_efectivo"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "estado_flujo_de_caja_tres_categorias",
+          "titulo": "El Estado de Flujo de Caja: Operación, Inversión y Financiamiento",
+          "etapa": "ejecucion",
+          "etiqueta": "Organiza tu Flujo de Caja",
+          "condiciones_activacion": [
+            "Cuando el emprendedor solo mira el saldo bancario sin entender su origen",
+            "Cuando se necesita evaluar la salud financiera real más allá de la utilidad reportada"
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "lectura_estado_flujo_efectivo",
+          "titulo": "Lectura del Estado de Flujo de Efectivo",
+          "etapa": "planificacion",
+          "etiqueta": "Lee tu Flujo de Efectivo",
+          "condiciones_activacion": [
+            "Si el usuario necesita evaluar la salud de caja de su startup",
+            "Si el usuario está evaluando si el negocio depende de financiamiento externo para sobrevivir",
+            "Cuando se necesita presentar estados financieros completos a inversionistas o bancos"
+          ],
+          "visitas": 1,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 58,
+        "fundir": true,
+        "por_que": "Ambos explican las mismas tres categorías del estado de flujo de efectivo/caja.",
+        "quedaria": "Lectura del Estado de Flujo de Efectivo"
+      }
+    },
+    {
+      "nodos": [
+        "estrategia_resegmentacion_mercado",
+        "resegmentacion_mercado_nicho_bajo_costo"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "estrategia_resegmentacion_mercado",
+          "titulo": "Estrategia de Re-segmentación de Mercado Existente",
+          "etapa": "planificacion",
+          "etiqueta": "Crea tu Propio Nicho",
+          "condiciones_activacion": [
+            "Si el usuario intenta entrar a un mercado dominado por competidores fuertes con recursos limitados propios"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "resegmentacion_mercado_nicho_bajo_costo",
+          "titulo": "Re-segmentación de Mercado (Nicho o Bajo Costo)",
+          "etapa": "validacion",
+          "etiqueta": "Evita el Ataque Frontal Directo",
+          "condiciones_activacion": [
+            "Si existe un competidor con más del 26% de cuota de mercado",
+            "Si el startup no tiene recursos para competir de frente",
+            "Si se busca diferenciación por nicho o precio"
+          ],
+          "visitas": 5,
+          "cosechas": 5,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 59,
+        "fundir": true,
+        "por_que": "Misma estrategia de re-segmentar el mercado ante un competidor dominante, mismas tácticas (nicho o bajo costo).",
+        "quedaria": "Re-segmentación de Mercado (Nicho o Bajo Costo)"
+      }
+    },
+    {
+      "nodos": [
+        "etapa_testing_validation",
+        "stage4_testing_validation"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "etapa_testing_validation",
+          "titulo": "Etapa 4 - Testing and Validation",
+          "etapa": "validacion",
+          "etiqueta": "Valida tu Producto Completo",
+          "condiciones_activacion": [
+            "Cuando el producto ha sido desarrollado y necesita validación completa antes del lanzamiento comercial"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "stage4_testing_validation",
+          "titulo": "Etapa 4: Pruebas y Validación",
+          "etapa": "validacion",
+          "etiqueta": "Valida Todo Antes de Lanzar",
+          "condiciones_activacion": [
+            "Cuando el desarrollo del producto está terminado y se necesita validar su desempeño real antes del lanzamiento",
+            "Cuando se requiere confirmar la aceptación del cliente y la viabilidad económica con datos reales"
+          ],
+          "visitas": 1,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 60,
+        "fundir": true,
+        "por_que": "Es la misma etapa del proceso descrita con título traducido y contenido casi idéntico.",
+        "quedaria": "Etapa 4: Pruebas y Validación"
+      }
+    },
+    {
+      "nodos": [
+        "explorar_medios_no_convencionales",
+        "prototipar_con_medios_no_convencionales"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "explorar_medios_no_convencionales",
+          "titulo": "Usar Medios No Convencionales",
+          "etapa": "ideacion",
+          "etiqueta": "Prueba Medios No Convencionales",
+          "condiciones_activacion": [
+            "Cuando el equipo está estancado usando siempre el mismo tipo de prototipo o formato",
+            "Cuando se busca hacer tangible una tecnología abstracta o invisible (ej. algoritmos, datos)"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "prototipar_con_medios_no_convencionales",
+          "titulo": "Use Unconventional Mediums: Prototipar con Materiales Inesperados",
+          "etapa": "ideacion",
+          "etiqueta": "Prototipa con Materiales Inesperados",
+          "condiciones_activacion": [
+            "Cuando el equipo está estancado en soluciones convencionales para un problema",
+            "En sesiones de ideación creativa que buscan romper paradigmas",
+            "Cuando se necesita repensar radicalmente la forma de un producto"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 61,
+        "fundir": true,
+        "por_que": "Ambos describen la misma técnica de usar materiales/medios inesperados para revelar sesgos de diseño.",
+        "quedaria": "Use Unconventional Mediums: Prototipar con Materiales Inesperados"
+      }
+    },
+    {
+      "nodos": [
+        "fase_entender_modelo_negocio",
+        "fase_entendimiento_investigacion_mercado"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "fase_entender_modelo_negocio",
+          "titulo": "Fase Entender: Investigación para el Modelo de Negocio",
+          "etapa": "ideacion",
+          "etiqueta": "Investiga para Entender el Mercado",
+          "condiciones_activacion": [
+            "Cuando el equipo necesita profundizar en el conocimiento del mercado y del cliente antes de diseñar el modelo de negocio"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "fase_entendimiento_investigacion_mercado",
+          "titulo": "Fase de Entendimiento: Investigación del Entorno",
+          "etapa": "validacion",
+          "etiqueta": "Investiga a Fondo tu Entorno",
+          "condiciones_activacion": [
+            "Si el equipo necesita entender el 'design space' antes de generar modelos de negocio",
+            "Si hay riesgo de sesgo por precompromiso con una idea"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 62,
+        "fundir": true,
+        "por_que": "Misma fase de investigación/inmersión en el entorno del modelo de negocio, mismas actividades descritas.",
+        "quedaria": "Fase de Entendimiento: Investigación del Entorno"
+      }
+    },
+    {
+      "nodos": [
+        "front_end_homework",
+        "homework_frontend_loading"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "front_end_homework",
+          "titulo": "Tareas de Front-End (Homework) Antes del Desarrollo",
+          "etapa": "ideacion",
+          "etiqueta": "Completa tu Tarea Previa",
+          "condiciones_activacion": [
+            "Cuando los proyectos pasan directo a desarrollo sin validación previa suficiente",
+            "Cuando se han detectado altas tasas de fracaso atribuibles a mala definición inicial del producto"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "homework_frontend_loading",
+          "titulo": "Front-End Loading / Homework Predesarrollo",
+          "etapa": "planificacion",
+          "etiqueta": "Prepara tu Tarea Previa",
+          "condiciones_activacion": [
+            "Antes de tomar la decisión de 'Go to Development'",
+            "Cuando el equipo quiere saltarse pasos de validación por presión de tiempo"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 63,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo conjunto de diez actividades de 'homework' previas al desarrollo.",
+        "quedaria": "Front-End Loading / Homework Predesarrollo"
+      }
+    },
+    {
+      "nodos": [
+        "fuentes_contratacion_ejecutivos",
+        "red_fundador_vs_inversor_hiring"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "fuentes_contratacion_ejecutivos",
+          "titulo": "Fuentes de Contratación de Ejecutivos",
+          "etapa": "ejecucion",
+          "etiqueta": "Diversifica tus Fuentes de Contratación",
+          "condiciones_activacion": [
+            "Cuando el startup necesita escalar el equipo ejecutivo más allá de los fundadores",
+            "Cuando la red personal del CEO se ha agotado como fuente de talento"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "red_fundador_vs_inversor_hiring",
+          "titulo": "Fuentes de Contratación: Red del Fundador vs Red del Inversor",
+          "etapa": "ejecucion",
+          "etiqueta": "Elige tu Red de Contratación",
+          "condiciones_activacion": [
+            "Cuando el startup necesita contratar su primer equipo ejecutivo (C-level, VP)",
+            "Al recibir presión de inversores para incorporar un CFO específico",
+            "Si la red personal del fundador se ha agotado y se necesita expandir la búsqueda"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 64,
+        "fundir": true,
+        "por_que": "Ambos tratan la evolución de las fuentes de contratación ejecutiva (red del fundador vs red externa/inversor) con los mismos datos.",
+        "quedaria": "Fuentes de Contratación de Ejecutivos"
+      }
+    },
+    {
+      "nodos": [
+        "gestion_portafolio_formal",
+        "portafolio_formal_management"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "gestion_portafolio_formal",
+          "titulo": "Sistema Formal de Gestión de Portafolio Integrado con Gates",
+          "etapa": "planificacion",
+          "etiqueta": "Revisa tu Portafolio Periódicamente",
+          "condiciones_activacion": [
+            "Cuando la organización maneja múltiples líneas de producto o tipos de proyecto simultáneamente",
+            "Si no existe alineación clara entre estrategia de negocio y portafolio de proyectos activos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "portafolio_formal_management",
+          "titulo": "Sistema Formal de Gestión de Portafolio",
+          "etapa": "planificacion",
+          "etiqueta": "Gestiona tu Portafolio Formalmente",
+          "condiciones_activacion": [
+            "Si la empresa maneja múltiples proyectos de innovación simultáneamente.",
+            "Si no existe alineación clara entre proyectos activos y estrategia de negocio."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 65,
+        "fundir": true,
+        "por_que": "Describen el mismo sistema de revisión periódica de portafolio integrado con gates.",
+        "quedaria": "Sistema Formal de Gestión de Portafolio Integrado con Gates"
+      }
+    },
+    {
+      "nodos": [
+        "gestion_riesgo_incremental",
+        "reglas_gestion_riesgo_gambling"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "gestion_riesgo_incremental",
+          "titulo": "Gestión de Riesgo Incremental (Reglas de Apuesta)",
+          "etapa": "planificacion",
+          "etiqueta": "Apuesta con Reglas Claras",
+          "condiciones_activacion": [
+            "Cuando se están comprometiendo grandes montos de inversión sin reducir la incertidumbre del proyecto",
+            "Cuando no existen puntos de decisión que permitan abandonar un proyecto a tiempo"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "reglas_gestion_riesgo_gambling",
+          "titulo": "Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)",
+          "etapa": "planificacion",
+          "etiqueta": "Gestiona la Incertidumbre del Proyecto",
+          "condiciones_activacion": [
+            "Si el equipo está por comprometer recursos significativos sin reducir la incertidumbre",
+            "Si la empresa no tiene un proceso formal de evaluación de riesgo en innovación"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 66,
+        "fundir": true,
+        "por_que": "Son las mismas cinco reglas de gestión de riesgo basadas en la analogía de apuestas.",
+        "quedaria": "Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)"
+      }
+    },
+    {
+      "nodos": [
+        "homework_voc_previo_agile",
+        "voc_temprano_en_agile_stage_gate"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "homework_voc_previo_agile",
+          "titulo": "Trabajo Previo (Homework) y Voz del Cliente Sigue Siendo Necesario en Agile",
+          "etapa": "ideacion",
+          "etiqueta": "No Saltes tu Tarea Previa",
+          "condiciones_activacion": [
+            "Si el equipo técnico tiende a evitar el trabajo de investigación de mercado por sentirse incómodo haciéndolo",
+            "Si se asume erróneamente que Agile elimina la necesidad de investigación previa"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "voc_temprano_en_agile_stage_gate",
+          "titulo": "Necesidad de Homework Temprano y Voice-of-Customer en Metodologías Ágiles",
+          "etapa": "validacion",
+          "etiqueta": "Escucha al Cliente desde el Inicio",
+          "condiciones_activacion": [
+            "Cuando el equipo cree erróneamente que Agile elimina la necesidad de VoC",
+            "Cuando se busca evitar tanto la parálisis por análisis como la falta de fundamento de mercado"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 67,
+        "fundir": true,
+        "por_que": "Ambos advierten sobre el mismo error de omitir homework/VoC en metodologías Agile-Stage-Gate.",
+        "quedaria": "Necesidad de Homework Temprano y Voice-of-Customer en Metodologías Ágiles"
+      }
+    },
+    {
+      "nodos": [
+        "humor_como_herramienta_creativa",
+        "sentido_del_humor_como_herramienta_de_pensamiento"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "humor_como_herramienta_creativa",
+          "titulo": "El Sentido del Humor como Ruptura de Barreras Mentales",
+          "etapa": "ideacion",
+          "etiqueta": "Usa el Humor para Crear",
+          "condiciones_activacion": [
+            "Cuando el equipo está atascado en supuestos convencionales de la industria",
+            "Si se necesita romper el pensamiento rígido o dogmático en una sesión de brainstorming"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "sentido_del_humor_como_herramienta_de_pensamiento",
+          "titulo": "El Sentido del Humor como Ruptura de Barreras Cognitivas",
+          "etapa": "ideacion",
+          "etiqueta": "Usa el Humor para Pensar",
+          "condiciones_activacion": [
+            "Cuando un equipo está atascado en pensamiento convencional o excesivamente solemne sobre un problema.",
+            "Cuando se busca desafiar tradiciones o supuestos institucionales que limitan la innovación."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 68,
+        "fundir": true,
+        "por_que": "Ambos describen la misma idea de Wallas sobre el humor como ruptura de censuras internas.",
+        "quedaria": "El Sentido del Humor como Ruptura de Barreras Cognitivas"
+      }
+    },
+    {
+      "nodos": [
+        "identificacion_talento_design_thinking",
+        "identificar_pensadores_de_diseno_internos"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "identificacion_talento_design_thinking",
+          "titulo": "Identificación de Talento en Design Thinking",
+          "etapa": "ejecucion",
+          "etiqueta": "Encuentra tus Diseñadores Ocultos",
+          "condiciones_activacion": [
+            "Cuando la organización carece de un equipo de innovación definido y necesita conformarlo con talento existente."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "identificar_pensadores_de_diseno_internos",
+          "titulo": "Encontrar Talento de Design Thinking dentro de la Organización",
+          "etapa": "planificacion",
+          "etiqueta": "Descubre Talento Interno",
+          "condiciones_activacion": [
+            "Si la organización cree que no tiene 'diseñadores' pero necesita innovar",
+            "Si se busca escalar una cultura de design thinking"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        }
+      ],
+      "veredicto": {
+        "grupo": 69,
+        "fundir": true,
+        "por_que": "Ambos describen cómo identificar pensadores de diseño marginados dentro de la organización.",
+        "quedaria": "Encontrar Talento de Design Thinking dentro de la Organización"
+      }
+    },
+    {
+      "nodos": [
+        "identificar_advisory_board",
+        "identificar_consejo_asesores"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "identificar_advisory_board",
+          "titulo": "Identificación de Miembros del Consejo Asesor",
+          "etapa": "planificacion",
+          "etiqueta": "Detecta Futuros Asesores",
+          "condiciones_activacion": [
+            "Durante todo el proceso de Customer Discovery, de forma oportunista",
+            "Cuando el equipo carece de expertise técnico o de dominio específico"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        },
+        {
+          "id": "identificar_consejo_asesores",
+          "titulo": "Identificar los Primeros Miembros del Consejo Asesor",
+          "etapa": "validacion",
+          "etiqueta": "Elige tus Primeros Asesores",
+          "condiciones_activacion": [
+            "Cuando el equipo necesita conocimiento externo especializado que no puede contratar a tiempo completo"
+          ],
+          "visitas": 3,
+          "cosechas": 3,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 70,
+        "fundir": true,
+        "por_que": "Ambos describen identificar durante customer discovery a personas que pueden ser asesores informales.",
+        "quedaria": "Identificar los Primeros Miembros del Consejo Asesor"
+      }
+    },
+    {
+      "nodos": [
+        "innovation_project_canvas",
+        "lienzo_proyecto_innovacion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "innovation_project_canvas",
+          "titulo": "Innovation Project Canvas",
+          "etapa": "planificacion",
+          "etiqueta": "Mapea tu Propio Plan",
+          "condiciones_activacion": [
+            "Cuando el proyecto es altamente innovador y el modelo estándar SOP no aplica bien",
+            "Cuando el equipo necesita más guía que un canvas totalmente en blanco pero busca flexibilidad",
+            "Si se quiere aumentar el compromiso del equipo con su propio plan de acción"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "lienzo_proyecto_innovacion",
+          "titulo": "Lienzo del Proyecto de Innovación (Innovation Project Canvas)",
+          "etapa": "ideacion",
+          "etiqueta": "Mapea tu Proyecto de Innovación",
+          "condiciones_activacion": [
+            "Si el equipo del proyecto tiene menos experiencia y necesita más guía estructural que un lienzo completamente en blanco",
+            "Si se requiere alinear a un equipo multidisciplinario sobre el alcance y riesgos del proyecto"
+          ],
+          "visitas": 1,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 71,
+        "fundir": true,
+        "por_que": "Es la misma herramienta canvas para mapear el plan de acción del proyecto de innovación.",
+        "quedaria": "Innovation Project Canvas"
+      }
+    },
+    {
+      "nodos": [
+        "keep_customers_strategy",
+        "optimizacion_keep_retencion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "keep_customers_strategy",
+          "titulo": "Estrategia de Retención de Clientes (Keep)",
+          "etapa": "validacion",
+          "etiqueta": "Retén a tus Clientes",
+          "condiciones_activacion": [
+            "Si el startup ya tiene sus primeros clientes y necesita evitar que se vayan",
+            "Si el costo de adquisición es alto y se busca maximizar el valor de vida del cliente"
+          ],
+          "visitas": 10,
+          "cosechas": 10,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "optimizacion_keep_retencion",
+          "titulo": "Optimización de Programas de Retención ('Keep')",
+          "etapa": "ejecucion",
+          "etiqueta": "Optimiza la Retención de Clientes",
+          "condiciones_activacion": [
+            "Cuando el startup ya cuenta con una base de clientes activos que requiere fidelización",
+            "Cuando el costo de adquisición es alto y se necesita maximizar el valor de vida del cliente"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 72,
+        "fundir": true,
+        "por_que": "Ambos describen la misma estrategia 'Keep' de retención de clientes con las mismas tácticas de bajo costo.",
+        "quedaria": "Estrategia de Retención de Clientes (Keep)"
+      }
+    },
+    {
+      "nodos": [
+        "kit_shock_and_awe_bienvenida",
+        "shock_and_awe_kit_bienvenida"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "kit_shock_and_awe_bienvenida",
+          "titulo": "Kit de Bienvenida 'Shock and Awe'",
+          "etapa": "ejecucion",
+          "etiqueta": "Sorprende con tu Bienvenida",
+          "condiciones_activacion": [
+            "Cuando el usuario acaba de cerrar una venta o firmar un cliente nuevo y necesita diseñar la primera experiencia postventa"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "shock_and_awe_kit_bienvenida",
+          "titulo": "Kit de 'Shock and Awe' para Nuevos Clientes",
+          "etapa": "ejecucion",
+          "etiqueta": "Sorprende con tu Kit de Bienvenida",
+          "condiciones_activacion": [
+            "Cuando el ticket promedio de compra es alto y justifica una inversión en experiencia de bienvenida",
+            "Cuando se busca diferenciarse de competidores que entregan el producto sin ceremonia"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 73,
+        "fundir": true,
+        "por_que": "Ambos describen el mismo kit de bienvenida diseñado para sorprender y deleitar al nuevo cliente.",
+        "quedaria": "Kit de 'Shock and Awe' para Nuevos Clientes"
+      }
+    },
+    {
+      "nodos": [
+        "manifiesto_regla4_iteraciones_pivotes",
+        "pivotes_e_iteraciones"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "manifiesto_regla4_iteraciones_pivotes",
+          "titulo": "Iteraciones Continuas y Pivotes",
+          "etapa": "validacion",
+          "etiqueta": "Itera y Cambia sin Miedo",
+          "condiciones_activacion": [
+            "Cuando las pruebas con clientes muestran resultados negativos o ambiguos",
+            "Cuando la startup está estancada y necesita un cambio dramático para sobrevivir"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "pivotes_e_iteraciones",
+          "titulo": "Pivotes e Iteraciones Continuas",
+          "etapa": "validacion",
+          "etiqueta": "Ajusta o Cambia de Rumbo",
+          "condiciones_activacion": [
+            "Si las métricas de validación muestran que una hipótesis del modelo de negocio es falsa",
+            "Si el crecimiento se ha estancado"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 74,
+        "fundir": true,
+        "por_que": "Ambos definen igual la diferencia entre pivote (cambio sustantivo) e iteración (cambio menor) en el Business Model Canvas.",
+        "quedaria": "Pivotes e Iteraciones Continuas"
+      }
+    },
+    {
+      "nodos": [
+        "market_type_revenue_growth",
+        "tipo_mercado_curva_ingresos"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "market_type_revenue_growth",
+          "titulo": "Tipo de Mercado y Curvas de Crecimiento de Ingresos",
+          "etapa": "validacion",
+          "etiqueta": "Proyecta tu Curva de Ingresos",
+          "condiciones_activacion": [
+            "Cuando se están construyendo proyecciones de ingresos para el business model",
+            "Si las proyecciones de crecimiento parecen desconectadas de la realidad del mercado"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "tipo_mercado_curva_ingresos",
+          "titulo": "El Tipo de Mercado Afecta la Curva de Ingresos",
+          "etapa": "validacion",
+          "etiqueta": "Anticipa tu Curva de Ingresos",
+          "condiciones_activacion": [
+            "Cuando se necesita proyectar ingresos futuros y el equipo no ha considerado el tipo de mercado en sus estimaciones"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 75,
+        "fundir": true,
+        "por_que": "Mismo concepto (tipo de mercado determina curva de ingresos) con títulos casi idénticos",
+        "quedaria": "El Tipo de Mercado Afecta la Curva de Ingresos"
+      }
+    },
+    {
+      "nodos": [
+        "medir_comportamiento_cliente_mvp",
+        "medir_comportamiento_y_entusiasmo_del_cliente"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "medir_comportamiento_cliente_mvp",
+          "titulo": "Medir el Comportamiento del Cliente (Purchase, Engagement, Retention, Referral)",
+          "etapa": "validacion",
+          "etiqueta": "Mide el Comportamiento del Cliente",
+          "condiciones_activacion": [
+            "Si el equipo ya tiene un MVP funcionando y necesita validar el interés real de los usuarios antes de escalar"
+          ],
+          "visitas": 3,
+          "cosechas": 3,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "medir_comportamiento_y_entusiasmo_del_cliente",
+          "titulo": "Medir Comportamiento y Entusiasmo del Cliente",
+          "etapa": "validacion",
+          "etiqueta": "Observa las Acciones Reales",
+          "condiciones_activacion": [
+            "Cuando el MVP ya está siendo usado por clientes reales invitados",
+            "Para decidir si se avanza a la fase de Customer Validation o se pivota de nuevo"
+          ],
+          "visitas": 1,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 76,
+        "fundir": true,
+        "por_que": "Ambos describen las mismas cuatro métricas de comportamiento del cliente para medir entusiasmo real",
+        "quedaria": "Medir el Comportamiento del Cliente (Purchase, Engagement, Retention, Referral)"
+      }
+    },
+    {
+      "nodos": [
+        "metodo_strategic_buckets",
+        "strategic_buckets"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "metodo_strategic_buckets",
+          "titulo": "Método de Strategic Buckets (Cubetas Estratégicas)",
+          "etapa": "planificacion",
+          "etiqueta": "Reparte Recursos en Cubetas Estratégicas",
+          "condiciones_activacion": [
+            "Cuando la empresa tiene múltiples proyectos de innovación compitiendo por recursos limitados.",
+            "Cuando la estrategia declarada no coincide con el gasto real en I+D.",
+            "Cuando hay exceso de proyectos pequeños e incrementales y faltan proyectos disruptivos."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        },
+        {
+          "id": "strategic_buckets",
+          "titulo": "Método de Buckets Estratégicos (Strategic Buckets)",
+          "etapa": "planificacion",
+          "etiqueta": "Asigna Recursos por Prioridad",
+          "condiciones_activacion": [
+            "Cuando la estrategia de innovación no se refleja claramente en la asignación real de recursos",
+            "Si la empresa quiere balancear inversión entre proyectos defensivos e innovadores",
+            "Cuando se requiere justificar decisiones de inversión con criterios estratégicos explícitos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 77,
+        "fundir": true,
+        "por_que": "Mismo método de Strategic Buckets con traducción de nombre distinta",
+        "quedaria": "Método de Strategic Buckets (Cubetas Estratégicas)"
+      }
+    },
+    {
+      "nodos": [
+        "metricas_accionables",
+        "vanity_metrics_vs_accionables"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": true,
+      "miembros": [
+        {
+          "id": "metricas_accionables",
+          "titulo": "Métricas Accionables vs Métricas de Vanidad",
+          "etapa": "validacion",
+          "etiqueta": "Persigue Métricas Que Sí Importan",
+          "condiciones_activacion": [
+            "Cuando el equipo o los inversionistas se enfocan en métricas de crecimiento bruto sin evidencia de aprendizaje real",
+            "Si existe presión para mostrar 'progreso' sin evidencia de mejora en el modelo de negocio"
+          ],
+          "visitas": 42,
+          "cosechas": 9,
+          "es_semilla": true,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "vanity_metrics_vs_accionables",
+          "titulo": "Métricas de Vanidad vs Métricas Accionables",
+          "etapa": "validacion",
+          "etiqueta": "Elige Métricas Accionables",
+          "condiciones_activacion": [
+            "Si el equipo siente que 'está progresando' pero no puede explicar por qué",
+            "Si las métricas suben y bajan sin relación clara con las acciones del equipo",
+            "Al inicio de cualquier proceso de medición de un MVP o producto en mercado"
+          ],
+          "visitas": 25,
+          "cosechas": 24,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 78,
+        "fundir": true,
+        "por_que": "Mismo concepto de distinción entre métricas de vanidad y accionables",
+        "quedaria": "Métricas Accionables vs Métricas de Vanidad"
+      }
+    },
+    {
+      "nodos": [
+        "metricas_que_importan",
+        "metrics_that_matter_framework"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "metricas_que_importan",
+          "titulo": "Metrics That Matter: Validar el Modelo Financiero",
+          "etapa": "validacion",
+          "etiqueta": "Valida tus Números Antes de Escalar",
+          "condiciones_activacion": [
+            "Cuando se necesita decidir si invertir fuertemente en escalar el negocio sin quedarse sin fondos",
+            "Si el equipo confunde este análisis con proyecciones financieras tradicionales de 5 años"
+          ],
+          "visitas": 6,
+          "cosechas": 6,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "metrics_that_matter_framework",
+          "titulo": "Metrics That Matter (Métricas que Importan)",
+          "etapa": "validacion",
+          "etiqueta": "Enfócate en las Métricas Clave",
+          "condiciones_activacion": [
+            "Cuando el startup ha completado la validación de clientes y necesita decidir si avanzar a la etapa de creación de clientes",
+            "Cuando se necesita evaluar si el modelo de negocio es financieramente viable antes de escalar"
+          ],
+          "visitas": 36,
+          "cosechas": 29,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 6,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 79,
+        "fundir": true,
+        "por_que": "Mismo enfoque Metrics That Matter para validar viabilidad financiera del modelo de negocio",
+        "quedaria": "Metrics That Matter (Métricas que Importan)"
+      }
+    },
+    {
+      "nodos": [
+        "modelo_spin_preguntas",
+        "modelo_spin_secuencia_preguntas"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "modelo_spin_preguntas",
+          "titulo": "Modelo SPIN: Secuencia de Preguntas de Venta",
+          "etapa": "validacion",
+          "etiqueta": "Sigue la Secuencia de Preguntas",
+          "condiciones_activacion": [
+            "Cuando se está preparando una llamada de venta consultiva o de venta grande",
+            "Cuando el equipo comercial tiende a presentar soluciones antes de entender bien el problema del cliente"
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "modelo_spin_secuencia_preguntas",
+          "titulo": "Modelo SPIN: Secuencia de Preguntas para Ventas Grandes",
+          "etapa": "ejecucion",
+          "etiqueta": "Ordena tus Preguntas de Venta",
+          "condiciones_activacion": [
+            "Cuando el usuario vende productos o servicios complejos con ciclos de venta largos.",
+            "Si el equipo comercial tiende a presentar soluciones antes de entender las necesidades del cliente."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 80,
+        "fundir": true,
+        "por_que": "Mismo modelo SPIN de secuencia de preguntas de venta",
+        "quedaria": "Modelo SPIN: Secuencia de Preguntas para Ventas Grandes"
+      }
+    },
+    {
+      "nodos": [
+        "multi_sided_platform_pattern",
+        "multi_sided_platforms"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ideacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "multi_sided_platform_pattern",
+          "titulo": "Patrón de Plataforma Multilateral (Multi-Sided Platform)",
+          "etapa": "ideacion",
+          "etiqueta": "Conecta Dos Lados del Mercado",
+          "condiciones_activacion": [
+            "Cuando el negocio conecta a dos tipos de usuarios que se benefician mutuamente de estar en la misma red",
+            "Cuando se busca monetizar una base de usuarios a través de un tercero (ej. publicidad)"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        },
+        {
+          "id": "multi_sided_platforms",
+          "titulo": "Plataformas Multilaterales (Multi-Sided Platforms)",
+          "etapa": "ideacion",
+          "etiqueta": "Une Varios Tipos de Clientes",
+          "condiciones_activacion": [
+            "Si el negocio depende de conectar dos grupos distintos que se necesitan mutuamente"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 81,
+        "fundir": true,
+        "por_que": "Mismo patrón de modelo de negocio de plataformas multilaterales",
+        "quedaria": "Plataformas Multilaterales (Multi-Sided Platforms)"
+      }
+    },
+    {
+      "nodos": [
+        "optimizacion_grow_customers",
+        "optimizacion_metricas_crecimiento"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "optimizacion_grow_customers",
+          "titulo": "Optimización de 'Grow' Customers (Crecer Ingresos por Cliente)",
+          "etapa": "ejecucion",
+          "etiqueta": "Monitorea Upsell y Referencias",
+          "condiciones_activacion": [
+            "Cuando el startup ya tiene una base estable de clientes y busca aumentar el valor de vida (LTV)",
+            "Cuando se necesita generar crecimiento sin depender exclusivamente de nueva adquisición"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "optimizacion_metricas_crecimiento",
+          "titulo": "Optimización de Métricas de Crecimiento (Grow Customers)",
+          "etapa": "validacion",
+          "etiqueta": "Mide el Crecimiento de tus Clientes",
+          "condiciones_activacion": [
+            "Si el startup ya tiene base de clientes activa y busca incrementar ingresos por cliente existente"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 82,
+        "fundir": true,
+        "por_que": "Mismo concepto de optimizar crecimiento de ingresos por cliente vía upsell/referidos",
+        "quedaria": "Optimización de Métricas de Crecimiento (Grow Customers)"
+      }
+    },
+    {
+      "nodos": [
+        "prevencion_de_objeciones",
+        "prevencion_objeciones_vs_manejo"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "prevencion_de_objeciones",
+          "titulo": "Prevención de Objeciones (en vez de Manejo de Objeciones)",
+          "etapa": "ejecucion",
+          "etiqueta": "Previene las Objeciones del Cliente",
+          "condiciones_activacion": [
+            "Cuando el equipo de ventas recibe muchas objeciones de precio o de resistencia al cambio.",
+            "Cuando se está diseñando un programa de entrenamiento de ventas."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        },
+        {
+          "id": "prevencion_objeciones_vs_manejo",
+          "titulo": "Prevención de Objeciones vs. Manejo de Objeciones",
+          "etapa": "ejecucion",
+          "etiqueta": "Previene, no Manejes Objeciones",
+          "condiciones_activacion": [
+            "Cuando el vendedor recibe muchas objeciones especialmente sobre precio o valor",
+            "Cuando se está diseñando un programa de entrenamiento de ventas",
+            "Cuando las ventas son de tamaño mediano o grande (no ventas pequeñas de bajo costo)"
+          ],
+          "visitas": 2,
+          "cosechas": 2,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 4,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 83,
+        "fundir": true,
+        "por_que": "Mismo concepto de prevenir objeciones en lugar de manejarlas",
+        "quedaria": "Prevención de Objeciones vs. Manejo de Objeciones"
+      }
+    },
+    {
+      "nodos": [
+        "publicidad_garantia",
+        "publicidad_garantia_conforme"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "publicidad_garantia",
+          "titulo": "Publicitar Garantías de Forma Legal (Satisfaction Guarantee y Lifetime Warranty)",
+          "etapa": "ejecucion",
+          "etiqueta": "Anuncia tu Garantía sin Engañar",
+          "condiciones_activacion": [
+            "Cuando el equipo de marketing planea usar la garantía como argumento de venta o diferenciador competitivo."
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        },
+        {
+          "id": "publicidad_garantia_conforme",
+          "titulo": "Publicidad Correcta de Garantías y Guarantees",
+          "etapa": "ejecucion",
+          "etiqueta": "Publicita tus Garantías Correctamente",
+          "condiciones_activacion": [
+            "Cuando se diseñan campañas publicitarias que mencionan garantías o guarantees",
+            "Cuando se usa la palabra 'lifetime' en materiales de marketing"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 84,
+        "fundir": true,
+        "por_que": "Mismo tema de cumplimiento legal FTC al publicitar garantías",
+        "quedaria": "Publicidad Correcta de Garantías y Guarantees"
+      }
+    },
+    {
+      "nodos": [
+        "reconstruccion_de_equipo_ejecutivo",
+        "reconstruir_equipo_ejecutivo_para_nueva_etapa"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "reconstruccion_de_equipo_ejecutivo",
+          "titulo": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio",
+          "etapa": "ejecucion",
+          "etiqueta": "Renueva tu Equipo tras el Cambio",
+          "condiciones_activacion": [
+            "Cuando la empresa ha pivotado a un modelo de negocio fundamentalmente distinto",
+            "Cuando el desempeño del equipo ejecutivo actual no corresponde a los resultados esperados en el nuevo contexto"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "reconstruir_equipo_ejecutivo_para_nueva_etapa",
+          "titulo": "Reconstruir el Equipo Ejecutivo Según la Nueva Etapa",
+          "etapa": "ejecucion",
+          "etiqueta": "Renueva tu Equipo Directivo",
+          "condiciones_activacion": [
+            "Cuando la empresa pivota de modelo de negocio (ej. servicios a producto)",
+            "Cuando el equipo actual fue exitoso en la etapa anterior pero la empresa entra a una fase distinta"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 85,
+        "fundir": true,
+        "por_que": "Mismo concepto de reconstruir el equipo ejecutivo tras cambio de modelo/etapa",
+        "quedaria": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio"
+      }
+    },
+    {
+      "nodos": [
+        "reporte_estado_miembro_equipo",
+        "team_member_status_report"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "reporte_estado_miembro_equipo",
+          "titulo": "Reporte de Estado del Miembro del Equipo",
+          "etapa": "ejecucion",
+          "etiqueta": "Reporta tu Avance de Equipo",
+          "condiciones_activacion": [
+            "Durante la ejecución del proyecto en cada periodo de reporte",
+            "Cuando se requiere consolidar el desempeño del equipo"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "team_member_status_report",
+          "titulo": "Informe de Estado del Miembro del Equipo",
+          "etapa": "ejecucion",
+          "etiqueta": "Reporta el Estado Individual",
+          "condiciones_activacion": [
+            "Si el proyecto está en ejecución y se requiere seguimiento periódico de tareas individuales"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 86,
+        "fundir": true,
+        "por_que": "Mismo documento de reporte periódico del miembro del equipo",
+        "quedaria": "Reporte de Estado del Miembro del Equipo"
+      }
+    },
+    {
+      "nodos": [
+        "riesgos_terminos_favorables_seed",
+        "seed_deals_riesgos_precedente"
+      ],
+      "tam": 2,
+      "etapas": [
+        "ejecucion",
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "riesgos_terminos_favorables_seed",
+          "titulo": "Riesgos de Obtener Términos Demasiado Favorables en Ronda Seed",
+          "etapa": "planificacion",
+          "etiqueta": "Cuida Términos Demasiado Buenos",
+          "condiciones_activacion": [
+            "Cuando el emprendedor está negociando o ya cerró una ronda seed con condiciones muy favorables"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        },
+        {
+          "id": "seed_deals_riesgos_precedente",
+          "titulo": "Riesgos de Precedente en Rondas Semilla",
+          "etapa": "ejecucion",
+          "etiqueta": "Cuida los Términos Semilla",
+          "condiciones_activacion": [
+            "Si el usuario está negociando su primera ronda de financiamiento semilla",
+            "Si el usuario recibió múltiples ofertas de inversionistas y debe elegir estructura"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 87,
+        "fundir": true,
+        "por_que": "Mismo riesgo de precedente por términos en ronda seed/semilla",
+        "quedaria": "Riesgos de Precedente en Rondas Semilla"
+      }
+    },
+    {
+      "nodos": [
+        "sistema_de_gates_go_kill",
+        "sistema_gates_go_kill"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "sistema_de_gates_go_kill",
+          "titulo": "Sistema de Compuertas (Gates) con Criterios Go/Kill",
+          "etapa": "planificacion",
+          "etiqueta": "Decide Avanzar o Detener Proyectos",
+          "condiciones_activacion": [
+            "Cuando la empresa tiene demasiados proyectos activos sin filtro claro",
+            "Cuando los proyectos débiles no se eliminan a tiempo y consumen recursos"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": [
+            "residuo_corporativo"
+          ]
+        },
+        {
+          "id": "sistema_gates_go_kill",
+          "titulo": "Sistema de Gates (Puntos de Decisión Go/Kill)",
+          "etapa": "planificacion",
+          "etiqueta": "Filtra Proyectos con Decisiones Go/Kill",
+          "condiciones_activacion": [
+            "Cuando existen demasiados proyectos activos y recursos insuficientes",
+            "Cuando las decisiones de continuar/matar proyectos son inconsistentes o inexistentes"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 88,
+        "fundir": true,
+        "por_que": "Mismo sistema de gates/compuertas con criterios go/kill en el embudo de innovación",
+        "quedaria": "Sistema de Gates (Puntos de Decisión Go/Kill)"
+      }
+    },
+    {
+      "nodos": [
+        "strat_map",
+        "strat_map_arenas_estrategicas"
+      ],
+      "tam": 2,
+      "etapas": [
+        "planificacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "strat_map",
+          "titulo": "Strat-Map: Mapa Estratégico de Priorización de Arenas",
+          "etapa": "planificacion",
+          "etiqueta": "Prioriza tus Arenas Estratégicas",
+          "condiciones_activacion": [
+            "Cuando se tiene una lista larga de arenas candidatas y se necesita priorizar cuáles atacar primero",
+            "Al finalizar la fase de identificación de oportunidades estratégicas"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": [
+            "matriz_o_puntaje"
+          ]
+        },
+        {
+          "id": "strat_map_arenas_estrategicas",
+          "titulo": "Strat-Map: Mapeo de Arenas Estratégicas",
+          "etapa": "planificacion",
+          "etiqueta": "Mapea tus Arenas de Negocio",
+          "condiciones_activacion": [
+            "Cuando la empresa necesita decidir en qué mercados o tecnologías enfocar su innovación",
+            "Cuando hay múltiples oportunidades de crecimiento y se requiere priorización estratégica",
+            "Si el esfuerzo de generación de ideas está disperso o sin dirección clara"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 89,
+        "fundir": true,
+        "por_que": "Misma herramienta Strat-Map de mapeo/priorización de arenas estratégicas",
+        "quedaria": "Strat-Map: Mapeo de Arenas Estratégicas"
+      }
+    },
+    {
+      "nodos": [
+        "test_sell_channel_partners",
+        "validar_canal_distribucion"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "test_sell_channel_partners",
+          "titulo": "Probar Venta a Través de Canales (Test Sell Channel Partners)",
+          "etapa": "validacion",
+          "etiqueta": "Valida tus Canales de Venta",
+          "condiciones_activacion": [
+            "Si el modelo de negocio depende de ventas indirectas (distribuidores, retailers)",
+            "Si ya existe evidencia de demanda de usuarios finales",
+            "NO aplica si la persona está sola con una idea pre-MVP: exige producto vendible y conversaciones reales o planeadas con distribuidores"
+          ],
+          "visitas": 3,
+          "cosechas": 1,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "validar_canal_distribucion",
+          "titulo": "Validar Socios de Canal de Distribución (Channel Partners)",
+          "etapa": "validacion",
+          "etiqueta": "Valida tus Socios de Canal",
+          "condiciones_activacion": [
+            "Si el modelo de negocio depende de canales de distribución indirectos (retail, mayoristas)",
+            "Cuando ya existe evidencia de demanda de clientes finales",
+            "NO aplica sin ventas directas previas a clientes finales: primero valida demanda directa, después el canal indirecto"
+          ],
+          "visitas": 18,
+          "cosechas": 8,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 90,
+        "fundir": true,
+        "por_que": "Mismo concepto de validar la estrategia de canal con socios de distribución",
+        "quedaria": "Validar Socios de Canal de Distribución (Channel Partners)"
+      }
+    },
+    {
+      "nodos": [
+        "verificar_modelo_ingresos",
+        "verificar_modelo_rentable"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "verificar_modelo_ingresos",
+          "titulo": "Verificar si se Puede Generar Ingresos y Crecer (Revenue Model Data)",
+          "etapa": "validacion",
+          "etiqueta": "Verifica que Puedas Crecer",
+          "condiciones_activacion": [
+            "Cuando se necesita decidir si el modelo de negocio es financieramente viable antes de escalar"
+          ],
+          "visitas": 12,
+          "cosechas": 10,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        },
+        {
+          "id": "verificar_modelo_rentable",
+          "titulo": "Verificar si el Negocio Puede Ser Rentable (Revenue Model Data)",
+          "etapa": "validacion",
+          "etiqueta": "Verifica que Seas Rentable",
+          "condiciones_activacion": [
+            "Cuando se necesita decidir si el modelo de negocio es financieramente viable antes de escalar",
+            "Cuando los inversionistas o fundadores requieren evidencia numérica de rentabilidad potencial"
+          ],
+          "visitas": 11,
+          "cosechas": 10,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 1,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 91,
+        "fundir": true,
+        "por_que": "Mismo proceso de consolidar datos para pronóstico de ingresos y evaluar rentabilidad",
+        "quedaria": "Verificar si el Negocio Puede Ser Rentable (Revenue Model Data)"
+      }
+    },
+    {
+      "nodos": [
+        "war_room_datos",
+        "war_room_pivot_proceed"
+      ],
+      "tam": 2,
+      "etapas": [
+        "validacion"
+      ],
+      "toca_puerta": false,
+      "miembros": [
+        {
+          "id": "war_room_datos",
+          "titulo": "Construir un War Room de Datos",
+          "etapa": "validacion",
+          "etiqueta": "Reúne tus Datos en Sala",
+          "condiciones_activacion": [
+            "Cuando se necesita consolidar y analizar grandes volúmenes de datos de validación antes de decidir el rumbo del negocio"
+          ],
+          "visitas": 0,
+          "cosechas": 0,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 2,
+          "hallazgos": []
+        },
+        {
+          "id": "war_room_pivot_proceed",
+          "titulo": "Crear un 'War Room' para el Análisis Pivot-or-Proceed",
+          "etapa": "validacion",
+          "etiqueta": "Reúnete para Decidir el Rumbo",
+          "condiciones_activacion": [
+            "Cuando se ha completado la recolección de datos de validación y se necesita decidir el futuro del negocio"
+          ],
+          "visitas": 3,
+          "cosechas": 3,
+          "es_semilla": false,
+          "cabeza_de_rama": false,
+          "entrantes": 3,
+          "hallazgos": []
+        }
+      ],
+      "veredicto": {
+        "grupo": 92,
+        "fundir": true,
+        "por_que": "Misma práctica del War Room para decisión pivot-or-proceed",
+        "quedaria": "Crear un 'War Room' para el Análisis Pivot-or-Proceed"
+      }
+    }
+  ],
+  "costo_veredictos_usd": 0.2
+}

@@ -249,6 +249,15 @@ def main():
     ap.add_argument("--extra", nargs="*", default=[], help="node_id sueltos a incluir")
     ap.add_argument("--tanda", type=int, default=POR_TANDA)
     ap.add_argument("--saltar", help="json con una lista de node_id a NO tocar")
+    # La re-voz normal se ancla al nodo y no sabe QUE hay que arreglar: en un
+    # lote de 36 eso basta, porque la baranda dice donde duele y el modelo lo
+    # ve. En una micro re-voz adjudicada NO basta: `criterio_bazooka_peashooter`
+    # salio de la primera pasada con "el equipo de consultores y abogados"
+    # intacto, porque nadie le dijo que lo que moria era la ESCALA. La
+    # instruccion viaja como ORDEN del editor, no como material: sigue prohibido
+    # inventar, y lo que se pide es quitar, no agregar.
+    ap.add_argument("--instruccion", help="orden extra del editor para esta corrida "
+                                          "(adjudicaciones puntuales)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -286,6 +295,9 @@ def main():
         prompt = json.dumps({k: viejo.get(k) for k in (
             "titulo_concepto", "resumen_teorico", "pasos_accionables",
             "entregable_esperado", "condiciones_activacion")}, ensure_ascii=False, indent=2)
+        if args.instruccion:
+            prompt = (f"ORDEN DEL EDITOR PARA ESTE NODO (manda sobre lo demas, "
+                      f"pero NO autoriza a inventar):\n{args.instruccion}\n\n" + prompt)
         nuevo, err = llamar(cli, prompt, uso)
         if err or not isinstance(nuevo, dict):
             rechazos.append({"node_id": nid, "motivo": err or "respuesta no es objeto"})
