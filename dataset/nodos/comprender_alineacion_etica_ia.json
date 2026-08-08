@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Alineación y Ética de la IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Antes de integrar IA en un producto o proceso de negocio, el emprendedor debe entender que los modelos de IA heredan sesgos de sus datos de entrenamiento (mayormente web abierta, dominado por perspectivas occidentales y masculinas) y que el proceso de alineación (RLHF) no elimina completamente estos sesgos, solo los oculta o reemplaza por otros. Esto tiene implicaciones directas si se construye un producto que use IA generativa para atender usuarios diversos, tomar decisiones de contratación, evaluación o generación de contenido.",
+  "resumen_teorico": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en su mayoría web abierta, dominada por perspectivas occidentales y masculinas) y que el ajuste posterior que se les hace (conocido como RLHF) no elimina esos sesgos del todo, solo los esconde o los cambia por otros. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
   "pasos_accionables": [
-    "Auditar qué modelo de IA se usará y qué se conoce sobre sus datos de entrenamiento y proceso de fine-tuning",
-    "Probar el modelo con casos de uso reales del negocio buscando sesgos de género, raza o cultura",
-    "Documentar los sesgos encontrados y decidir mitigaciones (prompts correctivos, revisión humana, elección de otro modelo)",
-    "Evaluar implicaciones legales y regulatorias según el país donde opera el startup (UE vs EEUU vs Japón)"
+    "Revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
+    "Pon a prueba el modelo con casos reales de tu negocio buscando sesgos de género, raza o cultura",
+    "Anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
+    "Pregunta en tu mercado qué implicaciones legales y regulatorias tiene usar IA en tu tipo de decisiones antes de avanzar"
   ],
-  "entregable_esperado": "Informe de auditoría de sesgos y riesgos éticos del modelo de IA elegido para el producto/negocio",
+  "entregable_esperado": "Un informe propio donde queden anotados los sesgos y riesgos éticos que encontraste al probar el modelo de IA que piensas usar en tu producto o negocio",
   "nodos_previos": [
     "desafios_implementacion_ia"
   ],
@@ -20,8 +20,8 @@
     "juran_quality_by_design"
   ],
   "condiciones_activacion": [
-    "Cuando el emprendimiento planea integrar IA generativa en su producto o servicio",
-    "Cuando el producto involucra decisiones sensibles (contratación, crédito, salud, justicia)"
+    "Cuando planeas meter IA generativa en tu producto o servicio",
+    "Cuando tu producto toca decisiones sensibles, como contratación, crédito, salud o justicia"
   ],
   "etiqueta_arbol": "Cuida la Ética de tu IA"
 }

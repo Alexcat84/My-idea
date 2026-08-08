@@ -245,6 +245,19 @@ BARANDAS = {
         r"\b(?:OSHA|EPA|FDA|IRS|SEC)\b",
         r"\bsalario m[ií]nimo de\b",
     ],
+    # LA DOCTRINA DEL IMPORTE (adjudicada ago 2026):
+    #
+    #   "La cifra de MERCADO sale; la cifra que ES LA NORMA se queda dentro de su
+    #    nodo-frontera, porque alli el numero es el hecho y la frontera ya le dice
+    #    al lector cuando le aplica."
+    #
+    # Los umbrales de $10 y $15 de la Magnuson-Moss son la ley, no un precio:
+    # quitarlos dejaria el nodo inutil y hasta falso. Una tarifa de franquicia o
+    # el costo de ejemplo de una patente son mercado, y salen con el "pregunta en
+    # tu mercado".
+    #
+    # El detector marca los DOS por igual, a proposito: la pregunta -- ¿es norma
+    # o es mercado? -- la contesta un ojo leyendo el nodo, no un patron.
     "matriz_o_puntaje": [
         r"\bmatriz de (?:riesgo|probabilidad|impacto|prioridad)",
         r"\bpuntú[ae]\b|\bpuntua(?:r|ndo|cion|ción)\b",

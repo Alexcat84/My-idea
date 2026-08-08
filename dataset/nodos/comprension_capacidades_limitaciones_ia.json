@@ -4,15 +4,15 @@
   "dominio": "core",
   "titulo_concepto": "Comprensión de las Capacidades y Limitaciones Impredecibles de la IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Las IA modernas muestran capacidades emergentes que ni sus propios creadores anticiparon completamente, pudiendo sobresalir en tareas complejas (como escribir código funcional) mientras fallan en tareas aparentemente simples (como jugar tic-tac-toe correctamente). Esto significa que las tareas fáciles para humanos pueden ser difíciles para la IA y viceversa. Los emprendedores deben probar empíricamente qué tan bien la IA resuelve su caso de uso específico antes de confiar en ella, en lugar de asumir capacidades basadas en la reputación general del modelo.",
+  "resumen_teorico": "Las IA modernas muestran capacidades que ni sus propios creadores anticiparon del todo: pueden sobresalir en tareas complejas, como escribir código funcional, y al mismo tiempo fallar en tareas aparentemente simples, como jugar tic-tac-toe correctamente. Esto significa que lo que es fácil para ti puede ser difícil para la IA, y al revés. Antes de confiar en ella para algo importante de tu negocio, prueba tú mismo qué tan bien resuelve tu caso concreto, en lugar de asumir que funciona bien solo porque el modelo tiene buena fama.",
   "pasos_accionables": [
-    "Diseñar pruebas específicas para el caso de uso propio del negocio, no solo confiar en benchmarks generales",
-    "Probar la IA en tareas límite (edge cases) relevantes para el negocio",
-    "Documentar patrones de error y aciertos encontrados durante las pruebas",
-    "Establecer un proceso de revisión humana para outputs críticos",
-    "Iterar el prompt o el flujo de trabajo basado en los resultados de las pruebas"
+    "Diseña pruebas específicas para tu propio caso de uso, no te quedes solo con pruebas estándar generales (benchmarks)",
+    "Prueba la IA en los casos límite (edge cases) que más importan en tu negocio",
+    "Anota qué patrones de error y de acierto vas encontrando mientras pruebas",
+    "Revisa tú mismo, o con quien te ayude, cualquier resultado crítico antes de usarlo",
+    "Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo"
   ],
-  "entregable_esperado": "Reporte de pruebas empíricas de la IA aplicada al caso de uso específico, con matriz de aciertos/errores documentada.",
+  "entregable_esperado": "Un documento donde anotas, después de probar la IA en tu caso concreto, qué funcionó bien y qué falló.",
   "nodos_previos": [
     "seleccion_modelo_ia_adecuado"
   ],
@@ -20,7 +20,7 @@
     "fine_tuning_ia_para_caso_de_uso"
   ],
   "condiciones_activacion": [
-    "Cuando el emprendedor va a delegar una tarea crítica del negocio a un sistema de IA generativa"
+    "Cuando vas a dejarle a la IA una tarea importante de tu negocio"
   ],
   "etiqueta_arbol": "Conoce lo que la IA Ignora"
 }

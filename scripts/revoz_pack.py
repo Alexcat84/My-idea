@@ -367,6 +367,14 @@ def main():
             viejo[k] = nuevo[k]
         ruta.write_text(json.dumps(viejo, ensure_ascii=False, indent=2), encoding="utf-8")
         hechos[nid] = True
+        # SE PERSISTE EN CADA NODO, no al final. Un lote de 52 no cabe en una
+        # ventana de 10 minutos, y cuando el primero se corto por tiempo el
+        # registro no se habia escrito: los nodos SI estaban en disco, pero la
+        # cuenta de lo ya pagado se habia perdido y re-correr habria pagado la
+        # API dos veces por el mismo trabajo. Es la misma averia que dejo el lote
+        # de ejecucion a medias en la fusion. Escribir 52 veces un JSON de 52
+        # claves no cuesta nada; volver a pagar 52 llamadas si.
+        hechos_path.write_text(json.dumps(hechos, ensure_ascii=False, indent=2), encoding="utf-8")
         ok += 1
         if len(muestra) < 5:
             muestra.append({"node_id": nid, "antes": antes,
