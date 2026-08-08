@@ -4,16 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Encuesta de Satisfacción Post-Entrega",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Herramienta de retroalimentación aplicada al finalizar una interacción o proyecto, que se adapta según la calificación recibida: si es alta, invita a testimonios; si es baja, crea espacio para ventilar frustraciones y buscar reconciliación. Permite capturar tanto la percepción del cliente como la del equipo interno para mejorar procesos futuros.",
+  "resumen_teorico": "Cuando terminas una entrega o un proyecto, pregúntale a tu cliente cómo le fue, con una calificación breve. Si la calificación es alta, aprovecha para pedirle un testimonio. Si es baja, abre un espacio para que exprese su frustración y busca reconciliar la relación. Aplica lo mismo con tu propio equipo, para mejorar tus procesos futuros.",
   "pasos_accionables": [
-    "Diseñar una encuesta breve con calificación inicial (ej. estrellas o NPS)",
-    "Ramificar preguntas según el resultado (positivo vs negativo)",
-    "Si es positivo, solicitar testimonio o reseña",
-    "Si es negativo, dar espacio para expresar frustración y proponer solución",
-    "Aplicar la encuesta tanto interna (equipo) como externamente (cliente)",
-    "Usar los resultados para ajustar procesos futuros"
+    "Diseña una encuesta breve con una calificación inicial (por ejemplo estrellas o NPS)",
+    "Divide las preguntas según el resultado, positivo o negativo",
+    "Si es positivo, pide un testimonio o una reseña",
+    "Si es negativo, da espacio para que exprese su frustración y propón una solución",
+    "Aplica la encuesta tanto a tu equipo como a tu cliente",
+    "Usa los resultados para ajustar tus procesos futuros"
   ],
-  "entregable_esperado": "Encuesta implementada con lógica de ramificación y reporte de resultados (NPS u otro indicador)",
+  "entregable_esperado": "Una encuesta con ramas según la respuesta y un reporte de resultados (como el NPS u otro indicador)",
   "nodos_previos": [
     "reunion_conclusion_proyecto",
     "cultura_feedback_alta_frecuencia"
@@ -22,7 +22,7 @@
     "fase_accomplish"
   ],
   "condiciones_activacion": [
-    "Cuando se completa una entrega, proyecto o interacción significativa con el cliente"
+    "Cuando termines una entrega, un proyecto o una interacción importante con tu cliente"
   ],
   "etiqueta_arbol": "Pregunta Cómo Quedó tu Cliente"
 }

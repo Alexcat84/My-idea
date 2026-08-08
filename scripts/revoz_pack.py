@@ -101,7 +101,7 @@ TILDES = {
     # salieron con la ortografia rota. Se corrige a maquina, que es determinista
     # y no es inventar, y ademas se veta abajo para que no vuelva a pasar.
     "vision": "visión", "hipotesis": "hipótesis", "solucion": "solución",
-    "soluciones": "soluciones", "validacion": "validación", "creacion": "creación",
+    "validacion": "validación", "creacion": "creación",
     "evaluacion": "evaluación", "definicion": "definición", "automatizacion": "automatización",
     "descripcion": "descripción", "iteracion": "iteración", "medicion": "medición",
     "operacion": "operación", "presentacion": "presentación", "reaccion": "reacción",

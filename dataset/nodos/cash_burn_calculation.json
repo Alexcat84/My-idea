@@ -2,16 +2,16 @@
   "node_id": "cash_burn_calculation",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Cálculo de Cash Burn (Quema de Efectivo)",
+  "titulo_concepto": "Cuánto dinero quemas cada trimestre (Cash Burn)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Proceso para calcular cuánto dinero pierde o gana la empresa cada trimestre, restando todos los costos (ventas, producto, operativos) de los ingresos netos. Es el indicador central para saber cuánto tiempo de vida (runway) le queda a la startup antes de quedarse sin fondos.",
+  "resumen_teorico": "Es la forma de calcular cuánto dinero pierdes o ganas en tu negocio cada trimestre: restas todos los costos (ventas, producto, operativos) de tus ingresos netos. Con ese número sabes cuánto tiempo de vida (runway) te queda antes de quedarte sin efectivo, y puedes decidir con calma cuándo escalar o buscar más dinero.",
   "pasos_accionables": [
-    "Calcular ingresos netos de la empresa por trimestre (ingresos brutos menos costos de canal)",
-    "Restar costos de ventas, costos de producto y costos operativos corrientes",
-    "El resultado es el cash burn (positivo o negativo) del periodo",
-    "Restar el cash burn del efectivo disponible al inicio del trimestre para obtener el efectivo remanente"
+    "Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)",
+    "Resta tus costos de ventas, de producto y los operativos corrientes",
+    "El resultado es cuánto dinero quemaste o generaste (cash burn) en ese periodo",
+    "Resta ese número del efectivo que tenías al inicio del trimestre para saber cuánto efectivo te queda"
   ],
-  "entregable_esperado": "Cálculo trimestral de cash burn y efectivo remanente durante al menos el primer año",
+  "entregable_esperado": "Tu cálculo trimestral de cuánto dinero quemas y cuánto efectivo te queda, durante al menos el primer año",
   "nodos_previos": [
     "metrics_that_matter_framework",
     "actualizar_modelo_de_negocio_pivot_o_proceed",
@@ -21,8 +21,8 @@
     "decision_pivotar_o_proceder"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita saber cuánto tiempo puede operar la empresa antes de quedarse sin capital",
-    "Antes de decidir escalar el negocio o buscar más financiamiento"
+    "Cuando necesitas saber cuánto tiempo puedes operar antes de quedarte sin capital",
+    "Antes de decidir si escalas el negocio o buscas más financiamiento"
   ],
   "etiqueta_arbol": "Calcula tu Quema de Caja"
 }

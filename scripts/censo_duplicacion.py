@@ -234,7 +234,12 @@ def _llamar(cliente, system, prompt, uso):
 BARANDAS = {
     "dato_local_cableado": [
         r"\b\d+\s*(?:%|por ciento)\s+(?:de impuesto|de arancel|de iva|de comision)",
-        r"\b(?:USD|US\$|\$|EUR|€)\s?\d[\d.,]*",
+        # El `\b` delante del grupo mataba el caso mas comun: `$` no es
+        # caracter de palabra, asi que "son $45" NUNCA casaba. La baranda
+        # llevaba desde su nacimiento ciega a los importes sueltos (cazada por
+        # su fixture, ago 2026). El limite izquierdo se pide solo donde hace
+        # falta: en las siglas.
+        r"(?:\bUSD|\bEUR|US\$|\$|€)\s?\d[\d.,]*",
         r"\bdivid(?:e|ir|iendo)\s+entre\s+\d{3,}",
         r"\b\d{3,}\s*(?:kg|libras|lbs)\b",
         r"\b(?:OSHA|EPA|FDA|IRS|SEC)\b",
@@ -246,6 +251,26 @@ BARANDAS = {
         r"\bescala de\s*1\s*a\s*(?:5|10)\b|\bdel\s*1\s*al\s*(?:5|10)\b",
         r"\bprobabilidad\s*(?:x|por|\*)\s*impacto\b",
         r"\bnivel de riesgo\s*=\s*",
+    ],
+    # LA CUARTA BARANDA (adoptada ago 2026, Fase 2-3 de la curacion del motor).
+    # Las tres primeras se construyeron para los PACKS, donde el defecto era la
+    # ESCALA: una empresa con gerencia y comites hablandole a alguien que trabaja
+    # solo. El defecto del NUCLEO es otro: la PERSONA. El nucleo no le habla a una
+    # empresa grande, le habla SOBRE un emprendedor en vez de A un emprendedor, y
+    # las tres primeras no lo ven: de los 8 blancos de los rumbos de diagnostico,
+    # cazaron CERO.
+    "voz_de_libro": [
+        # Se exige el VERBO en tercera persona detras: "el fundador SALE a
+        # vender" es voz de libro; "tu eres el fundador de esto" es la voz
+        # correcta y el patron sin verbo la cazaba (visto en su fixture).
+        r"\b(?:el|un) (?:fundador|emprendedor|usuario|equipo fundador) (?:debe|puede|tiene|sale|hace|necesita|busca|define|crea|elige|usa|realiza|entrega)\b",
+        r"\blos fundadores\b|\blos emprendedores\b",
+        r"\b(?:el equipo|la empresa|la startup|una empresa|el usuario) debe\b",
+        r"\blas empresas deben\b|\blos fundadores deben\b",
+        # El IMPERSONAL REFLEXIVO, que es lo que se le escapo a
+        # value_proposition_startup ("el trabajo que SE REALIZA para el cliente").
+        r"\bse (?:debe|deben|realiza|traduce|estructura|recomienda|utiliza|busca|espera)\b",
+        r"\bes la (?:fase|etapa) (?:donde|en (?:la )?que)\b",
     ],
     "residuo_corporativo": [
         # `tu equipo` SALIO del patron (adjudicado ago 2026). Era correcto en la
