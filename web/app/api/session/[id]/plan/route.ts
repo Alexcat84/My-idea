@@ -372,7 +372,8 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
             ...(enlace.fallo ? { texto: enlace.fallo } : {}),
           });
         }
-        await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion);
+        await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion,
+          resultado.nodosPorEtapa);
 
         const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];
         const { calidad, acumulado: acumuladoConJuez } = await evaluarCalidadSesion(
