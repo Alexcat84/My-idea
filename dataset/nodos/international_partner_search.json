@@ -4,22 +4,44 @@
   "dominio": "exportacion",
   "titulo_concepto": "Búsqueda Internacional de Socios (International Partner Search)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El International Partner Search del U.S. Commercial Service utiliza equipos de expertos en más de 75 países para encontrar los socios estratégicos más adecuados. La empresa exportadora proporciona materiales de marketing y antecedentes; el servicio entrega una lista de hasta cinco empresas prescreened interesadas en comprar o vender los productos, con información sobre tamaño, ventas, años en el negocio y contactos clave, en un plazo de 15 días.",
+  "resumen_teorico": "El International Partner Search del U.S. Commercial Service usa equipos de expertos en mas de 75 paises para identificar socios estrategicos calificados. Tu entregas materiales de marketing y el perfil de tu negocio, y en 15 días recibes una lista de hasta cinco empresas prescreened interesadas en comprar o vender tus productos, con tamano, ventas, anos en el negocio y contactos clave. Si necesitas reuniones ya agendadas, puedes solicitar el servicio Gold Key, que anade orientacion, investigacion de mercado, citas prearregladas, apoyo de interprete y asistencia para cerrar el trato, enviar mercancia y cobrar. Para verificar la fiabilidad de un socio antes de firmar, puedes pedir un informe de antecedentes (ICP) con reputacion, referencias financieras y comerciales, util en mercados donde faltan proveedores privados de información crediticia.",
   "pasos_accionables": [
-    "Preparar materiales de marketing y perfil de la empresa exportadora",
-    "Solicitar el servicio a través de la oficina local del U.S. Commercial Service",
-    "Recibir y evaluar la lista de hasta 5 socios potenciales prescreened",
-    "Contactar directamente a los socios interesados con la información proporcionada"
+    "Prepara tus materiales de marketing y el perfil de tu negocio",
+    "Solicita el International Partner Search en la oficina local del U.S. Commercial Service, indicando el mercado objetivo y el perfil de socio que buscas",
+    "Recibe y evalua la lista de hasta 5 socios potenciales prescreened en 15 días",
+    "Si necesitas reuniones ya agendadas, solicita el servicio Gold Key para obtener citas prearregladas, interprete y apoyo para cerrar el trato",
+    "Pide un informe ICP para verificar la reputacion y las referencias financieras del socio antes de firmar",
+    "Contacta directamente a los socios interesados con la información proporcionada"
   ],
-  "entregable_esperado": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interés confirmado",
+  "entregable_esperado": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interes confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
   "nodos_previos": [
-    "evaluacion_mercados_objetivo"
-  ],
-  "nodos_siguientes": [
+    "evaluacion_mercados_objetivo",
     "seleccion_representante_extranjero"
   ],
-  "condiciones_activacion": [
-    "Si el usuario necesita identificar rápidamente socios estratégicos calificados en un mercado extranjero"
+  "nodos_siguientes": [
+    "seleccion_representante_extranjero",
+    "clausula_escape_contrato_representante"
   ],
-  "etiqueta_arbol": "Busca Socios en el Extranjero"
+  "condiciones_activacion": [
+    "Si necesitas identificar rapidamente socios estrategicos calificados en un mercado extranjero",
+    "Si ya elegiste un mercado objetivo y quieres reuniones ya agendadas con compradores o socios",
+    "Si necesitas verificar la fiabilidad de una empresa extranjera antes de firmar un acuerdo"
+  ],
+  "etiqueta_arbol": "Busca Socios en el Extranjero",
+  "ids_alias": [
+    "gold_key_matching_service",
+    "international_company_profile"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "gold_key_matching_service",
+      "titulo": "Servicio Gold Key Matching",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    },
+    {
+      "node_id": "international_company_profile",
+      "titulo": "Perfil de Compañía Internacional (ICP)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

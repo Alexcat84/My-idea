@@ -4,23 +4,38 @@
   "dominio": "health_safety",
   "titulo_concepto": "Plan de Control de Infecciones",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Incluye el manejo de residuos biopeligrosos, el uso de equipo de proteccion personal, y la capacitacion sobre exposicion a animales, vectores como mosquitos y garrapatas, y enfermedades respiratorias de temporada.",
+  "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal, y capacitacion sobre exposicion a animales, vectores como mosquitos y garrapatas, y enfermedades respiratorias de temporada. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
   "pasos_accionables": [
+    "Evalua los riesgos de exposicion a agentes infecciosos en tu negocio.",
+    "Pon en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies.",
     "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos y objetos punzocortantes, con las etiquetas correspondientes.",
     "Ten a mano el equipo de proteccion personal necesario según el riesgo: guantes, proteccion ocular, mascarillas o respiradores certificados.",
-    "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacita cada año sobre mordeduras, rasguños y como reconocer señales de enfermedad.",
-    "Si hay exposicion a mosquitos o garrapatas, provee ropa protectora y repelente.",
-    "Lleva un registro de las enfermedades infecciosas relacionadas con el trabajo y reporta los casos graves según lo que exija la normativa laboral de tu mercado."
+    "Si tu trabajo o el de quien te ayuda implica contacto con animales, mosquitos o garrapatas, capacita cada año sobre estos riesgos y provee ropa protectora y repelente cuando aplique.",
+    "Define una politica de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado."
   ],
-  "entregable_esperado": "Un plan de control de infecciones por escrito, con los procedimientos de manejo de residuos, el equipo de proteccion asignado, y los registros de capacitacion y reportes que correspondan según tu normativa local.",
+  "entregable_esperado": "Un plan de control de infecciones por escrito, con la evaluacion de riesgo, los procedimientos de higiene y manejo de residuos, el equipo de proteccion asignado, y los registros de capacitacion y reportes que correspondan según tu normativa local.",
   "nodos_previos": [
-    "personal_protective_equipment"
+    "personal_protective_equipment",
+    "prevencion_enfermedades_por_calor"
   ],
   "nodos_siguientes": [
-    "medical_services_first_aid"
+    "medical_services_first_aid",
+    "procedimientos_lockout_tagout",
+    "lockout_tagout_procedures"
   ],
   "condiciones_activacion": [
-    "Cuando tu negocio maneja materiales biologicos, trabaja con animales, o esta expuesto a enfermedades transmisibles en el entorno laboral."
+    "Cuando tu negocio maneja materiales biologicos, trabaja con animales, o esta expuesto a enfermedades transmisibles en el entorno laboral.",
+    "Si quien te ayuda tiene exposicion potencial a agentes infecciosos en su labor."
   ],
-  "etiqueta_arbol": "Previene Riesgos de Infección"
+  "etiqueta_arbol": "Previene Riesgos de Infección",
+  "ids_alias": [
+    "plan_de_control_de_infecciones"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "plan_de_control_de_infecciones",
+      "titulo": "Plan de Control de Infecciones en el Lugar de Trabajo",
+      "fuente": "SMALL_BUSINESS"
+    }
+  ]
 }

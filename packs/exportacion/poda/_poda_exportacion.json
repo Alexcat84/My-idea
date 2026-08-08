@@ -5,181 +5,57 @@
   "clusters": [
     {
       "orden": 1,
-      "indice": 3,
+      "indice": 0,
       "nodos": [
-        "definicion_terminos_de_venta",
-        "glosario_terminos_incoterms",
-        "incoterms_reglas_comerciales_internacionales"
+        "programas_asistencia_gubernamental_exportacion",
+        "recursos_apoyo_gubernamental_exportacion",
+        "recursos_gubernamentales_exportacion"
       ],
-      "similitud": 0.9417719841003418,
-      "por_que": "Todos describen el mismo concepto de Incoterms y las mismas obligaciones/costos entre comprador y vendedor.",
-      "quedaria": "Incoterms: Términos Comerciales Internacionales (EXW, FCA, FAS, FOB)",
-      "sobrevive": "incoterms_reglas_comerciales_internacionales",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "definicion_terminos_de_venta": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "glosario_terminos_incoterms": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "incoterms_reglas_comerciales_internacionales": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive": "recursos_apoyo_gubernamental_exportacion",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Recursos de Apoyo Gubernamental para Exportadores (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank)",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
+      "telemetria": {}
     },
     {
       "orden": 2,
       "indice": 1,
       "nodos": [
-        "antidiversion_clause",
-        "clausula_antidesviacion"
+        "financiamiento_exim_bank_3",
+        "garantia_capital_trabajo",
+        "programas_ex_im_bank"
       ],
-      "similitud": 0.960666835308075,
-      "por_que": "Es la misma cláusula de control de destino exigida en documentos de embarque, solo cambia el nombre.",
-      "quedaria": "Cláusula Antidesviación (Destination Control Statement)",
-      "sobrevive": "clausula_antidesviacion",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "antidiversion_clause": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "clausula_antidesviacion": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive": "programas_ex_im_bank",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Programas de Financiamiento del Ex-Im Bank",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
+      "telemetria": {}
     },
     {
       "orden": 3,
-      "indice": 5,
+      "indice": 2,
       "nodos": [
-        "financiamiento_sba_exportacion",
-        "programas_sba_exportacion"
+        "asistencia_us_commercial_service",
+        "uso_del_us_commercial_service"
       ],
-      "similitud": 0.9583041071891785,
-      "por_que": "Ambos describen los mismos programas de financiamiento de la SBA para exportadores.",
-      "quedaria": "Programas de Financiamiento de la SBA para Exportadores",
-      "sobrevive": "financiamiento_sba_exportacion",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "financiamiento_sba_exportacion": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "programas_sba_exportacion": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive": "uso_del_us_commercial_service",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Aprovechamiento del U.S. Commercial Service",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
+      "telemetria": {}
     },
     {
       "orden": 4,
-      "indice": 7,
+      "indice": 3,
       "nodos": [
-        "seleccion_metodo_envio_internacional",
-        "seleccion_metodo_transporte_internacional"
+        "gold_key_matching_service",
+        "international_company_profile",
+        "international_partner_search"
       ],
-      "similitud": 0.9437987208366394,
-      "por_que": "Ambos describen la misma decisión sobre el método de transporte internacional (marítimo, aéreo, multimodal).",
-      "quedaria": "Selección del Método de Transporte Internacional",
-      "sobrevive": "seleccion_metodo_transporte_internacional",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "seleccion_metodo_envio_internacional": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "seleccion_metodo_transporte_internacional": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
-    },
-    {
-      "orden": 5,
-      "indice": 4,
-      "nodos": [
-        "enfoque_paso_a_paso_investigacion_mercado",
-        "investigacion_mercado_paso_a_paso"
-      ],
-      "similitud": 0.9434452056884766,
-      "por_que": "Ambas describen la misma metodología de tres pasos para investigar mercados de exportación.",
-      "quedaria": "Enfoque Paso a Paso para la Investigación de Mercados de Exportación",
-      "sobrevive": "enfoque_paso_a_paso_investigacion_mercado",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "enfoque_paso_a_paso_investigacion_mercado": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "investigacion_mercado_paso_a_paso": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
-    },
-    {
-      "orden": 6,
-      "indice": 6,
-      "nodos": [
-        "licenciamiento_tecnologia",
-        "licenciamiento_tecnologico"
-      ],
-      "similitud": 0.9381738901138306,
-      "por_que": "Ambos describen el mismo acuerdo contractual de licenciamiento de tecnología con fines de internacionalización.",
-      "quedaria": "Licenciamiento de Tecnología (Technology Licensing)",
-      "sobrevive": "licenciamiento_tecnologico",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "licenciamiento_tecnologia": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "licenciamiento_tecnologico": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
-    },
-    {
-      "orden": 7,
-      "indice": 0,
-      "nodos": [
-        "antiboycott_regulations",
-        "regulaciones_antiboicot"
-      ],
-      "similitud": 0.9336167573928833,
-      "por_que": "Ambos describen la misma normativa antiboicot de EE.UU. y la misma acción de cumplimiento.",
-      "quedaria": "Cumplimiento de las Regulaciones Antiboicot",
-      "sobrevive": "antiboycott_regulations",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "antiboycott_regulations": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "regulaciones_antiboicot": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
-    },
-    {
-      "orden": 8,
-      "indice": 7,
-      "nodos": [
-        "documentacion_exportacion",
-        "documentacion_exportacion_basica"
-      ],
-      "sobrevive": "documentacion_exportacion",
-      "sobrevive_por": "adjudicado a ojo",
-      "quedaria": "Documentación de Exportación",
-      "por_que": "familia gorda que el umbral no agrupo.",
+      "sobrevive": "international_partner_search",
+      "sobrevive_por": "adjudicado",
+      "quedaria": "Búsqueda Internacional de Socios (International Partner Search)",
+      "por_que": "la misma institucion o el mismo plan, contado varias veces.",
       "telemetria": {}
     }
   ],
