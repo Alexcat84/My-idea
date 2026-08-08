@@ -1,29 +1,30 @@
 {
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Estructura de Vesting para Fundadores vs. Contrataciones",
+  "titulo_concepto": "Cómo repartir las acciones en el tiempo entre fundadores y contrataciones (vesting)",
   "fuente": "The Founder's Dilemmas",
-  "resumen_teorico": "El vesting no solo protege a la empresa de salidas prematuras; también funciona como una herramienta de retención de talento clave ('esposas de oro'), dándole a un ejecutivo un fuerte incentivo financiero para permanecer durante un periodo determinado, típicamente 4 años. Es importante diferenciar el vesting de los fundadores del de las contrataciones no fundadoras: los fundadores suelen negociar 'crédito por tiempo servido' (reconociendo el tiempo ya trabajado antes de la inversión externa), obteniendo esquemas más cortos que los de nuevas contrataciones, aunque el apego emocional del fundador a la empresa puede reducir la necesidad de los inversionistas de imponer estas condiciones tan estrictamente. El diseño debe considerar también si el vesting se basa en tiempo o en desempeño, según el horizonte de valor esperado de cada rol.",
+  "resumen_teorico": "Repartir las acciones poco a poco en vez de entregarlas todas de una vez no solo te protege si alguien se va antes de tiempo; también es una herramienta para retener talento clave, porque le da a esa persona un fuerte incentivo económico para quedarse durante un periodo determinado, típicamente 4 años. Como fundador, tienes que diferenciar tu propio esquema del de las personas que contratas: tú puedes negociar con quien invierte que se te reconozca el tiempo que ya trabajaste antes de recibir la inversión, y así consolidar tus acciones en un plazo más corto que el de una nueva contratación. Además, tu apego a lo que construiste hace que quien invierte no necesite presionarte tanto con estas condiciones. Al diseñar el esquema, decide también si las acciones se consolidan solo por tiempo o por desempeño, según cuánto valor esperas que aporte cada rol.",
   "pasos_accionables": [
-    "Definir el cronograma estándar de vesting (usualmente 4 años) para nuevas contrataciones ejecutivas, diferenciándolo del de los fundadores",
-    "Negociar con los inversionistas el reconocimiento de 'crédito por tiempo servido' para los fundadores que ya trabajaron en la empresa antes de la inversión",
-    "Decidir si el vesting de cada rol se basa en tiempo o en desempeño, según su horizonte de valor esperado",
-    "Documentar los términos de vesting de forma consistente para todo el equipo, para evitar conflictos futuros en eventos de salida (adquisición, oferta pública inicial)",
-    "Evaluar la inclusión de cláusulas de aceleración de vesting ante un cambio de control"
+    "Define el plazo estándar (usualmente 4 años) para que las nuevas contrataciones ejecutivas consoliden sus acciones, y distínguelo del tuyo como fundador",
+    "Negocia con quien invierte que te reconozcan el tiempo que ya trabajaste en el negocio antes de recibir la inversión",
+    "Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+    "Deja por escrito las condiciones de cada persona de forma consistente, para evitar conflictos futuros si vendes el negocio o sales a bolsa",
+    "Evalúa incluir una cláusula que acelere la consolidación de acciones si cambia quien controla el negocio"
   ],
-  "entregable_esperado": "Documento de términos de vesting diferenciados para fundadores y para el equipo ejecutivo/contrataciones, incluyendo cronograma y condiciones de aceleración",
+  "entregable_esperado": "Documento con las condiciones de reparto de acciones diferenciadas para ti como fundador y para tu equipo ejecutivo o contrataciones, incluyendo el plazo y las condiciones de aceleración",
   "condiciones_activacion": [
-    "Cuando un inversor externo entra al cap table y exige vesting",
-    "Cuando se está estructurando la compensación de los primeros contratados",
-    "Cuando se formaliza la oferta de equity a un nuevo ejecutivo",
-    "Cuando se prepara la empresa para una ronda de inversión o adquisición"
+    "Cuando alguien invierte en tu negocio y te pide este tipo de condiciones",
+    "Cuando estás definiendo cómo pagarás a las primeras personas que contrates",
+    "Cuando formalizas la oferta de acciones a un nuevo ejecutivo",
+    "Cuando preparas tu negocio para recibir inversión o para venderlo"
   ],
   "node_id": "eleccion_estructura_vesting_founder",
   "nodos_previos": [
     "reasignacion_equity_fundadores",
     "diseno_compensacion_equidad",
     "contratacion_experiencia_vs_potencial",
-    "reducir_playing_with_fire_gap"
+    "reducir_playing_with_fire_gap",
+    "seesaw_salario_equity"
   ],
   "nodos_siguientes": [
     "term_sheet_negociacion",

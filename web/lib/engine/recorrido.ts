@@ -26,7 +26,7 @@ import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
-import { esOfrecible, etiquetaArbol, obtenerPregunta, sucesoresNivel, type Grafo, type PreguntasCache } from "./graph";
+import { esOfrecible, etiquetaArbol, obtenerPregunta, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import {
   interpretarMultiSalto,
@@ -404,7 +404,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     }
     const { elegidos, indice } = estado.sigamosDirigido;
     const nidActual = elegidos[indice];
-    const titulo = graph[nidActual]?.titulo_concepto ?? nidActual;
+    // Por el resolutor: este título entra al PERFIL DE SESIÓN, que viaja en el
+    // prompt de todos los turnos siguientes y acaba dentro del plan.
+    const titulo = tituloDeNodo(nidActual, graph);
     const perfilNuevo = `${estado.perfilSesion}\nSobre ${titulo}: ${respuestaUsuario ?? ""}`.trim();
     const siguienteIndice = indice + 1;
 

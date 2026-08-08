@@ -2,17 +2,17 @@
   "node_id": "plan_gestion_interesados",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Plan de Gestión de los Interesados",
+  "titulo_concepto": "Plan para relacionarte con las personas interesadas en tu proyecto",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Describe las estrategias para gestionar eficazmente la participación de los stakeholders, incluyendo su nivel actual y deseado de compromiso, necesidades de comunicación y el enfoque para moverlos hacia el nivel de participación preferido.",
+  "resumen_teorico": "Aquí defines cómo te vas a relacionar con cada persona que tiene algo que ver con tu proyecto: en qué nivel de compromiso está ahora, en qué nivel te gustaría que estuviera, qué necesita saber de ti y cómo la vas acercando al nivel que buscas.",
   "pasos_accionables": [
-    "Documentar el nivel actual (C) y deseado (D) de compromiso de cada stakeholder",
-    "Clasificar a los stakeholders (desconocedor, resistente, neutral, partidario, líder)",
-    "Definir necesidades de comunicación por stakeholder",
-    "Identificar relaciones entre grupos de interesados",
-    "Diseñar el enfoque de compromiso para mover a cada stakeholder al nivel deseado"
+    "Anota el nivel de compromiso actual y el nivel que te gustaría lograr con cada persona interesada",
+    "Ubica a cada una según cómo se relaciona con tu proyecto: si no lo conoce, si se resiste, si es neutral, si lo apoya o si ya lo defiende",
+    "Define qué necesita saber cada persona y cómo se lo vas a comunicar",
+    "Identifica cómo se relacionan entre sí los distintos grupos de personas interesadas",
+    "Piensa cómo vas a acercar a cada una al nivel de compromiso que necesitas"
   ],
-  "entregable_esperado": "Una matriz de evaluación de compromiso de interesados con estrategias específicas de acercamiento.",
+  "entregable_esperado": "Una lista donde para cada persona interesada tienes anotado su nivel actual y deseado de compromiso, junto con la manera en que planeas acercarla.",
   "nodos_previos": [
     "stakeholder_register",
     "plan_gestion_comunicaciones"
@@ -23,11 +23,13 @@
     "plan_gestion_calidad",
     "plan_gestion_cambios",
     "plan_gestion_comunicaciones",
-    "plan_gestion_costos"
+    "plan_gestion_costos",
+    "buyin_customer_development",
+    "cost_management_plan"
   ],
   "condiciones_activacion": [
-    "Cuando existen stakeholders con niveles de compromiso bajos o resistentes",
-    "Al iniciar la planificación de la gestión de interesados"
+    "Cuando tienes personas interesadas con poco compromiso o que se resisten a tu proyecto",
+    "Cuando empiezas a planear cómo te vas a relacionar con las personas interesadas en tu proyecto"
   ],
   "etiqueta_arbol": "Involucra a tus Interesados Clave"
 }

@@ -2,16 +2,16 @@
   "node_id": "eliminacion_planes_muestreo_estandar",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Eliminación de Planes de Muestreo Estándar (AQL, Military Standard 105D)",
+  "titulo_concepto": "Deja de usar tablas de muestreo estándar para aceptar o rechazar lotes (AQL, Military Standard 105D)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming critica el uso pro forma de planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig, que no consideran los costos reales (k1, k2) sino solo un nivel de calidad aceptable (AQL) arbitrario. Su aplicación mecánica, sin análisis de costos, puede duplicar el costo total respecto a la estrategia óptima (inspección 100% o ninguna). Se recomienda descartar estos planes y basar las decisiones en el análisis de costo total real.",
+  "resumen_teorico": "Deming muestra que usar planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig de forma automática es un error, porque esas tablas solo fijan un nivel de calidad aceptable (AQL) arbitrario y no toman en cuenta lo que realmente te cuesta inspeccionar o dejar pasar un defecto. Aplicarlas sin mirar tus costos reales puede hacer que termines pagando el doble de lo que pagarías si eligieras la estrategia correcta: revisar el cien por ciento de las piezas o no revisar ninguna. Mejor descarta estos planes y decide según el costo total real.",
   "pasos_accionables": [
-    "Revisar los contratos y procedimientos actuales que exigen el uso de AQL o planes de muestreo estándar.",
-    "Calcular el costo total bajo el plan de muestreo actual versus el costo con la regla óptima (0% o 100% inspección).",
-    "Negociar con proveedores y clientes la eliminación de cláusulas de AQL en favor de acuerdos basados en costo total y mejora continua.",
-    "Sustituir el criterio de aceptación por lotes por control estadístico continuo del proceso del proveedor."
+    "Revisa los contratos y procedimientos actuales que te exigen usar AQL o planes de muestreo estándar.",
+    "Calcula el costo total que tienes con el plan de muestreo actual y compáralo con el costo de la regla óptima: revisar todo o no revisar nada.",
+    "Negocia con tus proveedores y clientes para eliminar las cláusulas de AQL y acordar en base al costo total y la mejora continua.",
+    "Cambia el criterio de aceptar o rechazar lotes por un control estadístico continuo del proceso de tu proveedor."
   ],
-  "entregable_esperado": "Documento de política de calidad que elimina el uso de planes de muestreo estándar y establece criterios basados en análisis de costos y control estadístico.",
+  "entregable_esperado": "Un documento de política de calidad, propio, donde elimines el uso de planes de muestreo estándar y definas tus criterios según el análisis de costos y el control estadístico.",
   "nodos_previos": [
     "regla_todo_o_nada_inspeccion",
     "probabilidad_falla_ensamblaje_multiple"
@@ -20,8 +20,8 @@
     "relacion_largo_plazo_proveedor_unico"
   ],
   "condiciones_activacion": [
-    "Cuando la organización aplica actualmente planes de muestreo estándar como Military Standard 105D o tablas AQL",
-    "Cuando los contratos con proveedores exigen niveles de calidad aceptable (AQL) sin análisis de costo"
+    "Cuando hoy aplicas planes de muestreo estándar como Military Standard 105D o tablas AQL.",
+    "Cuando tus contratos con proveedores exigen niveles de calidad aceptable (AQL) sin análisis de costo."
   ],
   "etiqueta_arbol": "Descarta Muestreos Estándar Rígidos"
 }

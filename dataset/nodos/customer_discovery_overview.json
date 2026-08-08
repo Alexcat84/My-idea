@@ -2,16 +2,16 @@
   "node_id": "customer_discovery_overview",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Proceso de Customer Discovery (Cuatro Fases)",
+  "titulo_concepto": "Las cuatro fases para descubrir a tu cliente (Customer Discovery)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Proceso estructurado en cuatro fases para convertir las hipótesis fundacionales en hechos: (1) Plantear hipótesis del modelo de negocio, (2) Salir a probar el problema, (3) Salir a probar la solución/producto, (4) Verificar el modelo de negocio y decidir pivotar o proceder. El objetivo es encontrar el 'problem/solution fit' antes de escalar ventas.",
+  "resumen_teorico": "Proceso en cuatro fases para convertir tus supuestos sobre el negocio en hechos comprobados: primero planteas las hipótesis de tu modelo de negocio, luego sales a probar si el problema es real, después sales a probar tu solución o producto, y por ultimo verificas el modelo y decides si pivotar o seguir adelante. Buscas que el problema y la solución calcen bien (problem/solution fit) antes de escalar tus ventas.",
   "pasos_accionables": [
-    "Fase 1: Descomponer la visión fundacional en las 9 partes del Business Model Canvas",
-    "Fase 2: Salir del edificio para testear si el problema es real y doloroso para los clientes",
-    "Fase 3: Presentar el MVP y la propuesta de valor para validar la solución",
-    "Fase 4: Evaluar resultados y decidir si se tiene suficiente validación para pasar a Customer Validation o si se debe pivotar"
+    "Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)",
+    "Sal a comprobar si el problema es real y le duele a tus clientes",
+    "Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución",
+    "Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar"
   ],
-  "entregable_esperado": "Business Model Canvas actualizado con hipótesis convertidas en hechos validados o descartados, y decisión documentada de pivotar o proceder a Customer Validation.",
+  "entregable_esperado": "Tu lienzo de modelo de negocio actualizado, con las hipótesis convertidas en hechos validados o descartados, y tu decisión tomada sobre si pivotar o avanzar a la siguiente etapa.",
   "nodos_previos": [
     "customer_development_team",
     "lienzo_modelo_negocio"
@@ -19,11 +19,12 @@
   "nodos_siguientes": [
     "earlyvangelists",
     "producto_minimo_viable",
-    "hipotesis_de_tamano_de_mercado"
+    "hipotesis_de_tamano_de_mercado",
+    "identificar_earlyvangelists"
   ],
   "condiciones_activacion": [
-    "Si el usuario tiene una hipótesis de negocio pero no ha salido a hablar con clientes reales",
-    "Si el equipo quiere evitar construir un producto completo sin validar el problema primero"
+    "Tienes una hipótesis de negocio pero todavia no has salido a hablar con clientes reales",
+    "Quieres evitar construir un producto completo sin validar antes el problema"
   ],
   "etiqueta_arbol": "Prueba tu Modelo en Fases"
 }

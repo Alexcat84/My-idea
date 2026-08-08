@@ -59,6 +59,12 @@ VETADO = {
     # el voseo lleva TILDE ("sabes" con tilde). El patron [ee] cazaba las dos
     # y rechazo tres nodos bien escritos. Para esas formas se EXIGE la tilde.
     "voseo": [r"\bvos\b", r"\bpodés\b", r"\btenés\b", r"\bquerés\b", r"\bsabés\b", r"\bhacés\b"],
+    # ORTOGRAFIA ROTA que la correccion automatica no alcanzo. Va como VETO y no
+    # solo como correccion porque la lista de TILDES es finita: si el modelo
+    # inventa una forma nueva sin tilde, la correccion no la ve y el nodo se
+    # publicaria roto. Cazado en el piloto de voz: "pequeno" no es una palabra.
+    "ortografia rota": [r"\b(?:pequen[oa]s?|disen(?:[oa]s?|ar|as|an|ado|ada)|manana|compania|espanol|senal(?:es)?|anos)\b",
+                        r"\b(?:vision|hipotesis|solucion|validacion|automatizacion|version|decision|revision|mision|presion|precision|conversion)\b"],
     "matriz o puntaje": [
         r"\bmatriz de (?:riesgo|probabilidad|impacto|prioridad)", r"\bpunt[úu][ae]\b",
         r"\bescala de\s*1\s*a\s*(?:5|10)\b", r"\bprobabilidad\s*(?:x|por|\*)\s*impacto\b",
@@ -90,6 +96,26 @@ TILDES = {
     "logistica": "logística", "economico": "económico", "economica": "económica",
     "basico": "básico", "basica": "básica", "unico": "único", "unica": "única",
     "credito": "crédito", "informacion": "información", "produccion": "producción",
+    # Ampliacion tras el PILOTO DE VOZ (ago 2026): la --instruccion se paso
+    # escrita SIN TILDES y el modelo imito el estilo. Ocho de quince nodos
+    # salieron con la ortografia rota. Se corrige a maquina, que es determinista
+    # y no es inventar, y ademas se veta abajo para que no vuelva a pasar.
+    "vision": "visión", "hipotesis": "hipótesis", "solucion": "solución",
+    "validacion": "validación", "creacion": "creación",
+    "evaluacion": "evaluación", "definicion": "definición", "automatizacion": "automatización",
+    "descripcion": "descripción", "iteracion": "iteración", "medicion": "medición",
+    "operacion": "operación", "presentacion": "presentación", "reaccion": "reacción",
+    "atencion": "atención", "intencion": "intención", "conversion": "conversión",
+    "decision": "decisión", "precision": "precisión", "revision": "revisión",
+    "mision": "misión", "presion": "presión", "version": "versión",
+    # LA EÑE. No es una tilde: es otra letra, y "pequeno" no es una palabra.
+    "pequeno": "pequeño", "pequena": "pequeña", "pequenos": "pequeños",
+    "pequenas": "pequeñas", "diseno": "diseño", "disenos": "diseños",
+    "disenar": "diseñar", "disenas": "diseñas", "diseno_v": "diseño",
+    "disenan": "diseñan", "disenado": "diseñado", "disenada": "diseñada",
+    "manana": "mañana", "compania": "compañía",
+    "espanol": "español", "senal": "señal", "senales": "señales",
+    "ano": "año", "anos": "años", "duena": "dueña", "dueno": "dueño",
 }
 
 
@@ -222,7 +248,12 @@ def revisar(nuevo, viejo):
     # justo donde se prohibe inventar. Se admite +/-35% y nunca mas de 150.
     pal = len((nuevo.get("resumen_teorico") or "").split())
     pal_viejo = len((viejo.get("resumen_teorico") or "").split())
-    piso, techo = max(45, int(pal_viejo * 0.65)), min(PALABRAS[1], int(pal_viejo * 1.35) + 10)
+    # EL PISO NUNCA PIDE MAS DE LO QUE EL ORIGINAL TENIA. Con 45 fijo, un
+    # nodo de 26 palabras recibia la banda "45-45": imposible de cumplir, y
+    # cumplirla habria sido RELLENAR, que es presion de invencion justo donde
+    # se prohibe inventar. Cazado en la tanda 2 con `hojas_de_verificacion`.
+    piso = min(45, max(20, int(pal_viejo * 0.65)))
+    techo = max(piso + 15, min(PALABRAS[1], int(pal_viejo * 1.35) + 10))
     if not (piso <= pal <= techo):
         fallas.append(f"resumen de {pal} palabras (el original tenia {pal_viejo}; "
                       f"se admite {piso}-{techo})")
@@ -249,6 +280,17 @@ def main():
     ap.add_argument("--extra", nargs="*", default=[], help="node_id sueltos a incluir")
     ap.add_argument("--tanda", type=int, default=POR_TANDA)
     ap.add_argument("--saltar", help="json con una lista de node_id a NO tocar")
+    # La re-voz normal se ancla al nodo y no sabe QUE hay que arreglar: en un
+    # lote de 36 eso basta, porque la baranda dice donde duele y el modelo lo
+    # ve. En una micro re-voz adjudicada NO basta: `criterio_bazooka_peashooter`
+    # salio de la primera pasada con "el equipo de consultores y abogados"
+    # intacto, porque nadie le dijo que lo que moria era la ESCALA. La
+    # instruccion viaja como ORDEN del editor, no como material: sigue prohibido
+    # inventar, y lo que se pide es quitar, no agregar.
+    ap.add_argument("--instruccion", help="orden extra del editor para esta corrida "
+                                          "(adjudicaciones puntuales). ESCRIBELA CON "
+                                          "TILDES: el modelo imita el estilo de lo que "
+                                          "recibe, y una orden en ASCII sale en ASCII")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -286,6 +328,9 @@ def main():
         prompt = json.dumps({k: viejo.get(k) for k in (
             "titulo_concepto", "resumen_teorico", "pasos_accionables",
             "entregable_esperado", "condiciones_activacion")}, ensure_ascii=False, indent=2)
+        if args.instruccion:
+            prompt = (f"ORDEN DEL EDITOR PARA ESTE NODO (manda sobre lo demas, "
+                      f"pero NO autoriza a inventar):\n{args.instruccion}\n\n" + prompt)
         nuevo, err = llamar(cli, prompt, uso)
         if err or not isinstance(nuevo, dict):
             rechazos.append({"node_id": nid, "motivo": err or "respuesta no es objeto"})
@@ -327,6 +372,14 @@ def main():
             viejo[k] = nuevo[k]
         ruta.write_text(json.dumps(viejo, ensure_ascii=False, indent=2), encoding="utf-8")
         hechos[nid] = True
+        # SE PERSISTE EN CADA NODO, no al final. Un lote de 52 no cabe en una
+        # ventana de 10 minutos, y cuando el primero se corto por tiempo el
+        # registro no se habia escrito: los nodos SI estaban en disco, pero la
+        # cuenta de lo ya pagado se habia perdido y re-correr habria pagado la
+        # API dos veces por el mismo trabajo. Es la misma averia que dejo el lote
+        # de ejecucion a medias en la fusion. Escribir 52 veces un JSON de 52
+        # claves no cuesta nada; volver a pagar 52 llamadas si.
+        hechos_path.write_text(json.dumps(hechos, ensure_ascii=False, indent=2), encoding="utf-8")
         ok += 1
         if len(muestra) < 5:
             muestra.append({"node_id": nid, "antes": antes,

@@ -120,18 +120,42 @@ def test_el_libro_de_verdad_esta_bien_formado():
     assert filas[0]["operacion"] == "apertura-del-libro", (
         "la primera linea debe decir POR QUE el libro nace tarde")
     assert "memoria" in filas[0]["nota"], "la apertura no deja dicha la politica"
-    for f in filas[1:]:
-        assert f.get("parcial") is True, (
-            f"{f['pack']}/{f['operacion']}: es del ciclo viejo y no esta marcada parcial")
-        assert "origen" in f, "una fila rescatada sin decir de donde salio"
-    print(f"  ok: el libro real trae {len(filas)} filas, todas las viejas marcadas")
+    rescatadas = [f for f in filas[1:] if f.get("parcial")]
+    propias = [f for f in filas[1:] if not f.get("parcial")]
+    assert rescatadas, "desaparecieron las filas rescatadas del ciclo viejo"
+    for f in rescatadas:
+        assert "origen" in f, f"{f['pack']}: rescatada sin decir de donde salio"
+    for f in propias:
+        assert f.get("origen") is None, (
+            f"{f['pack']}/{f['operacion']}: una corrida propia no necesita origen; "
+            "si lo trae, es una rescatada sin marcar")
+        assert f["costo_usd"] > 0, f"{f['pack']}: corrida propia sin costo"
+    assert propias, "el libro no ha registrado ni una corrida propia todavia"
+    print(f"  ok: el libro real trae {len(filas)} filas: {len(propias)} propias "
+          f"y {len(rescatadas)} rescatadas y marcadas")
+
+
+def test_el_total_certificable_excluye_las_rescatadas():
+    """LA CIFRA QUE SE LLEVA A UN CIERRE. Un total que suma filas rescatadas
+    suena exacto y no lo es: cada una es la ULTIMA corrida de su script sobre
+    ese pack, no el total del pack."""
+    def cuerpo():
+        libro_mayor.anotar("quality", "consolidacion", 0.06, parcial=True, origen="rescatada")
+        libro_mayor.anotar("environmental", "re-voz", 0.53)
+        libro_mayor.anotar("exportacion", "consolidacion", 0.02)
+        filas = libro_mayor.leer()
+        assert libro_mayor.total(filas) == 0.61, libro_mayor.total(filas)
+        assert libro_mayor.total_certificable(filas) == 0.55, libro_mayor.total_certificable(filas)
+    con_libro_temporal(cuerpo)
+    print("  ok: el total certificable deja fuera las rescatadas")
 
 
 def main():
     for f in (test_anota_las_cuatro_cosas_pedidas, test_es_de_apendice_jamas_reescribe,
               test_anotar_jamas_tumba_la_corrida, test_el_total_declara_su_limite,
               test_deduce_el_pack_de_la_ruta_del_lote, test_los_dos_scripts_anotan_de_verdad,
-              test_el_libro_de_verdad_esta_bien_formado):
+              test_el_libro_de_verdad_esta_bien_formado,
+              test_el_total_certificable_excluye_las_rescatadas):
         f()
     print("OK: el libro mayor apendiza, declara su limite y nadie lo puede pisar.")
 

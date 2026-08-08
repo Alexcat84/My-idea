@@ -4,26 +4,44 @@
   "dominio": "core",
   "titulo_concepto": "Crear un 'War Room' para el Análisis Pivot-or-Proceed",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Para decidir si pivotar o proceder, el equipo fundador debe encerrarse en una sala durante uno o dos días y visualizar toda la información recopilada: business model canvas actualizado, hipótesis, mapas de flujo de trabajo, mapas de mercado y roadmap de ventas. Esto permite ver intersecciones entre los componentes del modelo de negocio que pueden revelar inconsistencias.",
+  "resumen_teorico": "Para decidir si pivotar o proceder, aíslate uno o dos días en un espacio dedicado y haz visible toda la información recopilada durante discovery y validation. Cubre una pared con el business model canvas final ampliado y otra con las hipótesis organizadas por bloque o partes relacionadas. Añade diagramas de apoyo como el mapa de flujo de trabajo del cliente, el mapa organizacional o de influencia, arquetipos de cliente, mapa de mercado y roadmap de canal o ventas. Usa un pizarrón para llevar el conteo de preguntas, cambios y métricas clave. Esto convierte pilas de datos dispersos en un panorama visual que permite detectar intersecciones e inconsistencias entre los componentes del modelo de negocio antes de tomar la decisión.",
   "pasos_accionables": [
-    "Reunir en una sala física todos los datos de discovery y validation",
-    "Cubrir una pared con el business model canvas final ampliado",
-    "Cubrir otra pared con las hipótesis organizadas por bloque",
-    "Usar un pizarrón para registrar preguntas, cambios y métricas clave",
-    "Revisar las intersecciones entre los componentes del modelo de negocio"
+    "Reserva un espacio dedicado por 1-2 días para concentrarte en el análisis",
+    "Cubre una pared con el business model canvas final ampliado",
+    "Cubre otra pared con las hipótesis organizadas por bloque o partes relacionadas",
+    "Añade diagramas de apoyo: mapa de flujo de trabajo del cliente, mapa organizacional o de influencia, arquetipos de cliente, mapa de mercado y roadmap de canal",
+    "Usa un pizarrón para registrar preguntas, cambios y métricas clave",
+    "Revisa las intersecciones entre los componentes del modelo de negocio para detectar inconsistencias"
   ],
-  "entregable_esperado": "Una sala de guerra física o virtual con toda la evidencia visual organizada para la toma de decisión pivot-or-proceed",
+  "entregable_esperado": "Un espacio físico o virtual con toda la evidencia visual organizada para tomar la decisión de pivotar o proceder",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "restriccion_gasto_validacion",
-    "cohort_analysis_retencion"
+    "cohort_analysis_retencion",
+    "validar_posicionamiento_con_analistas",
+    "hire_data_analytics_chief",
+    "analisis_de_cohortes"
   ],
   "nodos_siguientes": [
     "pivot_o_proceder",
-    "metricas_que_importan"
+    "metricas_que_importan",
+    "validar_modelo_negocio_hechos",
+    "decision_pivotar_o_proceder",
+    "metrics_that_matter_framework"
   ],
   "condiciones_activacion": [
-    "Cuando se ha completado la recolección de datos de validación y se necesita decidir el futuro del negocio"
+    "Cuando has completado la recolección de datos de discovery y validation y necesitas decidir el rumbo del negocio",
+    "Cuando tienes grandes volúmenes de datos de validación que necesitas consolidar antes de decidir"
   ],
-  "etiqueta_arbol": "Decide si Pivotar o Seguir"
+  "etiqueta_arbol": "Decide si Pivotar o Seguir",
+  "ids_alias": [
+    "war_room_datos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "war_room_datos",
+      "titulo": "Construir un War Room de Datos",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

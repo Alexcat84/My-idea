@@ -4,25 +4,42 @@
   "dominio": "core",
   "titulo_concepto": "Business Model Canvas como Reemplazo del Plan de Negocio",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Un plan de negocio tradicional es una colección estática de suposiciones no probadas que se vuelve obsoleto al primer contacto con clientes. El Business Model Canvas (basado en el modelo de Osterwalder) presenta 9 componentes clave del negocio en una sola página, permitiendo tratarlos como hipótesis vivas que se prueban y revisan constantemente durante el proceso de Customer Development.",
+  "resumen_teorico": "Un plan de negocio tradicional es una colección estática de suposiciones no probadas: ningún plan sobrevive el primer contacto con clientes, y una vez que consigues financiamiento se vuelve inútil como guía de ejecución. El Business Model Canvas, basado en el modelo de Osterwalder, presenta los 9 componentes clave del negocio (propuesta de valor, segmentos de clientes, canales, relaciones, ingresos, recursos, actividades, socios, costos) en una sola página. En lugar de un documento fijo, lo tratas como un marcador de hipótesis vivas que pruebas y revisas constantemente durante el proceso de Customer Development, sin convertirlo nunca en un plan operativo prematuro basado en suposiciones sin validar.",
   "pasos_accionables": [
-    "Dibujar el Business Model Canvas inicial con hipótesis para cada uno de los 9 bloques (propuesta de valor, segmentos de clientes, canales, relaciones, ingresos, recursos, actividades, socios, costos).",
-    "Salir a validar cada hipótesis con clientes reales cara a cara.",
-    "Revisar y redibujar el canvas cada vez que se obtenga nueva evidencia (iteración o pivote).",
-    "Conservar todas las versiones del canvas como un 'flip book' que documenta la evolución del modelo de negocio."
+    "Dibuja el Business Model Canvas inicial con hipótesis para cada uno de los 9 bloques (propuesta de valor, segmentos de clientes, canales, relaciones, ingresos, recursos, actividades, socios, costos).",
+    "Sal a validar cada hipótesis con clientes reales cara a cara.",
+    "Revisa y redibuja el canvas cada vez que obtengas nueva evidencia, ya sea para iterar o pivotar.",
+    "Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.",
+    "Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar."
   ],
-  "entregable_esperado": "Un Business Model Canvas versionado que sirve como tablero de puntuación (scorecard) del proceso de Customer Development, mostrando qué hipótesis han sido validadas o refutadas.",
+  "entregable_esperado": "Un Business Model Canvas versionado que sirve como scorecard del proceso de Customer Development, mostrando qué hipótesis han sido validadas o refutadas.",
   "nodos_previos": [
     "lienzo_modelo_negocio",
-    "business_model_environment_mapping"
+    "business_model_environment_mapping",
+    "busqueda_vs_ejecucion",
+    "business_plan_cinco_secciones",
+    "search_for_business_model"
   ],
   "nodos_siguientes": [
     "diseno_experimentos_hipotesis",
-    "pivote_startup"
+    "pivote_startup",
+    "modelo_customer_development",
+    "customer_discovery"
   ],
   "condiciones_activacion": [
-    "Si el usuario tiene un plan de negocio estático y rígido en lugar de un modelo dinámico.",
-    "Si el emprendedor confunde el plan de negocio con un manual de ejecución."
+    "Si tienes un plan de negocio estático y rígido en lugar de un modelo dinámico.",
+    "Si confundes el plan de negocio con un manual de ejecución.",
+    "Si estás a punto de escribir un plan de negocio tradicional para pedir financiamiento."
   ],
-  "etiqueta_arbol": "Cambia el Plan por el Canvas"
+  "etiqueta_arbol": "Cambia el Plan por el Canvas",
+  "ids_alias": [
+    "business_model_canvas_vs_plan_negocio"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "business_model_canvas_vs_plan_negocio",
+      "titulo": "Business Model Canvas vs. Plan de Negocio Tradicional",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

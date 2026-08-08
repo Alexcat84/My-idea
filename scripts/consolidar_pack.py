@@ -138,10 +138,16 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--pack", required=True)
     ap.add_argument("--dry-run", action="store_true")
+    # Un pack se puede podar mas de una vez: la Fase 1 de la curacion del motor
+    # trajo tres fusiones que el indice del ciclo anterior no vio. Sobrescribir
+    # _poda_<pack>.json seria pisar la poda ya adjudicada, que es historia.
+    ap.add_argument("--clusters", help="ruta al archivo de clusters "
+                                       "(por defecto packs/<pack>/poda/_poda_<pack>.json)")
     args = ap.parse_args()
 
-    poda = json.loads((BASE / "packs" / args.pack / "poda" /
-                       f"_poda_{args.pack}.json").read_text(encoding="utf-8"))
+    ruta_clusters = (Path(args.clusters) if args.clusters
+                     else BASE / "packs" / args.pack / "poda" / f"_poda_{args.pack}.json")
+    poda = json.loads(ruta_clusters.read_text(encoding="utf-8"))
     clusters = poda["clusters"]
     absorbidos_total = sum(len(c["nodos"]) - 1 for c in clusters)
     print(f"  {len(clusters)} clusters, {absorbidos_total} absorbidos")
@@ -234,7 +240,11 @@ def main():
         print(f"  [{c['orden']:>2}/{len(clusters)}] {gana}: absorbe {len(otros)}")
 
     salida = BASE / "packs" / args.pack / "poda"
-    (salida / "_consolidacion.json").write_text(json.dumps({
+    # El informe lleva el nombre del archivo de clusters que lo produjo: si no,
+    # la segunda poda de un pack pisaria el informe de la primera, que es
+    # justo lo que el libro mayor vino a impedir.
+    sufijo = "" if not args.clusters else "_" + ruta_clusters.stem.lstrip("_")
+    (salida / f"_consolidacion{sufijo}.json").write_text(json.dumps({
         "clusters_hechos": hechos, "rechazos": rechazos, "muestra": muestra,
         "costo_usd": round(uso["in"] / 1e6 * PRECIO_IN + uso["out"] / 1e6 * PRECIO_OUT, 2),
         "tokens": uso,

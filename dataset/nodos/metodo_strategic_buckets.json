@@ -4,30 +4,43 @@
   "dominio": "core",
   "titulo_concepto": "Método de Strategic Buckets (Cubetas Estratégicas)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Strategic Buckets es un método para traducir la estrategia de innovación en asignaciones concretas de recursos ('envelopes' o cubetas) según dimensiones clave como tipo de proyecto, línea de producto, mercado o geografía. Parte de la premisa de que la estrategia solo se vuelve real cuando se comprometen recursos financieros y humanos. La alta dirección define porcentajes de inversión deseados por categoría, clasifica los proyectos existentes en esas cubetas, compara el gasto real contra el deseado, y prioriza proyectos dentro de cada cubeta hasta agotar el presupuesto asignado.",
+  "resumen_teorico": "Strategic Buckets es un método para traducir tu estrategia de innovación en asignaciones concretas de recursos, o cubetas, según dimensiones clave como tipo de proyecto (plataformas, nuevos productos, mejoras), línea de producto, mercado, tecnología o geografía. Parte de la premisa de que la estrategia solo se vuelve real cuando comprometes recursos financieros y de tiempo específicos. Tú defines qué porcentaje de recursos quieres destinar a cada categoría, clasificas tus proyectos existentes en esas cubetas, comparas el gasto real contra el deseado y priorizas proyectos dentro de cada una hasta agotar el presupuesto asignado. Sirve también para balancear inversión entre proyectos defensivos e innovadores y para justificar tus decisiones de inversión con criterios estratégicos explícitos en lugar de intuición.",
   "pasos_accionables": [
-    "Definir las dimensiones estratégicas relevantes (tipo de proyecto, línea de producto, mercado, tecnología, geografía).",
-    "Revisar el desglose actual de recursos ('lo que es') mediante gráficos de pastel u otras visualizaciones.",
-    "Realizar un ejercicio tipo Delphi modificado donde los ejecutivos votan el porcentaje ideal de recursos por cubeta.",
-    "Clasificar los proyectos activos (posteriores al Gate 2) en las cubetas definidas.",
-    "Identificar brechas entre el gasto actual y el deseado por cubeta.",
-    "Priorizar proyectos dentro de cada cubeta según métricas financieras u otros criterios hasta agotar el recurso asignado."
+    "Define las dimensiones estratégicas relevantes para tu negocio, como tipo de proyecto, línea de producto, mercado, tecnología o geografía.",
+    "Revisa cómo están distribuidos hoy tus recursos entre esas dimensiones usando un gráfico simple, por ejemplo de pastel.",
+    "Decide qué porcentaje de recursos quieres destinar a cada cubeta según tu estrategia, consultando a otros si tienes con quién.",
+    "Clasifica tus proyectos activos dentro de las cubetas definidas.",
+    "Identifica las brechas entre el gasto actual y el deseado en cada cubeta.",
+    "Prioriza los proyectos dentro de cada cubeta según criterios financieros u otros hasta agotar el presupuesto asignado."
   ],
-  "entregable_esperado": "Un portafolio de proyectos organizado en 'cubetas' estratégicas con porcentajes de recursos asignados y lista de proyectos priorizados dentro de cada una, alineados con la estrategia de innovación del negocio.",
+  "entregable_esperado": "Un portafolio de proyectos organizado en cubetas estratégicas, con porcentajes de recursos asignados y proyectos priorizados dentro de cada una, alineado con tu estrategia de innovación.",
   "nodos_previos": [
     "estrategia_innovacion_producto",
     "lienzo_modelo_negocio",
-    "strategic_buckets"
+    "strategic_buckets",
+    "portfolio_management"
   ],
   "nodos_siguientes": [
     "ranking_proyectos_por_npv",
     "revision_portafolio_periodica",
-    "determinacion_tamano_cubetas"
+    "determinacion_tamano_cubetas",
+    "mitos_stage_gate"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa tiene múltiples proyectos de innovación compitiendo por recursos limitados.",
-    "Cuando la estrategia declarada no coincide con el gasto real en I+D.",
-    "Cuando hay exceso de proyectos pequeños e incrementales y faltan proyectos disruptivos."
+    "Cuando tienes múltiples proyectos de innovación compitiendo por recursos limitados.",
+    "Cuando tu estrategia declarada no coincide con el gasto real en I+D.",
+    "Cuando tienes exceso de proyectos pequeños e incrementales y faltan proyectos disruptivos, o quieres balancear inversión entre proyectos defensivos e innovadores.",
+    "Cuando necesitas justificar tus decisiones de inversión con criterios estratégicos explícitos."
   ],
-  "etiqueta_arbol": "Reparte Recursos en Cubetas Estratégicas"
+  "etiqueta_arbol": "Reparte Recursos en Cubetas Estratégicas",
+  "ids_alias": [
+    "strategic_buckets"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "strategic_buckets",
+      "titulo": "Método de Buckets Estratégicos (Strategic Buckets)",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

@@ -4,28 +4,42 @@
   "dominio": "core",
   "titulo_concepto": "Front-End Loading / Homework Predesarrollo",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El 'homework' o diligencia debida realizada antes de entrar a la etapa de desarrollo (fuzzy front end) es un factor crítico de éxito. Incluye: screening inicial, evaluación preliminar de mercado, evaluación técnica preliminar, evaluación de operaciones, estudio detallado de mercado, prueba de concepto, evaluación del valor económico y análisis de negocio/financiero. Invertir más tiempo aquí reduce fracasos y en realidad acelera el desarrollo posterior al evitar cambios costosos tardíos.",
+  "resumen_teorico": "El homework o diligencia debida antes de entrar a desarrollo (fuzzy front end) es el factor que decide el éxito o fracaso de tu producto, aunque la mayoría invierte poco tiempo aquí a pesar de su alto impacto. Debes completar un conjunto de actividades: screening inicial, evaluación preliminar de mercado y técnica, evaluación de operaciones y suministro, estudio detallado de mercado con voz del cliente, prueba de concepto con clientes reales, determinación del valor económico para el cliente, y análisis financiero para construir el business case. Invertir más tiempo en esta etapa no retrasa el proyecto, en realidad acelera el desarrollo posterior al evitar cambios costosos y tardíos, y reduce las tasas de fracaso atribuibles a mala definición inicial del producto.",
   "pasos_accionables": [
-    "Realizar screening inicial de la idea antes de comprometer recursos significativos",
-    "Ejecutar una evaluación preliminar de mercado (tamaño, aceptación probable)",
-    "Ejecutar una evaluación técnica preliminar (riesgos tecnológicos, ruta técnica)",
-    "Evaluar fuentes de suministro y aspectos de operaciones/manufactura",
-    "Realizar estudio de mercado detallado y VoC",
-    "Probar el concepto de producto con clientes reales",
-    "Determinar el valor económico del producto para el cliente",
-    "Construir el caso de negocio (business case) con análisis financiero antes de pasar a Development"
+    "Realiza un screening inicial de tu idea antes de comprometer recursos significativos",
+    "Ejecuta en paralelo una evaluación preliminar de mercado y una evaluación técnica preliminar identificando riesgos y ruta técnica",
+    "Evalúa fuentes de suministro y aspectos de operaciones o manufactura",
+    "Profundiza con un estudio detallado de mercado, competencia y voz del cliente",
+    "Prueba el concepto de producto con clientes reales y determina el valor económico que perciben",
+    "Construye tu business case con el análisis financiero y el plan de acción antes de pedir aprobación para pasar a Desarrollo"
   ],
   "entregable_esperado": "Business Case completo con evaluaciones de mercado, técnica, operaciones y financiera, aprobado antes de iniciar la etapa de Desarrollo",
   "nodos_previos": [
     "voz_del_cliente_voc",
-    "actividades_clave"
+    "actividades_clave",
+    "enfoque_mercado_voc",
+    "calidad_de_ejecucion_proceso_innovacion"
   ],
   "nodos_siguientes": [
-    "definicion_producto_proyecto"
+    "definicion_producto_proyecto",
+    "ventaja_competitiva_producto",
+    "gestion_riesgo_incremental",
+    "reglas_gestion_riesgo_gambling"
   ],
   "condiciones_activacion": [
-    "Antes de tomar la decisión de 'Go to Development'",
-    "Cuando el equipo quiere saltarse pasos de validación por presión de tiempo"
+    "Antes de tomar la decisión de pasar a Desarrollo",
+    "Cuando sientes presión de tiempo para saltarte pasos de validación",
+    "Cuando tu proyecto tiende a pasar directo a desarrollo sin validación previa suficiente"
   ],
-  "etiqueta_arbol": "Prepara tu Tarea Previa"
+  "etiqueta_arbol": "Prepara tu Tarea Previa",
+  "ids_alias": [
+    "front_end_homework"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "front_end_homework",
+      "titulo": "Tareas de Front-End (Homework) Antes del Desarrollo",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

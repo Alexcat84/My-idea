@@ -2,17 +2,17 @@
   "node_id": "estimate_at_completion_eac",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Estimación al Completar (EAC)",
+  "titulo_concepto": "Cuánto te va a costar terminar (Estimación al Completar o EAC)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "La Estimación al Completar (EAC) es una técnica de gestión del valor ganado que pronostica el gasto total esperado al finalizar el proyecto, basándose en el desempeño actual de costos (CPI) y cronograma (SPI). Existen varias fórmulas según los supuestos: si se espera que el CPI se mantenga constante, EAC = BAC/CPI; si tanto CPI como SPI influirán en el trabajo restante, EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI (Índice de Desempeño para Completar) mide la eficiencia necesaria en el trabajo restante para cumplir el presupuesto.",
+  "resumen_teorico": "La Estimación al Completar (EAC) te dice cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
   "pasos_accionables": [
-    "Calcular el CPI y SPI actuales del proyecto",
-    "Seleccionar la fórmula de EAC apropiada según los supuestos del proyecto",
-    "Calcular el EAC y justificar la elección del método",
-    "Calcular el TCPI para evaluar la viabilidad de completar según el plan o el EAC actual",
-    "Documentar los resultados en el Informe de Estado de Valor Ganado"
+    "Calcula el CPI y el SPI actuales de tu proyecto",
+    "Elige la fórmula de EAC que mejor se ajuste a lo que esperas que pase",
+    "Calcula el EAC y anota por qué elegiste ese método",
+    "Calcula el TCPI para ver si es viable terminar según el plan o según el EAC que sacaste",
+    "Anota los resultados en tu informe de estado de valor ganado"
   ],
-  "entregable_esperado": "Informe de Estado de Valor Ganado con EAC, TCPI y justificación del método seleccionado",
+  "entregable_esperado": "Tu informe de estado de valor ganado, con el EAC, el TCPI y la razón por la que elegiste ese método",
   "nodos_previos": [
     "estructura_de_costos",
     "linea_base_costos",
@@ -23,8 +23,8 @@
     "project_close_out"
   ],
   "condiciones_activacion": [
-    "Cuando el proyecto está en ejecución y se requiere pronosticar costos finales",
-    "Cuando existen variaciones de costo o cronograma que deben proyectarse"
+    "Cuando tu proyecto está en marcha y necesitas saber cuánto vas a gastar al final",
+    "Cuando hay diferencias en costos o tiempos que necesitas proyectar hacia adelante"
   ],
   "etiqueta_arbol": "Proyecta tu Costo Final"
 }

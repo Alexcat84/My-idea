@@ -88,7 +88,14 @@ describe.runIf(TIENE_VOYAGE)(
   "buscarAfines (Voyage AI real) -- mismos 2 casos de referencia de la Fase 2.9",
   () => {
     it(`query positiva encuentra '${NODO_ESPERADO_POSITIVO}' por encima de MIN_SCORE_SALTO`, async () => {
-      const candidatos = await buscarAfines(QUERY_POSITIVA, new Set(), { k: 8, minScore: MIN_SCORE_SALTO });
+      // k amplio, por el MISMO motivo que el caso negativo de abajo: el punto
+      // de este caso es el SCORE, que es lo que gobierna MIN_SCORE_SALTO, no el
+      // puesto. Estaba en k=8 y la campaña de voz (ago 2026) lo empujó al
+      // puesto 9 del ranking crudo sin tocarlo: sus vecinos mejoraron. Su score
+      // sigue clavado en la referencia (0.3511 contra 0.3507), que es
+      // justamente lo que este test existe para custodiar. Fijar el puesto era
+      // medir el vecindario creyendo medir la calibración.
+      const candidatos = await buscarAfines(QUERY_POSITIVA, new Set(), { k: 20, minScore: MIN_SCORE_SALTO });
       const encontrado = candidatos.find((c) => c.id === NODO_ESPERADO_POSITIVO);
       expect(encontrado).toBeDefined();
       expect(encontrado!.score).toBeGreaterThan(MIN_SCORE_SALTO);

@@ -2,20 +2,21 @@
   "node_id": "scorecard_de_seleccion_de_proyectos",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Scorecard de Criterios para Selección y Priorización de Proyectos",
+  "titulo_concepto": "Lista de puntuación para elegir y priorizar tus proyectos (scorecard)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Modelo de puntuación que combina seis criterios clave identificados en estudios de éxito/fracaso de nuevos productos: alineación estratégica, ventaja competitiva del producto, atractivo del mercado, apalancamiento de competencias centrales, factibilidad técnica y relación riesgo-retorno. Sirve como herramienta objetiva para comparar y priorizar proyectos en el portafolio.",
+  "resumen_teorico": "Es una forma de puntuar tus proyectos usando seis criterios que estudios sobre éxito y fracaso de nuevos productos identificaron como clave: qué tan alineado está con tu estrategia, la ventaja que ofrece frente a la competencia, qué tan atractivo es el mercado, si aprovecha lo que ya sabes hacer, si es viable técnicamente y la relación entre riesgo y retorno. Te sirve para comparar proyectos y decidir en cuáles invertir.",
   "pasos_accionables": [
-    "Definir los seis criterios de evaluación: estrategia, ventaja competitiva, atractivo de mercado, apalancamiento, factibilidad técnica y riesgo/retorno",
-    "Asignar pesos o escalas de puntuación a cada criterio",
-    "Evaluar cada proyecto activo contra el scorecard",
-    "Comparar puntuaciones entre proyectos para priorizar inversión",
-    "Revisar y actualizar el scorecard periódicamente con datos de proyectos pasados"
+    "Define los seis criterios que vas a usar: qué tan alineado está con tu estrategia, la ventaja frente a la competencia, qué tan atractivo es el mercado, si aprovecha lo que ya sabes hacer, si es viable técnicamente y la relación entre riesgo y retorno",
+    "Decide cómo vas a puntuar cada criterio, con pesos o una escala simple",
+    "Evalúa cada proyecto que tengas activo con esa lista",
+    "Compara los puntajes entre proyectos para decidir dónde invertir primero",
+    "Revisa y actualiza tu lista de tanto en tanto usando lo que aprendiste de proyectos anteriores"
   ],
-  "entregable_esperado": "Una matriz o scorecard completado con la puntuación de cada proyecto candidato del portafolio",
+  "entregable_esperado": "Una lista o tabla completa con el puntaje de cada proyecto que estás considerando",
   "nodos_previos": [
     "sistema_de_gates_go_kill",
-    "proceso_ideacion_modelo_negocio"
+    "proceso_ideacion_modelo_negocio",
+    "sistema_gates_go_kill"
   ],
   "nodos_siguientes": [
     "portfolio_management",
@@ -26,8 +27,8 @@
     "apalancamiento_de_competencias_centrales"
   ],
   "condiciones_activacion": [
-    "Cuando existen múltiples proyectos compitiendo por recursos limitados",
-    "Cuando las decisiones de inversión en innovación se basan en criterios subjetivos o políticos"
+    "Cuando tienes varios proyectos compitiendo por el mismo tiempo o dinero",
+    "Cuando decides en qué invertir por intuición o por presión de otros, sin criterios claros"
   ],
   "etiqueta_arbol": "Puntúa Tus Proyectos Clave"
 }

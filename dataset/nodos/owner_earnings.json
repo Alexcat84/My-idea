@@ -2,25 +2,26 @@
   "node_id": "owner_earnings",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Owner Earnings (Ganancias del Propietario)",
+  "titulo_concepto": "Ganancias del propietario (Owner Earnings)",
   "fuente": "Financial Intelligence for Entrepreneurs",
-  "resumen_teorico": "Métrica creada por Warren Buffett que mide la capacidad de una empresa de generar efectivo disponible para el dueño, considerando los gastos de capital necesarios para mantener el negocio saludable. A diferencia del profit o del flujo de caja operativo simple, esta métrica ajusta por las inversiones continuas necesarias.",
+  "resumen_teorico": "Es una métrica creada por Warren Buffett que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
   "pasos_accionables": [
-    "Calcular el flujo de caja operativo de la empresa",
-    "Restar los gastos de capital necesarios para mantener (no crecer) el negocio",
-    "Usar esta cifra para evaluar cuánto efectivo podría retirar el dueño sin dañar la empresa",
-    "Comparar owner earnings entre períodos para evaluar salud financiera real"
+    "Calcula el flujo de caja operativo de tu negocio",
+    "Resta los gastos de capital que necesitas para mantener el negocio, no para crecerlo",
+    "Usa esa cifra para saber cuánto efectivo podrías retirar sin dañar tu negocio",
+    "Compara esta cifra entre distintos períodos para ver si tu salud financiera real mejora o empeora"
   ],
-  "entregable_esperado": "Cálculo de owner earnings del último período fiscal",
+  "entregable_esperado": "El cálculo de tus ganancias del propietario del último período fiscal",
   "nodos_previos": [
     "cash_is_king",
-    "lectura_estado_flujo_efectivo"
+    "lectura_estado_flujo_efectivo",
+    "estado_flujo_de_caja_tres_categorias"
   ],
   "nodos_siguientes": [
     "flujo_de_caja_libre"
   ],
   "condiciones_activacion": [
-    "Cuando se evalúa el valor real de un negocio para inversión o venta"
+    "Cuando necesitas saber cuánto vale realmente tu negocio, para invertir en él o para venderlo"
   ],
   "etiqueta_arbol": "Calcula tus Ganancias Reales"
 }

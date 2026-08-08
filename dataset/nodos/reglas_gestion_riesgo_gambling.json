@@ -4,25 +4,43 @@
   "dominio": "core",
   "titulo_concepto": "Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Basado en la teoría de apuestas, estas cinco reglas permiten manejar el riesgo en proyectos de nuevos productos: mantener bajas las apuestas cuando la incertidumbre es alta, incrementar las apuestas solo cuando la incertidumbre baja, dividir el proceso en etapas (comprar opciones), pagar por información relevante para reducir la incertidumbre, y proveer puntos de salida (get-out points) donde se pueda abandonar el proyecto.",
+  "resumen_teorico": "Basado en la teoría de apuestas, la gestión de nuevos productos es esencialmente gestión de riesgo, entendido como la combinación de monto en juego e incertidumbre. Cinco reglas la guían: mantener bajas las apuestas cuando la incertidumbre es alta, incrementar el monto invertido solo cuando la incertidumbre baja, dividir el proceso en etapas comprando opciones en vez de jugar todo o nada, pagar por información que reduzca la incertidumbre antes de aumentar el gasto, y prever puntos de salida (gates) donde puedas abandonar el proyecto a tiempo. Estas reglas te permiten calibrar cuánto arriesgar en cada momento del proyecto según lo que realmente sabes, en vez de comprometer recursos grandes sobre supuestos no verificados.",
   "pasos_accionables": [
-    "Evaluar el nivel de incertidumbre actual del proyecto antes de asignar recursos",
-    "Dividir la inversión total en etapas incrementales en vez de comprometer todo el presupuesto de una vez",
-    "Invertir en investigación de mercado y técnica para reducir la incertidumbre antes de aumentar el gasto",
-    "Definir puntos de decisión claros donde se pueda matar el proyecto si la información no es favorable"
+    "Evaluar el nivel de incertidumbre actual antes de asignar recursos a la siguiente etapa",
+    "Dividir tu inversión total en etapas incrementales en vez de comprometer todo el presupuesto de una vez",
+    "Invertir en investigación de mercado y técnica (VoC, tests) para reducir la incertidumbre antes de aumentar el gasto",
+    "Definir puntos de decisión claros (gates) donde puedas matar el proyecto si la información no es favorable",
+    "Aumentar el monto invertido solo cuando la incertidumbre haya bajado en la etapa anterior"
   ],
-  "entregable_esperado": "Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa",
+  "entregable_esperado": "Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa, con puntos de salida definidos",
   "nodos_previos": [
     "open_innovation_ideacion",
-    "gestion_riesgo_incremental"
+    "gestion_riesgo_incremental",
+    "ventaja_competitiva_producto",
+    "sistema_gates_go_kill",
+    "front_end_homework",
+    "homework_frontend_loading"
   ],
   "nodos_siguientes": [
     "sistema_stage_gate",
-    "estructura_gates"
+    "estructura_gates",
+    "cadena_suministro_respuesta_desastres",
+    "fundamentos_gestion_riesgo"
   ],
   "condiciones_activacion": [
-    "Si el equipo está por comprometer recursos significativos sin reducir la incertidumbre",
-    "Si la empresa no tiene un proceso formal de evaluación de riesgo en innovación"
+    "Cuando estás por comprometer recursos significativos sin haber reducido la incertidumbre del proyecto",
+    "Cuando no tienes un proceso para evaluar el riesgo de tus proyectos de innovación",
+    "Cuando no existen puntos de decisión que te permitan abandonar un proyecto a tiempo"
   ],
-  "etiqueta_arbol": "Gestiona la Incertidumbre del Proyecto"
+  "etiqueta_arbol": "Gestiona la Incertidumbre del Proyecto",
+  "ids_alias": [
+    "gestion_riesgo_incremental"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "gestion_riesgo_incremental",
+      "titulo": "Gestión de Riesgo Incremental (Reglas de Apuesta)",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

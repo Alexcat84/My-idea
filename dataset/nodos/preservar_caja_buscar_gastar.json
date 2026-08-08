@@ -17,11 +17,13 @@
     "verificar_modelo_ingresos"
   ],
   "nodos_siguientes": [
-    "comunicacion_aprendizaje_startup"
+    "comunicacion_aprendizaje_startup",
+    "comunicacion_aprendizaje_continuo"
   ],
   "condiciones_activacion": [
     "Si el startup está gastando en marketing y ventas antes de validar su modelo de negocio.",
     "Si hay confusión sobre cuándo 'pisar el acelerador' de gasto."
   ],
-  "etiqueta_arbol": "Preserva Caja, Luego Invierte"
+  "etiqueta_arbol": "Preserva Caja, Luego Invierte",
+  "deprecado": true
 }

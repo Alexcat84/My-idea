@@ -2,27 +2,28 @@
   "node_id": "product_backlog_fisico",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Product Backlog Flexible para Productos Físicos",
+  "titulo_concepto": "Lista de requisitos flexible para productos físicos (product backlog)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El backlog de producto reemplaza parcialmente la definición tradicional de producto fija al inicio del proyecto. En productos físicos, el backlog es una lista priorizada y flexible de requisitos que evoluciona con el tiempo, permitiendo que el producto esté solo 20-90% definido al momento de la aprobación del proyecto (típicamente 40-60%). A medida que el proyecto avanza y la incertidumbre se reduce, el backlog y el presupuesto se vuelven más estables y se 'congelan' hacia el final de la etapa de Desarrollo.",
+  "resumen_teorico": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu lista y tu presupuesto se vuelven más estables, hasta que los terminas de fijar cerca del final de la etapa de desarrollo.",
   "pasos_accionables": [
-    "Crear una lista inicial de requisitos de producto priorizada, aceptando que no está 100% definida",
-    "Actualizar el backlog continuamente conforme se obtiene feedback de clientes e iteraciones técnicas",
-    "Congelar las decisiones de hardware más temprano (por los tiempos de fabricación) y dejar el software flexible más tiempo",
-    "Fijar el presupuesto final al término de la etapa de Desarrollo, no antes"
+    "Crea una lista inicial de requisitos priorizada, aceptando que no está completa al 100%",
+    "Actualiza esa lista de forma continua con el feedback de tus clientes y lo que aprendes en cada iteración técnica",
+    "Congela las decisiones de hardware más temprano, porque fabricarlo toma tiempo, y deja el software flexible por más tiempo",
+    "Fija tu presupuesto final cuando termines la etapa de desarrollo, no antes"
   ],
-  "entregable_esperado": "Documento de backlog de producto vivo, actualizado en cada sprint, con nivel de definición registrado (%) en cada gate.",
+  "entregable_esperado": "Un documento vivo con tu lista de requisitos, que actualizas en cada sprint, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
   "nodos_previos": [
     "seleccion_proyectos_agile",
-    "homework_voc_previo_agile"
+    "homework_voc_previo_agile",
+    "voc_temprano_en_agile_stage_gate"
   ],
   "nodos_siguientes": [
     "rol_gates_agile",
     "definicion_sprint_terminado_fisico"
   ],
   "condiciones_activacion": [
-    "Si la gerencia exige un plan de desarrollo detallado (Gantt) antes de aprobar el proyecto pero la definición del producto aún es incierta",
-    "Si el proyecto combina componentes de hardware y software con distintos tiempos de congelamiento"
+    "Si te exigen un plan detallado (tipo Gantt) antes de aprobar el proyecto, pero todavía no tienes clara la definición del producto",
+    "Si tu proyecto combina hardware y software con tiempos distintos para congelar decisiones"
   ],
   "etiqueta_arbol": "Ajusta tu Lista de Requisitos"
 }

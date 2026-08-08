@@ -1,0 +1,398 @@
+{
+  "_nota": "FIXTURES DE PATRONES: cada patron de detector nace con DOS, uno que DEBE cazar y uno que NO. Adjudicado ago 2026 como vacuna permanente de la familia verde-por-casualidad: tres veces en un ciclo un `\b` se convirtio en el caracter BACKSPACE al pasar por un heredoc, y el patron resultante no fallaba: SE CALLABA. Una clave mal escrita no falla, se silencia.",
+  "_como_se_usa": "engine/test_fixtures_de_patrones.py exige que TODO patron de BARANDAS y VETADO tenga entrada aqui, que cace sus positivos, que NO cace sus negativos, y que no contenga caracteres de control. Un patron nuevo sin fixtures deja la suite en rojo: esa es la vacuna.",
+  "fixtures": {
+    "\\b\\d+\\s*(?:%|por ciento)\\s+(?:de impuesto|de arancel|de iva|de comision)": {
+      "caza": [
+        "un 19% de impuesto",
+        "cobra 12 por ciento de arancel"
+      ],
+      "no_caza": [
+        "creciste un 19% este mes"
+      ]
+    },
+    "\\bdivid(?:e|ir|iendo)\\s+entre\\s+\\d{3,}": {
+      "caza": [
+        "divide entre 1000 para pasar a kilos"
+      ],
+      "no_caza": [
+        "divide entre tus socios",
+        "divide entre 12"
+      ]
+    },
+    "\\b\\d{3,}\\s*(?:kg|libras|lbs)\\b": {
+      "caza": [
+        "pesa 500 kg",
+        "carga 250 lbs"
+      ],
+      "no_caza": [
+        "pesa 20 kg",
+        "500 unidades"
+      ]
+    },
+    "\\b(?:OSHA|EPA|FDA|IRS|SEC)\\b": {
+      "caza": [
+        "registra ante la OSHA",
+        "lo exige la FDA"
+      ],
+      "no_caza": [
+        "la seccion de tu norma",
+        "seco al tacto"
+      ]
+    },
+    "\\bsalario m[ií]nimo de\\b": {
+      "caza": [
+        "el salario minimo de 2026",
+        "el salario mínimo de tu pais"
+      ],
+      "no_caza": [
+        "paga un salario justo"
+      ]
+    },
+    "\\bmatriz de (?:riesgo|probabilidad|impacto|prioridad)": {
+      "caza": [
+        "matriz de impacto"
+      ],
+      "no_caza": [
+        "matriz de datos"
+      ]
+    },
+    "\\bpuntú[ae]\\b|\\bpuntua(?:r|ndo|cion|ción)\\b": {
+      "caza": [
+        "puntúa cada opcion",
+        "sin puntuacion"
+      ],
+      "no_caza": [
+        "la puntualidad importa",
+        "llego puntual"
+      ]
+    },
+    "\\bescala de\\s*1\\s*a\\s*(?:5|10)\\b|\\bdel\\s*1\\s*al\\s*(?:5|10)\\b": {
+      "caza": [
+        "una escala de 1 a 5",
+        "del 1 al 10"
+      ],
+      "no_caza": [
+        "una escala de grises",
+        "creces a escala"
+      ]
+    },
+    "\\bprobabilidad\\s*(?:x|por|\\*)\\s*impacto\\b": {
+      "caza": [
+        "probabilidad por impacto"
+      ],
+      "no_caza": [
+        "probabilidad e impacto"
+      ]
+    },
+    "\\bnivel de riesgo\\s*=\\s*": {
+      "caza": [
+        "nivel de riesgo = alto"
+      ],
+      "no_caza": [
+        "el nivel de riesgo que aceptas"
+      ]
+    },
+    "\\bsu equipo\\b|\\bel equipo de\\b": {
+      "caza": [
+        "reune a su equipo",
+        "el equipo de ventas"
+      ],
+      "no_caza": [
+        "tu equipo",
+        "un equipo pequeño"
+      ]
+    },
+    "\\bel comit[ée]\\b|\\bun comit[ée]\\b": {
+      "caza": [
+        "lo aprueba el comité",
+        "arma un comite"
+      ],
+      "no_caza": [
+        "sin comites que aprueben"
+      ]
+    },
+    "\\btu departamento\\b|\\bel departamento de\\b": {
+      "caza": [
+        "el departamento de compras"
+      ],
+      "no_caza": [
+        "el departamento donde vives"
+      ]
+    },
+    "\\blos stakeholders\\b|\\blas partes interesadas\\b": {
+      "caza": [
+        "consulta a los stakeholders",
+        "las partes interesadas opinan"
+      ],
+      "no_caza": [
+        "quienes te compran"
+      ]
+    },
+    "\\bsu organizaci[óo]n\\b|\\btu organizaci[óo]n\\b": {
+      "caza": [
+        "en su organización",
+        "tu organizacion crece"
+      ],
+      "no_caza": [
+        "organiza tu semana"
+      ]
+    },
+    "\\bla alta direcci[óo]n\\b|\\bla gerencia\\b": {
+      "caza": [
+        "lo decide la alta dirección",
+        "la gerencia aprueba"
+      ],
+      "no_caza": [
+        "la direccion de tu taller"
+      ]
+    },
+    "\\brecursos humanos\\b": {
+      "caza": [
+        "recursos humanos lo gestiona"
+      ],
+      "no_caza": [
+        "recursos limitados"
+      ]
+    },
+    "\\bla gerencia\\b": {
+      "caza": [
+        "la gerencia decide"
+      ],
+      "no_caza": [
+        "gerencia tu tiempo"
+      ]
+    },
+    "\\bla alta direcci[óo]n\\b": {
+      "caza": [
+        "la alta dirección"
+      ],
+      "no_caza": [
+        "la direccion correcta"
+      ]
+    },
+    "\\bel departamento de\\b": {
+      "caza": [
+        "el departamento de calidad"
+      ],
+      "no_caza": [
+        "tu departamento favorito no aplica"
+      ]
+    },
+    "\\btu departamento\\b": {
+      "caza": [
+        "tu departamento aprueba"
+      ],
+      "no_caza": [
+        "tu taller aprueba"
+      ]
+    },
+    "\\bel comit[ée]\\b": {
+      "caza": [
+        "el comité revisa"
+      ],
+      "no_caza": [
+        "el comercio revisa"
+      ]
+    },
+    "\\bun comit[ée]\\b": {
+      "caza": [
+        "forma un comite"
+      ],
+      "no_caza": [
+        "forma un grupo"
+      ]
+    },
+    "\\blos stakeholders\\b": {
+      "caza": [
+        "los stakeholders piden"
+      ],
+      "no_caza": [
+        "los clientes piden"
+      ]
+    },
+    "\\blas partes interesadas\\b": {
+      "caza": [
+        "las partes interesadas"
+      ],
+      "no_caza": [
+        "las partes del motor"
+      ]
+    },
+    "\\b[st]u organizaci[óo]n\\b": {
+      "caza": [
+        "su organización",
+        "tu organizacion"
+      ],
+      "no_caza": [
+        "la organizacion del taller"
+      ]
+    },
+    "\\bvos\\b": {
+      "caza": [
+        "vos sabes"
+      ],
+      "no_caza": [
+        "voz de la casa",
+        "nosotros"
+      ]
+    },
+    "\\bpodés\\b": {
+      "caza": [
+        "podés hacerlo"
+      ],
+      "no_caza": [
+        "puedes hacerlo"
+      ]
+    },
+    "\\btenés\\b": {
+      "caza": [
+        "tenés que ir"
+      ],
+      "no_caza": [
+        "tienes que ir"
+      ]
+    },
+    "\\bquerés\\b": {
+      "caza": [
+        "si querés"
+      ],
+      "no_caza": [
+        "si quieres"
+      ]
+    },
+    "\\bsabés\\b": {
+      "caza": [
+        "ya sabés"
+      ],
+      "no_caza": [
+        "ya sabes"
+      ]
+    },
+    "\\bhacés\\b": {
+      "caza": [
+        "lo hacés bien"
+      ],
+      "no_caza": [
+        "lo haces bien"
+      ]
+    },
+    "\\b(?:pequen[oa]s?|disen(?:[oa]s?|ar|as|an|ado|ada)|manana|compania|espanol|senal(?:es)?|anos)\\b": {
+      "caza": [
+        "un lote pequeno",
+        "el diseno del envase",
+        "diseñas mal escrito: disenas"
+      ],
+      "no_caza": [
+        "un lote pequeño",
+        "el diseño del envase",
+        "diseñas bien",
+        "años",
+        "mañana"
+      ]
+    },
+    "\\b(?:vision|hipotesis|solucion|validacion|automatizacion|version|decision|revision|mision|presion|precision|conversion)\\b": {
+      "caza": [
+        "tu vision del negocio",
+        "una hipotesis"
+      ],
+      "no_caza": [
+        "tu visión del negocio",
+        "una hipótesis",
+        "visionario"
+      ]
+    },
+    "\\bpunt[úu][ae]\\b": {
+      "caza": [
+        "puntúa cada uno",
+        "puntua cada uno"
+      ],
+      "no_caza": [
+        "puntual",
+        "puntualidad"
+      ]
+    },
+    "\\bescala de\\s*1\\s*a\\s*(?:5|10)\\b": {
+      "caza": [
+        "escala de 1 a 10"
+      ],
+      "no_caza": [
+        "escala de grises"
+      ]
+    },
+    "(?:\\bUSD|\\bEUR|US\\$|\\$|€)\\s?\\d[\\d.,]*": {
+      "caza": [
+        "cuesta USD 1.200",
+        "son $45",
+        "un anticipo de $2,000",
+        "vale €30"
+      ],
+      "no_caza": [
+        "cuesta poco",
+        "el simbolo $ sin numero",
+        "USD sin cifra"
+      ]
+    },
+    "\\b(?:el|un) (?:fundador|emprendedor|usuario|equipo fundador) (?:debe|puede|tiene|sale|hace|necesita|busca|define|crea|elige|usa|realiza|entrega)\\b": {
+      "caza": [
+        "el fundador sale a vender",
+        "el equipo fundador entrega a mano"
+      ],
+      "no_caza": [
+        "tú eres el fundador de esto",
+        "el fundador de la empresa que admiras"
+      ]
+    },
+    "\\blos fundadores\\b|\\blos emprendedores\\b": {
+      "caza": [
+        "los fundadores salen del edificio",
+        "los emprendedores fracasan"
+      ],
+      "no_caza": [
+        "tú y los que trabajan contigo"
+      ]
+    },
+    "\\b(?:el equipo|la empresa|la startup|una empresa|el usuario) debe\\b": {
+      "caza": [
+        "el equipo debe formular",
+        "la startup debe validar"
+      ],
+      "no_caza": [
+        "tu equipo formula",
+        "debes validar"
+      ]
+    },
+    "\\blas empresas deben\\b|\\blos fundadores deben\\b": {
+      "caza": [
+        "las empresas deben medir",
+        "los fundadores deben salir"
+      ],
+      "no_caza": [
+        "debes medir",
+        "sal tú"
+      ]
+    },
+    "\\bes la (?:fase|etapa) (?:donde|en (?:la )?que)\\b": {
+      "caza": [
+        "es la fase donde el fundador vende",
+        "es la etapa en que se prueba"
+      ],
+      "no_caza": [
+        "en esta fase vendes",
+        "la fase que sigue"
+      ]
+    },
+    "\\bse (?:debe|deben)\\b(?! a )|\\bse (?:realiza|traduce|estructura|recomienda|utiliza|espera)\\b": {
+      "caza": [
+        "se debe entender al cliente",
+        "se recomienda medir",
+        "el trabajo que se realiza"
+      ],
+      "no_caza": [
+        "el silencio se debe a falta de informacion",
+        "la demora se debe a un retraso",
+        "entiende a tu cliente"
+      ]
+    }
+  }
+}

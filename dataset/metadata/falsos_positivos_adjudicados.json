@@ -1,0 +1,83 @@
+{
+  "_nota": "REGISTRO DE FALSOS POSITIVOS ADJUDICADOS. Un hallazgo que ya se juzgo y resulto correcto NO se vuelve a litigar: todo censo futuro lo reporta como YA-JUZGADO, con su fecha y su motivo. Nace del ciclo de la curacion del motor (ago 2026), donde tres hallazgos distintos costaron tres lecturas para llegar a la misma conclusion: el detector vio la palabra, no lo que el nodo describe.",
+  "_como_se_usa": "El censo consulta este archivo por (node_id, baranda). Si el par esta aqui, el hallazgo no entra al lote: se lista aparte como ya-juzgado. Sacar una entrada de aqui es re-abrir el juicio, y eso lo hace un ojo, no el automatismo.",
+  "adjudicados": [
+    {
+      "node_id": "evalua_la_gravedad_sin_autoengano",
+      "baranda": "residuo_corporativo",
+      "token": "comite",
+      "fecha": "2026-08-08",
+      "motivo": "Nombra al comite para decir que el emprendedor solo NO lo tiene: 'sin un jefe ni un comite que lo contrapese'. Es el argumento del nodo."
+    },
+    {
+      "node_id": "la_matriz_de_colores_te_engana",
+      "baranda": "matriz_o_puntaje",
+      "token": "matriz de riesgo",
+      "fecha": "2026-08-08",
+      "motivo": "El nodo se titula 'Por Que la Matriz de Riesgo No Funciona' y argumenta CONTRA las matrices. La baranda esta cazando a su propio aliado."
+    },
+    {
+      "node_id": "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
+      "baranda": "residuo_corporativo",
+      "token": "su equipo",
+      "fecha": "2026-08-08",
+      "motivo": "'otra persona de su equipo lo cambio': es el equipo del PROVEEDOR con quien se negocia, no el del lector. Contenido correcto de una negociacion."
+    },
+    {
+      "node_id": "infection_control_plan",
+      "baranda": "residuo_corporativo",
+      "token": "el equipo de",
+      "fecha": "2026-08-08",
+      "motivo": "'el equipo de proteccion personal' no es un equipo de trabajo: es el EPP. El patron caza la palabra, no la cosa."
+    },
+    {
+      "node_id": "familia_normas_iso_9000",
+      "baranda": "residuo_corporativo",
+      "token": "las partes interesadas",
+      "fecha": "2026-08-08",
+      "motivo": "Es el nombre LITERAL de la clausula 4.2 de ISO 9001 ('necesidades y expectativas de las partes interesadas'). Vocabulario de la norma, no voz corporativa. ISO 9000 es institucion-de-libro: no se omite, se mantiene al dia (ver ficha vigencia-del-marco-internacional)."
+    },
+    {
+      "node_id": "comprender_alineacion_etica_ia",
+      "baranda": "dato_local_cableado",
+      "token": "EEUU",
+      "fecha": "2026-08-08",
+      "motivo": "Habla del sesgo de los datos de entrenamiento ('dominado por perspectivas occidentales'), no de una ley."
+    },
+    {
+      "node_id": "convertir_necesidad_en_demanda",
+      "baranda": "dato_local_cableado",
+      "token": "estadounidense",
+      "fecha": "2026-08-08",
+      "motivo": "Design thinking. La palabra aparece dentro de un ejemplo, no como dependencia."
+    },
+    {
+      "node_id": "diseno_de_comportamiento_sostenible",
+      "baranda": "dato_local_cableado",
+      "token": "EE.UU.",
+      "fecha": "2026-08-08",
+      "motivo": "'El caso del Departamento de Energia de EE.UU. (Shift Focus con IDEO)': un caso de estudio citado."
+    },
+    {
+      "node_id": "evaluacion_riesgos_legales_ia",
+      "baranda": "dato_local_cableado",
+      "token": "EE.UU.",
+      "fecha": "2026-08-08",
+      "motivo": "'la legalidad varia segun el pais (la UE es mas restrictiva, EE.UU...)': el nodo YA localiza solo."
+    },
+    {
+      "node_id": "vesting_dinamico",
+      "baranda": "dato_local_cableado",
+      "token": "Estados Unidos",
+      "fecha": "2026-08-08",
+      "motivo": "Acuerdos de equity dinamicos entre cofundadores; la mencion es incidental."
+    },
+    {
+      "node_id": "compensacion_service_providers",
+      "baranda": "dato_local_cableado",
+      "token": "409A",
+      "fecha": "2026-08-08",
+      "motivo": "Pagar con equity es universal; 409A aparece de paso y tiene su propio nodo-frontera."
+    }
+  ]
+}

@@ -2,34 +2,52 @@
   "node_id": "lectura_balance_general",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Lectura y Análisis del Balance General",
+  "titulo_concepto": "Lectura y análisis del balance general",
   "fuente": "Financial Intelligence for Entrepreneurs",
-  "resumen_teorico": "El balance general (balance sheet) es el estado financiero que los inversionistas externos revisan primero. Muestra activos, pasivos y capital contable en un momento dado. Es más complejo de leer que el estado de resultados porque las líneas varían más según el tipo de negocio (ej. inventario en manufactura, goodwill si hubo adquisiciones). La regla clave: Activos = Pasivos + Capital.",
+  "resumen_teorico": "El balance general es el estado financiero que los inversionistas y banqueros con experiencia revisan primero, mientras que tú, si estás empezando, probablemente lo ignoras. Te muestra lo que tu empresa posee (activos), lo que debe (pasivos) y la diferencia entre ambos (capital o patrimonio) en una fecha específica. Es más difícil de leer que el estado de resultados porque las líneas cambian según tu tipo de negocio, por ejemplo inventario si fabricas algo, o goodwill si compraste otra empresa. La regla que nunca falla: Activos = Pasivos + Capital. Si entiendes esta relación entre categorías y cómo conecta con tus otros estados financieros, puedes ver la salud completa de tu negocio, no solo si vendes o ganas, sino qué tan sólido estás parado.",
   "pasos_accionables": [
-    "Identificar activos corrientes y no corrientes (efectivo, cuentas por cobrar, inventario, propiedad)",
-    "Identificar pasivos corrientes y de largo plazo",
-    "Verificar que Total Activos = Total Pasivos + Capital Contable como control de calidad",
-    "Comparar crecimiento de activos vs. pasivos entre periodos"
+    "Consigue el balance general de tu empresa en una fecha específica (fin de mes, trimestre o año fiscal)",
+    "Identifica tus activos corrientes y no corrientes (efectivo, cuentas por cobrar, inventario, propiedad)",
+    "Identifica tus pasivos corrientes y de largo plazo",
+    "Verifica que Total Activos sea igual a Total Pasivos más Capital, como control de calidad",
+    "Compara las cifras de al menos dos periodos y mira cómo crecen tus activos frente a tus pasivos",
+    "Revisa las notas al pie para entender los supuestos y estimaciones detrás de las cifras"
   ],
-  "entregable_esperado": "Balance general propio o de referencia con verificación de la ecuación contable balanceada",
+  "entregable_esperado": "Tu balance general revisado, con activos, pasivos y capital identificados y la ecuación contable verificada como balanceada",
   "nodos_previos": [
     "lectura_estado_resultados",
     "estructura_de_costos",
     "activos_intangibles_amortizacion",
     "depreciacion_y_amortizacion",
     "fundamentos_inteligencia_financiera",
-    "tres_palancas_rentabilidad"
+    "tres_palancas_rentabilidad",
+    "analisis_porcentual_estados_financieros"
   ],
   "nodos_siguientes": [
     "analisis_de_ratios_financieros",
     "lectura_estado_flujo_efectivo",
     "estado_flujo_de_caja_tres_categorias",
     "ratio_deuda_capital",
-    "tipos_de_pasivos"
+    "tipos_de_pasivos",
+    "clasificacion_tipos_activos",
+    "concepto_patrimonio_equity",
+    "cash_is_king",
+    "distincion_gasto_vs_capital_expenditure"
   ],
   "condiciones_activacion": [
-    "Si el usuario necesita preparar documentación financiera para inversionistas",
-    "Si el usuario quiere evaluar la solidez financiera de su empresa o una empresa objetivo"
+    "Si solo revisas tu estado de resultados y necesitas entender la salud financiera completa de tu negocio",
+    "Si buscas financiamiento y tienes que presentar estados financieros a inversionistas",
+    "Si quieres evaluar qué tan sólida está tu empresa, o una empresa que te interesa"
   ],
-  "etiqueta_arbol": "Lee tu Balance General"
+  "etiqueta_arbol": "Lee tu Balance General",
+  "ids_alias": [
+    "entendiendo_balance_general_basico"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "entendiendo_balance_general_basico",
+      "titulo": "Entendiendo los Fundamentos del Balance General",
+      "fuente": "Financial Intelligence for Entrepreneurs"
+    }
+  ]
 }

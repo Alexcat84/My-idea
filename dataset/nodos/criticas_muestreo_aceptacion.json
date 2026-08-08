@@ -2,16 +2,16 @@
   "node_id": "criticas_muestreo_aceptacion",
   "fase_proyecto": "ejecucion",
   "dominio": "quality",
-  "titulo_concepto": "Crítica al muestreo de aceptación (MIL-STD-105D y similares)",
+  "titulo_concepto": "Por qué revisar una muestra de cada lote no basta (muestreo de aceptación)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Los planes de muestreo de aceptación como Military Standard 105D o Dodge-Romig (AOQL, LTPD) incrementan costos y garantizan que algunos clientes recibirán producto defectuoso si se usan como auditoría final de calidad. Deming sostiene que estos métodos están obsoletos y que la industria no puede permitirse las pérdidas que generan; se debe migrar hacia el control estadístico de procesos en lugar de la inspección de lotes.",
+  "resumen_teorico": "Si controlas la calidad revisando solo una muestra de cada lote antes de aceptarlo o rechazarlo, como en el método MIL-STD-105D o los planes Dodge-Romig (conocidos por sus siglas AOQL y LTPD), estás pagando más y aun así algunos clientes recibirán producto defectuoso. Este enfoque ya no te sirve: no puedes permitirte las pérdidas que genera. Lo que funciona es controlar tu proceso mientras ocurre, en vez de revisar los lotes ya terminados.",
   "pasos_accionables": [
-    "Eliminar gradualmente el uso de planes de muestreo de aceptación como control final de calidad",
-    "Sustituir la inspección de lotes por control estadístico de procesos en tiempo real",
-    "Trabajar con proveedores para garantizar calidad en la fuente, no en la inspección final",
-    "Calcular el costo real de las pérdidas asociadas al muestreo de aceptación"
+    "Deja de usar poco a poco los planes de muestreo por aceptación como tu control final de calidad",
+    "Cambia la inspección de lotes por el control estadístico de tu proceso en tiempo real",
+    "Trabaja junto a tus proveedores para asegurar la calidad desde el origen, no en la revisión final",
+    "Calcula cuánto te cuesta realmente seguir usando el muestreo por aceptación"
   ],
-  "entregable_esperado": "Un plan de transición del muestreo de aceptación hacia control estadístico de procesos en la cadena de suministro",
+  "entregable_esperado": "Un plan para pasar del muestreo por aceptación al control estadístico de tu proceso en toda tu cadena de suministro",
   "nodos_previos": [
     "limitaciones_intervalos_confianza"
   ],
@@ -19,7 +19,7 @@
     "mito_departamento_control_calidad"
   ],
   "condiciones_activacion": [
-    "Si la empresa actualmente usa planes de muestreo de aceptación para controlar calidad de lotes entrantes o salientes"
+    "Si hoy controlas la calidad de tus lotes, entrantes o salientes, usando planes de muestreo por aceptación"
   ],
   "etiqueta_arbol": "No Confíes en el Muestreo"
 }

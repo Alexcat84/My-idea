@@ -2,30 +2,31 @@
   "node_id": "middle_ring_testing",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Middle Ring Testing (Bullseye)",
+  "titulo_concepto": "Probar tus canales candidatos (anillo intermedio del Bullseye)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Fase intermedia del método Bullseye donde se ejecutan pruebas baratas y rápidas sobre las estrategias de canal más prometedoras identificadas en la lluvia de ideas inicial. El objetivo es responder tres preguntas clave: costo de adquisición por cliente, cantidad de clientes disponibles en ese canal, y si esos clientes son los correctos en este momento. No se debe optimizar en profundidad, solo obtener señales de viabilidad estratégica antes de comprometer más recursos.",
+  "resumen_teorico": "Es la fase intermedia del método Bullseye donde pruebas de forma barata y rápida las estrategias de canal más prometedoras que salieron de tu lluvia de ideas inicial. Buscas responder tres preguntas: cuánto te cuesta conseguir un cliente por ese canal, cuántos clientes hay disponibles ahí, y si esos clientes son los correctos en este momento. Todavía no optimices a fondo, solo junta señales de qué tan viable es cada camino antes de comprometer más recursos.",
   "pasos_accionables": [
-    "Selecciona la estrategia de canal más prometedora de tu lista de brainstorming inicial",
-    "Diseña pruebas económicas (ej. $250 en AdWords) y de corto plazo (menos de un mes en fase I)",
-    "Mide costo de adquisición, volumen de clientes disponibles y calidad/ajuste de esos clientes",
-    "Compara los resultados de varias estrategias de canal usando una hoja de cálculo",
-    "Elige la estrategia ganadora para pasar a pruebas de anillo interno (inner ring)"
+    "Elige la estrategia de canal más prometedora de tu lista inicial de ideas",
+    "Diseña pruebas baratas (por ejemplo en AdWords, pregunta el precio en tu mercado) y de corto plazo, de menos de un mes",
+    "Mide cuánto te cuesta conseguir un cliente, cuántos clientes hay disponibles en ese canal y si son los correctos en este momento",
+    "Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo",
+    "Elige la estrategia ganadora para pasar a las pruebas del anillo interno"
   ],
-  "entregable_esperado": "Hoja de cálculo comparativa con costo de adquisición, volumen y calidad de clientes por estrategia de canal probada",
+  "entregable_esperado": "Tu hoja de cálculo comparando costo de adquisición, volumen y calidad de clientes por cada estrategia de canal que probaste",
   "nodos_previos": [
     "framework_bullseye",
     "traction_goal",
     "critical_path",
-    "traction_channel_bias"
+    "traction_channel_bias",
+    "bullseye_framework"
   ],
   "nodos_siguientes": [
     "critical_path",
     "targeting_blogs_channel"
   ],
   "condiciones_activacion": [
-    "Cuando el usuario ya identificó varias estrategias de canal candidatas y necesita decidir en cuál enfocarse",
-    "Cuando el equipo tiene recursos limitados y no puede optimizar múltiples canales a la vez"
+    "Cuando ya identificaste varias estrategias de canal candidatas y necesitas decidir en cuál enfocarte",
+    "Cuando tienes recursos limitados y no puedes probar todos los canales al mismo tiempo"
   ],
   "etiqueta_arbol": "Prueba tus Mejores Canales"
 }

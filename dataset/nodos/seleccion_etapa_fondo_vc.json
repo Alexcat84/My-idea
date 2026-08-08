@@ -2,26 +2,27 @@
   "node_id": "seleccion_etapa_fondo_vc",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Identificar el Tipo de Fondo VC Adecuado según Etapa",
+  "titulo_concepto": "Identificar el Tipo de Inversor Adecuado según tu Etapa",
   "fuente": "Venture Deals",
-  "resumen_teorico": "Existen distintos tipos de fondos VC según la etapa de inversión: micro VC, seed funds, early stage funds, mid stage (growth) funds y late stage funds. Cada uno tiene rangos de capital y focos de inversión distintos (Pre-Seed/Seed/Series A vs Series B-D vs pre-IPO). Un error común de los emprendedores es dirigirse a firmas que no invierten en su etapa actual, desperdiciando tiempo y energía.",
+  "resumen_teorico": "Existen distintos tipos de fondos de capital de riesgo (VC) según la etapa de inversión: los que entran muy temprano, los de etapa semilla, los de etapa inicial, los de etapa media o crecimiento, y los de etapa tardía. Cada uno maneja rangos de capital y focos distintos, desde arranque hasta cerca de salir a bolsa. Un error común es que toques la puerta de firmas que no invierten en tu etapa actual, y ahí pierdes tiempo y energía que no te sobran.",
   "pasos_accionables": [
-    "Determinar en qué etapa se encuentra la empresa (pre-seed, seed, Series A, B, etc.)",
-    "Investigar el tamaño de fondo y el foco de etapa de cada firma VC potencial",
-    "Descartar firmas cuyo perfil de inversión no coincide con la etapa actual de la empresa",
-    "Priorizar el esfuerzo de fundraising en firmas alineadas con la etapa"
+    "Determina en qué etapa está tu negocio ahora mismo (arranque, semilla, primera ronda seria, etc.)",
+    "Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+    "Descarta a los inversores cuyo perfil no coincide con tu etapa actual",
+    "Enfoca tu esfuerzo de conseguir capital en los que sí están alineados con tu momento"
   ],
-  "entregable_esperado": "Lista filtrada de firmas VC objetivo, clasificadas por etapa y tamaño de inversión relevante",
+  "entregable_esperado": "Tu lista filtrada de inversores objetivo, clasificados por etapa y tamaño de inversión que te sirve",
   "nodos_previos": [
-    "definicion_startup"
+    "definicion_startup",
+    "search_for_business_model"
   ],
   "nodos_siguientes": [
     "jerarquia_firma_vc",
     "manejo_syndicate_inversion"
   ],
   "condiciones_activacion": [
-    "Cuando se inicia una ronda de fundraising",
-    "Cuando el emprendedor no tiene claridad sobre a qué inversores acercarse"
+    "Cuando arrancas a buscar capital",
+    "Cuando no tienes claro a qué inversores acercarte"
   ],
   "etiqueta_arbol": "Identifica el Fondo Adecuado"
 }

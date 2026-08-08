@@ -2,16 +2,16 @@
   "node_id": "sesgo_retrospectivo_hindsight_2",
   "fase_proyecto": "validacion",
   "dominio": "health_safety",
-  "titulo_concepto": "Sesgo Retrospectivo (Hindsight Bias)",
+  "titulo_concepto": "Sesgo de mirar hacia atrás (Hindsight Bias)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
-  "resumen_teorico": "El sesgo retrospectivo ocurre cuando, conociendo el resultado de un evento, simplificamos la situación a una elección binaria entre notar o no los datos críticos. Esto distorsiona la capacidad de entender por qué las personas hicieron lo que hicieron, ya que ellas no contaban con el conocimiento del desenlace. Se debe distinguir entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era observable dado el contexto, interfaz y tareas concurrentes).",
+  "resumen_teorico": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso te impide entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dado el contexto, la pantalla o herramienta que usabas, y todo lo demás que tenías encima al mismo tiempo).",
   "pasos_accionables": [
-    "Evitar preguntas contrafactuales del tipo '¿por qué no hicieron...?'",
-    "Reconstruir la situación tal como se desplegó para los involucrados, no como se ve ahora con el resultado conocido",
-    "Diferenciar entre datos disponibles y datos observables en el momento",
-    "Evitar simplificar la secuencia de eventos a una causalidad lineal simple"
+    "No te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia",
+    "Reconstruye la situación tal como la viviste o la vivió la otra persona, sin usar lo que ya sabes ahora del resultado",
+    "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento",
+    "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal"
   ],
-  "entregable_esperado": "Reconstrucción cronológica de la situación desde el punto de vista de los involucrados, sin contaminación del conocimiento del resultado",
+  "entregable_esperado": "Una reconstrucción en orden cronológico de la situación, contada desde lo que sabías o sabía la otra persona en ese momento, sin dejar que el resultado final contamine esa mirada",
   "nodos_previos": [
     "caso_descarrilamiento_nakina"
   ],
@@ -20,7 +20,7 @@
     "fijacion_cognitiva"
   ],
   "condiciones_activacion": [
-    "Al iniciar cualquier investigación de 'error humano' o revisión de aprendizaje tras un incidente"
+    "Cuando estés revisando un error o un incidente para entender qué pasó y aprender de él"
   ],
   "etiqueta_arbol": "Reconoce el Sesgo Retrospectivo"
 }

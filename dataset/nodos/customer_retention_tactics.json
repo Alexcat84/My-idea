@@ -4,28 +4,50 @@
   "dominio": "core",
   "titulo_concepto": "Tácticas de Retención de Clientes (Keep)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Conjunto de tácticas digitales y físicas diseñadas para mantener a los clientes existentes comprometidos y activos, reduciendo el churn. Incluye programas de outreach, blogs/RSS, programas de lealtad, notificaciones push, mejoras de producto y llamadas de renovación. La retención es más rentable que la adquisición de nuevos clientes.",
+  "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave definir el Dia 1 de la relacion con el cliente y mapear el customer life cycle completo, prestando especial atencion a los primeros 100 dias, donde suele concentrarse la mayor desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
   "pasos_accionables": [
-    "Diseñar e-mails de bienvenida y guías de uso para nuevos clientes",
-    "Implementar notificaciones push y newsletters de tips periódicos",
-    "Crear programas de lealtad y recompensas por repetición de compra",
-    "Establecer llamadas de servicio antes de renovaciones de contrato",
-    "Monitorear señales de posible abandono y ofrecer descuentos preventivos"
+    "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y senales de abandono",
+    "Disena e-mails de bienvenida y guias de uso para los primeros dias de cada cliente nuevo",
+    "Crea un programa de lealtad con recompensas por compras o visitas repetidas",
+    "Envia notificaciones push y newsletters periodicas con tips para mantener el engagement",
+    "Define el Dia 1 de la relacion con el cliente y mapea los primeros 100 dias para identificar el punto exacto de mayor desercion",
+    "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante senales de posible abandono"
   ],
-  "entregable_esperado": "Plan de retención con tácticas específicas por canal digital y físico, listas para probar en validación de clientes",
+  "entregable_esperado": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos en los primeros 100 dias, listo para probar en validacion de clientes.",
   "nodos_previos": [
     "customer_segments_hypothesis",
     "channels_hypothesis_physical",
     "customer_retention_strategy",
-    "vesting_acciones_fundadores"
+    "vesting_acciones_fundadores",
+    "customer_acquisition_activation_web",
+    "embudo_get_keep_grow",
+    "community_building_estrategia",
+    "customer_appreciation_pr",
+    "customer_appreciation_soporte",
+    "eventos_offline_propios",
+    "cierre_satisfaccion_postventa",
+    "gestion_pedidos_order_management",
+    "programacion_entregas_delivery_scheduling",
+    "diseno_de_ia_antropomorfica_para_producto"
   ],
   "nodos_siguientes": [
     "retention_metrics",
     "estrategia_crecimiento_clientes"
   ],
   "condiciones_activacion": [
-    "Si el startup ya tiene clientes activos y busca reducir el churn",
-    "Si el modelo de negocio depende de suscripciones o repetición de compra"
+    "Cuando ya tienes una base activa de clientes y necesitas reducir el churn",
+    "Cuando detectas alta tasa de abandono en los primeros 100 dias de relacion",
+    "Si tu modelo de negocio depende de suscripciones o repeticion de compra"
   ],
-  "etiqueta_arbol": "Aplica Tácticas para Retener Clientes"
+  "etiqueta_arbol": "Aplica Tácticas para Retener Clientes",
+  "ids_alias": [
+    "customer_retention_strategy"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "customer_retention_strategy",
+      "titulo": "Estrategia de Retención de Clientes (Keep Customers)",
+      "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman"
+    }
+  ]
 }

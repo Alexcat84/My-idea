@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Estructura de las Puertas de Decisión (Gates)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Cada gate en el sistema Stage-Gate tiene tres componentes: entregables requeridos (lo que el equipo debe presentar), criterios de evaluación (must-meet como filtros eliminatorios y should-meet como scorecard ponderado), y resultados definidos (Go, Kill, Hold o Recycle). Los gatekeepers son gerentes senior que controlan los recursos necesarios para la siguiente etapa.",
+  "resumen_teorico": "En cada etapa de decisión revisas tres cosas: lo que debes presentar, los criterios con los que se evalúa (unos eliminatorios, que descartan de entrada, y otros que puntúan y priorizan) y el resultado posible: seguir, detener, poner en pausa o volver a trabajar la propuesta. Quien decide es alguien senior, con poder sobre los recursos que se necesitan para pasar a la siguiente etapa.",
   "pasos_accionables": [
-    "Definir una lista estándar de entregables para cada gate del proceso",
-    "Crear un checklist de criterios must-meet (eliminatorios) para filtrar proyectos no viables",
-    "Diseñar un scorecard con criterios should-meet ponderados para priorizar proyectos",
-    "Asignar gatekeepers senior responsables de cada gate según el nivel de recursos comprometidos"
+    "Define una lista clara de lo que debes entregar en cada punto de decisión de tu proceso",
+    "Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables",
+    "Diseña una forma de puntuar y priorizar los proyectos que sí cumplen, dándole más peso a los criterios que más importan",
+    "Decide quién, con experiencia y poder sobre los recursos, será responsable de aprobar cada etapa según lo que se compromete en ella"
   ],
-  "entregable_esperado": "Una plantilla de gate con checklist de criterios must-meet, scorecard de criterios should-meet, y protocolo de decisión Go/Kill/Hold/Recycle",
+  "entregable_esperado": "Una plantilla para cada punto de decisión, con la lista de criterios eliminatorios, una forma de puntuar los que sí cumplen, y un protocolo claro para decidir si sigues, detienes, pausas o rehaces la propuesta",
   "nodos_previos": [
     "sistema_stage_gate",
     "reglas_gestion_riesgo_gambling"
@@ -21,8 +21,8 @@
     "etapa_discovery_ideacion"
   ],
   "condiciones_activacion": [
-    "Si los proyectos avanzan sin puntos de control claros",
-    "Si la empresa necesita un mecanismo objetivo para priorizar entre múltiples proyectos"
+    "Si tus proyectos avanzan sin puntos de control claros",
+    "Si necesitas una forma objetiva de priorizar entre varios proyectos"
   ],
   "etiqueta_arbol": "Define Entregables y Criterios"
 }

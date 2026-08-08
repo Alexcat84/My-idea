@@ -14,11 +14,13 @@
   "entregable_esperado": "Experimento de bajo costo ejecutado que arroja datos cuantitativos (demanda real) y cualitativos (comportamiento de clientes)",
   "nodos_previos": [
     "definicion_tipos_nuevo_producto",
-    "customer_types_mapping"
+    "customer_types_mapping",
+    "tipos_de_clientes"
   ],
   "nodos_siguientes": [
     "mvp_concierge",
-    "experimentacion_iterativa_mercado_fisico"
+    "experimentacion_iterativa_mercado_fisico",
+    "concierge_mvp"
   ],
   "condiciones_activacion": [
     "Cuando existe una visión grande de negocio pero no hay certeza de que exista demanda real",

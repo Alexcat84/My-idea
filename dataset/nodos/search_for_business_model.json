@@ -4,22 +4,98 @@
   "dominio": "core",
   "titulo_concepto": "Búsqueda de un Modelo de Negocio (Search)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Concepto central que define la actividad principal de un startup antes de encontrar un modelo de negocio repetible y escalable. A diferencia de una empresa establecida que 'ejecuta' un modelo conocido, un startup 'busca' su modelo de negocio a través del proceso de Customer Development. Esta distinción es fundamental para entender la naturaleza experimental del startup.",
+  "resumen_teorico": "La búsqueda de un modelo de negocio es la actividad central de un startup, incluso si eres una sola persona con un teléfono: una organización temporal que opera bajo incertidumbre extrema y todavía no conoce a sus clientes, su problema ni las características necesarias del producto. A diferencia de una empresa establecida que ejecuta un modelo probado, tú buscas hipótesis sobre mercado, cliente, canal, precio y producto mediante Customer Development. Esta condición no depende del tamaño ni del sector: aplica igual dentro de una gran empresa que en un garaje, y te distingue de un negocio clon financiable con un préstamo bancario, cuyo éxito depende solo de ejecutar y no de descubrir. Mientras buscas, evita estructuras de ejecución y adopta una cultura de aprendizaje y experimentación, no de miedo al fracaso.",
   "pasos_accionables": [
-    "Reconocer que el startup está en modo de búsqueda, no de ejecución.",
-    "Aplicar el proceso de Customer Development para probar hipótesis del modelo de negocio.",
-    "Iterar y pivotar según la evidencia recogida hasta encontrar un modelo repetible y escalable."
+    "Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)",
+    "Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas",
+    "Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales",
+    "Evita montar estructuras o roles de ejecución antes de validar el modelo",
+    "Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable",
+    "Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso"
   ],
-  "entregable_esperado": "Un modelo de negocio validado con evidencia de que es repetible y escalable, o una decisión clara de pivote.",
+  "entregable_esperado": "Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.",
   "nodos_previos": [
     "lienzo_modelo_negocio",
-    "definicion_startup"
+    "definicion_startup",
+    "arenas_estrategicas",
+    "analisis_y_sintesis",
+    "diseno_consecuencias_no_intencionadas",
+    "historia_del_futuro_escenarios_especulativos",
+    "tecnica_cambio_de_perspectiva_escala",
+    "vision_estrategia_producto_pivote",
+    "descomposicion_tareas_trabajo",
+    "buscar_armonia_diseno",
+    "modelo_cascada_desarrollo_producto"
   ],
   "nodos_siguientes": [
-    "customer_development_process"
+    "customer_development_process",
+    "modelo_customer_development",
+    "lienzo_modelo_negocio",
+    "business_model_canvas_vs_plan_negocio",
+    "customer_discovery",
+    "fracaso_como_aprendizaje_startup",
+    "aprendizaje_validado",
+    "emprendimiento_como_disciplina_de_gestion",
+    "marcos_historicos_comunidades_startup",
+    "definir_antigoals",
+    "diseno_sistemico_partes_interesadas",
+    "how_might_we_briefs",
+    "mapeo_capas_diseno",
+    "pensamiento_espacial_mapeo",
+    "seleccion_etapa_fondo_vc",
+    "value_proposition_startup",
+    "waterfall_vs_agile_development",
+    "customer_development_modelo",
+    "metricas_de_startup",
+    "eliminar_desperdicio_organizacional",
+    "evitar_pseudociencia_producto",
+    "seleccion_estructura_corporativa",
+    "hr_como_control_de_calidad_gerencial",
+    "minimizar_politica_organizacional",
+    "vision_estrategia_producto_pivote",
+    "gestion_intraemprendedora_experimentacion",
+    "desarrollo_de_clientes_customer_development",
+    "business_model_canvas_vs_plan"
   ],
   "condiciones_activacion": [
-    "Al inicio de un startup, antes de tener un modelo de negocio comprobado"
+    "Al inicio de cualquier proyecto, antes de tener un modelo de negocio comprobado",
+    "Cuando estás organizando tu actividad como si ya conocieras tu modelo de negocio",
+    "Si trabajas dentro de una empresa grande pero enfrentas incertidumbre extrema sobre clientes o producto",
+    "Si vienes de una corporación grande y tiendes a aplicar procesos de ejecución conocidos"
   ],
-  "etiqueta_arbol": "Busca Tu Modelo de Negocio"
+  "etiqueta_arbol": "Busca Tu Modelo de Negocio",
+  "ids_alias": [
+    "busqueda_vs_ejecucion",
+    "definicion_startup",
+    "definicion_startup_busqueda_modelo_negocio",
+    "definicion_startup_incertidumbre",
+    "startup_como_busqueda_vs_ejecucion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "busqueda_vs_ejecucion",
+      "titulo": "Búsqueda vs. Ejecución: Definición de Startup",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "definicion_startup",
+      "titulo": "Definición de Startup",
+      "fuente": "The Lean Startup - Eric Ries"
+    },
+    {
+      "node_id": "definicion_startup_busqueda_modelo_negocio",
+      "titulo": "La Startup como Organización Temporal en Búsqueda de un Modelo de Negocio",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    },
+    {
+      "node_id": "definicion_startup_incertidumbre",
+      "titulo": "Definición de Startup bajo Incertidumbre Extrema",
+      "fuente": "The Lean Startup - Eric Ries"
+    },
+    {
+      "node_id": "startup_como_busqueda_vs_ejecucion",
+      "titulo": "Definición de Startup: Búsqueda vs. Ejecución",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

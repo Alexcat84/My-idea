@@ -4,15 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Inventario en Lean",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El inventario (materia prima, WIP, producto terminado) se considera generalmente desperdicio, pues representa efectivo inmovilizado y riesgo de daño, robo u obsolescencia. Sin embargo, cierto inventario estratégico compensa variación del proceso y demanda. Se debe calcular niveles mínimo-máximo y monitorear precisión mediante conteo cíclico.",
+  "resumen_teorico": "El inventario (materia prima, trabajo en proceso, producto terminado) casi siempre es desperdicio: es dinero inmovilizado y corre riesgo de dañarse, perderse o quedar obsoleto. Aun así, algo de inventario te sirve para absorber variaciones en tu proceso y en la demanda. Calcula tus niveles mínimo y máximo, y vigila su exactitud contando por ciclos.",
   "pasos_accionables": [
-    "Identificar todos los puntos de inventario en el value stream",
-    "Determinar si el inventario es estratégico o desperdicio puro",
-    "Calcular niveles mínimo-máximo considerando demanda, tiempo de reposición y variación",
-    "Implementar conteo cíclico para mejorar precisión de registros",
-    "Reducir o eliminar inventario no estratégico"
+    "Identifica todos los puntos de inventario en tu flujo de valor (value stream)",
+    "Determina si ese inventario es estratégico o es desperdicio puro",
+    "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición y la variación",
+    "Implementa un conteo por ciclos para mejorar la exactitud de tus registros",
+    "Reduce o elimina el inventario que no sea estratégico"
   ],
-  "entregable_esperado": "Plan de niveles de inventario optimizados con sistema de conteo cíclico implementado",
+  "entregable_esperado": "Un plan con niveles de inventario optimizados y un sistema de conteo por ciclos en marcha",
   "nodos_previos": [
     "value_stream_mapping"
   ],
@@ -21,8 +21,8 @@
     "kanban_pull_system"
   ],
   "condiciones_activacion": [
-    "Cuando existe exceso de inventario o inventario impreciso",
-    "Al diseñar el estado futuro del value stream"
+    "Cuando tienes exceso de inventario o tus registros son imprecisos",
+    "Cuando estás diseñando el estado futuro de tu flujo de valor"
   ],
   "etiqueta_arbol": "Revisa tu Inventario Estratégico"
 }

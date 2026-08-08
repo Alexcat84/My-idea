@@ -2,27 +2,41 @@
   "node_id": "indice_de_reparabilidad",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Diseñar un Índice de Reparabilidad",
+  "titulo_concepto": "Diseñar un puntaje de qué tan fácil es arreglar tu producto (índice de reparabilidad)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Inspirado en la legislación francesa de 'repairability index', este concepto propone definir parámetros claros (documentación, facilidad de desensamblaje, disponibilidad de repuestos, costo de repuestos, y aspectos específicos del producto) para evaluar qué tan reparable es una solución o producto, combatiendo la obsolescencia programada y fomentando una cultura de arreglo en vez de descarte.",
+  "resumen_teorico": "Todo se rompe eventualmente; la pregunta es qué haces cuando pasa. En Francia, desde 2021, los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad. Puedes tomar esa misma idea para tu producto y evaluarlo en cinco puntos: si existe documentación disponible, si es fácil de desarmar, si hay repuestos disponibles, cuánto cuestan esos repuestos y las particularidades propias de tu producto. Decide de antemano si tu producto va a vivir en una cultura de arreglo o si por defecto se rompe y se descarta, y cuéntaselo con claridad a quien te compra.",
   "pasos_accionables": [
-    "Define qué parámetros de reparabilidad aplican a tu producto o sistema.",
-    "Evalúa la disponibilidad de documentación técnica para usuarios/reparadores.",
-    "Diseña el producto pensando en facilidad de desensamblaje.",
-    "Planifica la disponibilidad y costo de repuestos a largo plazo.",
-    "Publica o comunica el puntaje de reparabilidad de forma transparente."
+    "Decide qué de esos cinco puntos (documentación, desarmado, repuestos, costo, particularidades) le aplica a tu producto.",
+    "Revisa si tienes documentación técnica disponible para quien lo use o lo repare.",
+    "Piensa el diseño de tu producto considerando cómo se desarma y se arregla, no solo cómo se arma.",
+    "Decide qué tan disponibles van a estar los repuestos o el soporte a largo plazo, y pregunta el precio en tu mercado.",
+    "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad y publícalo con claridad.",
+    "Compara tu enfoque contra dejar que el producto simplemente se rompa y se deseche, y ajusta tu modelo si hace falta."
   ],
-  "entregable_esperado": "Ficha de reparabilidad del producto con puntaje y plan de mejora en cada parámetro.",
+  "entregable_esperado": "Una ficha propia con los cinco puntos evaluados, un puntaje y un plan de soporte o mejora hasta que el producto termine su vida útil.",
   "nodos_previos": [
     "anticipar_consecuencias_negativas",
-    "checklist_sistema_stage_gate_primera_clase"
+    "checklist_sistema_stage_gate_primera_clase",
+    "planificacion_consecuencias_no_intencionadas",
+    "disenar_para_sanacion"
   ],
   "nodos_siguientes": [
     "cultura_de_optimismo"
   ],
   "condiciones_activacion": [
-    "Cuando el producto es físico y susceptible a romperse u obsolescencia.",
-    "Si se busca sostenibilidad y reducción de residuos en el modelo de negocio."
+    "Si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+    "Si tu producto se puede romper o está pensado para volverse obsoleto.",
+    "Si quieres diferenciarte por cuidar el ambiente o reducir la basura que generas."
   ],
-  "etiqueta_arbol": "Diseña tu Índice de Reparación"
+  "etiqueta_arbol": "Diseña tu Índice de Reparación",
+  "ids_alias": [
+    "diseno_reparabilidad_cultura_arreglo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "diseno_reparabilidad_cultura_arreglo",
+      "titulo": "Diseñar para la Reparabilidad: Índice de Reparabilidad",
+      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+    }
+  ]
 }

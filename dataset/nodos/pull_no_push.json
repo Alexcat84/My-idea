@@ -4,26 +4,27 @@
   "dominio": "core",
   "titulo_concepto": "Jalar, No Empujar (Pull, Don't Push)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Técnica de manufactura lean (usada por Toyota) donde cada etapa del proceso 'jala' (pull) lo que necesita de la etapa anterior solo cuando lo necesita, en lugar de que la etapa anterior 'empuje' (push) trabajo hacia adelante sin considerar la demanda real. En startups, esto se traduce en que no es el cliente quien jala el desarrollo de producto directamente (porque el cliente no siempre sabe lo que quiere), sino la hipótesis sobre el cliente la que debe jalar el trabajo del equipo de desarrollo. Cualquier trabajo que no responda a una hipótesis que necesita ser probada es desperdicio.",
+  "resumen_teorico": "Es una técnica de manufactura ajustada (usada por Toyota) donde cada etapa del proceso jala (pull) lo que necesita de la etapa anterior solo cuando lo necesita, en lugar de que la etapa anterior empuje (push) trabajo hacia adelante sin considerar la demanda real. En tu negocio esto se traduce en que no es el cliente quien jala el desarrollo de tu producto directamente, porque el cliente no siempre sabe lo que quiere, sino que es la hipótesis sobre el cliente la que debe jalar tu trabajo. Cualquier cosa que construyas y que no responda a una hipótesis que necesitas probar es desperdicio.",
   "pasos_accionables": [
-    "Formular una hipótesis clara antes de iniciar cualquier desarrollo de producto",
-    "Diseñar el experimento más pequeño posible que pueda validar o refutar esa hipótesis",
-    "Trabajar hacia atrás desde 'qué necesitamos aprender' para definir qué construir (en lugar de construir primero y preguntar después)",
-    "Evitar construir funcionalidades o inventario (WIP) que no respondan a una hipótesis activa de aprendizaje"
+    "Formula una hipótesis clara antes de empezar a construir nada",
+    "Diseña el experimento más pequeño posible que te permita validar o refutar esa hipótesis",
+    "Trabaja hacia atrás desde qué necesitas aprender para decidir qué construir, en lugar de construir primero y preguntar después",
+    "Evita construir funciones o dejar trabajo a medio hacer que no responda a una hipótesis activa que estés probando"
   ],
-  "entregable_esperado": "Un documento de hipótesis priorizadas que jalan el desarrollo del producto, en lugar de un roadmap de features fijo",
+  "entregable_esperado": "Una lista de hipótesis priorizadas que jalan el desarrollo de tu producto, en lugar de una lista fija de funciones por construir",
   "nodos_previos": [
     "trabajo_en_lotes_pequenos",
     "espiral_mortal_lotes_grandes",
     "ejecucion_de_touchpoints",
-    "value_stream_analysis_lean"
+    "value_stream_analysis_lean",
+    "analisis_flujo_de_valor"
   ],
   "nodos_siguientes": [
     "motor_de_crecimiento"
   ],
   "condiciones_activacion": [
-    "Si el equipo está construyendo features basándose en suposiciones no verificadas sobre lo que el cliente quiere",
-    "Si existe inventario de trabajo en progreso (diseños, planes) que nadie ha validado"
+    "Si estás construyendo funciones basándote en suposiciones sobre lo que el cliente quiere que nadie ha comprobado",
+    "Si tienes diseños o planes sin terminar que nadie ha validado todavía"
   ],
   "etiqueta_arbol": "Jala, no Empujes el Trabajo"
 }

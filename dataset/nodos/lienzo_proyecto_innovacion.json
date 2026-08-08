@@ -4,22 +4,40 @@
   "dominio": "core",
   "titulo_concepto": "Lienzo del Proyecto de Innovación (Innovation Project Canvas)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Herramienta visual tipo canvas que guía a equipos menos experimentados a mapear su plan de acción, cubriendo áreas como clientes, necesidades del cliente, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos, incertidumbres críticas y actividades prioritarias. Sirve como versión más estructurada del 'lienzo en blanco' usado por equipos expertos.",
+  "resumen_teorico": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de accion, en lugar de seguir una lista estandar de actividades. Se usan post its para volcar hipotesis en cada area: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposicion, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una version mas estructurada del lienzo en blanco que usan los mas expertos, util para aumentar tu propio compromiso con el plan.",
   "pasos_accionables": [
-    "Reunir al equipo del proyecto para completar el canvas con post-its",
-    "Definir los segmentos de clientes objetivo y sus necesidades no resueltas",
-    "Mapear tendencias de mercado y competidores relevantes",
-    "Articular la propuesta de valor y las soluciones consideradas",
-    "Listar riesgos, incertidumbres críticas y actividades prioritarias con responsables y plazos"
+    "Completa el canvas con post its en una sesion dedicada",
+    "Define los segmentos de clientes objetivo y sus necesidades no resueltas",
+    "Mapea tendencias de mercado y competidores relevantes",
+    "Articula la propuesta de valor y las soluciones consideradas",
+    "Separa que es hecho comprobado y que es suposicion no probada, y prioriza las brechas criticas a cerrar",
+    "Define las actividades clave: que, cuando y que recursos necesitas"
   ],
-  "entregable_esperado": "Un canvas completo del proyecto de innovación con hipótesis documentadas en cada área y un plan de próximos pasos con responsables y tiempos",
+  "entregable_esperado": "Un canvas completo del proyecto de innovacion con hipotesis documentadas en cada area, brechas de conocimiento identificadas y un plan de proximos pasos priorizado con tiempos.",
   "nodos_previos": [
-    "modelo_contingencia_riesgo"
+    "modelo_contingencia_riesgo",
+    "afinar_frente_difuso_innovacion",
+    "value_proposition_canvas",
+    "project_schedule"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "flexible_go_kill_criteria",
+    "modelo_hibrido_agile_stage_gate"
+  ],
   "condiciones_activacion": [
-    "Si el equipo del proyecto tiene menos experiencia y necesita más guía estructural que un lienzo completamente en blanco",
-    "Si se requiere alinear a un equipo multidisciplinario sobre el alcance y riesgos del proyecto"
+    "Cuando tienes poca experiencia y necesitas mas guia estructural que un lienzo completamente en blanco",
+    "Cuando tu proyecto es altamente innovador y un modelo estandar de actividades no aplica bien",
+    "Si buscas aumentar tu compromiso con tu propio plan de accion antes de ejecutarlo"
   ],
-  "etiqueta_arbol": "Mapea tu Proyecto de Innovación"
+  "etiqueta_arbol": "Mapea tu Proyecto de Innovación",
+  "ids_alias": [
+    "innovation_project_canvas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "innovation_project_canvas",
+      "titulo": "Innovation Project Canvas",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

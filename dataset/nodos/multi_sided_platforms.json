@@ -4,27 +4,44 @@
   "dominio": "core",
   "titulo_concepto": "Plataformas Multilaterales (Multi-Sided Platforms)",
   "fuente": "Business Model Generation (Osterwalder)",
-  "resumen_teorico": "Patrón de modelo de negocio donde un intermediario conecta dos o más segmentos de clientes distintos e interdependientes (ej. compradores y vendedores, buscadores y solucionadores), generando valor al facilitar interacciones entre ellos. Ejemplos: InnoCentive, consolas de videojuegos, Google.",
+  "resumen_teorico": "Patrón de modelo de negocio donde un intermediario conecta dos o más segmentos de clientes distintos e interdependientes (ej. compradores y vendedores, buscadores y solucionadores, jugadores y desarrolladores), generando valor al facilitar interacciones entre ellos. Cada segmento tiene su propia propuesta de valor pero necesita de la existencia de los otros para que la plataforma funcione. Frecuentemente un lado es subsidiado (a menudo el consumidor final) mientras el otro lado, como anunciantes o desarrolladores, genera los ingresos principales. Ejemplos: InnoCentive, consolas de videojuegos, App Store de Apple, Google.",
   "pasos_accionables": [
-    "Identificar dos o más segmentos de clientes que se beneficiarían de conectarse entre sí",
-    "Diseñar una propuesta de valor de 'acceso' para cada lado de la plataforma",
-    "Definir cómo se generarán ingresos (de uno o ambos lados)",
-    "Construir mecanismos que reduzcan costos de búsqueda entre los segmentos"
+    "Identifica dos o más segmentos de clientes que se necesitan mutuamente y se beneficiarían de conectarse",
+    "Diseña una propuesta de valor de acceso específica para cada lado de la plataforma",
+    "Decide qué lado subsidiarás y cuál generará los ingresos principales",
+    "Define los mecanismos de matchmaking que reduzcan costos de búsqueda entre los segmentos",
+    "Desarrolla las actividades y recursos necesarios para gestionar, promocionar y mantener tu plataforma"
   ],
-  "entregable_esperado": "Diseño de modelo de negocio con al menos dos segmentos de clientes interconectados y su propuesta de valor respectiva",
+  "entregable_esperado": "Un diseño de modelo de negocio que muestre al menos dos segmentos de clientes interconectados, sus propuestas de valor diferenciadas y los flujos de ingresos cruzados entre ellos",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "long_tail_pattern",
     "open_business_models",
-    "unbundling_business_models"
+    "unbundling_business_models",
+    "resegmentacion_mercado_nicho_bajo_costo"
   ],
   "nodos_siguientes": [
     "multi_sided_platform_pattern",
     "customer_scenarios_business_model",
-    "priorizar_elementos_a_validar"
+    "priorizar_elementos_a_validar",
+    "patron_freemium",
+    "value_proposition_startup",
+    "patron_free_business_model",
+    "escenarios_diseno_modelo_negocio"
   ],
   "condiciones_activacion": [
-    "Si el negocio depende de conectar dos grupos distintos que se necesitan mutuamente"
+    "Cuando tu negocio depende de conectar a dos o más tipos de usuarios que se benefician mutuamente de estar en la misma red",
+    "Cuando buscas monetizar una base de usuarios a través de un tercero, como publicidad"
   ],
-  "etiqueta_arbol": "Une Varios Tipos de Clientes"
+  "etiqueta_arbol": "Une Varios Tipos de Clientes",
+  "ids_alias": [
+    "multi_sided_platform_pattern"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "multi_sided_platform_pattern",
+      "titulo": "Patrón de Plataforma Multilateral (Multi-Sided Platform)",
+      "fuente": "Business Model Generation (Osterwalder)"
+    }
+  ]
 }

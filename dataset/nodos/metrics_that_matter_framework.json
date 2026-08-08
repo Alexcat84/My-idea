@@ -4,32 +4,53 @@
   "dominio": "core",
   "titulo_concepto": "Metrics That Matter (Métricas que Importan)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Enfoque radical para evaluar la viabilidad financiera de un startup mediante un pequeño conjunto de métricas clave (no un P&L tradicional), adaptadas al tipo de modelo de negocio (canal físico, web/mobile, o mercado multi-lado). Permite calcular el 'cash burn' trimestral y proyectar cuánto dinero quedará antes de agotar los fondos, sirviendo de base para la decisión de pivotar o proceder.",
+  "resumen_teorico": "Enfoque radical para evaluar la viabilidad financiera de tu startup usando un puñado de métricas clave organizadas según el Business Model Canvas (propuesta de valor, relaciones con clientes, tipo de mercado, estructura de costos, canal y flujos de ingresos), en lugar de hojas de cálculo de cinco años con cientos de líneas. Las dos métricas más importantes son los meses de efectivo que quedan en el banco y la velocidad con que se está quemando ese dinero, el burn rate. Adaptas las métricas al tipo de canal de venta, físico, digital directo o mercado multi-lado, para calcular ingresos netos, costos y cash burn trimestral, proyectando cuánto efectivo quedará antes de agotar los fondos y así decidir si conviene pivotar o seguir adelante.",
   "pasos_accionables": [
-    "Identificar el tipo de canal de venta de tu producto (físico, digital directo, o mercado multi-lado)",
-    "Listar las métricas específicas relevantes para ese modelo (unidades vendidas, precio, costos de canal, adquisición de clientes)",
-    "Construir una hoja de cálculo trimestral que muestre ingresos netos, costos y cash burn",
-    "Calcular el efectivo restante proyectado a fin de cada trimestre",
-    "Determinar si el negocio sobrevivirá el primer año o necesitará más financiamiento"
+    "Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado",
+    "Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes",
+    "Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto",
+    "Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo",
+    "Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo",
+    "Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos"
   ],
-  "entregable_esperado": "Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses",
+  "entregable_esperado": "Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.",
   "nodos_previos": [
     "fit_value_proposition",
     "customer_validation",
     "market_type_revenue_growth",
     "sales_funnel_get_keep_grow",
     "sales_roadmap",
-    "viral_loop_marketing"
+    "viral_loop_marketing",
+    "validar_modelo_negocio_hechos",
+    "war_room_pivot_proceed"
   ],
   "nodos_siguientes": [
     "decision_pivotar_o_proceder",
     "worst_case_best_case_analysis",
     "cash_burn_calculation",
-    "demand_curve_pricing"
+    "demand_curve_pricing",
+    "revalidar_modelo_negocio",
+    "customer_creation",
+    "burn_rate_por_etapa",
+    "pivot_o_proceder_revalidar_modelo_negocio",
+    "revalidacion_modelo_negocio",
+    "tipo_mercado_curva_ingresos"
   ],
   "condiciones_activacion": [
-    "Cuando el startup ha completado la validación de clientes y necesita decidir si avanzar a la etapa de creación de clientes",
-    "Cuando se necesita evaluar si el modelo de negocio es financieramente viable antes de escalar"
+    "Cuando has completado la validación de clientes y necesitas decidir si avanzar a la etapa de creación de clientes",
+    "Cuando necesitas evaluar si tu modelo de negocio es financieramente viable antes de escalar",
+    "Si confundes este análisis con las proyecciones financieras tradicionales de cinco años",
+    "Cuando necesitas decidir si invertir fuertemente en escalar sin quedarte sin fondos"
   ],
-  "etiqueta_arbol": "Enfócate en las Métricas Clave"
+  "etiqueta_arbol": "Enfócate en las Métricas Clave",
+  "ids_alias": [
+    "metricas_que_importan"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "metricas_que_importan",
+      "titulo": "Metrics That Matter: Validar el Modelo Financiero",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

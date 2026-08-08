@@ -4,15 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Práctica que permite que el producto no esté completamente definido al iniciar el desarrollo (menos del 50%), sino que evolucione mediante múltiples ciclos de construir un prototipo, probarlo con clientes, recoger feedback y revisar el diseño. Cada espiral acerca el proyecto al diseño final, fomentando la experimentación y el fallo rápido, barato y temprano.",
+  "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio de tres a cuatro veces en negocios entre empresas, hasta quince en procesos de diseño muy iterativos, y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
   "pasos_accionables": [
-    "Construir una versión mínima demostrable (prototipo, MVP, protocept) del producto",
+    "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final",
     "Probar la versión con clientes reales para medir interés, preferencia e intención de compra",
     "Recoger feedback directo sobre qué debe cambiarse o corregirse",
     "Revisar el diseño, propuesta de valor y beneficios en base al feedback",
-    "Repetir el ciclo hasta convergir en el diseño final del producto"
+    "Repetir el ciclo varias veces (de tres a cuatro en promedio, hasta quince en procesos muy iterativos), manteniendo contacto continuo con el cliente hasta llegar a pruebas de campo formales",
+    "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto"
   ],
-  "entregable_esperado": "Una serie de prototipos iterativos con registros de feedback de cliente en cada ciclo, culminando en una definición de producto validada",
+  "entregable_esperado": "Una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.",
   "nodos_previos": [
     "sistema_triple_a_stage_gate",
     "backlog_evolutivo_y_cronograma_flexible",
@@ -21,15 +22,35 @@
     "role_playing",
     "roles_product_owner_scrum_master",
     "storyboard",
-    "voc_temprano_en_agile_stage_gate"
+    "voc_temprano_en_agile_stage_gate",
+    "definicion_producto_proyecto",
+    "voz_del_cliente_voc",
+    "copy_testing",
+    "desarrollo_de_clientes_customer_development",
+    "superioridad_producto_beneficios",
+    "definicion_sprint_terminado_fisico",
+    "ejecucion_de_touchpoints"
   ],
   "nodos_siguientes": [
-    "modelo_contingencia_riesgo"
+    "modelo_contingencia_riesgo",
+    "plan_de_lanzamiento_al_mercado",
+    "five_data_traps"
   ],
   "condiciones_activacion": [
     "Si los clientes no tienen claro lo que quieren o necesitan",
-    "Si el proyecto es de alto riesgo o innovación radical",
-    "Si los requerimientos del producto pueden cambiar durante el desarrollo"
+    "Si el proyecto es de alto riesgo, innovación radical o el mercado es dinámico e incierto",
+    "Si los requerimientos del producto pueden cambiar durante el desarrollo",
+    "Si sigues un proceso lineal rígido y descubres tarde que el producto no cumple las expectativas"
   ],
-  "etiqueta_arbol": "Construye, Prueba y Ajusta"
+  "etiqueta_arbol": "Construye, Prueba y Ajusta",
+  "ids_alias": [
+    "spiral_development"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "spiral_development",
+      "titulo": "Desarrollo en Espiral (Spiral Development)",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

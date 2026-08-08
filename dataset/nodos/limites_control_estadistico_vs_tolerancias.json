@@ -2,16 +2,16 @@
   "node_id": "limites_control_estadistico_vs_tolerancias",
   "fase_proyecto": "ejecucion",
   "dominio": "quality",
-  "titulo_concepto": "Límites de Control Estadístico vs. Tolerancias de Calidad",
+  "titulo_concepto": "Cuando tu proceso se sale de control pero tu producto sigue cumpliendo (límites de control vs. tolerancias de calidad)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existe una confusión histórica entre los límites de control estadístico (basados en variación de causas comunes) y las tolerancias de calidad (especificaciones oficiales del producto). Un punto puede estar fuera de los límites de control sin que el producto incumpla las tolerancias, generando ambigüedad sobre si se debe tomar acción correctiva. Los líderes deben clarificar responsabilidades y establecer guías claras para estas situaciones, evitando que los operarios ignoren las cartas de control por falta de estatus oficial.",
+  "resumen_teorico": "Hay dos cosas que se confunden fácil: los límites de control estadístico, que muestran cuándo tu proceso se mueve más de lo normal, y las tolerancias de calidad, que son las especificaciones oficiales que tu producto debe cumplir. Puede pasar que un dato salga fuera de los límites de control sin que tu producto incumpla las tolerancias, y ahí no sabes si actuar o no. Tienes que dejar claro quién decide en ese momento y con qué criterio, para que tú o quien te ayuda en planta no terminen ignorando las cartas de control por no saber qué peso real tienen.",
   "pasos_accionables": [
-    "Clarificar la responsabilidad para la acción correctiva cuando hay puntos fuera de los límites de control",
-    "Establecer guías de decisión para los cuatro cuadrantes (proceso conforme/no conforme x producto conforme/no conforme)",
-    "Justificar el uso de cartas de control basándose en valor agregado: necesidades del cliente, riesgo de seguridad, economía, precisión requerida",
-    "Evitar la instalación indiscriminada de cartas de control sin propósito claro"
+    "Decide de antemano quién actúa cuando aparece un punto fuera de los límites de control",
+    "Deja una guía simple que te diga qué hacer según si tu proceso está o no bajo control y si tu producto cumple o no las especificaciones",
+    "Usa las cartas de control solo cuando te aporten algo real: lo que necesita tu cliente, un riesgo de seguridad, el costo de un error o la precisión que exige tu producto",
+    "Evita poner cartas de control por poner, sin tener claro para qué las usas"
   ],
-  "entregable_esperado": "Documento de guías de decisión (matriz de cuadrantes) que clarifique cuándo tomar acción correctiva según el estado del proceso y del producto",
+  "entregable_esperado": "Una guía clara y corta que te diga qué hacer en cada caso, según si tu proceso está bajo control y si tu producto cumple o no las especificaciones",
   "nodos_previos": [
     "ciclo_de_retroalimentacion_control",
     "bucle_retroalimentacion_control"
@@ -22,8 +22,8 @@
     "accion_correctiva"
   ],
   "condiciones_activacion": [
-    "Cuando el equipo detecta puntos fuera de los límites de control pero el producto sigue cumpliendo especificaciones",
-    "Si existe confusión entre el personal operativo sobre cuándo actuar frente a señales estadísticas"
+    "Cuando ves puntos fuera de los límites de control pero tu producto sigue cumpliendo las especificaciones",
+    "Si tú o quien trabaja contigo no tienen claro cuándo hay que actuar frente a una señal estadística"
   ],
   "etiqueta_arbol": "Distingue Control Estadístico de Tolerancias"
 }

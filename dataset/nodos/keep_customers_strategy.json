@@ -4,32 +4,45 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia de Retención de Clientes (Keep)",
   "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Es 5-10 veces más barato retener un cliente que adquirir uno nuevo. La estrategia 'Keep' consiste en diseñar tácticas de bajo costo para probar la retención de clientes durante el customer discovery: programas de lealtad, llamadas de seguimiento, encuestas de satisfacción, boletines de actualización de producto y monitoreo de quejas. El objetivo es identificar quién se queda, quién se va y por qué, organizando las métricas por 'cohortes' de clientes.",
+  "resumen_teorico": "Retener a un cliente cuesta entre 5 y 10 veces menos que adquirir uno nuevo, por lo que conviene probar tácticas de bajo costo durante el customer discovery: programas de lealtad, llamadas de seguimiento, encuestas de satisfacción, boletines de producto y monitoreo de quejas. Cada táctica debe evaluarse por su costo y retorno individual, con A/B testing de incentivos y mensajes. Identifica a tus clientes más leales mediante umbrales de gasto o compra, y diséñales un onboarding especial con beneficios exclusivos, comunicando el logro de ese nivel como un hito, no como una simple transacción. Organiza todo por cohortes para saber quién se queda, quién se va y por qué, y usa esos datos para justificar inversión en experiencia postventa frente a marketing de adquisición.",
   "pasos_accionables": [
-    "Diseñar un programa de llamadas de seguimiento a clientes (mensual o trimestral)",
-    "Lanzar una encuesta de satisfacción del cliente y medir reducción de churn",
-    "Crear boletines o tips de uso del producto para usuarios activos",
-    "Monitorear quejas de servicio al cliente y actuar proactivamente",
-    "Evaluar tácticas de 'lock-in' como contratos largos o costos de cambio altos",
-    "Organizar métricas de retención por cohortes de clientes",
-    "Calcular el costo de adquisición de cliente (CAC) actual de la empresa.",
-    "Calcular el valor vitalicio del cliente (LTV) y compararlo con el CAC.",
-    "Simular el impacto en utilidades de mejorar la tasa de retención en 5 puntos porcentuales.",
-    "Usar estos números para justificar internamente inversión en experiencia postventa frente a marketing/ventas."
+    "Diseña llamadas de seguimiento y encuestas de satisfacción, y mide la reducción de churn que generan",
+    "Define umbrales de gasto o compra que activen recompensas y detecten a tus clientes más leales",
+    "Crea un paquete de bienvenida u onboarding especial con beneficios exclusivos para ese segmento y comunica el logro como un hito celebrado",
+    "Monitorea el costo y ROI de cada táctica de retención por separado, probando distintos incentivos y mensajes",
+    "Organiza tus métricas de retención por cohortes y calcula tu CAC frente al LTV",
+    "Simula el impacto en utilidades de mejorar la retención unos puntos porcentuales para justificar invertir en postventa"
   ],
-  "entregable_esperado": "Un plan de hipótesis de retención con tácticas de bajo costo testeadas y métricas de cohortes documentadas en el business model canvas",
+  "entregable_esperado": "Un plan de hipótesis de retención con tácticas de bajo costo testeadas, programas activos con métricas de ROI y participación, y datos de cohortes documentados en el business model canvas",
   "nodos_previos": [
     "get_customers_funnel",
     "customer_discovery",
-    "framework_get_keep_grow"
+    "framework_get_keep_grow",
+    "cohort_analysis_retencion",
+    "customer_jobs",
+    "funnel_get_customers_optimizacion",
+    "embudo_get_keep_grow"
   ],
   "nodos_siguientes": [
     "estrategia_crecimiento_clientes",
-    "customer_retention_metrics_webmobile"
+    "customer_retention_metrics_webmobile",
+    "optimizacion_grow_customers",
+    "optimizacion_metricas_crecimiento"
   ],
   "condiciones_activacion": [
-    "Si el startup ya tiene sus primeros clientes y necesita evitar que se vayan",
-    "Si el costo de adquisición es alto y se busca maximizar el valor de vida del cliente"
+    "Si ya tienes primeros clientes o una base activa que necesitas evitar que se vaya",
+    "Si tu costo de adquisición es alto y buscas maximizar el valor de vida del cliente",
+    "Si quieres identificar y fidelizar a tu segmento de clientes más valioso"
   ],
-  "etiqueta_arbol": "Retén a tus Clientes"
+  "etiqueta_arbol": "Retén a tus Clientes",
+  "ids_alias": [
+    "optimizacion_keep_retencion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "optimizacion_keep_retencion",
+      "titulo": "Optimización de Programas de Retención ('Keep')",
+      "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman"
+    }
+  ]
 }

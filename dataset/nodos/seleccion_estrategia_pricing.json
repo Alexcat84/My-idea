@@ -4,32 +4,50 @@
   "dominio": "core",
   "titulo_concepto": "Selección de Estrategia de Pricing",
   "fuente": "The Startup Owner's Manual - Steve Blank | Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Existen múltiples modelos de fijación de precios (value pricing, competitive pricing, volume pricing, portfolio pricing, razor/razor blade, subscription, leasing, product-based pricing), cada uno adecuado a diferentes contextos de mercado, producto y estructura de costos. La elección correcta depende de si el mercado es nuevo o existente, del valor único entregado, de la posibilidad de generar compras repetidas y de la estructura de costos del negocio.",
+  "resumen_teorico": "Existen múltiples modelos de fijación de precios: value pricing, competitive pricing, volume pricing, portfolio pricing, razor/razor blade, subscription, leasing y product-based pricing, cada uno adecuado a distintos contextos de mercado, producto y estructura de costos. La estrategia correcta depende de si el mercado es nuevo, existente o resegmentado, del valor único que entrega el producto, de las creencias del mercado, de los precios de la competencia, de la posibilidad de generar compras repetidas y de los costos de fabricación. Puedes elegir un solo modelo o combinar varios según tu producto y clientes. Si vendes a empresas (B2B), conviene calcular el Costo Total de Propiedad y el Retorno de Inversión que espera el cliente para justificar el precio. Antes de fijar el precio definitivo, valida la hipótesis con clientes reales durante el customer discovery.",
   "pasos_accionables": [
-    "Identificar si el producto entrega valor único (patentado, diferenciado) para considerar value pricing",
-    "Evaluar si compite en un mercado existente para aplicar competitive pricing",
-    "Determinar si el modelo de negocio permite ingresos recurrentes (subscription, razor/blade, leasing)",
-    "Si hay múltiples productos, definir una estrategia de portfolio pricing balanceando márgenes altos y bajos",
-    "Probar la hipótesis de precio con clientes reales antes de fijarla definitivamente",
-    "Identifica los segmentos de clientes (ej. cuentas nacionales) que valoran servicios adicionales más que precio bajo",
-    "Diseña un menú de servicios de cadena de suministro que se puedan combinar según necesidad del cliente",
-    "Empaqueta estos servicios junto con los productos para justificar un precio superior",
-    "Valida con clientes clave que estén dispuestos a pagar por el paquete completo"
+    "Determinar el tipo de mercado (nuevo, existente o resegmentado) para elegir el modelo de precio adecuado",
+    "Comparar los precios de la competencia directa",
+    "Identificar si tu producto entrega valor único para aplicar value pricing, o si compite en un mercado existente para aplicar competitive pricing",
+    "Evaluar si tu modelo de negocio permite ingresos recurrentes (suscripción, razor/blade, leasing) o si conviene una estrategia de portfolio pricing con varios productos",
+    "Si vendes B2B, calcular el Costo Total de Propiedad (TCO) y el Retorno de Inversión (ROI) esperado por el cliente",
+    "Validar el precio o la hipótesis de pricing con clientes reales antes de fijarlo definitivamente"
   ],
-  "entregable_esperado": "Hipótesis de modelo de pricing documentada y justificada según el tipo de mercado y producto",
+  "entregable_esperado": "Hipótesis de modelo de pricing documentada y justificada según el tipo de mercado, la competencia y el valor entregado, lista para validar con clientes.",
   "nodos_previos": [
     "hipotesis_propuesta_de_valor_producto",
     "resegmentacion_mercado_nicho_bajo_costo",
-    "criterios_seleccion_proveedores"
+    "criterios_seleccion_proveedores",
+    "revenue_pricing_hypothesis",
+    "business_model_environment_mapping"
   ],
   "nodos_siguientes": [
     "validacion_hipotesis_ingresos",
     "customer_discovery",
-    "analisis_tco_roi_b2b"
+    "analisis_tco_roi_b2b",
+    "customer_discovery_phase2_problem_test",
+    "pass_fail_experiment_design",
+    "diseno_experimentos_pass_fail"
   ],
   "condiciones_activacion": [
-    "Cuando el emprendedor necesita definir cómo cobrará por su producto o servicio",
-    "Si existen dudas sobre qué modelo de precio maximiza rentabilidad y adopción"
+    "Cuando necesitas definir cómo vas a cobrar por tu producto o servicio",
+    "Si tienes dudas sobre qué modelo de precio maximiza rentabilidad y adopción"
   ],
-  "etiqueta_arbol": "Define Tu Estrategia de Precios"
+  "etiqueta_arbol": "Define Tu Estrategia de Precios",
+  "ids_alias": [
+    "pricing_models_selection",
+    "pricing_tactics_models"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "pricing_models_selection",
+      "titulo": "Selección de Modelo de Precios",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "pricing_tactics_models",
+      "titulo": "Modelos y Tácticas de Fijación de Precios",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

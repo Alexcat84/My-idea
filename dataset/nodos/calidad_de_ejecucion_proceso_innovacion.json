@@ -4,17 +4,20 @@
   "dominio": "core",
   "titulo_concepto": "Calidad de Ejecución como Proceso de Innovación",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "La innovación de productos debe tratarse como un proceso gestionable, aplicando principios de gestión de calidad total (TQM) para eliminar errores. Muchas fallas de nuevos productos se deben a omisiones de pasos clave y ejecución deficiente, no a falta de ideas. El objetivo es lograr completitud (ningún paso omitido), calidad (hacerlo bien a la primera - DIRTFT) y foco en las actividades críticas, especialmente las de front-end y las orientadas al mercado.",
+  "resumen_teorico": "La innovación de productos debe gestionarse como un proceso, aplicando principios de gestión de calidad total (TQM) para eliminar errores de ejecución. Muchas fallas de nuevos productos no se deben a falta de ideas, sino a omisiones de pasos clave y ejecución deficiente. El objetivo es lograr completitud (ningún paso omitido), calidad (hacerlo bien a la primera, DIRTFT) y foco en las actividades críticas, especialmente las de front-end y las orientadas al mercado. Además de mapear y controlar el proceso, conviene revisar después de cada proyecto qué causó los fallos de ejecución, para cerrar la brecha entre lo planificado y lo realmente hecho, y dirigir los recursos hacia las etapas más débiles y pivotales del recorrido idea-lanzamiento.",
   "pasos_accionables": [
-    "Mapear el proceso completo de idea-a-lanzamiento identificando todas las actividades necesarias",
-    "Verificar que no existan omisiones de actividades críticas (VoC, homework, planificación de lanzamiento)",
-    "Implementar controles de calidad (checkpoints) en cada etapa del proceso",
-    "Priorizar recursos hacia las etapas más débiles: front-end y actividades de mercado"
+    "Mapea el proceso completo de idea a lanzamiento identificando todas las actividades necesarias",
+    "Verifica que no falten actividades críticas como VoC, homework o planificación de lanzamiento",
+    "Define controles de calidad o checkpoints en cada etapa del proceso",
+    "Prioriza tu tiempo y recursos en las etapas de front-end y validación de mercado, que suelen ser las más débiles",
+    "Haz una revisión post mortem al cerrar cada proyecto para identificar por qué fallaron pasos de ejecución"
   ],
-  "entregable_esperado": "Un mapa de proceso de innovación con checklist de completitud y controles de calidad definidos por etapa",
+  "entregable_esperado": "Un mapa de proceso de innovación con checklist de completitud, controles de calidad por etapa y métricas de cumplimiento.",
   "nodos_previos": [
     "estrategia_de_innovacion_de_producto",
-    "cultura_de_optimismo"
+    "cultura_de_optimismo",
+    "sistema_stage_gate",
+    "storytelling_como_herramienta_diseno"
   ],
   "nodos_siguientes": [
     "sistema_gates_go_kill",
@@ -25,11 +28,25 @@
     "mejora_continua_sostenibilidad",
     "implementar_estrategias_reduccion_emisiones",
     "costo_de_mala_calidad_copq",
-    "evaluacion_mejora_programa"
+    "evaluacion_mejora_programa",
+    "homework_frontend_loading",
+    "ways_to_grow_matrix"
   ],
   "condiciones_activacion": [
-    "Cuando el equipo detecta que los productos fallan por ejecución deficiente más que por falta de ideas",
-    "Cuando no existe un proceso formal de desarrollo de nuevos productos"
+    "Cuando detectas que tus productos fallan más por ejecución deficiente que por falta de ideas",
+    "Cuando no tienes un proceso formal de desarrollo de nuevos productos",
+    "Cuando tus proyectos fallan repetidamente por omisiones o baja calidad en su ejecución",
+    "Cuando notas brechas entre lo que planificaste y lo que realmente ejecutaste"
   ],
-  "etiqueta_arbol": "Gestiona tu Proceso de Innovación"
+  "etiqueta_arbol": "Gestiona tu Proceso de Innovación",
+  "ids_alias": [
+    "calidad_ejecucion_proceso"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "calidad_ejecucion_proceso",
+      "titulo": "Calidad de Ejecución en el Proceso de Innovación",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

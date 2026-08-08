@@ -12,7 +12,7 @@ import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_JUEZ_SESION } from "../prompts";
 import type { EventoInterprete } from "./interprete";
-import type { Grafo } from "./graph";
+import { tituloDeNodo, type Grafo } from "./graph";
 
 /** Fraccion de sesiones que pasan por el juez. Default 1.0 (100%) durante
  * la beta -- se baja via env var cuando ya no haga falta revisar cada
@@ -53,7 +53,9 @@ export async function evaluarCalidadSesion(
     return { calidad: null, acumulado };
   }
 
-  const titulo = (nid: string) => graph[nid]?.titulo_concepto ?? nid;
+  // Por el resolutor: el juez lee títulos, y un id crudo en su material lo
+  // haría juzgar una sesión que no entiende.
+  const titulo = (nid: string) => tituloDeNodo(nid, graph);
   const turnos = turnosDecision.map((d) => ({
     nodo: d.nodo_actual ? titulo(d.nodo_actual) : null,
     destino: d.decision.camino.map(titulo),

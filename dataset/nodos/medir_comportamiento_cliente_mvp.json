@@ -4,26 +4,43 @@
   "dominio": "core",
   "titulo_concepto": "Medir el Comportamiento del Cliente (Purchase, Engagement, Retention, Referral)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Para determinar el entusiasmo real de los clientes por un MVP, se deben medir cuatro métricas críticas: Compra (o disposición a registrarse), Engagement (frecuencia y profundidad de uso), Retención (tasa de abandono/inactividad) y Referencia (viralidad). Estas métricas revelan si existe entusiasmo genuino más allá de las opiniones cualitativas.",
+  "resumen_teorico": "Una vez que los clientes interactúan con el MVP, hay que medir cada acción para evaluar entusiasmo real, no solo interés declarado u opiniones cualitativas. Cuatro métricas críticas revelan esto: Compra o disposición a registrarse (sustituto temprano si aún no hay venta), Engagement (frecuencia y profundidad de uso según el tipo de producto), Retención (tasa de cancelación o inactividad) y Referencia (viralidad, porcentaje y calidad de referidos). Estas métricas, comparadas contra criterios pass o fail definidos de antemano, determinan si existe un verdadero product/market fit antes de decidir si avanzas a Customer Validation o si necesitas pivotar de nuevo.",
   "pasos_accionables": [
-    "Medir tasa de compra o registro de interés en el MVP",
-    "Analizar frecuencia de visitas, tiempo de permanencia y actividad de usuarios",
-    "Identificar características de los usuarios que regresan con más frecuencia",
-    "Medir tasas de cancelación/inactividad como indicador de retención",
-    "Calcular porcentaje de usuarios que refieren a otros y cuántos referidos se activan"
+    "Mide tu tasa de compra o registro de interés como indicador temprano",
+    "Analiza frecuencia de visitas, tiempo de permanencia y profundidad de actividad de tus usuarios",
+    "Identifica qué características tienen los usuarios que regresan con más frecuencia",
+    "Rastrea tasas de cancelación o inactividad como indicador de retención",
+    "Calcula el porcentaje de usuarios que te refieren y cuántos referidos se activan",
+    "Compara todos los resultados contra tus criterios pass o fail definidos previamente"
   ],
-  "entregable_esperado": "Dashboard o reporte con métricas de Purchase, Engagement, Retention y Referral del MVP",
+  "entregable_esperado": "Dashboard o reporte con métricas de Purchase, Engagement, Retention y Referral del MVP, con conclusión sobre la validez del modelo",
   "nodos_previos": [
     "construir_mvp_baja_fidelidad",
     "hipotesis_propuesta_de_valor_producto",
-    "medir_comportamiento_y_entusiasmo_del_cliente"
+    "medir_comportamiento_y_entusiasmo_del_cliente",
+    "prueba_mvp_alta_fidelidad",
+    "tacticas_de_ferias_comerciales"
   ],
   "nodos_siguientes": [
     "realizar_pruebas_pasa_no_pasa",
-    "actualizar_business_model_canvas_discovery"
+    "actualizar_business_model_canvas_discovery",
+    "categorias_entusiasmo_cliente",
+    "actualizar_business_model_canvas_tuneup"
   ],
   "condiciones_activacion": [
-    "Si el equipo ya tiene un MVP funcionando y necesita validar el interés real de los usuarios antes de escalar"
+    "Ya tienes un MVP funcionando y usado por clientes reales invitados",
+    "Necesitas validar el interés real de los usuarios antes de escalar",
+    "Debes decidir si avanzas a la fase de Customer Validation o pivotas de nuevo"
   ],
-  "etiqueta_arbol": "Mide el Comportamiento del Cliente"
+  "etiqueta_arbol": "Mide el Comportamiento del Cliente",
+  "ids_alias": [
+    "medir_comportamiento_y_entusiasmo_del_cliente"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "medir_comportamiento_y_entusiasmo_del_cliente",
+      "titulo": "Medir Comportamiento y Entusiasmo del Cliente",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

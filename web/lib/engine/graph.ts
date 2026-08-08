@@ -71,14 +71,96 @@ export function cargarEntrySeeds(graph?: Grafo): string[] {
   return graph ? _entrySeeds.filter((nid) => esOfrecible(nid, graph)) : _entrySeeds;
 }
 
+// ── EL RESOLUTOR DE LA HISTORIA ──────────────────────────────────────────────
+//
+// LA PROMESA: "la historia resuelve". Cada fusión escribe `ids_alias` en el
+// superviviente, y la deprecación conserva el nodo absorbido entero (título,
+// resumen, aristas) justamente para que un recorrido viejo siga contando algo.
+//
+// LA PROMESA ESTABA A MEDIO CUMPLIR (auditoría del motor, ago 2026): el alias
+// se escribía, se declaraba en el tipo, y NADIE lo leía. 77 de los 285 alias
+// apuntan a ids que ya NO son nodos -- herencia de la era en que fusionar
+// BORRABA en vez de deprecar. Una referencia histórica a uno de ellos caía en
+// `?? nid` y el usuario veía el id crudo en su plan.
+//
+// Tres cosas aprendidas MIRANDO los datos, no suponiéndolas:
+//   1. el superviviente de un alias es SIEMPRE el nodo que lo lista, y ninguno
+//      está listado por dos nodos: la resolución es única, sin ambigüedad;
+//   2. hay CADENAS: 9 alias apuntan a un superviviente que a su vez fue
+//      absorbido después (`costo_de_calidad_5` -> `_6` -> el superviviente de
+//      la ronda 2). Por eso se camina la cadena en vez de dar un salto;
+//   3. hay 10 deprecados SIN sucesor: los que el auditor retiró de la selección
+//      porque no existe equivalente universal (los programas de OSHA, NIOSH,
+//      SBREFA, los programas estatales). Esos NO resuelven a otro nodo, y no
+//      deben: se representan a sí mismos, que conservan título y contenido.
+
+let _alias: Record<string, string> | null = null;
+
+/** alias -> el nodo que lo absorbió. Se construye una vez por proceso. */
+function mapaDeAlias(graph: Grafo): Record<string, string> {
+  if (_alias) return _alias;
+  const m: Record<string, string> = {};
+  for (const [nid, n] of Object.entries(graph)) {
+    for (const a of n.ids_alias ?? []) {
+      if (a !== nid) m[a] = nid; // el auto-alias (7 nodos) no dice nada
+    }
+  }
+  _alias = m;
+  return m;
+}
+
+/**
+ * Un id CUALQUIERA -- de hoy, de una fusión, o de la era en que se borraba --
+ * al nodo que hoy lo representa. `null` solo si el id no significa nada en
+ * ninguna era, que es el único caso que merece salir a la superficie como tal.
+ *
+ * Orden: el nodo activo si existe; si no, se camina la cadena de alias hasta
+ * uno activo; si la cadena entera fue retirada de la selección, el eslabón más
+ * RECIENTE que exista (tiene título, y es la versión más nueva de esa historia).
+ */
+export function resolverId(nid: string, graph: Grafo): string | null {
+  const n = graph[nid];
+  if (n && !n.deprecado) return nid;
+  const alias = mapaDeAlias(graph);
+  const visto = new Set<string>([nid]);
+  let cur = nid;
+  // El último nodo REAL que se pisó al caminar. Si la cadena entera fue
+  // retirada de la selección, ése es el representante honesto. Pasa en
+  // `involucramiento_sindical`, cuyo sucesor es el que el auditor retiró:
+  // devolver el punto de partida sería contar una versión más vieja.
+  let ultimoReal: string | null = n ? nid : null;
+  while (alias[cur] !== undefined) {
+    cur = alias[cur];
+    if (visto.has(cur)) break; // un ciclo no existe hoy; si aparece, se corta
+    visto.add(cur);
+    const c = graph[cur];
+    if (!c) continue; // eslabón de la era en que se borraba: se sigue caminando
+    ultimoReal = cur;
+    if (!c.deprecado) return cur;
+  }
+  return ultimoReal;
+}
+
 /** Fase 3.9: lo que se muestra en las SUPERFICIES DE NAVEGACIÓN (riel del
  * árbol, cintillo de la tarjeta) es la etiqueta_arbol -- 4-5 palabras en
  * segunda persona, generada para enamorar. El titulo_concepto (el nombre del
- * libro) solo respalda en el DETALLE del nodo. Fallback al título si falta la
- * etiqueta, y al id como último recurso. "La etiqueta enamora, el título
- * respalda". */
+ * libro) solo respalda en el DETALLE del nodo. "La etiqueta enamora, el título
+ * respalda".
+ *
+ * Pasa por el resolutor: una referencia histórica muestra el título de quien la
+ * representa hoy. El id crudo ya no lo alcanza ninguna referencia real -- solo
+ * un id que jamás existió. */
 export function etiquetaArbol(nid: string, graph: Grafo): string {
-  return graph[nid]?.etiqueta_arbol ?? graph[nid]?.titulo_concepto ?? nid;
+  const real = resolverId(nid, graph) ?? nid;
+  return graph[real]?.etiqueta_arbol ?? graph[real]?.titulo_concepto ?? real;
+}
+
+/** El TÍTULO de un nodo por su id, de cualquier era. Mismo resolutor que
+ * etiquetaArbol, pero sin la etiqueta: para los sitios donde lo que se cita es
+ * el nombre del concepto (el material del juez, el perfil de sesión). */
+export function tituloDeNodo(nid: string, graph: Grafo): string {
+  const real = resolverId(nid, graph) ?? nid;
+  return graph[real]?.titulo_concepto ?? real;
 }
 
 /**

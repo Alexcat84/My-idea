@@ -4,31 +4,54 @@
   "dominio": "core",
   "titulo_concepto": "MVP Conserje (Concierge MVP)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Es una técnica de MVP donde el equipo fundador entrega manualmente y de forma personalizada el servicio a un pequeño número de clientes, sin automatización ni escalabilidad. El objetivo no es construir un negocio rentable a pequeña escala, sino aprender de forma profunda sobre las necesidades reales del cliente y validar las hipótesis del modelo de crecimiento antes de invertir en producto o tecnología. Es ineficiente por diseño, pero maximiza el aprendizaje validado por unidad de esfuerzo.",
+  "resumen_teorico": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnologia. Es ineficiente a proposito, pero maximiza lo que aprendes por cada esfuerzo que haces. Además de recoger opiniones, mide comportamientos reales como finalizacion, repeticion y recomendacion, que dicen mas que preguntar. Es especialmente util cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
   "pasos_accionables": [
-    "Selecciona un solo cliente (o un grupo muy pequeño) representativo del segmento objetivo.",
-    "Entrega el servicio de forma manual y personalizada, sin sistemas automatizados.",
-    "Documenta explícitamente qué asunciones de tu modelo de crecimiento estás probando.",
-    "Cobra por el servicio si es posible, para validar disposición a pagar.",
-    "Solo automatiza o escala cuando el volumen de clientes supere tu capacidad manual.",
-    "Usa cada interacción para refinar el producto antes de construir tecnología."
+    "Consigue un primer cliente real (o un grupo muy pequeño) dispuesto a pagar por el servicio, aunque sea manual.",
+    "Entrega el servicio de forma completamente manual y personalizada, sin usar sistemas automatizados.",
+    "Anota que hipótesis de tu modelo de crecimiento estas probando en cada interaccion.",
+    "Mide comportamientos concretos del cliente, como finalizacion, repeticion y recomendacion, además de su opinion.",
+    "Repite el proceso con mas clientes uno a uno hasta que atenderlos a mano se te vuelva insostenible.",
+    "Automatiza solo las partes del proceso que se conviertan en cuello de botella, una vez que superes tu capacidad manual."
   ],
-  "entregable_esperado": "Registro de aprendizajes validados sobre el modelo de crecimiento a partir de la atención manual a los primeros clientes, y decisión informada sobre si automatizar o pivotar.",
+  "entregable_esperado": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente (finalizacion, repeticion y recomendacion) y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
   "nodos_previos": [
     "leap_of_faith_assumptions",
     "hipotesis_valor_crecimiento",
-    "construir_mvp_baja_fidelidad"
+    "construir_mvp_baja_fidelidad",
+    "romper_vision_en_experimentos",
+    "pensar_en_grande_empezar_pequeno",
+    "producto_minimo_viable"
   ],
   "nodos_siguientes": [
     "wizard_of_oz_testing",
     "contabilidad_innovacion",
     "principio_calidad_mvp",
-    "riesgos_lanzamiento_mvp"
+    "riesgos_lanzamiento_mvp",
+    "pivote_estrategico",
+    "producto_como_experimento",
+    "mvp_catalogo_tecnicas"
   ],
   "condiciones_activacion": [
-    "Cuando el emprendedor no sabe si su modelo de crecimiento es válido.",
-    "Cuando se necesita aprender rápido sin invertir en desarrollo de producto.",
-    "Cuando el equipo tiene pocos recursos y quiere evitar construir algo que nadie quiere."
+    "Cuando no sabes si tu modelo de crecimiento es valido.",
+    "Cuando necesitas aprender rápido sin invertir en desarrollo de producto.",
+    "Cuando tienes pocos recursos y quieres evitar construir algo que nadie quiere.",
+    "Cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana."
   ],
-  "etiqueta_arbol": "Atiende a Mano, Primero"
+  "etiqueta_arbol": "Atiende a Mano, Primero",
+  "ids_alias": [
+    "mvp_concierge",
+    "mvp_tipo_concierge"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "mvp_concierge",
+      "titulo": "MVP Concierge (Producto Mínimo Viable de Servicio Personalizado)",
+      "fuente": "The Lean Startup - Eric Ries"
+    },
+    {
+      "node_id": "mvp_tipo_concierge",
+      "titulo": "MVP tipo Concierge",
+      "fuente": "The Lean Startup - Eric Ries"
+    }
+  ]
 }

@@ -4,24 +4,42 @@
   "dominio": "core",
   "titulo_concepto": "Optimización de Métricas de Crecimiento (Grow Customers)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Se deben monitorear métricas clave como dólares incrementales por pedido, take rate de ofertas adicionales, tamaño promedio de orden, y tasa de opt-outs, ajustando constantemente mediante pruebas A/B.",
+  "resumen_teorico": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si la tasa de opt-out sube demasiado, suaviza el enfoque de venta y refuerza el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
   "pasos_accionables": [
-    "Medir dólares incrementales promedio por cliente recurrente (meta: +15%)",
-    "Calcular el 'take rate' de ofertas de upsell (meta: doble dígito)",
-    "Realizar pruebas A/B con ofertas más generosas y urgentes",
-    "Monitorear tasa de opt-outs para evitar saturar al cliente (no debe superar 25% del baseline)",
-    "Realizar encuestas de satisfacción y llamadas de seguimiento a clientes"
+    "Mide los dólares incrementales promedio por cliente recurrente (meta: +15%)",
+    "Calcula el take rate de ofertas de upsell (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B",
+    "Aumenta el tamaño promedio de orden mediante suscripciones más largas o bonos",
+    "Monitorea la tasa de opt-outs; si supera el 25% del baseline, suaviza el enfoque de venta",
+    "Realiza encuestas de satisfacción y llamadas de seguimiento que incluyan ofertas sutiles",
+    "Diseña e implementa un programa de referidos para atraer nuevos clientes a través de los existentes"
   ],
-  "entregable_esperado": "Dashboard de métricas de crecimiento con ofertas optimizadas y tasa de opt-out controlada",
+  "entregable_esperado": "Dashboard de métricas de crecimiento con ofertas de upsell y referidos optimizadas y tasa de opt-out controlada.",
   "nodos_previos": [
-    "analisis_de_cohortes"
+    "analisis_de_cohortes",
+    "optimizacion_keep_retencion",
+    "ab_testing_optimizacion",
+    "funnel_get_customers_optimizacion",
+    "keep_customers_strategy"
   ],
   "nodos_siguientes": [
     "coeficiente_viral",
-    "valor_de_vida_del_cliente"
+    "valor_de_vida_del_cliente",
+    "embudo_get_keep_grow",
+    "no_sacrificar_calidad_por_velocidad"
   ],
   "condiciones_activacion": [
-    "Si el startup ya tiene base de clientes activa y busca incrementar ingresos por cliente existente"
+    "Si ya tienes una base de clientes activa y buscas incrementar los ingresos por cliente existente",
+    "Cuando necesitas generar crecimiento sin depender solo de nueva adquisición"
   ],
-  "etiqueta_arbol": "Mide el Crecimiento de tus Clientes"
+  "etiqueta_arbol": "Mide el Crecimiento de tus Clientes",
+  "ids_alias": [
+    "optimizacion_grow_customers"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "optimizacion_grow_customers",
+      "titulo": "Optimización de 'Grow' Customers (Crecer Ingresos por Cliente)",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

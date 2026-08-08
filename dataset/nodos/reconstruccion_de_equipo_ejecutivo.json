@@ -4,25 +4,39 @@
   "dominio": "core",
   "titulo_concepto": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio",
   "fuente": "The Hard Thing About Hard Things",
-  "resumen_teorico": "Cuando una empresa cambia radicalmente de modelo de negocio (ej. de servicios cloud a venta de software empresarial), es común que los ejecutivos que fueron exitosos en el modelo anterior no tengan las competencias necesarias para el nuevo contexto (ej. un CFO sin experiencia en contabilidad de software, un director de ventas sin experiencia vendiendo software). Aunque doloroso, es necesario reemplazar a estas personas por perfiles adecuados al nuevo modelo, reconociendo que su desempeño pasado no garantiza éxito futuro en un contexto distinto.",
+  "resumen_teorico": "Cuando tu empresa pivota a un modelo de negocio radicalmente distinto (por ejemplo de servicios cloud a venta de software empresarial), las competencias que hicieron exitoso a tu equipo ejecutivo en la etapa anterior pueden no servir en la nueva. Un CFO experto en contabilidad de servicios puede no entender contabilidad de software; un líder de ventas exitoso en un modelo puede fracasar en ventas enterprise o marketing B2B. Debes evaluar objetivamente si cada ejecutivo tiene las competencias específicas que exige la nueva fase, no si es buena persona o buen profesional en general. El desempeño pasado no garantiza éxito futuro en un contexto distinto, y el reemplazo debe explicarse como una cuestión de fit de habilidades, no de valor personal.",
   "pasos_accionables": [
-    "Evaluar honestamente las competencias de cada ejecutivo frente a los requerimientos del nuevo modelo de negocio",
-    "Separar el desempeño pasado (en el modelo anterior) de la idoneidad para el nuevo rol",
-    "Identificar brechas de experiencia específica (ej. contabilidad de software, ventas de software, marketing del nuevo mercado)",
-    "Reemplazar de forma decidida a quienes no cumplan el perfil, aunque haya sido difícil personalmente",
-    "Contratar o promover perfiles con experiencia directa en el nuevo modelo de negocio"
+    "Define las competencias específicas que exige la nueva etapa del negocio, por ejemplo contabilidad de software, ventas enterprise o marketing B2B",
+    "Evalúa honestamente si cada ejecutivo posee esas competencias específicas frente a las genéricas que tenía antes",
+    "Separa el desempeño pasado en el modelo anterior de la idoneidad real para el nuevo rol",
+    "Identifica las brechas de experiencia concretas de cada persona respecto al nuevo modelo",
+    "Reemplaza de forma decidida a quienes no cumplan el perfil, aunque haya sido difícil y hayan sido valiosos antes",
+    "Comunica con transparencia que el cambio responde a fit de habilidades, no a un juicio sobre su desempeño personal"
   ],
-  "entregable_esperado": "Organigrama actualizado del equipo ejecutivo con perfiles alineados al nuevo modelo de negocio",
+  "entregable_esperado": "Matriz de competencias requeridas versus competencias del equipo actual, con organigrama actualizado y plan de reemplazo si aplica",
   "nodos_previos": [
     "comunicacion_transparente_en_crisis",
-    "pivote_estrategico"
+    "pivote_estrategico",
+    "business_model_environment_mapping"
   ],
   "nodos_siguientes": [
-    "ceo_puente_interino"
+    "ceo_puente_interino",
+    "desarrollo_attack_plans"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa ha pivotado a un modelo de negocio fundamentalmente distinto",
-    "Cuando el desempeño del equipo ejecutivo actual no corresponde a los resultados esperados en el nuevo contexto"
+    "Cuando tu empresa ha pivotado a un modelo de negocio fundamentalmente distinto",
+    "Cuando el desempeño de tu equipo ejecutivo actual no corresponde a los resultados esperados en el nuevo contexto",
+    "Cuando el equipo fue exitoso en la etapa anterior pero el negocio entra a una fase distinta"
   ],
-  "etiqueta_arbol": "Renueva tu Equipo tras el Pivote"
+  "etiqueta_arbol": "Renueva tu Equipo tras el Pivote",
+  "ids_alias": [
+    "reconstruir_equipo_ejecutivo_para_nueva_etapa"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "reconstruir_equipo_ejecutivo_para_nueva_etapa",
+      "titulo": "Reconstruir el Equipo Ejecutivo Según la Nueva Etapa",
+      "fuente": "The Hard Thing About Hard Things - Ben Horowitz"
+    }
+  ]
 }

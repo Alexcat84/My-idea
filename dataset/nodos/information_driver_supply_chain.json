@@ -4,23 +4,38 @@
   "dominio": "core",
   "titulo_concepto": "El Rol de la Información como Driver de la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La información es el conector entre todas las actividades de una cadena de suministro. Cuanto más precisa, oportuna y completa sea la información compartida entre los participantes, mejores decisiones podrán tomar sobre producción, inventario, ubicación y transporte, maximizando la rentabilidad conjunta. La información se usa para dos propósitos: coordinar actividades diarias (producción, inventario, transporte) y hacer forecasting/planificación táctica y estratégica.",
+  "resumen_teorico": "La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compartes con proveedores y clientes, mejores decisiones podrás tomar, maximizando la rentabilidad conjunta. La información cumple dos funciones: coordinar actividades diarias, como la programación de producción, los niveles de inventario y las rutas de transporte, y sustentar pronósticos de demanda, tanto a nivel táctico (cronogramas mensuales o trimestrales) como estratégico (decisiones de expansión o entrada y salida de mercados).",
   "pasos_accionables": [
-    "Mapear qué datos comparte actualmente tu empresa con proveedores y clientes",
-    "Identificar brechas de información que generan decisiones subóptimas",
-    "Implementar sistemas (EDI, ERP) para compartir datos de demanda, inventario y producción en tiempo real",
-    "Usar la información recopilada para generar forecasts tácticos (mensuales) y estratégicos (anuales)"
+    "Mapea qué datos compartes actualmente con tus proveedores y clientes",
+    "Identifica las brechas de información que te llevan a tomar decisiones subóptimas",
+    "Implementa un sistema (EDI, ERP o dashboard) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
+    "Usa esos datos para ajustar tus programaciones semanales de producción, inventario y transporte",
+    "Genera pronósticos tácticos mensuales y estratégicos anuales a partir de la información recopilada"
   ],
-  "entregable_esperado": "Mapa de flujo de información en la cadena de suministro con puntos de mejora identificados",
+  "entregable_esperado": "Mapa de flujo de información en tu cadena de suministro, con los puntos de mejora identificados, que alimente tus decisiones de producción, inventario, ubicación y transporte",
   "nodos_previos": [
-    "business_model_environment_mapping"
+    "business_model_environment_mapping",
+    "driver_transporte"
   ],
   "nodos_siguientes": [
     "alineacion_cadena_estrategia_negocio",
-    "trade_off_responsividad_eficiencia"
+    "trade_off_responsividad_eficiencia",
+    "planificacion_cadena_suministro"
   ],
   "condiciones_activacion": [
-    "Si el usuario ya tiene una operación con múltiples proveedores o distribuidores y necesita optimizar decisiones"
+    "Si operas con múltiples proveedores o distribuidores y necesitas optimizar tus decisiones",
+    "Si detectas desconexión de información entre los participantes de tu cadena de suministro",
+    "Si necesitas mejorar la precisión de tus pronósticos de demanda"
   ],
-  "etiqueta_arbol": "Comparte Información en tu Cadena"
+  "etiqueta_arbol": "Comparte Información en tu Cadena",
+  "ids_alias": [
+    "driver_informacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "driver_informacion",
+      "titulo": "Driver de Información: Coordinación y Pronóstico en la Cadena de Suministro",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

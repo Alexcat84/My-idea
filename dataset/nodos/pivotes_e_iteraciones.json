@@ -2,25 +2,42 @@
   "node_id": "pivotes_e_iteraciones",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Pivotes e Iteraciones Continuas",
+  "titulo_concepto": "Cambiar de rumbo o solo ajustar (pivotes e iteraciones)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Un pivote es un cambio sustantivo en uno o más de los nueve componentes del Business Model Canvas (ej. cambio de segmento de cliente o modelo de precios). Una iteración es un cambio menor (ej. ajustar precio de $99 a $79). Los pivotes están guiados por aprendizajes de pruebas pasa/no pasa constantes, como el famoso pivote de $12 mil millones de Groupon (de 'The Point' a cupones grupales).",
+  "resumen_teorico": "Un pivote es un cambio sustancial en uno o más de los nueve componentes de tu lienzo de modelo de negocio (Business Model Canvas), por ejemplo cambiar de segmento de cliente o de modelo de precios. Una iteración es un cambio menor, como ajustar el precio de tu producto (pregunta el precio en tu mercado). Los pivotes se guían por lo que aprendes de pruebas pasa/no pasa constantes durante el descubrimiento y la validación (discovery y validation), como el famoso pivote de 12 mil millones de dólares de Groupon (de 'The Point' a cupones grupales), que muestra cómo un pivote decisivo basado en datos puede transformar un negocio que no funcionaba en un éxito masivo.",
   "pasos_accionables": [
-    "Ejecutar pruebas pasa/no pasa continuas sobre las hipótesis del modelo de negocio",
-    "Cuando los datos contradicen una hipótesis, decidir si es una iteración menor o un pivote mayor",
-    "Documentar cada pivote como una nueva versión del Business Model Canvas",
-    "No aferrarse a la idea original si los datos indican lo contrario"
+    "Distingue con claridad entre un ajuste menor y un cambio sustancial",
+    "Corre pruebas pasa/no pasa constantes sobre las hipótesis de tu modelo de negocio",
+    "Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio",
+    "Cuando los datos contradigan una hipótesis, admite el error y decide sin demora si ajustas o cambias de rumbo",
+    "Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio",
+    "No te aferres a tu idea original si los datos indican lo contrario"
   ],
-  "entregable_esperado": "Historial versionado ('flip book') de Business Model Canvas mostrando la evolución del modelo",
+  "entregable_esperado": "Un historial con las versiones de tu lienzo de modelo de negocio, con la razón basada en datos detrás de cada ajuste y cada cambio de rumbo",
   "nodos_previos": [
-    "fallo_como_aprendizaje_startup"
+    "fallo_como_aprendizaje_startup",
+    "fracaso_como_aprendizaje_startup",
+    "customer_development_agile_pairing"
   ],
   "nodos_siguientes": [
-    "business_model_canvas_como_scorecard"
+    "business_model_canvas_como_scorecard",
+    "pivot_o_proceder_revalidar_modelo_negocio",
+    "business_model_canvas_scorecard"
   ],
   "condiciones_activacion": [
-    "Si las métricas de validación muestran que una hipótesis del modelo de negocio es falsa",
-    "Si el crecimiento se ha estancado"
+    "Si las pruebas con clientes te dan resultados negativos o ambiguos",
+    "Si tus métricas de validación muestran que una hipótesis de tu modelo de negocio es falsa",
+    "Si tu crecimiento está estancado y necesitas un cambio para sobrevivir"
   ],
-  "etiqueta_arbol": "Ajusta o Cambia de Rumbo"
+  "etiqueta_arbol": "Ajusta o Cambia de Rumbo",
+  "ids_alias": [
+    "manifiesto_regla4_iteraciones_pivotes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "manifiesto_regla4_iteraciones_pivotes",
+      "titulo": "Iteraciones Continuas y Pivotes",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

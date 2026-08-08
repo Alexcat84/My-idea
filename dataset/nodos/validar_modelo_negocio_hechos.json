@@ -15,11 +15,14 @@
   "entregable_esperado": "Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas",
   "nodos_previos": [
     "war_room_datos",
-    "pivot_o_proceder"
+    "pivot_o_proceder",
+    "decision_pivotar_o_proceder",
+    "war_room_pivot_proceed"
   ],
   "nodos_siguientes": [
     "validar_modelo_financiero",
-    "metricas_que_importan"
+    "metricas_que_importan",
+    "metrics_that_matter_framework"
   ],
   "condiciones_activacion": [
     "Cuando las hipótesis de descubrimiento de clientes ya fueron testeadas extensivamente y se necesita confirmar factualmente el modelo"

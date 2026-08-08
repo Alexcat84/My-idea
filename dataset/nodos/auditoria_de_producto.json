@@ -2,19 +2,19 @@
   "node_id": "auditoria_de_producto",
   "fase_proyecto": "ejecucion",
   "dominio": "quality",
-  "titulo_concepto": "Auditoría de Producto (Evaluación Independiente del Producto Terminado)",
+  "titulo_concepto": "Revisión independiente de tu producto terminado (auditoría de producto)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La auditoría de producto es una evaluación independiente y redundante del producto terminado, distinta de la inspección regular, que compara el desempeño real (idealmente el uso del cliente) contra especificaciones o necesidades del usuario. Se realiza en distintas etapas de progresión del producto (fábrica, distribuidor, servicio, campo) y puede ser aleatoria (imagen no sesgada de la calidad) o focalizada (en áreas problemáticas conocidas). Su propósito es detectar discrepancias entre lo que se mide internamente y lo que realmente importa al cliente, evitando el riesgo de que métricas internas (como un 98% de calificación) no reflejen la satisfacción real o los fallos en campo.",
+  "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificacion del 98%) mientras en la calle el producto sigue fallando.",
   "pasos_accionables": [
-    "Definir el alcance del audit: comparar con especificaciones internas o con necesidades reales del usuario",
-    "Seleccionar la etapa de evaluación (fábrica, distribuidor, servicio, campo) según complejidad del producto",
-    "Determinar tamaño de muestra usando métodos estadísticos o reglas prácticas (ej. 2% de producción por turno)",
-    "Diseñar el plan de auditoría especificando características a revisar (auditoría aleatoria vs focalizada)",
-    "Comparar resultados de auditoría con estudios de mercado o quejas de clientes para validar relevancia",
-    "Clasificar defectos por seriedad (crítico, mayor, menor A, menor B, incidental) y calcular demérito por unidad",
-    "Comparar resultados históricos y con competidores para detectar tendencias"
+    "Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita",
+    "Elige en que momento revisas: fabrica, distribuidor, servicio o ya en campo, según que tan complejo sea tu producto",
+    "Decide cuantas unidades vas a revisar, usando un método estadistico o una regla practica como revisar un porcentaje pequeño de lo que produces por turno",
+    "Diseña que vas a mirar en cada revisión: si sera al azar o enfocada en un problema que ya conoces",
+    "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estas midiendo lo que de verdad importa",
+    "Clasifica cada falla según su gravedad, de critica a incidental, y calcula un indice de fallas por unidad",
+    "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo esta empeorando"
   ],
-  "entregable_esperado": "Informe de auditoría de producto con índice de demérito por unidad, clasificación de defectos por seriedad y comparación con datos de campo/mercado",
+  "entregable_esperado": "Tu informe de revisión con un indice de fallas por unidad, la gravedad de cada falla y la comparacion con lo que pasa en campo o en el mercado",
   "nodos_previos": [
     "planificacion_de_la_inspeccion",
     "diferencia_planeacion_mejora",
@@ -28,9 +28,9 @@
     "bucle_retroalimentacion_control"
   ],
   "condiciones_activacion": [
-    "Cuando existe riesgo de que las métricas internas de calidad no reflejen la experiencia real del cliente",
-    "Cuando se requiere validar la efectividad de la inspección previa",
-    "Cuando el producto es crítico y se necesita redundancia de control"
+    "Cuando sospechas que tus números internos de calidad no reflejan lo que realmente vive el cliente",
+    "Cuando necesitas confirmar que tu inspeccion habitual esta funcionando",
+    "Cuando tu producto es delicado y quieres una segunda capa de control"
   ],
   "etiqueta_arbol": "Compara tu Producto contra la Realidad"
 }

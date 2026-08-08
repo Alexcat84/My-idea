@@ -2,21 +2,21 @@
   "node_id": "planificacion_estudio_capacidad",
   "fase_proyecto": "planificacion",
   "dominio": "quality",
-  "titulo_concepto": "Planificación de un Estudio de Capacidad de Proceso",
+  "titulo_concepto": "Cómo planear un estudio para saber si tu proceso es capaz de cumplir lo que promete",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Antes de recolectar datos para un estudio de capacidad, se debe clarificar el propósito del estudio y los pasos necesarios para lograrlo. Para procesos complejos o niveles de defectos de partes por millón, se recomienda una secuencia de nueve pasos que abarca desde la descripción del proceso hasta el plan de análisis de datos.",
+  "resumen_teorico": "Antes de ponerte a recolectar datos, aclara para qué quieres el estudio y qué pasos necesitas dar para lograrlo. Si tu proceso es complicado o buscas un nivel de defectos muy bajo (partes por millón), conviene seguir una secuencia de nueve pasos que va desde describir el proceso hasta armar el plan de análisis de los datos.",
   "pasos_accionables": [
-    "Desarrollar una descripción del proceso incluyendo entradas, pasos y características de salida",
-    "Definir las condiciones de proceso para cada variable (ajustes óptimos y rangos de operación)",
-    "Verificar que cada característica de calidad tenga una variable de proceso ajustable",
-    "Evaluar si el error de medición es significativo mediante un estudio separado",
-    "Decidir si el estudio se enfocará solo en variabilidad o también en errores/mistakes",
-    "Planificar el uso de gráficos de control para evaluar estabilidad",
-    "Preparar un plan de recolección de datos con tamaño de muestra adecuado",
-    "Planificar los métodos de análisis de datos antes de iniciar el estudio",
-    "Reservar tiempo para investigar resultados intermedios antes de calcular la capacidad final"
+    "Describe el proceso: qué entra, qué pasos sigue y cómo debería salir",
+    "Define las condiciones de cada variable: cuál es el ajuste óptimo y en qué rango puede moverse",
+    "Revisa que cada característica de calidad tenga una variable que puedas ajustar en el proceso",
+    "Evalúa si el error al medir es lo bastante grande como para hacer un estudio aparte sobre eso",
+    "Decide si tu estudio se va a enfocar solo en la variación normal o también en errores y equivocaciones",
+    "Planea usar gráficos de control para ver si el proceso se mantiene estable",
+    "Prepara un plan de recolección de datos con una muestra de tamaño adecuado",
+    "Define cómo vas a analizar los datos antes de empezar a recolectarlos",
+    "Reserva tiempo para revisar resultados parciales antes de calcular la capacidad final"
   ],
-  "entregable_esperado": "Plan documentado del estudio de capacidad de proceso listo para ejecución",
+  "entregable_esperado": "Un plan escrito del estudio de capacidad, listo para ponerlo en marcha",
   "nodos_previos": [
     "capacidad_proceso_concepto"
   ],
@@ -25,8 +25,8 @@
     "indice_cpk"
   ],
   "condiciones_activacion": [
-    "Cuando se requiere un estudio formal de capacidad para procesos complejos",
-    "Cuando se busca cumplir niveles de defectos de partes por millón"
+    "Cuando necesitas un estudio formal de capacidad para un proceso complicado",
+    "Cuando buscas cumplir un nivel de defectos muy bajo, medido en partes por millón"
   ],
   "etiqueta_arbol": "Planifica tu Estudio de Capacidad"
 }

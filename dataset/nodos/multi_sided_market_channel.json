@@ -2,26 +2,27 @@
   "node_id": "multi_sided_market_channel",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Canal de Ingresos en Mercados Multi-Sided",
+  "titulo_concepto": "El Canal de Ingresos Cuando Tienes Dos Tipos de Usuarios (mercado multi-sided)",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "En mercados de múltiples lados (como Google o redes sociales), la startup debe desarrollar una hipótesis separada para el 'lado del ingreso', usualmente anunciantes que pagan por acceder a una audiencia de usuarios gratuitos. El valor de la audiencia depende de su tamaño y distinción; audiencias pequeñas o indistintas son más difíciles de monetizar.",
+  "resumen_teorico": "Si tu negocio funciona como Google o las redes sociales, con un lado de usuarios que no pagan y otro que sí, necesitas construir una hipótesis separada para ese segundo lado: normalmente son anunciantes que pagan por llegar a la audiencia que usa tu producto gratis. El valor de esa audiencia depende de su tamaño y de qué tan distinta sea de otras; si es pequeña o se parece a cualquier otra, te va a costar más venderla.",
   "pasos_accionables": [
-    "Identificar potenciales anunciantes o agencias interesadas en la audiencia",
-    "Estimar cuánto están dispuestos a pagar y cómo funciona el proceso de venta",
-    "Validar que la audiencia tenga suficiente volumen (millones de page views mensuales)",
-    "Buscar diferenciar la audiencia para aumentar su valor frente a agregadores de inventario"
+    "Identifica posibles anunciantes o agencias que puedan interesarse en tu audiencia",
+    "Estima cuánto estarían dispuestos a pagar y cómo se maneja ese proceso de venta",
+    "Confirma que tu audiencia tenga suficiente volumen (millones de visitas mensuales)",
+    "Busca lo que hace distinta a tu audiencia para que valga más frente a quienes venden espacio publicitario al por mayor"
   ],
-  "entregable_esperado": "Hipótesis validada del canal de ingresos (lado pagador) con estimación de tamaño y valor de audiencia",
+  "entregable_esperado": "Una hipótesis validada de quién te va a pagar, con una estimación del tamaño y el valor de tu audiencia",
   "nodos_previos": [
     "channels_hypothesis_web_mobile"
   ],
   "nodos_siguientes": [
     "market_type_definicion",
-    "experimentacion_iterativa_mercado_fisico"
+    "experimentacion_iterativa_mercado_fisico",
+    "determinar_tipo_de_mercado"
   ],
   "condiciones_activacion": [
-    "Si el modelo de negocio es multi-sided (usuarios gratis + pagadores)",
-    "Cuando el producto depende de publicidad como fuente de ingresos"
+    "Si tu negocio tiene dos tipos de usuarios: unos que usan el producto gratis y otros que pagan",
+    "Cuando dependes de la publicidad como fuente de ingresos"
   ],
   "etiqueta_arbol": "Encuentra Quién Paga de Verdad"
 }

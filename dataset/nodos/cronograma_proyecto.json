@@ -4,30 +4,53 @@
   "dominio": "core",
   "titulo_concepto": "Cronograma del Proyecto (Project Schedule)",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se puede representar como diagrama de Gantt (detallado) o gráfico de hitos (solo eventos clave).",
+  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. Ambos formatos incluyen los nombres de los recursos asignados a cada actividad y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
   "pasos_accionables": [
     "Recopilar lista de actividades, diagrama de red y estimaciones de duración",
     "Determinar dependencias entre actividades",
-    "Asignar recursos a cada actividad",
+    "Asignar recursos a cada actividad y anotar sus nombres",
     "Calcular fechas de inicio y fin usando software de programación o Gantt",
+    "Seleccionar el formato de presentación segun necesites, diagrama de Gantt o gráfico de hitos",
     "Identificar hitos clave para el gráfico de hitos"
   ],
-  "entregable_esperado": "Diagrama de Gantt o gráfico de hitos con fechas de inicio/fin y dependencias",
+  "entregable_esperado": "Cronograma del proyecto completo en formato de diagrama de Gantt o gráfico de hitos, con fechas de inicio/fin, dependencias y recursos asignados",
   "nodos_previos": [
     "estimacion_tres_puntos",
     "plan_gestion_costos",
     "project_schedule",
-    "wbs_dictionary"
+    "wbs_dictionary",
+    "activity_list",
+    "network_diagram",
+    "activity_resource_requirements",
+    "activity_duration_estimates",
+    "milestone_list",
+    "resource_breakdown_structure",
+    "schedule_management_plan",
+    "cost_management_plan"
   ],
   "nodos_siguientes": [
     "estimacion_costos_actividad",
     "presupuesto_agil_innovacion",
     "project_charter",
-    "linea_base_costos"
+    "linea_base_costos",
+    "activity_duration_estimates",
+    "requirements_management_plan",
+    "innovation_project_canvas"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita visualizar la secuencia temporal de actividades del proyecto",
-    "Cuando se requiere comunicar plazos a stakeholders"
+    "Cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final",
+    "Cuando necesitas visualizar la secuencia temporal de tus actividades",
+    "Cuando necesitas comunicar plazos a alguien interesado en el proyecto"
   ],
-  "etiqueta_arbol": "Traza tu Cronograma de Proyecto"
+  "etiqueta_arbol": "Traza tu Cronograma de Proyecto",
+  "ids_alias": [
+    "project_schedule"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "project_schedule",
+      "titulo": "Project Schedule",
+      "fuente": "A Project Manager's Book of Forms"
+    }
+  ]
 }

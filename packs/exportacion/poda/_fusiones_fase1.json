@@ -1,0 +1,18 @@
+{
+  "pack": "exportacion",
+  "umbral": "zona gris 13-19%: manda la pregunta del lector, no el numero",
+  "regla_superviviente": "telemetria; sin historia, el mas rico",
+  "clusters": [
+    {
+      "orden": 1,
+      "nodos": [
+        "evaluacion_preparacion_empresa_exportar",
+        "autoevaluacion_gerencial_exportacion"
+      ],
+      "sobrevive": "evaluacion_preparacion_empresa_exportar",
+      "similitud": 0.13,
+      "por_que": "Los dos son la MISMA autoevaluacion previa a exportar: objetivos, experiencia previa, capacidad de personal, produccion y financiamiento. Sobrevive el que trae ademas los factores motivacionales y la evaluacion del producto.",
+      "quedaria": "Evaluacion de la Preparacion de la Empresa para Exportar"
+    }
+  ]
+}

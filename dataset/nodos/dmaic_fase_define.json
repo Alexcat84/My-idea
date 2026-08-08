@@ -2,16 +2,16 @@
   "node_id": "dmaic_fase_define",
   "fase_proyecto": "validacion",
   "dominio": "quality",
-  "titulo_concepto": "DMAIC - Fase Define (Definición del Proyecto)",
+  "titulo_concepto": "Definir el proyecto (fase Define de DMAIC)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "En esta fase el equipo confirma el problema, objetivo y alcance del proyecto iniciados en el charter. Se identifican los clientes clave, se determina la voz del cliente (VOC), se traduce a requerimientos CTQ (critical to quality) y se define un flujo de proceso de alto nivel, típicamente mediante un diagrama SIPOC.",
+  "resumen_teorico": "En esta fase confirmas el problema, el objetivo y el alcance del proyecto que ya planteaste al inicio. Identificas a tus clientes clave, escuchas lo que dicen (voz del cliente o VOC) y lo traduces en requisitos críticos de calidad (CTQ). Después dibujas un mapa simple del proceso, con proveedores, entradas, pasos, salidas y clientes (SIPOC), para tener claro dónde empieza y dónde termina lo que vas a mejorar.",
   "pasos_accionables": [
-    "Identificar los clientes clave relacionados con el proyecto",
-    "Recoger la voz del cliente (VOC) y traducirla en requerimientos CTQ",
-    "Elaborar un diagrama SIPOC para definir los límites del proceso",
-    "Confirmar el alcance, recursos y objetivo medible del proyecto"
+    "Identifica a los clientes clave relacionados con tu proyecto",
+    "Escucha lo que dice tu cliente (voz del cliente o VOC) y tradúcelo en requisitos críticos de calidad (CTQ)",
+    "Dibuja un mapa SIPOC para definir los límites de tu proceso",
+    "Confirma el alcance, los recursos y el objetivo medible de tu proyecto"
   ],
-  "entregable_esperado": "Charter confirmado, VOC documentada, CTQs definidos y diagrama SIPOC elaborado",
+  "entregable_esperado": "Charter confirmado, voz del cliente documentada, requisitos CTQ definidos y mapa SIPOC elaborado",
   "nodos_previos": [
     "dmaic_fase_select",
     "roles_equipo_proyecto_six_sigma"
@@ -20,7 +20,7 @@
     "dmaic_fase_measure"
   ],
   "condiciones_activacion": [
-    "Cuando un proyecto ha sido seleccionado y requiere delimitación clara antes de medir"
+    "Cuando ya elegiste un proyecto y necesitas delimitarlo claramente antes de medir"
   ],
   "etiqueta_arbol": "Define tu Problema y Alcance"
 }

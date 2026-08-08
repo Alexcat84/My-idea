@@ -2,16 +2,16 @@
   "node_id": "principio_humano_en_el_loop",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Principio 2: Ser el Humano en el Loop",
+  "titulo_concepto": "Principio 2: Sé tú quien decide, no la IA (mantente en el ciclo)",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "La IA generativa no 'sabe' realmente nada: predice la siguiente palabra más probable, priorizando muchas veces 'satisfacer al usuario' sobre 'ser precisa', lo que produce alucinaciones (respuestas incorrectas pero convincentes). Por ello, el emprendedor debe mantenerse activamente en el ciclo de decisión, verificando y cuestionando las salidas de la IA en vez de delegarle decisiones críticas sin supervisión, especialmente en áreas de alto riesgo para el negocio (finanzas, legal, salud, atención al cliente).",
+  "resumen_teorico": "La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve, sobre todo en lo que más te puede costar si sale mal, como plata, temas legales, salud o el trato con tus clientes.",
   "pasos_accionables": [
-    "Establecer puntos de verificación humana obligatorios antes de que una salida de IA llegue al cliente o se ejecute una acción",
-    "Entrenar al equipo para detectar señales de alucinación (citas inventadas, datos no verificables, exceso de confianza en la respuesta)",
-    "Nunca aceptar una respuesta de la IA como fuente única de verdad en decisiones críticas del negocio",
-    "Definir protocolos claros de cuándo la IA puede actuar de forma autónoma y cuándo requiere aprobación humana"
+    "Antes de que algo generado por IA llegue a un cliente o se ejecute, revísalo tú mismo, sin excepción",
+    "Aprende a reconocer cuándo la IA está inventando: citas que no existen, datos que no puedes comprobar, respuestas dadas con demasiada seguridad",
+    "Nunca tomes una respuesta de la IA como la única verdad cuando la decisión es importante para tu negocio",
+    "Decide de antemano en qué casos la IA puede actuar sola y en qué casos necesitas revisarlo tú antes"
   ],
-  "entregable_esperado": "Protocolo de supervisión humana (human-in-the-loop) para el uso de IA en el negocio",
+  "entregable_esperado": "Un protocolo simple donde defines en qué momentos revisas tú lo que hace la IA antes de dejarla actuar",
   "nodos_previos": [
     "principio_invitar_ia_siempre"
   ],
@@ -19,8 +19,8 @@
     "gestion_riesgo_seguridad_ia"
   ],
   "condiciones_activacion": [
-    "Cuando la IA se usa para generar contenido, decisiones o respuestas que impactan directamente al cliente o a operaciones críticas",
-    "Cuando el equipo detecta o sospecha de alucinaciones en las respuestas de la IA"
+    "Cuando usas IA para generar algo que le llega directo a un cliente o afecta una operación importante de tu negocio",
+    "Cuando notas o sospechas que la IA te está inventando información"
   ],
   "etiqueta_arbol": "Sé el Humano en el Loop"
 }

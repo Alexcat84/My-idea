@@ -2,19 +2,19 @@
   "node_id": "recoleccion_validacion_datos_benchmarking",
   "fase_proyecto": "ejecucion",
   "dominio": "quality",
-  "titulo_concepto": "Recolección y Validación de Datos en Benchmarking",
+  "titulo_concepto": "Cómo Recolectar y Validar los Datos para tu Comparación (Benchmarking)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Una vez definidos los KPIs, se debe desarrollar un método robusto para recolectar datos de todos los participantes, típicamente mediante documentos o portales web seguros. La validación es crítica ('garbage in, garbage out') y se realiza en dos fases: verificaciones automatizadas integradas en el documento de recolección, seguidas de verificaciones manuales que siguen un proceso de tres pasos: completitud, integridad y consistencia de los datos. Un help desk y FAQs facilitan el proceso y minimizan errores de interpretación.",
+  "resumen_teorico": "Una vez que tienes claros los indicadores que vas a medir, necesitas un método sólido para recolectar los datos de todos los que participan, normalmente con un documento o un portal seguro. Validar es clave, porque si metes datos basura, sacas resultados basura. Hazlo en dos fases: primero revisiones automáticas dentro del mismo documento de recolección, y después revisiones manuales en tres pasos: que los datos estén completos, que sean íntegros y que sean consistentes. Un canal de ayuda y preguntas frecuentes facilita el proceso y evita errores de interpretación.",
   "pasos_accionables": [
-    "Diseñar un documento de recolección de datos fácil de completar con validaciones automáticas integradas",
-    "Establecer un help desk disponible durante todo el proyecto para resolver dudas de los participantes",
-    "Ejecutar verificaciones automatizadas para prevenir datos espurios antes del envío",
-    "Realizar verificación manual de completitud: asegurar que todos los datos requeridos estén presentes",
-    "Realizar verificación manual de integridad: comparar datos interrelacionados para verificar relaciones esperadas",
-    "Realizar verificación manual de consistencia: triangular con datos históricos disponibles",
-    "Organizar una 'data clinic' si hay muchos errores o dificultades recurrentes"
+    "Diseña un documento de recolección fácil de llenar, con validaciones automáticas incluidas",
+    "Ten disponible un canal de ayuda durante todo el proyecto para resolver dudas de quienes participan",
+    "Corre revisiones automáticas para evitar datos raros antes de que te los envíen",
+    "Revisa manualmente que todo esté completo: que no falte ningún dato pedido",
+    "Revisa manualmente la integridad: compara los datos relacionados entre sí para ver si tienen sentido",
+    "Revisa manualmente la consistencia: compara con datos históricos que tengas disponibles",
+    "Si ves muchos errores o dificultades repetidas, organiza una sesión de resolución de dudas (data clinic) con los participantes"
   ],
-  "entregable_esperado": "Documento de recolección de datos validado y conjunto de datos limpio, completo, íntegro y consistente listo para análisis",
+  "entregable_esperado": "Un documento de recolección validado y un conjunto de datos limpio, completo, íntegro y consistente, listo para analizar",
   "nodos_previos": [
     "benchmarking_proceso",
     "gestion_efectiva_benchmarking"
@@ -25,8 +25,8 @@
     "normalizacion_datos_benchmarking"
   ],
   "condiciones_activacion": [
-    "Cuando se inicia la fase de recolección de datos de un estudio de benchmarking",
-    "Si existen múltiples participantes que deben enviar datos comparables"
+    "Cuando empiezas a recolectar datos para tu estudio de comparación (benchmarking)",
+    "Si tienes varios participantes que deben enviarte datos comparables"
   ],
   "etiqueta_arbol": "Recolecta y Valida tus Datos"
 }

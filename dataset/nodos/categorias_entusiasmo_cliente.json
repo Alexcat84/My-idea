@@ -2,21 +2,22 @@
   "node_id": "categorias_entusiasmo_cliente",
   "fase_proyecto": "validacion",
   "dominio": "core",
-  "titulo_concepto": "Categorización del Entusiasmo del Cliente",
+  "titulo_concepto": "Qué tan entusiasmados están tus clientes con tu solución",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Marco de cuatro categorías para clasificar honestamente la reacción de los clientes tras la presentación de solución: (1) aman el producto sin cambios necesarios, (2) les gusta pero piden features adicionales, (3) lo entienden pero no compran con entusiasmo, (4) no ven necesidad del producto. Las categorías 2, 3 y 4 son señales de alerta que requieren iteración o pivote, no avance automático.",
+  "resumen_teorico": "Después de presentar tu solución, la reacción de cada cliente cae en una de cuatro categorías: (1) le encanta tal cual está, sin cambios necesarios, (2) le gusta pero pide funciones adicionales, (3) la entiende pero no la compra con entusiasmo, (4) no ve la necesidad de tu producto. Si te encuentras en las categorías 2, 3 o 4, son señales de alerta: necesitas iterar o pivotar, no seguir avanzando por costumbre.",
   "pasos_accionables": [
-    "Recopilar todas las reacciones de clientes tras la presentación de solución",
-    "Clasificar cada respuesta en una de las 4 categorías definidas",
-    "Calcular el porcentaje de clientes en Categoría 1 (entusiasmo total)",
-    "Si predomina Categoría 2, evaluar cuidadosamente qué features son realmente indispensables vs. deseables",
-    "Si predominan Categorías 3 o 4, considerar seriamente un pivote y reiniciar Fase 1"
+    "Reúne todas las reacciones de tus clientes después de presentarles tu solución",
+    "Clasifica cada respuesta en una de las 4 categorías",
+    "Calcula qué porcentaje de tus clientes cae en la categoría 1, la de entusiasmo total",
+    "Si la mayoría cae en la categoría 2, evalúa con cuidado qué funciones son realmente indispensables y cuáles son solo deseables",
+    "Si la mayoría cae en las categorías 3 o 4, considera en serio pivotar y volver a empezar desde la Fase 1"
   ],
-  "entregable_esperado": "Tabla de clasificación de clientes por categoría de entusiasmo con porcentajes y decisión de acción resultante",
+  "entregable_esperado": "Una lista con tus clientes clasificados por categoría de entusiasmo, sus porcentajes y la decisión que tomas a partir de eso",
   "nodos_previos": [
     "prueba_solucion_con_cliente",
     "medir_comportamiento_y_entusiasmo_del_cliente",
-    "obtencion_de_compromiso"
+    "obtencion_de_compromiso",
+    "medir_comportamiento_cliente_mvp"
   ],
   "nodos_siguientes": [
     "pivotar_o_proceder",
@@ -26,8 +27,8 @@
     "ocho_fases_experiencia_cliente"
   ],
   "condiciones_activacion": [
-    "Cuando se ha completado la ronda de entrevistas de solución y se debe decidir si avanzar",
-    "Cuando el equipo de ingeniería insiste en agregar más features sin evidencia clara de necesidad"
+    "Cuando terminas la ronda de entrevistas de solución y tienes que decidir si avanzas",
+    "Cuando insistes en agregar más funciones sin tener evidencia clara de que se necesitan"
   ],
   "etiqueta_arbol": "Mide el Entusiasmo del Cliente"
 }

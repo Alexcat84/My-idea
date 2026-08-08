@@ -4,27 +4,45 @@
   "dominio": "core",
   "titulo_concepto": "Sistema de Gates (Puntos de Decisión Go/Kill)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "En lugar de un 'túnel' donde todos los proyectos avanzan sin filtro, se debe construir un 'embudo' (funnel) con puntos de decisión (gates) a lo largo del proceso. Cada gate evalúa: si el proyecto está listo (readiness check), si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorización, ej. NPV), y cuál es el plan de acción y recursos para la siguiente etapa. Los gates permiten matar proyectos débiles a tiempo y concentrar recursos en los de mayor valor.",
+  "resumen_teorico": "En lugar de dejar que todos tus proyectos avancen sin filtro como en un tunel, construye un embudo con puntos de decision (gates) a lo largo del proceso. En cada gate evaluas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorizacion, por ejemplo NPV), y que plan de accion y recursos necesita la siguiente fase. Usar criterios explicitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas debiles. Los gates te permiten matar proyectos a tiempo y concentrar tus recursos limitados en lo que realmente vale la pena.",
   "pasos_accionables": [
-    "Definir gates en puntos clave del proceso de desarrollo (ej. tras idea, tras homework, antes de desarrollo, antes de lanzamiento)",
-    "Establecer criterios claros de evaluación para cada gate (readiness, negocio, plan de acción)",
-    "Realizar reuniones de gate con decisión explícita: Go, Kill, Hold o Recycle",
-    "Comprometer recursos formalmente al equipo solo tras pasar el gate"
+    "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)",
+    "Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa",
+    "Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad",
+    "Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle",
+    "Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes",
+    "Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa"
   ],
-  "entregable_esperado": "Un mapa de gates con criterios de decisión y entregables requeridos en cada punto de control",
+  "entregable_esperado": "Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control",
   "nodos_previos": [
     "calidad_de_ejecucion_proceso_innovacion",
     "diseno_como_plataforma_expansiva",
-    "portafolio_formal_management"
+    "portafolio_formal_management",
+    "estrategia_de_innovacion_arenas",
+    "gestion_portafolio_formal"
   ],
   "nodos_siguientes": [
     "gestion_riesgo_incremental",
     "equipo_multifuncional_real",
-    "procesamiento_paralelo_con_espirales"
+    "procesamiento_paralelo_con_espirales",
+    "scorecard_de_seleccion_de_proyectos",
+    "portfolio_management",
+    "reglas_gestion_riesgo_gambling"
   ],
   "condiciones_activacion": [
-    "Cuando existen demasiados proyectos activos y recursos insuficientes",
-    "Cuando las decisiones de continuar/matar proyectos son inconsistentes o inexistentes"
+    "Cuando tienes demasiados proyectos o ideas activas y recursos insuficientes para todos",
+    "Cuando no eliminas a tiempo los proyectos debiles y siguen consumiendo tu tiempo y dinero",
+    "Cuando tus decisiones de continuar o parar un proyecto son inconsistentes o las tomas sin criterio claro"
   ],
-  "etiqueta_arbol": "Filtra Proyectos con Decisiones Go/Kill"
+  "etiqueta_arbol": "Filtra Proyectos con Decisiones Go/Kill",
+  "ids_alias": [
+    "sistema_de_gates_go_kill"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "sistema_de_gates_go_kill",
+      "titulo": "Sistema de Compuertas (Gates) con Criterios Go/Kill",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

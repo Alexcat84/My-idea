@@ -4,28 +4,43 @@
   "dominio": "core",
   "titulo_concepto": "El Estado de Flujo de Caja: Operación, Inversión y Financiamiento",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "El estado de flujo de caja se divide en tres categorías: efectivo de actividades operativas (el indicador más importante de salud del negocio), efectivo de actividades de inversión (compra/venta de activos como maquinaria) y efectivo de actividades de financiamiento (préstamos, aportes de accionistas, recompra de acciones, dividendos). A diferencia del estado de resultados y el balance, este estado tiene menos margen de manipulación contable, por lo que Wall Street y los inversores lo valoran cada vez más.",
+  "resumen_teorico": "El estado de flujo de caja es el más difícil de leer de los tres estados financieros, pero es el que más te conviene entender, porque te muestra de dónde viene tu efectivo y hacia dónde va, separado en tres partes: lo que genera tu operación diaria (el indicador más importante de la salud de tu negocio), lo que entra o sale por comprar o vender activos como maquinaria, y lo que entra o sale por préstamos, aportes propios, recompra de participaciones o reparto de utilidades. A diferencia del estado de resultados y el balance, este número es más difícil de maquillar, por eso cada vez más inversionistas lo revisan con atención. Te permite saber si tu negocio genera efectivo por sí mismo, si está invirtiendo en su futuro o si depende de dinero externo para sobrevivir, algo clave para saber si es sostenible.",
   "pasos_accionables": [
-    "Solicitar al contador un estado de flujo de caja si aún no existe",
-    "Clasificar cada movimiento de efectivo en operación, inversión o financiamiento",
-    "Evaluar si el flujo operativo es consistentemente saludable (señal de rentabilidad real)",
-    "Analizar si la inversión en activos es baja (posible 'vaca lechera') o alta (apuesta a futuro) según el tipo de negocio",
-    "Revisar la dependencia de financiamiento externo comparando años"
+    "Pide a quien te lleva la contabilidad un estado de flujo de caja si todavía no lo tienes",
+    "Clasifica cada movimiento de efectivo en operación, inversión o financiamiento",
+    "Revisa si el efectivo que genera tu operación es positivo o negativo y si se mantiene sano con el tiempo",
+    "Analiza si estás invirtiendo poco en activos (posible señal de que exprimes el negocio) o mucho (apuesta a futuro), según el tipo de negocio que tienes",
+    "Identifica de dónde viene la mayor parte de tu efectivo y compara entre periodos qué tanto dependes de dinero externo",
+    "Conecta los cambios de tu balance general, como las cuentas por cobrar, con las líneas correspondientes de tu flujo de efectivo"
   ],
-  "entregable_esperado": "Estado de flujo de caja clasificado en las tres categorías, con análisis de tendencia por periodo",
+  "entregable_esperado": "Un estado de flujo de caja clasificado en las tres categorías, con el análisis de cómo cambia entre periodos y una conclusión sobre de dónde sale realmente el efectivo de tu negocio",
   "nodos_previos": [
     "estructura_estado_resultados",
     "lectura_balance_general",
-    "contabilidad_caja_vs_devengo"
+    "contabilidad_caja_vs_devengo",
+    "profit_vs_cash"
   ],
   "nodos_siguientes": [
     "reconciliacion_utilidad_neta_flujo_caja",
     "flujo_de_caja_libre",
-    "analisis_de_ratios_financieros"
+    "analisis_de_ratios_financieros",
+    "owner_earnings"
   ],
   "condiciones_activacion": [
-    "Cuando el emprendedor solo mira el saldo bancario sin entender su origen",
-    "Cuando se necesita evaluar la salud financiera real más allá de la utilidad reportada"
+    "Cuando solo miras el saldo de tu cuenta bancaria sin entender de dónde viene",
+    "Cuando necesitas saber la salud financiera real de tu negocio más allá de la utilidad que reportas",
+    "Cuando estás evaluando si tu negocio depende de dinero externo para sobrevivir",
+    "Cuando necesitas mostrar tus finanzas completas a inversionistas o a un banco"
   ],
-  "etiqueta_arbol": "Organiza tu Flujo de Caja"
+  "etiqueta_arbol": "Organiza tu Flujo de Caja",
+  "ids_alias": [
+    "lectura_estado_flujo_efectivo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "lectura_estado_flujo_efectivo",
+      "titulo": "Lectura del Estado de Flujo de Efectivo",
+      "fuente": "Financial Intelligence for Entrepreneurs"
+    }
+  ]
 }

@@ -234,12 +234,30 @@ def _llamar(cliente, system, prompt, uso):
 BARANDAS = {
     "dato_local_cableado": [
         r"\b\d+\s*(?:%|por ciento)\s+(?:de impuesto|de arancel|de iva|de comision)",
-        r"\b(?:USD|US\$|\$|EUR|€)\s?\d[\d.,]*",
+        # El `\b` delante del grupo mataba el caso mas comun: `$` no es
+        # caracter de palabra, asi que "son $45" NUNCA casaba. La baranda
+        # llevaba desde su nacimiento ciega a los importes sueltos (cazada por
+        # su fixture, ago 2026). El limite izquierdo se pide solo donde hace
+        # falta: en las siglas.
+        r"(?:\bUSD|\bEUR|US\$|\$|€)\s?\d[\d.,]*",
         r"\bdivid(?:e|ir|iendo)\s+entre\s+\d{3,}",
         r"\b\d{3,}\s*(?:kg|libras|lbs)\b",
         r"\b(?:OSHA|EPA|FDA|IRS|SEC)\b",
         r"\bsalario m[ií]nimo de\b",
     ],
+    # LA DOCTRINA DEL IMPORTE (adjudicada ago 2026):
+    #
+    #   "La cifra de MERCADO sale; la cifra que ES LA NORMA se queda dentro de su
+    #    nodo-frontera, porque alli el numero es el hecho y la frontera ya le dice
+    #    al lector cuando le aplica."
+    #
+    # Los umbrales de $10 y $15 de la Magnuson-Moss son la ley, no un precio:
+    # quitarlos dejaria el nodo inutil y hasta falso. Una tarifa de franquicia o
+    # el costo de ejemplo de una patente son mercado, y salen con el "pregunta en
+    # tu mercado".
+    #
+    # El detector marca los DOS por igual, a proposito: la pregunta -- ¿es norma
+    # o es mercado? -- la contesta un ojo leyendo el nodo, no un patron.
     "matriz_o_puntaje": [
         r"\bmatriz de (?:riesgo|probabilidad|impacto|prioridad)",
         r"\bpuntú[ae]\b|\bpuntua(?:r|ndo|cion|ción)\b",
@@ -247,8 +265,48 @@ BARANDAS = {
         r"\bprobabilidad\s*(?:x|por|\*)\s*impacto\b",
         r"\bnivel de riesgo\s*=\s*",
     ],
+    # LA CUARTA BARANDA (adoptada ago 2026, Fase 2-3 de la curacion del motor).
+    # Las tres primeras se construyeron para los PACKS, donde el defecto era la
+    # ESCALA: una empresa con gerencia y comites hablandole a alguien que trabaja
+    # solo. El defecto del NUCLEO es otro: la PERSONA. El nucleo no le habla a una
+    # empresa grande, le habla SOBRE un emprendedor en vez de A un emprendedor, y
+    # las tres primeras no lo ven: de los 8 blancos de los rumbos de diagnostico,
+    # cazaron CERO.
+    "voz_de_libro": [
+        # Se exige el VERBO en tercera persona detras: "el fundador SALE a
+        # vender" es voz de libro; "tu eres el fundador de esto" es la voz
+        # correcta y el patron sin verbo la cazaba (visto en su fixture).
+        r"\b(?:el|un) (?:fundador|emprendedor|usuario|equipo fundador) (?:debe|puede|tiene|sale|hace|necesita|busca|define|crea|elige|usa|realiza|entrega)\b",
+        r"\blos fundadores\b|\blos emprendedores\b",
+        r"\b(?:el equipo|la empresa|la startup|una empresa|el usuario) debe\b",
+        r"\blas empresas deben\b|\blos fundadores deben\b",
+        # El IMPERSONAL REFLEXIVO, que es lo que se le escapo a
+        # value_proposition_startup ("el trabajo que SE REALIZA para el cliente").
+        # "se debe A" (= es causado por) no es el impersonal de obligacion:
+        # "el silencio se debe a falta de informacion" es correcto. Cazado
+        # leyendo la muestra ciega, no contandola.
+        r"\bse (?:debe|deben)\b(?! a )|\bse (?:realiza|traduce|estructura|recomienda|utiliza|espera)\b",
+        r"\bes la (?:fase|etapa) (?:donde|en (?:la )?que)\b",
+    ],
     "residuo_corporativo": [
-        r"\btu equipo\b|\bsu equipo\b|\bel equipo de\b",
+        # `tu equipo` SALIO del patron (adjudicado ago 2026). Era correcto en la
+        # era de la EXTRACCION: un nodo recien sacado del libro que decia "tu
+        # equipo" arrastraba un organigrama. Pero la re-voz lo escribio A
+        # PROPOSITO: es la voz de la casa para quien tiene dos o tres personas
+        # trabajando con el. Trece nodos ya re-vozados -- ocho de HSEQ -- caian
+        # aqui, y ocho los habia re-vozado esta misma casa.
+        #
+        # DOCTRINA HERMANA DE LA DE LOS ACENTOS:
+        #   "Los detectores deben conocer el trabajo ya hecho, o acaban
+        #    cobrandolo dos veces."
+        # Y la de origen: una baranda que caza lo correcto no es estricta, esta
+        # rota. Aqui ademas no era gratis: re-vozar trece nodos buenos cuesta
+        # dinero y arriesga DEGRADARLOS, porque el modelo tiene que cambiar algo
+        # para justificar su turno.
+        #
+        # Los marcadores de TERCERA persona se quedan: esos si delatan que el
+        # nodo le habla a una empresa que no es la del lector.
+        r"\bsu equipo\b|\bel equipo de\b",
         r"\bel comit[ée]\b|\bun comit[ée]\b",
         r"\btu departamento\b|\bel departamento de\b",
         r"\blos stakeholders\b|\blas partes interesadas\b",
@@ -258,8 +316,57 @@ BARANDAS = {
     ],
 }
 
+# LA EXENCION DE LOCALIZACION (adjudicada ago 2026, mismo principio).
+#
+# `adaptaciones_sectoriales_iso` decia: "las cGMP que exige la FDA en Estados
+# Unidos, O EL ORGANISMO EQUIVALENTE EN TU MERCADO". Es decir: el nodo YA trae
+# el reencuadre hecho, y la baranda saltaba por la sigla suelta. Es la ley que
+# el auditor ya adjudico: detectar por LO QUE EL NODO DESCRIBE, no por lo que
+# menciona.
+#
+# Si la formula de localizacion aparece cerca de la sigla, el nodo esta
+# localizado y no se marca. "Cerca" es la misma frase, no el nodo entero: un
+# nodo que localiza una sigla al principio no queda exento para otra que
+# cablee al final.
+VENTANA_LOCALIZACION = 160
+LOCALIZACION = re.compile(
+    r"\b(?:o el|o la|o su)\s+(?:organismo|entidad|agencia|autoridad|norma|"
+    r"equivalente|etiqueta|sello|regulador)\w*\s+(?:\w+\s+){0,3}"
+    r"(?:equivalente\s+)?(?:en|de)\s+tu\s+(?:mercado|pa[ií]s|regi[óo]n)"
+    r"|\bla\s+(?:que|de)\s+\w+\s+en\s+tu\s+(?:mercado|pa[ií]s)"
+    r"|\baverigua\s+(?:cu[áa]l\s+es\s+)?la\s+de\s+tu\s+(?:mercado|pa[ií]s)"
+    r"|\bseg[úu]n\s+tu\s+mercado\b"
+    r"|\bexisten\s+en\s+muchos\s+pa[ií]ses\b",
+    re.I)
 
-def revisar_barandas(nodo):
+
+def _esta_localizada(texto, ini, fin):
+    """True si la formula de localizacion acompaña a esta mencion concreta."""
+    ventana = texto[max(0, ini - VENTANA_LOCALIZACION): fin + VENTANA_LOCALIZACION]
+    return bool(LOCALIZACION.search(ventana))
+
+
+REGISTRO_FP = BASE / "dataset" / "metadata" / "falsos_positivos_adjudicados.json"
+_fp = None
+
+
+def falsos_positivos():
+    """(node_id, baranda) -> motivo, de los hallazgos YA JUZGADOS.
+
+    Nace del ciclo de la curacion (ago 2026): tres hallazgos distintos costaron
+    tres lecturas para llegar a la misma conclusion -- el detector vio la
+    palabra, no lo que el nodo describe. Un hallazgo juzgado no se re-litiga.
+    """
+    global _fp
+    if _fp is None:
+        _fp = {}
+        if REGISTRO_FP.exists():
+            for a in json.loads(REGISTRO_FP.read_text(encoding="utf-8"))["adjudicados"]:
+                _fp[(a["node_id"], a["baranda"])] = a["motivo"]
+    return _fp
+
+
+def revisar_barandas(nodo, incluir_juzgados=False):
     """Hallazgos con su CITA textual. Vacio = limpio en la muestra."""
     texto = " ".join([
         nodo.get("titulo_concepto", ""), nodo.get("resumen_teorico", ""),
@@ -267,14 +374,45 @@ def revisar_barandas(nodo):
         " ".join(nodo.get("condiciones_activacion") or []),
         nodo.get("entregable_esperado", "") or "",
     ])
+    # `condiciones_activacion` describe la SITUACION en tercera persona POR
+    # DISEÑO ("Cuando el usuario necesita proyectar cuantas franquicias
+    # vendera"): es la convencion del campo, no voz de libro. Marcarla seria
+    # marcar el diseño. Las otras tres barandas si la miran: un comite o un
+    # importe en dolares dentro de una condicion siguen siendo defectos.
+    texto_sin_condiciones = " ".join([
+        nodo.get("titulo_concepto", ""), nodo.get("resumen_teorico", ""),
+        " ".join(nodo.get("pasos_accionables") or []),
+        nodo.get("entregable_esperado", "") or "",
+    ])
     hallazgos = []
     for baranda, patrones in BARANDAS.items():
+        texto_baranda = texto_sin_condiciones if baranda == "voz_de_libro" else texto
+        marcado = False
         for p in patrones:
-            m = re.search(p, texto, re.I)
-            if m:
+            for m in re.finditer(p, texto_baranda, re.I):
+                # La exencion de localizacion solo aplica a las siglas: una
+                # sigla acompañada de "o el equivalente en tu mercado" no es un
+                # dato cableado, es un ejemplo ya localizado. Se busca la
+                # SIGUIENTE ocurrencia, no se abandona el patron: un nodo puede
+                # localizar una sigla y cablear otra.
+                if baranda == "dato_local_cableado" and _esta_localizada(texto_baranda, m.start(), m.end()):
+                    continue
                 ini = max(0, m.start() - 55)
-                cita = " ".join(texto[ini:m.end() + 55].split())
-                hallazgos.append({"baranda": baranda, "cita": f"...{cita}..."})
+                cita = " ".join(texto_baranda[ini:m.end() + 55].split())
+                h = {"baranda": baranda, "cita": f"...{cita}..."}
+                # YA JUZGADO: se reporta como tal, no se vuelve a discutir. Por
+                # defecto NO entra en la lista, para que un lote de trabajo no
+                # arrastre nodos que ya se leyeron y estaban bien.
+                juzgado = falsos_positivos().get((nodo.get("node_id"), baranda))
+                if juzgado:
+                    if incluir_juzgados:
+                        hallazgos.append(dict(h, ya_juzgado=juzgado))
+                    marcado = True
+                    break
+                hallazgos.append(h)
+                marcado = True
+                break
+            if marcado:
                 break
     return hallazgos
 

@@ -4,27 +4,42 @@
   "dominio": "core",
   "titulo_concepto": "Validar Socios de Canal de Distribución (Channel Partners)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Para negocios con canal de venta indirecto, esta etapa valida la estrategia de canal obteniendo órdenes o compromisos firmes de los socios distribuidores. Es crucial demostrar primero demanda real de clientes finales antes de acercarse a los canales, ya que su pregunta implícita es '¿puedo ganar dinero con este producto?'.",
+  "resumen_teorico": "Para negocios con venta indirecta a través de distribuidores, representantes o retailers, esta etapa valida la estrategia de canal consiguiendo órdenes o compromisos firmes de los socios. Antes de contactar canales necesitas demostrar demanda real de clientes finales, porque su pregunta implícita es si podrán ganar dinero y si habrá demanda que los empuje a vender. No confundas al socio de canal con el cliente final: el canal solo vende cuando la demanda lo obliga a hacerlo, no la crea por sí mismo salvo que lo verifiques. Debes entender los términos comerciales (márgenes, costos, devoluciones), el volumen potencial y los incentivos necesarios para que el canal se comprometa a vender tu producto.",
   "pasos_accionables": [
-    "Obtener primero validación de demanda de clientes finales antes de contactar canales",
-    "Evaluar si el socio de canal comprará y venderá el producto según precio y términos propuestos",
-    "Determinar el porcentaje del precio de venta que exige el canal y costos adicionales (flete, publicidad)",
-    "Indagar el volumen de ventas potencial y estrategias de promoción del socio",
-    "Negociar incentivos para el canal (bonos, entrenamiento, demostraciones)",
-    "Buscar una orden inicial de stock o prueba de mercado con el canal"
+    "Identifica y lista distribuidores o revendedores potenciales de distintos tamaños y tipos",
+    "Consigue primero evidencia de demanda de clientes finales antes de acercarte a los canales",
+    "Prepara una presentación de canal actualizada con pedidos o compromisos de clientes tempranos",
+    "Reúnete con representantes y distribuidores en varios mercados para evaluar si comprarán y venderán tu producto en esas condiciones",
+    "Pregunta el porcentaje del precio de venta que exige el canal, costos adicionales y política de devoluciones, y determina si el canal crea demanda o solo la cumple",
+    "Negocia incentivos como bonos, entrenamiento o demostraciones y busca una orden inicial de stock, registrando cada conversación para estimar ventas futuras"
   ],
-  "entregable_esperado": "Orden de stock inicial o compromiso firme de uno o más socios de canal, junto con aprendizajes sobre términos y volumen",
+  "entregable_esperado": "Orden de stock inicial o compromiso firme de uno o más socios de canal, junto con un registro de aprendizajes sobre términos, volumen y potencial de ventas",
   "nodos_previos": [
     "get_out_building_test_sell",
-    "channels_hypothesis_physical"
+    "channels_hypothesis_physical",
+    "get_out_of_the_building",
+    "canales_distribucion",
+    "producto_mercado_fit_motores"
   ],
   "nodos_siguientes": [
-    "customer_creation"
+    "customer_creation",
+    "desarrollo_posicionamiento_producto",
+    "auditoria_de_posicionamiento"
   ],
   "condiciones_activacion": [
-    "Si el modelo de negocio depende de canales de distribución indirectos (retail, mayoristas)",
-    "Cuando ya existe evidencia de demanda de clientes finales",
-    "NO aplica sin ventas directas previas a clientes finales: primero valida demanda directa, después el canal indirecto"
+    "Si el modelo de negocio depende de canales de distribución indirectos como retail, mayoristas o representantes",
+    "Cuando ya cuentas con evidencia de demanda real de clientes finales",
+    "No aplica si aún no tienes ventas directas previas a clientes finales: primero valida esa demanda antes de buscar el canal indirecto"
   ],
-  "etiqueta_arbol": "Valida tus Socios de Canal"
+  "etiqueta_arbol": "Valida tus Socios de Canal",
+  "ids_alias": [
+    "test_sell_channel_partners"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "test_sell_channel_partners",
+      "titulo": "Probar Venta a Través de Canales (Test Sell Channel Partners)",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

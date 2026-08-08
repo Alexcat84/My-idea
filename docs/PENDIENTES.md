@@ -495,6 +495,71 @@ fusión ya corrió; lo que queda es la voz.
 
 No se dispara nada hasta que el fundador lo ponga en el tablero.
 
+## FRENTE DE RECUPERACIÓN — abierto con evidencia, para la campaña del motor
+
+**Demostrado experimentalmente (ago 2026), no supuesto.** La voz **no** cura la
+puntería de la brújula.
+
+**La evidencia**: se re-vozó el vecindario completo de tres rumbos que subían sin
+llegar (13 rivales directos + su rama). Con todo el vecindario hablando igual de
+bien, **los blancos no subieron: retrocedieron**, y los rivales —todos en el
+lote— siguieron ganando.
+
+| rumbo | blanco | rivales que ganan |
+|---|---|---|
+| *"nadie me ha pagado"* | 67 → **78** | `profit_vs_cash`, `cash_is_king` |
+| *"por qué me comprarían"* | 82 → **83** | `necesidad_vs_deseo_en_ma` (¡fusiones y adquisiciones!) |
+| *"le sirve a todo el mundo"* | 245 → **252** | `anticipar_consecuencias_negativas` |
+
+**El diagnóstico**: la brújula se engancha a **palabras sueltas**. *"pagado"* la
+lleva a las finanzas, *"me comprarían"* a M&A, *"está mal"* a las consecuencias
+no intencionadas. Ninguna es un problema de contenido ni de voz.
+
+Y el contraste lo cierra: los dos rumbos cuyo vecindario **no** competía por las
+mismas palabras **sí** llegaron al top-10 con solo re-vozar.
+
+### PRUEBA DE ACEPTACIÓN del frente
+
+> **Los tres rumbos de arriba se ponen VERDES.** Están en el banco como
+> `diagnostico: true`, fuera del marcador y con su expectativa escrita al lado.
+> El día que el frente funcione, se quitan de diagnóstico y entran a la vara.
+
+### Hipótesis del auditor para ese día, sin diseñarla ahora
+
+**Embeber también las `condiciones_activacion`.** Están escritas como
+situaciones —*"Cuando el emprendedor está tratando de…"*, *"Si dudas entre pagar
+más por mejores profesionales"*— y **se parecen mucho más a como escribe un
+usuario** que el texto conceptual del resumen. Es dato que **ya existe** en los
+3.511 nodos: sería un spike barato.
+
+Nota mía sobre esa hipótesis, de este mismo ciclo: cuando se excluyó ese campo de
+la cuarta baranda fue precisamente porque **describe la situación del lector en
+tercera persona por diseño**. Ese es el argumento a favor: es el campo escrito
+desde la situación, no desde el concepto.
+
+Lo demás del frente vive en `docs/AUDITORIA_MOTOR.md`, archivada.
+
+## Ficha: `huecos-de-contenido` — documentados sin inventarlos
+
+Vacíos REALES del catálogo, encontrados midiendo y **no rellenados a mano**.
+Material de minería futura: el día que se extraiga un libro que los cubra, ya
+está dicho qué falta y por qué se supo.
+
+- **El núcleo no tiene nodo de PRIMERA CONTRATACIÓN.** Cero aciertos en el
+  barrido sobre los 1.721. El rumbo `nucleo_no_doy_abasto_solo` lo documenta: sin
+  contenido, la brújula manda esa consulta a *"quemar las naves"*. El contenido
+  natural es del futuro mundo **Primer Equipo**, cuya ficha ya está abierta y que
+  heredó dos conceptos deprecados de quality. El día que ese mundo nazca, ese
+  rumbo lo estrena.
+- **`environmental` no tiene huella de carbono a ESCALA DE TALLER.** Los dos
+  nodos que había (`evaluar_huella_carbono` y `medir_huella_carbono_corporativa`)
+  eran **el mismo inventario corporativo formal** del mismo libro, con el mismo
+  entregable, y se fundieron. Nadie cubre *"cuánto contamina lo que hago yo"* a
+  escala de una persona con un taller.
+
+Ninguno se inventa. **Un hueco documentado vale más que un nodo fabricado para
+taparlo**: el nodo fabricado se ofrece, y lo que se ofrece se cree.
+
 ## DOCTRINA DE LA VÁLVULA (ago 2026)
 
 > **El título mentía, los pasos no.**

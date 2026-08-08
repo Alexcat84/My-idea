@@ -2,19 +2,19 @@
   "node_id": "cap_table_basico",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Construcción de la Tabla de Capitalización (Cap Table)",
+  "titulo_concepto": "Cómo armar tu tabla de reparto de acciones (cap table)",
   "fuente": "Venture Deals",
-  "resumen_teorico": "El cap table resume quién posee qué parte de la empresa antes y después de una ronda de financiamiento. Es fundamental que los fundadores entiendan cómo calcular el porcentaje de propiedad de cada clase de accionista (fundadores, pool de opciones para empleados, inversionistas), especialmente cuando se introduce un pool de opciones post-money, ya que esto diluye directamente la propiedad de los fundadores y no a los inversionistas.",
+  "resumen_teorico": "La tabla de capitalización (cap table) resume quién tiene qué parte de tu negocio, antes y después de recibir una inversión. Necesitas entender cómo calcular el porcentaje que le corresponde a cada tipo de dueño (tú como fundador, la bolsa de opciones para empleados, los inversionistas), sobre todo cuando se agrega una bolsa de opciones después de la inversión (post-money), porque eso te diluye a ti, no a los inversionistas.",
   "pasos_accionables": [
-    "Listar acciones existentes de fundadores antes de la inversión",
-    "Determinar la valuación pre-money y el monto de inversión para calcular la valuación post-money",
-    "Calcular el porcentaje de propiedad de los inversionistas (inversión/post-money)",
-    "Si hay un pool de opciones post-money, restar su porcentaje del de los fundadores para obtener su participación real",
-    "Resolver las incógnitas del cap table (acciones totales, precio por acción) usando álgebra básica",
-    "Verificar los cálculos cruzando la valuación pre-money implícita contra el número de acciones y precio por acción",
-    "Usar decimales/fracciones de acciones en cálculos intermedios y redondear solo al final"
+    "Lista las acciones que tienes como fundador antes de recibir la inversión",
+    "Define la valuación antes de la inversión (pre-money) y el monto que vas a recibir, para calcular la valuación después de la inversión (post-money)",
+    "Calcula el porcentaje que le corresponde al inversionista dividiendo lo que invierte entre la valuación post-money",
+    "Si vas a crear una bolsa de opciones después de la inversión, resta ese porcentaje del tuyo para saber cuánto te queda realmente",
+    "Resuelve lo que falta en tu tabla (total de acciones, precio por acción) con álgebra básica",
+    "Verifica tus cálculos comparando la valuación pre-money implícita contra el número de acciones y el precio por acción",
+    "Usa decimales o fracciones de acciones en los cálculos intermedios y redondea solo al final"
   ],
-  "entregable_esperado": "Cap table completo y verificado con todas las clases de acciones, porcentajes y precio por acción calculados correctamente",
+  "entregable_esperado": "Tu tabla de capitalización completa y verificada, con cada tipo de acción, su porcentaje y el precio por acción calculados correctamente",
   "nodos_previos": [
     "safe_simple_agreement_future_equity",
     "metodo_conversion_notas_cap_table",
@@ -36,8 +36,8 @@
     "vesting_acciones_fundadores"
   ],
   "condiciones_activacion": [
-    "Si el founder está evaluando un term sheet de un VC",
-    "Si se necesita entender el impacto de un pool de opciones nuevo en la propiedad de los fundadores"
+    "Si estás evaluando una propuesta de inversión (term sheet) de un inversionista",
+    "Si necesitas entender cómo una nueva bolsa de opciones afecta tu propiedad como fundador"
   ],
   "etiqueta_arbol": "Construye tu Tabla de Capitalización"
 }

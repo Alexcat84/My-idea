@@ -4,14 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Métricas Accionables vs Métricas de Vanidad",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Distingue entre métricas de vanidad (vanity metrics) —como el número total de usuarios registrados o ingresos brutos, que dan una imagen optimista pero engañosa— y métricas accionables, que permiten tomar decisiones informadas sobre causa y efecto en el negocio. Las métricas accionables deben ser comprensibles, accesibles y auditables por todo el equipo, y deben demostrar claramente una relación causal entre las acciones tomadas y los resultados obtenidos.",
+  "resumen_teorico": "Las métricas de vanidad (usuarios totales, ingresos brutos, hits al sitio) suben y generan sensación de progreso, pero no muestran relación causa efecto ni guían decisiones. Son peligrosas porque explotan un sesgo humano: cuando los números suben te atribuyes el mérito, cuando bajan culpas a factores externos. Las métricas accionables, en cambio, muestran con claridad qué acción específica generó qué resultado, permitiendo aprendizaje real. Deben ser comprensibles y accesibles para ti y cualquiera que revise tus reportes, y auditables. El análisis de cohortes, en lugar de gráficos de línea acumulativa, revela el progreso real del negocio en vez de esconder estancamiento detrás de números brutos que solo crecen.",
   "pasos_accionables": [
-    "Evitar guiarse por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito",
-    "Diseñar métricas que muestren relación causal clara entre cambios realizados y comportamiento del cliente",
-    "Usar análisis de cohortes en lugar de gráficos de línea acumulativa para evaluar progreso real",
-    "Validar que las métricas sean comprensibles y accesibles para todo el equipo, no solo para analistas"
+    "Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito",
+    "Para cada métrica que uses, preguntarte si sube o baja, sabes exactamente qué acción lo causó",
+    "Diseñar métricas que muestren relación causal clara entre los cambios que haces y el comportamiento del cliente",
+    "Reemplazar gráficos de línea acumulativa por análisis de cohortes para evaluar el progreso real",
+    "Eliminar o sustituir cualquier métrica que no permita esta trazabilidad",
+    "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard"
   ],
-  "entregable_esperado": "Un set de métricas accionables definidas y utilizadas de forma consistente en la toma de decisiones del equipo, evitando el 'success theater'",
+  "entregable_esperado": "Una lista de tus métricas actuales clasificadas como vanidad o accionables, con plan de reemplazo y usadas de forma consistente en tus decisiones, evitando el success theater",
   "nodos_previos": [
     "analisis_de_cohortes",
     "contabilidad_innovacion",
@@ -26,11 +28,25 @@
     "contabilidad_innovacion_pivote",
     "motor_de_crecimiento",
     "reunion_pivotar_o_perseverar",
-    "riesgo_no_pivotar_a_tiempo"
+    "riesgo_no_pivotar_a_tiempo",
+    "metricas_cohortes",
+    "split_testing_experimentos_ab"
   ],
   "condiciones_activacion": [
-    "Cuando el equipo o los inversionistas se enfocan en métricas de crecimiento bruto sin evidencia de aprendizaje real",
-    "Si existe presión para mostrar 'progreso' sin evidencia de mejora en el modelo de negocio"
+    "Cuando tú o tus inversionistas se enfocan en métricas de crecimiento bruto sin evidencia de aprendizaje real",
+    "Si sientes que estás progresando pero no puedes explicar por qué",
+    "Si tus métricas suben y bajan sin relación clara con tus acciones",
+    "Al inicio de cualquier proceso de medición de un MVP o producto en mercado"
   ],
-  "etiqueta_arbol": "Persigue Métricas Que Sí Importan"
+  "etiqueta_arbol": "Persigue Métricas Que Sí Importan",
+  "ids_alias": [
+    "vanity_metrics_vs_accionables"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "vanity_metrics_vs_accionables",
+      "titulo": "Métricas de Vanidad vs Métricas Accionables",
+      "fuente": "The Lean Startup - Eric Ries"
+    }
+  ]
 }

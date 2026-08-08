@@ -2,16 +2,16 @@
   "node_id": "dividends_terms",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Dividends en Term Sheets de VC",
+  "titulo_concepto": "Dividendos en la hoja de términos (term sheet) de tu ronda",
   "fuente": "Venture Deals",
-  "resumen_teorico": "Cláusula que otorga a los accionistas preferentes el derecho a recibir dividendos (acumulativos o no) antes que los accionistas comunes, típicamente entre 5% y 15% anual del precio original de compra. En rondas de venture capital early-stage rara vez impactan significativamente el retorno, pero pueden ser relevantes en escenarios de downside o en inversiones grandes (>$50M) como en private equity.",
+  "resumen_teorico": "Es una cláusula que da a los inversionistas con acciones preferentes el derecho a cobrar dividendos (acumulados o no) antes que tú y los demás accionistas comunes, normalmente entre 5% y 15% anual sobre el precio original de compra. En rondas tempranas casi nunca cambian mucho tu retorno, pero pueden pesar si las cosas van mal o si la inversión es muy grande (más de 50 millones de dólares), como suele pasar en private equity.",
   "pasos_accionables": [
-    "Determinar si el dividendo es acumulativo o no acumulativo y su tasa porcentual.",
-    "Calcular el impacto real del dividendo en escenarios de retorno alto y bajo.",
-    "Exigir que cualquier declaración de dividendo requiera aprobación de una mayoría o supermayoría del consejo directivo.",
-    "Prestar atención a si el dividendo se paga en efectivo o en acciones (dilución adicional)."
+    "Revisa si el dividendo es acumulativo o no acumulativo y cuál es su porcentaje.",
+    "Calcula qué tanto te afecta ese dividendo tanto si el negocio va muy bien como si va mal.",
+    "Pide que cualquier decisión de repartir dividendos necesite el visto bueno de una mayoría amplia del consejo (board).",
+    "Fíjate si el dividendo se paga en efectivo o en más acciones, porque esto último te diluye todavía más."
   ],
-  "entregable_esperado": "Cláusula de dividendos negociada con protección del board y claridad sobre su forma de pago.",
+  "entregable_esperado": "Una cláusula de dividendos negociada, con protección del consejo (board) y claridad sobre cómo se paga.",
   "nodos_previos": [
     "automatic_conversion"
   ],
@@ -19,8 +19,8 @@
     "redemption_rights"
   ],
   "condiciones_activacion": [
-    "Si el inversionista tiene background de private equity",
-    "Si la ronda de inversión es de gran tamaño (>$50 millones)"
+    "Cuando el inversionista viene del mundo de private equity",
+    "Cuando la ronda es muy grande (más de 50 millones de dólares)"
   ],
   "etiqueta_arbol": "Negocia los Dividendos Preferentes"
 }

@@ -2,18 +2,18 @@
   "node_id": "plan_gestion_comunicaciones",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Plan de Gestión de las Comunicaciones",
+  "titulo_concepto": "Plan de comunicación con las personas que te importan en el proyecto",
   "fuente": "A Project Manager's Book of Forms",
-  "resumen_teorico": "Documento que define cómo se generará, recopilará, distribuirá y almacenará la información del proyecto entre los interesados. Especifica quién recibe qué información, cómo, con qué frecuencia y quién es responsable de enviarla, asegurando que el flujo de comunicación soporte la gestión efectiva del compromiso de los stakeholders.",
+  "resumen_teorico": "Es el documento donde defines cómo vas a generar, juntar, enviar y guardar la información de tu proyecto entre las personas involucradas. Ahí dejas claro quién recibe qué información, cómo la vas a mandar, con qué frecuencia y quién es el responsable de enviarla, para que la comunicación sostenga una buena relación con cada uno de ellos.",
   "pasos_accionables": [
-    "Listar los stakeholders o grupos que deben recibir información del proyecto",
-    "Describir el tipo de información a comunicar (reportes de estado, actas, actualizaciones)",
-    "Definir el método de entrega (correo, reuniones, web meetings)",
-    "Establecer la frecuencia o condiciones de envío",
-    "Asignar un remitente responsable de cada comunicación",
-    "Documentar restricciones o supuestos de comunicación y un glosario de términos"
+    "Haz una lista de las personas o grupos que necesitan recibir información de tu proyecto",
+    "Describe qué tipo de información vas a comunicar a cada uno (reportes de avance, actas, actualizaciones)",
+    "Decide el método de entrega (correo, reuniones, videollamadas)",
+    "Define cada cuánto o en qué momento vas a enviar cada comunicación",
+    "Decide quién es el responsable de mandar cada comunicación",
+    "Anota las restricciones o supuestos de comunicación y un glosario con los términos que uses"
   ],
-  "entregable_esperado": "Un Plan de Gestión de las Comunicaciones completo con matriz de stakeholders, tipo de información, método, frecuencia y responsables.",
+  "entregable_esperado": "Un plan de comunicación completo con la lista de personas involucradas, el tipo de información, el método, la frecuencia y quién es responsable de cada envío.",
   "nodos_previos": [
     "stakeholder_register",
     "plan_gestion_interesados"
@@ -21,11 +21,12 @@
   "nodos_siguientes": [
     "plan_gestion_interesados",
     "buy_in_customer_development",
-    "reporte_estado_miembro_equipo"
+    "reporte_estado_miembro_equipo",
+    "buyin_customer_development"
   ],
   "condiciones_activacion": [
-    "Cuando el proyecto tiene múltiples stakeholders con necesidades de información distintas",
-    "Cuando se requiere formalizar el flujo de comunicación del proyecto"
+    "Cuando tienes varias personas involucradas en tu proyecto con necesidades de información distintas",
+    "Cuando necesitas dejar claro y ordenado cómo vas a comunicarte durante el proyecto"
   ],
   "etiqueta_arbol": "Organiza tus Comunicaciones del Proyecto"
 }

@@ -2,16 +2,16 @@
   "node_id": "etapa_pruebas_necesaria",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Necesidad de una Etapa de Pruebas Separada en Proyectos Grandes",
+  "titulo_concepto": "Cuándo necesitas una etapa de pruebas separada antes de invertir en grande",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Aunque Agile-Stage-Gate incorpora validaciones continuas de cliente durante el Desarrollo, para proyectos grandes, costosos y de larga duración se recomienda mantener una etapa de Pruebas (Testing) separada con su propio gate ('Go to Test'). Esta etapa incluye pruebas de producción, ensayos de campo formales, pruebas beta y test de mercado, lo que permite a la gerencia revisar el proyecto antes de comprometer capital en equipo de producción o lanzamiento semicomercial.",
+  "resumen_teorico": "Si tu proyecto es grande, caro y de larga duración, no te alcanza con validar con clientes mientras desarrollas: conviene que agregues una etapa de pruebas aparte, con su propia decisión de avanzar (pasar a pruebas). Ahí haces pruebas de producción, ensayos de campo formales, pruebas con usuarios reales (beta) y pruebas de mercado. Esto te permite revisar todo antes de comprometer dinero en equipo de producción o en un lanzamiento a media escala.",
   "pasos_accionables": [
-    "Evaluar el tamaño, costo y duración del proyecto para decidir si se necesita etapa de pruebas separada",
-    "Si el proyecto es grande, definir un gate 'Go to Test' distinto del cierre de Desarrollo",
-    "Incluir en la etapa de pruebas: ensayos de producción, pruebas de campo/beta, y pruebas de mercado",
-    "Mantener al equipo de desarrollo involucrado durante esta etapa para asegurar continuidad y compromiso"
+    "Mira el tamaño, el costo y la duración de tu proyecto para decidir si necesitas una etapa de pruebas separada",
+    "Si el proyecto es grande, define un momento claro de decidir si pasas a pruebas, distinto de cuando cierras el desarrollo",
+    "En la etapa de pruebas incluye: ensayos de producción, pruebas de campo o con usuarios reales, y pruebas de mercado",
+    "Mantente involucrado junto con quien desarrolló el producto durante esta etapa para no perder continuidad ni compromiso"
   ],
-  "entregable_esperado": "Plan de etapa de pruebas con actividades específicas (producción, campo, mercado) y gate de aprobación definido.",
+  "entregable_esperado": "Un plan de etapa de pruebas con actividades concretas (producción, campo, mercado) y el momento definido en que decides si avanzas.",
   "nodos_previos": [
     "rol_gates_agile"
   ],
@@ -19,8 +19,8 @@
     "actitud_de_experimentacion_organizacional"
   ],
   "condiciones_activacion": [
-    "Si el proyecto es de gran envergadura, alto costo o larga duración",
-    "Si se requiere inversión de capital (CAPEX) en equipo de producción antes del lanzamiento"
+    "Si tu proyecto es de gran envergadura, alto costo o larga duración",
+    "Si necesitas invertir dinero en equipo de producción antes de lanzar"
   ],
   "etiqueta_arbol": "Separa tus Pruebas Finales"
 }

@@ -17,15 +17,18 @@
   "nodos_previos": [
     "embudo_get_keep_grow",
     "producto_minimo_viable",
-    "comunicacion_aprendizaje_startup"
+    "comunicacion_aprendizaje_startup",
+    "comunicacion_aprendizaje_continuo"
   ],
   "nodos_siguientes": [
     "customer_retention_strategy",
-    "estrategia_crecimiento_clientes"
+    "estrategia_crecimiento_clientes",
+    "customer_retention_tactics"
   ],
   "condiciones_activacion": [
     "Cuando el startup opera en canal web/mobile y necesita atraer sus primeros clientes",
     "Cuando se está en Fase 2 o 3 de customer discovery probando reacción inicial al MVP"
   ],
-  "etiqueta_arbol": "Atrae y Activa Clientes Digitales"
+  "etiqueta_arbol": "Atrae y Activa Clientes Digitales",
+  "deprecado": true
 }
