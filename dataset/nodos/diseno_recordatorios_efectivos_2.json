@@ -4,22 +4,37 @@
   "dominio": "health_safety",
   "titulo_concepto": "Diseño de Recordatorios Efectivos para Prevenir Omisiones",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Los errores por omisión son frecuentes en tareas de mantenimiento y pueden reducirse significativamente mediante recordatorios bien diseñados. Un buen recordatorio debe cumplir cinco criterios universales: ser conspicuo (atraer atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (informar cuándo y dónde), de contenido claro (qué hacer) y verificable (permitir marcar los pasos completados). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquear el progreso si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (removible tras cumplir su función).",
+  "resumen_teorico": "Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.",
   "pasos_accionables": [
-    "Identificar los pasos de tarea propensos a omisión mediante análisis de errores históricos",
-    "Diseñar recordatorios que cumplan los 5 criterios universales: conspicuo, contiguo, contextual, contenido, check",
-    "Evaluar si aplican criterios secundarios como compeler el progreso o confirmar finalización",
-    "Implementar y probar el recordatorio en el flujo real de trabajo",
-    "Revisar periódicamente la efectividad del recordatorio y ajustar según kaizen (mejora continua)"
+    "Identifica los pasos de tarea propensos a omisión revisando errores históricos",
+    "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y check",
+    "Evalúa si conviene sumar criterios secundarios como bloquear el avance o confirmar la finalización",
+    "Prueba el recordatorio en el flujo real de trabajo antes de aplicarlo de forma general",
+    "Revisa periódicamente su efectividad y ajústalo según lo que observes en la práctica"
   ],
-  "entregable_esperado": "Sistema de recordatorios documentado con checklist de verificación para pasos críticos de tareas de mantenimiento",
+  "entregable_esperado": "Sistema de recordatorios documentado con checklist de verificación implementado en los pasos críticos de tus tareas de mantenimiento.",
   "nodos_previos": [
-    "caracteristicas_tareas_propensas_omision"
+    "caracteristicas_tareas_propensas_omision",
+    "prevalencia_omisiones"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "racional_mantenimiento_preventivo_correctivo"
+  ],
   "condiciones_activacion": [
-    "Cuando se detectan omisiones recurrentes en procedimientos de mantenimiento o inspección",
-    "Cuando una tarea tiene múltiples pasos secuenciales fáciles de olvidar"
+    "Cuando detectas omisiones recurrentes en procedimientos de mantenimiento o inspección",
+    "Cuando una tarea tiene múltiples pasos secuenciales fáciles de olvidar",
+    "Cuando identificas un paso crítico con alta probabilidad de omisión",
+    "Cuando buscas reducir costos y accidentes asociados a fallas de mantenimiento"
   ],
-  "etiqueta_arbol": "Evita Omisiones con Buenos Recordatorios"
+  "etiqueta_arbol": "Evita Omisiones con Buenos Recordatorios",
+  "ids_alias": [
+    "diseno_recordatorios_efectivos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "diseno_recordatorios_efectivos",
+      "titulo": "Diseño de Recordatorios Efectivos contra Omisiones",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

@@ -4,29 +4,43 @@
   "dominio": "health_safety",
   "titulo_concepto": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
   "fuente": "OSHA3886",
-  "resumen_teorico": "El riesgo es el producto de la severidad y la probabilidad de un peligro, junto con el número de trabajadores expuestos. Evaluar estos factores permite priorizar qué peligros deben controlarse primero y aplicar controles interinos mientras se implementan soluciones permanentes.",
+  "resumen_teorico": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de trabajadores expuestos a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes para los peligros de mayor riesgo, debes aplicar controles interinos que reduzcan la exposición de inmediato. Esta priorización no exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en la lista. La evaluación te da un criterio objetivo para justificar el orden en que actúas y para no dejar peligros serios sin atención indefinida.",
   "pasos_accionables": [
-    "Evaluar severidad potencial y probabilidad de cada peligro identificado",
-    "Determinar el número de trabajadores expuestos",
-    "Aplicar controles interinos mientras se desarrollan soluciones permanentes",
-    "Priorizar los peligros de mayor riesgo para atención inmediata"
+    "Evalúa la severidad potencial y la probabilidad de ocurrencia de cada peligro identificado",
+    "Determina el número de trabajadores expuestos a cada peligro",
+    "Aplica controles interinos de inmediato mientras desarrollas las soluciones permanentes",
+    "Prioriza los peligros de mayor riesgo para atenderlos primero",
+    "Mantén el compromiso de controlar todos los peligros graves reconocidos aunque no sean tu prioridad inmediata"
   ],
-  "entregable_esperado": "Matriz de riesgos priorizada con peligros clasificados por severidad y probabilidad",
+  "entregable_esperado": "Matriz de riesgos priorizada con peligros clasificados por severidad, probabilidad y nivel de riesgo asignado",
   "nodos_previos": [
     "inspeccion_sitio_peligros",
     "identificacion_peligros_salud",
     "investigacion_incidentes",
     "identificacion_peligros_salud_2",
-    "investigacion_incidentes_2"
+    "investigacion_incidentes_2",
+    "peligros_emergencias_no_rutinarias",
+    "inspeccion_lugar_trabajo_peligros"
   ],
   "nodos_siguientes": [
     "jerarquia_controles",
     "prevencion_violencia_laboral",
-    "rutas_de_salida_y_puertas_de_emergencia"
+    "rutas_de_salida_y_puertas_de_emergencia",
+    "prevencion_control_peligros"
   ],
   "condiciones_activacion": [
-    "Cuando existen múltiples peligros identificados y recursos limitados para atenderlos",
-    "Cuando se necesita justificar el orden de implementación de controles"
+    "Cuando existen múltiples peligros identificados y recursos limitados para atenderlos todos a la vez",
+    "Cuando necesitas justificar el orden de implementación de controles"
   ],
-  "etiqueta_arbol": "Prioriza tus Peligros Reales"
+  "etiqueta_arbol": "Prioriza tus Peligros Reales",
+  "ids_alias": [
+    "priorizacion_caracterizacion_peligros"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "priorizacion_caracterizacion_peligros",
+      "titulo": "Caracterización y Priorización de Peligros",
+      "fuente": "OSHA3885"
+    }
+  ]
 }

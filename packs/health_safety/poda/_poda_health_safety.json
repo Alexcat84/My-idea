@@ -1,183 +1,104 @@
 {
-  "regla_superviviente": "el nodo con mas historia; sin historia, el propuesto",
   "pack": "health_safety",
-  "umbral": 0.9,
+  "ronda": "27 clusters + familia OSHA",
+  "dudas": [],
   "clusters": [
     {
       "orden": 1,
-      "indice": 14,
+      "indice": 0,
       "nodos": [
         "fallas_activas_condiciones_latentes",
         "fallas_activas_condiciones_latentes_2",
         "fallos_activos_condiciones_latentes"
       ],
-      "similitud": 0.923582911491394,
-      "por_que": "Los tres describen el mismo par conceptual de fallas activas y condiciones latentes.",
-      "quedaria": "Fallas Activas y Condiciones Latentes",
       "sobrevive": "fallas_activas_condiciones_latentes",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "fallas_activas_condiciones_latentes": {
-          "visto": 1,
-          "cosechado": 1
-        },
-        "fallas_activas_condiciones_latentes_2": {
-          "visto": 1,
-          "cosechado": 1
-        },
-        "fallos_activos_condiciones_latentes": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Fallas Activas y Condiciones Latentes",
+      "por_que": "Los tres describen el mismo par conceptual de fallas activas y condiciones latentes.",
+      "telemetria": {}
     },
     {
       "orden": 2,
-      "indice": 13,
+      "indice": 1,
       "nodos": [
+        "correccion_deficiencias_programa_sst",
         "evaluacion_mejora_programa",
+        "evaluacion_mejora_programa_2",
         "evaluacion_mejora_programa_3",
-        "evaluacion_periodica_programa_seguridad"
+        "evaluacion_periodica_programa_seguridad",
+        "verificacion_implementacion_programa_sst"
       ],
-      "similitud": 0.9225432872772217,
-      "por_que": "Los tres describen la misma acción de evaluar periódicamente el programa de seguridad con indicadores leading/lagging.",
-      "quedaria": "Evaluación y Mejora del Programa de Seguridad y Salud",
       "sobrevive": "evaluacion_mejora_programa",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "evaluacion_mejora_programa": {
-          "visto": 3,
-          "cosechado": 3
-        },
-        "evaluacion_mejora_programa_3": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "evaluacion_periodica_programa_seguridad": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Evaluación y Mejora del Programa de Seguridad y Salud",
+      "por_que": "Los tres describen la misma acción de evaluar periódicamente el programa de seguridad con indicadores leading/lagging.",
+      "telemetria": {}
     },
     {
       "orden": 3,
-      "indice": 27,
+      "indice": 2,
       "nodos": [
         "resiliencia_organizacional",
         "safety_i_safety_ii",
         "safety_ii_resiliencia"
       ],
-      "similitud": 0.9070473909378052,
-      "por_que": "Las tres describen el mismo cambio de paradigma (seguridad como presencia de capacidades vs ausencia de fallos), solo con distinto énfasis narrativo, sin implicar acciones distintas.",
-      "quedaria": "Safety I versus Safety II",
       "sobrevive": "safety_i_safety_ii",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "resiliencia_organizacional": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "safety_i_safety_ii": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "safety_ii_resiliencia": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Safety I versus Safety II",
+      "por_que": "Las tres describen el mismo cambio de paradigma (seguridad como presencia de capacidades vs ausencia de fallos), solo con distinto énfasis narrativo, sin implicar acciones distintas.",
+      "telemetria": {}
     },
     {
       "orden": 4,
-      "indice": 8,
+      "indice": 3,
       "nodos": [
         "diseno_recordatorios_efectivos",
         "diseno_recordatorios_efectivos_2"
       ],
-      "similitud": 0.9577035903930664,
-      "por_que": "Ambos describen los mismos criterios de diseño de recordatorios contra omisiones.",
-      "quedaria": "Diseño de Recordatorios Efectivos para Prevenir Omisiones",
       "sobrevive": "diseno_recordatorios_efectivos_2",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "diseno_recordatorios_efectivos": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "diseno_recordatorios_efectivos_2": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Diseño de Recordatorios Efectivos para Prevenir Omisiones",
+      "por_que": "Ambos describen los mismos criterios de diseño de recordatorios contra omisiones.",
+      "telemetria": {}
     },
     {
       "orden": 5,
-      "indice": 15,
+      "indice": 4,
       "nodos": [
         "formal_safety_assessment_safety_case",
         "safety_case_evaluacion_formal"
       ],
-      "similitud": 0.9507095813751221,
-      "por_que": "Ambos describen el mismo modelo regulatorio del Safety Case surgido del Informe Cullen.",
-      "quedaria": "Safety Case y Evaluación Formal de Seguridad (FSA)",
       "sobrevive": "safety_case_evaluacion_formal",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "formal_safety_assessment_safety_case": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "safety_case_evaluacion_formal": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Safety Case y Evaluación Formal de Seguridad (FSA)",
+      "por_que": "Ambos describen el mismo modelo regulatorio del Safety Case surgido del Informe Cullen.",
+      "telemetria": {}
     },
     {
       "orden": 6,
-      "indice": 12,
+      "indice": 5,
       "nodos": [
         "establecer_metas_seguridad_correctas",
         "metas_de_seguridad_correctas"
       ],
-      "similitud": 0.9487907886505127,
-      "por_que": "Ambos plantean la misma crítica a fijar metas de reducción de accidentes en vez de gestionar procesos.",
-      "quedaria": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos",
       "sobrevive": "metas_de_seguridad_correctas",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "establecer_metas_seguridad_correctas": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "metas_de_seguridad_correctas": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos",
+      "por_que": "Ambos plantean la misma crítica a fijar metas de reducción de accidentes en vez de gestionar procesos.",
+      "telemetria": {}
     },
     {
       "orden": 7,
-      "indice": 22,
+      "indice": 6,
       "nodos": [
         "modelo_barreras_defensas",
         "modelo_barreras_swiss_cheese"
       ],
-      "similitud": 0.9483699798583984,
-      "por_que": "Ambos describen el mismo modelo de barreras y defensas tipo Swiss Cheese.",
-      "quedaria": "Modelo de Barreras y Defensas (Swiss Cheese)",
       "sobrevive": "modelo_barreras_defensas",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "modelo_barreras_defensas": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "modelo_barreras_swiss_cheese": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Modelo de Barreras y Defensas (Swiss Cheese)",
+      "por_que": "Ambos describen el mismo modelo de barreras y defensas tipo Swiss Cheese.",
+      "telemetria": {}
     },
     {
       "orden": 8,
@@ -186,44 +107,24 @@
         "critica_behavior_based_safety",
         "riesgos_programas_seguridad_conductual"
       ],
-      "similitud": 0.9415314197540283,
-      "por_que": "Ambos critican el mismo enfoque de seguridad basada en comportamiento por culpar al individuo.",
-      "quedaria": "Crítica a los Programas de Seguridad Basados en Comportamiento",
       "sobrevive": "critica_behavior_based_safety",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "critica_behavior_based_safety": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "riesgos_programas_seguridad_conductual": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Crítica a los Programas de Seguridad Basados en Comportamiento",
+      "por_que": "Ambos critican el mismo enfoque de seguridad basada en comportamiento por culpar al individuo.",
+      "telemetria": {}
     },
     {
       "orden": 9,
-      "indice": 3,
+      "indice": 8,
       "nodos": [
         "caracterizacion_priorizacion_peligros",
         "priorizacion_caracterizacion_peligros"
       ],
-      "similitud": 0.9410337209701538,
-      "por_que": "Ambos describen el mismo proceso de evaluar severidad, probabilidad y exposición para priorizar peligros.",
-      "quedaria": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
       "sobrevive": "caracterizacion_priorizacion_peligros",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "caracterizacion_priorizacion_peligros": {
-          "visto": 2,
-          "cosechado": 2
-        },
-        "priorizacion_caracterizacion_peligros": {
-          "visto": 2,
-          "cosechado": 2
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
+      "por_que": "Ambos describen el mismo proceso de evaluar severidad, probabilidad y exposición para priorizar peligros.",
+      "telemetria": {}
     },
     {
       "orden": 10,
@@ -232,772 +133,331 @@
         "elevated_surfaces_fall_protection",
         "superficies_elevadas_proteccion_caidas"
       ],
-      "similitud": 0.937385082244873,
-      "por_que": "Ambos describen el mismo requisito de protección contra caídas desde más de 4 pies.",
-      "quedaria": "Protección contra Caídas en Superficies Elevadas (Requisito desde 4 Pies)",
       "sobrevive": "elevated_surfaces_fall_protection",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "elevated_surfaces_fall_protection": {
-          "visto": 3,
-          "cosechado": 3
-        },
-        "superficies_elevadas_proteccion_caidas": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Protección contra Caídas en Superficies Elevadas (Medidas y Sistemas)",
+      "por_que": "Ambos describen el mismo requisito de protección contra caídas desde más de 4 pies.",
+      "telemetria": {}
     },
     {
       "orden": 11,
-      "indice": 25,
+      "indice": 10,
       "nodos": [
+        "jerarquia_controles",
         "prevencion_control_peligros",
         "prevencion_control_peligros_2"
       ],
-      "similitud": 0.9347258806228638,
-      "por_que": "Ambos describen el mismo proceso de seleccionar e implementar la jerarquía de controles; la separación planificación/ejecución es solo el momento, no una acción distinta.",
-      "quedaria": "Prevención y Control de Peligros mediante Jerarquía de Controles",
       "sobrevive": "prevencion_control_peligros",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "prevencion_control_peligros": {
-          "visto": 4,
-          "cosechado": 3
-        },
-        "prevencion_control_peligros_2": {
-          "visto": 3,
-          "cosechado": 2
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Prevención y Control de Peligros (Jerarquía de Controles)",
+      "por_que": "Ambos describen el mismo proceso de seleccionar e implementar la jerarquía de controles; la separación planificación/ejecución es solo el momento, no una acción distinta.",
+      "telemetria": {}
     },
     {
       "orden": 12,
-      "indice": 17,
+      "indice": 11,
       "nodos": [
         "identificacion_recopilacion_informacion_peligros",
         "recopilacion_informacion_peligros"
       ],
-      "similitud": 0.9344753623008728,
-      "por_que": "Ambos describen la misma acción de reunir información existente sobre peligros antes de controlarlos.",
-      "quedaria": "Recopilación y Revisión de Información sobre Peligros",
       "sobrevive": "identificacion_recopilacion_informacion_peligros",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "identificacion_recopilacion_informacion_peligros": {
-          "visto": 3,
-          "cosechado": 3
-        },
-        "recopilacion_informacion_peligros": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Recopilación y Revisión de Información sobre Peligros",
+      "por_que": "Ambos describen la misma acción de reunir información existente sobre peligros antes de controlarlos.",
+      "telemetria": {}
     },
     {
       "orden": 13,
-      "indice": 16,
+      "indice": 12,
       "nodos": [
         "heart_evaluacion_probabilidad_error",
         "heart_metodo_evaluacion_error_humano"
       ],
-      "similitud": 0.933708906173706,
-      "por_que": "Ambos describen la misma técnica HEART para evaluar y reducir errores humanos.",
-      "quedaria": "HEART: Human Error Assessment and Reduction Technique",
       "sobrevive": "heart_metodo_evaluacion_error_humano",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "heart_evaluacion_probabilidad_error": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "heart_metodo_evaluacion_error_humano": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "HEART: Human Error Assessment and Reduction Technique",
+      "por_que": "Ambos describen la misma técnica HEART para evaluar y reducir errores humanos.",
+      "telemetria": {}
     },
     {
       "orden": 14,
-      "indice": 0,
+      "indice": 13,
       "nodos": [
         "abandonar_arreglos_rapidos",
         "abandonar_la_falacia_del_arreglo_rapido"
       ],
-      "similitud": 0.9257774353027344,
-      "por_que": "Ambos describen el mismo concepto de rechazar soluciones superficiales tras un accidente.",
-      "quedaria": "Abandonar la Falacia del Arreglo Rápido",
       "sobrevive": "abandonar_arreglos_rapidos",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "abandonar_arreglos_rapidos": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "abandonar_la_falacia_del_arreglo_rapido": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Abandonar la Falacia del Arreglo Rápido",
+      "por_que": "Ambos describen el mismo concepto de rechazar soluciones superficiales tras un accidente.",
+      "telemetria": {}
     },
     {
       "orden": 15,
-      "indice": 28,
+      "indice": 14,
       "nodos": [
         "seguimiento_efectividad_controles",
         "seguimiento_efectividad_controles_2"
       ],
-      "similitud": 0.9251403212547302,
-      "por_que": "El proceso de verificar, inspeccionar y mantener los controles es el mismo; la distinción por industria (general/construcción) no cambia la acción a realizar.",
-      "quedaria": "Seguimiento de la Efectividad de los Controles (Industria General)",
       "sobrevive": "seguimiento_efectividad_controles",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "seguimiento_efectividad_controles": {
-          "visto": 3,
-          "cosechado": 3
-        },
-        "seguimiento_efectividad_controles_2": {
-          "visto": 2,
-          "cosechado": 1
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Seguimiento de la Efectividad de los Controles (Industria General)",
+      "por_que": "El proceso de verificar, inspeccionar y mantener los controles es el mismo; la distinción por industria (general/construcción) no cambia la acción a realizar.",
+      "telemetria": {}
     },
     {
       "orden": 16,
-      "indice": 6,
+      "indice": 15,
       "nodos": [
         "continuacion_de_plan",
         "plan_continuation_bias"
       ],
-      "similitud": 0.9229865670204163,
-      "por_que": "Ambos describen el mismo sesgo de persistir con un plan pese a señales de cambio de situación.",
-      "quedaria": "Sesgo de Continuación del Plan (Plan Continuation)",
       "sobrevive": "plan_continuation_bias",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "continuacion_de_plan": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "plan_continuation_bias": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Sesgo de Continuación del Plan (Plan Continuation)",
+      "por_que": "Ambos describen el mismo sesgo de persistir con un plan pese a señales de cambio de situación.",
+      "telemetria": {}
     },
     {
       "orden": 17,
-      "indice": 19,
+      "indice": 16,
       "nodos": [
         "inspeccion_lugar_trabajo_peligros",
         "inspeccion_sitio_peligros"
       ],
-      "similitud": 0.9217984676361084,
-      "por_que": "Ambos describen la misma acción de inspeccionar regularmente el sitio para identificar peligros.",
-      "quedaria": "Inspección Regular del Sitio de Trabajo para Identificar Peligros",
       "sobrevive": "inspeccion_lugar_trabajo_peligros",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "inspeccion_lugar_trabajo_peligros": {
-          "visto": 2,
-          "cosechado": 2
-        },
-        "inspeccion_sitio_peligros": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Inspección del Lugar de Trabajo para Identificar Peligros de Seguridad",
+      "por_que": "Ambos describen la misma acción de inspeccionar regularmente el sitio para identificar peligros.",
+      "telemetria": {}
     },
     {
       "orden": 18,
-      "indice": 10,
+      "indice": 17,
       "nodos": [
         "enfoque_situacional_vs_personal",
         "enfoque_situacional_vs_personal_2"
       ],
-      "similitud": 0.919266939163208,
-      "por_que": "Ambos comparan el mismo dilema entre abordar a la persona o la situación en la gestión de errores.",
-      "quedaria": "Enfoque Situacional vs. Personal en la Gestión de Errores",
       "sobrevive": "enfoque_situacional_vs_personal",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "enfoque_situacional_vs_personal": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "enfoque_situacional_vs_personal_2": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Enfoque Situacional vs. Personal en la Gestión de Errores",
+      "por_que": "Ambos comparan el mismo dilema entre abordar a la persona o la situación en la gestión de errores.",
+      "telemetria": {}
     },
     {
       "orden": 19,
-      "indice": 21,
+      "indice": 18,
       "nodos": [
         "lockout_tagout_procedures",
         "procedimientos_lockout_tagout"
       ],
-      "similitud": 0.9158167243003845,
-      "por_que": "Ambos describen el mismo procedimiento de bloqueo y etiquetado para controlar energías peligrosas.",
-      "quedaria": "Procedimientos de Bloqueo y Etiquetado (Control de Energías Peligrosas)",
       "sobrevive": "lockout_tagout_procedures",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "lockout_tagout_procedures": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "procedimientos_lockout_tagout": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Procedimientos de Bloqueo y Etiquetado (Control de Energías Peligrosas)",
+      "por_que": "Ambos describen el mismo procedimiento de bloqueo y etiquetado para controlar energías peligrosas.",
+      "telemetria": {}
     },
     {
       "orden": 20,
-      "indice": 20,
+      "indice": 19,
       "nodos": [
         "investigacion_incidentes",
         "investigacion_incidentes_2"
       ],
-      "similitud": 0.9146560430526733,
-      "por_que": "Ambos describen la misma acción de investigar incidentes y casi accidentes para hallar causas raíz.",
-      "quedaria": "Investigación de Incidentes y Casi Accidentes",
       "sobrevive": "investigacion_incidentes",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "investigacion_incidentes": {
-          "visto": 2,
-          "cosechado": 2
-        },
-        "investigacion_incidentes_2": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Investigación de Incidentes y Casi Accidentes",
+      "por_que": "Ambos describen la misma acción de investigar incidentes y casi accidentes para hallar causas raíz.",
+      "telemetria": {}
     },
     {
       "orden": 21,
-      "indice": 1,
+      "indice": 20,
       "nodos": [
         "accidentes_individuales_vs_organizacionales",
         "diferenciacion_accidente_individual_organizacional"
       ],
-      "similitud": 0.9143344163894653,
-      "por_que": "Ambos describen la misma distinción entre accidentes individuales y organizacionales.",
-      "quedaria": "Distinción entre Accidentes Individuales y Organizacionales",
       "sobrevive": "accidentes_individuales_vs_organizacionales",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "accidentes_individuales_vs_organizacionales": {
-          "visto": 2,
-          "cosechado": 2
-        },
-        "diferenciacion_accidente_individual_organizacional": {
-          "visto": 1,
-          "cosechado": 1
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Distinción entre Accidentes Individuales y Organizacionales",
+      "por_que": "Ambos describen la misma distinción entre accidentes individuales y organizacionales.",
+      "telemetria": {}
     },
     {
       "orden": 22,
-      "indice": 26,
+      "indice": 21,
       "nodos": [
         "programa_seguridad_salud_ocupacional",
         "programa_seguridad_salud_ocupacional_2"
       ],
-      "similitud": 0.9122732281684875,
-      "por_que": "Es el mismo marco de 7 elementos de OSHA descrito dos veces con distinto nivel de detalle en el título.",
-      "quedaria": "Programa de Seguridad y Salud Ocupacional (Marco de 7 Elementos)",
       "sobrevive": "programa_seguridad_salud_ocupacional",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "programa_seguridad_salud_ocupacional": {
-          "visto": 4,
-          "cosechado": 4
-        },
-        "programa_seguridad_salud_ocupacional_2": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Programa de Seguridad y Salud Ocupacional (Marco de 7 Elementos)",
+      "por_que": "Es el mismo marco de 7 elementos de OSHA descrito dos veces con distinto nivel de detalle en el título.",
+      "telemetria": {}
     },
     {
       "orden": 23,
-      "indice": 4,
+      "indice": 22,
       "nodos": [
         "ciclo_de_culpa_2",
         "ciclo_de_culpa_blame_cycle"
       ],
-      "similitud": 0.9079912900924683,
-      "por_que": "Ambos describen el mismo ciclo de culpa derivado del supuesto de libre albedrío.",
-      "quedaria": "El Ciclo de la Culpa (Blame Cycle)",
       "sobrevive": "ciclo_de_culpa_2",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "ciclo_de_culpa_2": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "ciclo_de_culpa_blame_cycle": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
-    },
-    {
-      "orden": 24,
-      "indice": 11,
-      "nodos": [
-        "establecer_comunicacion_efectiva_contratistas",
-        "establecer_comunicacion_efectiva_hostempleador"
-      ],
-      "similitud": 0.9073402881622314,
-      "por_que": "Ambos describen la misma acción de establecer un procedimiento de intercambio de información sobre peligros entre contratistas.",
-      "quedaria": "Establecer Comunicación Efectiva entre Empleador Anfitrión y Contratistas",
-      "sobrevive": "establecer_comunicacion_efectiva_hostempleador",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "establecer_comunicacion_efectiva_contratistas": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "establecer_comunicacion_efectiva_hostempleador": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "El Ciclo de la Culpa (Blame Cycle)",
+      "por_que": "Ambos describen el mismo ciclo de culpa derivado del supuesto de libre albedrío.",
+      "telemetria": {}
     },
     {
       "orden": 25,
-      "indice": 2,
+      "indice": 24,
       "nodos": [
         "bad_apple_theory",
         "old_view_bad_apple_theory"
       ],
-      "similitud": 0.9056847095489502,
-      "por_que": "Ambos describen la misma teoría clásica de la manzana podrida (Old View).",
-      "quedaria": "Teoría de la Manzana Podrida (Bad Apple Theory)",
       "sobrevive": "bad_apple_theory",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "bad_apple_theory": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "old_view_bad_apple_theory": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Teoría de la Manzana Podrida (Bad Apple Theory)",
+      "por_que": "Ambos describen la misma teoría clásica de la manzana podrida (Old View).",
+      "telemetria": {}
     },
     {
       "orden": 26,
-      "indice": 18,
+      "indice": 25,
       "nodos": [
         "implementacion_controles",
         "implementacion_controles_2"
       ],
-      "similitud": 0.9047348499298096,
-      "por_que": "Ambos describen la misma acción de implementar controles según prioridades del plan.",
-      "quedaria": "Implementación de Controles Seleccionados en el Sitio",
       "sobrevive": "implementacion_controles",
-      "sobrevive_por": "telemetría",
-      "telemetria": {
-        "implementacion_controles": {
-          "visto": 3,
-          "cosechado": 2
-        },
-        "implementacion_controles_2": {
-          "visto": 3,
-          "cosechado": 2
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Implementación de Controles en el Lugar de Trabajo",
+      "por_que": "Ambos describen la misma acción de implementar controles según prioridades del plan.",
+      "telemetria": {}
     },
     {
       "orden": 27,
-      "indice": 24,
+      "indice": 26,
       "nodos": [
         "normalizacion_de_la_desviacion",
         "regulador_fallas_sistemicas"
       ],
-      "similitud": 0.9044965505599976,
-      "por_que": "Ambos describen el mismo fenómeno de normalización de la desviación de Vaughan, uno solo extiende su implicación regulatoria.",
-      "quedaria": "Normalización de la Desviación",
       "sobrevive": "normalizacion_de_la_desviacion",
-      "sobrevive_por": "propuesto",
-      "telemetria": {
-        "normalizacion_de_la_desviacion": {
-          "visto": 0,
-          "cosechado": 0
-        },
-        "regulador_fallas_sistemicas": {
-          "visto": 0,
-          "cosechado": 0
-        }
-      }
+      "sobrevive_por": "regla vigente",
+      "quedaria": "Normalización de la Desviación",
+      "por_que": "Ambos describen el mismo fenómeno de normalización de la desviación de Vaughan, uno solo extiende su implicación regulatoria.",
+      "telemetria": {}
+    },
+    {
+      "orden": 28,
+      "indice": 27,
+      "nodos": [
+        "comunicacion_coordinacion_multiempleador",
+        "comunicacion_coordinacion_multiempleador_2",
+        "coordinacion_empleadores_multiples",
+        "coordinacion_multiempleador",
+        "coordinacion_sitios_multiempleador",
+        "establecer_comunicacion_efectiva_contratistas",
+        "establecer_comunicacion_efectiva_hostempleador",
+        "establecer_coordinacion_efectiva_contratistas",
+        "establecer_coordinacion_efectiva_hostempleador"
+      ],
+      "sobrevive": "coordinacion_sitios_multiempleador",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Coordinación y Comunicación en Sitios Multiempleador",
+      "por_que": "familia OSHA, grupo alfa: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 29,
+      "indice": 28,
+      "nodos": [
+        "identificacion_evaluacion_peligros",
+        "identificacion_evaluacion_peligros_2"
+      ],
+      "sobrevive": "identificacion_evaluacion_peligros",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Identificación y Evaluación de Peligros (Industria General)",
+      "por_que": "familia OSHA, grupo gamma_a: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 30,
+      "indice": 29,
+      "nodos": [
+        "identificacion_peligros_salud",
+        "identificacion_peligros_salud_2"
+      ],
+      "sobrevive": "identificacion_peligros_salud",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Identificación de Peligros para la Salud (Industria General)",
+      "por_que": "familia OSHA, grupo gamma_b: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 31,
+      "indice": 30,
+      "nodos": [
+        "peligros_emergencias_no_rutinarias",
+        "peligros_emergencias_no_rutinarias_2"
+      ],
+      "sobrevive": "peligros_emergencias_no_rutinarias",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias",
+      "por_que": "familia OSHA, grupo gamma_c: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 32,
+      "indice": 31,
+      "nodos": [
+        "capacitacion_educacion_seguridad",
+        "educacion_entrenamiento_seguridad"
+      ],
+      "sobrevive": "capacitacion_educacion_seguridad",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Educación y Capacitación en Seguridad y Salud Ocupacional",
+      "por_que": "familia OSHA, grupo delta: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 33,
+      "indice": 32,
+      "nodos": [
+        "compromiso_gerencial_seguridad",
+        "liderazgo_gerencial_seguridad"
+      ],
+      "sobrevive": "liderazgo_gerencial_seguridad",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Liderazgo Gerencial en Seguridad y Salud",
+      "por_que": "familia OSHA, grupo epsilon: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 34,
+      "indice": 33,
+      "nodos": [
+        "diez_pasos_iniciales_programa",
+        "nueve_pasos_iniciar_programa"
+      ],
+      "sobrevive": "nueve_pasos_iniciar_programa",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Nueve Pasos Simples para Iniciar un Programa de Seguridad",
+      "por_que": "familia OSHA, grupo zeta: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
+    },
+    {
+      "orden": 35,
+      "indice": 34,
+      "nodos": [
+        "participacion_trabajadores",
+        "participacion_trabajadores_2"
+      ],
+      "sobrevive": "participacion_trabajadores",
+      "sobrevive_por": "adjudicado a ojo",
+      "quedaria": "Participación de los Trabajadores en el Programa de Seguridad",
+      "por_que": "familia OSHA, grupo eta: el mismo elemento contado por las dos guias.",
+      "telemetria": {}
     }
-  ],
-  "barandas": {
-    "areas_riesgo_primario": [
-      {
-        "baranda": "matriz_o_puntaje",
-        "cita": "...iesgo previamente subestimado (ej. riesgos a terceros) Matriz de riesgos organizacionales categorizados en los cuatro tipos, c..."
-      }
-    ],
-    "auftragssystem_supervision_autonoma": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...o del respeto de los trabajadores como del respaldo de la gerencia. Seleccionar supervisores con experiencia extensa y co..."
-      }
-    ],
-    "autoinspeccion_lugar_de_trabajo": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...ciales evaluando directamente los procesos de trabajo. OSHA ofrece consultorías gratuitas (On-Site Consultation) p..."
-      }
-    ],
-    "capacitacion_educacion_seguridad": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...adecuado para todos los trabajadores Considerar cursos OSHA 10-horas o 30-horas según el rol Cuando se incorporan..."
-      }
-    ],
-    "caracterizacion_priorizacion_peligros": [
-      {
-        "baranda": "matriz_o_puntaje",
-        "cita": "...ita justificar el orden de implementación de controles Matriz de riesgos priorizada con peligros clasificados por severidad y..."
-      }
-    ],
-    "clasificacion_sistemas_por_nivel_seguridad": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...jo y tecnología; en sistemas seguros, el compromiso de la alta dirección y el reporte de incidentes como ensayo de accidentes...."
-      }
-    ],
-    "clausula_deber_general_osha": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...Esta cláusula aplica solo cuando no existe un estándar OSHA específico que cubra el peligro, o cuando el estándar..."
-      }
-    ],
-    "compromiso_gerencial_seguridad": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...Liderazgo y Compromiso de la Gerencia en Seguridad La gerencia debe demostrar liderazgo visi..."
-      }
-    ],
-    "costos_ocultos_accidentes_iceberg": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...ndirectos (no solo lo cubierto por seguro) Presentar a la alta dirección un análisis costo-beneficio de la inversión en prevenc..."
-      }
-    ],
-    "critica_ground_truth_investigacion": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...ando se evalúa el desempeño humano en retrospectiva Si el equipo de investigación asume tener una visión objetiva de los h..."
-      }
-    ],
-    "cultura_de_seguridad_componentes": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...de 'cultura informada' de la organización Comunicar a la alta dirección la importancia de invertir en estos cuatro pilares Cua..."
-      }
-    ],
-    "cultura_justa_organizacional": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...n sistema de evaluación justo y consistente Establecer un comité o 'jurado de pares' para casos ambiguos Documentar pol..."
-      }
-    ],
-    "derecho_rechazo_trabajo_peligroso": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...o daño físico grave, no hay tiempo suficiente para que OSHA inspeccione, y (cuando sea posible) el trabajador ha n..."
-      }
-    ],
-    "diseno_departamento_seguridad_efectivo": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...de datos aislado de la realidad operativa. Evaluar si el departamento de seguridad está generando inteligencia útil o solo esta..."
-      }
-    ],
-    "educacion_entrenamiento_seguridad": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...mientas como el Hazard Identification Training Tool de OSHA Entrenar a trabajadores nuevos y actuales en procedimi..."
-      }
-    ],
-    "ergonomia_laboral": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...ividad de las medidas implementadas. Revisar registros OSHA 300, compensación laboral y reportes de primeros auxil..."
-      }
-    ],
-    "escaleras_fijas_seguridad": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...gadas Asegurar que los pasamanos soporten una carga de 200 libras Revisar que los escalones sean antideslizantes y de al..."
-      }
-    ],
-    "escape_trampa_proveedor_pasivo": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...de la Trampa del Proveedor Pasivo de Seguridad Cuando el departamento de seguridad se limita a suministrar datos hacia arriba s..."
-      }
-    ],
-    "evaluacion_mejora_programa_2": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...ntas de autoevaluación disponibles en la página web de OSHA Después de un ciclo de implementación del programa Cua..."
-      }
-    ],
-    "evitar_lenguaje_juzgador": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...forme de investigación de accidente o incidente Cuando el equipo de investigación usa términos como 'error humano' o 'fall..."
-      }
-    ],
-    "identificacion_evaluacion_peligros": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...ión de información existente (manuales, SDS, registros OSHA 300/301, JHAs), inspecciones periódicas del lugar de t..."
-      }
-    ],
-    "identificacion_evaluacion_peligros_2": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...ormación existente (manuales de equipo, SDS, registros OSHA 300/301, resultados de monitoreo) Designar una persona..."
-      },
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...ones frecuentes del sitio Involucrar a trabajadores en el equipo de inspección Investigar incidentes y casi-accidentes par..."
-      }
-    ],
-    "identificacion_peligros_salud_2": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...a posible Consultar el Programa de Consulta In Situ de OSHA si se requiere apoyo especializado Cuando existen proc..."
-      }
-    ],
-    "identificacion_recopilacion_informacion_peligros": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...les de equipos, SDS, reportes de inspección, registros OSHA 300/301, resultados de monitoreo de exposición, JHAs)..."
-      }
-    ],
-    "infection_control_plan": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...cciosas relacionadas con el trabajo en los formularios OSHA 300/301 y reportar fatalidades u hospitalizaciones seg..."
-      }
-    ],
-    "ingenieria_cultura_aprendizaje": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...adas en los hallazgos Comprometer recursos y tiempo de la alta dirección explícitamente para IMPLEMENTAR las reformas indicadas..."
-      }
-    ],
-    "inspeccion_lugar_trabajo_peligros": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...uipos y áreas de trabajo Incluir a los trabajadores en el equipo de inspección Documentar hallazgos con fotos o videos par..."
-      }
-    ],
-    "inspeccion_sitio_peligros": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...iderar inspecciones periódicas Incluir trabajadores en el equipo de inspección Documentar hallazgos con fotos/video y chec..."
-      }
-    ],
-    "investigacion_incidentes": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...si accidente en el lugar de trabajo Al recibir reporte OSHA 300/301 Informe de investigación de incidente con caus..."
-      }
-    ],
-    "investigacion_incidentes_2": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...da la organización Cumplir con los plazos de reporte a OSHA (8h fatalidad, 24h hospitalización/amputación) Cuando..."
-      }
-    ],
-    "jerarquia_controles": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": ".... Identificar opciones de control revisando estándares OSHA, literatura de fabricantes y experiencia de otros siti..."
-      }
-    ],
-    "liderazgo_gerencial_seguridad": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...Seguridad y Salud Elemento central del programa donde la alta dirección demuestra compromiso visible con la seguridad, la conv..."
-      }
-    ],
-    "motores_de_seguridad_3cs": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...de seguridad' de una organización, responsabilidad de la alta dirección (ápice estratégico): Compromiso (motivación más recurs..."
-      }
-    ],
-    "plan_de_accion_de_emergencia": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...rsonal. Aunque solo es obligatorio bajo ciertas normas OSHA, es una buena práctica general. Identificar emergencia..."
-      }
-    ],
-    "plan_de_control_de_infecciones": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...infecciosos y reporte de enfermedades ocupacionales a OSHA. Realizar evaluación de riesgo de exposición a agentes..."
-      }
-    ],
-    "planes_estatales_osha": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...Planes Estatales OSHA (State Plans) Programas de seguridad y salud ocupacion..."
-      }
-    ],
-    "prevencion_violencia_laboral": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...nocturno, transporte) Revisar registros de incidentes (OSHA 300, primeros auxilios, reportes de casi-accidentes) R..."
-      }
-    ],
-    "programa_consulta_osha_onsite": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...Programa de Consulta en Sitio de OSHA (On-Site Consultation) El Programa de Consulta en Siti..."
-      }
-    ],
-    "programa_proteccion_denunciantes": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...eligros, presentar quejas o participar en inspecciones OSHA. Las represalias incluyen despido, degradación, intimi..."
-      },
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...resenta una queja OSHA Cuando se diseña la política de recursos humanos de la empresa Política escrita de no represalias y pro..."
-      }
-    ],
-    "programa_seguridad_salud_ocupacional": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...7 Elementos) Marco flexible y proactivo propuesto por OSHA para gestionar la seguridad y salud en el trabajo, apl..."
-      }
-    ],
-    "programa_seguridad_salud_ocupacional_2": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...por accidentes o mejorar el cumplimiento normativo de OSHA Documento de programa de seguridad y salud implementad..."
-      },
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...a moral del personal. Obtener el compromiso visible de la gerencia con la seguridad y salud laboral Establecer mecanismos..."
-      }
-    ],
-    "programas_cooperativos_osha": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...Programas Cooperativos de OSHA (Asociaciones Estratégicas, Alianzas, VPP) OSHA ofrece..."
-      }
-    ],
-    "recopilacion_informacion_peligros": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...S), reportes de autoinspección, registros de lesiones (OSHA 300/301), resultados de monitoreo de exposición, progr..."
-      },
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...información sobre peligros del sitio, disponible para el equipo de seguridad..."
-      }
-    ],
-    "recursos_educativos_osha": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...Recursos Educativos y de Capacitación de OSHA Conjunto de materiales gratuitos y programas de capaci..."
-      }
-    ],
-    "recursos_externos_seguridad": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...Seguridad (Aseguradoras, Asociaciones, SBDC) Además de OSHA y NIOSH, las pequeñas empresas pueden apoyarse en aseg..."
-      }
-    ],
-    "registro_reporte_lesiones": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...tro y Reporte de Lesiones y Enfermedades Ocupacionales OSHA exige llevar registros de lesiones y enfermedades labo..."
-      }
-    ],
-    "responsabilidad_hacia_abajo_vs_rendicion_de_cuentas": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...ridad se traslade a la línea, no solo se reporte hacia la gerencia Cuando existen métricas o señalización pública de 'día..."
-      }
-    ],
-    "revision_aplicabilidad_estandares_osha": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...Revisión de Aplicabilidad de Estándares OSHA Proceso mediante el cual el empleador analiza los está..."
-      }
-    ],
-    "riesgo_actividades_mantenimiento": [
-      {
-        "baranda": "matriz_o_puntaje",
-        "cita": "...l mantenimiento es la que presenta mayor riesgo porque puntúa alto simultáneamente en tres criterios: contacto direc..."
-      }
-    ],
-    "riesgos_del_enfoque_en_error_humano": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...lose de condiciones sistémicas subyacentes. Evitar que el departamento de Recursos Humanos convierta las investigaciones de segu..."
-      }
-    ],
-    "rutas_de_salida_y_puertas_de_emergencia": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...les trabajadores Si se requiere cumplimiento normativo OSHA sobre rutas de escape Checklist de cumplimiento de rut..."
-      }
-    ],
-    "sbrefa_cumplimiento": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...mpresas ayuda para entender y cumplir las regulaciones OSHA, y les da voz en el desarrollo de nuevas normas. Oblig..."
-      }
-    ],
-    "seduccion_modelo_persona": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...sgo hacia la culpa individual tras incidentes Educar a la gerencia sobre las limitaciones del modelo de persona frente a..."
-      }
-    ],
-    "seguridad_electrica": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...car que el trabajo eléctrico cumpla con los estándares OSHA (29 CFR 1910.303/305/334) Mantener espacio de acceso y..."
-      }
-    ],
-    "seguridad_trabajadores_jovenes": [
-      {
-        "baranda": "dato_local_cableado",
-        "cita": "...as o lesiones Fomentar participación en entrenamientos OSHA de 10 horas cuando sea posible Si la empresa emplea tr..."
-      }
-    ],
-    "trabajo_como_imaginado_vs_trabajo_como_hecho": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...iencia organizacional que mide la distancia entre cómo la gerencia imagina que se realizan las operaciones y cómo realmen..."
-      }
-    ],
-    "vpc_condiciones_productoras_violacion": [
-      {
-        "baranda": "residuo_corporativo",
-        "cita": "...onal Diagnóstico de factores de violación normativa en el equipo de trabajo con recomendaciones de intervención cultural..."
-      }
-    ]
-  }
+  ]
 }

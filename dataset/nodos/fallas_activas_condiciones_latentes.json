@@ -4,30 +4,54 @@
   "dominio": "health_safety",
   "titulo_concepto": "Fallas Activas y Condiciones Latentes",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las fallas activas son errores y violaciones cometidos por el personal de primera línea ('sharp end') con efecto inmediato. Las condiciones latentes son consecuencias de decisiones tomadas en niveles superiores de la organización, que permanecen dormidas hasta que se combinan con otros factores para producir un fallo. Ambas crean 'agujeros' en las defensas del sistema; cuando se alinean, se abre una 'ventana de oportunidad' para el accidente.",
+  "resumen_teorico": "Las fallas activas son errores o violaciones cometidos por quien está en primera línea, con efecto inmediato y de corta duración. Las condiciones latentes son como patógenos residentes: decisiones de niveles superiores (presupuesto, capacitación, diseño, procedimientos) que quedan dormidas por años hasta combinarse con circunstancias locales y fallas activas para atravesar las defensas del sistema. Cuando ambas se alinean, se abre una ventana de oportunidad para el accidente. Las condiciones latentes suelen originarse en decisiones ajenas al momento del incidente y pueden contribuir a varios accidentes si no se detectan a tiempo, por lo que corregirlas tiene más impacto que enfocarse solo en el error humano visible.",
   "pasos_accionables": [
-    "Identificar actos inseguros (errores/violaciones) cometidos en el momento del incidente",
-    "Buscar decisiones organizacionales previas (presupuesto, capacitación, dotación) que crearon condiciones latentes",
-    "Evaluar cómo ambos tipos de fallas coincidieron temporal y espacialmente"
+    "Identificar los actos inseguros (errores o violaciones) cometidos en el momento del incidente",
+    "Buscar las decisiones previas (presupuesto, capacitación, dotación, diseño) que crearon condiciones latentes",
+    "Elaborar una tabla que separe fallas activas de condiciones latentes para cada hallazgo",
+    "Rastrear el origen de cada condición latente hasta la decisión gerencial o de diseño que la generó",
+    "Priorizar la corrección de condiciones latentes por su impacto en futuros eventos",
+    "Mantener un registro de condiciones latentes conocidas para monitorearlas de forma continua, no solo tras un accidente"
   ],
-  "entregable_esperado": "Lista clasificada de fallas activas vs condiciones latentes identificadas en el incidente",
+  "entregable_esperado": "Tabla que clasifica fallas activas y condiciones latentes del incidente y traza el origen organizacional de cada condición latente.",
   "nodos_previos": [
     "modelo_accidente_organizacional",
     "defensas_en_profundidad_2",
     "omisiones_en_mantenimiento",
     "prueba_sustitucion_johnston",
-    "reglas_parada_investigacion_accidentes"
+    "reglas_parada_investigacion_accidentes",
+    "modelo_queso_suizo"
   ],
   "nodos_siguientes": [
     "ventana_oportunidad_accidente",
     "defensas_en_profundidad",
     "caso_grietas_pequenas_mantenimiento_aeronaves",
     "condiciones_latentes_largo_plazo",
-    "documentacion_mantenimiento_linea_base"
+    "documentacion_mantenimiento_linea_base",
+    "trayectoria_del_accidente",
+    "heart_metodo_evaluacion_error_humano",
+    "omisiones_en_mantenimiento"
   ],
   "condiciones_activacion": [
     "Al analizar por qué un accidente ocurrió pese a múltiples capas defensivas",
-    "Cuando se busca distinguir causas inmediatas de causas raíz"
+    "Cuando se busca distinguir causas inmediatas de causas raíz",
+    "Cuando se busca ir más allá de culpar al error humano individual"
   ],
-  "etiqueta_arbol": "Distingue Errores de Condiciones Ocultas"
+  "etiqueta_arbol": "Distingue Errores de Condiciones Ocultas",
+  "ids_alias": [
+    "fallas_activas_condiciones_latentes_2",
+    "fallos_activos_condiciones_latentes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "fallas_activas_condiciones_latentes_2",
+      "titulo": "Fallas Activas vs. Condiciones Latentes",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    },
+    {
+      "node_id": "fallos_activos_condiciones_latentes",
+      "titulo": "Fallos Activos y Condiciones Latentes",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

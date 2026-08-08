@@ -4,21 +4,38 @@
   "dominio": "health_safety",
   "titulo_concepto": "Teoría de la Manzana Podrida (Bad Apple Theory)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Es la formulación clásica de la Vieja Visión del error humano: los sistemas complejos funcionarían bien de no ser por el comportamiento errático de algunas personas poco confiables ('manzanas podridas'). Bajo esta teoría, se asume que los errores humanos causan más de dos tercios de los accidentes y que los fallos son sorpresas inesperadas que no pertenecen al sistema, sino que son introducidas por la falta de fiabilidad humana. Esta teoría lleva a intervenciones centradas en el individuo (sanciones, despidos, campañas de actitud) que no modifican las condiciones organizacionales que generaron el comportamiento.",
+  "resumen_teorico": "Es la formulación clásica de la Vieja Visión del error humano: los sistemas complejos funcionarían bien de no ser por el comportamiento errático de algunas personas poco confiables, las 'manzanas podridas'. Bajo esta teoría se asume que el error humano causa más de dos tercios de los accidentes y que los fallos son sorpresas inesperadas que no pertenecen al sistema, sino que son introducidas por la falta de fiabilidad de las personas. Esto lleva a soluciones centradas en el individuo, como sanciones, despidos, campañas de actitud, más reglas y procedimientos o reemplazar personas por tecnología, sin modificar las condiciones que generaron el comportamiento problemático.",
   "pasos_accionables": [
-    "Detectar si las investigaciones de incidentes terminan señalando a un individuo como causa raíz sin explorar condiciones sistémicas.",
-    "Cuestionar la creencia de que remover a la persona 'responsable' resuelve el problema de fondo.",
-    "Documentar casos históricos donde la sanción individual no previno la recurrencia del incidente."
+    "Revisa si al analizar un incidente terminas señalando a una persona específica como causa raíz sin mirar las condiciones que rodearon el hecho.",
+    "Cuestiona la creencia de que sancionar o apartar a la persona 'responsable' resuelve el problema de fondo.",
+    "Anota casos pasados donde culpar a alguien no evitó que el mismo problema volviera a ocurrir.",
+    "Evalúa si las medidas que aplicaste antes, como advertencias, reglas nuevas o cambios de personal, funcionaron o no."
   ],
-  "entregable_esperado": "Lista de casos internos donde se aplicó la lógica de la manzana podrida y evaluación de si el problema se repitió.",
+  "entregable_esperado": "Un registro personal de casos donde aplicaste la lógica de la manzana podrida, con la evaluación de si el problema se repitió.",
   "nodos_previos": [
-    "old_view_vs_new_view_human_error"
+    "old_view_vs_new_view_human_error",
+    "modelos_gestion_seguridad"
   ],
   "nodos_siguientes": [
-    "human_error_como_sintoma"
+    "human_error_como_sintoma",
+    "new_view_human_error",
+    "local_rationality_principle",
+    "accident_proneness_fallacy"
   ],
   "condiciones_activacion": [
-    "Cuando una investigación de accidente concluye rápidamente culpando a un trabajador específico."
+    "Cuando concluyes rápido que un incidente fue culpa de una persona en particular.",
+    "Cuando piensas en despedir, sancionar o reemplazar a alguien como solución a un problema recurrente.",
+    "Cuando atribuyes un error principalmente a negligencia o descuido individual sin revisar el contexto."
   ],
-  "etiqueta_arbol": "No Busques Manzanas Podridas"
+  "etiqueta_arbol": "No Busques Manzanas Podridas",
+  "ids_alias": [
+    "old_view_bad_apple_theory"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "old_view_bad_apple_theory",
+      "titulo": "Old View o Teoría de la Manzana Podrida",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ]
 }

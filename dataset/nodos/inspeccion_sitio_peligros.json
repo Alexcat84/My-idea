@@ -14,16 +14,20 @@
   ],
   "entregable_esperado": "Reportes de inspección periódicos con hallazgos documentados y plan de corrección",
   "nodos_previos": [
-    "recopilacion_informacion_peligros"
+    "recopilacion_informacion_peligros",
+    "identificacion_recopilacion_informacion_peligros"
   ],
   "nodos_siguientes": [
     "caracterizacion_priorizacion_peligros",
     "investigacion_incidentes_2",
-    "peligros_emergencias_no_rutinarias_2"
+    "peligros_emergencias_no_rutinarias_2",
+    "investigacion_incidentes",
+    "peligros_emergencias_no_rutinarias"
   ],
   "condiciones_activacion": [
     "Cuando el sitio de trabajo está en operación activa y cambia constantemente",
     "Cuando se requiere verificar cumplimiento continuo de condiciones seguras"
   ],
-  "etiqueta_arbol": "Inspecciona tu Obra Regularmente"
+  "etiqueta_arbol": "Inspecciona tu Obra Regularmente",
+  "deprecado": true
 }

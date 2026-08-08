@@ -4,24 +4,39 @@
   "dominio": "health_safety",
   "titulo_concepto": "Normalización de la Desviación",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Concepto acuñado por Diane Vaughan a partir del análisis del accidente del Challenger. Describe cómo una organización, a través de decisiones sucesivas aparentemente razonables, redefine gradualmente lo que considera 'riesgo aceptable', hasta que prácticas peligrosas se convierten en norma cultural. No se trata de negligencia individual sino de conformidad con reglas y procedimientos que dejaron de ser adecuados, sin que nadie perciba claramente el momento en que las cosas empezaron a fallar.",
+  "resumen_teorico": "Concepto acuñado por Diane Vaughan a partir del accidente del Challenger. Describe cómo, mediante decisiones sucesivas y aparentemente razonables, redefines gradualmente lo que consideras 'riesgo aceptable', hasta que prácticas peligrosas se vuelven norma en tu forma de operar. No es negligencia puntual sino conformidad con criterios que dejaron de ser adecuados, sin que percibas con claridad el momento en que las cosas empezaron a fallar. El patrón incluye erosión gradual de estándares, desatención de tus propias señales de alerta o feedback de calidad, uso de éxitos pasados para justificar riesgos mayores, y una desconexión creciente entre cómo crees que funciona tu negocio y cómo realmente funciona.",
   "pasos_accionables": [
-    "Auditar el histórico de 'anomalías' o desviaciones aceptadas como normales en la operación",
-    "Identificar el lenguaje organizacional que minimiza riesgos ('acceptable risk', 'anomaly', etc.)",
-    "Revisar si los criterios de riesgo se han relajado progresivamente sin una revisión formal",
-    "Establecer puntos de control periódicos que cuestionen la aceptación acumulada de desviaciones"
+    "Audita tu historial de anomalías o incidentes menores que has tolerado sin corregir",
+    "Identifica el lenguaje que usas para minimizar riesgos crecientes en tu negocio",
+    "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente",
+    "Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones",
+    "Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad",
+    "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna"
   ],
-  "entregable_esperado": "Informe de auditoría cultural que identifique patrones de desviación normalizada y recomendaciones para revertirlos",
+  "entregable_esperado": "Informe personal de auditoría que identifique patrones de desviación normalizada y recomendaciones concretas para revertirlos.",
   "nodos_previos": [
-    "modelo_accidente_organizacional"
+    "modelo_accidente_organizacional",
+    "principios_gestion_error"
   ],
   "nodos_siguientes": [
     "fallo_regulatorio_por_recursos_insuficientes",
     "dysfunctional_organizational_culture_patterns"
   ],
   "condiciones_activacion": [
-    "Cuando la organización presenta un historial de incidentes menores tolerados sin corrección",
-    "Cuando se detecta lenguaje interno que trivializa riesgos crecientes"
+    "Cuando tienes un historial de incidentes menores tolerados sin corrección",
+    "Cuando detectas en ti mismo lenguaje que trivializa riesgos crecientes",
+    "Cuando justificas decisiones de mayor riesgo apoyándote en éxitos pasados sin revisarlos",
+    "Cuando sospechas que tu percepción de cómo opera tu negocio se ha desconectado de la realidad"
   ],
-  "etiqueta_arbol": "Cuidado con Normalizar el Riesgo"
+  "etiqueta_arbol": "Cuidado con Normalizar el Riesgo",
+  "ids_alias": [
+    "regulador_fallas_sistemicas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "regulador_fallas_sistemicas",
+      "titulo": "Normalización de la Desviación y Fallas Regulatorias",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

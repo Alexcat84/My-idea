@@ -4,23 +4,39 @@
   "dominio": "health_safety",
   "titulo_concepto": "Protección contra Caídas en Superficies Elevadas (Medidas y Sistemas)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Medidas para proteger a los trabajadores de caídas y objetos que puedan caer desde superficies elevadas mayores a 4 pies, incluyendo barandales, redes de seguridad, sistemas de detención de caídas y almacenamiento seguro de materiales en altura.",
+  "resumen_teorico": "Cuando trabajas en superficies elevadas a más de 4 pies (1.2 metros) sobre el nivel inferior, necesitas protegerte tanto a ti como a quienes estén debajo de posibles caídas de objetos. Esto incluye sistemas de barandillas, redes de seguridad o sistemas de detención de caídas para prevenir tu propia caída, así como rodapiés, pantallas o barandillas para evitar que objetos caigan sobre otros. También debes considerar estructuras de protección tipo dosel bajo las superficies elevadas, equipo de protección personal como casco para quienes estén expuestos a objetos que caen, espacio de altura libre adecuado y almacenamiento seguro de materiales apilados en altura para evitar volcamientos.",
   "pasos_accionables": [
-    "Instalar sistemas de barandales, redes de seguridad o sistemas de detención de caídas en superficies elevadas mayores a 4 pies.",
-    "Colocar rodapiés o pantallas para evitar la caída de objetos.",
-    "Erigir estructuras de protección (canopy) bajo superficies elevadas.",
-    "Proveer EPP como casco a trabajadores expuestos a caída de objetos.",
-    "Apilar y asegurar materiales en superficies elevadas para evitar volcamientos o caídas."
+    "Identifica todas las superficies elevadas mayores a 4 pies en tu lugar de trabajo.",
+    "Instala sistemas de barandales, redes de seguridad o sistemas de detención de caídas.",
+    "Coloca rodapiés o pantallas para evitar la caída de objetos.",
+    "Erige estructuras de protección tipo dosel bajo las superficies elevadas.",
+    "Usa casco u otro EPP si estás expuesto a caída de objetos.",
+    "Apila y asegura materiales en altura, verificando espacio adecuado, para evitar volcamientos o caídas."
   ],
-  "entregable_esperado": "Sistemas de protección contra caídas instalados y verificados, con procedimientos de almacenamiento seguro en altura documentados.",
+  "entregable_esperado": "Sistemas de protección contra caídas instalados y verificados mediante checklist, con procedimientos de almacenamiento seguro en altura documentados.",
   "nodos_previos": [
     "programa_proteccion_respiratoria"
   ],
   "nodos_siguientes": [
-    "superficies_elevadas_proteccion_caidas"
+    "superficies_elevadas_proteccion_caidas",
+    "escaleras_portatiles_seguridad",
+    "escaleras_fijas_seguridad",
+    "pisos_aberturas_paredes_seguridad"
   ],
   "condiciones_activacion": [
-    "Cuando los trabajadores realizan tareas en superficies elevadas más de 4 pies sobre el nivel inferior."
+    "Trabajas en superficies elevadas a más de 4 pies sobre el nivel inferior.",
+    "Hay riesgo de caída de objetos desde alturas hacia zonas donde circulan personas.",
+    "Necesitas almacenar o apilar materiales en superficies elevadas."
   ],
-  "etiqueta_arbol": "Protege contra Caídas en Altura"
+  "etiqueta_arbol": "Protege contra Caídas en Altura",
+  "ids_alias": [
+    "superficies_elevadas_proteccion_caidas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "superficies_elevadas_proteccion_caidas",
+      "titulo": "Protección contra Caídas en Superficies Elevadas (Requisito desde 4 Pies)",
+      "fuente": "SMALL_BUSINESS"
+    }
+  ]
 }

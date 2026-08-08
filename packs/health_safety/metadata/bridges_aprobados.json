@@ -1,5 +1,5 @@
 {
-  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; POME y CEPI limitados; rechazados: CEPI-mantenimiento y 2 usos extra de diseno_imperfeccion por afinidad tenue, 2 extras de POME, 1 duplicado tematico de arreglos rapidos, 1 par tecnologia-mantenimiento debil). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero.",
+  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; POME y CEPI limitados; rechazados: CEPI-mantenimiento y 2 usos extra de diseno_imperfeccion por afinidad tenue, 2 extras de POME, 1 duplicado tematico de arreglos rapidos, 1 par tecnologia-mantenimiento debil). | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | fusion HSEQ: puentes redirigidos a su superviviente.",
   "aprobados": [
     {
       "core": "second_wind_energia_mental",
@@ -8,13 +8,15 @@
     },
     {
       "core": "gestion_de_conflictos_cofundadores",
-      "dominio": "enfoque_situacional_vs_personal_2",
-      "score": 0.8
+      "dominio": "enfoque_situacional_vs_personal",
+      "score": 0.8,
+      "redir_hseq_dominio": "enfoque_situacional_vs_personal_2"
     },
     {
       "core": "calidad_de_ejecucion_proceso_innovacion",
-      "dominio": "evaluacion_mejora_programa_2",
-      "score": 0.81
+      "dominio": "evaluacion_mejora_programa",
+      "score": 0.81,
+      "redir_hseq_dominio": "evaluacion_mejora_programa_2"
     },
     {
       "core": "proteccion_organizacion_matriz_experimentos",
@@ -23,13 +25,15 @@
     },
     {
       "core": "proteccion_organizacion_matriz_experimentos",
-      "dominio": "riesgos_programas_seguridad_conductual",
-      "score": 0.79
+      "dominio": "critica_behavior_based_safety",
+      "score": 0.79,
+      "redir_hseq_dominio": "riesgos_programas_seguridad_conductual"
     },
     {
       "core": "five_whys_inversion_proporcional",
-      "dominio": "investigacion_incidentes_2",
-      "score": 0.77
+      "dominio": "investigacion_incidentes",
+      "score": 0.77,
+      "redir_hseq_dominio": "investigacion_incidentes_2"
     },
     {
       "core": "capacidad_de_respuesta_responsable",
@@ -48,8 +52,9 @@
     },
     {
       "core": "diseno_imperfeccion_intencional",
-      "dominio": "abandonar_la_falacia_del_arreglo_rapido",
-      "score": 0.79
+      "dominio": "abandonar_arreglos_rapidos",
+      "score": 0.79,
+      "redir_hseq_dominio": "abandonar_la_falacia_del_arreglo_rapido"
     },
     {
       "core": "tecnologias_disruptivas_oportunidad",

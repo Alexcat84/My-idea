@@ -384,6 +384,26 @@ Reencuadrarlos a persona-sola habría sido escribir un nodo que la fuente no
 escribió. Siguen en el grafo (nadie se borra) y **su minería propia podrá
 renacerlos desde sus fuentes** cuando ese mundo exista.
 
+## Campaña fichada: `re-voz-de-hseq` — PRIORIDAD ALTA, PRE-BETA
+
+**Se dispara tras la fusión de Seguridad y Personas**, que ya está hecha. La
+secuencia fusión-primero volvió a pagarse sola: el censo previo marcaba 57 nodos
+con hallazgo y tras absorber 48, el paciente quedó en **49**.
+
+**Censo post-fusión**: {'matriz_o_puntaje': 3, 'residuo_corporativo': 20, 'dato_local_cableado': 27}
+
+**Por qué es prioridad alta y no puede esperar a después de la beta**, a
+diferencia de la de quality: **27 de los hallazgos son DATO LOCAL CABLEADO, y casi
+todos son OSHA** — un organismo de Estados Unidos citado como si fuera el marco
+de todos. Para un usuario de cualquier otro país eso no es un defecto de estilo:
+es una **deuda de credibilidad**. Un emprendedor en Bogotá o en Lima que lee
+"según exige OSHA" descubre en dos clics que OSHA no le aplica, y con eso pierde
+la confianza en el resto del mundo, no solo en ese nodo.
+
+El trabajo: el método se conserva, el organismo se vuelve *"averigua qué
+organismo regula esto en tu país"*. Mismo circuito de re-voz ya curtido, con las
+barandas del taller (no las de la fábrica) y el guardián de rumbos vigilando.
+
 ## Campaña CERRADA: `re-voz-de-quality`
 
 **Se dispara al CERRAR la cirugía de fusión de Calidad, no antes.** La secuencia

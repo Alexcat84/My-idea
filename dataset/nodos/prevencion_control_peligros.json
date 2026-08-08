@@ -4,31 +4,55 @@
   "dominio": "health_safety",
   "titulo_concepto": "Prevención y Control de Peligros (Jerarquía de Controles)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Elemento que consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros identificados. Los controles deben seleccionarse según una jerarquía: primero soluciones de ingeniería, luego prácticas seguras de trabajo, controles administrativos, y finalmente equipo de protección personal (EPP). Se debe desarrollar un plan que garantice implementación, protección provisional, seguimiento de progreso y verificación de efectividad.",
+  "resumen_teorico": "Este elemento consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros ya identificados. Sigue el modelo NIOSH de jerarquía de controles, donde las opciones más efectivas remueven físicamente el peligro (eliminación, sustitución) y las menos efectivas dependen de tu comportamiento (controles administrativos, EPP), pasando por soluciones de ingeniería y prácticas de trabajo seguras. Debes evitar controles que generen nuevos peligros y combinar varios niveles cuando uno solo no baste. Aplica principios de Prevención mediante el Diseño al elegir equipos y materiales. El resultado debe plasmarse en un plan que garantice implementación con plazos, protección provisional mientras se aplican controles definitivos, y verificación posterior de que realmente funcionan.",
   "pasos_accionables": [
-    "Seleccionar controles priorizando ingeniería sobre EPP",
-    "Desarrollar un plan de implementación con responsables y plazos",
-    "Proveer protección provisional mientras se implementan controles definitivos",
-    "Verificar la efectividad de los controles implementados",
-    "Involucrar a los trabajadores en la elección y evaluación de soluciones"
+    "Identificar opciones de control revisando estándares, literatura de fabricantes y experiencias de otros sitios",
+    "Priorizar eliminación o sustitución del peligro antes de recurrir a ingeniería, controles administrativos o EPP",
+    "Combinar varios niveles de control cuando uno solo no sea suficiente, evitando introducir nuevos peligros",
+    "Desarrollar un plan de implementación con plazos y protección provisional mientras aplicas los controles definitivos",
+    "Verificar la efectividad de los controles implementados y ajustarlos según resultados",
+    "Aplicar principios de Prevención mediante el Diseño al elegir equipos y materiales"
   ],
-  "entregable_esperado": "Plan de control de peligros con jerarquía aplicada, responsables asignados y mecanismo de verificación",
+  "entregable_esperado": "Plan de control de peligros con jerarquía aplicada, plazos, protección provisional y mecanismo de verificación de efectividad",
   "nodos_previos": [
     "identificacion_evaluacion_peligros",
     "enfoque_find_and_fix",
     "identificacion_evaluacion_peligros_2",
     "participacion_trabajadores",
-    "programa_seguridad_salud_ocupacional"
+    "programa_seguridad_salud_ocupacional",
+    "caracterizacion_priorizacion_peligros",
+    "priorizacion_caracterizacion_peligros",
+    "identificacion_peligros_salud",
+    "inspeccion_lugar_trabajo_peligros",
+    "investigacion_incidentes"
   ],
   "nodos_siguientes": [
     "evaluacion_mejora_programa",
     "capacitacion_educacion_seguridad",
     "educacion_entrenamiento_seguridad",
-    "evaluacion_mejora_programa_2"
+    "evaluacion_mejora_programa_2",
+    "plan_control_peligros"
   ],
   "condiciones_activacion": [
-    "Cuando ya se han identificado peligros y se requiere decidir cómo mitigarlos",
-    "Cuando los controles actuales dependen únicamente de EPP sin considerar opciones superiores en la jerarquía"
+    "Cuando ya identificaste peligros y necesitas decidir cómo mitigarlos",
+    "Cuando tus controles actuales dependen únicamente de EPP sin considerar opciones superiores en la jerarquía",
+    "Cuando diseñas controles para una nueva actividad o proceso"
   ],
-  "etiqueta_arbol": "Controla los Peligros por Niveles"
+  "etiqueta_arbol": "Controla los Peligros por Niveles",
+  "ids_alias": [
+    "jerarquia_controles",
+    "prevencion_control_peligros_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "jerarquia_controles",
+      "titulo": "Jerarquía de Controles de Peligros",
+      "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "prevencion_control_peligros_2",
+      "titulo": "Prevención y Control de Peligros mediante Jerarquía de Controles",
+      "fuente": "OSHA3886"
+    }
+  ]
 }

@@ -14,7 +14,8 @@
   "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con procedimientos de respuesta asociados",
   "nodos_previos": [
     "identificacion_peligros_salud",
-    "inspeccion_sitio_peligros"
+    "inspeccion_sitio_peligros",
+    "inspeccion_lugar_trabajo_peligros"
   ],
   "nodos_siguientes": [
     "controles_no_rutinarias_emergencias"
@@ -23,5 +24,6 @@
     "Cuando el proyecto incluye actividades de alto riesgo poco frecuentes",
     "Cuando no existe un plan de emergencia actualizado"
   ],
-  "etiqueta_arbol": "Planea Ante Tareas No Rutinarias"
+  "etiqueta_arbol": "Planea Ante Tareas No Rutinarias",
+  "deprecado": true
 }

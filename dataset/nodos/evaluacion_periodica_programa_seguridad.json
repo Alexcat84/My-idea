@@ -13,16 +13,19 @@
   ],
   "entregable_esperado": "Informe de evaluación del programa con indicadores actualizados y calendario de revisiones periódicas definido",
   "nodos_previos": [
-    "programa_seguridad_salud_ocupacional_2"
+    "programa_seguridad_salud_ocupacional_2",
+    "programa_seguridad_salud_ocupacional"
   ],
   "nodos_siguientes": [
     "comunicacion_coordinacion_multiempleador",
-    "verificacion_implementacion_programa_sst"
+    "verificacion_implementacion_programa_sst",
+    "coordinacion_sitios_multiempleador"
   ],
   "condiciones_activacion": [
     "Cuando ha pasado un año desde la última evaluación del programa",
     "Cuando ocurre un cambio significativo en procesos o equipos",
     "Cuando se presenta un incidente grave, daño material importante o aumento de quejas de seguridad"
   ],
-  "etiqueta_arbol": "Revisa tu Programa Periódicamente"
+  "etiqueta_arbol": "Revisa tu Programa Periódicamente",
+  "deprecado": true
 }

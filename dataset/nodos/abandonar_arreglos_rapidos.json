@@ -4,22 +4,38 @@
   "dominio": "health_safety",
   "titulo_concepto": "Abandonar la Falacia del Arreglo Rápido",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
-  "resumen_teorico": "Tras un accidente, la presión por mostrar resultados rápidos lleva a organizaciones a aplicar 'arreglos rápidos' superficiales y de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento, o agregar más tecnología. Estos son falsos arreglos porque no atacan las causas sistémicas y, en el caso de la reprimenda, detienen directamente el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo).",
+  "resumen_teorico": "Tras un accidente o fallo, la presión por mostrar resultados empuja a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda detiene el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos reducen la transparencia, y la tecnología añadida crea nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
   "pasos_accionables": [
     "Resistir la presión de ofrecer una solución rápida inmediatamente después de un incidente",
-    "Evitar reprimendas o sanciones individuales como respuesta primaria a un evento",
-    "Cuestionar si un nuevo procedimiento o tecnología realmente ataca la causa raíz sistémica",
+    "Identificar si la respuesta ha sido una quick fix falsa: reprimenda, reentrenamiento, procedimiento o tecnología nueva",
+    "Cuestionar si esa solución atribuye la falla solo a individuos en lugar de mirar la causa raíz sistémica",
     "Realizar un análisis profundo de factores organizacionales antes de proponer countermeasures",
     "Preservar el capital de aprendizaje del incidente evitando culpar a los involucrados"
   ],
-  "entregable_esperado": "Protocolo de investigación de incidentes que excluya sanciones inmediatas y priorice el análisis sistémico antes de emitir recomendaciones",
+  "entregable_esperado": "Protocolo o informe de investigación de incidentes que excluya sanciones y soluciones superficiales y priorice el análisis de causas organizacionales profundas.",
   "nodos_previos": [
-    "preguntas_clave_armadura_organizacional"
+    "preguntas_clave_armadura_organizacional",
+    "responsabilizacion_del_trabajador",
+    "diseno_imperfeccion_intencional"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "hard_fixes_organizacionales",
+    "investigacion_new_view"
+  ],
   "condiciones_activacion": [
-    "Cuando ocurre un incidente o accidente y existe presión organizacional/mediática por respuestas inmediatas",
-    "Cuando se está diseñando el protocolo de investigación de incidentes de una organización"
+    "Cuando ocurre un incidente o accidente y existe presión organizacional o mediática por respuestas inmediatas",
+    "Cuando se está diseñando el protocolo de investigación de incidentes de una organización",
+    "Cuando la organización propone reprimenda, reentrenamiento o nueva normativa sin análisis profundo previo"
   ],
-  "etiqueta_arbol": "Evita los Arreglos Rápidos"
+  "etiqueta_arbol": "Evita los Arreglos Rápidos",
+  "ids_alias": [
+    "abandonar_la_falacia_del_arreglo_rapido"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "abandonar_la_falacia_del_arreglo_rapido",
+      "titulo": "Abandonar la falacia del arreglo rápido (Quick Fix)",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ]
 }
