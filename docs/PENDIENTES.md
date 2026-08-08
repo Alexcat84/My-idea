@@ -416,6 +416,28 @@ no existen como sujetos.
 exacta de los 185 vivos, y `_poda_quality.json` la cita textual y el patrón de
 cada uno. La campaña arranca sin volver a medir nada.
 
+## REQUISITO DE TODA REGENERACIÓN: la prueba de rumbos
+
+**Cualquier cosa que cambie el índice semántico corre `scripts/rumbos/prueba_rumbos.py`
+antes de darse por hecha.** Sin excepción, y aunque el cambio "sea pequeño".
+
+Qué la dispara:
+- un reindex de Voyage (`build_semantic_index_voyage.py`)
+- la re-voz de un pack (185 nodos regenerados = 185 embeddings nuevos)
+- una fusión, una deprecación, un pack nuevo
+- cualquier edición masiva de `resumen_teorico` o `titulo_concepto`
+
+Ya está cableada como paso `d-bis` de `integrar_packs.py`, justo detrás del
+reindex. Fuera de ese flujo, se corre a mano.
+
+**Por qué**: Gate 0 dice que el grafo está sano, las suites que el código cumple,
+el vuelo que el viaje corre. Ninguno dice si la brújula APUNTA BIEN. Una deriva
+de puntería no rompe nada: manda a la persona equivocada al mundo equivocado, en
+silencio, y se descubre en el recorrido de alguien.
+
+La línea base vive committeada en `scripts/rumbos/linea_base_rumbos.json`. La
+prueba sale con código 1 si algún rumbo cambia de estado.
+
 ## Al margen, sin acción: `matriz_probabilidad_impacto` (núcleo)
 
 Anotado al re-anclar los puentes (ago 2026), **sin acción y sin urgencia**: el
@@ -428,6 +450,21 @@ Queda como **candidato a ojo en la eventual revisión del núcleo post-beta**, c
 la misma vara que todo lo del núcleo: la telemetría es testigo obligado antes de
 tocar nada. Si algún día se revisa, hay que mirar también su puente: sin el
 ancla, el correctivo pierde su punto de exposición.
+
+## Al margen, sin acción: `proteger_fragiles_caja_dentro_de_caja` (entrega)
+
+Encontrado por la primera corrida de la prueba de rumbos (ago 2026), **sin acción
+porque esa pieza solo mide**: es el ÚNICO nodo de compras y entrega cuyo título
+va sin tildes, *"Proteger **fragiles** con el **metodo** caja dentro de caja"*, y
+su resumen igual (*"Para **articulos fragiles**…"*).
+
+Y le cuesta puntería: para la consulta *"vendo velas aromáticas y me llegan
+rotas"* queda **14.º dentro de su propio mundo**, detrás de flores, líquidos y
+relleno. La consulta lleva tildes y sus rivales también.
+
+No prueba causalidad, pero la coincidencia es exacta y la baranda de tildes del
+extractor nació después de él. Si se corrige, la prueba de rumbos dirá si
+recupera el puesto: ese rumbo ya está en el banco esperándolo.
 
 ## Ficha post-beta: `densidad-de-quality`
 

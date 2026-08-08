@@ -92,7 +92,8 @@ ESTADO = BASE / "dataset" / "metadata" / "_integracion_en_curso.json"
 
 PASOS = [
     "a_nodos_y_puentes", "e_gate0", "e_bis_etiquetas", "b_familias",
-    "c_cache_preguntas", "d_indice_voyage", "f_sync", "f_suite_web", "f_suite_python",
+    "c_cache_preguntas", "d_indice_voyage", "d_bis_rumbos",
+    "f_sync", "f_suite_web", "f_suite_python",
 ]
 
 
@@ -399,6 +400,16 @@ def main():
     paso("d_indice_voyage", lambda: correr(
         [sys.executable, "scripts/build_semantic_index_voyage.py"],
         "d. Índice semántico Voyage completo"))
+
+    # d-bis. LA PRUEBA DE RUMBOS, obligatoria tras CADA reindex.
+    # Gate 0 dice que el grafo esta sano; las suites, que el codigo cumple; el
+    # vuelo, que el viaje corre. Ninguno dice si la BRUJULA APUNTA BIEN. Un
+    # reindex cambia el espacio semantico entero, y una deriva de punteria no
+    # rompe nada: manda a la persona equivocada al mundo equivocado, en silencio.
+    # Aqui se CANTA contra la linea base committeada.
+    paso("d_bis_rumbos", lambda: correr(
+        [sys.executable, "scripts/rumbos/prueba_rumbos.py"],
+        "d-bis. Prueba de rumbos (la brujula apunta donde debe)"))
 
     # f. sync de assets a la web + suites
     paso("f_sync", lambda: correr(
