@@ -59,6 +59,12 @@ VETADO = {
     # el voseo lleva TILDE ("sabes" con tilde). El patron [ee] cazaba las dos
     # y rechazo tres nodos bien escritos. Para esas formas se EXIGE la tilde.
     "voseo": [r"\bvos\b", r"\bpodés\b", r"\btenés\b", r"\bquerés\b", r"\bsabés\b", r"\bhacés\b"],
+    # ORTOGRAFIA ROTA que la correccion automatica no alcanzo. Va como VETO y no
+    # solo como correccion porque la lista de TILDES es finita: si el modelo
+    # inventa una forma nueva sin tilde, la correccion no la ve y el nodo se
+    # publicaria roto. Cazado en el piloto de voz: "pequeno" no es una palabra.
+    "ortografia rota": [r"\b(?:pequen[oa]s?|disen(?:[oa]s?|ar|as|an|ado|ada)|manana|compania|espanol|senal(?:es)?|anos)\b",
+                        r"\b(?:vision|hipotesis|solucion|validacion|automatizacion|version|decision|revision|mision|presion|precision|conversion)\b"],
     "matriz o puntaje": [
         r"\bmatriz de (?:riesgo|probabilidad|impacto|prioridad)", r"\bpunt[úu][ae]\b",
         r"\bescala de\s*1\s*a\s*(?:5|10)\b", r"\bprobabilidad\s*(?:x|por|\*)\s*impacto\b",
@@ -90,6 +96,26 @@ TILDES = {
     "logistica": "logística", "economico": "económico", "economica": "económica",
     "basico": "básico", "basica": "básica", "unico": "único", "unica": "única",
     "credito": "crédito", "informacion": "información", "produccion": "producción",
+    # Ampliacion tras el PILOTO DE VOZ (ago 2026): la --instruccion se paso
+    # escrita SIN TILDES y el modelo imito el estilo. Ocho de quince nodos
+    # salieron con la ortografia rota. Se corrige a maquina, que es determinista
+    # y no es inventar, y ademas se veta abajo para que no vuelva a pasar.
+    "vision": "visión", "hipotesis": "hipótesis", "solucion": "solución",
+    "soluciones": "soluciones", "validacion": "validación", "creacion": "creación",
+    "evaluacion": "evaluación", "definicion": "definición", "automatizacion": "automatización",
+    "descripcion": "descripción", "iteracion": "iteración", "medicion": "medición",
+    "operacion": "operación", "presentacion": "presentación", "reaccion": "reacción",
+    "atencion": "atención", "intencion": "intención", "conversion": "conversión",
+    "decision": "decisión", "precision": "precisión", "revision": "revisión",
+    "mision": "misión", "presion": "presión", "version": "versión",
+    # LA EÑE. No es una tilde: es otra letra, y "pequeno" no es una palabra.
+    "pequeno": "pequeño", "pequena": "pequeña", "pequenos": "pequeños",
+    "pequenas": "pequeñas", "diseno": "diseño", "disenos": "diseños",
+    "disenar": "diseñar", "disenas": "diseñas", "diseno_v": "diseño",
+    "disenan": "diseñan", "disenado": "diseñado", "disenada": "diseñada",
+    "manana": "mañana", "compania": "compañía",
+    "espanol": "español", "senal": "señal", "senales": "señales",
+    "ano": "año", "anos": "años", "duena": "dueña", "dueno": "dueño",
 }
 
 
@@ -257,7 +283,9 @@ def main():
     # instruccion viaja como ORDEN del editor, no como material: sigue prohibido
     # inventar, y lo que se pide es quitar, no agregar.
     ap.add_argument("--instruccion", help="orden extra del editor para esta corrida "
-                                          "(adjudicaciones puntuales)")
+                                          "(adjudicaciones puntuales). ESCRIBELA CON "
+                                          "TILDES: el modelo imita el estilo de lo que "
+                                          "recibe, y una orden en ASCII sale en ASCII")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
