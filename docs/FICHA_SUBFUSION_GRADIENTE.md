@@ -797,6 +797,117 @@ valvula como ultima palabra.**
 
 ---
 
+# CITAS INTRA-DOMINIO ADELANTADAS
+
+**No son casos. Son la cola inicial del barrido intra-dominio** que el fundador
+decidio hacer (ver el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`).
+
+> **La lectura del gradiente las REGALA sin costo**: aparecen mientras se lee otra
+> cosa, y guardarlas es gratis. **Aqui se acumulan SIN ADJUDICAR**, para que
+> cuando el barrido arranque no empiece de cero.
+
+## a) `quality`, el par de KPI
+
+`sistema_medicion_kpi` (puestos **15** y **84**) y `medicion_kpi` (puesto **114**).
+
+## b) `quality`, el racimo Deming de responsabilidad
+
+`politica_no_culpar_trabajador` (puesto **86**),
+`responsabilidad_gerencial_causas_comunes` (puesto **113**), y el **base** de
+`distincion_causas_comunes_especiales`.
+
+> **Ojo con este**: la **fusion con reparto del base ya esta adjudicada** (ver la
+> maraña de causas comunes), y **puede absorber parte de este racimo antes de que
+> el barrido llegue**. Conviene mirarlos juntos, no en dos momentos.
+
+## c) `risk_management`, el trio de actualizacion de la lista
+
+`el_riesgo_cambia_con_el_tiempo` (puesto **107**) contra los **dos reencuadrados
+de la cirugia 1**, `manten_viva_tu_lista_de_riesgos` y
+`revisa_tus_riesgos_con_un_ritmo`.
+
+> **Este merece cuidado especial**: los dos contra los que roza **acaban de ser
+> reescritos**, y el veredicto del puesto 59 confirmo que **el reencuadre les dio
+> momento propio**. Leer esto como sub-fusion sin tener eso presente seria
+> deshacer una cirugia que la propia cola valido.
+
+---
+
+# VERIFICACIONES DE FAMILIA (lote 11)
+
+**Pedidas por el auditor, hechas contra el grafo. Se reporta lo que hay, sin
+adjudicar.**
+
+## `desarrollar_caracteristicas_proceso`: FORMA NUEVA, ni huerfano ni fusion
+
+| nodo | estado | dominio | pasos | alias | merged |
+|---|---|---|---:|---|---:|
+| `desarrollar_caracteristicas_proceso` | **ACTIVO** | quality | 4 | ninguno | 0 |
+| `desarrollar_caracteristicas_proceso_2` | **ACTIVO** | quality | 6 | ninguno | 0 |
+
+**No hay mas variantes de la familia.**
+
+> **NO ES LA CLASE DE LOS HUERFANOS DEL DEDUP.** Alli el hermano **habia sido
+> absorbido por un tercero** y el base se quedaba fuera. **Aqui no paso NADA**: los
+> dos siguen vivos, ninguno lleva marca, y **el dedup sencillamente nunca miro esta
+> familia.**
+
+**Leidos, son el mismo tema a dos voces y dos profundidades**: el base *"Desarrollar
+las Caracteristicas del Proceso"* en **cuatro pasos y en infinitivo** (listar,
+evaluar, seleccionar, establecer); el `_2` *"Como disenar el proceso para crear y
+entregar tu producto"* en **seis pasos y en tu**, con las condiciones de operacion
+reales del usuario y los diagramas de flujo.
+
+> **Es la misma figura del trio ECR**: **una version curada viviendo al lado de su
+> hermana sin curar, y ninguna de las dos marcada.**
+
+### La forma, medida en todo el catalogo
+
+**36 parejas** de `base` mas `_N` con **los dos ACTIVOS y NINGUNO con marca**
+(ni `ids_alias`, ni `merged_originals`, ni ser alias de nadie):
+
+| dominio | parejas |
+|---|---:|
+| quality | **25** |
+| health_safety | 6 |
+| environmental | 3 |
+| core | 1 |
+| franquicias | 1 |
+
+> **Traido como medicion, no como caso.** Una pareja de sufijo viva **no prueba
+> duplicado**: `auditoria_de_producto` y su `_2` estan en esta lista y **ya se
+> leyeron como temas propios** en el racimo de auditoria. **Lo que la lista dice es
+> donde nadie ha mirado, no donde hay defecto.**
+
+## `trilogia`: FALSA FAMILIA, el parentesco es de apellido
+
+| nodo | estado | pasos | que es de verdad |
+|---|---|---:|---|
+| `trilogia_de_juran` | **ACTIVO**, con 3 absorbidos | 6 | **la trilogia**: planificar, controlar, mejorar, con esporadico contra cronico |
+| `juran_trilogy` | **DEPRECADO**, con archivo | 4 | absorbido por el anterior |
+| `trilogia_de_juran_2`, `_3` | **sin archivo**, solo alias | | absorbidos; son **dos de los 27 registros sin archivo** |
+| `trilogia_juran_qa_qc` | **ACTIVO**, sin marca | 3 | **la diferencia entre QC y QA**. Su titulo **ni menciona la trilogia** |
+| `benchmarking_trilogia_juran` | **ACTIVO**, sin marca | 4 | **benchmarking** alimentando el diseno y la mejora |
+
+> **La sospecha del auditor se confirma leyendo: el parentesco es SOLO DE NOMBRE.**
+>
+> `trilogia_juran_qa_qc` se titula *"La diferencia entre vigilar la calidad y
+> asegurarla"* y sus tres pasos separan el dia a dia de la revision del sistema.
+> **No es la trilogia: es otra cosa que comparte apellido.**
+>
+> `benchmarking_trilogia_juran` es **benchmarking**, y usa la trilogia como destino
+> de sus hallazgos. **Tampoco es el mismo nodo.**
+
+**NADA que fusionar aqui.** Lo unico que deja la lectura es **una nota de voz**:
+`benchmarking_trilogia_juran` esta **en infinitivo** (*Utilizar, Aplicar,
+Incorporar, Usar*), y **al barrido residual va**.
+
+> **Vale la pena escribir la moraleja**: la familia de sufijo dio un hallazgo real
+> (36 parejas sin mirar) **y la familia de apellido dio cero**. **El nombre
+> compartido no es señal, y conviene no volver a tratarlo como si lo fuera.**
+
+---
+
 # CASOS COLATERALES DE VOZ Y VALVULA
 
 **No son sub-fusion.** Son nodos que la lectura del gradiente encontro rotos por
