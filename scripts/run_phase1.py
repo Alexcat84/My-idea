@@ -456,6 +456,70 @@ def count_asymmetric_edges(nodes):
     return missing_previo, missing_siguiente
 
 
+# ---------------------------------------------------------------------------
+# LAS TRES BARANDAS DEL ALIAS (cirugia de metadata, ago 2026)
+#
+# El alias es la promesa de la historia: un id viejo tiene que llevar al nodo
+# que hoy lo representa. Se limpiaron ocho auto-alias y un alias con dos
+# duenos, y el Gate no los veia. Ahora si.
+#
+# Se dejan como funciones PURAS a proposito: reciben el diccionario de nodos y
+# devuelven las violaciones, para que los fixtures las prueben con grafos
+# sinteticos sin recompilar nada.
+# ---------------------------------------------------------------------------
+
+def alias_auto(nodos):
+    """Nodos que llevan su PROPIO id dentro de su ids_alias.
+
+    No es cosmetico. `mapaDeAlias` en graph.ts lo filtra, y por eso nadie se
+    colgaba, pero un auto-alias es una entrada x -> x que cualquier caminador
+    sin guarda convierte en bucle, y ademas compite por el mismo alias con el
+    dueno legitimo (ver `alias_con_dos_duenos`).
+    """
+    return sorted(nid for nid, n in nodos.items() if nid in (n.get("ids_alias") or []))
+
+
+def alias_con_dos_duenos(nodos):
+    """alias -> los nodos que lo reclaman, cuando son mas de uno.
+
+    LA AVERIA QUE ESTO EVITA es silenciosa: el mapa se construye recorriendo
+    los nodos y el ULTIMO en escribir gana, asi que la resolucion depende del
+    ORDEN de serializacion del grafo. Cazado con `jerarquia_controles`, que
+    ganaba el dueno correcto por estar en el indice 2877 contra el 2217 del
+    otro. Un dato que esta bien de suerte es un dato que esta mal.
+    """
+    duenos = collections.defaultdict(list)
+    for nid, n in nodos.items():
+        for a in n.get("ids_alias") or []:
+            duenos[a].append(nid)
+    return {a: sorted(d) for a, d in sorted(duenos.items()) if len(d) > 1}
+
+
+def gemelos_divergentes(nodos_dataset, nodos_web):
+    """node_id -> que difiere entre las dos copias del grafo.
+
+    POR QUE ESTE CHEQUEO EXISTE: 71 `etiqueta_arbol` vivieron divergentes entre
+    dataset/metadata/master_graph.json y web/lib/assets/master_graph.json
+    durante toda una serie de commits. La web servia la forma curada y el
+    dataset la vieja, y NINGUN guardian comparaba los dos artefactos: cada uno
+    era valido por su cuenta. Es la regla de transito fotografiada, dos gemelos
+    y nadie que los mirara juntos.
+
+    Se comparan CAMPOS, no bytes: el orden de las claves y el formato son cosa
+    del serializador y no dicen nada.
+    """
+    dif = {}
+    for nid in sorted(set(nodos_dataset) | set(nodos_web)):
+        a, b = nodos_dataset.get(nid), nodos_web.get(nid)
+        if a is None or b is None:
+            dif[nid] = "solo en " + ("dataset" if b is None else "web")
+            continue
+        campos = sorted(k for k in set(a) | set(b) if a.get(k) != b.get(k))
+        if campos:
+            dif[nid] = ",".join(campos)
+    return dif
+
+
 def compute_directed_reachability(nodes, seed_ids):
     """BFS dirigido hacia adelante (nodos_siguientes) desde seed_ids.
     Devuelve (alcanzados, total, porcentaje)."""
@@ -624,7 +688,7 @@ def load_entry_seeds():
     return seeds
 
 
-def step7_validate(master, parse_errors):
+def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
     stats = master["stats"]
     checks = []
 
@@ -773,6 +837,58 @@ def step7_validate(master, parse_errors):
         checks.append(("Todo nodo ACTIVO tiene vector en el indice semantico",
                        not sin_vector, detalle))
 
+    # ── LAS TRES BARANDAS DEL ALIAS ─────────────────────────────────────────
+    auto = alias_auto(nodos_todos)
+    checks.append((
+        "Ningun nodo lleva su propio id en su ids_alias (auto-alias)",
+        not auto,
+        f"{len(auto)} auto-alias" + (f": {auto[:5]}" if auto else ""),
+    ))
+
+    dos = alias_con_dos_duenos(nodos_todos)
+    checks.append((
+        "Ningun alias es reclamado por dos nodos distintos",
+        not dos,
+        f"{len(dos)} con dos duenos" + (
+            f": {[f'{a} <- {d}' for a, d in list(dos.items())[:3]]}" if dos else ""),
+    ))
+
+    # Los dos artefactos del grafo tienen que decir lo MISMO. Ver la nota larga
+    # de `gemelos_divergentes`: la divergencia de 71 etiquetas vivio meses
+    # porque cada copia era valida por separado.
+    # EL ORDEN DEL REMEDIO IMPORTA Y POR ESO VA ESCRITO. Recompilar borra la
+    # curaduria de etiquetas (vive en dataset/metadata/, no en los nodos), asi
+    # que tras un recompile la copia ATRASADA es la del dataset. Sincronizar a
+    # secas empujaria esa copia vieja sobre la buena de la web: el remedio
+    # arreglaria el sintoma y estropearia la voz. Primero se reaplica, despues
+    # se sincroniza.
+    REMEDIO_SYNC = ("ANTES de usar esta copia, EN ESTE ORDEN: "
+                    "python scripts/etiquetas_de_cara.py --aplicar && "
+                    "python scripts/sync_assets_web.py")
+    #
+    # SE COMPARA EL SNAPSHOT DE ANTES DEL PASO 6, no el recien compilado. Es la
+    # unica forma de que el chequeo signifique algo: el paso 6 recompila desde
+    # los nodos y por diseno NO reaplica la curaduria, asi que comparar el
+    # intermedio pondria el Gate en rojo SIEMPRE, y un chequeo que siempre
+    # grita se acaba desactivando. La pregunta honesta es la que vivio en HEAD:
+    # los dos artefactos que se sirven, tal como estaban, ¿decian lo mismo?
+    ruta_web = BASE / "web" / "lib" / "assets" / "master_graph.json"
+    if nodos_dataset_al_empezar is None:
+        checks.append(("Los dos master_graph (dataset y web) dicen lo mismo", True,
+                       "sin snapshot: el chequeo no aplica en esta invocacion"))
+    elif not ruta_web.exists():
+        checks.append(("Los dos master_graph (dataset y web) dicen lo mismo", False,
+                       f"NO EXISTE {ruta_web} -> {REMEDIO_SYNC}"))
+    else:
+        nodos_web = load_json(ruta_web)["nodos"]
+        gemelos = gemelos_divergentes(nodos_dataset_al_empezar, nodos_web)
+        detalle = f"{len(gemelos)} nodos divergentes"
+        if gemelos:
+            muestra = [f"{k} ({v})" for k, v in list(gemelos.items())[:3]]
+            detalle += f": {muestra} -> {REMEDIO_SYNC}"
+        checks.append(("Los dos master_graph (dataset y web) dicen lo mismo",
+                       not gemelos, detalle))
+
     seeds = load_entry_seeds()
     seeds_deprecadas = sorted(set(seeds) & deprecados)
     checks.append((
@@ -894,6 +1010,11 @@ def main():
         "symmetrize_added": [],
     }
 
+    # El snapshot de los DOS artefactos tal como llegan, antes de que el paso 6
+    # recompile. Ver la nota del chequeo de gemelos en step7_validate.
+    nodos_al_empezar = (load_json(MASTER_GRAPH_PATH)["nodos"]
+                        if MASTER_GRAPH_PATH.exists() else None)
+
     print("=== Paso 1: Normalizacion ASCII ===")
     rename_map = step1_ascii_normalize(log)
     print(f"  {len(rename_map)} archivo(s) renombrado(s).")
@@ -928,7 +1049,7 @@ def main():
     print(f"  Log escrito en {LOG_PATH.relative_to(BASE)}")
 
     print("\n=== Paso 7: Validador Gate 0 ===")
-    checks, near_duplicates = step7_validate(master, parse_errors)
+    checks, near_duplicates = step7_validate(master, parse_errors, nodos_al_empezar)
 
     all_ok = True
     print("\n--- Resumen Gate 0 ---")
