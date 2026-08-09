@@ -630,6 +630,32 @@ artesana sola que **no debe devolver nodos de escala corporativa en el top-3**.
 Si la política de escala empezara a estorbar, ese rumbo lo canta antes que un
 usuario.
 
+## EL SEGUNDO ÍNDICE (`engine/semantic_index.npz`) Y EL MOTOR DE CLI
+
+**Estado: fósil vigilado, no retirado.**
+
+**Sus datos**: generado **2026-07-08**, sentence-transformers, 384 dimensiones,
+**1.266 vectores contra 3.521 activos**. Sin consumidores fuera del CLI, sin
+prueba que lo ejercite, sin flujo que lo regenere.
+
+**Por qué no se retiró**: en el CLI vive el port original y la documentación viva
+de las rutas de la web.
+
+**Por qué NO entra al Gate 0**: el Gate es la puerta del catálogo y no se ata a
+un artefacto sin consumidores en la línea de ensamblaje. Obligaría a regenerarlo
+en cada minería para nada, y **un guardián que cobra peaje por trabajo inútil se
+acaba desactivando**.
+
+**Qué se hizo en su lugar**: la brújula del CLI **se niega a operar** si el
+índice no cubre a todos los activos. Cero tolerancia, aviso una vez por sesión
+con el comando de regeneración, y sin lanzar: el motor sigue con navegación
+local, el mismo respaldo que ya existe cuando falta la clave de Voyage en la web.
+
+**CONDICIÓN DE RETIRO, fijada por adelantado**: el CLI y su índice se retiran
+cuando **el último flujo que hoy solo existe ahí tenga puerto en la web**. Hasta
+entonces vive, vigilado y honesto. **No se relitiga** sin que esa condición se
+cumpla o sin evidencia nueva.
+
 ## Ficha: `huecos-de-contenido` — documentados sin inventarlos
 
 Vacíos REALES del catálogo, encontrados midiendo y **no rellenados a mano**.

@@ -68,7 +68,7 @@ Fase 2.7 - escucha activa y costos: (a) prioridad_declarada rastrea si el
 Fase 2.8 - navegacion libre (brujula semantica): completa la autonavegacion
     adaptativa mas alla del riel local. engine/build_semantic_index.py
     genera embeddings locales (sentence-transformers, costo cero por
-    sesion) de los 1265 nodos en engine/semantic_index.npz; buscar_afines()
+    sesion) en engine/semantic_index.npz; buscar_afines()
     los usa en cada turno para ofrecerle al interprete, ademas de los
     sucesores locales, hasta 8 "saltos_posibles" de CUALQUIER parte del
     grafo (cualquier fase, incluso anteriores) afines a la ultima respuesta
@@ -1544,9 +1544,43 @@ def resumen_nodo(nid, graph, preguntas_cache=None):
 # vez, con nota impresa) y el motor sigue funcionando solo con navegacion
 # local, exactamente como antes de esta fase.
 # ---------------------------------------------------------------------------
+# ADVERTENCIA SOBRE ESTE INDICE (ago 2026, auditoria del segundo indice):
+# engine/semantic_index.npz es un ARTEFACTO CONGELADO del 8 de julio de 2026.
+# Lo genera engine/build_semantic_index.py con sentence-transformers en 384
+# dimensiones, mientras que la web usa Voyage en 512: son proveedores distintos
+# y sus espacios NO son comparables. Ningun flujo de la linea de ensamblaje lo
+# regenera, asi que envejece solo con cada cambio del catalogo.
+#
+# Por eso la brujula SE APAGA SOLA si el indice no cubre a TODOS los nodos
+# activos del grafo maestro (ver _cargar_brujula). No se pone la cifra aqui a
+# proposito: cualquier numero escrito en un comentario caduca, y este mismo
+# comentario decia "1265" cuando el archivo tenia 1266 vectores y el catalogo
+# 3.521 activos.
+#
+# Su condicion de retiro esta fijada en docs/PENDIENTES.md.
 _BRUJULA_MODELO = None
 _BRUJULA_INDICE = None  # (ids: list[str], embeddings: np.ndarray) o (None, None) si fallo
 _BRUJULA_AVISO_IMPRESO = False
+
+
+def _activos_sin_vector(ids_indice):
+    """(faltantes, total_activos) del grafo maestro contra el indice.
+
+    EL PUENTE CORRECTIVO (adjudicado ago 2026): el antidoto se ancla en el PUNTO
+    DE EXPOSICION. El daño de este indice no esta en el archivo, esta en el
+    momento en que alguien corre el CLI y se cree el resultado.
+
+    Devuelve el TOTAL de activos y no lo deduce sumando: el indice contiene ids
+    que hoy estan deprecados, asi que `len(faltan) + len(ids)` sobrecuenta. Un
+    numero inventado dentro de un aviso es la misma enfermedad que el aviso
+    viene a curar.
+    """
+    try:
+        grafo = cargar_grafo()
+    except Exception:
+        return [], 0  # sin grafo no se puede juzgar: no es culpa de la brujula
+    activos = {k for k, n in grafo.items() if not n.get("deprecado")}
+    return sorted(activos - set(ids_indice)), len(activos)
 
 
 def _cargar_brujula():
@@ -1558,6 +1592,33 @@ def _cargar_brujula():
         data = np.load(SEMANTIC_INDEX_PATH, allow_pickle=False)
         ids = list(data["ids"])
         embeddings = data["embeddings"]
+
+        # LA BRUJULA SE NIEGA A OPERAR DESFASADA. Cero tolerancia, igual que en
+        # el Gate: si falta UN activo, se apaga.
+        #
+        #   "Una brujula que apunta al 36 por ciento del territorio no es una
+        #    brujula degradada, es una brujula equivocada."
+        #
+        # Y el aviso NO es una excepcion: el motor sigue con navegacion local,
+        # que es el MISMO respaldo que ya existe cuando falta la clave de Voyage
+        # en la web. Un CLI que no arranca es peor que un CLI sin brujula.
+        faltan, total_activos = _activos_sin_vector(ids)
+        if faltan:
+            if not _BRUJULA_AVISO_IMPRESO:
+                _BRUJULA_AVISO_IMPRESO = True
+                try:
+                    import datetime
+                    generado = datetime.datetime.fromtimestamp(
+                        os.path.getmtime(SEMANTIC_INDEX_PATH)).strftime("%Y-%m-%d")
+                except Exception:
+                    generado = "desconocida"
+                print(f"  (brujula semantica APAGADA, navegacion solo local: el indice no "
+                      f"conoce {len(faltan)} de los {total_activos} nodos activos; "
+                      f"generado el {generado}. Regeneralo con: "
+                      f"python engine/build_semantic_index.py)")
+            _BRUJULA_INDICE = (None, None)
+            return False
+
         from sentence_transformers import SentenceTransformer
         _BRUJULA_MODELO = SentenceTransformer(SEMANTIC_MODEL_NAME)
         _BRUJULA_INDICE = (ids, embeddings)
