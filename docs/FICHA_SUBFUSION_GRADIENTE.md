@@ -256,10 +256,25 @@ inspeccion ya tomadas).
 `auditoria_sistema_control_calidad_2`, `ingenieria_calidad`,
 `auditoria_presidente` y `funciones_del_departamento_de_calidad`.
 
-> **Cuenta medida**: los tres grupos nombran **ocho** nodos del mundo, de los que
-> **siete entran a fusion**. El encargo dice **nueve**; la lectura que cuadra es
-> que el noveno sea `nucleo/quality_audit` mismo, que **no se funde pero si es
-> parte de la lectura**. **Queda para que el auditor fije la cuenta.**
+### LA CUENTA DE NUEVE, fijada
+
+**Adjudicada con la lectura del ejecutor. El nueve no se borra: se explica.**
+
+| | cuantos | quienes |
+|---|---:|---|
+| **nodos del MUNDO que entran a lectura de fusion** | **8** | el **par de producto** (`auditoria_de_producto`, `auditoria_producto`) **con `auditoria_de_producto_2` leido aparte** dentro del mismo grupo, el **trio del programa** y el **duo de proceso** |
+| **el NOVENO implicado** | **1** | **`nucleo/quality_audit`** |
+| **total implicado** | **9** | |
+
+**Por que `quality_audit` cuenta aunque no se funda**: es **la referencia contra la
+que se lee todo el racimo**. Los dieciseis pares emparejan **contra el**, y lo que
+sobreviva a la fusion **volvera a medirse contra el**. Una lectura de fusion que
+lo deje fuera **no sabria contra que altura esta fusionando**.
+
+> **`auditoria_de_producto_2` esta dentro de los ocho porque se LEE con el grupo,
+> aunque su veredicto sea tema propio y no se funda.** Esa es la diferencia entre
+> **implicado en la lectura** y **absorbido en la fusion**, y conviene no
+> mezclarlas al contar.
 
 ### Observacion suelta, sin caso abierto
 
