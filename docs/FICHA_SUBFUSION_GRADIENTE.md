@@ -371,16 +371,72 @@ actual de la empresa"*.
 > despues de `plan_mejora_procesos` y `economia_circular`. **El instrumento no fue
 > una idea: fue la respuesta a un patron que ya se estaba repitiendo.**
 
+### `core/propuesta_gasto_capital`, 12 pasos: DOBLE, y el PRIMER FALSO NEGATIVO
+
+**La cuarta confirmada de rebote** (lote 15, puesto 189). **Dos narraciones del
+mismo analisis de gasto de capital:**
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | **la generica**: costos, beneficios, **NPV** con hurdle rate, payback e IRR, **redactar la propuesta** |
+| **6 a 12** | **la de sabor IT**: hardware y software por trimestre, beneficios directos, incrementales, de evitacion e intangibles, flujo trimestral con **VPN**, y **presentar el analisis** |
+
+**Duplicados verificados**: el valor presente en el paso **3** (*NPV*) y en el
+**11** (*VPN*); la propuesta **redactada** en el 5 y **presentada** en el 12.
+
+> ## ESTE NODO NO ESTA EN LA COLA DEL INSTRUMENTO
+>
+> **Es el primer falso negativo medido, y quedo fuera por 0,9 puntos**: bloque
+> **44,1** contra el umbral **45**.
+>
+> **Y lo que lo hace instructivo es que el instrumento SI vio la costura**: su
+> corte propuesto es **tras el paso 5**, exactamente donde la lectura la encontro.
+> **Lo que fallo no fue la señal: fue el umbral.**
+
+### Por que se le escapo: la parafrasis con vocabulario distinto
+
+| los dos pasos duplicados | similitud |
+|---|---:|
+| *"Calcular NPV usando el hurdle rate"* contra *"calcular el flujo de caja neto trimestral y el valor presente neto (VPN)"* | **46,2** |
+| *"Redactar la propuesta"* contra *"Presentar el analisis a los ejecutivos"* | **50,6** |
+
+> **Es la parafrasis un escalon mas alla de lo que el C3 ya habia visto: no es que
+> cambie la cola de la frase, es que la SIGLA esta en dos idiomas.** `NPV` y `VPN`
+> son la misma cosa y **para un comparador de tokens no se parecen en nada.**
+
+### El costo de recuperarlo, medido y sin adjudicar
+
+**Bajar el umbral de bloque de 45 a 44 recupera este nodo**, y cuesta:
+
+| umbral de bloque | nodos que entran por esa señal |
+|---:|---:|
+| 46 | 82 |
+| **45** (el actual) | **106** |
+| **44** | **124** |
+| 43 | 142 |
+
+> **Dieciocho citas mas para recuperar una costura confirmada**, y
+> `propuesta_gasto_capital` entra **penultimo** de esas dieciocho. **No lo decido.**
+> **Lo que si queda dicho es que la cola de 110 no era completa**, y que el
+> compromiso de leerla entera **no garantiza haber visto todas las costuras.**
+
 ---
 
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **leidos** (C1: 3, C2: 5, C3: 6, los 2 calibradores, y 1 de rebote en el lote 13) | **17** |
-| **costuras confirmadas** | **13** |
-| **citas falsas** | **4** |
-| tasa de acierto | **76%** |
+| **CITAS del instrumento leidas** | **17** |
+| de esas, costura **confirmada** | **13** |
+| de esas, **citas falsas** | **4** |
+| **precision de la cola** | **76%** |
+| **costuras confirmadas que la cola NO citaba** | **1** (`propuesta_gasto_capital`) |
+| **TOTAL de costuras confirmadas** | **14** |
+
+**De las 17 citas leidas, 5 llegaron por el gradiente y no por orden de cola**: los
+dos calibradores, `ratios_eficiencia_inventario`, `propuesta_gasto_capital` (que
+resulto no estar citado) y el hermano del caso 7. **La lectura de la clase no ha
+avanzado sola: la ha empujado el otro frente.**
 
 **Las cuatro falsas se reparten en dos clases nuevas**: LARGO LEGITIMO (2) y FALSO
 POSITIVO DE SECUENCIA LEGITIMA (2).
@@ -440,6 +496,12 @@ que todas las fuentes tocan**, y por tanto **los que mas fusiones recibieron**.
 Cada libro traia su version, y cada version entro entera detras de la anterior.
 
 > **Los nodos que mas se sirven al usuario son los peores servidos.**
+
+> **Y el contrario tambien existe, para no leer el patron como una condena**:
+> `nucleo/decision_intensidad_capital` lleva **SEIS especializaciones sanas** de
+> `franquicias` (puestos 22, 79, 82, 136, 146 y 188) **sin una sola costura ni
+> pisada**. **Un nodo base muy citado NO tiene por que acabar acrecionado**: el
+> defecto es de como se fusiono, no de cuanto se usa.
 
 **Consecuencia para la mesa del fundador**, y es la que cambia el orden de las
 prioridades:
@@ -1278,6 +1340,30 @@ truncada de 14 nodos es exactamente el ruido de puntuacion que aquella anoto.
 
 ---
 
+## CITAS MUNDO CONTRA MUNDO
+
+**Subseccion nueva (lote 15).** Las de arriba son **dentro de un dominio**. Estas
+cruzan dos mundos, y por eso **no las adjudica el mismo barrido**: van al
+**inter-mundos del final**, que es la tercera cara del instrumento pendiente.
+
+### 1. La calificacion de proveedores vive en DOS mundos
+
+| nodo | mundo | puesto | que es |
+|---|---|---:|---|
+| `calificacion_de_calidad_de_proveedores` | `quality` | 163 | **el plan compuesto con pesos**: metricas de no conformidad y DPM, pesos para calidad, entrega, costo y respuesta, y la calificacion decide **participacion de mercado entre proveedores** |
+| `lleva_scorecard_desempeno_proveedor` | `compras` | 194 | **el registro simple del taller**: una lista corta de lo que te importa, anotar **en palabras** si cumplio, guardar un comentario de que paso, y mirarlo antes de renegociar |
+
+> **Los dos angulos son legitimos y la diferencia es de escala, no de tema**: uno
+> reparte volumen de compra entre proveedores con una formula ponderada, el otro te
+> deja renegociar sabiendo que paso.
+>
+> **Lo que no existe es un puente entre ellos**, ni nada que le diga al lector que
+> el mismo trabajo tiene dos alturas segun su tamano.
+
+**Sin adjudicar. La decision es del barrido inter-mundos.**
+
+---
+
 # VERIFICACIONES DE FAMILIA (lote 11)
 
 **Pedidas por el auditor, hechas contra el grafo. Se reporta lo que hay, sin
@@ -1570,6 +1656,39 @@ bytes**, y una pasada sobre el catalogo real.
 `ids_alias`** (`paso1_ascii`, `consolidar_pack`, `paso2_dedup`, `tejer_ola1`),
 porque **una regla escrita en un solo sitio falla en el que alguien olvido**. Un
 test de contrato custodia los cinco.
+
+## C4. EL ID FOSIL: el nombre sobrevivio a su contenido
+
+Encontrado en el **lote 15, puesto 190**. **No es sub-fusion, ni voz, ni valvula:
+es un id que dejo de decir la verdad.**
+
+### `nucleo/convertir_unknown_unknowns_en_known_unknowns`
+
+| | |
+|---|---|
+| **su id promete** | epistemologia de riesgos: convertir lo que no sabes que no sabes |
+| **su titulo dice** | *"Anticipar Escenarios de Riesgo entre Cofundadores"* |
+| **sus tres pasos hacen** | listar eventos disruptivos personales (visa, salud, mudanza), discutir como cambia la equidad o los roles, documentar acuerdos de contingencia |
+| **su fuente es** | *The Founder's Dilemmas* |
+
+**Verificado**: **no tiene `ids_alias` ni `merged_originals`**. La mudanza del tema
+**no dejo rastro**: solo el id fosil.
+
+> **Inofensivo para el usuario, que ve el titulo. Venenoso para toda consulta por
+> id**, que es como se trabaja aqui: los rumbos, los puentes, las fichas y esta
+> misma campana citan nodos **por su id**.
+>
+> **Un id que miente hace que la busqueda correcta devuelva el nodo equivocado, y
+> el lector humano no tiene forma de notarlo.**
+
+### Clase con UN miembro medido, y sin barrido adjudicado
+
+**Puede no ser el unico.** Un barrido seria comparar el id contra el titulo y el
+contenido de cada nodo, y **no se ha corrido**.
+
+> **Queda declarada como clase con un solo miembro conocido.** Es lo unico honesto
+> que se puede decir hoy: **no que sea un caso aislado, sino que solo se ha medido
+> uno.**
 
 ---
 

@@ -2042,3 +2042,103 @@ aislada, y escribir esa decision en una frase.
 > **El gradiente, como problema, quedo confirmado arriba.** Lo que la segunda mitad
 > esta entregando es **material para los barridos y verificaciones de lo ya
 > hecho.**
+
+---
+
+## LOTE 15, puestos 175 y 177 a 195 (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden. El **176** no esta aqui: se leyo en el adelanto del racimo.
+
+> **CERO VIOLACIONES. QUINTO lote seguido.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **175** | OK | `franquicias/posicionamiento_est` contra `nucleo/superioridad_producto_beneficios` **(t37.6, s0.7711)**. Renuncia estrategica contra beneficios sobre features |
+| **177** | OK | `quality/estudio_lealtad_cliente` contra `nucleo/encuesta_satisfaccion_postproyecto` **(t35.8, s0.7704)**. Estudio periodico contra encuesta post-entrega |
+| **178** | OK POR ESPECIALIZACION | `exportacion/participacion_ferias_comerciales` contra `nucleo/estrategia_ferias_comerciales` **(t49.5, s0.7703)**. La logistica de exhibir sobre la estrategia anual |
+| **179** | OK | `compras/verifica_quien_tiene_el_poder_de_decidir_o_vetar` contra `nucleo/orden_negociacion_puntos` **(t45.0, s0.77)**. Poder de veto contra orden de temas |
+| **180** | OK POR ESPECIALIZACION | `franquicias/marketing_en_ferias_comerciales_de_franquicias` contra el mismo nodo de ferias **(t51.7, s0.77)**. **Segunda especializacion sana del mismo nodo** |
+| **181** | FALSO PAR FUNCIONAL | `quality/identificacion_de_riesgos` contra `nucleo/plan_gestion_riesgos` **(t33.0, s0.7698)** |
+| **182** | OK | `quality/mapeo_flujo_valor` contra `nucleo/plan_mejora_procesos` **(t40.0, s0.7698)**. **El hermano fuerte del caso 7 contra el costurado del nucleo**, que se re-exhibe por tercera vez |
+| **183** | FALSO PAR FUNCIONAL | `risk_management/busca_el_riesgo_antes_de_que_te_busque` contra `nucleo/plan_gestion_riesgos` **(t40.0, s0.7697)**. Tercera aparicion, mismo veredicto |
+| **184** | OK POR ESPECIALIZACION | `exportacion/proteccion_marca_madrid_protocol` contra `nucleo/marcas_registradas` **(t50.5, s0.7691)**. Tratado intocable; **con los puestos 131 y 161, el trio de PI de `exportacion` se lee como escalera coherente** |
+| **185** | OK | `health_safety/seduccion_modelo_persona` contra `nucleo/curse_cinco_culpas` **(t39.3, s0.7691)**. El fundamento Dekker contra la sesion |
+| **186** | OK | `quality/qfd_matriz` contra `nucleo/requirements_traceability_matrix` **(t36.4, s0.7689)**. QFD encadenado sobre la matriz PMI |
+| **187** | OK | `quality/innovacion_tipo_ii` contra `nucleo/open_innovation_ideacion` **(t38.8, s0.7686)**. Tecnica interna contra ecosistema abierto |
+| **188** | OK | `franquicias/decision_diy_vs_consultor_franquicia` contra `nucleo/decision_intensidad_capital` **(t40.3, s0.7685)**. **El hub sube a SEIS** |
+| **189** | OK, **costura confirmada de rebote** | ver abajo |
+| **190** | FALSO PAR FUNCIONAL, **colateral de tipo nuevo** | ver abajo |
+| **191** | OK | `quality/analisis_competitivo_calidad` contra `nucleo/superioridad_producto_beneficios` **(t35.7, s0.7678)**. Medir contra posicionar |
+| **192** | OK | `quality/diagrama_de_flujo_proceso_map` contra `nucleo/network_diagram` **(t48.8, s0.7678)**. Mapa de proceso contra red de dependencias |
+| **193** | OK | `quality/analisis_competitivo_calidad` contra `nucleo/analisis_competitivo` **(t62.7, s0.7677)**. Pruebas de laboratorio contra identificacion de oportunidades; **el nodo del mundo cierra sus tres parejas sanas** |
+| **194** | OK, **primera cita mundo-mundo concreta** | `compras/lleva_scorecard_desempeno_proveedor` contra `nucleo/criterios_seleccion_proveedores` **(t41.4, s0.7674)** |
+| **195** | OK | `exportacion/garantias_producto_internacional` contra `nucleo/diferenciacion_garantia_contrato_servicio` **(t47.5, s0.7672)** |
+
+### 189, la costura de rebote, y el PRIMER FALSO NEGATIVO del instrumento
+
+`quality/calculo_roi_calidad` contra `nucleo/propuesta_gasto_capital`
+**(t40.8, s0.768)**
+
+**El par cumple.** El nodo del NUCLEO tiene **doce pasos y DOS narraciones del
+mismo analisis**:
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | **la generica**: costos de la inversion, beneficios esperados, **NPV** con hurdle rate, payback e IRR, **redactar la propuesta** |
+| **6 a 12** | **la de sabor IT**: costos de hardware y software por trimestre, beneficios directos, incrementales, de evitacion e intangibles, flujo de caja trimestral con el **VPN**, y **presentar el analisis** |
+
+**Los dos duplicados que la lectura vio, verificados**: el valor presente calculado
+en el paso **3** (*NPV*) y otra vez en el **11** (*VPN*), y la propuesta
+**redactada** en el 5 y **presentada** en el 12.
+
+> **Y AQUI ESTA EL HALLAZGO QUE IMPORTA: este nodo NO ESTA en la cola del
+> instrumento.** Es su **primer falso negativo**, y quedo fuera **por 0,9 puntos**:
+> bloque **44,1** contra el umbral **45**.
+>
+> **El instrumento vio la costura y no la reporto.** Su corte propuesto es **tras
+> el paso 5**, que es **exactamente donde la lectura la encontro.**
+>
+> **La razon es la parafrasis llevada un paso mas alla**: los dos pasos duplicados
+> **usan vocabulario distinto para lo mismo**. *"Calcular NPV usando el hurdle
+> rate"* contra *"calcular el valor presente neto (VPN)"* mide **46,2**. **El mismo
+> concepto con la sigla en dos idiomas.**
+
+**Registrado en la clase, con su costo de recuperacion medido.**
+
+### 190, EL ID FOSIL: un tipo de defecto nuevo
+
+`risk_management/que_hacer_con_un_riesgo_nuevo` contra
+`nucleo/convertir_unknown_unknowns_en_known_unknowns` **(t39.0, s0.768)**
+
+**El par es falso.** Lo que trae es el nodo del nucleo:
+
+| | |
+|---|---|
+| **su id promete** | epistemologia de riesgos: convertir lo que no sabes que no sabes |
+| **su titulo dice** | *"Anticipar Escenarios de Riesgo entre Cofundadores"* |
+| **sus tres pasos hacen** | listar eventos disruptivos personales (visa, salud, mudanza), discutir como cambia la equidad, documentar acuerdos de contingencia |
+| **su fuente es** | *The Founder's Dilemmas* |
+
+> **El id quedo con el nombre viejo despues de que el tema migro.** No tiene
+> `ids_alias` ni `merged_originals`, asi que **la mudanza no dejo rastro**: solo el
+> id fosil.
+
+**Inofensivo para el usuario, que ve el titulo. Venenoso para toda consulta por
+id.** A la ficha, como clase colateral nueva.
+
+---
+
+## MARCADOR TRAS 197 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas** | **cero**, quinto lote seguido |
+| costuras confirmadas de rebote | **4** (`plan_mejora_procesos`, `economia_circular`, `ratios_eficiencia_inventario`, `propuesta_gasto_capital`) |
+| **falsos negativos del instrumento** | **1**, y medido |
+| hub `decision_intensidad_capital` | **SEIS** especializaciones sanas |
+| clases colaterales | **3**: voz y valvula, numero de paso en el titulo, **y el id fosil** |
+
+> **Cinco lotes seguidos sin violaciones.** La segunda mitad de la cola **ya no
+> mide el gradiente: audita el catalogo por otros lados**, y en este lote encontro
+> hasta **un defecto del instrumento que la campana misma construyo.**
