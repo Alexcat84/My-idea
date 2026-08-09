@@ -127,6 +127,33 @@ doscientos a novecientos, mil), incluidos compuestos como *"cuarenta y cinco"*.
 proposito**: la medicion del radio de explosion demostro el doble sentido. Lo que
 queda fuera **lo cubre la lectura del lote**, como cazo el primer caso.
 
+### Enmienda: `ciento` suelto, RATIFICADO fuera
+
+El ejecutor excluyo `ciento` de la clase de las que disparan solas, apartandose
+de la letra de la lista de centenas, y lo reporto. **El auditor lo ratifica con
+su mismo razonamiento**: su uso real vive dentro de *"por ciento"*, que ya esta
+cubierto por la clase del compuesto, y suelto **solo duplicaba la unidad
+detectada** sin cazar nada nuevo.
+
+### Comportamiento verificado y CORRECTO, para que nadie lo reporte como bug
+
+Un **nombre de norma con digitos**, como `MIL-STD-105D`, **SI dispara** cuando se
+anade como texto **nuevo**: no por la extension de palabras, sino por **la mitad
+de digitos** de la baranda, que ve el `105`.
+
+**Es lo deseado.** Una norma citada que **no estaba en el original** es un hecho
+nuevo, y un hecho nuevo es exactamente lo que la baranda existe para frenar.
+
+Comprobado en los dos sentidos:
+
+| caso | resultado |
+|---|---|
+| `MIL-STD-105D` **nuevo** respecto del original | **dispara** (`105`) |
+| `MIL-STD-105D` **ya presente** en el original | **no dispara** |
+
+Lo que la regla de tokenizacion resuelve es otra cosa: que la **palabra** `MIL`
+dentro de ese token **jamas** case con el numeral `mil`.
+
 ## 2. Contexto: **SI**, el compuesto exacto para "por ciento"
 
 **La fragilidad ante redacciones nuevas es aceptable porque falla hacia el falso

@@ -498,3 +498,98 @@ averia que esta casa persigue.
 | `construir_mvp_baja_fidelidad` | 1 | **1** |
 
 **Cuatro inmoviles y una que sube un puesto.** Ruido.
+
+---
+
+## LOTE 5, puestos 21 a 27 por senal
+
+**9 ago 2026.** Etiquetas y puestos **coinciden**.
+
+### 21. GRADIENTE OK POR ESPECIALIZACION, clase nueva de OK
+
+`health_safety/caracterizacion_priorizacion_peligros` contra
+`nucleo/matriz_probabilidad_impacto` **(t36.8, s0.8353)**
+
+**No es mas profundo en la mecanica**: anade lo que **su dominio exige y el
+nucleo no puede dar** (personas expuestas, controles provisionales inmediatos,
+compromiso con todo peligro grave).
+
+> **La base aplicada donde hay cuerpos en juego.**
+
+### 22. GRADIENTE OK EJEMPLAR
+
+`franquicias/decision_franquiciar_vs_expansion_propia` contra
+`nucleo/decision_intensidad_capital` **(t34.9, s0.8345)**
+
+El nucleo **decide en tres pasos**; el mundo **modela cuatro escenarios a cinco y
+diez anos** contra la meta financiera personal.
+
+> **Decidir contra modelar.** Al acta como ejemplar.
+
+### 23. VIOLACION INVERTIDA, clase nueva: **EL NUCLEO SE PASO**
+
+`compras/clasifica_tu_inventario` contra `nucleo/gestion_inventario`
+**(t46.3, s0.834)**
+
+El nodo del mundo es **correcto y de voz impecable**. El del **NUCLEO** tiene
+**nueve pasos** con inventario ciclico optimo, costos de ordenar contra mantener,
+estacionalidad y puntos de reorden, **en voz de manual**.
+
+**No es base: es un curso de operaciones en el plan gratuito.**
+
+**PRIMER CASO LEGITIMO de la palanca reservada en la cirugia 1**: reencuadrar el
+nodo del **NUCLEO** a version base. **PENDIENTE DEL VISTO DEL FUNDADOR**; no se
+ejecuta desde este documento.
+
+### 24. Cierra el TRIO del brainstorming
+
+`quality/brainstorming` contra `nucleo/reglas_brainstorming`
+**(t61.5, s0.8325)**, **TERCER** nodo del nucleo sobre el tema (con
+`brainstorming_efectivo` y `brainstorming_divergente`).
+
+La sospecha de sub-fusion **sube a CASO CONFIRMADO de tres nodos**, con voz de
+manual y anglicismos en el de este par (*Post-it notes*, *Silly Cow*).
+
+### 25. GRADIENTE OK
+
+`quality/calculo_roi_calidad` contra `nucleo/calculo_roi` **(t81.7, s0.8324)**
+
+El nucleo **calcula ROI**; el mundo trae **los matices de calcularlo para
+calidad** (capital contra operativo, muestreo, validar ante el rango).
+**Especializacion correcta.**
+
+### 26. FALSO PAR FUNCIONAL
+
+`compras/decide_criterio_eleccion_proveedor` contra
+`nucleo/gestion_procurement_consumo` **(t34.7, s0.8323)**
+
+Uno **elige proveedor**, el otro **controla consumo contra lo esperado**. Temas
+vecinos, no el mismo.
+
+### 27. GRADIENTE OK apretado, con sospecha colateral
+
+`compras/decide_criterio_eleccion_proveedor` contra
+`nucleo/criterios_seleccion_proveedores` **(t46.2, s0.831)**
+
+El del mundo aporta **el momento anterior**: decidir el criterio **ANTES** de
+buscar.
+
+**Pero** el nodo del nucleo tiene **diez pasos que son visiblemente DOS nodos
+pegados**: la matriz ponderada (1 a 6), la gestion de la base (7 a 10), y el
+*"define que necesitas"* **reaparece en el paso 7**, reiniciando la secuencia a
+mitad de lista. **TERCER caso a la ficha de sub-fusion del nucleo.**
+
+---
+
+## MARCADOR TRAS 27 DE 346, y lectura de tendencia
+
+**El lote 5 no trajo ninguna violacion clasica.** Trajo una **INVERTIDA** (el
+nucleo pasado de profundidad en inventario) y **dos confirmaciones de
+sub-fusion**.
+
+> **A medida que baja la senal, la deuda que aparece es cada vez mas DEL
+> NUCLEO**: sub-fusion (brainstorming **confirmado en trio**, proveedores **con
+> costura**, Goldratt pendiente) y **exceso de profundidad puntual**.
+
+**La ficha de sub-fusion del nucleo ya tiene entidad propia: cuatro temas
+anotados.**
