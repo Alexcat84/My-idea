@@ -416,9 +416,44 @@ mismo analisis de gasto de capital:**
 | 43 | 142 |
 
 > **Dieciocho citas mas para recuperar una costura confirmada**, y
-> `propuesta_gasto_capital` entra **penultimo** de esas dieciocho. **No lo decido.**
-> **Lo que si queda dicho es que la cola de 110 no era completa**, y que el
-> compromiso de leerla entera **no garantiza haber visto todas las costuras.**
+> `propuesta_gasto_capital` entra **penultimo** de esas dieciocho.
+
+### ADJUDICADO: el umbral baja a 44
+
+**El auditor lo adjudico con el mandato del fundador como argumento**: *dieciocho
+citas mas es barato, y hay un falso negativo conocido viviendo en esa franja.*
+
+| | antes | ahora |
+|---|---:|---:|
+| umbral de bloque | 45 | **44** |
+| **citas en la cola** | 110 | **128** |
+| citas nuevas | | **18** |
+
+> **Nota de cifra, para que nadie la lea mal**: el **124** que se midio era el
+> conteo **por señal de bloque**. **La cola es la UNION de las dos señales**, y
+> lleva ademas **4 citas que entran solo por la señal de pareja**. De ahi 128.
+> **Las dieciocho nuevas, que es lo que se adjudico, son exactas.**
+
+**Las 18 van marcadas como `franja_44_45` en la salida y agrupadas en su propia
+seccion del resumen**, para que la lectura las encuentre juntas y no repartidas
+por la cola.
+
+### Y EL LIMITE, que este cambio NO cierra
+
+**Bajar el umbral recupera a ESE falso negativo. No cierra el mecanismo que lo
+produjo.**
+
+> **Un comparador de tokens no ve equivalencias semanticas a ningun umbral.**
+> `NPV` y `VPN` son la misma cosa y para este instrumento se parecen un **46,2**.
+> **No hay numero que arregle eso.**
+
+**Las tres redes que quedan debajo** estan escritas en
+`docs/COSTURAS_INTERNAS_RESUMEN.md`: los **rebotes del gradiente** (que ya cazaron
+cuatro costuras sin buscarlas), el **barrido semantico intra-dominio** del final
+(donde los embeddings si ven que NPV y VPN viven juntos), y **la pasada unica**,
+que relee entero cada nodo antes de destejerlo.
+
+> **El limite queda declarado, no tapado. Ninguna cola sustituye a leer el nodo.**
 
 ---
 
@@ -426,7 +461,7 @@ mismo analisis de gasto de capital:**
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **17** |
+| **CITAS del instrumento leidas** | **17** de **128** |
 | de esas, costura **confirmada** | **13** |
 | de esas, **citas falsas** | **4** |
 | **precision de la cola** | **76%** |
@@ -435,8 +470,13 @@ mismo analisis de gasto de capital:**
 
 **De las 17 citas leidas, 5 llegaron por el gradiente y no por orden de cola**: los
 dos calibradores, `ratios_eficiencia_inventario`, `propuesta_gasto_capital` (que
-resulto no estar citado) y el hermano del caso 7. **La lectura de la clase no ha
+entonces no estaba citado) y el hermano del caso 7. **La lectura de la clase no ha
 avanzado sola: la ha empujado el otro frente.**
+
+> **El marcador NO cambia con la regeneracion de la cola.** Las **18 nuevas** entran
+> como **PENDIENTES**, no como leidas: suman al denominador (110 a 128) y **nada
+> mas**. `propuesta_gasto_capital` ya estaba contado como confirmado; lo unico que
+> cambia es que **ahora ademas esta citado**.
 
 **Las cuatro falsas se reparten en dos clases nuevas**: LARGO LEGITIMO (2) y FALSO
 POSITIVO DE SECUENCIA LEGITIMA (2).

@@ -9,7 +9,7 @@ La clase nacio de dos hallazgos del gradiente: `plan_mejora_procesos` (puesto 83
 | señal | que caza | umbral |
 |---|---|---:|
 | **pareja de pasos** | el paso repetido casi literal (`token_sort_ratio`) | **80** |
-| **alineacion de bloques** | la secuencia que vuelve a empezar, y **donde** | **45** |
+| **alineacion de bloques** | la secuencia que vuelve a empezar, y **donde** | **44** |
 
 **Basta con que dispare cualquiera, y se reportan las dos siempre**, como en el hermano mayor: el auditor necesita ver por que entro cada nodo.
 
@@ -29,16 +29,16 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**110 nodos** en la cola, sobre 3521 activos.
+**128 nodos** en la cola, sobre 3521 activos.
 
 | dominio | nodos |
 |---|---:|
-| core | 66 |
-| quality | 24 |
-| exportacion | 6 |
+| core | 78 |
+| quality | 26 |
+| exportacion | 9 |
 | seguridad_digital | 5 |
+| franquicias | 4 |
 | health_safety | 4 |
-| franquicias | 3 |
 | environmental | 2 |
 
 ## Distribucion, para calibrar
@@ -51,6 +51,49 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 | maximo | 92.8 | 80.2 |
 
 Nodos evaluados por bloques (6 pasos o mas): **173**.
+
+## La franja 44 a 45: lo que el umbral viejo dejaba fuera
+
+**18 citas** entraron al bajar el umbral de bloque de 45 a 44. **Van juntas aqui a proposito**, para que la lectura del auditor las encuentre sin rastrearlas por la cola.
+
+| # | dominio | nodo | pasos | bloque | corte |
+|---:|---|---|---:|---:|---:|
+| 1 | core | `preferencia_de_liquidacion` | 8 | 45.0 | 3 |
+| 2 | exportacion | `certificado_de_origen_coo` | 6 | 45.0 | 3 |
+| 3 | quality | `presentaciones_alta_direccion` | 6 | 45.0 | 3 |
+| 4 | core | `brainstorming_divergente` | 8 | 44.8 | 5 |
+| 5 | core | `portfolio_management` | 6 | 44.7 | 3 |
+| 6 | core | `internal_idea_capture` | 7 | 44.7 | 4 |
+| 7 | core | `captura_conocimiento_mercado` | 7 | 44.7 | 4 |
+| 8 | core | `lectura_balance_general` | 6 | 44.6 | 3 |
+| 9 | exportacion | `evaluacion_preparacion_empresa_exportar` | 6 | 44.6 | 3 |
+| 10 | quality | `planificacion_cero_defectos` | 7 | 44.5 | 4 |
+| 11 | exportacion | `negociacion_acuerdo_representante_extranjero` | 8 | 44.4 | 4 |
+| 12 | core | `sem_estrategia_ejecucion` | 8 | 44.3 | 5 |
+| 13 | core | `product_market_fit` | 6 | 44.2 | 3 |
+| 14 | core | `producto_unico_superior` | 8 | 44.2 | 3 |
+| 15 | franquicias | `ferias_comerciales_franquicia` | 6 | 44.2 | 3 |
+| 16 | core | `revisiones_regulares_desempeno_ceo` | 10 | 44.2 | 5 |
+| 17 | core | `propuesta_gasto_capital` | 12 | 44.1 | 5 |
+| 18 | core | `optimizacion_embudo_get_customers` | 10 | 44.1 | 6 |
+
+**El motivo del cambio fue un FALSO NEGATIVO medido**: `nucleo/propuesta_gasto_capital`, con costura confirmada por lectura, quedaba fuera por **0,9 puntos** (bloque 44,1). **La señal si lo habia visto**: su corte propuesto es tras el paso 5, exactamente donde la lectura encontro la costura.
+
+## EL LIMITE DECLARADO, que bajar el umbral NO cierra
+
+**Bajar el umbral recupera a ESE falso negativo. No cierra el mecanismo que lo produjo.**
+
+> **Un comparador de tokens no ve equivalencias semanticas, a ningun umbral.** En el nodo recuperado, el paso 3 dice *"calcular NPV usando el hurdle rate"* y el 11 dice *"calcular el valor presente neto (VPN)"*. **Son la misma cosa con la sigla en dos idiomas, y para este instrumento se parecen un 46,2.**
+
+**Las redes que quedan debajo, y por eso el limite se declara en vez de taparse:**
+
+| red | que caza que este instrumento no |
+|---|---|
+| **(a) los rebotes del gradiente** | ya cazaron **cuatro** costuras sin buscarlas, leyendo pares por otra razon |
+| **(b) el barrido semantico intra-dominio** del final | los embeddings **si** ven que `NPV` y `VPN` viven juntos |
+| **(c) la pasada unica** | relee **entero** cada nodo que toca antes de destejerlo |
+
+> **Ninguna cola sustituye a leer el nodo.** Este instrumento ordena la lectura; no la reemplaza.
 
 ## Los veinte primeros
 
@@ -72,9 +115,9 @@ Nodos evaluados por bloques (6 pasos o mas): **173**.
 | 14 | quality | `viaje_diagnostico_remedial` | 8 | 63.5 | 46.7 | 4 | bloque |
 | 15 | quality | `planificacion_recoleccion_datos` | 16 | 63.4 | 52.3 | 11 | bloque |
 | 16 | core | `gestion_libro_abierto_obm` | 10 | 63.2 | 45.1 | 4 | bloque |
-| 17 | seguridad_digital | `csf_funcion_govern` | 7 | 62.0 | 48.5 | 3 | bloque |
-| 18 | core | `analisis_tco_roi_b2b` | 9 | 61.9 | 48.9 | 6 | bloque |
-| 19 | core | `plan_gestion_riesgos` | 6 | 61.9 | 50.3 | 3 | bloque |
-| 20 | core | `wizard_of_oz_testing` | 6 | 61.4 | 47.4 | 3 | bloque |
+| 17 | core | `portfolio_management` | 6 | 62.1 | 44.7 | 3 | bloque |
+| 18 | seguridad_digital | `csf_funcion_govern` | 7 | 62.0 | 48.5 | 3 | bloque |
+| 19 | core | `analisis_tco_roi_b2b` | 9 | 61.9 | 48.9 | 6 | bloque |
+| 20 | core | `plan_gestion_riesgos` | 6 | 61.9 | 50.3 | 3 | bloque |
 
 La cola completa, con los dos pasos de cada pareja, en `COSTURAS_INTERNAS.jsonl`.

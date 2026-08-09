@@ -25,8 +25,10 @@ que entro cada nodo:
 
   2. ALINEACION DE BLOQUES: para cada corte posible de la lista, se empareja el
      segundo bloque contra el primero EN ORDEN (emparejamiento monotono) y se
-     promedian las tres mejores parejas. Umbral 45. Caza el BLOQUE reiniciado,
+     promedian las tres mejores parejas. Umbral 44. Caza el BLOQUE reiniciado,
      que es la figura de los dos hallazgos, y ademas dice DONDE esta el corte.
+     (Bajado de 45 a 44 en ago 2026 por un falso negativo medido: ver la nota
+     de UMBRAL_BLOQUE.)
 
 POR QUE HACEN FALTA LAS DOS, medido antes de escribirlo. Con la señal 1 sola, y
 en cualquier umbral, la calibracion NO entra: la mejor pareja interna de
@@ -57,7 +59,21 @@ SALIDA = BASE / "docs" / "COSTURAS_INTERNAS.jsonl"
 RESUMEN = BASE / "docs" / "COSTURAS_INTERNAS_RESUMEN.md"
 
 UMBRAL_PAREJA = 80
-UMBRAL_BLOQUE = 45
+# BAJADO DE 45 A 44 (lote 15, ago 2026), y el motivo es un FALSO NEGATIVO medido.
+# `nucleo/propuesta_gasto_capital` tiene dos narraciones del mismo analisis de
+# gasto de capital y quedo fuera de la cola por 0,9 puntos: bloque 44,1.
+#
+# Lo instructivo es que la señal SI lo vio: su corte propuesto fue tras el paso 5,
+# exactamente donde la lectura encontro la costura. No fallo la señal, fallo el
+# umbral.
+#
+# Y la razon de fondo esta medida: el paso 3 dice "calcular NPV usando el hurdle
+# rate" y el 11 dice "calcular el valor presente neto (VPN)". Son LA MISMA COSA con
+# la sigla en dos idiomas, y para token_sort_ratio se parecen un 46,2.
+#
+# Costo del cambio, medido antes de aplicarlo: 18 citas mas (106 -> 124 por esta
+# señal). Adjudicado como barato frente al mandato de leerlas todas.
+UMBRAL_BLOQUE = 44
 
 # Minimo de pasos para que un bloque signifique algo: con menos de tres pasos por
 # lado, "el segundo bloque repite al primero" no es una afirmacion, es ruido.
@@ -145,6 +161,9 @@ def main():
             "corte": corte,
             "disparo_pareja": disparo_p,
             "disparo_bloque": disparo_b,
+            # La franja que el umbral 45 dejaba fuera. Se marca para que la
+            # lectura del auditor las encuentre JUNTAS y no repartidas por la cola.
+            "franja_44_45": bool(disparo_b and 44.0 <= s_blo < 45.0),
         })
 
     # Ordena por la señal MAS FUERTE de las dos, normalizando ambas a 0-1.
@@ -232,6 +251,48 @@ def main():
     A(f"| maximo | {max(sc_pareja):.1f} | {max(sc_bloque):.1f} |")
     A("")
     A(f"Nodos evaluados por bloques (6 pasos o mas): **{len(sc_bloque)}**.")
+    A("")
+    franja = [f for f in filas if f["franja_44_45"]]
+    A("## La franja 44 a 45: lo que el umbral viejo dejaba fuera")
+    A("")
+    A(f"**{len(franja)} citas** entraron al bajar el umbral de bloque de 45 a 44. "
+      "**Van juntas aqui a proposito**, para que la lectura del auditor las "
+      "encuentre sin rastrearlas por la cola.")
+    A("")
+    A("| # | dominio | nodo | pasos | bloque | corte |")
+    A("|---:|---|---|---:|---:|---:|")
+    for i, f in enumerate(sorted(franja, key=lambda x: -x["sim_bloque"]), 1):
+        A(f"| {i} | {f['dominio']} | `{f['node_id']}` | {f['pasos']} | "
+          f"{f['sim_bloque']} | {f['corte']} |")
+    A("")
+    A("**El motivo del cambio fue un FALSO NEGATIVO medido**: "
+      "`nucleo/propuesta_gasto_capital`, con costura confirmada por lectura, quedaba "
+      "fuera por **0,9 puntos** (bloque 44,1). **La señal si lo habia visto**: su "
+      "corte propuesto es tras el paso 5, exactamente donde la lectura encontro la "
+      "costura.")
+    A("")
+    A("## EL LIMITE DECLARADO, que bajar el umbral NO cierra")
+    A("")
+    A("**Bajar el umbral recupera a ESE falso negativo. No cierra el mecanismo que "
+      "lo produjo.**")
+    A("")
+    A("> **Un comparador de tokens no ve equivalencias semanticas, a ningun "
+      "umbral.** En el nodo recuperado, el paso 3 dice *\"calcular NPV usando el "
+      "hurdle rate\"* y el 11 dice *\"calcular el valor presente neto (VPN)\"*. "
+      "**Son la misma cosa con la sigla en dos idiomas, y para este instrumento se "
+      "parecen un 46,2.**")
+    A("")
+    A("**Las redes que quedan debajo, y por eso el limite se declara en vez de "
+      "taparse:**")
+    A("")
+    A("| red | que caza que este instrumento no |")
+    A("|---|---|")
+    A("| **(a) los rebotes del gradiente** | ya cazaron **cuatro** costuras sin buscarlas, leyendo pares por otra razon |")
+    A("| **(b) el barrido semantico intra-dominio** del final | los embeddings **si** ven que `NPV` y `VPN` viven juntos |")
+    A("| **(c) la pasada unica** | relee **entero** cada nodo que toca antes de destejerlo |")
+    A("")
+    A("> **Ninguna cola sustituye a leer el nodo.** Este instrumento ordena la "
+      "lectura; no la reemplaza.")
     A("")
     A("## Los veinte primeros")
     A("")
