@@ -539,45 +539,64 @@ al cliente en su contexto real. **La segunda tanda repite el ciclo entero.**
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **21** de **128** |
-| de esas, costura **confirmada** | **15** |
+| **CITAS del instrumento leidas** | **22** de **128** |
+| de esas, costura **confirmada** | **16** |
 | de esas, **citas falsas** | **6** |
-| **precision de la cola** | **71%** |
-| **costuras confirmadas que la cola NO citaba** | **1** (`propuesta_gasto_capital`) |
+| **precision de la cola** | **73%** |
+| **costuras confirmadas que la cola NO citaba** | **0** |
 | **TOTAL de costuras confirmadas** | **16** |
 
-> **DISCREPANCIA DE CIFRA, sin resolver, para que la adjudique el auditor.** El
-> encargo dictaba *21 leidas, 16 confirmadas, 6 falsas, precision 76%, mas la
-> confirmada fuera de cola*. **Tres de esas cuatro cifras cierran y quedan
-> escritas. La cuarta no**, y no la invento:
+> **DISCREPANCIA RESUELTA: el auditor elige la segunda lectura.** El marcador
+> anterior contaba 21 leidas, 15 confirmadas y una decimosexta aparte, en una
+> fila de *confirmadas que la cola NO citaba*. **Esa fila baja a cero y su
+> ejemplar entra a la cola.**
 >
-> - **16 confirmadas + 6 falsas = 22**, no 21. De las 21 leidas, **15** estan
->   confirmadas: las 19 anteriores eran 15 mas 4 falsas, y **las dos nuevas
->   salieron las dos falsas**, asi que el numerador de confirmadas no se movio.
-> - **El 76% es exactamente 16/21**, o sea mete la confirmada de FUERA de cola en
->   el numerador y deja el denominador solo con las citas de la cola. **Eso la
->   cuenta dos veces**, porque despues se vuelve a sumar como *"mas la confirmada
->   fuera de cola"*.
-> - **La precision de la cola es 15/21 = 71%.** El 16 sigue siendo correcto como
->   **TOTAL** de costuras confirmadas, que es como esta escrito arriba.
+> **La razon:** tras la regeneracion `propuesta_gasto_capital` **si esta citado**
+> (bloque 44,1). La categoria *fuera de cola* **describe la historia, no el
+> presente**, y la historia ya tiene su sitio propio en esta ficha: el apartado
+> **`core/propuesta_gasto_capital`, 12 pasos: DOBLE, y el PRIMER FALSO NEGATIVO**,
+> con **El costo de recuperarlo, medido y sin adjudicar** a continuacion. Ahi
+> queda contado lo que de verdad importa de ese caso, que es **que el umbral 44
+> existe porque este nodo se escapo**. En el marcador no hace falta una fila para
+> recordarlo.
 >
-> **Hay una segunda lectura que tambien cierra y que el auditor puede preferir**:
-> tras la regeneracion `propuesta_gasto_capital` **si esta citado** (esta en la
-> cola, con bloque 44,1), asi que se lo podria contar dentro de las leidas. Eso da
-> **22 leidas, 16 confirmadas, 6 falsas, precision 73%**, y entonces la fila de
-> *"confirmadas que la cola NO citaba"* baja a cero. **Las dos lecturas dan el
-> mismo TOTAL de 16.** No elegi por mi cuenta: dejo escrita la que no toca la
-> contabilidad anterior.
+> **Las dos lecturas siempre dieron el mismo TOTAL de 16.** Lo unico que cambia es
+> donde se cuenta el decimosexto, y ahora se cuenta donde esta: dentro.
 
-**De las 19 citas leidas, 7 llegaron por el gradiente y no por orden de cola**: los
-dos calibradores, `ratios_eficiencia_inventario`, `propuesta_gasto_capital` (que
-entonces no estaba citado) y el hermano del caso 7. **La lectura de la clase no ha
+### DOCTRINA DEL MARCADOR: los totales se recomputan del archivo
+
+**Registrada aqui porque este marcador ya se descuadro dos veces por la misma
+causa.**
+
+> **Los totales del marcador se recomputan SIEMPRE del archivo. El auditor dicta
+> el delta, nunca el total.**
+
+Un total dictado de memoria no se puede verificar contra nada: llega como cifra
+y se copia como cifra. Un delta si (*esta cita salio falsa*, *esta se confirmo*),
+porque el total sale despues de contar, y contar es reproducible. **Las dos veces
+que este marcador no cerro fue por sumar deltas sobre un total recordado en vez
+de recontar.**
+
+La cuenta de esta entrada salio de cruzar los veredictos escritos en esta ficha
+con `docs/COSTURAS_INTERNAS.jsonl`, cita por cita: **22 leidas, 16 confirmadas,
+6 falsas, y cada una en exactamente una fila de la tabla de franjas de abajo.**
+
+**De las 22 citas leidas, buena parte llego por el gradiente y no por orden de
+cola**: los dos calibradores, `ratios_eficiencia_inventario`,
+`propuesta_gasto_capital` y el hermano del caso 7. **La lectura de la clase no ha
 avanzado sola: la ha empujado el otro frente.**
 
-> **El marcador NO cambia con la regeneracion de la cola.** Las **18 nuevas** entran
-> como **PENDIENTES**, no como leidas: suman al denominador (110 a 128) y **nada
-> mas**. `propuesta_gasto_capital` ya estaba contado como confirmado; lo unico que
-> cambia es que **ahora ademas esta citado**.
+> **Nota de la recomputacion, para no inventar**: la version anterior de esta
+> linea decia *7 de 19 llegaron por el gradiente* y enumeraba cinco. El total de
+> leidas si se recomputa del archivo; **la procedencia de cada cita no esta
+> registrada por cita en ningun sitio**, asi que el 7 no lo puedo reconstruir ni
+> lo repito como cifra. Queda la enumeracion, que si esta verificada.
+
+> **El denominador si cambio con la regeneracion de la cola.** Las **18 nuevas**
+> entraron como **PENDIENTES**, no como leidas: suman al denominador (110 a 128)
+> y nada mas. La unica que ademas movio el numerador fue
+> `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
+> citada**, que es exactamente lo que esta entrada viene a asentar.
 
 **Las seis falsas se reparten en dos clases**: LARGO LEGITIMO (3) y FALSO POSITIVO
 DE SECUENCIA LEGITIMA (3). **Las dos clases quedaron empatadas y las dos quedaron
@@ -593,29 +612,83 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
+**La tabla esta RECONCILIADA: cada una de las 22 citas leidas vive en
+exactamente una fila, y las filas suman 22 clavado.**
+
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **2** | **2** | **4** |
+| **por debajo de 51,0** | **5** | **2** | **7** |
+| **sin señal de bloque** (solo pareja) | 0 | 0 | **0** |
+| | **16** | **6** | **22** |
 
-> **Las dos nuevas cayeron las dos aqui abajo**: `seleccion_representante_extranjero`
-> con **50,9** y `plan_gestion_riesgos` con **50,3**, y **las dos salieron falsas.**
+**Las 22, con su fila y su veredicto**, recontadas cruzando los veredictos de
+esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
+
+| fila | cita | bloque | veredicto |
+|---|---|---:|:--:|
+| por encima de 52,0 | `producto_minimo_viable` | 80,2 | confirmada |
+| por encima de 52,0 | `coeficiente_viral` | 74,7 | confirmada |
+| por encima de 52,0 | `decision_de_vender_startup` | 69,3 | confirmada |
+| por encima de 52,0 | `viral_loop_marketing` | 65,9 | confirmada |
+| por encima de 52,0 | `transicion_producto_a_experiencia` | 60,1 | confirmada |
+| por encima de 52,0 | `lienzo_modelo_negocio` | 59,2 | confirmada |
+| por encima de 52,0 | `plan_mejora_procesos` | 56,7 | confirmada |
+| por encima de 52,0 | `ab_testing_optimizacion` | 52,6 | confirmada |
+| por encima de 52,0 | `planificacion_recoleccion_datos` | 52,3 | confirmada |
+| entre 51,0 y 52,0 | `principios_medicion_efectiva` | 51,9 | **falsa** |
+| entre 51,0 y 52,0 | `key_partners_hypothesis` | 51,7 | confirmada |
+| entre 51,0 y 52,0 | `split_testing_experimentos_ab` | 51,5 | confirmada |
+| entre 51,0 y 52,0 | `founder_ceo_succession_process` | 51,5 | **falsa** |
+| entre 51,0 y 52,0 | `mix_ubicaciones_corporativas_franquicia` | 51,4 | **falsa** |
+| entre 51,0 y 52,0 | `fmea_analisis_de_modos_de_falla` | 51,4 | **falsa** |
+| por debajo de 51,0 | `seleccion_representante_extranjero` | 50,9 | **falsa** |
+| por debajo de 51,0 | `plan_gestion_riesgos` | 50,3 | **falsa** |
+| por debajo de 51,0 | `voz_del_cliente_voc` | 50,2 | confirmada |
+| por debajo de 51,0 | `future_scenarios_planning` | 50,1 | confirmada |
+| por debajo de 51,0 | `economia_circular_como_modelo_de_negocio` | 49,7 | confirmada |
+| por debajo de 51,0 | `ratios_eficiencia_inventario` | 48,3 | confirmada |
+| por debajo de 51,0 | `propuesta_gasto_capital` | 44,1 | confirmada |
+
+> **Las dos nuevas cayeron las dos en la fila de abajo**:
+> `seleccion_representante_extranjero` con **50,9** y `plan_gestion_riesgos` con
+> **50,3**, y **las dos salieron falsas.**
 >
-> **Nota de contabilidad, sin resolver**: las tres filas suman **19**, y las citas
-> leidas son **21**. La diferencia de dos viene de la contabilidad anterior, no de
-> esta entrada: las dos nuevas si estan en la tabla. **Lo dejo señalado en vez de
-> cuadrarlo por mi cuenta.**
+> **La nota de contabilidad que estaba abierta queda CERRADA.** Las filas sumaban
+> 19 contra 21 leidas por dos motivos, los dos identificados al recontar:
+> **`voz_del_cliente_voc` (50,2) y `future_scenarios_planning` (50,1), las dos
+> confirmadas de rebote del lote 17, nunca se habian metido en ninguna fila.** Y
+> el vigesimo segundo es `propuesta_gasto_capital` (44,1), que entra con la
+> decision del auditor de arriba. Las tres van a la fila de abajo, y las tres son
+> confirmadas: por eso esa fila pasa de **2 y 2** a **5 confirmadas y 2 falsas**.
+>
+> **La fila de las citas sin señal de bloque queda creada y en cero.** El
+> instrumento tiene **cuatro** citas que disparan solo por pareja (bloque 0,0) y
+> **ninguna esta leida todavia**. La fila existe para que la primera que se lea
+> tenga sitio y no vuelva a caerse de la cuenta.
 
-**Por encima de 52 son NUEVE de nueve, no doce de doce**: el doce es el total de
-confirmadas, y **tres de ellas viven por debajo de 52** (`split_testing` en 51,5,
-`key_partners` en 51,7, y `economia_circular` en **49,7**).
+**Por encima de 52 son NUEVE de nueve.** Y ahora que la cuenta esta completa, el
+reparto de las **16 confirmadas** es: **9 por encima de 52 y SIETE por debajo**
+(`key_partners` 51,7, `split_testing` 51,5, `voz_del_cliente_voc` 50,2,
+`future_scenarios_planning` 50,1, `economia_circular` 49,7,
+`ratios_eficiencia_inventario` 48,3 y `propuesta_gasto_capital` 44,1).
+
+> **Esto es una correccion de fondo, no de forma.** La version anterior decia
+> *tres de ellas viven por debajo de 52*, sobre un total de doce confirmadas. Con
+> la tabla cuadrada son **siete de dieciseis**: **casi la mitad de todas las
+> costuras confirmadas del catalogo viven por debajo de la franja**, es decir en
+> el terreno donde la señal de bloque es debil. **Es el argumento mas fuerte que
+> hay contra acelerar la lectura ahi abajo**, y estaba escondido en el descuadre.
 
 > **LA FRANJA 51 a 52 NO ES UN PISO DE FALSOS: ES UNA ZONA MEZCLADA**, con dos
-> confirmadas y cuatro falsas. Y **por debajo de 51 viven DOS costuras
-> confirmadas**: `economia_circular` (49,7), que es uno de los dos calibradores del
-> instrumento, y `ratios_eficiencia_inventario` (48,3), confirmada de rebote en el
-> lote 13.
+> confirmadas y cuatro falsas. Y **por debajo de 51 viven CINCO costuras
+> confirmadas**, que con la tabla cuadrada son la mayoria de esa fila:
+> `voz_del_cliente_voc` (50,2) y `future_scenarios_planning` (50,1), las dos
+> confirmadas de rebote del lote 17; `economia_circular` (49,7), que es uno de los
+> dos calibradores del instrumento; `ratios_eficiencia_inventario` (48,3),
+> confirmada de rebote en el lote 13; y `propuesta_gasto_capital` (44,1), el
+> primer falso negativo, que es la razon de que el umbral sea 44 y no mas alto.
 
 > **Y el segundo trae ademas la prueba de que las dos señales se ganan el
 > sueldo**: `ratios_eficiencia_inventario` tiene **bloque 48,3** (de los mas bajos
@@ -626,31 +699,46 @@ confirmadas, y **tres de ellas viven por debajo de 52** (`split_testing` en 51,5
 ### Consecuencia para el paso de lectura, y va en sentido contrario
 
 **Por encima de 52 la señal es limpia y ahi si se puede leer rapido. Pero eso son
-solo 13 de las 110 citas.**
+solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
+regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
-> **97 de las 110 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **3 confirmadas contra 4 falsas**: una moneda
+> **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
+> abajo**, donde la muestra leida da **7 confirmadas contra 6 falsas**: una moneda
 > al aire, no un piso de ruido.
 >
 > **Acelerar ahi seria pasar de largo justamente donde esta casi toda la cola, y
-> donde ya se sabe que hay costuras reales.** El compromiso de leer los 110 no
-> cambia, **y el paso tampoco deberia aflojarse por debajo de la franja.**
+> donde ya se sabe que hay costuras reales.** El compromiso de leer la cola entera
+> no cambia, **y el paso tampoco deberia aflojarse por debajo de la franja.**
 
 ### La prediccion de la zona mezclada se sigue cumpliendo
 
 **Las dos citas nuevas son la comprobacion, y salio la que se esperaba**: las dos
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
-> **Bajo 52 la señal de bloque sigue sin sostenerse sola.** La muestra leida en esa
-> mitad de la cola pasa de **3 confirmadas contra 4 falsas** a **3 contra 6**.
-> Sigue sin ser un piso de ruido, porque las tres confirmadas siguen ahi, pero
-> **tampoco se ha vuelto un terreno donde se pueda leer de corrido.**
+> **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
+> mitad de la cola queda, con la tabla ya cuadrada, en **7 confirmadas contra 6
+> falsas**. Ni piso de ruido ni terreno donde se pueda leer de corrido: una
+> moneda al aire, y con casi la mitad del tesoro dentro.
 >
-> **La consecuencia operativa no cambia y conviene repetirla porque es la parte que
-> tienta**: **el paso de lectura NO se acelera.** Cada cita de esta mitad se sigue
-> leyendo entera contra el grafo. Las dos de esta entrada lo confirman: **las dos
-> parecian costura por su bloque y ninguna lo era**, y eso solo se supo abriendo
-> los pasos.
+> **Correccion, y va en la direccion que menos convenia.** Esta subseccion decia
+> que la muestra pasaba de *3 contra 4* a *3 contra 6*, con lo que la mitad de
+> abajo parecia irse volviendo esteril y el argumento se apoyaba en resistir la
+> tentacion de acelerar. **Al reconciliar la tabla aparecieron tres confirmadas
+> que nunca se habian contado en ninguna fila** (`voz_del_cliente_voc`,
+> `future_scenarios_planning` y `propuesta_gasto_capital`), **las tres por debajo
+> de 51**. El reparto real nunca fue 3 contra 6.
+>
+> **Lo que si se cumplio de la prediccion**: las dos citas nuevas viven bajo 52
+> (50,9 y 50,3) y **las dos salieron falsas**, que es lo que se esperaba de esa
+> banda.
+>
+> **Y la consecuencia operativa no solo no cambia: se refuerza.** **El paso de
+> lectura NO se acelera**, y ahora por un motivo mejor que la prudencia: **siete
+> de las dieciseis costuras confirmadas del catalogo estan ahi abajo.** No es una
+> zona que haya que peinar por disciplina, es donde esta casi la mitad de lo que
+> se busca. Cada cita se sigue leyendo entera contra el grafo: las dos de esta
+> entrada **parecian costura por su bloque y ninguna lo era**, y eso solo se supo
+> abriendo los pasos.
 
 ### Nota de orden: la zona 51 a 52 esta cosechada entera
 
