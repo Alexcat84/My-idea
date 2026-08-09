@@ -2849,3 +2849,173 @@ paso por paso:**
 | parejas del iman `metricas_calidad` | **trece** |
 
 > **Quedan 29 pares. Un lote y la cola muere.**
+
+---
+
+## LOTE 22 FINAL, puestos 318 a 346 (veintinueve pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los
+veintinueve puestos coinciden.
+
+> **CERO VIOLACIONES. DUODECIMO lote seguido. LA COLA DE 346 QUEDA AGOTADA.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **318** | FALSO PAR FUNCIONAL | `risk_management/que_hacer_con_un_riesgo_nuevo` contra `nucleo/plan_gestion_riesgos` **(t36.2)**. Tercera aparicion |
+| **319** | OK, tema propio | `compras/preguntas_abiertas_motivacion_proveedor` contra `nucleo/negociacion_contratos_proveedores` **(t41.8)** |
+| **320** | OK, **y destapa un par que ninguna consulta de sufijo podia ver** | ver abajo |
+| **321** | OK, **par filosofico sano** | `quality/aceptacion_de_fallas_como_inevitables` contra `nucleo/no_sacrificar_calidad_por_velocidad` **(t40.0)**. Tasa de falla costeable contra andon |
+| **322** | OK, **par de SCORECARDS del nucleo** | ver abajo |
+| **323** | OK | `quality/establecer_metas_caracteristicas` contra `nucleo/definicion_producto_proyecto` **(t40.9)** |
+| **324** | FALSO PAR FUNCIONAL | `risk_management/nombra_tus_suposiciones_fragiles` contra `nucleo/convertir_unknown_unknowns_en_known_unknowns` **(t40.0)**. **El id fosil re-exhibido** |
+| **325** | OK | `quality/evaluacion_encuesta_calidad_proveedor` contra `nucleo/procurement_audit` **(t35.6)** |
+| **326** | OK, **tema propio EJEMPLAR** | `risk_management/caza_las_oportunidades_no_solo_amenazas` contra `nucleo/reglas_gestion_riesgo_gambling` **(t55.6)**. **La lista de oportunidades junto a la de amenazas** |
+| **327** | FALSO PAR FUNCIONAL | `risk_management/empieza_con_lo_que_ya_funciona` contra `nucleo/reglas_gestion_riesgo_gambling` **(t30.4)** |
+| **328** | OK, tema propio | `compras/plantilla_fija_cotizaciones` contra `nucleo/criterios_seleccion_proveedores` **(t38.7)** |
+| **329** | OK funcional | `quality/desarrollar_estrategias_largo_plazo` contra `nucleo/metas_objetivos_smart_innovacion` **(t36.5)** |
+| **330** | OK | `quality/especificacion_requisitos_proveedores` contra `nucleo/plan_gestion_adquisiciones` **(t38.1)** |
+| **331** | OK | `quality/gestion_estrategica_de_calidad_sqm` contra `nucleo/plan_gestion_calidad` **(t64.4)**. **Quinta pareja sana del plan** |
+| **332** | OK | `quality/rol_lider_equipo_calidad` contra `nucleo/equipo_multifuncional_real` **(t47.1)** |
+| **333** | OK | `quality/diseno_de_procesos_por_caracteristicas` contra `nucleo/plan_mejora_procesos` **(t48.7)**. **Septima exhibicion del costurado** |
+| **334** | OK, **PRIMERA aparicion de `seguridad_digital` en toda la cola** | `seguridad_digital/estrategia_gestion_riesgo_tolerancia` contra `nucleo/plan_gestion_riesgos` **(t44.4)**. Tolerancia de riesgo cyber, sana contra el plan generico |
+| **335** | OK | `compras/decide_si_lo_compras_o_lo_haces_tu` contra `nucleo/gestion_procurement_consumo` **(t46.3)** |
+| **336** | FALSO PAR FUNCIONAL | `franquicias/manejo_objeciones_venta_franquicia` contra `nucleo/preguntas_problema_2` **(t38.5)**. **DECIMA y ultima aparicion** |
+| **337** | FALSO PAR FUNCIONAL | `franquicias/proceso_llamada_inicial_venta` contra `nucleo/fase_assess` **(t31.7)** |
+| **338** | OK | `entrega/detectar_prioridad_cliente_entrega` contra `nucleo/desconexion_ventas_experiencia` **(t47.9)** |
+| **339** | OK, angulos | `environmental/optimizacion_rutas_ecoruteo` contra `nucleo/milk_run_deliveries` **(t30.8)** |
+| **340** | OK, **herramientas muertas, tercer nodo** | ver abajo |
+| **341** | OK | `risk_management/riesgo_no_es_mala_suerte` contra `nucleo/registro_de_riesgos` **(t45.6)**. Tercera pareja sana del reencuadrado |
+| **342** | OK | `environmental/logistica_inversa_rentable` contra `nucleo/economia_circular_como_modelo_de_negocio` **(t34.2)**. **El nucleo re-exhibe la costura de la calibradora** |
+| **343** | OK | `franquicias/riesgo_concepto_vs_amenaza_competitiva` contra `nucleo/evaluacion_ventana_mercado` **(t39.1)** |
+| **344** | OK | `quality/diagrama_de_flujo_proceso_map` contra `nucleo/mapa_flujo_trabajo_cliente` **(t41.9)** |
+| **345** | OK | `quality/benchmarking_mejores_practicas` contra `nucleo/auditoria_desempeno_new_products` **(t41.0)** |
+| **346** | FALSO PAR FUNCIONAL | `risk_management/busca_el_riesgo_antes_de_que_te_busque` contra `nucleo/convertir_unknown_unknowns_en_known_unknowns` **(t51.2)**. **La cola cierra con el id fosil exhibiendose por ultima vez** |
+
+### 320, el ultimo lote destapa la clase que estaba declarada SIN MEDIR
+
+`quality/descubrir_necesidades_cliente` contra
+`nucleo/customer_discovery_phase2_problem_test` **(t36.6)**
+
+**El par cumple.** Lo que trae es el nodo del mundo:
+
+> **`quality` tiene DOS nodos de descubrir necesidades del cliente, y sus nombres
+> se diferencian en UNA PALABRA:**
+>
+> | nodo | pasos | titulo |
+> |---|---:|---|
+> | `descubrir_necesidades_cliente` | 3 | *Descubrir las Necesidades del Cliente* |
+> | `descubrir_necesidades_del_cliente` | 6 | *Descubrimiento de las Necesidades del Cliente* |
+>
+> **Los dos de Juran, los dos activos, ninguno con marca, y NO conectados.**
+
+**El de tres pasos es la version comprimida** (recolectar la voz del cliente,
+identificar explicitas e implicitas, priorizar). **El de seis es el metodo
+completo** (planificar los metodos, recopilar en el lenguaje del cliente,
+distinguir declaradas de reales de percibidas de culturales, investigar usos no
+previstos, priorizar, y traducir a lenguaje tecnico).
+
+> **Y AQUI ESTA LO QUE IMPORTA: este par NO ES UNA FAMILIA DE SUFIJO.** Se llaman
+> distinto desde el origen, asi que **ninguna consulta de sufijo lo habria
+> encontrado jamas**, ni la de `_2` ni la general ni la de cadenas.
+>
+> **Es el PRIMER MIEMBRO CONCRETO de la clase que la ficha declaro NO MEDIDA**: los
+> huerfanos por **nombre libre**. **La cola lo entrego en su ultimo lote, y por
+> accidente.**
+
+### 322, el par de SCORECARDS del nucleo
+
+`environmental/modelo_eco_criterios_ponderados` contra
+`nucleo/scorecard_de_seleccion_de_proyectos` **(t62.2)**
+
+**El nucleo tiene DOS scorecards de seleccion de proyectos**, con el puesto 174, y
+**los dos son de Cooper**:
+
+| lo que dicen los dos | `scoring_model_scorecard` | `scorecard_de_seleccion_de_proyectos` |
+|---|---|---|
+| **los MISMOS seis criterios** (encaje con la estrategia, ventaja del producto, atractivo del mercado, aprovechar lo que ya sabes hacer, viabilidad tecnica, riesgo contra retorno) | paso 1 | paso 1 |
+| escala o pesos | paso 2 | paso 2 |
+| puntuar y priorizar | pasos 3 y 4 | pasos 3 y 4 |
+
+**Lo propio de cada uno es UN paso**: *"usa un scorecard distinto segun el tipo de
+proyecto"* en uno; *"revisa y actualiza tu lista"* en el otro.
+
+> **CONTINUA O REPITE: repite. Y NO estan conectados.** **Cuarto par calcado del
+> nucleo.**
+
+### 340, herramientas muertas: el tercer nodo, y con mas de una
+
+`quality/analisis_competitivo_calidad` contra `nucleo/analisis_trafico_competitivo`
+**(t59.0)**
+
+**Es el TERCER nodo competitivo del nucleo** (con los del par de analisis
+competitivo, puestos 193 y 209), **y el que mas herramientas nombra**.
+
+> **PRECISION VERIFICADA sobre cuales estan muertas**, porque el encargo agrupo
+> tres nombres y **solo uno de esos tres lo esta**:
+>
+> | herramienta | donde | estado |
+> |---|---|---|
+> | **Alexa** | pasos 1 y 6 | **RETIRADA** por Amazon en 2022 |
+> | **Compete** | paso 1 | **RETIRADA**, y antes que Alexa |
+> | Quantcast | paso 6 | **sigue operando** |
+> | MixRank | paso 5 | **sigue operando** |
+> | Adbeat | paso 5 | **sigue operando** |
+> | Quora | paso 3 | **sigue operando** |
+
+**A la ficha de herramientas muertas. El nodo no se toca.**
+
+---
+
+# CIERRE DEL FRENTE DEL GRADIENTE
+
+**346 de 346 pares leidos. Sin muestreo. La cola esta agotada.**
+
+## Lo que la vara encontro, que era su trabajo
+
+| | |
+|---|---:|
+| **pares leidos** | **346** |
+| **violaciones de gradiente** | **8** |
+| de esas, **curadas** en la cirugia 1 | **5** |
+| **abiertas**, adjudicadas y sin ejecutar | **3** |
+
+**Las ocho violaciones viven en los primeros cinco lotes.** **La ultima esta en el
+puesto 64.** Desde el **puesto 99** hasta el **346**, **doce lotes seguidos sin una
+sola violacion nueva.**
+
+> **La conclusion de la vara es que el gradiente, como problema, estaba
+> CONCENTRADO ARRIBA.** Y eso **valida el instrumento**: la señal ordeno la cola de
+> modo que **lo que dolia salio primero.**
+
+## Lo que la cola encontro sin buscarlo, que resulto ser mas
+
+**La cosecha lateral no cabe en la vara, y por eso vive en
+`docs/FICHA_SUBFUSION_GRADIENTE.md`:**
+
+| hallazgo | cuanto |
+|---|---|
+| **costuras de acrecion confirmadas de rebote** | **6**, y una de ellas destapo el primer falso negativo del instrumento hermano |
+| **pares calcados** | **4 en el nucleo** (innovacion abierta, programacion de produccion, control de proceso via `quality`, scorecards) y **3 dentro de un mundo** |
+| **colaterales de clase** | **5**: voz y valvula (C1), numero de paso en el titulo (C2, seis miembros), id fosil (C4), audiencia invertida (C5) |
+| **fronteras con choque de fuentes** | **4**, con **su patron** (Deming contra las practicas gerenciales) y **su pieza neutral ya existente** |
+| **verificaciones post-cirugia no buscadas** | **4** (puestos 59, 173, 217 y 268) |
+| **citas intra-dominio** | quince racimos |
+| **citas mundo contra mundo** | 2 |
+| **fichas alimentadas** | marco-pais (3 miembros y su MODELO), herramientas muertas (3 nodos), Hugos (128 nodos, 2 duplicados dentro) |
+
+> **La vara midio lo que se le pidio y salio bien. Lo que no se le pidio, y aparecio
+> igual, es lo que deja trabajo para meses.**
+
+## Los herederos del frente
+
+**El frente del gradiente cierra. Lo que hereda esta declarado y medido:**
+
+| heredero | estado |
+|---|---|
+| **la franja bajo el umbral** | el umbral 0,75 esta muy por encima del p99.9; **bajar a 0,70 o 0,65 la ensancha**, y **no se ha dimensionado** |
+| **el barrido intra-dominio** | decidido por el fundador, **al final y con cola propia**; converge con la pregunta mundo-mundo y con la clase de nombre libre |
+| **las 109 costuras por leer** | 19 de 128 leidas; **la clase de acrecion sigue viva** |
+| **la clase de NOMBRE LIBRE** | ya no esta sin miembros: **el puesto 320 le dio el primero** |
+
+> **La cola de 346 se leyo entera, una por una, y ninguna se extrapolo de su
+> vecina. Eso era el compromiso, y esta cumplido.**

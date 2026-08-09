@@ -823,6 +823,44 @@ vuelve a caducar.
 > barrido**. La primera que apareció, apareció **de rebote**. Cuando se despierte,
 > lo primero es **el barrido**, no la entrada suelta.
 
+### Entrada 3 (lote 22, puesto 340): el nodo que más herramientas nombra
+
+`nucleo/analisis_trafico_competitivo` (*The Startup Owner's Manual* | *Traction*)
+nombra **seis herramientas en ocho pasos**, y **no todas están muertas**. La lista
+exacta, verificada contra el grafo:
+
+| herramienta | dónde | estado |
+|---|---|---|
+| **Alexa** | pasos 1 y 6 | **RETIRADA** por Amazon en 2022 |
+| **Compete** | paso 1 | **RETIRADA**, y antes que Alexa |
+| Quantcast | paso 6 | sigue operando |
+| MixRank | paso 5 | sigue operando |
+| Adbeat | paso 5 | sigue operando |
+| Quora | paso 3 | sigue operando |
+
+> **PRECISIÓN, porque cambia el tamaño del arreglo**: el encargo agrupó *Alexa,
+> Quantcast y MixRank*, y **de esas tres solo Alexa está muerta**. Las muertas son
+> **Alexa y Compete**; las otras cuatro siguen vivas. **La reparación es
+> quirúrgica, no una reescritura del nodo.**
+
+**La ficha va por tres nodos y ocho menciones:**
+
+| nodo | herramientas nombradas |
+|---|---|
+| `nucleo/seo_link_building` (P69) | Open Site Explorer |
+| `nucleo/seo_estrategia_fat_head` (P145) | Open Site Explorer |
+| `nucleo/analisis_trafico_competitivo` (P340) | Alexa, Compete, Quantcast, MixRank, Adbeat, Quora |
+
+> **Los tres son del núcleo, y los tres aparecieron de rebote leyendo el
+> gradiente.** Ninguno se buscó.
+
+**Y el barrido gana un criterio que antes no tenía**: no basta con listar los
+nombres propios, **hay que comprobar cuáles siguen vivos**. En este nodo, **cuatro
+de seis lo están**. Un barrido que asuma que todo nombre propio caducó **rompería
+consejos que funcionan**.
+
+**Ningún nodo se toca: la reparación es de la pasada única.**
+
 ### Entrada 2 de herramientas (lote 13, puesto 145): Open Site Explorer, SEGUNDA vez
 
 `nucleo/seo_estrategia_fat_head` **cita la misma herramienta muerta** que

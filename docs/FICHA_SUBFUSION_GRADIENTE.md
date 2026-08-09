@@ -1126,10 +1126,29 @@ y una se fundio, **ninguna consulta de sufijo lo vera jamas.**
 Ese residuo **solo se caza con semantica**, y **es la misma pregunta mundo contra
 mundo** anotada en el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`.
 
+### EL PRIMER MIEMBRO CONCRETO, y lo dio el ultimo lote de la cola
+
+**`quality/descubrir_necesidades_cliente` (3 pasos) y
+`quality/descubrir_necesidades_del_cliente` (6 pasos).** Puesto **320**.
+
+| | |
+|---|---|
+| titulos | *Descubrir las Necesidades del Cliente* contra *Descubrimiento de las Necesidades del Cliente* |
+| fuente | **la misma**, Juran |
+| estado | **los dos activos, ninguno con marca, NO conectados** |
+| contenido | el de 3 pasos es **la version comprimida**; el de 6 es **el metodo completo** (planificar metodos, recopilar en el lenguaje del cliente, distinguir declaradas de reales de percibidas de culturales, usos no previstos, priorizar, traducir a lenguaje tecnico) |
+
+> **Sus nombres se diferencian en UNA PALABRA, y esa palabra basta para que ninguna
+> consulta de sufijo los vea**: ni la de `_2`, ni la general, ni la de cadenas.
+>
+> **La clase deja de ser una hipotesis.** Y lo entrego **la cola, en su ultimo
+> lote, por accidente**, que es exactamente como aparecieron casi todos los
+> hallazgos laterales de esta campana.
+
 | clase | estado |
 |---|---|
 | huerfanos por **familia de sufijo** | **CERRADA**: seis bases, nueve rutas, todas en `quality` |
-| huerfanos por **nombre libre** | **NO MEDIDA**, y declarada como tal |
+| huerfanos por **nombre libre** | **NO MEDIDA**, pero **YA NO SIN MIEMBROS**: ver abajo |
 
 ---
 
@@ -1252,9 +1271,14 @@ suelto para ser **un mapa completo**:
 `franquicias/manejo_objeciones_venta_franquicia` lleva **siete** emparejamientos
 leidos (puestos 5, 42, 54, 70, 75, 117 y 167) de **diez** que tiene en la cola.
 
-> **Solo la frontera del puesto 5 es doctrinal**; las otras seis son falsos pares
-> por vecindad de venta. **El contador no agrava el caso: lo acota.** Lo que hay
-> que resolver sigue siendo **uno**.
+> **CIERRE DEL CONTADOR**: la cola termino con **DIEZ apariciones** (puestos 5, 42,
+> 54, 70, 75, 117, 167, 216, 218 y 336), **las diez leidas**.
+>
+> **Una sola es doctrinal, la del puesto 5. Las otras NUEVE son falsos pares por
+> vecindad de venta.**
+>
+> **El contador nunca agravo el caso: lo acoto.** Diez emparejamientos y **un solo
+> problema real**, que es el que la ficha de fronteras ya tenia.
 
 ## EL PATRON, que las dos ultimas dejan a la vista
 
@@ -1693,7 +1717,23 @@ gravedad** y pone al **ingeniero de calidad** a revisarlos a diario.
 > **Dos alturas del mismo paso, y el `_2` en voz de fabrica.** **La lectura de
 > fusion decide, y el superviviente no se adjudica aqui.**
 
-## q) `franquicias`, el par de la PRIMERA LLAMADA
+## q) `nucleo`, el par de SCORECARDS (cuarto calcado del nucleo)
+
+`scoring_model_scorecard` (puesto **174**) y `scorecard_de_seleccion_de_proyectos`
+(puesto **322**). **Cinco pasos cada uno, los dos del nucleo, los dos de Cooper.**
+
+| lo que dicen los dos | uno | el otro |
+|---|---:|---:|
+| **los MISMOS seis criterios**: encaje con la estrategia, ventaja del producto, atractivo del mercado, aprovechar lo que ya sabes hacer, viabilidad tecnica, riesgo contra retorno | 1 | 1 |
+| escala o pesos | 2 | 2 |
+| puntuar y priorizar | 3 y 4 | 3 y 4 |
+
+**Lo propio de cada uno es UN paso**: *"usa un scorecard distinto segun el tipo de
+proyecto"* contra *"revisa y actualiza tu lista"*.
+
+> **CONTINUA O REPITE: repite. Y NO estan conectados.**
+
+## r) `franquicias`, el par de la PRIMERA LLAMADA
 
 `proceso_primera_llamada` (7 pasos, puesto **270**) y
 `proceso_llamada_inicial_venta` (8 pasos, puestos **74** y **274**). **Los dos de
@@ -1716,7 +1756,7 @@ el avance con **el CIRF**.
 
 ---
 
-## r) `nucleo`, el racimo de SUCESION
+## s) `nucleo`, el racimo de SUCESION
 
 `founder_ceo_succession_process` (leido **sano** en el lote C3),
 `framework_tres_rs_sucesion` (puesto **305**) e
@@ -1730,7 +1770,7 @@ el avance con **el CIRF**.
 que **la lectura de este racimo no es solo de duplicado: es tambien de a quien le
 habla cada uno.**
 
-## s) `nucleo`, la RETENCION: un trio donde la cura YA se aplico
+## t) `nucleo`, la RETENCION: un trio donde la cura YA se aplico
 
 | nodo | pasos | estado |
 |---|---:|---|
@@ -1806,6 +1846,45 @@ ESPECIALIZACION**.
 > Con esto, la entrada de las 36 parejas queda cerrada por el lado de la unica que
 > cruzaba dominios: **no habia duplicado que fusionar, habia un sufijo que
 > significaba otra cosa.**
+
+---
+
+# FIGURA NUEVA: EL BASE FUE FUSIONADO Y SU HERMANO QUEDO FUERA
+
+**Medida por el auditor y reproducida por el ejecutor.** Es **la inversa de los
+huerfanos del caso 8**, y es peor.
+
+| | los huerfanos (caso 8) | esta figura |
+|---|---|---|
+| el **base** | **sin marcas**: se quedo fuera de la fusion | **CON marcas** (`ids_alias` o `merged_originals`): **estuvo EN la fusion** |
+| el **hermano `_N`** | fue absorbido por un tercero | **activo y sin marcas**: **nadie lo miro** |
+
+> **Alli la fusion no vio al base. Aqui la fusion TRATO al base y dejo fuera a su
+> propio hermano.** **Alguien tuvo el nodo en la mano y no miro al lado.**
+
+## La consulta, reproducida: SEIS rutas sobre CUATRO bases
+
+| base (con marcas) | dominio | hermanos que quedaron fuera |
+|---|---|---|
+| **`accion_correctiva`** | quality | **`_2`, `_4` y `_6`**: **TRES** |
+| `medicion_calidad` | quality | `_2` |
+| `six_sigma_dmaic` | quality | `_2` |
+| `ciclo_ventas_calidad_franquicia` | franquicias | `_2` |
+
+**Seis rutas, cuatro bases, cinco de las seis en `quality`.**
+
+## Y la secuencia de Crosby otra vez
+
+**Cuatro de los seis hermanos que quedaron fuera son de Crosby** (*Quality is
+free*): los tres de `accion_correctiva` y el de `medicion_calidad`. **Dos de ellos
+llevan el numero de paso en el titulo**: *Accion Correctiva (**Paso 6**)* y *Paso
+3: Medicion de la Calidad*.
+
+> **Y un detalle que agrava el de `accion_correctiva`: el base es de JURAN y los
+> tres hermanos que quedaron fuera son de CROSBY.** La fusion conservo el nodo de
+> un autor **y dejo sueltos tres del otro**, sobre el mismo tema.
+
+**Sin adjudicar. Lectura de fusion en la pasada unica.**
 
 ---
 
@@ -2140,6 +2219,12 @@ es un id que dejo de decir la verdad.**
 
 **Puede no ser el unico.** Un barrido seria comparar el id contra el titulo y el
 contenido de cada nodo, y **no se ha corrido**.
+
+> **Y ese unico miembro CERRO LA COLA.** Se re-exhibio en los puestos **324** y
+> **346**, o sea **el ultimo par leido de los 346 es el id fosil**. **Tres
+> apariciones en total** (190, 324 y 346), **las tres falsos pares**: el id **atrae
+> emparejamientos por lo que PROMETE, no por lo que dice**. Es la demostracion
+> practica de por que un id que miente envenena las consultas.
 
 > **Queda declarada como clase con un solo miembro conocido.** Es lo unico honesto
 > que se puede decir hoy: **no que sea un caso aislado, sino que solo se ha medido
