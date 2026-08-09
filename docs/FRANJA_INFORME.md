@@ -14,7 +14,7 @@ apartado 6.3.
 Ningun nodo se toco. Este documento es la entrega. **La adjudicacion del
 auditor sobre las 2 A y las 6 B ya llego y esta en la seccion 9**; los racimos
 quedan para despues de la muestra, y **la muestra del 5% de las D ya esta
-sorteada, versionada y con su primera tanda leida** (seccion 10).
+sorteada, versionada y con dos tandas de tres leidas** (seccion 10).
 
 ---
 
@@ -24,8 +24,8 @@ sorteada, versionada y con su primera tanda leida** (seccion 10).
 |---|---|---:|---:|
 | A | Violacion candidata de la vara | 2 | 0,1 |
 | B | Dudoso | 6 | 0,4 |
-| C | Sano, pero con hallazgo lateral | 370 | 23,0 |
-| D | Sano y limpio | 1.228 | 76,5 |
+| C | Sano, pero con hallazgo lateral | 371 | 23,1 |
+| D | Sano y limpio | 1.227 | 76,4 |
 | | **Total** | **1.606** | **100** |
 
 Las dos A estan en los puestos 15 y 124. Las seis B estan en los puestos 22,
@@ -39,7 +39,7 @@ violaciones del gradiente.
 
 **Lo que la franja si encontro.** El cribado se cruzo con otra cosa, mucho mas
 grande que lo que venia a buscar: el catalogo esta lleno de nodos que dicen lo
-mismo dos, tres, cuatro y hasta doce veces. Eso es lo que ocupa las 370 C y es
+mismo dos, tres, cuatro y hasta doce veces. Eso es lo que ocupa las 371 C y es
 lo que este informe organiza en la seccion 4.
 
 ---
@@ -53,7 +53,7 @@ porque cambian como se leen los veredictos.
    manual y el infinitivo suelto NO disparan C: aparecen en demasiados nodos
    para ser senal.
 2. **En cada razon de C digo si la figura es NUEVA o YA REGISTRADA**, para que
-   la adjudicacion no tenga que ir a buscarlo. De las 370 C, 112 traen una
+   la adjudicacion no tenga que ir a buscarlo. De las 371 C, 113 traen una
    figura nueva.
 3. **Las herramientas con nombre propio se anotan SIN asumir que murieron.**
    Las plataformas de uso general (Google, LinkedIn, Facebook, Amazon) se
@@ -66,7 +66,7 @@ porque cambian como se leen los veredictos.
 
 Cuando una figura ya quedaba censada completa (los racimos grandes), en varios
 pares posteriores que solo tocaban a un miembro ya contado marque D en vez de
-C. **El conteo de 370 C subestima cuantas veces se volvio a ver cada figura.**
+C. **El conteo de 371 C subestima cuantas veces se volvio a ver cada figura.**
 Lo que NO queda corto son las figuras mismas y sus censos: esos estan
 completos y son lo que importa para adjudicar.
 
@@ -396,7 +396,8 @@ que quedo como B en franja 28.
 
 ## 6. Correcciones mias, en limpio
 
-Tres errores propios que quedan aqui declarados y ya corregidos en el archivo:
+Cuatro errores propios que quedan aqui declarados y ya corregidos en el archivo
+(el cuarto lo encontro la muestra D, no yo):
 
 1. **Cifras mal sumadas en dos mensajes de commit.** En el checkpoint de 500
    escribi 100 C y 393 D cuando eran 112 y 381; en el de 800 escribi 191 C y
@@ -437,6 +438,15 @@ Tres errores propios que quedan aqui declarados y ya corregidos en el archivo:
    (apartado 4.4) y la 1604 es la **quinta verificacion post-cirugia no
    buscada** (apartado 9.4).
 
+4. **Una figura del encargo aplicada a medias: los *Punto N* de Deming.** La
+   figura *numero de paso en el titulo* la aplique a los *Paso N* del programa de
+   Crosby y **nunca a los *Punto N* de los catorce puntos de Deming**, que son
+   siete nodos de `quality` con la misma forma. Su primera aparicion en la cola
+   fue la **franja 159** y la clasifique D. **La encontro la muestra D en la
+   franja 822**, que queda corregida a C con el censo entero de la figura en su
+   razon; el detalle esta en el apartado 10.1, verificacion 1. **Es el unico
+   veredicto que la muestra ha tenido que corregir en 41 pares leidos.**
+
 ---
 
 ## 7. Lo que el auditor tiene que decidir
@@ -460,15 +470,15 @@ resto sigue abierto.
    propio catalogo ya tiene como vara.
 6. **Los seis choques de doctrina** entre mundo y nucleo.
 7. ~~**El 5% de muestra aleatoria de las D**, que el auditor sortea.~~
-   **SORTEADA, VERSIONADA Y EN CURSO**: 61 pares, 20 leidos y los 20 se
-   sostienen. Ver seccion 10.
+   **SORTEADA, VERSIONADA Y EN CURSO**: 61 pares, 41 leidos y los 41 se
+   sostienen en la vara. Ver seccion 10.
 
 ---
 
 ## 8. Los veredictos completos
 
 Lo que sigue es la lista de cada A, cada B y cada C con su razon, en orden de
-`puesto_franja`. Las 1.228 D no se listan aqui; estan enteras en
+`puesto_franja`. Las 1.227 D no se listan aqui; estan enteras en
 `docs/FRANJA_VEREDICTOS.jsonl`, una por linea, con su razon.
 
 ### 8.1 Las A (2)
@@ -493,7 +503,7 @@ Lo que sigue es la lista de cada A, cada B y cada C con su razon, en orden de
 - **610** | franquicias/concepto_de_advances contra advances_vs_continuations  
   DUDOSO. El nodo del mundo da cuatro pasos de la misma doctrina que el nucleo, el avance como venta pequena progresiva, y lo unico propio de franquicias es el ejemplo del CIRF. El nucleo ademas aporta el diagnostico que el mundo no tiene: distinguir avance de continuacion y preguntarte que falto cuando solo lograste una continuacion. La especializacion es un ejemplo, no metodo.
 
-### 8.3 Las C (370)
+### 8.3 Las C (371)
 
 Cada razon dice si la figura es NUEVA o YA REGISTRADA.
 
@@ -893,6 +903,8 @@ Cada razon dice si la figura es NUEVA o YA REGISTRADA.
   El mundo especializa la primera llamada a la venta de franquicias contra preparar las preguntas de problema: sano. FIGURA: par calcado de franquicias, proceso_llamada_inicial_venta con proceso_primera_llamada, ya registrado.
 - **820** | quality/distincion_causas_especiales_comunes contra regla_simplificada_tolerancia_errores  
   Verificar el control estadistico antes de ajustar el proceso contra la regla de dos lineas: niveles distintos, sano. FIGURA: trio calcado de causas comunes y especiales, ya registrado en franja 265.
+- **822** | quality/institucionalizar_capacitacion contra rediseno_procesos_negocio_cx  
+  Instituir la capacitacion segun Deming contra redisenar los procesos que le dan friccion al cliente. Objetos distintos, sano. FIGURA NUEVA, destapada por la muestra D (tanda 2): numero de paso en el titulo, y no es el programa de Crosby sino LOS CATORCE PUNTOS DE DEMING. El nodo se titula Instituir la Capacitacion (Punto 6). Censo verificado contra el grafo: SIETE nodos de quality llevan el numero de punto en el titulo, los puntos 5, 6, 7, 8, 10, 13 y 14 (mejora_continua_del_sistema, institucionalizar_capacitacion, adopcion_liderazgo, eliminar_miedo, eliminar_slogans_metas, fomento_educacion_autoeducacion y plan_de_accion_transformacion). CORRECCION MIA: la figura si estaba en la lista del encargo y la aplique a los Paso N de Crosby, pero nunca a los Punto N de Deming; su primera aparicion en la cola fue la franja 159 y la clasifique D. Las demas apariciones quedan D bajo la limitacion declarada de re-vista de racimo ya contado.
 - **824** | franquicias/calculo_roi_franquiciado_2 contra validacion_hipotesis_ingresos  
   Calcular el retorno que gana quien compra tu franquicia contra comprobar si tus ingresos aguantan el negocio: objetos distintos, sano. FIGURA: sufijo _N vivo en franquicias, calculo_roi_franquiciado_2. Vigesimo quinto miembro.
 - **829** | quality/revision_progreso contra revision_portafolio_periodica  
@@ -1414,6 +1426,25 @@ Extraccion: `sample` de 61, **sin reemplazo**. Resultado ordenado ascendente.
 > lista sale **identica a la dictada por el auditor, los 61 puestos, en el mismo
 > orden**. Cero diferencias en los dos sentidos.
 
+> **PIN OBLIGATORIO, y hay que leerlo antes de intentar reproducir el sorteo.**
+> La poblacion del sorteo son las **1.228 D que habia en el archivo cuando se
+> sorteo**, es decir el archivo tal como quedo en el commit **`e4af8c35`**. La
+> propia muestra ya reclasifico un veredicto (**F822**, de D a C, ver la tanda
+> 2), asi que **la poblacion viva ya no es la misma**: hoy son 1.227 D y el
+> mismo procedimiento sobre esa poblacion **da otra lista** (comprobado: solo 34
+> de los 61 puestos coincidirian).
+>
+> **Reproducir el sorteo se hace contra el pin, no contra el archivo vivo:**
+>
+> ```
+> git show e4af8c35:docs/FRANJA_VEREDICTOS.jsonl
+> ```
+>
+> **Y esto no es un defecto del sorteo: es lo que pasa cuando una muestra
+> funciona.** Si la validacion encuentra algo, cambia el archivo que valida. La
+> lista versionada de arriba es la que manda; el procedimiento sirve para
+> auditarla contra el pin.
+
 #### La lista completa, versionada
 
 Los 61 puestos sorteados, con su par y su tanda. **Esta es la lista de
@@ -1488,10 +1519,15 @@ que sale del procedimiento de arriba corrido sobre el archivo.
 
 | | |
 |---|---:|
-| **pares D leidos por el auditor** | **20** de **61** |
-| de esos, se sostienen como **D limpios de vara** | **20** |
+| **pares D leidos por el auditor** | **41** de **61** |
+| de esos, se sostienen como **D limpios de vara** | **41** |
 | **violaciones encontradas** | **0** |
 | **dudosos mal archivados** | **0** |
+| **veredictos corregidos por figura** | **1** (F822, de D a C) |
+
+**Cifras recomputadas del archivo, no del dictado.** Las 41 leidas son la tanda 1
+(20 puestos, del 18 al 603) mas la tanda 2 (21 puestos, del 621 al 1128). Quedan
+**20 por leer**, del 1130 al 1565.
 
 #### TANDA 1 (puestos 18 a 603): VEINTE DE VEINTE
 
@@ -1534,6 +1570,132 @@ formuladas, con sus dos nodos y la nota de parentesco con
 `risk_management/correr_hacia_el_riesgo`, que sale del mismo capitulo del mismo
 libro que el nodo del mundo.
 
+
+#### TANDA 2 (puestos 621 a 1128): VEINTIUNO DE VEINTIUNO limpios de vara
+
+**Los veintiun pares de la tanda 2 se sostienen en la pregunta de la vara.** El
+auditor los leyo contra el grafo. **Cero violaciones y cero dudosos escondidos**,
+igual que la tanda 1.
+
+**La muestra acumula 41 de 41 sin una sola violacion.** Con 41 de 61 leidos, dos
+tercios de la validacion estan hechos y el cribado se sostiene en lo que vino a
+comprobarse: **la clasificacion de las D como sanas de gradiente no ha fallado ni
+una vez.**
+
+**Pero la tanda dejo dos cosas que la tanda 1 no dejo**, y las dos se verificaron
+contra el grafo antes de escribirlas. La primera obligo a corregir un veredicto;
+la segunda desarmo una candidatura.
+
+#### VERIFICACION 1 (F822): la figura estaba en la lista y se me escapo
+
+**Resultado: es el primer C-como-D de la muestra. El veredicto queda corregido.**
+
+`quality/institucionalizar_capacitacion` se titula **Instituir la Capacitacion
+(Punto 6)**. Numero de paso en el titulo **estaba entre las ocho figuras que
+disparaban C** en el encargo, asi que no cabe archivarlo bajo ninguna limitacion
+declarada.
+
+**Comprobado contra el informe, como pedia el encargo:** el racimo de los catorce
+puntos de Deming **NO esta entre los treinta racimos censados** del apartado 4.1.
+El que si esta es **el programa de catorce pasos de CROSBY**, que es otro
+programa, de otro autor, con otra numeracion. **No son el mismo hallazgo.**
+
+**Censo de la figura, verificado contra el grafo. Son SIETE nodos, todos de
+`quality`, y todos llevan el numero de punto de Deming en el titulo:**
+
+| punto | nodo | titulo |
+|---:|---|---|
+| **5** | `mejora_continua_del_sistema` | Mejora continua y permanente del sistema de produccion y servicio (Punto 5) |
+| **6** | `institucionalizar_capacitacion` | Instituir la Capacitacion (Punto 6) |
+| **7** | `adopcion_liderazgo` | Adoptar e Instituir el Liderazgo (Punto 7) |
+| **8** | `eliminar_miedo` | Eliminar el Miedo (Punto 8) |
+| **10** | `eliminar_slogans_metas` | Eliminar Slogans, Exhortaciones y Metas Numericas (Punto 10) |
+| **13** | `fomento_educacion_autoeducacion` | Fomentar la Educacion y Autoeducacion (Punto 13) |
+| **14** | `plan_de_accion_transformacion` | Plan de Accion para la Transformacion (Punto 14) |
+
+> **Siete de los catorce puntos entraron al catalogo como nodos sueltos con el
+> numero puesto**, exactamente la misma forma que ya se habia censado para los
+> pasos de Crosby. **Es la misma figura, de otro programa.**
+
+**La correccion, escrita sin adorno.** La figura estaba en la lista del encargo y
+**la apliqué a los *Paso N* de Crosby pero nunca a los *Punto N* de Deming**. Su
+primera aparicion en la cola no fue la 822: fue **la franja 159**
+(`mejora_continua_del_sistema`), y la clasifiqué D. La 822 es donde la muestra la
+cazo.
+
+**Lo que cambia y lo que no:**
+
+- **F822 pasa de D a C**, con la figura y el censo en su razon. Es el unico
+  veredicto corregido por la muestra hasta ahora.
+- **Las demas apariciones quedan D**, y no por dejadez: caen bajo la limitacion
+  declarada en el apartado 2 (cuando una figura queda censada completa, los pares
+  posteriores que solo tocan a un miembro ya contado se marcan D). El censo esta
+  arriba, entero, que es lo que la adjudicacion necesita.
+- **Las cifras de clase cambian**: 371 C y 1.227 D. Recomputadas del archivo.
+
+#### VERIFICACION 2 (F947): el paralelo se sostiene a medias y la candidatura cae
+
+**Resultado: la D se sostiene. NO es par calcado, y el dato que sostenia la
+candidatura no esta en el texto.**
+
+`quality/desarrollo_expertos_capaces` (Juran) contra
+`core/entrenamiento_funcional_empleados` (Horowitz), leidos paso a paso:
+
+| | quality (Juran) | nucleo (Horowitz) |
+|---:|---|---|
+| **1** | usar los resultados de la evaluacion de competencias como linea base | identificar las competencias clave de cada rol critico |
+| **2** | disenar un curriculo de capacitacion por rol y nivel jerarquico | crear documentos o programas de entrenamiento especificos (*Good PM / Bad PM*) |
+| **3** | **establecer un programa de certificacion interno** (Green Belt, Black Belt, Lean Expert) | **hacer obligatorio el entrenamiento antes de aprobar nuevas contrataciones** |
+| **4** | medir el impacto de la capacitacion en el desempeno de los proyectos de mejora | medir la productividad de los nuevos empleados antes y despues |
+
+**Lo que si se confirma:** el paralelo es real **en tres de los cuatro pasos**.
+Los dos nodos montan el mismo esqueleto (linea base de competencias, programa por
+rol, medicion despues), y eso es mas parecido de lo que decia mi razon original
+(*metodos distintos*).
+
+**Lo que lo desarma, y es el paso 3.** Ahi las dos doctrinas se separan de
+verdad: **quality monta una estructura de certificacion interna** y **el nucleo
+pone el entrenamiento como compuerta de contratacion**. No es el mismo consejo
+dicho dos veces: son dos palancas distintas sobre el mismo material.
+
+> **Y la premisa de la candidatura no esta en el catalogo, comprobado.** El
+> encargo la apoyaba en que los dos lados usan **el mismo ejemplo, Green Belt**.
+> **`entrenamiento_funcional_empleados` no dice Green Belt en ningun sitio**: ni
+> en sus pasos, ni en su resumen, ni en su entregable. Su ejemplo es **Good PM /
+> Bad PM**, de Horowitz.
+>
+> **Barrido del catalogo entero para no dejarlo en una sola lectura: Green Belt y
+> Black Belt aparecen en DOCE nodos, y los doce son de `quality`. Ninguno del
+> nucleo.** El vocabulario de los cinturones no cruza al catalogo gratis.
+
+**Por eso la D queda**, con la verificacion escrita en su razon. **No la subo a B
+tampoco**: los dos nodos tienen cuatro pasos, ninguno es mas hondo que el otro, y
+la especializacion de quality es real (competencias, cinturones, proyectos de
+mejora). No hay empate que adjudicar.
+
+#### Hallazgo lateral de la verificacion 2: el racimo de los cinturones
+
+El barrido de Green Belt y Black Belt destapo material que el cribado no habia
+visto, porque **son nodos de `quality` contra `quality` y la franja solo miraba
+mundo contra nucleo**. Se anota como **racimo CANDIDATO**, fuera del censo de
+treinta, que esta cerrado:
+
+- **El rol del Black Belt, tres veces**: `rol_black_belt`,
+  `rol_black_belt_six_sigma` y `rol_facilitador_black_belt`.
+- **La estructura de roles entera, dos veces**: `roles_six_sigma` y
+  `estructura_competencias_six_sigma_lean`, las dos listando Green, Black, Master
+  y Lean.
+- **La certificacion y el entrenamiento de los cinturones, tres veces**:
+  `certificacion_belts_six_sigma`, `entrenamiento_para_breakthrough` y
+  `desarrollo_expertos_capaces`, que es el nodo que abrio esta verificacion.
+- Y `rol_green_belt_six_sigma` para el Green Belt.
+
+> **Nueve nodos de `quality` sobre la estructura de cinturones de Six Sigma.**
+> Seria de los racimos mas grandes de los treinta censados si perteneciera a ese
+> censo. **No se censa aqui**: el censo de treinta esta cerrado y este es
+> material del barrido intra-dominio. **Queda anotado con su medicion para que el
+> barrido lo encuentre hecho.**
+
 ### 10.2 Los treinta racimos: primer censo, adjudicacion despues
 
 **Los treinta racimos del apartado 4.1 quedan como PRIMER CENSO del barrido
@@ -1565,5 +1727,6 @@ sobrevive, es salud del nucleo. Si desaparece, era el metro.
 ---
 
 **Estado del encargo:** cribado cerrado (1.606 de 1.606), agujero de borde
-cerrado, A y B adjudicadas, **muestra D sorteada y en curso (20 de 61, veinte de
-veinte se sostienen)**, racimos esperando al barrido.
+cerrado, A y B adjudicadas, **muestra D sorteada y en curso (41 de 61, cuarenta y
+uno de cuarenta y uno se sostienen en la vara, con un veredicto corregido por
+figura)**, racimos esperando al barrido.

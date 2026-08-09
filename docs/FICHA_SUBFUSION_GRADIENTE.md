@@ -777,6 +777,14 @@ Cada libro traia su version, y cada version entro entera detras de la anterior.
 > pisada**. **Un nodo base muy citado NO tiene por que acabar acrecionado**: el
 > defecto es de como se fusiono, no de cuanto se usa.
 
+> **Y el hub ha seguido sumando en la otra cola, sin una sola mala.** El cribado
+> de la franja le emparejo **CATORCE especializaciones mas** (trece D y una C con
+> hallazgo lateral, ninguna A y ninguna B), y la ultima la trajo la muestra D:
+> **F1096, `franquicias/mito_control_calidad_corporativo`**, otra pareja sana.
+> **Son dos colas distintas y por eso no se suman en una sola cifra**: nueve en
+> la cola de 346 y catorce en la franja. **Veintitres emparejamientos contra el
+> mismo nodo base y ni uno solo problematico.**
+
 **Consecuencia para la mesa del fundador**, y es la que cambia el orden de las
 prioridades:
 
@@ -875,12 +883,24 @@ por el otro lado; profundizar solo el mundo deja la costura viva.
 La unica que deja tarea es `quality/optimizacion_de_procesos` (franja 28), flaco
 y autorreferente: **candidato a engorde, no caso de vara.**
 
-**Y la validacion del cribado ya empezo**: el auditor sorteo la muestra del 5% de
-las D (61 pares, semilla `81febf5c`, procedimiento fijado y reproducido) y leyo
-la **tanda 1, veinte de veinte, contra el grafo**. **Cero violaciones y cero
-dudosos mal archivados.** Con 20 de 61 leidos lo validado es el primer tercio;
-las dos tandas que faltan son las que deciden. **El unico matiz de la tanda dio
-una FRONTERA CANDIDATA nueva**, registrada mas abajo en esta ficha.
+**Y la validacion del cribado va por dos tandas de tres**: el auditor sorteo la
+muestra del 5% de las D (61 pares, semilla `81febf5c`, procedimiento fijado y
+reproducido) y leyo la **tanda 1 (20 pares) y la tanda 2 (21 pares) contra el
+grafo**. **Cuarenta y uno de cuarenta y uno se sostienen en la vara: cero
+violaciones y cero dudosos escondidos.** Quedan 20 por leer.
+
+**Lo que la muestra si ha movido son figuras, no la vara**, y en tres entradas:
+
+1. **Tanda 1, F303**: una **FRONTERA CANDIDATA** nueva, registrada mas abajo en
+   esta ficha. Hueco de la lista de figuras del encargo, no error del cribado.
+2. **Tanda 2, F822**: **el primer C-como-D**, y el unico veredicto corregido en
+   41 pares. La figura de *numero de paso en el titulo* estaba en la lista y se
+   habia aplicado a los *Paso N* de Crosby pero **nunca a los *Punto N* de los
+   catorce puntos de Deming**: son **siete nodos de `quality`** con el numero
+   puesto en el titulo (puntos 5, 6, 7, 8, 10, 13 y 14). Censo entero en
+   `docs/FRANJA_INFORME.md`, apartado 10.1.
+3. **Tanda 2, F947**: una candidatura a par calcado transdominio que **el texto
+   completo desarmo**. Ver la nota de los cinturones aqui abajo.
 
 ---
 
@@ -1563,6 +1583,33 @@ si se reduce la base, y **documentar la decision segun criticidad del componente
 hay que inventarlo: ya esta en el catalogo.** **Lo que si se
 > puede afirmar ya es que no son errores: son dos escuelas, y el catalogo las
 > sirve a la vez sin avisar.**
+
+## RACIMO CANDIDATO: los cinturones de Six Sigma en `quality`
+
+**Llega por la muestra D del cribado** (tanda 2, verificacion de la franja
+**947**; detalle en `docs/FRANJA_INFORME.md`, apartado 10.1). **El cribado no
+podia verlo**: son nodos de `quality` contra `quality`, y la franja solo miraba
+mundo contra nucleo.
+
+**Nueve nodos de `quality` sobre la estructura de cinturones**, medidos contra el
+grafo:
+
+| que repite | nodos |
+|---|---|
+| **el rol del Black Belt, tres veces** | `rol_black_belt`, `rol_black_belt_six_sigma`, `rol_facilitador_black_belt` |
+| **la estructura de roles entera, dos veces** | `roles_six_sigma`, `estructura_competencias_six_sigma_lean` (las dos listan Green, Black, Master y Lean) |
+| **la certificacion y el entrenamiento, tres veces** | `certificacion_belts_six_sigma`, `entrenamiento_para_breakthrough`, `desarrollo_expertos_capaces` |
+| el Green Belt | `rol_green_belt_six_sigma` |
+
+> **Seria de los racimos mas grandes de los treinta censados si perteneciera a
+> ese censo. No pertenece**: el censo de treinta esta cerrado y este es material
+> del barrido intra-dominio. **Queda anotado con su medicion para que el barrido
+> lo encuentre hecho.**
+
+> **Y hay un dato de frontera que sale del mismo barrido**: **Green Belt y Black
+> Belt aparecen en DOCE nodos del catalogo y los doce son de `quality`. Ninguno
+> del nucleo.** El vocabulario de los cinturones **no cruza al catalogo gratis**,
+> que es exactamente lo que la vara del gradiente querria ver.
 
 ## FRONTERA CANDIDATA: la negacion del riesgo contra el determinismo del CEO
 
