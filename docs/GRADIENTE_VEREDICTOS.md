@@ -780,3 +780,210 @@ una cuenta sin nombre y conviene fijarlo al abrir la ficha.
 > como costura. Los cinco casos, con nombre y con su pregunta de lectura, en
 > `docs/FICHA_SUBFUSION_GRADIENTE.md`. **La nota se queda porque fue ella la que
 > obligo a fijarlos.**
+
+---
+
+## LOTE 7, puestos 41 a 60 por senal (veinte pares)
+
+**9 ago 2026.** Etiquetas y puestos **coinciden**; las veinte parejas de cifras
+verificadas contra `docs/GRADIENTE_PARES.jsonl`.
+
+### 41. GRADIENTE OK
+
+`quality/analisis_competitivo_calidad` contra `nucleo/brief_competitivo`
+**(t47.2, s0.8154)**
+
+**Producto contra posicionamiento**: pruebas de laboratorio y de campo contra la
+razon de compra. **Angulos complementarios.**
+
+### 42. FALSO PAR FUNCIONAL
+
+`franquicias/manejo_objeciones_venta_franquicia` contra
+`nucleo/diagnostico_sintoma_vs_causa_ventas` **(t35.2, s0.8139)**
+
+Manejar objeciones contra **diagnosticar problemas de venta**.
+
+### 43. FALSO PAR FUNCIONAL
+
+`compras/prepara_posicion_agenda_antes_negociar` contra
+`nucleo/orden_negociacion_puntos` **(t51.9, s0.8133)**
+
+Preparar una compra contra **ordenar los puntos de un term sheet de inversion**.
+Objetos distintos.
+
+### 44. GRADIENTE OK apretado
+
+`risk_management/deja_de_ignorar_el_riesgo` contra
+`nucleo/sesgo_optimismo_fundador` **(t34.7, s0.8131)**
+
+**El mismo sesgo por dos caras**: el nucleo lo ataca en **las proyecciones**
+(dividir entre diez, buscar evidencia en contra, premortem); el mundo, en **la
+negacion del riesgo** (los quince minutos de escribir lo que preferirias no
+pensar, el permiso semanal de pensar en negativo). **Ensanches distintos, ninguno
+domina.**
+
+### 45. FALSO PAR FUNCIONAL, con colateral de voz
+
+`compras/prepara_posicion_agenda_antes_negociar` contra
+`nucleo/negociacion_contratos_proveedores` **(t40.4, s0.813)**
+
+Momentos distintos: **preparar** contra **cerrar el contrato**.
+
+**COLATERAL**: el nodo del nucleo esta en **voz de manual**, con los cinco pasos
+en infinitivo (*Definir*, *Negociar*, *Establecer*, *Estudiar*, *Formalizar*).
+**Anotado para el barrido de voz residual. Sin tocar.**
+
+### 46. GRADIENTE OK POR ESPECIALIZACION
+
+`franquicias/ferias_comerciales_franquicia` contra
+`nucleo/estrategia_ferias_comerciales` **(t44.7, s0.8129)**
+
+El mundo **especializa la feria para reclutar franquiciados** (perfil de
+inversor, calificar prospectos en el stand) sobre la estrategia general.
+
+### 47. GRADIENTE OK del par; hallazgo en el racimo
+
+`quality/auditoria_de_producto_2` contra `nucleo/quality_audit`
+**(t39.0, s0.8125)**
+
+**Reinspeccion para verificar decisiones de inspeccion**: mas hondo que los cuatro
+pasos del nucleo, y **tema propio real**.
+
+**El hallazgo no es este par**: es el racimo al que pertenece. Ver el caso 6 de
+`docs/FICHA_SUBFUSION_GRADIENTE.md`.
+
+### 48. FALSO PAR FUNCIONAL
+
+`quality/evaluacion_desempeno_proyectos` contra
+`nucleo/team_performance_assessment` **(t65.0, s0.8116)**
+
+**Proyectos de mejora** contra **desempeno del equipo.** Objetos distintos.
+
+### 49. VIOLACION, la primera clasica desde el top-20. Arreglo por VIA 2
+
+`quality/value_stream_mapping` contra `nucleo/analisis_flujo_de_valor`
+**(t40.4, s0.8112)**
+
+El mundo **describe el metodo en cuatro pasos genericos** (documentar el flujo,
+registrar metricas, identificar desperdicio, priorizar). El nucleo **lo ENSENA en
+seis concretos**: lo real contra lo que uno cree, **interrogar cada actividad**
+(que trabajo se hace, cuanto tarda, si es necesaria), causa raiz de los cuellos, y
+**eliminar con ejemplos**.
+
+> **El gratuito ensena a hacerlo; el de pago lo describe.**
+
+**Arreglo por VIA 2, re-minado**: la fuente lean de `quality` tiene de sobra. **No
+se toca el nucleo.**
+
+### 50. GRADIENTE OK del par; al racimo
+
+`quality/programa_auditoria_calidad` contra `nucleo/quality_audit`
+**(t76.9, s0.8096)**
+
+### 51. GRADIENTE OK, con observacion estructural
+
+`quality/identificacion_de_riesgos` contra `nucleo/registro_de_riesgos`
+**(t59.1, s0.8092)**
+
+**Metodo real de identificacion** (lista sistematica, sombrero negro, fallas de
+tres anos) contra **el formato de registro**. Momentos distintos, **ambos sanos**.
+
+**La observacion no es del par**: `quality` contiene **una miniseccion de riesgos
+paralela al mundo `risk_management` entero**. Es un solape **mundo contra mundo**,
+invisible para el instrumento por diseno. Anotada como **limite conocido** en el
+tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`.
+
+### 52. FALSO PAR FUNCIONAL
+
+`compras/domina_lo_que_compras` contra `nucleo/gestion_procurement_consumo`
+**(t60.7, s0.8085)**
+
+**Investigar antes de negociar** contra **controlar el consumo**. Segunda vez que
+este nodo del nucleo empareja en falso (tambien en el puesto 26).
+
+### 53. GRADIENTE OK POR ESPECIALIZACION, con colateral de marco-pais
+
+`exportacion/proteccion_propiedad_intelectual_internacional` contra
+`nucleo/intellectual_property_strategy` **(t51.0, s0.8081)**
+
+**La capa internacional sobre la estrategia domestica.**
+
+**COLATERAL**: el nodo del mundo **cablea `uspto.gov` y `stopfakes.gov`**,
+agencias de **UN pais**. **Los tratados PCT y Madrid son intocables** (son el
+vocabulario acordado entre paises); **las URLs de agencias son la clase "ejemplar
+de un pais"** que pide el reencuadre *"averigua el de tu pais"*.
+
+**Anotado en la ficha dormida `vigencia-del-marco-internacional` de
+`docs/PENDIENTES.md`. El nodo no se toca.**
+
+### 54. FALSO PAR FUNCIONAL
+
+`franquicias/manejo_objeciones_venta_franquicia` contra
+`nucleo/senales_de_compra_reales` **(t33.8, s0.8064)**
+
+**Tercera aparicion** del nodo de objeciones en lo leido (puestos 5, 42 y 54). Su
+choque doctrinal **ya tiene ficha** (la frontera con SPIN, puesto 5).
+
+> **Dato verificado, para calibrar expectativas de la cola**: ese nodo aparece
+> **diez veces** en los 346, y **siete estan por leer**. Es un nodo de venta
+> ancho, no una anomalia; **pero conviene saber que volvera**.
+
+### 55. GRADIENTE OK del par; al racimo
+
+`quality/auditoria_producto` contra `nucleo/quality_audit` **(t50.0, s0.8061)**
+
+### 56. GRADIENTE OK
+
+`quality/auditoria_negocio` contra `nucleo/quality_audit` **(t49.1, s0.8058)**
+
+**Auditoria de negocio con preguntas clave**: tema propio.
+
+### 57. FALSO PAR FUNCIONAL
+
+`quality/enfoque_en_procesos_no_en_problemas` contra
+`nucleo/rediseno_procesos_negocio_cx` **(t45.7, s0.8048)**
+
+**PDCA sobre problemas recurrentes** contra **rediseno de la experiencia del
+cliente.**
+
+### 58. GRADIENTE OK del par; al racimo
+
+`quality/concepto_de_auditoria_de_calidad` contra `nucleo/quality_audit`
+**(t66.7, s0.8044)**
+
+### 59. GRADIENTE OK, y **EVIDENCIA POST-CIRUGIA POSITIVA**
+
+`risk_management/haz_tu_lista_de_lo_que_puede_fallar`, **ya reencuadrado** (*El
+Censo de Riesgos*), contra `nucleo/matriz_probabilidad_impacto`
+**(t28.9, s0.8043)**
+
+**El nodo reencuadrado se sostiene solo**: el censo con **el paso del pudor**
+(escribir lo que da verguenza admitir), **el criterio de que amerita accion**, y
+**observados contra activos**.
+
+> **Donde el puesto 5 encontro empate blando, la cola encuentra ahora momento
+> propio con voz propia. La cirugia 1, medida por la propia cola.**
+
+### 60. GRADIENTE OK apretado
+
+`entrega/medir_satisfaccion_real_del_cliente` contra
+`nucleo/encuesta_satisfaccion_postproyecto` **(t45.8, s0.8039)**
+
+**La brecha esperado-recibido** contra **el diseno de la encuesta.** Ensanches
+distintos.
+
+---
+
+## MARCADOR TRAS 60 DE 346
+
+| ficha | estado |
+|---|---|
+| VIOLACIONES clasicas | **7**. **5 curadas** en la cirugia 1; **2 abiertas**: `constraint_management` (puestos 9 y 10) y `value_stream_mapping` (puesto 49). **Las dos de `quality`, y las dos se arreglan profundizando el mundo** |
+| VIOLACIONES INVERTIDAS | **2 cargos** sobre `gestion_inventario` |
+| FRONTERAS con choque de fuentes | **2** (objeciones, plazos) |
+| SUB-FUSION | ficha con el **caso 1 CERRADO** (Goldratt no se funde) y un **caso nuevo abierto**: el racimo de auditoria de `quality` |
+| EVIDENCIA POST-CIRUGIA | **positiva**, en el puesto 59 |
+
+> **La cirugia 1 quedo verificada por la propia cola**, sin instrumento nuevo: el
+> nodo reencuadrado volvio a emparejar contra el mismo nodo del nucleo **y esta
+> vez gano su lugar.**

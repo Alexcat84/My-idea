@@ -760,6 +760,22 @@ entran a revisión cuando el comercio cambie de rumbo.
 2020 no es un dato local ni un detalle de estilo: es el vocabulario acordado
 entre países, y un catálogo que lo cite desactualizado miente con precisión.
 
+### Entrada del gradiente (lote 7, puesto 53), sin tocar el nodo
+
+`exportacion/proteccion_propiedad_intelectual_internacional` **cablea `uspto.gov`
+y `stopfakes.gov`**, agencias de **un solo país**, en su paso 3.
+
+**La frontera cae limpia dentro de la doctrina de esta ficha**, y por eso el nodo
+se anota entero en vez de partirse:
+
+- **PCT y Madrid Protocol (paso 2) son INTOCABLES**: son tratados multinacionales,
+  el vocabulario acordado entre países, exactamente la clase de Incoterms.
+- **Las dos URLs de agencias son la clase "ejemplar de un país"**, y piden el
+  reencuadre *"averigua el de tu país"* cuando esta ficha despierte.
+
+**El nodo no se toca desde el gradiente.** Queda aquí porque su revisión es de
+vigencia de marco, no de profundidad.
+
 Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviación)
 viven aquí también: su condición honesta —*"si tu producto lleva componentes de
 EE.UU. o tu ruta lo toca"*— depende de acuerdos que cambian.
