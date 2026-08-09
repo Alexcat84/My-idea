@@ -1455,3 +1455,115 @@ de `docs/FICHA_SUBFUSION_GRADIENTE.md`).
 `franquicias/evaluacion_necesidad_franquiciar`, `quality/value_stream_mapping`
 contra `nucleo/plan_mejora_procesos`, `quality/sistema_medicion_kpi` y
 `franquicias/obtencion_marca_registrada`. **Van en el proximo lote.**
+
+---
+
+## LOTE 9, puestos 81 a 85, mas las dos marañas del caso 8
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los cinco
+puestos coinciden. **Con esto se agota el tramo 1 a 85 de la cola.**
+
+### 81. GRADIENTE OK apretado
+
+`environmental/diseno_para_el_medio_ambiente` contra
+`nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t34.4, s0.7942)**
+
+**Marco contra metodo**: DfE con ciclo de vida y objetivos medibles, sobre el
+mapeo cradle del nucleo. **Angulos a dos alturas compatibles.**
+
+### 82. GRADIENTE OK ejemplar
+
+`franquicias/evaluacion_necesidad_franquiciar` contra
+`nucleo/decision_intensidad_capital` **(t37.3, s0.7937)**
+
+Prototipo probado, **documentable y ensenable**, ROI del franquiciado, ventajas
+contra desventajas: **muy por encima de los tres pasos del nucleo.**
+
+> **`decision_intensidad_capital` es un HUB SANO**, con **tres** especializaciones
+> ejemplares de `franquicias`: los puestos **22, 79 y 82**, verificados contra la
+> cola. Vale anotarlo porque **es el contrario exacto de un racimo**: un nodo del
+> nucleo al que tres nodos de mundo se cuelgan **sin pisarse entre si.**
+
+### 83. PAR SIN EFECTO, y HALLAZGO DEL NUCLEO
+
+`quality/value_stream_mapping` contra `nucleo/plan_mejora_procesos`
+**(t55.1, s0.7936)**
+
+**El par no dice nada nuevo**: el nodo del mundo es **el VSM debil ya sentenciado
+en el caso 7**, y su arreglo esta decidido.
+
+**Lo que si dice algo es el nodo del NUCLEO.** `plan_mejora_procesos` tiene
+**quince pasos** y una **COSTURA DE PEGADO DOBLE a simple vista**:
+
+| el primer bloque | el segundo, otra vez |
+|---|---|
+| 8. Definir el **output esperado** del proceso antes de disenar los pasos | 11. Define el **resultado final** que el proceso debe producir |
+| 9. Establecer **metricas de exito en cada etapa** | 13. Establece **metricas para cada etapa** |
+| 10. **Asignar responsabilidad clara** (individuo/equipo) por cada paso | 14. **Asigna responsabilidad clara** a una organizacion o individuo por cada paso |
+
+**Y el ejemplo de contratacion aparece dos veces**: en el paso 6 (*"ej.
+contratacion"*) y en el 11 (*"ej: un empleado excelente en el proceso de
+contratacion"*), con el 13 preguntando por candidatos.
+
+> **PRECISION VERIFICADA, y afina el hallazgo en vez de debilitarlo.** El encargo
+> describe los bloques como **8 a 10** contra **11 a 15**. Leidos los quince, la
+> correspondencia es **de tres a tres** (8, 9, 10 contra 11, 13, 14); los pasos
+> **12 y 15 no tienen pareja**: son anadidos del segundo bloque.
+>
+> **Y hay una marca que el conteo no ve y que cierra el caso**: los pasos **1 a 10
+> estan en INFINITIVO** (*Documentar, Identificar, Definir, Establecer, Asignar*)
+> y los **11 a 15 estan en TU** (*Define, Diseña, Establece, Asigna, Aumenta*).
+> **La costura se ve en la gramatica, no solo en el contenido**: son dos
+> extracciones distintas pegadas, y ni siquiera hablan igual.
+
+**Caso nuevo abierto en `docs/FICHA_SUBFUSION_GRADIENTE.md`.**
+
+### 84. GRADIENTE OK
+
+`quality/sistema_medicion_kpi` contra `nucleo/diseno_metricas_lideres_rezagados`
+**(t36.8, s0.7929)**
+
+**Segunda pareja leida del mismo nodo del mundo** (la primera, el puesto 15).
+**Sistema de medicion contra diseno de senales**: ensanches distintos, **ambos
+sanos**.
+
+> **Dato de cola, para no sorprenderse luego**: ese nodo tiene **cuatro** parejas
+> en los 346 (puestos 15, 84, 254 y 282). **Dos por leer.**
+
+### 85. GRADIENTE OK apretado, con el SEGUNDO COLATERAL DE MARCO-PAIS
+
+`franquicias/obtencion_marca_registrada` contra `nucleo/marcas_registradas`
+**(t59.7, s0.7925)**
+
+> **LA IRONIA, verificada palabra por palabra en los dos nodos.** El nodo del
+> **NUCLEO ya esta CURADO**: dice *"en Estados Unidos esto se hace ante el USPTO;
+> averigua cual es la oficina equivalente en tu pais"* y *"presenta la solicitud
+> formal ante la oficina correspondiente en tu pais"*.
+>
+> **El del MUNDO sigue cableado**: la base **TESS**, un abogado de **Thomson
+> CompuMark**, la solicitud ante la **USPTO**, y hasta el titulo dice **"Marca
+> Registrada Federal"**.
+>
+> **El mundo quedo atras de la campana que curo al nucleo.** No es que el de pago
+> sea mas superficial: es que **el gratuito ya viajo y el de pago no**.
+
+**Anotado en la ficha de marco-pais de `docs/PENDIENTES.md`, junto al puesto 53.
+El nodo no se toca.**
+
+---
+
+## MARCADOR TRAS 92 DE 346
+
+**Top-20, lotes 5 a 9, y el adelanto del racimo.** Mas **las dos maranas del caso
+8 leidas fuera de cola** (ECR y causas comunes).
+
+| ficha | estado |
+|---|---|
+| VIOLACIONES clasicas | **8**. 5 curadas; abiertas `constraint_management`, `carta_proyecto_calidad` y `value_stream_mapping`, **este ultimo con su diagnostico cambiado a FUSION** |
+| VIOLACIONES INVERTIDAS | **2 cargos** sobre `gestion_inventario` |
+| FRONTERAS con choque | **2** |
+| COLATERALES de marco-pais | **2** (puestos 53 y 85), **y el segundo con el mundo atras del nucleo** |
+| CASOS de la ficha de sub-fusion | **9**: cuatro del nucleo (uno cerrado), cuatro del mundo, **y el nuevo `plan_mejora_procesos`** |
+
+> **El tramo 1 a 85 esta agotado. Quedan 261 pares de la cola, mas la franja bajo
+> el umbral, mas el intra-dominio.**

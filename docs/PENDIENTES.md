@@ -823,6 +823,29 @@ vuelve a caducar.
 > barrido**. La primera que apareció, apareció **de rebote**. Cuando se despierte,
 > lo primero es **el barrido**, no la entrada suelta.
 
+### Entrada 2 de marco-país (lote 9, puesto 85): el mundo quedó atrás del núcleo
+
+Va aquí, junto al puesto 53, aunque su ficha natural sea la de marco: es la misma
+clase de **ejemplar de un país** cableado.
+
+`franquicias/obtencion_marca_registrada` está atado a un solo país en todo: la
+base **TESS**, un abogado de **Thomson CompuMark**, la solicitud ante la
+**USPTO**, y el propio título dice *"Marca Registrada **Federal**"*.
+
+**Lo que lo hace distinto del puesto 53 es con qué contrasta.** Su par del núcleo,
+`nucleo/marcas_registradas`, **ya está curado**: dice *"en Estados Unidos esto se
+hace ante el USPTO; **averigua cuál es la oficina equivalente en tu país**"* y
+*"presenta la solicitud ante la **oficina correspondiente en tu país**"*.
+
+> **La campaña que curó al núcleo no pasó por los mundos.** No es que el nodo de
+> pago sea más superficial: es que **el gratuito ya viajó y el de pago no**.
+
+**Consecuencia para cuando esto despierte**: el barrido **no puede ser solo del
+núcleo**. Lo que se curó una vez en `core` **hay que buscarlo otra vez en los
+nueve mundos**, o la asimetría se repite en cada campaña de voz.
+
+**El nodo no se toca desde el gradiente.**
+
 Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviación)
 viven aquí también: su condición honesta —*"si tu producto lleva componentes de
 EE.UU. o tu ruta lo toca"*— depende de acuerdos que cambian.
