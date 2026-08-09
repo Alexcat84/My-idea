@@ -524,7 +524,21 @@ mismas palabras **sí** llegaron al top-10 con solo re-vozar.
 > `diagnostico: true`, fuera del marcador y con su expectativa escrita al lado.
 > El día que el frente funcione, se quitan de diagnóstico y entran a la vara.
 
-### Hipótesis del auditor para ese día, sin diseñarla ahora
+### Hipótesis del auditor para ese día — CORREGIDA con el código en la mano
+
+La hipótesis era *"embeber también las `condiciones_activacion`: es dato que ya
+existe y sería un spike barato"*. **Parte de una premisa falsa**:
+`scripts/build_semantic_index_voyage.py:56-62` ya las incluye en el texto que se
+embebe, junto al título y el resumen. **Los tres rumbos rebeldes fallan con ellas
+dentro.**
+
+Eso no mata la intuición, la reorienta: si el campo escrito como situación ya
+está en la mezcla y no basta, lo que queda por probar es **embeberlo aparte y
+consultarlo aparte** — dos índices, o un campo con peso propio en la puntuación—
+en vez de *añadirlo*. No lo diseño aquí.
+
+Lectura completa del uso real del campo en
+`docs/LECTURA_CONDICIONES_Y_DEPRECADOS.md`.
 
 **Embeber también las `condiciones_activacion`.** Están escritas como
 situaciones —*"Cuando el emprendedor está tratando de…"*, *"Si dudas entre pagar
