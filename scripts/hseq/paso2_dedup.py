@@ -88,7 +88,8 @@ def fusionar(cat: str) -> None:
             k.setdefault("merged_originals", []).append(
                 {"node_id": viejo, "titulo": nodos[viejo].get("titulo_concepto", ""),
                  "fuente": nodos[viejo].get("fuente", "")})
-            k.setdefault("ids_alias", []).append(viejo)
+            if viejo != keeper:  # el keeper jamas es alias de si mismo
+                k.setdefault("ids_alias", []).append(viejo)
             # heredar aristas del absorbido (se simetriza en paso 4)
             for campo in ("nodos_previos", "nodos_siguientes"):
                 for r in nodos[viejo].get(campo) or []:

@@ -38,7 +38,12 @@ for cat, mapa in RENOMBRES.items():
         alias = data.get("ids_alias") or []
         if viejo not in alias:
             alias.append(viejo)
-        data["ids_alias"] = alias
+        # EL AUTO-ALIAS NACIA AQUI, y este es el punto exacto. El nodo llega ya
+        # con la BASE en su ids_alias (la absorbio en el dedup) y acto seguido
+        # se guarda CON ESE MISMO NOMBRE: la entrada vieja se vuelve un alias a
+        # si mismo. Los ocho auto-alias que se limpiaron en ago 2026 son
+        # exactamente los ocho renombres de la tabla de arriba.
+        data["ids_alias"] = [a for a in alias if a != nuevo]
         borrar_nodo(cat, viejo)
         guardar_nodo(cat, nuevo, data)
         nodos[nuevo] = data

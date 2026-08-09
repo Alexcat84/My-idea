@@ -106,7 +106,8 @@ def dedup_fusionar():
             if otro not in nodos or keeper not in nodos:
                 continue
             k = nodos[keeper]
-            k.setdefault("ids_alias", []).append(otro)
+            if otro != keeper:  # el keeper jamas es alias de si mismo
+                k.setdefault("ids_alias", []).append(otro)
             for campo in ("nodos_previos", "nodos_siguientes"):
                 for r in nodos[otro].get(campo) or []:
                     if r not in (k.get(campo) or []) and r != keeper:

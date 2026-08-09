@@ -219,7 +219,8 @@ def main():
                 for r in nodos[n].get(campo) or []:
                     if r != gana and r not in (d.get(campo) or []) and r not in otros:
                         d.setdefault(campo, []).append(r)
-        d["ids_alias"] = alias
+        # El superviviente jamas se declara alias de si mismo.
+        d["ids_alias"] = [a for a in alias if a != gana]
         d["merged_originals"] = merged
         rutas[gana].write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
 

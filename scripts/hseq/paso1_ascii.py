@@ -30,7 +30,9 @@ for cat in CATEGORIAS:
         alias = data.get("ids_alias") or []
         if viejo not in alias:
             alias.append(viejo)
-        data["ids_alias"] = alias
+        # Misma forma que _renombrar_cosmetico: se guarda con OTRO nombre, asi
+        # que cualquier alias que ya fuera igual al nuevo id se vuelve auto.
+        data["ids_alias"] = [a for a in alias if a != nuevo]
         borrar_nodo(cat, viejo)
         guardar_nodo(cat, nuevo, data)
         nodos[nuevo] = data
