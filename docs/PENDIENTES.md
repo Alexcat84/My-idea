@@ -776,6 +776,36 @@ se anota entero en vez de partirse:
 **El nodo no se toca desde el gradiente.** Queda aquí porque su revisión es de
 vigencia de marco, no de profundidad.
 
+## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
+
+**Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no
+una entrada suya, y conviene explicar por qué se abrió aparte: aquella se declara
+a sí misma sobre **nodos de exportación que citan marcos versionados o tratados**,
+y esto es **otra clase** (una herramienta comercial citada por su nombre, en un
+nodo del **núcleo**). **Si el auditor prefiere una sola ficha, fundirlas cuesta
+una línea.**
+
+**El principio es el mismo que ya está escrito arriba**: un catálogo que cita algo
+desactualizado **miente con precisión**.
+
+### Entrada 1: `nucleo/seo_link_building`
+
+Su paso 4 dice *"revisa tus enlaces y los de tu competencia con una herramienta
+como **Open Site Explorer**"*. **Moz retiró esa herramienta.** El consejo sigue
+siendo bueno; **el nombre propio ya no existe**.
+
+**Clase del arreglo**: no es dato local ni profundidad. Es **una herramienta
+nombrada que caducó**, y el reencuadre natural es **describir la capacidad en vez
+del producto** (*"con una herramienta de análisis de enlaces"*), que además no
+vuelve a caducar.
+
+**El nodo no se toca desde el gradiente.**
+
+> **Por qué esta ficha vale la pena aunque hoy tenga una sola entrada**: el
+> catálogo nombra herramientas en más sitios, y **ninguna revisión las ha
+> barrido**. La primera que apareció, apareció **de rebote**. Cuando se despierte,
+> lo primero es **el barrido**, no la entrada suelta.
+
 Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviación)
 viven aquí también: su condición honesta —*"si tu producto lleva componentes de
 EE.UU. o tu ruta lo toca"*— depende de acuerdos que cambian.

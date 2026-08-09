@@ -1170,3 +1170,214 @@ presidente (228), funciones de control (279). **Falso par**: revision de progres
 
 > **Ningun par futuro de `quality_audit` queda sin leer. La fusion puede
 > ejecutarse sin reabrirse.**
+
+---
+
+## LOTE 8, puestos 61 a 80 por senal, sin los dos del adelanto (dieciocho pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los
+dieciocho puestos coinciden.
+
+> **Rango corregido y comprobado con el propio marcador.** El encargo titulaba el
+> lote *"puestos 61 a 85"*, pero lista **dieciocho pares que llegan hasta el 80**,
+> y su marcador dice **87 de 346**: eso es **80 leidos** mas los **siete del
+> adelanto que estan por encima de 80** (98, 105, 106, 160, 176, 228 y 279). **La
+> aritmetica cuadra con 61 a 80.** Los puestos **81 a 85 siguen sin leer.**
+
+Los puestos **63 y 66** no estan aqui: se leyeron en el **adelanto del racimo**.
+
+### 61. GRADIENTE OK apretado
+
+`quality/value_non_value_added_analysis` contra `nucleo/analisis_flujo_de_valor`
+**(t52.5, s0.803)**
+
+**Especializa un paso del nucleo** (la clasificacion VA/NVA, con la pregunta
+*"¿el cliente pagaria por esto?"*) **en metodo propio**. Se queda como
+**especializacion** del racimo de VSM.
+
+### 62. GRADIENTE OK, el hermano fuerte
+
+`quality/mapeo_flujo_valor` contra el mismo nucleo **(t50.4, s0.8029)**
+
+**Estado actual con tiempos, esperas, inventarios y capacidad; clasificacion
+VA/NVA; estado futuro; y mecanismos de control.** Por encima del nucleo.
+**Ejemplar.**
+
+### 64. VIOLACION, la tercera de `quality`
+
+`quality/carta_proyecto_calidad` contra `nucleo/project_charter`
+**(t55.1, s0.8005)**
+
+**Cuatro pasos livianos** (declarar el problema, definir la meta, formalizar la
+autorizacion, publicar) **contra el acta completa del nucleo en seis**: criterios
+de exito medibles, riesgos de alto nivel con cronograma y presupuesto, **nivel de
+autoridad del responsable**, y **firma del sponsor**.
+
+**Arreglo por via 1 o 2.**
+
+> **Dato verificado de rebote**: este nodo **ya figura como DUDOSO** en
+> `docs/INVENTARIO_ESCALA.md`, por el paso de *"publicar la carta para otorgar
+> legitimidad al equipo"*. **Quien lo profundice arregla las dos cosas de una
+> pasada**, o arriesga profundizar hacia arriba, que es lo contrario de lo que
+> hace falta.
+
+### 65. FALSO PAR por titulo, y la semantica lo delata
+
+`quality/analisis_valor` contra `nucleo/analisis_flujo_de_valor`
+**(t80.0, s0.671)**
+
+**Analisis de valor** (relacionar costos con necesidades del cliente por
+prioridad) **no es VSM**.
+
+> **Segunda vez que la doble senal salva un par**: titulo 80 y semantica 0,671.
+> Con una sola señal habria entrado sin nada que lo desmintiera.
+
+### 67. GRADIENTE OK apretado
+
+`quality/principios_medicion_efectiva` contra
+`nucleo/diseno_metricas_lideres_rezagados` **(t31.7, s0.7998)**
+
+**Una lista de diez principios** (verificada: son diez pasos) contra el **diseno
+afilado** de señales tempranas y de metricas que provocan comportamientos raros.
+**Ensanches distintos.**
+
+### 68. GRADIENTE OK, tema propio
+
+`compras/conoce_insumos_vitales` contra `nucleo/gestion_procurement_consumo`
+**(t32.4, s0.7997)**
+
+**Analisis de criticidad**: que insumo detiene la operacion si falta, y **stock de
+seguridad o segundo proveedor** para los criticos dificiles de reponer. Contra el
+**control de consumo** del nucleo.
+
+### 69. GRADIENTE OK POR ESPECIALIZACION, con colateral de vigencia
+
+`franquicias/seo_para_captacion_de_franquiciados` contra
+`nucleo/seo_link_building` **(t37.9, s0.7996)**
+
+**COLATERAL, y esta vez el dato caducado esta en el NUCLEO**: el paso 4 de
+`seo_link_building` dice *"revisa tus enlaces y los de tu competencia con una
+herramienta como Open Site Explorer"*. **Esa herramienta ya no existe: Moz la
+retiro.**
+
+**Anotado en `docs/PENDIENTES.md`. El nodo no se toca.**
+
+### 70 y 75. FALSOS PARES FUNCIONALES, cuarta y quinta aparicion del nodo de objeciones
+
+`franquicias/manejo_objeciones_venta_franquicia` contra dos piezas de SPIN:
+`nucleo/preparacion_preguntas_problema_precall` **(t38.7, s0.7994)** y
+`nucleo/preguntas_need_payoff` **(t41.1, s0.7976)**
+
+**La ficha de frontera ya cubre el choque doctrinal**; cada aparicion nueva **la
+engorda**. Van cinco de las diez que tiene en la cola.
+
+### 71. FALSO PAR FUNCIONAL
+
+`risk_management/riesgo_del_negocio_o_del_proyecto` contra
+`nucleo/matriz_probabilidad_impacto` **(t36.2, s0.7991)**
+
+**Clasificar por fuente no es priorizar.**
+
+### 72. GRADIENTE OK, tema propio
+
+`quality/reduccion_inventario_calidad` contra `nucleo/gestion_inventario`
+**(t37.0, s0.7985)**
+
+**Reducir inventario VIA calidad de proveedores**: angulo propio.
+
+> **La violacion invertida de `gestion_inventario` queda en sus DOS cargos, sin
+> tercero.** El plan de la cirugia 2 no cambia.
+
+### 73. FALSO PAR FUNCIONAL
+
+`risk_management/riesgo_no_es_mala_suerte` contra `nucleo/plan_gestion_riesgos`
+**(t38.2, s0.7981)**
+
+**Definir no es gobernar.**
+
+### 74. GRADIENTE OK POR ESPECIALIZACION
+
+`franquicias/proceso_llamada_inicial_venta` contra
+`nucleo/cuatro_etapas_llamada_de_ventas` **(t42.5, s0.7978)**
+
+**El guion concreto de calificacion de franquiciados** sobre el marco de etapas.
+
+### 76. FALSO PAR FUNCIONAL, con nota al caso 5 de la ficha
+
+`quality/plan_de_gestion_de_riesgos` contra `nucleo/plan_gestion_riesgos`
+**(t44.6, s0.7975)**
+
+**El metodo COC por riesgo no es el plan de gobierno.** Temas distintos.
+
+**La confusion es real, y va al caso 5**: **la fusion del duo COC debe arreglar el
+titulo de paso.**
+
+> **PRECISION VERIFICADA, porque la confusion no esta donde el encargo la puso.**
+> El encargo dice que **los titulos** son casi identicos. **No lo son**, y la
+> propia cifra lo dice: **similitud de titulo 44,6**. Son *"Plan para manejar un
+> riesgo: preocupaciones, opciones y consecuencias"* contra *"Como vas a manejar
+> los riesgos del proyecto (Plan de Gestion de Riesgos)"*.
+>
+> **Donde SI hay gemelos es en los ids**: `plan_de_gestion_de_riesgos` (mundo)
+> contra `plan_gestion_riesgos` (nucleo). Y hay algo peor: **el parentesico del
+> titulo del NUCLEO es, letra por letra, el nombre del nodo del MUNDO.**
+>
+> **El hallazgo se sostiene y de hecho se agrava**: quien lea *"Plan de Gestion de
+> Riesgos"* en el titulo del nucleo y busque ese nombre, **encuentra el nodo del
+> mundo**. **Lo que la fusion tiene que arreglar es el id, no solo el titulo.**
+
+### 77. GRADIENTE OK
+
+`quality/desarrollar_metas_anuales` contra
+`nucleo/metas_objetivos_smart_innovacion` **(t34.8, s0.7973)**
+
+**Ciclo anual de metas** contra **metricas de innovacion**. Vecinos sanos.
+
+### 78. FALSO PAR FUNCIONAL, con confirmacion para la cirugia 2
+
+`compras/calcula_costo_de_mantener_contra_costo_de_reponer` contra
+`nucleo/gestion_procurement_consumo` **(t43.3, s0.7955)**
+
+**Lote optimo no es control de consumo.**
+
+> **Y confirma por lectura independiente lo que el plan de la cirugia 2 afirmaba**:
+> el nodo de `compras` **ENSEÑA el calculo en cinco pasos** (sumar el gasto anual
+> de guardar, sacar el porcentaje sobre el inventario promedio, costear cada
+> pedido, comparar pedir poco y seguido contra mucho y espaciado, revisar al
+> cambiar volumenes) **donde el nucleo solo lo enunciaba**. **La pieza no necesita
+> trasplante: necesita arista.**
+
+### 79. GRADIENTE OK
+
+`franquicias/alternativa_operaciones_propias` contra
+`nucleo/decision_intensidad_capital` **(t35.2, s0.7954)**
+
+**Modela la rama de unidades propias**: capital, responsabilidad, valuacion y
+ancho de banda gerencial. **Hermano del ejemplar del puesto 22.**
+
+### 80. GRADIENTE OK apretado
+
+`health_safety/preguntar_que_no_quien` contra `nucleo/curse_cinco_culpas`
+**(t39.2, s0.7947)**
+
+**La misma filosofia a dos escalas**: el mundo es **habito personal** (*"ante un
+problema, evita preguntar primero quien lo hizo"*); el nucleo es **facilitacion de
+sesion** (reunir a los afectados, fijar el mantra, detener al que señala, explicar
+los Cinco Porques al inicio). **Ambos sanos.**
+
+---
+
+## MARCADOR TRAS 87 DE 346
+
+**Top-20, lotes 5 a 8, y el adelanto del racimo.**
+
+| ficha | estado |
+|---|---|
+| VIOLACIONES clasicas | **8**. **5 curadas** en la cirugia 1. **Abiertas**: `constraint_management`, `carta_proyecto_calidad`, y `value_stream_mapping`, **que CAMBIA DE DIAGNOSTICO** (ver la revision del veredicto 49) |
+| VIOLACIONES INVERTIDAS | **2 cargos** sobre `gestion_inventario`, **sin tercero** |
+| FRONTERAS con choque | **2**. La de objeciones ya lleva **cinco apariciones** |
+| RACIMOS de sub-fusion en `quality` | **auditoria** (completo), **VSM** (nuevo, caso 7), **COC** (con la nota del titulo y del id) |
+
+> **`quality` no tiene un problema de nodos sueltos: tiene racimos.** Tres ya, y
+> los tres nacieron de la misma forma, con varias extracciones del mismo capitulo
+> que nadie volvio a mirar juntas.
