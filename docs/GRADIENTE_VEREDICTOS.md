@@ -1428,6 +1428,12 @@ de `docs/FICHA_SUBFUSION_GRADIENTE.md`).
 > detector y el limite declarado de la clase estan en
 > `docs/FICHA_SUBFUSION_GRADIENTE.md`.
 
+> **CIERRE DEL COTEJO (tras `6ceb839`)**: **el ocho quedo verificado por el
+> auditor.** La discrepancia con su cuenta inicial **no era ruido: destapo una
+> clase nueva**, la de los **auto-alias** y el **alias con dos dueños**, que su
+> caminador contaba como cadenas. **Ver el colateral C3 de
+> `docs/FICHA_SUBFUSION_GRADIENTE.md`.**
+
 **Y los puestos 81 a 85 siguen pendientes**, nombrados desde este mismo lote:
 `environmental/diseno_para_el_medio_ambiente`,
 `franquicias/evaluacion_necesidad_franquiciar`, `quality/value_stream_mapping`

@@ -587,6 +587,64 @@ lector no tiene.**
 > nodos ya estan citados a esa lectura, y un titulo que va a cambiar de dueno no
 > se toca dos veces.
 
+## C3. AUTO-ALIAS Y ALIAS CON DOS DUEÑOS
+
+**Hallazgo del cotejo del "ocho".** No es sub-fusion: es **metadata sucia**, y
+salio de que dos cuentas no coincidian.
+
+### Como se destapo
+
+**La cifra del ejecutor era CORRECTA: ocho cadenas reales** de mas de un salto,
+es decir alias cuyo dueño esta a su vez deprecado.
+
+**La cuenta inicial del auditor (17) estaba contaminada**: su caminador contaba
+como cadena los **bucles de auto-alias**, que no llevan a ninguna parte.
+
+### Lo que hay en el dato
+
+**OCHO nodos llevan su propio id dentro de su `ids_alias`**: siete activos
+(`trilogia_de_juran`, `concepto_variacion_estadistica`,
+`distribucion_normal_probabilidad`, `inspeccion_automatizada`,
+`plan_control_peligros`, `deteccion_temprana_regulatoria`,
+`recomendaciones_smart`) **mas `jerarquia_controles`, que esta deprecado.**
+
+**El patron es comun y se lee solo**: el auto-alias aparece **junto al `_2`
+absorbido**. Es la **huella de una tanda de fusion que escribio la familia
+completa incluyendo al sobreviviente**, en vez de solo a los absorbidos.
+
+### UN alias con DOS dueños
+
+**`jerarquia_controles`** esta reclamado por **su propio nodo deprecado** (via
+auto-alias) **y por `prevencion_control_peligros`**, que es su absorbedor real.
+
+> **La resolucion depende del ORDEN de construccion del mapa. Averia silenciosa
+> en potencia.**
+
+**Medido**: con el orden actual del master gana `prevencion_control_peligros`,
+que es **el correcto**. Pero **gana por orden, no por regla**.
+
+### TERCERA aparicion de la leccion del detector
+
+Van tres formas del mismo tropiezo: **el sufijo fijo**, **el salto unico**, y
+ahora **el dato sucio que inflaba la cuenta**.
+
+> ## FORMA FINAL DE LA REGLA
+>
+> **Toda consulta que caza una ceguera se revisa contra TRES cosas: su propia
+> ceguera, las estructuras que el catalogo ya declaro, y la posibilidad de que el
+> DATO MISMO este sucio.**
+
+### Limpieza
+
+**Cirugia de metadata aparte. ADJUDICACION PENDIENTE**, con la urgencia que dicte
+el reporte de los resolutores (tarea 1 del mismo encargo, y su resumen esta
+abajo).
+
+> **Adelanto del reporte, para que la ficha no obligue a buscarlo**: **ningun
+> resolutor de la casa se cuelga hoy**. Los dos que caminan cadenas **filtran el
+> auto-alias al construir el mapa Y llevan guarda de ciclo**, dos defensas
+> independientes. **La limpieza es de higiene, no de incendio.**
+
 ---
 
 # FICHA DORMIDA: los 27 REGISTROS SIN ARCHIVO
