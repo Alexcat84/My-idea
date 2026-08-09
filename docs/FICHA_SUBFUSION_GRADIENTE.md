@@ -286,19 +286,119 @@ metodo completo** que empieza en el 5 y llega hasta el 16.
 
 **Ya confirmado como calibracion. Sin cambio.**
 
+## LOTE C3: dos confirmadas, cuatro citas falsas, y dos clases de veredicto nuevas
+
+**Es el primer lote que trae CITAS FALSAS, y por eso es el que mas enseña sobre el
+instrumento.** Cada anatomia verificada contra el grafo.
+
+### CONFIRMADAS
+
+#### 1. `core/key_partners_hypothesis`, 14 pasos, corte 9: TRIPLE
+
+| bloque | de que fuente viene |
+|---|---|
+| **1 a 5** | **el Canvas**: listar socios, que provee cada uno, flexibilidad de proveedores, y **actualizar el Business Model Canvas** |
+| **6 a 10** | **el libro de traccion**: objetivo de traccion y metricas, tipo de partnership, evaluar por capacidad de mover la metrica, negociar alineado con el **Critical Path** |
+| **11 a 14** | **alianzas por cuello de botella**: que alianza resuelve tu cuello de botella, licensing, distribucion, supply |
+
+> **Tres fuentes, cero tejido.**
+
+#### 2. `core/split_testing_experimentos_ab`, 9 pasos, corte 6: DOBLE
+
+**El A/B de producto** (1 a 5: hipotesis, dividir en A y B, lanzar solo a B, medir,
+comparar) y **la narracion de grupo de control** (6 a 9: seleccionar control con
+desempeno similar, medir en el mismo periodo, comparar cambio porcentual, reportar
+diferencia neta).
+
+> **CITA INTRA-DOMINIO DEL NUCLEO, y es de las que ahorran trabajo**: el nucleo
+> tiene **DOS nodos de A/B testing**, este y `ab_testing_optimizacion` (confirmado
+> en el C2, con tres narraciones). **Los dos con costura.**
+>
+> **Su destejido probablemente converge en uno**, asi que **en la pasada unica se
+> leen JUNTOS.** Registrado tambien en las citas intra-dominio.
+
+### CITAS FALSAS, y las dos clases nuevas que las nombran
+
+#### LARGO LEGITIMO
+
+**Supera el estandar de 3 a 6 pasos, pero NO hay narracion repetida dentro.**
+
+| nodo | pasos | que es |
+|---|---:|---|
+| `quality/principios_medicion_efectiva` | 10 | **la lista canonica de diez principios**, cada uno distinto |
+| `quality/fmea_analisis_de_modos_de_falla` | 8 | **el metodo FMEA canonico en secuencia unica**: hoja de nueve columnas, modos, causas, efectos, frecuencia por severidad por detectabilidad, RPN, acciones, validar |
+
+> **Su arreglo NO es destejido: es una decision de ESTANDAR**, y le toca a la
+> pasada unica. Un metodo canonico de ocho pasos **no se puede partir sin
+> romperlo**, y la pregunta honesta es si el estandar admite excepciones nombradas.
+
+#### FALSO POSITIVO DE SECUENCIA LEGITIMA
+
+**Pasos tematicamente ESPEJADOS que la señal de bloque roza sin que haya narracion
+repetida.**
+
+| nodo | pasos | el espejo |
+|---|---:|---|
+| `core/founder_ceo_succession_process` | 8 | paso 2 *"evalua si TUS habilidades encajan con la siguiente etapa"* contra paso 6 *"evalua si el perfil de QUIEN TE SUCEDERIA encaja con la etapa"* |
+| `franquicias/mix_ubicaciones_corporativas_franquicia` | 6 | secuencia unica de decision, sin espejo ni repeticion |
+
+> **Mismo verbo y misma estructura, sujeto distinto.** Es exactamente lo que engana
+> a un emparejador monotono, y **no es un defecto: es como se escribe una sucesion.**
+
+> **Nota del ejecutor sobre el segundo**: `mix_ubicaciones_corporativas_franquicia`
+> tiene **seis pasos**, o sea **esta DENTRO del estandar**. Su bloque se evaluo con
+> **tres contra tres**, que es el minimo que el instrumento admite y **la evidencia
+> mas delgada que puede producir**. **Los nodos cortos dan la señal de bloque mas
+> ruidosa**, y conviene saberlo al leer la parte baja de la cola.
+
 ---
 
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| leidos desde **la cola del instrumento** (C1: 3, C2: 5 nuevos) | **8** |
-| confirmados | **8** |
-| **citas falsas** | **0** |
-| mas los **dos calibradores**, confirmados antes desde la cola del gradiente | 2 |
-| **total de nodos con costura confirmada** | **10** |
+| **leidos** (C1: 3, C2: 5, C3: 6, mas los 2 calibradores) | **16** |
+| **costuras confirmadas** | **12** |
+| **citas falsas** | **4** |
+| tasa de acierto | **75%** |
 
-> **Ocho citas leidas, ocho costuras. El instrumento no ha fallado una sola vez.**
+**Las cuatro falsas se reparten en dos clases nuevas**: LARGO LEGITIMO (2) y FALSO
+POSITIVO DE SECUENCIA LEGITIMA (2).
+
+### LA FRANJA, medida, y la lectura NO es la que parecia
+
+**El dato que se propuso**: *las cuatro falsas viven entre 51 y 52 de señal de
+bloque; por encima de 52, doce de doce confirmadas.*
+
+**La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
+se puede hacer con ella:
+
+| franja de señal de bloque | confirmadas | falsas | leidas |
+|---|---:|---:|---:|
+| **por encima de 52,0** | **9** | **0** | 9 |
+| **entre 51,0 y 52,0** | **2** | **4** | 6 |
+| **por debajo de 51,0** | **1** | 0 | 1 |
+
+**Por encima de 52 son NUEVE de nueve, no doce de doce**: el doce es el total de
+confirmadas, y **tres de ellas viven por debajo de 52** (`split_testing` en 51,5,
+`key_partners` en 51,7, y `economia_circular` en **49,7**).
+
+> **LA FRANJA 51 a 52 NO ES UN PISO DE FALSOS: ES UNA ZONA MEZCLADA**, con dos
+> confirmadas y cuatro falsas. Y **por debajo de 51 vive una costura confirmada**,
+> que ademas es **uno de los dos calibradores del instrumento.**
+
+### Consecuencia para el paso de lectura, y va en sentido contrario
+
+**Por encima de 52 la señal es limpia y ahi si se puede leer rapido. Pero eso son
+solo 13 de las 110 citas.**
+
+> **97 de las 110 viven por debajo de 52**, es decir **en la zona mezclada o mas
+> abajo**, donde la muestra leida da **3 confirmadas contra 4 falsas**: una moneda
+> al aire, no un piso de ruido.
+>
+> **Acelerar ahi seria pasar de largo justamente donde esta casi toda la cola, y
+> donde ya se sabe que hay costuras reales.** El compromiso de leer los 110 no
+> cambia, **y el paso tampoco deberia aflojarse por debajo de la franja.**
 
 ---
 
@@ -933,7 +1033,16 @@ decidio hacer (ver el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`)
 **Tres linajes lean del mismo mundo rozandose**: Shingo, Deming y el PDCA sobre
 problemas recurrentes. **Sin adjudicar.**
 
-## d) `risk_management`, el CUARTETO de actualizacion de la lista
+## d) `nucleo`, los DOS nodos de A/B testing
+
+`split_testing_experimentos_ab` (C3) y `ab_testing_optimizacion` (C2). **Los dos
+del nucleo y los dos con costura confirmada.**
+
+> **Su destejido probablemente converge en uno.** En la pasada unica **se leen
+> JUNTOS**: destejer uno sin mirar al otro seria escribir dos veces la misma
+> narracion canonica.
+
+## e) `risk_management`, el CUARTETO de actualizacion de la lista
 
 **Era trio y pasa a CUARTETO con el lote 12.**
 
@@ -995,8 +1104,13 @@ NO es esa.**
 | `Essentials of Supply Chain Mana - Michael H. Hugos` (la variante truncada) | **14** |
 | cadenas combinadas que la incluyen | **21** |
 
-> **No son tres nodos: son alrededor de 128 nodos del nucleo salidos de UN SOLO
-> libro de cadena de suministro escrito para multinacionales.**
+> **No son tres nodos: son 128 nodos del nucleo salidos de UN SOLO libro de cadena
+> de suministro escrito para multinacionales.**
+
+> **CIFRA CONFIRMADA POR DOS VIAS INDEPENDIENTES.** El ejecutor la sumo por cadena
+> de fuente (93 exactas, 14 truncadas, 21 combinadas) y el auditor conto los
+> activos con Hugos en el campo. **Las dos dan 128, y los 128 son del nucleo, sin
+> uno solo en los mundos.**
 >
 > **Los tres que el gradiente cazo son una MUESTRA, no el grupo.** Cuando la
 > pasada unica llegue a esta nota, **lo primero no es curar tres: es medir cuantos
