@@ -146,7 +146,7 @@ palanca reservada** (reencuadrar el nodo del **NUCLEO** a version base, clausula
 
 ---
 
-# LADO MUNDO, dos casos
+# LADO MUNDO, tres casos
 
 ## 5. `quality`, el metodo COC escrito dos veces
 
@@ -172,7 +172,25 @@ titulos no muestran**?
 > **Dato de grafo verificado**: los dos nodos **no estan conectados** entre si, ni
 > por `nodos_previos` ni por `nodos_siguientes`. **Nadie los puso en escalera a
 > proposito**, a diferencia del caso 1. Ese es el contraste que hace a este el
-> caso **mas maduro para fusion** de los cinco.
+> caso **mas maduro para fusion**.
+
+### AÑADIDO EN EL LOTE 8 (puesto 76): la fusion tiene que arreglar el ID
+
+El puesto 76 emparejo a `quality/plan_de_gestion_de_riesgos` contra
+`nucleo/plan_gestion_riesgos`. **El veredicto fue falso par funcional** (el metodo
+COC no es el plan de gobierno), **pero destapo un problema de nombres que esta
+fusion debe resolver de paso.**
+
+**Los TITULOS no son el problema** (similitud 44,6). **Los IDS si son gemelos**:
+`plan_de_gestion_de_riesgos` contra `plan_gestion_riesgos`. Y **el parentesico del
+titulo del NUCLEO es, letra por letra, el nombre del nodo del MUNDO**: *"Como vas a
+manejar los riesgos del proyecto **(Plan de Gestion de Riesgos)**"*.
+
+> **Quien lea ese nombre en el nucleo y lo busque, encuentra el nodo del mundo.**
+>
+> **Al fusionar el duo COC, el superviviente NO puede conservar el id
+> `plan_de_gestion_de_riesgos`.** El renombre entra en la misma operacion, con su
+> alias, o el problema sobrevive a la fusion.
 
 ## 6. `quality`, EL RACIMO DE AUDITORIA
 
@@ -284,6 +302,71 @@ los dos son revision periodica, pero el segundo la aplica a proyectos de mejora
 con costo, inversion y ahorro neto. **Si el racimo se abre alguna vez a una
 segunda vuelta, mirarlos juntos cuesta poco.**
 
+## 7. `quality`, EL DUO DE VSM
+
+Abierto en el **lote 8**. **Nace de una revision de veredicto**: el puesto 49 era
+una VIOLACION con arreglo por via 2 (re-minado), y el lote 8 **cambio el
+diagnostico a FUSION**.
+
+| nodo | pasos | papel |
+|---|---:|---|
+| `quality/value_stream_mapping` | 4 | **el DEBIL**. Sus cuatro pasos **viven dentro** del fuerte |
+| `quality/mapeo_flujo_valor` | 5 | **el FUERTE**. Estado actual con tiempos, VA/NVA de tres niveles, estado futuro y mecanismos de control |
+| `quality/value_non_value_added_analysis` | 4 | **ESPECIALIZACION LEGITIMA**: se queda **fuera de la fusion** |
+
+**Los tres comparten fuente**: *Juran's Quality Handbook*. Y el nodo del nucleo
+contra el que emparejan, `analisis_flujo_de_valor`, viene de **otro libro**
+(*Winning at New Products*), **asi que no hay riesgo de tocar el nucleo aqui.**
+
+## LO QUE EL GRAFO DICE, y es mas de lo que la sospecha esperaba
+
+**Verificado antes de escribirlo, como en el caso 5.**
+
+### a) Los dos hermanos NO estan conectados entre si
+
+`value_stream_mapping` y `mapeo_flujo_valor` **no se declaran** ni en
+`nodos_previos` ni en `nodos_siguientes`. **Nadie los puso nunca en escalera.**
+
+**Los dos apuntan al mismo hijo**: los dos declaran
+`value_non_value_added_analysis` en sus `nodos_siguientes`, y este declara **a los
+dos** en sus `nodos_previos`. **Dos padres separados para un hijo compartido.**
+
+### b) LA FUSION DE ESTE RACIMO YA SE HIZO UNA VEZ, Y DEJO A UNO FUERA
+
+**Este es el hallazgo, y no estaba en la sospecha.**
+
+`mapeo_flujo_valor` **ya es el superviviente de una fusion**:
+
+| absorbido | titulo |
+|---|---|
+| `mapeo_flujo_valor_2` | *Mapeo de Flujo de Valor (Valor Agregado y No Agregado)* |
+| `value_stream_mapping_2` | *Value Stream Mapping (Distinguir Valor de Desperdicio)* |
+
+**Los dos estan en sus `ids_alias` y en sus `merged_originals`, con su fuente.**
+Es decir: **`quality` tenia CUATRO nodos de VSM, tres se fundieron en uno, y
+`value_stream_mapping` se quedo fuera.**
+
+Y se quedo fuera **sin marca**: no tiene `ids_alias`, no tiene
+`merged_originals`. **Nadie decidio conservarlo aparte; simplemente no entro.**
+
+> **Este caso no pregunta si hay que fusionar. Pregunta por que este no entro la
+> primera vez.**
+>
+> Y sugiere una comprobacion que **excede este caso**: si el dedup de los packs
+> fusiono por pares de sufijo (`X` con `X_2`), **`value_stream_mapping` quedaria
+> fuera por llamarse distinto de `mapeo_flujo_valor`** aunque su `_2` si entrara.
+> **Eso seria una CLASE, no un caso.** No se investiga desde aqui.
+
+### c) Por que la especializacion se queda
+
+`value_non_value_added_analysis` **no repite** a ninguno de los dos: toma **un
+paso** (la clasificacion VA/NVA) y le pone **la pregunta que la hace operable**
+(*"¿el cliente pagaria por esto?"*). **Es profundizacion, no duplicado**, y
+sobrevive a la fusion **con sus dos aristas de entrada reducidas a una.**
+
+**Lectura de fusion PENDIENTE. La valvula de pasos accionables, como siempre,
+tiene la ultima palabra.**
+
 ---
 
 # CASOS COLATERALES DE VOZ Y VALVULA
@@ -341,7 +424,8 @@ de siempre**:
 | **1.º** | **caso 5**, `quality` COC | dos nodos, un solo mundo, **lectura corta** |
 | **2.º** | **casos 3 y 4**, las costuras | **un solo nodo cada uno**: se abre, se parte o se recorta, y se cierra |
 | **3.º** | **caso 2**, brainstorming | **requiere decidir el reparto** entre nodos que sobreviven |
-| **4.º** | **caso 6**, el racimo de auditoria | **el mas grande**, pero ya **RACIMO COMPLETO**: 16 de 16 leidos, membresia cerrada en tres grupos. **Se puede ejecutar sin reabrirse** |
+| **4.º** | **caso 7**, el duo de VSM | **dos nodos y una especializacion que no se toca**, pero antes hay que entender **por que el debil no entro en la fusion anterior** |
+| **5.º** | **caso 6**, el racimo de auditoria | **el mas grande**, pero ya **RACIMO COMPLETO**: 16 de 16 leidos, membresia cerrada en tres grupos. **Se puede ejecutar sin reabrirse** |
 
 **El caso 1 salio del orden: esta CERRADO y no se ejecuta.**
 

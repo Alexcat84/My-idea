@@ -875,6 +875,32 @@ seis concretos**: lo real contra lo que uno cree, **interrogar cada actividad**
 **Arreglo por VIA 2, re-minado**: la fuente lean de `quality` tiene de sobra. **No
 se toca el nucleo.**
 
+> ## REVISION TRAS EL LOTE 8: el diagnostico cambia de VIA 2 a FUSION
+>
+> **El veredicto original se conserva arriba, sin borrar.** Lo que cambia no es
+> que haya violacion, sino **como se cura**.
+>
+> **El lote 8 mostro que `quality` tiene DOS nodos de VSM**, y que el otro,
+> `mapeo_flujo_valor` (puesto 62), **ya esta por encima del nucleo**. **Los cuatro
+> pasos de `value_stream_mapping` viven dentro de `mapeo_flujo_valor`**:
+>
+> | `value_stream_mapping` (4 pasos) | donde vive en `mapeo_flujo_valor` (5 pasos) |
+> |---|---|
+> | documentar el flujo actual | paso 2, **con tiempos, esperas, inventarios y capacidad** |
+> | registrar metricas de ciclo y costo | paso 2, **incluido** |
+> | identificar desperdicio | paso 3, **con la clasificacion VA/NVA de tres niveles** |
+> | priorizar como proyectos de mejora | pasos 4 y 5, **con estado futuro y mecanismos de control** |
+>
+> > **La violacion se cura fundiendo al hermano debil en el fuerte, no re-minando
+> > la fuente.** El re-minado sobraba: **la profundidad ya estaba escrita, en el
+> > nodo de al lado.**
+>
+> **Es el mismo patron de la FUGA DE SECCION del puesto 12**, pero un grado peor:
+> alli la profundidad estaba en el peldano vecino; **aqui esta en un gemelo que
+> nadie conecto.**
+>
+> **Va al CASO 7 de `docs/FICHA_SUBFUSION_GRADIENTE.md`. Sin ejecutar.**
+
 ### 50. GRADIENTE OK del par; al racimo
 
 `quality/programa_auditoria_calidad` contra `nucleo/quality_audit`
