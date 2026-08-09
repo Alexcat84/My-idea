@@ -377,17 +377,23 @@ no una rareza.**
 se llamaba distinto quedo fuera sin decision**. Nadie lo conservo a proposito:
 **simplemente no entro.**
 
-### LA CONSULTA GENERAL, corrida por el auditor: SEIS bases huerfanas
+### EL CENSO FINAL: SEIS bases huerfanas por NUEVE rutas
 
 **Primero se corrio la consulta fijada al sufijo `_2` y dio cuatro.** El ejecutor
 la extendio a `_3` y `_4` y aparecieron dos mas. **El auditor la corrio en su
 forma general (`_N`, cualquier sufijo) y confirmo el resultado del ejecutor:**
 
-| consulta | bases |
-|---|---:|
-| hermano **`_2`** | 4 |
-| hermano **`_2`, `_3` o `_4`** (extension del ejecutor) | **6** |
-| hermano **`_N`** (general, del auditor) | **6** |
+| consulta | bases | rutas |
+|---|---:|---:|
+| hermano **`_2`** | 4 | 4 |
+| hermano **`_2`, `_3` o `_4`** (extension del ejecutor) | **6** | 6 |
+| hermano **`_N`**, **un salto** de alias (general, del auditor) | **6** | 8 |
+| hermano **`_N`**, **resolviendo CADENAS** (censo final) | **6** | **9** |
+
+**La novena ruta es una CADENA**: `costo_de_calidad_5` fue absorbido por
+`costo_de_calidad_6`, **y el `_6` viajo entero despues a
+`costo_de_mala_calidad_copq`** en un segundo salto. **Una consulta de un solo
+salto no la ve.**
 
 **Las seis, todas en `quality`.** A los cuatro del caso 8 se suman **tres
 CANDIDATOS A LECTURA, sin adjudicar**:
@@ -406,16 +412,10 @@ en el caso 8 por la ruta `_2`; **la novedad es que su maraña no es simple.**
 | `costo_de_calidad_5` | deprecado | `costo_de_calidad_6` |
 | `costo_de_calidad_6` | deprecado | `costo_de_mala_calidad_copq` |
 
-> **PRECISION MEDIDA POR EL EJECUTOR.** El encargo lo llama **triplemente
-> huerfano** (`_2` y `_4` a uno, `_6` al otro) y cifra el total en **ocho rutas**.
-> **Son CUATRO hermanos emigrados y NUEVE rutas**: falta el salto
-> **`costo_de_calidad_5` -> `costo_de_calidad_6`**, que despues viajo entero a
-> `costo_de_mala_calidad_copq` en un **segundo salto**.
->
-> **La conclusion del auditor no cambia y se refuerza**: los hermanos se
-> repartieron entre **DOS supervivientes finales** (`costo_de_calidad_3` y
-> `costo_de_mala_calidad_copq`) **y el base quedo fuera de ambas**. Solo que la
-> familia es de **seis miembros**, no de cuatro.
+> **CENSO FINAL, adjudicado**: **CUADRUPLE huerfano**. Familia de **seis
+> miembros**, **cuatro emigrados** (`_2`, `_4`, `_5`, `_6`) **repartidos entre DOS
+> supervivientes finales** (`costo_de_calidad_3` y `costo_de_mala_calidad_copq`),
+> **y el base quedo fuera de ambas fusiones.**
 
 #### b) `distincion_causas_comunes_especiales`
 
@@ -429,10 +429,16 @@ superviviente **que se llama distinto**. **Es la forma identica al caso 7.**
 nombre**: `eliminacion_causas_error_4` absorbio al `_3` y **quedo con la
 historia**, mientras el base sigue activo **sin marca**.
 
-> **PRECISION MEDIDA**: el encargo dice **dos hermanos vivos**. **Son TRES**: el
-> base, el `_2` y el `_4`. **El `_2` es un tercer nodo vivo sin marca**, lo que
-> hace el caso mas raro, no menos: **de cuatro hermanos sobre el mismo tema, tres
-> siguen ofreciendose y solo uno lleva historia.**
+> **TRES HERMANOS ACTIVOS**: el base, el `_2` y el `_4`, **y solo el `_4` lleva
+> historia.** De cuatro hermanos sobre el mismo tema, **tres siguen ofreciendose y
+> nada los relaciona.**
+
+> ## PRIMERO EN LA COLA DE LECTURA DEL CASO 8 AMPLIADO
+>
+> **Es el unico de los tres donde la maraña esta VIVA EN LA OFERTA**, no solo en
+> el registro. Los demas son huecos de historia: se leen cuando toque. **Aqui hay
+> tres nodos que un lector puede recibir hoy, sobre el mismo tema, sin que nada
+> le diga que son parientes.**
 
 **La lectura de estos tres se hara contra sus supervivientes y hermanos en el
 proximo lote del auditor, junto con los puestos 81 a 85.**
@@ -447,12 +453,28 @@ proximo lote del auditor, junto con los puestos 81 a 85.**
 > misma fijada al sufijo `_2`. El detector del punto ciego heredo el punto
 > ciego**, y la frase *"no hay quinta victima"* era falsa.
 
-**REGLA REUTILIZABLE:**
+### Y la SEGUNDA CAPA, confesada tambien por el auditor
 
-> **Toda consulta que caza una ceguera se revisa PRIMERO contra esa misma
-> ceguera.**
+**La consulta general arreglo el sufijo pero heredo otra ceguera**: **resolvia UN
+SOLO SALTO de alias**, y **la ruta en cadena le era invisible**.
 
-**Credito de la caza**: el ejecutor, extendiendo el sufijo.
+> **Y las cadenas no son una hipotesis: el propio catalogo las declara.**
+> `resolverId` en `web/lib/engine/graph.ts` **camina cadenas** precisamente porque
+> existen. **Hay ocho** de mas de un salto en el catalogo, y una de ellas es
+> justo la novena ruta de esta clase.
+
+**Dos ejemplares del mismo patron, con el mismo remedio.**
+
+### FORMULACION FINAL DE LA REGLA
+
+> **Toda consulta que caza una ceguera se revisa contra ESA MISMA CEGUERA y
+> contra LAS ESTRUCTURAS QUE EL CATALOGO YA DECLARO**: sufijos de cualquier
+> profundidad, cadenas de cualquier largo.
+
+**La segunda mitad es la que importa**: la casa **ya tenia escrito** que las
+cadenas existen, en el codigo que las camina. **La consulta no lo leyo.**
+
+**Credito de las dos cazas**: el ejecutor.
 
 ---
 

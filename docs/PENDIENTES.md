@@ -749,6 +749,23 @@ Las filas rescatadas del ciclo viejo van marcadas **`parcial`** y el resumen lo
 dice en voz alta: un total con filas dudosas se declara dudoso en vez de sonar
 exacto. **El próximo ciclo cierra con total certificable.**
 
+## Campaña del gradiente: el tablero vive en su auditoría
+
+**Puntero, para que la decisión no viva solo ahí.** El tablero completo de la
+campaña está en `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`, y las fichas de
+fusión que abrió, en `docs/FICHA_SUBFUSION_GRADIENTE.md`.
+
+**DECISIÓN DEL FUNDADOR (ago 2026): el barrido INTRA-DOMINIO se hace y cierra el
+100%** (el núcleo contra sí mismo y cada mundo contra sí mismo). Converge con la
+pregunta **mundo contra mundo** y con la clase de huérfanos **por nombre libre**,
+que quedó declarada NO MEDIDA: **son tres caras del mismo instrumento**, que es
+`scripts/gradiente_pares.py` con otro emparejamiento.
+
+**ORDEN FIJADO**: primero se agota la cola de 346, después la franja bajo el
+umbral, y **el intra-dominio AL FINAL**, porque muchos de sus pares caerán solos
+cuando las fusiones de la ficha se ejecuten. **El instrumento no se extiende
+hasta llegar ahí.**
+
 ## Ficha permanente: `vigencia-del-marco-internacional`
 
 Nace con el ciclo del censo (ago 2026). Los nodos de exportación que citan

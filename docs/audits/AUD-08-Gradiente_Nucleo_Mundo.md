@@ -443,8 +443,39 @@ minisección de riesgos** (`identificacion_de_riesgos`,
 > **Cuando la cola de 346 se agote, la franja siguiente no es solo bajar el
 > umbral semántico: es también la pregunta mundo contra mundo.**
 
-**Decisión pendiente del fundador con el auditor. No se extiende el instrumento
-desde esta nota.**
+### DECISIÓN DEL FUNDADOR: el barrido intra-dominio se hace
+
+**El barrido INTRA-DOMINIO** (el núcleo contra sí mismo, y cada mundo contra sí
+mismo) **SE HACE, y cierra el 100%.**
+
+**Converge con las otras dos preguntas abiertas**, y esa es la razón de la
+decisión: no son tres trabajos, son **tres caras del mismo instrumento**.
+
+| pregunta | dónde nació |
+|---|---|
+| **mundo contra mundo** | lote 7, puesto 51: la minisección de riesgos de `quality` |
+| **la clase de huérfanos por NOMBRE LIBRE** | ficha de sub-fusión: declarada **NO MEDIDA** |
+| **el intra-dominio** | esta decisión |
+
+**Las tres se responden con lo mismo**: **pares por semántica dentro y entre
+dominios, sin pasar por el núcleo.** Es `scripts/gradiente_pares.py` **con otro
+emparejamiento**: las **mismas dos señales**, los mismos umbrales calibrables, y
+**la misma doctrina de que empareja pero no juzga.**
+
+### ORDEN FIJADO, para no duplicar lecturas
+
+| | qué |
+|---|---|
+| **1.º** | **agotar la cola de 346** |
+| **2.º** | **la franja bajo el umbral** |
+| **3.º** | **el intra-dominio, AL FINAL**, con su cola propia |
+
+> **El intra-dominio va último por una razón económica, no por prioridad:
+> muchos de sus pares caerán solos cuando las fusiones de
+> `docs/FICHA_SUBFUSION_GRADIENTE.md` se ejecuten.** Leerlos antes sería leer dos
+> veces lo mismo, y la segunda vez con el catálogo ya cambiado debajo.
+
+**El instrumento no se extiende hasta llegar al tercer punto.**
 
 ### Decisiones que esperan al fundador
 
