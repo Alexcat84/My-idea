@@ -98,6 +98,16 @@ let _alias: Record<string, string> | null = null;
 
 /** alias -> el nodo que lo absorbió. Se construye una vez por proceso. */
 function mapaDeAlias(graph: Grafo): Record<string, string> {
+  // El cache es por PROCESO y por el grafo de produccion, que es el unico que
+  // el motor carga. Un grafo distinto (un test con fixture sintetico) no puede
+  // leer el mapa del real: se le construye el suyo y no se cachea.
+  if (graph !== _grafo) {
+    const m: Record<string, string> = {};
+    for (const [nid, n] of Object.entries(graph)) {
+      for (const a of n.ids_alias ?? []) if (a !== nid) m[a] = nid;
+    }
+    return m;
+  }
   if (_alias) return _alias;
   const m: Record<string, string> = {};
   for (const [nid, n] of Object.entries(graph)) {

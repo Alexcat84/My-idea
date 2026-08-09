@@ -83,9 +83,15 @@ describe("resolverId — un id de cualquier era", () => {
         expect(r, `${a} devolvió su propio id en vez de avanzar`).not.toBe(a);
       }
     }
-    expect(sinActivo, "apareció una cadena retirada nueva: adjudícala").toEqual([
-      "involucramiento_sindical",
-    ]);
+    // Hasta ago 2026 aquí había uno: `involucramiento_sindical`, cuya cadena
+    // terminaba en un nodo retirado de la selección. Al revivir los diez
+    // deprecados de selección bajo la política de escala y de país, su sucesor
+    // volvió a estar activo y la cadena entera resuelve. Es el resolutor
+    // haciendo su trabajo sin que nadie lo tocara.
+    //
+    // La lista se deja explícita, no vacía por descuido: si mañana aparece una
+    // cadena retirada nueva, el test la nombra y pide adjudicarla.
+    expect(sinActivo, "apareció una cadena retirada nueva: adjudícala").toEqual([]);
   });
 
   it("un deprecado SIN sucesor resuelve a sí mismo, no a null", () => {
@@ -93,13 +99,32 @@ describe("resolverId — un id de cualquier era", () => {
     // SBREFA, programas estatales): no hay equivalente universal al que
     // apuntar, y no debe haberlo. Pero el nodo conserva su título y su
     // contenido, así que su historia sigue contando algo.
+    // HOY NO QUEDA NINGUNO EN EL GRAFO REAL: los diez deprecados de selección
+    // volvieron con su condición honesta (ago 2026), así que los 314 deprecados
+    // que quedan son todos fusiones con sucesor. El comportamiento sigue siendo
+    // correcto y hay que custodiarlo igual: el día que se retire un concepto sin
+    // equivalente, tiene que representarse a sí mismo y no devolver null.
+    //
+    // Se prueba con un grafo SINTÉTICO, que es lo honesto cuando el caso real se
+    // vació: fingir que existe uno sería peor que decir que no hay.
     const reclamados = new Set(paresDeAlias().map(([a]) => a));
-    const sinSucesor = Object.keys(graph).filter((k) => graph[k].deprecado && !reclamados.has(k));
-    expect(sinSucesor.length).toBeGreaterThan(0);
-    for (const nid of sinSucesor) {
+    const sinSucesorReales = Object.keys(graph).filter(
+      (k) => graph[k].deprecado && !reclamados.has(k));
+    for (const nid of sinSucesorReales) {
       expect(resolverId(nid, graph)).toBe(nid);
-      expect(tituloDeNodo(nid, graph)).not.toBe(nid); // tiene título de verdad
+      expect(tituloDeNodo(nid, graph)).not.toBe(nid);
     }
+
+    const sintetico = {
+      retirado_sin_equivalente: {
+        node_id: "retirado_sin_equivalente", fase_proyecto: "ejecucion", dominio: "core",
+        titulo_concepto: "Un programa que solo existe en un país", resumen_teorico: "x",
+        deprecado: true,
+      },
+    } as unknown as Grafo;
+    expect(resolverId("retirado_sin_equivalente", sintetico)).toBe("retirado_sin_equivalente");
+    expect(tituloDeNodo("retirado_sin_equivalente", sintetico))
+      .toBe("Un programa que solo existe en un país");
   });
 
   it("un id que jamás existió devuelve null — y ese es el ÚNICO caso", () => {

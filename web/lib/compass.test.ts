@@ -10,6 +10,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { MIN_SCORE_SALTO, buscarAfines } from "./compass";
+import { cargarGrafo, resolverId } from "./engine/graph";
 
 const QUERY_POSITIVA = "no he calculado bien cuanto me cuesta cada pieza";
 const NODO_ESPERADO_POSITIVO = "hoja_estimacion_costos";
@@ -47,8 +48,15 @@ describe("calibracion offline (fixture, sin red)", () => {
   };
 
   function scoreContra(nodoId: string, queryEmbedding: number[]): number {
-    const idx = index.ids.indexOf(nodoId);
-    expect(idx).toBeGreaterThanOrEqual(0);
+    // POR EL RESOLUTOR DE LA HISTORIA. El fixture guarda ids de la Fase 2.9 y
+    // de la v1.3, y la fusión del núcleo (ago 2026) absorbió alguno de ellos:
+    // `framework_bullseye` vive hoy dentro de `bullseye_framework`. Un
+    // `indexOf` crudo devolvía -1 y el caso moría, cuando el concepto que
+    // gobierna MIN_SCORE_SALTO sigue existiendo y sigue respondiendo.
+    // Es exactamente para lo que el resolutor existe: la historia resuelve.
+    const vigente = resolverId(nodoId, cargarGrafo()) ?? nodoId;
+    const idx = index.ids.indexOf(vigente);
+    expect(idx, `${nodoId} (hoy ${vigente}) no está en el índice`).toBeGreaterThanOrEqual(0);
     return coseno(queryEmbedding, index.embeddings[idx]);
   }
 
