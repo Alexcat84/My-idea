@@ -1745,3 +1745,59 @@ apiladas.
 
 **Los detalles, en `docs/FICHA_SUBFUSION_GRADIENTE.md` (clase 9) y en
 `docs/COSTURAS_INTERNAS_RESUMEN.md`.**
+
+---
+
+## LOTE 11, puestos 99 a 114 sin los dos del adelanto (catorce pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los
+catorce puestos coinciden. Los puestos **105 y 106** no estan aqui: se leyeron en
+el adelanto del racimo.
+
+> **CAMBIO DE REGIMEN. Cero violaciones nuevas.** Por debajo de **0,79** la cola
+> deja de traer gradiente roto y empieza a traer **sanidad** y **material
+> intra-dominio**.
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **99** | GRADIENTE OK | `quality/ctq_caracteristicas_criticas` contra `nucleo/metricas_calidad` **(t46.2, s0.788)**. VOC a metrica con limites y prioridad, sobre el nodo flaco del nucleo |
+| **100** | GRADIENTE OK | `risk_management/riesgo_contra_valor_vale_la_pena` contra `nucleo/gates_tempranos_flexibles` **(t31.9, s0.7875)**. Valor contra riesgo y rigor por etapa: vecinos sanos |
+| **101** | FALSO PAR FUNCIONAL | `quality/trilogia_juran_qa_qc` contra `nucleo/metricas_calidad` **(t22.0, s0.7873)**. QC contra QA no es definir metricas. **Verificacion de familia en la ficha** |
+| **102** | GRADIENTE OK, tema propio | `compras/plantilla_fija_cotizaciones` contra `nucleo/gestion_procurement_consumo` **(t36.2, s0.7869)** |
+| **103** | FALSO PAR FUNCIONAL | `quality/definicion_y_concepto_de_aseguramiento_de_calidad` contra `nucleo/metricas_calidad` **(t41.2, s0.7868)**. **Cuarta aparicion del nodo flaco del nucleo** atrayendo falsos por generico; su nota de voz ya esta en el barrido residual |
+| **104** | GRADIENTE OK POR ESPECIALIZACION | `quality/dmadv_fase_verificacion` contra `nucleo/etapa_testing_validation` **(t26.7, s0.7867)**. Verificar el PROCESO en produccion sobre probar el PRODUCTO en el mercado |
+| **107** | GRADIENTE OK, con **cita intra-dominio** | `risk_management/el_riesgo_cambia_con_el_tiempo` contra `nucleo/registro_de_riesgos` **(t50.0, s0.7858)**. Sano contra el nucleo; **roza a los dos reencuadrados de la cirugia 1 dentro de su propio mundo** |
+| **108** | GRADIENTE OK | `quality/eliminar_barreras_departamentales` contra `nucleo/equipo_multifuncional` **(t29.5, s0.7856)**. Colaboracion continua contra equipo de proyecto |
+| **109** | GRADIENTE OK | `quality/innovacion_tipo_ii` contra `nucleo/brainstorming_divergente` **(t28.6, s0.7856)**. Tecnica especifica sobre marco general |
+| **110** | GRADIENTE OK, con **colateral de voz** | ver abajo |
+| **111** | GRADIENTE OK | `quality/desarrollar_caracteristicas_proceso_2` contra `nucleo/etapa_development` **(t41.6, s0.7851)**. **Verificacion de familia en la ficha** |
+| **112** | GRADIENTE OK | `risk_management/el_valor_tambien_es_incierto` contra `nucleo/gates_tempranos_flexibles` **(t35.4, s0.7848)**. **Segundo peldano sano sobre el mismo nucleo: hub sano** |
+| **113** | GRADIENTE OK, con **cita intra-dominio** | `quality/responsabilidad_gerencial_causas_comunes` contra `nucleo/curse_cinco_culpas` **(t37.0, s0.7844)** |
+| **114** | GRADIENTE OK, con **cita intra-dominio** | `quality/medicion_kpi` contra `nucleo/medicion_monitoreo_desempeno` **(t41.1, s0.7838)** |
+
+### 110, el colateral de voz, con su contraste servido en el mismo par
+
+`entrega/elegir_modo_transporte_volumen_distancia` contra
+`nucleo/driver_transporte` **(t45.8, s0.7853)**
+
+El nodo del **NUCLEO disena rutas y redes entre instalaciones, en voz de manual**:
+**escala de fabrica**. **La politica de escala ampara el contenido** (nada se
+esconde por estructura), **pero la voz va al barrido residual**.
+
+> **Lo que hace a este par util es que trae su propio contraste**: el nodo del
+> mundo **dice el mismo tema al lector real**, eligiendo modo de transporte por
+> volumen y distancia. **En el mismo par se ve la enfermedad y la cura.**
+
+---
+
+## MARCADOR TRAS 118 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas en el lote** | **cero** |
+| citas intra-dominio acumuladas | **tres racimos**, en la ficha |
+| notas de voz residual | ahora **cuatro**: `negociacion_contratos_proveedores` (45), `metricas_calidad` (96, y ya lleva **cuatro** falsos pares), `driver_transporte` (110), mas lo que traiga el barrido |
+
+> **La cola por debajo de 0,79 ya no discute el gradiente: reparte material para
+> los DOS barridos que vienen**, el intra-dominio y el de voz residual. **Leerla
+> sigue valiendo, pero por otra razon que al principio.**
