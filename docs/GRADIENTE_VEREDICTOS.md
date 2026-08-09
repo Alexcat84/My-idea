@@ -987,3 +987,157 @@ distintos.
 > **La cirugia 1 quedo verificada por la propia cola**, sin instrumento nuevo: el
 > nodo reencuadrado volvio a emparejar contra el mismo nodo del nucleo **y esta
 > vez gano su lugar.**
+
+---
+
+## ADELANTO DEL RACIMO DE AUDITORIA (decision del fundador: atacar el arbol completo)
+
+**9 ago 2026.** Nueve pares **adelantados fuera del orden de la cola**, para que la
+lectura de fusion del racimo **no tenga que reabrirse** cuando el barrido normal
+llegue a ellos. Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los nueve
+puestos coinciden.
+
+**Todos contra el mismo `nucleo/quality_audit`.**
+
+### 63. GRADIENTE OK, tema propio
+
+`quality/definicion_y_concepto_de_aseguramiento_de_calidad`
+**(t46.4, s0.8016)**
+
+**Aseguramiento no es auditoria.** Define el alcance del aseguramiento,
+sus evidencias, y lo diferencia de las demas tareas de calidad. **Fuera del
+racimo.**
+
+### 66. MIEMBRO DEL RACIMO, duo de proceso (con el 106)
+
+`quality/auditorias_calidad_proceso` **(t76.9, s0.7999)**
+
+### 98. GRADIENTE OK, tema propio (auditar el sistema mismo)
+
+`quality/auditoria_sistema_control_calidad_2` **(t45.5, s0.7881)**
+
+**Tema propio real**: no audita un producto ni un proceso, **audita el sistema de
+control** y pregunta si sigue siendo adecuado. **Fuera del racimo.**
+
+> ## LA VERIFICACION DEL SUFIJO `_2`, PEDIDA Y HECHA: EL HERMANO EXISTE
+>
+> **`quality/auditoria_sistema_control_calidad`, sin sufijo, EXISTE y esta
+> DEPRECADO.** Cinco pasos, misma fuente (*Juran's Quality Handbook*), mismo
+> tema. El `_2` que sobrevive es **claramente su version mejor**: seis pasos, voz
+> de tu, y añade que hacer cuando los puntos salen de los limites de control.
+>
+> **Lo que NO esta, y es el hallazgo:**
+>
+> | comprobacion | resultado |
+> |---|---|
+> | ¿hay `ids_alias` que lleve del deprecado al `_2`? | **NO. Ninguna entrada.** |
+> | ¿tiene `deprecado_por`? | **NO, es `null`.** |
+> | ¿tiene `motivo_deprecacion`? | **NO, es `null`.** |
+>
+> **Es un deprecado SIN SUCESOR REGISTRADO.** El resolutor lo trata bien (un
+> deprecado sin sucesor se representa a si mismo y la puerta unica no lo ofrece),
+> asi que **no hay avería para el lector**. Lo que hay es **historia sin
+> escribir**: el `_2` es su sucesor de hecho y **nadie lo dice en el dato**.
+>
+> **Y queda un residuo medido**: **tres nodos ACTIVOS declaran arista al id
+> deprecado** (`manual_de_calidad` y `medicion_kpi` en sus `nodos_siguientes`,
+> `planificacion_estrategica_despliegue_2` en sus `nodos_previos`). **Los tres
+> declaran TAMBIEN el `_2`**, asi que la arista viva existe y la muerta es peso
+> muerto que la puerta filtra.
+>
+> **No se toca nada desde aqui.** Va como observacion de dato, no de gradiente:
+> **el arreglo natural seria registrar el alias y limpiar las tres aristas
+> muertas**, y eso es adjudicacion aparte.
+
+### 105. FALSO PAR FUNCIONAL
+
+`quality/revision_progreso` **(t31.0, s0.7865)**
+
+**Revision de avance no es auditoria**: puntos de revision, comparar contra el
+objetivo, brechas, responsable, comunicar.
+
+**Nota, sin abrir caso**: **roza a `quality/revision_progreso_breakthrough`**
+(puesto 36). Una linea de observacion en la ficha de sub-fusion. **No es un caso
+abierto.**
+
+### 106. MIEMBRO DEL RACIMO, duo de proceso (con el 66)
+
+`quality/auditoria_de_proceso` **(t40.6, s0.7862)**
+
+### 160. NODO ROTO: caso propio de voz y valvula, FUERA del racimo y FUERA del gradiente
+
+`quality/auditoria_calidad_proveedores` **(t49.4, s0.7732)**
+
+**El titulo promete** auditoria en **recepcion y aceptacion de proveedores**. **Los
+pasos son otra cosa**: el **protocolo de visita de un auditor corporativo**.
+Reunirse con el gerente de calidad, reunirse con el gerente general, obtener
+autorizacion de otros departamentos, y **distribuir el informe desde la planta
+auditada**.
+
+**Titulo que miente, pasos de manual, valvula en contra.**
+
+**Entrada propia** en la seccion CASOS COLATERALES DE VOZ Y VALVULA de
+`docs/FICHA_SUBFUSION_GRADIENTE.md`. **Pendiente de adjudicacion.**
+
+> **Dato verificado que ahorra trabajo a esa lectura**: este nodo **ya esta
+> clasificado CORPORATIVO por la condicion (c)** en `docs/INVENTARIO_ESCALA.md`,
+> **con la misma cita** (*"Reunirse con el gerente general para explicar el plan de
+> auditoria"*). **La mitad de escala del veredicto ya estaba medida**; lo nuevo es
+> el titulo que miente.
+
+### 176. GRADIENTE OK, tema propio
+
+`quality/ingenieria_calidad` **(t48.8, s0.771)**
+
+Definir caracteristicas de desempeno con quien disena, coordinar el metodo de
+produccion, y fijar los puntos de control. **Fuera del racimo.**
+
+### 228. GRADIENTE OK, corporativo legitimo bajo la politica de escala
+
+`quality/auditoria_presidente` **(t46.9, s0.7618)**
+
+**La auditoria anual liderada por el presidente o CEO.** Es corporativo y **esta
+bien que lo sea**: la compuerta de escala se retiro entera y **nada se esconde por
+estructura**. Ya figura como **CORPORATIVO (c)** en `docs/INVENTARIO_ESCALA.md`.
+
+### 279. GRADIENTE OK, tema propio y voz correcta
+
+`quality/funciones_del_departamento_de_calidad` **(t28.3, s0.7563)**
+
+El titulo dice *departamento*, **pero los pasos estan reescritos a la escala del
+lector** (*"alguien capacitado que no sea quien fabrica el producto"*). **El
+contraste con el puesto 160 es exacto**: mismo riesgo de origen, resuelto bien.
+
+---
+
+## EL RACIMO QUEDA LEIDO AL 100%
+
+**16 de 16 pares de `nucleo/quality_audit`.**
+
+### Membresia final para la lectura de fusion
+
+| grupo | nodos | lectura |
+|---|---|---|
+| **el par de producto** | `auditoria_de_producto` (7 pasos), `auditoria_producto` (4) | **el largo CONTIENE POR COMPLETO al corto** |
+| | `auditoria_de_producto_2` (4) | **tema propio** (reinspeccion de decisiones), nombrado en el grupo pero **no entra a fusion** |
+| **el trio del programa** | `concepto_de_auditoria_de_calidad`, `programa_auditoria_calidad`, `auditoria_calidad` | **tres nodos reparten cuatro decisiones de montaje** |
+| **el duo de proceso** | `auditorias_calidad_proceso`, `auditoria_de_proceso` | checklist y hallazgos del proceso, dos veces |
+
+**Fuera del racimo, con tema propio**: `auditoria_negocio` (56), aseguramiento
+(63), sistema de control (98), ingenieria de calidad (176), auditoria del
+presidente (228), funciones de control (279). **Falso par**: revision de progreso
+(105). **Caso propio de voz y valvula**: `auditoria_calidad_proveedores` (160).
+
+> **CUENTA MEDIDA, y la traigo porque no coincide con la del encargo.** Los tres
+> grupos nombran **OCHO nodos del mundo**, de los cuales **SIETE entran a lectura
+> de fusion** (`auditoria_de_producto_2` queda declarado tema propio). **El encargo
+> dice nueve.** La lectura que cuadra es que el noveno sea **`nucleo/quality_audit`
+> mismo**, que no se funde pero **si es parte de la lectura**: es el nodo contra el
+> que los dieciseis emparejan, y lo que sobreviva a la fusion volvera a medirse
+> contra el. **No lo doy por sentado: lo dejo dicho para que el auditor fije la
+> cuenta.**
+
+### Lo que este adelanto compra
+
+> **Ningun par futuro de `quality_audit` queda sin leer. La fusion puede
+> ejecutarse sin reabrirse.**

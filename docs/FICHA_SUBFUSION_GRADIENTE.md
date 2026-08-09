@@ -182,7 +182,7 @@ MISMO `nucleo/quality_audit`**, un nodo de cuatro pasos.
 **Cada par individual cumple el gradiente.** Ninguno es una violacion. **El
 hallazgo es el solape INTERNO del racimo.**
 
-### Los miembros leidos, con su puesto
+### Los primeros siete leidos, con su puesto (lotes 6 y 7)
 
 | puesto | nodo del mundo | pasos |
 |---:|---|---:|
@@ -229,17 +229,79 @@ marca de nacimiento de la extraccion por chunks.
 > la actividad evaluada"* es **el paso 2 de `auditoria_calidad`**. **Tres nodos
 > reparten cuatro decisiones de montaje.**
 
-### El limite de este caso, que la lectura de fusion tendra que fijar
+### RACIMO COMPLETO: los dieciseis leidos
 
-`nucleo/quality_audit` empareja **dieciseis veces** en los 346, y **nueve de esas
-parejas estan por leer** (puestos 63, 66, 98, 105, 106, 160, 176, 228 y 279).
+**El fundador decidio atacar el arbol completo**, y los nueve pares que faltaban
+(puestos 63, 66, 98, 105, 106, 160, 176, 228 y 279) se **adelantaron fuera del
+orden de la cola**. Sus veredictos estan en la seccion ADELANTO DEL RACIMO DE
+AUDITORIA de `docs/GRADIENTE_VEREDICTOS.md`.
 
-> **Los siete de arriba son miembros CONFIRMADOS por lectura. Los nueve de abajo
-> son CANDIDATOS SIN LEER, y no se adjudican aqui.**
->
-> **Decision pendiente del auditor con el fundador**: o la lectura de fusion
-> **espera** a que la cola llegue a ellos, o se **adelantan** a proposito para no
-> fusionar un racimo dos veces. **El ejecutor no la toma.**
+> **16 de 16 pares de `nucleo/quality_audit` leidos. Ningun par futuro queda
+> pendiente: la fusion puede ejecutarse SIN REABRIRSE.**
+
+### Membresia final, para la lectura de fusion
+
+| grupo | nodos | que se leyo |
+|---|---|---|
+| **el par de producto** | `auditoria_de_producto` (7 pasos) y `auditoria_producto` (4) | **el largo contiene por completo al corto** |
+| **el trio del programa** | `concepto_de_auditoria_de_calidad`, `programa_auditoria_calidad`, `auditoria_calidad` | **tres nodos reparten cuatro decisiones de montaje** |
+| **el duo de proceso** | `auditorias_calidad_proceso` y `auditoria_de_proceso` | el checklist y los hallazgos del proceso, **dos veces** |
+
+**Nombrado en el grupo de producto pero FUERA de la fusion**:
+`auditoria_de_producto_2`, que es **tema propio** (reinspeccion de decisiones de
+inspeccion ya tomadas).
+
+**Fuera del racimo, con tema propio verificado**: `auditoria_negocio`,
+`definicion_y_concepto_de_aseguramiento_de_calidad`,
+`auditoria_sistema_control_calidad_2`, `ingenieria_calidad`,
+`auditoria_presidente` y `funciones_del_departamento_de_calidad`.
+
+> **Cuenta medida**: los tres grupos nombran **ocho** nodos del mundo, de los que
+> **siete entran a fusion**. El encargo dice **nueve**; la lectura que cuadra es
+> que el noveno sea `nucleo/quality_audit` mismo, que **no se funde pero si es
+> parte de la lectura**. **Queda para que el auditor fije la cuenta.**
+
+### Observacion suelta, sin caso abierto
+
+`quality/revision_progreso` (puesto 105) **roza** a
+`quality/revision_progreso_breakthrough` (puesto 36). **Una linea, no un caso**:
+los dos son revision periodica, pero el segundo la aplica a proyectos de mejora
+con costo, inversion y ahorro neto. **Si el racimo se abre alguna vez a una
+segunda vuelta, mirarlos juntos cuesta poco.**
+
+---
+
+# CASOS COLATERALES DE VOZ Y VALVULA
+
+**No son sub-fusion.** Son nodos que la lectura del gradiente encontro rotos por
+otra razon y que **no tienen donde ir**. Se registran aqui para que no se pierdan.
+
+## C1. `quality/auditoria_calidad_proveedores`: el titulo miente
+
+Encontrado en el **adelanto del racimo, puesto 160**. **Fuera del racimo y fuera
+del gradiente.**
+
+| | |
+|---|---|
+| **el titulo promete** | auditoria en **recepcion y aceptacion de proveedores** |
+| **los pasos entregan** | el **protocolo de visita de un auditor corporativo**: reunirse con el gerente de calidad, reunirse con el gerente general, obtener autorizacion de otros departamentos, distribuir el informe desde la planta auditada |
+
+**Tres defectos a la vez**: **titulo que miente**, **pasos en voz de manual**, y
+**la valvula en contra** (nada de eso lo hace el lector del taller esta semana).
+
+**Arreglo probable, y lo decide la lectura**: **reencuadre a la escala del
+lector**, o **marca corporativa con reescritura**. **PENDIENTE DE ADJUDICACION.**
+
+> **Dato verificado que ahorra la mitad del trabajo**: el nodo **ya esta
+> clasificado CORPORATIVO por la condicion (c)** en `docs/INVENTARIO_ESCALA.md`,
+> **con la misma cita**. Lo unico nuevo que aporta el gradiente es **el titulo que
+> miente**.
+
+> **Y el contraste que enseña como se arregla**:
+> `quality/funciones_del_departamento_de_calidad` (puesto 279) **tenia el mismo
+> riesgo de origen** (su titulo dice *departamento*) **y esta resuelto bien**: sus
+> pasos hablan de *"alguien capacitado que no sea quien fabrica el producto"*.
+> **El camino ya existe en el propio mundo.**
 
 ---
 
@@ -264,7 +326,7 @@ de siempre**:
 | **1.º** | **caso 5**, `quality` COC | dos nodos, un solo mundo, **lectura corta** |
 | **2.º** | **casos 3 y 4**, las costuras | **un solo nodo cada uno**: se abre, se parte o se recorta, y se cierra |
 | **3.º** | **caso 2**, brainstorming | **requiere decidir el reparto** entre nodos que sobreviven |
-| **4.º** | **caso 6**, el racimo de auditoria | **el mas grande y el menos maduro**: siete nodos confirmados, nueve candidatos sin leer, y su alcance no esta fijado |
+| **4.º** | **caso 6**, el racimo de auditoria | **el mas grande**, pero ya **RACIMO COMPLETO**: 16 de 16 leidos, membresia cerrada en tres grupos. **Se puede ejecutar sin reabrirse** |
 
 **El caso 1 salio del orden: esta CERRADO y no se ejecuta.**
 
