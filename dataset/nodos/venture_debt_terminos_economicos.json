@@ -2,17 +2,17 @@
   "node_id": "venture_debt_terminos_economicos",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Términos Económicos de un Venture Debt Term Sheet",
+  "titulo_concepto": "Las condiciones de precio en un préstamo de deuda de riesgo (venture debt)",
   "fuente": "Venture Deals",
-  "resumen_teorico": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, y entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que podrás ejercer esas acciones (strike price) es lo que más se negocia: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
+  "resumen_teorico": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, y entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que podrás ejercer esas acciones (precio de ejercicio o strike price) es lo que más se negocia: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
   "pasos_accionables": [
-    "Analizar la tasa de interés propuesta y el índice de referencia (Prime Rate) más el spread.",
-    "Revisar la estructura y momento de cobro de los fees del préstamo.",
-    "Negociar el porcentaje de warrant coverage y si es sobre acciones comunes o preferentes.",
-    "Negociar el strike price del warrant, buscando anclarlo a la valoración de la próxima ronda si se espera crecimiento.",
-    "Comparar ofertas entre bancos (menor warrant, más covenants) y fondos de deuda (mayor warrant, menos covenants)."
+    "Revisa la tasa de interés que te proponen y el índice de referencia (como la Prime Rate) más el margen que le suman.",
+    "Fíjate cómo y cuándo te cobran las comisiones del préstamo.",
+    "Negocia qué porcentaje de tu empresa entregas en certificados de compra de acciones (warrants) y si son sobre acciones comunes o preferentes.",
+    "Negocia el precio al que podrás ejercer esos warrants, buscando anclarlo a la valoración de tu próxima ronda si esperas crecer.",
+    "Compara ofertas entre bancos, que suelen pedir menos warrants pero imponen más restricciones (covenants), y fondos de deuda, que piden más warrants pero imponen menos restricciones."
   ],
-  "entregable_esperado": "Tabla comparativa de term sheets de venture debt con tasa, fees, warrant coverage y strike price para negociar la mejor oferta.",
+  "entregable_esperado": "Una tabla donde compares las ofertas de préstamo de deuda de riesgo que recibas, con la tasa, las comisiones, el porcentaje de warrants y el precio de ejercicio de cada una, para elegir la mejor.",
   "nodos_previos": [
     "venture_debt_introduccion"
   ],
@@ -20,8 +20,8 @@
     "venture_debt_introduccion"
   ],
   "condiciones_activacion": [
-    "Si el emprendedor está evaluando o negociando un term sheet de deuda de riesgo.",
-    "Si se necesita comparar ofertas de distintos prestamistas (bancos vs fondos de deuda)."
+    "Si estás evaluando o negociando la propuesta de un préstamo de deuda de riesgo (venture debt term sheet).",
+    "Si necesitas comparar ofertas de distintos prestamistas, como bancos frente a fondos de deuda."
   ],
   "etiqueta_arbol": "Negocia tus Términos de Deuda"
 }
