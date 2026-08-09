@@ -146,7 +146,126 @@ palanca reservada** (reencuadrar el nodo del **NUCLEO** a version base, clausula
 
 ---
 
-## 9. COSTURAS DE PEGADO DOBLE EN EL NUCLEO. **CLASE, no caso**
+## 9. ACRECION SIN TEJER. **CLASE del nucleo**
+
+> **LA CLASE CAMBIA DE NOMBRE Y DE TAMAÑO** al leer el top del instrumento.
+> Nacio como *"costuras de pegado doble"*, con dos ejemplares de **dos** bloques.
+> El top tiene nodos de **cinco, siete y mas** bloques apilados.
+>
+> **El defecto no es que algo se pego dos veces: es que las fusiones historicas
+> del nucleo APILARON NARRACIONES SIN TEJERLAS.** Cada fuente entro entera,
+> detras de la anterior, y nadie escribio la version unica.
+>
+> **ACRECION SIN TEJER** es el nombre que describe lo que se ve.
+
+### El tamaño, medido
+
+| | |
+|---|---:|
+| nodos citados por `scripts/costuras_internas.py` | **110** |
+| de `core` | **66** |
+| de `quality` | **24** |
+| resto (`exportacion`, `seguridad_digital`, `health_safety`, `franquicias`, `environmental`) | **20** |
+
+**La señal de bloques marca el corte**, asi que cada cita llega con **donde
+mirar**, no solo con que mirar.
+
+---
+
+## LOTE C1: los tres primeros del top, leidos
+
+**Veredicto del auditor: COSTURA CONFIRMADA en los tres.** Las repeticiones que
+siguen **se verificaron contra el grafo antes de escribirlas**.
+
+### a) `core/producto_minimo_viable`, 22 pasos: CINCO narraciones del MVP en fila
+
+**Los bloques**: 1 a 5, 6 a 9, 10 a 14, 15 a 18, 19 a 22.
+
+**Y la misma instruccion servida una y otra vez**, con las palabras cambiadas:
+
+| la instruccion | en los pasos |
+|---|---|
+| *"define el conjunto minimo de caracteristicas a partir de tu vision"* | **6, 15 y 19** |
+| *"itera o cambia de rumbo si nadie lo encuentra interesante o suficiente"* | **8, 17 y 22** |
+| *"muestra tu primera version solo a los earlyvangelists, no al mercado masivo"* | **7, 12 y 20** |
+
+> **Es el nodo de bandera del catalogo sirviendo la misma instruccion TRES veces,
+> tres veces, y tres veces.** Un lector que llegue aqui recibe veintidos pasos
+> para aprender lo que caben en cinco.
+
+### b) `core/coeficiente_viral`, 16 pasos: TRES narraciones del calculo de K
+
+| bloque | que es |
+|---|---|
+| **1 a 5** | la version **simple**: contar usuarios y referidos, porcentaje que se activa, coeficiente, incentivos, monitoreo |
+| **6 a 11** | la version **descompuesta**, en **tu**: invitaciones por usuario, conversion, `K = i * conversion`, tiempo de ciclo viral, eslabon mas debil |
+| **12 a 16** | **la descompuesta OTRA VEZ**, en **infinitivo**: invitaciones, conversion en clics, clics en registros, `K = invitaciones x click-through x signup`, variable mas debil |
+
+> **DOS CORTES, NO UNO.** Y el tercer bloque **repite al segundo cambiando solo la
+> voz**, que es la firma de esta clase: el mismo contenido entro dos veces desde
+> dos extracciones distintas.
+
+### c) `core/viral_loop_marketing`, 30 pasos: SIETE bloques apilados
+
+Todo lo que las fuentes dijeron sobre referidos, en fila: mecanismos y coeficiente
+(1 a 3), la peticion de referido (4 a 8), los promotores espontaneos (9 a 13), el
+programa de referidos (14 a 17), **el mismo programa otra vez en tu** (18 a 21),
+las recompensas mas alla del dinero (22 a 25), y los tipos de viralidad (26 a 30).
+
+> **Contra el estandar de 3 a 6 pasos, treinta pasos son CINCO VECES el techo.**
+>
+> **Eso no es un nodo: es un vertedero ordenado.**
+
+---
+
+## LA CORRELACION CON EL ESTANDAR DE PASOS
+
+**El estandar de `docs/SOP_EXTRACCION_PACKS.md` ya hacia ilegales estos nodos**:
+*"pasos_accionables: 3-6 pasos imperativos concretos, hacibles esta semana"*.
+
+**Nadie lo medía.**
+
+| | |
+|---|---:|
+| activos por encima de 6 pasos | **177** (5,0% del catalogo) |
+| de las **110 citas**, cuantas estan fuera del estandar | **72** (65%) |
+| de las **106 que disparan por bloque**, cuantas estan fuera | **72** (68%) |
+| de los **10 nodos con mas pasos** del catalogo, cuantos cito el instrumento | **10 de 10** |
+
+> **El 5% del catalogo incumple el estandar, pero es el 65% de las citas.** Las dos
+> señales miden cosas distintas y apuntan al mismo sitio: **un nodo largo lo es
+> casi siempre porque le apilaron narraciones.**
+
+**Consecuencia para la lectura**: el instrumento **ya reporta el conteo de pasos
+de cada cita**, y **la cola del auditor se ordena por disparo de bloque y conteo
+de pasos JUNTOS**. Ninguna de las dos sola pone arriba lo que mas duele.
+
+---
+
+## EL ARREGLO DE LA CLASE: DESTEJIDO POR REESCRITURA
+
+**Para cuando el fundador dispare. No se ejecuta desde este documento.**
+
+**No es una fusion**: no hay supervivientes que elegir ni alias que escribir.
+**Es un solo nodo al que le sobran narraciones.**
+
+| | que se hace |
+|---|---|
+| **1** | **UNA narracion canonica de 3 a 6 pasos**, la del estandar |
+| **2** | **los aportes UNICOS de cada bloque, tejidos dentro**: la descomposicion de K, el tiempo de ciclo viral, los tipos de viralidad, y sus equivalentes en cada nodo |
+| **3** | clausula **"quitar no es inventar"**, con **la lista explicita de lo que se quita** |
+| **4** | **re-voz** del resultado |
+| **5** | **cierre completo de catalogo tocado**: Gate 0, reindex, sync, trinquete con puestos antes y despues |
+
+**Por LOTES, con plan previo por lote**, como la cirugia 2.
+
+> **Lo que hace este arreglo posible sin perder nada**: **las fuentes ya viajan en
+> `merged_originals`**. El destejido **no toca la doctrina de fuentes**: quita
+> texto repetido, y la autoria de cada absorbido sigue registrada donde siempre.
+
+---
+
+## El registro original de la clase, conservado
 
 > **PASO DE CASO A CLASE en el lote 10.** El puesto 97 destapo **el segundo
 > ejemplar**, `nucleo/economia_circular_como_modelo_de_negocio`, con la figura
