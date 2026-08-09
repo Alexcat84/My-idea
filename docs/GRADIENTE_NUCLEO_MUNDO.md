@@ -117,3 +117,29 @@ es el diseno querido.**
 
 > **El defecto de una violacion no es que existan dos nodos: es que el de pago
 > quedo a la altura del gratis.**
+
+---
+
+# LA PROHIBICION PROTEGE LA BASE, NO EL EXCESO
+
+**Decision del fundador (ago 2026), nacida de la clase VIOLACION INVERTIDA.**
+
+Cuando el nucleo **profundiza de mas**, el arreglo tiene **DOS MITADES
+INSEPARABLES**:
+
+1. **El nodo del nucleo baja a BASE SOLIDA**: suficiente, **jamas mudo**.
+2. **El EXCESO no se tira: se TRASPLANTA al mundo aplicable y lo robustece.**
+
+**Desplazar el nodo base sigue prohibido. Trasplantar el exceso es el arreglo.**
+No son la misma operacion y conviene no confundirlas: la primera deja al plan
+gratuito cojo en un tema; la segunda le devuelve al plan gratuito su base honesta
+y le da al de pago la profundidad que el nucleo estaba reteniendo de mas.
+
+> **Un reencuadre a base que borre el exceso sin darle destino en el mundo es un
+> arreglo A MEDIAS, y se rechaza.**
+
+**Consecuencia practica para quien ejecute**: el plan de la cirugia **no esta
+completo** hasta que cada pieza del exceso tenga escrito **a que peldano del
+mundo va y como**. Si alguna pieza **no tiene peldano donde vivir**, eso se
+**declara**, y crear el nodo que falte es **adjudicacion aparte**, no un tramite
+de la cirugia.
