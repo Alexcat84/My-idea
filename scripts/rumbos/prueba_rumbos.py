@@ -205,6 +205,12 @@ def main():
             faltan = faltan + [f"ninguna de {conjunto}"]
         prohibidos = r.get("prohibido_top3") or []
         violada = [d for d in prohibidos if d in doms_top[:TOP_FRONTERA]]
+        # PROHIBICION POR NODO (ago 2026): las fronteras de dominio no bastan
+        # para vigilar la POLITICA DE ESCALA, porque un nodo corporativo y uno
+        # de artesano viven en el MISMO dominio. El rumbo-trampa de la artesana
+        # sola nombra los nodos que no deben salirle en el top-3.
+        prohibidos_n = r.get("prohibido_nodos_top3") or []
+        violada += [f"nodo:{n}" for n in prohibidos_n if n in ids_top[:TOP_FRONTERA]]
 
         if not dom_ok or violada:
             estado = "rojo"

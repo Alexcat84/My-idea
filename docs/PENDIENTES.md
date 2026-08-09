@@ -524,7 +524,38 @@ mismas palabras **sí** llegaron al top-10 con solo re-vozar.
 > `diagnostico: true`, fuera del marcador y con su expectativa escrita al lado.
 > El día que el frente funcione, se quitan de diagnóstico y entran a la vara.
 
-### Hipótesis del auditor para ese día, sin diseñarla ahora
+### LAS TRES VÍAS POR PROBAR, en orden de costo (adjudicadas ago 2026)
+
+**(a) La asimetría de `input_type`.** Verificar que el corpus se embebió como
+`document` y que las consultas van como `query`. Si no coinciden, **hay puntería
+perdida gratis**, sin tocar un solo nodo. Es lo más barato que hay: se reporta al
+abrir el frente.
+
+**(b) Embeber y CONSULTAR las `condiciones_activacion` aparte**, con índice o
+peso propio, para que **la situación compita contra la situación** en vez de
+diluirse dentro del concepto. Hoy están dentro del mismo vector que el título y
+el resumen, y ahí se pierden.
+
+**(c) Un reordenador sobre el top-k de la búsqueda vectorial**, que lee consulta
+y nodo juntos. Es la cura clásica del enganche léxico, y la más cara.
+
+**Prueba de aceptación, intacta**: los tres rumbos en verde.
+
+### Hipótesis original del auditor — CORREGIDA con el código en la mano
+
+La hipótesis era *"embeber también las `condiciones_activacion`: es dato que ya
+existe y sería un spike barato"*. **Parte de una premisa falsa**:
+`scripts/build_semantic_index_voyage.py:56-62` ya las incluye en el texto que se
+embebe, junto al título y el resumen. **Los tres rumbos rebeldes fallan con ellas
+dentro.**
+
+Eso no mata la intuición, la reorienta: si el campo escrito como situación ya
+está en la mezcla y no basta, lo que queda por probar es **embeberlo aparte y
+consultarlo aparte** — dos índices, o un campo con peso propio en la puntuación—
+en vez de *añadirlo*. No lo diseño aquí.
+
+Lectura completa del uso real del campo en
+`docs/LECTURA_CONDICIONES_Y_DEPRECADOS.md`.
 
 **Embeber también las `condiciones_activacion`.** Están escritas como
 situaciones —*"Cuando el emprendedor está tratando de…"*, *"Si dudas entre pagar
@@ -538,6 +569,30 @@ tercera persona por diseño**. Ese es el argumento a favor: es el campo escrito
 desde la situación, no desde el concepto.
 
 Lo demás del frente vive en `docs/AUDITORIA_MOTOR.md`, archivada.
+
+## DECISIÓN DE DISEÑO: las `condiciones_activacion` NO son compuerta, y así se quedan
+
+**Adjudicada ago 2026, con el código leído.** No filtran: suman puntaje léxico en
+cuatro sitios del motor y viajan al intérprete dentro de `resumenNodo`, que las
+lee antes de elegir.
+
+**El porqué, y es el argumento que la sostiene:**
+
+> Cuando el motor decide, **todavía no sabe casi nada del usuario**. Filtrar por
+> una condición que el usuario aún no ha declarado mataría nodos legítimos por
+> falta de información, no por falta de encaje. Sumar puntaje y entregarle las
+> condiciones al intérprete es lo correcto: pesa hacia quien encaja sin cerrarle
+> la puerta a quien todavía no ha contado su situación.
+
+**La advertencia queda registrada igual**: es un peso, no un muro. Si el catálogo
+se quedara sin mejores candidatos, un nodo de escala corporativa se le ofrecería
+igual a quien trabaja solo.
+
+**Y la seguridad se compra con un guardián, no con un filtro**: el rumbo-trampa
+`frontera_artesana_sola_no_corporativo` en el banco de rumbos. Una consulta de
+artesana sola que **no debe devolver nodos de escala corporativa en el top-3**.
+Si la política de escala empezara a estorbar, ese rumbo lo canta antes que un
+usuario.
 
 ## Ficha: `huecos-de-contenido` — documentados sin inventarlos
 
