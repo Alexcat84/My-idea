@@ -377,59 +377,102 @@ no una rareza.**
 se llamaba distinto quedo fuera sin decision**. Nadie lo conservo a proposito:
 **simplemente no entro.**
 
-### PERO LA CLASE NO ESTA ACOTADA EN CUATRO, y esto lo trae el ejecutor
+### LA CONSULTA GENERAL, corrida por el auditor: SEIS bases huerfanas
 
-**Reproduje la consulta y da los cuatro exactos.** Y despues la **corri otra vez
-extendiendo el sufijo**, porque el catalogo tiene familias que llegan a `_3` y
-`_4`:
+**Primero se corrio la consulta fijada al sufijo `_2` y dio cuatro.** El ejecutor
+la extendio a `_3` y `_4` y aparecieron dos mas. **El auditor la corrio en su
+forma general (`_N`, cualquier sufijo) y confirmo el resultado del ejecutor:**
 
-| consulta | huerfanos |
+| consulta | bases |
 |---|---:|
-| hermano **`_2`** (la que se corrio) | **4** |
-| hermano **`_2`, `_3` o `_4`** | **6** |
+| hermano **`_2`** | 4 |
+| hermano **`_2`, `_3` o `_4`** (extension del ejecutor) | **6** |
+| hermano **`_N`** (general, del auditor) | **6** |
 
-**Los dos que aparecen al extenderla:**
+**Las seis, todas en `quality`.** A los cuatro del caso 8 se suman **tres
+CANDIDATOS A LECTURA, sin adjudicar**:
 
-| candidato | su hermano | absorbido por | ¿misma forma? |
-|---|---|---|---|
-| `distincion_causas_comunes_especiales` | `_3` | **`causas_comunes_vs_especiales`** | **SI, identica**: el superviviente **se llama distinto** |
-| `eliminacion_causas_error` | `_3` | `eliminacion_causas_error_4` | **NO**: el superviviente **es de la misma familia de nombre** |
+#### a) `costo_de_calidad`: huerfano MULTIPLE
 
-> **`distincion_causas_comunes_especiales` es el quinto huerfano, y es la misma
-> forma exacta que `value_stream_mapping`.** Su `_2` sigue activo (por eso la
-> consulta de `_2` no lo vio) y su `_3` se fue a un nodo con otro nombre.
+**Sus hermanos emigraron y el base quedo fuera de todas las fusiones.** Ya estaba
+en el caso 8 por la ruta `_2`; **la novedad es que su maraña no es simple.**
+
+| miembro | estado | se fue a |
+|---|---|---|
+| `costo_de_calidad` | **ACTIVO, sin marca** | **se quedo** |
+| `costo_de_calidad_2` | deprecado | `costo_de_calidad_3` |
+| `costo_de_calidad_3` | **ACTIVO** | **superviviente** |
+| `costo_de_calidad_4` | deprecado | `costo_de_calidad_3` |
+| `costo_de_calidad_5` | deprecado | `costo_de_calidad_6` |
+| `costo_de_calidad_6` | deprecado | `costo_de_mala_calidad_copq` |
+
+> **PRECISION MEDIDA POR EL EJECUTOR.** El encargo lo llama **triplemente
+> huerfano** (`_2` y `_4` a uno, `_6` al otro) y cifra el total en **ocho rutas**.
+> **Son CUATRO hermanos emigrados y NUEVE rutas**: falta el salto
+> **`costo_de_calidad_5` -> `costo_de_calidad_6`**, que despues viajo entero a
+> `costo_de_mala_calidad_copq` en un **segundo salto**.
 >
-> **La ironia vale la pena escribirla**: la consulta que cazaba un dedup ciego al
-> sufijo **estaba ella misma fijada al sufijo `_2`.**
->
-> **No lo doy por adjudicado**: el quinto y el sexto **quedan como candidatos a la
-> espera del auditor**, y por eso **no entran al caso 8**. Lo que si queda dicho es
-> que **la frase "no hay quinta victima" no se sostiene con la medicion.**
+> **La conclusion del auditor no cambia y se refuerza**: los hermanos se
+> repartieron entre **DOS supervivientes finales** (`costo_de_calidad_3` y
+> `costo_de_mala_calidad_copq`) **y el base quedo fuera de ambas**. Solo que la
+> familia es de **seis miembros**, no de cuatro.
 
-### Observacion medida de rebote, fuera de alcance
+#### b) `distincion_causas_comunes_especiales`
 
-**27 de las 349 entradas de `merged_originals` del catalogo apuntan a ids que ya
-no tienen archivo propio** en ningun sitio del repositorio (entre ellas
-`consejos_calidad` y `consejos_de_calidad_2`, absorbidos por
-`consejo_de_calidad_3`).
+**Familia de tres: dos vivos y uno emigrado.** El base y su `_2` **siguen los dos
+ACTIVOS y sin marca**; el `_3` se fue a **`causas_comunes_vs_especiales`**, un
+superviviente **que se llama distinto**. **Es la forma identica al caso 7.**
 
-De esos 27 **sobrevive el registro** (id, titulo y fuente), que es lo que la
-doctrina de las fuentes necesita, **pero no su contenido**. Los otros 322 si
-conservan su archivo deprecado entero.
+#### c) `eliminacion_causas_error`
 
-> **No se investiga desde aqui**, y puede tener explicacion (absorciones ocurridas
-> **dentro del pack antes de integrarlo**, de modo que solo el superviviente
-> viajo al master). **Queda anotado porque nadie lo habia medido.**
+**Familia de cuatro**, y aqui el superviviente **es de la misma familia de
+nombre**: `eliminacion_causas_error_4` absorbio al `_3` y **quedo con la
+historia**, mientras el base sigue activo **sin marca**.
 
-### c) Por que la especializacion se queda
+> **PRECISION MEDIDA**: el encargo dice **dos hermanos vivos**. **Son TRES**: el
+> base, el `_2` y el `_4`. **El `_2` es un tercer nodo vivo sin marca**, lo que
+> hace el caso mas raro, no menos: **de cuatro hermanos sobre el mismo tema, tres
+> siguen ofreciendose y solo uno lleva historia.**
 
-`value_non_value_added_analysis` **no repite** a ninguno de los dos: toma **un
-paso** (la clasificacion VA/NVA) y le pone **la pregunta que la hace operable**
-(*"¿el cliente pagaria por esto?"*). **Es profundizacion, no duplicado**, y
-sobrevive a la fusion **con sus dos aristas de entrada reducidas a una.**
+**La lectura de estos tres se hara contra sus supervivientes y hermanos en el
+proximo lote del auditor, junto con los puestos 81 a 85.**
 
-**Lectura de fusion PENDIENTE. La valvula de pasos accionables, como siempre,
-tiene la ultima palabra.**
+---
+
+### LA LECCION DEL DETECTOR
+
+**Confesada por el auditor, y vale mas que el hallazgo:**
+
+> **La consulta que cazaba un dedup ciego al parentesco de nombre estaba ella
+> misma fijada al sufijo `_2`. El detector del punto ciego heredo el punto
+> ciego**, y la frase *"no hay quinta victima"* era falsa.
+
+**REGLA REUTILIZABLE:**
+
+> **Toda consulta que caza una ceguera se revisa PRIMERO contra esa misma
+> ceguera.**
+
+**Credito de la caza**: el ejecutor, extendiendo el sufijo.
+
+---
+
+### EL LIMITE DE LA CLASE, declarado para que no se vuelva a acotar en falso
+
+**Incluso la consulta general esta atada a FAMILIAS DE NOMBRE.**
+
+**Un huerfano cuyo gemelo se llame distinto desde el origen es INVISIBLE para
+ella.** Si dos extracciones del mismo capitulo nacieron con nombres sin parentesco
+y una se fundio, **ninguna consulta de sufijo lo vera jamas.**
+
+Ese residuo **solo se caza con semantica**, y **es la misma pregunta mundo contra
+mundo** anotada en el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`.
+
+| clase | estado |
+|---|---|
+| huerfanos por **familia de sufijo** | **CERRADA**: seis bases, nueve rutas, todas en `quality` |
+| huerfanos por **nombre libre** | **NO MEDIDA**, y declarada como tal |
+
+---
 
 ## 8. `quality`, LOS TRES HUERFANOS RESTANTES
 
@@ -521,6 +564,31 @@ lector no tiene.**
 > **Se arregla en la misma lectura de fusion de cada caso, no antes.** Los dos
 > nodos ya estan citados a esa lectura, y un titulo que va a cambiar de dueno no
 > se toca dos veces.
+
+---
+
+# FICHA DORMIDA: los 27 REGISTROS SIN ARCHIVO
+
+**Medicion del ejecutor, reproducida por el auditor.** No es sub-fusion ni voz:
+es un hueco de historia que nadie habia medido.
+
+**27 exactos de las 349 entradas de `merged_originals`** del catalogo apuntan a
+ids que **ya no tienen archivo propio en ninguna parte del repositorio**. Entre
+ellas, `consejos_de_calidad_2`, del caso 8.
+
+| que sobrevive | que no |
+|---|---|
+| **el registro**: id, titulo y **fuente** | **el TEXTO** del absorbido |
+
+> **La union de fuentes esta a salvo**, que es lo que la doctrina de las fuentes
+> necesita. **Lo que no se puede consultar es que decia.** Los otros 322 si
+> conservan su archivo deprecado entero.
+
+**Hipotesis inocente, sin investigar**: absorciones ocurridas **dentro del pack
+antes de integrarlo**, de modo que **solo el superviviente viajo al master**.
+
+> **Se investiga cuando alguna lectura de fusion necesite consultar que decia un
+> absorbido de esa lista. No antes.**
 
 ---
 

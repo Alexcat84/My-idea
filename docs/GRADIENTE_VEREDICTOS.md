@@ -1418,11 +1418,15 @@ de una fusion **porque su hermano se llamaba distinto del superviviente**.
 `consejos_de_calidad`, `costo_de_calidad` y `entrenamiento_supervisores` (caso 8
 de `docs/FICHA_SUBFUSION_GRADIENTE.md`).
 
-> **La clase NO quedo cerrada en cuatro, y esto lo trae el ejecutor.** Al
-> reproducir la consulta y **extender el sufijo mas alla de `_2`**, aparece un
-> **quinto de forma identica**: `distincion_causas_comunes_especiales`, cuyo `_3`
-> se fue a `causas_comunes_vs_especiales`. **Queda como candidato a la espera del
-> auditor, y por eso no entro al caso 8.** El detalle esta en la ficha.
+> **La clase NO quedo cerrada en cuatro.** El ejecutor extendio la consulta mas
+> alla del sufijo `_2` y aparecieron dos bases mas; **el auditor la corrio en su
+> forma general y confirmo el resultado**. **La cuenta final es SEIS bases
+> huerfanas por NUEVE rutas, todas en `quality`**, y los tres candidatos nuevos
+> (`costo_de_calidad` con maraña multiple,
+> `distincion_causas_comunes_especiales` y `eliminacion_causas_error`) **van al
+> proximo lote junto con los puestos 81 a 85**. El detalle, la leccion del
+> detector y el limite declarado de la clase estan en
+> `docs/FICHA_SUBFUSION_GRADIENTE.md`.
 
 **Y los puestos 81 a 85 siguen pendientes**, nombrados desde este mismo lote:
 `environmental/diseno_para_el_medio_ambiente`,
