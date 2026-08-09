@@ -2562,3 +2562,114 @@ observados, no como activos"*.
 > **Quedan 69 pares de la cola.** Y lo que sigue saliendo no es gradiente: son
 > **duplicados internos de los mundos**, que hasta ahora se habian visto solo en el
 > nucleo.
+
+---
+
+## LOTE 20, puestos 277 a 297 sin el del adelanto (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden. El **279** no esta aqui: se leyo en el adelanto del racimo.
+
+> **CERO VIOLACIONES. DECIMO lote seguido. Quedan 49: dos lotes y la cola muere.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **277** | OK funcional | `compras/negocia_por_intereses_no_posiciones` contra `nucleo/orden_negociacion_puntos` **(t38.4)** |
+| **278** | OK | `quality/estilo_gerencial_calidad` contra `nucleo/atributos_liderazgo_ceo` **(t43.3)** |
+| **280** | OK, tema propio | `risk_management/correr_hacia_el_riesgo` contra `nucleo/gates_tempranos_flexibles` **(t34.4)**. **Apetito de riesgo decidido a proposito**; tercera pareja sana de ese nucleo |
+| **281** | OK | `quality/brainstorming` contra `nucleo/construir_sobre_ideas_ajenas` **(t44.8)** |
+| **282** | OK | `quality/sistema_medicion_kpi` contra `nucleo/build_metrics_toolset` **(t42.9)** |
+| **283** | OK | `entrega/decidir_vender_solo_online_o_tambien_tienda_fisica` contra `nucleo/channels_hypothesis_web_mobile` **(t38.3)**. **El canal fisico-digital del taller sobre el digital puro** |
+| **284** | FALSO PAR FUNCIONAL | `quality/identificacion_causa_raiz_no_culpa_individual` contra `nucleo/five_whys_inversion_proporcional` **(t30.0)** |
+| **285** | FALSO PAR FUNCIONAL | `quality/evaluacion_gestion_riesgos` contra `nucleo/modelo_contingencia_riesgo` **(t48.6)**. **QUINTA aparicion del nodo COC** |
+| **286** | OK | `franquicias/capitalizacion_adecuada_del_franquiciador` contra `nucleo/decision_intensidad_capital` **(t28.8)**. **OCTAVA del hub** |
+| **287** | OK | `risk_management/guarda_lo_que_aprendiste_de_cada_golpe` contra `nucleo/emprendimiento_serial` **(t33.8)** |
+| **288** | OK, **segunda cita mundo-mundo** | ver abajo |
+| **289** | OK, **el colateral C2 suma miembro** | ver abajo |
+| **290** | OK, **LA PIEZA NEUTRAL de la frontera Deming** | ver abajo |
+| **291** | OK | `compras/pide_una_revision_externa_antes_de_firmar_cualquier_contrato` contra `nucleo/negociacion_carta_compromiso_banquero` **(t39.1)** |
+| **292** | OK | `quality/seleccionar_diseno_general_proceso` contra `nucleo/diseno_conceptual_sistema` **(t44.1)** |
+| **293** | OK | `franquicias/definir_meta_a_5_anos_antes_de_franquiciar` contra `nucleo/decision_intensidad_capital` **(t38.2)**. **NOVENA del hub** |
+| **294** | FALSO PAR FUNCIONAL | `quality/evaluacion_gestion_riesgos` contra `nucleo/analisis_de_sensibilidad_riesgo` **(t46.2)**. **SEXTA del COC** |
+| **295** | OK, tema propio | `compras/ofrece_valor_no_economico` contra `nucleo/orden_negociacion_puntos` **(t41.1)** |
+| **296** | OK | `quality/medicion_kpi` contra `nucleo/diseno_metricas_lideres_rezagados` **(t37.4)** |
+| **297** | OK, **par intra-nucleo de ROI** | ver abajo |
+
+### 288, el DFE vive en DOS mundos
+
+`quality/design_for_environment` contra `nucleo/diseno_para_sostenibilidad_cradle_to_cradle`
+**(t37.2)**
+
+**El mismo tema con el mismo nombre en dos mundos, y de dos libros distintos**:
+`quality/design_for_environment` (Juran, angulo de **materiales**) y
+`environmental/diseno_para_el_medio_ambiente` (Esty, *Green to Gold*, angulo de
+**marco**, puesto 81). **No estan conectados.**
+
+**Segunda cita mundo contra mundo. Sin adjudicar.**
+
+### 289, el numero de paso de Crosby vuelve a asomar
+
+`quality/medicion_calidad_2` contra `nucleo/metricas_calidad` **(t65.3)**
+
+**Su titulo es *"Paso 3: Medicion de la Calidad"***. **La secuencia de Crosby otra
+vez en un titulo**, y **duodecima pareja del iman**.
+
+> **PRECISION DE CUENTA**: el colateral C2 ya tenia **cuatro** miembros (*Paso 13*
+> en `consejos_de_calidad`, *Paso 4* en `costo_de_calidad_3`, y *Paso 11* en los
+> **dos** nodos de ECR). **Con este son CINCO, no tres.**
+
+### 290, LA PIEZA NEUTRAL de la frontera Deming, y ya existia
+
+`quality/seleccion_fuente_unica_multiple` contra
+`nucleo/coordinacion_colaboracion_cadena_suministro` **(t34.6)**
+
+**Presenta las dos escuelas como una DECISION CON CRITERIOS, sin doctrina**:
+*evaluar ventajas de competencia (multiples proveedores) contra profundidad de
+relacion (fuente unica)*, analizar reputacion y calificacion, decidir si se reduce
+la base, y **documentar la decision segun criticidad del componente**.
+
+> **Y hay un dato que explica por que PUEDE ser neutral: es de JURAN.** La frontera
+> enfrenta a **Deming** (*proveedor unico*) con el nodo del nucleo (*matriz
+> ponderada entre varios*). **Este viene de un tercer autor, y por eso no tiene que
+> defender ninguno de los dos lados.**
+
+**Cuando la pasada unica escriba el contexto de esa frontera, el puente natural ya
+esta en el catalogo.**
+
+### 297, el par de ROI del nucleo, y la consecuencia para el destejido
+
+`quality/roi_proyectos_calidad` contra `nucleo/calculo_roi` **(t61.5)**
+
+**El par cumple.** El hallazgo es que `calculo_roi` (**cinco pasos genericos y
+sanos**) convive con `propuesta_gasto_capital`, **la costurada del puesto 189**.
+
+> **DATO DE GRAFO, y es el que da la consecuencia**: **NO estan sueltos, estan
+> encadenados en orden a traves de un intermedio**:
+>
+> `calculo_roi` **->** `comparacion_metodos_inversion` **->**
+> `propuesta_gasto_capital`
+>
+> **El generico va PRIMERO.** Y sin embargo la costurada **vuelve a derivar lo
+> mismo**: costo total de la inversion, beneficios esperados y el calculo del
+> retorno estan **en los dos**.
+
+**CONSECUENCIA ESCRITA PARA LA PASADA UNICA**: el destejido de
+`propuesta_gasto_capital` **debe mirar primero a este vecino**. **Parte del material
+duplicado puede sobrar del todo si el generico ya lo cubre**, y la escalera dice
+que deberia cubrirlo.
+
+---
+
+## MARCADOR TRAS 297 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas** | **cero**, decimo lote seguido |
+| hub `decision_intensidad_capital` | **NUEVE** especializaciones sanas |
+| apariciones del nodo COC | **seis** |
+| parejas del iman `metricas_calidad` | **doce** |
+| citas mundo contra mundo | **2** |
+
+> **Tres pasos del nucleo sosteniendo NUEVE profundizaciones sanas.** El hub cierra
+> el lote como lo que es: **la prueba de que un nodo base breve y bien puesto
+> aguanta todo lo que le cuelguen.**

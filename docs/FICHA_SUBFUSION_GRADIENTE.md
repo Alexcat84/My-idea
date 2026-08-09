@@ -578,8 +578,8 @@ Cada libro traia su version, y cada version entro entera detras de la anterior.
 > **Los nodos que mas se sirven al usuario son los peores servidos.**
 
 > **Y el contrario tambien existe, para no leer el patron como una condena**:
-> `nucleo/decision_intensidad_capital` lleva **SIETE especializaciones sanas** de
-> `franquicias` (puestos 22, 79, 82, 136, 146, 188 y 236) **sin una sola costura ni
+> `nucleo/decision_intensidad_capital` lleva **NUEVE especializaciones sanas** de
+> `franquicias` (puestos 22, 79, 82, 136, 146, 188, 236, 286 y 293) **sin una sola costura ni
 > pisada**. **Un nodo base muy citado NO tiene por que acabar acrecionado**: el
 > defecto es de como se fusiono, no de cuanto se usa.
 
@@ -1271,7 +1271,22 @@ negociacion, y tambien enfrentan una fuente con doctrina propia contra una pract
 generica.
 
 > **Ninguna se resuelve sola.** Quien se queda con que, y **si el contexto se
-> escribe dentro de los nodos**, es adjudicacion de la pasada unica. **Lo que si se
+> escribe dentro de los nodos**, es adjudicacion de la pasada unica.
+
+## LA PIEZA NEUTRAL de la frontera Deming, y ya existia (lote 20, puesto 290)
+
+`quality/seleccion_fuente_unica_multiple` **presenta las dos escuelas como una
+DECISION CON CRITERIOS, sin doctrina**: evaluar ventajas de competencia (multiples)
+contra profundidad de relacion (unica), analizar reputacion y calificacion, decidir
+si se reduce la base, y **documentar la decision segun criticidad del componente**.
+
+> **Y hay un dato que explica por que PUEDE ser neutral: es de JURAN.** La frontera
+> 4 enfrenta a **Deming** (*proveedor unico y relacion larga*) con el nodo del
+> nucleo (*matriz ponderada entre varios por puntaje*). **Este viene de un tercer
+> autor, y por eso no tiene que defender ninguno de los dos lados.**
+
+**Cuando la pasada unica escriba el contexto de esa frontera, el puente natural NO
+hay que inventarlo: ya esta en el catalogo.** **Lo que si se
 > puede afirmar ya es que no son errores: son dos escuelas, y el catalogo las
 > sirve a la vez sin avisar.**
 
@@ -1575,7 +1590,33 @@ uno, los dos del nucleo, los dos de Hugos.**
 > alineacion de cadena (lote 13). **La sospecha sobre los 128 deja de ser teorica:
 > dos pares, encontrados los dos por accidente, en un bloque que nadie ha barrido.**
 
-## l) `nucleo`, las ferias: escalera SANA, y dos nodos en `franquicias`
+## l) `nucleo`, el par de ROI, y la CONSECUENCIA para el destejido
+
+`calculo_roi` (puesto **297**, 5 pasos genericos y sanos) y
+`propuesta_gasto_capital` (puesto **189**, 12 pasos, **la costurada**).
+
+> **DATO DE GRAFO: NO estan sueltos. Estan encadenados en ORDEN a traves de un
+> intermedio.**
+>
+> `calculo_roi` **->** `comparacion_metodos_inversion` **->**
+> `propuesta_gasto_capital`
+>
+> **El generico va PRIMERO.** Y sin embargo la costurada **vuelve a derivar lo
+> mismo**: costo total de la inversion, beneficios esperados y el calculo del
+> retorno estan **en los dos**.
+
+### CONSECUENCIA PARA LA PASADA UNICA, y es operativa
+
+> **El destejido de `propuesta_gasto_capital` debe mirar PRIMERO a este vecino.**
+>
+> **Parte del material duplicado puede sobrar del todo si el generico ya lo
+> cubre**, y la escalera dice que deberia cubrirlo. **Destejer sin mirar al vecino
+> arriesga conservar como "aporte unico" algo que el peldano anterior ya dijo
+> mejor.**
+
+**Es la primera vez que un destejido tiene una precondicion escrita.**
+
+## m) `nucleo`, las ferias: escalera SANA, y dos nodos en `franquicias`
 
 **Verificado, y sale a favor del catalogo**: `estrategia_ferias_comerciales`
 declara a `tacticas_de_ferias_comerciales` en sus siguientes, y este a aquel en sus
@@ -1596,7 +1637,7 @@ propios de ferias**, `marketing_en_ferias_comerciales_de_franquicias` (P180) y
 > aparecen pares calcados **dentro de un mundo** con esta claridad, y aparecieron
 > **dos en el mismo lote**.
 
-### m) `quality`, el par de INNOVACION TIPO II
+### n) `quality`, el par de INNOVACION TIPO II
 
 `tipos_innovacion_i_ii` (6 pasos, puesto **267**) y `innovacion_tipo_ii` (5 pasos,
 puesto **233**). **Los dos de `quality`, los dos de Juran.**
@@ -1611,7 +1652,7 @@ pequeno*, *combinarlo con*), el mismo **diferir la critica**, el mismo refinar.
 > primero. **Es la misma figura del par de innovacion abierta del nucleo**: una
 > arista que ordena, pero un segundo peldano que vuelve a decir el primero.
 
-### n) `franquicias`, el par de la PRIMERA LLAMADA
+### o) `franquicias`, el par de la PRIMERA LLAMADA
 
 `proceso_primera_llamada` (7 pasos, puesto **270**) y
 `proceso_llamada_inicial_venta` (8 pasos, puestos **74** y **274**). **Los dos de
@@ -1655,6 +1696,21 @@ cruzan dos mundos, y por eso **no las adjudica el mismo barrido**: van al
 > el mismo trabajo tiene dos alturas segun su tamano.
 
 **Sin adjudicar. La decision es del barrido inter-mundos.**
+
+### 2. El DFE vive en DOS mundos
+
+| nodo | mundo | puesto | fuente y angulo |
+|---|---|---:|---|
+| `design_for_environment` | `quality` | 288 | **Juran**, angulo de **materiales** |
+| `diseno_para_el_medio_ambiente` | `environmental` | 81 | **Esty**, *Green to Gold*, angulo de **marco** |
+
+**El mismo tema con casi el mismo nombre, de dos libros distintos, y NO
+conectados.**
+
+> **A diferencia de la calificacion de proveedores, aqui no hay diferencia de
+> escala: hay diferencia de ANGULO.** Los dos hablan al mismo lector.
+
+**Sin adjudicar.**
 
 ---
 
@@ -1824,9 +1880,16 @@ Encontrado en el **caso 8**. **Dos titulos llevan el numero de paso de Crosby:**
 | `quality/costo_de_calidad_3` | **Paso 4**: Costo de la Calidad |
 | `quality/eliminacion_causas_error` | **Paso 11**: Eliminacion de Causas de Error |
 | `quality/eliminacion_causas_error_2` | Eliminacion de Causas de Error - ECR (**Paso 11**) |
+| `quality/medicion_calidad_2` | **Paso 3**: Medicion de la Calidad |
 
-**Los dos ultimos entraron con la lectura del trio ECR (lote 9), y son los dos que
-esa fusion absorbe**: ahi el titulo se cura sin trabajo extra.
+**Los dos de ECR entraron con la lectura del trio (lote 9), y son los dos que esa
+fusion absorbe**: ahi el titulo se cura sin trabajo extra. **El quinto llego en el
+lote 20 (puesto 289) y NO tiene fusion que lo cure**: hay que tratarlo aparte.
+
+> **Cinco titulos con el numero de paso de Crosby.** **Cuatro de los cinco son
+> pasos distintos de la MISMA secuencia** (3, 4, 11 y 13), lo que confirma que no
+> es un descuido suelto: **es una tanda de extraccion que copio los encabezados del
+> libro.**
 
 **Es la secuencia del libro filtrandose al catalogo como si el usuario lo
 estuviera leyendo.** Un titulo que **presupone un orden que la app no muestra**:
