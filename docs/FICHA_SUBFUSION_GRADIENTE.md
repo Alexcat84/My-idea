@@ -587,10 +587,13 @@ lector no tiene.**
 > nodos ya estan citados a esa lectura, y un titulo que va a cambiar de dueno no
 > se toca dos veces.
 
-## C3. AUTO-ALIAS Y ALIAS CON DOS DUEÑOS
+## C3. AUTO-ALIAS Y ALIAS CON DOS DUEÑOS. **LIMPIADO en `0e5e0c6`**
 
 **Hallazgo del cotejo del "ocho".** No es sub-fusion: es **metadata sucia**, y
 salio de que dos cuentas no coincidian.
+
+> **CERRADO el 9 ago 2026 en `0e5e0c6`.** Lo que sigue **se conserva en pasado**,
+> porque la clase y su leccion valen mas que el arreglo.
 
 ### Como se destapo
 
@@ -617,11 +620,15 @@ completa incluyendo al sobreviviente**, en vez de solo a los absorbidos.
 **`jerarquia_controles`** esta reclamado por **su propio nodo deprecado** (via
 auto-alias) **y por `prevencion_control_peligros`**, que es su absorbedor real.
 
-> **La resolucion depende del ORDEN de construccion del mapa. Averia silenciosa
+> **La resolucion dependia del ORDEN de construccion del mapa. Averia silenciosa
 > en potencia.**
 
-**Medido**: con el orden actual del master gana `prevencion_control_peligros`,
-que es **el correcto**. Pero **gana por orden, no por regla**.
+**Medido entonces**: ganaba `prevencion_control_peligros`, que es **el correcto**,
+por estar en el **indice 2877** del master contra el **2217** del nodo deprecado.
+**Ganaba por orden, no por regla, y un dato que esta bien de suerte es un dato que
+esta mal.**
+
+**AHORA gana porque es el UNICO que lo reclama.**
 
 ### TERCERA aparicion de la leccion del detector
 
@@ -634,16 +641,34 @@ ahora **el dato sucio que inflaba la cuenta**.
 > ceguera, las estructuras que el catalogo ya declaro, y la posibilidad de que el
 > DATO MISMO este sucio.**
 
-### Limpieza
+### La limpieza, HECHA en `0e5e0c6`
 
-**Cirugia de metadata aparte. ADJUDICACION PENDIENTE**, con la urgencia que dicte
-el reporte de los resolutores (tarea 1 del mismo encargo, y su resumen esta
-abajo).
+**Se hizo como higiene, no como incendio**, y el reporte de los resolutores es lo
+que permitio tratarla asi: **ningun resolutor de la casa se colgaba**. Los dos que
+caminan cadenas **filtran el auto-alias al construir el mapa Y llevan guarda de
+ciclo**, dos defensas independientes.
 
-> **Adelanto del reporte, para que la ficha no obligue a buscarlo**: **ningun
-> resolutor de la casa se cuelga hoy**. Los dos que caminan cadenas **filtran el
-> auto-alias al construir el mapa Y llevan guarda de ciclo**, dos defensas
-> independientes. **La limpieza es de higiene, no de incendio.**
+**Alcance**: el propio id fuera del `ids_alias` de los ocho. Todo lo demas
+intacto, **por edicion de linea y no por re-serializado**, porque los archivos
+estan en CRLF y volcarlos habria reescrito cada linea y enterrado el cambio real.
+
+**Verificacion sobre los dos masters recompilados** (el del dataset y el de la
+web):
+
+| consulta | resultado |
+|---|---:|
+| nodos con auto-alias | **0** |
+| alias con dos dueños | **0** |
+| **cadenas de mas de un salto** | **8**, las mismas |
+
+**Las ocho cadenas se conservan porque son HISTORIA y no se tocan.** Cierre:
+Gate 0 OK, sync hecho, **sin reindex** (ningun texto ni id activo cambio),
+trinquete **42/1/0 sin deriva** y **las cinco anclas inmoviles**.
+
+> **Lo que NO se toco, y conviene saberlo**: los ocho nodos viven **tambien en sus
+> packs** (`quality`, `health_safety`, `environmental`), y **ahi la huella sigue**.
+> Son la entrada pre-integracion, y limpiarlos es otra decision. **Re-integrar un
+> pack re-sembraria el defecto.**
 
 ---
 
