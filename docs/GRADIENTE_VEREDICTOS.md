@@ -1949,3 +1949,96 @@ efectivo, cuentas por cobrar y pagar).
 > sanas de `franquicias`** (puestos 22, 79, 82, 136 y 146). **Es el nodo estrella
 > del gradiente**: un nodo base al que cinco nodos de mundo se cuelgan sin pisarse
 > ni entre ellos ni con el.
+
+---
+
+## LOTE 14, puestos 155 a 174 sin el del adelanto (diecinueve pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los
+diecinueve puestos coinciden. El **160** no esta aqui: se leyo en el adelanto del
+racimo.
+
+> **CERO VIOLACIONES. CUARTO lote seguido.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **155** | OK | `quality/clases_de_medidas_de_calidad` contra `nucleo/metricas_calidad` **(t52.6, s0.7747)**. **Sexta pareja del nodo flaco** |
+| **156** | FALSO PAR FUNCIONAL | `risk_management/tecnicas_para_sacar_riesgos_a_la_luz` contra `nucleo/registro_de_riesgos` **(t46.4, s0.7745)**. Identificar no es registrar |
+| **157** | OK, **y el ejemplar se agranda** | ver abajo |
+| **158** | FALSO PAR FUNCIONAL | `risk_management/que_hacer_con_un_riesgo_nuevo` contra `nucleo/matriz_probabilidad_impacto` **(t36.5, s0.7733)**. Segunda aparicion; **el dudoso via 1 vive en el puesto 133** |
+| **159** | FALSO PAR FUNCIONAL, **nota a la frontera de plazos** | `compras/revela_tu_propio_plazo_limite_al_negociar` contra `nucleo/no_shop_extension_negotiation` **(t35.0, s0.7732)** |
+| **161** | OK POR ESPECIALIZACION | `exportacion/proteccion_propiedad_intelectual_2` contra `nucleo/marcas_registradas` **(t47.3, s0.7731)**. **Primera de las dos parejas del nodo de la colision de nombre**; queda la del puesto 221 |
+| **162** | OK | `quality/equipo_conjunto_de_mejora_con_proveedores` contra `nucleo/colaboracion_cadena_suministro` **(t57.9, s0.7729)**. Equipo conjunto contra efecto latigo |
+| **163** | OK | `quality/calificacion_de_calidad_de_proveedores` contra `nucleo/criterios_seleccion_proveedores` **(t50.4, s0.7728)**. Calificacion periodica: **el momento posterior a la seleccion** |
+| **164** | OK | `quality/establecer_metas_caracteristicas` contra `nucleo/metas_objetivos_smart_innovacion` **(t41.4, s0.7723)**. **El racimo de metas de `quality` sube a CUARTETO** |
+| **165** | OK funcional | `compras/define_punto_maximo_de_stock` contra `nucleo/gestion_procurement_consumo` **(t44.2, s0.7722)**. **Tercera confirmacion de la profundidad de `compras`**, y es el nodo destino de la cirugia 2 |
+| **166** | OK | `quality/analisis_flujo_proceso_servicio` contra `nucleo/mapa_flujo_trabajo_cliente` **(t48.9, s0.7722)**. Blueprint del servicio contra el dia del cliente |
+| **167** | FALSO PAR FUNCIONAL | `franquicias/manejo_objeciones_venta_franquicia` contra `nucleo/investigacion_como_habilidad_clave` **(t32.3, s0.772)**. **SEPTIMA aparicion** del nodo de objeciones |
+| **168** | OK | `quality/estudio_lealtad_cliente` contra `nucleo/keep_customers_strategy` **(t58.3, s0.772)**. Medir lealtad contra tacticas de retencion |
+| **169** | OK | `health_safety/ciclo_de_culpa_2` contra `nucleo/curse_cinco_culpas` **(t59.8, s0.7719)**. **Hermanos Dekker a dos escalas**; su familia de sufijo ya esta en la medicion de las 36 |
+| **170** | FALSO PAR FUNCIONAL | `risk_management/el_riesgo_cambia_con_el_tiempo` contra `nucleo/matriz_probabilidad_impacto` **(t36.5, s0.7716)**. Segunda aparicion, mismo veredicto |
+| **171** | OK | `compras/domina_lo_que_compras` contra `nucleo/negociacion_contratos_proveedores` **(t42.0, s0.7715)**. Preparacion contra cierre |
+| **172** | OK | `quality/quejas_llegan_tarde` contra `nucleo/desconexion_ventas_experiencia` **(t37.7, s0.7715)**. Cliente silencioso contra traspaso venta-entrega |
+| **173** | OK, **verificacion post-cirugia 1B** | ver abajo |
+| **174** | OK ejemplar | `environmental/modelo_eco_criterios_ponderados` contra `nucleo/scoring_model_scorecard` **(t56.5, s0.7711)**. El scorecard ambiental especializa al generico |
+
+### 157, el ejemplar gana contra un SEGUNDO nodo base
+
+`franquicias/decision_franquiciar_vs_expansion_propia` contra
+`nucleo/decision_autofinanciamiento_vs_inversion` **(t30.1, s0.7737)**
+
+**El ejemplar del puesto 22 vuelve a ganar, ahora contra otro nodo base del
+nucleo**, que resuelve en **tres pasos** (gasto mensual y runway, si el modelo
+permite ingresos pronto, cuanto control cedes).
+
+> **PRECISION VERIFICADA**: el nodo del mundo tiene **SEIS PASOS** y modela
+> **CUATRO ESCENARIOS** (status quo, unidades propias, franquiciar, socio de
+> capital), mas definir la meta financiera y comparar contra ella. **Seis pasos,
+> cuatro escenarios, contra tres pasos.** El contraste se sostiene entero.
+
+### 159, la frontera de plazos suma un segundo nodo del nucleo
+
+**El par es FALSO PAR FUNCIONAL** (extender un no-shop no es revelar tu fecha),
+**pero el nodo del nucleo cae del mismo lado doctrinal** que el de la frontera del
+puesto 38: **el plazo es palanca que se administra, no informacion que se
+comparte** (*"mantener presion sobre el comprador"*).
+
+> **PRECISION VERIFICADA sobre las fuentes**: los dos nodos del nucleo **NO son
+> del mismo libro**. `no_shop_extension_negotiation` es de **Venture Deals - Brad
+> Feld**; `negociacion_con_plazos_artificiales` es de **The Hard Thing About Hard
+> Things**.
+>
+> **Eso agranda el hallazgo en vez de encogerlo**: no es un libro, son **dos
+> libros distintos de la literatura de tratos** cayendo del mismo lado, contra
+> `compras` que viene de la literatura de relacion con proveedores. **A la ficha.**
+
+### 173, la cirugia 1B verificada por la cola
+
+`environmental/cradle_to_cradle_concepto` contra
+`nucleo/economia_circular_como_modelo_de_negocio` **(t55.6, s0.7713)**
+
+**El reencuadre a PUERTA se sostiene limpio.** Sus cuatro pasos son **decisiones de
+marco** y nada mas: reconocer si reduces dano o eliminas el residuo, decidir a que
+ciclo pertenece lo tuyo, decidir si el cambio atraviesa el negocio o es prueba
+aislada, y escribir esa decision en una frase.
+
+> **Y el nodo del NUCLEO vuelve a exhibir su costura ya confirmada** (la del lote
+> 10, puesto 97). **Dos lecturas independientes, el mismo defecto.**
+
+---
+
+## MARCADOR TRAS 177 DE 346
+
+> **Pasada la mitad de la cola (51,2%).**
+
+| | |
+|---|---|
+| **violaciones nuevas** | **cero**, cuarto lote seguido |
+| fronteras con choque | **4**, y una de ellas gana un segundo nodo del nucleo |
+| **cirugias verificadas por la propia cola** | **las DOS del ciclo**: la 1 en el puesto 59, la 1B en el 173 |
+| apariciones del nodo de objeciones | **siete** |
+
+> **Cuatro lotes seguidos sin una sola violacion, y la mitad de la cola pasada.**
+> **El gradiente, como problema, quedo confirmado arriba.** Lo que la segunda mitad
+> esta entregando es **material para los barridos y verificaciones de lo ya
+> hecho.**

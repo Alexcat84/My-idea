@@ -1030,6 +1030,33 @@ valvula como ultima palabra.**
 
 ---
 
+# LAS DOS CIRUGIAS DEL CICLO, VERIFICADAS POR LA PROPIA COLA
+
+**No es sub-fusion. Se registra aqui porque es el unico sitio donde el trabajo de
+la campana se mira entero**, y porque es la evidencia mas barata que esta casa ha
+conseguido de que una reparacion funciono.
+
+**Las dos cirugias se arreglaron mirando un par. Y las dos volvieron a la cola por
+su cuenta, en OTRO par, mucho mas abajo, y pasaron.**
+
+| cirugia | que arreglo | donde volvio | veredicto de la relectura |
+|---|---|---:|---|
+| **1** (`08988ad`) | cinco peldanos de `risk_management` por via 1 | **puesto 59**, `haz_tu_lista_de_lo_que_puede_fallar` contra el mismo nodo del nucleo | **GRADIENTE OK**: donde el puesto 5 encontro empate blando, la cola encuentra **momento propio con voz propia** |
+| **1B** (`1260581`) | `cradle_to_cradle_concepto` reencuadrado a **puerta** del tema | **puesto 173**, contra `economia_circular_como_modelo_de_negocio` | **GRADIENTE OK**: sus cuatro pasos son **decisiones de marco** y nada mas |
+
+> **Ninguna de las dos relecturas se hizo para verificar nada.** Salieron en el
+> orden de la cola, con el auditor leyendo otro par, meses de trabajo despues.
+>
+> **Eso es lo que las hace valer**: una verificacion que se busca es un examen que
+> uno mismo escribe. **Esta llego sola.**
+
+**Y hay un tercer dato en el mismo puesto 173**: el nodo del NUCLEO de ese par
+**vuelve a exhibir la costura que el lote 10 ya le habia confirmado**. **Dos
+lecturas independientes, el mismo defecto**, que es la otra cara de la misma
+moneda: la cola confirma tanto lo curado como lo pendiente.
+
+---
+
 # FRONTERAS CON CHOQUE DE FUENTES: son CUATRO, y hay patron
 
 **No son violaciones de gradiente. Son doctrinas que se contradicen dentro del
@@ -1038,9 +1065,35 @@ catalogo**, y un lector que reciba las dos sale con instrucciones opuestas.
 | # | puesto | el mundo dice | el nucleo dice |
 |---:|---:|---|---|
 | **1** | 6 | `franquicias`: **las objeciones indican interes**, prepara respuestas | **SPIN**: los mejores reciben MENOS objeciones porque **las previenen** |
-| **2** | 38 | `compras`: **REVELA tu fecha limite real** al proveedor | **IMPON fechas artificiales** para forzar decisiones |
+| **2** | 38, **y 159** | `compras`: **REVELA tu fecha limite real** al proveedor | **DOS nodos del nucleo**, ver abajo |
 | **3** | 138 | `quality` (**Deming**): los sistemas de evaluacion de desempeno son una **BARRERA** al orgullo del trabajo | **instituye revisiones formales y periodicas** |
 | **4** | 150 | `quality` (**Deming**): **proveedor unico y relacion de largo plazo** | **matriz ponderada** para elegir entre varios por puntaje |
+
+## La frontera 2 gana un SEGUNDO nodo del nucleo (lote 14)
+
+El puesto **159** emparejo `compras/revela_tu_propio_plazo_limite_al_negociar`
+contra `nucleo/no_shop_extension_negotiation`. **El par en si es FALSO PAR
+FUNCIONAL**, pero **el nodo del nucleo cae del mismo lado doctrinal**: trata el
+plazo como **palanca que se administra**, no como informacion que se comparte
+(*"mantener presion sobre el comprador"*).
+
+> **Y las fuentes, verificadas, agrandan el hallazgo**: los dos nodos del nucleo
+> **NO salen del mismo libro**. `negociacion_con_plazos_artificiales` es de *The
+> Hard Thing About Hard Things*; `no_shop_extension_negotiation` es de *Venture
+> Deals*.
+>
+> **No es un autor: son DOS libros distintos de la literatura de TRATOS cayendo
+> del mismo lado**, contra `compras`, que viene de la literatura de **relacion con
+> proveedores**. **La frontera no es entre dos nodos: es entre dos oficios.**
+
+## El contador de objeciones: SIETE apariciones
+
+`franquicias/manejo_objeciones_venta_franquicia` lleva **siete** emparejamientos
+leidos (puestos 5, 42, 54, 70, 75, 117 y 167) de **diez** que tiene en la cola.
+
+> **Solo la frontera del puesto 5 es doctrinal**; las otras seis son falsos pares
+> por vecindad de venta. **El contador no agrava el caso: lo acota.** Lo que hay
+> que resolver sigue siendo **uno**.
 
 ## EL PATRON, que las dos ultimas dejan a la vista
 
@@ -1121,10 +1174,21 @@ problemas recurrentes. **Sin adjudicar.**
 > **Si dos de los 128 se duplican entre si, puede haber mas**, y el barrido de voz
 > tendria que traer tambien ojo de duplicado.
 
-## f) `quality`, el par de metas SMART de proyecto
+## f) `quality`, el CUARTETO de metas
 
-`goal_statement_smart` (puesto **87**) y `definir_metas_smart_de_proyecto`
-(puesto **139**). **Los dos del mismo mundo, los dos sobre la meta de un proyecto.**
+**Era par y pasa a cuarteto con el lote 14. Los cuatro activos, los cuatro de
+`quality`, los cuatro sobre fijar metas:**
+
+| nodo | puesto | pasos |
+|---|---:|---:|
+| `goal_statement_smart` | 87 | 5 |
+| `establecimiento_metas_de_calidad` | 96 | 5 |
+| `definir_metas_smart_de_proyecto` | 139 | 4 |
+| `establecer_metas_caracteristicas` | 164 | 5 |
+
+> **Dos de ellos llevan SMART en el titulo y los cuatro fijan metas de un proyecto
+> de calidad.** Es el racimo mas parejo de los siete: **ninguno destaca sobre los
+> otros**, que es justo lo que hace sospechar que son uno.
 
 ## g) `nucleo`, los DOS nodos de A/B testing
 
