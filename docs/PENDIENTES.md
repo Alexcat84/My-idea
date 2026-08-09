@@ -863,6 +863,25 @@ nueve mundos**, o la asimetría se repite en cada campaña de voz.
 
 **El nodo no se toca desde el gradiente.**
 
+### Entrada 3 de marco-país (lote 16, puesto 214): tercer miembro, y ya son dos mundos
+
+`exportacion/screening_mercados_potenciales` cita el **U.S. Census Bureau** (paso
+1) y el **U.S. Commercial Service** (paso 5) para elegir a qué mercados exportar.
+
+**Con este van tres miembros medidos, de dos mundos distintos:**
+
+| miembro | mundo | qué cablea |
+|---|---|---|
+| `proteccion_propiedad_intelectual_internacional` (P53) | exportacion | uspto.gov, stopfakes.gov |
+| `obtencion_marca_registrada` (P85) | franquicias | TESS, Thomson CompuMark, USPTO, y *Federal* en el título |
+| `screening_mercados_potenciales` (P214) | exportacion | Census Bureau, Commercial Service |
+
+> **El barrido de los nueve mundos queda confirmado POR ACUMULACIÓN, no por
+> doctrina.** No hizo falta argumentar que hacía falta: **tres hallazgos
+> accidentales, en dos mundos distintos, lo demuestran solos.**
+
+**El nodo no se toca desde el gradiente.**
+
 Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviación)
 viven aquí también: su condición honesta —*"si tu producto lleva componentes de
 EE.UU. o tu ruta lo toca"*— depende de acuerdos que cambian.

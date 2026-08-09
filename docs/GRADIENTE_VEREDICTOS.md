@@ -2142,3 +2142,98 @@ id.** A la ficha, como clase colateral nueva.
 > **Cinco lotes seguidos sin violaciones.** La segunda mitad de la cola **ya no
 > mide el gradiente: audita el catalogo por otros lados**, y en este lote encontro
 > hasta **un defecto del instrumento que la campana misma construyo.**
+
+---
+
+## LOTE 16, puestos 196 a 215 por senal (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden.
+
+> **CERO VIOLACIONES. SEXTO lote seguido.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **196** | OK, tema propio | `risk_management/nombra_tus_suposiciones_fragiles` contra `nucleo/plan_gestion_riesgos` **(t37.2, s0.7672)** |
+| **197** | OK | `quality/desarrollar_estrategias_largo_plazo` contra `nucleo/creacion_estrategia_cadena_suministro` **(t39.7, s0.7671)** |
+| **198** | OK, **coherencia post-cirugia** | `risk_management/un_dueno_para_cada_riesgo` contra `nucleo/matriz_probabilidad_impacto` **(t34.3, s0.7671)**. Asume la lista hecha y asigna duenos |
+| **199** | OK | `quality/enfoque_en_procesos_no_en_problemas` contra `nucleo/five_whys_inversion_proporcional` **(t40.0, s0.767)**. El proceso raiz contra el metodo de porques |
+| **200** | OK POR ESPECIALIZACION | `franquicias/clasificacion_abc_prospectos` contra `nucleo/clasificacion_leads_abc` **(t56.6, s0.7669)**. El benchmark propio (CIRF en 48 horas) sobre el metodo base |
+| **201** | FALSO PAR FUNCIONAL | `risk_management/tecnicas_para_sacar_riesgos_a_la_luz` contra `nucleo/matriz_probabilidad_impacto` **(t31.5, s0.7669)**. Segunda aparicion |
+| **202** | **DUDOSO**, figura nueva | ver abajo |
+| **203** | OK | `quality/criterios_diseno_producto` contra `nucleo/superioridad_producto_beneficios` **(t35.7, s0.7662)**. Criterios de seleccion contra beneficios |
+| **204** | OK apretado | `compras/preparate_para_marcharte_del_trato` contra `nucleo/batna_definicion` **(t39.6, s0.7661)**. **El mismo consejo desde dos oficios** (proveedores y fundraising), **sin choque** |
+| **205** | OK | `environmental/manufactura_verde` contra `nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t39.2, s0.7661)**. Operacion contra diseno |
+| **206** | FALSO PAR FUNCIONAL | `quality/fin_precio_como_criterio_unico` contra `nucleo/tecnologia_como_medio_no_fin` **(t41.0, s0.7661)**. **La semantica los unio por la FORMA** *"no elijas por X"* |
+| **207** | FALSO PAR FUNCIONAL | `quality/distincion_causas_comunes_especiales_2` contra `nucleo/five_whys_inversion_proporcional` **(t35.8, s0.7654)**. La marana 2 re-exhibida; **su fusion clara ya esta adjudicada** |
+| **208** | OK | `quality/takt_time` contra `nucleo/programacion_produccion` **(t51.4, s0.7654)**. Takt contra lote economico: metodos distintos |
+| **209** | OK, **cita intra-nucleo** | ver abajo |
+| **210** | OK | `quality/diagnostico_antes_remedio` contra `nucleo/diagnostico_sintoma_vs_causa_ventas` **(t51.1, s0.7646)**. El principio contra su aplicacion a ventas |
+| **211** | FALSO PAR FUNCIONAL | `quality/fin_precio_como_criterio_unico` contra `nucleo/gestion_procurement_consumo` **(t28.9, s0.7645)**. **Tercera aparicion** del nodo de Deming del precio |
+| **212** | OK | `quality/manual_de_calidad` contra `nucleo/plan_gestion_calidad` **(t50.7, s0.7644)**. Sistema documental contra plan; **cuarta pareja sana** del plan del nucleo |
+| **213** | OK | `quality/matriz_de_planificacion_arbol` contra `nucleo/matriz_asignacion_responsabilidades` **(t35.1, s0.7644)**. Arbol con quien y cuando contra RACI |
+| **214** | OK, **tercer colateral de marco-pais** | `exportacion/screening_mercados_potenciales` contra `nucleo/captura_conocimiento_mercado` **(t41.8, s0.7642)**. El nodo del mundo cita **U.S. Census Bureau** (paso 1) y **U.S. Commercial Service** (paso 5) |
+| **215** | OK | `quality/revision_progreso` contra `nucleo/variance_analysis` **(t36.1, s0.7642)**. Revision formal contra analisis de variacion |
+
+### 202, EMPATE TRANSDOMINIO: una figura que la cola no habia dado
+
+`risk_management/nombra_tus_suposiciones_fragiles` contra
+`nucleo/leap_of_faith_assumptions` **(t36.6, s0.7668)**
+
+**Casi gemelos, cuatro pasos cada uno, y de dos linajes distintos:**
+
+| | el del mundo (**DeMarco y Lister**, *Waltzing with Bears*) | el del nucleo (**Ries**, *The Lean Startup*) |
+|---|---|---|
+| separar lo comprobado de lo supuesto | paso 2 | paso 1 |
+| ordenar por peligro | paso 3 (*"la que, si es falsa, tumba el plan"*) | pasos 2 y 4 |
+| lo propio de cada uno | **definir una prueba barata** de la suposicion | **reescribir las comparaciones** con otros negocios en terminos verificables |
+
+> **Ninguno domina ni especializa al otro.** No es violacion (el de pago no queda a
+> la altura del gratis: **quedan a la MISMA altura por caminos distintos**), y no es
+> especializacion (**ninguno asume al otro hecho**).
+
+**Dos salidas para la pasada unica**, y **decide el fundador**:
+
+1. **Diferenciacion fina**: el del mundo se reencuadra a **riesgo del plan**,
+   citando el ejercicio de supuestos **como ya hecho**.
+2. **Convivencia declarada de linajes**: los dos se quedan, **y se dice que son dos
+   escuelas del mismo ejercicio**.
+
+> **Nota de lectura que vale la pena**: el paso 4 del nodo de **riesgo** (*"define
+> una forma barata de poner a prueba esa suposicion"*) **es logica de Lean Startup
+> pura**, y el nodo que **viene** de Lean Startup no lo tiene. **Los linajes ya se
+> cruzaron solos.**
+
+### 209, el par de analisis competitivo del NUCLEO
+
+`quality/analisis_competitivo_calidad` contra
+`nucleo/analisis_competitivo_deconstruccion` **(t69.2, s0.7647)**
+
+**El nodo del mundo cierra sus CUATRO parejas sanas** (puestos 41, 191, 193 y 209).
+
+**Y el nucleo tiene DOS nodos de analisis competitivo**, con el 193.
+
+> **PRECISION VERIFICADA**: el **desarme fisico de productos** esta **solo en uno**.
+> `analisis_competitivo_deconstruccion` dice *"comprar y desarmar fisicamente los
+> productos competidores en laboratorio"*; `analisis_competitivo` dice *"analizar
+> fortalezas y debilidades de los productos de los competidores lideres"*, que es
+> **vecino pero no el mismo acto**. **La sospecha se sostiene por el tema, no por
+> ese paso.**
+
+**A las citas intra-dominio, con su dato de grafo. Sin adjudicar.**
+
+---
+
+## MARCADOR TRAS 217 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas** | **cero**, sexto lote seguido |
+| **figuras nuevas de veredicto** | **1**: el EMPATE TRANSDOMINIO (202) |
+| colaterales de marco-pais | **3**, de **dos mundos** |
+| citas intra-dominio | **nueve racimos** |
+
+> **Seis lotes seguidos sin violaciones, y la cola sigue entregando figuras que no
+> existian.** El empate transdominio **no es un defecto**: es **el catalogo
+> mostrando que dos libros distintos ensenan el mismo ejercicio**, y que nadie lo
+> habia mirado junto.

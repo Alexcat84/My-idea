@@ -1218,6 +1218,47 @@ generica.
 
 ---
 
+# DUDOSOS QUE ESPERAN AL FUNDADOR
+
+## El EMPATE TRANSDOMINIO (lote 16, puesto 202): figura nueva
+
+`risk_management/nombra_tus_suposiciones_fragiles` contra
+`nucleo/leap_of_faith_assumptions`. **Cuatro pasos cada uno, dos linajes
+distintos, el mismo ejercicio.**
+
+| | el del mundo (**DeMarco y Lister**) | el del nucleo (**Ries**) |
+|---|---|---|
+| separar lo comprobado de lo supuesto | paso 2 | paso 1 |
+| ordenar por peligro | paso 3 | pasos 2 y 4 |
+| **lo propio** | definir una **prueba barata** | reescribir las **comparaciones** en terminos verificables |
+
+### Por que es una figura NUEVA y no encaja en las que ya hay
+
+| | por que no |
+|---|---|
+| **VIOLACION** | el de pago **no queda a la altura del gratis**: quedan a la **misma** altura, por caminos distintos |
+| **ESPECIALIZACION** | **ninguno asume al otro hecho** |
+| **FALSO PAR** | **es exactamente el mismo ejercicio**, no temas vecinos |
+
+> **Es un ESPEJO DE LINAJES**: dos libros distintos ensenan lo mismo, y el catalogo
+> los sirve sin decir que son la misma cosa.
+
+### Las dos salidas, y decide el fundador
+
+1. **DIFERENCIACION FINA**: el del mundo se reencuadra a **riesgo del plan**,
+   citando el ejercicio de supuestos **como ya hecho**. Es la via 1 de siempre.
+2. **CONVIVENCIA DECLARADA**: los dos se quedan **y se dice que son dos escuelas
+   del mismo ejercicio**.
+
+> **Dato de lectura que pesa en la decision**: el paso 4 del nodo de **riesgo**
+> (*"define una forma barata de poner a prueba esa suposicion"*) **es logica de
+> Lean Startup pura**, y el nodo que **viene** de Lean Startup **no lo tiene**.
+>
+> **Los linajes ya se cruzaron solos.** Elegir la salida 1 significaria separar lo
+> que las fuentes ya mezclaron.
+
+---
+
 # CITAS INTRA-DOMINIO ADELANTADAS
 
 **No son casos. Son la cola inicial del barrido intra-dominio** que el fundador
@@ -1292,7 +1333,31 @@ problemas recurrentes. **Sin adjudicar.**
 > de calidad.** Es el racimo mas parejo de los siete: **ninguno destaca sobre los
 > otros**, que es justo lo que hace sospechar que son uno.
 
-## g) `nucleo`, los DOS nodos de A/B testing
+## g) `nucleo`, el par de ANALISIS COMPETITIVO
+
+`analisis_competitivo` (puesto **193**, 5 pasos) y
+`analisis_competitivo_deconstruccion` (puesto **209**, 6 pasos). **Los dos del
+nucleo, y los dos del MISMO libro**: *Winning at New Products - Robert G. Cooper*.
+
+> **DATO DE GRAFO, y no es el que se esperaba: NO estan sueltos.** No se declaran
+> entre si, **pero comparten vecino en un orden definido**:
+>
+> `analisis_competitivo_deconstruccion` **->** `iota_analysis` **->**
+> `analisis_competitivo`
+>
+> **Estan a dos saltos, encadenados a traves de un intermedio**, con la
+> deconstruccion **antes** del analisis. **No es un par huerfano: es una escalera
+> con un peldano en medio.**
+
+> **Y una precision de contenido**: el **desarme fisico** de productos esta **solo
+> en uno** (*"comprar y desarmar fisicamente los productos competidores en
+> laboratorio"*). El otro dice *"analizar fortalezas y debilidades de los productos
+> de los competidores lideres"*, que es **vecino pero no el mismo acto**.
+
+**Sin adjudicar.** La escalera existente **juega en contra** de la sospecha, igual
+que en el caso 1 de Goldratt.
+
+## h) `nucleo`, los DOS nodos de A/B testing
 
 `split_testing_experimentos_ab` (C3) y `ab_testing_optimizacion` (C2). **Los dos
 del nucleo y los dos con costura confirmada.**
@@ -1301,7 +1366,7 @@ del nucleo y los dos con costura confirmada.**
 > JUNTOS**: destejer uno sin mirar al otro seria escribir dos veces la misma
 > narracion canonica.
 
-## h) `risk_management`, el CUARTETO de actualizacion de la lista
+## i) `risk_management`, el CUARTETO de actualizacion de la lista
 
 **Era trio y pasa a CUARTETO con el lote 12.**
 
