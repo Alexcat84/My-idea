@@ -1567,3 +1567,158 @@ El nodo no se toca.**
 
 > **El tramo 1 a 85 esta agotado. Quedan 261 pares de la cola, mas la franja bajo
 > el umbral, mas el intra-dominio.**
+
+---
+
+## LOTE 10, puestos 86 a 97 por senal (doce pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los doce
+puestos coinciden.
+
+### 86. GRADIENTE OK, con CRUCE que alimenta la maraña de causas comunes
+
+`quality/politica_no_culpar_trabajador` contra `nucleo/curse_cinco_culpas`
+**(t42.7, s0.7924)**
+
+**Estadistica de limites de control aplicada a personas** contra **la sesion de
+cinco porques sin culpas**. Angulos sanos.
+
+**El cruce no es del par**: ese nodo del mundo **le quita el territorio propio al
+base de la maraña de causas comunes**. Ver la ficha.
+
+### 87. GRADIENTE OK
+
+`quality/goal_statement_smart` contra `nucleo/metas_objetivos_smart_innovacion`
+**(t39.6, s0.7923)**
+
+**Meta de proyecto de diseno** contra **metas de innovacion del negocio.**
+
+### 88. FALSO PAR FUNCIONAL
+
+`compras/clasifica_tu_inventario` contra `nucleo/gestion_procurement_consumo`
+**(t44.4, s0.7914)**
+
+**Inventario en bodega** contra **control de compras.**
+
+### 89. GRADIENTE OK, con nota menor
+
+`quality/analisis_causa_raiz_diagnostico` contra
+`nucleo/five_whys_inversion_proporcional` **(t30.3, s0.7914)**
+
+**El viaje de diagnostico de Juran** (Pareto, teorias, validacion estadistica)
+sobre **los cinco porques**.
+
+> **NOTA MENOR, verificada**: el nodo del nucleo tiene **nueve pasos**, y los
+> **cuatro ultimos son de VENTAS** (problema recurrente de ventas, revisar
+> grabaciones de llamadas, redisenar el entrenamiento, medir tras el cambio),
+> pegados detras de los cinco de incidentes.
+>
+> **Es absorcion tematica, no repeticion**: el segundo bloque **aplica el mismo
+> metodo a otro dominio**, no vuelve a decir lo mismo. Por eso **queda muy por
+> debajo del caso 9 y solo se anota**.
+>
+> **Y por eso el instrumento de la tarea 3 NO lo caza, con razon**: mide texto
+> repetido, y aqui **no hay texto repetido, hay tema anadido.** Son dos defectos
+> distintos de la misma tanda de pegado.
+
+### 90. FALSO PAR FUNCIONAL
+
+`quality/evaluacion_gestion_riesgos` contra `nucleo/matriz_probabilidad_impacto`
+**(t31.4, s0.7911)**
+
+**El metodo COC por riesgo** contra **la priorizacion**. **Tercer emparejamiento**
+de ese nodo, que ya espera su fusion en el caso 5.
+
+### 91. GRADIENTE OK, tema propio
+
+`compras/ten_reglas_claras_para_avisar_a_proveedores_no_elegidos` contra
+`nucleo/criterios_seleccion_proveedores` **(t47.5, s0.7908)**
+
+**El momento POSTERIOR a elegir**, con su etiqueta profesional. **Tema que el
+nucleo no toca.**
+
+### 92. GRADIENTE OK POR ESPECIALIZACION
+
+`environmental/stakeholder_mapping_wheel` contra
+`nucleo/stakeholder_analysis_matrix` **(t42.9, s0.7908)**
+
+Actores de industria, **materialidad** y sostenibilidad sobre la matriz generica.
+
+### 93. GRADIENTE OK, tema propio
+
+`risk_management/cual_es_tu_mayor_riesgo` contra
+`nucleo/matriz_probabilidad_impacto` **(t36.4, s0.7906)**
+
+**Calibracion epistemica**: como lo sabes, evidencia contra corazonada. **Momento
+propio.**
+
+### 94. FALSO PAR FUNCIONAL
+
+`risk_management/busca_el_riesgo_antes_de_que_te_busque` contra
+`nucleo/registro_de_riesgos` **(t57.7, s0.7904)**
+
+**Cuando buscar** contra **como registrar**. **Segunda vez de este nodo, mismo
+veredicto** (la primera, el puesto 39).
+
+### 95. GRADIENTE OK apretado
+
+`quality/mejora_continua_del_proceso` contra `nucleo/mejora_continua_relentless`
+**(t52.2, s0.7894)**
+
+**Deming** (procesos, proveedores, control estadistico) contra
+**experimentacion de propuesta de valor**. **Doctrinas complementarias, no
+choque.**
+
+### 96. GRADIENTE OK, con nota menor
+
+`quality/establecimiento_metas_de_calidad` contra `nucleo/metricas_calidad`
+**(t55.6, s0.789)**
+
+**Fijar metas** contra **definir metricas.**
+
+> **NOTA MENOR, verificada**: el nodo del nucleo es **flaco (cuatro pasos) y en
+> voz de manual**, con el cuarto diciendo *"documentar en formato estandarizado
+> con ID unico"*. **Al barrido de voz residual.**
+
+### 97. GRADIENTE OK, y el HALLAZGO del lote
+
+`environmental/desperdicio_es_alimento` contra
+`nucleo/economia_circular_como_modelo_de_negocio` **(t32.3, s0.7881)**
+
+**El par cumple.** El hallazgo es el nodo del **NUCLEO**: **nueve pasos con
+COSTURA DE PEGADO DOBLE**, la misma figura del caso 9.
+
+| el primer bloque | el segundo, otra vez |
+|---|---|
+| 1. **Mapear el ciclo de vida** completo del producto | 6. **Mapear el ciclo de vida** actual de tu producto |
+| 2. **Identificar** puntos donde el desperdicio seria insumo | 7. **Identificar** en cual de las cinco estrategias hay potencial |
+| 3. **Redisenar** el modelo para recuperar y reusar | 8. **Disenar** un mecanismo de retorno o remanufactura |
+| 5. **Medir el impacto** economico y ambiental | 9. **Calcular el impacto** en sostenibilidad y costos |
+
+**El paso 4 (prototipar y pilotar) no tiene pareja.**
+
+> **Verificado, y afina el hallazgo**: el paso **6 reinicia lo que el 1 ya hizo**,
+> tal cual, y detras vienen identificar, disenar y calcular repitiendose. **La
+> marca de voz es mas debil que en el caso 9** (los dos bloques estan en
+> infinitivo), pero **el segundo se dirige al lector** (*"tu producto"*, *"tu
+> negocio"*) **y el primero no**. **Misma tanda, misma huella, un poco mas
+> disimulada.**
+
+**El caso 9 pasa de caso a CLASE.** Ver la ficha y el instrumento
+`scripts/costuras_internas.py`.
+
+---
+
+## MARCADOR TRAS 104 DE 346
+
+| ficha | estado |
+|---|---|
+| VIOLACIONES clasicas | **8**, tres abiertas |
+| VIOLACIONES INVERTIDAS | **2 cargos** sobre `gestion_inventario` |
+| FRONTERAS con choque | **2** |
+| COLATERALES de marco-pais | **2** |
+| CASOS de la ficha | **9**, y el **caso 9 pasa a CLASE** con dos ejemplares |
+| NOTAS de voz residual | `negociacion_contratos_proveedores` (45) y `metricas_calidad` (96) |
+
+> **El lote 10 no trajo ninguna violacion nueva. Trajo la SEGUNDA costura de
+> pegado doble en el nucleo, y con ella la certeza de que no era un caso suelto.**
