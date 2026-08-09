@@ -732,6 +732,33 @@ def step7_validate(master, parse_errors):
         f"{len(fantasmas)} fantasmas" + (f": {fantasmas[:5]}" if fantasmas else ""),
     ))
 
+    # ── TODO ACTIVO TIENE VECTOR EN EL INDICE SEMANTICO ─────────────────────
+    #
+    # LA CLASE QUE CIERRA (ago 2026): al revivir diez nodos deprecados de
+    # seleccion, los diez EXISTIAN en el grafo, pasaban todos los chequeos, y la
+    # brujula era INCAPAZ de encontrarlos: el indice se habia construido cuando
+    # estaban deprecados, y build_semantic_index los excluye a proposito.
+    #
+    # No es un caso, es una clase: CUALQUIER cambio de estado de deprecado la
+    # reproduce, y tambien la reproduce un nodo nuevo sin reindexar. Un nodo
+    # ofrecible que el indice no conoce es invisible para el salto semantico y
+    # para la prueba de rumbos, y ninguna de las dos se queja: simplemente no lo
+    # devuelven nunca. Cero tolerancia.
+    ruta_indice = BASE / "web" / "lib" / "assets" / "semantic_index.json"
+    if ruta_indice.exists():
+        con_vector = set(json.loads(ruta_indice.read_text(encoding="utf-8"))["ids"])
+        sin_vector = sorted(set(activos) - con_vector)
+        sobran = sorted(con_vector - set(activos))
+        detalle = f"{len(sin_vector)} activos sin vector"
+        if sin_vector:
+            detalle += (f": {sin_vector[:5]} -> corre el reindex ANTES de usar esta copia: "
+                        "python scripts/build_semantic_index_voyage.py && "
+                        "python scripts/sync_assets_web.py")
+        if sobran:
+            detalle += f" | {len(sobran)} vectores de nodos que ya no son ofrecibles"
+        checks.append(("Todo nodo ACTIVO tiene vector en el indice semantico",
+                       not sin_vector, detalle))
+
     seeds = load_entry_seeds()
     seeds_deprecadas = sorted(set(seeds) & deprecados)
     checks.append((
