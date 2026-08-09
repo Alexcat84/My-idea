@@ -883,11 +883,13 @@ por el otro lado; profundizar solo el mundo deja la costura viva.
 La unica que deja tarea es `quality/optimizacion_de_procesos` (franja 28), flaco
 y autorreferente: **candidato a engorde, no caso de vara.**
 
-**Y la validacion del cribado va por dos tandas de tres**: el auditor sorteo la
-muestra del 5% de las D (61 pares, semilla `81febf5c`, procedimiento fijado y
-reproducido) y leyo la **tanda 1 (20 pares) y la tanda 2 (21 pares) contra el
-grafo**. **Cuarenta y uno de cuarenta y uno se sostienen en la vara: cero
-violaciones y cero dudosos escondidos.** Quedan 20 por leer.
+**Y la validacion del cribado esta CERRADA**: el auditor sorteo la muestra del 5%
+de las D (61 pares, semilla `81febf5c`, procedimiento fijado, reproducido y
+pineado al commit del sorteo) y la leyo entera en tres tandas de 20, 21 y 20.
+**Sesenta y uno de sesenta y uno se sostienen en la vara: cero violaciones y cero
+dudosos escondidos.** **Veredicto: CRIBADO VALIDADO**, y el metodo de tres piezas
+que lo consiguio queda registrado en el informe como metodo reutilizable de la
+casa.
 
 **Lo que la muestra si ha movido son figuras, no la vara**, y en tres entradas:
 
@@ -1650,6 +1652,46 @@ opuestas, que es la definicion de esta seccion.
 > entre las ocho figuras que disparaban C** en el encargo. **Es hueco de la lista
 > de figuras, no de la lectura.** Si el barrido intra-dominio va a cazar
 > fronteras, la lista de figuras tiene que decirlo antes de empezar.
+
+### La tanda 3 ACOTA esta frontera, y la acota mucho
+
+**Dos pares de la ultima tanda de la muestra D cambian el tamano del choque**, y
+los dos estan verificados contra el grafo.
+
+**F1379**: `risk_management/correr_hacia_el_riesgo` contra
+`nucleo/fallo_como_aprendizaje_startup` (Steve Blank, *The Startup Owner's
+Manual*). **Las dos escuelas CONCUERDAN.** DeMarco y Lister dicen *un proyecto
+sin riesgo casi siempre es un proyecto sin premio* y mandan **decidir a proposito
+cuanto riesgo correr**; Blank manda **quitarle el peso de la culpa al fallo y
+tratarlo como un dato mas**. Distinto metodo, misma postura ante el riesgo y el
+fallo.
+
+> **Consecuencia para la frontera candidata, y es de acotacion:** el mundo `risk`
+> **no esta enfrentado al nucleo**. Esta enfrentado a **UN autor del nucleo,
+> Horowitz, y solo en un punto: los planes de contingencia.** Con el lean del
+> nucleo concuerda. **Una frontera de un par contra un autor es un caso de
+> contexto; una frontera del mundo contra el catalogo seria otra cosa.** Es la
+> primera.
+
+**F1399**: `risk_management/escepticismo_sano_ante_el_riesgo` (Hubbard, *The
+Failure of Risk Management*) contra `nucleo/matriz_probabilidad_impacto`. **Es un
+meta-nodo: desconfia de las plantillas de riesgo, incluida la del nucleo con la
+que lo emparejaron.** Sus pasos, textuales: *de cualquier metodo de riesgo que
+uses, preguntate como sabrias si de verdad te esta ayudando*, *desconfia de la
+calma*, *antes de adoptar una plantilla ajena busca evidencia de que a alguien le
+funciono*, *prefiere una nota simple y honesta a un tablero vistoso que no puedas
+comprobar*.
+
+> **El nodo no nombra la matriz de probabilidad e impacto**, y no le hago decir lo
+> que no dice. **Pero el nodo del nucleo con el que se empareja es exactamente el
+> genero de artefacto del que manda desconfiar**: una plantilla de escalas
+> cruzadas.
+>
+> **Se registra como PIEZA DE CONTEXTO del mundo `risk` para la pasada unica, y
+> es sano.** No es frontera ni empate: es un nodo que ensena a usar las
+> herramientas con humildad, y el catalogo esta mejor con el dentro que fuera.
+> **Es ademas el contrapeso natural de la frontera de arriba**, escrito por el
+> propio mundo.
 
 ---
 

@@ -13,8 +13,8 @@ apartado 6.3.
 
 Ningun nodo se toco. Este documento es la entrega. **La adjudicacion del
 auditor sobre las 2 A y las 6 B ya llego y esta en la seccion 9**; los racimos
-quedan para despues de la muestra, y **la muestra del 5% de las D ya esta
-sorteada, versionada y con dos tandas de tres leidas** (seccion 10).
+quedan para despues de la muestra, y **la muestra del 5% de las D esta CERRADA,
+61 de 61 leidos y el cribado VALIDADO** (seccion 10).
 
 ---
 
@@ -452,26 +452,50 @@ Cuatro errores propios que quedan aqui declarados y ya corregidos en el archivo
 ## 7. Lo que el auditor tiene que decidir
 
 Este informe no propone arreglos. Lo que deja sobre la mesa. **Los puntos 1 y 7
-ya tienen respuesta del auditor** y estan resueltos en las secciones 9 y 10; el
-resto sigue abierto.
+estan CERRADOS** en las secciones 9 y 10; el resto sigue abierto.
 
 1. ~~**Las 2 A y las 6 B**, para adjudicar una por una.~~ **ADJUDICADAS**, ver
    seccion 9.
-2. **Los treinta racimos**, para decidir si el arreglo es nodo por nodo o de
-   racimo entero. Trece de ellos estan dentro del nucleo. **El auditor los deja
-   como primer censo del barrido intra-dominio y los adjudica despues de la
-   muestra D** (seccion 10).
+2. **Los racimos, que ya son TREINTA Y DOS**, para decidir si el arreglo es nodo
+   por nodo o de racimo entero. Trece de los treinta primeros estan dentro del
+   nucleo. **Con la muestra cerrada, este punto es EL SIGUIENTE**: ver el estado
+   de abajo.
 3. **Los cinco pasos duplicados del programa de Crosby**, que son el caso mas
    limpio y mas facil de cerrar.
-4. **Las veintiuna costuras**, todas en nodos del nucleo, con la pregunta de
-   por que ninguna aparecio en un nodo de mundo. **Queda como pregunta abierta
-   con hipotesis a comprobar en el barrido** (apartado 4.5 y seccion 10).
+4. **Las veintiuna costuras** de este informe, todas en nodos del nucleo, con la
+   pregunta de por que ninguna aparecio en un nodo de mundo. **Queda como
+   pregunta abierta con hipotesis a comprobar en el barrido** (apartado 4.5 y
+   seccion 10).
 5. **Los veinte casos de marco-pais**, con los tres contramodelos que el
-   propio catalogo ya tiene como vara.
-6. **Los seis choques de doctrina** entre mundo y nucleo.
+   propio catalogo ya tiene como vara. **El de `seguridad_digital` ya se
+   reclasifico a caso a escala de mundo** (apartado 4.6).
+6. **Los seis choques de doctrina** entre mundo y nucleo, **mas la frontera
+   candidata que destapo la muestra** (F303, apartado 10.1).
 7. ~~**El 5% de muestra aleatoria de las D**, que el auditor sortea.~~
-   **SORTEADA, VERSIONADA Y EN CURSO**: 61 pares, 41 leidos y los 41 se
-   sostienen en la vara. Ver seccion 10.
+   **CERRADA: 61 de 61 leidos, 61 de 61 limpios en la vara.** Veredicto:
+   **CRIBADO VALIDADO**. Ver seccion 10.
+
+### El estado, y que sigue
+
+**La muestra cerro. El cribado de la franja esta validado y este informe deja de
+ser un frente abierto para ser una entrega.** Lo que sigue no es mas lectura de
+pares:
+
+> **Lo siguiente es la MESA DE RACIMOS con el fundador.**
+
+**Van TREINTA Y DOS racimos a esa mesa**: los **treinta censados** del apartado
+4.1 mas los **dos que destapo la muestra D**, que el cribado no podia ver porque
+son de un mundo contra si mismo y la franja solo miraba mundo contra nucleo:
+
+| racimo nuevo | donde | nodos | de donde salio |
+|---|---|---:|---|
+| **Los puntos de Deming en el titulo** | quality | **7** | verificacion 1 de la tanda 2 (F822) |
+| **La estructura de cinturones de Six Sigma** | quality | **9** | verificacion 2 de la tanda 2 (F947) |
+
+**Y en paralelo, sin esperar a la mesa**: **las 106 citas de costura que quedan
+por leer** (128 del instrumento menos las 22 leidas) **siguen en tandas del
+auditor**. Son dos frentes que no se bloquean entre si: la mesa de racimos
+decide arreglos, las tandas de costuras siguen midiendo.
 
 ---
 
@@ -1519,15 +1543,19 @@ que sale del procedimiento de arriba corrido sobre el archivo.
 
 | | |
 |---|---:|
-| **pares D leidos por el auditor** | **41** de **61** |
-| de esos, se sostienen como **D limpios de vara** | **41** |
+| **pares D leidos por el auditor** | **61** de **61** |
+| de esos, se sostienen como **D limpios de vara** | **61** |
 | **violaciones encontradas** | **0** |
 | **dudosos mal archivados** | **0** |
 | **veredictos corregidos por figura** | **1** (F822, de D a C) |
+| **estado** | **CERRADA** |
 
-**Cifras recomputadas del archivo, no del dictado.** Las 41 leidas son la tanda 1
-(20 puestos, del 18 al 603) mas la tanda 2 (21 puestos, del 621 al 1128). Quedan
-**20 por leer**, del 1130 al 1565.
+**Cifras recomputadas del archivo, no del dictado.** Las 61 son la tanda 1 (20
+puestos, del 18 al 603), la tanda 2 (21 puestos, del 621 al 1128) y la tanda 3
+(20 puestos, del 1130 al 1565). **Nota de coherencia**: de los 61 puestos
+sorteados, **hoy 60 siguen siendo D y uno es C** (F822), porque la propia muestra
+lo reclasifico. Por eso el sorteo se reproduce contra el pin y no contra el
+archivo vivo.
 
 #### TANDA 1 (puestos 18 a 603): VEINTE DE VEINTE
 
@@ -1696,11 +1724,93 @@ treinta, que esta cerrado:
 > material del barrido intra-dominio. **Queda anotado con su medicion para que el
 > barrido lo encuentre hecho.**
 
+
+#### TANDA 3 (puestos 1130 a 1565): VEINTE DE VEINTE, cero discrepancias
+
+**Los veinte pares de la ultima tanda se sostienen como D.** El auditor los leyo
+con el texto completo delante, no por el resumen del veredicto. **Cero
+discrepancias**: ni una reclasificacion, ni una figura pasada por alto, ni una
+candidatura que abrir.
+
+#### CIERRE DE LA MUESTRA: 61 de 61, y el veredicto
+
+**La muestra esta leida entera.** El reparto final, recomputado del archivo:
+
+| | |
+|---|---:|
+| **pares D sorteados** | **61** |
+| **leidos por el auditor** | **61** (tandas de 20, 21 y 20) |
+| **limpios en la pregunta de la vara** | **61 de 61** |
+| **violaciones encontradas** | **0** |
+| **dudosos escondidos** | **0** |
+| **reclasificaciones** | **1** (F822, de D a C) |
+| **candidaturas del auditor desarmadas por el texto** | **1** (F947) |
+
+**En la pregunta que la muestra venia a hacer, la respuesta es limpia: sesenta y
+uno de sesenta y uno.** Ninguna D escondia una violacion de la vara y ninguna
+escondia un dudoso. **La clasificacion de las D se sostiene.**
+
+**En clasificacion, la muestra si movio dos piezas, y las dos en direcciones
+distintas:**
+
+1. **F822, hacia arriba.** Un hueco mio, no del metodo: la figura *numero de paso
+   en el titulo* estaba en la lista y la aplique a Crosby y no a Deming.
+   Reclasificada a C, **y de paso destapo un racimo nuevo**, los siete nodos de
+   los puntos de Deming.
+2. **F947, hacia abajo.** Una candidatura del auditor a par calcado que **el
+   texto completo desarmo**: el ejemplo compartido en el que se apoyaba no existe
+   en el nodo del nucleo. **La D se sostuvo**, y el barrido que hizo falta para
+   comprobarlo destapo el otro racimo nuevo, los nueve nodos de los cinturones.
+
+> **Las dos correcciones fueron en sentidos opuestos, y eso es lo que hace que la
+> muestra valga.** Una subio un veredicto mio y la otra bajo una lectura del
+> auditor. **Un control que solo corrige en una direccion no es un control: es un
+> sesgo con otro nombre.**
+
+#### VEREDICTO: CRIBADO VALIDADO
+
+**El cribado de la franja queda validado.** 1.606 pares clasificados, las 2 A y
+las 6 B adjudicadas una por una, y una muestra del 5% de las D leida entera sin
+encontrar una sola violacion mal archivada.
+
+**Y el metodo que lo consiguio queda registrado como metodo probado de la casa,
+reutilizable tal cual.** Son tres piezas y ninguna sobra:
+
+| pieza | que aporta | por que no se puede quitar |
+|---|---|---|
+| **1. Cribado al 100%, con clase y razon por par** | cobertura sin muestreo, y **cada veredicto auditable** porque lleva escrito por que | sin la razon escrita, una relectura no puede discrepar de nada: solo puede volver a leer desde cero |
+| **2. Relectura del auditor de las A, las B y las discrepancias** | adjudicacion de lo que el cribado marco como dudoso o grave | el que criba no puede ser el que adjudica lo que el mismo marco |
+| **3. Muestra sorteada de las D, con semilla y procedimiento** | control sobre lo que el cribado dio por sano, que es **donde nadie mira** | las clases limpias son el 76% del volumen: si ahi hay un error, ningun otro paso lo encuentra |
+
+> **La pieza 3 es la que la mayoria de las revisiones se salta**, porque revisar
+> lo que ya salio bien parece trabajo perdido. **Aqui encontro un hueco de figura
+> en el primer tercio**, y no lo habria encontrado ningun otro paso del proceso.
+
+**Tres condiciones que el metodo necesita para volver a funcionar**, aprendidas
+en esta pasada y no antes:
+
+- **La lista de figuras se declara antes de empezar y se cierra.** Lo que no este
+  en la lista, el cribado lo va a ver y no va a tener donde ponerlo: paso con las
+  fronteras de doctrina (F303) y es hueco del encargo, no del que lee.
+- **Los totales se recomputan del archivo, nunca del dictado.** Es la misma
+  doctrina que quedo escrita para el marcador de costuras.
+- **El sorteo se pinea al commit en que se hizo.** Si la muestra funciona, cambia
+  el archivo que valida, y a partir de ahi el procedimiento ya no reproduce la
+  lista contra el archivo vivo. Ver el pin de esta misma seccion.
+
 ### 10.2 Los treinta racimos: primer censo, adjudicacion despues
 
-**Los treinta racimos del apartado 4.1 quedan como PRIMER CENSO del barrido
-intra-dominio**, no como una lista de arreglos pendientes. Se adjudican
-**despues** de la muestra D.
+**Los treinta racimos del apartado 4.1 quedaron como PRIMER CENSO del barrido
+intra-dominio**, no como una lista de arreglos pendientes, y se adjudican
+**despues** de la muestra D. **La muestra ya cerro**, asi que este punto esta
+maduro: va a la mesa de racimos con el fundador (seccion 7).
+
+**Y el censo ya no es de treinta: es de TREINTA Y DOS.** La propia muestra
+destapo dos racimos mas, los dos de `quality` contra si mismo y por eso invisibles
+para una cola que solo miraba mundo contra nucleo: **los siete nodos de los puntos
+de Deming** (verificacion 1) y **los nueve de la estructura de cinturones**
+(verificacion 2). **No se meten en la tabla del apartado 4.1**, que es el censo
+cerrado de lo que vio el cribado; se suman aqui, que es donde se decide.
 
 Tiene sentido en ese orden: el cribado los encontro de rebote, mirando pares de
 mundo contra nucleo, y por eso el censo es el que cabe por esa ventana. El
@@ -1726,7 +1836,9 @@ sobrevive, es salud del nucleo. Si desaparece, era el metro.
 
 ---
 
-**Estado del encargo:** cribado cerrado (1.606 de 1.606), agujero de borde
-cerrado, A y B adjudicadas, **muestra D sorteada y en curso (41 de 61, cuarenta y
-uno de cuarenta y uno se sostienen en la vara, con un veredicto corregido por
-figura)**, racimos esperando al barrido.
+**Estado del encargo: ENTREGADO Y VALIDADO.** Cribado cerrado (1.606 de 1.606),
+agujero de borde cerrado, A y B adjudicadas, **muestra D cerrada (61 de 61, cero
+violaciones, una reclasificacion y una candidatura desarmada)** y **veredicto de
+CRIBADO VALIDADO** con su metodo registrado para reutilizar. **Lo siguiente es la
+mesa de racimos con el fundador (32 racimos), y en paralelo las 106 citas de
+costura que quedan por leer.**
