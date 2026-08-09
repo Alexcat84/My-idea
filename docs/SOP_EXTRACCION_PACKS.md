@@ -115,6 +115,14 @@ mapear a las 4 fases reales así (usado en risk_management):
    a sus mundos, jamás se duplica su contenido.
 8. Destilar del TEXTO REAL de cada sección (verificar antes de construir), no de
    memoria.
+9. **EL GRADIENTE CONTRA EL NÚCLEO.** Todo concepto a minar se coteja ANTES
+   contra el núcleo: si el núcleo ya tiene un nodo base del mismo tema, el nodo
+   nuevo del mundo **(i)** lo declara en `nodos_previos` cuando el puente
+   aplique según la ley del ancla, **(ii)** asume la base como hecha en vez de
+   repetirla, y **(iii)** profundiza: **sus pasos empiezan donde los del núcleo
+   terminan**. Un nodo de mundo que repite la base del núcleo al mismo nivel es
+   un **RECHAZO de extracción**, no un caso de fusión posterior.
+   Referencia: `docs/GRADIENTE_NUCLEO_MUNDO.md`.
 
 ## PROCESO (paso a paso)
 1. **Preparar la vara**: generar `scripts/ids_existentes.txt` (todos los
