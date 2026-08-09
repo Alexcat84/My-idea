@@ -2347,3 +2347,218 @@ NIH y la seleccion de metodo por complejidad en el segundo.
 > **La colision de nombre queda LEIDA COMPLETA**: `proteccion_propiedad_intelectual_2`
 > paso por sus dos parejas (161 y 221) **y las dos salieron sanas**. **El nodo esta
 > bien; lo unico raro era su nombre.**
+
+---
+
+## LOTE 18, puestos 237 a 256 por senal (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden.
+
+> **CERO VIOLACIONES. OCTAVO lote seguido.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **237** | FALSO PAR FUNCIONAL | `quality/establecer_proyecto_y_metas_diseno` contra `nucleo/determine_what_to_prototype` **(t42.4)** |
+| **238** | OK | `quality/analisis_datos_reporte_estatus` contra `nucleo/metricas_calidad` **(t31.6)**. **Novena del flaco** |
+| **239** | OK | `environmental/innovar_transformar_mercados` contra `nucleo/reinvencion_constante` **(t30.0)** |
+| **240** | OK | `quality/comprension_brechas_desempeno` contra `nucleo/auditoria_desempeno_new_products` **(t43.3)** |
+| **241** | OK, **tema propio EJEMPLAR** | `entrega/evaluar_proceso_completo_no_cada_metrica` contra `nucleo/encuesta_satisfaccion_postproyecto` **(t29.8)**. **El perfect order del taller**: multiplicar porcentajes por paso y comparar contra la promesa |
+| **242** | OK | `quality/plan_de_control` contra `nucleo/metricas_calidad` **(t41.2)**. **Decima del flaco** |
+| **243** | OK | `quality/equipo_conjunto_de_mejora_con_proveedores` contra `nucleo/collaboration_enablers` **(t42.5)** |
+| **244** | OK | `quality/control_calidad_operaciones_servicio` contra `nucleo/metricas_calidad` **(t46.9)**. **UNDECIMA del flaco: IMAN CONFIRMADO** |
+| **245** | OK | `entrega/encuestar_al_cliente_para_saber_que_valora` contra `nucleo/encuesta_satisfaccion_postproyecto` **(t41.3)** |
+| **246** | OK | `environmental/aprender_haciendo_dfe` contra `nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t38.9)** |
+| **247** | OK | `exportacion/promocion_sitio_web` contra `nucleo/seo_link_building` **(t25.2)** |
+| **248** | OK, **el racimo Deming a SEXTETO, con angulo inverso** | ver abajo |
+| **249** | OK, **la frontera de plazos encuentra su ESPEJO** | ver abajo |
+| **250** | OK, **caso menor de marco-pais** | ver abajo |
+| **251** | OK, **par intra-nucleo nuevo** | ver abajo |
+| **252** | OK funcional | `compras/preparate_para_marcharte_del_trato` contra `nucleo/negociacion_contratos_proveedores` **(t34.8)** |
+| **253** | OK | `entrega/reducir_devoluciones_mejorando_informacion_previa` contra `nucleo/logistica_inversa_retornos` **(t37.1)** |
+| **254** | OK | `quality/sistema_medicion_kpi` contra `nucleo/metricas_accionables` **(t36.9)** |
+| **255** | OK, **citas de ferias** | ver abajo |
+| **256** | OK | `quality/establecer_proyecto_y_metas_diseno` contra `nucleo/metas_objetivos_smart_innovacion` **(t37.3)** |
+
+### 244, el IMAN confirmado
+
+`nucleo/metricas_calidad` cierra el lote con **ONCE parejas leidas**, y **las once
+salieron sanas o falsas**. **Ni una violacion.**
+
+> **Cuatro pasos, voz de manual, y once emparejamientos.** Es la prueba de que un
+> nodo **flaco y generico** atrae la cola **por vaguedad, no por tema**. **Su nota
+> de voz sigue en el barrido residual, y ahora tiene once razones.**
+
+### 248, el racimo Deming sube a SEXTETO, pero con el angulo al reves
+
+`quality/responsabilidad_personal_en_gestion` contra `nucleo/curse_cinco_culpas`
+**(t38.5)**
+
+Sus cuatro pasos mandan **lo contrario** que el resto del racimo: *escribe tu
+problema sin terminos genericos*, *revisa si le atribuyes la causa a factores
+externos*, **reconoce tu cuota de responsabilidad**, conviertelo en compromiso.
+
+> **PRECISION VERIFICADA que conviene tener presente al leer el racimo: este nodo
+> es de CROSBY, no de Deming.** Los otros cinco dicen *"el sistema, no la
+> persona"*; **este dice *"tu parte, no los factores externos"***.
+>
+> **Probable contrapeso legitimo**, y por eso entra al racimo. **Pero esta a un
+> paso de ser la QUINTA frontera con choque de fuentes**, porque son **dos autores
+> dando consejos opuestos**. **Lo decide la lectura intra-dominio.**
+
+### 249, la frontera de plazos encuentra su espejo, y queda formulada
+
+`compras/reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor`
+contra `nucleo/negociacion_con_plazos_artificiales` **(t45.9)**
+
+> **El mundo ensena a DEFENDERSE exactamente de la tactica que el nucleo ensena a
+> USAR.**
+
+**Y los dos son correctos para su lector**: el nucleo te habla como quien vende y
+necesita que el comprador avance; el mundo te habla como quien compra y necesita
+no ceder por prisa fabricada.
+
+**Con esto la frontera de plazos queda formulada entera**: el nucleo ensena la
+tactica (P38), otro nodo del nucleo la administra como palanca (P159), y el mundo
+la reconoce y se defiende (P249). **No falta ninguna pieza; falta decidir si el
+catalogo lo dice.**
+
+### 250, marco-pais en su forma MENOR
+
+`nucleo/regla_disponibilidad_previa_venta` **(t35.2)**
+
+**El titulo conserva el nombre de la regla estadounidense** (*Pre-Sale
+Availability Rule*, de la *Businessperson's Guide to Federal Warranty Law*), **pero
+los tres pasos ya estan universalizados**: revisa por que canal vendes, coloca el
+texto visible junto al producto o en su pagina, prepara a quien te ayuda a vender.
+
+> **Es la forma menor de la clase: el contenido ya viajo y el nombre se quedo.**
+> Justo al reves del puesto 85, donde el mundo seguia cableado entero.
+
+### 251, el par de PROGRAMACION DE PRODUCCION del nucleo
+
+`quality/sistema_pull_push` contra `nucleo/produccion_scheduling_balance_objetivos`
+**(t36.9)**
+
+**El nucleo tiene DOS nodos de programacion de produccion**, con el puesto 208, y
+**los dos son de Hugos**:
+
+| lo que dicen los dos | `programacion_produccion` | `produccion_scheduling_balance_objetivos` |
+|---|---:|---:|
+| **lote economico** | paso 1 | paso 2 |
+| **run-out time** para secuenciar | pasos 2 y 3 | paso 3 |
+| balancear utilizacion, inventario y servicio | paso 4 | paso 1 |
+
+> **Aplicada la pregunta CONTINUA-O-REPITE: repite.** Los cuatro pasos de uno son
+> los cuatro del otro en otro orden.
+>
+> **Y NO estan conectados**, ni en un sentido ni en el otro. **A diferencia del par
+> de innovacion abierta, aqui no hay ni siquiera una arista que discutir.**
+
+**Y es el SEGUNDO par duplicado que aparece DENTRO de la subfamilia Hugos**, tras
+el de alineacion de cadena del lote 13. **La sospecha sobre los 128 deja de ser
+teorica.**
+
+### 255, las ferias: una escalera sana y dos nodos de mundo
+
+`franquicias/ferias_comerciales_franquicia` contra
+`nucleo/tacticas_de_ferias_comerciales` **(t48.2)**
+
+> **Verificado: el par del nucleo SI es una escalera.** `estrategia_ferias_comerciales`
+> declara a `tacticas_de_ferias_comerciales` en sus siguientes, y este a aquel en
+> sus previos. **Estrategia primero, tacticas despues, del mismo libro
+> (*Traction*).** **No es duplicado: es como se debe hacer.**
+
+**Lo que si queda anotado es del lado del mundo**: `franquicias` tiene **dos nodos
+propios de ferias** (`marketing_en_ferias_comerciales_de_franquicias`, P180, y
+`ferias_comerciales_franquicia`, P255). **A las citas intra-dominio.**
+
+---
+
+## MARCADOR TRAS 257 DE 346
+
+---
+
+## LOTE 19, puestos 257 a 276 por senal (veinte pares)
+
+**9 ago 2026.** Cifras verificadas; los veinte puestos coinciden.
+
+> **CERO VIOLACIONES. NOVENO lote seguido.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **257** | FALSO PAR FUNCIONAL | `compras/calcula_costo_de_mantener_contra_costo_de_reponer` contra `nucleo/efecto_bullwhip` **(t45.5)** |
+| **258** | OK | `franquicias/desarrollo_value_proposition_usp` contra `nucleo/producto_unico_superior` **(t45.4)** |
+| **259** | OK | `quality/juran_rcca_metodo` contra `nucleo/five_whys_inversion_proporcional` **(t29.2)** |
+| **260** | OK POR ESPECIALIZACION | `franquicias/encaje_organizacional` contra `nucleo/evaluacion_fit_cultural` **(t45.7)**. Franquiciados sobre empleados |
+| **261** | FALSO PAR FUNCIONAL | `quality/diagnostico_antes_remedio` contra `nucleo/curse_cinco_culpas` **(t33.7)** |
+| **262** | OK funcional | `quality/revision_progreso` contra `nucleo/plan_mejora_procesos` **(t59.4)**. **Quinta exhibicion del costurado** |
+| **263** | OK | `exportacion/seleccion_canales_distribucion` contra `nucleo/hipotesis_de_canales` **(t67.4)** |
+| **264** | OK | `quality/analisis_vendibilidad` contra `nucleo/evaluacion_de_atractivo_de_mercado` **(t34.6)** |
+| **265** | OK | `quality/brainstorming` contra `nucleo/butterfly_test_convergencia` **(t35.7)**. Divergencia contra convergencia |
+| **266** | FALSO PAR FUNCIONAL | `quality/evaluacion_de_factores_de_riesgo` contra `nucleo/plan_gestion_riesgos` **(t38.2)** |
+| **267** | OK, **par intra-quality CALCADO** | ver abajo |
+| **268** | OK, **CUARTA verificacion post-cirugia** | ver abajo |
+| **269** | FALSO PAR FUNCIONAL | `compras/revela_tu_propio_plazo_limite_al_negociar` contra `nucleo/orden_negociacion_puntos` **(t44.0)**. La frontera de plazos **ya esta formulada** |
+| **270** | OK POR ESPECIALIZACION, **par intra-franquicias CALCADO** | ver abajo |
+| **271** | OK | `risk_management/entrega_por_partes_para_exponer_el_riesgo` contra `nucleo/rendicion_de_cuentas_del_equipo` **(t28.8)** |
+| **272** | OK, tema propio | `risk_management/empieza_con_lo_que_ya_funciona` contra `nucleo/matriz_probabilidad_impacto` **(t34.9)**. Lo simple primero |
+| **273** | OK | `risk_management/plan_b_antes_de_necesitarlo` contra `nucleo/plan_de_contingencia_b` **(t60.0)**. Generico contra pregunta inversa con secreto |
+| **274** | OK | `franquicias/proceso_llamada_inicial_venta` contra `nucleo/apertura_efectiva_llamada_venta` **(t52.6)** |
+| **275** | OK POR ESPECIALIZACION | `exportacion/evaluacion_mercados_objetivo` contra `nucleo/evaluacion_de_atractivo_de_mercado` **(t69.7)** |
+| **276** | OK | `entrega/mapear_servicio_antes_durante_despues` contra `nucleo/rediseno_procesos_negocio_cx` **(t41.4)** |
+
+### 267 y 270, dos pares CALCADOS, y ninguno del nucleo
+
+> **PRECISION VERIFICADA sobre cual gemelo esta en cada puesto**, porque el encargo
+> los nombro al reves y conviene que el acta cite el par correcto:
+>
+> - **el puesto 267 es `tipos_innovacion_i_ii`** contra `nucleo/innovacion_abierta`;
+>   su gemelo `innovacion_tipo_ii` es el del puesto **233**.
+> - **el puesto 270 es `proceso_primera_llamada`** contra
+>   `nucleo/cuatro_etapas_llamada_de_ventas`; su gemelo
+>   `proceso_llamada_inicial_venta` es el del puesto **74** (y vuelve en el 274).
+>
+> **El hallazgo es el mismo y no cambia**: los dos pares existen y estan calcados.
+
+**a) `quality`: `tipos_innovacion_i_ii` (6 pasos) y `innovacion_tipo_ii` (5).**
+Mismo metodo, **las mismas tres columnas** (*hacerlo mas grande*, *mas pequeno*,
+*combinarlo con*), **el mismo diferir la critica** y el mismo refinar. **Del mismo
+libro (Juran).**
+
+**b) `franquicias`: `proceso_primera_llamada` (7 pasos) y
+`proceso_llamada_inicial_venta` (8).** Misma agenda: contacto y fuente del lead,
+calificar financieramente, urgencia y motivos, **hot buttons**, que otras
+franquicias considera, overview breve, y pedir el avance con **el CIRF**. **Del
+mismo libro (Siebert).**
+
+> **LA ACRECION ENTRE NODOS NO ERA MONOPOLIO DEL NUCLEO.** Es la primera vez que
+> aparecen pares calcados **dentro de un mundo** con esta claridad.
+
+### 268, la CUARTA verificacion post-cirugia
+
+`risk_management/haz_tu_lista_de_lo_que_puede_fallar` (**El Censo de Riesgos**,
+reencuadrado en la cirugia 1) contra `nucleo/plan_gestion_riesgos` **(t33.0)**
+
+**Momento propio otra vez**, y esta vez **la frontera la hace un paso concreto del
+reencuadre**: *"de los que decidas soltar, anotalos igual pero marcalos como
+observados, no como activos"*.
+
+> **Ese paso lo escribio la cirugia. Y es el que hoy separa al nodo del plan de
+> gobierno del nucleo.**
+
+---
+
+## MARCADOR TRAS 277 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas en dos lotes** | **cero** |
+| **lotes seguidos sin violaciones** | **NUEVE** |
+| verificaciones post-cirugia por la cola | **4** (59, 173, 217, 268) |
+| pares calcados **dentro de un mundo** | **2** (quality y franquicias) |
+| pares duplicados dentro de la **subfamilia Hugos** | **2** |
+
+> **Quedan 69 pares de la cola.** Y lo que sigue saliendo no es gradiente: son
+> **duplicados internos de los mundos**, que hasta ahora se habian visto solo en el
+> nucleo.

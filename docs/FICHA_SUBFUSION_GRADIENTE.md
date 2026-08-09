@@ -1185,8 +1185,10 @@ su cuenta, en OTRO par, mucho mas abajo, y pasaron.**
 |---|---|---:|---|
 | **1** (`08988ad`) | cinco peldanos de `risk_management` por via 1 | **puesto 59**, `haz_tu_lista_de_lo_que_puede_fallar` contra el mismo nodo del nucleo | **GRADIENTE OK**: donde el puesto 5 encontro empate blando, la cola encuentra **momento propio con voz propia** |
 | **1B** (`1260581`) | `cradle_to_cradle_concepto` reencuadrado a **puerta** del tema | **puesto 173**, contra `economia_circular_como_modelo_de_negocio` | **GRADIENTE OK**: sus cuatro pasos son **decisiones de marco** y nada mas |
+| **1**, otra vez | la cadencia de `revisa_tus_riesgos_con_un_ritmo` | **puesto 217**, contra `matriz_probabilidad_impacto` | **GRADIENTE OK** |
+| **1**, y una cuarta | el Censo de `haz_tu_lista_de_lo_que_puede_fallar` | **puesto 268**, contra `plan_gestion_riesgos` | **GRADIENTE OK**, y **la frontera la hace un paso que escribio la cirugia**: *"marcalos como observados, no como activos"* |
 
-> **Ninguna de las dos relecturas se hizo para verificar nada.** Salieron en el
+> **Ninguna de las CUATRO relecturas se hizo para verificar nada.** Salieron en el
 > orden de la cola, con el auditor leyendo otro par, meses de trabajo despues.
 >
 > **Eso es lo que las hace valer**: una verificacion que se busca es un examen que
@@ -1227,6 +1229,23 @@ plazo como **palanca que se administra**, no como informacion que se comparte
 > **No es un autor: son DOS libros distintos de la literatura de TRATOS cayendo
 > del mismo lado**, contra `compras`, que viene de la literatura de **relacion con
 > proveedores**. **La frontera no es entre dos nodos: es entre dos oficios.**
+
+## La frontera 2 queda FORMULADA ENTERA (lote 18)
+
+**El puesto 249 le encontro su espejo**, y con el la frontera deja de ser un par
+suelto para ser **un mapa completo**:
+
+| pieza | nodo | que ensena |
+|---|---|---|
+| **la tactica** | `nucleo/negociacion_con_plazos_artificiales` (P38) | **pon una fecha limite artificial** para forzar que avancen |
+| **la palanca** | `nucleo/no_shop_extension_negotiation` (P159) | administra el plazo **para mantener presion** |
+| **la defensa** | `compras/reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor` (P249) | **reconoce esa tactica y no cedas por prisa fabricada** |
+| **la alternativa** | `compras/revela_tu_propio_plazo_limite_al_negociar` (P38) | **revela tu fecha real** y pregunta por la suya |
+
+> **Los cuatro son correctos para su lector.** El nucleo habla a quien vende y
+> necesita que el comprador avance; el mundo habla a quien compra.
+>
+> **No falta ninguna pieza. Lo que falta es decidir si el catalogo lo dice.**
 
 ## El contador de objeciones: SIETE apariciones
 
@@ -1326,7 +1345,7 @@ entero**.
 
 **Era trio y pasa a CUARTETO con el lote 13.**
 
-**Era cuarteto y pasa a QUINTETO con el lote 17.**
+**Era quinteto y pasa a SEXTETO con el lote 18.**
 
 `politica_no_culpar_trabajador` (puesto **86**),
 `responsabilidad_gerencial_causas_comunes` (puesto **113**),
@@ -1335,8 +1354,20 @@ entero**.
 fuerte con el primero**), y el **base** de
 `distincion_causas_comunes_especiales`.
 
-> **Cinco nodos de `quality` sobre no culpar al individuo.** Es el racimo mas
-> numeroso de la ficha, **y su base ya tiene fusion con reparto adjudicada**.
+**Y el sexto llega con el ANGULO AL REVES**: `responsabilidad_personal_en_gestion`
+(puesto **248**) manda *"reconoce tu cuota de responsabilidad"* y *"revisa si le
+atribuyes la causa a factores externos"*.
+
+> **Seis nodos de `quality` sobre la culpa.** Es el racimo mas numeroso de la
+> ficha, **y su base ya tiene fusion con reparto adjudicada**.
+>
+> **PRECISION VERIFICADA que cambia como se lee el sexto: es de CROSBY, no de
+> Deming.** Los otros cinco dicen *"el sistema, no la persona"*; **este dice *"tu
+> parte, no los factores externos"***.
+>
+> **Probable contrapeso legitimo, y por eso entra al racimo. Pero esta a un paso de
+> ser la QUINTA frontera con choque de fuentes**, porque son **dos autores dando
+> consejos opuestos.**
 
 > **Ojo con este**: la **fusion con reparto del base ya esta adjudicada** (ver la
 > maraña de causas comunes), y **puede absorber parte de este racimo antes de que
@@ -1523,6 +1554,83 @@ NO es esa.**
 
 **Y de paso confirma la ficha dormida de normalizacion de fuentes**: la variante
 truncada de 14 nodos es exactamente el ruido de puntuacion que aquella anoto.
+
+## k) `nucleo`, el par de PROGRAMACION DE PRODUCCION
+
+`programacion_produccion` (puesto **208**) y
+`produccion_scheduling_balance_objetivos` (puesto **251**). **Cuatro pasos cada
+uno, los dos del nucleo, los dos de Hugos.**
+
+| lo que dicen los dos | uno | el otro |
+|---|---:|---:|
+| **lote economico** | 1 | 2 |
+| **run-out time** para secuenciar | 2 y 3 | 3 |
+| balancear utilizacion, inventario y servicio | 4 | 1 |
+
+> **CONTINUA O REPITE: repite.** Los cuatro pasos de uno son los cuatro del otro en
+> otro orden. **Y NO estan conectados**, ni en un sentido ni en el otro: **aqui no
+> hay ni siquiera una arista que discutir.**
+
+> **Es el SEGUNDO par duplicado dentro de la subfamilia HUGOS**, tras el de
+> alineacion de cadena (lote 13). **La sospecha sobre los 128 deja de ser teorica:
+> dos pares, encontrados los dos por accidente, en un bloque que nadie ha barrido.**
+
+## l) `nucleo`, las ferias: escalera SANA, y dos nodos en `franquicias`
+
+**Verificado, y sale a favor del catalogo**: `estrategia_ferias_comerciales`
+declara a `tacticas_de_ferias_comerciales` en sus siguientes, y este a aquel en sus
+previos. **Del mismo libro (*Traction*), estrategia primero y tacticas despues.**
+
+> **No es duplicado: es como se debe hacer, y sirve de contraejemplo** para los
+> pares de este apartado.
+
+**Lo que si queda anotado es del lado del mundo**: `franquicias` tiene **dos nodos
+propios de ferias**, `marketing_en_ferias_comerciales_de_franquicias` (P180) y
+`ferias_comerciales_franquicia` (P255). **Sin adjudicar.**
+
+---
+
+## PARES CALCADOS DENTRO DE UN MUNDO (lote 19)
+
+> **LA ACRECION ENTRE NODOS NO ERA MONOPOLIO DEL NUCLEO.** Es la primera vez que
+> aparecen pares calcados **dentro de un mundo** con esta claridad, y aparecieron
+> **dos en el mismo lote**.
+
+### m) `quality`, el par de INNOVACION TIPO II
+
+`tipos_innovacion_i_ii` (6 pasos, puesto **267**) y `innovacion_tipo_ii` (5 pasos,
+puesto **233**). **Los dos de `quality`, los dos de Juran.**
+
+**Mismo metodo**: las mismas **tres columnas** (*hacerlo mas grande*, *hacerlo mas
+pequeno*, *combinarlo con*), el mismo **diferir la critica**, el mismo refinar.
+
+> **CONTINUA O REPITE: repite, y ademas comprime.** Lo unico propio del segundo es
+> *"seleccionar las ideas con mayor potencial"*.
+>
+> **Y SI estan conectados**, en los dos sentidos, con `tipos_innovacion_i_ii`
+> primero. **Es la misma figura del par de innovacion abierta del nucleo**: una
+> arista que ordena, pero un segundo peldano que vuelve a decir el primero.
+
+### n) `franquicias`, el par de la PRIMERA LLAMADA
+
+`proceso_primera_llamada` (7 pasos, puesto **270**) y
+`proceso_llamada_inicial_venta` (8 pasos, puestos **74** y **274**). **Los dos de
+`franquicias`, los dos de Siebert.**
+
+**Misma agenda**: contacto y fuente del lead, calificar financieramente, urgencia y
+motivos, **hot buttons**, que otras franquicias considera, overview breve, y pedir
+el avance con **el CIRF**.
+
+> **Y aqui NO estan conectados**: ninguno declara al otro.
+>
+> **Ademas la voz los separa**: `proceso_primera_llamada` esta en **tu** (*obten,
+> calificalo, detecta, preguntale*) y `proceso_llamada_inicial_venta` en
+> **infinitivo** (*obtener, calificar, determinar, identificar*).
+>
+> **Es la figura del trio ECR y de `desarrollar_caracteristicas_proceso`: una
+> version curada viviendo al lado de su hermana sin curar, y ninguna marcada.**
+
+**Sin adjudicar los dos.**
 
 ---
 

@@ -880,6 +880,22 @@ nueve mundos**, o la asimetría se repite en cada campaña de voz.
 > doctrina.** No hizo falta argumentar que hacía falta: **tres hallazgos
 > accidentales, en dos mundos distintos, lo demuestran solos.**
 
+### Entrada 4, y es la forma MENOR: el nombre se quedó, el contenido ya viajó
+
+`nucleo/regla_disponibilidad_previa_venta` (lote 18, puesto 250) conserva en su
+**título** el nombre de la regla estadounidense (*Pre-Sale Availability Rule*, de
+la *Businessperson's Guide to Federal Warranty Law*), **pero sus tres pasos ya
+están universalizados**: revisa por qué canal vendes, coloca el texto de la
+garantía visible junto al producto o en su página, prepara a quien te ayuda a
+vender.
+
+> **Es la forma menor de la clase, y el contrario exacto del puesto 85**: allí el
+> mundo seguía cableado entero mientras el núcleo ya estaba curado; **aquí el
+> contenido ya viajó y solo se quedó el nombre.**
+
+**Consecuencia para el barrido**: hay que mirar **títulos además de pasos**. Un
+barrido que solo lea `pasos_accionables` **no vería este caso.**
+
 **El nodo no se toca desde el gradiente.**
 
 Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviación)
