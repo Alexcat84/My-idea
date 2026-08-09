@@ -1801,3 +1801,74 @@ esconde por estructura), **pero la voz va al barrido residual**.
 > **La cola por debajo de 0,79 ya no discute el gradiente: reparte material para
 > los DOS barridos que vienen**, el intra-dominio y el de voz residual. **Leerla
 > sigue valiendo, pero por otra razon que al principio.**
+
+---
+
+## LOTE 12, puestos 115 a 134 por senal (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden.
+
+> **CERO VIOLACIONES.** Dieciseis OK, dos falsos funcionales, un dudoso.
+> **El cambio de regimen del lote 11 se confirma.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **115** | OK | `risk_management/riesgo_contra_valor_vale_la_pena` contra `nucleo/reglas_gestion_riesgo_gambling` **(t44.4, s0.7831)**. Valor contra inversion por etapas: vecinos |
+| **116** | OK | `quality/innovacion_tipo_ii` contra `nucleo/mash_ups` **(t33.3, s0.7825)**. Tecnicas hermanas distintas |
+| **117** | FALSO PAR FUNCIONAL | `franquicias/manejo_objeciones_venta_franquicia` contra `nucleo/diseno_embudo_ventas_cliente` **(t30.8, s0.7821)**. **SEXTA aparicion** del nodo de objeciones; la ficha de frontera suma |
+| **118** | OK | `health_safety/abandonar_arreglos_rapidos` contra `nucleo/five_whys_inversion_proporcional` **(t31.3, s0.7821)**. Anti quick fix sobre el metodo |
+| **119** | FALSO PAR FUNCIONAL | `quality/identificacion_de_riesgos` contra `nucleo/matriz_probabilidad_impacto` **(t27.1, s0.7821)**. Identificar no es priorizar |
+| **120** | OK, **nota de voz al nucleo** | `compras/conoce_insumos_vitales` contra `nucleo/gestion_riesgo_cadena_suministro` **(t31.6, s0.7819)**. **El taller contra la multinacional**: la politica de escala ampara el contenido, la voz va al barrido |
+| **121** | OK apretado | `environmental/tirania_intergeneracional_remota` contra `nucleo/diseno_consecuencias_no_intencionadas` **(t35.9, s0.781)**. Herencia intergeneracional contra mal uso: angulos |
+| **122** | OK | `quality/plan_de_control` contra `nucleo/plan_gestion_calidad` **(t48.8, s0.7808)**. El metodo de control de ocho pasos sobre el plan de gobierno |
+| **123** | OK | `quality/unidades_medida_sensores` contra `nucleo/metricas_calidad` **(t38.8, s0.7805)**. **Quinta pareja del nodo flaco, quinta sana** |
+| **124** | OK, **ejemplar post-cirugia** | `risk_management/cuatro_caminos_ante_un_riesgo` contra `nucleo/matriz_probabilidad_impacto` **(t34.0, s0.7805)**. **Abre asumiendo la priorizacion hecha: nacio como la cirugia 1 ensena** |
+| **125** | OK | `quality/analisis_competitivo_calidad` contra `nucleo/ventaja_competitiva_producto` **(t38.9, s0.7804)**. Medir contra exigir criterio |
+| **126** | OK, tema propio | `compras/documenta_el_ahorro_real_de_cada_compra` contra `nucleo/gestion_procurement_consumo` **(t43.6, s0.7798)** |
+| **127** | OK | `quality/establecer_proyecto_y_metas_diseno` contra `nucleo/definicion_producto_proyecto` **(t44.2, s0.7794)**. Vecinos sanos |
+| **128** | OK apretado | `quality/definicion_y_concepto_de_aseguramiento_de_calidad` contra `nucleo/plan_gestion_calidad` **(t50.7, s0.7792)** |
+| **129** | OK, **cita intra-dominio** | `quality/principios_mejora_continua` contra `nucleo/cultura_de_experimentacion_continua` **(t55.9, s0.7792)**. **Shingo contra Toyota**: linajes complementarios |
+| **130** | OK, **nota de voz al nucleo** | `quality/equipo_conjunto_de_mejora_con_proveedores` contra `nucleo/alineacion_cadena_estrategia_negocio` **(t49.6, s0.779)** |
+| **131** | OK POR ESPECIALIZACION | `exportacion/proteccion_patentes_internacional` contra `nucleo/patentes_startup` **(t51.2, s0.7789)**. **Y limpio de agencias de pais**: solo PCT y WIPO, tratados intocables. **Buen contraste con el puesto 85** |
+| **132** | OK | `quality/reduccion_tiempo_ciclo` contra `nucleo/analisis_flujo_de_valor` **(t34.8, s0.7789)**. El COMO reducir tras mapear |
+| **133** | **DUDOSO**, via 1 suave, y cita intra-dominio | ver abajo |
+| **134** | OK apretado, nota menor de voz | `quality/gestion_para_la_calidad` contra `nucleo/plan_gestion_calidad` **(t52.8, s0.7784)**. Pasos de abstraccion (*"establecer metodos universales"*) con **valvula floja** |
+
+### 133, el unico dudoso del lote
+
+`risk_management/que_hacer_con_un_riesgo_nuevo` contra `nucleo/registro_de_riesgos`
+**(t53.8, s0.7789)**
+
+**Verificado contra el grafo**: sus **pasos 2, 3 y 4 repiten el registro casi
+literal**.
+
+| el nodo del mundo | el del nucleo |
+|---|---|
+| 2. *"estima su probabilidad y su impacto"* | 3. *"piensa que tan probable es y que tan grave"* |
+| 3. *"decide su camino de respuesta y quien lo vigila"* | 4. *"decide como vas a responder y quien se hace cargo"* |
+| 4. *"sumalo a tu lista viva para que entre en el ritmo de revision"* | 6. *"manten actualizado si el riesgo sigue abierto o ya se cerro"* |
+
+**Su unico aporte propio es la PRIMERA LINEA**: *"cuando aparezca un riesgo nuevo,
+**no lo ignores por no estar en el plan**"*.
+
+> **Ahi hay un sesgo real que el nucleo no nombra**, y es todo lo que este nodo
+> tiene de suyo. **Candidato a centrarse en ese sesgo asumiendo el registro
+> hecho**, que es la via 1 exacta de la cirugia 1.
+
+**VIA 1 SUAVE, PARA LA PASADA UNICA. No se ejecuta.**
+
+---
+
+## MARCADOR TRAS 138 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas en el lote** | **cero** |
+| dudosos nuevos | **1** (puesto 133), a la pasada unica |
+| citas intra-dominio | **cuatro racimos**, en la ficha |
+| notas de voz al nucleo | la **subfamilia Hugos**, con nombre de grupo en la ficha |
+
+> **Dos lotes seguidos sin una sola violacion.** La cola por debajo de 0,78 esta
+> confirmando que **el gradiente, como problema, se concentro arriba**. Lo que
+> sigue saliendo es **material para los barridos**, no para la vara.

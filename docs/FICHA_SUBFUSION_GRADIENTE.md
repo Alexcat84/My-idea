@@ -925,16 +925,85 @@ decidio hacer (ver el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`)
 > maraña de causas comunes), y **puede absorber parte de este racimo antes de que
 > el barrido llegue**. Conviene mirarlos juntos, no en dos momentos.
 
-## c) `risk_management`, el trio de actualizacion de la lista
+## c) `quality`, el racimo de mejora continua
 
-`el_riesgo_cambia_con_el_tiempo` (puesto **107**) contra los **dos reencuadrados
-de la cirugia 1**, `manten_viva_tu_lista_de_riesgos` y
+`principios_mejora_continua` (puesto **129**), `mejora_continua_del_proceso`
+(puesto **95**) y `enfoque_en_procesos_no_en_problemas` (puesto **57**).
+
+**Tres linajes lean del mismo mundo rozandose**: Shingo, Deming y el PDCA sobre
+problemas recurrentes. **Sin adjudicar.**
+
+## d) `risk_management`, el CUARTETO de actualizacion de la lista
+
+**Era trio y pasa a CUARTETO con el lote 12.**
+
+`el_riesgo_cambia_con_el_tiempo` (puesto **107**) y
+`que_hacer_con_un_riesgo_nuevo` (puesto **133**) contra los **dos reencuadrados de
+la cirugia 1**, `manten_viva_tu_lista_de_riesgos` y
 `revisa_tus_riesgos_con_un_ritmo`.
+
+> **El cuarto llega con veredicto propio**: el 133 es **DUDOSO con via 1 suave**
+> (repite el registro del nucleo en sus pasos 2 a 4, y su unico aporte es *"no lo
+> ignores por no estar en el plan"*). **Su arreglo por gradiente y su lectura
+> intra-dominio son el mismo trabajo**, y conviene no hacerlo dos veces.
 
 > **Este merece cuidado especial**: los dos contra los que roza **acaban de ser
 > reescritos**, y el veredicto del puesto 59 confirmo que **el reencuadre les dio
 > momento propio**. Leer esto como sub-fusion sin tener eso presente seria
 > deshacer una cirugia que la propia cola valido.
+
+---
+
+# NOTA DE VOZ CON NOMBRE DE GRUPO: LA SUBFAMILIA HUGOS
+
+**Para el barrido de voz residual. No es sub-fusion.**
+
+Tres nodos del **nucleo** aparecieron en tres lotes distintos con la misma
+enfermedad de voz: **cadena de suministro a escala de multinacional, en voz de
+manual.**
+
+| nodo | puesto | pasos |
+|---|---:|---:|
+| `driver_transporte` | 110 | 4 |
+| `gestion_riesgo_cadena_suministro` | 120 | 8 |
+| `alineacion_cadena_estrategia_negocio` | 130 | 4 |
+
+**La politica de escala ampara el contenido** (nada se esconde por estructura).
+**La voz se cura EN GRUPO, con el mismo criterio, cuando la pasada unica llegue.**
+
+## CORRECCION DEL NOMBRE, verificada contra el grafo
+
+**El encargo llamaba al grupo "subfamilia Chopra". Los tres comparten fuente, pero
+NO es esa.**
+
+> **Los tres citan *Essentials of Supply Chain Management - Michael H. Hugos*.**
+>
+> **Chopra aparece DENTRO de un paso**, no como fuente: el primer paso de
+> `alineacion_cadena_estrategia_negocio` dice *"responder las 6 preguntas de
+> **Chopra y Meindl** sobre tu mercado"*. Es **un autor citado por el libro**, no
+> el libro.
+
+**El grupo se llama SUBFAMILIA HUGOS.**
+
+## Y el grupo es MUCHO mas grande que tres
+
+**Medido sobre los activos:**
+
+| cadena de fuente | nodos |
+|---|---:|
+| `Essentials of Supply Chain Management - Michael H. Hugos` | **93** |
+| `Essentials of Supply Chain Mana - Michael H. Hugos` (la variante truncada) | **14** |
+| cadenas combinadas que la incluyen | **21** |
+
+> **No son tres nodos: son alrededor de 128 nodos del nucleo salidos de UN SOLO
+> libro de cadena de suministro escrito para multinacionales.**
+>
+> **Los tres que el gradiente cazo son una MUESTRA, no el grupo.** Cuando la
+> pasada unica llegue a esta nota, **lo primero no es curar tres: es medir cuantos
+> de los 128 tienen la misma voz.**
+
+**Y de paso confirma la ficha dormida de normalizacion de fuentes**: la variante
+truncada de 14 nodos es exactamente el ruido de puntuacion que aquella anoto.
 
 ---
 
