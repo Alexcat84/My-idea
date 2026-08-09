@@ -378,6 +378,22 @@ argumento, y un recordatorio en el propio `--help`.
 | **FRONTERAS CON CHOQUE** | objeciones (par 6) y plazos de negociación (par 38). Decidir **quién se queda con qué**, y **si el contexto se escribe en los nodos** |
 | **INVENTARIO DE ESCALA** | `docs/INVENTARIO_ESCALA.md` es parcial a propósito (1.573 de 3.521 clasificados). **Sus dos usos declarados siguen sin construir**: material para que el intérprete converse sabiendo qué nodos son de operación corporativa, e insumo del **mapa tema-a-mundo** de la invitación al final del plan |
 
+### Límite conocido del instrumento, anotado sin construir nada
+
+**El instrumento solo empareja mundo contra núcleo.** Los solapes **MUNDO CONTRA
+MUNDO son invisibles para él, por diseño.**
+
+El **lote 7, puesto 51**, lo dejó a la vista: `quality` contiene **una
+minisección de riesgos** (`identificacion_de_riesgos`,
+`evaluacion_gestion_riesgos`, `plan_de_gestion_de_riesgos`) **paralela al mundo
+`risk_management` entero**.
+
+> **Cuando la cola de 346 se agote, la franja siguiente no es solo bajar el
+> umbral semántico: es también la pregunta mundo contra mundo.**
+
+**Decisión pendiente del fundador con el auditor. No se extiende el instrumento
+desde esta nota.**
+
 ### Decisiones que esperan al fundador
 
 1. **La palanca reservada sobre `nucleo/gestion_inventario`** (pares 23 y 37):
