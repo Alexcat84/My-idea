@@ -14,13 +14,13 @@ deprecacion existente**: alias, `merged_originals`, **nada se borra**.
 
 ---
 
-# LADO NUCLEO, cuatro casos con nombre
+# LADO NUCLEO, cinco casos con nombre
 
 Estos cuatro **corrigen la cuenta sin nombre** que quedo en el marcador del lote 5
 de `docs/GRADIENTE_VEREDICTOS.md`.
 
 **Estado: el caso 1 esta CERRADO** (no se funden, ver su razon). **Los casos 2, 3
-y 4 siguen abiertos.**
+y 4 siguen abiertos**, y el **caso 9** se sumo en el lote 9.
 
 ## 1. GOLDRATT, dos nodos. **CERRADO: NO SE FUNDEN**
 
@@ -143,6 +143,50 @@ palanca reservada** (reencuadrar el nodo del **NUCLEO** a version base, clausula
 > declara a `clasifica_tu_inventario` (el nodo de `compras` del puesto 23) en sus
 > `nodos_siguientes`. **El puente al mundo ya existe**, asi que un reencuadre a
 > base **no deja al lector sin salida**: la escalera esta tendida.
+
+---
+
+## 9. `plan_mejora_procesos`, COSTURA DE PEGADO DOBLE
+
+Abierto en el **lote 9, puesto 83**. **No lo destapo su par**: el nodo del mundo
+de ese par es el VSM debil, ya sentenciado en el caso 7. **Lo destapo leer el nodo
+del nucleo mientras se leia el par.**
+
+**Quince pasos, y dos secuencias casi identicas pegadas dentro del MISMO nodo:**
+
+| el primer bloque | el segundo, otra vez |
+|---|---|
+| 8. Definir el **output esperado** antes de disenar los pasos | 11. Define el **resultado final** que el proceso debe producir |
+| 9. Establecer **metricas de exito en cada etapa** | 13. Establece **metricas para cada etapa** |
+| 10. **Asignar responsabilidad clara** por cada paso | 14. **Asigna responsabilidad clara** por cada paso |
+
+**Los pasos 12 y 15 no tienen pareja**: son anadidos del segundo bloque.
+
+**Y el ejemplo de contratacion aparece dos veces**, en el paso 6 y en el 11.
+
+> **LA MARCA QUE CIERRA EL CASO, verificada y que el conteo no ve**: los pasos **1
+> a 10 estan en INFINITIVO** (*Documentar, Identificar, Definir, Establecer,
+> Asignar*) y los **11 a 15 estan en TU** (*Define, Diseña, Establece, Asigna,
+> Aumenta*).
+>
+> **La costura se ve en la gramatica.** Son **dos extracciones distintas pegadas**,
+> y **ni siquiera hablan igual**.
+
+### Es la mas visible de la campaña, y la de forma distinta
+
+**Los otros ocho casos son varios nodos que deberian ser menos.** Este es **UN
+SOLO NODO con el texto duplicado dentro.**
+
+> **Por eso su lectura es de FUSION INTERNA: se DESTEJE, no se depreca.** No hay
+> superviviente que elegir ni alias que escribir: **hay un nodo al que le sobran
+> pasos, y una decision sobre que voz se queda.**
+
+**Y esa decision no es cosmetica**: el bloque en tu es el que ya habla como la
+casa, y el bloque en infinitivo es el que trae el arranque del metodo (documentar
+el as-is, limites de control, objetivos to-be). **Quedarse con uno entero
+perderia algo; la lectura tiene que tejer, no cortar.**
+
+**PENDIENTE. Sin ejecutar.**
 
 ---
 
@@ -440,8 +484,61 @@ historia**, mientras el base sigue activo **sin marca**.
 > tres nodos que un lector puede recibir hoy, sobre el mismo tema, sin que nada
 > le diga que son parientes.**
 
-**La lectura de estos tres se hara contra sus supervivientes y hermanos en el
-proximo lote del auditor, junto con los puestos 81 a 85.**
+### LAS DOS MARAÑAS, LEIDAS (lote 9)
+
+**Se leyeron con los puestos 81 a 85, fuera de cola.** `costo_de_calidad` sigue
+sin leer.
+
+#### EL TRIO ECR: LEIDO Y ADJUDICADO, pendiente solo del disparo del fundador
+
+**Los tres vivos son el mismo concepto**: el **paso 11 de Crosby**.
+
+| nodo | pasos | quien es |
+|---|---:|---|
+| `eliminacion_causas_error` | 4 | **el base, corporativo**: *"asignar grupos funcionales responsables"*, voz en infinitivo, y **"Paso 11" en el titulo** |
+| `eliminacion_causas_error_2` | 6 | voz de tu, y **el sorteo semanal** como incentivo (paso 6). **Tambien lleva "Paso 11" en el titulo** |
+| `eliminacion_causas_error_4` | 6 | **curado a la voz del taller** (*"quien te ayuda"*), titulo sin numero de paso, **y el unico con historia** (`ids_alias`) |
+
+> **VEREDICTO DE LECTURA: FUSION DOBLE hacia `eliminacion_causas_error_4`**, con
+> **alias de los dos absorbidos**.
+>
+> **Los titulos con numero de paso se curan solos en la fusion**: los dos que lo
+> llevan son los dos que se absorben. **El colateral C2 se cierra en parte por
+> esta via.**
+
+**PENDIENTE DEL DISPARO DEL FUNDADOR. No se ejecuta desde este documento.**
+
+#### LA MARAÑA DE CAUSAS COMUNES: mitad clara y mitad fina
+
+**La mitad clara**: `distincion_causas_comunes_especiales_2` **cabe en el
+superviviente** `causas_comunes_vs_especiales`, que trae el metodo completo (datos
+en orden cronologico, grafico con limites, reglas de deteccion, investigar la
+senal, listar las causas comunes y actuar distinto segun el tipo). **FUSION
+CLARA.**
+
+> **Precision verificada al leer los dos, y la traigo porque la fusion tendra que
+> decidirlo**: lo unico del `_2` que el superviviente **no dice como tal** es su
+> **aviso en forma de prohibicion**, *"evita investigar cada caso como si fuera
+> una causa especial cuando el proceso es estable"*. El superviviente **manda
+> investigar la senal** y **manda asumir las causas comunes**, pero **no advierte
+> del error de perseguir cada caso**. **La lectura decide si ese aviso sobrevive
+> como paso.**
+
+**La mitad fina**: el **BASE** es otra cosa. Sus cuatro pasos son **angulo de
+gestion de personas**: no informar defectos individuales con el proceso en
+control, **ayudar** al trabajador ante una causa especial, y **no sancionarlo por
+fallas del sistema**.
+
+> **Es Deming aplicado a DIRIGIR GENTE, no a leer una carta de control.**
+
+**DUDOSO, con la lectura anotada**: **sobrevive con titulo diferenciado**, o **se
+funde**. **Lo decide la fusion fina con el fundador.**
+
+> **Dato de rebote que pesa en esa decision**: ese base **ya figura como DUDOSO en
+> `docs/INVENTARIO_ESCALA.md`**, y por la misma razon exacta (*"el analisis
+> estadistico central es solitario, pero los pasos sobre trabajadores asumen que
+> hay empleados"*). **Las dos lecturas, hechas por separado y con criterios
+> distintos, señalan el mismo nodo por el mismo motivo.**
 
 ---
 
@@ -575,6 +672,11 @@ Encontrado en el **caso 8**. **Dos titulos llevan el numero de paso de Crosby:**
 |---|---|
 | `quality/consejos_de_calidad` | **Paso 13**: Consejos de Calidad |
 | `quality/costo_de_calidad_3` | **Paso 4**: Costo de la Calidad |
+| `quality/eliminacion_causas_error` | **Paso 11**: Eliminacion de Causas de Error |
+| `quality/eliminacion_causas_error_2` | Eliminacion de Causas de Error - ECR (**Paso 11**) |
+
+**Los dos ultimos entraron con la lectura del trio ECR (lote 9), y son los dos que
+esa fusion absorbe**: ahi el titulo se cura sin trabajo extra.
 
 **Es la secuencia del libro filtrandose al catalogo como si el usuario lo
 estuviera leyendo.** Un titulo que **presupone un orden que la app no muestra**:
@@ -763,8 +865,9 @@ de siempre**:
 | **2.º** | **casos 3 y 4**, las costuras | **un solo nodo cada uno**: se abre, se parte o se recorta, y se cierra |
 | **3.º** | **caso 2**, brainstorming | **requiere decidir el reparto** entre nodos que sobreviven |
 | **4.º** | **caso 7**, el duo de VSM | **dos nodos y una especializacion que no se toca**, pero antes hay que entender **por que el debil no entro en la fusion anterior** |
-| **5.º** | **caso 8**, los tres huerfanos restantes | **tres lecturas independientes**, una por par, y la (c) puede terminar en encadenar en vez de fundir |
-| **6.º** | **caso 6**, el racimo de auditoria | **el mas grande**, pero ya **RACIMO COMPLETO**: 16 de 16 leidos, membresia cerrada en tres grupos. **Se puede ejecutar sin reabrirse** |
+| **5.º** | **caso 8**, los huerfanos | **el trio ECR ya esta LEIDO Y ADJUDICADO** (fusion doble); quedan la mitad fina de causas comunes y `costo_de_calidad`, sin leer |
+| **6.º** | **caso 9**, `plan_mejora_procesos` | **forma distinta**: no se elige superviviente, se **desteje** un solo nodo. Puede ir en cualquier momento, no depende de los demas |
+| **7.º** | **caso 6**, el racimo de auditoria | **el mas grande**, pero ya **RACIMO COMPLETO**: 16 de 16 leidos, membresia cerrada en tres grupos. **Se puede ejecutar sin reabrirse** |
 
 **El caso 1 salio del orden: esta CERRADO y no se ejecuta.**
 
