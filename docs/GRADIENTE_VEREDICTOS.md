@@ -21,7 +21,7 @@ empobrecer el nucleo (ver `docs/GRADIENTE_NUCLEO_MUNDO.md`).
 
 **9 ago 2026.**
 
-### 1. VIOLACION
+### 1. VIOLACION, arreglo por VIA 1 (reencuadre)
 
 `risk_management/cuan_probable_y_cuanto_doleria` contra
 `nucleo/matriz_probabilidad_impacto` **(t25.8, s0.8934)**
@@ -30,9 +30,10 @@ Leidos los pasos: el nodo del mundo **estima alto-medio-bajo y ordena**; el del
 nucleo **define escalas, cruza, fija umbrales de aceptacion Y define la respuesta
 a cada riesgo**. **El nodo gratuito es mas profundo que el de pago.**
 
-**Arreglo propuesto**: profundizar el nodo del mundo (calibracion de umbrales
-propia, respuesta por riesgo, y que sus pasos asuman hecha la priorizacion base
-del nucleo). **El nucleo no se toca.**
+**Arreglo por VIA 1, reencuadre** (ver la seccion QUE SIGNIFICA PROFUNDIZAR de
+`docs/GRADIENTE_NUCLEO_MUNDO.md`): el peldano de entrada se reescribe para
+**asumir hecha la priorizacion del nucleo** y arrancar en la calibracion honesta
+(umbrales propios, respuesta por riesgo). **El nucleo no se toca.**
 
 ### 2. DUDOSO
 
@@ -43,7 +44,8 @@ El mundo **ENSANCHA** (velocidad, indignacion del cliente, complejidad, alcance:
 dimensiones que el nucleo no tiene) **pero no AHONDA** (pasos blandos, sin
 umbrales ni respuesta).
 
-Empate elegante o gradiente: **lo decide el fundador**.
+Empate elegante o gradiente: **lo decide el fundador**. Si se adjudica violacion,
+**el arreglo natural es la via 1** (reencuadre).
 
 ### 3. FALSO PAR
 

@@ -53,3 +53,67 @@ veredicto de cada par es lectura textual del auditor con visto del fundador.
 
 La regla de nacimiento vive además donde se mina: `docs/SOP_EXTRACCION_PACKS.md`,
 en las reglas de extracción.
+
+---
+
+# QUE SIGNIFICA PROFUNDIZAR: tres vias, por orden de costo
+
+## Via 1, REENCUADRE
+
+La profundidad **ya existe** en la escalera del propio mundo, y el peldano de
+entrada repitio la base del nucleo en vez de asumirla hecha.
+
+**Arreglo**: reescribir ese peldano para que sus pasos **empiecen donde los del
+nucleo terminan**. Cero fuentes nuevas, cero nodos nuevos.
+
+**Evidencia de que esta via suele alcanzar**, tomada del par violado del lote 1:
+`la_matriz_de_colores_te_engana` **ya supera al nucleo** con estimaciones en
+dinero y tiempo y rangos declarados (*"probabilidad y cuanto en dinero o
+tiempo"*, *"cuando digas probabilidad media, aclara que rango quieres decir"*).
+**La profundidad existe en la escalera; lo que fallo fue el peldano de entrada.**
+
+> **Precision verificada contra el grafo antes de escribirla**: ese nodo es
+> **sucesor DIRECTO** de `cuan_probable_y_cuanto_doleria`, que lo declara en sus
+> `nodos_previos`. Es **un peldano, no dos**. El argumento se sostiene entero y
+> de hecho se refuerza: la profundidad estaba a un solo paso.
+
+## Via 2, RE-MINADO
+
+La extraccion original se quedo en la superficie del capitulo. Se vuelve al
+**texto real de la seccion fuente** (regla 8 del SOP) y se destila el nivel
+siguiente. **Cuesta lectura, no bibliografia.**
+
+## Via 3, LITERATURA NUEVA
+
+**Solo con la fuente genuinamente exprimida**, y pasa por adjudicacion de
+bibliografia con visto del fundador. **Es la excepcion.**
+
+---
+
+# EL TECHO DE LA PROFUNDIDAD: tres paredes
+
+**a) LA FUENTE.** Jamas se inventa profundidad que el libro no da.
+
+**b) LA VALVULA.** Los pasos siguen siendo **hacibles esta semana** por el lector
+del taller. Donde la accion del emprendedor se detiene, el nodo dice *"esto
+existe y a esta escala no lo necesitas todavia"*, y ahi termina.
+
+**c) LA VOZ.** Profundo **no es tecnico ni corporativo**: se le pide al lector
+**mas precision, no mas empresa**.
+
+> **EXPONENCIAL significa relativo a la base del nucleo, no enciclopedico.**
+
+---
+
+# PROHIBICION COMPLEMENTARIA DEL EMPOBRECIMIENTO: tampoco se DESPLAZA
+
+**Desplazar nodos base del nucleo hacia los mundos tambien queda prohibido como
+arreglo.** Deja al **plan gratuito cojo** en ese tema (*"ya esta la base"* se
+vuelve mentira) y **serrucha puntos de anclaje de la ley del ancla**, cuyos
+puentes anclan **siempre** en el nucleo.
+
+**Los pares nucleo-mundo no son duplicados: son el mismo tema a dos alturas, que
+es el diseno querido.**
+
+> **El defecto de una violacion no es que existan dos nodos: es que el de pago
+> quedo a la altura del gratis.**
