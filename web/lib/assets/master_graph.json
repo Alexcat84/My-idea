@@ -24728,14 +24728,15 @@
       "dominio": "risk_management",
       "titulo_concepto": "Probabilidad e Impacto",
       "fuente": "Edwards et al., Managing Project Risks, Cap. 8 (Assessing Likelihood and Impacts)",
-      "resumen_teorico": "Todo riesgo se mide por dos cosas: qué tan probable es que ocurra, y cuánto te dolería si ocurre. Estas dos preguntas ordenan tu lista y te dicen a cuáles prestar atención primero. Un riesgo muy probable pero de daño mínimo puede esperar; uno improbable pero capaz de hundirte merece tu atención hoy. No necesitas números perfectos al principio: basta con ubicar cada riesgo como alta, media o baja probabilidad, y como daño grande, mediano o pequeño, siempre que seas honesto y consistente al hacerlo. El error común es mirar solo una de las dos dimensiones: obsesionarse con lo que más probable sin ver que su daño es trivial, o temer un desastre que casi nunca pasa.",
+      "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparacion sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimacion imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano minimo puede esperar; uno improbable capaz de hundirte merece tu atención hoy, siempre que uses el mismo criterio para todos.",
       "pasos_accionables": [
-        "De cada riesgo de tu lista, estima qué tan probable es: alta, media o baja.",
-        "Estima también cuánto dolería si pasa: daño grande, mediano o pequeño.",
-        "Ordena tu lista con las dos dimensiones juntas, no con una sola.",
-        "Sé honesto y usa el mismo criterio para todos, para poder compararlos de verdad."
+        "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderias, no a una etiqueta de color.",
+        "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja.",
+        "Revisa si dos riesgos con la misma etiqueta en realidad significan cosas muy distintas en dinero o tiempo; si es así, corrige la etiqueta.",
+        "Marca que riesgos improbables pero capaces de hundirte necesitan tu atención esta semana, aunque su probabilidad sea baja.",
+        "Aplica el mismo criterio de conversión, en dinero, en tiempo o en rango de porcentaje, a todos los riesgos de tu lista, sin excepciones."
       ],
-      "entregable_esperado": "Tu lista de riesgos con una estimación de probabilidad y de impacto para cada uno, hecha con criterio consistente.",
+      "entregable_esperado": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero o tiempo, en vez de etiquetas o colores vagos.",
       "nodos_previos": [
         "haz_tu_lista_de_lo_que_puede_fallar",
         "el_pre_mortem_imagina_el_fracaso",
@@ -24747,9 +24748,9 @@
         "la_matriz_de_colores_te_engana"
       ],
       "condiciones_activacion": [
-        "cuando todos tus riesgos te parecen igual de urgentes",
-        "cuando te obsesiona un riesgo probable cuyo daño en realidad es menor",
-        "cuando no sabes a cuál de tus riesgos atender primero"
+        "cuando dos riesgos con la misma etiqueta de impacto en realidad te costarian cantidades muy distintas",
+        "cuando no puedes explicar que rango de probabilidad quisiste decir con media",
+        "cuando tu lista de riesgos aparenta rigor pero nadie podria verificar los números detras"
       ],
       "etiqueta_arbol": "Cuán Probable y Cuánto Dolería"
     },
@@ -48130,14 +48131,15 @@
       "dominio": "risk_management",
       "titulo_concepto": "Evaluación de la Severidad del Riesgo",
       "fuente": "Edwards et al., Managing Project Risks, Cap. 8 (Evaluating Risk Severity)",
-      "resumen_teorico": "La gravedad de un riesgo combina su probabilidad y su impacto en un solo juicio que te dice cuánta atención merece. Un riesgo grave es el que junta buena probabilidad de ocurrir con capacidad de hacerte mucho daño; ese va primero. El reto no es la fórmula, es la honestidad: es tentador inflar la gravedad de lo que ya decidiste evitar, o minimizar la de lo que no quieres enfrentar. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode. Para el emprendedor solo, sin un jefe ni un comité que lo contrapese, la disciplina de juzgar la gravedad de forma pareja es lo que evita que su miedo o su ilusión decidan por él.",
+      "resumen_teorico": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. El peligro ahora no es la fórmula, es la honestidad: es tentador inflar la gravedad de lo que ya decidiste evitar, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
       "pasos_accionables": [
-        "Para cada riesgo, junta su probabilidad y su impacto en un solo nivel de gravedad.",
-        "Ordena tus riesgos de más grave a menos grave con ese criterio.",
-        "Revisa si inflaste o minimizaste alguno para que encajara con lo que ya querías hacer.",
-        "Atiende primero los tres más graves, no los que te dan más miedo emocional."
+        "Repasa tu lista ya ordenada por gravedad y pregúntate, riesgo por riesgo, si le pusiste el nivel que le corresponde o el que te conviene creer.",
+        "Marca los riesgos donde notas que minimizaste algo que no quieres enfrentar.",
+        "Marca los riesgos donde notas que inflaste la gravedad de algo que ya decidiste evitar de todos modos.",
+        "Vuelve a mirar tu orden final y confirma que los tres más graves según el mismo criterio, no según tu miedo, sean los que atenderás primero.",
+        "Si tu orden cambia después de esta revisión, quédate con el nuevo orden aunque incomode."
       ],
-      "entregable_esperado": "Tus riesgos ordenados por gravedad con un criterio parejo, con los tres más graves marcados para atender primero.",
+      "entregable_esperado": "Tu lista de riesgos ya ordenada por gravedad, revisada y corregida de sesgos, con los más graves confirmados como los primeros que vas a atender.",
       "nodos_previos": [
         "cuan_probable_y_cuanto_doleria",
         "identificacion_de_riesgos"
@@ -48148,9 +48150,9 @@
         "definir_que_cuenta_como_dano_antes_de_probar_empaque"
       ],
       "condiciones_activacion": [
-        "cuando no sabes a cuál de tus riesgos dedicar tu tiempo limitado",
-        "cuando sospechas que tu miedo o tu ilusión están ordenando tus prioridades",
-        "cuando calificaste riesgos pero sin un criterio parejo entre ellos"
+        "cuando ya ordenaste tus riesgos por gravedad pero sospechas que el orden refleja tu miedo o tu ilusión más que los hechos",
+        "cuando notas que le bajas gravedad a un riesgo solo porque no quieres lidiar con él",
+        "cuando trabajas solo y no tienes a nadie que cuestione cómo calificaste cada riesgo"
       ],
       "etiqueta_arbol": "Evalúa la Gravedad Sin Autoengaño"
     },
@@ -60194,14 +60196,15 @@
       "dominio": "risk_management",
       "titulo_concepto": "El Censo de Riesgos",
       "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 2; Edwards et al., Managing Project Risks, Cap. 6",
-      "resumen_teorico": "El corazón de gestionar el riesgo es tener una lista viva de lo que puede salir mal, no una foto que hiciste una vez y archivaste. Se arma con una sesión honesta de lluvia de ideas donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, y luego decides cuáles vale la pena manejar. Lo importante no es la lista inicial, sino el mecanismo que la mantiene despierta: cada semana aparecen riesgos nuevos y otros se apagan. Para un emprendedor solo, esta lista sustituye al equipo que en una empresa te avisaría de los peligros. Sin ella, gestionar riesgo es imposible: no puedes cuidar lo que no has nombrado.",
+      "resumen_teorico": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. El valor no está en la lista que sale de esa primera sesión, sino en aprender a distinguir qué entra al registro y qué se queda fuera sin culpa.",
       "pasos_accionables": [
-        "Siéntate quince minutos y escribe todo lo que podría salir mal en tu proyecto, sin filtrarte.",
-        "Marca cuáles merecen que hagas algo y cuáles puedes soltar por ahora.",
-        "Guarda la lista en un lugar que revises seguido, no en un cajón.",
-        "Agenda un momento fijo cada semana para añadir riesgos nuevos y quitar los que ya pasaron."
+        "Ponte un tiempo fijo y dedícalo solo a nombrar amenazas, sin evaluarlas todavía ni buscarles solución.",
+        "Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.",
+        "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo.",
+        "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto.",
+        "De los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya."
       ],
-      "entregable_esperado": "Una lista viva de riesgos, guardada a la vista, con un momento semanal fijo para actualizarla.",
+      "entregable_esperado": "La lista inicial de riesgos nombrados sin filtro, separada en dos grupos: los que pasan al registro para atenderse y los que se dejan marcados como observados.",
       "nodos_previos": [
         "cual_es_tu_mayor_riesgo",
         "amenaza_y_oportunidad",
@@ -60215,9 +60218,9 @@
         "busca_el_riesgo_antes_de_que_te_busque"
       ],
       "condiciones_activacion": [
-        "cuando llevas los riesgos en la cabeza y no en un papel",
-        "cuando hiciste una lista al inicio y nunca la volviste a tocar",
-        "cuando algo te sorprendió y al mirarlo atrás era previsible"
+        "cuando nunca has hecho una sesión honesta de nombrar lo que puede salir mal",
+        "cuando te censuras al pensar en riesgos porque suenan pesimistas o exagerados",
+        "cuando no sabes distinguir cuáles riesgos merecen acción y cuáles puedes dejar pasar por ahora"
       ],
       "etiqueta_arbol": "Lista de lo Que Puede Fallar"
     },
@@ -69677,14 +69680,15 @@
       "dominio": "risk_management",
       "titulo_concepto": "El Registro de Riesgos como Documento Vivo",
       "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 9; Edwards et al., Managing Project Risks, Cap. 10",
-      "resumen_teorico": "Tu lista de riesgos sirve solo si está viva. Cada semana el proyecto cambia: unos riesgos se apagan porque ya no pueden afectarte y se pueden cerrar, otros crecen, y aparecen unos que ni existían al arrancar. Una lista que hiciste una vez y guardaste caduca sola y te da una falsa sensación de control. Mantenerla viva es un trabajo pequeño pero constante: en cada revisión, cierras lo que ya pasó, actualizas lo que cambió y agregas lo nuevo. Este mecanismo de descubrimiento continuo es más importante que la lista inicial, porque los riesgos que te hunden suelen ser los que aparecieron después y nadie volvió a mirar. Para el emprendedor solo, la lista viva es su radar: apagado, vuela a ciegas.",
+      "resumen_teorico": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste como pequeños crecen sin que te des cuenta, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control, y eso es más peligroso que no tener lista: te confías justo donde deberías estar mirando con más atención.",
       "pasos_accionables": [
-        "En cada revisión, cierra los riesgos que ya no pueden afectarte y anótalo.",
-        "Actualiza la probabilidad y el impacto de los que cambiaron.",
-        "Agrega los riesgos nuevos que hayan aparecido desde la última vez.",
-        "Mantén el mecanismo activo todo el proyecto, no solo al inicio."
+        "Antes de marcar un riesgo como cerrado, pregúntate si de verdad ya no puede afectarte; si todavía puede, aunque sea menos probable, déjalo abierto.",
+        "Revisa uno por uno los riesgos abiertos y pregúntate cuáles se hicieron más graves o más probables desde que los anotaste.",
+        "Piensa qué cosas cambiaron en el proyecto desde la última revisión y qué riesgos nuevos aparecieron por esos cambios, aunque no existieran al principio.",
+        "Incorpora esos riesgos nuevos al registro con el mismo detalle que los demás, en vez de guardarlos aparte o dejarlos en tu cabeza.",
+        "Si en una revisión no cierras nada, no cambias nada y no agregas nada, tómalo como señal de que estás mirando por encima, no de que todo sigue igual."
       ],
-      "entregable_esperado": "Un registro de riesgos actualizado en cada revisión: cerrados los vencidos, ajustados los cambiados, añadidos los nuevos.",
+      "entregable_esperado": "El mismo registro de riesgos, pero con los cierres justificados por el criterio de que ya no pueden afectarte, los riesgos que crecieron señalados como tales, y los riesgos nuevos incorporados con el mismo detalle que los originales.",
       "nodos_previos": [
         "revisa_tus_riesgos_con_un_ritmo",
         "un_dueno_para_cada_riesgo"
@@ -69694,9 +69698,10 @@
         "guarda_lo_que_aprendiste_de_cada_golpe"
       ],
       "condiciones_activacion": [
-        "cuando tu lista de riesgos quedó congelada desde el arranque",
-        "cuando un riesgo nuevo te sorprendió porque nadie actualizó la lista",
-        "cuando no cierras los riesgos que ya pasaron y la lista se vuelve ruido"
+        "cuando cierras riesgos solo porque pasó el tiempo o te cansaste de verlos en la lista",
+        "cuando el proyecto cambió de forma importante y tu registro sigue igual que al principio",
+        "cuando un riesgo te sorprende y al revisar te das cuenta de que no existía cuando armaste la lista",
+        "cuando confías en tu registro simplemente porque existe, sin haberlo revisado a fondo hace tiempo"
       ],
       "etiqueta_arbol": "Mantén Viva tu Lista de Riesgos"
     },
@@ -97609,14 +97614,15 @@
       "dominio": "risk_management",
       "titulo_concepto": "Procedimientos de Monitoreo del Riesgo",
       "fuente": "Edwards et al., Managing Project Risks, Cap. 10 (Monitoring Procedures)",
-      "resumen_teorico": "Vigilar tus riesgos no puede ser algo que haces cuando te sobra tiempo: necesita un ritmo fijo. La frecuencia sana depende de la gravedad y del movimiento del proyecto: los riesgos graves o en momentos intensos piden revisión frecuente, hasta semanal o diaria; los tranquilos, una mirada mensual basta. La idea no es reunirte a contemplar la lista, sino detectar a tiempo cualquier desviación de lo normal y decidir si actúas. Un buen monitoreo también te avisa cuándo un riesgo ya no puede afectarte, para cerrarlo, y cuándo apareció uno nuevo. Para el emprendedor solo, poner en la agenda un momento fijo de revisión de riesgos, con una frecuencia acorde a lo que está en juego, es lo que convierte la gestión de riesgo de una buena intención en un hábito real.",
+      "resumen_teorico": "Vigilar tus riesgos no puede ser algo que haces cuando te sobra tiempo: necesita un ritmo fijo. La frecuencia sana depende de la gravedad y del movimiento del proyecto: los riesgos graves o los momentos intensos piden revisión frecuente, hasta semanal o diaria; los tranquilos, una mirada mensual basta. La idea no es reunirte a contemplar la lista, sino detectar a tiempo cualquier desviación de lo normal y decidir si actúas. Para el emprendedor solo, poner en la agenda un momento fijo de revisión, con una frecuencia acorde a lo que está en juego, es lo que convierte la gestión de riesgo de una buena intención en un hábito real.",
       "pasos_accionables": [
-        "Define una frecuencia de revisión acorde a la gravedad: más seguido para los riesgos graves.",
-        "Agenda ese momento como una cita fija, no como algo para cuando sobre tiempo.",
-        "En cada revisión busca desviaciones de lo normal y decide si hay que actuar.",
-        "Sube la frecuencia en las etapas intensas del proyecto y bájala en las tranquilas."
+        "Clasifica tus riesgos según su gravedad y elige para cada uno una frecuencia de revisión acorde: más seguido para los más graves.",
+        "Agenda esas revisiones como una cita fija en tu calendario, no como algo para cuando sobre tiempo.",
+        "En cada revisión busca desviaciones de lo normal en el riesgo y decide si hay que actuar.",
+        "Cuando entres a una etapa intensa del proyecto, sube la frecuencia de revisión de los riesgos afectados.",
+        "Cuando la etapa se calme, baja la frecuencia de nuevo a un ritmo tranquilo."
       ],
-      "entregable_esperado": "Un calendario de revisión de riesgos con frecuencia acorde a su gravedad, agendado como cita fija.",
+      "entregable_esperado": "Un calendario de revisión de riesgos con una frecuencia distinta asignada a cada nivel de gravedad, agendado como cita fija.",
       "nodos_previos": [
         "un_dueno_para_cada_riesgo",
         "busca_el_riesgo_antes_de_que_te_busque",
@@ -97630,7 +97636,7 @@
       "condiciones_activacion": [
         "cuando solo miras tus riesgos cuando ya estalló uno",
         "cuando revisas riesgos solo si te sobra tiempo",
-        "cuando un riesgo grave pasó semanas sin que nadie lo vigilara"
+        "cuando un riesgo grave pasó mucho tiempo sin que nadie lo vigilara"
       ],
       "etiqueta_arbol": "Revisa tus Riesgos con un Ritmo"
     },

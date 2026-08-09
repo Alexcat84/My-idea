@@ -21,7 +21,7 @@ empobrecer el nucleo (ver `docs/GRADIENTE_NUCLEO_MUNDO.md`).
 
 **9 ago 2026.**
 
-### 1. VIOLACION, arreglo por VIA 1 (reencuadre)
+### 1. VIOLACION, arreglo por VIA 1 (reencuadre) **[ARREGLADO en la CIRUGIA 1]**
 
 `risk_management/cuan_probable_y_cuanto_doleria` contra
 `nucleo/matriz_probabilidad_impacto` **(t25.8, s0.8934)**
@@ -81,7 +81,7 @@ gradiente**.
 > puesto en la cola. Los cinco de este lote son, como conjunto, exactamente los
 > puestos 4 a 8 de `GRADIENTE_PARES.jsonl`, pero el orden interno difiere.
 
-### 4. VIOLACION, arreglo por VIA 1
+### 4. VIOLACION, arreglo por VIA 1 **[ARREGLADO en la CIRUGIA 1]**
 
 `risk_management/manten_viva_tu_lista_de_riesgos` contra
 `nucleo/registro_de_riesgos` **(t62.3, s0.8736)**
@@ -93,7 +93,7 @@ tras aplicar la respuesta.
 **Reencuadre**: el peldano asume el registro del nucleo hecho y aporta **el
 ritual de revision** con cadencia y criterio de cierre.
 
-### 5. VIOLACION, y con el par 4 forma el primer CASO DE ARREGLO POR SECCION
+### 5. VIOLACION, y con el par 4 forma el primer CASO DE ARREGLO POR SECCION **[ARREGLADO en la CIRUGIA 1]**
 
 `risk_management/haz_tu_lista_de_lo_que_puede_fallar` contra el mismo
 `nucleo/registro_de_riesgos` **(t73.7, s0.864)**
@@ -134,7 +134,7 @@ Misma altura, angulos distintos: el nucleo con **ejemplos vivos**, el mundo con
 **Propuesta si el fundador lo adjudica arreglable**: via 1 suave, el mundo asume
 el nodo del nucleo como puerta, **sin recortar ninguno**.
 
-### 8. DUDOSO, empate de ensanche, mismo tipo que el 7
+### 8. DUDOSO, empate de ensanche, mismo tipo que el 7 **[NO ARREGLADO: la CIRUGIA 1 paro en su parte 2, ver abajo]**
 
 `environmental/cradle_to_cradle_concepto` contra
 `nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t58.9, s0.8606)**
@@ -286,7 +286,7 @@ imparciales, entrenamiento, autoauditorias con muestreo externo).
 **Nota cosmetica** para la ficha dormida de campos-sucios-dataset: el nodo del
 nucleo tiene **id en ingles**.
 
-### 17. VIOLACION, la cuarta de `risk_management`
+### 17. VIOLACION, la cuarta de `risk_management` **[ARREGLADO en la CIRUGIA 1]**
 
 `risk_management/evalua_la_gravedad_sin_autoengano` contra el mismo
 `nucleo/matriz_probabilidad_impacto` **(t29.6, s0.8394)**
@@ -307,7 +307,7 @@ priorizacion del nucleo como hecha.
 del par 13 **se sostiene por poco**; la sospecha correcta es **SUB-FUSION EN EL
 NUCLEO**, gemela de la de Goldratt (lote 3). **Va a la misma ficha aparte.**
 
-### 19. VIOLACION PARCIAL, la quinta de risk
+### 19. VIOLACION PARCIAL, la quinta de risk **[ARREGLADO en la CIRUGIA 1]**
 
 `risk_management/revisa_tus_riesgos_con_un_ritmo` contra el mismo
 `nucleo/registro_de_riesgos` **(t49.1, s0.837)**
@@ -364,3 +364,82 @@ ejecutable del gradiente, con **la prueba de rumbos vigilando el trinquete**.
 **Alternativa**: seguir leyendo cola antes de tocar.
 
 **Ningun arreglo se ejecuta desde este documento.**
+
+---
+
+# CIRUGIA 1 EJECUTADA
+
+**9 ago 2026.** Primera ejecucion del arreglo por **via 1 (reencuadre)**. Cero
+contenido inventado, cero nodos nuevos, cero nodos deprecados, cero aristas
+tocadas. **Solo texto.**
+
+## Parte 1, los cinco peldanos de `risk_management`: HECHA
+
+Cada peldano abre ahora **asumiendo hecha la base del nucleo** y se queda con su
+aporte propio como centro.
+
+| nodo | base del nucleo que ahora asume | su centro nuevo |
+|---|---|---|
+| `cuan_probable_y_cuanto_doleria` | `matriz_probabilidad_impacto` | la calibracion honesta: dano en dinero o tiempo, rango declarado |
+| `haz_tu_lista_de_lo_que_puede_fallar` | `registro_de_riesgos` | la sesion de censo y el criterio de que entra y que se suelta |
+| `manten_viva_tu_lista_de_riesgos` | `registro_de_riesgos` | el ritual de vida: criterio de cierre, deteccion de los que crecieron |
+| `evalua_la_gravedad_sin_autoengano` | `matriz_probabilidad_impacto` | el autoengano de inflar o minimizar |
+| `revisa_tus_riesgos_con_un_ritmo` | `registro_de_riesgos` | la cadencia proporcional a la gravedad |
+
+**Ninguno activo la condicion de paro**: los cinco subieron por encima de su base
+**sin inventar contenido**, usando solo lo que el propio peldano y su escalera ya
+contenian.
+
+**Se elimino tambien la duplicacion DENTRO de la escalera**: el momento semanal
+salio del peldano 2 y del 3 porque es el centro del 5, y los dos primeros pasos
+del 4 salieron porque eran literalmente los del nucleo.
+
+## Parte 2, la reordenacion del par 8: **PARADA**
+
+**No se ejecuto.** La condicion de paro escrita en el encargo se cumplio:
+
+> **NO existe arista entre `cradle_to_cradle_concepto` y `desperdicio_es_alimento`.**
+
+`cradle_to_cradle_concepto.nodos_siguientes` son `menos_malo_vs_bueno`,
+`sustitucion_quimica_sinergetica` y `sistema_take_back`.
+`desperdicio_es_alimento.nodos_previos` son `eco_efectividad`,
+`eco_efectividad_2` y `nuevo_encargo_de_diseno`. **Ninguno de los dos nombra al
+otro, en ninguna direccion.**
+
+**No se creo la arista.** Reordenar la escalera para que el titular apunte al
+profundo **exige un cambio de aristas**, que esta tarea prohibia. Vuelve a
+adjudicacion.
+
+## Dos cosas que aparecieron ejecutando
+
+**1. La baranda anti-invencion no ve cifras escritas en palabras.** El primer
+peldano volvio con un ejemplo inventado (*"no es lo mismo un veinte por ciento
+que un cuarenta y cinco"*) que `RE_CIFRA` no caza porque solo mira digitos. Se
+quito a mano y se anadio la prohibicion explicita a las ordenes siguientes.
+**Queda anotado como deuda del validador.**
+
+**2. El `SYSTEM` de la re-voz gana a la orden del editor cuando se contradicen.**
+El peldano 4 volvio **identico** a como entro: el prompt del sistema dice *"los
+HECHOS: ni uno nuevo, ni uno menos"* y la orden pedia **quitar** dos pasos. Hubo
+que autorizar el borrado expresamente (*"quitar no es inventar"*) para que
+aplicara. **Un reencuadre que quita siempre necesitara esa autorizacion.**
+
+## Verificacion del cierre
+
+- **Gate 0 completo: OK**, antes y despues del reindex. 3.521 activos, 314
+  deprecados, **0 activos sin vector**.
+- **Reindex completo** de Voyage y `sync_assets_web`.
+- **Rumbos: 42 verdes, 1 ambar, 0 rojos** sobre 43. **Sin deriva** contra la
+  linea base committeada. Trinquete integro.
+- **Los puestos de las cinco anclas de la vara congelada, antes y despues**:
+
+| ancla | antes | despues |
+|---|---:|---:|
+| `diseno_experimentos_hipotesis` (validar antes de gastar) | 10 | **10** |
+| `get_out_building_test_sell` (nadie me ha pagado) | 37 | **37** |
+| `value_proposition_startup` (por que me comprarian) | 114 | **113** |
+| `customer_segments_hypothesis` (le sirve a todo el mundo) | 293 | **292** |
+| `construir_mvp_baja_fidelidad` (sacar algo pequeno) | 1 | **1** |
+
+**Tres inmoviles y dos que suben un puesto.** Es ruido, como se esperaba de seis
+nodos reescritos en un mundo que no compite por esas consultas.

@@ -4,14 +4,15 @@
   "dominio": "risk_management",
   "titulo_concepto": "Probabilidad e Impacto",
   "fuente": "Edwards et al., Managing Project Risks, Cap. 8 (Assessing Likelihood and Impacts)",
-  "resumen_teorico": "Todo riesgo se mide por dos cosas: qué tan probable es que ocurra, y cuánto te dolería si ocurre. Estas dos preguntas ordenan tu lista y te dicen a cuáles prestar atención primero. Un riesgo muy probable pero de daño mínimo puede esperar; uno improbable pero capaz de hundirte merece tu atención hoy. No necesitas números perfectos al principio: basta con ubicar cada riesgo como alta, media o baja probabilidad, y como daño grande, mediano o pequeño, siempre que seas honesto y consistente al hacerlo. El error común es mirar solo una de las dos dimensiones: obsesionarse con lo que más probable sin ver que su daño es trivial, o temer un desastre que casi nunca pasa.",
+  "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparacion sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimacion imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano minimo puede esperar; uno improbable capaz de hundirte merece tu atención hoy, siempre que uses el mismo criterio para todos.",
   "pasos_accionables": [
-    "De cada riesgo de tu lista, estima qué tan probable es: alta, media o baja.",
-    "Estima también cuánto dolería si pasa: daño grande, mediano o pequeño.",
-    "Ordena tu lista con las dos dimensiones juntas, no con una sola.",
-    "Sé honesto y usa el mismo criterio para todos, para poder compararlos de verdad."
+    "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderias, no a una etiqueta de color.",
+    "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja.",
+    "Revisa si dos riesgos con la misma etiqueta en realidad significan cosas muy distintas en dinero o tiempo; si es así, corrige la etiqueta.",
+    "Marca que riesgos improbables pero capaces de hundirte necesitan tu atención esta semana, aunque su probabilidad sea baja.",
+    "Aplica el mismo criterio de conversión, en dinero, en tiempo o en rango de porcentaje, a todos los riesgos de tu lista, sin excepciones."
   ],
-  "entregable_esperado": "Tu lista de riesgos con una estimación de probabilidad y de impacto para cada uno, hecha con criterio consistente.",
+  "entregable_esperado": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero o tiempo, en vez de etiquetas o colores vagos.",
   "nodos_previos": [
     "haz_tu_lista_de_lo_que_puede_fallar",
     "el_pre_mortem_imagina_el_fracaso",
@@ -23,9 +24,9 @@
     "la_matriz_de_colores_te_engana"
   ],
   "condiciones_activacion": [
-    "cuando todos tus riesgos te parecen igual de urgentes",
-    "cuando te obsesiona un riesgo probable cuyo daño en realidad es menor",
-    "cuando no sabes a cuál de tus riesgos atender primero"
+    "cuando dos riesgos con la misma etiqueta de impacto en realidad te costarian cantidades muy distintas",
+    "cuando no puedes explicar que rango de probabilidad quisiste decir con media",
+    "cuando tu lista de riesgos aparenta rigor pero nadie podria verificar los números detras"
   ],
   "etiqueta_arbol": "Cuán Probable y Cuánto Dolería"
 }

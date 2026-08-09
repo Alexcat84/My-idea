@@ -4,14 +4,15 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Registro de Riesgos como Documento Vivo",
   "fuente": "DeMarco y Lister, Waltzing with Bears, Cap. 9; Edwards et al., Managing Project Risks, Cap. 10",
-  "resumen_teorico": "Tu lista de riesgos sirve solo si está viva. Cada semana el proyecto cambia: unos riesgos se apagan porque ya no pueden afectarte y se pueden cerrar, otros crecen, y aparecen unos que ni existían al arrancar. Una lista que hiciste una vez y guardaste caduca sola y te da una falsa sensación de control. Mantenerla viva es un trabajo pequeño pero constante: en cada revisión, cierras lo que ya pasó, actualizas lo que cambió y agregas lo nuevo. Este mecanismo de descubrimiento continuo es más importante que la lista inicial, porque los riesgos que te hunden suelen ser los que aparecieron después y nadie volvió a mirar. Para el emprendedor solo, la lista viva es su radar: apagado, vuela a ciegas.",
+  "resumen_teorico": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste como pequeños crecen sin que te des cuenta, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control, y eso es más peligroso que no tener lista: te confías justo donde deberías estar mirando con más atención.",
   "pasos_accionables": [
-    "En cada revisión, cierra los riesgos que ya no pueden afectarte y anótalo.",
-    "Actualiza la probabilidad y el impacto de los que cambiaron.",
-    "Agrega los riesgos nuevos que hayan aparecido desde la última vez.",
-    "Mantén el mecanismo activo todo el proyecto, no solo al inicio."
+    "Antes de marcar un riesgo como cerrado, pregúntate si de verdad ya no puede afectarte; si todavía puede, aunque sea menos probable, déjalo abierto.",
+    "Revisa uno por uno los riesgos abiertos y pregúntate cuáles se hicieron más graves o más probables desde que los anotaste.",
+    "Piensa qué cosas cambiaron en el proyecto desde la última revisión y qué riesgos nuevos aparecieron por esos cambios, aunque no existieran al principio.",
+    "Incorpora esos riesgos nuevos al registro con el mismo detalle que los demás, en vez de guardarlos aparte o dejarlos en tu cabeza.",
+    "Si en una revisión no cierras nada, no cambias nada y no agregas nada, tómalo como señal de que estás mirando por encima, no de que todo sigue igual."
   ],
-  "entregable_esperado": "Un registro de riesgos actualizado en cada revisión: cerrados los vencidos, ajustados los cambiados, añadidos los nuevos.",
+  "entregable_esperado": "El mismo registro de riesgos, pero con los cierres justificados por el criterio de que ya no pueden afectarte, los riesgos que crecieron señalados como tales, y los riesgos nuevos incorporados con el mismo detalle que los originales.",
   "nodos_previos": [
     "revisa_tus_riesgos_con_un_ritmo",
     "un_dueno_para_cada_riesgo"
@@ -21,9 +22,10 @@
     "guarda_lo_que_aprendiste_de_cada_golpe"
   ],
   "condiciones_activacion": [
-    "cuando tu lista de riesgos quedó congelada desde el arranque",
-    "cuando un riesgo nuevo te sorprendió porque nadie actualizó la lista",
-    "cuando no cierras los riesgos que ya pasaron y la lista se vuelve ruido"
+    "cuando cierras riesgos solo porque pasó el tiempo o te cansaste de verlos en la lista",
+    "cuando el proyecto cambió de forma importante y tu registro sigue igual que al principio",
+    "cuando un riesgo te sorprende y al revisar te das cuenta de que no existía cuando armaste la lista",
+    "cuando confías en tu registro simplemente porque existe, sin haberlo revisado a fondo hace tiempo"
   ],
   "etiqueta_arbol": "Mantén Viva tu Lista de Riesgos"
 }
