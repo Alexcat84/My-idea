@@ -218,6 +218,111 @@ las recompensas mas alla del dinero (22 a 25), y los tipos de viralidad (26 a 30
 
 ---
 
+## LOTE C2: cinco confirmaciones nuevas
+
+**Veredicto del auditor: COSTURA CONFIRMADA en las cinco.** Repeticiones
+verificadas contra el grafo antes de escribirlas.
+
+### 1. `core/decision_de_vender_startup`, 34 pasos: EL PEOR NODO MEDIDO DEL CATALOGO
+
+**Pareja 79,2 y bloque 69,3. Unas seis narraciones apiladas.**
+
+**Seis parejas duplicadas a simple vista, las seis verificadas:**
+
+| la instruccion, dicha dos veces | pasos |
+|---|---|
+| define un precio minimo firme basado en el valor real | **14 y 18** |
+| comunica ese precio con firmeza a todos los compradores | **15 y 19** |
+| corre un proceso corto de sondeo de M&A | **8 y 26** |
+| compara la oferta contra tu proyeccion a 3 o 5 anos | **9 y 25** |
+| ajusta tu salario de CEO a valores de mercado | **27 y 32** |
+| separa la decision de tu situacion financiera personal | **30 y 33** |
+
+> **Y hay mas de las seis citadas**: *"pregunta a tu equipo si esta dispuesto a
+> seguir"* aparece en **11, 13 y 17**, y **evaluar el mercado real** en **16, 22 y
+> 24**. **Treinta y cuatro pasos para vender una empresa, y el nodo se repite a si
+> mismo al menos ocho veces.**
+
+### 2. `core/lienzo_modelo_negocio`, 17 pasos: CUATRO narraciones del Canvas
+
+| bloque | como completa los nueve bloques |
+|---|---|
+| **1 a 4** | **con post-its**, en grande, iterando en grupo |
+| **5 a 8** | **para la solucion disenada**: socios, canales, costos e ingresos |
+| **9 a 12** | **con el equipo y publicacion**: imprimir para cada miembro, reunirse, pausar donde falte, publicar en la pared |
+| **13 a 17** | **bloque por bloque**: segmentos, propuesta, canales, recursos, costos |
+
+**El literal *"completar cada uno de los 9 bloques"* esta en los pasos 2 y 5.**
+
+> **Nodo insignia, como el MVP del C1.**
+
+### 3. `core/ab_testing_optimizacion`, 15 pasos: TRES narraciones
+
+**Corte en el 10.** Landing page (1 a 5), metrica unica (6 a 10), canal nucleo
+(11 a 15).
+
+> **Y el tercer bloque esta en TU** (*Define, Disena, Mide, Itera, Documenta*)
+> mientras los dos primeros van en infinitivo. **La misma firma de siempre.**
+
+### 4. `core/transicion_producto_a_experiencia`, 12 pasos: COSTURA DOBLE
+
+**Corte en el 7**, y dos instrucciones dichas dos veces:
+
+| | pasos |
+|---|---|
+| *"tu producto podria transformarse en un modelo de acceso o servicio"* | **5 y 9** |
+| *"identificar barreras de adopcion"* (confianza, disponibilidad, propiedad contra renta) | **6 y 10** |
+
+### 5. `quality/planificacion_recoleccion_datos`, 16 pasos: COSTURA LEVE
+
+**Corte en el 11**, pero la figura es mas simple: **los cuatro primeros pasos son
+un RESUMEN** (objetivos, que medir, como medir, recolectar) **pegado delante del
+metodo completo** que empieza en el 5 y llega hasta el 16.
+
+> **Destejido facil**: no hay que elegir entre narraciones, **hay que quitar un
+> indice que se colo como pasos.**
+
+### 6. `nucleo/plan_mejora_procesos`
+
+**Ya confirmado como calibracion. Sin cambio.**
+
+---
+
+## MARCADOR DE LA CLASE
+
+| | |
+|---|---:|
+| leidos desde **la cola del instrumento** (C1: 3, C2: 5 nuevos) | **8** |
+| confirmados | **8** |
+| **citas falsas** | **0** |
+| mas los **dos calibradores**, confirmados antes desde la cola del gradiente | 2 |
+| **total de nodos con costura confirmada** | **10** |
+
+> **Ocho citas leidas, ocho costuras. El instrumento no ha fallado una sola vez.**
+
+---
+
+## EL PATRON DE CENTRALIDAD
+
+**La acrecion golpea PROPORCIONAL A LA CENTRALIDAD.**
+
+Los nodos mas acrecionados son los **insignia**: el MVP, el Canvas, vender la
+empresa, el A/B testing, el coeficiente viral. **Y no es casualidad**: son **los
+que todas las fuentes tocan**, y por tanto **los que mas fusiones recibieron**.
+Cada libro traia su version, y cada version entro entera detras de la anterior.
+
+> **Los nodos que mas se sirven al usuario son los peores servidos.**
+
+**Consecuencia para la mesa del fundador**, y es la que cambia el orden de las
+prioridades:
+
+> **La primera tanda de destejidos, el top-10, toca MAS EXPERIENCIA DE USUARIO
+> REAL que cualquier otra cirugia pendiente.** Un lector que pide su MVP, su
+> Canvas o su prueba A/B recibe hoy veintidos, diecisiete o quince pasos donde
+> caben cinco. **No es deuda de catalogo: es lo que la gente lee.**
+
+---
+
 ## LA CORRELACION CON EL ESTANDAR DE PASOS
 
 **El estandar de `docs/SOP_EXTRACCION_PACKS.md` ya hacia ilegales estos nodos**:
@@ -871,8 +976,42 @@ reales del usuario y los diagramas de flujo.
 | quality | **25** |
 | health_safety | 6 |
 | environmental | 3 |
-| core | 1 |
 | franquicias | 1 |
+| **la pareja que CRUZA dominios** | **1** |
+
+### La pareja que cruza, identificada
+
+**Las dos cuentas del total coincidian en 36 y discrepaban en una etiqueta**: una
+tabla decia `core 1` y la otra `exportacion 1`. **Las dos eran correctas**, porque
+contaban dominios distintos de la misma pareja:
+
+| miembro | dominio |
+|---|---|
+| `proteccion_propiedad_intelectual` | **core** |
+| `proteccion_propiedad_intelectual_2` | **exportacion** |
+
+**Es la UNICA de las 36 que cruza dominios.**
+
+### Y leida, no es un duplicado: es una COLISION DE NOMBRE
+
+| nodo | fuente | de que habla |
+|---|---|---|
+| el de `core` | *Venture Deals* | **quien es dueno de lo que se crea**: acuerdo de work for hire, a quien le cuentas informacion sensible |
+| el de `exportacion` | *A Basic Guide to Exporting* | **registrar patente y marca en cada mercado extranjero** antes de exportar |
+
+> **Fuentes distintas, temas distintos. El sufijo `_2` aqui no significa "segunda
+> version de aquello": significa "el id ya estaba ocupado".**
+
+**Y no esta en la cola del gradiente** (titulo 46,3 y semantica por debajo del
+umbral), asi que **tampoco es un par nucleo-mundo**. El `_2` si empareja contra
+**otros dos** nodos del nucleo, en los puestos **161 y 221**, ambos sin leer.
+
+> **LA MORALEJA, que afila la medicion de las 36**: el sufijo `_N` de este catalogo
+> **carga DOS significados distintos**, y confundirlos es la trampa. Casi siempre
+> es *"segunda extraccion del mismo concepto"*; **aqui es *"el nombre estaba
+> tomado"***.
+>
+> **Razon de mas para leer las 36 antes de tratarlas como duplicados.**
 
 > **Traido como medicion, no como caso.** Una pareja de sufijo viva **no prueba
 > duplicado**: `auditoria_de_producto` y su `_2` estan en esta lista y **ya se
