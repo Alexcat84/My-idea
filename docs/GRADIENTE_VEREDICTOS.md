@@ -70,3 +70,87 @@ gradiente**.
   corporativa; su paso de reunir un equipo interdisciplinario no lo hace una
   persona sola esta semana. Sin compuerta nada se esconde, pero el nodo tiene un
   problema de voz y de valvula previo al censo, **y toca a una SEMILLA**.
+
+---
+
+## LOTE 2, pares 4 a 8 por senal
+
+**9 ago 2026.**
+
+> El numero del veredicto es una **etiqueta de lectura correlativa**, no el
+> puesto en la cola. Los cinco de este lote son, como conjunto, exactamente los
+> puestos 4 a 8 de `GRADIENTE_PARES.jsonl`, pero el orden interno difiere.
+
+### 4. VIOLACION, arreglo por VIA 1
+
+`risk_management/manten_viva_tu_lista_de_riesgos` contra
+`nucleo/registro_de_riesgos` **(t62.3, s0.8736)**
+
+El mundo: **cierra, actualiza, agrega, mantiene el ritmo**. El nucleo: todo eso
+**MAS** identificador unico, causa y efecto, respuesta con dueño, y reevaluacion
+tras aplicar la respuesta.
+
+**Reencuadre**: el peldano asume el registro del nucleo hecho y aporta **el
+ritual de revision** con cadencia y criterio de cierre.
+
+### 5. VIOLACION, y con el par 4 forma el primer CASO DE ARREGLO POR SECCION
+
+`risk_management/haz_tu_lista_de_lo_que_puede_fallar` contra el mismo
+`nucleo/registro_de_riesgos` **(t73.7, s0.864)**
+
+**Tercer peldano blando del mismo mundo contra el mismo nodo denso del nucleo**
+(con los pares 1 y 4).
+
+**PATRON**: la escalera de `risk_management` **reparte en peldanos suaves lo que
+el nucleo da en un solo nodo**. No se arregla peldano por peldano: **se mira la
+seccion entera del mundo contra su base del nucleo de una vez.**
+
+> **El defecto es de reparto, no de nodos sueltos.**
+
+### 6. FRONTERA CON CHOQUE DE FUENTES, no violacion de gradiente
+
+`franquicias/manejo_objeciones_venta_franquicia` contra
+`nucleo/prevencion_objeciones_vs_manejo` **(t48.8, s0.8726)**
+
+**No son el mismo tema a dos alturas**: el nucleo vende **tu producto** (minado
+de SPIN), el mundo vende **una franquicia tuya a un franquiciado**.
+
+Pero hay **tension doctrinal integrada**: el mundo enseña que las objeciones
+indican interes y a preparar respuestas; **SPIN enseña lo contrario** (los
+mejores reciben MENOS objeciones porque las previenen desarrollando la
+necesidad).
+
+**Ficha propia de frontera**: resolver quien se queda con que, como los choques
+del mundo 11. **No es arreglo de gradiente.**
+
+### 7. DUDOSO, empate de ensanche
+
+`environmental/biomimicry_diseno` contra `nucleo/biomimicry_conexiones_naturales`
+**(t49.5, s0.8647)**
+
+Misma altura, angulos distintos: el nucleo con **ejemplos vivos**, el mundo con
+**el marco formal**.
+
+**Propuesta si el fundador lo adjudica arreglable**: via 1 suave, el mundo asume
+el nodo del nucleo como puerta, **sin recortar ninguno**.
+
+### 8. DUDOSO, empate de ensanche, mismo tipo que el 7
+
+`environmental/cradle_to_cradle_concepto` contra
+`nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t58.9, s0.8606)**
+
+**Hermanos, no escalones.** Misma propuesta que el 7.
+
+---
+
+## MARCADOR ACUMULADO tras 8 de 346
+
+| clase | pares |
+|---|---:|
+| VIOLACION | **3** (las tres de `risk_management`) |
+| DUDOSO | 3 |
+| FRONTERA con choque de fuentes | 1 |
+| FALSO PAR | 1 |
+
+**`risk_management` queda como primer candidato a ARREGLO POR SECCION** cuando el
+fundador decida ejecutar.
