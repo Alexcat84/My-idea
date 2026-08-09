@@ -577,6 +577,26 @@ vería.
 ninguna vía. Si una vía obliga a cambiarla, se para y se adjudica antes de
 seguir.
 
+### LA VARA CADUCA SI ENTRA CATÁLOGO NUEVO
+
+Los puestos de partida (**67, 82 y 245**) se midieron el **8 de agosto de 2026**
+sobre un catálogo de **3.521 nodos activos**. El puesto de un ancla es una
+posición **RELATIVA**: si entran cientos de nodos nuevos (mundo 11, la garantía
+honesta en el núcleo, la huella en Ambiente), esos puestos **se mueven solos por
+dilución**, sin que nadie haya tocado el motor.
+
+Por lo tanto:
+
+a) Si el frente de recuperación se abre **ANTES** de integrar nodos nuevos, la
+   vara vale tal como está congelada.
+b) Si se integra catálogo nuevo primero, **la línea base se vuelve a medir ANTES
+   de abrir ninguna vía**, y se anota junto a los números nuevos **el tamaño del
+   catálogo sobre el que se midieron**. Los puestos viejos **NO** se comparan con
+   los nuevos como si nada hubiera pasado.
+
+**Recomendación del auditor: correr el frente primero.** Las tres vías son
+experimentos cortos; la minería son días.
+
 ### Hipótesis original del auditor — CORREGIDA con el código en la mano
 
 La hipótesis era *"embeber también las `condiciones_activacion`: es dato que ya

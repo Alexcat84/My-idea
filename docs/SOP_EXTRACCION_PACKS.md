@@ -134,3 +134,23 @@ mapear a las 4 fases reales así (usado en risk_management):
 6. **Consolidar** todos los lotes en `packs/<pack>/nodos_crudos/<pack>_crudo.json`
    (array). La resolución de aristas, dedup, Gate 0, semillas y puentes los hace
    el pipeline existente, no la extracción.
+
+## LA MINERÍA NO TERMINA EN LA INTEGRACIÓN
+
+Desde el chequeo del vector (ago 2026), **todo nodo nuevo integrado sin
+reindexar TUMBA el Gate 0, por diseño**. Un nodo que existe en el grafo y no
+tiene vector es invisible para el salto semántico y para la prueba de rumbos, y
+ninguna de las dos se queja: simplemente no lo devuelven nunca.
+
+**La receta termina con**:
+
+```
+python scripts/build_semantic_index_voyage.py && python scripts/sync_assets_web.py
+```
+
+**Un catálogo perfecto con el Gate en rojo por esta causa no es un fallo del
+Gate: es el Gate haciendo su trabajo.**
+
+Y detrás del reindex va la prueba de rumbos, que ya está cableada como paso
+`d-bis` de `integrar_packs.py` (ver `docs/PENDIENTES.md`, "REQUISITO DE TODA
+REGENERACIÓN").
