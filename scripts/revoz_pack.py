@@ -216,7 +216,10 @@ def llamar(cli, prompt, uso):
     return None, ultimo or "fallo"
 
 
-RE_CIFRA = re.compile(r"\d+(?:[.,]\d+)?")
+# La baranda de cifras vive en UN solo sitio (scripts/cifras.py): estaba
+# duplicada aqui y en consolidar_pack.py, y ampliarla habria dejado la misma
+# regla escrita dos veces.
+from cifras import cifras_nuevas  # noqa: E402
 
 
 def texto_de(n):
@@ -231,7 +234,7 @@ def revisar(nuevo, viejo):
     fallas = []
     t_nuevo, t_viejo = texto_de(nuevo), texto_de(viejo)
 
-    inventadas = sorted(set(RE_CIFRA.findall(t_nuevo)) - set(RE_CIFRA.findall(t_viejo)))
+    inventadas = cifras_nuevas(t_nuevo, t_viejo)
     if inventadas:
         fallas.append(f"cifras que el nodo original no tenia: {inventadas}")
 

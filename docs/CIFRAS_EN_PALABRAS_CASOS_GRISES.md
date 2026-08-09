@@ -1,6 +1,9 @@
-# La deuda de `RE_CIFRA`: PARO con los casos grises
+# La deuda de `RE_CIFRA`: ACTA de los casos grises y su adjudicacion
 
-**Tarea 2 detenida a proposito.** El encargo lo dijo: *"si al construirlo
+> **Este documento es un ACTA, no un archivo.** El paro se resolvio: cada
+> pregunta lleva su adjudicacion al lado, y la construccion esta hecha.
+
+**La tarea 2 se detuvo a proposito.** El encargo lo dijo: *"si al construirlo
 descubres que la frontera entre numeral y palabra de orden es mas fina de lo que
 estos ejemplos sugieren, PARAS y traes los casos grises en vez de decidir el
 limite solo"*.
@@ -110,4 +113,75 @@ que mire son porcentajes de verdad. Ahi no hay frontera fina.
    registro de falsos positivos adjudicados, o se resuelven con la regla de
    contexto?
 
-**No se escribio ni un patron.** El detector sigue como estaba.
+---
+
+# LA ADJUDICACION, pregunta por pregunta
+
+## 1. Alcance: **ESTRECHO**
+
+Dos clases unicamente: **el compuesto exacto `<numeral> por ciento`**, y **las
+decenas, centenas y el mil como palabra** (veinte a noventa, cien, ciento,
+doscientos a novecientos, mil), incluidos compuestos como *"cuarenta y cinco"*.
+
+**Fracciones, frecuencias, ordinales y numerales chicos quedan FUERA a
+proposito**: la medicion del radio de explosion demostro el doble sentido. Lo que
+queda fuera **lo cubre la lectura del lote**, como cazo el primer caso.
+
+## 2. Contexto: **SI**, el compuesto exacto para "por ciento"
+
+**La fragilidad ante redacciones nuevas es aceptable porque falla hacia el falso
+NEGATIVO**, que la lectura ve. Un falso positivo bloquea nodos buenos **en
+silencio**.
+
+## 3. Accion: **RECHAZA**, con la semantica de diff intacta
+
+Igual que los digitos. **Solo la aparicion NUEVA respecto del original rechaza**;
+lo que ya estaba en el nodo jamas dispara.
+
+**VALVULA DE DEGRADACION, fijada por adelantado y no discutible en caliente**: si
+en operacion se adjudican **DOS falsos positivos** de esta extension en el
+registro de falsos positivos, **se degrada a aviso** y vuelve a adjudicacion.
+
+## 4. Los cinco compuestos: **SIN LISTA DE EXENCIONES**
+
+Cuatro quedan fuera **por alcance** (`doble pared`, `numero par`, `de una vez`,
+`primera mitad`) y `MIL-STD` cae **por la regla de tokenizacion**: se matchean
+**palabras completas en minuscula**, jamas subcadenas de tokens con mayusculas,
+guiones o digitos pegados.
+
+---
+
+# LA CONSTRUCCION, hecha
+
+**La baranda salio a un solo sitio: `scripts/cifras.py`.** Estaba **duplicada**
+en `revoz_pack.py` y `consolidar_pack.py`, y ampliarla habria dejado la misma
+regla escrita dos veces. Los dos scripts ahora la importan y **ninguno guarda
+copia**, con un test que lo custodia.
+
+**Un ajuste que tomo el ejecutor y reporta**: `ciento` no entra en la clase de
+las que disparan solas, aunque este en las centenas. Suelto es arcaico y su uso
+real es siempre dentro de *"por ciento"*, que ya cubre la clase del compuesto;
+dejarlo solo duplicaba la unidad detectada sin cazar nada nuevo.
+
+## Los fixtures, los dos lados
+
+**DEBE CAZAR** (6): el compuesto `<numeral> por ciento`, `cuarenta y cinco`,
+`cien` como cuantificador, `mil` como palabra, otro porcentaje escrito, y los
+digitos de siempre.
+
+**NO DEBE CAZAR** (13), **todos sacados del catalogo real** y no de laboratorio:
+`doble pared`, `numero par`, `de una vez`, `una vez por semana`, `primera mitad`,
+`la mitad de`, los marcadores de discurso, `MIL-STD-105D`, `tres tipos`, `una
+solucion`, `ciencia` (contiene `cien`), `milagro` (contiene `mil`), y
+`Mil Millones` en mayuscula.
+
+## La pasada en seco
+
+**Cada uno de los 3.521 nodos activos comparado consigo mismo: CERO disparos**,
+que es lo que la semantica de diff exige. Un solo disparo habria sido un defecto
+de construccion.
+
+**23 nodos (0,7 por ciento) contienen hoy alguna cifra en palabras** y quedan
+protegidos por el diff: ya estaban, y jamas dispararan.
+
+`engine/test_cifras.py` custodia las seis cosas, incluida la pasada en seco.

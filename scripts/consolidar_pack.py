@@ -115,15 +115,13 @@ def llamar(cli, prompt, uso):
     return None, ultimo or "fallo"
 
 
-RE_CIFRA = re.compile(r"\d+(?:[.,]\d+)?")
+# Ver scripts/cifras.py: la baranda de cifras es una sola para toda la casa.
+from cifras import cifras_nuevas  # noqa: E402
 
 
 def cifras_inventadas(nuevo, fuentes):
     """Cifras del texto nuevo que no aparecen en ninguno de los nodos fuente."""
-    en_fuente = set()
-    for f in fuentes:
-        en_fuente |= set(RE_CIFRA.findall(f))
-    return sorted({c for c in RE_CIFRA.findall(nuevo) if c not in en_fuente})
+    return cifras_nuevas(nuevo, list(fuentes))
 
 
 def texto_de(n):
