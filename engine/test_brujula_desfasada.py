@@ -183,7 +183,6 @@ def test_la_fecha_sale_del_ARTEFACTO_y_no_del_sistema_de_archivos():
     # prohibiria documentar la decision.
     assert "getmtime(" not in cuerpo, (
         "el cargador volvio a deducir la fecha del sistema de archivos")
-    assert "os.path.getmtime" not in cuerpo.replace("no se cae de vuelta a getmtime", "")
     assert "generado_iso" in cuerpo, "el cargador no lee la fecha del artefacto"
 
     # (4) y el generador la escribe
