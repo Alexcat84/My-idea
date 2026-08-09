@@ -118,12 +118,43 @@ def test_el_nodo_fantasma_con_nombre():
     print("  ok: el nodo-fantasma-con-nombre tiene su chequeo de cero tolerancia")
 
 
+def test_todo_activo_tiene_vector_en_el_indice():
+    """LA CLASE DE LA TRAMPA SILENCIOSA (ago 2026).
+
+    Al revivir diez nodos deprecados de seleccion, los diez EXISTIAN en el
+    grafo, pasaban todos los chequeos, y la brujula era INCAPAZ de encontrarlos:
+    el indice semantico se habia construido cuando estaban deprecados, y
+    build_semantic_index los excluye a proposito.
+
+    No es un caso, es una CLASE: cualquier cambio de estado de deprecado la
+    reproduce, y tambien un nodo nuevo sin reindexar. Un nodo ofrecible que el
+    indice no conoce es invisible para el salto semantico y para la prueba de
+    rumbos, y NINGUNA DE LAS DOS SE QUEJA: simplemente no lo devuelven nunca.
+
+    Es la misma familia que el nodo-fantasma-con-nombre: existe, tiene titulo, y
+    nadie puede llegar a el. Por eso el chequeo es de cero tolerancia."""
+    src = (BASE / "scripts" / "run_phase1.py").read_text(encoding="utf-8")
+    assert "Todo nodo ACTIVO tiene vector en el indice semantico" in src, "falta el chequeo"
+    cuerpo = src[src.index("ruta_indice = BASE"):src.index("seeds = load_entry_seeds()")]
+    assert "set(activos) - con_vector" in cuerpo, "no compara contra los ACTIVOS"
+    assert "not sin_vector" in cuerpo, "el chequeo tolera activos sin vector"
+    # y el mensaje tiene que decir QUE HACER, no solo que algo esta mal
+    assert "corre el reindex ANTES de usar esta copia" in cuerpo, (
+        "el aviso no dice que hacer: un fallo sin remedio a la vista se ignora")
+    assert "build_semantic_index_voyage.py" in cuerpo, "no nombra el comando"
+    # la otra direccion se REPORTA pero no tumba: un vector de mas no hace
+    # invisible a nadie, y la puerta unica ya lo filtra al consultar.
+    assert "con_vector - set(activos)" in cuerpo, "no reporta los vectores que sobran"
+    print("  ok: todo activo tiene vector, con cero tolerancia y el remedio en el mensaje")
+
+
 def main():
     for f in (test_el_nodo_fantasma_con_nombre, test_la_curaduria_real_existe,
               test_suelto_sobre_copia_revertida_grita_y_falla,
               test_via_integrar_packs_limpio_y_callado,
               test_copia_intacta_no_molesta,
-              test_jamas_auto_aplica):
+              test_jamas_auto_aplica,
+              test_todo_activo_tiene_vector_en_el_indice):
         f()
     print("OK: la curaduria revertida grita, falla y jamas se auto-aplica.")
 
