@@ -1,10 +1,17 @@
 # AUD-08 · La campaña del gradiente núcleo-mundo
 
-**Estado: ABIERTO. 40 de 346 pares leídos (11,6%).** Esta auditoría documenta el
-proceso completo desde la primera pasada: la doctrina, el instrumento, seis lotes
-de lectura, dos cirugías ejecutadas y la deuda de validador que la ejecución
-destapó. **Se escribe desde los documentos versionados y los hashes, no de
-memoria**: cada afirmación lleva su commit o su documento fuente.
+**Estado: ABIERTO. 104 de 346 pares leídos (30,1%)**, más los nueve del adelanto
+del racimo y las dos marañas leídas fuera de cola.
+
+Esta auditoría documenta el proceso completo desde la primera pasada: la doctrina,
+los instrumentos, **diez lotes** de lectura, **tres cirugías ejecutadas** (dos de
+gradiente y una de metadata) y las deudas que la ejecución destapó. **Se escribe
+desde los documentos versionados y los hashes, no de memoria**: cada afirmación
+lleva su commit o su documento fuente.
+
+> **La lectura corre hoy en DOS FRENTES**: la cola del gradiente (104 de 346) y el
+> top del instrumento de costuras internas (3 de 110). No compiten: uno mide un
+> nodo **contra otro**, el otro mide un nodo **contra sí mismo**.
 
 Documentos vivos de la campaña:
 
@@ -15,6 +22,8 @@ Documentos vivos de la campaña:
 | `docs/GRADIENTE_PARES_RESUMEN.md` | los umbrales, la distribución medida y la calibración |
 | `docs/GRADIENTE_VEREDICTOS.md` | los veredictos, lote a lote, y el marcador |
 | `docs/CIFRAS_EN_PALABRAS_CASOS_GRISES.md` | el acta del paro de la baranda |
+| `docs/FICHA_SUBFUSION_GRADIENTE.md` | los nueve casos de fusión que la campaña abrió |
+| `docs/COSTURAS_INTERNAS_RESUMEN.md` | la cola del segundo instrumento, el de acreción sin tejer |
 
 ---
 
@@ -396,6 +405,54 @@ propia.**
 **La cadena funcionó porque tiene dos eslabones y el segundo re-verificó antes de
 tocar.** El paro no lo produjo la duda: lo produjo **el hábito de medir otra vez
 justo antes de escribir**.
+
+### d) El instrumento cuya señal no servía, y por qué la segunda sí
+
+**Al construir `scripts/costuras_internas.py` se pidió una señal concreta**:
+`token_sort_ratio` entre parejas de pasos del mismo nodo, umbral 80. **Medida
+antes de escribir el instrumento, esa señal no caza la calibración conocida, y no
+la caza en ningún umbral útil:**
+
+| nodo de calibración | mejor pareja interna | puesto en el catálogo |
+|---|---:|---:|
+| `plan_mejora_procesos` | **60,0** | 172 de 3.521 |
+| `economia_circular_como_modelo_de_negocio` | **54,7** | 741 de 3.521 |
+
+**Bajar el umbral hasta 54 caza 856 nodos, el 24% del catálogo.** La doctrina de
+la casa ya lo tenía escrito para la baranda de cifras: *una baranda que caza lo
+correcto no es estricta, está rota*.
+
+**El motivo, leído en los nodos**: esas costuras son **paráfrasis con cola
+distinta**, no copias. *"Establecer métricas de éxito en cada etapa"* contra
+*"Establece métricas para cada etapa (¿estás obteniendo suficientes
+candidatos?)"*. **La cola diluye el ratio.**
+
+**La segunda señal, desviación del ejecutor ratificada por el auditor**:
+**alineación de bloques con emparejamiento monótono**. Para cada corte posible de
+la lista, el segundo bloque se empareja contra el primero **en orden, sin
+retroceder**.
+
+> **Eso es lo que distingue *"estos dos pasos se parecen"* de *"la secuencia
+> vuelve a empezar"*, y además entrega EL CORTE.**
+
+Los dos calibradores entran en los puestos 24 y 61 de 110, **y el instrumento
+acierta el corte exacto en los dos**. Es además el patrón del hermano mayor:
+`gradiente_pares.py` tiene dos señales independientes por la misma razón, y
+reporta las dos siempre.
+
+### La distinción entre dos defectos hermanos, que el instrumento no confunde
+
+De la misma tanda de pegado salieron **dos averías distintas**, y conviene no
+mezclarlas:
+
+| defecto | ejemplo | ¿lo caza el instrumento? |
+|---|---|---|
+| **texto repetido** (la clase de acreción) | `producto_minimo_viable`, cinco narraciones del MVP | **sí**, es lo que mide |
+| **tema añadido** | `five_whys_inversion_proporcional`, con cuatro pasos de ventas pegados detrás | **no, y con razón** |
+
+**En el segundo no hay texto repetido: hay el mismo método aplicado a otro
+dominio.** El instrumento **no lo caza por diseño**, y eso es correcto: son
+enfermedades distintas y el remedio de una no sirve para la otra.
 
 ### La relectura que quedó: las aristas hacia deprecados son DISEÑO
 

@@ -1722,3 +1722,26 @@ COSTURA DE PEGADO DOBLE**, la misma figura del caso 9.
 
 > **El lote 10 no trajo ninguna violacion nueva. Trajo la SEGUNDA costura de
 > pegado doble en el nucleo, y con ella la certeza de que no era un caso suelto.**
+
+### LA LECTURA SE PARTE EN DOS FRENTES
+
+**El instrumento de costuras entrego su primera cola: 110 citas.** Y el **lote
+C1** (los tres primeros del top) **confirmo la clase en los tres**, que ademas
+resulto ser **mas grande de lo que su nombre decia**: no son costuras de dos
+bloques, es **ACRECION SIN TEJER**, con nodos de cinco y siete narraciones
+apiladas.
+
+**Desde aqui la lectura del auditor corre en DOS FRENTES PARALELOS:**
+
+| frente | estado |
+|---|---|
+| **la cola del gradiente** | **104 de 346** leidos, mas el adelanto del racimo |
+| **el top de costuras internas** | **3 de 110** leidos (lote C1) |
+
+> **No compiten, y por eso pueden ir a la vez**: el gradiente mide **un nodo
+> contra otro**; las costuras miden **un nodo contra si mismo**. Ninguno de los
+> dos hallazgos de acrecion salio de su par: **los dos aparecieron leyendo el nodo
+> del nucleo mientras se leia otra cosa**, y de ahi nacio el instrumento.
+
+**Los detalles, en `docs/FICHA_SUBFUSION_GRADIENTE.md` (clase 9) y en
+`docs/COSTURAS_INTERNAS_RESUMEN.md`.**
