@@ -323,24 +323,46 @@ diferencia neta).
 
 **Supera el estandar de 3 a 6 pasos, pero NO hay narracion repetida dentro.**
 
-| nodo | pasos | que es |
-|---|---:|---|
-| `quality/principios_medicion_efectiva` | 10 | **la lista canonica de diez principios**, cada uno distinto |
-| `quality/fmea_analisis_de_modos_de_falla` | 8 | **el metodo FMEA canonico en secuencia unica**: hoja de nueve columnas, modos, causas, efectos, frecuencia por severidad por detectabilidad, RPN, acciones, validar |
+| nodo | pasos | bloque | corte | que es |
+|---|---:|---:|---:|---|
+| `quality/principios_medicion_efectiva` | 10 | 51,9 | 6 | **la lista canonica de diez principios**, cada uno distinto |
+| `quality/seleccion_representante_extranjero` | 9 | **50,9** | **5** | **checklist de nueve criterios distintos** para evaluar a un candidato: tamano de la fuerza de ventas, historial de cinco anos, territorio, compatibilidad de lineas, instalaciones, politicas de compensacion, perfil de clientes, cuantos principales representa, enfoque promocional. **Ninguno repite a otro.** |
+| `quality/fmea_analisis_de_modos_de_falla` | 8 | 51,4 | 4 | **el metodo FMEA canonico en secuencia unica**: hoja de nueve columnas, modos, causas, efectos, frecuencia por severidad por detectabilidad, RPN, acciones, validar |
 
 > **Su arreglo NO es destejido: es una decision de ESTANDAR**, y le toca a la
 > pasada unica. Un metodo canonico de ocho pasos **no se puede partir sin
 > romperlo**, y la pregunta honesta es si el estandar admite excepciones nombradas.
+
+> **Con la tercera, la clase queda caracterizada** y ya no es una bolsa de casos
+> sueltos: **es la clase de los FORMATOS LISTA que el estandar de 3 a 6 pasos no
+> contempla.** Una lista canonica de principios, un metodo canonico en secuencia
+> unica y un checklist de criterios de evaluacion **no son narraciones apiladas: son
+> formatos donde el numero de pasos lo fija el contenido, no el autor.**
+>
+> **Y tienen firma medible**: los tres pasan de ocho pasos (10, 9 y 8) y sus cortes
+> de bloque son **6, 5 y 4**, o sea la evidencia mas ancha que el instrumento
+> produce. **El largo legitimo se parece al doble por arriba y se distingue por
+> abajo**: mucho material, cero repeticion.
+>
+> **Lo que le toca decidir a la pasada unica ya no es caso por caso**: es si el
+> estandar admite una excepcion nombrada para los formatos lista, y con que
+> criterio se reconoce uno.
+
+> **Verificado contra el grafo antes de registrar**: `seleccion_representante_extranjero`
+> existe en `exportacion`, tiene exactamente **nueve pasos**, y su pareja disparada
+> (3 contra 7) son *"analizar el territorio actual cubierto"* contra *"analizar el
+> perfil de clientes actuales"*, **dos criterios distintos que comparten el verbo**.
 
 #### FALSO POSITIVO DE SECUENCIA LEGITIMA
 
 **Pasos tematicamente ESPEJADOS que la señal de bloque roza sin que haya narracion
 repetida.**
 
-| nodo | pasos | el espejo |
-|---|---:|---|
-| `core/founder_ceo_succession_process` | 8 | paso 2 *"evalua si TUS habilidades encajan con la siguiente etapa"* contra paso 6 *"evalua si el perfil de QUIEN TE SUCEDERIA encaja con la etapa"* |
-| `franquicias/mix_ubicaciones_corporativas_franquicia` | 6 | secuencia unica de decision, sin espejo ni repeticion |
+| nodo | pasos | bloque | corte | el espejo |
+|---|---:|---:|---:|---|
+| `core/founder_ceo_succession_process` | 8 | 51,5 | 5 | paso 2 *"evalua si TUS habilidades encajan con la siguiente etapa"* contra paso 6 *"evalua si el perfil de QUIEN TE SUCEDERIA encaja con la etapa"* |
+| `franquicias/mix_ubicaciones_corporativas_franquicia` | 6 | 51,4 | **3** | secuencia unica de decision, sin espejo ni repeticion |
+| `core/plan_gestion_riesgos` | 6 | **50,3** | **3** | pasos **5 y 6**: *"define que tan probable y que tan grave puede ser cada riesgo"* y *"decide tu propia forma de comparar que riesgos son mas probables o mas graves"*. **Son los dos vecinos legitimos del PMI**: primero se definen las escalas, despues el metodo para comparar con ellas. **Uno no puede existir sin el otro.** |
 
 > **Mismo verbo y misma estructura, sujeto distinto.** Es exactamente lo que engana
 > a un emparejador monotono, y **no es un defecto: es como se escribe una sucesion.**
@@ -350,6 +372,22 @@ repetida.**
 > **tres contra tres**, que es el minimo que el instrumento admite y **la evidencia
 > mas delgada que puede producir**. **Los nodos cortos dan la señal de bloque mas
 > ruidosa**, y conviene saberlo al leer la parte baja de la cola.
+
+> **Con el tercero, esa nota deja de ser una observacion suelta y se vuelve el
+> retrato de la clase.** `plan_gestion_riesgos` tambien tiene **seis pasos** y
+> tambien se evaluo **tres contra tres**. **Los dos falsos positivos que estan
+> DENTRO del estandar son los dos que el instrumento juzgo con la evidencia mas
+> delgada que sabe producir.**
+>
+> **La regla practica que sale de ahi**: cuando la cita tenga **corte 3**, la señal
+> de bloque no alcanza por si sola y hay que mirar los pasos. El tercero de la
+> clase la confirma dos veces seguidas.
+
+> **Verificado contra el grafo antes de registrar**: `plan_gestion_riesgos` existe
+> en `core`, tiene exactamente **seis pasos**, y los pasos 5 y 6 son literalmente
+> los que el instrumento emparejo. **La cita entro por bloque (50,3 sobre el umbral
+> de 44), no por pareja**: su 61,9 de pareja esta muy por debajo del umbral de 80.
+> **Es una cita de bloque, y el bloque es de tres contra tres.**
 
 ## CONFIRMADA DE REBOTE desde el gradiente (lote 13)
 
@@ -501,12 +539,35 @@ al cliente en su contexto real. **La segunda tanda repite el ciclo entero.**
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **19** de **128** |
+| **CITAS del instrumento leidas** | **21** de **128** |
 | de esas, costura **confirmada** | **15** |
-| de esas, **citas falsas** | **4** |
-| **precision de la cola** | **79%** |
+| de esas, **citas falsas** | **6** |
+| **precision de la cola** | **71%** |
 | **costuras confirmadas que la cola NO citaba** | **1** (`propuesta_gasto_capital`) |
 | **TOTAL de costuras confirmadas** | **16** |
+
+> **DISCREPANCIA DE CIFRA, sin resolver, para que la adjudique el auditor.** El
+> encargo dictaba *21 leidas, 16 confirmadas, 6 falsas, precision 76%, mas la
+> confirmada fuera de cola*. **Tres de esas cuatro cifras cierran y quedan
+> escritas. La cuarta no**, y no la invento:
+>
+> - **16 confirmadas + 6 falsas = 22**, no 21. De las 21 leidas, **15** estan
+>   confirmadas: las 19 anteriores eran 15 mas 4 falsas, y **las dos nuevas
+>   salieron las dos falsas**, asi que el numerador de confirmadas no se movio.
+> - **El 76% es exactamente 16/21**, o sea mete la confirmada de FUERA de cola en
+>   el numerador y deja el denominador solo con las citas de la cola. **Eso la
+>   cuenta dos veces**, porque despues se vuelve a sumar como *"mas la confirmada
+>   fuera de cola"*.
+> - **La precision de la cola es 15/21 = 71%.** El 16 sigue siendo correcto como
+>   **TOTAL** de costuras confirmadas, que es como esta escrito arriba.
+>
+> **Hay una segunda lectura que tambien cierra y que el auditor puede preferir**:
+> tras la regeneracion `propuesta_gasto_capital` **si esta citado** (esta en la
+> cola, con bloque 44,1), asi que se lo podria contar dentro de las leidas. Eso da
+> **22 leidas, 16 confirmadas, 6 falsas, precision 73%**, y entonces la fila de
+> *"confirmadas que la cola NO citaba"* baja a cero. **Las dos lecturas dan el
+> mismo TOTAL de 16.** No elegi por mi cuenta: dejo escrita la que no toca la
+> contabilidad anterior.
 
 **De las 19 citas leidas, 7 llegaron por el gradiente y no por orden de cola**: los
 dos calibradores, `ratios_eficiencia_inventario`, `propuesta_gasto_capital` (que
@@ -518,8 +579,11 @@ avanzado sola: la ha empujado el otro frente.**
 > mas**. `propuesta_gasto_capital` ya estaba contado como confirmado; lo unico que
 > cambia es que **ahora ademas esta citado**.
 
-**Las cuatro falsas se reparten en dos clases nuevas**: LARGO LEGITIMO (2) y FALSO
-POSITIVO DE SECUENCIA LEGITIMA (2).
+**Las seis falsas se reparten en dos clases**: LARGO LEGITIMO (3) y FALSO POSITIVO
+DE SECUENCIA LEGITIMA (3). **Las dos clases quedaron empatadas y las dos quedaron
+caracterizadas**, cada una con su firma medible: la primera son formatos lista de
+ocho pasos o mas con cortes anchos; la segunda tiene sus dos miembros de seis pasos
+juzgados con corte 3.
 
 ### LA FRANJA, medida, y la lectura NO es la que parecia
 
@@ -533,7 +597,15 @@ se puede hacer con ella:
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **2** | 0 | 2 |
+| **por debajo de 51,0** | **2** | **2** | **4** |
+
+> **Las dos nuevas cayeron las dos aqui abajo**: `seleccion_representante_extranjero`
+> con **50,9** y `plan_gestion_riesgos` con **50,3**, y **las dos salieron falsas.**
+>
+> **Nota de contabilidad, sin resolver**: las tres filas suman **19**, y las citas
+> leidas son **21**. La diferencia de dos viene de la contabilidad anterior, no de
+> esta entrada: las dos nuevas si estan en la tabla. **Lo dejo señalado en vez de
+> cuadrarlo por mi cuenta.**
 
 **Por encima de 52 son NUEVE de nueve, no doce de doce**: el doce es el total de
 confirmadas, y **tres de ellas viven por debajo de 52** (`split_testing` en 51,5,
@@ -563,6 +635,40 @@ solo 13 de las 110 citas.**
 > **Acelerar ahi seria pasar de largo justamente donde esta casi toda la cola, y
 > donde ya se sabe que hay costuras reales.** El compromiso de leer los 110 no
 > cambia, **y el paso tampoco deberia aflojarse por debajo de la franja.**
+
+### La prediccion de la zona mezclada se sigue cumpliendo
+
+**Las dos citas nuevas son la comprobacion, y salio la que se esperaba**: las dos
+viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
+
+> **Bajo 52 la señal de bloque sigue sin sostenerse sola.** La muestra leida en esa
+> mitad de la cola pasa de **3 confirmadas contra 4 falsas** a **3 contra 6**.
+> Sigue sin ser un piso de ruido, porque las tres confirmadas siguen ahi, pero
+> **tampoco se ha vuelto un terreno donde se pueda leer de corrido.**
+>
+> **La consecuencia operativa no cambia y conviene repetirla porque es la parte que
+> tienta**: **el paso de lectura NO se acelera.** Cada cita de esta mitad se sigue
+> leyendo entera contra el grafo. Las dos de esta entrada lo confirman: **las dos
+> parecian costura por su bloque y ninguna lo era**, y eso solo se supo abriendo
+> los pasos.
+
+### Nota de orden: la zona 51 a 52 esta cosechada entera
+
+**De los seis puestos siguientes de la cola, cuatro ya estaban leidos bajo sus ids
+completos**: `key_partners_hypothesis`, `split_testing_experimentos_ab`,
+`mix_ubicaciones_corporativas_franquicia` y `fmea_analisis_de_modos_de_falla`.
+
+> **Comprobado contra el instrumento**: la banda de bloque **51,0 a 52,0 tiene
+> exactamente SEIS citas** en `docs/COSTURAS_INTERNAS.jsonl`, y **las seis estan
+> leidas y registradas en esta ficha**: `principios_medicion_efectiva` (51,9),
+> `key_partners_hypothesis` (51,7), `founder_ceo_succession_process` (51,5),
+> `split_testing_experimentos_ab` (51,5), `mix_ubicaciones_corporativas_franquicia`
+> (51,4) y `fmea_analisis_de_modos_de_falla` (51,4).
+>
+> **La zona mezclada no queda a medias: queda cerrada**, con su reparto final de
+> **dos confirmadas contra cuatro falsas**. Lo que sigue por leer vive todo **por
+> debajo de 51**, que es justo donde la evidencia es mas delgada y donde ya hay dos
+> costuras reales esperando.
 
 ---
 
