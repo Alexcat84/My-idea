@@ -78,6 +78,125 @@
       "token": "409A",
       "fecha": "2026-08-08",
       "motivo": "Pagar con equity es universal; 409A aparece de paso y tiene su propio nodo-frontera."
+    },
+    {
+      "node_id": "clasificacion_garantia_full_limited",
+      "baranda": "dato_local_cableado",
+      "token": "$10",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA: el umbral de 10 dolares ES la Magnuson-Moss Act, no un precio de mercado. Su condicion ya dice 'si vendes a clientes en Estados Unidos': marcarlo es marcar el arreglo."
+    },
+    {
+      "node_id": "publicidad_garantia_conforme",
+      "baranda": "dato_local_cableado",
+      "token": "$15",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA: el umbral de 15 dolares ES la regla de la FTC. Misma razon."
+    },
+    {
+      "node_id": "crowdfunding_legal_exemptions_jobs_act",
+      "baranda": "dato_local_cableado",
+      "token": "SEC",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA: la SEC no es una mencion, es el regulador ante el que se registra. Ya acotado."
+    },
+    {
+      "node_id": "equity_crowdfunding",
+      "baranda": "dato_local_cableado",
+      "token": "SEC",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA, misma razon."
+    },
+    {
+      "node_id": "derechos_de_registro",
+      "baranda": "voz_de_libro",
+      "token": "los bancos de inversion",
+      "fecha": "2026-08-08",
+      "motivo": "El nodo ya localiza ('el regulador de valores de tu pais, en Estados Unidos la SEC') y la frase marcada describe QUIEN decide, no una instruccion en tercera persona."
+    },
+    {
+      "node_id": "registration_rights_stock_consideration",
+      "baranda": "dato_local_cableado",
+      "token": "SEC",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA: ya reencuadrado a 'el regulador de valores de tu pais (en Estados Unidos es la SEC)'."
+    },
+    {
+      "node_id": "valuacion_409a",
+      "baranda": "dato_local_cableado",
+      "token": "409A",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA: la seccion 409A ES el nombre de la norma fiscal. Ya acotado."
+    },
+    {
+      "node_id": "decision_fundador_solo_vs_equipo",
+      "baranda": "voz_de_libro",
+      "token": "los fundadores",
+      "fecha": "2026-08-08",
+      "motivo": "'solo el 16.1% de los fundadores de negocios de alto potencial funda en solitario' es una ESTADISTICA sobre fundadores, no una instruccion dada en tercera persona. El patron caza la frase; el nodo describe un hecho."
+    },
+    {
+      "node_id": "sesgo_optimismo_fundador",
+      "baranda": "voz_de_libro",
+      "token": "los emprendedores",
+      "fecha": "2026-08-08",
+      "motivo": "'el 95% de los emprendedores cree tener mas de 50% de probabilidad de exito' es un dato, no voz de libro. Misma razon."
+    },
+    {
+      "node_id": "scorecard_descubrimiento_cliente",
+      "baranda": "matriz_o_puntaje",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "CONSERVADO POR ADJUDICACION (ago 2026): un instrumento de puntaje que existe en el mundo es conocimiento. La doctrina anti-matriz nacio para que la casa no le ponga notas al usuario en su propio registro, no para censurar que el instrumento exista. Se le arreglo la voz y gano condicion de activacion honesta."
+    },
+    {
+      "node_id": "scorecard_de_seleccion_de_proyectos",
+      "baranda": "matriz_o_puntaje",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "CONSERVADO POR ADJUDICACION (ago 2026): un instrumento de puntaje que existe en el mundo es conocimiento. La doctrina anti-matriz nacio para que la casa no le ponga notas al usuario en su propio registro, no para censurar que el instrumento exista. Se le arreglo la voz y gano condicion de activacion honesta."
+    },
+    {
+      "node_id": "scoring_model_scorecard",
+      "baranda": "matriz_o_puntaje",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "CONSERVADO POR ADJUDICACION (ago 2026): un instrumento de puntaje que existe en el mundo es conocimiento. La doctrina anti-matriz nacio para que la casa no le ponga notas al usuario en su propio registro, no para censurar que el instrumento exista. Se le arreglo la voz y gano condicion de activacion honesta."
+    },
+    {
+      "node_id": "design_scorecard",
+      "baranda": "matriz_o_puntaje",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "CONSERVADO POR ADJUDICACION (ago 2026): un instrumento de puntaje que existe en el mundo es conocimiento. La doctrina anti-matriz nacio para que la casa no le ponga notas al usuario en su propio registro, no para censurar que el instrumento exista. Se le arreglo la voz y gano condicion de activacion honesta."
+    },
+    {
+      "node_id": "sistema_puntuacion_baldrige",
+      "baranda": "matriz_o_puntaje",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "CONSERVADO POR ADJUDICACION (ago 2026): un instrumento de puntaje que existe en el mundo es conocimiento. La doctrina anti-matriz nacio para que la casa no le ponga notas al usuario en su propio registro, no para censurar que el instrumento exista. Se le arreglo la voz y gano condicion de activacion honesta."
+    },
+    {
+      "node_id": "equipo_multifuncional_real",
+      "baranda": "residuo_corporativo",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "CONSERVADO POR LA POLITICA DE ESCALA (ago 2026): el contenido de escala corporativa no se poda ni se depreca por escala. Si quien lee tiene un equipo o un area, la respuesta corporativa es la correcta. Se corrigio a QUIEN le habla y gano condicion honesta."
+    },
+    {
+      "node_id": "comprender_definicion_legal_franquicia",
+      "baranda": "dato_local_cableado",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA (ago 2026): los umbrales en dolares son la regla de la FTC, no un precio de mercado. Su condicion ya acota a quien vende franquicias en Estados Unidos."
+    },
+    {
+      "node_id": "cumplimiento_ftc_rule_436",
+      "baranda": "dato_local_cableado",
+      "token": "(adjudicado)",
+      "fecha": "2026-08-08",
+      "motivo": "NODO-FRONTERA (ago 2026): los umbrales en dolares son la regla de la FTC, no un precio de mercado. Su condicion ya acota a quien vende franquicias en Estados Unidos."
     }
   ]
 }

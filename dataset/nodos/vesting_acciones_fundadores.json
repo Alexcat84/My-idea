@@ -1,25 +1,25 @@
 {
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Vesting de Acciones (Stock Vesting)",
+  "titulo_concepto": "Adquisición gradual de tus acciones (vesting)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El vesting es el mecanismo mediante el cual un fundador, empleado o consultor adquiere gradualmente la propiedad de sus acciones u opciones a lo largo del tiempo, en vez de recibirlas todas de una vez. El esquema estándar es de 4 años con un 'cliff' de 1 año: nada se adquiere durante el primer año, y al cumplirlo se otorga de golpe el primer 25%, seguido de adquisición mensual del resto durante los siguientes 3 años. Si alguien deja la empresa antes de completar su vesting, la empresa puede recomprar las acciones no adquiridas, lo que protege tanto a la empresa como a los demás accionistas de la salida prematura de una persona clave. Al momento de fundación, este mecanismo suele formalizarse emitiendo 'founders' stock' (acciones comunes a precio muy bajo, dado el valor mínimo de la empresa en ese momento) sujetas a este cronograma, presentando dentro de los 30 días siguientes la elección fiscal 83(b) para fijar el tratamiento tributario sobre ganancias de capital a largo plazo. El vesting también puede incluir cláusulas de aceleración ante un cambio de control: la aceleración de gatillo simple (single-trigger) otorga vesting completo automáticamente al ocurrir la adquisición, mientras que la de doble gatillo (double-trigger) -la más común en deals de VC- exige dos eventos: el cambio de control Y una terminación involuntaria sin causa dentro de un plazo definido (típicamente 13 meses), protegiendo así el interés del comprador en retener al talento clave tras la adquisición. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "resumen_teorico": "El vesting es la forma en que ganas la propiedad de tus acciones u opciones con el tiempo, no de golpe. Lo comun: 4 años con un año de espera inicial (cliff), sin nada ese primer año; al cumplirlo recibes 25%, y el resto mes a mes durante los 3 años siguientes. Si te vas antes, la empresa puede recomprar lo no adquirido. Al fundar, tu acción de fundador se emite a precio bajo, sujeta a este calendario, y conviene presentar la eleccion fiscal 83(b) en los 30 días siguientes. También puedes pactar aceleracion si la empresa cambia de manos: de un solo gatillo, que libera todo de inmediato, o de doble gatillo -la mas usada en capital de riesgo- que exige el cambio de control y un despido sin causa en un plazo, normalmente 13 meses. Verifica estos detalles con un profesional en tu pais.",
   "pasos_accionables": [
-    "Al momento de constituir legalmente la empresa, formalizar la emisión de acciones comunes ('founders' stock') a los fundadores a un precio bajo, completando toda la documentación de compra y pago",
-    "Presentar la elección fiscal 83(b) dentro de los 30 días siguientes a la emisión de las acciones",
-    "Establecer un cronograma de vesting estándar: 1 año de cliff (25% al cumplirlo) y el resto en adquisición mensual durante 3 años más",
-    "Negociar crédito de vesting retroactivo si el fundador ya trabajó en la empresa antes de recibir inversión externa",
-    "Documentar el derecho de recompra (o recuperación) de la empresa sobre las acciones no adquiridas si alguien se va antes de tiempo",
-    "Negociar si aplican cláusulas de aceleración ante un cambio de control, prefiriendo la de doble gatillo (cambio de control + despido sin causa) sobre la de gatillo simple, ya que esta última puede desincentivar a compradores potenciales",
-    "Documentar claramente qué constituye 'causa' y 'razón justificada' de terminación para efectos de la aceleración"
+    "Al constituir legalmente tu empresa, formaliza la emisión de tus acciones de fundador a un precio bajo, completando toda la documentación de compra y pago",
+    "Presenta la eleccion fiscal 83(b) dentro de los 30 días siguientes a la emisión de tus acciones",
+    "Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisicion mensual durante los siguientes 3 años",
+    "Negocia crédito de vesting retroactivo si ya trabajaste en la empresa antes de recibir inversion externa",
+    "Documenta el derecho de la empresa a recomprar las acciones no adquiridas si alguien se va antes de tiempo",
+    "Negocia si aplican clausulas de aceleracion ante un cambio de control, prefiriendo la de doble gatillo (cambio de control mas despido sin causa) sobre la de un solo gatillo, ya que esta ultima puede desincentivar a compradores potenciales",
+    "Documenta claramente que constituye 'causa' y 'razon justificada' de terminacion para efectos de la aceleracion"
   ],
-  "entregable_esperado": "Acuerdo de vesting firmado por fundadores y empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, cláusula de recompra, elección 83(b) presentada y condiciones de aceleración claramente definidas",
+  "entregable_esperado": "Acuerdo de vesting firmado por ti y tus socios o empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, clausula de recompra, eleccion 83(b) presentada y condiciones de aceleracion claramente definidas",
   "condiciones_activacion": [
-    "Al momento de constituir legalmente la startup o incorporar nuevos cofundadores",
-    "Si se está estructurando la distribución de equity entre fundadores",
-    "Si un inversionista de capital de riesgo exige vesting como condición de inversión",
-    "Si se necesita proteger a la empresa de la salida temprana de un cofundador o empleado clave",
-    "Si se está negociando una posible adquisición de la empresa"
+    "Cuando constituyes legalmente tu startup o incorporas nuevos cofundadores",
+    "Si estas estructurando la distribucion de acciones entre fundadores",
+    "Si un inversionista de capital de riesgo exige vesting como condicion de inversion",
+    "Si necesitas proteger tu empresa de la salida temprana de un cofundador o empleado clave",
+    "Si estas negociando una posible venta de tu empresa"
   ],
   "node_id": "vesting_acciones_fundadores",
   "nodos_previos": [
