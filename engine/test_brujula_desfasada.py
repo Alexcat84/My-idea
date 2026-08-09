@@ -45,12 +45,18 @@ def _reset():
     pm._BRUJULA_AVISO_IMPRESO = False
 
 
-def _con_indice(ids, fn):
-    """Corre fn con un .npz de juguete que contiene exactamente `ids`."""
+def _con_indice(ids, fn, generado_iso=None):
+    """Corre fn con un .npz de juguete que contiene exactamente `ids`.
+
+    `generado_iso=None` reproduce el .npz REAL de hoy, que es anterior al
+    registro de la fecha y por tanto no trae el campo."""
     import numpy as np
     tmp = Path(tempfile.mkdtemp()) / "juguete.npz"
-    np.savez(tmp, ids=np.array(ids, dtype=object).astype(str),
-             embeddings=np.zeros((len(ids), 4), dtype=np.float32))
+    campos = {"ids": np.array(ids, dtype=object).astype(str),
+              "embeddings": np.zeros((len(ids), 4), dtype=np.float32)}
+    if generado_iso is not None:
+        campos["generado_iso"] = np.array(generado_iso)
+    np.savez(tmp, **campos)
     real = pm.SEMANTIC_INDEX_PATH
     pm.SEMANTIC_INDEX_PATH = tmp
     _reset()
@@ -138,12 +144,61 @@ def test_el_npz_real_no_se_toca():
     print("  ok: el .npz real sigue en su sitio y ningun caso lo escribe")
 
 
+def test_la_fecha_sale_del_ARTEFACTO_y_no_del_sistema_de_archivos():
+    """LA FECHA DEL AVISO MENTIA EN UN CLON FRESCO.
+
+    Git NO guarda tiempos de modificacion: en cualquier clon nuevo el .npz nace
+    con la fecha del checkout. El aviso, que sacaba la fecha de os.path.getmtime,
+    habria dicho "generado hoy" MIENTRAS EXPLICA QUE EL INDICE ESTA DESFASADO.
+
+    Es la misma familia que el "3.604" que se colo por deducir un total en vez de
+    contarlo: un dato dentro de un aviso que no es lo que dice ser. Y estos
+    avisos existen justamente para no mentir.
+
+    La cura: la fecha se escribe DENTRO del artefacto al generarlo. Si no esta,
+    se dice DESCONOCIDA y no se cae de vuelta a getmtime, porque un dato
+    equivocado es peor que uno ausente."""
+    activos = _activos()
+    incompleto = activos[:-1]
+
+    # (1) CON el campo: el aviso muestra ESA fecha, no la del archivo.
+    _, con = _capturar(lambda: _con_indice(incompleto, pm._cargar_brujula,
+                                           generado_iso="2026-07-08T17:40:00"))
+    assert "generado el 2026-07-08" in con, con
+    assert "desconocida" not in con, con
+
+    # (2) SIN el campo (el .npz real de hoy): dice desconocida y NO inventa fecha.
+    _, sin = _capturar(lambda: _con_indice(incompleto, pm._cargar_brujula))
+    assert "fecha de generacion desconocida" in sin, sin
+    assert "anterior a este registro" in sin, sin
+    import re
+    assert not re.search(r"generado el \d{4}-\d{2}-\d{2}", sin), (
+        f"invento una fecha sin tener el campo: {sin}")
+
+    # (3) EL REMACHE: getmtime no aparece en el cuerpo del cargador.
+    src = (BASE / "engine" / "prototipo_motor.py").read_text(encoding="utf-8")
+    cuerpo = src[src.index("def _cargar_brujula"):src.index("def buscar_afines")]
+    # Se busca la LLAMADA, no la palabra: el comentario que explica por que no
+    # se usa la nombra a proposito, y una asercion sobre la palabra suelta
+    # prohibiria documentar la decision.
+    assert "getmtime(" not in cuerpo, (
+        "el cargador volvio a deducir la fecha del sistema de archivos")
+    assert "os.path.getmtime" not in cuerpo.replace("no se cae de vuelta a getmtime", "")
+    assert "generado_iso" in cuerpo, "el cargador no lee la fecha del artefacto"
+
+    # (4) y el generador la escribe
+    gen = (BASE / "engine" / "build_semantic_index.py").read_text(encoding="utf-8")
+    assert "generado_iso=np.array(generado)" in gen, "el generador no guarda la fecha"
+    print("  ok: la fecha sale del artefacto; sin campo dice desconocida y no inventa ninguna")
+
+
 def main():
     for f in (test_indice_al_que_le_falta_UN_activo_apaga_la_brujula,
               test_indice_que_cubre_a_todos_los_activos_busca_normal,
               test_el_apagado_NO_lanza_y_buscar_afines_devuelve_vacio,
               test_avisa_UNA_sola_vez_por_sesion,
-              test_el_npz_real_no_se_toca):
+              test_el_npz_real_no_se_toca,
+              test_la_fecha_sale_del_ARTEFACTO_y_no_del_sistema_de_archivos):
         f()
     print("OK: la brujula del CLI se apaga antes que mentir.")
 

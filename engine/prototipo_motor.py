@@ -1606,15 +1606,20 @@ def _cargar_brujula():
         if faltan:
             if not _BRUJULA_AVISO_IMPRESO:
                 _BRUJULA_AVISO_IMPRESO = True
-                try:
-                    import datetime
-                    generado = datetime.datetime.fromtimestamp(
-                        os.path.getmtime(SEMANTIC_INDEX_PATH)).strftime("%Y-%m-%d")
-                except Exception:
-                    generado = "desconocida"
+                # LA FECHA SALE DEL PROPIO ARTEFACTO, jamas del sistema de
+                # archivos. Git no guarda tiempos de modificacion: en un clon
+                # nuevo el .npz nace con la fecha del checkout y el aviso diria
+                # "generado hoy" mientras explica que esta desfasado. Si el
+                # campo no esta -- el .npz de hoy es anterior a este registro --
+                # se dice DESCONOCIDA y no se cae de vuelta a getmtime: un dato
+                # equivocado es peor que uno ausente, y ese es todo el motivo.
+                crudo = data["generado_iso"] if "generado_iso" in data.files else None
+                cuando = (f"generado el {str(crudo)[:10]}" if crudo is not None
+                          else "fecha de generacion desconocida (el indice es "
+                               "anterior a este registro)")
                 print(f"  (brujula semantica APAGADA, navegacion solo local: el indice no "
                       f"conoce {len(faltan)} de los {total_activos} nodos activos; "
-                      f"generado el {generado}. Regeneralo con: "
+                      f"{cuando}. Regeneralo con: "
                       f"python engine/build_semantic_index.py)")
             _BRUJULA_INDICE = (None, None)
             return False

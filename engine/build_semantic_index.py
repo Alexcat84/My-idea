@@ -32,6 +32,7 @@ lista de ids en el mismo orden.
 
 Uso: python engine/build_semantic_index.py
 """
+import datetime
 import json
 from pathlib import Path
 
@@ -69,7 +70,15 @@ def main():
         textos, normalize_embeddings=True, show_progress_bar=True, batch_size=64,
     ).astype("float32")
 
-    np.savez_compressed(INDEX_PATH, ids=np.array(ids), embeddings=embeddings)
+    # LA FECHA VA DENTRO DEL ARTEFACTO, no se deduce del sistema de archivos.
+    # Git no guarda tiempos de modificacion: en cualquier clon nuevo el .npz
+    # nace con la fecha del checkout, y el aviso de la brujula diria "generado
+    # hoy" mientras explica que el indice esta desfasado. Un dato dentro de un
+    # aviso que no es lo que dice ser es exactamente lo que estos avisos vienen
+    # a curar.
+    generado = datetime.datetime.now().replace(microsecond=0).isoformat()
+    np.savez_compressed(INDEX_PATH, ids=np.array(ids), embeddings=embeddings,
+                        generado_iso=np.array(generado))
     print(f"Guardado: {INDEX_PATH} ({embeddings.shape[0]} nodos, dim={embeddings.shape[1]})")
 
 
