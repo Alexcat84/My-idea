@@ -1019,35 +1019,64 @@ racimo.**
 **Tema propio real**: no audita un producto ni un proceso, **audita el sistema de
 control** y pregunta si sigue siendo adecuado. **Fuera del racimo.**
 
-> ## LA VERIFICACION DEL SUFIJO `_2`, PEDIDA Y HECHA: EL HERMANO EXISTE
+> ## LA VERIFICACION DEL SUFIJO `_2`, PEDIDA Y HECHA: EL HERMANO EXISTE Y SU HISTORIA ESTA COMPLETA
 >
 > **`quality/auditoria_sistema_control_calidad`, sin sufijo, EXISTE y esta
 > DEPRECADO.** Cinco pasos, misma fuente (*Juran's Quality Handbook*), mismo
 > tema. El `_2` que sobrevive es **claramente su version mejor**: seis pasos, voz
 > de tu, y añade que hacer cuando los puntos salen de los limites de control.
 >
-> **Lo que NO esta, y es el hallazgo:**
+> **Y su sucesion ESTA REGISTRADA, entera, desde el dia de la fusion:**
 >
 > | comprobacion | resultado |
 > |---|---|
-> | ¿hay `ids_alias` que lleve del deprecado al `_2`? | **NO. Ninguna entrada.** |
-> | ¿tiene `deprecado_por`? | **NO, es `null`.** |
-> | ¿tiene `motivo_deprecacion`? | **NO, es `null`.** |
+> | `ids_alias` del `_2` | **`["auditoria_sistema_control_calidad"]`** |
+> | `merged_originals` del `_2` | **el absorbido, con su id, su titulo y su fuente** |
+> | ¿el resolutor lleva del id muerto al `_2`? | **SI**, es uno de los **391 alias** del catalogo |
 >
-> **Es un deprecado SIN SUCESOR REGISTRADO.** El resolutor lo trata bien (un
-> deprecado sin sucesor se representa a si mismo y la puerta unica no lo ofrece),
-> asi que **no hay avería para el lector**. Lo que hay es **historia sin
-> escribir**: el `_2` es su sucesor de hecho y **nadie lo dice en el dato**.
+> **No falta nada. Es una fusion normal, bien escrita.**
 >
-> **Y queda un residuo medido**: **tres nodos ACTIVOS declaran arista al id
-> deprecado** (`manual_de_calidad` y `medicion_kpi` en sus `nodos_siguientes`,
-> `planificacion_estrategica_despliegue_2` en sus `nodos_previos`). **Los tres
-> declaran TAMBIEN el `_2`**, asi que la arista viva existe y la muerta es peso
-> muerto que la puerta filtra.
+> ### RECTIFICACION DEL EJECUTOR
 >
-> **No se toca nada desde aqui.** Va como observacion de dato, no de gradiente:
-> **el arreglo natural seria registrar el alias y limpiar las tres aristas
-> muertas**, y eso es adjudicacion aparte.
+> **En la primera version de este bloque reporte lo contrario**: que no habia
+> alias, que `deprecado_por` y `motivo_deprecacion` estaban en `null`, y que era
+> un deprecado sin sucesor registrado. **Las tres afirmaciones eran falsas**, y
+> sobre ellas se encargo una cirugia de historia que no tenia nada que arreglar.
+>
+> **Los dos errores, para que no se repitan:**
+>
+> 1. **Busque el mapa de alias como una clave de nivel superior en
+>    `master_graph.json`.** No vive ahi: **vive en el campo `ids_alias` de cada
+>    nodo**, que es exactamente como lo lee `mapaDeAlias` en
+>    `web/lib/engine/graph.ts`. Mi consulta **no encontro el mapa**, y **reporte
+>    eso como una ausencia medida**. Una consulta fallida contada como dato.
+> 2. **`deprecado_por` y `motivo_deprecacion` no existen en el esquema**, en
+>    **ninguno** de los 3.835 nodos. La sucesion se registra **en el
+>    sobreviviente** (`ids_alias` mas `merged_originals`), nunca en el deprecado.
+>    Lei el `null` de un campo inexistente **como si fuera un valor vacio**.
+>
+> ### Lo unico que si estaba bien medido, y lo que significa
+>
+> **Tres nodos activos declaran arista al id deprecado** (`manual_de_calidad` y
+> `medicion_kpi` en sus `nodos_siguientes`,
+> `planificacion_estrategica_despliegue_2` en sus `nodos_previos`), ademas de la
+> viva al `_2`.
+>
+> **No es residuo: es el diseño.** Medido en todo el catalogo:
+>
+> | | |
+> |---|---:|
+> | aristas de nodos **activos** hacia ids **deprecados** | **1.149** |
+> | nodos activos que las declaran | **824** (23% de los 3.521) |
+> | ids deprecados apuntados | **308** de 314 |
+>
+> Y lo dice el propio Gate en su comentario: *"Un deprecado sigue EN el grafo, con
+> sus aristas intactas: el grafo historico queda integro"*. **La puerta unica lo
+> filtra antes de ofrecerlo, y la simetria de aristas lo exige en los dos
+> extremos**: quitarlas de un solo lado pondria el Gate en rojo, y el paso 5 de
+> simetrizacion **las volveria a poner**.
+>
+> **CONCLUSION: no habia nada que arreglar. Cero nodos tocados.**
 
 ### 105. FALSO PAR FUNCIONAL
 
