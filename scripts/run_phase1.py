@@ -744,16 +744,30 @@ def step7_validate(master, parse_errors):
     # ofrecible que el indice no conoce es invisible para el salto semantico y
     # para la prueba de rumbos, y ninguna de las dos se queja: simplemente no lo
     # devuelven nunca. Cero tolerancia.
+    # EL CHEQUEO SE AGREGA SIEMPRE, PASE O FALLE. La primera version lo envolvia
+    # en `if ruta_indice.exists()`, y sin el archivo el chequeo NO ENTRABA en la
+    # lista: el Gate salia verde sin el. Es la misma trampa silenciosa en su
+    # forma extrema, porque sin indice no hay diez nodos invisibles, hay 3.521.
+    #
+    #   "Un chequeo AUSENTE y un chequeo VERDE se ven igual en el resumen."
+    #
+    # Y esa es justamente la enfermedad que este chequeo vino a curar, asi que no
+    # podia padecerla.
+    REMEDIO = ("corre el reindex ANTES de usar esta copia: "
+               "python scripts/build_semantic_index_voyage.py && "
+               "python scripts/sync_assets_web.py")
     ruta_indice = BASE / "web" / "lib" / "assets" / "semantic_index.json"
-    if ruta_indice.exists():
+    if not ruta_indice.exists():
+        checks.append(("Todo nodo ACTIVO tiene vector en el indice semantico", False,
+                       f"NO HAY INDICE en {ruta_indice}: los {len(activos)} activos estan "
+                       f"sin vector -> {REMEDIO}"))
+    else:
         con_vector = set(json.loads(ruta_indice.read_text(encoding="utf-8"))["ids"])
         sin_vector = sorted(set(activos) - con_vector)
         sobran = sorted(con_vector - set(activos))
         detalle = f"{len(sin_vector)} activos sin vector"
         if sin_vector:
-            detalle += (f": {sin_vector[:5]} -> corre el reindex ANTES de usar esta copia: "
-                        "python scripts/build_semantic_index_voyage.py && "
-                        "python scripts/sync_assets_web.py")
+            detalle += f": {sin_vector[:5]} -> {REMEDIO}"
         if sobran:
             detalle += f" | {len(sobran)} vectores de nodos que ya no son ofrecibles"
         checks.append(("Todo nodo ACTIVO tiene vector en el indice semantico",

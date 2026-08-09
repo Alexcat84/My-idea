@@ -539,7 +539,43 @@ el resumen, y ahí se pierden.
 **(c) Un reordenador sobre el top-k de la búsqueda vectorial**, que lee consulta
 y nodo juntos. Es la cura clásica del enganche léxico, y la más cara.
 
-**Prueba de aceptación, intacta**: los tres rumbos en verde.
+### PRUEBA DE ACEPTACIÓN, CERRADA Y CONGELADA
+
+**LOS TRES RUMBOS REBELDES**, identificados por nombre contra la foto final de
+`scripts/rumbos/_puestos_final.json`:
+
+| rumbo | ancla | puesto de partida |
+|---|---|---:|
+| `nucleo_dicen_que_si_pero_no_compran` | `get_out_building_test_sell` | **67** |
+| `nucleo_por_que_me_comprarian_a_mi` | `value_proposition_startup` | **82** |
+| `nucleo_le_sirve_a_todo_el_mundo` | `customer_segments_hypothesis` | **245** |
+
+Los otros dos rumbos de diagnóstico (`nucleo_validar_antes_de_gastar` y
+`nucleo_sacar_algo_pequeno_primero`) **ya se pusieron verdes** tras la fusión y
+la re-voz del núcleo: no son prueba, son trabajo hecho. El de hueco
+(`nucleo_no_doy_abasto_solo`) no entra: **lo cierra el mundo 11, no el motor**.
+
+**PASA la vía si**:
+
+a) **los tres rebeldes quedan verdes**: ancla dentro del top-K con K=10, dominio
+   correcto, sin frontera violada;
+b) **el trinquete aguanta**: cero rojos en los 43 del marcador y ámbares menores
+   o iguales a la línea base de 1;
+c) **`nucleo_validar_antes_de_gastar` y `nucleo_sacar_algo_pequeno_primero` NO
+   retroceden fuera del top-K**.
+
+**Las tres condiciones son necesarias. Arreglar tres rompiendo otros no es
+arreglar.**
+
+**CÓMO SE MIDE**: se reportan **las dos cosas** en cada corrida, el marcador de
+colores **y** los puestos exactos de las cinco anclas vía
+`scripts/rumbos/puesto_de_blancos.py`. El puesto es la medida continua: bajar de
+245 a 30 es progreso real aunque el color no cambie, y el marcador solo no lo
+vería.
+
+**ESTA VARA QUEDA CONGELADA.** No se renegocia después de ver resultados de
+ninguna vía. Si una vía obliga a cambiarla, se para y se adjudica antes de
+seguir.
 
 ### Hipótesis original del auditor — CORREGIDA con el código en la mano
 
@@ -647,6 +683,21 @@ cada script. La suma habría tenido que salir del chat.
 El arreglo: **`docs/COSTOS.jsonl`**, un libro de apéndice —una línea por corrida,
 nunca se reescribe— que `revoz_pack.py` y `consolidar_pack.py` alimentan con
 fecha, pack, operación y costo. `python scripts/libro_mayor.py` lo suma.
+
+### LA FRONTERA DEL CICLO DE LA CURACIÓN DEL MOTOR
+
+El libro tiene **66 corridas por $16,54**, y el ciclo de la curación del motor
+reportó **$15,25 en 57 corridas**. La diferencia está explicada, y se deja
+escrita para que nadie concluya después que el reporte mintió:
+
+> **La primera corrida de este ciclo es la de `2026-08-08T16:08:53+00:00`**
+> (environmental / consolidación / $0,03). Todo lo anterior son **9 filas que no
+> le pertenecen**: la línea de apertura del libro ($0,00) y **8 filas rescatadas
+> y marcadas `parcial`** ($1,29), que son del ciclo del censo y se recuperaron
+> de informes que se pisaban unos a otros.
+
+El libro **no se toca**: es un registro, y un registro al que se le quitan filas
+deja de serlo. Lo que se corrige es el reporte, diciendo dónde empieza a contar.
 
 Las filas rescatadas del ciclo viejo van marcadas **`parcial`** y el resumen lo
 dice en voz alta: un total con filas dudosas se declara dudoso en vez de sonar
