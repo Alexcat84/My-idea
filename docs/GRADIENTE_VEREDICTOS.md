@@ -248,3 +248,119 @@ profundidad en el peldano de al lado**.
 
 **El arreglo ira por secciones, y sera mas barato de lo que la cuenta de
 violaciones sugiere.**
+
+---
+
+## LOTE 4, puestos 14 a 20 por senal
+
+**9 ago 2026.** Etiquetas de lectura y puestos de la cola **coinciden**.
+
+### 14. FALSO PAR por titulo
+
+`seguridad_digital/getting_started_risk_assessment` contra
+`nucleo/resource_assessment` **(t84.3, s0.6022)**
+
+*"Assessment"* emparejo **riesgo cibernetico** con **evaluacion de recursos para
+una idea**. Sin relacion.
+
+**Segundo falso par por titulo con la semantica delatandolo.**
+
+### 15. GRADIENTE OK, ejemplar positivo
+
+`quality/sistema_medicion_kpi` contra `nucleo/medicion_monitoreo_desempeno`
+**(t48.4, s0.8406)**
+
+El nucleo **mide la propuesta de valor**; el mundo construye **el SISTEMA de
+medicion** (KPI vinculados a estrategia, desperdicio cronico, costos de mala
+calidad, tablero con metodo y frecuencia).
+
+> **De medir a sistematizar: asi se ve el gradiente bien hecho.**
+
+### 16. GRADIENTE OK, mismo tipo
+
+`quality/auditoria_calidad` contra `nucleo/quality_audit` **(t54.8, s0.8405)**
+
+El nucleo **audita una vez**; el mundo **monta el programa** (auditores
+imparciales, entrenamiento, autoauditorias con muestreo externo).
+
+**Nota cosmetica** para la ficha dormida de campos-sucios-dataset: el nodo del
+nucleo tiene **id en ingles**.
+
+### 17. VIOLACION, la cuarta de `risk_management`
+
+`risk_management/evalua_la_gravedad_sin_autoengano` contra el mismo
+`nucleo/matriz_probabilidad_impacto` **(t29.6, s0.8394)**
+
+Junta, ordena, y trae **UNA idea propia**: el sesgo de inflar o minimizar para
+justificar lo que ya querias hacer.
+
+**Reencuadre**: el peldano **se queda con el autoengano como centro** y asume la
+priorizacion del nucleo como hecha.
+
+### 18. HALLAZGO: el par 13 era un TRIO
+
+`quality/brainstorming` contra `nucleo/brainstorming_efectivo`
+**(t51.4, s0.8391)**, que es **OTRO** nodo del nucleo, distinto de
+`brainstorming_divergente` (par 13).
+
+**El nucleo tiene DOS nodos de brainstorming**, mas el del mundo. El gradiente OK
+del par 13 **se sostiene por poco**; la sospecha correcta es **SUB-FUSION EN EL
+NUCLEO**, gemela de la de Goldratt (lote 3). **Va a la misma ficha aparte.**
+
+### 19. VIOLACION PARCIAL, la quinta de risk
+
+`risk_management/revisa_tus_riesgos_con_un_ritmo` contra el mismo
+`nucleo/registro_de_riesgos` **(t49.1, s0.837)**
+
+Tiene **UN aporte real** que el nucleo no da (frecuencia proporcional a la
+gravedad, subir en etapas intensas); **el resto empata con la ultima linea del
+nodo del nucleo**.
+
+**La mas leve de las cinco y la mas facil de reencuadrar**: se queda con la
+cadencia proporcional como unico centro.
+
+### 20. GRADIENTE OK: la calibracion conocida, releida con todo lo aprendido
+
+`quality/sistema_gestion_calidad` contra `nucleo/plan_gestion_calidad`
+**(t83.6, s0.7797)**
+
+**Planear contra sistematizar**, la misma relacion sana de los puestos 15 y 16.
+
+---
+
+# CIERRE DEL TOP-20: marcador del primer barrido
+
+**20 pares leidos.**
+
+| clase | pares |
+|---|---:|
+| VIOLACION | **6** (5 de `risk_management`, 1 de `quality`) |
+| GRADIENTE OK claros | 3, mas 1 propuesto |
+| DUDOSO de ensanche | 2 (con el par 8 propuesto a arreglo por seccion) |
+| FRONTERA con choque de fuentes | 1 |
+| FALSO PAR | 3 |
+| FUGA DE SECCION | 1 |
+
+Y **2 sospechas de SUB-FUSION EN EL NUCLEO** anotadas aparte:
+
+- **Goldratt**: `teoria_de_restricciones` y `cinco_pasos_enfoque_restricciones`
+- **brainstorming**: `brainstorming_efectivo` y `brainstorming_divergente`
+
+## DIAGNOSTICO EJECUTIVO
+
+- **`quality` en general CUMPLE el gradiente**; sus pares buenos son ejemplares.
+- **`risk_management` es el enfermo**: cinco peldanos de entrada repiten la base
+  del nucleo contra **dos** nodos densos (`registro_de_riesgos` y
+  `matriz_probabilidad_impacto`). El arreglo es **UNA cirugia de seccion por via
+  1** (reencuadres, cero contenido nuevo), **no cinco parches**.
+- **El nucleo tiene deuda chica de sub-fusion**, iluminada de rebote. Ficha
+  propia, fuera del gradiente.
+
+## PROPUESTA DEL AUDITOR AL FUNDADOR, pendiente de visto
+
+**Autorizar la cirugia de seccion de `risk_management`** como primer arreglo
+ejecutable del gradiente, con **la prueba de rumbos vigilando el trinquete**.
+
+**Alternativa**: seguir leyendo cola antes de tocar.
+
+**Ningun arreglo se ejecuta desde este documento.**
