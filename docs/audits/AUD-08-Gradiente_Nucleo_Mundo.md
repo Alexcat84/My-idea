@@ -374,8 +374,7 @@ argumento, y un recordatorio en el propio `--help`.
 
 | ficha | contenido |
 |---|---|
-| **SUB-FUSIÓN DEL NÚCLEO** | Goldratt (`teoria_de_restricciones` con `cinco_pasos_enfoque_restricciones`), brainstorming **confirmado en trío** (`reglas_brainstorming`, `brainstorming_efectivo`, `brainstorming_divergente`) y `criterios_seleccion_proveedores`, con la costura visible en su paso 7. **La cuenta va en cuatro y el documento solo nombra tres: el cuarto es una cuenta sin nombre y conviene fijarlo al abrir la ficha.** |
-| **SUB-FUSIÓN DEL LADO MUNDO** | `quality/plan_de_gestion_de_riesgos` contra `quality/evaluacion_gestion_riesgos`: el mismo método escrito dos veces en el mismo mundo |
+| **SUB-FUSIÓN** | **ABIERTA en `docs/FICHA_SUBFUSION_GRADIENTE.md`**, con los cinco casos por nombre: Goldratt, el trío de brainstorming, `criterios_seleccion_proveedores`, `gestion_inventario` (los cuatro del núcleo) y el método COC duplicado de `quality` (el del lado mundo). La cuenta sin nombre del marcador del lote 5 **queda fijada ahí**: el cuarto era `gestion_inventario` |
 | **FRONTERAS CON CHOQUE** | objeciones (par 6) y plazos de negociación (par 38). Decidir **quién se queda con qué**, y **si el contexto se escribe en los nodos** |
 | **INVENTARIO DE ESCALA** | `docs/INVENTARIO_ESCALA.md` es parcial a propósito (1.573 de 3.521 clasificados). **Sus dos usos declarados siguen sin construir**: material para que el intérprete converse sabiendo qué nodos son de operación corporativa, e insumo del **mapa tema-a-mundo** de la invitación al final del plan |
 

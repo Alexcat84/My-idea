@@ -592,7 +592,11 @@ sub-fusion**.
 > costura**, Goldratt pendiente) y **exceso de profundidad puntual**.
 
 **La ficha de sub-fusion del nucleo ya tiene entidad propia: cuatro temas
-anotados.**
+anotados** (`teoria_de_restricciones` con `cinco_pasos_enfoque_restricciones`, el
+trio de brainstorming, `criterios_seleccion_proveedores` y `gestion_inventario`).
+
+**FICHA ABIERTA**: `docs/FICHA_SUBFUSION_GRADIENTE.md`, con los cuatro por nombre
+mas el caso del lado mundo. **Pendiente del visto del fundador para ejecutar.**
 
 ---
 
@@ -770,3 +774,9 @@ del nucleo lleva la cuenta en **cuatro** desde el cierre del lote 5, pero este
 documento solo **nombra tres**: Goldratt (pares 9 y 10), brainstorming en trio
 (pares 13, 18 y 24) y `criterios_seleccion_proveedores` (par 27). El cuarto es
 una cuenta sin nombre y conviene fijarlo al abrir la ficha.
+
+> **RESUELTO al abrir la ficha.** El cuarto es **`gestion_inventario`**, que entro
+> a la cuenta en el lote 5 por el par 23 como violacion invertida y quedo tambien
+> como costura. Los cinco casos, con nombre y con su pregunta de lectura, en
+> `docs/FICHA_SUBFUSION_GRADIENTE.md`. **La nota se queda porque fue ella la que
+> obligo a fijarlos.**
