@@ -2673,3 +2673,179 @@ que deberia cubrirlo.
 > **Tres pasos del nucleo sosteniendo NUEVE profundizaciones sanas.** El hub cierra
 > el lote como lo que es: **la prueba de que un nodo base breve y bien puesto
 > aguanta todo lo que le cuelguen.**
+
+---
+
+## LOTE 21, puestos 298 a 317 por senal (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden.
+
+> **CERO VIOLACIONES. UNDECIMO lote seguido. Queda un lote y la cola muere.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **298** | OK funcional | `quality/rol_lider_equipo_calidad` contra `nucleo/roles_product_owner_scrum_master` **(t25.0)** |
+| **299** | OK | `health_safety/abandonar_arreglos_rapidos` contra `nucleo/curse_cinco_culpas` **(t39.1)** |
+| **300** | OK | `quality/equipo_conjunto_de_mejora_con_proveedores` contra `nucleo/sop_colaborativo` **(t36.0)** |
+| **301** | OK funcional | `quality/planificacion_cadena_suministro` contra `nucleo/alineacion_cadena_estrategia_negocio` **(t60.3)**. **El par Hugos duplicado se re-exhibe** |
+| **302** | OK | `quality/calculo_roi_calidad` contra `nucleo/ranking_proyectos_por_npv` **(t36.4)** |
+| **303** | OK | `quality/descubrir_necesidades_del_cliente` contra `nucleo/customer_discovery_phase2_problem_test` **(t35.6)**. Juran contra Blank |
+| **304** | OK, tema propio | `compras/investiga_con_fuentes_objetivas_antes_de_contactar` contra `nucleo/gestion_procurement_consumo` **(t32.4)** |
+| **305** | OK, **colateral de tipo nuevo: LA AUDIENCIA INVERTIDA** | ver abajo |
+| **306** | OK, **y el marco-pais sale al reves de lo esperado** | ver abajo |
+| **307** | OK, **los gemelos del Paso 3** | ver abajo |
+| **308** | OK | `risk_management/nombra_tus_suposiciones_fragiles` contra `nucleo/manejo_de_incertidumbre_proyectos_innovadores` **(t58.1)** |
+| **309** | OK POR ESPECIALIZACION | `exportacion/trabajo_con_bancos_comerciales` contra `nucleo/gestion_relacion_bancaria` **(t52.0)** |
+| **310** | OK, **y la retencion resulta ser un TRIO con la cura ya aplicada** | ver abajo |
+| **311** | OK | `quality/sistema_manejo_quejas` contra `nucleo/encuesta_satisfaccion_postproyecto` **(t37.3)** |
+| **312** | OK funcional | `quality/tipos_innovacion_i_ii` contra `nucleo/open_innovation_ideacion` **(t44.7)** |
+| **313** | OK funcional | `compras/ofrece_valor_no_economico` contra `nucleo/negociacion_contratos_proveedores` **(t38.7)** |
+| **314** | OK POR ESPECIALIZACION | `franquicias/proceso_llamada_inicial_venta` contra `nucleo/etapa_de_investigacion` **(t52.6)** |
+| **315** | OK, **racimo de SUCESION en el nucleo** | ver abajo |
+| **316** | OK, **tercer par calcado de `quality`** | ver abajo |
+| **317** | OK | `quality/descubrir_necesidades_del_cliente` contra `nucleo/customer_discovery` **(t60.9)** |
+
+### 305, LA AUDIENCIA INVERTIDA: un colateral que no se parece a ninguno
+
+`quality/planificacion_gobierno_organizaciones_familiares` contra
+`nucleo/framework_tres_rs_sucesion` **(t32.8)**
+
+**El par cumple.** El hallazgo es a quien le habla el nodo del nucleo. Sus cuatro
+pasos, verificados:
+
+> *"Invertir tiempo en construir una relacion de confianza **con el fundador** antes
+> de asumir el rol de CEO"*, *"educar gradualmente **al fundador** sobre su nuevo
+> rol"*, *"negociar incentivos... para **el fundador saliente**"*, *"asignar **al
+> fundador** un area donde su experiencia siga siendo valiosa"*.
+
+> **La segunda persona implicita apunta al CEO entrante o al inversor que gestiona
+> la sucesion. Y el lector de la app es el fundador.**
+>
+> **El nodo esta bien escrito y su contenido es correcto: le habla al actor
+> equivocado.**
+
+**Distinto de la voz corporativa** (que habla del tema a escala grande) **y distinto
+del id fosil** (donde el nombre miente). **Aqui el contenido acierta y el
+destinatario no.** A la ficha, como colateral nuevo.
+
+### 306, marco-pais: y el nodo del NUCLEO esta BIEN MARCADO
+
+`exportacion/garantias_producto_internacional` contra
+`nucleo/cumplimiento_magnuson_moss` **(t38.7)**
+
+**Verificado nodo por nodo, y sale al reves de lo que la sospecha esperaba: el nodo
+NO es un miembro nuevo de la ficha de marco-pais. Es el CONTRAEJEMPLO.**
+
+| donde | que dice |
+|---|---|
+| `condiciones_activacion` | *"**Si vendes, o piensas vender, productos a clientes en Estados Unidos**"* y *"cuando tu producto cuesta mas de 15 dolares y lo vendes a consumidores finales **en Estados Unidos**"* |
+| `resumen_teorico` | *"Esta es una ley federal **de Estados Unidos**... vendidos a clientes **en ese pais**"* |
+| `entregable_esperado` | *"...**si vendes a clientes en Estados Unidos**"* |
+
+> **Es exactamente el nodo-frontera condicional que la doctrina prescribe, hecho
+> bien.** Lo dice en la condicion, en el resumen y en el entregable: **tres veces.**
+
+**Y su hermano de libro tambien.** El detalle esta en `docs/PENDIENTES.md`.
+
+### 307, los gemelos del Paso 3 de Crosby
+
+`quality/medicion_calidad` contra `nucleo/metricas_calidad` **(t56.0)**.
+**Decimotercera del iman.**
+
+**El nodo del mundo y su `_2` (puesto 289) son DOS extracciones del mismo Paso 3 de
+Crosby**, y **los dos lo dicen en el titulo**: *"Medicion de la Calidad (Paso 3)"* y
+*"Paso 3: Medicion de la Calidad"*. **El colateral C2 sube a SEIS.**
+
+> **PRECISION VERIFICADA: esta pareja NO es una de las 36.** La medicion de las 36
+> exige que **ninguno de los dos** lleve marca, y `medicion_calidad` **tiene
+> `ids_alias` y un `merged_originals`**: **ya estuvo en una fusion.**
+>
+> **Es una figura distinta y algo peor: el base fue tratado en una fusion, y su
+> propio `_2` quedo fuera de ella.** Nadie miro al hermano mientras se fusionaba al
+> hermano.
+
+**Y no estan calcados**: el base define metricas por area e involucra a los
+responsables; el `_2` recolecta datos de inspeccion, **clasifica defectos por
+gravedad** y pone al **ingeniero de calidad** a revisarlos a diario. **Dos alturas
+del mismo paso, y el `_2` en voz de fabrica.**
+
+### 310, la retencion: un TRIO, y la cura YA se aplico
+
+`quality/estudio_lealtad_cliente` contra `nucleo/customer_retention_tactics`
+**(t54.3)**
+
+**Verificado, y el hallazgo es bueno**: el nucleo tiene **tres** nodos de
+retencion, y **el tercero cuenta la historia entera**.
+
+| nodo | pasos | estado |
+|---|---:|---|
+| `customer_retention_strategy` | **17** | **DEPRECADO** |
+| `customer_retention_tactics` | 6 | **ACTIVO**, y **lo tiene en sus `ids_alias`** |
+| `keep_customers_strategy` | 6 | ACTIVO |
+
+**El deprecado de 17 pasos era una ACRECION de manual**, con el duplicado a la
+vista: paso **7** (*"calcular la tasa real de abandono en los primeros 100 dias"*)
+y paso **11** (*"medir la tasa de abandono de clientes nuevos en sus primeros 100
+dias"*), **79,7 de similitud**.
+
+> **Y alguien ya lo destejio: `customer_retention_tactics`, seis pasos, es su
+> version destejida, y lo absorbio con alias.**
+>
+> **Es el DESTEJIDO POR REESCRITURA que la clase de acrecion propone, ya aplicado
+> una vez en este catalogo, antes de que la clase tuviera nombre.**
+
+**Lo que queda vivo es un par**, `keep_customers_strategy` y
+`customer_retention_tactics`, **estrategia contra tacticas y NO conectados**. A las
+citas, sin adjudicar.
+
+### 315, el racimo de SUCESION del nucleo
+
+`quality/planificacion_gobierno_organizaciones_familiares` contra
+`nucleo/identificacion_necesidad_sucesion_ceo` **(t45.4)**
+
+**Tres nodos de sucesion en el nucleo**: `founder_ceo_succession_process` (leido
+sano en el lote C3), `framework_tres_rs_sucesion` (305, el de la audiencia
+invertida) y este.
+
+> **Dato de grafo**: `identificacion_necesidad_sucesion_ceo` **declara a**
+> `framework_tres_rs_sucesion` **en sus siguientes**, asi que **dos de los tres son
+> escalera**. `founder_ceo_succession_process` **esta aparte**, sin arista con
+> ninguno de los dos.
+
+### 316, el TERCER par calcado de `quality`
+
+`quality/matriz_de_control_de_proceso` contra `nucleo/plan_mejora_procesos`
+**(t66.7)**. **Sexta exhibicion del costurado.**
+
+**`quality` tiene `plan_de_control` (8 pasos, puesto 122) y
+`matriz_de_control_de_proceso` (6 pasos), los dos de Juran, con el mismo metodo
+paso por paso:**
+
+| el metodo | en el plan | en la matriz |
+|---|---:|---:|
+| identificar variables que afectan al remedio y al cliente | 1 | 1 |
+| el estandar que dispara la accion, con limite de control | 2 | 2 |
+| como, donde y cuando se mide | 3 y 4 | 3 |
+| quien analiza y quien actua | 5 y 6 | 4 |
+| pasos para regresar el proceso a control | 7 | 5 |
+| **revisar la matriz** | 8 | 6 |
+
+> **La prueba mas limpia esta en el propio `plan_de_control`: su paso 8 dice
+> *"revisar LA MATRIZ"*.** **El nodo llamado plan se refiere a si mismo como
+> matriz.** Son el mismo artefacto con dos nombres.
+
+**Y NO estan conectados.** **CONTINUA O REPITE: repite, comprimido.**
+
+---
+
+## MARCADOR TRAS 317 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas** | **cero**, undecimo lote seguido |
+| pares calcados dentro de un mundo | **3** (dos de `quality`, uno de `franquicias`) |
+| colaterales de clase | **5**: voz y valvula, numero de paso, id fosil, **audiencia invertida** |
+| parejas del iman `metricas_calidad` | **trece** |
+
+> **Quedan 29 pares. Un lote y la cola muere.**

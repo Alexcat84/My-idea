@@ -1652,7 +1652,48 @@ pequeno*, *combinarlo con*), el mismo **diferir la critica**, el mismo refinar.
 > primero. **Es la misma figura del par de innovacion abierta del nucleo**: una
 > arista que ordena, pero un segundo peldano que vuelve a decir el primero.
 
-### o) `franquicias`, el par de la PRIMERA LLAMADA
+### o) `quality`, el par de CONTROL DE PROCESO (tercer calcado del mundo)
+
+`plan_de_control` (8 pasos, puesto **122**) y `matriz_de_control_de_proceso`
+(6 pasos, puesto **316**). **Los dos de `quality`, los dos de Juran.**
+
+| el metodo | en el plan | en la matriz |
+|---|---:|---:|
+| identificar variables que afectan al remedio y al cliente | 1 | 1 |
+| el estandar que dispara la accion, con limite de control | 2 | 2 |
+| como, donde y cuando se mide | 3 y 4 | 3 |
+| quien analiza y quien actua | 5 y 6 | 4 |
+| pasos para regresar el proceso a control | 7 | 5 |
+| **revisar la matriz** | 8 | 6 |
+
+> **La prueba mas limpia esta dentro del propio `plan_de_control`: su paso 8 dice
+> *"revisar LA MATRIZ"*.** **El nodo llamado plan se refiere a si mismo como
+> matriz.** Son el mismo artefacto con dos nombres.
+
+**CONTINUA O REPITE: repite, comprimido. Y NO estan conectados.**
+
+## p) `quality`, los GEMELOS DEL PASO 3, y una figura nueva
+
+`medicion_calidad` (5 pasos, puesto **307**) y `medicion_calidad_2` (5 pasos,
+puesto **289**). **Los dos de Crosby, y los dos con el numero de paso en el
+titulo**: *"Medicion de la Calidad (Paso 3)"* y *"Paso 3: Medicion de la Calidad"*.
+
+> **NO es una de las 36 parejas, y conviene que quede claro.** Aquella medicion
+> exige que **ninguno de los dos** lleve marca. **`medicion_calidad` tiene
+> `ids_alias` y un `merged_originals`: ya estuvo en una fusion.**
+>
+> **Es una figura distinta, y algo peor: el base fue TRATADO en una fusion, y su
+> propio `_2` quedo fuera de ella.** **Nadie miro al hermano mientras se fusionaba
+> al hermano.**
+
+**Y no estan calcados**: el base define metricas por area e involucra a los
+responsables; el `_2` recolecta datos de inspeccion, **clasifica defectos por
+gravedad** y pone al **ingeniero de calidad** a revisarlos a diario.
+
+> **Dos alturas del mismo paso, y el `_2` en voz de fabrica.** **La lectura de
+> fusion decide, y el superviviente no se adjudica aqui.**
+
+## q) `franquicias`, el par de la PRIMERA LLAMADA
 
 `proceso_primera_llamada` (7 pasos, puesto **270**) y
 `proceso_llamada_inicial_venta` (8 pasos, puestos **74** y **274**). **Los dos de
@@ -1672,6 +1713,45 @@ el avance con **el CIRF**.
 > version curada viviendo al lado de su hermana sin curar, y ninguna marcada.**
 
 **Sin adjudicar los dos.**
+
+---
+
+## r) `nucleo`, el racimo de SUCESION
+
+`founder_ceo_succession_process` (leido **sano** en el lote C3),
+`framework_tres_rs_sucesion` (puesto **305**) e
+`identificacion_necesidad_sucesion_ceo` (puesto **315**).
+
+> **Dato de grafo**: `identificacion_necesidad_sucesion_ceo` **declara a**
+> `framework_tres_rs_sucesion` **en sus siguientes**: **dos de los tres son
+> escalera.** El tercero **esta aparte**, sin arista con ninguno.
+
+**Y uno de los tres carga el colateral de AUDIENCIA INVERTIDA** (ver abajo), asi
+que **la lectura de este racimo no es solo de duplicado: es tambien de a quien le
+habla cada uno.**
+
+## s) `nucleo`, la RETENCION: un trio donde la cura YA se aplico
+
+| nodo | pasos | estado |
+|---|---:|---|
+| `customer_retention_strategy` | **17** | **DEPRECADO** |
+| `customer_retention_tactics` | 6 | **ACTIVO**, y lo tiene en sus `ids_alias` |
+| `keep_customers_strategy` | 6 | ACTIVO |
+
+**El deprecado de 17 pasos era una ACRECION de manual**, con el duplicado a la
+vista (paso 7 contra paso 11, las dos midiendo el abandono en los primeros 100
+dias, **79,7 de similitud**).
+
+> **Y alguien ya lo destejio.** `customer_retention_tactics`, seis pasos, **es su
+> version destejida, y lo absorbio con alias.**
+>
+> **Es el DESTEJIDO POR REESCRITURA que la clase 9 propone, ya aplicado una vez en
+> este catalogo, antes de que la clase tuviera nombre.** **El arreglo no es una
+> idea nueva: es una practica que esta casa ya ejecuto y funciono.**
+
+**Lo que queda vivo es un par**: `keep_customers_strategy` (estrategia) y
+`customer_retention_tactics` (tacticas), **NO conectados entre si**. **Sin
+adjudicar.**
 
 ---
 
@@ -1881,15 +1961,18 @@ Encontrado en el **caso 8**. **Dos titulos llevan el numero de paso de Crosby:**
 | `quality/eliminacion_causas_error` | **Paso 11**: Eliminacion de Causas de Error |
 | `quality/eliminacion_causas_error_2` | Eliminacion de Causas de Error - ECR (**Paso 11**) |
 | `quality/medicion_calidad_2` | **Paso 3**: Medicion de la Calidad |
+| `quality/medicion_calidad` | Medicion de la Calidad **(Paso 3)** |
 
 **Los dos de ECR entraron con la lectura del trio (lote 9), y son los dos que esa
 fusion absorbe**: ahi el titulo se cura sin trabajo extra. **El quinto llego en el
 lote 20 (puesto 289) y NO tiene fusion que lo cure**: hay que tratarlo aparte.
 
-> **Cinco titulos con el numero de paso de Crosby.** **Cuatro de los cinco son
-> pasos distintos de la MISMA secuencia** (3, 4, 11 y 13), lo que confirma que no
-> es un descuido suelto: **es una tanda de extraccion que copio los encabezados del
-> libro.**
+> **SEIS titulos con el numero de paso de Crosby**, y **los seis son pasos de la
+> MISMA secuencia** (3, 3, 4, 11, 11 y 13). **No es un descuido suelto: es una
+> tanda de extraccion que copio los encabezados del libro.**
+>
+> **Y el Paso 3 esta DOS veces**, en los dos gemelos de `medicion_calidad`: **el
+> mismo encabezado copiado dos veces desde el mismo libro.**
 
 **Es la secuencia del libro filtrandose al catalogo como si el usuario lo
 estuviera leyendo.** Un titulo que **presupone un orden que la app no muestra**:
@@ -2061,6 +2144,37 @@ contenido de cada nodo, y **no se ha corrido**.
 > **Queda declarada como clase con un solo miembro conocido.** Es lo unico honesto
 > que se puede decir hoy: **no que sea un caso aislado, sino que solo se ha medido
 > uno.**
+
+## C5. LA AUDIENCIA INVERTIDA: el contenido acierta, el destinatario no
+
+Encontrado en el **lote 21, puesto 305**. **Un miembro medido.**
+
+### `nucleo/framework_tres_rs_sucesion`
+
+Sus cuatro pasos, verificados: *"invertir tiempo en construir una relacion de
+confianza **con el fundador** antes de asumir el rol de CEO"*, *"educar
+gradualmente **al fundador** sobre su nuevo rol"*, *"negociar incentivos... para
+**el fundador saliente**"*, *"asignar **al fundador** un area donde su experiencia
+siga siendo valiosa"*.
+
+> **La segunda persona implicita apunta al CEO entrante o al inversor que gestiona
+> la sucesion. Y el lector de la app es el fundador.**
+
+### Por que es una clase propia y no cabe en las que ya hay
+
+| clase | por que no es esa |
+|---|---|
+| **voz corporativa** | no es que hable a escala grande: **habla a OTRA PERSONA** |
+| **id fosil** (C4) | alli **el nombre miente y el contenido esta bien**; aqui el contenido esta bien **y apunta al actor equivocado** |
+| **valvula** | no es que el lector no pueda hacerlo: **es que el nodo no le habla a el** |
+
+> **El nodo esta bien escrito. Simplemente no es para quien lo va a leer.**
+
+**Clase con UN miembro medido y sin barrido adjudicado.** Un barrido seria buscar
+la segunda persona implicita de cada nodo del nucleo, **y no se ha corrido**.
+
+> **Es lo unico honesto que se puede decir hoy: no que sea un caso aislado, sino
+> que solo se ha medido uno.**
 
 ---
 

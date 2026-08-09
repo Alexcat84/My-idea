@@ -896,6 +896,43 @@ vender.
 **Consecuencia para el barrido**: hay que mirar **títulos además de pasos**. Un
 barrido que solo lea `pasos_accionables` **no vería este caso.**
 
+### CORRECCIÓN de la entrada 4, y el MODELO que la ficha buscaba (lote 21)
+
+**La entrada 4 se registró como "forma menor" sin comprobar sus
+`condiciones_activacion`. Comprobadas, el nodo NO es un miembro de esta ficha:**
+
+`regla_disponibilidad_previa_venta` declara *"**Si vendes, o piensas vender,
+productos a clientes en Estados Unidos**"*. **Está condicionado.** Su único residuo
+es el nombre inglés de la regla en el título, que es **cosmético, no de válvula**.
+
+**Y su hermano de libro lo confirma.** El puesto 306 llevó a
+`nucleo/cumplimiento_magnuson_moss`, y está marcado **tres veces**:
+
+| dónde | qué dice |
+|---|---|
+| `condiciones_activacion` | *"Si vendes, o piensas vender, productos a clientes en **Estados Unidos**"* |
+| `resumen_teorico` | *"Esta es una ley federal **de Estados Unidos**... vendidos a clientes **en ese país**"* |
+| `entregable_esperado` | *"...**si vendes a clientes en Estados Unidos**"* |
+
+> **Los dos nodos de la ley de garantías, del mismo libro, están correctamente
+> condicionados. NO son deuda: son EL MODELO.**
+
+**Los miembros reales de esta ficha son TRES**, y lo que los separa del modelo es
+exactamente lo que hay que arreglar:
+
+| miembro | su condición | qué le falta |
+|---|---|---|
+| `proteccion_propiedad_intelectual_internacional` (P53) | *"si planea licenciar tecnología o formar joint ventures en el extranjero"* | **no nombra país alguno**, y cablea `uspto.gov` y `stopfakes.gov` |
+| `obtencion_marca_registrada` (P85) | *"cuando se planea franquiciar y aún no se posee un trademark **federal**"* | **dice "federal" sin decir de qué país** |
+| `screening_mercados_potenciales` (P214) | *"cuando se inicia la fase de selección de mercados"* | **genérica**, y cablea Census Bureau y Commercial Service |
+
+> **EL REMEDIO YA EXISTE EN EL CATÁLOGO, aplicado dos veces y del mismo libro.** No
+> hay que inventar cómo se arregla esta clase: hay que **copiar la condición
+> honesta** que los nodos de garantías ya llevan.
+>
+> **Y eso cambia el costo de la ficha**: no es reescribir contenido, es **añadir la
+> condición que dice a quién aplica.**
+
 **El nodo no se toca desde el gradiente.**
 
 Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviación)
