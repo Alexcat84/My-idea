@@ -246,6 +246,31 @@ en la cirugia 1 un peldano volvio **identico a como entro** por esto mismo.
 **Y la baranda de cifras seguira armada**: la base propuesta **no introduce ni una
 cifra** que no estuviera, ni en digitos ni en palabras.
 
+## EL REGISTRO DE TRASPLANTE, requisito de ejecucion
+
+**Regla 4 de la seccion LA FUENTE DE UN NODO FUSIONADO O TRASPLANTADO de
+`docs/GRADIENTE_NUCLEO_MUNDO.md`**, y aqui es obligatoria:
+
+> **Cada pieza del exceso que baje a `compras` lleva su REGISTRO DE TRASPLANTE en
+> el nodo RECEPTOR**: de que nodo vino (`gestion_inventario`) y con que fuente
+> (*Financial Intelligence for Entrepreneurs | Essentials of Supply Chain
+> Management - Michael H. Hugos*), **con la misma forma del registro de fusion**.
+>
+> **Un trasplante sin ese registro no se ejecuta.**
+
+**Aplica a los dos receptores**:
+`compras/calcula_costo_de_mantener_contra_costo_de_reponer` y
+`compras/define_punto_maximo_de_stock`.
+
+> **Matiz que la ejecucion tendra que resolver y este plan no decide**: en el
+> punto 3 quedo medido que **tres de las cuatro piezas ya viven en `compras`, y
+> mas hondo**. Si el trasplante resulta ser **cero texto movido** (el nucleo
+> simplemente baja y el mundo ya lo tenia), **hay que decidir si el registro de
+> trasplante se escribe igual**. **Mi lectura, no vinculante**: si no viaja
+> contenido, no hay autoria que acreditar, y el registro **sobra**; lo que si hace
+> falta es **la arista**, que es lo que conecta la base con la profundidad. **Que
+> lo fije el auditor antes de ejecutar.**
+
 ---
 
 # LO QUE ESTE PLAN NO DECIDE, y espera al fundador con el auditor

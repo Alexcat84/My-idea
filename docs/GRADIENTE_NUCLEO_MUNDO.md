@@ -143,3 +143,72 @@ completo** hasta que cada pieza del exceso tenga escrito **a que peldano del
 mundo va y como**. Si alguna pieza **no tiene peldano donde vivir**, eso se
 **declara**, y crear el nodo que falte es **adjudicacion aparte**, no un tramite
 de la cirugia.
+
+---
+
+# LA FUENTE DE UN NODO FUSIONADO O TRASPLANTADO
+
+## 1. En FUSION, el mecanismo actual es correcto y NO se cambia
+
+- **El sobreviviente conserva su campo `fuente`.**
+- **Cada absorbido queda en `merged_originals`** con su **id**, su **titulo** y
+  **SU fuente**.
+- **El archivo deprecado conserva la suya.**
+
+> **Nada se pierde.** Verificado: los **314 deprecados** del catalogo conservan
+> su campo `fuente`, sin excepcion.
+
+## 2. LA REGLA DE LECTURA, que faltaba
+
+> **La fuente completa de un nodo es la UNION de su campo `fuente` mas las
+> fuentes de sus `merged_originals`.**
+
+**Cualquier superficie que muestre fuentes al usuario deriva esa union.** Leer
+solo la portada **subdeclara la autoria**.
+
+**Medido sobre el catalogo:**
+
+| | |
+|---|---:|
+| activos con absorciones | **264** |
+| de esos, con **fuentes mezcladas** | **41** |
+
+**El ejemplar**: `costo_de_mala_calidad_copq` lleva contenido de **Juran, Deming
+y Crosby**, con **portada de Juran**. Diecinueve absorbidos, y su union de
+fuentes son tres libros distintos. **Mostrar solo la portada le quita el credito
+a dos autores.**
+
+## 3. NO se reescriben las portadas
+
+**Duplicar en el campo `fuente` lo que `merged_originals` ya guarda es crear
+divergencia futura**: dos sitios que dicen lo mismo hoy y dejan de decirlo el dia
+que alguien actualiza uno.
+
+> **El dato se lee, no se copia.**
+
+## 4. En TRASPLANTE, la regla es OBLIGATORIA ANTES de ejecutar
+
+**El trasplante es la operacion nueva de la doctrina de las dos mitades, y no es
+una fusion**: **nadie se depreca**, asi que **`merged_originals` no aplica por si
+solo**.
+
+> **Todo contenido trasplantado viaja con su fuente, registrada en el nodo
+> RECEPTOR con la misma forma del registro de fusion**: de que nodo vino, con que
+> fuente.
+>
+> **Un trasplante sin ese registro NO SE EJECUTA.**
+
+## 5. Nota de higiene, sin tarea
+
+**Parte de los 41 mezclados no son autorias distintas: son variantes de escritura
+de la misma cadena.** Verificado:
+
+- **Dekker con y sin punto y coma** (`... - Dekker, Sidney` y `... - Dekker,
+  Sidney;`)
+- **folletos hermanos** `OSHA3885` y `OSHA3886`
+- y algunas mas del mismo tipo: **Berman/Knight** con y sin autores,
+  **Osterwalder** con parentesis y con guion, **Blank** en dos ordenes.
+
+> **La normalizacion de cadenas de fuente es FICHA DORMIDA, no urgencia.** Se
+> anota para que nadie confunda ruido de puntuacion con coautoria real al leer la
+> cifra de 41.
