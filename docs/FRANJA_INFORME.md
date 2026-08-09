@@ -13,8 +13,8 @@ apartado 6.3.
 
 Ningun nodo se toco. Este documento es la entrega. **La adjudicacion del
 auditor sobre las 2 A y las 6 B ya llego y esta en la seccion 9**; los racimos
-quedan para despues de la muestra, y el 5% de muestra de las D lo sortea el
-auditor (seccion 10).
+quedan para despues de la muestra, y **la muestra del 5% de las D ya esta
+sorteada, versionada y con su primera tanda leida** (seccion 10).
 
 ---
 
@@ -460,7 +460,8 @@ resto sigue abierto.
    propio catalogo ya tiene como vara.
 6. **Los seis choques de doctrina** entre mundo y nucleo.
 7. ~~**El 5% de muestra aleatoria de las D**, que el auditor sortea.~~
-   **SORTEADO Y PLANIFICADO**, ver seccion 10.
+   **SORTEADA, VERSIONADA Y EN CURSO**: 61 pares, 20 leidos y los 20 se
+   sostienen. Ver seccion 10.
 
 ---
 
@@ -1383,7 +1384,7 @@ escribir:
 
 ### 10.1 La muestra de validacion del cribado
 
-**El auditor leera 61 pares D, el 5%, sorteados con semilla `81febf5c`, en
+**El auditor lee 61 pares D, el 5%, sorteados con semilla `81febf5c`, en
 tandas.** Es la validacion final del cribado: si la muestra no encuentra en las
 D nada que debiera haber sido A, B o C, la clasificacion de las 1.228 D queda en
 pie.
@@ -1391,11 +1392,147 @@ pie.
 El 5% se calcula sobre las **1.228 D** del archivo cerrado (1.228 por 0,05 son
 61,4, que redondea a 61).
 
-> **Detalle que dejo anotado y no invento:** el encargo fija la semilla pero no
-> el procedimiento de sorteo (que generador, sobre que orden, con o sin
-> reemplazo). No genero la lista por mi cuenta, porque una lista sacada de un
-> procedimiento distinto al del auditor no seria reproducible ni verificable.
-> La lista la trae el auditor, o me dicta el procedimiento y la reproduzco.
+#### El procedimiento del sorteo, fijado y reproducible
+
+El encargo anterior fijaba la semilla pero no el procedimiento, y sin
+procedimiento una semilla no reproduce nada. **El auditor lo fijo, y queda
+escrito aqui para que cualquiera pueda repetir el sorteo y obtener la misma
+lista:**
+
+```python
+import json, random
+V = [json.loads(l) for l in open('docs/FRANJA_VEREDICTOS.jsonl', encoding='utf-8') if l.strip()]
+D = sorted(v['puesto_franja'] for v in V if v['clase'] == 'D')   # 1228 puestos
+muestra = sorted(random.Random("81febf5c").sample(D, 61))        # sin reemplazo
+```
+
+Poblacion: los puestos de clase D de `docs/FRANJA_VEREDICTOS.jsonl` **en orden
+ascendente**, que son 1.228. Generador: `random.Random("81febf5c")` de Python.
+Extraccion: `sample` de 61, **sin reemplazo**. Resultado ordenado ascendente.
+
+> **REPRODUCIDO Y VERIFICADO.** Corri el procedimiento contra el archivo y la
+> lista sale **identica a la dictada por el auditor, los 61 puestos, en el mismo
+> orden**. Cero diferencias en los dos sentidos.
+
+#### La lista completa, versionada
+
+Los 61 puestos sorteados, con su par y su tanda. **Esta es la lista de
+referencia**: si una relectura futura no coincide con ella, la que manda es la
+que sale del procedimiento de arriba corrido sobre el archivo.
+
+| puesto | tanda | par |
+|---:|:--:|---|
+| **18** | **1** | `compras/preguntas_abiertas_motivacion_proveedor` contra `gestion_procurement_consumo` |
+| **40** | **1** | `health_safety/revision_de_aprendizaje` contra `curse_cinco_culpas` |
+| **72** | **1** | `entrega/elegir_modo_transporte_volumen_distancia` contra `programacion_entregas_delivery_scheduling` |
+| **85** | **1** | `quality/sistema_gestion_calidad` contra `metricas_calidad` |
+| **103** | **1** | `quality/inhibidores_del_breakthrough` contra `coraje_para_pivotar` |
+| **130** | **1** | `quality/planificacion_estrategica_despliegue` contra `creacion_estrategia_cadena_suministro` |
+| **135** | **1** | `compras/preguntas_abiertas_motivacion_proveedor` contra `investigacion_como_habilidad_clave` |
+| **258** | **1** | `quality/matriz_de_planificacion_arbol` contra `plan_gestion_recursos_humanos` |
+| **268** | **1** | `franquicias/contratar_vendedor_franquicia` contra `contratar_cerrador_de_ventas` |
+| **303** | **1** | `risk_management/deja_de_ignorar_el_riesgo` contra `no_jugar_con_probabilidades` |
+| **363** | **1** | `entrega/mapear_servicio_antes_durante_despues` contra `encuesta_satisfaccion_postproyecto` |
+| **378** | **1** | `quality/mantener_las_ganancias` contra `mejora_continua_relentless` |
+| **392** | **1** | `quality/monitoreo_continuo_benchmarking` contra `mantener_puntaje_innovacion` |
+| **449** | **1** | `quality/empoderamiento_personal_frontline` contra `documento_quien_es_quien_equipo` |
+| **462** | **1** | `quality/innovacion_tipo_ii` contra `pensamiento_convergente_divergente` |
+| **508** | **1** | `environmental/optimizacion_tecnologia_cadena_suministro` contra `cuatro_categorias_desempeno_cadena_suministro` |
+| **580** | **1** | `quality/gestion_participativa_qc_circle_supervisores` contra `entrenamiento_gerencial` |
+| **597** | **1** | `compras/preparate_para_marcharte_del_trato` contra `necesidad_vs_deseo_en_ma` |
+| **602** | **1** | `risk_management/las_formas_en_que_los_proyectos_mueren` contra `definicion_producto_proyecto` |
+| **603** | **1** | `compras/negocia_por_intereses_no_posiciones` contra `prevencion_objeciones_vs_manejo` |
+| **621** | 2 | `quality/planificacion_cadena_suministro` contra `plan_gestion_adquisiciones` |
+| **622** | 2 | `franquicias/ingenieria_inversa_metas` contra `metrics_that_matter_framework` |
+| **631** | 2 | `quality/mejora_del_sistema_responsabilidad_gerencial` contra `no_sacrificar_calidad_por_velocidad` |
+| **657** | 2 | `quality/cuestionario_autoevaluacion_gerencial_calidad` contra `framework_excelencia_operacional` |
+| **673** | 2 | `quality/sistema_pull_push` contra `pull_no_push` |
+| **686** | 2 | `quality/rotacion_de_puestos_para_mejora_calidad` contra `hr_calidad_gestion` |
+| **715** | 2 | `franquicias/alternativa_operaciones_propias` contra `decision_autofinanciamiento_vs_inversion` |
+| **730** | 2 | `quality/equipo_conjunto_de_mejora_con_proveedores` contra `plataforma_colaboracion_tiempo_real` |
+| **756** | 2 | `risk_management/nombra_tus_suposiciones_fragiles` contra `definicion_producto_proyecto` |
+| **796** | 2 | `entrega/medir_satisfaccion_real_del_cliente` contra `metricas_servicio_cliente_bts_bto` |
+| **799** | 2 | `environmental/value_stream_mapping_ambiental` contra `modelo_simulacion_cadena_suministro_circular` |
+| **804** | 2 | `compras/muestra_puntos_en_comun_antes_de_negociar` contra `preguntas_situacion` |
+| **819** | 2 | `environmental/alineacion_engagement_estrategia_general` contra `cultura_de_buena_empresa` |
+| **822** | 2 | `quality/institucionalizar_capacitacion` contra `rediseno_procesos_negocio_cx` |
+| **853** | 2 | `quality/ausencia_valor_verdadero` contra `metricas_calidad` |
+| **947** | 2 | `quality/desarrollo_expertos_capaces` contra `entrenamiento_funcional_empleados` |
+| **957** | 2 | `quality/establecer_proyecto_y_metas_diseno` contra `definicion_objetivos_proyecto_sistema` |
+| **961** | 2 | `quality/aceptacion_de_fallas_como_inevitables` contra `regla_simplificada_tolerancia_errores` |
+| **1085** | 2 | `risk_management/el_riesgo_eres_tu` contra `transicion_post_sucesion` |
+| **1096** | 2 | `franquicias/mito_control_calidad_corporativo` contra `decision_intensidad_capital` |
+| **1128** | 2 | `exportacion/negociacion_acuerdo_representante_extranjero` contra `negociacion_contratos_proveedores` |
+| **1130** | 2 | `quality/establecer_estandares_desempeno` contra `checklist_sistema_stage_gate_primera_clase` |
+| **1135** | 2 | `quality/vacios_conocimiento_cliente` contra `enfoque_mercado_voc` |
+| **1143** | 2 | `quality/roi_proyectos_calidad` contra `ranking_proyectos_por_npv` |
+| **1170** | 2 | `quality/prepare_phase_roadmap` contra `fase_diseno_prototipado_modelos` |
+| **1179** | 2 | `quality/vacios_conocimiento_cliente` contra `categorias_entusiasmo_cliente` |
+| **1207** | 2 | `quality/diseno_servicio_calidad` contra `encuesta_satisfaccion_postproyecto` |
+| **1217** | 2 | `risk_management/reporta_el_riesgo_sin_maquillaje` contra `cultura_transparencia_organizacional` |
+| **1301** | 2 | `quality/evaluacion_desempeno_proyectos` contra `mantener_puntaje_innovacion` |
+| **1312** | 2 | `compras/prepara_posicion_agenda_antes_negociar` contra `obtencion_de_compromiso` |
+| **1362** | 2 | `quality/calculo_roi_calidad` contra `costo_de_oportunidad` |
+| **1376** | 2 | `quality/desarrollar_caracteristicas_proceso` contra `determine_what_to_prototype` |
+| **1379** | 2 | `risk_management/correr_hacia_el_riesgo` contra `fallo_como_aprendizaje_startup` |
+| **1384** | 2 | `environmental/pilotos_estrategia_sostenibilidad` contra `fase_mobilizar_modelo_negocio` |
+| **1399** | 2 | `risk_management/escepticismo_sano_ante_el_riesgo` contra `matriz_probabilidad_impacto` |
+| **1426** | 2 | `environmental/pilotos_estrategia_sostenibilidad` contra `romper_vision_en_experimentos` |
+| **1436** | 2 | `quality/auditorias_gerenciales_periodicas` contra `cultura_feedback_alta_frecuencia` |
+| **1467** | 2 | `exportacion/promocion_sitio_web` contra `test_socios_de_trafico` |
+| **1519** | 2 | `quality/reduccion_inventario_calidad` contra `gestion_riesgo_cadena_suministro` |
+| **1529** | 2 | `franquicias/manejo_objeciones_venta_franquicia` contra `desarrollo_presentacion_problema` |
+| **1565** | 2 | `entrega/decidir_vender_solo_online_o_tambien_tienda_fisica` contra `channels_hypothesis_physical` |
+
+#### Marcador de la muestra
+
+| | |
+|---|---:|
+| **pares D leidos por el auditor** | **20** de **61** |
+| de esos, se sostienen como **D limpios de vara** | **20** |
+| **violaciones encontradas** | **0** |
+| **dudosos mal archivados** | **0** |
+
+#### TANDA 1 (puestos 18 a 603): VEINTE DE VEINTE
+
+**Los veinte primeros de la muestra se sostienen.** El auditor los leyo contra
+el grafo, uno por uno. **Cero violaciones de la vara y cero dudosos mal
+archivados**: los veinte estaban bien clasificados como D.
+
+**Lo que eso dice del cribado, con la cautela que corresponde:** veinte de
+veinte es un tramo limpio, no una prueba cerrada. Con 20 de 61 leidos, lo que
+esta validado es el primer tercio de la muestra. **Las dos tandas que faltan son
+las que deciden.**
+
+#### El matiz de F303: HUECO DEL ENCARGO, no error del cribado
+
+Un solo par de la tanda dejo materia, y **el auditor lo adjudica como hueco del
+encargo, no como fallo de la clasificacion**.
+
+**Franja 303**: `risk_management/deja_de_ignorar_el_riesgo` contra
+`no_jugar_con_probabilidades`. **El par porta una FRONTERA DE DOCTRINA**, y las
+dos caras estan verificadas contra el grafo:
+
+| | el mundo dice | el nucleo dice |
+|---|---|---|
+| **nodo** | `deja_de_ignorar_el_riesgo` (risk_management) | `no_jugar_con_probabilidades` (nucleo) |
+| **fuente** | DeMarco y Lister, *Waltzing with Bears*, cap. 1 y 2 | Ben Horowitz, *The Hard Thing About Hard Things* |
+| **doctrina** | *dedica quince minutos a proposito a escribir lo que preferirias no pensar*, y **date permiso de pensar en negativo un rato cada semana** | *rechaza la paralisis de las probabilidades*, **evita construir planes de contingencia que desvien el enfoque de encontrar la salida** |
+
+**Por que el veredicto D era correcto.** El encargo listaba ocho figuras que
+disparaban clase C, y **frontera de doctrina no estaba entre ellas**. Con las
+instrucciones dadas, un par sano en gradiente cuyo unico hallazgo es un choque
+de doctrina se clasifica D, que es exactamente lo que se hizo, **y la nota del
+choque quedo escrita en la razon del veredicto** desde el primer momento, junto
+con el parentesco con la franja 140.
+
+> **El cribado no perdio la figura: la vio, la anoto y no tenia casilla donde
+> ponerla.** El hueco es de la lista de figuras, no de la lectura.
+
+**La figura entra a la ficha** como FRONTERA CANDIDATA junto a las cuatro
+formuladas, con sus dos nodos y la nota de parentesco con
+`risk_management/correr_hacia_el_riesgo`, que sale del mismo capitulo del mismo
+libro que el nodo del mundo.
 
 ### 10.2 Los treinta racimos: primer censo, adjudicacion despues
 
@@ -1428,4 +1565,5 @@ sobrevive, es salud del nucleo. Si desaparece, era el metro.
 ---
 
 **Estado del encargo:** cribado cerrado (1.606 de 1.606), agujero de borde
-cerrado, A y B adjudicadas, muestra D y racimos en manos del auditor.
+cerrado, A y B adjudicadas, **muestra D sorteada y en curso (20 de 61, veinte de
+veinte se sostienen)**, racimos esperando al barrido.

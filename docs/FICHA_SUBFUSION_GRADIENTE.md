@@ -875,6 +875,13 @@ por el otro lado; profundizar solo el mundo deja la costura viva.
 La unica que deja tarea es `quality/optimizacion_de_procesos` (franja 28), flaco
 y autorreferente: **candidato a engorde, no caso de vara.**
 
+**Y la validacion del cribado ya empezo**: el auditor sorteo la muestra del 5% de
+las D (61 pares, semilla `81febf5c`, procedimiento fijado y reproducido) y leyo
+la **tanda 1, veinte de veinte, contra el grafo**. **Cero violaciones y cero
+dudosos mal archivados.** Con 20 de 61 leidos lo validado es el primer tercio;
+las dos tandas que faltan son las que deciden. **El unico matiz de la tanda dio
+una FRONTERA CANDIDATA nueva**, registrada mas abajo en esta ficha.
+
 ---
 
 ## El registro original de la clase, conservado
@@ -1463,7 +1470,7 @@ moneda: la cola confirma tanto lo curado como lo pendiente.
 
 ---
 
-# FRONTERAS CON CHOQUE DE FUENTES: son CUATRO, y hay patron
+# FRONTERAS CON CHOQUE DE FUENTES: CUATRO formuladas, DOS candidatas, y hay patron
 
 **No son violaciones de gradiente. Son doctrinas que se contradicen dentro del
 catalogo**, y un lector que reciba las dos sale con instrucciones opuestas.
@@ -1556,6 +1563,46 @@ si se reduce la base, y **documentar la decision segun criticidad del componente
 hay que inventarlo: ya esta en el catalogo.** **Lo que si se
 > puede afirmar ya es que no son errores: son dos escuelas, y el catalogo las
 > sirve a la vez sin avisar.**
+
+## FRONTERA CANDIDATA: la negacion del riesgo contra el determinismo del CEO
+
+**Llega por la muestra D del cribado de la franja** (tanda 1, franja **303**;
+detalle en `docs/FRANJA_INFORME.md`, apartado 10.1). **Entra como candidata, no
+como formulada**, junto a las cuatro de arriba.
+
+| | el mundo dice | el nucleo dice |
+|---|---|---|
+| **nodo** | `risk_management/deja_de_ignorar_el_riesgo` | `nucleo/no_jugar_con_probabilidades` |
+| **fuente** | DeMarco y Lister, *Waltzing with Bears*, cap. 1 y 2 | Ben Horowitz, *The Hard Thing About Hard Things* |
+| **doctrina** | **date permiso de pensar en negativo un rato cada semana**: dedica quince minutos a proposito a escribir lo que preferirias no pensar, marca los miedos que ignoras porque no sabes resolverlos, y dale una idea al mas feo | **rechaza la paralisis de las probabilidades**: concentra el cien por ciento del esfuerzo en buscar la solucion y **evita construir planes de contingencia que desvien el enfoque de encontrar la salida** |
+
+**Los cuatro pasos de cada lado verificados contra el grafo.** El choque es
+literal y esta en el mismo acto: **el mundo manda reservar tiempo semanal para
+imaginar lo que puede fallar, y el nucleo manda no gastar foco en el plan de
+lo que puede fallar.** Un lector que reciba los dos sale con instrucciones
+opuestas, que es la definicion de esta seccion.
+
+> **Parentesco que agranda el lado del mundo, verificado**:
+> `risk_management/correr_hacia_el_riesgo` **sale del mismo capitulo del mismo
+> libro** (DeMarco y Lister, cap. 1) y **es la otra cara de la misma doctrina**:
+> *un proyecto sin riesgo casi siempre es un proyecto sin premio*, y manda
+> **decidir a proposito cuanto riesgo estas dispuesto a correr**. No es un nodo
+> suelto contra Horowitz: es **una escuela entera** la que esta del lado del
+> mundo.
+
+> **Por que entra como CANDIDATA y no numerada.** Ya hay otra candidata en pie,
+> el sexto nodo del racimo de la culpa (`responsabilidad_personal_en_gestion`,
+> Crosby contra Deming), y **ninguna de las dos esta formulada entera todavia**:
+> a esta le falta el barrido de `risk_management` para saber si el mundo tiene
+> mas piezas del lado de DeMarco, y si el nucleo tiene alguna pieza neutral como
+> la que aparecio en la frontera 4. **No le pongo ordinal a ninguna hasta que se
+> formulen.**
+
+> **Y como llego importa**: el cribado **vio esta figura y la anoto en la razon
+> del veredicto**, pero la clasifico D porque *frontera de doctrina* **no estaba
+> entre las ocho figuras que disparaban C** en el encargo. **Es hueco de la lista
+> de figuras, no de la lectura.** Si el barrido intra-dominio va a cazar
+> fronteras, la lista de figuras tiene que decirlo antes de empezar.
 
 ---
 

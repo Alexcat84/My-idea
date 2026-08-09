@@ -822,6 +822,34 @@ igual que ya está escrito para la ficha hermana.
 
 **Ningún nodo se toca desde aquí.**
 
+#### Adjudicación provisional del auditor: es un CASO A ESCALA DE MUNDO
+
+Con el conteo de arriba sobre la mesa (20 de 55 nodos: 13 con CUI, 4 con NIST, 4
+con SP 800, 4 con POA&M, con solapes), **el auditor reclasifica el caso**. Deja
+de ser *tres instancias sueltas de marco-país en un mundo* y pasa a ser
+**un caso a escala de mundo**: cuando más de un tercio de los nodos comparten el
+mismo encuadre nacional, el encuadre es del dominio, no de los nodos.
+
+**Remedio candidato, provisional:**
+
+> **UNA condición o declaración de marco a nivel de dominio, no veinte parches
+> nodo a nodo.** Los principios viajan (la disciplina de identificar proveedores
+> críticos, de evaluarlos antes de contratar, de tener plan de respuesta); **los
+> artefactos de cumplimiento son de Estados Unidos** (CUI, NIST SP 800-171, el
+> POA&M). Una sola declaración que separe las dos cosas cubre los veinte nodos y
+> no deja veinte redacciones distintas de la misma advertencia.
+
+**Es provisional en dos sentidos, y los dos importan:**
+
+1. **La decisión final es del fundador**, y se toma en el barrido, no aquí.
+2. **El remedio es candidato, no dictado.** Antes de escribirlo hay que ver los
+   veinte nodos juntos: puede que unos pocos sí necesiten reencuadre propio (los
+   que hacen del artefacto el objeto del nodo, no una mención), y esos no los
+   cubre ninguna declaración de dominio.
+
+**Sigue sin tocarse nada.** Esta entrada solo cambia de qué tamaño es el
+problema y por dónde conviene agarrarlo.
+
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
 
 **Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no
