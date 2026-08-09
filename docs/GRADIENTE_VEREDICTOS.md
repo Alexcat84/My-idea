@@ -593,3 +593,180 @@ sub-fusion**.
 
 **La ficha de sub-fusion del nucleo ya tiene entidad propia: cuatro temas
 anotados.**
+
+---
+
+## LOTE 6, puestos 28 a 40 por senal (trece pares)
+
+**9 ago 2026.** Etiquetas y puestos **coinciden**; las trece parejas de cifras
+verificadas contra `docs/GRADIENTE_PARES.jsonl`.
+
+### 28. FALSO PAR FUNCIONAL
+
+`risk_management/riesgo_no_es_mala_suerte` contra
+`nucleo/matriz_probabilidad_impacto` **(t33.0, s0.8297)**
+
+El del mundo **define que es riesgo y filtra el ruido**: momento **ANTERIOR** de
+la secuencia, no el mismo tema a dos alturas.
+
+### 29. GRADIENTE OK
+
+`quality/evaluacion_gestion_riesgos` contra `nucleo/plan_gestion_riesgos`
+**(t46.6, s0.8273)**
+
+El nucleo **gobierna** (roles, categorias, reservas); el mundo **evalua opciones
+con metodo** (actuar contra no actuar, efectos secundarios, costo-beneficio).
+**Angulos complementarios.**
+
+### 30. GRADIENTE OK POR ESPECIALIZACION
+
+`environmental/computacion_en_la_nube` contra
+`nucleo/cloud_computing_supply_chain` **(t41.6, s0.8272)**
+
+El mundo anade **eficiencia energetica, metricas ambientales del proveedor y
+ahorro proyectado** sobre la migracion generica del nucleo.
+
+### 31. SUB-FUSION DEL LADO MUNDO, primera del barrido, en `quality`
+
+`quality/plan_de_gestion_de_riesgos` contra
+`nucleo/matriz_probabilidad_impacto` **(t36.8, s0.8267)**
+
+**El hallazgo no es el par**: es que sus pasos son **casi identicos** a los de
+`quality/evaluacion_gestion_riesgos` (puesto 29). La misma lluvia exhaustiva, el
+mismo actuar contra no actuar con efectos secundarios, el mismo costo-beneficio,
+las mismas acciones con responsables.
+
+> **El metodo de preocupaciones, opciones y consecuencias escrito DOS veces en el
+> mismo mundo.**
+
+A la **ficha de sub-fusion, lado mundo**, para lectura de fusion clasica
+(absorcion con alias, o el matiz que los separe). **Sin ejecutar.**
+
+### 32. GRADIENTE OK
+
+`environmental/logistica_inversa_rentable` contra
+`nucleo/logistica_inversa_retornos` **(t40.8, s0.8264)**
+
+El nucleo **procesa retornos**; el mundo los **convierte en centro de beneficio**
+(jerarquia de destino, canales de reventa, KPI). **Ejemplar.**
+
+### 33. GRADIENTE OK
+
+`quality/auditoria_de_producto` contra `nucleo/quality_audit`
+**(t33.0, s0.8253)**
+
+Muestreo, clasificacion de fallas por gravedad, indice por unidad y comparacion
+temporal contra los **cuatro pasos genericos** del nucleo. **Ejemplar.**
+
+### 34. GRADIENTE OK apretado
+
+`environmental/eco_efectividad_2` contra
+`nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t11.0, s0.8247)**
+
+El mundo **cuestiona el diseno mismo** y **fija metas positivas**; sube respecto
+del mapeo del nucleo, **sin holgura**.
+
+### 35. FALSO PAR FUNCIONAL
+
+`quality/evaluacion_gestion_riesgos` contra `nucleo/risk_audit`
+**(t54.9, s0.8218)**
+
+**Evaluar opciones de un riesgo** contra **auditar el proceso al cierre del
+proyecto.** Temas vecinos.
+
+### 36. GRADIENTE OK POR ESPECIALIZACION, apretado
+
+`quality/revision_progreso_breakthrough` contra
+`nucleo/revision_portafolio_periodica` **(t38.6, s0.8201)**
+
+El mundo aplica la revision periodica a **proyectos de mejora** con costo,
+inversion y ahorro neto; el nucleo revisa **el portafolio entero**. **Objetos
+distintos.**
+
+### 37. VIOLACION INVERTIDA, **SEGUNDO CARGO** al mismo nodo del nucleo
+
+`quality/inventory_analysis_lean` contra `nucleo/gestion_inventario`
+**(t55.7, s0.8198)**
+
+El analisis lean del mundo (flujo de valor, estrategico contra desperdicio,
+minimos y maximos, conteo ciclico) **ya esta casi todo DENTRO** del nodo de nueve
+pasos del nucleo.
+
+`gestion_inventario` **pisa ahora a DOS mundos**: `compras` en el puesto 23 y
+`quality` aqui. **El caso de reencuadrarlo a version base queda reforzado** y
+sigue **PENDIENTE DEL VISTO DEL FUNDADOR**.
+
+> **Precision verificada contra el grafo antes de escribirla, y traida por el
+> ejecutor sin decidirla.** De los cuatro elementos del nodo lean, **uno solo
+> esta dentro del nucleo**, y ahi el nucleo es en efecto mas profundo: los
+> minimos y maximos por demanda y variacion los cubren su inventario de
+> seguridad (paso 7) y sus puntos de reorden (paso 9). Los otros tres **no
+> estan**: el flujo de valor y el estrategico contra desperdicio son aporte
+> propio del mundo, y el **conteo ciclico** del mundo es exactitud de registros,
+> mientras el paso 6 del nucleo es **inventario ciclico** en el sentido de lote
+> optimo entre costo de ordenar y de mantener. **Son cosas distintas.**
+>
+> **El veredicto no cambia y el cargo se sostiene**: el nodo de pago **no sube**
+> sobre el gratuito en lo que comparten, y el nucleo sigue teniendo profundidad
+> de curso de operaciones. Lo que se corrige es **el alcance del solape**: es
+> parcial, no casi total, y el mundo tiene material propio que sobreviviria a
+> cualquier arreglo.
+
+### 38. FRONTERA CON CHOQUE DE FUENTES, la segunda
+
+`compras/revela_tu_propio_plazo_limite_al_negociar` contra
+`nucleo/negociacion_con_plazos_artificiales` **(t44.0, s0.8169)**
+
+El mundo ensena a **REVELAR** tu fecha limite real al proveedor; el nucleo ensena
+a **IMPONER** fechas artificiales para forzar decisiones. **Contradiccion frontal
+integrada.**
+
+**Descargo parcial**: los contextos son distintos (relacion larga con proveedor
+contra venta en paralelo a varios compradores), y puede que **ambas tacticas sean
+correctas en su contexto**.
+
+> **Pero ninguno de los dos nodos sabe que el otro existe, y un usuario que lea
+> ambos sale con instrucciones opuestas sin la llave del contexto.**
+
+A la **ficha de fronteras**, junto al caso de objeciones (par 6): quien se queda
+con que, y **si el contexto se escribe en los nodos**.
+
+### 39. FALSO PAR FUNCIONAL
+
+`risk_management/busca_el_riesgo_antes_de_que_te_busque` contra
+`nucleo/matriz_probabilidad_impacto` **(t32.7, s0.8167)**
+
+**CUANDO** identificar contra **COMO** priorizar. Momento anterior.
+
+### 40. GRADIENTE OK
+
+`entrega/flujo_decision_devoluciones` contra
+`nucleo/logistica_inversa_retornos` **(t32.6, s0.8164)**
+
+El **flujo operativo de 48 horas** con destino por defecto por motivo, sobre el
+registro y la medicion del nucleo.
+
+> **Tres nodos sanos sobre retornos en tres alturas**: nucleo, `entrega` y
+> `environmental` (par 32).
+
+---
+
+## MARCADOR TRAS 40 DE 346
+
+| ficha | estado |
+|---|---|
+| VIOLACIONES clasicas | **6** (5 curadas en la cirugia 1) |
+| VIOLACIONES INVERTIDAS | **2 cargos sobre UN solo nodo del nucleo** (`gestion_inventario`) |
+| FRONTERAS con choque de fuentes | **2** (objeciones, plazos) |
+| SUB-FUSION | **4 temas del nucleo** mas **1 de `quality`** |
+
+**TENDENCIA CONFIRMADA:**
+
+> **Bajando la senal, la cola encuentra cada vez menos gradiente roto y cada vez
+> mas deuda estructural del nucleo y costuras de fusion.**
+
+**Nota de trazabilidad del ejecutor, sin decidir nada**: la ficha de sub-fusion
+del nucleo lleva la cuenta en **cuatro** desde el cierre del lote 5, pero este
+documento solo **nombra tres**: Goldratt (pares 9 y 10), brainstorming en trio
+(pares 13, 18 y 24) y `criterios_seleccion_proveedores` (par 27). El cuarto es
+una cuenta sin nombre y conviene fijarlo al abrir la ficha.
