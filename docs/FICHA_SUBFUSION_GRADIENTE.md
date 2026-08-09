@@ -455,20 +455,60 @@ que relee entero cada nodo antes de destejerlo.
 
 > **El limite queda declarado, no tapado. Ninguna cola sustituye a leer el nodo.**
 
+## CONFIRMADAS DE REBOTE, quinta y sexta (lote 17)
+
+**Las dos YA estaban citadas en la cola.** No son falsos negativos: **son citas que
+el gradiente leyo antes de que les tocara su turno.**
+
+### `core/voz_del_cliente_voc`, 10 pasos: DOBLE de la observacion
+
+**En la cola con pareja 57,1 y bloque 50,2.**
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | preparate para observar, **observa en su entorno**, complementa la entrevista, usa lo observado desde el inicio, manten contacto |
+| **6 a 10** | **observa una vez al mes**, ponte en su lugar, atiende los detalles pequenos, anota y revisa, busca patrones |
+
+**El duplicado literal**: paso **2** contra paso **6**, los dos mandando observar
+al cliente en su contexto real. **La segunda tanda repite el ciclo entero.**
+
+> **Nota honesta sobre el instrumento**: su corte propuesto fue **tras el paso 4**,
+> y la lectura pone la frontera **tras el 5**. **Se quedo a un paso.** En los cinco
+> casos anteriores habia acertado el corte exacto; **aqui lo aproxima.** Sigue
+> siendo util (el corte orienta), pero **no es una coordenada, es una pista.**
+
+### `core/future_scenarios_planning`, 13 pasos: CUATRO bloques
+
+**En la cola con pareja 53,7 y bloque 50,1.**
+
+| bloque | de que habla |
+|---|---|
+| **1 a 3** | el generico: drivers, matriz, narrar escenarios |
+| **4 a 5** | el del **Canvas**: workshop y preguntas por bloque |
+| **6 a 9** | **IA, tanda 1**: lineal contra exponencial, contingencia, revision trimestral |
+| **10 a 13** | **IA, tanda 2**: definir escenarios de IA, evaluar impacto, senales de alerta, revision periodica |
+
+> **Las dos tandas de IA se repiten ENTRE SI**: las dos definen escenarios, evaluan
+> el impacto en el modelo de negocio y mandan revisar con periodicidad.
+>
+> **Es el primer ejemplar con CUATRO bloques de tres fuentes distintas**, y el
+> primero donde **la repeticion no es entre el bloque viejo y el nuevo, sino entre
+> dos bloques NUEVOS del mismo tema.**
+
 ---
 
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **17** de **128** |
-| de esas, costura **confirmada** | **13** |
+| **CITAS del instrumento leidas** | **19** de **128** |
+| de esas, costura **confirmada** | **15** |
 | de esas, **citas falsas** | **4** |
-| **precision de la cola** | **76%** |
+| **precision de la cola** | **79%** |
 | **costuras confirmadas que la cola NO citaba** | **1** (`propuesta_gasto_capital`) |
-| **TOTAL de costuras confirmadas** | **14** |
+| **TOTAL de costuras confirmadas** | **16** |
 
-**De las 17 citas leidas, 5 llegaron por el gradiente y no por orden de cola**: los
+**De las 19 citas leidas, 7 llegaron por el gradiente y no por orden de cola**: los
 dos calibradores, `ratios_eficiencia_inventario`, `propuesta_gasto_capital` (que
 entonces no estaba citado) y el hermano del caso 7. **La lectura de la clase no ha
 avanzado sola: la ha empujado el otro frente.**
@@ -538,8 +578,8 @@ Cada libro traia su version, y cada version entro entera detras de la anterior.
 > **Los nodos que mas se sirven al usuario son los peores servidos.**
 
 > **Y el contrario tambien existe, para no leer el patron como una condena**:
-> `nucleo/decision_intensidad_capital` lleva **SEIS especializaciones sanas** de
-> `franquicias` (puestos 22, 79, 82, 136, 146 y 188) **sin una sola costura ni
+> `nucleo/decision_intensidad_capital` lleva **SIETE especializaciones sanas** de
+> `franquicias` (puestos 22, 79, 82, 136, 146, 188 y 236) **sin una sola costura ni
 > pisada**. **Un nodo base muy citado NO tiene por que acabar acrecionado**: el
 > defecto es de como se fusiono, no de cuanto se usa.
 
@@ -1271,8 +1311,8 @@ decidio hacer (ver el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`)
 ## a) `quality`, la miniseccion de riesgos
 
 `identificacion_de_riesgos`, `evaluacion_gestion_riesgos`,
-`plan_de_gestion_de_riesgos` y, desde el lote 13,
-`matriz_riesgo_conocido_desconocido` (puesto **137**).
+`plan_de_gestion_de_riesgos`, `matriz_riesgo_conocido_desconocido` (puesto **137**)
+y, desde el lote 17, `evaluacion_de_factores_de_riesgo` (puesto **232**). **Cinco.**
 
 **Es el racimo que destapo la pregunta mundo contra mundo** (lote 7, puesto 51):
 `quality` tiene una seccion de riesgos **paralela al mundo `risk_management`
@@ -1286,10 +1326,17 @@ entero**.
 
 **Era trio y pasa a CUARTETO con el lote 13.**
 
+**Era cuarteto y pasa a QUINTETO con el lote 17.**
+
 `politica_no_culpar_trabajador` (puesto **86**),
 `responsabilidad_gerencial_causas_comunes` (puesto **113**),
-`moral_y_sistema_no_individuo` (puesto **143**), y el **base** de
+`moral_y_sistema_no_individuo` (puesto **143**),
+`identificacion_causa_raiz_no_culpa_individual` (puesto **235**, que **solapa
+fuerte con el primero**), y el **base** de
 `distincion_causas_comunes_especiales`.
+
+> **Cinco nodos de `quality` sobre no culpar al individuo.** Es el racimo mas
+> numeroso de la ficha, **y su base ya tiene fusion con reparto adjudicada**.
 
 > **Ojo con este**: la **fusion con reparto del base ya esta adjudicada** (ver la
 > maraña de causas comunes), y **puede absorber parte de este racimo antes de que
@@ -1357,7 +1404,41 @@ nucleo, y los dos del MISMO libro**: *Winning at New Products - Robert G. Cooper
 **Sin adjudicar.** La escalera existente **juega en contra** de la sospecha, igual
 que en el caso 1 de Goldratt.
 
-## h) `nucleo`, los DOS nodos de A/B testing
+## h) `nucleo`, el par de INNOVACION ABIERTA: el mas pegado hasta la fecha
+
+`open_innovation_ideacion` (puesto **187**, 6 pasos) y `innovacion_abierta`
+(puesto **233**, 7 pasos). **Los dos del nucleo y los dos del mismo libro**
+(*Winning at New Products - Robert G. Cooper*).
+
+| lo que dicen los dos | en el primero | en el segundo |
+|---|---:|---:|
+| equipos de **scouting** | 1 | 2 |
+| **pagina web** para recibir ideas del publico | 2 | 3 |
+| **transferencia tecnologica universitaria** | 3 | 4 |
+| sesiones con **proveedores** tecnicos | 4 | 5 |
+| **el mismo ejemplo de LEGO Digital Designer** | 5 | 6 |
+
+**Lo propio de cada uno es UN paso**: adaptar Stage-Gate en el primero; el sindrome
+NIH y la seleccion de metodo por complejidad en el segundo.
+
+> **DATO DE GRAFO, y esta vez NO exculpa.** Estan **conectados directamente y en
+> los dos sentidos**.
+>
+> **Pero la conexion no significa lo mismo que en Goldratt.** Alli el primero
+> **DELEGABA** en el segundo (*"aplicar los cinco pasos de enfoque"*), y por eso el
+> caso 1 se cerro. **Aqui el segundo REPITE al primero**, cinco pasos de siete, con
+> el mismo ejemplo.
+>
+> > **Una escalera cuyo segundo peldano vuelve a decir el primero no es una
+> > escalera.**
+>
+> **La leccion, para no repetir el error del caso 1 al reves**: la pregunta no es
+> *"¿estan conectados?"*, es *"¿el segundo CONTINUA o REPITE?"*. **La arista sola
+> no responde nada.**
+
+**Sin adjudicar.**
+
+## i) `nucleo`, los DOS nodos de A/B testing
 
 `split_testing_experimentos_ab` (C3) y `ab_testing_optimizacion` (C2). **Los dos
 del nucleo y los dos con costura confirmada.**
@@ -1366,7 +1447,7 @@ del nucleo y los dos con costura confirmada.**
 > JUNTOS**: destejer uno sin mirar al otro seria escribir dos veces la misma
 > narracion canonica.
 
-## i) `risk_management`, el CUARTETO de actualizacion de la lista
+## j) `risk_management`, el CUARTETO de actualizacion de la lista
 
 **Era trio y pasa a CUARTETO con el lote 12.**
 
@@ -1466,6 +1547,21 @@ cruzan dos mundos, y por eso **no las adjudica el mismo barrido**: van al
 > el mismo trabajo tiene dos alturas segun su tamano.
 
 **Sin adjudicar. La decision es del barrido inter-mundos.**
+
+---
+
+## La colision de nombre, LEIDA COMPLETA (lote 17)
+
+`exportacion/proteccion_propiedad_intelectual_2` **paso por sus dos parejas de la
+cola y las dos salieron sanas**: contra `nucleo/marcas_registradas` (puesto 161) y
+contra `nucleo/intellectual_property_strategy` (puesto 221), **las dos OK POR
+ESPECIALIZACION**.
+
+> **El nodo esta bien. Lo unico raro era su nombre.**
+>
+> Con esto, la entrada de las 36 parejas queda cerrada por el lado de la unica que
+> cruzaba dominios: **no habia duplicado que fusionar, habia un sufijo que
+> significaba otra cosa.**
 
 ---
 

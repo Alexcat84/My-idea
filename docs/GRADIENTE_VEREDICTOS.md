@@ -2237,3 +2237,113 @@ puestos coinciden.
 > existian.** El empate transdominio **no es un defecto**: es **el catalogo
 > mostrando que dos libros distintos ensenan el mismo ejercicio**, y que nadie lo
 > habia mirado junto.
+
+---
+
+## LOTE 17, puestos 216 a 236 sin el del adelanto (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden. El **228** no esta aqui: se leyo en el adelanto del racimo.
+
+> **CERO VIOLACIONES. SEPTIMO lote seguido.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **216** | FALSO PAR FUNCIONAL | `franquicias/manejo_objeciones_venta_franquicia` contra `nucleo/planificacion_preguntas_implicacion` **(t49.4, s0.7641)**. **Octava aparicion** |
+| **217** | OK, **TERCERA verificacion post-cirugia** | `risk_management/revisa_tus_riesgos_con_un_ritmo` contra `nucleo/matriz_probabilidad_impacto` **(t31.2, s0.7641)**. **El reencuadrado de la cadencia, sano** |
+| **218** | FALSO PAR FUNCIONAL | `franquicias/manejo_objeciones_venta_franquicia` contra `nucleo/senales_de_compra_en_venta_grande` **(t36.1, s0.764)**. **Novena aparicion** |
+| **219** | OK | `quality/definicion_calidad_fitness_for_purpose` contra `nucleo/metricas_calidad` **(t41.8, s0.7638)**. **Septima pareja del nodo flaco, septima sana** |
+| **220** | OK apretado | `exportacion/optimizacion_motores_busqueda` contra `nucleo/seo_link_building` **(t34.1, s0.7631)**. SEO internacional por mercado |
+| **221** | OK POR ESPECIALIZACION | `exportacion/proteccion_propiedad_intelectual_2` contra `nucleo/intellectual_property_strategy` **(t63.6, s0.763)**. **Cierra la colision de nombre: leida completa y sana** |
+| **222** | OK | `environmental/stakeholder_mapping_wheel` contra `nucleo/stakeholder_register` **(t47.0, s0.7627)**. Rueda estrategica contra registro operativo |
+| **223** | OK, **QUINTA costura de rebote** | ver abajo |
+| **224** | OK | `compras/negocia_por_intereses_no_posiciones` contra `nucleo/negociacion_contratos_proveedores` **(t47.5, s0.7622)**. Metodo contra checklist |
+| **225** | OK funcional | `quality/diagrama_de_flujo_proceso_map` contra `nucleo/plan_mejora_procesos` **(t50.0, s0.762)**. **El costurado del nucleo se exhibe por cuarta vez** |
+| **226** | OK | `quality/seleccion_hacer_o_comprar` contra `nucleo/outsourcing_cadena_suministro` **(t37.4, s0.7619)**. **El angulo de moral y lealtad es propio del mundo** |
+| **227** | OK funcional | `compras/calcula_costo_de_mantener_contra_costo_de_reponer` contra `nucleo/gestion_inventario` **(t33.0, s0.7618)**. **Tercera pareja del nodo invertido**; su estructura bi-bloque es exactamente lo que la cirugia 2 documenta |
+| **229** | OK, **SEXTA costura de rebote** | ver abajo |
+| **230** | OK, tema propio | `compras/punto_unico_contacto_proveedores` contra `nucleo/negociacion_contratos_proveedores` **(t51.1, s0.7615)** |
+| **231** | OK | `quality/establecimiento_de_niveles_de_calidad_aql_dpm` contra `nucleo/metricas_calidad` **(t33.8, s0.7615)**. **Octava pareja del flaco, octava sana** |
+| **232** | OK apretado | `quality/evaluacion_de_factores_de_riesgo` contra `nucleo/registro_de_riesgos` **(t36.1, s0.7614)**. Miembro nuevo de la miniseccion de riesgos |
+| **233** | OK, **el par intra-nucleo mas pegado** | ver abajo |
+| **234** | OK | `quality/necesidad_mantener_informado` contra `nucleo/comunicacion_proactiva_puntos_estres` **(t49.0, s0.7613)** |
+| **235** | OK | `quality/identificacion_causa_raiz_no_culpa_individual` contra `nucleo/curse_cinco_culpas` **(t37.2, s0.761)**. **El racimo Deming sube a QUINTETO** |
+| **236** | OK | `franquicias/estimacion_inversion_inicial_franquiciador` contra `nucleo/decision_intensidad_capital` **(t45.0, s0.7607)**. **El hub sube a SIETE** |
+
+### 223 y 229, las costuras quinta y sexta
+
+**`nucleo/voz_del_cliente_voc`, 10 pasos: DOBLE de la observacion.**
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | preparate para observar, **observa en su entorno**, complementa la entrevista, usa lo observado desde el inicio, manten contacto |
+| **6 a 10** | **observa una vez al mes**, ponte en su lugar, atiende los detalles pequenos, anota y revisa, busca patrones |
+
+**El duplicado literal**: paso 2 (*"observa directamente a tu cliente en el lugar
+donde usa tu producto"*) contra paso 6 (*"observa a un cliente usando tu producto
+en su contexto real al menos una vez al mes"*). **La segunda tanda repite el ciclo
+entero.**
+
+**`nucleo/future_scenarios_planning`, 13 pasos: CUATRO bloques.**
+
+| bloque | de que habla |
+|---|---|
+| **1 a 3** | el generico: drivers de incertidumbre, matriz, narrar cada escenario |
+| **4 a 5** | el del **Canvas**: workshop y preguntas por bloque |
+| **6 a 9** | **IA, tanda 1**: lineal contra exponencial, plan de contingencia, revisar trimestralmente |
+| **10 a 13** | **IA, tanda 2**: definir escenarios de IA, evaluar impacto, senales de alerta, revisar periodicamente |
+
+> **Las dos tandas de IA se repiten entre si**: las dos definen escenarios, evaluan
+> el impacto en el modelo de negocio y mandan revisar con periodicidad.
+
+**Las dos YA estaban citadas en la cola del instrumento** (bloque 50,2 y 50,1).
+**No son falsos negativos: son citas que el gradiente leyo antes de que les tocara
+su turno.**
+
+### 233, el par de INNOVACION ABIERTA: el mas pegado hasta la fecha
+
+`quality/innovacion_tipo_ii` contra `nucleo/innovacion_abierta`
+**(t44.0, s0.7614)**
+
+**El par cumple.** El hallazgo es que **el nucleo tiene DOS nodos de innovacion
+abierta**, con el puesto 187, **y los dos son del mismo libro** (Cooper).
+
+| lo que dicen los dos | en `open_innovation_ideacion` | en `innovacion_abierta` |
+|---|---|---|
+| equipos de **scouting** | paso 1 | paso 2 |
+| **pagina web** para recibir ideas del publico | paso 2 | paso 3 |
+| **transferencia tecnologica universitaria** | paso 3 | paso 4 |
+| sesiones con **proveedores** tecnicos | paso 4 | paso 5 |
+| **el mismo ejemplo de LEGO Digital Designer** | paso 5 | paso 6 |
+
+**Lo propio de cada uno es UN paso**: adaptar Stage-Gate en el primero; el sindrome
+NIH y la seleccion de metodo por complejidad en el segundo.
+
+> **DATO DE GRAFO, y esta vez NO exculpa: estan conectados DIRECTAMENTE**, en los
+> dos sentidos (`open_innovation_ideacion` declara a `innovacion_abierta` en sus
+> siguientes, y este a aquel en sus previos).
+>
+> **Pero la conexion no dice lo mismo que en Goldratt.** Alli el primero
+> **DELEGABA** en el segundo (*"aplicar los cinco pasos de enfoque"*). **Aqui el
+> segundo REPITE al primero**, cinco pasos de siete, con el mismo ejemplo.
+>
+> **Una escalera cuyo segundo peldano vuelve a decir el primero no es una
+> escalera.**
+
+**A las citas intra-nucleo. Sin adjudicar.**
+
+---
+
+## MARCADOR TRAS 237 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas** | **cero**, septimo lote seguido |
+| **costuras confirmadas de rebote** | **6** |
+| verificaciones post-cirugia por la cola | **3** (puestos 59, 173 y 217) |
+| apariciones del nodo de objeciones | **nueve** |
+| hub `decision_intensidad_capital` | **SIETE** especializaciones sanas |
+
+> **La colision de nombre queda LEIDA COMPLETA**: `proteccion_propiedad_intelectual_2`
+> paso por sus dos parejas (161 y 221) **y las dos salieron sanas**. **El nodo esta
+> bien; lo unico raro era su nombre.**
