@@ -3012,10 +3012,110 @@ sola violacion nueva.**
 
 | heredero | estado |
 |---|---|
-| **la franja bajo el umbral** | el umbral 0,75 esta muy por encima del p99.9; **bajar a 0,70 o 0,65 la ensancha**, y **no se ha dimensionado** |
+| **la franja bajo el umbral** | **DIMENSIONADA** (ver abajo): **1.603 pares nuevos** con piso 0,70. **Propuesta del auditor pendiente de visto** |
 | **el barrido intra-dominio** | decidido por el fundador, **al final y con cola propia**; converge con la pregunta mundo-mundo y con la clase de nombre libre |
 | **las 109 costuras por leer** | 19 de 128 leidas; **la clase de acrecion sigue viva** |
 | **la clase de NOMBRE LIBRE** | ya no esta sin miembros: **el puesto 320 le dio el primero** |
 
 > **La cola de 346 se leyo entera, una por una, y ninguna se extrapolo de su
 > vecina. Eso era el compromiso, y esta cumplido.**
+
+---
+
+# LA FRANJA BAJO EL UMBRAL, DIMENSIONADA
+
+**Medida con `scripts/gradiente_pares.py --umbral-semantico 0.70`, regenerando en
+un directorio aparte. Las salidas versionadas NO se tocaron: la cola de 346 sigue
+como estaba.**
+
+> **Comprobacion de que la medicion es la misma cola ensanchada y no otra**: los
+> **346 pares versionados reaparecen TODOS** en la corrida a 0,70. **Cero
+> desapariciones.** La cola leida es un subconjunto estricto de la nueva.
+
+## El tamano
+
+| | |
+|---|---:|
+| pares totales con piso **0,70** | **1.949** |
+| de esos, **ya leidos** | 346 |
+| **PARES NUEVOS** | **1.603** |
+| **nodos de mundo que DEBUTAN** (nunca aparecieron en la cola leida) | **463** |
+| nodos de mundo distintos en la cola leida | 229 |
+
+> **La franja no es una cola mas larga: es OTRO catalogo.** **Cuadruplica** los
+> pares y **triplica** los nodos de mundo implicados.
+
+## Por tramo de clave, solo los pares NUEVOS
+
+| tramo | pares | acumulado |
+|---|---:|---:|
+| **0,745 o mas** | **67** | 67 |
+| hasta 0,74 | 69 | 136 |
+| hasta 0,73 | 203 | 339 |
+| hasta 0,72 | 297 | 636 |
+| hasta 0,70 | 967 | **1.603** |
+
+**Y por mundo**: `quality` **867**, `risk_management` 155, `compras` 150,
+`environmental` 141, `franquicias` 136, `exportacion` 60, `health_safety` 58,
+`entrega` 25, `seguridad_digital` 11.
+
+> **`quality` solo aporta mas de la mitad de la franja entera.**
+
+### Tres cifras que difieren de la medicion del auditor, y por que
+
+**Los tres tramos intermedios coinciden CLAVADOS** (69, 203 y 297), lo que confirma
+que es la misma medicion. **Las diferencias estan en los bordes:**
+
+| | auditor | ejecutor |
+|---|---:|---:|
+| pares nuevos | 1.601 | **1.603** |
+| banda de 0,745 o mas | 64 | **67** |
+| nodos que debutan | 462 | **463** |
+
+**La banda alta es sensible a la convencion**, y esta medido: con `>= 0,745` da
+**67**, con `> 0,745` da **66**, y contando **solo por semantica** (ignorando los
+que entran por titulo) da **65**. **Ninguna convencion probada da 64.**
+
+> **Se registran las cifras medidas y se deja constancia de la diferencia.** **Son
+> de uno a tres pares en los bordes y no mueven ninguna decision**, pero el acta no
+> adopta un numero que no pudo reproducir.
+
+---
+
+# LA PROPUESTA DEL AUDITOR, pendiente de visto del fundador
+
+## Lo que se propone
+
+**Leer los pares de 0,745 o mas como FRANJA DE CONTROL.** **Si el regimen limpio se
+sostiene ahi, declarar el piso en ese punto** y cerrar el barrido por semejanza.
+
+## El argumento, con sus cifras verificadas
+
+| pieza del argumento | verificado |
+|---|---|
+| **el regimen de violaciones murio arriba** | la ultima violacion es el **puesto 64**, y su clave es **0,8005** |
+| **hay colchon de sobra** | **282 pares** leidos despues de esa ultima violacion, **todos limpios** |
+| **bajo esa semejanza la pregunta de la vara deja de aplicar** | la clave del ultimo par leido es **0,7501**: por debajo, **el material ya es otro** |
+
+> **PRECISION DE DOS CIFRAS DEL ARGUMENTO, que no lo debilitan**: la clave del
+> puesto 64 es **0,8005**, no 0,79; y el colchon de pares limpios tras esa
+> violacion es de **282**, no 250. **El argumento se sostiene con mas margen del
+> que se le atribuia.**
+
+## La alternativa en la mesa
+
+**Bajar hasta 0,74**, que son **136 pares** (67 mas 69).
+
+## Lo que NINGUNA de las dos opciones cubre, y ya tiene dueno
+
+**La franja mide SEMEJANZA entre un nodo de mundo y uno del nucleo.** Las clases
+que la campana encontro de rebote **no se cazan asi**, y cada una tiene su
+heredero declarado:
+
+| lo que la franja no vera | quien lo hereda |
+|---|---|
+| acrecion dentro de un nodo | **las 109 costuras por leer** |
+| pares calcados dentro de un mundo, y los huerfanos por nombre libre | **el barrido intra-dominio** |
+| ids fosiles, audiencia invertida, herramientas muertas, marco-pais | **la relectura de la pasada unica**, que abre cada nodo que toca |
+
+> **NINGUNA DE LAS DOS OPCIONES SE EJECUTA HASTA EL VISTO.**

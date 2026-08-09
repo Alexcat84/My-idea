@@ -1,16 +1,17 @@
 # AUD-08 · La campaña del gradiente núcleo-mundo
 
-**Estado: ABIERTO. 104 de 346 pares leídos (30,1%)**, más los nueve del adelanto
-del racimo y las dos marañas leídas fuera de cola.
+**Estado: LA COLA DE 346 QUEDA AGOTADA (346 de 346, sin muestreo).** El frente del
+gradiente cierra; sus herederos están declarados y medidos.
 
 Esta auditoría documenta el proceso completo desde la primera pasada: la doctrina,
-los instrumentos, **diez lotes** de lectura, **tres cirugías ejecutadas** (dos de
-gradiente y una de metadata) y las deudas que la ejecución destapó. **Se escribe
+los instrumentos, **veintidós lotes** de lectura más tres de costuras, **tres
+cirugías ejecutadas** (dos de gradiente y una de metadata) y las deudas que la
+ejecución destapó. **Se escribe
 desde los documentos versionados y los hashes, no de memoria**: cada afirmación
 lleva su commit o su documento fuente.
 
-> **La lectura corre hoy en DOS FRENTES**: la cola del gradiente (104 de 346) y el
-> top del instrumento de costuras internas (3 de 110). No compiten: uno mide un
+> **La lectura corre hoy en DOS FRENTES**: la cola del gradiente, **agotada**, y el
+> top del instrumento de costuras internas (**19 de 128**). No compiten: uno mide un
 > nodo **contra otro**, el otro mide un nodo **contra sí mismo**.
 
 Documentos vivos de la campaña:
@@ -50,6 +51,9 @@ Dispuesto por el fundador al abrir la campaña y respetado en los seis lotes:
 2. **Cuando la cola de señal alta se agote, se baja el umbral y se barre la
    franja siguiente.** El instrumento acepta `--umbral-semantico` justamente para
    eso, y su resumen ya deja escrito que bajar a 0,70 o 0,65 la ensancha.
+   **CUMPLIDO EN SU PRIMERA MITAD**: los 346 se leyeron todos, y la franja
+   siguiente ya está medida (1.603 pares nuevos a 0,70). **Su piso espera el visto
+   del fundador.**
 
 **Lo segundo importa tanto como lo primero**: la cola actual está calibrada muy
 por encima del percentil 99,9 de la distribución real (ver sección 3), así que
@@ -524,7 +528,7 @@ emparejamiento**: las **mismas dos señales**, los mismos umbrales calibrables, 
 | | qué |
 |---|---|
 | **1.º** | **agotar la cola de 346** |
-| **2.º** | **la franja bajo el umbral** |
+| **2.º** | **la franja bajo el umbral**, ya **DIMENSIONADA** (ver abajo) |
 | **3.º** | **el intra-dominio, AL FINAL**, con su cola propia |
 
 > **El intra-dominio va último por una razón económica, no por prioridad:
@@ -533,6 +537,45 @@ emparejamiento**: las **mismas dos señales**, los mismos umbrales calibrables, 
 > veces lo mismo, y la segunda vez con el catálogo ya cambiado debajo.
 
 **El instrumento no se extiende hasta llegar al tercer punto.**
+
+### LA FRANJA, DIMENSIONADA (ago 2026)
+
+**Agotada la cola de 346, se midió la franja siguiente** con
+`scripts/gradiente_pares.py --umbral-semantico 0.70`, **regenerando aparte y sin
+tocar las salidas versionadas**.
+
+| | |
+|---|---:|
+| pares totales con piso **0,70** | **1.949** |
+| **pares nuevos**, bajo la cola leída | **1.603** |
+| **nodos de mundo que debutan** | **463** |
+
+**Los 346 versionados reaparecen todos**: la cola leída es un subconjunto estricto.
+
+| tramo de clave | pares nuevos |
+|---|---:|
+| **0,745 o más** | **67** |
+| hasta 0,74 | 69 |
+| hasta 0,73 | 203 |
+| hasta 0,72 | 297 |
+| hasta 0,70 | 967 |
+
+> **La franja no es una cola más larga: es otro catálogo.** Cuadruplica los pares y
+> triplica los nodos de mundo implicados. **`quality` sola aporta más de la mitad.**
+
+**Propuesta del auditor, pendiente del visto del fundador**: leer los **67** de
+0,745 o más como **franja de control**, y si el régimen limpio se sostiene,
+**declarar el piso ahí**. Alternativa en la mesa: bajar a **0,74** (136 pares).
+
+**El argumento, con sus cifras verificadas**: la última violación está en el
+**puesto 64** con clave **0,8005**, y detrás de ella hay **282 pares leídos, todos
+limpios**. Por debajo de la clave del último par leído (**0,7501**) **el material
+ya es otro**, y la pregunta de la vara deja de aplicar.
+
+**El detalle completo, con la propuesta y lo que ninguna de las dos opciones
+cubre**, está en la sección de cierre de `docs/GRADIENTE_VEREDICTOS.md`.
+
+> **Ninguna de las dos opciones se ejecuta hasta el visto.**
 
 ### Decisiones que esperan al fundador
 
