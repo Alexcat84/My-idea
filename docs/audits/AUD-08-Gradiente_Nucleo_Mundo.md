@@ -360,6 +360,58 @@ está escribiendo un `--instruccion`**, y ahí es donde tiene que tropezarse con
 ella. Va en dos sitios del mismo archivo: la nota larga con el porqué encima del
 argumento, y un recordatorio en el propio `--help`.
 
+### c) La rectificación del deprecado (`06df920`): el sistema de paro funcionó
+
+**El ejecutor reportó un hallazgo falso**: que
+`quality/auditoria_sistema_control_calidad_2` no registraba a su hermano
+deprecado como sucesor. Sobre ese reporte se adjudicó una cirugía de historia. **Al
+ir a ejecutarla, la verificación previa la desmintió y nada se tocó.**
+
+**La sucesión estaba completa desde el día de la fusión**: `ids_alias` con el id
+muerto y `merged_originals` con su id, su título y su fuente.
+
+**Tres clases de error quedaron con nombre:**
+
+**(a) Una consulta fallida contada como dato.** Se buscó el mapa de alias como
+**clave de nivel superior** de `master_graph.json`. No vive ahí: vive en el campo
+`ids_alias` **de cada nodo**, que es exactamente como lo lee `mapaDeAlias` en
+`web/lib/engine/graph.ts`. La consulta **no encontró el mapa**, y esa nada se
+reportó **como una ausencia medida**.
+
+> **Una consulta que no encuentra nada no es lo mismo que un catálogo que no tiene
+> nada, y la diferencia no se ve en la salida.**
+
+**(b) El `null` de un campo inexistente leído como valor vacío.**
+`deprecado_por` y `motivo_deprecacion` **no existen en el esquema**, en ninguno de
+los 3.835 nodos: la sucesión vive **en el superviviente, nunca en el deprecado**.
+Un `.get()` sobre un campo que no está devuelve lo mismo que sobre un campo vacío.
+
+**(c) DEL AUDITOR: adjudicar sobre un hallazgo sin verificarlo por cuenta
+propia.**
+
+> **Los reportes convincentes son los que MÁS verificación merecen, no los que
+> menos.** Un hallazgo bien redactado, con tabla y cifras, es exactamente el que
+> pasa sin que nadie lo mire dos veces.
+
+**La cadena funcionó porque tiene dos eslabones y el segundo re-verificó antes de
+tocar.** El paro no lo produjo la duda: lo produjo **el hábito de medir otra vez
+justo antes de escribir**.
+
+### La relectura que quedó: las aristas hacia deprecados son DISEÑO
+
+De rebote, la verificación midió lo que nadie había medido:
+
+| | |
+|---|---:|
+| aristas de nodos **activos** hacia ids **deprecados** | **1.149** |
+| nodos activos que las declaran | **824** (23% de los 3.521) |
+| ids deprecados apuntados | **308** de 314 |
+
+**No son residuo: son la historia viva**, y **la simetría las exige en ambos
+extremos**. Quitarlas de un solo lado pone el Gate en rojo, y el paso 5 de
+simetrización **las vuelve a poner**. El propio Gate lo tiene escrito: *"un
+deprecado sigue EN el grafo, con sus aristas intactas"*.
+
 ---
 
 ## 7. EL TABLERO ABIERTO

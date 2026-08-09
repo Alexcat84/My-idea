@@ -258,30 +258,55 @@ cifra** que no estuviera, ni en digitos ni en palabras.
 >
 > **Un trasplante sin ese registro no se ejecuta.**
 
-**Aplica a los dos receptores**:
-`compras/calcula_costo_de_mantener_contra_costo_de_reponer` y
-`compras/define_punto_maximo_de_stock`.
+## A QUE PIEZA LE TOCA REGISTRO, ADJUDICADO
 
-> **Matiz que la ejecucion tendra que resolver y este plan no decide**: en el
-> punto 3 quedo medido que **tres de las cuatro piezas ya viven en `compras`, y
-> mas hondo**. Si el trasplante resulta ser **cero texto movido** (el nucleo
-> simplemente baja y el mundo ya lo tenia), **hay que decidir si el registro de
-> trasplante se escribe igual**. **Mi lectura, no vinculante**: si no viaja
-> contenido, no hay autoria que acreditar, y el registro **sobra**; lo que si hace
-> falta es **la arista**, que es lo que conecta la base con la profundidad. **Que
-> lo fije el auditor antes de ejecutar.**
+**La precision del auditor cerro el matiz**: el registro **acredita autoria**, y
+**la autoria viaja con el texto**. Se escribe **solo cuando viaja texto**.
+
+| pieza del exceso | destino | ¿viaja texto? | que lleva |
+|---|---|---|---|
+| lote optimo (paso 6) | `calcula_costo_de_mantener_contra_costo_de_reponer` | **NO**: el destino ya lo tiene, y mas hondo | **ARISTA**, sin registro |
+| stock de seguridad (paso 7) | `define_punto_maximo_de_stock` | **NO**, idem | **ARISTA**, sin registro |
+| puntos de reorden (paso 9) | `define_punto_maximo_de_stock` | **NO**, idem | **ARISTA**, sin registro |
+| **estacionalidad (paso 8)** | **peldano por crear** | **SI**: es la unica pieza que no existe en ningun mundo | **REGISTRO DE TRASPLANTE** con la fuente de `gestion_inventario` |
+
+> **Las tres primeras no se trasplantan: se destapan.** Escribirles un acta de
+> mudanza documentaria un viaje que no ocurre.
+>
+> **La cuarta es la unica que si mueve texto del nucleo**, y por eso es la unica
+> que lleva el registro **con la fuente de `gestion_inventario`** (*Financial
+> Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael
+> H. Hugos*).
+
+## LA CIRUGIA ESPERA UNICAMENTE UN VISTO
+
+**Todo lo demas esta resuelto.** Lo que falta es **la decision sobre la
+estacionalidad**: si el fundador **aprueba crear su peldano**, la pieza viaja con
+su registro y la cirugia se ejecuta entera. Si **no**, la doctrina de las dos
+mitades **mantiene el arreglo bloqueado**.
 
 ---
 
-# LO QUE ESTE PLAN NO DECIDE, y espera al fundador con el auditor
+# LA UNICA DECISION ABIERTA: LA ESTACIONALIDAD
 
-1. **La estacionalidad**: opcion (a), un paso simple en la base, u opcion (b),
-   deuda abierta que **bloquea** la cirugia. **Es la unica decision que impide
-   ejecutar.**
-2. **Las dos aristas** del nucleo hacia `compras`: si entran en esta cirugia o van
-   por su cuenta.
-3. **El borrador del punto 2**, palabra por palabra, incluida la colision
-   apretada con `clasifica_tu_inventario`.
+**Tres formas posibles, y el fundador elige una.**
+
+| | forma | consecuencia |
+|---|---|---|
+| **(a)** | **se queda en la base del nucleo**, en forma simple | la cirugia se ejecuta ya; el nucleo conserva un paso mas |
+| **(b)** | **se declara deuda abierta** y el nodo baja sin ella | la doctrina de las dos mitades **BLOQUEA** la cirugia hasta adjudicar |
+| **(c)** | **se crea su peldano en `compras`** | la pieza **viaja con su registro de trasplante**, y es la unica que lo lleva. Requiere la adjudicacion de nodo nuevo |
+
+## Lo que ya NO esta abierto
+
+- **Las dos aristas** del nucleo hacia `compras`: **entran en esta cirugia**, y no
+  son un adorno, reparan un hueco de anclaje que ya existia. Resuelto en la tabla
+  de la seccion anterior.
+- **El registro de trasplante**: resuelto por la precision del auditor. **Tres
+  piezas sin registro, una con el.**
+- **El borrador de la version base**: se mantiene tal como esta escrito en el
+  punto 2, **incluida la colision apretada con `clasifica_tu_inventario`**, que
+  queda como **aviso permanente de lectura**, no como decision pendiente.
 
 **PARADO AQUI. La ejecucion la disparan el fundador y el auditor sobre este
 documento.**

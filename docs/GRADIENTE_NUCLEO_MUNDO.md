@@ -198,6 +198,17 @@ solo**.
 >
 > **Un trasplante sin ese registro NO SE EJECUTA.**
 
+### EL REGISTRO DE TRASPLANTE ACREDITA AUTORIA, Y LA AUTORIA VIAJA CON EL TEXTO
+
+**Se escribe SOLO cuando viaja texto de un nodo a otro.**
+
+Si el destino **ya tenia el contenido escrito con su propia fuente**, **no hay
+injerto que acreditar**: el arreglo **destapa lo que el mundo ya hacia mejor**, y
+lo que hace falta es **la arista**, no **el acta de mudanza**.
+
+> **Un registro de trasplante sin texto trasplantado documenta una mudanza que no
+> ocurrio, y un registro que miente es peor que ninguno.**
+
 ## 5. Nota de higiene, sin tarea
 
 **Parte de los 41 mezclados no son autorias distintas: son variantes de escritura
