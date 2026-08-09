@@ -280,6 +280,24 @@ def main():
     ap.add_argument("--extra", nargs="*", default=[], help="node_id sueltos a incluir")
     ap.add_argument("--tanda", type=int, default=POR_TANDA)
     ap.add_argument("--saltar", help="json con una lista de node_id a NO tocar")
+    # PRECEDENCIA DEL SYSTEM SOBRE LA ORDEN DEL EDITOR (adjudicado ago 2026,
+    # tras la cirugia 1 del gradiente).
+    #
+    # La regla del SYSTEM "los HECHOS: ni uno nuevo, ni uno menos" LE GANA a la
+    # orden del editor cuando se contradicen. Se comprobo en vivo: un nodo al
+    # que la orden le pedia QUITAR dos pasos volvio IDENTICO a como entro.
+    #
+    # ESA TERQUEDAD ES UNA DEFENSA Y NO SE DEBILITA: impide que una re-voz
+    # descuidada ampute contenido que a nadie le sobraba.
+    #
+    # Cuando quitar contenido ES la orden legitima (reencuadres del gradiente,
+    # absorciones), la orden debe incluir la AUTORIZACION EXPRESA:
+    #
+    #     "quitar no es inventar"
+    #
+    # enumerando QUE se quita y POR QUE. Sin esa autorizacion, el SYSTEM manda y
+    # el contenido se queda.
+    #
     # La re-voz normal se ancla al nodo y no sabe QUE hay que arreglar: en un
     # lote de 36 eso basta, porque la baranda dice donde duele y el modelo lo
     # ve. En una micro re-voz adjudicada NO basta: `criterio_bazooka_peashooter`
@@ -290,7 +308,9 @@ def main():
     ap.add_argument("--instruccion", help="orden extra del editor para esta corrida "
                                           "(adjudicaciones puntuales). ESCRIBELA CON "
                                           "TILDES: el modelo imita el estilo de lo que "
-                                          "recibe, y una orden en ASCII sale en ASCII")
+                                          "recibe, y una orden en ASCII sale en ASCII. Si la orden QUITA "
+                                          "contenido, tiene que decir 'quitar no es inventar': ver la nota "
+                                          "de PRECEDENCIA arriba")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
