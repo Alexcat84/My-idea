@@ -744,6 +744,49 @@ de pasos JUNTOS**. Ninguna de las dos sola pone arriba lo que mas duele.
 > `merged_originals`**. El destejido **no toca la doctrina de fuentes**: quita
 > texto repetido, y la autoria de cada absorbido sigue registrada donde siempre.
 
+### ECO DE LA ADJUDICACION DE LA FRANJA: la clase tapa al pago
+
+**Viene del cribado de la franja bajo el umbral** (`docs/FRANJA_INFORME.md`,
+seccion 9). El detalle completo esta alli; aqui queda lo que le toca a esta
+clase, que es mucho.
+
+**El cribado leyo 1.606 pares y encontro exactamente DOS violaciones de la
+vara. Las dos son sombras de DOS nodos de esta clase:**
+
+| franja | el nodo del mundo (de pago) | el nodo del nucleo (gratis) |
+|---:|---|---|
+| **15** | `quality/breakthrough_desempeno_actual`, 5 pasos | **`plan_mejora_procesos`**, 15 pasos, tres bloques apilados |
+| **124** | `environmental/eco_efectividad`, 3 pasos | **`economia_circular_como_modelo_de_negocio`**, 9 pasos, dos bloques apilados |
+
+Son **los dos ejemplares con nombre de esta ficha**: el primero y el segundo,
+los mismos que hicieron pasar el hallazgo de caso a clase.
+
+> **La frase de la adjudicacion, y es un cargo nuevo contra la clase:** *las
+> violaciones de la franja no son enfermedad nueva, son la acrecion del gratis
+> tapando al pago.*
+>
+> El nodo del nucleo no gana la comparacion porque sepa mas: **gana porque
+> abulta**. Llega a la mesa con quince pasos contra cinco, o nueve contra tres,
+> y son la misma doctrina contada dos o tres veces. **La vara del gradiente
+> estaba midiendo una costura y llamandola profundidad.**
+
+**Consecuencia practica para el arreglo de arriba: la cura es ACOPLADA, y las
+dos manos van en la pasada unica.**
+
+1. **Destejer el costurado del nucleo** con la tabla de cinco pasos de arriba,
+   sin cambiarle nada. Reduce la sombra sin quitarle una sola decision al
+   lector.
+2. **Profundizar el nodo del mundo con su propio libro**, que es **el patron de
+   la cirugia 1**: ni copiarle al nucleo ni recortarle al nucleo, sino darle al
+   nodo de pago la voz y el metodo de su propia fuente.
+
+**Las dos juntas o ninguna.** Destejer solo el nucleo deja el par igual de plano
+por el otro lado; profundizar solo el mundo deja la costura viva.
+
+**Las 6 dudosas del cribado quedaron OK las seis**, sin ninguna accion de vara.
+La unica que deja tarea es `quality/optimizacion_de_procesos` (franja 28), flaco
+y autorreferente: **candidato a engorde, no caso de vara.**
+
 ---
 
 ## El registro original de la clase, conservado
@@ -1312,12 +1355,18 @@ su cuenta, en OTRO par, mucho mas abajo, y pasaron.**
 | **1B** (`1260581`) | `cradle_to_cradle_concepto` reencuadrado a **puerta** del tema | **puesto 173**, contra `economia_circular_como_modelo_de_negocio` | **GRADIENTE OK**: sus cuatro pasos son **decisiones de marco** y nada mas |
 | **1**, otra vez | la cadencia de `revisa_tus_riesgos_con_un_ritmo` | **puesto 217**, contra `matriz_probabilidad_impacto` | **GRADIENTE OK** |
 | **1**, y una cuarta | el Censo de `haz_tu_lista_de_lo_que_puede_fallar` | **puesto 268**, contra `plan_gestion_riesgos` | **GRADIENTE OK**, y **la frontera la hace un paso que escribio la cirugia**: *"marcalos como observados, no como activos"* |
+| **1**, y una QUINTA | `manten_viva_tu_lista_de_riesgos`, otro de los cinco peldanos | **franja 1604** (otra cola: el cribado bajo el umbral, y ademas un par de borde), contra `matriz_probabilidad_impacto` | **GRADIENTE OK**: mantener vivo el registro contra priorizar por probabilidad e impacto son **momentos propios** |
 
-> **Ninguna de las CUATRO relecturas se hizo para verificar nada.** Salieron en el
+> **Ninguna de las CINCO relecturas se hizo para verificar nada.** Salieron en el
 > orden de la cola, con el auditor leyendo otro par, meses de trabajo despues.
 >
 > **Eso es lo que las hace valer**: una verificacion que se busca es un examen que
 > uno mismo escribe. **Esta llego sola.**
+
+**La quinta merece una linea aparte por como llego**: salio del **agujero de
+borde** del cribado de la franja, es decir, de un par que la regla de corte
+habia dejado fuera y que se anexo despues. Ni siquiera estaba en la cola que se
+leyo. **La cirugia 1 lleva cinco verificaciones y ninguna se fue a buscar.**
 
 **Y hay un tercer dato en el mismo puesto 173**: el nodo del NUCLEO de ese par
 **vuelve a exhibir la costura que el lote 10 ya le habia confirmado**. **Dos

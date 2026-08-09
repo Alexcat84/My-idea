@@ -1,14 +1,20 @@
 # La franja bajo el umbral, cribada entera
 
-Informe de cierre del encargo de cribado. Los 1.601 pares de
+Informe de cierre del encargo de cribado. Los 1.606 pares de
 `docs/FRANJA_PARES.jsonl` quedaron leidos uno por uno, en orden de
 `puesto_franja`, y registrados en `docs/FRANJA_VEREDICTOS.jsonl`. No hay
-huecos: los puestos 1 a 1601 estan todos en el archivo, cada uno con su clase
+huecos: los puestos 1 a 1606 estan todos en el archivo, cada uno con su clase
 y su razon.
 
-Ningun nodo se toco. Este documento es la entrega; la adjudicacion de las A,
-las B y las C es lectura del auditor, y el 5% de muestra de las D lo sortea el
-auditor.
+**Los cinco ultimos (1602 a 1606) son los pares de borde** que la regla de
+corte del Paso 0 habia dejado fuera. Se anexaron despues de la primera entrega,
+sin renumerar nada, y con eso el agujero de borde queda cerrado. Ver el
+apartado 6.3.
+
+Ningun nodo se toco. Este documento es la entrega. **La adjudicacion del
+auditor sobre las 2 A y las 6 B ya llego y esta en la seccion 9**; los racimos
+quedan para despues de la muestra, y el 5% de muestra de las D lo sortea el
+auditor (seccion 10).
 
 ---
 
@@ -18,22 +24,22 @@ auditor.
 |---|---|---:|---:|
 | A | Violacion candidata de la vara | 2 | 0,1 |
 | B | Dudoso | 6 | 0,4 |
-| C | Sano, pero con hallazgo lateral | 368 | 23,0 |
-| D | Sano y limpio | 1.225 | 76,5 |
-| | **Total** | **1.601** | **100** |
+| C | Sano, pero con hallazgo lateral | 370 | 23,0 |
+| D | Sano y limpio | 1.228 | 76,5 |
+| | **Total** | **1.606** | **100** |
 
 Las dos A estan en los puestos 15 y 124. Las seis B estan en los puestos 22,
 28, 52, 79, 104 y 610. Despues del puesto 610 no hay una sola A ni una sola B
-en 991 pares leidos.
+en 996 pares leidos, **incluidos los cinco de borde**.
 
 **La lectura de la vara.** Por debajo del umbral la vara del gradiente
-aguanta. Dos violaciones candidatas en 1.601 pares, las dos en el primer 8% de
-la cola, y ninguna en los ultimos 991 pares. La franja no es un yacimiento de
+aguanta. Dos violaciones candidatas en 1.606 pares, las dos en el primer 8% de
+la cola, y ninguna en los ultimos 996 pares. La franja no es un yacimiento de
 violaciones del gradiente.
 
 **Lo que la franja si encontro.** El cribado se cruzo con otra cosa, mucho mas
 grande que lo que venia a buscar: el catalogo esta lleno de nodos que dicen lo
-mismo dos, tres, cuatro y hasta doce veces. Eso es lo que ocupa las 368 C y es
+mismo dos, tres, cuatro y hasta doce veces. Eso es lo que ocupa las 370 C y es
 lo que este informe organiza en la seccion 4.
 
 ---
@@ -47,7 +53,7 @@ porque cambian como se leen los veredictos.
    manual y el infinitivo suelto NO disparan C: aparecen en demasiados nodos
    para ser senal.
 2. **En cada razon de C digo si la figura es NUEVA o YA REGISTRADA**, para que
-   la adjudicacion no tenga que ir a buscarlo. De las 368 C, 111 traen una
+   la adjudicacion no tenga que ir a buscarlo. De las 370 C, 112 traen una
    figura nueva.
 3. **Las herramientas con nombre propio se anotan SIN asumir que murieron.**
    Las plataformas de uso general (Google, LinkedIn, Facebook, Amazon) se
@@ -60,7 +66,7 @@ porque cambian como se leen los veredictos.
 
 Cuando una figura ya quedaba censada completa (los racimos grandes), en varios
 pares posteriores que solo tocaban a un miembro ya contado marque D en vez de
-C. **El conteo de 368 C subestima cuantas veces se volvio a ver cada figura.**
+C. **El conteo de 370 C subestima cuantas veces se volvio a ver cada figura.**
 Lo que NO queda corto son las figuras mismas y sus censos: esos estan
 completos y son lo que importa para adjudicar.
 
@@ -85,6 +91,11 @@ dos nodos del mundo pertenecen a racimos. `eco_efectividad` es uno de once
 nodos de cradle to cradle en environmental y uno de tres que se titulan eco
 efectividad. `breakthrough_desempeno_actual` convive con la familia de causas
 comunes de quality. Puede que el arreglo no sea nodo por nodo sino de racimo.
+
+> **Adjudicadas.** El auditor confirmo las dos como violaciones y les encontro
+> una causa comun que yo no habia visto: **las dos son sombras de nodos
+> costurados del nucleo**. La adjudicacion completa, con la verificacion de los
+> cuatro nodos contra el grafo, esta en la **seccion 9**.
 
 ---
 
@@ -182,7 +193,7 @@ su `_2`, `ciclo_de_culpa` con su `_2`, `triple_bottom_line` con su `_2`.
 
 ### 4.4 Ids casi identicos
 
-**Dieciocho pares** de nodos cuyos ids se distinguen por una letra, un
+**Diecinueve pares** de nodos cuyos ids se distinguen por una letra, un
 articulo o por las mismas palabras permutadas, con contenido calcado. Empezo
 como figura de quality y termino apareciendo tambien en environmental,
 franquicias y **dentro del nucleo**.
@@ -207,6 +218,23 @@ Los mas claros:
 - **En el nucleo:** `fallo_como_aprendizaje_startup` con `fracaso_como_aprendizaje_startup`
 - **En el nucleo:** `leap_of_faith_assumptions` con `leap_of_faith_questions`
 - **En el nucleo:** `funnel_get_customers_optimizacion` con `optimizacion_embudo_get_customers`
+
+**La decimonovena llego con los pares de borde, y es de otra especie**
+(franja 1603): `exportacion/seleccion_canales_distribucion` contra
+`seleccion_canal_distribucion` **del nucleo**. Es la **primera transdominio**
+de la figura. Las dieciocho anteriores viven todas dentro de un mismo mundo o
+dentro del nucleo; esta es la primera que cruza la frontera que el producto
+cobra, con una sola letra de plural separando el id del mundo del id del
+nucleo. El contenido del par es sano (el mundo especializa a comercio
+internacional sobre la base lean del nucleo), pero la coincidencia de ids es un
+riesgo de confusion que las otras dieciocho no tenian: aqui un lector puede
+cruzar sin darse cuenta la linea entre lo gratis y lo pago.
+
+> **Discrepancia de ordinal, sin resolver.** El encargo de la adjudicacion la
+> llama *octava* instancia. En este registro la octava es la **franja 723**
+> (`reduccion_tiempo_ciclo` con `reduccion_de_tiempo_de_ciclo`), y esta es la
+> decimonovena. Escribo el ordinal que sale del archivo y dejo el otro
+> anotado. No cambio ninguno de los dos por mi cuenta.
 
 ### 4.5 Costuras: nodos que cuentan lo mismo dos veces
 
@@ -240,6 +268,16 @@ grandes, ordenadas por tamano:
 **Todas las costuras estan en nodos del NUCLEO.** No aparecio ni una sola en
 un nodo de mundo. Esa asimetria merece explicacion del auditor.
 
+> **Queda como pregunta abierta, con hipotesis a comprobar** (adjudicacion, ver
+> seccion 10): **21 de 21 en el nucleo puede ser efecto del tamano de los nodos
+> del nucleo, no de su salud.** Una costura necesita sitio: hacen falta dos
+> bloques apilados para que se vea, y los nodos del nucleo son sistematicamente
+> mas largos que los de mundo. Si el nucleo concentra los nodos de nueve pasos
+> para arriba, concentrara las costuras aunque los dos lados enfermen igual. La
+> comprobacion es del barrido intra-dominio: **normalizar la tasa de costura
+> por longitud del nodo** y ver si la asimetria sobrevive. Si sobrevive, es
+> salud; si desaparece, era el metro.
+
 ### 4.6 Marco-pais cableado
 
 **Veinte pares** dejaron a la vista nodos que cablean un marco regulatorio
@@ -272,6 +310,28 @@ verse un nodo bien hecho:
 - `exclusividad_territorial_representante` manda verificar si las leyes de tu
   pais permiten el limite territorial.
 
+**Colateral de la adjudicacion: el CUI de seguridad_digital, y lo que medí al
+verificarlo.** La adjudicacion registra
+`seguridad_digital/getting_started_supply_chain_risk_management` (paso 1,
+*proveedores criticos con acceso a sistemas que procesan CUI*) como tercera
+instancia de marco-pais en ese mundo tras los dos POA&M. **Verificado contra el
+grafo: la cita existe y es marco-pais** (CUI es una designacion federal
+estadounidense y arrastra NIST SP 800-171). Dos precisiones que salen de la
+misma verificacion:
+
+1. **No es nueva en este archivo.** Ya estaba registrada en el veredicto de la
+   **franja 79**, dentro de la B, como *pais cableado, el nodo del mundo vuelve
+   a usar CUI sin condicion de pais*. Lo que faltaba era subirla aqui, a la
+   lista de la figura. Queda subida.
+2. **Tercera REGISTRADA, no tercera existente.** Al ir a contarlas conte el
+   mundo entero: **de los 55 nodos de seguridad_digital, 20 cablean el marco
+   federal estadounidense en sus pasos** (CUI, NIST, SP 800, POA&M). Son trece
+   con CUI, cuatro con NIST, cuatro con SP 800 y cuatro con POA&M, con solapes.
+   **Mas de un tercio del mundo.** El cribado solo vio los que la franja le puso
+   delante; el problema de ese mundo no son tres nodos sino su encuadre entero,
+   y eso es material para el barrido intra-dominio, no para un parche de tres
+   nodos.
+
 ### 4.7 Herramientas con nombre propio
 
 Catorce pares las dejaron a la vista. Se anotan sin asumir que murieron.
@@ -289,7 +349,7 @@ Amazon.
 ### 4.8 Herramientas muertas, id fosil, audiencia invertida
 
 Tres de las ocho figuras del encargo **no produjeron ningun hallazgo nuevo** en
-1.601 pares:
+1.606 pares:
 
 - **Id que no corresponde al contenido:** no encontre ninguno mas alla de los
   que ya estaban en la ficha.
@@ -347,37 +407,67 @@ Tres errores propios que quedan aqui declarados y ya corregidos en el archivo:
    (franja 247) se llama Paso 3 y lo clasifique D sin marcar la figura. Quedo
    registrado donde corresponde en franja 562 y 1525, y cuenta en la tabla del
    apartado 4.2.
-3. **El agujero de borde del Paso 0**, que ya traje en el commit `dd0af9a` y
-   repito aqui porque sigue abierto: la regla de corte (clave menor a 0,7501)
-   metio 3 pares que ya estaban leidos en la cola de 346 y dejo fuera 5 pares
-   genuinamente nuevos, con claves 0,7940, 0,7820, 0,7763, 0,7512 y 0,7508.
-   No cambie la regla ni la numeracion. Esos 5 se pueden anexar como 1602 a
-   1606 sin renumerar nada.
+3. **El agujero de borde del Paso 0: CERRADO.** Lo traje en el commit `dd0af9a`
+   y estuvo abierto hasta esta entrega. La regla de corte (clave menor a
+   0,7501) metio 3 pares que ya estaban leidos en la cola de 346 y dejo fuera 5
+   pares genuinamente nuevos, con claves 0,7940, 0,7820, 0,7763, 0,7512 y
+   0,7508.
+
+   **Los cinco quedan anexados y leidos, con cero violaciones.** Se
+   reprodujeron con la receta de este informe (regeneracion del instrumento a
+   umbral semantico 0,70 en medicion aparte, resta de la cola de 346 y de la
+   franja, y restauracion de las salidas del instrumento con `git checkout --`,
+   sin persistir nada). La reproduccion dio **exactamente esos cinco, con las
+   mismas claves y los mismos ids**, y confirmo tambien los 3 ya leidos
+   (franjas 4, 5 y 1029). Entraron como puestos **1602 a 1606**, sin cambiar la
+   regla y sin renumerar nada:
+
+   | puesto | clave | par | clase |
+   |---:|---:|---|:--:|
+   | 1602 | 0,7940 | `quality/politica_formal_de_calidad` contra `plan_gestion_calidad` | D |
+   | 1603 | 0,7820 | `exportacion/seleccion_canales_distribucion` contra `seleccion_canal_distribucion` | C |
+   | 1604 | 0,7763 | `risk_management/manten_viva_tu_lista_de_riesgos` contra `matriz_probabilidad_impacto` | C |
+   | 1605 | 0,7512 | `quality/evaluacion_alternativas_solucion` contra `brainstorming_divergente` | D |
+   | 1606 | 0,7508 | `quality/evaluacion_desempeno_proyectos` contra `diseno_metricas_lideres_rezagados` | D |
+
+   **Ninguna A y ninguna B entre los cinco**, que era la pregunta que el
+   agujero dejaba abierta: los pares de mayor clave de la franja, los que mas
+   cerca estaban del umbral, no escondian ninguna violacion. Las dos C traen
+   figura: la 1603 es la primera transdominio de los ids casi identicos
+   (apartado 4.4) y la 1604 es la **quinta verificacion post-cirugia no
+   buscada** (apartado 9.4).
 
 ---
 
 ## 7. Lo que el auditor tiene que decidir
 
-Este informe no propone arreglos. Lo que deja sobre la mesa:
+Este informe no propone arreglos. Lo que deja sobre la mesa. **Los puntos 1 y 7
+ya tienen respuesta del auditor** y estan resueltos en las secciones 9 y 10; el
+resto sigue abierto.
 
-1. **Las 2 A y las 6 B**, para adjudicar una por una.
+1. ~~**Las 2 A y las 6 B**, para adjudicar una por una.~~ **ADJUDICADAS**, ver
+   seccion 9.
 2. **Los treinta racimos**, para decidir si el arreglo es nodo por nodo o de
-   racimo entero. Trece de ellos estan dentro del nucleo.
+   racimo entero. Trece de ellos estan dentro del nucleo. **El auditor los deja
+   como primer censo del barrido intra-dominio y los adjudica despues de la
+   muestra D** (seccion 10).
 3. **Los cinco pasos duplicados del programa de Crosby**, que son el caso mas
    limpio y mas facil de cerrar.
 4. **Las veintiuna costuras**, todas en nodos del nucleo, con la pregunta de
-   por que ninguna aparecio en un nodo de mundo.
+   por que ninguna aparecio en un nodo de mundo. **Queda como pregunta abierta
+   con hipotesis a comprobar en el barrido** (apartado 4.5 y seccion 10).
 5. **Los veinte casos de marco-pais**, con los tres contramodelos que el
    propio catalogo ya tiene como vara.
 6. **Los seis choques de doctrina** entre mundo y nucleo.
-7. **El 5% de muestra aleatoria de las D**, que el auditor sortea.
+7. ~~**El 5% de muestra aleatoria de las D**, que el auditor sortea.~~
+   **SORTEADO Y PLANIFICADO**, ver seccion 10.
 
 ---
 
 ## 8. Los veredictos completos
 
 Lo que sigue es la lista de cada A, cada B y cada C con su razon, en orden de
-`puesto_franja`. Las 1.225 D no se listan aqui; estan enteras en
+`puesto_franja`. Las 1.228 D no se listan aqui; estan enteras en
 `docs/FRANJA_VEREDICTOS.jsonl`, una por linea, con su razon.
 
 ### 8.1 Las A (2)
@@ -402,7 +492,7 @@ Lo que sigue es la lista de cada A, cada B y cada C con su razon, en orden de
 - **610** | franquicias/concepto_de_advances contra advances_vs_continuations  
   DUDOSO. El nodo del mundo da cuatro pasos de la misma doctrina que el nucleo, el avance como venta pequena progresiva, y lo unico propio de franquicias es el ejemplo del CIRF. El nucleo ademas aporta el diagnostico que el mundo no tiene: distinguir avance de continuacion y preguntarte que falto cuando solo lograste una continuacion. La especializacion es un ejemplo, no metodo.
 
-### 8.3 Las C (368)
+### 8.3 Las C (370)
 
 Cada razon dice si la figura es NUEVA o YA REGISTRADA.
 
@@ -1142,6 +1232,10 @@ Cada razon dice si la figura es NUEVA o YA REGISTRADA.
   Vision, mision y estrategias contra la estrategia de innovacion de producto y tecnologia: niveles distintos, sano. FIGURA: trio de estrategia de innovacion con ids casi identicos en el NUCLEO, ya registrado en franja 1517.
 - **1595** | quality/optimizacion_caracteristicas_diseno contra actualizar_modelo_de_negocio_pivot_o_proceed  
   Optimizar las caracteristicas con revisiones formales de diseno contra decidir si pivotas o sigues: objetos distintos, sano. FIGURA: racimo de pivotar o proceder en el nucleo, ya censado en franja 1349 y ampliado en 1481.
+- **1603** | exportacion/seleccion_canales_distribucion contra seleccion_canal_distribucion  
+  El mundo especializa la eleccion de canal al comercio internacional sobre la base lean del nucleo: sano. FIGURA NUEVA, decimonovena del tipo de ids casi identicos, y la PRIMERA TRANSDOMINIO de esa figura: seleccion_canales_distribucion en exportacion contra seleccion_canal_distribucion en el nucleo, separados por una sola letra de plural. Verificado: las dieciocho anteriores viven todas dentro de un mismo mundo o dentro del nucleo, ninguna cruza la frontera. DISCREPANCIA DE ORDINAL: el encargo la llama OCTAVA; en este registro la octava es la franja 723. Anotada en la seccion de adjudicacion del informe, sin resolver. Par de borde.
+- **1604** | risk_management/manten_viva_tu_lista_de_riesgos contra matriz_probabilidad_impacto  
+  Mantener vivo el registro de riesgos contra priorizar por probabilidad e impacto: momentos propios, sano. FIGURA: QUINTA verificacion post-cirugia no buscada. manten_viva_tu_lista_de_riesgos es uno de los cinco peldanos que reescribio la cirugia 1 (08988ad, verificado en el commit) y vuelve a la cola por su cuenta, como los cuatro de la tabla de la ficha. Par de borde.
 
 ### 8.4 Lo que no cupo en las clases (15 notas dentro de pares D o C)
 
@@ -1178,4 +1272,160 @@ Cada razon dice si la figura es NUEVA o YA REGISTRADA.
 
 ---
 
-Cribado completo: 1.601 de 1.601. Ningun nodo se toco.
+Cribado completo: 1.606 de 1.606, con los cinco pares de borde anexados.
+Ningun nodo se toco.
+
+---
+
+## 9. La adjudicacion del auditor
+
+El auditor leyo las 2 A y las 6 B y las adjudico. Lo que sigue es su veredicto,
+con la verificacion que hice contra el grafo antes de escribirlo.
+
+### 9.1 Las dos A: VIOLACIONES CONFIRMADAS
+
+Las dos quedan confirmadas como violaciones de la vara. **Y el auditor les
+encontro una causa comun que yo no habia visto: las dos son sombras de los dos
+nodos costurados del nucleo.**
+
+| franja | nodo del mundo | pasos | nodo del nucleo | pasos | el nucleo esta costurado |
+|---:|---|---:|---|---:|---|
+| **15** | `quality/breakthrough_desempeno_actual` | 5 | `plan_mejora_procesos` | 15 | si, tres bloques apilados |
+| **124** | `environmental/eco_efectividad` | 3 | `economia_circular_como_modelo_de_negocio` | 9 | si, dos bloques apilados |
+
+**Verificado contra el grafo, nodo por nodo:**
+
+- `breakthrough_desempeno_actual` (quality, 5 pasos) es el DMAIC de manual:
+  define, mide, analiza causas raiz, implementa mejoras, establece controles.
+- `plan_mejora_procesos` (nucleo, 15 pasos) **no son quince decisiones**. El
+  tercer bloque (pasos 11 a 15) vuelve a contar el segundo casi paso por paso:
+  el paso 11 (*define el resultado final que el proceso debe producir*) es el
+  paso 8 (*definir el output esperado del proceso antes de disenar los pasos*);
+  el paso 13 (*establece metricas para cada etapa*) es el paso 9 (*establecer
+  metricas de exito en cada etapa*); el paso 14 (*asigna responsabilidad clara
+  a una organizacion o individuo por cada paso*) es el paso 10 (*asignar
+  responsabilidad clara por cada paso*). Es la costura que el lote 10 ya le
+  habia confirmado.
+- `eco_efectividad` (environmental, 3 pasos): piloto, ciclos biologico y
+  tecnico, materiales de upcycling.
+- `economia_circular_como_modelo_de_negocio` (nucleo, 9 pasos) **son cinco
+  decisiones contadas dos veces**. El segundo bloque (6 a 9) repite el primero:
+  el paso 6 (*mapear el ciclo de vida actual*) es el paso 1 (*mapear el ciclo
+  de vida completo*); el paso 8 (*disenar un mecanismo de retorno o
+  remanufactura*) es el paso 3 (*redisenar el modelo para incluir recuperacion,
+  reuso o regeneracion*); el paso 9 (*calcular el impacto en sostenibilidad y
+  en costos*) es el paso 5 (*medir el impacto economico y ambiental*).
+
+> **La lectura del auditor, en una linea: las violaciones de la franja no son
+> enfermedad nueva. Son la acrecion del gratis tapando al pago.**
+>
+> El nodo del nucleo no gana la comparacion porque sepa mas. La gana porque
+> **abulta**: cuenta la misma doctrina dos o tres veces y llega a la mesa con
+> quince pasos contra cinco, o nueve contra tres. La vara del gradiente estaba
+> midiendo una costura y llamandola profundidad.
+
+### 9.2 La cura acoplada, para la pasada unica
+
+El auditor dicta **una sola cura, de dos manos, para las dos A**, y las dos
+manos se hacen en la misma pasada:
+
+1. **Destejer el costurado del nucleo.** Quitar el bloque repetido reduce la
+   sombra sin quitarle nada al lector: `plan_mejora_procesos` pierde una
+   narracion, no una decision, y `economia_circular_como_modelo_de_negocio`
+   pasa de nueve pasos a las cinco decisiones que de verdad tiene.
+2. **Profundizar el nodo del mundo con su propio libro**, que es **el patron de
+   la cirugia 1**: no se copia del nucleo ni se le recorta al nucleo, se le da
+   al nodo de pago la voz y el metodo de su propia fuente.
+
+**Las dos manos juntas o ninguna.** Destejer solo el nucleo deja el par igual
+de plano por el otro lado; profundizar solo el mundo deja la costura viva. Y la
+cirugia 1 ya demostro, cuatro veces sin buscarlo, que cuando las dos se hacen
+el par vuelve a la cola por su cuenta y pasa.
+
+### 9.3 Las seis B: OK las seis
+
+Ninguna de las seis es violacion. El veredicto del auditor, una por una:
+
+| franja | par | veredicto |
+|---:|---|---|
+| **22** | `quality/criterios_seleccion_proyectos_calidad` contra `gestion_de_portafolio_gates_go_kill` | **OK.** Especializacion real: la matriz de nominaciones es del mundo. |
+| **28** | `quality/optimizacion_de_procesos` contra `mejora_continua_relentless` | **OK apretado.** El nodo del mundo es flaco y autorreferente: **candidato a engorde, no caso de vara.** |
+| **52** | `exportacion/plataformas_comercio_electronico_marketplaces` contra `channels_hypothesis_web_mobile` | **OK.** Especializacion a marketplaces. |
+| **79** | `seguridad_digital/getting_started_supply_chain_risk_management` contra `gestion_riesgo_cadena_suministro` | **OK.** Objetos distintos: gobierno cyber contra riesgo fisico de la cadena. |
+| **104** | `franquicias/sitio_web_captura_leads` contra `diseno_landing_page` | **OK.** Tema propio, y la doctrina opuesta es legitima: captura de leads contra landing de autoservicio. |
+| **610** | `franquicias/concepto_de_advances` contra `advances_vs_continuations` | **OK.** Especializacion con el CIRF. |
+
+**La unica accion que sale de las seis** es la del 28, y no es de vara: el nodo
+del mundo entra a la lista de engorde, no a la de violaciones.
+
+### 9.4 Colateral de la adjudicacion
+
+Dos cosas que la adjudicacion dejo registradas y que verifique antes de
+escribir:
+
+1. **El CUI del marco NIST en
+   `seguridad_digital/getting_started_supply_chain_risk_management`.**
+   Verificado en el paso 1 del nodo. Tercera instancia **registrada** de
+   marco-pais en ese mundo tras los dos POA&M. Al contarla mediante el grafo
+   salio ademas que **20 de los 55 nodos de ese mundo cablean el marco federal
+   estadounidense**: el detalle esta en el apartado 4.6.
+2. **La quinta verificacion post-cirugia no buscada** (franja 1604, uno de los
+   pares de borde). `manten_viva_tu_lista_de_riesgos` es **uno de los cinco
+   peldanos que reescribio la cirugia 1** (verificado en el commit `08988ad`,
+   que toca ese archivo) y volvio a la cola por su cuenta, contra
+   `matriz_probabilidad_impacto`, y **paso**: momento propio, sano. Es la quinta
+   de la tabla de la ficha, que tenia cuatro. Y llego sola, otra vez: salio del
+   agujero de borde, no de ninguna busqueda.
+
+---
+
+## 10. La muestra D, los racimos y lo que queda abierto
+
+### 10.1 La muestra de validacion del cribado
+
+**El auditor leera 61 pares D, el 5%, sorteados con semilla `81febf5c`, en
+tandas.** Es la validacion final del cribado: si la muestra no encuentra en las
+D nada que debiera haber sido A, B o C, la clasificacion de las 1.228 D queda en
+pie.
+
+El 5% se calcula sobre las **1.228 D** del archivo cerrado (1.228 por 0,05 son
+61,4, que redondea a 61).
+
+> **Detalle que dejo anotado y no invento:** el encargo fija la semilla pero no
+> el procedimiento de sorteo (que generador, sobre que orden, con o sin
+> reemplazo). No genero la lista por mi cuenta, porque una lista sacada de un
+> procedimiento distinto al del auditor no seria reproducible ni verificable.
+> La lista la trae el auditor, o me dicta el procedimiento y la reproduzco.
+
+### 10.2 Los treinta racimos: primer censo, adjudicacion despues
+
+**Los treinta racimos del apartado 4.1 quedan como PRIMER CENSO del barrido
+intra-dominio**, no como una lista de arreglos pendientes. Se adjudican
+**despues** de la muestra D.
+
+Tiene sentido en ese orden: el cribado los encontro de rebote, mirando pares de
+mundo contra nucleo, y por eso el censo es el que cabe por esa ventana. El
+barrido intra-dominio es la herramienta que los mira de frente, y adjudicar
+treinta racimos con el censo parcial seria decidir con la mitad del mapa.
+
+### 10.3 La asimetria de las costuras: pregunta abierta, con hipotesis
+
+**21 costuras de 21 estan en nodos del nucleo. Ninguna en un nodo de mundo.**
+Queda anotada como pregunta abierta, con una hipotesis concreta a comprobar en
+el barrido:
+
+> **Puede ser efecto del tamano de los nodos del nucleo, no de su salud.**
+
+Una costura necesita sitio para verse: hacen falta dos bloques apilados, y los
+nodos del nucleo son sistematicamente mas largos que los de mundo. Si el nucleo
+concentra los nodos de nueve pasos para arriba, va a concentrar las costuras
+aunque los dos lados enfermen exactamente igual.
+
+**La comprobacion es barata y es del barrido: normalizar la tasa de costura por
+longitud del nodo.** Si al comparar nodos de la misma longitud la asimetria
+sobrevive, es salud del nucleo. Si desaparece, era el metro.
+
+---
+
+**Estado del encargo:** cribado cerrado (1.606 de 1.606), agujero de borde
+cerrado, A y B adjudicadas, muestra D y racimos en manos del auditor.

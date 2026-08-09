@@ -793,6 +793,35 @@ se anota entero en vez de partirse:
 **El nodo no se toca desde el gradiente.** Queda aquí porque su revisión es de
 vigencia de marco, no de profundidad.
 
+### Entrada del cribado de la franja: `seguridad_digital`, y no es una entrada suelta
+
+Viene de la adjudicación de la franja (`docs/FRANJA_INFORME.md`, apartado 4.6 y
+sección 9.4). **Es el primer miembro de esta ficha que NO es de exportación**, y
+por eso la anoto aquí en vez de abrirle ficha propia: la clase es la misma
+(marco de un solo país cableado sin condición de país). **Si el auditor prefiere
+ficha aparte, mudarla cuesta una línea.**
+
+**El caso citado**: `seguridad_digital/getting_started_supply_chain_risk_management`,
+cuyo paso 1 manda *identificar proveedores críticos con acceso a sistemas que
+procesan **CUI***. CUI es una designación federal estadounidense y arrastra
+detrás el NIST SP 800-171. Es la **tercera instancia registrada** en ese mundo,
+después de los dos POA&M.
+
+**Y al ir a contarla, el censo cambió el tamaño del problema.** Medido contra el
+grafo, nodo por nodo:
+
+> **20 de los 55 nodos de `seguridad_digital` cablean el marco federal
+> estadounidense en sus pasos** (trece con CUI, cuatro con NIST, cuatro con
+> SP 800, cuatro con POA&M, con solapes). **Más de un tercio del mundo.**
+
+**Lo que eso significa para esta ficha**: en `seguridad_digital` el problema no
+son tres nodos sueltos que se arreglan uno por uno, **es el encuadre entero del
+mundo**. El cribado sólo vio los que la cola le puso delante. **Cuando esta
+ficha despierte, en este mundo lo primero es el barrido, no la entrada suelta**,
+igual que ya está escrito para la ficha hermana.
+
+**Ningún nodo se toca desde aquí.**
+
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
 
 **Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no
