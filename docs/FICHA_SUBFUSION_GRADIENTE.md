@@ -19,7 +19,27 @@ deprecacion existente**: alias, `merged_originals`, **nada se borra**.
 Estos cuatro **corrigen la cuenta sin nombre** que quedo en el marcador del lote 5
 de `docs/GRADIENTE_VEREDICTOS.md`.
 
-## 1. GOLDRATT, dos nodos
+**Estado: el caso 1 esta CERRADO** (no se funden, ver su razon). **Los casos 2, 3
+y 4 siguen abiertos.**
+
+## 1. GOLDRATT, dos nodos. **CERRADO: NO SE FUNDEN**
+
+> **CERRADO el 9 ago 2026**, adjudicado por el auditor con los datos de grafo que
+> trajo el ejecutor al abrir esta ficha. **La entrada no se borra: se marca
+> cerrada con su razon**, que es como se cierra todo en esta casa.
+>
+> **La razon**: los dos nodos son **una escalera tejida con delegacion
+> explicita**. Estan encadenados **en los dos sentidos**, y **el paso 3 del
+> primero delega literalmente en el segundo** (*"Aplicar los cinco pasos de
+> enfoque para gestionar las restricciones identificadas"*). Eso no es un
+> concepto partido por accidente: **es un peldano que apunta al siguiente a
+> proposito.**
+>
+> **Lo unico vivo de Goldratt** es la **violacion de gradiente del nodo del
+> mundo**, `quality/constraint_management`, **que ya tiene veredicto propio**
+> (puestos 9 y 10) y se arregla profundizando el mundo, no tocando el nucleo.
+
+**Lo que sigue es el registro original de la sospecha, conservado.**
 
 `nucleo/teoria_de_restricciones` (3 pasos) y
 `nucleo/cinco_pasos_enfoque_restricciones` (5 pasos).
@@ -126,7 +146,7 @@ palanca reservada** (reencuadrar el nodo del **NUCLEO** a version base, clausula
 
 ---
 
-# LADO MUNDO, un caso
+# LADO MUNDO, dos casos
 
 ## 5. `quality`, el metodo COC escrito dos veces
 
@@ -154,6 +174,73 @@ titulos no muestran**?
 > proposito**, a diferencia del caso 1. Ese es el contraste que hace a este el
 > caso **mas maduro para fusion** de los cinco.
 
+## 6. `quality`, EL RACIMO DE AUDITORIA
+
+Abierto en el **lote 7**. **Nodos del mundo `quality` que emparejan contra el
+MISMO `nucleo/quality_audit`**, un nodo de cuatro pasos.
+
+**Cada par individual cumple el gradiente.** Ninguno es una violacion. **El
+hallazgo es el solape INTERNO del racimo.**
+
+### Los miembros leidos, con su puesto
+
+| puesto | nodo del mundo | pasos |
+|---:|---|---:|
+| 16 | `auditoria_calidad` | 4 |
+| **33** | `auditoria_de_producto` | 7 |
+| 47 | `auditoria_de_producto_2` | 4 |
+| 50 | `programa_auditoria_calidad` | 4 |
+| 55 | `auditoria_producto` | 4 |
+| 56 | `auditoria_negocio` | 5 |
+| 58 | `concepto_de_auditoria_de_calidad` | 4 |
+
+> **CORRECCION DE ALCANCE, medida y traida por el ejecutor sin decidirla.** El
+> encargo abrio este caso con **seis** miembros y la lista de puestos **16, 47,
+> 50, 55, 56, 58**. **Son siete**: falta el **puesto 33**,
+> `quality/auditoria_de_producto`, que el propio encargo **nombra en el cuerpo**
+> del hallazgo (*"auditoria_de_producto y auditoria_producto son casi el mismo
+> nodo"*) pero **omite en la lista**. Verificado contra la cola.
+
+### El solape interno, leido
+
+**a) `auditoria_de_producto` (7 pasos) y `auditoria_producto` (4 pasos): casi el
+mismo nodo con casi el mismo nombre.**
+
+> **Precision verificada**: **no es un parecido, es una contencion.** Los cuatro
+> pasos del corto viven dentro de los siete del largo: elegir la etapa de
+> evaluacion, tomar muestras representativas, y validar que lo auditado sea lo
+> que le importa al cliente. **El nodo de cuatro pasos no tiene nada que el de
+> siete no tenga**, y el de siete ademas clasifica fallas por gravedad, calcula
+> indice por unidad y compara en el tiempo.
+
+**b) `auditoria_calidad` y `programa_auditoria_calidad`: los dos son "el
+programa".** Ambos se ocupan de montar la auditoria antes de hacerla (alcance,
+criterios, quien audita).
+
+**c) `auditoria_de_producto_2` SI es tema propio** (reinspeccion de decisiones de
+inspeccion ya tomadas), **pero carga el sufijo numerico conocido**, que es la
+marca de nacimiento de la extraccion por chunks.
+
+> **HALLAZGO ADICIONAL, verificado al leer y traido sin decidirlo**: el solape de
+> (b) **no es una pareja, es un trio**. `concepto_de_auditoria_de_calidad`
+> comparte **paso por paso** con los otros dos: su *"definir si la auditoria sera
+> orientada a cumplimiento, a efectividad o ambas"* es **el paso 1 de
+> `programa_auditoria_calidad`**, y su *"seleccionar auditores independientes de
+> la actividad evaluada"* es **el paso 2 de `auditoria_calidad`**. **Tres nodos
+> reparten cuatro decisiones de montaje.**
+
+### El limite de este caso, que la lectura de fusion tendra que fijar
+
+`nucleo/quality_audit` empareja **dieciseis veces** en los 346, y **nueve de esas
+parejas estan por leer** (puestos 63, 66, 98, 105, 106, 160, 176, 228 y 279).
+
+> **Los siete de arriba son miembros CONFIRMADOS por lectura. Los nueve de abajo
+> son CANDIDATOS SIN LEER, y no se adjudican aqui.**
+>
+> **Decision pendiente del auditor con el fundador**: o la lectura de fusion
+> **espera** a que la cola llegue a ellos, o se **adelantan** a proposito para no
+> fusionar un racimo dos veces. **El ejecutor no la toma.**
+
 ---
 
 # RELACION CON EL GRADIENTE
@@ -176,7 +263,10 @@ de siempre**:
 |---|---|---|
 | **1.º** | **caso 5**, `quality` COC | dos nodos, un solo mundo, **lectura corta** |
 | **2.º** | **casos 3 y 4**, las costuras | **un solo nodo cada uno**: se abre, se parte o se recorta, y se cierra |
-| **3.º** | **casos 1 y 2**, Goldratt y brainstorming | **requieren decidir el reparto** entre nodos que sobreviven |
+| **3.º** | **caso 2**, brainstorming | **requiere decidir el reparto** entre nodos que sobreviven |
+| **4.º** | **caso 6**, el racimo de auditoria | **el mas grande y el menos maduro**: siete nodos confirmados, nueve candidatos sin leer, y su alcance no esta fijado |
+
+**El caso 1 salio del orden: esta CERRADO y no se ejecuta.**
 
 **El caso 4 puede ejecutarse junto con el reencuadre a base de
 `gestion_inventario`** si el fundador aprueba esa palanca: **es el mismo nodo
