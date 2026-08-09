@@ -1872,3 +1872,80 @@ literal**.
 > **Dos lotes seguidos sin una sola violacion.** La cola por debajo de 0,78 esta
 > confirmando que **el gradiente, como problema, se concentro arriba**. Lo que
 > sigue saliendo es **material para los barridos**, no para la vara.
+
+---
+
+## LOTE 13, puestos 135 a 154 por senal (veinte pares)
+
+**9 ago 2026.** Cifras verificadas contra `docs/GRADIENTE_PARES.jsonl`; los veinte
+puestos coinciden.
+
+> **CERO VIOLACIONES. Tercer lote seguido.**
+
+| # | veredicto | par y lectura |
+|---:|---|---|
+| **135** | OK, **cita intra-nucleo** | `quality/planificacion_cadena_suministro` contra `nucleo/definicion_alineacion_cadena_suministro` **(t60.9, s0.7783)**. Sourcing de commodity contra alineacion. **El nucleo tiene DOS nodos de alineacion de cadena**, ver la ficha |
+| **136** | OK | `franquicias/principio_apalancamiento_numero_magico` contra `nucleo/decision_intensidad_capital` **(t38.8, s0.7779)**. **Cuarto hermano sano del hub** |
+| **137** | OK, tema propio | `quality/matriz_riesgo_conocido_desconocido` contra `nucleo/matriz_probabilidad_impacto` **(t42.3, s0.7778)**. Miembro nuevo de la miniseccion de riesgos de `quality` |
+| **138** | **FRONTERA CON CHOQUE**, la tercera | ver abajo |
+| **139** | OK, **cita intra-quality** | `quality/definir_metas_smart_de_proyecto` contra `nucleo/metas_objetivos_smart_innovacion` **(t49.5, s0.7773)**. **`quality` tiene DOS nodos de metas SMART de proyecto** (con el 87) |
+| **140** | OK | `franquicias/velocidad_crecimiento_franquicia_2` contra `nucleo/eleccion_ritmo_crecimiento` **(t40.0, s0.7769)**. Especializacion sana; su familia de sufijo ya esta en la medicion de las 36 |
+| **141** | OK | `quality/institucionalizar_capacitacion` contra `nucleo/entrenamiento_empleados_startup` **(t29.3, s0.7766)**. El taller contra el programa formal |
+| **142** | OK | `quality/formacion_seleccion_y_retencion_de_personal` contra `nucleo/hr_calidad_gestion` **(t37.2, s0.7762)**. Seleccion contra ciclo de vida |
+| **143** | OK | `quality/moral_y_sistema_no_individuo` contra `nucleo/curse_cinco_culpas` **(t29.5, s0.7762)**. **El racimo Deming de responsabilidad sube a CUARTETO** |
+| **144** | OK POR ESPECIALIZACION | `exportacion/seleccion_canales_distribucion` contra `nucleo/seleccion_canal_fisico` **(t76.6, s0.7761)** |
+| **145** | OK, **colateral de herramienta** | `franquicias/seo_para_captacion_de_franquiciados` contra `nucleo/seo_estrategia_fat_head` **(t32.4, s0.776)**. **El nucleo cita Open Site Explorer POR SEGUNDA VEZ** |
+| **146** | OK | `franquicias/franquicia_como_capital_alternativo` contra `nucleo/decision_intensidad_capital` **(t34.0, s0.7758)**. **QUINTO hermano sano del hub: nodo estrella del gradiente** |
+| **147** | OK POR ESPECIALIZACION | `exportacion/garantias_producto_internacional` contra `nucleo/garantias_implicitas_vs_expresas` **(t34.8, s0.7755)** |
+| **148** | OK | `quality/evaluacion_desempeno_junta_directiva` contra `nucleo/evaluacion_balanceada_de_ejecutivos` **(t46.2, s0.7755)**. Junta contra ejecutivo: objetos distintos, **los dos amparados por la politica de escala** |
+| **149** | FALSO PAR FUNCIONAL | `quality/evaluacion_gestion_riesgos` contra `nucleo/registro_de_riesgos` **(t56.0, s0.7755)**. **Cuarta aparicion del nodo COC**, que sigue esperando su fusion del caso 5 |
+| **150** | **FRONTERA CON CHOQUE**, la cuarta | ver abajo |
+| **151** | OK | `quality/rol_lider_equipo_calidad` contra `nucleo/roles_responsabilidades` **(t55.1, s0.775)**. Especializacion sobre la plantilla generica |
+| **152** | OK, **ejemplar post-cirugia** | `risk_management/reduce_el_riesgo_a_lo_razonable` contra `nucleo/matriz_probabilidad_impacto` **(t39.3, s0.775)**. Asume lo grave identificado, ataca probabilidad o impacto, **anota el residual** |
+| **153** | OK | `quality/diseno_servicio_calidad` contra `nucleo/rediseno_procesos_negocio_cx` **(t37.3, s0.7749)**. Disenar desde cero contra redisenar |
+| **154** | OK funcional, **costura confirmada de rebote** | ver abajo |
+
+### 138 y 150, las dos fronteras nuevas: Deming contra el nucleo
+
+| # | el mundo dice | el nucleo dice |
+|---:|---|---|
+| **138** | `eliminacion_barreras_orgullo_del_trabajo`: **revisar los sistemas de evaluacion de desempeno como BARRERA** al orgullo del trabajo | `gestion_desempeno_feedback`: **instituir revisiones formales y periodicas** |
+| **150** | `fin_precio_como_criterio_unico`: **proveedor unico y relacion de largo plazo** | `criterios_seleccion_proveedores`: **matriz ponderada para elegir entre varios por puntaje** |
+
+> **No son violaciones de gradiente: son doctrinas que se contradicen.** Y con
+> estas van **cuatro**. **El patron esta en la ficha.**
+
+### 154, la costura que llego de rebote
+
+`compras/clasifica_tu_inventario` contra `nucleo/ratios_eficiencia_inventario`
+**(t49.6, s0.7748)**
+
+**El par es funcional y sano.** Lo que trae es el nodo del nucleo: **es el puesto 4
+del top de costuras, y su doble esta a la vista.**
+
+| | |
+|---|---|
+| paso 2 | *"Calcular COGS anual dividido entre inventario promedio para obtener **rotacion**"* |
+| paso 5 | *"Calcular la **rotacion** de inventario actual de la empresa"* |
+
+**Dos bloques**: 1 a 4 (DII, rotacion, comparar con competidores, liberar efectivo)
+y 5 a 8 (rotacion **otra vez**, retorno sobre ventas, ciclo de conversion de
+efectivo, cuentas por cobrar y pagar).
+
+**COSTURA CONFIRMADA. Registrada en la clase de acrecion.**
+
+---
+
+## MARCADOR TRAS 158 DE 346
+
+| | |
+|---|---|
+| **violaciones nuevas** | **cero**, tercer lote seguido |
+| **fronteras con choque** | **4**, y con patron reconocido |
+| costuras confirmadas de rebote | **1** (`ratios_eficiencia_inventario`) |
+| citas intra-dominio | **siete racimos** en la ficha |
+
+> **`nucleo/decision_intensidad_capital` cierra el lote con CINCO especializaciones
+> sanas de `franquicias`** (puestos 22, 79, 82, 136 y 146). **Es el nodo estrella
+> del gradiente**: un nodo base al que cinco nodos de mundo se cuelgan sin pisarse
+> ni entre ellos ni con el.

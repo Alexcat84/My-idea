@@ -823,6 +823,23 @@ vuelve a caducar.
 > barrido**. La primera que apareció, apareció **de rebote**. Cuando se despierte,
 > lo primero es **el barrido**, no la entrada suelta.
 
+### Entrada 2 de herramientas (lote 13, puesto 145): Open Site Explorer, SEGUNDA vez
+
+`nucleo/seo_estrategia_fat_head` **cita la misma herramienta muerta** que
+`nucleo/seo_link_building` (entrada 1, puesto 69).
+
+**Verificado contra el grafo: son exactamente dos nodos activos los que la
+nombran, y los dos son del núcleo.**
+
+> **Ya no es un caso suelto: es un patrón.** Una herramienta retirada por Moz
+> sobrevive en **dos** sitios del catálogo, y **apareció las dos veces de rebote**,
+> leyendo otra cosa.
+
+**Confirma el primer acto de esta ficha, que ya estaba escrito**: cuando despierte,
+**lo primero es el barrido**, no la entrada suelta. Dos apariciones accidentales en
+un mismo barrido de gradiente son la mejor evidencia de que **nadie ha mirado el
+resto**.
+
 ### Entrada 2 de marco-país (lote 9, puesto 85): el mundo quedó atrás del núcleo
 
 Va aquí, junto al puesto 53, aunque su ficha natural sea la de marco: es la misma

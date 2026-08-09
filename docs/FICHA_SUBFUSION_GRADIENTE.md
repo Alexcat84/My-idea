@@ -351,16 +351,36 @@ repetida.**
 > mas delgada que puede producir**. **Los nodos cortos dan la señal de bloque mas
 > ruidosa**, y conviene saberlo al leer la parte baja de la cola.
 
+## CONFIRMADA DE REBOTE desde el gradiente (lote 13)
+
+### `core/ratios_eficiencia_inventario`, 8 pasos: DOBLE
+
+**El puesto 4 del top del instrumento**, confirmado **sin leer la cola**: salio en
+el puesto **154** del gradiente, leyendo otra cosa.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 4** | DII, **rotacion**, comparar con competidores, liberar efectivo atado |
+| **5 a 8** | **la rotacion OTRA VEZ**, retorno sobre ventas, ciclo de conversion de efectivo, cuentas por cobrar y pagar |
+
+**El literal**: paso 2 *"calcular COGS anual dividido entre inventario promedio
+para obtener **rotacion**"* contra paso 5 *"calcular la **rotacion** de inventario
+actual de la empresa"*.
+
+> **Es la TERCERA vez que una costura aparece de rebote leyendo el gradiente**,
+> despues de `plan_mejora_procesos` y `economia_circular`. **El instrumento no fue
+> una idea: fue la respuesta a un patron que ya se estaba repitiendo.**
+
 ---
 
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **leidos** (C1: 3, C2: 5, C3: 6, mas los 2 calibradores) | **16** |
-| **costuras confirmadas** | **12** |
+| **leidos** (C1: 3, C2: 5, C3: 6, los 2 calibradores, y 1 de rebote en el lote 13) | **17** |
+| **costuras confirmadas** | **13** |
 | **citas falsas** | **4** |
-| tasa de acierto | **75%** |
+| tasa de acierto | **76%** |
 
 **Las cuatro falsas se reparten en dos clases nuevas**: LARGO LEGITIMO (2) y FALSO
 POSITIVO DE SECUENCIA LEGITIMA (2).
@@ -377,15 +397,23 @@ se puede hacer con ella:
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **1** | 0 | 1 |
+| **por debajo de 51,0** | **2** | 0 | 2 |
 
 **Por encima de 52 son NUEVE de nueve, no doce de doce**: el doce es el total de
 confirmadas, y **tres de ellas viven por debajo de 52** (`split_testing` en 51,5,
 `key_partners` en 51,7, y `economia_circular` en **49,7**).
 
 > **LA FRANJA 51 a 52 NO ES UN PISO DE FALSOS: ES UNA ZONA MEZCLADA**, con dos
-> confirmadas y cuatro falsas. Y **por debajo de 51 vive una costura confirmada**,
-> que ademas es **uno de los dos calibradores del instrumento.**
+> confirmadas y cuatro falsas. Y **por debajo de 51 viven DOS costuras
+> confirmadas**: `economia_circular` (49,7), que es uno de los dos calibradores del
+> instrumento, y `ratios_eficiencia_inventario` (48,3), confirmada de rebote en el
+> lote 13.
+
+> **Y el segundo trae ademas la prueba de que las dos señales se ganan el
+> sueldo**: `ratios_eficiencia_inventario` tiene **bloque 48,3** (de los mas bajos
+> de la cola) **y pareja 85,1** (de los mas altos). **La señal que casi lo deja
+> fuera es la que la otra compenso.** Quitar una de las dos habria costado esta
+> costura.
 
 ### Consecuencia para el paso de lectura, y va en sentido contrario
 
@@ -1002,6 +1030,39 @@ valvula como ultima palabra.**
 
 ---
 
+# FRONTERAS CON CHOQUE DE FUENTES: son CUATRO, y hay patron
+
+**No son violaciones de gradiente. Son doctrinas que se contradicen dentro del
+catalogo**, y un lector que reciba las dos sale con instrucciones opuestas.
+
+| # | puesto | el mundo dice | el nucleo dice |
+|---:|---:|---|---|
+| **1** | 6 | `franquicias`: **las objeciones indican interes**, prepara respuestas | **SPIN**: los mejores reciben MENOS objeciones porque **las previenen** |
+| **2** | 38 | `compras`: **REVELA tu fecha limite real** al proveedor | **IMPON fechas artificiales** para forzar decisiones |
+| **3** | 138 | `quality` (**Deming**): los sistemas de evaluacion de desempeno son una **BARRERA** al orgullo del trabajo | **instituye revisiones formales y periodicas** |
+| **4** | 150 | `quality` (**Deming**): **proveedor unico y relacion de largo plazo** | **matriz ponderada** para elegir entre varios por puntaje |
+
+## EL PATRON, que las dos ultimas dejan a la vista
+
+> **Las fuentes DOCTRINALES de `quality` (Deming) chocan sistematicamente con las
+> MEJORES PRACTICAS GERENCIALES del nucleo.**
+
+**Y no es casualidad de tema**: Deming escribio **contra** la evaluacion de
+desempeno y **contra** la compra por puntaje comparado. **Son sus catorce puntos,
+literalmente.** El nucleo, minado de manuales de gestion, trae justo lo que Deming
+combatia.
+
+**De las cuatro fronteras, DOS son Deming.** Las otras dos son de venta y
+negociacion, y tambien enfrentan una fuente con doctrina propia contra una practica
+generica.
+
+> **Ninguna se resuelve sola.** Quien se queda con que, y **si el contexto se
+> escribe dentro de los nodos**, es adjudicacion de la pasada unica. **Lo que si se
+> puede afirmar ya es que no son errores: son dos escuelas, y el catalogo las
+> sirve a la vez sin avisar.**
+
+---
+
 # CITAS INTRA-DOMINIO ADELANTADAS
 
 **No son casos. Son la cola inicial del barrido intra-dominio** que el fundador
@@ -1011,21 +1072,34 @@ decidio hacer (ver el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`)
 > cosa, y guardarlas es gratis. **Aqui se acumulan SIN ADJUDICAR**, para que
 > cuando el barrido arranque no empiece de cero.
 
-## a) `quality`, el par de KPI
+## a) `quality`, la miniseccion de riesgos
+
+`identificacion_de_riesgos`, `evaluacion_gestion_riesgos`,
+`plan_de_gestion_de_riesgos` y, desde el lote 13,
+`matriz_riesgo_conocido_desconocido` (puesto **137**).
+
+**Es el racimo que destapo la pregunta mundo contra mundo** (lote 7, puesto 51):
+`quality` tiene una seccion de riesgos **paralela al mundo `risk_management`
+entero**.
+
+## b) `quality`, el par de KPI
 
 `sistema_medicion_kpi` (puestos **15** y **84**) y `medicion_kpi` (puesto **114**).
 
-## b) `quality`, el racimo Deming de responsabilidad
+## c) `quality`, el racimo Deming de responsabilidad
+
+**Era trio y pasa a CUARTETO con el lote 13.**
 
 `politica_no_culpar_trabajador` (puesto **86**),
-`responsabilidad_gerencial_causas_comunes` (puesto **113**), y el **base** de
+`responsabilidad_gerencial_causas_comunes` (puesto **113**),
+`moral_y_sistema_no_individuo` (puesto **143**), y el **base** de
 `distincion_causas_comunes_especiales`.
 
 > **Ojo con este**: la **fusion con reparto del base ya esta adjudicada** (ver la
 > maraña de causas comunes), y **puede absorber parte de este racimo antes de que
 > el barrido llegue**. Conviene mirarlos juntos, no en dos momentos.
 
-## c) `quality`, el racimo de mejora continua
+## d) `quality`, el racimo de mejora continua
 
 `principios_mejora_continua` (puesto **129**), `mejora_continua_del_proceso`
 (puesto **95**) y `enfoque_en_procesos_no_en_problemas` (puesto **57**).
@@ -1033,7 +1107,26 @@ decidio hacer (ver el tablero de `docs/audits/AUD-08-Gradiente_Nucleo_Mundo.md`)
 **Tres linajes lean del mismo mundo rozandose**: Shingo, Deming y el PDCA sobre
 problemas recurrentes. **Sin adjudicar.**
 
-## d) `nucleo`, los DOS nodos de A/B testing
+## e) `nucleo`, los DOS nodos de alineacion de cadena
+
+`definicion_alineacion_cadena_suministro` (puesto **135**) y
+`alineacion_cadena_estrategia_negocio` (puesto **130**).
+
+> **Verificado contra el grafo: los dos son del NUCLEO y los dos son fuente
+> Hugos.** Es decir, **son dos de los 128 de la subfamilia**, y dicen casi lo
+> mismo: mapear la cadena y tu rol en ella, y alinear los drivers segun si
+> compites por eficiencia o por capacidad de respuesta.
+>
+> **Esto cambia el peso de la subfamilia Hugos**: no es solo un problema de voz.
+> **Si dos de los 128 se duplican entre si, puede haber mas**, y el barrido de voz
+> tendria que traer tambien ojo de duplicado.
+
+## f) `quality`, el par de metas SMART de proyecto
+
+`goal_statement_smart` (puesto **87**) y `definir_metas_smart_de_proyecto`
+(puesto **139**). **Los dos del mismo mundo, los dos sobre la meta de un proyecto.**
+
+## g) `nucleo`, los DOS nodos de A/B testing
 
 `split_testing_experimentos_ab` (C3) y `ab_testing_optimizacion` (C2). **Los dos
 del nucleo y los dos con costura confirmada.**
@@ -1042,7 +1135,7 @@ del nucleo y los dos con costura confirmada.**
 > JUNTOS**: destejer uno sin mirar al otro seria escribir dos veces la misma
 > narracion canonica.
 
-## e) `risk_management`, el CUARTETO de actualizacion de la lista
+## h) `risk_management`, el CUARTETO de actualizacion de la lista
 
 **Era trio y pasa a CUARTETO con el lote 12.**
 
