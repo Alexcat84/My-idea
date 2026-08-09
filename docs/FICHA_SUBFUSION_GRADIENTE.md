@@ -670,6 +670,50 @@ trinquete **42/1/0 sin deriva** y **las cinco anclas inmoviles**.
 > Son la entrada pre-integracion, y limpiarlos es otra decision. **Re-integrar un
 > pack re-sembraria el defecto.**
 
+### EL CIERRE COMPLETO: las tres capas
+
+**La limpieza del catalogo era solo la primera.** Un defecto que se limpia sin
+cerrar su origen vuelve.
+
+#### 1. Las SEMILLAS de los packs, limpiadas
+
+Los ocho nodos vivian **tambien** en `packs/quality`, `packs/health_safety` y
+`packs/environmental`, con la misma huella. **Ocho archivos, ocho lineas, mismo
+metodo de linea.** Los packs son **entrada, no catalogo**: sin Gate, sin reindex,
+sin rumbos. **Re-integrar un pack ya no re-siembra el defecto.**
+
+#### 2. La BARANDA en el Gate 0, tres chequeos nuevos
+
+| chequeo | que impide |
+|---|---|
+| **auto-alias** | ningun nodo lleva su propio id en su `ids_alias` |
+| **alias con dos duenos** | ninguna cadena es reclamada por dos nodos |
+| **gemelos del master** | el master del dataset y el de la web **no pueden divergir en contenido de nodos** |
+
+**El tercero nacio de este mismo trabajo**: la divergencia de **71
+`etiqueta_arbol`** vivio en HEAD sin que nadie la viera **porque ningun guardian
+comparaba los dos artefactos**. Cada copia era valida por su cuenta.
+
+**Fixtures de los dos lados** en `engine/test_gate_alias.py`: uno que viola cada
+regla, uno limpio que pasa las tres, uno que prueba que se comparan **campos y no
+bytes**, y una pasada sobre el catalogo real.
+
+#### 3. El ESCRITOR, cazado con su linea
+
+**`scripts/hseq/_renombrar_cosmetico.py`**, en el bucle de renombre.
+
+> **El mecanismo**: el nodo llega con **la BASE ya en su `ids_alias`** (la absorbio
+> en el dedup) **y acto seguido se guarda CON ESE MISMO NOMBRE**. La entrada vieja
+> se vuelve un alias a si mismo. **No fue una tanda descuidada: fue el renombre
+> cosmetico.**
+>
+> **La prueba**: su tabla `RENOMBRES` tiene **exactamente los ocho**.
+
+**El filtro se aplico ahi y en los otros cuatro puntos de escritura de
+`ids_alias`** (`paso1_ascii`, `consolidar_pack`, `paso2_dedup`, `tejer_ola1`),
+porque **una regla escrita en un solo sitio falla en el que alguien olvido**. Un
+test de contrato custodia los cinco.
+
 ---
 
 # FICHA DORMIDA: los 27 REGISTROS SIN ARCHIVO

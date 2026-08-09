@@ -1434,6 +1434,22 @@ de `docs/FICHA_SUBFUSION_GRADIENTE.md`).
 > caminador contaba como cadenas. **Ver el colateral C3 de
 > `docs/FICHA_SUBFUSION_GRADIENTE.md`.**
 
+> **Y de rebote, el hallazgo de las 71.** La cirugia destapo que
+> `dataset/metadata/master_graph.json` y `web/lib/assets/master_graph.json`
+> **llevaban 71 `etiqueta_arbol` divergentes**: la web servia la forma curada de
+> la campaña de anglicismos (*Canvas* a *Mapa*, *Prompts* a *Instrucciones*) y el
+> master del dataset seguia con la vieja, **porque la curaduria se aplica a las
+> DOS copias y alguien recompilo el dataset despues sin reaplicarla**.
+>
+> **Vivio en HEAD hasta `0e5e0c6`.** Ninguna de las dos copias estaba rota: cada
+> una era valida por su cuenta, y **ningun guardian las comparaba**.
+>
+> > **Es la regla de transito fotografiada: dos artefactos gemelos y nadie que
+> > los mirara juntos.**
+>
+> **Ahora el Gate los compara**, y su remedio lleva el ORDEN escrito, porque
+> sincronizar a secas habria empujado la copia vieja sobre la buena.
+
 **Y los puestos 81 a 85 siguen pendientes**, nombrados desde este mismo lote:
 `environmental/diseno_para_el_medio_ambiente`,
 `franquicias/evaluacion_necesidad_franquiciar`, `quality/value_stream_mapping`
