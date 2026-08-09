@@ -134,7 +134,7 @@ Misma altura, angulos distintos: el nucleo con **ejemplos vivos**, el mundo con
 **Propuesta si el fundador lo adjudica arreglable**: via 1 suave, el mundo asume
 el nodo del nucleo como puerta, **sin recortar ninguno**.
 
-### 8. DUDOSO, empate de ensanche, mismo tipo que el 7 **[NO ARREGLADO: la CIRUGIA 1 paro en su parte 2, ver abajo]**
+### 8. DUDOSO, empate de ensanche, mismo tipo que el 7 **[ARREGLADO en la CIRUGIA 1B]**
 
 `environmental/cradle_to_cradle_concepto` contra
 `nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t58.9, s0.8606)**
@@ -394,7 +394,7 @@ contenian.
 salio del peldano 2 y del 3 porque es el centro del 5, y los dos primeros pasos
 del 4 salieron porque eran literalmente los del nucleo.
 
-## Parte 2, la reordenacion del par 8: **PARADA**
+## Parte 2, la reordenacion del par 8: **PARADA, resuelta despues en la CIRUGIA 1B**
 
 **No se ejecuto.** La condicion de paro escrita en el encargo se cumplio:
 
@@ -443,3 +443,58 @@ aplicara. **Un reencuadre que quita siempre necesitara esa autorizacion.**
 
 **Tres inmoviles y dos que suben un puesto.** Es ruido, como se esperaba de seis
 nodos reescritos en un mundo que no compite por esas consultas.
+
+---
+
+# CIRUGIA 1B EJECUTADA: el par 8, con la arista adjudicada
+
+**9 ago 2026.** Resuelve la parte 2 que la cirugia 1 dejo parada.
+
+## La adjudicacion que la desbloqueo
+
+Los dos nodos son **del mismo mundo** (`environmental`), asi que crear la arista
+**no viola la ley del ancla**, que prohibe el **acoplamiento mundo a mundo**, no
+las aristas internas de un mundo.
+
+**Arista bidireccional creada**, espejando el formato del resto del archivo (ids,
+no titulos): `cradle_to_cradle_concepto.nodos_siguientes` gana
+`desperdicio_es_alimento`, y `desperdicio_es_alimento.nodos_previos` gana
+`cradle_to_cradle_concepto`. **Gate 0 la valido**, con la alcanzabilidad dirigida
+en 100 por ciento.
+
+## El reencuadre
+
+`cradle_to_cradle_concepto` era **el nodo apretado entre dos**: repetia el mapeo
+del nucleo por arriba y el mapeo material de `desperdicio_es_alimento` por abajo.
+
+Ahora es **la PUERTA del tema**, y se queda con lo unico que nadie mas tiene: **la
+distincion**. Que la diferencia entre reducir dano y disenar sin residuo **no es
+de grado sino de clase**, y que hay **dos ciclos que no se mezclan**. Sus pasos
+son **decisiones de marco**, no el mapeo material.
+
+`desperdicio_es_alimento` **no se toco**: conserva el mapa de flujo, la
+eliminacion de toxicos y los modelos de servicio, que es su profundidad.
+
+**Una decision que tomo el ejecutor y reporta**: el resumen orienta hacia la
+profundizacion **sin nombrar el nodo destino**. La arista recien creada **ya es**
+el mecanismo de navegacion; un titulo cableado en prosa seria **una segunda
+fuente de verdad que envejece** si el nodo se renombra, que es justo la clase de
+averia que esta casa persigue.
+
+## Verificacion del cierre
+
+- **Gate 0 completo: OK** antes y despues del reindex, con la simetria de la
+  arista nueva validada y **0 activos sin vector**.
+- **Reindex completo** de Voyage y `sync_assets_web`.
+- **Rumbos: 42 verdes, 1 ambar, 0 rojos**. **Sin deriva.** Trinquete integro.
+- **Los puestos de las cinco anclas, antes y despues**:
+
+| ancla | antes | despues |
+|---|---:|---:|
+| `diseno_experimentos_hipotesis` | 10 | **10** |
+| `get_out_building_test_sell` | 36 | **36** |
+| `value_proposition_startup` | 114 | **113** |
+| `customer_segments_hypothesis` | 292 | **292** |
+| `construir_mvp_baja_fidelidad` | 1 | **1** |
+
+**Cuatro inmoviles y una que sube un puesto.** Ruido.
