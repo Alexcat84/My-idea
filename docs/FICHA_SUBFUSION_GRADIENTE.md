@@ -146,7 +146,7 @@ palanca reservada** (reencuadrar el nodo del **NUCLEO** a version base, clausula
 
 ---
 
-# LADO MUNDO, tres casos
+# LADO MUNDO, cuatro casos
 
 ## 5. `quality`, el metodo COC escrito dos veces
 
@@ -357,6 +357,70 @@ Y se quedo fuera **sin marca**: no tiene `ids_alias`, no tiene
 > fuera por llamarse distinto de `mapeo_flujo_valor`** aunque su `_2` si entrara.
 > **Eso seria una CLASE, no un caso.** No se investiga desde aqui.
 
+### RESOLUCION DE LA HIPOTESIS: INVESTIGADA Y CONFIRMADA COMO CLASE
+
+**El auditor la investigo. Es una clase, y `value_stream_mapping` es un miembro,
+no una rareza.**
+
+**La consulta**: nodos base **activos**, **sin `ids_alias` ni
+`merged_originals`**, cuyo hermano `_2` **fue absorbido por un TERCER nodo**.
+**Cuatro huerfanos, los cuatro en `quality`:**
+
+| huerfano | su hermano fue absorbido por |
+|---|---|
+| `value_stream_mapping` | `mapeo_flujo_valor` |
+| `consejos_de_calidad` | `consejo_de_calidad_3` |
+| `costo_de_calidad` | `costo_de_calidad_3` |
+| `entrenamiento_supervisores` | `entrenamiento_supervisores_calidad` |
+
+**El mecanismo**: el dedup **caso por parentesco de nombre**, y **el hermano que
+se llamaba distinto quedo fuera sin decision**. Nadie lo conservo a proposito:
+**simplemente no entro.**
+
+### PERO LA CLASE NO ESTA ACOTADA EN CUATRO, y esto lo trae el ejecutor
+
+**Reproduje la consulta y da los cuatro exactos.** Y despues la **corri otra vez
+extendiendo el sufijo**, porque el catalogo tiene familias que llegan a `_3` y
+`_4`:
+
+| consulta | huerfanos |
+|---|---:|
+| hermano **`_2`** (la que se corrio) | **4** |
+| hermano **`_2`, `_3` o `_4`** | **6** |
+
+**Los dos que aparecen al extenderla:**
+
+| candidato | su hermano | absorbido por | ¿misma forma? |
+|---|---|---|---|
+| `distincion_causas_comunes_especiales` | `_3` | **`causas_comunes_vs_especiales`** | **SI, identica**: el superviviente **se llama distinto** |
+| `eliminacion_causas_error` | `_3` | `eliminacion_causas_error_4` | **NO**: el superviviente **es de la misma familia de nombre** |
+
+> **`distincion_causas_comunes_especiales` es el quinto huerfano, y es la misma
+> forma exacta que `value_stream_mapping`.** Su `_2` sigue activo (por eso la
+> consulta de `_2` no lo vio) y su `_3` se fue a un nodo con otro nombre.
+>
+> **La ironia vale la pena escribirla**: la consulta que cazaba un dedup ciego al
+> sufijo **estaba ella misma fijada al sufijo `_2`.**
+>
+> **No lo doy por adjudicado**: el quinto y el sexto **quedan como candidatos a la
+> espera del auditor**, y por eso **no entran al caso 8**. Lo que si queda dicho es
+> que **la frase "no hay quinta victima" no se sostiene con la medicion.**
+
+### Observacion medida de rebote, fuera de alcance
+
+**27 de las 349 entradas de `merged_originals` del catalogo apuntan a ids que ya
+no tienen archivo propio** en ningun sitio del repositorio (entre ellas
+`consejos_calidad` y `consejos_de_calidad_2`, absorbidos por
+`consejo_de_calidad_3`).
+
+De esos 27 **sobrevive el registro** (id, titulo y fuente), que es lo que la
+doctrina de las fuentes necesita, **pero no su contenido**. Los otros 322 si
+conservan su archivo deprecado entero.
+
+> **No se investiga desde aqui**, y puede tener explicacion (absorciones ocurridas
+> **dentro del pack antes de integrarlo**, de modo que solo el superviviente
+> viajo al master). **Queda anotado porque nadie lo habia medido.**
+
 ### c) Por que la especializacion se queda
 
 `value_non_value_added_analysis` **no repite** a ninguno de los dos: toma **un
@@ -366,6 +430,43 @@ sobrevive a la fusion **con sus dos aristas de entrada reducidas a una.**
 
 **Lectura de fusion PENDIENTE. La valvula de pasos accionables, como siempre,
 tiene la ultima palabra.**
+
+## 8. `quality`, LOS TRES HUERFANOS RESTANTES
+
+**Hermanos del caso 7, misma clase, mismo mecanismo.** Leidos por el auditor
+contra sus supervivientes. **Cada uno va a lectura de fusion propia, con la
+valvula como ultima palabra.**
+
+### a) `consejos_de_calidad` contra `consejo_de_calidad_3`
+
+| | quien es |
+|---|---|
+| **el huerfano** (5 pasos) | **el intercambio ENTRE talleres**: un espacio con otras personas que evaluan calidad **en su propio negocio**, con agenda propia, participacion abierta, y el intercambio entre sucursales. **Es el paso 13 de Crosby re-vozado** |
+| **el superviviente** (4 pasos) | **el consejo INTERNO de areas**: representantes de las distintas areas de mejora, periodicidad, e **institucionalizarlo como estructura permanente** |
+
+> **Parientes, no gemelos.** Uno mira hacia afuera y el otro hacia adentro. **La
+> lectura puede terminar en dos nodos con frontera clara, o en fusion.**
+
+### b) `costo_de_calidad` contra `costo_de_calidad_3`
+
+| | quien es |
+|---|---|
+| **el huerfano** (5 pasos) | **marco financiero mensual**: revision mensual con numeros financieros y operativos juntos, comparados contra lo presupuestado, con dueno por desviacion |
+| **el superviviente** (6 pasos) | **el calculo como porcentaje de ventas**, con el desglose por componente, la comparacion contra un estandar de referencia, y **meta de reduccion progresiva** |
+
+> **El solape mas gordo de los tres.** Los dos calculan el costo de la calidad y
+> los dos lo vuelven recurrente.
+
+### c) `entrenamiento_supervisores` contra `entrenamiento_supervisores_calidad`
+
+| | quien es |
+|---|---|
+| **el huerfano** (3 pasos) | **la version taller**: una conversacion clara, comprobar que cada quien pueda explicarlo con sus palabras, y alinear antes de lanzar |
+| **el superviviente** (6 pasos) | **el programa completo**: seis horas de estudio, manual de referencia, **test de comprension**, dudas individuales y refuerzo por area |
+
+> **Posible relacion base-profundo DENTRO del mismo mundo**, que es una figura que
+> el gradiente no cubre (mide nucleo contra mundo, no mundo contra mundo). **Si la
+> lectura la confirma, no se funden: se encadenan.**
 
 ---
 
@@ -401,6 +502,26 @@ lector**, o **marca corporativa con reescritura**. **PENDIENTE DE ADJUDICACION.*
 > pasos hablan de *"alguien capacitado que no sea quien fabrica el producto"*.
 > **El camino ya existe en el propio mundo.**
 
+## C2. El numero de paso del libro, cableado en el titulo
+
+Encontrado en el **caso 8**. **Dos titulos llevan el numero de paso de Crosby:**
+
+| nodo | titulo |
+|---|---|
+| `quality/consejos_de_calidad` | **Paso 13**: Consejos de Calidad |
+| `quality/costo_de_calidad_3` | **Paso 4**: Costo de la Calidad |
+
+**Es la secuencia del libro filtrandose al catalogo como si el usuario lo
+estuviera leyendo.** Un titulo que **presupone un orden que la app no muestra**:
+nadie que abra la app ve un paso 1, ni sabe que hay catorce.
+
+**No es dato caducado ni voz corporativa: es una referencia a un indice que el
+lector no tiene.**
+
+> **Se arregla en la misma lectura de fusion de cada caso, no antes.** Los dos
+> nodos ya estan citados a esa lectura, y un titulo que va a cambiar de dueno no
+> se toca dos veces.
+
 ---
 
 # RELACION CON EL GRADIENTE
@@ -425,7 +546,8 @@ de siempre**:
 | **2.º** | **casos 3 y 4**, las costuras | **un solo nodo cada uno**: se abre, se parte o se recorta, y se cierra |
 | **3.º** | **caso 2**, brainstorming | **requiere decidir el reparto** entre nodos que sobreviven |
 | **4.º** | **caso 7**, el duo de VSM | **dos nodos y una especializacion que no se toca**, pero antes hay que entender **por que el debil no entro en la fusion anterior** |
-| **5.º** | **caso 6**, el racimo de auditoria | **el mas grande**, pero ya **RACIMO COMPLETO**: 16 de 16 leidos, membresia cerrada en tres grupos. **Se puede ejecutar sin reabrirse** |
+| **5.º** | **caso 8**, los tres huerfanos restantes | **tres lecturas independientes**, una por par, y la (c) puede terminar en encadenar en vez de fundir |
+| **6.º** | **caso 6**, el racimo de auditoria | **el mas grande**, pero ya **RACIMO COMPLETO**: 16 de 16 leidos, membresia cerrada en tres grupos. **Se puede ejecutar sin reabrirse** |
 
 **El caso 1 salio del orden: esta CERRADO y no se ejecuta.**
 

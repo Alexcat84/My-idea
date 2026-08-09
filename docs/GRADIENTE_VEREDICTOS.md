@@ -1407,3 +1407,25 @@ los Cinco Porques al inicio). **Ambos sanos.**
 > **`quality` no tiene un problema de nodos sueltos: tiene racimos.** Tres ya, y
 > los tres nacieron de la misma forma, con varias extracciones del mismo capitulo
 > que nadie volvio a mirar juntas.
+
+## NOTA DE CIERRE DEL LOTE 8
+
+**La hipotesis del dedup por sufijo quedo CONFIRMADA COMO CLASE.** El auditor la
+investigo: son **huerfanos del dedup**, nodos base activos que se quedaron fuera
+de una fusion **porque su hermano se llamaba distinto del superviviente**.
+
+**Cuatro confirmados, los cuatro en `quality`**: `value_stream_mapping` (caso 7),
+`consejos_de_calidad`, `costo_de_calidad` y `entrenamiento_supervisores` (caso 8
+de `docs/FICHA_SUBFUSION_GRADIENTE.md`).
+
+> **La clase NO quedo cerrada en cuatro, y esto lo trae el ejecutor.** Al
+> reproducir la consulta y **extender el sufijo mas alla de `_2`**, aparece un
+> **quinto de forma identica**: `distincion_causas_comunes_especiales`, cuyo `_3`
+> se fue a `causas_comunes_vs_especiales`. **Queda como candidato a la espera del
+> auditor, y por eso no entro al caso 8.** El detalle esta en la ficha.
+
+**Y los puestos 81 a 85 siguen pendientes**, nombrados desde este mismo lote:
+`environmental/diseno_para_el_medio_ambiente`,
+`franquicias/evaluacion_necesidad_franquiciar`, `quality/value_stream_mapping`
+contra `nucleo/plan_mejora_procesos`, `quality/sistema_medicion_kpi` y
+`franquicias/obtencion_marca_registrada`. **Van en el proximo lote.**
