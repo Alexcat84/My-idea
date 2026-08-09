@@ -154,3 +154,97 @@ el nodo del nucleo como puerta, **sin recortar ninguno**.
 
 **`risk_management` queda como primer candidato a ARREGLO POR SECCION** cuando el
 fundador decida ejecutar.
+
+---
+
+## LOTE 3, puestos 9 a 13 por senal
+
+**9 ago 2026.** En este lote las etiquetas de lectura **coinciden** con los
+puestos de la cola.
+
+### 9 y 10. VIOLACION, la primera fuera de `risk_management`
+
+Un solo veredicto porque es **el mismo nodo del mundo contra dos del nucleo**.
+
+`quality/constraint_management` contra `nucleo/teoria_de_restricciones`
+**(t65.3, s0.8562)** y contra `nucleo/cinco_pasos_enfoque_restricciones`
+**(t56.9, s0.8533)**
+
+El nucleo tiene **dos** nodos sobre Goldratt: la teoria con **metricas de
+throughput** y los cinco pasos con su **mapa de flujo**. El nodo del mundo trae
+los mismos cinco pasos **comprimidos, sin metricas y sin mapa**: **el de pago es
+un resumen de los dos gratuitos.**
+
+**Arreglo**: via 1 o 2, profundizar el nodo del mundo hacia lo que su fuente de
+calidad si da (la restriccion **en contexto de proceso de calidad**, no la teoria
+general).
+
+> **NOTA APARTE, sin adjudicar hoy**: dos nodos del nucleo sobre el mismo
+> Goldratt **huelen a sub-fusion**. Ficha propia, fuera del gradiente.
+
+### 11. FALSO PAR, cazado SOLO por la senal de titulo
+
+`risk_management/guarda_lo_que_aprendiste_de_cada_golpe` (lecciones de riesgos
+vividos) contra `nucleo/captura_conocimiento_mercado` (investigacion de
+competidores) **(t85.3, s0.4096)**
+
+La palabra **captura** emparejo temas sin relacion; **la semantica baja ya lo
+delataba**.
+
+> **Valida la decision de reportar las dos senales por par**: con una sola, este
+> par habria entrado sin nada que lo desmintiera.
+
+### 12. FUGA DE SECCION, con GRADIENTE OK del par en si
+
+`environmental/desperdicio_es_alimento` contra
+`nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t38.5, s0.8493)**
+
+El nodo del mundo es **claramente mas profundo** que el del nucleo (nutrientes
+biologicos contra tecnicos, eliminacion de toxicos, modelos de servicio con
+retencion de propiedad): **gradiente cumplido**.
+
+**El hallazgo es otro**: este nodo hace exactamente lo que al par 8
+(`cradle_to_cradle_concepto`) le faltaba. **La profundidad del tema existe en
+`environmental`, pero esta en el peldano de al lado, no en el nodo titular.**
+
+**PROPUESTA**: reclasificar el **par 8** de DUDOSO a **ARREGLO POR SECCION** junto
+con este: **reordenar la escalera para que el titular apunte al profundo**, sin
+escribir contenido nuevo. **Es la via 1 mas barata que existe.**
+
+### 13. PROPUESTO GRADIENTE OK, con matiz de frontera, al visto del fundador
+
+`quality/brainstorming` contra `nucleo/brainstorming_divergente`
+**(t50.0, s0.8482)**
+
+Ensanchan en **ejes distintos**: el mundo trae el **ritual grupal completo**
+(turnos, calentamiento, fatiga del grupo, procesado de duplicados); el nucleo
+trae las **reglas base MAS la capa de IA** como participante. **Ninguno domina.**
+
+El del mundo es **irreducible a una persona sola**, y eso **lo ampara la politica
+corporativa**: en `quality` el brainstorming es herramienta de equipo de mejora.
+
+**Sin arreglo propuesto.**
+
+---
+
+## MARCADOR ACUMULADO tras 13 de 346
+
+| clase | pares |
+|---|---:|
+| VIOLACION | **4** (3 de `risk_management`, 1 de `quality`) |
+| DUDOSO | 3 (el par 8 propuesto a reclasificar) |
+| FRONTERA con choque de fuentes | 1 |
+| FALSO PAR | 2 |
+| FUGA DE SECCION con gradiente OK | 1 |
+| PROPUESTO OK | 1 |
+
+## PATRON CONSOLIDADO
+
+> **Los defectos del gradiente son defectos de REPARTO DE ESCALERAS, no de nodos
+> sueltos.**
+
+`risk_management` **diluye** en peldanos suaves; `environmental` **esconde la
+profundidad en el peldano de al lado**.
+
+**El arreglo ira por secciones, y sera mas barato de lo que la cuenta de
+violaciones sugiere.**
