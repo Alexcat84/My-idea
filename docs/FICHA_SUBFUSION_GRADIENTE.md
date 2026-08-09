@@ -146,11 +146,34 @@ palanca reservada** (reencuadrar el nodo del **NUCLEO** a version base, clausula
 
 ---
 
-## 9. `plan_mejora_procesos`, COSTURA DE PEGADO DOBLE
+## 9. COSTURAS DE PEGADO DOBLE EN EL NUCLEO. **CLASE, no caso**
 
-Abierto en el **lote 9, puesto 83**. **No lo destapo su par**: el nodo del mundo
-de ese par es el VSM debil, ya sentenciado en el caso 7. **Lo destapo leer el nodo
-del nucleo mientras se leia el par.**
+> **PASO DE CASO A CLASE en el lote 10.** El puesto 97 destapo **el segundo
+> ejemplar**, `nucleo/economia_circular_como_modelo_de_negocio`, con la figura
+> identica y en un tema **sin ninguna relacion** con el primero.
+>
+> **Dos figuras identicas en temas sin relacion no son coincidencia: significan
+> que la tanda que pego sin tejer dejo mas huellas.** Y esas **no se cazan
+> esperando el tercer golpe de suerte**: se cazan con un instrumento.
+>
+> **Instrumento construido**: `scripts/costuras_internas.py`, con sus salidas en
+> `docs/COSTURAS_INTERNAS.jsonl` y `docs/COSTURAS_INTERNAS_RESUMEN.md`. **Cita,
+> no juzga**, como su hermano mayor. **110 nodos citados** de 3.521 activos.
+
+### Los dos ejemplares leidos
+
+**Ninguno de los dos lo destapo su par**: los dos aparecieron **leyendo el nodo
+del nucleo mientras se leia otra cosa**.
+
+| ejemplar | pasos | el corte | la marca de voz |
+|---|---:|---|---|
+| `plan_mejora_procesos` (lote 9, puesto 83) | 15 | **tras el 10** | **fuerte**: 1 a 10 en infinitivo, 11 a 15 en tu |
+| `economia_circular_como_modelo_de_negocio` (lote 10, puesto 97) | 9 | **tras el 5** | **debil**: los dos bloques en infinitivo, pero el segundo se dirige al lector (*"tu producto"*) |
+
+**El instrumento acierta los dos cortes**, y los pone en los puestos 24 y 61 de su
+cola de 110.
+
+### El primer ejemplar, en detalle
 
 **Quince pasos, y dos secuencias casi identicas pegadas dentro del MISMO nodo:**
 
@@ -533,6 +556,29 @@ fallas del sistema**.
 
 **DUDOSO, con la lectura anotada**: **sobrevive con titulo diferenciado**, o **se
 funde**. **Lo decide la fusion fina con el fundador.**
+
+> ## EL CRUCE DEL PUESTO 86 CIERRA EL DUDOSO
+>
+> **Lo que hacia dudoso al base era su angulo de personas. Ese angulo ya tiene
+> casa, y mejor.**
+>
+> `quality/politica_no_culpar_trabajador` hace lo mismo **con metodo**: analiza la
+> **distribucion de errores entre todas las personas usando limites de control**,
+> identifica a quien excede el limite superior **como posible causa especial e
+> investiga el contexto antes de actuar**, y **disena respuestas diferenciadas
+> segun lo que muestren los datos**. El base solo dice *"no sancionar"*.
+>
+> **LA LECTURA DEL AUDITOR PASA DE DUDOSO A FUSION CON REPARTO:**
+>
+> | que parte del base | a donde va |
+> |---|---|
+> | el contenido de **proceso** (carta de control, causa comun contra especial) | `causas_comunes_vs_especiales` |
+> | el contenido de **personas** (no sancionar, ayudar al trabajador) | `politica_no_culpar_trabajador` |
+>
+> > **El base queda sin territorio propio.** No es que se parezca a dos nodos: es
+> > que **sus dos mitades ya viven mejor en dos sitios distintos.**
+>
+> **Decision final del fundador, como todas.**
 
 > **Dato de rebote que pesa en esa decision**: ese base **ya figura como DUDOSO en
 > `docs/INVENTARIO_ESCALA.md`**, y por la misma razon exacta (*"el analisis
