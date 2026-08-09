@@ -135,7 +135,10 @@ def test_todo_activo_tiene_vector_en_el_indice():
     nadie puede llegar a el. Por eso el chequeo es de cero tolerancia."""
     src = (BASE / "scripts" / "run_phase1.py").read_text(encoding="utf-8")
     assert "Todo nodo ACTIVO tiene vector en el indice semantico" in src, "falta el chequeo"
-    cuerpo = src[src.index("ruta_indice = BASE"):src.index("seeds = load_entry_seeds()")]
+    # El span arranca en REMEDIO, que es donde vive el mensaje, y no en
+    # `ruta_indice`: el remedio se extrajo a una constante al arreglar la
+    # autodesactivacion, y buscarlo mas abajo lo dejaba fuera.
+    cuerpo = src[src.index("REMEDIO = ("):src.index("seeds = load_entry_seeds()")]
     assert "set(activos) - con_vector" in cuerpo, "no compara contra los ACTIVOS"
     assert "not sin_vector" in cuerpo, "el chequeo tolera activos sin vector"
     # y el mensaje tiene que decir QUE HACER, no solo que algo esta mal
@@ -145,7 +148,37 @@ def test_todo_activo_tiene_vector_en_el_indice():
     # la otra direccion se REPORTA pero no tumba: un vector de mas no hace
     # invisible a nadie, y la puerta unica ya lo filtra al consultar.
     assert "con_vector - set(activos)" in cuerpo, "no reporta los vectores que sobran"
-    print("  ok: todo activo tiene vector, con cero tolerancia y el remedio en el mensaje")
+
+    # LOS DOS FIXTURES DEL CHEQUEO. Todo patron nace con uno que debe cazar y
+    # uno que no; este tambien, porque su primera version se AUTODESACTIVABA:
+    # estaba envuelto en `if ruta_indice.exists()` y sin el archivo no entraba
+    # en la lista. El Gate salia verde sin el chequeo, y un chequeo ausente y
+    # uno verde se ven igual en el resumen.
+
+    # (1) CAZA: sin indice en la ruta, el chequeo aparece y FALLA.
+    assert "if not ruta_indice.exists():" in cuerpo, (
+        "no hay rama para el indice ausente: el chequeo se autodesactiva")
+    rama_ausente = cuerpo[cuerpo.index("if not ruta_indice.exists():"):cuerpo.index("else:")]
+    assert "False" in rama_ausente, "el indice ausente no hace fallar el chequeo"
+    assert "NO HAY INDICE" in rama_ausente, "no dice que el problema es que falta el indice"
+    assert "REMEDIO" in rama_ausente, "el caso sin indice no trae el remedio"
+
+    # (2) NO CAZA: con el indice presente y completo, pasa. Se comprueba contra
+    # el estado real del repo, que es la unica prueba que no se puede fingir.
+    import json as _json
+    idx = BASE / "web" / "lib" / "assets" / "semantic_index.json"
+    assert idx.exists(), "no hay indice en el repo: este fixture no puede correr"
+    ids = set(_json.loads(idx.read_text(encoding="utf-8"))["ids"])
+    grafo = _json.loads(
+        (BASE / "dataset" / "metadata" / "master_graph.json").read_text(encoding="utf-8"))["nodos"]
+    activos = {k for k, n in grafo.items() if not n.get("deprecado")}
+    assert not (activos - ids), (
+        f"hay {len(activos - ids)} activos sin vector en el repo: {sorted(activos - ids)[:5]}")
+
+    # Y el chequeo se agrega SIEMPRE, en las dos ramas.
+    assert cuerpo.count('"Todo nodo ACTIVO tiene vector en el indice semantico"') == 2, (
+        "el chequeo no se agrega en las dos ramas: en una de ellas desaparece del resumen")
+    print("  ok: todo activo tiene vector, con sus dos fixtures y sin autodesactivarse")
 
 
 def main():

@@ -3,8 +3,9 @@
  * prototipo_motor.py), pero con Voyage AI en runtime en vez de
  * sentence-transformers (Python-only, no viaja a la web).
  *
- * El indice de los 1266 nodos (web/lib/assets/semantic_index.json) se
- * genero UNA vez con scripts/build_semantic_index_voyage.py
+ * El indice de TODOS los nodos ofrecibles (web/lib/assets/semantic_index.json,
+ * uno por nodo activo; los deprecados quedan fuera a proposito) se
+ * genero con scripts/build_semantic_index_voyage.py
  * (input_type="document"). En cada turno, esta funcion hace UNA llamada
  * corta a Voyage para embeber solo la respuesta del usuario
  * (input_type="query", ~$0.0001/turno) y calcula similitud coseno en
