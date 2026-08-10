@@ -1063,6 +1063,121 @@ próxima extracción vuelve a meter nombres de archivo.
 
 ---
 
+
+---
+
+### Entrada del cribado de costuras (11 ago 2026): NAFTA, y la ficha mide por fin lo que dice su nombre
+
+**Sale de la tanda 21 de costuras, del nodo `exportacion/certificado_de_origen_coo`.
+Su paso 3 dice, literal y verificado contra el grafo:**
+
+> *Determinar si aplica un tratado de libre comercio (**FTA/NAFTA/CAFTA-DR**) que
+> reduzca aranceles*
+
+**NAFTA se extinguió el 1 de julio de 2020**, sustituido por el **USMCA** (T-MEC en
+México, CUSMA en Canadá). El nodo manda comprobar si aplica un tratado que **lleva
+cinco años sin existir**.
+
+#### CHOCA CON EL ENCARGO Y LO TRAIGO: esta no es la segunda medición, es la PRIMERA
+
+**El encargo dice que la primera medición de esta ficha es el caso COC de las
+fusiones. Verificado, no lo es.** El caso COC vive en
+`docs/FICHA_SUBFUSION_GRADIENTE.md` sección 5 y **trata de otra cosa por completo**:
+es el duo `evaluacion_gestion_riesgos` contra `plan_de_gestion_de_riesgos`, y su
+hallazgo es que **al fusionarlos el superviviente no puede conservar el id**,
+porque choca con `nucleo/plan_gestion_riesgos`. **Es un problema de nombres y
+alias en una fusión, no de vigencia de un marco.**
+
+**Y al ir a comprobarlo salió algo mejor que la corrección.** Esta ficha tiene dos
+entradas previas y **ninguna de las dos mide vigencia**:
+
+| entrada previa | qué mide de verdad |
+|---|---|
+| gradiente lote 7, `proteccion_propiedad_intelectual_internacional` | **alcance geográfico**: cablea `uspto.gov` y `stopfakes.gov`, agencias de un país |
+| franja, `seguridad_digital` | **alcance geográfico**: artefactos de cumplimiento de un país |
+
+> **La ficha se llama `vigencia-del-marco-internacional` y sus dos entradas son de
+> ALCANCE, no de VIGENCIA.** Su texto fundacional dice *Incoterms 2020 no es un
+> dato local: un catálogo que lo cite desactualizado miente con precisión*, o sea
+> que **nació apuntando al eje temporal y se llenó del eje geográfico.**
+>
+> **NAFTA es la PRIMERA entrada que mide lo que el nombre promete: un marco que
+> caducó.**
+
+#### LA MEDICIÓN, y no es un nodo: son ocho
+
+**Recontado del grafo el 11 ago 2026:**
+
+| término | nodos vivos que lo nombran |
+|---|---:|
+| **NAFTA** | **8** |
+| USMCA | **0** |
+| T-MEC | **0** |
+| CUSMA | **0** |
+| TLCAN | **0** |
+
+> **El catálogo nombra ocho veces un tratado extinto y CERO veces su sustituto.**
+
+**Y dos de los ocho lo llevan en sitios que no son un paso cualquiera:**
+
+| nodo | dónde está NAFTA |
+|---|---|
+| **`nafta_free_trade_agreements`** | **en el ID del nodo**, y en el título: *Aprovechamiento de NAFTA y Tratados de Libre Comercio* |
+| **`certificado_de_origen_tratados_libre_comercio`** | **en el TÍTULO**: *Certificado de Origen y Tratados de Libre Comercio (**NAFTA**, Rules of Origin, RVC)*, y en el resumen, y en un paso |
+| `certificado_de_origen_coo` | paso 3 |
+| `documentacion_exportacion` | la lista de documentos |
+| `regla_de_minimis` | el porcentaje, *7% para NAFTA* |
+| `reglas_origen_sectoriales` | dos pasos, con el método de trazabilidad automotriz |
+| `foreign_trade_zones` | mención |
+| `import_regulations_foreign_governments` | mención |
+
+> **El del id es el caro, y engancha con la DECISION 4 de la mesa de racimos**:
+> renombrar `nafta_free_trade_agreements` **exige alias**, igual que las 36
+> parejas de sufijo. **Un id que muere sin alias rompe todo lo que apuntaba a él.**
+>
+> **CAFTA-DR sí sigue vigente**, así que de la lista del paso 3 solo NAFTA está
+> muerto. **La reparación es quirúrgica, no una reescritura del dominio.**
+
+#### EL SEGUNDO HALLAZGO, y es peor que el primero: Incoterms sin año
+
+**Al medir el otro marco que la ficha nombra en su texto fundacional:**
+
+| | |
+|---|---:|
+| nodos vivos que nombran **Incoterms** | **11** |
+| de esos, los que citan **una versión** (2010, 2020...) | **0** |
+
+> **La ficha nació diciendo que citar Incoterms desactualizado miente con
+> precisión. La medición dice algo distinto y peor: el catálogo NO CITA NINGUNA
+> VERSIÓN, once veces.**
+>
+> **Y para Incoterms eso importa de verdad**, porque las reglas cambiaron entre
+> 2010 y 2020: **DAT desapareció y se convirtió en DPU**, y las coberturas de
+> seguro de CIP se movieron. **Un nodo que dice *usa Incoterms* sin año no está
+> desactualizado: está indeterminado**, que es más difícil de detectar y de
+> arreglar.
+
+#### EL PUNTERO JURISDICCIONAL NO SALVA DE ESTO, y conviene decirlo
+
+**`certificado_de_origen_coo` tiene el puntero**, literal en su resumen: *esta
+mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la
+fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de
+actuar.*
+
+> **Y aun así manda buscar NAFTA.** El puntero avisa de que **la jurisdicción**
+> puede ser otra; **no avisa de que el tratado nombrado ya no existe en ninguna
+> jurisdicción.** Son dos averías distintas y el puntero solo cubre una.
+>
+> **Es el mismo límite que la ficha de herramientas ya midió con otras palabras**:
+> *la muerta se detecta abriendo el enlace; la mutada no, porque el enlace abre.*
+> Aquí: **el puntero se lee y no dice nada, porque lo que caducó no es la
+> jurisdicción sino el nombre.**
+
+**Ningún nodo se toca.** La ficha queda **despierta y con dos mediciones**: ocho
+nodos con un tratado extinto y once con un marco sin versión.
+
+---
+
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
 
 **Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no
