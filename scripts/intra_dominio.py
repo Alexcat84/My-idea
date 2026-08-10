@@ -50,6 +50,7 @@ INDICE = BASE / "web" / "lib" / "assets" / "semantic_index.json"
 INFORME = BASE / "docs" / "FRANJA_INFORME.md"
 FICHA = BASE / "docs" / "FICHA_SUBFUSION_GRADIENTE.md"
 MESA = BASE / "docs" / "MESA_RACIMOS.md"
+RACIMOS = BASE / "docs" / "RACIMOS_MIEMBROS.jsonl"
 SALIDA = BASE / "docs" / "INTRA_DOMINIO_PARES.jsonl"
 RESUMEN = BASE / "docs" / "INTRA_DOMINIO_RESUMEN.md"
 
@@ -174,7 +175,26 @@ def procedencia(grafo, activos):
             if etiqueta not in nodos[x]:
                 nodos[x].append(etiqueta)
 
-    cuentas = {"informe_4_4_ids_casi_identicos": n44, "informe_4_3_base_mas_2": n43,
+    # 7. Las nominas de los 32 racimos. Dos nodos del MISMO racimo forman pareja
+    #    marcada: el par ya esta censado, aunque el censo no lo escribiera par a
+    #    par. Es la fuente que cerro el hueco declarado de la primera corrida.
+    n_rac = n_rac_par = 0
+    if RACIMOS.exists():
+        for linea in RACIMOS.read_text(encoding="utf-8").splitlines():
+            if not linea.strip():
+                continue
+            r = json.loads(linea)
+            ids = [m["node_id"] for m in r["miembros"] if m["node_id"] in activos]
+            f = "racimo censado: %s (%s)" % (r["racimo"], r["origen"])
+            n_rac += 1
+            for i, x in enumerate(ids):
+                if f not in nodos[x]:
+                    nodos[x].append(f)
+                for y in ids[i + 1:]:
+                    par(x, y, f); n_rac_par += 1
+
+    cuentas = {"racimos_miembros_32_nominas": "%d racimos, %d parejas" % (n_rac, n_rac_par),
+               "informe_4_4_ids_casi_identicos": n44, "informe_4_3_base_mas_2": n43,
                "informe_4_2_crosby_duplicados": n42, "ficha_36_parejas_de_sufijo": n_suf,
                "ficha_citas_intra_dominio_nodos": len([k for k, v in nodos.items() if any("citas intra-dominio" in f for f in v)])}
     return parejas, nodos, cuentas
@@ -186,6 +206,8 @@ def main():
     ap.add_argument("--umbral-titulo", type=int, default=UMBRAL_TITULO)
     ap.add_argument("--umbral-semantico", type=float, default=UMBRAL_SEMANTICO)
     ap.add_argument("--dominio", default=None, help="limitar a un dominio")
+    ap.add_argument("--banda-desde", type=float, default=0.78,
+                    help="piso de la banda que se CUENTA sin entrar en la cola")
     args = ap.parse_args()
 
     import numpy as np
@@ -215,7 +237,7 @@ def main():
     if args.dominio:
         doms = [d for d in doms if d == args.dominio]
 
-    pares, distribucion, comparadas = [], {}, {}
+    pares, distribucion, comparadas, conteo_banda = [], {}, {}, {}
     for dom in doms:
         ids = sorted(por_dom[dom])
         n = len(ids)
@@ -233,6 +255,14 @@ def main():
         distribucion[dom]["maximo"] = float(sem_planos.max())
         distribucion[dom]["media"] = float(sem_planos.mean())
         distribucion[dom]["sobre_umbral"] = int((sem_planos >= args.umbral_semantico).sum())
+
+        # LA BANDA DE ABAJO, contada y no volcada. Pares que se quedan justo
+        # fuera por semantica, con el titulo tambien por debajo de su umbral: no
+        # entran en la cola ni en el jsonl, solo se cuentan, para que la decision
+        # de leerla o cribarla se tome con el numero delante.
+        banda = np.triu((S >= args.banda_desde) & (S < args.umbral_semantico) &
+                        (T < args.umbral_titulo), k=1)
+        conteo_banda[dom] = int(banda.sum())
 
         disp = (S >= args.umbral_semantico) | (T >= args.umbral_titulo)
         ii, jj = np.where(np.triu(disp, k=1))
@@ -362,15 +392,11 @@ def main():
     for k, v in cuentas.items():
         A(f"| `{k}` | {v} |")
     A("")
-    A("> **HUECO DECLARADO, y es de cobertura de las marcas, no de la cola.** De los **32 "
-      "racimos** de `docs/MESA_RACIMOS.md`, **solo dos tienen la lista de miembros escrita** "
-      "(los puntos de Deming y los cinturones, los dos destapados por la muestra D). Los "
-      "**30 del censo del cribado** estan registrados **con nombre y tamano pero sin ids de "
-      "sus miembros** en ningun documento, asi que el instrumento **no puede marcarlos** y "
-      "no se los inventa. **La consecuencia practica: la columna de re-avistados esta "
-      "SUBESTIMADA**, y un par marcado como nuevo puede ser miembro de un racimo ya "
-      "censado. Se cierra escribiendo los miembros de esos 30 racimos, no tocando este "
-      "instrumento.")
+    A("> **HUECO CERRADO.** En la primera corrida solo dos de los 32 racimos tenian nomina "
+      "escrita y el resumen declaraba la columna de re-avistados como subestimada. **Ya no**: "
+      "`docs/RACIMOS_MIEMBROS.jsonl` tiene **las 32 nominas completas**, reconstruidas de las "
+      "razones de los veredictos del cribado, y **las 32 cuadran con su tamano censado**. "
+      "Cada par cuyos dos nodos pertenecen al mismo racimo entra ya como re-avistado.")
     A("")
     A("## Recall contra lo declarado, que es el dato duro de calibracion")
     A("")
@@ -434,6 +460,45 @@ def main():
         d = distribucion[dom]
         A(f"| {dom} | {comparadas[dom]} | {d['media']:.4f} | {d['p50']:.4f} | {d['p90']:.4f} | "
           f"{d['p99']:.4f} | {d['p99.9']:.4f} | {d['maximo']:.4f} | {d['sobre_umbral']} |")
+    A("")
+    A(f"## La banda {args.banda_desde:.2f} a {args.umbral_semantico:.2f}, dimensionada sin leer")
+    A("")
+    A(f"**Pares que se quedan JUSTO fuera de la cola**: semantica entre "
+      f"**{args.banda_desde:.2f}** y **{args.umbral_semantico:.2f}**, y titulo **por debajo de "
+      f"{args.umbral_titulo}**, o sea que no entran por ninguna de las dos senales. **No "
+      f"estan en `{SALIDA.name}`: solo se cuentan.**")
+    A("")
+    A("| dominio | pares en la banda | en la cola | la banda seria un aumento de |")
+    A("|---|---:|---:|---:|")
+    tot_b = 0
+    for dom in doms:
+        if dom not in conteo_banda:
+            continue
+        cb, cc = conteo_banda[dom], por_dominio.get(dom, 0)
+        tot_b += cb
+        A(f"| {dom} | **{cb}** | {cc} | {(100.0 * cb / cc):.0f}% |" if cc else f"| {dom} | **{cb}** | 0 | n/a |")
+    A(f"| **total** | **{tot_b}** | **{len(pares)}** | **{(100.0 * tot_b / len(pares)):.0f}%** |" if pares else "")
+    A("")
+    A(f"**La banda esta dimensionada por el precedente de la franja**: alli el auditor bajo "
+      f"el umbral, encontro los pares de borde y los leyo. **La decision de leer esta banda "
+      f"o de cribarla se toma con este conteo delante, no antes.**")
+    A("")
+    A("**Verificacion de las dos perdidas conocidas**, que es lo que hace util a la banda:")
+    A("")
+    A("| pareja | semantica | titulo | cae en la banda |")
+    A("|---|---:|---:|:--:|")
+    for x, y in (("accion_correctiva_4", "accion_correctiva_sistematica"),
+                 ("cadencia_seguimiento_prospectos", "gestion_seguimiento_prospectos")):
+        if x in pos and y in pos:
+            ss = float(E[pos[x]] @ E[pos[y]]); st = float(token_sort_ratio(titulo[x], titulo[y]))
+            dentro = args.banda_desde <= ss < args.umbral_semantico and st < args.umbral_titulo
+            A(f"| `{x}` con `{y}` | {ss:.4f} | {st:.1f} | {'**SI**' if dentro else '**NO**'} |")
+        else:
+            A(f"| `{x}` con `{y}` | sin vector | n/a | **NO SE PUEDE MEDIR** |")
+    A("")
+    A("**Las dos son parejas ya adjudicadas que las senales actuales no ven** (el recall de "
+      "arriba). Si caen dentro, la banda **es exactamente el sitio donde vive lo que esta "
+      "cola se pierde**, y eso es lo que hay que pesar al decidir si se lee.")
     A("")
     A("## Los treinta pares de similitud mas alta")
     A("")

@@ -30,6 +30,22 @@ meter ahi**: ese censo es el cierre de lo que vio el cribado, y el cribado no
 podia verlos porque son de un mundo contra si mismo mientras la franja solo
 miraba mundo contra nucleo. Se suman aqui, que es donde se decide.
 
+**Las NOMINAS de los 32 estan escritas** en `docs/RACIMOS_MIEMBROS.jsonl`, una
+linea por racimo, con el id de cada miembro y **el veredicto del cribado de donde
+salio**. Se reconstruyeron de las razones de `docs/FRANJA_VEREDICTOS.jsonl`, y
+**las 32 cuadran con su tamano censado**: 171 miembros en total.
+
+> **Un hallazgo del censo de nominas, y toca a la cuenta de 32.** Dos racimos se
+> solapan y uno **contiene** al otro: **Obtencion de compromiso** (3) es un
+> subconjunto exacto de **El avance y el compromiso en la venta** (5). Los tres
+> nodos `obtencion_de_compromiso`, `obtencion_compromiso_venta` y
+> `obtencion_compromiso` estan en los dos.
+>
+> **Por eso los 32 racimos tienen 171 miembros pero solo 168 nodos distintos.**
+> No cambio la cuenta de 32 por mi cuenta: **la decision 2 los va a leer par a
+> par de todos modos**, y con la nomina delante el solape se resuelve en la
+> lectura. Queda anotado para que nadie lo cuente dos veces al planificar.
+
 **La forma de la mesa.** Los 32 se reparten en **cuatro grupos, y cada grupo
 cuelga de UNA decision estructural.** Cada racimo esta en exactamente un grupo.
 Los tres primeros grupos consumen los 32; **el cuarto no consume racimos: cruza
