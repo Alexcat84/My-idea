@@ -921,6 +921,35 @@ vuelve a caducar.
 
 **El nodo no se toca desde el gradiente.**
 
+### Entrada 2 (10 ago 2026): las DOS PRIMERAS herramientas declaradas MUERTAS, con evidencia
+
+Salen de verificar las seis que nombra `nucleo/retargeting_display`, y son las
+primeras que esta campaña puede declarar muertas en vez de anotarlas sin
+verificar.
+
+| herramienta | estado | evidencia |
+|---|---|---|
+| **Perfect Audience** | **MUERTA** | TrustRadius la lista como *(discontinued)*; comprada por Marin Software en 2014 y por SharpSpring en 2019, y descontinuada después |
+| **The Deck** | **MUERTA** | **cerró en marzo de 2017**, anunciado por su fundador Jim Coudal; cubierto por TechCrunch y Daring Fireball |
+| AdRoll | viva | plataforma de NextRoll, activa en 2026 |
+| MixRank | viva | operando en 2026 |
+| Adbeat | viva | activa en 2026 |
+| BuySellAds | viva | operando en 2026 |
+
+> **Las dos muertas viven en el mismo nodo y en pasos distintos**: `Perfect
+> Audience` en el paso 1, entre los píxeles a instalar, y `The Deck` en el paso
+> 4, entre las redes de nicho a evaluar. **Un lector que siga ese nodo hoy
+> instalaría el píxel de una plataforma descontinuada y evaluaría una red que
+> cerró hace nueve años.**
+>
+> **El nodo es sano como costura y está caducado como consejo.** Son dos
+> preguntas distintas y las dos hay que contestarlas.
+
+**Lo que esto cambia para la ficha, y es el argumento del barrido**: de **seis**
+verificadas, **dos** están muertas. El informe de la franja tiene **veinticuatro
+nombres propios anotados sin verificar**. No es una predicción decir que habrá
+más; es la razón para verificarlos.
+
 > **Por qué esta ficha vale la pena aunque hoy tenga una sola entrada**: el
 > catálogo nombra herramientas en más sitios, y **ninguna revisión las ha
 > barrido**. La primera que apareció, apareció **de rebote**. Cuando se despierte,
