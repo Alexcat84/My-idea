@@ -443,7 +443,7 @@ repetida.**
 **Era una regla practica sacada de dos casos. Con la tanda nueva ya es un dato
 del archivo, y el dato es rotundo:**
 
-> **De las citas leidas con corte 3, va UNA confirmada de DIECISEIS.**
+> **De las citas leidas con corte 3, van DOS confirmadas de DIECINUEVE.**
 
 | cita | pasos | bloque | pareja | veredicto |
 |---|---:|---:|---:|:--:|
@@ -463,19 +463,53 @@ del archivo, y el dato es rotundo:**
 | `core/fase_affirm_buyers_remorse` | 6 | 48,0 | 54,7 | **falsa** |
 | `core/etapa_testing_validation` | 6 | 47,5 | 48,9 | **falsa** |
 | `core/wizard_of_oz_testing` | 6 | 47,4 | 61,4 | **falsa** |
+| `core/metricas_accionables` | 6 | 47,0 | 50,0 | **falsa** |
+| `core/ceo_de_guerra_vs_paz` | 6 | 46,7 | 50,5 | **falsa** |
+| **`core/cliente_disena_producto`** | **8** | **46,6** | **55,2** | **CONFIRMADA** |
 
-**Los dieciseis cortes y las dieciseis parejas verificados uno por uno en
+**Los diecinueve cortes y las diecinueve parejas verificados uno por uno en
 `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
 
-> **La regla se mantiene y gana su excepcion:** **una cita de corte 3 no es
-> evidencia de costura por si sola.** Quince de dieciseis han caido al abrir los pasos,
-> pero **una era costura de verdad**, asi que el corte 3 tampoco es un
-> descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
+> **La regla se mantiene y gana su segunda excepcion:** **una cita de corte 3 no
+> es evidencia de costura por si sola.** Diecisiete de diecinueve han caido al
+> abrir los pasos, pero **dos eran costura de verdad**, asi que el corte 3 tampoco
+> es un descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
 >
 > **Y no se puede usar para filtrar la cola**, que sigue siendo la tentacion:
-> **53 de las 128 citas tienen corte 3**, el 41% de la cola entera. La confirmada
-> de hoy es la prueba de que ahi dentro hay costuras reales. **La regla es para
-> leer, no para podar.**
+> **53 de las 128 citas tienen corte 3**, el 41% de la cola entera. Las **dos**
+> confirmadas leidas son la prueba de que ahi dentro hay costuras reales. **La
+> regla es para leer, no para podar.**
+
+#### LA LECTURA FINA POR LONGITUD, y esta vez el archivo SI la sostiene
+
+**La lectura por PAREJA (mas abajo) no separo nada. La lectura por LONGITUD si.**
+Con una sola confirmada no habia con que leer fino; con dos, y las dos recontadas
+del archivo, aparece una figura que antes no se podia ver: las **dos confirmadas
+de corte 3 tienen las dos EXACTAMENTE 8 pasos** (`empoderamiento_de_participantes`
+y `cliente_disena_producto`), mientras las falsas se apilan abajo.
+
+| pasos del nodo (con corte 3) | citas | confirmadas |
+|---|---:|---:|
+| **6 pasos** | 14 | **0** |
+| **7 pasos** | 2 | **0** |
+| **8 pasos** | **2** | **2** |
+| **9 pasos** | 1 | **0** |
+
+> **La lectura que el dato aguanta, y solo la que aguanta**: con corte 3, **en los
+> nodos de 6 y 7 pasos la señal es ruido puro (dieciseis falsas de dieciseis)**, y
+> **las dos costuras reales viven las dos en nodos de 8 pasos.** El corte 3 dice
+> que hay poco material que comparar; **en un nodo corto ese poco no alcanza para
+> nada, en uno de 8 pasos ya hay bastante para que una costura asome.** Es la misma
+> forma del retrato inverso, vista desde el otro extremo de la escala.
+
+> **La excepcion que impide escribir un *8 o mas* limpio, y se dice**: el unico
+> nodo de corte 3 con 9 pasos es `internacionalizacion_sitio_web_exportacion`, y
+> es **falsa**, porque es un **formato lista** (nueve mejoras de sitio web, cero
+> repeticion). **La regla no es *8 pasos o mas confirma*: es que a corte 3 la
+> longitud es el desempate que la señal de bloque no da, y el formato lista sigue
+> siendo la excepcion que se reconoce por fuente y titulo antes de abrir los
+> pasos.** Con esa salvedad, la regla del corte 3 queda: **nodo corto, ruido; nodo
+> de 8 pasos, abre con cuidado que ahi han aparecido las dos presas.**
 
 #### LA LECTURA FINA DEL CORTE 3, y NO sale como se esperaba
 
@@ -485,15 +519,17 @@ del archivo, y el dato es rotundo:**
 
 | | |
 |---|---|
-| pareja **mas alta** de las dieciseis citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
+| pareja **mas alta** de las diecinueve citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
 | segunda mas alta | **59,9**, `internacionalizacion_sitio_web_exportacion`, tambien **falsa** |
-| la de la confirmada | **59,7**, o sea **la tercera**, por debajo de dos falsas |
+| la de la primera confirmada | **59,7** (`empoderamiento_de_participantes`), o sea **la tercera**, por debajo de dos falsas |
+| la de la segunda confirmada | **55,2** (`cliente_disena_producto`), **mas abajo todavia**, por debajo de varias falsas |
 
-> **La pareja no separa las confirmadas de las falsas en el corte 3.** Escrita
-> como regla, *mira la pareja* habria mandado leer primero las dos falsas y dejar
-> la confirmada en tercer lugar.
+> **La pareja no separa las confirmadas de las falsas en el corte 3, y con la
+> segunda confirmada lo deja aun mas claro.** Escrita como regla, *mira la pareja*
+> habria mandado leer primero dos falsas y dejar la primera confirmada en tercer
+> lugar y la segunda mas abajo. **La longitud si separo (arriba); la pareja no.**
 >
-> **Ademas, ninguna de las dieciseis dispara por pareja**: el umbral de pareja
+> **Ademas, ninguna de las diecinueve dispara por pareja**: el umbral de pareja
 > es **80** y la mas alta de este grupo es 62,0. **Todas entraron por bloque.** La
 > pareja aqui no es una senal que sostenga nada, es un numero que acompana.
 >
@@ -563,6 +599,13 @@ dieciseis**, y la unica excepcion es un formato lista.
 > y la señal es ruido; con trece contra trece hay tanto que si el nodo repite, se
 > ve. **El corte es un termometro de cuanto se puede confiar en el bloque, no de
 > cuanta costura hay.**
+
+> **Recomputado tras la banda 46,6 a 47,4, y el retrato NO se movio.** Las seis
+> citas de esa tanda tienen cortes 3, 3, 3, 4, 5 y 5: **ninguna llega a corte 8**,
+> asi que **el retrato inverso sigue en DIECISEIS confirmadas de DIECISIETE**, sin
+> entrada nueva por arriba. Lo que la tanda movio fue el otro extremo de la escala,
+> el corte 3, donde por fin aparecieron dos confirmadas y la lectura fina por
+> longitud (arriba). **Las dos puntas se leyeron el mismo dia y solo una cambio.**
 
 ## CONFIRMADA DE REBOTE desde el gradiente (lote 13)
 
@@ -1297,29 +1340,162 @@ solape, verificado contra el grafo:
 
 ---
 
+## TANDA DE LA BANDA 46,6 a 47,4: tres confirmadas y tres falsas, todas del nucleo
+
+**Segunda tanda con el orden nuevo, y repite la firma de la primera**: las seis
+citas son del nucleo, las tres confirmadas de `core` y las tres falsas tambien.
+**Es la banda mas baja leida hasta hoy**, pegada al umbral 44, y aun asi el
+nucleo pone tres presas.
+
+### `core/cliente_disena_producto`, 8 pasos, corte 3: DOBLE, y SEGUNDA CONFIRMADA DE CORTE 3
+
+**Bloque 46,6, pareja 55,2 sobre [1,5], corte 3.** Dos fuentes: *Winning at New
+Products* de Cooper y *Never Lose a Customer Again* de Coleman.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 4** | **la herramienta de co-diseno de Cooper**: evaluar si el cliente entiende la tecnologia, montar una herramienta digital tipo CAD para que cree sus propios disenos, abrir una galeria o comunidad donde los compartan, revisar esos disenos para sacar ideas de nuevos productos |
+| **5 a 8** | **la co-creacion como experiencia de Coleman**: identificar donde el cliente puede personalizar, disenar un proceso guiado que no lo abrume, **entregarle algo tangible o simbolico que represente su decision**, mostrar de forma visible lo que logro |
+
+**El calco verificado contra el grafo**: el **paso 1** (*evalua si tu producto es
+apto: tu cliente debe poder entender la tecnologia que hay detras*) y el **paso
+5** (*identifica en que partes de tu producto tu cliente puede tomar decisiones
+de personalizacion*) hacen la misma pregunta de aptitud para la co-creacion, una
+por el lado tecnico y otra por el lado del alcance. Es la pareja [1,5] que el
+instrumento disparo.
+
+> **Precision sobre el corte, con la disciplina de siempre**: el corte es **3** y
+> la frontera real entre las dos narraciones esta en **4 contra 5** (Cooper cierra
+> en el 4, Coleman abre en el 5). **Se queda a un paso**, como
+> `ganar_comprension_del_cliente`. El corte 3 dice que hay poco material que
+> comparar, no donde esta la costura: la frontera la puso la lectura.
+
+> **EL CRUCE AL RACIMO TRANSVERSAL DE EXPERIENCIA, verificado contra el grafo.**
+> El **paso 7** (*entregale algo tangible o simbolico que represente la decision
+> que tomo*) es el mismo material del ritual de bienvenida de Coleman que ya vive
+> en `blueprint_de_experiencia` **paso 11** (*crea un recuerdo fisico o digital
+> que tu cliente pueda conservar de la decision que tomo*). **Las dos frases
+> mandan lo mismo**: dar al cliente un objeto que represente la decision que acaba
+> de tomar.
+
+> **Nota del ejecutor sobre el conteo, traida en vez de escrita redonda**: el
+> encargo llama a este cruce el *quinto avistamiento del material del ritual*. **La
+> ficha no lleva una serie numerada de avistamientos de ese material**, asi que el
+> ordinal *quinto* no lo puedo reconstruir del archivo ni lo repito como cifra. Lo
+> verificado y lo que se registra es el cruce en si: `cliente_disena_producto`
+> paso 7 contra `blueprint_de_experiencia` paso 11, la misma instruccion de
+> entregar un objeto de la decision. Si el auditor lleva ese conteo aparte, el
+> ordinal es suyo; con lo que hay en la ficha, se registra el cruce sin numerarlo.
+
+> **CONSECUENCIA PARA EL RACIMO TRANSVERSAL UNO**: el bloque del ritual de
+> `blueprint_de_experiencia` (pasos 9 a 13) ya tiene dictado que **se parte en un
+> nodo propio, el ritual de bienvenida**. El material del ritual de
+> `cliente_disena_producto` (pasos 7 y 8) **es de esa misma casa**: cuando la
+> pasada unica arme el nodo del ritual, este par de pasos es suyo, no de un nodo
+> nuevo. Es la misma leccion que dejo `fase_affirm_buyers_remorse`: **mirar el
+> destino existente antes de crear nada.**
+
+### `core/mapa_de_canal_de_ventas`, 8 pasos, corte 5: SEPTIMA DE LA FORMA QUE PARTE
+
+**Bloque 47,4, corte 5.** Dos fuentes: *The Startup Owner's Manual* de Blank y
+*Essentials of Supply Chain Management* de Hugos.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | **la food chain de canal de Blank**: validar un solo canal antes de expandir, dibujar la cadena completa entre tu empresa y el cliente final, documentar la responsabilidad de cada eslabon, calcular descuentos y margenes por nivel, disenar un plan de gestion del canal |
+| **6 a 8** | **medio mapa SCM de Hugos**: identificar en que categoria participa tu empresa, mapear todos los participantes de la cadena de suministro incluyendo proveedores del proveedor y clientes del cliente, ver que proveedores de servicios mejorarian la eficiencia |
+
+> **No es repeticion, es un programa ajeno pegado detras**, la firma de la forma
+> que parte. **Septimo ejemplar**, detras de `blueprint_de_experiencia`,
+> `metas_vs_proposito`, `analisis_tco_roi_b2b`, `enfoque_motor_unico_crecimiento`,
+> `plan_de_adquisicion_acquire` y `ganar_comprension_del_cliente`. **Y aqui el
+> corte SI clava la frontera**: es 5, y la costura esta exactamente entre el paso
+> 5 y el 6.
+
+> **NOTA DE REPARTO, verificada contra el grafo**: la mitad de Hugos (pasos 6 a 8)
+> no es material suelto. **Sale de *Essentials of Supply Chain Management*, y ese
+> libro tiene parientes en el bloque Hugos del nucleo**, la subfamilia Hugos
+> registrada mas abajo en esta ficha. Cuando la pasada unica separe este nodo, la
+> mitad SCM no se desteje sola: **se reparte con esa subfamilia**, que es donde
+> vive su tema. La mitad de Blank se queda como el mapa de canal que el titulo
+> promete. **Es medio mapa** porque son tres pasos, un SCM abreviado, no el mapa
+> entero.
+
+### `core/seleccion_ceo_fundador`, 12 pasos, corte 5: DOBLE DE LA DECISION DE CEO
+
+**Bloque 46,8, corte 5.** Dos fuentes: *The Founder's Dilemmas* y *The Hard Thing
+About Hard Things* de Horowitz.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 4** | **la decision en grupo (Founder's Dilemmas)**: reunir al equipo fundador para discutir quien debe ser CEO sin dar por hecho que es quien tuvo la idea, evaluar candidatos por ejecucion y no por pasion, considerar roles alternativos para el fundador (Chairman, CTO, CSO), documentar el acuerdo formalmente |
+| **5 a 8** | **la decision introspectiva (Horowitz)**: evaluar si tu tienes la vision de producto para seguir liderando, identificar tus brechas de habilidades de CEO, buscar mentores con experiencia real fundando, y si no quieres el puesto encontrar al CEO profesional adecuado e integrarlo |
+| **9 a 12** | **la integracion, que CONTINUA sin calcarse**: evaluar si tu equipo directivo conoce el producto, negociar clausulas de control antes de aceptar inversion, transicion gradual si contratas un CEO externo, detectar senales tempranas de desalineacion |
+
+**El doble, verificado contra el grafo**: la tanda grupal (1 a 4) y la
+introspectiva (5 a 8) **responden la misma pregunta**, quien debe ser el CEO y
+que pasa si no es el fundador, una desde la mesa del equipo y otra desde el
+espejo. El **paso 2** (*evalua a los candidatos por su capacidad de ejecucion, no
+por pasion*) vuelve en el **paso 6** (*identifica tus brechas de habilidades de
+CEO*); el **paso 3** (*considera roles alternativos para la persona con la idea*)
+vuelve en el **paso 8** (*si no quieres ser CEO, encuentra al profesional
+adecuado e integralo*). **La tercera tanda no repite: gestiona al CEO ya elegido.**
+
+> **Precision sobre el corte**: el corte es **5** (frontera propuesta entre el
+> paso 5 y el 6) y la frontera real del doble esta en **4 contra 5**, donde la
+> tanda grupal cierra y la introspectiva abre. **Se queda a un paso**, esta vez por
+> el lado tardio: mete el primer paso introspectivo en el bloque del grupo.
+
+### Las tres falsas de la tanda, todas SECUENCIA LEGITIMA
+
+| cita | pasos | corte | por que es SECUENCIA LEGITIMA |
+|---|---:|---:|---|
+| `core/metricas_accionables` | 6 | **3** | secuencia unica de Ries, accionables contra vanidad: evitar numeros brutos acumulativos, exigir que cada metrica trace la accion que la causo, disenar la relacion causal, pasar a cohortes, eliminar lo que no traza y validar que sea comprensible. **Cada paso afina el anterior, ninguno lo repite.** La pareja [3,6] son dos criterios distintos que comparten el sujeto *metrica* |
+| `core/cap_table_basico` | 7 | 4 | secuencia unica de *Venture Deals* para armar un cap table: listar acciones de fundador, pre y post money, porcentaje del inversionista, restar el option pool, resolver lo que falta con algebra y verificar los calculos. La pareja [5,6] son **dos vecinos legitimos: resolver y luego verificar** |
+| `core/ceo_de_guerra_vs_paz` | 6 | **3** | secuencia unica de Horowitz: evaluar si el negocio esta en modo normal o existencial, actuar segun guerra o paz, delegar la tactica manteniendo la direccion, y **revisar periodicamente si el contexto cambio de modo**. La pareja [1,6] son los dos vecinos del marco, evaluar ahora y reevaluar despues, como en `plan_gestion_riesgos` |
+
+> **Estas tres mueven la regla del corte 3, y la mueven arriba en la ficha**:
+> `cliente_disena_producto` es la SEGUNDA confirmada de corte 3, y
+> `metricas_accionables` y `ceo_de_guerra_vs_paz` son dos falsas mas de corte 3.
+> La cuenta recomputada del archivo pasa a **dos confirmadas de diecinueve**, y la
+> tabla de la regla queda actualizada en su seccion, con la lectura fina que la
+> nueva pareja de confirmadas permite escribir.
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **58** de **128** |
-| de esas, costura **confirmada** | **31** |
-| de esas, **citas falsas** | **27** |
+| **CITAS del instrumento leidas** | **64** de **128** |
+| de esas, costura **confirmada** | **34** |
+| de esas, **citas falsas** | **30** |
 | **precision de la cola** | **53%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
-| **TOTAL de costuras confirmadas** | **31** |
+| **TOTAL de costuras confirmadas** | **34** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **58 leidas, 31
-confirmadas, 27 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **64 leidas, 34
+confirmadas, 30 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
-**La caida sigue, y ya suave.** La serie completa: **73% con 22 leidas, 68% con
-28, 65% con 34, 65% con 40, 61% con 46, 56% con 52 y 53% con 58**. Seis tandas
-de banda estrecha llevan **14 confirmadas contra 22 falsas**.
+**La caida sigue, y ya casi plana.** La serie completa: **73% con 22 leidas, 68%
+con 28, 65% con 34, 65% con 40, 61% con 46, 56% con 52, 53% con 58 y 53% con 64**.
+Siete tandas de banda estrecha llevan **18 confirmadas contra 24 falsas**.
 
-> **La primera tanda con el orden nuevo dio dos de seis**, mejor que la anterior
-> de `quality` (una de seis) y peor que la media. **Una tanda no prueba el orden
-> nuevo**, y asi queda dicho: la decision de leer primero el nucleo se tomo por
-> donde vive la presa confirmada, no por una promesa de rendimiento.
+> **Correccion de conteo, recomputada del archivo y traida sin redondear**: la
+> version anterior decia que las SEIS tandas de banda llevaban *14 confirmadas
+> contra 22 falsas*. Al recontar cruzando la tabla de franjas de abajo con
+> `docs/COSTURAS_INTERNAS.jsonl` salen **15 confirmadas contra 21 falsas** en esas
+> seis (3+3+4+2+1+2 confirmadas, 3+3+2+4+5+4 falsas, 36 citas). **El total de 36
+> siempre cuadro; el reparto estaba corrido en uno.** Con la septima tanda dentro
+> (3 y 3) queda en **18 contra 24**.
+
+> **La segunda tanda con el orden nuevo dio tres de seis**, mejor que la primera
+> (dos de seis) y por encima de la media de banda. **Dos tandas siguen sin probar
+> el orden nuevo**, y asi queda dicho: la decision de leer primero el nucleo se
+> tomo por donde vive la presa confirmada, no por una promesa de rendimiento. Lo
+> que si confirma esta tanda es el *donde*: **las tres presas son de `core`, las
+> tres falsas tambien, y la banda es la mas baja leida.**
 
 > **Ahi esta el dato que sostiene la decision de orden de abajo**, y conviene
 > verlo antes de leerla: **cuatro de las cinco falsas de la ultima tanda son de
@@ -1400,22 +1576,25 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las veintisiete falsas se reparten en las mismas dos clases**: LARGO LEGITIMO
-(**7**) y FALSO POSITIVO DE SECUENCIA LEGITIMA (**20**). **Ninguna falsa ha
+**Las treinta falsas se reparten en las mismas dos clases**: LARGO LEGITIMO
+(**7**) y FALSO POSITIVO DE SECUENCIA LEGITIMA (**23**). **Ninguna falsa ha
 necesitado una clase nueva desde que las dos quedaron caracterizadas**, que es la
-mejor señal de que estan bien trazadas: veintisiete casos y ni uno se ha salido.
+mejor señal de que estan bien trazadas: treinta casos y ni uno se ha salido. Las
+tres nuevas (`metricas_accionables`, `cap_table_basico`, `ceo_de_guerra_vs_paz`)
+son secuencias unicas de un solo libro cada una, y las tres cayeron en la clase
+sin forzarla.
 
 ### LA ASIMETRIA, recomputada del archivo, y NO es 19 de 19
 
-**La tanda nueva la refuerza**: las tres confirmadas son las tres de `core`. Pero
-al recontar del archivo la cifra completa **no sale redonda**, y la escribo como
-sale:
+**La tanda nueva la refuerza otra vez**: las tres confirmadas son las tres de
+`core`. Pero al recontar del archivo la cifra completa **sigue sin salir
+redonda**, y la escribo como sale:
 
 | | |
 |---|---:|
-| **confirmadas en nodos del NUCLEO** | **30** |
+| **confirmadas en nodos del NUCLEO** | **33** |
 | **confirmadas en nodos de MUNDO** | **1** |
-| | **31** |
+| | **34** |
 
 **La excepcion es `quality/planificacion_recoleccion_datos`**, confirmada en el
 lote C2 y registrada en esta misma ficha **con su prefijo `quality/` desde el
@@ -1424,7 +1603,7 @@ la asimetria nunca se habia recomputado.**
 
 > **Choca con lo dictado, y por eso lo traigo en vez de escribirlo redondo**: el
 > encargo daba por hecho que *las confirmadas siguen siendo todas del nucleo*.
-> **Son 30 de 31**, y la excepcion sigue siendo la misma y unica:
+> **Son 33 de 34**, y la excepcion sigue siendo la misma y unica:
 > `quality/planificacion_recoleccion_datos` sigue sin encontrar companeros de
 > mundo, tanda tras tanda.
 
@@ -1434,7 +1613,7 @@ choque nace de ahi:
 | registro | cuantas | reparto |
 |---|---:|---|
 | **Las costuras que vio el CRIBADO de la franja** (`FRANJA_INFORME.md`, apartado 4.5) | **21** | **21 de 21 en el nucleo**, verificado nodo por nodo contra el grafo |
-| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **31** | **30 en el nucleo, 1 en `quality`** |
+| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **34** | **33 en el nucleo, 1 en `quality`** |
 
 **Son dos colas distintas, con dos poblaciones distintas, y las dos cifras son
 correctas en su sitio.** El *21 de 21* del informe se sostiene; el *todas* de
@@ -1458,18 +1637,24 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 58 citas leidas vive en
-exactamente una fila, y las filas suman 58 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 64 citas leidas vive en
+exactamente una fila, y las filas suman 64 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **20** | **23** | **43** |
+| **por debajo de 51,0** | **23** | **26** | **49** |
 | **sin señal de bloque** (solo pareja) | 0 | 0 | **0** |
-| | **31** | **27** | **58** |
+| | **34** | **30** | **64** |
 
-**Las 58, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las seis nuevas de la banda 46,6 a 47,4 caen las seis en la fila de abajo**
+(46,6 a 47,4 esta por debajo de 51,0): tres confirmadas (`cliente_disena_producto`
+46,6, `seleccion_ceo_fundador` 46,8, `mapa_de_canal_de_ventas` 47,4) y tres falsas
+(`ceo_de_guerra_vs_paz` 46,7, `cap_table_basico` 46,9, `metricas_accionables`
+47,0). La fila de abajo pasa de **20 y 23** a **23 confirmadas y 26 falsas**.
+
+**Las 64, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -1531,6 +1716,12 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `fase_affirm_buyers_remorse` | 48,0 | **falsa** |
 | por debajo de 51,0 | `etapa_testing_validation` | 47,5 | **falsa** |
 | por debajo de 51,0 | `wizard_of_oz_testing` | 47,4 | **falsa** |
+| por debajo de 51,0 | `mapa_de_canal_de_ventas` | 47,4 | confirmada |
+| por debajo de 51,0 | `metricas_accionables` | 47,0 | **falsa** |
+| por debajo de 51,0 | `cap_table_basico` | 46,9 | **falsa** |
+| por debajo de 51,0 | `seleccion_ceo_fundador` | 46,8 | confirmada |
+| por debajo de 51,0 | `ceo_de_guerra_vs_paz` | 46,7 | **falsa** |
+| por debajo de 51,0 | `cliente_disena_producto` | 46,6 | confirmada |
 | por debajo de 51,0 | `propuesta_gasto_capital` | 44,1 | confirmada |
 
 > **Las dos nuevas cayeron las dos en la fila de abajo**:
