@@ -945,8 +945,29 @@ verificar.
 > **El nodo es sano como costura y está caducado como consejo.** Son dos
 > preguntas distintas y las dos hay que contestarlas.
 
-**Lo que esto cambia para la ficha, y es el argumento del barrido**: de **seis**
-verificadas, **dos** están muertas. El informe de la franja tiene **veinticuatro
+### Entrada 3 (10 ago 2026): cinco nombres más del lote grande, verificación PARCIAL
+
+**El lote de veinticuatro no se pudo cerrar en esta pasada** y queda abierto a
+propósito: la búsqueda web estuvo caída durante parte del trabajo y **no se
+escribió nada de memoria**. Lo que sí quedó verificado con evidencia:
+
+| nombre | estado | evidencia |
+|---|---|---|
+| **Alexa** (alexa.com, ranking web de Amazon) | **MUERTA** | Amazon la retiró el **1 de mayo de 2022**, anunciado en diciembre de 2021; las APIs cerraron en diciembre de 2022 |
+| **oDesk** | **MUERTA como marca** | rebautizada **Upwork en mayo de 2015**; el dominio redirige |
+| **Elance** | **MUERTA como marca** | fusionada en Elance-oDesk y **retirada tras el rebranding a Upwork** |
+| **InnoCentive** | **VIVA, con dueño nuevo** | **adquirida por Wazoku en julio de 2020**; sigue operando dentro del grupo |
+| **Guide to Greener Electronics** (Greenpeace) | **NO VERIFICABLE** | la última edición localizable es la de **2017**; no se encontró anuncio de discontinuación, así que no se declara muerta |
+
+**Con estas, el censo va en cuatro muertas y cinco vivas de once verificadas.**
+Quedan por verificar: Empty Miles Service, RentaGreenBox, EcoNation, Minitab,
+TrafficEstimate.com, Google Analytics, Energy Star, VMware, Google Keyword
+Planner, Google Trends, GS1, EPCglobal, Optimizely, Visual Website Optimizer,
+Unbounce, SEMrush, SpyFu, y las plataformas generales (Google, LinkedIn,
+Facebook, Amazon).
+
+**Lo que esto cambia para la ficha, y es el argumento del barrido**: de **once**
+verificadas, **cuatro** están muertas. El informe de la franja tiene **veinticuatro
 nombres propios anotados sin verificar**. No es una predicción decir que habrá
 más; es la razón para verificarlos.
 
