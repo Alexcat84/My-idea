@@ -1405,7 +1405,8 @@ se encontro. **`CAMBIADA` es columna, no matiz de `viva`:**
 | **antes del lote** | 6 | 0 | 5 | 1 | **12** |
 | **el lote** | **1** | **6** | **9** | **2** | **18** |
 | **entrada 5, `export.gov`** | 0 | **1** | 0 | 0 | **1** |
-| **CENSO ENTERO** | **7** | **7** | **14** | **3** | **31** |
+| **entrada 6, del par 176** | **2** | 0 | 0 | 0 | **2** |
+| **CENSO ENTERO** | **9** | **7** | **14** | **3** | **33** |
 
 **Las seis CAMBIADAS, con su evidencia y con lo que cambio:**
 
@@ -1642,6 +1643,39 @@ estan tambien en la lista de NAFTA o de Incoterms sin version.** El dominio
 `exportacion` acumula las tres averias a la vez, **la herramienta mudada, el
 tratado extinto y el marco sin version**, y eso lo convierte en **el candidato
 natural del primer barrido de vigencia**, por delante de los demas.
+
+---
+
+---
+
+### Entrada 6 (11 ago 2026): `Delicious` y `Social Mention`, las dos MUERTAS
+
+**Salen del puesto 176 del cribado intra, del par `targeting_blogs_channel`
+contra `targeting_blogs_traccion`**, que la relectura R2 acaba de sostener como
+fusión. **Los dos nodos mandan encontrar blogs de nicho con estas herramientas.**
+
+| nombre | estado | evidencia |
+|---|---|---|
+| **Delicious** (delicious.com, marcadores sociales) | **MUERTA** | **Pinboard la compró en junio de 2017** por 35.000 dólares y **la puso en solo lectura el 15 de junio de 2017**: la API dejó de funcionar y no se pueden añadir ni editar marcadores. Se conserva **como archivo**, un museo de enlaces del pasado |
+| **Social Mention** (socialmention.com) | **MUERTA** | El sitio original **está caído en su mayor parte y sin mantenimiento**. **Salvedad anotada**: hoy existe una herramienta con ese nombre servida por **BrandMentions**, que es otra empresa; **el nombre sobrevive, el sitio que el nodo cablea no** |
+
+> **Las dos están en el paso 1 de su nodo, que es el peor sitio posible**: es el
+> paso que dice **cómo encontrar los blogs**. Un lector que empiece por ahí
+> **empieza por dos herramientas que no le van a devolver nada**.
+>
+> **`Delicious` es además el caso más limpio de la clase MUERTA de todo el
+> censo**: no cambió de dueño ni de casa ni de nombre. **Está congelada desde
+> 2017 y se declara a sí misma museo.**
+
+**Reparto entre los dos nodos, verificado**: `Delicious` aparece en **uno** de los
+dos (`targeting_blogs_channel`) y `Social Mention` en **los dos**. **Tres
+menciones muertas en dos nodos que además van a fusionarse**, así que **el
+arreglo y la fusión son la misma operación**: al escribir el nodo superviviente
+del par 176, las dos herramientas salen solas.
+
+> **Y eso da la regla de orden que el plan necesita**: **cuando un nodo con
+> herramienta muerta está en un par que va a fusionarse, el arreglo de vigencia
+> NO se hace aparte.** Se hace al redactar el superviviente, o se hace dos veces.
 
 ---
 

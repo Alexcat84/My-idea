@@ -23,6 +23,22 @@ veredictos de la franja; estas tres salieron del otro eje y por eso faltan.
 > son correctas por separado. **Se leen enteras en la relectura, con la mesa como
 > marco**, igual que los 32 racimos: una decision por familia, no una por pareja.
 
+> **REGLA FAMILIA DECLARADA, generalizada el 11 ago 2026 a TODO racimo declarado**
+> (los de este informe y los 32 de `RACIMOS_MIEMBROS.jsonl`):
+>
+> **Un par cuyos DOS nodos pertenecen a un racimo ya declarado lleva razon
+> `familia declarada` y NO pelea la clase.** Se registra con la clase que la
+> silueta indique, sin argumentarla, **porque la decision ya esta tomada en otro
+> sitio y discutirla aqui es trabajo que se tira.**
+>
+> **Lo que SI se anota de esos pares es cualquier cosa NUEVA**: un miembro que no
+> estuviera en la nomina, una arista que cambie la forma, o un choque con la
+> lectura de la familia. **La regla ahorra discusion, no observacion.**
+>
+> **Nacio para el racimo del cierre en venta grande (seccion 9) y se extiende
+> aqui** porque el razonamiento no depende de esa familia: **vale para cualquiera
+> que ya haya subido.**
+
 **Miembros verificados contra el grafo uno por uno.** Los tres racimos son
 **enteramente de `core`**.
 
@@ -684,6 +700,71 @@ serie**.
 > **La tercera pregunta es la que evita que una fusion correcta empobrezca el
 > catalogo.**
 
+### TANDA R2: seis puestos mas, SEIS DE SEIS SOSTENIDAS
+
+**Acumulado de la relectura: 12 de 12.**
+
+| puesto | el par | sostiene |
+|---:|---|:---:|
+| **169** | `estrategia_plataformas_existentes` contra `existing_platforms_leverage` | **si** |
+| **173** | `mission_and_operations_planning` contra `proceso_sop_mop` | **si** |
+| **174** | `cultura_climatica_innovacion` contra `cultura_de_innovacion` | **si** |
+| **175** | `customer_discovery_get_out_of_building` contra `get_out_of_the_building` | **si** |
+| **176** | `targeting_blogs_channel` contra `targeting_blogs_traccion` | **si** |
+| **177** | `comprension_capacidades_limitaciones_ia` contra `jagged_frontier_ia` | **si** |
+
+**Y esta tanda trae lo que R1 no habia necesitado: TRES casos donde la tercera
+pregunta, que se pierde al fusionar, tiene respuesta larga.** Verificados contra
+el grafo paso por paso.
+
+#### 175: la fusion tiene que llevarse TRES cosas, y ninguna esta en los dos
+
+**Los dos nodos dicen salir a hablar con clientes. Ninguno es superconjunto del
+otro: cada uno trae lo suyo.**
+
+| lo que hay que conservar | de que nodo sale |
+|---|---|
+| **hipotesis-primero**: *identifica tus hipotesis clave sobre el problema, el cliente y la solucion* antes de salir | `customer_discovery_get_out_of_building`, paso 1 |
+| **lidera-tu-mismo**: *lidera tu mismo estas conversaciones, no las delegues en personal junior* | `get_out_of_the_building`, paso 2 |
+| **documenta-al-momento**: *documenta lo que aprendes de cada conversacion EN EL MOMENTO (blog, CRM)* | `get_out_of_the_building`, paso 4 |
+
+> **Aqui no hay superviviente natural: hay una fusion que se escribe.** Y las tres
+> instrucciones **viajan las tres**, porque cada una tapa un fallo distinto: salir
+> sin hipotesis, delegar la salida, y salir y no anotar.
+
+#### 174: sobrevive el largo, pero el corto tiene el TONO
+
+**`cultura_de_innovacion` (6 pasos) contra `cultura_climatica_innovacion` (3).**
+El largo trae la mecanica entera, reconocimiento, politica de no castigar el error
+honesto, comunicacion abierta y recursos para proyectos audaces.
+
+> **Sobrevive el largo. Pero lo que el corto tiene y el largo no es EL TONO
+> INTROSPECTIVO**, y es literal: *revisa si de verdad le dedicas tiempo a apoyar
+> los proyectos, **no solo dinero***; *abre espacios para que las ideas puedan
+> venir de cualquiera, **no solo de ti***.
+>
+> **El corto le habla al fundador de sus propios actos; el largo describe un
+> sistema.** **La fusion conserva el tono o el nodo pierde a quien lo lee.**
+
+#### 173: superconjunto LEVE, y el que muere tiene sabor propio
+
+**`proceso_sop_mop` es superconjunto de `mission_and_operations_planning`, pero
+por poco**: los cinco pasos corren en paralelo y **lo unico que el primero anade
+es el cierre del ciclo**, *implementar el plan y monitorear con datos
+actualizados, ajustando en tiempo real*, donde el segundo se detiene en *simular
+antes de ejecutarlo*.
+
+> **Superviviente: `proceso_sop_mop`.** Y lo que hay que conservar del otro es
+> **el sabor de mision**: su vocabulario es humanitario o militar, *poblacion
+> afectada*, *suministros*, *vehiculos disponibles*. **El superviviente habla de
+> negocio; el que muere habla de operacion de emergencia**, y ese encuadre es un
+> caso de uso real que no se puede tirar con el nodo.
+
+> **LOS TRES CASOS ENSEÑAN LO MISMO Y POR ESO VAN JUNTOS**: en 175 no hay
+> superviviente, en 174 lo hay pero pierde el tono, en 173 lo hay pero pierde el
+> encuadre. **Ninguna de las tres perdidas se ve mirando cual nodo tiene mas
+> pasos**, que es lo que una fusion apresurada mira.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -777,6 +858,37 @@ seccion 1 en su forma mas clara.**
 > **Lo que si se anota de esos cuatro** es cualquier cosa **nueva** que aparezca
 > al abrirlos, un nodo que no estuviera en los ocho o un choque con esta lectura.
 
+### EL FORASTERO: CANDIDATA A FRONTERA DE DOCTRINA INTRA-NUCLEO
+
+**`tacticas_cierre_ventas`, de *Traction* (Weinberg), no es un duplicado mal
+puesto: es una doctrina distinta conviviendo con la de Rackham dentro del mismo
+nucleo.** Y eso **no tiene ficha todavia**.
+
+| | **Rackham**, los siete | **Weinberg**, el forastero |
+|---|---|---|
+| **la tesis** | las tecnicas de cierre **danan** la venta grande | la decision **hay que pedirla**, con fecha y por escrito |
+| **cuando** | durante toda la venta compleja | cuando el prospecto **ya esta calificado** y en la etapa final |
+| **que prohibe** | presionar, cerrar de forma asumida o alternativa | **dejar la decision abierta o ambigua** |
+
+> **LA EVIDENCIA DE QUE CONVIVEN Y NO SE CONTRADICEN SON SUS PROPIOS VEREDICTOS**:
+> los dos pares que lo enfrentan a la doctrina de Rackham, los puestos **408 y
+> 504**, salieron **D los dos**. **El cribado ya dictamino que no se pisan.**
+>
+> **Y la frontera es real y es de momento**: Rackham habla de **antes**, cuando el
+> cliente todavia no ha articulado su necesidad; Weinberg habla de **despues**,
+> cuando ya la articulo y solo falta cerrar la fecha. **Pedir claridad no es
+> presionar.**
+
+> **POR QUE ES CANDIDATA A FICHA Y NO SE RESUELVE AQUI**: las fronteras de
+> doctrina que esta campana ha visto eran **entre el nucleo y un mundo**. **Esta
+> es INTRA-NUCLEO**, dos libros dentro de `core` que dicen cosas distintas sobre
+> el mismo momento de venta, **y el lector no tiene como saber cual le toca.**
+>
+> **El riesgo no es la duplicacion: es la contradiccion aparente.** Un lector que
+> caiga en los dos sin el matiz del momento **lee que no hay que cerrar y que hay
+> que cerrar.** **Eso pide una linea de frontera escrita, no una fusion.**
+
+
 ---
 
 ## 10. RACIMO NUEVO: LA SELECCION DE CANAL, y choca con la relectura R1
@@ -845,5 +957,72 @@ por tanto **su superviviente natural**.
 > conocida, y el sexto, el 165, sostiene su veredicto de A. **Lo que se corrige es
 > el alcance de su nota de direccion, no la lectura.**
 
+### CANDIDATURA DE FORMA: JERARQUIA MADRE-HIJAS CON ARISTAS
+
+**Alternativa a la mega-fusion, y se registra como candidata porque se decide al
+leer la familia entera, no ahora.**
+
+| | la mega-fusion | **la jerarquia madre-hijas** |
+|---|---|---|
+| **que hace** | funde los cinco en `seleccion_canal_distribucion` | **conserva el general como MADRE y las especializaciones como HIJAS, enlazadas** |
+| **que gana** | un solo nodo, cero repeticion | el metodo general **una sola vez**, y cada canal con lo suyo |
+| **que pierde** | **el canal fisico y el digital como casos propios** | nada de contenido; **exige podar de las hijas lo que la madre ya dice** |
+
+> **Es la forma que el catalogo ya usa bien en otros sitios**: es exactamente lo
+> que hace `value_proposition_canvas` con sus tres piezas, y
+> `patron_free_business_model` con `patron_freemium` y `patron_bait_hook`. **Las
+> dos son MADRES SANAS medidas en este informe.**
+>
+> **Y el trabajo que exige esta medido**: hoy la familia tiene **DOS aristas
+> internas** y ninguna sale del nodo general. **Para que la jerarquia exista hay
+> que crear las aristas que faltan**, que es barato, **y podar de cada hija los
+> pasos que repiten a la madre**, que es donde esta el trabajo de verdad.
+
+> **LO QUE DECIDE ENTRE LAS DOS, y no lo decido yo**: si el canal fisico y el
+> digital **cambian el procedimiento** o solo lo ilustran. Si lo cambian, hijas.
+> **Si solo lo ilustran, la madre se los come como ejemplos y la fusion gana.**
+
 **Los pares que queden de esta familia en la cola llevan razon `familia
 declarada`**, igual que la del cierre en venta grande.
+
+---
+
+## 11. CANDIDATO a racimo: LA SUPERVISION DE LA IA
+
+**CANDIDATO, no censo.** Se registra aqui para que la relectura lo encuentre
+hecho; **no sube a racimo hasta que un tercer par lo confirme o lo desmienta.**
+
+### Los cuatro nodos, verificados contra el grafo
+
+**Los cuatro de `core` y los cuatro del mismo libro**, *Co-Intelligence* de
+Mollick:
+
+| nodo | pasos |
+|---|---:|
+| `human_in_the_loop_ia` | 4 |
+| `principio_humano_en_el_loop` | 4 |
+| `comprension_capacidades_limitaciones_ia` | 5 |
+| `jagged_frontier_ia` | 4 |
+
+### La evidencia: dos pares, los dos A, y los dos SOSTENIDOS en relectura
+
+| puesto | el par | clase | relectura |
+|---:|---|:---:|:---:|
+| **166** | `human_in_the_loop_ia` contra `principio_humano_en_el_loop` | **A** | **sostenida en R1** |
+| **177** | `comprension_capacidades_limitaciones_ia` contra `jagged_frontier_ia` | **A** | **sostenida en R2** |
+
+> **Dos parejas independientes, las dos repiten, y las dos aguantan la relectura.**
+> Lo que las une es el asunto: **donde termina lo que la IA hace sola y donde
+> empieza lo que tiene que mirar una persona.**
+
+### La forma: SUELTO, cero aristas
+
+> **Ninguno de los cuatro enlaza con ninguno de los otros tres.** Es la forma peor
+> del barrido de la seccion 6, y aqui con un agravante: **son cuatro nodos del
+> mismo libro sobre el mismo asunto y el grafo no los conoce.**
+
+> **POR QUE QUEDA EN CANDIDATO Y NO SUBE**: los dos pares leidos son **disjuntos**,
+> `human_in_the_loop` con `principio_humano` por un lado y `comprension` con
+> `jagged_frontier` por otro. **Nadie ha leido todavia un par CRUZADO entre las
+> dos mitades**, y sin eso no esta probado que sean una familia y no dos parejas
+> vecinas. **La cola decidira: cuando traiga un par cruzado, sube o se parte.**

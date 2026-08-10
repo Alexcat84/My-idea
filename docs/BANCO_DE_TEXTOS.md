@@ -619,3 +619,41 @@ prueba.** Un título de commit, un comentario con el cálculo a mano, un test
 escrito — nada de eso es un resultado. Los dos defectos de instrumento de esta
 fase **solo aparecieron al correr de verdad**: ninguna lectura del código los
 habría encontrado.
+
+### 9.3 Una dirección de fusión decidida sobre un par no sobrevive a su familia
+
+**Doctrina del 11 ago 2026, nacida de un choque real y con su ejemplar.**
+
+> **Cuando dos nodos repiten, decidir cuál sobrevive mirando solo a esos dos
+> puede ser correcto para el par y empobrecedor para el catálogo.** Antes de fijar
+> superviviente hay que preguntar **si el par pertenece a una familia**. Si
+> pertenece, **la dirección se decide con la familia entera delante.**
+
+**EL EJEMPLAR, verificado contra el grafo.** La relectura declaró
+`seleccion_canal_distribucion` superviviente natural frente a
+`seleccion_canal_fisico`, y **para ese par es cierto**: lo cubre entero y trae un
+paso más, recalcular la hipótesis de ingresos con los costos del canal.
+
+**Pero la familia son cinco nodos**, los cinco del mismo libro:
+`seleccion_canal_distribucion` (el general), `seleccion_canal_fisico`,
+`channels_hypothesis_web_mobile` (el digital), `hipotesis_de_canales` y
+`validar_canal_distribucion`. **Y ya lleva tres veredictos de repetición, los
+tres contra el nodo general.**
+
+> **Contra el físico se perdía una concreción. Contra los cinco se pierden dos
+> especializaciones enteras**, la física y la digital, **que el nodo general no
+> lleva y no puede llevar sin dejar de ser general.**
+>
+> **Fusionar los cinco dejaría un solo nodo de canal que no sabe si el producto
+> se vende en una tienda o en una tienda de aplicaciones.**
+
+**La nota del par 165 queda CORREGIDA DE ALCANCE, no de lectura**: el veredicto de
+repetición se sostiene y la dirección vale para el par; **lo que no vale es
+extenderla a la familia.**
+
+> **Por qué esto es una regla de verificación y no de estilo**: el superconjunto
+> de dos **puede ser el empobrecedor de cinco**, y la diferencia **no se ve
+> contando pasos**. Solo aparece al poner la familia delante. **Es el mismo error
+> de forma que el marcador: una cifra correcta calculada sobre la población
+> equivocada.**
+
