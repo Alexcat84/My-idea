@@ -1047,11 +1047,35 @@ mejorado: es que las doce primeras estaban sesgadas**, porque salieron de nodos
 de marketing y de mercados de trabajo por encargo, que es justo donde se citan
 productos comerciales de nicho por su nombre.
 
-| | muertas | vivas | no verificables | total |
-|---|---:|---:|---:|---:|
-| **antes del lote** | 6 | 5 | 1 | **12** |
-| **el lote** | **1** | **15** | **2** | **18** |
-| **CENSO ENTERO** | **7** | **20** | **3** | **30** |
+**EL CENSO PASA A CUATRO COLUMNAS**, porque tres no alcanzaban para decir lo que
+se encontro. **`CAMBIADA` es columna, no matiz de `viva`:**
+
+| | muertas | **CAMBIADAS** | vivas sin cambio | no verificables | total |
+|---|---:|---:|---:|---:|---:|
+| **antes del lote** | 6 | 0 | 5 | 1 | **12** |
+| **el lote** | **1** | **6** | **9** | **2** | **18** |
+| **CENSO ENTERO** | **7** | **6** | **14** | **3** | **30** |
+
+**Las seis CAMBIADAS, con su evidencia y con lo que cambio:**
+
+| nombre | que cambio | evidencia |
+|---|---|---|
+| **Google Analytics** | **la version**, y rompe el paso | Universal Analytics dejo de recoger datos el **1 jul 2023**; acceso y API cortados en jul 2024 **y datos borrados** |
+| **VMware** | **la forma de comprarlo**, y rompe el paso | Broadcom **termino las perpetuas en 2024**, todo a suscripcion por nucleo; **descontinuados el hipervisor vSphere gratuito y los Essentials Kits** |
+| **Energy Star** | **la casa**: de la EPA al DOE | propuesto para eliminacion en 2025 con cero dolares en el presupuesto FY2026; **acuerdo EPA/DOE de marzo de 2026** |
+| **EPCglobal** | **el estatuto**: de organizacion a iniciativa | constituida **dentro de GS1 en 2005**; hoy es una iniciativa de GS1 |
+| **Optimizely** | **dueno y alcance** | Episerver la compro en oct 2020 y **rebautizo la empresa entera como Optimizely en ene 2021**; de herramienta A/B a suite |
+| **Unbounce** | **dueno** | controlada por Crest Rock Partners; **fusionada con Insightly en jul 2024** |
+
+> **PRECISION SOBRE DONDE CAE LA FRONTERA, y la digo porque la columna se puede
+> leer mal.** El criterio que selecciona exactamente estas seis es **cambio
+> material documentado dentro del lote**. Con un criterio **mas estricto**, que el
+> cambio rompa el paso que la usa, **solo Google Analytics y VMware califican**;
+> las otras cuatro cambiaron de casa, de estatuto o de dueno sin que el lector
+> tenga que hacer nada distinto. Con un criterio **mas laxo**, cambio de dueno,
+> **entraria tambien `InnoCentive`** del lote anterior, adquirida por Wazoku en
+> 2020. **La cifra queda en seis como esta dictada, y queda escrito cual es su
+> borde por si el auditor lo quiere mover.**
 
 > **Las siete muertas son siete productos comerciales de nicho**: Alexa, Compete,
 > Perfect Audience, The Deck, oDesk, Elance y el nombre Visual Website Optimizer.
@@ -1131,8 +1155,104 @@ esta ficha viene proponiendo desde la entrada 1:
    fichado en el **puesto 941** con semejanza 0,8051, y ahí se lee cuando le
    toque, en orden.
 
+---
+
+#### LAS DOS REGLAS QUE ESTE LOTE DEJA ESCRITAS
+
+**Se escriben como reglas y no como comentario porque el barrido va a usarlas,
+y porque las dos salieron de datos, no de opinion.**
+
+> **REGLA DE DETECCION**: **la muerta se detecta abriendo el enlace; la mutada
+> no, porque el enlace abre.**
+>
+> De ahi que **el barrido no pueda preguntar solo si la herramienta existe**.
+> Tiene que preguntar **si el paso que la usa sigue siendo ejecutable**, que es
+> otra pregunta y bastante mas cara de contestar. Una herramienta institucional
+> **no muere: muta**, y la instruccion escrita contra la forma vieja **caduca
+> exactamente igual de mal** que la que nombra una empresa cerrada.
+
+> **REGLA DE MORTALIDAD POR TIPO**: **muere el producto comercial de nicho; el
+> estandar y la institucion no mueren, mutan.**
+>
+> **Las siete muertas son siete productos comerciales de nicho** (Alexa, Compete,
+> Perfect Audience, The Deck, oDesk, Elance y el nombre Visual Website
+> Optimizer): **ninguna es un estandar, una institucion ni un producto de
+> plataforma grande.** De las **siete institucionales o de plataforma grande**
+> (GS1, EPCglobal, Energy Star, Google Analytics, Keyword Planner, Trends y las
+> plataformas generales), **cero muertas y cuatro cambiadas.**
+>
+> **Nombrar un producto comercial de nicho es apostar. Nombrar un estandar o una
+> institucion es seguro para el NOMBRE y no lo es para el PROCEDIMIENTO. Las dos
+> apuestas se pierden, solo que de maneras distintas.**
+
+---
+
+#### EL REMEDIO DE LA CASA: el patron espejo del marco-pais
+
+**La ficha hermana de arriba resolvio el marco-pais con una regla de sitio: la
+condicion se copia A LA PUERTA, donde se actua. Este lote permite escribir su
+espejo, y el espejo no es de sitio sino de GRADO DE COMPROMISO.**
+
+**Primero hay que separar dos usos que hoy se tratan igual y no lo son:**
+
+| uso | que es | como se arregla |
+|---|---|---|
+| **herramienta-EJEMPLO** | el nodo ensena una **capacidad** y nombra un producto solo para ilustrarla. El paso sigue teniendo sentido si el producto desaparece | **se vuelve mencion generica con ejemplos vivos**: se nombra la capacidad y los productos van detras, como ejemplos y no como instruccion |
+| **herramienta-OBJETO** | el nodo trata **sobre esa herramienta**. Sin ella no queda nodo | **no se generaliza: se le pone FICHA DE VIGENCIA**, con fecha de verificacion, y se revisa en cada pasada |
+
+> **EL EJEMPLAR ESTA EN EL PROPIO CATALOGO, y por eso este remedio no hay que
+> inventarlo.** Dos nodos hermanos, mismo dominio, misma fuente y mismo tema,
+> escriben el mismo paso de las dos maneras:
+>
+> | | como lo dice |
+> |---|---|
+> | `analisis_trafico_competitivo`, paso 1 | *Buscar y comparar trafico de competidores con herramientas como **Alexa o Compete*** |
+> | `capturar_conocimiento_de_mercado`, paso 3 | *Usar **herramientas de medicion de trafico web** y rankings de app stores* |
+>
+> **El segundo no caduca. El primero caduco en 2022.** La redaccion arreglada
+> **esta escrita**, en un nodo hermano, y **lo unico que hace falta es
+> copiarla**.
+
+**Por que este remedio es hermano del de marco-pais y no otra cosa**: los dos
+tratan **una dependencia que el nodo no declara**. Alli la dependencia es de
+**jurisdiccion** y el remedio es **declararla en la puerta**. Aqui la dependencia
+es de **un producto de un tercero** y el remedio es **no contraerla**, o
+declararla con fecha si es inevitable. **En los dos casos el nodo miente por
+omision, y en los dos el arreglo es barato porque no toca la doctrina.**
+
+> **ANOMALIA ANOTADA, que es el argumento de este remedio en una linea**: el
+> catalogo nombra **oDesk y Elance**, las dos marcas muertas, **y no nombra
+> Upwork ni una sola vez** (verificado: cero apariciones en el grafo). **La
+> marca viva en la que las dos se fundieron no esta.** Un nodo que dijera
+> *plataformas de trabajo por encargo* seguiria de pie; el que nombra las dos
+> marcas manda al lector a dos sitios que ya no existen.
+
+---
+
+#### EN CONFLICTO DECLARADO, sin arbitro
+
+**Dos nombres se quedan sin veredicto a proposito. No es que falte trabajo: es
+que las fuentes se contradicen y forzar una lectura seria inventar.**
+
+| nombre | una fuente dice | la otra dice | estado |
+|---|---|---|---|
+| **Quantcast** (el producto **Quantcast Measure**, paso 6 de `analisis_trafico_competitivo`) | **descontinuado**, segun directorios de software | **activo**, segun las paginas propias de Quantcast y su documentacion de ayuda | **EN CONFLICTO DECLARADO** |
+| **RentaGreenBox** | **cerrada de forma permanente**, segun Crunchbase | **local activo en Huntington Beach a julio de 2026**, segun Yelp, y el sitio propio responde | **EN CONFLICTO DECLARADO** |
+
+> **El veredicto anterior de `Quantcast` NO se revierte.** La entrada del lote 22
+> lo dio por vivo y **la empresa lo esta**; lo que esta en duda es el producto
+> concreto que el paso pide. **Queda marcado, no cambiado.**
+>
+> **Ninguno de los dos se cuenta como muerto ni como vivo sin cambio en la tabla
+> de arriba**: los dos van en `no verificables`, que es exactamente para lo que
+> existe esa columna. **Si el conflicto se resuelve, se resuelve con evidencia
+> nueva y se anota la fecha.**
+
+---
+
 **Ningún nodo se toca desde esta ficha.** Lo que cambia es que el barrido ya
-tiene sus seis casas, su orden de prioridad y su segunda pregunta.
+tiene **sus seis casas, su orden de prioridad, su segunda pregunta y sus dos
+remedios escritos**.
 
 ### Entrada 3 (lote 22, puesto 340): el nodo que más herramientas nombra
 

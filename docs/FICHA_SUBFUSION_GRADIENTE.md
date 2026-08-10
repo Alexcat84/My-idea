@@ -193,6 +193,52 @@ siguen **se verificaron contra el grafo antes de escribirlas**.
 > tres veces, y tres veces.** Un lector que llegue aqui recibe veintidos pasos
 > para aprender lo que caben en cinco.
 
+#### MEDICION COMPLETA (10 ago 2026, de rebote en el puesto 362 del cribado intra): PRIMER DESTEJIDO DEL PLAN
+
+**El cribado intra-dominio volvio a caer sobre este nodo por otro camino, y al
+recontarlo salieron dos cosas que esta entrada no tenia. Queda medido entero.**
+
+**Primero, la cuenta de los pasos se queda corta en una fila.** La instruccion de
+mostrarlo solo a los primeros usuarios **no aparece tres veces sino CUATRO**:
+
+| la instruccion | en los pasos | como se dijo la cuarta vez |
+|---|---|---|
+| *"muestra tu primera version solo a los earlyvangelists, no al mercado masivo"* | 7, 12, 20 **y 4** | el paso **4** dice **early adopters** en vez de **earlyvangelists**; es la misma orden con otra etiqueta, y por eso se habia escapado |
+
+**Segundo, y esto no se habia mirado nunca: la costura tambien esta en las
+`condiciones_activacion`, y ahi es peor.** **El nodo declara DIEZ condiciones de
+activacion**, y al agruparlas por lo que dicen **quedan CINCO**:
+
+| lo que la condicion dice de verdad | en cuantas condiciones | cuales |
+|---|---:|---|
+| alguien quiere construir el producto completo con todas las funciones antes de validar | **4** | 3, 5, 7, 9 |
+| no hay evidencia todavia de que el problema sea real | **2** | 6, 10 |
+| no se sabe cuando dejar de analizar y empezar a construir | **2** | 1, 2 |
+| ya hay earlyvangelists listos para probar | 1 | 4 |
+| no esta claro que caracteristicas priorizar | 1 | 8 |
+
+> **Diez condiciones para decir cinco cosas, y una de ellas dicha cuatro veces.**
+> **La costura no es solo de pasos: el nodo se repite tambien en la puerta por la
+> que se entra a el.** Ninguna otra entrada de esta ficha habia medido ese campo,
+> y este caso obliga a mirarlo en los demas emblemas.
+
+> **POR ESO ES EL PRIMER DESTEJIDO DEL PLAN, y no por ser el mas grande**, que no
+> lo es: `decision_de_vender_startup` tiene 34 pasos. **Lo es porque es el mas
+> barato de arreglar y el que mas ensena.**
+>
+> - **El material sobrante ya esta identificado paso por paso**, con posiciones,
+>   asi que el destejido **no exige releer y decidir**: exige **borrar**.
+> - **Las cinco narraciones dicen lo mismo**, o sea que **no hay reparto que
+>   negociar**: no se parte en dos nodos, se poda a uno.
+> - **De veintidos pasos a cinco y de diez condiciones a cinco** deja el nodo
+>   dentro del estandar de 3 a 6 sin escribir una sola frase nueva.
+> - **Y es el nodo de bandera del catalogo**: si el destejido se ensaya aqui, el
+>   antes y el despues se puede ensenar sin explicar nada.
+>
+> **Lo que este caso deja probado para los demas**: cuando la medicion trae las
+> posiciones exactas de cada repeticion, el destejido deja de ser un juicio y
+> pasa a ser una lista de borrados. **Medir bien es la mitad del arreglo.**
+
 ### b) `core/coeficiente_viral`, 16 pasos: TRES narraciones del calculo de K
 
 | bloque | que es |
