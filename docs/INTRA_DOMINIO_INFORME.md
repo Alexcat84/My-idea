@@ -217,3 +217,109 @@ solo, no.**
 **no basta con mirar la arista del par que se tiene delante**. Hay que mirar
 **si la madre ya tiene otro hijo para ese mismo paso**, porque entonces el
 problema no esta entre madre e hijo **sino entre los dos hijos**.
+
+---
+
+## 3. LA REGLA DE LA ARISTA, PUESTA A TRABAJAR (tramo 371 a 422)
+
+**Desde que la silueta tiene regla, la arista se consulta ANTES de escribir la
+clase.** En el tramo anterior la silueta se marcaba B por no saber leerla; en
+este ya decide sola. **Cinco casos nuevos, y la regla los reparte en los dos
+sentidos:**
+
+| puesto | el hijo | la madre | paso | arista | clase que dicta la regla |
+|---:|---|---|---:|:---:|---|
+| 393 | `evaluacion_capital_para_cofundadores` | `busqueda_cofundador_complementario` | 1 | **NO** | **A**, duplicacion |
+| 395 | `proceso_ideacion_modelo_negocio` | `proceso_diseno_modelo_negocio_5_fases` | 3 | **NO** | **A**, duplicacion |
+| 396 | `elevator_pitch_inversion` | `preparacion_materiales_fundraising` | 1 | **NO** | **A**, duplicacion |
+| 409 | `drag_along_agreement` | `co_sale_drag_along_agreements` | 4 | **SI** | **D**, jerarquia sana |
+| 402 | `acuerdo_de_co_venta_y_votacion` | `co_sale_drag_along_agreements` | 6 | **SI** | **D**, jerarquia sana |
+
+> **SEGUNDA MADRE DE DOS CON ARISTAS, y esta si lo es**: `co_sale_drag_along_agreements`
+> reparte sus dos mitades en dos hijos y **enlaza a los dos**. El drag-along vive
+> en `drag_along_agreement` y el acuerdo de votacion en
+> `acuerdo_de_co_venta_y_votacion`. **Con `ejecucion_rapida_de_despidos` van dos
+> madres sanas y bien enlazadas.**
+
+### CORRECCION DECLARADA: el puesto 402 pasa de B a D
+
+**El error es mio y su causa tambien.** Escribi el veredicto del 402 **sin
+consultar la arista**, teniendo ya escrita la regla que la exige, y lo lei como
+media coincidencia sospechosa entre dos nodos que comparten la clausula de
+co-venta y difieren en la otra mitad. **Consultada la arista, eran los dos hijos
+enlazados de la misma madre.** Corregido en el archivo, con la correccion y su
+motivo escritos dentro de la razon del veredicto.
+
+**La regla de metodo que deja**: la arista se consulta **antes** de escribir la
+clase, no despues de escribirla.
+
+### UNA COMPROBACION QUE SALIO VERDE, y se registra por eso
+
+**Salieron dos nodos de MVP concierge que la cola no habia emparejado nunca**, y
+lo persegui como posible fallo de recall del instrumento. **No lo era.**
+
+| | |
+|---|---:|
+| nodos del grafo | **3835** |
+| **deprecados** | **314** |
+| activos | **3521** |
+| en el indice semantico | **3521** |
+| **activos sin vector** | **0** |
+| aristas a ids inexistentes | **0** |
+
+**`mvp_concierge` y `mvp_tipo_concierge` estan DEPRECADOS**; el unico vivo de los
+tres es `concierge_mvp`. **El catalogo ya habia resuelto ese trio y el
+instrumento hizo bien en no emparejarlos.** La cifra de 3521 del resumen es
+correcta y la cobertura del cribado no tiene hueco.
+
+### PERO LA COMPROBACION DESTAPO UNA ENMIENDA A LA REGLA DE LA ARISTA
+
+**Las aristas hacia nodos deprecados existen, y son muchas:**
+
+| | |
+|---|---:|
+| aristas salientes de nodos activos | **15 499** |
+| de esas, **apuntan a un nodo DEPRECADO** | **1 149**, el **7,4%** |
+| nodos activos con al menos una | **824** de 3521, el **23%** |
+
+> **ENMIENDA: donde la regla dice *hay arista*, hay que leer *hay arista a un
+> nodo VIVO*.** Una de cada trece aristas del catalogo apunta a un nodo retirado,
+> y casi un cuarto de los nodos vivos tiene alguna. **Un hijo enlazado solo a
+> traves de un nodo deprecado no esta enlazado.**
+>
+> **Ejemplo verificado, del puesto 395**: `proceso_diseno_modelo_negocio_5_fases`
+> tiene arista con `fase_entender_modelo_negocio`, **que esta deprecado**. Y en el
+> puesto 384, `mvp_catalogo_tecnicas` tiene entre sus previos a **dos** nodos
+> deprecados de MVP concierge.
+>
+> **Ninguno de los nodos de los casos ya juzgados esta deprecado**, asi que **los
+> ocho veredictos del tramo anterior y los cinco de este no cambian.** Verificado
+> uno por uno.
+
+---
+
+## 4. FAMILIAS NUEVAS DEL TRAMO 371 a 422
+
+**Todas de `core` y ninguna en `RACIMOS_MIEMBROS.jsonl`.** Se anotan aqui para
+que la relectura las encuentre hechas.
+
+| familia | nodos | puestos donde salio |
+|---|---:|---|
+| **la estrategia de innovacion y sus arenas** | **6** | 280, 357, 405, 422 |
+| la palanca frente a los inversionistas | **4** | 334, 394, 413 |
+| las cabezas de Customer Discovery | **4** | 269, 276, 291, 415 |
+| el modelo financiero del fin de la validacion | 3 | 371, 404 |
+| SPIN | 3 | 305, 401 |
+
+> **La de innovacion es la mas grave despues de la del Stage-Gate**: **seis
+> nodos**, y **tres de sus ids son el mismo nombre con y sin preposiciones**
+> (`estrategia_de_innovacion_de_producto`, `estrategia_innovacion_producto`,
+> `estrategia_de_innovacion_producto`). **Dos pares distintos del mismo nodo
+> cayeron en DUDOSO por el mismo motivo**, los puestos 405 y 422, que es
+> exactamente la firma de familia ya descrita: **el mismo nodo sale de una manera
+> contra un hermano y de otra contra el siguiente.**
+
+> **Y las cabezas de Customer Discovery tienen un detalle propio**:
+> `customer_discovery_overview` y `customer_discovery_cuatro_fases` **llevan el
+> mismo titulo exacto**, *Las cuatro fases para descubrir a tu cliente*. El racimo
+> censado cubre solo parte de esta familia.
