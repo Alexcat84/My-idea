@@ -53,6 +53,9 @@ MESA = BASE / "docs" / "MESA_RACIMOS.md"
 RACIMOS = BASE / "docs" / "RACIMOS_MIEMBROS.jsonl"
 SALIDA = BASE / "docs" / "INTRA_DOMINIO_PARES.jsonl"
 RESUMEN = BASE / "docs" / "INTRA_DOMINIO_RESUMEN.md"
+# Marca de corte: lo que este por debajo de esta marca en el resumen NO lo
+# genera el script y sobrevive a las regeneraciones.
+MARCA_MANUAL = "<!-- MANUAL -->"
 
 UMBRAL_TITULO = 80
 # BAJADO DE 0.80 A 0.78 para el cribado completo, y el motivo esta medido: las
@@ -539,7 +542,17 @@ def main():
       "**leer por dominio** en vez de por cola global, y **ordenar por senal** dejando la "
       "cola larga para tandas posteriores. **Lo que no se puede hacer es podarla en "
       "silencio**: si se corta, se escribe donde se corto y cuanto quedo sin mirar.")
-    RESUMEN.write_text("\n".join(L) + "\n", encoding="utf-8")
+    # Todo lo que venga despues de la marca MANUAL en el resumen anterior se
+    # CONSERVA. El resumen es un archivo generado, y sin esto cualquier anotacion
+    # escrita a mano (calibraciones, decisiones del auditor) se perderia en la
+    # siguiente regeneracion SIN DEJAR RASTRO, que es justo la averia que la
+    # doctrina de esta campana no admite: fallar callado.
+    manual = ""
+    if RESUMEN.exists():
+        previo = RESUMEN.read_text(encoding="utf-8")
+        if MARCA_MANUAL in previo:
+            manual = previo[previo.index(MARCA_MANUAL):].rstrip() + "\n"
+    RESUMEN.write_text("\n".join(L) + "\n" + manual, encoding="utf-8")
 
     print(f"  pares: {len(pares)} | escrito {SALIDA.name} y {RESUMEN.name}")
     for dom in doms:

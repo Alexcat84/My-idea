@@ -557,12 +557,30 @@ La cola completa, con los titulos de los dos lados y las marcas de procedencia, 
 
 ---
 
-## ANOTACION A MANO, POSTERIOR A LA GENERACION: la calibracion del eje de titulo
+<!-- MANUAL -->
 
-**AVISO DE PROCEDENCIA: esta seccion NO la escribio `scripts/intra_dominio.py`.
-Se anadio a mano el 11 ago 2026 y una regeneracion del resumen la borraria.** La
-cola se regenero una sola vez, como manda el encargo largo, asi que no deberia
-haber regeneracion; **si la hay, esta seccion hay que recuperarla del historial.**
+# ANOTACIONES A MANO
+
+**TODO LO QUE SIGUE A LA MARCA `<!-- MANUAL -->` LO CONSERVA EL SCRIPT.**
+`scripts/intra_dominio.py` regenera todo lo de arriba y **copia esta cola tal
+cual** en cada regeneracion.
+
+> **Por que existe esta marca, y la fecha importa.** Estas anotaciones se
+> escribieron el 11 ago 2026 **dentro de un archivo generado**, con un aviso de
+> procedencia que decia que una regeneracion las borraria. **Eso no es un aviso:
+> es una averia esperando.** El mismo dia se mudaron aqui y se le anadio al
+> script el codigo que respeta la marca. **Ahora el aviso sobra porque el
+> problema no existe.**
+>
+> **Como se anade algo**: se escribe debajo de la marca. **Como se pierde**:
+> borrando la marca. Nada mas.
+
+---
+
+## La calibracion del eje de titulo
+
+**Escrita a mano el 11 ago 2026, y mudada el 11 ago 2026 a esta cola.** Ya no
+corre peligro: vive debajo de la marca `<!-- MANUAL -->` y el script la preserva.
 
 ### El falso positivo conocido: PLANTILLA DE ID
 

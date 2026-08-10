@@ -323,3 +323,86 @@ que la relectura las encuentre hechas.
 > `customer_discovery_overview` y `customer_discovery_cuatro_fases` **llevan el
 > mismo titulo exacto**, *Las cuatro fases para descubrir a tu cliente*. El racimo
 > censado cubre solo parte de esta familia.
+
+---
+
+## 5. FIGURA NUEVA: CENTRO SANO CON GEMELO SIN CASA
+
+**Nace de reordenar el racimo del puesto 360, y el reordenamiento cambia el
+arreglo, no solo la descripcion.**
+
+### Como se leyo primero, y por que estaba incompleto
+
+**En el puesto 360 la familia del lienzo de propuesta de valor se registro como
+RACIMO NUEVO con la silueta de dos mitades mas un nodo conjunto**, la misma del
+racimo de capital de trabajo: `customer_profile` y `value_map` como mitades, y
+`customer_profile_value_map` como el nodo que las cuenta juntas.
+
+**Estaba bien descrito y mal encuadrado, y el motivo es el de siempre: no habia
+mirado las aristas.** Con la regla ya escrita, el puesto 459 obligo a mirarlas.
+
+### Lo que dice el grafo, verificado
+
+| nodo | papel |
+|---|---|
+| **`value_proposition_canvas`** | **EL CENTRO.** Sus cuatro pasos son descargar la plantilla, dibujar el perfil, dibujar el mapa y trabajar los dos lados hasta el encaje |
+| `customer_profile` | pieza, **enlazada** desde el centro |
+| `value_map` | pieza, **enlazada** desde el centro |
+| `fit_value_proposition` | pieza, **enlazada** desde el centro y con arista de vuelta |
+| **`customer_profile_value_map`** | **EL GEMELO: NO esta entre los enlazados del centro** |
+
+> **El centro enlaza con las TRES piezas que nombra en sus propios pasos.** Es la
+> jerarquia sana en su mejor forma vista hasta ahora: un nodo que enumera partes y
+> el grafo llevando a cada una.
+>
+> **Y `customer_profile_value_map` cuenta las dos primeras juntas sin estar
+> enlazado con el centro ni con ninguna de ellas.** No es una pieza mas: **es una
+> segunda version del centro, sin casa.**
+
+### La figura, y su anatomia
+
+> **CENTRO SANO CON GEMELO SIN CASA**: un nodo hace de centro y enlaza con las
+> piezas que enumera; **y existe ademas otro nodo que cuenta lo mismo que el
+> centro, o parte de ello, sin arista con nadie de la familia.**
+>
+> **La familia no esta rota. Lo que sobra es uno.**
+
+**No es la primera vez: es la segunda, y la primera se leyo mal por el mismo
+motivo.** En el puesto 279 se registro `wallas_etapa_iluminacion` como madre sin
+arista con `intimation_illumination`. **Y era cierto pero incompleto**: la madre
+**si** tiene arista con `wallas_intimacion_fringe_consciousness`, que desarrolla
+la misma sub-etapa. **Tambien alli habia un centro sano y un gemelo sin casa**,
+y el par de los dos gemelos es el puesto 403, ya leido como A.
+
+| ejemplar | el centro | la pieza enlazada | **el gemelo sin casa** |
+|---|---|---|---|
+| lienzo de propuesta de valor | `value_proposition_canvas` | `customer_profile`, `value_map`, `fit_value_proposition` | **`customer_profile_value_map`** |
+| iluminacion de Wallas | `wallas_etapa_iluminacion` | `wallas_intimacion_fringe_consciousness` | **`intimation_illumination`** |
+
+### LO QUE CAMBIA EN EL ARREGLO, que es el motivo de nombrarla
+
+> **Un racimo desordenado se resuelve DESMONTANDO la familia: hay que decidir
+> cuantos nodos quiere el catalogo y repartir el material, que es lo que la mesa
+> hace con los seis del Stage-Gate.**
+>
+> **Un centro sano con gemelo sin casa NO se desmonta: se resuelve el gemelo.** El
+> centro y sus piezas se quedan como estan, con sus aristas, y **la unica decision
+> es que hacer con el que sobra**: absorberlo en el centro, o enlazarlo si resulta
+> que aporta algo que el centro no dice.
+>
+> **Es una decision de un nodo en vez de una decision de familia, y por eso es
+> mucho mas barata.** Nombrarla sirve exactamente para no llevar a la mesa lo que
+> no hace falta llevar.
+
+**Consecuencia para el racimo del 360**: **deja de ser un racimo nuevo que pide
+mesa** y pasa a ser **un centro sano con un gemelo que resolver**. La familia
+entera son **siete nodos** (`value_proposition_canvas`, `customer_profile`,
+`value_map`, `fit_value_proposition`, `customer_profile_value_map`,
+`value_proposition_startup` y `desarrollo_value_proposition_usp`), pero **solo uno
+esta en cuestion.**
+
+> **Y queda la pregunta de metodo, que apunto sin contestar**: **cuantos de los
+> racimos ya declarados son en realidad centros sanos con un gemelo.** Los dos
+> primeros ejemplares aparecieron los dos por mirar la arista despues de haber
+> escrito el veredicto. **La comprobacion es barata y hay que hacerla antes de
+> llevar nada a la mesa.**
