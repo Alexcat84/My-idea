@@ -827,8 +827,9 @@ igual que ya está escrito para la ficha hermana.
 Registrado el **9 ago 2026**, y entra aquí porque esta ficha necesita tanto sus
 miembros como sus contramodelos: sin contramodelo, la ficha no tiene vara.
 
-**Cinco nodos del núcleo**, todos de *Businessperson's Guide to Federal Warranty
-Law*, **condicionan por país de forma explícita**:
+**SEIS nodos del núcleo**, todos de *Businessperson's Guide to Federal Warranty
+Law*, **condicionan por país de forma explícita** (el sexto se verificó el 10 ago
+2026, leyendo la tanda 12 de costuras):
 
 | nodo | primera `condiciones_activacion` |
 |---|---|
@@ -837,6 +838,7 @@ Law*, **condicionan por país de forma explícita**:
 | `clasificacion_garantia_full_limited` | la misma línea, literal |
 | `evitar_terminos_enganosos_garantia` | la misma línea, literal |
 | `regla_divulgacion_garantia` | la misma línea, literal |
+| `publicidad_garantia_conforme` | *vendes, o piensas vender, productos a clientes en Estados Unidos*, **y además** condiciona por el uso de la palabra *lifetime* y por el umbral de los 15 dólares |
 
 **Y cuatro de los cinco lo repiten en el `resumen_teorico`** con la instrucción
 de buscar la norma equivalente: *como es una ley de Estados Unidos, si vendes en
