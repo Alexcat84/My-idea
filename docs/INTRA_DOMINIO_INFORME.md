@@ -776,3 +776,74 @@ seccion 1 en su forma mas clara.**
 >
 > **Lo que si se anota de esos cuatro** es cualquier cosa **nueva** que aparezca
 > al abrirlos, un nodo que no estuviera en los ocho o un choque con esta lectura.
+
+---
+
+## 10. RACIMO NUEVO: LA SELECCION DE CANAL, y choca con la relectura R1
+
+**Sube a racimo el 11 ago 2026, en el puesto 537, y lo hace CHOCANDO con una
+direccion de fusion que la relectura R1 acababa de fijar. Por eso se registra
+aqui y no en una razon de veredicto.**
+
+### Los cinco miembros, verificados contra el grafo
+
+**Los cinco de `core` y los cinco del mismo libro**, *The Startup Owner's Manual*
+de Blank:
+
+| nodo | pasos | de que trata |
+|---|---:|---|
+| **`seleccion_canal_distribucion`** | 5 | el canal **en general** |
+| `seleccion_canal_fisico` | 4 | el canal **fisico** |
+| `channels_hypothesis_web_mobile` | 5 | el canal **digital** |
+| `hipotesis_de_canales` | 5 | la hipotesis de canal del lienzo |
+| `validar_canal_distribucion` | 6 | validar el canal elegido |
+
+> **DETALLE DE CAMPO, ya conocido y aqui otra vez**: cuatro declaran *Steve
+> Blank* y `validar_canal_distribucion` declara *Blank, Steve*. **La misma obra en
+> dos grafias**, que es el defecto medido en la ficha `campos-sucios-dataset`.
+
+### Tres veredictos A ya emitidos
+
+| puesto | el par | clase |
+|---:|---|:---:|
+| **165** | `seleccion_canal_distribucion` contra `seleccion_canal_fisico` | **A** |
+| **400** | `hipotesis_de_canales` contra `seleccion_canal_distribucion` | **A** |
+| **537** | `channels_hypothesis_web_mobile` contra `seleccion_canal_distribucion` | **A** |
+
+**Los tres contra el mismo nodo general.** Es el patron del centro doctrinal:
+`seleccion_canal_distribucion` **repite con todos sus hermanos**.
+
+### EL CHOQUE, dicho entero
+
+**La relectura R1 declaro, y verificado paso por paso sigue siendo cierto**, que
+`seleccion_canal_distribucion` es **superconjunto** de `seleccion_canal_fisico` y
+por tanto **su superviviente natural**.
+
+> **Eso vale PARA ESE PAR. No vale para la familia.**
+>
+> **La tercera pregunta de la relectura, que se pierde al fusionar, cambia de
+> respuesta al mirar los cinco.** Contra `seleccion_canal_fisico` se perdia **una
+> concrecion**, el ejemplo de canal fisico. **Contra los cinco se pierden DOS
+> ESPECIALIZACIONES ENTERAS**, la fisica y la digital, que el nodo general **no
+> lleva y no puede llevar sin dejar de ser general.**
+>
+> **Fusionar los cinco en el general dejaria al catalogo con un solo nodo de canal
+> que no sabe si el producto se vende en una tienda o en una tienda de
+> aplicaciones.** Y ese es justo el reparto que el catalogo hace bien en otros
+> sitios.
+
+### LA REGLA QUE ESTE CHOQUE DEJA, y es de metodo
+
+> **UNA DIRECCION DE FUSION DECIDIDA SOBRE UN PAR NO SOBREVIVE A SU FAMILIA.**
+>
+> **La relectura tiene que preguntar, antes de fijar superviviente, si el par
+> pertenece a una familia declarada o declarable.** Si pertenece, **la direccion
+> se decide con la familia entera delante**, porque el superconjunto de dos puede
+> ser el empobrecedor de cinco.
+>
+> **Esto NO invalida la tanda R1**: cinco de sus seis pares no tienen familia
+> conocida, y el sexto, el 165, sostiene su veredicto de A. **Lo que se corrige es
+> el alcance de su nota de direccion, no la lectura.**
+
+**Los pares que queden de esta familia en la cola llevan razon `familia
+declarada`**, igual que la del cierre en venta grande.
