@@ -55,7 +55,14 @@ SALIDA = BASE / "docs" / "INTRA_DOMINIO_PARES.jsonl"
 RESUMEN = BASE / "docs" / "INTRA_DOMINIO_RESUMEN.md"
 
 UMBRAL_TITULO = 80
-UMBRAL_SEMANTICO = 0.80
+# BAJADO DE 0.80 A 0.78 para el cribado completo, y el motivo esta medido: las
+# DOS parejas ya adjudicadas que la corrida a 0.80 perdia viven en 0,7890
+# (accion_correctiva_4 con accion_correctiva_sistematica) y 0,7887 (cadencia
+# con gestion_seguimiento_prospectos). Un umbral que se deja fuera lo que ya
+# esta confirmado no es selectivo: es ciego en la banda de abajo. Los pares que
+# entran por esa rebaja van marcados con banda_078_080 para poder contarlos
+# aparte y no mezclar su rendimiento con el de la cola original.
+UMBRAL_SEMANTICO = 0.78
 
 # La calibracion conocida: este par TIENE que aparecer en la cola. Es uno de los
 # diecinueve ids casi identicos del apartado 4.4 del informe, los dos en quality.
@@ -280,12 +287,16 @@ def main():
                 "disparo_titulo": bool(T[i, j] >= args.umbral_titulo),
                 "disparo_semantica": bool(S[i, j] >= args.umbral_semantico),
                 "pasos_a": pasos[a], "pasos_b": pasos[b],
+                "banda_078_080": bool(S[i, j] < 0.80 and T[i, j] < args.umbral_titulo),
                 "procedencia_pareja": fuentes_par,
                 "procedencia_nodo": fuentes_nodo,
                 "estado": "re-avistado" if fuentes_par else ("nodo ya avistado" if fuentes_nodo else "nuevo"),
             })
 
-    pares.sort(key=lambda p: -max(p["sim_semantica"], p["sim_titulo"] / 100))
+    # Orden de lectura: por dominio y, dentro del dominio, por clave descendente.
+    pares.sort(key=lambda p: (p["dominio"], -max(p["sim_semantica"], p["sim_titulo"] / 100)))
+    for n, p in enumerate(pares, 1):
+        p["puesto_intra"] = n
     with open(SALIDA, "w", encoding="utf-8") as fh:
         for p in pares:
             fh.write(json.dumps(p, ensure_ascii=False) + "\n")
@@ -461,27 +472,31 @@ def main():
         A(f"| {dom} | {comparadas[dom]} | {d['media']:.4f} | {d['p50']:.4f} | {d['p90']:.4f} | "
           f"{d['p99']:.4f} | {d['p99.9']:.4f} | {d['maximo']:.4f} | {d['sobre_umbral']} |")
     A("")
-    A(f"## La banda {args.banda_desde:.2f} a {args.umbral_semantico:.2f}, dimensionada sin leer")
+    A("## La banda 0,78 a 0,80, YA DENTRO de la cola")
     A("")
-    A(f"**Pares que se quedan JUSTO fuera de la cola**: semantica entre "
-      f"**{args.banda_desde:.2f}** y **{args.umbral_semantico:.2f}**, y titulo **por debajo de "
-      f"{args.umbral_titulo}**, o sea que no entran por ninguna de las dos senales. **No "
-      f"estan en `{SALIDA.name}`: solo se cuentan.**")
+    A(f"**Pares que entraron por la rebaja del umbral**: semantica por debajo de **0,80** y "
+      f"titulo por debajo de **{args.umbral_titulo}**, o sea que con el umbral anterior no "
+      f"entraban por ninguna de las dos senales. **Estan en `{SALIDA.name}` con el campo "
+      f"`banda_078_080` en true**, para poder contar su rendimiento aparte y no mezclarlo "
+      f"con el de la cola original.")
     A("")
-    A("| dominio | pares en la banda | en la cola | la banda seria un aumento de |")
-    A("|---|---:|---:|---:|")
+    banda_dom = collections.Counter(p["dominio"] for p in pares if p["banda_078_080"])
+    A("| dominio | de la banda | del resto de la cola | total | la banda es |")
+    A("|---|---:|---:|---:|---:|")
     tot_b = 0
     for dom in doms:
-        if dom not in conteo_banda:
-            continue
-        cb, cc = conteo_banda[dom], por_dominio.get(dom, 0)
+        cb = banda_dom.get(dom, 0); cc = por_dominio.get(dom, 0)
         tot_b += cb
-        A(f"| {dom} | **{cb}** | {cc} | {(100.0 * cb / cc):.0f}% |" if cc else f"| {dom} | **{cb}** | 0 | n/a |")
-    A(f"| **total** | **{tot_b}** | **{len(pares)}** | **{(100.0 * tot_b / len(pares)):.0f}%** |" if pares else "")
+        A(f"| {dom} | **{cb}** | {cc - cb} | {cc} | {(100.0 * cb / cc):.0f}% |" if cc
+          else f"| {dom} | 0 | 0 | 0 | n/a |")
+    if pares:
+        A(f"| **total** | **{tot_b}** | **{len(pares) - tot_b}** | **{len(pares)}** | "
+          f"**{(100.0 * tot_b / len(pares)):.0f}%** |")
     A("")
-    A(f"**La banda esta dimensionada por el precedente de la franja**: alli el auditor bajo "
-      f"el umbral, encontro los pares de borde y los leyo. **La decision de leer esta banda "
-      f"o de cribarla se toma con este conteo delante, no antes.**")
+    A("**La banda se lee, no se descarta, y el motivo esta medido**: las dos parejas ya "
+      "adjudicadas que la corrida anterior perdia viven dentro de ella. **Su rendimiento se "
+      "cuenta aparte** (cuantas A, B y C aporta contra su costo de lectura), que es la unica "
+      "forma de saber si la rebaja del umbral valio la pena.")
     A("")
     A("**Verificacion de las dos perdidas conocidas**, que es lo que hace util a la banda:")
     A("")
@@ -507,7 +522,8 @@ def main():
     A("")
     A("| # | dominio | nodo a | nodo b | titulo | semantica | pasos a/b | estado |")
     A("|---:|---|---|---|---:|---:|---:|---|")
-    for i, p in enumerate(pares[:30], 1):
+    top = sorted(pares, key=lambda z: -max(z["sim_semantica"], z["sim_titulo"] / 100))[:30]
+    for i, p in enumerate(top, 1):
         A(f"| {i} | {p['dominio']} | `{p['nodo_a']}` | `{p['nodo_b']}` | {p['sim_titulo']} | "
           f"{p['sim_semantica']} | {p['pasos_a']}/{p['pasos_b']} | {p['estado']} |")
     A("")
