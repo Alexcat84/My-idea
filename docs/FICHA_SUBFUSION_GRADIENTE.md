@@ -391,6 +391,8 @@ repetida.**
 | `quality/matriz_de_seleccion` | 7 | 50,2 | **3** | **el metodo de los cien puntos, en secuencia unica**: acordar criterios, repartir 100 puntos, promediar pesos, listar alternativas, calificar de 1 a 5, promediar y consensuar. **Cada paso necesita al anterior.** |
 | `core/decision_de_salir_a_bolsa` | 10 | 50,0 | 7 | **decidir y luego preparar**: los pasos 1 a 5 evaluan si salir a bolsa (capital, exposicion personal, bloqueo, junta, accionistas dispersos) y los 6 a 10 preparan la salida (minimos para ser publico, ventajas y desventajas, hablar con quien ya lo hizo, preparar al equipo, precio de la oferta). **Continua, no repite.** |
 | `franquicias/programa_cumplimiento_legal` | 6 | 49,8 | **3** | **secuencia unica de cumplimiento**: capacitar cada ano, designar punto de contacto legal, registrar comunicaciones, entrevista de cierre, compras de prueba, cero tolerancia. |
+| `core/contratacion_experiencia_vs_potencial` | 10 | 49,2 | 5 | **elegir el perfil y luego afinarlo**: los pasos 1 a 4 deciden entre rock star y rising star con el burn rate delante, y los 5 a 10 afinan con la pregunta de conocimiento interno contra externo y sus dos ramas. |
+| `quality/identificacion_practicas_lideres` | 6 | 49,0 | **3** | **DOS foros distintos en secuencia**, no dos narraciones: el paso 1 es el foro interno de hallazgos y el 4 es el foro de intercambio de practicas lideres, con presentaciones y preguntas recogidas antes. |
 
 > **Mismo verbo y misma estructura, sujeto distinto.** Es exactamente lo que engana
 > a un emparejador monotono, y **no es un defecto: es como se escribe una sucesion.**
@@ -422,7 +424,7 @@ repetida.**
 **Era una regla practica sacada de dos casos. Con la tanda nueva ya es un dato
 del archivo, y el dato es rotundo:**
 
-> **De las citas leidas con corte 3, va UNA confirmada de SEIS.**
+> **De las citas leidas con corte 3, va UNA confirmada de SIETE.**
 
 | cita | pasos | bloque | pareja | veredicto |
 |---|---:|---:|---:|:--:|
@@ -432,13 +434,14 @@ del archivo, y el dato es rotundo:**
 | `exportacion/internacionalizacion_sitio_web_exportacion` | 9 | 50,1 | 59,9 | **falsa** |
 | **`core/empoderamiento_de_participantes`** | **8** | **50,1** | **59,7** | **CONFIRMADA** |
 | `franquicias/programa_cumplimiento_legal` | 6 | 49,8 | 54,6 | **falsa** |
+| `quality/identificacion_practicas_lideres` | 6 | 49,0 | 54,4 | **falsa** |
 
-**Los seis cortes y las seis parejas verificados uno por uno en
+**Los siete cortes y las siete parejas verificados uno por uno en
 `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
 
 > **La regla se mantiene y gana su excepcion:** **una cita de corte 3 no es
-> evidencia de costura por si sola.** Cinco de seis han caido al abrir los pasos,
-> pero **la sexta era costura de verdad**, asi que el corte 3 tampoco es un
+> evidencia de costura por si sola.** Seis de siete han caido al abrir los pasos,
+> pero **una era costura de verdad**, asi que el corte 3 tampoco es un
 > descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
 >
 > **Y no se puede usar para filtrar la cola**, que sigue siendo la tentacion:
@@ -454,7 +457,7 @@ del archivo, y el dato es rotundo:**
 
 | | |
 |---|---|
-| pareja **mas alta** de las seis citas de corte 3 | **61,9**, y es de `plan_gestion_riesgos`, que es **falsa** |
+| pareja **mas alta** de las siete citas de corte 3 | **61,9**, y es de `plan_gestion_riesgos`, que es **falsa** |
 | segunda mas alta | **59,9**, `internacionalizacion_sitio_web_exportacion`, tambien **falsa** |
 | la de la confirmada | **59,7**, o sea **la tercera**, por debajo de dos falsas |
 
@@ -462,7 +465,7 @@ del archivo, y el dato es rotundo:**
 > como regla, *mira la pareja* habria mandado leer primero las dos falsas y dejar
 > la confirmada en tercer lugar.
 >
-> **Ademas, ninguna de las seis dispara por pareja**: el umbral de pareja es
+> **Ademas, ninguna de las siete dispara por pareja**: el umbral de pareja es
 > **80** y la mas alta de este grupo es 61,9. **Todas entraron por bloque.** La
 > pareja aqui no es una senal que sostenga nada, es un numero que acompana.
 >
@@ -478,7 +481,7 @@ del archivo, y el dato es rotundo:**
 **Si el corte 3 no distingue nada, el corte ancho distingue casi todo.** Del
 archivo, contando las leidas:
 
-> **De las citas leidas con corte 8 o mas, van DOCE confirmadas de DOCE.**
+> **De las citas leidas con corte 8 o mas, van CATORCE confirmadas de CATORCE.**
 
 | corte | pasos | cita |
 |---:|---:|---|
@@ -490,14 +493,17 @@ archivo, contando las leidas:
 | **11** | 16 | `quality/planificacion_recoleccion_datos` |
 | **11** | 16 | `core/coeficiente_viral` |
 | **11** | 14 | `core/metas_vs_proposito` |
+| **10** | 19 | `core/actualizacion_posiciones_existentes` |
 | **10** | 15 | `core/plan_mejora_procesos` |
 | **10** | 15 | `core/ab_testing_optimizacion` |
+| **10** | 14 | `core/principio_calidad_mvp` |
 | **9** | 14 | `core/key_partners_hypothesis` |
 | **8** | 13 | `core/future_scenarios_planning` |
 
-**`metas_vs_proposito` es la entrada nueva de esta tabla**: corte 11 en un nodo
-de 14 pasos, y confirmada doble. **Los cortes altos en nodos largos siguen
-saliendo confirmados sin una sola excepcion, doce de doce.**
+**Las entradas nuevas son tres**: `metas_vs_proposito` con corte 11,
+`actualizacion_posiciones_existentes` con corte 10 en 19 pasos y
+`principio_calidad_mvp` con corte 10 en 14. **Los cortes altos en nodos largos
+siguen saliendo confirmados sin una sola excepcion, catorce de catorce.**
 
 > **Y la tanda nueva marca ademas donde esta el borde por abajo**:
 > `core/decision_de_salir_a_bolsa` tiene **corte 7** y salio **FALSA**. **Es la
@@ -711,10 +717,11 @@ letra.
 >
 > **Es el primer caso de la clase donde el destejido PARTE en vez de podar.**
 >
-> **Y ya no esta solo**: `metas_vs_proposito`, en la tanda de la banda 49, hace lo
-> mismo con un tercer bloque de Coleman pegado a dos narraciones de Goodhart.
-> **Con dos ejemplares la forma deja de ser excepcion y el arreglo de la clase
-> necesita regla propia para ella.**
+> **Y ya son CUATRO**: `metas_vs_proposito` (tercer bloque de Coleman pegado a dos
+> narraciones de Goodhart), `analisis_tco_roi_b2b` (giro de audiencia de vendedor
+> a comprador) y `enfoque_motor_unico_crecimiento` (la misma doctrina con dos
+> objetos de dos libros). **Con cuatro ejemplares la forma tiene regla propia en
+> el arreglo de la clase, escrita mas abajo.**
 
 ### `core/cultura_de_experiencia`, 12 pasos: EL EMPODERAMIENTO DOS VECES
 
@@ -848,25 +855,138 @@ el 7 con otras palabras.
 
 ---
 
+## TANDA DE LA BANDA 48,9 a 49,5: cuatro confirmadas y dos falsas
+
+**La primera tanda de banda estrecha que rompe el empate**: cuatro y dos en vez
+de tres y tres. **Las cuatro confirmadas son las cuatro del nucleo.**
+
+### `core/actualizacion_posiciones_existentes`, 19 pasos: CUATRO TANDAS
+
+**Bloque 49,0, corte 10.** Dos fuentes: *The Founder's Dilemmas* y *The Hard
+Thing About Hard Things*.
+
+| tanda | de que habla |
+|---|---|
+| **1 a 4** | expectativas desde el inicio, no inflar titulos, evaluar si el empleado escala, comunicar antes de contratar por encima |
+| **5 a 10** | **la conversacion de degradacion**: evaluar honestamente, decidir antes de entrar, anticipar la verguenza y la traicion, ofrecer otro rol, lenguaje decisivo, compensacion |
+| **11 a 15** | **la evaluacion del ejecutivo**: los roles cambian, evaluar por desempeno actual y no por reputacion, apalancamiento del CEO, si sigue haciendo su trabajo viejo, el equipo antes que la lealtad |
+| **16 a 19** | **la evaluacion trimestral**: evaluar cada trimestre, no separar la capacidad de escalar del desempeno, preguntarse si hay alguien mejor hoy, no juzgar el futuro sin datos |
+
+**Los tres calcos, verificados contra el grafo:**
+
+- **3 con 5**: *evaluar objetivamente si un empleado clave puede escalar con las
+  nuevas demandas del rol* contra *evaluar honestamente si el empleado leal puede
+  crecer con el puesto*.
+- **4 con 11**: *comunicar de forma transparente y anticipada cuando se preve
+  contratar por encima* contra *comunicar desde el inicio que los roles cambiaran
+  conforme la empresa crezca*.
+- **12 con 19**: *evaluar a cada ejecutivo segun su desempeno actual, no su
+  reputacion pasada* contra *evita juicios sobre el desempeno futuro basados en
+  teorias sin datos*. **Es la misma doctrina dicha por sus dos extremos**: juzga
+  con el dato de hoy, ni con el pasado ni con la teoria.
+
+> **Entra al top de los destejidos por tamano, y es el CUARTO**: 19 pasos, detras
+> de `decision_de_vender_startup` (34), `viral_loop_marketing` (30) y
+> `producto_minimo_viable` (22). **De los cuatro mas grandes, tres son de
+> personas y equipo**, que es donde el catalogo apilo mas.
+
+### `core/analisis_tco_roi_b2b`, 9 pasos: GIRO DE AUDIENCIA A MITAD DE NODO
+
+**Bloque 48,9, pareja 61,9, corte 6.** Dos fuentes: *The Startup Owner's Manual*
+y *Essentials of Supply Chain Management*.
+
+**Es una forma NUEVA dentro de la forma que parte, y es la mas incomoda de las
+vistas hasta ahora: el nodo cambia de lector a mitad de camino.**
+
+| bloque | quien eres | que te manda |
+|---|---|---|
+| **1 a 4** | **el VENDEDOR B2B** | calcular el TCO de adopcion, preparar un ROI hipotetico antes de las reuniones, comparar tu ROI contra la solucion actual **del cliente**, usar el analisis como white paper **en tu proceso de venta** |
+| **5 a 9** | **el COMPRADOR** | definir criterios cualitativos, asignar pesos entre costo y calidad (75/25), calcular el costo total ponderado **de cada proveedor**, comparar proveedores, ajustar los pesos |
+
+> **No es una repeticion: es un cambio de silla.** El lector que llega buscando
+> como vender su producto a una empresa recibe, en el paso 5, instrucciones para
+> ponderar a sus proveedores. **Las dos mitades son utiles y ninguna sobra; lo
+> que sobra es que vivan en el mismo nodo.**
+
+> **CONSECUENCIA ESCRITA, y no es poda: la mitad compradora es candidata a
+> TRASPLANTE del nucleo a `compras`.** Ahi ya vive esa doctrina, medida en el
+> cribado intra-dominio: `matriz_de_seleccion` es el metodo de los cien puntos y
+> `decide_criterio_eleccion_proveedor` manda anotar de tres a cinco criterios
+> ademas del precio. **El material del paso 5 al 9 pertenece a ese mundo, no al
+> nucleo.**
+>
+> **Y el trasplante tiene condicion**, que se escribe aqui para que no se aplique
+> a la ligera: **solo si viaja TEXTO**, con su registro de procedencia. Mover una
+> idea sin texto no es trasplante, es reescribir de memoria en otro sitio, y eso
+> es exactamente como se produjo la duplicacion que esta campana viene a
+> deshacer.
+
+### `core/principio_calidad_mvp`, 14 pasos: TRES NARRACIONES DEL MISMO MVP
+
+**Bloque 49,2, corte 10.** **Tres fuentes y tres narraciones**, una por libro:
+*The Lean Startup*, *The Hard Thing About Hard Things* y *Essentials of Supply
+Chain Management*.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | **Ries**: si la caracteristica contribuye al aprendizaje, versiones hacky, no asumir el estandar de la industria, distinguir defecto de baja fidelidad estetica, decidir con el feedback |
+| **6 a 10** | resistir la presion del equipo tecnico, distinguir requisitos heredados de necesidades reales, **lanzar lo antes posible aceptando que fallara**, capturar el aprendizaje, iterar con el mercado |
+| **11 a 14** | identificar las funcionalidades criticas, excluir las secundarias, **lanzar la solucion minima viable**, iterar con el uso real |
+
+> **Las tres dicen lo mismo: lanza temprano, aprende del cliente real, itera.**
+> Cambian los ejemplos, no la doctrina.
+
+> **Es pariente directo del emblema de la clase.** `producto_minimo_viable` tiene
+> **22 pasos en cinco narraciones** del mismo asunto y es el caso mas citado de
+> esta ficha. **Los dos nodos del MVP estan costurados, y hay que mirarlos
+> juntos**: destejer uno sin el otro deja al lector con la misma doctrina
+> repetida, solo que repartida en dos sitios.
+
+### `core/enfoque_motor_unico_crecimiento`, 9 pasos: CUARTO CASO DE LA FORMA QUE PARTE
+
+**Bloque 49,5, corte 4.** Dos fuentes: *The Lean Startup* y *Traction*.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 4** | **el motor de crecimiento** (Ries): identifica tu apuesta de fe, sal a hablar con clientes si no lo tienes claro, concentra desarrollo y metricas en **ese unico motor**, evalua a fondo antes de cambiar |
+| **5 a 9** | **el canal Bullseye** (Weinberg): identifica el canal que gana en el anillo medio, redirige **todos** tus recursos a **ese canal principal**, no te distraigas con secundarios, tacticas de apoyo solo si refuerzan, repite Bullseye cuando se sature |
+
+> **La doctrina es UNA, concentrate en uno solo, y los objetos son DOS**, motor y
+> canal, cada uno de su libro. **Aqui el destejido parte en dos nodos que se
+> apuntan entre si**, no en dos temas ajenos: es la variante mas limpia de la
+> forma, y por eso conviene tenerla registrada al lado de las otras tres.
+
+### Las dos falsas de la tanda
+
+| cita | pasos | corte | clase | por que |
+|---|---:|---:|---|---|
+| `core/contratacion_experiencia_vs_potencial` | 10 | 5 | **SECUENCIA LEGITIMA** | los pasos 1 a 4 eligen el perfil (burn rate, rock star contra rising star, la comprobacion en la entrevista) y los 5 a 10 **afinan el criterio** con la pregunta de conocimiento interno contra externo y sus dos ramas. **Continua, no repite.** |
+| `quality/identificacion_practicas_lideres` | 6 | **3** | **SECUENCIA LEGITIMA** | **son DOS foros distintos, no dos narraciones**: el paso 1 es el foro interno de hallazgos y el paso 4 es el foro de intercambio de practicas lideres, con sus presentaciones y sus preguntas recogidas antes. Secuencia de benchmarking. |
+
+> **Con esta, el corte 3 queda en UNA confirmada de SIETE**, y la lectura no
+> cambia: ni descarta ni confirma, obliga a abrir los pasos.
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **34** de **128** |
-| de esas, costura **confirmada** | **22** |
-| de esas, **citas falsas** | **12** |
+| **CITAS del instrumento leidas** | **40** de **128** |
+| de esas, costura **confirmada** | **26** |
+| de esas, **citas falsas** | **14** |
 | **precision de la cola** | **65%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
-| **TOTAL de costuras confirmadas** | **22** |
+| **TOTAL de costuras confirmadas** | **26** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **34 leidas, 22
-confirmadas, 12 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **40 leidas, 26
+confirmadas, 14 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
-**Dos tandas seguidas de banda estrecha han dado lo mismo, tres y tres**, y la
-precision cae en escalon: **73% con 22 leidas, 68% con 28, 65% con 34.** Es lo
-que la ficha lleva prediciendo desde que se midio la zona mezclada: **la parte
-baja de la cola paga peor, y paga a la mitad.**
+**La caida de la precision se detuvo**: 73% con 22 leidas, 68% con 28, 65% con
+34, **y 65% con 40**. Las dos primeras tandas de banda estrecha dieron tres y
+tres; **la tercera dio cuatro y dos**. Es pronto para llamarlo suelo, pero por
+primera vez la parte baja de la cola no paga peor que la tanda anterior.
 
 > **DISCREPANCIA RESUELTA: el auditor elige la segunda lectura.** El marcador
 > anterior contaba 21 leidas, 15 confirmadas y una decimosexta aparte, en una
@@ -920,10 +1040,10 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las doce falsas se reparten en las mismas dos clases**: LARGO LEGITIMO (**5**)
-y FALSO POSITIVO DE SECUENCIA LEGITIMA (**7**). **Ninguna falsa ha necesitado una
-clase nueva desde que las dos quedaron caracterizadas**, que es la mejor señal de
-que estan bien trazadas: doce casos y ni uno se ha salido.
+**Las catorce falsas se reparten en las mismas dos clases**: LARGO LEGITIMO
+(**5**) y FALSO POSITIVO DE SECUENCIA LEGITIMA (**9**). **Ninguna falsa ha
+necesitado una clase nueva desde que las dos quedaron caracterizadas**, que es la
+mejor señal de que estan bien trazadas: catorce casos y ni uno se ha salido.
 
 ### LA ASIMETRIA, recomputada del archivo, y NO es 19 de 19
 
@@ -933,9 +1053,9 @@ sale:
 
 | | |
 |---|---:|
-| **confirmadas en nodos del NUCLEO** | **21** |
+| **confirmadas en nodos del NUCLEO** | **25** |
 | **confirmadas en nodos de MUNDO** | **1** |
-| | **22** |
+| | **26** |
 
 **La excepcion es `quality/planificacion_recoleccion_datos`**, confirmada en el
 lote C2 y registrada en esta misma ficha **con su prefijo `quality/` desde el
@@ -944,7 +1064,9 @@ la asimetria nunca se habia recomputado.**
 
 > **Choca con lo dictado, y por eso lo traigo en vez de escribirlo redondo**: el
 > encargo daba por hecho que *las confirmadas siguen siendo todas del nucleo*.
-> **Son 21 de 22**, y la excepcion sigue siendo la misma y unica.
+> **Son 25 de 26**, y la excepcion sigue siendo la misma y unica: veinticuatro
+> tandas de lectura despues, `quality/planificacion_recoleccion_datos` no ha
+> encontrado companeros de mundo.
 
 **Y hay que separar dos registros que se estaban leyendo como uno**, porque el
 choque nace de ahi:
@@ -952,7 +1074,7 @@ choque nace de ahi:
 | registro | cuantas | reparto |
 |---|---:|---|
 | **Las costuras que vio el CRIBADO de la franja** (`FRANJA_INFORME.md`, apartado 4.5) | **21** | **21 de 21 en el nucleo**, verificado nodo por nodo contra el grafo |
-| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **22** | **21 en el nucleo, 1 en `quality`** |
+| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **26** | **25 en el nucleo, 1 en `quality`** |
 
 **Son dos colas distintas, con dos poblaciones distintas, y las dos cifras son
 correctas en su sitio.** El *21 de 21* del informe se sostiene; el *todas* de
@@ -976,18 +1098,18 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 34 citas leidas vive en
-exactamente una fila, y las filas suman 34 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 40 citas leidas vive en
+exactamente una fila, y las filas suman 40 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **11** | **8** | **19** |
+| **por debajo de 51,0** | **15** | **10** | **25** |
 | **sin señal de bloque** (solo pareja) | 0 | 0 | **0** |
-| | **22** | **12** | **34** |
+| | **26** | **14** | **40** |
 
-**Las 34, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 40, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -1009,22 +1131,28 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | entre 51,0 y 52,0 | `fmea_analisis_de_modos_de_falla` | 51,4 | **falsa** |
 | por debajo de 51,0 | `seleccion_representante_extranjero` | 50,9 | **falsa** |
 | por debajo de 51,0 | `plan_gestion_riesgos` | 50,3 | **falsa** |
-| por debajo de 51,0 | `voz_del_cliente_voc` | 50,2 | confirmada |
-| por debajo de 51,0 | `future_scenarios_planning` | 50,1 | confirmada |
-| por debajo de 51,0 | `economia_circular_como_modelo_de_negocio` | 49,7 | confirmada |
-| por debajo de 51,0 | `ratios_eficiencia_inventario` | 48,3 | confirmada |
 | por debajo de 51,0 | `project_close_out` | 50,3 | confirmada |
-| por debajo de 51,0 | `empoderamiento_de_participantes` | 50,1 | confirmada |
-| por debajo de 51,0 | `decision_de_salir_a_bolsa` | 50,0 | **falsa** |
-| por debajo de 51,0 | `schedule_management_plan` | 49,8 | confirmada |
-| por debajo de 51,0 | `programa_cumplimiento_legal` | 49,8 | **falsa** |
-| por debajo de 51,0 | `metas_vs_proposito` | 49,7 | confirmada |
-| por debajo de 51,0 | `elaboracion_pro_forma_invoice` | 49,7 | **falsa** |
 | por debajo de 51,0 | `blueprint_de_experiencia` | 50,3 | confirmada |
+| por debajo de 51,0 | `voz_del_cliente_voc` | 50,2 | confirmada |
 | por debajo de 51,0 | `cultura_de_experiencia` | 50,2 | confirmada |
 | por debajo de 51,0 | `auditoria_calidad_proveedores` | 50,2 | **falsa** |
 | por debajo de 51,0 | `matriz_de_seleccion` | 50,2 | **falsa** |
+| por debajo de 51,0 | `future_scenarios_planning` | 50,1 | confirmada |
+| por debajo de 51,0 | `empoderamiento_de_participantes` | 50,1 | confirmada |
 | por debajo de 51,0 | `internacionalizacion_sitio_web_exportacion` | 50,1 | **falsa** |
+| por debajo de 51,0 | `decision_de_salir_a_bolsa` | 50,0 | **falsa** |
+| por debajo de 51,0 | `schedule_management_plan` | 49,8 | confirmada |
+| por debajo de 51,0 | `programa_cumplimiento_legal` | 49,8 | **falsa** |
+| por debajo de 51,0 | `economia_circular_como_modelo_de_negocio` | 49,7 | confirmada |
+| por debajo de 51,0 | `metas_vs_proposito` | 49,7 | confirmada |
+| por debajo de 51,0 | `elaboracion_pro_forma_invoice` | 49,7 | **falsa** |
+| por debajo de 51,0 | `enfoque_motor_unico_crecimiento` | 49,5 | confirmada |
+| por debajo de 51,0 | `principio_calidad_mvp` | 49,2 | confirmada |
+| por debajo de 51,0 | `contratacion_experiencia_vs_potencial` | 49,2 | **falsa** |
+| por debajo de 51,0 | `actualizacion_posiciones_existentes` | 49,0 | confirmada |
+| por debajo de 51,0 | `identificacion_practicas_lideres` | 49,0 | **falsa** |
+| por debajo de 51,0 | `analisis_tco_roi_b2b` | 48,9 | confirmada |
+| por debajo de 51,0 | `ratios_eficiencia_inventario` | 48,3 | confirmada |
 | por debajo de 51,0 | `propuesta_gasto_capital` | 44,1 | confirmada |
 
 > **Las dos nuevas cayeron las dos en la fila de abajo**:
@@ -1044,15 +1172,18 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 > **ninguna esta leida todavia**. La fila existe para que la primera que se lea
 > tenga sitio y no vuelva a caerse de la cuenta.
 
-**Por encima de 52 son NUEVE de nueve.** Y con las dos tandas de banda dentro, el
-reparto de las **22 confirmadas** es: **9 por encima de 52 y TRECE por debajo**
+**Por encima de 52 son NUEVE de nueve.** Y con las tres tandas de banda dentro,
+el reparto de las **26 confirmadas** es: **9 por encima de 52 y DIECISIETE por
+debajo**
 (`key_partners` 51,7, `split_testing` 51,5, `project_close_out` 50,3,
 `blueprint_de_experiencia` 50,3, `cultura_de_experiencia` 50,2,
 `voz_del_cliente_voc` 50,2, `future_scenarios_planning` 50,1,
 `economia_circular` 49,7, `ratios_eficiencia_inventario` 48,3,
 `propuesta_gasto_capital` 44,1, y las tres nuevas `empoderamiento_de_participantes`
-50,1, `schedule_management_plan` 49,8 y `metas_vs_proposito` 49,7). **Ya son
-claramente mas las de abajo que las de arriba.**
+50,1, `schedule_management_plan` 49,8, `metas_vs_proposito` 49,7,
+`enfoque_motor_unico_crecimiento` 49,5, `principio_calidad_mvp` 49,2,
+`actualizacion_posiciones_existentes` 49,0 y `analisis_tco_roi_b2b` 48,9).
+**Casi el doble abajo que arriba.**
 
 > **Esto empezo siendo una correccion y ya es la tendencia.** La version original
 > decia *tres de ellas viven por debajo de 52*, sobre doce confirmadas; al cuadrar
@@ -1060,8 +1191,9 @@ claramente mas las de abajo que las de arriba.**
 > de diecinueve**. **La mayoria de las costuras confirmadas del catalogo vive por
 > debajo de la franja**, es decir en el terreno donde la señal de bloque es debil.
 > **Es el argumento mas fuerte que hay contra acelerar la lectura ahi abajo**, y
-> cada tanda nueva lo hace mas fuerte, no menos. **Con 34 leidas van trece de
-> veintidos.**
+> cada tanda nueva lo hace mas fuerte, no menos. **Con 40 leidas van diecisiete de
+> veintiseis, y las cuatro confirmadas de la ultima tanda son las cuatro de abajo
+> de 49,5.**
 
 > **LA FRANJA 51 a 52 NO ES UN PISO DE FALSOS: ES UNA ZONA MEZCLADA**, con dos
 > confirmadas y cuatro falsas. Y **por debajo de 51 viven CINCO costuras
@@ -1085,8 +1217,8 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **13 confirmadas contra 12 falsas**: una
-> moneda al aire, no un piso de ruido.
+> abajo**, donde la muestra leida da **17 confirmadas contra 14 falsas**: una
+> moneda al aire que ya se inclina, y no hacia el ruido.
 >
 > **Acelerar ahi seria pasar de largo justamente donde esta casi toda la cola, y
 > donde ya se sabe que hay costuras reales.** El compromiso de leer la cola entera
@@ -1098,8 +1230,8 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con las dos tandas de banda dentro, en **13 confirmadas
-> contra 12 falsas**. Ni piso de ruido ni terreno donde se pueda leer de corrido: una
+> mitad de la cola queda, con las tres tandas de banda dentro, en **17 confirmadas
+> contra 14 falsas**. Ni piso de ruido ni terreno donde se pueda leer de corrido: una
 > moneda al aire, y con casi la mitad del tesoro dentro.
 >
 > **Correccion, y va en la direccion que menos convenia.** Esta subseccion decia
@@ -1217,6 +1349,38 @@ de pasos JUNTOS**. Ninguna de las dos sola pone arriba lo que mas duele.
 | **5** | **cierre completo de catalogo tocado**: Gate 0, reindex, sync, trinquete con puestos antes y despues |
 
 **Por LOTES, con plan previo por lote**, como la cirugia 2.
+
+### REGLA PROPIA: cuando el destejido PARTE en vez de podar
+
+**La tabla de arriba supone que al nodo le sobran narraciones DEL MISMO TEMA.**
+Hay una forma en la que eso no se cumple, y ya tiene **cuatro ejemplares
+leidos**, asi que deja de ser excepcion:
+
+| ejemplar | que contiene de mas |
+|---|---|
+| `blueprint_de_experiencia` | 17 pasos: el blueprint **y** el ritual de bienvenida |
+| `metas_vs_proposito` | 14 pasos: Goodhart dos veces **y** el deseo real del cliente detras del objetivo declarado |
+| `analisis_tco_roi_b2b` | 9 pasos: el vendedor B2B **y** el comprador ponderando proveedores |
+| `enfoque_motor_unico_crecimiento` | 9 pasos: el motor de crecimiento **y** el canal Bullseye |
+
+> **REGLA: el nodo costurado que contiene un TEMA AJENO se PARTE, no se poda.**
+> Aplicarle la narracion canonica de 3 a 6 pasos obligaria a tirar material que
+> no sobra: **lo que sobra es la repeticion, no el segundo tema.**
+
+**Y la regla tiene una segunda mitad, para el caso en que el tema ajeno no sea
+solo otro tema sino de otro MUNDO:**
+
+> **Si el tema ajeno pertenece a un mundo, se evalua TRASPLANTE en vez de nodo
+> nuevo en el nucleo.** El caso vivo es `analisis_tco_roi_b2b`: sus pasos 5 a 9
+> son doctrina de `compras`, donde ya viven `matriz_de_seleccion` y
+> `decide_criterio_eleccion_proveedor`.
+>
+> **Condicion del trasplante, y es dura a proposito: solo si viaja TEXTO, con su
+> registro de procedencia.** Mover una idea sin su texto no es trasplantar, es
+> **volver a escribirla de memoria en otro sitio**, y eso es exactamente el
+> mecanismo que produjo la duplicacion que esta campana viene a deshacer. **Si el
+> texto no puede viajar, se parte en el nucleo y se deja anotado el parentesco
+> con el mundo.**
 
 > **Lo que hace este arreglo posible sin perder nada**: **las fuentes ya viajan en
 > `merged_originals`**. El destejido **no toca la doctrina de fuentes**: quita
