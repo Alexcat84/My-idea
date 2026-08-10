@@ -121,3 +121,226 @@ Nodos evaluados por bloques (6 pasos o mas): **173**.
 | 20 | core | `plan_gestion_riesgos` | 6 | 61.9 | 50.3 | 3 | bloque |
 
 La cola completa, con los dos pasos de cada pareja, en `COSTURAS_INTERNAS.jsonl`.
+
+---
+
+<!-- MANUAL -->
+
+# INFORME DE CIERRE DEL INSTRUMENTO
+
+**TODO LO QUE SIGUE A LA MARCA `<!-- MANUAL -->` LO CONSERVA EL SCRIPT.**
+`scripts/costuras_internas.py` regenera lo de arriba y **copia esta cola tal cual**
+en cada regeneracion. La marca y el codigo que la respeta se anadieron el 11 ago
+2026, la misma solucion que ya lleva `scripts/intra_dominio.py`.
+
+**Cerrado el 11 ago 2026. Toda cifra de este informe esta RECOMPUTADA del archivo**
+cruzando `docs/COSTURAS_INTERNAS.jsonl` con los veredictos escritos en
+`docs/FICHA_SUBFUSION_GRADIENTE.md`.
+
+> **LA COLA CIERRA: 128 citas, 128 veredictos propios.** Ninguno heredado de otro
+> informe, ninguno pendiente. **Veintidos tandas.**
+
+---
+
+## 1. LAS CIFRAS FINALES
+
+| | |
+|---|---:|
+| citas del instrumento | **128** |
+| **costuras CONFIRMADAS** | **46** |
+| citas FALSAS | **82** |
+| **precision de la cola** | **36%** |
+
+**La serie de la precision, tanda a tanda**: 73% con 22 leidas, 68% con 28, 65%
+con 34, 65% con 40, 61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70,
+57% con 76, 55% con 82, 51% con 88, 48% con 94, 48% con 95, 46% con 101, 45% con
+102, 43% con 108, 40% con 114, 38% con 121 y **36% con 128**.
+
+> **La precision baja de forma monotona desde la tanda 3 y eso NO es que el
+> instrumento se degrade: es el orden de lectura.** La cola se leyo de mayor a
+> menor senal, asi que lo bueno salio primero. **Un instrumento que ordena bien
+> tiene que terminar con la precision cayendo.**
+
+### Las 46 confirmadas, por forma
+
+| forma | ejemplares | que le pasa al nodo |
+|---|---:|---|
+| **LA FORMA QUE PARTE** | **8** | un nodo lleva **dos temas**; la cirugia **separa** en dos nodos |
+| **LA FORMA REPARTIDA** | **1** | un tema vive **partido en dos nodos**; la cirugia **reune** |
+| **el resto** | **37** | **narraciones repetidas del mismo tema**; la cirugia **poda** |
+
+> **La forma repartida es el espejo de la que parte, y nacio de una correccion
+> mia**: el encargo daba por repetido el Bullseye en dos nodos y al verificarlo
+> contra el grafo **cada nodo llevaba una mitad distinta**. **Cambiar el verbo,
+> de podar a reunir, cambia la operacion entera.**
+
+### Las 82 falsas, por clase
+
+| clase | citas | por que no es costura |
+|---|---:|---|
+| **FALSO POSITIVO DE SECUENCIA LEGITIMA** | **74** | un procedimiento largo **que no se puede acortar ni reordenar**: cada paso necesita al anterior |
+| **LARGO LEGITIMO** | **7** | checklists que el estandar de 3 a 6 pasos no contempla, y que **no estan repetidos: estan completos** |
+| **DUO LEGITIMO** | **1** | **dos fuentes en secuencia temporal que no se solapan** |
+
+> **LOS SIETE DEL LARGO LEGITIMO NO SE ARREGLAN UNO A UNO: son DECISION DE
+> FUENTE.** Cuatro de los siete son formatos-lista del *Basic Guide*; el resto
+> sale del mismo molde. **No se decide nodo por nodo si el checklist se parte: se
+> decide una vez por libro y se aplica a todos sus nodos.**
+
+---
+
+## 2. LA HERENCIA PRINCIPAL: EL PREDICTOR DE FUENTES
+
+**Es lo mas util que deja esta campana, y llego por un camino que no era el
+previsto.**
+
+| | citas leidas | confirmadas | tasa |
+|---|---:|---:|---:|
+| **nodos de DOS o mas libros** | **47** | **43** | **91%** |
+| **nodos de UN solo libro** | **81** | **3** | **4%** |
+| | **128** | **46** | 36% |
+
+> **Veintitres veces mas probable.** Un nodo que declara dos libros confirma nueve
+> de cada diez veces; uno que declara uno solo, cuatro de cada cien.
+>
+> **Y el reparto de la cola no explica el resultado**: 47 contra 81 no es un
+> efecto de muestra pequena en ninguno de los dos lados.
+
+**La racha final lo dice sin estadistica: CUARENTA Y CINCO citas de un solo libro
+leidas seguidas, de la tanda 15 a la 22, sin UNA SOLA costura.** Las tres
+confirmadas de un solo libro son todas anteriores a la tanda 15.
+
+> **EL INSTRUMENTO SE CONSTRUYO SOBRE DOS SENALES DE TEXTO, el bloque y la
+> pareja, y las dos resultaron ruidosas. La senal que si separa no estaba en el
+> texto: estaba en el campo `fuente`, que nadie habia mirado.**
+
+### LA SALVEDAD, y sin ella el predictor se usa mal
+
+> **El campo `fuente` tiene ruido medido, y esta medido en otra ficha**
+> (`campos-sucios-dataset`, en `docs/PENDIENTES.md`): **1.314 nodos del catalogo,
+> el 34,3%, declaran una fuente que no es el titulo de la obra** sino un nombre de
+> archivo truncado o un codigo de documento. **Y once obras aparecen con dos o
+> tres grafias distintas.**
+>
+> Ademas hay ruido de contenido: **`gestion_libro_abierto_obm` declara un libro
+> cuyo material no aparece en ningun paso.**
+>
+> **El predictor es bueno y su base NO esta auditada.** Auditarla es del barrido.
+
+### LA REGLA DE USO, que es la que impide el mal uso
+
+> **EL PREDICTOR ORDENA LA LECTURA. NO DICTA EL VEREDICTO.**
+>
+> **Probado en los dos sentidos dentro de esta misma campana**:
+> `manejo_empleados_en_adquisicion` declara dos libros, entro alto en la cola por
+> eso, **y salio FALSA**. La senal acerto al ponerlo arriba; **el veredicto siguio
+> siendo de la lectura**, como en las 128.
+>
+> **Lo que el predictor sirve para hacer**: decidir por donde empezar cuando hay
+> mas cola que tiempo. **Lo que no sirve para hacer**: cerrar un nodo sin abrirlo.
+
+---
+
+## 3. LAS REGLAS DE CORTE, con sus cifras finales
+
+**El `corte` es donde el instrumento cree que empieza la segunda narracion. Se
+midio si predice, y la respuesta es que no.**
+
+| regla | cifra final | veredicto |
+|---|---|---|
+| **el corte 3 NO es evidencia** | **53 citas de corte 3, 4 confirmadas** | Cuarenta y nueve cayeron al abrir los pasos. **Un corte bajo es lo normal en un procedimiento corto.** |
+| **la pareja como senal UNICA no cazo nada** | **4 citas de solo pareja, 0 confirmadas** | El eje de pareja sin el de bloque **no encontro ni una costura en toda la campana** |
+| **corte 8 o mas predice costura, SALVO formato lista** | se cumple con la salvedad | La rompio `elementos_plan_exportacion_ejemplo`, corte 10 y FALSA, que es un formato lista |
+| **mirar la pareja dentro del corte 3 no ayuda** | la pareja mas alta de ese grupo es de una FALSA | **La regla que se quiso escribir no se sostuvo con los datos** |
+
+> **LO QUE EL EJE DE PAREJA SI ENSENA, y salio en la ultima tanda**: sus tres
+> citas mas altas que no son copia **son las tres SIMETRIA DELIBERADA**, la
+> comprobacion en los dos sentidos, los dos polos de una tecnica, el cruce
+> completo de un estudio de medicion. **En su extremo superior, el eje de pareja
+> caza al que escribe bien.**
+
+> **PRECISION SOBRE EL CAMPO `pareja`, verificada en las 128 entradas**: son **dos
+> indices de pasos DEL MISMO NODO**, no dos nodos. **Las dos senales del
+> instrumento son internas las dos**, y por eso el cribado intra-dominio es otro
+> eje y no un solapamiento.
+
+---
+
+## 4. LA ASIMETRIA NUCLEO-MUNDOS, final
+
+| | |
+|---|---:|
+| confirmadas en nodos del **NUCLEO** | **45** |
+| confirmadas en nodos de **MUNDO** | **1** |
+| | **46** |
+
+**La unica excepcion es `quality/planificacion_recoleccion_datos`.**
+
+> **Cuarenta y cinco de cuarenta y seis.** La costura interna es **un fenomeno del
+> nucleo**, y eso encaja con la vara del gradiente: **el nucleo se escribio
+> primero, con mas fuentes y mas pasadas, y ahi es donde se apilaron las
+> narraciones.**
+
+---
+
+## 5. LOS RACIMOS COSTURADOS TRANSVERSALES
+
+**Dos racimos donde la costura interna y la duplicacion entre nodos son el mismo
+problema, y por eso se destejen juntos.**
+
+### Numero 1: la familia de la EXPERIENCIA del cliente
+
+**Cinco vertices: tres costurados y dos sanos que son DESTINO del material que
+sobra.** El destejido de los tres reparte hacia los dos, en vez de podar y tirar.
+
+> **Y tiene un quinto vertice que hay que fabricar**: el destejido conjunto tiene
+> que mirar a `fase_affirm_buyers_remorse` como destino aunque hoy no exista con
+> ese contenido.
+
+### Numero 2: el BULLSEYE partido en dos
+
+**Es el ejemplar unico de LA FORMA REPARTIDA**, y su regla no es *decidir cual es
+la copia* sino **decidir donde vive el original**.
+
+---
+
+## 6. LOS PATRONES DE FUENTE
+
+**Tres decisiones de fuente en la pasada unica, en vez de dieciocho arreglos de
+nodo. Es la misma economia de la mesa de racimos.**
+
+| patron | como se manifiesta | nodos |
+|---|---|---:|
+| **los formatos lista del `Basic Guide` y de Juran** | checklists largos que el estandar de 3 a 6 pasos no contempla, y que salen **FALSOS** | 4 de los 7 LARGO LEGITIMO |
+| **la tanda de Mollick** | el metodo de taller rehecho con IA como segundo bloque, **CONFIRMADO** las tres veces | 3 |
+| **el pegado de Hugos** | material de cadena de suministro adosado a nodos de otro tema, **CONFIRMADO** | 11 de las 46 |
+
+> **El de Mollick sale mas raro de lo que parece, y la medicion lo agrava**: **51
+> nodos declaran a Mollick y 48 son de tema IA por su propio id.** O sea que la
+> tanda entro **dos veces y de dos maneras**: como familia propia de 48 nodos, que
+> es lo correcto, **y ademas como injerto en 3 nodos de taller que ya existian**.
+> **El material de IA ya tenia adonde ir: los injertos no se hicieron por falta de
+> sitio.**
+
+---
+
+## 7. EL ESTADO, dicho sin adorno
+
+> **NADA ESTA REPARADO. NINGUN NODO SE TOCO EN TODA LA CAMPANA.**
+>
+> **Las 46 costuras confirmadas, las 8 de la forma que parte, la repartida, los
+> dos racimos transversales y los tres patrones de fuente PASAN ENTEROS AL PLAN DE
+> LA PASADA UNICA.** Este instrumento **citaba y medía**; **no arregla.**
+
+**Lo que el plan de la pasada unica recibe de aqui, en orden de coste:**
+
+1. **Tres decisiones de fuente** que cubren dieciocho nodos.
+2. **Dos racimos transversales** que se destejen juntos, con reparto en vez de poda.
+3. **Nueve cirugias de forma**: ocho que parten, una que reune.
+4. **Treinta y siete podas** de narracion repetida, la primera de ellas
+   `producto_minimo_viable`, elegida **no por ser la mayor sino por ser la mas
+   barata**: su material sobrante ya esta localizado paso por paso, asi que el
+   destejido deja de ser un juicio y pasa a ser una lista de borrados.
+
+> **Y la deuda que este informe deja abierta y no cierra**: **auditar el campo
+> `fuente`** antes de fiarse del predictor para nada que no sea ordenar una cola.

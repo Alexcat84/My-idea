@@ -57,6 +57,9 @@ BASE = Path(__file__).resolve().parent.parent
 GRAFO = BASE / "dataset" / "metadata" / "master_graph.json"
 SALIDA = BASE / "docs" / "COSTURAS_INTERNAS.jsonl"
 RESUMEN = BASE / "docs" / "COSTURAS_INTERNAS_RESUMEN.md"
+# Marca de corte: lo que este por debajo de esta marca en el resumen NO lo
+# genera el script y sobrevive a las regeneraciones.
+MARCA_MANUAL = "<!-- MANUAL -->"
 
 UMBRAL_PAREJA = 80
 # BAJADO DE 45 A 44 (lote 15, ago 2026), y el motivo es un FALSO NEGATIVO medido.
@@ -309,7 +312,16 @@ def main():
           f"{' y '.join(por)} |")
     A("")
     A(f"La cola completa, con los dos pasos de cada pareja, en `{SALIDA.name}`.")
-    RESUMEN.write_text("\n".join(L) + "\n", encoding="utf-8")
+    # Todo lo que venga despues de la marca MANUAL en el resumen anterior se
+    # CONSERVA. El resumen es un archivo generado, y sin esto el informe de
+    # cierre escrito a mano se perderia en la siguiente regeneracion SIN DEJAR
+    # RASTRO. Misma solucion que en scripts/intra_dominio.py.
+    manual = ""
+    if RESUMEN.exists():
+        previo = RESUMEN.read_text(encoding="utf-8")
+        if MARCA_MANUAL in previo:
+            manual = previo[previo.index(MARCA_MANUAL):].rstrip() + "\n"
+    RESUMEN.write_text("\n".join(L) + "\n" + manual, encoding="utf-8")
 
     with open(SALIDA, "w", encoding="utf-8") as fh:
         for f in filas:

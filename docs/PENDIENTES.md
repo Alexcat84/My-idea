@@ -1336,7 +1336,8 @@ se encontro. **`CAMBIADA` es columna, no matiz de `viva`:**
 |---|---:|---:|---:|---:|---:|
 | **antes del lote** | 6 | 0 | 5 | 1 | **12** |
 | **el lote** | **1** | **6** | **9** | **2** | **18** |
-| **CENSO ENTERO** | **7** | **6** | **14** | **3** | **30** |
+| **entrada 5, `export.gov`** | 0 | **1** | 0 | 0 | **1** |
+| **CENSO ENTERO** | **7** | **7** | **14** | **3** | **31** |
 
 **Las seis CAMBIADAS, con su evidencia y con lo que cambio:**
 
@@ -1535,6 +1536,46 @@ que las fuentes se contradicen y forzar una lectura seria inventar.**
 **Ningún nodo se toca desde esta ficha.** Lo que cambia es que el barrido ya
 tiene **sus seis casas, su orden de prioridad, su segunda pregunta y sus dos
 remedios escritos**.
+
+---
+
+### Entrada 5 (11 ago 2026): `export.gov`, la primera del cierre de costuras
+
+**Sale de la tanda 22, la ultima del instrumento, del nodo
+`exportacion/evaluacion_preparacion_empresa_exportar`, cuyo ultimo paso dice:**
+
+> *Realiza la evaluacion formal de preparacion exportadora en
+> **export.gov/begin/assessment.asp***
+
+| nombre | estado | evidencia |
+|---|---|---|
+| **export.gov** | **CAMBIADA**: cambio de casa | El sitio de la International Trade Administration **migro a `trade.gov`**. Lo que queda de export.gov vive como **archivo en `legacy.export.gov`**; la ITA activa esta en trade.gov |
+
+> **Es la misma clase que `Energy Star`**, que sobrevivio mudandose de la EPA al
+> DOE: **el servicio existe y la puerta por la que el nodo manda entrar ya no.**
+>
+> **Y el detalle de la URL delata la edad sin necesidad de buscar nada**: termina
+> en **`.asp`**, una extension de pagina que hace anos que no se emite. **La
+> propia direccion lleva su fecha escrita.**
+
+#### Y NO ES UN NODO, SON CUATRO, recontado del grafo
+
+| nodo | como lo cablea |
+|---|---|
+| `evaluacion_preparacion_empresa_exportar` | `export.gov/begin/assessment.asp` |
+| `calculo_de_aranceles_importacion` | **dos veces**: en el resumen y en un paso, *la base de datos de aranceles en export.gov* |
+| `reglas_de_origen_fta_2` | `export.gov/fta` |
+
+> **Cinco menciones en cuatro nodos, todas del dominio `exportacion`.** Ninguna
+> apunta a trade.gov.
+
+**Y engancha con la ficha hermana de vigencia**: **tres de estos cuatro nodos
+estan tambien en la lista de NAFTA o de Incoterms sin version.** El dominio
+`exportacion` acumula las tres averias a la vez, **la herramienta mudada, el
+tratado extinto y el marco sin version**, y eso lo convierte en **el candidato
+natural del primer barrido de vigencia**, por delante de los demas.
+
+---
 
 ### Entrada 3 (lote 22, puesto 340): el nodo que más herramientas nombra
 
