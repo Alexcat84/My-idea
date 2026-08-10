@@ -165,3 +165,23 @@ precio del `REGLAS_Y_TOKENS.md` contra `precios.ts`. Si difieren, corrige el
 canon en la adopción, deja una nota de adopción citando `precios.ts`, y avísale
 a Design para que su próxima entrega venga alineada de origen. Ninguna ruta
 hardcodea números: leen de `precios.ts` / `packs_catalog.json`.
+
+## Bridge: el nombre de proyecto es `i-have-an-idea`, sin excepción
+
+**Regla:** en toda llamada a los tools `bridge_*` (`bridge_list_pending`,
+`bridge_read_brief`, `bridge_save_result`, `bridge_review`), el argumento
+`project` es literalmente `i-have-an-idea`. Nunca `I have an idea`, nunca el
+nombre de la carpeta, nunca una variante con mayúsculas o espacios.
+
+**Por qué:** el puente enruta por el string `project`, y ese string es el nombre
+de una carpeta bajo `C:\Users\AlexDesk\Bridge\`. La carpeta de este repo se
+llama `I have an idea` (con espacios), así que la deducción natural — usar el
+nombre del directorio — crea un buzón *distinto* al que escribe el chat. El
+fallo es silencioso y de los peores: el chat deposita briefs sin error, y Code
+responde "no hay nada pendiente" indefinidamente, cada uno mirando su propia
+carpeta. No hay ningún síntoma que delate el desajuste.
+
+**Cómo aplicarla:** usa la constante tal cual. Si `bridge_list_pending` devuelve
+vacío pero el usuario asegura haber mandado un brief, la primera hipótesis es un
+`project` mal escrito, no un brief perdido: comprueba qué carpetas existen bajo
+`C:\Users\AlexDesk\Bridge\` antes de dar nada por perdido.
