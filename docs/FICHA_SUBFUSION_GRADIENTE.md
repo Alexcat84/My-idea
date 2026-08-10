@@ -473,12 +473,17 @@ del archivo, y el dato es rotundo:**
 | `core/definicion_gatekeepers` | 6 | 45,7 | 60,6 | **falsa** |
 | `core/plan_gestion_adquisiciones` | 6 | 45,7 | 52,0 | **falsa** |
 | `core/retargeting_display` | 6 | 45,6 | 48,6 | **falsa** |
+| `core/validar_canal_distribucion` | 6 | 45,4 | 50,0 | **falsa** |
+| `core/prototipar_con_medios_no_convencionales` | 6 | 45,3 | 51,4 | **falsa** |
+| `core/eventos_offline_como_canal_traccion` | 7 | 45,1 | 52,6 | **falsa** |
+| `core/preferencia_de_liquidacion` | 8 | 45,0 | 50,9 | **falsa** |
+| `core/portfolio_management` | 6 | 44,7 | 62,1 | **falsa** |
 
-**Los veintiseis cortes y las veintiseis parejas verificados uno por uno en
+**Los treinta y un cortes y las treinta y un parejas verificados uno por uno en
 `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
 
 > **La regla se mantiene y gana su segunda excepcion:** **una cita de corte 3 no
-> es evidencia de costura por si sola.** Veintidos de veintiseis han caido al
+> es evidencia de costura por si sola.** Veintisiete de treinta y uno han caido al
 > abrir los pasos, pero **CUATRO eran costura de verdad**, asi que el corte 3 tampoco
 > es un descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
 >
@@ -526,7 +531,7 @@ y `cliente_disena_producto`), mientras las falsas se apilan abajo.
 
 | | |
 |---|---|
-| pareja **mas alta** de las veintiseis citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
+| pareja **mas alta** de las treinta y un citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
 | segunda mas alta | **59,9**, `internacionalizacion_sitio_web_exportacion`, tambien **falsa** |
 | la de la primera confirmada | **59,7** (`empoderamiento_de_participantes`), o sea **la tercera**, por debajo de dos falsas |
 | la de la segunda confirmada | **55,2** (`cliente_disena_producto`), **mas abajo todavia**, por debajo de varias falsas |
@@ -536,7 +541,7 @@ y `cliente_disena_producto`), mientras las falsas se apilan abajo.
 > habria mandado leer primero dos falsas y dejar la primera confirmada en tercer
 > lugar y la segunda mas abajo. **La longitud si separo (arriba); la pareja no.**
 >
-> **Ademas, ninguna de las veintiseis dispara por pareja**: el umbral de pareja
+> **Ademas, ninguna de las treinta y una dispara por pareja**: el umbral de pareja
 > es **80** y la mas alta de este grupo es 62,0. **Todas entraron por bloque.** La
 > pareja aqui no es una senal que sostenga nada, es un numero que acompana.
 >
@@ -1764,7 +1769,7 @@ nodo esta sano. **Corte 3 y confirmada**, la segunda de esta tanda.
 | | con dos o mas fuentes | con una sola |
 |---|---:|---:|
 | **las 45 confirmadas** | **42 (93%)** | 3 |
-| **las 37 falsas** | **4 (11%)** | 33 |
+| **las 43 falsas** | **4 (9%)** | 39 |
 
 **La señal se refuerza**: subio de 91% a 93% en las confirmadas y sigue en el
 entorno del 10% en las falsas. **Cinco de las seis citas de esta tanda, elegidas
@@ -1923,30 +1928,103 @@ propia en un nodo sano de Coleman.
 
 ---
 
+## TANDA 15: la primera tanda EN BLANCO, y la señal la predijo
+
+**Seis citas del nucleo por bloque, banda 44,7 a 45,4. Las seis FALSAS.** Es la
+primera tanda sin una sola confirmada en quince tandas de lectura.
+
+| cita | pasos | corte | fuente unica |
+|---|---:|---:|---|
+| `core/vesting_acciones_fundadores` | 7 | 4 | *Venture Deals* (Feld) |
+| `core/validar_canal_distribucion` | 6 | **3** | *The Startup Owner's Manual* (Blank) |
+| `core/prototipar_con_medios_no_convencionales` | 6 | **3** | *Assembling Tomorrow* |
+| `core/eventos_offline_como_canal_traccion` | 7 | **3** | *Traction* (Weinberg) |
+| `core/preferencia_de_liquidacion` | 8 | **3** | *Venture Deals* (Feld) |
+| `core/portfolio_management` | 6 | **3** | *Winning at New Products* (Cooper) |
+
+**Todas SECUENCIA LEGITIMA.** Y `portfolio_management` es ademas **vecino sano
+del racimo de portafolio** censado en la franja: pertenece a la familia y no
+esta costurado por dentro.
+
+> **LA CAUSA ESTA MEDIDA Y ES LA MISMA SEÑAL, ahora prediciendo en negativo: las
+> seis declaran UNA SOLA FUENTE.** Verificado nodo por nodo contra el grafo.
+>
+> **La señal de dos fuentes ha predicho en las dos direcciones**: ocho citas
+> elegidas por tener dos libros dieron siete confirmadas; **seis citas que solo
+> tienen uno dieron cero.** No es que la banda 44 sea esteril: **es que ahi abajo
+> ya casi no quedan nodos de dos libros, y sin juntura no hay costura.**
+
+> **Lo que esta tanda anade a la señal, y es lo que le faltaba**: hasta ahora
+> solo se habia comprobado que **las citas de dos fuentes rinden**. Esta
+> comprueba lo contrario, que es la mitad que hace util a un predictor: **las de
+> una sola fuente no rinden.** Con 88 leidas, la tabla queda con las dos caras.
+
+---
+
+### VERIFICACION DE MARCO en `core/vesting_acciones_fundadores`
+
+**El nodo cablea material del IRS**: el paso 2 manda *presentar la eleccion
+fiscal 83(b) dentro de los 30 dias siguientes a la emision*, y el
+`entregable_esperado` exige *eleccion 83(b) presentada*. La eleccion 83(b) es
+del codigo fiscal estadounidense.
+
+**Revisadas las tres casas, como manda la leccion de Magnuson**, el resultado
+**no es limpio en ninguna de las dos direcciones** y se registra como sale:
+
+| casa | condiciona por pais? |
+|---|---|
+| `condiciones_activacion` | **NO**. Sus cinco entradas son de situacion (constituir la empresa, incorporar cofundadores, exigencia del inversor, proteger la salida temprana, negociar una venta). Ninguna menciona pais |
+| `pasos_accionables` | **NO**. El paso 2 manda presentar la 83(b) sin condicion alguna |
+| `entregable_esperado` | **NO**. Exige la 83(b) presentada como parte del entregable, sin condicion |
+| `resumen_teorico` | **SI, pero generico y al final**: cierra con *verifica estos detalles con un profesional en tu pais* |
+
+> **Ni contramodelo limpio ni marco-pais limpio: es un caso intermedio, y merece
+> nombre propio porque no es el unico que va a aparecer.**
+>
+> **La diferencia con la familia Magnuson-Moss es de peso y de sitio.** Alli la
+> condicion es **la primera linea de `condiciones_activacion`**, dice **Estados
+> Unidos** con todas sus letras y se repite en dos o tres casas. **Aqui hay una
+> frase generica en la ultima linea del resumen**, y **lo que el lector ejecuta**,
+> que son los pasos y el entregable, **no lleva condicion ninguna**.
+>
+> **Un lector de otro pais que siga este nodo presenta una eleccion 83(b) que no
+> existe en su jurisdiccion**, y solo se entera si lee el resumen entero hasta el
+> final. **La frase esta, pero no esta donde se decide.**
+
+> **Se registra como CANDIDATO a la ficha de marco-pais, con su atenuante
+> escrito**, y con la observacion que le toca al barrido: **la pregunta util no
+> es si el nodo condiciona, sino si condiciona DONDE SE ACTUA.** El contramodelo
+> Magnuson-Moss condiciona en la puerta; este condiciona en la despedida.
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **82** de **128** |
+| **CITAS del instrumento leidas** | **88** de **128** |
 | de esas, costura **confirmada** | **45** |
-| de esas, **citas falsas** | **37** |
-| **precision de la cola** | **55%** |
+| de esas, **citas falsas** | **43** |
+| **precision de la cola** | **51%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
 | **TOTAL de costuras confirmadas** | **45** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **82 leidas, 45
-confirmadas, 37 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **88 leidas, 45
+confirmadas, 43 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
 **La serie completa**: 73% con 22 leidas, 68% con 28, 65% con 34, 65% con 40,
-61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70, 57% con 76 y **55%
-con 82**.
+61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70, 57% con 76, 55% con
+82 y **51% con 88**.
 
-> **Las dos subidas tuvieron causa y la bajada tambien.** Las tandas 12 y 13 se
-> ordenaron por la señal de dos fuentes y subieron la precision; **la tanda 14
-> mezclo las dos ultimas citas de esa señal con cuatro elegidas por bloque, y las
-> cuatro de bloque salieron falsas.** No es que la cola empeore: **es que ya no
-> queda vena que ordenar, y lo que se lee por bloque rinde lo que rendia antes.**
+> **Las dos subidas tuvieron causa y las dos bajadas tambien.** Las tandas 12 y
+> 13 se ordenaron por la señal de dos fuentes y subieron la precision; **la 14
+> mezclo las dos ultimas citas de esa señal con cuatro de bloque y las cuatro
+> salieron falsas; la 15 fue entera de bloque y salio ENTERA EN BLANCO.**
+>
+> **No es que la cola empeore: es que la vena se agoto y lo que queda es lo que
+> siempre rindio poco.** Las seis de la tanda 15 declaran **una sola fuente**, y
+> las seis salieron falsas. **La señal predice ahora en las dos direcciones.**
 
 > **Correccion de conteo, recomputada del archivo y traida sin redondear**: la
 > version anterior decia que las SEIS tandas de banda llevaban *14 confirmadas
@@ -2042,8 +2120,8 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las treinta y siete falsas se reparten en TRES clases**: LARGO LEGITIMO
-(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**29**) y **DUO LEGITIMO (1)**.
+**Las cuarenta y tres falsas se reparten en TRES clases**: LARGO LEGITIMO
+(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**35**) y **DUO LEGITIMO (1)**.
 
 > **La tercera clase se abrio en la tanda 13, despues de treinta y dos falsas sin
 > necesitarla**, y se abrio porque la lectura cambio de orden: **al leer por la
@@ -2115,16 +2193,16 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 82 citas leidas vive en
-exactamente una fila, y las filas suman 82 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 88 citas leidas vive en
+exactamente una fila, y las filas suman 88 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **34** | **33** | **67** |
+| **por debajo de 51,0** | **34** | **39** | **73** |
 | **sin señal de bloque** (solo pareja) | 0 | 0 | **0** |
-| | **45** | **37** | **82** |
+| | **45** | **43** | **88** |
 
 **Las seis nuevas de la banda 46,6 a 47,4 caen las seis en la fila de abajo**
 (46,6 a 47,4 esta por debajo de 51,0): tres confirmadas (`cliente_disena_producto`
@@ -2132,7 +2210,7 @@ exactamente una fila, y las filas suman 82 clavado.**
 (`ceo_de_guerra_vs_paz` 46,7, `cap_table_basico` 46,9, `metricas_accionables`
 47,0). La fila de abajo pasa de **20 y 23** a **23 confirmadas y 26 falsas**.
 
-**Las 82, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 88, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -2213,8 +2291,14 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `regalos_estrategicos_sorpresa` | 45,7 | **falsa** |
 | por debajo de 51,0 | `posicionamiento_de_empresa` | 45,6 | confirmada |
 | por debajo de 51,0 | `retargeting_display` | 45,6 | **falsa** |
+| por debajo de 51,0 | `vesting_acciones_fundadores` | 45,4 | **falsa** |
+| por debajo de 51,0 | `validar_canal_distribucion` | 45,4 | **falsa** |
+| por debajo de 51,0 | `prototipar_con_medios_no_convencionales` | 45,3 | **falsa** |
 | por debajo de 51,0 | `gut_check` | 45,2 | confirmada |
 | por debajo de 51,0 | `gestion_libro_abierto_obm` | 45,1 | confirmada |
+| por debajo de 51,0 | `eventos_offline_como_canal_traccion` | 45,1 | **falsa** |
+| por debajo de 51,0 | `preferencia_de_liquidacion` | 45,0 | **falsa** |
+| por debajo de 51,0 | `portfolio_management` | 44,7 | **falsa** |
 | por debajo de 51,0 | `producto_unico_superior` | 44,2 | confirmada |
 | por debajo de 51,0 | `revisiones_regulares_desempeno_ceo` | 44,2 | confirmada |
 | por debajo de 51,0 | `optimizacion_embudo_get_customers` | 44,1 | confirmada |
@@ -2290,8 +2374,8 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **36 confirmadas contra 37 falsas**: la
-> moneda sigue en el filo, cruzando de un lado a otro cada tanda.
+> abajo**, donde la muestra leida da **36 confirmadas contra 43 falsas**: la
+> moneda volvio a caer del lado de las falsas, y esta vez por seis.
 >
 > **Acelerar ahi seria pasar de largo justamente donde esta casi toda la cola, y
 > donde ya se sabe que hay costuras reales.** El compromiso de leer la cola entera
@@ -2303,7 +2387,7 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con la tanda 14 dentro, en **36 confirmadas contra 37
+> mitad de la cola queda, con la tanda 15 dentro, en **36 confirmadas contra 43
 > falsas**.
 >
 > **Nota de recomputo, y explica por que estas cifras saltaron mas de lo esperado**:
