@@ -690,4 +690,47 @@ herramientas muertas**, `Delicious` en uno y `Social Mention` en los dos.
 > sobrevive. **Una herramienta muerta en el nodo que muere se cuela en el texto
 > nuevo si nadie la fue a buscar.**
 
+### 9.5 Racimo PURO contra racimo MEZCLADO: no piden el mismo trabajo
+
+**Distinción del 11 ago 2026, con su primer ejemplar declarado.**
+
+> **RACIMO PURO**: **todos** sus pares internos leídos y **todos** repiten. **No
+> hay nada que decidir sobre qué sobra: sobra todo menos uno.** Va a
+> **CONSOLIDACIÓN DIRECTA** en el plan.
+>
+> **RACIMO MEZCLADO**: sus pares dan clases distintas, unos repiten y otros son
+> sanos. **Ahí la pregunta no es cuál sobra sino cuántos nodos quiere el
+> catálogo**, y **se lee entero** antes de tocar nada.
+
+**PRIMER PURO DECLARADO: `El efectivo contra la ganancia`.** Verificado en el
+archivo de veredictos:
+
+| | |
+|---|---:|
+| miembros censados | **3** |
+| pares internos posibles | **3** |
+| **pares leídos** | **3** |
+| **pares que repiten** | **3** |
+| pares pendientes en la cola | **0** |
+
+> **Los tres pares son los puestos 300, 487 y 544, y los tres salieron A.** El
+> racimo está **cerrado y sin excepciones**: no queda ningún par suyo por leer que
+> pudiera desmentirlo.
+
+**Por qué la distinción vale la pena, y es de coste:**
+
+> **Un racimo mezclado necesita una mesa**: alguien tiene que mirar los miembros
+> juntos y decidir la arquitectura. **Un racimo puro no necesita mesa: necesita un
+> redactor.** Lo único que hay que resolver es la dirección de fusión y qué se
+> lleva de los que mueren, que es trabajo de la relectura y no de la mesa.
+>
+> **Meter un puro en la mesa cuesta una reunión que no hacía falta. Sacar un
+> mezclado de la mesa cuesta una arquitectura decidida a ciegas.** Por eso la
+> etiqueta se pone antes, y se pone contando pares leídos, no a ojo.
+
+**La condición para declarar PURO es dura a propósito**: **cero pares pendientes**.
+Un racimo con pares sin leer **no puede declararse puro**, porque el par que falta
+es exactamente el que podría desmentirlo.
+
+
 

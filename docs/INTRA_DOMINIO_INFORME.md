@@ -828,6 +828,86 @@ grafo paso por paso al escribir su perdida.
 > el unico que no, el 192, es superconjunto limpio. **Once de doce fusiones
 > necesitan que alguien escriba que se lleva del que muere.**
 
+### TANDA R5, EN MODO CIEGO: el control de la observacion de 24 de 24
+
+**El auditor adjudico seis puestos CON LAS RAZONES TAPADAS, y al destapar
+coincidio SEIS DE SEIS.** Acumulado de la relectura: **30 de 30**.
+
+> **POR QUE ESTA TANDA EXISTE.** Al cerrar R4 escribi una objecion contra mi
+> propia serie: *la relectura no vuelve a leer los nodos desde cero, los mira con
+> la razon del cribado delante, asi que una A mal puesta por haber leido mal los
+> dos nodos pasaria las dos veces.* **La tanda ciega es la respuesta a esa
+> objecion**: sin la razon delante, la coincidencia ya no puede venir de haberla
+> leido.
+
+| puesto | el par | coincide a ciegas |
+|---:|---|:---:|
+| **200** | `hoja_de_ruta_de_ventas` contra `refinar_sales_roadmap` | **si** |
+| **206** | `customer_discovery` contra `customer_discovery_overview` | **si** |
+| **207** | `estrategia_de_innovacion_arenas` contra `estrategia_de_innovacion_y_tecnologia` | **si** |
+| **209** | `etapa_de_investigacion` contra `etapa_investigacion_ventas` | **si** |
+| **211** | `framework_excelencia_operacional` contra `preguntas_excelencia_operacional` | **si** |
+| **212** | `storytelling_como_herramienta_de_diseno` contra `storytelling_para_el_cambio` | **si** |
+
+### EL LIMITE, dicho antes que el resultado
+
+> **Son SEIS pares.** Con seis casos y coincidencia perfecta, **lo unico que queda
+> descartado es que la razon escrita estuviera arrastrando al segundo lector en
+> estos seis**. **No queda medida la tasa de acuerdo del metodo**: para eso hacen
+> falta mas tandas ciegas, y sobre todo **pares donde la clase sea discutible**,
+> que es donde un control muerde.
+>
+> **Y no sustituye al control de fondo.** El control de fondo de esta campana
+> sigue siendo **la muestra pineada de las D**, que se sortea con procedimiento
+> reproducible y se lee al cierre: **esa mide si el cribado esta DEJANDO PASAR
+> duplicados**, que es el error que ninguna relectura de las A puede ver, porque
+> las A no son la poblacion donde vive ese error.
+>
+> **En una frase: la tanda ciega controla que la razon no contamine. La muestra
+> pineada controla que la clase no se equivoque en la otra direccion.** Hacen
+> falta las dos.
+
+### LO QUE LA CIEGA AÑADIO, y esto si es ganancia neta
+
+**Cuatro matices que la lectura con razon delante no habia producido.** Los cuatro
+verificados contra el grafo.
+
+> **211: EL MISMO FRAMEWORK EN DOS DIRECCIONES DE USO.**
+> `framework_excelencia_operacional` manda **documentar y disenar tus propios
+> procesos**; `preguntas_excelencia_operacional` manda **preguntarle al ejecutivo
+> por los suyos**. **Mismo contenido, dos usos: autoauditoria y entrevista.**
+> **La fusion conserva las dos direcciones**, o el nodo sirve para la mitad de los
+> casos.
+
+> **212: EL MISMO METODO CON DOS OBJETIVOS.**
+> `storytelling_como_herramienta_de_diseno` busca **que la audiencia se apropie de
+> la historia y la difunda**; `storytelling_para_el_cambio` busca **cambiar
+> comportamientos concretos en una poblacion**. **Difusion y cambio de conducta no
+> son el mismo objetivo, y el metodo si es el mismo.** **La fusion conserva los
+> dos objetivos.**
+
+> **209: UN MATIZ DE AUDIENCIA, y apunta mas lejos que este par.**
+> `etapa_de_investigacion` le habla **al vendedor de sus propios actos** (*dedica
+> tiempo*, *resiste la tentacion*). `etapa_investigacion_ventas` le habla **a quien
+> dirige a otros** (*entrenar al equipo comercial*, *medir la proporcion en las
+> llamadas propias*). **Es la voz de dirigir, no la de ejecutar.**
+>
+> **ANOTADO PARA EL FUTURO MUNDO 11**: si alguna vez existe un mundo de direccion
+> de equipos, **esta mitad tiene ahi su casa**, y la fusion de hoy no deberia
+> borrarla sino marcarla.
+
+> **200: las perdidas, y son dos por lado.** De `hoja_de_ruta_de_ventas` viajan
+> **cuantos-yeses** (cuantas personas tienen que decir que si) y **el
+> plan-post-venta** (los pasos que quedan tras el si verbal). De
+> `refinar_sales_roadmap` viajan **peligros-RFP** (detectar RFPs y negativas a
+> comprar de startups) y **validar-en-cuentas** (que el roadmap se repita con
+> exito en varias). **Ninguno de los dos es superconjunto.**
+
+> **Los pares de familia declarada de esta tanda llevan direccion PROVISIONAL DE
+> PAR**, por la doctrina del banco 9.3: el **200** es de la familia del sales
+> roadmap, el **206** del racimo censado de Customer discovery y el **207** del
+> racimo nuevo de la estrategia de innovacion.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1179,3 +1259,28 @@ Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
 > antes, no despues.**
 >
 > **NO SE ADJUDICA AQUI.** Esta tabla es la candidatura; la decision es de la mesa.
+
+### LA FORMA DEL TRATAMIENTO, preparada y sin adjudicar
+
+**El marco lo da la DECISION 1 de la mesa. Lo que sigue es el ORDEN que la
+medicion obliga, no una decision nueva.**
+
+| paso | que se hace | por que va en ese lugar |
+|---:|---|---|
+| **1** | **fundir los DOS nodos-programa en uno** (el par del puesto **326**, ya juzgado A) | **sin programa unico las piezas no tienen de donde colgar**, y la DECISION 1 pide uno |
+| **2** | **resolver la serie de los SEIS MEDIOS de comunicacion** | esta **instanciada por fase**, o sea que es **una serie dentro de otra**: tocarla despues obliga a rehacer lo de las fases |
+| **3** | **consolidar fase por fase**, con **Affirm de patron** | **Affirm ya se hizo**, y sus **tres nodos deprecados** son la prueba de que el procedimiento funciona y de como quedo el resultado |
+| **4** | **el nodo base de cada fase PRESIDE, no repite** | resuelve las **tres B** de Assess y Acclimate: no eran duda de clase, **eran duda de jerarquia** |
+
+> **EL PASO 4 ES EL QUE CAMBIA VEREDICTOS YA ESCRITOS, y por eso se declara
+> aqui.** Las tres B del cribado (puestos **196**, **224** y **253**) enfrentaban
+> el nodo base de una fase contra un hermano suyo, y quedaron en duda **porque no
+> habia forma de decidir si el base repetia o mandaba.**
+>
+> **Con el tratamiento declarado, el base MANDA**, y esas tres dejan de ser duda
+> sin necesidad de releerlas: **la jerarquia las contesta.**
+>
+> **NO SE TOCAN AHORA.** Se contestan **cuando la mesa apruebe el tratamiento**, y
+> no antes: cambiar tres veredictos por una forma que todavia no esta aprobada
+> seria adjudicar por adelantado.
+
