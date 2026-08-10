@@ -4768,6 +4768,18 @@ gravedad** y pone al **ingeniero de calidad** a revisarlos a diario.
 
 ## q) `nucleo`, el par de SCORECARDS (cuarto calcado del nucleo)
 
+> **SOSTENIDO EN RELECTURA (11 ago 2026).** Este par es tambien el **puesto 184
+> del cribado intra-dominio**, donde salio **A REPITE**, y la **tanda R4 de la
+> relectura lo volvio a mirar y lo sostiene**. **Los dos ejes coinciden y la
+> segunda lectura no lo tumba.**
+>
+> **Y la relectura anade lo que ninguno de los dos ejes daba: que se pierde al
+> fusionar.** De `scoring_model_scorecard` viajan **dos cosas que el otro no
+> tiene**: usar **un scorecard distinto segun el TIPO de proyecto**, y combinar el
+> puntaje con **otro indicador de productividad** para ordenar la cartera.
+> **Fusionar sin llevarselas convierte un scorecard de dos dimensiones en uno de
+> una.**
+
 `scoring_model_scorecard` (puesto **174**) y `scorecard_de_seleccion_de_proyectos`
 (puesto **322**). **Cinco pasos cada uno, los dos del nucleo, los dos de Cooper.**
 

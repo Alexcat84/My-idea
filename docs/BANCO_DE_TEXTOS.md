@@ -657,3 +657,37 @@ extenderla a la familia.**
 > de forma que el marcador: una cifra correcta calculada sobre la población
 > equivocada.**
 
+### 9.4 EL TOQUE ÚNICO: se arregla en la redacción del superviviente, o se arregla dos veces
+
+**Doctrina del plan, 11 ago 2026.**
+
+> **Toda avería de un nodo que va a fusionarse se arregla EN LA REDACCIÓN DEL
+> SUPERVIVIENTE.** Si se arregla antes, por su propio frente, **se arregla dos
+> veces**: una en el nodo que va a morir y otra en el texto que lo reemplaza.
+
+**Vale para las cuatro clases de avería que esta campaña tiene medidas**:
+**vigencia** (tratados extintos, marcos sin versión), **herramientas** (muertas o
+mudadas), **marco-país** (la condición que falta en la puerta) y **campos sucios**
+(la fuente que es un nombre de archivo).
+
+**EL EJEMPLAR, y es el que la hizo nacer.** El par 176 del cribado,
+`targeting_blogs_channel` contra `targeting_blogs_traccion`, **va a fusionarse**:
+es A y la relectura R2 lo sostuvo. Y entre los dos nodos hay **tres menciones de
+herramientas muertas**, `Delicious` en uno y `Social Mention` en los dos.
+
+> **Arreglarlas por el frente de herramientas significaría reescribir el paso 1 de
+> los dos nodos, y después volver a escribirlo una tercera vez al redactar el
+> superviviente.** **Al redactar el superviviente salen solas.**
+
+**La regla de orden que deja, y es lo que el plan necesita:**
+
+> **Antes de abrir un frente de arreglo, se mira si el nodo está en un par con
+> veredicto de fusión.** Si lo está, **el arreglo no se programa: se anota como
+> requisito del superviviente.**
+>
+> **Y al revés, que es la mitad que se olvida**: quien redacte un superviviente
+> **tiene que consultar las fichas de avería de LOS DOS nodos**, no solo del que
+> sobrevive. **Una herramienta muerta en el nodo que muere se cuela en el texto
+> nuevo si nadie la fue a buscar.**
+
+

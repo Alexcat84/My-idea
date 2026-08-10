@@ -765,6 +765,69 @@ antes de ejecutarlo*.
 > encuadre. **Ninguna de las tres perdidas se ve mirando cual nodo tiene mas
 > pasos**, que es lo que una fusion apresurada mira.
 
+### TANDAS R3 y R4: doce puestos mas, DOCE DE DOCE SOSTENIDAS
+
+**Acumulado de la relectura: 24 de 24.** Todos los pares verificados contra el
+grafo paso por paso al escribir su perdida.
+
+> **NOTA GENERAL QUE GOBIERNA LA MITAD DE ESTAS DIRECCIONES**: los pares que
+> pertenecen a una **familia declarada** llevan su direccion de fusion como
+> **PROVISIONAL DE PAR**. Se fija **al leer la familia entera**, por la doctrina
+> del banco 9.3: **una direccion decidida sobre un par no sobrevive a su
+> familia.** Van marcados abajo.
+
+#### R3, seis puestos
+
+| puesto | el par | que se pierde si no viaja |
+|---:|---|---|
+| **178** | `comunidad_tribu_marca` contra `construccion_tribu_de_marca` | **celebrar-historias** del primero; **transformacion-de-identidad** y **simbolos** (merchandising, insignias) del segundo |
+| **179** | `storyboard` contra `storyboard_prototipado` | **time-box de 30 a 45 minutos** y **actuar-el-storyboard** del primero; **titular-escenas** del segundo |
+| **182** | `comunicacion_transparente_en_crisis` contra `liderazgo_frente_crisis_competitiva` | **contacto-proactivo con medios** del primero; **practica-bajo-presion** del segundo |
+| **183** | `fase_activate` contra `fase_activate_primera_impresion` | **expectativas claras y momentum temprano** del primero; **momento-exacto del primer contacto**, **eliminar barreras** y **reaccion emocional** del segundo |
+| **184** | `scorecard_de_seleccion_de_proyectos` contra `scoring_model_scorecard` | **scorecard-por-tipo de proyecto** e **indicador-de-productividad** del segundo |
+| **185** | `ecuacion_de_valor_cliente` contra `ecuacion_de_valor_venta` | **las preguntas SPIN nombradas** (Implicacion y Necesidad-Beneficio) del primero; **agrandar-el-problema** del segundo |
+
+> **El 183 es de familia declarada** (la de la experiencia de Coleman) y **el 178
+> tambien**: sus direcciones quedan **provisionales de par**.
+>
+> **Y el 184 confirma algo que ya estaba escrito en otra ficha**: es el **cuarto
+> par calcado del nucleo** registrado en `docs/FICHA_SUBFUSION_GRADIENTE.md`,
+> puestos 174 y 322 de aquella numeracion. **La relectura lo sostiene**, y eso
+> queda anotado alli.
+
+#### R4, seis puestos
+
+| puesto | el par | que se pierde si no viaja |
+|---:|---|---|
+| **188** | `criterios_equity_split` contra `split_igual_vs_desigual` | **el anti-apreton-de-manos** del corto: *no cierres el acuerdo con un simple apreton de manos rapido* |
+| **189** | `proceso_decision_vc` contra `proceso_diligencia_vc` | **rol-del-contacto** (asociado contra socio) y **senales-de-alerta** del primero; **pregunta-el-proceso y los proximos pasos** del segundo |
+| **192** | `refinar_sales_roadmap` contra `sales_roadmap` | **sobrevive `refinar_sales_roadmap`**, que es superconjunto claro, 6 pasos contra 3 |
+| **194** | `analisis_entorno_modelo_negocio` contra `business_model_environment_mapping` | **preguntas-estrategicas-por-bloque del Canvas** del segundo; **stakeholders y su influencia** del primero |
+| **195** | `sistema_tres_rs_alineacion` contra `three_rs_equilibrium` | **los elefantes en la habitacion** y **documenta-por-escrito** del segundo |
+| **197** | `obtencion_compromiso_venta` contra `obtencion_de_compromiso` | **evita-presion** del primero; **el compromiso mas alto que el cliente pueda dar de verdad** del segundo |
+
+> **CUATRO DE LOS SEIS SON DE FAMILIA DECLARADA y sus direcciones quedan
+> PROVISIONALES DE PAR**: el **188** de la familia del reparto de equity (seis
+> nodos), el **192** de la del sales roadmap, el **195** de la de las tres Rs, y
+> el **197** de la de obtencion de compromiso, que vive dentro del racimo censado
+> del avance en la venta.
+
+### LO QUE VEINTICUATRO DE VEINTICUATRO SIGNIFICAN, y lo que no
+
+> **Lo que significan**: en veinticuatro relecturas **el cribado no ha emitido una
+> sola A que no se sostenga**. Sobre 194 A registradas, eso es una muestra del
+> 12%, y es la primera cifra de fiabilidad que la campana tiene sobre si misma.
+>
+> **Lo que NO significan**: la relectura **no vuelve a leer los nodos desde cero**,
+> los mira con la razon del cribado delante. **Una A mal puesta por haber leido
+> mal los dos nodos pasaria las dos veces.** Lo que esta serie prueba es que **la
+> clase es coherente con la razon escrita**, no que la razon fuera correcta.
+>
+> **Donde si esta mordiendo**: **en las perdidas.** De los doce pares de R3 y R4,
+> **todos menos uno** tienen material que se perderia en una fusion apresurada, y
+> el unico que no, el 192, es superconjunto limpio. **Once de doce fusiones
+> necesitan que alguien escriba que se lleva del que muere.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1026,3 +1089,93 @@ Mollick:
 > `jagged_frontier` por otro. **Nadie ha leido todavia un par CRUZADO entre las
 > dos mitades**, y sin eso no esta probado que sean una familia y no dos parejas
 > vecinas. **La cola decidira: cuando traiga un par cruzado, sube o se parte.**
+
+---
+
+## 12. MEDICION: LA SERIE DE COLEMAN, candidata a TERCERA SERIE DECLARADA
+
+**Medicion, no adjudicacion.** La DECISION 1 de la mesa, aprobada el 9 ago 2026,
+resuelve los programas desmontados en piezas con el tratamiento **SERIE
+DECLARADA**: *un nodo-programa unico que presenta la serie entera, un nodo por
+paso colgando de el, y el numero en el titulo pasa a ser legitimo porque el
+nodo-programa lo explica.*
+
+**Esta es la candidatura de las ocho fases de Coleman a ese mismo tratamiento.
+Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
+
+### La poblacion
+
+| | |
+|---|---:|
+| nodos vivos que declaran *Never Lose a Customer Again* | **83** |
+| de esos, **nodos de FASE** (llevan una de las ocho en id o titulo) | **16** |
+| **nodos-PROGRAMA** (presentan la serie entera) | **2** |
+| nodos de CANAL (la sub-serie de los seis medios de comunicacion) | **4** |
+
+### Las ocho fases, una por una
+
+| fase | nodos vivos | cuales |
+|---|---:|---|
+| **Assess** | **3** | `fase_assess`, `fase_assess_ciclo_cliente`, `fase_assess_experiencia_cliente` |
+| **Admit** | **2** | `fase_admit`, `fase_admit_celebracion` |
+| Affirm | **1** | `fase_affirm_buyers_remorse` |
+| **Activate** | **2** | `fase_activate`, `fase_activate_primera_impresion` |
+| **Acclimate** | **3** | `fase_acclimate`, `fase_acclimate_experiencia_cliente`, `fase_acclimate_mapa_de_proceso` |
+| **Accomplish** | **2** | `fase_accomplish`, `fase_accomplish_experiencia_cliente` |
+| **Adopt** | **2** | `fase_adopt`, `fase_adopt_ciclo_cliente` |
+| Advocate | **1** | `advocacy_customer_journey` |
+
+> **SEIS DE LAS OCHO FASES ESTAN DOBLADAS O TRIPLICADAS.** Solo Affirm y Advocate
+> tienen un nodo. **Dieciseis nodos para ocho pasos.**
+
+### TRES HALLAZGOS QUE LA MEDICION DESTAPA
+
+> **1. LA SERIE YA TIENE DOS NODOS-PROGRAMA, y la DECISION 1 pide UNO.**
+> `fases_de_retencion_de_clientes` y `ocho_fases_experiencia_cliente` **presentan
+> los dos la serie entera**, y el cribado ya los juzgo: **puesto 326, A REPITE.**
+> **El tratamiento de serie declarada empieza aqui, fundiendo los dos programas**,
+> porque sin un programa unico las piezas no tienen de donde colgar.
+
+> **2. AFFIRM YA FUE CONSOLIDADA UNA VEZ, y quedan las cicatrices.** Es la unica
+> fase con **TRES nodos DEPRECADOS**: `fase_affirm`,
+> `fase_affirm_reduccion_incertidumbre` y `fase_affirm_reducir_remordimiento`.
+> **Alguien hizo con Affirm exactamente lo que esta candidatura propone para las
+> otras siete**, y por eso Affirm es hoy la fase mas limpia. **El precedente
+> existe y funciono.**
+
+> **3. HAY UNA SEGUNDA SERIE CRUZADA, la de los SEIS MEDIOS DE COMUNICACION**:
+> `seis_medios_comunicacion_cliente` es su programa, y cuelgan de el
+> `seis_canales_comunicacion_assess`, `seis_herramientas_comunicacion_fase_activate`
+> y `seis_herramientas_comunicacion_celebracion`. **Es una serie de canales
+> instanciada POR FASE**, o sea **una serie dentro de otra**. **El tratamiento de
+> la de fases tiene que decidir que hace con esta antes de tocarla**, o multiplica
+> el problema en vez de resolverlo.
+
+### La evidencia del cribado
+
+**Dieciseis pares de Coleman ya leidos**: **doce A**, **tres B** y **una D**.
+
+| dentro de la MISMA fase | puestos | clase |
+|---|---|:---:|
+| Activate | 183 | **A** |
+| Admit | 421 | **A** |
+| Assess | 373 | **A**, y 224 **B** |
+| Acclimate | 447 | **A**, y 196 y 253 **B** |
+
+> **Ninguna comparacion dentro de una fase salio D.** Las tres B son las tres de
+> Assess y Acclimate contra el nodo base de su fase, que es justo la duda que el
+> tratamiento resuelve: **si el nodo base es el programa de esa fase, no repite:
+> preside.**
+
+### LA CANDIDATURA, sin adjudicar
+
+> **La serie de Coleman cumple los tres requisitos que la DECISION 1 pide:** es un
+> **programa desmontado en piezas**, las piezas **llevan el nombre del paso en el
+> id**, y **el numero de la serie es real** (son ocho fases y hay nodos para las
+> ocho).
+>
+> **Y trae dos cosas que las dos series ya declaradas no tenian**: **dos programas
+> en vez de uno**, y **una serie anidada dentro**. **Las dos hay que resolverlas
+> antes, no despues.**
+>
+> **NO SE ADJUDICA AQUI.** Esta tabla es la candidatura; la decision es de la mesa.
