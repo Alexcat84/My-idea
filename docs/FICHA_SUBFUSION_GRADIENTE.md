@@ -2834,6 +2834,61 @@ DELIBERADA.**
 
 ---
 
+## COSTURAS FUERA DE COLA
+
+**Lista abierta el 11 ago 2026, despues del cierre del instrumento.**
+
+**El instrumento cerro en 128 de 128 y su informe de cierre no se reabre.** Pero
+la cola del instrumento **no era el catalogo entero**: era lo que sus dos senales
+cazaron. **Lo que aparezca despues por otra via se anota aqui**, con su anatomia
+verificada, y **viaja al plan de la pasada unica por la razon de su veredicto**,
+no por el informe cerrado.
+
+> **POR QUE UNA LISTA APARTE Y NO UN ANEXO AL INFORME.** Reabrir un informe
+> cerrado para meterle una fila **convierte el cierre en mentira**: la proxima
+> lectura no sabria si las 128 son las 128 o son las que habia el dia que se
+> escribio. **El informe dice lo que el instrumento vio. Esta lista dice lo que
+> aparecio despues.** Las dos cifras siguen siendo verdad por separado.
+
+### 1. `core/retention_metrics`, 9 pasos: PRIMERA FUERA DE COLA
+
+**Hallada el 11 ago 2026 en el puesto 522 del cribado intra-dominio**, o sea
+**por el otro eje**, no por el de costuras. Anatomia verificada contra el grafo:
+
+**Dos fuentes**: *The Startup Owner's Manual* (Blank) y *Never Lose a Customer
+Again* (Coleman).
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | **las metricas de retencion**: visitas y tiempo en sitio por cohorte, tiempo medio entre visitas, vida media y valor de vida del cliente, quejas y tickets, y agrupar por cohorte de mes de ingreso |
+| **6 a 9** | **otro asunto entero**: costo de adquisicion exacto **por canal**, punto de equilibrio para recuperarlo, porcentaje de clientes que se van **antes** de ese punto, y presentar el impacto financiero a la direccion |
+
+> **El corte esta en el paso 6 y se ve en el vocabulario.** Del 1 al 5 se mide
+> **lo que el cliente hace**; del 6 al 9 se mide **lo que el cliente cuesta**.
+> Retencion y economia de adquisicion son dos preguntas, y la segunda entra con
+> su propia jerga, CAC, breakeven, impacto financiero.
+>
+> **Y encaja con el predictor**: declara **DOS libros**, que es la senal que en
+> las 128 acerto el 91% de las veces. **La cola no lo tenia y el predictor lo
+> habria puesto arriba.**
+
+**POR QUE EL INSTRUMENTO NO LO CAZO, y conviene decirlo porque mide su alcance**:
+sus dos senales miden **repeticion**, y aqui **no hay repeticion**: hay **dos
+temas distintos pegados**. Ninguno de los nueve pasos repite a otro. **Es la
+FORMA QUE PARTE en estado puro, y esa forma solo dispara el instrumento cuando
+ademas se repite algo**, que es lo que pasaba en los ocho ejemplares ya
+registrados.
+
+> **Lo que esto le dice al plan**: **el instrumento de costuras tiene un punto
+> ciego declarado**, los nodos que llevan dos temas **sin repetir nada**. **El eje
+> intra-dominio los encuentra de rebote**, porque el nodo con dos temas se parece
+> a los dos vecinos de cada tema.
+
+**Destino**: la pasada unica, con **cirugia de la FORMA QUE PARTE**, separar en
+dos. **No se toca desde aqui.**
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |

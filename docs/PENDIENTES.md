@@ -1173,8 +1173,76 @@ actuar.*
 > Aquí: **el puntero se lee y no dice nada, porque lo que caducó no es la
 > jurisdicción sino el nombre.**
 
-**Ningún nodo se toca.** La ficha queda **despierta y con dos mediciones**: ocho
-nodos con un tratado extinto y once con un marco sin versión.
+**Ningún nodo se toca.** La ficha queda **despierta y con dos mediciones**, con
+las cifras corregidas en la adjudicación de abajo: **seis nodos citan un tratado
+extinto** y **doce un marco sin versión**.
+
+---
+
+### ADJUDICADO PARA EL PLAN (11 ago 2026): `exportacion` es el PRIMER BARRIDO DE VIGENCIA
+
+**La decision se sostiene. La evidencia que yo di para ella NO, y la corrijo
+antes de usarla.**
+
+#### TRES CORRECCIONES A LO QUE ESCRIBI AYER
+
+**Las tres son mias y las tres salen de recontar el grafo en vez de leer mi
+propia salida de ayer.**
+
+> **1. `export.gov` esta en TRES nodos, no en cuatro.** Escribi *cuatro nodos,
+> cinco menciones*. Lo real: **3 nodos y 4 menciones**, porque
+> `calculo_de_aranceles_importacion` lo nombra **dos veces** y yo lei dos lineas
+> de salida como dos nodos.
+>
+> **2. LA INTERSECCION QUE CITE ES VACIA.** Escribi que *tres de esos cuatro
+> nodos estan tambien en la lista de NAFTA o de Incoterms sin version*. **Es
+> falso: la interseccion entre los nodos de `export.gov` y los de NAFTA o
+> Incoterms no tiene ni un elemento.** Son conjuntos disjuntos.
+>
+> **3. La cifra de NAFTA mezclaba dos cosas distintas.** Dije 8 nodos. Lo exacto:
+> **6 nodos lo NOMBRAN en su texto**, y otros **2 solo lo llevan en una ARISTA**
+> que apunta al id `nafta_free_trade_agreements`. **Apuntar al nodo no es citar el
+> tratado**, y mezclarlos infla la cifra.
+
+**Y la correccion 3 deja un dato util que no tenia**: `foreign_trade_zones` e
+`import_regulations_foreign_governments` **apuntan por arista a
+`nafta_free_trade_agreements`**. Cuando la DECISION 4 renombre ese id, **esas dos
+aristas se rompen si no lleva alias.** Es la prueba concreta de por que el alias
+no es opcional.
+
+#### LA EVIDENCIA REAL, y es mas fuerte que la que yo habia dado
+
+**Recontado del grafo, sobre nodos VIVOS:**
+
+| averia | nodos vivos |
+|---|---:|
+| citan **NAFTA** en su texto | **6** |
+| citan **Incoterms** sin ninguna version | **12** |
+| cablean **`export.gov`** | **3** |
+| **UNION de las tres** | **21** |
+
+> **LOS VEINTIUNO SON DE `exportacion`. Los 21 de 21.** Ni un solo nodo de otro
+> dominio esta tocado por ninguna de las tres averias de vigencia.
+>
+> **Eso adjudica el barrido mejor que mi solapamiento inventado.** No hace falta
+> que un nodo acumule dos averias: **hace falta que el dominio las acumule todas,
+> y las acumula en exclusiva.**
+
+**Por eso `exportacion` va primero, y con este orden dentro:**
+
+1. **`nafta_free_trade_agreements`**, porque el tratado extinto le da **el id y el
+   titulo**, y porque **dos aristas dependen de ese id**: es el unico de los 21
+   que exige alias, o sea que es el que hay que resolver antes de mover nada.
+2. **`certificado_de_origen_tratados_libre_comercio`**, que lo lleva en el titulo
+   y lo repite **cuatro veces**.
+3. **Los otros cuatro que lo nombran** en resumen o pasos.
+4. **Los doce de Incoterms**, que no piden reescritura sino **anadir el ano**, y
+   que se hacen de una pasada porque la decision es una sola.
+5. **Los tres de `export.gov`**, que solo piden cambiar el dominio por `trade.gov`.
+
+> **Ninguna de las cinco toca la doctrina de un nodo.** Son nombres, versiones y
+> direcciones. **Por eso el barrido de vigencia es el mas barato de todos los
+> frentes abiertos, y por eso conviene hacerlo antes que el destejido.**
 
 ---
 

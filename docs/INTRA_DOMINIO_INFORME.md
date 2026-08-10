@@ -543,3 +543,77 @@ sin ninguna arista dentro del racimo.
 > 488. **La mesa de las puertas se va a encontrar con eso.**
 
 **NO SE ADJUDICA NADA AQUI.** La tabla es el mapa; las decisiones son de la mesa.
+
+---
+
+## 7. RACIMO NUEVO: LAS METRICAS DE COHORTE
+
+**Sube a racimo el 11 ago 2026 por la firma que este informe ya tiene descrita:
+el mismo nodo sale de tres maneras distintas segun con que hermano se compare.**
+
+### Los tres pares que lo obligan
+
+| puesto | el par | clase | por que |
+|---:|---|:---:|---|
+| **353** | `metricas_cohortes` contra `analisis_de_cohortes` | **A** | mismo instrumento, mismo uso |
+| **478** | `metricas_cohortes` contra `metricas_accionables` | **D** | hijo con casa propia **CON arista**: jerarquia sana |
+| **522** | `metricas_cohortes` contra `retention_metrics` | **A** | hijo con casa propia **SIN arista**: duplicacion |
+
+> **`metricas_cohortes` es a la vez un duplicado, un hijo legitimo y un
+> duplicado otra vez, segun a quien se le ponga al lado.** Las tres lecturas son
+> correctas por separado y **ninguna se puede ejecutar sin las otras dos
+> delante**, que es la definicion de familia que este informe usa desde la
+> seccion 1.
+
+### Los miembros, verificados contra el grafo
+
+**Cinco nodos vivos, los cinco de `core`:**
+
+| nodo | pasos | fuente |
+|---|---:|---|
+| **`metricas_accionables`** | 6 | *The Lean Startup* (Ries) |
+| `metricas_cohortes` | 4 | *The Lean Startup* (Ries) |
+| `analisis_de_cohortes` | 5 | *The Startup Owner's Manual* (Blank) |
+| `tres_as_de_metricas` | 5 | *The Lean Startup* (Ries) |
+| `retention_metrics` | 9 | *The Startup Owner's Manual* (Blank) y *Never Lose a Customer Again* (Coleman) |
+
+> **Y hay un sexto que ya esta resuelto**: `cohort_analysis_retencion`, **5 pasos,
+> DEPRECADO**. **Esta familia ya tuvo un duplicado retirado en su dia**, lo que
+> dice que alguien la miro antes y no la termino.
+
+### La forma, medida con el metodo de la seccion 6
+
+**Aristas internas resueltas a nodo vivo:**
+
+| nodo | toca dentro del racimo | grado |
+|---|---|---:|
+| **`metricas_accionables`** | `analisis_de_cohortes`, `metricas_cohortes`, `tres_as_de_metricas` | **3** |
+| `metricas_cohortes` | `metricas_accionables`, `tres_as_de_metricas` | 2 |
+| `tres_as_de_metricas` | `metricas_accionables`, `metricas_cohortes` | 2 |
+| `analisis_de_cohortes` | `metricas_accionables` | 1 |
+| **`retention_metrics`** | **ninguno** | **0** |
+
+> **FORMA: CENTRO ENLAZADO.** `metricas_accionables` toca a tres de los otros
+> cuatro y es el unico de grado maximo.
+>
+> **Y CANDIDATO A CENTRO SANO CON GEMELO SIN CASA**, la figura de la seccion 5:
+> **centro `metricas_accionables`, gemelo `retention_metrics`**, que no enlaza con
+> ninguno de los otros cuatro.
+>
+> **Con esto son SEIS los candidatos a esa figura**, los cinco de la tabla de la
+> seccion 6 mas este.
+
+### Lo que esto le hace al arreglo
+
+> **La familia no se desmonta.** Cuatro de los cinco cuelgan de un centro que los
+> enlaza, y esa parte esta sana. **Lo que hay que resolver son dos cosas y no
+> cinco:**
+>
+> 1. **El gemelo `retention_metrics`**, que ademas es la primera **COSTURA FUERA
+>    DE COLA** de la ficha de costuras: **lleva dos temas pegados** y su cirugia
+>    es partirlo. **Partirlo puede resolver el gemelo de paso**, porque su mitad
+>    de retencion es lo que se solapa con el racimo y la de adquisicion no.
+> 2. **El par del puesto 353**, `metricas_cohortes` contra `analisis_de_cohortes`,
+>    que repite y **cuelga del mismo centro**: ahi si hay fusion que hacer.
+>
+> **Las dos decisiones son de nodo, no de familia. El centro se queda como esta.**
