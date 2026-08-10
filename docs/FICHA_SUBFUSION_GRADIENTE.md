@@ -527,12 +527,12 @@ del archivo, y el dato es rotundo:**
 | `core/lectura_balance_general` | 6 | 44,6 | 51,0 | **falsa** |
 | `core/product_market_fit` | 6 | 44,2 | 55,8 | **falsa** |
 
-**Los treinta y tres cortes y las treinta y tres parejas verificados uno por uno
+**Los treinta y ocho cortes y las treinta y ocho parejas verificados uno por uno
 en `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
 
 > **La regla se mantiene y gana su segunda excepcion:** **una cita de corte 3 no
-> es evidencia de costura por si sola.** Veintinueve de treinta y tres han caido
-> al abrir los pasos, pero **CUATRO eran costura de verdad**, asi que el corte 3 tampoco
+> es evidencia de costura por si sola.** Treinta y cuatro de treinta y ocho han
+> caido al abrir los pasos, pero **CUATRO eran costura de verdad**, asi que el corte 3 tampoco
 > es un descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
 >
 > **Y no se puede usar para filtrar la cola**, que sigue siendo la tentacion:
@@ -579,7 +579,7 @@ y `cliente_disena_producto`), mientras las falsas se apilan abajo.
 
 | | |
 |---|---|
-| pareja **mas alta** de las treinta y tres citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
+| pareja **mas alta** de las treinta y ocho citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
 | segunda mas alta | **59,9**, `internacionalizacion_sitio_web_exportacion`, tambien **falsa** |
 | la de la primera confirmada | **59,7** (`empoderamiento_de_participantes`), o sea **la tercera**, por debajo de dos falsas |
 | la de la segunda confirmada | **55,2** (`cliente_disena_producto`), **mas abajo todavia**, por debajo de varias falsas |
@@ -589,7 +589,7 @@ y `cliente_disena_producto`), mientras las falsas se apilan abajo.
 > habria mandado leer primero dos falsas y dejar la primera confirmada en tercer
 > lugar y la segunda mas abajo. **La longitud si separo (arriba); la pareja no.**
 >
-> **Ademas, ninguna de las treinta y tres dispara por pareja**: el umbral de pareja
+> **Ademas, ninguna de las treinta y ocho dispara por pareja**: el umbral de pareja
 > es **80** y la mas alta de este grupo es 62,0. **Todas entraron por bloque.** La
 > pareja aqui no es una senal que sostenga nada, es un numero que acompana.
 >
@@ -1817,7 +1817,7 @@ nodo esta sano. **Corte 3 y confirmada**, la segunda de esta tanda.
 | | con dos o mas fuentes | con una sola |
 |---|---:|---:|
 | **las 46 confirmadas** | **43 (93%)** | 3 |
-| **las 49 falsas** | **4 (8%)** | 45 |
+| **las 55 falsas** | **4 (7%)** | 51 |
 
 **La señal se refuerza**: subio de 91% a 93% en las confirmadas y sigue en el
 entorno del 10% en las falsas. **Cinco de las seis citas de esta tanda, elegidas
@@ -2171,6 +2171,62 @@ aqui, junto al remedio, porque es una instruccion de redaccion y no un hallazgo:
 
 ---
 
+### CANDIDATO NUEVO A NODO-FRONTERA: `exportacion/export_administration_regulations`
+
+**Verificacion tipo Magnuson hecha sobre sus tres casas, y el veredicto es
+limpio: NO condiciona en la puerta.** Sale de la tanda 17, y es el primer
+candidato que no es del nucleo.
+
+**El nodo cablea EAR, ECCN, BIS y U.S. Commercial Service. Esto es lo que dice
+cada casa, transcrito:**
+
+| casa | que dice sobre el pais |
+|---|---|
+| **`condiciones_activacion`, LA PUERTA** | **NADA.** Sus tres condiciones son *si vas a exportar un producto por primera vez*, *si tu producto tiene aplicaciones de doble uso* y *si el destino de exportacion es un pais con restricciones*. **Ninguna nombra desde donde se exporta.** |
+| `resumen_teorico` | **SI, y con el pais nombrado**: *las EAR regulan... puede que necesites una licencia de exportacion del BIS del Departamento de Comercio de EE.UU.* Y al final: *esta mecanica refleja la normativa de EE.UU. ...; verifica el acuerdo y la regulacion vigente en tu jurisdiccion antes de actuar.* |
+| `pasos_accionables` | **NADA.** Los seis pasos mandan clasificar por ECCN, consultar el chart de las EAR, pedir opinion consultiva al BIS, solicitar la licencia y contactar a la oficina local del U.S. Commercial Service, **sin condicion previa de ninguna clase.** |
+| `entregable_esperado` | **NADA**: *clasificacion ECCN de tu producto y determinacion documentada de si necesitas licencia*, sin condicion. |
+
+> **CANDIDATO CONFIRMADO, y con la misma anatomia exacta que
+> `vesting_acciones_fundadores`:** la condicion honesta **existe y esta escrita**,
+> pero vive **al final del `resumen_teorico`**, que es donde ya no decide nada, y
+> ademas **esta redactada en generico** (*verifica la regulacion vigente en tu
+> jurisdiccion*) en vez de nombrar el pais.
+>
+> **Lo que le pasa a un lector de fuera de Estados Unidos**: entra por la puerta
+> porque va a exportar por primera vez, que es su caso, y el nodo lo manda a
+> **clasificar su producto con un ECCN, pedirle una opinion consultiva al BIS y
+> solicitar una licencia de exportacion estadounidense**. **Nada de eso existe
+> para el.** Y el entregable que se le pide es precisamente esa clasificacion.
+
+**EL REMEDIO BARATO, escrito para que se pueda copiar tal cual:**
+
+> **Copiar a `condiciones_activacion` la condicion honesta con el pais dentro:
+> *si exportas DESDE Estados Unidos*.** Una linea. **No hay que reescribir el
+> nodo, ni quitarle material, ni tocar la doctrina**: el contenido es correcto
+> para quien exporta desde alli.
+
+#### Y aqui la doctrina del marco gana una distincion que no tenia
+
+**Esta condicion no es del mismo tipo que la de Magnuson-Moss, y confundirlas
+haria mal el arreglo:**
+
+| | la condicion es sobre | como se redacta |
+|---|---|---|
+| la familia **Magnuson-Moss** | **el DESTINO**: a quien le vendes | *si vendes, o piensas vender, productos a clientes en Estados Unidos* |
+| **las EAR** | **el ORIGEN**: desde donde exportas | *si exportas DESDE Estados Unidos* |
+
+> **Son dos ejes distintos y un nodo puede necesitar uno, el otro o los dos.**
+> `export_administration_regulations` es el primer ejemplar del eje de ORIGEN que
+> esta campana encuentra. **La regla de la puerta no cambia; lo que cambia es que
+> ahora hay que preguntar cual de los dos ejes condiciona, y no solo si hay
+> pais.**
+
+**El nodo no se toca desde esta ficha.** Queda **candidato**, con su evidencia
+transcrita y su remedio escrito, para que el barrido lo ejecute.
+
+---
+
 ## DECISION DE CUENTAS: en esta cola manda SIN VEREDICTO PROPIO
 
 **Registrada aqui, junto al marcador, porque es una regla de contabilidad y este
@@ -2308,24 +2364,142 @@ tenia una muerta mas de la que yo habia sumado**.
 
 ---
 
+## TANDA 17: la primera tanda de MUNDOS, y la tercera en blanco
+
+**Seis citas mas, LAS SEIS FALSAS**, y es la **tercera tanda consecutiva sin una
+sola confirmada**. Es tambien **la primera tanda entera de mundos**: ninguna es
+de `core`, porque en `core` ya no queda nada que leer.
+
+**Banda de bloque 47,4 a 48,1**, y esa banda **queda agotada con esta tanda**:
+el instrumento tiene **catorce citas** ahi dentro, **ocho ya estaban leidas** en
+tandas anteriores y **estas seis eran las que faltaban**. Anatomias y fuentes
+verificadas contra el grafo antes de escribir la tabla.
+
+| cita | dominio | pasos | bloque | corte | fuente unica |
+|---|---|---:|---:|---:|---|
+| `respuesta_consultas_internacionales` | exportacion | 7 | 48,1 | **3** | *A Basic Guide to Exporting* (U.S. Commercial Service, 11.ª ed.) |
+| `plan_de_accion_de_emergencia` | health_safety | 6 | 48,1 | **3** | `SMALL_BUSINESS` |
+| `design_for_six_sigma_dfss` | quality | 6 | 47,6 | **3** | *Juran's Quality Handbook* (Defeo) |
+| `make_certain_programa` | quality | 7 | 47,5 | **3** | *Quality is Free* (Philip B. Crosby) |
+| `diseno_de_mejoras_para_clientes` | quality | 7 | 47,5 | 4 | *Juran's Quality Handbook* (Defeo) |
+| `export_administration_regulations` | exportacion | 6 | 47,4 | **3** | *A Basic Guide to Exporting* (U.S. Commercial Service, 11.ª ed.) |
+
+**Las seis son SECUENCIA LEGITIMA**, y las seis por el mismo motivo: **cada una
+recorre un solo procedimiento de principio a fin**. El plan de emergencia
+identifica riesgos, nombra a quien ordena evacuar, documenta rutas, atiende a
+quien no puede salir solo, cuenta a la gente y capacita; la respuesta a consultas
+fija politica, traduce, contesta, informa terminos, adjunta y archiva. **No hay
+un segundo bloque en ninguna: hay un procedimiento largo.**
+
+### Dos precisiones que salieron al verificar, y las dos corrigen el encargo
+
+> **1. `make_certain_programa` es de Crosby pero esta FUERA de los catorce
+> pasos**, confirmado contra el grafo: la serie declarada vive en otros nodos
+> (`concepto_programa_catorce_pasos`, `crosby_programa_14_pasos_introduccion`,
+> `mejora_calidad_crosby` y companeros). **Este es un programa aparte del mismo
+> libro**, el Make Certain, con su propia mecanica de coordinadores por
+> departamento y sesiones donde cada uno declara su mayor problema. **No toca la
+> serie de catorce que la mesa de racimos ya tiene declarada**, y por eso su
+> veredicto no arrastra nada alli.
+
+> **2. La fuente de `plan_de_accion_de_emergencia` NO dice *OSHA small business*:
+> dice `SMALL_BUSINESS`, a secas y en mayusculas.** Y al ir a comprobarlo salio
+> un defecto de campo que vale mas que la cita:
+>
+> | token en el campo `fuente` | nodos | dominio |
+> |---|---:|---|
+> | `SMALL_BUSINESS` | **51** | health_safety |
+> | `OSHA3886` | **27** | health_safety |
+> | `OSHA3885` | **24** | health_safety |
+> | | **102** | **todos health_safety** |
+>
+> **Ciento dos nodos llevan un token de archivo donde deberia ir un titulo de
+> fuente**, y **ninguno de los 51 de `SMALL_BUSINESS` contiene la cadena OSHA**,
+> asi que ni siquiera se pueden agrupar por texto. **Son 102 de los 283 nodos de
+> `health_safety`, mas de un tercio del dominio.**
+>
+> **Es el mismo defecto de campo ya anotado en el informe intra** con *Steve
+> Blank* contra *Blank, Steve*, pero peor: alli el libro estaba escrito de dos
+> maneras, **aqui no esta escrito**. Cualquier barrido de fuentes que se haga
+> contra este dominio tiene que resolver los tokens primero.
+
+### La constelacion Six Sigma: la cita es sana y la familia es grande
+
+**`design_for_six_sigma_dfss` es sano**: recorre el diseno para Six Sigma de
+principio a fin, del alcance a los CTQ, de los CTQ al diseno integrado de
+producto y proceso, y de ahi a la verificacion y al plan de lanzamiento.
+
+> **Pero al verificarlo aparecio el tamano de la constelacion: DIECINUEVE nodos
+> del catalogo llevan `six_sigma` o `seis_sigma` en su propio id**, y **cuatro de
+> ellos son del mismo asunto que este**: `design_for_six_sigma_dfss`,
+> `design_for_six_sigma_dmadv`, `design_for_six_sigma_dmadv_2` y
+> `dmadv_design_for_six_sigma`. **Eso no lo decide esta ficha**: es materia del
+> cribado intra-dominio, que lo leera cuando la cola los traiga. **Queda anotado
+> para que no haya que encontrarlo dos veces.**
+
+---
+
+### EL PREDICTOR EN NEGATIVO SOSTENIDO: dieciocho seguidas
+
+**La racha, con cifras recontadas del archivo:**
+
+> **DIECIOCHO citas de UNA SOLA FUENTE leidas seguidas, y CERO costuras.** Seis
+> en la tanda 15, seis en la tanda 16 y seis en esta.
+>
+> **Y la unica cosa que interrumpio esa racha confirma el predictor por el otro
+> lado**: entre la tanda 16 y esta se leyo `brainstorming_divergente`, **la unica
+> de DOS libros que quedaba sin veredicto propio**, y **confirmo**.
+>
+> **El predictor esta prediciendo en las dos direcciones a la vez y sin fallar en
+> dieciocho tiros.**
+
+| | citas leidas | confirmadas | tasa |
+|---|---:|---:|---:|
+| **nodos de DOS o mas libros** | **47** | **43** | **91%** |
+| **nodos de UN solo libro** | **54** | **3** | **6%** |
+
+**Las 47 de dos libros estan todas leidas desde la tanda 17 anterior.** Lo que
+queda de la cola, **las 27 citas restantes, es de un solo libro sin excepcion.**
+
+> **Consecuencia para lo que queda, y hay que decirla sin adornos**: si el
+> predictor se sostiene, **de las 27 que faltan cabe esperar una o dos costuras,
+> no mas**. La cola ya dio lo que tenia que dar. **Eso no es motivo para dejar de
+> leerla**, porque la tasa del 6% no es cero y porque el compromiso es leerla
+> entera, **pero si lo es para no esperar de ella lo que ya no tiene.**
+
+### Lo que queda por leer, recontado del instrumento
+
+| dominio | citas sin leer |
+|---|---:|
+| quality | **13** |
+| seguridad_digital | 4 |
+| exportacion | 3 |
+| health_safety | 3 |
+| environmental | 2 |
+| franquicias | 2 |
+| **core** | **0** |
+| | **27** |
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **95** de **128** |
+| **CITAS del instrumento leidas** | **101** de **128** |
 | de esas, costura **confirmada** | **46** |
-| de esas, **citas falsas** | **49** |
-| **precision de la cola** | **48%** |
+| de esas, **citas falsas** | **55** |
+| **precision de la cola** | **46%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
 | **TOTAL de costuras confirmadas** | **46** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **95 leidas, 46
-confirmadas, 49 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **101 leidas, 46
+confirmadas, 55 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
 **La serie completa**: 73% con 22 leidas, 68% con 28, 65% con 34, 65% con 40,
 61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70, 57% con 76, 55% con
-82, 51% con 88, 48% con 94 y **48% con 95**.
+82, 51% con 88, 48% con 94, 48% con 95 y **46% con 101**.
 
 > **Las dos subidas tuvieron causa y las dos bajadas tambien.** Las tandas 12 y
 > 13 se ordenaron por la señal de dos fuentes y subieron la precision; **la 14
@@ -2432,8 +2606,8 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las cuarenta y nueve falsas se reparten en TRES clases**: LARGO LEGITIMO
-(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**41**) y **DUO LEGITIMO (1)**.
+**Las cincuenta y cinco falsas se reparten en TRES clases**: LARGO LEGITIMO
+(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**47**) y **DUO LEGITIMO (1)**.
 
 > **La tercera clase se abrio en la tanda 13, despues de treinta y dos falsas sin
 > necesitarla**, y se abrio porque la lectura cambio de orden: **al leer por la
@@ -2505,16 +2679,16 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 95 citas leidas vive en
-exactamente una fila, y las filas suman 95 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 101 citas leidas vive en
+exactamente una fila, y las filas suman 101 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **35** | **44** | **79** |
+| **por debajo de 51,0** | **35** | **50** | **85** |
 | **sin señal de bloque** (solo pareja) | 0 | **1** | **1** |
-| | **46** | **49** | **95** |
+| | **46** | **55** | **101** |
 
 **Las seis nuevas de la banda 46,6 a 47,4 caen las seis en la fila de abajo**
 (46,6 a 47,4 esta por debajo de 51,0): tres confirmadas (`cliente_disena_producto`
@@ -2522,7 +2696,7 @@ exactamente una fila, y las filas suman 95 clavado.**
 (`ceo_de_guerra_vs_paz` 46,7, `cap_table_basico` 46,9, `metricas_accionables`
 47,0). La fila de abajo pasa de **20 y 23** a **23 confirmadas y 26 falsas**.
 
-**Las 95, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 101, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -2580,11 +2754,17 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `modelo_hibrido_agile_stage_gate` | 48,1 | confirmada |
 | por debajo de 51,0 | `medir_comportamiento_cliente_mvp` | 48,1 | **falsa** |
 | por debajo de 51,0 | `distorsion_muestreo_mecanico` | 48,1 | **falsa** |
+| por debajo de 51,0 | `respuesta_consultas_internacionales` | 48,1 | **falsa** |
+| por debajo de 51,0 | `plan_de_accion_de_emergencia` | 48,1 | **falsa** |
 | por debajo de 51,0 | `ganar_comprension_del_cliente` | 48,0 | confirmada |
 | por debajo de 51,0 | `fase_affirm_buyers_remorse` | 48,0 | **falsa** |
+| por debajo de 51,0 | `design_for_six_sigma_dfss` | 47,6 | **falsa** |
 | por debajo de 51,0 | `etapa_testing_validation` | 47,5 | **falsa** |
+| por debajo de 51,0 | `make_certain_programa` | 47,5 | **falsa** |
+| por debajo de 51,0 | `diseno_de_mejoras_para_clientes` | 47,5 | **falsa** |
 | por debajo de 51,0 | `wizard_of_oz_testing` | 47,4 | **falsa** |
 | por debajo de 51,0 | `mapa_de_canal_de_ventas` | 47,4 | confirmada |
+| por debajo de 51,0 | `export_administration_regulations` | 47,4 | **falsa** |
 | por debajo de 51,0 | `metricas_accionables` | 47,0 | **falsa** |
 | por debajo de 51,0 | `cap_table_basico` | 46,9 | **falsa** |
 | por debajo de 51,0 | `seleccion_ceo_fundador` | 46,8 | confirmada |
@@ -2694,7 +2874,7 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **37 confirmadas contra 48 falsas**: la
+> abajo**, donde la muestra leida da **37 confirmadas contra 55 falsas**: la
 > moneda ya no esta en el filo, y el motivo es que se acabaron los nodos de dos
 > libros.
 >
@@ -2708,8 +2888,14 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con la tanda 17 dentro, en **37 confirmadas contra 48
+> mitad de la cola queda, con la tanda 17 dentro, en **37 confirmadas contra 55
 > falsas**.
+>
+> **CUARTO PASAJE DERIVADO QUE SE ENCUENTRA DESCUADRADO, y hay que decirlo aqui
+> porque esta justo debajo del aviso**: antes de esta tanda esta frase decia *48
+> falsas* y la tabla de franjas daba **49** (4 mas 44 mas 1). **Un off-by-one
+> que sobrevivio al recomputo de la tanda 12**, en el mismo parrafo que advierte
+> de este fallo exacto. **Recontado del archivo, con la tanda 17 dentro, son 55.**
 >
 > **Nota de recomputo, y explica por que estas cifras saltaron mas de lo esperado**:
 > tres pasajes derivados de esta seccion se habian quedado en el estado de la
