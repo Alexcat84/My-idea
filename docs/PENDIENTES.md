@@ -822,6 +822,50 @@ igual que ya está escrito para la ficha hermana.
 
 **Ningún nodo se toca desde aquí.**
 
+### El bloque CONTRAMODELO más consistente del catálogo: la familia Magnuson-Moss
+
+Registrado el **9 ago 2026**, y entra aquí porque esta ficha necesita tanto sus
+miembros como sus contramodelos: sin contramodelo, la ficha no tiene vara.
+
+**Cinco nodos del núcleo**, todos de *Businessperson's Guide to Federal Warranty
+Law*, **condicionan por país de forma explícita**:
+
+| nodo | primera `condiciones_activacion` |
+|---|---|
+| `cumplimiento_magnuson_moss` | *Si vendes, o piensas vender, productos a clientes en Estados Unidos.* |
+| `regla_disponibilidad_previa_venta` | la misma línea, literal |
+| `clasificacion_garantia_full_limited` | la misma línea, literal |
+| `evitar_terminos_enganosos_garantia` | la misma línea, literal |
+| `regla_divulgacion_garantia` | la misma línea, literal |
+
+**Y cuatro de los cinco lo repiten en el `resumen_teorico`** con la instrucción
+de buscar la norma equivalente: *como es una ley de Estados Unidos, si vendes en
+otro país conviene revisar la norma equivalente que aplique allí*.
+`cumplimiento_magnuson_moss` lo repite además en su `entregable_esperado`, o sea
+**tres veces en el mismo nodo**.
+
+> **Este es el patrón que la ficha debería pedir para todo lo demás**: no se
+> borra el marco nacional, se **condiciona** y se manda buscar el equivalente
+> local. El lector de otro país no pierde el nodo, sabe qué hacer con él.
+
+**Historia verificada contra git, porque la pregunta correspondía**: el nodo se
+creó el **2026-07-11** (`722bfa5d`) ya con condición de país (*se vende a
+consumidores finales en EE.UU.*), y el **2026-08-08** el commit `9e22a53f`
+(*Regulación cerrada*) la reescribió a la forma explícita actual. **Nunca perdió
+la condición: la ganó más fuerte.** No hay cambio de contenido que rastrear.
+
+> **Corrección que esto obliga**, ya aplicada: el apartado 4.6 de
+> `docs/FRANJA_INFORME.md` clasificaba `cumplimiento_magnuson_moss` como uno de
+> los **dos casos duros de marco-país del núcleo**. Baja a contramodelo, el
+> veredicto de la franja 1297 pasa de C a D, y cinco veredictos del cribado
+> intra-dominio (157, 159, 162, 164 y 171) pasan de C a D. **La causa fue leer
+> `pasos_accionables` sin leer `condiciones_activacion`.**
+
+**Alcance del error, medido**: de los **52 nodos** implicados en los **33
+veredictos** de la franja que citan la figura, **solo 4 llevan condición de
+país**, y uno de ellos ya estaba listado como contramodelo. **El censo de la
+figura se sostiene.**
+
 #### Adjudicación provisional del auditor: es un CASO A ESCALA DE MUNDO
 
 Con el conteo de arriba sobre la mesa (20 de 55 nodos: 13 con CUI, 4 con NIST, 4

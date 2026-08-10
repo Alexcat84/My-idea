@@ -24,8 +24,8 @@ quedan para despues de la muestra, y **la muestra del 5% de las D esta CERRADA,
 |---|---|---:|---:|
 | A | Violacion candidata de la vara | 2 | 0,1 |
 | B | Dudoso | 6 | 0,4 |
-| C | Sano, pero con hallazgo lateral | 371 | 23,1 |
-| D | Sano y limpio | 1.227 | 76,4 |
+| C | Sano, pero con hallazgo lateral | 370 | 23,0 |
+| D | Sano y limpio | 1.228 | 76,5 |
 | | **Total** | **1.606** | **100** |
 
 Las dos A estan en los puestos 15 y 124. Las seis B estan en los puestos 22,
@@ -39,7 +39,7 @@ violaciones del gradiente.
 
 **Lo que la franja si encontro.** El cribado se cruzo con otra cosa, mucho mas
 grande que lo que venia a buscar: el catalogo esta lleno de nodos que dicen lo
-mismo dos, tres, cuatro y hasta doce veces. Eso es lo que ocupa las 371 C y es
+mismo dos, tres, cuatro y hasta doce veces. Eso es lo que ocupa las 370 C y es
 lo que este informe organiza en la seccion 4.
 
 ---
@@ -53,7 +53,7 @@ porque cambian como se leen los veredictos.
    manual y el infinitivo suelto NO disparan C: aparecen en demasiados nodos
    para ser senal.
 2. **En cada razon de C digo si la figura es NUEVA o YA REGISTRADA**, para que
-   la adjudicacion no tenga que ir a buscarlo. De las 371 C, 113 traen una
+   la adjudicacion no tenga que ir a buscarlo. De las 370 C, 112 traen una
    figura nueva.
 3. **Las herramientas con nombre propio se anotan SIN asumir que murieron.**
    Las plataformas de uso general (Google, LinkedIn, Facebook, Amazon) se
@@ -66,7 +66,7 @@ porque cambian como se leen los veredictos.
 
 Cuando una figura ya quedaba censada completa (los racimos grandes), en varios
 pares posteriores que solo tocaban a un miembro ya contado marque D en vez de
-C. **El conteo de 371 C subestima cuantas veces se volvio a ver cada figura.**
+C. **El conteo de 370 C subestima cuantas veces se volvio a ver cada figura.**
 Lo que NO queda corto son las figuras mismas y sus censos: esos estan
 completos y son lo que importa para adjudicar.
 
@@ -310,13 +310,43 @@ de catorce dias, los registros estatales de franquicias, los requisitos de la
 FTC, el Malcolm Baldrige National Quality Award, las certificaciones ASQ y del
 Juran Institute, y el POA&M del marco federal en seguridad_digital.
 
-**En el NUCLEO, dos, y son las mas duras:**
+**En el NUCLEO, UNO, y era el segundo de los dos que este apartado dio por
+duros:**
 
-- `cumplimiento_magnuson_moss` estructura el nodo entero alrededor de una ley
-  federal estadounidense, incluido el paso de consultar a un abogado que
-  conozca esa ley.
 - `term_sheet_disposiciones_vinculantes` cablea los costos de filing del HSR
-  Act, ley antimonopolio estadounidense.
+  Act, ley antimonopolio estadounidense. **Verificado el 9 ago 2026: sus
+  `condiciones_activacion` no mencionan ningun pais.** Se sostiene.
+
+> **CORRECCION DEL 9 AGO 2026, y es de las que cambian una entrada, no una
+> cifra.** Este apartado decia que en el nucleo habia **dos** casos duros y
+> ponia a `cumplimiento_magnuson_moss` como el primero. **Es falso, y por la
+> definicion de esta misma figura**, que exige *sin ninguna condicion de pais*.
+>
+> **El nodo condiciona por pais TRES veces**, verificado hoy contra el grafo:
+>
+> - su primera `condiciones_activacion` es literalmente *si vendes, o piensas
+>   vender, productos a clientes en Estados Unidos*;
+> - su `resumen_teorico` cierra con *como es una ley de Estados Unidos, si
+>   vendes en otro pais conviene revisar la norma equivalente que aplique alli*;
+> - su `entregable_esperado` repite la condicion.
+>
+> **`cumplimiento_magnuson_moss` NO es marco-pais cableado: es un
+> CONTRAMODELO**, y de los mejores del catalogo. Baja a la lista de
+> contramodelos de este mismo apartado.
+>
+> **La causa del error fue de metodo y toca a mas de un veredicto**: se juzgo la
+> figura leyendo `pasos_accionables` **sin leer `condiciones_activacion`**, que
+> es donde vive la condicion. **La entrada venia del veredicto de la franja
+> 1297**, que queda corregido de C a D en el archivo con su nota.
+>
+> **Alcance del error, medido y acotado**: de los **52 nodos** implicados en los
+> **33 veredictos** de la franja que citan esta figura, **solo 4 llevan
+> condicion de pais**. Los otros 48 se sostienen. Los cuatro son
+> `cumplimiento_magnuson_moss`, `evitar_terminos_enganosos_garantia`,
+> `regla_divulgacion_garantia` (los tres de la familia Magnuson-Moss) y
+> `paris_convention_prioridad`, **que este apartado ya listaba como
+> contramodelo**. **La figura, como censo, se sostiene: el error estaba
+> concentrado en una familia.**
 
 **Y aparecio marco europeo por primera vez:**
 `responsabilidad_extendida_productor_2` cablea WEEE y RoHS.
@@ -330,6 +360,14 @@ verse un nodo bien hecho:
   internacionales.
 - `exclusividad_territorial_representante` manda verificar si las leyes de tu
   pais permiten el limite territorial.
+- **La familia Magnuson-Moss entera, cinco nodos del nucleo** de
+  *Businessperson's Guide to Federal Warranty Law*: `cumplimiento_magnuson_moss`,
+  `regla_disponibilidad_previa_venta`, `clasificacion_garantia_full_limited`,
+  `evitar_terminos_enganosos_garantia` y `regla_divulgacion_garantia`.
+  **Los cinco abren sus `condiciones_activacion` con la misma linea**: *si
+  vendes, o piensas vender, productos a clientes en Estados Unidos*. **Es el
+  bloque de contramodelos mas consistente del catalogo**, y estaba mal
+  clasificado hasta hoy.
 
 **Colateral de la adjudicacion: el CUI de seguridad_digital, y lo que medí al
 verificarlo.** La adjudicacion registra
@@ -417,8 +455,8 @@ que quedo como B en franja 28.
 
 ## 6. Correcciones mias, en limpio
 
-Cinco errores propios que quedan aqui declarados y ya corregidos en el archivo
-(el cuarto lo encontro la muestra D, no yo):
+Seis errores propios que quedan aqui declarados y ya corregidos en el archivo
+(el cuarto lo encontro la muestra D y el sexto lo encontro el auditor, no yo):
 
 1. **Cifras mal sumadas en dos mensajes de commit.** En el checkpoint de 500
    escribi 100 C y 393 D cuando eran 112 y 381; en el de 800 escribi 191 C y
@@ -467,6 +505,26 @@ Cinco errores propios que quedan aqui declarados y ya corregidos en el archivo
    franja 822**, que queda corregida a C con el censo entero de la figura en su
    razon; el detalle esta en el apartado 10.1, verificacion 1. **Es el unico
    veredicto que la muestra ha tenido que corregir en 41 pares leidos.**
+
+6. **Una figura atribuida sin leer donde vive la condicion.** El apartado 4.6
+   daba a `cumplimiento_magnuson_moss` como uno de los **dos casos duros de
+   marco-pais del nucleo**. **Es falso**: el nodo condiciona por pais tres veces,
+   y la primera linea de sus `condiciones_activacion` lo dice literalmente.
+   **Juzgue la figura por `pasos_accionables` sin leer `condiciones_activacion`.**
+   El veredicto de la **franja 1297** queda corregido de C a D con su nota, el
+   apartado 4.6 lo baja a **contramodelo** junto con los otros cuatro de su
+   familia, y las cifras de clase vuelven a **370 C y 1.228 D**.
+
+   **Lo que hace util este error es su alcance medido**: de los **52 nodos** que
+   aparecen en los **33 veredictos** de la franja con esta figura, **solo 4
+   llevan condicion de pais**, y uno de esos cuatro ya estaba listado como
+   contramodelo. **El censo de la figura se sostiene; el error estaba
+   concentrado en una familia.**
+
+   **Y deja una regla de metodo, ya aplicada**: la figura de marco-pais **no se
+   decide en los pasos**. `scripts/intra_leer.py` imprime desde hoy las
+   `condiciones_activacion` de los dos nodos de cada par, para que el cribado
+   intra-dominio no pueda repetir el error en los 3.188 pares que le quedan.
 
 5. **Dos pasos duplicados de Crosby que no habia contado.** El apartado 4.2 decia
    **cinco**; al preparar la mesa de racimos y volver a medir los titulos contra
@@ -532,7 +590,7 @@ decide arreglos, las tandas de costuras siguen midiendo.
 ## 8. Los veredictos completos
 
 Lo que sigue es la lista de cada A, cada B y cada C con su razon, en orden de
-`puesto_franja`. Las 1.227 D no se listan aqui; estan enteras en
+`puesto_franja`. Las 1.228 D no se listan aqui; estan enteras en
 `docs/FRANJA_VEREDICTOS.jsonl`, una por linea, con su razon.
 
 ### 8.1 Las A (2)
@@ -557,7 +615,7 @@ Lo que sigue es la lista de cada A, cada B y cada C con su razon, en orden de
 - **610** | franquicias/concepto_de_advances contra advances_vs_continuations  
   DUDOSO. El nodo del mundo da cuatro pasos de la misma doctrina que el nucleo, el avance como venta pequena progresiva, y lo unico propio de franquicias es el ejemplo del CIRF. El nucleo ademas aporta el diagnostico que el mundo no tiene: distinguir avance de continuacion y preguntarte que falto cuando solo lograste una continuacion. La especializacion es un ejemplo, no metodo.
 
-### 8.3 Las C (371)
+### 8.3 Las C (370)
 
 Cada razon dice si la figura es NUEVA o YA REGISTRADA.
 
@@ -1199,8 +1257,6 @@ Cada razon dice si la figura es NUEVA o YA REGISTRADA.
   Armar las reglas de tu programa de auditoria contra las reglas de tus reuniones de decision: objetos distintos, sano. FIGURA, amplia la de franja 1124: la familia de auditoria de calidad del mundo quality llega a SEIS nodos con estructuracion_programa_auditoria. auditoria_calidad, principios_auditoria_calidad, programa_auditoria_calidad, concepto_de_auditoria_de_calidad, reporte_auditoria y estructuracion_programa_auditoria.
 - **1294** | quality/planificacion_estrategica_despliegue_2 contra roadmap_proyectos_operacionales_12_meses  
   Integrar la calidad en tu plan de negocio contra el plan de doce meses de proyectos de operaciones: objetos distintos, sano. FIGURAS, dos, las dos NUEVAS. Sufijo _N vivo en quality, planificacion_estrategica_despliegue_2, trigesimo miembro. Y par calcado con planificacion_estrategica_despliegue (franja 130): los dos bajan la vision y la mision a metas anuales, meten la voz del cliente al mismo nivel que las metas financieras y alinean el reconocimiento con las metas de mejora.
-- **1297** | exportacion/marco_legal_comercio_electronico_internacional contra cumplimiento_magnuson_moss  
-  Las reglas legales para vender online en otros paises contra cumplir la ley Magnuson-Moss: sano, y con figura fuerte. FIGURA NUEVA: marco-pais DENTRO DEL NUCLEO, y del tipo mas duro que ha salido. cumplimiento_magnuson_moss estructura todo el nodo alrededor de una ley federal estadounidense, incluido el paso de consultar a un abogado que conozca esa ley, sin ninguna condicion de pais. El contraste con el nodo del mundo, que si condiciona por pais destino, deja la comparacion servida para el auditor.
 - **1302** | quality/lenguajes_jerarquia_organizacional contra profit_vs_cash  
   Traducir tus metricas operativas al lenguaje del dinero contra la diferencia entre ganar y tener el dinero: niveles distintos, sano. FIGURA: trio del efectivo contra la ganancia en el nucleo, ya censado en franja 1226.
 - **1315** | franquicias/eleccion_abogado_franquicias contra seleccion_abogado_venture  

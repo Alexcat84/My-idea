@@ -51,6 +51,14 @@ for i in range(D, H + 1):
         print("  %s %s | %s" % (lado.upper(), k, p["titulo_" + lado]))
         if rr:
             print("     racimo: %s" % "; ".join(rr))
+        # Las condiciones de activacion se imprimen SIEMPRE, y no es adorno: la
+        # figura de marco-pais se decide ahi, no en los pasos. El 9 ago 2026 se
+        # emitieron cinco veredictos falsos de pais cableado por leer solo los
+        # pasos de la familia Magnuson-Moss, que condiciona por pais en su
+        # condicion_activacion y no en sus pasos.
+        cond = (G.get(k) or {}).get("condiciones_activacion") or []
+        if cond:
+            print("     condiciones: %s" % " | ".join(" ".join(str(c).split())[:70] for c in cond))
         for j, s in enumerate(pasos(k), 1):
             print("     %d. %s" % (j, s))
     print()
