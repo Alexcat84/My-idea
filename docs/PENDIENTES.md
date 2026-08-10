@@ -953,21 +953,33 @@ escribió nada de memoria**. Lo que sí quedó verificado con evidencia:
 
 | nombre | estado | evidencia |
 |---|---|---|
-| **Alexa** (alexa.com, ranking web de Amazon) | **MUERTA** | Amazon la retiró el **1 de mayo de 2022**, anunciado en diciembre de 2021; las APIs cerraron en diciembre de 2022 |
+| **Alexa** (alexa.com, ranking web de Amazon) | **MUERTA** | Amazon la retiró el **1 de mayo de 2022**, anunciado en diciembre de 2021; las APIs cerraron en diciembre de 2022. **NO es una entrada nueva**: esta ficha ya la daba por retirada desde la entrada del lote 22, vía `nucleo/analisis_trafico_competitivo`. **Una sola herramienta muerta, dos procedencias**: aparece en ese nodo y en el de métricas de franquicias del informe 4.7 |
 | **oDesk** | **MUERTA como marca** | rebautizada **Upwork en mayo de 2015**; el dominio redirige |
 | **Elance** | **MUERTA como marca** | fusionada en Elance-oDesk y **retirada tras el rebranding a Upwork** |
 | **InnoCentive** | **VIVA, con dueño nuevo** | **adquirida por Wazoku en julio de 2020**; sigue operando dentro del grupo |
 | **Guide to Greener Electronics** (Greenpeace) | **NO VERIFICABLE** | la última edición localizable es la de **2017**; no se encontró anuncio de discontinuación, así que no se declara muerta |
 
-**Con estas, el censo va en cuatro muertas y cinco vivas de once verificadas.**
+> **CORRECCIÓN DE LA CIFRA, recomputada del censo entero el 10 ago 2026**:
+> escribí *cuatro muertas y cinco vivas de once verificadas* y **no conté
+> `Compete`**, que la entrada del lote 22 ya daba por retirada junto con Alexa.
+>
+> | | |
+> |---|---:|
+> | **muertas** | **6**: Alexa, Compete, Perfect Audience, The Deck, oDesk, Elance |
+> | **vivas** | **5**: AdRoll, MixRank, Adbeat, BuySellAds, InnoCentive |
+> | **no verificables** | **1**: Guide to Greener Electronics |
+> | **verificadas** | **12** |
+>
+> **Seis muertas de doce verificadas: la mitad.**
 Quedan por verificar: Empty Miles Service, RentaGreenBox, EcoNation, Minitab,
 TrafficEstimate.com, Google Analytics, Energy Star, VMware, Google Keyword
 Planner, Google Trends, GS1, EPCglobal, Optimizely, Visual Website Optimizer,
 Unbounce, SEMrush, SpyFu, y las plataformas generales (Google, LinkedIn,
 Facebook, Amazon).
 
-**Lo que esto cambia para la ficha, y es el argumento del barrido**: de **once**
-verificadas, **cuatro** están muertas. El informe de la franja tiene **veinticuatro
+**Lo que esto cambia para la ficha, y es el argumento del barrido**: de **doce**
+verificadas, **seis** están muertas, y quedan **dieciocho** nombres propios del
+catálogo sin verificar. El informe de la franja tiene **veinticuatro
 nombres propios anotados sin verificar**. No es una predicción decir que habrá
 más; es la razón para verificarlos.
 

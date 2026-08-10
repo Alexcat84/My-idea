@@ -1770,7 +1770,7 @@ nodo esta sano. **Corte 3 y confirmada**, la segunda de esta tanda.
 
 | | con dos o mas fuentes | con una sola |
 |---|---:|---:|
-| **las 45 confirmadas** | **42 (93%)** | 3 |
+| **las 46 confirmadas** | **43 (93%)** | 3 |
 | **las 49 falsas** | **4 (8%)** | 45 |
 
 **La señal se refuerza**: subio de 91% a 93% en las confirmadas y sigue en el
@@ -2125,24 +2125,161 @@ aqui, junto al remedio, porque es una instruccion de redaccion y no un hallazgo:
 
 ---
 
+## DECISION DE CUENTAS: en esta cola manda SIN VEREDICTO PROPIO
+
+**Registrada aqui, junto al marcador, porque es una regla de contabilidad y este
+es su sitio.**
+
+> **En la cola de 128 citas manda la cuenta de SIN VEREDICTO PROPIO. Cada cita
+> exige su veredicto EN ESTA COLA. Lo que conste en otros informes es contexto,
+> nunca asiento.**
+
+**Nace de un descuadre que aparecio dos veces y siempre por el mismo nodo.**
+`brainstorming_divergente` figuraba como costura confirmada en la tabla del
+informe de la franja, encontrada por el eje mundo contra nucleo, **pero no tenia
+veredicto propio aqui**. Quien lo contaba como leido obtenia 8 pendientes y
+nucleo agotado; quien lo contaba como pendiente obtenia 9 y una cita restante.
+**Las dos cuentas eran correctas y contaban cosas distintas**, que es
+exactamente lo que una regla de contabilidad viene a impedir.
+
+> **Por que manda esta y no la otra**: un veredicto de otro informe se emitio
+> **mirando otra cosa**. La tabla de costuras del informe de la franja salio de
+> leer pares mundo contra nucleo, no de leer la cita del instrumento con su
+> bloque, su corte y su pareja delante. **Contarlo como asiento aqui seria
+> importar una conclusion sin importar su prueba.**
+
+---
+
+## `core/brainstorming_divergente`, 8 pasos: CONFIRMADA, y cierra el nucleo
+
+**Bloque 44,8, corte 5.** *Change by Design* (Tim Brown) y *Co-Intelligence*
+(Mollick).
+
+| bloque | de que habla |
+|---|---|
+| **1 a 4** | **el taller IDEO**: reunir al equipo sin distracciones, establecer las reglas (cantidad sobre calidad, diferir el juicio, construir sobre las ideas de otros), **generar el mayor numero de ideas sin filtrar**, registrarlas visualmente |
+| **5 a 8** | **la tanda de IA**: usar la IA como un participante mas, pedirle que adopte personas y estilos, **generar un lote grande con IA y filtrar despues con criterio humano**, iterar cruzando conceptos |
+
+**El calco verificado**: el paso **3** (*generar el mayor numero de ideas posible
+sin filtrar prematuramente*) vuelve en el paso **7** (*generar un lote grande de
+ideas con IA y luego aplicar filtrado humano experto*). **Es la misma
+instruccion, generar mucho y filtrar despues, dicha una vez para el taller y otra
+para la maquina.**
+
+> **EL NUCLEO QUEDA AGOTADO DE VERDAD.** Era la ultima cita de `core` en la cola
+> de 128. Las 33 que restan son todas de mundos: 16 de `quality`, 5 de
+> `exportacion`, 4 de `health_safety`, 4 de `seguridad_digital`, 2 de
+> `environmental` y 2 de `franquicias`.
+
+> **Y era tambien la ultima cita de DOS LIBROS sin veredicto propio. Confirmo, y
+> el predictor cierra su ultima apuesta a favor:**
+>
+> | | citas leidas | confirmadas | tasa |
+> |---|---:|---:|---:|
+> | **nodos de DOS o mas libros** | **47** | **43** | **91%** |
+> | **nodos de UN solo libro** | **48** | **3** | **6%** |
+>
+> **Las 47 citas de dos libros de la cola estan todas leidas.** Lo que queda por
+> leer, las 33 de mundos, **es de un solo libro sin excepcion**.
+
+---
+
+## PATRON DE FUENTE: LA TANDA DE MOLLICK, y sale mas raro de lo previsto
+
+**Tres nodos de metodo de taller llevan a Mollick pegado como segunda voz**, y
+los tres estan confirmados como costura. Verificado contra el grafo:
+
+| nodo | primera voz, el taller | segunda voz |
+|---|---|---|
+| `future_scenarios_planning` | *Business Model Generation* (Osterwalder) | **Mollick** |
+| `gut_check` | *The field guide to human-centered design* (IDEO) | **Mollick** |
+| `brainstorming_divergente` | *Change by Design* (Tim Brown) | **Mollick** |
+
+**Los tres tienen la misma anatomia**: el metodo clasico en el primer bloque y
+**la misma operacion rehecha con IA** en el segundo.
+
+> **PERO al ir a contarlo salio un dato que cambia como se lee el patron, y no
+> estaba en el encargo.** Mollick **no es un libro que se pego a tres nodos
+> ajenos: es un libro con territorio propio.** **51 nodos del catalogo lo
+> declaran**, y **48 de ellos son nodos de tema IA por su propio id**
+> (`prompting_*`, `ia_*`, `jagged_frontier_ia`, `human_in_the_loop_ia`,
+> `deteccion_alucinaciones_ia` y asi).
+>
+> **O sea que la tanda de Mollick entro dos veces y de dos maneras**: como
+> **familia propia de 48 nodos**, que es lo correcto, **y ademas como injerto en
+> 3 nodos de taller que ya existian**, que es la costura.
+>
+> **Eso agrava el caso en vez de atenuarlo**: el material de IA **ya tenia
+> adonde ir**. Los tres injertos no se hicieron por falta de sitio; se hicieron
+> teniendo el sitio hecho.
+
+### Los patrones de fuente que ya van tres, y lo que significan juntos
+
+| patron | como se manifiesta | cuantos nodos |
+|---|---|---:|
+| **los formatos lista del `Basic Guide`** | checklists largos que el estandar de 3 a 6 pasos no contempla, y que salen **falsos** | 4 de los 7 LARGO LEGITIMO |
+| **la tanda de Mollick** | el metodo de taller rehecho con IA como segundo bloque, **confirmado** las tres veces | 3 |
+| **el pegado de Hugos** | material de cadena de suministro adosado a nodos de otro tema, **confirmado** | 11 de las 46 confirmadas |
+
+> **Los tres son arreglos de nodo que se convierten en UNA decision de fuente en
+> la pasada unica**, y esa es la utilidad de haberlos nombrado. **No se decide
+> nodo por nodo si el checklist del Basic Guide se parte, si el bloque de IA se
+> separa o si el apendice de Hugos se poda: se decide una vez por libro, y la
+> decision se aplica a todos sus nodos.**
+>
+> **Es la misma economia que la mesa de racimos**: cuatro decisiones en vez de
+> treinta y dos. **Aqui son tres decisiones en vez de dieciocho nodos.**
+
+---
+
+## CENSO DE HERRAMIENTAS: reconciliado, y la cuenta sube
+
+**`Alexa` estaba contada dos veces**, y al reconciliarla aparecio que **el censo
+tenia una muerta mas de la que yo habia sumado**.
+
+| donde constaba | que decia |
+|---|---|
+| ficha de herramientas, entrada del lote 22 (via franja) | `nucleo/analisis_trafico_competitivo` la cita en sus pasos 1 y 6, y ya la declaraba **RETIRADA**, junto con **`Compete`** |
+| ficha de herramientas, entrada 3 (10 ago 2026, via costuras) | **MUERTA**, con la fecha exacta del cierre de Amazon |
+
+> **Una sola entrada, con las dos procedencias.** Alexa aparece en **dos nodos
+> distintos** del catalogo (`analisis_trafico_competitivo` y el nodo de metricas
+> de franquicias del informe 4.7), y **es una sola herramienta muerta**, no dos.
+
+> **CORRECCION DE MI PROPIA CIFRA, recomputada del censo entero**: escribi *cuatro
+> muertas y cinco vivas de once verificadas*. **No conte `Compete`**, que la
+> entrada anterior ya daba por retirada. **El censo real va asi:**
+>
+> | | |
+> |---|---:|
+> | **muertas** | **6**: Alexa, Compete, Perfect Audience, The Deck, oDesk, Elance |
+> | **vivas** | **5**: AdRoll, MixRank, Adbeat, BuySellAds, InnoCentive |
+> | **no verificables** | **1**: Guide to Greener Electronics |
+> | **verificadas en total** | **12** |
+>
+> **Seis muertas de doce verificadas.** La mitad. **Y el catalogo tiene otros
+> dieciocho nombres propios anotados sin verificar.**
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **94** de **128** |
-| de esas, costura **confirmada** | **45** |
+| **CITAS del instrumento leidas** | **95** de **128** |
+| de esas, costura **confirmada** | **46** |
 | de esas, **citas falsas** | **49** |
 | **precision de la cola** | **48%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
-| **TOTAL de costuras confirmadas** | **45** |
+| **TOTAL de costuras confirmadas** | **46** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **94 leidas, 45
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **95 leidas, 46
 confirmadas, 49 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
 **La serie completa**: 73% con 22 leidas, 68% con 28, 65% con 34, 65% con 40,
 61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70, 57% con 76, 55% con
-82, 51% con 88 y **48% con 94**.
+82, 51% con 88, 48% con 94 y **48% con 95**.
 
 > **Las dos subidas tuvieron causa y las dos bajadas tambien.** Las tandas 12 y
 > 13 se ordenaron por la señal de dos fuentes y subieron la precision; **la 14
@@ -2277,9 +2414,9 @@ redonda**, y la escribo como sale:
 
 | | |
 |---|---:|
-| **confirmadas en nodos del NUCLEO** | **44** |
+| **confirmadas en nodos del NUCLEO** | **45** |
 | **confirmadas en nodos de MUNDO** | **1** |
-| | **45** |
+| | **46** |
 
 **La excepcion es `quality/planificacion_recoleccion_datos`**, confirmada en el
 lote C2 y registrada en esta misma ficha **con su prefijo `quality/` desde el
@@ -2288,7 +2425,7 @@ la asimetria nunca se habia recomputado.**
 
 > **Choca con lo dictado, y por eso lo traigo en vez de escribirlo redondo**: el
 > encargo daba por hecho que *las confirmadas siguen siendo todas del nucleo*.
-> **Son 44 de 45**, y la excepcion sigue siendo la misma y unica:
+> **Son 45 de 46**, y la excepcion sigue siendo la misma y unica:
 > `quality/planificacion_recoleccion_datos` sigue sin encontrar companeros de
 > mundo, tanda tras tanda.
 
@@ -2298,7 +2435,7 @@ choque nace de ahi:
 | registro | cuantas | reparto |
 |---|---:|---|
 | **Las costuras que vio el CRIBADO de la franja** (`FRANJA_INFORME.md`, apartado 4.5) | **21** | **21 de 21 en el nucleo**, verificado nodo por nodo contra el grafo |
-| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **45** | **44 en el nucleo, 1 en `quality`** |
+| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **46** | **45 en el nucleo, 1 en `quality`** |
 
 **Son dos colas distintas, con dos poblaciones distintas, y las dos cifras son
 correctas en su sitio.** El *21 de 21* del informe se sostiene; el *todas* de
@@ -2322,16 +2459,16 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 94 citas leidas vive en
-exactamente una fila, y las filas suman 94 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 95 citas leidas vive en
+exactamente una fila, y las filas suman 95 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **34** | **44** | **78** |
+| **por debajo de 51,0** | **35** | **44** | **79** |
 | **sin señal de bloque** (solo pareja) | 0 | **1** | **1** |
-| | **45** | **49** | **94** |
+| | **46** | **49** | **95** |
 
 **Las seis nuevas de la banda 46,6 a 47,4 caen las seis en la fila de abajo**
 (46,6 a 47,4 esta por debajo de 51,0): tres confirmadas (`cliente_disena_producto`
@@ -2339,7 +2476,7 @@ exactamente una fila, y las filas suman 94 clavado.**
 (`ceo_de_guerra_vs_paz` 46,7, `cap_table_basico` 46,9, `metricas_accionables`
 47,0). La fila de abajo pasa de **20 y 23** a **23 confirmadas y 26 falsas**.
 
-**Las 94, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 95, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -2427,6 +2564,7 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `gestion_libro_abierto_obm` | 45,1 | confirmada |
 | por debajo de 51,0 | `eventos_offline_como_canal_traccion` | 45,1 | **falsa** |
 | por debajo de 51,0 | `preferencia_de_liquidacion` | 45,0 | **falsa** |
+| por debajo de 51,0 | `brainstorming_divergente` | 44,8 | confirmada |
 | por debajo de 51,0 | `portfolio_management` | 44,7 | **falsa** |
 | por debajo de 51,0 | `internal_idea_capture` | 44,7 | **falsa** |
 | por debajo de 51,0 | `captura_conocimiento_mercado` | 44,7 | **falsa** |
@@ -2510,7 +2648,7 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **36 confirmadas contra 48 falsas**: la
+> abajo**, donde la muestra leida da **37 confirmadas contra 48 falsas**: la
 > moneda ya no esta en el filo, y el motivo es que se acabaron los nodos de dos
 > libros.
 >
@@ -2524,7 +2662,7 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con la tanda 16 dentro, en **36 confirmadas contra 48
+> mitad de la cola queda, con la tanda 17 dentro, en **37 confirmadas contra 48
 > falsas**.
 >
 > **Nota de recomputo, y explica por que estas cifras saltaron mas de lo esperado**:
