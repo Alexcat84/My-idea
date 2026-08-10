@@ -403,6 +403,11 @@ repetida.**
 | `quality/identificacion_practicas_lideres` | 6 | 49,0 | **3** | **DOS foros distintos en secuencia**, no dos narraciones: el paso 1 es el foro interno de hallazgos y el 4 es el foro de intercambio de practicas lideres, con presentaciones y preguntas recogidas antes. |
 | `core/verificar_modelo_ingresos` | 6 | 48,8 | **3** | **secuencia unica de calculo**: recopilar datos, ingreso bruto, ingreso neto de canal, restar costos, tres escenarios y evaluar el cash burn. Cada paso necesita al anterior. |
 | `seguridad_digital/csf_funcion_govern` | 7 | 48,5 | **3** | **secuencia unica de la funcion Govern del NIST CSF 2.0**: mision y riesgos, requisitos aplicables, responsable, impacto de perder activos, seguro, terceros y comunicar politicas. |
+| `quality/desarrollo_caracteristicas_producto` | 6 | 48,3 | **3** | el **Paso 4 del Quality by Design de Juran** en secuencia unica: agrupar necesidades, elegir metodos, tecnicas creativas, verificar regulaciones, seleccionar y detallar. |
+| `quality/abolir_inspeccion_masiva` | 6 | 48,3 | **3** | **secuencia de Deming**: medir el costo de la inspeccion actual, causa raiz, muestreo aleatorio, redisenar el proceso, reducir gradualmente, reservar el 100% para lo critico. |
+| `core/criterios_equity_split` | 8 | 48,3 | 5 | **secuencia de criterios de Wasserman** que continua sin calcarse: aportes pasados, capital, costo de oportunidad, aportes futuros, prima de idea, motivaciones, ajuste por dedicacion y registro escrito. |
+| `quality/estratificacion_datos` | 7 | 48,2 | 4 | **secuencia del metodo**, y el *repetir para otras variables* del paso 6 es **iteracion, no re-narracion**. |
+| `quality/distorsion_muestreo_mecanico` | 6 | 48,1 | **3** | **secuencia de Deming** sobre el sesgo del instrumento de muestreo, de evaluar el metodo a documentar sus cambios. |
 
 > **Mismo verbo y misma estructura, sujeto distinto.** Es exactamente lo que engana
 > a un emparejador monotono, y **no es un defecto: es como se escribe una sucesion.**
@@ -434,7 +439,7 @@ repetida.**
 **Era una regla practica sacada de dos casos. Con la tanda nueva ya es un dato
 del archivo, y el dato es rotundo:**
 
-> **De las citas leidas con corte 3, va UNA confirmada de NUEVE.**
+> **De las citas leidas con corte 3, va UNA confirmada de DOCE.**
 
 | cita | pasos | bloque | pareja | veredicto |
 |---|---:|---:|---:|:--:|
@@ -447,12 +452,15 @@ del archivo, y el dato es rotundo:**
 | `quality/identificacion_practicas_lideres` | 6 | 49,0 | 54,4 | **falsa** |
 | `core/verificar_modelo_ingresos` | 6 | 48,8 | 57,8 | **falsa** |
 | `seguridad_digital/csf_funcion_govern` | 7 | 48,5 | 62,0 | **falsa** |
+| `quality/desarrollo_caracteristicas_producto` | 6 | 48,3 | 58,1 | **falsa** |
+| `quality/abolir_inspeccion_masiva` | 6 | 48,3 | 53,2 | **falsa** |
+| `quality/distorsion_muestreo_mecanico` | 6 | 48,1 | 59,1 | **falsa** |
 
-**Los nueve cortes y las nueve parejas verificados uno por uno en
+**Los doce cortes y las doce parejas verificados uno por uno en
 `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
 
 > **La regla se mantiene y gana su excepcion:** **una cita de corte 3 no es
-> evidencia de costura por si sola.** Ocho de nueve han caido al abrir los pasos,
+> evidencia de costura por si sola.** Once de doce han caido al abrir los pasos,
 > pero **una era costura de verdad**, asi que el corte 3 tampoco es un
 > descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
 >
@@ -469,7 +477,7 @@ del archivo, y el dato es rotundo:**
 
 | | |
 |---|---|
-| pareja **mas alta** de las nueve citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
+| pareja **mas alta** de las doce citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
 | segunda mas alta | **59,9**, `internacionalizacion_sitio_web_exportacion`, tambien **falsa** |
 | la de la confirmada | **59,7**, o sea **la tercera**, por debajo de dos falsas |
 
@@ -477,7 +485,7 @@ del archivo, y el dato es rotundo:**
 > como regla, *mira la pareja* habria mandado leer primero las dos falsas y dejar
 > la confirmada en tercer lugar.
 >
-> **Ademas, ninguna de las nueve dispara por pareja**: el umbral de pareja es
+> **Ademas, ninguna de las doce dispara por pareja**: el umbral de pareja es
 > **80** y la mas alta de este grupo es 62,0. **Todas entraron por bloque.** La
 > pareja aqui no es una senal que sostenga nada, es un numero que acompana.
 >
@@ -493,7 +501,7 @@ del archivo, y el dato es rotundo:**
 **Si el corte 3 no distingue nada, el corte ancho distingue casi todo.** Del
 archivo, contando las leidas:
 
-> **De las citas leidas con corte 8 o mas, van CATORCE confirmadas de QUINCE.**
+> **De las citas leidas con corte 8 o mas, van QUINCE confirmadas de DIECISEIS.**
 >
 > **La racha se rompio en esta tanda, y con un caso que la explica.**
 
@@ -512,13 +520,15 @@ archivo, contando las leidas:
 | **10** | 15 | `core/ab_testing_optimizacion` |
 | **10** | 14 | `core/principio_calidad_mvp` |
 | **10** | 13 | `exportacion/elementos_plan_exportacion_ejemplo` **FALSA** |
+| **9** | 12 | `core/plan_de_adquisicion_acquire` |
 | **9** | 14 | `core/key_partners_hypothesis` |
 | **8** | 13 | `core/future_scenarios_planning` |
 
 **La entrada nueva es una sola, y es la que rompe la racha**:
-`elementos_plan_exportacion_ejemplo`, corte 10 en 13 pasos, **falsa**. **Los
-cortes altos en nodos largos siguen prediciendo costura catorce veces de
-quince**, y la unica excepcion es un formato lista.
+`elementos_plan_exportacion_ejemplo`, corte 10 en 13 pasos, **falsa**, y en la
+tanda siguiente `plan_de_adquisicion_acquire` con corte 9 volvio a confirmar.
+**Los cortes altos en nodos largos siguen prediciendo costura quince veces de
+dieciseis**, y la unica excepcion es un formato lista.
 
 > **Y la primera falsa por encima de la linea ya llego**:
 > `exportacion/elementos_plan_exportacion_ejemplo`, **corte 10 en un nodo de 13
@@ -1094,27 +1104,126 @@ About Hard Things*.
 
 ---
 
+## TANDA DE LA BANDA 48,1 a 48,3: una confirmada y cinco falsas
+
+**El peor rendimiento de las cinco tandas de banda estrecha**, y con un reparto
+por dominio que se explica solo: la unica confirmada es del nucleo y **cuatro de
+las cinco falsas son de `quality`**.
+
+### `core/plan_de_adquisicion_acquire`, 12 pasos: QUINTA DE LA FORMA QUE PARTE
+
+**Bloque 48,3, corte 9.** Dos fuentes: *The Startup Owner's Manual* y
+*Traction*.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 7** | **el Acquire Plan de Blank**: revisar las hipotesis del modelo, definir por actividad quien, que tactica, cuanto presupuesto y que metrica, fijar el pasa o falla antes de cada prueba, instrumentar el sitio, lanzar escalonado, limitar el gasto por prueba, y dejar lista la plomeria de activacion |
+| **8 a 12** | **el programa Bullseye de Weinberg, entero**: listar los 19 canales de traccion, disenar una prueba barata por canal, correrlas y medir resultados concretos, comparar entre canales y elegir, y anotar lo aprendido incluso de las que fallaron |
+
+> **No es repeticion, es un programa ajeno pegado detras**, que es la firma de
+> la forma que parte. **Quinto ejemplar**, detras de `blueprint_de_experiencia`,
+> `metas_vs_proposito`, `analisis_tco_roi_b2b` y
+> `enfoque_motor_unico_crecimiento`.
+
+### RACIMO COSTURADO TRANSVERSAL NUMERO DOS: el Bullseye pegado en dos sitios
+
+**El cruce, verificado contra el grafo, y sale mas fuerte de lo que el encargo
+suponia.** El programa Bullseye de *Traction* esta pegado en **dos** nodos del
+nucleo, **y cada uno se quedo con una mitad distinta**:
+
+| nodo | que mitad del Bullseye lleva | pasos |
+|---|---|---|
+| `plan_de_adquisicion_acquire` | **la mitad de PRUEBA**: listar los 19 canales, disenar una prueba barata por canal, correrlas, comparar y anotar | 8 a 12 |
+| `enfoque_motor_unico_crecimiento` | **la mitad de ELECCION**: identificar el canal que gana en el anillo medio, redirigir todos los recursos, no distraerse con secundarios, y repetir Bullseye cuando se sature | 5 a 9 |
+
+> **Ninguno de los dos tiene el Bullseye completo, y entre los dos si.** El
+> primero prueba y no dice que hacer con el ganador mas alla de invertirle mas;
+> el segundo elige y concentra pero da por hecha la prueba. **Un lector que
+> reciba solo uno se queda con medio programa sin saberlo.**
+
+> **REGLA PARA LA PASADA UNICA: los dos se destejen JUNTOS, con un solo reparto,
+> y la salida probable es un NODO BULLSEYE PROPIO que los dos citen.** Aqui la
+> particion no es una opcion entre otras: **el material extraido de los dos es
+> exactamente un programa completo**, asi que el nodo nuevo no hay que
+> inventarlo, hay que reunirlo.
+>
+> **Y hay una diferencia con el racimo transversal numero uno**, el de la
+> familia de experiencia: alli el material se repetia entre los tres nodos y el
+> reparto era para decidir **cual es la copia**. **Aqui el material NO se repite:
+> se complementa**, y el reparto es para decidir **donde vive el original**. Son
+> dos problemas distintos con la misma cirugia.
+
+### Las cinco falsas de la tanda
+
+| cita | pasos | corte | por que es SECUENCIA LEGITIMA |
+|---|---:|---:|---|
+| `quality/desarrollo_caracteristicas_producto` | 6 | **3** | el Paso 4 del Quality by Design de Juran en secuencia unica: agrupar necesidades, elegir metodos de identificacion, aplicar tecnicas creativas, verificar regulaciones, seleccionar caracteristicas de alto nivel y detallarlas |
+| `quality/abolir_inspeccion_masiva` | 6 | **3** | secuencia de Deming: medir el costo de la inspeccion actual, analizar causa raiz, pasar a muestreo aleatorio, redisenar el proceso, reducir gradualmente y reservar el 100% para lo critico |
+| `quality/estratificacion_datos` | 7 | 4 | secuencia del metodo: elegir variables, establecer categorias, clasificar, calcular, graficar, **repetir para otras variables** y planificar confirmacion. **El repetir del paso 6 es ITERACION del metodo, no una segunda narracion** |
+| `quality/distorsion_muestreo_mecanico` | 6 | **3** | secuencia de Deming sobre el sesgo del instrumento de muestreo: evaluar el metodo, calibrar el sesgo, pasar a numeros aleatorios, alternativa si no se puede, registrar las caracteristicas y documentar los cambios |
+| `core/criterios_equity_split` | 8 | 5 | secuencia de criterios de Wasserman que **continua sin calcarse**: aportes pasados, capital, costo de oportunidad, aportes futuros, prima de idea, motivaciones, ajuste por dedicacion y registro escrito |
+
+> **Nota sobre `desarrollo_caracteristicas_producto`, que no se adjudica aqui**:
+> es el id base de una pareja de sufijo y de la familia D4 de
+> `desarrollar_caracteristicas_producto`. **Como COSTURA es falso**, que es la
+> pregunta de esta ficha. Lo otro le toca a la familia.
+
+> **Nota sobre `criterios_equity_split`, y es un caso util de las dos preguntas
+> a la vez**: como costura es **falso**, y al mismo tiempo el cribado
+> intra-dominio ya lo clasifico como **A REPITE** en su puesto 188, porque
+> `split_igual_vs_desigual` es su version corta. **Un nodo puede estar limpio
+> por dentro y tener un gemelo fuera.** Las dos cosas son ciertas y ninguna
+> corrige a la otra.
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **46** de **128** |
-| de esas, costura **confirmada** | **28** |
-| de esas, **citas falsas** | **18** |
-| **precision de la cola** | **61%** |
+| **CITAS del instrumento leidas** | **52** de **128** |
+| de esas, costura **confirmada** | **29** |
+| de esas, **citas falsas** | **23** |
+| **precision de la cola** | **56%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
-| **TOTAL de costuras confirmadas** | **28** |
+| **TOTAL de costuras confirmadas** | **29** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **46 leidas, 28
-confirmadas, 18 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **52 leidas, 29
+confirmadas, 23 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
-**No era suelo.** La serie completa: **73% con 22 leidas, 68% con 28, 65% con
-34, 65% con 40 y 61% con 46**. La tanda de la banda 48,9 dio cuatro y dos y
-parecio frenar la caida; **esta dio dos y cuatro y la reanudo**. Cuatro tandas de
-banda estrecha llevan **11 confirmadas contra 13 falsas**: por debajo de 51 la
-cola paga **menos de la mitad**, y ese es el numero con el que hay que decidir
-cuanto mas se lee.
+**La caida no se detuvo.** La serie completa: **73% con 22 leidas, 68% con 28,
+65% con 34, 65% con 40, 61% con 46 y 56% con 52**. Cinco tandas de banda
+estrecha llevan **12 confirmadas contra 18 falsas**: por debajo de 51 la cola
+paga **dos de cada cinco**. **Y la ultima tanda dio una de seis**, que es el peor
+rendimiento medido.
+
+> **Ahi esta el dato que sostiene la decision de orden de abajo**, y conviene
+> verlo antes de leerla: **cuatro de las cinco falsas de la ultima tanda son de
+> `quality`**, y las cuatro son secuencias de manual, de Juran y de Deming.
+
+### DECISION DE ORDEN DEL AUDITOR: primero el nucleo
+
+**Las 76 citas que quedan por leer se leen priorizando las del NUCLEO.**
+
+> **La cobertura integra queda intacta. Cambia el ORDEN, no el alcance.** Las
+> citas de mundo no se descartan ni se muestrean: se leen despues.
+
+**El motivo, con los numeros de esta misma ficha delante:**
+
+- **La presa confirmada vive casi entera en el nucleo**: **28 de las 29
+  confirmadas** son de `core`, y la unica excepcion lleva veinticuatro tandas
+  sin encontrar companeros de mundo.
+- **La banda baja de `quality` rinde secuencias limpias de manual**: en la
+  ultima tanda, **cuatro de cinco falsas** eran de ese mundo, y las cuatro
+  resultaron ser el mismo genero, un paso de Juran o una secuencia de Deming
+  escritos en orden.
+
+> **Lo que esta decision NO dice**: no dice que las citas de mundo esten sanas.
+> Dice que **la evidencia acumulada las pone despues en la fila**, y que si la
+> lectura se interrumpiera a mitad, **es mejor haber leido el nucleo entero que
+> media cola de cada sitio.** Cuando el nucleo se agote, la cola de mundo se lee
+> igual y con el mismo paso.
 
 > **DISCREPANCIA RESUELTA: el auditor elige la segunda lectura.** El marcador
 > anterior contaba 21 leidas, 15 confirmadas y una decimosexta aparte, en una
@@ -1168,10 +1277,10 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las dieciocho falsas se reparten en las mismas dos clases**: LARGO LEGITIMO
-(**7**) y FALSO POSITIVO DE SECUENCIA LEGITIMA (**11**). **Ninguna falsa ha
+**Las veintitres falsas se reparten en las mismas dos clases**: LARGO LEGITIMO
+(**7**) y FALSO POSITIVO DE SECUENCIA LEGITIMA (**16**). **Ninguna falsa ha
 necesitado una clase nueva desde que las dos quedaron caracterizadas**, que es la
-mejor señal de que estan bien trazadas: dieciocho casos y ni uno se ha salido.
+mejor señal de que estan bien trazadas: veintitres casos y ni uno se ha salido.
 
 ### LA ASIMETRIA, recomputada del archivo, y NO es 19 de 19
 
@@ -1181,9 +1290,9 @@ sale:
 
 | | |
 |---|---:|
-| **confirmadas en nodos del NUCLEO** | **27** |
+| **confirmadas en nodos del NUCLEO** | **28** |
 | **confirmadas en nodos de MUNDO** | **1** |
-| | **28** |
+| | **29** |
 
 **La excepcion es `quality/planificacion_recoleccion_datos`**, confirmada en el
 lote C2 y registrada en esta misma ficha **con su prefijo `quality/` desde el
@@ -1192,7 +1301,7 @@ la asimetria nunca se habia recomputado.**
 
 > **Choca con lo dictado, y por eso lo traigo en vez de escribirlo redondo**: el
 > encargo daba por hecho que *las confirmadas siguen siendo todas del nucleo*.
-> **Son 27 de 28**, y la excepcion sigue siendo la misma y unica:
+> **Son 28 de 29**, y la excepcion sigue siendo la misma y unica:
 > `quality/planificacion_recoleccion_datos` sigue sin encontrar companeros de
 > mundo, tanda tras tanda.
 
@@ -1202,7 +1311,7 @@ choque nace de ahi:
 | registro | cuantas | reparto |
 |---|---:|---|
 | **Las costuras que vio el CRIBADO de la franja** (`FRANJA_INFORME.md`, apartado 4.5) | **21** | **21 de 21 en el nucleo**, verificado nodo por nodo contra el grafo |
-| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **28** | **27 en el nucleo, 1 en `quality`** |
+| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **29** | **28 en el nucleo, 1 en `quality`** |
 
 **Son dos colas distintas, con dos poblaciones distintas, y las dos cifras son
 correctas en su sitio.** El *21 de 21* del informe se sostiene; el *todas* de
@@ -1226,18 +1335,18 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 46 citas leidas vive en
-exactamente una fila, y las filas suman 46 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 52 citas leidas vive en
+exactamente una fila, y las filas suman 52 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **17** | **14** | **31** |
+| **por debajo de 51,0** | **18** | **19** | **37** |
 | **sin señal de bloque** (solo pareja) | 0 | 0 | **0** |
-| | **28** | **18** | **46** |
+| | **29** | **23** | **52** |
 
-**Las 46, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 52, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -1286,6 +1395,12 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `elementos_plan_exportacion_ejemplo` | 48,6 | **falsa** |
 | por debajo de 51,0 | `organizacion_adaptativa` | 48,5 | confirmada |
 | por debajo de 51,0 | `csf_funcion_govern` | 48,5 | **falsa** |
+| por debajo de 51,0 | `plan_de_adquisicion_acquire` | 48,3 | confirmada |
+| por debajo de 51,0 | `desarrollo_caracteristicas_producto` | 48,3 | **falsa** |
+| por debajo de 51,0 | `abolir_inspeccion_masiva` | 48,3 | **falsa** |
+| por debajo de 51,0 | `criterios_equity_split` | 48,3 | **falsa** |
+| por debajo de 51,0 | `estratificacion_datos` | 48,2 | **falsa** |
+| por debajo de 51,0 | `distorsion_muestreo_mecanico` | 48,1 | **falsa** |
 | por debajo de 51,0 | `ratios_eficiencia_inventario` | 48,3 | confirmada |
 | por debajo de 51,0 | `propuesta_gasto_capital` | 44,1 | confirmada |
 
@@ -1306,9 +1421,9 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 > **ninguna esta leida todavia**. La fila existe para que la primera que se lea
 > tenga sitio y no vuelva a caerse de la cuenta.
 
-**Por encima de 52 son NUEVE de nueve.** Y con las cuatro tandas de banda
-dentro, el reparto de las **28 confirmadas** es: **9 por encima de 52 y
-DIECINUEVE por debajo**
+**Por encima de 52 son NUEVE de nueve.** Y con las cinco tandas de banda
+dentro, el reparto de las **29 confirmadas** es: **9 por encima de 52 y VEINTE
+por debajo**
 (`key_partners` 51,7, `split_testing` 51,5, `project_close_out` 50,3,
 `blueprint_de_experiencia` 50,3, `cultura_de_experiencia` 50,2,
 `voz_del_cliente_voc` 50,2, `future_scenarios_planning` 50,1,
@@ -1317,8 +1432,8 @@ DIECINUEVE por debajo**
 50,1, `schedule_management_plan` 49,8, `metas_vs_proposito` 49,7,
 `enfoque_motor_unico_crecimiento` 49,5, `principio_calidad_mvp` 49,2,
 `actualizacion_posiciones_existentes` 49,0, `analisis_tco_roi_b2b` 48,9,
-`customer_journey_mapping` 48,6 y `organizacion_adaptativa` 48,5).
-**Mas del doble abajo que arriba.**
+`customer_journey_mapping` 48,6, `organizacion_adaptativa` 48,5 y
+`plan_de_adquisicion_acquire` 48,3). **Mas del doble abajo que arriba.**
 
 > **Esto empezo siendo una correccion y ya es la tendencia.** La version original
 > decia *tres de ellas viven por debajo de 52*, sobre doce confirmadas; al cuadrar
@@ -1326,8 +1441,8 @@ DIECINUEVE por debajo**
 > de diecinueve**. **La mayoria de las costuras confirmadas del catalogo vive por
 > debajo de la franja**, es decir en el terreno donde la señal de bloque es debil.
 > **Es el argumento mas fuerte que hay contra acelerar la lectura ahi abajo**, y
-> cada tanda nueva lo hace mas fuerte, no menos. **Con 46 leidas van diecinueve de
-> veintiocho.**
+> cada tanda nueva lo hace mas fuerte, no menos. **Con 52 leidas van veinte de
+> veintinueve.**
 
 > **LA FRANJA 51 a 52 NO ES UN PISO DE FALSOS: ES UNA ZONA MEZCLADA**, con dos
 > confirmadas y cuatro falsas. Y **por debajo de 51 viven CINCO costuras
@@ -1351,8 +1466,8 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **19 confirmadas contra 18 falsas**: una
-> moneda al aire, y ahora casi exacta.
+> abajo**, donde la muestra leida da **20 confirmadas contra 23 falsas**: la
+> moneda se inclino, y por primera vez hacia las falsas.
 >
 > **Acelerar ahi seria pasar de largo justamente donde esta casi toda la cola, y
 > donde ya se sabe que hay costuras reales.** El compromiso de leer la cola entera
@@ -1364,8 +1479,8 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con las cuatro tandas de banda dentro, en **19
-> confirmadas contra 18 falsas**. Ni piso de ruido ni terreno donde se pueda leer de corrido: una
+> mitad de la cola queda, con las cinco tandas de banda dentro, en **20
+> confirmadas contra 23 falsas**. Ni piso de ruido ni terreno donde se pueda leer de corrido: una
 > moneda al aire, y con casi la mitad del tesoro dentro.
 >
 > **Correccion, y va en la direccion que menos convenia.** Esta subseccion decia
