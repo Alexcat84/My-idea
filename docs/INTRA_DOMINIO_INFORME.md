@@ -617,3 +617,162 @@ el mismo nodo sale de tres maneras distintas segun con que hermano se compare.**
 >    que repite y **cuelga del mismo centro**: ahi si hay fusion que hacer.
 >
 > **Las dos decisiones son de nodo, no de familia. El centro se queda como esta.**
+
+---
+
+## 8. LA RELECTURA DE LAS A, y su metodo
+
+**Frente nuevo, abierto por el auditor el 11 ago 2026 y en paralelo al cribado.**
+La cola del cribado **no cambia por esto**: sigue en orden y sin saltos.
+
+> **QUE ES.** El cribado emite un veredicto por par leyendo los dos nodos. **La
+> relectura vuelve sobre las A ya registradas** y pregunta otra cosa: **si la
+> fusion se sostiene al mirarla como operacion**, no como juicio.
+>
+> **Por que hace falta.** Un par puede repetir de verdad y aun asi **no tener
+> superviviente claro**, o tener uno que pierde material al fusionar. **La A dice
+> que sobra uno; no dice cual.**
+
+### TANDA R1: seis puestos, SEIS DE SEIS SOSTENIDAS
+
+| puesto | el par | sostiene |
+|---:|---|:---:|
+| **3** | `domina_lo_que_compras` contra `investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor` | **si** |
+| **156** | `customer_discovery_cuatro_fases` contra `customer_discovery_overview` | **si** |
+| **160** | `gestion_sindicato_inversores` contra `manejo_syndicate_inversion` | **si** |
+| **161** | `asignacion_agil_de_recursos` contra `presupuesto_agil_innovacion` | **si** |
+| **165** | `seleccion_canal_distribucion` contra `seleccion_canal_fisico` | **si** |
+| **166** | `human_in_the_loop_ia` contra `principio_humano_en_el_loop` | **si** |
+
+**Ninguna se cae.** Es la primera medida de fiabilidad que tiene el cribado sobre
+si mismo, y con seis casos **no prueba nada todavia**; lo que hace es **abrir la
+serie**.
+
+### LA NOTA DE DIRECCION DE FUSION DEL PUESTO 165, verificada contra el grafo
+
+**Es lo que la relectura anade y el cribado no daba: quien sobrevive.**
+
+| | `seleccion_canal_distribucion` (5 pasos) | `seleccion_canal_fisico` (4 pasos) |
+|---|---|---|
+| habitos de compra de la categoria | paso 1 | paso 3 |
+| evaluar el canal por costo y control | paso 2 | paso 2 |
+| complejidad y precio del producto contra el canal | paso 3 | paso 1, como listado de opciones |
+| **recalcular la hipotesis de INGRESOS NETOS con los costos del canal** | **paso 4** | **NO LO TIENE** |
+| quedarse con UN canal y no lanzar por varios | paso 5 | paso 4 |
+
+> **`seleccion_canal_distribucion` es SUPERCONJUNTO de `seleccion_canal_fisico`.**
+> Cubre sus cuatro pasos y **trae uno que el otro no tiene**, el que devuelve el
+> costo del canal al modelo de ingresos. **Superviviente natural.**
+
+> **UNA PRECISION QUE LA FUSION TIENE QUE LLEVARSE, y no contradice la
+> direccion**: lo unico propio del nodo que muere es **el encuadre fisico**, su
+> paso 1 lista *opciones de canal fisico relevantes para la industria*. **El
+> superviviente habla de canal en general.** **Al fusionar hay que conservar el
+> ejemplo fisico**, o la fusion gana un paso y pierde una concrecion.
+
+### LA REGLA QUE ESTA TANDA DEJA
+
+> **La relectura no revisa el veredicto: revisa la OPERACION.** Sus tres
+> preguntas, en este orden:
+>
+> 1. **Se sostiene la A?** Si no, vuelve al cribado con su razon.
+> 2. **Quien sobrevive?** Y la respuesta se justifica **por contenido**, no por
+>    antiguedad ni por longitud: **sobrevive el superconjunto**.
+> 3. **Que se pierde al fusionar?** Lo que solo tenga el que muere **se anota
+>    para que viaje**, como el encuadre fisico del 165.
+>
+> **La tercera pregunta es la que evita que una fusion correcta empobrezca el
+> catalogo.**
+
+---
+
+## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
+
+**Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
+lecturas incoherentes entre si segun el hermano: es la firma de familia de la
+seccion 1 en su forma mas clara.**
+
+### Los ocho miembros, verificados contra el grafo
+
+**Los ocho de `core`. Y aqui esta el dato que reordena la familia entera:**
+
+| nodo | pasos | fuente |
+|---|---:|---|
+| `riesgo_tecnicas_cierre_venta_compleja` | 4 | *SPIN Selling* (Rackham) |
+| `cierre_segun_complejidad_venta` | 5 | *SPIN Selling* (Rackham) |
+| `ineficacia_cierre_ventas_grandes` | 4 | *SPIN Selling* (Rackham) |
+| `cierre_satisfaccion_postventa` | 4 | *SPIN Selling* (Rackham) |
+| `cierre_sofisticacion_comprador` | 4 | *SPIN Selling* (Rackham) |
+| `obtencion_compromiso` | 4 | *SPIN Selling* (Rackham) |
+| `obtencion_de_compromiso` | 5 | *SPIN Selling* (Rackham) |
+| **`tacticas_cierre_ventas`** | 4 | **_Traction_ (Weinberg)** |
+
+> **SIETE DE OCHO SON DEL MISMO LIBRO. EL OCTAVO ES DE OTRO.** Y eso **no es un
+> detalle de procedencia: explica la incoherencia que motivo el racimo.**
+
+### Los nueve pares leidos, y lo que dicen juntos
+
+| puesto | el par | clase |
+|---:|---|:---:|
+| 274 | `cierre_segun_complejidad_venta` contra `riesgo_tecnicas` | **A** |
+| 321 | `ineficacia_cierre_ventas_grandes` contra `riesgo_tecnicas` | **A** |
+| 432 | `cierre_sofisticacion_comprador` contra `riesgo_tecnicas` | **A** |
+| 463 | `obtencion_compromiso` contra `obtencion_de_compromiso` | **A** |
+| 337 | `cierre_satisfaccion_postventa` contra `riesgo_tecnicas` | **B** |
+| 527 | `obtencion_compromiso` contra `riesgo_tecnicas` | **B** |
+| 499 | `ineficacia_cierre_ventas_grandes` contra `obtencion_compromiso` | **D** |
+| **408** | `obtencion_compromiso` contra **`tacticas_cierre_ventas`** | **D** |
+| **504** | `obtencion_de_compromiso` contra **`tacticas_cierre_ventas`** | **D** |
+
+> **DOS DE LOS TRES VEREDICTOS D SON CONTRA EL NODO DE WEINBERG**, y el tercero
+> (499) enfrenta las dos mitades entre si. **Ningun par de Rackham contra Rackham
+> dentro de la misma mitad salio D.**
+
+### LA LECTURA, y no es "ocho nodos incoherentes"
+
+**Medido, el racimo se ordena en TRES piezas y no en una:**
+
+| pieza | miembros | de que trata |
+|---|---:|---|
+| **A. las tecnicas de cierre no funcionan en venta grande** | **5** | `riesgo_tecnicas` de centro, con `cierre_segun_complejidad`, `ineficacia`, `cierre_sofisticacion` y `cierre_satisfaccion` |
+| **B. el avance y el compromiso** | **2** | `obtencion_compromiso` y `obtencion_de_compromiso`, ya censados en su propio racimo |
+| **C. el forastero** | **1** | **`tacticas_cierre_ventas`**, de Weinberg, sobre pedir la decision a un prospecto ya calificado |
+
+> **La pieza A repite hacia dentro** (tres A contra el mismo centro). **La pieza B
+> repite hacia dentro** (una A). **Y las dos piezas contra el forastero dan D las
+> dos veces**, porque el forastero **no dice lo que Rackham dice**: no sostiene
+> que el cierre dane la venta grande, sino que **la decision hay que pedirla con
+> fecha y por escrito cuando el prospecto ya esta calificado**.
+>
+> **Las lecturas nunca fueron incoherentes: median cosas distintas y yo no lo
+> habia separado.** La incoherencia era mia por tratar como una familia lo que
+> son dos mitades de un libro **mas un nodo de otro libro que legitimamente
+> discrepa.**
+
+### La forma en el grafo
+
+| | |
+|---|---|
+| aristas internas | **2**: `cierre_segun_complejidad` con `tacticas_cierre_ventas`, y `cierre_satisfaccion` con `cierre_sofisticacion` |
+| aislados | **4**: `ineficacia`, `riesgo_tecnicas`, `obtencion_compromiso`, `obtencion_de_compromiso` |
+| **forma** | **MIXTO**, y muy flojo: **grado maximo 1** |
+
+> **El centro doctrinal de la pieza A, `riesgo_tecnicas_cierre_venta_compleja`,
+> es uno de los cuatro AISLADOS.** El nodo con el que tres hermanos repiten **no
+> esta enlazado con ninguno de ellos.** No hay centro sano que preservar: **aqui
+> el grafo no ayuda nada.**
+
+### LA REGLA OPERATIVA, registrada
+
+> **LA FAMILIA SE LEE ENTERA EN LA RELECTURA.** No se decide pieza por pieza ni
+> par por par.
+>
+> **Y los pares que queden de esta familia en la cola del cribado llevan razon
+> `familia declarada` y NO pelean la clase.** Quedan **cuatro** por leer, en los
+> puestos **601, 971, 1280 y 1333**. Emitir un veredicto propio para cada uno
+> **anadiria ruido a una decision que ya esta tomada en otro sitio**: seguir
+> discutiendo la clase de un par cuya familia ya subio a mesa es trabajo que se
+> tira.
+>
+> **Lo que si se anota de esos cuatro** es cualquier cosa **nueva** que aparezca
+> al abrirlos, un nodo que no estuviera en los ocho o un choque con esta lectura.

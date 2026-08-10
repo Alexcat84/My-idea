@@ -239,6 +239,38 @@ confirmadas de un solo libro son todas anteriores a la tanda 15.
 > **Lo que el predictor sirve para hacer**: decidir por donde empezar cuando hay
 > mas cola que tiempo. **Lo que no sirve para hacer**: cerrar un nodo sin abrirlo.
 
+### EL PUNTO CIEGO DEL INSTRUMENTO, declarado el 11 ago 2026
+
+**Se anade a la herencia y NO toca ninguna cifra: las 128 siguen siendo 128 y el
+cierre sigue cerrado.** Lo que se declara es **un limite del instrumento**, que
+es informacion sobre lo que midio, no una medicion nueva.
+
+> **LAS DOS SENALES MIDEN REPETICION. Un nodo que lleva DOS TEMAS PEGADOS SIN
+> REPETIR NADA no dispara ninguna de las dos.**
+
+**El ejemplar es `core/retention_metrics`**, hallado **despues del cierre** y por
+el otro eje, en el puesto 522 del cribado intra-dominio. **Nueve pasos, dos
+fuentes**, y el corte se ve en el vocabulario: del 1 al 5 se mide **lo que el
+cliente hace**, del 6 al 9 **lo que el cliente cuesta**, con su propia jerga de
+CAC, punto de equilibrio e impacto financiero. **Ninguno de los nueve pasos
+repite a otro**, y por eso la cola no lo tenia.
+
+> **Es LA FORMA QUE PARTE en estado puro.** Los ocho ejemplares que si entraron
+> disparaban porque **ademas** repetian algo. **Esta es la forma sin su
+> acompanamiento, y es invisible para este instrumento.**
+>
+> **LA RED QUE LO CUBRE ES EL EJE INTRA-DOMINIO, y lo cubre DE REBOTE**: un nodo
+> con dos temas **se parece a los vecinos de cada uno de los dos**, asi que entra
+> en la cola del otro eje por partida doble aunque no repita nada por dentro.
+>
+> **Los dos instrumentos no se solapan: se tapan los agujeros.** El de costuras
+> mira dentro del nodo; el intra mira entre nodos; **y la forma que parte pura
+> solo se ve desde fuera.**
+
+**Lo que aparezca por esta via se anota en `COSTURAS FUERA DE COLA`**, en
+`docs/FICHA_SUBFUSION_GRADIENTE.md`, **no aqui**: este informe dice lo que el
+instrumento vio.
+
 ---
 
 ## 3. LAS REGLAS DE CORTE, con sus cifras finales

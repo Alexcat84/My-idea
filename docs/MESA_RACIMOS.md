@@ -329,6 +329,20 @@ que apuntaba a el.**
 > y van por renombre o alias**, porque en los dos el contenido esta sano. **Fusionar
 > ahi seria arreglar un nombre borrando un nodo bueno de pago.**
 
+> **CONTRAEJEMPLO CONCRETO DEL ALIAS, medido el 11 ago 2026 y anotado aqui porque
+> es la prueba de la frase de arriba.** La decision dice que *un id que muere sin
+> alias rompe todo lo que apuntaba a el*. **Eso ya no es una advertencia teorica:
+> tiene dos aristas con nombre.**
+>
+> **`nafta_free_trade_agreements` es candidato a renombre** porque lleva en el id
+> un tratado extinto desde el 1 de julio de 2020. **Y DOS nodos vivos apuntan a
+> ese id por arista**: `foreign_trade_zones` lo tiene en sus `nodos_previos` e
+> `import_regulations_foreign_governments` en sus `nodos_siguientes`.
+>
+> **Si ese renombre se hace sin alias, esas dos aristas quedan apuntando a un id
+> que ya no existe.** Verificado contra el grafo. **Es el ejemplar mas barato de
+> ensenar por que la clausula del alias no era opcional.**
+
 **VISTO DEL FUNDADOR: APROBADA, 9 ago 2026.** Se ejecuta la recomendacion del auditor.
 
 ---
