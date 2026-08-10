@@ -408,6 +408,10 @@ repetida.**
 | `core/criterios_equity_split` | 8 | 48,3 | 5 | **secuencia de criterios de Wasserman** que continua sin calcarse: aportes pasados, capital, costo de oportunidad, aportes futuros, prima de idea, motivaciones, ajuste por dedicacion y registro escrito. |
 | `quality/estratificacion_datos` | 7 | 48,2 | 4 | **secuencia del metodo**, y el *repetir para otras variables* del paso 6 es **iteracion, no re-narracion**. |
 | `quality/distorsion_muestreo_mecanico` | 6 | 48,1 | **3** | **secuencia de Deming** sobre el sesgo del instrumento de muestreo, de evaluar el metodo a documentar sus cambios. |
+| `core/medir_comportamiento_cliente_mvp` | 6 | 48,1 | **3** | secuencia de metricas de comportamiento sobre el MVP. |
+| `core/fase_affirm_buyers_remorse` | 6 | 48,0 | **3** | secuencia unica de la fase Affirm: mapear el periodo de silencio, contacto proactivo, reafirmar la decision, anticipar obstaculos, abrir espacio para dudas y medir cancelaciones. |
+| `core/etapa_testing_validation` | 6 | 47,5 | **3** | secuencia de la **Etapa 4** de Cooper. |
+| `core/wizard_of_oz_testing` | 6 | 47,4 | **3** | secuencia del metodo Wizard of Oz. |
 
 > **Mismo verbo y misma estructura, sujeto distinto.** Es exactamente lo que engana
 > a un emparejador monotono, y **no es un defecto: es como se escribe una sucesion.**
@@ -439,7 +443,7 @@ repetida.**
 **Era una regla practica sacada de dos casos. Con la tanda nueva ya es un dato
 del archivo, y el dato es rotundo:**
 
-> **De las citas leidas con corte 3, va UNA confirmada de DOCE.**
+> **De las citas leidas con corte 3, va UNA confirmada de DIECISEIS.**
 
 | cita | pasos | bloque | pareja | veredicto |
 |---|---:|---:|---:|:--:|
@@ -455,12 +459,16 @@ del archivo, y el dato es rotundo:**
 | `quality/desarrollo_caracteristicas_producto` | 6 | 48,3 | 58,1 | **falsa** |
 | `quality/abolir_inspeccion_masiva` | 6 | 48,3 | 53,2 | **falsa** |
 | `quality/distorsion_muestreo_mecanico` | 6 | 48,1 | 59,1 | **falsa** |
+| `core/medir_comportamiento_cliente_mvp` | 6 | 48,1 | 52,6 | **falsa** |
+| `core/fase_affirm_buyers_remorse` | 6 | 48,0 | 54,7 | **falsa** |
+| `core/etapa_testing_validation` | 6 | 47,5 | 48,9 | **falsa** |
+| `core/wizard_of_oz_testing` | 6 | 47,4 | 61,4 | **falsa** |
 
-**Los doce cortes y las doce parejas verificados uno por uno en
+**Los dieciseis cortes y las dieciseis parejas verificados uno por uno en
 `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
 
 > **La regla se mantiene y gana su excepcion:** **una cita de corte 3 no es
-> evidencia de costura por si sola.** Once de doce han caido al abrir los pasos,
+> evidencia de costura por si sola.** Quince de dieciseis han caido al abrir los pasos,
 > pero **una era costura de verdad**, asi que el corte 3 tampoco es un
 > descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
 >
@@ -477,7 +485,7 @@ del archivo, y el dato es rotundo:**
 
 | | |
 |---|---|
-| pareja **mas alta** de las doce citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
+| pareja **mas alta** de las dieciseis citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
 | segunda mas alta | **59,9**, `internacionalizacion_sitio_web_exportacion`, tambien **falsa** |
 | la de la confirmada | **59,7**, o sea **la tercera**, por debajo de dos falsas |
 
@@ -485,8 +493,8 @@ del archivo, y el dato es rotundo:**
 > como regla, *mira la pareja* habria mandado leer primero las dos falsas y dejar
 > la confirmada en tercer lugar.
 >
-> **Ademas, ninguna de las doce dispara por pareja**: el umbral de pareja es
-> **80** y la mas alta de este grupo es 62,0. **Todas entraron por bloque.** La
+> **Ademas, ninguna de las dieciseis dispara por pareja**: el umbral de pareja
+> es **80** y la mas alta de este grupo es 62,0. **Todas entraron por bloque.** La
 > pareja aqui no es una senal que sostenga nada, es un numero que acompana.
 >
 > **Lo que si se puede escribir, porque sale del archivo**: **con corte 3 ninguna
@@ -501,7 +509,8 @@ del archivo, y el dato es rotundo:**
 **Si el corte 3 no distingue nada, el corte ancho distingue casi todo.** Del
 archivo, contando las leidas:
 
-> **De las citas leidas con corte 8 o mas, van QUINCE confirmadas de DIECISEIS.**
+> **De las citas leidas con corte 8 o mas, van DIECISEIS confirmadas de
+> DIECISIETE.**
 >
 > **La racha se rompio en esta tanda, y con un caso que la explica.**
 
@@ -521,6 +530,7 @@ archivo, contando las leidas:
 | **10** | 14 | `core/principio_calidad_mvp` |
 | **10** | 13 | `exportacion/elementos_plan_exportacion_ejemplo` **FALSA** |
 | **9** | 12 | `core/plan_de_adquisicion_acquire` |
+| **8** | 11 | `core/ganar_comprension_del_cliente` |
 | **9** | 14 | `core/key_partners_hypothesis` |
 | **8** | 13 | `core/future_scenarios_planning` |
 
@@ -1177,26 +1187,139 @@ nucleo, **y cada uno se quedo con una mitad distinta**:
 
 ---
 
+## LA FORMA REPARTIDA, espejo de la forma que parte
+
+**Nace de una correccion.** El encargo de la banda 48,1 daba por hecho que el
+Bullseye estaba **repetido** en dos nodos; al verificarlo contra el grafo salio
+que estaba **repartido**, cada nodo con una mitad distinta. La diferencia no era
+de matiz: **cambia la cirugia**, asi que la forma se nombra aparte.
+
+| | LA FORMA QUE PARTE | LA FORMA REPARTIDA |
+|---|---|---|
+| **que pasa** | **un nodo lleva dos temas** | **un tema vive partido en dos nodos** |
+| **la cirugia** | **separar** | **reunir** |
+| **que decide el reparto** | **cual de los dos temas se queda** | **donde vive el original** |
+| **el material** | sobra donde esta | **no sobra en ninguno de los dos: falta en los dos** |
+| **ejemplares** | **cinco**: `blueprint_de_experiencia`, `metas_vs_proposito`, `analisis_tco_roi_b2b`, `enfoque_motor_unico_crecimiento`, `plan_de_adquisicion_acquire` | **uno**: el Bullseye entre `enfoque_motor_unico_crecimiento` y `plan_de_adquisicion_acquire` |
+
+> **El ejemplar medido, para que la forma no quede en abstracto**:
+> `plan_de_adquisicion_acquire` tiene la mitad de PRUEBA del Bullseye (listar los
+> 19 canales, probar cada uno, comparar) y `enfoque_motor_unico_crecimiento`
+> tiene la mitad de ELECCION (identificar el ganador del anillo medio,
+> concentrar todo, repetir al saturarse). **Ninguno de los dos sirve solo.**
+
+> **Y hay un nodo que esta en las dos formas a la vez**:
+> `enfoque_motor_unico_crecimiento` **parte** (motor de Ries mas canal de
+> Weinberg) **y ademas esta repartido** (su mitad de canal es media Bullseye).
+> **Eso no es una contradiccion: es lo que pasa cuando el pegado se hizo dos
+> veces sobre el mismo nodo.** La pasada unica lo tiene que abrir una sola vez y
+> resolver las dos cosas en el mismo acto.
+
+---
+
+## TANDA DE LA BANDA 47,4 a 48,1: dos confirmadas y cuatro falsas, todas del nucleo
+
+**Primera tanda con el orden nuevo aplicado**: las seis citas son del nucleo.
+
+### `core/ganar_comprension_del_cliente`, 11 pasos: SEXTA DE LA FORMA QUE PARTE
+
+**Bloque 48,0, corte 8.** Dos fuentes: *The Startup Owner's Manual* y *Never
+Lose a Customer Again*.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 6** | **investigacion etnografica**: el flujo de trabajo del cliente, que otras soluciones usa, que cambiaria su compra, **pasar un dia haciendo lo que el hace**, que publicaciones lee, documentar con criterio de validado |
+| **7 a 11** | **un programa de CRM completo**: elegir la herramienta, definir de 5 a 10 datos prioritarios, completar lo que ya sabes, investigar perfiles publicos, priorizar datos personales y emocionales |
+
+> **Precision sobre el corte, con la misma disciplina de siempre**: el encargo
+> dice que el corte clava la frontera y **no la clava**. El corte es **8** y la
+> frontera esta en **6 contra 7**. Es el mismo caso de `metas_vs_proposito`: el
+> corte ancho dice que hay mucho material que comparar, **no donde esta la
+> costura**. Donde el corte si clavo fue en `project_close_out` y en
+> `schedule_management_plan`, los dos con corte 5 y frontera en 5 contra 6.
+
+### `core/modelo_hibrido_agile_stage_gate`, 13 pasos: DOBLE DEL CICLO ITERATIVO
+
+**Bloque 48,1, corte 7.** Dos fuentes: *Winning at New Products* y *Essentials
+of Supply Chain Management*.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 9** | **el hibrido Agile-Stage-Gate de Cooper**: mantener las compuertas Go/Kill, insertar sprints de 1 a 4 semanas, reuniones diarias, **entregable tangible al final de cada sprint**, tableros y backlog, revisiones con interesados, equipo dedicado, expandir a etapas tempranas |
+| **10 a 13** | **el ciclo generico vision e hitos**: definir la vision de largo plazo, dividir en hitos de 30, 60 y 90 dias, **entregar una version funcional al final de cada ciclo** y ajustar el plan siguiente con lo aprendido |
+
+**El calco, con los dos textos delante**: el paso **4** (*definir un entregable
+tangible y demostrable al final de cada sprint*) vuelve en el paso **12**
+(*entregar una version funcional al final de cada ciclo, por minima que sea*).
+**Es la misma instruccion con el vocabulario del otro libro.**
+
+### Las cuatro falsas, todas corte 3 y todas SECUENCIA LEGITIMA
+
+| cita | pasos | por que |
+|---|---:|---|
+| `core/fase_affirm_buyers_remorse` | 6 | secuencia unica de la fase Affirm: mapear el periodo de silencio, disenar el contacto proactivo, redactar la reafirmacion, anticipar obstaculos, abrir espacio para dudas y medir cancelaciones |
+| `core/etapa_testing_validation` | 6 | secuencia de la Etapa 4 de Cooper |
+| `core/medir_comportamiento_cliente_mvp` | 6 | secuencia de metricas de comportamiento sobre el MVP |
+| `core/wizard_of_oz_testing` | 6 | secuencia del metodo Wizard of Oz |
+
+> **Nota C2 sobre `etapa_testing_validation`, anotada SIN CENSAR**: su titulo
+> lleva **Etapa 4**, y podria ser la primera vista de una serie numerada de
+> Cooper dentro del nucleo, como los Paso N de Crosby y los Punto N de Deming en
+> `quality`. **Una vista no es un censo**, asi que aqui solo queda la anotacion.
+> **El barrido intra-dominio es quien la mira.**
+
+### `fase_affirm_buyers_remorse` es el CUARTO VERTICE del racimo transversal uno
+
+**Sana como costura, y aun asi cambia el plan del racimo de experiencia.** El
+solape, verificado contra el grafo:
+
+| `fase_affirm_buyers_remorse` | `blueprint_de_experiencia`, bloque 5 a 8 |
+|---|---|
+| paso 1: **mapea cuanto dura el periodo de silencio** entre la compra y el primer uso | paso 5: documenta el proceso actual de atencion postventa, paso a paso |
+| paso 2: **disena al menos un punto de contacto proactivo durante ese periodo** | paso 6: identifica los momentos de mayor ansiedad **y disena acciones proactivas para esos momentos** |
+| paso 5: crea un espacio explicito donde el cliente exprese dudas | paso 7: **establece seguimientos programados sin esperar a que tu cliente se queje** |
+
+> **El bloque 5 a 8 del blueprint es el tema de `fase_affirm`**, escrito otra vez
+> y en otro nodo. **La diferencia con los otros tres vertices es importante:
+> `fase_affirm` NO esta costurado. Es el nodo sano al que le duplicaron el
+> tema.**
+
+> **REGLA QUE ESTO ANADE AL RACIMO TRANSVERSAL NUMERO UNO**: el reparto del
+> destejido conjunto **tiene que mirar a `fase_affirm_buyers_remorse` como
+> DESTINO EXISTENTE antes de crear nada**. El bloque de postventa proactiva del
+> blueprint **no necesita un nodo nuevo: ya tiene casa**. **Crear uno seria
+> fabricar el quinto vertice del mismo racimo mientras se destejen los otros
+> cuatro.**
+>
+> Con esto el racimo transversal uno pasa a tener **cuatro vertices**:
+> `blueprint_de_experiencia`, `cultura_de_experiencia`, `customer_journey_mapping`
+> (los tres costurados) y **`fase_affirm_buyers_remorse`, sano y destino**.
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **52** de **128** |
-| de esas, costura **confirmada** | **29** |
-| de esas, **citas falsas** | **23** |
-| **precision de la cola** | **56%** |
+| **CITAS del instrumento leidas** | **58** de **128** |
+| de esas, costura **confirmada** | **31** |
+| de esas, **citas falsas** | **27** |
+| **precision de la cola** | **53%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
-| **TOTAL de costuras confirmadas** | **29** |
+| **TOTAL de costuras confirmadas** | **31** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **52 leidas, 29
-confirmadas, 23 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **58 leidas, 31
+confirmadas, 27 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
-**La caida no se detuvo.** La serie completa: **73% con 22 leidas, 68% con 28,
-65% con 34, 65% con 40, 61% con 46 y 56% con 52**. Cinco tandas de banda
-estrecha llevan **12 confirmadas contra 18 falsas**: por debajo de 51 la cola
-paga **dos de cada cinco**. **Y la ultima tanda dio una de seis**, que es el peor
-rendimiento medido.
+**La caida sigue, y ya suave.** La serie completa: **73% con 22 leidas, 68% con
+28, 65% con 34, 65% con 40, 61% con 46, 56% con 52 y 53% con 58**. Seis tandas
+de banda estrecha llevan **14 confirmadas contra 22 falsas**.
+
+> **La primera tanda con el orden nuevo dio dos de seis**, mejor que la anterior
+> de `quality` (una de seis) y peor que la media. **Una tanda no prueba el orden
+> nuevo**, y asi queda dicho: la decision de leer primero el nucleo se tomo por
+> donde vive la presa confirmada, no por una promesa de rendimiento.
 
 > **Ahi esta el dato que sostiene la decision de orden de abajo**, y conviene
 > verlo antes de leerla: **cuatro de las cinco falsas de la ultima tanda son de
@@ -1277,10 +1400,10 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las veintitres falsas se reparten en las mismas dos clases**: LARGO LEGITIMO
-(**7**) y FALSO POSITIVO DE SECUENCIA LEGITIMA (**16**). **Ninguna falsa ha
+**Las veintisiete falsas se reparten en las mismas dos clases**: LARGO LEGITIMO
+(**7**) y FALSO POSITIVO DE SECUENCIA LEGITIMA (**20**). **Ninguna falsa ha
 necesitado una clase nueva desde que las dos quedaron caracterizadas**, que es la
-mejor señal de que estan bien trazadas: veintitres casos y ni uno se ha salido.
+mejor señal de que estan bien trazadas: veintisiete casos y ni uno se ha salido.
 
 ### LA ASIMETRIA, recomputada del archivo, y NO es 19 de 19
 
@@ -1290,9 +1413,9 @@ sale:
 
 | | |
 |---|---:|
-| **confirmadas en nodos del NUCLEO** | **28** |
+| **confirmadas en nodos del NUCLEO** | **30** |
 | **confirmadas en nodos de MUNDO** | **1** |
-| | **29** |
+| | **31** |
 
 **La excepcion es `quality/planificacion_recoleccion_datos`**, confirmada en el
 lote C2 y registrada en esta misma ficha **con su prefijo `quality/` desde el
@@ -1301,7 +1424,7 @@ la asimetria nunca se habia recomputado.**
 
 > **Choca con lo dictado, y por eso lo traigo en vez de escribirlo redondo**: el
 > encargo daba por hecho que *las confirmadas siguen siendo todas del nucleo*.
-> **Son 28 de 29**, y la excepcion sigue siendo la misma y unica:
+> **Son 30 de 31**, y la excepcion sigue siendo la misma y unica:
 > `quality/planificacion_recoleccion_datos` sigue sin encontrar companeros de
 > mundo, tanda tras tanda.
 
@@ -1311,7 +1434,7 @@ choque nace de ahi:
 | registro | cuantas | reparto |
 |---|---:|---|
 | **Las costuras que vio el CRIBADO de la franja** (`FRANJA_INFORME.md`, apartado 4.5) | **21** | **21 de 21 en el nucleo**, verificado nodo por nodo contra el grafo |
-| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **29** | **28 en el nucleo, 1 en `quality`** |
+| **Las costuras confirmadas por la COLA del instrumento** (esta ficha) | **31** | **30 en el nucleo, 1 en `quality`** |
 
 **Son dos colas distintas, con dos poblaciones distintas, y las dos cifras son
 correctas en su sitio.** El *21 de 21* del informe se sostiene; el *todas* de
@@ -1335,18 +1458,18 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 52 citas leidas vive en
-exactamente una fila, y las filas suman 52 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 58 citas leidas vive en
+exactamente una fila, y las filas suman 58 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **18** | **19** | **37** |
+| **por debajo de 51,0** | **20** | **23** | **43** |
 | **sin señal de bloque** (solo pareja) | 0 | 0 | **0** |
-| | **29** | **23** | **52** |
+| | **31** | **27** | **58** |
 
-**Las 52, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 58, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -1399,9 +1522,15 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `desarrollo_caracteristicas_producto` | 48,3 | **falsa** |
 | por debajo de 51,0 | `abolir_inspeccion_masiva` | 48,3 | **falsa** |
 | por debajo de 51,0 | `criterios_equity_split` | 48,3 | **falsa** |
-| por debajo de 51,0 | `estratificacion_datos` | 48,2 | **falsa** |
-| por debajo de 51,0 | `distorsion_muestreo_mecanico` | 48,1 | **falsa** |
 | por debajo de 51,0 | `ratios_eficiencia_inventario` | 48,3 | confirmada |
+| por debajo de 51,0 | `estratificacion_datos` | 48,2 | **falsa** |
+| por debajo de 51,0 | `modelo_hibrido_agile_stage_gate` | 48,1 | confirmada |
+| por debajo de 51,0 | `medir_comportamiento_cliente_mvp` | 48,1 | **falsa** |
+| por debajo de 51,0 | `distorsion_muestreo_mecanico` | 48,1 | **falsa** |
+| por debajo de 51,0 | `ganar_comprension_del_cliente` | 48,0 | confirmada |
+| por debajo de 51,0 | `fase_affirm_buyers_remorse` | 48,0 | **falsa** |
+| por debajo de 51,0 | `etapa_testing_validation` | 47,5 | **falsa** |
+| por debajo de 51,0 | `wizard_of_oz_testing` | 47,4 | **falsa** |
 | por debajo de 51,0 | `propuesta_gasto_capital` | 44,1 | confirmada |
 
 > **Las dos nuevas cayeron las dos en la fila de abajo**:
@@ -1421,9 +1550,9 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 > **ninguna esta leida todavia**. La fila existe para que la primera que se lea
 > tenga sitio y no vuelva a caerse de la cuenta.
 
-**Por encima de 52 son NUEVE de nueve.** Y con las cinco tandas de banda
-dentro, el reparto de las **29 confirmadas** es: **9 por encima de 52 y VEINTE
-por debajo**
+**Por encima de 52 son NUEVE de nueve.** Y con las seis tandas de banda dentro,
+el reparto de las **31 confirmadas** es: **9 por encima de 52 y VEINTIDOS por
+debajo**
 (`key_partners` 51,7, `split_testing` 51,5, `project_close_out` 50,3,
 `blueprint_de_experiencia` 50,3, `cultura_de_experiencia` 50,2,
 `voz_del_cliente_voc` 50,2, `future_scenarios_planning` 50,1,
@@ -1433,7 +1562,8 @@ por debajo**
 `enfoque_motor_unico_crecimiento` 49,5, `principio_calidad_mvp` 49,2,
 `actualizacion_posiciones_existentes` 49,0, `analisis_tco_roi_b2b` 48,9,
 `customer_journey_mapping` 48,6, `organizacion_adaptativa` 48,5 y
-`plan_de_adquisicion_acquire` 48,3). **Mas del doble abajo que arriba.**
+`plan_de_adquisicion_acquire` 48,3, `modelo_hibrido_agile_stage_gate` 48,1 y
+`ganar_comprension_del_cliente` 48,0). **Mas del doble abajo que arriba.**
 
 > **Esto empezo siendo una correccion y ya es la tendencia.** La version original
 > decia *tres de ellas viven por debajo de 52*, sobre doce confirmadas; al cuadrar
@@ -1441,8 +1571,8 @@ por debajo**
 > de diecinueve**. **La mayoria de las costuras confirmadas del catalogo vive por
 > debajo de la franja**, es decir en el terreno donde la señal de bloque es debil.
 > **Es el argumento mas fuerte que hay contra acelerar la lectura ahi abajo**, y
-> cada tanda nueva lo hace mas fuerte, no menos. **Con 52 leidas van veinte de
-> veintinueve.**
+> cada tanda nueva lo hace mas fuerte, no menos. **Con 58 leidas van veintidos de
+> treinta y una.**
 
 > **LA FRANJA 51 a 52 NO ES UN PISO DE FALSOS: ES UNA ZONA MEZCLADA**, con dos
 > confirmadas y cuatro falsas. Y **por debajo de 51 viven CINCO costuras
@@ -1466,8 +1596,8 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **20 confirmadas contra 23 falsas**: la
-> moneda se inclino, y por primera vez hacia las falsas.
+> abajo**, donde la muestra leida da **22 confirmadas contra 27 falsas**: la
+> moneda se inclino hacia las falsas y sigue inclinandose.
 >
 > **Acelerar ahi seria pasar de largo justamente donde esta casi toda la cola, y
 > donde ya se sabe que hay costuras reales.** El compromiso de leer la cola entera
@@ -1479,8 +1609,8 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con las cinco tandas de banda dentro, en **20
-> confirmadas contra 23 falsas**. Ni piso de ruido ni terreno donde se pueda leer de corrido: una
+> mitad de la cola queda, con las seis tandas de banda dentro, en **22
+> confirmadas contra 27 falsas**. Ni piso de ruido ni terreno donde se pueda leer de corrido: una
 > moneda al aire, y con casi la mitad del tesoro dentro.
 >
 > **Correccion, y va en la direccion que menos convenia.** Esta subseccion decia
