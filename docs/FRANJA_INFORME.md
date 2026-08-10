@@ -155,16 +155,37 @@ Y ademas tiene **los pasos sueltos convertidos en nodos independientes con el
 numero en el titulo**: Paso Dos, Paso 3, Paso 4, Paso 6, Paso 10, Paso 11 y
 Paso 14.
 
-**Cinco de esos pasos aparecen DUPLICADOS**, con dos nodos distintos que
+**SIETE de esos pasos aparecen DUPLICADOS**, con dos nodos distintos que
 llevan el mismo numero y dicen lo mismo:
 
-| Paso | Los dos nodos |
-|---|---|
-| Paso 3 | `medicion_calidad` y `medicion_calidad_2` |
-| Paso 6 | `accion_correctiva_4` y `accion_correctiva_sistematica` |
-| Paso 10 | `establecimiento_metas` y `fijacion_de_metas` |
-| Paso 11 | `eliminacion_causas_error` y `eliminacion_causas_error_2` |
-| Paso 14 | `reinicio_programa_calidad` y `repeticion_programa` |
+| Paso | Los dos nodos | |
+|---|---|---|
+| Paso 3 | `medicion_calidad` y `medicion_calidad_2` | |
+| **Paso 4** | `costo_de_calidad_2` y `costo_de_calidad_3` | **NUEVO** |
+| Paso 6 | `accion_correctiva_4` y `accion_correctiva_sistematica` | |
+| Paso 10 | `establecimiento_metas` y `fijacion_de_metas` | |
+| Paso 11 | `eliminacion_causas_error` y `eliminacion_causas_error_2` | |
+| **Paso 12** | `reconocimiento` y `reconocimiento_al_desempeno` | **NUEVO** |
+| Paso 14 | `reinicio_programa_calidad` y `repeticion_programa` | |
+
+> **Los dos NUEVOS salieron al preparar la mesa de racimos, y son correccion
+> mia**: el conteo original decia cinco. Estan verificados contra el grafo y los
+> dos vienen del mismo libro de Crosby.
+>
+> - **Paso 4**: `costo_de_calidad_2` (4 pasos) y `costo_de_calidad_3` (6 pasos)
+>   **comparten el primer paso palabra por palabra** (*dale a quien te lleva las
+>   cuentas informacion detallada sobre que constituye el costo de calidad*) **y
+>   tambien el ultimo**. El `_3` es el `_2` con dos pasos mas.
+> - **Paso 12**: `reconocimiento` (3 pasos) y `reconocimiento_al_desempeno` (5
+>   pasos) predican lo mismo con otras palabras: **programa de reconocimiento no
+>   financiero, publico, y la ceremonia por encima del dinero.**
+
+> **Y un caso que mide igual pero NO es duplicado, para no inflarlo**: el **Paso
+> 7** tambien tiene dos nodos, `comite_cero_defectos` y
+> `planificacion_cero_defectos`, **pero dicen cosas distintas**: uno arma el
+> grupo de apoyo de tres o cuatro personas y el otro planifica el lanzamiento
+> (materiales, metodo, cronograma, representacion sindical). **Mismo numero,
+> distinto contenido: se anota y no se cuenta como duplicado.**
 
 O sea: la figura del numero de paso en el titulo no era cosmetica. Es un
 programa entero desmontado en piezas, con piezas duplicadas. Eso explica de un
@@ -396,7 +417,7 @@ que quedo como B en franja 28.
 
 ## 6. Correcciones mias, en limpio
 
-Cuatro errores propios que quedan aqui declarados y ya corregidos en el archivo
+Cinco errores propios que quedan aqui declarados y ya corregidos en el archivo
 (el cuarto lo encontro la muestra D, no yo):
 
 1. **Cifras mal sumadas en dos mensajes de commit.** En el checkpoint de 500
@@ -447,6 +468,14 @@ Cuatro errores propios que quedan aqui declarados y ya corregidos en el archivo
    razon; el detalle esta en el apartado 10.1, verificacion 1. **Es el unico
    veredicto que la muestra ha tenido que corregir en 41 pares leidos.**
 
+5. **Dos pasos duplicados de Crosby que no habia contado.** El apartado 4.2 decia
+   **cinco**; al preparar la mesa de racimos y volver a medir los titulos contra
+   el grafo salieron **siete**: faltaban el **Paso 4**
+   (`costo_de_calidad_2` con `costo_de_calidad_3`) y el **Paso 12**
+   (`reconocimiento` con `reconocimiento_al_desempeno`). **Corregido en el
+   apartado 4.2**, con la evidencia de cada uno y con el caso del Paso 7 anotado
+   aparte por medir igual sin ser duplicado.
+
 ---
 
 ## 7. Lo que el auditor tiene que decidir
@@ -460,8 +489,9 @@ estan CERRADOS** en las secciones 9 y 10; el resto sigue abierto.
    por nodo o de racimo entero. Trece de los treinta primeros estan dentro del
    nucleo. **Con la muestra cerrada, este punto es EL SIGUIENTE**: ver el estado
    de abajo.
-3. **Los cinco pasos duplicados del programa de Crosby**, que son el caso mas
-   limpio y mas facil de cerrar.
+3. **Los SIETE pasos duplicados del programa de Crosby** (eran cinco hasta que
+   la preparacion de la mesa encontro dos mas), que son el caso mas limpio y mas
+   facil de cerrar.
 4. **Las veintiuna costuras** de este informe, todas en nodos del nucleo, con la
    pregunta de por que ninguna aparecio en un nodo de mundo. **Queda como
    pregunta abierta con hipotesis a comprobar en el barrido** (apartado 4.5 y
