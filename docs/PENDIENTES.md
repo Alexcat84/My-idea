@@ -953,7 +953,7 @@ escribió nada de memoria**. Lo que sí quedó verificado con evidencia:
 
 | nombre | estado | evidencia |
 |---|---|---|
-| **Alexa** (alexa.com, ranking web de Amazon) | **MUERTA** | Amazon la retiró el **1 de mayo de 2022**, anunciado en diciembre de 2021; las APIs cerraron en diciembre de 2022. **NO es una entrada nueva**: esta ficha ya la daba por retirada desde la entrada del lote 22, vía `nucleo/analisis_trafico_competitivo`. **Una sola herramienta muerta, dos procedencias**: aparece en ese nodo y en el de métricas de franquicias del informe 4.7 |
+| **Alexa** (alexa.com, ranking web de Amazon) | **MUERTA** | Amazon la retiró el **1 de mayo de 2022**, anunciado en diciembre de 2021; las APIs cerraron en diciembre de 2022. **NO es una entrada nueva**: esta ficha ya la daba por retirada desde la entrada del lote 22, vía `nucleo/analisis_trafico_competitivo`. **Una sola herramienta muerta, TRES procedencias** (corregido en la entrada 4: escribí dos y son tres) |
 | **oDesk** | **MUERTA como marca** | rebautizada **Upwork en mayo de 2015**; el dominio redirige |
 | **Elance** | **MUERTA como marca** | fusionada en Elance-oDesk y **retirada tras el rebranding a Upwork** |
 | **InnoCentive** | **VIVA, con dueño nuevo** | **adquirida por Wazoku en julio de 2020**; sigue operando dentro del grupo |
@@ -971,22 +971,168 @@ escribió nada de memoria**. Lo que sí quedó verificado con evidencia:
 > | **verificadas** | **12** |
 >
 > **Seis muertas de doce verificadas: la mitad.**
-Quedan por verificar: Empty Miles Service, RentaGreenBox, EcoNation, Minitab,
-TrafficEstimate.com, Google Analytics, Energy Star, VMware, Google Keyword
-Planner, Google Trends, GS1, EPCglobal, Optimizely, Visual Website Optimizer,
-Unbounce, SEMrush, SpyFu, y las plataformas generales (Google, LinkedIn,
-Facebook, Amazon).
-
-**Lo que esto cambia para la ficha, y es el argumento del barrido**: de **doce**
-verificadas, **seis** están muertas, y quedan **dieciocho** nombres propios del
-catálogo sin verificar. El informe de la franja tiene **veinticuatro
-nombres propios anotados sin verificar**. No es una predicción decir que habrá
-más; es la razón para verificarlos.
+> **Los dieciocho que quedaban se verificaron el mismo día: ver la entrada 4,
+> que cierra el lote y corrige esta cifra.** El censo entero no va en seis
+> muertas de doce sino en **siete de treinta**, y el motivo de la diferencia es
+> el hallazgo, no un error de suma.
 
 > **Por qué esta ficha vale la pena aunque hoy tenga una sola entrada**: el
 > catálogo nombra herramientas en más sitios, y **ninguna revisión las ha
 > barrido**. La primera que apareció, apareció **de rebote**. Cuando se despierte,
 > lo primero es **el barrido**, no la entrada suelta.
+
+### Entrada 4 (10 ago 2026): EL LOTE CIERRA, y con él aparece una segunda forma de caducar
+
+**Los dieciocho nombres que quedaban abiertos están verificados con evidencia y
+el lote de veinticuatro queda cerrado.** El resultado no es el que la ficha
+esperaba, y **el hallazgo no es la cuenta de muertas: es que hay DOS formas de
+caducar y el censo solo estaba contando una.**
+
+#### Las tres que no siguen tal como el catálogo las nombra
+
+| nombre | estado | evidencia |
+|---|---|---|
+| **Visual Website Optimizer** | **MUERTA COMO MARCA** | Wingify la rebautizó **VWO en junio de 2014**. El producto vive; **el nombre que usa el catálogo no** |
+| **Empty Miles Service** (VICS / GS1) | **NO VERIFICABLE**, con el dueño desaparecido | VICS firmó la fusión con GS1 US el **10 sep 2012** y la completó a final de año. **No encontré página viva del servicio ni anuncio de cierre**, así que no lo declaro muerto |
+| **RentaGreenBox** | **NO VERIFICABLE, FUENTES EN CONFLICTO** | **Crunchbase la da por cerrada de forma permanente**; **Yelp muestra local activo en Huntington Beach a julio de 2026** y el sitio propio responde. **No lo fuerzo en ninguna dirección** |
+
+#### Las quince vivas, y seis de ellas vivas de otra manera
+
+| nombre | estado | evidencia |
+|---|---|---|
+| **GS1** | **VIVA, y mandando** | gobierna GTIN/EAN/UPC desde 1973 y conduce **Sunrise 2027**, la transición al código 2D en punto de venta |
+| **EPCglobal** | **VIVA COMO ESTÁNDAR, no como organización aparte** | se constituyó **dentro de GS1 en 2005**; hoy es una iniciativa de GS1, no una entidad independiente |
+| **Google Analytics** | **VIVO EL NOMBRE, MUERTA LA VERSIÓN** | **Universal Analytics dejó de recoger datos el 1 jul 2023**; en jul 2024 se cortaron el acceso y la API **y se borraron los datos**. Solo existe GA4 |
+| **Energy Star** | **VIVO, Y CAMBIÓ DE CASA** | la EPA propuso eliminarlo en 2025, con cero dólares en el presupuesto FY2026; **sobrevivió mudándose al Departamento de Energía**, con acuerdo EPA/DOE de marzo de 2026 |
+| **VMware** | **VIVO, MUERTA LA FORMA DE COMPRARLO** | Broadcom **terminó las licencias perpetuas en 2024** y pasó todo a suscripción por núcleo; **el hipervisor vSphere gratuito y los Essentials Kits se descontinuaron** |
+| **Optimizely** | **VIVA, CON DUEÑO Y ALCANCE NUEVOS** | Episerver la compró en oct 2020 y **en ene 2021 rebautizó la empresa entera como Optimizely**; dejó de ser una herramienta de pruebas A/B para ser una suite |
+| **Unbounce** | **VIVA, CON DUEÑO NUEVO** | controlada por Crest Rock Partners; **fusionada con Insightly en julio de 2024** |
+| **Minitab** | **VIVO** | versión 22.4.0; entregas del Solution Center en feb, may y jul de 2026 |
+| **Google Keyword Planner** | **VIVO** | dentro de Google Ads, sección Planificación; exige cuenta de Ads |
+| **Google Trends** | **VIVO** | activo, con **API en alfa desde jul 2025** y panel Gemini en Explorar |
+| **SEMrush** | **VIVA** | operando en 2026 |
+| **SpyFu** | **VIVA** | operando en 2026 |
+| **TrafficEstimate.com** | **VIVA** | sigue apareciendo en guías de herramientas de 2026 y su propio tráfico se mide |
+| **EcoNation** | **VIVA, evidencia débil** | sitio propio activo con referencias de obra. **No consulté el registro mercantil belga**, y eso es lo que zanjaría la pregunta |
+| **las plataformas generales** (Google, LinkedIn, Facebook, Amazon) | **VIVAS** | con una nota: **Facebook es Meta desde octubre de 2021** como empresa, aunque el producto conserve el nombre |
+
+---
+
+#### EL HALLAZGO: MUERTA y CAMBIADA son dos cosas distintas
+
+**De las quince vivas, SEIS no están vivas como el catálogo las describe.** Y el
+caso que lo enseña sin discusión posible es **Google Analytics**:
+
+> **El nombre está perfectamente vivo. Todo lo que se escriba sobre la interfaz
+> de Universal Analytics es papel mojado desde el 1 de julio de 2023, y desde
+> julio de 2024 ni siquiera se pueden mirar los datos viejos.** Un nodo que diga
+> *usa Google Analytics* sigue en pie; uno que describa dónde hacer clic dentro
+> manda al lector a una pantalla que ya no existe.
+>
+> **Una herramienta institucional no muere: muta.** Y una instrucción escrita
+> contra la forma vieja **caduca exactamente igual de mal** que una que nombra
+> una empresa cerrada. **La diferencia es que la muerta se detecta abriendo el
+> enlace y la mutada no**, porque el enlace abre perfectamente.
+
+**Por eso el barrido no puede preguntar solo si la herramienta existe.** Tiene
+que preguntar **si el paso que la usa sigue siendo ejecutable**, que es otra
+pregunta y bastante más cara de contestar.
+
+#### LA MORTALIDAD NO ES DEL CATÁLOGO: ES DEL TIPO DE HERRAMIENTA
+
+**La cifra bajó mucho, y bajó por una razón que hay que decir en vez de
+celebrarla.** La primera mitad del censo daba **seis muertas de doce, la mitad**.
+Con el lote cerrado da **siete de treinta, el 23%**. **No es que el catálogo haya
+mejorado: es que las doce primeras estaban sesgadas**, porque salieron de nodos
+de marketing y de mercados de trabajo por encargo, que es justo donde se citan
+productos comerciales de nicho por su nombre.
+
+| | muertas | vivas | no verificables | total |
+|---|---:|---:|---:|---:|
+| **antes del lote** | 6 | 5 | 1 | **12** |
+| **el lote** | **1** | **15** | **2** | **18** |
+| **CENSO ENTERO** | **7** | **20** | **3** | **30** |
+
+> **Las siete muertas son siete productos comerciales de nicho**: Alexa, Compete,
+> Perfect Audience, The Deck, oDesk, Elance y el nombre Visual Website Optimizer.
+> **Ninguna es un estándar, una institución ni un producto de una plataforma
+> grande.**
+>
+> **Y al revés: de las siete institucionales o de plataforma grande** (GS1,
+> EPCglobal, Energy Star, Google Analytics, Keyword Planner, Trends y las
+> plataformas generales), **cero muertas y cuatro cambiadas de forma material.**
+>
+> **La regla de redacción que sale de aquí**: nombrar un producto comercial de
+> nicho **es apostar**; nombrar un estándar o una institución **es seguro para el
+> nombre y no lo es para el procedimiento**. **Las dos apuestas se pierden, solo
+> que de maneras distintas.**
+
+---
+
+#### LAS SEIS CASAS DE LAS SIETE MUERTAS, verificadas contra el grafo
+
+**Esto es lo que le sirve al barrido, y no la lista de nombres.** Las siete
+muertas viven en **seis nodos**, cinco del núcleo y uno de franquicias:
+
+| nodo | dominio | muertas que nombra | dónde |
+|---|---|---|---|
+| `analisis_trafico_competitivo` | core | **Alexa, Compete** | resumen y **paso 1**; Alexa además en el **paso 6** |
+| `capturar_conocimiento_de_mercado` | core | **Alexa, Compete** | **solo en el resumen teórico** |
+| `medicion_resultados_marketing_franquicia` | franquicias | **Alexa** | **paso 3**, junto a TrafficEstimate.com y Google Analytics |
+| `retargeting_display` | core | **Perfect Audience, The Deck** | **pasos 1 y 4** |
+| `seo_long_tail` | core | **oDesk, Elance** | **el mismo paso**, como par |
+| `optimizacion_embudo_get_customers` | core | **Visual Website Optimizer** | un paso, junto a Optimizely y Unbounce, **que sí viven** |
+
+> **DOS CORRECCIONES A LO QUE YO MISMO ESCRIBÍ HOY EN ESTA FICHA**, y las dos
+> salen de contar bien en vez de suponer:
+>
+> 1. **Alexa vive en TRES nodos, no en dos.** Escribí *dos procedencias* esta
+>    misma mañana. Falta `capturar_conocimiento_de_mercado`.
+> 2. **Compete vive en DOS nodos, no en uno.** La entrada del lote 22 solo
+>    registraba `analisis_trafico_competitivo`.
+>
+> **La causa de las dos es la misma**: busqué por subcadena. `Alexa` da diez
+> aciertos en el grafo y **siete son *Osterwalder, Alexander***; `Elance` da tres
+> y **dos son la palabra *freelance***. **Los nombres propios cortos hay que
+> buscarlos con frontera de palabra**, y esa es la lección de instrumento.
+
+#### EL CATÁLOGO YA CONTIENE SU PROPIO REMEDIO, y no lo sabe
+
+**`capturar_conocimiento_de_mercado` y `analisis_trafico_competitivo` cuentan lo
+mismo y lo escriben distinto**, y esa diferencia es exactamente el arreglo que
+esta ficha viene proponiendo desde la entrada 1:
+
+| | qué dice el paso |
+|---|---|
+| `analisis_trafico_competitivo`, paso 1 | *Buscar y comparar tráfico de competidores con herramientas como **Alexa o Compete*** |
+| `capturar_conocimiento_de_mercado`, paso 3 | *Usar **herramientas de medición de tráfico web** y rankings de app stores* |
+
+> **El segundo describe la capacidad y el primero nombra dos productos muertos.
+> El segundo no caduca; el primero caducó en 2022.** No hay que inventar la
+> redacción arreglada: **está escrita, en un nodo hermano, dentro del mismo
+> dominio y con la misma fuente.**
+>
+> **Y hay una anomalía que conviene mirar**: el catálogo nombra **oDesk y
+> Elance**, las dos marcas muertas, y **no nombra Upwork ni una sola vez**, que
+> es la viva en la que las dos se fundieron. **Verificado: cero apariciones.**
+
+#### DOS COSAS QUE NO CIERRO, y las dejo abiertas a propósito
+
+1. **`Quantcast`: no revierto el veredicto anterior, pero queda marcado.** La
+   entrada del lote 22 lo dio por vivo, y **la empresa lo está**. Pero el
+   producto que el paso 6 pide, **Quantcast Measure**, aparece **como
+   descontinuado en directorios de software y como activo en las páginas propias
+   de Quantcast**. **Fuentes en conflicto: se queda como estaba, con la marca
+   puesta.** Es, si se confirma, otro caso de *vivo el nombre y muerta la
+   versión*.
+2. **Un par de nodos casi gemelos apareció de rebote**, `captura_conocimiento_mercado`
+   (7 pasos) y `capturar_conocimiento_de_mercado` (5 pasos), **mismo dominio y
+   misma fuente**. **No lo juzgo aquí**: la cola del cribado intra ya lo tiene
+   fichado en el **puesto 941** con semejanza 0,8051, y ahí se lee cuando le
+   toque, en orden.
+
+**Ningún nodo se toca desde esta ficha.** Lo que cambia es que el barrido ya
+tiene sus seis casas, su orden de prioridad y su segunda pregunta.
 
 ### Entrada 3 (lote 22, puesto 340): el nodo que más herramientas nombra
 
