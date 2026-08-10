@@ -1817,7 +1817,7 @@ nodo esta sano. **Corte 3 y confirmada**, la segunda de esta tanda.
 | | con dos o mas fuentes | con una sola |
 |---|---:|---:|
 | **las 46 confirmadas** | **43 (93%)** | 3 |
-| **las 55 falsas** | **4 (7%)** | 51 |
+| **las 56 falsas** | **4 (7%)** | 52 |
 
 **La señal se refuerza**: subio de 91% a 93% en las confirmadas y sigue en el
 entorno del 10% en las falsas. **Cinco de las seis citas de esta tanda, elegidas
@@ -2456,10 +2456,10 @@ producto y proceso, y de ahi a la verificacion y al plan de lanzamiento.
 | | citas leidas | confirmadas | tasa |
 |---|---:|---:|---:|
 | **nodos de DOS o mas libros** | **47** | **43** | **91%** |
-| **nodos de UN solo libro** | **54** | **3** | **6%** |
+| **nodos de UN solo libro** | **55** | **3** | **5%** |
 
 **Las 47 de dos libros estan todas leidas desde la tanda 17 anterior.** Lo que
-queda de la cola, **las 27 citas restantes, es de un solo libro sin excepcion.**
+queda de la cola, **las 26 citas restantes, es de un solo libro sin excepcion.**
 
 > **Consecuencia para lo que queda, y hay que decirla sin adornos**: si el
 > predictor se sostiene, **de las 27 que faltan cabe esperar una o dos costuras,
@@ -2482,24 +2482,58 @@ queda de la cola, **las 27 citas restantes, es de un solo libro sin excepcion.**
 
 ---
 
+## TANDA 18: una sola cita, y el corte 7 tampoco basta
+
+**`quality/control_estadistico_de_procesos`, 10 pasos. Bloque 47,2, pareja 53,0,
+corte 7.** *Juran's Quality Handbook* (Defeo), **fuente unica**.
+
+**FALSA. SECUENCIA LEGITIMA**, y la prueba esta en el par de pasos que mas se
+parecen:
+
+| paso | que dice | que hace |
+|---:|---|---|
+| **6** | *decidir la linea central y los limites de control (usualmente mas o menos 3 sigma)* | **elige la REGLA**, antes de tener datos |
+| **9** | *calcular limites de control y definir instrucciones de interpretacion y accion* | **aplica esa regla A LOS DATOS** ya recogidos |
+
+> **Entre los dos hay tres pasos que son justamente lo que falta para poder
+> calcular**: elegir subgrupos racionales (7) y montar el sistema de recoleccion
+> (8). **El 9 no repite al 6: lo continua**, porque sin el 7 y el 8 no hay con
+> que calcular nada. **Es la doctrina de continua-o-repite en su forma mas
+> limpia.**
+
+**Los diez pasos son un solo procedimiento de principio a fin**, del que
+caracteristica graficar hasta interpretar el grafico. **No hay segundo bloque: hay
+un procedimiento largo**, como las seis de la tanda 17.
+
+> **Y el corte 7 se estrena en falso.** Hasta ahora la ficha tenia medido que el
+> corte 3 no predice; **este es el primer corte alto que se lee en la banda baja
+> y tambien sale falso**. La lectura que deja: **el corte mide donde cambia el
+> vocabulario, no si hay dos narraciones.** Un procedimiento de diez pasos cambia
+> de vocabulario varias veces por dentro sin dejar de ser uno solo.
+
+**DECIMONOVENA cita de una sola fuente seguida sin una costura.** La racha sigue
+viva: seis de la tanda 15, seis de la 16, seis de la 17 y esta.
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **101** de **128** |
+| **CITAS del instrumento leidas** | **102** de **128** |
 | de esas, costura **confirmada** | **46** |
-| de esas, **citas falsas** | **55** |
-| **precision de la cola** | **46%** |
+| de esas, **citas falsas** | **56** |
+| **precision de la cola** | **45%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
 | **TOTAL de costuras confirmadas** | **46** |
 
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **101 leidas, 46
-confirmadas, 55 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **102 leidas, 46
+confirmadas, 56 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
 **La serie completa**: 73% con 22 leidas, 68% con 28, 65% con 34, 65% con 40,
 61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70, 57% con 76, 55% con
-82, 51% con 88, 48% con 94, 48% con 95 y **46% con 101**.
+82, 51% con 88, 48% con 94, 48% con 95, 46% con 101 y **45% con 102**.
 
 > **Las dos subidas tuvieron causa y las dos bajadas tambien.** Las tandas 12 y
 > 13 se ordenaron por la señal de dos fuentes y subieron la precision; **la 14
@@ -2606,8 +2640,8 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las cincuenta y cinco falsas se reparten en TRES clases**: LARGO LEGITIMO
-(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**47**) y **DUO LEGITIMO (1)**.
+**Las cincuenta y seis falsas se reparten en TRES clases**: LARGO LEGITIMO
+(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**48**) y **DUO LEGITIMO (1)**.
 
 > **La tercera clase se abrio en la tanda 13, despues de treinta y dos falsas sin
 > necesitarla**, y se abrio porque la lectura cambio de orden: **al leer por la
@@ -2679,16 +2713,16 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 101 citas leidas vive en
-exactamente una fila, y las filas suman 101 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 102 citas leidas vive en
+exactamente una fila, y las filas suman 102 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **35** | **50** | **85** |
+| **por debajo de 51,0** | **35** | **51** | **86** |
 | **sin señal de bloque** (solo pareja) | 0 | **1** | **1** |
-| | **46** | **55** | **101** |
+| | **46** | **56** | **102** |
 
 **Las seis nuevas de la banda 46,6 a 47,4 caen las seis en la fila de abajo**
 (46,6 a 47,4 esta por debajo de 51,0): tres confirmadas (`cliente_disena_producto`
@@ -2696,7 +2730,7 @@ exactamente una fila, y las filas suman 101 clavado.**
 (`ceo_de_guerra_vs_paz` 46,7, `cap_table_basico` 46,9, `metricas_accionables`
 47,0). La fila de abajo pasa de **20 y 23** a **23 confirmadas y 26 falsas**.
 
-**Las 101, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 102, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -2765,6 +2799,7 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `wizard_of_oz_testing` | 47,4 | **falsa** |
 | por debajo de 51,0 | `mapa_de_canal_de_ventas` | 47,4 | confirmada |
 | por debajo de 51,0 | `export_administration_regulations` | 47,4 | **falsa** |
+| por debajo de 51,0 | `control_estadistico_de_procesos` | 47,2 | **falsa** |
 | por debajo de 51,0 | `metricas_accionables` | 47,0 | **falsa** |
 | por debajo de 51,0 | `cap_table_basico` | 46,9 | **falsa** |
 | por debajo de 51,0 | `seleccion_ceo_fundador` | 46,8 | confirmada |
@@ -2874,7 +2909,7 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **37 confirmadas contra 55 falsas**: la
+> abajo**, donde la muestra leida da **37 confirmadas contra 56 falsas**: la
 > moneda ya no esta en el filo, y el motivo es que se acabaron los nodos de dos
 > libros.
 >
@@ -2888,7 +2923,7 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con la tanda 17 dentro, en **37 confirmadas contra 55
+> mitad de la cola queda, con la tanda 18 dentro, en **37 confirmadas contra 56
 > falsas**.
 >
 > **CUARTO PASAJE DERIVADO QUE SE ENCUENTRA DESCUADRADO, y hay que decirlo aqui

@@ -554,3 +554,52 @@ La cola completa, con los titulos de los dos lados y las marcas de procedencia, 
 ## Que hacer con el tamano de esta cola
 
 **Si la cola sale grande, no es un fallo del instrumento: es el tamano del problema.** El paso de lectura lo deciden el auditor y el fundador, como se hizo con la franja bajo el umbral. Las palancas, en orden de menor a mayor perdida de cobertura: **subir el umbral semantico** (la distribucion de arriba dice cuanto), **leer por dominio** en vez de por cola global, y **ordenar por senal** dejando la cola larga para tandas posteriores. **Lo que no se puede hacer es podarla en silencio**: si se corta, se escribe donde se corto y cuanto quedo sin mirar.
+
+---
+
+## ANOTACION A MANO, POSTERIOR A LA GENERACION: la calibracion del eje de titulo
+
+**AVISO DE PROCEDENCIA: esta seccion NO la escribio `scripts/intra_dominio.py`.
+Se anadio a mano el 11 ago 2026 y una regeneracion del resumen la borraria.** La
+cola se regenero una sola vez, como manda el encargo largo, asi que no deberia
+haber regeneracion; **si la hay, esta seccion hay que recuperarla del historial.**
+
+### El falso positivo conocido: PLANTILLA DE ID
+
+**Los puestos 427 y 428 del cribado dispararon por titulo y salieron sanos los
+dos**, y no por casualidad: **los dos son el mismo molde.**
+
+| puesto | el par | titulo | semantica |
+|---:|---|---:|---:|
+| 427 | `key_partners_hypothesis` contra `key_resources_hypothesis` | **84,6** | **0,6992** |
+| 428 | `plan_gestion_calidad` contra `plan_gestion_cambios` | **84,6** | **0,7077** |
+
+> **El molde es `X_hypothesis` y `plan_gestion_X`**: dos ids construidos con la
+> misma plantilla sobre contenidos que no se parecen. **La semantica de los dos
+> esta muy por debajo del umbral de 0,78** y acerto; **el titulo se dejo enganar
+> por la plantilla.**
+>
+> **Y en el 427 el propio nodo desmiente el par**: el paso 4 de
+> `key_partners_hypothesis` manda *distinguir con claridad entre socios y
+> recursos clave*.
+
+### LA DECISION DEL AUDITOR, y sus tres partes
+
+> **1. El umbral NO se toca a mitad de corrida.** Subir el umbral de titulo con
+> 449 pares ya leidos partiria la cola en dos poblaciones distintas y ningun
+> conteo posterior seria comparable con los anteriores. **La cola se lee entera
+> con el instrumento con el que empezo.**
+>
+> **2. PLANTILLA DE ID queda registrado como falso positivo CONOCIDO**, y el
+> cribador **lo despacha en la razon del veredicto** en vez de tratarlo como
+> hallazgo nuevo cada vez. Basta con nombrarlo y seguir.
+>
+> **3. La leccion viaja al diseno del proximo instrumento**, no a este: **un eje
+> de titulo que compare ids deberia descontar el prefijo o el sufijo comun de
+> plantilla antes de puntuar**, o exigir que el titulo dispare acompanado de una
+> semantica minima. **Aqui no se cambia nada; alli no se repite.**
+
+**Lo que esto NO significa**: el eje de titulo no queda desacreditado. Sigue
+siendo el que caza los pares de id casi identico que la semantica no siempre
+sube, que es justo para lo que se puso. **Lo que queda medido es su modo de
+fallo, y ahora tiene nombre.**

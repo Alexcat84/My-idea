@@ -896,6 +896,173 @@ mismo encuadre nacional, el encuadre es del dominio, no de los nodos.
 **Sigue sin tocarse nada.** Esta entrada solo cambia de qué tamaño es el
 problema y por dónde conviene agarrarlo.
 
+
+## Ficha permanente: `campos-sucios-dataset`
+
+**DESPIERTA el 11 ago 2026.** Estaba dormida desde el gradiente, donde solo tenía
+notas cosméticas sueltas (un id en inglés, un gemelo cirílico). **La despierta el
+defecto de los tokens de fuente que salió de la tanda 17 de costuras, y al medirlo
+entero resultó ser mucho más grande de lo que la nota anunciaba.**
+
+**Todas las cifras de esta ficha están recontadas del grafo el 11 ago 2026**, sobre
+`dataset/metadata/master_graph.json`: **3.835 nodos en disco, 314 deprecados, 3.521
+activos.**
+
+---
+
+### 1. EL HALLAZGO: el campo `fuente` no guarda el título de la obra, guarda el NOMBRE DEL ARCHIVO
+
+**Esto no se sabía, y explica de golpe tres defectos que parecían distintos.**
+
+**La firma es inconfundible y son tres marcas juntas:**
+
+| marca | qué se ve | ejemplo real del grafo |
+|---|---|---|
+| **truncado a 31 caracteres exactos** | el título se corta a mitad de palabra | `Juran's Quality Handbook_ The C` |
+| **guion bajo donde iba `:` o `.`** | el saneado de nombre de archivo | `Co-Intelligence_ Living and Wor`, `Reason, J. T_` |
+| **código de documento desnudo** | ni siquiera hay título | `OSHA3885`, `SMALL_BUSINESS` |
+
+> **Las tres son la misma avería: alguien guardó el nombre del fichero PDF en vez
+> del título de la obra.** `OSHA3885` y `OSHA3886` **son números de publicación
+> reales de OSHA**, o sea nombres de archivo; `SMALL_BUSINESS` es otro. Y el corte
+> a **31 caracteres exactos** no lo produce una persona: **lo produce un programa.**
+
+#### La medición, con vivos y deprecados separados
+
+| defecto | nodos en disco | de esos, deprecados | **VIVOS** |
+|---|---:|---:|---:|
+| **título truncado a 31 caracteres** | **1.212** | 93 | **1.119** |
+| **código de documento desnudo** | **102** | 32 | **70** |
+| **UNIÓN (no se solapan)** | **1.314** | 125 | **1.189** |
+
+**1.314 de 3.835 nodos, el 34,3% del catálogo, declaran una fuente que no es el
+título de la obra.**
+
+**Las diez grafías truncadas, con su peso:**
+
+| grafía tal cual está en el campo | nodos |
+|---|---:|
+| `Juran's Quality Handbook_ The C - Joseph A. Defeo` | **570** |
+| `The Green to Gold Business Play - Daniel C. Esty` | **242** |
+| `Managing the Risks of Organizat - Reason, J. T_` | 112 |
+| `The Field Guide to Understandin - Dekker, Sidney;` | 91 |
+| `The Hard Thing About Hard Thing - Ben Horowitz` | 60 |
+| `Co-Intelligence_ Living and Wor - Ethan Mollick` | 51 |
+| `Change by Design, Revised and U - Tim Brown` | 43 |
+| `The Field Guide to Understandin - Dekker, Sidney` | 27 |
+| `Essentials of Supply Chain Mana - Michael H. Hugos` | 17 |
+| `Guia de empaque para transporte` | 1 |
+
+**Los tres códigos desnudos, todos de `health_safety`:**
+
+| token | en disco | deprecados | **vivos** |
+|---|---:|---:|---:|
+| `SMALL_BUSINESS` | 51 | 4 | **47** |
+| `OSHA3886` | 27 | **20** | **7** |
+| `OSHA3885` | 24 | 8 | **16** |
+| | **102** | **32** | **70** |
+
+> **CORRECCIÓN DE MI PROPIA CIFRA, y va aquí porque la escribí hace un día.** En
+> la tanda 17 escribí que los 102 eran *de los 283 nodos de `health_safety`, más
+> de un tercio del dominio*. **Está mal por partida doble**: mezclé el conteo en
+> disco (102) con el de activos (283). Los números reales son
+> **102 de 332 en disco, el 30,7%**, y **70 de 283 activos, el 24,7%**. **No es
+> más de un tercio ni por una base ni por la otra.**
+>
+> El error es el mismo de siempre: **dividir dos cifras que no se cuentan sobre la
+> misma población.**
+
+### 2. LA MISMA OBRA ESCRITA DE VARIAS MANERAS: once libros, 1.178 nodos
+
+**Consecuencia directa de lo anterior**, porque unas extracciones truncaron y otras
+no. **Once obras** aparecen con dos o tres grafías **que no añaden ninguna
+información**:
+
+| obra | grafías | nodos | en qué se diferencian |
+|---|---:|---:|---|
+| *The Startup Owner's Manual* | **3** | **234** | *Steve Blank* / *Blank, Steve* / sin autor |
+| *Venture Deals* | 2 | 142 | con y sin *Brad Feld* |
+| *Essentials of Supply Chain Management* | 2 | 135 | una **truncada** |
+| *The Founder's Dilemmas* | 2 | 130 | con y sin *Wasserman, Noam* |
+| *The Field Guide to Understanding...* | 2 | 118 | **solo un punto y coma final** |
+| *The Hard Thing About Hard Things* | **3** | 106 | una **truncada**, otra sin autor |
+| *Financial Intelligence for Entrepreneurs* | 2 | 86 | con y sin autores |
+| *A Project Manager's Book of Forms* | 2 | 67 | con y sin autora |
+| *Change by Design* | 2 | 56 | con y sin *Tim Brown* |
+| *Business Model Generation* | **3** | 55 | *(Osterwalder)* / *- Osterwalder* / *- Osterwalder, Alexander* |
+| *The Art of Thought* | 2 | 49 | *Wallas, Graham* / *Graham Wallas* |
+| | | **1.178** | |
+
+> **Lo que esto rompe, y no es teórico**: cualquier conteo por libro hecho con
+> igualdad de cadena **cuenta once obras como veintiséis**. El caso de Dekker es el
+> más ridículo de todos: **118 nodos partidos en dos grupos por un punto y coma.**
+
+#### DOS COSAS QUE NO SON ESTE DEFECTO, y las separo para que nadie las arregle por error
+
+1. **La citación por capítulo SÍ añade información y no se toca.** *Edwards et al.*
+   (30 grafías), *DeMarco y Lister* (13), *Hubbard* (10), *Lindstrom* (7),
+   *Rushton* (3), *Muller* (3) y la *Guía FedEx* (2) citan capítulo o sección.
+   **Eso es buena práctica, no suciedad**, aunque tenga el mismo efecto de romper
+   los conteos por cadena.
+2. **`OSHA3885` y `OSHA3886` NO son dos grafías de un documento: son dos
+   documentos distintos.** Mi primera agrupación automática los juntó porque
+   normalizaba por prefijo. **Es un artefacto de mi propio análisis y lo declaro
+   antes de que se convierta en un arreglo equivocado.**
+
+### 3. LO QUE YA ESTABA ANOTADO Y SIGUE EN PIE, verificado hoy
+
+**La sección B.2 de `docs/AUDITORIA_MOTOR.md` sigue siendo exacta**, recontada:
+
+| clave anómala | nodos | qué es |
+|---|---:|---|
+| `fuentes_adicionales` | **4** | `arquetipos_de_cliente`, `composicion_board_directors`, `definicion_startup`, `preferencia_de_liquidacion` |
+| `fase_проekto` | **1** | `crosby_habilidad_transmision`, **gemelo cirílico** |
+| `fase_project` | **1** | `mapa_flujo_trabajo_cliente`, gemelo en inglés |
+
+> **PRECISIÓN sobre las otras dos claves que un barrido ingenuo marcaría**:
+> `ids_alias` (**309** nodos) y `merged_originals` (**269**) **no son suciedad**:
+> están declaradas y son del consolidador. Su problema es otro, y está en la
+> sección B.3 de la auditoría: **nadie las lee.** No se tocan desde aquí.
+
+**Y la nota cosmética que abrió esta ficha sigue viva**: hay ids del núcleo escritos
+en inglés (`quality_audit` frente a `quality/auditoria_calidad`). **No lleva cifra
+porque no la he medido**, y medirla exige decidir antes qué cuenta como id inglés.
+
+---
+
+### 4. EL REMEDIO CANDIDATO: una tabla de mapeo, un commit
+
+> **UNA TABLA DE MAPEO de grafía a título canónico, aplicada en la pasada única, en
+> UN commit.** El campo `fuente` tiene **129 grafías distintas** en todo el
+> catálogo: **la tabla cabe en una pantalla** y la sustitución es mecánica.
+
+**Cómo se construye, en orden y sin ambigüedad:**
+
+1. **Los 102 códigos desnudos** se resuelven a mano: son tres, y **`OSHA3885` y
+   `OSHA3886` son publicaciones identificables por su número**.
+2. **Las diez truncadas** se completan al título real. **No se pueden reconstruir
+   por programa**, porque los últimos caracteres se perdieron: hay que mirar el
+   original.
+3. **Las once obras con varias grafías** se colapsan a una sola forma, y **la forma
+   canónica se decide una vez**: título más autor, con un solo criterio de orden
+   del nombre.
+4. **Las citas por capítulo se conservan tal cual**, y lo que se canoniza es solo su
+   prefijo de obra.
+
+**Y el remedio que impide la reincidencia, que es lo que la auditoría ya pedía
+para las claves**: **una lista blanca de fuentes en el Gate 0**. Si un nodo nuevo
+declara una `fuente` que no está en la tabla, **el gate lo para**. Sin eso, la
+próxima extracción vuelve a meter nombres de archivo.
+
+> **Prioridad, dicha con honestidad**: esto **no rompe nada hoy**. El lector no ve
+> el campo `fuente` y el motor no lo usa para decidir. **Lo que rompe es todo
+> trabajo de análisis que agrupe por obra**, y esta campaña ya tropezó con ello
+> dos veces: en el racimo de la apertura de Customer Validation y en la tanda 17
+> de costuras. **Es barato, es de higiene, y cada análisis que se haga antes de
+> arreglarlo hay que hacerlo con la tabla en la mano.**
+
+---
+
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
 
 **Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no
