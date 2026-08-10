@@ -125,7 +125,7 @@ marco.
 - **`costo_de_calidad`**: la ficha lo tiene marcado **sin leer**. Con el Paso 4
   ahora contado como duplicado, **este es el hueco vivo de este grupo**.
 
-**VISTO DEL FUNDADOR: pendiente.**
+**VISTO DEL FUNDADOR: APROBADA, 9 ago 2026.** Se ejecuta la recomendacion del auditor.
 
 ---
 
@@ -192,7 +192,7 @@ misma prueba que el gradiente ya usa entre mundo y nucleo.
   como repeticion.**
 - **Los cinturones** llegan sin leer: es el racimo mas nuevo de la mesa.
 
-**VISTO DEL FUNDADOR: pendiente.**
+**VISTO DEL FUNDADOR: APROBADA, 9 ago 2026.** Se ejecuta la recomendacion del auditor.
 
 ---
 
@@ -258,7 +258,7 @@ de catalogo: **es lo que la gente lee.**
   `cradle_to_cradle_concepto` como puerta del tema, y **la cola lo verifico sola
   despues**. Hay precedente de que este racimo se arregla bien.
 
-**VISTO DEL FUNDADOR: pendiente.**
+**VISTO DEL FUNDADOR: APROBADA, 9 ago 2026.** Se ejecuta la recomendacion del auditor.
 
 ---
 
@@ -313,11 +313,45 @@ que apuntaba a el.**
 > y van por renombre o alias**, porque en los dos el contenido esta sano. **Fusionar
 > ahi seria arreglar un nombre borrando un nodo bueno de pago.**
 
-**VISTO DEL FUNDADOR: pendiente.**
+**VISTO DEL FUNDADOR: APROBADA, 9 ago 2026.** Se ejecuta la recomendacion del auditor.
 
 ---
 
-## 6. Lo que esta mesa NO decide
+## 6. El visto del fundador, y la clausula que lo acompana
+
+**Las cuatro decisiones quedan APROBADAS el 9 de agosto de 2026**, las cuatro por
+la recomendacion del auditor:
+
+| decision | que queda aprobado |
+|---:|---|
+| **1** | **serie declarada**: nodo-programa unico, un nodo por paso, y el numero en el titulo pasa a ser legitimo |
+| **2** | **sin cuota**: continua o repite, par a par dentro del racimo |
+| **3** | **entran enteros** a la pasada unica, con **prioridad UX** |
+| **4** | **familia unica** de ids, con continua o repite y **fusion con alias** |
+
+### La clausula general
+
+> **Lo demas pendiente se ejecuta DESPUES de solventar esto**, salvo lo que haga
+> falta **adelantar para sellar un hueco**.
+
+**Lo que la clausula permite y lo que no**, escrito para que no se estire:
+
+- **Permite adelantar** un trabajo pendiente cuando **sin el quedaria un hueco
+  abierto** en lo que se esta ejecutando. Sellar un hueco es la unica excusa.
+- **No permite** empezar un frente nuevo porque venga a mano ni porque sea
+  barato. El orden es el orden.
+- **Cuando algo se adelante, se escribe que hueco venia a sellar.** Sin esa
+  linea, un adelanto es indistinguible de un desvio.
+
+### Estado de la mesa
+
+**CERRADA como insumo del plan de la pasada unica.** Las cuatro decisiones
+estructurales estan tomadas; **lo que sigue no es decidir, es planificar la
+ejecucion** con estas cuatro como marco.
+
+---
+
+## 7. Lo que esta mesa NO decide
 
 Para que quede claro que sigue abierto y por que no esta aqui:
 
