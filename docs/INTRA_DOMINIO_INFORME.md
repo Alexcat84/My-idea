@@ -406,3 +406,140 @@ esta en cuestion.**
 > primeros ejemplares aparecieron los dos por mirar la arista despues de haber
 > escrito el veredicto. **La comprobacion es barata y hay que hacerla antes de
 > llevar nada a la mesa.**
+
+---
+
+## 6. BARRIDO DE ARISTAS DE LOS RACIMOS
+
+**Mecanico y de solo lectura. Es un MAPA, no una adjudicacion:** dice que forma
+tiene cada racimo en el grafo, y la lectura de racimos lo usara para saber a que
+se enfrenta antes de abrir ninguno.
+
+**Poblacion**: los **32 racimos con nomina** de `docs/RACIMOS_MIEMBROS.jsonl` mas
+los **4 nuevos que ya tienen miembros escritos** en este informe. **36 racimos.**
+
+### Como se midio, dicho entero para que se pueda discutir
+
+1. **Cada arista se resuelve a NODO VIVO caminando `ids_alias`**, que es la
+   enmienda vigente de la seccion 3. **Hizo falta 101 veces**: sin resolver, esas
+   101 aristas se habrian contado como inexistentes.
+2. Solo cuentan las aristas **entre miembros del mismo racimo**. Se ignoran las
+   que salen fuera.
+3. La arista se cuenta **sin direccion**: si A apunta a B o B apunta a A, es una.
+4. **Formas**, y los umbrales van escritos porque son elegidos por mi, no
+   derivados de nada:
+   - **SUELTO**: cero aristas internas.
+   - **CENTRO ENLAZADO**: hay **un solo** miembro de grado maximo, y ese grado es
+     **al menos 2** y **al menos la mitad** de los demas miembros.
+   - **CADENA**: ningun miembro pasa de grado 2, no hay aislados y las aristas no
+     superan n menos 1.
+   - **MIXTO**: todo lo demas.
+5. **Candidato a CENTRO SANO CON GEMELO SIN CASA**: hay un unico miembro de grado
+   maximo con grado 2 o mas, **y uno o dos miembros con cero aristas internas.**
+   Esos son los gemelos.
+
+> **VERIFICACION DE NOMINA, y salio limpia: CERO incidencias.** Los **171
+> miembros** de las 32 nominas y los de los cuatro nuevos **resuelven todos a un
+> nodo vivo**, ninguno hay que buscarlo por alias y ninguno ha desaparecido.
+
+### EL RESULTADO, y no es el que esperaba
+
+| forma | racimos |
+|---|---:|
+| **CENTRO ENLAZADO** | **3** |
+| **MIXTO** | **18** |
+| **SUELTO** | **15** |
+| | **36** |
+
+> **QUINCE de los treinta y seis racimos no tienen NI UNA arista entre sus
+> miembros.** Y si se cuenta a los que tienen **una sola**, que a efectos de
+> navegacion es lo mismo, **son VEINTICUATRO de treinta y seis: dos tercios.**
+>
+> **Eso es un hallazgo sobre el catalogo, no sobre los racimos.** Un racimo es
+> un grupo de nodos que dicen lo mismo o casi. **Que dos tercios de esos grupos
+> no esten conectados por el grafo significa que el lector que cae en uno de sus
+> miembros no tiene por donde llegar a los otros.** La duplicacion no solo
+> repite: **repite sin avisar.**
+
+### LOS CINCO CANDIDATOS A CENTRO SANO CON GEMELO SIN CASA
+
+**Son los racimos que la figura de la seccion 5 resuelve barato**, sin desmontar
+la familia:
+
+| racimo | n | el centro | grado | **el gemelo o los gemelos** |
+|---|---:|---|---:|---|
+| NUEVO: el lienzo de propuesta de valor | 7 | `value_proposition_canvas` | 4 | **`customer_profile_value_map`, `desarrollo_value_proposition_usp`** |
+| Auditoria de calidad | 6 | `principios_auditoria_calidad` | 3 | **`auditoria_calidad`, `reporte_auditoria`** |
+| Mapeo del flujo de valor | 5 | `ocho_desperdicios_lean` | 2 | **`analisis_flujo_de_valor`, `value_stream_mapping_ambiental`** |
+| La estructura de cinturones de Six Sigma | 9 | `rol_black_belt` | 2 | **`desarrollo_expertos_capaces`, `rol_facilitador_black_belt`** |
+| Los puntos de Deming en el titulo | 7 | `adopcion_liderazgo` | 2 | **`eliminar_slogans_metas`, `mejora_continua_del_sistema`** |
+
+> **El del lienzo de propuesta de valor tiene DOS gemelos, no uno.** La seccion 5
+> nombro a `customer_profile_value_map`; el barrido anade
+> **`desarrollo_value_proposition_usp`**, que tampoco esta enlazado con nadie de
+> la familia. **Es una correccion a lo que escribi ayer**, y sale de medir en vez
+> de mirar.
+
+### LA TABLA ENTERA, racimo por racimo
+
+**`n`** son los miembros, **`ar`** las aristas internas y **`ais`** los miembros
+sin ninguna arista dentro del racimo.
+
+| racimo | origen | n | ar | ais | forma | miembro mas enlazado |
+|---|---|---:|---:|---:|---|---|
+| NUEVO: el lienzo de propuesta de valor | informe | 7 | 7 | 2 | **CENTRO ENLAZADO** | `value_proposition_canvas` (4) |
+| Auditoria de calidad | nomina | 6 | 4 | 2 | **CENTRO ENLAZADO** | `principios_auditoria_calidad` (3) |
+| Mapeo del flujo de valor | nomina | 5 | 2 | 2 | **CENTRO ENLAZADO** | `ocho_desperdicios_lean` (2) |
+| No culpar a la persona, arreglar el sistema | nomina | 20 | 14 | 4 | **MIXTO** | `ciclo_de_culpa` (3) |
+| Causas comunes y responsabilidad del sistema | nomina | 12 | 7 | 4 | **MIXTO** | `causas_comunes_vs_especiales` (3) |
+| Cradle to cradle | nomina | 11 | 8 | 3 | **MIXTO** | `desperdicio_es_alimento` (4) |
+| La estructura de cinturones de Six Sigma | nomina | 9 | 4 | 2 | **MIXTO** | `rol_black_belt` (2) |
+| Portafolio: revisar, podar, reasignar | nomina | 7 | 1 | 5 | **MIXTO** | `gestion_portafolio_formal` (1) |
+| Customer discovery: salir a hablar con el cliente | nomina | 7 | 3 | 1 | **MIXTO** | `customer_development_modelo` (1) |
+| Los puntos de Deming en el titulo | nomina | 7 | 3 | 2 | **MIXTO** | `adopcion_liderazgo` (2) |
+| NUEVO: las puertas del Stage-Gate | informe | 6 | 2 | 2 | **MIXTO** | `asignacion_recursos_en_gates` (1) |
+| Benchmarking | nomina | 5 | 1 | 3 | **MIXTO** | `monitoreo_continuo_benchmarking` (1) |
+| Los cinco porques | nomina | 5 | 5 | 0 | **MIXTO** | `cinco_porques_master` (3) |
+| Pivotar o proceder | nomina | 5 | 1 | 3 | **MIXTO** | `decision_pivotar_o_proceder` (1) |
+| El avance y el compromiso en la venta | nomina | 5 | 1 | 3 | **MIXTO** | `advances_vs_continuations` (1) |
+| Encuadre del problema (How Might We) | nomina | 5 | 2 | 1 | **MIXTO** | `how_might_we_brief_social` (1) |
+| Analisis de causa raiz | nomina | 4 | 1 | 2 | **MIXTO** | `analisis_diagnostico_causa` (1) |
+| Las reglas del brainstorming | nomina | 4 | 1 | 2 | **MIXTO** | `brainstorming` (1) |
+| Metas de calidad | nomina | 3 | 1 | 1 | **MIXTO** | `establecer_estandares_desempeno` (1) |
+| El efectivo contra la ganancia | nomina | 3 | 1 | 1 | **MIXTO** | `cash_is_king` (1) |
+| NUEVO: la apertura de Customer Validation | informe | 3 | 1 | 1 | **MIXTO** | `filosofia_validacion_clientes` (1) |
+| Accion correctiva | nomina | 7 | 0 | 7 | **SUELTO** | ninguno |
+| Ciclo de mejora PDCA / PDSA | nomina | 4 | 0 | 4 | **SUELTO** | ninguno |
+| Clasificacion de defectos | nomina | 4 | 0 | 4 | **SUELTO** | ninguno |
+| NUEVO: la puerta del ajuste | informe | 4 | 0 | 4 | **SUELTO** | ninguno |
+| Fitness for purpose | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Costo de calidad | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Consejo de calidad | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Eliminacion de causas de error | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Plan y matriz de control | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Diversidad en el diseno | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| La etapa de investigacion en la venta | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Estrategia de innovacion de producto | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Programa de catorce pasos de Crosby | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Poka yoke | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+| Obtencion de compromiso | nomina | 3 | 0 | 3 | **SUELTO** | ninguno |
+
+### Lo que la tabla dice, en tres lecturas
+
+> **1. Los racimos grandes estan mejor conectados que los pequenos.** Los tres de
+> mas de diez miembros (*No culpar a la persona* con 20, *Causas comunes* con 12,
+> *Cradle to cradle* con 11) son todos MIXTO con varias aristas. **Los de tres
+> miembros son casi todos SUELTOS.** Tiene sentido: un tema grande se escribio
+> como recorrido y se enlazo; un trio de gemelos se escribio tres veces y nadie
+> los presento.
+>
+> **2. `NUEVO: la puerta del ajuste` es SUELTO con cuatro miembros y cero
+> aristas**, y eso refuerza lo que ya decia su ficha: cuatro nodos juzgando la
+> misma puerta **sin que ninguno sepa de los otros.**
+>
+> **3. `Portafolio: revisar, podar, reasignar` tiene siete miembros y UNA arista,
+> con cinco aislados.** Es el racimo censado peor conectado de todos, y es
+> ademas el que toca al racimo nuevo de las puertas del Stage-Gate por el puesto
+> 488. **La mesa de las puertas se va a encontrar con eso.**
+
+**NO SE ADJUDICA NADA AQUI.** La tabla es el mapa; las decisiones son de la mesa.

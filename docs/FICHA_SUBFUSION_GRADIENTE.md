@@ -527,11 +527,11 @@ del archivo, y el dato es rotundo:**
 | `core/lectura_balance_general` | 6 | 44,6 | 51,0 | **falsa** |
 | `core/product_market_fit` | 6 | 44,2 | 55,8 | **falsa** |
 
-**Los cuarenta y dos cortes y las cuarenta y dos parejas verificados uno por uno
-en `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
+**Los cuarenta y cinco cortes y las cuarenta y cinco parejas verificados uno por
+uno en `docs/COSTURAS_INTERNAS.jsonl` antes de escribir estas cifras.**
 
 > **La regla se mantiene y gana su segunda excepcion:** **una cita de corte 3 no
-> es evidencia de costura por si sola.** Treinta y ocho de cuarenta y dos han
+> es evidencia de costura por si sola.** Cuarenta y una de cuarenta y cinco han
 > caido al abrir los pasos, pero **CUATRO eran costura de verdad**, asi que el corte 3 tampoco
 > es un descarte. **Es exactamente lo que la regla decia: hay que abrir los pasos.**
 >
@@ -579,7 +579,7 @@ y `cliente_disena_producto`), mientras las falsas se apilan abajo.
 
 | | |
 |---|---|
-| pareja **mas alta** de las cuarenta y dos citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
+| pareja **mas alta** de las cuarenta y cinco citas de corte 3 | **62,0**, y es de `csf_funcion_govern`, que es **falsa** |
 | segunda mas alta | **59,9**, `internacionalizacion_sitio_web_exportacion`, tambien **falsa** |
 | la de la primera confirmada | **59,7** (`empoderamiento_de_participantes`), o sea **la tercera**, por debajo de dos falsas |
 | la de la segunda confirmada | **55,2** (`cliente_disena_producto`), **mas abajo todavia**, por debajo de varias falsas |
@@ -589,7 +589,7 @@ y `cliente_disena_producto`), mientras las falsas se apilan abajo.
 > habria mandado leer primero dos falsas y dejar la primera confirmada en tercer
 > lugar y la segunda mas abajo. **La longitud si separo (arriba); la pareja no.**
 >
-> **Ademas, ninguna de las cuarenta y dos dispara por pareja**: el umbral de pareja
+> **Ademas, ninguna de las cuarenta y cinco dispara por pareja**: el umbral de pareja
 > es **80** y la mas alta de este grupo es 62,0. **Todas entraron por bloque.** La
 > pareja aqui no es una senal que sostenga nada, es un numero que acompana.
 >
@@ -1817,7 +1817,7 @@ nodo esta sano. **Corte 3 y confirmada**, la segunda de esta tanda.
 | | con dos o mas fuentes | con una sola |
 |---|---:|---:|
 | **las 46 confirmadas** | **43 (93%)** | 3 |
-| **las 62 falsas** | **4 (6%)** | 58 |
+| **las 68 falsas** | **4 (6%)** | 64 |
 
 **La señal se refuerza**: subio de 91% a 93% en las confirmadas y sigue en el
 entorno del 10% en las falsas. **Cinco de las seis citas de esta tanda, elegidas
@@ -2125,6 +2125,9 @@ del instrumento, **quedan 34 sin leer, y solo UNA es del nucleo**:
 | **nodos de DOS o mas libros** | **46** | **42** | **91%** |
 | **nodos de UN solo libro** | **48** | **3** | **6%** |
 
+> **INSTANTANEA CONGELADA de ese momento, NO se actualiza.** La tabla viva esta
+> en `MARCADOR DE LA CLASE`.
+
 > **Quince veces mas probable.** Un nodo que declara dos libros confirma nueve de
 > cada diez veces; uno que declara uno solo confirma seis de cada cien. **Y el
 > reparto de la cola es casi mitad y mitad**, 46 contra 48, asi que no es un
@@ -2280,6 +2283,9 @@ para la maquina.**
 > |---|---:|---:|---:|
 > | **nodos de DOS o mas libros** | **47** | **43** | **91%** |
 > | **nodos de UN solo libro** | **48** | **3** | **6%** |
+>
+> **INSTANTANEA CONGELADA de ese momento, NO se actualiza.** La tabla viva esta en
+> `MARCADOR DE LA CLASE`.
 >
 > **Las 47 citas de dos libros de la cola estan todas leidas.** Lo que queda por
 > leer, las 33 de mundos, **es de un solo libro sin excepcion**.
@@ -2453,13 +2459,12 @@ producto y proceso, y de ahi a la verificacion y al plan de lanzamiento.
 > **El predictor esta prediciendo en las dos direcciones a la vez y sin fallar en
 > dieciocho tiros.**
 
-| | citas leidas | confirmadas | tasa |
-|---|---:|---:|---:|
-| **nodos de DOS o mas libros** | **47** | **43** | **91%** |
-| **nodos de UN solo libro** | **61** | **3** | **5%** |
+> **LA TABLA DEL PREDICTOR NO VIVE AQUI.** Vive **una sola vez**, en
+> `MARCADOR DE LA CLASE`, y se recomputa del archivo con el resto del marcador.
+> Aqui solo se cuenta lo que esta tanda le anadio.
 
 **Las 47 de dos libros estan todas leidas desde la tanda 17 anterior.** Lo que
-queda de la cola, **las 20 citas restantes, es de un solo libro sin excepcion.**
+queda de la cola, **las 14 citas restantes, es de un solo libro sin excepcion.**
 
 > **Consecuencia para lo que queda, y hay que decirla sin adornos**: si el
 > predictor se sostiene, **de las 27 que faltan cabe esperar una o dos costuras,
@@ -2554,10 +2559,9 @@ ninguna:
 > **VEINTICINCO citas de UNA SOLA FUENTE leidas seguidas, y CERO costuras.** Seis
 > en la tanda 15, seis en la 16, seis en la 17, una en la 18 y seis en esta.
 
-| | citas leidas | confirmadas | tasa |
-|---|---:|---:|---:|
-| **nodos de DOS o mas libros** | **47** | **43** | **91%** |
-| **nodos de UN solo libro** | **61** | **3** | **5%** |
+> **LA TABLA DEL PREDICTOR NO VIVE AQUI.** Vive **una sola vez**, en
+> `MARCADOR DE LA CLASE`, y se recomputa del archivo con el resto del marcador.
+> Aqui solo se cuenta lo que esta tanda le anadio.
 
 **Las tres confirmadas de un solo libro son de hace mucho.** La tasa de esa mitad
 **ha bajado del 6% al 5% sin que ninguna nueva confirme**, que es lo que pasa
@@ -2609,24 +2613,108 @@ sistema*, ni en ninguna otra de las 32.**
 
 ---
 
+## TANDA 20: quinta en blanco, y la racha llega a treinta y una
+
+**Seis citas, LAS SEIS FALSAS.** Quinta tanda consecutiva sin una sola
+confirmada. **Banda de bloque 45,9 a 46,4, y tambien queda agotada**: el
+instrumento tiene **diez citas** ahi dentro, **cuatro ya estaban leidas** y estas
+seis eran las que faltaban. Anatomias y fuentes verificadas contra el grafo.
+
+| cita | dominio | pasos | bloque | corte | fuente unica |
+|---|---|---:|---:|---:|---|
+| `funcion_protect_politica_seguridad` | seguridad_digital | 8 | 46,4 | 5 | *Cybersecurity for Small Business* (FTC/NIST CSF) |
+| `diseno_para_factores_criticos_y_error_humano` | quality | 6 | 46,4 | **3** | *Juran's Quality Handbook* (Defeo) |
+| `prevencion_violencia_laboral` | health_safety | 7 | 46,2 | **3** | `SMALL_BUSINESS` |
+| `desarrollar_caracteristicas_proceso_2` | quality | 6 | 45,9 | **3** | *Juran's Quality Handbook* (Defeo) |
+| `planificacion_estudio_capacidad` | quality | 9 | 45,9 | 5 | *Juran's Quality Handbook* (Defeo) |
+| `getting_started_planning` | seguridad_digital | 7 | 45,9 | 4 | *NIST SP 1318: Protecting CUI* |
+
+**Las seis son SECUENCIA LEGITIMA**, y la de nueve pasos es la que mejor lo
+enseña: **`planificacion_estudio_capacidad` es un estudio de capacidad de proceso
+de principio a fin**, y nueve pasos ahi no son dos narraciones sino un
+procedimiento que no se puede acortar.
+
+> **NOTA SOBRE `desarrollar_caracteristicas_proceso_2`, y no se adjudica aqui.**
+> Su id es **miembro de las 36 parejas de sufijo**, con
+> `desarrollar_caracteristicas_proceso` de pareja, y **eso lo gobierna la DECISION
+> 4 de la mesa de racimos**, aprobada el 9 ago 2026: la familia de ids se arregla
+> **de una vez**, con el criterio continua-o-repite y **fusion con alias** para que
+> ningun id viejo quede muerto.
+>
+> **Como COSTURA es FALSO**, que es la unica pregunta de esta ficha. **Lo del
+> nombre le toca a la familia D4**, y las dos cosas son ciertas sin corregirse.
+> Es el mismo reparto que ya se escribio para `desarrollo_caracteristicas_producto`.
+
+### LA RACHA LLEGA A TREINTA Y UNA, con cifras del archivo
+
+> **TREINTA Y UNA citas de UNA SOLA FUENTE leidas seguidas, y CERO costuras.**
+> Seis en la tanda 15, seis en la 16, seis en la 17, una en la 18, seis en la 19 y
+> seis en esta.
+
+> **LA TABLA DEL PREDICTOR NO VIVE AQUI.** Vive **una sola vez**, en
+> `MARCADOR DE LA CLASE`. Con esta tanda queda en **47 de dos libros con 43
+> confirmadas (91%)** y **67 de un solo libro con 3 (4%)**.
+
+**La tasa de la mitad de un solo libro ha ido del 6% al 5% y ahora al 4%, y
+ninguna de esas bajadas viene de un veredicto nuevo en contra**: vienen de que el
+denominador crece y **el numerador lleva treinta y una lecturas sin moverse**.
+
+> **Quedan 14 citas y las 14 son de un solo libro.** Al 4%, **lo esperable de las
+> 14 es media costura**. La cola se lee entera igual, porque ese es el compromiso
+> y porque el 4% no es cero, **pero conviene decir ya que el rendimiento util de
+> este instrumento se agoto hace cinco tandas.**
+
+### Lo que queda por leer, recontado del instrumento
+
+| dominio | citas sin leer |
+|---|---:|
+| quality | **6** |
+| exportacion | 3 |
+| franquicias | 2 |
+| health_safety | 1 |
+| environmental | 1 |
+| seguridad_digital | 1 |
+| **core** | **0** |
+| | **14** |
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |
 |---|---:|
-| **CITAS del instrumento leidas** | **108** de **128** |
+| **CITAS del instrumento leidas** | **114** de **128** |
 | de esas, costura **confirmada** | **46** |
-| de esas, **citas falsas** | **62** |
-| **precision de la cola** | **43%** |
+| de esas, **citas falsas** | **68** |
+| **precision de la cola** | **40%** |
 | **costuras confirmadas que la cola NO citaba** | **0** |
 | **TOTAL de costuras confirmadas** | **46** |
 
+### EL PREDICTOR DE FUENTES, la tabla viva y unica
+
+**Se recomputa del archivo con el marcador, en la misma pasada.**
+
+| | citas leidas | confirmadas | tasa |
+|---|---:|---:|---:|
+| **nodos de DOS o mas libros** | **47** | **43** | **91%** |
+| **nodos de UN solo libro** | **67** | **3** | **4%** |
+
+> **POR QUE ESTA AQUI Y NO EN LAS TANDAS, y es una correccion de estructura mia.**
+> Esta tabla llego a existir **dos veces a la vez**, en la seccion de la tanda 17
+> y en la de la tanda 19, y **las dos estaban vivas**: yo actualizaba una y
+> escribia la otra. **Dos versiones de lo mismo es la averia, no el sintoma.**
+>
+> **Las dos copias murieron y redirigen aqui.** La tabla es del MARCADOR y no de
+> una tanda: **sale de todas las citas leidas, no de las seis ultimas.** Cada
+> tanda cuenta lo que anadio y apunta a este sitio.
+
 **Recomputado del archivo con la doctrina de abajo**, cruzando los veredictos
-escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **108 leidas, 46
-confirmadas, 62 falsas, y cada una en exactamente una fila de la tabla de franjas.**
+escritos en esta ficha con `docs/COSTURAS_INTERNAS.jsonl`: **114 leidas, 46
+confirmadas, 68 falsas, y cada una en exactamente una fila de la tabla de franjas.**
 
 **La serie completa**: 73% con 22 leidas, 68% con 28, 65% con 34, 65% con 40,
 61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70, 57% con 76, 55% con
-82, 51% con 88, 48% con 94, 48% con 95, 46% con 101, 45% con 102 y **43% con 108**.
+82, 51% con 88, 48% con 94, 48% con 95, 46% con 101, 45% con 102, 43% con 108 y **40% con 114**.
 
 > **Las dos subidas tuvieron causa y las dos bajadas tambien.** Las tandas 12 y
 > 13 se ordenaron por la señal de dos fuentes y subieron la precision; **la 14
@@ -2733,8 +2821,8 @@ avanzado sola: la ha empujado el otro frente.**
 > `propuesta_gasto_capital`, que ya estaba confirmada y **ahora ademas esta
 > citada**, que es exactamente lo que esta entrada viene a asentar.
 
-**Las sesenta y dos falsas se reparten en TRES clases**: LARGO LEGITIMO
-(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**54**) y **DUO LEGITIMO (1)**.
+**Las sesenta y ocho falsas se reparten en TRES clases**: LARGO LEGITIMO
+(**7**), FALSO POSITIVO DE SECUENCIA LEGITIMA (**60**) y **DUO LEGITIMO (1)**.
 
 > **La tercera clase se abrio en la tanda 13, despues de treinta y dos falsas sin
 > necesitarla**, y se abrio porque la lectura cambio de orden: **al leer por la
@@ -2806,16 +2894,16 @@ bloque; por encima de 52, doce de doce confirmadas.*
 **La primera mitad es exacta.** La segunda no cuadra, y la diferencia cambia lo que
 se puede hacer con ella:
 
-**La tabla esta RECONCILIADA: cada una de las 108 citas leidas vive en
-exactamente una fila, y las filas suman 108 clavado.**
+**La tabla esta RECONCILIADA: cada una de las 114 citas leidas vive en
+exactamente una fila, y las filas suman 114 clavado.**
 
 | franja de señal de bloque | confirmadas | falsas | leidas |
 |---|---:|---:|---:|
 | **por encima de 52,0** | **9** | **0** | 9 |
 | **entre 51,0 y 52,0** | **2** | **4** | 6 |
-| **por debajo de 51,0** | **35** | **57** | **92** |
+| **por debajo de 51,0** | **35** | **63** | **98** |
 | **sin señal de bloque** (solo pareja) | 0 | **1** | **1** |
-| | **46** | **62** | **108** |
+| | **46** | **68** | **114** |
 
 **Las seis nuevas de la banda 46,6 a 47,4 caen las seis en la fila de abajo**
 (46,6 a 47,4 esta por debajo de 51,0): tres confirmadas (`cliente_disena_producto`
@@ -2823,7 +2911,7 @@ exactamente una fila, y las filas suman 108 clavado.**
 (`ceo_de_guerra_vs_paz` 46,7, `cap_table_basico` 46,9, `metricas_accionables`
 47,0). La fila de abajo pasa de **20 y 23** a **23 confirmadas y 26 falsas**.
 
-**Las 108, con su fila y su veredicto**, recontadas cruzando los veredictos de
+**Las 114, con su fila y su veredicto**, recontadas cruzando los veredictos de
 esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 
 | fila | cita | bloque | veredicto |
@@ -2899,6 +2987,12 @@ esta ficha con `docs/COSTURAS_INTERNAS.jsonl`:
 | por debajo de 51,0 | `cultura_de_reporte` | 46,8 | **falsa** |
 | por debajo de 51,0 | `viaje_diagnostico_remedial` | 46,7 | **falsa** |
 | por debajo de 51,0 | `evaluacion_riesgo_calidad_organizacional` | 46,6 | **falsa** |
+| por debajo de 51,0 | `funcion_protect_politica_seguridad` | 46,4 | **falsa** |
+| por debajo de 51,0 | `diseno_para_factores_criticos_y_error_humano` | 46,4 | **falsa** |
+| por debajo de 51,0 | `prevencion_violencia_laboral` | 46,2 | **falsa** |
+| por debajo de 51,0 | `desarrollar_caracteristicas_proceso_2` | 45,9 | **falsa** |
+| por debajo de 51,0 | `planificacion_estudio_capacidad` | 45,9 | **falsa** |
+| por debajo de 51,0 | `getting_started_planning` | 45,9 | **falsa** |
 | por debajo de 51,0 | `metricas_accionables` | 47,0 | **falsa** |
 | por debajo de 51,0 | `cap_table_basico` | 46,9 | **falsa** |
 | por debajo de 51,0 | `seleccion_ceo_fundador` | 46,8 | confirmada |
@@ -3008,7 +3102,7 @@ solo NUEVE de las 128 citas** (cifras recontadas del instrumento tras la
 regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 
 > **119 de las 128 viven por debajo de 52**, es decir **en la zona mezclada o mas
-> abajo**, donde la muestra leida da **37 confirmadas contra 62 falsas**: la
+> abajo**, donde la muestra leida da **37 confirmadas contra 68 falsas**: la
 > moneda ya no esta en el filo, y el motivo es que se acabaron los nodos de dos
 > libros.
 >
@@ -3022,7 +3116,7 @@ regeneracion; la version anterior decia 13 de 110, sobre la cola vieja).
 viven **por debajo de bloque 52** (50,9 y 50,3) y **las dos resultaron falsas.**
 
 > **Bajo 52 la señal de bloque no se sostiene sola.** La muestra leida en esa
-> mitad de la cola queda, con la tanda 19 dentro, en **37 confirmadas contra 62
+> mitad de la cola queda, con la tanda 20 dentro, en **37 confirmadas contra 68
 > falsas**.
 >
 > **CUARTO PASAJE DERIVADO QUE SE ENCUENTRA DESCUADRADO, y hay que decirlo aqui
