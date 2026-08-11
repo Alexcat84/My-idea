@@ -3505,6 +3505,125 @@ comparten UNO.**
 > justamente los que deciden a quien hay que entrevistar. **No estaba en la lista
 > de perdidas y es la mas cara del par.**
 
+### TANDA R32, VIGESIMOCTAVA CIEGA: seis de seis
+
+**Acumulado: 192 releidas, de las cuales 168 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+**Esta tanda se releyo con una regla nueva de trabajo: cada perdida propuesta se
+BUSCA EN EL GRAFO antes de clasificarla.** Cuatro de las seis cambiaron de lista.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **549** | `filosofia_customer_validation` contra `introduccion_validacion_clientes` | **familia declarada**: el reparto no se cierra en el par | ver abajo |
+| **550** | `preservar_efectivo_buscar_modelo` contra `restriccion_gasto_validacion` | **la reserva de caja para varios pivotes**, las **cifras** del presupuesto por prueba, y del otro lado **invertir tras el encaje** y **el criterio propio de validado**. **La tasa de consumo NO se pierde** | de **catalogo** |
+| **558** | `diseno_de_experiencias_participativas` contra `economia_de_la_experiencia` | **los ejemplos de marcas**; del otro lado **TRES cosas y no dos** | de **lector** |
+| **559** | `warrants_deuda_convertible` contra `warrants_financiamiento` | el **plazo de cinco a diez anos**, el **pago separado**, el **porcentaje de cobertura**; del otro lado **negociar valoracion en vez de warrant**. **La contabilidad esta en los dos** | de **catalogo** |
+| **561** | `evaluacion_vp_ventas` contra `framework_evaluacion_director_ventas` | **las referencias del propio equipo** y **como contrata talento**; del otro lado el **modelo de evaluacion de representantes** y **los procesos tecnicos de venta**. **Las referencias de clientes estan en los dos** | de **catalogo** |
+| **562** | `plan_a_b_c_soft_landing` contra `restructuracion_deuda_soft_landing` | **avisar apenas se detecte la desviacion** y **como te califica el prestamista**; del otro lado el **cierre ordenado que minimiza danos** | de **catalogo** |
+
+#### 549: familia declarada, la apertura de Customer Validation
+
+**El par es A y sigue siendo A.** Lo que no se decide aqui es la direccion de la
+fusion, por el **banco 9.3**.
+
+> `filosofia_customer_validation` tiene **DOS A vigentes**: esta y la del puesto
+> **1096** contra `earlyvangelists_ventas_tempranas`. **Es el centro de la
+> apertura de la etapa**, y en el tramo 1101-1200 salio sano contra cinco nodos
+> mas. **Repite con quien abre la etapa y jerarquiza con quien la ejecuta.**
+>
+> **Lo que la mesa decide y el par no**: si el catalogo quiere **una** puerta de
+> entrada a Customer Validation o **dos**. Aqui solo esta medido que estas dos
+> dicen lo mismo.
+
+#### 550: la tasa de consumo NO se pierde, y hay que quitarla de la lista
+
+**CORRECCION DECLARADA, con la busqueda hecha en el grafo antes de clasificar.**
+
+| perdida propuesta | verificacion | veredicto |
+|---|---|---|
+| **reserva para multiples pivotes** | el termino aparece en **UN SOLO nodo vivo**, este | **perdida real** |
+| **presupuesto maximo por prueba** | el gesto sobrevive en `plan_de_adquisicion_acquire` (*limita el gasto por prueba a una cifra que puedas permitirte*), **pero las cifras 2.000 a 10.000 dolares estan solo aqui** | **perdida PARCIAL: se pierde la cifra, no el gesto** |
+| **mide la tasa de consumo de caja** | vive en `cash_is_king`, `burn_rate_por_etapa`, `metricas_de_startup`, `metrics_that_matter_framework` y varios mas | **NO ES PERDIDA** |
+| **invertir agresivamente tras el encaje** | *llenar el canal de ventas* aparece **solo aqui** | **perdida real** |
+| **documenta tu criterio de validado** | *que constituye un modelo validado* aparece **solo aqui** | **perdida real** |
+
+> **De cinco perdidas propuestas, una se cae entera y otra se reduce a una cifra.**
+> **La busqueda en el grafo cuesta una consulta y cambio el 40% de la lista.**
+> Queda como practica de las tandas que vienen.
+
+#### 558: el lado de la economia pierde TRES, y aparece un nombre propio para el censo
+
+**CORRECCION DECLARADA.** El encargo daba dos perdidas del lado de
+`economia_de_la_experiencia`. **Son tres:**
+
+| lo que solo tiene `economia_de_la_experiencia` | |
+|---|---|
+| **disenar elementos que generen conexion emocional** | **no estaba listado.** El otro nodo solo IDENTIFICA si la propuesta es emocional; este manda DISENAR lo emocional |
+| **evaluar la ejecucion del detalle** (calidad, distribucion, precio, diseno fisico) | ya listado |
+| **iterar con el mismo rigor que la ingenieria de un producto** | ya listado |
+
+> **Y el otro lado es casi un subconjunto**: los tres pasos de
+> `diseno_de_experiencias_participativas` estan dentro de los cinco del otro salvo
+> uno, **y ese uno son DOS NOMBRES PROPIOS**: *Whole Foods* y *Virgin America*,
+> los unicos del grafo entero segun la busqueda.
+>
+> **AVISO PARA LA FICHA DE VIGENCIA, y lo digo como aviso y no como hallazgo**:
+> **Virgin America** es un nombre que conviene verificar antes de conservarlo en
+> una fusion. **NO lo he comprobado en esta sesion** y por eso no lo registro
+> como muerto: lo registro como **PENDIENTE DE VERIFICAR**, igual que Quantcast.
+
+#### 559: la contabilidad esta en los dos, con movimientos opuestos
+
+**PRECISION DECLARADA.** El encargo listaba *complica la contabilidad* como
+perdida de `warrants_financiamiento`. **Los dos la nombran, y hacen cosas
+distintas con ella:**
+
+| nodo | que dice de la contabilidad |
+|---|---|
+| `warrants_deuda_convertible` | **la REMEDIA**: pedir que el pago de los warrants quede separado del resto para evitar el descuento de emision original |
+| `warrants_financiamiento` | **la usa para DECLINAR**: evaluar si el warrant complica innecesariamente la contabilidad **y la estructura legal a largo plazo** antes de aceptarlo |
+
+> **No se pierde el tema: se perderia uno de los dos movimientos.** Y lo que si es
+> exclusivo del segundo es **la estructura legal a largo plazo** y **la
+> alternativa de negociar una valoracion previa mas baja** cuando el warrant solo
+> se propone por precio.
+>
+> **Las tres perdidas del primero se verifican enteras**: el plazo de cinco a
+> diez anos, el pago separado, y el porcentaje de cobertura de la nota. **Ojo con
+> este ultimo**: los dos nodos dicen *20%*, pero uno lo usa como **cobertura del
+> monto de la nota** y el otro como **tope de descuento en un prestamo puente**.
+> **Misma cifra, dos magnitudes distintas.**
+
+#### 561: las referencias de clientes estan en los dos, y falta un tercer exclusivo
+
+**DOS CORRECCIONES DECLARADAS.**
+
+**PRIMERA: las referencias de clientes NO se pierden.** El encargo las listaba
+como exclusivas de `evaluacion_vp_ventas`. **Los dos las piden**, uno en su paso 5
+y el otro en su paso 6, y los dos para lo mismo, confirmar que cerro negocios
+grandes.
+
+**SEGUNDA: lo que si es exclusivo de `evaluacion_vp_ventas` son DOS cosas y una
+no estaba listada:**
+
+| exclusivo de `evaluacion_vp_ventas` | |
+|---|---|
+| el **modelo de evaluacion de representantes**, con la distincion entre transaccionales y de venta a empresas grandes | ya listado |
+| los **procesos tecnicos de venta**: comparativas, pruebas de concepto, demostraciones y documentos de bloqueo | **no estaba listado**, y es lo unico del par que baja al detalle de como se vende |
+
+**Y las dos del otro lado se verifican enteras**: las referencias **del propio
+equipo** para confirmar si la gente lo seguiria, y **como identifica y contrata
+talento** con ejemplos de contrataciones fallidas.
+
+#### 562: verificado entero, con una nota
+
+**Las tres perdidas propuestas se verifican.** Y queda anotado que **el trato
+profesional con prestamista e inversionistas esta en los dos**, en el paso 3 de
+uno y el 4 del otro: **lo que se perderia del lado del plan A B C no es la
+profesionalidad sino el CIERRE ORDENADO como paso propio**, el que minimiza
+perdidas para todos los involucrados cuando ya no hay venta posible.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -4106,6 +4225,101 @@ racimo nuevo de **las puertas del Stage-Gate** (seis miembros, seccion 1).
 > del portafolio lo toca primero, decide sobre un nodo que la mesa de las puertas
 > va a fusionar despues. **Orden recomendado: primero se cierra la familia de las
 > puertas, y con el superviviente en la mano se mira el cruce con el portafolio.**
+
+### ADJUDICADO EL 14 ago 2026: EL CRUCE 2 DESAPARECE. Son UNA sola mesa
+
+**El fundador adjudica: PUERTAS y PORTAFOLIO dejan de ser dos mesas.** Motivo
+escrito: **dos mesas que comparten franja deciden dos veces lo mismo o se
+contradicen.**
+
+> **La medicion respalda la adjudicacion, y con una cifra que no estaba tomada.**
+> La nomina unida tiene **DOCE aristas internas**, y **OCHO de las doce CRUZAN la
+> frontera vieja** entre puertas y portafolio. **El grafo ya las trata como una
+> sola familia**; las dos mesas eran una division del papel, no del catalogo.
+
+**LO QUE ESTO DEROGA, y conviene decirlo entero**: el orden recomendado que este
+cruce fijaba, *primero se cierra la familia de las puertas y con el superviviente
+en la mano se mira el portafolio*, **ya no aplica**. No hay dos mesas que ordenar:
+**hay una que se sienta con dieciseis nodos delante.**
+
+**LA NOMINA UNIDA, cerrada: DIECISEIS miembros y CERO candidatos fuera.**
+
+| procedencia | nodos |
+|---|---|
+| **las puertas** (6) | `sistema_stage_gate`, `stage_gate_system`, `estructura_gates`, `sistema_gates_go_kill`, `asignacion_recursos_en_gates`, `sistema_gestion_recursos_en_gates` |
+| **el portafolio** (7) | `portfolio_management`, `gestion_portafolio_formal`, `revision_portafolio_periodica`, `gestion_portafolio_dos_niveles`, `gestion_de_portafolio_gates_go_kill`, `gestion_portafolio_foco`, `equipos_dedicados_de_proyecto` |
+| **los TRES que arrastra `sistema_gates_go_kill`** | `requisitos_gates_con_dientes` (801), `gates_go_kill_decision_points` (1038), **`estructura_de_gates`** (765) |
+
+> **El tercer arrastrado aparecio al correr el barrido sobre la union**, no antes:
+> `estructura_de_gates` entra por su A con `requisitos_gates_con_dientes`. **Y es
+> la CUARTA trampa de identificador del ejercicio**: existe tambien
+> `estructura_gates`, sin la particula, y es otro nodo vivo. **Su par SI esta en
+> la cola**, el puesto **1524**, asi que este si se va a poder cerrar.
+
+**LA FORMA DE LA MESA UNIDA, vigente al puesto 1200:**
+
+| medida | cuantas |
+|---|---:|
+| pares posibles | **120** |
+| en la cola | 21 |
+| **leidos** | **18** |
+| **en A** | **15** |
+| B / D | 1 (600) / 2 (1014, 1151) |
+| pendientes en cola | 3 (1366, 1399, **1524**) |
+| **NUNCA ENCOLADOS** | **99** |
+| aristas internas | 12, **ocho cruzando la frontera vieja** |
+
+> **QUINCE pares en A entre dieciseis nodos.** Es, con diferencia, **el bloque de
+> repeticion mas grande medido en el ejercicio**, y su consolidacion seria la
+> mayor del plan.
+>
+> **Y la reserva se escribe con la cifra**: **99 de los 120 pares nunca entraron a
+> la cola.** Lo que se sabe de esta familia sale de **18 lecturas**, o sea del
+> **15%** de sus pares. **La mesa se sienta con eso, no con mas.**
+
+---
+
+### REGISTRO DE DEPENDENCIAS ENTRE MESAS
+
+**Abierto el 14 ago 2026, por encargo.** La regla que lo gobierna:
+
+> ## NINGUNA MESA SE SIENTA ANTES QUE LA MESA DE LA QUE DEPENDE.
+
+**Y hay dos formas de depender**, porque no todo lo que va delante es una mesa:
+
+| forma | que significa |
+|---|---|
+| **MESA depende de MESA** | el veredicto de un par de la primera cambia segun lo que decida la segunda |
+| **MESA depende de CIRUGIA** | el veredicto depende de que sobreviva a un destejido, y el destejido no es una mesa: es un acto |
+
+**PRIMER EJEMPLAR, y el que produjo el registro: el 1190.**
+
+| pieza | |
+|---|---|
+| **la mesa que espera** | la que decida el par **1190**, `formalize_advisory_board` contra `identificar_consejo_asesores` |
+| **la mesa de la que depende** | la **junta asesora**, que tiene que decidir el **367**, los dos nodos de identificar |
+| **por que** | los dos gemelos **difieren justo en la linea que decide**: uno difiere la formalizacion en su paso 6 y el otro no. Si el superviviente conserva ese paso, formalizar es su hijo (D); si conserva la version de cuatro pasos, formalizar repite (A) |
+| **por que NO contradice al 976** | porque el 976 se leyo contra el gemelo que **no** difiere. **Las dos lecturas son correctas sobre nodos distintos** |
+
+**LAS OTRAS DEPENDENCIAS, que ya estaban implicitas en los congelados y aqui se
+hacen explicitas.** Salen de una medicion simple: **cuantos congelados cuelgan del
+mismo nodo.**
+
+| el nodo | congelados que dependen de su cirugia | nota |
+|---|---|---|
+| **`producto_minimo_viable`** | **TRES**: 494, 592, 830 | y el **494 es la CURA ACOPLADA MAYOR**, un acto de tres. **El orden interno es: destejer, luego 494, luego 592 y 830** |
+| **`voz_del_cliente_voc`** | **TRES**: 724, 755, 827 | tres pares distintos esperando un solo destejido |
+| **`ab_testing_optimizacion`** | **DOS**: 738, 1061 | y el **1061 es una costurada contra costurada**, el tercer acto de tres del archivo |
+
+> **OCHO de los quince congelados cuelgan de TRES nodos.** No estan repartidos por
+> el catalogo: **estan amontonados.** Y eso cambia la forma del trabajo: **tres
+> cirugias desbloquean mas de la mitad de los congelados**, y hacerlas en otro
+> orden no rompe nada, pero hacerlas TARDE bloquea ocho pares a la vez.
+>
+> **La regla, aplicada a esto**: las mesas que tocan esos tres nodos **no se
+> sientan hasta que la cirugia este hecha**. No es una recomendacion de eficiencia:
+> es que **antes de la cirugia esas mesas no tienen el veredicto que necesitan
+> para decidir.**
 
 ### LA REGLA QUE ESTA SECCION FIJA
 
@@ -7898,3 +8112,72 @@ contra `prompting_por_persona_ia`.
 > **Y una nota de metodo que este tramo gano**: cuatro veces el barrido de las A
 > contesto, antes de leer, una pregunta que en el tramo anterior se habria anotado
 > como sospecha. **La disciplina del 9.5.0 esta funcionando.**
+
+---
+
+## 50. DOS NOMINAS DE LA R32, contadas con los dos instrumentos
+
+**Vigentes al puesto 1200**, por el banco 9.21.
+
+### 50.1 LOS WARRANTS: sub-puro de tres, y a UNA lectura de cerrarse
+
+| instrumento | resultado |
+|---|---|
+| **contador** (`contar_nombre.py "warrant"`) | **19 nodos vivos**, 69 menciones. Los cuatro de arriba concentran 40; **el resto son mencionadores**, incluida `cumplimiento_magnuson_moss`, que usa la palabra en su sentido legal de garantia y **no tiene nada que ver** |
+| **barrido de las A** | **TRES miembros** y **CERO candidatos fuera** |
+
+| nodo | pasos | sus A |
+|---|---:|---|
+| **`warrants_deuda_convertible`** | 5 | **DOS**: 559 y 1028. **El centro** |
+| `warrants_financiamiento` | 4 | 559 |
+| `warrant_pricing_venture_debt` | 4 | 1028 |
+
+**LA FORMA: tres pares posibles, LOS TRES EN LA COLA, dos leidos y los dos en A.**
+
+> **Ninguno se quedo fuera de la cola**, que es raro: de las familias medidas hasta
+> aqui es **la primera con cobertura completa**. **El puesto 1448 cierra la
+> figura**: si sale A es un **PURO de tres**, y si sale D es una estrella.
+>
+> **Y es la familia mejor cableada del ejercicio**: **DOS aristas internas de tres
+> posibles**, cuando el portafolio tiene cero de veintiuna y el compromiso cero de
+> tres.
+>
+> **Nota de campo sucio, ya conocida**: dos miembros declaran *Venture Deals -
+> Brad Feld* y el tercero declara solo *Venture Deals*. **La misma obra en dos
+> grafias**, el defecto medido en la ficha `campos-sucios-dataset`.
+
+### 50.2 LA EVALUACION DEL LIDER DE VENTAS: pareja cerrada, y NO es Blank contra Horowitz
+
+**CORRECCION DECLARADA del encargo, verificada en el campo de fuente.**
+
+| nodo | fuente declarada |
+|---|---|
+| `evaluacion_vp_ventas` | **The Hard Thing About Hard Things, Ben Horowitz** |
+| `framework_evaluacion_director_ventas` | **The Hard Thing About Hard Things, Ben Horowitz** |
+
+> **Los dos son de Horowitz. No hay ningun nodo de Blank en la nomina.**
+
+| instrumento | resultado |
+|---|---|
+| **contador** (cinco terminos: *vp de ventas*, *lider de ventas*, *director de ventas*, *head of sales*, *vp ventas*) | **9 nodos vivos**. Siete son mencionadores |
+| **barrido de las A** | **DOS miembros** y **CERO candidatos fuera** |
+
+**LA FORMA: un par posible, en la cola, leido, en A. Cero aristas.**
+
+> **Es una PAREJA CERRADA**, la familia mas pequena que puede existir: **todo lo
+> que hay esta leido y no hay nada que anadir.** No es un puro, porque un puro se
+> declara sobre tres o mas; **es el caso donde el barrido y el contador coinciden
+> en que no hay mas que mirar.**
+
+**PERO LA INTUICION DEL ENCARGO APUNTABA A ALGO REAL, y aqui esta medido.** El
+contador levanta un nodo de **Blank** que menciona el puesto tres veces:
+**`refinar_sales_roadmap`**, leido en el puesto **1088**.
+
+> **Su paso 6 dice, en UNA LINEA**: *usar el roadmap como prueba de competencia al
+> contratar un VP de ventas.* **Blank nombra la contratacion; Horowitz trae los
+> dos nodos que dicen como evaluarla.** Es una relacion de madre y de hijos
+> **entre libros**.
+>
+> **Y NO HAY NINGUN PAR EN LA COLA entre el nodo de Blank y ninguno de los dos de
+> Horowitz.** Es la **QUINTA pareja** que este ejercicio no puede cerrar, y la
+> primera que se encuentra **contando una nomina** en vez de leyendo un par.

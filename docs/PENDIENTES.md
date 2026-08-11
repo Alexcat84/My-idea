@@ -2304,3 +2304,77 @@ formas distintas a la vez.
 > tambien **el mejor candidato a piloto**: lo que se aprenda aqui sirve para
 > todas las curas acopladas que vienen detras, porque ninguna es mas dificil que
 > esta.
+
+---
+
+## REGISTRO DE MESAS (abierto el 14 ago 2026)
+
+**Una MESA es una decision que no se puede tomar mirando un par**: hace falta la
+familia entera delante. Este registro las lista con su nomina medida y su
+dependencia, si tiene.
+
+> **REGLA QUE LAS GOBIERNA, adjudicada el 14 ago 2026:**
+> **NINGUNA MESA SE SIENTA ANTES QUE LA MESA DE LA QUE DEPENDE.**
+> El registro de dependencias vive en el informe, seccion 13.
+
+### MESA 1: LAS PUERTAS Y EL PORTAFOLIO, unidas
+
+**ADJUDICADO el 14 ago 2026: dejan de ser dos mesas.** Motivo escrito por el
+fundador: **dos mesas que comparten franja deciden dos veces lo mismo o se
+contradicen.**
+
+> **La medicion respalda la adjudicacion**: la nomina unida tiene **doce aristas
+> internas y OCHO cruzan la frontera vieja.** El grafo ya las trataba como una
+> sola familia.
+
+**NOMINA CERRADA: DIECISEIS miembros, cero candidatos fuera.**
+
+| procedencia | nodos |
+|---|---|
+| puertas (6) | `sistema_stage_gate`, `stage_gate_system`, `estructura_gates`, `sistema_gates_go_kill`, `asignacion_recursos_en_gates`, `sistema_gestion_recursos_en_gates` |
+| portafolio (7) | `portfolio_management`, `gestion_portafolio_formal`, `revision_portafolio_periodica`, `gestion_portafolio_dos_niveles`, `gestion_de_portafolio_gates_go_kill`, `gestion_portafolio_foco`, `equipos_dedicados_de_proyecto` |
+| **los tres que arrastra `sistema_gates_go_kill`** | `requisitos_gates_con_dientes` (801), `gates_go_kill_decision_points` (1038), `estructura_de_gates` (765) |
+
+| medida | cuantas |
+|---|---:|
+| pares posibles | 120 |
+| en cola | 21 |
+| leidos | **18** |
+| **en A** | **15** |
+| B / D | 1 / 2 |
+| pendientes | 3 (1366, 1399, 1524) |
+| **nunca encolados** | **99** |
+
+> **Quince pares en A entre dieciseis nodos: el bloque de repeticion mas grande
+> medido.** Y la reserva, con su cifra: **la mesa se sienta sabiendo el 15% de sus
+> pares.**
+>
+> **LO QUE ESTA ADJUDICACION DEROGA**: el orden que fijaba el cruce 2 del informe,
+> *primero las puertas y luego el portafolio*, **ya no aplica**. No hay dos mesas
+> que ordenar.
+
+### MESA 2: EL RACIMO DEL PIVOTE
+
+Ver la ficha de mas arriba. **Nomina de siete, sin cambios**: el puesto 1140 salio
+**D** y `actualizar_modelo_de_negocio_pivot_o_proceed` **no entra** (ocho
+veredictos y los ocho D).
+
+### MESA 3: LA JUNTA ASESORA
+
+**Cuatro miembros**: `formalize_advisory_board`, `formalizar_junta_asesora`,
+`identificar_junta_asesores`, `identificar_consejo_asesores`.
+
+> **TIENE UNA MESA COLGANDO DE ELLA**, y es la primera dependencia registrada del
+> plan: **el par 1190 no se puede decidir hasta que esta mesa decida el 367.**
+> Detalle en el informe, seccion 13.
+
+### MESA 4: LA APERTURA DE CUSTOMER VALIDATION
+
+**Levantada en la relectura R32, puesto 549.** `filosofia_customer_validation`
+contra `introduccion_validacion_clientes`, y con **`earlyvangelists_ventas_tempranas`**
+dentro por la A del puesto 1096.
+
+> **Lo que decide: si el catalogo quiere UNA puerta de entrada a Customer
+> Validation o dos.** Medido: `filosofia_customer_validation` **repite con quien
+> abre la etapa** (dos A) **y jerarquiza con quien la ejecuta** (cinco lecturas
+> sanas en el tramo 1101-1200).
