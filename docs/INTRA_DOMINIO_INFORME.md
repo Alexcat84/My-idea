@@ -84,6 +84,13 @@ tres marcados **A**.
 > todo, dos que separen sistema y puerta, o tres que separen sistema, puerta y
 > recursos. **Es una decision de arquitectura, no tres podas.**
 
+> **LO QUE ESTE RACIMO PIDE, nombrado el 12 ago 2026 desde la relectura R11: un
+> PROGRAMA UNICO**, la misma figura que la serie de Coleman. **Una sola decision
+> de cuantos nodos quiere el catalogo para las puertas, y despues una redaccion
+> que la ejecute entera.** Los tres A de este racimo **no son tres encargos**: son
+> sintomas de un encargo solo. **Si se ejecutan por separado, el segundo redacta
+> sobre lo que el primero acaba de mover.**
+
 ### Racimo nuevo C: LA APERTURA DE CUSTOMER VALIDATION (3 nodos)
 
 | nodo | pasos | fuente declarada |
@@ -1218,6 +1225,74 @@ cuente antes de tocarlas.**
 > por el lado de traccion y Coleman por el de experiencia. Quien redacte uno tiene
 > que mirar el otro.
 
+### TANDA R11, SEPTIMA CIEGA: seis de seis
+
+**Acumulado: 66 de 66, de los cuales 42 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **265** | `influence_map_organizacional` contra `mapa_de_influencia` | **comprador-economico**, determinar quien es el que finalmente paga; **palanca-entre-grupos**, usar el apoyo de un grupo para convencer al siguiente; y **no-te-saltes-etapas** aunque parezca mas rapido | de **lector** |
+| **268** | `pivotar_o_proceder` contra `pivote_o_proceder` | **dibuja-el-flujo-real** del cliente tipico con datos recogidos, para compararlo contra lo que suponias; y **reduce-a-un-parrafo**, dejar la lista de funciones en algo que se cuente en un parrafo y se venda a miles | de **lector** |
+| **273** | `analisis_de_variancia` contra `analisis_varianza_financiera` | **favorable-desfavorable**, decidir a mano el signo de cada varianza; **parentesis-contables**, verificar como presenta el sistema los negativos; y **antes-de-tomar-decisiones**, investigar la causa **antes** de decidir nada | de **lector** |
+| **274** | `cierre_segun_complejidad_venta` contra `riesgo_tecnicas_cierre_venta_compleja` | la mitad permisiva del primero, que en la venta pequena las tecnicas de cierre **si** se aplican; y **satisfaccion-postventa** como medida de si el cierre esta danando la relacion | de **lector** |
+| **275** | `sistema_stage_gate` contra `stage_gate_system` | **logica-de-opciones**, que cada etapa cueste progresivamente mas siguiendo la logica de comprar opciones; **playbook-replicable** como sistema operativo de toda la organizacion; y **agil-context-based**, ajustar el rigor al riesgo y tipo de proyecto | de **lector** |
+| **276** | `customer_discovery` contra `customer_discovery_cuatro_fases` | ya anotadas en los puestos **156** y **206** | de **lector** |
+
+#### 274: la fusion es INTRA-RACKHAM y no toca la frontera
+
+**Los dos nodos son de *SPIN Selling*, los dos del racimo del cierre en venta
+grande de la seccion 9.**
+
+> **Fusionarlos no mueve la frontera de doctrina de ese racimo**, que es la que
+> enfrenta a los siete de Rackham con el forastero `tacticas_cierre_ventas` de
+> *Traction*. **Es una poda interna, y de las baratas.** Igual que el 248.
+
+#### 275: los DOS programas del Stage-Gate, y el racimo pide PROGRAMA UNICO
+
+**`sistema_stage_gate` y `stage_gate_system` son los dos nodos que el racimo B de
+la seccion 1 describe como el sistema entero, dos veces.**
+
+> **Este par no se arregla solo, y no porque sea dificil sino porque no es un
+> par.** El racimo de las puertas tiene **seis miembros y tres pares leidos, los
+> tres en A**, y esos tres A son **tres fusiones distintas que no se pueden
+> ejecutar a la vez.**
+>
+> **Lo que este racimo necesita es la misma figura que la serie de Coleman: un
+> PROGRAMA UNICO.** No tres podas sucesivas, sino **una sola decision de cuantos
+> nodos quiere el catalogo para las puertas** y despues una redaccion que la
+> ejecute entera. **Registrado junto a la candidatura del racimo B.**
+
+#### 276: SUB-PURO, figura nueva, y va al banco
+
+**El trio `customer_discovery_overview`, `customer_discovery_cuatro_fases` y
+`customer_discovery` tiene sus TRES pares posibles leidos y los tres son A.**
+
+| | |
+|---|---:|
+| miembros del trio | **3** |
+| pares posibles **del trio** | **3** |
+| leidos | **3** (puestos 156, 206 y 276) |
+| que repiten | **3** |
+| pendientes | **0** |
+
+> **Y sin embargo NO es un racimo puro**, porque **el trio no es una familia: es
+> un pedazo de una.** La familia censada de customer discovery tiene **siete
+> miembros y 21 pares posibles**, de los cuales **11 estan en la cola y 9 leidos**.
+>
+> **PRECISION QUE HAY QUE HACER Y NO ESTABA EN EL ENCARGO**: uno de los tres del
+> trio, `customer_discovery_overview`, **NO esta en esa nomina de siete** (es uno
+> de los nueve que el puesto 615 midio fuera). **Asi que el conjunto que de verdad
+> contiene al trio son OCHO nodos y 28 pares posibles**, no siete y 21. La cifra
+> del encargo es la de la nomina censada; la del grafo es una mas.
+
+**Declarado en el banco 9.5 como figura nueva: EL SUB-PURO.**
+
+> **Lo que compra**: el redactor puede consolidar el trio **mientras la familia se
+> sigue leyendo**, sin esperar a la mesa. **Lo que NO compra**: decidir cuantos
+> nodos quiere el catalogo para el descubrimiento de clientes, que sigue siendo
+> decision de familia.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1949,6 +2024,24 @@ confirmada.
 > **No es un mezclado sin centro como el 201: es un CENTRO DE REPETICION.** Un
 > nodo que absorbe a los tres y tres nodos que entre ellos son dudosos.
 >
+> **NOTA DEL 12 ago 2026, y condiciona todo lo que sigue de esta seccion**: esta
+> lectura descansa en los veredictos **A** de los puestos **490** y **497**, que
+> se sostienen porque `fit_problema_solucion` **no enlaza a ninguno de sus hijos
+> de paso**. Y esa cuenta descansa a su vez en **dos juicios mios de
+> hijo-o-no-hijo**, declarados en la seccion 16.5: que `design_test_repeat` y
+> `circulos_busqueda_cofundadores` **no son hijos de paso** de ese nodo.
+>
+> **Los dos juicios se revisitan cuando la familia del encaje se lea entera como
+> FAMILIA DECLARADA**, y no antes: es exactamente el caso que esa regla existe
+> para evitar, decidir de a pares lo que es decision de familia. **Si alguno de
+> los dos juicios cae, el 490 o el 497 pasan a D y este CENTRO DE REPETICION deja
+> de existir.** Referencia cruzada puesta en los dos sitios.
+>
+> **Y el puesto 723 aporta evidencia a favor del juicio sobre `design_test_repeat`**:
+> resulto ser un nodo de ciclo con **dos gemelos propios**,
+> `ciclo_construir_medir_aprender` y `ciclo_crear_medir_aprender`, o sea vida
+> propia y no desarrollo de un paso ajeno.
+
 > **Y el centro de repeticion es, otra vez, una costura**: `fit_problema_solucion`
 > declara *Value Proposition Design* **y** *Traction* en su campo `fuente`, **y es
 > uno de los veinte que quedaron fuera de la cola de las 128.**
@@ -2351,6 +2444,40 @@ mismas seis herramientas y no lleva `seis` en el identificador.**
 > del **637** y el **683**, **y las dos anteriores las habia escrito yo mismo como
 > leccion.** La cuenta de esa familia queda **abierta** hasta que se haga por
 > contenido.
+
+#### LA CIFRA CORRECTA, contada con `scripts/contar_nombre.py`
+
+**La cuenta queda CERRADA el 12 ago 2026, y con herramienta en vez de a ojo.**
+
+| conteo | cuando | resultado |
+|---|---|---:|
+| a mano, puesto **669** | 11 ago | **4** |
+| a mano, puesto **719** | 12 ago | **5** |
+| **con script** | 12 ago | **7** |
+
+**Los siete nodos vivos del nucleo que nombran el instrumento de las seis vias de
+comunicacion de Coleman**, con lo que es cada uno:
+
+| nodo | que es |
+|---|---|
+| `seis_medios_comunicacion_cliente` | **el instrumento**: define las seis vias y como elegir entre ellas |
+| `seis_canales_comunicacion_assess` | aplicacion a la fase **Assess** |
+| `seis_herramientas_comunicacion_fase_activate` | aplicacion a la fase **Activate** |
+| `seis_herramientas_comunicacion_celebracion` | aplicacion a la **celebracion de hitos** |
+| **`estrategia_multicanal_bienvenida`** | aplicacion a la **bienvenida posterior a la compra**, y **no lleva la palabra en el identificador**: es la que se me habia perdido |
+| `fase_assess_ciclo_cliente` | **no es aplicacion**: es un nodo de fase que **mete el instrumento dentro de un paso**, el 5 |
+| `fase_adopt_ciclo_cliente` | lo mismo, dentro de su paso 2 |
+
+> **Y contar bien destapa una figura que el conteo a mano no podia ver: la fase
+> Assess esta DOBLADA.** `fase_assess_ciclo_cliente` **lleva el instrumento
+> pegado dentro de un paso** y `seis_canales_comunicacion_assess` **es ese mismo
+> uso con casa propia**. Es la **DUPLICACION CRUZADA** de la seccion 15.3, un
+> ejemplar mas: **uno lo absorbe, el otro lo desarrolla, y nadie los enlaza.**
+>
+> **La regla que sale de aqui esta en el banco 9.5.1: EL CENSO POR NOMBRE SE
+> CUENTA POR SCRIPT.** Y la segunda mitad importa igual: **el script dice donde
+> mirar; la pertenencia se decide leyendo.** Los dos ultimos de la tabla lo
+> prueban: el script los trae y la lectura dice que no son aplicaciones.
 
 ### 18.2 CUATRO CANDIDATOS A RACIMO, contados y no declarados
 

@@ -766,6 +766,37 @@ Selling*. Verificado en el archivo de veredictos:
 > la cola: el trío del sales roadmap 3 de 3, la familia del encaje 6 de 6, el
 > racimo del control de la junta 3 de 3.
 
+#### FIGURA NUEVA: EL SUB-PURO
+
+**Registrada el 12 ago 2026, desde la relectura R11.**
+
+> **Un SUB-PURO es un subconjunto de una familia que cumple la condición dura
+> puertas adentro**: todos SUS pares posibles leídos, todos repiten, cero
+> pendientes, **mientras la familia que lo contiene sigue sin leerse entera.**
+
+**EL EJEMPLAR (puesto 276): el trío del descubrimiento de clientes.**
+
+| | |
+|---|---:|
+| miembros del trío | **3**: `customer_discovery_overview`, `customer_discovery_cuatro_fases`, `customer_discovery` |
+| pares posibles **del trío** | **3** |
+| **leídos** | **3** (puestos 156, 206 y 276) |
+| que repiten | **3** |
+| pendientes | **0** |
+| **la familia que lo contiene** | **8 nodos, 28 pares posibles, 9 leídos** |
+
+> **Qué compra y qué no.** El redactor **puede consolidar el trío mientras la
+> familia se sigue leyendo**: sus tres pares están cerrados y ninguna lectura
+> pendiente puede desmentirlos, porque las pendientes son **con otros nodos**, no
+> entre estos tres.
+>
+> **Lo que NO compra** es decidir cuántos nodos quiere el catálogo para el
+> descubrimiento de clientes. **Eso sigue siendo decisión de familia**, y el
+> sub-puro solo reduce su tamaño.
+>
+> **Y la condición para declararlo es la misma de siempre, aplicada al
+> subconjunto: se cuentan los PARES POSIBLES del trío, no los de la cola.**
+
 #### La clase de tarea que esto crea: COMPLETAR LOS PARES DEL PURO
 
 **Registrada el 12 ago 2026.**
@@ -876,6 +907,33 @@ Tres miembros, tres pares posibles, los tres leídos, **y las clases son B, C y 
 aparezca con arista verificada se anota aquí en vez de ir a la mesa**: es la vía
 rápida, y su valor está en no gastarle a la mesa un tiempo que no le corresponde.
 
+### 9.5.1 EL CENSO POR NOMBRE SE CUENTA POR SCRIPT
+
+**Registrada el 12 ago 2026, después de que el conteo a mano fallara TRES veces.**
+
+| dónde falló | qué pasó |
+|---|---|
+| puesto **637** | predije que dos nodos de nombre casi igual eran gemelos. **No lo eran.** |
+| puesto **683** | la otra mitad de esa misma predicción. **Tampoco.** |
+| puesto **719** | conté una familia en **4** miembros. Eran **7**: tres no llevaban la palabra en el identificador |
+
+> **Un barrido por nombre hecho a ojo cuenta de menos cuando la familia no
+> comparte la palabra, y cuenta de más cuando la comparte sin compartir el
+> contenido.** Las dos direcciones del error, y las dos aparecieron.
+
+**LA REGLA:**
+
+> **Todo censo de familia por nombre se cuenta con `scripts/contar_nombre.py`, no
+> a mano.** El script normaliza (minúsculas, sin acentos, guión y guión bajo
+> equivalentes) y busca en identificador, título, pasos, resumen, condiciones y
+> entregable, separando vivos de deprecados.
+>
+> **Y la segunda mitad de la regla es igual de importante: el script dice DÓNDE
+> MIRAR, no quién es de la familia.** La pertenencia **se decide leyendo**. Contar
+> es mecánico; pertenecer no lo es.
+
+---
+
 ### 9.6.1 LA MAYORIA MANDA: cuando la arista que falta acusa y cuando no
 
 **Registrada el 12 ago 2026, adjudicada por el fundador, para la figura
@@ -896,7 +954,25 @@ HERMANOS ENLAZADOS MENOS UNO que el cribado intra encontro en los puestos 581 y
 > parezca a estos: LAS ARISTAS PRUEBAN INTENCION.**
 >
 > **Cuatro de cinco es un cableado con un hueco. Dos de cinco es un patron sin
-> establecer.** En el primer caso el grafo demuestra que alguien sabia como se
+> establecer.**
+
+##### RATIFICACIÓN del 12 ago 2026: el CERO entra en la regla
+
+**El cribado encontró en los puestos 658 y 678 el caso que la regla no nombraba:
+madres que no enlazan a NINGUNO de sus hijos.** Se resolvió con un límite puesto
+sobre la marcha y declarado como tal; **el fundador lo incorpora ahora al texto
+de la regla.**
+
+> **CERO ENLAZADOS ES EL CASO EXTREMO DEL MITAD-O-MENOS.** Sin ni un hermano
+> enlazado **no hay mayoría de la que tirar**: la silueta no dice nada y **manda
+> el contenido**, igual que en cualquier otra proporción por debajo de la mitad.
+>
+> **No es una excepción a la regla: es su borde.** Y el borde es donde vive la
+> mayoría de los casos: de las **veinte** madres medidas, **once** no enlazan a
+> ninguno de sus hijos.
+
+**Los diez veredictos que colgaban de aquel límite ya citan la regla** (puestos
+490, 497, 522, 555, 557, 568, 582, 586, 610 y 624). En el primer caso el grafo demuestra que alguien sabia como se
 > enlaza esta familia y se salto uno; en el segundo no hay nada que demuestre que
 > la familia iba a estar enlazada, asi que la ausencia de arista no dice nada y
 > hay que volver al texto.
