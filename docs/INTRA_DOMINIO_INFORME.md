@@ -987,6 +987,32 @@ dejar la decision abierta y documentarla.
 > coma a los que no cierran seria borrar la frontera por via de fusion**, que es
 > justo lo que la candidata a frontera de la seccion 9 viene a impedir.
 
+### TANDA R7, TERCERA CIEGA: seis de seis
+
+**Acumulado: 42 de 42, de los cuales 18 a ciegas.** Perdidas verificadas contra el
+grafo.
+
+| puesto | el par | que se pierde si no viaja |
+|---:|---|---|
+| **222** | `obtencion_compromiso` contra `obtencion_compromiso_venta` | **mide-por-avances** del primero; **revisa-las-preocupaciones-en-voz-alta** del segundo |
+| **227** | `balance_eficiencia_responsividad` contra `trade_off_responsividad_eficiencia` | **el monitoreo de factores** del primero (demanda, precios, tasas de produccion, frecuencia de entregas); **los cinco drivers nombrados** del segundo (produccion, inventario, ubicacion, transporte, informacion) |
+| **228** | `determinar_tipo_de_mercado` contra `hipotesis_tipo_mercado` | **la cifra doctrinal de Blank** del segundo, *1,7x o 3x el presupuesto de marketing del lider*; **clonar-de-otro-pais** y **documentar-como-hipotesis** del primero |
+| **230** | `etnografia_investigacion_usuario` contra `investigacion_etnografica_ideacion` | **dia-en-la-vida** del segundo; **problemas fisicos, emocionales y contextuales** del primero |
+| **232** | `customer_validation_sell_phase` contra `get_out_building_test_sell` | **evita-exclusividades** y **personalizaciones-reales** del segundo; **proceso-de-aprobacion dentro del negocio del cliente** del primero |
+| **234** | `brainstorming_efectivo` contra `reglas_brainstorming` | **Silly Cow** y **la inmersion previa** del segundo; **grupos-con-confianza** y **separar-divergencia-de-seleccion** del primero |
+
+> **DIRECCIONES PROVISIONALES DE PAR**, por la 9.3: el **222** es de la familia de
+> obtencion de compromiso, que vive dentro del racimo censado del avance; el
+> **232** es de la apertura de Customer Validation; y el **234** es del racimo
+> censado de las reglas del brainstorming, **que ademas cruza con una decision de
+> fuente y por eso tiene entrada propia en la seccion 13.**
+
+> **UNA CIFRA QUE MERECE SU PROPIA LINEA**: el 228 es el unico par de las siete
+> tandas donde lo que se pierde es **un numero**. *1,7x o 3x el presupuesto de
+> marketing del lider* no es una formulacion que se pueda reconstruir leyendo el
+> nodo superviviente: **o viaja, o desaparece del catalogo.** Las demas perdidas
+> son gestos que otro redactor podria volver a escribir; **esta no.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1380,3 +1406,78 @@ medicion obliga, no una decision nueva.**
 > no antes: cambiar tres veredictos por una forma que todavia no esta aprobada
 > seria adjudicar por adelantado.
 
+---
+
+## 13. LOS CRUCES: donde dos frentes tocan el mismo nodo
+
+**Seccion abierta el 11 ago 2026.** Hasta ahora los cruces se anotaban dentro de
+la razon del veredicto que los encontraba, y **eso los esconde**: quien lea el
+plan por frentes no los ve.
+
+> **UN CRUCE es un nodo o una familia que dos frentes distintos van a tocar.** Y
+> la regla que los gobierna es la misma que la del **toque unico** del banco 9.4,
+> subida un nivel: **si dos frentes tocan lo mismo, o se resuelven juntos, o el
+> segundo recompone lo que hizo el primero.**
+
+### CRUCE 1: el racimo del brainstorming contra la DECISION DE FUENTE de Mollick
+
+**Verificado contra el grafo.** El racimo censado `Las reglas del brainstorming`
+tiene **cuatro miembros, y los cuatro declaran libros distintos**:
+
+| miembro | fuente |
+|---|---|
+| `brainstorming_efectivo` | *Change by Design* (Tim Brown, IDEO) |
+| **`brainstorming_divergente`** | ***Change by Design* (Tim Brown) mas *Co-Intelligence* (Mollick)** |
+| `reglas_brainstorming` | *Business Model Generation* (Osterwalder) |
+| `brainstorming` | *Juran's Quality Handbook* (Defeo) |
+
+> **Cuatro nodos, cuatro libros.** Y **uno de los cuatro es el injerto de Mollick**
+> que la ficha de costuras confirmo: `brainstorming_divergente` lleva **el taller
+> de Tim Brown en sus pasos 1 a 4 y la version con IA de Mollick en los 5 a 8**,
+> con el paso 3 volviendo calcado en el 7.
+
+**EL CRUCE, y es de los que recomponen:**
+
+> **La decision de fuente de Mollick manda DESTEJER ese nodo**, separando el
+> bloque de IA. **Y el destejido cambia la aritmetica del racimo**, porque lo que
+> queda despues **ya no es el mismo nodo**.
+>
+> **Lo que queda es un taller de Tim Brown. Y `brainstorming_efectivo` TAMBIEN es
+> un taller de Tim Brown.** O sea que **el destejido puede convertir un racimo de
+> cuatro libros en un duplicado limpio de dos nodos del mismo libro**, que es una
+> pregunta mucho mas facil que la de ahora.
+
+**El orden importa y va en los dos sentidos:**
+
+| si se hace primero | que pasa |
+|---|---|
+| **el racimo** | se decide la arquitectura de cuatro nodos **con uno de ellos todavia costurado**, o sea sobre un miembro que va a cambiar |
+| **la decision de fuente** | el racimo llega a la mesa **con el nodo ya limpio**, y quiza con un duplicado obvio que antes estaba tapado por el bloque de IA |
+
+> **RECOMENDACION, y no es adjudicacion: la decision de fuente PRIMERO.** Es mas
+> barata (es una pasada por libro, no una mesa), y **deja el racimo mejor
+> planteado en vez de peor.** Lo contrario obliga a rehacer la mesa.
+
+### CRUCE 2: el racimo del Portafolio contra el racimo de las puertas del Stage-Gate
+
+**Ya estaba encontrado, en el puesto 488, pero vivia dentro de una razon de
+veredicto. Se sube aqui.**
+
+`gestion_de_portafolio_gates_go_kill` esta censado en el racimo
+`Portafolio: revisar, podar, reasignar`, y `sistema_gates_go_kill` pertenece al
+racimo nuevo de **las puertas del Stage-Gate** (seis miembros, seccion 1).
+**El par entre los dos REPITE.**
+
+> **Los dos racimos se tocan en ese par**, asi que **la mesa de las puertas tiene
+> que mirar tambien la nomina del portafolio antes de decidir cuantos nodos quiere
+> el catalogo**. Si no, decide sobre seis cuando en realidad hay siete en juego.
+
+### LA REGLA QUE ESTA SECCION FIJA
+
+> **Todo cruce se anota AQUI ademas de en su veredicto.** Un cruce escrito solo
+> dentro de una razon **existe para quien lee los veredictos en orden y no existe
+> para quien lee el plan por frentes**, que es justamente quien lo necesita.
+>
+> **Y todo cruce lleva su orden recomendado con el motivo**, porque *resolverlos
+> juntos* casi nunca significa a la vez: significa **en el orden que no obliga a
+> rehacer nada.**
