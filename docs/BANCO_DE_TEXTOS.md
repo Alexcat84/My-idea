@@ -714,7 +714,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **2** | **la ecuación de valor** | 3 | 3 | **3** | 3 | **PURO**, y el único con **los tres pares releídos a ciegas** |
 | **3** | el sales roadmap | **5** | **10** | 4 | 4 | **SUB-PURO**: el trío es puro puertas adentro, la familia no está cerrada |
 | **4** | la etapa de investigación en la venta | **4** | **6** | 4 | 4 | **SUB-PURO**, por lo mismo |
-| **5** | **la competencia entre inversores** | 3 | 3 | **3** | 3 | **PURO**, y el **primero declarado con el contador ya vigente** |
+| **5** | la competencia entre inversores | **4** | **6** | 5 | 5 | **SUB-PURO** desde el 13 ago 2026, **degradado con corrección declarada**: el contador se quedó en tres y el cuarto miembro se llamaba distinto |
 | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
 | **7** | **la junta asesora** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A |
 
@@ -725,6 +725,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **3** | **6** | puestos 872, 918, 1023, 1306, 1330 y el par `customer_validation_sales_roadmap` contra `sales_roadmap`, **que nunca entró a la cola** |
 | **4** | **2** | puesto 862 y el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola** |
 | **7** | **3** | puestos **976** y **1190**, los dos en la cola, más `identificar_consejo_asesores` contra `formalizar_junta_asesora`, **que nunca entró** |
+| **5** | **1** | puesto **1030**, `gestion_multiples_term_sheets` contra `leverage_en_negociacion_con_vcs`, **en la cola**. Si sale A, es **PURO de CUATRO**, el primero de ese tamaño |
 | **6** | **3** | las **tres fuera de la cola**: `etnografia_de_proyecto` contra `investigacion_etnografica_ideacion`, y `etnografia_aplicada_en_equipos_multidisciplinarios` contra cada uno de los dos de Cooper |
 
 > **El 6 es el más barato de cerrar de los tres sub-puros**: sus tres lecturas
@@ -1569,3 +1570,78 @@ frecuencia**: la misma escalera, el mismo peldaño.
 > la mire por encima, porque *son momentos distintos del proceso* suena a razón.
 > **El test la desarma sin discutir**: que enseñe qué pide el segundo que el
 > primero no pida.
+
+---
+
+### 9.13 DOCTRINA: AISLADO NO ES GEMELO
+
+**Adoptada el 13 ago 2026**, tras el recuento de la figura CENTRO SANO CON GEMELO
+SIN CASA y las nueve lecturas dirigidas que lo siguieron.
+
+> **La figura tiene DOS mitades y cada una se prueba distinto.**
+>
+> | mitad | qué afirma | cómo se prueba |
+> |---|---|---|
+> | **SIN CASA** | nadie lo enlazó | **forma del grafo**: cero aristas dentro del racimo |
+> | **GEMELO** | repite lo que dice el centro | **hecho de lectura**: un par **A vigente** contra el centro o contra un miembro |
+>
+> **Declarar la figura con una sola mitad no es media prueba: es ninguna.** Un
+> nodo sin aristas puede ser un duplicado, o puede ser un vecino legítimo que
+> nadie cableó.
+
+**EL EJEMPLAR, y es una medición, no un argumento.** De **trece** gemelos
+declarados en **ocho** candidatos:
+
+| | |
+|---|---:|
+| probados por par A vigente | **3** |
+| caídos por veredicto volteado | **1** |
+| declarados **solo por la forma** | **9** |
+| **de esos nueve, probados al leerlos** | **CERO** |
+
+> **Nueve de nueve cayeron.** Y **tres de los nueve ni siquiera eran del dominio
+> del racimo** (uno de `franquicias`, uno de `environmental`, uno de `core` dentro
+> de un racimo de `quality`).
+>
+> **La forma sola no predijo ni una vez.** Los tres ejemplares que sí se sostienen
+> tenían todos su par A **antes** de que la figura se nombrara.
+
+---
+
+### 9.14 REGLA DE MEDICIÓN: todo conteo de grado excluye el propio nodo
+
+**Adoptada el 13 ago 2026.**
+
+> **Al contar grado, vecinos o aislados, el propio nodo se excluye SIEMPRE.**
+
+**El motivo, medido**: el grafo vivo tiene **27 nodos con AUTO-ARISTA**, que se
+listan a sí mismos entre sus `nodos_previos` o `nodos_siguientes`. Al resolver
+alias, esos enlaces vuelven al nodo.
+
+> **Un aislado con auto-arista deja de parecer aislado**, y el error va **en la
+> dirección peligrosa**: hace desaparecer un problema en vez de inventarlo.
+> **Es un falso negativo silencioso**, exactamente lo que el canon de fallar
+> ruidoso prohíbe.
+
+**Las 27 quedan anotadas en `docs/PENDIENTES.md`** como **arreglo mecánico** (una
+pasada que las borra) **más guarda en Gate 0** para que no vuelvan a entrar.
+
+---
+
+### 9.15 PRECISIÓN a 9.5.1: el contador se complementa con EL BARRIDO DE LAS A
+
+**Propuesta el 13 ago 2026, desde la degradación del quinto puro.**
+
+> **El censo por nombre falla cuando un miembro se llama distinto.** El quinto
+> puro se declaró con **tres** miembros porque el contador se corrió sobre el
+> nombre de la familia, y el cuarto, `gestion_multiples_term_sheets`, **no lleva
+> ese nombre**. Sus dos pares con miembros **ya estaban en el archivo, los dos en
+> A** (394 y 413), desde antes de la declaración.
+
+> **La defensa es mecánica y cuesta nada: al censar una familia, barrer también
+> las A.** Todo nodo con un **A vigente** contra cualquier miembro **es candidato
+> a miembro** y entra a la lectura de pertenencia.
+>
+> **El contador dice dónde mirar por el nombre; el barrido de las A dice dónde
+> mirar por el archivo.** Los dos alimentan la misma lectura, que sigue siendo
+> quien decide.

@@ -512,6 +512,16 @@ la familia:
 > la familia. **Es una correccion a lo que escribi ayer**, y sale de medir en vez
 > de mirar.
 
+> **CORRECCION DEL 13 ago 2026, y cae casi toda esta tabla.** Estos cinco
+> candidatos se declararon **midiendo la forma**, cero aristas dentro del racimo,
+> **sin leer ni uno de los pares**. Leidos por encargo, **los NUEVE gemelos de
+> esta tabla y el del racimo de cohortes CAEN**: ninguno repite a su centro. Ver
+> **seccion 33**.
+>
+> **`desarrollo_value_proposition_usp` es el caso mas claro de por que**: no solo
+> no repite al centro, **es de otro dominio**, `franquicias`. La medicion de
+> aristas no lo podia ver y una sola lectura lo resuelve.
+
 ### LA TABLA ENTERA, racimo por racimo
 
 **`n`** son los miembros, **`ar`** las aristas internas y **`ais`** los miembros
@@ -2360,6 +2370,132 @@ el 230 y el 839. **Releido a ciegas, sostiene su A.**
 > innovation accounting en el 376; los criterios de exito y fracaso, la
 > documentacion y el no penalizar en el 387). **El monton de la DECISION 4 no
 > puede fusionar a ciegas por el id: tiene que leer cual de los dos trae mas.**
+
+### TANDA R22, DECIMOCTAVA CIEGA: CINCO de seis, y la PRIMERA DISCREPANCIA
+
+**Acumulado: 132 de 132 releidos, de los cuales 108 a ciegas. Coincidencias: 131
+de 132.** El puesto **395** es **la primera discrepancia en todo el ejercicio**, y
+se resolvio en relectura conjunta: **la clase cambia**.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **389** | `leap_of_faith_assumptions` contra `leap_of_faith_questions` | **reescribir las comparaciones** con otros negocios en terminos verificables; **disenar el experimento** que valida cada supuesto antes de construir | de **lector** |
+| **392** | `build_metrics_toolset` contra `metricas_de_adquisicion_activacion` | **repartida por bloques**, ver abajo | de **lector** |
+| **394** | `construccion_de_leverage` contra `gestion_multiples_term_sheets` | **nunca ser el primero en poner precio**; **usar el primer term sheet como palanca**; y **dos que el dictado no listo**: anclar en dos o tres terminos y flexibilidad en el resto, e identificar a todos los VCs objetivo antes de empezar | de **lector** |
+| **395** | `proceso_diseno_modelo_negocio_5_fases` contra `proceso_ideacion_modelo_negocio` | **cambia de clase**, ver abajo | **de CATALOGO a de LECTOR** |
+| **400** | `hipotesis_de_canales` contra `seleccion_canal_distribucion` | **una sola**: los **habitos de compra** establecidos en la categoria | de **lector** |
+| **401** | `modelo_spin` contra `modelo_spin_preguntas` | **dejar de entrenar abiertas contra cerradas**, **revisar tus llamadas** para ver donde te trabas, y **presentar la solucion recien cuando el cliente articule** la necesidad explicita | de **lector** |
+
+#### 395: LA PRIMERA DISCREPANCIA, resuelta en conjunta. **A pasa a D.**
+
+**LAS DOS LECTURAS, dichas enteras antes de decidir:**
+
+| | qué dice |
+|---|---|
+| **la A vigente** | el hijo es **segunda casa** de la fase 3, que ya tiene la suya (`fase_diseno_prototipado_modelos`). Duplicacion de casa, no de arista |
+| **la del auditor** | por **LA LINEA O EL PROCEDIMIENTO**: el hijo trae **criterios de seleccion, reducir a tres o cinco y prototipar**, procedimiento que la madre no tiene. **D** |
+
+**VERIFICADO CONTRA EL ARCHIVO, y es lo que decide:**
+
+| par | nodos | clase |
+|---:|---|:---:|
+| **507** | `fase_diseno_prototipado_modelos` contra `proceso_ideacion_modelo_negocio` | **A** |
+| **633** | `fase_diseno_prototipado_modelos` contra la **madre** | **D** |
+| **641** | `fase_diseno_prototipado_modelos` contra `prototipado_modelos_negocio` | **A** |
+
+> **La duplicacion que la razon vieja describia YA ESTA REGISTRADA, y en el par
+> que le corresponde: el 507.** El 395 la estaba cobrando **por segunda vez y
+> contra el nodo equivocado.**
+>
+> **Y la inconsistencia se ve sin discutir**: la misma madre contra **las dos
+> casas** de su fase 3 daba **D** con una (633) y **A** con la otra (395). **No
+> pueden ser las dos.**
+
+> **VEREDICTO: 395 pasa de A a D**, con correccion declarada dentro de su razon.
+> **Por la vara**: la fase 3 de la madre es **una linea**, *genera y prueba
+> prototipos y selecciona el mejor*; el hijo trae **criterios de seleccion**
+> nombrados (tiempo de implementacion, potencial de ingresos, resistencia del
+> cliente) y **reducir a tres o cinco y prototiparlas**. **Procedimiento, no
+> linea. CONTINUA.**
+
+> **LO QUE SI SE PIERDE Y QUEDA ANOTADO**: los pasos 1 y 2 del hijo, **el equipo
+> diverso y la inmersion**, vuelven a contar las fases 1 y 2 de la madre. **Eso es
+> material repetido dentro de un nodo sano**, y el redactor tiene que podarlo, no
+> fusionarlo.
+
+**Y LA PARAFRASIS ABOLIDA ESTABA VIVA EN SU TEXTO.** La razon empezaba con *la
+regla lo resuelve: SIN ARISTA, verificado, o sea DUPLICACION*, que es exactamente
+la parafrasis que el banco 9.5.0 abolio. **Reescrita citando la vara.**
+
+#### 394: el QUINTO PURO se degrada a SUB-PURO, y el contador se queda corto
+
+**`gestion_multiples_term_sheets` ES un cuarto miembro**, y no por este par: **ya
+tenia DOS A con miembros en el archivo antes de esta lectura.**
+
+| | antes | ahora |
+|---|---:|---:|
+| miembros | 3 | **4** |
+| pares posibles | 3 | **6** |
+| leidos | 3 | **5** (257, 334, **394**, **413**, 787) |
+| en A | 3 | **5** |
+| pendientes | 0 | **1**: el puesto **1030** |
+
+> **Por que el contador no lo vio**: se corrio sobre el nombre de la familia,
+> *competencia entre inversores*, y este nodo **se llama por su artefacto**, term
+> sheets. **El termino correcto era otro y el nodo estaba a la vista con el
+> 413 ya en A.**
+>
+> **De ahi la precision del banco 9.15: el contador se complementa con EL BARRIDO
+> DE LAS A.** Todo nodo con A vigente contra un miembro es candidato a miembro.
+
+> **Le falta UNA lectura y esta en la cola.** Si el **1030** sale A, esta familia
+> es **PURO DE CUATRO**, el primero de ese tamano en todo el archivo.
+
+#### 392 y 401: las dos clases citadas de la ficha, y salen distintas
+
+| nodo | clase real en la ficha | efecto en el par |
+|---|---|---|
+| **`modelo_spin_preguntas`** | **CITA FALSA**, seis pasos, bloque 46,5, nombrada **SECUENCIA LEGITIMA**: la secuencia SPIN entera mas el ajuste de ritmo | **ninguno**: no es costura, el 401 es libre |
+| **`metricas_de_adquisicion_activacion`** | **una de las VEINTE fuera de cola**, dos obras, **sin anatomia escrita** hasta hoy | **es costura, y con gemelo: cura acoplada** |
+
+**ANATOMIA DE `metricas_de_adquisicion_activacion`, verificada contra el grafo y
+escrita por primera vez** (tercera de las veinte que la recibe):
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | **Blank**: que relacion se quiere con el cliente, menos de doce metricas accionables, metricas de adquisicion, metricas de activacion, y el tablero |
+| **6 a 9** | **Weinberg**: definir que es una conversion antes de lanzar campana, calcular CTR, CPC y CPA por campana de prueba, comparar CAC contra LTV, y usar SEM para **aprender** que mensaje funciona |
+
+> **DECIMO EJEMPLAR DE LA CURA ACOPLADA** y septimo del tipo caro: costurada con
+> gemelo declarado (este 392 en A). **Anotado en la ficha.**
+
+**SU PUESTO EN LA COLA: EN COLA, NO CONGELADO**, y con un aviso.
+
+> El solape del par es **el montaje del instrumento** (hipotesis de relacion,
+> menos de doce metricas, instrumentar, tablero), y **cae entero en el bloque 1 a
+> 5**, el que sobrevive al destejido. **Veredicto invariante.**
+>
+> **EL AVISO, porque estuvo cerca**: este nodo **repite el costo de adquisicion a
+> los dos lados de la juntura**, en su paso 3 y otra vez en los pasos 7 y 8. **Si
+> el solape de un par futuro cae sobre el CAC, ese par SI bloquea.** Este no,
+> porque su solape es el montaje y no el costo.
+
+**LA PERDIDA, REPARTIDA por el banco 9.11:**
+
+| se salva en ESTA fusion | viaja con el destejido |
+|---|---|
+| de `build_metrics_toolset`: que el sistema **escale luego a retencion y cohortes** | **las tres del dictado**: definir que es una conversion, el CAC contra el LTV, y el SEM para aprender. **Las tres son del bloque de Weinberg** |
+
+> **El dictado listaba las tres como perdidas del par. Ninguna lo es**: las tres
+> viven en el bloque que la cirugia se lleva. **Cuarto ejemplar de la figura**,
+> con el 344, el 374 y el 386.
+
+#### 400: una de las dos perdidas dictadas no lo es
+
+> **`un-solo-canal` esta en LOS DOS nodos**, y con las mismas mayusculas: paso 4
+> de `hipotesis_de_canales` y paso 5 de `seleccion_canal_distribucion`. **La razon
+> vieja ya lo decia.** La unica perdida real del par son **los habitos de compra
+> establecidos en la categoria.**
 
 ---
 
@@ -5006,3 +5142,104 @@ con ellos llega a **siete pares leidos**:
 > `decision_pivotar_o_proceder` y no a `customer_validation`**, que es su segundo
 > paso. **Es la tercera del mismo tipo en tres tramos** (841, 846, 854) y las tres
 > son madres que nombran un paso y no lo enlazan.
+
+---
+
+## 33. LAS NUEVE LECTURAS DIRIGIDAS: nueve de nueve caen
+
+**Encargo aprobado el 13 ago 2026.** No son lecturas de la cola: son **pares
+dirigidos**, cada gemelo declarado contra el centro de su racimo, con la misma
+vara del cribado. **Se registran aqui y no en el jsonl**, que solo lleva la cola.
+
+### 33.1 EL SALDO
+
+| | |
+|---|---:|
+| leidos | **9 de 9** |
+| **PROBADOS como gemelo** | **CERO** |
+| caen | **9** |
+| de esos, de **otro dominio** que su racimo | **3** |
+
+> **La forma sola no acerto ni una vez.** Los tres ejemplares que la figura si
+> tiene (`customer_profile_value_map`, `dso_dpo_gestion_capital_trabajo`,
+> `intimation_illumination`) **tenian su par A antes de que la figura se
+> nombrara**. Los nueve declarados **solo por cero aristas** no sobreviven la
+> lectura.
+
+### 33.2 LOS NUEVE, uno por uno
+
+| # | gemelo declarado | contra el centro | veredicto y por que |
+|---:|---|---|---|
+| 1 | `desarrollo_value_proposition_usp` | `value_proposition_canvas` | **CAE, y ni siquiera es del dominio**: es de **franquicias**, de *Franchise Your Business*, y define la USP de un negocio **franquiciable**, validando con consultas no solicitadas de interesados. El centro es una **herramienta de dos lados** con su plantilla. **Cero solape** |
+| 2 | `auditoria_calidad` | `principios_auditoria_calidad` | **CAE**: es de **Crosby** y monta la auditoria, que funcion se audita y contra que criterios, auditores imparciales de otras areas, tiempo para el reporte, autoauditorias verificadas por muestreo. El centro son **los cinco principios de Juran**. Se tocan en **un paso**, formar al auditor |
+| 3 | `reporte_auditoria` | `principios_auditoria_calidad` | **CAE**: es **el documento**, resumen ejecutivo y alcance, revisar el borrador con el auditado en reunion de cierre, clasificar hallazgos por gravedad, decidir a quien se entrega, y empezar por lo que si funciona. **Cero solape con los principios** |
+| 4 | `analisis_flujo_de_valor` | `ocho_desperdicios_lean` | **CAE, con figura**: mismo instrumento en **arenas distintas**. El centro aplica **la taxonomia de los ocho desperdicios** a un proceso productivo; este aplica el mapeo **al proceso de innovacion**, con lo creido contra lo real, cuatro preguntas por actividad y causa raiz de cuellos de botella. **Ninguno cabe en una linea del otro** |
+| 5 | `value_stream_mapping_ambiental` | `ocho_desperdicios_lean` | **CAE, y es de otro dominio**: es de **environmental**, registra entradas de materiales, energia y agua y salidas de scrap, emisiones y residuos peligrosos, con iconos y costos de disposicion. **Es el VSM con datos ambientales**, otro objeto |
+| 6 | `desarrollo_expertos_capaces` | `rol_black_belt` | **CAE**: el centro es **el ROL**, seleccionar candidatos, encargarle la nominacion de proyectos, coordinar, certificar. Este es **el SISTEMA DE FORMACION**, linea base de competencias, curriculo por rol y nivel, programa interno de certificacion y medir su impacto. Se tocan en **la certificacion** |
+| 7 | `rol_facilitador_black_belt` | `rol_black_belt` | **CAE, y es el mas cercano de los nueve**: los dos son del mismo libro y **el propio centro se distingue en su resumen**, el Black Belt *va mas alla de facilitar equipos*. Este manda asignar facilitador a cada equipo, entrenarlo, usarlo para detectar el estancamiento y **retirar el apoyo poco a poco**. **Actos distintos** |
+| 8 | `eliminar_slogans_metas` | `adopcion_liderazgo` | **CAE**: son **dos puntos numerados de Deming**, el 10 y el 7, y el catalogo hace bien en tener los dos. **Se tocan en una instruccion**, dejar las metas numericas, **y ese solape es de Deming, no del catalogo** |
+| 9 | `mejora_continua_del_sistema` | `adopcion_liderazgo` | **CAE**: punto **5** contra punto **7**. La calidad desde el diseno, reducir la variacion alrededor del nominal, distinguir apagar incendios de mejorar el proceso. **Cero solape** |
+
+### 33.3 LO QUE ESTO DEJA, y no es solo un saldo
+
+> **1. La figura queda con TRES ejemplares y CERO candidatos pendientes.** Ya no
+> hay lista abierta: los nueve estan leidos y los nueve caen. **La seccion 6 de
+> este informe queda corregida en ese punto.**
+
+> **2. TRES RACIMOS TIENEN MIEMBROS DE OTRO DOMINIO**, y eso es defecto de
+> **nomina**, no de lectura:
+>
+> | racimo | miembro | su dominio real |
+> |---|---|---|
+> | el lienzo de propuesta de valor (`core`) | `desarrollo_value_proposition_usp` | **franquicias** |
+> | Mapeo del flujo de valor (`quality`) | `value_stream_mapping_ambiental` | **environmental** |
+> | Mapeo del flujo de valor (`quality`) | `analisis_flujo_de_valor` | **core** |
+>
+> **Un racimo con miembros de tres dominios no es una familia: es un grupo de
+> nombres parecidos.** Anotado al plan.
+
+> **3. La leccion de metodo, que es la cara util del cero de nueve**: cuando una
+> figura **se declara por forma y se prueba por lectura, hay que probarla antes de
+> contarla.** Ocho candidatos sonaban a ocho problemas y eran **tres**.
+
+---
+
+## 34. LAS TRES MESAS CONVOCADAS
+
+**Abiertas el 13 ago 2026.** Hasta ahora cada tramo decia *esto pide mesa* y la
+frase se quedaba dentro de un veredicto. **Aqui viven las tres, con nomina, motivo
+y que decide cada una.**
+
+### MESA 1: EL STAGE-GATE Y SUS PUERTAS, con su cruce de portafolio
+
+| | |
+|---|---|
+| **nomina medida** | **nueve nodos leidos** del nucleo entre etapas, puertas, sistemas y portafolio |
+| **motivo** | pares que repiten dentro de la familia (**356**, **852**, **853**) y **dos racimos que se tocan** en un solo nodo |
+| **el cruce** | `sistema_gates_go_kill` repite **hacia fuera** con `gestion_de_portafolio_gates_go_kill`, del racimo del portafolio, **y hacia dentro** con `estructura_gates`, del suyo |
+| **QUE DECIDE** | **cuantos nodos quiere el catalogo** para el sistema de puertas, y **en que orden se tocan los dos racimos** |
+| **orden recomendado** | **primero la familia de las puertas**, y con el superviviente en la mano el cruce con el portafolio. Al reves, el portafolio decide sobre un nodo que despues se funde |
+
+### MESA 2: EL RACIMO DEL PIVOTE
+
+| | |
+|---|---|
+| **nomina medida** | **siete** por lectura contra **cinco** censados. 21 pares posibles, 10 en cola, **5 leidos**, 11 que nunca entraron, **dos aristas internas** |
+| **el saldo** | dentro de Blank ya esta resuelto: la misma puerta **repite** (268 A), puertas distintas son **sanas** (594 D, 598 D). **El cruce entre libros no**: 771 y 843, los dos **B** |
+| **QUE DECIDE** | si el catalogo quiere **un nodo por LIBRO** o **un nodo por PUERTA** del proceso |
+| **recomendacion del auditor, registrada** | **el catalogo se organiza por lo que el lector HACE, no por la biblioteca**: **un nodo por PUERTA** como opcion por defecto, y **nodo por libro solo donde los libros discrepen de verdad**, y entonces se llama **FRONTERA DECLARADA** y se escribe como tal, no como dos nodos que se ignoran |
+
+### MESA 3: `customer_development_modelo` Y SU ZONA
+
+| | |
+|---|---|
+| **el nodo** | **siete pares leidos**: **A** en 635 y 849, **D** en 377 y 854, **B en 683, 707 y 806** |
+| **motivo** | **tres dudosos sobre un solo nodo, mas que ningun otro del cribado.** Y repite con **dos** nodos de descubrimiento distintos |
+| **la forma del problema** | demasiados nodos contando **el mismo proceso desde alturas distintas**: el modelo entero, la etapa, la fase y el gesto |
+| **QUE DECIDE** | **a que altura vive cada nodo** de customer development, y **cual de las alturas se queda con el material comun** |
+| **por que no se decide pareja por pareja** | porque cada par enfrenta **dos alturas** y la respuesta correcta depende de las **cuatro** |
+
+> **LO QUE LAS TRES COMPARTEN, y es el motivo de abrir el registro**: ninguna es
+> una duda de clase. **Las tres son dudas de ARQUITECTURA**, y por eso el cribado
+> las acumula en B en vez de resolverlas. **Cada B de estas zonas es una mesa que
+> no se ha sentado.**

@@ -2108,3 +2108,32 @@ contada dos veces **repite** (268 A) y puertas distintas del proceso son **sanas
 > 843) y decidir si Ries y Blank **discrepan** sobre cómo decidir un pivote, o si
 > solo **entran por sitios distintos** a la misma puerta. Si es lo segundo, la
 > recomendación los resuelve a los dos de una vez.
+
+---
+
+## ARREGLOS MECÁNICOS DEL GRAFO (13 ago 2026)
+
+### 1. LAS 27 AUTO-ARISTAS
+
+**Medido**: 27 nodos vivos se listan a sí mismos en sus `nodos_previos` o
+`nodos_siguientes`. Al resolver alias, el enlace vuelve al propio nodo.
+
+| qué | cómo |
+|---|---|
+| **arreglo** | una pasada que borra el propio id de las dos listas de cada nodo. **Mecánico, sin criterio** |
+| **guarda** | validación en **Gate 0**: ningún nodo puede citarse a sí mismo como previo o siguiente |
+| **por qué importa** | no rompe nada visible, **pero hace que un aislado deje de parecer aislado**. Es un falso negativo silencioso, y ya alcanzó a una medición (banco §9.14) |
+
+### 2. TRES RACIMOS CON MIEMBROS DE OTRO DOMINIO
+
+Encontrado al leer los nueve pares dirigidos (informe §33).
+
+| racimo | miembro | su dominio real |
+|---|---|---|
+| el lienzo de propuesta de valor (`core`) | `desarrollo_value_proposition_usp` | **franquicias** |
+| Mapeo del flujo de valor (`quality`) | `value_stream_mapping_ambiental` | **environmental** |
+| Mapeo del flujo de valor (`quality`) | `analisis_flujo_de_valor` | **core** |
+
+> **Un racimo con miembros de tres dominios no es una familia: es un grupo de
+> nombres parecidos.** No es mecánico: pide decidir si la nómina se depura o si
+> esos racimos se declaran explícitamente transversales.

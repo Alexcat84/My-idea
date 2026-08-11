@@ -3026,8 +3026,27 @@ o sea limpios por dentro:
 > Cooper, que es el que sobrevive. **Pero los TRES pares que este nodo congela
 > siguen congelados**, y por eso sigue siendo el primero de la cirugia.
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y SEIS
-> confirmadas con gemelo** (277, 285, 331, **361**, **374**, **386**). **Las cuatro confirmadas son
+> **DECIMO EJEMPLAR, anadido el 13 ago 2026 desde la relectura R22, y es el
+> SEPTIMO del tipo caro. Sale de la lista de las VEINTE FUERA DE COLA:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`metricas_de_adquisicion_activacion`** (puesto 392 del intra) | **fuera de cola**, nueve pasos, **DOBLE**: Blank en 1 a 5 y Weinberg en 6 a 9 | **A**, repite con `build_metrics_toolset` |
+>
+> **Lo que hay que salvar, YA REPARTIDO por bloques** (banco 9.11): **en la
+> fusion**, que el sistema escale luego a retencion y cohortes, de
+> `build_metrics_toolset`. **Con el destejido** viajan las tres del bloque de
+> Weinberg: definir que es una conversion, comparar el CAC contra el LTV, y usar
+> SEM para aprender que mensaje funciona.
+>
+> **Su par entra a la cola SIN congelar**, con un aviso: **este nodo repite el
+> costo de adquisicion a los dos lados de la juntura**, en su paso 3 y otra vez en
+> los 7 y 8. **Si el solape de un par futuro cae sobre el CAC, ese par SI
+> bloquea.** El 392 no, porque su solape es el montaje del instrumento.
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y SIETE
+> confirmadas o fuera de cola con gemelo** (277, 285, 331, **361**, **374**,
+> **386**, **392**). **Las cuatro confirmadas son
 > las unicas que necesitan cura acoplada**: en las falsas no hay nada que
 > destejer.
 
@@ -3238,6 +3257,28 @@ Management* (Hugos).
 **Destino**: la pasada unica, **separar en dos**. Y su par del puesto **851 queda
 CONGELADO**, no solo encolado: **el solape del par es justamente la orden
 repetida**, asi que el veredicto depende de cual de las dos copias sobreviva.
+
+---
+
+### 3. `core/metricas_de_adquisicion_activacion`, 9 pasos: TERCERA FUERA DE COLA
+
+**Hallada el 13 ago 2026 en la relectura R22 del puesto 392**, otra vez **por el
+otro eje**. Anatomia verificada contra el grafo.
+
+**Dos fuentes**: el manual de Blank y *Traction* de Weinberg.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 5** | **Blank**: que relacion se quiere con el cliente, menos de doce metricas accionables, metricas de adquisicion, metricas de activacion, y montar el tablero |
+| **6 a 9** | **Weinberg**: definir que es una conversion **antes** de lanzar campana, calcular CTR, CPC y CPA por campana de prueba, comparar **CAC contra LTV**, y usar **SEM para aprender** que mensaje funciona, no solo para vender |
+
+> **Hay repeticion interna y cruza la juntura**: el **costo de adquisicion** esta
+> en el paso 3, dentro del bloque de Blank, y vuelve en los pasos **7 y 8**,
+> dentro del de Weinberg. **El instrumento lo habria cazado si hubiera estado en
+> la cola.**
+
+**Destino**: la pasada unica, **separar en dos**, y **cura acoplada** con
+`build_metrics_toolset`, que es su gemelo declarado.
 
 ---
 
