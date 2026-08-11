@@ -5227,6 +5227,7 @@ y que decide cada una.**
 | **nomina medida** | **siete** por lectura contra **cinco** censados. 21 pares posibles, 10 en cola, **5 leidos**, 11 que nunca entraron, **dos aristas internas** |
 | **el saldo** | dentro de Blank ya esta resuelto: la misma puerta **repite** (268 A), puertas distintas son **sanas** (594 D, 598 D). **El cruce entre libros no**: 771 y 843, los dos **B** |
 | **QUE DECIDE** | si el catalogo quiere **un nodo por LIBRO** o **un nodo por PUERTA** del proceso |
+| **AMPLIADA el 13 ago 2026** | la zona tiene **DOS familias**, la de la **DECISION** (siete nodos) y la del **ACTO de pivotar** (`pivote_estrategico`, `pivote_startup`, `catalogo_pivotes`), y **SEIS dudosos** contados del archivo: 591, 668, 737, 753, 771 y 843. **`pivote_startup` solo carga cuatro de los seis** |
 | **recomendacion del auditor, registrada** | **el catalogo se organiza por lo que el lector HACE, no por la biblioteca**: **un nodo por PUERTA** como opcion por defecto, y **nodo por libro solo donde los libros discrepen de verdad**, y entonces se llama **FRONTERA DECLARADA** y se escribe como tal, no como dos nodos que se ignoran |
 
 ### MESA 3: `customer_development_modelo` Y SU ZONA
@@ -5243,3 +5244,96 @@ y que decide cada una.**
 > una duda de clase. **Las tres son dudas de ARQUITECTURA**, y por eso el cribado
 > las acumula en B en vez de resolverlas. **Cada B de estas zonas es una mesa que
 > no se ha sentado.**
+
+---
+
+## 35. EL TRAMO 855 a 860: una familia cierra y la mesa del pivote se agranda
+
+**Seis pares leidos, los seis del nucleo.** Acumulado **860 de 3.388**, global
+**30,8%** de A y **nucleo 37,4%**. **El tramo dio 50%.** **Faltan 40 para el
+checkpoint de los 900.**
+
+### 35.1 LA FAMILIA DE SPIN QUEDA LEIDA ENTERA
+
+**Puesto 856.** Con este par, **los seis pares posibles de la familia estan
+leidos**, y los seis estaban en la cola.
+
+| | |
+|---|---:|
+| miembros | **4**: `metodologia_spin_selling`, `framework_spin_selling`, `modelo_spin`, `modelo_spin_preguntas` |
+| pares posibles | **6** |
+| **leidos** | **6**, todos |
+| saldo | **4 A** (248, 305, 401, 856) y **2 D** (625, 764) |
+
+> **MEZCLADA COMPLETA, y por eso NO pide mesa: pide redactor.** La familia esta
+> cerrada, se sabe exactamente que repite y que no, y **no hay ninguna pregunta de
+> arquitectura pendiente.** Es el contraste util con las tres mesas de la seccion
+> 34.
+>
+> **Y trae un detalle del grafo**: el par que cierra la familia es **Weinberg
+> resumiendo a Rackham**, y **no hay arista entre ellos.** El catalogo tiene la
+> cita y el grafo no la conoce.
+
+### 35.2 LA MESA DEL PIVOTE ERA MAS GRANDE DE LO MEDIDO
+
+**La seccion 34 la abrio con SIETE nodos, los de la DECISION.** Este tramo
+encuentra que **hay una segunda familia en la misma zona: la del ACTO de
+pivotar.**
+
+| familia | de que trata | ejemplo |
+|---|---|---|
+| **la DECISION** | si pivotar o no | `pivote_o_proceder`, `decision_pivote_perseverar` |
+| **el ACTO** | como se pivota | `pivote_estrategico`, `pivote_startup`, `catalogo_pivotes` |
+
+**Y la zona entera acumula SEIS dudosos**, contados del archivo: **591, 668, 737,
+753, 771 y 843.**
+
+> **`pivote_startup` solo carga CUATRO de esos seis.** Es, con
+> `customer_development_modelo`, uno de los dos nodos que mas dudas produce en
+> todo el cribado.
+>
+> **La mesa 2 queda ampliada**: no decide sobre siete nodos, decide sobre **una
+> zona con dos familias y seis dudosos.**
+
+**PERO EL TRAMO TAMBIEN LE DA A ESA MESA SU DATO MAS UTIL** (puesto **860**):
+
+> **Dentro de Blank, la misma puerta ya repetia** (268 A). **Ahora, dentro de
+> Ries, la misma decision tambien repite** (860 A). **Y el acto de pivotar repite
+> entre los dos libros** (857 A).
+>
+> **La duplicacion esta DENTRO de cada libro.** Los unicos pares que siguen sin
+> resolverse son **los cruzados** (771 y 843). **Eso empuja hacia la
+> recomendacion del auditor**: si cada libro ya se repite a si mismo, el criterio
+> de reparto no puede ser el libro. **Un nodo por PUERTA.**
+
+### 35.3 LA CUARTA ARISTA QUE FALTA DEL MISMO TIPO, y la mesa 3 se confirma
+
+**Puesto 855.** `customer_development_process` nombra la validacion con clientes
+en su etapa 2 y **no enlaza** a `customer_validation`, que la ejecuta.
+
+> **Es la cuarta del mismo tipo en cuatro tramos** (841, 846, 854, 855): **madres
+> que nombran un paso y no lo enlazan.**
+>
+> **Y aqui se ve por que la mesa 3 no es opcional**: `customer_validation` lleva
+> **DOS madres distintas leidas contra el**, esta y `customer_development_modelo`
+> (854), **las dos en D**, y **las dos madres entre si dieron D** (377). **Tres
+> nodos contando el mismo proceso a tres alturas, ninguno enlazado con el hijo, y
+> los tres pares sanos.** El problema no es que repitan: **es que nadie sabe cual
+> preside.**
+
+### 35.4 Lo demas del tramo
+
+> **1. Dos etapas consecutivas de la misma llamada de Rackham SIN ARISTA entre
+> ellas** (puesto **858**): los Preliminares y la Investigacion. Salen **D**, se
+> tocan en una sola orden, no hablar del producto antes de tiempo, **y el grafo no
+> sabe que van seguidas.** No es duplicacion: **es una serie sin cablear.**
+>
+> **2. El sub-puro numero 4, la etapa de investigacion en la venta, tiene su
+> lectura pendiente a la vuelta**: el puesto **862**, que cae en el tramo
+> siguiente. **Con el y con el par que nunca entro a la cola, la familia se
+> cierra.**
+>
+> **3. La contabilidad de caja contra el devengo sale sana** (puesto **859**):
+> una es la **decision de migrar** y la otra es la **revision de periodo**. Lo mas
+> valioso del segundo, **distinguir la utilidad reportada del flujo de caja real
+> disponible**, no esta en el primero.
