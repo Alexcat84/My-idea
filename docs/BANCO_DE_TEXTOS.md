@@ -717,6 +717,17 @@ archivo de veredictos:
 > racimo está **cerrado y sin excepciones**: no queda ningún par suyo por leer que
 > pudiera desmentirlo.
 
+> **RE-VERIFICADO EL 12 ago 2026 con `scripts/contar_nombre.py` y
+> `RACIMOS_MIEMBROS.jsonl`, por la regla de LA NÓMINA QUE CRECE**: la nómina sigue
+> siendo de **tres** (`diferencia_ganancia_flujo_caja`, `profit_vs_cash`,
+> `cash_is_king`), los tres pares posibles siguen siendo esos tres, y **ninguno de
+> los tres miembros tiene un solo par leído con un nodo de fuera**. Los vecinos que
+> el censo levanta (`burn_rate_por_etapa`, `cash_burn_calculation` y dos más)
+> **hablan de consumo de caja, que es otro objeto**.
+>
+> **El primer puro se sostiene sin cambios.** Es el único de los cuatro que ha
+> pasado por una re-verificación de nómina y ha salido intacto.
+
 **Por qué la distinción vale la pena, y es de coste:**
 
 > **Un racimo mezclado necesita una mesa**: alguien tiene que mirar los miembros

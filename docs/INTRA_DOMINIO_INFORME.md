@@ -1551,6 +1551,98 @@ la serie de Coleman, en que **cuatro fusiones sueltas no valen**. Ocho nodos que
 dicen donde acaba la IA y empieza la persona **necesitan una sola decision de
 cuantos nodos quiere el catalogo**, no cuatro podas.
 
+### TANDA R14, DECIMA CIEGA: seis de seis
+
+**Acumulado: 84 de 84, de los cuales 60 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **300** | `diferencia_ganancia_flujo_caja` contra `profit_vs_cash` | **proyeccion-12-18-meses** del flujo de caja segun lo que esperas crecer; y **lineas-de-credito-antes**, conseguir financiamiento **antes** de que la falta de efectivo sea urgente | de **lector** |
+| **301** | `analisis_motivaciones_fundador` contra `influencias_tempranas_motivaciones` | **las-13-motivaciones** de la lista, de la que se eligen cuatro; **perfiles-tipicos** de quien emprende y de quien no, para compararse; y **control-o-riqueza**, saber cual de los dos pesa mas en ti | de **lector** |
+| **302** | `asignacion_recursos_en_gates` contra `sistema_gestion_recursos_en_gates` | **lista-priorizada-visible** de proyectos activos en cada puerta; **no-agregar-sin-resolver** las implicaciones de recursos; y **compromiso-explicito** de personas y presupuesto en la reunion | de **lector** |
+| **303** | `enfoque_etapa_investigacion` contra `etapa_investigacion_ventas` | ya anotadas en los puestos **209** y **278** | de **lector** |
+| **305** | `metodologia_spin_selling` contra `modelo_spin` | **diagnostica-pequena-o-grande** antes de nada; **estudios-de-incremento**, la cifra de mas del veinte por ciento; **deja-abiertas-vs-cerradas**, que esa distincion no es el factor; y **transiciones-invisibles** entre tipos de pregunta | de **lector** |
+| **306** | `pivote_startup` contra `pivotes_e_iteraciones` | **distingue-ajuste-de-cambio** entre iteracion y pivote; **versiona-el-lienzo**, documentar cada cambio como version nueva; y **cuentalo-como-normal** a quien trabaja contigo | de **lector** |
+
+> **DOS DE FAMILIA DECLARADA**: el **302** es del racimo de **las puertas del
+> Stage-Gate** (ocho miembros tras la remedicion del puesto 765) y el **306** del
+> racimo censado **Pivotar o proceder**. **Sus direcciones de fusion quedan
+> provisionales de par por la 9.3.**
+
+#### 303: el CUARTO PURO sostiene su tercer par
+
+**Con el 209 y el 278, los tres pares del puro de la etapa de investigacion han
+pasado por la relectura a ciegas y los tres se sostienen.**
+
+> **Es el segundo puro con todos sus pares releidos**, tras el de la ecuacion de
+> valor. **La condicion del puesto 769 sigue viva** (el cuarto candidato externo,
+> con los puestos 800 y 862 pendientes), pero **lo que esta leido, aguanta.**
+
+#### 300: LA NOMINA DEL PRIMER PURO, contada, y NO crecio
+
+**El encargo pedia verificar si la familia del efectivo contra la ganancia habia
+crecido, porque el 300 parecia emparejar dos nodos de fuera. Contado con el
+script y con `RACIMOS_MIEMBROS.jsonl`, la respuesta es que NO.**
+
+| | |
+|---|---:|
+| nomina censada | **3**: `diferencia_ganancia_flujo_caja`, `profit_vs_cash`, `cash_is_king` |
+| pares posibles | **3** |
+| leidos | **3** (puestos **300**, **487** y **544**) |
+| que repiten | **3** |
+| pendientes | **0** |
+
+> **Los dos nodos del 300 SI estan en la nomina**, y ese par es **uno de los tres
+> que hicieron puro al racimo**. **No hay nada que degradar.**
+>
+> **Y el censo por script lo confirma por el otro lado**: los tres primeros del
+> conteo son exactamente los tres de la nomina; los otros cuatro que asoman
+> (`burn_rate_por_etapa`, `cash_burn_calculation` y dos mas) **hablan de consumo de
+> caja, que es otro objeto**, y **ninguno de los tres tiene un solo par leido con
+> un nodo de fuera**.
+>
+> **EL PRIMER PURO SE SOSTIENE SIN CAMBIOS.**
+
+#### 305: LA FAMILIA SPIN, y la vara le cambio la clase
+
+**Contada con el script y el jsonl. Es FAMILIA PROPIA, no material del racimo del
+cierre en venta grande.**
+
+| | |
+|---|---:|
+| miembros | **4**: `metodologia_spin_selling`, `modelo_spin`, `modelo_spin_preguntas`, `framework_spin_selling` |
+| pares posibles | **6** |
+| **en la cola** | **6**, o sea **todos** |
+| leidos | **5** |
+| clases | **A** (248), **A** (305), **A** (401), **D** (625), **D** (764) |
+| **pendiente** | **UNO**, el puesto **856** |
+| solape con el racimo del cierre | **NINGUNO**, cero miembros compartidos |
+
+> **Lo que la nomina dice y la memoria no decia**: los cuatro pares que conectarian
+> SPIN con el racimo del cierre **existen en la cola y estan los cuatro
+> pendientes** (1150, 1375, 1489 y 1526). **Hoy son dos familias vecinas sin un
+> solo par leido entre ellas.**
+
+**Y AQUI ESTA EL HALLAZGO GORDO, que no es de nomina sino de doctrina:**
+
+> **Antes de la vara del banco 9.6.1, esta familia tenia CINCO pares leidos y los
+> CINCO en A.** Con el 856 en A habria sido el **QUINTO PURO** y habria ido
+> directo al redactor.
+>
+> **La vara convirtio el 625 y el 764 en D**, y con eso la familia **paso de
+> candidata a pura a MEZCLADA**, y una mezclada necesita mesa.
+>
+> **La vara no solo movio diecinueve veredictos: cambio la clase de familias
+> enteras.** Y el efecto va en la direccion que ya se habia visto en el marcador:
+> **menos consolidacion directa y mas enlace**. Es el primer caso donde se puede
+> medir sobre una familia concreta.
+
+**LA FORMA DE ESTA FAMILIA, para cuando le toque**: `framework_spin_selling` es
+**el forastero declarado**, cita *Traction* de Weinberg y no a Rackham, y es uno
+de los tres forasteros de *Traction* en familias de Rackham (con
+`tacticas_cierre_ventas` y `compromiso_linea_tiempo_cliente`).
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1802,6 +1894,43 @@ declarada`**, igual que la del cierre en venta grande.
 > el par que cruzaria las dos mitades originales sigue pendiente. **Lo que subio
 > el racimo fue la evidencia agregada, no esa condicion.** Todo medido y
 > declarado en la seccion 8, tanda R13.
+
+### LA NOMINA VIGENTE: OCHO miembros
+
+| nodo | pasos |
+|---|---:|
+| `human_in_the_loop_ia` | 4 |
+| `principio_humano_en_el_loop` | 4 |
+| `comprension_capacidades_limitaciones_ia` | 5 |
+| `jagged_frontier_ia` | 4 |
+| `mitigar_falling_asleep_wheel` | 4 |
+| `riesgo_sobredependencia_ia` | 4 |
+| `alineacion_etica_ia_negocio` | 5 |
+| `comprender_alineacion_etica_ia` | 4 |
+
+**28 pares posibles, 13 en la cola, CUATRO leidos y los cuatro en A** (166, 177,
+293, 692). **Nueve pendientes de cola y quince que nunca entraron.** **Una sola
+arista interna**, entre `jagged_frontier_ia` y `riesgo_sobredependencia_ia`.
+
+### LAS CONDICIONES VIVAS DE ESTE RACIMO
+
+**Escritas aqui dentro para que no vivan solo en una razon de veredicto.** Son
+cinco puestos concretos y cada uno decide algo distinto:
+
+| puesto | que decide |
+|---:|---|
+| **1211** | `comprension_capacidades_limitaciones_ia` contra `principio_humano_en_el_loop`: **cruza las dos mitades originales** |
+| **1239** | `comprension_capacidades_limitaciones_ia` contra `human_in_the_loop_ia`: **cruza** |
+| **1339** | `human_in_the_loop_ia` contra `jagged_frontier_ia`: **cruza** |
+| **1451** | `jagged_frontier_ia` contra `principio_humano_en_el_loop`: **cruza** |
+| **1478** | `deteccion_alucinaciones_ia` contra `principio_humano_en_el_loop`: **decide la ABSORCION** de la pareja de alucinaciones, hoy adyacente y no incluida |
+
+> **Los cuatro primeros prueban o desmienten que las dos mitades originales sean
+> una sola familia.** El racimo subio por evidencia agregada, no porque eso este
+> probado. **Si los cuatro salieran D, este racimo se parte en dos y hay que
+> decirlo.**
+>
+> **El quinto decide el tamano**: con el 1478 en A la nomina pasa de ocho a diez.
 
 **EL TEXTO ORIGINAL DEL CANDIDATO, del 11 ago 2026:**
 
