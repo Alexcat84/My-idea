@@ -1717,6 +1717,53 @@ el grafo.
 entra**: menciona el roadmap de ventas de pasada y su objeto es otro. **El script
 lo trae, la lectura lo deja fuera.**
 
+### TANDA R16, DUODECIMA CIEGA: seis de seis
+
+**Acumulado: 96 de 96, de los cuales 72 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **321** | `ineficacia_cierre_ventas_grandes` contra `riesgo_tecnicas_cierre_venta_compleja` | **auditoria-por-observacion**, auditar el uso de tecnicas de cierre escuchando llamadas reales; y **compara-tasas-entre-vendedores**, medir el exito de quien usa muchas tecnicas contra quien usa pocas | de **lector** |
+| **322** | `desconexion_ventas_experiencia` contra `traspaso_ventas_cuentas` | **incentivos-de-quien-vende**, que al vendedor tambien le importe que el cliente quede bien; **CRM-automatico** que pase la informacion sin depender de nadie; y **promesa-contra-entrega-periodica**, revisar de vez en cuando si lo prometido coincide con lo entregado | de **lector** |
+| **325** | `get_visual` contra `pensamiento_visual` | **si-cuesta-explicarlo-dibujalo** como regla de desatasco; y **libreta-siempre**, llevar encima el cuaderno o su equivalente digital | de **lector** |
+| **326** | `fases_de_retencion_de_clientes` contra `ocho_fases_experiencia_cliente` | **prioriza-Affirm-y-Activate** como las dos fases mas descuidadas; y **detecta-atascos-y-plan-de-avance**, ver en que fase se atascan los clientes y armar el plan para moverlos | de **lector** |
+| **328** | `formalizar_junta_asesora` contra `formalize_advisory_board` | **CEO-been-there**, buscar un asesor que ya haya dirigido; **mapa-por-area**, decidir que asesores necesitas por tecnico, negocio, cliente e industria; y **solo-impacto-estrategico**, calidad sobre cantidad | de **lector** |
+| **329** | `diagnostico_efecto_latigo` contra `efecto_bullwhip` | **beer-game**, simular el juego con el equipo para que vean la dinamica; y **decidir-si-compartir-datos**, usar los numeros del costo para decidir si vale la pena coordinarse | de **lector** |
+
+#### 321: la segunda poda intra-Rackham del racimo del cierre
+
+**Los dos son de *SPIN Selling* y los dos del racimo de la seccion 9.**
+
+> **La fusion respeta la frontera**: no toca al forastero `tacticas_cierre_ventas`
+> de *Traction*, que es la linea de doctrina de ese racimo. **Es poda interna,
+> como el 248 y el 274.**
+
+#### 326: LOS DOS PROGRAMAS DE COLEMAN, confirmados a ciegas
+
+**Y esto no es un par mas: es el arranque del tratamiento entero de esa serie.**
+
+> La **DECISION 1** pide **un nodo-programa unico** que presente la serie y del que
+> cuelguen las fases. **La serie de Coleman tiene DOS**, y el puesto 326 ya los
+> habia marcado **A**. **La relectura a ciegas lo sostiene.**
+>
+> **Sin fundir estos dos primero, las piezas no tienen de donde colgar**, asi que
+> este par es **el primer movimiento** de la candidatura de la seccion 12, no uno
+> cualquiera.
+
+**LAS DOS PRIORIDADES QUE TIENEN QUE VIAJAR AL SUPERVIVIENTE:**
+
+| de que nodo | que dice |
+|---|---|
+| `fases_de_retencion_de_clientes` | **priorizar Affirm y Activate**, que son las dos fases mas descuidadas del ciclo |
+| `ocho_fases_experiencia_cliente` | **detectar en que fase se atascan** los clientes y **armar el plan** para moverlos a la siguiente |
+
+> **Ninguna de las dos esta en el otro nodo, y las dos son operativas.** Un
+> programa unico que las pierda deja la serie sin punto de entrada, porque
+> **Affirm y Activate son justamente donde la serie dice que esta el problema.**
+>
+> **Anotado junto a LA FORMA DEL TRATAMIENTO en la seccion 12.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -2106,6 +2153,18 @@ Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
 > tienen un nodo. **Dieciseis nodos para ocho pasos.**
 
 ### TRES HALLAZGOS QUE LA MEDICION DESTAPA
+
+> **CONFIRMADO A CIEGAS EL 12 ago 2026, relectura R16, puesto 326.** Y con las
+> dos piezas que tienen que VIAJAR al programa unico, porque ninguna esta en el
+> otro nodo y las dos son operativas:
+>
+> | de que nodo | que dice |
+> |---|---|
+> | `fases_de_retencion_de_clientes` | **priorizar Affirm y Activate**, las dos fases mas descuidadas |
+> | `ocho_fases_experiencia_cliente` | **detectar en que fase se atascan** los clientes y **armar el plan** para moverlos |
+>
+> **Un programa unico que las pierda deja la serie sin punto de entrada**, porque
+> Affirm y Activate son justamente donde la serie dice que esta el problema.
 
 > **1. LA SERIE YA TIENE DOS NODOS-PROGRAMA, y la DECISION 1 pide UNO.**
 > `fases_de_retencion_de_clientes` y `ocho_fases_experiencia_cliente` **presentan

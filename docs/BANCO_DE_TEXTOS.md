@@ -730,10 +730,35 @@ Cuando choquen con esta tabla, **manda la tabla**.
 > y **los dos son de tres miembros**. **Cuanto más chica la familia, menos sitio
 > hay donde esconder un cuarto miembro.**
 
-> **LA REGLA QUE ESTO FIJA, y es de procedimiento**: **un puro no se declara sin
-> pasar antes el contador sobre su nómina.** La condición dura mira los pares; el
-> contador mira los miembros. **Faltaba el segundo paso y costó dos
-> declaraciones.**
+##### LA REGLA DEL CONTADOR, adoptada el 12 ago 2026
+
+**Condición PREVIA de toda declaración de puro, al mismo nivel que la condición
+dura y antes que ella en el orden de ejecución.**
+
+> **La condición dura mira los PARES. El contador mira los MIEMBROS.** Son dos
+> preguntas distintas y hacen falta las dos:
+>
+> **1.** `scripts/contar_nombre.py` sobre la nómina, **y lectura de lo que
+> devuelva**, para fijar quiénes son los miembros. El script dice dónde mirar; la
+> pertenencia se decide leyendo (banco 9.5.1).
+> **2.** Recién entonces se cuentan los pares posibles y se aplica la condición
+> dura.
+
+**LA EVIDENCIA, y está en la tabla viva de arriba:**
+
+| puro | ¿pasó el contador antes de declararse? | qué le pasó |
+|---|---|---|
+| **1** el efectivo contra la ganancia | **sí** (re-verificado) | **sigue en pie** |
+| **2** la ecuación de valor | **sí** | **sigue en pie** |
+| **3** el sales roadmap | **no** | **cayó a sub-puro**: la familia era de 5 |
+| **4** la etapa de investigación | **no** | **cayó a sub-puro**: la familia era de 4 |
+
+> **Dos de dos sin contador cayeron. Dos de dos con contador siguen en pie.** No
+> es una muestra grande, pero **la causa de las dos caídas fue exactamente lo que
+> el contador mide: un miembro fuera de la nómina.**
+>
+> **Y el orden importa**: contar los pares de una nómina incompleta da una
+> respuesta correcta a una pregunta equivocada. **Por eso el contador va primero.**
 >
 > **Y los dos sub-puros no son un fracaso: son la clase de tarea COMPLETAR LOS
 > PARES DEL PURO con el trabajo ya cuantificado**, seis lecturas uno y dos el
