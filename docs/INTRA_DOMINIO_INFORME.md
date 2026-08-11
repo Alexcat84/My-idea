@@ -1413,7 +1413,8 @@ PURO y hay que declararlo.**
 > archivo, no de suponerla.
 >
 > **Cumple la condicion dura con pares posibles y no con pares de cola**, que es
-> la precision del banco 9.5. **Declarado CUARTO PURO.** Le falta lo unico que a
+> la precision del banco 9.5. **Declarado CUARTO PURO.** **CON CONDICION, puesta ocho
+> puestos despues por el propio cribado: ver seccion 22.1.** Le falta lo unico que a
 > un puro le puede faltar: **un superviviente propuesto**, que aqui no lo da
 > ninguna relectura todavia.
 
@@ -3035,3 +3036,77 @@ OBSERVACION**, **bloquea su segundo par** (puestos 724 y 755).
 > **3. EL RACIMO DEL EQUITY AVANZA**: el puesto **754** cerro el tercero de sus
 > cinco pares pendientes. **Quedan dos, los puestos 871 y 1008**, y cuando caigan
 > ese racimo sera de los pocos con la cuenta cerrada.
+
+---
+
+## 22. EL TRAMO 761 a 772: un puro que nace con condicion
+
+**Doce pares leidos, los doce del nucleo.** Acumulado **772 de 3.388**, global
+**30,4%** de A y **nucleo 37,9%**. **Sin checkpoint: el de los 800 es el
+proximo.**
+
+### 22.1 EL CUARTO PURO NACIO Y EL MISMO TRAMO LE PUSO CONDICION
+
+**Lo declare en la relectura R12 de este mismo turno. Ocho puestos despues, el
+cribado encontro al cuarto candidato.**
+
+> **`investigacion_como_habilidad_clave`** es de *SPIN Selling*, no esta en la
+> nomina censada, y manda **lo mismo que los tres**: preparar preguntas que
+> descubran necesidades reales, no apoyarse en el conocimiento del producto como
+> reemplazo de indagar, y **medir que porcentaje de la llamada se usa en preguntar
+> y cuanto en presentar**, que es literalmente el paso que los tres comparten.
+
+| par | contra | estado |
+|---|---|---|
+| **800** | `etapa_investigacion_ventas` | **PENDIENTE** |
+| **862** | `enfoque_etapa_investigacion` | **PENDIENTE** |
+| el tercero | `etapa_de_investigacion` | **nunca entro a la cola** |
+
+> **El puro se sostiene sobre la nomina censada, que es lo que la condicion dura
+> pide.** Pero **basta con que el 800 o el 862 salga A para que la familia sea de
+> cuatro y el puro pase a SUB-PURO**, igual que le paso al trio de las arenas
+> ocho puestos antes.
+>
+> **La condicion quedo escrita dentro de la declaracion del banco 9.5, con los dos
+> puestos que la resuelven nombrados.** Un puro con fecha de revision.
+
+> **Y esto es la regla de la nomina que crece (seccion 6) mordiendo por tercera
+> vez, ahora sobre un racimo CENSADO.** El censo no protege: **una nomina cerrada
+> por censo puede estar cortada igual que una reconstruida.**
+
+### 22.2 OTRO PAR DE NOMBRE, y este si es real
+
+**Puesto 765.** Existen **`estructura_gates`** y **`estructura_de_gates`**, dos
+nodos vivos separados por un **DE**, y **solo el primero esta en la nomina** del
+racimo de las puertas.
+
+> **Su par mutuo es el puesto 1524 y esta pendiente.** Pero el segundo ya repitio
+> con `requisitos_gates_con_dientes` en este tramo, igual que el primero habia
+> repetido en el puesto 745.
+>
+> **LA FAMILIA DE LAS PUERTAS, remedida**: **ocho nodos**, 28 pares posibles,
+> ocho en la cola, **cuatro leidos y LOS CUATRO EN A**. **El PROGRAMA UNICO que el
+> 275 pidio tiene ahora ocho nodos que gobernar, no seis.**
+>
+> **Y a diferencia de las dos predicciones por nombre que fallaron** (puestos 637
+> y 683), **esta salio cierta porque se leyo antes de decirlo.**
+
+### 22.3 Lo demas del tramo
+
+> **1. SEGUNDA VEZ que los dos nodos estan censados en racimos DISTINTOS** (puesto
+> 768, tras el 677): la regla FAMILIA DECLARADA no corre porque pide los dos en la
+> misma nomina. **Y las dos veces el cruce es el mismo**: la practica de una
+> familia termina en la puerta de la otra, sin arista.
+>
+> **2. El racimo del pivote suma su tercer par dudoso del mismo nodo** (puestos
+> 737, 753 y 771). **`pivote_startup` y `pivote_o_proceder` se rozan con todo el
+> mundo y no repiten con nadie del todo.**
+>
+> **3. La vara del banco 9.6.1 volvio a resolver un caso sin deliberar** (puesto
+> 764, la misma madre del 625): uno de tres hijos enlazados, contenido manda, y el
+> hijo trae la secuencia SPIN entera. **CONTINUA.**
+>
+> **4. `sintesis_hipotesis_modelo_negocio` llega a cuatro pares leidos y los
+> cuatro sanos.** Es el segundo nodo del tramo con esa firma, con
+> `verificar_product_market_fit` de la seccion 21.2: **se rozan con muchos y no
+> repiten con ninguno.**

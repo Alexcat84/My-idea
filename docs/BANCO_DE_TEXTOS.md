@@ -872,6 +872,23 @@ cerrada por definición, no reconstruida por el cribado:
 > Ninguna relectura lo ha nombrado todavía, así que este va a la mesa solo para
 > eso, y en una frase: **cuál de los tres se queda.**
 
+> **CONDICIÓN AÑADIDA EL MISMO DÍA, y sale del puesto 769 del cribado**: existe un
+> **CUARTO nodo** de la misma doctrina y del mismo libro,
+> **`investigacion_como_habilidad_clave`**, que **no está en la nómina censada** y
+> que manda lo mismo: preparar preguntas que descubran necesidades reales, no
+> apoyarse en el conocimiento del producto, y **medir qué porcentaje de la llamada
+> se usa en preguntar y cuánto en presentar**.
+>
+> **Sus pares con el trío están PENDIENTES**: el **800** contra
+> `etapa_investigacion_ventas`, el **862** contra `enfoque_etapa_investigacion`, y
+> el tercero **nunca entró a la cola**.
+>
+> **El puro se sostiene sobre la nómina censada, que es lo que la condición dura
+> pide. Pero basta con que el 800 o el 862 salga A para que la familia sea de
+> CUATRO y este puro pase a SUB-PURO**, exactamente como le pasó al trío de las
+> arenas. **Queda declarado con la condición encima y con los dos puestos que la
+> resuelven nombrados.**
+
 ### 9.5.1 El espejo: MEZCLADO COMPLETO, y es la categoría más cara
 
 **Encontrado el 11 ago 2026 al remedir los racimos pre-regla.**
