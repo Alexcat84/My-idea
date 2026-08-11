@@ -1811,6 +1811,12 @@ direcciones:
 > buena noticia ni una mala**. Es el aviso de que **el trabajo que queda cambió de
 > tipo**, de fusiones a enlaces, **y de caro a barato.**
 
+> **PRECISIÓN DEL 13 ago 2026, medida en dos tramos consecutivos**: la figura
+> **no viene repartida por la cola, viene en RACIMOS**. El tramo 1001 a 1036 dio
+> **36%** de pares resueltos con la vara y el 1037 a 1050 dio **14%**, con la tasa
+> de A casi igual en los dos. **La cifra de la vara sirve por TRAMO y no por par**:
+> es un indicador de **posición en la cola**, no una propiedad del catálogo.
+
 > **LA CIFRA QUE HAY QUE REPORTAR DESDE AHORA, junto a la tasa de A: cuántos pares
 > del tramo se resolvieron con la vara.** Cuando esa cifra sube y la de A baja,
 > la cola está en zona de jerarquías. **Las dos juntas dicen lo que ninguna dice

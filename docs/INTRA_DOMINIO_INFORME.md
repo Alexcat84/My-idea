@@ -6727,3 +6727,80 @@ se resolvieron con LA VARA, el 36%.**
 >
 > **4. `realizar_pruebas_pasa_no_pasa` llega a CATORCE pares leidos y TRECE
 > sanos.** Sigue siendo el nodo mas leido sin duplicarse de todo el cribado.
+
+---
+
+## 44. EL TRAMO 1037 a 1050: la vara no viene repartida
+
+**Catorce pares leidos, los catorce del nucleo.** Acumulado **1.050 de 3.388**,
+global **28,3%** de A y **nucleo 33,1%**. **El tramo dio 14,3%**, y **DOS de los
+catorce se resolvieron con la vara, el 14%.**
+
+### 44.1 LA CIFRA DE LA VARA NO ES ESTABLE, Y ESO ES INFORMACION
+
+**Los dos tramos desde el checkpoint de los 1.000, uno al lado del otro:**
+
+| tramo | pares | tasa de A | resueltos con la vara |
+|---|---:|---:|---:|
+| 1001 a 1036 | 36 | 16,7% | **13 (36%)** |
+| **1037 a 1050** | 14 | 14,3% | **2 (14%)** |
+| **acumulado 1001 a 1050** | **50** | **16,0%** | **15 (30%)** |
+
+> **La tasa de A se mantuvo y la de la vara se desplomo a la mitad.** Si las dos
+> midieran lo mismo, se moverian juntas. **No lo hacen.**
+
+> **LO QUE ESTO PRECISA DE LA DOCTRINA 9.19, y hay que decirlo porque la matiza**:
+> la figura de la jerarquia **no viene repartida por la cola: viene en racimos**.
+> El tramo anterior cayo en una zona de madres con hijos (customer development,
+> Coleman, SPIN, cadena de suministro); este cayo en una zona de **pares
+> hermanos**, dos etapas del mismo proceso o dos instrumentos del mismo libro.
+>
+> **La cifra de la vara sirve, pero por TRAMO y no por par.** Un tramo con 36% de
+> vara dice *estamos en zona de jerarquias*; uno con 14% dice *volvimos a zona de
+> hermanos*. **Es un indicador de POSICION en la cola, no una propiedad del
+> catalogo.**
+
+### 44.2 EL DIAGNOSTICO QUE NO ENLAZA CON NINGUNO DE SUS DOS REMEDIOS
+
+**Puesto 1046, y con el 994 son dos.** `efecto_bullwhip` termina su ultimo paso
+diciendo **usa estos numeros para decidir si vale la pena invertir en compartir
+datos o coordinarte mejor con tus proveedores**.
+
+| el remedio | puesto | arista |
+|---|---:|:---:|
+| `compartir_datos_cadena_suministro` | 994 | **NO** |
+| `mitigacion_efecto_latigo` | **1046** | **NO** |
+
+> **El nodo nombra la decision y el catalogo tiene DOS nodos que la ejecutan, y no
+> hay arista con ninguno.** Es la forma del barrido `paso_contra_nodo.py` con una
+> vuelta de tuerca: **no falta una arista, faltan dos**, y las dos salen del mismo
+> paso.
+
+### 44.3 DOS PAREJAS QUE EL REDACTOR DEBERIA ENLAZAR, NO FUNDIR
+
+> **1. Los dos extremos de la misma transicion** (puesto **1043**):
+> `equipo_customer_development` manda **quitar** los titulos de ventas y marketing
+> y liderar uno mismo; `company_building` manda **formarlos** y contratar a quien
+> tenga experiencia de escala. **Uno deshace lo que el otro monta**, y esa es
+> exactamente la frontera del metodo dicha desde los dos lados. **Sin arista.**
+>
+> **2. Cuando hay reunion contra que pasa dentro** (puesto **1042**):
+> `aceleracion_de_gates` dice cuando saltarse la reunion de decision;
+> `protocolo_reuniones_gate` dice como hacerla bien cuando toca. **Complementarios
+> perfectos, y esta vez SI hay arista.**
+
+### 44.4 Lo demas del tramo
+
+> **1. El frente del Stage-Gate suma otra A puertas adentro** (puesto **1038**),
+> y con ella **doce nodos leidos**. La mesa 1 sigue creciendo sin convocarse. **Lo
+> unico que este par anade de contenido es una quinta salida del gate**, *seguir
+> pero con condiciones*, que el otro nodo no lista.
+>
+> **2. El racimo de la SUPERVISION DE LA IA suma su quinto par interno** (puesto
+> **1041**, **A**), y sigue **MEZCLADO** con cuatro A y un sano. **Lo mas duro del
+> par y lo que hay que salvar**: hacer pruebas periodicas con casos **disenados
+> para que la IA falle** y medir si el equipo detecta el error.
+>
+> **3. Tercera lectura del nodo de preguntas de implicacion contra un nodo de
+> secuencia** (puesto **1049**), y las tres sanas. **Pero la arista solo existe en
+> una de las tres** (la del 1021). **El mismo hijo, tres madres, un cable.**
