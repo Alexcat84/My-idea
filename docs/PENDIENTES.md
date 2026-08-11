@@ -3,6 +3,29 @@
 Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 (Última actualización: agosto 2026.)
 
+## 0. Despliegues de staging APAGADOS en Vercel (12 ago 2026)
+
+**Qué se hizo:** `web/vercel.json` lleva ahora
+`"git": { "deploymentEnabled": { "staging": false } }`. Vercel deja de construir un
+preview por cada push a `staging`. **Motivo:** el frente del cribado empuja muchas
+veces al día y cada push disparaba un despliegue que nadie mira.
+
+**Por qué en `web/` y no en la raíz, que es lo que pedía el encargo:** el proyecto de
+Vercel está enlazado desde `web/` (existe `web/.vercel/project.json`, y la app Next
+vive ahí; no hay `package.json` en la raíz). **Vercel lee el `vercel.json` del Root
+Directory del proyecto**, así que un archivo en la raíz no se leería y el apagado no
+tendría efecto. Se deja **un solo archivo**, el que Vercel lee, por la regla de fuente
+única.
+
+**Cómo se revierte, en una línea:** borrar la clave `git` de `web/vercel.json` (o
+poner `"staging": true`) y commitear. También se puede reactivar desde el panel de
+Vercel sin tocar el repo, pero entonces el archivo y el panel dirían cosas distintas:
+**mejor revertir aquí.**
+
+**Ojo:** `main` no se toca. Los despliegues de producción siguen igual.
+
+---
+
 ## 1. Campaña "Espacios" — Fase 3 (COMPLETA, en staging)
 
 **Plan y contrato: `docs/PLAN_ESPACIOS_FASE3.md`** (Opción A "dentro de Tu avance";
