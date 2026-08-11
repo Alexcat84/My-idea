@@ -3736,3 +3736,80 @@ marca** en el regalo.
 > **2. LA VOZ DEL CLIENTE, CINCO nodos vistos** (puesto 806), y uno de ellos,
 > `voz_del_cliente_voc`, **es costura confirmada que bloquea dos pares**. **No se
 > puede decidir de a pares mientras el nodo grande siga sin operar.**
+
+---
+
+## 26. EL TRAMO 813 a 824: el nodo mejor cableado del cribado
+
+**Doce pares leidos, los doce del nucleo.** Acumulado **824 de 3.388**, global
+**30,9%** de A y **nucleo 38,0%**. El tramo dio **25,0%**. **El checkpoint de los
+900 es el proximo.**
+
+### 26.1 EL NODO MEJOR CABLEADO QUE HA SALIDO, y es el superviviente natural
+
+**Puesto 815.** `ocho_fases_experiencia_cliente` **enlaza a las OCHO fases, al
+otro programa, a la serie de los seis medios y a la aplicacion de la bienvenida.**
+
+> **En un archivo donde la averia dominante es el cero enlazados**, este nodo es
+> la excepcion medida. **Y eso lo convierte en el candidato natural a superviviente
+> cuando los dos programas de Coleman se fundan**, decision que el puesto 326 dejo
+> confirmada a ciegas en la relectura R16.
+>
+> **Fundir hacia el nodo bien cableado es gratis; fundir hacia el otro obliga a
+> reconstruir doce aristas.** Es la primera vez que el cribado puede recomendar
+> una direccion de fusion **por la forma del grafo y no por el contenido.**
+
+### 26.2 LA VARA RESOLVIO CUATRO PARES DEL TRAMO SIN DELIBERAR
+
+| puesto | madre | lo que el hijo anade | clase |
+|---:|---|---|:---:|
+| **813** | `ciclo_de_conversion_de_efectivo` | politica de pagos y riesgo reputacional | **D** |
+| **816** | `get_out_building_test_sell` | umbrales, CAC contra precio, clasificacion de reacciones | **D** |
+| **821** | `diez_principios_prototipado` | materiales y escala de tiempo | **D** |
+| **822** | `comparacion_metodos_inversion` | para que NO sirve el payback | **D** |
+
+> **Cuatro de doce pares del tramo los resolvio la vara en una linea de razon.**
+> Antes de nombrarla, cada uno de esos habria sido una discusion.
+
+### 26.3 UNA TENSION ENTRE LIBROS que no es contradiccion pero decide
+
+**Puesto 817.** `business_model_canvas_vs_plan` de Blank dice que el lienzo
+**reemplaza** al plan de negocio. `business_plan_cinco_secciones` de Osterwalder
+**escribe el plan** y mete el lienzo dentro como una de sus cinco secciones.
+
+> **No se contradicen en un paso: se contradicen en la recomendacion.** El
+> catalogo hoy le dice al lector las dos cosas segun por donde entre.
+>
+> **Y no se arregla fusionando**, porque los dos textos son correctos en su libro.
+> **Se arregla decidiendo que recomienda el catalogo**, que es una decision de voz
+> y no de arquitectura. **Anotada para la mesa.**
+
+### 26.4 Familias que avanzan, contadas del archivo
+
+> **1. LOS DESPIDOS: cinco nodos, diez pares posibles, SIETE leidos** (cinco D y
+> dos B). **Le faltan tres** y ya tiene dos dudosos dentro: **va a salir mezclada,
+> no pura**, pero es barata de cerrar.
+>
+> **2. LA META DE TRACCION: tres nodos, dos pares leidos y los dos en A** (627 y
+> 824). **Tres nodos para una sola idea y ninguno enlaza a otro.**
+>
+> **3. EL SCORECARD DE PUERTAS: tres nodos vistos** (184, 820), con el 820 en
+> **A**.
+>
+> **4. `verificar_product_market_fit` llega a ONCE pares leidos y sigue en CERO
+> A.** Es el ejemplar mas puro de la figura de la seccion 21.2: **se roza con
+> todos y no repite con ninguno.**
+
+### 26.5 La costura que NO bloqueo, y por que
+
+**Puesto 823.** `brainstorming_divergente` es costura confirmada, **pero el par
+se juzgo igual.**
+
+> **El solape con `brainstorming_efectivo` cae completo en los pasos 1 a 4**, el
+> taller de Tim Brown, **y la juntura esta en el paso 5**, donde arranca el bloque
+> de Mollick. **Por el refinamiento del puesto 673, un solape que no cruza la
+> juntura no bloquea.**
+>
+> **Es el contraejemplo util**: de los cuatro nodos costurados que han entrado a
+> pares, **tres bloquearon y este no**. La diferencia no es el nodo: **es donde
+> cae el solape.**
