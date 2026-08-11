@@ -8666,6 +8666,10 @@ lista: los dos nodos vivos y el par ausente en los siete casos.**
 | **5a** | `refinar_sales_roadmap` contra `evaluacion_vp_ventas` | Blank dice en **una linea** *usar el roadmap como prueba de competencia al contratar un VP de ventas*, y Horowitz trae los dos nodos que dicen como evaluarlo. **Relacion de madre e hijos entre libros** | **seccion 50.2** |
 | **5b** | `refinar_sales_roadmap` contra `framework_evaluacion_director_ventas` | el mismo nodo de Blank contra el segundo de Horowitz | **seccion 50.2** |
 
+| **6** | `pensamiento_visual` (Brown) contra `pensamiento_visual_modelos_negocio` (Osterwalder) | el primero **ya es gemelo de `get_visual`** (A del puesto **325**) y el segundo lleva casi el mismo nombre. **Tres nodos de pensamiento visual en tres libros y solo DOS de los tres pares se pueden leer** | **1281** |
+
+> **ANADIDA el 14 ago 2026.** Con ella van **SEIS parejas y OCHO lecturas**.
+
 ### 52.2 QUE TIENEN EN COMUN, y por que aparecen ahora y no antes
 
 **Ninguna se encontro leyendo su propio par**, porque su par no existe. **Las
@@ -9085,3 +9089,121 @@ familia:
 > a leerse contra vecinos de fuera, **y los cuatro se quedan del tamano que
 > tenian.** Una medicion que aguanta su primera prueba no es una medicion probada,
 > **pero es mejor que una que no se ha probado nunca.**
+
+---
+
+## 56. CHECKPOINT DE LOS 1.300
+
+### 56.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.300** de 3.388 | 320 | 89 | 7 | 884 | **24,6%** |
+| **NUCLEO por separado** | **1.145** | 319 | 87 | 7 | 732 | **27,9%** |
+| **el tramo 1278-1300** | **23** | **0** | 1 | 0 | 22 | **0,0%** |
+
+**Sin huecos: 1 a 1.300 registrados uno por uno. Ningun nodo se toco.**
+
+### 56.2 LAS DOS SERIES, por centenas
+
+| centena | leidos | tasa de A | **vara** | con arista |
+|---|---:|---:|---:|---:|
+| 1001-1100 | 100 | 15,0% | 34% | 19 |
+| 1101-1200 | 100 | **9,0%** | **42%** | 21 |
+| **1201-1300** | 100 | **7,0%** | **38%** | 21 |
+
+**Y por tramos, que es donde se ve el movimiento fino:**
+
+| tramo | leidos | tasa de A | vara |
+|---|---:|---:|---:|
+| 1201-1235 | 35 | **17,1%** | 34% |
+| 1236-1256 | 21 | 0,0% | 43% |
+| 1257-1277 | 21 | 4,8% | 33% |
+| **1278-1300** | **23** | **0,0%** | **43%** |
+
+> **Dos de los cuatro tramos de esta centena no dieron ni una A.** Y la centena
+> entera cae a **7,0%**, la mas baja del ejercicio, **con la vara en 38%**: cuatro
+> de cada diez pares se resuelven citando la linea contra el procedimiento.
+>
+> **Y el aviso del 9.19 sigue en pie**: dentro de la misma centena hubo un tramo
+> al **17,1%** y dos al **0,0%**. **La cifra se mueve con la cola, no con el
+> catalogo**, y por eso se lee por tramo y no se proyecta.
+
+### 56.3 EL UNICO B DE LA CENTENA, y es la pregunta abierta de una mesa
+
+**El puesto 1298**, `decision_pivote_perseverar` contra `pivote_startup`, es **el
+unico B en cien pares**, y no es un empate por pereza: **es la pregunta que la
+mesa del pivote dejo escrita y sin decidir.**
+
+| nodo | su disposicion sobre la MISMA decision |
+|---|---|
+| `decision_pivote_perseverar` (Ries y Traction) | **buscar el punto brillante**: clientes comprometidos aunque sean pocos, que tienen en comun, si el problema es el momento del mercado; **y pivotar SOLO si no aparece ninguno** |
+| `pivote_startup` (Blank) | **decidir con rapidez y sin miedo al fracaso** |
+
+> **No son dos entradas distintas a la misma puerta, que es lo que la mesa
+> sospechaba: son dos disposiciones OPUESTAS sobre la misma decision.** Una empuja
+> a quedarse hasta agotar la busqueda; la otra a moverse sin miedo.
+>
+> **Si eso cuenta como que los libros discrepan de verdad, la mesa declara
+> FRONTERA y quedan los dos nodos. Si cuenta como matiz, es A y sobra uno.** No lo
+> adjudico: lo que anado es que **la familia lleva SEIS B sobre la misma pregunta**
+> (668, 737, 753, 843, 957 y este) **y la mesa no se ha sentado.**
+
+### 56.4 EL NODO MAS LEIDO SIN UNA SOLA A
+
+**`actualizar_modelo_de_negocio_pivot_o_proceed` llega a NUEVE lecturas y las
+nueve en D**: 294, 733, 846, 912, 954, 1140, 1161, 1170 y **1300**.
+
+> **Se roza con nueve vecinos distintos y no repite con ninguno.** Es la prueba
+> por acumulacion de lo que el 1140 dijo por lectura: **no es miembro de la mesa
+> del pivote.** Y es, medido, **el nodo mejor delimitado del catalogo**.
+
+**Y su espejo, en la misma centena**: `filosofia_customer_validation` llega a
+**OCHO lecturas, DOS A y SEIS sanas**, y el reparto es limpio: **las dos A son
+contra nodos que ABREN la etapa** (549 y 1096) **y las seis sanas contra los
+instrumentos que la ejecutan.** **Repite con quien la enuncia y jerarquiza con
+quien la hace.**
+
+### 56.5 LA SEXTA PAREJA QUE LA COLA NO PUEDE CERRAR
+
+**Encontrada en el puesto 1281**, y por el mismo camino que las cinco anteriores:
+contando alrededor de un par, no leyendolo.
+
+| los nodos | por que hace falta |
+|---|---|
+| `pensamiento_visual` (Brown) contra `pensamiento_visual_modelos_negocio` (Osterwalder) | el primero **ya es gemelo** de `get_visual` (A del puesto **325**); el segundo lleva casi el mismo nombre y **su par con el primero no esta en la cola**. Tres nodos de pensamiento visual en tres libros y **solo dos de los tres pares se pueden leer** |
+
+> **Van SEIS parejas en 1.300 pares.** El ritmo se sostiene en **una cada
+> doscientos y pico**, y **cinco de las seis salieron midiendo, no leyendo.**
+
+### 56.6 LA REGLA NUEVA YA ESTA PAGANDO
+
+**La seccion 54.7 pide que, cuando un par toque una costura confirmada, se cite su
+ACTO y su tamano.** En este tramo se aplico **tres veces**:
+
+| puesto | la costura | su acto |
+|---:|---|---|
+| **1282** | `metricas_de_adquisicion_activacion` | **acto 10**, de 2 nodos |
+| **1287** | `plan_de_adquisicion_acquire` | **acto 8**, de 2 nodos |
+| **1293** | `producto_minimo_viable` | **acto 11**, de 2 nodos, **y su destejido es la primera cirugia del orden de la pasada** |
+
+> **Ninguno de los tres actos crece con estos pares.** El valor no esta en que
+> cambien: **esta en que ahora se sabe, en el momento de leer, cuanto pesa el nodo
+> que se acaba de tocar.** Antes eso habia que ir a buscarlo, y por eso no se
+> buscaba.
+
+### 56.7 EL SALDO DEL CHECKPOINT
+
+> **Mil trescientos pares leidos uno por uno, sin huecos, sin tocar un nodo.** El
+> nucleo va en **27,9%** y la centena en **7,0%**, la mas baja del ejercicio.
+>
+> **Lo que esta centena deja no son racimos nuevos: son cierres.** El nodo mejor
+> delimitado del catalogo queda probado por acumulacion; la familia de la junta
+> directiva queda medida con **siete lecturas y cero A**; el vecino del racimo del
+> cierre queda fuera con **cuatro**; y la pregunta de la mesa del pivote queda
+> **afilada**, con las dos disposiciones opuestas puestas una al lado de la otra.
+>
+> **Y una cifra para el que planifique**: de los 1.300 pares leidos, **320 repiten
+> y 884 estan sanos.** Por cada par que hay que fusionar hay casi tres que solo
+> habia que leer para descartar. **El cribado no esta encontrando averias: esta
+> midiendo cuantas NO hay.**
