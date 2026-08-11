@@ -8181,3 +8181,174 @@ contador levanta un nodo de **Blank** que menciona el puesto tres veces:
 > **Y NO HAY NINGUN PAR EN LA COLA entre el nodo de Blank y ninguno de los dos de
 > Horowitz.** Es la **QUINTA pareja** que este ejercicio no puede cerrar, y la
 > primera que se encuentra **contando una nomina** en vez de leyendo un par.
+
+---
+
+## 51. TRAMO 1201-1235: la tasa de A SUBE, y hay que decirlo
+
+### 51.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.235** de 3.388 | 319 | 88 | 6 | 822 | **25,8%** |
+| **NUCLEO por separado** | **1.080** | 318 | 86 | 6 | 670 | **29,4%** |
+| **el tramo 1201-1235** | **35** | **6** | 0 | 0 | 29 | **17,1%** |
+
+**Sin huecos. Ningun nodo se toco.**
+
+### 51.2 LA SERIE SE ROMPE, y es un dato del 9.19, no un fallo
+
+| tramo | leidos | tasa de A | vara |
+|---|---:|---:|---:|
+| 1051-1100 | 50 | 14,0% | 38% |
+| 1101-1157 | 57 | 12,3% | 37% |
+| 1158-1200 | 43 | **4,7%** | 49% |
+| **1201-1235** | **35** | **17,1%** | 34% |
+
+> **Cuatro tramos bajando y este sube a mas del triple del anterior.** No es ruido
+> y no lo suavizo: **la cola entro en una zona densa de familias**, Rackham con el
+> racimo del cierre, Coleman con las ocho fases, Founder's Dilemmas con la junta y
+> los cofundadores, y ahi los hermanos salen de a dos.
+>
+> **Y eso es exactamente lo que dice el 9.19**: la cifra es **un indicador de
+> POSICION EN LA COLA**, no una propiedad del catalogo. **Si vale para explicar que
+> baje, vale para explicar que suba.** Una serie que solo se cita cuando baja seria
+> la mitad comoda de la regla, que es lo que el 9.5.0 llama la senal de alarma.
+
+### 51.3 SEGUNDO EJEMPLAR DE LA ESTRELLA, y el primero con la cuenta completa
+
+**El puesto 1201 cierra la familia del SCORECARD como racimo en estrella (banco
+9.23), y esta vez con las dos cuentas terminadas:**
+
+| cuenta | resultado |
+|---|---|
+| pares con el centro `scoring_model_scorecard` | **DOS y los dos A**: 184 y 820 |
+| pares entre perifericos | **UNO, y es el unico posible: SANO** (1201) |
+
+> **Aqui no queda ningun par sin leer.** A diferencia del ejemplar de pass/fail,
+> que se sostiene sobre un periferico leido con otros dos sin decidir, **esta
+> estrella esta cerrada**: tres nodos, tres pares, todos leidos.
+>
+> **Y la lectura es limpia**: el centro es el instrumento; los perifericos son
+> **el momento en que se usa**, ordenar la cartera contra decidir en una puerta.
+> **Comparten herramienta y no comparten acto.**
+
+### 51.4 EL RACIMO DEL CIERRE SUBE A DIEZ, y su vecino queda fuera con tres lecturas
+
+**Dos A en este tramo, y las dos por la misma tesis**: clasificar la venta por su
+tamano y no presionar el cierre si es grande.
+
+| puesto | el par | que anade |
+|---:|---|---|
+| **1202** | `diferencias_venta_pequena_venta_grande` contra el centro | mete al nodo en la nomina |
+| **1205** | `cierre_segun_complejidad_venta` contra el mismo nodo | confirma que los dos miembros comparten la tesis |
+
+> **RECOMPUTO, por el 9.10**: la ficha de la seccion 9 se escribio con **ocho**
+> miembros. Con el **1004**, que no estaba, y con el **1202**, **la nomina medida
+> hoy es de DIEZ.**
+
+**Y el contraste vale mas que la suma**: `relacion_continua_con_cliente` lleva
+**TRES lecturas y las tres sanas** (520, 1206, 1217).
+
+> **No enuncia la tesis del racimo en ninguna de las tres.** Dice otra cosa, que la
+> relacion pesa en la decision. **Es adyacente y no miembro, y ahora esta medido
+> por tres lados** en vez de supuesto por el titulo.
+
+### 51.5 PRIMERA DE LAS CUATRO CONDICIONES DEL RACIMO DE LA IA, Y SALE D
+
+**El puesto 1211 es uno de los cinco puestos que la seccion 11 dejo escritos como
+condiciones vivas, y de los cuatro que deciden si las dos mitades del racimo son
+una sola familia.**
+
+> `comprension_capacidades_limitaciones_ia` **MAPEA LA MAQUINA** (disena tus
+> propias pruebas, prueba los casos limite de tu negocio, anota los patrones de
+> error) y despacha la revision humana en **una linea**.
+> `principio_humano_en_el_loop` **es esa linea entera**: revisar sin excepcion,
+> reconocer cuando la maquina inventa, no tomarla como unica verdad, y decidir de
+> antemano donde puede actuar sola.
+>
+> **Por la vara, CONTINUA.** Y la seccion 11 escribio que **si los cuatro cruces
+> salieran D, el racimo se parte en dos.** Este es el primero y sale D.
+>
+> **Es UN voto de cuatro, no una conclusion.** Quedan el **1239**, el **1339** y el
+> **1451**. Lo registro como el primer voto a favor de partirlo, y no adelanto
+> nada mas.
+
+### 51.6 LA FAMILIA DEL PROMPTING, LEIDA ENTERA (1220)
+
+**El ultimo par pendiente salio. La forma completa, medida:**
+
+| pieza | nodos |
+|---|---|
+| **la madre** | `ingenieria_de_prompts_efectiva` |
+| **cuatro hijas SANAS** | por persona (1144), cadena de pensamiento (1125), alta variacion (1191), simulaciones (1220) |
+| **un repetidor** | `asignacion_persona_ia`: repite con la madre (514) **y con una de las hijas** (1175) |
+
+> **Es una familia madre-hijas como la del canal**, con un solo nodo de sobra. **De
+> seis nodos y siete pares, cinco son jerarquia sana y dos son el mismo repetidor.**
+> **El arreglo es barato**: cuatro aristas y una fusion.
+
+### 51.7 UNA REGLA QUE ESTE TRAMO DEJA: MARCO COMPARTIDO contra ACTO COMPARTIDO
+
+**Dos pares casi iguales de forma salieron con clases distintas, y el criterio que
+los separa queda escrito porque va a hacer falta otra vez.**
+
+| puesto | que comparten | clase | por que |
+|---:|---|:---:|---|
+| **1222** | los **dos primeros pasos enteros**: definir que informacion guardar y meterla en el sistema de clientes. **Es el acto que los dos titulos nombran** | **A** | lo compartido **es el acto** |
+| **1224** | **un solo paso**: limitar cuantos directores ponen los inversionistas. Todo lo que cuelga de el es distinto en cada uno | **D** | lo compartido **es por donde se entra** |
+
+> **CUANDO LO COMPARTIDO ES EL ACTO, ES A. CUANDO ES SOLO EL MARCO DE ENTRADA, ES
+> SANO.** Y la misma regla explica el **1214**: los cuatro tipos de mercado son un
+> marco, y por eso **los tres nodos que DECIDEN el tipo repiten entre si** (228,
+> 345, 686) **y los que lo CONSUMEN salen sanos**, el posicionamiento (1145) y la
+> proyeccion de ingresos (1214).
+>
+> **El 1224 ademas cambio de clase al correr el barrido**: la familia de la junta
+> lleva **cinco lecturas y CERO A**, y con esa base volvi a contar. **Sin el
+> barrido habria entrado una A que la familia no sostiene.**
+
+### 51.8 CUARTA COSTURA ENTRE LIBROS, y ya son cuatro con el campo declarandolo
+
+| nodo | pasos | los dos bloques |
+|---|---:|---|
+| `fit_problema_solucion` (536) | 6 | Osterwalder / **Traction** |
+| `project_close_out` (1165) | 11 | PM Book of Forms / **Coleman** |
+| `co_creation_session` (1196) | 9 | IDEO / **cadena de suministro** |
+| **`propuesta_gasto_capital`** (1225) | **12** | Financial Intelligence / **Essentials of Supply Chain** |
+
+> **En los cuatro, el campo `fuente` lo declara.** No hay que deducirlo: hay que
+> leerlo. **Y en los cuatro el solape del par cae en el PRIMER bloque**, o sea que
+> los cuatro veredictos son invariantes.
+
+### 51.9 DOS CANDIDATOS NUEVOS PARA EL MISMO RACIMO, en cien puestos
+
+**`build-measure-learn`, el numero 9 de la tabla viva, gana dos candidatos y
+ninguno es del libro de la familia:**
+
+| puesto | el candidato | su libro |
+|---:|---|---|
+| **1182** | `desarrollo_en_espiral` | **Cooper** |
+| **1208** | `startup_como_experimento_cientifico` | Ries |
+
+> **El 1208 es el caso limpio**: los cuatro pasos del bucle son los mismos y lo
+> unico que anade son **tres condiciones de rigor**, que la hipotesis sea falsable,
+> que el experimento pueda fallar y que se corra a pequena escala. **No es otro
+> ciclo: es el mismo con requisitos.**
+>
+> **Candidatos, no miembros.** Los declaro con su evidencia y sin subir la nomina.
+
+### 51.10 EL SALDO
+
+> **Mil doscientos treinta y cinco pares. La tasa sube por primera vez en cinco
+> tramos y la explicacion no es un fallo del cribado: es la cola.**
+>
+> Lo que el tramo deja escrito son **criterios** mas que veredictos: **acto contra
+> marco** (1222 y 1224), **quien decide contra quien consume** una taxonomia
+> (1214), y **la segunda estrella cerrada** (1201). Los tres sirven para leer lo
+> que viene, no solo para explicar lo leido.
+>
+> **Y una nota de disciplina que este tramo confirma**: el **1224** iba a salir A y
+> salio D despues de correr el barrido. **Es la segunda vez en cien puestos que el
+> barrido corrige mi lectura antes de escribirla**, con el 1140. La regla de
+> correrlo siempre no esta pagando en nominas: esta pagando en clases.
