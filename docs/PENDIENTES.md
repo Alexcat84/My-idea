@@ -2256,3 +2256,51 @@ declaró.
 > **Un barrido que cruce las costuras confirmadas contra todas las A del archivo
 > diría cuántas hay de una vez**, en vez de irlas encontrando. Es de solo lectura
 > y no adjudica nada: **cambia el goteo por una cifra.**
+
+> **CORRIDO EL 13 ago 2026, y la cifra esta en la seccion 45 del informe: 17
+> costuras con gemelo, VIGENTE AL PUESTO 1050.** Corregida a **18** el mismo dia
+> por el puesto 1061. **Y de ahi salio la regla del banco 9.21**: toda cifra de
+> cruce lleva su fecha de corte, y **este barrido se repite UNA SOLA VEZ, al
+> cierre del cribado**; entre medias el goteo sigue par por par sobre esta base.
+
+---
+
+## `brainstorming_divergente`: EL NODO DE MAS FRENTES DEL CATALOGO
+
+**Lo levanto el barrido de confirmadas del 13 ago 2026, y nadie lo habia contado
+junto.** No es un pendiente nuevo: **son cuatro pendientes viejos que resultaron
+ser el mismo nodo.**
+
+### LOS CUATRO FRENTES, cada uno ya registrado por su lado
+
+| frente | que pide | donde vive hoy |
+|---|---|---|
+| **1. DECISION DE FUENTE** | es el **injerto de Mollick**: el nodo lleva atribucion de un libro que no es de donde salio su contenido | ficha de campos sucios y censo de injertos |
+| **2. DESTEJIDO** | es **costura CONFIRMADA**: tiene repeticion interna verificada | ficha de sub-fusion, tabla de confirmadas |
+| **3. TRES GEMELOS** | `brainstorming_efectivo` (823), `reglas_brainstorming` (834) y `generar_multiples_opciones` (844): **su cura acoplada es de CUATRO nodos en un solo acto** | barrido de confirmadas, informe seccion 45 |
+| **4. RACIMO DE CUATRO LIBROS** | el racimo del brainstorming cruza fuentes distintas, o sea que la fusion toca la atribucion de mas de un miembro | informe, racimo del brainstorming |
+
+### EL ORDEN ES PROPIO Y NO ES NEGOCIABLE
+
+> **1. LA FUENTE PRIMERO.** Mientras no este decidido de que libro es este nodo,
+> cualquier fusion escribe la atribucion equivocada en el superviviente. **Y el
+> superviviente es el que se queda: el error se vuelve permanente.**
+>
+> **2. EL DESTEJIDO DESPUES.** Con la fuente ya fijada, se le quita la repeticion
+> interna. **Antes no**, porque el destejido decide que bloques sobreviven y esos
+> bloques son los que van a cargar la atribucion.
+>
+> **3. LOS TRES GEMELOS AL FINAL, y los tres en un solo acto.** Solo con el nodo
+> ya destejido se puede ver que le queda propio frente a cada gemelo. **Fundir
+> antes de destejer obliga a decidir el destino de material que la cirugia iba a
+> quitar de todos modos.**
+
+**POR QUE SE ESCRIBE EL ORDEN Y NO SOLO LA LISTA: cualquier otro orden obliga a
+rehacer.** Fundir antes de destejer se rehace; destejer antes de decidir la
+fuente se rehace; tocar un gemelo antes que los otros dos deja al nodo con dos
+formas distintas a la vez.
+
+> **Es el unico nodo del catalogo con los cuatro frentes encima.** Y por eso es
+> tambien **el mejor candidato a piloto**: lo que se aprenda aqui sirve para
+> todas las curas acopladas que vienen detras, porque ninguna es mas dificil que
+> esta.

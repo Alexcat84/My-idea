@@ -1878,3 +1878,77 @@ por su autor o en otro idioma.
 > degradó a sub-puro y volvió a puro; los cuadrantes se reportaron con cinco
 > miembros y diez pares cuando eran seis y quince. **Ninguno de los dos errores
 > fue de lectura. Los dos fueron de censo.**
+
+---
+
+### 9.21 REGLA: TODA CIFRA DE CRUCE LLEVA SU FECHA DE CORTE
+
+**Un barrido cruza contra lo que hay VIGENTE en el momento de correrlo.** Si el
+archivo sigue creciendo debajo, la salida no es falsa: **es vieja**. La regla
+tiene dos mitades y las dos son obligatorias.
+
+> **PRIMERA MITAD: la salida se escribe con su corte.** Toda cifra que salga de
+> cruzar dos conjuntos del archivo se escribe **"vigente al puesto N"**, nunca a
+> secas. Un número sin corte se lee como propiedad del catálogo, y no lo es:
+> es una foto.
+>
+> **SEGUNDA MITAD: el barrido de confirmadas se repite UNA SOLA VEZ, al cierre
+> del cribado.** No se vuelve a correr cada checkpoint. Entre medias **el goteo
+> sigue par por par contra la base ya contada**: cada A nueva que toque una
+> confirmada se anota cuando aparece, sobre la nómina del barrido, sin rehacer
+> el barrido entero.
+
+**POR QUÉ ASÍ Y NO CADA CIEN.** Correrlo otra vez cuesta lo mismo que la primera
+vez y devuelve casi lo mismo: el trabajo útil está en las A nuevas, que son pocas
+y llegan una a una. **El goteo es barato cuando ya existe una base contra la que
+gotear; era caro cuando había que descubrir la base entera de una en una.** Los
+dos métodos no compiten: el barrido pone el suelo, el goteo lo mantiene.
+
+**EL EJEMPLAR, y es el que produjo la regla.** El barrido de confirmadas de la
+sección 45 del informe probó como negativo útil que los **actos de tres son
+exactamente DOS**, el 341 y el 494. **Horas después, en el mismo día**, el puesto
+**1061** registró un tercero: `ab_testing_optimizacion` contra
+`optimizacion_embudo_get_customers`, **las dos confirmadas**.
+
+| | |
+|---|---|
+| **por qué el barrido no lo vio** | cruza contra las **A vigentes al correrlo**, y esa A todavía no existía |
+| **de quién es el error** | **de nadie**: el instrumento midió bien lo que había |
+| **qué habría evitado el susto** | escribir la salida como **"17 costuras con gemelo, vigente al puesto 1050"** |
+
+> **El instrumento no falló: se quedó viejo.** Y un negativo sin fecha de corte
+> es la forma más cara de quedarse viejo, porque **un negativo se lee como
+> "no hay más" y en realidad dice "no había más hasta aquí".**
+
+---
+
+### 9.22 FIGURA: LA VARA EN LOS DOS SENTIDOS
+
+**La vara del 9.6.1 es una relación entre LÍNEAS, no entre NODOS.** Dos nodos
+pueden ser **cada uno hijo del otro** sin que ninguno repita al otro, porque **la
+línea que uno expande no es la línea que el otro expande.**
+
+> **CÓMO SE RECONOCE.** Se aplica la vara en un sentido y da CONTINÚA. Se aplica
+> en el sentido contrario, **sobre una línea distinta**, y también da CONTINÚA.
+>
+> **QUÉ SIGNIFICA.** Ninguno de los dos es la madre. **El par es sano** y se
+> registra **C, sano con figura**, no D: la figura merece quedar escrita.
+>
+> **CUÁL ES EL ARREGLO, y no es fusión.** Es **ENLACE MUTUO: dos aristas**, una
+> por cada línea expandida. Fundirlos sería el error caro, porque **borraría los
+> dos procedimientos para dejar un nodo con dos líneas sueltas.**
+
+**LA COMPROBACIÓN QUE LA SEPARA DE LA DUPLICACIÓN.** Si las dos direcciones
+apuntan a **la misma línea**, no es esta figura: es un solape y se juzga por las
+reglas de siempre. **La figura exige dos líneas distintas**, una en cada nodo.
+
+**EL EJEMPLAR: puesto 1077, clase C.** `herramientas_de_activacion_web` contra
+`diseno_landing_page`, del mismo libro y **con arista ya puesta**.
+
+| sentido | la línea | el procedimiento que la expande |
+|---|---|---|
+| **A hacia B** | herramientas paso 5: *crear páginas de aterrizaje según la fuente del tráfico* | **todo** `diseno_landing_page` |
+| **B hacia A** | landing paso 4: *incluir demos de menos de un minuto, pruebas gratuitas o calculadoras* | **todo** `herramientas_de_activacion_web` |
+
+> **Primera aparición en 1.100 pares leídos.** Es rara, y por eso conviene tenerla
+> nombrada: sin nombre, un par así se lee como duplicación mutua y se fusiona.

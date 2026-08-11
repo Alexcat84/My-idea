@@ -3185,6 +3185,202 @@ Con los puestos **840** (el genchi gembutsu por duplicado), **849** y **439**,
 
 ---
 
+### TANDA R30, VIGESIMOSEXTA CIEGA: seis de seis
+
+**Acumulado: 180 releidas, de las cuales 156 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **511** | `disenar_tests_pass_fail` contra `diseno_experimentos_pass_fail` | **NADA. Es un subconjunto estricto** y la direccion de la fusion esta forzada; ver abajo | **de catalogo, nula** |
+| **513** | `explotacion_tecnologias_disruptivas` contra `tecnologias_disruptivas_oportunidad` | **el analisis IOTA** de impacto de oportunidades y amenazas, el **trabajo de campo con adoptantes tempranos** y **monitorear industrias relacionadas** que trabajan en problemas similares; del otro lado, **mapear el desempeno de la dominante en el tiempo** y **si la dominante ya excede las necesidades reales** | de **catalogo** |
+| **514** | `asignacion_persona_ia` contra `ingenieria_de_prompts_efectiva` | **probar multiples personas para la misma tarea y comparar** e **iterar en modo conversacion** paso a paso; del otro lado, las **restricciones de formato, extension y publico objetivo** | de **lector** |
+| **518** | `cuatro_capacidades_mercado` contra `estrategia_cuatro_capacidades_mercado` | **invertir en la fortaleza y no en debilidades menores** y **definir metricas por capacidad** como tasa de surtido o tiempo de entrega; del otro lado, **diagnosticar la etapa de madurez del mercado** y la regla de **no invertir en eficiencia interna si compites en mercado de crecimiento** | de **catalogo** |
+| **525** | `encuadre_desafio_diseno` contra `how_might_we_framing` | **verificar que la pregunta no sea demasiado general ni demasiado especifica** y **usarla como brujula** durante todo el proceso; del otro lado **TRES cosas y no una**: ver abajo | de **lector** |
+| **526** | `homework_frontend_loading` contra `voice_of_customer_homework` | **los clientes de los clientes** de la cadena de valor y el **business case con datos duros**; del otro lado **TRES y no dos**: ver abajo | de **catalogo** |
+
+#### 511: LA FAMILIA PASS/FAIL son CUATRO, no tres, y la evidencia ya estaba escrita
+
+**Los dos instrumentos corridos, como manda el estandar de certificacion.**
+
+| instrumento | que dio |
+|---|---|
+| **contador** (`contar_nombre.py "pass/fail" "pass fail"`) | **14 nodos vivos** mencionan el termino, 27 menciones |
+| **barrido de las A** | **TRES A vigentes** dentro de la familia: **467**, **511** y **639** |
+
+> **CORRECCION DECLARADA del dictado.** El encargo daba la familia como **tres
+> nodos vistos**. **Son CUATRO**, y el cuarto no hubo que leerlo: **su A ya
+> estaba en el archivo**. Es el puesto **639**,
+> `diseno_experimentos_pass_fail` contra `realizar_pruebas_pasa_no_pasa`. **Es
+> exactamente el modo de fallo del 9.20**: el miembro que falta se llama por otro
+> idioma, *pasa o no pasa* en vez de *pass/fail*, y el ojo lo salta.
+
+**LA NOMINA VIGENTE AL PUESTO 1100: CUATRO miembros**, los cuatro de `core` y los
+cuatro del mismo libro.
+
+| nodo | pasos |
+|---|---:|
+| `diseno_experimentos_pass_fail` | **6** |
+| `disenar_tests_pass_fail` | 5 |
+| `diseno_experimentos_hipotesis` | 4 |
+| `realizar_pruebas_pasa_no_pasa` | 4 |
+
+**Y LA FORMA NO ES UN RACIMO: ES UNA ESTRELLA.** Seis pares posibles, **cinco en
+la cola**, cuatro leidos.
+
+| par | puesto | clase |
+|---|---:|:---:|
+| `diseno_experimentos_pass_fail` contra `diseno_experimentos_hipotesis` | 467 | **A** |
+| `diseno_experimentos_pass_fail` contra `disenar_tests_pass_fail` | 511 | **A** |
+| `diseno_experimentos_pass_fail` contra `realizar_pruebas_pasa_no_pasa` | 639 | **A** |
+| `diseno_experimentos_hipotesis` contra `realizar_pruebas_pasa_no_pasa` | 636 | **D** |
+| `disenar_tests_pass_fail` contra `realizar_pruebas_pasa_no_pasa` | 1346 | pendiente |
+| `disenar_tests_pass_fail` contra `diseno_experimentos_hipotesis` | **nunca entro a la cola** | |
+
+> **Las tres A tocan al MISMO nodo.** `diseno_experimentos_pass_fail`, el de seis
+> pasos, repite con los otros tres; **y los dos perifericos leidos entre si dan
+> D** (636: uno disena la prueba, el otro fija el umbral que la decide). **Es un
+> centro con radios, no un racimo cerrado**, y por eso la familia queda
+> **MEZCLADA** decida lo que decida el 1346.
+>
+> **Y la unica arista interna de los cuatro une justo al par que nunca entro a la
+> cola**, `disenar_tests_pass_fail` con `diseno_experimentos_hipotesis`. **El
+> cableado esta puesto donde la cola no mira, y falta en los tres pares que si
+> repiten.**
+
+**POR QUE EL 511 NO PIERDE NADA, y es el A mas barato leido hasta aqui.** Los
+**cinco** pasos de `disenar_tests_pass_fail` estan **todos** dentro de los seis
+del otro:
+
+| paso del que muere | donde vive |
+|---|---|
+| que se quiere aprender | paso 1 |
+| el test mas simple posible | paso 2, **que ademas dice con que**: paginas de aterrizaje, presentaciones o maquetas |
+| criterios numericos claros | paso 3, **que ademas da la cifra**: nueve de treinta pedidos |
+| ejecutar y no detenerlo antes de tiempo | pasos 4 y 5, **que ademas dan el tamano**, diez a treinta prospectos, y **el motivo**, no confundir un maximo local con el global |
+| registrar aprendizajes, no solo datos | paso 6 |
+
+> **CORRECCION DECLARADA, la segunda de este puesto.** Las tres perdidas que
+> proponia el encargo, paginas de aterrizaje, duracion suficiente y grupo de diez
+> a treinta, **son material del SUPERVIVIENTE, no del que muere**. Aqui **la
+> direccion de la fusion no se elige: esta forzada**, y por eso **la perdida es
+> cero**. Es el unico A del archivo hasta ahora que no necesita reparto por
+> bloques.
+>
+> **Y una precision de vocabulario, verificada**: la palabra **preventas** no
+> aparece en ninguno de los dos nodos. Lo que el paso 2 dice es **paginas de
+> aterrizaje, presentaciones o maquetas**.
+
+#### 513: y de paso, un racimo de tres que la cola NO PUEDE cerrar
+
+**Barrido de las A sobre los tres nodos de tecnologias disruptivas de Cooper:**
+
+| puesto | el par | clase |
+|---:|---|:---:|
+| **505** | `evaluacion_tecnologias_disruptivas` contra `tecnologias_disruptivas_oportunidad` | **A** (R29) |
+| **513** | `explotacion_tecnologias_disruptivas` contra `tecnologias_disruptivas_oportunidad` | **A** (esta tanda) |
+| | `evaluacion_` contra `explotacion_` | **NO EXISTE EN LA COLA** |
+
+> **`tecnologias_disruptivas_oportunidad` tiene DOS A vigentes**, o sea que por el
+> 9.20 los otros dos son **candidatos a miembro** de una misma familia. **Otra
+> estrella, y esta con el centro leido por los dos lados.**
+>
+> **Lo que hay que decir y no adivinar**: el par que probaria o rompería la
+> familia, evaluacion contra explotacion, **no esta en la cola**. **El cribado no
+> lo va a decidir nunca**, por mucho que avance. Queda anotado como lo que es:
+> **un racimo candidato que este ejercicio no puede cerrar solo**, y que necesita
+> una lectura dirigida si alguien quiere la nomina firme.
+
+#### 514: NO es del racimo IA-supervision, y no es una pareja adyacente: es OTRA FAMILIA
+
+**Verificado contra la nomina de OCHO de la seccion 11, antes de escribir esto.**
+
+| pregunta | respuesta medida |
+|---|---|
+| estan los dos nodos en la nomina de ocho | **NO. Ninguno de los dos.** |
+| pares en la cola entre este par y los ocho | **CERO** |
+
+> **Y ahi esta la diferencia con los dos casos anteriores.** La pareja de las
+> **alucinaciones** (363) y la del **invitar a la IA a todo** (456) son parejas
+> **adyacentes con condicion viva**: cada una tiene **UN puesto de la cola** que
+> decide si entra al racimo, el **1478** y el **1517**. **Esta no tiene ninguno.**
+> No es adyacente al racimo: **esta en otro sitio del mismo libro.**
+
+**LO QUE SI ES: la cabeza de la FAMILIA DEL PROMPTING**, tambien de Mollick.
+**Contador** (`contar_nombre.py "prompt"`): **13 nodos vivos**, 33 menciones. **De
+ellos, siete con pares en la cola entre si:**
+
+| puesto | el par | clase |
+|---:|---|:---:|
+| **514** | `asignacion_persona_ia` contra `ingenieria_de_prompts_efectiva` | **A** |
+| **955** | `asignacion_persona_ia` contra `prompting_alta_variacion` | **D** |
+| **1125** | `ingenieria_de_prompts_efectiva` contra `prompting_cadena_de_pensamiento` | pendiente |
+| **1144** | `ingenieria_de_prompts_efectiva` contra `prompting_por_persona_ia` | pendiente |
+| **1175** | `asignacion_persona_ia` contra `prompting_por_persona_ia` | pendiente |
+| **1191** | `ingenieria_de_prompts_efectiva` contra `prompting_alta_variacion` | pendiente |
+| **1220** | `disenar_prompts_efectivos_para_ia` contra `ingenieria_de_prompts_efectiva` | pendiente |
+
+> **CUATRO de los cinco pendientes caen en el tramo 1101-1200**, o sea en el
+> checkpoint que viene. **No adelanto nada**: lo anoto para que cuando salgan se
+> lean como lo que son, la evidencia de una familia, y no como pares sueltos.
+>
+> **Una sola arista interna entre los siete**, `ingenieria_de_prompts_efectiva`
+> con `prompting_cadena_de_pensamiento`, y esta puesta en los dos sentidos.
+>
+> **Y queda una sospecha anotada, no adjudicada**: el titulo de
+> `ingenieria_de_prompts_efectiva` es *Ingenieria de Prompts como Habilidad
+> Practica* y existe un nodo llamado **`habilidad_prompting_como_experticia`**.
+> **No hay par entre ellos en la cola.** Lo digo porque se ve, no porque lo haya
+> leido.
+
+#### 525: el par que da nombre al racimo HMW, y el lado de IDEO pierde TRES cosas
+
+**CORRECCION DECLARADA.** El encargo daba una sola perdida del lado de IDEO,
+documentar contexto y restricciones. **Son tres**, verificadas contra los dos
+nodos:
+
+| lo que solo tiene `encuadre_desafio_diseno` | |
+|---|---|
+| **definir el impacto ultimo que se busca lograr** | HMW no lo pide en ningun paso |
+| **listar posibles soluciones pensando ampliamente**, permitiendo resultados sorprendentes | HMW no lo pide |
+| **documentar contexto y restricciones** geograficas, tecnologicas, de tiempo y de poblacion | HMW no lo pide |
+
+> **Y el encuadre de IDEO al lado le da al racimo una lectura que no tenia.** HMW
+> es **puro trabajo sobre la pregunta**: redactarla, calibrar su altura, iterarla
+> con el equipo, usarla de brujula. IDEO **envuelve la pregunta en su mundo**: el
+> impacto que persigue, las soluciones que ya se imaginan y las restricciones
+> reales.
+>
+> **El corazon repetido es el mismo en los dos**, formular el problema como
+> pregunta abierta y ajustarla segun lo aprendido, **y por eso el par es A**.
+> **Pero la fusion aqui no es simetrica**: el superviviente tiene que quedarse
+> con la calibracion de altura de HMW **y** con el contexto y las restricciones de
+> IDEO, o la pregunta queda bien formulada y flotando.
+
+#### 526: y el lado del homework pierde TRES, no dos
+
+**CORRECCION DECLARADA, y una precision.** El encargo daba dos perdidas del lado
+de `homework_frontend_loading`. **Son tres:**
+
+| lo que solo tiene `homework_frontend_loading` | |
+|---|---|
+| **el screening inicial** antes de comprometer recursos | ya listado en el encargo |
+| **evaluar fuentes de suministro y aspectos de operaciones o manufactura** | **no estaba listado**, y no aparece en el otro nodo en ninguna forma |
+| **el business case con analisis financiero Y PLAN DE ACCION** | ya listado |
+
+> **Y la precision sobre la evaluacion tecnica**, que el encargo daba como perdida
+> del lado de la voz del cliente: **no es una ausencia, es una diferencia de
+> profundidad.** `homework_frontend_loading` **si tiene** evaluacion tecnica, en
+> su paso 2, pero **preliminar** y en paralelo con la de mercado;
+> `voice_of_customer_homework` la pone **antes de aprobar el proyecto**, o sea
+> como puerta. **No se pierde el gesto: se perderia el momento en que se hace.**
+>
+> **Y la version profunda de esa misma evaluacion vive en un tercer nodo**,
+> `etapa_build_business_case`, leido en el puesto **1099**: *evaluacion tecnica y
+> operativa detallada de viabilidad*. **Tres nodos del mismo libro tienen la misma
+> evaluacion a tres profundidades distintas**, y solo una de las tres parejas ha
+> pasado por la cola.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
