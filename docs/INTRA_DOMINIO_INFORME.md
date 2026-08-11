@@ -9731,3 +9731,105 @@ ejercicio de la que se sabe todo.**
 > **Con ellos la familia seria de siete y la cobertura completa se perderia.** Se
 > anotan como candidatos y **la cifra de cobertura total se declara sobre los
 > cinco**, que es sobre lo que esta medida.
+
+---
+
+## 59. TRAMO 1341-1359: dos estrellas, una confirmada y otra nacida
+
+### 59.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.359** de 3.388 | 322 | 89 | 7 | 941 | **23,7%** |
+| **NUCLEO por separado** | **1.204** | 321 | 87 | 7 | 789 | **26,7%** |
+| **el tramo 1341-1359** | **19** | **0** | 0 | 0 | 19 | **0,0%** |
+
+**Sin huecos. Ningun nodo se toco.** La vara resuelve **7 de 19, el 37%**.
+
+> **Tercer tramo del ejercicio sin una sola A**, con el 1236-1256 y el 1278-1300.
+> **Y aun asi es de los que mas cierran**, porque lo que trajo no fueron
+> veredictos: fueron **dos resoluciones de la figura del banco 9.23**.
+
+### 59.2 LA CONDICION VIVA DE LA ESTRELLA SE RESUELVE A SU FAVOR (1346)
+
+**El banco 9.23 declaro la figura del RACIMO EN ESTRELLA con un ejemplar que
+cojeaba**, y lo dijo asi: la familia PASS/FAIL se sostenia sobre **UN SOLO par
+periferico leido**, y **el puesto 1346, si salia A, rompia la estrella.**
+
+**Salio D.**
+
+| la cuenta | resultado |
+|---|---|
+| **pares con el centro** `diseno_experimentos_pass_fail` | **TRES y los tres A**: 467, 511, 639 |
+| **pares entre perifericos** | **DOS leidos y los DOS sanos**: 636 y **1346** |
+| lo que queda | **UN par que NUNCA entro a la cola**, y es una de las seis parejas de la seccion 52 |
+
+> **El ejemplar pasa de tener condicion viva a tener las dos cuentas hechas.** Y la
+> razon del sano es la misma que el puesto 636 escribio para esta familia: **uno
+> disena la prueba y el otro fija el umbral que la decide.** Dos lecturas
+> independientes, separadas por setecientos puestos, dieron la misma frontera.
+
+### 59.3 TERCERA ESTRELLA DEL EJERCICIO, y nace completa (1348)
+
+**Los dos nodos del puesto 1348 ya estaban en la misma componente** del cierre
+transitivo: los dos son gemelos de `regalos_estrategicos_sorpresa`, por las A de
+los puestos **799** y **251**. **Este par era el unico que faltaba leer entre
+ellos.**
+
+| la cuenta | resultado |
+|---|---|
+| pares con el centro `regalos_estrategicos_sorpresa` | **DOS y los dos A** |
+| pares entre perifericos | **UNO, el unico posible: SANO** |
+| **cobertura** | **3 de 3** |
+
+> **Es la primera estrella del archivo que nace con cobertura completa el mismo dia
+> en que se declara.** Y la prueba del 1097 la respalda: **fundir los dos
+> perifericos SUMARIA nueve reglas distintas en vez de borrar ninguna.**
+
+**LAS TRES ESTRELLAS MEDIDAS, para tenerlas juntas:**
+
+| familia | centro | pares con el centro | pares perifericos | cobertura |
+|---|---|---|---|---|
+| **pass/fail** | `diseno_experimentos_pass_fail` | 3 A | **2 sanos** | 5 de 6 |
+| **scorecard** | `scoring_model_scorecard` | 2 A | 1 sano | **3 de 3** |
+| **los regalos** | `regalos_estrategicos_sorpresa` | 2 A | 1 sano | **3 de 3** |
+
+> **Tres familias, tres centros, y en las tres los perifericos no se tocan entre
+> ellos.** La figura ya no descansa en un ejemplar: **descansa en tres, y dos de
+> ellos con todos sus pares leidos.**
+
+### 59.4 LA REGLA DEL ACTO, aplicada otras seis veces
+
+| puesto | la costura | su acto |
+|---:|---|---|
+| 1347 | `funnel_get_customers_optimizacion` (miembro **sano**) | **6**, el de las pruebas A/B |
+| **1354** | `seleccion_ceo_fundador` | **3** |
+| **1357** | `posicionamiento_de_empresa` | **1**, sin gemelo |
+| **1358** | `ganar_comprension_del_cliente` | **1**, sin gemelo |
+| 1358 | `dia_en_la_vida_del_cliente` | **congelado 755**, de la segunda cirugia |
+| **1359** | `producto_minimo_viable` | **2**, la cura acoplada mayor, **primera cirugia** |
+
+> **La regla ya se aplica sin esfuerzo y esta cambiando lo que se sabe al leer**:
+> en este tramo, **dos de las costuras tocadas resultaron ser de las treinta y dos
+> sin gemelo**, o sea que su arreglo es un destejido y nada mas. **Eso antes no se
+> sabia hasta que alguien fuera a buscarlo.**
+
+### 59.5 LOS CUATRO HIJOS SIN CABLE
+
+**Con el puesto 1345, `customer_discovery_cuatro_fases` llega a CUATRO hijos
+leidos** (1083, 1094, 1170, 1345) **y los cuatro SIN ARISTA.**
+
+> **Una madre con cuatro hijos verificados por lectura y ni un solo cable.** Es la
+> entrada mas grande de la bolsa del 9.19 encontrada en una sola familia, y **las
+> cuatro son de la clase barata**: una arista cada una.
+
+### 59.6 EL SALDO
+
+> **Mil trescientos cincuenta y nueve pares.** El tramo no trae ni una A, y aun asi
+> **cierra dos figuras**: la estrella de pass/fail deja de tener condicion viva, y
+> nace una tercera estrella con todos sus pares leidos.
+>
+> **Lo que esto le hace al banco**: el 9.23 se escribio con **un ejemplar que
+> cojeaba y dos contraejemplos**. Hoy tiene **tres ejemplares**, dos de ellos
+> completos. **Una figura con tres casos medidos ya no es una observacion: es una
+> forma del catalogo.**

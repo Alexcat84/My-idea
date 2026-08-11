@@ -2029,6 +2029,21 @@ UNO**, y los demas no se parecen entre ellos.
 > **Un ejemplar con condicion viva sigue siendo un ejemplar**, pero la figura se
 > declara sabiendo de que pata cojea.
 
+> **ACTUALIZACION del 14 ago 2026: la condicion viva se resolvio y la figura tiene
+> TRES ejemplares.** El puesto **1346** salio **D**, asi que la estrella de
+> pass/fail queda con **dos pares perifericos leidos y los dos sanos**. Y el puesto
+> **1348** trajo un tercer ejemplar, la familia de los regalos, **con cobertura
+> completa el mismo dia**.
+>
+> | familia | pares con el centro | pares perifericos | cobertura |
+> |---|---|---|---|
+> | **pass/fail** | 3 A | **2 sanos** | 5 de 6 |
+> | **scorecard** (1201) | 2 A | 1 sano | **3 de 3** |
+> | **los regalos** (1348) | 2 A | 1 sano | **3 de 3** |
+>
+> **Tres familias, tres centros, y en las tres los perifericos no se tocan entre
+> ellos.** Detalle en las secciones 51.3 y 59 del informe.
+
 **LOS DOS CONTRAEJEMPLOS, medidos el mismo dia y por eso valen:**
 
 | familia | pares con el centro | pares perifericos | forma |
