@@ -8565,3 +8565,125 @@ cinco salieron de mirar alrededor:**
 > **Y la lista queda ABIERTA.** Van cinco parejas en 1.235 pares leidos; **el
 > ritmo es de una cada doscientos cincuenta**, asi que conviene volver a esta
 > seccion en cada checkpoint en vez de esperar al cierre.
+
+---
+
+## 53. TRAMO 1236-1256: el primer tramo del ejercicio SIN UNA SOLA A
+
+### 53.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.256** de 3.388 | 319 | 88 | 7 | 842 | **25,4%** |
+| **NUCLEO por separado** | **1.101** | 318 | 86 | 7 | 690 | **28,9%** |
+| **el tramo 1236-1256** | **21** | **0** | 0 | **1** | 20 | **0,0%** |
+
+**Sin huecos. Ningun nodo se toco.**
+
+> **Es el primer tramo del ejercicio sin una sola A**, y llega justo despues del
+> unico tramo que subio. **La serie no baja ni sube: se mueve con la cola**, que es
+> lo que dice el 9.19.
+
+| tramo | leidos | tasa de A | vara |
+|---|---:|---:|---:|
+| 1158-1200 | 43 | 4,7% | 49% |
+| 1201-1235 | 35 | **17,1%** | 34% |
+| **1236-1256** | **21** | **0,0%** | **43%** |
+
+**Y el tramo largo 1201-1256, que es lo que se puede comparar con una centena:**
+**56 leidos, 6 A, 10,7%, vara 38%.**
+
+### 53.2 SEGUNDO EJEMPLAR DE LA VARA EN LOS DOS SENTIDOS, y el grafo ya lo habia resuelto
+
+**El puesto 1240 es el segundo caso del banco 9.22 en 1.256 pares**, y trae algo
+que el primero no tenia.
+
+| sentido | la linea | el procedimiento que la expande |
+|---|---|---|
+| **A hacia B** | `diversidad_vs_homogeneidad_equipo` paso 3: *hablar con quien consideres sumar y poner sobre la mesa si comparten valores* | **todo** `prueba_antes_de_comprometerse`: el proyecto pequeno de prueba, la discusion de aspiraciones y riesgo, las preguntas de fortalezas y de que haria abandonar |
+| **B hacia A** | `prueba_antes_de_comprometerse` paso 4: *evaluar si habria disposicion a contratar diversidad de habilidades* | **todo** `diversidad_vs_homogeneidad_equipo`: que habilidades faltan, salir a buscar contactos distintos, no elegir por comodidad |
+
+> **Y LAS DOS ARISTAS YA ESTAN PUESTAS, en los dos sentidos, verificado
+> resolviendo a nodo vivo.** El 9.22 prescribe **enlace mutuo** como arreglo, y
+> aqui **el grafo ya lo hizo.**
+>
+> **Eso cambia el estatus de la figura**: no describe solo un par raro que hubo
+> que nombrar. **Describe un cableado que alguien ya considero correcto**, y que
+> sin la figura se habria leido como duplicacion mutua y se habria fusionado.
+
+**QUINTA TRAMPA DE IDENTIFICADOR, y la mas literal del ejercicio**:
+`diversidad_vs_homogeneidad_equipo` tiene una A vigente (782) contra
+**`homogeneidad_vs_diversidad_equipo`**. **Las mismas dos palabras en orden
+inverso, y son dos nodos vivos distintos.**
+
+### 53.3 SEGUNDA CONDICION DEL RACIMO DE LA IA, Y TAMBIEN D
+
+**El puesto 1239 es el segundo de los cuatro cruces que la seccion 11 dejo
+escritos.** `comprension_capacidades_limitaciones_ia` contra
+`human_in_the_loop_ia`: **la misma forma del 1211 con el otro nodo de la mitad
+humana**, y el mismo resultado.
+
+| condicion | puesto | clase |
+|---|---:|:---:|
+| contra `principio_humano_en_el_loop` | **1211** | **D** |
+| contra `human_in_the_loop_ia` | **1239** | **D** |
+| contra `jagged_frontier_ia` | 1339 | pendiente |
+| `jagged_frontier_ia` contra `principio_humano_en_el_loop` | 1451 | pendiente |
+
+> **Van DOS de cuatro y las dos en D.** La seccion 11 escribio que **si los cuatro
+> salieran D el racimo se parte en dos.** Ya no es un voto suelto: **es la mitad.**
+>
+> **Y la lectura es la misma las dos veces**: `comprension_capacidades_limitaciones_ia`
+> **mapea la maquina** (disena tus propias pruebas, casos limite, patrones de error)
+> y despacha la revision humana **en una linea**; los dos nodos de la mitad humana
+> **son esa linea entera**. **No lo adelanto**, pero conviene que la mesa sepa que
+> llega con dos votos puestos.
+
+### 53.4 EL VECINO DEL RACIMO DEL CIERRE QUEDA CERRADO, con cuatro lecturas
+
+`relacion_continua_con_cliente` sale **sano por cuarta vez** (1249).
+
+| puesto | contra que | que prueba |
+|---:|---|---|
+| 520 | `diferencias_venta_pequena_venta_grande` | contra un miembro |
+| **1206** | `riesgo_tecnicas_cierre_venta_compleja` | **contra el CENTRO** |
+| 1217 | `venta_interna_cliente` | contra un lateral |
+| **1249** | `cierre_segun_complejidad_venta` | contra otro miembro |
+
+> **Cuatro lecturas, cuatro sanas, ninguna A.** No enuncia la tesis del racimo en
+> ninguna de las cuatro. **Es adyacente y no miembro, y ahora esta medido por
+> cuatro lados en vez de supuesto por el titulo.**
+
+### 53.5 EL MISMO DEFECTO DE INDICE, RESUELTO DE LAS DOS FORMAS POSIBLES
+
+| puesto | el indice | nombra a sus hijos | tiene arista con ellos |
+|---:|---|---|---|
+| **1092** | `customer_discovery_phase2_problem_test` | **si**, sus pasos son titulos de otros nodos | **NO**, esta cableado hacia los lados |
+| **1250** | `rapid_prototyping` | **si, y entre parentesis**: *(usar Determine What to Prototype)*, *(Get Feedback)* | **SI** |
+
+> **Es el mismo defecto potencial resuelto de las dos maneras dentro del mismo
+> archivo.** Y prueba algo util para la bolsa de aristas faltantes: **cablear un
+> indice a sus hijos no es una imposibilidad tecnica ni una convencion ausente.**
+> **Es una tarea que en unos sitios se hizo y en otros no.**
+
+### 53.6 QUINTA COSTURA ENTRE LIBROS
+
+`decision_pivote_perseverar` declara **fuente doble**, *The Lean Startup* y
+*Traction*, y sus **nueve pasos** se parten en dos bloques: la decision con
+metricas, y la busqueda del punto brillante entre los clientes leales.
+
+> Con `fit_problema_solucion`, `project_close_out`, `co_creation_session` y
+> `propuesta_gasto_capital`, **ya son CINCO**, y en las cinco **el campo lo
+> declara**. **Es un patron del catalogo, no un accidente**: hay una clase de nodo
+> que nacio pegando dos libros, y se reconoce leyendo un campo.
+
+### 53.7 EL SALDO
+
+> **Mil doscientos cincuenta y seis pares. Veintiuno seguidos sin una sola A**, y
+> el tramo anterior habia sido el mas alto en cinco. **La cifra no tiene tendencia:
+> tiene cola.**
+>
+> Lo que el tramo deja es sobre todo **cierres**: el vecino del racimo del cierre
+> queda fuera con cuatro lecturas, la segunda condicion de la IA cae del mismo
+> lado que la primera, y la figura del 9.22 **gana un ejemplar que el grafo ya
+> habia cableado bien**. **Tres cosas que no se sabian y ahora estan medidas.**
