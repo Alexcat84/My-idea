@@ -4923,3 +4923,86 @@ estuve a punto de registrarlo como correccion al barrido de la seccion 6.**
 > aislados tiene que excluir el propio nodo**, o los aislados dejan de parecerlo.
 > Es una linea de codigo y una fuente de falsos negativos que ya me alcanzo una
 > vez.
+
+---
+
+## 32. EL TRAMO 849 a 854: la segunda anatomia fuera de cola, escrita aqui
+
+**Seis pares leidos, los seis del nucleo.** Acumulado **854 de 3.388**, global
+**30,8%** de A y **nucleo 37,5%**. **El tramo dio 50%**, el mas cargado de A en
+varios tramos. **Faltan 46 para el checkpoint de los 900.**
+
+### 32.1 LA SEGUNDA COSTURA FUERA DE COLA CON ANATOMIA ESCRITA
+
+**Puesto 851.** `procesamiento_paralelo_con_espirales` es uno de los **veinte**,
+declara *Winning at New Products* mas *Essentials of Supply Chain Management*, y
+**la ficha no tenia su anatomia**: hasta hoy la unica fuera de cola con anatomia
+escrita era `retention_metrics`.
+
+| bloque | de que habla |
+|---|---|
+| **1 a 4** | **Cooper**: areas en paralelo como en el rugby y no como en relevos, versiones tempranas y baratas, ciclos rapidos de prueba con clientes, y repetirlos en cada etapa |
+| **5 a 9** | **Hugos**: dividir el proyecto en partes independientes, disenar tareas ejecutables en paralelo, asignar por habilidades multiuso, plan B, y disenar para poder recortar funciones |
+
+> **El duplicado que lo delata es el paso 1 contra el paso 6**: los dos mandan
+> trabajar en paralelo y no en cascada, uno hablando de **areas** y otro de
+> **tareas**.
+
+**Y ESE MISMO DUPLICADO ES EL SOLAPE DEL PAR**, que es lo que lo bloquea:
+
+> `customer_development_agile_pairing` manda **trabajar agil y no en cascada**, y
+> eso **toca el paso 1 y el paso 6 a la vez**, o sea **los dos lados de la
+> juntura**. Por el banco 9.9, **bloquea**. Es la misma figura del puesto 830 con
+> el emblema: **cuando la orden repetida ES el solape, no hay forma de juzgar sin
+> saber cual de las dos copias sobrevive.**
+
+**Van CINCO de los veinte leidos desde que la lista se midio**, y el saldo no
+mejora:
+
+| puesto | nodo | clase | motivo |
+|---:|---|:---:|---|
+| 798 | `preguntas_ipo_dolor_cliente` | **B** | costura |
+| 831 | `estrategia_crecimiento_clientes` | **B** | costura |
+| 843 | `decision_pivote_perseverar` | **B** | familia sin adjudicar |
+| 848 | `retention_metrics` | **D** | solape en el bloque que sobrevive |
+| **851** | `procesamiento_paralelo_con_espirales` | **B** | costura, solape sobre la juntura |
+
+> **Cuatro de cinco sin resolver.** La lista de los veinte **se comporta peor que
+> la cola de las 128**, y el motivo es de forma: **estos nodos son largos y por eso
+> su solape casi siempre encuentra una juntura.**
+
+### 32.2 UN CENTRO QUE NO PARA DE DAR DUDAS
+
+**`customer_development_modelo` entra a DOS pares de este tramo** (849 y 854) y
+con ellos llega a **siete pares leidos**:
+
+| clase | puestos |
+|---|---|
+| **A** | 635 (`customer_discovery`), **849** (`customer_discovery_get_out_of_building`) |
+| **D** | 377, **854** |
+| **B** | **683, 707, 806** |
+
+> **Repite con DOS nodos de descubrimiento distintos** y **acumula tres dudosos**,
+> mas que ningun otro nodo del cribado hasta ahora. **Su zona, la del customer
+> development, pide mesa igual que la del Stage-Gate y la del pivote**, y por el
+> mismo motivo: **son demasiados nodos contando el mismo proceso desde alturas
+> distintas**, y pareja por pareja no se decide.
+
+### 32.3 Lo demas del tramo
+
+> **1. EL FRENTE DEL STAGE-GATE LLEGA A NUEVE NODOS LEIDOS** (puestos **852** y
+> **853**, los dos **A**). El 852 repite el scorecard distinto para proyectos
+> radicales; el 853 es **la arquitectura de dos niveles contra la practica que ya
+> la contiene**, donde lo unico propio de la arquitectura, la distincion entre
+> decisiones estrategicas y tacticas, **cabe en una linea**. **La mesa del
+> Stage-Gate crece cada tramo y sigue sin convocarse.**
+>
+> **2. LA ZONA DEL GOBIERNO DE LA JUNTA es de las mas sanas del cribado** (puesto
+> **850**): **diez pares leidos y solo dos sin resolver**, el B del 168 y la C del
+> 201. Armar la junta y manejarla son cosas distintas y el catalogo lo tiene bien.
+>
+> **3. OTRA ARISTA QUE FALTA de las baratas** (puesto **854**): la madre del
+> customer development **enlaza a `customer_discovery` y a
+> `decision_pivotar_o_proceder` y no a `customer_validation`**, que es su segundo
+> paso. **Es la tercera del mismo tipo en tres tramos** (841, 846, 854) y las tres
+> son madres que nombran un paso y no lo enlazan.

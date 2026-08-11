@@ -3216,6 +3216,31 @@ dos. **No se toca desde aqui.**
 
 ---
 
+### 2. `core/procesamiento_paralelo_con_espirales`, 9 pasos: SEGUNDA FUERA DE COLA
+
+**Hallada el 13 ago 2026 en el puesto 851 del cribado intra**, otra vez **por el
+otro eje**. Anatomia verificada contra el grafo:
+
+**Dos fuentes**: *Winning at New Products* (Cooper) y *Essentials of Supply Chain
+Management* (Hugos).
+
+| bloque | de que habla |
+|---|---|
+| **1 a 4** | **Cooper**: areas en paralelo como en el rugby y no como en relevos, versiones tempranas y baratas (bocetos, prototipos virtuales), ciclos rapidos de prueba con clientes, y repetirlos en cada etapa |
+| **5 a 9** | **Hugos**: dividir el proyecto en partes independientes, disenar tareas ejecutables en paralelo, asignar por habilidades multiuso, plan B, y disenar para poder recortar funciones sin perder lo esencial |
+
+> **El duplicado literal es el paso 1 contra el paso 6**, los dos mandando
+> trabajar en paralelo y no en cascada: uno hablando de **areas** y otro de
+> **tareas**. **A diferencia de `retention_metrics`, aqui SI hay repeticion
+> interna**, o sea que **el instrumento lo habria cazado si hubiera estado en la
+> cola.** Es la firma de Hugos que el informe de cierre ya midio.
+
+**Destino**: la pasada unica, **separar en dos**. Y su par del puesto **851 queda
+CONGELADO**, no solo encolado: **el solape del par es justamente la orden
+repetida**, asi que el veredicto depende de cual de las dos copias sobreviva.
+
+---
+
 ## MARCADOR DE LA CLASE
 
 | | |

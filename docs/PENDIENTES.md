@@ -38,8 +38,8 @@ son grandes y por eso entran a muchos pares.
 
 | cuenta | qué significa | hoy | lista |
 |---|---|---:|---|
-| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **11** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835 |
-| **EN COLA** | el texto va a cambiar, se relee igual | **13** | los once de arriba **más 361 y 374** |
+| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **12** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835, **851** |
+| **EN COLA** | el texto va a cambiar, se relee igual | **15** | los doce de arriba **más 361, 374 y 386** |
 
 **Los TRES que están en cola sin congelar**, y por qué: en el **361** el nodo chico
 **es** el bloque 1 a 5 del grande; en el **374** el solape cae entero en el bloque
