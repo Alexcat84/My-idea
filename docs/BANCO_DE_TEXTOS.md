@@ -1751,3 +1751,59 @@ como *posible puro de tres*.
 > **La regla operativa**: antes de citar una nómina, **buscar si hay una medición
 > posterior en el informe.** El censo es el punto de partida del contador (§9.5.1),
 > no su resultado.
+
+---
+
+### 9.18 UNA REGLA ABOLIDA SE BUSCA TAMBIEN EN SU ESPEJO
+
+**Adoptada el 13 ago 2026**, tras el barrido de razones.
+
+> **Cuando se abole una regla, el barrido que la persigue tiene que buscar LAS DOS
+> DIRECCIONES en que la regla concluia.** Buscar solo la forma que acusa deja viva
+> la forma que exculpa, **y la que exculpa es la que nadie va a reclamar**, porque
+> no molesta a nadie: el veredicto ya salio bien.
+
+**EL EJEMPLAR, medido.** La paráfrasis abolida por §9.5.0 concluía en dos
+direcciones:
+
+| forma | qué concluía | razones con el defecto |
+|---|---|---:|
+| **la que ACUSA** | *sin arista, o sea duplicación* | **25** |
+| **la que EXCULPA** | *con arista, o sea jerarquía sana* | **13** |
+| | **total** | **38** |
+
+> **La primera búsqueda encontró 27 y se dio por hecha.** La pasada completa, con
+> el espejo incluido, encontró **38**. **El espejo era el 34% del defecto.**
+
+> **Y el saldo prueba que era defecto de TEXTO y no de juicio: ninguna de las 38
+> cambió de clase.** Sus cuerpos ya decidían por contenido; lo que estaba viejo era
+> la primera frase. **Si arreglar el texto hubiera movido clases, el problema no
+> habría sido de texto.**
+
+---
+
+### 9.19 LA COLA CAMBIA DE PRESA: la similitud alta caza duplicados, la media caza jerarquías
+
+**Adoptada el 13 ago 2026**, en el checkpoint de los 1.000.
+
+> **La tasa de A no baja porque quede menos por arreglar. Baja porque cambia LA
+> CLASE de lo que queda.** Una cola ordenada por similitud pone delante los pares
+> que **dicen lo mismo** y deja detrás los que **están en distinto nivel**: una
+> madre que nombra un paso en una línea y un hijo que trae el procedimiento.
+
+**LA EVIDENCIA, de tres fuentes que no se coordinaron:**
+
+| fuente | qué dice |
+|---|---|
+| **la curva por centenas** | de 54% en la tercera centena a **18% en la décima**, siete centenas bajando |
+| **la vara** | **trece de los veintidós pares finales** se resolvieron con *la línea o el procedimiento*, todos con la misma anatomía |
+| **el barrido `paso_contra_nodo.py`** | **624 candidatos sin arista** de esa misma figura, contados el mismo día, y una muestra que los da **79% jerarquía sana** |
+
+> **Lo que esto cambia para leer el marcador**: una tasa de A que cae **no es una
+> buena noticia ni una mala**. Es el aviso de que **el trabajo que queda cambió de
+> tipo**, de fusiones a enlaces, **y de caro a barato.**
+
+> **LA CIFRA QUE HAY QUE REPORTAR DESDE AHORA, junto a la tasa de A: cuántos pares
+> del tramo se resolvieron con la vara.** Cuando esa cifra sube y la de A baja,
+> la cola está en zona de jerarquías. **Las dos juntas dicen lo que ninguna dice
+> sola.**

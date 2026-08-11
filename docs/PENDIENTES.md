@@ -2183,3 +2183,41 @@ racimos cuyos miembros no comparten dominio.**
 > encuentra todos de una vez, y cada uno se resuelve igual: **o la nómina se
 > depura, o el racimo se declara transversal de forma explícita.** Lo que no puede
 > quedar es un racimo que **parece** de un dominio y no lo es.
+
+---
+
+## LA BOLSA DEL PASO CONTRA NODO: 624 candidatos, una sola clase
+
+**Medido el 13 ago 2026** con `scripts/paso_contra_nodo.py` y una **muestra pineada
+de 24** (pin en `docs/PIN_SORTEO_PASO_NODO.txt`, informe §40).
+
+| | |
+|---|---:|
+| candidatos **sin arista** | **624** |
+| leidos en la muestra | 24 |
+| **JERARQUIA SANA** (arista que falta) | **19** |
+| **MADRE QUE REPITE** (poda) | **0** |
+| FALSO POSITIVO | 5 |
+
+> **CERO PODAS EN VEINTICUATRO LECTURAS.** La bolsa **no es una mezcla de dos
+> clases de arreglo: es UNA, y es la barata.** Eso simplifica el plan: no hay que
+> triar entre enlazar y podar, hay que **enlazar**.
+
+**PROYECCION, declarada como proyeccion**: aplicando la tasa de cada estrato a su
+tamano salen **489** jerarquias sanas. El intervalo de Wilson al 95% sobre 19 de
+24 va de 60% a 94%, o sea **entre 376 y 586 aristas que faltan**.
+
+### CALIBRACION PARA UNA CORRIDA FUTURA: el modo de fallo es EL VERBO
+
+**No se aplica a la lista ya emitida**, que se lee como esta. Es para el dia que
+el instrumento vuelva a correr.
+
+> **En cuatro de los cinco falsos positivos, el paso y el hijo comparten el
+> SUSTANTIVO y cambian el VERBO**: leer contra disenar, monitorear contra lograr,
+> listar contra definir, comprar contra certificar. **El instrumento mide
+> vocabulario y no accion.**
+
+> **La correccion que esto sugiere**: extraer el verbo principal del paso y el del
+> titulo del hijo, y **penalizar el candidato cuando los verbos pertenecen a
+> familias distintas** (observar contra construir, listar contra definir). No se
+> toca el umbral: se anade una senal.

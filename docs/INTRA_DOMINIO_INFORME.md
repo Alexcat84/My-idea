@@ -1067,6 +1067,24 @@ primera de un libro consigo mismo.**
 > **Y no es un empate que se resuelva fusionando**, porque fundir deja al lector
 > con una sola de las dos y sin saber que la otra existia.
 
+> **SEGUNDA EJEMPLAR, 13 ago 2026, y lo encontro el EJE NUEVO**: en la muestra
+> pineada del barrido paso-contra-nodo, el candidato numero 4 resulto ser esto y
+> no una jerarquia.
+>
+> | nodo | que manda para el MISMO gesto, centrar el proceso |
+> |---|---|
+> | `pre_control_estadistico` | centrar el proceso **entre los limites de ESPECIFICACION** al iniciar |
+> | `limites_de_especificacion_vs_limites_de_control` | **NUNCA** ajustar el proceso segun si un punto cae dentro o fuera de **especificacion**; ajustar solo cuando el grafico de control senale causa especial |
+>
+> **Los dos de `quality`.** El pre-control usa la especificacion a proposito,
+> porque es una tecnica de arranque rapido; el otro nodo lo prohibe como doctrina
+> general. **No es contradiccion: es una excepcion que ninguno de los dos
+> declara.**
+>
+> **Y confirma algo del instrumento nuevo**: un eje que busca jerarquias tambien
+> destapa fronteras, porque las dos figuras se parecen por fuera (dos nodos que
+> hablan del mismo gesto) y se distinguen solo leyendo.
+
 > **LO QUE LA FIGURA OBLIGA**: escribir la frontera **dentro de los dos nodos**,
 > nombrando la condicion que decide. **Una frontera intra-libro es mas peligrosa
 > que una entre libros**, porque el lector no tiene la senal de *son autores
@@ -2881,6 +2899,86 @@ donde no**, con el mismo procedimiento que se uso con las EAR:
 > inversionistas o syndicates*) **y en su resumen**. **Estado: VIVA**, verificada
 > el 13 ago 2026. **Es el nombre propio numero trece del censo**, y el primero que
 > entra por el eje intra-dominio en vez de por la franja o las costuras.
+
+### TANDA R27, VIGESIMOTERCERA CIEGA: seis de seis
+
+**Acumulado: 162 releidas, de las cuales 138 a ciegas. Discrepancias: UNA**, el
+395. **Dos perdidas dictadas no resistieron la verificacion y se corrigen abajo.**
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **475** | `customer_profile` contra `customer_profile_value_map` | **priorizar jobs, pains y gains** por importancia, severidad y relevancia, y **los tres tipos de jobs**, funcionales, sociales y emocionales; del otro lado, **comunicar los dos documentos a toda la organizacion** y **usarlos como marcador** en las conversaciones con clientes | de **lector** |
+| **476** | `diseno_organizacional_equipos_innovacion` contra `equipo_multifuncional_real` | **liberar tiempo real** de las tareas habituales y las **recompensas por desempeno del equipo** y no solo individual; del otro lado, **elegir la forma de organizar segun la complejidad** y buscar que el equipo este **fisicamente junto** | de **lector** |
+| **477** | `customer_profile_value_map` contra `value_proposition_canvas` | **dibujar los dos lados**, el circulo del perfil a la derecha y el cuadrado del mapa a la izquierda, e **iterar hasta encontrar el encaje** | de **lector** |
+| **479** | `contratar_ambicion_correcta` contra `screening_ambicion_organizacional` | **el rigor extra en los roles de ventas**, porque ahi los incentivos locales son mas fuertes; del otro lado, **si pregunta por la estrategia antes que por la compensacion** | de **lector** |
+| **482** | `advances_vs_continuations` contra `marco_avances_continuaciones` | **evitar objetivos vagos** como recopilar informacion o construir relacion; del otro lado, **la clasificacion del resultado en CUATRO categorias** | de **lector** |
+| **483** | `clasificacion_mercados_cadena_suministro` contra `marco_analisis_mercado_cadena_suministro` | **decidir si en cada area hay que liderar, igualar o superar** a la competencia; del otro lado, **revisar el cuadrante periodicamente porque cambia** y **ajustar inventario y precios** segun el cuadrante | de **lector** |
+
+#### DOS CORRECCIONES DEL DICTADO, en el mismo puesto
+
+**Las dos en el 482, y las dos verificadas contra el grafo:**
+
+> **1. *Identifica que falto* NO es perdida: esta en LOS DOS.** Es el paso 4 de
+> `advances_vs_continuations` (*si el resultado fue una continuacion, identifica
+> que falto para lograr un avance real*) y el paso 2 de
+> `marco_avances_continuaciones` (*si el resultado fue una Continuacion,
+> identifica que accion concreta falto para convertirla en Avance*). **Es la misma
+> frase.**
+>
+> **2. La clasificacion es en CUATRO, no en tres.** El dictado decia
+> *clasifica-en-tres*; el nodo clasifica en **Orden, Avance, Continuacion y
+> No-venta**. **La perdida existe y es mas grande de lo dictado**: la cuarta
+> categoria, la no-venta, es la que obliga a mirar de frente lo que no funciono.
+
+#### 475 y 477: el CASO FUNDACIONAL de la figura, releido a ciegas
+
+**`customer_profile_value_map` es el UNICO gemelo de la figura CENTRO SANO CON
+GEMELO SIN CASA que esta probado por partida doble**, y estos son los dos pares
+que lo prueban. **Los dos se releyeron sin mirar el veredicto y los dos
+sostienen su A.**
+
+| puesto | contra quien | que repite |
+|---:|---|---|
+| **477** | **el CENTRO**, `value_proposition_canvas` | los dos lados del lienzo y su trabajo conjunto |
+| **475** | **una PIEZA**, `customer_profile` | la especificacion de jobs, pains y gains |
+
+> **Repite con el centro Y con una de sus piezas, y no tiene arista con ninguno de
+> los siete miembros de la familia.** Eso es exactamente la figura, y es la unica
+> vez que se cumple con las dos mitades probadas: **la forma la da el grafo, el
+> gemelo lo dan estas dos lecturas.**
+>
+> **Lo que la relectura asegura**: despues de que las nueve lecturas dirigidas
+> tumbaran nueve candidatos y de que la del racimo de cohortes cayera por un
+> veredicto volteado, **la figura se quedo con tres ejemplares. El mas fuerte de
+> los tres acaba de pasar la prueba ciega dos veces.** Ya no descansa en una
+> lectura vieja.
+
+#### 483: la familia de los CUADRANTES es de SEIS, y yo la conte en cinco
+
+**Correccion declarada de mi propia nomina.** En la tanda R18 reporte esta familia
+con **cinco miembros y diez pares posibles**. **Son SEIS.**
+
+| | lo que reporte | lo que es |
+|---|---:|---:|
+| miembros | 5 | **6** |
+| pares posibles | 10 | **15** |
+| en la cola | 5 | **7** |
+| **leidos** | 4 | **7** |
+| **en A** | 4 | **SIETE de siete** |
+| nunca en cola | 5 | **8** |
+
+> **El sexto es `marco_analisis_mercado_cadena_suministro`**, y **su A con un
+> miembro ya estaba en el archivo cuando conte**: el puesto **704**. **No lo vi
+> porque corri el contador sobre el nombre de la familia y este nodo no lo lleva**,
+> exactamente el modo de fallo que el banco 9.15 nombra.
+>
+> **Tercera vez que el BARRIDO DE LAS A habria evitado un error de nomina**, con
+> el quinto puro (394) y con la ecuacion de valor (950). **La regla existe desde
+> hace un dia y este es su tercer ejemplar retroactivo.**
+
+> **Y con la cifra corregida, esta familia es la mas cargada del inventario**:
+> **siete pares leidos y los SIETE en A**, sin un solo sano. **Le faltan ocho
+> lecturas y ninguna esta en la cola.**
 
 ---
 
