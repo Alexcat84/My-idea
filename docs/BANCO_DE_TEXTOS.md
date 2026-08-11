@@ -907,6 +907,42 @@ Tres miembros, tres pares posibles, los tres leídos, **y las clases son B, C y 
 aparezca con arista verificada se anota aquí en vez de ir a la mesa**: es la vía
 rápida, y su valor está en no gastarle a la mesa un tiempo que no le corresponde.
 
+### 9.5.0 LA REGLA SE CITA, NO SE PARAFRASEA
+
+**Registrada el 12 ago 2026, con el choque que la obligó como ejemplar.**
+
+> **Una regla parafraseada deja de ser la regla.** La paráfrasis conserva el caso
+> que uno tenía en la cabeza al escribirla y **pierde el que la regla cubría sin
+> que uno lo viera**. Y como suena igual, nadie la revisa: se cita la paráfrasis
+> durante cientos de lecturas creyendo que se cita la regla.
+
+**EL EJEMPLAR, y costó diecinueve veredictos.**
+
+| lo que decía la regla | lo que decía mi paráfrasis |
+|---|---|
+| **la arista no exculpa**: que exista no absuelve, y lo que absuelve es que uno de los dos sea un resumen | **sin arista igual a duplicación** |
+
+> **La frase real corta en los DOS sentidos**: si la arista no exculpa cuando
+> está, **tampoco acusa cuando falta**. Mi paráfrasis solo conservó la mitad que
+> acusa, y esa mitad **decidió la clase de diecinueve pares** hasta que la
+> ratificación restauró la regla entera.
+>
+> **La paráfrasis no era un error de lectura: era una regla nueva, más pequeña,
+> con el mismo nombre.**
+
+**LO QUE ESTO OBLIGA:**
+
+> **1. En una razón se CITA la regla, con su número, no se resume.** Si hay que
+> resumirla para que quepa, la razón está mal armada.
+>
+> **2. Cuando una regla se aplique muchas veces seguidas, se vuelve a leer el
+> texto original cada tanto.** El desvío no se nota desde dentro.
+>
+> **3. Y la señal de alarma es el silencio**: una regla que nunca produce un caso
+> incómodo probablemente ya no es la regla, sino la mitad cómoda de ella.
+
+---
+
 ### 9.5.1 EL CENSO POR NOMBRE SE CUENTA POR SCRIPT
 
 **Registrada el 12 ago 2026, después de que el conteo a mano fallara TRES veces.**
@@ -972,7 +1008,38 @@ de la regla.**
 > ninguno de sus hijos.
 
 **Los diez veredictos que colgaban de aquel límite ya citan la regla** (puestos
-490, 497, 522, 555, 557, 568, 582, 586, 610 y 624). En el primer caso el grafo demuestra que alguien sabia como se
+490, 497, 522, 555, 557, 568, 582, 586, 610 y 624).
+
+##### LA VARA DE LA RAMA CONTENIDO-MANDA: **LA LÍNEA O EL PROCEDIMIENTO**
+
+**Propuesta por Claude en la sección 19 del informe intra el 12 ago 2026 y
+adoptada por el auditor el mismo día.** La rama *contenido-manda* no tenía test
+operativo: decía qué preguntar y no cómo responder.
+
+> **Si lo que el hijo añade a lo que la madre ya dice CABE EN UNA LÍNEA, REPITE.
+> Si trae un PROCEDIMIENTO que la madre no tiene, CONTINÚA.**
+
+**Cómo se aplica, y es deliberadamente mecánico:**
+
+| se lee | y se pregunta |
+|---|---|
+| el paso de la madre que el hijo desarrolla | ¿es una línea, o ya trae el procedimiento? |
+| el nodo hijo entero | ¿qué queda si le quito lo que la madre ya dijo? |
+| **lo que queda** | ¿cabe en una línea, o es una secuencia de acciones con su propia lógica? |
+
+**EJECUTADA sobre los veintitrés veredictos de esa silueta: DIECINUEVE cayeron a
+D y CUATRO se sostienen en A.**
+
+| se sostienen | por qué |
+|---:|---|
+| **568** | lo que el hijo añade es una línea: *cómo se enteró de nosotros* |
+| **586** | lo que el hijo añade es una línea: *no atribuir las ideas a una sola persona* |
+| **474** | el hijo **repite además dos pasos más** de la madre |
+| **395** | no es caso de esta rama: la familia está en **cadena completa** y el nodo es una **segunda casa** |
+
+> **La vara no inventa doctrina: nombra la que el archivo ya usaba sin saberlo.**
+> Las cuatro que se sostienen se sostenían por este motivo desde el principio,
+> escrito con otras palabras en cada razón. En el primer caso el grafo demuestra que alguien sabia como se
 > enlaza esta familia y se salto uno; en el segundo no hay nada que demuestre que
 > la familia iba a estar enlazada, asi que la ausencia de arista no dice nada y
 > hay que volver al texto.

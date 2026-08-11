@@ -1592,13 +1592,14 @@ Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
 | nodos vivos que declaran *Never Lose a Customer Again* | **83** |
 | de esos, **nodos de FASE** (llevan una de las ocho en id o titulo) | **16** |
 | **nodos-PROGRAMA** (presentan la serie entera) | **2** |
-| nodos de CANAL (la sub-serie de los seis medios de comunicacion) | **4** |
+| nodos de CANAL (la sub-serie de los seis medios de comunicacion) | ~~4~~ **7** |
 
 ### Las ocho fases, una por una
 
 | fase | nodos vivos | cuales |
 |---|---:|---|
 | **Assess** | **3** | `fase_assess`, `fase_assess_ciclo_cliente`, `fase_assess_experiencia_cliente` |
+| | | **y ademas ASSESS ESTA DOBLADA POR LA OTRA SERIE**, ver abajo |
 | **Admit** | **2** | `fase_admit`, `fase_admit_celebracion` |
 | Affirm | **1** | `fase_affirm_buyers_remorse` |
 | **Activate** | **2** | `fase_activate`, `fase_activate_primera_impresion` |
@@ -1606,6 +1607,29 @@ Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
 | **Accomplish** | **2** | `fase_accomplish`, `fase_accomplish_experiencia_cliente` |
 | **Adopt** | **2** | `fase_adopt`, `fase_adopt_ciclo_cliente` |
 | Advocate | **1** | `advocacy_customer_journey` |
+
+#### ASSESS DOBLADA: la fase que aparece en las dos series a la vez
+
+**Encontrada el 12 ago 2026 al contar con el script, y a ojo no se veia.**
+
+| nodo | como trata el instrumento de las seis vias |
+|---|---|
+| `fase_assess_ciclo_cliente` | lo lleva **DENTRO**, en su paso 5: *disena al menos una mejora inmediata usando uno de los seis canales de comunicacion* |
+| `seis_canales_comunicacion_assess` | lo tiene con **CASA PROPIA**: es ese mismo uso convertido en nodo entero |
+
+> **Y no hay arista entre los dos**, verificado resolviendo a nodo vivo. **Es la
+> DUPLICACION CRUZADA de la seccion 15.3 aplicada a una serie**: el mismo material
+> absorbido por un lado y desarrollado por el otro, sin camino entre ellos.
+>
+> **Adopt tiene la mitad de la figura** (`fase_adopt_ciclo_cliente` lleva los seis
+> canales dentro de su paso 2) **pero no tiene nodo de canal propio**, o sea que
+> **Assess es la unica fase doblada por las DOS series a la vez**: tres nodos de
+> fase y uno de canal, cuatro nodos para un paso.
+>
+> **Lo que esto le anade a la candidatura**: el tratamiento de serie declarada
+> **tiene que decidir las dos series juntas**, porque en Assess se tocan. Si se
+> consolidan las fases primero, el nodo de canal de Assess queda colgando de un
+> nodo que ya no existe.
 
 > **SEIS DE LAS OCHO FASES ESTAN DOBLADAS O TRIPLICADAS.** Solo Affirm y Advocate
 > tienen un nodo. **Dieciseis nodos para ocho pasos.**
@@ -1628,7 +1652,16 @@ Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
 > **3. HAY UNA SEGUNDA SERIE CRUZADA, la de los SEIS MEDIOS DE COMUNICACION**:
 > `seis_medios_comunicacion_cliente` es su programa, y cuelgan de el
 > `seis_canales_comunicacion_assess`, `seis_herramientas_comunicacion_fase_activate`
-> y `seis_herramientas_comunicacion_celebracion`. **Es una serie de canales
+> y `seis_herramientas_comunicacion_celebracion`.
+>
+> **CORRECCION DECLARADA DEL 12 ago 2026, contada con `scripts/contar_nombre.py`:
+> esa cifra de CUATRO era mia y estaba mal. Son SIETE.** La conte a ojo en el
+> puesto 669 y dio cuatro, la volvi a contar a ojo en el 719 y dio cinco, y el
+> contador dio **siete**. Faltaban `estrategia_multicanal_bienvenida`, que aplica
+> las mismas seis vias a la bienvenida posterior a la compra **sin llevar la
+> palabra en el identificador**, y los dos nodos de fase que llevan el instrumento
+> **metido dentro de un paso**, `fase_assess_ciclo_cliente` y
+> `fase_adopt_ciclo_cliente`. **Es una serie de canales
 > instanciada POR FASE**, o sea **una serie dentro de otra**. **El tratamiento de
 > la de fases tiene que decidir que hace con esta antes de tocarla**, o multiplica
 > el problema en vez de resolverlo.
@@ -2269,6 +2302,71 @@ yo, asi que van declarados:
 > antes de escribirla a **42,8%** despues de aplicarla a todo lo medido. **No
 > cambio ni un nodo: cambio la vara.**
 
+### 16.6 EL SALDO FINAL DE LA SILUETA, con la vara ejecutada
+
+**Cerrado el 12 ago 2026.** La silueta *hijo con casa propia sin arista* llego a
+**VEINTITRES veredictos** en total: los veinte de la medicion mas los tres que ya
+habian caido antes de que se hiciera la lista (473, 633 y 644).
+
+| | |
+|---|---:|
+| veredictos de la silueta | **23** |
+| **pasaron a D** | **19** |
+| **siguen en A** | **4** |
+
+**Los cuatro que quedan, y cada uno por un motivo distinto:**
+
+| puesto | por que aguanta |
+|---:|---|
+| **568** | lo que el hijo anade cabe en **una linea**: la pregunta *como se entero de nosotros* |
+| **586** | lo que el hijo anade cabe en **una linea**: no atribuir las ideas a una sola persona |
+| **474** | el hijo **repite ademas dos pasos mas** de la madre: no es solo desarrollo, es solape |
+| **395** | **no es caso de esta rama**: la familia esta en cadena completa y el nodo es una **segunda casa** de una fase que ya tiene la suya |
+
+### 16.7 LA EXTENSION QUE HICE Y HAY QUE PODER VETAR
+
+**El encargo nombro OCHO caidas. Ejecute DIEZ.**
+
+> Los puestos **658** y **678** no estaban en la lista porque mi cuenta de la
+> seccion 19 solo cubria los diez colgantes. **Pero los dos se sostenian con la
+> misma frase que la ratificacion abolio**, la figura no aplica y manda la regla
+> original. **Dejarlos intactos era dejar el archivo contradiciendose otra vez, en
+> el mismo sitio y por el mismo motivo.**
+>
+> **Los pase a D aplicando la vara y lo declare dentro de sus razones**, con la
+> palabra EXTENSION DECLARADA delante, **para que se puedan vetar en una linea.**
+
+**Los dos, medidos:** en el **658** el hijo trae el **calculo del costo de
+retraso con sus cinco componentes** y la regla de superponer solo si supera al
+riesgo; en el **678** trae la **prevencion minima viable por nivel de causa** y la
+escalada si el problema reaparece. **Ninguna de las dos cosas cabe en una linea.**
+
+### 16.8 EL MARCADOR RECOMPUTADO, y lo que la doctrina le movio
+
+| | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **global** | **742 de 3.388** | **231** | 65 | 4 | 442 | **31,1%** |
+| **nucleo** | **587** | **230** | 63 | 4 | 290 | **39,2%** |
+
+**La serie de la tasa de A del nucleo, para que se vea que la movio la vara y no
+el material:**
+
+| momento | tasa de A del nucleo |
+|---|---:|
+| puesto 567, antes de la regla de la mayoria | **49,5%** |
+| puesto 700, con la regla escrita y aplicada hacia adelante | 43,9% |
+| puesto 742, antes de ejecutar la vara | 40,9% |
+| **puesto 742, con la vara ejecutada** | **39,2%** |
+
+> **Diez puntos de caida y ni un nodo tocado.** Los mismos 587 pares del nucleo,
+> los mismos textos, y **noventa y tantos veredictos menos en A** de los que
+> habria con la vara vieja.
+>
+> **Lo que esto dice del plan es lo importante**: **la fusion es menos frecuente y
+> el ENLACE mas** de lo que el archivo creia hasta ayer. La clase de arreglo mas
+> barata del banco 9.6, la arista que falta, **acaba de heredar diecinueve casos
+> que estaban contados como fusiones.**
+
 ---
 
 ## 17. EL TRAMO 646 a 700: la regla nueva puesta a trabajar
@@ -2596,6 +2694,21 @@ traigo en vez de resolverlo porque no me toca.**
 >
 > **Nombrarla convertiria ocho lecturas dirigidas en cero**, porque la cuenta de
 > arriba ya esta hecha con esa vara.
+
+### CERRADA EL MISMO DIA
+
+**El auditor adopto la vara con el nombre propuesto, LA LINEA O EL PROCEDIMIENTO,
+y esta en el banco 9.6.1.** La cuenta de arriba se ejecuto entera: **los ocho
+cayeron, el 568 y el 586 aguantan citando la vara**, y **extendi la ejecucion a
+dos mas, el 658 y el 678**, que se sostenian con la misma frase abolida y no
+estaban en la lista. **Esa extension va declarada y se puede vetar**, seccion
+16.7.
+
+> **Lo que esta seccion deja como leccion, y va al banco 9.5.0**: el choque no fue
+> entre dos reglas. **Fue entre la regla y mi parafrasis de la regla.** La regla
+> decia *la arista no exculpa*, que corta en los dos sentidos; mi parafrasis decia
+> *sin arista igual a duplicacion*, que solo corta en uno. **Y la parafrasis
+> gobernó diecinueve veredictos.**
 
 ---
 
