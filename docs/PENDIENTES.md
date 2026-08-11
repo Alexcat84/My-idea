@@ -2048,6 +2048,40 @@ de margen y la fusión se comió la séptima. Lo que hizo fue destaparlo.
 densidad del pack, fijada como está hoy"): fija el estado actual, así que el día
 que alguien mejore la densidad el test lo canta en vez de dejarlo pasar.
 
+### PRIMERA MEDICIÓN DE LA FICHA (13 ago 2026): la densidad no es la que parece
+
+**La ficha llevaba dormida desde la cirugía de Calidad. El barrido nuevo
+`paso_contra_nodo.py` le da su primera medición, y sale al revés de lo esperado.**
+
+| | quality | núcleo |
+|---|---:|---:|
+| nodos vivos | 792 | 1.618 |
+| candidatos paso-contra-nodo | **323** | 298 |
+| de esos, **SIN arista** | **296** | 229 |
+| candidatos por cada 100 nodos | **40,8** | 18,4 |
+
+> **Quality tiene la MITAD de nodos que el núcleo y MÁS candidatos**, y más del
+> doble por nodo.
+
+**LO QUE ESTO CAMBIA EN EL DIAGNÓSTICO, y es lo importante.** La ficha decía que
+quality está *tan conectado* que `ramaDe()` desde cualquier semilla se traga todo.
+Sigue siendo cierto. **Pero el barrido mide lo contrario en el otro plano**: hay
+**296 relaciones madre-hijo de contenido que el grafo NO tiene cableadas.**
+
+> **Los dos hechos juntos dicen algo que ninguno decía solo: las aristas de
+> quality son MUCHAS y no son las que hacen falta.** El pack está lleno de enlaces
+> que conectan todo con todo, y **le faltan justo los que codifican la jerarquía**
+> (este paso lo desarrolla este nodo).
+>
+> **Por eso `ramaDe()` no discrimina**: no discrimina porque las aristas que tiene
+> no significan jerarquía. **La densidad no es exceso de estructura: es ruido de
+> estructura.**
+
+**Lo que la ficha gana con esto**: deja de ser un problema de *demasiadas
+aristas* y pasa a ser uno de *aristas equivocadas*. **El arreglo ya no es podar el
+grafo: es añadir las 296 que faltan y volver a medir `ramaDe()` con ellas
+puestas.** Sigue siendo post-beta, pero ahora tiene una hipótesis medible.
+
 **Por qué post-beta**: arreglarlo es podar aristas, y qué aristas sobran lo dice
 el recorrido real de la gente, no el grafo mirándose a sí mismo.
 

@@ -2795,6 +2795,93 @@ la nomina: no lo es.**
 > anotados como condiciones vivas del racimo**, y ninguno de los dos es de los
 > cuatro cruzadores que deciden si el racimo se parte.
 
+### TANDA R26, VIGESIMOSEGUNDA CIEGA: seis de seis
+
+**Acumulado: 156 releidas, de las cuales 132 a ciegas. Discrepancias: UNA**, el
+395. **Las seis razones de esta tanda pasaron ademas por el barrido de razones**,
+y la del 474 era una de las treinta y ocho.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **460** | `estrategia_de_innovacion_arenas` contra `estrategia_de_innovacion_de_producto` | los **buckets estrategicos de recursos**, el **compromiso con la vision de largo plazo** mas alla del ano en curso, y **vincular explicitamente las metas de innovacion con las del negocio** | de **lector** |
+| **462** | `crowdfunding_legal_exemptions_jobs_act` contra `equity_crowdfunding` | **determinar si lo que ofreces es un security o no**, y **elegir portal autorizado** con las divulgaciones de la SEC si vas por el Titulo III; del otro lado, **los sindicatos de AngelList** | de **lector** |
+| **463** | `obtencion_compromiso` contra `obtencion_de_compromiso` | **preguntar si falta algo por aclarar** antes de cerrar, **resumir los beneficios** discutidos, y **pedir el compromiso mas alto que el cliente pueda dar de verdad**; del otro lado, **medir el exito por avances y no por pedidos** | de **lector** |
+| **467** | `diseno_experimentos_hipotesis` contra `diseno_experimentos_pass_fail` | el **criterio numerico de exito fijado de antemano**, **extender la duracion** lo suficiente para no confundir un maximo local con el global, y **registrar los insights cualitativos** y no solo el pasa o no pasa | de **lector** |
+| **468** | `gestion_portafolio_formal` contra `revision_portafolio_periodica` | la **poda inicial** de los mas debiles y los **buckets con ranking dentro de cada uno**; del otro lado, el **panorama visual** de todos los proyectos y **anotar las decisiones** | de **lector** |
+| **474** | `milk_run_deliveries` contra `programacion_entregas_delivery_scheduling` | **medir el ahorro tras implementar** la ruta consolidada; del otro lado, **decidir entre ubicaciones de producto unico o centros de distribucion** | de **lector** |
+
+#### UNA PERDIDA DICTADA QUE NO LO ES
+
+> **En el 463, el *objetivo de avance realista* esta en LOS DOS.** Es el paso 1 de
+> `obtencion_compromiso` (*define para cada llamada un objetivo de avance
+> realista*) y el paso 4 de `obtencion_de_compromiso` (*propon el siguiente paso
+> concreto y realista*). **No se pierde.** Las otras dos del dictado se sostienen.
+
+#### 474: la A se sostiene POR CONTENIDO, y su razon era una de las treinta y ocho
+
+**Verificado paso por paso**: `milk_run_deliveries` **repite tres de los cinco
+pasos de la madre** (el EOQ por ubicacion, la eleccion entre matriz de ahorros y
+asignacion generalizada, y el diseno de la ruta consolidada), **y no solo
+desarrolla el paso 3.**
+
+> **Por la vara: no trae un procedimiento que la madre no tenga, trae la madre
+> otra vez con una rama ampliada. REPITE.** La A se sostiene, y ahora la sostiene
+> el contenido y no la ausencia de arista, que era lo que decia su apertura vieja.
+
+#### 463: ids con y sin preposicion, dentro del racimo del avance
+
+`obtencion_compromiso` contra `obtencion_de_compromiso`: **el mismo nombre con y
+sin el *de***. **Va al monton de la DECISION 4**, y es el tercero que este cribado
+manda alli tras el 883 y el 941.
+
+> **Pero con una diferencia que hay que decir**: los dos son **miembros del racimo
+> del cierre**, y este par es **la cuarta poda intra-Rackham** tras 248, 274 y
+> 432. **La frontera con el lado de Weinberg sigue sin tocarse.**
+
+#### 468: el cruce portafolio-puertas vuelve, y ahora desde dentro del portafolio
+
+**El cruce 2 de la seccion 13** enfrentaba un nodo de puertas contra uno de
+portafolio. **Este par es de dos nodos de portafolio**, y los dos integran los
+gates dentro de su procedimiento.
+
+> **Lo que anade al cruce**: la familia del portafolio **tambien repite puertas
+> adentro**, asi que la mesa 1 no puede resolver el cruce mirando solo la nomina
+> de las puertas. **Son dos familias que repiten cada una por su lado y ademas se
+> tocan.**
+
+#### 462: CANDIDATO A MARCO-PAIS, verificado en sus tres casas
+
+**El nodo cablea la regulacion de un solo pais y hay que decir donde condiciona y
+donde no**, con el mismo procedimiento que se uso con las EAR:
+
+| casa | que es | condiciona por pais? |
+|---|---|---|
+| **`titulo_concepto`** | *Crowdfunding y Exenciones Legales (JOBS Act)* | **NO**: nombra la ley estadounidense sin decir que lo es |
+| **`resumen_teorico`** | *vender una participacion exige registrarla ante la SEC, salvo que aplique una exencion; la JOBS Act define tres marcos: 506(b), 506(c) y Titulo III* | **NO**: nombra SEC y JOBS Act **sin ninguna clausula de jurisdiccion** |
+| **`pasos_accionables`** | los cinco pasos mandan elegir entre 506(b), 506(c) y Titulo III, y **elegir un portal autorizado con las divulgaciones que exige la SEC** | **NO**: cero condicion previa, igual que las EAR |
+
+> **VEREDICTO DE LA FIGURA: es marco-pais CABLEADO, del tipo duro.** A diferencia
+> de Magnuson-Moss, que al menos condiciona por **destino**, y de las EAR, que
+> condicionan por **origen**, **este nodo no condiciona por nada**: da por supuesto
+> que el lector levanta capital bajo la SEC.
+>
+> **Y su gemelo, `equity_crowdfunding`, hace exactamente lo mismo**: nombra la SEC
+> en su titulo y en tres de sus cuatro pasos, sin jurisdiccion. **La pareja entera
+> es marco-pais.**
+>
+> **Lo que esto le anade al remedio**: si los dos se funden, **el superviviente
+> hereda el problema completo**. La fusion y el reencuadre **son el mismo acto**,
+> como en la cura acoplada, y el contramodelo ya existe:
+> `seguridad_trabajadores_jovenes`, que universaliza dentro del paso.
+
+**Y AL CENSO DE HERRAMIENTAS, con evidencia:**
+
+> **`AngelList`** queda registrada, citada en `equity_crowdfunding` **paso 4**
+> (*si usas una plataforma como AngelList, entiende como funcionan los grupos de
+> inversionistas o syndicates*) **y en su resumen**. **Estado: VIVA**, verificada
+> el 13 ago 2026. **Es el nombre propio numero trece del censo**, y el primero que
+> entra por el eje intra-dominio en vez de por la franja o las costuras.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -6052,3 +6139,177 @@ obedece.** Y el saldo del cableado es la mitad:
 > (puesto **938**). **Ningun otro nodo del cribado ha sostenido tantas lecturas
 > sin duplicarse.** Es un instrumento propio, y a estas alturas eso ya no es una
 > lectura: es una medicion.
+
+---
+
+## 40. LA MUESTRA PINEADA DEL BARRIDO PASO-CONTRA-NODO
+
+**Encargo aprobado el 13 ago 2026. El pin se escribio ANTES de correr el sorteo** y
+se transcribe aqui completo para que el orden se pueda auditar.
+
+### 40.1 EL PIN, tal como se escribio
+
+> **UNIVERSO**: las filas de `docs/PASO_NODO_CANDIDATOS.jsonl` con `arista=false`.
+> **Son 624.**
+>
+> **ESTRATOS**: `quality` (296), `core` (229), y una **franja** con todos los
+> demas dominios juntos (99).
+>
+> **TAMANO**: **24**. Diez de quality, ocho de core, seis de la franja.
+>
+> **POR QUE NO ES PROPORCIONAL**: la franja **se sobre-muestrea a proposito**
+> (seis de veinticuatro, 25%, cuando le tocaria 16%) para que los dominios chicos
+> tengan senal propia. **Se declara aqui para que la proyeccion se lea con ese
+> sesgo puesto.**
+>
+> **ORDEN DETERMINISTA**: cada estrato se ordena por la terna (madre, paso, hijo)
+> antes de sortear. **SEMILLA: 20260813.** Procedimiento:
+> `random.Random(20260813).sample(lista_ordenada, n)`, estrato por estrato, en el
+> orden quality, core, franja.
+>
+> **CLASIFICACION**: cada candidato se lee con **LA VARA** del banco 9.6.1 y cae
+> en una de tres: **JERARQUIA SANA** (el hijo trae procedimiento; falta la
+> arista), **MADRE QUE REPITE** (toca poda), **FALSO POSITIVO** (vecino
+> legitimo).
+>
+> **LA SALIDA ES PROYECCION, NO MEDICION. No se adjudica ningun arreglo.**
+
+### 40.2 EL SALDO
+
+| clase | quality (10) | core (8) | franja (6) | **total (24)** |
+|---|---:|---:|---:|---:|
+| **JERARQUIA SANA** | **7** | **7** | **5** | **19** |
+| **MADRE QUE REPITE** | 0 | 0 | 0 | **0** |
+| **FALSO POSITIVO** | 3 | 1 | 1 | **5** |
+| tasa de acierto | 70% | 87,5% | 83% | **79,2%** |
+
+> **CERO PODAS en veinticuatro.** Es el hallazgo que no esperaba: **cuando esta
+> figura dispara, la madre SIEMPRE dice su paso en una linea.** No aparecio ni una
+> madre que re-desarrollara lo que el hijo ya cuenta.
+>
+> **Si se sostiene, simplifica el plan entero**: esta bolsa **no es una mezcla de
+> dos clases de arreglo. Es una sola**, y es la barata.
+
+### 40.3 LOS CINCO FALSOS POSITIVOS, y por que fallo el instrumento
+
+| # | el candidato | por que no es |
+|---:|---|---|
+| 3 | `seleccion_plan_muestreo_ansi_z14` p3 contra `planes_de_muestreo_de_aceptacion` | el paso manda **LEER la tabla** del estandar; el hijo ensena a **DISENAR** un plan por economia. **Actos distintos sobre el mismo objeto** |
+| 4 | `pre_control_estadistico` p1 contra `limites_de_especificacion_vs_limites_de_control` | **estan en TENSION, no en jerarquia**: el paso manda centrar el proceso **entre los limites de especificacion** y el hijo advierte de que **nunca** se ajuste el proceso por la especificacion. **Frontera, no madre e hijo** |
+| 10 | `sistema_pull_push` p5 contra `reduccion_tiempo_ciclo` | el paso manda **MONITOREAR** la reduccion; el hijo ensena a **LOGRARLA**. El instrumento engancho el sustantivo compartido |
+| 13 | `medir_lo_que_importa_no_solo_lo_facil` p1 contra `metricas_calidad` | el paso manda **listar** las metricas que ya usas; el hijo **define** metricas de calidad con su formato. Inventario contra definicion |
+| 24 | `compra_equipos_verdes` p1 contra `certificacion_leed_energy_star` | el paso pide el sello **en cada equipo que compras**; el hijo certifica **el local o el proyecto**. Mismo sello, objeto distinto |
+
+> **El modo de fallo tiene nombre y es uno solo: el VERBO.** En cuatro de los
+> cinco, el paso y el hijo comparten el sustantivo y **cambian el verbo**: leer
+> contra disenar, monitorear contra lograr, listar contra definir, comprar contra
+> certificar. **El instrumento mide vocabulario y no accion**, y ahi es donde
+> falla.
+>
+> **Y el quinto, el numero 4, no es un fallo del instrumento sino un HALLAZGO que
+> no cabia en las tres clases**: dos nodos de `quality` que dan instrucciones
+> opuestas sobre el mismo gesto. **Es una FRONTERA INTRA-LIBRO como la del puesto
+> 877**, encontrada por el eje nuevo. Queda anotada.
+
+### 40.4 LA PROYECCION, declarada como proyeccion
+
+**Aplicando la tasa de cada estrato a su tamano** (que es lo que corrige el
+sobre-muestreo de la franja):
+
+| estrato | sin arista | tasa medida | proyeccion de jerarquias sanas |
+|---|---:|---:|---:|
+| quality | 296 | 70% | **207** |
+| core | 229 | 87,5% | **200** |
+| franja | 99 | 83% | **82** |
+| **TOTAL** | **624** | **79,2%** | **489** |
+
+**EL INTERVALO, y es ancho porque veinticuatro son veinticuatro.** Sobre 19 de 24,
+el intervalo de Wilson al 95% va de **60% a 94%**.
+
+> **Traducido a la bolsa entera: entre 376 y 586 aristas que faltan.** El punto
+> central esta cerca de **490**.
+>
+> **NO ES UNA MEDICION.** Es una proyeccion de una muestra de veinticuatro sobre
+> seiscientos veinticuatro, con un sesgo de estrato declarado y un intervalo de
+> mas de doscientos casos de ancho. **Lo unico que la muestra prueba con firmeza
+> es el signo: la mayoria de esta bolsa es jerarquia sana sin cablear**, y **la
+> clase de poda, que era la mitad esperada del plan, no aparecio ni una vez.**
+
+### 40.5 DOS CANDIDATOS QUE EL CRIBADO YA CONOCIA
+
+**Dos de los diecinueve caen sobre nodos que el cribado lleva tramos mirando:**
+
+| candidato | lo que el cribado ya sabia |
+|---|---|
+| `customer_validation` paso 1 contra `mvp_alta_fidelidad` | `customer_validation` es **el nodo mas mirado del archivo**, catorce pares leidos y once sanos. **Y le falta el enlace con el nodo que ejecuta su primer paso** |
+| `customer_development_modelo` paso 1 contra `customer_segments_hypothesis` | es el nodo de la **MESA 3**, nueve pares leidos y tres dudosos. **Su problema de alturas tiene aqui una de sus causas: no enlaza al hijo que desarrolla su paso 1** |
+
+> **Los dos son de la zona del customer development.** El eje nuevo **no encontro
+> una zona nueva: encontro por que la vieja se comporta como se comporta.**
+
+---
+
+## 41. EL BARRIDO DE RAZONES: treinta y ocho aperturas reescritas
+
+**Encargo aprobado el 13 ago 2026.** Se busco en
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` toda razon que citara la **PARAFRASIS
+ABOLIDA** por el banco 9.5.0 y se reescribio citando **LA VARA**.
+
+### 41.1 EL VOLUMEN, y es mayor de lo que la primera busqueda dijo
+
+| busqueda | resultado |
+|---|---:|
+| primera pasada, solo la forma *sin arista igual a duplicacion* | 27 |
+| **pasada completa, incluyendo LA FORMA ESPEJO** *con arista igual a jerarquia sana* | **38** |
+
+> **La forma espejo era el error mas facil de pasar por alto**, y es exactamente
+> la mitad que la ratificacion abolio con la frase *la arista no exculpa, y eso
+> corta en los dos sentidos*. **Once razones exculpaban por la arista** y ninguna
+> busqueda anterior las habia mirado, porque el defecto se buscaba solo del lado
+> que acusa.
+
+**LAS APERTURAS QUE SE ENCONTRARON, contadas por forma:**
+
+| veces | la formula |
+|---:|---|
+| 17 | *y la regla lo resuelve: SIN ARISTA, verificado, o sea DUPLICACION* |
+| 13 | *con ARISTA en los dos sentidos, verificada: JERARQUIA SANA* |
+| 8 | variantes de las dos anteriores con otro encabezado |
+
+### 41.2 QUE SE CAMBIO, exactamente
+
+**Solo la APERTURA.** El cuerpo de cada razon, con su medicion, su forma medida y
+su correccion si la tenia, **queda intacto**.
+
+> **La apertura nueva dice tres cosas:** que la version original citaba la
+> parafrasis abolida; que **la arista es DATO DEL GRAFO y no argumento**, y que
+> **corta en los dos sentidos, no acusa cuando falta ni exculpa cuando esta**; y
+> que la clase la decide la vara, **como se lee mas abajo**.
+
+**LO QUE NO SE TOCO, y hay que decirlo**: varias razones citan la parafrasis
+**como historia**, del tipo *el veredicto se emitio con la regla vieja y la regla
+que lo gobierna se escribio despues*. **Esas citas son correctas y se conservan**:
+son el registro de por que hubo una correccion.
+
+### 41.3 NINGUNA CLASE CAMBIA, y por que
+
+**Verificado una por una: las treinta y ocho sostienen su clase con la vara.**
+
+| grupo | cuantas | por que sobrevive |
+|---|---:|---|
+| las que ya habian sido corregidas por la ratificacion | 19 | su cuerpo **ya aplicaba la vara**; solo la apertura estaba vieja |
+| las de la forma espejo, *con arista* | 13 | su cuerpo **ya decia el contenido**: *el hijo le anade lo suyo*, *ninguno sobra*. La arista era adorno, no argumento |
+| las cuatro en **A** (474, 568, 586, 611) | 4 | las cuatro dicen ya, en su cuerpo, que **lo que el hijo anade cabe en una linea**. REPITE por contenido |
+| las dos con figura propia (641, 671) | 2 | dos casas de la misma fase y un plan con su matriz: la clase venia del contenido |
+
+> **El marcador no se movio ni un punto**: A 278, B 86, C 5, D 573.
+>
+> **Y eso es exactamente lo que se esperaba de un barrido de redaccion**: si
+> arreglar el texto hubiera movido clases, el problema no habria sido de texto.
+> **Lo que el barrido arregla es el ARCHIVO como documento**, no el archivo como
+> juicio: cualquiera que lea una de esas treinta y ocho razones a partir de hoy
+> **lee la regla vigente y no la abolida.**
+
+> **LA LECCION DE METODO, que es la que vale para el proximo barrido**: **una
+> regla abolida no se busca solo en la forma que la nombra.** Se busca tambien en
+> **su espejo**, y en este caso el espejo era el 34% del defecto.

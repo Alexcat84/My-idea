@@ -1,0 +1,15 @@
+PIN DEL SORTEO, escrito ANTES de correrlo. 13 ago 2026.
+UNIVERSO: las filas de docs/PASO_NODO_CANDIDATOS.jsonl con arista=false. Son 624.
+ESTRATOS: quality (296), core (229), y una franja con TODOS los demas dominios juntos (99).
+TAMANO: 24 en total. 10 de quality, 8 de core, 6 de la franja.
+POR QUE NO ES PROPORCIONAL: la franja se sobre-muestrea a proposito (6 de 24 = 25 por ciento
+cuando le tocaria 16) para que los dominios chicos tengan senal propia. Se declara aqui para
+que la proyeccion se lea con ese sesgo puesto.
+ORDEN DETERMINISTA: cada estrato se ordena por la terna (madre, paso, hijo) antes de sortear.
+SEMILLA: 20260813. Procedimiento: random.Random(20260813).sample(lista_ordenada, n), estrato
+por estrato, en el orden quality, core, franja.
+CLASIFICACION: cada candidato se lee con LA VARA del banco 9.6.1 y cae en una de tres:
+  JERARQUIA SANA (el hijo trae procedimiento; falta la arista)
+  MADRE QUE REPITE (la madre re-desarrolla lo que el hijo ya cuenta; toca poda)
+  FALSO POSITIVO (vecino legitimo; el instrumento se equivoco)
+LA SALIDA ES PROYECCION, NO MEDICION. No se adjudica ningun arreglo.
