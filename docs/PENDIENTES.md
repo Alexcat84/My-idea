@@ -20,6 +20,8 @@ caería sobre un texto que va a cambiar (banco 9.4 y 9.9).
 | `ab_testing_optimizacion` + `split_testing_experimentos_ab` | 1 | 738 |
 | `preguntas_ipo_dolor_cliente` | 1 | 798 |
 | `key_partners_hypothesis` + `asociaciones_clave` | 1 | 599 |
+| **`estrategia_crecimiento_clientes`** | **1** | 831 |
+| **`producto_unico_superior`** (va a cura acoplada) | **1** | 835 |
 
 > **`voz_del_cliente_voc` vale por tres y `producto_minimo_viable` por dos**: los
 > dos primeros movimientos de la cirugía liberan cinco de los nueve.
@@ -27,8 +29,12 @@ caería sobre un texto que va a cambiar (banco 9.4 y 9.9).
 > **Y el criterio se puede seguir aplicando**: cada nodo costurado que entre a un
 > par nuevo sube en la lista. La cuenta se rehace del jsonl, no de memoria.
 
+**Actualización del 12 ago 2026: la cuenta subió a ONCE pares por OCHO nodos**, y
+va a seguir subiendo mientras la cirugía no arranque, porque los nodos costurados
+son grandes y por eso entran a muchos pares.
+
 **LA COLA DE RELECTURA POST-CIRUGÍA queda nombrada**: los puestos **592, 599,
-724, 738, 755, 784, 798, 827 y 830**. Se releen **después** de operar sus nodos, y
+724, 738, 755, 784, 798, 827, 830, 831 y 835**. Se releen **después** de operar sus nodos, y
 sus razones ya llevan escrito qué hay que salvar en cada caso.
 
 > **Dos avisos para quien la ejecute.** El **827** tiene los **dos** nodos

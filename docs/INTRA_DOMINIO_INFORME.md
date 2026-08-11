@@ -4110,3 +4110,78 @@ fases y **no enlaza a `fase_adopt_ciclo_cliente`**.
 > con su hijo** (puestos 686 y 825). **Es el ejemplo mas limpio de para que sirve
 > la vara**: el mismo nodo, dos vecinos, dos clases distintas y ninguna
 > discusion.
+
+---
+
+## 28. EL TRAMO 831 a 836: aparece la tercera causa de bloqueo
+
+**Seis pares leidos, los seis del nucleo.** Acumulado **836 de 3.388**, global
+**30,7%** de A y **nucleo 37,6%**. El tramo dio **33,3%**. **El checkpoint de los
+900 es el proximo.**
+
+### 28.1 LA TERCERA CAUSA DE BLOQUEO: el nodo que va a la CURA ACOPLADA
+
+**Puesto 835.** `producto_unico_superior` es costura **confirmada** y ademas
+**tiene gemelo declarado** (puesto 285), o sea que esta en la lista de los que
+necesitan **cura acoplada**: destejido y fusion en el mismo acto.
+
+> **El solape de este par NO toca la juntura**, asi que por el banco 9.9 no
+> deberia bloquear. **Y aun asi bloquea**, por otro motivo: **la cura acoplada no
+> reescribe un bloque, reescribe el nodo entero.** Lo que sobreviva no se parece
+> a lo que hay hoy ni en la parte que el solape toca.
+
+**Las tres causas de bloqueo, ya separadas:**
+
+| causa | regla | ejemplares |
+|---|---|---|
+| el solape **toca la juntura** | banco 9.9 | 724, 755, 784, 798, 827, 830, 831, 599, 738 |
+| el nodo va a **cura acoplada** | esta seccion | **835** |
+| **ninguna**: el solape cae en un bloque que sobrevive | banco 9.9 | 823, 834, **344** |
+
+> **La diferencia practica es de orden**: los del primer grupo se releen **despues
+> de la cirugia de su nodo**; el del segundo, **despues de la cirugia Y de la
+> fusion**. **Es un puesto mas atras en la cola.**
+
+### 28.2 LA CUENTA DE CONGELADOS SUBE A ONCE
+
+| nodo a operar | pares que libera |
+|---|---:|
+| `voz_del_cliente_voc` | **3** (724, 755, 827) |
+| `producto_minimo_viable` | **2** (592, 830) |
+| `lienzo_modelo_negocio` | 1 (784) |
+| `ab_testing_optimizacion` + `split_testing_experimentos_ab` | 1 (738) |
+| `preguntas_ipo_dolor_cliente` | 1 (798) |
+| `key_partners_hypothesis` + `asociaciones_clave` | 1 (599) |
+| **`estrategia_crecimiento_clientes`** | **1** (831) |
+| **`producto_unico_superior`** (cura acoplada) | **1** (835) |
+
+> **ONCE pares congelados por OCHO nodos.** Eran nueve por seis hace seis
+> lecturas. **La cuenta sube porque los nodos costurados son grandes y por eso
+> entran a muchos pares**, y va a seguir subiendo mientras la cirugia no arranque.
+
+### 28.3 LA SEGUNDA DE LOS VEINTE ENTRA A UN PAR, y bloquea
+
+**Puesto 831.** `estrategia_crecimiento_clientes` es uno de los **veinte nodos que
+declaran dos obras y nunca entraron a la cola de las 128.**
+
+> Sus diez pasos se parten a la vista: **1 a 6 el Grow de Blank**, **7 a 10 el
+> programa de referidos de Coleman**. Y el par solapa con **los dos bloques**.
+>
+> **Van dos de veinte, y las dos bloquearon** (798 y este). **La lista de los
+> veinte se comporta exactamente igual que las 128**, con el agravante de que
+> **ninguno de esos veinte tiene anatomia escrita**: hay que abrirlos uno por uno
+> cuando les toque.
+
+### 28.4 Lo demas del tramo
+
+> **1. La familia de la sucesion llega a DOCE pares leidos** (puesto 832), y el
+> nodo nuevo aporta lo que ninguno de los otros once: **el co-CEO o el COO
+> complementario como alternativa al reemplazo total.**
+>
+> **2. `errores_comunes_asignacion_roles` acumula su segundo gemelo** (673 y
+> **833**). **La familia de los titulos del equipo fundador pide contador.**
+>
+> **3. Segundo par del racimo del brainstorming que se juzga pese a la costura**
+> (puesto 834, con el 823): **las dos veces el solape cayo en los pasos 1 a 4.**
+> Lo que se pierde aqui es la **inmersion previa** antes de la sesion, que no esta
+> en ningun otro nodo del racimo.

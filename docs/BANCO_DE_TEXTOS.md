@@ -1394,6 +1394,23 @@ pares.**
 > se puede contestar **antes** de la cirugía, mirando la anatomía que la ficha ya
 > tiene escrita.
 
+##### PRECISIÓN: hay una TERCERA causa de bloqueo, y no es el solape
+
+**Añadida el 12 ago 2026, puesto 835 del cribado.**
+
+> **Un nodo que va a CURA ACOPLADA bloquea sus pares aunque el solape no toque la
+> juntura.** El motivo es de alcance: la cura acoplada (destejido más fusión con
+> el gemelo, banco 9.4) **no reescribe un bloque: reescribe el nodo entero.** Lo
+> que sobreviva no se parece a lo de hoy ni en la parte que el solape toca.
+
+**Las tres causas, y cada una manda un puesto distinto en la cola de relectura:**
+
+| causa | cuándo se relee el par |
+|---|---|
+| el solape toca la juntura | **después de la cirugía** del nodo |
+| el nodo va a cura acoplada | **después de la cirugía Y de la fusión** |
+| el solape cae entero en un bloque que sobrevive | **no se relee: el par se juzga hoy** |
+
 ---
 
 ### 9.7 PÉRDIDA DE LECTOR contra PÉRDIDA DE CATÁLOGO
