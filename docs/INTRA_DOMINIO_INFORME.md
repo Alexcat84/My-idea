@@ -3624,6 +3624,166 @@ uno y el 4 del otro: **lo que se perderia del lado del plan A B C no es la
 profesionalidad sino el CIERRE ORDENADO como paso propio**, el que minimiza
 perdidas para todos los involucrados cuando ya no hay venta posible.
 
+### TANDA R33, VIGESIMONOVENA CIEGA: seis de seis
+
+**Acumulado: 198 releidas, de las cuales 174 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+**Cada perdida propuesta se busco en el grafo antes de clasificarla**, como en la
+R32. **Cinco de las seis cambiaron de lista.**
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **568** | `publicidad_offline_pruebas_locales` contra `tracking_publicidad_offline` | **las pruebas locales en paralelo** y **revisar el rendimiento cada tanto**; del otro lado **la pregunta de como se entero** y **el codigo por canal**. **Los espacios sobrantes NO se pierden** | de **catalogo** |
+| **570** | `desarrollo_presentacion_problema` contra `presentacion_problema_tres_columnas` | **el costo estimado del problema**, **que deberia haberte preguntado**, **las referencias** y **el formato de una diapositiva**; del otro lado **dos preguntas**. **Las tres columnas estan en los dos** | de **lector** |
+| **571** | `gamificacion_onboarding_visual` contra `visualizacion_progreso_onboarding` | **entregar el elemento entero en el arranque** contra **enviar solo lo del paso actual** y **anticipar el siguiente**. **Y las dos instrucciones se contradicen** | de **lector** |
+| **573** | `colaboracion_cadena_suministro` contra `compartir_datos_cadena_suministro` | **medir el efecto latigo y graficarlo** y **la posicion en la cadena**; del otro lado **evaluar cuantitativamente beneficios contra riesgos** y **compartir decisiones internas** | de **catalogo** |
+| **574** | `gestion_portafolio_formal` contra `portfolio_management` | **familia declarada**, y ahora dentro de la MESA UNIDA | ver abajo |
+| **586** | `brainstorming_efectivo` contra `construir_sobre_ideas_ajenas` | **la prioridad de construir por encima de generar**; del otro lado **no atribuir la idea a una sola persona** | de **lector** |
+
+#### 570: LA ARISTA EXISTE Y AUN ASI ES DUPLICACION
+
+**Es el ejemplar que faltaba, y hay que decir de que regla.** El banco 9.5.0
+registro que **la arista no exculpa**, y que la parafrasis abolida solo conservaba
+la mitad que acusa. **Esta es la otra mitad, y hasta hoy nunca habia disparado en
+el archivo.**
+
+| | |
+|---|---|
+| **la arista** | existe **en los dos sentidos**, verificada resolviendo a nodo vivo |
+| **el veredicto** | **A**, sostenido a ciegas |
+
+> **Los dos nodos son la misma reunion, paso por paso**: presentar solo los
+> problemas y pausar, preguntar como lo resuelve hoy, presentar la solucion
+> propia al final, y observar la reaccion. **El cableado esta bien puesto y el
+> contenido esta duplicado de todos modos.**
+>
+> **Lo que esto le hace a la regla**: durante el ejercicio, la falta de arista se
+> uso muchas veces como sintoma. **Aqui la arista esta y no salva nada.** Queda
+> como ejemplar de la mitad que exculpa, junto al de la mitad que acusa.
+
+**CORRECCION DECLARADA de las perdidas.** El encargo listaba *las tres columnas*
+como perdida del segundo nodo. **Estan en los dos**: el paso 1 de
+`desarrollo_presentacion_problema` dice literalmente *una presentacion simple de
+una diapositiva con tres columnas*.
+
+| lo que si es exclusivo de cada uno | |
+|---|---|
+| `presentacion_problema_tres_columnas` | **DOS preguntas y no una**: como RANKEA el cliente las soluciones actuales, y como se compara la solucion propuesta con ellas |
+| `desarrollo_presentacion_problema` | el **costo estimado del problema** en tiempo, dinero o frustracion, verificado como unico en el grafo; **que deberia haberte preguntado**; **pedir referencias**; y **el formato de UNA DIAPOSITIVA**, que no estaba listado |
+
+#### 568: los espacios sobrantes NO se pierden, y hay un nodo entero de eso
+
+**CORRECCION DECLARADA, con la busqueda hecha.**
+
+| perdida propuesta | verificacion | veredicto |
+|---|---|---|
+| **espacios sobrantes con descuento** | existe **`publicidad_remanente_remnant_ads`**, un nodo dedicado entero al tema | **NO ES PERDIDA** |
+| revisar el rendimiento cada tanto porque el anuncio decae | no aparece en esa forma en ningun otro nodo de la zona | **perdida real** |
+| la pregunta *como se entero de nosotros* | **NINGUN** otro nodo vivo la trae | **perdida real** |
+| un codigo de descuento por canal | **NINGUN** otro nodo vivo lo trae | **perdida real** |
+
+> **Y una perdida que no estaba listada**: `publicidad_offline_pruebas_locales`
+> es el unico que manda **disenar varias pruebas pequenas EN PARALELO en distintos
+> mercados locales**. El otro nodo mide una campana; este disena un experimento
+> con varias plazas a la vez.
+
+#### 571: la fase ACCLIMATE sube a CINCO nodos, no a cuatro, y los dos nuevos se contradicen
+
+**CORRECCION DECLARADA.** El encargo daba este par como el **cuarto** nodo de la
+fase. **Son dos nodos, y los dos son nuevos para la cuenta: la fase pasa de tres a
+CINCO.**
+
+| nodo | como llega a la fase |
+|---|---|
+| `fase_acclimate` | por nombre |
+| `fase_acclimate_experiencia_cliente` | por nombre |
+| `fase_acclimate_mapa_de_proceso` | por nombre |
+| **`gamificacion_onboarding_visual`** | **por contenido**: su resumen y sus condiciones hablan de la implementacion larga y tecnica, que es esta fase. **No la nombra** |
+| **`visualizacion_progreso_onboarding`** | **por contenido**, igual |
+
+**LOS CUATRO PARES LEIDOS: dos A y dos B.**
+
+| puesto | el par | clase |
+|---:|---|:---:|
+| 447 | experiencia_cliente contra mapa_de_proceso | **A** |
+| **571** | gamificacion contra visualizacion | **A** |
+| 253 | fase_acclimate contra experiencia_cliente | B |
+| 196 | fase_acclimate contra mapa_de_proceso | B |
+
+> **DOS PARES DE GEMELOS SEPARADOS DENTRO DE LA MISMA FASE**, y ningun par leido
+> entre los dos grupos. **Los de nombre repiten entre si y los de contenido
+> repiten entre si**, y nadie ha cruzado los dos.
+
+**Y LA CONTRADICCION, que es lo que la mesa va a tener que resolver:** los dos
+nodos del 571 dicen lo contrario sobre el mismo gesto.
+
+| `gamificacion_onboarding_visual` | `visualizacion_progreso_onboarding` |
+|---|---|
+| **entregar el elemento fisico o digital AL INICIO, junto con el arranque** | **enviar SOLO la informacion necesaria del paso actual**, evitando saturar al cliente con todo el proceso de una vez |
+
+> **Es la CUARTA tension declarada del ejercicio**, con los puestos 1120, 1155 y
+> 1229. **El superviviente no puede llevar las dos**, y no lo adjudico.
+
+#### 573: duplicacion cruzada, y falta un exclusivo del segundo lado
+
+**Verificado por lectura y no por parecido de titulo.** `colaboracion_cadena_suministro`
+dedica sus pasos **4 y 5** a establecer acuerdos de intercambio de datos y montar
+un sistema barato de visibilidad; y **eso es el asunto entero** de
+`compartir_datos_cadena_suministro`. **El cruce es real y va en un solo sentido.**
+
+**CORRECCION DECLARADA**: del lado de `compartir_datos_cadena_suministro` se
+pierden **DOS y no una**. La listada, evaluar cuantitativamente los beneficios de
+colaborar frente a los riesgos de exposicion; **y una que no estaba: compartir
+DECISIONES internas con impacto en la demanda, como las promociones, con los
+proveedores clave.** El otro nodo comparte **datos** de inventario y de punto de
+venta; **solo este comparte decisiones**, que es otra cosa y llega antes.
+
+**Las dos del primer lado se verifican enteras**: medir el efecto latigo comparando
+pedidos entrantes contra salientes y graficar la divergencia, y determinar la
+posicion de la empresa en la cadena.
+
+#### 574: familia declarada, y ahora la familia es la MESA UNIDA
+
+**El par es A y sigue siendo A.** Lo que no se decide aqui es la direccion de la
+fusion, por el **banco 9.3**. **Y la novedad es de tamano**: cuando este par se
+leyo, su familia era el racimo del portafolio. **Hoy los dos son miembros de la
+mesa unida de DIECISEIS nodos**, adjudicada el 14 ago 2026.
+
+> **Lo propio de `gestion_portafolio_formal` son los STRATEGIC BUCKETS** con
+> asignacion de recursos por cubeta y ranking dentro de cada una hasta el limite,
+> y la cadencia de dos a cuatro revisiones al ano. **Lo propio de
+> `portfolio_management` es la cifra**, que alrededor de un tercio de los proyectos
+> suele sobrar. **La mesa decide con dieciseis nodos delante, no con dos.**
+
+#### 586: el racimo del brainstorming es de CINCO, y eso agranda la cura mas cara del plan
+
+**El par es A y sigue siendo A.** `construir_sobre_ideas_ajenas` no trae
+procedimiento: comparte ideas abiertamente, fomenta sesiones de construccion
+colectiva y evita atribuir. **Eso es la regla que `brainstorming_efectivo` enuncia
+en su paso 2 y practica en su paso 1**, diferir el juicio.
+
+**LO QUE ESTE PAR DESTAPA, y es lo importante de la tanda.** El barrido de
+confirmadas conto los gemelos DIRECTOS de `brainstorming_divergente` y dio tres:
+`brainstorming_efectivo` (823), `reglas_brainstorming` (834) y
+`generar_multiples_opciones` (844). **De ahi salio la ficha del NODO DE MAS
+FRENTES con una cura acoplada de CUATRO nodos en un solo acto.**
+
+> **Medido hoy con la nomina cerrada por el 9.20, la familia es de CINCO**, porque
+> `construir_sobre_ideas_ajenas` repite con uno de los tres gemelos. **CINCO pares
+> en la cola, los CINCO leidos y los CINCO en A: es un SUB-PURO de cinco miembros**
+> con una sola arista interna.
+>
+> **Y arrastra un sexto candidato**: `pensamiento_convergente_divergente`, por la
+> A del puesto 943 con `generar_multiples_opciones`.
+
+**LA LECCION DE METODO, y no es que el barrido fallara:** el barrido de las A
+contesta **quien es gemelo de un nodo**. Una **cura acoplada fusiona una
+familia**, y una familia es el cierre transitivo de esa relacion. **Son dos
+preguntas distintas, y la ficha del plan uso la respuesta de la primera para la
+segunda.** La cura de `brainstorming_divergente` no es de cuatro nodos: **es de
+cinco, y puede ser de seis.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -8352,3 +8512,56 @@ ninguno es del libro de la familia:**
 > salio D despues de correr el barrido. **Es la segunda vez en cien puestos que el
 > barrido corrige mi lectura antes de escribirla**, con el 1140. La regla de
 > correrlo siempre no esta pagando en nominas: esta pagando en clases.
+
+---
+
+## 52. LAS PAREJAS QUE EL EJERCICIO NO PUEDE CERRAR
+
+**Lista propia, abierta el 14 ago 2026 por encargo.** Son pares de nodos vivos
+que **NO ESTAN EN LA COLA**: por mucho que el cribado avance, **no los va a
+decidir nunca.** Cada uno necesita una lectura dirigida, como las nueve del
+gemelo.
+
+**Verificado uno por uno contra `INTRA_DOMINIO_PARES.jsonl` antes de escribir la
+lista: los dos nodos vivos y el par ausente en los siete casos.**
+
+### 52.1 LA LISTA: CINCO parejas, SIETE lecturas
+
+| # | los nodos | por que hace falta cerrarla | de donde salio |
+|---:|---|---|---|
+| **1** | `evaluacion_tecnologias_disruptivas` contra `explotacion_tecnologias_disruptivas` | los dos repiten con `tecnologias_disruptivas_oportunidad` (505 y 513), o sea que **son candidatos a una familia de tres**. Este par decide si la familia existe o si son dos pares sueltos alrededor de un centro | **R30** |
+| **2** | `estrategia_innovacion_producto` contra `estrategia_de_innovacion_producto` | **dos identificadores que difieren en una particula y son nodos distintos**, de 5 y 7 pasos. Contra el mismo tercero dieron **A** (1121) y **D** (1129). Sin este par no hay forma de saber si el catalogo tiene uno o dos | **1129** |
+| **3a** | `project_close_out` contra `reunion_conclusion_proyecto` | `project_close_out` declara **fuente doble** y sus pasos 6 a 11 son de Coleman, **casi palabra por palabra** el monitoreo de tres meses del otro. **El bloque injertado no se puede leer contra su origen** | **1165** |
+| **3b** | `project_close_out` contra `encuesta_satisfaccion_postproyecto` | el mismo bloque injertado contra el otro nodo de Coleman que duplica | **1165** |
+| **4** | `disenar_tests_pass_fail` contra `diseno_experimentos_hipotesis` | es **un par periferico del racimo en estrella de pass/fail**, y de los pares perifericos depende la figura del **banco 9.23**. Ademas es **el unico par de esa familia que tiene arista** | **banco 9.23** |
+| **5a** | `refinar_sales_roadmap` contra `evaluacion_vp_ventas` | Blank dice en **una linea** *usar el roadmap como prueba de competencia al contratar un VP de ventas*, y Horowitz trae los dos nodos que dicen como evaluarlo. **Relacion de madre e hijos entre libros** | **seccion 50.2** |
+| **5b** | `refinar_sales_roadmap` contra `framework_evaluacion_director_ventas` | el mismo nodo de Blank contra el segundo de Horowitz | **seccion 50.2** |
+
+### 52.2 QUE TIENEN EN COMUN, y por que aparecen ahora y no antes
+
+**Ninguna se encontro leyendo su propio par**, porque su par no existe. **Las
+cinco salieron de mirar alrededor:**
+
+| como aparecio | cuantas |
+|---|---:|
+| midiendo una **nomina** (contador mas barrido) | 3 (la 1, la 4 y la 5) |
+| leyendo **otro** par y chocando con un identificador o una fuente | 2 (la 2 y la 3) |
+
+> **Es una clase de hueco que el cribado no puede ver desde dentro.** La cola se
+> construyo por similitud; **estos pares quedaron por debajo del corte** y por eso
+> ninguna lectura los va a traer. **Solo aparecen cuando se cuenta una familia o
+> cuando dos nodos casi homonimos se cruzan por casualidad.**
+
+### 52.3 LO QUE PIDE LA LISTA
+
+> **Una tanda de lecturas dirigidas al cierre, siete pares**, con el mismo formato
+> de las nueve del gemelo: leer el par, clasificarlo, y **anotar el efecto sobre la
+> nomina o la ficha que lo levanto.**
+>
+> **Tres de las siete cambian el tamano de una familia** (la 1, la 4 y las dos de
+> la 5). **Dos deciden si un nodo sobra** (la 2 y las dos de la 3). **Ninguna es
+> una curiosidad: todas estan colgando de algo que ya esta escrito en el plan.**
+>
+> **Y la lista queda ABIERTA.** Van cinco parejas en 1.235 pares leidos; **el
+> ritmo es de una cada doscientos cincuenta**, asi que conviene volver a esta
+> seccion en cada checkpoint en vez de esperar al cierre.

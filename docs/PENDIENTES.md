@@ -2378,3 +2378,104 @@ dentro por la A del puesto 1096.
 > Validation o dos.** Medido: `filosofia_customer_validation` **repite con quien
 > abre la etapa** (dos A) **y jerarquiza con quien la ejecuta** (cinco lecturas
 > sanas en el tramo 1101-1200).
+
+---
+
+## ORDEN DE LA PASADA: LAS CIRUGIAS SE ORDENAN POR CONGELADOS LIBERADOS
+
+**Adjudicado el 14 ago 2026.** El criterio de orden no es el tamano del nodo ni
+lo averiado que este: es **cuantos pares desbloquea su destejido.**
+
+> **La medicion que lo obliga: OCHO de los QUINCE congelados cuelgan de TRES
+> nodos.** No estan repartidos por el catalogo, **estan amontonados**. Hacer esas
+> tres primero libera mas de la mitad del inventario; hacerlas tarde deja ocho
+> pares parados a la vez.
+
+### LAS TRES PRIMERAS, en orden, con los pares que libera cada una
+
+#### 1. `producto_minimo_viable` (22 pasos) libera TRES
+
+| par | contra que nodo | clase hoy |
+|---:|---|:---:|
+| **494** | `principio_calidad_mvp` | **A** |
+| **592** | `mvp_catalogo_tecnicas` | B |
+| **830** | `prueba_mvp_alta_fidelidad` | B |
+
+> **VA PRIMERA, y no solo por la cuenta.** El **494 es la CURA ACOPLADA MAYOR**:
+> los dos nodos estan costurados, asi que es un **acto de tres**, destejer uno,
+> destejer el otro y solo entonces decidir la fusion. **Y `principio_calidad_mvp`
+> tiene catorce pasos**, o sea que el segundo destejido tampoco es pequeno.
+>
+> **El orden interno es obligatorio**: destejer `producto_minimo_viable`, destejer
+> `principio_calidad_mvp`, resolver el **494**, y **solo despues** mirar el 592 y
+> el 830, que se leen contra lo que haya quedado.
+
+#### 2. `voz_del_cliente_voc` (10 pasos) libera TRES
+
+| par | contra que nodo | clase hoy |
+|---:|---|:---:|
+| **724** | `voice_of_customer_estrategico` | B |
+| **755** | `dia_en_la_vida_del_cliente` | B |
+| **827** | `ganar_comprension_del_cliente` | B |
+
+> **Los tres son B**, o sea que **los tres esperan exactamente lo mismo**: saber
+> que queda del nodo para poder clasificarlos. **Es la cirugia mas limpia de las
+> tres**: un solo destejido, sin gemelo costurado enfrente, y tres pares que se
+> resuelven detras en una sola sentada.
+
+#### 3. `ab_testing_optimizacion` (15 pasos) libera DOS
+
+| par | contra que nodo | clase hoy |
+|---:|---|:---:|
+| **738** | `split_testing_experimentos_ab` | B |
+| **1061** | `optimizacion_embudo_get_customers` | **A** |
+
+> **VA TERCERA porque es la mas enredada de las tres.** El **1061 es el TERCER
+> ACTO DE TRES del archivo**, costurada contra costurada, y el **738 tiene los DOS
+> nodos averiados con el solape cruzando las dos junturas**. **Los dos pares
+> dependen de dos destejidos, no de uno.**
+
+### LO QUE QUEDA DETRAS, y por que no ordena la pasada
+
+**Los siete congelados restantes cuelgan de un nodo cada uno** (599, 784, 798,
+831, 835, 851 y el 1190). **Ninguno gana nada por ir antes que otro**, asi que se
+hacen cuando toque su familia.
+
+> **EXCEPCION, y es la unica del inventario: el 1190 no depende de una cirugia
+> sino de OTRA MESA.** Espera a que la mesa de la junta asesora decida el 367. Va
+> en el registro de dependencias del informe, seccion 13, no aqui.
+
+### LA REGLA QUE ESTE ORDEN FIJA
+
+> **Cuando varias cirugias estan disponibles, va primero la que libera mas pares
+> congelados.** Y si dos empatan, va primero **la que no tenga gemelo costurado
+> enfrente**, porque esa se puede cerrar en un acto y la otra necesita tres.
+
+---
+
+## CORRECCION A LA FICHA DE `brainstorming_divergente`: la cura es de CINCO, no de cuatro
+
+**Encontrado el 14 ago 2026 en la relectura R33, puesto 586.**
+
+La ficha del **NODO DE MAS FRENTES** dice que su cura acoplada es de **cuatro
+nodos en un solo acto**, contando sus tres gemelos directos: `brainstorming_efectivo`
+(823), `reglas_brainstorming` (834) y `generar_multiples_opciones` (844).
+
+> **Medido hoy con la nomina cerrada: la familia es de CINCO.**
+> `construir_sobre_ideas_ajenas` repite con `brainstorming_efectivo` (puesto 586),
+> que es uno de los tres gemelos, **asi que por el banco 9.20 es candidato al mismo
+> racimo.** Cinco pares en la cola, **los cinco leidos y los cinco en A**: es un
+> **sub-puro de cinco** con una sola arista interna.
+>
+> **Y arrastra un sexto candidato**, `pensamiento_convergente_divergente`, por la
+> A del puesto 943.
+
+**POR QUE EL BARRIDO NO LO DIO, y no es un fallo suyo:** el barrido de las A
+contesta **quien es gemelo de un nodo**. Una cura acoplada **fusiona una familia**,
+y una familia es el **cierre transitivo** de esa relacion. **Son dos preguntas
+distintas y la ficha uso la respuesta de la primera para la segunda.**
+
+> **Lo que cambia en el plan**: el acto mas caro del inventario **crece de cuatro
+> nodos a cinco, y puede ser de seis**. El orden escrito en la ficha, fuente
+> primero, destejido despues y los gemelos al final, **no cambia**; lo que cambia
+> es cuantos nodos entran en el ultimo paso.
