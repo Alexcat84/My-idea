@@ -7737,3 +7737,164 @@ no tener el cruce en dos sitios.
 > **O sea que las dos mesas no se tocan en un punto: se tocan en una franja.**
 > Decidir si portafolio y puertas son una familia o dos **es trabajo de lectura**,
 > y el barrido no lo va a contestar: solo dice que la frontera esta ahi.
+
+---
+
+## 49. CHECKPOINT DE LOS 1.200: el nucleo baja del 30 por ciento
+
+### 49.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.200** de 3.388 | 313 | 88 | 6 | 793 | **26,1%** |
+| **NUCLEO por separado** | **1.045** | 312 | 86 | 6 | 641 | **29,9%** |
+| **el tramo 1158-1200** | **43** | **2** | 0 | 0 | 41 | **4,7%** |
+
+**Sin huecos: 1 a 1.200 registrados uno por uno. Ningun nodo se toco.**
+
+> **El nucleo baja del 30 por ciento por primera vez.** Empezo en **54%** en la
+> centena 3.
+
+### 49.2 LAS DOS SERIES QUE PIDE EL ENCARGO
+
+| tramo | leidos | tasa de A | **pares resueltos con LA VARA** | con arista |
+|---|---:|---:|---:|---:|
+| 901-1000 | 100 | 18,0% | 31 (31%) | 6 |
+| 1001-1050 | 50 | 16,0% | 15 (30%) | 11 |
+| 1051-1100 | 50 | 14,0% | 19 (38%) | 8 |
+| 1101-1157 | 57 | 12,3% | 21 (37%) | 17 |
+| **1158-1200** | **43** | **4,7%** | **21 (49%)** | 4 |
+
+**Y por centenas, que es como se ve el movimiento de verdad:**
+
+| centena | tasa de A | vara |
+|---|---:|---:|
+| 901-1000 | **18,0%** | 31% |
+| 1001-1100 | **15,0%** | 34% |
+| **1101-1200** | **9,0%** | **42%** |
+
+> **La tasa de A cae a la mitad en dos centenas y la vara sube diez puntos.** En el
+> ultimo tramo **casi uno de cada dos pares se resolvio citando la linea contra el
+> procedimiento**, y solo dos de cuarenta y tres repitieron.
+>
+> **Y hay que decir lo que esto NO significa**, por el banco 9.19: no significa
+> que quede menos trabajo. **Significa que la cola dejo de traer duplicados y trae
+> jerarquias**, que se arreglan con una arista y no con una fusion. La cifra es un
+> indicador de POSICION EN LA COLA. **No se proyecta.**
+
+### 49.3 EL HALLAZGO DEL TRAMO: el 1190 se congela, y traigo el choque entero
+
+**`formalize_advisory_board` contra `identificar_consejo_asesores` sale D por la
+vara, y eso CHOCA con una A ya registrada: el puesto 976 leyo el mismo nodo de
+formalizar contra el OTRO nodo de identificar y salio A.** Y los dos nodos de
+identificar **son gemelos entre si** (A del puesto 367).
+
+**La diferencia esta medida, y es exactamente la que decide:**
+
+| nodo | pasos | que hace con la formalizacion |
+|---|---:|---|
+| `identificar_junta_asesores` (el del 976) | **4** | **NO la difiere**. Hace parte del trabajo de formalizar: evaluar el interes de cada uno en **convertirse en asesor formal** y para que areas |
+| `identificar_consejo_asesores` (el del 1190) | **6** | **la difiere explicitamente**: su paso 6 dice *formaliza el consejo mas adelante, durante la validacion de clientes* |
+
+> **Uno se solapa con formalizar; el otro le cede el turno.** Por eso el 976 es A y
+> el 1190 es D, y **no es una contradiccion: es que los dos nodos de identificar
+> difieren justo en la linea que decide.**
+>
+> **POR ESO SE CONGELA (banco 9.9).** El veredicto del 1190 **depende de lo que
+> sobreviva a la fusion del 367**: si el superviviente conserva el paso 6,
+> formalizar sigue siendo su hijo y esto es D; si conserva la version de cuatro
+> pasos, formalizar pasa a repetir y esto seria A.
+>
+> **La mesa de la junta asesora tiene que decidir el 367 ANTES de tocar este par**,
+> y ese orden no estaba escrito en ninguna parte.
+
+### 49.4 SEGUNDO SUBCONJUNTO ESTRICTO, y el primero que cruza libros (1182)
+
+**Los cuatro pasos de `design_test_repeat` (Osterwalder) estan enteros dentro de
+los seis de `desarrollo_en_espiral` (Cooper).** Perdida **cero** y direccion de
+fusion **forzada**, igual que el 511.
+
+> **Y lo que le hace a una nomina, medido con el barrido antes de escribir**:
+> `design_test_repeat` es miembro del racimo **BUILD-MEASURE-LEARN**, el numero 9
+> de la tabla viva, con cinco miembros. **`desarrollo_en_espiral` no tenia NINGUNA
+> A hasta este par.** Con esta pasa a **candidato a miembro** por el 9.20, y seria
+> **el primero de otro libro** en ese racimo: Cooper entrando en una familia de
+> Ries y Osterwalder. **Queda como candidato levantado con su evidencia, no como
+> miembro.**
+
+### 49.5 TRES COSTURAS ENTRE LIBROS, y las tres lo declaran en su propio campo
+
+**El tramo destapa un patron que no estaba nombrado**: nodos con **fuente doble**
+cuyos pasos se parten en dos bloques, uno por libro.
+
+| nodo | pasos | los dos bloques |
+|---|---:|---|
+| `fit_problema_solucion` (536) | 6 | 1-3 los tres tipos de encaje (Osterwalder) / 4-6 **las fases del embudo de traccion** (Traction) |
+| `project_close_out` (1165) | 11 | 1-5 el cierre formal (PM Book of Forms) / 6-11 **objetivos del arranque, testimonios y monitoreo de tres meses** (Coleman) |
+| `co_creation_session` (1196) | 9 | 1-4 la sesion de codiseno con usuarios (IDEO) / 5-9 **socios de la cadena de suministro, simulaciones y contratos** (Hugos) |
+
+> **En los tres casos el campo de fuente lo dice**, o sea que **no hay que
+> deducirlo: hay que leerlo.** Y en los tres el segundo bloque **repite material
+> que ya vive en nodos del libro donante**: el de `project_close_out` duplica casi
+> palabra por palabra el monitoreo de tres meses de `reunion_conclusion_proyecto`,
+> que la tanda R31 acababa de releer.
+
+**PRECISION AL 541 DE LA R31, y sale de aqui.** Aquella tanda listo *el monitoreo
+de tres meses* como perdida del par. **No es perdida de catalogo: ese material
+tambien vive en `project_close_out`.** Una perdida se declara contra el par y
+**se verifica contra el catalogo**, y esta vez la verificacion llego sesenta
+puestos despues.
+
+### 49.6 PAREJAS QUE LA COLA NO PUEDE CERRAR: ya van CUATRO
+
+| la pareja | por que importa |
+|---|---|
+| `evaluacion_` contra `explotacion_tecnologias_disruptivas` (R30) | decidiria si son un racimo de tres |
+| `estrategia_innovacion_producto` contra `estrategia_de_innovacion_producto` (1129) | dos identificadores que difieren en una particula, y **son nodos distintos** |
+| `project_close_out` contra los dos nodos de Coleman que duplica (1165) | el bloque injertado no se puede leer contra su origen |
+| `disenar_tests_pass_fail` contra `diseno_experimentos_hipotesis` (banco 9.23) | es **un par periferico de la estrella**, y de el depende la figura |
+
+> **Cuatro parejas que este ejercicio no va a decidir por mucho que avance.** No es
+> un defecto del cribado: es el limite de la cola que se eligio. **Conviene tenerlas
+> juntas y contadas**, porque cada una necesita una lectura dirigida y ninguna la
+> va a pedir sola.
+
+### 49.7 LA FAMILIA DEL PROMPTING QUEDA CERRADA (1175)
+
+**El puesto que el R30 dejo anotado salio, y sale A.** `asignacion_persona_ia`
+contra `prompting_por_persona_ia`.
+
+> **Lo que decide el par**: los dos pasos que `asignacion_persona_ia` no comparte
+> con este **no son sobre personas**, son la anatomia generica del prompt, **y son
+> exactamente el material por el que ya salio A contra la madre en el 514.** O sea
+> que **no tiene nada que sea suyo y ademas sea sobre personas**.
+>
+> **Es la union de una madre y de su hija**, y el 1144 ya habia probado que esas
+> dos son madre e hija y no gemelas. Con este par, `asignacion_persona_ia` lleva
+> **dos A** y la forma de la familia queda dicha: **una madre, una hija, y un
+> tercer nodo que las duplica a las dos a la vez.**
+
+### 49.8 LO QUE SE SOSTIENE, medido
+
+| medicion | como queda |
+|---|---|
+| `actualizar_modelo_de_negocio_pivot_o_proceed` | **OCHO veredictos y los OCHO D** (294, 733, 846, 912, 954, 1140, 1161, 1170). Confirma el 1140: **no es miembro de la mesa del pivote** |
+| `customer_discovery_cuatro_fases` | **TRES hijos leidos** (1083, 1094, 1170) y **los tres sin arista** |
+| `earlyvangelists_ventas_tempranas` | **cuatro lecturas**: una A (1096, contra la filosofia entera) y **tres sanas** (1128, 1164, 1185). Su unico gemelo es la filosofia |
+| Rackham | dos pares laterales mas (1188, 1159) y los dos sanos. **El puro del compromiso y el racimo del metodo SPIN siguen separados**, ahora con dos de tres miembros probados contra `modelo_spin` |
+| los gemelos que el barrido contesto antes de leer | `gestion_sindicato_inversores` con `manejo_syndicate_inversion` (160), `usuarios_extremos` (426), `fase_activate` (183), `fase_assess_ciclo` (373). **Ninguno se anoto como sospecha: todos se consultaron** |
+
+### 49.9 EL SALDO
+
+> **Mil doscientos pares leidos uno por uno, sin huecos, sin tocar un nodo.** El
+> nucleo baja del 30% por primera vez y el ultimo tramo marca **4,7%**.
+>
+> **Lo que este checkpoint deja no son los veredictos: son los ordenes.** El 1190
+> descubre que **la mesa de la junta asesora tiene que decidir un par antes que
+> otro**; las tres costuras entre libros dicen que **hay nodos cuyo arreglo empieza
+> por elegir de que libro son**; y las cuatro parejas que la cola no puede cerrar
+> dicen **cuanto de este trabajo no va a terminar aqui**.
+>
+> **Y una nota de metodo que este tramo gano**: cuatro veces el barrido de las A
+> contesto, antes de leer, una pregunta que en el tramo anterior se habria anotado
+> como sospecha. **La disciplina del 9.5.0 esta funcionando.**
