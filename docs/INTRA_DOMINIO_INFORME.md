@@ -8908,3 +8908,109 @@ una decision sobre seis nodos.**
 > **Y caduca.** Cada A nueva puede unir dos componentes y volver un acto de dos en
 > un acto de cinco. **Vigente al puesto 1256**; se vuelve a correr al cierre del
 > cribado, junto al barrido de confirmadas, como manda el 9.21.
+
+---
+
+## 55. TRAMO 1257-1277: las fronteras de los actos aguantan su primera prueba
+
+### 55.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.277** de 3.388 | 320 | 88 | 7 | 862 | **25,1%** |
+| **NUCLEO por separado** | **1.122** | 319 | 86 | 7 | 710 | **28,4%** |
+| **el tramo 1257-1277** | **21** | **1** | 0 | 0 | 20 | **4,8%** |
+
+**Sin huecos. Ningun nodo se toco.**
+
+| tramo | leidos | tasa de A | vara |
+|---|---:|---:|---:|
+| 1201-1235 | 35 | 17,1% | 34% |
+| 1236-1256 | 21 | 0,0% | 43% |
+| **1257-1277** | **21** | **4,8%** | **33%** |
+| **1201-1277 junto** | **77** | **9,1%** | **36%** |
+
+### 55.2 LO QUE EL TRAMO PRUEBA: las fronteras medidas en la seccion 54 aguantan
+
+**El cierre transitivo se calculo ayer sobre el archivo. Este tramo es el primero
+que enfrenta a miembros de esos actos con nodos de FUERA, y los tres salen sanos.**
+
+| puesto | el miembro | su acto | contra | resultado |
+|---:|---|---|---|:---:|
+| **1270** | `generar_multiples_opciones` | **acto 1**, el brainstorming, **7 nodos** | `deadlines_como_herramienta_convergencia` | **D** |
+| **1276** | `plan_acquire_activate` | acto 8, **2 nodos** | `plan_de_activacion` | **D** |
+| **1261** | `voz_del_cliente_voc` | **acto 3**, **4 nodos** | `customer_development_modelo` | **D** |
+
+> **Tres actos puestos a prueba por su borde y ninguno crece.** No prueba que las
+> fronteras sean definitivas, **pero si que la medicion no era casual**: los nodos
+> que estan dentro estan dentro por una A, y los que quedaron fuera siguen fuera
+> cuando se les lee de verdad.
+
+**Y el mismo tramo prueba el borde de un racimo de la tabla viva**: el **1273**
+enfrenta a `ciclo_construir_medir_aprender`, miembro de **build-measure-learn**,
+con `establecer_linea_base_mvp`. **Sale D.** Ese racimo gano **dos candidatos** en
+cien puestos (1182 y 1208) y **aqui no gana un tercero.**
+
+### 55.3 LA ZONA MEJOR REPARTIDA DEL ARCHIVO: la junta directiva
+
+**Con el 1258, la familia de la junta llega a SIETE lecturas y sigue con CERO A.**
+
+| puesto | el par |
+|---:|---|
+| 242 | control tardio contra perdida de control |
+| 1053 | perdida de control contra tamano |
+| 1091 | gestion contra tamano |
+| 1204 | bloqueo contra perdida de control |
+| 1224 | control tardio contra tamano |
+| 1238 | fundadores en la junta contra gestion |
+| **1258** | bloqueo contra tamano |
+
+> **Siete pares distintos entre seis nodos y ninguno repite.** Es lo contrario del
+> portafolio, que con dieciocho lecturas lleva quince A. **Dos zonas del mismo
+> tamano y de calidad opuesta**, y conviene tenerlo escrito: **cuando la mesa del
+> portafolio se siente, la de la junta no tiene nada que decidir.**
+
+### 55.4 SEPTIMA COSTURA ENTRE LIBROS, y es una confirmada
+
+`revisiones_regulares_desempeno_ceo` (puesto **1263**) declara **fuente doble**,
+*The Founder's Dilemmas* y *The Hard Thing About Hard Things*, y sus **diez pasos**
+se parten en el ritual de revision (1 a 4) y **un bloque de Horowitz** (5 a 10) con
+la historia de la empresa, la auditoria de velocidad de decision y los objetivos
+calibrados.
+
+> **Es la SEPTIMA del ejercicio y la primera que ademas es COSTURA CONFIRMADA**, o
+> sea que su destejido y su decision de fuente **son el mismo trabajo**. En las
+> siete el campo `fuente` lo declara.
+
+### 55.5 SEGUNDA ESCALERA DE COOPER, y tambien sube
+
+**El 1274**, `gate1_idea_screen` contra `etapa_scoping`: la puerta pide **una
+pagina** y una lista de si o no; la etapa que autoriza pide busqueda secundaria,
+contacto con ventas, prueba de concepto, evaluacion tecnica y un caso de negocio
+preliminar.
+
+> Con el **1099**, **van dos escaleras de este libro leidas y las dos suben** (banco
+> 9.12 al derecho). **El gasto crece solo despues de que la puerta lo autorice.**
+
+### 55.6 TERCERA CONFIRMACION DE LA REGLA DEL TIPO DE MERCADO
+
+**El 1260** anade el tercer caso a la regla que este ejercicio fijo para esa
+familia:
+
+| los que **DECIDEN** el tipo | repiten entre si: **puro de tres** (228, 345, 686) |
+|---|---|
+| los que **CONSUMEN** el tipo | **sanos**: el posicionamiento (1145), la proyeccion de ingresos (1214) y **la rama de resegmentacion (1260)** |
+
+> **La taxonomia compartida no crea repeticion. Lo que la crea es decidirla dos
+> veces.**
+
+### 55.7 EL SALDO
+
+> **Mil doscientos setenta y siete pares.** El tramo trae **una sola A**, la de las
+> dos arquitecturas modulares, y **veinte sanos**.
+>
+> **Su valor no esta en los veredictos sino en que pone a prueba lo medido el dia
+> anterior.** Tres actos del cierre transitivo y un racimo de la tabla viva salen
+> a leerse contra vecinos de fuera, **y los cuatro se quedan del tamano que
+> tenian.** Una medicion que aguanta su primera prueba no es una medicion probada,
+> **pero es mejor que una que no se ha probado nunca.**
